@@ -1105,7 +1105,7 @@ test. The separation is new law: finite attention makes fit necessary
 is never qualified for attention because it fits (P0, P6).
 
 
-Source: EXECUTIVE_BASELINE.md#the-executive-configuration sha256=9ad9cfb92d3063085eecdd56d53d93a67331811d01590176c30f44d66487d7c3
+Source: EXECUTIVE_BASELINE.md#the-executive-configuration sha256=e50b4ad70451fe84882053bc0dffef6f6c0c806a5dba68ac9933aa79029fb935
 
 ### The executive configuration
 
@@ -1653,7 +1653,7 @@ common discriminators to cases and logical-review checks, and its §6
 records dispositions.
 
 
-Source: EXECUTIVE_BASELINE.md#foundation-to-law sha256=9ad9cfb92d3063085eecdd56d53d93a67331811d01590176c30f44d66487d7c3 rows=8/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
+Source: EXECUTIVE_BASELINE.md#foundation-to-law sha256=e50b4ad70451fe84882053bc0dffef6f6c0c806a5dba68ac9933aa79029fb935 rows=8/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
 
 ### Foundation to law
 

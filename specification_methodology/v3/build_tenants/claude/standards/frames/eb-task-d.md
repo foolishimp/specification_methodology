@@ -57,7 +57,7 @@ Routes, in order:
 
 Size of this frame: 116381 bytes.
 
-Source: EXECUTIVE_BASELINE.md#executive sha256=9ad9cfb92d3063085eecdd56d53d93a67331811d01590176c30f44d66487d7c3
+Source: EXECUTIVE_BASELINE.md#executive sha256=e50b4ad70451fe84882053bc0dffef6f6c0c806a5dba68ac9933aa79029fb935
 
 ### Executive
 
@@ -75,7 +75,7 @@ universal semantic owner, controller, manager service or runtime executive
 observer (P6, RF-016).
 
 
-Source: EXECUTIVE_BASELINE.md#reviewer sha256=9ad9cfb92d3063085eecdd56d53d93a67331811d01590176c30f44d66487d7c3
+Source: EXECUTIVE_BASELINE.md#reviewer sha256=e50b4ad70451fe84882053bc0dffef6f6c0c806a5dba68ac9933aa79029fb935
 
 ### Reviewer
 
@@ -89,7 +89,7 @@ assign priority, apply disposition or activate the next frame (P6; rc.2
 #reviewer).
 
 
-Source: EXECUTIVE_BASELINE.md#technical-triage-severity-priority-and-boundary-effect sha256=9ad9cfb92d3063085eecdd56d53d93a67331811d01590176c30f44d66487d7c3
+Source: EXECUTIVE_BASELINE.md#technical-triage-severity-priority-and-boundary-effect sha256=e50b4ad70451fe84882053bc0dffef6f6c0c806a5dba68ac9933aa79029fb935
 
 ### Technical triage, severity, priority and boundary effect
 
@@ -153,7 +153,7 @@ constrains its consumption is EVALUATION §4 (Result and triage
 projection).
 
 
-Source: EXECUTIVE_BASELINE.md#work-result sha256=9ad9cfb92d3063085eecdd56d53d93a67331811d01590176c30f44d66487d7c3
+Source: EXECUTIVE_BASELINE.md#work-result sha256=e50b4ad70451fe84882053bc0dffef6f6c0c806a5dba68ac9933aa79029fb935
 
 ### Work result
 
@@ -213,7 +213,7 @@ revises only the affected results, preserving originals and supported
 surviving claims (ACTIVATION §7; P4b).
 
 
-Source: EXECUTIVE_BASELINE.md#6-executive-attention-evaluation-and-action sha256=9ad9cfb92d3063085eecdd56d53d93a67331811d01590176c30f44d66487d7c3
+Source: EXECUTIVE_BASELINE.md#6-executive-attention-evaluation-and-action sha256=e50b4ad70451fe84882053bc0dffef6f6c0c806a5dba68ac9933aa79029fb935
 
 ## 6. Executive attention, evaluation and action
 
@@ -389,7 +389,7 @@ Cut or exact Install stays immutable under its own lifecycle law and imposes
 no immutability on the Source Project constructing a successor (P3, P4b).
 
 
-Source: EXECUTIVE_BASELINE.md#the-executive-configuration sha256=9ad9cfb92d3063085eecdd56d53d93a67331811d01590176c30f44d66487d7c3
+Source: EXECUTIVE_BASELINE.md#the-executive-configuration sha256=e50b4ad70451fe84882053bc0dffef6f6c0c806a5dba68ac9933aa79029fb935
 
 ### The executive configuration
 
@@ -472,7 +472,7 @@ allocation only where it fits, and whether its prohibitions and its
 reporting of blockers hold wherever it is used.
 
 
-Source: EXECUTIVE_BASELINE.md#12-complete-engagement-transition sha256=9ad9cfb92d3063085eecdd56d53d93a67331811d01590176c30f44d66487d7c3
+Source: EXECUTIVE_BASELINE.md#12-complete-engagement-transition sha256=e50b4ad70451fe84882053bc0dffef6f6c0c806a5dba68ac9933aa79029fb935
 
 ## 12. Complete engagement transition
 
@@ -680,7 +680,7 @@ and of the Executive's exclusions (§8):
 | an unsupported or materially incomplete technical assessment | a capable evaluation is reactivated, or `indeterminate` is kept; Reviewer evidence is not rewritten |
 
 
-Source: EXECUTIVE_BASELINE.md#17-actor-binding-and-independence sha256=9ad9cfb92d3063085eecdd56d53d93a67331811d01590176c30f44d66487d7c3
+Source: EXECUTIVE_BASELINE.md#17-actor-binding-and-independence sha256=e50b4ad70451fe84882053bc0dffef6f6c0c806a5dba68ac9933aa79029fb935
 
 ## 17. Actor binding and independence
 
@@ -1034,7 +1034,7 @@ separation of severity, priority, boundary effect and disposition, and
 EXECUTIVE_BASELINE keeps the Reviewer and Executive instance (P6).
 
 
-Source: ASSURANCE.md#10-testing-evidence-composition sha256=5ebbcfce5b57bf9e58a73ca8982f2f2a19d6980916c3a176f6c4a2bebf7f8e65
+Source: ASSURANCE.md#10-testing-evidence-composition sha256=e4af8a6cc87fed82d787a8feb2f0fadaa4299b22df2623629542ce5e3408d390
 
 ## 10. Testing evidence composition
 
@@ -1381,7 +1381,7 @@ Provenance: rc.2 RF #result-conjunction and
 conservation accounting.
 
 
-Source: ASSURANCE.md#foundation-to-law-assurance-and-testing sha256=5ebbcfce5b57bf9e58a73ca8982f2f2a19d6980916c3a176f6c4a2bebf7f8e65 rows=1/14 selected by the anchors this frame carries; the consumers paragraph of 14 items is omitted
+Source: ASSURANCE.md#foundation-to-law-assurance-and-testing sha256=e4af8a6cc87fed82d787a8feb2f0fadaa4299b22df2623629542ce5e3408d390 rows=1/14 selected by the anchors this frame carries; the consumers paragraph of 14 items is omitted
 
 ### Foundation to law: assurance and testing
 
@@ -1478,7 +1478,7 @@ common discriminators to cases and logical-review checks, and its §6
 records dispositions.
 
 
-Source: EXECUTIVE_BASELINE.md#foundation-to-law sha256=9ad9cfb92d3063085eecdd56d53d93a67331811d01590176c30f44d66487d7c3 rows=10/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
+Source: EXECUTIVE_BASELINE.md#foundation-to-law sha256=e50b4ad70451fe84882053bc0dffef6f6c0c806a5dba68ac9933aa79029fb935 rows=10/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
 
 ### Foundation to law
 

@@ -1576,20 +1576,24 @@
    "source_member": "DESIGN_MODULE_METHOD.md",
    "source_anchor": "#proportional-design-sequencing",
    "identifiers": "",
-   "disposition": "conserved",
-   "disposition_note": "conserved in full; the four definitions, both modes, counterfactual evidence, no prior gate where no material alternative remains, evidence not authority, one bounded design_reframe; the general proportionality relation is ACTIVATION \u00a76, pointed to",
-   "proposed_replacement": false,
+   "disposition": "superseded",
+   "disposition_note": "superseded in its repeated-surprise sentence, proposed and pending the product owner's acceptance, by DESIGN_MODULE \u00a75 Proportional design sequencing with ACTIVATION \u00a71 Feedback and diagnosis: repeated or cross-cutting material surprises are evidence for diagnosis and require one bounded design_reframe only where it establishes that the affected design cut is underconstrained; the rc.2 sentence \"Repeated or cross-cutting material surprises are evidence that the affected design cut is underconstrained and require one bounded `design_reframe`; retained code remains provisional evidence until that reframe is accepted.\" required a reframe where the realisation alone deviates from a decision-complete accepted design, against rc.2's own `realization_refactor` and its rule that a prior gate is disproportionate where no materially divergent architecture remains; the rest conserved: the four definitions, both modes, counterfactual evidence, no prior gate where no material alternative remains, evidence not authority; the general proportionality relation is ACTIVATION \u00a76, pointed to",
+   "proposed_replacement": true,
    "disposition_standing": "author_proposal",
    "acceptance": "ticket_decision_pending",
    "predecessor_sha256": "207cdc03348aaa6ae0cc71832f202e4e44af053967b4fae6b379e7167606b021",
    "successor_loci": [
     {
      "locus": "DESIGN_MODULE.md#proportional-design-sequencing",
-     "sha256": "79c089f7cfd8d5843da7227a4df5cc719e4bb8e0fdae80ac49535f452445a22f"
+     "sha256": "24daa807c901840779e28a438cd8c3ebfcdcde5e33c1b6fe7778fbe48ac95ff4"
     },
     {
      "locus": "ACTIVATION.md#6-cost-and-proportionality",
      "sha256": "f0ccace4b75ed2e840b58f672d12163873b9db2f08d59725f94b3ffa353e4834"
+    },
+    {
+     "locus": "ACTIVATION.md#construction-relation",
+     "sha256": "9bd5828006ced4ad89d8a1d6259dc1af051149d25b4728ffab028df9b3fab149"
     }
    ],
    "modal_conversion": false,
@@ -8452,16 +8456,20 @@
    "source_member": "SPEC_METHOD.md",
    "source_anchor": "#spec-drivenness-litmus",
    "identifiers": "",
-   "disposition": "conserved",
-   "disposition_note": "conserved; all thirteen conditions",
-   "proposed_replacement": false,
+   "disposition": "superseded",
+   "disposition_note": "superseded in its eleventh condition, proposed and pending the product owner's acceptance, by SPEC_METHOD \u00a72 Spec-drivenness litmus with \u00a74 Universal intake triage: discovered drift fails the litmus where triage locates its cause in the constitutional source and that source is not repriced; the rc.2 condition \"Drift is discovered, but the constitutional source is not repriced.\" required repricing where the realisation alone deviates from sufficient law, against rc.2's own `realization_refactor`; the other twelve conditions conserved",
+   "proposed_replacement": true,
    "disposition_standing": "author_proposal",
    "acceptance": "ticket_decision_pending",
    "predecessor_sha256": "b8364e48b3cf04cfed017712477ae5d89f6079d47bb50b1a7202ad9e2a6a484b",
    "successor_loci": [
     {
      "locus": "SPEC_METHOD.md#spec-drivenness-litmus",
-     "sha256": "deffd0dd0e642e6f774b0d8b8019552e9fe250d95c5f23eb92803f0fae24d06b"
+     "sha256": "9449c27c527bf4b176fab0588ddd79bf0d0a521535d008544ea800ad2b1f6ca8"
+    },
+    {
+     "locus": "SPEC_METHOD.md#universal-intake-triage",
+     "sha256": "761778f52a08ad50a0fa93b7a785bd336653a7f4e433041810c3cd774530eb62"
     }
    ],
    "modal_conversion": false,
@@ -9823,16 +9831,20 @@
    "source_member": "SPEC_METHOD.md",
    "source_anchor": "#verification-layers",
    "identifiers": "",
-   "disposition": "conserved",
-   "disposition_note": "conserved; the profile-flavoured example (compositional graphs, Fragment types, discovery workflow) generalised to a reusable composable unit; \"the chain\" located at SPEC_METHOD \u00a72 Constitutional chain; the family table under Foundation to law is new",
-   "proposed_replacement": false,
+   "disposition": "superseded",
+   "disposition_note": "superseded in its scenario-failure sentence, proposed and pending the product owner's acceptance, by ASSURANCE \u00a71 Verification layers with \u00a712 Counterexample localisation: a failing scenario shows that actual behaviour disagrees with the scenario's expected outcome, and localisation locates which surface is wrong as far as the evidence supports; the rc.2 sentence \"When a scenario fails, the gap is between the system's actual behavior and its claimed capability \u2014 not between the spec's words and the spec's other words.\" excluded a wrong scenario expectation or observation, against the common construction requirement that diagnosis distinguish them; the rest conserved: the profile-flavoured example (compositional graphs, Fragment types, discovery workflow) generalised to a reusable composable unit; \"the chain\" located at SPEC_METHOD \u00a72 Constitutional chain; the family table under Foundation to law is new",
+   "proposed_replacement": true,
    "disposition_standing": "author_proposal",
    "acceptance": "ticket_decision_pending",
    "predecessor_sha256": "d8641fa248726bc1bc2fe0786f94d27400d883e704a7a2eff6af237d2b334ea4",
    "successor_loci": [
     {
      "locus": "ASSURANCE.md#1-verification-layers",
-     "sha256": "eec74f15586b751a5eb0d856270d64a789825e0623c733cd810cb23254b4ca65"
+     "sha256": "e3ec9f9e1d22dfcdabd267b3a6d8b86b7b1425991914ed23bfbc5de06b87147f"
+    },
+    {
+     "locus": "ASSURANCE.md#12-counterexample-localisation",
+     "sha256": "afc059eb5a71c7f1fc73ae8a4a338803cdf1f42e4101e216f26d5a077410759f"
     }
    ],
    "modal_conversion": false,
@@ -10137,7 +10149,7 @@
    "successor_loci": [
     {
      "locus": "SPEC_METHOD.md#trace-closure-and-anti-drift",
-     "sha256": "0c645b225b30a928ca801e9f0dab842b69329ec2d3ac80808485a53f4147efe5"
+     "sha256": "1bbb93d94e0c5bc440fc4670d6f9e28605bfca79cbdcfc105e100365ceb8cf43"
     }
    ],
    "modal_conversion": false,
@@ -10163,7 +10175,7 @@
    "successor_loci": [
     {
      "locus": "SPEC_METHOD.md#trace-closure-and-anti-drift",
-     "sha256": "0c645b225b30a928ca801e9f0dab842b69329ec2d3ac80808485a53f4147efe5"
+     "sha256": "1bbb93d94e0c5bc440fc4670d6f9e28605bfca79cbdcfc105e100365ceb8cf43"
     }
    ],
    "modal_conversion": true,
@@ -10192,7 +10204,7 @@
    "successor_loci": [
     {
      "locus": "SPEC_METHOD.md#trace-closure-and-anti-drift",
-     "sha256": "0c645b225b30a928ca801e9f0dab842b69329ec2d3ac80808485a53f4147efe5"
+     "sha256": "1bbb93d94e0c5bc440fc4670d6f9e28605bfca79cbdcfc105e100365ceb8cf43"
     }
    ],
    "modal_conversion": true,
@@ -10213,7 +10225,7 @@
    "source_anchor": "#drift-signals",
    "identifiers": "",
    "disposition": "superseded",
-   "disposition_note": "superseded in its tenth signal, proposed and pending the product owner's acceptance, by SPEC_METHOD \u00a72 Trace closure and anti-drift, Drift signals, with \u00a74 Change classes: a gap not expressible in current requirements re-enters at the layer its change class names, Requirements or upstream; the rc.2 signal \"If a real use case reveals a gap not expressible in current requirements, a new intent is needed, not a code hack.\" sent a requirement-level gap with stable direction to Intent, against rc.2's own `requirement_reprice`; the other nine signals conserved",
+   "disposition_note": "superseded in its persistent-delta and tenth signals, proposed and pending the product owner's acceptance, by SPEC_METHOD \u00a72 Trace closure and anti-drift, Drift signals, with \u00a74 Universal intake triage and Change classes: persistent delta is drift whose cause triage diagnoses among the code, the requirement and design stack, the predictive model and the observation, and a gap not expressible in current requirements re-enters at the layer its change class names, Requirements or upstream; the rc.2 signal \"If events and projection reveal persistent delta, either code is wrong or the requirement/design stack is stale.\" left out a wrong prediction or observation, against the common construction requirement that diagnosis distinguish them; the rc.2 signal \"If a real use case reveals a gap not expressible in current requirements, a new intent is needed, not a code hack.\" sent a requirement-level gap with stable direction to Intent, against rc.2's own `requirement_reprice`; the other eight signals conserved",
    "proposed_replacement": true,
    "disposition_standing": "author_proposal",
    "acceptance": "ticket_decision_pending",
@@ -10221,7 +10233,11 @@
    "successor_loci": [
     {
      "locus": "SPEC_METHOD.md#trace-closure-and-anti-drift",
-     "sha256": "0c645b225b30a928ca801e9f0dab842b69329ec2d3ac80808485a53f4147efe5"
+     "sha256": "1bbb93d94e0c5bc440fc4670d6f9e28605bfca79cbdcfc105e100365ceb8cf43"
+    },
+    {
+     "locus": "SPEC_METHOD.md#universal-intake-triage",
+     "sha256": "761778f52a08ad50a0fa93b7a785bd336653a7f4e433041810c3cd774530eb62"
     }
    ],
    "modal_conversion": false,
@@ -12594,16 +12610,20 @@
    "source_member": "STDO_REFERENCE_FRAME_BASELINE.md",
    "source_anchor": "#failure-classification",
    "identifiers": "",
-   "disposition": "conserved",
-   "disposition_note": "conserved; all twenty-eight rows; the row on a compression, summary, generated map or prior result refers to ACTIVATION \u00a75 The workspace and an actor's account, which states its rule for tier 1",
-   "proposed_replacement": false,
+   "disposition": "superseded",
+   "disposition_note": "superseded in its first row, proposed and pending the product owner's acceptance, by EXECUTIVE_BASELINE \u00a720 Failure classification with ACTIVATION \u00a71 Feedback and diagnosis: a coherent capability other than the selected Product is a Product-frame falsification whose cause diagnosis locates, re-entry following that cause; the rc.2 first diagnosis \"Product-frame falsification and Product re-entry\" sent a realisation that alone deviates from a sufficient Product, requirement and design stack to Product re-entry, against rc.2's own `realization_refactor`; the other twenty-seven rows conserved; the row on a compression, summary, generated map or prior result refers to ACTIVATION \u00a75 The workspace and an actor's account, which states its rule for tier 1",
+   "proposed_replacement": true,
    "disposition_standing": "author_proposal",
    "acceptance": "ticket_decision_pending",
    "predecessor_sha256": "71ef75eb3b57976f3e4567987954e0b9b0dce1bc72d44bdd8be5728f8df9ae14",
    "successor_loci": [
     {
      "locus": "EXECUTIVE_BASELINE.md#20-failure-classification",
-     "sha256": "a09b88646005351a8d0ba65816055e9b8396d123362949927464a2318b419626"
+     "sha256": "ecb6ca2174463e055fa7ed6de47db899453b011a678275b12ca9458dd5cfac8c"
+    },
+    {
+     "locus": "ACTIVATION.md#construction-relation",
+     "sha256": "9bd5828006ced4ad89d8a1d6259dc1af051149d25b4728ffab028df9b3fab149"
     }
    ],
    "modal_conversion": false,
@@ -17901,17 +17921,17 @@
   }
  ],
  "row_count": 650,
- "semantic_sha256": "dcb996fb3d53e50440c0da5bc82da0b5e0fec7aa472c6a56e04d7588cbc824a9",
+ "semantic_sha256": "74a2934156c3468c63e6a7e1ce19cac3787c012e6694fab260fe644476185ba2",
  "counts": {
   "modal_conversion": 124,
   "assessed": 184,
   "unresolved_predecessor_anchor": 17,
   "unresolved_successor_locus": 0,
-  "proposed_replacement": 24,
+  "proposed_replacement": 28,
   "by_disposition": {
-   "conserved": 607,
+   "conserved": 603,
    "not": 19,
-   "superseded": 24
+   "superseded": 28
   }
  }
 }

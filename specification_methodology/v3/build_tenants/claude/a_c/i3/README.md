@@ -139,7 +139,7 @@ run from the clean root, is kept beside the iteration 5 returns
 | `axiomatic-program.json` | `5fea30ce62bbc8eea3b1904712d47ae0feb23ac0d8d4b49174dc8c1ea74b3b22` |
 | `bindings.json` | `816d211c2a92c3e3d2e8adc13d07fb1ae5ecc9fb8b8b4ba593b6f7f6009e201f` |
 | `coverage.json` | `e31cca44bc799099d7c2e4897e6e61ce8a20476238c2ecf852aef813b478d4a5` |
-| `consumers.json` | `95168da3923e0c4c95473fb499f587ee1e881611d5470d40d3edcd04c9a676cc` |
+| `consumers.json` | `aa5d19bb036cf593cb22e6c28cd8a96cad8e2cbbda1fc1c88e7581e887d7c8f1` |
 | `validation-report.json` | `735b9c1cbb3f05b1dcbdda78d1b491fbf041c90c79a83a1d5be4f08be3d2434e` |
 | `logical-constraint-map.json` | `b04951653f1890070d7055392c8a9eadb7ffd2de73aedde4b3069f221e3c264a` |
 | `projections/projection-authority-kinds-materialized.json` | `2a4955cdcdb204b1b6bf2fceaed33795d8a85896ba42f5106f9bfcf4fd72286a` |

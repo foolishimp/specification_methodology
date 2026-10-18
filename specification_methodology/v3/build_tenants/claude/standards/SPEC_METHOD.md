@@ -326,7 +326,9 @@ The work is not spec-driven if any of these holds (P2, P6; rc.2
 9. A live domain artifact is rewritten in place after becoming part of the
    live constitutional surface.
 10. A capability claim has no operational evidence.
-11. Drift is discovered but the constitutional source is not repriced.
+11. Drift is discovered, [Universal intake triage](#universal-intake-triage)
+    locates its cause in the constitutional source, and that source is not
+    repriced.
 12. A major ambiguity at a constitutional or realisation boundary is neither
     recorded nor explicitly governed.
 13. A material product, module, function, application, runtime surface or
@@ -597,9 +599,11 @@ Code behaviour with no design owner means the design has already drifted.
 Shipping code or tests that cannot trace back out to live requirement and
 design authority are ungoverned product surface. Tests that validate
 implementation habit rather than requirement truth lock in drift. Events
-and projection that reveal persistent delta mean either the code is wrong
-or the requirement and design stack is stale. A capability with
-requirements and design but no scenario has unverified operational meaning.
+and projection that reveal persistent delta signal drift whose cause
+[Universal intake triage](#universal-intake-triage) diagnoses: the code, the
+requirement and design stack, the predictive model or the observation. A
+capability with requirements and design but no scenario has unverified
+operational meaning.
 A requirement treated as a product feature when it is a guarantee,
 governance rule or verification obligation is misclassified. A live
 constitutional artifact corrected by in-place mutation rather than
@@ -2010,7 +2014,7 @@ POSTING_GUIDE.md, whose UP-012 the member map places here, where
 | #probabilistic-work-boundary | conserved; restated as the work-boundary object and P0's commitment; the profile binding to one traversal is generalised and kept by PROFILES §2 | FOUNDATIONS §2 Work boundary, §3 P0; ACTIVATION §1 consumes it |
 | #recursive-product-taxonomy | conserved; the eight objects with their concept identities, the governing rules and the compiler analogy are restated as ontology | FOUNDATIONS §2 Product lineage objects; §6 here consumes them |
 | #manifesto | conserved | §2 Manifesto |
-| #spec-drivenness-litmus | conserved | §2 Spec-drivenness litmus |
+| #spec-drivenness-litmus | superseded in its eleventh condition, proposed and pending the product owner's acceptance: discovered drift fails the litmus where intake triage locates its cause in the constitutional source and that source is not repriced (§4 Universal intake triage), where rc.2 required repricing the constitutional source for any discovered drift; the other twelve conditions conserved | §2 Spec-drivenness litmus |
 | #process-constitution | conserved; the definition overlay's binding is PRODUCT_DEFINITION §1; the `how.build_tenants` entries are written "tenant registry entries" | §1 Process constitution |
 | #constitutional-chain | superseded in its repricing sentence, proposed and pending the product owner's acceptance: a constitutional insufficiency re-enters at the layer its change class names (§4 Change classes), generating new goals or intent where the work wave, direction or scope changes, where rc.2 generated new goals or intent for every constitutional insufficiency; the rest conserved: the WHAT and HOW bindings are PRODUCT_DEFINITION §8; one WHAT realised by independent tenants whatever the layout and derivative tenant-local realisation are restated in §11 rule 1, to which §2 refers; §11 rule 4 applies by reference the law of EVALUATION §6 that conforming tenants need not behave identically outside the contract, which is new in that member and has no rc.2 clause | §2 Constitutional chain; §11 |
 | #sprint-execution-boundary | conserved; mechanics at TICKETS §3 | §4 Sprint execution boundary |
@@ -2053,7 +2057,7 @@ POSTING_GUIDE.md, whose UP-012 the member map places here, where
 | #trace-closure-and-anti-drift-rule | conserved | §2 Trace closure and anti-drift |
 | #ownership | conserved | §2 Trace closure and anti-drift, Ownership |
 | #downstream-closure | conserved | §2 Trace closure and anti-drift, Downstream closure |
-| #drift-signals | superseded in its tenth signal, proposed and pending the product owner's acceptance: a gap not expressible in current requirements re-enters at the layer its change class names (§4 Change classes), Requirements or upstream, where rc.2 required a new intent; the other nine signals conserved | §2 Trace closure and anti-drift, Drift signals |
+| #drift-signals | superseded in its persistent-delta and tenth signals, proposed and pending the product owner's acceptance: persistent delta that events and projection reveal is drift whose cause intake triage diagnoses among the code, the requirement and design stack, the predictive model and the observation (§4 Universal intake triage), where rc.2 named only the code and the stack; a gap not expressible in current requirements re-enters at the layer its change class names (§4 Change classes), Requirements or upstream, where rc.2 required a new intent; the other eight signals conserved | §2 Trace closure and anti-drift, Drift signals |
 | #live-surface-immutability | conserved | §2 Live surface immutability |
 | #fundamental-migration-rule | conserved; for an inherited requirement the four classes of inherited constitutional material are stated as the legacy classifications of §2, adopted being Active, so that one requirement is classified once; their relation to the successor dispositions of RELEASE §9 is stated (both new, with their purpose stated where they are written) | §7 Fundamental migration |
 | #transformation-wave-rule | conserved | §7 Transformation wave |

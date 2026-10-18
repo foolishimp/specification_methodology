@@ -43,9 +43,9 @@ Routes, in order:
 7. [DESIGN_MODULE.md#foundation-to-law](../DESIGN_MODULE.md#foundation-to-law)
 8. [SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity](../SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity)
 
-Size of this frame: 102529 bytes.
+Size of this frame: 102884 bytes.
 
-Source: DESIGN_MODULE.md#5-ontology-first-design sha256=7c081d8c49aabb128831ba46a9b7e0df6997d14a10bbf835ff04727da0bb9b57
+Source: DESIGN_MODULE.md#5-ontology-first-design sha256=9e2642d51d0b024a448fe7910dcb323fb3f3bb2a003ad33c27c39a5dda625220
 
 ## 5. Ontology-first design
 
@@ -159,10 +159,15 @@ exposes previously hidden architectural ambiguity, the boundary switches to
 design-gated sequencing at the smallest causally closed affected decision
 set rather than retroactively invalidating unrelated work. Serial
 implementation repairs do not establish design acceptance. Repeated or
-cross-cutting material surprises are evidence that the affected design cut
-is underconstrained and require one bounded `design_reframe` (SPEC_METHOD
-§4 Change classes); retained code remains provisional evidence until that
-reframe is accepted (P6, P2).
+cross-cutting material surprises are evidence for diagnosis under
+[ACTIVATION §1 Feedback and diagnosis](../ACTIVATION.md#construction-relation),
+not a diagnosis. Where the diagnosis establishes that the affected design
+cut is underconstrained, so that `decision_complete(B)` fails, one bounded
+`design_reframe` follows (SPEC_METHOD §4 Change classes), and retained code
+remains provisional evidence until that reframe is accepted. Where the
+accepted design is decision-complete and the realisation alone deviates
+from it, the repair is a `realization_refactor`, however often the surprise
+recurs (P6, P2).
 
 This applies the governing proportionality law: a prior design gate is
 warranted when it removes material semantic ambiguity whose alternatives
@@ -702,7 +707,7 @@ accepted design; it preserves, but need not be enumerated by, the
 Ontology (P6; SPEC_METHOD §2 Trace closure and anti-drift).
 
 
-Source: DESIGN_MODULE.md#7-ontology-and-three-view-design-gate sha256=7c081d8c49aabb128831ba46a9b7e0df6997d14a10bbf835ff04727da0bb9b57
+Source: DESIGN_MODULE.md#7-ontology-and-three-view-design-gate sha256=9e2642d51d0b024a448fe7910dcb323fb3f3bb2a003ad33c27c39a5dda625220
 
 ## 7. Ontology and three-view design gate
 
@@ -1151,7 +1156,7 @@ unchanged failed construction relation as if iteration alone could close
 it (P2).
 
 
-Source: SPEC_METHOD.md#change-classes sha256=688368839bd3f9e49f3d875b75a68024379235d5612004bd91f3fa1985560c07
+Source: SPEC_METHOD.md#change-classes sha256=a9af987337606202ae4feccfbf807e3c8910685ec3e02520cf42c8f9cce65300
 
 ### Change classes
 
@@ -1499,7 +1504,7 @@ Provenance: rc.2 RF #result-conjunction and
 conservation accounting.
 
 
-Source: DESIGN_MODULE.md#foundation-to-law sha256=7c081d8c49aabb128831ba46a9b7e0df6997d14a10bbf835ff04727da0bb9b57 rows=3/26 selected by the anchors this frame carries; the consumers paragraph of 26 items is omitted
+Source: DESIGN_MODULE.md#foundation-to-law sha256=9e2642d51d0b024a448fe7910dcb323fb3f3bb2a003ad33c27c39a5dda625220 rows=3/26 selected by the anchors this frame carries; the consumers paragraph of 26 items is omitted
 
 ### Foundation to law
 
@@ -1571,7 +1576,7 @@ are choices this profile, the adopting Product or another owner makes, so
 no profile choice is presented as following from the foundations (P6, P2).
 
 
-Source: SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity sha256=688368839bd3f9e49f3d875b75a68024379235d5612004bd91f3fa1985560c07 rows=1/10 selected by the anchors this frame carries; the consumers paragraph of 10 items is omitted
+Source: SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity sha256=a9af987337606202ae4feccfbf807e3c8910685ec3e02520cf42c8f9cce65300 rows=1/10 selected by the anchors this frame carries; the consumers paragraph of 10 items is omitted
 
 ### Foundation to law: change management and ambiguity
 

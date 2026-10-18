@@ -1,7 +1,7 @@
 #!/bin/bash
 # Regenerate the a_c/i3 checker artifacts at the freeze: materialise the pinned checker, run validate and
-# the eight projections, copy the outputs into a_c/i3, refresh the artifact digests in a_c/i3/README.md,
-# then rerun the controls. Usage, from the tenant root: bash qualification/C3-ITER4/tools/freeze_ac.sh <scratch dir>
+# the projections, copy the outputs into a_c/i3, rerun the controls and the consumers step, then refresh the
+# artifact digests in a_c/i3/README.md. Usage, from the tenant root: bash qualification/C3-ITER4/tools/freeze_ac.sh <scratch dir>
 set -eo pipefail  # a failed step or control fails the freeze; the pipes into tail hide no exit status
 SP=$1; mkdir -p "$SP"
 AI=$(bash qualification/C3-ITER3/tools/verify_ai.sh "$SP" | tail -1); AC="$AI/build_tenants/core/code/ac.py"
@@ -11,6 +11,9 @@ cp "$SP/out/validation-report.json" a_c/i3/validation-report.json
 cp "$SP/out/logical-constraint-map.json" a_c/i3/logical-constraint-map.json
 cp "$SP/out"/projections/*.json a_c/i3/projections/
 cp "$SP/out/commands.log" a_c/i3/checker-commands.log
+python3 -I qualification/C3-ITER4/tools/ac_controls.py "$SP" qualification/C3-ITER5/returns/ac_controls.json | tail -8
+python3 -I qualification/C3-ITER4/tools/consumers.py
+# the artifact digests last, after consumers.py has regenerated consumers.json, so one run leaves no stale digest
 python3 -I - <<'PY'
 import hashlib, re
 p='a_c/i3/README.md'; s=open(p).read()
@@ -21,5 +24,3 @@ assert re.search(pat, s), 'artifact table not found'
 new=re.sub(pat, r'\1'+rows+'\n', s, count=1)
 open(p,'w').write(new); print('README artifact table', 'refreshed' if new!=s else 'unchanged', len(files), 'files')
 PY
-python3 -I qualification/C3-ITER4/tools/ac_controls.py "$SP" qualification/C3-ITER5/returns/ac_controls.json | tail -8
-python3 -I qualification/C3-ITER4/tools/consumers.py
