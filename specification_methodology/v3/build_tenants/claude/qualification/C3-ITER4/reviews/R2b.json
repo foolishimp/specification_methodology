@@ -1,0 +1,178 @@
+{
+ "review": "R2b",
+ "reviewer": "sonnet, same-family nonauthor, fresh context",
+ "items": [
+  {
+   "item": "port 1",
+   "fidelity": "adapted_beyond_record",
+   "owner": "ok",
+   "meaning": "kept",
+   "note": "Record names four columns; receiver has five (Pillar, with a ten-pillar definition). Also unrecorded: the trace paragraph, family and placement definitions, reworded standing sentences. Standing, arguments-not-proofs and added-choice determinations kept."
+  },
+  {
+   "item": "port 2",
+   "fidelity": "adapted_beyond_record",
+   "owner": "ok",
+   "meaning": "kept",
+   "note": "Recorded: scoping to recovered and independent commitments, standing terms, Distinction column kept. Unrecorded: new opening sentence, 'finite capacity' gloss, 'each with its owner', reworded closing sentence, purpose sentence; owner sentence 55-56 not carried. Determination kept."
+  },
+  {
+   "item": "port 3",
+   "fidelity": "adapted_beyond_record",
+   "owner": "defect",
+   "meaning": "kept",
+   "note": "Direction, loss, no-transfer and no-authority sentences carried with context names substituted. Unrecorded: Codex sentences 141-144 and 161-162 sit in FOUNDATIONS §2, which duplicates REFERENCE_FRAME §1; closing paragraph added; basis pins omitted. Owner defect: two sections state one determination."
+  },
+  {
+   "item": "port 4",
+   "fidelity": "adapted_beyond_record",
+   "owner": "ok",
+   "meaning": "kept",
+   "note": "Span sentence and quasi-inverse condition carried with symbols adapted. Unrecorded: Sigma_contract changed to Σ, elaborated natural-isomorphism wording with undefined 'the pair', restated category and functor items, PRODUCT_DEFINITION §5 disambiguation, unordered-rungs sentence. Determination kept."
+  },
+  {
+   "item": "port 5",
+   "fidelity": "adapted_beyond_record",
+   "owner": "ok",
+   "meaning": "kept",
+   "note": "Recorded: link rebasing, Source-line format, prefaces, key subset, refusals. Unrecorded: rows=k/n partial family-table copies; frame id and task fields; Acquisition adds derived-surface-first order, stale fallback and outcome naming. Acquisition determination kept; generator and frames are instruments."
+  },
+  {
+   "item": "port 6",
+   "fidelity": "not_comparable",
+   "owner": "ok",
+   "meaning": "instrument",
+   "note": "Pattern port; the record defers its differences to returns/C2.md, which is not in the packet. Only donor lines 6-9 and 12-13 are confirmable as verbatim; lines 11 and 94-95 are not in the receiver excerpt. Instrument, not law."
+  },
+  {
+   "item": "C3",
+   "fidelity": "adapted_beyond_record",
+   "owner": "ok",
+   "meaning": "instrument",
+   "receiver": "more",
+   "note": "More: adds identifiers, disposition_note, proposed_replacement, a constant acceptance field and summary counts, and limits modal_conversion to conserved rows. All recorded fields are present. Tool and sidecar record, not law."
+  },
+  {
+   "item": "C4",
+   "fidelity": "adapted_as_recorded",
+   "owner": "ok",
+   "meaning": "instrument",
+   "receiver": "as_recorded",
+   "note": "As recorded: owner locus with current hash, consumers by link, support cites unless a reading records otherwise, unresolved semantics stated in basis. Minor extras: statement prefix, resolves flags, counts. Donor inputs and result_mapping are not carried."
+  },
+  {
+   "item": "C5",
+   "fidelity": "adapted_beyond_record",
+   "owner": "ok",
+   "meaning": "instrument",
+   "receiver": "less",
+   "note": "Less: the log shows holds_all false, so validate-positive and project-positive fail and byte-identical reproduction is not shown; identity-adverse cannot fail. Also runs seven controls with three mutants where the record names three controls."
+  }
+ ],
+ "findings": [
+  {
+   "id": "R2b-01",
+   "item": "port 1",
+   "severity": "Medium",
+   "what": "The receiving table has a fifth Pillar column with a ten-pillar definition and a trace paragraph, none of which the source or the record names; the record says this line uses four columns.",
+   "quote": "The table then has one row per consequence, in five columns:",
+   "smallest_repair": "Name the Pillar column, trace paragraph and placement rule in the record as this line's own additions with reasons, or correct the record to five columns."
+  },
+  {
+   "id": "R2b-02",
+   "item": "port 2",
+   "severity": "Low",
+   "what": "Port 2 differs from source 48-65 in ways the record does not name: a new opening sentence, a gloss on finite capacity, 'each with its owner', a reworded closing sentence, a purpose sentence, and no counterpart to the owner sentence at 55-56.",
+   "quote": "Particular method rules need these premises plus their stated domain and policy choices, each with its owner",
+   "smallest_repair": "Add these differences to the record with reasons, or remove them; state that source lines 55-56 are not carried."
+  },
+  {
+   "id": "R2b-03",
+   "item": "port 3",
+   "severity": "Medium",
+   "what": "FOUNDATIONS §2 carries Codex sentences verbatim (source 141-144, 161-162) and near verbatim (130-132) while the record calls that rule this line's own text, and REFERENCE_FRAME §1 repeats 130-132 and 155-156, so one determination has two owners.",
+   "quote": "An activation binds each member's distinct coordinates in its selected complete governing basis; equal cut selection does not mean equal member coordinates.",
+   "smallest_repair": "Keep the rule only in FOUNDATIONS §2 and record those sentences in its cone with source lines; reduce the REFERENCE_FRAME declaration to direction, loss and a link."
+  },
+  {
+   "id": "R2b-04",
+   "item": "port 3",
+   "severity": "Low",
+   "what": "REFERENCE_FRAME §1 adds rules the record does not name (refinements map back to their owner; profile or product frames are not imported) and omits the source and target basis pins and the review-carrier and role-label sentences.",
+   "quote": "names its owner in this table and maps back to it",
+   "smallest_repair": "Record the added rules and the omissions with reasons, or move the rules to FOUNDATIONS §2."
+  },
+  {
+   "id": "R2b-05",
+   "item": "port 3",
+   "severity": "Low",
+   "what": "FOUNDATIONS §3 says PROFILES §1 owns 'the import rule' while decision D7 and REFERENCE_FRAME §1 place the import rule in FOUNDATIONS §2, so the term resolves to two owners.",
+   "quote": "PROFILES: §1 owns the import rule that every profile table cites in its premise column",
+   "smallest_repair": "Rename the profile rule (for example the family-import rule) or point it to FOUNDATIONS §2, so 'import rule' has one owner."
+  },
+  {
+   "id": "R2b-06",
+   "item": "port 4",
+   "severity": "Low",
+   "what": "EVALUATION §6 departs from source 249-258 beyond the record: Sigma_contract becomes Σ, the quasi-inverse condition is elaborated with an undefined 'the pair', the category and functor items the record says are not ported are restated, and a PRODUCT_DEFINITION §5 disambiguation and an unordered-rungs rule are added.",
+   "quote": "natural isomorphisms between each composite of the pair and the identity functor, on a stated domain",
+   "smallest_repair": "Record these differences with reasons, define or drop 'the pair', and refer to FOUNDATIONS §4 Formal fragment instead of restating its items."
+  },
+  {
+   "id": "R2b-07",
+   "item": "port 5",
+   "severity": "Medium",
+   "what": "Frames contain partial family-table copies (rows=k/n) although the record and the generator docstring say frames copy owner bytes with only links rebased, and the same preface says each excerpt is copied byte for byte.",
+   "quote": "a family table of which only the k rows that cite a section this frame carries are copied",
+   "smallest_repair": "Record the row filter and its reason, document and test it in generate_frames.py, and say in the preface that rows=k/n excerpts are not byte copies; or copy whole tables."
+  },
+  {
+   "id": "R2b-08",
+   "item": "port 5",
+   "severity": "Low",
+   "what": "The generator's frame specification has id and task fields the record's key list omits, and Acquisition adds a derived-surface-first order with stale fallback and outcome naming and drops the 'no universal sufficiency claim' sentence, while the record says only 'acquisition rule adapted'.",
+   "quote": "Reads the frame specifications in standards/frames/FRAME_INPUTS.json (frame id, task, scope, ordered owner#anchor routes).",
+   "smallest_repair": "Name id and task, the acquisition additions and the omitted sentence in the record, each with its reason."
+  },
+  {
+   "id": "R2b-09",
+   "item": "port 6",
+   "severity": "Low",
+   "what": "The record says donor lines 11 and 94-95 are copied verbatim, but the receiver excerpt (lines 1-95) shows TEMPLATE = Path(__file__).resolve() in place of line 11 and ends before the write and print lines, so the claim cannot be confirmed.",
+   "quote": "TEMPLATE = Path(__file__).resolve()",
+   "smallest_repair": "Show the receiving lines for donor 11 and 94-95 in the return, or correct the verbatim list to lines 6-9 and 12-13."
+  },
+  {
+   "id": "R2b-10",
+   "item": "C3",
+   "severity": "Medium",
+   "what": "frontier_review.py raises modal_conversion only for conserved rows with a non-empty locus list, narrower than the record, so a superseded row that drops must or shall gets no flag for the meaning judgment I4-04 takes from these rows, and it adds fields the record does not name.",
+   "quote": "'modal_conversion': bool(pmodal and loci and not smodal and disp == 'conserved')",
+   "smallest_repair": "Drop the disposition condition or record it with its reason, and name identifiers, disposition_note, proposed_replacement and acceptance in the record."
+  },
+  {
+   "id": "R2b-11",
+   "item": "C3",
+   "severity": "Low",
+   "what": "frontier_review.py and consumers.py hash a section as the text up to the next heading of any level, so a locus hash omits subsections, unlike the one section rule of generate_frames.py (next heading of equal or higher level).",
+   "quote": "anchor -> text under the heading up to the next heading of any level",
+   "smallest_repair": "Use the generate_frames.py section rule for locus hashes, or record the shorter extent and why it suffices."
+  },
+  {
+   "id": "R2b-12",
+   "item": "C5",
+   "severity": "High",
+   "what": "ac_controls.json records holds_all false: validate-positive (report and map not byte-identical to a_c/i3) and project-positive (all eight projections exit 1) fail, so the recorded reproduction of the frozen projections is not shown and the dropped-clause control has no passing baseline.",
+   "quote": "\"holds_all\": false",
+   "smallest_repair": "Find why checker output differs from the frozen files, fix program or control, rerun to holds_all true at freeze, and give the dropped-clause control a passing baseline."
+  },
+  {
+   "id": "R2b-13",
+   "item": "C5",
+   "severity": "Medium",
+   "what": "identity-adverse appends bytes to a copy of ac.py and checks only that its hash differs from a constant hard-coded in the script, so it does not run the identity check, cannot fail, and tampers a checker copy rather than a member digest as the record states.",
+   "quote": "ctl('identity-adverse', 'a tampered copy fails the same digest comparison', sha(tam) != RECORDED_AC, sha(tam))",
+   "smallest_repair": "Feed a tampered member digest to the identity check the verifier runs and expect refusal; read the expected digest from A_C_DEPENDENCY instead of a constant."
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+**1. `ev-101` and `ev-102`**
+- Cause is not established.
+- Cause comes only from an admitted causal claim under competent authority and evidence. Timestamp, adjacency, a common subject and a shared actor do not create it.
+- The projection's `causally_precedes_event(ev-101, ev-102)` is therefore not an admitted cause edge. A projection mints no cause.
+- Cause would be established by a `RelationClaim` of kind `causally_precedes_event`. That claim needs claimant authority and evidence. It must pass the whole admission sequence:
+  - `claim_admission` judgment `admitted`;
+  - an admitting event with `event_admission` `admitted`;
+  - the materialised relation;
+  - the successor frontier;
+  - the semantic cut with `semantic_cut_admission` `admitted`.
+  - Acyclicity in `G_evt_cause` must also hold.
+- Predicate: "cause from `ev-101` to `ev-102` is established". Nothing admitted supports it, so it is not `satisfied`.
+- If a claim were submitted without authority and evidence, the result is `hold` plus `unresolved_cause`, which maps to `indeterminate`.
+- The method does not say what core value to give a bare edge that no claim ever backed. I treat it as not admitted and as unresolved cause.
+
+**2. `ev-103`**
+- The operator's edit is not lawful. Admitted events are immutable, and identity binds the payload digest.
+- Editing the payload under the same id leaves a digest mismatch with the admitted event. The edited record is not the admitted fact.
+- No event carries the edit's authority, so the edit has no admitted standing.
+- Predicate: "`ev-103` is the unchanged admitted fact". The digest mismatch is the counterexample, so this is `falsified`.
+- A lawful correction keeps `ev-103` unchanged and adds a new event with its own id.
+- The new event is linked by `corrects_event(new, ev-103)`. It is admitted through a claim, judgment, event, judgment, relation, successor frontier and cut.
+- The successor frontier is the old members plus the new event once. A prior projection does not silently advance.
+- The correction changes later projection only through an explicit selection law. It does not delete, rewrite or re-identify `ev-103`.
+- The corrected value is not given in the task, so I do not supply one. Until a selection law is applied, the frontier carries `competing_lineage`.
+
+**3. `L-9`**
+- The edge is not lawful.
+- AC-004 and the closed relation table decide. `causally_precedes_occurrence` has source `Occurrence` and target `Occurrence`. Its source here is a `FrameworkEvent`, which is a wrong-sort source.
+- This is a structural defect in the edge under judgment, so the cause is `constraint`:
+  - the qualifier cause is `refuse_wrong_type`;
+  - the stop is `refusal(constraint)`;
+  - the core member is `falsified`;
+  - the decision is `refused(constraint)`.
+- The wrong-sort edge is the counterexample.
+- An event-to-event cause would use `causally_precedes_event`. This still needs an admitted claim.
+- Which repair is intended is not stated, so I do not choose one.
+
+**4. The reorder policy**
+- The coordinate `observed_at` may order eligible facts so a projection can select current truth, latest first.
+- That is lawful only if its comparison law, basis and admitting authority are explicit, and the selection runs over a complete frontier. Latest-only summaries do not prove completeness.
+- It may not create semantic, admission, causal or decision authority.
+- Treating the event with the greatest `observed_at` as the decision that a pending reorder is approved is therefore unlawful. Approval needs a judgment by an owner-issued authority.
+- Greatest `observed_at` also does not make that event a cause of anything.
+
+**5. Stopped occurrences**
+- **`occ-23`**
+  - Stop: `hold`, with residual `stale_frontier`, from the `frontier_projection` judgment.
+  - Core member: `indeterminate`.
+  - It is not `out_of_frame`, because the relations and capabilities are declared and exercised.
+  - Survives: the `stale_frontier` residual, which names the unobserved newest frontier as the evidence that would decide. Re-entry is to construct a new exact frontier and projection.
+- **`occ-24`**
+  - Stop: `partial_effect(not_attained)`.
+  - Core member: `falsified`. Effects value: `not_effected`.
+  - The task says the post-state defeats the outcome as a whole, so I read it as unreachable by any later completion. That reading is an assumption.
+  - If a later completion could still meet the outcome, the stop is `partial_effect(undecided)` and the core member is `indeterminate`.
+  - The error response is not evidence about the subject.
+  - Survives:
+    - the counterexample, named as 3 of 5 SKUs decremented and the rest unreached;
+    - the `partial_effect` residual, which records that the end of the effect is not established;
+    - the re-entry of a bounded post-observation and an explicit disposition before any further effect;
+    - reconciliation before any repetition.
+  - `falsified` does not license treating the effect as absent, repeating it, or treating it as ended.
+- **`occ-25`**
+  - A reference that "does not resolve in the model" is a local reference with no record, which is dangling and refuses under AC-003.
+  - Stop: `refusal(constraint)`.
+  - Core member: `falsified`. Decision: `refused(constraint)`.
+  - The occurrence is not admitted, and the dangling `r-77` is the counterexample. Re-entry is a new complete occurrence candidate.
+  - If `r-77` is an external reference whose resolution has not yet been evaluated, the stop is `gap`. The core member is then `invalid_basis`, and the basis repair must be named.
+  - If a basis condition is also named, it is reported as its own `invalid_basis` result beside the refusal.
+
+**No method source**
+- The method does not define "competent authority" for a particular claimant, or whether `observed_at` has a declared comparison law, basis and admitting authority here.
+- The task does not give the corrected value for `ev-103`.
+- The task does not say whether `r-77` is local or external. This decides between `refusal(constraint)` and `gap` for `occ-25`.
+- The task does not say whether a later completion could still meet the `occ-24` outcome. This decides between `not_attained` and `undecided`.
+- The method does not give a core value for a projection-recorded edge that no claim ever backed (part 1).

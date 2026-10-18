@@ -1,0 +1,665 @@
+{
+  "group": "G3",
+  "symbols": [
+    {
+      "uri": "urn:stdo-3:claude:i3:concept:constraint-surface",
+      "kind": "urn:stdo-3:claude:i3:vocabulary:kind:concept",
+      "label": "Constraint surface: the obligations and permitted freedom of work on a declared subject and boundary",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/AXIOMATIC_CALCULUS.md#constraint-surfaces"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:concept:hard-stop",
+      "kind": "urn:stdo-3:claude:i3:vocabulary:kind:concept",
+      "label": "Hard stop: a condition that halts work whatever the policy",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/ACTIVATION.md#4-totality-and-refinement"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:concept:promotion-block",
+      "kind": "urn:stdo-3:claude:i3:vocabulary:kind:concept",
+      "label": "Promotion block: the decision owner's act of blocking current promotion over a finding",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#when-a-finding-blocks-promotion"
+      ]
+    }
+  ],
+  "clauses": [
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:block-four-conditions",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:promotion-block"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:force",
+          "literal": "must"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "EVALUATION §5, conserving UP-007"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "the four necessary conditions for blocking"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "any enumeration of conditions bearing on the claim's acceptance"
+        }
+      ],
+      "statement": "A finding can block current promotion only when it: 1. falsifies that claim; 2. exposes competing or ambiguous authority on the claim's acceptance path; 3. violates applicable active authority, safety or retained accepted behaviour; or 4. establishes a material architectural decision with durable consequences that forecloses an admitted Product outcome.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#when-a-finding-blocks-promotion"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:block-hard-stop-row",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:promotion-block"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:hard-stop"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:force",
+          "literal": "must"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p6"
+        }
+      ],
+      "statement": "a valid falsification of a mandatory claim governed by a non-waivable hard stop — the boundary blocks, whatever the assigned priority or the decision cutoff",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#when-a-finding-blocks-promotion"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:block-owner-decides",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:promotion-block"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:force",
+          "literal": "must"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "EVALUATION §5; the cutoff: the adopting Product"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "below the Product-owned cutoff no block follows mechanically"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "mechanical blocking by severity, or the decision owner's act under a cutoff"
+        }
+      ],
+      "statement": "any other finding meeting one of the four conditions — the decision owner decides blocking from the exact affected claim, the governed outcome or decision the work serves (ACTIVATION §1, Intake), the applicable hard stops and the Product-owned cutoff policy; below that cutoff no block follows mechanically, and an accepted residual is retained explicitly",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#when-a-finding-blocks-promotion"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:block-outside-claim",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:promotion-block"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:force",
+          "literal": "must-not"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:condition",
+          "literal": "by itself"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:qualification",
+          "literal": "the observation is repricing or re-entry input, returned as §4 states"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p6"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p2"
+        }
+      ],
+      "statement": "an observation outside the exact reviewed claim — repricing or re-entry input, returned as §4 states: by itself it does not widen the reviewed subject, block its bounded claim, or require a new ticket, artifact, review round or implementation increment",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#when-a-finding-blocks-promotion"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:severity-not-priority",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:promotion-block"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:force",
+          "literal": "must-not"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p6"
+        }
+      ],
+      "statement": "Severity selects neither priority nor a block mechanically, and priority neither erases severity nor waives a hard stop.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#when-a-finding-blocks-promotion"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:surface-definition",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:states",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:constraint-surface"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p0"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p2"
+        }
+      ],
+      "statement": "A constraint surface states, for a declared subject and work boundary, the obligations and the permitted freedom of the work: its objects and their meanings, the predicates and dependencies that bear on it, the admissible operations, the required results, the authority, the evidence and the conditions still unresolved.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/AXIOMATIC_CALCULUS.md#constraint-surfaces"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:surface-no-strategy",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:permits",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:constraint-surface"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:force",
+          "literal": "may"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p2"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p6"
+        }
+      ],
+      "statement": "It constrains the work without prescribing the worker's internal solution strategy beyond those obligations (P2, P6).",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/AXIOMATIC_CALCULUS.md#constraint-surfaces"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:ac-holds",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "AXIOMATIC_CALCULUS AC-007"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "holds maps to satisfied"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "the five core values"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:refined-value",
+          "literal": "holds"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:predicate",
+          "literal": "the constraint's predicate holds for its governed subject on the exact basis"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+          "ref": "urn:stdo-3:claude:i3:core:satisfied"
+        }
+      ],
+      "statement": "holds — satisfied — the judgment establishes the predicate on the exact basis",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:ac-failed",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "AXIOMATIC_CALCULUS AC-007"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "failed maps to falsified"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "the five core values"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:refined-value",
+          "literal": "failed"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:predicate",
+          "literal": "the constraint's predicate holds for its governed subject on the exact basis"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+          "ref": "urn:stdo-3:claude:i3:core:falsified"
+        }
+      ],
+      "statement": "failed — falsified — a counterexample defeats the predicate; the judgment names it",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:ac-indeterminate",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "AXIOMATIC_CALCULUS AC-007"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "indeterminate maps to indeterminate"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "the five core values"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:refined-value",
+          "literal": "indeterminate"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:predicate",
+          "literal": "the constraint's predicate holds for its governed subject on the exact basis"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+          "ref": "urn:stdo-3:claude:i3:core:indeterminate"
+        }
+      ],
+      "statement": "indeterminate — indeterminate — the admissible evidence cannot decide the predicate; the judgment names the evidence that would decide",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:ac-out-of-scope",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "AXIOMATIC_CALCULUS AC-007"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "out of scope maps to out_of_frame"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "the five core values"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:refined-value",
+          "literal": "out of scope"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:predicate",
+          "literal": "the constraint's predicate holds for its governed subject on the exact basis"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+          "ref": "urn:stdo-3:claude:i3:core:out_of_frame"
+        }
+      ],
+      "statement": "out of scope — out_of_frame — the predicate is asked of a subject or relation outside the constraint's declared `applies_to`, context or scope, so deciding it needs a relation the constraint does not declare; the judgment names that relation, with its owner where the subject gives one",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:ac-invalid-basis",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "AXIOMATIC_CALCULUS AC-007"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "invalid basis maps to invalid_basis"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "the five core values"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:refined-value",
+          "literal": "invalid basis"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:predicate",
+          "literal": "the constraint's predicate holds for its governed subject on the exact basis"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+          "ref": "urn:stdo-3:claude:i3:core:invalid_basis"
+        }
+      ],
+      "statement": "invalid basis — invalid_basis — the subject or basis cannot support the judgment; the judgment names the basis repair",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:ac-declared-result",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "AXIOMATIC_CALCULUS AC-007"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "declared result maps to satisfied"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "the five core values"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:refined-value",
+          "literal": "declared result"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:predicate",
+          "literal": "the operation yields its declared result on the exact basis"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+          "ref": "urn:stdo-3:claude:i3:core:satisfied"
+        }
+      ],
+      "statement": "declared result — satisfied — the closure, the projection with its boundary, the admission, the proposed successor `M_b_prime*` or the proposed model `M_subject*` is returned on the exact basis; a proposed successor or model establishes that it is available, never its acceptance or admission (FOUNDATIONS §4 Results)",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:ac-hold",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "AXIOMATIC_CALCULUS AC-007"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "hold maps to indeterminate"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "the five core values"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:refined-value",
+          "literal": "hold"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:predicate",
+          "literal": "the operation yields its declared result on the exact basis"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+          "ref": "urn:stdo-3:claude:i3:core:indeterminate"
+        }
+      ],
+      "statement": "`hold` — indeterminate — the operation was applied and stops because evidence, an observation or a disposition it needs is not yet admitted, so the admissible evidence cannot decide whether it yields its result; its residual names what would decide",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:ac-gap",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "AXIOMATIC_CALCULUS AC-007"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "gap maps to invalid_basis"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "the five core values"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:refined-value",
+          "literal": "gap"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:predicate",
+          "literal": "the operation yields its declared result on the exact basis"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+          "ref": "urn:stdo-3:claude:i3:core:invalid_basis"
+        }
+      ],
+      "statement": "`gap` — invalid_basis — the result needs a member, reference, resolution or declaration whose resolution on the basis is still open: the declared relation that resolves it has not yet decided it, as for an external resolution not yet evaluated; the result is undefined on this basis until it is supplied. A reference evaluated to no target is dangling and refuses (AC-003): a local reference with no record in the model's closed population, and an external reference whose declared resolution has been evaluated and yields no target",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:ac-refusal-constraint",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "AXIOMATIC_CALCULUS AC-007"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "refusal(constraint) maps to falsified"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "the five core values"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:refined-value",
+          "literal": "refusal(constraint)"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:predicate",
+          "literal": "the operation yields its declared result on the exact basis"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+          "ref": "urn:stdo-3:claude:i3:core:falsified"
+        }
+      ],
+      "statement": "`refusal(constraint)` — falsified — every refusal that is not `refusal(basis)`: the refusal names a demonstrated violation of a declared law of this member or a constraint of its signature by the record, model, carrier, transformation or application under judgment, including a missing record family (AC-001), a dangling reference (AC-003) and an application without its traversal (AC-015), or it names no condition of the basis; the violation or other defect it names is the counterexample",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:ac-refusal-basis",
+      "clause_type": "relation",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:maps-to",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "AXIOMATIC_CALCULUS AC-007"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "refusal(basis) maps to invalid_basis"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "the five core values"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:refined-value",
+          "literal": "refusal(basis)"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:predicate",
+          "literal": "the operation yields its declared result on the exact basis"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:core-value",
+          "ref": "urn:stdo-3:claude:i3:core:invalid_basis"
+        }
+      ],
+      "statement": "`refusal(basis)` — invalid_basis — the refusal names one or more conditions of the basis the operation acts on and no demonstrated violation of a declared law or constraint by the record, model, carrier, transformation or application under judgment: a seed set, relation family, required-edge semantics, basis or scope that is not exact; a fixed point that is not finite and unique; an input model, subject or carrier whose exact identity, basis or admission is not established; or mixed bases with no composite-basis relation (AC-006)",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal"
+      ]
+    }
+  ],
+  "residuals": [],
+  "frame_indexes": [
+    {
+      "uri": "urn:stdo-3:claude:i3:frame-index:promotion-block",
+      "frame_ref": "stdo-3://build_tenants/claude/standards/EVALUATION.md#when-a-finding-blocks-promotion",
+      "scope": "Decide whether a review finding blocks current promotion: the four necessary conditions, the hard-stop row, the decision owner's act under the cutoff, observations outside the claim, and severity apart from priority.",
+      "clause_refs": [
+        "urn:stdo-3:claude:i3:clause:block-four-conditions",
+        "urn:stdo-3:claude:i3:clause:block-hard-stop-row",
+        "urn:stdo-3:claude:i3:clause:block-owner-decides",
+        "urn:stdo-3:claude:i3:clause:block-outside-claim",
+        "urn:stdo-3:claude:i3:clause:severity-not-priority"
+      ],
+      "residual_refs": [],
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/EVALUATION.md#when-a-finding-blocks-promotion"
+      ]
+    }
+  ]
+}

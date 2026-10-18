@@ -1,3 +1,5 @@
+Historical: this set binds earlier member bytes and is not current; the current interpretation is [../i3/](../i3/README.md).
+
 # T1 a_c Interpretation (Claude tenant)
 
 Status: the T1.2 document increment is frozen and encoded; the program

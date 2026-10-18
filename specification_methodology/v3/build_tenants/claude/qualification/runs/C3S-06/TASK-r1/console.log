@@ -1,0 +1,109 @@
+# console log for qualification/runs/C3S-06/TASK-r1
+# tenant root: /Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude
+# start 2026-10-13T22:40:40Z
+# step TASK-r1: python3 -I qualification/instruments/bounded_step.py --cap 110000 --run-dir qualification/runs/C3S-06/TASK-r1 --step-id TASK-r1 --card qualification/cases/C3S-CARD.md --block METHOD=standards/frames/configuration.md --block TASK=qualification/cases/C3S-06/TASK.md --model sonnet
+## Configuration
+
+Marta must accept this configuration before any activation starts. The byte totals below are computed from the stated sizes. They are not measurements of the actual files.
+
+**Activations** (each a separate session with an empty context)
+
+| ID | Operation | Actor | Inputs | Bytes | Result and destination |
+|---|---|---|---|---|---|
+| F-N | Fit North constants (R1) | A1 | North 2026 record 70,000 + method notes 40,000 + contract 10,000 | 120,000 (≤200,000) | `constants/north` committed; compact result goes to the coordinator (me) and, by identity only, to AS-N |
+| F-S | Fit South constants (R1) | A1 | South record 50,000 + notes 40,000 + contract 10,000 | 100,000 (≤200,000) | `constants/south` committed; result goes to the coordinator, and to AS-S by identity |
+| (East fit) | None. `east-c1` is kept as a candidate (see Justification). | – | – | – | Its commit id and hash are frozen by the coordinator and sent to AS-E |
+| AS-N | Assess North constants against the North record by the notes (R2) | A2 | North record 70,000 + notes 40,000 + `north` constants 10,000 + contract 10,000 | 130,000 (≤200,000) | Closed result goes to the coordinator |
+| AS-E | Assess `east-c1` against the East record by the notes (R2) | A2 | East record 60,000 + notes 40,000 + `east-c1` 10,000 + contract 10,000 | 120,000 (≤200,000) | Closed result goes to the coordinator |
+| AS-S | Assess South constants (R2) | A2 | South record 50,000 + notes 40,000 + `south` constants 10,000 + contract 10,000 | 110,000 (≤200,000) | Closed result goes to the coordinator |
+| E-EDIT | Change `ports/east.yaml` from CD-2019 to CD-2026 using `datum/cd2026.csv` (R3) | A3 | `east.yaml` 20,000 + datum offsets 8,000 + contract 10,000 | 38,000 (≤64,000) | Edited file identity and hash, plus a diff, go to the coordinator and then to T-E |
+| T-N | Generate North tables | A3 | `north` constants 10,000 + `north.yaml` 20,000 + template 15,000 + contract 10,000 | 55,000 (≤64,000) | Tables, with the full run.log, go to the coordinator |
+| T-E | Generate East tables | A3 | `east-c1` (or its successor) 10,000 + edited `east.yaml` 20,000 + template 15,000 + contract 10,000 | 55,000 (≤64,000) | Tables, with the full run.log, go to the coordinator |
+| T-S | Generate South tables | A3 | `south` constants 10,000 + `south.yaml` 20,000 + template 15,000 + contract 10,000 | 55,000 (≤64,000) | Tables, with the full run.log, go to the coordinator |
+| COORD | Track closed results, run the R3 check on the logs and declared datums, and assemble the release package. It mutates nothing. | Me | Up to 9 compact closed results, 10,000 each at most: ≤90,000 | ≤90,000 (≤120,000) | Package goes to Marta for disposition, then to Ravi |
+| PUB | Publish all three ports' tables to the public portal in one action (R4) | Ravi | The accepted package: table ids and hashes, assessment results, Marta's acceptance | Not stated | Publication outcome goes to the coordinator and Marta |
+
+The T-N, T-E and T-S figures follow the stated dependency that tables depend only on constants, configuration and template. The datum file enters only at E-EDIT. The East 55,000 figure assumes the generator does not read `datum/cd2026.csv`. If it does, T-E is 63,000, which still fits A3 but with a 1,000-byte margin.
+
+**Dependency order**
+1. Marta accepts the configuration. This acceptance also covers the independence policy and the Ravi date (see Justification).
+2. In parallel: F-N, F-S, E-EDIT and AS-E. AS-E needs only the frozen `east-c1`.
+3. AS-N starts after F-N. AS-S starts after F-S.
+4. T-N starts after AS-N is `satisfied`. T-S starts after AS-S is `satisfied`. T-E starts after both AS-E is `satisfied` and E-EDIT is done.
+5. COORD runs the R3 check on all three. Marta disposes. Ravi publishes all three together in his Thursday hour.
+6. If any assessment is not `satisfied`, nothing from that port moves on. Re-fitting is a new authored candidate and needs a new assessment. A new constants commit invalidates dependent tables and results. If publication cannot happen in Ravi's window, no port is published alone.
+
+**What each exchange carries**
+- **Fit result:** constants commit id and hash. Gauge record and notes identities. Predicate "constants fitted per R1". Core value. Residuals. Invalidation conditions. It does not carry the fitter's reasoning.
+- **Assessment result:** the exact constants id assessed, the record and notes identities, and the criterion taken from the notes. The assessor records its expectations from the notes before opening the constants. It also carries the measured deviation, the core value, and what was not performed. The assessor receives no author summary and makes no repair.
+- **E-EDIT result:** the old and new datum declarations, and the datum file identity.
+- **Table result:** table ids and hashes, the constants, configuration and template identities used, the declared datum, and every log line verbatim, WARN lines included. "Done, 0 errors" alone is never accepted.
+- **Release package:** all of the above for three ports, plus the R3 check and the open residuals.
+
+None of these exchanges grants authority.
+
+**Authority**
+- **Frame-set and configuration acceptance:** Marta.
+- **Edits to `constants/`:** the F-N and F-S activations.
+- **Edits to `tables/`:** the T-N, T-E and T-S activations.
+- **Edit to `ports/east.yaml`:** E-EDIT. These come from the W-12 grant, to the assigned activations only.
+- **Assessors:** read-only. They have evaluation authority and no operation authority.
+- **Coordinator:** mutates nothing and holds no grant.
+- **Decision authority:** the task does not name who accepts results. I propose Marta, or a proxy she declares.
+- **Publication:** only Ravi holds the operation grant. Publishing is his effect. An effect whose completion is unknown, such as a lost response, is reconciled before any repeat or dependent action.
+
+## Justification
+
+**Fit with dependencies, capacities and R2**
+- The three ports' fits and assessments are independent of each other, so they run in parallel. Tables depend only on their own port's constants, configuration and template, so each can start as soon as its constants are assessed.
+- One A1 or A2 activation over all three ports would need 180,000 (records) + 40,000 (notes) + 10,000 (contract) = 230,000 bytes. That exceeds the 200,000 capacity. Per-port activations fit with room.
+- A3 cannot fit or assess, so it only edits configuration and generates tables, and each activation fits its 64,000 capacity.
+- I have no fitting or table tools and 120,000 capacity, so I only coordinate, from compact results.
+- R2 needs an assessor who did not author the constants. A1 authors and A2 assesses. A2 has the numeric comparison tools. A3 and I cannot assess.
+- A fresh context alone does not give independence.
+- The task does not say whether A1 and A2 are of one model family. The default is that they are not independent. Marta's acceptance must therefore declare, for R2, that A1 and A2 are independent. If she does not, R2 is unmet for every port and no listed actor can supply an independent assessment. The coordinator then stops and asks Marta (re-entry on authority).
+- This is an adequacy argument. I make no optimality claim, and no comparison was done.
+
+**What I keep from the pilot**
+- `east-c1` is kept as a candidate, not as an assessed result. Mechanical evidence may be reused. The judgment may not.
+- Reusing `east-c1` does not need a new fit. It does need a fresh independent assessment. If AS-E fails, East is re-fitted.
+- The WARN line is kept as evidence of the CD-2019 defect.
+- The practice of separate sessions is kept.
+- I do not keep the "satisfied, within 3 cm", the "done, 0 errors", or the East tables.
+
+**Tomas's proposal**
+- A familiar setup and its label do not accept or reject a configuration. It is judged against the task, the actors' limits, the authority and the assurance required.
+- A3 as Reviewer cannot assess constants, so R2 cannot be met.
+- A2 doing all fitting and tables in one go would exceed capacity, as computed above. If A1 holding "the whole W-12 record" includes the gauge data, it also exceeds capacity.
+- A1 as Executive and also the author of the East fit mixes the coordinator and constructor roles. A coordinator that constructs would decide on its own effects.
+- The pilot's compact result dropped a WARN that defeats R3. That shows a hazard of this arrangement, not an advantage.
+- The optimality claim is unsupported. Optimal is relative to stated objectives, constraints and a comparison scope, and needs evidence for that comparison. "Used for three years" and "the team knows it" are familiarity, not evidence. The setup does not even meet R2 here.
+
+## Check
+
+**Predicate:** "the East tables from the pilot meet R2 and R3 and may be published."
+
+**Result: `falsified`.** The rule is mine, because the task declares none. R2, R3 and the publication decision are mandatory, and any falsified mandatory component falsifies the whole.
+
+**Deciding facts**
+- **R3 falsified.** `tables/east/run.log` shows heights written relative to CD-2019, and `east.yaml` declares CD-2019. R3 requires CD-2026. That log line is the counterexample. A3's "done, 0 errors" is a returned message, not evidence for R3, and it omitted the WARN.
+- **R2 gap (not performed).** The pilot assessment was done by a new A1 session. A1 authored `east-c1`. A fresh context does not make it independent, so it is the author's self-review. The planned independent assessment has no closed result. A reused judgment does not satisfy a separately required independent judgment. Independence of A1 and A2 is also undeclared.
+- **R3, R4 and publication:** the tables cannot be published with R3 falsified. R4 requires all three ports together, and North and South do not exist. Ravi's grant has not been exercised.
+
+**Recorded as not performed or not established**
+- the independent assessment of `east-c1`;
+- any inspection of the East table contents or of `east.yaml` by me (I rely on the stated log line);
+- whether "within 3 cm" is the method notes' criterion;
+- whether the East tables were ever published (not stated, so it needs checking before anything else);
+- the R4 publication and Marta's disposition.
+
+## No method source
+
+- Who the decision owner is for accepting results and release readiness. The task does not say, and the method names no one.
+- The policy on whether A1 and A2 are independent. The method gives only the default (not independent), and the governing basis (Marta) must state otherwise.
+- The content of the method notes, including the assessment tolerance, and whether the pilot's 3 cm is correct.
+- The execution binding (ACTIVATION §6). It decides what the context-size boundary includes (prompts, tool schemas), and the task states no figures for these. The fit figures above cover only the stated materials. Context outside the stated materials is not measured.
+- The date of "Thursday", Ravi's capacity and input limits, the sizes of tables and logs, and whether the generator reads the datum file.
+- ACTIVATION §3 (admission and activation outcomes) and §5 (work state and restart) are cited by the METHOD block but not included in it. The Executive baseline's Worker and Reviewer grants are not included either. I did not rely on them.
+# step exit 0
+# end 2026-10-13T22:42:10Z

@@ -1,0 +1,992 @@
+{
+  "kind": "finite_oracle_result",
+  "instance": "assurance_relations",
+  "evidence_class": "tested against an independently specified oracle",
+  "result": {
+    "predicate": "On the declared finite domains, the encoded observation-sufficiency decision, the necessary-condition standing, the joint-miss computation and the change-impact selection meet properties P1 to P12",
+    "core_value": "satisfied",
+    "domain_outcome": "all 5831 assertions hold; every declared mutant is falsified"
+  },
+  "bindings": {
+    "source": {
+      "path": "standards/FOUNDATIONS.md",
+      "sha256": "fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f",
+      "sections": [
+        {
+          "anchor": "assertions-and-observation",
+          "lines": "1230-1301",
+          "sha256": "4bccbc2b4c0f5915cf20e6090051b7abbae039292e114a3459511e08620ecd3e"
+        },
+        {
+          "anchor": "quantified-assurance",
+          "lines": "1357-1408",
+          "sha256": "9666dc3e83bbd769efe823a3c7657c55db8f444bc5944bc2260bd1194263229b"
+        },
+        {
+          "anchor": "change-impact-and-evidence-reuse",
+          "lines": "1409-1493",
+          "sha256": "e989bf4b8c0dd996e5545f18db94f8ba275d14485697c0b046429746ed3bfbc6"
+        }
+      ]
+    },
+    "oracle_sources": [
+      {
+        "path": "../../specification/requirements/ASSURANCE.md",
+        "sha256": "ef6dbee500c42289cf710fae81bc6c79af67f3c6b9f94a11b48be48ccf643ef5",
+        "sections": [
+          {
+            "anchor": "assertions-and-observation",
+            "lines": "25-57",
+            "sha256": "324c3078414feb7bd8ede882e9c8db605f3501fd602728ccd72f50873b750750"
+          },
+          {
+            "anchor": "assurance-within-a-risk-model",
+            "lines": "72-96",
+            "sha256": "9a074a30fa71f96d86b914a682c81d726d04c6702920abed1a74935da266810a"
+          },
+          {
+            "anchor": "change-impact-and-targeted-reassessment",
+            "lines": "97-122",
+            "sha256": "bc035cd3311d9309449d2ad87240d974a3e98c8ba7e400baf38f44018fd314a4"
+          }
+        ]
+      },
+      {
+        "path": "standards/FOUNDATIONS.md",
+        "sha256": "fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f",
+        "sections": [
+          {
+            "anchor": "assertions-and-observation",
+            "lines": "1230-1301",
+            "sha256": "4bccbc2b4c0f5915cf20e6090051b7abbae039292e114a3459511e08620ecd3e"
+          },
+          {
+            "anchor": "quantified-assurance",
+            "lines": "1357-1408",
+            "sha256": "9666dc3e83bbd769efe823a3c7657c55db8f444bc5944bc2260bd1194263229b"
+          },
+          {
+            "anchor": "change-impact-and-evidence-reuse",
+            "lines": "1409-1493",
+            "sha256": "e989bf4b8c0dd996e5545f18db94f8ba275d14485697c0b046429746ed3bfbc6"
+          }
+        ]
+      }
+    ],
+    "model": {
+      "path": "qualification/instruments/finite_oracle/assurance/model.py",
+      "sha256": "05ca71219ebed255e9cf0f7d0963f3ebcd5a45c68fc71e29f8ac5595cad7e78a"
+    },
+    "mutants": {
+      "path": "qualification/instruments/finite_oracle/assurance/mutants.py",
+      "sha256": "d350f85421957320e69901f8a7e6bff88ccba200c3e9d67d28ec2c6c125e0a95"
+    },
+    "executable": [
+      {
+        "path": "qualification/instruments/finite_oracle/template.py",
+        "sha256": "1c8778554c777a622350ba60893e4406a94c935b1bcc58d2b4a136f40afa25d5"
+      },
+      {
+        "path": "qualification/instruments/finite_oracle/assurance/check.py",
+        "sha256": "2f28935b19af06f66fe9965205507533c60ab318fc761344887bc56b34702b64"
+      },
+      {
+        "path": "qualification/instruments/generate_frames.py",
+        "sha256": "d114f3352063cbfbbe179aa5a395a745b03c3319173b8d63b55935ef04b1fc48"
+      }
+    ]
+  },
+  "domain": {
+    "observation": "four admissible cases with every truth assignment (16) and every observation partition (15): 240",
+    "assertion": "a check that is a necessary condition or a sufficient conjunction, passing or not: 4",
+    "quantified": "two checks with miss probabilities in {1/4, 1/2}, under a declared independent or dependent joint model: 8",
+    "impact": "two tests, each with validity dependencies {f1}, {f2}, {f1,f2} or unknown and a mandatory flag, under a nonempty change {f1}, {f2} or {f1,f2}: 8 x 8 x 3 = 192",
+    "cases": "240 + 4 + 8 + 192 = 444; one deterministic output each"
+  },
+  "properties": {
+    "P1_satisfied_only_on_uniform_true": "a case is judged satisfied only when every case sharing its observation is true (ASSURANCE Assertions And Observation: same observation, opposite truth values admit no sound complete decision; FOUNDATIONS Observation sufficiency)",
+    "P2_falsified_only_on_uniform_false": "a case is judged falsified only when every case sharing its observation is false (the same sentences: a reported failure is treated the same way)",
+    "P3_mixed_observation_indeterminate": "a case whose observation class holds opposite truth values is judged indeterminate (ASSURANCE: further evidence, a narrower scope or an indeterminate judgment is required)",
+    "P4_uniform_observation_decided": "a case whose observation class is uniform is decided, not indeterminate (non-vacuity guard: this check's reading that the sufficiency condition met permits the decision)",
+    "P5_necessary_not_full": "a passing check of a necessary condition does not establish the full obligation (ASSURANCE: passing a check of a necessary condition does not establish the full obligation)",
+    "P6_sufficient_establishes": "a passing sufficient conjunction establishes the obligation (ASSURANCE: the stated conjunction is sufficient; non-vacuity guard)",
+    "P7_joint_from_declared_model": "the joint miss probability is the declared model's, and equals the product of marginals only under declared independence (ASSURANCE Assurance Within A Risk Model; FOUNDATIONS Quantified assurance: replacing the terms by the product requires conditional independence)",
+    "P8_detection_not_correctness": "one minus the joint miss is reported as at least one detection, never as the probability that the whole product is correct (FOUNDATIONS Quantified assurance)",
+    "P9_affected_selected": "every test whose known dependencies meet the change is selected (FOUNDATIONS Change impact: S_\u0394 = { t : D*(t) intersects I(\u0394) })",
+    "P10_mandatory_selected": "every mandatory gate is selected whatever the change (ASSURANCE: mandatory gates remain applicable; FOUNDATIONS: a mandatory gate remains applicable)",
+    "P11_unknown_selected": "a test whose dependencies are unknown is selected (ASSURANCE: missing influence information cannot justify exclusion; FOUNDATIONS: unknown impact widens reassessment)",
+    "P12_retained_only_if_unaffected": "a retained test is not mandatory, has known dependencies and none of them is in the change (FOUNDATIONS: retention establishes the validity conditions; excluding a check requires supported coverage of its dependencies)"
+  },
+  "counts": {
+    "cases": 444,
+    "outputs": 444,
+    "value_checks": 444,
+    "assertions": 5831,
+    "classes": {
+      "assertion:condition-only": 3,
+      "assertion:established": 1,
+      "impact:all_selected": 162,
+      "impact:some_retained": 30,
+      "observation:all_decided": 94,
+      "observation:some_indeterminate": 146,
+      "quantified:dependent": 4,
+      "quantified:independent": 4,
+      "scenario=assertion": 4,
+      "scenario=impact": 192,
+      "scenario=observation": 240,
+      "scenario=quantified": 8
+    }
+  },
+  "mutants": {
+    "majority_in_class": {
+      "predicate": "the variant majority_in_class meets every property on the declared domain",
+      "core_value": "falsified",
+      "counterexample_cases": 56,
+      "by_property": {
+        "P1_satisfied_only_on_uniform_true": 28,
+        "P2_falsified_only_on_uniform_false": 28,
+        "P3_mixed_observation_indeterminate": 56
+      },
+      "output_differs_from_model": 56,
+      "value_set_differs_from_model": 56,
+      "record_differs_from_model": 0,
+      "first_counterexample": {
+        "case": {
+          "case": {
+            "scenario": "observation",
+            "truth": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "partition": [
+              [
+                0,
+                1,
+                2,
+                3
+              ]
+            ]
+          }
+        },
+        "failed": [
+          "P2_falsified_only_on_uniform_false",
+          "P3_mixed_observation_indeterminate"
+        ],
+        "model": {
+          "lawful": [
+            "IIII"
+          ],
+          "record": {
+            "scenario": "observation",
+            "blocks": 1,
+            "mixed_blocks": [
+              [
+                0,
+                1,
+                2,
+                3
+              ]
+            ]
+          }
+        },
+        "mutant": {
+          "lawful": [
+            "FFFF"
+          ],
+          "record": {
+            "scenario": "observation",
+            "blocks": 1,
+            "mixed_blocks": [
+              [
+                0,
+                1,
+                2,
+                3
+              ]
+            ]
+          }
+        }
+      },
+      "first_counterexample_by_property": {
+        "P1_satisfied_only_on_uniform_true": {
+          "case": {
+            "scenario": "observation",
+            "truth": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "partition": [
+              [
+                0
+              ],
+              [
+                1,
+                2,
+                3
+              ]
+            ]
+          }
+        },
+        "P2_falsified_only_on_uniform_false": {
+          "case": {
+            "scenario": "observation",
+            "truth": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "partition": [
+              [
+                0,
+                1,
+                2,
+                3
+              ]
+            ]
+          }
+        },
+        "P3_mixed_observation_indeterminate": {
+          "case": {
+            "scenario": "observation",
+            "truth": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "partition": [
+              [
+                0,
+                1,
+                2,
+                3
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "optimistic_on_mixed": {
+      "predicate": "the variant optimistic_on_mixed meets every property on the declared domain",
+      "core_value": "falsified",
+      "counterexample_cases": 146,
+      "by_property": {
+        "P1_satisfied_only_on_uniform_true": 146,
+        "P3_mixed_observation_indeterminate": 146
+      },
+      "output_differs_from_model": 146,
+      "value_set_differs_from_model": 146,
+      "record_differs_from_model": 0,
+      "first_counterexample": {
+        "case": {
+          "case": {
+            "scenario": "observation",
+            "truth": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "partition": [
+              [
+                0,
+                1,
+                2,
+                3
+              ]
+            ]
+          }
+        },
+        "failed": [
+          "P1_satisfied_only_on_uniform_true",
+          "P3_mixed_observation_indeterminate"
+        ],
+        "model": {
+          "lawful": [
+            "IIII"
+          ],
+          "record": {
+            "scenario": "observation",
+            "blocks": 1,
+            "mixed_blocks": [
+              [
+                0,
+                1,
+                2,
+                3
+              ]
+            ]
+          }
+        },
+        "mutant": {
+          "lawful": [
+            "SSSS"
+          ],
+          "record": {
+            "scenario": "observation",
+            "blocks": 1,
+            "mixed_blocks": [
+              [
+                0,
+                1,
+                2,
+                3
+              ]
+            ]
+          }
+        }
+      },
+      "first_counterexample_by_property": {
+        "P1_satisfied_only_on_uniform_true": {
+          "case": {
+            "scenario": "observation",
+            "truth": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "partition": [
+              [
+                0,
+                1,
+                2,
+                3
+              ]
+            ]
+          }
+        },
+        "P3_mixed_observation_indeterminate": {
+          "case": {
+            "scenario": "observation",
+            "truth": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "partition": [
+              [
+                0,
+                1,
+                2,
+                3
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "pessimistic_on_mixed": {
+      "predicate": "the variant pessimistic_on_mixed meets every property on the declared domain",
+      "core_value": "falsified",
+      "counterexample_cases": 146,
+      "by_property": {
+        "P2_falsified_only_on_uniform_false": 146,
+        "P3_mixed_observation_indeterminate": 146
+      },
+      "output_differs_from_model": 146,
+      "value_set_differs_from_model": 146,
+      "record_differs_from_model": 0,
+      "first_counterexample": {
+        "case": {
+          "case": {
+            "scenario": "observation",
+            "truth": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "partition": [
+              [
+                0,
+                1,
+                2,
+                3
+              ]
+            ]
+          }
+        },
+        "failed": [
+          "P2_falsified_only_on_uniform_false",
+          "P3_mixed_observation_indeterminate"
+        ],
+        "model": {
+          "lawful": [
+            "IIII"
+          ],
+          "record": {
+            "scenario": "observation",
+            "blocks": 1,
+            "mixed_blocks": [
+              [
+                0,
+                1,
+                2,
+                3
+              ]
+            ]
+          }
+        },
+        "mutant": {
+          "lawful": [
+            "FFFF"
+          ],
+          "record": {
+            "scenario": "observation",
+            "blocks": 1,
+            "mixed_blocks": [
+              [
+                0,
+                1,
+                2,
+                3
+              ]
+            ]
+          }
+        }
+      },
+      "first_counterexample_by_property": {
+        "P2_falsified_only_on_uniform_false": {
+          "case": {
+            "scenario": "observation",
+            "truth": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "partition": [
+              [
+                0,
+                1,
+                2,
+                3
+              ]
+            ]
+          }
+        },
+        "P3_mixed_observation_indeterminate": {
+          "case": {
+            "scenario": "observation",
+            "truth": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "partition": [
+              [
+                0,
+                1,
+                2,
+                3
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "necessary_as_established": {
+      "predicate": "the variant necessary_as_established meets every property on the declared domain",
+      "core_value": "falsified",
+      "counterexample_cases": 1,
+      "by_property": {
+        "P5_necessary_not_full": 1
+      },
+      "output_differs_from_model": 1,
+      "value_set_differs_from_model": 1,
+      "record_differs_from_model": 0,
+      "first_counterexample": {
+        "case": {
+          "case": {
+            "scenario": "assertion",
+            "kind": "necessary",
+            "passes": 1
+          }
+        },
+        "failed": [
+          "P5_necessary_not_full"
+        ],
+        "model": {
+          "lawful": [
+            "condition-only"
+          ],
+          "record": {
+            "scenario": "assertion",
+            "kind": "necessary",
+            "passes": 1
+          }
+        },
+        "mutant": {
+          "lawful": [
+            "established"
+          ],
+          "record": {
+            "scenario": "assertion",
+            "kind": "necessary",
+            "passes": 1
+          }
+        }
+      },
+      "first_counterexample_by_property": {
+        "P5_necessary_not_full": {
+          "case": {
+            "scenario": "assertion",
+            "kind": "necessary",
+            "passes": 1
+          }
+        }
+      }
+    },
+    "link_only_selection": {
+      "predicate": "the variant link_only_selection meets every property on the declared domain",
+      "core_value": "falsified",
+      "counterexample_cases": 43,
+      "by_property": {
+        "P12_retained_only_if_unaffected": 43,
+        "P9_affected_selected": 43
+      },
+      "output_differs_from_model": 43,
+      "value_set_differs_from_model": 43,
+      "record_differs_from_model": 0,
+      "first_counterexample": {
+        "case": {
+          "case": {
+            "scenario": "impact",
+            "tests": [
+              [
+                [
+                  "f1"
+                ],
+                0
+              ],
+              [
+                [
+                  "f2"
+                ],
+                0
+              ]
+            ],
+            "delta": [
+              "f2"
+            ]
+          }
+        },
+        "failed": [
+          "P12_retained_only_if_unaffected",
+          "P9_affected_selected"
+        ],
+        "model": {
+          "lawful": [
+            "RS"
+          ],
+          "record": {
+            "scenario": "impact",
+            "delta": [
+              "f2"
+            ],
+            "unknown": []
+          }
+        },
+        "mutant": {
+          "lawful": [
+            "RR"
+          ],
+          "record": {
+            "scenario": "impact",
+            "delta": [
+              "f2"
+            ],
+            "unknown": []
+          }
+        }
+      },
+      "first_counterexample_by_property": {
+        "P12_retained_only_if_unaffected": {
+          "case": {
+            "scenario": "impact",
+            "tests": [
+              [
+                [
+                  "f1"
+                ],
+                0
+              ],
+              [
+                [
+                  "f2"
+                ],
+                0
+              ]
+            ],
+            "delta": [
+              "f2"
+            ]
+          }
+        },
+        "P9_affected_selected": {
+          "case": {
+            "scenario": "impact",
+            "tests": [
+              [
+                [
+                  "f1"
+                ],
+                0
+              ],
+              [
+                [
+                  "f2"
+                ],
+                0
+              ]
+            ],
+            "delta": [
+              "f2"
+            ]
+          }
+        }
+      }
+    },
+    "drop_mandatory_when_unaffected": {
+      "predicate": "the variant drop_mandatory_when_unaffected meets every property on the declared domain",
+      "core_value": "falsified",
+      "counterexample_cases": 30,
+      "by_property": {
+        "P10_mandatory_selected": 30,
+        "P12_retained_only_if_unaffected": 30
+      },
+      "output_differs_from_model": 30,
+      "value_set_differs_from_model": 30,
+      "record_differs_from_model": 0,
+      "first_counterexample": {
+        "case": {
+          "case": {
+            "scenario": "impact",
+            "tests": [
+              [
+                [
+                  "f1"
+                ],
+                0
+              ],
+              [
+                [
+                  "f2"
+                ],
+                1
+              ]
+            ],
+            "delta": [
+              "f1"
+            ]
+          }
+        },
+        "failed": [
+          "P10_mandatory_selected",
+          "P12_retained_only_if_unaffected"
+        ],
+        "model": {
+          "lawful": [
+            "SS"
+          ],
+          "record": {
+            "scenario": "impact",
+            "delta": [
+              "f1"
+            ],
+            "unknown": []
+          }
+        },
+        "mutant": {
+          "lawful": [
+            "SR"
+          ],
+          "record": {
+            "scenario": "impact",
+            "delta": [
+              "f1"
+            ],
+            "unknown": []
+          }
+        }
+      },
+      "first_counterexample_by_property": {
+        "P10_mandatory_selected": {
+          "case": {
+            "scenario": "impact",
+            "tests": [
+              [
+                [
+                  "f1"
+                ],
+                0
+              ],
+              [
+                [
+                  "f2"
+                ],
+                1
+              ]
+            ],
+            "delta": [
+              "f1"
+            ]
+          }
+        },
+        "P12_retained_only_if_unaffected": {
+          "case": {
+            "scenario": "impact",
+            "tests": [
+              [
+                [
+                  "f1"
+                ],
+                0
+              ],
+              [
+                [
+                  "f2"
+                ],
+                1
+              ]
+            ],
+            "delta": [
+              "f1"
+            ]
+          }
+        }
+      }
+    },
+    "unknown_as_unaffected": {
+      "predicate": "the variant unknown_as_unaffected meets every property on the declared domain",
+      "core_value": "falsified",
+      "counterexample_cases": 45,
+      "by_property": {
+        "P11_unknown_selected": 45,
+        "P12_retained_only_if_unaffected": 45
+      },
+      "output_differs_from_model": 45,
+      "value_set_differs_from_model": 45,
+      "record_differs_from_model": 0,
+      "first_counterexample": {
+        "case": {
+          "case": {
+            "scenario": "impact",
+            "tests": [
+              [
+                [
+                  "f1"
+                ],
+                0
+              ],
+              [
+                "unknown",
+                0
+              ]
+            ],
+            "delta": [
+              "f1"
+            ]
+          }
+        },
+        "failed": [
+          "P11_unknown_selected",
+          "P12_retained_only_if_unaffected"
+        ],
+        "model": {
+          "lawful": [
+            "SS"
+          ],
+          "record": {
+            "scenario": "impact",
+            "delta": [
+              "f1"
+            ],
+            "unknown": [
+              1
+            ]
+          }
+        },
+        "mutant": {
+          "lawful": [
+            "SR"
+          ],
+          "record": {
+            "scenario": "impact",
+            "delta": [
+              "f1"
+            ],
+            "unknown": [
+              1
+            ]
+          }
+        }
+      },
+      "first_counterexample_by_property": {
+        "P11_unknown_selected": {
+          "case": {
+            "scenario": "impact",
+            "tests": [
+              [
+                [
+                  "f1"
+                ],
+                0
+              ],
+              [
+                "unknown",
+                0
+              ]
+            ],
+            "delta": [
+              "f1"
+            ]
+          }
+        },
+        "P12_retained_only_if_unaffected": {
+          "case": {
+            "scenario": "impact",
+            "tests": [
+              [
+                [
+                  "f1"
+                ],
+                0
+              ],
+              [
+                "unknown",
+                0
+              ]
+            ],
+            "delta": [
+              "f1"
+            ]
+          }
+        }
+      }
+    },
+    "independent_product": {
+      "predicate": "the variant independent_product meets every property on the declared domain",
+      "core_value": "falsified",
+      "counterexample_cases": 4,
+      "by_property": {
+        "P7_joint_from_declared_model": 4
+      },
+      "output_differs_from_model": 4,
+      "value_set_differs_from_model": 4,
+      "record_differs_from_model": 0,
+      "first_counterexample": {
+        "case": {
+          "case": {
+            "scenario": "quantified",
+            "p1": "1/4",
+            "p2": "1/4",
+            "dependence": "dependent"
+          }
+        },
+        "failed": [
+          "P7_joint_from_declared_model"
+        ],
+        "model": {
+          "lawful": [
+            "1/4|detection=3/4|claim=at-least-one-detection"
+          ],
+          "record": {
+            "scenario": "quantified",
+            "dependence": "dependent"
+          }
+        },
+        "mutant": {
+          "lawful": [
+            "1/16|detection=15/16|claim=at-least-one-detection"
+          ],
+          "record": {
+            "scenario": "quantified",
+            "dependence": "dependent"
+          }
+        }
+      },
+      "first_counterexample_by_property": {
+        "P7_joint_from_declared_model": {
+          "case": {
+            "scenario": "quantified",
+            "p1": "1/4",
+            "p2": "1/4",
+            "dependence": "dependent"
+          }
+        }
+      }
+    },
+    "detection_as_correctness": {
+      "predicate": "the variant detection_as_correctness meets every property on the declared domain",
+      "core_value": "falsified",
+      "counterexample_cases": 8,
+      "by_property": {
+        "P8_detection_not_correctness": 8
+      },
+      "output_differs_from_model": 8,
+      "value_set_differs_from_model": 8,
+      "record_differs_from_model": 0,
+      "first_counterexample": {
+        "case": {
+          "case": {
+            "scenario": "quantified",
+            "p1": "1/4",
+            "p2": "1/4",
+            "dependence": "independent"
+          }
+        },
+        "failed": [
+          "P8_detection_not_correctness"
+        ],
+        "model": {
+          "lawful": [
+            "1/16|detection=15/16|claim=at-least-one-detection"
+          ],
+          "record": {
+            "scenario": "quantified",
+            "dependence": "independent"
+          }
+        },
+        "mutant": {
+          "lawful": [
+            "1/16|detection=15/16|claim=product-correct"
+          ],
+          "record": {
+            "scenario": "quantified",
+            "dependence": "independent"
+          }
+        }
+      },
+      "first_counterexample_by_property": {
+        "P8_detection_not_correctness": {
+          "case": {
+            "scenario": "quantified",
+            "p1": "1/4",
+            "p2": "1/4",
+            "dependence": "independent"
+          }
+        }
+      }
+    }
+  },
+  "limits": [
+    "Fidelity is not established: the check does not show that FOUNDATIONS \u00a74 states the rules model.py encodes; that is a reviewer's judgement against the bound section digests",
+    "The properties are this check's reading of the common assurance requirement and of the cited FOUNDATIONS subsections; their fidelity to those sources is likewise a reviewer's judgement",
+    "The encoding and the oracle share an author, the I5-04 Writer, who wrote model.py first; the oracle is independent of the encoding only in being written without reading or calling it",
+    "Observation: four admissible cases and deterministic truth; the checker is modelled as a function of the observation class, so a probabilistic or human checker admitting several conclusions (Assertions and observation) is not modelled; the narrower-scope response is not modelled, only the indeterminate one",
+    "Assertion: one necessary condition or one sufficient conjunction, passing or not; conjunctions with several conjuncts and their coverage and compatibility argument are not modelled",
+    "Quantified: the dependent joint model is fixed at the maximal positive dependence P(both) = min(p1, p2); no calibration, prior or population is modelled, and no Bayes update is exercised",
+    "Impact: two tests, two facts and nonempty changes; the mandatory gate, the unknown dependency and the requirement-to-test link are the only selection relations; serialisation and cost are not modelled",
+    "A failed or refused run writes no result; an older result file stays bound to its own digests",
+    "A finite check on the declared domains only: no claim beyond them, and no categorical or universal claim"
+  ]
+}

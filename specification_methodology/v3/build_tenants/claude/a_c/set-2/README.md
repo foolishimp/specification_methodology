@@ -1,3 +1,5 @@
+Historical: this set binds earlier member bytes and is not current; the current interpretation is [../i3/](../i3/README.md).
+
 # a_c Interpretation of the eight-standard set (Claude tenant, set-2)
 
 Status: the successor of [set/](../set/README.md) over the standards at

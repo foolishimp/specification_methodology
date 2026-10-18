@@ -26,7 +26,7 @@ to the next heading at its own level or shallower.
 
 | Name | Members |
 |---|---|
-| `frame` | `REFERENCE_FRAME.md`; `FOUNDATIONS.md` §2; `ACTIVATION.md` §1 to §4 and §7; `EVALUATION.md` §7 |
+| `frame` | `REFERENCE_FRAME.md`; `FOUNDATIONS.md` §2 and §4; `ACTIVATION.md` §1 to §4 and §7; `EVALUATION.md` §7 |
 | `frame-baseline` | `EXECUTIVE_BASELINE.md`; `ASSURANCE.md` §7 to §13; `EVALUATION.md` §4 |
 | `spec` | `SPEC_METHOD.md`; `ACTIVATION.md`; `PRODUCT_DEFINITION.md`; `ASSURANCE.md`; `EVALUATION.md`; `TICKETS.md`; `FOUNDATIONS.md` §2 and §3; `PROFILES.md` §2 and §3 |
 | `design` | `DESIGN_MODULE.md`; `ASSURANCE.md` §14 to §16; `ACTIVATION.md` §1, §4 and §6; `SPEC_METHOD.md` §2; `FOUNDATIONS.md` §4 |

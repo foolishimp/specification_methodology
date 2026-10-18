@@ -1,0 +1,76 @@
+## Transformation record
+
+```text
+t = {
+  id: MISSING (no transformation identity is given; the step is only "r3 to r4, performed by Tomas")
+  traversal: v-req-to-design-3
+  domain_model: M-billing@r3 — exact content identity MISSING (no whole-model digest; only per-record cj-1 digests, with the middle parts elided)
+  codomain_model: M-billing@r4 — sha256:7d…e9 (elided; this is the digest Nadia's judgment cites)
+  context: W-invoice-rounding
+  owner: Tomas
+  scope: design records derived from REQ-12
+  basis: 4a1f9e20 (calculus basis calc-1, signature sig-billing-1 on both sides; same-basis ordinary transformation)
+  operation_authority: G-88 (issued by Ravi). It permits adding design records under REQ-12 and does not permit edits to requirement, latitude or residual records.
+  preconditions: MISSING (the traversal's preconditions are not stated)
+  preservation_relation: MISSING (no typed equality relation is named). REQ-12 and LAT-12a are covered by byte identity under cj-1 instead.
+  preserved: {REQ-12, LAT-12a}. Same kind, id, owner and cj-1 digest (a1…01, a1…02). Scope and basis of LAT-12a are unchanged.
+  introduced: {DES-12.1} (design clause, owner Tomas, digest b2…04, in the successor only)
+  removed: {} (empty)
+  UNCLASSIFIED: RES-4. It is in both models with the same id and owner but a changed digest (a1…03 to b2…03) and a changed consequence field.
+    - It cannot be preserved, because a changed field refuses membership in P_t.
+    - It cannot be removed, because it is present in the successor.
+    - It cannot be introduced, because it is present in the input.
+    - So the local delta Local_b = P ⊔ R and Local_b' = P ⊔ N does not close.
+  external_preserved: {ext:iso-4217-minor-units → iso4217@2024-06 (published table; currency data; pinned; resolution basis 4a1f9e20; evidence EV-iso-pin-2)}
+  external_introduced: {}
+  external_removed: {}
+  external_resolution_witnesses: one witness for that coordinate, with decision: equal, domain_resolution and codomain_resolution field-equal as stated, and the model identities as above. The witness's own evidence identity is MISSING; only the resolution's evidence EV-iso-pin-2 is given.
+  residuals: RES-4 remains in the successor but is modified. No authorised disposition is on file (AC-009). RES-4's own re_entry (Requirements) is carried unchanged.
+  evidence: RN-31 (the only evidence on file)
+  provenance: performed by Tomas on 2026-10-11 (actor identity). Further provenance MISSING.
+  stop_states: the traversal's stop contract is "stop on any change to a requirement record". Its mapping of each stop value to a core value is MISSING. REQ-12 is unchanged, so that stop is not triggered.
+  invalidation: MISSING
+  re_entry: MISSING
+}
+```
+
+## Application
+
+The record supports `refusal(constraint)`, which maps to `falsified` for the predicate "the operation yields its declared result on the exact basis". The counterexamples are:
+- RES-4 changed under an unchanged identity, so the local delta cannot close.
+- The change to RES-4 went beyond grant G-88, which excludes residual edits, and no authorised disposition of RES-4 is on file (AC-009).
+
+No `M_b_prime*` is established as a lawful proposed successor. This is a demonstrated violation, not a basis condition.
+
+## Judgment record
+
+```text
+Judgment = {
+  id: MISSING
+  kind: MISSING (no JudgmentKind is named for design-conformance review in sig-billing-1)
+  subject: M-billing@r4 (unchanged by the judgment)
+  subject_digest: sha256:7d…e9
+  context: W-invoice-rounding (the subject's workspace; the judgment's own context is not stated)
+  owner: Nadia
+  scope: whether DES-12.1 conforms to REQ-12 within LAT-12a. The modified RES-4 and the lawfulness of the r3→r4 step are not examined.
+  basis: not stated for the judgment. The subject's basis is calc-1 / 4a1f9e20.
+  evaluator: Nadia (actor identity; independent design reviewer)
+  authority: evaluation authority over billing design records
+  decision: satisfied for the predicate "DES-12.1 conforms to REQ-12 within LAT-12a". It says nothing about the transformation or about admission or acceptance.
+  evidence: RN-31; test run TR-205 on build b-40
+  provenance: MISSING beyond the evidence above
+  decided_at: 2026-10-12T09:00Z
+}
+```
+
+## Promotion
+
+Promoting r4 would require an explicit relation between the unchanged r4 and an admission or acceptance judgment, and Ravi holds acceptance authority for billing design records. Nadia's conformance judgment does not substitute for that acceptance, and it does not cure the refusal. Before promotion, a lawful successor is needed: RES-4 must be dispositioned by competent authority (its owner is Lena), or its change must be made under an operation grant that covers residual edits, and Ravi issued G-88 so he is the grant's issuer.
+
+## No method source
+
+- Who holds admission authority, as opposed to acceptance, for a successor model.
+- Who counts as competent authority to disposition a residual, and whether a new grant can cover it after the fact.
+- The `JudgmentKind` values and the evaluation-predicate mapping for a design-conformance judgment. AC-007 maps constraint judgments and operation outcomes only.
+- How the calculus basis `calc-1` and the source basis `4a1f9e20` relate to the single `basis` coordinate of `t`.
+- How the evidence `RN-31` weighs when it also supports the step it reviews. The METHOD block gives no independence rule.

@@ -1,0 +1,66 @@
+## Drift locks
+
+- **Outcome lock: holds.** The 1.2 mandate (guest checkout with card payment), the severity and priority scales, the decision cutoff and the hard stop are unchanged. "Nothing else changed" supports this.
+- **Basis lock: fails.**
+  - Activation was on build `b-77` with `checkout.yaml` r41. The current configuration is r42, so the configuration coordinate is no longer exact and current.
+  - r42 lowers the payment-provider timeout, which can affect the payment-provider seam and the retry handling that `4be19f02` changes. The change also meets `RR-9`'s own invalidation condition ("any change to `checkout.yaml`").
+  - Result: `invalid_basis`. `WR-31`'s evidence (`UA-5`, `E2E-3`, `INT-8` and the unit suite, all on r41) and `RR-9` are both bound to a superseded basis. The bytes of `b-77` are unchanged.
+- **Product-role lock: holds on the stated facts.** No Source Project, Product, Install or Artifact identity is stated to have changed. The facts give no explicit role map, so this rests on "nothing else changed".
+- **Authority lock: holds.**
+  - Priya changed r42 under her configuration authority.
+  - Omar's grant (four dispositions over 1.2 release candidates) and Jules's ownership of the basis are unchanged.
+  - Work contract `EC-77` is unchanged.
+- **Coverage-and-return lock: fails.**
+  - Every material evaluation must be closed or an explicit residual. None of the five results is closed on the current basis (`UA-5`, `E2E-3`, `INT-8`, the unit suite, `RR-9`). Each is stale for the r42 basis.
+  - `EC-77` requires independent review of the payment-path change, and no independent result applies to r42.
+  - Nothing evaluates the hard stop (no card number persisted outside the provider) against the changed retry handling.
+  - Result: no satisfied conjunction. Each stale result is a planned assessment without an applicable closed result, so the composite is at best `indeterminate` and cannot be `satisfied`. The basis disagreement itself is `invalid_basis`.
+
+## Work result
+
+`WR-31` is `candidate_ready`, whose core value is `satisfied`.
+
+- **What it establishes.** Only that an exact candidate (`4be19f02`, `b-77`) and its transition evidence exist. It is not an assessment and not acceptance.
+- **Subject.** The candidate bytes are exact.
+- **Independent assessment.** `EC-77` requires it, because the commit changes the payment path. Ada's self-review is Worker evidence and cannot be relabelled as independent.
+- **Evidence.** All of it is bound to r41, not r42. The timeout change touches the seam and path that `INT-8` and `E2E-3` cover, so the green results are not valid for the current basis.
+- **Contradicting result.** `RR-9` is a material contradicting result for the address step on the original basis.
+- **Missing results.** A negative-path result and a hard-stop (card persistence) result are not stated anywhere. Aggregate green status cannot stand in for them.
+- **Conclusion.** I keep `WR-31` as a ready candidate, not accepted progress. Its evidence must be re-established on r42, and independent review is required.
+- **Effects.** No `completion_unknown` effect is named, so no reconciliation applies.
+
+## Finding F-1
+
+- **Severity: high.** Hana (Reviewer) sets it, on the Product's scale. It is evaluation evidence.
+- **Priority: P2.** I (Omar, Executive) set it. The leak needs `autofill_v2` on, a flag that is off in the release configuration and outside the 1.2 mandate. A workaround exists and the repair is low-cost and low-risk. It is still a real privacy defect against R-C4, so it is not P3.
+- **Frame result: `falsified`.** Hana set it in `RR-9` for the claim as evaluated, with the counterexample (a second guest sees the first guest's address). `RR-9` is now invalidated by its own condition (r42), so I cannot consume it on the current basis. I preserve it as the original ruling and as evidence.
+- **Current-boundary effect: no block, by my determination.**
+  - Severity is high, not critical.
+  - The path is outside the release mandate.
+  - It is not a hard stop: an address is not a card number, and no card persistence is shown.
+  - Under Jules's cutoff it is recorded as an explicit residual with an owner.
+  - This effect concerns F-1 only. The candidate stays unpromotable for the reasons above.
+
+## Disposition
+
+No disposition can be applied now.
+
+- **Locks.** The basis lock and the coverage-and-return lock fail, and the locks must be revalidated before disposition.
+- **`accept`.** Not available. There is no valid independent review on r42, and `EC-77` requires one.
+- **`local_repair` and `reject`.** Not available. The only defect, F-1, comes from a result that is invalidated and not consumable. It is also outside the blocking cutoff.
+- **`re_enter`.** Not available. It needs a change to the governing outcome, requirement, identity, authority or contract. Here an operational configuration revision invalidated the evidence.
+
+**Next action:** I record F-1 as a residual (severity high, priority P2, no boundary block, original `RR-9` preserved). I do not edit anything. Then I re-select the basis as `b-77` with r42, and take two steps within what current authority permits:
+1. Reactivate Ada with her existing grant to re-run `UA-5`, `E2E-3`, `INT-8` and the unit suite on r42, plus a negative-path test and a card-persistence hard-stop check covering the retry handling and the 4 s timeout.
+2. Activate an independent Reviewer (Hana, or another reviewer who is not Ada) on the frozen candidate with r42. The claim is R-C1 to R-C6 for `autofill_v2` on and off, including the payment path, with the storage-dump test from F-1's residual uncertainty.
+
+I will revalidate the five locks before disposing.
+
+## No method source
+
+The METHOD block did not supply the following, and the TASK did not state it:
+- A rule for deciding whether the r41 to r42 change materially affects each result. I treated `RR-9`'s stated invalidation condition and the payment-path adjacency as the grounds. Whether the Worker results would still pass is undetermined.
+- An explicit Product-role map, which the Product-role lock needs.
+- The owner of the F-1 residual. I cannot invent one, so Jules or another named owner must be assigned.
+- Whether my grant, which lists only the four dispositions, covers activating Ada and Hana. The next action assumes current authority permits it. If it does not, the step is a request to the assigning authority.
+- The mapping from a priority label to a policy. The basis gives the scale only, so P2 is my own judgment.

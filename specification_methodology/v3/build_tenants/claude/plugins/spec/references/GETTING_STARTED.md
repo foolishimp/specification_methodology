@@ -87,7 +87,10 @@ Before acting, resolve:
 6. the admitted ticket, sprint entry, or equivalent work carrier; and
 7. only the exact owning standard needed for the action.
 
-Do not bulk-load the standards corpus. A new LLM should be able to state this
+Acquire item 7 under the basis's `ACTIVATION.md` section 2, Acquisition: a
+derived surface whose sources are current where one serves the task,
+otherwise the owning sections that decide it. Do not bulk-load the
+standards corpus. A new LLM should be able to state this
 compact basis before it changes anything:
 
 ```text
@@ -377,14 +380,16 @@ the next action needs.
 
 ### Find The First Changed Layer
 
-| First changed layer | Change class | Re-entry point |
+The table quotes SPEC_METHOD §4 Change classes, which owns them.
+
+| Change | Change class | Re-entry point |
 |---|---|---|
-| current work-wave focus | `goal_reprice` | Goals |
-| purpose or scope | `intent_reprice` | Intent |
-| Product shape, terms, or boundary | `product_reprice` | Product |
-| invariant truth | `requirement_reprice` | Requirements |
-| realization structure | `design_reframe` | Design |
-| code or configuration only | `realization_refactor` | realized surface |
+| current bounded work-wave focus changes | `goal_reprice` | Goals |
+| directional or scope change | `intent_reprice` | Intent |
+| current product realisation changes while directional intent stays stable | `product_reprice` | Product |
+| constitutional truth changes while project direction stays stable | `requirement_reprice` | Requirements |
+| realisation structure changes while active intent and requirement truth stay stable | `design_reframe` | Design |
+| local code, configuration or attribute change with no intended constitutional or structural change; it must prove no upstream drift | `realization_refactor` | the realised surface only |
 
 Before substantive execution, establish applicable upstream work authority,
 then derive and admit one run-scoped execution contract from the first matching
@@ -597,7 +602,7 @@ or apply disposition.
 | requirement truth is missing | re-enter requirements, not code |
 | structural decision is missing | re-enter design |
 | code and test disagree | reconcile through governing authority |
-| independent review is required | stabilize one exact review subject and activate Reviewer; freeze before material reference exposure where generic-method qualification requires it |
+| independent review is required (the boundaries TICKETS §7 names) | stabilise one exact review subject as EVALUATION §3 Protocol states (frozen before material reference exposure where method qualification requires it; otherwise an immutable identity or an equivalent exact-subject relation sufficient for the claim) and activate Reviewer |
 | a finding is adjacent to the current claim | return it as triage input; do not automatically block |
 | requested effect exceeds the grant | refuse and return to Product-owned decision authority |
 
@@ -614,8 +619,12 @@ Definition:
   authority, and projection;
 - `RELEASE.md`: immutable cuts, qualified transport refs, publication,
   successor identity, and release evidence;
-- `REFERENCE_FRAME.md`, `FOUNDATIONS.md` section 2 and `ACTIVATION.md`
-  section 3: bounded evaluation and result law; and
+- `REFERENCE_FRAME.md`, `FOUNDATIONS.md` sections 2 and 4 (Results) and
+  `ACTIVATION.md` sections 2 and 3: bounded evaluation, acquisition and
+  result law;
+- `frames/` in the standards tree: verbatim frames, each copying the owning
+  sections one task needs, among them the bootstrap frame; a frame owns no
+  determination; and
 - `EXECUTIVE_BASELINE.md`: optional Executive, Worker, Reviewer,
   technical-triage, and disposition profile, with its testing frames in
   `ASSURANCE.md`.

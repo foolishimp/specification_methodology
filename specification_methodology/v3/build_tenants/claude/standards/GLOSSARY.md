@@ -19,6 +19,12 @@ meanings in the selected complete STDO basis (P6, P1; rc.2
 
 Each row records an indexed spelling, the bounded-context identity
 declared by the cited owning clause, and the exact owning concept clause.
+§17 uses a second row form for a label that several clauses use: the
+label, a locator naming where that use occurs, and the owning clause. The
+locator only says where to look; it defines nothing and declares no
+context, which the owning clause supplies;
+§2 states how a row records a concept that a context holds by import, and
+a concept whose member declares no bounded context for it.
 The owning clause together with the selected basis identifies the candidate meaning;
 the occurrence being resolved still supplies its own governed scope (P1,
 P3). A row whose context or owning clause does not resolve is invalid, and
@@ -34,14 +40,28 @@ this index supplies no fallback decision (P1, P5).
 ## 2. Locator law
 
 Every locus is a clause of this corpus, never of the predecessor cut; a
-predecessor route appears only in §16 as provenance (P6, P3). Each
+predecessor route appears only in §17 as provenance (P6, P3). Each
 section names the clause that declares its context. A row's owning concept
-clause declares the row's bounded-context identity and owns the concept,
-in its own text or through the context-ownership statement of its own
-member (P6, P1). The relation clause, where given, points to the defining
-locus of a concept that the owning clause includes from another member,
-or to a clause that relates the concept to another member or context; the
-index states no relation itself (P1, P6).
+clause is the section that defines the concept. Where that section's
+member declares the row's context, the clause declares the row's
+bounded-context identity and owns the concept, in its own text or through
+the context-ownership statement of its own member (P6, P1). Where a
+context holds a concept that another member defines, by an import
+declaration or by an owner relation that the context's declaring member
+states
+([FOUNDATIONS §2 Imports between members](FOUNDATIONS.md#imports-between-members)),
+the row cites the defining section as owning concept clause and names the
+declaration or owner relation in its relation clause (P1, P3). Otherwise
+the relation clause, where given, points to a clause that relates the
+concept to another member or context; the index states no relation itself
+(P1, P6).
+
+A concept defined outside every bounded context its member declares has
+that member as its source context
+([FOUNDATIONS §2 Imports between members](FOUNDATIONS.md#imports-between-members)).
+§16 indexes those concepts with the member in place of a bounded-context
+identity. Such a row declares no context, and a context holds one of those
+concepts only by its own import (P1, P3).
 
 A term without such an owning clause is not a valid row under §1, and
 this index carries no such row (P5, P6).
@@ -86,6 +106,7 @@ Context declared by
 | `Projection` | `urn:stdo:bounded-context:axiomatic-calculus` | [`AXIOMATIC_CALCULUS.md#ac-011-projection`](AXIOMATIC_CALCULUS.md#ac-011-projection) | none |
 | `Interpretation` | `urn:stdo:bounded-context:axiomatic-calculus` | [`AXIOMATIC_CALCULUS.md#6-interpretation-and-models`](AXIOMATIC_CALCULUS.md#6-interpretation-and-models) | none |
 | `Axiomatic Calculus Basis` | `urn:stdo:bounded-context:axiomatic-calculus` | [`AXIOMATIC_CALCULUS.md#8-calculus-identity`](AXIOMATIC_CALCULUS.md#8-calculus-identity) | none |
+| operation outcome: declared result; `hold`; `gap`; `refusal(constraint)`; `refusal(basis)` | `urn:stdo:bounded-context:axiomatic-calculus` | [`AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal`](AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal) | [`AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds`](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds); [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |
 
 ## 5. Semantic resolution
 
@@ -93,16 +114,16 @@ Context declared by
 [PRODUCT_DEFINITION §5](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution)
 (P3).
 
-| Indexed term | Bounded-context identity | Owning concept clause |
-|---|---|---|
-| `Term` | `urn:stdo:bounded-context:semantic-resolution` | [`PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution`](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution) |
-| `Concept Reference` | `urn:stdo:bounded-context:semantic-resolution` | [`PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution`](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution) |
-| `Bounded Context` | `urn:stdo:bounded-context:semantic-resolution` | [`PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution`](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution) |
-| `Semantic Address` | `urn:stdo:bounded-context:semantic-resolution` | [`PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution`](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution) |
-| `Semantic Import` | `urn:stdo:bounded-context:semantic-resolution` | [`PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution`](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution) |
-| `Semantic Translation` | `urn:stdo:bounded-context:semantic-resolution` | [`PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution`](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution) |
-| `Semantic Equivalence` | `urn:stdo:bounded-context:semantic-resolution` | [`PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution`](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution) |
-| `Semantic Disambiguation` | `urn:stdo:bounded-context:semantic-resolution` | [`PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution`](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution) |
+| Indexed term | Bounded-context identity | Owning concept clause | Relation clause |
+|---|---|---|---|
+| `Term` | `urn:stdo:bounded-context:semantic-resolution` | [`PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution`](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution) | none |
+| `Concept Reference` | `urn:stdo:bounded-context:semantic-resolution` | [`PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution`](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution) | none |
+| `Bounded Context` | `urn:stdo:bounded-context:semantic-resolution` | [`PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution`](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution) | none |
+| `Semantic Address` | `urn:stdo:bounded-context:semantic-resolution` | [`PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution`](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution) | none |
+| `Semantic Import` | `urn:stdo:bounded-context:semantic-resolution` | [`FOUNDATIONS.md#imports-between-members`](FOUNDATIONS.md#imports-between-members) | [`PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution`](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution), which applies the import between bounded contexts |
+| `Semantic Translation` | `urn:stdo:bounded-context:semantic-resolution` | [`PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution`](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution) | none |
+| `Semantic Equivalence` | `urn:stdo:bounded-context:semantic-resolution` | [`PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution`](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution) | none |
+| `Semantic Disambiguation` | `urn:stdo:bounded-context:semantic-resolution` | [`PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution`](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution) | none |
 
 ## 6. Product-definition routing
 
@@ -142,31 +163,47 @@ Context declared by
 ## 8. Reference-frame evaluation
 
 Context declared by
-[REFERENCE_FRAME §1](REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit),
-whose statement of ownership includes in the context the frame objects of
-FOUNDATIONS §2 and the result algebra of ACTIVATION §3, each owned at its
-defining locus (P3, P6). A row for an included concept cites §1 as the
-clause that declares the context and owns the concept in it, and its
-defining locus as relation clause (P6, P1).
+[REFERENCE_FRAME §1](REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit)
+(P3). Its import declaration,
+[Imports into this context](REFERENCE_FRAME.md#imports-into-this-context),
+holds in the context the frame objects, ontology objects, authority kinds,
+disjointness and frame tuple of FOUNDATIONS §2, the core results and their
+conjunction of FOUNDATIONS §4, the step with its result refinements and
+the closed result of ACTIVATION §1 to §3 and §7, and the qualification of
+EVALUATION §7, each kept by its owner. A row for an imported concept cites
+its owning section as owning concept clause and the import declaration as
+relation clause (§2; P1, P6).
 
 | Indexed term | Bounded-context identity | Owning concept clause | Relation clause |
 |---|---|---|---|
-| `Reference Frame`; `Frame` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit`](REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit) | [`FOUNDATIONS.md#frame-objects`](FOUNDATIONS.md#frame-objects) |
-| `Frame Tuple` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit`](REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit) | [`FOUNDATIONS.md#the-frame-tuple`](FOUNDATIONS.md#the-frame-tuple); [`REFERENCE_FRAME.md#minimal-frame-declaration`](REFERENCE_FRAME.md#minimal-frame-declaration) |
+| `Reference Frame`; `Frame` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`FOUNDATIONS.md#frame-objects`](FOUNDATIONS.md#frame-objects) | [`REFERENCE_FRAME.md#imports-into-this-context`](REFERENCE_FRAME.md#imports-into-this-context); [`REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit`](REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit) |
+| `Frame Tuple` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`FOUNDATIONS.md#the-frame-tuple`](FOUNDATIONS.md#the-frame-tuple) | [`REFERENCE_FRAME.md#imports-into-this-context`](REFERENCE_FRAME.md#imports-into-this-context); [`REFERENCE_FRAME.md#minimal-frame-declaration`](REFERENCE_FRAME.md#minimal-frame-declaration) |
 | `Frame Declaration` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`REFERENCE_FRAME.md#minimal-frame-declaration`](REFERENCE_FRAME.md#minimal-frame-declaration) | none |
 | `Frame-Set Declaration` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`REFERENCE_FRAME.md#4-frame-set-declaration`](REFERENCE_FRAME.md#4-frame-set-declaration) | [`PRODUCT_DEFINITION.md#7-collective-reference-frame-basis`](PRODUCT_DEFINITION.md#7-collective-reference-frame-basis) |
-| `Activated Frame` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit`](REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit) | [`FOUNDATIONS.md#frame-objects`](FOUNDATIONS.md#frame-objects); [`REFERENCE_FRAME.md#11-the-activation-packet`](REFERENCE_FRAME.md#11-the-activation-packet) |
+| `Activated Frame` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`FOUNDATIONS.md#frame-objects`](FOUNDATIONS.md#frame-objects) | [`REFERENCE_FRAME.md#imports-into-this-context`](REFERENCE_FRAME.md#imports-into-this-context); [`REFERENCE_FRAME.md#11-the-activation-packet`](REFERENCE_FRAME.md#11-the-activation-packet) |
 | `Activation Packet` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`REFERENCE_FRAME.md#11-the-activation-packet`](REFERENCE_FRAME.md#11-the-activation-packet) | [`ACTIVATION.md#1-the-step`](ACTIVATION.md#1-the-step) |
-| `Evaluation` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit`](REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit) | [`FOUNDATIONS.md#frame-objects`](FOUNDATIONS.md#frame-objects) |
+| `Evaluation` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`FOUNDATIONS.md#frame-objects`](FOUNDATIONS.md#frame-objects) | [`REFERENCE_FRAME.md#imports-into-this-context`](REFERENCE_FRAME.md#imports-into-this-context) |
+| `Evaluation Family`; `Workspace`; `Material-Relation Manifold`; `Coordinate`; `Topology`; `Capability Envelope`; `Frame Set`; `Active Frame Configuration`; `Lens`; `Role`, `Persona`, `Abstraction`, `Component` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`FOUNDATIONS.md#frame-objects`](FOUNDATIONS.md#frame-objects) | [`REFERENCE_FRAME.md#imports-into-this-context`](REFERENCE_FRAME.md#imports-into-this-context) |
+| `Actor Identity` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`FOUNDATIONS.md#authority-kinds`](FOUNDATIONS.md#authority-kinds) | [`REFERENCE_FRAME.md#imports-into-this-context`](REFERENCE_FRAME.md#imports-into-this-context); [`SPEC_METHOD.md#11-build-tenant-binding`](SPEC_METHOD.md#11-build-tenant-binding) |
 | `Engagement Atom`; `Semantic Atom` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`REFERENCE_FRAME.md#engagement-atom-and-semantic-atom`](REFERENCE_FRAME.md#engagement-atom-and-semantic-atom) | none |
+| `Communication` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`REFERENCE_FRAME.md#rf-009-no-assumed-hierarchy`](REFERENCE_FRAME.md#rf-009-no-assumed-hierarchy) | [`ACTIVATION.md#configuration`](ACTIVATION.md#configuration) |
+| `activate` outcome: `activated_frame`; `activation_refusal(capability)`; `activation_refusal(authority)`; `activation_refusal(basis)` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`REFERENCE_FRAME.md#5-method-functions`](REFERENCE_FRAME.md#5-method-functions) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |
+| `conjoin` outcome: `decision(holds)`; `decision(fails)`; `conflict`; `indeterminate` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`REFERENCE_FRAME.md#5-method-functions`](REFERENCE_FRAME.md#5-method-functions) | [`FOUNDATIONS.md#conjunction-of-results`](FOUNDATIONS.md#conjunction-of-results) |
+| `translate` outcome: `translated_value`; `declared_loss`; `refusal(condition)`; `refusal(authority)`; `refusal(basis)` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`REFERENCE_FRAME.md#5-method-functions`](REFERENCE_FRAME.md#5-method-functions) | [`REFERENCE_FRAME.md#evidence-or-coordinate-translation`](REFERENCE_FRAME.md#evidence-or-coordinate-translation) |
 | `Coverage Ledger` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`REFERENCE_FRAME.md#coverage-ledger`](REFERENCE_FRAME.md#coverage-ledger) | none |
-| `Result Algebra` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit`](REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit) | [`ACTIVATION.md#3-result-algebra`](ACTIVATION.md#3-result-algebra); [`REFERENCE_FRAME.md#rf-012-closed-results`](REFERENCE_FRAME.md#rf-012-closed-results); [`AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal`](AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal) |
-| `satisfied`; `falsified`; `indeterminate`; `out_of_frame`; `invalid_basis` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit`](REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit) | [`ACTIVATION.md#3-result-algebra`](ACTIVATION.md#3-result-algebra); [`REFERENCE_FRAME.md#rf-012-closed-results`](REFERENCE_FRAME.md#rf-012-closed-results) |
-| `Evaluation Family`; `Workspace`; `Material-Relation Manifold`; `Coordinate`; `Topology`; `Capability Envelope`; `Frame Set`; `Active Frame Configuration`; `Lens`; `Role`, `Persona`, `Abstraction`, `Component` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit`](REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit) | [`FOUNDATIONS.md#frame-objects`](FOUNDATIONS.md#frame-objects) |
-| construction availability: `candidate_ready`; `refused`; `incomplete`; `re_entry_requested` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit`](REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit) | [`ACTIVATION.md#3-result-algebra`](ACTIVATION.md#3-result-algebra) |
-| disposition: `accept`; `local_repair`; `re_enter`; `reject` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit`](REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit) | [`ACTIVATION.md#disposition`](ACTIVATION.md#disposition) |
-| ambiguity outcome: `resolved`; `carried`; `escalated`; `blocked` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit`](REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit) | [`ACTIVATION.md#3-result-algebra`](ACTIVATION.md#3-result-algebra); [`SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle`](SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle) |
-| `Closed Result` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`REFERENCE_FRAME.md#rf-012-closed-results`](REFERENCE_FRAME.md#rf-012-closed-results) | [`ACTIVATION.md#7-closed-result-and-reuse`](ACTIVATION.md#7-closed-result-and-reuse) |
+| coverage status: `covered`; `separately_covered`; `excluded_by_authority`; `conditionally_covered`; `conflicted`; `uncovered`; `unknown` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`REFERENCE_FRAME.md#coverage-ledger`](REFERENCE_FRAME.md#coverage-ledger) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |
+| `Result Algebra`; core result algebra | `urn:stdo:bounded-context:reference-frame-evaluation` | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) | [`REFERENCE_FRAME.md#imports-into-this-context`](REFERENCE_FRAME.md#imports-into-this-context); [`REFERENCE_FRAME.md#rf-012-closed-results`](REFERENCE_FRAME.md#rf-012-closed-results); [`AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal`](AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal) |
+| `satisfied`; `falsified`; `indeterminate`; `out_of_frame`; `invalid_basis` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) | [`REFERENCE_FRAME.md#imports-into-this-context`](REFERENCE_FRAME.md#imports-into-this-context); [`REFERENCE_FRAME.md#rf-012-closed-results`](REFERENCE_FRAME.md#rf-012-closed-results) |
+| not performed, an evaluation with no closed result; refinement of the core | `urn:stdo:bounded-context:reference-frame-evaluation` | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) | [`REFERENCE_FRAME.md#imports-into-this-context`](REFERENCE_FRAME.md#imports-into-this-context) |
+| further refinement; parent value; child value; parent-value rule | `urn:stdo:bounded-context:reference-frame-evaluation` | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) | [`REFERENCE_FRAME.md#imports-into-this-context`](REFERENCE_FRAME.md#imports-into-this-context) |
+| conjunction of results; declared decision rule; composition of results | `urn:stdo:bounded-context:reference-frame-evaluation` | [`FOUNDATIONS.md#conjunction-of-results`](FOUNDATIONS.md#conjunction-of-results) | [`REFERENCE_FRAME.md#imports-into-this-context`](REFERENCE_FRAME.md#imports-into-this-context); [`REFERENCE_FRAME.md#result-conjunction`](REFERENCE_FRAME.md#result-conjunction) |
+| size measurement | `urn:stdo:bounded-context:reference-frame-evaluation` | [`ACTIVATION.md#2-context-construction-under-an-envelope`](ACTIVATION.md#2-context-construction-under-an-envelope) | [`REFERENCE_FRAME.md#imports-into-this-context`](REFERENCE_FRAME.md#imports-into-this-context); [`REFERENCE_FRAME.md#rf-002-finite-attention`](REFERENCE_FRAME.md#rf-002-finite-attention) |
+| admission and activation: `activated`; `admission_refused(authority)`; `admission_refused(basis)`; `closure_unresolved` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`ACTIVATION.md#admission-and-activation`](ACTIVATION.md#admission-and-activation) | [`REFERENCE_FRAME.md#imports-into-this-context`](REFERENCE_FRAME.md#imports-into-this-context); [`REFERENCE_FRAME.md#5-method-functions`](REFERENCE_FRAME.md#5-method-functions) |
+| construction availability: `candidate_ready`; `refused`; `incomplete`; `re_entry_requested(authority)`; `re_entry_requested(basis)` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`ACTIVATION.md#construction-availability`](ACTIVATION.md#construction-availability) | [`REFERENCE_FRAME.md#imports-into-this-context`](REFERENCE_FRAME.md#imports-into-this-context) |
+| disposition: `accept`; `local_repair`; `re_enter`; `reject` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`ACTIVATION.md#disposition`](ACTIVATION.md#disposition) | [`REFERENCE_FRAME.md#imports-into-this-context`](REFERENCE_FRAME.md#imports-into-this-context) |
+| ambiguity outcome: `resolved`; `carried`; `escalated`; `blocked` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`ACTIVATION.md#ambiguity-outcome`](ACTIVATION.md#ambiguity-outcome) | [`REFERENCE_FRAME.md#imports-into-this-context`](REFERENCE_FRAME.md#imports-into-this-context); [`SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle`](SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle) |
+| effects: `completed`; `not_effected`; `completion_unknown` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`ACTIVATION.md#effects`](ACTIVATION.md#effects) | [`REFERENCE_FRAME.md#imports-into-this-context`](REFERENCE_FRAME.md#imports-into-this-context) |
+| `Closed Result` | `urn:stdo:bounded-context:reference-frame-evaluation` | [`ACTIVATION.md#7-closed-result-and-reuse`](ACTIVATION.md#7-closed-result-and-reuse) | [`REFERENCE_FRAME.md#imports-into-this-context`](REFERENCE_FRAME.md#imports-into-this-context); [`REFERENCE_FRAME.md#rf-012-closed-results`](REFERENCE_FRAME.md#rf-012-closed-results) |
 | `Product` specialist frame family | `urn:stdo:bounded-context:reference-frame-evaluation` | [`EXECUTIVE_BASELINE.md#11-derived-generic-specialist-frame-set`](EXECUTIVE_BASELINE.md#11-derived-generic-specialist-frame-set) | none |
 | `Owner` specialist frame family | `urn:stdo:bounded-context:reference-frame-evaluation` | [`EXECUTIVE_BASELINE.md#11-derived-generic-specialist-frame-set`](EXECUTIVE_BASELINE.md#11-derived-generic-specialist-frame-set) | none |
 
@@ -174,15 +211,21 @@ defining locus as relation clause (P6, P1).
 
 Context declared by
 [PRODUCT_DEFINITION §8](PRODUCT_DEFINITION.md#8-what-how-and-work-carriers)
-(P3).
+(P3). §8 names the build tenant, the realisation relation and the terms of
+the build-tenant binding as concepts of the context owned in SPEC_METHOD
+§11, and the multi-build-tenant work item as owned in TICKETS §4; their rows
+cite those owners and name §8 as relation clause (§2; P1, P3).
 
-| Indexed term | Bounded-context identity | Owning concept clause |
-|---|---|---|
-| `Build Tenant` | `urn:stdo:bounded-context:build-tenancy` | [`PRODUCT_DEFINITION.md#8-what-how-and-work-carriers`](PRODUCT_DEFINITION.md#8-what-how-and-work-carriers) |
-| `Build Tenancy`; `Multi-Build-Tenancy` | `urn:stdo:bounded-context:build-tenancy` | [`PRODUCT_DEFINITION.md#8-what-how-and-work-carriers`](PRODUCT_DEFINITION.md#8-what-how-and-work-carriers) |
-| `Tenant Registry` | `urn:stdo:bounded-context:build-tenancy` | [`PRODUCT_DEFINITION.md#8-what-how-and-work-carriers`](PRODUCT_DEFINITION.md#8-what-how-and-work-carriers) |
-| `Common Build-Tenant Surface` | `urn:stdo:bounded-context:build-tenancy` | [`PRODUCT_DEFINITION.md#8-what-how-and-work-carriers`](PRODUCT_DEFINITION.md#8-what-how-and-work-carriers) |
-| `Multi-Build-Tenant Work Item` | `urn:stdo:bounded-context:build-tenancy` | [`TICKETS.md#multi-build-tenant-independence`](TICKETS.md#multi-build-tenant-independence) |
+| Indexed term | Bounded-context identity | Owning concept clause | Relation clause |
+|---|---|---|---|
+| `Build Tenant` | `urn:stdo:bounded-context:build-tenancy` | [`SPEC_METHOD.md#11-build-tenant-binding`](SPEC_METHOD.md#11-build-tenant-binding) | [`PRODUCT_DEFINITION.md#8-what-how-and-work-carriers`](PRODUCT_DEFINITION.md#8-what-how-and-work-carriers) |
+| `Build-Tenant Binding`; `Calculus Binding`; `Execution Binding` | `urn:stdo:bounded-context:build-tenancy` | [`SPEC_METHOD.md#11-build-tenant-binding`](SPEC_METHOD.md#11-build-tenant-binding) | [`PRODUCT_DEFINITION.md#8-what-how-and-work-carriers`](PRODUCT_DEFINITION.md#8-what-how-and-work-carriers) |
+| `Requirements Calculus`; `Computational Calculus`; `Execution Environment` | `urn:stdo:bounded-context:build-tenancy` | [`SPEC_METHOD.md#11-build-tenant-binding`](SPEC_METHOD.md#11-build-tenant-binding) | [`PRODUCT_DEFINITION.md#8-what-how-and-work-carriers`](PRODUCT_DEFINITION.md#8-what-how-and-work-carriers) |
+| `Author Identity`; `Operation Kind` | `urn:stdo:bounded-context:build-tenancy` | [`SPEC_METHOD.md#11-build-tenant-binding`](SPEC_METHOD.md#11-build-tenant-binding) | [`PRODUCT_DEFINITION.md#8-what-how-and-work-carriers`](PRODUCT_DEFINITION.md#8-what-how-and-work-carriers); [`FOUNDATIONS.md#authority-kinds`](FOUNDATIONS.md#authority-kinds) |
+| `Build Tenancy`; `Multi-Build-Tenancy` | `urn:stdo:bounded-context:build-tenancy` | [`PRODUCT_DEFINITION.md#8-what-how-and-work-carriers`](PRODUCT_DEFINITION.md#8-what-how-and-work-carriers) | none |
+| `Tenant Registry` | `urn:stdo:bounded-context:build-tenancy` | [`PRODUCT_DEFINITION.md#8-what-how-and-work-carriers`](PRODUCT_DEFINITION.md#8-what-how-and-work-carriers) | none |
+| `Common Build-Tenant Surface` | `urn:stdo:bounded-context:build-tenancy` | [`PRODUCT_DEFINITION.md#8-what-how-and-work-carriers`](PRODUCT_DEFINITION.md#8-what-how-and-work-carriers) | none |
+| `Multi-Build-Tenant Work Item` | `urn:stdo:bounded-context:build-tenancy` | [`TICKETS.md#multi-build-tenant-independence`](TICKETS.md#multi-build-tenant-independence) | [`PRODUCT_DEFINITION.md#8-what-how-and-work-carriers`](PRODUCT_DEFINITION.md#8-what-how-and-work-carriers) |
 
 ## 10. Recursive product
 
@@ -242,6 +285,13 @@ Context declared by
 | `Adjoint Mapping` | `urn:stdo:bounded-context:world-model` | [`WORLD_MODEL.md#6-units`](WORLD_MODEL.md#6-units) | none |
 | `Composed World Model` | `urn:stdo:bounded-context:world-model` | [`WORLD_MODEL.md#6-units`](WORLD_MODEL.md#6-units) | none |
 | `Query Plane` | `urn:stdo:bounded-context:world-model` | [`WORLD_MODEL.md#6-units`](WORLD_MODEL.md#6-units) | none |
+| cut admissibility: `cut_admissible`; `cut_inadmissible`; `discrimination_undecided` | `urn:stdo:bounded-context:world-model` | [`WORLD_MODEL.md#14-results-of-this-profile`](WORLD_MODEL.md#14-results-of-this-profile) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |
+| direction acceptance: `direction_verified`; `extraction_inadmissible`; `verification_failed`; `verification_inconclusive`; `representation_space_invalid` | `urn:stdo:bounded-context:world-model` | [`WORLD_MODEL.md#14-results-of-this-profile`](WORLD_MODEL.md#14-results-of-this-profile) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |
+| overlay publication: `published_verified`; `published_unverified` | `urn:stdo:bounded-context:world-model` | [`WORLD_MODEL.md#14-results-of-this-profile`](WORLD_MODEL.md#14-results-of-this-profile) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |
+| overlay storage: `storage_retained`; `storage_lossy` | `urn:stdo:bounded-context:world-model` | [`WORLD_MODEL.md#14-results-of-this-profile`](WORLD_MODEL.md#14-results-of-this-profile) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |
+| null-peer discrimination: `null_peer_discriminated`; `not_yet_lawful` | `urn:stdo:bounded-context:world-model` | [`WORLD_MODEL.md#14-results-of-this-profile`](WORLD_MODEL.md#14-results-of-this-profile) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |
+| promotion gate: `gate_met`; `gate_not_met` | `urn:stdo:bounded-context:world-model` | [`WORLD_MODEL.md#14-results-of-this-profile`](WORLD_MODEL.md#14-results-of-this-profile) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |
+| saturation: `saturated`; `not_saturated` | `urn:stdo:bounded-context:world-model` | [`WORLD_MODEL.md#14-results-of-this-profile`](WORLD_MODEL.md#14-results-of-this-profile) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |
 
 ## 14. Graph-native ODD
 
@@ -259,6 +309,8 @@ rows create no identity between the contexts (P1).
 | `F_D` | `urn:stdo:bounded-context:graph-native-odd` | [`ODD.md#probabilistic-compute`](ODD.md#probabilistic-compute) | none |
 | `F_P` | `urn:stdo:bounded-context:graph-native-odd` | [`ODD.md#probabilistic-compute`](ODD.md#probabilistic-compute) | [`SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle`](SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle) |
 | `F_H` | `urn:stdo:bounded-context:graph-native-odd` | [`ODD.md#probabilistic-compute`](ODD.md#probabilistic-compute) | [`SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle`](SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle) |
+| closure decision: `close`; `yield`; `retry(defeated)`; `retry(undecided)`; `repair(implementation)`; `repair(proof)`; `re-enter(undeclared)`; `re-enter(basis)`; `reprice`; `block(undeclared)`; `block(basis)` | `urn:stdo:bounded-context:graph-native-odd` | [`ODD.md#115d-constructive-evaluation-and-yield-loop`](ODD.md#115d-constructive-evaluation-and-yield-loop) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |
+| audit outcome: compliant; non-compliant; valid and worth incorporating | `urn:stdo:bounded-context:graph-native-odd` | [`ODD.md#9-method-governance-and-audit`](ODD.md#9-method-governance-and-audit) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |
 
 ## 15. Traversal occurrence
 
@@ -274,8 +326,85 @@ Context declared by
 | `Mutable Subject` | `urn:stdo:bounded-context:traversal-occurrence-profile` | [`TRAVERSAL_OCCURRENCE.md#mutable-subject-effect-relation`](TRAVERSAL_OCCURRENCE.md#mutable-subject-effect-relation) | none |
 | `Event Frontier` | `urn:stdo:bounded-context:traversal-occurrence-profile` | [`TRAVERSAL_OCCURRENCE.md#event-frontier-and-projection`](TRAVERSAL_OCCURRENCE.md#event-frontier-and-projection) | none |
 | `Traversal Occurrence Profile Basis` | `urn:stdo:bounded-context:traversal-occurrence-profile` | [`TRAVERSAL_OCCURRENCE.md#exact-profile-identity`](TRAVERSAL_OCCURRENCE.md#exact-profile-identity) | none |
+| stop and decision values split by cause: `refusal(constraint)`; `refusal(basis)`; `refused(constraint)`; `refused(basis)`; `partial_effect(not_attained)`; `partial_effect(undecided)`; `partial(not_attained)`; `partial(undecided)` | `urn:stdo:bounded-context:traversal-occurrence-profile` | [`TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds`](TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds) | [`AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal`](AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal); [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |
 
-## 16. Source dispositions
+## 16. Concepts of members without a declared context
+
+This section indexes the concepts that a member defines outside every
+bounded context it declares. The source context of each is its owning
+member
+([FOUNDATIONS §2 Imports between members](FOUNDATIONS.md#imports-between-members)),
+which the second column names in place of a bounded-context identity. A
+row here declares no context; a context holds one of these concepts only
+by its own import, as §8 records for the concepts that REFERENCE_FRAME §1
+imports (§2; P1, P3).
+
+| Indexed term | Source context | Owning concept clause | Relation clause |
+|---|---|---|---|
+| `recovered`; `independent`; `derived`; `hypothesis` | FOUNDATIONS | [`FOUNDATIONS.md#1-vocabulary-of-standing`](FOUNDATIONS.md#1-vocabulary-of-standing) | [`FOUNDATIONS.md#3-commitments`](FOUNDATIONS.md#3-commitments) |
+| accounts of a construction: algorithmic description; informational interpretation; computational realisation | FOUNDATIONS | [`FOUNDATIONS.md#accounts-of-a-construction`](FOUNDATIONS.md#accounts-of-a-construction) | [`SPEC_METHOD.md#11-build-tenant-binding`](SPEC_METHOD.md#11-build-tenant-binding) |
+| `Import`; `Import Declaration`; `Adoption`; `Adoption Premise` | FOUNDATIONS | [`FOUNDATIONS.md#imports-between-members`](FOUNDATIONS.md#imports-between-members) | [`PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution`](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution); [`PROFILES.md#1-the-boundary`](PROFILES.md#1-the-boundary); [`REFERENCE_FRAME.md#imports-into-this-context`](REFERENCE_FRAME.md#imports-into-this-context) |
+| `Material Family`; `Family Table`; `Instance Premise`; `Added Choice` | FOUNDATIONS | [`FOUNDATIONS.md#foundation-to-law`](FOUNDATIONS.md#foundation-to-law) | none |
+| `Adopting Product` | FOUNDATIONS | [`FOUNDATIONS.md#foundation-to-law`](FOUNDATIONS.md#foundation-to-law) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |
+| `Supporting Evidence` (of a categorical claim; the earlier label `Evidence Class` is superseded) | FOUNDATIONS | [`FOUNDATIONS.md#4-algebra`](FOUNDATIONS.md#4-algebra), Formal fragment | [`EVALUATION.md#6-conformance-of-realisations`](EVALUATION.md#6-conformance-of-realisations) |
+| `Join` (four senses: categorical join; composition boundary; join of results; relation join) | FOUNDATIONS | [`FOUNDATIONS.md#1-vocabulary-of-standing`](FOUNDATIONS.md#1-vocabulary-of-standing) | [`CONFORMANCE.md#1-counterexamples-from-the-builders-own-history`](CONFORMANCE.md#1-counterexamples-from-the-builders-own-history) |
+| `Assurance Relations`; `Assertion Provenance`; `Execution Provenance`; `Observation Sufficiency`; `Impact Cover`; `Validity Dependency`; `Mandatory Gate` | FOUNDATIONS | [`FOUNDATIONS.md#assurance-relations`](FOUNDATIONS.md#assurance-relations) | [`ACTIVATION.md#7-closed-result-and-reuse`](ACTIVATION.md#7-closed-result-and-reuse); [`EVALUATION.md#1-claims`](EVALUATION.md#1-claims); [`ASSURANCE.md#3-test-authority`](ASSURANCE.md#3-test-authority); [`RELEASE.md#8-acceptance`](RELEASE.md#8-acceptance) |
+| `Current State`; `Destination`; `Transition` | ACTIVATION | [`ACTIVATION.md#transitions`](ACTIVATION.md#transitions) | [`ACTIVATION.md#5-work-state-and-restart`](ACTIVATION.md#5-work-state-and-restart) |
+| `Construction Relation`; `Strategy`; `Composition Boundary`; `Feedback and Diagnosis`; the four causes | ACTIVATION | [`ACTIVATION.md#construction-relation`](ACTIVATION.md#construction-relation) | [`SPEC_METHOD.md#universal-intake-triage`](SPEC_METHOD.md#universal-intake-triage); [`EVALUATION.md#1-claims`](EVALUATION.md#1-claims); [`FOUNDATIONS.md#construction-synthesis`](FOUNDATIONS.md#construction-synthesis) |
+| `Configuration` | ACTIVATION | [`ACTIVATION.md#configuration`](ACTIVATION.md#configuration) | [`FOUNDATIONS.md#frame-objects`](FOUNDATIONS.md#frame-objects); [`REFERENCE_FRAME.md#rf-009-no-assumed-hierarchy`](REFERENCE_FRAME.md#rf-009-no-assumed-hierarchy) |
+| `Acquisition`; `Derived Surface`; deciding owner section | ACTIVATION | [`ACTIVATION.md#2-context-construction-under-an-envelope`](ACTIVATION.md#2-context-construction-under-an-envelope) | none |
+| `Rewrite Step`; `Licensing Law`; `Exact Step`; `Approximate Step`; `Adequacy Relation`; `End-to-End Bound` | ACTIVATION | [`ACTIVATION.md#refinement`](ACTIVATION.md#refinement) | none |
+| `Truth Surface`; actor's account | ACTIVATION | [`ACTIVATION.md#the-workspace-and-an-actors-account`](ACTIVATION.md#the-workspace-and-an-actors-account) | [`ACTIVATION.md#transitions`](ACTIVATION.md#transitions) |
+| `Equivalence Ladder`; semantic equivalence of realisations; `Computational Equivalence`; `Categorical Equivalence` | EVALUATION | [`EVALUATION.md#6-conformance-of-realisations`](EVALUATION.md#6-conformance-of-realisations) | [`FOUNDATIONS.md#4-algebra`](FOUNDATIONS.md#4-algebra); `Semantic Equivalence` of concepts in §5 is another concept |
+| `Adequate Attention`; `Actual-Use Evidence` | EVALUATION | [`EVALUATION.md#frame-qualification`](EVALUATION.md#frame-qualification) | [`ACTIVATION.md#2-context-construction-under-an-envelope`](ACTIVATION.md#2-context-construction-under-an-envelope) |
+| `Discriminator`; `Common Discriminators` | CONFORMANCE | [`CONFORMANCE.md#conformance`](CONFORMANCE.md#conformance) | [`CONFORMANCE.md#5-coverage-of-the-common-discriminators`](CONFORMANCE.md#5-coverage-of-the-common-discriminators) |
+| `Logical-Review Check` | CONFORMANCE | [`CONFORMANCE.md#5-coverage-of-the-common-discriminators`](CONFORMANCE.md#5-coverage-of-the-common-discriminators) | [`EVALUATION.md#4-review-results`](EVALUATION.md#4-review-results) |
+| profile import rule | PROFILES | [`PROFILES.md#1-the-boundary`](PROFILES.md#1-the-boundary) | [`FOUNDATIONS.md#imports-between-members`](FOUNDATIONS.md#imports-between-members) |
+| axiom verdict: `pass`; `fail`; `not_applicable` | DESIGN_MODULE | [`DESIGN_MODULE.md#cross-view-axiom-evaluation`](DESIGN_MODULE.md#cross-view-axiom-evaluation) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |
+| Ontology verdict and design verdict: `accepted` | DESIGN_MODULE | [`DESIGN_MODULE.md#gate-and-retrospective-work`](DESIGN_MODULE.md#gate-and-retrospective-work) | [`ACTIVATION.md#disposition`](ACTIVATION.md#disposition) |
+| surface review: `compliant`; `violation`; `design_module_incomplete` | UX | [`UX.md#15-results-of-this-profile`](UX.md#15-results-of-this-profile) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |
+| replay proof: `replay_passes`; `replay_fails` | UX | [`UX.md#15-results-of-this-profile`](UX.md#15-results-of-this-profile) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |
+| closure obligations: `closure_obligations_met`; `closure_unproven` | UX | [`UX.md#15-results-of-this-profile`](UX.md#15-results-of-this-profile) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |
+| carrier admission: `carrier_admitted`; `carrier_missing` | UX | [`UX.md#15-results-of-this-profile`](UX.md#15-results-of-this-profile) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |
+
+## 17. Labels with several senses
+
+Some labels name different things in different clauses. Each row below
+locates one sense with the clause that owns it; the label's meaning at an
+occurrence is the sense its owning clause gives, and the occurrence
+qualifies the label or states its predicate where it is used. Equal
+spelling across these rows establishes no equivalence (§1; P1, P3).
+Purpose and material relation: an actor that read one sense into another
+clause reconciled the two by itself; this index points each sense to its
+owner.
+
+| Label | Where this use occurs (locator, not a definition) | Owning clause |
+|---|---|---|
+| `indeterminate` | a core result value: admissible evidence cannot decide | [FOUNDATIONS §4 Results](FOUNDATIONS.md#results) |
+| `indeterminate` | a triage payload class, not a result | [EVALUATION §4 Result and triage projection](EVALUATION.md#result-and-triage-projection) |
+| `not_applicable` | a triage payload class, not a result | [EVALUATION §4 Result and triage projection](EVALUATION.md#result-and-triage-projection) |
+| `not_applicable` | a successor disposition with a bounded reason | [RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015) |
+| `not_applicable` | a lifecycle phase declared not to apply, with its reason | [SPEC_METHOD §2 Operational lifecycle sufficiency](SPEC_METHOD.md#operational-lifecycle-sufficiency) |
+| `not_applicable` | a design-grounded exclusion and an entity-lifecycle matrix entry | [DESIGN_MODULE](DESIGN_MODULE.md), the head and the state model; [ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement) |
+| `not_applicable` | a traversal judgment value | [TRAVERSAL_OCCURRENCE](TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds) |
+| `refusal`, `refused` | an activation or translation refusal of a method function | [REFERENCE_FRAME §5](REFERENCE_FRAME.md#5-method-functions) |
+| `refusal`, `refused` | a constraint or basis refusal of an a_c operation | [AXIOMATIC_CALCULUS AC-007](AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal) |
+| `refusal`, `refused` | a traversal judgment decision and stop | [TRAVERSAL_OCCURRENCE](TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds) |
+| `refusal`, `refused` | a refused admission of a work contract | [ACTIVATION §1 Admission](ACTIVATION.md#admission) |
+| `gap` | an a_c stop, with a core value | [AXIOMATIC_CALCULUS AC-007](AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal) |
+| `gap` | a conjunction gap, which has no value of its own | [FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results) |
+| disposition | an acceptance disposition at a boundary | [ACTIVATION §3 Disposition](ACTIVATION.md#disposition) |
+| disposition | a successor disposition of a predecessor claim | [RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015) |
+| disposition | a repricing disposition of an obligation | [TICKETS §7 Recorded judgment and owner-ruling continuity](TICKETS.md#recorded-judgment-and-owner-ruling-continuity) |
+| disposition | a planning choice for an evaluation in a basis inventory, not a coverage status | `templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md`, Coverage And Residuals |
+| missing | the absence of a closed result | [FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Not performed |
+| adoption | Product adoption of an available profile | [PRODUCT_DEFINITION §7](PRODUCT_DEFINITION.md#7-collective-reference-frame-basis) |
+| adoption | adoption of a shared method lesson | [SPEC_METHOD §6](SPEC_METHOD.md#shared-method-adoption-and-propagation-stdo-up-012) |
+| adoption | a consumer's adoption of a release basis | [RELEASE §4](RELEASE.md#4-selector-and-consumer-adoption) |
+| `Closed`, `closed` | a post's discussion state | [POSTING_GUIDE §7](POSTING_GUIDE.md#7-discussion-state-and-mutability) |
+| `Closed`, `closed` | a ticket or sprint status | [TICKETS §4 Status](TICKETS.md#status) |
+
+## 18. Source dispositions
 
 Rows of rc.2 GLOSSARY_GUIDE.md. Anchors are into rc.2 GLOSSARY_GUIDE.md; a
 locus is a section of this file. Every conserved row is restated in this
@@ -287,7 +416,12 @@ per row. Generalisations recorded here: the predecessor's section titles
 drop "Index"; "the selected complete STDO release" is written "the
 selected complete STDO basis"; the predecessor's reference to
 `SPEC_METHOD.md#bounded-context-semantic-resolution` is written as
-PRODUCT_DEFINITION §5, its successor owner.
+PRODUCT_DEFINITION §5, its successor owner. New in this corpus: §2's rule
+for a row whose concept a context holds by import or owner relation, and
+for a concept whose member declares no context for it, with §16. Purpose
+and material relation: each row names the section that defines its
+concept, so the index cannot present an importing or relating clause as a
+second owner (P1, P6).
 
 | Anchor | Disposition | Locus |
 |---|---|---|
@@ -295,11 +429,11 @@ PRODUCT_DEFINITION §5, its successor owner.
 | #method-identity-index | conserved; both terms in the method-identity context at SPEC_METHOD §1; the `O` relation clause at ODD §1, successor of rc.2 ODD_METHOD #1-position | §3 |
 | #axiomatic-calculus-index | conserved; all fourteen rows in the axiomatic-calculus context at the tenant's AXIOMATIC_CALCULUS sections | §4 |
 | #traversal-occurrence-profile-index | conserved; all seven rows in the traversal-occurrence-profile context at the same-named sections of TRAVERSAL_OCCURRENCE, which declares the context in its Position, with the imported-calculus relation | §15 |
-| #semantic-resolution-index | conserved; all eight terms, owner moved from rc.2 SPEC_METHOD to PRODUCT_DEFINITION §5 | §5 |
+| #semantic-resolution-index | conserved; all eight terms in the semantic-resolution context declared by PRODUCT_DEFINITION §5, owner moved from rc.2 SPEC_METHOD to PRODUCT_DEFINITION §5, except `Semantic Import`, owned at FOUNDATIONS §2 Imports between members, which PRODUCT_DEFINITION §5 applies between bounded contexts | §5 |
 | #product-definition-routing-index | conserved; all eleven terms, owner moved from rc.2 SPEC_METHOD to PRODUCT_DEFINITION §1, §3, §4 and §7 | §6 |
 | #release-publication-index | conserved; all seven terms at RELEASE §2 | §7 |
-| #reference-frame-evaluation-index | conserved; the reference frame owned in the context by REFERENCE_FRAME §1, whose statement of ownership includes the frame objects of FOUNDATIONS §2 at their defining locus, now the relation clause; both specialist families at EXECUTIVE_BASELINE §11; the successor's other frame objects and result algebra added under the same inclusion | §8 |
-| #build-tenancy-index | conserved; four rows owner moved from rc.2 SPEC_METHOD to PRODUCT_DEFINITION §8, the work-item row at TICKETS §4 | §9 |
+| #reference-frame-evaluation-index | conserved; the context declared by REFERENCE_FRAME §1, whose import declaration holds the reference frame and the other frame objects of FOUNDATIONS §2, each row citing its owning section with that declaration as relation clause; both specialist families at EXECUTIVE_BASELINE §11; the successor's other frame objects, its core result algebra (FOUNDATIONS §4 Results) and the step's result refinements (ACTIVATION §3) added under the same import | §8 |
+| #build-tenancy-index | conserved; the four rows in the build-tenancy context declared by PRODUCT_DEFINITION §8, owner moved from rc.2 SPEC_METHOD, `Build Tenant` to SPEC_METHOD §11 and the other three to PRODUCT_DEFINITION §8; the work-item row at TICKETS §4 | §9 |
 | #recursive-product-index | conserved; all eight terms, owner moved from rc.2 SPEC_METHOD to FOUNDATIONS §2 Product lineage objects | §10 |
 | #product-assurance-index | conserved; five rows owner moved from rc.2 SPEC_METHOD to ASSURANCE §2, `Unit Test` from rc.2 DESIGN_MODULE_METHOD to ASSURANCE §15 with DESIGN_MODULE as relation | §11 |
 | #graph-native-odd-index | conserved; all eight rows in the graph-native-odd context at ODD §1 and §5, the ABG relation at ODD §10, the `F_P` and `F_H` relation at SPEC_METHOD §5 (rc.2 #ambiguity-governance-rule); `F_D`, `F_P`, `F_H` also keep their axiomatic-calculus row | §14 |

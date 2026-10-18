@@ -21,7 +21,9 @@ read-only.
 1. From the verified definition, read Goals, bound work lanes, selected outcome,
    exact checkpoint/workspace,
    accepted design, proof, and exact review results. Comments and dashboards
-   are projections.
+   are projections. Acquire owning sections under the selected basis's
+   `ACTIVATION.md` section 2, Acquisition; work state and resumption are its
+   section 5.
    Resolve each reported ticket to its unique current authoritative carrier,
    including a referenced peer ticket. A historical link, predecessor section
    or another ticket's summary cannot establish its current lane or admission.
@@ -51,7 +53,8 @@ read-only.
    review counts.
 
 For an interrupted or refused operation, report the requested outcome,
-observed effect state and the effect owner's retry rule separately. No observed
+observed effect state and the effect owner's retry rule separately, as the
+reconciliation of uncertain external effects in ACTIVATION §5 requires. No observed
 effect alone does not mean the request is complete or that retry is needed.
 Keep unknown effects unknown and withhold repetition until its rule permits it.
 For completion, evaluate satisfied obligations, current evidence, required
@@ -64,4 +67,5 @@ Lead with Product outcome and current boundary. Report basis health, completed
 since the comparison point, current work/evidence, blockers/findings, proposed
 triage or decisions, and one next already-authorized action. State stale,
 missing, or unverified evidence. Keep adjacent observations from becoming
-automatic release blockers.
+automatic release blockers; when a finding blocks promotion is decided by
+EVALUATION §5 When a finding blocks promotion.

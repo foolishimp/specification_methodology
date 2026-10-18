@@ -41,8 +41,39 @@ unchanged to the bound objects; narrowed scope: boundaries this profile
 governs; invalidation: a change of this profile's definition of any bound
 object re-evaluates the binding (P1, P6).
 
+Results and design records. A performed evaluation under this profile
+returns a value of the core result algebra of
+[FOUNDATIONS §4 Results](FOUNDATIONS.md#results), directly or through one
+of this profile's two refinements, each mapped where it is defined: the
+reconstruction decisions of §7 Invariant reconstruction sufficiency and
+the axiom verdicts of §7 Cross-view axiom evaluation. The Ontology verdict
+and the design verdict are dispositions under
+[ACTIVATION §3 Disposition](ACTIVATION.md#disposition), as §7 Gate and
+retrospective work states. The profile's other closed vocabularies are
+entries of the design record, which a design author declares and an
+assessment examines; they are not results and map to no core value: the
+function-derivation dispositions and the entries of the entity-lifecycle
+matrix (§5), a `not_applicable` entry for a discovery category or for an
+unsupported admission form (§5), the competing-path dispositions (§5), the
+classes of an IACS revision and the entries of a reference mapping (§6),
+the two-part disposition of an algorithmic obligation (§7) and the module
+roles (§9). An evaluation of such a record, such as the cross-view proof
+that every discovered functionality row has a disposition, returns its own
+core value. This member uses `not_applicable` in two senses. A
+`not_applicable` record entry, in the entity-lifecycle matrix, for a
+discovery category or for an unsupported admission form (§5), records an
+exclusion: the excluded obligation has no result, under
+[ACTIVATION §1 Applicability](ACTIVATION.md#applicability), Exclusion and
+the core, which decides exclusions. A `not_applicable` axiom verdict (§7
+Cross-view axiom evaluation) is a value of a predicate declared as a
+disjunction that includes non-application, mapped there under the same
+paragraph. This statement is new in this corpus. Purpose and material
+relation: a consumer that combines this profile's outcomes with other
+results reads each result in the one core and never reads a record entry
+as a result (P5, P6).
+
 Every clause names the principle that requires it (P0 to P6, FOUNDATIONS
-§3; C is proposed as P0). The predecessor's "must" is written in the
+§3). The predecessor's "must" is written in the
 indicative; its "should", "may", "recommended", "typical", "preferred",
 "normally", "usually", "minimum", "where practical" and "allowed" keep
 their force. A route written `rc.2 #anchor` is into
@@ -118,6 +149,132 @@ system means, is stated once in
 [SPEC_METHOD §2 Realisation shape](SPEC_METHOD.md#realisation-shape),
 scoped to boundaries this profile governs; every rule below refines it
 (P1, P6; rc.2 #3-core-rule).
+
+### Foundation to law
+
+This member is material family F17, software design. The table below
+shows which of its rules follow from which premises, in the format of
+[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law),
+which also states the standing of the consequences. An actor enters the
+family here, when it designs, implements or reviews a boundary that this
+profile governs. The family imports these families under
+[PROFILES §1](PROFILES.md#1-the-boundary), and its rows cite them as
+premises: F1, frames and context, for
+[FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds); F2,
+transitions, steps and configuration ([ACTIVATION §1](ACTIVATION.md#1-the-step));
+F3, results and their combination
+([FOUNDATIONS §4 Results](FOUNDATIONS.md#results)); F4, work state,
+resumption and reuse ([ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse));
+F6, claims, evidence, assessment and acceptance
+([EVALUATION §1](EVALUATION.md#1-claims)); F8, identity
+([IDENTITY §1](IDENTITY.md#1-position)); F10, constitutional chain,
+outcome and build-tenant binding ([SPEC_METHOD §2](SPEC_METHOD.md#2-the-chain));
+F12, binding a project to the method
+([PRODUCT_DEFINITION §1](PRODUCT_DEFINITION.md#1-overlay-and-layout-independence));
+and F13, work carriers ([TICKETS §5](TICKETS.md#5-from-carrier-to-execution)),
+whose implementation-migration rule Recurrence extraction refines.
+Standing of the commitments cited
+([FOUNDATIONS §3](FOUNDATIONS.md#3-commitments)): P0 recovered; P1, P2,
+P3, P4a and P6 independent; P4b derived from P0 and P2, with P0's premise
+that step-produced facts are not re-acquirable; P5 derived from P0 and P6,
+with P0's open-world premise. Its instance premises hold where a project
+adopts this profile for a boundary; they are adopted with it and do not
+follow from the foundations (P1, P6):
+It also imports F18, graph-native construction ([ODD §1](ODD.md#1-position)), for the constructive-carrier law its first row defers to.
+
+- I1: a Product has decided the outcomes and capabilities it builds, and
+  adopts this profile for a named boundary of its realisation;
+- I2: realisation code can hold one meaning in typed carriers and explicit
+  transforms or in orchestration, helpers, open payloads and shared
+  mutable state, and in more than one place;
+- I3: bounded actors design, implement, test, review and later change the
+  boundary, and an actor taking a later local action generally does not
+  hold the reasoning that produced the design;
+- I4: a mechanism the boundary needs can be built locally or taken from
+  existing foundations, and similar computation recurs across boundaries
+  and over time.
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P6 (independent), P1 (independent); F10 imported; I1; F18 imported | the constitutional chain decides what the Product does (F10) and authority stays with its owner (P6), so this profile governs only how a decided outcome is realised; one meaning admits several realisation shapes (P1), so a decision that functionality is required does not decide how many entities, functions, operations, carriers or modules exist; where the graph-execution profile governs, its graph carriers own the constructive law (F18), so no deterministic module this profile governs replaces a graph function, edge traversal or graph module | [§1 Purpose](#purpose), [Position](#position), [Core rule](#core-rule); [§2](#2-graph-execution-alignment-and-escalation); [§8](#8-theoretical-framing); [§12 Relationship to other members](#relationship-to-other-members), [Non-goals](#non-goals) | the functional bias and its preferences at "should" force, and the profile's scope, which adopts no world-model theory (§8): this profile; the core rule and the non-goals: [SPEC_METHOD §2 Realisation shape](SPEC_METHOD.md#realisation-shape); the graph-native carrier law: [ODD](ODD.md#1-position) | 1, 4, 5 |
+| P5 (derived from P0 and P6), P6 (independent); F3 imported | an evaluation under this profile can meet a condition outside its context and cannot report success on it (P5), and a record is not a judgment (P6), so every performed evaluation returns a core value of F3, directly or through a refinement mapped where it is defined, and an entry of the design record, a `not_applicable` exclusion included, is not a result | [the head of this member](#design_module), Results and design records | the two refinements, their predicates and the record vocabularies: this profile; what an exclusion is: [ACTIVATION §1 Applicability](ACTIVATION.md#applicability), Exclusion and the core | 3, 9 |
+| P3 (independent), P1 (independent), P6 (independent); I2 | a meaning has one declared identity and is read through a declared contract (P3, P1), and code can hold one meaning in several places (I2), so a change that adds a place for a meaning adds a rival truth surface; hence a change adds no truth surface, and foreign input is lawful only at ingress, where it collapses into local carrier truth under a declared contract; a check is evidence, not authority (P6), so typing or schemas enforce only a seam already made real | [§3](#3-boundary-closure-evaluators) | that the three evaluators override other heuristics, at "should" force; the fail-closed test; the four-step ingress shape: this profile | 4, 6 |
+| P4a (independent), P1 (independent), P6 (independent); I2 | steps compose only through declared result types and domains (P4a), and meaning holds only under a declared contract (P1); meaning held in closed typed carriers, explicit return values and small composed transforms can be checked, while meaning in open payloads, implicit `Any` or untyped definitions cannot (I2), so the latter are not typed design; a typing claim needs its evidence (P6), so a boundary whose strict checker does not run cleanly is not yet implementation-conformant | [§4](#4-functional-bias-and-typing) | the preferences and avoidances at "should" force, the Python rule, the requirement of a strict checking pass, and the conditions for `Any`, `cast` and `# type: ignore`: this profile; which strict checker and its configuration: the project | 4, 3 |
+| P1 (independent), P3 (independent), P6 (independent); F10 imported; I1 | the constitutional WHAT owns Product meaning (F10) and no realisation mints authority (P6), so a new or materially changed semantic boundary derives its semantic model from one accepted Ontology subordinate to that WHAT, and implementation cannot self-ratify missing Ontology authority; identities are declared and survive change (P3), so the Ontology carries stable identities and a basis that makes staleness decidable; a projection keeps meaning only through a declared contract (P1), so every design projection traces to the Ontology, an untraceable element is ungrounded, and a realisation derived from a reference line shows its derivation, not code comparison alone | [§5](#5-ontology-first-design), its opening, [Ontology projection](#ontology-projection); [§6 Reference-derived module design](#reference-derived-module-design); [§7 Ontology evidence](#ontology-evidence) | the ten terms of the Ontology, the definition of a material semantic boundary and the evidence items: this profile; who accepts the Ontology: the design authority ([§7 Gate and retrospective work](#gate-and-retrospective-work)); proportionality: [ACTIVATION §6](ACTIVATION.md#6-cost-and-proportionality); the invalidators, of which a reprice is an instance: [ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse) | 1, 2, 6 |
+| P2 (independent), P0 (recovered, with its premise that a step's output is a candidate until evaluated), P6 (independent); F2 imported; I3 | implementation output is a candidate until evaluated (P0) and evidence does not mint authority (P6), and a later actor does not hold the design reasoning (I3), so a material relation that implementation fixes before design acceptance becomes a decision no one owns; adequacy is set by the outcome (P2), so where no material alternative remains a prior gate adds nothing; hence design, implementation and tests may evolve together only while the boundary is decision-complete, otherwise the affected design decision is accepted before retained implementation establishes it, and implementation is evidence about the design, never authority over it, so a repeated surprise reframes the design only where diagnosis under F2 establishes that the boundary is not decision-complete | [Proportional design sequencing](#proportional-design-sequencing); [Decision-complete symbolic design](#decision-complete-symbolic-design) | the nineteen terms of `M(B)` and the predicates `decision_complete(B)` and `co_evolution_admissible(B)`: this profile; the proportionality relation that selects between the two modes: [ACTIVATION §6](ACTIVATION.md#6-cost-and-proportionality) | 4, 9 |
+| P4b (derived from P0 and P2), P0 (recovered); F2 imported; I3 | a bounded design action is one transition inside a frame that does not own the relations its lawfulness depends on (P0, F2), and its actor does not hold the reasoning behind those relations (I3), so the relations must be recorded where it can re-acquire them (P4b); hence the action is evaluated against every governing frame it derives from, a result that changes a governing relation re-enters at that relation, and the selected method basis with the accepted design suffices, without conversation history, to decide whether the action preserves, changes, duplicates or violates each governing relation in its affected set | [Bounded frame conservation (UP-017)](#bounded-frame-conservation-up-017); [§7 Invariant reconstruction sufficiency (UP-018)](#invariant-reconstruction-sufficiency-up-018) | the five frame items, the four decisions and their core values: this profile; reconstruction without history: [ACTIVATION §1 Intake](ACTIVATION.md#intake); the seam rule: [ACTIVATION §1 Execution unit](ACTIVATION.md#execution-unit) | 7, 3 |
+| P2 (independent), P5 (derived from P0 and P6), P6 (independent); I4 | a design is adequate only if its outcome can be realised (P2), and success cannot be reported on a capability the substrate lacks (P5), so a design whose substrate cannot natively construct it is not acceptable, and the missing capability stays an explicit gap or re-enters; a mechanism can come from several sources (I4), and unknown evidence supports no claim (P6), so a material generic capability or dependency is chosen by a bounded, recorded discovery and comparison that eliminates on hard failures, keeps unknowns unknown and selects no dominated candidate; reuse confers no authority (P6) | [Native constructability (UP-002)](#native-constructability-up-002); [Capability and foundation selection (UP-023)](#capability-and-foundation-selection-up-023) | the substrate and the evidence mechanism: the consumer; the candidate sources and comparison dimensions: this profile; the priorities and risk tolerances that resolve a frontier: declared for the exact Product and applied by its existing trade-off owner; whether one implementation serves several instances: [FOUNDATIONS §4](FOUNDATIONS.md#4-algebra) Shared machinery, which this procedure refines; what creates no authority: [FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds); invalidation of selection evidence: [ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse) | 4, 9 |
+| P3 (independent), P5 (derived from P0 and P6), P4a (independent) | an entity keeps its declared identity across admissible change (P3), so every lifecycle question of an entity (declare, read, update, retire) has an answer; a step cannot report success on a case it did not decide (P5), so silence is no answer: each question is answered by a lawful function, declared `not_applicable` with a reason, or named as an owned gap, and each discovered functionality item is derived, deferred, excluded or a named gap; steps compose only under declared types (P4a), so higher-order behaviour names its composition and effect algebra, and no private helper becomes an undeclared constructor | [Entity and lifecycle completeness](#entity-and-lifecycle-completeness); [Atomic functions and higher-order composition](#atomic-functions-and-higher-order-composition) | the matrix columns, the lifecycle readings at "should normally" force and the row dispositions: this profile; what a `not_applicable` entry is: [ACTIVATION §1 Applicability](ACTIVATION.md#applicability), Exclusion and the core; the composition and effect algebra: the project, such as GTL and ABG under [ODD](ODD.md#1-position) | 2, 3, 4 |
+| P6 (independent), P4b (derived from P0 and P2), P3 (independent); F1, F2 imported | authority permits only within its scope and is never minted by actor, capability, composition or projection (P6; F1, What creates no authority), so authority is part of the Ontology, actor and capability are not authority, and a composed function has no more authority than its inputs and constituents; an admission decision is a step-produced fact the outer contract needs (P4b) and an identity is declared and one (P3), so each consequential entity-transition domain has one complete admission relation, with every competing path explicitly related to it | [Authority model](#authority-model); [Transformation admission completeness (UP-016)](#transformation-admission-completeness-up-016) | the authority roles, the named typed transition and owning admission boundary that carry an explicit authority decision in the design, and the fields of the admission relation: this profile; the list of what creates no authority: [FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds); admission and standing-qualification semantics: [ACTIVATION §4](ACTIVATION.md#complete-enclosing-relation-admission); authority identity: [IDENTITY §6](IDENTITY.md#6-authority-identity-and-conservation-stdo-up-004) | 9, 4 |
+| P3 (independent), P6 (independent), P2 (independent) | a semantic meaning has one declared identity and owner (P3), so a realisation unit that introduces, duplicates or reinterprets it makes one meaning two; hence a top-level unit is Prime-conformant only when it projects accepted Prime atoms, each governing its declared domain, and adds no semantic authority (P6); a design is judged by the outcome it serves (P2), so contraction covers the whole candidate family, preserves root authority, and does not succeed when it increases authority centres, truth surfaces or review burden | [Prime semantic atoms and admitted domain](#prime-semantic-atoms-and-admitted-domain); [Whole-family Prime contraction](#whole-family-prime-contraction); [Recursive Prime and root conservation (UP-003)](#recursive-prime-and-root-conservation-up-003); [§6](#6-prime-law); [Boundary and governance cost (UP-005)](#boundary-and-governance-cost-up-005) | the Prime vocabulary, the review questions of contraction and the typical lawful reasons for a top-level unit: this profile; weighing ambiguity removed against reasoning complexity: [ACTIVATION §6](ACTIVATION.md#6-cost-and-proportionality) | 4, 2 |
+| P3 (independent), P2 (independent); F6 imported | a carrier is an identity-bearing boundary, which is a claim with a proof obligation (P3), and a carrier with no route to the boundary's functionality or authority flow is unjustified (P2), so a schema or typed boundary declares from the accepted Ontology the smallest carrier set for that functionality and authority flow, any other shape is subordinate unless it passes a declared test, and extra boundaries are design debt; a revision changes a claim about the whole set, which is assessed on its whole basis (F6), so a revision re-derives the whole set and reruns its gates over all of it | [Irreducible architectural carrier set](#irreducible-architectural-carrier-set); [IACS revision](#iacs-revision); [Promotion test](#promotion-test); [Boundary inflation prohibition](#boundary-inflation-prohibition) | the IACS, Subordinate Payload, Promotion Test and Boundary Inflation terms, the six example roles and the five promotion grounds: this profile; the assurance law a revision consumes: [EVALUATION §1](EVALUATION.md#1-claims) | 4, 2 |
+| P1 (independent), P5 (derived from P0 and P6), P6 (independent); F3 imported; I3 | a view is a representation, not the meaning (P1), so each of three distinct views is a fidelity-checked projection of the accepted Ontology, not a peer truth surface, and a later actor reads the behaviour from them, not from memory (I3); a gate cannot report success on an axiom it did not decide (P5) and needs evidence for each claim (P6), so before promotion or a design-method closure claim every applicable axiom is evaluated across the views, and each verdict maps to one core value of F3; an axiom that does not apply satisfies only the declared disjunction and never counts as met | [§7](#7-ontology-and-three-view-design-gate); [Domain model](#domain-model), [Sequence model](#sequence-model), [State model](#state-model); [Cross-view axiom evaluation](#cross-view-axiom-evaluation) | the three Mermaid views, the stereotypes, the ten matrix columns, and the axiom verdicts with their disjunctive predicate: this profile; another text-native format: the project's ratification; applicability and exclusion: [ACTIVATION §1 Applicability](ACTIVATION.md#applicability), Exclusion and the core | 6, 3, 9 |
+| P6 (independent), P0 (recovered, with its premise that a step's output is a candidate until evaluated); F3, F4, F6 imported | a produced design pack is a candidate until evaluated (P0), and acceptance is the owner's disposition, distinct from assessment (P6, F6), so the Ontology verdict and the design verdict are the design authority's dispositions at the design gate, and no assessment result or produced pack is the verdict; a combination with a non-satisfied mandatory result or a gap is never `satisfied` (F3), so without both verdicts `accepted` a new or semantically changed boundary is not promoted, published or closed, and implementation under co-evolution stays provisional evidence until the gate is accepted; an unchanged consumer reuses a closed result (F4), so an unchanged `realization_refactor` reuses its verdict on a proof of no delta | [Gate and retrospective work](#gate-and-retrospective-work) | the design gate as the acceptance boundary of a semantic boundary: this profile; the decision owner: the design authority that accepts the Ontology (§5); the dispositions and their core values: [ACTIVATION §3](ACTIVATION.md#disposition) | 9, 3 |
+| P1 (independent), P3 (independent), P6 (independent), P2 (independent); I2, and this row's instance premise that domain views do not show the machinery that realises them | domain views do not show the machinery that realises them (instance premise), and similar code can carry different meanings (I2); representation is not meaning (P1) and identity is declared, not read from shape (P3), so similarity yields only a commonisation candidate, a materially non-equivalent law requires separation, and by P2 an obligation the outcome needs must have a route, so at a material semantic boundary the design projects its computational realisation, giving each material algorithmic obligation a semantic and a realisation disposition; reuse mints no authority (P6), so a local realisation does not present an accepted relation as newly owned | [Computational realisation projection (UP-019)](#computational-realisation-projection-up-019) | the two-part disposition and its values: this profile; supported workloads and acceptance limits: the Product; the separation of costs: [ACTIVATION §6](ACTIVATION.md#6-cost-and-proportionality); shared machinery: [FOUNDATIONS §4](FOUNDATIONS.md#4-algebra) | 4, 3, 6 |
+| P0 (recovered), P1 (independent); I3 | a finite actor reasons over a bounded unit (P0), and later actors do not hold the design reasoning (I3), so modules are realisation-level units that bound traversal reasoning and are classified by role; the tier-2 assurance law names objects this profile defines, and each name keeps one meaning only under a declared binding (P1), so the binding at the head maps those names to this profile's objects, and the assurance law applies to them unchanged | [§9](#9-module-taxonomy); the binding at [the head of this member](#design_module) | the six module roles, at "recommended" force, and the binding: this profile; the design-to-module evidence route, module-derived unit tests and module lifecycle confirmation: [ASSURANCE §14 to §16](ASSURANCE.md#14-design-to-module-evidence-route) | 4, 1 |
+| P3 (independent), P5 (derived from P0 and P6); I2 | a value keeps its identity only across admissible change (P3), so source truth held in values that change only by admitted transition keeps one identity, while shared mutable state can change it unobserved (I2); a function with no outcome for part of its domain would report success on a case it did not decide (P5), so semantic functions should be total or as close to total as the language and problem allow | [§10](#10-realisation-rules): [Immutable carriers](#immutable-carriers), [Totality](#totality) | typed immutable values as the preferred carrier, at "should" force, and the justifications for mutation: this profile; the outcome values of a semantic function: the Product, as its domain values | 4, 2 |
+| P6 (independent), P1 (independent); I2 | code can decide one meaning in several places (I2), and each further place is a possible rival authority (P6) whose reading has no declared contract (P1), so effects should be explicit and isolated at the edge, no controller should be the hidden semantic centre, and coupling should be reduced by dependency shape, so fewer places can invent meaning | [Effect edge](#effect-edge), [No semantic centre](#no-semantic-centre), [Coupling](#coupling) | the typical edges, the preferred sequence and the dependency direction, at "should" force: this profile | 4, 9 |
+| P0 (recovered, with its boundary commitment), P6 (independent) | the method governs a step's boundary and not an actor's internal path (P0's boundary commitment), and authority acts only within its scope (P6), so a boundary that governs, observes or evaluates another actor publishes state, boundary and admissible routes, not strategy, unless strategy is part of its ratified responsibility | [Governance and strategy separation](#governance-and-strategy-separation) | the seven lawful publications and the four drifts: this profile | 9, 4 |
+| P2 (independent), P6 (independent) | a change is justified by the claim it serves (P2), and a change outside that claim acts beyond the authority admitted for it (P6), so clean-up is lawful only when boundary-local and neutral in behaviour, authority, visibility and effect, and a cross-boundary opportunity is repricing input for its owner | [Opportunistic optimisation](#opportunistic-optimisation) | that clean-up should leave an opened boundary better, at "should" force, with its conditions and examples: this profile; admission of follow-up work: the owning authority at the smallest re-entry point ([SPEC_METHOD §4](SPEC_METHOD.md#4-change-management)) | 1, 9 |
+| P2 (independent), P3 (independent); F13 imported; I4 | similar computation recurs (I4), and each further local rebuild adds cost with no new route to the outcome (P2), while similar code does not establish one identity (P3), so a credible recurrence yields a commonisation review, never an automatic merge, as the generic ticket rule decides (F13) | [Recurrence extraction](#recurrence-extraction) | the rule of two, the third-rebuild threshold and the commonisation order: [TICKETS §6](TICKETS.md#recurring-realisation-and-library-declaration), the generic owner; their refinement as design-method conformance: this profile; whether one implementation serves several instances: [FOUNDATIONS §4](FOUNDATIONS.md#4-algebra) Shared machinery | 4 |
+| P6 (independent), P2 (independent); F3, F4, F6 imported | a closure claim needs evidence for the exact claim, and implementation status is not that evidence (P6, F6), so a bounded check reconstructs the function of the exact claim before the claim is made, reusing accepted evidence only under the reuse law (F4); a falsified claim is never `satisfied` (F3), so an issue that falsifies the claim or an applicable hard stop blocks the design-method closure claim; a discovery outside the claim has no route to that claim (P2), so it is repricing input, not scope | [Post-ticket design review](#post-ticket-design-review) | the check's five determinations as domain triggers and the absorption conditions for boundary-local clean-up: this profile; when a finding blocks current promotion: [EVALUATION §5 When a finding blocks promotion](EVALUATION.md#when-a-finding-blocks-promotion); reuse and its invalidators: [ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse); ticket status and closure mechanics: [TICKETS](TICKETS.md) | 9, 1 |
+| P6 (independent), P1 (independent), P3 (independent) | a meaning has one owner, declared and one (P3), with no rival authority (P6), and is read through a declared contract (P1), so each interface family has one authoritative source truth that downstream interfaces consume, and a proxy that keeps an old authority path behind a new surface leaves two owners for one meaning, which is bridge debt | [Interface bleed prohibition](#interface-bleed-prohibition); [Proxy interface prohibition](#proxy-interface-prohibition) | retained compatibility with its own authority and proof: the project's design; the bridge prohibition: [SPEC_METHOD §7](SPEC_METHOD.md#bridge-prohibition) | 9, 6 |
+| P6 (independent), P1 (independent), P2 (independent) | a design claim needs evidence (P6), so review checks the rules above for the boundary; a question that the carriers and transforms cannot answer shows meaning held outside a declared contract (P1), a realisation too coupled or too imperative; a prompt clause that enforces design law is justified only by its route to the behaviour it governs (P2), so it needs provenance and proof that it still causes or prevents that behaviour | [§11](#11-review) | the 56 questions, the 43 checks and the 14 hard-gate checks: this profile; prompt construction: [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) | 9, 4 |
+| P6 (independent), P2 (independent); F12 imported; I1 | an optional profile governs a boundary only where the authority that may adopt it has adopted it (P6, F12), so the project applies it consistently across the named boundary; a completion claim needs its evidence (P6), and obligations follow the boundary's outcome (P2), so a design-method completion claim for a new or materially changed boundary needs its declared or cited Ontology and evidence, and partial adoption names the adopted boundary and rule family and claims no completion whose evidence it skipped | [§12 Adoption](#adoption); [the head of this member](#design_module), which declares the profile optional | who adopts: Product authority, under [PRODUCT_DEFINITION §7](PRODUCT_DEFINITION.md#7-collective-reference-frame-basis); the adopted boundary and rule family: that authority; the means of recording adoption, at "may" force: this profile | 1, 9 |
+| P3 (independent), P6 (independent); F8 imported | identity is declared by its authority (P3, F8) and a default confers no authority (P6), so identity generators, validators and normalisers that a runtime realisation publishes are defaults, which the owner of the identity can override | [Identity defaults from a bound runtime realisation](#identity-defaults-from-a-bound-runtime-realisation) | the permission for a consumer-bound realisation of the ABG role to publish defaults for its own runtime surfaces and the default surface kinds, limited to that role: this profile; the defaults' standing and the override law: [IDENTITY §7](IDENTITY.md#7-default-formats-and-overrides) | 2 |
+
+Consumers outside this member that apply these rows, each keeping its
+owner: [ASSURANCE §14 to §16](ASSURANCE.md#14-design-to-module-evidence-route)
+apply the module-taxonomy row through the binding at the head;
+[UX](UX.md#1-position) refines the §4 and §10 rows for modules that
+realise a UX surface ([PROFILES §4](PROFILES.md#4-ux)); the recurrence row
+refines the ticket rule of TICKETS §6;
+[FOUNDATIONS §4](FOUNDATIONS.md#4-algebra) Shared machinery is refined for
+software design by the capability-selection row; and
+[ACTIVATION §1 Intake](ACTIVATION.md#intake) uses the design evidence of
+the frame-conservation row when this profile governs the boundary.
+
+Consumers of these rows, where an actor enters them (FOUNDATIONS §3
+Foundation to law, Consumers), one list per row, each consumer linked to
+its own locus:
+
+- Row 1, purpose, position and core rule: [SPEC_METHOD §2 Realisation shape](SPEC_METHOD.md#realisation-shape), which states the core rule and the non-goals for a boundary this profile governs; [UX §2](UX.md#2-role-and-composition) and [UX Relationship to other members](UX.md#relationship-to-other-members), which compose this profile with the UX and graph-execution profiles per surface; [WORLD_MODEL §4 Relation to the design profile](WORLD_MODEL.md#relation-to-the-design-profile), for §8; [ODD §11.5D](ODD.md#115d-constructive-evaluation-and-yield-loop) A15, which keeps this profile's realisation modules inside the ODD ownership split, as §2 requires.
+- Row 2, results and design records: [Invariant reconstruction sufficiency (UP-018)](#invariant-reconstruction-sufficiency-up-018) and [Cross-view axiom evaluation](#cross-view-axiom-evaluation), which map the two refinements where they are defined; [Gate and retrospective work](#gate-and-retrospective-work), which places the Ontology and design verdicts under ACTIVATION §3 Disposition.
+- Row 3, boundary closure evaluators: [Adoption](#adoption), which makes the evaluators explicit in the governing ADR or ticket for carrier, schema and governance migrations; [Design review questions](#design-review-questions) 4, 5, 7, 9 and 17 to 19; the [Functional realisation checklist](#functional-realisation-checklist), ingress and truth-surface checks.
+- Row 4, functional bias and typing: [UX §10](UX.md#10-type-sharing), which makes the §4 preference for parsing foreign data once at ingress an obligation at six seams; [CONFORMANCE §5](CONFORMANCE.md#5-coverage-of-the-common-discriminators), discriminator 11; [Design review questions](#design-review-questions) 12 and 18.
+- Row 5, ontology-first design and its projections: [PRODUCT_DEFINITION §3](PRODUCT_DEFINITION.md#3-constitutional-set-sufficiency), which keeps an accepted design Ontology below the constitutional WHAT; [ASSURANCE §14](ASSURANCE.md#14-design-to-module-evidence-route) and [§15](ASSURANCE.md#15-module-derived-unit-tests), whose evidence chains start from the accepted Ontology and, where a reference realisation exists, from the reference-to-ontology mapping, through the binding at the head; [Adoption](#adoption), which requires the accepted Ontology, the Ontology evidence and the reference-to-target derivation asset before a completion claim; [Design review questions](#design-review-questions) 21 and 41 to 48.
+- Row 6, proportional sequencing and decision completeness: [SPEC_METHOD §4 Procedures](SPEC_METHOD.md#procedures), where design, implementation and tests co-evolve only when the co-evolution predicate holds; [ASSURANCE §14](ASSURANCE.md#14-design-to-module-evidence-route), which gates the evidence relation on decision completeness through the binding at the head; [Gate and retrospective work](#gate-and-retrospective-work), whose precondition it is; [Design review questions](#design-review-questions) 40.
+- Row 7, bounded frame conservation and invariant reconstruction: [ACTIVATION §1 Intake](ACTIVATION.md#intake), which consumes the affected set and the invariants these laws supply; [EXECUTIVE_BASELINE §8](EXECUTIVE_BASELINE.md#8-derived-executive-frame) and [§14](EXECUTIVE_BASELINE.md#14-coverage-application), which carry the bounded-frame conservation laws as governing invariants of the Executive frame and of the affected causal cone; [Post-ticket design review](#post-ticket-design-review), which treats a changed governing relation under §7 as a material input change for the affected claim.
+- Row 8, native constructability and capability selection: [EXECUTIVE_BASELINE §11](EXECUTIVE_BASELINE.md#11-derived-generic-specialist-frame-set), Reuse/Foundation, and [§14](EXECUTIVE_BASELINE.md#14-coverage-application), bounded realisation and self-review, which apply the capability-and-foundation selection law where material; [ASSURANCE §14](ASSURANCE.md#14-design-to-module-evidence-route), which forbids compensating for an unrealised declared constructor with a hidden controller; the [Functional realisation checklist](#functional-realisation-checklist), foundation-selection check; [Design review questions](#design-review-questions) 49 to 56.
+- Row 9, entity, lifecycle and function completeness: [ASSURANCE §15](ASSURANCE.md#15-module-derived-unit-tests), whose unit tests trace to the entity, lifecycle and function law of the accepted Ontology through the binding at the head; [Ontology evidence](#ontology-evidence), which carries the two matrices and the composition and effect algebra; [Design review questions](#design-review-questions) 42, 44 and 46.
+- Row 10, authority model and transformation admission: [ACTIVATION §1 Intake](ACTIVATION.md#intake), which consumes the accepted admission relations; [ODD §11.5B](ODD.md#115b-execution-authority-audit), where ABG's admission authority is the graph-native specialisation of transformation admission completeness; [Ontology evidence](#ontology-evidence), authority matrix; [Design review questions](#design-review-questions) 43.
+- Row 11, Prime law: [SPEC_METHOD §3](SPEC_METHOD.md#3-outcome-conservation), where a prerequisite or experiment cannot waive the prime law of a design profile; [Essential carrier consolidation](#essential-carrier-consolidation), which declares the IACS first; [Ontology evidence](#ontology-evidence) and [Adoption](#adoption), which require whole-family Prime contraction and each atom's admitted domain before a completion claim; [Design review questions](#design-review-questions) 10 and 45.
+- Row 12, the irreducible architectural carrier set: [ASSURANCE §2](ASSURANCE.md#2-testing-strategy-taxonomy), [§7 Unit frame](ASSURANCE.md#unit-frame), [§14](ASSURANCE.md#14-design-to-module-evidence-route) and [§15](ASSURANCE.md#15-module-derived-unit-tests), where the carrier inventory the design declares is the IACS through the binding at the head; [UX §12](UX.md#12-adoption), step 3, and [UX §14](UX.md#14-review-questions), question 13; [WORLD_MODEL §4 Relation to the design profile](WORLD_MODEL.md#relation-to-the-design-profile), for a Markov object read as a candidate cut; [Design review questions](#design-review-questions) 13 to 16 and 22.
+- Row 13, the three-view design gate: [ASSURANCE §7 Unit frame](ASSURANCE.md#unit-frame), [§14](ASSURANCE.md#14-design-to-module-evidence-route) and [§15](ASSURANCE.md#15-module-derived-unit-tests), where the design's domain, sequence and state projections with axiom evaluation are the three-view asset through the binding at the head; [UX §12](UX.md#12-adoption), step 3, and [UX §14](UX.md#14-review-questions), question 13, for the structural carrier diagram; [Design review questions](#design-review-questions) 35 to 39.
+- Row 14, gate and retrospective work: [SPEC_METHOD §2 Reconstruction litmus](SPEC_METHOD.md#reconstruction-litmus), which neither waives the gate nor recreates unchanged accepted views; [ASSURANCE §14](ASSURANCE.md#14-design-to-module-evidence-route), where retained implementation follows design acceptance; [§5 Ontology-first design](#5-ontology-first-design) and [Decision-complete symbolic design](#decision-complete-symbolic-design), which reach the gate; [Post-ticket design review](#post-ticket-design-review), for unchanged-boundary reuse; the [Functional realisation checklist](#functional-realisation-checklist), hard gate and unchanged-boundary paragraph.
+- Row 15, computational realisation projection: [ACTIVATION §1 Intake](ACTIVATION.md#intake), which consumes the computational dispositions; [ASSURANCE §13 Computational whole-path evaluation](ASSURANCE.md#computational-whole-path-evaluation), which evaluates one complete producer-to-consumer path under this law.
+- Row 16, module taxonomy and the binding: [ASSURANCE §2](ASSURANCE.md#2-testing-strategy-taxonomy), [§7 Unit frame](ASSURANCE.md#unit-frame), [§14](ASSURANCE.md#14-design-to-module-evidence-route), [§15](ASSURANCE.md#15-module-derived-unit-tests) and [§16](ASSURANCE.md#16-module-lifecycle-confirmation), which apply the module-ownership and unit-proof law through the binding at the head; [Adoption](#adoption), which classifies implementation modules by §9; [Design review questions](#design-review-questions) 23.
+- Row 17, immutable carriers and totality: [UX §2](UX.md#2-role-and-composition), which cites and extends §10 for UX modules; [Design review questions](#design-review-questions) 6; the [Functional realisation checklist](#functional-realisation-checklist), carrier and purity checks.
+- Row 18, effect edge, no semantic centre and coupling: [UX §6](UX.md#6-effect-membrane), which refines Effect edge into the effect membrane; [UX §2](UX.md#2-role-and-composition); [Design review questions](#design-review-questions) 1 to 3; the [Functional realisation checklist](#functional-realisation-checklist), effect-edge and coupling checks.
+- Row 19, governance and strategy separation: [Design review questions](#design-review-questions) 20; the [Functional realisation checklist](#functional-realisation-checklist), governance and observability check. No section of another member applies it; the rule binds a realisation boundary that governs another actor, which only this profile designs.
+- Row 20, opportunistic optimisation: [Design review questions](#design-review-questions) 24 and 25; the [Functional realisation checklist](#functional-realisation-checklist), clean-up and cross-boundary checks. No section of another member applies it; a cross-boundary opportunity re-enters as repricing input through SPEC_METHOD §4, which owns that re-entry and not this rule.
+- Row 21, recurrence extraction (a refinement of the rule [TICKETS §6 Recurring realisation and library declaration](TICKETS.md#recurring-realisation-and-library-declaration) owns): [ASSURANCE §13 Computational whole-path evaluation](ASSURANCE.md#computational-whole-path-evaluation), for recurrence work; [Capability and foundation selection (UP-023)](#capability-and-foundation-selection-up-023), [Whole-family Prime contraction](#whole-family-prime-contraction) and [§9 Module taxonomy](#9-module-taxonomy), which bound what recurrence review may do; [Design review questions](#design-review-questions) 26 and 27.
+- Row 22, post-ticket design review: [Design review questions](#design-review-questions) 28; the [Functional realisation checklist](#functional-realisation-checklist), closure-claim check. No section of another member applies it; the hard stops and the finding law are ACTIVATION §4's and EVALUATION §5's, which this rule applies and which apply nothing of it.
+- Row 23, interface bleed and proxy interfaces: [Design review questions](#design-review-questions) 8 and 11; the [Functional realisation checklist](#functional-realisation-checklist), one-owner check. No section of another member applies them; the migration-time proxy and bridge rules are SPEC_METHOD §7's, which this rule cites and which apply nothing of it.
+- Row 24, review: [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope), which names §11 as the design specialisation of prompt construction; [Adoption](#adoption), which uses the questions as review criteria for implementation-migration tickets.
+- Row 25, adoption: [SPEC_METHOD §2 Realisation shape](SPEC_METHOD.md#realisation-shape), which applies to a boundary adopted under this rule; [ASSURANCE §14](ASSURANCE.md#14-design-to-module-evidence-route), which applies to a boundary a design profile governs; [UX §2](UX.md#2-role-and-composition), which reads this profile and the UX profile together for a UX module and this profile alone for any other. Who adopts is PRODUCT_DEFINITION §7's rule, as the choice column states.
+- Row 26, identity defaults: [IDENTITY §7 Derived domain overrides](IDENTITY.md#derived-domain-overrides), which keeps such defaults overridable and places what a realisation publishes here.
+
+Each consumer applies the rule and decides nothing the owning section does
+not (P2, P6).
+
+The table accounts for this whole member: the head, §1 to §12 and the
+binding the head declares; §13 records dispositions and decides nothing.
+Its Pillar column follows FOUNDATIONS §3. It is new in this corpus and has
+no rc.2 row. Purpose and material relation: a reader of this profile sees
+which of its rules rest on the commitments and imported families and which
+are choices this profile, the adopting Product or another owner makes, so
+no profile choice is presented as following from the foundations (P6, P2).
 
 ## 2. Graph-execution alignment and escalation
 
@@ -238,6 +395,18 @@ helpers that both decide meaning and perform writes; and proxy interfaces
 that partially imitate a new design while preserving the old authority
 path (P6, P4a; §10).
 
+Both lists bind. A project that adopts this profile prefers the first
+and avoids the second as an obligation of the profile, not as a
+description of practice: a realisation that takes an avoided shape, or
+forgoes a preferred one, does not conform unless a rule of this profile
+permits that departure and the realisation records the justification the
+rule requires. The permitted departures are those the owning rules state:
+mutable carrier state where it is materially necessary, under §10
+[Immutable carriers](#immutable-carriers), and the failure-carrier
+preference only where practical. Convenience permits no departure (P6,
+P2; the predecessor's "must prefer" and "must avoid", read with the
+necessity exception of its immutable carrier rule).
+
 ### Python typing
 
 When this profile governs a Python boundary, repo-authored Python is fully
@@ -298,7 +467,9 @@ relation identities plus a version or basis that makes source change,
 staleness and the affected projection set decidable (P3; FOUNDATIONS §2,
 Basis). A reprice of a governing source invalidates only the affected
 Ontology relations and downstream projections until their impact is
-re-evaluated. Code, tests, generated schemas or a single implementing
+re-evaluated; the reprice is an instance of the material input change of
+[ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse), which owns the
+invalidators. Code, tests, generated schemas or a single implementing
 agent cannot self-ratify missing Ontology authority (P6). The Ontology
 verdict may live in the same design pack and acceptance record as the
 three-view verdict (§7); this rule does not require a second document,
@@ -380,10 +551,15 @@ exposes previously hidden architectural ambiguity, the boundary switches to
 design-gated sequencing at the smallest causally closed affected decision
 set rather than retroactively invalidating unrelated work. Serial
 implementation repairs do not establish design acceptance. Repeated or
-cross-cutting material surprises are evidence that the affected design cut
-is underconstrained and require one bounded `design_reframe` (SPEC_METHOD
-§4 Change classes); retained code remains provisional evidence until that
-reframe is accepted (P6, P2).
+cross-cutting material surprises are evidence for diagnosis under
+[ACTIVATION §1 Feedback and diagnosis](ACTIVATION.md#construction-relation),
+not a diagnosis. Where the diagnosis establishes that the affected design
+cut is underconstrained, so that `decision_complete(B)` fails, one bounded
+`design_reframe` follows (SPEC_METHOD §4 Change classes), and retained code
+remains provisional evidence until that reframe is accepted. Where the
+accepted design is decision-complete and the realisation alone deviates
+from it, the repair is a `realization_refactor`, however often the surprise
+recurs (P6, P2).
 
 This applies the governing proportionality law: a prior design gate is
 warranted when it removes material semantic ambiguity whose alternatives
@@ -430,7 +606,10 @@ decision, projections contradict one another, or two materially
 non-equivalent networks remain admissible. Local algorithm and layout
 choices may remain open only when every admitted choice is semantically
 equivalent under the accepted network. Contradictory projections make the
-design unsatisfiable and block promotion (P1, P5). Decision completeness
+design unsatisfiable and block promotion (P1, P5): an unsatisfiable design
+fails the design gate's acceptance criterion, so this block is a
+precondition of the gate (§7 Gate and retrospective work), not a decision
+on a review finding. Decision completeness
 does not require another document: the constraint network may be expressed
 through the existing Ontology, algebra, module mapping and views when those
 surfaces jointly carry the complete relation (P2).
@@ -545,7 +724,10 @@ A discovery gap that could materially alter the frontier prevents
 selection; an immaterial residual records why it cannot change the current
 decision. A later candidate that satisfies the applicability criteria and
 could materially alter the lawful frontier invalidates the affected
-selection evidence and re-enters this relation (P6, P5, P3).
+selection evidence and re-enters this relation (P6, P5, P3); such a
+candidate is newly acquired admissible evidence material to the selection,
+an instance of the material input change of
+[ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse).
 
 This relation operates inside the Product boundary and, where applicable,
 the migration strategy already admitted by their existing owners. It does
@@ -599,7 +781,9 @@ richest feature set. A rejected material candidate records the decisive
 evidence or falsifier. Unsupported preference is not design closure (P6).
 
 Reuse does not automatically confer or transfer semantic, admission or
-other operation authority (IDENTITY §6). A selected foundation may realise
+other operation authority (IDENTITY §6; an instance of
+[FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds), What
+creates no authority). A selected foundation may realise
 an explicitly assigned authority-bearing role when accepted design
 preserves the declared relation's owner, role kind, subject, scope, basis
 and material lifecycle and refusal invariants. Foundation capability,
@@ -677,14 +861,20 @@ implementation convenience. Pure subordinate helpers inherit the authority
 envelope of their owning Ontology function and do not require peer
 authority rows unless they cross one of those boundaries.
 
-Composition does not widen authority implicitly. A composed or
+What cannot create authority is stated once in
+[FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds), What
+creates no authority. This paragraph applies its items on composition,
+projection, labels, capability strings and payload shape to the Ontology's
+functions and adds only these design instances (P6; IDENTITY §6).
+Composition does not widen authority implicitly: a composed or
 higher-order function has no more authority than the authority law
 admitted for its inputs, constituent functions and current basis.
 Delegation, elevation, transfer or retirement authority requires a named
-typed transition and an owning admission boundary. Projections cannot
-create authority, and downstream code cannot reconstruct an authority
-witness from actor labels, capability strings or payload shape (P6;
-IDENTITY §6).
+typed transition and an owning admission boundary; these carry in the
+design the explicit authority decision that FOUNDATIONS requires and do not
+replace it. Projections cannot create authority, and downstream code
+cannot reconstruct an authority witness from actor labels, capability
+strings or payload shape.
 
 ### Transformation admission completeness (UP-016)
 
@@ -751,7 +941,9 @@ produce a candidate transformation, but projection status does not confer
 admission authority; any consequential result re-enters the governing
 admission relation against its explicit predecessor basis, and a
 reconstructed projection state is not self-authenticating admission
-evidence (P6).
+evidence (P6; projection is an item of
+[FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds), What
+creates no authority).
 
 This law is false if any of the following holds (P6, P4b): two materially
 non-equivalent admission relations remain reachable for the same governed
@@ -1183,12 +1375,12 @@ the concrete invariant values. A design that restates method decision law
 to satisfy this rule reproduces the local-method duplication this law
 exists to remove (P1, P6).
 
-| Decision | The action, against a governing relation |
-|---|---|
-| preserves | leaves the relation intact and operates inside it |
-| changes | alters the relation itself, and therefore re-enters at that relation before acceptance |
-| duplicates | establishes an equivalent path that is explicitly disposed as a constituent, replica, replacement or deliberately independent realisation |
-| violates | contradicts the relation, or establishes an equivalent path that is left undisposed |
+| Decision | The action, against a governing relation | Core value |
+|---|---|---|
+| preserves | leaves the relation intact and operates inside it | `satisfied` |
+| changes | alters the relation itself, and therefore re-enters at that relation before acceptance | `invalid_basis` |
+| duplicates | establishes an equivalent path that is explicitly disposed as a constituent, replica, replacement or deliberately independent realisation | `satisfied` |
+| violates | contradicts the relation, or establishes an equivalent path that is left undisposed | `falsified` |
 
 The boundary between changes and violates is the locus of acceptance, not
 the size of the delta: an otherwise lawful change accepted inside the
@@ -1198,6 +1390,27 @@ an equivalent path is lawful when disposed and a defect when not (P4b,
 P6). Sufficiency is bound to a declared action and its affected set; it is
 not a claim over an unbounded space of possible future changes, and the
 performance of any particular reviewer is not evidence either way (P0).
+
+The four decisions are a refinement of the core result algebra
+([FOUNDATIONS §4 Results](FOUNDATIONS.md#results)). They answer what the
+action does to one governing relation, and each maps to exactly one core
+value for the predicate "the action is admissible in the acting frame on
+the current governing basis"; the value travels with that predicate and
+with the decision, whose meaning stays here (P5, P6). `preserves` and a
+disposed `duplicates` leave the relation as accepted. For `changes`, the
+relation itself must change at its own locus before the action can be
+accepted, so the current governing basis cannot support accepting it in
+the acting frame, as for the disposition `re_enter` of
+[ACTIVATION §3](ACTIVATION.md#disposition). For `violates`, the
+contradiction or the undisposed equivalent path is the counterexample. An
+evaluation that reaches none of the four decisions returns the core value
+its cause selects, `indeterminate` where the admissible evidence cannot
+decide, naming what would decide (FOUNDATIONS §4 Results); where the
+cause is that the selected method basis and the accepted design do not
+suffice, the case falsifies this law, as stated below. The mapping is
+new in this corpus. Purpose and material relation: a lawful change is
+never read as a violation or as an action the acting frame may accept, and
+a violation is never read as a re-entry (P4b, P6).
 
 This obligation adds no artifact. It is satisfied through the Ontology
 evidence, authority matrix, transformation-admission relation, frame
@@ -1294,6 +1507,44 @@ relied-on `semantic_not_realized` constructor is a blocking gap; it may
 not be replaced by imperative glue in a plugin, shell, service, script or
 test harness (P6, P5).
 
+Axiom verdicts. The three verdicts are a refinement of the core result
+algebra ([FOUNDATIONS §4 Results](FOUNDATIONS.md#results)). They answer
+what the design pack concludes about one axiom for the active boundary,
+and each maps to exactly one core value for the predicate "on the exact
+Ontology and design basis, the boundary's design meets the axiom, or the
+axiom does not apply to the boundary"; the value travels with that
+predicate and with the verdict, whose meaning stays here (P5, P6). This
+profile declares that predicate as a disjunction that includes
+non-application, the case that
+[ACTIVATION §1 Applicability](ACTIVATION.md#applicability), Exclusion and
+the core, permits and bounds. That paragraph decides what follows for the
+verdicts: `not_applicable` rests on a false applicability premise, an
+unresolved premise supports no `not_applicable`, and the `satisfied` of a
+`not_applicable` verdict counts toward this disjunction only, never toward
+the predicate that the design meets the axiom:
+
+| Verdict | Ground | Core value |
+|---|---|---|
+| `pass` | the cited Ontology, view and enforcement evidence establishes that the design meets the axiom | `satisfied` |
+| `not_applicable` | the axiom's applicability premise is false for the active boundary on basis-bound facts, and the reason names those facts and the authority whose scope declaration excludes the axiom ([ACTIVATION §1 Applicability](ACTIVATION.md#applicability)) | `satisfied` |
+| `fail` | the axiom applies, and the evidence names an element, message, transition, authority path or enforcement that violates it; that is the counterexample | `falsified` |
+
+The verdict, recorded with its value, keeps the distinction between not
+applying and meeting the axiom (FOUNDATIONS §4 Results, Recording). An evaluated axiom that reaches none of the three
+verdicts records in the Verdict column the core value its cause selects,
+with what would decide it: `indeterminate` where the admissible evidence
+cannot decide the predicate, as where the applicability premise is
+unresolved and the design does not meet the axiom; `out_of_frame` where
+the evaluation needs a relation or evaluator capability that the activated
+frame does not declare; `invalid_basis` where the Ontology or design basis
+cannot support it. An applicable axiom that the pack did not evaluate has
+no result (FOUNDATIONS §4 Results, Not performed). None of these is
+`pass`. The mapping and the direct core values are new in this corpus.
+Purpose and material relation: a design gate that combines axiom verdicts
+with other results reads them in the one core, so an excluded axiom is
+never read as conforming or as failing, and an undecided or unevaluated
+axiom is never read as a pass or a fail (P5, P6).
+
 ### Gate and retrospective work
 
 For a new or semantically changed boundary, the Ontology and design
@@ -1302,6 +1553,36 @@ contract or semantic carrier is promoted or the work claims design-method
 closure. Any failed applicable axiom, missing functionality disposition,
 unresolved authority path or blocking realisation gap keeps the verdict
 non-accepted (P6; rc.2 #gate-and-retrospective-work).
+
+The Ontology verdict and the design verdict are each an acceptance
+result: a decision that consumes the results of assessment, distinct from
+them. The decision owner is the
+design authority that accepts the Ontology (§5), and the verdict is its
+disposition of the Ontology or of the design pack at the design gate,
+under [ACTIVATION §3 Disposition](ACTIVATION.md#disposition), which owns
+the dispositions and their core values. `accepted` is the disposition
+`accept`, which maps to `satisfied` for "the candidate is accepted at its
+declared boundary", the candidate being the Ontology or the design pack
+and the boundary the design gate. A verdict that is not `accepted` is one
+of the other three dispositions, mapped there, or no disposition yet,
+which is no acceptance result. The verdict consumes the pack's availability
+and assessment results, among them the evaluation of decision
+completeness, which is the design gate's acceptance criterion
+([§5 Decision-complete symbolic design](#decision-complete-symbolic-design)),
+the axiom verdicts and the cross-view proofs, and stays separate from both
+(FOUNDATIONS §4 Results, availability, assessment and acceptance): a matrix in which every applicable axiom is
+`pass` is evidence for the design authority, never the verdict, and a
+step that produced the pack establishes neither. An axiom whose result
+is not `satisfied`, whether `fail` or a core value recorded directly, an
+applicable axiom with no result, or an axiom with no result whose
+applicability is not established false, keeps the verdict non-accepted
+as a failed axiom does, because a combination with a non-satisfied
+mandatory result or a gap is never `satisfied`
+([FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results))
+(P6, P5). The binding to ACTIVATION §3 is new in this corpus. Purpose and
+material relation: neither a passing matrix nor a produced design pack is
+read as acceptance, and the design gate's acceptance combines with other
+results in the one core (P6).
 
 For an unchanged `realization_refactor`, the gate is proportional: cite
 the accepted Ontology and design basis, identify the touched projection
@@ -1349,7 +1630,9 @@ rc.2 #computational-realization-projection-stdo-up-019).
 
 Component role sets. Every material realisation component has an explicit
 set of semantic and operational roles. Technology capability does not
-confer authority. A component's declared role set is design authority;
+confer authority (an instance of
+[FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds), What
+creates no authority). A component's declared role set is design authority;
 where a role carries authority, composition and use preserve the
 applicable authority relation under IDENTITY §6, which is supporting law
 here rather than the owner of the role model (P6). A component may
@@ -1526,9 +1809,14 @@ Convenience is not sufficient justification.
 ### Totality
 
 Semantic functions should be total or as close to total as the language
-and problem allow (P5; rc.2 #8-totality-rule). The result algebra and its
-non-success outcomes are ACTIVATION §3; this rule is their realisation
-shape. Preferred: invalid input is rejected at the boundary; semantic
+and problem allow (P5; rc.2 #8-totality-rule). The rule applies P5
+([FOUNDATIONS §3](FOUNDATIONS.md#3-commitments)) to a semantic function,
+which can meet an input outside its admitted domain. The method's own
+results, with their non-success values, are the core result algebra of
+[FOUNDATIONS §4 Results](FOUNDATIONS.md#results). The outcome values a
+semantic function returns are the Product's domain values, not results of
+this method; an evaluation that consumes them returns its own core value
+(P5, P1). Preferred: invalid input is rejected at the boundary; semantic
 kernels consume admitted carriers only; failure is returned in a typed and
 explicit form when practical. Projects using this profile should prefer
 `Result`-like or closed outcome carriers, explicit validation stages, and
@@ -1654,23 +1942,21 @@ nested contract or policy carriers; proof-helper or fixture shaping;
 effect-edge request or plan shaping; and constructor or materialisation
 helpers that do not own semantic law.
 
-The rule of two: the second credible recurrence forces a library or
-commonisation review; the third local rebuild is not acceptable by
-default. A third local rebuild is not design-method conformant unless the
-active boundary consumes an existing reusable library or commonisation
-surface, extends that surface before the local implementation lands, or
-review records an explicit do-not-commonise decision and why the pattern
-is still boundary-specific (P2). For ticketed implementation work,
-[TICKETS §6](TICKETS.md#recurring-realisation-and-library-declaration)
-owns the ticket-level recording and enforcement of that decision through
-fields such as `library_usage`, `governing_library` and
-`library_rationale`; this section
-defines the design review obligation, not a rival ticket lifecycle (P6).
+The rule of two, its third-rebuild threshold and the commonisation order
+are owned by
+[TICKETS §6 Recurring realisation and library declaration](TICKETS.md#recurring-realisation-and-library-declaration),
+which applies them to every implementation migration ticket together with
+the fields `library_usage`, `governing_library` and `library_rationale`.
+This profile refines that rule for design review: a third local rebuild
+is not design-method conformant unless the active boundary consumes an
+existing reusable library or commonisation surface, extends that surface
+before the local implementation lands, or review records an explicit
+do-not-commonise decision and why the pattern is still boundary-specific
+(P2). This section defines the design review obligation, not a rival
+ticket rule or lifecycle (P6).
 
-The preferred commonisation order is (1) boundary-local clean-up, (2) a
-tenant-local reusable library, (3) shared or common propagation only
-through separate design re-entry. If a reusable pattern remains
-tenant-local and authority-neutral, it should be extracted into a reusable
+Under the commonisation order that TICKETS §6 owns, if a reusable
+pattern remains tenant-local and authority-neutral, it should be extracted into a reusable
 library or common realisation surface rather than recreated inside each
 module. If commonisation would change ownership, public carriers, module
 boundaries or shared common law, it is no longer recurrence extraction; it
@@ -1683,8 +1969,8 @@ an unused common helper do not establish contraction (P2, P4b).
 
 ### Post-ticket design review
 
-When a ticket adopts this profile and claims its boundary has been
-processed, the design-method closure claim should not rest on
+When a ticket applies this profile to its boundary and claims that
+boundary has been processed, the design-method closure claim should not rest on
 implementation status alone (P6, P2;
 rc.2 #11d-post-ticket-design-review-rule). The processed boundary is checked
 against its accepted design basis and exact closure claim before the
@@ -1716,31 +2002,56 @@ governed claim (P6; EVALUATION §1).
 The complete selected function is the causal closure of the declared
 claim, not the whole Product or the whole history of its construction. The
 unchanged-boundary rules of §5 and §7 permit reuse of a current accepted
-Ontology, design verdict and sufficient reconstruction evidence after
-checking their exact scope, traces, applicability and invalidators. A new
-role, conversation or review occurrence does not itself require
-re-authoring that evidence or recreating the three views. Missing, stale
-or ambiguous coverage is not a no-delta proof. A material changed relation
-or new counterexample requires affected reconstruction and the applicable
-design gate, conserving supported unaffected relations. This reuse does
-not weaken §7's complete Ontology and three-view coverage for a new or
-materially changed boundary (P2, P6; ACTIVATION §7).
+Ontology, design verdict and sufficient reconstruction evidence as closed
+results under [ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse),
+which owns reuse and its three invalidators: the check confirms their
+exact scope, traces and applicability, and that none of those invalidators
+has occurred. The invalidators those rules name are instances of
+ACTIVATION §7's three, and no fourth exists: a reprice of a governing
+source, which invalidates only the affected Ontology relations and
+downstream projections until their impact is re-evaluated (§5), is a
+changed basis for those relations and projections; a later candidate
+that satisfies the applicability criteria and could materially alter the
+lawful frontier (§7) is a material input change for the affected
+selection evidence; new evidence or another material dimension that
+defeats a dominance relation (§7) is a material input change for that
+relation. A new role, conversation or review occurrence is not one of
+them, so it does not itself require re-authoring that evidence or
+recreating the three views. Missing, stale or ambiguous coverage is not a
+no-delta proof. A material changed relation or a new counterexample is an
+instance of that section's material input change: it requires affected
+reconstruction and the applicable design gate, conserving supported
+unaffected relations. This reuse does not weaken §7's complete Ontology
+and three-view coverage for a new or materially changed boundary (P2, P6).
 
 The required consequence: an issue that falsifies the current claim or an
-applicable hard stop blocks the design-method closure claim; ticket or
+applicable hard stop blocks the design-method closure claim, because that
+claim is then `falsified`, which never becomes `satisfied`
+([FOUNDATIONS §4 Results](FOUNDATIONS.md#results)), and a hard stop is not
+waived ([ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement)). Whether
+a finding also blocks the boundary's current promotion is decided by
+[EVALUATION §5 When a finding blocks promotion](EVALUATION.md#when-a-finding-blocks-promotion).
+The check's determinations above are this profile's domain triggers for
+that section's four conditions: a discovered falsifying issue for the
+first; competing or ambiguous authority on the acceptance path for the
+second; a boundary that is not lawful under the current design and module
+assets, or a claim that omits a causally applicable requirement, accepted design
+relation or retained predecessor claim, for the third; and the durable
+architectural foreclosure for the fourth. Applied to this check: ticket or
 review wording cannot narrow applicable active authority away;
 boundary-local clean-up or commonisation is absorbed only when required to
 make the current claim true, preserve singular authority, satisfy accepted
 design, or avoid the durable architectural foreclosure above; other
 clean-up, recurrence, generality and cross-boundary opportunities are
+observations outside the exact claim, which EVALUATION §5 returns as
 repricing inputs that do not automatically widen the subject, block its
 bounded claim or require a follow-up ticket; and any repricing admitted by
 the owning authority enters through the smallest lawful re-entry point
-(P6, P2). The rule keeps design closure truthful without turning discovery
+(SPEC_METHOD §4) (P6, P2). The rule keeps design closure truthful without turning discovery
 into automatic scope expansion: current defects and hard stops remain
 blocking, useful observations may survive as repricing input, and
 unclaimed future capability and optional clean-up do not become implicit
-work. No processed ticket that has adopted this profile should claim
+work. No processed ticket that applies this profile should claim
 design-method closure until this bounded design check is complete.
 
 ### Interface bleed prohibition
@@ -2091,13 +2402,18 @@ Ontology, IACS, three-view asset, cross-view evaluation or unit-test lane
 
 ### Adoption
 
-Projects may adopt this profile by citing it in ADRs or design surfaces;
-naming it in the project's agent entry surface (such as `AGENTS.md`) as
-the preferred realisation discipline; using it as review criteria for
-implementation-migration tickets; and classifying implementation modules
-by the taxonomy of §9 (P2, P6; rc.2 #15-adoption-guidance).
+Who may adopt this profile is stated once in
+[PRODUCT_DEFINITION §7](PRODUCT_DEFINITION.md#7-collective-reference-frame-basis):
+inclusion in the selected method cut makes the profile available, and only
+Product authority adopts it. This profile adds no adopter. The adopting
+Product's authority may record its adoption by citing the profile in ADRs
+or design surfaces; naming it in the project's agent entry surface (such
+as `AGENTS.md`) as the preferred realisation discipline; using it as
+review criteria for implementation-migration tickets; and classifying
+implementation modules by the taxonomy of §9 (P2, P6;
+rc.2 #15-adoption-guidance).
 
-When a project adopts this profile, it applies it consistently across the
+When the profile is adopted, the project applies it consistently across the
 named boundary: Ontology and architecture derivation; design modules;
 runtime or execution kernels; prompt assembly and reporting paths;
 constructors and materialisers; and projection and query surfaces. For
@@ -2225,15 +2541,15 @@ pointed to, not repeated.
 | #3b-ingress-collapse-rule | conserved; lawful only at ingress, immediate collapse, the four-step shape, the four non-lawful closures | §3 Ingress collapse |
 | #4-functional-bias-without-language-mandate | conserved; the six preferences (one "where practical") and the seven avoidances | §4 Functional bias without language mandate |
 | #4a-python-typing-rule | conserved; full typing with the three meanings, the six non-typed forms, the four required shapes, the four conditions for `Any`, `cast` and `# type: ignore`, the strict checker and its conformance consequence | §4 Python typing |
-| #4b-ontology-first-design-rule | conserved; derivation from one accepted Ontology, candidate slice before promotion of the eight kinds, subordinate to WHAT, not a replacement for design, source and authority identification, stable identities and basis, partial invalidation, no self-ratification, no second document, the material boundary definition, the refactor and delta rules, the ten-term Ontology, not a census | §5 |
-| #proportional-design-sequencing | conserved in full; the four definitions, co-evolution and design-gated modes, the disposable spike, neither mode default, counterfactual evidence, no prior gate where no material alternative remains, evidence relation not authority, carrier placement, switch at the smallest set, serial repairs, one bounded `design_reframe`, the warranted and disproportionate gate; the proportionality relation itself is ACTIVATION §6 | §5 Proportional design sequencing; ACTIVATION §6 |
-| #decision-complete-symbolic-design | conserved in full; the nineteen-term `M(B)`, the decision-complete criterion stated as the design-gate acceptance criterion, projections of one network, underconstraint and the three cases, open local choices only when equivalent, contradictory projections block, no further document | §5 Decision-complete symbolic design |
+| #4b-ontology-first-design-rule | conserved; derivation from one accepted Ontology, candidate slice before promotion of the eight kinds, subordinate to WHAT, not a replacement for design, source and authority identification, stable identities and basis, partial invalidation, no self-ratification, no second document, the material boundary definition, the refactor and delta rules, the ten-term Ontology, not a census; the reprice that invalidates is named as an instance of ACTIVATION §7's material input change, which owns the invalidators | §5; ACTIVATION §7 |
+| #proportional-design-sequencing | superseded in its repeated-surprise sentence, proposed and pending the product owner's acceptance: repeated or cross-cutting material surprises are evidence for diagnosis under ACTIVATION §1 Feedback and diagnosis and require one bounded `design_reframe` only where the diagnosis establishes that the affected design cut is underconstrained, where rc.2 took any such surprises as that evidence and required the reframe; the rest conserved: the four definitions, co-evolution and design-gated modes, the disposable spike, neither mode default, counterfactual evidence, no prior gate where no material alternative remains, evidence relation not authority, carrier placement, switch at the smallest set, serial repairs, the warranted and disproportionate gate; the proportionality relation itself is ACTIVATION §6 | §5 Proportional design sequencing; ACTIVATION §6 |
+| #decision-complete-symbolic-design | conserved in full; the nineteen-term `M(B)`, the decision-complete criterion stated as the design-gate acceptance criterion, projections of one network, underconstraint and the three cases, open local choices only when equivalent, contradictory projections block (stated as a precondition of the design gate, not a decision on a review finding), no further document | §5 Decision-complete symbolic design |
 | #bounded-frame-conservation-stdo-up-017 | conserved; the five frame items, several governing frames with the three examples, the evaluation and re-entry rule, the subordinate-frame rule, the falsifier, discovered functionality as evidence, the nine-step derivation order; the seam rule is ACTIVATION §1 Execution unit and §4 Refinement, and P4b's frame instance is FOUNDATIONS §3, both pointed to | §5 Bounded frame conservation (UP-017); ACTIVATION §1, §4; FOUNDATIONS §3 |
 | #native-constructability-before-design-acceptance-stdo-up-002 | conserved; the nine required native constructions, explicit gap or re-entry, the five forbidden hidings, obligation not prescription | §5 Native constructability (UP-002) |
-| #capability-and-foundation-selection-stdo-up-023 | conserved in full; the label-free statement, relation and mechanic factoring, the five candidate sources, bounded reproducible discovery with its per-category declarations and invalidation, the strategy boundary and no-preference rule, compositions, the eight comparison dimensions, elimination, unknowns, frontier, dominance, the trade-off owner, role and authority preservation, recursion, distinction from recurrence, proportional application; the candidate-not-adjudication law is FOUNDATIONS §4 Shared machinery, pointed to | §5 Capability and foundation selection (UP-023); FOUNDATIONS §4 |
+| #capability-and-foundation-selection-stdo-up-023 | conserved in full; the label-free statement, relation and mechanic factoring, the five candidate sources, bounded reproducible discovery with its per-category declarations and invalidation, the strategy boundary and no-preference rule, compositions, the eight comparison dimensions, elimination, unknowns, frontier, dominance, the trade-off owner, role and authority preservation, recursion, distinction from recurrence, proportional application; the candidate-not-adjudication law is FOUNDATIONS §4 Shared machinery, pointed to; the later candidate that invalidates selection evidence is named as an instance of ACTIVATION §7's material input change, and reuse conferring no authority as an instance of FOUNDATIONS §2 Authority kinds, What creates no authority | §5 Capability and foundation selection (UP-023); FOUNDATIONS §4; ACTIVATION §7; FOUNDATIONS §2 Authority kinds |
 | #entity-and-lifecycle-completeness | conserved; the enumeration, the seven-column matrix, the inheritance rule, the four "may" and "should normally" lifecycle readings, cell completeness, distinction from the operational lifecycle | §5 Entity and lifecycle completeness |
-| #authority-model | conserved; authority in the Ontology, the eight-column matrix, the five distinctions, role coincidence, helper inheritance, no implicit widening and its four consequences | §5 Authority model |
-| #transformation-admission-completeness-stdo-up-016 | conserved in full; the six-column relation, the seven declarations, binding to ACTIVATION §4 as sole owner of admission semantics, per-owner qualification, `not_applicable` conditions, the three obligation falsifiers, singularity, competing-path disposition and retention, projection status, the three law falsifiers | §5 Transformation admission completeness (UP-016); ACTIVATION §4 |
+| #authority-model | conserved; authority in the Ontology, the eight-column matrix, the five distinctions, role coincidence, helper inheritance, no implicit widening and its four consequences, stated as design instances of FOUNDATIONS §2 Authority kinds, What creates no authority, which owns the list; the named typed transition and owning admission boundary carry in the design the explicit authority decision FOUNDATIONS requires and do not replace it | §5 Authority model; FOUNDATIONS §2 Authority kinds |
+| #transformation-admission-completeness-stdo-up-016 | conserved in full; the six-column relation, the seven declarations, binding to ACTIVATION §4 as sole owner of admission semantics, per-owner qualification, `not_applicable` conditions, the three obligation falsifiers, singularity, competing-path disposition and retention, projection status (an instance of FOUNDATIONS §2 Authority kinds, What creates no authority), the three law falsifiers | §5 Transformation admission completeness (UP-016); ACTIVATION §4 |
 | #atomic-functions-and-higher-order-composition | conserved; smallest parameterised families, "should normally", the seven-column minimum matrix, the five row dispositions, the seven typical categories and six laws, vocabulary not required, graph and other bindings, iterative discovery only under co-evolution, reconciliation, no undeclared constructor | §5 Atomic functions and higher-order composition |
 | #prime-semantic-atoms-and-universal-domain | conserved; the definition, design altitude, many-to-many mapping, contraction before proof, admitted domain, no local fork, out-of-domain and in-domain cases, candidate atom without domain | §5 Prime semantic atoms and admitted domain |
 | #whole-family-prime-contraction | conserved in full; complete family and projections, the eight review questions, plausible families not Prime, contraction during design | §5 Whole-family Prime contraction |
@@ -2248,32 +2564,41 @@ pointed to, not repeated.
 | #5d-reference-derived-module-design-rule | conserved; not code comparison alone, the six-step derivation, the purpose, the five minimum assets, the design question, incompleteness | §6 Reference-derived module design |
 | #5e-ontology-and-three-view-behavioral-design-gate | conserved; Ontology and three-view asset before promotion, co-evolution and design-gated cases, unchanged boundaries, the three views, ratified alternative format, no flowchart substitute, one surface and one decision, projections not peers | §7 |
 | #ontology-evidence | conserved; the eight included items, parent slice, copying creates a truth surface | §7 Ontology evidence |
-| #invariant-reconstruction-sufficiency-stdo-up-018 | conserved in full; reasoning state not deliverable, sufficiency to recover and decide, two distinct inputs and the duplication warning, the four-decision table, the two boundaries, bounded sufficiency, no artifact, the falsifier, the withheld-history test; the general reconstruction-without-history rule is ACTIVATION §1 Intake, pointed to | §7 Invariant reconstruction sufficiency (UP-018); ACTIVATION §1 |
+| #invariant-reconstruction-sufficiency-stdo-up-018 | conserved in full; reasoning state not deliverable, sufficiency to recover and decide, two distinct inputs and the duplication warning, the four-decision table, the two boundaries, bounded sufficiency, no artifact, the falsifier, the withheld-history test; the general reconstruction-without-history rule is ACTIVATION §1 Intake, pointed to. New in this corpus: the four decisions are a refinement mapped into the core of FOUNDATIONS §4 Results for "the action is admissible in the acting frame on the current governing basis", preserves and duplicates to `satisfied`, changes to `invalid_basis` as for the disposition `re_enter` of ACTIVATION §3, violates to `falsified`, and an evaluation that reaches no decision returns the core value its cause selects | §7 Invariant reconstruction sufficiency (UP-018); ACTIVATION §1 |
 | #domain-model | conserved; the twelve shown elements, the six stereotypes, the two visibility marks, the three relationship expectations | §7 Domain model |
 | #sequence-model | conserved; the execution path, owners and authority, the applicable paths, participant and message binding, no silent replacement, Ontology function binding | §7 Sequence model |
 | #state-model | conserved; the complete lifecycle with its state kinds, transition binding, controller memory not lifecycle truth | §7 State model |
-| #cross-view-axiom-evaluation | conserved; the three verdicts, the ten-column matrix, the eleven proofs, graph-native visibility, the blocking constructor | §7 Cross-view axiom evaluation |
-| #gate-and-retrospective-work | conserved; both verdicts accepted, the four blockers, the unchanged-refactor proof, provisional evidence under co-evolution, the spike, retrospective review, no rationalisation, boundary-bounded asset, incompleteness and its limits | §7 Gate and retrospective work |
-| #computational-realization-projection-stdo-up-019 | conserved in full; domain-only blindness, role sets and the three cases, the projection and its seven contents, the producer-to-consumer path, operational assumptions, subordinate projection and the four-step sequence, the ten dimensions, separation conditions, the two-part disposition, the four falsifiers; the cost separation and dimension declaration are ACTIVATION §6, shared machinery FOUNDATIONS §4, both pointed to | §7 Computational realisation projection (UP-019); ACTIVATION §6; FOUNDATIONS §4 |
+| #cross-view-axiom-evaluation | conserved; the three verdicts, the ten-column matrix, the eleven proofs, graph-native visibility, the blocking constructor. New in this corpus: the three verdicts are a refinement mapped into the core of FOUNDATIONS §4 Results for "on the exact Ontology and design basis, the boundary's design meets the axiom, or the axiom does not apply to the boundary", `pass` and `not_applicable` to `satisfied`, `fail` to `falsified`; the predicate is a disjunction that includes non-application, under ACTIVATION §1 Applicability, Exclusion and the core, which decides that `satisfied` for `not_applicable` never establishes that the design meets the axiom and that `not_applicable` requires a false applicability premise. Tightening the predecessor implies and does not state: an evaluated axiom that reaches none of the three verdicts records the core value its cause selects, and an applicable axiom not evaluated has no result; neither is `pass` | §7 Cross-view axiom evaluation; ACTIVATION §1 Applicability |
+| #gate-and-retrospective-work | conserved; both verdicts accepted, the four blockers, the unchanged-refactor proof, provisional evidence under co-evolution, the spike, retrospective review, no rationalisation, boundary-bounded asset, incompleteness and its limits. New in this corpus: each verdict is an acceptance result, the disposition of the design authority under ACTIVATION §3 Disposition, `accepted` being `accept` mapped to `satisfied` for "the candidate is accepted at its declared boundary"; it consumes the assessment results and is never inferred from them. Tightening the predecessor implies and does not state: an axiom verdict that maps to a value other than `satisfied`, an applicable axiom with no result, or an axiom with no result whose applicability is not established false, keeps the verdict non-accepted as a failed axiom does | §7 Gate and retrospective work; ACTIVATION §3 Disposition |
+| #computational-realization-projection-stdo-up-019 | conserved in full; domain-only blindness, role sets and the three cases (technology capability conferring no authority named as an instance of FOUNDATIONS §2 Authority kinds), the projection and its seven contents, the producer-to-consumer path, operational assumptions, subordinate projection and the four-step sequence, the ten dimensions, separation conditions, the two-part disposition, the four falsifiers; the cost separation and dimension declaration are ACTIVATION §6, shared machinery FOUNDATIONS §4, both pointed to | §7 Computational realisation projection (UP-019); ACTIVATION §6; FOUNDATIONS §4 |
 | #5f-theoretical-framing-for-boundary-law | conserved; stands alone, engineering Ontology without metaphysical adoption, the Markov-object framing, the four analogues, justification not prerequisite, scope not expanded | §8 |
 | #6-design-module-taxonomy | conserved; "should be classified", the six recommended roles, not naming ceremony, bounded traversal reasoning, the four review questions, recurrence visibility | §9 |
 | #6a-design-to-module-to-implementation-unit-tests-evidence-route | conserved in full; restated in tier-2 terms bound by this profile's declared binding | ASSURANCE §14 |
 | #6b-module-derived-unit-test-rule | conserved in full; restated as the realisation-authority side of the authority-source split | ASSURANCE §15 |
 | #6c-module-lifecycle-confirmation-rule | conserved in full | ASSURANCE §16 |
 | #7-immutable-carrier-rule | conserved; "should be carried", the three-part preferred shape, the three justifications, convenience insufficient | §10 Immutable carriers |
-| #8-totality-rule | conserved; "should be total", the three preferred properties ("when practical"), the three "should prefer" and three "should avoid" items; P5 and the result algebra are FOUNDATIONS §3 and ACTIVATION §3, pointed to | §10 Totality; FOUNDATIONS §3 P5 |
+| #8-totality-rule | conserved; "should be total", the three preferred properties ("when practical"), the three "should prefer" and three "should avoid" items; P5 is FOUNDATIONS §3 and the core result algebra FOUNDATIONS §4 Results, both pointed to; the outcome values a semantic function returns are the Product's domain values, not results of this method | §10 Totality; FOUNDATIONS §3 P5; FOUNDATIONS §4 Results |
 | #9-effect-edge-rule | conserved; "should be explicit", the seven typical edges, "should not perform", the four-step preferred sequence, "should be treated as suspect" | §10 Effect edge |
 | #10-no-semantic-center-rule | conserved; the five centres, the four inclusions, the five discovery questions, "should already exist" | §10 No semantic centre |
 | #11-coupling-rule | conserved; "should be reduced", the preferred and rejected directions, the four coupling signs, fewer places to invent meaning | §10 Coupling |
 | #11a-governancestrategy-separation-rule | conserved; governance not strategy, the seven lawful publications, the four drifts, the distinction, no replacement decision engine | §10 Governance and strategy separation |
 | #11b-opportunistic-optimization-rule | conserved; "should be left better", subordination, the five conditions, the four lawful and four non-lawful examples, repricing input, scope rule versus TICKETS, the test, the closing contrast | §10 Opportunistic optimisation |
-| #11c-recurrence-extraction-rule | conserved; commonisation candidate, the four "usually" properties, the five typical candidates, the rule of two, the three conformance exceptions, TICKETS §6 recording, the three-step "preferred" order, "should be extracted", separate decision, closure by consumption and retirement | §10 Recurrence extraction |
-| #11d-post-ticket-design-review-rule | conserved; "should not rest", the check, no separate artifact, TICKETS authority, the five determinations, complete reconstruction, what hashes, headings and green tests establish, causal closure and reuse, the five consequences, the closing rule with "should not claim" | §10 Post-ticket design review |
+| #11c-recurrence-extraction-rule | conserved; commonisation candidate, the four "usually" properties, the five typical candidates, the rule of two, which TICKETS §6 owns as ticket law and this section refines as design-method conformance, the three conformance exceptions, the three-step "preferred" order (now stated once, at TICKETS §6), "should be extracted", separate decision, closure by consumption and retirement | §10 Recurrence extraction |
+| #11d-post-ticket-design-review-rule | conserved; "should not rest", the check, no separate artifact, TICKETS authority, the five determinations, complete reconstruction, what hashes, headings and green tests establish, causal closure and reuse, the five consequences, the closing rule with "should not claim"; reuse and its invalidators are ACTIVATION §7's, with a changed relation or new counterexample named as an instance of its material input change; whether a finding blocks current promotion is EVALUATION §5 When a finding blocks promotion, the five determinations being this profile's domain triggers for its four conditions, while a falsified closure claim stays blocked as a `falsified` result; "a ticket adopts" is written "a ticket applies this profile to its boundary" | §10 Post-ticket design review; ACTIVATION §7; EVALUATION §5 |
 | #12-interface-bleed-prohibition | conserved; "should bleed", the five bleed conditions, the three-part shape, non-bleed | §10 Interface bleed prohibition |
 | #13-proxy-interface-prohibition | conserved; the prohibition, the four proxy marks, bridge debt, explicit compatibility or removal | §10 Proxy interface prohibition |
 | #14-design-review-questions | conserved; all 56 questions in order, the closing rule | §11 Design review questions |
 | #14a-functional-realization-review-checklist | conserved; all 43 checks, the 14 hard-gate checks, language-agnostic scope, the unchanged-boundary gate | §11 Functional realisation checklist |
-| #15-adoption-guidance | conserved; the four "may" adoption means, consistent application across six areas, "should make" the evaluators explicit, the four completion obligations, partial adoption "allowed" and "should be named", narrowing without skipped evidence | §12 Adoption |
+| #15-adoption-guidance | superseded, proposed and pending the product owner's acceptance of the replacement relation (delta I3-3b, row 162): the rc.2 sentence "Projects may adopt this method by" the four means is replaced by PRODUCT_DEFINITION §7's rule that only Product authority adopts an available profile, with the four "may" means kept as the means by which that authority records its adoption; conserved unchanged: consistent application across six areas, "should make" the evaluators explicit, the four completion obligations, partial adoption "allowed" and "should be named", narrowing without skipped evidence | §12 Adoption; PRODUCT_DEFINITION §7 |
 | #16-relationship-to-other-method-surfaces | conserved; the five governances, the five answers, the graph-profile split, the UX refinement, lifecycle confirmation versus release decisions | §12 Relationship to other members |
 | #17-non-goals | conserved; stated once in SPEC_METHOD §2 Realisation shape, scoped to boundaries this profile governs: the four non-requirements, the readability requirement, the required composition and effect algebra, vocabulary optional and law not | SPEC_METHOD §2 Realisation shape; §12 Non-goals |
 | IDENTITY_METHOD #defaults-from-a-bound-abg-realization | conserved; the "may publish" permission for runtime surfaces and default surface kinds (with its graph-profile reading) is restated here; starter conventions and convenience contracts, not universal doctrine, lawful only while overridable, with the override law, are IDENTITY §7 | §12 Identity defaults from a bound runtime realisation; IDENTITY §7 |
+
+New law with no predecessor row: the family table at §1 Foundation to
+law, which decides nothing beyond the rules it cites, with
+[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law)
+owning its format and the standing of its consequences; and the paragraph
+Results and design records at the head of this member, which states where
+this profile's results are mapped, that its design-record vocabularies
+are not results, and the two senses of `not_applicable`, with its purpose
+and material relation stated there.

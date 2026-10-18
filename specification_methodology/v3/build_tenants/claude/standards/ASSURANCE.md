@@ -7,13 +7,17 @@ scenario bundles, installed dev proof, significant path coverage, the
 product testing frame set, combinatorial coverage and testing value,
 legitimate-path and technical-debt erasure, testing evidence composition,
 assurance subject acquisition, counterexample localisation and the
-end-to-end interface integration frame.
-Consumes [FOUNDATIONS](FOUNDATIONS.md) (claim, evidence, judgment,
-authority), [REFERENCE_FRAME](REFERENCE_FRAME.md) (the frame, its
-declaration shape, conjunction and coverage),
+end-to-end interface integration frame. Its family table (F14) is §1
+Foundation to law.
+Consumes [FOUNDATIONS](FOUNDATIONS.md) (§2 claim, evidence, judgment,
+authority; §4 [Results](FOUNDATIONS.md#results), the core result algebra,
+and [Conjunction of results](FOUNDATIONS.md#conjunction-of-results)),
+[REFERENCE_FRAME](REFERENCE_FRAME.md) (the frame, its declaration shape,
+frames in conjunction, translation and coverage),
 [EVALUATION](EVALUATION.md) (claims, separation, independent
-assessment, acceptance, conformance) and [ACTIVATION §3](ACTIVATION.md)
-(the result algebra); adds no definition to tier 1. The particular
+assessment, acceptance, conformance) and [ACTIVATION](ACTIVATION.md)
+(§1 applicability and the execution relation, §6 proportionality, §7
+reuse); adds no definition to tier 1. The particular
 method's chain and change classes are [SPEC_METHOD](SPEC_METHOD.md); the
 project's bindings are [PRODUCT_DEFINITION](PRODUCT_DEFINITION.md). The
 design profile's module-derived unit-proof law (its 6A to 6C) is §14 to
@@ -33,7 +37,7 @@ nothing here depends on that cut to be applied.
 
 ## 1. Verification layers
 
-Each layer of the chain (SPEC_METHOD §1) preserves a distinct kind of truth
+Each layer of the chain ([SPEC_METHOD §2 Constitutional chain](SPEC_METHOD.md#constitutional-chain)) preserves a distinct kind of truth
 (P2, P6; rc.2 #verification-layers):
 
 | Layer | What it preserves | Primary question answered |
@@ -50,17 +54,89 @@ a scenario asks whether a user can build such a unit and apply it twice
 (P6).
 
 Scenarios are the product-owner layer: concrete, end-to-end use cases that
-validate the chain from intent to realised behaviour. When a scenario
-cannot be written, the capability is not yet real. When a scenario fails,
-the gap is between the system's actual behaviour and its claimed
-capability, not between the specification's words and its other words (P2,
-P6).
+validate the chain from intent to realised behaviour. While no scenario
+for a capability can be written, its operational meaning is unverified;
+that alone does not show whether its governing claim is inadequate or the
+means to state or observe its expected outcome is missing, and diagnosis
+under [ACTIVATION §1 Feedback and diagnosis](ACTIVATION.md#construction-relation)
+locates the cause. When a scenario fails, its observed outcome disagrees
+with the scenario's expected outcome, which no comparison of the
+specification's words with its other words could show. That report is an
+observation, so it shows that actual behaviour disagrees only where its
+observation binding is supported
+([FOUNDATIONS §4 Assertions and observation](FOUNDATIONS.md#assertions-and-observation)).
+The failure alone does not show whether the realisation, the governing
+claim, the scenario's expected outcome or its observation is wrong;
+[§12 Counterexample localisation](#12-counterexample-localisation) locates
+the cause as far as the evidence supports (P2, P6).
 
 Scenarios do not replace requirement categories. They primarily validate
 capability claims and other behaviour with concrete operational meaning.
 Constraints, governance rules and verification-infrastructure requirements
 may require different evidence in addition to, or instead of, end-to-end
 scenarios (P2).
+
+### Foundation to law: assurance and testing
+
+This family (F14 in the index of
+[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law))
+decides what evidence proves a claim about a realised product and how
+that evidence is organised. Its instance premises, which the commitments
+do not supply, are named in the rows as follows: runnable product, a
+product's realisation can be executed or observed, in a source form and in
+a deployed, installed or otherwise runnable form, to produce evidence;
+composition, a product is composed of modules, interfaces and owners along
+causal paths, so its claims range from one module's law to a user's
+outcome; users, some claims are about outcomes a user obtains through the
+product's supported surfaces; external boundaries, a product or its proof
+may depend on workers, transports or fixtures outside its source boundary;
+designed modules, a design profile may govern a realisation boundary and
+declare module ownership. Each commitment's standing is written as the
+table of commitments in FOUNDATIONS §3 states it.
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P2 (independent); P6 (independent); instance: runnable product, users | By P6 each layer keeps its own authority, so requirements, design and scenarios preserve distinct truths. By P2 a capability matters as the use it serves, so while no concrete scenario for it can be written its operational meaning is unverified and diagnosis under [ACTIVATION §1](ACTIVATION.md#construction-relation) locates the cause, and a failing scenario is operational evidence that its observed outcome and the expected outcome disagree; by P6 that evidence shows a disagreement of actual behaviour only where its observation binding is supported, and [§12](#12-counterexample-localisation) locates its cause; scenarios do not replace the evidence other kinds of requirement need. | [§1](#1-verification-layers) | the three layers and scenarios as the product-owner layer: domain choices of this member; the layers of the chain: [SPEC_METHOD §2 Constitutional chain](SPEC_METHOD.md#constitutional-chain) (family F10); diagnosis: [ACTIVATION §1 Feedback and diagnosis](ACTIVATION.md#construction-relation) (family F2); the observation binding: [FOUNDATIONS §4 Assertions and observation](FOUNDATIONS.md#assertions-and-observation) (family F3) | 1, 5, 9 |
+| P6 (independent); P2 (independent); P1 (independent); instance: runnable product | By P6 a proof has authority only through what authorises it, so every executable proof surface declares its authority source, and its expected results derive from that authority, never from current implementation behaviour. By P1 and P2 a name or breadth of execution carries no authority, so breadth of execution is not authority, and a project's lane names map back to one taxonomy before closure is claimed. | [§2](#2-testing-strategy-taxonomy) | the two primary authorities, design or module conformance and UAT, the product-assurance bounded context and the terminology list: domain choices of this member; each project's lane names: that project, mapped back here | 4, 9 |
+| P6 (independent); P1 (independent); P5 (derived from P0 and P6, with P0's open-world premise); instance: runnable product, users, external boundaries | By P6 acceptance needs evidence of the claim itself, and by P1 a substitute is not the thing substituted, so acceptance evidence comes only from the composed product form exercised through its declared surfaces, and a substituted external worker or transport proves only the relations exercised. By P5 a claim about the real boundary is undecided without evidence that crosses it, so narrower green lanes are necessary and not sufficient for it. | [§2](#2-testing-strategy-taxonomy), the sandbox paragraphs; [§7 User-acceptance frame](#user-acceptance-frame), last paragraph | the sandbox lane and its harnessed and live modes: domain choices of this member | 8, 9 |
+| P3 (independent); P6 (independent); P5 (derived from P0 and P6, with P0's open-world premise); instance: external boundaries | By P3 a lane binds an exact source boundary, so a required closure lane is reproducible from it: an external dependency is checked in, declared with its acquisition rule, or the lane is classified outside required closure. By P5 a missing fixture means the evaluation was not performed, so it is reported as such, never as a product semantic failure. | [§2 Fixture and proof portability](#fixture-and-proof-portability) | the three admissible forms: domain choices of this member | 8, 9 |
+| P6 (independent); P2 (independent); instance: composition | By P6 a proof needs written authority, so every live requirement's proof rests on written, traceable test-case authority. By P2 a behaviour claim is about use, so where a requirement claims meaningful behaviour the proving surface should be an ordered sequence through a coherent use; an undeclared path leaves coverage unjudgeable and an unexercised one leaves the behaviour unproved, so the significant paths are declared and exercised. | [§3](#3-test-authority); [§4](#4-scenario-bundle); [§6](#6-significant-path-coverage) | the scenario bundle and the five usual significant paths: domain choices of this member; the derivation of each test case from admitted work: [TICKETS §7](TICKETS.md#test-case-authority) (family F13) | 1, 5, 9 |
+| P6 (independent); P3 (independent); instance: runnable product | By P3 a claim about an installable system binds its installed form, and by P6 a source-level check is evidence of another subject, so the decisive proof runs against an installed development form as an external target, and source-level checks do not replace it. | [§5](#5-installed-dev-proof) | the preference for a fresh sandbox, at "should": a policy choice of this member; the install and development-product roles: [FOUNDATIONS §2 Product lineage objects](FOUNDATIONS.md#product-lineage-objects) (family F15) | 8, 9 |
+| P0 (recovered); P6 (independent); P1 (independent); P4a (independent); instance: composition | By P0 a finite actor evaluates one bounded claim at a time, and by P4a results combine only through declared relations, so where testing frames are selected, testing is a claim-relative set of frames, each bound to one exact claim, subject, path, population, oracle and falsifier, and every result stays bound to its claim. By P1 and P6 a label, runner, count or coverage measure confers no assurance, so a broader frame cannot make a narrower law true, and narrower green results cannot establish an unevaluated broader claim. | [§7](#7-product-testing-frame-set), Terms and The set; [§10](#10-testing-evidence-composition) | the four ordinary frames and their declarations: domain choices of this member; selecting the set for a claim: the governing frame configuration ([PRODUCT_DEFINITION §7](PRODUCT_DEFINITION.md#7-collective-reference-frame-basis)) or the admitted work authority; the mapping of engagement roles onto the frames: [EXECUTIVE_BASELINE](EXECUTIVE_BASELINE.md) (family F16) | 3, 7, 9 |
+| P6 (independent); P3 (independent); P5 (derived from P0 and P6, with P0's open-world premise); instance: runnable product, composition | By P3 a path claim binds the exact path, and by P5 an absence is shown only by evidence, so a product path claim needs two-sided evidence: the required path witnessed through the supported ordinary path, and each forbidden path absent or refused, in the production graph and in the assurance graph. By P6 equal output is evidence of output, not of path, so equal output through a forbidden path falsifies the path claim. | [§7 Terms](#terms), authoritative Product path; [§9](#9-legitimate-path-and-technical-debt-erasure) | path-sensitive mutation where proportionate and safe: a policy choice of this member | 4, 9 |
+| P2 (independent); P6 (independent); P5 (derived from P0 and P6, with P0's open-world premise); P4a (independent); instance: composition | By P2 a test's value is what it decides for the claim, so testing value is the material combinations a frame discriminates for its claim, not a count. By P5 an omitted interaction is undecided, so a reduced covering set is lawful only with a reason why the omitted interactions cannot change the claim, or with them kept as residuals; by P4a and P6 code coverage shows only what was visited. | [§7 Terms](#terms), material combinatorial complexity; [§8](#8-combinatorial-coverage-and-testing-value) | the eight index terms and the nine product factors: domain choices of this member; any scalar score: Product, requirement or accepted-design authority | 3, 9 |
+| P6 (independent); P1 (independent); P5 (derived from P0 and P6, with P0's open-world premise); instance: runnable product | By P6 the owner issues the subject, and by P1 a reconstruction is not the subject, so the assurance subject is the owner-issued subject, acquired through its owner surface, and an evaluator never builds a parallel owner state and evaluates it as the product. By P5 a missing owner projection leaves its claim undecided, so it stays a named gap. | [§11](#11-assurance-subject-acquisition-and-evaluation) | none | 6, 9 |
+| P5 (derived from P0 and P6, with P0's open-world premise); P1 (independent); P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); instance: composition | By P5 a counterexample locates only as far as its evidence supports, and by P4b it persists until disposed, so it is returned to the earliest causal frontier the evidence supports. By P1 the four forms mean different things, so a unique locus, a joint set, unresolved alternatives and an unbounded frontier stay distinct, each read as one core value; localisation authorises no repair. | [§12](#12-counterexample-localisation) | the four localisation forms: domain choices of this member; any resulting change: the re-entry of [SPEC_METHOD §4](SPEC_METHOD.md#4-change-management) (family F11) | 3, 9 |
+| P0 (recovered); P1 (independent); P4a (independent); P5 (derived from P0 and P6, with P0's open-world premise); P6 (independent); instance: composition, users | By P0 and P4a each seam is a separately declared relation, so across an interface chain contract sufficiency, boundary congruence, path realisation and user usability are distinct claims with distinct results, and a full usability claim needs all four and their conjunction. By P1 and P5 a seam is evaluated only on its own coordinates, so each seam binds its domains, available context, translation, current observation, actual path and diagnostic cause; by P6 diagnosis grants no repair, and a complete-path result is not replaced by local successes. | [§13](#13-end-to-end-interface-integration-frame), Claim boundaries, Obligations and Computational whole-path evaluation | the frame identity, its twelve elements, the four claims, the six obligations and the ten qualification cases: domain choices of this member; activation: the governing frame configuration or admitted work authority; the family names: [EXECUTIVE_BASELINE](EXECUTIVE_BASELINE.md) (family F16); computational realisation and recurrence law: [DESIGN_MODULE](DESIGN_MODULE.md) (family F17) | 4, 7, 9 |
+| P6 (independent); P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); P2 (independent); instance: designed modules | By P6 the accepted ontology, design and module boundary are the authority for a designed module, so where a design profile governs a boundary, implementation and unit tests derive from them, and evidence feeds back without selecting the semantic answer. By P4b and P2 module proof needs a record that traces to the module's ownership, so module-owned unit tests are authoritative for module proof and should trace to module ownership, not helper shape, and a module without that lane is not closure-ready. | [§14](#14-design-to-module-evidence-route); [§15](#15-module-derived-unit-tests) | the two evidence chains, the completeness requirements and the traceability sources: domain choices of this member; the binding of the written terms to the profile's objects: [DESIGN_MODULE](DESIGN_MODULE.md) (family F17) | 4, 9 |
+| P2 (independent); P6 (independent); P5 (derived from P0 and P6, with P0's open-world premise); instance: designed modules | By P2 every lifecycle phase of a designed surface bears on its outcome, and by P5 an unanswered phase is undecided, so before closure each phase is answered, declared not applicable with a reason, or recorded as a named gap. By P6 implementation proves a lifecycle path only within its own authority, and a gap proceeds only when governed. | [§16](#16-module-lifecycle-confirmation) | the nine stated items: domain choices of this member; the lifecycle chain and its markers: [SPEC_METHOD §2 Operational lifecycle sufficiency](SPEC_METHOD.md#operational-lifecycle-sufficiency) (family F10) | 1, 9 |
+
+The standing of these consequences is stated in
+[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law).
+The table accounts for §1 to §16. §17 records dispositions and decides
+nothing.
+
+Consumers of these rows, where an actor enters them (FOUNDATIONS §3
+Foundation to law, Consumers), one list per row, each consumer linked to
+its own locus:
+
+- Row 1, the verification layers: no separate consumer applies. The layers are applied inside this member, by §2 to §6, which the rows below trace; [SPEC_METHOD §9](SPEC_METHOD.md#9-evidence) names §1 to §6 as the rules of realisation proof and applies none of them to a case, and EXECUTIVE_BASELINE §2 names this member as the owner of the taxonomy and states no application of §1.
+- Row 2, the authority source of a proof surface and the lane mapping: [DESIGN_MODULE §6 Irreducible architectural carrier set](DESIGN_MODULE.md#irreducible-architectural-carrier-set), the carrier inventory to which design and module conformance tests bind; this member's [§15](#15-module-derived-unit-tests), which keeps module-derived unit proof within the product-assurance bounded context and leaves acceptance meaning with Product authority.
+- Row 3, acceptance evidence from the composed product: this member's [§13 Obligations](#obligations), where a live claim needs live evidence under §2; otherwise no separate consumer applies: which lane a project runs is its assurance design, and the acceptance decision that consumes the evidence is EVALUATION §5's and RELEASE §8's, which apply the claim law of EVALUATION and name these paragraphs nowhere.
+- Row 4, fixture and proof portability: no separate consumer applies. A lane's external dependencies are declared by the project's assurance design under this paragraph; a missing fixture is reported as an evaluation not performed, in the core value of FOUNDATIONS §4 Results that this paragraph applies; no section of another member names it.
+- Row 5, test authority, scenario bundles and significant paths: [TICKETS §7 Test case authority](TICKETS.md#test-case-authority), the ticket-local rule of the general test authority law; [SPEC_METHOD §4 Consistency gate](SPEC_METHOD.md#consistency-gate), where implementation behaviour is evidence and not authority and the test authority rule is this member's.
+- Row 6, installed dev proof: [ODD §13](ODD.md#13-installed-dev-rule), which binds the rule for its profile; the install and development-product roles are FOUNDATIONS §2 Product lineage objects', as the choice column states; which installed form a claim binds is the claim's own.
+- Row 7, the testing frames and evidence composition: [EXECUTIVE_BASELINE §1](EXECUTIVE_BASELINE.md#1-canonical-compression), where the four frames are activated inside the engagement relation and no narrower green frame establishes an unevaluated composition; [§5 Terms owned by ASSURANCE](EXECUTIVE_BASELINE.md#terms-owned-by-assurance); [§8 Steel-thread delivery](EXECUTIVE_BASELINE.md#steel-thread-delivery), where unit evidence covers module-owned laws under the frames and the frames keep their distinct claims; [§11 Relation to the testing and interface frames](EXECUTIVE_BASELINE.md#relation-to-the-testing-and-interface-frames); [§12 step 2](EXECUTIVE_BASELINE.md#2-executive-activates-worker), whose activation names the testing claims, subjects, topology and populations, and [step 4](EXECUTIVE_BASELINE.md#4-executive-evaluates-the-work-result), where a missing or contradicted frame result is read under §10; [§14](EXECUTIVE_BASELINE.md#14-coverage-application), whose rows for the user outcome, the installed path, material interfaces and module-owned laws name the frames; [§16 Adopt this baseline](EXECUTIVE_BASELINE.md#adopt-this-baseline), whose inventory the adoption declares; [§18](EXECUTIVE_BASELINE.md#18-profile-qualification), obligations 12 to 15; this member's [§13](#13-end-to-end-interface-integration-frame), which relates its families to the frames of §7, and [§15](#15-module-derived-unit-tests), whose lane claims, and leaves unclosed, what the unit frame of §7 states.
+- Row 8, path claims: [EXECUTIVE_BASELINE §5 Terms owned by ASSURANCE](EXECUTIVE_BASELINE.md#terms-owned-by-assurance), for the authoritative Product path; [§12 step 2](EXECUTIVE_BASELINE.md#2-executive-activates-worker) and [§16 Adopt this baseline](EXECUTIVE_BASELINE.md#adopt-this-baseline), whose activation and inventory carry the forbidden-path exclusions; [§14](EXECUTIVE_BASELINE.md#14-coverage-application), whose row for obsolete and rival paths names the production-closure and assurance-closure graphs; [§18](EXECUTIVE_BASELINE.md#18-profile-qualification), obligation 13, where an end-to-end frame falsifies an equal output obtained through a forbidden path.
+- Row 9, testing value and combinatorial coverage: [EXECUTIVE_BASELINE §5 Terms owned by ASSURANCE](EXECUTIVE_BASELINE.md#terms-owned-by-assurance), for material combinatorial complexity; [§12 step 2](EXECUTIVE_BASELINE.md#2-executive-activates-worker) and [§16 Adopt this baseline](EXECUTIVE_BASELINE.md#adopt-this-baseline), whose activation and inventory carry the material combination populations; [§18](EXECUTIVE_BASELINE.md#18-profile-qualification), obligation 14, where omitted higher-order combinations stay residuals; [§20](EXECUTIVE_BASELINE.md#20-failure-classification), where one sunny path reported as combinatorial coverage is an undeclared interaction population.
+- Row 10, the assurance subject: [EXECUTIVE_BASELINE §20](EXECUTIVE_BASELINE.md#20-failure-classification), where a harness that derives owner state from raw events beside an installed owner projection is an invalid assurance subject, and [§21](EXECUTIVE_BASELINE.md#21-anti-patterns), items 25 and 27; this member's [§13 Obligations](#obligations), whose evidence acquisition follows §11.
+- Row 11, counterexample localisation: [SPEC_METHOD §4 Universal intake triage](SPEC_METHOD.md#universal-intake-triage), where localisation applies to a supported diagnosis where required; [EXECUTIVE_BASELINE §20](EXECUTIVE_BASELINE.md#20-failure-classification), where a symptom assigned to one owner without causal-frontier evidence is unsupported localisation, and [§21](EXECUTIVE_BASELINE.md#21-anti-patterns), item 26; this member's [§1](#1-verification-layers), where the cause of a failing scenario is located, and [§13 Obligations](#obligations), obligation 6, which applies §12 to preserve diagnostic cause.
+- Row 12, the interface integration frame: [DESIGN_MODULE §7 Computational realisation projection](DESIGN_MODULE.md#computational-realisation-projection-up-019), where component-local success establishes no complete-path claim; [EXECUTIVE_BASELINE §11 Relation to the testing and interface frames](EXECUTIVE_BASELINE.md#relation-to-the-testing-and-interface-frames), which relates the frame's families to the Executive's generic specialist frames.
+- Row 13, the design-to-module route and module-derived unit tests: [DESIGN_MODULE §9](DESIGN_MODULE.md#9-module-taxonomy), where a boundary's modules are proved under this assurance law; [§6 Irreducible architectural carrier set](DESIGN_MODULE.md#irreducible-architectural-carrier-set), the inventory to which unit proof binds; [§12 Adoption](DESIGN_MODULE.md#adoption), where a module-derived unit test lane is published before closure is claimed; [EXECUTIVE_BASELINE §18](EXECUTIVE_BASELINE.md#18-profile-qualification), obligation 15, where every coded module has a module-derived unit lane; [FOUNDATIONS §4 Parallel derivation and mutual assurance](FOUNDATIONS.md#parallel-derivation-and-mutual-assurance), whose example instantiates the route's paths in acceptance and build-level tests.
+- Row 14, module lifecycle confirmation: [DESIGN_MODULE §5 Entity and lifecycle completeness](DESIGN_MODULE.md#entity-and-lifecycle-completeness), which keeps the entity lifecycle apart from the operational lifecycle this section confirms; [§9](DESIGN_MODULE.md#9-module-taxonomy); [§12 Relationship to other members](DESIGN_MODULE.md#relationship-to-other-members), where the rule detects lifecycle signal and decides no release eligibility or acceptance.
+
+Each consumer applies the rule and decides nothing the owning section does
+not (P2, P6).
 
 ## 2. Testing strategy taxonomy
 
@@ -171,7 +247,14 @@ Every live requirement has written test-case authority (P6; rc.2
 #test-authority-rule). That authority may include scenario bundles,
 ordered test-case sequences, negative or control cases and other explicit
 evidence cases appropriate to the kind of truth being proved; it exists in
-written form and is traceable. No live requirement is fully proved on
+written form and is traceable. Written authority includes the assertion
+provenance of each expected result: the owning obligation, its
+interpretation, assumptions, derivation and shared dependencies, and
+whether the asserted predicate is the obligation, a necessary condition of
+it or part of a sufficient conjunction
+([FOUNDATIONS §4 Assertions and observation](FOUNDATIONS.md#assertions-and-observation),
+[Parallel derivation and mutual assurance](FOUNDATIONS.md#parallel-derivation-and-mutual-assurance))
+(P6). No live requirement is fully proved on
 informal operator confidence, ambient habit or an unlabelled test corpus
 (P6; EVALUATION §5, green labels are not acceptance). The derivation of
 each test case from admitted work authority is
@@ -273,7 +356,11 @@ set, and the law of §8 to §13 that serves it, available; it adopts nothing,
 and each activation is decided by ACTIVATION §1 (Applicability). The kind
 of runner does not select the frame; the evaluated claim, subject, path,
 population, oracle and falsification boundary do (P6, P2; provenance
-#derived-product-testing-frame-set). The ordinary configuration holds four
+#derived-product-testing-frame-set). Each frame's `invalidation` row,
+here and in §13, lists named instances of the material input change or
+the changed basis of
+[ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse); it adds no
+other kind of invalidator. The ordinary configuration holds four
 distinct frames:
 
 - user acceptance evaluates the Product outcome from the user's supported
@@ -302,8 +389,10 @@ bound results -> declared conjunction -> Product or release disposition
 
 The fan-out assigns claims to evidence; it is neither an authority
 hierarchy nor a claim that one frame decomposes into another. Evidence
-may relate through declared conjunction, translation, falsification and
-re-entry (P4a; REFERENCE_FRAME §6). A broader frame cannot make a module-owned
+may relate through declared conjunction
+([FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results)),
+translation (REFERENCE_FRAME §6), falsification and re-entry (P4a). A
+broader frame cannot make a module-owned
 law true, and any number of narrower green frames cannot establish an
 unevaluated Product composition or user outcome (EVALUATION §1, the weaker
 property never substitutes for the claimed one).
@@ -312,8 +401,10 @@ The frames may overlap, and one execution may supply evidence to several of
 them; every result stays bound to its own claim. A label such as `UAT`,
 `E2E`, `integration` or `unit` has no assurance value without the
 corresponding frame declaration (P1, P6). Each frame below is given in the
-shape of a frame declaration (REFERENCE_FRAME §13); "core result" is a
-member of ACTIVATION §3.
+shape of a frame declaration (REFERENCE_FRAME §13); "core result", here
+and in §13, is a value of the core result algebra of
+[FOUNDATIONS §4 Results](FOUNDATIONS.md#results), recorded with the
+predicate the frame's claim states.
 
 ### User-acceptance frame
 
@@ -460,7 +551,9 @@ testing-value index considers at least:
 No universal scalar is required. A project may define one only through
 Product, requirement or accepted-design authority, and keeps the
 underlying coverage coordinates rather than flattening them into a score
-(P1, P6).
+(P1, P6). A project-defined scalar is a quantified claim under
+[FOUNDATIONS §4 Quantified assurance](FOUNDATIONS.md#quantified-assurance)
+and keeps its model and limits explicit (P6).
 
 At unit altitude the relevant dimensions are module-bounded. Unit-testing
 value normally rises with the internal combinatorial complexity of an
@@ -557,8 +650,15 @@ One execution may provide several bound results. A supported user scenario
 may supply user-acceptance evidence for the outcome, end-to-end evidence for
 the runnable causal path, integration evidence for selected seams and unit
 counterexamples for a module-owned algebra. Those claims stay distinct and
-combine only through declared REFERENCE_FRAME §6 relations (P4a, P6;
-provenance #testing-evidence-composition).
+combine only through the declared relations of REFERENCE_FRAME §6, whose
+result conjunction is
+[FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results)
+(P4a, P6;
+provenance #testing-evidence-composition). Each bound result states which
+predicate it establishes; a result over a necessary condition does not
+establish the obligation, and the sufficiency of a conjunction is a claim
+of its own ([FOUNDATIONS §4 Assertions and observation](FOUNDATIONS.md#assertions-and-observation))
+(P6).
 
 The default proof responsibilities are (P6, P2):
 
@@ -574,7 +674,8 @@ combinations unevaluated. Integration and unit results cannot stand in for
 either broader claim. When the Product claim requires all of them, a
 conflict or a missing result stays visible to the decision owner's
 disposition and cannot be hidden by aggregate green status (P5, P6;
-REFERENCE_FRAME §8, operational full coverage item 6).
+FOUNDATIONS §4 Conjunction of results, Survival; REFERENCE_FRAME §8,
+operational full coverage item 6).
 
 ## 11. Assurance subject acquisition and evaluation
 
@@ -587,7 +688,13 @@ reconstruction relation. A harness, fixture, expected-value builder, proof
 script, assurance evaluator or assessor does not reconstruct a parallel
 owner state from raw payloads, events, logs, filenames, labels or
 implementation fragments and then evaluate that self-authored state as if
-it were the Product subject.
+it were the Product subject. Where the acquired observation cannot
+separate two admissible subjects on which the assessed predicate takes
+opposite truth values, the frame returns further evidence, a justified
+narrower scope or `indeterminate`. The binding of the
+observation itself needs support
+([FOUNDATIONS §4 Assertions and observation](FOUNDATIONS.md#assertions-and-observation),
+Observation sufficiency) (P1, P6).
 
 After lawful acquisition, an independently derived oracle may evaluate the
 governing claim. Generic assurance mechanics may compute bytes, digests,
@@ -622,6 +729,20 @@ The localisation result represents exactly one of (P5, P1):
   possible causal explanations but cannot establish which occurred; or
 - `indeterminate`, when the evidence cannot support a bounded frontier.
 
+The four forms are a refinement of the core under the rule of
+[FOUNDATIONS §4 Results](FOUNDATIONS.md#results), for the predicate "the
+evidence establishes the counterexample's earliest violated loci on the
+declared path". One unique violated locus and a jointly established set
+map to `satisfied`. Unresolved alternative frontiers map to
+`indeterminate`, naming the alternatives that further evidence must
+decide between. The fourth form is the core value `indeterminate` itself,
+naming the evidence a bounded frontier needs. The form travels with the
+value as the domain outcome, so a joint set stays distinct from a unique
+locus and unresolved alternatives stay distinct from an unbounded
+frontier. Purpose and material relation: a localisation combines with
+other results in the one core, and an unresolved causal explanation is
+never read as an established one (P5, P1, P6).
+
 Localisation records the subject, basis, frontier form and members, causal
 evidence, expected relations, the observed counterexample and the
 downstream claims it invalidates. It does not collapse a jointly
@@ -653,12 +774,12 @@ universal activation gate (P2, P3; provenance
 | subject and basis | one Product outcome and an independently stated oracle; the governing requirements and design basis, exact source or workspace checkpoint, contracts and finite case population; for design claims, the declared participant roles, functional path, dependencies, configuration and capabilities; for claims over their realisation, the actual participants, callable selection, supported entry and exit, and the exact runnable artifact or install |
 | material manifold | the producers, consumers, transformations and effect owners, as declared for design claims or actually selected for realised claims; at each material seam, the functional preconditions and postconditions, value and reference domains, lifecycle and time, supplied context, mutable subject, refusals, observations and user-visible result |
 | coordinates and equality | distinct Product, artifact or install, workspace, observation, invocation, candidate, admitted result and evidence identities; exact revisions, domain, units, cardinality, ordering, empty, null or default meaning and validity interval; equal shape or output implies no equal meaning, provenance or authority |
-| governing invariants | the selected Product, requirement, design and interface law; REFERENCE_FRAME declaration, conjunction and translation law; the claim boundaries and obligations below; the existing testing and assurance owners keep their laws |
+| governing invariants | the selected Product, requirement, design and interface law; REFERENCE_FRAME declaration and translation law; the conjunction of results of FOUNDATIONS §4; the claim boundaries and obligations below; the existing testing and assurance owners keep their laws |
 | authority | existing owners keep semantic, operation, admission and reserved decision authority; the activation grants bounded evaluation, with construction only under its existing exact operation grant; the declared decision consumer disposes the closed result |
 | evidence | source-linked contracts and both selected sides; for design claims, design relations and explicitly unresolved realisation facts; for claims over realised relations, the actual supplied request, context and response, callable and configuration identity, owner validation, effect and observation records and the ordinary caller's outcome; independently derived expected relations and disclosed substitution limits |
 | capability envelope | competence in the outcome, functional composition, domain and lifecycle semantics, participant capabilities and causal diagnosis; sufficient access to the exact subject and evidence without altering a reviewed subject; required independence stays claim-relative |
 | exclusions | hidden context or privilege, rival contract truth, inferred authority, undeclared substitutes, private or test-only paths for ordinary-path claims, candidate output treated as admission, fixture success treated as real user evidence, and unsupported whole-Product or all-future-case conclusions |
-| result and relations | each activated claim returns a core result with its exact evidence, coverage, causal findings and residuals; shared evidence is referenced once; mandatory claims compose only through a declared same-basis or lawful-translation conjunction to the named decision consumer |
+| result and relations | each activated claim returns a core result with its exact evidence, coverage, causal findings and residuals; shared evidence is referenced once; mandatory claims compose only through a declared same-basis or lawful-translation conjunction (FOUNDATIONS §4 Conjunction of results) to the named decision consumer |
 | invalidation | a material change of contract, domain, participant, prompt or context, capability, callable path, configuration, translation, relevant workspace observation, lifecycle, oracle or evidence population invalidates the affected conclusions; unchanged valid evidence and owner rulings stay reusable |
 | qualification | the representative sensitivity and refusal cases below, bound to actual subjects, actor envelopes and independently stated expected relations; mechanical source checks supply no semantic or live-user qualification |
 
@@ -674,11 +795,17 @@ universal activation gate (P2, P3; provenance
 | user usability | Can the ordinary human, LLM or software caller obtain the selected outcome using only its declared context, access and supported surface? Internal success or validator-aware fixtures cannot establish this claim. |
 
 The activation selects claims from the work's applicability (ACTIVATION §1)
-and states the scope reason for each unselected claim. Design-only work
+and states the scope reason for each unselected claim; an unselected claim
+has no result. Design-only work
 does not require unavailable runtime evidence and does not report runtime or
 UAT satisfaction. An unknown material condition keeps its dependent claim
-unresolved; omission cannot close it. A full end-to-end usability claim
-needs all four distinct results and their explicit conjunction. Transport,
+unresolved: the claim's result is never `satisfied` and names the
+condition as what would decide it
+([FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Standing); omission
+cannot close it. A full end-to-end usability claim
+needs all four distinct results and their explicit conjunction
+([FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results)),
+in which an unselected claim is uncovered coverage. Transport,
 parse, admission, semantic satisfaction, operation completion and user
 success are not interchangeable (P5, P6).
 
@@ -760,7 +887,8 @@ claims stay open (the sequencing heuristic of SPEC_METHOD §8). This frame
 adds no exhaustive-hardening prerequisite, scenario quota, controller,
 runtime, generator, routine human approval, new ledger or automatic extra
 agent. Existing authority selects proportionate assurance and any further
-operation. The result returns the four claim dispositions, the exact
+operation. The result returns, for each of the four claims, its core
+result or the scope reason it was not selected, the exact
 exercised subject and path, the supported mismatch, retained work,
 substitutions, residuals and invalidators in the existing work carrier; it
 is neither acceptance nor a grant of the next action (P2, P6; ACTIVATION
@@ -832,7 +960,13 @@ implementation and module-derived unit tests
 ```
 
 The first chain is semantic derivation. The second is evidence feedback
-and cannot select or accept the affected semantic answer (P6). When the
+and cannot select or accept the affected semantic answer (P6). The two
+chains are this member's instance of parallel derivation: expected results
+carry assertion provenance from the first chain and executions carry
+execution provenance from the second; agreement between them is
+compatible with a shared error, and disagreement requires diagnosis
+([FOUNDATIONS §4 Parallel derivation and mutual assurance](FOUNDATIONS.md#parallel-derivation-and-mutual-assurance))
+(P6, P1). When the
 design's co-evolution condition holds, the two chains may proceed together
 without making implementation semantic authority; design still owns the
 structural HOW. Where the design is not decision-complete, the relation is
@@ -964,12 +1098,18 @@ surface that states (P6, P5):
 - the owner, source truth and authority boundary for the lifecycle
   decisions.
 
-Each lifecycle phase is one of: answered by the active design,
+Each lifecycle phase takes one of the three answers that
+[SPEC_METHOD §2 Operational lifecycle sufficiency](SPEC_METHOD.md#operational-lifecycle-sufficiency)
+owns, applied here to design evidence: answered by the active design,
 requirement, release, deployment or telemetry surface; declared not
 applicable with a reason; or recorded as a named `Gap:` or `Unanswered:`
-item with an owning follow-up. A phase list without answers,
-not-applicable reasons or named gaps is not design-method evidence (P5,
-P6).
+item, which in design evidence also names its owning follow-up. A phase
+list without answers, not-applicable reasons or named gaps is not
+design-method evidence (P5, P6). The three are declared states of the
+design evidence for a phase under that section, not result values; a
+named gap is a residual
+([FOUNDATIONS §2](FOUNDATIONS.md#2-ontology)) that remains until its
+owning follow-up disposes it (P4b, P5).
 
 Implementation proves the selected lifecycle path only within the
 authority it owns. Code, tests, generated artifacts or runtime fixtures may
@@ -987,8 +1127,8 @@ Rows received by this member. In the first table anchors are into rc.2
 SPEC_METHOD.md; in the second, into rc.2 STDO_REFERENCE_FRAME_BASELINE.md;
 in the third, into rc.2 DESIGN_MODULE_METHOD.md. A locus is a section of
 this file. Every row is restated in this member's own text; a route is
-provenance only. The ticket law's test-case authority is disposed at its
-member's activation and listed here then. Generalisations recorded for the
+provenance only. The ticket law's test-case authority is disposed in
+[TICKETS §10](TICKETS.md#10-source-dispositions). Generalisations recorded for the
 third table, each keeping a profile term out of tier 2: "Ontology" is
 written "ontology", "IACS" "the carrier inventory the design declares",
 "three-view evidence" "the design's domain, sequence and state evidence",
@@ -1007,7 +1147,7 @@ force.
 
 | Anchor | Disposition | Locus |
 |---|---|---|
-| #verification-layers | conserved; the predecessor's example ("compositional graphs", "Fragment types", "a reusable discovery workflow") is generalised to a reusable composable unit, since the example named a profile's subject and the law does not depend on it | §1 |
+| #verification-layers | superseded in its scenario-writing and scenario-failure sentences, proposed and pending the product owner's acceptance: while no scenario for a capability can be written its operational meaning is unverified, and diagnosis under ACTIVATION §1 Feedback and diagnosis locates the cause, where rc.2 concluded from the symptom that the capability is not yet real; a failing scenario shows that its observed outcome disagrees with the scenario's expected outcome, a disagreement of actual behaviour only where its observation binding is supported (FOUNDATIONS §4 Assertions and observation), and §12 Counterexample localisation locates whether the realisation, the governing claim, the expected outcome or the observation is wrong, as far as the evidence supports, where rc.2 placed the gap between behaviour and claimed capability and excluded the specification's own words; the rest conserved: the predecessor's example ("compositional graphs", "Fragment types", "a reusable discovery workflow") is generalised to a reusable composable unit, since the example named a profile's subject and the law does not depend on it; "the chain" is located at SPEC_METHOD §2 Constitutional chain; the family table under Foundation to law is new | §1 |
 | #testing-strategy-taxonomy | conserved in full: both authority sources, the sandbox-only rule for UAT, the harnessed and live modes, the necessary-not-sufficient rule and the terminology list; the owner of the product-assurance bounded context is this member rather than SPEC_METHOD; `DESIGN_MODULE_METHOD.md` is carried as the DESIGN_MODULE member and "IACS" as the carrier inventory the design declares | §2 |
 | #fixture-and-proof-portability-rule | conserved | §2 Fixture and proof portability |
 | #test-authority-rule | conserved | §3 |
@@ -1017,7 +1157,7 @@ force.
 
 | Anchor | Disposition | Locus |
 |---|---|---|
-| #canonical-compression | conserved in part here: the testing-frame evidence topology; the rest of the row is EXECUTIVE_BASELINE §1 | §7 The set |
+| #canonical-compression | conserved; carried in two loci: the testing-frame evidence topology here, the rest of the row at EXECUTIVE_BASELINE §1 | §7 The set; EXECUTIVE_BASELINE §1 |
 | #testing-frame | conserved | §7 Terms |
 | #authoritative-product-path | conserved | §7 Terms |
 | #material-combinatorial-complexity | conserved | §7 Terms |
@@ -1030,10 +1170,10 @@ force.
 | #legitimate-path-and-technical-debt-erasure | conserved | §9 |
 | #testing-evidence-composition | conserved; "Executive disposition" written as the decision owner's disposition | §10 |
 | #assurance-subject-acquisition-and-evaluation | conserved; "Reviewer" written as assessor | §11 |
-| #counterexample-localization | conserved | §12 |
+| #counterexample-localization | conserved; the four forms are mapped into the core of FOUNDATIONS §4 Results for the predicate "the evidence establishes the counterexample's earliest violated loci on the declared path", the mapping new: a unique locus and a joint set to `satisfied`, unresolved alternatives to `indeterminate`, and the fourth form is `indeterminate` itself | §12 |
 | #derived-end-to-end-interface-integration-frame | conserved; twelve elements; the frame identity is unchanged and still resolves in the reference-frame-evaluation context owned by REFERENCE_FRAME, its assurance law now stated in this member; the named families (Public Boundary, Design, Operator, Owner, Proof) are written as evaluations of those concerns, and their mapping is EXECUTIVE_BASELINE §11 | §13 |
-| #interface-integration-claim-boundaries | conserved; four claims | §13 Claim boundaries |
-| #interface-integration-obligations | conserved; six obligations; "Apply Steel-Thread Delivery" written as the sequencing heuristic of SPEC_METHOD §8 | §13 Obligations |
+| #interface-integration-claim-boundaries | conserved; four claims; stated in the terms of FOUNDATIONS §4: an unselected claim has no result and is uncovered coverage in the usability conjunction, and an unknown material condition keeps its dependent claim's result from `satisfied`, naming the condition | §13 Claim boundaries |
+| #interface-integration-obligations | conserved; six obligations; "Apply Steel-Thread Delivery" written as the sequencing heuristic of SPEC_METHOD §8; "the four claim dispositions" written as each claim's core result or the scope reason it was not selected, since "disposition" names the decision owner's act (ACTIVATION §3) and the successor's claim about a predecessor claim (RELEASE §9) | §13 Obligations |
 | #computational-whole-path-evaluation | conserved; the families Operator, Owner, Reuse/Foundation and Proof written as evaluations of operators, owners, reused foundations and proof, mapped in EXECUTIVE_BASELINE §11; "STDO-UP-019" written as the design profile's computational realisation law | §13 Computational whole-path evaluation |
 | #interface-integration-qualification | conserved; ten cases | §13 Qualification |
 
@@ -1041,4 +1181,15 @@ force.
 |---|---|---|
 | #6a-design-to-module-to-implementation-unit-tests-evidence-route | conserved in full; both chains, derivation versus feedback, co-evolution and design-gated cases, the unchanged-refactor rule, the agentic handoff without a second protocol, the five completeness requirements, re-expression against module ownership, the module boundary as reasoning surface, both seven-step chains, the too-weak proof surface | §14 |
 | #6b-module-derived-unit-test-rule | conserved in full; the authority-source split, module-owned proof lanes, the five "should be traceable" sources, the five forbidden primary sources, the required question, helper tests permitted but not canonical, the three-part canonical rule with "may exist", not closure-ready without the lane | §15 |
-| #6c-module-lifecycle-confirmation-rule | conserved in full; the lifecycle of every designed surface, confirmation before closure, the chain consumed not redefined, not a release plan, the nine stated items, the three phase dispositions, the bare list is not evidence, implementation proves only within its authority, the governed-gap rule and the five forbidden closure bases | §16 |
+| #6c-module-lifecycle-confirmation-rule | conserved in full; the lifecycle of every designed surface, confirmation before closure, the chain consumed not redefined, not a release plan, the nine stated items, the three phase states, the bare list is not evidence, implementation proves only within its authority, the governed-gap rule and the five forbidden closure bases; the three phase states are applied as the three answers that SPEC_METHOD §2 Operational lifecycle sufficiency owns, keeping here the owning follow-up a named gap names in design evidence; the reading of the three phase states as states of the evidence, not result values, with a named gap as a residual, is new | §16 |
+
+New in this member, with no rc.2 row: the family table at §1 Foundation
+to law, in the format of
+[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law); it
+decides nothing beyond the rules it names. Purpose and material relation:
+a reader sees which assurance rules follow from the commitments and which
+are added choices with their owners, so no added choice is presented as
+derived (P6, P2). The mapping of §12's localisation forms states its
+purpose where it is written; the readings in §13 and §16 apply
+FOUNDATIONS §4 Results and Conjunction of results and add no rule of their
+own.

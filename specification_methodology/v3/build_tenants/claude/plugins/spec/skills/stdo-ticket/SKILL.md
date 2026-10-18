@@ -18,7 +18,9 @@ that selection grants no ticket-state authority.
 
 1. From the verified definition and installed basis, read Goals, Intent,
    Product, affected requirements, accepted design, ticket bindings, and
-   relevant existing work.
+   relevant existing work. Acquire owning sections under the selected basis's
+   `ACTIVATION.md` section 2, Acquisition; intake triage and change classes
+   are `SPEC_METHOD.md` section 4, ticket fields `TICKETS.md` section 4.
 2. Confirm explicit authority to create or update ticket state. Without it,
    return proposed triage and stop without writing.
 3. Create or update a durable ticket only when the work or an open obligation
@@ -69,7 +71,8 @@ rulings, and no active non-closure condition. Review checks that evidence when
 required; occurrence of review is not the closing event. Record reusable
 judgments with their question, subject/basis, support, actor/authority,
 conclusion, uncertainty and revising observation. Preserve an owner's original
-ruling separately from interpretation and invalidate only affected support.
+ruling separately from interpretation and invalidate only affected support,
+under the invalidators of `ACTIVATION.md` section 7.
 Use this ticket's existing proof/result routes; do not create a judgment registry.
 When repricing, give each affected obligation a retained, superseded, deferred
 or withdrawn disposition with its owner and applicable evidence. Preserve

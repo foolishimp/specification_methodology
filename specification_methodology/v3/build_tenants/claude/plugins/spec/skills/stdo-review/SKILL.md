@@ -21,11 +21,15 @@ read-only.
    exact affected Product claims, authority, scope,
    exclusions, evidence population, required independence, Reviewer capability
    envelope, Executive baseline profile technical-triage fields where adopted, the
-   Product-selected severity scale, review time, and subject-, basis-,
-   capability-, and scale-change invalidation.
+   Product-selected severity scale, review time, and invalidation under the
+   three invalidators of `ACTIVATION.md` section 7, a subject, capability or
+   scale change being a named instance of a material input change or a
+   changed basis.
 2. Reacquire live authority, implementation, tests, fixtures, installed or
    runtime evidence, and material history. Do not use the Worker summary as
-   evidence.
+   evidence. Acquire owning sections under the selected basis's
+   `ACTIVATION.md` section 2, Acquisition; review law is `EVALUATION.md`
+   sections 3 and 4.
    Reuse exact applicable computed facts and traceable prior judgments after
    checking their support and invalidation. This does not replace your own
    assessment where the claim requires independence. Determine required
@@ -44,7 +48,7 @@ read-only.
 - Bind findings and affected acceptance predicates to a violated property,
   supported entry/state, governing operating/threat model and credible causal
   path. An excluded threat gives no guard a retention claim; test presence
-  creates no authority. Internal location alone does not establish trust.
+  creates no authority (FOUNDATIONS §2 What creates no authority). Internal location alone does not establish trust.
   Preserve supported input, mutable-state, authority and effect checks.
 - For material computational composition or recurrence, evaluate one complete
   producer-to-consumer path, including established facts, invalidators, effects,
@@ -57,13 +61,15 @@ read-only.
   containment, repair complexity, regression risk, and residual uncertainty.
 - Use only the Product-bound scale. Keep adjacent observations separate.
 - Never turn technical severity into Executive priority or promotion-boundary
-  effect.
+  effect. Whether a finding blocks promotion is decided by EVALUATION §5 When
+  a finding blocks promotion.
 - Distinguish repair of a nonconforming candidate under unchanged law from an
   intentional governing change. A failure alone does not require repricing.
 - Check satisfied closure conditions; your review event cannot establish them
   or create an additional closing ceremony.
 
-Keep the result projection total:
+Keep the result projection total over the core values of `FOUNDATIONS.md`
+section 4, Results:
 
 - `satisfied`: no finding; triage is `not_applicable`;
 - `falsified`: findings carry complete triage or explicit field-level
@@ -80,5 +86,6 @@ adjacent observations, uncertainty, invalidation, and owning re-entry point.
 Bind each reusable judgment to its question, subject/basis, supporting facts,
 actor/authority, conclusion/scope and revising observation in the existing
 result carrier. Preserve original owner rulings separately from interpretation.
-Return to Executive when the Project Reference-Frame Basis adopts that frame;
-otherwise return to the Product-owned decision authority. Stop.
+Return to the coordination the applicable configuration selects: the
+Executive when the Project Reference-Frame Basis adopts that frame;
+otherwise the Product-owned decision authority. Stop.

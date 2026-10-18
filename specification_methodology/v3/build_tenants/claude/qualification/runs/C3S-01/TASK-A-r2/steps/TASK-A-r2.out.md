@@ -1,0 +1,149 @@
+## 1. Frame declaration
+
+# Frame: F-E1-ledger-export-trailer-count
+
+## Evaluation Family
+- Question: on build `b-120`, does the trailer count of an export file equal the source table's row count at export time (R-3)?
+- Predicate: "the trailer count equals the source table's row count at export time, on the exact basis below."
+- Result algebra: the core algebra (`satisfied`, `falsified`, `indeterminate`, `out_of_frame`, `invalid_basis`), unrefined.
+- E2 and E3 are separate evaluations. They may supply closed results as inputs. They are not part of this family.
+
+## Subject And Basis
+- Workspace: `W-ledger-export`.
+- Subject: service `ledger-export`, build `b-120`, commit `c0ffee12`, file `exporter.py` (SHA-256 `5f1a…9c2e`). Only the abbreviated hash is stated, so the full hash is missing.
+- Configuration: `export.yaml` revision 14.
+- Database: production table `ledger_rows`. Reads have gone to a read replica since 2026-10-09 (lag up to 30 s, CHG-2026-1009).
+- Time of the claim: 2026-10-11T16:00Z.
+- Topology coordinate: reads come from the replica, not the primary.
+- Missing:
+  - the database engine and isolation level;
+  - the replica's identity;
+  - which table state "export time" refers to;
+  - the time of any export on `b-120`.
+
+## Material Manifold
+- Entities:
+  - R-3 and D-3;
+  - `exporter.py` at `c0ffee12`;
+  - the read transaction;
+  - the streamed rows;
+  - the `SELECT COUNT(*)`;
+  - the trailer;
+  - `ledger_rows` on the primary and on the replica;
+  - replica lag;
+  - `export.yaml` r14.
+- Relations:
+  - the count is taken after streaming, inside or after the read transaction (D-3 does not say which);
+  - the count source is the replica, with lag of up to 30 s;
+  - "the source table's row count at export time" is the comparison target.
+- Missing: whether `export.yaml` r14 selects the replica or primary connection. The subject does not say.
+
+## Coordinates And Equality
+- Build identity is the commit (`b-120` = `c0ffee12`). Build labels and file names do not establish equality.
+- A count is compared with a table state only when both are tied to the same declared table-state coordinate.
+- The declared equality law for "table state at export time" is missing. The subject names no snapshot or time-coordinate rule, so table state primary-at-T versus replica-at-T is undeclared.
+
+## Invariants
+- R-3: every export file carries, in its trailer line, the row count of the source table at export time.
+- D-3 is the design to be checked.
+- Evidence about one build does not transfer to another without a declared relation (RF-005).
+- Other governing laws are not stated in the subject, so none are listed.
+
+## Authorities
+- Frame-set authority: not stated.
+- Semantic authority: Mara owns the meaning of R-3, including the meaning of "at export time".
+- Evaluation authority: not stated in the subject. See the activation residual below.
+- Operation authority: none, because this is a read-only evaluation. Deon owns changes to `exporter.py` and `export.yaml`. Priya owns database configuration.
+- Decision authority: Mara (release decision).
+
+## Evidence
+- Admissible, with provenance and basis scope:
+  - V1: CI run 4471, build `b-118`, 2026-10-08, fixture table of 25 rows.
+  - V2: OPS-391, a production export on 2026-10-10 with trailer 1,204,311. Its build is not recorded, and no primary count was recorded.
+  - V3: CHG-2026-1009.
+- Excluded:
+  - any claim that V1 covers `b-120` (that is E2's question);
+  - any inferred primary row count;
+  - any inferred build for V2.
+- Missing: an export on `b-120` paired with an independently recorded source count at a declared table-state coordinate.
+
+## Capability Envelope
+- Needed: read the supplied record and apply the declared relation.
+- Not stated: the actor's tools, access and context capacity, and any independence conditions.
+- No tool execution, production access or fresh export is available within this record.
+
+## Boundary And Exclusions
+- Excluded:
+  - the release decision;
+  - whether the product is ready to ship;
+  - E2 and E3 as evaluations;
+  - recommendations on design or configuration.
+- Prohibited assumptions:
+  - that V1 or V2 bind to `b-120`;
+  - that replica state equals primary state;
+  - that a transaction gives a consistent snapshot (isolation level unstated).
+- Out of frame if the claim needs a meaning of "at export time" that Mara has not declared.
+
+## Optional Frame Relations
+- Inputs: closed results of E2 (applicability of V1 to `b-120`) and E3 (which table state D-3's count reads), if produced. Neither is in the record.
+- Output: the closed E1 result, to Mara's disposition of claim K.
+
+## Invalidation And Recharting
+- A new commit or build, or a change to `exporter.py`.
+- A change to `export.yaml` from r14.
+- A topology change: replica to primary, a new replica, or a change in lag.
+- A new or revised meaning of R-3 or of "at export time".
+- New evidence (a recorded count, or an export on `b-120`).
+- Any of these requires reevaluation before the result is reused.
+
+## Qualification
+- Representative cases, counterexamples and known residuals are not supplied in the subject. No qualification is claimed for this frame revision.
+- Known residuals: those listed under Evidence and Authorities.
+
+## 2. Activation and evaluation result
+
+# Frame Evaluation Result
+
+- frame identity and revision: F-E1-ledger-export-trailer-count, first revision. No earlier revision is stated.
+- activation identity: ACT-E1-b120-c0ffee12-cfg14-2026-10-11T16:00Z. Activation outcome: `activated_frame`, core value `satisfied`, for the predicate "the frame is activated for this evaluation, subject, basis and actor". This answers whether the frame was activated and says nothing about E1's claim.
+- evaluation: E1, as declared above.
+- subject and basis: `ledger-export` `exporter.py` at `c0ffee12`, build `b-120`, `export.yaml` r14, production `ledger_rows` read from a replica with up to 30 s lag, time 2026-10-11T16:00Z. The basis is exact and unambiguous, and no stale or mismatched coordinate is found in the stated facts.
+- actor and capability envelope: the evaluator of this step. Its envelope is not stated, and the evaluation uses only the supplied record.
+- semantic, evaluation, operation where material, and decision authority:
+  - semantic: Mara;
+  - evaluation: admitted only by this task's assignment, with the assigner not identified;
+  - operation: none (read-only);
+  - decision: Mara.
+- admissible evidence: V1, V2 and V3, each bound as stated in the frame.
+- result: `indeterminate`. Predicate: "the trailer count equals the source table's row count at export time, on build `b-120`".
+- inference relation:
+  - V1 binds `b-118` and a 25-row fixture. It does not bind `b-120`, and it does not test count correctness against a changing production table.
+  - `test_count_matches_fixture_table` shows only that D-3 matched a static table in CI.
+  - V2 shows a trailer of 1,204,311 on 2026-10-10. Its build is not recorded, and no source count was recorded, so no comparison is possible.
+  - V3 shows reads come from a replica with up to 30 s lag. Together with D-3, this means the count may come from a different table state than a primary-based "export time" count.
+  - No evidence pairs a `b-120` trailer with an independently recorded source count. The admissible evidence therefore neither establishes the predicate nor yields a counterexample, so `falsified` is not supported.
+  - Whether the replica's count is in or out of spec depends on the meaning of "at export time", which the record does not declare. That gives `out_of_frame` a lawful ground as well. This result returns `indeterminate` and names `out_of_frame` as the alternative ground, with the owner and pressure below.
+- residual uncertainty:
+  - the build used for V2;
+  - the primary's row count at V2 time;
+  - the isolation level and whether the COUNT shares the streaming snapshot;
+  - which database `export.yaml` r14 targets;
+  - the effect of replica lag, which is E3's question and is unresolved;
+  - the applicability of V1 to `b-120`, which is E2's question and is unresolved.
+  - What would decide: an export on `b-120` with a source count recorded at a declared table-state coordinate.
+- out_of_frame residual (missing relation or capability, owner, reconfiguration pressure):
+  - Missing relation: the declared meaning of "source table's row count at export time" (replica or primary, snapshot or wall-clock). Owner: Mara (semantic authority).
+  - Also: the database configuration facts, owned by Priya, and the configuration and code facts, owned by Deon.
+  - Reconfiguration pressure: declare the table-state coordinate and equality law. This is not returned as the result value.
+- invalidation conditions: as declared under Invalidation And Recharting.
+- consuming decision or conjunction: Mara's disposition of claim K. A conjunction with E2 and E3 is not performed here. Any such conjunction would need a declared decision rule and a coherent composite basis.
+
+## Claim K
+
+The result says `indeterminate` for E1 on `b-120`: the supplied evidence neither establishes nor refutes that the trailer count equals the source row count at export time, so it does not support "R-3 is satisfied on `b-120`" and does not falsify it either. It does not assess "ready to ship", the acceptance predicate, which is a separate result. Mara disposes claim K as the decision authority. This result is evidence for her and is not a disposition.
+
+## No method source
+
+- No rule says how to choose between `indeterminate` and `out_of_frame` when both have a lawful ground. The method says only that the result names the value it returns and the ground.
+- The method does not say who admits the evaluation authority for this step. The subject does not name that authority either.
+- The method does not define "at export time" or a table-state equality law for replicated data. I treated these as missing facts and did not supply them.

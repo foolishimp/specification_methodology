@@ -75,7 +75,7 @@ names the exact term, target bounded context, complete material candidate set,
 selected concept, owning resolution carrier and authority, semantic bases, and
 governed scope. When candidates cross contexts, the referenced `uri` also owns
 the complete import, translation, or equivalence relation required by
-`PRODUCT_DEFINITION.md` section 6; the JSON entry does not restate that
+`PRODUCT_DEFINITION.md` section 5; the JSON entry does not restate that
 meaning.
 
 Replace at least:

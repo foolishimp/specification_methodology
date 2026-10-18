@@ -1,0 +1,158 @@
+{
+ "kind": "claude-ac-controls",
+ "controls": [
+  {
+   "control": "identity-positive",
+   "expects": "the materialised executable, schema and output contract match the digests in A_C_DEPENDENCY.md",
+   "holds": true,
+   "detail": {
+    "expected": {
+     "Executable": "5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8",
+     "Schema": "43326dbab520bd2d56fbdf605211f66499de1969b13e2e0226868bd6af9777a7",
+     "Output-contract": "c124264d1fc564a8a054bba46b5c188c4e770da51862b4c2122e3c616efb1b6b"
+    },
+    "mismatches": []
+   }
+  },
+  {
+   "control": "identity-adverse",
+   "expects": "the same identity check refuses when one member is tampered (one byte appended to the schema)",
+   "holds": true,
+   "detail": {
+    "mismatches": [
+     "Schema"
+    ]
+   }
+  },
+  {
+   "control": "validate-positive",
+   "expects": "exit 0, status valid, 0 diagnostics, report and map byte-identical to a_c/i3",
+   "holds": true,
+   "detail": {
+    "exit": 0,
+    "status": "valid",
+    "diagnostics": 0,
+    "report_identical": true,
+    "map_identical": true
+   }
+  },
+  {
+   "control": "validate-adverse-duplicate-clause",
+   "expects": "a program with a duplicated clause uri is not valid",
+   "holds": true,
+   "detail": {
+    "exit": 1,
+    "status": "invalid",
+    "diagnostics": 2,
+    "stderr": ""
+   }
+  },
+  {
+   "control": "validate-adverse-dangling-source",
+   "expects": "a program whose clause cites a missing anchor is not valid",
+   "holds": true,
+   "detail": {
+    "exit": 1,
+    "status": "invalid",
+    "diagnostics": 1,
+    "stderr": ""
+   }
+  },
+  {
+   "control": "project-positive",
+   "expects": "all 10 projections from the fresh map exit 0 and are byte-identical to a_c/i3/projections",
+   "holds": true,
+   "detail": [
+    [
+     "authority-kinds",
+     "reference-only",
+     0,
+     true,
+     ""
+    ],
+    [
+     "authority-kinds",
+     "materialized",
+     0,
+     true,
+     ""
+    ],
+    [
+     "construction-and-assurance",
+     "reference-only",
+     0,
+     true,
+     ""
+    ],
+    [
+     "construction-and-assurance",
+     "materialized",
+     0,
+     true,
+     ""
+    ],
+    [
+     "promotion-block",
+     "reference-only",
+     0,
+     true,
+     ""
+    ],
+    [
+     "promotion-block",
+     "materialized",
+     0,
+     true,
+     ""
+    ],
+    [
+     "result-algebra-and-conjunction",
+     "reference-only",
+     0,
+     true,
+     ""
+    ],
+    [
+     "result-algebra-and-conjunction",
+     "materialized",
+     0,
+     true,
+     ""
+    ],
+    [
+     "reuse-and-invalidation",
+     "reference-only",
+     0,
+     true,
+     ""
+    ],
+    [
+     "reuse-and-invalidation",
+     "materialized",
+     0,
+     true,
+     ""
+    ]
+   ]
+  },
+  {
+   "control": "project-adverse-dropped-clause",
+   "expects": "a program with one clause dropped from a frame index validates, and its projection differs from the fresh positive projection of that index (the passing baseline), and from the frozen one",
+   "holds": true,
+   "detail": {
+    "dropped": "urn:stdo-3:claude:i3:clause:what-creates-no-authority",
+    "exit": 0,
+    "validate_status": "valid",
+    "baseline_exists": true,
+    "differs_from_fresh": true,
+    "stderr": ""
+   }
+  }
+ ],
+ "checker": {
+  "ids": "tag 9bff233c3f0e7d80f63307fa3b12800dd3db681c commit 9a9c479776ffd974fbcafcf48341980918209aef tree 3a553ceb8db2e8de4ac779abdc2a2ceae5708c7d subtree 6dae168d0a258ca506f4d6b9d5cd0a0c835fb546",
+  "ac_py_sha256": "5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8"
+ },
+ "elapsed_seconds": 2.7,
+ "holds_all": true
+}

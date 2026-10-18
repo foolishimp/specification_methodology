@@ -13,20 +13,27 @@ representation, materialisation, publication and attribute-ledger laws;
 entity recovery and the entity cut construction law; the Markov-object
 overlay construction law; the saturation, composition and projection
 laws; the control and data planes; the proof law; world-model-driven
-development; the output; the companion surfaces; and the mapping of this
-profile's results to the core algebra. It imports
+development; the output; the companion surfaces; and this profile's
+refinements of the core result algebra. It imports
 [FOUNDATIONS](FOUNDATIONS.md), [ACTIVATION](ACTIVATION.md),
 [EVALUATION](EVALUATION.md), [IDENTITY](IDENTITY.md),
 [SPEC_METHOD](SPEC_METHOD.md),
 [PRODUCT_DEFINITION](PRODUCT_DEFINITION.md), [RELEASE](RELEASE.md) and
-[TICKETS](TICKETS.md) by reference and defines none of their objects
-again: Object, Authority and Basis are FOUNDATIONS §2, the product-lineage
-objects FOUNDATIONS §2 Product lineage objects, scoped identity IDENTITY
-§2, cross-context imports and translations PRODUCT_DEFINITION §5, the
-result algebra ACTIVATION §3, and the statistical Markov boundary a
-hypothesis of FOUNDATIONS §5. The graph-execution profile is named
-through [PROFILES §2](PROFILES.md#2-graph-execution); its member is not
-on this branch and is not linked (P6, P2).
+[TICKETS](TICKETS.md) by reference under
+[PROFILES §1](PROFILES.md#1-the-boundary) and defines none of their
+objects again: Object, Authority and Basis are FOUNDATIONS §2, the
+product-lineage objects FOUNDATIONS §2 Product lineage objects, scoped
+identity IDENTITY §2, the import of a concept
+[FOUNDATIONS §2 Imports between members](FOUNDATIONS.md#imports-between-members),
+the relations between bounded contexts (import, translation, equivalence
+and disambiguation) and their carrier
+[PRODUCT_DEFINITION §5](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution),
+the core result algebra [FOUNDATIONS §4 Results](FOUNDATIONS.md#results),
+the step's refinements of it
+[ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition), and the
+statistical Markov boundary a hypothesis of FOUNDATIONS §5. The
+graph-execution profile is [ODD](ODD.md), indexed in
+[PROFILES §2](PROFILES.md#2-graph-execution) (P6, P2).
 
 This profile's own terms are those of §6 Units (App, Builder Project,
 Published Domain Artifact, Fragment, World Model Object, Assurance,
@@ -48,8 +55,9 @@ publication under this profile, where admissible change is treatment
 across adjacent domains; invalidation: a change of §9 or of FOUNDATIONS
 §2 Object or P3 re-evaluates the binding (P3, P1).
 
-Every clause names the principle that requires it (P0 to P6, FOUNDATIONS
-§3; C is proposed as P0). The predecessor's "must" is written in the
+Each clause names the principle that requires it (P0 to P6, FOUNDATIONS
+§3), as [FOUNDATIONS §1](FOUNDATIONS.md#1-vocabulary-of-standing)
+requires. The predecessor's "must" is written in the
 indicative; its "should", "may", "preferred", "optional", "mandatory",
 "at minimum", "at least", "usually", "sufficient" and "lawful" keep their
 force. A route written `rc.2 #anchor` is into
@@ -131,6 +139,84 @@ P6; rc.2 #manifesto):
 If these claims do not hold, the work is not genuinely
 world-model-driven (P6).
 
+### Foundation to law
+
+This member is material family F21, world model. The table below shows
+which of its rules follow from which premises, in the format of
+[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law),
+which also states the standing of the consequences. The family imports
+five families under [PROFILES §1](PROFILES.md#1-the-boundary): F2,
+transitions, steps and configuration, for refinement
+([ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement)); F3,
+results and their combination
+([FOUNDATIONS §4 Results](FOUNDATIONS.md#results)); F8, identity
+([IDENTITY §1](IDENTITY.md#1-position)); F9, the `a_c` calculus
+([AXIOMATIC_CALCULUS §1](AXIOMATIC_CALCULUS.md#1-position)); and F12,
+binding a project to the method
+([PRODUCT_DEFINITION §1](PRODUCT_DEFINITION.md#1-overlay-and-layout-independence)). This
+profile's ledgers, cuts, overlays, treatments and projections are its own
+concepts and are not the calculus's records of similar name by spelling.
+Its instance premises hold where world-model work is done under this
+profile; they are adopted with it and do not follow from the foundations
+(P1, P6):
+
+- I1: institutional source systems enact domain function and stay
+  sovereign for operational truth; the builder observes them and replaces
+  none of them;
+- I2: records do not carry their own meaning, and the people who work with
+  them already commit to the objects, implicitly in code paths, records
+  and workflows, or explicitly in schemas and policy;
+- I3: probabilistic systems can propose correspondences across domains,
+  and delivery at volume needs deterministic execution;
+- I4: some builders work over a representation space in which identity is
+  a geometric direction.
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P1 (independent), P6 (independent); I1, I2 | By P1 a record does not carry its meaning, and by I2 the people who work with records already commit to the objects, so data is evidence of function and never meaning in isolation, and the world model is a derived semantic layer that makes those commitments explicit; by P6 and I1 the source systems keep operational truth, so the published semantic layer is the one truth surface for meaning, with overlays, query planes and compiled artifacts downstream of it | [§1](#1-position); [§3](#3-what-a-world-model-is), with [Single truth surface](#single-truth-surface); [§5](#5-core-claims) | the two constitutional intents, the manifesto and the order of the evidence hierarchy: this profile | 2, 6, 9 |
+| P3 (independent), P6 (independent); F8 imported ([IDENTITY §1](IDENTITY.md#1-position)); I2 | By P3 an identity binds its boundary and basis, and F8 resolves identity under owner, context and basis, so the primary published unit carries a declared identity with its boundary, authority, state, evidence, treatment, covariance and ambiguity; by P6 a claim holds only on its evidence, so the unit is discriminated from plausible alternatives at evidence altitude proportional to its claim; by P1 equal names do not establish equal meaning, so fully qualified naming removes preventable aliasing | [§6](#6-units), Entity Cut; [§8 Representation law](#representation-law); [§9 Admissibility](#admissibility); [§9 Discrimination](#discrimination); [§5](#5-core-claims) | the entity cut as that unit, its eight surfaces with three lawful values each, and its binding of FOUNDATIONS §2 Object and P3's boundary claim (this member's lead): this profile; which discrimination techniques a cut uses, none of them mandatory: the builder project | 2, 9 |
+| P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable), P6 (independent), P3 (independent); I1 | By P4b accepted facts are not erased and are not re-acquirable from memory, and by P3 a published value binds its exact cut, so the attribute ledger is append-only, and published truth should be immutable per cut and superseded by later cuts; by P6 and I1 an attribute's authority is its traced source, so every accepted attribute should be recoverable through its cut, its ledger entries, their assurance and that source | [§7](#7-flow); [§8 Materialisation law](#materialisation-law); [§8 Publication law](#publication-law); [§8 Attribute ledger law](#attribute-ledger-law); [§9 Publishing a cut](#publishing-a-cut) | Git and the filesystem as the publication ledger in the initial lane, with a later database as query plane: this profile; carriers, layouts, schemas and storage topology: consumer realisation | 2, 6, 9 |
+| P1 (independent), P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); F2 imported ([ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement)), F9 imported ([AXIOMATIC_CALCULUS §1](AXIOMATIC_CALCULUS.md#1-position)) | By P1 a mapping of fields does not carry meaning across domains, so cross-domain change is modelled as treatment, covariance and adjoint interpretation, not as naked field mapping; by F2 a treatment is a refinement or rewrite step, so it declares what it preserves and where it is not exact; by P4b a projection keeps its derivation, so it is a downstream convenience over the semantic kernel, should remain traceable to it, and is not semantic authority | [§5](#5-core-claims); [§6](#6-units), Treatment Surface, Covariance Edge, Adjoint Mapping; [§11 Projection law](#projection-law) | what a treatment preserves, its licensing law and, where it changes meaning, its adequacy relation: [ACTIVATION §4 Refinement](ACTIVATION.md#refinement); the five declared fields of a treatment and the preferred order world model, API contract, schema contract: this profile | 3, 6, 10 |
+| P1 (independent), P3 (independent); F12 imported ([PRODUCT_DEFINITION §1](PRODUCT_DEFINITION.md#1-overlay-and-layout-independence)) | By P1 equal spelling does not establish equal meaning, and by P3 a concept binds its owner and context, so imported product-lineage concepts keep their owner and meaning, and a narrower concept enters only by a declared directional specialisation, never as an alias | [§2](#2-role-and-imports); [§2 Builder Project specialisation](#builder-project-specialisation) | Builder Project and its narrowed meaning: this profile; the source concepts: [FOUNDATIONS §2 Product lineage objects](FOUNDATIONS.md#product-lineage-objects); the relation carrier: [PRODUCT_DEFINITION §5](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution) | 1, 2 |
+| P6 (independent), P5 (derived from P0 and P6, with P0's open-world premise); F3 imported ([FOUNDATIONS §4 Results](FOUNDATIONS.md#results)) | By P5 a construct's standing is what its evidence establishes, and its formal condition was tested and not met, so the Markov-object construct is held at candidate status; by F3 a failed run falsifies that run's predicate only, so the gate is not relocated; by P6 evidence is not authority, so overlays inherit the candidate class, entity cuts do not, and the pinned empirical program is research evidence, not authority | [§4 Epistemic status](#epistemic-status); [§4 Four working refinements](#four-working-refinements); [§13 Companion surfaces](#companion-surfaces) | the construct as load-bearing working vocabulary, the four working refinements and the program's pin: this profile; the statistical Markov boundary: a hypothesis of [FOUNDATIONS §5](FOUNDATIONS.md#5-hypotheses) | 2, 9 |
+| P3 (independent), P6 (independent), P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); F9 imported ([AXIOMATIC_CALCULUS §1](AXIOMATIC_CALCULUS.md#1-position)); I4 | Under I4 identity is a direction in a declared representation space, and by P3 the direction binds that space, so it is published and stored with its space, evidence and verification trace and never composed across spaces; by P6 it is accepted only on evidence, so only when a verification under held-out treatment preserves identity; by P4b and F9 its derivation from paired evidence stays traceable | [§10](#10-markov-object-overlay-construction) | the mean-offset form and its admissible supervised variants, the exclusion of principal-component and maximum-variance constructions, the three verifications, the seven publication items and the six storage items: this profile | 2, 6, 10 |
+| P2 (independent), P6 (independent), P0 (recovered); I3 | Under I3 probabilistic systems propose correspondences, and by P6 a proposal is not an accepted fact, so probabilistic correspondence belongs in an epistemic overlay on the control plane, outside the identity of the published object; by P0 and P2 delivery at volume cannot repeat judgment at each use, so accepted understanding governs compilation, and execution at scale should run through deterministic compiled artifacts | [§5](#5-core-claims); [§7](#7-flow), stages 11 and 13; [§12 Control plane and data plane](#control-plane-and-data-plane) | the split into a semantic control plane and a deterministic data plane: this profile | 8, 9 |
+| P2 (independent), P5 (derived from P0 and P6, with P0's open-world premise), P4a (independent) | By P2 work serves a bounded outcome, and by P5 incomplete evidence is a declared gap, so a builder project may work a bounded source-object set repeatedly until its ledger is judged sufficiently saturated, with the remaining gaps explicit, and sparse first publication is lawful with its bound on evidence altitude declared; by P4a separate parts compose only through declared relations, so local published artifacts are stitched into higher-order models that keep their authority, not replaced by a central monolith | [§9 Admissibility](#admissibility); [§11 Saturation law](#saturation-law); [§11 Composition law](#composition-law) | the federated mesh as the preferred end state, with mesh topology product-local until its law is ratified: this profile | 2, 5, 9 |
+| P2 (independent) | By P2 obligations follow a bounded outcome, so adoption need not wait for the standardisation argument: a bounded wedge proves the substrate by emitting conventional and covariant outputs side by side | [§12 Proof law](#proof-law); [§12 World-model-driven development](#world-model-driven-development) | a policy of this profile: the five-step wedge, and where normative application specs serve instead of the world model | 1, 5 |
+| P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent); F3 imported ([FOUNDATIONS §4 Results](FOUNDATIONS.md#results)) | By P5 a value decides only what its evidence establishes, and F3 gives one core, so each verdict of this profile is a refined value mapped to exactly one core value for a named predicate, and a verification that was not run has no result | [§14](#14-results-of-this-profile) | the seven refinements and their values: this profile | 3, 9 |
+
+No row cites the opening of §4; §4 Effective blanket; §4 Relation to
+the design profile; the units of §6 other than Entity Cut, Treatment
+Surface, Covariance Edge and Adjoint Mapping; the opening of §9; or §13
+Output. These sections apply the consequences above, and every clause
+names the principle that requires it
+([FOUNDATIONS §1](FOUNDATIONS.md#1-vocabulary-of-standing)). §15 records
+source dispositions and decides nothing. The table is
+new in this corpus. Purpose and material relation: an actor started on
+this member sees which rules follow from the foundations and the imported
+families, and which are choices of this profile, the builder project or a
+consumer, with their owners, so no choice is presented as derived and no
+candidate construct as established (P6, P1).
+
+Consumers of these rows, where an actor enters them (FOUNDATIONS §3
+Foundation to law, Consumers), one list per row, each consumer linked to
+its own locus:
+
+- Row 1, the derived semantic layer and the single truth surface: [§7](#7-flow), stage 1, which gathers evidence in the order of §3 Evidence hierarchy; [§8 Materialisation law](#materialisation-law), where the source systems stay sovereign for operational truth under §5; [§12 Control plane and data plane](#control-plane-and-data-plane), whose plane split leaves the semantic truth surface at §3 Single truth surface; otherwise no separate consumer applies: [ODD §2](ODD.md#2-method-role) and [UX §2 Relationship to other members](UX.md#relationship-to-other-members) defer world-model semantics to this profile and apply no rule of these sections.
+- Row 2, the entity cut, its representation, admissibility and discrimination: [§3](#3-what-a-world-model-is), whose primary unit is the entity cut of §6; [§4 Four working refinements](#four-working-refinements), whose first refinement reads the Representation law as a test of identity surviving treatment, and which leave entity-cut admissibility to §9; [§4 Epistemic status](#epistemic-status), where an entity cut is lawful on its own admissibility test under §9 and inherits no candidate status; [§6](#6-units), Markov Object, whose discovery obligations are §9's; [§7](#7-flow), stage 7, where sparse first publication is lawful under §9 Admissibility; [§8 Materialisation law](#materialisation-law), where §9 states the obligation the cut's selection discharges; [§10](#10-markov-object-overlay-construction), the representation-substrate specialisation of §9, and [§10 Verification by treatment](#verification-by-treatment), where publishing an unverified direction violates the Representation law; [§14](#14-results-of-this-profile), cut admissibility and overlay publication.
+- Row 3, the ledger, materialisation and publication: [§6](#6-units), Markov Object, whose published object is an immutable cut projected from the attribute ledger and not an in-place mutable record; [§10 Overlay publication](#overlay-publication), where overlays are never mutated in place under §8 Publication law; otherwise no separate consumer applies: carriers, layouts, schemas and storage topology are a consumer realisation, as the choice column states, and no section of another member names these sections.
+- Row 4, treatments, covariance, adjoint interpretation and projection: [§7](#7-flow), stage 8, where cross-domain meaning becomes explicit through treatment surfaces, covariance edges and adjoint mappings, and stage 12, where projections are emitted from the same semantic kernel; otherwise no separate consumer applies: what a treatment preserves and its licensing law are [ACTIVATION §4 Refinement](ACTIVATION.md#refinement)'s, as the choice column states, and no section of another member names these sections.
+- Row 5, imported lineage concepts and the Builder Project specialisation: [§6](#6-units), Builder Project, whose relation to Source Project is the directional specialisation of §2 and is not read as an unchanged import or general equivalence; otherwise no separate consumer applies: [GLOSSARY §10](GLOSSARY.md#10-recursive-product) and [§13](GLOSSARY.md#13-world-model) record the specialisation and decide nothing.
+- Row 6, the epistemic status of the construct: [CONFORMANCE §5](CONFORMANCE.md#5-coverage-of-the-common-discriminators), discriminator 12; [FOUNDATIONS §5](FOUNDATIONS.md#5-hypotheses), which carries the statistical Markov boundary at the candidate status this section states; [§4 Effective blanket](#effective-blanket), where the construct remains candidate-class; [§6](#6-units), Markov Object, whose theory is §4; [§10 Verification by treatment](#verification-by-treatment), where a verification battery is not a closed Markov blanket under §4 Epistemic status; [§14](#14-results-of-this-profile), promotion gate, and its closing paragraph, where a failed gate run does not falsify the construct.
+- Row 7, the Markov-object overlay construction: [§4 Four working refinements](#four-working-refinements), whose fourth refinement grounds the exclusion of principal-component and maximum-variance constructions under §10; [§6](#6-units), Markov-Object Overlay, constructed and verified under §10, and Markov Object, whose representation-substrate obligations are §10's; [§8 Materialisation law](#materialisation-law), where §10 applies when the cut's selection is expressed geometrically in a declared representation space; [§14](#14-results-of-this-profile), direction acceptance, overlay publication, overlay storage and null-peer discrimination, and A verification not run, where an unrun verification leaves the direction a candidate.
+- Row 8, probabilistic correspondence and deterministic compilation: no separate consumer applies. The split is applied by a builder project when it aligns and compiles, at the stages this row names, and by the tooling it runs under them; [§13 Output](#output) lists the resulting epistemic overlays and compiled artifacts and decides nothing, and no section of another member names these sections.
+- Row 9, saturation, composition and sparse publication: [§4 Four working refinements](#four-working-refinements), whose third refinement keeps sparse first publication lawful under the Saturation law; [§7](#7-flow), stage 7, where sparse first publication is lawful under §9 Admissibility, and stage 10, where composition keeps local authority under §11 Composition law; [§14](#14-results-of-this-profile), cut admissibility and saturation.
+- Row 10, the proof law and world-model-driven development: no separate consumer applies. The wedge is a policy of this profile that an adopting builder project applies under its own authority; no section of this or another member applies these sections, and PROFILES names them in its inventory without applying them.
+- Row 11, the results of this profile: no separate consumer applies. The values are returned by the evaluations that §9, §10 and §11 require, which §14 names from its side; no section of this or another member returns them by name, and the core they map to is [FOUNDATIONS §4 Results](FOUNDATIONS.md#results), which owns it and applies no rule of this section.
+
+Each consumer applies the rule and decides nothing the owning section does
+not (P2, P6).
+
 ## 2. Role and imports
 
 SPEC_METHOD defines the general constitutional method for spec-driven
@@ -155,8 +241,9 @@ compose; they do not compete (P6, P4a).
 This profile imports these exact concepts from the bounded context
 `urn:stdo:bounded-context:recursive-product-taxonomy`, owned by
 FOUNDATIONS §2 Product lineage objects, into
-`urn:stdo:bounded-context:world-model` (P1, P3; the import's carrier
-coordinates are PRODUCT_DEFINITION §5's):
+`urn:stdo:bounded-context:world-model` (P1, P3; a Semantic Import under
+PRODUCT_DEFINITION §5, which applies FOUNDATIONS §2 Imports between
+members between bounded contexts and gives the carrier's coordinates):
 
 - `urn:stdo:concept:recursive-product-taxonomy:source-project`;
 - `urn:stdo:concept:recursive-product-taxonomy:product`;
@@ -218,7 +305,9 @@ rc.2 #builder-project-specialization-relation):
 - lifecycle and invalidation: a change to either concept or context, the
   selected method basis, the builder configuration relation, or the
   governed scope invalidates the translation until the owning authorities
-  reevaluate it.
+  reevaluate it; each is a named instance of a material input change or a
+  changed basis under
+  [ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse).
 
 ## 3. What a world model is
 
@@ -304,7 +393,10 @@ propagates across substrates: what domain experts recognise as "objects"
 in an institutional system is the same kind of structure Friston
 described for biological systems, re-expressed through another
 substrate. The profile is the practice of making that structure explicit,
-traceable and publishable (P3, P6).
+traceable and publishable (P3, P6). The generic law for boundary claims,
+their evidence and the limit on stronger Markov claims is
+[IDENTITY §2 Boundaries and sufficiency claims](IDENTITY.md#boundaries-and-sufficiency-claims);
+this section refines it for the Markov-object construct.
 
 ### Effective blanket
 
@@ -463,7 +555,14 @@ implicitly (P6; rc.2 #world-models-externalize-expert-cognition).
 Mappings are semantic treatments. Cross-domain transformation is not
 plain structural rewrite. Every treatment declares preserved structure,
 changed meaning, loss, surplus and ambiguity (P1, P4b;
-rc.2 #mappings-are-semantic-treatments).
+rc.2 #mappings-are-semantic-treatments). A treatment is a refinement or
+rewrite step of
+[ACTIVATION §4 Refinement](ACTIVATION.md#refinement): what it preserves
+and its licensing law are that section's, and a treatment that changes
+meaning is an approximate step with its adequacy relation. The five
+declared fields are this profile's domain fields for that statement;
+preserved structure is what the step preserves, and changed meaning,
+loss, surplus and ambiguity state where and how it is not exact.
 
 Fully qualified naming is mandatory. Many cross-domain failures are
 preventable naming collisions. Fully qualified naming removes aliasing,
@@ -1064,27 +1163,79 @@ program does not amend this profile (P6, P3).
 
 ## 14. Results of this profile
 
-New clause. Purpose: the one-algebra rule of ACTIVATION §3, under which a
-profile's own result or stop vocabulary declares a total mapping to the
-five core members and adds none; the material relation is that this
-profile's verdicts decide publication of cuts and overlays and enter
-composites that consume only core members (P5, P6). Each verdict answers
-its own question; nothing is coerced to satisfied.
+This section owns this profile's refinements of the core result algebra
+of [FOUNDATIONS §4 Results](FOUNDATIONS.md#results). Each refinement names
+the question it answers and the predicate its mapping is for, and maps
+each of its values to exactly one core value. The predicate travels with
+the value, so a `satisfied` for one predicate never counts toward another
+([FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results)),
+and no mapping raises a result's standing: nothing is coerced to
+`satisfied` (P5, P6). The refinements are new in this corpus. Purpose and
+material relation: this profile's verdicts decide publication of entity
+cuts and overlays and enter conjunctions with the results of other
+members, which combine only in the core, so an inadmissible cut, an
+unverified direction or a failed gate run is never read as publishable
+(P5, P6).
 
-| Profile verdict | Question | Core member |
+| Refinement | Question | Predicate of the mapping |
 |---|---|---|
-| admissible entity cut (§9) | are the eight surfaces explicit, traceable and discriminated at evidence altitude proportional to the claim | satisfied; a stated bound on evidence altitude with its residual ambiguity declared satisfies the test (sparse first publication) |
-| entity cut not admissible (§9) | is a surface neither a stated value, a stated absence nor a stated non-applicability, or untraceable, or undiscriminated | falsified, the surface being the counterexample; indeterminate only where the discrimination the cut itself claims cannot be decided at its stated altitude |
-| verified overlay direction (§10) | is at least one acceptable verification recorded with identity preserved under held-out treatment, for a direction built by an admissible extraction | satisfied |
-| inadmissible extraction (§10) | is the direction built by a principal-component or maximum-variance construction | falsified, whatever its verification result: such a construction is not admissible as an identity direction |
-| failed verification (§10) | does a recorded verification show identity not preserved | falsified |
-| inconclusive verification (§10) | did a recorded verification run without establishing either an acceptable preservation or a demonstrated loss of identity | indeterminate, naming the held-out treatment or verification that would decide (ACTIVATION §3, second case) |
-| candidate direction, no verification run (§10) | none performed | no evaluation result: the claim is unresolved under ACTIVATION §3's third case, and the step that left it unrun stops `incomplete`, core indeterminate; publishing the direction is a Representation law violation, falsified for the publication claim |
-| not yet a lawful Markov object (§10 Null-peer discrimination) | do the uniqueness and transfer tests pass | satisfied when both pass; falsified when either fails |
-| overlay with no declared representation space, or directions composed across spaces (§10) | can the overlay be evaluated | invalid_basis: the subject or basis cannot support the evaluation |
-| promotion gate (§4 Epistemic status) | does the direction-native conditional-independence test meet its predicate | satisfied when met; falsified for that gate run when not met; the construct's standing is unchanged by a failed run |
-| sufficiently saturated (§11) | do material attributes have traceable support with remaining gaps explicit | satisfied, the explicit gaps carried as residuals; falsified where an attribute exists without support |
-| storage layout (§10 Storage shape) | are the six surfaces retained | satisfied when retained; falsified when any is lost |
+| cut admissibility | is the entity cut admissible (§9 Admissibility) | the entity cut's eight surfaces are explicit, traceable and discriminated from plausible alternatives at evidence altitude proportional to its claim |
+| direction acceptance | is a candidate identity direction accepted (§10 Identity-direction extraction, Verification by treatment) | the identity direction is built by an admissible extraction, projection along it preserves object identity under held-out treatments, and at least one acceptable verification is recorded |
+| overlay publication | does a published overlay rest on an accepted direction (§8 Representation law, §10 Verification by treatment) | the published overlay's direction has a recorded acceptable verification |
+| overlay storage | does the stored overlay keep its package (§10 Storage shape) | the stored overlay retains the six surfaces of §10 Storage shape |
+| null-peer discrimination | is the candidate a lawful Markov object by null-peer comparison (§10 Null-peer discrimination) | the candidate passes the uniqueness test and the transfer test |
+| promotion gate | does a run of the promotion gate meet its predicate (§4 Epistemic status) | this run of the direction-native conditional-independence test meets its predicate |
+| saturation | is the attribute ledger sufficiently saturated for publication (§11 Saturation law) | materially important attributes have traceable support, the remaining gaps are explicit ambiguities, and the resulting cut is stable enough to publish |
+
+| Refinement | Value | Core value | Ground |
+|---|---|---|---|
+| cut admissibility | `cut_admissible` | satisfied | each surface is a stated value, a stated absence or a stated non-applicability with its reason, is traced, and is discriminated at the stated altitude; a stated bound on evidence altitude with its residual ambiguity declared meets the test (sparse first publication) |
+| cut admissibility | `cut_inadmissible` | falsified | a surface is neither a stated value, a stated absence nor a stated non-applicability, or is untraceable, or the admissible evidence shows the boundary undiscriminated from a plausible alternative; that surface or alternative is the counterexample |
+| cut admissibility | `discrimination_undecided` | indeterminate | no counterexample of `cut_inadmissible` is found, and the admissible evidence cannot decide the discrimination the cut itself claims at its stated altitude; the value names the evidence that would decide |
+| direction acceptance | `direction_verified` | satisfied | the direction is built by an admissible extraction in its declared representation space, at least one acceptable verification is recorded with identity preserved under held-out treatment, and no recorded verification shows identity lost |
+| direction acceptance | `extraction_inadmissible` | falsified | the direction is built by a principal-component or maximum-variance construction, which is not admissible as an identity direction, whatever its verification shows; that construction is the counterexample |
+| direction acceptance | `verification_failed` | falsified | the extraction is admissible, and a recorded verification shows identity not preserved under held-out treatment; that verification is the counterexample |
+| direction acceptance | `verification_inconclusive` | indeterminate | the extraction is admissible in a declared representation space, no recorded verification establishes an acceptable preservation or shows identity lost, and a recorded verification ran without establishing either; the value names the held-out treatment or verification that would decide |
+| direction acceptance | `representation_space_invalid` | invalid_basis | no counterexample of `extraction_inadmissible` or `verification_failed` is found, and the overlay declares no representation space, or its direction is composed with directions computed in another space; that basis cannot support the evaluation (§10) |
+| overlay publication | `published_verified` | satisfied | the published direction has a recorded acceptable verification |
+| overlay publication | `published_unverified` | falsified | a direction with no acceptable verification is published, which violates §8 Representation law (§10 Verification by treatment); that publication is the counterexample |
+| overlay storage | `storage_retained` | satisfied | the stored package retains the declared representation space and its version, the geometric object, the distributed evidence, the verification trace, the provenance and authority record, and the supersession record |
+| overlay storage | `storage_lossy` | falsified | the stored layout loses one of those surfaces; the lost surface is the counterexample |
+| null-peer discrimination | `null_peer_discriminated` | satisfied | the identity-loaded attributes in the candidate's core are unique to it among its null peers, and its identity direction transfers more cleanly than a random diagonal |
+| null-peer discrimination | `not_yet_lawful` | falsified | the uniqueness test or the transfer test fails, so the cluster is not yet a lawful Markov object; the failing test is the counterexample |
+| promotion gate | `gate_met` | satisfied | the run meets the test's predicate |
+| promotion gate | `gate_not_met` | falsified | the run does not meet the test's predicate; it is the counterexample for that run only, and the construct's standing is unchanged |
+| saturation | `saturated` | satisfied | the three conditions hold; the explicit gaps are carried as residuals |
+| saturation | `not_saturated` | falsified | a condition fails, as where an attribute exists without traceable support (silent unsupported attribute creation) or a gap is a silent miss; that attribute or gap is the counterexample |
+
+Where none of these values applies, the evaluation returns a core value
+directly under [FOUNDATIONS §4 Results](FOUNDATIONS.md#results):
+`indeterminate` where the admissible evidence cannot decide its predicate,
+naming the evidence that would decide; `out_of_frame` where its claim
+needs a relation or capability that its frame does not declare; and
+`invalid_basis` where its subject or basis cannot support it on a ground
+other than `representation_space_invalid` (P5).
+
+A verification not run. Where no ground of `extraction_inadmissible` or
+`representation_space_invalid` holds, a candidate direction whose
+verification has not been run has no result for direction acceptance:
+the verification is the evaluation of that predicate, and it was not
+performed, so it has no
+closed result and is never mapped to
+`indeterminate` or to any other core value
+([FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Not performed). The
+direction stays a candidate (§10 Verification by treatment). In every
+conjunction over its acceptance, the unrun verification is a planned
+assessment without a closed result
+([FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results),
+Gaps) where the verification was planned; where none was planned, the
+obligation it would have discharged is uncovered coverage. A step whose output needed that verification and that stopped
+without it ends `incomplete`, which
+[ACTIVATION §3 Construction availability](ACTIVATION.md#construction-availability)
+maps for the predicate "a candidate is available", never to
+`indeterminate`; the step's work state carries the unrun verification as
+a residual ([ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart)).
+Publishing the unverified direction is `published_unverified` (P5, P6).
 
 Two readings keep the mapping total without coercion (P5, P1). A stated
 absence or stated non-applicability on an admissibility surface is a
@@ -1112,10 +1263,17 @@ Builder Project owner "WORLD_MODEL_METHOD.md#builder-project" as §6
 Units. The predecessor's "must" is written in the indicative; every
 other modal keeps its force.
 
+Three clauses have no predecessor row and are new: the declared binding of
+FOUNDATIONS §2 Object and P3's boundary claim to the entity cut (lead);
+the refinements of the core result algebra (§14), which FOUNDATIONS §4
+Results requires of a profile with its own result vocabulary; and the
+family table (§1 Foundation to law), in the format of FOUNDATIONS §3
+Foundation to law (P1, P3, P5, P6).
+
 | Anchor | Disposition | Locus |
 |---|---|---|
-| #position | conserved; the lost-context premise, the eight enacting surfaces, the seven starting claims, inspectable versioned machine-reasonable truth | §1 |
-| #method-role | conserved; the role split, primary surface, the owned bounded context, narrower Product contexts, graph-execution composition, the four imports with invalidation and the no-alias rule, the five "in particular" meanings; the import's owner is FOUNDATIONS §2 (generalisation) | §2 |
+| #position | conserved; the lost-context premise, the eight enacting surfaces, the seven starting claims, inspectable versioned machine-reasonable truth; the family table under Foundation to law is new | §1 |
+| #method-role | conserved; the role split, primary surface, the owned bounded context, narrower Product contexts, graph-execution composition, the four imports with invalidation and the no-alias rule, the five "in particular" meanings; the import's owner is FOUNDATIONS §2 (generalisation); the import is a Semantic Import under PRODUCT_DEFINITION §5, which applies FOUNDATIONS §2 Imports between members between bounded contexts | §2 |
 | #builder-project-specialization-relation | conserved; all ten coordinates, stated against PRODUCT_DEFINITION §5's relation carrier | §2 Builder Project specialisation |
 | #constitutional-intents | conserved; the two intents, query and serving not constitutional, a later plane at "may" | §1 Constitutional intents |
 | #manifesto | conserved; the fifteen commitments and the not-world-model-driven condition | §1 Manifesto |
@@ -1182,7 +1340,7 @@ other modal keeps its force.
 | #markov-object-construction-law | conserved; representation-substrate specialisation, its applicability and the three space kinds, not required otherwise, built and stored minimum, the space part of the overlay, no composition across spaces | §10 |
 | #1-paired-evidence-collection | conserved; at least one null peer, the three evidence items, distributed entries not the object | §10 Paired evidence collection |
 | #2-identity-direction-extraction | conserved; low-rank projection, the mean-offset formula, the three admissible supervised variants, principal-component and maximum-variance inadmissible, not a column | §10 Identity-direction extraction |
-| #3-verification-by-treatment | conserved; acceptance condition, at least one of the three verifications, unverified is candidate, publishing it violates the Representation law, the cut stays lawful, battery not a closed blanket | §10 Verification by treatment; §14 |
+| #3-verification-by-treatment | conserved; acceptance condition, at least one of the three verifications, unverified is candidate, publishing it violates the Representation law, the cut stays lawful, battery not a closed blanket; the mapping to the core result algebra is new (§14): a verification not run has no result, and publishing an unverified direction is `published_unverified` | §10 Verification by treatment; §14 |
 | #4-core-and-coat-decomposition | conserved; core across ≥ N of N contexts, coat, both evidence, ratio a characterisation | §10 Core and coat decomposition |
 | #5-null-peer-discrimination | conserved; the three questions with their expected answers, failure meaning not yet lawful | §10 Null-peer discrimination; §14 |
 | #6-overlay-publication | conserved; the seven "at minimum" items, immutable projection, revision supersedes, space change is supersession, no in-place mutation | §10 Overlay publication |

@@ -1,0 +1,843 @@
+{
+  "group": "G1",
+  "symbols": [
+    {
+      "uri": "urn:stdo-3:claude:i3:concept:authority",
+      "kind": "urn:stdo-3:claude:i3:vocabulary:kind:concept",
+      "label": "Authority: frame-set, semantic, evaluation, operation or decision authority, distinct from actor identity",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#authority-kinds"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:concept:boundary-claim",
+      "kind": "urn:stdo-3:claude:i3:vocabulary:kind:concept",
+      "label": "Boundary claim: a claim about what belongs to an object, with a proof obligation",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/IDENTITY.md#boundaries-and-sufficiency-claims"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:concept:conjunction",
+      "kind": "urn:stdo-3:claude:i3:vocabulary:kind:concept",
+      "label": "Conjunction of results: the one rule combining results for a composite predicate",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#conjunction-of-results"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:concept:core-result",
+      "kind": "urn:stdo-3:claude:i3:vocabulary:kind:concept",
+      "label": "Core result algebra: the one set of five result values of FOUNDATIONS §4",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#results"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:concept:gap",
+      "kind": "urn:stdo-3:claude:i3:vocabulary:kind:concept",
+      "label": "Gap: a planned assessment without a closed result, or uncovered coverage",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#conjunction-of-results"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:concept:not-performed",
+      "kind": "urn:stdo-3:claude:i3:vocabulary:kind:concept",
+      "label": "Not performed: a planned evaluation with no closed result",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#results"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:concept:proxy",
+      "kind": "urn:stdo-3:claude:i3:vocabulary:kind:concept",
+      "label": "Proxy: a bounded agent of human authority, admitted explicitly",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#authority-kinds"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:concept:refinement",
+      "kind": "urn:stdo-3:claude:i3:vocabulary:kind:concept",
+      "label": "Refinement: a member's finer values, each mapped to exactly one core value",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#results"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:concept:stale-result",
+      "kind": "urn:stdo-3:claude:i3:vocabulary:kind:concept",
+      "label": "Stale result: a held result bound to a basis the composite does not require",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#conjunction-of-results"
+      ]
+    }
+  ],
+  "clauses": [
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:p0",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:premise"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:qualification",
+          "literal": "recovered: P0's standing in FOUNDATIONS §3"
+        }
+      ],
+      "statement": "P0 Bounded construction. A finite actor realises a selected outer contract through steps. Each step's selected context fits the actor's envelope.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:p1",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:premise"
+        }
+      ],
+      "statement": "P1 Interpretation. Subject, representation and interpretation are distinct; meaning holds within a declared context through a declared contract.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:p2",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:premise"
+        }
+      ],
+      "statement": "P2 Purpose. A selected outcome defines adequacy; interfaces inherit material obligations from the transformation they serve.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:p3",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:premise"
+        }
+      ],
+      "statement": "P3 Identity. An object's identity is declared (authority, kind, value) and survives admissible change; a boundary is a claim with a proof obligation.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:p4a",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:premise"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:condition",
+          "literal": "only when the first's result type and judgment satisfy the second's exact declared domain and preconditions"
+        }
+      ],
+      "statement": "P4a Typed composition. Two steps compose only when the first's result type and judgment satisfy the second's exact declared domain and preconditions.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:p4a-retention",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:force",
+          "literal": "must-not"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p4a"
+        }
+      ],
+      "statement": "Yet the steps compose although the first's result type need not meet the second's declared domain, and the first step's other intermediate results and stop state are lost; P4a forbids both.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:p4b",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p0"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p2"
+        }
+      ],
+      "statement": "P4b Conservation of step-produced facts. Judgments, residuals, observations and authority decisions the outer contract needs are recorded by the step that produced them.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:p5",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p0"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p6"
+        }
+      ],
+      "statement": "P5 Totality. A step can meet a condition outside its context (P0's open-world premise), and it cannot report success on one (P6).",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:p6",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:premise"
+        }
+      ],
+      "statement": "P6 Justification and authority. Definitions, assumptions, observations, candidate judgments and accepted claims have distinct standing; evidence supports a claim on a basis; authority permits or disposes within scope.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#3-commitments"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:core-only-one",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:states",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:core-result"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:force",
+          "literal": "must"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p5"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p6"
+        }
+      ],
+      "statement": "This core is the only one.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#results"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:only-satisfied-establishes",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:states",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:core-result"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p6"
+        }
+      ],
+      "statement": "Only `satisfied` establishes the predicate.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#results"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:no-mapping-raises-standing",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:refinement"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:not-performed"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:force",
+          "literal": "must-not"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p5"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p6"
+        }
+      ],
+      "statement": "No refinement or mapping raises a result's standing (P5, P6): - a falsified or failed result never maps to a satisfied or successful one; - a result that admissible evidence cannot decide never maps to `satisfied`; - an evaluation that was not performed stays distinct from one whose evidence cannot decide: it has no [closed result](ACTIVATION.md#7-closed-result-and-reuse), and it is never mapped to `indeterminate` or to any other core value; - an effect whose completion is unknown never maps to no effect or to completed.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#results"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:not-performed-no-result",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:states",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:not-performed"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p6"
+        }
+      ],
+      "statement": "An evaluation that is required or planned and was not performed has no closed result; an actor cannot report an evaluation it did not perform (P6).",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#results"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:refinement-maps-once",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:refinement"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:force",
+          "literal": "must"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p5"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p1"
+        }
+      ],
+      "statement": "A member, profile or adopting Product that needs finer outcomes defines a refinement. The refinement names the question it answers and the predicate its mapping is for, and maps every refined value to exactly one core value.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#results"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:parent-value-rule",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:policy-choice"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:refinement"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:force",
+          "literal": "must"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:owner",
+          "literal": "FOUNDATIONS §4 Results"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:choice",
+          "literal": "a child value keeps its parent's core value"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:among",
+          "literal": "letting a split by cause change the core value, or keeping it"
+        }
+      ],
+      "statement": "The parent-value rule governs every such split: each child value names its parent value and its cause and keeps its parent's core value; a child that needs a different core value needs a different parent value, which only the owner of the parent declares; and no child takes `satisfied` from a parent that is not `satisfied`.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#results"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:availability-assessment-acceptance",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:states",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:core-result"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p6"
+        }
+      ],
+      "statement": "Availability, assessment and acceptance are separate results, each with its own predicate: that a step produced a candidate; that the candidate meets its declared criteria; and that the [decision owner](ACTIVATION.md#roles-and-delegation) accepts it at its boundary.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#results"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:conjunction-defined-once",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:states",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:conjunction"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:core-only-one"
+        }
+      ],
+      "statement": "It is defined here once, over the core.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#conjunction-of-results"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:conjunction-three-inputs",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:conjunction"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:gap"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:force",
+          "literal": "must"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p5"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p4b"
+        }
+      ],
+      "statement": "A conjunction takes three inputs and keeps them apart: 1. the closed results returned, each a core value with its predicate and domain outcome; 2. the planned assessments that have no closed result applicable to the composite: evaluations the composite requires that were not performed, or whose result is absent, stale, bound to another subject or basis, or incapable of establishing its claim; 3. the required coverage that no planned assessment addresses: for a required obligation set R and the coverage C that the planned assessments admit, the uncovered coverage R minus C.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#conjunction-of-results"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:gap-never-satisfied",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:gap"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:force",
+          "literal": "must-not"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:conjunction-three-inputs"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p5"
+        }
+      ],
+      "statement": "A conjunction with any item in the second or third input is never `satisfied`.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#conjunction-of-results"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:stale-satisfied-never-counts",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:stale-result"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:force",
+          "literal": "must-not"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p3"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p5"
+        }
+      ],
+      "statement": "A stale `satisfied` never counts toward the composite.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#conjunction-of-results"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:failure-survives-joins",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:conjunction"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:gap"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:force",
+          "literal": "must"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p4b"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p5"
+        }
+      ],
+      "statement": "A known failure and a gap of either kind survive every join.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#conjunction-of-results"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:authority-kinds-never-collapse",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:authority"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:force",
+          "literal": "must-not"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:condition",
+          "literal": "by default"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:exception",
+          "literal": "the kinds may coincide in a lawful case"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p6"
+        }
+      ],
+      "statement": "These may coincide in a lawful case and never collapse by default.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#authority-kinds"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:what-creates-no-authority",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:authority"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:force",
+          "literal": "must-not"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p6"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p3"
+        }
+      ],
+      "statement": "None of the following mints, widens, transfers or reconstructs semantic, evaluation, operation or decision authority (P6, P3): - actor identity, an actor's capability, its tools or its access; - a name, label, display label, status label, role name, capability string, locator, file name or path; - declaring, naming, selecting, activating or executing a frame, or occupying a role; - implementation reachability, a reachable code path or an available operation; - the shape of evidence or of a payload, or the availability of evidence inside a frame; - a passing check, a successful step, a completed review or a count of any of them; - copying, interpreting, encoding, evaluating, transporting, projecting, compressing, importing or acquiring material; - drafting, admitting or retaining a work contract, beyond what its owner has admitted; - composition, delegation, adapters, wrappers and registries, which may restrict admitted authority or carry it faithfully, and never widen its scope, add a role, increase its cardinality or change its kind.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#authority-kinds"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:authority-changes-need-decision",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:authority"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:proxy"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:force",
+          "literal": "must"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p6"
+        }
+      ],
+      "statement": "Elevation, transfer, split, merge, proxy grant, revocation and retirement each need an explicit authority decision with an identifiable basis.",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#authority-kinds"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:proxy-identity-distinct",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:permits",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:proxy"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:force",
+          "literal": "may"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:condition",
+          "literal": "where the governing identity and authority law permits it"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p6"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p3"
+        }
+      ],
+      "statement": "Human authority may act directly, or through an explicitly admitted bounded proxy where the governing identity and authority law permits it; proxy identity and human-authority identity stay distinct (P6, P3).",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#authority-kinds"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:boundary-claim-proof",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:requires",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:boundary-claim"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:force",
+          "literal": "must"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p3"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p6"
+        }
+      ],
+      "statement": "A boundary claim names its object, the evidence that supports it and the basis it holds on, and it holds only as far as that evidence goes (P3, P6).",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/IDENTITY.md#boundaries-and-sufficiency-claims"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:clause:markov-boundary-hypothesis",
+      "clause_type": "constraint",
+      "operator": "urn:stdo-3:claude:i3:vocabulary:operator:forbids",
+      "arguments": [
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:standing",
+          "ref": "urn:stdo-3:claude:i3:standing:consequence"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:subject",
+          "ref": "urn:stdo-3:claude:i3:concept:boundary-claim"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:force",
+          "literal": "must-not"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:qualification",
+          "literal": "no work relies on it as established"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:p5"
+        },
+        {
+          "role": "urn:stdo-3:claude:i3:vocabulary:role:support",
+          "ref": "urn:stdo-3:claude:i3:clause:boundary-claim-proof"
+        }
+      ],
+      "statement": "That stronger claim, a statistical Markov boundary, is a hypothesis ([FOUNDATIONS §5](FOUNDATIONS.md#5-hypotheses)); no work relies on it as established, and a profile that uses such a construct states its epistemic status (P5).",
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/IDENTITY.md#boundaries-and-sufficiency-claims"
+      ]
+    }
+  ],
+  "residuals": [],
+  "frame_indexes": [
+    {
+      "uri": "urn:stdo-3:claude:i3:frame-index:result-algebra-and-conjunction",
+      "frame_ref": "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#results",
+      "scope": "Combine results or refine result values: the one core algebra, its standing, non-performance, the refinement and parent-value rules, and the conjunction with its three inputs, gaps, stale results and survival.",
+      "clause_refs": [
+        "urn:stdo-3:claude:i3:clause:core-only-one",
+        "urn:stdo-3:claude:i3:clause:only-satisfied-establishes",
+        "urn:stdo-3:claude:i3:clause:no-mapping-raises-standing",
+        "urn:stdo-3:claude:i3:clause:not-performed-no-result",
+        "urn:stdo-3:claude:i3:clause:refinement-maps-once",
+        "urn:stdo-3:claude:i3:clause:parent-value-rule",
+        "urn:stdo-3:claude:i3:clause:availability-assessment-acceptance",
+        "urn:stdo-3:claude:i3:clause:conjunction-defined-once",
+        "urn:stdo-3:claude:i3:clause:conjunction-three-inputs",
+        "urn:stdo-3:claude:i3:clause:gap-never-satisfied",
+        "urn:stdo-3:claude:i3:clause:stale-satisfied-never-counts",
+        "urn:stdo-3:claude:i3:clause:failure-survives-joins"
+      ],
+      "residual_refs": [],
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#results",
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#conjunction-of-results"
+      ]
+    },
+    {
+      "uri": "urn:stdo-3:claude:i3:frame-index:authority-kinds",
+      "frame_ref": "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#authority-kinds",
+      "scope": "Decide whether something grants authority: the kinds of authority, what creates none, the changes that need an explicit decision, and the proxy limit.",
+      "clause_refs": [
+        "urn:stdo-3:claude:i3:clause:authority-kinds-never-collapse",
+        "urn:stdo-3:claude:i3:clause:what-creates-no-authority",
+        "urn:stdo-3:claude:i3:clause:authority-changes-need-decision",
+        "urn:stdo-3:claude:i3:clause:proxy-identity-distinct",
+        "urn:stdo-3:claude:i3:clause:only-admitted-contract-activates"
+      ],
+      "residual_refs": [],
+      "source_refs": [
+        "stdo-3://build_tenants/claude/standards/FOUNDATIONS.md#authority-kinds"
+      ]
+    }
+  ]
+}

@@ -1,10 +1,8 @@
 # ODD
 
 Tier 3. The Outcome-Driven Development profile: graph-native product
-authoring over a declared asset graph. It imports
-[FOUNDATIONS](FOUNDATIONS.md), [ACTIVATION](ACTIVATION.md),
-[EVALUATION](EVALUATION.md), [SPEC_METHOD](SPEC_METHOD.md) and
-[AXIOMATIC_CALCULUS](AXIOMATIC_CALCULUS.md) by reference under
+authoring over a declared asset graph. It imports the families that
+[§1 Foundation to law](#foundation-to-law) lists by reference under
 [PROFILES §1](PROFILES.md#1-the-boundary) and restates none of them. Inside
 its bounded context it uses its own terms freely: graph, node, asset,
 vector, edge, graph function, traversal, worksite, ledger, event log, GTL,
@@ -15,7 +13,7 @@ only (P0, P1).
 Two definitions are used here and owned elsewhere. The a_c traversal record
 and the functor kinds are
 [AXIOMATIC_CALCULUS §5](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds);
-the core result algebra is [ACTIVATION §3](ACTIVATION.md#3-result-algebra).
+the core result algebra is [FOUNDATIONS §4 Results](FOUNDATIONS.md#results).
 This profile's graph traversal and its F_D, F_P and F_H shorthands are its
 own concepts and are not those records by spelling. The Executive, Worker
 and Reviewer of [EXECUTIVE_BASELINE](EXECUTIVE_BASELINE.md) are roles, and roles
@@ -75,6 +73,132 @@ not decoration around a process. GTL is the language expression of the
 profile. ABG is the substrate of traversal governance, binding and runtime
 truth that realises the GTL program without owning the domain's internal
 HOW (P0, P6).
+
+### Foundation to law
+
+This member is material family F18, outcome-driven development. The table
+below shows which of its rules follow from which premises, in the format
+of [FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law),
+which also states the standing of the consequences. Under
+[PROFILES §1](PROFILES.md#1-the-boundary) the family imports the families
+its rows rest on; their rules and choices keep their owners:
+
+- F1, frames and context
+  ([REFERENCE_FRAME §1](REFERENCE_FRAME.md#1-the-frame-as-the-engagement-unit)),
+  for acquisition under ACTIVATION §2;
+- F2, transitions, steps and configuration ([ACTIVATION §1](ACTIVATION.md#1-the-step));
+- F3, results and their combination ([FOUNDATIONS §4 Results](FOUNDATIONS.md#results));
+- F4, work state, resumption and reuse ([ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart));
+- F6, claims, evidence, assessment and acceptance ([EVALUATION §1](EVALUATION.md#1-claims));
+- F9, the `a_c` calculus ([AXIOMATIC_CALCULUS §1](AXIOMATIC_CALCULUS.md#1-position));
+- F10, constitutional chain, outcome and build-tenant binding ([SPEC_METHOD §2](SPEC_METHOD.md#2-the-chain));
+- F11, change management and ambiguity ([SPEC_METHOD §4](SPEC_METHOD.md#4-change-management));
+- F12, binding a project to the method
+  ([PRODUCT_DEFINITION §1](PRODUCT_DEFINITION.md#1-overlay-and-layout-independence));
+- F13, work carriers ([TICKETS §5](TICKETS.md#5-from-carrier-to-execution));
+- F15, release and successor conservation ([RELEASE §1](RELEASE.md#1-context-and-position)).
+
+Its instance premises hold where a product is built with this profile;
+they are adopted with it and do not follow from the foundations (P1, P6):
+
+- I1: a selected Product outcome is admitted as external authority for
+  the work;
+- I2: the work changes a mutable workspace, beside which an immutable
+  ledger and event log record the admitted work;
+- I3: bounded probabilistic workers carry out the constructive actions,
+  and their reports and artifacts are observations;
+- I4: the product is built with an installed release of a method product,
+  which may be an earlier release of the product itself.
+
+Each commitment in the premise column carries its standing from
+[FOUNDATIONS §3](FOUNDATIONS.md#3-commitments).
+
+| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
+|---|---|---|---|---|
+| P3 (independent), P4a (independent), P0 (recovered); I2 | By P3 identity is declared, so each bounded state is a node over explicit typed assets with a declared identity, never one hidden workspace object (I2); by P4a steps compose only through declared result types and domains, so each admissible transition is a vector that declares its required upstream assets, target, evaluators and gates, and output contract; by P0 an actor holds only what it acquired in a bounded step, so the work is a traversal that takes one admissible vector at a time until the selected target closes | [§5](#5-graph-model), with [Nodes](#nodes), [Vectors](#vectors) and [Traversal](#traversal); [§11.1](#111-typed-assets-and-nodes-are-explicit) | the graph as the product's process model and traversal as its workflow, and `asset_surface` as the declaration of a produced or consumed boundary: this member; which nodes, vectors and assets a product declares: the product | 5, 2, 3 |
+| P0 (recovered), P6 (independent); I3; F2 (imported) | within one bounded step the worker's internal path is its own and the traversal contract is its admissible external space; the worker cannot close the edge, emit runtime events, mutate ledgers or decide re-entry, because its output is a candidate until evaluated and its report is an observation, not authority | [§5 Probabilistic compute](#probabilistic-compute); A5 in [§11.5D](#115d-constructive-evaluation-and-yield-loop) | one vector or edge traversal as the bounded step, declared as a binding in §5 Probabilistic compute: this member | 5, 8, 9 |
+| P1 (independent), P3 (independent); F9 (imported), F11 (imported) | By P1 equal spelling fixes no meaning and by P3 identity is declared, so this profile's traversal and its F_D, F_P and F_H shorthands are concepts of its own bounded context and not the `a_c` traversal record or functor kinds by equal spelling (F9); F_P and F_H relate to the source concepts of SPEC_METHOD §5 only through declared specialisations that state direction, preserved meaning, narrowed scope and invalidation (F11) | this member's lead; [§1](#1-position), the bounded-context paragraph; [§5 Probabilistic compute](#probabilistic-compute) | the bounded context and the F_P and F_H specialisations: this member, under PROFILES §1 | 5, 6 |
+| P4a (independent), P4b (derived from P0 and P2); F2 (imported) | By P4a a step composes only through its declared contract, so a graph function realises an outer vector, which stays the callable contract; by P4b a later step needs step-produced facts recorded, so where the function refines that vector into inner steps the inner boundaries are published and a later step reads earlier outputs only through its declared environment; and F2 makes the loop govern each published inner boundary as it governs the outer one | [§5 Graph functions](#graph-functions); [§11.4](#114-the-gtl-module-is-the-operative-publication-surface), second paragraph; [§11.8](#118-cumulative-environment-law-is-mandatory); A14 in [§11.5D](#115d-constructive-evaluation-and-yield-loop) | the cumulative carried environment as the specialised contract for carrying earlier outputs, with its three declarations at "should": this member | 5, 3, 4 |
+| P0 (recovered), P3 (independent), P6 (independent) | every operative constructive step has a named, typed and published carrier that a later actor and the runtime can re-acquire, because a later actor holds declared sources and not another actor's private memory, and no undeclared surface carries authority; no operative step, callable surface or capability stays only in prose, prompt memory, an orchestration loop or a service method, and a caller binds to the published outer carrier, never to a hidden inner vector | [§11.2](#112-graph-functions-are-the-primary-constructive-carrier); [§11.3](#113-the-function-catalogue-is-published); [§11.4](#114-the-gtl-module-is-the-operative-publication-surface), first paragraph; [§8](#8-responsibility-layers-and-local-binding), last paragraph | `GraphFunction` as the carrier; a machine-readable function catalogue whose retained functions should expose at minimum name, inputs, outputs, intent and public or helper role; the GTL module as the publication surface: this member; which functions, graphs and catalogue entries a product publishes: the product | 5, 4, 1 |
+| P0 (recovered), P6 (independent); I3 | imperative code transports or persists facts and decides nothing that the declared carrier owns: domain meaning, semantic target movement, step selection, closure, lineage and constructive workflow truth, because what is decided only in imperative code is decided by no declared owner | [§11.2A](#112a-outcome-first-realisation-order); [§14](#14-dogfooding-rule) | the order outcome traversal, declarative carrier, minimal adapter code, with the outcome traversal's declarations; building the product's own framework behaviour through its graph functions: this member | 5, 4 |
+| P6 (independent), P0 (recovered), P3 (independent); I3; F2 (imported) | By P6 authority exists only through a grant and by P3 an identity is one and declared, so each traversal has exactly one execution authority, which owns its selection and advance, actor invocation and supervision, retry, continuation and re-entry, runtime events and closure fold; by P0 and I3 a bounded step, product code, a plugin, a service or a query returns evidence, policy input and control and holds none of these (F2), so two controllers that can each claim one traversal leave the product not ODD-correct | [§10 ABG](#abg), [ODD product](#odd-product) and [Query and service layers](#query-and-service-layers); [§11.5A](#115a-abg-owns-continuation-and-re-entry); [§11.5B](#115b-execution-authority-audit); A15 in [§11.5D](#115d-constructive-evaluation-and-yield-loop) | ABG as the role of that single authority, with its ownership list and the product's; the five-surface audit inventory, the changes that require the audit and the conditions that prevent closure: this member; the concrete realisation of the ABG role: the consumer (§1) | 5, 8, 9 |
+| P6 (independent), P1 (independent), P3 (independent), P5 (derived from P0 and P6) | By P6 authority is scoped, so model synthesis, gap discovery, next-action selection and action evaluation hold separate authorities and no command, report, query, service or summary becomes a rival source of traversal truth; by P5 a projection decides only what its evidence establishes, so visible state is a projection that reconciles to the admitted truth it reads or fails closed; by P1 and P3 equal names establish no identity | [§11.5](#115-current-state-is-a-projection-over-constructive-history); [§11.5C](#115c-projection-source-coherence); A0, A4a, A11, A12, A16 and the constitutional equation in [§11.5D](#115d-constructive-evaluation-and-yield-loop) | the four functions `synthesize_model`, `eval_gap`, `evaluate_next` and `evaluate_action`, and the duty of a design, ticket, module or proof to name the one it implements or consumes: this member; domain asset meaning, catalogue meaning and gap interpretation: the product (A15) | 5, 6, 9 |
+| P6 (independent), P0 (recovered); I2, I3; F2 (imported), F6 (imported) | no edge closes from an artifact, a worker report, process success or liveness alone; closure is a fold over admitted evidence, the workspace counts only through the ledger, and an evaluator attends only to admitted ledger rows reachable through declared lineage, because a report or artifact is an observation, not authority, and a step's context is its declared material, never the workspace | A1, A1a, A1b, A6, A7 and A10 in [§11.5D](#115d-constructive-evaluation-and-yield-loop) | the governed work pair of workspace, ledger, event log and evaluator work, and the ledger's fields: this member; carrier names other than those of the loop: the implementation, which keeps the authority shape (§11.5D) | 5, 7, 9 |
+| P4b (derived from P0 and P2), P3 (independent); I2; F4 (imported) | By P4b every closure-relevant callout is a step-produced fact the outer contract needs, so it is admitted to the immutable ledger and event log; by P3 a correction keeps the identity of what it corrects, so it appends or supersedes and never rewrites; under F4 and I2 every closure decision and next-action selection is reproducible by replay from carriers that each reference their causal predecessors | A1a, A13 and A13a in [§11.5D](#115d-constructive-evaluation-and-yield-loop); [§11.5](#115-current-state-is-a-projection-over-constructive-history) | the replay inputs listed in A13 and the predecessor chain of A13a: this member | 5, 2, 9 |
+| P5 (derived from P0 and P6), P0 (recovered); F4 (imported) | By P5 work that is still lawful but not yet decided has no failure to classify, and by P0 the next actor holds only what is recorded, so such work returns control without failure classification, keeping the same edge and a replay-visible resume basis (F4) | A9, and A4 on `post_yield_resume`, in [§11.5D](#115d-constructive-evaluation-and-yield-loop) | `yield` as the lawful iteration boundary, distinct from retry, block and timeout: this member | 5 |
+| P2 (independent), P6 (independent); I1; F10 (imported), F11 (imported) | By P2 only work with a route to the selected outcome is justified, so the selected outcome bounds the loop: every action binds the current gap to exact target assets and obligations before invocation, and only published lawful actions are ranked; by P6 no further material work is selected without another admitted basis once a terminal condition of the loop is reached, and a reprice requests constitutional re-entry (F10, F11) and selects nothing; by P6 edge closure is evidence toward Product acceptance, not acceptance | the selected-outcome paragraphs, the intent-lineage paragraph, A2, A3, A4 on `post_reprice` and A16 in [§11.5D](#115d-constructive-evaluation-and-yield-loop) | which outcome is selected and accepted: its owner under [SPEC_METHOD §3](SPEC_METHOD.md#3-outcome-conservation); the re-entry a reprice requests: its owning relation under SPEC_METHOD §4 | 5, 1 |
+| P5 (derived from P0 and P6), P6 (independent); F3 (imported) | By F3 every result is stated in the core or in a refinement mapped into it, so the closure decision is a closed sum type, `evaluate_next` is total, and each closure decision and each audit outcome maps to exactly one core value for a named predicate, its cause being part of the value where the cause decides it (P5); by P6 a closure decision answers the edge predicate and is not a disposition of ACTIVATION §3, which answers the acceptance predicate, so neither counts toward the other; selection data decides no predicate, so it maps to no core value, while each typed no-action decides that no published lawful action can be selected and maps by its cause, and a closure decision it follows keeps its own value for the edge predicate | A4, A8 and its mapping in [§11.5D](#115d-constructive-evaluation-and-yield-loop); the audit mapping in [§9](#9-method-governance-and-audit) | the seven closure decisions, their causes, the two causes of a typed no-action and the default of graph following in A4: this member; the priority policy: the product (A15) | 5, 3, 9 |
+| P6 (independent), P1 (independent), P3 (independent); F12 (imported) | By P6 each part of an ODD product has one owner: one WHAT surface, one HOW relation, runtime truth with the traversal authority and domain meaning with the product; by P1 and P3 the split binds by authority and not by directory names, and a runtime frame's name does not enrol it among the evaluation frames (F12), while an evaluation frame may take a runtime frame as its subject or coordinate without collapsing the two | [§10](#10-what-an-odd-product-is), with [Product specification](#product-specification-software-development-topology) and [Product realisation](#product-realisation-software-development-topology) | the ten-part application boundary and `specification/` and `build_tenants/` as the default software-development locations: this member; the actual locations: the product's definition under PRODUCT_DEFINITION | 5, 1, 7 |
+| P1 (independent), P2 (independent), P6 (independent); F10 (imported) | By P6 this profile decides only what it owns, graph-native structure and product shape, and neither a product's domain semantics nor its current line; by P2 domain-correct work also needs the constitutional chain (F10), the domain method's semantic law and the product's local authority surfaces; by P1 where a product also adopts a domain profile, each governs its own questions and the two compose | [§2](#2-method-role); [§3](#3-method-composition) | the split between graph-native structure and product shape, owned here, and world-model semantics, publication and composition law, owned by [WORLD_MODEL](WORLD_MODEL.md#1-position); which domain method and local surfaces apply: the product | 5, 1, 2 |
+| P0 (recovered), P2 (independent); F1 (imported) | an actor building an ODD product acquires the general method, the product's domain method where one exists, and its local authority surfaces before it acts, then identifies and declares the graph carrier and loop, and implements code last, because it holds only the declared sources it acquires and the selected outcome sets which obligations matter | [§17](#17-invocation-rule); [§18](#18-cold-start-reading-order) | the fourteen-step sequence and the two reading orders, with "usually" for the effect of skipping the order: this member | 5, 1, 7 |
+| P6 (independent), P2 (independent); F11 (imported) | By P6 a structural pattern becomes shared law only when this profile is changed (F11), so usage and repetition approve nothing; by P2 a move the profile does not clearly cover is evaluated against it, and a move found worth incorporating is not fully approved until the profile is updated | [§9](#9-method-governance-and-audit) | the audit questions, at "should", and the three audit outcomes: this member; a change to this profile: the method's change management (SPEC_METHOD §4) | 5, 1, 9 |
+| P1 (independent), P3 (independent) | By P1 a capability class is a layer idea whose meaning each product binds to its own typed assets, and by P3 identity is declared, so shared structural law and a product's local semantic bindings stay distinct, and copying another product's local names without semantic need is not reuse of the method | [§8](#8-responsibility-layers-and-local-binding); [§11.6](#116-product-specific-semantics-sit-above-the-shared-carrier) | the capability classes listed, as examples: this member; local asset names, asset meanings, proof lanes and query overlays: the product | 5, 6, 1 |
+| P6 (independent); F6 (imported) | ODD, GTL and ABG name capability roles, not a required implementation; a consumer, a reference realisation or a historical product may prove or falsify conformance and supplies no method authority, because evidence never mints authority | [§1](#1-position), the paragraphs on roles and on consumer binding | the concrete realisations of the GTL and ABG roles: the consumer, in its own Product, requirements, design and immutable dependency identity | 9, 5, 8 |
+| P0 (recovered), P6 (independent); I3; F13 (imported) | automation decides nothing that the declared surfaces do not: each automated move is one an actor holding only those surfaces could make, because a later actor re-acquires declared sources and not private memory, and authority comes only from declared owners; an agentic worker's artifacts take effect only through admission against deterministic criteria, and conformance evidence is not ratification | [§11.7](#117-manual-walkthrough-must-still-be-lawful); [§11.7A](#117a-conforming-agentic-development) | the manual walkthrough as the test of automation, and its agentic form as the conformance proof of the method: this member; the admission criteria for produced artifacts: [SPEC_METHOD](SPEC_METHOD.md) and [TICKETS](TICKETS.md) | 5, 9, 7 |
+| P6 (independent), P5 (derived from P0 and P6); F6 (imported) | By P6 only the real authority-bearing input decides, so negative evidence for a boundary exercises the supported authority path with that input invalidated and shows refusal before the prohibited effect (F6); by P5 a manufactured refusal, blocked event, gap or verdict proves nothing about that path, and absence in source, package, installation and runtime are distinct claims | [§11.7B](#117b-real-authority-path-negative-proof-stdo-up-010) | the concrete test and evidence mechanism: the consumer | 9, 5 |
+| P3 (independent), P6 (independent); I4; F15 (imported) | By P3 the installed builder and the product it builds, and the selected immutable release and mutable source, are distinct identities (F15), and by P6 they hold distinct authority: the selected release governs a consumer and mutable source governs none; a mismatch is repaired by installing one complete release (I4), a release version is no graph truth (P3), and where an installable development form exists, decisive proof runs against it (P6) | [§4](#4-method-library-classes); [§7](#7-self-host-boundary); [§13](#13-installed-dev-rule); [§15](#15-release-boundary) | which release a consumer selects: the consumer ([PRODUCT_DEFINITION §4](PRODUCT_DEFINITION.md#4-shared-installed-release-basis-and-toolchain-manager)); which members are method members: the [standards README](README.md#documents); the isolated environment and the proving lane of §13, at "should": this member | 1, 2, 9 |
+| P6 (independent), P3 (independent); F12 (imported) | By P6 the installed product provides the method, runtime and carrier surfaces and assumes no knowledge of a target project's domain, over which it holds no grant; by P3 the target project owns its definition, constitutional surfaces, realisation roots and domain outputs as its own identity (F12) | [§6](#6-product-boundary) | the default scaffold names and `build_tenants/` as the default realisation root: this member, as defaults; the target project's domain, surfaces and outputs: the target project | 1, 5 |
+| P4a (independent), P2 (independent); F3 (imported) | By P4a a refined inner chain closes the enclosing carrier only when the enclosing contract still holds after fold-back and zoomed and unzoomed views agree; by P2 and F3 a live requirement without a proof witness is a gap that keeps the enclosing carrier open until it is realised, deferred or repriced out of the active branch; that a scenario bundle should make clear the boundary, assets, vectors, paths and evidence that close it is this member's choice | [§11.9](#119-global-convergence-must-be-stable-under-zoom); [§12](#12-scenario-rule) | which scenarios a product keeps and which proof witness fits a requirement class: the product; deferring or repricing a requirement out of the active branch: the requirement's owner | 5, 3, 9 |
+| P5 (derived from P0 and P6); F3 (imported) | By F3 results conjoin and by P5 an unestablished clause establishes nothing, so an ODD product is built correctly only when every clause of §11 holds: the clauses form a conjunction, and one failing or unestablished clause leaves the product not built correctly | [§11](#11-core-law), its lead | which clauses make up the core law: this member | 5, 3 |
+
+Consumers of these rows, where an actor enters them (FOUNDATIONS §3
+Foundation to law, Consumers), one list per row, each consumer linked to
+its own locus:
+
+- Row 1, nodes, vectors and typed assets: [DESIGN_MODULE §2](DESIGN_MODULE.md#2-graph-execution-alignment-and-escalation), which asks first whether a boundary moves a typed asset from one state to another, and [DESIGN_MODULE Relationship to other members](DESIGN_MODULE.md#relationship-to-other-members); [§11.7](#117-manual-walkthrough-must-still-be-lawful), steps 1 and 2; [§11.7A](#117a-conforming-agentic-development), where admission enforces an artifact as a constructor enforces a typed asset under §11.1; [§17](#17-invocation-rule), step 5; [§19](#19-ramp-up-checklist), question 2; [§16](#16-failure-pattern), pattern 1.
+- Row 2, the bounded probabilistic step: [PROFILES §1](PROFILES.md#1-the-boundary), whose declared-binding rule takes its shape from the F_P and F_H specialisations §5 owns, and [PROFILES §2](PROFILES.md#2-graph-execution), which keeps the bounded-step binding and the worker's internal solution strategy outside the framework; [CONFORMANCE §1](CONFORMANCE.md#1-counterexamples-from-the-builders-own-history), case C-09; [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope), which names A5 as the ODD specialisation of prompt construction; [DESIGN_MODULE §2](DESIGN_MODULE.md#2-graph-execution-alignment-and-escalation), which keeps probabilistic worker boundaries out of imperative prompt or dispatch code; [§11.5B](#115b-execution-authority-audit) and [§11.7A](#117a-conforming-agentic-development), which read F_P and F_D at the audit and at the method layer.
+- Row 3, the bounded context: [PROFILES §1](PROFILES.md#1-the-boundary), which keeps the traversal record and the functor kinds as terms of AXIOMATIC_CALCULUS §5 apart from the profile's shorthands; [§11.5B](#115b-execution-authority-audit), which binds F_P and F_H to the source concepts of SPEC_METHOD §5 through §5 Probabilistic compute.
+- Row 4, graph functions and refinement: [PROFILES §2](PROFILES.md#2-graph-execution), which keeps the refinement binding with §11.8 as its specialised contract; [DESIGN_MODULE Atomic functions and higher-order composition](DESIGN_MODULE.md#atomic-functions-and-higher-order-composition), where a product under this profile binds its composition and effect algebra to GTL composition and ABG interpretation; [§11.7](#117-manual-walkthrough-must-still-be-lawful), step 2; [§17](#17-invocation-rule), steps 6 and 8; [§19](#19-ramp-up-checklist), question 3; [§16](#16-failure-pattern), patterns 2 and 7.
+- Row 5, published constructive carriers: [DESIGN_MODULE §2](DESIGN_MODULE.md#2-graph-execution-alignment-and-escalation), which is not used to hide graph functions inside service methods, and [DESIGN_MODULE §11 Design review questions](DESIGN_MODULE.md#design-review-questions) 29 to 31; [UX §3](UX.md#3-product-truth-and-admitted-carriers), where a published graph function or lawful composition is an admitted carrier; [§9](#9-method-governance-and-audit), which asks which public graph functions carry the transition; [§17](#17-invocation-rule), steps 6 to 8; [§19](#19-ramp-up-checklist), questions 3 to 5; [§16](#16-failure-pattern), patterns 9 and 10.
+- Row 6, outcome-first realisation order: [DESIGN_MODULE §2](DESIGN_MODULE.md#2-graph-execution-alignment-and-escalation), which orders outcome traversal, declarative carrier structure and deterministic module realisation and reprices a module that owns next work or closure, with the graph-execution checks of the [DESIGN_MODULE Functional realisation checklist](DESIGN_MODULE.md#functional-realisation-checklist); [§17](#17-invocation-rule), step 14; [§16](#16-failure-pattern), patterns 10 and 11. §14 Dogfooding has no separate consumer; it binds only a product that provides this profile's framework behaviour, and a violation shows as §16 pattern 10.
+- Row 7, one execution authority: [PROFILES §2](PROFILES.md#2-graph-execution), which indexes the ownership split of §10; [UX §3](UX.md#3-product-truth-and-admitted-carriers), where an ABG event or command boundary is an admitted carrier, [UX §8](UX.md#8-continuation-and-replay), whose view does not own continuation because the runtime does, and [UX Relationship to other members](UX.md#relationship-to-other-members), where UX surfaces are projection and query surfaces under this profile; [DESIGN_MODULE §2](DESIGN_MODULE.md#2-graph-execution-alignment-and-escalation), which keeps continuation and re-entry decisions out of deterministic controllers, and [DESIGN_MODULE Relationship to other members](DESIGN_MODULE.md#relationship-to-other-members); [§9](#9-method-governance-and-audit), which asks whether a command, service or query surface replaces ABG continuation and whether the §11.5B audit holds; [§11.7B](#117b-real-authority-path-negative-proof-stdo-up-010), whose supported relation leaves traversal, event, continuation and replay truth with ABG; [§17](#17-invocation-rule), step 10; [§19](#19-ramp-up-checklist), questions 6 and 9; [§16](#16-failure-pattern), patterns 11 and 12.
+- Row 8, projection over constructive history and evaluation separation: [§9](#9-method-governance-and-audit), which asks which projected or query state is exposed without replacing ABG runtime truth; [§11.7B](#117b-real-authority-path-negative-proof-stdo-up-010), where no query or projection may become a rival traversal controller; [§17](#17-invocation-rule), step 13; [§19](#19-ramp-up-checklist), questions 7 and 8; [§16](#16-failure-pattern), pattern 14. No section of another member applies these rules; UX §3 binds a UX projection surface to admitted carriers under its own rule.
+- Row 9, evidence before closure and the ledger: [§9](#9-method-governance-and-audit), which asks which proof or closure lane justifies a capability; [§11.5B](#115b-execution-authority-audit), where the closure fold stays with ABG and a worker self-report or product postflight closes nothing; [§17](#17-invocation-rule), step 11; [§19](#19-ramp-up-checklist), questions 10 and 12; [§16](#16-failure-pattern), pattern 6.
+- Row 10, admitted facts, correction and replayability: [§11.5B](#115b-execution-authority-audit), where runtime event emission, append and replay stay with ABG and a direct append or side-ledger mutation is forbidden; [§11.5C](#115c-projection-source-coherence), where runtime status views derive from ABG runtime facts, events, replay or projection truth; [§17](#17-invocation-rule), step 11; [§19](#19-ramp-up-checklist), question 10.
+- Row 11, yield: [§17](#17-invocation-rule), step 12; [§19](#19-ramp-up-checklist), question 11; [§16](#16-failure-pattern), pattern 13. No section of another member applies it: yield is a closure decision of this member's loop, read elsewhere only through its core value.
+- Row 12, the selected outcome and lawful action selection: [§17](#17-invocation-rule), step 11, from intent lineage through target binding and lawful action selection; [§19](#19-ramp-up-checklist), question 10; [§16](#16-failure-pattern), pattern 14. No section of another member applies these rules; the selected outcome they bind to is SPEC_METHOD §3's, which this member applies and which applies nothing of it.
+- Row 13, closure decisions and the core mapping: [§19](#19-ramp-up-checklist), question 11; [§16](#16-failure-pattern), pattern 13. No section of another member applies these rules; a consumer of a closure decision or audit outcome reads its core value under FOUNDATIONS §4 Results.
+- Row 14, the ODD product and its ownership split: [PROFILES §2](PROFILES.md#2-graph-execution), which indexes §10 as the ownership split of graph execution; [DESIGN_MODULE Relationship to other members](DESIGN_MODULE.md#relationship-to-other-members), [UX §2](UX.md#2-role-and-composition) and [WORLD_MODEL §2](WORLD_MODEL.md#2-role-and-imports), which leave graph-native product shape to this profile; [§17](#17-invocation-rule), steps 4 to 9; [§18](#18-cold-start-reading-order); [§19](#19-ramp-up-checklist), questions 1 to 7.
+- Row 15, method role and composition: [UX §2](UX.md#2-role-and-composition) and [UX Relationship to other members](UX.md#relationship-to-other-members), [WORLD_MODEL §2](WORLD_MODEL.md#2-role-and-imports) and [DESIGN_MODULE Relationship to other members](DESIGN_MODULE.md#relationship-to-other-members), each of which composes with this profile and leaves it what it owns; [§17](#17-invocation-rule), steps 1 to 3; [§18](#18-cold-start-reading-order), whose closing paragraph divides structural expectation, domain law and current line.
+- Row 16, invocation and reading order: [§19](#19-ramp-up-checklist), whose questions test what the sequence and the reading order produce. No section of another member applies them: they bind the actor who enters this member, and the acquisition they require is F1's rule, imported in the premise column.
+- Row 17, method governance and audit: [§11.7A](#117a-conforming-agentic-development), where shared method change still follows §9 and repeated agentic execution ratifies nothing. No section of another member applies it; the audit governs moves under this profile, and shared-law adoption across members is SPEC_METHOD §6's rule.
+- Row 18, responsibility layers and local binding: [§9](#9-method-governance-and-audit), whose audit asks which layer or capability class is implemented and which local typed assets bind it, and distinguishes shared structural law from local semantic bindings; [§19](#19-ramp-up-checklist), questions 2 and 6. No section of another member applies these rules; they bind a product's binding of this profile's layers, which the product declares in its own authority surfaces.
+- Row 19, capability roles and consumer binding: [DESIGN_MODULE Identity defaults from a bound runtime realisation](DESIGN_MODULE.md#identity-defaults-from-a-bound-runtime-realisation), where a consumer-bound realisation of the ABG role publishes defaults for its own runtime surfaces; [§11.5B](#115b-execution-authority-audit), where the execution authority is the one consumer-bound realisation of the ABG role; [§11.7B](#117b-real-authority-path-negative-proof-stdo-up-010), where the consumer owns the concrete test and evidence mechanism.
+- Row 20, manual walkthrough and conforming agentic development: [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope), which names §11.7A as the ODD specialisation of prompt construction; [§11.7A](#117a-conforming-agentic-development), whose walkthrough is §11.7's conformance proof; [§19](#19-ramp-up-checklist), question 14; [§16](#16-failure-pattern), patterns 3 and 15.
+- Row 21, real authority-path negative proof: no separate consumer applies. The property binds negative evidence for an ODD or graph-native boundary; the consumer owns the concrete test and evidence mechanism, as the section says, and the negative-proof rules of other members, TICKETS §6 Mixed-state negative proof and SPEC_METHOD §7 Hard-break discipline, are their own and name this section nowhere.
+- Row 22, builder, release and source distinctions: [§11.7](#117-manual-walkthrough-must-still-be-lawful), where automation that collapses the installed builder and the product under development into one authority surface is unlawful, for §7; otherwise no separate consumer applies: the generic rules that §4, §13 and §15 specialise are PRODUCT_DEFINITION §4's, RELEASE §4's and ASSURANCE §5's, which name this member nowhere.
+- Row 23, product boundary: [§11.7](#117-manual-walkthrough-must-still-be-lawful), where automation that depends on implementation-carrier knowledge the installed product should not have is unlawful; [§17](#17-invocation-rule), step 3; [§16](#16-failure-pattern), pattern 4.
+- Row 24, convergence under zoom and scenarios: [§17](#17-invocation-rule), step 9; [§19](#19-ramp-up-checklist), questions 12 and 13; [§16](#16-failure-pattern), patterns 5, 6 and 8. No section of another member applies these rules; ASSURANCE §4 and §6 own the generic scenario-bundle and significant-path law and name this member nowhere.
+- Row 25, the core-law conjunction: [§16](#16-failure-pattern), which declares the profile violated when any pattern holds; [§11.5B](#115b-execution-authority-audit), whose closure conditions leave the product not ODD-correct over GTL/ABG when any one is present; [§19](#19-ramp-up-checklist), whose closing sentence reads an unanswered question as a product not yet ODD-shaped.
+
+Each consumer applies the rule and decides nothing the owning section does
+not (P2, P6).
+
+Sections that add no rule of their own (A0 to A16 are the axioms of
+§11.5D):
+
+- §1's first two paragraphs say what the instruction `using ODD, build
+  this product` means by naming rules of §5, §10 and §11, which the rows
+  trace.
+- §16 lists fifteen failure patterns. Each is the violation of a rule a
+  row traces: 1, §5 Nodes and Vectors; 2, §5 Graph functions; 3, §11.7;
+  4, §6 and §11.7; 5, §12; 6, A6 and §11.9; 7, §11.8; 8, §11.9; 9, §11.2,
+  §11.2A and §10 Query and service layers; 10, §11.2A; 11, §11.2A and
+  §11.5A; 12, §11.5B; 13, A9; 14, A0, A12 and A16; 15, §11.7A.
+- §19 asks fourteen questions, each for the surface that a traced rule
+  requires: 1, §17 step 4; 2, §11.1; 3, §11.2; 4, §11.3; 5, §11.4; 6, §10
+  and A15; 7, §11.5; 8, §11.5C; 9, §11.5B; 10, §11.5D; 11, A8 and A9; 12
+  and 13, §11.9; 14, §11.7A. Its closing sentence is a diagnostic over
+  those surfaces. Whether a product is built correctly is decided by §11,
+  and whether a move complies by the audit of §9.
+- §20 is a compression of this member and owns no determination (§20).
+- §21 records where each predecessor claim is carried and decides no
+  outcome ([FOUNDATIONS §3](FOUNDATIONS.md#foundation-to-law)).
+
+The table is new in this corpus. Purpose and material relation: an actor
+started on this member sees which rules follow from the foundations and
+which are choices, and who owns each choice, so no choice is presented as
+derived (P6, P1).
 
 ## 2. Method role
 
@@ -391,6 +515,19 @@ implementation is not fully approved until this profile is updated. If the
 result is non-compliance, the implementation should be repriced, repaired
 or rejected, not normalised by repetition (P6).
 
+Mapping of the audit outcome to the core result algebra, new in this
+corpus. Purpose: [FOUNDATIONS §4 Results](FOUNDATIONS.md#results) states
+the outcome of every evaluation in the core. Material relation: a design,
+ticket or proof that consumes the audit reads incorporation as neither
+compliance nor failure. Each outcome maps for the predicate "the move
+complies with the current profile" (P5, P6):
+
+| Outcome | Core value | Ground |
+|---|---|---|
+| compliant | satisfied | the move meets the law of the current profile |
+| non-compliant | falsified | the law of this profile that the move violates is the counterexample |
+| valid and worth incorporating | out_of_frame | the current profile does not declare the law the move needs; the outcome names that law, this profile as its owner and the update it requires, which is the reconfiguration pressure of out_of_frame ([FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Out of frame or indeterminate) |
+
 In practice no shared structural pattern becomes approved by usage; no
 grey pattern becomes constitutional by drift; reusable structural law is
 ratified in this profile; and local product law is ratified in the
@@ -589,14 +726,18 @@ The audit must inventory at least these surfaces (P6):
 
 Where these surfaces admit a consequential entity transformation, ABG's
 admission authority is the graph-native specialisation of transformation
-admission completeness
-([STDO-UP-016](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016),
-whose successor home is the software-design profile, PROFILES §3). ABG's
-broader execution, supervision, retry and projection authority continues
-to derive from this profile and is not thereby reclassified as admission
-authority. `F_P` and `F_H` are the ODD projections of the
-candidate-producer and human-adjudication roles that UP-016 declares
-generically (P6, P1).
+admission completeness, whose admission semantics
+[ACTIVATION §4](ACTIVATION.md#complete-enclosing-relation-admission) owns;
+the software-design profile restates the predecessor rule in
+[DESIGN_MODULE, Transformation admission completeness](DESIGN_MODULE.md#transformation-admission-completeness-up-016)
+(provenance rc.2
+[STDO-UP-016](stdo://releases/v2.5.1-rc.2/standards/DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016)).
+ABG's broader execution, supervision, retry and projection authority
+continues to derive from this profile and is not thereby reclassified as
+admission authority. `F_P` and `F_H` are the ODD projections of the
+candidate-producer and human-adjudication roles, which this profile binds
+to the source concepts of SPEC_METHOD §5 in
+[§5 Probabilistic compute](#probabilistic-compute) (P6, P1).
 
 Reviewing produced artifacts alone does not satisfy the audit. It must
 include a code, call-graph or static-surface review appropriate to the
@@ -648,7 +789,11 @@ loop running from intent lineage and model synthesis through observation
 to the next lawful action. This is the profile's homeostasis loop, and
 its constitutional surface names the operative functions directly:
 `synthesize_model`, `eval_gap`, `evaluate_next` and `evaluate_action`
-(P2, P5, P6).
+(P2, P5, P6). The loop is this profile's binding of
+[ACTIVATION §1 Feedback and diagnosis](ACTIVATION.md#construction-relation):
+it corrects towards the required conditions as observations arrive,
+guarantees neither convergence nor the adequacy of those conditions, and
+its diagnoses distinguish the four causes named there (P2, P6).
 
 The selected Product outcome under STDO-UP-013
 ([SPEC_METHOD §3](SPEC_METHOD.md#3-outcome-conservation)) is external
@@ -717,7 +862,7 @@ authority (P6):
 | --- | --- | --- | --- |
 | `synthesize_model` | `IntentLineage + prior ProductAssetModel + admitted product truth` | `ProductAssetModel` | Model synthesis. It may update desired and known typed asset truth. It must not observe the worksite, select work, invoke work, or close work. |
 | `eval_gap` | `ProductAssetModel + RuntimeEventLog + RuntimeProjection + Worksite` | `ObservationSnapshot + GapPressureRow` | Read-only gap discovery. It compares desired model truth to observed reality and emits missing, partial, blocked, waiting, or ambiguous asset pressure. It does not choose work and does not close work. |
-| `evaluate_next` | `NextActionBasis + fresh eval_gap + TargetObligationBinding + ActionCatalog + Policy` | `PriorityProjection + NextActionProjection + selected_action` | Next-action selection. `TargetObligationBinding` carries the exact selected Product outcome and any admitted bounded-basis refs. `NextActionBasis` is either `initial_selection(IntentLineage, ProductAssetModel)` or one explicit post-action basis derived from an `EdgeClosureDecision`: `post_yield_resume`, `post_close_graph_continuation`, `post_retry`, `post_repair`, `post_reenter`, `post_reprice`, or `post_block`. Except for unresolved `post_reprice`, which returns typed no-action pending separately admitted constitutional authority, it may select only published lawful graph actions that bind to the gap and governing basis. It does not admit construction intent and does not evaluate the result of an action. |
+| `evaluate_next` | `NextActionBasis + fresh eval_gap + TargetObligationBinding + ActionCatalog + Policy` | `PriorityProjection + NextActionProjection + selected_action`; for a typed no-action, also its own core result (A4) | Next-action selection. `TargetObligationBinding` carries the exact selected Product outcome and any admitted bounded-basis refs. `NextActionBasis` is either `initial_selection(IntentLineage, ProductAssetModel)` or one explicit post-action basis derived from an `EdgeClosureDecision`: `post_yield_resume`, `post_close_graph_continuation`, `post_retry`, `post_repair`, `post_reenter`, `post_reprice`, or `post_block`. Except for unresolved `post_reprice`, which returns typed no-action pending separately admitted constitutional authority, it may select only published lawful graph actions that bind to the gap and governing basis. It does not admit construction intent and does not evaluate the result of an action. |
 | `evaluate_action` | `ConstructionIntent + AdmittedEvidence + TargetObligationBinding + Policy` | `EdgeFulfillmentLedger + EdgeClosureDecision` | Action-result evaluation. It decides close, yield, retry, repair, re-enter, reprice, or block for the action just taken. It does not choose the next graph action. |
 
 The word evaluator is not sufficient by itself. A design, ticket, code
@@ -871,6 +1016,41 @@ Product outcome or bounded basis and supplies it through a new
 ordinary, but it is still an `evaluate_next` decision and not hidden
 sequential control (P5, P2, P6).
 
+Selection and its results. `evaluate_next`'s selection of what is
+invoked next is invocational data (A11) and is not itself a value of the
+core result algebra of
+[FOUNDATIONS §4 Results](FOUNDATIONS.md#results). A typed no-action
+disposition, however, records a material determination: that no
+published lawful action can be selected. Each typed no-action returns its
+own result for the predicate "a published lawful action can be selected
+for the current gap on the exact basis", refined by cause as A8 refines
+`block`, on `initial_selection` and after a closure decision alike. A
+closure decision it follows (`post_retry`, `post_repair`, `post_reenter`,
+`post_block`, `post_reprice`) keeps its own value for the edge predicate
+under A8 below and is evidence for the selection, not its result; neither
+value counts toward the other's predicate
+([FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results)).
+An earlier result stands for a no-action only where it decided this same
+predicate on the current basis. In the rule above, `reprice or block` and
+`block with typed no-action disposition` name typed no-actions of
+`evaluate_next`, not closure decisions, which only `evaluate_action` makes
+(A4a); on `post_reprice` the no-action is `no_action(undeclared)`, naming
+the outcome or bound the reprice found undeclared and the re-entry that
+would declare it (P5, P6):
+
+| Typed no-action | Core value | Ground |
+|---|---|---|
+| `no_action(undeclared)` | out_of_frame | the gap needs an action that the admitted catalogue does not publish, or a relation, capability or authority that no admitted basis declares (A3); the value names what is missing and its owner, as for `block(undeclared)` |
+| `no_action(basis)` | invalid_basis | no published action is lawful on the current bound outcome, catalogue and policy, which cannot support the gap, as for `block(basis)` |
+
+The typed no-action stays beside its core value as the domain outcome,
+and producing the next-action projection establishes availability only
+([ACTIVATION §3 Construction availability](ACTIVATION.md#construction-availability)).
+Where the graph is complete and no action follows a closed edge, nothing
+is refused and no selection determination is made: the empty selection is
+invocational data, and `close` keeps its own value for the edge predicate
+under A8.
+
 A4a Evaluation function separation. `synthesize_model`, `eval_gap`,
 `evaluate_next` and `evaluate_action` are separate authority functions.
 `synthesize_model` may synthesise the current product asset model from
@@ -940,25 +1120,93 @@ Each disposition is replay-visible and must carry basis and reason refs
 sufficient to reproduce the decision (P5, P6).
 
 Mapping of the closure decision to the core result algebra, new in this
-corpus. Purpose: the one-algebra rule of
-[ACTIVATION §3](ACTIVATION.md#3-result-algebra), under which a profile
-with its own decision vocabulary declares a total mapping to the five core
-members and adds none. Material relation: each closure decision, read with
-the cause or evidence its basis and reason refs record, to exactly one core
-member, which is what a composite over the edge joins; the decision keeps
-its own vocabulary and its basis and reason refs, which A8 requires to be
-sufficient to reproduce it and which therefore carry that cause or
-evidence (P5, P6).
+corpus. Purpose: [FOUNDATIONS §4 Results](FOUNDATIONS.md#results) states
+every outcome in the core or in a refinement that maps each refined value
+to exactly one core value and adds no core value. Material relation: a
+composite over the edge joins each closure decision as one core value, so
+a failure, an undecided closure and a needed re-entry stay distinct (P5,
+P6). The closure decision is `evaluate_action`'s result over admitted
+evidence, mapped for the predicate "the edge's obligations are fulfilled
+on the exact basis". The bounded action it judges has its own step result
+under [ACTIVATION §3 Construction availability](ACTIVATION.md#construction-availability)
+for "a candidate is available", and neither value counts toward the
+other's predicate
+([FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results)).
+Each decision keeps its own vocabulary and its basis and reason refs
+beside its core value (P5, P6).
 
-| Decision | Core member | Reason |
+Refined by cause. Where a decision would map to one of two core values
+according to its cause, the cause is part of the refined value, written
+in parentheses as in `re-enter(basis)`, and each refined value maps once
+(FOUNDATIONS §4 Results, Refinements). The cause is read from the
+decision's basis and reason refs, which A8 requires to be sufficient to
+reproduce it. The seven decisions of A8 stay the closed vocabulary; a
+refined value names a decision and its cause and adds no decision (P5,
+P6). The causes are:
+
+- `retry(defeated)`: admissible evidence defeats the edge for this attempt
+  while the same action stays lawful; `retry(undecided)`: every other
+  retry, as after a liveness interruption, which alone never gives
+  `retry(defeated)` (A10).
+- `repair(implementation)` and `repair(proof)`: the edge's governing
+  relation, basis and target binding stay coherent, and a local defect,
+  in the implementation or in its proof, keeps the edge from closing, so
+  a repair of the same edge is the lawful next action (A11).
+  `repair(implementation)`: admitted evidence shows the implementation
+  failing an edge obligation; `repair(proof)`: every other repair, the
+  defect being in the proof.
+- `re-enter(undeclared)` and `block(undeclared)`: the cause is a relation,
+  capability or authority that no admitted basis declares;
+  `re-enter(basis)` and `block(basis)`: every other cause, the current
+  basis being unable to support the edge, as when it is stale, substituted
+  or unrepairable. A decision with both causes records both and takes the
+  `basis` value, as
+  [ACTIVATION §3 Construction availability](ACTIVATION.md#construction-availability)
+  decides for `re_entry_requested`.
+
+| Decision | Core value | Ground |
 |---|---|---|
 | `close` | satisfied | the ledger's admitted evidence fulfils the edge's obligations on the exact basis |
-| `yield` | indeterminate | the edge stays lawful and its closure is not yet decided; it reaches indeterminate by the stop-state route of construction availability's `incomplete`, not as the evaluation's result, without failure classification, as A9 requires |
-| `retry` | falsified or indeterminate | falsified only when admissible evidence defeats the edge for this attempt while the same action stays lawful, otherwise indeterminate; a liveness interruption alone never yields falsified (A10); A9 separates this failure-classified re-attempt from yield |
-| `repair` | falsified or indeterminate | the result is locally defective while the governing relation stays coherent (ACTIVATION §3 Disposition, `local_repair`), whose defect is in the implementation or in the proof; falsified when admitted evidence shows the implementation failing an edge obligation, the failing obligation row being the counterexample; otherwise indeterminate, the defect being in the proof, so the admitted evidence cannot decide the obligation, and the decision's reason refs name the repaired proof that would decide (P5, P6) |
-| `re-enter` | out_of_frame or invalid_basis | the edge cannot close on its current basis because an upstream asset or governing relation must change; the member follows the cause in the decision's reason refs, as construction availability maps `re_entry_requested` under ACTIVATION §3: out_of_frame when the cause is an undeclared relation, capability or authority, and invalid_basis for every other cause, the current basis being unable to support the edge, as when it is stale, substituted or unrepairable |
-| `reprice` | out_of_frame | further work needs a selected outcome or bound that no admitted basis declares; the decision names it, its owner and the constitutional re-entry it requests, which is the reconfiguration pressure of out_of_frame (ACTIVATION §4) |
-| `block` | out_of_frame or invalid_basis | `evaluate_action` decides that the action just taken leaves the edge unable to proceed on its current basis; the member follows the cause in the decision's reason refs, as for `re-enter` |
+| `yield` | indeterminate | the edge stays lawful and the admitted evidence, progress or a waiting state, does not yet decide its obligations; the replay-visible resume basis names what would decide; no failure is classified, as A9 requires |
+| `retry(defeated)` | falsified | the evidence that defeats the edge for this attempt is the counterexample; A9 separates this failure-classified re-attempt from yield |
+| `retry(undecided)` | indeterminate | the attempt ended without evidence that decides the edge's obligations; the decision's reason refs name the re-attempt that would decide |
+| `repair(implementation)` | falsified | the failing obligation row is the counterexample (P5, P6) |
+| `repair(proof)` | indeterminate | the defect is in the proof, so the admitted evidence cannot decide the obligation; the decision's reason refs name the repaired proof that would decide (P5, P6) |
+| `re-enter(undeclared)` | out_of_frame | the edge cannot close on its current basis because an upstream asset or governing relation must change, and the change needs a relation, capability or authority that no admitted basis declares; the decision names it and its owner |
+| `re-enter(basis)` | invalid_basis | the edge cannot close on its current basis because an upstream asset or governing relation must change, and that basis cannot support the edge |
+| `reprice` | out_of_frame | further work needs a selected outcome or bound that no admitted basis declares; the decision names it, its owner and the constitutional re-entry it requests, which is the reconfiguration pressure of out_of_frame ([FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Out of frame or indeterminate) |
+| `block(undeclared)` | out_of_frame | `evaluate_action` decides that the action just taken leaves the edge unable to proceed, because it needs a relation, capability or authority that no admitted basis declares |
+| `block(basis)` | invalid_basis | `evaluate_action` decides that the action just taken leaves the edge unable to proceed on its current basis, which cannot support it |
+
+Closure decisions and dispositions. The closure decisions of A8 and their
+refined values are this member's, and they answer the edge predicate
+above. The dispositions `accept`, `local_repair`, `re_enter` and `reject`
+are owned by [ACTIVATION §3 Disposition](ACTIVATION.md#disposition) and
+answer another predicate, "the candidate is accepted at its declared
+boundary". A closure decision is not a disposition and is never recorded
+as one, and no disposition is a closure decision: `repair` is not
+`local_repair`, and `re-enter` is not `re_enter`. Edge closure is
+evidence toward acceptance and never acceptance itself (the
+selected-outcome paragraphs above). Their core values differ because their
+predicates differ. `repair(proof)` is `indeterminate`, because a
+defective proof leaves the edge's obligations undecided, while
+`local_repair` is `falsified`, because the local defect defeats
+acceptance of the candidate. `re-enter(undeclared)` is `out_of_frame`,
+because the change needs a relation, capability or authority that no
+admitted basis declares, while `re_enter` is `invalid_basis`. Neither
+value counts toward the other's predicate
+([FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results)).
+In §11.5D, §16 and §19 "disposition" names a closure decision (the
+selected-outcome paragraphs, A8, A11, the constitutional equation, §16
+item 13 and §19 question 11) or, in "typed no-action disposition", a
+selection of `evaluate_next` (A3, A4); there it never names a disposition
+of ACTIVATION §3. The dispositions of §21 are the successor dispositions
+of [RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015)
+(P1, P5, P6). Purpose and material relation:
+a consumer that read an edge's `repair` as `local_repair`, or `re-enter`
+as `re_enter`, would take an undecided edge for a defeated candidate, or a
+missing declaration for an unsupporting basis; the material relation is
+whether a closure decision is combined as an acceptance result.
 
 A9 Yield is lawful iterate. `yield` is the lawful iteration boundary (P5):
 
@@ -1232,7 +1480,10 @@ packet carries only the smallest declared authority sufficient to decide
 the step, with its source refs, and that conformance is enforced by
 admitting the produced artifact rather than by enlarging what the agent
 must hold. Compression is prompt input and never the deciding authority
-(P0, P6). A derived surface or projected frame of the general method may
+(P0, P6). What a derived surface may decide is owned by
+[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope),
+Acquisition and Standalone scope; this section adds only the ODD limit
+that follows. A derived surface or projected frame of the general method may
 orient the agent to source precedence, lawful re-entry and traceability;
 it must not be used to decide product-specific behaviour, which must come
 from the current product authority packet (P6, P1; provenance rc.2
@@ -1366,7 +1617,9 @@ runs against that installed development form in an isolated environment.
 For a graph-native ODD product the proving lane should exercise install,
 project bootstrap, graph traversal, evidence collection and
 target-relative closure. Direct source checks stay useful and do not
-replace installed-dev proof (P6, P3).
+replace installed-dev proof (P6, P3). This rule is the profile's binding of
+[ASSURANCE §5 Installed dev proof](ASSURANCE.md#5-installed-dev-proof), which
+owns it.
 
 ## 14. Dogfooding rule
 
@@ -1544,6 +1797,14 @@ packet, with produced artifacts passing deterministic admission: the
 agentic walkthrough proves the process can be followed, and admission
 proves each act conforms (P0, P6).
 
+This section is a compression of this member, a derived surface in the
+sense of [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope),
+Acquisition. Its sources are §1, §2, §11.1 to §11.5D, §11.7 and §11.7A of
+this member at the same digest, and it owns no determination. Where it and
+a source section differ, the source section decides
+([ACTIVATION §2 Staleness of derived surfaces](ACTIVATION.md#staleness-of-derived-surfaces))
+(P1, P6).
+
 ## 21. Source dispositions
 
 Rows of rc.2 ODD_METHOD.md received by this member, all 48 under
@@ -1559,19 +1820,23 @@ imperatives ("do not", "declare") are written as indicative law or as
 written as labelled paragraphs; American spellings are written British in
 prose and kept in identifiers (P6, P3).
 
-Four clauses have no predecessor row and are new. Two are bindings that
+Seven clauses have no predecessor row and are new. Two are bindings that
 FOUNDATIONS P0 and ACTIVATION §4 assign to PROFILES §2, which indexes them
 in this profile: the binding of the bounded step of FOUNDATIONS P0 (§5
 Probabilistic compute) and the binding of the refinement of ACTIVATION §4
 (§5 Graph functions). The third is the opening note that roles are not
 functor kinds, which restates ACTIVATION §1 and AXIOMATIC_CALCULUS §5
-together. The fourth is the mapping of the A8 closure decisions to the
-core result algebra (§11.5D), which ACTIVATION §3 requires of a profile
-with its own closure vocabulary (P0, P1, P5).
+together. The fourth and fifth are the mappings of the A8 closure
+decisions (§11.5D) and of the §9 audit outcomes to the core result
+algebra, which FOUNDATIONS §4 Results requires of a profile with its own
+result vocabulary. The sixth is the family table (§1 Foundation to law),
+in the format of FOUNDATIONS §3 Foundation to law. The seventh is the
+statement in §20 that the canonical compression is a derived surface of
+this member under ACTIVATION §2 and owns no determination (P0, P1, P5, P6).
 
 | rc.2 anchor | Disposition | Locus |
 |---|---|---|
-| #1-position | conserved; the instruction written `using ODD, build this product`; its eight meanings, the paradigm equation, the three role expansions, the bounded-context URN, consumer binding and the two core jobs restated | §1 |
+| #1-position | conserved; the instruction written `using ODD, build this product`; its eight meanings, the paradigm equation, the three role expansions, the bounded-context URN, consumer binding and the two core jobs restated; the family table under Foundation to law is new | §1 |
 | #2-method-role | conserved; WORLD_MODEL_METHOD written as the world-model profile (WORLD_MODEL, tier 3) | §2 |
 | #3-method-composition | conserved | §3 |
 | #4-method-folder-semantics | conserved; the three classes and the rule that only method members are constitutional restated generically, the class named by its predecessor membership (`*_METHOD.md`) and in this corpus by the method members the standards README names (the tier 1 and tier 2 standards and, when a project selects them, the tier 3 profiles); the authoring path `specification/standards/` written generically, its successor path bound at packaging | §4 |
@@ -1584,7 +1849,7 @@ with its own closure vocabulary (P0, P1, P5).
 | #6-product-boundary | conserved | §6 |
 | #7-self-host-boundary-rule | conserved | §7 |
 | #8-responsibility-layers-and-local-binding | conserved | §8 |
-| #9-method-governance-and-audit | conserved; "ODD_METHOD.md" written as this profile | §9 |
+| #9-method-governance-and-audit | conserved; "ODD_METHOD.md" written as this profile; the mapping of the three audit outcomes to the core result algebra is new | §9 |
 | #10-what-an-odd-product-is | conserved; the application boundary block carried exactly; the `reference_frame_bases` meaning routed to REFERENCE_FRAME | §10 |
 | #product-specification-software-development-topology | conserved | §10 Product specification |
 | #product-realization-software-development-topology | conserved | §10 Product realisation |
@@ -1599,12 +1864,12 @@ with its own closure vocabulary (P0, P1, P5).
 | #114-the-gtl-module-is-the-operative-publication-surface | conserved | §11.4 |
 | #115-current-state-is-a-projection-over-constructive-history | conserved | §11.5 |
 | #115a-abg-owns-continuation-and-re-entry | conserved | §11.5A |
-| #115b-execution-authority-audit | conserved; the five-surface inventory carried exactly; UP-016 keeps its rc.2 route, its successor home being the software-design profile | §11.5B |
+| #115b-execution-authority-audit | conserved; the five-surface inventory carried exactly; UP-016's admission semantics are linked to their owner, ACTIVATION §4, and the predecessor rule to its restatement in the software-design profile, with the rc.2 route kept as provenance; the roles that F_P and F_H project are reached through the bindings of §5 Probabilistic compute to SPEC_METHOD §5 | §11.5B |
 | #115c-projection-source-coherence | conserved | §11.5C |
-| #115d-constructive-evaluation-and-yield-loop | conserved in full; the authority chain, the sixteen-object table, the four-function table, every axiom block, the constitutional equation and its where-clause carried exactly; A0 to A16 as labelled paragraphs; UP-013 routed to SPEC_METHOD §3; Design Module Method written as the software-design profile | §11.5D |
+| #115d-constructive-evaluation-and-yield-loop | conserved in full; the authority chain, the sixteen-object table, the four-function table, every axiom block, the constitutional equation and its where-clause carried exactly; A0 to A16 as labelled paragraphs; UP-013 routed to SPEC_METHOD §3; Design Module Method written as the software-design profile; the mapping of the closure decisions to the core result algebra is new, for the predicate "the edge's obligations are fulfilled on the exact basis", with `retry`, `repair`, `re-enter` and `block` split by cause into refined values, each mapped to exactly one core value; new: `evaluate_next`'s selection is stated to be no result of the core, while each typed no-action returns its own result for the selection predicate by cause and a closure decision it follows keeps its own value for the edge predicate; new: the closure decisions are distinguished from the dispositions of ACTIVATION §3, and the ground of `repair` is stated in this member | §11.5D |
 | #116-product-specific-semantics-sit-above-the-shared-carrier | conserved | §11.6 |
 | #117-manual-walkthrough-must-still-be-lawful | conserved; "§5.2 and §5.3" written as §5 Vectors and Graph functions | §11.7 |
-| #117a-conforming-agentic-development | conserved; SPEC_METHOD.md and TICKET_METHOD.md written as SPEC_METHOD and TICKETS | §11.7A |
+| #117a-conforming-agentic-development | conserved; SPEC_METHOD.md and TICKET_METHOD.md written as SPEC_METHOD and TICKETS; what a derived surface may decide referred to ACTIVATION §2 | §11.7A |
 | #117b-real-authority-path-negative-proof-stdo-up-010 | conserved in full, with the supported-relation block carried exactly; this section is UP-010's only successor home | §11.7B |
 | #118-cumulative-environment-law-is-mandatory | conserved; "mandatory", "should declare", "may require" and "structurally wrong" kept; profile law, not generalised into the core; §5 Graph functions declares this environment as the specialised contract through which ACTIVATION §4 lets a refinement carry earlier outputs | §11.8 |
 | #119-global-convergence-must-be-stable-under-zoom | conserved; "usually" kept | §11.9 |
@@ -1618,4 +1883,4 @@ with its own closure vocabulary (P0, P1, P5).
 | #general-odd-product | conserved; nine steps with successor member names | §18 General ODD product |
 | #world-model-product | conserved; ten steps with successor member names | §18 World-model product |
 | #19-ramp-up-checklist | conserved; all fourteen questions | §19 |
-| #20-canonical-compression | conserved | §20 |
+| #20-canonical-compression | conserved; stated to be a compression of this member under ACTIVATION §2 that owns no determination | §20 |

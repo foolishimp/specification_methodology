@@ -1,0 +1,134 @@
+# console log for qualification/runs/C3S-07/TASK-r2
+# tenant root: /Users/jim/src/apps/specification_methodology-claude/specification_methodology/v3/build_tenants/claude
+# start 2026-10-13T22:42:04Z
+# step TASK-r2: python3 -I qualification/instruments/bounded_step.py --cap 110000 --run-dir qualification/runs/C3S-07/TASK-r2 --step-id TASK-r2 --card qualification/cases/C3S-CARD.md --block METHOD=standards/frames/binding.md --block TASK=qualification/cases/C3S-07/TASK.md --model sonnet
+## Bindings
+
+Predicate: each tenant's build-tenant binding, meaning its calculus binding (from the requirements calculus to its computational calculus) and its execution binding (from that calculus to its execution environment).
+
+**Operations, shared by both tenants.** Each operation is listed with its inputs, outputs and outcome.
+
+1. `assign`: takes an application and a pool or rota, and returns two assessors. The check that neither is the applicant is not stated in the facts (see No method source).
+2. `assess`: takes an application and returns a score from 0 to 10 in points, plus written reasons. It is recorded once per assessor.
+3. `conceal`: each assessment stays unseen by the other assessor until both are recorded.
+4. `rank`: takes the two scores and returns a ranking.
+5. `present`: gives the chair both assessments and the ranking.
+6. `decide`: the chair's decision, recorded with its reasons and the two scores used (G3).
+7. `notify`: informs the applicant of the decision.
+
+**Composition (the order is fixed).** `assign` comes first. The two `assess` operations are independent of each other. `rank` and `present` run only after both assessments are recorded. `decide` follows `present`, and `notify` follows `decide`.
+
+**Effects.** Every record operation changes the stored record. `notify` is an external effect, and each tenant binds it to a different channel.
+
+- **Effect values.** Each is `completed`, `not_effected` or `completion_unknown`. A lost response or an absent record keeps the value at `completion_unknown`; that value is `indeterminate`, not `completed`.
+- **Tenant S:** `notify` is an email.
+- **Tenant H:** `notify` is a posted letter.
+
+**Resource measures material to G1–G4.**
+
+- **G4 elapsed time.** The unit is working days. It starts at submission and must be ≤ 20 working days. The stop point is not stated in the facts: it could be when the email is sent, when the letter is posted, or when the applicant receives it. Until that boundary is declared, a G4 resource claim supports no conformance claim.
+- **Score unit.** Points from 0 to 10.
+- **Other measures.** Human effort, communication and machine resources are measured only where a selected obligation needs them. G1–G4 select none, and Plan F's 30% cost saving has no stated unit or boundary.
+
+**Operational assumptions on which conformance depends.**
+
+- **Tenant S:** the pool is available, the nightly job runs, and email can fail.
+- **Tenant H:** staff are available, envelopes stay sealed, and the post can fail.
+- **Both:** the chair is available.
+
+**Execution environment.**
+
+- **Tenant S:** a technology stack (web application and database), with the chair, the external assessors and the operator as the people involved.
+- **Tenant H:** a human process, made of the clerk, the staff assessors, paper forms, sealed envelopes, a spreadsheet formula and the chair.
+
+**Can the two share one calculus?** Yes, provided each binding shows that it satisfies the calculus's laws. The facts do not show that either does.
+
+- **The lead's claim fails.** Using no software changes the execution binding, not the calculus.
+- **What may differ.** The effects and failure behaviour of `notify`, and the resource behaviour, may differ between the email and the letter. These are material to the calculus and must be stated per binding.
+- **What may not differ.** Neither environment may remove a required human decision or a required independent assessment.
+
+## Author, actor and operation
+
+Predicate: the author, actor and operation-kind facts for each person.
+
+Author, actor and operation kind stay distinct, and none determines another.
+
+**Jon**
+- **Author:** of the description of tenant H's process. The facts name no other authorship.
+- **Actor:** the chair of tenant H.
+- **Operations:**
+  - He reads the sheets and ranking. This is an `assess`-free read, not an assessment.
+  - He decides and writes the reasons on the decision form. This is `decide`, and it is human adjudication if the governing authority admits him. G2 reserves the award decision to the chair, but the facts record no explicit admission or grant. I take G2's naming of the chair as that admission, and that is an assumption.
+- **Effect of his authorship:** it neither selects the environment nor grants authority. He cannot be an independent assessor of his own description.
+
+**Pia**
+- **Author:** none stated.
+- **Actor:** the clerk.
+- **Operations:**
+  - Logging applications is `record`.
+  - Assigning assessors from a rota is carrying out a rule-bound step.
+  - Handing out sheets, passing them to the chair and posting the letter are `relay`.
+  - Opening envelopes is `relay` and `record`.
+  - Computing the ranking by a fixed formula is `measure` or compute, which is mechanical.
+- **Human adjudication:** none of these is human adjudication. No admission is stated, and no judgment is exercised.
+
+**Lu**
+- **Author:** none stated.
+- **Actor:** the operator.
+- **Operations:**
+  - Running the nightly job is executing a step.
+  - Pressing `send` is `relay`, or carrying out a step.
+- **Human adjudication:** neither is human adjudication. No admission is stated, and the decision was already made by the system rule.
+
+**Judging the two status-report statements.**
+- **"Ranking in H is human judgement because Pia computes it."** This is wrong. The performer's identity does not decide the kind of an operation. The ranking is a mechanical formula, and no admission makes it adjudication.
+- **"Lu's step is human adjudication."** This is wrong, for the same reason. The chair's weekly list is read after the fact and decides nothing.
+
+## Model check
+
+Predicate: "the model passes the structural checker." This is `satisfied` for the model with zero diagnostics.
+
+**What it establishes.** It establishes structural conformance only. That covers closed syntax, types, identities, references, bases and mechanically decidable predicates of that model. It is evidence for semantic review.
+
+**What it does not establish.**
+- That the model is faithful to the real process.
+- That the process meets G1–G4, including independence, concealment, the chair's authority and the 20-working-day limit.
+- Execution conformance. That needs its own evidence.
+- Anything about semantic acceptance. A generic checker has no semantic or authority decision contract here.
+
+**Jon's claim.** "This shows tenant H conforms to G1–G4" is unsupported. Jon also authored the description, so his assessment would not be independent. On this evidence the conformance predicate is undecided (`indeterminate`).
+
+## Plan F
+
+Predicate: "tenant S and tenant H under Plan F conform to G1–G4."
+
+**Result: `falsified`.**
+
+**Deciding facts.**
+- **Part 1 (both tenants).** The second assessor reads the first's score and reasons and marks `agree` or `disagree`. This merges two required independent assessments, and it breaks G1 in three ways:
+  - The assessors are no longer independent.
+  - The second assessor's record is not a score from 0 to 10 with reasons.
+  - Concealment of each assessment from the other assessor is lost.
+- **Part 2 (tenant S).** The system issues the award when both scores are 8 or higher.
+  - This replaces the required chair decision (G2) with an automated result.
+  - Lu's `send` is `relay`, not adjudication.
+  - The chair's weekly list is read after the fact, so it does not restore the decision.
+  - G3's recorded chair reasons are also lost.
+- **Consequence.** A plan that merges required independent assessments, or substitutes an automated result for a required human decision, is a counterexample to the obligation it weakens. In any run under Plan F, the lost assessments and the lost decision have no applicable closed result.
+- **Conjunction.** One falsified mandatory result means the conjunction is not `satisfied`. Other satisfied components would not discard it.
+
+**Agreement figures.** Four of 200 applications differed by more than one point. This describes how often past independent scores matched. Matching outputs do not discharge lost independence or authority, so the figure is irrelevant to conformance. It also says nothing about the score pairs that disagree.
+
+**Savings.** The 30% cost saving and six working days saved do not discharge the lost independence or authority. They cannot weaken a requirement. A requirement may be weakened only by a change to the WHAT, made by its owner Ama.
+
+**Scope.** Tenant H under Plan F is falsified through Part 1 alone. Part 2 is stated for tenant S only.
+
+## No method source
+
+- Who counts as a different person, and non-applicant checking, for the pool and the rota. The facts do not say how either tenant checks that an assessor is not the applicant.
+- The G4 stop point of the elapsed-time measure, and the definition of a working day. The facts supply neither.
+- Whether the chair is admitted by an explicit grant. The method requires the admission, and the facts give none beyond G2's naming of the chair.
+- The conjunction's declared rule, meaning which results are mandatory and which non-satisfied value is reported. The method leaves this to the applying member. The `falsified` result for Plan F rests on the build-tenant binding rule's falsification of the lost obligation, not on a declared rule.
+- How to read the 4/200 figure statistically. The method excludes it from conformance, but supplies no guidance on its interpretation.
+# step exit 0
+# end 2026-10-13T22:42:50Z

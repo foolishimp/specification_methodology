@@ -1,0 +1,112 @@
+# 1. Coverage ledger
+
+**Predicate for every status:** on the declared coverage tuple (W-notify, G, B, E, S, T), a capable frame of S covers the evaluation with no unresolved conflict, or a governing authority the row cites excludes it. Each status maps to its core value and is a result of `audit_coverage` only, never of the evaluation itself.
+
+**The tuple.** Commit `9e1d2f44` with config rev 41 at 2026-10-11T12:00Z is declared and current, so the audit does not return `invalid_basis` and every row gets a status. Rows E1, E3 and E4 each carry a result or observation on a different basis or time. That affects the row's status, not the tuple.
+
+**Fields common to every row**
+- **Subject and basis:** W-notify at commit `9e1d2f44`, config rev 41, T 2026-10-11T12:00Z. The basis each earlier result bound is given per row.
+- **Operation authority:** none. No evaluation performs a mutation.
+- **Actor availability:** not in the subject. The envelope is named per row, but whether a named actor is available is missing.
+
+**E1: no message is sent twice for one event**
+- **Provenance:** requirement NR-2.
+- **Selected frames:** F-A. Its family is "delivery behaviour of the sender on one commit".
+- **Actor envelope:** an engineer with repository access and the staging replay harness.
+- **Semantic authority:** Lena.
+- **Decision authority:** Tomas.
+- **Evidence:** required is a replay on commit `9e1d2f44` under config rev 41. The only existing evidence, a 10,000-event replay on 2026-10-10, bound config rev 39. The retry window changed from 60 s to 300 s at 08:00Z on 2026-10-11, so that result is bound to a mismatched coordinate and is not reusable (RF-005, ACTIVATION §7).
+- **Dependencies:** shares config rev with E3. The retry–duplicate interaction has no declared conjunction. F-A's family names a commit but not a config revision as a coordinate.
+- **Status:** `conditionally_covered` (core `indeterminate`).
+- **Residual:** the condition is that the replay is re-run on rev 41. Missing from the subject: the replay's size or acceptance interval for rev 41, and whether config rev is a coordinate of F-A.
+
+**E2: schema v7 consumers accept v8 payloads**
+- **Provenance:** requirement NR-5.
+- **Selected frames:** F-B. Its family is "payload schema compatibility between producer and consumer revisions".
+- **Actor envelope:** any actor with the two schema files.
+- **Semantic authority:** Lena.
+- **Decision authority:** Tomas.
+- **Evidence:** a contract test of 2026-10-09 on schema revisions 7 and 8.
+- **Dependencies:** none stated.
+- **Status:** `covered` (core `satisfied`).
+- **Residual:** the result binds schema revisions, which the config change did not touch. The subject does not say that the schema files at `9e1d2f44` are revisions 7 and 8, and no recorded re-check shows independence from the config change. If either fails, the row is not `covered`.
+
+**E3: the retry policy bounds total sends to three per event**
+- **Provenance:** design note D-9.
+- **Selected frames:** F-A.
+- **Actor envelope:** as E1.
+- **Semantic authority:** the platform team.
+- **Decision authority:** Tomas.
+- **Evidence:** a result closed on 2026-10-10 on config rev 39. The retry policy is the very thing rev 41 changed, so that result is invalid for reuse. Required is a re-evaluation on rev 41.
+- **Dependencies:** as E1.
+- **Status:** `conditionally_covered` (core `indeterminate`).
+- **Residual:** the condition is re-evaluation on rev 41. Whether F-A's family includes retry-policy bounds is not decided by its declared text.
+
+**E4: the dead-letter queue is empty before release**
+- **Provenance:** release checklist item 7.
+- **Selected frames:** F-C (family "operational state of the queues at a named time") and F-A.
+- **Actor envelope:** F-C needs the operations lead with dashboard access. F-A needs the engineer envelope.
+- **Semantic authority:** not recorded. Who owns the meaning of "the dead-letter queue", including whether `dlq-shadow` is one, is missing.
+- **Decision authority:** Tomas.
+- **Evidence:** F-C, dashboard, 0 messages at 09:00Z, `satisfied`. F-A, log inspection, 12 messages in `dlq-shadow` at 09:30Z, `falsified`. Both fall after the 08:00Z config change. Their age against T, and whether they still hold at release, are not in the subject.
+- **Dependencies:** F-A and F-C with no combining rule declared.
+- **Status:** `conflicted` (core `falsified`).
+- **Residual:** the counterexample from F-A survives and stays unresolved for Tomas. Part 2 suggests F-A's activation may be outside its family. That is my reading, not a recorded disposition, so I do not discard the counterexample.
+
+**E5: the rate limiter drops no events under a burst of 500/s**
+- **Provenance:** post-mortem of INC-77.
+- **Selected frames:** none. No frame was activated, and no declared family states this question.
+- **Actor envelope:** missing.
+- **Semantic authority:** missing.
+- **Decision authority:** Tomas (the release decision).
+- **Evidence:** missing. A burst observation is required and none exists.
+- **Dependencies:** none stated.
+- **Status:** `uncovered` (core `falsified`).
+- **Residual:** no capable frame is shown, so the absence is the counterexample. The status would change if the frame-set authority shows that an existing frame's family includes this question.
+
+**E6: every consumer verifies webhook signatures**
+- **Provenance:** security obligation SEC-3.
+- **Selected frames:** none. No frame's family includes it.
+- **Actor envelope:** missing.
+- **Semantic authority:** Ari.
+- **Decision authority:** not recorded.
+- **Evidence:** missing.
+- **Dependencies:** none stated.
+- **Status:** `uncovered` (core `falsified`).
+- **Residual:** no authority is cited that excludes it, so `excluded_by_authority` is unavailable. The missing decision owner means authority coverage is not closed. In a conjunction over G this row is required coverage that no planned assessment addresses, not a `falsified` component.
+
+**Whole claim:** no decision rule or conjunction over G is declared. With E4 `conflicted`, E5 and E6 `uncovered` and E1 and E3 off the tuple, operational full coverage is not met.
+
+# 2. Diagnostic order
+
+The signal matches two missing-frame signals. Reviewers expanded context twice without reaching a decidable question. Two actors used the same frame name, "delivery", for different material relations.
+
+1. **Was the correct declared frame activated?** The answer differs by activation.
+   - F-C on E4: yes. E4 asks the state of a queue at a named time, which F-C's family states.
+   - F-A on E4: no. Family inclusion decides this. F-A's family is delivery behaviour of the sender on one commit. E4 asks queue emptiness. The shared word "delivery" and F-A's standing in S do not place E4 in F-A's family.
+
+**I stop at question 1.** It locates the defect: F-A was activated on an evaluation outside its family. Both actors said "delivery" for different relations, and the reviewers' requests for a wider log window had no decidable question because the F-A and F-C results answer different questions. Questions 2–8 are not reached, and I record no answers for them. Opening question 8 would add a frame before the activation error is cleared.
+
+**Uncertainty:** the answer rests on the declared family text. If Tomas, as frame-set authority, declares that F-A's family includes queue state, the answer to question 1 changes.
+
+# 3. Revision action
+
+**Action:** clarify activation. E4 is activated only in F-C, and F-A's activation on E4 is withdrawn as out of family.
+- **Changes:** the activation record for E4. No frame declaration and no inventory entry changes.
+- **Materiality:** non-material. It changes no frame declaration, so it produces no new revision coordinate and reopens nothing. The record states that it is non-material.
+- **Reopens:** no prior activations, results or coverage claims.
+
+What this action does not do:
+- It does not resolve E4. The row stays `conflicted` until Tomas disposes it, because the `dlq-shadow` counterexample is not discarded.
+- E1 and E3 are already invalid for reuse from the config rev 39→41 basis change (RF-005, ACTIVATION §7). That is not a result of this revision.
+- If the owner instead widens F-A's family to include E4, that is a material revision. It would reopen every result bound to the prior F-A revision: E1, E3, and the F-A activation on E4. It would also reopen the coverage claims on rows E1, E3 and E4 and the tuple-level coverage claim. F-B's E2 and F-C's E4 result would stay closed unless a re-check shows otherwise.
+
+This is a proposed delta only. The frame-set authority, Tomas, accepts or rejects it, and I hold no such authority.
+
+# No method source
+
+- No rule gives the standing of a result from an activation outside the frame's family. I kept the F-A counterexample and did not map it.
+- No rule says how to classify a row whose only result is bound to a superseded basis. I used `conditionally_covered` from the cause text of that status.
+- No rule says whether a configuration revision is a coordinate of a frame whose family names only a commit.
+- No rule distinguishes `uncovered` from `unknown` when no activation exists and the family text does not decide capability. I used `uncovered` because no declared family states E5.
+- No rule says how stale an observation (E4, 09:00Z and 09:30Z against T) may be before it is unusable.

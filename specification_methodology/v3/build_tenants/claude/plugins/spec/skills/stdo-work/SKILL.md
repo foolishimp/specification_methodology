@@ -15,6 +15,20 @@ Read and apply
 execution contract or changing any surface. Continue only from its exactly-one
 verified selection; that selection grants no work or mutation authority.
 
+## Acquire The Deciding Owners
+
+Enter through the verified definition's declared bootstrap entrypoint. Then
+acquire what this work needs under the selected basis's `ACTIVATION.md`
+section 2, Acquisition: a derived surface whose sources are current where one
+serves the task, such as a verbatim frame of the cut, and otherwise the owning
+sections that decide the task's questions. Acquire only from the exact
+selected basis; a candidate source, a version-line selector or another basis
+is no substitute. Acquisition is read-only and grants no role, operation or
+decision; effectful work still needs the admitted contract below. Before
+dependent action, return a missing binding (no available frame declaring what
+the evaluation needs, or an absent or unverifiable basis) with the outcome
+that section names.
+
 ## Classify From The Available Evidence
 
 Apply the selected basis's intake and agentic-construction rules
@@ -96,14 +110,17 @@ outcome or enlarge the grant.
 
 Use the accepted Project Reference-Frame Basis to determine applicable
 evaluations, including those required by an affected owner. A known false
-condition omits that evaluation; an unknown condition needs a bounded
-resolution or explicit residual. Missing required results cannot count as
-satisfied. Availability of a frame does not require activating it.
+condition omits that evaluation; an unknown condition is unresolved, not
+false: it needs a bounded resolution or an explicit residual, and the claim
+that depends on it is withheld until evidence or the owning decision
+resolves it (ACTIVATION §1 Applicability). Missing required
+results cannot count as satisfied. Availability of a frame does not require activating it.
 
 When that basis permits direct Writer use and one sufficient context/grant
-covers the outcome, construct directly without an additional Executive,
-Reviewer or durable ticket. Activate coordination for a material dependency,
-authority or context boundary. While occupying Executive, do not edit files or
+covers the outcome, construct directly without an additional coordinating
+activation, Reviewer or durable ticket. Activate the coordination the
+applicable configuration selects for a material dependency, authority or
+context boundary. While occupying Executive, do not edit files or
 Git state; the same actor must first enter a separately bound Writer activation.
 An actual independence requirement still needs an independent capable actor.
 One exact Writer grant may cover its declared construction, status and checkpoint
@@ -149,7 +166,8 @@ Keep reusable judgments and owner rulings in the existing carrier: exact
 question, subject/basis, supporting computed evidence, actor and authority,
 conclusion, scope, uncertainty and revising observation. Preserve the original
 owner ruling separately from interpretation. Invalidate the affected claim
-when its support changes; retain unrelated valid results. Reuse does not
+when one of the invalidators of `ACTIVATION.md` section 7 occurs; retain
+unrelated valid results. Reuse does not
 manufacture an owner ruling or satisfy required independent assessment.
 
 On repricing, retain, supersede, defer or withdraw each affected obligation with
