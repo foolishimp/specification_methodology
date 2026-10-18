@@ -7,7 +7,7 @@ Purpose: The owning sections for the foundation-to-law table format and family i
 Binds:
 
 - This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=3bb7594a194950819d6aad65e3938358e8685bbbc2ebf67c0ad720c37bb04487; section sha256=4cbb45c08b9a77c117085634925f62c54c6957212acf12bd3d1b62351cff7eb4)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=740847e4c66b692959fd4a2f1f328ab9cfcd0df5c9ac38af10227f0cc590951a; section sha256=999878fc125b35047cadc804e7a904d7c1095a7669a28f05c55d690642397d17 spanning to #formal-representation)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f; section sha256=7b0227b3af5aa72fc5f65150e4115b8ce4e639b24b100230966f09f83d3b8fbf spanning to #formal-representation)
 - As the reconstruction task, its return distinguishes semantic conservation, demonstrated reduction and mere relocation ([../EVALUATION.md#return-of-a-reconstruction](../EVALUATION.md#return-of-a-reconstruction); member sha256=14f8816b1eb9cd146dd58a29bac35ea47a62e4e4b093b20f9892330e44922991; section sha256=562980b12fdfe47dc66ec7f5eb13f27b4ea24730184ae7e0aba51102bdc74346)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
@@ -48,7 +48,7 @@ Routes, in order:
 
 Size of this frame: 81857 bytes.
 
-Source: FOUNDATIONS.md#authority-kinds sha256=740847e4c66b692959fd4a2f1f328ab9cfcd0df5c9ac38af10227f0cc590951a
+Source: FOUNDATIONS.md#authority-kinds sha256=fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f
 
 ### Authority kinds
 
@@ -115,7 +115,7 @@ so one list keeps the answer the same in every member, and a capability,
 a label or a passing check can never be read as a permission (P6).
 
 
-Source: FOUNDATIONS.md#imports-between-members sha256=740847e4c66b692959fd4a2f1f328ab9cfcd0df5c9ac38af10227f0cc590951a
+Source: FOUNDATIONS.md#imports-between-members sha256=fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f
 
 ### Imports between members
 
@@ -175,7 +175,7 @@ members cannot answer one question two ways, and using a concept grants
 no authority over it (P1, P6).
 
 
-Source: FOUNDATIONS.md#foundation-to-law sha256=740847e4c66b692959fd4a2f1f328ab9cfcd0df5c9ac38af10227f0cc590951a
+Source: FOUNDATIONS.md#foundation-to-law sha256=fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f
 
 ### Foundation to law
 
@@ -317,7 +317,7 @@ contributions it helps account for, so a contribution that no row names
 is visible as unaccounted (P2).
 
 
-Source: FOUNDATIONS.md#results sha256=740847e4c66b692959fd4a2f1f328ab9cfcd0df5c9ac38af10227f0cc590951a rows=1/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
+Source: FOUNDATIONS.md#results sha256=fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f rows=1/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 

@@ -1,7 +1,7 @@
-# STDO 3.0.0 RC8, Claude line candidate
+# STDO 3.0.0 RC9, Claude line candidate
 
-Release note of the Claude line's eighth release-candidate cut of the STDO
-Specification Methodology, version line 3.0.0, candidate 8. It is
+Release note of the Claude line's ninth release-candidate cut of the STDO
+Specification Methodology, version line 3.0.0, candidate 9. It is
 reconciled to the exact subject it ships with: the freeze commit on
 `tenant/claude/c3-synthesis` (commit A of RELEASE §7's two-commit
 construction) that holds this file. The cut is not published: the local
@@ -13,20 +13,35 @@ below is read from the record (`qualification/C3-ITER5/COUNTS.json`).
 
 ## Identity and refs
 
-- Version line `3.0.0`, candidate `rc.8`; local tag
-  `specification_methodology-claude/v3.0.0-rc.8` over commit A. Candidates
-  1, 2, 3 and 5 stay immutable at `af3b8b7`, `ba882bc`, `9e90169` and
-  `4a63c92` with their tags `specification_methodology-claude/v3.0.0-rc.1`,
-  `-rc.2`, `-rc.3` and `-rc.5`. Candidate 4, `7c64978` with its tag `-rc.4`
+- Version line `3.0.0`, candidate `rc.9`; local tag
+  `specification_methodology-claude/v3.0.0-rc.9` over commit A. Candidates
+  1, 2, 3, 5 and 8 stay immutable at `af3b8b7`, `ba882bc`, `9e90169`,
+  `4a63c92` and `9aee01f` with their tags
+  `specification_methodology-claude/v3.0.0-rc.1`, `-rc.2`, `-rc.3`, `-rc.5`
+  and `-rc.8`. Candidate 4, `7c64978` with its tag `-rc.4`
   and manifest commit `336b264`, was superseded before review by
   candidate 5. Candidates 6, `9905497` with its tag `-rc.6` and manifest
   commit `d3d8d8c`, and 7, `7cea510` with its tag `-rc.7` and manifest
   commit `ede430e`, were superseded before review by candidate 8.
 - Project subtree root `specification_methodology/v3/build_tenants/claude`.
 - Common input: C3-I5-06 at `4c340f7`; last reviewed candidate on this
-  line: candidate 5, `4a63c92`.
+  line: candidate 8, `9aee01f`.
 - Builder: STDO 2.5.1-rc.2, manifest
   `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`.
+
+## Changes since candidate 8
+
+Repair of the one finding of the affected readback of candidate 8 (main
+checkout, `.ai-workspace/comments/codex/20261018T022002Z_REVIEW_CLAUDE_RC8/REVIEW.md`,
+uncommitted there), accepted on source by this line:
+
+- RC8-01. ASSURANCE §1 takes a failing scenario as showing that its
+  observed outcome disagrees with its expected outcome. That report is an
+  observation under FOUNDATIONS §4 Assertions and observation, so it shows
+  that actual behaviour disagrees only where its observation binding is
+  supported. The family row, the verification-layers disposition and its
+  frontier row state the same, and FOUNDATIONS' observation-sufficiency
+  row names ASSURANCE §1 among its consumers. The row stays within Q19.
 
 ## Changes since candidate 5
 
@@ -164,7 +179,7 @@ authority compressions out of scope for the baseline.
 
 ## Plugin inventory
 
-`plugins/spec`, 17 files, version label `3.0.0-rc.8` in both plugin
+`plugins/spec`, 17 files, version label `3.0.0-rc.9` in both plugin
 manifests, digests in `release/manifest.json`.
 
 ## Manager inventory

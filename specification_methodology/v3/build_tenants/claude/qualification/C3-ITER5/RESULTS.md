@@ -1,8 +1,8 @@
-# Results, iteration 5, candidate 8 (I5-09)
+# Results, iteration 5, candidate 9 (I5-09)
 
 The standing of this candidate against the six member acceptance criteria
 of the C3 Construction Contract and the integrated closure checks, at the
-candidate 8 freeze. Every figure here is read from the record by
+candidate 9 freeze. Every figure here is read from the record by
 `qualification/C3-ITER5/tools/counts.py` (`COUNTS.json`). Values are the
 ratified ones; `unresolved` is a state of the work, never a judgment;
 nothing here is `satisfied` as a criterion, because no criterion has had
@@ -15,7 +15,7 @@ the baseline.
 
 | Criterion | Evidence held | What is missing | Standing |
 |---|---|---|---|
-| 1. One disposition per row; loci resolve | 707 common rows present once plus 14 child rows, 650 rows in all, each with one disposition (`frontier_check.py`); 770 loci resolve (`locus_check.py`) | the cross-family check of the dispositions | `unresolved` |
+| 1. One disposition per row; loci resolve | 707 common rows present once plus 14 child rows, 650 rows in all, each with one disposition (`frontier_check.py`); 771 loci resolve (`locus_check.py`) | the cross-family check of the dispositions | `unresolved` |
 | 2. Conservation, author-independent comparison | 184 of 603 `conserved` rows read by fresh-context nonauthors (iteration 4 batches, the blind sample of test 2, iteration 5 batch 01): 182 conserved, 2 changed and repaired | 419 `conserved` rows unread, 3 of them read earlier on text the candidate 2 repairs changed and marked for reread; the blind sample of 28 claims on `main` found 2 relocations filed as conserved, one now a proposed relation | `unresolved` |
 | 3. Superseded rows name an accepted relation | 28 rows proposed, consolidated in [DECISIONS.md](DECISIONS.md) (Q1 to Q17 and Q19), the two earlier readings of the Q19 sections marked for reread; the ten authority compressions deferred with the owner's scoping | every owner decision | `unresolved` |
 | 4. Frames fit; a fresh actor uses them correctly against independent expectations | 12 frames bind the construction relation, the assurance relations and change impact by owner section and digest (`--check` 0); capacity 160,000, largest `configuration` 144,806 bytes, all twelve 1,184,208; trial design with writer and grader addenda; 7 expectation sets hashed at iteration 4 | the run and the shared protocol (the owner's); the remaining sets (scoped out) | `unresolved` |

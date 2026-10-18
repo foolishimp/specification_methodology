@@ -7,8 +7,8 @@ Purpose: The owning sections for the Executive and Reviewer frames, technical tr
 Binds:
 
 - This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=3bb7594a194950819d6aad65e3938358e8685bbbc2ebf67c0ad720c37bb04487; section sha256=4cbb45c08b9a77c117085634925f62c54c6957212acf12bd3d1b62351cff7eb4)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=740847e4c66b692959fd4a2f1f328ab9cfcd0df5c9ac38af10227f0cc590951a; section sha256=999878fc125b35047cadc804e7a904d7c1095a7669a28f05c55d690642397d17 spanning to #formal-representation)
-- A reuse decision in this task acquires the change and the evidence-validity conditions that support applicability: the impact cover of the change, the dependencies of each retained result and its retention conditions ([../FOUNDATIONS.md#change-impact-and-evidence-reuse](../FOUNDATIONS.md#change-impact-and-evidence-reuse); member sha256=740847e4c66b692959fd4a2f1f328ab9cfcd0df5c9ac38af10227f0cc590951a; section sha256=e989bf4b8c0dd996e5545f18db94f8ba275d14485697c0b046429746ed3bfbc6)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f; section sha256=7b0227b3af5aa72fc5f65150e4115b8ce4e639b24b100230966f09f83d3b8fbf spanning to #formal-representation)
+- A reuse decision in this task acquires the change and the evidence-validity conditions that support applicability: the impact cover of the change, the dependencies of each retained result and its retention conditions ([../FOUNDATIONS.md#change-impact-and-evidence-reuse](../FOUNDATIONS.md#change-impact-and-evidence-reuse); member sha256=fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f; section sha256=e989bf4b8c0dd996e5545f18db94f8ba275d14485697c0b046429746ed3bfbc6)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 a link to the owning section, the digest of its member and the digest of that
@@ -1034,7 +1034,7 @@ separation of severity, priority, boundary effect and disposition, and
 EXECUTIVE_BASELINE keeps the Reviewer and Executive instance (P6).
 
 
-Source: ASSURANCE.md#10-testing-evidence-composition sha256=8655a69c79757e24cf619e04010dbb1b1ed14f036a9e96eed14d3f40d67b885e
+Source: ASSURANCE.md#10-testing-evidence-composition sha256=e33a6e39e1e93d38dbd3ea212d8d9f0d2f44a366a9345fda762d2481c254d0bf
 
 ## 10. Testing evidence composition
 
@@ -1070,7 +1070,7 @@ FOUNDATIONS §4 Conjunction of results, Survival; REFERENCE_FRAME §8,
 operational full coverage item 6).
 
 
-Source: FOUNDATIONS.md#results sha256=740847e4c66b692959fd4a2f1f328ab9cfcd0df5c9ac38af10227f0cc590951a rows=7/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
+Source: FOUNDATIONS.md#results sha256=fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f rows=7/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -1255,7 +1255,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=740847e4c66b692959fd4a2f1f328ab9cfcd0df5c9ac38af10227f0cc590951a
+Source: FOUNDATIONS.md#conjunction-of-results sha256=fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f
 
 ### Conjunction of results
 
@@ -1381,7 +1381,7 @@ Provenance: rc.2 RF #result-conjunction and
 conservation accounting.
 
 
-Source: ASSURANCE.md#foundation-to-law-assurance-and-testing sha256=8655a69c79757e24cf619e04010dbb1b1ed14f036a9e96eed14d3f40d67b885e rows=1/14 selected by the anchors this frame carries; the consumers paragraph of 14 items is omitted
+Source: ASSURANCE.md#foundation-to-law-assurance-and-testing sha256=e33a6e39e1e93d38dbd3ea212d8d9f0d2f44a366a9345fda762d2481c254d0bf rows=1/14 selected by the anchors this frame carries; the consumers paragraph of 14 items is omitted
 
 ### Foundation to law: assurance and testing
 

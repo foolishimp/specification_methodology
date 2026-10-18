@@ -95,7 +95,7 @@ cost and forcing close review; they are not authority layers and cannot hide
 drift (§4).
 
 
-Source: FOUNDATIONS.md#product-lineage-objects sha256=740847e4c66b692959fd4a2f1f328ab9cfcd0df5c9ac38af10227f0cc590951a
+Source: FOUNDATIONS.md#product-lineage-objects sha256=fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f
 
 ### Product lineage objects
 
@@ -337,7 +337,7 @@ source may author a future cut; it must not silently govern a consumer
 (P6, P3).
 
 
-Source: FOUNDATIONS.md#authority-kinds sha256=740847e4c66b692959fd4a2f1f328ab9cfcd0df5c9ac38af10227f0cc590951a
+Source: FOUNDATIONS.md#authority-kinds sha256=fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f
 
 ### Authority kinds
 
@@ -404,7 +404,7 @@ so one list keeps the answer the same in every member, and a capability,
 a label or a passing check can never be read as a permission (P6).
 
 
-Source: FOUNDATIONS.md#the-frame-tuple sha256=740847e4c66b692959fd4a2f1f328ab9cfcd0df5c9ac38af10227f0cc590951a
+Source: FOUNDATIONS.md#the-frame-tuple sha256=fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f
 
 ### The frame tuple
 
@@ -829,7 +829,7 @@ those of the selected basis. This rule is new in tier 1; it was stated
 only for packaging carriers before.
 
 
-Source: FOUNDATIONS.md#results sha256=740847e4c66b692959fd4a2f1f328ab9cfcd0df5c9ac38af10227f0cc590951a rows=0/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
+Source: FOUNDATIONS.md#results sha256=fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f rows=0/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
