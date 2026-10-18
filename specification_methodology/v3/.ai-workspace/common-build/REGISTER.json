@@ -641,11 +641,11 @@
       "id": "A3",
       "title": "Canonical standards-manifest digest",
       "agreed_scope": "Fix canonical member-set digest construction and verify actual materialization. Complete identity alone can faithfully pin an incompatible digest. Reuse prior reproduced counterexample because the generator is unchanged.",
-      "scope_limits": null,
+      "scope_limits": "Canonical mechanics pass for every committed candidate member with explicit verification-only release coordinates. No real tag, source-release attestation, install or release claimed.",
       "discriminating_case": "Namespace/subtree normalization alone still fails; canonical root-prefixed digest plus normalization passes the actual verifier.",
       "agreement": "proposal scope agreed; not replacement acceptance",
       "classification": "package_repair",
-      "construction_state": "mechanism_implemented",
+      "construction_state": "materialized_exact_candidate_passes_installed_verifier",
       "acceptance": "not_recorded",
       "qualification": "not_established",
       "dependencies": [],
@@ -657,7 +657,9 @@
       "evidence": [
         "returns/package-tools.json",
         "returns/package-tests.json",
-        "returns/package-final-check.json"
+        "returns/package-final-check.json",
+        "returns/package-materialization-return.json",
+        "returns/package-installed-verifier.json"
       ]
     },
     {
@@ -984,5 +986,7 @@
   "candidate_inventory": {
     "path": "returns/package-final-freeze.json",
     "sha256": "cd140a1ca32e17d8310522cf170b252c1887d7127c8fc17833b4d8e05c608050"
-  }
+  },
+  "candidate_commit": "494451522072ec34381c644f1ccfa2331f2b1e27",
+  "candidate_tree": "082df4ea2b7b3658aab528bbfbcfe81234ccc810"
 }

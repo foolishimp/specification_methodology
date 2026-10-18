@@ -2,7 +2,7 @@
 
 The candidate is the complete directory at [build_tenants/common](../../build_tenants/common/). Its entry is [standards/README.md](../../build_tenants/common/standards/README.md). This directory, `common-build/`, is the separate construction record: it carries source pins, changes, open decisions and verification evidence and is not delivered with the candidate.
 
-The owner checkpoint is `2e7fa0f6`. Construction is on `tenant/common/standalone-v3` in `/Users/jim/src/apps/specification_methodology-common-build`. The [admitted contract](../tickets/active/T-003-COMMON-standalone-v3-construction.md) binds the source choices, exclusions and authority limits.
+The owner checkpoint is `2e7fa0f6`; the first candidate is `494451522072ec34381c644f1ccfa2331f2b1e27`, candidate tree `082df4ea2b7b3658aab528bbfbcfe81234ccc810`. Construction is on `tenant/common/standalone-v3` in `/Users/jim/src/apps/specification_methodology-common-build`. The [admitted contract](../tickets/active/T-003-COMMON-standalone-v3-construction.md) binds the source choices, exclusions and authority limits.
 
 ## Prepared work
 
@@ -20,7 +20,9 @@ The [seed-to-candidate account](SEED_TO_CANDIDATE.json) covers every file: 37 re
 - [Conservation-record checks](records/VALIDATION.json) cover all 705 inherited identities with 16 passing controls. The [record and reproduction guide](records/README.md) retain the 19 disposition repairs, the ten disputed rows, all pending replacements and the unresolved exact extents of 15 synthetic source clauses.
 - Nine checker advisories remain visible. Six occurrences concern the pending A1 reach; three explicitly import the existing result owner. The lexical count does not enumerate every occurrence split across lines.
 
-Exact-candidate materialization follows the first build commit, with explicit verification-only coordinates and a recorded installed-verifier result. It does not select a release, install the candidate or attest an actual release-shaped source tree.
+The [exact-candidate materialization](returns/package-materialization-return.json) passed: all 81 committed files transferred unchanged; the installed verifier returned no failures; installed and candidate manifest schemas validated; canonical manifest bytes and the standards digest reproduced. The [receipt](returns/package-installed-verifier.json) and [reproduction instructions](returns/package-materialization-reproduction.md) bind the inputs and runtime. The manifest SHA256 is `609b8ee9f7b8412fc3e19fd35f95862528f30adb9a708bc211d659a77e91a712`.
+
+The cut/ref `v3.0.0-rc.9999` and absent-tag sentinel are explicit verification-only inputs. They select no release, create no tag, install nothing and attest no release-shaped source tree. The actual construction commit has the tenant layout. Mechanical compatibility is the established claim.
 
 ## Decisions and review still open
 

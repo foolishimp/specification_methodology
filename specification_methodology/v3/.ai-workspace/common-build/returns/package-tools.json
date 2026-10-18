@@ -4,6 +4,15 @@
     "returns/package-final-check.json": "9fdd2dd6c298cfdf52ba57c4387bec901af3d3531a5aafbee73e7c7b28c4e32a",
     "returns/package-final-freeze.json": "cd140a1ca32e17d8310522cf170b252c1887d7127c8fc17833b4d8e05c608050",
     "returns/package-final-run.json": "92e0fb9d45bfedd02973c68432be5c30468345da9104377d2a6eadef9270439f",
+    "returns/package-installed-verifier-run.json": "c333b20a5441a94f69367ff61514ab1cd94619b15f2e937b2964150fb8923875",
+    "returns/package-installed-verifier.json": "b5656449db5cd4984a668221dde8b454d51062c1a397167485d6c57140f06e66",
+    "returns/package-materialization-check.json": "724a5a5188885e10e775e676863f292d94c9964c53ff26d5ee0b9f6be946ca26",
+    "returns/package-materialization-coordinates-explanation.json": "2ad5555bea636623580c0c81c31704166f46b7c0e5c637487d318c9fbfec385d",
+    "returns/package-materialization-coordinates.json": "20cd8cac3387c8e73c51a61061ab33dfd989a60b1bbe43c7896c85d0f98369f9",
+    "returns/package-materialization-manifest.json": "609b8ee9f7b8412fc3e19fd35f95862528f30adb9a708bc211d659a77e91a712",
+    "returns/package-materialization-reproduction.md": "8764867f98d4e31c5fa4cf6d37033c97d4c69a414e18fe27cacbf2aecdfdc51e",
+    "returns/package-materialization-return.json": "c662b6564d742eefbd082ec6458c6f42bae1557592ff31af067dc94176ca220c",
+    "returns/package-materialization-run.json": "cf25f560f383d3b9532acb2992aeff325539c7eac6dc9f4fac12dd0c3315b07a",
     "returns/package-preliminary-check.json": "3b9488902526395c539c5c7d7dc0f598da3453fc95e8961018451935a2dc6f98",
     "returns/package-preliminary-freeze.json": "8a8de2c2de47ea5a2c04e76b97e373f86a5efb7d3fb7d4b22e56508972e6c81e",
     "returns/package-preliminary-run.json": "800f0174397b1cf42bd434a923d8c4db068f934fd1eee17e7a81603e106c606f",
@@ -28,20 +37,30 @@
   },
   "kind": "stdo.common-build-writer-return",
   "limits": [
-    "No candidate edits, Git/index mutation, tag, install, selector or remote effect performed by this Writer. Preliminary and final integrated candidate freezes/checks were explicitly requested by the construction pen.",
+    "No candidate edits, Git/index mutation, tag, install, selector or remote effect performed by this Writer. Owner-requested candidate freezes, checks and isolated verification-only materialization were performed; all release coordinates retain their declared fictional/actual distinctions.",
     "No semantic qualification, independent review, owner replacement decision or acceptance is established by these mechanical gates.",
     "Reference parsing covers documented forms; prose, unlinked code paths, generated-project routes, custom Markdown extensions, general JSON-schema conformance and frame fidelity need separate checks/review.",
     "The trusted interpreter/standard library and separate installed verifier are explicit dependencies; the checker does not authenticate its own launcher or the external runtime.",
     "Supplied release coordinates are checked for shape/consistency, not attested against Git objects; materialization creates no release ref."
   ],
-  "pending_integration": [
-    "Construction pen checkpoints the first build and supplies explicit construction/staging coordinates.",
-    "Materialize the exact final frozen candidate and capture schema/canonical-JSON/installed-verifier proof.",
-    "Preserve distinction between staging materialization and actual release-shaped source installation."
-  ],
-  "recorded_at": "2026-10-18T15:54:31.916545+00:00",
-  "result": "tooling_ready; final_integrated_mechanical_check_passed",
+  "pending_integration": [],
+  "recorded_at": "2026-10-18T16:06:36.481121+00:00",
+  "result": "tooling_ready; exact_candidate_materialization_and_installed_verifier_passed; pen_relinquished",
   "verification": {
+    "exact_candidate_materialization": {
+      "candidate_tree": "082df4ea2b7b3658aab528bbfbcfe81234ccc810",
+      "construction_commit": "494451522072ec34381c644f1ccfa2331f2b1e27",
+      "coordinates_sha256": "20cd8cac3387c8e73c51a61061ab33dfd989a60b1bbe43c7896c85d0f98369f9",
+      "manifest_sha256": "609b8ee9f7b8412fc3e19fd35f95862528f30adb9a708bc211d659a77e91a712",
+      "members": 81,
+      "no_install_or_release": true,
+      "return": "returns/package-materialization-return.json",
+      "schemas_passed": [
+        "installed_basis_schema",
+        "candidate_schema"
+      ],
+      "valid": true
+    },
     "failed": 0,
     "final_candidate": {
       "advisory_count": 9,
