@@ -41,7 +41,7 @@ migration. The separately selected source refinement below preserves the release
 
 ## Selected Work
 
-- [T-034](../.ai-workspace/tickets/active/T-034-support-standalone-v3-installation.md) implements standalone V3 package installation in the existing toolchain. The common candidate remains under independent review; a_c, Representation, publication, and actual consumer adoption are outside this work.
+- [T-034](../.ai-workspace/tickets/completed/T-034-support-standalone-v3-installation.md) completes standalone V3 package installation in toolchain `0.1.5`, with 179 passing regression tests, independent review and an installed-CLI replay of all 81 common package files. The common candidate remains under independent review; a_c, Representation, publication, and actual consumer adoption are outside this work.
 
 - [T-033](../.ai-workspace/tickets/completed/T-033-release-stdo-251-rc2-triage-triangulation.md) completes triage triangulation and the published, freshly verified RC2 cohort through targeted semantic revision, mechanical rebinding and bounded qualification. Preserve existing authority and proportionality; external consumer adoption is unselected.
 

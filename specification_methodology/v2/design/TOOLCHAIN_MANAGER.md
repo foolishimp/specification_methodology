@@ -5,7 +5,8 @@
   `.ai-workspace/tickets/completed/T-014-make-version-line-selector-latest.md`,
   `.ai-workspace/tickets/completed/T-020-consolidate-specification-stack-monorepo.md`,
   `.ai-workspace/tickets/completed/T-021-qualify-monorepo-release-refs.md`,
-  `.ai-workspace/tickets/completed/T-029-complete-consumer-cohort-adoption.md`
+  `.ai-workspace/tickets/completed/T-029-complete-consumer-cohort-adoption.md`,
+  `.ai-workspace/tickets/completed/T-034-support-standalone-v3-installation.md`
 - Derives from: `specification/PRODUCT.md#product-definition-overlay`
 - Supersedes: none
 - Superseded by: none
