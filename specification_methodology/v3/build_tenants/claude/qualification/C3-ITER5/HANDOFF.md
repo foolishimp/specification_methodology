@@ -1,21 +1,29 @@
-# Iteration 5 Handoff, Claude Line: candidate 8
+# Iteration 5 Handoff, Claude Line: candidate 9
 
-Current candidate: candidate 8, `3.0.0-rc.8`, commit A `9aee01ffa76cfbde1a6b8f1153a25bd6d71c216e`, local tag
-`specification_methodology-claude/v3.0.0-rc.8` (object `08555a3b6f09df0a0297e59932dc7b6a967582bd`, not pushed),
+Current candidate: candidate 9, `3.0.0-rc.9`, commit A `c2cfa9b908d1722ae3f26c32fa4ece691083bdc3`, local tag
+`specification_methodology-claude/v3.0.0-rc.9` (object `ac905d6e4009a32e8d72a9d3df03807ec2d40c9a`, not pushed),
 commit B the commit that adds `release/manifest.json` for it. It repairs
-C5-02 and the five causal-routing sites that Codex's reciprocal review of
-candidate 5 and its addendum name, C5-01 among them (Q19, eight rows), and
-the diagnosis owners' consumer paragraphs name those sites. Its freeze
-script writes the interpretation's digests after the consumers step. The
-[review package](REVIEW-PACKAGE-RC8.md) is written for Codex's affected
-readback, with the adverse cases and the rerun commands. The
-[results table](RESULTS.md) and the [decision list](DECISIONS.md) (Q1 to
-Q19) are current. Candidate 5, `4a63c92`, is superseded; candidates 6,
-`9905497`, and 7, `7cea510`, were superseded before they were sent. The
-unrun conservation batches in `reassess/` were built from an earlier
-candidate, and batches 04, 05, 06, 11, 12, 13 and 14 hold text of sections
-the repairs changed; batches are rebuilt from the candidate when the
-reading is scheduled. Nothing is accepted.
+RC8-01, the one finding of Codex's affected readback of candidate 8:
+ASSURANCE §1 takes a failing scenario's report as an observation, which
+shows that actual behaviour disagrees only where its observation binding
+is supported. It carries candidate 8's repairs of C5-02 and of the five
+causal-routing sites that Codex's reciprocal review of candidate 5 and its
+addendum name, C5-01 among them (Q19, eight rows), with the diagnosis
+owners' consumer paragraphs naming those sites. The
+[review package](REVIEW-PACKAGE-RC9.md) is written for Codex's affected
+readback of the repair, with its cases and the rerun commands; the
+[candidate 8 package](REVIEW-PACKAGE-RC8.md) is kept as the package Codex
+reviewed. The [results table](RESULTS.md) and the
+[decision list](DECISIONS.md) (Q1 to Q19) are current. Besides those
+decisions, qualification work remains: a nonauthor reading of 419
+conserved rows, the shared actual-use trial, and 38 of the 46 deciding
+paths, which are not yet traced. Candidates 5, `4a63c92`, and 8,
+`9aee01f`, are superseded; candidates 6, `9905497`, and 7, `7cea510`, were
+superseded before they were sent. The unrun conservation batches in
+`reassess/` were built from an earlier candidate, and batches 04, 05, 06,
+11, 12, 13 and 14 hold text of sections the repairs changed; batches are
+rebuilt from the candidate when the reading is scheduled. Nothing is
+accepted.
 
 The record of candidate 2 follows unchanged below.
 
