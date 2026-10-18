@@ -137,9 +137,22 @@ This line's earlier results were wrong in three places.
 
 ## Same class in the Claude line
 
-Claude candidate 8 source (`9aee01f`) was read for each class repaired
-here. None is present.
+Claude candidate 8, source `9aee01f` and records `1db13bfe`, was read for
+each class repaired here. One is present, and Codex has already reported
+it.
 
+- **Low: a failed scenario is still read as actual disagreement.**
+  ASSURANCE:61–63 says "When a scenario fails, actual behaviour disagrees
+  with the scenario's expected outcome". The next sentence allows that the
+  scenario's observation is wrong. With a correct implementation and a
+  faulty observation, actual behaviour agrees with the expected outcome,
+  and the first sentence is false. It is the assumption of adequate
+  observation that Codex's persistent-delta repair removes from its
+  interpretation. The family row at ASSURANCE:96 carries the same reading.
+  Codex's review of candidate 8, uncommitted in the main checkout at this
+  writing, reports it as RC8-01. This review read the source after reading
+  that finding, so this is a confirmation, not an independent discovery.
+  Repairing candidate 8 is the product owner's decision.
 - **Tenth drift signal:** SPEC_METHOD:610–613 keeps the symptom, "not a
   code hack", and routes by change class. The persistent-delta signal at
   601–604 names four causes for triage to diagnose.
@@ -148,11 +161,19 @@ here. None is present.
 - **Reviewer edit:** EXECUTIVE_BASELINE:1265 says "It does not edit the
   candidate, direct the repair or authorise continuation". Anti-Patterns
   item 10 at 1740 repeats it.
-- **Interpretation:** the live determination account,
-  `qualification/C3-ITER5/determinations/DETERMINATIONS.json` at
-  `1db13bfe`, carries none of the predecessor phrases. The hits elsewhere in
-  the tree are dispositions quoting rc.2, historical reassessment batches,
-  run inputs and the release note.
+- **Interpretation:**
+  - The rows of `qualification/C3-ITER5/determinations/DETERMINATIONS.json`
+    that reach the five sites repaired since candidate 5 match their
+    sources. ASSURANCE row 1 and DESIGN_MODULE row 6 changed with them; the
+    unchanged rows state no route that the repairs changed.
+  - The current encoding, `a_c/i3/`, carries none of the predecessor
+    phrases.
+  - The historical sets `a_c/set-5/` and `a_c/set-6/` still carry the
+    earlier design-surprise reading, "require one bounded design_reframe".
+    `a_c/README.md` declares them historical, not current interpretations
+    of the rebuilt members, and names re-encoding as open work.
+  - The other hits are dispositions quoting rc.2, historical reassessment
+    batches, run inputs and the release note.
 
 ## Limits
 
