@@ -122,8 +122,7 @@ The standing of these consequences is stated in
 The table accounts for §1 to §12 and for FOUNDATIONS §2 Imports between
 members; the grounds of `out_of_frame` and `invalid_basis` stated there
 are traced by family F3 at
-[FOUNDATIONS §4 Results](FOUNDATIONS.md#results). §13 records
-dispositions and decides nothing.
+[FOUNDATIONS §4 Results](FOUNDATIONS.md#results).
 
 Consumers of these rows, where an actor enters them (FOUNDATIONS §3
 Foundation to law, Consumers), one list per row, each consumer linked to

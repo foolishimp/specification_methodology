@@ -6,9 +6,9 @@ Purpose: The owning sections for ontology-first design, proportional design sequ
 
 Binds:
 
-- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=22e39f1c5804c297eec2982e0b859438222b83b3439a810eed58d89b84bbb619; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=8c8cf97691fc97fd9939bdbb07e2669435842a60a1d658e7121fb10f1d11c8a8; section sha256=ce8079ea09ef206c7120446eb85d81c29a1052fb7c5bfdf2fb62ee92c3f68c84 spanning to #formal-representation)
-- A reuse decision in this task acquires the change and the evidence-validity conditions that support applicability: the impact cover of the change, the dependencies of each retained result and its retention conditions ([../FOUNDATIONS.md#change-impact-and-evidence-reuse](../FOUNDATIONS.md#change-impact-and-evidence-reuse); member sha256=8c8cf97691fc97fd9939bdbb07e2669435842a60a1d658e7121fb10f1d11c8a8; section sha256=e989bf4b8c0dd996e5545f18db94f8ba275d14485697c0b046429746ed3bfbc6)
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545; section sha256=a7d5fc5930338c3fb3959017f41935ce742fbb1bf189c2f527dde4e0ba12d064 spanning to #formal-representation)
+- A reuse decision in this task acquires the change and the evidence-validity conditions that support applicability: the impact cover of the change, the dependencies of each retained result and its retention conditions ([../FOUNDATIONS.md#change-impact-and-evidence-reuse](../FOUNDATIONS.md#change-impact-and-evidence-reuse); member sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545; section sha256=e989bf4b8c0dd996e5545f18db94f8ba275d14485697c0b046429746ed3bfbc6)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 a link to the owning section, the digest of its member and the digest of that
@@ -43,7 +43,7 @@ Routes, in order:
 7. [DESIGN_MODULE.md#foundation-to-law](../DESIGN_MODULE.md#foundation-to-law)
 8. [SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity](../SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity)
 
-Size of this frame: 100695 bytes.
+Size of this frame: 100681 bytes.
 
 Source: DESIGN_MODULE.md#5-ontology-first-design sha256=50e70c797c93718e85192aaf2de39596f62f53030507ca8242c1af7e8f0ebcbe
 
@@ -1100,7 +1100,7 @@ lifecycle law; or a local realisation presents an existing accepted
 relation as newly owned local truth.
 
 
-Source: ACTIVATION.md#disposition sha256=22e39f1c5804c297eec2982e0b859438222b83b3439a810eed58d89b84bbb619
+Source: ACTIVATION.md#disposition sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf
 
 ### Disposition
 
@@ -1125,7 +1125,7 @@ or the competing truth path, is the counterexample to accepting this
 candidate; a repaired candidate is a new candidate with its own results.
 For `re_enter` the governing basis the candidate was built and assessed on
 must change, so that basis cannot support acceptance; the change re-enters
-at its owning relation (§4). The core values are new; they place
+at its owning relation (§4). The core values place
 acceptance in the one core, as FOUNDATIONS §4 Results requires, so that a
 consumer combining results cannot take availability or assessment as
 acceptance (P6).
@@ -1141,7 +1141,7 @@ unchanged failed construction relation as if iteration alone could close
 it (P2).
 
 
-Source: SPEC_METHOD.md#change-classes sha256=5fe14955b40d1b9763b788d91aacd939799225be032811524be85fce44128c3d
+Source: SPEC_METHOD.md#change-classes sha256=c7b83b2b7e8c9a301d2e535fc3752c08f718d9fc679e32f8a91c15c285976e8e
 
 ### Change classes
 
@@ -1178,7 +1178,7 @@ evaluation result, so a change classed `realization_refactor` cannot stand
 in for a `satisfied` result that no upstream drift occurred (P5, P1).
 
 
-Source: FOUNDATIONS.md#results sha256=8c8cf97691fc97fd9939bdbb07e2669435842a60a1d658e7121fb10f1d11c8a8 rows=6/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
+Source: FOUNDATIONS.md#results sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545 rows=6/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -1351,7 +1351,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=8c8cf97691fc97fd9939bdbb07e2669435842a60a1d658e7121fb10f1d11c8a8
+Source: FOUNDATIONS.md#conjunction-of-results sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545
 
 ### Conjunction of results
 
@@ -1544,7 +1544,7 @@ are choices this profile, the adopting Product or another owner makes, so
 no profile choice is presented as following from the foundations (P6, P2).
 
 
-Source: SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity sha256=5fe14955b40d1b9763b788d91aacd939799225be032811524be85fce44128c3d rows=1/10 selected by the anchors this frame carries; the consumers paragraph of 10 items is omitted
+Source: SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity sha256=c7b83b2b7e8c9a301d2e535fc3752c08f718d9fc679e32f8a91c15c285976e8e rows=1/10 selected by the anchors this frame carries; the consumers paragraph of 10 items is omitted
 
 ### Foundation to law: change management and ambiguity
 

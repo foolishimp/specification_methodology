@@ -6,9 +6,9 @@ Purpose: The owning sections for workspace coverage and its statuses, frame-set 
 
 Binds:
 
-- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=22e39f1c5804c297eec2982e0b859438222b83b3439a810eed58d89b84bbb619; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=8c8cf97691fc97fd9939bdbb07e2669435842a60a1d658e7121fb10f1d11c8a8; section sha256=ce8079ea09ef206c7120446eb85d81c29a1052fb7c5bfdf2fb62ee92c3f68c84 spanning to #formal-representation)
-- A reuse decision in this task acquires the change and the evidence-validity conditions that support applicability: the impact cover of the change, the dependencies of each retained result and its retention conditions ([../FOUNDATIONS.md#change-impact-and-evidence-reuse](../FOUNDATIONS.md#change-impact-and-evidence-reuse); member sha256=8c8cf97691fc97fd9939bdbb07e2669435842a60a1d658e7121fb10f1d11c8a8; section sha256=e989bf4b8c0dd996e5545f18db94f8ba275d14485697c0b046429746ed3bfbc6)
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545; section sha256=a7d5fc5930338c3fb3959017f41935ce742fbb1bf189c2f527dde4e0ba12d064 spanning to #formal-representation)
+- A reuse decision in this task acquires the change and the evidence-validity conditions that support applicability: the impact cover of the change, the dependencies of each retained result and its retention conditions ([../FOUNDATIONS.md#change-impact-and-evidence-reuse](../FOUNDATIONS.md#change-impact-and-evidence-reuse); member sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545; section sha256=e989bf4b8c0dd996e5545f18db94f8ba275d14485697c0b046429746ed3bfbc6)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 a link to the owning section, the digest of its member and the digest of that
@@ -52,9 +52,9 @@ Routes, in order:
 16. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
 17. [REFERENCE_FRAME.md#foundation-to-law](../REFERENCE_FRAME.md#foundation-to-law)
 
-Size of this frame: 95961 bytes.
+Size of this frame: 95851 bytes.
 
-Source: FOUNDATIONS.md#2-ontology sha256=8c8cf97691fc97fd9939bdbb07e2669435842a60a1d658e7121fb10f1d11c8a8
+Source: FOUNDATIONS.md#2-ontology sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545
 
 ## 2. Ontology
 
@@ -284,11 +284,10 @@ distinct (P1, P0):
 
 The distinction is kept for any construction and is independent of the
 tiers of this corpus: a construction may need all three accounts, and no
-account is a tier (P1). The distinction is an added choice in the sense
-of §3 Foundation to law, not a commitment, and has none of the standings
-of §1; its owner is the Intent of the Product that owns this corpus, in
-its Direction. Purpose and material relation: the steps, the meaning of
-the data and the means of execution can each change while the others
+account is a tier (P1). This section owns the distinction as an added
+choice in the sense of §3 Foundation to law, not a commitment; it has none
+of the standings of §1. Purpose and material relation: the steps, the
+meaning of the data and the means of execution can each change while the others
 hold, so a claim about one account is never taken for a claim about
 another (P1, P6).
 
@@ -316,10 +315,9 @@ An import declaration states, for each imported concept (P1, P3, P6):
   concepts of one declaration.
 
 An import takes one of two forms. A declaration states these contents
-for each imported concept in one place; between members of this corpus it
-rests on the authority of the Product that owns the corpus, so the
-relation is owner-authorised (P6). A reference at the point of use
-that names the owning section is also an import: it states what is
+for each imported concept in one place; between members of this corpus,
+it is the owner-authorised relation described here (P6). A reference at the
+point of use that names the owning section is also an import: it states what is
 imported and its owner; its source context is the one the list above
 names, its target is the using member's context, and its direction, loss
 and lack of authority are those stated above. A concept another member
@@ -877,7 +875,7 @@ revising observation, invalidates no result by itself;
 reuse still requires the consumer's exact applicability check (P3, P6).
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=22e39f1c5804c297eec2982e0b859438222b83b3439a810eed58d89b84bbb619
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf
 
 ## 7. Closed result and reuse
 
@@ -963,7 +961,7 @@ proof when loss of incidental process state is a material counterexample:
 the proof destroys or excludes the incidental authority and compares the
 reconstructed semantic outcomes (P5, P6).
 
-Source: FOUNDATIONS.md#results sha256=8c8cf97691fc97fd9939bdbb07e2669435842a60a1d658e7121fb10f1d11c8a8 rows=6/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
+Source: FOUNDATIONS.md#results sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545 rows=6/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -1136,7 +1134,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=8c8cf97691fc97fd9939bdbb07e2669435842a60a1d658e7121fb10f1d11c8a8
+Source: FOUNDATIONS.md#conjunction-of-results sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545
 
 ### Conjunction of results
 

@@ -106,8 +106,7 @@ table of commitments in FOUNDATIONS §3 states it.
 
 The standing of these consequences is stated in
 [FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law).
-The table accounts for §1 to §16. §17 records dispositions and decides
-nothing.
+The table accounts for §1 to §16.
 
 Consumers of these rows, where an actor enters them (FOUNDATIONS §3
 Foundation to law, Consumers), one list per row, each consumer linked to

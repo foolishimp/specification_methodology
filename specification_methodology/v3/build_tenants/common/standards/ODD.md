@@ -787,8 +787,8 @@ it corrects towards the required conditions as observations arrive,
 guarantees neither convergence nor the adequacy of those conditions, and
 its diagnoses distinguish the four causes named there (P2, P6).
 
-The selected Product outcome under STDO-UP-013
-([SPEC_METHOD §3](SPEC_METHOD.md#3-outcome-conservation)) is external
+The selected Product outcome under
+[SPEC_METHOD §3 Outcome conservation](SPEC_METHOD.md#3-outcome-conservation) is external
 authority for this loop. Product models, gaps, assurance, ledgers and
 projections may interpret that outcome but cannot author, select or
 enlarge it. `evaluate_next` may select material work only within that
@@ -1189,8 +1189,8 @@ In §11.5D, §16 and §19 "disposition" names a closure decision (the
 selected-outcome paragraphs, A8, A11, the constitutional equation, §16
 item 13 and §19 question 11) or, in "typed no-action disposition", a
 selection of `evaluate_next` (A3, A4); there it never names a disposition
-of ACTIVATION §3. The dispositions of §21 are the successor dispositions
-of [RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015)
+of ACTIVATION §3. Successor-claim dispositions are governed by
+[RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015)
 (P1, P5, P6). Purpose and material relation:
 a consumer that read an edge's `repair` as `local_repair`, or `re-enter`
 as `re_enter`, would take an undecided edge for a defeated candidate, or a

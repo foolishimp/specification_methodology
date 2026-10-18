@@ -330,9 +330,10 @@ stdo bootstrap --definition stdo_default.json --dry-run
 stdo bootstrap --definition stdo_default.json
 ```
 
-A repository checkout also contains `QUICKSTART.md` with the expanded
-field-by-field walkthrough. The plugin does not depend on that repository-root
-file; this packaged guide remains sufficient after installation.
+The packaged [Product Definition template guide](../../../standards/templates/README.md#product-definition-overlay)
+explains the fields and their required bindings; the
+[Project Reference-Frame Basis template](../../../standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md)
+provides the frame-basis declaration.
 
 ### Install The Shared Skills
 

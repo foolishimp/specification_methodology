@@ -6,8 +6,8 @@ Purpose: The owning sections for build-tenant binding, ambiguity governance with
 
 Binds:
 
-- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=22e39f1c5804c297eec2982e0b859438222b83b3439a810eed58d89b84bbb619; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=8c8cf97691fc97fd9939bdbb07e2669435842a60a1d658e7121fb10f1d11c8a8; section sha256=ce8079ea09ef206c7120446eb85d81c29a1052fb7c5bfdf2fb62ee92c3f68c84 spanning to #formal-representation)
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545; section sha256=a7d5fc5930338c3fb3959017f41935ce742fbb1bf189c2f527dde4e0ba12d064 spanning to #formal-representation)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 a link to the owning section, the digest of its member and the digest of that
@@ -49,9 +49,9 @@ Routes, in order:
 14. [SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding](../SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding)
 15. [SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity](../SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity)
 
-Size of this frame: 96227 bytes.
+Size of this frame: 95974 bytes.
 
-Source: SPEC_METHOD.md#11-build-tenant-binding sha256=5fe14955b40d1b9763b788d91aacd939799225be032811524be85fce44128c3d
+Source: SPEC_METHOD.md#11-build-tenant-binding sha256=c7b83b2b7e8c9a301d2e535fc3752c08f718d9fc679e32f8a91c15c285976e8e
 
 ## 11. Build-tenant binding
 
@@ -89,7 +89,7 @@ Terms used in this section:
   the selected execution binding require it, and an adequate human
   process using current records and direct observation is a permitted
   execution binding of a generic procedure that requires none of them
-  (P1, P6; law carried from the common binding requirement).
+  (P1, P6).
 - Author identity and actor identity are as
   [EVALUATION §3](../EVALUATION.md#3-independent-assessment) defines them:
   authorship is one condition of an assessment's independence there, and
@@ -247,7 +247,7 @@ tenant-local realisation derivative until ratified (rule 1). Rule 4 applies
 tenants need not behave identically outside the contract.
 
 
-Source: SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle sha256=5fe14955b40d1b9763b788d91aacd939799225be032811524be85fce44128c3d
+Source: SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle sha256=c7b83b2b7e8c9a301d2e535fc3752c08f718d9fc679e32f8a91c15c285976e8e
 
 ## 5. Ambiguity governance and lifecycle
 
@@ -318,7 +318,7 @@ to lifecycle phases: an unanswered phase is a recorded gap, never a silent
 absence.
 
 
-Source: FOUNDATIONS.md#2-ontology sha256=8c8cf97691fc97fd9939bdbb07e2669435842a60a1d658e7121fb10f1d11c8a8
+Source: FOUNDATIONS.md#2-ontology sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545
 
 ## 2. Ontology
 
@@ -548,11 +548,10 @@ distinct (P1, P0):
 
 The distinction is kept for any construction and is independent of the
 tiers of this corpus: a construction may need all three accounts, and no
-account is a tier (P1). The distinction is an added choice in the sense
-of §3 Foundation to law, not a commitment, and has none of the standings
-of §1; its owner is the Intent of the Product that owns this corpus, in
-its Direction. Purpose and material relation: the steps, the meaning of
-the data and the means of execution can each change while the others
+account is a tier (P1). This section owns the distinction as an added
+choice in the sense of §3 Foundation to law, not a commitment; it has none
+of the standings of §1. Purpose and material relation: the steps, the
+meaning of the data and the means of execution can each change while the others
 hold, so a claim about one account is never taken for a claim about
 another (P1, P6).
 
@@ -580,10 +579,9 @@ An import declaration states, for each imported concept (P1, P3, P6):
   concepts of one declaration.
 
 An import takes one of two forms. A declaration states these contents
-for each imported concept in one place; between members of this corpus it
-rests on the authority of the Product that owns the corpus, so the
-relation is owner-authorised (P6). A reference at the point of use
-that names the owning section is also an import: it states what is
+for each imported concept in one place; between members of this corpus,
+it is the owner-authorised relation described here (P6). A reference at the
+point of use that names the owning section is also an import: it states what is
 imported and its owner; its source context is the one the list above
 names, its target is the using member's context, and its direction, loss
 and lack of authority are those stated above. A concept another member
@@ -612,7 +610,7 @@ members cannot answer one question two ways, and using a concept grants
 no authority over it (P1, P6).
 
 
-Source: EVALUATION.md#2-separation sha256=3b30baee4f6941d35491e4ae0aa5e5a332f8b8afbae833dc3b4631da3426060e
+Source: EVALUATION.md#2-separation sha256=4c87b1286d9c721b6e050b64adb8f6804327c0d8e3dad67f7c3973cbef389fd6
 
 ## 2. Separation
 
@@ -657,7 +655,7 @@ scope (P3;
 [RF-005](../REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates)).
 
 
-Source: EVALUATION.md#3-independent-assessment sha256=3b30baee4f6941d35491e4ae0aa5e5a332f8b8afbae833dc3b4631da3426060e
+Source: EVALUATION.md#3-independent-assessment sha256=4c87b1286d9c721b6e050b64adb8f6804327c0d8e3dad67f7c3973cbef389fd6
 
 ## 3. Independent assessment
 
@@ -732,7 +730,7 @@ policy the governing basis states for the claim; the default where it is not
 stated is that they are not independent.
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation sha256=fb56ac87f017abefd81416e28c5e2b6ef512caafa8c75c979cca4865af61cb87
+Source: AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf
 
 ### AC-018 Structural and semantic separation
 
@@ -746,7 +744,7 @@ the semantic fidelity of an interpretation covers its meaning and
 materiality (P1, P6).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-019-valid-model sha256=fb56ac87f017abefd81416e28c5e2b6ef512caafa8c75c979cca4865af61cb87
+Source: AXIOMATIC_CALCULUS.md#ac-019-valid-model sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf
 
 ### AC-019 Valid model
 
@@ -769,7 +767,7 @@ the semantic or authority subset unless the model supplies an exact lawful
 decision contract for it (P6, P1).
 
 
-Source: ACTIVATION.md#effects sha256=22e39f1c5804c297eec2982e0b859438222b83b3439a810eed58d89b84bbb619
+Source: ACTIVATION.md#effects sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf
 
 ### Effects
 
@@ -813,7 +811,7 @@ action, before any repetition or dependent action. A `not_effected`
 value licenses neither treating the effect as absent nor repeating it
 while its end is not established.
 
-The refinement is new. Its material relation is whether an action whose
+The refinement's material relation is whether an action whose
 external effect may have occurred is repeated or relied on; §4 names a
 lost post-effect response as a case that no added core value solves, and
 this refinement records it in the existing core. Keeping the end of the
@@ -822,7 +820,7 @@ counterexample already established for the declared outcome, and an
 effect that may still be acting.
 
 
-Source: FOUNDATIONS.md#results sha256=8c8cf97691fc97fd9939bdbb07e2669435842a60a1d658e7121fb10f1d11c8a8 rows=6/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
+Source: FOUNDATIONS.md#results sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545 rows=6/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -995,7 +993,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=8c8cf97691fc97fd9939bdbb07e2669435842a60a1d658e7121fb10f1d11c8a8
+Source: FOUNDATIONS.md#conjunction-of-results sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545
 
 ### Conjunction of results
 
@@ -1117,7 +1115,7 @@ premises hold ([ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement),
 Refinement).
 
 
-Source: AXIOMATIC_CALCULUS.md#foundation-to-law sha256=fb56ac87f017abefd81416e28c5e2b6ef512caafa8c75c979cca4865af61cb87 rows=1/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
+Source: AXIOMATIC_CALCULUS.md#foundation-to-law sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf rows=1/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
 
 ### Foundation to law
 
@@ -1145,7 +1143,7 @@ foundations and which are choices, with the owner of each choice, so no
 choice is presented as derived (P6, P1).
 
 
-Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=3b30baee4f6941d35491e4ae0aa5e5a332f8b8afbae833dc3b4631da3426060e rows=6/17 selected by the anchors this frame carries; the consumers paragraph of 17 items is omitted
+Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=4c87b1286d9c721b6e050b64adb8f6804327c0d8e3dad67f7c3973cbef389fd6 rows=6/17 selected by the anchors this frame carries; the consumers paragraph of 17 items is omitted
 
 ### Foundation to law: claims, evidence, assessment and acceptance
 
@@ -1181,7 +1179,7 @@ they are traced in family F3 at
 what §4 decides about the review record, triage and returns.
 
 
-Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=3b30baee4f6941d35491e4ae0aa5e5a332f8b8afbae833dc3b4631da3426060e rows=0/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
+Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=4c87b1286d9c721b6e050b64adb8f6804327c0d8e3dad67f7c3973cbef389fd6 rows=0/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
 
 ### Foundation to law: conformance, equivalence and qualification
 
@@ -1210,7 +1208,7 @@ last two rows; its §5 maps the method discriminators to cases and
 logical-review checks.
 
 
-Source: SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding sha256=5fe14955b40d1b9763b788d91aacd939799225be032811524be85fce44128c3d rows=3/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
+Source: SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding sha256=c7b83b2b7e8c9a301d2e535fc3752c08f718d9fc679e32f8a91c15c285976e8e rows=3/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
 
 ### Foundation to law: chain, outcome and build-tenant binding
 
@@ -1232,7 +1230,7 @@ derived from P0 and P6, with P0's open-world premise.
 |---|---|---|---|---|
 | P2 independent; P1 independent; P6 independent; instance: several realisations | By P2 obligations follow the outcome, not the means, so the same obligations may be realised by different means, and the obligations decide fitness. By P6 executing an operation is not adjudicating it, so the kind of executor alone neither accepts nor rejects a realisation, a person performing an operation does not thereby adjudicate, and a convenient stack weakens no obligation; by P1 a representation that validates structurally is not thereby executed correctly. Only an obligation's owner can weaken it (P6), so a change that needs a weaker obligation is a change to the WHAT at its owning layer. | [§11](../SPEC_METHOD.md#11-build-tenant-binding), rules 1, 2, 4 and 6, and Application in this method | the division of a binding into requirements calculus, computational calculus and execution environment: a domain choice of this member; each tenant's calculus and environment: that tenant's design | 4, 8 |
 | P0 recovered; P1 independent; P2 independent; P4a independent; P6 independent; P5 derived; instance: several realisations | By P0 and P5 a binding's results must be evaluable by a finite actor, so a binding identifies its operations, their outcome values mapped into the core, and resource measures with units and boundaries. By P4a a calculus composes by its declared laws, so it may serve wherever its laws hold, whoever executes it. By P6 a project's mechanics for developing several tenants are that project's own law. | [§11](../SPEC_METHOD.md#11-build-tenant-binding), rules 3 and 5, and Development of several tenants | which resources are measured, the limits on them, and their units and boundaries: each tenant's binding, as its obligations require, under the resource-limit law of [ACTIVATION §6 Resource limits](../ACTIVATION.md#resource-limits); the development mechanics: the project's product definition or the tenant's design | 3, 8 |
-| P1 independent; P0 recovered; P4a independent; P6 independent; instance: several realisations | By P1 and P4a the steps of a construction, what its data means and how it is carried out are separately declared, so they stay three separate accounts across the binding. A mapping from one account to another is a transformation, so it states and discharges its preservation under the law of [ACTIVATION §4 Refinement](../ACTIVATION.md#refinement) and, where it is recorded in a_c, of [AC-013](../AXIOMATIC_CALCULUS.md#ac-013-transformation). | [§11](../SPEC_METHOD.md#11-build-tenant-binding), rule 7 | which accounts a mapping joins, and the evidence that discharges its preservation in the environment: each tenant's binding; the three accounts of a construction: an added choice whose owner is the Intent of the Product that owns this corpus, in its Direction, defined at [FOUNDATIONS §2 Accounts of a construction](../FOUNDATIONS.md#accounts-of-a-construction) | 6, 8 |
+| P1 independent; P0 recovered; P4a independent; P6 independent; instance: several realisations | By P1 and P4a the steps of a construction, what its data means and how it is carried out are separately declared, so they stay three separate accounts across the binding. A mapping from one account to another is a transformation, so it states and discharges its preservation under the law of [ACTIVATION §4 Refinement](../ACTIVATION.md#refinement) and, where it is recorded in a_c, of [AC-013](../AXIOMATIC_CALCULUS.md#ac-013-transformation). | [§11](../SPEC_METHOD.md#11-build-tenant-binding), rule 7 | which accounts a mapping joins, and the evidence that discharges its preservation in the environment: each tenant's binding; the three accounts of a construction: an added choice owned by [FOUNDATIONS §2 Accounts of a construction](../FOUNDATIONS.md#accounts-of-a-construction) | 6, 8 |
 
 The standing of these consequences is stated in
 [FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law).
@@ -1245,7 +1243,7 @@ the rows §8 applies and the families that trace its statement of the
 step's results and its use of the tenant's binding.
 
 
-Source: SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity sha256=5fe14955b40d1b9763b788d91aacd939799225be032811524be85fce44128c3d rows=1/10 selected by the anchors this frame carries; the consumers paragraph of 10 items is omitted
+Source: SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity sha256=c7b83b2b7e8c9a301d2e535fc3752c08f718d9fc679e32f8a91c15c285976e8e rows=1/10 selected by the anchors this frame carries; the consumers paragraph of 10 items is omitted
 
 ### Foundation to law: change management and ambiguity
 

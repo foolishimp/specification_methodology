@@ -122,7 +122,7 @@ def normalize_body(row: dict[str, Any]) -> tuple[str, bool]:
 def refs(text: str) -> list[str]:
     return [item for item in re.findall(r"`([^`]+)`", text)
             if re.match(r"(?:standards/|plugins/|release/|schemas/|templates/)?[^ ]+\.(?:md|json|yaml)(?:#.*)?$", item)
-            or item == "LICENSE"]
+            or re.fullmatch(r"(?:[^/\s]+/)*LICENSE", item)]
 
 
 def candidate_locus(locus: str, rules: dict[str, Any]) -> str:
@@ -415,6 +415,8 @@ def validate(result: dict[str, Any], rules: dict[str, Any], shared: dict[str, An
         require(relation["proposed_disposition"] in VALUES, "unknown proposed disposition")
         require(relation["effective_disposition"] == "unresolved" and relation["acceptance"] == "pending", "acceptance or effective conservation invented")
         require(relation.get("dependencies") and relation.get("pending_decisions") and row.get("evidence"), "relation lost dependency, evidence or pending decision")
+        if relation["proposed_disposition"] in {"conserved", "superseded"}:
+            require(relation["receiving_loci"], "carried claim has no receiving locus: " + row["id"])
         if row["seed_disposition"]["normalized"] == "not_applicable":
             require(disposition(row["seed_disposition"]["note"]) == "not_applicable" and len(row["seed_disposition"]["note"].strip()) > 16, "non-applicability reason missing")
         if row["kind"] == "compression":
@@ -428,6 +430,7 @@ def validate(result: dict[str, Any], rules: dict[str, Any], shared: dict[str, An
             require(any(d["id"] == f"KEEP-OR-WITHDRAW-{n:02d}" for d in relation["pending_decisions"]), "Q2/Q6 owner choice lost")
         for locus in relation["receiving_loci"]:
             require(candidate_locus(locus["locus"], {"locus_adaptations": {}}) == locus["locus"], "receiving locus is not package-local")
+            require(locus.get("status") == "resolved", "unresolved receiving locus: " + row["id"] + " -> " + locus["locus"] + " (" + str(locus.get("status")) + ")")
         for evidence in row["evidence"]:
             require(evidence["current_applicability"] == "not_established", "historical review applicability invented")
 
@@ -451,6 +454,11 @@ def controls(result: dict[str, Any], rules: dict[str, Any], shared: dict[str, An
     def select(sample: dict[str, Any], predicate: Any) -> dict[str, Any]:
         return next(row for row in sample["rows"] if predicate(row))
 
+    def unresolved_locus(sample: dict[str, Any], locus: str, data: bytes | None) -> None:
+        projection = Projection()
+        projection.current[locus.partition("#")[0]] = data
+        sample["rows"][0]["successor_relation"]["receiving_loci"][0] = projection.resolve(locus, locus)
+
     mutated("omitted_shared_body_row", lambda s: s["rows"].remove(select(s, lambda r: r["inventory_class"] == "shared_body")))
     mutated("omitted_nonbody_row", lambda s: s["rows"].remove(select(s, lambda r: r["kind"] == "template")))
     mutated("duplicate_ID", lambda s: s["rows"].append(deepcopy(s["rows"][0])))
@@ -464,6 +472,10 @@ def controls(result: dict[str, Any], rules: dict[str, Any], shared: dict[str, An
     mutated("missing_Q2_Q6_owner_choice", lambda s: select(s, lambda r: r.get("loan_comparison_row") == 93)["successor_relation"].update(pending_decisions=[]))
     mutated("historical_review_promoted_to_current", lambda s: s["rows"][0]["evidence"][0].update(current_applicability="established"))
     mutated("locus_escapes_candidate", lambda s: s["rows"][0]["successor_relation"]["receiving_loci"][0].update(locus="../../old/OWNER.md#rule"))
+    mutated("conserved_without_receiving_locus", lambda s: select(s, lambda r: r["successor_relation"]["proposed_disposition"] == "conserved")["successor_relation"].update(receiving_loci=[]))
+    mutated("superseded_without_receiving_locus", lambda s: select(s, lambda r: r["successor_relation"]["proposed_disposition"] == "superseded")["successor_relation"].update(receiving_loci=[]))
+    mutated("missing_receiving_member", lambda s: unresolved_locus(s, "standards/missing-control.md", None))
+    mutated("missing_receiving_anchor", lambda s: unresolved_locus(s, "standards/anchor-control.md#absent", b"# Present\n"))
     rejected("duplicate_JSON_key", lambda: parse_json('{"rows":[],"rows":[]}'))
     rejected("malformed_not_without_reason", lambda: normalize_body({"disposition": "not", "disposition_note": "not an applicable record"}))
     return outcomes

@@ -862,14 +862,13 @@ specialisations are
 
 The operation that joins AC-010, AC-011 and RF-002, RF-003, RF-004,
 RF-014 and RF-017 into one procedure is stated here (P0); each of
-those laws is applied here from its successor section in
+those laws is applied here from its owning section in
 [AXIOMATIC_CALCULUS §4](AXIOMATIC_CALCULUS.md#ac-010-material-closure) and
-[REFERENCE_FRAME §3](REFERENCE_FRAME.md#3-laws), and a `stdo://` route in
-this section is provenance only. The method does not require proving
+[REFERENCE_FRAME §3](REFERENCE_FRAME.md#3-laws). The method does not require proving
 that no undiscovered material relation exists
 ([RF-003](REFERENCE_FRAME.md#rf-003-material-sufficiency)).
-The size measurement of step 3, with the condition under which it
-applies, and Acquisition are also new. Purpose and material relation:
+The size measurement of step 3 applies under its stated condition.
+Purpose and material relation of that measurement and Acquisition:
 finite context makes fit necessary (P0), so a fit against a declared
 capacity is measured rather than asserted, while fit and attention stay
 separate claims (P6); and an actor without a derived surface for its task
@@ -1049,7 +1048,7 @@ or the competing truth path, is the counterexample to accepting this
 candidate; a repaired candidate is a new candidate with its own results.
 For `re_enter` the governing basis the candidate was built and assessed on
 must change, so that basis cannot support acceptance; the change re-enters
-at its owning relation (§4). The core values are new; they place
+at its owning relation (§4). The core values place
 acceptance in the one core, as FOUNDATIONS §4 Results requires, so that a
 consumer combining results cannot take availability or assessment as
 acceptance (P6).
@@ -1087,7 +1086,7 @@ the value: `carried` with what would resolve the ambiguity, `blocked` with
 the halting condition and what would lift it (FOUNDATIONS §4 Results,
 Recording). No outcome other than `resolved` maps to `satisfied`, so a
 dependent claim cannot rest on a carried, escalated or blocked ambiguity
-as if it were resolved. The mapping is new; it places ambiguity outcomes
+as if it were resolved. The mapping places ambiguity outcomes
 in the one core, which FOUNDATIONS §4 Results requires of every outcome
 (P5, P6).
 
@@ -1133,7 +1132,7 @@ action, before any repetition or dependent action. A `not_effected`
 value licenses neither treating the effect as absent nor repeating it
 while its end is not established.
 
-The refinement is new. Its material relation is whether an action whose
+The refinement's material relation is whether an action whose
 external effect may have occurred is repeated or relied on; §4 names a
 lost post-effect response as a case that no added core value solves, and
 this refinement records it in the existing core. Keeping the end of the

@@ -128,8 +128,7 @@ the table of commitments in FOUNDATIONS §3 states it.
 The standing of these consequences is stated in
 [FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law).
 The table accounts for §1 to §9 and for FOUNDATIONS §2 Product lineage
-objects. §10 records open questions and decides nothing; §11 records
-dispositions and decides nothing.
+objects. §10 records open questions and decides nothing.
 
 Consumers of these rows, where an actor enters them (FOUNDATIONS §3
 Foundation to law, Consumers), one list per row, each consumer linked to
@@ -682,8 +681,7 @@ supersession by itself; an obligation stays obligatory, a preference
 stays a preference, and every permitted exception and scope condition
 survives, or the claim is not conserved. A statement that a whole
 package's wording is equivalent establishes none of this for any claim
-(P6, P1; the common successor disposition requirement, carried here as
-the test this section applies). A `conserved` disposition recorded
+(P6, P1). A `conserved` disposition recorded
 before this test applied is re-evaluated under it before the affected
 claim qualifies; until then its standing is `unresolved`.
 

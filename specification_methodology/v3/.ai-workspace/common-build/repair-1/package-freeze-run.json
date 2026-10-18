@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/usr/local/bin/python3",
+    "-I",
+    "-S",
+    "-c",
+    "import hashlib,pathlib,sys\np=pathlib.Path(sys.argv[1]);b=p.read_bytes()\nif hashlib.sha256(b).hexdigest()!=sys.argv[2]:raise SystemExit(\"checker identity mismatch\")\nsys.argv=[str(p)]+sys.argv[3:]\nexec(compile(b,str(p),\"exec\"),{\"__name__\":\"__main__\",\"__file__\":str(p),\"__authenticated_checker_sha256__\":hashlib.sha256(b).hexdigest()})",
+    "/Users/jim/src/apps/specification_methodology-common-build/specification_methodology/v3/.ai-workspace/common-build/tools/package_tools.py",
+    "30b70f6e7771535cf50b37e56a51bb595b477364b6c1112acf044c7b76e4ceac",
+    "freeze",
+    "--root",
+    "/Users/jim/src/apps/specification_methodology-common-build/specification_methodology/v3/build_tenants/common",
+    "--inventory",
+    "/Users/jim/src/apps/specification_methodology-common-build/specification_methodology/v3/.ai-workspace/common-build/repair-1/package-inventory.json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"inventory\": \"/Users/jim/src/apps/specification_methodology-common-build/specification_methodology/v3/.ai-workspace/common-build/repair-1/package-inventory.json\", \"inventory_sha256\": \"187908fed6acee3570f472ee15c11e3116537155a8c5cc14cad8d096dc8381cd\", \"member_count\": 81, \"standing\": \"identity capture, not validation or acceptance\"}\n",
+  "stderr": "",
+  "checker_sha256": "30b70f6e7771535cf50b37e56a51bb595b477364b6c1112acf044c7b76e4ceac"
+}

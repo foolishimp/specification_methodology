@@ -562,8 +562,7 @@ remain distinct from probabilistic overlays (P6, P0).
 
 ## 6. Units
 
-The profile's units (P3, #builder-project and the sibling
-unit anchors named in §15):
+The profile's units (P3):
 
 | Unit | Definition | Requires |
 |---|---|---|
@@ -616,8 +615,7 @@ artifacts (P3, P5).
 
 ## 7. Flow
 
-The profile proceeds through these stages (P4b, P6 and
-the stage anchors named in §15):
+The profile proceeds through these stages (P4b, P6):
 
 1. Observe. Gather source evidence from the strongest available surfaces
    (§3 Evidence hierarchy): runtime behaviour; source records and events;

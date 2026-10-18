@@ -1571,7 +1571,8 @@ names the normative premises and owners, and the publication basis names
 the calculus member that states their application. The principle-ref
 population is exactly the sorted, duplicate-free expansion of the local
 derivation addresses that the resolved calculus member declares under
-§8: neither a selected subset nor an independently invented list. Every
+[AXIOMATIC_CALCULUS §8](AXIOMATIC_CALCULUS.md#8-calculus-identity): neither
+a selected subset nor an independently invented list. Every
 referenced member resolves to exact bytes whose digest occurs once in
 the package manifest, and each fragment resolves one heading under the
 publication's semantic-address rule. An unresolved basis record, a
@@ -1585,10 +1586,11 @@ consumer mapping cannot stand in for either imported basis or for the
 publication identity (P3, P6).
 
 `publication_basis.release_uri` is one absolute immutable
-`stdo://releases/v<version>/` URI for a release or
-`stdo://releases/v<version>-rc.<positive-ordinal>/` URI for a release
-candidate. Its spelling establishes identity, not acceptance or release
-standing.
+`stdo://releases/v<version>-rc.<positive-ordinal>/` URI under
+[RELEASE §2](RELEASE.md#2-release-identities). Acceptance under
+[RELEASE §8](RELEASE.md#acceptance-criteria) is a verdict over that exact
+cut and creates no second release identity. Its spelling establishes
+identity, not acceptance or release standing.
 `publication_basis.member_uri` is exactly that URI plus
 `standards/TRAVERSAL_OCCURRENCE.md`. The installed release manifest named
 by `manifest_sha256` contains exactly one standards member with that path

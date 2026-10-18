@@ -20,13 +20,12 @@ Use these templates as source material for project-local files such as:
 `PRODUCT_DEFINITION_TEMPLATE.json` is the one per-product fill-in overlay. Its
 normative schema is `../schemas/product-definition.schema.json`.
 
-The current schema identity is `urn:stdo:schema:product-definition:3`. Revision
-3 replaces the undifferentiated `constitution.authorities` array with one
+The schema identity is `urn:stdo:schema:product-definition:3`. It declares one
 explicit STDO source, mutable version-line selector, exact installed basis and
 manifest digest, plus `additional_authorities`. Constitutional entrypoints are
 basis-qualified objects, and `agent_bootstrap` declares the entrypoint and local
-instruction targets managed between stable markers. Other Product Definition
-relations retain their revision-2 meaning.
+instruction targets managed between stable markers. The complete definition
+relations are stated in [PRODUCT_DEFINITION](../PRODUCT_DEFINITION.md#2-required-definition-relations).
 
 Copy it to the logical root of one product definition:
 

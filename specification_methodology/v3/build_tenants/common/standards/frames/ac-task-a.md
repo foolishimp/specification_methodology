@@ -6,8 +6,8 @@ Purpose: The owning sections for the model signature and typed records, the laws
 
 Binds:
 
-- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=22e39f1c5804c297eec2982e0b859438222b83b3439a810eed58d89b84bbb619; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=8c8cf97691fc97fd9939bdbb07e2669435842a60a1d658e7121fb10f1d11c8a8; section sha256=ce8079ea09ef206c7120446eb85d81c29a1052fb7c5bfdf2fb62ee92c3f68c84 spanning to #formal-representation)
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545; section sha256=a7d5fc5930338c3fb3959017f41935ce742fbb1bf189c2f527dde4e0ba12d064 spanning to #formal-representation)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 a link to the owning section, the digest of its member and the digest of that
@@ -52,7 +52,7 @@ Routes, in order:
 
 Size of this frame: 69466 bytes.
 
-Source: FOUNDATIONS.md#authority-kinds sha256=8c8cf97691fc97fd9939bdbb07e2669435842a60a1d658e7121fb10f1d11c8a8
+Source: FOUNDATIONS.md#authority-kinds sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545
 
 ### Authority kinds
 
@@ -119,7 +119,7 @@ so one list keeps the answer the same in every member, and a capability,
 a label or a passing check can never be read as a permission (P6).
 
 
-Source: AXIOMATIC_CALCULUS.md#2-signature sha256=fb56ac87f017abefd81416e28c5e2b6ef512caafa8c75c979cca4865af61cb87
+Source: AXIOMATIC_CALCULUS.md#2-signature sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf
 
 ## 2. Signature
 
@@ -237,7 +237,7 @@ code or any other representation only when its encoding profile proves
 that every tuple relation is preserved or explicitly refused (P1, P4b).
 
 
-Source: AXIOMATIC_CALCULUS.md#3-typed-records sha256=fb56ac87f017abefd81416e28c5e2b6ef512caafa8c75c979cca4865af61cb87
+Source: AXIOMATIC_CALCULUS.md#3-typed-records sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf
 
 ## 3. Typed records
 
@@ -376,7 +376,7 @@ domains. An undeclared residual kind or value refuses structural admission
 (P3).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-002-scoped-identity sha256=fb56ac87f017abefd81416e28c5e2b6ef512caafa8c75c979cca4865af61cb87
+Source: AXIOMATIC_CALCULUS.md#ac-002-scoped-identity sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf
 
 ### AC-002 Scoped identity
 
@@ -393,7 +393,7 @@ binding beside it: equal spelling, payload equality, position in any
 structure and carrier equality do not establish semantic identity (P3).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-003-reference-closure sha256=fb56ac87f017abefd81416e28c5e2b6ef512caafa8c75c979cca4865af61cb87
+Source: AXIOMATIC_CALCULUS.md#ac-003-reference-closure sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf
 
 ### AC-003 Reference closure
 
@@ -405,7 +405,7 @@ wrong-sort, wrong-basis, locally-and-externally ambiguous or
 undeclared-field references refuse structural admission (P3, P5).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-005-authority-conservation sha256=fb56ac87f017abefd81416e28c5e2b6ef512caafa8c75c979cca4865af61cb87
+Source: AXIOMATIC_CALCULUS.md#ac-005-authority-conservation sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf
 
 ### AC-005 Authority conservation
 
@@ -418,7 +418,7 @@ interpreting, encoding, evaluating and transporting a record, none of
 which transfers authority (P6, P4b).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-006-basis-coherence sha256=fb56ac87f017abefd81416e28c5e2b6ef512caafa8c75c979cca4865af61cb87
+Source: AXIOMATIC_CALCULUS.md#ac-006-basis-coherence sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf
 
 ### AC-006 Basis coherence
 
@@ -432,7 +432,7 @@ mixed basis is an explicitly owned record, and individually valid
 coordinates do not create a coherent composite basis by proximity (P6, P3).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal sha256=fb56ac87f017abefd81416e28c5e2b6ef512caafa8c75c979cca4865af61cb87
+Source: AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf
 
 ### AC-007 Constraint and refusal
 
@@ -535,7 +535,7 @@ the activation outcome `closure_unresolved` of
 predicate (P5, P6).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-008-explicit-latitude sha256=fb56ac87f017abefd81416e28c5e2b6ef512caafa8c75c979cca4865af61cb87
+Source: AXIOMATIC_CALCULUS.md#ac-008-explicit-latitude sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf
 
 ### AC-008 Explicit latitude
 
@@ -546,7 +546,7 @@ the same rule for any two values; this law is its form over `L` and `T`
 (P6, P1).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-009-residual-conservation sha256=fb56ac87f017abefd81416e28c5e2b6ef512caafa8c75c979cca4865af61cb87
+Source: AXIOMATIC_CALCULUS.md#ac-009-residual-conservation sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf
 
 ### AC-009 Residual conservation
 
@@ -556,7 +556,7 @@ disposition creates an exact successor model. Absence from a projection is
 not resolution (P4b).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-013-transformation sha256=fb56ac87f017abefd81416e28c5e2b6ef512caafa8c75c979cca4865af61cb87
+Source: AXIOMATIC_CALCULUS.md#ac-013-transformation sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf
 
 ### AC-013 Transformation
 
@@ -745,7 +745,7 @@ step: what was preserved, introduced and removed, the external resolution
 witnesses and the residuals.
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-014-judgment-separation sha256=fb56ac87f017abefd81416e28c5e2b6ef512caafa8c75c979cca4865af61cb87
+Source: AXIOMATIC_CALCULUS.md#ac-014-judgment-separation sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf
 
 ### AC-014 Judgment separation
 
@@ -776,7 +776,7 @@ subject. Promotion is an explicit relation between the unchanged subject
 and its admission or acceptance judgment (P6, P3).
 
 
-Source: AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds sha256=fb56ac87f017abefd81416e28c5e2b6ef512caafa8c75c979cca4865af61cb87
+Source: AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf
 
 ## 5. Traversals and functor kinds
 
@@ -896,7 +896,7 @@ universal `F_P -> F_D -> F_H` sequence; each application owns its lawful
 topology (P4a, P4b, P6). FOUNDATIONS §3 P4a consumes this law.
 
 
-Source: FOUNDATIONS.md#results sha256=8c8cf97691fc97fd9939bdbb07e2669435842a60a1d658e7121fb10f1d11c8a8 rows=7/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
+Source: FOUNDATIONS.md#results sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545 rows=7/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -1070,7 +1070,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=8c8cf97691fc97fd9939bdbb07e2669435842a60a1d658e7121fb10f1d11c8a8
+Source: FOUNDATIONS.md#conjunction-of-results sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545
 
 ### Conjunction of results
 
@@ -1192,7 +1192,7 @@ premises hold ([ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement),
 Refinement).
 
 
-Source: AXIOMATIC_CALCULUS.md#foundation-to-law sha256=fb56ac87f017abefd81416e28c5e2b6ef512caafa8c75c979cca4865af61cb87 rows=9/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
+Source: AXIOMATIC_CALCULUS.md#foundation-to-law sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf rows=9/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
 
 ### Foundation to law
 

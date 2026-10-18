@@ -68,8 +68,7 @@ which the commitments do not supply:
 | P3 (independent), P6 (independent) | By P3 and P6 an identity surface must let a reader recover owner, kind, scope and relations, so an identity surface that cannot answer the minimum questions is under-defined | [§10](#10-minimum-questions) | the seven questions: this member | 2 |
 | P3 (independent), P1 (independent), P0 (recovered) | By P3 and P1 identity is read through its published law, not mined from text, so implementations should prefer typed identity readers and published identity law over regex mining; by P0 a repair is bounded to the step at hand, so the first lawful repair contains the immediate bug, and the enduring repair publishes identity law and moves implementations onto it | [§12](#12-consequence-for-implementations) | a policy of this member: the enduring repair publishes identity law and moves implementations onto it | 2, 8 |
 
-§11 applies these rows to examples and decides nothing beyond them; §13
-records where each predecessor claim is carried and decides nothing. The
+§11 applies these rows to examples and decides nothing beyond them. The
 table is stated here. Purpose and material relation: an actor
 started on this member sees which identity rules follow from the
 foundations and which are choices, with the owner of each choice, so no

@@ -74,7 +74,7 @@ Targeted failure controls accompany the adopted gates. Existing useful task rout
 
 ## Open decisions and qualification
 
-Owner: A1 reach across four additional passages; Q13 frame-excerpt tradeoff; Q14 task-routed entry; Q2/Q6 rows 93-96; remaining exact replacement decisions; covering reviewer assignment. Reviewer: P1 class. No total replacement count is endorsed while those classifications are unresolved.
+Owner: A1 reach across four additional passages; Q13 frame-excerpt tradeoff; Q14 task-routed entry; Q2/Q6 rows 93-96; remaining exact replacement decisions; covering reviewer assignment; D1 calculus derivation basis (SC2), D2 CONFORMANCE scope and independent expectations (SC3), D3 the application evidence duty (SC5), and D4 recoverability (SC4). The [decision packet](../../common-build/repair-1/DECISIONS.md) records the additional choices without accepting them. Reviewer: P1 class. No total replacement count is endorsed while those classifications are unresolved.
 
 Completion of construction requires a fully local package, a complete register return, reproducible mechanical verification and explicit residuals. Release readiness additionally requires current semantic and actual-use evidence on the frozen candidate, independent review over the material contribution set, owner replacement decisions and release acceptance. A green package checker establishes only its declared mechanical properties.
 

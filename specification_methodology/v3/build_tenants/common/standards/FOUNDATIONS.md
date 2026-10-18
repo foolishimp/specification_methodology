@@ -277,11 +277,10 @@ distinct (P1, P0):
 
 The distinction is kept for any construction and is independent of the
 tiers of this corpus: a construction may need all three accounts, and no
-account is a tier (P1). The distinction is an added choice in the sense
-of §3 Foundation to law, not a commitment, and has none of the standings
-of §1; its owner is the Intent of the Product that owns this corpus, in
-its Direction. Purpose and material relation: the steps, the meaning of
-the data and the means of execution can each change while the others
+account is a tier (P1). This section owns the distinction as an added
+choice in the sense of §3 Foundation to law, not a commitment; it has none
+of the standings of §1. Purpose and material relation: the steps, the
+meaning of the data and the means of execution can each change while the others
 hold, so a claim about one account is never taken for a claim about
 another (P1, P6).
 
@@ -309,10 +308,9 @@ An import declaration states, for each imported concept (P1, P3, P6):
   concepts of one declaration.
 
 An import takes one of two forms. A declaration states these contents
-for each imported concept in one place; between members of this corpus it
-rests on the authority of the Product that owns the corpus, so the
-relation is owner-authorised (P6). A reference at the point of use
-that names the owning section is also an import: it states what is
+for each imported concept in one place; between members of this corpus,
+it is the owner-authorised relation described here (P6). A reference at the
+point of use that names the owning section is also an import: it states what is
 imported and its owner; its source context is the one the list above
 names, its target is the using member's context, and its direction, loss
 and lack of authority are those stated above. A concept another member
@@ -478,8 +476,7 @@ of their relations, stated once so that every consumer of the construction
 relation, which [ACTIVATION §1](ACTIVATION.md#construction-relation), a
 tier 1 foundations member of this corpus, owns, can see which commitment grounds each part. It is derived, not a further
 commitment, and has the standing of a consequence under Foundation to law
-below (P6). It is law carried from the common requirements' synthesis of
-their principles.
+below (P6).
 
 | Commitment | Contribution to construction |
 |---|---|
@@ -533,15 +530,13 @@ consequence, in five columns:
   A row never files the whole rule as the choice: the choice is only what
   the premises leave open.
 - Pillar: the pillar contributions the row helps account for, by number.
-  The pillars are the ten contributions that the Foundational Reduction of
-  the Product that owns this corpus names, in its order: 1 specification
+  The ten contributions used in this trace are, in order: 1 specification
   and project structure; 2 world models, identity and Markov objects; 3
   algebraic calculus; 4 functional design; 5 outcome-driven development; 6
   information and interpretation; 7 reference frames; 8 computational
   calculus and execution binding; 9 evidence, correction and authority; 10
-  axiomatic calculus. That Product owns the contributions and their
-  wording. A Pillar cell is a trace, like the rest of the table: it is not
-  a premise, adds no standing to the row, owns no choice, and does not
+  axiomatic calculus. A Pillar cell is a trace, like the rest of the table:
+  it is not a premise, adds no standing to the row, owns no choice, and does not
   claim that a pillar is an axiom or follows from finite capacity.
 
 Consumers. After the table, a paragraph names, for each row, the sections
@@ -551,8 +546,7 @@ consumer applies and
 the scope of that absence. A blank field or a generic referral establishes
 neither coverage nor non-applicability. The paragraph is a trace like the
 table: a consumer named in it applies the rule and decides nothing the
-owning section does not (P2, P6; law carried from the common standalone
-successor requirement).
+owning section does not (P2, P6).
 
 A family table is a trace. Its consequence and choice columns state no
 determination that the rule it names does not state, and the table owns
@@ -1057,9 +1051,8 @@ and evidence that support claims about it. They are the shared owner for
 the preservation, assertion, provenance, quantified-assurance, reuse and
 formal-representation obligations in this corpus; ACTIVATION §1, §4, §5 and §7, EVALUATION §1 and §3,
 ASSURANCE §3, §10, §11 and §14, RELEASE §8 and §9, SPEC_METHOD §4 and
-the a_c interpretation apply them and state no second relation (P6). They are law
-carried from the common assurance requirement. A tenant chooses its
-representation and execution within these obligations. The notation
+any a_c interpretation apply them and state no second relation (P6).
+A tenant chooses its representation and execution within these obligations. The notation
 states proof obligations; writing an implication does not discharge it.
 
 Foundation to law. This family, assurance relations, covers the six
@@ -1076,7 +1069,7 @@ conditions of the situations the family governs, not commitments.
 | P4a (independent), P2 (independent), P6 (independent); instance premise a | By P4a the composite's property follows only through compatible boundaries, by P2 the final property matters only through its connection to Z, and by P6 that connection is argued, not assumed, so an end-to-end argument establishes the initial condition, each step's premises, compatibility at each boundary and the connection to Z, and preservation is distinct from progress and termination | [Preservation through construction](#preservation-through-construction) | the composition law for concurrency, branches and external effects: the owner of the construction's design | 3, 4, 7 |
 | P1 (independent), P6 (independent), P5 (derived from P0 and P6, with P0's open-world premise); instance premises a, b | By P1 an assertion's predicate is distinct from the obligation it is derived from, by P6 passing a necessary condition establishes no more than that condition, and by P5 a conjunction's coverage is a claim of its own, so each assertion states whether its predicate is the obligation, a necessary condition or part of a sufficient conjunction, conditional on Γ and Ω | [Assertions and observation](#assertions-and-observation) | the declared domain Ω and the interpretation: the owner of the obligation and the assessor's activation | 6, 9 |
 | P3 (independent), P1 (independent), P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent); instance premises b, c | By P3 two admissible cases can differ while their observations agree, by P1 agreement of observations is not agreement of meaning, by P5 an undecidable case is `indeterminate` and never `satisfied`, and by P6 soundness covers every admitted conclusion, so a checker is sound only where its observation separates the cases, and otherwise acquires evidence, narrows its scope or returns `indeterminate` | [Assertions and observation](#assertions-and-observation), Observation sufficiency | the checker's admitted relation T and its observation π: the owner of the assessment frame | 6, 7, 9 |
-| P6 (independent), P1 (independent), P4a (independent); instance premises a, c | By P6 an expected answer is justified by its derivation from the obligation and an execution by its record, by P1 a copied answer carries no independent interpretation, and by P4a shared dependencies compose into shared causes of error, so assertion provenance and execution provenance are both required, agreement among paths with shared causes is not independent evidence, and disagreement requires diagnosis | [Parallel derivation and mutual assurance](#parallel-derivation-and-mutual-assurance) | which paths are run and compared: the strategy's owner; the authorship of ported material: EVALUATION §3 and the Cross-Synthesis rule of the owning Product | 6, 9 |
+| P6 (independent), P1 (independent), P4a (independent); instance premises a, c | By P6 an expected answer is justified by its derivation from the obligation and an execution by its record, by P1 a copied answer carries no independent interpretation, and by P4a shared dependencies compose into shared causes of error, so assertion provenance and execution provenance are both required, agreement among paths with shared causes is not independent evidence, and disagreement requires diagnosis | [Parallel derivation and mutual assurance](#parallel-derivation-and-mutual-assurance) | which paths are run and compared: the strategy's owner; the authorship of ported material: [EVALUATION §3](EVALUATION.md#3-independent-assessment) | 6, 9 |
 | P6 (independent), P5 (derived from P0 and P6, with P0's open-world premise), P1 (independent); instance premise c | By P6 a number is a claim on its model and evidence, by P5 an unsupported estimate stays unknown, and by P1 a probability over outcomes is distinct from the truth of the predicate, so a quantified assurance claim states its population, priors, likelihoods, shared causes and calibration limits, and no threshold is imposed by this member | [Quantified assurance](#quantified-assurance) | the risk policy and any threshold: the actor exercising the admitted work authority, under the adopting Product | 9 |
 | P3 (independent), P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable), P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent); instance premise a | By P3 a changed dependency changes what an earlier observation applies to, by P4b retained evidence is conserved with its subject, by P5 unknown impact leaves the dependent assurance undecided, and by P6 retention is justified and not assumed, so validity dependencies are kept apart from justification links, affected checks are selected conservatively, and evidence is retained only under its validity conditions while mandatory gates stay applicable, which ACTIVATION §7 applies to closed results and handoffs | [Change impact and evidence reuse](#change-impact-and-evidence-reuse) | the representation of dependencies and the selection model: the realisation; mandatory gates: RELEASE §8 and the adopting Product | 2, 9 |
 | P1 (independent), P6 (independent); instance premise a | By P1 a representation is distinct from the meaning it carries, and by P6 a label is not evidence, so the formal interpretation distinguishes a stated formula, a discharged argument, checked structure, an external predicate and execution evidence, and finite examples prove no universal implication | [Formal representation](#formal-representation) | the carrier, checker and projections: the tenant's a_c design under AXIOMATIC_CALCULUS | 6, 10 |
@@ -1088,7 +1081,7 @@ locus:
 - Row 2, the end-to-end argument: [ACTIVATION §1 Composition boundaries](ACTIVATION.md#construction-relation) and [ACTIVATION §4 Refinement](ACTIVATION.md#refinement), as for row 1.
 - Row 3, assertion directions: [EVALUATION §1](EVALUATION.md#1-claims); [ASSURANCE §3](ASSURANCE.md#3-test-authority); [ASSURANCE §10](ASSURANCE.md#10-testing-evidence-composition).
 - Row 4, observation sufficiency: [ASSURANCE §1](ASSURANCE.md#1-verification-layers), where a failing scenario shows a disagreement of actual behaviour only where its observation binding is supported; [ASSURANCE §11](ASSURANCE.md#11-assurance-subject-acquisition-and-evaluation).
-- Row 5, provenance and mutual assurance: [EVALUATION §1](EVALUATION.md#1-claims); [EVALUATION §3](EVALUATION.md#3-independent-assessment); [ASSURANCE §3](ASSURANCE.md#3-test-authority); [ASSURANCE §14](ASSURANCE.md#14-design-to-module-evidence-route); the Cross-Synthesis rule of the Product that owns this corpus.
+- Row 5, provenance and mutual assurance: [EVALUATION §1](EVALUATION.md#1-claims); [EVALUATION §3](EVALUATION.md#3-independent-assessment), including its authorship rule for a received contribution; [ASSURANCE §3](ASSURANCE.md#3-test-authority); [ASSURANCE §14](ASSURANCE.md#14-design-to-module-evidence-route).
 - Row 6, quantified assurance: [EXECUTIVE_BASELINE Technical triage](EXECUTIVE_BASELINE.md#technical-triage-severity-priority-and-boundary-effect), whose causal assessment records a confidence; [SPEC_METHOD §8](SPEC_METHOD.md#8-bounded-execution-in-this-method), where a probability informs priority; [ASSURANCE §8](ASSURANCE.md#8-combinatorial-coverage-and-testing-value), where a project may define a testing-value scalar. At each, an unsupported numeric confidence remains unresolved.
 - Row 7, change impact and reuse: [ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse), through which [ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart) and [EVALUATION §3](EVALUATION.md#3-independent-assessment) reach it; [RELEASE §8](RELEASE.md#8-acceptance) and [§9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015); [SPEC_METHOD §4 Universal intake triage](SPEC_METHOD.md#universal-intake-triage), whose determination of the surfaces and evidence to re-derive is the selection `S_Δ`.
 - Row 8, formal representation: [AXIOMATIC_CALCULUS Constraint surfaces](AXIOMATIC_CALCULUS.md#constraint-surfaces), whose first condition of use keeps each element's kind of support; [CONFORMANCE §4](CONFORMANCE.md#4-cases-for-method-discriminators), cases AR-01 to AR-04, which carry the demonstration cases this owner requires. The interpretation that records the kinds is a derived view under AXIOMATIC_CALCULUS, not a consumer of the rule.
@@ -1261,8 +1254,8 @@ and does not identify the faulty party by itself. Assurance accounts for
 shared specifications, interpretations, tools, fixtures, observations,
 copied material and other material failure causes. Different actors,
 model families or codebases do not establish statistical independence.
-Porting retains authorship and common dependencies (EVALUATION §3 and the
-Cross-Synthesis rule of the Product that owns this corpus). Repeating
+Porting retains authorship and common dependencies
+([EVALUATION §3](EVALUATION.md#3-independent-assessment)). Repeating
 evidence does not create a new independent observation. Agreement with
 an incorrect common model cannot validate that model against the desired
 real-world outcome; validation of the governing expectations uses its
@@ -1415,11 +1408,12 @@ its `D*(t)` meets `I(Δ)` (P5, P6).
 
 ### Formal representation
 
-The candidate's a_c interpretation represents the material obligations
-and dependency relationships of these subsections under the
-constraint-surface fidelity rule of the Product that owns this corpus,
-through [AXIOMATIC_CALCULUS](AXIOMATIC_CALCULUS.md) and the acquired
-views that project it. It distinguishes five kinds of support for a statement: a
+An a_c interpretation of these assurance relations represents their
+material obligations and dependency relationships. Its fidelity and the
+acquired views that project it follow
+[AXIOMATIC_CALCULUS §6](AXIOMATIC_CALCULUS.md#6-interpretation-and-models)
+and [Constraint surfaces](AXIOMATIC_CALCULUS.md#constraint-surfaces).
+It distinguishes five kinds of support for a statement: a
 stated formula, a discharged mathematical argument, mechanically checked
 structure, an externally assessed predicate, and evidence from execution.
 An external predicate retains the source, scope and evidence required to
@@ -1427,9 +1421,9 @@ establish it; an arbitrary truth label does not discharge the obligation.
 No particular proof assistant, probability library or execution engine is
 selected (P1, P6).
 
-The candidate demonstrates the applicable positive, negative and
-unresolved cases in [CONFORMANCE](CONFORMANCE.md), including weak
-assertions, insufficient observations, shared error, and change selection
+Assessment of these assurance relations demonstrates the applicable
+positive, negative and unresolved cases in [CONFORMANCE](CONFORMANCE.md),
+including weak assertions, insufficient observations, shared error, and change selection
 that either retains valid evidence or invalidates affected evidence.
 Mathematical proof, exhaustive checks of a finite model, sampled tests and
 observed use retain their distinct scopes. Finite examples do not prove
@@ -1437,11 +1431,12 @@ the universal implications above. An unproved universal claim can remain
 unresolved while bounded construction and assurance proceed where their
 governing conditions permit them (P5, P6).
 
-The existing member and integrated criteria assess these owners and their
-consumers ([EVALUATION §6](EVALUATION.md#6-conformance-of-realisations)).
+Assessment of these owners and their consumers follows
+[EVALUATION §6](EVALUATION.md#6-conformance-of-realisations) and
+[§7](EVALUATION.md#7-qualification-of-frames-and-of-the-method).
 Source semantics, formal fidelity and actual use retain their separate
-evidence; these obligations create no seventh criterion and do not make
-each test a theorem-proving exercise (P6).
+evidence within the applicable conformance and qualification criteria;
+these obligations do not make each test a theorem-proving exercise (P6).
 
 Purpose and material relation of the assurance relations: they connect
 construction results to the obligations they support, expose shared

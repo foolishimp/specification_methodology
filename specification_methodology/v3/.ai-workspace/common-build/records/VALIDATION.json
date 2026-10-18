@@ -99,6 +99,26 @@
       "observed": "nonlocal candidate locus ../../old/OWNER.md#rule"
     },
     {
+      "name": "conserved_without_receiving_locus",
+      "result": "pass",
+      "observed": "carried claim has no receiving locus: README.md#standards-library"
+    },
+    {
+      "name": "superseded_without_receiving_locus",
+      "result": "pass",
+      "observed": "carried claim has no receiving locus: AXIOMATIC_CALCULUS.md#derivation-provenance"
+    },
+    {
+      "name": "missing_receiving_member",
+      "result": "pass",
+      "observed": "unresolved receiving locus: README.md#standards-library -> standards/missing-control.md (missing_candidate_member)"
+    },
+    {
+      "name": "missing_receiving_anchor",
+      "result": "pass",
+      "observed": "unresolved receiving locus: README.md#standards-library -> standards/anchor-control.md#absent (missing_candidate_anchor)"
+    },
+    {
       "name": "duplicate_JSON_key",
       "result": "pass",
       "observed": "duplicate JSON key: rows"

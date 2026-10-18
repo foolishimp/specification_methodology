@@ -976,7 +976,11 @@
     "Q2_Q6_ROWS_93_96",
     "EXACT_REPLACEMENTS",
     "TEN_CHANGED_CONSERVED_ROWS",
-    "COVERING_REVIEW_ASSIGNMENT"
+    "COVERING_REVIEW_ASSIGNMENT",
+    "D1",
+    "D2",
+    "D3",
+    "D4"
   ],
   "reviewer_decisions": [
     "P1_CLASS"
@@ -984,9 +988,27 @@
   "no_decision_count_endorsed": true,
   "standing": "Construction record. Proposal agreement, prepared text, mechanical evidence and acceptance are separate. No whole-method qualification or release is claimed.",
   "candidate_inventory": {
-    "path": "returns/package-final-freeze.json",
-    "sha256": "cd140a1ca32e17d8310522cf170b252c1887d7127c8fc17833b4d8e05c608050"
+    "path": "repair-1/package-inventory.json",
+    "sha256": "187908fed6acee3570f472ee15c11e3116537155a8c5cc14cad8d096dc8381cd"
   },
-  "candidate_commit": "494451522072ec34381c644f1ccfa2331f2b1e27",
-  "candidate_tree": "082df4ea2b7b3658aab528bbfbcfe81234ccc810"
+  "candidate_commit": null,
+  "candidate_tree": null,
+  "standalone_decision_register": "repair-1/DECISIONS.json",
+  "standalone_decision_readback": "repair-1/DECISIONS.md",
+  "review_readback": {
+    "source": "repair-1/inputs/PINS.json",
+    "status": "B1-B3 author repairs integrated; D1-D4 explicitly pending; supplementary review and installed verification in progress"
+  },
+  "candidate_history": [
+    {
+      "role": "first_build",
+      "commit": "494451522072ec34381c644f1ccfa2331f2b1e27",
+      "tree": "082df4ea2b7b3658aab528bbfbcfe81234ccc810",
+      "inventory": {
+        "path": "returns/package-final-freeze.json",
+        "sha256": "cd140a1ca32e17d8310522cf170b252c1887d7127c8fc17833b4d8e05c608050"
+      },
+      "evidence_standing": "historical exact subject; not current proof"
+    }
+  ]
 }

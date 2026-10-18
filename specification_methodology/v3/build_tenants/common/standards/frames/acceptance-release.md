@@ -6,8 +6,8 @@ Purpose: The owning sections for review results and triage, acceptance and when 
 
 Binds:
 
-- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=22e39f1c5804c297eec2982e0b859438222b83b3439a810eed58d89b84bbb619; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=8c8cf97691fc97fd9939bdbb07e2669435842a60a1d658e7121fb10f1d11c8a8; section sha256=ce8079ea09ef206c7120446eb85d81c29a1052fb7c5bfdf2fb62ee92c3f68c84 spanning to #formal-representation)
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545; section sha256=a7d5fc5930338c3fb3959017f41935ce742fbb1bf189c2f527dde4e0ba12d064 spanning to #formal-representation)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 a link to the owning section, the digest of its member and the digest of that
@@ -46,9 +46,9 @@ Routes, in order:
 11. [RELEASE.md#foundation-to-law-release-and-successor-conservation](../RELEASE.md#foundation-to-law-release-and-successor-conservation)
 12. [TICKETS.md#foundation-to-law-work-carriers](../TICKETS.md#foundation-to-law-work-carriers)
 
-Size of this frame: 59658 bytes.
+Size of this frame: 59504 bytes.
 
-Source: EVALUATION.md#4-review-results sha256=3b30baee4f6941d35491e4ae0aa5e5a332f8b8afbae833dc3b4631da3426060e
+Source: EVALUATION.md#4-review-results sha256=4c87b1286d9c721b6e050b64adb8f6804327c0d8e3dad67f7c3973cbef389fd6
 
 ## 4. Review results
 
@@ -117,7 +117,7 @@ assessor and decision owner; [EXECUTIVE_BASELINE](../EXECUTIVE_BASELINE.md)
 binds its Reviewer and Executive instance (P6).
 
 
-Source: EVALUATION.md#5-acceptance sha256=3b30baee4f6941d35491e4ae0aa5e5a332f8b8afbae833dc3b4631da3426060e
+Source: EVALUATION.md#5-acceptance sha256=4c87b1286d9c721b6e050b64adb8f6804327c0d8e3dad67f7c3973cbef389fd6
 
 ## 5. Acceptance
 
@@ -185,7 +185,7 @@ does not block on observations outside its claim, while a non-waivable hard
 stop still blocks.
 
 
-Source: ACTIVATION.md#disposition sha256=22e39f1c5804c297eec2982e0b859438222b83b3439a810eed58d89b84bbb619
+Source: ACTIVATION.md#disposition sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf
 
 ### Disposition
 
@@ -210,7 +210,7 @@ or the competing truth path, is the counterexample to accepting this
 candidate; a repaired candidate is a new candidate with its own results.
 For `re_enter` the governing basis the candidate was built and assessed on
 must change, so that basis cannot support acceptance; the change re-enters
-at its owning relation (§4). The core values are new; they place
+at its owning relation (§4). The core values place
 acceptance in the one core, as FOUNDATIONS §4 Results requires, so that a
 consumer combining results cannot take availability or assessment as
 acceptance (P6).
@@ -226,7 +226,7 @@ unchanged failed construction relation as if iteration alone could close
 it (P2).
 
 
-Source: FOUNDATIONS.md#results sha256=8c8cf97691fc97fd9939bdbb07e2669435842a60a1d658e7121fb10f1d11c8a8 rows=7/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
+Source: FOUNDATIONS.md#results sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545 rows=7/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -400,7 +400,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=8c8cf97691fc97fd9939bdbb07e2669435842a60a1d658e7121fb10f1d11c8a8
+Source: FOUNDATIONS.md#conjunction-of-results sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545
 
 ### Conjunction of results
 
@@ -561,7 +561,7 @@ Closure recording preserves the exact evaluated scope, the satisfied
 conditions, the evidence and the remaining residuals (P4b, P2).
 
 
-Source: RELEASE.md#8-acceptance sha256=8b405f7ee59b2a7e6602ca576b211bbb8a5411fe84c4e4a50f310661d5fa6fe2
+Source: RELEASE.md#8-acceptance sha256=53f465d4d25b097c7da0df0e1f18805d273b032f6fe849b59a457b29b1349992
 
 ## 8. Acceptance
 
@@ -606,7 +606,7 @@ dependent capability passed. The claim is either qualified against a
 healthy dependency or narrowed before acceptance (P6, P5).
 
 
-Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=8b405f7ee59b2a7e6602ca576b211bbb8a5411fe84c4e4a50f310661d5fa6fe2
+Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=53f465d4d25b097c7da0df0e1f18805d273b032f6fe849b59a457b29b1349992
 
 ## 9. Successor baseline conservation (STDO-UP-015)
 
@@ -641,8 +641,7 @@ supersession by itself; an obligation stays obligatory, a preference
 stays a preference, and every permitted exception and scope condition
 survives, or the claim is not conserved. A statement that a whole
 package's wording is equivalent establishes none of this for any claim
-(P6, P1; the common successor disposition requirement, carried here as
-the test this section applies). A `conserved` disposition recorded
+(P6, P1). A `conserved` disposition recorded
 before this test applied is re-evaluated under it before the affected
 claim qualifies; until then its standing is `unresolved`.
 
@@ -674,7 +673,7 @@ requires of the disposition record; it applies this section and is not
 part of it (P4b, P6).
 
 
-Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=3b30baee4f6941d35491e4ae0aa5e5a332f8b8afbae833dc3b4631da3426060e rows=4/17 selected by the anchors this frame carries; the consumers paragraph of 17 items is omitted
+Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=4c87b1286d9c721b6e050b64adb8f6804327c0d8e3dad67f7c3973cbef389fd6 rows=4/17 selected by the anchors this frame carries; the consumers paragraph of 17 items is omitted
 
 ### Foundation to law: claims, evidence, assessment and acceptance
 
@@ -708,7 +707,7 @@ they are traced in family F3 at
 what §4 decides about the review record, triage and returns.
 
 
-Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=3b30baee4f6941d35491e4ae0aa5e5a332f8b8afbae833dc3b4631da3426060e rows=1/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
+Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=4c87b1286d9c721b6e050b64adb8f6804327c0d8e3dad67f7c3973cbef389fd6 rows=1/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
 
 ### Foundation to law: conformance, equivalence and qualification
 
@@ -731,14 +730,14 @@ below is stated in
 
 | Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
 |---|---|---|---|---|
-| P1 (independent), P6 (independent); instance premise b | By P1 moved text is not changed meaning and unchanged bytes are not conserved meaning, and by P6 each claim needs its own evidence, so a reconstruction return states semantic conservation, demonstrated reduction and mere relocation as separate claims with separate evidence, and no byte or size measure establishes any of them | [Return of a reconstruction](../EVALUATION.md#return-of-a-reconstruction) | the dispositions and the conservation reading: [RELEASE §9](../RELEASE.md#9-successor-baseline-conservation-stdo-up-015) (family F19); the reduction measure, its baselines and the traced paths: the candidate's design, declared before the trace | 1, 6, 9 |
+| P1 (independent), P6 (independent); instance premise b | By P1 moved text is not changed meaning and unchanged bytes are not conserved meaning, and by P6 each claim needs its own evidence, so a reconstruction return states semantic conservation, demonstrated reduction and mere relocation as separate claims with separate evidence, and no byte or size measure establishes any of them | [Return of a reconstruction](../EVALUATION.md#return-of-a-reconstruction) | the dispositions and the conservation reading: [RELEASE §9](../RELEASE.md#9-successor-baseline-conservation-stdo-up-015) (family F15); the reduction measure, its baselines and the traced paths: the candidate's design, declared before the trace | 1, 6, 9 |
 
 CONFORMANCE §1 to §4 list the cases, which are the choices named in the
 last two rows; its §5 maps the method discriminators to cases and
 logical-review checks.
 
 
-Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=8b405f7ee59b2a7e6602ca576b211bbb8a5411fe84c4e4a50f310661d5fa6fe2 rows=3/12 selected by the anchors this frame carries; the consumers paragraph of 12 items is omitted
+Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=53f465d4d25b097c7da0df0e1f18805d273b032f6fe849b59a457b29b1349992 rows=3/12 selected by the anchors this frame carries; the consumers paragraph of 12 items is omitted
 
 ### Foundation to law: release and successor conservation
 
@@ -771,8 +770,7 @@ the table of commitments in FOUNDATIONS §3 states it.
 The standing of these consequences is stated in
 [FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law).
 The table accounts for §1 to §9 and for FOUNDATIONS §2 Product lineage
-objects. §10 records open questions and decides nothing; §11 records
-dispositions and decides nothing.
+objects. §10 records open questions and decides nothing.
 
 
 Source: TICKETS.md#foundation-to-law-work-carriers sha256=5f7e4cb0785a27b9e6dda1fd91044e775183b6a0e6e80b33811e54665b144b57 rows=1/11 selected by the anchors this frame carries; the consumers paragraph of 11 items is omitted

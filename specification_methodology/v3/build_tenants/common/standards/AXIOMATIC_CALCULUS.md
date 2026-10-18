@@ -1192,9 +1192,12 @@ hard-coded member count. Local premise ownership does not move to the
 calculus member merely because both are published together (P3, P6).
 
 `publication_basis` binds this member's exact bytes. Its member URI resolves
-inside its release URI. The release may be a candidate or a stable release;
-its coordinate states which, and the record grants no acceptance or release
-status by its presence. A principle reference outside the bound package, a
+inside its release URI. Every release URI in this record has the immutable
+`stdo://releases/v<version>-rc.<positive-ordinal>/` form defined by
+[RELEASE §2](RELEASE.md#2-release-identities). Acceptance is a verdict over
+that exact cut under [RELEASE §8](RELEASE.md#acceptance-criteria), not a
+second release identity. The record grants no acceptance or release status
+by its presence. A principle reference outside the bound package, a
 missing or ambiguous clause, an extra undeclared premise reference, or a
 manifest or member digest mismatch invalidates the record (P3, P6).
 

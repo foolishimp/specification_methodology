@@ -112,7 +112,7 @@ assessment where supportable, blast radius, workaround, repair complexity,
 regression risk, confidence, and residual uncertainty. Under the executive
 profile, Executive assigns priority and determines promotion-boundary effect against the complete Product
 view and current mandate. Severity, priority, frame result, boundary effect,
-and `STDO-UP-020` disposition remain distinct.
+and disposition under [ACTIVATION §3](../ACTIVATION.md#disposition) remain distinct.
 
 This template imposes no universal numeric scale. A project may bind `S0..Sn`
 and `P0..Pn`, including a `P2` decision cutoff, only by defining their exact
