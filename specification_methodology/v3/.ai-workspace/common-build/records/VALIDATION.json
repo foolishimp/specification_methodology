@@ -1,0 +1,133 @@
+{
+  "kind": "stdo.common.conservation-mechanical-validation",
+  "result": "mechanical_properties_pass",
+  "counts": {
+    "body": 650,
+    "shared_body": 636,
+    "tenant_children": 14,
+    "nonbody": 55,
+    "nonbody_kinds": {
+      "compression": 10,
+      "schema": 2,
+      "template": 24,
+      "licence": 1,
+      "plugin": 17,
+      "release note": 1
+    },
+    "truncated_not_repairs": 19,
+    "route_recovery_repairs": 1,
+    "disputed_rows_pending": 10,
+    "source_claim_digests_unresolved": 17,
+    "unresolved_candidate_loci": 0,
+    "predecessor_digest_recovery": {
+      "unresolved_exact_clause_extent": 15,
+      "recovered_exact_heading_content": 2
+    }
+  },
+  "unresolved_candidate_loci": [],
+  "semantic_qualification": "not_assessed; unresolved dispositions and pending decisions retained",
+  "sources_verified": 12,
+  "controls": [
+    {
+      "name": "positive_complete_projection",
+      "result": "pass",
+      "observed": "all identity, scope, reason and pending-decision invariants accepted"
+    },
+    {
+      "name": "omitted_shared_body_row",
+      "result": "pass",
+      "observed": "omitted or unexpected projected ID"
+    },
+    {
+      "name": "omitted_nonbody_row",
+      "result": "pass",
+      "observed": "omitted or unexpected projected ID"
+    },
+    {
+      "name": "duplicate_ID",
+      "result": "pass",
+      "observed": "duplicate projected ID"
+    },
+    {
+      "name": "compression_marked_not_applicable",
+      "result": "pass",
+      "observed": "deferred compression relabeled or brought into scope"
+    },
+    {
+      "name": "compression_silently_in_scope",
+      "result": "pass",
+      "observed": "deferred compression relabeled or brought into scope"
+    },
+    {
+      "name": "invented_acceptance",
+      "result": "pass",
+      "observed": "acceptance or effective conservation invented"
+    },
+    {
+      "name": "disputed_row_marked_conserved",
+      "result": "pass",
+      "observed": "disputed row silently settled"
+    },
+    {
+      "name": "loan_meaning_change_marked_conserved",
+      "result": "pass",
+      "observed": "proposed meaning change marked conserved"
+    },
+    {
+      "name": "not_applicable_reason_erased",
+      "result": "pass",
+      "observed": "unknown disposition note: "
+    },
+    {
+      "name": "missing_dependency",
+      "result": "pass",
+      "observed": "relation lost dependency, evidence or pending decision"
+    },
+    {
+      "name": "missing_Q2_Q6_owner_choice",
+      "result": "pass",
+      "observed": "relation lost dependency, evidence or pending decision"
+    },
+    {
+      "name": "historical_review_promoted_to_current",
+      "result": "pass",
+      "observed": "historical review applicability invented"
+    },
+    {
+      "name": "locus_escapes_candidate",
+      "result": "pass",
+      "observed": "nonlocal candidate locus ../../old/OWNER.md#rule"
+    },
+    {
+      "name": "conserved_without_receiving_locus",
+      "result": "pass",
+      "observed": "carried claim has no receiving locus: README.md#standards-library"
+    },
+    {
+      "name": "superseded_without_receiving_locus",
+      "result": "pass",
+      "observed": "carried claim has no receiving locus: AXIOMATIC_CALCULUS.md#derivation-provenance"
+    },
+    {
+      "name": "missing_receiving_member",
+      "result": "pass",
+      "observed": "unresolved receiving locus: README.md#standards-library -> standards/missing-control.md (missing_candidate_member)"
+    },
+    {
+      "name": "missing_receiving_anchor",
+      "result": "pass",
+      "observed": "unresolved receiving locus: README.md#standards-library -> standards/anchor-control.md#absent (missing_candidate_anchor)"
+    },
+    {
+      "name": "duplicate_JSON_key",
+      "result": "pass",
+      "observed": "duplicate JSON key: rows"
+    },
+    {
+      "name": "malformed_not_without_reason",
+      "result": "pass",
+      "observed": "unknown disposition note: not an applicable record"
+    }
+  ],
+  "controls_pass": true
+}

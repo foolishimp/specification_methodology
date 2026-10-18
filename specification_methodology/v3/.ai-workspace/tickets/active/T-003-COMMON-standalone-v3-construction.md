@@ -74,10 +74,14 @@ Targeted failure controls accompany the adopted gates. Existing useful task rout
 
 ## Open decisions and qualification
 
-Owner: A1 reach across four additional passages; Q13 frame-excerpt tradeoff; Q14 task-routed entry; Q2/Q6 rows 93-96; remaining exact replacement decisions; covering reviewer assignment. Reviewer: P1 class. No total replacement count is endorsed while those classifications are unresolved.
+Owner: A1 reach across four additional passages; Q13 frame-excerpt tradeoff; Q14 task-routed entry; Q2/Q6 rows 93-96; remaining exact replacement decisions; covering reviewer assignment; D1 calculus derivation basis (SC2), D2 CONFORMANCE scope and independent expectations (SC3), D3 the application evidence duty (SC5), and D4 recoverability (SC4). The [decision packet](../../common-build/repair-1/DECISIONS.md) records the additional choices without accepting them. Reviewer: P1 class. No total replacement count is endorsed while those classifications are unresolved.
 
 Completion of construction requires a fully local package, a complete register return, reproducible mechanical verification and explicit residuals. Release readiness additionally requires current semantic and actual-use evidence on the frozen candidate, independent review over the material contribution set, owner replacement decisions and release acceptance. A green package checker establishes only its declared mechanical properties.
 
+## Construction progress
+
+The initial owner checkpoint is `2e7fa0f6`. The [construction return](../../common-build/BUILD.md) and [28-item register](../../common-build/REGISTER.json) record the prepared candidate and the decisions that remain open. The candidate is isolated on `tenant/common/standalone-v3`; this progress record accepts none of its proposed replacements.
+
 ## First construction checkpoint
 
-Review and admission were checkpointed at `2e7fa0f648faa3a6fabe06f8087caab45248c505`. The first common candidate is `494451522072ec34381c644f1ccfa2331f2b1e27`, isolated on `tenant/common/standalone-v3`; its candidate tree is `082df4ea2b7b3658aab528bbfbcfe81234ccc810`. The [handoff](../../comments/codex/20261018T160429Z_COMMON_FIRST_BUILD_CHECKPOINT.md) identifies the external construction records, current checks and pending decisions. No proposed replacement is accepted by this progress record.
+Review and admission were checkpointed at `2e7fa0f648faa3a6fabe06f8087caab45248c505`. The first common candidate was `494451522072ec34381c644f1ccfa2331f2b1e27`, isolated on `tenant/common/standalone-v3`; its candidate tree was `082df4ea2b7b3658aab528bbfbcfe81234ccc810`. The [first handoff](../../comments/codex/20261018T160429Z_COMMON_FIRST_BUILD_CHECKPOINT.md) retains that historical subject. The construction return above owns the current repair checkpoint and pending decisions. No proposed replacement is accepted by this progress record.

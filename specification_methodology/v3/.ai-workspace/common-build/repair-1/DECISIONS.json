@@ -1,0 +1,162 @@
+{
+  "kind": "stdo.common-standalone-owner-decisions",
+  "version": 1,
+  "standing": "Author proposals for owner decision after covering review. No option has been accepted.",
+  "review_input": "inputs/PINS.json",
+  "subject_inventory": "package-inventory.json",
+  "decision_owner": "Jim",
+  "author_interest": "Codex authored SC2-SC5 and this repair; Claude authored the baseline. Recommendations do not supply independent review.",
+  "decisions": [
+    {
+      "id": "D1",
+      "adaptation": "SC2",
+      "title": "Calculus derivation basis",
+      "status": "pending",
+      "current_proposal": "The complete premise set and published calculus member bind the same immutable package; the identity record is issued outside the hashed members after they are fixed.",
+      "options": [
+        {
+          "id": "same_package",
+          "effect": "Keep SC2: premise clauses resolve in the publishing package, with equal derivation/publication release URIs and manifest digests."
+        },
+        {
+          "id": "earlier_accepted_basis",
+          "effect": "Restore the generic earlier accepted release as derivation basis, separately from publication. The external record selects the actual basis; the package names no fixed prior release."
+        }
+      ],
+      "recommendation": "pending owner choice; standalone locality and preservation of generic provenance law do not resolve this tradeoff by themselves",
+      "loci": [
+        "standards/AXIOMATIC_CALCULUS.md#derivation-provenance",
+        "standards/AXIOMATIC_CALCULUS.md#8-calculus-identity",
+        "standards/TRAVERSAL_OCCURRENCE.md#exact-profile-identity",
+        "standards/TRAVERSAL_OCCURRENCE.md#closed-profile-signature"
+      ],
+      "conservation_ids": [
+        "AXIOMATIC_CALCULUS.md#derivation-provenance",
+        "AXIOMATIC_CALCULUS.md#exact-calculus-identity",
+        "TRAVERSAL_OCCURRENCE_PROFILE.md#exact-profile-identity",
+        "TRAVERSAL_OCCURRENCE_PROFILE.md#closed-profile-signature"
+      ],
+      "invariants": [
+        "RC-only release identity under RELEASE applies to either choice.",
+        "No digest depends on the identity record being created.",
+        "M5 complete-premise accounting is retained; D1 is the additional choice."
+      ],
+      "follow_through": [
+        "Specify how every principle URI addresses a complete clause, including non-heading rows and paragraphs.",
+        "Check digest-field encoding consistently against RELEASE and packaged schemas before a runnable identity-record claim."
+      ]
+    },
+    {
+      "id": "D2",
+      "adaptation": "SC3",
+      "title": "Conformance scope and independently specified expectations",
+      "status": "pending",
+      "current_proposal": "CONFORMANCE contains 80 local expected distinctions for method owners and consumers; its preamble no longer requires independently specified expectations.",
+      "options": [
+        {
+          "id": "local_cases_with_independent_qualification",
+          "effect": "Keep local adopter cases, but explicitly require separately specified expectations for qualification of this package, independent of the constructing actor, with declared provenance and dependencies."
+        },
+        {
+          "id": "retain_current_sc3",
+          "effect": "Keep the current preamble and local expectations, relying on the existing generic assessment and trial-independence laws."
+        },
+        {
+          "id": "qualification_only",
+          "effect": "Restore the qualification-only scope and independently specified expectations, expressing the requirement generically without an unavailable construction-document dependency."
+        }
+      ],
+      "recommendation": "local_cases_with_independent_qualification",
+      "recommended_preamble_replacement": {
+        "before": "A case names its subject, mechanism and expected distinction. An execution\nrecord separately binds the exact tested subject, basis, acquired context,\nobservations, assessor and result. A run is not a pass; only an assessment\nagainst the declared predicate establishes one. The presence of a case or\ncoverage map is no execution or qualification evidence (P6).",
+        "after": "A case names its subject, mechanism and expected distinction. When this\npackage itself is the subject of qualification, the governing authority\ncommissions expected distinctions independently of the constructing actor,\nderived from the governing obligations. The published cases contribute to\nthe case population but do not, by their authorship or presence, establish\nthat independence. Assertion and execution provenance, shared dependencies\nand assessor independence follow FOUNDATIONS \u00a74 Parallel derivation and\nmutual assurance and EVALUATION \u00a73. An execution record separately binds\nthe exact tested subject, basis, acquired context, observations, assessor\nand result. A run is not a pass; only an assessment against the declared\npredicate establishes one. The presence of a case or coverage map is no\nexecution or qualification evidence (P6)."
+      },
+      "loci": [
+        "standards/CONFORMANCE.md",
+        "standards/README.md",
+        "standards/EVALUATION.md#3-independent-assessment",
+        "standards/FOUNDATIONS.md#parallel-derivation-and-mutual-assurance"
+      ],
+      "conservation_ids": [],
+      "no_inherited_row_reason": "CONFORMANCE has no inherited predecessor identity; this decision is deliberately represented outside the inherited 705-row population.",
+      "follow_through": [
+        "Align the README scope description and EVALUATION family-table consumer with the selected scope.",
+        "Reassess case coverage and oracle provenance against the selected qualification subject."
+      ]
+    },
+    {
+      "id": "D3",
+      "adaptation": "SC5",
+      "title": "Application evidence duty for World Model refinements",
+      "status": "pending",
+      "current_proposal": "An application records its own evidence for the boundaries and overlays it publishes.",
+      "options": [
+        {
+          "id": "retain_application_duty",
+          "effect": "Keep the explicit duty for published boundaries and overlays, without promoting the Markov construct beyond candidate standing."
+        },
+        {
+          "id": "remove_added_duty",
+          "effect": "Remove the added application-specific sentence; retain the four working refinements, their candidate standing, the promotion gate and the general evidence laws."
+        }
+      ],
+      "recommendation": "retain_application_duty, as a proposed explicit obligation, not a claimed conservation",
+      "loci": [
+        "standards/WORLD_MODEL.md#four-working-refinements"
+      ],
+      "conservation_ids": [
+        "WORLD_MODEL_METHOD.md#four-working-refinements-indicated-by-the-empirical-program"
+      ],
+      "invariants": [
+        "Candidate standing and the conditional-independence promotion gate remain.",
+        "The A2 append-only argument and its existing policy are separate from this added duty."
+      ]
+    },
+    {
+      "id": "D4",
+      "adaptation": "SC4",
+      "title": "Recoverability without a mandatory prior-version runtime dependency",
+      "status": "pending",
+      "current_proposal": "Measure recoverability on this exact package. A comparative claim additionally declares a comparison baseline and matched conditions; comparison is optional for an absolute recoverability claim.",
+      "options": [
+        {
+          "id": "accept_sc4",
+          "effect": "Keep the current EVALUATION benchmark and CONFORMANCE R-01/R-02; no comparative improvement is claimed without matched evidence."
+        },
+        {
+          "id": "require_comparative_baseline",
+          "effect": "Require an explicitly selected comparable baseline for qualification, stated as a generic rule without naming a fixed prior version."
+        }
+      ],
+      "recommendation": "accept_sc4; Claude and Codex agree on this recommendation, not on owner acceptance",
+      "loci": [
+        "standards/EVALUATION.md#method-self-qualification",
+        "standards/CONFORMANCE.md#3-recoverability"
+      ],
+      "conservation_ids": [
+        "REFERENCE_FRAME_METHOD.md#method-self-qualification"
+      ],
+      "existing_decision": "CONFIRM-ROW-20",
+      "record_repair": "The row is additionally flagged as a standalone adaptation; CONFIRM-ROW-20 remains pending."
+    }
+  ],
+  "existing_decisions": {
+    "owner": [
+      "A1_REACH",
+      "Q13",
+      "Q14",
+      "Q2_Q6_ROWS_93_96",
+      "EXACT_REPLACEMENTS",
+      "TEN_CHANGED_CONSERVED_ROWS",
+      "COVERING_REVIEW_ASSIGNMENT"
+    ],
+    "reviewer": [
+      "P1_CLASS"
+    ]
+  },
+  "scope_limits": [
+    "No total decision count is endorsed.",
+    "P1 classification belongs to the covering reviewer, not the owner.",
+    "Current draft text remains a proposal until the applicable exact decisions and acceptance occur."
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "kind": "construction-integration-edits",
+  "standing": "authored changes; no acceptance or semantic qualification",
+  "changes": [
+    {
+      "file": "standards/ACTIVATION.md",
+      "reason": "Resolve the local ODD profile index anchor reported by the package checker.",
+      "before_sha256": "d79d8a468b404615704423e3a7be965d338ab2961df416804b47e608f9dfb4ad",
+      "after_sha256": "1eba38796a68255e1a79962a3ba61ecb4c652155b9ecb18eadac6cc0b424d795",
+      "removed": "PROFILES.md#2-odd",
+      "inserted": "PROFILES.md#2-graph-execution"
+    },
+    {
+      "file": "standards/ACTIVATION.md",
+      "reason": "Remove construction novelty claim while retaining its local rule relations.",
+      "before_sha256": "1eba38796a68255e1a79962a3ba61ecb4c652155b9ecb18eadac6cc0b424d795",
+      "after_sha256": "22e39f1c5804c297eec2982e0b859438222b83b3439a810eed58d89b84bbb619",
+      "removed": "limit is read as fitting, or forces a silent omission. This subsection is\nnew in this corpus; its parts carry RF-014's prohibition of silent\nomission, REFERENCE_FRAME \u00a74's rule that a resource control applies only\nthrough a selected frame, and UP-014's selection rule.",
+      "inserted": "limit is read as fitting, or forces a silent omission. The rule applies\nRF-014's prohibition of silent omission, REFERENCE_FRAME \u00a74's rule that a\nresource control applies only through a selected frame, and UP-014's\nselection rule."
+    },
+    {
+      "file": "standards/EVALUATION.md",
+      "reason": "Replace implicit shared-specification and builder-history dependency with complete local case expectations.",
+      "before_sha256": "316cb7178ff00a96d442df735520292d36568acf94b0d59a4217499191096e00",
+      "after_sha256": "3b30baee4f6941d35491e4ae0aa5e5a332f8b8afbae833dc3b4631da3426060e",
+      "removed": "the cases, with their subjects and expected distinctions: CONFORMANCE, from the common conformance discriminators and the builder's history",
+      "inserted": "the cases, with their subjects and expected distinctions: [CONFORMANCE \u00a71\u2013\u00a75](CONFORMANCE.md#1-counterexample-cases)"
+    },
+    {
+      "file": "standards/README.md",
+      "reason": "Describe the existing member frame using the standalone conformance owner.",
+      "before_sha256": "8a13f051db563e278eca1019429080155a1ca939d07182d9dec5d93cd3a55770",
+      "after_sha256": "1c71894ef22cf9b3d18d0497462ff15e528b4a38c9c52d2123fa2f9730c5e5fb",
+      "removed": "assess it against the common conformance discriminators without self-review standing in for independent review.",
+      "inserted": "assess it against the local CONFORMANCE discriminators without self-review standing in for independent review."
+    },
+    {
+      "file": "standards/frames/FRAME_INPUTS.json",
+      "reason": "Align the existing frame task description with its local conformance owner; no route or excerpt-policy change.",
+      "before_sha256": "c9bdcb05962681a0307226e01472318f600ad562830ca653eb674232b408c61b",
+      "after_sha256": "68e836f6ac6c757b33f4555990d7238126607bc7ebf410775301a177708434bc",
+      "removed": "assess it against the common conformance discriminators without self-review standing in for independent review.",
+      "inserted": "assess it against the local CONFORMANCE discriminators without self-review standing in for independent review."
+    }
+  ]
+}

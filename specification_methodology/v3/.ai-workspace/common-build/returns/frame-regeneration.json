@@ -1,0 +1,46 @@
+{
+  "kind": "current-frame-regeneration",
+  "tool_sha256": "d114f3352063cbfbbe179aa5a395a745b03c3319173b8d63b55935ef04b1fc48",
+  "python": "/usr/local/bin/python3",
+  "candidate_root": "/Users/jim/src/apps/specification_methodology-common-build/specification_methodology/v3/build_tenants/common",
+  "policy": "Existing selected routes and excerpt policy; Q13 and Q14 remain pending. Task text and local conformance anchors updated. No new frame.",
+  "runs": [
+    {
+      "operation": "regenerate",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-I",
+        "-S",
+        "-c",
+        "import hashlib,pathlib,sys\np=pathlib.Path(sys.argv[1]); b=p.read_bytes()\nif hashlib.sha256(b).hexdigest()!=sys.argv[2]: raise SystemExit(\"frame generator digest mismatch before execution\")\nsys.argv=[str(p)]+sys.argv[3:]\nexec(compile(b,str(p),\"exec\"),{\"__name__\":\"__main__\",\"__file__\":str(p)})",
+        "/Users/jim/src/apps/specification_methodology-common-build/specification_methodology/v3/.ai-workspace/common-build/frame-tools/generate_frames.py",
+        "d114f3352063cbfbbe179aa5a395a745b03c3319173b8d63b55935ef04b1fc48",
+        "--root",
+        "/Users/jim/src/apps/specification_methodology-common-build/specification_methodology/v3/build_tenants/common"
+      ],
+      "exit_code": 0,
+      "stdout": "standards/frames/rf-task-a.md 111867 bytes sha256=a65a5aa4db2dc75f0e84bc5d04bdbff7628362e982c6f4332920b850949d002f\nstandards/frames/rf-task-b.md 95961 bytes sha256=f3a0c46a2daefb4f0551ac67bb88f7898aa27ab3f949b34e6c58a00c5db6bf0b\nstandards/frames/ac-task-a.md 69466 bytes sha256=263826137343407878cfbc7e6bc0484819ad4d4629ea96fc611f0cab6e388b5e\nstandards/frames/traversal-task-f.md 105865 bytes sha256=be008c7efa86d93ef9bd5e5d70ab561e375e62e86261672965b8d2df3d609e56\nstandards/frames/eb-task-d.md 115811 bytes sha256=4e7888d7ba304ba0f3f45e5a4cff94b107924fe62fcce72d95d233c515f46ab9\nstandards/frames/dm-task-d.md 100695 bytes sha256=06bdd67196987e64313eff07ac899686ade378f4dda6e03e992e13e7b0f98e6a\nstandards/frames/configuration.md 141858 bytes sha256=7e07531e91e055dc877bc8fb7c4f96b5d6c16ee74a024e9ef9aa8a4785827567\nstandards/frames/binding.md 96227 bytes sha256=4a3e6240e0cd5cf08eae65be03d9deb362ec4ea873bff33ca3422855d514b84a\nstandards/frames/stale-summary.md 94467 bytes sha256=06ec38f6be841e3cf0c87b3b8e4e18c59daac9f55e6e87ee11260f64ff94082d\nstandards/frames/bootstrap.md 83195 bytes sha256=da6b327162ba719477bfabf8fdccf752d2a211820bdd5d4729889a466f374b1c\nstandards/frames/acceptance-release.md 59658 bytes sha256=0b6e2ca91385e96edfa40ee61de1472a981436e938840dbc26260c024ed095f6\nstandards/frames/member-build-assess.md 94401 bytes sha256=2e91dc80a948c17ec9fed57da19b6450994e2003d818516e49b1ead5fca1802e\nstandards/frames/FRAME_INPUTS.json 102811 bytes sha256=f54b375474eaa1cac4c0a15aa0da75efc8447d38c53b25b98ecc37bbc3a4b08c\n",
+      "stderr": ""
+    },
+    {
+      "operation": "check",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-I",
+        "-S",
+        "-c",
+        "import hashlib,pathlib,sys\np=pathlib.Path(sys.argv[1]); b=p.read_bytes()\nif hashlib.sha256(b).hexdigest()!=sys.argv[2]: raise SystemExit(\"frame generator digest mismatch before execution\")\nsys.argv=[str(p)]+sys.argv[3:]\nexec(compile(b,str(p),\"exec\"),{\"__name__\":\"__main__\",\"__file__\":str(p)})",
+        "/Users/jim/src/apps/specification_methodology-common-build/specification_methodology/v3/.ai-workspace/common-build/frame-tools/generate_frames.py",
+        "d114f3352063cbfbbe179aa5a395a745b03c3319173b8d63b55935ef04b1fc48",
+        "--root",
+        "/Users/jim/src/apps/specification_methodology-common-build/specification_methodology/v3/build_tenants/common",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "frame_inputs_sha256": "f54b375474eaa1cac4c0a15aa0da75efc8447d38c53b25b98ecc37bbc3a4b08c",
+  "limits": "Mechanical source identity and exact generated output only; no semantic or actual-use qualification. The preserved upstream test file is source evidence, not a claimed executed standalone suite."
+}

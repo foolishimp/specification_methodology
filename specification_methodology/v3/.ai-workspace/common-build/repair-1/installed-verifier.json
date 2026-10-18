@@ -1,0 +1,65 @@
+{
+  "candidate_member_count": 81,
+  "canonical_manifest_bytes_match": true,
+  "canonical_standards_digest_match": true,
+  "complete_frozen_candidate_members_match": true,
+  "installed_verifier_failures": [],
+  "inventory_sha256": "187908fed6acee3570f472ee15c11e3116537155a8c5cc14cad8d096dc8381cd",
+  "kind": "stdo.common-exact-candidate-materialization-verification",
+  "manifest_sha256": "820b9cbcff67f26123b4888266e3715dcd807bc7ad06839da5cf478c5b0a0f46",
+  "materialized_candidate_member_count": 81,
+  "observed_toolchain_module_pins": {
+    "stdo_toolchain": {
+      "path": "/Users/jim/.local/pipx/venvs/stdo-toolchain/lib/python3.13/site-packages/stdo_toolchain/__init__.py",
+      "sha256": "3431c7cc20d31a6a374fb48b627b259d77eb6f126ad9d10198801ab5e863457f"
+    },
+    "stdo_toolchain.constants": {
+      "path": "/Users/jim/.local/pipx/venvs/stdo-toolchain/lib/python3.13/site-packages/stdo_toolchain/constants.py",
+      "sha256": "865976bc3726e27a3f48c6f895d9238b507d1ccf132cfc3cd3622e88db3313e1"
+    },
+    "stdo_toolchain.errors": {
+      "path": "/Users/jim/.local/pipx/venvs/stdo-toolchain/lib/python3.13/site-packages/stdo_toolchain/errors.py",
+      "sha256": "2fcb25411f230ffdb1dfb38a1994b47e23b3516d79cfde7e5bc10d6580a01982"
+    },
+    "stdo_toolchain.git_source": {
+      "path": "/Users/jim/.local/pipx/venvs/stdo-toolchain/lib/python3.13/site-packages/stdo_toolchain/git_source.py",
+      "sha256": "29b64b55c5519d64915920fed18fe33a0ad83eb3cd4cc8fbb4c10fece0341516"
+    },
+    "stdo_toolchain.manifest": {
+      "path": "/Users/jim/.local/pipx/venvs/stdo-toolchain/lib/python3.13/site-packages/stdo_toolchain/manifest.py",
+      "sha256": "a97d4273baf6e16a165b695881e7b25f1b5735c558c111ab401be7093514f911"
+    },
+    "stdo_toolchain.util": {
+      "path": "/Users/jim/.local/pipx/venvs/stdo-toolchain/lib/python3.13/site-packages/stdo_toolchain/util.py",
+      "sha256": "51508fc8878db4211abb58265b4dd7824ed92d3125b98b8e392797ccbc68d7c0"
+    }
+  },
+  "plugin_member_count": 17,
+  "runtime": {
+    "executable": "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+    "jsonschema_version": "4.26.0",
+    "python_version": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.0.13.3)]",
+    "stdo_toolchain_version": "0.1.5"
+  },
+  "schema_validation": [
+    {
+      "errors": [],
+      "label": "installed_basis_schema",
+      "path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/schemas/installed-release-manifest.schema.json",
+      "sha256": "711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2",
+      "valid": true
+    },
+    {
+      "errors": [],
+      "label": "candidate_schema",
+      "path": "/private/tmp/stdo-common-repair1-eoaa7kai/materialized/standards/schemas/installed-release-manifest.schema.json",
+      "sha256": "711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2",
+      "valid": true
+    }
+  ],
+  "scope": "Exact candidate bytes in an isolated canonical layout with fictional cut/ref and absent-tag sentinel. No release-source attestation or installation.",
+  "source_pin_limit": "Observed loaded STDO-toolchain source files, schemas and declared runtime identities; not authentication of the entire Python or dependency closure.",
+  "standards_member_count": 62,
+  "standards_member_set_sha256": "3b97fc16469da5d4d8d27317ff1c179b549a12f2bc357e24db2571c7ee6759ce",
+  "valid": true
+}
