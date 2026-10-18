@@ -501,7 +501,7 @@ locates that material after basis selection. Its projection does not become a
 rival authority or guarantee sufficiency for a different task.
 
 
-Source: [SPEC_METHOD.md — Agentic Construction Execution (`STDO-UP-020`)](../SPEC_METHOD.md#agentic-construction-execution-stdo-up-020); SHA256 `30b903bbf00d86b7c86b9e80352c8ea61fd820842e7e386e91e9083899cb91b0`.
+Source: [SPEC_METHOD.md — Agentic Construction Execution (`STDO-UP-020`)](../SPEC_METHOD.md#agentic-construction-execution-stdo-up-020); SHA256 `ed904bbc1871d0e5f9790703f068a596e869922c7dad5abda227bfb03dd3d0a3`.
 
 ## Agentic Construction Execution (`STDO-UP-020`)
 
@@ -732,7 +732,7 @@ reported as accepted Product progress.
 ---
 
 
-Source: [SPEC_METHOD.md — Computed Classification And Treatment](../SPEC_METHOD.md#computed-classification-and-treatment); SHA256 `30b903bbf00d86b7c86b9e80352c8ea61fd820842e7e386e91e9083899cb91b0`.
+Source: [SPEC_METHOD.md — Computed Classification And Treatment](../SPEC_METHOD.md#computed-classification-and-treatment); SHA256 `ed904bbc1871d0e5f9790703f068a596e869922c7dad5abda227bfb03dd3d0a3`.
 
 ### Computed Classification And Treatment
 

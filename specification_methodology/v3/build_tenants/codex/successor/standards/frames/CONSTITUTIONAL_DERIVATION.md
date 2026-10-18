@@ -420,7 +420,7 @@ validation pass. [Contract application](../TRANSFORMATION_LIBRARY.md#contract-ap
 shared decision; the design consumer binds its domain admission obligations.
 
 
-Source: [DESIGN_MODULE_METHOD.md — Admission contract use](../DESIGN_MODULE_METHOD.md#admission-contract-use); SHA256 `2fa28450644b3683dd6a082c1c3d6524ab0110fc4efa068b91937ad85c4623ec`.
+Source: [DESIGN_MODULE_METHOD.md — Admission contract use](../DESIGN_MODULE_METHOD.md#admission-contract-use); SHA256 `0a413ba16eb1364b78abb41d228d7b36406f8f32125f382f9598ffc6eea8a999`.
 
 #### Admission contract use
 
@@ -452,7 +452,7 @@ current-basis re-entry. This is the existing admission assessment, not an
 additional validation pass.
 
 
-Source: [DESIGN_MODULE_METHOD.md — Transformation Admission Completeness (`STDO-UP-016`)](../DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016); SHA256 `2fa28450644b3683dd6a082c1c3d6524ab0110fc4efa068b91937ad85c4623ec`.
+Source: [DESIGN_MODULE_METHOD.md — Transformation Admission Completeness (`STDO-UP-016`)](../DESIGN_MODULE_METHOD.md#transformation-admission-completeness-stdo-up-016); SHA256 `0a413ba16eb1364b78abb41d228d7b36406f8f32125f382f9598ffc6eea8a999`.
 
 ### Transformation Admission Completeness (`STDO-UP-016`)
 
@@ -558,7 +558,7 @@ current-basis re-entry. This is the existing admission assessment, not an
 additional validation pass.
 
 
-Source: [SPEC_METHOD.md — Complete Enclosing-Relation Admission (`STDO-UP-021`)](../SPEC_METHOD.md#complete-enclosing-relation-admission-stdo-up-021); SHA256 `30b903bbf00d86b7c86b9e80352c8ea61fd820842e7e386e91e9083899cb91b0`.
+Source: [SPEC_METHOD.md — Complete Enclosing-Relation Admission (`STDO-UP-021`)](../SPEC_METHOD.md#complete-enclosing-relation-admission-stdo-up-021); SHA256 `ed904bbc1871d0e5f9790703f068a596e869922c7dad5abda227bfb03dd3d0a3`.
 
 ## Complete Enclosing-Relation Admission (`STDO-UP-021`)
 
@@ -688,7 +688,7 @@ reconstruction does not compare the complete semantic result.
 ---
 
 
-Source: [SPEC_METHOD.md — Product Outcome Conservation (`STDO-UP-013`)](../SPEC_METHOD.md#product-outcome-conservation-stdo-up-013); SHA256 `30b903bbf00d86b7c86b9e80352c8ea61fd820842e7e386e91e9083899cb91b0`.
+Source: [SPEC_METHOD.md — Product Outcome Conservation (`STDO-UP-013`)](../SPEC_METHOD.md#product-outcome-conservation-stdo-up-013); SHA256 `ed904bbc1871d0e5f9790703f068a596e869922c7dad5abda227bfb03dd3d0a3`.
 
 ## Product Outcome Conservation (`STDO-UP-013`)
 
@@ -779,7 +779,7 @@ Outcome success is necessary delivery evidence, not complete Product or release
 closure.
 
 
-Source: [SPEC_METHOD.md — Test Authority Rule](../SPEC_METHOD.md#test-authority-rule); SHA256 `30b903bbf00d86b7c86b9e80352c8ea61fd820842e7e386e91e9083899cb91b0`.
+Source: [SPEC_METHOD.md — Test Authority Rule](../SPEC_METHOD.md#test-authority-rule); SHA256 `ed904bbc1871d0e5f9790703f068a596e869922c7dad5abda227bfb03dd3d0a3`.
 
 ## Test Authority Rule
 
@@ -795,7 +795,7 @@ operator confidence, ambient habit, or an unlabeled test corpus.
 ---
 
 
-Source: [DESIGN_MODULE_METHOD.md — 1. Authority Seam Closure](../DESIGN_MODULE_METHOD.md#1-authority-seam-closure); SHA256 `2fa28450644b3683dd6a082c1c3d6524ab0110fc4efa068b91937ad85c4623ec`.
+Source: [DESIGN_MODULE_METHOD.md — 1. Authority Seam Closure](../DESIGN_MODULE_METHOD.md#1-authority-seam-closure); SHA256 `0a413ba16eb1364b78abb41d228d7b36406f8f32125f382f9598ffc6eea8a999`.
 
 ### 1. Authority Seam Closure
 
@@ -817,7 +817,7 @@ unless an explicit migration design admits the difference. Negative proof
 covers structural drift as well as missing source truth.
 
 
-Source: [DESIGN_MODULE_METHOD.md — Bounded Frame Conservation (`STDO-UP-017`)](../DESIGN_MODULE_METHOD.md#bounded-frame-conservation-stdo-up-017); SHA256 `2fa28450644b3683dd6a082c1c3d6524ab0110fc4efa068b91937ad85c4623ec`.
+Source: [DESIGN_MODULE_METHOD.md — Bounded Frame Conservation (`STDO-UP-017`)](../DESIGN_MODULE_METHOD.md#bounded-frame-conservation-stdo-up-017); SHA256 `0a413ba16eb1364b78abb41d228d7b36406f8f32125f382f9598ffc6eea8a999`.
 
 ### Bounded Frame Conservation (`STDO-UP-017`)
 
@@ -866,13 +866,13 @@ constitutional functionality
 ```
 
 
-Source: [DESIGN_MODULE_METHOD.md — 8. Totality Rule](../DESIGN_MODULE_METHOD.md#8-totality-rule); SHA256 `2fa28450644b3683dd6a082c1c3d6524ab0110fc4efa068b91937ad85c4623ec`.
+Source: [DESIGN_MODULE_METHOD.md — 8. Totality Rule](../DESIGN_MODULE_METHOD.md#8-totality-rule); SHA256 `0a413ba16eb1364b78abb41d228d7b36406f8f32125f382f9598ffc6eea8a999`.
 
 ## 8. Totality Rule
 
 Semantic functions should be total, or as close as the language and problem
-allow. Bind their admitted input domain, intended result and permitted repair,
-re-entry, refusal, yielding or termination under
+allow. Bind their admitted input domain, intended result and permitted
+continuation, repair, recovery, re-entry, refusal, yielding or termination under
 [Contract application](../TRANSFORMATION_LIBRARY.md#contract-application) and
 [bounded construction](../FOUNDATIONS.md#bounded-construction). The method-boundary
 return uses the core result record with the original domain outcome.
@@ -1184,7 +1184,7 @@ source-to-consumer binding. This is the informational consequence of F2/F4;
 neither predicate decidability nor a particular serialization follows from it.
 
 
-Source: [SPEC_METHOD.md — WHAT, HOW, And Work Carriers](../SPEC_METHOD.md#what-how-and-work-carriers); SHA256 `30b903bbf00d86b7c86b9e80352c8ea61fd820842e7e386e91e9083899cb91b0`.
+Source: [SPEC_METHOD.md — WHAT, HOW, And Work Carriers](../SPEC_METHOD.md#what-how-and-work-carriers); SHA256 `ed904bbc1871d0e5f9790703f068a596e869922c7dad5abda227bfb03dd3d0a3`.
 
 ### WHAT, HOW, And Work Carriers
 

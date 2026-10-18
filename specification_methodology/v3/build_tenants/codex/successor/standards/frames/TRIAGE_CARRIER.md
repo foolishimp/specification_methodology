@@ -462,7 +462,7 @@ next dependent action. These relations use the existing work and evidence
 carriers; they prescribe no role sequence or orchestration runtime.
 
 
-Source: [SPEC_METHOD.md — Universal Intake Triage](../SPEC_METHOD.md#universal-intake-triage); SHA256 `30b903bbf00d86b7c86b9e80352c8ea61fd820842e7e386e91e9083899cb91b0`.
+Source: [SPEC_METHOD.md — Universal Intake Triage](../SPEC_METHOD.md#universal-intake-triage); SHA256 `ed904bbc1871d0e5f9790703f068a596e869922c7dad5abda227bfb03dd3d0a3`.
 
 ### Universal Intake Triage
 
@@ -559,7 +559,7 @@ upstream constitutional surface is changing.
 The absence of a declared change class is process drift.
 
 
-Source: [SPEC_METHOD.md — Computed Classification And Treatment](../SPEC_METHOD.md#computed-classification-and-treatment); SHA256 `30b903bbf00d86b7c86b9e80352c8ea61fd820842e7e386e91e9083899cb91b0`.
+Source: [SPEC_METHOD.md — Computed Classification And Treatment](../SPEC_METHOD.md#computed-classification-and-treatment); SHA256 `ed904bbc1871d0e5f9790703f068a596e869922c7dad5abda227bfb03dd3d0a3`.
 
 ### Computed Classification And Treatment
 
@@ -835,7 +835,7 @@ retaining an active execution contract cannot create or renew authority that
 the owning work-wave authority has not admitted.
 
 
-Source: [SPEC_METHOD.md — Complete Enclosing-Relation Admission (`STDO-UP-021`)](../SPEC_METHOD.md#complete-enclosing-relation-admission-stdo-up-021); SHA256 `30b903bbf00d86b7c86b9e80352c8ea61fd820842e7e386e91e9083899cb91b0`.
+Source: [SPEC_METHOD.md — Complete Enclosing-Relation Admission (`STDO-UP-021`)](../SPEC_METHOD.md#complete-enclosing-relation-admission-stdo-up-021); SHA256 `ed904bbc1871d0e5f9790703f068a596e869922c7dad5abda227bfb03dd3d0a3`.
 
 ## Complete Enclosing-Relation Admission (`STDO-UP-021`)
 
@@ -965,7 +965,7 @@ reconstruction does not compare the complete semantic result.
 ---
 
 
-Source: [SPEC_METHOD.md — Agentic Construction Execution (`STDO-UP-020`)](../SPEC_METHOD.md#agentic-construction-execution-stdo-up-020); SHA256 `30b903bbf00d86b7c86b9e80352c8ea61fd820842e7e386e91e9083899cb91b0`.
+Source: [SPEC_METHOD.md — Agentic Construction Execution (`STDO-UP-020`)](../SPEC_METHOD.md#agentic-construction-execution-stdo-up-020); SHA256 `ed904bbc1871d0e5f9790703f068a596e869922c7dad5abda227bfb03dd3d0a3`.
 
 ## Agentic Construction Execution (`STDO-UP-020`)
 

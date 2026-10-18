@@ -33,10 +33,10 @@ source_digests:
   TRAVERSAL_OCCURRENCE_PROFILE.md: 2d2735ee8c04b3fac8716e3c4912edffa8a233352e782f935883a568ae7de1cf
   REFERENCE_FRAME_METHOD.md: 41aa764b4a4e030a2d578d8ad571f1bb962a2305d69eb5407e7a38d6ed8abc01
   STDO_REFERENCE_FRAME_BASELINE.md: 1a1fa84dfe93fbf9eec75cb650457b9705793574cd3da81826f2c42f2d7520fe
-  SPEC_METHOD.md: 30b903bbf00d86b7c86b9e80352c8ea61fd820842e7e386e91e9083899cb91b0
+  SPEC_METHOD.md: ed904bbc1871d0e5f9790703f068a596e869922c7dad5abda227bfb03dd3d0a3
   schemas/product-definition.schema.json: e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf
   schemas/installed-release-manifest.schema.json: 711a2eea44b995a043d4d9e02c8427723fc830de1a9f0f3c8c66e8ddb7aee4c2
-  DESIGN_MODULE_METHOD.md: 2fa28450644b3683dd6a082c1c3d6524ab0110fc4efa068b91937ad85c4623ec
+  DESIGN_MODULE_METHOD.md: 0a413ba16eb1364b78abb41d228d7b36406f8f32125f382f9598ffc6eea8a999
   ODD_METHOD.md: 821ba83b9a133b4d15b4e39ffcbe7447a00ccd5eae954aae9f00b4d6f2016519
   WORLD_MODEL_METHOD.md: fd1456951b40081503d89e9f81e500e96fa4537fa7bdc9f13d09add10480d31f
   TICKET_METHOD.md: 682933765f75e90613a84845b2ff1d2c2e67dc0f6af361bf8ddb2ed4ebf6f0b1
@@ -1110,7 +1110,7 @@ layer that owns the missing truth.
   its evidence, findings or explicit no-finding state, technical triage where
   applicable, residuals, and invalidation conditions. Findings and counterexamples
   may identify already-required behavior and be independently rechecked. The
-  Reviewer does not implement repairs, direct repair operations, apply an STDO
+  Reviewer does not edit the candidate, direct the repair, apply an STDO
   disposition, or authorize continuation. Executive
   cannot exceed its existing grant or become another semantic, operation, or
   implementation owner.
