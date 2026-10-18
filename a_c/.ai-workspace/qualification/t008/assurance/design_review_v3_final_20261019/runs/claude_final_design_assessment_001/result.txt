@@ -1,0 +1,280 @@
+# Bounded assessment: T-008 final seven-file F_D support design (subject `sha256:30472059…4bce`)
+
+## 1. Subject, basis, claim, binding and evidence population
+
+**Subject.** The exact seven-file subject in CANDIDATE_MANIFEST, identity `sha256:30472059b6dcfe05fb372c8a707748262210a38c73c05b821a2f6b973ccb4bce`:
+
+| Member | SHA-256 prefix |
+|---|---|
+| T-008 ticket | `5202b98f` |
+| design README | `f757ab63` |
+| `fd-method-claude-rc9.json` | `bdb93754` |
+| `fd-support.md` | `3c4c366d` |
+| GOALS | `7f78e1a9` |
+| REFERENCE_FRAME_BASIS | `5cda45d1` |
+| `stdo_a_c.json` | `b0e013e6` |
+
+All seven were supplied in full. The `fd-support.md` digest equals the repair-003 postimage.
+
+**Basis.**
+- WHAT: `c2f67fec…`.
+- Builder: v2.5.1-rc.2, manifest `3d860ff4…`.
+- Selected method: Claude RC9 source `c2cfa9b9…`, custody `3a209713…`, tree `98de394b…`, profiles EXECUTIVE_BASELINE and DESIGN_MODULE.
+- My own pre-exposure expectations: V1 `04ce8038…` and A1 `a008a91a…`, unchanged.
+
+**Claim evaluated.** The selected predicate: the exact design is decision-complete for its declared finite FD-001..013/FDV fragment under that WHAT and the RC9 source/profile. This is a design-sufficiency claim only.
+
+**Producer and binding limits.**
+- I am a Claude-family assessor whose environment self-labels `claude-opus-5-5`. That label does not establish the actual producer. Transport, session and usage metadata are retained separately by the coordinator; I cannot observe them.
+- The candidate was authored by the native GPT Worker `/root/ac_fd_tenant_design` together with `/root` Executive direction. I authored none of it.
+- No statistical independence is claimed. The declared assurance condition is nonauthor cross-family assessment with source-first V1/A1 records.
+
+**Evidence population.**
+- The governing source excerpts supplied (one packet, `a18f4a88…`).
+- The custody observations: 11 RC9 member blobs, all matching the profile's digests and byte counts. The profile's twelfth member, standards `README.md` `8047171e`, is **not** in verified custody and was not supplied.
+- The repair-002 and repair-003 contract, admission, check, return and diff records, and the upstream baseline proof.
+- The preservation projection. Its 3492 leaf rows were not read.
+
+**Not acquired.** No live Git state, code, runtime, native intakes or predecessor assessment text. Producer check counts and `candidate_ready` are treated as producer records, not semantic adequacy.
+
+## 2. Predicate result
+
+- **Predicate:** `decision_complete(B)` for the declared FD/FDV design boundary (DESIGN_MODULE §5), on the exact subject and basis above.
+- **Original domain outcome:** not decision-complete. The boundary is underconstrained: the public policy projection contradicts itself at the notification-binding seam, and further secondary seams remain open.
+- **Core value: `falsified`.**
+
+**Counterexample (Finding 1).** The closed, unknown-field-refusing Grant and Executor registry records contain no notification or sink field. The design text and the Attempt payload nevertheless require a grant- or executor-chosen registered sink id.
+
+**Mapping.** DESIGN_MODULE §5 states the boundary "is underconstrained whenever … projections contradict one another, or two materially non-equivalent networks remain admissible." A named counterexample defeats the predicate, so the core value is `falsified` (FOUNDATIONS §4 Results). It is not `indeterminate`, because the defect is observable in the supplied bytes.
+
+**Limits.**
+- This result concerns the design predicate only.
+- No result is given for runtime behaviour, boundary congruence, path realisation, ordinary-user usability, UAT, FDV-001/002/003 execution, benefit, acceptance, release or method qualification.
+- No severity, priority, disposition or boundary effect is assigned. No Product scale is selected.
+
+## 3. Source-bound findings
+
+### Finding 1 — Notification sink binding is required but has no lawful home in the closed policy schema
+
+**Locators (`fd-support.md`):**
+- Line 392–395: policy closed top-level keys, which include `event_sinks`.
+- Line 451: Grant exact fields: `id, authority_sources, outcome, principals, targets, operations, tools, executors, territory, preconditions, admission`.
+- Line 453: Executor exact fields, which also contain no notification field.
+- Line 441–443: "Registry populations are id-keyed objects; duplicate ids/unknown fields refuse."
+- Line 792: the Attempt payload has `notification`.
+- Line 1446: the reservation encloses the "notification sink".
+- Line 1536–1539: "Grant/executor notification binding chooses only a registered id … public requests cannot register an endpoint."
+- `dispatch.start` arguments (line 243) carry no sink selection.
+
+**Entry and causal path.** An operator authors a policy for FD-007 notifications.
+- Any field placed on a Grant or Executor to name a sink is refused as an unknown field.
+- No request argument can select a sink.
+- The Attempt's `notification` value therefore has no policy-sourced derivation.
+- An implementation Worker must choose between at least three readings: a new Grant field, a new Executor field, or a single implicit sink. These differ in who selects the declared consumer of delivery, which is authority-relevant (EXEC §6 Event-driven attention; F4 sink rows).
+
+**Affected actors and relations:**
+- The Effect Worker and Integration Worker, who hold the disjoint grants (lines 1238–1249).
+- FD-007 notifications, SC-AC-FD-014, and the Attempt reservation enclosing relation (F2, line 1446).
+
+**Material consequence.** Implementation would establish a material public-contract and authority choice that the design was required to settle. This is exactly the DESIGN_MODULE §5 "implementation has to introduce a new material semantic decision" condition.
+
+**Uncertainty.** An implementer might read lines 1536–1537 as implicitly extending the Grant/Executor schema. That reading still contradicts the "exact fields" tables. Either way the network is not unique.
+
+### Finding 2 — "Explicitly registered external producer" for returns has no registry
+
+**Locators.**
+- Line 247: `return.capture` output "must be from that attempt or an explicitly registered external producer, otherwise unauthenticated."
+- Line 392–395: the closed policy keys contain no producer registry.
+- Line 449–451: the Principal registry is for startup requesters, not return producers.
+- Lines 617–626: conjunction cardinality depends on an "authenticated closed evaluation".
+
+**Path.** A Reviewer or assessor run that was not launched through `dispatch.start` cannot be authenticated. This applies, for example, to the Claude CLI assessment that the plan says Executive "separately activates" (line 1224–1225).
+- A lawful fallback exists: such a return is treated as unauthenticated and therefore a planned-assessment gap.
+- The named "registered external producer" branch is nonetheless undecidable.
+
+**Affected relations.** FD-008, FD-010, and the independence/assessment cardinality seam.
+
+**Consequence.** Either the branch is dead text, or implementation invents a registry and its trust semantics. This is a secondary underconstraint. On its own it might be closed by declaring the branch unsupported.
+
+### Finding 3 — Cross-module export lists diverge between the module table and the realization seam
+
+**Locators.**
+- Module table, lines 718–720:
+  - core exports `execute_read` and `build_preflight`, with no `prepare_write` or `make_artifact`;
+  - effects exports `dispatch, supervise, observe_attempt, cancel, wait_events, write_record, retain_operation`.
+- Realization seam, lines 1744–1779:
+  - core also exports `prepare_write -> EffectPlan` and `make_artifact`;
+  - effects exports `execute_effect` and `persist_outcome(runtime,request,outcome)`;
+  - `EvidenceStore.resolve/query_artifacts/retain` (lines 861–866) are also listed.
+
+**What the seam says.** "Full-request handler signatures … remain normative." The seam supersedes the CoreOutcome draft, but it does not state whether `retain_operation(runtime,request,response)` and `persist_outcome` are the same function. It also does not state who constructs the Writer EffectPlan: core `prepare_write` or effects `write_record`.
+
+**Affected actors.** Workers 1 and 2 develop disjoint modules "against these accepted contracts" in parallel, and Worker 3 integrates.
+
+**Uncertainty.** These may be compatible supersets. Equivalent local helper names are allowed, but these are declared cross-module seams.
+
+**Consequence.** There is a risk of an integration mismatch that a seam-defect re-entry would then have to resolve. This is ambiguity, not a demonstrated contradiction.
+
+### Finding 4 — Several public input carriers lack a closed content contract while the wire grammar is "closed versioned"
+
+**Locators.**
+- `results.conjoin.plan` (line 251; content listed in prose at lines 610–614 without exact keys).
+- `refresh.prepare.invalidators` and `declarations` (line 254).
+- `resources.aggregate.accounting` (line 255; the elapsed boundary is "declared by the accounting contract", line 702–703).
+- `return_contract` role-specific proof obligations (line 301).
+
+**Contrast.** The `relations.query` declaration (line 381–384), the packet, the envelope and other carriers are fully closed.
+
+**Consequence.**
+- The FD-012 invalidator content is the ACTIVATION §7 three kinds plus their named instances, but no closed representation is given.
+- FD-013 counter identity, scope and pricing semantics depend on an unspecified carrier.
+- F_P actors cannot author these inputs from the ordinary contract alone. This bears on ASSURANCE §13 contract sufficiency.
+
+**Uncertainty.** Part of this may be ordinary schema realization delegated to the core Worker (line 736). However, the semantics of an invalidator and a counter identity are not purely layout.
+
+### Finding 5 — Contract-state population omits `superseded`
+
+**Locators.** ACTIVATION §1 Admission requires that contracts carry at minimum drafted, admitted, rejected and superseded states. The receipt-validity view (lines 1584–1599) and the lifecycle row (line 1513) use Draft, Rejected, Admitted, Applicable and StaleForUse. Supersession appears only as "separate finding/receipt". The `preflight` payload `decision` enum is not enumerated (line 791).
+
+**Consequence.** The FD-006 representation of a method-owned state is incomplete. The material scope is narrow: admitted-then-superseded contracts are distinguishable only through prose.
+
+### Finding 6 — Wire mapping of held outcomes to status and exit code is underdetermined
+
+**Locators.**
+- Lines 187–194 define status `ok|refused|error`, CLI exit codes 0/2/1, and "error preserves caught external failure and unknown effects".
+- Lines 1344–1352 put `held(observation)` and `held(effect)` codes (`internal_failure`, `effect_completion_unknown`) in the "refusal `code` population".
+- It is not stated whether a held outcome carries `status: error` with a refusal object, `status: refused`, or `status: ok` with a truthful unknown receipt. Lines 1372 and 1817 suggest the last of these is sometimes possible.
+
+**Consequence.** Ordinary CLI callers could see different exit codes across implementations for the same operation outcome. This has minor contract-sufficiency impact. The `operation_outcome` value itself is unambiguous.
+
+## 4. Author groupings and FD/FDV coverage (evidence-bound closure reasoning)
+
+Repair labels and check counts are not used as verdicts below.
+
+### F1 — Operation availability, facts and judgments: closed on supplied text
+
+- B(op) is a distinct tenant refinement under SPEC_METHOD §11 rule 3, with a source parent in FOUNDATIONS Results.
+- There are seven boundary values, each mapping once. The refusal-code table has 33 codes (lines 1344–1352; profile lines 953–1235).
+- Protocol-level failures carry a null outcome, correctly manufacturing no evaluation.
+- Facts are kept separate from judgments, consistent with SPEC_METHOD Computed classification. This covers RF audit_coverage versus facts (line 1369), AC-007 outcomes for `graph.project` (line 1368), and ACT §3 admission and activation outcomes (lines 1370–1371).
+- The basis-before-constraint cause order is declared as this boundary's own discriminator. Demonstrated constraint judgments are kept on their own predicate (lines 1338–1340), consistent with AC-007's own rule.
+- Supported, with Finding 6 as a residual.
+
+### F2 — Product-authorized admission and commit relations: largely closed
+
+- A complete UP-016-style relation table is given for each owner (lines 1443–1450).
+- Commit units, decomposability and failure boundaries are given on both sides (lines 1463–1471).
+- All ten ACT §4 standing forms are planned per owner (lines 1483–1494).
+- Composite cross-Product and distributed forms are dispositioned as unsupported, and the bootstrap mechanisms are dispositioned as historical, non-competing paths.
+- The operating assumptions are declared rather than invented: local POSIX atomic same-directory publication with cooperative serialization; no OS confinement, hostile filesystem or cross-filesystem claims.
+- **Not closed:** the Attempt-reservation enclosing relation includes a notification sink that cannot be policy-bound (Finding 1).
+
+### F3 — Return cardinality, conjunction order and RF domain output: closed
+
+- One authenticated key yields zero or one contribution. Replay counts once. Same key with a different payload becomes a conflict and contributes a gap. Distinct runs are distinct assessments (lines 617–634).
+- The declared rule uses plan order. The fall-through order is invalid_basis, then indeterminate, then required-constraint falsified, then satisfied (lines 636–648). This matches FOUNDATIONS Reported value.
+- The RF §5 domain output is mapped after the core value, and `conflict` applies only when the core is falsified and mandatory same-claim results disagree (lines 650–660). This is exactly the conditional reading in the task qualification.
+- Stale held results are gaps, not relabelled `invalid_basis`.
+- The authentication premise remains limited by Finding 2.
+
+### F4 — Lifecycle, authority, Prime contraction, views and module lifecycle: substantially present
+
+- Lifecycle matrices for 13 carriers.
+- Authority matrix.
+- Eight-atom contraction with admitted domains, and a derivation of all 23 operations. The count of 23 is consistent with the inventory plus `evidence.read`.
+- Additional state and sequence views.
+- ASSURANCE §16 phases, each answered or reserved.
+- The cross-view table gives pass and not_applicable verdicts with reasons, scoped as Writer evaluations.
+- **Not closed:** the sink registry/binding projection is contradictory (Finding 1), and the receipt state set lacks `superseded` (Finding 5).
+
+### F5 — Independence, severity, role transition and operand domain: closed
+
+- The independence policy is a closed carrier; null means same-family judgments do not count as independent (EVALUATION §3 default).
+- Severity may be explicit null, with no invented scale.
+- A prior same-actor role transition must be recorded, and an Executive cannot self-record it (EXEC §6).
+- Operand-domain mapping (lines 1710–1722):
+  - wrong domain gives `invalid_basis` for the requested predicate;
+  - missing input in domain gives `indeterminate`;
+  - unsupported syntax is not performed.
+
+### A–G and integration seams
+
+- Expectation body (A), verified history and exposure (B), and requester versus target (D) are concrete and coherent.
+- The artifact, plan and precondition seams (C) are mostly closed but carry the Finding 3 divergence.
+- The qualified-operator record (E) binds external qualification and refuses `unqualified_operator`.
+- Producer/attempt-aware identity (F) is closed.
+- The direct FD/FDV-to-RC9 routes (G) are present for all 16 IDs, with member digests matching custody. The route scope explicitly disclaims common-to-RC9 equivalence, which is consistent with A1 §3(1–2).
+
+### Repair-003 — fixed-argv Git acquisition primitive: coherent and sufficient
+
+- It is distinguished from F_P actor, registered-executor and general-effect launches (line 718).
+- It is bound to the registered root, full object, member and blob hash, with no shell, hooks, filters, checkout or lazy fetch.
+- Because whole-blob hash verification decides content correctness, the Git executable's identity being observed rather than bound is non-material to acquired-content fidelity. It remains a host-scope residual.
+- No arbitrary subprocess capability is exposed. The core-imports-no-effects seam is preserved.
+
+### Per-requirement coverage
+
+Every FD-001..013 requirement has an operation, a contract, an owning module and a planned positive/adverse proof row (lines 1199–1213). FDV-001/002/003 rows are present.
+
+| Requirement | Coverage | Residual |
+|---|---|---|
+| FD-002 | Dirty and untracked bytes, population changes, HEAD treated only as metadata | The three-basis-role distinction (builder / consumer method / subject) is implicit through profile and model bindings rather than an explicit output field |
+| FD-005 | Byte measurement before read, unknown host context makes fit indeterminate, no trimming, token capacities refused | — |
+| FD-007 | Completion-unknown versus not-effected, end tracked separately, cancel is not rollback, bounded fallback | Notification binding (Finding 1) |
+| FD-012 | `S_Δ` as declared closure ∩ impact cover, absent edge proves nothing | Invalidator carrier (Finding 4) |
+| FD-013 | Counter identity, subsets, unknown not zero | Accounting carrier (Finding 4) |
+
+## 5. Supported and no-finding aspects (evidence)
+
+- **Method binding.**
+  - RC9 is not written into `constitution.stdo.basis`; the `stdo_a_c.json` diff only adds the T-008 locator at line 71, with builder bytes unchanged.
+  - Unknown cut, profile or translation refuses (line 53–55).
+  - No path-proximity discovery: the profile digest is required by Runtime (line 721).
+  - These satisfy A1 A2/A3 and §3(1).
+- **Authority.**
+  - Startup-bound principal and protected policy; requests cannot mint grants, executors, owners or overrides (lines 59–68, 395–464).
+  - No Executive or Reviewer mutation (invariant 5; lines 936–942).
+  - Matches FOUNDATIONS §2 "What creates no authority" and RF-006.
+- **Admission (ACTIVATION §1).**
+  - Drafted is separated from admitted. The receipt carries mechanism, authority, digest, decision and evidence.
+  - A missing durable surface gives `result_surface_denied`, which maps to `out_of_frame`.
+  - The bootstrap receipt is not treated as FD-006 evidence (ticket lines 109–116; F2 line 1415–1422).
+- **Effects.** Values and the end-as-separate-question follow ACTIVATION §3 Effects. The state view includes the counterexample-with-unestablished-end path (lines 1137–1166).
+- **Not-performed handling.** Not-performed evaluations have no result. A stale result is a gap. Availability, assessment and acceptance are kept separate (lines 285–303, 632–634).
+- **Interface thinness.**
+  - One core catalog serves CLI and MCP.
+  - The MCP full-envelope projection keeps request.id separate from the JSON-RPC id (lines 1820–1842).
+  - The legacy 2025-11-25 negotiation follows the pinned lifecycle.
+  - No study MCP or proxy path.
+  - Consistent with DESIGN_MODULE §12–13.
+- **Profile and adoption.** REFERENCE_FRAME_BASIS frames RC9 and profile selection as work-scoped under Jim's instruction, without claiming installed or constitutional change (lines 41–83). A1 A4 is satisfied in substance. The residual is that this framing sits in the adoption-bearing surface.
+- **Preservation.**
+  - The projection is internally consistent: nine roots summing to 3492 members; root trees equal anchor trees; four named code blobs equal the upstream-proof preimages (`2f5de4d6`, `7002a794`, `bd60bb9e`, `5be5e738`).
+  - The plan requires existing regressions plus an actual pinned-upstream trial before renewing any compatibility claim (lines 1218–1220).
+  - The baseline proof (107 run, 0 skipped, 9 upstream checks at `fe085ced`) supports only the existing path. It updates A1 §3(6)'s "4 skipped" for that path only.
+
+## 6. Unperformed claims, residuals and invalidators
+
+**Unperformed, with no result.**
+- Runtime behaviour.
+- Boundary congruence.
+- Path realisation, including the forbidden-path exclusion inventory. Existing generation/worker launchers are not explicitly dispositioned as excluded dispatch paths.
+- Ordinary LLM/human usability. The plan does not explicitly restate ASSURANCE §13's clean-room conditions: expectations recorded before responses are inspected, no edited responses, no silent retries.
+- Standing-form observations.
+- FDV-001/002/003 execution.
+- Benefit, acceptance and release.
+
+**Residuals.**
+- The standards `README.md` member (`8047171e`) is unverified in custody. Clause-anchor existence for DESIGN_MODULE `11-review` and AC-018 was not checkable from the supplied excerpts.
+- The 3492 preservation leaf rows were not read. After implementation, the `code/` and `test_env/` trees will gain members. The plan does not state whether preservation is then judged by whole-tree equality or by existing-member equality.
+- The cooperative local trust model is declared and assumed, not verified.
+
+**Invalidators.**
+- Any change to the seven subject bytes, RC9 members or profile, WHAT, owner grant, policy schema or the evidence population.
+- Actual producer metadata showing a non-Claude or authoring producer.
+- A material counterexample to the supported aspects above.
+
+## 7. Adjacent observations (outside the claim; no triage against it)
+
+- The T-008 ticket, which is the design's durable result surface, records the v3 return pinning `fd-support.md` `a4a94204`. It does not record repair-003 or the current `3c4c366d` identity, which is held only in the repair-003 return file. The current design state is therefore split across carriers (TICKETS one-truth projection).
+- The ticket's `ticket_category: ordinary` and `change_class: design_local` coexist with a materially new public boundary. This is a re-entry classification question for its owner.

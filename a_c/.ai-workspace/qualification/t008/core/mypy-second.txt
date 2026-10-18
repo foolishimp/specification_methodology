@@ -1,0 +1,17 @@
+a_c/build_tenants/graphify/code/ac_support_core.py:108: error: Dict entry 0 has incompatible type "str": "list[str]"; expected "str": "int | float | str | list[JSON] | dict[str, JSON] | None"  [dict-item]
+a_c/build_tenants/graphify/code/ac_support_core.py:109: error: Dict entry 1 has incompatible type "str": "list[str]"; expected "str": "int | float | str | list[JSON] | dict[str, JSON] | None"  [dict-item]
+a_c/build_tenants/graphify/code/ac_support_core.py:707: error: Dict entry 10 has incompatible type "str": "dict[str, str | int]"; expected "str": "dict[str, object] | int | float | str | list[JSON] | dict[str, JSON] | None"  [dict-item]
+a_c/build_tenants/graphify/code/ac_support_core.py:965: error: Dict entry 8 has incompatible type "str": "dict[str, str | dict[str, str | int]]"; expected "str": "dict[str, Collection[str]] | int | float | str | list[JSON] | dict[str, JSON] | None"  [dict-item]
+a_c/build_tenants/graphify/code/ac_support_core.py:1304: error: Dict entry 0 has incompatible type "str": "list[str]"; expected "str": "int | float | str | list[JSON] | dict[str, JSON] | None"  [dict-item]
+a_c/build_tenants/graphify/code/ac_support_core.py:1305: error: Dict entry 1 has incompatible type "str": "list[str]"; expected "str": "int | float | str | list[JSON] | dict[str, JSON] | None"  [dict-item]
+a_c/build_tenants/graphify/code/ac_support_core.py:1306: error: Dict entry 2 has incompatible type "str": "list[str]"; expected "str": "int | float | str | list[JSON] | dict[str, JSON] | None"  [dict-item]
+a_c/build_tenants/graphify/code/ac_support_core.py:1308: error: Value of type "int | float | str | list[JSON] | dict[str, JSON] | None" is not indexable  [index]
+a_c/build_tenants/graphify/code/ac_support_core.py:1308: error: No overload variant of "__getitem__" of "list" matches argument type "str"  [call-overload]
+a_c/build_tenants/graphify/code/ac_support_core.py:1308: note: Possible overload variants:
+a_c/build_tenants/graphify/code/ac_support_core.py:1308: note:     def __getitem__(self, SupportsIndex, /) -> JSON
+a_c/build_tenants/graphify/code/ac_support_core.py:1308: note:     def __getitem__(self, slice[Any, Any, Any], /) -> list[JSON]
+a_c/build_tenants/graphify/code/ac_support_core.py:1308: error: Invalid index type "str" for "str"; expected type "SupportsIndex | slice[Any, Any, Any]"  [index]
+a_c/build_tenants/graphify/code/ac_support_core.py:2354: error: Dict entry 4 has incompatible type "str": "list[Object]"; expected "str": "int | float | str | list[JSON] | dict[str, JSON] | None"  [dict-item]
+a_c/build_tenants/graphify/code/ac_support_core.py:2410: error: Dict entry 0 has incompatible type "str": "list[str]"; expected "str": "int | float | str | list[JSON] | dict[str, JSON] | None"  [dict-item]
+a_c/build_tenants/graphify/code/ac_support_core.py:2480: error: Dict entry 1 has incompatible type "str": "list[Object]"; expected "str": "int | float | str | list[JSON] | dict[str, JSON] | None"  [dict-item]
+Found 13 errors in 1 file (checked 1 source file)

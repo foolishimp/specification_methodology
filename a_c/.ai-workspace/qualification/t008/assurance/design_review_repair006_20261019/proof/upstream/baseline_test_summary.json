@@ -1,0 +1,21 @@
+{
+  "actual_upstream_cases": [
+    "test_actual_upstream_one_pass_a_c_aware_creation_and_discovery_custody (test_ac_generate.GenerationTests.test_actual_upstream_one_pass_a_c_aware_creation_and_discovery_custody) ... ok",
+    "test_actual_upstream_source_extract_and_generated_model_round_trip (test_ac_generate.GenerationTests.test_actual_upstream_source_extract_and_generated_model_round_trip) ... /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout/graphify/cache.py:1097: RuntimeWarning: stat index switched from cache root '/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmp6ui4xkm9/aware/discovery' to '/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpqyoqmpfj/graphify/discovery' within one process; each root's stat-index.json now only reflects its own files, but library callers crossing project roots in one process should still use a fresh process per root to avoid losing the fastpath (#3989).",
+    "test_actual_upstream_grounded_proposal_round_trip (test_ac_grounding.GroundingTests.test_actual_upstream_grounded_proposal_round_trip) ... /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout/graphify/cache.py:1097: RuntimeWarning: stat index switched from cache root '/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpqyoqmpfj/graphify/discovery' to '/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbetfl3n9/graphify/discovery' within one process; each root's stat-index.json now only reflects its own files, but library callers crossing project roots in one process should still use a fresh process per root to avoid losing the fastpath (#3989).",
+    "test_actual_upstream_repaired_proposal_round_trip (test_ac_repair.RepairTests.test_actual_upstream_repaired_proposal_round_trip) ... /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout/graphify/cache.py:1097: RuntimeWarning: stat index switched from cache root '/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbetfl3n9/graphify/discovery' to '/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmphiazf2ra/graphify/discovery' within one process; each root's stat-index.json now only reflects its own files, but library callers crossing project roots in one process should still use a fresh process per root to avoid losing the fastpath (#3989)."
+  ],
+  "failures": [],
+  "listed_test_results": 107,
+  "module_selection": [
+    "test_ac_graph",
+    "test_ac_generate",
+    "test_ac_grounding",
+    "test_ac_repair"
+  ],
+  "ok_marker": true,
+  "reported_test_seconds": 6.494,
+  "selection_rationale": "Exact four pre-existing baseline modules; deliberately excludes concurrently added F_D support tests. All107 existing tests executed with actual pinned upstream enabled.",
+  "skips": [],
+  "tests_run": 107
+}

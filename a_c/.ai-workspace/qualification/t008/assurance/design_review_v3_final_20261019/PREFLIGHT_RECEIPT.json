@@ -1,0 +1,41 @@
+{
+  "kind": "retained-read-only-preflight-observation",
+  "recorded_utc": "2026-10-18T18:44:10.285710+00:00",
+  "actor": "/root/ac_fd_independent_assurance",
+  "command": [
+    "python3",
+    "launch_claude_final_design_review.py"
+  ],
+  "exit_code": 0,
+  "mode": "preflight_only",
+  "model_calls": 0,
+  "actual_tool_output_observed": "Preflight verified all bound input hashes, 22 original source members, seven final candidate copies, committed preimages, 39 proof records, 45 supplied model DATA components, 183 protected prior files, exact binary and fixed argv.",
+  "hashes": {
+    "review_activation_sha256": "e64a4d959022b97e152adb5c67016d28515e26e88e03dc5de95b4c9560609f4a",
+    "candidate_manifest_sha256": "e04729c982c776582529a2a8fe049ab04072160bcaa55a251872af8c9256411f",
+    "proof_manifest_sha256": "f70c7773d048c83820a076ff91fa008fcdffd15b9718883758bbef4b68afe0af",
+    "review_payload_manifest_sha256": "1174f46add54e7b94319b92e3f0099b82832979dd527a5de178edb83f193d9ce",
+    "prompt_sha256": "146418da32a585ec2c22e79cc568a92eef76db7664ec5d864f1eaa1e0581b90b",
+    "system_sha256": "e5bb1d7edd5dff46dd04b37827d7d40f34207695bd76ee7cfb5598a5f15859e1",
+    "launch_plan_sha256": "ee4e2ad276fe5391fdb1befb96379296355d70b9d950b5fab50012de1ea836fd",
+    "launcher_sha256": "025fa68edddd18a05b55edf5da26e1d9d93be9e1504acfc7aebdf4cc2645c7f5",
+    "action_binding_sha256": "c58c8a5b74ba23714c9a47ddae685b8b9ebca3376ebb608991ea0ebd30740cfb",
+    "source_selection_sha256": "1b01b0ba96a0b4ef5205d9da731ff6ec68c21fd613331e7996984d4fac06f8b2",
+    "subject_id": "sha256:30472059b6dcfe05fb372c8a707748262210a38c73c05b821a2f6b973ccb4bce",
+    "prompt_bytes": 1090909,
+    "system_bytes": 1377,
+    "explicit_total_input_bytes": 1092286,
+    "candidate_bytes": 232524,
+    "proof_files": 39,
+    "model_components": 45,
+    "protected_prior_files": 183,
+    "model_calls": 0,
+    "required_approval_decision": "approved_final_repaired_design_assessment_launch",
+    "state": "prepared_hold_before_model_call"
+  },
+  "fixed_argv_and_timeout_identical_to_approved_v1": true,
+  "launcher_diff_sha256": "2108b95496e762390e81765afd61e3ba375e49db6bee24eb49bfa0462dad5ca5",
+  "final_approval_absent_observed": true,
+  "run_surface_absent_observed": true,
+  "standing": "Read-only custody and readiness checks only; no semantic verdict, new source-only call, execution admission, candidate acceptance or launch authority. HOLD pending Executive exact approval."
+}

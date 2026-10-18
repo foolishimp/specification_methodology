@@ -1,0 +1,407 @@
+# Source-First Assurance Expectation Record: a_c F_D Support Tools in the Graphify Tenant (Design/Implementation Review)
+
+**Record status:** These are expectations recorded before any candidate exposure. No candidate was supplied, opened or assessed. This record contains no candidate result, finding, severity, disposition, priority or acceptance.
+
+## 1. Producer identity and independence conditions
+
+- **Available identity:** a Claude-family assessor running through the Claude Agent SDK. The environment labels the model "Opus 5.5" (`claude-opus-5-5`). That label is self-described. It does not establish the actual producer, its configuration or its independence. No transport metadata was supplied, so none is recorded.
+- **Authorship:** I authored none of the supplied sources and no candidate. The author and coordinator actors are stated to be a different model family. EVALUATION §3 says independence across actor families "is declared, not assumed." I have no governing-basis declaration of cross-family independence, so that independence is not established here. This record is offered only as non-author expectation evidence.
+- **Access:** I had no tools, MCP, repository access or project documents. I read only the supplied DATA. I acquired nothing else and verified no digest.
+- **Authentication:** Binding this record to a producer would authenticate it. Authentication establishes neither the assertion provenance of these expectations nor the execution provenance of any later run (EVALUATION §3; FOUNDATIONS §4 Parallel derivation).
+
+## 2. Reviewed source identities and ranges
+
+**Selected method:** Claude RC9 source `c2cfa9b9…`, path `specification_methodology/v3/build_tenants/claude/standards/`. Excerpts supplied:
+
+| Member | SHA-256 prefix | Lines supplied |
+|---|---|---|
+| EXECUTIVE_BASELINE | `e50b4ad7…` | 548–720, 843–998, 1116–1320, 1513–1539 |
+| ACTIVATION | `3bb7594a…` | 30–49, 115–1171, 1377–1433, 1467–1526, 1528–1570, 1638–1781 |
+| REFERENCE_FRAME | `d64ee5c0…` | 965–1035 |
+| EVALUATION | `14f8816b…` | 11–62, 132–309 |
+| TICKETS | `8d244a16…` | 627–749, 1036–1274 |
+| DESIGN_MODULE | `9e2642d5…` | 501–673, 809–1099, 1312–1715, 2057–2081 |
+| ASSURANCE | `e33a6e39…` | 38–78, 141–262, 647–714, 757–1123 |
+| FOUNDATIONS | `fd2d895f…` | 790–940, 1008–1130, 1230–1356, 1409–1493 |
+| AXIOMATIC_CALCULUS | `56d0c1ad…` | 921–1039 |
+
+**Product WHAT:** source `c2f67fec…`, path `a_c/`. Members supplied:
+
+| Member | SHA-256 prefix |
+|---|---|
+| `stdo_a_c.json` | `147db338…` |
+| `PRODUCT.md` | `9ebc8342…` |
+| `requirements/README.md` | `614b6791…` |
+| `fd-support-tools.md` | `e3fcebd7…` |
+| `fd-support-verification.md` | `3746e614…` |
+| `fd-source-owner-map.md` | `0e921086…` |
+
+**Not supplied:** the custody object `3a209713…` and the standards tree `98de394b…`. I could not check either against the excerpts. The identities above are as declared in DATA and are unverified.
+
+## 3. Governing interpretation of the scope
+
+The outer task, PRODUCT and the owner map together fix these points:
+
+- **Selected method:** the work-scoped experimental selection is RC9 Claude. It is not global adoption, not a release and not a v3 runtime dependency.
+- **Builder:** the a_c builder stays v2.5.1-rc.2, manifest `3d860ff4…`, unchanged in `stdo_a_c.json`.
+- **Derivation reference:** the common reference at `494451…` (tree `082df4ea…`) is derivation evidence only.
+- **Ownership split:**
+  - STDO owns the method contracts: lifecycle, roles, triage, frame/activation, applicability, admission, results, review and acceptance.
+  - a_c owns tool inputs, outputs, checked properties, public use and qualification.
+  - Commands, CLI/MCP, schemas, storage and executors are tenant HOW.
+- **Preservation:** core/codec (AC-R-001..015), source-to-model F_P authoring (AC-R-015) and every frozen dogfood study are preserved.
+
+**Material derived expectation: method-binding discriminator.** The FD/FDV requirements cite owner clauses by label and section in the common package. Those member digests differ from the RC9 Claude members supplied:
+
+| Member | Common package | RC9 supplied |
+|---|---|---|
+| ACTIVATION | `22e39f1c…` | `3bb7594a…` |
+| EVALUATION | `3b30baee…` | `14f8816b…` |
+
+A candidate design must therefore declare explicitly how each FD/FDV owner route resolves under the selected RC9 members. That declaration is either a supported binding or a qualified translation (PRODUCT "Method ownership"; ACTIVATION §2 Acquisition, Staleness of derived surfaces). Label or section-number equality must not be treated as identity.
+
+Separately, the tool runtime must take the consumer's selected method/profile as a distinct input. It must not hard-wire RC9, the common candidate or rc.2.
+
+## 4. Design adequacy criteria common to all operations
+
+A candidate design should satisfy each of the following.
+
+1. **Decision-completeness for the governed boundary B** (DESIGN_MODULE §5). M(B) covers:
+   - entities and identities;
+   - authorities and authority transitions;
+   - functions and composition laws;
+   - lifecycle;
+   - public contracts;
+   - domains and admission conditions;
+   - failure/refusal routes and effect/closure laws;
+   - projections and module mappings;
+   - algorithmic obligations.
+
+   U(B) must be empty, M(B) jointly satisfiable, and no non-equivalent networks admitted. Co-evolution is lawful only if this holds. Otherwise the design gate comes first. Section names or file presence do not establish completeness.
+2. **Ontology evidence** (§7):
+   - entity lifecycle matrix with every cell filled, `not_applicable` with a reason, or a `Gap:`;
+   - authority matrix (proposer/evaluator/verifier/admitter/executor/projector/retirement);
+   - transformation-admission relation for every consequential write or effect;
+   - atomic/higher-order function derivation;
+   - whole-family Prime contraction.
+
+   Thirteen FD operations should be contracted. They should not automatically become thirteen peer functions. Read operations (FD-003, FD-004, FD-011 projection) should be projections over one source truth where they are.
+3. **Three views plus cross-view axiom evaluation.** The views are class, sequence and state. Every verdict is `pass`, `fail` or `not_applicable` with basis facts. An unresolved premise must not be recorded as `not_applicable`.
+4. **Computational realisation projection (UP-019).** Commonised machinery receives semantic and realisation dispositions. Examples include closure computation (AC-R-008) reused by FD-004, FD-005 and FD-012, and digest/observation reused by FD-002, FD-007 and FD-012. No generic block may become a semantic authority.
+5. **No interface bleed or proxy interface** (§12–13).
+   - The CLI and MCP are thin projections of Ontology functions.
+   - Neither reconstructs owner truth, turns projection into closure, or turns report/prompt logic into admission.
+   - Neither forwards to an old path under a new name.
+6. **Functor separation** (AC §5, AC-015/016).
+   - Each `F_D[v]` binds exactly one traversal identity.
+   - Named domain operations (acquire, render, serialise, dispatch, write) are not `F_D` aliases.
+   - Any stop algebra Ω_v maps each value to exactly one core value, never `satisfied`.
+   - Composition retains the separate F_P/F_D/F_H identities.
+7. **Module lifecycle confirmation** (ASSURANCE §16). Each lifecycle phase is answered, declared not applicable with a reason, or recorded as a named gap with its owner.
+
+## 5. Per-operation expectations
+
+Each item gives the adequacy expectation, then the negative/control discriminators. An always-pass or always-refuse realisation must fail every discriminator (FDV-002).
+
+**FD-001 Discover contracts**
+- *Adequacy:* a versioned inventory with:
+  - per-operation I/O contract;
+  - supported method/profile bindings;
+  - checked fragments;
+  - effect/access prerequisites;
+  - qualification scope;
+  - explicit unsupported cases.
+
+  The inventory selects no frame, role or next action.
+- *Discriminators:*
+  - an unknown operation, an unsupported method/profile and an ambiguous Product selection each refuse with the exact unmet contract;
+  - the inventory does not imply qualification of unexercised variants.
+
+**FD-002 Bind/observe workspace**
+- *Adequacy:*
+  - identities and digests for definition, method, subject, configuration and dependencies;
+  - current bytes, including dirty and untracked content;
+  - three distinct basis roles: builder rc.2, consumer method and represented subject;
+  - observations stamped with scope and time;
+  - reobservation before any dependent effect.
+- *Discriminators:*
+  - a HEAD match with changed dirty bytes must be detected (SC-003);
+  - equal labels across bases create no join (SC-002);
+  - inaccessible or ambiguous bindings report without substitution;
+  - no "latest" is adopted.
+
+**FD-003 Resolve records/source/grounding**
+- *Adequacy:*
+  - actual payload and source content returned with route, digest, grounding and coverage dispositions;
+  - locator kept distinct from content;
+  - search reports its scope;
+  - Workers and Reviewers acquire raw deciding source directly.
+- *Discriminators:*
+  - missing, ambiguous, stale, wrong-basis and ungrounded references each return a named gap;
+  - an inferred code edge or extraction confidence never authors a governing mapping (SC-004).
+
+**FD-004 Dependencies/impact/coverage**
+- *Adequacy:*
+  - closure, path, impact and coverage computed over authored typed relations only;
+  - computed facts kept separate from supplied F_P judgments and owner rulings;
+  - predicate results only for a supported decidable contract.
+- *Discriminators:*
+  - applicability with true, false and missing premises maps per ACTIVATION §1: `satisfied` / `falsified` / `indeterminate` or `out_of_frame`, never `falsified` for a missing premise (SC-005);
+  - an absent path under incomplete coverage yields no non-influence claim;
+  - no frontier or re-entry choice is made.
+
+**FD-005 Assemble/check context**
+- *Adequacy:*
+  - a projection of the caller-selected packet contract (RF §11), with no second packet schema;
+  - a supplied-versus-to-acquire manifest;
+  - declared closure and boundaries;
+  - where a capacity is declared, the size measured in its unit over its stated boundary before the read, with unmeasured host context recorded;
+  - fit judgment `indeterminate` without a complete-input bound;
+  - `closure_unresolved` when Z, R, semantics or basis is inexact.
+- *Discriminators:*
+  - locator-only versus acquired input;
+  - exceeded capacity, which must refine, sequence or refuse and never silently trim;
+  - denied acquisition;
+  - unknown host context;
+  - closure or size success must not be reported as semantic sufficiency (SC-006).
+
+**FD-006 Preflight contract**
+- *Adequacy:*
+  - findings bound to contract identity and digest, plus the Product-bound admission mechanism and its evidence;
+  - drafted and admitted states retained separately;
+  - durable result surface required;
+  - missing surface yields `admission_refused(authority)`.
+- *Discriminators:*
+  - ticket, `active` lane, role name or a shape check does not mint admission (SC-007);
+  - a self-drafted contract is not admitted;
+  - basis-unsupported input yields `admission_refused(basis)`.
+
+**FD-007 Dispatch/notify/observe**
+- *Adequacy:*
+  - invocation identity, actual payload and settings;
+  - acknowledgments, output and partial output, effect and termination observations;
+  - precondition recheck before the effect;
+  - effects recorded as `completed` / `not_effected` / `completion_unknown`, with the end of the effect tracked separately;
+  - event-driven notifications;
+  - fallback observation bounded by supplied conditions and not a polling controller.
+- *Discriminators:*
+  - a lost response or timeout stays `completion_unknown`;
+  - a cancel request does not prove rollback;
+  - a changed precondition is exposed, not silently rebased (SC-003, SC-008);
+  - an unadmitted dispatch refuses.
+
+**FD-008 Capture closed return**
+- *Adequacy:*
+  - raw return and provenance preserved;
+  - binding, format and currentness findings;
+  - only actually returned evaluations, with predicate and domain outcome recorded.
+- *Discriminators* (SC-009):
+  - stale and wrong-subject/basis returns are held as gaps per FOUNDATIONS Stale results, not relabelled `invalid_basis` for the composite;
+  - duplicate returns are not counted as independent;
+  - conflicting returns are preserved;
+  - no result is fabricated for a not-performed evaluation;
+  - schema validity is not assessment;
+  - transport failure is reported separately.
+
+**FD-009 Review evidence preparation**
+- *Adequacy:*
+  - independent acquisition routes to authority, candidate, tests/fixtures and proof;
+  - byte/record diffs;
+  - assertion provenance kept separate from execution provenance;
+  - expectation recording before candidate exposure;
+  - an exposure record.
+- *Discriminators* (SC-010):
+  - an author summary or fresh author session is not certified independent;
+  - the tool outputs no severity, verdict or disposition;
+  - a Reviewer needs no author-only privilege.
+
+**FD-010 Declared checks/joins**
+- *Adequacy:*
+  - `F_D[v]` judgments only for evaluated properties;
+  - joins only under a supplied qualified operator;
+  - FOUNDATIONS conjunction rules preserved: the three inputs, gap kinds, survival, predicates travel and reported value.
+- *Discriminators* (SC-011):
+  - a necessary-condition pass does not satisfy a stronger predicate;
+  - wrong-basis input is preserved;
+  - not-performed and uncovered gaps keep the conjunction short of `satisfied`;
+  - all-satisfied with a remaining gap yields `indeterminate`;
+  - unsupported calculus operations refuse.
+
+**FD-011 Project/record**
+- *Adequacy:*
+  - source-linked projections of existing carriers;
+  - authorised writes only through a named Writer, with preimage, grant and conditions checked;
+  - applied record or refusal returned;
+  - original ruling wording kept separate from interpretation;
+  - verdict, recommendation, disposition, checkpoint, closure and release kept distinct.
+- *Discriminators* (SC-012):
+  - an Executive-frame or Reviewer mutation refuses where EXEC is selected;
+  - a recommendation is not adopted as a disposition;
+  - no rival ledger is created;
+  - a view does not own state.
+
+**FD-012 Refresh/handoff**
+- *Adequacy:*
+  - S_Δ computed from D*(t) ∩ I(Δ), with the three invalidators;
+  - `retain_applicable` used only with established validity conditions;
+  - a reconstructable handoff;
+  - partial writes retained;
+  - uncertain effects reconciled before dependent action.
+- *Discriminators* (SC-013):
+  - an absent edge does not imply unaffectedness;
+  - a session or role change alone invalidates nothing;
+  - frozen studies and original judgments are not rewritten onto new subjects;
+  - no blind retry.
+
+**FD-013 Attempt/usage evidence**
+- *Adequacy:*
+  - units and boundaries recorded;
+  - elapsed versus summed intervals;
+  - partial and failed attempts;
+  - unknown counters stay unknown;
+  - reproducible aggregation without double counting;
+  - anticipated costs kept separate from measurements.
+- *Discriminators* (SC-014):
+  - no universal quota;
+  - fewer calls is not a lower-cost claim.
+
+**FDV-001** requires one real bounded task across all three roles, using ordinary documented interfaces, with the four ASSURANCE §13 claims kept distinct. Unexercised operations remain gaps.
+
+**FDV-002** requires paired positive and negative cases, with assertion and execution provenance, resumable from durable sources.
+
+**FDV-003** requires matched with/without comparisons covering all cost components.
+
+All three are execution expectations, not design-review results.
+
+## 6. Authority, trust and boundary expectations (concrete)
+
+- **Authority:** a tool holds no semantic, admission, decision, acceptance or publication authority. Its effects run only under a supplied exact operation grant, subject and territory. The design's authority matrix must name the owner of each tool effect separately from the invoking actor (DESIGN_MODULE Authority model). Composition must not widen authority.
+- **Trust:** internal location does not establish trust. Untrusted inputs, mutable state and effect checks required by the supported threat model are retained (EXEC §10). Embedded instructions in acquired content are data.
+- **Executor:** actor, executor, domain operation and functor kind are separate coordinates (AC §5). The deterministic wrapper does not make F_P output deterministic or semantic.
+- **Preconditions and effects:** preconditions are rechecked before each effect. Effects use the ACTIVATION §3 Effects refinement. Resumption is not idempotent.
+- **Current state:** the workspace is the truth surface and an account is not. Observations are distinct from immutable authority and history (ASSURANCE §13 obligation 4).
+- **Source boundary:** only the exact selected basis is acquired. A stale derived surface is not used. A matching digest does not establish fidelity.
+- **Closure boundary:** closure must be finite and unique, otherwise `closure_unresolved`.
+- **Fit boundary:** measured only where a capacity is declared.
+- **Provenance:** preserved through every join.
+- **Refusal:** each refusal states its cause and maps to exactly one core value. A refusal is not recorded as a step's stop.
+
+## 7. Direct Executive/Worker/Reviewer usability
+
+- Interfaces must be usable by all three roles without private study knowledge (PRODUCT; FD-001).
+- Workers get direct implementation and proof context. Their read scope may exceed their write territory (EXEC §9).
+- Reviewers get direct candidate, test and source access under exposure control.
+- Executive use includes no mutation path when the EXEC profile is selected (EXEC §6). An Executive's inspection does not become a Reviewer result (§17).
+- A design that routes Worker or Reviewer acquisition only through Executive-assembled packets fails this criterion.
+- A design review can assess **contract sufficiency** only (ASSURANCE §13). It cannot assess user usability.
+
+## 8. Method-owned result, conjunction and reuse distinctions
+
+The tools must reproduce, and must not redefine, the following:
+
+- the five core values;
+- the refinement rules:
+  - each refined value maps to exactly one core value;
+  - cause becomes part of the value where it changes the mapping;
+  - a child value keeps its parent's core value;
+  - no mapping raises standing;
+- availability, assessment and acceptance as three separate results;
+- `incomplete` mapping to `falsified` only for availability;
+- not performed, which has no result, kept distinct from `indeterminate`;
+- the ambiguity and effect refinements;
+- disposition values limited to `accept`, `local_repair`, `re_enter` and `reject`;
+- exclusion meaning "not evaluated", never "met";
+- a `satisfied` obtained via `not_applicable` counting only toward the declared disjunction;
+- reuse under the three invalidators;
+- a reused judgment never satisfying a required independent judgment.
+
+Repricing dispositions are recorded states, not results.
+
+## 9. Decision-complete design and thin public projections
+
+The design must show:
+
+- every CLI/MCP operation traced to an Ontology function and its authority role;
+- every sequence message bound to a declared transform or effect;
+- state diagrams covering refusal, blocked, retry, escalation and terminal states;
+- that raw probabilistic output cannot transition directly to accepted or closed.
+
+Protocol and schema choices are HOW, but they must introduce no semantic peer. An existing script or worker launcher may be consumed as a building block. It is not retrospectively qualified, and it is not a proxy for a real operation.
+
+## 10. Preservation and ordinary-interface proof obligations
+
+**Preservation:**
+- core/codec behaviour and AC-R-001..015 unchanged;
+- F_P authoring unchanged;
+- frozen dogfood studies byte-identical and not regenerated;
+- `stdo_a_c.json` builder basis unchanged.
+
+Under DESIGN_MODULE, the expected evidence is an unchanged-boundary proof: the touched projection set, plus no delta in entities, authority, functions, effects or public semantics. Under ASSURANCE §10, regression evidence must be bound to those subjects.
+
+**Ordinary-interface proof:**
+- path realisation through the documented entry, not private or test-only paths;
+- for LLM usability, a clean-room run with expectations recorded before responses are inspected, no edited responses and no silent retries;
+- each mechanical claim needs both a predicate and a reachable witness. A planned harness is planned evidence only (EVALUATION §1).
+
+## 11. Assertion versus execution provenance
+
+- Every expected result traces along the chain: ticket → triage → re-entry → requirement/design → expectation (TICKETS Test case authority). It is never derived from implementation behaviour.
+- Execution records alone are insufficient.
+- Agreement between design-derived and implementation-derived results may reflect a shared error. Disagreement requires diagnosis.
+- Same-process proofs do not establish cross-process or durable authority (ACTIVATION §7).
+
+## 12. What a design review can assess versus later claims
+
+**A design review can assess:**
+- decision-completeness;
+- Ontology, views and axiom evaluation;
+- authority and admission relations;
+- Prime contraction;
+- computational projection;
+- non-bleed and non-proxy;
+- contract sufficiency;
+- the preservation argument;
+- the method-binding declaration;
+- traceability of the planned tests.
+
+**Not assessable by design review:**
+- boundary congruence on actual composition;
+- path realisation;
+- ordinary user usability;
+- harnessed or live UAT;
+- FDV-001/002 execution;
+- FDV-003 benefit or efficiency;
+- semantic acceptance, release or method adoption.
+
+Under ASSURANCE §13, design-only work reports none of these as satisfied. They remain unclaimed or unresolved.
+
+## 13. Residuals and missing deciding sources
+
+Each gap below is followed by its consequence.
+
+1. **No candidate, design files, implementation or tests.** No adequacy evaluation was performed.
+2. **Work authority for design/implementation not supplied.** PRODUCT says this "requires a subsequent bounded work selection." The admitted contract, its ticket (T-007 is authoring-only) and the durable result surface are missing. Admission and grant boundaries cannot be decided.
+3. **RC9 members not supplied:**
+   - PRODUCT_DEFINITION §4/8/11/12;
+   - SPEC_METHOD §4/8/11;
+   - REFERENCE_FRAME §3 (RF-005/012/013/014/016), §5, §6, §8, §10, §13;
+   - EXEC §2/3/5/16/19;
+   - EVALUATION §5/6/7;
+   - ASSURANCE §7–9/12;
+   - ACTIVATION §4;
+   - FOUNDATIONS §2;
+   - AXIOMATIC_CALCULUS AC-007/§9;
+   - TICKETS §4/5 body.
+
+   Expectations that depend on these remain unresolved, in particular:
+   - activation refusal causes;
+   - the profile-specific EXEC §19 checks;
+   - acceptance and blocking law;
+   - qualification freeze.
+4. **The common package at `494451…` was not supplied** (owner-map members). Fidelity of a translation from the FD owner routes to RC9 cannot be decided here.
+5. **Custody and tree identities `3a209713…` and `98de394b…` were not verifiable.** Basis exactness is asserted only.
+6. **No accepted Graphify design, Ontology or AC-R qualification baseline, and no list of frozen study identities.** Preservation subjects cannot be enumerated.
+7. **No declared cross-family independence policy.** The independence standing of this record is undecided.
+8. **No Product-selected severity scale or triage policy.** It is not needed for expectations, but any later findings cannot be graded until it is supplied.
+
+No approval, disposition, repair or result is issued by this record.

@@ -1,0 +1,14 @@
+test_actor_side_public_mcp_writer_completes_before_actor_exit (test_ac_support_effects.ProcessTests.test_actor_side_public_mcp_writer_completes_before_actor_exit) ... FAIL
+
+======================================================================
+FAIL: test_actor_side_public_mcp_writer_completes_before_actor_exit (test_ac_support_effects.ProcessTests.test_actor_side_public_mcp_writer_completes_before_actor_exit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py", line 456, in test_actor_side_public_mcp_writer_completes_before_actor_exit
+    self.assertEqual(c.as_object(value["process_end"])["returncode"], 0)
+AssertionError: 4 != 0
+
+----------------------------------------------------------------------
+Ran 1 test in 2.244s
+
+FAILED (failures=1)

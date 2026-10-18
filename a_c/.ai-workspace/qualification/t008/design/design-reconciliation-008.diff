@@ -1,0 +1,420 @@
+--- a_c/build_tenants/graphify/design/fd-support.md@repair007
++++ a_c/build_tenants/graphify/design/fd-support.md@reconciliation008
+@@ -1,11 +1,12 @@
+ # Deterministic support for F_P development actors
+ 
+-Status: **design candidate v3 for T-008** (A–G seams and selected F1–F5 repairs). This is tenant HOW for
++Status: **provisional HOW, reconciliation-008 for T-008**. This is tenant HOW for
+ [REQ-AC-FD-001..013](../../../specification/requirements/fd-support-tools.md)
+ and the [qualification obligations](../../../specification/requirements/fd-support-verification.md).
+-No executable support-tool behavior, semantic acceptance or benefit is claimed
+-by this document. The unchanged codec and source-generation designs retain
+-their existing checked scopes.
++This document specifies the selected contract; separate closed module returns
++record provisional construction evidence. Integrated qualification, actual F_P
++assessment, semantic acceptance and benefit remain pending. The unchanged codec
++and source-generation designs retain their existing checked scopes.
+ 
+ ## Boundary and method binding
+ 
+@@ -302,6 +303,16 @@
+ actor is id/family/authorship identity. These coordinates are checked against
+ the original activation and protected identity bindings, never accepted merely
+ because the answer asserts them.
++
++The expected activation coordinate is derived only after full packet acquisition
++and validation: `{"id": packet.activation.id, "sha256": SHA256(canonical(packet))}`.
++The complete canonical packet body, including revision/configuration and every
++other field, participates. Its acquired raw parent SourceRef/hash, the Context
++and Preflight artifact hashes, and frame/subject/basis coordinates remain
++separate. No caller replacement hash is accepted. The coordinate is published
++as `activation_identity` in the ordinary Context summary and in its rendered
++`boundaries`, so an actor can construct the return through the public surface.
++This derived coordinate adds no packet field and has no self-hash recursion.
+ 
+ Each performed evaluation has exactly `id`, `predicate`, `domain_outcome`,
+ `core_value`, `evidence`, `residuals` and `invalidators`. `predicate` is its exact
+@@ -545,10 +556,25 @@
+ automatic second launch occurs. A fresh actor can acquire the named attempt,
+ reconcile observed effects/end, and supply an explicit already-authorized retry
+ with predecessor/reconciliation evidence. `retry_of` is required for another
+-attempt of the same activation. No success or retry grant follows from silence.
++attempt of the same activation. The same applicable protected Grant must
++explicitly require at least one existing registered reconciliation predicate
++whose exact declared subject is the complete predecessor Attempt id/digest,
++whose basis is the selected current execution Basis, and whose source contract
++is the operator-verified owner-selected reconciliation for this retry scope.
++All such required predicates and ordinary Grant conditions require actual
++authenticated checks.evaluate evidence and current input observations; an
++arbitrary satisfied check or caller-selected predicate cannot substitute.
++Core checks that pure binding and effects freshly rechecks it at reservation
++and launch. No selected predicate means the supported retry refuses/holds its
++missing contract. Original predecessor/source/reconciliation refs, results and
++unknown effects survive; success neither relabels the predecessor nor grants
++retry authority or establishes descendant/effect completion. No success or retry
++grant follows from silence, and no automatic retry is introduced.
+ 
+ The supervisor is launched through the tenant's own fixed entry point and
+-pinned code dependencies, without user scripts or shell. Actual child receipt,
++pinned code dependencies, without user scripts or shell. Its operator-startup
++Python binding is distinct from the actor Executor executable/settings and
++cannot be overridden by an actor or public request. Actual child receipt,
+ process exit, effect snapshots, durable writes and unknown descendants are
+ separate event kinds. Process exit establishes only that observed process's
+ end. External work or descendants may remain unknown under that executor's
+@@ -605,7 +631,9 @@
+ 
+ `review.prepare` expectation phase permits exact governing-source and relevant
+ proof-contract acquisition, records the Reviewer's source-derived expectations
+-as its F_P evidence and excludes candidate content. Candidate phase acquires
++as its F_P evidence and excludes candidate content. Claim scope is the acquired
++ReviewClaim population declared below, not an inferred prose/link mapping.
++Candidate phase acquires
+ exact immutable candidate, source, actual tests/fixtures/proof and selected
+ comparison directly, preserving expectation/preimage and observed exposure
+ ordering. The author summary is optional evidence, never a replacement. The
+@@ -757,7 +785,7 @@
+ 
+ The SourceRefs in relations.query.declarations, results.conjoin.plan,
+ refresh.prepare.declarations and invalidators, resources.aggregate.accounting
+-and return.capture.return_contract
++and return.capture.return_contract, plus the structured review.prepare.claim route,
+ resolve **actual UTF-8 JSON bodies**, parsed with the same integer-only,
+ duplicate-key-refusing grammar as public requests. They are not merely manifests
+ or arbitrary dictionaries. Their exact keys/types are the following shared
+@@ -795,6 +823,37 @@
+ falsified excludes it under ACT §1; unresolved/missing/other values leave it
+ required and unresolved. Its exclusion is a state, not a result of the skipped
+ obligation. This only serializes ACT Applicability, whose result is preserved.
++
++#### Review claim population and exposure scope
++
++The public review.prepare.claim argument remains a SourceRef. Its acquired
++structured body is exactly ReviewClaim: `{"id": Id, "candidate_sources":
++[SourceRef,...]}`. The finite unique list is the F_P supplier's explicitly
++complete declared candidate-source population; that claim of scope is not a
++tool-inferred semantic mapping. The claim parent's identity is distinct from
++these member parents. Exact shape/ref validation rejects duplicate declared
++refs, ambiguous whole-parent hashes, dangling/out-of-scope/wrong-parent bindings
++under the existing boundary codes. Adding the explicit candidate to the
++population uses exact union, not a second copy of the same ref. Before candidate
++phase, member locators/hashes can be inspected without reading candidate bytes.
++
++All declared refs plus the explicit candidate participate in historical
++exposure overlap and actual-delivery checks, including earlier test/fixture
++member acquisitions. Matching retains source/parent/selection identity and
++uncertain overlaps. Opaque prose is retained verbatim; its extra population is
++unknown, so no clean source-first/independence conclusion covers a broader unseen
++population. Missing or opaque declarations can yield truthful unknown output;
++actual qualification selects a structured complete population. Candidate-phase
++proof must bind the same claim/source identity and check the full historical
++population, not merely its manifest file. SourceRef validity, supplied scope and
++observed delivery remain distinct from semantic independence.
++
++Positive: an exact structured unique population includes both implementation
++and fixture parents; a prior fixture read is detected for that claim. Adverse:
++duplicate/dangling/competing-parent refs refuse or retain their precise basis
++gap, never infer a mapping. Unknown: opaque or absent extra scope cannot certify
++clean exposure, and an unobserved external acquisition remains unknown. These
++are uses of review.prepare and existing reads, not a new method sequence.
+ 
+ #### Relation declarations and query facts (FD-004)
+ 
+@@ -1161,8 +1220,10 @@
+     "RelationCoverageFacts": {"type":"object","properties":{"scoped_population":{"type":"array","items":{"$ref":"#/$defs/Id"},"uniqueItems":true},"declared_support_present":{"type":"array","items":{"$ref":"#/$defs/SupportMapping"}},"missing_declared_support":{"type":"array","items":{"$ref":"#/$defs/Id"},"uniqueItems":true},"mapping_absent":{"type":"array","items":{"$ref":"#/$defs/Id"},"uniqueItems":true},"empty_declared_support":{"type":"array","items":{"$ref":"#/$defs/Id"},"uniqueItems":true},"explicit_unknowns":{"type":"array","items":{"$ref":"#/$defs/RelationUnknown"}},"required_missing":{"type":"array","items":{"$ref":"#/$defs/Id"},"uniqueItems":true}},"required":["scoped_population","declared_support_present","missing_declared_support","mapping_absent","empty_declared_support","explicit_unknowns","required_missing"],"additionalProperties":false},
+     "RelationBoundary": {"type":"object","properties":{"candidate_closure":{"type":"boolean"},"unresolved_traversal_relations":{"type":"array","items":{"$ref":"#/$defs/Id"},"uniqueItems":true},"excluded_relations":{"type":"array","items":{"$ref":"#/$defs/Id"},"uniqueItems":true},"non_governing_relations":{"type":"array","items":{"$ref":"#/$defs/Id"},"uniqueItems":true},"unknown_obligations":{"type":"array","items":{"$ref":"#/$defs/Id"},"uniqueItems":true},"missing_mappings":{"type":"array","items":{"$ref":"#/$defs/Id"},"uniqueItems":true},"out_of_scope_obligations":{"type":"array","items":{"$ref":"#/$defs/Id"},"uniqueItems":true},"limits":{"type":"array","items":{"$ref":"#/$defs/Id"}}},"required":["candidate_closure","unresolved_traversal_relations","excluded_relations","non_governing_relations","unknown_obligations","missing_mappings","out_of_scope_obligations","limits"],"additionalProperties":false},
+     "RelationQueryResult": {"type":"object","properties":{"schema":{"const":"a_c.fd-support.relation-query-result/1"},"query":{"enum":["dependencies","path","impact","coverage"]},"declarations":{"$ref":"#/$defs/SourceRef"},"model":{"$ref":"#/$defs/ModelRef"},"model_basis":{"$ref":"#/$defs/Identity"},"subject":{"$ref":"#/$defs/Identity"},"basis":{"$ref":"#/$defs/Basis"},"seeds":{"type":"array","items":{"$ref":"#/$defs/Id"}},"records":{"type":"array","items":{"$ref":"#/$defs/Id"},"uniqueItems":true},"relations":{"type":"array","items":{"$ref":"#/$defs/RelationEdge"}},"traversed_relations":{"type":"array","items":{"$ref":"#/$defs/Id"},"uniqueItems":true},"path":{"oneOf":[{"type":"null"},{"$ref":"#/$defs/RelationPath"}]},"coverage":{"oneOf":[{"type":"null"},{"$ref":"#/$defs/RelationCoverageFacts"}]},"applicability":{"type":"array","items":{"$ref":"#/$defs/RelationApplicabilityFact"}},"boundary":{"$ref":"#/$defs/RelationBoundary"}},"required":["schema","query","declarations","model","model_basis","subject","basis","seeds","records","relations","traversed_relations","path","coverage","applicability","boundary"],"additionalProperties":false}
++,
++    "ReviewClaim": {"type":"object","properties":{"id":{"$ref":"#/$defs/Id"},"candidate_sources":{"type":"array","items":{"$ref":"#/$defs/SourceRef"},"uniqueItems":true}},"required":["id","candidate_sources"],"additionalProperties":false}
+   },
+-  "oneOf": [{"$ref":"#/$defs/ConjunctionPlan"},{"$ref":"#/$defs/RefreshDeclarations"},{"$ref":"#/$defs/Invalidators"},{"$ref":"#/$defs/Accounting"},{"$ref":"#/$defs/Resource"},{"$ref":"#/$defs/ReturnContract"},{"$ref":"#/$defs/ContractSupersession"},{"$ref":"#/$defs/RelationDeclarations"}]
++  "oneOf": [{"$ref":"#/$defs/ConjunctionPlan"},{"$ref":"#/$defs/RefreshDeclarations"},{"$ref":"#/$defs/Invalidators"},{"$ref":"#/$defs/Accounting"},{"$ref":"#/$defs/Resource"},{"$ref":"#/$defs/ReturnContract"},{"$ref":"#/$defs/ContractSupersession"},{"$ref":"#/$defs/RelationDeclarations"},{"$ref":"#/$defs/ReviewClaim"}]
+ }
+ ```
+ 
+@@ -1801,7 +1862,8 @@
+   "relation_expected_subject": {
+     "id": "urn:example:e1",
+     "sha256": "13150a2535d1271d57b112728fffaf9d3eaa40fe12547c9030bfc86029e9b1c8"
+-  }
++  },
++  "review_claim": {"id":"review-claim1","candidate_sources":[{"engine":"workspace-regular-file","root":"example-read-root","path":"candidate.py","object":null,"sha256":"0000000000000000000000000000000000000000000000000000000000000000","selector":null}]}
+ }
+ ```
+ 
+@@ -1939,7 +2001,9 @@
+ exactly the UTF-8 prefix `Use the activated frame and declared return contract below.\n` followed by tenant-canonical JSON with exactly `schema`
+ (`a_c.fd-support.actor-context/1`), `packet`, `projections`, `sources`,
+ `late_acquisition` and `boundaries`. Sources are actual acquired payloads with
+-parent identities. Fit, rendered hash, store metadata and the rendering itself
++parent identities. `boundaries.activation_identity` contains the expected whole-
++packet activation coordinate above; the ordinary summary also exposes it as
++`activation_identity`. Fit, rendered hash, store metadata and the rendering itself
+ are outside that body, avoiding a self-counting/self-hashing context. The exact
+ prefix plus JSON is measured and dispatched unchanged. An exceeded
+ envelope never causes the full body to be supplied implicitly. A Return's
+@@ -2025,8 +2089,10 @@
+ acquisition and actual dispatched context delivery. A manifest/hash alone is
+ not recorded as full payload delivery. Partial/unknown delivery stays scoped.
+ 
+-A known claim supplies its exact candidate-source population through its bound
+-claim source and explicit candidate reference. Matching uses verified source
++A known structured ReviewClaim supplies its explicitly declared complete
++candidate-source population through its bound claim source, unioned with the
++explicit candidate reference. Opaque prose retains unknown additional scope;
++it is never parsed as an implicit source map. Matching uses verified source
+ identity/digest and actual selection overlap; model acquisition may additionally
+ match an exact model id/digest under its declared representation equivalence.
+ No guessed semantic source mapping is introduced. When a claim becomes known,
+@@ -2409,8 +2475,12 @@
+ accepted-result benefit, Product acceptance or release. Complete calculus
+ execution and unsupported methods/translations are outside this fragment.
+ Executor/host evidence and actual use are qualified only when exercised. The
+-finite design claim is available for independent source review; code and
+-operational qualification remain downstream of Executive disposition.
++finite design claim remains subject to independent assessment. Root separately
++admitted provisional construction on repair-007 and explicit refinements;
++composed mechanical qualification, actual registered F_P source-first assessment
++and integrated independent assessment precede separate ontology/design
++dispositions and any promotion. The Product runtime binding stays proposed
++until separately selected for exact live qualification.
+ 
+ ## Pinned protocol references
+ 
+@@ -2571,6 +2641,15 @@
+ cooperative serialization of participating mutable material inputs. Tool
+ Writers use the shared scope/target lock protocol; registered executors and
+ operator-controlled other writers honor the selected quiescent commit scope.
++For dispatch the Product scope lock covers only the fresh precondition check,
++launch intent and actual spawn/start-observation edge. A separate per-Attempt
++supervision lock spans actor IO and preserves at-most-once invocation. The
++Product lock is released before waiting/streaming actor IO, so a separately
++granted actor-side Worker Writer can acquire Product/target locks during the
++invocation. Later post-effect observers acquire their own actual bounded
++quiescence scope; no global lock is assumed across F_P thought or the lifetime
++of a Worker MCP Writer child. Pins, edge rechecks, launch uncertainty, retry
++reconciliation and target Writer serialization remain required.
+ Immutable exact snapshots require no mutable lock. If the requested currentness
+ requires unsynchronized external mutation to be excluded but that premise is
+ not supported, admission refuses/holds the actual gap; it does not claim a
+@@ -2589,7 +2668,7 @@
+ |---|---|---|---|
+ | Product mechanism / Preflight admission | Exact Product/authorized owner binding, outcome/grant, packet/context, caller/target, method/profile, all material observation/dependency refs, executor/surface, applicable predicates and preimages. Reacquire/lock and validate every join before commitment. | One immutable complete Preflight receipt envelope after all referenced payloads are present/verified. Draft/staging artifacts confer no admitted truth. Reconstruct exact receipt and its complete references; absent marker means no receipt. | Only selected authorized mechanism; bootstrap historical scope as above, no request-supplied bypass. |
+ | Effect membrane / Attempt reservation | Admitted receipt plus exact request key/hash, context, target/executor/settings, result surface, the complete exact Grant-selected notification sink binding/consumer, retry/reconciliation and fresh required basis. | One complete immutable Attempt reservation anchor, atomically published before launch. No durable reservation means no launch. Exact replay returns the same reservation; conflicting key refuses. | Only registered supervisor path; no direct shell or user entry point establishes reservation/admission. |
+-| Registered executor edge / Invocation | Existing reservation, exact executable/helper/config preimages, caller/target authority and fresh locked inputs. | Admission is already complete. Actual process start is an external effect, not transactionally coupled to evidence. Intent exists first; lost spawn/ack leaves completion_unknown, never automatic repeat. Fresh observation uses the anchor and actual process/subject evidence. | Registered executor only; arbitrary argv/projection-triggered execution unsupported. |
++| Registered executor edge / Invocation | Existing reservation, exact executable/helper/config preimages, caller/target authority and fresh inputs locked only across precheck/intent/spawn/start observation; per-Attempt supervision remains locked across actor IO. | Admission is already complete. Release Product scope before waiting/streaming actor IO; later observers reacquire their bounded scope. Actual process start is an external effect, not transactionally coupled to evidence. Intent exists first; lost spawn/ack leaves completion_unknown, never automatic repeat. Fresh observation uses the anchor and actual process/subject evidence. | Registered executor only; arbitrary argv/projection-triggered execution unsupported. |
+ | Writer membrane / one target record | Exact caller Worker/Writer grant, target preimage, intended whole postimage, authority/method/current dependencies, target lock and durable intent. | One whole target-file publication: complete new bytes or original/absent target. Existing replacement uses same-directory atomic replace; absent creation links a fully written/fsynced temp file exclusively into an absent target, never exposes a partially written new file. Reconstruct from durable intent and actual pre/post/other bytes; unknown other state cannot be reset or blindly retried. | Only named granted Writer interface for this tool domain; no Executive/Reviewer target impersonation or non-atomic fallback. |
+ | Evidence store / immutable artifact or event | Exact complete envelope, all dependencies, provenance and content digest; protected namespace and existing evidence grant. | Complete same-directory atomic publication of one verified envelope. Raw/staged payloads are not admission markers. History only treats complete verified marker records as admitted evidence; orphan staging is not success. | One envelope grammar/verification path; optional indexes are nonauthoritative and rebuildable. |
+ | Sink / one notification delivery | Registered sink id/root/consumer/retention and exact event payload, all already committed evidence refs. | One complete atomic sink event record. Delivery is that local publication; consumption is unobserved unless separately evidenced. Failed sink publication retains gap/fallback. | Registered durable-file-events sink only; no request-supplied network/file target. |
+@@ -3003,10 +3082,34 @@
+ observed route, not a claim that an actor mentally attended to every byte.
+ Missing/in-flight delivery proof cannot certify clean source-first ordering.
+ 
++After a complete actual CLI/MCP response write and flush, the fixed adapter
++calls the pure `core.transport_observation(runtime,request,response,interval,
++bytes_sha256,byte_count)` builder, then `EvidenceStore.retain` once. The complete
++`acquisition` envelope payload is exactly `schema`
++(`a_c.fd-support.transport-observation/1`), `operation` (OperationEvidence ref),
++`response_sha256`, `request_sha256`, `recipient`, `acquisitions`, `delivery` and
++`wire`. `delivery` is exactly `{"state":"write_flushed","interval":Interval}`;
++`wire` is exactly `{"sha256":Sha256,"bytes":nonnegative integer}`. The builder
++reacquires/verifies the protected operation against the exact original request
++and response (its evidence coordinate is separate), and derives acquisition
++refs only from that operation's actual public-response content scope for the
++fixed principal. The envelope provenance binds the original request/principal
++and actual interval. A Context summary is not delivery of its retained body.
++The response digest covers the public tool response; the wire digest/byte count
++cover the actual full CLI or JSON-RPC bytes written, including its framing.
++This event is an observed local write/flush, never consumer acquisition, mental
++receipt or a second result. `persist_outcome` remains the sole response wrapper;
++there is no second public operation, prior-envelope patch or fabricated receipt.
++In-flight/partial/failed writes and missing/failed event publication remain
++potential exposure/unknown. A post-write publication failure reports the gap on
++stderr without changing the already written response or silently retrying it.
++History matches the verified operation/acquisition/recipient/interval relation;
++missing evidence cannot certify clean source-first ordering.
++
+ The internal supervisor entry is fixed:
+ 
+ ```text
+-<registered Python> <exact ac_support.py> _supervise
++<operator-startup Python> <exact ac_support.py> _supervise
+   --policy <operator-selected absolute policy path>
+   --policy-sha256 <exact digest>
+   --principal <original requester principal>
+@@ -3015,7 +3118,22 @@
+ ```
+ 
+ Only the effects module creates this argv from the retained reservation; public
+-requests supply none of these path/argv values. The fixed adapter entry calls
++requests supply none of these path/argv values. Before supervisor spawn, the
++immutable Attempt invocation seals its `supervisor` binding: `python` is the
++resolved regular-file path/SHA-256 of the actual startup interpreter; `modules`
++contains exact path/SHA-256 pins for ac_support.py, ac_support_core.py and
++ac_support_effects.py; `startup` retains Python invocation, policy path/digest
++and principal; `argv_template` identifies the fixed private entry and `argv`
++retains its fixed construction. The anchor-coordinate suffix alone uses the
++fixed `<immutable-anchor-id>` / `<immutable-anchor-sha256>` placeholders until
++that complete anchor is hashed; filling those two values is not re-pinning.
++Interpreter/module pins are checked before supervisor spawn and at private
++reentry before actor launch. Drift/unreadability/unavailability refuses or
++holds without launch; reentry never silently selects new bytes. Canonical
++symlink resolution identifies the actual operator-started Python, not a
++request-selected authority. Actor Executor executable/argv/settings remain a
++separate registered binding and cannot override this startup/own-code scope.
++The fixed adapter entry calls
+ exactly `effects.supervise(runtime, ArtifactRef)`. This private reentry resolves
+ only a complete protected Attempt reservation, recovers its original full strict
+ request and exact retained Context, and rechecks policy, grant, target, fixed
+@@ -3063,6 +3181,20 @@
+ an actual bound tool refusal returns isError=true with the exact structured
+ response plus serialized text. Stdout remains newline-delimited protocol only.
+ There is no global MCP/host configuration effect or dependency on the study MCP.
++
++The outer pinned MCP/JSON-RPC envelope permits ordinary finite numeric metadata
++(including decimal/exponent forms) with exact numeric identity and original
++number-token class/lexeme preserved; no binary-float rounding is allowed.
++Duplicate keys, NaN/infinity and out-of-bound messages refuse at transport.
++Extended clientInfo/capabilities and RPC ids remain transport data, never
++Product/grant/operation authority. The complete actual tools/call.arguments is
++serialized and reparsed by the strict core request parser. Integer public
++tokens stay integers; public decimal/exponent tokens, including 1.0 and 1e0,
++remain decimal/exponent tokens and refuse even if numerically integral. A
++Decimal normalization that turns 1e0 into 1 is not permitted. Legal outer
++metadata decimals and exact numeric id roundtrips do not weaken public lexical
++rules, canonicalization or identities. The pinned schema source is
++[2025-11-25 schema.ts](https://raw.githubusercontent.com/modelcontextprotocol/specification/2025-11-25/schema/2025-11-25/schema.ts).
+ 
+ ### Authoritative F_D path and explicit legacy exclusions
+ 
+--- a_c/.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md@repair007
++++ a_c/.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md@reconciliation008
+@@ -16,7 +16,7 @@
+ - dependencies: Committed common WHAT c2f67fec8154028d45d7cd7a2832dd4fade4d94b; exact installed builder; owner-selected Claude RC9 execution method.
+ 
+ Current design state and exact repair routing are owned by
+-[Current candidate after repair-007](#current-candidate-after-repair-007) below.
++[Current candidate after reconciliation-008](#current-candidate-after-reconciliation-008) below.
+ Earlier closed returns/admissions in this ticket are history for their exact
+ subjects and do not project current acceptance or implementation readiness.
+ 
+@@ -419,33 +419,82 @@
+ actor qualification, usefulness, Product acceptance and release remain separate.
+ This Worker stops at that return; it activates no implementation itself.
+ 
+-## Current candidate after repair-007
+-
+-The current work state is **active, design candidate available for independent
+-assessment and Executive disposition**. No design acceptance, implementation
+-activation, runtime qualification, usefulness, Product acceptance or release
+-is recorded here. The previous v1/v2/v3/repair-003 returns retain their original
+-subjects and bounded standing; none is projected as current acceptance.
++## Current candidate after reconciliation-008
++
++The current work state is **active, provisional construction complete by
++module; composed qualification pending**. Root separately assessed repair-007
++for provisional co-evolution and admitted disjoint construction; this current
++reconciliation transcribes its prior explicit refinements, not code-derived
++meaning. No ontology/design acceptance, integrated runtime qualification,
++usefulness, Product acceptance or release is recorded here. All earlier returns
++and negative assessments retain their exact historical subjects and standing.
+ 
+ Current exact HOW: [fd-support.md](../../../build_tenants/graphify/design/fd-support.md),
+-SHA-256 `32095ebef2f2bb1d5a5328faecc576f87fdaae788cdd23570374b0eea4fb9a70`. The unchanged RC9 binding remains
++SHA-256 `faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f`. The unchanged RC9 binding remains
+ `bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1`.
+ This ticket is the current work-state authority. Its own final hash and all
+ seven current candidate members are recorded together in the Writer's exact
+-[repair-007 closed return](../../qualification/t008/design/design-repair-007-return.json),
++[reconciliation-008 closed return](../../qualification/t008/design/design-reconciliation-008.return.json),
+ avoiding a self-hash cycle. That return is evidence/projection, not a second
+ work-state authority; future observations update this owning carrier through
+ an authorized Writer. The original fixed Git/member preservation inventory
+ remains unchanged and referenced, not regenerated.
+ 
+-For repair-006, the Executive selected HOW `3e35631618daaa0c3c696480df6a8e946fa13f17ead05cea7337b5ef23364fa6` as that exact candidate. Its then-current binding superseded the stale repair-004 pointer, not the historical assessment or any Product meaning. Repair-005 settled only the private supervisor call seam. The repair-005 assessment `7dbbb8a9360da5f91c56bc014ef581da5bc922bcf68a97d71abf7fe633bff34f` falsified its seven-file subject solely for that stale pointer and supplied no separate HOW-only verdict. Repair-004 and repair-005 closed returns remain historical at their exact recorded subjects. Independent current-subject reassessment and the separate design disposition are still pending; this recording creates no implementation activation, acceptance or release.
+-
++For repair-006, the Executive selected HOW `3e35631618daaa0c3c696480df6a8e946fa13f17ead05cea7337b5ef23364fa6` as that exact candidate. Its then-current binding superseded the stale repair-004 pointer, not the historical assessment or any Product meaning. Repair-005 settled only the private supervisor call seam. The repair-005 assessment `7dbbb8a9360da5f91c56bc014ef581da5bc922bcf68a97d71abf7fe633bff34f` falsified its seven-file subject solely for that stale pointer and supplied no separate HOW-only verdict. Repair-004 and repair-005 closed returns remain historical at their exact recorded subjects. At that repair-006 return, current-subject reassessment and separate design disposition were pending; that recording created no implementation activation, acceptance or release.
++
++
++### Reconciliation-008: prior Root selections and provisional evidence
++
++Root selects HOW `faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f` as the current reconciled source for this same bounded
++outcome. The [exact delegated contract](../../qualification/t008/design/design-reconciliation-008.contract.txt)
++and [separate Root-reported scoped receipt](../../qualification/t008/design/design-reconciliation-008.admission.json)
++were retained before these source effects. They authorize only HOW/current-ticket
++reconciliation and own evidence. The seven-member return binds this actual HOW,
++this final ticket and the five unchanged members without a self-hash cycle.
++
++The causal selections predate the affected code: Core's
++[activation identity](../../qualification/t008/core/ACTIVATION_IDENTITY.clarification.txt)
++and [ReviewClaim scope](../../qualification/t008/core/REVIEW_CLAIM.clarification.txt),
++Effects' [startup supervisor binding](../../qualification/t008/effects/SUPERVISOR_BINDING.clarification.txt),
++[retry reconciliation](../../qualification/t008/effects/RETRY_RECONCILIATION.clarification.txt)
++and [bounded Product/per-Attempt lock repair](../../qualification/t008/effects/repair-001/CONTRACT.txt),
++and Interfaces' [actual transport observation](../../qualification/t008/interfaces/TRANSPORT.clarification.txt)
++and [outer numeric/public lexical distinction](../../qualification/t008/interfaces/TRANSPORT.numeric.clarifications.json).
++The HOW transcribes those source-selected representations/realization seams;
++only ReviewClaim is added to its shared catalog (58 definitions; prior 57
++unchanged). No new atom, method law, public operation or semantic result follows.
++
++Root's [source-bound co-evolution assessment](../../qualification/t008/design/co-evolution-001.assessment.json)
++SHA-256 `9dcc63c57b010d6ec9741f4637f957f512f5f243c2fd5130bbc0ab0600a883aa`
++records decision_complete/co_evolution_admissible on exact repair-007 for
++provisional code/tests, not independent S or ontology/design acceptance. Closed
++[Core](../../qualification/t008/core/CLOSED_RETURN.json),
++[Effects repair-001](../../qualification/t008/effects/repair-001/CLOSED_RETURN.json),
++[Interfaces](../../qualification/t008/interfaces/CLOSED_RETURN.json) and
++[actor transport](../../qualification/t008/interfaces/actor_transport/CLOSED_RETURN.json)
++returns report their exact owned subjects. Core reports 55 tests passed;
++Effects reports 32, including its deterministic composed Writer fixture;
++actor transport reports 16 controlled helper tests passed and zero actual
++actors. Interfaces' 18 public tests were authored but unexecuted in its return.
++Those reports remain bounded module evidence; this author performed only
++source/document checks and reran none of their runtime tests.
++
++Next selected sequence is integrated mechanical qualification, then actual
++registered F_P source-first assessment, followed by integrated independent
++assessment and separate Executive ontology/design dispositions. Material new
++ambiguity returns the smallest affected cut to design gating. The Product
++runtime binding below remains a proposal until separately selected for exact
++live qualification. Public integration, actual F_P/independence/acceptance,
++release and measured benefit remain pending; this recording admits no next
++actor or effect. Product acceptance/release remain Jim's. The rebased
++[Prime author draft](../../qualification/t008/design/design-reconciliation-008.prime.draft.json)
++changes exact source locators only; both disposition fields remain null.
+ 
+ ### Repair-007 selected FD-004 closure and prospective sequence
+ 
+-Root selects HOW `32095ebef2f2bb1d5a5328faecc576f87fdaae788cdd23570374b0eea4fb9a70` as the current candidate for
+-this existing bounded outcome; this owning ticket and the repair-007 return
+-name that same exact subject. The prior repair-006 binding and every earlier
++For repair-007, Root selected HOW `32095ebef2f2bb1d5a5328faecc576f87fdaae788cdd23570374b0eea4fb9a70`
++as that exact candidate for this bounded outcome; the then-current owning ticket
++and repair-007 return named the same subject. The prior repair-006 binding and every earlier
+ finding, assessment and closed return remain historical on their own subjects.
+ The actual [repair-006 assessment](../../qualification/t008/assurance/design_review_repair006_20261019/runs/claude_repair006_design_assessment_001/result.txt),
+ SHA-256 `4122cc827c72ef95b8b9a7c9e532000e12d952e7d0b3054bad8d7e931f90fe7f`,
+@@ -473,10 +522,11 @@
+ JudgmentRef exists; final whole-declaration acquisition identity remains separate.
+ The existing 44 definitions and other public contracts remain unchanged.
+ 
+-Prospective sequence, under RC9 DESIGN_MODULE §5/§7: **after** Root performs its
++Historical repair-007 prospective sequence, under RC9 DESIGN_MODULE §5/§7: **after** Root performs its
+ own current decision_complete/co_evolution_admissible assessment, provisional
+ code and tests may evolve through separately admitted implementation activations.
+-That assessment has not yet been recorded here, and this return activates none.
++At that repair-007 return the assessment was not yet recorded; the later
++co-evolution-001 assessment is linked above. That author return activated none.
+ No promotion or design-method closure occurs until integrated independent
+ assessment and separate Executive ontology/design dispositions. No further
+ independent design-only model call is planned before provisional construction;
+@@ -489,7 +539,7 @@
+ Prime draft is unchanged. The [exact diff](../../qualification/t008/design/design-repair-007.diff),
+ [short source-selected checks](../../qualification/t008/design/design-repair-007-checks.json)
+ and [closed return](../../qualification/t008/design/design-repair-007-return.json)
+-provide the current seven-member freeze. No source-authoring return or ordinary
++provide the historical repair-007 seven-member freeze. No source-authoring return or ordinary
+ schema check is independent assessment, design acceptance or a grant to continue.
+ 
+ ### Source-owned triage correction

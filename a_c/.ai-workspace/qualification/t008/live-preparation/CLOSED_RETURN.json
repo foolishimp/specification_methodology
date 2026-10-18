@@ -1,0 +1,129 @@
+{
+  "schema": "a_c.live-task-preparation-return/1",
+  "activation": "T-008-live-preparation-001",
+  "actor": {
+    "id": "/root/ac_fd_tenant_design",
+    "role": "Writer/Worker",
+    "consumer": "/root"
+  },
+  "state": "closed",
+  "value": "candidate_ready",
+  "cause": "Supplied task, exact three-field draft binding, prerequisites and source custody are available; finite static checks pass. No live task has run.",
+  "basis": {
+    "product": "urn:stdo:product-definition:a-c-implementations",
+    "WHAT_commit": "c2f67fec8154028d45d7cd7a2832dd4fade4d94b",
+    "builder_manifest": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "RC9_source": "c2cfa9b908d1722ae3f26c32fa4ece691083bdc3",
+    "standards_tree": "98de394b352179c25dfa63b0b59a9b6bdd43632d",
+    "profile_sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+  },
+  "authority_receipt": {
+    "path": "a_c/.ai-workspace/qualification/t008/live-preparation/PREPARATION.admission.json",
+    "sha256": "2d612228414fee83956877b7675aa079bad59480cf5720fa08980fac590f46cb"
+  },
+  "task_id": "urn:a-c:fd-support:T008:live-task:001",
+  "primary_artifacts": {
+    "a_c/.ai-workspace/qualification/t008/live-preparation/TASK.md": "3dc7c91a91c672c7721559025e9252c395ce8f5da4ce064f995d973b97cc9ec6",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/runtime-binding.draft.json": "e08f6d669aa147b95149bfda7cce6440836c95ead1e7369abe32480ec835ceca",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/PREREQUISITES.md": "f861284572094e2f115e86ffce78780e0ff0e15c7b613f4a03f11c4afbd93af0",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/SOURCE_MANIFEST.json": "d131a36e24361d1bad6a6eab297738faf6a2f01df0395bcdfe1cef0cfeb4c611",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/CHECKS.json": "30a4bef3d2bb64fabbe17be79f34f2d38b0f61546ae69ea8e21a13554bde3083"
+  },
+  "all_authored_files_before_return": {
+    "a_c/.ai-workspace/qualification/t008/live-preparation/CHECKS.json": "30a4bef3d2bb64fabbe17be79f34f2d38b0f61546ae69ea8e21a13554bde3083",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/PREPARATION.admission.json": "2d612228414fee83956877b7675aa079bad59480cf5720fa08980fac590f46cb",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/PREPARATION.contract.txt": "a4764c74588f8b6f2fd2760b2b280d63fed6f2edaa593d9784d22310804d4c12",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/PREREQUISITES.md": "f861284572094e2f115e86ffce78780e0ff0e15c7b613f4a03f11c4afbd93af0",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/SOURCE_MANIFEST.json": "d131a36e24361d1bad6a6eab297738faf6a2f01df0395bcdfe1cef0cfeb4c611",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/TASK.md": "3dc7c91a91c672c7721559025e9252c395ce8f5da4ce064f995d973b97cc9ec6",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/runtime-binding.draft.json": "e08f6d669aa147b95149bfda7cce6440836c95ead1e7369abe32480ec835ceca",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/sources/evidence/core/CLOSED_RETURN.json": "9b865a94b022033865f473973c7b3856b25e8d29520fbf5ad8fda40e04e6fcf3",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/sources/evidence/design/co-evolution-001.assessment.json": "9dcc63c57b010d6ec9741f4637f957f512f5f243c2fd5130bbc0ab0600a883aa",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/sources/evidence/design/design-reconciliation-008.return.json": "31828729e04d808a6f2a20f1f0440b3115d3686fe8d52d8539709c13a423ed9f",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/sources/evidence/interfaces/CLOSED_RETURN.json": "93a28698fb8b1578e81dbae034f7a01c7660c044f3d23a8091ddd627faa7a60c",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/sources/evidence/interfaces/actor_transport/CLOSED_RETURN.json": "f37e496ade6a105a1769acb5dd1d122e5acee84c5dcdfed29c7722d49e043e44",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/sources/method/ACTIVATION.md": "3bb7594a194950819d6aad65e3938358e8685bbbc2ebf67c0ad720c37bb04487",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/sources/method/ASSURANCE.md": "e33a6e39e1e93d38dbd3ea212d8d9f0d2f44a366a9345fda762d2481c254d0bf",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/sources/method/DESIGN_MODULE.md": "9e2642d51d0b024a448fe7910dcb323fb3f3bb2a003ad33c27c39a5dda625220",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/sources/method/EVALUATION.md": "14f8816b1eb9cd146dd58a29bac35ea47a62e4e4b093b20f9892330e44922991",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/sources/method/EXECUTIVE_BASELINE.md": "e50b4ad70451fe84882053bc0dffef6f6c0c806a5dba68ac9933aa79029fb935",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/sources/method/FOUNDATIONS.md": "fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/sources/method/REFERENCE_FRAME.md": "d64ee5c05aaefac346116c2e43eabf193dd84123f1d461070ecd378ce5e9b551",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/sources/product/.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md": "a34425295fe5fd2cbbd21406f0b0fc609245152a374267a47b5dcd3bd08d7fa2",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/sources/product/build_tenants/graphify/code/ac_support.py": "4d1ea7fe98ec1b53f2a19d9a2fef2b3fbb070624c955fbb1e9e48f5cc88011b1",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/sources/product/build_tenants/graphify/code/ac_support_core.py": "97b099812fc1f6964c83cd7df678e4a1fd0575e941c74549689fe4944f008820",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/sources/product/build_tenants/graphify/design/fd-method-claude-rc9.json": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/sources/product/build_tenants/graphify/design/fd-support.md": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/sources/product/build_tenants/graphify/examples/fd-support/README.md": "6f740e730487e52098f50d38e59199f36b03b0aadc80b105b4f8eb29b9b5dce5",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/sources/product/build_tenants/graphify/examples/fd-support/actor_cli.py": "06cd55463fd23e45fbf56fa46de92b9ba49f6650e3dc5686e219544d5457b42c",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/sources/product/specification/PRODUCT.md": "9ebc8342affe8c5e0afb08ebe22f3f98f73f7bdc64db00eee17674c47274bef7",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/sources/product/specification/requirements/fd-support-tools.md": "e3fcebd7e9fbc60dc36ed4c02ee834a96f14226af134809c938169d4712dfc23",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/sources/product/specification/requirements/fd-support-verification.md": "3746e614a5ddc3f0a551e926998f16d6101cc037c5c43b879b4447b017a8dbdf",
+    "a_c/.ai-workspace/qualification/t008/live-preparation/sources/product/stdo_a_c.json": "b0e013e6f9dabb9d3f31dd02c1a6909e9fc6418925a8d829f3bb1c2adf3dac1d"
+  },
+  "source_copy_count": 23,
+  "unchanged_design_freeze": {
+    "a_c/build_tenants/graphify/design/fd-support.md": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f",
+    "a_c/.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md": "a34425295fe5fd2cbbd21406f0b0fc609245152a374267a47b5dcd3bd08d7fa2",
+    "a_c/build_tenants/graphify/design/fd-method-claude-rc9.json": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1",
+    "a_c/build_tenants/graphify/design/README.md": "f757ab636858c851cc500f5473ef0bc99a8d20ef2dfc209857917657895cf961",
+    "a_c/specification/REFERENCE_FRAME_BASIS.md": "5cda45d1f267a3f221703c7fcc42b100c7997d3a98c015b7faf4f46b21222b8a",
+    "a_c/specification/GOALS.md": "7f78e1a9834d1fc19fa421655e690c3b500138c66f94ff762337f57629351a03",
+    "a_c/stdo_a_c.json": "b0e013e6f9dabb9d3f31dd02c1a6909e9fc6418925a8d829f3bb1c2adf3dac1d"
+  },
+  "checks": {
+    "schema": "a_c.live-preparation-checks/1",
+    "state": "closed-static-checks-passed",
+    "task_id": "urn:a-c:fd-support:T008:live-task:001",
+    "strict_JSON_grammar": true,
+    "binding_exact_top_fields": [
+      "mechanism",
+      "result_surface",
+      "scope"
+    ],
+    "current_HOW_and_guarded_Core_match": true,
+    "result_surface_exact": true,
+    "scope_two_actual_Claude_roles_with_Root_per_call_approval": true,
+    "no_future_policy_Attempt_or_self_hash": true,
+    "source_copies_byte_equal": 23,
+    "all_7_design_members_unchanged": true,
+    "exact_supplied_task_outcome": true,
+    "criteria_present": true,
+    "all_local_links_resolve": true,
+    "TASK_lines": 89,
+    "guide_absent": true,
+    "live_evidence_root_not_created": true,
+    "actual_actor_calls": 0,
+    "runtime_tests": 0,
+    "existing_source_effects": false,
+    "limits": [
+      "Static preparation/document/hash checks only; no public tools or support runtime invoked.",
+      "Effects002 and integrated proof pending in the grant; no success inferred.",
+      "Draft not Product-located/selected/admitted; no ontology/design/Product acceptance or benefit claim.",
+      "Custody is not actual source acquisition or a complete final ReviewClaim population."
+    ]
+  },
+  "binding_standing": "DRAFT only. Not inside Product-located T008 or selected/admitted. Later policy must explicitly register logical root product.",
+  "pending": [
+    "Closed Effects repair002 and exact integrated mechanical qualification",
+    "Root qualification-only binding selection inside T008 through existing authority locator",
+    "Complete final frozen ReviewClaim population and selected independence/exposure policy",
+    "Exact runtime/packet/native CLI/module/helper dependencies and Claude settings",
+    "Separate exact Root approval before each of two actual registered calls",
+    "Actual public Executive/Worker/Reviewer acquisition, granted write, source-first assessment, capture/check and task disposition",
+    "Integrated independent assessment and separate ontology/design dispositions; Product acceptance/release remain Jim’s"
+  ],
+  "actual_effects": {
+    "new_files_only_under": "a_c/.ai-workspace/qualification/t008/live-preparation",
+    "actor_or_dispatch_authority_created": false,
+    "public_guide_written": false,
+    "live_evidence_root_created": false,
+    "code_existing_sources_peer_Git_global_model_runtime_effects": false
+  },
+  "invalidators": [
+    "Source/Core/profile/Product/builder/method/authority drift",
+    "Target exists or scope expands",
+    "Missing mechanical/authority/capability/currentness/exposure prerequisite"
+  ],
+  "next": "Return exact hashes to Root and STOP. No T008 binding edit, target write, actor launch or continuation inferred."
+}

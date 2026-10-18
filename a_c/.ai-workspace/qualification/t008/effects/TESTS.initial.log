@@ -1,0 +1,57 @@
+test_forged_anchor_and_new_unreconciled_attempt_refuse (test_ac_support_effects.ProcessTests.test_forged_anchor_and_new_unreconciled_attempt_refuse) ... /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py:1127: ResourceWarning: subprocess 28456 is still running
+  _warn("subprocess %s is still running" % self.pid,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+FAIL
+test_real_registered_invocation_exact_replay_and_final_output (test_ac_support_effects.ProcessTests.test_real_registered_invocation_exact_replay_and_final_output) ... /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py:1127: ResourceWarning: subprocess 28500 is still running
+  _warn("subprocess %s is still running" % self.pid,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+FAIL
+test_timeout_preserves_partial_effect_and_separate_end (test_ac_support_effects.ProcessTests.test_timeout_preserves_partial_effect_and_separate_end) ... /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py:1127: ResourceWarning: subprocess 28562 is still running
+  _warn("subprocess %s is still running" % self.pid,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+FAIL
+test_atomic_failure_surface_fresh_reconstruction (test_ac_support_effects.StoreTests.test_atomic_failure_surface_fresh_reconstruction) ... ok
+test_complete_envelope_roundtrip_and_distinct_execution_identity (test_ac_support_effects.StoreTests.test_complete_envelope_roundtrip_and_distinct_execution_identity) ... ok
+test_dependency_order_and_nonrecursive_operation_evidence (test_ac_support_effects.StoreTests.test_dependency_order_and_nonrecursive_operation_evidence) ... ok
+test_missing_reference_tamper_symlink_and_corrupt_history (test_ac_support_effects.StoreTests.test_missing_reference_tamper_symlink_and_corrupt_history) ... ok
+test_append_exact_replay_and_conflicting_identity (test_ac_support_effects.WriterTests.test_append_exact_replay_and_conflicting_identity) ... ok
+test_exclusive_creation_and_wrong_direct_role (test_ac_support_effects.WriterTests.test_exclusive_creation_and_wrong_direct_role) ... ok
+test_post_target_evidence_failure_never_repeats_or_rolls_back (test_ac_support_effects.WriterTests.test_post_target_evidence_failure_never_repeats_or_rolls_back) ... ok
+test_stale_preimage_and_material_drift_are_distinct (test_ac_support_effects.WriterTests.test_stale_preimage_and_material_drift_are_distinct) ... ok
+
+======================================================================
+FAIL: test_forged_anchor_and_new_unreconciled_attempt_refuse (test_ac_support_effects.ProcessTests.test_forged_anchor_and_new_unreconciled_attempt_refuse)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py", line 274, in test_forged_anchor_and_new_unreconciled_attempt_refuse
+    self.finished(runtime, c.as_object(c.as_object(first["result"])["artifact"]))
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py", line 117, in finished
+    self.fail("Registered fixture process did not produce an observed end within the bounded test deadline")
+AssertionError: Registered fixture process did not produce an observed end within the bounded test deadline
+
+======================================================================
+FAIL: test_real_registered_invocation_exact_replay_and_final_output (test_ac_support_effects.ProcessTests.test_real_registered_invocation_exact_replay_and_final_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py", line 243, in test_real_registered_invocation_exact_replay_and_final_output
+    value = self.finished(runtime, ref)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py", line 117, in finished
+    self.fail("Registered fixture process did not produce an observed end within the bounded test deadline")
+AssertionError: Registered fixture process did not produce an observed end within the bounded test deadline
+
+======================================================================
+FAIL: test_timeout_preserves_partial_effect_and_separate_end (test_ac_support_effects.ProcessTests.test_timeout_preserves_partial_effect_and_separate_end)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py", line 260, in test_timeout_preserves_partial_effect_and_separate_end
+    value = self.finished(runtime, ref)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py", line 117, in finished
+    self.fail("Registered fixture process did not produce an observed end within the bounded test deadline")
+AssertionError: Registered fixture process did not produce an observed end within the bounded test deadline
+
+----------------------------------------------------------------------
+Ran 11 tests in 15.322s
+
+FAILED (failures=3)

@@ -1,0 +1,16 @@
+a_c/build_tenants/graphify/test_env/test_ac_support_core.py:41: error: Redundant cast to "str"  [redundant-cast]
+a_c/build_tenants/graphify/test_env/test_ac_support_core.py:42: error: Incompatible return value type (got "dict[str, str]", expected "dict[str, JSON]")  [return-value]
+a_c/build_tenants/graphify/test_env/test_ac_support_core.py:42: note: "Dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+a_c/build_tenants/graphify/test_env/test_ac_support_core.py:42: note: Consider using "Mapping" instead, which is covariant in the value type
+a_c/build_tenants/graphify/test_env/test_ac_support_core.py:42: note: Perhaps you need a type annotation for "ref"? Suggestion: "dict[str, JSON]"
+a_c/build_tenants/graphify/test_env/test_ac_support_core.py:83: error: Module "ac_support_core" does not explicitly export attribute "ac_graph"  [attr-defined]
+a_c/build_tenants/graphify/test_env/test_ac_support_core.py:115: error: Dict entry 1 has incompatible type "str": "JSON"; expected "str": "str | dict[str, JSON]"  [dict-item]
+a_c/build_tenants/graphify/test_env/test_ac_support_core.py:115: error: Dict entry 3 has incompatible type "str": "list[Never]"; expected "str": "str | dict[str, JSON]"  [dict-item]
+a_c/build_tenants/graphify/test_env/test_ac_support_core.py:115: error: Dict entry 4 has incompatible type "str": "list[Never]"; expected "str": "str | dict[str, JSON]"  [dict-item]
+a_c/build_tenants/graphify/test_env/test_ac_support_core.py:154: error: Dict entry 1 has incompatible type "str": "None"; expected "str": "Collection[JSON]"  [dict-item]
+a_c/build_tenants/graphify/test_env/test_ac_support_core.py:156: error: Dict entry 1 has incompatible type "str": "None"; expected "str": "Collection[JSON]"  [dict-item]
+a_c/build_tenants/graphify/test_env/test_ac_support_core.py:156: error: Dict entry 2 has incompatible type "str": "None"; expected "str": "Collection[JSON]"  [dict-item]
+a_c/build_tenants/graphify/test_env/test_ac_support_core.py:157: error: Dict entry 2 has incompatible type "str": "dict[str, str | dict[str, ac_support_core.JSON]]"; expected "str": "dict[str, Collection[str]] | int | float | str | list[ac_graph.JSON] | dict[str, ac_graph.JSON] | None"  [dict-item]
+a_c/build_tenants/graphify/test_env/test_ac_support_core.py:323: error: Dict entry 1 has incompatible type "str": "dict[str, dict[str, ac_support_core.JSON]]"; expected "str": "int | float | str | list[ac_graph.JSON] | dict[str, ac_graph.JSON] | None"  [dict-item]
+a_c/build_tenants/graphify/test_env/test_ac_support_core.py:401: error: Argument 1 to "as_object" has incompatible type "Collection[str] | None"; expected "JSON"  [arg-type]
+Found 12 errors in 1 file (checked 2 source files)

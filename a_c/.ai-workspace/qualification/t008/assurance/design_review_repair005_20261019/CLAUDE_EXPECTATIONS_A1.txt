@@ -1,0 +1,248 @@
+# Source-Only Expectation Addendum A1 to the v1 a_c F_D Expectation Record
+
+**Status:** This addendum was written before any candidate exposure. The v1 record stays unchanged. This addendum does not restate it. No candidate, design bytes, implementation or tests were supplied or read. It contains no finding, severity, priority, verdict, disposition or acceptance.
+
+## 1. Evidence population acquired (supplied identities only)
+
+**Producer of this invocation.** The environment self-describes as `claude-opus-5-5`. I cannot observe my own transport, init or terminal metadata. That metadata must be captured externally and kept separate from v1's actual metadata (session `9a89ade9…`, producer-usage `3226a0ac…`, firstParty).
+
+**New RC9 deciding source.** All excerpts are from source `c2cfa9b9…`, path `…/claude/standards/`:
+
+| Member (SHA-256 prefix) | Lines supplied |
+|---|---|
+| FOUNDATIONS `fd2d895f` | 52–71, 101–227, 242–280 |
+| PRODUCT_DEFINITION `96e1f26a` | 233–258, 294–332, 647–710, 740–785, 883–999 |
+| REFERENCE_FRAME `d64ee5c0` | 281–458, 525–658, 686–696, 726–806, 817–839, 880–962, 1071–1120, 1157–1182 |
+| ACTIVATION `3bb7594a` | 1172–1376 |
+| EXECUTIVE_BASELINE `e50b4ad7` | 112–194, 409–536, 1414–1512, 1635–1682 |
+| SPEC_METHOD `b4b8cafa` | 825–874, 911–1019, 1636–1669, 1782–1936 |
+| EVALUATION `14f8816b` | 310–328, 340–459, 547–628 |
+| ASSURANCE `e33a6e39` | 317–594, 596–646, 715–756 |
+| AXIOMATIC_CALCULUS `56d0c1ad` | 540–629, 1281–1383 |
+| TICKETS `8d244a16` | 396–417 |
+
+**External evidence.** Each item keeps its producer and scope as supplied:
+
+- **`ACTION_AND_EXTERNAL_BINDINGS.json` `f8530b49`.** Executive-selected action, method-support clarification, cross-family declaration, severity statement and a preservation observation.
+- **`EXTERNAL_WORK_AUTHORITY.md` `cd4add76`.**
+  - Covers T-008 lines 17–26 and 104–229 only.
+  - Whole-file `4efb5c25…` is reported by the Executive. It was not recomputed.
+- **`DESIGN_ACTIVATION.canonical.json` `259e3830`.**
+  - The admitted contract `T-008-design-001`.
+  - Admission was reported by the Executive with exit 0.
+  - Mechanism `5d87472c…`, policy `f8299a2f…`.
+- **`VERIFIED_CUSTODY_OBSERVATIONS.json` `df13e721`.**
+  - Both `c2cfa9b9…` and `3a209713…` resolve the standards path to tree `98de394b…`.
+  - Eleven RC9 member blobs and digests are equal to the packet copies.
+  - Eleven a_c members at `c2f67fec…` are equal, including:
+    - `REFERENCE_FRAME_BASIS.md` `ecf9ceac`;
+    - `GOALS.md` `373f5626`;
+    - `INTENT.md` `09d97401`;
+    - `README.md` `569fd904`;
+    - `AGENTS.md` `41d4a657`.
+  - The contents of those five were not supplied.
+- **V1 actual producer-usage `3226a0ac`.**
+
+These are byte, tree and work-authority observations. They are not semantic fidelity evidence and not an admission evaluation performed by me.
+
+## 2. Expectation delta by named gap
+
+### A. Authority, binding and exact basis
+
+**A1. Sources for the v1 authority expectations (preserved, now sourced to RC9).**
+- FOUNDATIONS §2 Authority kinds supplies the six distinct kinds.
+- Its "What creates no authority" list now directly sources v1's FD-006, FD-009 and FD-011 discriminators: role name, label, path, ticket, passing check, payload shape, reachability, and drafting beyond admission.
+- **Further supported:**
+  - The list covers composition, adapters, wrappers and registries, which "never widen". This sources v1 §4.5: CLI/MCP must be thin and non-proxy.
+  - "A read-only evaluation declares no operation authority." Read operations (FD-001/003/004/011-projection) should therefore declare none.
+  - Effectful operations should inherit an exact owner grant.
+
+**A2. Basis (FOUNDATIONS §2 Basis, Coordinate; RF-005).**
+- **Narrowed:**
+  - Each FD result binds every coordinate whose change can alter it.
+  - A moving basis needs a declared advancement detection and reevaluation condition.
+  - Mixed bases need an explicit composite relation.
+- *Discriminator:* the builder, method and subject bases may be combined only through a declared composite relation, and are otherwise refused. "Equal names, values, shapes, locations" create no coordinate equality.
+
+**A3. Builder and method separation (FOUNDATIONS Development product; PRODUCT_DEFINITION §4, §11, §12).**
+- The rc.2 install is a development product. It transfers no meaning or authority.
+- `constitution.stdo.basis.{uri,manifest_sha256}` is the sole authored STDO selection.
+- No cache, registry, source checkout or alias may replace it.
+- Mutable method source is not operative consumer law before release. A project-local copy is lawful only when explicitly bound and verified.
+- **Correction/narrowing of v1 §3:** RC9 is a candidate source activated by work contract (`mode: owner-selected work-scoped candidate dogfood`). It is not the Product's constitution basis.
+- *Discriminators:*
+  - A design that writes RC9 into `constitution.stdo.basis` fails.
+  - A design that lets the tool discover RC9 by path proximity fails.
+  - A design that presents RC9 as the operative or installed method fails.
+  - `stdo_a_c.json` is inside the write territory, but "builder basis … changes" is an excluded boundary. Any edit to it must leave the basis bytes unchanged.
+
+**A4. Profile availability vs adoption vs activation (PRODUCT_DEFINITION §7; EXEC §2, §16).**
+- The admitted contract lists `selected_profiles: [EXECUTIVE_BASELINE.md, DESIGN_MODULE.md]` for activation. Only Product authority adopts a profile, through an accepted Project Reference-Frame Basis.
+- *Discriminator:* the design must not claim EXEC adoption, or write an adoption record, unless an admitting Product authority is cited. `REFERENCE_FRAME_BASIS.md` is in the territory, so this matters.
+- EXEC §19 adoption content (severity and priority scales, hard stops, the twelve families) is absent. That absence is consistent with "no severity scale". The design must not fabricate it.
+
+**A5. Tenant binding content (SPEC_METHOD §11, rules 1–7).** This now supplies the concrete design obligation for the "declared supported RC9 owner binding." The calculus and execution binding must be declared in the tenant design surfaces, with:
+- per operation: inputs, outputs, effects and outcome values, each value mapping to exactly one core value, and effects recorded per ACTIVATION §3 Effects;
+- composition laws and permitted transformations;
+- resource measures with unit and boundary (this further sources v1 FD-013);
+- operational assumptions about actors, tools, availability and failure.
+
+Additional rules:
+- Rule 2: no environment choice removes a required human decision or independent assessment.
+- Rule 4: merging required independent assessments, or substituting automation for a required human decision, makes that obligation `falsified`.
+- Rule 6: structural validation of an a_c model is not execution conformance.
+
+**A6. Derived-surface fidelity (PRODUCT_DEFINITION §11).** `fd-method-claude-rc9.json` is a derived surface.
+- **Expectation:** each binding row carries the deciding RC9 path and digest. It preserves the owning clause's applicability, obligations, permissions, exclusions, decision owners and invalidators. It requires neither a stricter nor a weaker relation by compression.
+- *Discriminators:*
+  - a row that cites a clause by label only;
+  - a row that drops a condition or its lawful alternative;
+  - a row that infers RC9 meaning from the common map.
+- A matching digest does not establish fidelity.
+
+### B. RF results, joins, coverage and reuse
+
+**B1. Refusal causes (RF §5 refinement table).** These now resolve v1 gap 3, "activation refusal causes":
+- `activation_refusal(capability|authority)` maps to `out_of_frame`; `(basis)` maps to `invalid_basis`, topology mismatch included.
+- `conjoin`: `conflict` maps to `falsified`, and the disagreement is preserved for the decision owner.
+- `translate`: `declared_loss` maps to `satisfied`, and the loss travels as a residual. `refusal(condition|authority|basis)` maps to `falsified`, `out_of_frame` and `invalid_basis` respectively.
+- *Discriminators (FD-010):*
+  - mandatory satisfied/falsified disagreement yields `conflict`, not a merge;
+  - an unperformed assessment or uncovered coverage is not a `conjoin` outcome;
+  - `decision(holds)` is not acceptance.
+- EXEC §3 (Work result) confirms that an `activation_refusal` is never a synthetic Worker result.
+
+**B2. Coverage (RF §8 ledger, basis tuple, operational full coverage).**
+- FD-004 coverage output uses the seven statuses with the stated core mapping, or else returns classification facts only (B3).
+- *Discriminators:*
+  - `excluded_by_authority` maps to `satisfied` only with a cited authority, and never reads as performed;
+  - an `uncovered` row enters a conjunction as required-coverage-gap, not as a `falsified` component;
+  - a stale or ambiguous coverage tuple maps to `invalid_basis` with no status assigned;
+  - authority coverage requires every effectful path to name its operation authority.
+
+**B3. Computed classification (SPEC_METHOD Computed classification).**
+- **Correction/narrowing to v1 FD-004 and FD-012:**
+  - changed/unchanged/unknown facts, added/removed/changed facts, and covered/missing/stale/ambiguous/outside-scope facts map to **no core value**;
+  - an evaluation that consumes them returns its own value, and unknown stays unknown;
+  - a missing candidate is an input state.
+- **Further support:**
+  - authority traversal includes root, authority and grant changes even when bytes are equal;
+  - a rename is removal plus addition unless an identity-preserving relation is supplied;
+  - a filename or digest alone establishes no accepted coverage.
+- *Discriminator:* step 4 "rule-determined treatment" may appear only from declared rules with recorded owners and sufficient premises. It must never come from a label or filename. Reserved O stays with its owner.
+- **Preserved from v1:** the tool selects no next action. If the design computes treatment, it must declare this as C under named rules and not as a selection.
+
+**B4. Reuse and revision.**
+- C invalidators are enumerated by name: request, candidate, owner or root relation, projection, design trace or acceptance, rule, configuration, evidence, basis, and revising observation.
+- A new role, conversation or resumption reuses C after an applicability check.
+- RF Revision actions: a material frame revision reopens all bound results by default, and silence does not keep a result closed.
+- This further supports the v1 FD-012/SC-013 discriminators.
+
+### C. Admission, preconditions and effects
+
+**C1. Complete enclosing-relation admission (ACTIVATION §4).** For any tool operation that admits or commits a material transition (FD-006 and FD-011 writes):
+- every participant and join is derived and validated before any effect;
+- caller assertions of completeness establish nothing;
+- basis advancement yields effect-free re-entry;
+- mixed bases refuse;
+- the commit is all or none;
+- replay and fresh reconstruction reproduce the result.
+
+**Expectation for design review:** the design names each admission owner and its supported boundary. It plans the ten standing-structural-qualification forms, with a design-grounded `not_applicable` where a form is unsupported. Observation of those forms belongs to proof activation.
+
+The receipt states explicitly that it does not qualify "the public admission tool being constructed". *Discriminator:* the bootstrap admission is not evidence for FD-006.
+
+**C2. Totality and refinement (ACTIVATION §4).**
+- Every condition class has a declared next move, an explicit unknown class included.
+- A hanging call, an unsatisfiable demand and a lost post-effect response remain three distinct cases. This sources v1 FD-007.
+- Hard stops: an absent authority surface and a missing capability.
+- Approximate steps (for example FD-005 compression or projection) need an adequacy relation and an end-to-end bound. A per-step tolerance does not compose into one.
+
+**C3. AC-007 operation outcomes (correction to v1 FD-005/FD-008 wording).**
+- **Outcome mapping:**
+  - `hold` maps to `indeterminate`;
+  - stop `gap` maps to `invalid_basis`, as a closed result;
+  - `refusal(constraint)` maps to `falsified`;
+  - `refusal(basis)` maps to `invalid_basis`, including a closure fixed point that is not finite and unique.
+- **What this corrects:** v1's `closure_unresolved` must be declared as a refinement mapping to exactly one core value consistent with this table.
+- *Discriminators:*
+  - the AC stop `gap` (a closed `invalid_basis` result) is kept distinct from a FOUNDATIONS conjunction gap, which is an absence of result;
+  - a demonstrated violation alongside a basis condition stays `refusal(constraint)`, with the basis result reported beside it.
+
+**C4. Constraint surface (AXIOMATIC_CALCULUS §1281+).**
+- A surface is a derived view with routes, not observations.
+- Unresolved conditions block dependent operations.
+- A mechanical projection runs only under a separately selected checking contract.
+- This further supports v1 FD-003/005: Workers and Reviewers acquire observations themselves.
+
+### D. Module, ordinary-path proof and evaluation gates
+
+**D1. Testing frames (ASSURANCE §7).**
+- The design's test grants should assign each claim to a congruent frame: user-acceptance, E2E, integration or unit.
+- Every coded module needs a module-derived unit lane, and composition-heavy modules need boundary evidence.
+- Labels and counts have no assurance value.
+- If an FDV-001 claim depends on real external compute or transport, live sandbox UAT is mandatory. Harnessed substitutes limit the claim.
+
+**D2. Legitimate path (ASSURANCE §9).**
+- Path proof is two-sided: required-path witnesses plus a forbidden-path exclusion inventory.
+- A test-only seam is lawful only when isolated and declared.
+- *Discriminator:* the design names the forbidden and old paths, including any reused launcher or scripts, and states how they are excluded.
+
+**D3. Counterexample localisation (ASSURANCE §12).**
+- The four forms keep their stated mapping.
+- A joint set is never collapsed to one owner.
+
+**D4. Evaluation gates.**
+- EVALUATION §6 equivalence ladder: no rung implies another. Byte identity and incumbent equality are not comparison criteria. This supports dropping any common↔RC9 equivalence claim.
+- EVALUATION §7 frame qualification has nine tests, and adequate attention is shown only by actual use. Neither is design-review evidence.
+- EVALUATION §5 blocking conditions are necessary, not sufficient, and the decision owner decides. With no cutoff supplied, later consequence statements may say which of the four conditions a finding meets. They may not say whether it blocks.
+
+## 3. Corrected or narrowed scope assumptions
+
+1. **Method binding** (narrows v1 §3, last paragraph, and §3 discriminator).
+   - Single-profile exact RC9 support is sufficient.
+   - The caller must select it explicitly by commit, tree and members. Neither a silent default nor path discovery is lawful.
+   - Every other method or profile refuses with a cause-bearing value. An unsupported method maps to the `out_of_frame` class. A digest or tree mismatch maps to `invalid_basis`.
+   - Universal multi-method support is not required.
+2. **Common package** (closes v1 gap 4 as not required). The common owner map is requirement-derivation history. Fidelity is judged against the RC9 deciding clauses (A6), not by translation from the common map.
+3. **Work authority** (v1 gap 2 now externally supplied).
+   - Contract: design only.
+   - Outcome: the design defines disjoint implementation and test grants but does not grant them.
+   - Implementation and runtime tests are excluded. Durable result surface: T-008.
+   - Reserved decisions: Executive disposition, non-author assessment, and Jim's acceptance.
+   - The negative control for a mutating Executive role supports v1 §7.
+4. **Independence** (v1 gap 7). This is a declared cross-family condition plus non-authorship and source-first evidence. It makes no statistical claim. Per FOUNDATIONS Disjointness, the word "independent" alone establishes nothing. Actual author and assessor bindings are needed for each frozen review.
+5. **Custody** (v1 gap 5). Tree and byte equality is now externally observed. It is not semantic.
+6. **Preservation baseline.**
+   - The observation is 107 tests discovered, OK with 4 skipped (upstream-gated), as reported by the Executive.
+   - It is not a full-execution baseline, not upstream compatibility and not an accepted preservation baseline.
+   - v1 gap 6 stands.
+7. **Severity.** No scale is supplied, and none is to be invented (EXEC Technical triage).
+
+## 4. Genuinely unresolved
+
+**Before candidate review (only if the candidate touches these surfaces):**
+- **Missing preimage contents:** `REFERENCE_FRAME_BASIS.md` (`ecf9ceac`) and `GOALS.md` (`373f5626`). Both are in the write territory, but only their digests were observed.
+  - *Question:* does a_c already record an accepted Project Reference-Frame Basis, or does it record none?
+  - *Consequence:* without the preimage, the lawfulness of any candidate edit to these files (A4) cannot be decided. It would remain `indeterminate`.
+- **Contract field names:** the TICKETS execution-contract fields (`target_truth`, `closure_law`, `proof_surface`, …) are "should" fields, and the admitted contract uses different field names. This is recorded as an observation only. Admission was external, and I neither reassess it nor treat it as decisive.
+
+**Later, at frozen-subject or proof activation:**
+- exact candidate identity and freeze;
+- actual author binding;
+- this invocation's actual producer metadata;
+- the implementation and test grants;
+- the upstream pin for the 4 gated cases;
+- the accepted preservation and frozen-study inventory;
+- ASSURANCE §2 harnessed/live mode selection;
+- ACTIVATION §6 resource-limit law for FD-013 measurement;
+- standing-structural-qualification observations;
+- FDV-001/002/003 execution.
+
+IDENTITY §6 (proxy) is not needed unless a candidate claims proxy acceptance.
+
+No other absent deciding owner is materially needed for source-first design-review expectations.
+
+## 5. Non-performance
+
+Candidate adequacy was not evaluated, and no adequacy predicate was performed, so none has a result. This addendum makes no claim of runtime or live usability, benefit, method adoption or release, Product acceptance, continuation or disposition.

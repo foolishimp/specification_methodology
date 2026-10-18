@@ -1,0 +1,264 @@
+# Bounded design assessment: T-008 seven-file F_D support design (frozen subject `sha256:ed42ae68…`)
+
+## 1. Subject, basis, claim and evidence population
+
+**Subject.** The exact frozen seven-file subject is `sha256:ed42ae68c9c76640a33cc622cb21a9e928628b58349b5c58ba049edbf58f0893`, manifest `01d2a4f4…`:
+
+| File | SHA-256 prefix |
+|---|---|
+| T-008 ticket | `4efb5c25` |
+| `design/README.md` | `f757ab63` |
+| `fd-method-claude-rc9.json` | `61d021d0` |
+| `fd-support.md` | `9a13e3fe` |
+| `GOALS.md` | `7f78e1a9` |
+| `REFERENCE_FRAME_BASIS.md` | `5cda45d1` |
+| `stdo_a_c.json` | `b0e013e6` |
+
+I read only the supplied frozen bytes. I recomputed no digest.
+
+**Basis.**
+- WHAT `c2f67fec…`, consisting of the PRODUCT, INTENT, GOALS, REFERENCE_FRAME_BASIS and requirements preimages, `fd-support-tools.md`, `fd-support-verification.md`, and `stdo_a_c.json`.
+- Selected Claude RC9 source `c2cfa9b9…`, custody `3a209713…`, tree `98de394b…`, with the EXECUTIVE_BASELINE and DESIGN_MODULE profiles, as supplied in excerpts.
+- Builder v2.5.1-rc.2, manifest `3d860ff4…`.
+- The common owner map is treated as derivation history only.
+
+**Claim evaluated.** The exact design is decision-complete for its declared finite FD-001..013/FDV design fragment. That includes meaningful public contracts; authority, effect, currentness, result and reuse seams; and an adequate qualification and preservation plan.
+
+**Assertion provenance.** My unchanged pre-exposure expectations V1 and A1. Comparison preimages are the committed `c2f67fec` README, GOALS, REFERENCE_FRAME_BASIS and `stdo_a_c.json`.
+
+**Assessor.** The environment self-describes as Claude-family `claude-opus-5-5`. That label does not establish the actual producer. Transport metadata is held externally. The independence standing is the declared cross-family condition plus non-authorship, with no statistical claim. I authored none of the subject.
+
+**Not used as a verdict:** the author's `candidate_ready`, its check counts and its "pass for design" cross-view verdicts.
+
+## 2. Core result for the selected predicate
+
+**Predicate:** the exact design is decision-complete for its declared finite FD/FDV fragment under the selected WHAT and RC9 basis.
+
+**Core value: `falsified`.**
+
+**Ground.** Under DESIGN_MODULE §5, `decision_complete(B)` requires U(B) to be empty, M(B) to be jointly satisfiable, and every admitted network to be semantically equivalent. Its falsifiers include cases where "implementation has to introduce a new material semantic decision" and where "two materially non-equivalent networks remain admissible". DESIGN_MODULE §7 (UP-016) separately falsifies a design that leaves "partial-failure boundary coverage … or reconstruction … to implementation inference". The counterexamples are F1–F3 below, with F4 corroborating. Each is a specific unresolved or contradictory member of M(B), not a missing heading.
+
+The result is bounded:
+- It does not say the design is broadly inadequate. Much of it is strong (§4).
+- It is no disposition, priority or boundary effect.
+- It does not decide runtime, path, usability, benefit or acceptance claims (§6).
+
+## 3. Findings, ordered by consequence
+
+### F1. Operation outcome values and refusal causes are not enumerated or mapped to the core
+
+**Violated source property.**
+- SPEC_METHOD §11 rule 3: the binding identifies, for each operation, "outcome values; each outcome value maps to exactly one core value".
+- AXIOMATIC_CALCULUS AC-007 operation outcomes: `hold`, `gap`, `refusal(constraint)` and `refusal(basis)`, with the cause part of the value.
+- ACTIVATION §3 admission and activation outcomes: `admission_refused(authority|basis)`, `closure_unresolved` and `out_of_frame`.
+- REFERENCE_FRAME §5 `activate`, `conjoin` and `translate` refinements.
+- FDV-002 requires that "different source conditions must yield the owner-contract distinctions".
+
+**Candidate locator.** `fd-support.md` §Public wire grammar:
+- "`status` is `ok`, `refused` or `error`, a transport/operation distinction, never a semantic result algebra".
+- "Refusal contains exactly `code`, `reason`, `gaps` and `source_refs`".
+
+No refusal-code population exists in any of the seven files. No mapping from code or cause to a core value exists. Only the `checks.evaluate` judgment has a mapping.
+
+**Entry or state.** Any refused request to one of the 23 operations. Examples:
+- `contract.preflight` with an unsupported basis versus missing authority;
+- `context.assemble` with an inexact closure;
+- `tools.describe` for an unsupported profile;
+- `relations.query` coverage output, which is neither declared as SPEC_METHOD §4 computed facts (no core value) nor mapped to the RF §8 coverage statuses.
+
+**Causal path.** The proposed grants split core, effects and adapter across three disjoint Workers, and the core Worker "owns the public argument/schema inventory". A Worker that meets a refusal must invent its code vocabulary and decide, for example, whether a stale preimage is `invalid_basis` or `falsified`. This is the materially non-equivalent choice the ticket's non-closure criterion forbids: "leave no material semantic decision to an implementation Worker". Consumers (Executive, Reviewer, `return.check`, `results.conjoin`) cannot then read refusals in the one core. That risks the confusion ACTIVATION §3 exists to prevent, namely a refused admission read as a step's stop, or a basis failure read as a falsification.
+
+**Affected parties.** Every F_P caller, the FDV-002 discriminators, and the core/effects/adapter seam.
+
+**Uncertainty.** The author may intend the codes to be serialization-only, with the core mapping delegated to RC9 "by reference". But the binding JSON's `contract_routes` route ownership without stating any per-operation value set. So the mapping remains unresolved in this subject.
+
+**Smallest bounded correction (recommendation only).**
+1. Add one closed table of refusal and outcome codes per operation family.
+2. For each code, name its RC9 refinement parent, its cause and its single core value.
+3. Explicitly declare which outputs are computed facts with no core value: diff states, coverage classification, `workspace.observe` deltas.
+
+### F2. The transformation-admission relation for preflight, dispatch reservation and Writer commit is incomplete, and its qualification forms are not planned
+
+**Violated source property.**
+- DESIGN_MODULE §7 Transformation admission completeness (UP-016): each material admission relation declares its owner and boundary, basis continuity, enclosing relation, refusal and effect boundaries, "the complete semantic commit unit and its decomposability … every materially distinct post-validation commit or publication boundary", reconstruction, supported forms, and competing-path disposition.
+- ACTIVATION §4 Complete enclosing-relation admission and Standing structural qualification, which has ten forms including stale/advanced basis, replay equality, fresh reconstruction and atomic publication failure.
+- TICKETS §5: "The admission mechanism and the durable result and evidence surface are the ones the product definition binds."
+
+**Candidate locators in `fd-support.md`.**
+- §Existing records: `work.write` "writes complete exact bytes atomically **where the local filesystem permits**".
+- §Product-bound admission: `admission` "may reference only the implemented finite mechanism `product-policy-preflight/1`", selected through operator policy (`grants[].admission`). It is not bound to the consumer Product definition. `stdo_a_c.json` binds no admission mechanism.
+- §Qualification plan, FD-006 row: covers only "fabricated receipt, wrong Product/outcome/basis and missing durable surface".
+- The commit and publication boundaries of the receipt write, the attempt reservation, the evidence retention and the per-target-lock write are not enumerated. There is no dominance or equivalence proof.
+- There is no disposition of the external bootstrap mechanism (`5d87472c…`) as a same-scope predecessor, replacement or independent path relative to `product-policy-preflight/1`.
+
+**Entry or state.** Any of these:
+- an interrupted `work.write` or receipt write after validation;
+- a policy or preimage advancing between preflight and the supervisor's effect edge;
+- a fresh process reconstructing an attempt or receipt.
+
+**Causal path.** Whether a partial write is exposed, and what reconstruction shows, are left to filesystem-dependent implementation inference. That is a named UP-016 falsifier. The mechanism's admitting authority is the operator policy, so the TICKETS §5 binding to the Product definition is neither satisfied nor explicitly translated. The FDV plan would not observe the standing forms, so a qualification claim could later outrun its population (EVALUATION §1).
+
+**Affected parties.** FD-006 and FD-011 (and FD-007 reservation), the Writer membrane, and Executive reliance on receipts.
+
+**Uncertainty.**
+- Under the declared trusted-operator model, operator policy may legitimately project owner grants. The rc.2 product-definition schema was not supplied, so I cannot tell whether a mechanism field exists there.
+- The excluded hostile-filesystem threat is correctly not required. My finding concerns only supported-model partial failure and basis advancement.
+
+**Smallest bounded correction (recommendation only).**
+1. Add one compact admission-relation table covering preflight receipt, attempt reservation and `work.write`. For each, give owner, basis continuity, commit unit and each post-validation publication boundary, reconstruction, and competing-path disposition, including the bootstrap mechanism.
+2. State how the mechanism selection traces to Product-definition authority, or declare that as an explicit gap.
+3. Add the applicable standing-structural forms to the FD-006 and FD-011 plan rows, with a design-grounded `not_applicable` where a form is unsupported.
+
+### F3. Conjunction conflict handling and return cardinality admit non-equivalent results
+
+**Violated source property.**
+- REFERENCE_FRAME §5 `conjoin`: `conflict`, where "mandatory results for the same claim disagree, one `satisfied` and another `falsified`", maps to `falsified`, and the counterexample survives.
+- FOUNDATIONS §4 Conjunction Survival: a conflicted mandatory result stays unresolved, and known failures survive every join.
+
+**Candidate locator.** `fd-support.md` §Predicate and conjunction fragment:
+- "otherwise a declared unresolved conflict yields indeterminate and otherwise the composite is satisfied", reached only after "mandatory results are all satisfied";
+- combined with `results.conjoin` taking an unbounded `returns` list, and with `return.check`, which retains "different original results over the same bound predicate … identified as conflict".
+
+**Entry or state.** Two returns for one mandatory planned assessment: one `satisfied`, one `falsified`.
+
+**Causal path.** The plan does not declare how many returns may bind one planned assessment, or which one is "the mandatory returned value". The two readings diverge:
+- **Implementation A** treats the falsified copy as the returned value and reports `falsified`. This is RC9-consistent.
+- **Implementation B** treats the assessment as satisfied with a "declared conflict" and reports `indeterminate`.
+
+That divergence is two non-equivalent admitted networks, and reading B departs from RF §5. The `conjoin` domain outcomes (`decision(holds|fails)`, `conflict`) are also not stated as emitted, so a consumer cannot recover the RF distinction from the core value alone (FOUNDATIONS Recording).
+
+**Uncertainty.** "Declared conflict" may mean a plan-declared nonmandatory conflict rule. The text does not say so.
+
+**Smallest bounded correction (recommendation only).**
+1. Declare the cardinality of returns per planned assessment.
+2. Route a mandatory satisfied/falsified disagreement to RF `conflict` and `falsified`.
+3. Emit the RF §5 domain outcome alongside the core value.
+
+### F4. Ontology evidence and the three views do not jointly carry several lifecycle and authority relations
+
+**Violated source property.**
+- DESIGN_MODULE §7 Ontology evidence: entity-lifecycle completeness matrix, authority matrix, function-derivation matrix, and whole-family Prime contraction with admitted domains.
+- DESIGN_MODULE Sequence model and State model: every message binds an Ontology function and authority role, and the state view shows the "complete admitted lifecycle for the active boundary".
+- ASSURANCE §16 module lifecycle confirmation.
+
+**Candidate locator.** `fd-support.md` §Ontology and invariants and §Three-view projection. The design provides a carrier table, nine invariants and an Attempt-only state view. It does not provide:
+- a declare/read/transition/retire matrix (no retirement for OwnerPolicy, Preflight receipts, evidence store or event sinks);
+- a proposer/evaluator/verifier/admitter/executor/projector/retirement matrix;
+- a Prime contraction over 23 operations. For example, `source.read`, `records.read`, `evidence.read` and `work.project` are candidate projections over one acquisition relation, and this is not evaluated;
+- sequence coverage of the Writer, review, refresh or return-check paths;
+- operation names bound to sequence messages;
+- ASSURANCE §16 phase answers or `Gap:` items.
+
+**Concrete consequences.**
+- Preflight receipt validity: "not an indefinitely valid bearer token", but no validity or expiry relation is given.
+- Evidence-store retention and retirement are unspecified.
+- The notification sink's registration and owner are unspecified: it is "selected named durable event sink", but sinks are absent from the closed policy keys.
+
+**Uncertainty.** DESIGN_MODULE permits "an equivalent closed representation", and parts of these relations are distributed in prose. The listed items are the ones I found unresolved, not merely unformatted.
+
+**Smallest bounded correction (recommendation only).**
+1. Add the lifecycle and authority matrices for the eleven carriers plus EvidenceStore and event sink.
+2. Add a one-table Prime and function derivation over the operation family.
+3. Extend the state view to Preflight validity and `work.write`.
+4. Add ASSURANCE §16 phase answers or named gaps.
+
+### F5. Smaller unresolved seams in the same boundary
+
+Each item gives the locator, then the gap.
+
+1. **Independence policy carrier** (§Returns, review and qualified checks). The design says "Family independence requires an explicit governing policy". The closed policy top-level key set has no carrier for that declaration. It is therefore unspecified how a declared cross-family condition (EVALUATION §3) is consumed, and whether a registered predicate suffices.
+2. **Reviewer packet additions** (`profile_additions.reviewer`). These require severity-scale SourceRefs, but no Product-selected severity scale exists, and nullability is stated only for the `actor_authority` group. As written, a lawful Reviewer packet for this Product may be unconstructible, or else implementations will diverge on null handling.
+3. **Executive role transition.** The principal is startup-bound. EXECUTIVE_BASELINE §6 requires a same-actor role transition to be recorded in the work carrier before the effect, and the design does not say how that recording relates to restarting under another principal.
+4. **Operand-domain failures** (`checks.evaluate`). The design says "A wrong operand domain is a domain/basis failure" without choosing between `invalid_basis` and `refusal(constraint)`.
+
+## 4. Supported (no-finding) aspects, with evidence and residuals
+
+- **Basis roles.**
+  - The builder stays v2.5.1-rc.2. `stdo_a_c.json` differs from the preimage only by the T-008 authority locator; I compared the supplied bytes by inspection. Constitution, local axioms, tenant registry and empty composition are unchanged.
+  - RC9 is pinned by commit, custody and tree as a work-scoped binding. It is not written into `constitution.stdo.basis`.
+  - The common map is labelled "derivation history, not this execution binding". Other cuts and translations refuse, which satisfies the single-profile support allowance.
+- **Trust model.** The trusted operator and registered executors are declared, as are the untrusted caller, untrusted F_P output and untrusted workspace. No OS-confinement claim is made, and path, symlink and Git-blob acquisition rules are concrete. This is acceptable under the supported model. I demand no excluded threat.
+- **Effects.**
+  - Receipt, output, intended effect and observed end are kept separate.
+  - `completion_unknown` and `not_effected`-with-end-unestablished follow ACTIVATION §3 Effects.
+  - There is no blind retry: `retry_of` and reconciliation are required. Cancel and timeout do not prove the end.
+- **Functor and authority separation.**
+  - The `F_D[v]` judgment is distinct from named domain operations.
+  - There is no Executive or Reviewer mutation path.
+  - Tool output activates nothing.
+  - Recommendations are never adopted as dispositions.
+- **Context fit.**
+  - Fit is measured in UTF-8 stdin bytes over a declared boundary before delivery.
+  - Unknown host context yields `indeterminate`, and there is no trimming.
+  - Token capacity refuses.
+- **Direct Worker and Reviewer access.** `source.read`, `evidence.read` and `review.prepare` are available to all principals. Review has a source-first expectation phase.
+- **Preservation of existing work.**
+  - The codec design README preimage text is retained verbatim, with one appended section.
+  - The proposed grants exclude codec and frozen-study edits, and frozen studies are never refresh targets.
+  - No upstream compatibility claim is renewed without an actual pinned trial.
+
+**Residual.** The regression set is only "appropriate", and there is no exact preservation-subject digest inventory.
+
+## 5. Coverage of FD-001..013 and FDV
+
+Each operation is mapped to a public operation and a module. Contract sufficiency is supported for most, with the qualifications from §3:
+
+| Requirement | Assessment |
+|---|---|
+| FD-001 | Contracts are discoverable, but the unsupported-case refusal values are unmapped (F1). |
+| FD-002 | Dirty and untracked bytes, scopes and recheck before effect are adequate. |
+| FD-003 | Adequate. |
+| FD-004 | Closure over authored edges only, and no unaffected verdict, are adequate. Coverage output status semantics are unresolved (F1). |
+| FD-005 | Adequate, except that `closure_unresolved` is unmapped (F1). |
+| FD-006 | Admission relation incomplete (F2). |
+| FD-007 | Adequate on effects; reservation commit unit open (F2). |
+| FD-008 | Adequate. |
+| FD-009 | Adequate, except the independence-policy carrier (F5.1). |
+| FD-010 | Predicate fragment adequate; conjunction conflict ambiguous (F3). |
+| FD-011 | Writer membrane present but commit unit open (F2). Projection returns raw selected content only; whether that suffices for "next-action scope/support/owner" projection is uncertain. |
+| FD-012 | Adequate. |
+| FD-013 | Adequate. |
+
+| Obligation | Assessment |
+|---|---|
+| FDV-001 | A real bounded-task plan is present, with the clean-room Reviewer kept separate. |
+| FDV-002 | Plan present; standing-structural and refusal-mapping discriminators missing (F1, F2). |
+| FDV-003 | Explicitly unperformed. That is correct for this stage. |
+
+## 6. Not performed, unselected or undecided
+
+These carry no result:
+- boundary congruence;
+- path realisation;
+- ordinary live-user usability;
+- harnessed or live UAT;
+- FDV-001/002 execution and FDV-003 benefit;
+- runtime or protocol behaviour, including the MCP 2025-11-25 assertions, which I could not verify without access;
+- semantic acceptance, Product acceptance, release, and method adoption or publication.
+
+I make no claim about the adequacy of existing `ac_graph` functions (`find`, `inspect`, `project_many`, `validate`, `decode`), because their code was not supplied.
+
+## 7. Adjacent observations (outside the claim; no claim-relative effect)
+
+1. **Ticket fields.** The T-008 ticket lacks `triaged_at`, which is a TICKETS required field.
+2. **GOALS labelling.** `GOALS.md` labels T-007 a "completed" increment while T-007 sits in the active lane. This is the same pattern as the preimage's earlier labels, and is possible TICKETS UP-009 drift.
+3. **Unverified binding row.** The binding JSON lists RC9 `README.md` (`8047171e…`), and the DESIGN_MODULE `11-review` and AC `ac-018` anchors. None is covered by the supplied custody observation, which has 11 members, and none was supplied. The ticket's "12 member checks" is not corroborated here.
+4. **Project Reference-Frame Basis edits.** `REFERENCE_FRAME_BASIS.md` now records the RC9 profile selection, and the T-008 locator is added as an admitting authority of the Product frame basis.
+   - The text frames this as engagement-scoped activation, not adoption.
+   - Whether it amounts to Product adoption under PRODUCT_DEFINITION §7 / EXECUTIVE_BASELINE §16 is uncertain. No EXECUTIVE_BASELINE §19 adoption content is present, which is consistent with non-adoption.
+
+## 8. Residuals and invalidators
+
+**Residuals.**
+- The decision-equivalence of local realisation choices outside F1–F5 is assessed only as far as the supplied text allows.
+- The RC9 excerpts are partial, so owner clauses outside the supplied lines were not read.
+- No accepted preservation inventory exists.
+- The 107-test baseline is externally reported only, with four gated skips.
+- The external admission and custody checks keep their scope and were not re-evaluated.
+
+**Invalidators.**
+- Any change to the seven frozen members, the WHAT, the RC9 commit/custody/tree/members, the selected profiles, the author or assessor bindings, or the evidence population.
+- Supply of the missing RC9 sections or the rc.2 product-definition schema, if they show an admission-mechanism binding or a mapping that this review treated as absent.
+- Any declared revising observation by the Executive.
+
+Return is to `/root` Executive. No disposition, priority, boundary effect, repair direction or continuation is assigned.

@@ -1,0 +1,64 @@
+{
+  "schema": "a_c.design-checks/1",
+  "activation": "T-008-design-repair-004",
+  "scope": "source/catalog/example/document sanity only; not runtime or semantic acceptance",
+  "checks": {
+    "exact_admitted_contract_unchanged": true,
+    "exact_canonical_contract_unchanged": true,
+    "source_preimages_match_frozen_review": true,
+    "all_source_JSON_blocks_parse": true,
+    "content_schema_refs_and_closed_keys": true,
+    "seven_content_examples_conform_shape": true,
+    "four_adverse_shape_examples_rejected": true,
+    "five_other_candidate_hashes_unchanged": true,
+    "all_prior_design_evidence_unchanged": true,
+    "seven_named_preserved_realization_blobs_unchanged": true,
+    "new_HOW_hash_is_ticket_current_projection": true,
+    "source_owned_class_and_category_rationale_recorded": true,
+    "selected_old_seam_conflicts_absent": true,
+    "declared_capacity_applicability_explicit": true,
+    "closed_contract_states_and_wire_map_explicit": true,
+    "changed_lines_have_no_trailing_whitespace": true,
+    "all_source_local_links_resolve_at_close": true
+  },
+  "counts": {
+    "JSON_blocks": 8,
+    "shared_schema_definitions": 44,
+    "positive_shape_examples": 7,
+    "adverse_shape_examples": 4,
+    "source_local_links": 26,
+    "mermaid_assets": 7,
+    "prior_design_evidence_files": 15,
+    "other_preserved_candidate_files": 5,
+    "preserved_named_blobs": 7
+  },
+  "preimages": {
+    "a_c/build_tenants/graphify/design/fd-support.md": "3c4c366d0ebc5a8cd5d78d897f89ffaa762668fe5228221f4daa254b41427c1c",
+    "a_c/.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md": "5202b98f6c510439d57b2e1f5a9488af59fd4cfcaad7ca973a96d681041d760d"
+  },
+  "frozen_preimage_sources": {
+    "a_c/.ai-workspace/qualification/t008/assurance/design_review_v3_final_20261019/candidate/build_tenants/graphify/design/fd-support.md": "3c4c366d0ebc5a8cd5d78d897f89ffaa762668fe5228221f4daa254b41427c1c",
+    "a_c/.ai-workspace/qualification/t008/assurance/design_review_v3_final_20261019/candidate/.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md": "5202b98f6c510439d57b2e1f5a9488af59fd4cfcaad7ca973a96d681041d760d"
+  },
+  "unchanged_candidate_hashes": {
+    "a_c/build_tenants/graphify/design/fd-method-claude-rc9.json": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1",
+    "a_c/build_tenants/graphify/design/README.md": "f757ab636858c851cc500f5473ef0bc99a8d20ef2dfc209857917657895cf961",
+    "a_c/specification/REFERENCE_FRAME_BASIS.md": "5cda45d1f267a3f221703c7fcc42b100c7997d3a98c015b7faf4f46b21222b8a",
+    "a_c/specification/GOALS.md": "7f78e1a9834d1fc19fa421655e690c3b500138c66f94ff762337f57629351a03",
+    "a_c/stdo_a_c.json": "b0e013e6f9dabb9d3f31dd02c1a6909e9fc6418925a8d829f3bb1c2adf3dac1d"
+  },
+  "adverse_document_controls": [
+    "wrong_role_proof",
+    "unknown_accounting_key",
+    "undeclared_invalidator_kind",
+    "zero_rate_denominator"
+  ],
+  "additional_source_selected_direction": "Executive clarified ACT §2 lines 748–760 no-declared-capacity applicability within the selected public-input/qualification repair. Numeric/full-host fit is unperformed without a selected capacity predicate; exact bytes/host unknowns and all other required premises survive. No override manufactures fit.",
+  "limits": [
+    "No runtime tests or actors",
+    "No actual FDV or semantic acceptance claim",
+    "No new checker/runtime module or dependency installed",
+    "Preservation inventory retained unchanged; no repeated upstream/model trial",
+    "Examples are illustrative shape data with placeholder hashes, not live authority or evidence"
+  ]
+}

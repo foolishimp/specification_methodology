@@ -1,0 +1,51 @@
+{
+  "schema": "a_c.effects-repair-control-annex/1",
+  "activation": "T-008-effects-repair-001",
+  "source_selected_before_repair": {
+    "HOW_sha256": "32095ebef2f2bb1d5a5328faecc576f87fdaae788cdd23570374b0eea4fb9a70",
+    "HOW_relations": [
+      "Registered executor edge / Invocation: existing reservation, exact executable/helper/config preimages, fresh locked inputs; intent before actual start; no automatic repeat",
+      "Writer membrane / one target record: exact Worker grant, target lock, preimage and durable intent before whole-file publication",
+      "Fixed supervisor reentry and exact Core-generated Writer plan; no alternate public effect mechanism"
+    ],
+    "Executive_contract_sha256": "2d14025449104b348ab5df2ba72de3596dc132aac3312304e5574bd39756c875",
+    "required_discriminator": "Actor invokes the real public MCP work.write path and requires its actual target/result progress before its own exit."
+  },
+  "original_control_map": {
+    "path": "../CONTROL_MAP.json",
+    "raw_sha256": "66951da54010f38129f5bbcbdee8b6eac5cd6873b93e627a07099fd3341ca9b8",
+    "controls": 15,
+    "standing_forms": 10,
+    "scope": "All original named31controls rerun with their recorded gaps retained; this annex does not retroactively amend the old candidate."
+  },
+  "repair_control": {
+    "id": "EFF-REPAIR-001",
+    "test": "ProcessTests.test_actor_side_public_mcp_writer_completes_before_actor_exit",
+    "original_failure_evidence": [
+      "TEST.before.log",
+      "BEFORE.cut.json",
+      "BEFORE.discriminator.json",
+      "proof-before/"
+    ],
+    "repaired_success_evidence": [
+      "TEST.after.log",
+      "AFTER.discriminator.json",
+      "proof-after/",
+      "TESTS.final.log",
+      "proof-final/"
+    ],
+    "established": "Public MCP Worker request reaches core preparation and actual Writer target/evidence publication while registered actor remains active; per-Attempt at-most-once ownership is retained. Exact replay, lost launch acknowledgments, retry reconciliation, timeout/cancel, target/store publication faults and fresh recovery are also rerun in the final32case suite.",
+    "not_established": [
+      "Actual model/F_P Executive/Worker/Reviewer usability",
+      "Full ordinary Product-bound outer admission or semantic acceptance",
+      "General deadlock freedom for every operating model or unsupported concurrent authority",
+      "Exclusive causal or performance comparison across otherwise identical peer sources: historical before and after peer cuts differ explicitly"
+    ]
+  },
+  "standing_form_delta": {
+    "direct": "Actual public MCP work.write progress in a registered fixture actor.",
+    "supported_composite_nested": "Actual fixed supervisor -> registered Worker fixture -> public MCP -> pure Writer plan -> protected intent/atomic target/result, before actor exit.",
+    "other_forms": "Original exact replay/adverse/reconstruction forms rerun; original per-form qualification gaps remain unchanged."
+  },
+  "reserved": "No new owner authority, plan semantics, provider launch, acceptance, promotion or release."
+}

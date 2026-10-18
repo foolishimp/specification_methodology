@@ -1,0 +1,189 @@
+{
+  "schema": "a_c.effects-implementation-repair-return/1",
+  "activation": "T-008-effects-repair-001",
+  "state": "candidate_ready",
+  "actor": {
+    "id": "/root/ac_fd_effects_worker",
+    "role": "Writer/Worker",
+    "consumer": "/root"
+  },
+  "basis": {
+    "Product": "urn:stdo:product-definition:a-c-implementations",
+    "WHAT": "c2f67fec8154028d45d7cd7a2832dd4fade4d94b",
+    "builder_uri": "stdo://releases/v2.5.1-rc.2/",
+    "builder_manifest": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "RC9_source": "c2cfa9b908d1722ae3f26c32fa4ece691083bdc3",
+    "RC9_custody": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+    "RC9_tree": "98de394b352179c25dfa63b0b59a9b6bdd43632d",
+    "HOW_sha256": "32095ebef2f2bb1d5a5328faecc576f87fdaae788cdd23570374b0eea4fb9a70",
+    "T008_sha256": "f888154c1be0e435f834d71a494459b70e6fe2f5a56a36f17d076db10a4395ab",
+    "profile_sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1",
+    "mode": "Root-selected provisional co-evolution, not ontology/design acceptance or independent satisfaction"
+  },
+  "repair_admission": {
+    "contract": "CONTRACT.txt",
+    "contract_raw_sha256": "2d14025449104b348ab5df2ba72de3596dc132aac3312304e5574bd39756c875",
+    "receipt": "ADMISSION.json",
+    "receipt_raw_sha256": "c629dff1fee8c7f6b8cee3dc7934b5899cf57b188303759bbfa0dc59e591117b",
+    "mechanism": "Root finite external bootstrap under existing owner implementation mandate; not admission by this candidate tool"
+  },
+  "supersedes_for_future_integration": {
+    "old_closed_return": "../CLOSED_RETURN.json",
+    "raw_sha256": "ac1a0c1f3591e1f639d1fcb731b35afc34027cf4e79ebe608ae2eedf036e3bb3",
+    "old_candidate_manifest_raw_sha256": "9e975ef6f080195b538a2d0ae768474091138f15c52e852d52ecfd066545d5bb",
+    "preserved": "Original candidate/evidence snapshots remain immutable; the original31checks did not include this composed public MCP Writer discriminator."
+  },
+  "construction_availability": {
+    "predicate": "The admitted bounded lock repair and selected real composed process control, with exact candidate snapshots and actual check evidence, are available to the Executive.",
+    "core_value": "satisfied",
+    "value": "candidate_ready",
+    "candidate": {
+      "id": "urn:a-c:graphify:fd-effects:T-008-effects-repair-001",
+      "sha256": "d11896e27756be6b425694d0747979500d32e71bb1c9a993cd1b01c8a84eb30e",
+      "manifest": "CANDIDATE.json",
+      "snapshot": "candidate/"
+    }
+  },
+  "realized_repair": [
+    "Product scope lock now ends after fresh material/pin/retry checks, durable actor_launch_intent, actual Popen and actor_started observation; per-Attempt supervision lock still spans the full invocation.",
+    "Actor streaming/wait proceeds with no held Product scope lock, permitting an independently granted actor-side public Writer to acquire its own Product/target locks.",
+    "Final currentness/file-postimage observations take a separate bounded actual Product scope lock.",
+    "New registered deterministic actor invokes real public MCP work.write and verifies exact target bytes before its own exit; no direct fixture target mutation."
+  ],
+  "performed_evaluations": [
+    {
+      "id": "old-candidate-composed-regression",
+      "predicate": "The selected composed public MCP Writer control exposes the old lock behavior.",
+      "core_value": "satisfied",
+      "domain_outcome": {
+        "test_result": "failed-as-required-control",
+        "raw_sha256": "34e75c59474a3c18b7568549f4bf70ba1ab47a210219621cb09fb668d9afbf4f",
+        "test_count": 1,
+        "reported_seconds": "2.244",
+        "exit_code_observed": 1,
+        "skips": 0,
+        "failures": 1,
+        "errors": 0
+      },
+      "evidence": [
+        "BEFORE.cut.json",
+        "BEFORE.discriminator.json",
+        "TEST.before.log",
+        "proof-before/"
+      ]
+    },
+    {
+      "id": "repaired-composed-control",
+      "predicate": "The actual registered actor completes its public MCP Writer request and verifies target bytes before exiting.",
+      "core_value": "satisfied",
+      "domain_outcome": {
+        "raw_sha256": "169652e5be420291f4394b2f813077ae4c45d17c0aee1fc0db173fcec4fe11dc",
+        "test_count": 1,
+        "reported_seconds": "0.302",
+        "exit_code_observed": 0,
+        "skips": 0,
+        "failures": 0,
+        "errors": 0
+      },
+      "evidence": [
+        "AFTER.discriminator.json",
+        "TEST.after.log",
+        "proof-after/"
+      ]
+    },
+    {
+      "id": "owned-final-suite",
+      "predicate": "All32named owned tests pass at the exact recorded repaired source/dependency cut.",
+      "core_value": "satisfied",
+      "domain_outcome": {
+        "raw_sha256": "f6f9e1b1e97494f5bd3191b71479f19c96cf10a7bab166d91ec9d826ebeafda7",
+        "test_count": 32,
+        "reported_seconds": "3.322",
+        "exit_code_observed": 0,
+        "skips": 0,
+        "failures": 0,
+        "errors": 0
+      },
+      "evidence": [
+        "TESTS.final.log",
+        "CHECKS.json",
+        "PROOF.manifest.json",
+        "proof-final/"
+      ]
+    },
+    {
+      "id": "owned-strict-typing",
+      "predicate": "Strict mypy reports no issue in the3owned files after the final source change.",
+      "core_value": "satisfied",
+      "domain_outcome": {
+        "files": 3,
+        "issues": 0,
+        "exit_code": 0,
+        "flags": [
+          "--strict",
+          "--follow-imports=silent"
+        ],
+        "raw_sha256": "8228fcc5ce46d42d01caf3cd941f4e9c5f2bcc372bb5b147a2f0572d2dd675a8"
+      },
+      "evidence": [
+        "TYPING.after.log",
+        "COMMANDS.json"
+      ]
+    },
+    {
+      "id": "exact-final-cut-and-preservation",
+      "predicate": "Final source dependencies stayed byte-identical across tests, and original frozen return/evidence/snapshots remain unchanged.",
+      "core_value": "satisfied",
+      "domain_outcome": true,
+      "evidence": [
+        "SOURCE.invariance.json",
+        "CANDIDATE.json"
+      ]
+    }
+  ],
+  "evidence": {
+    "CONTRACT.txt": "2d14025449104b348ab5df2ba72de3596dc132aac3312304e5574bd39756c875",
+    "ADMISSION.json": "c629dff1fee8c7f6b8cee3dc7934b5899cf57b188303759bbfa0dc59e591117b",
+    "BEFORE.cut.json": "58df680234a92181cb05f7cd422144ba38a31351bacffdde69a6ead65ba7e9ae",
+    "BEFORE.discriminator.json": "d4666e085ceae8df8353c818c368058e01e321d04a0fa4b7c70b4f57ecc1236c",
+    "AFTER.discriminator.json": "b100d4bd0c688282cbd3f39aeaaca1fec8a442a4dc836adbe0d918e5ae2b35e6",
+    "FINAL.before-tests.json": "ad84f3ae08070146a0c62625721206d474c7ef3f897258c52832353fa40cc069",
+    "SOURCE.invariance.json": "3f9a613b93810abb97f477d5d244c566d3d76fb02d275d1799c12c37248827fc",
+    "COMMANDS.json": "9fa4eb05b7d53edc743ad647f7d3dab5f1faa082ea38a9efaea859126faaf556",
+    "CONTROL_MAP.json": "64a33bf647f72e97080a93892574945882b58634c74db89a9bea782230ae1fcd",
+    "CHECKS.json": "b8212ffa9d48f4315a75214924be6ab5c15b417a62e482be8cf8c26a8a806aaa",
+    "PROOF.manifest.json": "db17a9e7cad87e20b83edcd4d157c14b44004674ff03f36c4d9ea332b5b8368e",
+    "CANDIDATE.json": "2d9dd61679bd4f2ab2b07c5ee82b58d5d6afa298df823c66cee25ebe40b966ba",
+    "TEST.before.log": "34e75c59474a3c18b7568549f4bf70ba1ab47a210219621cb09fb668d9afbf4f",
+    "TEST.after.log": "169652e5be420291f4394b2f813077ae4c45d17c0aee1fc0db173fcec4fe11dc",
+    "TESTS.final.log": "f6f9e1b1e97494f5bd3191b71479f19c96cf10a7bab166d91ec9d826ebeafda7",
+    "TYPING.after.log": "8228fcc5ce46d42d01caf3cd941f4e9c5f2bcc372bb5b147a2f0572d2dd675a8"
+  },
+  "residuals": [
+    "Only this admitted lock repair is closed as a constructed owned candidate; no independent satisfaction or ontology/design/Product acceptance is asserted.",
+    "Actual public MCP Writer progression is established under a deterministic regular-file actor and synthetic outer Context/receipt. It is not actual F_P/model usability or full ordinary Product-bound admission qualification.",
+    "Historical before/after peer cuts differ and are preserved explicitly. No controlled performance improvement or exclusive source-change causality is measured.",
+    "Original15control/10standing-form per-variant gaps remain as declared in ../CONTROL_MAP.json; the new annex closes the actual composed local path only.",
+    "No OS confinement, complete descendant/external-effect end, semantic task success, distributed transaction or hardware power-loss durability is claimed.",
+    "Actual model/provider calls, accepted-result benefit/efficiency, installed qualification, full calculus conformance, promotion and release remain unperformed or unqualified."
+  ],
+  "actual_effect_boundary": {
+    "source_writes": [
+      "a_c/build_tenants/graphify/code/ac_support_effects.py",
+      "a_c/build_tenants/graphify/test_env/test_ac_support_effects.py",
+      "a_c/build_tenants/graphify/test_env/support_fixtures/local_actor.py"
+    ],
+    "evidence_writes": "a_c/.ai-workspace/qualification/t008/effects/repair-001/ only",
+    "runtime_effects": "Registered local regular-file deterministic process fixtures, actual public MCP child and isolated disposable test filesystem/fault effects",
+    "LLM_provider_calls": 0,
+    "Git_package_global_configuration_effects": false,
+    "peer_common_design_or_prior_evidence_edits": false
+  },
+  "invalidators": [
+    "Any owned candidate byte change",
+    "Any material Core/Interfaces/codec/profile/policy/method/owner contract change affecting these checks",
+    "Changed lock/publication/executor operating assumptions or new unresolved semantic decision",
+    "Missing/corrupt historical proof markers or protected grants/currentness identities"
+  ],
+  "next": "Stop. Executive consumes this exact repaired candidate and schedules any ordinary integration, actual F_P use, independent assessment and separate acceptance dispositions."
+}

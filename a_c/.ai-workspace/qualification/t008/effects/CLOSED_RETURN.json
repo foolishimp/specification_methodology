@@ -1,0 +1,153 @@
+{
+  "schema": "a_c.effects-implementation-return/1",
+  "activation": "T-008-effects-001",
+  "state": "candidate_ready",
+  "actor": {
+    "id": "/root/ac_fd_effects_worker",
+    "role": "Writer/Worker",
+    "consumer": "/root"
+  },
+  "basis": {
+    "Product": "urn:stdo:product-definition:a-c-implementations",
+    "WHAT": "c2f67fec8154028d45d7cd7a2832dd4fade4d94b",
+    "builder_uri": "stdo://releases/v2.5.1-rc.2/",
+    "builder_manifest": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "RC9_source": "c2cfa9b908d1722ae3f26c32fa4ece691083bdc3",
+    "RC9_custody": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+    "RC9_tree": "98de394b352179c25dfa63b0b59a9b6bdd43632d",
+    "HOW_sha256": "32095ebef2f2bb1d5a5328faecc576f87fdaae788cdd23570374b0eea4fb9a70",
+    "T008_sha256": "f888154c1be0e435f834d71a494459b70e6fe2f5a56a36f17d076db10a4395ab",
+    "profile_sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1",
+    "mode": "Root-selected provisional co-evolution, not ontology/design acceptance or independent satisfaction"
+  },
+  "construction_availability": {
+    "predicate": "The three named owned implementation/test/fixture files and their exact transition/check evidence are available to Executive on the fixed candidate cut.",
+    "value": "candidate_ready",
+    "core_value": "satisfied",
+    "candidate": {
+      "id": "urn:a-c:graphify:fd-effects:T-008-effects-001",
+      "sha256": "8a496d4322b19c67355e19fdefce59770a1d26a7c384d5cba8b43833075e8378",
+      "manifest": "CANDIDATE.json",
+      "snapshot": "candidate/"
+    }
+  },
+  "realized": [
+    "Complete immutable EvidenceStore envelopes, dependency-first publication, verified cross-process history and cooperative complete-prefix publication/query locking",
+    "Exact core-prepared preflight decision receipt persistence; separate drafted/admitted/rejected coordinates and historical receipt reconstruction",
+    "Registered one-attempt reservation and fixed private supervisor with sealed running-Python/own-module/actor invocation pins; no arbitrary caller argv/env/cwd",
+    "Actual process stdin/stdout/stderr, partial/timeout/cancel/end/descendant observations; unique final output slot/producer and scoped file-postimage facts",
+    "Grant-selected durable event sink, local publication versus consumer receipt, bounded named events.wait fallback and visible notification failure",
+    "Exact Worker Writer plan, protected intent before atomic replace/exclusive create, preimage/lock/currentness checks, existing mode conservation and truthful post-effect recovery",
+    "Actual attempt/operation intervals with separately published noncyclic resource records; unavailable provider counters explicitly unknown",
+    "Explicit selected predecessor-bound reconciliation through Core verifier before retry reservation and actor launch; no prior-effect relabeling or automatic retry"
+  ],
+  "performed_evaluations": [
+    {
+      "id": "effects-module-controls",
+      "predicate": "All 31 named lower-layer tests pass on the exact recorded candidate/dependency cut.",
+      "core_value": "satisfied",
+      "domain_outcome": {
+        "tests": 31,
+        "passed": 31,
+        "skips": 0,
+        "failures": 0,
+        "errors": 0,
+        "reported_elapsed_seconds": "3.060"
+      },
+      "evidence": [
+        "TESTS.final.log",
+        "CHECKS.json",
+        "CONTROL_MAP.json",
+        "PROOF.manifest.json"
+      ]
+    },
+    {
+      "id": "effects-owned-typing",
+      "predicate": "Strict mypy reports no issue in the three owned Python source/test/fixture files against the observed typed imported seams.",
+      "core_value": "satisfied",
+      "domain_outcome": {
+        "checked_owned_files": 3,
+        "issues": 0,
+        "flags": [
+          "--strict",
+          "--follow-imports=silent"
+        ]
+      },
+      "evidence": [
+        "TYPING.final.log",
+        "CHECKS.json"
+      ]
+    },
+    {
+      "id": "effects-exact-test-cut",
+      "predicate": "The three owned files and observed peer/codec/profile test dependencies remained byte-identical before and after the final executed check.",
+      "core_value": "satisfied",
+      "domain_outcome": true,
+      "evidence": [
+        "CANDIDATE.before-tests.json",
+        "CHECKS.json",
+        "CANDIDATE.json"
+      ]
+    }
+  ],
+  "evidence": {
+    "ACTIVATION.draft.json": "76cf40b38cf1b5785c663268f45e30ef5c0c5256deac69dcf725a87576ddb451",
+    "IMPLEMENTATION.contract.txt": "f3fddbea4cf462f4bb62d45a99cdb7b1d624a47e7d56f73038656b76fea75fd8",
+    "IMPLEMENTATION.admission.json": "93bd559b29bc1b2f25e81fe83e4e7b9e22b00f11bf269288fa247ca6d55b2142",
+    "SUPERVISOR_BINDING.clarification.txt": "6401074699ba5a4058742704c5db72344bcd19ce7013a1276f6f807fe75aa318",
+    "RETRY_RECONCILIATION.clarification.txt": "62df00bd55e20e7d585c50910e104406c3f5c8d303b3f15c93a81b19475128fc",
+    "CONTROL_MAP.json": "66951da54010f38129f5bbcbdee8b6eac5cd6873b93e627a07099fd3341ca9b8",
+    "CHECKS.json": "626e9ba3f3b33474e23e069a251b1806e67b46a32ad87ae86f8d4464c531b01d",
+    "PROOF.manifest.json": "09414e21da9c98e2e8d7c3b5883e9c8402cb8223295aee38a1f748358fcda3b8",
+    "CANDIDATE.before-tests.json": "3e31e8a3e93e29c6a476ce63e3f925a66ff9ae4c35304648695f74ac3fdd71f2",
+    "CANDIDATE.json": "9e975ef6f080195b538a2d0ae768474091138f15c52e852d52ecfd066545d5bb",
+    "TESTS.final.log": "8357fd91e5aa37eae1fccebc59fde5a56cf22f98dcb588ad1fa8bf6194440958",
+    "TYPING.final.log": "8228fcc5ce46d42d01caf3cd941f4e9c5f2bcc372bb5b147a2f0572d2dd675a8"
+  },
+  "retained_prior_attempts": {
+    "logs": [
+      "TESTS.candidate.log",
+      "TESTS.expanded.log",
+      "TESTS.final.log",
+      "TESTS.initial.log",
+      "TESTS.process-diagnostic.log",
+      "TESTS.startup-repair.log"
+    ],
+    "diagnostic_custody": "proof-candidate-2/",
+    "final_raw_custody": "proof-final/",
+    "meaning": "Failed fixture initialization, process-finalization and real concurrent-stage/history race runs are preserved; their subjects/results are not rewritten."
+  },
+  "unperformed_or_unqualified": [
+    "Full ordinary Product-bound admission and public CLI/MCP integration",
+    "Actual clean-room F_P Executive/Worker/Reviewer task use and required independent assessment",
+    "All owner instances of every standing structural/publication form; per-control gaps are explicit in CONTROL_MAP.json",
+    "Installed qualification, hardware power-loss durability, complete calculus conformance, accepted-result benefit, Product acceptance and release"
+  ],
+  "residuals": [
+    "Synthetic lower-layer Context/receipt/plan fixtures are not full ordinary Product-bound admission or clean-room F_P task evidence. Core/Interfaces integrated checks and actual actor use remain downstream.",
+    "All fifteen controls and ten standing forms have explicit coverage/gaps in CONTROL_MAP.json; not every owner-instance or semantic authority discriminator was executed in this module.",
+    "The cooperative local POSIX boundary does not provide OS confinement, distributed/cross-filesystem atomicity or hardware power-loss qualification.",
+    "Generic process/file observations do not prove semantic work or complete descendant/external effect end; available provider usage was not observed in these local fixture calls and remains unknown.",
+    "Observed peer source cut is historical test evidence, not a claim that later peer revisions remain qualified.",
+    "FDV-003 benefit, full calculus conformance, installed qualification, ontology/design acceptance, Product acceptance and release remain unqualified."
+  ],
+  "actual_effect_boundary": {
+    "source_writes": [
+      "a_c/build_tenants/graphify/code/ac_support_effects.py",
+      "a_c/build_tenants/graphify/test_env/test_ac_support_effects.py",
+      "a_c/build_tenants/graphify/test_env/support_fixtures/local_actor.py"
+    ],
+    "evidence_writes": "a_c/.ai-workspace/qualification/t008/effects/",
+    "runtime_effects": "Only registered regular-file local fixtures and disposable isolated test roots",
+    "LLM_provider_calls": 0,
+    "Git_package_global_configuration_effects": false,
+    "peer_or_frozen_study_edits": false
+  },
+  "invalidators": [
+    "Any owned candidate byte change",
+    "Material Core/Interfaces/codec/profile or selected policy/method/owner contract change affecting these checks",
+    "Unsupported publication/executor operating-model premise or new material semantic ambiguity",
+    "Missing/corrupt proof markers, changed protected identities or unreviewed grant/currentness relations"
+  ],
+  "next": "Stop. Executive consumes this exact candidate and schedules supported integrated checks, independent assessment and separate dispositions. No self-acceptance, promotion, closure or continuation is inferred."
+}

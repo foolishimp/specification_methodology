@@ -1,0 +1,19 @@
+{
+  "schema": "a_c.test.failed-run/1",
+  "run": "001",
+  "outcome": "58 tests executed,57 passed,1 fixture setup error; all3 new controls passed",
+  "failed_test": "test_exact_immutable_git_source_acquisition_uses_pinned_blob",
+  "cause": "Selected TMPDIR placed writable Fixture.workspace below the repository configured as protected immutable-Git source root; existing policy correctly refused aliasing before source read.",
+  "candidate_defect_exposed": false,
+  "test_or_code_edited_for_recovery": false,
+  "recovery": "Use ordinary per-test TemporaryDirectory on native temporary root outside the protected Git source population.",
+  "native_temp_root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T",
+  "raw_tests": "tests-001.txt",
+  "raw_mypy": "mypy-001.txt",
+  "mypy_exit_code": 0,
+  "test_exit_code": 1,
+  "candidate_001_snapshots": {
+    "ac_support_core.py": "97b099812fc1f6964c83cd7df678e4a1fd0575e941c74549689fe4944f008820",
+    "test_ac_support_core.py": "c464a299e766246d8ff2eb8b70e51dd4cb37501e206ba8ff561007ba4a7be99a"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "a_c.test.execution-plan/1",
+  "run": "001",
+  "commands": [
+    {
+      "id": "tests-001",
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "a_c/build_tenants/graphify/test_env",
+        "-p",
+        "test_ac_support_core.py",
+        "-v"
+      ],
+      "environment": {
+        "PYTHONPYCACHEPREFIX": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/core/qualification-002/cache",
+        "TMPDIR": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/core/qualification-002/temp",
+        "A_C_CORE_QUALIFICATION_CUSTODY": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/core/qualification-002/execution-001"
+      },
+      "stdout_stderr": "tests-001.txt"
+    },
+    {
+      "id": "mypy-001",
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "argv": [
+        "a_c/.venv/bin/python",
+        "-m",
+        "mypy",
+        "--strict",
+        "--cache-dir",
+        "a_c/.ai-workspace/qualification/t008/core/qualification-002/mypy-cache",
+        "a_c/build_tenants/graphify/code/ac_support_core.py",
+        "a_c/build_tenants/graphify/test_env/test_ac_support_core.py"
+      ],
+      "environment": {
+        "PYTHONPYCACHEPREFIX": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/core/qualification-002/cache",
+        "TMPDIR": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/core/qualification-002/temp"
+      },
+      "stdout_stderr": "mypy-001.txt"
+    }
+  ],
+  "candidate": {
+    "a_c/build_tenants/graphify/code/ac_support_core.py": "97b099812fc1f6964c83cd7df678e4a1fd0575e941c74549689fe4944f008820",
+    "a_c/build_tenants/graphify/test_env/test_ac_support_core.py": "c464a299e766246d8ff2eb8b70e51dd4cb37501e206ba8ff561007ba4a7be99a"
+  },
+  "oracle_sha256": "18de4b10001f35b4e78b4626afd46769f059e2845734573bda0966cc35ba5b19"
+}

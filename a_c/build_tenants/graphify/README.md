@@ -6,6 +6,101 @@ model family supports all eight core record shapes, exact basis and content
 identity, reversible graph representation, inspection, discovery and declared
 governing closure. The [design](design/README.md) defines the checked fragment.
 
+## Support tools for Executive, Worker and Reviewer callers
+
+[`code/ac_support.py`](code/ac_support.py) is the public JSON CLI and stdio MCP
+entry for the additional [F_D support requirements](../../specification/requirements/fd-support-tools.md).
+It projects the core's single operation/schema catalog and the protected effect
+boundary. The exact [Claude RC9 profile](design/fd-method-claude-rc9.json) is a
+work-scoped method binding; the installed a_c builder remains v2.5.1-rc.2.
+This is provisional construction under the selected design co-evolution mode.
+Integrated independent assessment, separate ontology/design dispositions,
+Product acceptance, installed qualification and benefit remain separate claims.
+
+The integrated mechanical cut passes 242 tests: the 107 existing codec,
+generation, grounding and repair regressions, 58 core controls, 40 effect
+controls and 37 public-interface/helper controls. Joined strict typing passes
+for nine files with normal import checking. The documented fresh read-only
+CLI/MCP path and a separate nine-check trial against the pinned upstream pass.
+Exact subjects, raw failed and successful runs, and remaining variants are in
+the [integration evidence](../../.ai-workspace/qualification/t008/interfaces/integration-001/README.md).
+Actual model/actor usability and independent semantic review remain unperformed
+at that cut; fixture process success does not establish either.
+
+Start with the [read-only public example](examples/fd-support/README.md). It
+prepares a fresh operator configuration, exact source requests and a complete
+MCP exchange without private study machinery or a package installation. All
+three example principals can discover contracts and acquire actual source. It
+registers no work grant or executor and grants no Product work authority.
+The required admission placeholder cannot establish a valid preflight receipt.
+
+A trusted local Product operator starts one fixed principal and exact policy:
+
+```sh
+python3 build_tenants/graphify/code/ac_support.py --policy POLICY.json --policy-sha256 POLICY_SHA256 --principal PRINCIPAL call --request REQUEST.json
+python3 build_tenants/graphify/code/ac_support.py --policy POLICY.json --policy-sha256 POLICY_SHA256 --principal PRINCIPAL call --request -
+python3 build_tenants/graphify/code/ac_support.py --policy POLICY.json --policy-sha256 POLICY_SHA256 --principal PRINCIPAL mcp
+```
+
+These commands are relative to `a_c/`. CLI emits one response on stdout and
+exits 0 for `ok`, 2 for `refused`, or 1 for `error`. Diagnostics use stderr.
+The status describes tool-output availability; an available negative or unknown
+inner judgment can be `ok`. A receipt, process exit or valid JSON is no semantic
+acceptance or proof that external effects ended.
+
+The full request is UTF-8 integer-only JSON with duplicate keys refused:
+
+```json
+{"schema":"a_c.fd-support.request/1","id":"caller-describe-001","operation":"tools.describe","arguments":{}}
+```
+
+`tools.describe` returns public input/output contracts, checked fragments,
+acquired-body schemas, supported profile, prerequisites and explicit unsupported
+variants. Its inventory is broader than any one configured principal's grants.
+Every command retains exact typed evidence where the trusted store is available;
+an `ArtifactRef` is a verified acquisition route, not content already read.
+Use `evidence.read` to acquire it. Failed publication never supplies a false
+durable reference.
+
+| Caller-selected purpose | Public operations |
+|---|---|
+| Discover contracts and observe selected current inputs | `tools.describe`, `workspace.observe` |
+| Acquire actual records, raw source and retained evidence | `source.read`, `records.find`, `records.read`, `evidence.read` |
+| Project authored closure and declared relation/coverage facts | `graph.project`, `relations.query` |
+| Render the supplied packet and preflight existing authority | `context.assemble`, `contract.preflight` |
+| Invoke one registered executor and observe its evidence | `dispatch.start`, `dispatch.observe`, `dispatch.cancel`, `events.wait` |
+| Preserve/check original returns and source-first review evidence | `return.capture`, `return.check`, `review.prepare` |
+| Evaluate selected supported predicates and qualified joins | `checks.evaluate`, `results.conjoin` |
+| Project existing carriers and apply an already-authorized Writer record | `work.project`, `work.write` |
+| Prepare affected handoff and aggregate measured/unknown resources | `refresh.prepare`, `resources.aggregate` |
+
+MCP supports only legacy revision **2025-11-25** with `initialize`,
+`notifications/initialized`, `ping`, `tools/list` and `tools/call`. It responds
+with that supported revision when the client requests another version; an
+incompatible client can disconnect. Each tool's `arguments` is the same full
+request envelope above, and the tool name must equal `request.operation`.
+Keep the caller's `id` stable for an exact effect retry. JSON-RPC ids are separate
+transport coordinates and cannot mint another attempt. Results contain equal
+structured content and serialized JSON text. Tool refusals use `isError`;
+invalid protocol/method/tool requests use JSON-RPC errors. Modern
+`server/discover`, MCP Tasks, resources and prompts are unsupported.
+The outer MCP transport accepts ordinary finite JSON metadata and preserves
+numeric protocol ids without binary-float rounding. The full a_c tool envelope
+is separately reparsed through its integer-only grammar: `1.0` and `1e0` remain
+unsupported there. Transport metadata supplies no operation or work authority.
+See the pinned [lifecycle](https://modelcontextprotocol.io/specification/2025-11-25/basic/lifecycle),
+[stdio](https://modelcontextprotocol.io/specification/2025-11-25/basic/transports)
+and [tools](https://modelcontextprotocol.io/specification/2025-11-25/server/tools)
+contracts.
+
+For real dispatch or writing, bind existing Product authority and exact target
+preimages before the effect. The [support design](design/fd-support.md) owns the
+concrete policy, packet, return and effect contracts. Example policy bytes,
+role labels or hashes do not create authority. Registered processes are trusted
+local executors; no OS sandbox guarantee is made. Timeout/cancel preserves
+partial output and unknown effects; reconcile them before an authorized retry.
+The tools select no frame, frontier, review finding, disposition or next action.
+
 The ordinary path creates an **unaccepted proposal view**. Neither successful
 validation nor a graph round trip establishes semantic fidelity, issuer
 authority, carrier admission or Product acceptance. F_P authors meaning; this
@@ -72,9 +167,11 @@ repair, execute its returned attempt path, then assemble:
 
 Authoring and repair share a three-call limit per chunk in this profile. Original
 failures, repair usage and incomplete/refused chains remain explicit; a failed
-or incomplete repair cannot enter a complete model. All 107 tenant tests pass
-with the actual pinned Graphify boundary. This is mechanical evidence, separate
-from interpretation quality.
+or incomplete repair cannot enter a complete model. The 107 existing codec,
+generation, grounding and repair regressions passed with the actual pinned
+Graphify boundary at their earlier qualification cut. That is the legacy suite,
+not a current total including the new F_D support tests. Its mechanical evidence
+remains separate from interpretation quality and new support qualification.
 
 The completed [V3 source-creation trial](../../dogfood/stdo-v3-generation/README.md)
 binds frozen Codex RC5 and Claude RC8 consumer inputs and provides fresh Graphify

@@ -1,0 +1,33 @@
+{
+  "schema": "a_c.effects-repair-source-invariance/1",
+  "before_final_tests": {
+    "code/ac_support_effects.py": "9108d6ad10e412f5a0e981c88c06c7b37cb913a24286282da9aae752f239a586",
+    "test_env/test_ac_support_effects.py": "a3e3470f47dcb759dd479ed9b1b19a717cf0303150477f9c3bd3b302e26cab45",
+    "test_env/support_fixtures/local_actor.py": "9c3c0fd8fe563f96db6cb00d95989fd319a6518b006f0efffcfd3d48caf6838a",
+    "code/ac_support_core.py": "97b099812fc1f6964c83cd7df678e4a1fd0575e941c74549689fe4944f008820",
+    "code/ac_support.py": "4d1ea7fe98ec1b53f2a19d9a2fef2b3fbb070624c955fbb1e9e48f5cc88011b1",
+    "code/ac_graph.py": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+    "design/fd-support.md": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f",
+    "design/fd-method-claude-rc9.json": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+  },
+  "after_final_tests": {
+    "code/ac_support_effects.py": "9108d6ad10e412f5a0e981c88c06c7b37cb913a24286282da9aae752f239a586",
+    "test_env/test_ac_support_effects.py": "a3e3470f47dcb759dd479ed9b1b19a717cf0303150477f9c3bd3b302e26cab45",
+    "test_env/support_fixtures/local_actor.py": "9c3c0fd8fe563f96db6cb00d95989fd319a6518b006f0efffcfd3d48caf6838a",
+    "code/ac_support_core.py": "97b099812fc1f6964c83cd7df678e4a1fd0575e941c74549689fe4944f008820",
+    "code/ac_support.py": "4d1ea7fe98ec1b53f2a19d9a2fef2b3fbb070624c955fbb1e9e48f5cc88011b1",
+    "code/ac_graph.py": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+    "design/fd-support.md": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f",
+    "design/fd-method-claude-rc9.json": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+  },
+  "same_exact_cut": true,
+  "T008_sha256": "a34425295fe5fd2cbbd21406f0b0fc609245152a374267a47b5dcd3bd08d7fa2",
+  "previous_closed_returns_manifests": {
+    "CLOSED_RETURN.json": "ac1a0c1f3591e1f639d1fcb731b35afc34027cf4e79ebe608ae2eedf036e3bb3",
+    "CANDIDATE.json": "9e975ef6f080195b538a2d0ae768474091138f15c52e852d52ecfd066545d5bb",
+    "repair-001/CLOSED_RETURN.json": "d6e5aa7b829fcaa6fd22c488402e71c2e2b52a3997204710348828f223c58ef2",
+    "repair-001/CANDIDATE.json": "2d9dd61679bd4f2ab2b07c5ee82b58d5d6afa298df823c66cee25ebe40b966ba"
+  },
+  "previous_referenced_evidence_and_snapshots_verified": true,
+  "meaning": "Prior frozen returns, their referenced evidence and owned snapshots remain byte-conserved. No current acceptance or qualification is inferred from their historical subjects."
+}

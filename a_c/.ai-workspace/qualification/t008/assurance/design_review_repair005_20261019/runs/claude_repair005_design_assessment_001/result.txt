@@ -1,0 +1,231 @@
+# Assessment of the T-008 repair-005 seven-file design subject
+
+## 1. Subject, basis, claim, producer binding and evidence population
+
+**Subject.** `sha256:c8f3ea58fba77ab09260ca24b1c2baf023529a80f4a9ab92d80c11958e4ebffb`, per CANDIDATE_MANIFEST. It has seven files, all supplied as full exact bytes:
+
+| File | SHA-256 prefix |
+|---|---|
+| T-008 ticket | `4eb3f32d` |
+| design README | `f757ab63` |
+| `fd-method-claude-rc9.json` | `bdb93754` |
+| `fd-support.md` | `3e356316` |
+| GOALS | `7f78e1a9` |
+| REFERENCE_FRAME_BASIS | `5cda45d1` |
+| `stdo_a_c.json` | `b0e013e6` |
+
+**Basis.**
+- Committed WHAT: `c2f67fec…`.
+- Builder: v2.5.1-rc.2, manifest `3d860ff4…`.
+- Selected work-scoped Claude RC9 source `c2cfa9b9…`, custody `3a209713…`, tree `98de394b…`, with profiles EXECUTIVE_BASELINE and DESIGN_MODULE.
+- Governing source DATA `a18f4a88…` plus SOURCE_ADDITIONS `c41f82aa…`.
+- My own pre-exposure expectations V1 `04ce8038…` and A1 `a008a91a…`, unchanged.
+
+**Claim assessed.** The exact seven-file design is decision-complete for its declared finite FD-001..013/FDV fragment. This covers:
+- public contracts;
+- authority, effects, currentness, results and reuse seams;
+- the module, CLI and MCP boundaries;
+- the qualification and preservation plan.
+
+**Producer binding.**
+- This assessor self-describes as a Claude-family model (`claude-opus-5-5`). That label does not establish the actual producer. Transport metadata is outside my observation and is recorded separately.
+- Candidate authorship belongs to the native GPT Worker `/root/ac_fd_tenant_design` together with `/root` Executive technical direction. The Executive is not independent of this subject.
+- I authored no part of the subject. No statistical independence is claimed.
+
+**Evidence population.** I read:
+- the full current seven files;
+- the governing source excerpts;
+- the repair-004 and repair-005 return, contract, admission and checks records;
+- the repair-005 diff;
+- the upstream baseline proof;
+- the preservation projection;
+- the bounded prior-findings excerpt (lines 55–149).
+
+I did not read the 3,492 omitted inventory leaf rows, the 113,062-byte repair-004 diff, any live Git state, any implementation, or any native peer intake. Producer check counts (17+9 checks, 44 definitions, 7 examples) are document-shape observations. I did not use them as semantic evidence.
+
+## 2. Selected predicate: core value and ground
+
+**Result: `falsified`.** The predicate is FOUNDATIONS §4 Results / EVALUATION §4, applied to the declared composite seven-file claim.
+
+**Ground.** There is one demonstrated counterexample: a contradiction between the subject's declared one-truth work-state carrier and the subject's current HOW. It is Finding 1 in §3.
+
+Within the `fd-support.md` and profile design network, I found no further material unresolved decision that would admit non-equivalent realizations. This is a statement about my examined population, not a separate result. It is reported in §5 as no-finding evidence, and I evaluated no separate HOW-only predicate.
+
+**Mapping to the method.**
+- The counterexample concerns the composite boundary. EVALUATION §1 says cross-carrier satisfaction and conflict are decided at the declared composite boundary.
+- DESIGN_MODULE §5 says contradictory projections block the design.
+- TICKETS §7 UP-009 says contradiction between the owning ticket and cited evidence blocks closure.
+
+No severity, priority, boundary effect or disposition is assigned.
+
+## 3. Source-bound finding
+
+### Finding 1: the ticket's current HOW identity is stale for this subject
+
+**Locators in the current frozen ticket (`4eb3f32d`):**
+- Lines 18–19 route the current design state to "Current candidate after repair-004".
+- Lines 430–432: "Current exact HOW: fd-support.md, SHA-256 `2136f3582fc432786cb09345165edae94c368faf5ed45c91aa99cbe45a922d12`".
+- Line 433: "This ticket is the current work-state authority."
+- Lines 433–439: the ticket names the repair-004 return as recording "all seven current candidate members". That return lists HOW `2136f358` (repair-004 return, line 45).
+- Line 438: "future observations update this owning carrier through an authorized Writer."
+
+**Contrary evidence in the same subject and its bound proof:**
+- The current HOW is `3e35631618daaa0c3c696480df6a8e946fa13f17ead05cea7337b5ef23364fa6` (CANDIDATE_MANIFEST; repair-005 return, line 35; repair-005 checks, line 16).
+- The repair-005 contract excluded writes to T-008 (`excluded_boundaries`: "T008/profile/other five candidate files").
+- The repair-005 return states "T008 … explicitly unchanged".
+
+**Entry and state.** A fresh actor, or an implementation-grant activation, reconstructs current design state from the ticket. ACT §1 Intake, RF-013 and DESIGN_MODULE UP-018 forbid relying on conversation or prior-actor memory, so the ticket is the route.
+
+**Causal path.**
+1. The ticket, which self-declares as the one current authority, names `2136f358` as the current HOW.
+2. That predecessor HOW lacks exactly the seam repair-005 settled. In the predecessor, effects "Exports only `EvidenceStore`, `execute_effect`, `persist_outcome`", and the supervisor is an internal non-exported helper. Yet the adapter "owns the fixed internal supervisor entry point" (repair-005 diff, lines 7–8).
+3. An actor following the owning carrier therefore binds a design in which the cross-module call from the `_supervise` entry is unresolved.
+4. Alternatively the actor detects a hash mismatch with no owning-carrier record of why the HOW changed. ACT §2 staleness and UP-009 then make the current state undecidable from the carrier.
+
+**Affected actor and relation.**
+- Executive design disposition and the implementation-grant binding ("Each activation must bind its exact accepted design preimage", `fd-support.md`, lines 2037–2038).
+- The Effect and Integration Workers.
+- The TICKETS §7 one-truth relation and the ACT §1/§5 reconstructable work state.
+
+**Uncertainty.**
+- The defect is localized to a work-state projection. It does not touch the HOW's semantic network.
+- The section is titled "after repair-004", which an actor could read as time-indexed. However, the ticket's own claim is about what is current, and it states the ticket owns that.
+- An Executive disposition naming `3e356316` explicitly would supersede the stale pointer for that disposition. But that disposition is not part of this subject.
+
+**Material consequence.** The seven-file subject projects two different current-HOW identities. One of them reintroduces the repaired supervisor-seam ambiguity. Under UP-009 this contradiction blocks closure of the composite claim.
+
+## 4. Reconciliation of historical findings and author groupings
+
+These judgments are against the current bytes. Repair labels and check counts were not used as a verdict.
+
+### Prior Findings 1–6 (old subject `30472059…`)
+
+| Prior finding | Current status | Evidence |
+|---|---|---|
+| 1 Notification sink | **Closed** | Grant has the sole field `notification_sink` (lines 485, 2345–2352). It is nonnull for dispatch grants. Executor records have no notification field (line 487). The Attempt binding is exactly `{"sink_id", "binding"}` and the consumer derives only from it. Refusal codes are named for mismatches. The class and sequence views were updated (lines 1894, 1920, 1928). |
+| 2 External producer registry | **Closed** | Authentication of external producers is explicitly unsupported (lines 266, 578–586). External material stays raw and unauthenticated, with gaps. No registry is implied. |
+| 3 Export divergence | **Closed, with repair-005 seam supported** | The module table (lines 1518–1520), lines 1661–1666 and the realization seam (lines 2640–2658) agree: core `prepare_write`/`make_artifact`; effects `execute_effect`/`persist_outcome`/`EvidenceStore`; private `supervise`. Old names are declared internal only or absent (lines 2654–2656). Core constructs the Writer plan. |
+| 4 Closed content carriers | **Closed** | A JSON Schema 2020-12 catalog (lines 968–1019) defines ConjunctionPlan, RefreshDeclarations, Invalidators (exactly the three ACT §7 kinds), Accounting/Resource/CounterRule/Pricing and the role-specific ReturnContract. Cross-field constraints are in lines 752–961. Examples are marked illustrative (lines 1022–1026). The integer-only lexical rule is stated outside the schema. |
+| 5 Superseded state | **Closed** | `contract_state` takes exactly drafted, admitted, rejected or superseded. Supersession only via an owner `ContractSupersession` source. Applicability (`StaleForUse`) is kept separate. State views are at lines 2403–2469. |
+| 6 Held to status/exit map | **Closed** | The closed table at lines 199–204 maps held outcomes to error/1, and the timeout-versus-interrupted discriminator is at lines 206–209. MCP `isError` and JSON-RPC routing are stated. |
+
+### Repair-005 seam: `effects.supervise(runtime, attempt_ref) -> int`
+
+**Supported as a design decision.**
+- The fixed `_supervise` argv is constructed only by effects (lines 2669–2681).
+- The adapter calls exactly `effects.supervise(runtime, ArtifactRef)`.
+- The reentry resolves only a complete protected Attempt anchor. The anchor payload carries `request` and `context` (line 1592).
+- The reentry rechecks policy, grant, target, executable and dependencies before launch. Drift leads to `RefusedBeforeLaunch` (state view, line 1944).
+- No public operation, forged request or alternate admission is created. The returned int is an OS exit code only.
+- `execute_effect` remains the sole public-request entry (lines 1665–1666, 2645–2647). This is coherent with invariant 4 and the F2 reservation/invocation rows.
+
+**Residual uncertainty, not counted as a finding.** Line 2652 calls `persist_outcome` "the sole retention and response-wrapper entry". The supervisor process must nevertheless publish events, output and end observations without a public response. The reading consistent with the rest of the text (lines 1612–1617, 1663–1666) is that this is "sole cross-module" retention, with effects-internal `EvidenceStore.retain` used for Attempt-owned records. That reading leaves no non-equivalent network, but the sentence's quantifier is broader than intended.
+
+### Author groupings
+
+**A–G:**
+- Expectation body (lines 1703–1726).
+- Cross-process history and exposure (lines 1671–1701).
+- Envelope, plan and recheck seams (lines 1560–1669).
+- Requester versus target (lines 1728–1745).
+- Qualified-operator evidence (lines 1747–1764).
+- Direct requirement routes (profile `requirement_routes`, which cover all 23 operations).
+
+I found no current-subject counterexample in any of these.
+
+**F1–F5 (repair-002 labels):**
+- F1 operation outcome/fact/judgment separation: a closed 7-value boundary refinement with a single source parent each, and per-operation inner-result tables (lines 2112–2196).
+- F2 Product-located mechanism, commit units and ten standing forms (lines 2198–2303).
+- F4 lifecycles, authority, Prime and state (lines 2305–2539).
+- F5 independence, severity and role-transition operand domains (lines 2541–2592).
+- The realization seam (lines 2594–2704).
+
+These are supported within the declared operating assumptions. The "F3" label has no section heading; its content is the realization seam. This is noted as navigation only.
+
+**Integration seams.**
+- The ordinary F_D path and legacy exclusions (lines 2730–2753).
+- MCP projection with a full envelope and stable `request.id` (lines 2706–2728).
+- The fixed-argv read-only Git primitive is confined to core acquisition with no hooks, filters, checkout, configuration mutation or lazy fetch (line 1518). It is distinct from F_P, registered-executor and general effect launches. This is coherent and sufficient within the declared cooperative-local model.
+
+## 5. FD/FDV design coverage and supported no-finding aspects
+
+**Method binding.**
+- Single exact RC9 profile. The members carry path, SHA-256 and bytes, and all twelve match the custody observations, including the README.
+- Unsupported cuts or profiles refuse.
+- The common map is kept as derivation history.
+- `stdo_a_c.json` only gains the T-008 authority locator. The basis, constitution and composition are unchanged.
+- This satisfies the A2, A3 and A6 discriminators.
+
+**Results.**
+- Operation availability is separate from transport status, computed facts and requested judgments.
+- Inner results from AC-007, ACT §3, RF §5 and ACT Effects keep their own predicates.
+- The computed classification maps to no core value, as SPEC §4 requires.
+- `closure_unresolved` maps to `invalid_basis`. The AC stop `gap` is kept distinct from a conjunction gap.
+
+**Conjunction.**
+- Declared rule: first non-satisfied mandatory result in plan order.
+- If none, then: basis disagreement gives `invalid_basis`; otherwise any gap gives `indeterminate`; otherwise a required-constraint counterexample falsifies.
+- The RF §5 `conflict` is computed only after a falsified core value. This is consistent with the conditional REFERENCE_FRAME §5 qualification.
+- Authenticated cardinality: one key per planned assessment; exact replay counts once; a different payload under the same key is a conflict and becomes a gap.
+- Stale results are gaps, not relabeled `invalid_basis`.
+- Nested joins carry union survival.
+
+**Fit (ACT §2 step 3).**
+- When capacity is declared: full active input or a supported host-inclusive bound; unknown host makes the fit `indeterminate` unless a measured excess falsifies it; no trimming.
+- `capacity_bytes: null`: no fit gate and no invented fit result. Exact bytes and unknowns are retained. Admission proceeds only if the grant requires no fit predicate.
+- This matches the source clause and is not an override.
+
+**Admission and effects.**
+- One Product-located mechanism. Complete commit units per owner. Publication boundaries are enumerated with before/after discriminators.
+- Explicit non-claims: cross-filesystem atomicity and hostile same-account mutation.
+- Effects values, with end recorded separately; no blind retry.
+
+**Review and independence.**
+- Source-first expectation phase.
+- History of exposure that persists across processes.
+- `independence_policy` is null, or the policy's explicit pairs; same-family without a policy is not independent.
+- Severity scale may be null, with no invented grades.
+- Reviewer and Executive returns cannot mutate.
+
+**Writer.**
+- Current Worker role plus a named grant.
+- Durable intent before an atomic whole-target publication.
+- The Executive cannot write its own role transition.
+
+**Refresh and accounting.**
+- D* ∩ I with conservative unknown frontiers.
+- `retain_applicable` takes four proof conditions.
+- Counter identity, cumulative snapshots, subsets, interval union versus summed duration, and exact-rational pricing.
+
+**Qualification plan.**
+- FD-001..013 rows.
+- FDV-001: one real task across three roles, with ordinary interfaces and clean-room conditions (unedited responses, no silent retry).
+- FDV-002: SC-002..014.
+- FDV-003: explicitly unperformed.
+- Real subprocess MCP. Standing forms. Two plan orders.
+
+**Preservation.** Existing members plus exact approved additions. The legacy paths `ac_graph`, `ac_generate`/`run_actor`, `ac_grounding`, `ac_repair` and the frozen-study roots are excluded from F_D claims.
+
+**Baseline proof.** 107 pre-existing tests and the nine-check upstream trial at `fe085ced`. This supports the existing path only. It qualifies no new module.
+
+## 6. Unperformed claims, residuals and invalidators
+
+**Unperformed, with no result:** runtime behavior, boundary congruence, path realization, ordinary live-user usability, UAT, FDV-001/002/003 execution, benefit, Product acceptance, release, and full-method qualification.
+
+**Residuals:**
+- Prime evidence (lines 2365–2401) states the eight atoms, their admitted domains and a total mapping. It does not state per-atom falsification conditions or accepted loss, which DESIGN_MODULE UP-003 lists among Prime evidence. I do not find that this leaves non-equivalent networks open. It is a gap in evidence form for the design gate's owner.
+- The `persist_outcome` "sole retention" quantifier (§4).
+- Executor and host effect guarantees are limited to the registered observers.
+- The cross-view table is the Writer's self-evaluation.
+
+**Not acquired:** the 3,492 inventory leaves, the repair-004 large diff, live Git, external exposure history.
+
+**Invalidators:**
+- Any change to the candidate, source, profile, authority or evidence-population bytes.
+- An Executive or owner record that explicitly binds the current HOW `3e356316` as current, which bears on Finding 1.
+- Actual producer metadata showing that the nonauthor cross-family condition is not met.
+
+## 7. Adjacent observations (outside the selected claim; triage not applicable)
+
+- `fd-support.md` line 3 ("design candidate v3 … A–G … F1–F5") and lines 1555–1558 describe an earlier revision state. They do not mention repair-004 or repair-005. This is narrative staleness only.
+- The illustrative Reviewer and Executive return-contract examples use `authority_source` path `worker-role.md` (lines 1395–1399, 1447–1451). These are placeholder data only.

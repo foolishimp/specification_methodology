@@ -1,0 +1,222 @@
+{
+  "activation": "T-008-upstream-001",
+  "checkout": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout",
+  "completed_at": "2026-10-18T18:09:49.450349+00:00",
+  "environment_overrides": {
+    "GIT_CONFIG_GLOBAL": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/gitconfig",
+    "GIT_CONFIG_NOSYSTEM": "1",
+    "GIT_TERMINAL_PROMPT": "0",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "exact_clean_checkout": true,
+  "head": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+  "old_incomplete_checkout": "preserved, untouched",
+  "origin_url": "https://github.com/Graphify-Labs/graphify.git",
+  "required_commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+  "started_at": "2026-10-18T18:09:45.912303+00:00",
+  "status_porcelain": "",
+  "steps": [
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "-c",
+        "submodule.recurse=false",
+        "clone",
+        "--no-checkout",
+        "--depth",
+        "1",
+        "--template=/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/empty-template",
+        "https://github.com/Graphify-Labs/graphify.git",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "elapsed_seconds": 2.1699441249947995,
+      "environment_overrides": {
+        "GIT_CONFIG_GLOBAL": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/gitconfig",
+        "GIT_CONFIG_NOSYSTEM": "1",
+        "GIT_TERMINAL_PROMPT": "0",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "finished_at": "2026-10-18T18:09:48.082593+00:00",
+      "name": "01-clone",
+      "returncode": 0,
+      "started_at": "2026-10-18T18:09:45.912635+00:00",
+      "stderr": "01-clone.stderr",
+      "stderr_sha256": "1429e220e680b2a302ffb7980044edbc063db36624a38d1aeab16b891b2bcee0",
+      "stdout": "01-clone.stdout",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timeout": false
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "fetch",
+        "--depth",
+        "1",
+        "origin",
+        "fe085cedddde3a18554f8749b230bfe47f3dcce7"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "elapsed_seconds": 1.130565624916926,
+      "environment_overrides": {
+        "GIT_CONFIG_GLOBAL": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/gitconfig",
+        "GIT_CONFIG_NOSYSTEM": "1",
+        "GIT_TERMINAL_PROMPT": "0",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "finished_at": "2026-10-18T18:09:49.213470+00:00",
+      "name": "02-fetch-pin",
+      "returncode": 0,
+      "started_at": "2026-10-18T18:09:48.082896+00:00",
+      "stderr": "02-fetch-pin.stderr",
+      "stderr_sha256": "7db95a954de31d0c54746e1b1157d354d7754b2a5b78a7858d99216cf52df746",
+      "stdout": "02-fetch-pin.stdout",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timeout": false
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "checkout",
+        "--detach",
+        "fe085cedddde3a18554f8749b230bfe47f3dcce7"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "elapsed_seconds": 0.13955516717396677,
+      "environment_overrides": {
+        "GIT_CONFIG_GLOBAL": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/gitconfig",
+        "GIT_CONFIG_NOSYSTEM": "1",
+        "GIT_TERMINAL_PROMPT": "0",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "finished_at": "2026-10-18T18:09:49.353261+00:00",
+      "name": "03-checkout-pin",
+      "returncode": 0,
+      "started_at": "2026-10-18T18:09:49.213712+00:00",
+      "stderr": "03-checkout-pin.stderr",
+      "stderr_sha256": "e484fef7f73871c4e1cba449b4d0d8b2fbdd80978bfbe7669f6b796ea099d53b",
+      "stdout": "03-checkout-pin.stdout",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timeout": false
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "elapsed_seconds": 0.00964116700924933,
+      "environment_overrides": {
+        "GIT_CONFIG_GLOBAL": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/gitconfig",
+        "GIT_CONFIG_NOSYSTEM": "1",
+        "GIT_TERMINAL_PROMPT": "0",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "finished_at": "2026-10-18T18:09:49.363108+00:00",
+      "name": "04-head",
+      "returncode": 0,
+      "started_at": "2026-10-18T18:09:49.353469+00:00",
+      "stderr": "04-head.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "04-head.stdout",
+      "stdout_sha256": "b2d4806fcdefa876d230238c9a61e9a387b9e260e2e7add07e0980ae44afe954",
+      "timeout": false
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout",
+        "status",
+        "--porcelain=v1",
+        "--untracked-files=all"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "elapsed_seconds": 0.06628750008530915,
+      "environment_overrides": {
+        "GIT_CONFIG_GLOBAL": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/gitconfig",
+        "GIT_CONFIG_NOSYSTEM": "1",
+        "GIT_TERMINAL_PROMPT": "0",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "finished_at": "2026-10-18T18:09:49.429582+00:00",
+      "name": "05-status",
+      "returncode": 0,
+      "started_at": "2026-10-18T18:09:49.363300+00:00",
+      "stderr": "05-status.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "05-status.stdout",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timeout": false
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout",
+        "rev-parse",
+        "HEAD^{tree}"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "elapsed_seconds": 0.010965750087052584,
+      "environment_overrides": {
+        "GIT_CONFIG_GLOBAL": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/gitconfig",
+        "GIT_CONFIG_NOSYSTEM": "1",
+        "GIT_TERMINAL_PROMPT": "0",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "finished_at": "2026-10-18T18:09:49.440783+00:00",
+      "name": "06-tree",
+      "returncode": 0,
+      "started_at": "2026-10-18T18:09:49.429820+00:00",
+      "stderr": "06-tree.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "06-tree.stdout",
+      "stdout_sha256": "b2ec965b0a48c3204cb2798396565ca621d0abc524c6f42e5758791ecc3715ad",
+      "timeout": false
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout",
+        "remote",
+        "get-url",
+        "origin"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "elapsed_seconds": 0.009149124845862389,
+      "environment_overrides": {
+        "GIT_CONFIG_GLOBAL": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/gitconfig",
+        "GIT_CONFIG_NOSYSTEM": "1",
+        "GIT_TERMINAL_PROMPT": "0",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "finished_at": "2026-10-18T18:09:49.450131+00:00",
+      "name": "07-remote",
+      "returncode": 0,
+      "started_at": "2026-10-18T18:09:49.440986+00:00",
+      "stderr": "07-remote.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "07-remote.stdout",
+      "stdout_sha256": "dd468aeeb140b6b4e76877229e1a61b51055147f958680b008785baa8ac5a6a6",
+      "timeout": false
+    }
+  ],
+  "temporary_root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv",
+  "tree": "6e11ed7cda0437ff12a29a328ca785e8915ddbc0",
+  "upstream_url": "https://github.com/Graphify-Labs/graphify.git"
+}

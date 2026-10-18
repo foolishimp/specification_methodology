@@ -1,0 +1,63 @@
+test_identity_shaped_raw_json_and_literal_result_are_data (test_ac_support_effects.DependencyTests.test_identity_shaped_raw_json_and_literal_result_are_data) ... ERROR
+test_public_missing_input_preserves_original_refusal_and_readable_operation (test_ac_support_effects.DependencyTests.test_public_missing_input_preserves_original_refusal_and_readable_operation) ... FAIL
+test_public_projected_source_identity_is_preserved_without_dereference (test_ac_support_effects.DependencyTests.test_public_projected_source_identity_is_preserved_without_dereference) ... FAIL
+test_true_primary_provenance_and_carrier_support_must_exist (test_ac_support_effects.DependencyTests.test_true_primary_provenance_and_carrier_support_must_exist) ... ok
+
+======================================================================
+ERROR: test_identity_shaped_raw_json_and_literal_result_are_data (test_ac_support_effects.DependencyTests.test_identity_shaped_raw_json_and_literal_result_are_data)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_effects.py", line 53, in _regular
+    if not stat.S_ISREG(path.lstat().st_mode):
+                        ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pathlib.py", line 847, in lstat
+    return self.stat(follow_symlinks=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pathlib.py", line 840, in stat
+    return os.stat(self, follow_symlinks=follow_symlinks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-effects-yhotdj0z/evidence/objects/0000000000000000000000000000000000000000000000000000000000000000.json'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py", line 304, in test_identity_shaped_raw_json_and_literal_result_are_data
+    self.store.retain(raw)
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_effects.py", line 189, in retain
+    return self._retain(envelope)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_effects.py", line 206, in _retain
+    self.resolve(dependency)
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_effects.py", line 173, in resolve
+    raw = _regular(self.root / "objects" / (sha + ".json"))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_effects.py", line 61, in _regular
+    raise c.SupportError("source_missing", "Required regular file is absent", [str(path)], []) from error
+ac_support_core.SupportError: Required regular file is absent
+
+======================================================================
+FAIL: test_public_missing_input_preserves_original_refusal_and_readable_operation (test_ac_support_effects.DependencyTests.test_public_missing_input_preserves_original_refusal_and_readable_operation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py", line 290, in test_public_missing_input_preserves_original_refusal_and_readable_operation
+    self.assertEqual(c.as_object(response["refusal"])["code"], "source_missing")
+AssertionError: 'evidence_publication_failed' != 'source_missing'
+- evidence_publication_failed
++ source_missing
+
+
+======================================================================
+FAIL: test_public_projected_source_identity_is_preserved_without_dereference (test_ac_support_effects.DependencyTests.test_public_projected_source_identity_is_preserved_without_dereference)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py", line 317, in test_public_projected_source_identity_is_preserved_without_dereference
+    self.assertEqual(response["status"], "ok")
+AssertionError: 'error' != 'ok'
+- error
++ ok
+
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.109s
+
+FAILED (failures=2, errors=1)

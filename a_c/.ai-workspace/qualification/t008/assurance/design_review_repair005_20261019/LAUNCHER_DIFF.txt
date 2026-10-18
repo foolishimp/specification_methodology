@@ -1,0 +1,33 @@
+--- held004launcher
++++ prepared005launcher
+@@ -1,5 +1,5 @@
+ #!/usr/bin/env python3
+-"""One fresh repair004 current-design assessment; work evidence, not a method engine."""
++"""One fresh repair005 current-design assessment; work evidence, not a method engine."""
+ from __future__ import annotations
+ import argparse
+ import datetime as dt
+@@ -93,7 +93,7 @@
+                 "--system-prompt", system]
+     if plan["argv"] != expected:
+         raise ValueError("Launch argv differs from fixed isolated configured-CLI contract")
+-    if plan["stdin_sha256"] != "b41a17426d1d694b2327f29425026ceaa7d5ce9f02a70d8f0d7c05b0a27d6778":
++    if plan["stdin_sha256"] != "0c6e23910d3cf31ecd58c1fb332063ad19847cb57441a74e7f7405ac26eb4e9d":
+         raise ValueError("Final-design prompt differs from exact prepared input")
+     if plan["calls"] != 1 or plan["automatic_retries"] != 0 or plan["process_wall_limit_seconds"] > 1200:
+         raise ValueError("Unapproved call/resource bound")
+@@ -121,12 +121,12 @@
+             raise ValueError("Final approval mismatch: " + key)
+     attempt = ROOT / plan["attempt_directory"]
+     attempt.mkdir(parents=True, exist_ok=False)
+-    workdir = Path(tempfile.mkdtemp(prefix="ac_t008_repair004_review_"))
++    workdir = Path(tempfile.mkdtemp(prefix="ac_t008_repair005_review_"))
+     initial_files = sorted(p.name for p in workdir.iterdir())
+     if initial_files:
+         raise ValueError("Review workspace is not empty")
+     started = time.monotonic()
+-    record = {"kind": "raw-repair004-design-model-assessment-attempt", "started_utc": now(),
++    record = {"kind": "raw-repair005-design-model-assessment-attempt", "started_utc": now(),
+               "executable": plan["executable"], "executable_realpath": plan["executable_realpath"],
+               "executable_sha256": plan["executable_sha256"], "version": plan["version"],
+               "argv": plan["argv"], "prompt_sha256": plan["stdin_sha256"],

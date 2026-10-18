@@ -1,0 +1,49 @@
+--- a_c/build_tenants/graphify/design/fd-support.md (repair-005 preimage)
++++ a_c/build_tenants/graphify/design/fd-support.md (repair-005 candidate)
+@@ -1516,8 +1516,8 @@
+ | Module | Owned boundary and exported seam |
+ |---|---|
+ | `code/ac_support_core.py` | Strict grammar and refusal type, Runtime/policy/source/profile binding, source/observation/model/context relations, read/query/review/return/check/conjunction/refresh/resource operations and inventory/schema data. Exports `SupportError(code, reason, gaps, source_refs)`, `Runtime.from_policy(path, expected_sha256, principal)`, `canonical(value)`, `digest(value)`, `read_source(runtime, ref)`, `observe(runtime, scope)`, `check_preconditions(runtime, recheck_set)`, `inventory(operation=None)`, `request_schema(operation=None)`, `parse_request(raw_bytes)`, `validate_request(request)`, `make_artifact(kind, payload, provenance)`, `execute_read(runtime, request) -> CoreOutcome`, `build_preflight(runtime, request) -> EffectPlan` and `prepare_write(runtime, request) -> EffectPlan`. No F_P actor, registered-executor or general-effect launches, and no authoritative carrier writes. Fixed-argv read-only Git plumbing is allowed solely as the immutable-source acquisition primitive, bound to the exact registered root, full object, member path and blob hash, with observed Git executable/configuration scope; no shell, hooks, filters, checkout, configuration mutation, moving-ref substitution or lazy network fetch. This allowance exposes no arbitrary subprocess primitive or new capability. |
+-| `code/ac_support_effects.py` | Protected EvidenceStore, exact preflight receipt persistence, attempt reservation/supervisor, fixed-executor dispatch/observe/cancel/events, Writer effect membrane and retained evidence. Imports core; core does not import effects. Exports only `EvidenceStore(runtime)`, `execute_effect(runtime, request, plan) -> CoreOutcome` and `persist_outcome(runtime, request, outcome) -> Response`. Dispatch/observe/cancel/events/supervisor/Writer functions are internal full-request helpers, never independent cross-module exports. Core constructs the Writer EffectPlan; effects only rechecks and executes it. |
+-| `code/ac_support.py` | Thin authoritative dispatcher, JSON CLI and legacy MCP stdio adapter. Imports both modules. Exports `execute(runtime, request)` and `main(argv=None)`. Validates once, routes to existing operations, retains exact response evidence; no independent method logic. Also owns the fixed internal supervisor entry point. |
++| `code/ac_support_effects.py` | Protected EvidenceStore, exact preflight receipt persistence, attempt reservation/supervisor, fixed-executor dispatch/observe/cancel/events, Writer effect membrane and retained evidence. Imports core; core does not import effects. Exports `EvidenceStore(runtime)`, `execute_effect(runtime, request, plan) -> CoreOutcome` and `persist_outcome(runtime, request, outcome) -> Response`, plus private fixed-supervisor reentry `supervise(runtime, attempt_ref) -> int`. The int is the OS-supervisor exit code, never a semantic/Worker result. execute_effect remains the sole public-request effect entry; other dispatch/observe/cancel/events/Writer helpers remain internal. Core constructs the Writer EffectPlan; effects only rechecks and executes it. |
++| `code/ac_support.py` | Thin authoritative dispatcher, JSON CLI and legacy MCP stdio adapter. Imports both modules. Exports `execute(runtime, request)` and `main(argv=None)`. Validates once, routes to existing operations, retains exact response evidence; no independent method logic. Also owns the fixed internal supervisor entry point, which calls exactly `effects.supervise(runtime, ArtifactRef)`. |
+ | `design/fd-method-claude-rc9.json` | Exact data binding to RC9 member bytes and owner routes. Unchanged profile identity/digest required by supported Runtime. No method source-body copy. |
+ 
+ Core receives narrow read-only callbacks `resolve_artifact(ArtifactRef)->bytes`
+@@ -1663,7 +1663,7 @@
+ `EvidenceStore.retain(envelope)->ArtifactRef`. Retain accepts the complete
+ core-created provenance envelope, verifies its canonical bytes/ref and publishes
+ those exact bytes; it never constructs or patches semantic payloads. The only
+-public effect entry is `execute_effect(runtime,request,plan)`; every internal
++public-request effect entry is `execute_effect(runtime,request,plan)`; the private fixed-supervisor cross-module reentry is `supervise(runtime,attempt_ref)->int`. Every other internal
+ handler receives the full request, not an arguments-only object or hidden
+ mutable current-request global. Equivalent local immutable helper types are
+ allowed; these cross-module JSON meanings and effect ownership are fixed.
+@@ -2643,7 +2643,8 @@
+ `check_preconditions(runtime,recheck_set)` returns newly acquired observations,
+ changes and gaps; effects records and freshly reruns it at the actual edge.
+ Effects `execute_effect(runtime,request,plan)->CoreOutcome` is the sole
+-cross-module effect entry. `plan` is the core-produced immutable EffectPlan
++public-request cross-module effect entry. The separate private fixed-supervisor
++reentry is `supervise(runtime,attempt_ref)->int`, not another public operation. `plan` is the core-produced immutable EffectPlan
+ for contract.preflight/work.write and is null for the other named effect
+ operations; these route only to fixed internal full-request helpers. Effects
+ never constructs the Writer plan or accepts a CLI/MCP-supplied plan. It checks
+@@ -2677,8 +2678,14 @@
+ ```
+ 
+ Only the effects module creates this argv from the retained reservation; public
+-requests supply none of these path/argv values. The internal entry validates
+-exact policy, anchor, grant, target and dependency binding again. Supervisor
++requests supply none of these path/argv values. The fixed adapter entry calls
++exactly `effects.supervise(runtime, ArtifactRef)`. This private reentry resolves
++only a complete protected Attempt reservation, recovers its original full strict
++request and exact retained Context, and rechecks policy, grant, target, fixed
++executable and dependency binding before the already registered launch. It
++creates no forged public request, new public operation, hidden Runtime mode or
++alternate admission path. supervise returns an integer OS-supervisor exit code,
++not a semantic judgment or Worker result. Other effect helpers remain internal. Supervisor
+ stdout/stderr go to separate protected diagnostic files; they never contaminate
+ CLI/MCP stdout or substitute for actual executor stdout/stderr. Exact stdin,
+ worker outputs, invocation observations and unknown usage remain distinct.

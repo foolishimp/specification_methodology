@@ -1,0 +1,43 @@
+{
+  "kind": "local-help-contract-check-only",
+  "checked_utc": "2026-10-18T17:31:51.981377+00:00",
+  "no_model_call": true,
+  "version": "2.1.302 (Claude Code)",
+  "executable": "/Users/jim/.local/bin/claude",
+  "executable_realpath": "/Users/jim/.local/share/claude/versions/2.1.302",
+  "executable_sha256": "5262ce9de86243fed0d21edc39b271555d56780d0112e2b194439fe1c6662d37",
+  "help_sha256": "223ec71c6e89368ce9d8d4b36118ec535a3af755728b7868fd60f69f6af7c64e",
+  "help_exit_code": 0,
+  "version_exit_code": 0,
+  "flags_found_in_help": {
+    "--print": true,
+    "--safe-mode": true,
+    "--restricted": true,
+    "--tools": true,
+    "--disable-slash-commands": true,
+    "--strict-mcp-config": true,
+    "--mcp-config": true,
+    "--no-session-persistence": true,
+    "--no-chrome": true,
+    "--permission-mode": true,
+    "--permission-prompts": true,
+    "--output-format": true,
+    "--verbose": true,
+    "--system-prompt": true
+  },
+  "documented_values": {
+    "tools_empty": true,
+    "permission_mode_dontAsk": true,
+    "permission_prompts_none": true,
+    "output_format_stream_json": true,
+    "no_persistence_print_only": true
+  },
+  "non_bypass": "No bypass flag, model override, fallback, provider override, add-dir, plugin-dir, resume or continue selected",
+  "limits": "Help proves documented availability; actual initial-event tools/MCP/model observations remain unperformed. Admin-managed policy and hidden host context may still apply and are not measured.",
+  "value_check_method": "Normalize CLI help whitespace before checking value documentation; argv empty-string remains exact empty string.",
+  "initial_check_preserved": {
+    "path": "CLI_FLAG_CHECK.initial.json",
+    "sha256": "d3a950c16d466d445dc104ee8184ff334f6d2080077dc8ef048e449db9613730",
+    "cause": "Whitespace-sensitive initial documentation check returned false because CLI help wraps before tools; no model call or unsupported flag was attempted."
+  }
+}

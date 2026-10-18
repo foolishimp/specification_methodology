@@ -1,0 +1,62 @@
+{
+  "authority_source": {
+    "engine": "workspace-regular-file",
+    "object": null,
+    "path": ".ai-workspace/qualification/t008/live-binding-001/TASK.md",
+    "root": "product",
+    "selector": null,
+    "sha256": "6d777ece58832ec57185f47cbe69f714222329e600b3a190acac63d7d744fff2"
+  },
+  "carrier": "a_c.fd-support.closed-return/1",
+  "id": "urn:a-c:T008:worker-guide-return:001",
+  "output_slot": "final_stdout_object",
+  "proof": {
+    "predicate_ids": [],
+    "transition_sources": [
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": ".ai-workspace/qualification/t008/live-binding-001/TASK.md",
+        "root": "product",
+        "selector": null,
+        "sha256": "6d777ece58832ec57185f47cbe69f714222329e600b3a190acac63d7d744fff2"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": ".ai-workspace/tickets/active/T-008-fd-tenant-implementation.md",
+        "root": "product",
+        "selector": {
+          "lines": [
+            668,
+            728
+          ]
+        },
+        "sha256": "ab06521088409bc6efa21caf95ff4dec5b8eadb7686c32e3c8866dfd72dc7abc"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "GRANT.md",
+        "root": "runtime",
+        "selector": null,
+        "sha256": "bc26d713a2f162e61aaf96011f0931fa6d9b1656e21c611e6c4f23265f5b3ac8"
+      }
+    ]
+  },
+  "required_evaluations": [
+    {
+      "id": "guide-task-criteria",
+      "predicate": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": ".ai-workspace/qualification/t008/live-binding-001/TASK.md",
+        "root": "product",
+        "selector": null,
+        "sha256": "6d777ece58832ec57185f47cbe69f714222329e600b3a190acac63d7d744fff2"
+      }
+    }
+  ],
+  "role": "Worker",
+  "schema": "a_c.fd-support.return-contract/1"
+}

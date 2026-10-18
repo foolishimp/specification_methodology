@@ -1,0 +1,32 @@
+{
+  "mode": "preview-only",
+  "argv": [
+    "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py",
+    "--policy",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/live-runtime-prep-002/executive-policy.json",
+    "--policy-sha256",
+    "bc82783219403f46dfcd9c928ea6a224dafefffea4f0973103a4c4a59e420ec5",
+    "--principal",
+    "/root",
+    "call",
+    "--request",
+    "-"
+  ],
+  "request": {
+    "schema": "a_c.fd-support.request/1",
+    "id": "t008-task-read-001",
+    "operation": "source.read",
+    "arguments": {
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": ".ai-workspace/qualification/t008/live-binding-001/TASK.md",
+        "root": "product",
+        "selector": null,
+        "sha256": "6d777ece58832ec57185f47cbe69f714222329e600b3a190acac63d7d744fff2"
+      },
+      "encoding": "utf8"
+    }
+  }
+}

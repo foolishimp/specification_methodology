@@ -1,0 +1,110 @@
+{
+  "observed_at": "2026-10-18T18:11:31.959368+00:00",
+  "source_files": {
+    "a_c/build_tenants/graphify/code/ac_generate.py": {
+      "bytes": 69523,
+      "sha256": "7002a7942f612f5a11e2a69dc865849ffef51c29c7b0cab9feb5170fb32d0479"
+    },
+    "a_c/build_tenants/graphify/code/ac_graph.py": {
+      "bytes": 49166,
+      "sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667"
+    },
+    "a_c/build_tenants/graphify/code/ac_grounding.py": {
+      "bytes": 31297,
+      "sha256": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd"
+    },
+    "a_c/build_tenants/graphify/code/ac_repair.py": {
+      "bytes": 36708,
+      "sha256": "5be5e738f12006dcb17066ccfb60d22e65e5929a8a9a96d52ee5c0a19efda928"
+    },
+    "a_c/build_tenants/graphify/test_env/check_upstream.py": {
+      "bytes": 22990,
+      "sha256": "e7c796e71b6143cd6314114fa3b5db6dae35f0a13fd6bcfed010402747182561"
+    },
+    "a_c/build_tenants/graphify/test_env/fixture_support.py": {
+      "bytes": 14839,
+      "sha256": "39201a5147db14d2acf929e9065b3eb5fd7cca6eeda0218095a6e1f94499c3b6"
+    },
+    "a_c/build_tenants/graphify/test_env/fixtures/toy_model.json": {
+      "bytes": 70776,
+      "sha256": "a72d423a222ecd84a429e28796c93ba07ac8b79d40caf3b74af02c36029f3b0b"
+    },
+    "a_c/build_tenants/graphify/test_env/requirements-qualification.txt": {
+      "bytes": 278,
+      "sha256": "9be107b68f56e3b7d7c1d6e3ac297daeda8484a8af8ceae783aead8355a7b3b5"
+    },
+    "a_c/build_tenants/graphify/test_env/test_ac_generate.py": {
+      "bytes": 27925,
+      "sha256": "245a7e1748ebbe59042ba9c2151017227f380e37913b39ed8ee78146329c362f"
+    },
+    "a_c/build_tenants/graphify/test_env/test_ac_graph.py": {
+      "bytes": 32150,
+      "sha256": "406f07ad5c3944abe209a9aada1d18bcb94e283bef54a0a3167fdba9894e8ec7"
+    },
+    "a_c/build_tenants/graphify/test_env/test_ac_grounding.py": {
+      "bytes": 19256,
+      "sha256": "de695850c371bacb079305e55314a097a62c80b70624fcdabcc1506fad4dfacb"
+    },
+    "a_c/build_tenants/graphify/test_env/test_ac_repair.py": {
+      "bytes": 16130,
+      "sha256": "a0097ae36ce732fd84fdeaef21707acb4566bdbcc78faa5231fda4fdabacae18"
+    }
+  },
+  "source_preimages_unchanged": true,
+  "steps": [
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "elapsed_seconds": 0.012548625003546476,
+      "environment_overrides": {
+        "GIT_CONFIG_GLOBAL": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/gitconfig",
+        "GIT_CONFIG_NOSYSTEM": "1",
+        "GIT_TERMINAL_PROMPT": "0",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "finished_at": "2026-10-18T18:11:31.972063+00:00",
+      "name": "10-final-upstream-head",
+      "returncode": 0,
+      "started_at": "2026-10-18T18:11:31.959520+00:00",
+      "stderr": "10-final-upstream-head.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "10-final-upstream-head.stdout",
+      "stdout_sha256": "b2d4806fcdefa876d230238c9a61e9a387b9e260e2e7add07e0980ae44afe954"
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout",
+        "status",
+        "--porcelain=v1",
+        "--untracked-files=all"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "elapsed_seconds": 0.014409166993573308,
+      "environment_overrides": {
+        "GIT_CONFIG_GLOBAL": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/gitconfig",
+        "GIT_CONFIG_NOSYSTEM": "1",
+        "GIT_TERMINAL_PROMPT": "0",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "finished_at": "2026-10-18T18:11:31.986501+00:00",
+      "name": "11-final-upstream-status",
+      "returncode": 0,
+      "started_at": "2026-10-18T18:11:31.972097+00:00",
+      "stderr": "11-final-upstream-status.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "11-final-upstream-status.stdout",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "upstream_exact_and_clean": true,
+  "upstream_head": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+  "upstream_status_porcelain": ""
+}

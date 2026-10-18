@@ -1,0 +1,58 @@
+{
+  "schema": "a_c.effects-repair-control-annex/1",
+  "activation": "T-008-effects-repair-002",
+  "oracles": "ORACLES.json",
+  "original_controls": "../CONTROL_MAP.json",
+  "previous_repair_controls": "../repair-001/CONTROL_MAP.json",
+  "new_controls": [
+    {
+      "oracle": "DEP-001",
+      "tests": [
+        "DependencyTests.test_public_missing_input_preserves_original_refusal_and_readable_operation"
+      ],
+      "evidence": "Actual CLI response/source_missing refusal, stored operation and fresh CLI reacquisition; DISCRIMINATORS.json"
+    },
+    {
+      "oracle": "DEP-002",
+      "tests": [
+        "DependencyTests.test_identity_shaped_raw_json_and_literal_result_are_data",
+        "DependencyTests.test_public_projected_source_identity_is_preserved_without_dereference",
+        "DependencyTests.test_public_predicate_identity_subject_and_json_domain_are_data"
+      ],
+      "evidence": "Raw and literal result/gap preservation; real source/JSON projection and finite predicate public routes"
+    },
+    {
+      "oracle": "DEP-003",
+      "tests": [
+        "DependencyTests.test_true_primary_provenance_and_carrier_support_must_exist",
+        "DependencyTests.test_declared_carrier_support_rejects_missing_and_tampered_parents",
+        "StoreTests.test_dependency_order_and_nonrecursive_operation_evidence"
+      ],
+      "evidence": "21 missing carrier-edge variants, true primary/provenance missing support, actual tamper refusal and reverse-order typed dependency publication"
+    },
+    {
+      "oracle": "DEP-004",
+      "tests": [
+        "DependencyTests.test_return_ownership_graph_preserves_quoted_actor_and_qualification_data",
+        "DependencyTests.test_unresolved_candidates_and_unknown_host_do_not_claim_support"
+      ],
+      "evidence": "Return ownership support versus opaque original actor/unknown qualification/Identity data; explicit qualified-operator proof edges still verified; unresolved relation candidate/late source/unknown host stays data"
+    },
+    {
+      "oracle": "DEP-005",
+      "tests": [
+        "ProcessTests.test_actor_side_public_mcp_writer_completes_before_actor_exit",
+        "all other original32owned controls"
+      ],
+      "evidence": "Final40suite reruns actual process/Writer/retry/replay/recovery/fault controls"
+    }
+  ],
+  "standing_form_scope": "Existing15control/10standing-form qualification gaps remain. This repair adds actual public data/refusal retention and a finite set of typed support adversaries, not all owner/semantic variants.",
+  "old_fixture_repair": "Two old tests used untyped raw child/dependency fields. They now use declared Observation->Context and resource owner edges, so their assertions test actual typed support rather than the removed shape inference.",
+  "unqualified": [
+    "Actual model/F_P usability",
+    "Full ordinary Product admission/semantic Return capture",
+    "Independent design/implementation acceptance",
+    "Installed qualification, Product promotion/release/benefit"
+  ]
+}

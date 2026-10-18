@@ -1,0 +1,111 @@
+{
+  "kind": "closed-source-first-expectation-return",
+  "recorded_utc": "2026-10-18T17:36:29.711062+00:00",
+  "consumer": "/root Executive",
+  "actor": "/root/ac_fd_independent_assurance Writer for evidence; native coordinator, no candidate assessment",
+  "actual_assessor_producer": {
+    "model_ids": [
+      "claude-opus-5-5"
+    ],
+    "session_id": "9a89ade9-58be-4f34-9ea7-c632d6485472",
+    "CLI_version": "2.1.302",
+    "provider": "firstParty",
+    "producer_evidence": "raw initial model event plus terminal modelUsage; distinct from model self-description"
+  },
+  "source_prompt_sha256": "e7eec043b71ac6a9a1029d58192ac2c2702b6b91acf9a461d43fb65684fe36ac",
+  "system_sha256": "e5bb1d7edd5dff46dd04b37827d7d40f34207695bd76ee7cfb5598a5f15859e1",
+  "raw_expectation_result": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/assurance/source_first_20261019/runs/claude_source_expectations_001/result.txt",
+  "raw_expectation_result_sha256": "04ce803821b90162ad85d68e20a6395b9847762a8f9ab2f340df7fb367d38615",
+  "raw_stream": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/assurance/source_first_20261019/runs/claude_source_expectations_001/stdout.stream.jsonl",
+  "raw_stream_sha256": "0f97503302f901e799f1a67fcde7fd3b9706511f11740d8e944352635a2d2609",
+  "producer_usage": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/assurance/source_first_20261019/runs/claude_source_expectations_001/producer-usage.json",
+  "producer_usage_sha256": "3226a0aca6d3ef88887884c18c9899c763224fda8155de5330af985109b4b2a0",
+  "attempt_metadata": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/assurance/source_first_20261019/runs/claude_source_expectations_001/attempt-final.json",
+  "process_outcome": {
+    "return_code": 0,
+    "timeout": false,
+    "elapsed_wall_seconds": 104.65501950006,
+    "process_end_observed": true,
+    "empty_temp_workspace_removed": true
+  },
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 132793,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 10072,
+    "output_tokens_details": {
+      "thinking_tokens": 1293
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 132793,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 10072,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 132793,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 132793
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 2,
+      "outputTokens": 10072,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 132793,
+      "webSearchRequests": 0,
+      "costUSD": 1.263792,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 1293,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_list_cost_usd": 1.263792,
+  "actual_calls": 1,
+  "automatic_retries": 0,
+  "isolation_observed": {
+    "initial_tools_empty": true,
+    "initial_MCP_empty": true,
+    "fresh_empty_temp_directory": true,
+    "model_override": false,
+    "event_parse_errors": []
+  },
+  "exposure": {
+    "candidate": "none; no candidate seen by coordinator or assessor",
+    "expectations_closed_before_candidate": true
+  },
+  "standing": "Completed source-only expectation acquisition. No candidate predicate was evaluated; no candidate core result, severity, disposition, priority, acceptance, benefit or release claim.",
+  "returned_expectation_scope": "All FD-001..013 operations, FDV families, method binding, decision completeness, authority/trust/effects/currentness/context/refusals, all three actors, result algebra/reuse, thin public interface and preservation/proof obligations.",
+  "returned_material_gaps": [
+    "No candidate or design/implementation work contract was supplied to the model",
+    "Additional deciding owners absent from supplied excerpt population: notably ACTIVATION \u00a74; REFERENCE_FRAME \u00a73/5/6/8/10/13; EXEC \u00a719 and profile selection/terms; FOUNDATIONS \u00a72; owner law for acceptance/qualification and all applicable assurance frames",
+    "No accepted Graphify ontology/design/preservation baseline/frozen-study inventory supplied",
+    "No explicit cross-family independence policy or Product-selected severity scale supplied to the model",
+    "Source map common-member digests differ from selected RC9; future candidate must declare exact supported owner-route binding/translation, not infer identity from labels",
+    "Source/custody/tree verification was external to the model; actual local deterministic checks remain separately recorded"
+  ],
+  "native_coordination_notes": [
+    "Missing-source notices do not create permission for another model call or candidate review. Executive selects any supplemental acquisition and independently binds frozen subject/work/independence/severity conditions.",
+    "A declared exact supported RC9-only capability may be lawful with explicit refusals for unsupported methods; the returned warning against hard-wiring is interpreted only against the actual caller-selected binding requirement, without rewriting the model record.",
+    "Producer binding is now available externally from raw CLI metadata; the model accurately said transport metadata was not supplied to it. This does not establish statistical independence or candidate adequacy."
+  ],
+  "next_action": "Return closed evidence to /root; await separately bound activation; no further model call, candidate access or repair inferred from this output."
+}

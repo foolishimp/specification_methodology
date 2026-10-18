@@ -1,0 +1,33 @@
+{
+  "schema": "a_c.test.execution-plan/1",
+  "run": "002",
+  "commands": [
+    {
+      "id": "tests-002",
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "a_c/build_tenants/graphify/test_env",
+        "-p",
+        "test_ac_support_core.py",
+        "-v"
+      ],
+      "environment": {
+        "PYTHONPYCACHEPREFIX": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/core/qualification-002/cache",
+        "A_C_CORE_QUALIFICATION_CUSTODY": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/core/qualification-002/execution-002"
+      },
+      "stdout_stderr": "tests-002.txt"
+    }
+  ],
+  "candidate": {
+    "a_c/build_tenants/graphify/code/ac_support_core.py": "97b099812fc1f6964c83cd7df678e4a1fd0575e941c74549689fe4944f008820",
+    "a_c/build_tenants/graphify/test_env/test_ac_support_core.py": "c464a299e766246d8ff2eb8b70e51dd4cb37501e206ba8ff561007ba4a7be99a"
+  },
+  "oracle_sha256": "18de4b10001f35b4e78b4626afd46769f059e2845734573bda0966cc35ba5b19",
+  "native_temp_root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T",
+  "reexecution_reason": "Recover observed fixture source-root alias; no source edit, no code re-pin."
+}

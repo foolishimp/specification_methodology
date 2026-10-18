@@ -1,0 +1,114 @@
+{
+  "schema": "a_c.live-binding-authoring-return/1",
+  "activation": "T008-live-binding-001",
+  "actor": {
+    "id": "/root/ac_fd_tenant_design",
+    "role": "Writer/Worker",
+    "consumer": "/root"
+  },
+  "state": "closed",
+  "value": "candidate_ready",
+  "cause": "Root qualification-only selection is appended; exact body/selector/successor task are available and static checks pass. Runtime remains held.",
+  "basis": {
+    "product": "urn:stdo:product-definition:a-c-implementations",
+    "WHAT_commit": "c2f67fec8154028d45d7cd7a2832dd4fade4d94b",
+    "builder_manifest": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "RC9_source": "c2cfa9b908d1722ae3f26c32fa4ece691083bdc3",
+    "standards_tree": "98de394b352179c25dfa63b0b59a9b6bdd43632d",
+    "profile_sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+  },
+  "ticket_before": {
+    "path": "a_c/.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md",
+    "sha256": "a34425295fe5fd2cbbd21406f0b0fc609245152a374267a47b5dcd3bd08d7fa2",
+    "preserved_copy": "a_c/.ai-workspace/qualification/t008/live-binding-001/T008.preimage.md"
+  },
+  "ticket_after": {
+    "path": "a_c/.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md",
+    "sha256": "ab06521088409bc6efa21caf95ff4dec5b8eadb7686c32e3c8866dfd72dc7abc",
+    "bytes": 45019
+  },
+  "binding_body": {
+    "path": "a_c/.ai-workspace/qualification/t008/live-binding-001/runtime-binding.selected.json",
+    "sha256": "bc1fc91bdf44ba68930487e910ab5199341b33b57081f52d871ce703184850b8",
+    "canonical_sha256": "34eeb8fc193d9a611e31d2ac2f11499ea16f7dee4464e199c629ca3f5e870567"
+  },
+  "binding_SourceRef": {
+    "engine": "workspace-regular-file",
+    "root": "product",
+    "path": ".ai-workspace/tickets/active/T-008-fd-tenant-implementation.md",
+    "object": null,
+    "sha256": "ab06521088409bc6efa21caf95ff4dec5b8eadb7686c32e3c8866dfd72dc7abc",
+    "selector": {
+      "lines": [
+        668,
+        728
+      ]
+    }
+  },
+  "successor_TASK_SourceRef": {
+    "engine": "workspace-regular-file",
+    "root": "product",
+    "path": ".ai-workspace/qualification/t008/live-binding-001/TASK.md",
+    "object": null,
+    "sha256": "6d777ece58832ec57185f47cbe69f714222329e600b3a190acac63d7d744fff2",
+    "selector": null
+  },
+  "definition_locator": "/reference_frame_bases/0/authority/3",
+  "definition_locator_resolves_existing_T008": true,
+  "current_seven_member_inventory": {
+    "a_c/build_tenants/graphify/design/fd-support.md": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f",
+    "a_c/.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md": "ab06521088409bc6efa21caf95ff4dec5b8eadb7686c32e3c8866dfd72dc7abc",
+    "a_c/build_tenants/graphify/design/fd-method-claude-rc9.json": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1",
+    "a_c/build_tenants/graphify/design/README.md": "f757ab636858c851cc500f5473ef0bc99a8d20ef2dfc209857917657895cf961",
+    "a_c/specification/REFERENCE_FRAME_BASIS.md": "5cda45d1f267a3f221703c7fcc42b100c7997d3a98c015b7faf4f46b21222b8a",
+    "a_c/specification/GOALS.md": "7f78e1a9834d1fc19fa421655e690c3b500138c66f94ff762337f57629351a03",
+    "a_c/stdo_a_c.json": "b0e013e6f9dabb9d3f31dd02c1a6909e9fc6418925a8d829f3bb1c2adf3dac1d"
+  },
+  "authored_evidence_before_return": {
+    "a_c/.ai-workspace/qualification/t008/live-binding-001/BINDING.admission.json": "a934a639cc460d487db3f2a1dec146eb8b47e7ac366e8c888ce1fe94015bde0d",
+    "a_c/.ai-workspace/qualification/t008/live-binding-001/BINDING.contract.txt": "b72544e4bf50ccc2ab701062ea01a39f9721b4aef0d6291d4cd5ea4afa47334f",
+    "a_c/.ai-workspace/qualification/t008/live-binding-001/BINDING.ref.json": "50f3302354733a3fa2ee10b5eae6678d2a6ecc8d900039f7579f87b1e62ae324",
+    "a_c/.ai-workspace/qualification/t008/live-binding-001/CHECKS.json": "7c9db50a6448c65c749c4325c117e0a7f167a10321755ed2e24fca2dc46d9c79",
+    "a_c/.ai-workspace/qualification/t008/live-binding-001/T008.diff": "640f925df1988011afbaf090b65cff28b6a370d380e5e3cb606ae0d5918ce5f0",
+    "a_c/.ai-workspace/qualification/t008/live-binding-001/T008.preimage.md": "a34425295fe5fd2cbbd21406f0b0fc609245152a374267a47b5dcd3bd08d7fa2",
+    "a_c/.ai-workspace/qualification/t008/live-binding-001/TASK.md": "6d777ece58832ec57185f47cbe69f714222329e600b3a190acac63d7d744fff2",
+    "a_c/.ai-workspace/qualification/t008/live-binding-001/TASK.ref.json": "ba7ca0a2063cf7a3e6a51df8faf4f455e2b4aafb71d936bd057540e37958f648",
+    "a_c/.ai-workspace/qualification/t008/live-binding-001/runtime-binding.selected.json": "bc1fc91bdf44ba68930487e910ab5199341b33b57081f52d871ce703184850b8"
+  },
+  "checks": {
+    "path": "a_c/.ai-workspace/qualification/t008/live-binding-001/CHECKS.json",
+    "sha256": "7c9db50a6448c65c749c4325c117e0a7f167a10321755ed2e24fca2dc46d9c79",
+    "all_declared_checks_passed": true,
+    "runtime_tests": 0,
+    "actual_actor_calls": 0
+  },
+  "preserved": {
+    "all_preexisting_ticket_bytes": true,
+    "original_preparation": true,
+    "HOW_PD_requirements_other_6_design_members": true,
+    "historical_proposals_and_assessments_not_relabelled": true
+  },
+  "selected_now": "product-policy-preflight/1 on guarded Core/current HOW for this bounded real-use qualification only; one Worker then two separately approved same-Reviewer activations, original artifact criteria unchanged.",
+  "held": [
+    "Integrated mechanical qualification must close",
+    "Root exact separate approval before each actual registered call",
+    "Actual runtime/packet/dependency/source/role/preimage/independence/exposure/return premises remain required"
+  ],
+  "reserved": [
+    "Separate ontology/design disposition",
+    "Root bounded task disposition after evidence",
+    "Jim Product acceptance/release"
+  ],
+  "actual_effects": {
+    "source_only": "a_c/.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md",
+    "operation": "append only",
+    "new_evidence_only_under": "a_c/.ai-workspace/qualification/t008/live-binding-001",
+    "actor_launch_target_write_runtime_model_Git_global_effects": false
+  },
+  "invalidators": [
+    "Ticket/SourceRef/Core/HOW/profile/PD/basis/authority drift",
+    "Broader work/call/write scope required",
+    "Required actual authority/capability/independence/currentness premise missing"
+  ],
+  "next": "Return exact current refs and STOP before runtime; no call approval, launch, guide write or continuation inferred."
+}

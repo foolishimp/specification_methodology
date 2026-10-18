@@ -1,0 +1,34 @@
+{
+  "actual_actor_calls": 0,
+  "command": [
+    "a_c/.venv/bin/python",
+    "-m",
+    "mypy",
+    "--strict",
+    "--follow-imports=silent",
+    "--cache-dir",
+    "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/a-c-actor-mypy-ojoe6_nj",
+    "a_c/build_tenants/graphify/examples/fd-support/actor_cli.py",
+    "a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py"
+  ],
+  "ended_ns": 1792355661526198000,
+  "environment": {
+    "MYPYPATH": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "exit_code": 0,
+  "scope": "owned helper/test typing only; imported peer implementation errors suppressed",
+  "source_identities": [
+    {
+      "path": "a_c/build_tenants/graphify/examples/fd-support/actor_cli.py",
+      "result": "parsed",
+      "sha256": "06cd55463fd23e45fbf56fa46de92b9ba49f6650e3dc5686e219544d5457b42c"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py",
+      "result": "parsed",
+      "sha256": "d1f15c0702be4d744712372f038c1f4ed0a79c19e67c6743b462b0172fb5c301"
+    }
+  ],
+  "started_ns": 1792355660629562000
+}

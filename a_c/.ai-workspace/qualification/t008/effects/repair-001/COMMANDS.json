@@ -1,0 +1,47 @@
+{
+  "schema": "a_c.effects-repair-check-invocations/1",
+  "final_owned_suite": {
+    "cwd": "/Users/jim/src/apps/specification_methodology",
+    "environment": {
+      "AC_SUPPORT_EFFECTS_PROOF_ROOT": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/effects/repair-001/proof-final"
+    },
+    "argv": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "a_c/build_tenants/graphify/test_env",
+      "-p",
+      "test_ac_support_effects.py",
+      "-v"
+    ],
+    "shell_pipeline": "set -o pipefail; combined stdout/stderr retained with tee TESTS.final.log",
+    "exit_code": 0
+  },
+  "final_strict_typing": {
+    "cwd": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify",
+    "argv": [
+      "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+      "-m",
+      "mypy",
+      "--strict",
+      "--follow-imports=silent",
+      "code/ac_support_effects.py",
+      "test_env/test_ac_support_effects.py",
+      "test_env/support_fixtures/local_actor.py"
+    ],
+    "combined_output": "TYPING.after.log",
+    "exit_code": 0
+  },
+  "historical_affected_runs": {
+    "selected_unittest_method": "test_ac_support_effects.ProcessTests.test_actor_side_public_mcp_writer_completes_before_actor_exit",
+    "before_log": "TEST.before.log",
+    "after_log": "TEST.after.log",
+    "raw_custody": [
+      "proof-before/",
+      "proof-after/"
+    ],
+    "full_shell_invocation": "Not independently transcribed in this carrier; source cut, selected engine/method and unedited raw outputs/custody are retained. No fabricated command transcript."
+  }
+}

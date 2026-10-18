@@ -1,0 +1,46 @@
+{
+  "actual_actor_calls": 0,
+  "command": [
+    "a_c/.venv/bin/python",
+    "-m",
+    "unittest",
+    "-v",
+    "a_c.build_tenants.graphify.test_env.test_ac_support_interfaces.ActorCliTransportTests"
+  ],
+  "ended_ns": 1792355618843753000,
+  "environment": {
+    "AC_ACTOR_TRANSPORT_TEST_EVIDENCE": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/interfaces/actor_transport/fixtures-001",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "exit_code": 0,
+  "scope": "controlled optional actor-helper process fixtures only; no support CLI/MCP integration or real provider/model",
+  "sources_after": [
+    {
+      "path": "a_c/build_tenants/graphify/examples/fd-support/actor_cli.py",
+      "sha256": "06cd55463fd23e45fbf56fa46de92b9ba49f6650e3dc5686e219544d5457b42c"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py",
+      "sha256": "d1f15c0702be4d744712372f038c1f4ed0a79c19e67c6743b462b0172fb5c301"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/ac_support_core.py",
+      "sha256": "97b099812fc1f6964c83cd7df678e4a1fd0575e941c74549689fe4944f008820"
+    }
+  ],
+  "sources_before": [
+    {
+      "path": "a_c/build_tenants/graphify/examples/fd-support/actor_cli.py",
+      "sha256": "06cd55463fd23e45fbf56fa46de92b9ba49f6650e3dc5686e219544d5457b42c"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py",
+      "sha256": "d1f15c0702be4d744712372f038c1f4ed0a79c19e67c6743b462b0172fb5c301"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/ac_support_core.py",
+      "sha256": "97b099812fc1f6964c83cd7df678e4a1fd0575e941c74549689fe4944f008820"
+    }
+  ],
+  "started_ns": 1792355616252909000
+}

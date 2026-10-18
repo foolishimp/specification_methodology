@@ -1,0 +1,20 @@
+{
+  "failed_cut": "interfaces-002",
+  "failures": 1,
+  "observed": "All prior36controls passed; new canonical setup positive passed. Extra test incorrectly assumed trusted startup policy-path parent aliases are prohibited. Exact policy bytes plus canonical registered bindings allow that alias.",
+  "preimages": [
+    {
+      "bytes": 45343,
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py",
+      "sha256": "c5abccddf881c9d93fdbe262b342e88d25e07fc558c3c2d539520f062b234a8e"
+    },
+    {
+      "bytes": 10717,
+      "path": "a_c/build_tenants/graphify/examples/fd-support/README.md",
+      "sha256": "86253c11a205a46fbb9ca9f7174c9b6cb8a1fa4bc098afcc4a7a26274e021efe"
+    }
+  ],
+  "repair": "Negative control explicitly configures an aliased evidence/result root under a separately exact bad policy; preserves actual source/evidence component refusal. Public wording narrowed to those registered paths.",
+  "scope": "source-derived integration-control correction; no runtime code change",
+  "source_owner": "Core Runtime.from_policy/_regular_bytes and protected Effects EvidenceStore directory checks; no general startup-policy ancestor prohibition declared"
+}

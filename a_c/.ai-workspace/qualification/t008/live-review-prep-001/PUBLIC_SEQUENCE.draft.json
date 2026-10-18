@@ -1,0 +1,162 @@
+{
+  "CLI_shape": [
+    "<exact registered Python>",
+    "<exact ac_support.py>",
+    "--policy",
+    "<exact selected policy path>",
+    "--policy-sha256",
+    "<actual policy raw SHA>",
+    "--principal",
+    "<fixed registered principal>",
+    "call",
+    "--request",
+    "<actual full-envelope request file or ->"
+  ],
+  "MCP_shape": "same full envelope as tools/call.arguments; exact tool name equals operation; JSON-RPC id separate from stable full request id; pinned2025-11-25 lifecycle",
+  "actual_actor_or_operation_calls": 0,
+  "acyclic_preparation": [
+    "Reviewer tool policy (no executors) and fixed same identity/history first",
+    "explicit MCP config pins exact tool policy SHA",
+    "separate phase helper plans pin config/tool policy/native/dependencies and own fresh raw evidence directories",
+    "outer Executive policy registers exact phase executors; it never changes an already running Attempt"
+  ],
+  "schema": "a_c.review-public-sequence-draft/1",
+  "state": "DRAFT non-invokable template; no operation executed",
+  "steps": [
+    {
+      "actor": "Executive /root",
+      "operation": "workspace.observe",
+      "purpose": "current exact final population before preparing each Context; a same-policy writer observation belongs to Worker tool policy, not reused across hashes"
+    },
+    {
+      "actor": "Executive /root",
+      "operation": "context.assemble",
+      "purpose": "materialized source-only expectation packet; every candidate direct ref absent or exact permitted late route; no pre-expectation candidate bytes"
+    },
+    {
+      "actor": "Executive /root",
+      "operation": "contract.preflight",
+      "purpose": "actual selected Product binding/grant/executor/result key, exact Context/observations; no active grant created here"
+    },
+    {
+      "actor": "Executive /root",
+      "operation": "dispatch.start",
+      "purpose": "only after exact per-call Root approval; one actual registered native helper plan, no replay-as-retry"
+    },
+    {
+      "actor": "Reviewer",
+      "full_envelope_template": {
+        "arguments": {
+          "encoding": "utf8",
+          "source": {
+            "held_until_final_freeze": "one permitted exact governing SourceRef/chunk"
+          }
+        },
+        "id": "stable-unique-review-source-id",
+        "operation": "source.read",
+        "schema": "a_c.fd-support.request/1"
+      },
+      "operation": "source.read"
+    },
+    {
+      "actor": "Reviewer",
+      "full_envelope_template": {
+        "arguments": {
+          "artifact": {
+            "held_until_final_freeze": "actual source.read response.evidence"
+          }
+        },
+        "id": "stable-unique-review-operation-evidence-id",
+        "operation": "evidence.read",
+        "schema": "a_c.fd-support.request/1"
+      },
+      "operation": "evidence.read"
+    },
+    {
+      "actor": "Reviewer",
+      "full_envelope_template": {
+        "arguments": {
+          "candidate": {
+            "held_until_final_freeze": "actual primary guide SourceRef, locator only here"
+          },
+          "claim": {
+            "held_until_final_freeze": "actual complete claim SourceRef"
+          },
+          "comparison": null,
+          "expectation_body": {
+            "source_inputs": {
+              "held_until_final_freeze": "actual earlier same-actor verified OperationEvidence.payload.acquisitions"
+            },
+            "text": {
+              "held_until_final_freeze": "actual Reviewer-authored source-derived text"
+            }
+          },
+          "expectations": null,
+          "phase": "expectation",
+          "proof": [],
+          "sources": []
+        },
+        "id": "stable-unique-expectation-id",
+        "operation": "review.prepare",
+        "schema": "a_c.fd-support.request/1"
+      },
+      "operation": "review.prepare"
+    },
+    {
+      "actor": "Executive /root",
+      "operations": [
+        "dispatch.observe",
+        "events.wait",
+        "return.capture",
+        "return.check"
+      ],
+      "purpose": "retain actual output_finalized raw/final producer relation, exact initial ReturnContract and explicit null-expectation gap; no semantic answer repair"
+    },
+    {
+      "actor": "Executive /root",
+      "purpose": "freeze real expectation ArtifactRef into second ReturnContract and a new Context; separately approve actual assessment call; same fixed Reviewer tool policy/history"
+    },
+    {
+      "actor": "Reviewer",
+      "full_envelope_template": {
+        "arguments": {
+          "candidate": {
+            "held_until_final_freeze": "identical actual primary guide SourceRef"
+          },
+          "claim": {
+            "held_until_final_freeze": "identical actual complete claim SourceRef"
+          },
+          "comparison": null,
+          "expectation_body": null,
+          "expectations": {
+            "held_until_final_freeze": "actual earlier expectation ArtifactRef"
+          },
+          "phase": "candidate",
+          "proof": {
+            "held_until_final_freeze": "actual selected raw proof SourceRefs"
+          },
+          "sources": []
+        },
+        "id": "stable-unique-candidate-phase-id",
+        "operation": "review.prepare",
+        "schema": "a_c.fd-support.request/1"
+      },
+      "operation": "review.prepare"
+    },
+    {
+      "actor": "Reviewer",
+      "operation": "source.read",
+      "purpose": "acquire actual candidate/proof UTF8 chunks, assess against its own earlier expectations, then actual opaque final closed return"
+    },
+    {
+      "actor": "Executive /root",
+      "operations": [
+        "dispatch.observe",
+        "events.wait",
+        "return.capture",
+        "return.check"
+      ],
+      "purpose": "retain actual assessment/check/coverage/gaps; task and Product dispositions remain with actual owner"
+    }
+  ]
+}

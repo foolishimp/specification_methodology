@@ -37,3 +37,47 @@ T-007's Writer owns only its named common source/ticket territory; its frozen
 return is assessed by a nonauthor. This source increment establishes no new
 consumer frame set, lifecycle state, actor configuration or method-owned
 decision rule. Future tool checks bind the caller's exact selected contracts.
+
+## T-008 owner-selected RC9 execution configuration
+
+Jim's [implementation instruction](../.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md#owner-instruction)
+selects Claude RC9 for the bounded Graphify-tenant implementation of the
+committed deterministic-support WHAT. Source
+`c2cfa9b908d1722ae3f26c32fa4ece691083bdc3`, custody
+`3a2097137c3588ba44b98e3ea801ac7f2be1daf0` and standards tree
+`98de394b352179c25dfa63b0b59a9b6bdd43632d` bind the exact work-scoped candidate.
+The [RC9 support binding](../build_tenants/graphify/design/fd-method-claude-rc9.json)
+records exact member bytes and owner clauses. This explicit candidate dogfood
+selects EXECUTIVE_BASELINE and DESIGN_MODULE for this engagement; it changes
+no installed construction constitution, common derivation history, calculus
+identity, Product composition or release status.
+
+Executive `/root` selects bounded dependency-ready work, consumes exact closed
+returns and records dispositions through an activated Writer. It mutates no
+candidate/Product/worktree bytes while Executive. Writer/Workers receive exact
+operation/grant/territory and stop at return. Independent Reviewers acquire
+source/subject/proof themselves, record source-derived expectations before
+candidate exposure, edit no candidate and return to the Executive. A fresh
+author context supplies no independence. All roles preserve RC9's existing
+result, admission, effects and return relations by reference; a_c defines no
+replacement lifecycle or role policy.
+
+The T-008 design contract has a separately checked external bootstrap admission
+receipt bound to its exact digest and the owner's existing work instruction.
+This is bounded admission evidence, not qualification of the future public
+admission tool or admission of the upstream outcome. Each subsequent code,
+review, recording or checkpoint activation needs its own exact granted contract.
+No repeated human permission ceremony follows where current authority already
+covers the action. Jim retains scope, meaning, Product acceptance and release.
+
+| Work-scoped frame | Selected owner and bounded question | Result boundary |
+|---|---|---|
+| Executive | Claude RC9 EXECUTIVE_BASELINE §§6/8/12/19; select/consume/dispose within T-008's implementation mandate and current source basis. | No Executive mutation or inferred owner acceptance. |
+| Writer/Worker design/construction | RC9 §§9/12/19, ACTIVATION §§1–3/7 and DESIGN_MODULE §§5/7; construct the exact selected design/code/proof with a named operation and territory. | Candidate availability and separate performed-check results; stop at return. |
+| Nonauthor review | RC9 §10/17/19, EVALUATION §§2–4 and ASSURANCE; source-first independent assessment of frozen exact design/runtime/proof within the supplied independence basis. | Evidence-bound findings; no repairs, priority, disposition or self-acceptance. |
+
+Initial design is a [candidate](../build_tenants/graphify/design/fd-support.md).
+Implementation and ordinary-use qualification are downstream of its required
+assessment/disposition; benefit, full calculus conformance and release remain
+unqualified. Deferred common requirements are not silently relabeled by this
+work-scoped configuration record.

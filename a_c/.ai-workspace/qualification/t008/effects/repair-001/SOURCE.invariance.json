@@ -1,0 +1,44 @@
+{
+  "schema": "a_c.effects-repair-source-invariance/1",
+  "before_final_tests": {
+    "files": {
+      "code/ac_support_effects.py": "b7f6cb4dc66209e6bf463d41eb0d9100e80b4418188185d3d831205968dc4fb3",
+      "code/ac_support_core.py": "97b099812fc1f6964c83cd7df678e4a1fd0575e941c74549689fe4944f008820",
+      "code/ac_support.py": "4d1ea7fe98ec1b53f2a19d9a2fef2b3fbb070624c955fbb1e9e48f5cc88011b1",
+      "code/ac_graph.py": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+      "test_env/test_ac_support_effects.py": "0ddca158a8dddcae72c6a7e30c2ffe01a4ca07029031c51be6f58285ec75368e",
+      "test_env/support_fixtures/local_actor.py": "9c3c0fd8fe563f96db6cb00d95989fd319a6518b006f0efffcfd3d48caf6838a",
+      "design/fd-method-claude-rc9.json": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+    },
+    "scope": "Owned repair candidate with actual composed MCP Worker Writer control; peer cut historical, not integrated acceptance"
+  },
+  "after_final_tests": {
+    "code/ac_support_effects.py": "b7f6cb4dc66209e6bf463d41eb0d9100e80b4418188185d3d831205968dc4fb3",
+    "code/ac_support_core.py": "97b099812fc1f6964c83cd7df678e4a1fd0575e941c74549689fe4944f008820",
+    "code/ac_support.py": "4d1ea7fe98ec1b53f2a19d9a2fef2b3fbb070624c955fbb1e9e48f5cc88011b1",
+    "code/ac_graph.py": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+    "test_env/test_ac_support_effects.py": "0ddca158a8dddcae72c6a7e30c2ffe01a4ca07029031c51be6f58285ec75368e",
+    "test_env/support_fixtures/local_actor.py": "9c3c0fd8fe563f96db6cb00d95989fd319a6518b006f0efffcfd3d48caf6838a",
+    "design/fd-method-claude-rc9.json": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+  },
+  "same_exact_cut": true,
+  "previous_closed_return_raw_sha256": "ac1a0c1f3591e1f639d1fcb731b35afc34027cf4e79ebe608ae2eedf036e3bb3",
+  "previous_manifest_and_referenced_evidence_verified_unchanged": {
+    "ACTIVATION.draft.json": "76cf40b38cf1b5785c663268f45e30ef5c0c5256deac69dcf725a87576ddb451",
+    "IMPLEMENTATION.contract.txt": "f3fddbea4cf462f4bb62d45a99cdb7b1d624a47e7d56f73038656b76fea75fd8",
+    "IMPLEMENTATION.admission.json": "93bd559b29bc1b2f25e81fe83e4e7b9e22b00f11bf269288fa247ca6d55b2142",
+    "SUPERVISOR_BINDING.clarification.txt": "6401074699ba5a4058742704c5db72344bcd19ce7013a1276f6f807fe75aa318",
+    "RETRY_RECONCILIATION.clarification.txt": "62df00bd55e20e7d585c50910e104406c3f5c8d303b3f15c93a81b19475128fc",
+    "CONTROL_MAP.json": "66951da54010f38129f5bbcbdee8b6eac5cd6873b93e627a07099fd3341ca9b8",
+    "CHECKS.json": "626e9ba3f3b33474e23e069a251b1806e67b46a32ad87ae86f8d4464c531b01d",
+    "PROOF.manifest.json": "09414e21da9c98e2e8d7c3b5883e9c8402cb8223295aee38a1f748358fcda3b8",
+    "CANDIDATE.before-tests.json": "3e31e8a3e93e29c6a476ce63e3f925a66ff9ae4c35304648695f74ac3fdd71f2",
+    "CANDIDATE.json": "9e975ef6f080195b538a2d0ae768474091138f15c52e852d52ecfd066545d5bb",
+    "TESTS.final.log": "8357fd91e5aa37eae1fccebc59fde5a56cf22f98dcb588ad1fa8bf6194440958",
+    "TYPING.final.log": "8228fcc5ce46d42d01caf3cd941f4e9c5f2bcc372bb5b147a2f0572d2dd675a8",
+    "candidate/code/ac_support_effects.py": "b6b09bc044894471ea38f7418eadfa988aaebd02f14a04e3030456037fa70fb4",
+    "candidate/test_env/test_ac_support_effects.py": "510e8167ec34ff58743c6ca7f108acdff9def95d800cc787372479962e726ee9",
+    "candidate/test_env/support_fixtures/local_actor.py": "991c3481dc86841f9c912321e635e57c93881117295a0a5e9866380356941819"
+  },
+  "claim": "Exact final test cut and original frozen closed-return evidence are byte-conserved; this does not infer integrated qualification."
+}

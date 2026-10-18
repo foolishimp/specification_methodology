@@ -1,0 +1,70 @@
+{
+  "activation": "T-008-core-qualification-002",
+  "candidate": {
+    "a_c/build_tenants/graphify/code/ac_support_core.py": {
+      "bytes": 209760,
+      "sha256": "97b099812fc1f6964c83cd7df678e4a1fd0575e941c74549689fe4944f008820"
+    },
+    "a_c/build_tenants/graphify/test_env/test_ac_support_core.py": {
+      "bytes": 91118,
+      "sha256": "c464a299e766246d8ff2eb8b70e51dd4cb37501e206ba8ff561007ba4a7be99a"
+    }
+  },
+  "code_repair_needed": false,
+  "execution_facts": "EXECUTION_FACTS.json",
+  "new_controls": [
+    {
+      "expected_authority": "CONTROL_AUTHORITY.json",
+      "id": "FD012-SURVIVOR-001",
+      "observed": "Original falsified evaluation/old subject/history preserved; all four bound preservation conditions and both finite completeness conditions actually satisfied; explicit separate current retention relation and one unchanged check, no affected candidates/gaps.",
+      "test": "test_refresh_preserves_falsified_original_with_four_conditions_and_certified_frontier"
+    },
+    {
+      "id": "FD012-SURVIVOR-002",
+      "observed": "Null claim_scope evaluation leaves named missing condition gap and supported_applicability false; original verdict/subject/history unchanged.",
+      "test": "test_refresh_missing_preservation_condition_withholds_reuse_without_rewriting_history"
+    },
+    {
+      "id": "FD012-SURVIVOR-003",
+      "observed": "Actual current-bound claim_scope check is falsified; supported_applicability false; original verdict/subject/history unchanged.",
+      "test": "test_refresh_falsified_preservation_condition_withholds_reuse_without_rewriting_history"
+    }
+  ],
+  "prior_preservation": "PRESERVATION_CHECK.json",
+  "qualification_limit": "Actual finite source-bound predicate executions through checks.evaluate; test-controlled protected memory operation provenance, no F_P or global semantic completeness assertion.",
+  "raw_custody": "RAW_CUSTODY_MANIFEST.json",
+  "run_results": [
+    {
+      "all_three_added_controls_passed": true,
+      "commands": "COMMANDS-001.json",
+      "diagnosis": "FAILED_RUN-001.json",
+      "failed_run_retained": true,
+      "passed": 57,
+      "run": "001",
+      "test_exit_code": 1,
+      "test_raw": "tests-001.txt",
+      "tests": 58
+    },
+    {
+      "commands": "COMMANDS-002.json",
+      "passed": 58,
+      "run": "002",
+      "source_code_or_test_changed_since_run001": false,
+      "test_exit_code": 0,
+      "test_raw": "tests-002.txt",
+      "test_seconds": "2.479",
+      "tests": 58
+    },
+    {
+      "commands": "COMMANDS-001.json",
+      "exit_code": 0,
+      "files": 2,
+      "mode": "--strict",
+      "ran_after_final_test_source_change": true,
+      "raw": "mypy-001.txt",
+      "run": "mypy-001"
+    }
+  ],
+  "schema": "a_c.core-qualification-checks/1",
+  "scope": "Finite FD012/FDV002 module preservation/survivor controls plus unchanged preceding module controls and strict typing; no independent semantic/benefit qualification."
+}

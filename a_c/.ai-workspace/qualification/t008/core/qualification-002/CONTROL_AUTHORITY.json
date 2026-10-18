@@ -1,0 +1,71 @@
+{
+  "schema": "a_c.test.source-selected-controls/1",
+  "activation": "T-008-core-qualification-002",
+  "recorded_before_candidate_test_execution": true,
+  "sources": [
+    {
+      "path": "a_c/specification/requirements/fd-support-tools.md",
+      "anchor": "REQ-AC-FD-012",
+      "sha256": "e3fcebd7e9fbc60dc36ed4c02ee834a96f14226af134809c938169d4712dfc23"
+    },
+    {
+      "path": "a_c/specification/requirements/fd-support-verification.md",
+      "anchor": "REQ-AC-FDV-002 and SC-AC-FD-013",
+      "sha256": "3746e614a5ddc3f0a551e926998f16d6101cc037c5c43b879b4447b017a8dbdf"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/design/fd-support.md",
+      "selected_sha256": "32095ebef2f2bb1d5a5328faecc576f87fdaae788cdd23570374b0eea4fb9a70",
+      "section": "Refresh declarations and invalidators; finite source-selected retention row"
+    },
+    {
+      "path": "IMPLEMENTATION.contract.txt",
+      "sha256": "930d62a9cf31cbe7b48cd88a7b1a3e906703739d2dff971ded5ae894b5505ae5"
+    }
+  ],
+  "finite_scope": "One declared check and one unchanged data dependency, two exact observed file populations, no claim of semantic coverage outside the supplied finite contract.",
+  "cases": [
+    {
+      "id": "FD012-SURVIVOR-001",
+      "discriminator": "Original performed check is falsified on exact old subject/basis. All four current new-subject/new-basis preservation conditions are performed satisfied checks. Dependency and impact completeness are separate performed satisfied checks over the declared finite node/edge/material-source population. Actual old/current observation entries are equal.",
+      "expected": {
+        "unchanged_candidates": [
+          "stable-check"
+        ],
+        "affected_candidates": [],
+        "retention_supported": true,
+        "historical_core_value": "falsified",
+        "original_subject_unchanged": true,
+        "original_record_bytes_unchanged": true,
+        "original_history_members_unchanged": true,
+        "separate_current_retention_relation": true,
+        "no_reexecution_of_original_check": true
+      }
+    },
+    {
+      "id": "FD012-SURVIVOR-002",
+      "discriminator": "Same positive finite frontier and actual original falsified result; claim_scope evaluation is explicitly null.",
+      "expected": {
+        "retention_supported": false,
+        "named_claim_scope_gap": true,
+        "historical_core_value": "falsified",
+        "original_history_members_unchanged": true
+      }
+    },
+    {
+      "id": "FD012-SURVIVOR-003",
+      "discriminator": "New subject changes the declared claim scope, and the same bound preservation predicate actually performs to falsified on current new subject/basis. The original check remains falsified on old subject/basis.",
+      "expected": {
+        "retention_supported": false,
+        "claim_scope_core_value": "falsified",
+        "historical_core_value": "falsified",
+        "original_history_members_unchanged": true
+      }
+    }
+  ],
+  "limits": [
+    "Module controls supply finite F_P-owned scope and population; they do not prove completeness or semantic influence of an arbitrary codebase.",
+    "Protected memory resolver is a declared test control; actual check execution and exact input/evidence bytes are retained when custody is enabled.",
+    "No actor/model/provider or matched benefit study; no ontology/design acceptance, promotion or release qualification."
+  ]
+}

@@ -1,0 +1,1442 @@
+{
+  "basis": {
+    "HOW_sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f",
+    "WHAT": "c2f67fec8154028d45d7cd7a2832dd4fade4d94b"
+  },
+  "closed_module_proofs": [
+    {
+      "path": "a_c/.ai-workspace/qualification/t008/core/CLOSED_RETURN.json",
+      "scope": "initial55Core controls; superseded test qualification supplements below",
+      "sha256": "9b865a94b022033865f473973c7b3856b25e8d29520fbf5ad8fda40e04e6fcf3"
+    },
+    {
+      "path": "a_c/.ai-workspace/qualification/t008/core/qualification-002/CLOSED_RETURN.json",
+      "scope": "58Core controls including dedicated four-condition preservation and completeness-certified unchanged frontier",
+      "sha256": "59c0869f7aef9488b9b30e81020a3865e6f9309243c1d1b28a5e812cf9e243aa"
+    },
+    {
+      "path": "a_c/.ai-workspace/qualification/t008/effects/repair-002/CLOSED_RETURN.json",
+      "scope": "40Effects controls, typed dependency traversal/tamper and composed actual MCP Writer progress",
+      "sha256": "f3788704e86d57123973b4abce376e933073dfceb3926527b83a99042c30e2f1"
+    }
+  ],
+  "declared_unsupported_variants": [
+    "other method cuts",
+    "semantic sufficiency certification",
+    "inferred semantic edges",
+    "arbitrary executable predicates",
+    "OS sandboxing",
+    "external producer authentication",
+    "MCP server/discover",
+    "benefit or acceptance claims"
+  ],
+  "live_path": "One separately approved Worker plus two separately approved Reviewer activations per Root; expectations-first phase cannot claim assessment closure; see NEXT_PACKET_PREPARATION.md and REVIEWER_PHASES.selection.txt",
+  "observed_upstream_warnings": {
+    "cache_root_switch_warnings": 3,
+    "scope": "actual upstream warns when its cache root changes between disposable fixtures in one test process; raw warning retained; no code repair or performance claim. Separate check_upstream is its own actual process and passes."
+  },
+  "qualification": {
+    "actual_provider_calls": 0,
+    "actual_upstream_test_cases": [
+      "GenerationTests.test_actual_upstream_one_pass_a_c_aware_creation_and_discovery_custody",
+      "GenerationTests.test_actual_upstream_source_extract_and_generated_model_round_trip",
+      "GroundingTests.test_actual_upstream_grounded_proposal_round_trip",
+      "RepairTests.test_actual_upstream_repaired_proposal_round_trip"
+    ],
+    "errors": 0,
+    "failures": 0,
+    "full_suite_tests": 242,
+    "joined_strict_files": 9,
+    "public_helper_tests": 37,
+    "seconds": "31.620",
+    "skips": 0,
+    "upstream_checks": 9
+  },
+  "rows": [
+    {
+      "declared_fragment": "selected finite declared contract only",
+      "declared_prerequisites": [
+        "trusted exact policy",
+        "fixed principal operation grant",
+        "exact acquired input basis"
+      ],
+      "distinct_retained_operation_envelopes": 23,
+      "durable_operation_witnesses": [
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "8f42110976083d8fe2e5e5d7d2847d0a0a4899b891879d796e5889b4dc57a194",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/effects-fixtures/test_ac_support_effects_DependencyTests_test_public_predicate_identity_subject_and_json_domain_are_data/evidence/objects/8f42110976083d8fe2e5e5d7d2847d0a0a4899b891879d796e5889b4dc57a194.json",
+          "refusal": null,
+          "request_id": "literal-public-predicate",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "4f0315bc75f0d178a388c7bc95545cc44fe4d14b0981dca1e2e4f666a4f32de2",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/effects-fixtures/test_ac_support_effects_ProcessTests_test_selected_actual_reconciliation_allows_one_explicit_retry/evidence/objects/4f0315bc75f0d178a388c7bc95545cc44fe4d14b0981dca1e2e4f666a4f32de2.json",
+          "refusal": null,
+          "request_id": "actual-reconciliation-check",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "71dce804124096e3a7c13af4bbec18fe82a30ac79ccb59cf8885b13c63889001",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_preserves_falsified_original_with_four_conditions_and_certified_frontier/artifacts/71dce804124096e3a7c13af4bbec18fe82a30ac79ccb59cf8885b13c63889001.json",
+          "refusal": null,
+          "request_id": "request-5",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "ac6aaa057f71b635613fb147947e897d827f5ebcf1f7e9aa69169f68102e6eda",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_preserves_falsified_original_with_four_conditions_and_certified_frontier/artifacts/ac6aaa057f71b635613fb147947e897d827f5ebcf1f7e9aa69169f68102e6eda.json",
+          "refusal": null,
+          "request_id": "request-3",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "99205987bd71426e19e187fd6d4ee03eaad0ec5633d5006985cf9c698026688b",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_preserves_falsified_original_with_four_conditions_and_certified_frontier/artifacts/99205987bd71426e19e187fd6d4ee03eaad0ec5633d5006985cf9c698026688b.json",
+          "refusal": null,
+          "request_id": "request-4",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "d4f4ec3c52b696a8a70cabd7231692cec75e721be97184d8f78cedc3cec01fbd",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_preserves_falsified_original_with_four_conditions_and_certified_frontier/artifacts/d4f4ec3c52b696a8a70cabd7231692cec75e721be97184d8f78cedc3cec01fbd.json",
+          "refusal": null,
+          "request_id": "request-7",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "3ec048381350043c25e31b6e0c31f1186ca3f064b8ef8c721586778c8984861e",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_preserves_falsified_original_with_four_conditions_and_certified_frontier/artifacts/3ec048381350043c25e31b6e0c31f1186ca3f064b8ef8c721586778c8984861e.json",
+          "refusal": null,
+          "request_id": "request-8",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "5730b2699c8b2259cac218a6d0520232ea61af10776f4f2d62e307090cbf0249",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_preserves_falsified_original_with_four_conditions_and_certified_frontier/artifacts/5730b2699c8b2259cac218a6d0520232ea61af10776f4f2d62e307090cbf0249.json",
+          "refusal": null,
+          "request_id": "request-9",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "a44c09d18de26e63667b67ef76c323bbdb93d4080f96f4c1fac43261a167ef20",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_preserves_falsified_original_with_four_conditions_and_certified_frontier/artifacts/a44c09d18de26e63667b67ef76c323bbdb93d4080f96f4c1fac43261a167ef20.json",
+          "refusal": null,
+          "request_id": "request-6",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "f5af91ed02893def02258bcb953ac6a662f10d4a4dc75bea9319590c19bafb0a",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_missing_preservation_condition_withholds_reuse_without_rewriting_history/artifacts/f5af91ed02893def02258bcb953ac6a662f10d4a4dc75bea9319590c19bafb0a.json",
+          "refusal": null,
+          "request_id": "request-9",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "93a37e5e3d61be3f578ac0797de89abddc488bbe8e32ff60a4ecba0ec8dd8123",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_missing_preservation_condition_withholds_reuse_without_rewriting_history/artifacts/93a37e5e3d61be3f578ac0797de89abddc488bbe8e32ff60a4ecba0ec8dd8123.json",
+          "refusal": null,
+          "request_id": "request-4",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "c5e61fb222b7a0d323584d6e3fd10e4389c6518108600f675c76acebb086b35e",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_missing_preservation_condition_withholds_reuse_without_rewriting_history/artifacts/c5e61fb222b7a0d323584d6e3fd10e4389c6518108600f675c76acebb086b35e.json",
+          "refusal": null,
+          "request_id": "request-3",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "04b4e14cc88fa530828cb72fbb88e93a87cc14c01ee8ae909d0451d75682d0d6",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_missing_preservation_condition_withholds_reuse_without_rewriting_history/artifacts/04b4e14cc88fa530828cb72fbb88e93a87cc14c01ee8ae909d0451d75682d0d6.json",
+          "refusal": null,
+          "request_id": "request-7",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "9af6ea7ab0be96a77f88a0f07be0d7068e4d8df36729d5f633f7b2f9e59a2e7d",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_missing_preservation_condition_withholds_reuse_without_rewriting_history/artifacts/9af6ea7ab0be96a77f88a0f07be0d7068e4d8df36729d5f633f7b2f9e59a2e7d.json",
+          "refusal": null,
+          "request_id": "request-6",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "1394473a00c8361d23946b43f6f5f866f6f39426ff36141db28f893d50176007",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_missing_preservation_condition_withholds_reuse_without_rewriting_history/artifacts/1394473a00c8361d23946b43f6f5f866f6f39426ff36141db28f893d50176007.json",
+          "refusal": null,
+          "request_id": "request-8",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "4cc79986ed91b597e7b01ff9fdf5261754b2ea85005ad8bb7a8a1b61a5fb297d",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_missing_preservation_condition_withholds_reuse_without_rewriting_history/artifacts/4cc79986ed91b597e7b01ff9fdf5261754b2ea85005ad8bb7a8a1b61a5fb297d.json",
+          "refusal": null,
+          "request_id": "request-5",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "83493ced147e4882e0c60eb0cb35237527499f164ee09c0397d8a0488bd4d399",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_falsified_preservation_condition_withholds_reuse_without_rewriting_history/artifacts/83493ced147e4882e0c60eb0cb35237527499f164ee09c0397d8a0488bd4d399.json",
+          "refusal": null,
+          "request_id": "request-4",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "563f214e8f05aa2de54c5e3260052055880c3b0413884f0e48589e225bd8fd82",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_falsified_preservation_condition_withholds_reuse_without_rewriting_history/artifacts/563f214e8f05aa2de54c5e3260052055880c3b0413884f0e48589e225bd8fd82.json",
+          "refusal": null,
+          "request_id": "request-8",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "df7a20579cae7643859d631500af904f7e75dbce4f57a9a2f79313e6a77d03da",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_falsified_preservation_condition_withholds_reuse_without_rewriting_history/artifacts/df7a20579cae7643859d631500af904f7e75dbce4f57a9a2f79313e6a77d03da.json",
+          "refusal": null,
+          "request_id": "request-5",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "96452c9ed43e209f3b372161d19091e36e91898f1b3c357ffaf4b51a20e51684",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_falsified_preservation_condition_withholds_reuse_without_rewriting_history/artifacts/96452c9ed43e209f3b372161d19091e36e91898f1b3c357ffaf4b51a20e51684.json",
+          "refusal": null,
+          "request_id": "request-9",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "67bc7b917baf61178f0a502986f784069e089a79759016520fcc561d49edc9fe",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_falsified_preservation_condition_withholds_reuse_without_rewriting_history/artifacts/67bc7b917baf61178f0a502986f784069e089a79759016520fcc561d49edc9fe.json",
+          "refusal": null,
+          "request_id": "request-3",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "9ad3d4f403a55e954204fa46a30035c760265281fa49bb1693f7548161a91cfa",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_falsified_preservation_condition_withholds_reuse_without_rewriting_history/artifacts/9ad3d4f403a55e954204fa46a30035c760265281fa49bb1693f7548161a91cfa.json",
+          "refusal": null,
+          "request_id": "request-7",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "7970e3b2cc44e6ac846c0c2ff29a54410f9a1d996278a762f125315eefeda920",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_falsified_preservation_condition_withholds_reuse_without_rewriting_history/artifacts/7970e3b2cc44e6ac846c0c2ff29a54410f9a1d996278a762f125315eefeda920.json",
+          "refusal": null,
+          "request_id": "request-6",
+          "status": "ok"
+        }
+      ],
+      "executed_test_source_literal_mentions": {
+        "test_ac_support_core.py": [
+          "CoreTests.test_predicate_decisive_branch_retains_gaps_and_unsupported_unperformed",
+          "CoreTests.test_bound_source_predicate_executes_actual_json",
+          "CoreTests.test_relations_unknown_conditions_conservatively_include_and_nonrecursive_binding",
+          "CoreTests.test_relations_excluded_obligation_keeps_raw_missing_mapping_fact",
+          "CoreTests.test_all_closed_codes_map_without_overwriting_inner_values"
+        ],
+        "test_ac_support_effects.py": [
+          "DependencyTests.test_public_predicate_identity_subject_and_json_domain_are_data",
+          "ProcessTests.test_selected_actual_reconciliation_allows_one_explicit_retry"
+        ]
+      },
+      "operation": "checks.evaluate",
+      "requirements": [
+        "REQ-AC-FD-010"
+      ],
+      "status_counts": {
+        "ok": 23
+      },
+      "unexecuted_variants": [
+        "Any supported input/role/host/failure combination outside the named retained test controls",
+        "Real provider/CLI decoder path and fresh semantic Executive/Worker/Reviewer task"
+      ],
+      "unmatched_static_test_mentions_not_counted_as_execution": {},
+      "witness_limits": [
+        "A source literal mention locates a test; it is not independently inferred runtime branch coverage",
+        "Only listed raw tests/envelopes substantiate finite scenarios, not every legal or refusal variant",
+        "Actual F_P task/model usability, whole-host fit, semantic sufficiency and acceptance are unperformed"
+      ]
+    },
+    {
+      "declared_fragment": "selected finite declared contract only",
+      "declared_prerequisites": [
+        "trusted exact policy",
+        "fixed principal operation grant",
+        "exact acquired input basis"
+      ],
+      "distinct_retained_operation_envelopes": 0,
+      "durable_operation_witnesses": [],
+      "executed_test_source_literal_mentions": {
+        "test_ac_support_core.py": [
+          "CoreTests.test_context_role_packet_unknown_fields_refused",
+          "CoreTests.test_context_model_projection_retains_prepared_target_acquisition",
+          "CoreTests.test_evidence_read_inline_context_content_preserves_candidate_exposure"
+        ]
+      },
+      "operation": "context.assemble",
+      "requirements": [
+        "REQ-AC-FD-005"
+      ],
+      "status_counts": {},
+      "unexecuted_variants": [
+        "Any supported input/role/host/failure combination outside the named retained test controls",
+        "Real provider/CLI decoder path and fresh semantic Executive/Worker/Reviewer task",
+        "No durable OperationEvidence for this operation retained in this integration run; source-selected Core tests still executed as named"
+      ],
+      "unmatched_static_test_mentions_not_counted_as_execution": {},
+      "witness_limits": [
+        "A source literal mention locates a test; it is not independently inferred runtime branch coverage",
+        "Only listed raw tests/envelopes substantiate finite scenarios, not every legal or refusal variant",
+        "Actual F_P task/model usability, whole-host fit, semantic sufficiency and acceptance are unperformed"
+      ]
+    },
+    {
+      "declared_fragment": "selected finite declared contract only",
+      "declared_prerequisites": [
+        "trusted exact policy",
+        "fixed principal operation grant",
+        "exact acquired input basis"
+      ],
+      "distinct_retained_operation_envelopes": 3,
+      "durable_operation_witnesses": [
+        {
+          "bound_value": "refused(authority)",
+          "canonical_sha256": "2c5ec82d40f65ad86ac2afd79a86136aa6e89632a0e755e6ad9186cc89d10a55",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/public-fixtures/test_valid_preflight_is_denied_without_work_grant_or_executor/demo/evidence/objects/2c5ec82d40f65ad86ac2afd79a86136aa6e89632a0e755e6ad9186cc89d10a55.json",
+          "refusal": "authority_missing",
+          "request_id": "readonly-denied-001",
+          "status": "refused"
+        },
+        {
+          "bound_value": "refused(authority)",
+          "canonical_sha256": "545f1307de803840b267fe01023ef5d29e4aa3dfeaea129327d925a584bc6129",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/public-fixtures/test_mcp_protocol_errors_are_separate_from_bound_tool_refusal/demo/evidence/objects/545f1307de803840b267fe01023ef5d29e4aa3dfeaea129327d925a584bc6129.json",
+          "refusal": "authority_missing",
+          "request_id": "readonly-denied-001",
+          "status": "refused"
+        },
+        {
+          "bound_value": "refused(authority)",
+          "canonical_sha256": "9b5050939fc2b118514126d7b65b083184afabe5ecfe1da6cd49276bfe625a42",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/ordinary-demo-001/retained-demo/evidence/objects/9b5050939fc2b118514126d7b65b083184afabe5ecfe1da6cd49276bfe625a42.json",
+          "refusal": "authority_missing",
+          "request_id": "readonly-denied-001",
+          "status": "refused"
+        }
+      ],
+      "executed_test_source_literal_mentions": {
+        "test_ac_support_core.py": [
+          "CoreTests.test_preflight_actual_owner_binding_and_requester_target",
+          "CoreTests.test_preflight_forged_receipt_and_bad_target_sink_refuse",
+          "CoreTests.test_preflight_product_pointer_cannot_be_minted_by_policy",
+          "CoreTests.test_required_fit_predicate_stays_required_when_no_capacity_selected"
+        ],
+        "test_ac_support_effects.py": [
+          "ProcessTests.test_selected_actual_reconciliation_allows_one_explicit_retry"
+        ],
+        "test_ac_support_interfaces.py": [
+          "PublicInterfaceTests.test_mcp_protocol_errors_are_separate_from_bound_tool_refusal"
+        ]
+      },
+      "operation": "contract.preflight",
+      "requirements": [
+        "REQ-AC-FD-006"
+      ],
+      "status_counts": {
+        "refused": 3
+      },
+      "unexecuted_variants": [
+        "Any supported input/role/host/failure combination outside the named retained test controls",
+        "Real provider/CLI decoder path and fresh semantic Executive/Worker/Reviewer task"
+      ],
+      "unmatched_static_test_mentions_not_counted_as_execution": {},
+      "witness_limits": [
+        "A source literal mention locates a test; it is not independently inferred runtime branch coverage",
+        "Only listed raw tests/envelopes substantiate finite scenarios, not every legal or refusal variant",
+        "Actual F_P task/model usability, whole-host fit, semantic sufficiency and acceptance are unperformed"
+      ]
+    },
+    {
+      "declared_fragment": "selected finite declared contract only",
+      "declared_prerequisites": [
+        "trusted exact policy",
+        "fixed principal operation grant",
+        "exact acquired input basis"
+      ],
+      "distinct_retained_operation_envelopes": 0,
+      "durable_operation_witnesses": [],
+      "executed_test_source_literal_mentions": {
+        "test_ac_support_effects.py": [
+          "ProcessTests.test_cancel_records_request_and_signal_with_partial_effect"
+        ]
+      },
+      "operation": "dispatch.cancel",
+      "requirements": [
+        "REQ-AC-FD-007"
+      ],
+      "status_counts": {},
+      "unexecuted_variants": [
+        "Any supported input/role/host/failure combination outside the named retained test controls",
+        "Real provider/CLI decoder path and fresh semantic Executive/Worker/Reviewer task",
+        "No durable OperationEvidence for this operation retained in this integration run; source-selected Core tests still executed as named"
+      ],
+      "unmatched_static_test_mentions_not_counted_as_execution": {},
+      "witness_limits": [
+        "A source literal mention locates a test; it is not independently inferred runtime branch coverage",
+        "Only listed raw tests/envelopes substantiate finite scenarios, not every legal or refusal variant",
+        "Actual F_P task/model usability, whole-host fit, semantic sufficiency and acceptance are unperformed"
+      ]
+    },
+    {
+      "declared_fragment": "selected finite declared contract only",
+      "declared_prerequisites": [
+        "trusted exact policy",
+        "fixed principal operation grant",
+        "exact acquired input basis"
+      ],
+      "distinct_retained_operation_envelopes": 0,
+      "durable_operation_witnesses": [],
+      "executed_test_source_literal_mentions": {
+        "test_ac_support_effects.py": [
+          "ProcessTests.test_lost_actor_spawn_ack_preserves_effect_and_reentry_does_not_repeat"
+        ]
+      },
+      "operation": "dispatch.observe",
+      "requirements": [
+        "REQ-AC-FD-007"
+      ],
+      "status_counts": {},
+      "unexecuted_variants": [
+        "Any supported input/role/host/failure combination outside the named retained test controls",
+        "Real provider/CLI decoder path and fresh semantic Executive/Worker/Reviewer task",
+        "No durable OperationEvidence for this operation retained in this integration run; source-selected Core tests still executed as named"
+      ],
+      "unmatched_static_test_mentions_not_counted_as_execution": {},
+      "witness_limits": [
+        "A source literal mention locates a test; it is not independently inferred runtime branch coverage",
+        "Only listed raw tests/envelopes substantiate finite scenarios, not every legal or refusal variant",
+        "Actual F_P task/model usability, whole-host fit, semantic sufficiency and acceptance are unperformed"
+      ]
+    },
+    {
+      "declared_fragment": "selected finite declared contract only",
+      "declared_prerequisites": [
+        "trusted exact policy",
+        "fixed principal operation grant",
+        "exact acquired input basis"
+      ],
+      "distinct_retained_operation_envelopes": 0,
+      "durable_operation_witnesses": [],
+      "executed_test_source_literal_mentions": {
+        "test_ac_support_core.py": [
+          "CoreTests.test_executive_prepared_context_delivery_binds_actual_target_source"
+        ],
+        "test_ac_support_effects.py": [
+          "ProcessTests.test_selected_actual_reconciliation_allows_one_explicit_retry"
+        ]
+      },
+      "operation": "dispatch.start",
+      "requirements": [
+        "REQ-AC-FD-007"
+      ],
+      "status_counts": {},
+      "unexecuted_variants": [
+        "Any supported input/role/host/failure combination outside the named retained test controls",
+        "Real provider/CLI decoder path and fresh semantic Executive/Worker/Reviewer task",
+        "No durable OperationEvidence for this operation retained in this integration run; source-selected Core tests still executed as named"
+      ],
+      "unmatched_static_test_mentions_not_counted_as_execution": {},
+      "witness_limits": [
+        "A source literal mention locates a test; it is not independently inferred runtime branch coverage",
+        "Only listed raw tests/envelopes substantiate finite scenarios, not every legal or refusal variant",
+        "Actual F_P task/model usability, whole-host fit, semantic sufficiency and acceptance are unperformed"
+      ]
+    },
+    {
+      "declared_fragment": "selected finite declared contract only",
+      "declared_prerequisites": [
+        "trusted exact policy",
+        "fixed principal operation grant",
+        "exact acquired input basis"
+      ],
+      "distinct_retained_operation_envelopes": 0,
+      "durable_operation_witnesses": [],
+      "executed_test_source_literal_mentions": {
+        "test_ac_support_effects.py": [
+          "ProcessTests.test_sink_failure_and_bounded_fallback_remain_visible"
+        ]
+      },
+      "operation": "events.wait",
+      "requirements": [
+        "REQ-AC-FD-007"
+      ],
+      "status_counts": {},
+      "unexecuted_variants": [
+        "Any supported input/role/host/failure combination outside the named retained test controls",
+        "Real provider/CLI decoder path and fresh semantic Executive/Worker/Reviewer task",
+        "No durable OperationEvidence for this operation retained in this integration run; source-selected Core tests still executed as named"
+      ],
+      "unmatched_static_test_mentions_not_counted_as_execution": {},
+      "witness_limits": [
+        "A source literal mention locates a test; it is not independently inferred runtime branch coverage",
+        "Only listed raw tests/envelopes substantiate finite scenarios, not every legal or refusal variant",
+        "Actual F_P task/model usability, whole-host fit, semantic sufficiency and acceptance are unperformed"
+      ]
+    },
+    {
+      "declared_fragment": "selected finite declared contract only",
+      "declared_prerequisites": [
+        "trusted exact policy",
+        "fixed principal operation grant",
+        "exact acquired input basis"
+      ],
+      "distinct_retained_operation_envelopes": 8,
+      "durable_operation_witnesses": [
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "ac14f8e9c7c274187f026fa8f21f721abeac85818f705d175d491bc60f7e4ea1",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/effects-fixtures/test_ac_support_effects_DependencyTests_test_return_ownership_graph_preserves_quoted_actor_and_qualification_data/evidence/objects/ac14f8e9c7c274187f026fa8f21f721abeac85818f705d175d491bc60f7e4ea1.json",
+          "refusal": null,
+          "request_id": "read-original-return",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "537d7303572c5919aa17e31d97ddaa538e8b461ce30e44aaf154ce544926d8c6",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/effects-fixtures/test_ac_support_effects_DependencyTests_test_public_missing_input_preserves_original_refusal_and_readable_operation/evidence/objects/537d7303572c5919aa17e31d97ddaa538e8b461ce30e44aaf154ce544926d8c6.json",
+          "refusal": null,
+          "request_id": "read-refused-operation",
+          "status": "ok"
+        },
+        {
+          "bound_value": "refused(basis)",
+          "canonical_sha256": "bcbbc1a29e7f08cbd1e72fe0e7b51ad42c3655db53514435c7ae1197846a6e19",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/effects-fixtures/test_ac_support_effects_DependencyTests_test_public_missing_input_preserves_original_refusal_and_readable_operation/evidence/objects/bcbbc1a29e7f08cbd1e72fe0e7b51ad42c3655db53514435c7ae1197846a6e19.json",
+          "refusal": "source_missing",
+          "request_id": "missing-public-input",
+          "status": "refused"
+        },
+        {
+          "bound_value": "refused(basis)",
+          "canonical_sha256": "304ea6e066a2e50d621836f35a0f2504aa5dbb052bb7ab46cd94d192dd86b85c",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/public-fixtures/test_unavailable_ref_is_mcp_tool_refusal_with_acquirable_original_evidence/demo/evidence/objects/304ea6e066a2e50d621836f35a0f2504aa5dbb052bb7ab46cd94d192dd86b85c.json",
+          "refusal": "source_missing",
+          "request_id": "missing-evidence-mcp",
+          "status": "refused"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "3a4604989c138b4721d76f4970c78bdd3d7e9ea06c8a5ab01f854082b45b0c8a",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/public-fixtures/test_unavailable_ref_is_mcp_tool_refusal_with_acquirable_original_evidence/demo/evidence/objects/3a4604989c138b4721d76f4970c78bdd3d7e9ea06c8a5ab01f854082b45b0c8a.json",
+          "refusal": null,
+          "request_id": "mcp-refusal-fresh-cli",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "35b2a90b9dc99a7897a53f7c18bcd94aee4c9e0e494b66660e733b7cf65b038d",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/public-fixtures/test_original_operation_evidence_is_acquirable_in_fresh_cli/demo/evidence/objects/35b2a90b9dc99a7897a53f7c18bcd94aee4c9e0e494b66660e733b7cf65b038d.json",
+          "refusal": null,
+          "request_id": "fresh-evidence-reader",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "b19bee779421001a09403e7c34ab2449a8e5bc1d851d67ecde6e8846da4ad202",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/public-fixtures/test_unavailable_ref_preserves_original_cli_refusal_and_durable_operation/demo/evidence/objects/b19bee779421001a09403e7c34ab2449a8e5bc1d851d67ecde6e8846da4ad202.json",
+          "refusal": null,
+          "request_id": "acquire-missing-evidence-refusal",
+          "status": "ok"
+        },
+        {
+          "bound_value": "refused(basis)",
+          "canonical_sha256": "971ad4b8cf1b07bd6d882f79ec04437465490ec34cec968eabdb5f1473195777",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/public-fixtures/test_unavailable_ref_preserves_original_cli_refusal_and_durable_operation/demo/evidence/objects/971ad4b8cf1b07bd6d882f79ec04437465490ec34cec968eabdb5f1473195777.json",
+          "refusal": "source_missing",
+          "request_id": "missing-evidence-cli",
+          "status": "refused"
+        }
+      ],
+      "executed_test_source_literal_mentions": {
+        "test_ac_support_core.py": [
+          "CoreTests.test_evidence_read_inline_context_content_preserves_candidate_exposure"
+        ],
+        "test_ac_support_effects.py": [
+          "DependencyTests.test_public_missing_input_preserves_original_refusal_and_readable_operation",
+          "DependencyTests.test_return_ownership_graph_preserves_quoted_actor_and_qualification_data"
+        ],
+        "test_ac_support_interfaces.py": [
+          "PublicInterfaceTests.test_original_operation_evidence_is_acquirable_in_fresh_cli",
+          "PublicInterfaceTests.test_unavailable_ref_preserves_original_cli_refusal_and_durable_operation",
+          "PublicInterfaceTests.test_unavailable_ref_is_mcp_tool_refusal_with_acquirable_original_evidence"
+        ]
+      },
+      "operation": "evidence.read",
+      "requirements": [
+        "REQ-AC-FD-003"
+      ],
+      "status_counts": {
+        "ok": 5,
+        "refused": 3
+      },
+      "unexecuted_variants": [
+        "Any supported input/role/host/failure combination outside the named retained test controls",
+        "Real provider/CLI decoder path and fresh semantic Executive/Worker/Reviewer task"
+      ],
+      "unmatched_static_test_mentions_not_counted_as_execution": {},
+      "witness_limits": [
+        "A source literal mention locates a test; it is not independently inferred runtime branch coverage",
+        "Only listed raw tests/envelopes substantiate finite scenarios, not every legal or refusal variant",
+        "Actual F_P task/model usability, whole-host fit, semantic sufficiency and acceptance are unperformed"
+      ]
+    },
+    {
+      "declared_fragment": "selected finite declared contract only",
+      "declared_prerequisites": [
+        "trusted exact policy",
+        "fixed principal operation grant",
+        "exact acquired input basis"
+      ],
+      "distinct_retained_operation_envelopes": 0,
+      "durable_operation_witnesses": [],
+      "executed_test_source_literal_mentions": {
+        "test_ac_support_core.py": [
+          "CoreTests.test_new_model_wrappers_acquire_payload_and_refuse_unknown_seed"
+        ]
+      },
+      "operation": "graph.project",
+      "requirements": [
+        "REQ-AC-FD-003"
+      ],
+      "status_counts": {},
+      "unexecuted_variants": [
+        "Any supported input/role/host/failure combination outside the named retained test controls",
+        "Real provider/CLI decoder path and fresh semantic Executive/Worker/Reviewer task",
+        "No durable OperationEvidence for this operation retained in this integration run; source-selected Core tests still executed as named"
+      ],
+      "unmatched_static_test_mentions_not_counted_as_execution": {},
+      "witness_limits": [
+        "A source literal mention locates a test; it is not independently inferred runtime branch coverage",
+        "Only listed raw tests/envelopes substantiate finite scenarios, not every legal or refusal variant",
+        "Actual F_P task/model usability, whole-host fit, semantic sufficiency and acceptance are unperformed"
+      ]
+    },
+    {
+      "declared_fragment": "selected finite declared contract only",
+      "declared_prerequisites": [
+        "trusted exact policy",
+        "fixed principal operation grant",
+        "exact acquired input basis"
+      ],
+      "distinct_retained_operation_envelopes": 0,
+      "durable_operation_witnesses": [],
+      "executed_test_source_literal_mentions": {
+        "test_ac_support_core.py": [
+          "CoreTests.test_new_model_wrappers_acquire_payload_and_refuse_unknown_seed"
+        ]
+      },
+      "operation": "records.find",
+      "requirements": [
+        "REQ-AC-FD-003"
+      ],
+      "status_counts": {},
+      "unexecuted_variants": [
+        "Any supported input/role/host/failure combination outside the named retained test controls",
+        "Real provider/CLI decoder path and fresh semantic Executive/Worker/Reviewer task",
+        "No durable OperationEvidence for this operation retained in this integration run; source-selected Core tests still executed as named"
+      ],
+      "unmatched_static_test_mentions_not_counted_as_execution": {},
+      "witness_limits": [
+        "A source literal mention locates a test; it is not independently inferred runtime branch coverage",
+        "Only listed raw tests/envelopes substantiate finite scenarios, not every legal or refusal variant",
+        "Actual F_P task/model usability, whole-host fit, semantic sufficiency and acceptance are unperformed"
+      ]
+    },
+    {
+      "declared_fragment": "selected finite declared contract only",
+      "declared_prerequisites": [
+        "trusted exact policy",
+        "fixed principal operation grant",
+        "exact acquired input basis"
+      ],
+      "distinct_retained_operation_envelopes": 0,
+      "durable_operation_witnesses": [],
+      "executed_test_source_literal_mentions": {
+        "test_ac_support_core.py": [
+          "CoreTests.test_new_model_wrappers_acquire_payload_and_refuse_unknown_seed"
+        ]
+      },
+      "operation": "records.read",
+      "requirements": [
+        "REQ-AC-FD-003"
+      ],
+      "status_counts": {},
+      "unexecuted_variants": [
+        "Any supported input/role/host/failure combination outside the named retained test controls",
+        "Real provider/CLI decoder path and fresh semantic Executive/Worker/Reviewer task",
+        "No durable OperationEvidence for this operation retained in this integration run; source-selected Core tests still executed as named"
+      ],
+      "unmatched_static_test_mentions_not_counted_as_execution": {},
+      "witness_limits": [
+        "A source literal mention locates a test; it is not independently inferred runtime branch coverage",
+        "Only listed raw tests/envelopes substantiate finite scenarios, not every legal or refusal variant",
+        "Actual F_P task/model usability, whole-host fit, semantic sufficiency and acceptance are unperformed"
+      ]
+    },
+    {
+      "declared_fragment": "selected finite declared contract only",
+      "declared_prerequisites": [
+        "trusted exact policy",
+        "fixed principal operation grant",
+        "exact acquired input basis"
+      ],
+      "distinct_retained_operation_envelopes": 3,
+      "durable_operation_witnesses": [
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "8eee7ca8179f032e95f56446c13605fd4d110021a6612e1afbf2318c4bada8ec",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_preserves_falsified_original_with_four_conditions_and_certified_frontier/artifacts/8eee7ca8179f032e95f56446c13605fd4d110021a6612e1afbf2318c4bada8ec.json",
+          "refusal": null,
+          "request_id": "request-10",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "0c30f6ec1d6fe2071e2d056d43a15e19c2875db285afa9456a4c2d4baf8c1c82",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_missing_preservation_condition_withholds_reuse_without_rewriting_history/artifacts/0c30f6ec1d6fe2071e2d056d43a15e19c2875db285afa9456a4c2d4baf8c1c82.json",
+          "refusal": null,
+          "request_id": "request-10",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "6f7d25c8d308f80996ff2ad39b976a241f0b7f886eff99e33d3a5fe81e433f10",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_falsified_preservation_condition_withholds_reuse_without_rewriting_history/artifacts/6f7d25c8d308f80996ff2ad39b976a241f0b7f886eff99e33d3a5fe81e433f10.json",
+          "refusal": null,
+          "request_id": "request-10",
+          "status": "ok"
+        }
+      ],
+      "executed_test_source_literal_mentions": {
+        "test_ac_support_core.py": [
+          "CoreTests.test_refresh_preserves_falsified_original_with_four_conditions_and_certified_frontier",
+          "CoreTests.test_refresh_missing_preservation_condition_withholds_reuse_without_rewriting_history",
+          "CoreTests.test_refresh_falsified_preservation_condition_withholds_reuse_without_rewriting_history"
+        ]
+      },
+      "operation": "refresh.prepare",
+      "requirements": [
+        "REQ-AC-FD-012"
+      ],
+      "status_counts": {
+        "ok": 3
+      },
+      "unexecuted_variants": [
+        "Any supported input/role/host/failure combination outside the named retained test controls",
+        "Real provider/CLI decoder path and fresh semantic Executive/Worker/Reviewer task"
+      ],
+      "unmatched_static_test_mentions_not_counted_as_execution": {},
+      "witness_limits": [
+        "A source literal mention locates a test; it is not independently inferred runtime branch coverage",
+        "Only listed raw tests/envelopes substantiate finite scenarios, not every legal or refusal variant",
+        "Actual F_P task/model usability, whole-host fit, semantic sufficiency and acceptance are unperformed"
+      ]
+    },
+    {
+      "declared_fragment": "selected finite declared contract only",
+      "declared_prerequisites": [
+        "trusted exact policy",
+        "fixed principal operation grant",
+        "exact acquired input basis"
+      ],
+      "distinct_retained_operation_envelopes": 1,
+      "durable_operation_witnesses": [
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "06e6ade156582d43df6af375edf9b5c2e81a4876ad687c2d236071861a0fd376",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/effects-fixtures/test_ac_support_effects_DependencyTests_test_unresolved_candidates_and_unknown_host_do_not_claim_support/evidence/objects/06e6ade156582d43df6af375edf9b5c2e81a4876ad687c2d236071861a0fd376.json",
+          "refusal": null,
+          "request_id": "unresolved-relation",
+          "status": "ok"
+        }
+      ],
+      "executed_test_source_literal_mentions": {
+        "test_ac_support_effects.py": [
+          "DependencyTests.test_unresolved_candidates_and_unknown_host_do_not_claim_support"
+        ]
+      },
+      "operation": "relations.query",
+      "requirements": [
+        "REQ-AC-FD-004"
+      ],
+      "status_counts": {
+        "ok": 1
+      },
+      "unexecuted_variants": [
+        "Any supported input/role/host/failure combination outside the named retained test controls",
+        "Real provider/CLI decoder path and fresh semantic Executive/Worker/Reviewer task"
+      ],
+      "unmatched_static_test_mentions_not_counted_as_execution": {},
+      "witness_limits": [
+        "A source literal mention locates a test; it is not independently inferred runtime branch coverage",
+        "Only listed raw tests/envelopes substantiate finite scenarios, not every legal or refusal variant",
+        "Actual F_P task/model usability, whole-host fit, semantic sufficiency and acceptance are unperformed"
+      ]
+    },
+    {
+      "declared_fragment": "selected finite declared contract only",
+      "declared_prerequisites": [
+        "trusted exact policy",
+        "fixed principal operation grant",
+        "exact acquired input basis"
+      ],
+      "distinct_retained_operation_envelopes": 0,
+      "durable_operation_witnesses": [],
+      "executed_test_source_literal_mentions": {},
+      "operation": "resources.aggregate",
+      "requirements": [
+        "REQ-AC-FD-013"
+      ],
+      "status_counts": {},
+      "unexecuted_variants": [
+        "Any supported input/role/host/failure combination outside the named retained test controls",
+        "Real provider/CLI decoder path and fresh semantic Executive/Worker/Reviewer task",
+        "No durable OperationEvidence for this operation retained in this integration run; source-selected Core tests still executed as named"
+      ],
+      "unmatched_static_test_mentions_not_counted_as_execution": {},
+      "witness_limits": [
+        "A source literal mention locates a test; it is not independently inferred runtime branch coverage",
+        "Only listed raw tests/envelopes substantiate finite scenarios, not every legal or refusal variant",
+        "Actual F_P task/model usability, whole-host fit, semantic sufficiency and acceptance are unperformed"
+      ]
+    },
+    {
+      "declared_fragment": "selected finite declared contract only",
+      "declared_prerequisites": [
+        "trusted exact policy",
+        "fixed principal operation grant",
+        "exact acquired input basis"
+      ],
+      "distinct_retained_operation_envelopes": 0,
+      "durable_operation_witnesses": [],
+      "executed_test_source_literal_mentions": {
+        "test_ac_support_core.py": [
+          "CoreTests.test_nested_conjunction_cannot_hide_inherited_counterexample"
+        ]
+      },
+      "operation": "results.conjoin",
+      "requirements": [
+        "REQ-AC-FD-010"
+      ],
+      "status_counts": {},
+      "unexecuted_variants": [
+        "Any supported input/role/host/failure combination outside the named retained test controls",
+        "Real provider/CLI decoder path and fresh semantic Executive/Worker/Reviewer task",
+        "No durable OperationEvidence for this operation retained in this integration run; source-selected Core tests still executed as named"
+      ],
+      "unmatched_static_test_mentions_not_counted_as_execution": {},
+      "witness_limits": [
+        "A source literal mention locates a test; it is not independently inferred runtime branch coverage",
+        "Only listed raw tests/envelopes substantiate finite scenarios, not every legal or refusal variant",
+        "Actual F_P task/model usability, whole-host fit, semantic sufficiency and acceptance are unperformed"
+      ]
+    },
+    {
+      "declared_fragment": "selected finite declared contract only",
+      "declared_prerequisites": [
+        "trusted exact policy",
+        "fixed principal operation grant",
+        "exact acquired input basis"
+      ],
+      "distinct_retained_operation_envelopes": 0,
+      "durable_operation_witnesses": [],
+      "executed_test_source_literal_mentions": {
+        "test_ac_support_core.py": [
+          "CoreTests.test_inventory_has_one_closed_schema_and_33_codes",
+          "CoreTests.test_pasted_raw_payload_cannot_borrow_attempt_authentication"
+        ]
+      },
+      "operation": "return.capture",
+      "requirements": [
+        "REQ-AC-FD-008"
+      ],
+      "status_counts": {},
+      "unexecuted_variants": [
+        "Any supported input/role/host/failure combination outside the named retained test controls",
+        "Real provider/CLI decoder path and fresh semantic Executive/Worker/Reviewer task",
+        "No durable OperationEvidence for this operation retained in this integration run; source-selected Core tests still executed as named"
+      ],
+      "unmatched_static_test_mentions_not_counted_as_execution": {},
+      "witness_limits": [
+        "A source literal mention locates a test; it is not independently inferred runtime branch coverage",
+        "Only listed raw tests/envelopes substantiate finite scenarios, not every legal or refusal variant",
+        "Actual F_P task/model usability, whole-host fit, semantic sufficiency and acceptance are unperformed"
+      ]
+    },
+    {
+      "declared_fragment": "selected finite declared contract only",
+      "declared_prerequisites": [
+        "trusted exact policy",
+        "fixed principal operation grant",
+        "exact acquired input basis"
+      ],
+      "distinct_retained_operation_envelopes": 0,
+      "durable_operation_witnesses": [],
+      "executed_test_source_literal_mentions": {
+        "test_ac_support_core.py": [
+          "CoreTests.test_authentic_final_return_retained_and_historical_subject_not_rewritten"
+        ]
+      },
+      "operation": "return.check",
+      "requirements": [
+        "REQ-AC-FD-008"
+      ],
+      "status_counts": {},
+      "unexecuted_variants": [
+        "Any supported input/role/host/failure combination outside the named retained test controls",
+        "Real provider/CLI decoder path and fresh semantic Executive/Worker/Reviewer task",
+        "No durable OperationEvidence for this operation retained in this integration run; source-selected Core tests still executed as named"
+      ],
+      "unmatched_static_test_mentions_not_counted_as_execution": {},
+      "witness_limits": [
+        "A source literal mention locates a test; it is not independently inferred runtime branch coverage",
+        "Only listed raw tests/envelopes substantiate finite scenarios, not every legal or refusal variant",
+        "Actual F_P task/model usability, whole-host fit, semantic sufficiency and acceptance are unperformed"
+      ]
+    },
+    {
+      "declared_fragment": "selected finite declared contract only",
+      "declared_prerequisites": [
+        "trusted exact policy",
+        "fixed principal operation grant",
+        "exact acquired input basis"
+      ],
+      "distinct_retained_operation_envelopes": 0,
+      "durable_operation_witnesses": [],
+      "executed_test_source_literal_mentions": {
+        "test_ac_support_core.py": [
+          "CoreTests.test_source_first_expectation_requires_real_delivery_and_producer",
+          "CoreTests.test_prior_candidate_exposure_survives_fresh_runtime_and_history_gap",
+          "CoreTests.test_nonreviewer_cannot_impersonate_expectation_producer",
+          "CoreTests.test_review_claim_population_detects_prior_fixture_member_exposure",
+          "CoreTests.test_opaque_claim_keeps_population_unknown_without_inferred_mapping",
+          "CoreTests.test_review_claim_duplicate_ambiguous_and_dangling_refs_refuse",
+          "CoreTests.test_candidate_phase_acquires_entire_declared_population_and_wrong_parent_refuses",
+          "CoreTests.test_evidence_read_inline_context_content_preserves_candidate_exposure"
+        ]
+      },
+      "operation": "review.prepare",
+      "requirements": [
+        "REQ-AC-FD-009"
+      ],
+      "status_counts": {},
+      "unexecuted_variants": [
+        "Any supported input/role/host/failure combination outside the named retained test controls",
+        "Real provider/CLI decoder path and fresh semantic Executive/Worker/Reviewer task",
+        "No durable OperationEvidence for this operation retained in this integration run; source-selected Core tests still executed as named"
+      ],
+      "unmatched_static_test_mentions_not_counted_as_execution": {},
+      "witness_limits": [
+        "A source literal mention locates a test; it is not independently inferred runtime branch coverage",
+        "Only listed raw tests/envelopes substantiate finite scenarios, not every legal or refusal variant",
+        "Actual F_P task/model usability, whole-host fit, semantic sufficiency and acceptance are unperformed"
+      ]
+    },
+    {
+      "declared_fragment": "selected finite declared contract only",
+      "declared_prerequisites": [
+        "trusted exact policy",
+        "fixed principal operation grant",
+        "exact acquired input basis"
+      ],
+      "distinct_retained_operation_envelopes": 10,
+      "durable_operation_witnesses": [
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "6a3b98a4832fe94ca1df0c1b522547664761d812575e4c17febaaead0d8197c8",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/public-fixtures/test_file_and_stdin_acquire_actual_source_for_worker/demo/evidence/objects/6a3b98a4832fe94ca1df0c1b522547664761d812575e4c17febaaead0d8197c8.json",
+          "refusal": null,
+          "request_id": "readonly-product-001",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "df888bf4661bf76f96d2f08eaba10cd61f4abc9a19033779dcbbebffe98d5361",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/public-fixtures/test_file_and_stdin_acquire_actual_source_for_worker/demo/evidence/objects/df888bf4661bf76f96d2f08eaba10cd61f4abc9a19033779dcbbebffe98d5361.json",
+          "refusal": null,
+          "request_id": "readonly-product-001",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "6343455ddc8d35af377dca062f90e8d91667aa223f5fdaffd307379854efdf5f",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/public-fixtures/test_setup_selects_canonical_operator_paths_before_runtime_binding/actual-operator-directory/canonical-demo/evidence/objects/6343455ddc8d35af377dca062f90e8d91667aa223f5fdaffd307379854efdf5f.json",
+          "refusal": null,
+          "request_id": "readonly-product-001",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "1f4cfca6567afc5d051c22bd4f251809fb3c4d6aadca60dc7980a2f19f2a3c63",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/public-fixtures/test_mcp_optional_metadata_client_info_and_capabilities_are_data/demo/evidence/objects/1f4cfca6567afc5d051c22bd4f251809fb3c4d6aadca60dc7980a2f19f2a3c63.json",
+          "refusal": null,
+          "request_id": "readonly-product-001",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "9fef86bdc511bc6399e74949a64dc1d6fb8fc0cb21689e2ba5f6e52256a75cf0",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/public-fixtures/test_documented_mcp_session_uses_shared_schemas_and_actual_source/demo/evidence/objects/9fef86bdc511bc6399e74949a64dc1d6fb8fc0cb21689e2ba5f6e52256a75cf0.json",
+          "refusal": null,
+          "request_id": "readonly-product-001",
+          "status": "ok"
+        },
+        {
+          "bound_value": "refused(constraint)",
+          "canonical_sha256": "4e4f947e3843c4532f282f561c817fcb6f49719ceb3713129324b74d7bb40b5d",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/public-fixtures/test_source_symlink_refuses_through_public_source_route/demo/evidence/objects/4e4f947e3843c4532f282f561c817fcb6f49719ceb3713129324b74d7bb40b5d.json",
+          "refusal": "path_refused",
+          "request_id": "symlink-control",
+          "status": "refused"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "70d9ada0d00b290bf7a5ea3cf83597f9d869ee02e0e70d3561d34596dcf1b05c",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/public-fixtures/test_mcp_protocol_errors_are_separate_from_bound_tool_refusal/demo/evidence/objects/70d9ada0d00b290bf7a5ea3cf83597f9d869ee02e0e70d3561d34596dcf1b05c.json",
+          "refusal": null,
+          "request_id": "readonly-product-001",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "9a89eeefdd6bfc857303f944956663037d15a1d8ffcaacbd7f129eb82899560b",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/public-fixtures/test_original_operation_evidence_is_acquirable_in_fresh_cli/demo/evidence/objects/9a89eeefdd6bfc857303f944956663037d15a1d8ffcaacbd7f129eb82899560b.json",
+          "refusal": null,
+          "request_id": "readonly-product-001",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "65650c9bc1f43d2f810b03f0ad1c9f7dd8704e01fe8a2426ecaa74eaf1a72de7",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/ordinary-demo-001/retained-demo/evidence/objects/65650c9bc1f43d2f810b03f0ad1c9f7dd8704e01fe8a2426ecaa74eaf1a72de7.json",
+          "refusal": null,
+          "request_id": "readonly-product-001",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "883665d312ab9b10858566f5457e515ed3f947addb19e732971e41f1bbe4dce5",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/ordinary-demo-001/retained-demo/evidence/objects/883665d312ab9b10858566f5457e515ed3f947addb19e732971e41f1bbe4dce5.json",
+          "refusal": null,
+          "request_id": "readonly-product-001",
+          "status": "ok"
+        }
+      ],
+      "executed_test_source_literal_mentions": {
+        "test_ac_support_core.py": [
+          "CoreTests.test_request_unknown_fields_and_profile_refuse",
+          "CoreTests.test_source_raw_slices_pointer_and_missing_are_distinct",
+          "CoreTests.test_source_binary_stale_denied_escape_and_symlink",
+          "CoreTests.test_source_first_expectation_requires_real_delivery_and_producer",
+          "CoreTests.test_prior_candidate_exposure_survives_fresh_runtime_and_history_gap",
+          "CoreTests.test_policy_revocation_does_not_hot_reload_for_read_access",
+          "CoreTests.test_all_closed_codes_map_without_overwriting_inner_values",
+          "CoreTests.test_request_schema_transitive_closure_is_self_contained_and_smaller",
+          "CoreTests.test_exact_immutable_git_source_acquisition_uses_pinned_blob",
+          "CoreTests.test_review_claim_population_detects_prior_fixture_member_exposure"
+        ],
+        "test_ac_support_interfaces.py": [
+          "PublicInterfaceTests.test_mcp_protocol_errors_are_separate_from_bound_tool_refusal",
+          "PublicInterfaceTests.test_mcp_notifications_never_run_a_tool_or_emit_responses",
+          "PublicInterfaceTests.test_mcp_optional_metadata_client_info_and_capabilities_are_data",
+          "PublicInterfaceTests.test_mcp_decimal_and_exponent_tokens_stay_refused_in_public_envelope",
+          "PublicInterfaceTests.test_source_symlink_refuses_through_public_source_route"
+        ]
+      },
+      "operation": "source.read",
+      "requirements": [
+        "REQ-AC-FD-003"
+      ],
+      "status_counts": {
+        "ok": 9,
+        "refused": 1
+      },
+      "unexecuted_variants": [
+        "Any supported input/role/host/failure combination outside the named retained test controls",
+        "Real provider/CLI decoder path and fresh semantic Executive/Worker/Reviewer task"
+      ],
+      "unmatched_static_test_mentions_not_counted_as_execution": {},
+      "witness_limits": [
+        "A source literal mention locates a test; it is not independently inferred runtime branch coverage",
+        "Only listed raw tests/envelopes substantiate finite scenarios, not every legal or refusal variant",
+        "Actual F_P task/model usability, whole-host fit, semantic sufficiency and acceptance are unperformed"
+      ]
+    },
+    {
+      "declared_fragment": "selected finite declared contract only",
+      "declared_prerequisites": [
+        "trusted exact policy",
+        "fixed principal operation grant",
+        "exact acquired input basis"
+      ],
+      "distinct_retained_operation_envelopes": 11,
+      "durable_operation_witnesses": [
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "29cfecacb4433129744680d19613e495dc7039706a1fe1d8c2ec115076821642",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/effects-fixtures/test_ac_support_effects_StoreTests_test_negative_inner_result_is_returned_and_refusals_keep_mapping/evidence/objects/29cfecacb4433129744680d19613e495dc7039706a1fe1d8c2ec115076821642.json",
+          "refusal": null,
+          "request_id": "store-1",
+          "status": "ok"
+        },
+        {
+          "bound_value": "refused(authority)",
+          "canonical_sha256": "4a1a8d6fc9e023fc9a78553edc66821f77deccee128083696f0fcccc77599e1d",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/effects-fixtures/test_ac_support_effects_StoreTests_test_negative_inner_result_is_returned_and_refusals_keep_mapping/evidence/objects/4a1a8d6fc9e023fc9a78553edc66821f77deccee128083696f0fcccc77599e1d.json",
+          "refusal": "authority_missing",
+          "request_id": "store-1",
+          "status": "refused"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "fd2845f1b26da8bb20c389d62f7591e84f535977c10abfffe383da88817e7048",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/effects-fixtures/test_ac_support_effects_DependencyTests_test_identity_shaped_raw_json_and_literal_result_are_data/evidence/objects/fd2845f1b26da8bb20c389d62f7591e84f535977c10abfffe383da88817e7048.json",
+          "refusal": null,
+          "request_id": "store-1",
+          "status": "ok"
+        },
+        {
+          "bound_value": "refused(authority)",
+          "canonical_sha256": "9a4841b0d16b399db9031e7738c46d02cfd2fb07fec738ffc86bca4879d7b3d7",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/effects-fixtures/test_ac_support_effects_DependencyTests_test_identity_shaped_raw_json_and_literal_result_are_data/evidence/objects/9a4841b0d16b399db9031e7738c46d02cfd2fb07fec738ffc86bca4879d7b3d7.json",
+          "refusal": "authority_missing",
+          "request_id": "store-1",
+          "status": "refused"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "a56d476bc4de8afede70787b76a3bfb36446c29b50dc0c04fe100c2595e218f1",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/effects-fixtures/test_ac_support_effects_DependencyTests_test_return_ownership_graph_preserves_quoted_actor_and_qualification_data/evidence/objects/a56d476bc4de8afede70787b76a3bfb36446c29b50dc0c04fe100c2595e218f1.json",
+          "refusal": null,
+          "request_id": "store-1",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "1a49a6efa044db65f5e0f1b8e2625ece3c84edb074f629a0905abb47775b5ed3",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/effects-fixtures/test_ac_support_effects_StoreTests_test_prepared_acquisition_refs_survive_without_rewrapping/evidence/objects/1a49a6efa044db65f5e0f1b8e2625ece3c84edb074f629a0905abb47775b5ed3.json",
+          "refusal": null,
+          "request_id": "store-1",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "3c93f3266f1f12f7d316abccc99d67918127ab51a0506ef31204c5d5b3205eb7",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/effects-fixtures/test_ac_support_effects_StoreTests_test_dependency_order_and_nonrecursive_operation_evidence/evidence/objects/3c93f3266f1f12f7d316abccc99d67918127ab51a0506ef31204c5d5b3205eb7.json",
+          "refusal": null,
+          "request_id": "store-1",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "45aa6bf228c182d3740ceabd33502713e8668d1e1c6fa5389fe79ac57860a5b7",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/public-fixtures/test_all_three_principals_discover_real_contracts/demo/evidence/objects/45aa6bf228c182d3740ceabd33502713e8668d1e1c6fa5389fe79ac57860a5b7.json",
+          "refusal": null,
+          "request_id": "readonly-describe-001",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "0b4490739e916b0c24545d187a1fcd881805b877359ed8b7763de68c96414b8b",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/public-fixtures/test_all_three_principals_discover_real_contracts/demo/evidence/objects/0b4490739e916b0c24545d187a1fcd881805b877359ed8b7763de68c96414b8b.json",
+          "refusal": null,
+          "request_id": "readonly-describe-001",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "f810375abfdcf587bdccec94641849ca7f218cf14a659a003771222c5a6298e3",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/public-fixtures/test_all_three_principals_discover_real_contracts/demo/evidence/objects/f810375abfdcf587bdccec94641849ca7f218cf14a659a003771222c5a6298e3.json",
+          "refusal": null,
+          "request_id": "readonly-describe-001",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "ad7d88bf1910b52fbdc5c73adbe95518be478648e8093eb0418dc58eccfb9973",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/ordinary-demo-001/retained-demo/evidence/objects/ad7d88bf1910b52fbdc5c73adbe95518be478648e8093eb0418dc58eccfb9973.json",
+          "refusal": null,
+          "request_id": "readonly-describe-001",
+          "status": "ok"
+        }
+      ],
+      "executed_test_source_literal_mentions": {
+        "test_ac_support_core.py": [
+          "CoreTests.test_request_unknown_fields_and_profile_refuse",
+          "CoreTests.test_artifact_identity_covers_producer_and_preserves_raw_import",
+          "CoreTests.test_resource_unknown_and_no_double_counted_cumulative_subset"
+        ],
+        "test_ac_support_effects.py": [
+          "StoreTests.test_complete_envelope_roundtrip_and_distinct_execution_identity",
+          "StoreTests.test_dependency_order_and_nonrecursive_operation_evidence",
+          "StoreTests.test_publication_failure_has_no_computed_durable_reference",
+          "StoreTests.test_prepared_acquisition_refs_survive_without_rewrapping",
+          "StoreTests.test_negative_inner_result_is_returned_and_refusals_keep_mapping",
+          "DependencyTests.test_identity_shaped_raw_json_and_literal_result_are_data",
+          "DependencyTests.test_true_primary_provenance_and_carrier_support_must_exist",
+          "DependencyTests.test_return_ownership_graph_preserves_quoted_actor_and_qualification_data"
+        ],
+        "test_ac_support_interfaces.py": [
+          "PublicInterfaceTests.test_mcp_protocol_errors_are_separate_from_bound_tool_refusal"
+        ]
+      },
+      "operation": "tools.describe",
+      "requirements": [
+        "REQ-AC-FD-001"
+      ],
+      "status_counts": {
+        "ok": 9,
+        "refused": 2
+      },
+      "unexecuted_variants": [
+        "Any supported input/role/host/failure combination outside the named retained test controls",
+        "Real provider/CLI decoder path and fresh semantic Executive/Worker/Reviewer task"
+      ],
+      "unmatched_static_test_mentions_not_counted_as_execution": {},
+      "witness_limits": [
+        "A source literal mention locates a test; it is not independently inferred runtime branch coverage",
+        "Only listed raw tests/envelopes substantiate finite scenarios, not every legal or refusal variant",
+        "Actual F_P task/model usability, whole-host fit, semantic sufficiency and acceptance are unperformed"
+      ]
+    },
+    {
+      "declared_fragment": "selected finite declared contract only",
+      "declared_prerequisites": [
+        "trusted exact policy",
+        "fixed principal operation grant",
+        "exact acquired input basis"
+      ],
+      "distinct_retained_operation_envelopes": 1,
+      "durable_operation_witnesses": [
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "74c6a7b6ff3cca9ea3d5d6cc792b9ef53c245e29c68840e7d12146bab7f67949",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/effects-fixtures/test_ac_support_effects_DependencyTests_test_public_projected_source_identity_is_preserved_without_dereference/evidence/objects/74c6a7b6ff3cca9ea3d5d6cc792b9ef53c245e29c68840e7d12146bab7f67949.json",
+          "refusal": null,
+          "request_id": "literal-public-projection",
+          "status": "ok"
+        }
+      ],
+      "executed_test_source_literal_mentions": {
+        "test_ac_support_core.py": [
+          "CoreTests.test_projection_keeps_original_ruling_without_task_state"
+        ],
+        "test_ac_support_effects.py": [
+          "DependencyTests.test_public_projected_source_identity_is_preserved_without_dereference"
+        ]
+      },
+      "operation": "work.project",
+      "requirements": [
+        "REQ-AC-FD-011"
+      ],
+      "status_counts": {
+        "ok": 1
+      },
+      "unexecuted_variants": [
+        "Any supported input/role/host/failure combination outside the named retained test controls",
+        "Real provider/CLI decoder path and fresh semantic Executive/Worker/Reviewer task"
+      ],
+      "unmatched_static_test_mentions_not_counted_as_execution": {},
+      "witness_limits": [
+        "A source literal mention locates a test; it is not independently inferred runtime branch coverage",
+        "Only listed raw tests/envelopes substantiate finite scenarios, not every legal or refusal variant",
+        "Actual F_P task/model usability, whole-host fit, semantic sufficiency and acceptance are unperformed"
+      ]
+    },
+    {
+      "declared_fragment": "selected finite declared contract only",
+      "declared_prerequisites": [
+        "trusted exact policy",
+        "fixed principal operation grant",
+        "exact acquired input basis"
+      ],
+      "distinct_retained_operation_envelopes": 1,
+      "durable_operation_witnesses": [
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "20dd9e4cfa36241db81af48d847a873e189909c7a6634c863470bf0923d2c97d",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/effects-fixtures/test_ac_support_effects_ProcessTests_test_actor_side_public_mcp_writer_completes_before_actor_exit/evidence/objects/20dd9e4cfa36241db81af48d847a873e189909c7a6634c863470bf0923d2c97d.json",
+          "refusal": null,
+          "request_id": "actor-side-public-write",
+          "status": "ok"
+        }
+      ],
+      "executed_test_source_literal_mentions": {
+        "test_ac_support_core.py": [
+          "CoreTests.test_inventory_has_one_closed_schema_and_33_codes",
+          "CoreTests.test_writer_pure_plan_exact_preimage_and_role_membrane",
+          "CoreTests.test_same_actor_role_change_needs_existing_transition_before_writer"
+        ]
+      },
+      "operation": "work.write",
+      "requirements": [
+        "REQ-AC-FD-011"
+      ],
+      "status_counts": {
+        "ok": 1
+      },
+      "unexecuted_variants": [
+        "Any supported input/role/host/failure combination outside the named retained test controls",
+        "Real provider/CLI decoder path and fresh semantic Executive/Worker/Reviewer task"
+      ],
+      "unmatched_static_test_mentions_not_counted_as_execution": {},
+      "witness_limits": [
+        "A source literal mention locates a test; it is not independently inferred runtime branch coverage",
+        "Only listed raw tests/envelopes substantiate finite scenarios, not every legal or refusal variant",
+        "Actual F_P task/model usability, whole-host fit, semantic sufficiency and acceptance are unperformed"
+      ]
+    },
+    {
+      "declared_fragment": "selected finite declared contract only",
+      "declared_prerequisites": [
+        "trusted exact policy",
+        "fixed principal operation grant",
+        "exact acquired input basis"
+      ],
+      "distinct_retained_operation_envelopes": 9,
+      "durable_operation_witnesses": [
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "745cf4d436208e5aaa4ca66d4fb0792be261710c32fb0eb235d1bea4a6a02b56",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_preserves_falsified_original_with_four_conditions_and_certified_frontier/artifacts/745cf4d436208e5aaa4ca66d4fb0792be261710c32fb0eb235d1bea4a6a02b56.json",
+          "refusal": null,
+          "request_id": "request-1",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "365cd039d003bce78fdcb59af62134211765004eb673dd30394d63b4e64238fb",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_preserves_falsified_original_with_four_conditions_and_certified_frontier/artifacts/365cd039d003bce78fdcb59af62134211765004eb673dd30394d63b4e64238fb.json",
+          "refusal": null,
+          "request_id": "request-2",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "56b729c9d43568fde49741c12e91cdea07201a039711e0aba33997bebdb9b85f",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_missing_preservation_condition_withholds_reuse_without_rewriting_history/artifacts/56b729c9d43568fde49741c12e91cdea07201a039711e0aba33997bebdb9b85f.json",
+          "refusal": null,
+          "request_id": "request-2",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "f79e402690d721a33ab48fa8acb0f4f778496aaf19d883a9bbb5750120bab053",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_missing_preservation_condition_withholds_reuse_without_rewriting_history/artifacts/f79e402690d721a33ab48fa8acb0f4f778496aaf19d883a9bbb5750120bab053.json",
+          "refusal": null,
+          "request_id": "request-1",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "e49d9f02f102ed50a2111de1c71c97865d625e6ca4b817a84fcd1748b17f9334",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_falsified_preservation_condition_withholds_reuse_without_rewriting_history/artifacts/e49d9f02f102ed50a2111de1c71c97865d625e6ca4b817a84fcd1748b17f9334.json",
+          "refusal": null,
+          "request_id": "request-2",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "a728760fa31e08de0bb9189c93826b59f7326261435c7d18f176a4e12cae9a8f",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/core-qualification-fixtures/test_refresh_falsified_preservation_condition_withholds_reuse_without_rewriting_history/artifacts/a728760fa31e08de0bb9189c93826b59f7326261435c7d18f176a4e12cae9a8f.json",
+          "refusal": null,
+          "request_id": "request-1",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "e8a648392f8c3d791823541dac36985d5d7cd13f05ce00b3ac83dc0f71583892",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/public-fixtures/test_observe_sees_dirty_bytes_without_a_commit_proxy/demo/evidence/objects/e8a648392f8c3d791823541dac36985d5d7cd13f05ce00b3ac83dc0f71583892.json",
+          "refusal": null,
+          "request_id": "observe-before",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "6fc2bdc868203823e9b8e05ef11698fff0e2d4712091b7a8c1cd07f91424044d",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/suite-001/public-fixtures/test_observe_sees_dirty_bytes_without_a_commit_proxy/demo/evidence/objects/6fc2bdc868203823e9b8e05ef11698fff0e2d4712091b7a8c1cd07f91424044d.json",
+          "refusal": null,
+          "request_id": "observe-after",
+          "status": "ok"
+        },
+        {
+          "bound_value": "returned",
+          "canonical_sha256": "25c13ebfb63e52658d8f39954169a18ed8234ab6bfcd21558e9d8590ef26c518",
+          "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/ordinary-demo-001/retained-demo/evidence/objects/25c13ebfb63e52658d8f39954169a18ed8234ab6bfcd21558e9d8590ef26c518.json",
+          "refusal": null,
+          "request_id": "readonly-observe-001",
+          "status": "ok"
+        }
+      ],
+      "executed_test_source_literal_mentions": {
+        "test_ac_support_core.py": [
+          "CoreTests.test_dirty_and_new_population_recheck_without_head_proxy",
+          "CoreTests.test_observation_caps_never_return_complete_looking_partial",
+          "CoreTests.test_refresh_conservative_unknown_and_original_handoff"
+        ],
+        "test_ac_support_interfaces.py": [
+          "PublicInterfaceTests.test_observe_sees_dirty_bytes_without_a_commit_proxy"
+        ]
+      },
+      "operation": "workspace.observe",
+      "requirements": [
+        "REQ-AC-FD-002"
+      ],
+      "status_counts": {
+        "ok": 9
+      },
+      "unexecuted_variants": [
+        "Any supported input/role/host/failure combination outside the named retained test controls",
+        "Real provider/CLI decoder path and fresh semantic Executive/Worker/Reviewer task"
+      ],
+      "unmatched_static_test_mentions_not_counted_as_execution": {},
+      "witness_limits": [
+        "A source literal mention locates a test; it is not independently inferred runtime branch coverage",
+        "Only listed raw tests/envelopes substantiate finite scenarios, not every legal or refusal variant",
+        "Actual F_P task/model usability, whole-host fit, semantic sufficiency and acceptance are unperformed"
+      ]
+    }
+  ],
+  "schema": "a_c.integrated-operation-scenario-evidence/1",
+  "scope_limits": [
+    "A passing finite mechanical suite is not independent semantic review or acceptance",
+    "Protected local process fixtures are actual subprocess evidence but not F_P actors",
+    "No complete calculus conformance, matched quality/cost/efficiency benefit or release qualification",
+    "All unlisted supported scenarios remain unexecuted; unsupported inventory remains explicitly outside fragment"
+  ],
+  "source_of_expectations": "selected WHAT/HOW, not peer assurance or private fixture answers; closed module returns are bounded execution evidence",
+  "transport_observations": {
+    "write_flushed_transport_envelopes": 30
+  }
+}

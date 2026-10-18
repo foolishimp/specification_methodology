@@ -1,0 +1,284 @@
+{
+  "kind": "coordinator-locators-for-unchanged-closed-assessment",
+  "recorded_utc": "2026-10-18T18:09:38.639139+00:00",
+  "subject_id": "sha256:ed42ae68c9c76640a33cc622cb21a9e928628b58349b5c58ba049edbf58f0893",
+  "raw_result_sha256": "92ecfb1c1752f6e9dbd29da02c07165760b3a5107011a775cb1af118c4bc2704",
+  "standing": "Chaseable evidence and source qualifications, not a new model call or adopted repair/disposition",
+  "findings": [
+    {
+      "id": "F1",
+      "label": "Operation outcome/refusal populations and core mappings unresolved",
+      "raw_assessment": {
+        "packet_path": "runs/claude_design_assessment_001/result.txt",
+        "line_start": 48,
+        "line_end": 79
+      },
+      "frozen_candidate": [
+        {
+          "packet_path": "candidate/build_tenants/graphify/design/fd-support.md",
+          "line_start": 174,
+          "line_end": 181
+        },
+        {
+          "packet_path": "candidate/build_tenants/graphify/design/fd-support.md",
+          "line_start": 587,
+          "line_end": 588
+        }
+      ],
+      "governing_sources": [
+        {
+          "member": "SPEC_METHOD.md",
+          "section": "11, material content rule 3",
+          "packet_path": "../source_first_20261019/sources/method/SPEC_METHOD.md",
+          "line_start": 1856,
+          "line_end": 1865
+        },
+        {
+          "member": "AXIOMATIC_CALCULUS.md",
+          "section": "AC-007"
+        },
+        {
+          "member": "ACTIVATION.md",
+          "section": "3"
+        },
+        {
+          "member": "REFERENCE_FRAME.md",
+          "section": "5"
+        }
+      ],
+      "summary": "The selected public binding leaves operation/refusal code populations and their cause-qualified core mappings open; computed facts and coverage classifications also need an explicit semantic category. The raw assessor reports an implementation decision gap, not a new semantic result for each refusal.",
+      "affected_boundary": [
+        "FD-001",
+        "FD-004",
+        "FD-005",
+        "FDV-002",
+        "all public callers and core/effects/adapter seam"
+      ]
+    },
+    {
+      "id": "F2",
+      "label": "Admission, commit/publication and reconstruction relation incomplete",
+      "raw_assessment": {
+        "packet_path": "runs/claude_design_assessment_001/result.txt",
+        "line_start": 80,
+        "line_end": 111
+      },
+      "frozen_candidate": [
+        {
+          "packet_path": "candidate/build_tenants/graphify/design/fd-support.md",
+          "line_start": 407,
+          "line_end": 450
+        },
+        {
+          "packet_path": "candidate/build_tenants/graphify/design/fd-support.md",
+          "line_start": 479,
+          "line_end": 521
+        },
+        {
+          "packet_path": "candidate/build_tenants/graphify/design/fd-support.md",
+          "line_start": 614,
+          "line_end": 626
+        },
+        {
+          "packet_path": "candidate/build_tenants/graphify/design/fd-support.md",
+          "line_start": 893,
+          "line_end": 903
+        }
+      ],
+      "governing_sources": [
+        {
+          "member": "DESIGN_MODULE.md",
+          "section": "5, Transformation admission completeness (UP-016)",
+          "packet_path": "../source_first_20261019/sources/method/DESIGN_MODULE.md",
+          "line_start": 879,
+          "line_end": 925
+        },
+        {
+          "member": "ACTIVATION.md",
+          "section": "4, Complete enclosing-relation admission and Standing structural qualification",
+          "packet_path": "../source_first_20261019/sources/method/ACTIVATION.md",
+          "line_start": 1344,
+          "line_end": 1375
+        },
+        {
+          "member": "TICKETS.md",
+          "section": "5",
+          "packet_path": "../source_first_20261019/sources/method/TICKETS.md",
+          "line_start": 665
+        }
+      ],
+      "summary": "The raw assessment identifies unresolved complete commit units, post-validation publication boundaries, supported reconstruction and standing qualification forms for preflight receipts, reservations and work.write, plus Product-authority routing and competing bootstrap-path disposition.",
+      "source_locator_correction": "Raw result cites UP-016 as DESIGN_MODULE section 7; the retained governing owner clause is section 5 at lines 879–925. Raw result remains unchanged.",
+      "qualification": "The raw assessor explicitly leaves rc.2 Product-definition schema support unknown and accepts the trusted-operator scope. An absent overlay mechanism field alone is not treated here as a conclusive authority violation; excluded hostile-filesystem threats are not added.",
+      "affected_boundary": [
+        "FD-006",
+        "FD-007 reservation",
+        "FD-011",
+        "FDV-002"
+      ]
+    },
+    {
+      "id": "F3",
+      "label": "Conjunction return cardinality and domain-outcome mapping ambiguous",
+      "raw_assessment": {
+        "packet_path": "runs/claude_design_assessment_001/result.txt",
+        "line_start": 112,
+        "line_end": 136
+      },
+      "frozen_candidate": [
+        {
+          "packet_path": "candidate/build_tenants/graphify/design/fd-support.md",
+          "line_start": 235
+        },
+        {
+          "packet_path": "candidate/build_tenants/graphify/design/fd-support.md",
+          "line_start": 527,
+          "line_end": 539
+        },
+        {
+          "packet_path": "candidate/build_tenants/graphify/design/fd-support.md",
+          "line_start": 590,
+          "line_end": 610
+        }
+      ],
+      "governing_sources": [
+        {
+          "member": "REFERENCE_FRAME.md",
+          "section": "5, conjoin conflict row",
+          "packet_path": "../source_first_20261019/sources/method/REFERENCE_FRAME.md",
+          "line_start": 582
+        },
+        {
+          "member": "FOUNDATIONS.md",
+          "section": "4, Conjunction Survival and Recording"
+        }
+      ],
+      "summary": "The plan does not settle how multiple retained returns bind one planned mandatory assessment, and the RF domain outcome is not explicitly emitted alongside its core mapping. The assessment reports materially different possible readings.",
+      "source_qualification": "REFERENCE_FRAME section 5 conflict is cause-qualified: the conjunction already reports falsified while mandatory results disagree. This row does not impose universal falsified priority. The supported open question is cardinality and domain/core mapping under an explicitly qualified declared operator; the raw recommendation is retained as assessor DATA, not an adopted ordering law.",
+      "affected_boundary": [
+        "FD-010",
+        "return.check",
+        "results.conjoin"
+      ]
+    },
+    {
+      "id": "F4",
+      "label": "Lifecycle, authority and complete three-view/Prime evidence gaps",
+      "raw_assessment": {
+        "packet_path": "runs/claude_design_assessment_001/result.txt",
+        "line_start": 137,
+        "line_end": 164
+      },
+      "frozen_candidate": [
+        {
+          "packet_path": "candidate/build_tenants/graphify/design/fd-support.md",
+          "line_start": 97,
+          "line_end": 139
+        },
+        {
+          "packet_path": "candidate/build_tenants/graphify/design/fd-support.md",
+          "line_start": 514,
+          "line_end": 521
+        },
+        {
+          "packet_path": "candidate/build_tenants/graphify/design/fd-support.md",
+          "line_start": 682,
+          "line_end": 875
+        }
+      ],
+      "governing_sources": [
+        {
+          "member": "DESIGN_MODULE.md",
+          "section": "5, entity/lifecycle completeness, authority model, function derivation and whole-family Prime contraction",
+          "packet_path": "../source_first_20261019/sources/method/DESIGN_MODULE.md",
+          "line_start": 809
+        },
+        {
+          "member": "DESIGN_MODULE.md",
+          "section": "7, Ontology evidence, Sequence model and State model",
+          "packet_path": "../source_first_20261019/sources/method/DESIGN_MODULE.md",
+          "line_start": 1338
+        },
+        {
+          "member": "ASSURANCE.md",
+          "section": "16, Module lifecycle confirmation",
+          "packet_path": "../source_first_20261019/sources/method/ASSURANCE.md",
+          "line_start": 1074
+        }
+      ],
+      "summary": "The raw assessor reports missing equivalent closed evidence for several non-Attempt lifecycles, authority/function relations, event-sink ownership, whole-family Prime contraction and module lifecycle phase answers. It accepts equivalent closed representations, rather than demanding a particular format.",
+      "qualification": "Receipt validity must be read with the existing material pre-effect rechecks at frozen design lines 418–423. This closure does not infer a universal automatic-expiry requirement from the raw observation.",
+      "affected_boundary": [
+        "material carrier/operation lifecycle",
+        "Writer/review/refresh paths",
+        "design and module evidence gates"
+      ]
+    },
+    {
+      "id": "F5",
+      "label": "Four smaller public actor, review and domain seams unresolved",
+      "raw_assessment": {
+        "packet_path": "runs/claude_design_assessment_001/result.txt",
+        "line_start": 165,
+        "line_end": 172
+      },
+      "frozen_candidate": [
+        {
+          "packet_path": "candidate/build_tenants/graphify/design/fd-support.md",
+          "line_start": 60,
+          "line_end": 64
+        },
+        {
+          "packet_path": "candidate/build_tenants/graphify/design/fd-support.md",
+          "line_start": 297,
+          "line_end": 306
+        },
+        {
+          "packet_path": "candidate/build_tenants/graphify/design/fd-support.md",
+          "line_start": 377,
+          "line_end": 405
+        },
+        {
+          "packet_path": "candidate/build_tenants/graphify/design/fd-support.md",
+          "line_start": 527,
+          "line_end": 557
+        },
+        {
+          "packet_path": "candidate/build_tenants/graphify/design/fd-support.md",
+          "line_start": 587,
+          "line_end": 588
+        }
+      ],
+      "governing_sources": [
+        {
+          "member": "EVALUATION.md",
+          "section": "3, independence and declared cross-family condition"
+        },
+        {
+          "member": "EXECUTIVE_BASELINE.md",
+          "section": "6, recorded role transition"
+        },
+        {
+          "member": "AXIOMATIC_CALCULUS.md",
+          "section": "AC-007"
+        },
+        {
+          "member": "SPEC_METHOD.md",
+          "section": "11"
+        }
+      ],
+      "items": [
+        "Explicit independence-policy carrier/routing remains unclear, including whether a registered predicate supplies it.",
+        "Reviewer profile additions require severity-scale SourceRefs without explicit null handling for this no-scale Product.",
+        "Startup-bound principals do not explain the required prior work-carrier record for a same-actor role transition.",
+        "Wrong operand domain is called a domain/basis failure without choosing the domain outcome and cause-qualified core mapping."
+      ],
+      "qualification": "No severity scale has been selected. F labels are identifiers, not grades. Absence of a dedicated independence-policy key alone does not prove that a registered source/predicate carrier cannot supply the declared policy.",
+      "affected_boundary": [
+        "FD-009",
+        "all three actor contracts",
+        "checks.evaluate"
+      ]
+    }
+  ]
+}

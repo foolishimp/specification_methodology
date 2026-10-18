@@ -1,0 +1,203 @@
+{
+  "authority_sources": [
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "OPERATOR.md",
+      "root": "operator",
+      "selector": null,
+      "sha256": "9d0d74cfdc1d53a3247de4cb0265e589c2df8771044a2393f8074d8f28b495e3"
+    }
+  ],
+  "event_sinks": {},
+  "evidence_root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/a-c-integrated-check-zx6d1t27/a-c-interface-0zua66pi/demo/evidence",
+  "executors": {},
+  "grants": {},
+  "id": "urn:a-c:fd-support:read-only-example",
+  "independence_policy": null,
+  "limits": {
+    "max_bytes": 8388608,
+    "max_files": 1024,
+    "max_history_records": 10000,
+    "max_message_bytes": 1048576,
+    "max_wait_ms": 1000
+  },
+  "method_profile": {
+    "id": "urn:a-c:fd-support:method:claude-rc9:executive:1",
+    "sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1",
+    "source": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "build_tenants/graphify/design/fd-method-claude-rc9.json",
+      "root": "product",
+      "selector": null,
+      "sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+    }
+  },
+  "operators": {},
+  "predicates": {},
+  "principals": {
+    "executive": {
+      "actor_id": "urn:a-c:fd-support:read-only-example:executive",
+      "authorship": "operator-example",
+      "family": "example-no-model",
+      "operations": [
+        "tools.describe",
+        "workspace.observe",
+        "source.read",
+        "records.find",
+        "records.read",
+        "graph.project",
+        "relations.query",
+        "evidence.read",
+        "work.project"
+      ],
+      "role": "Executive",
+      "role_binding": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "OPERATOR.md",
+        "root": "operator",
+        "selector": null,
+        "sha256": "9d0d74cfdc1d53a3247de4cb0265e589c2df8771044a2393f8074d8f28b495e3"
+      },
+      "role_transition": null
+    },
+    "reviewer": {
+      "actor_id": "urn:a-c:fd-support:read-only-example:reviewer",
+      "authorship": "operator-example",
+      "family": "example-no-model",
+      "operations": [
+        "tools.describe",
+        "workspace.observe",
+        "source.read",
+        "records.find",
+        "records.read",
+        "graph.project",
+        "relations.query",
+        "evidence.read",
+        "work.project"
+      ],
+      "role": "Reviewer",
+      "role_binding": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "OPERATOR.md",
+        "root": "operator",
+        "selector": null,
+        "sha256": "9d0d74cfdc1d53a3247de4cb0265e589c2df8771044a2393f8074d8f28b495e3"
+      },
+      "role_transition": null
+    },
+    "worker": {
+      "actor_id": "urn:a-c:fd-support:read-only-example:worker",
+      "authorship": "operator-example",
+      "family": "example-no-model",
+      "operations": [
+        "tools.describe",
+        "workspace.observe",
+        "source.read",
+        "records.find",
+        "records.read",
+        "graph.project",
+        "relations.query",
+        "evidence.read",
+        "work.project"
+      ],
+      "role": "Worker",
+      "role_binding": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "OPERATOR.md",
+        "root": "operator",
+        "selector": null,
+        "sha256": "9d0d74cfdc1d53a3247de4cb0265e589c2df8771044a2393f8074d8f28b495e3"
+      },
+      "role_transition": null
+    }
+  },
+  "product": {
+    "authority_binding": {
+      "definition_locator": "/reference_frame_bases/0/authority/0",
+      "mechanism": {
+        "id": "product-policy-preflight/1",
+        "implementation_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/design/fd-support.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f"
+        }
+      },
+      "owner_record": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "OPERATOR.md",
+        "root": "operator",
+        "selector": null,
+        "sha256": "9d0d74cfdc1d53a3247de4cb0265e589c2df8771044a2393f8074d8f28b495e3"
+      },
+      "result_surface": {
+        "consumer": "read-only-example",
+        "namespace": "readonly-demo",
+        "root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/a-c-integrated-check-zx6d1t27/a-c-interface-0zua66pi/demo/evidence"
+      },
+      "scope": {
+        "Product_work_authority": false,
+        "kind": "read-only-example"
+      }
+    },
+    "definition": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "stdo_a_c.json",
+      "root": "product",
+      "selector": null,
+      "sha256": "b0e013e6f9dabb9d3f31dd02c1a6909e9fc6418925a8d829f3bb1c2adf3dac1d"
+    },
+    "definition_id": "urn:stdo:product-definition:a-c-implementations"
+  },
+  "schema": "a_c.fd-support.policy/1",
+  "sources": {
+    "operator": {
+      "kind": "workspace",
+      "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/a-c-integrated-check-zx6d1t27/a-c-interface-0zua66pi/demo/control",
+      "read_scope": [
+        {
+          "kind": "file",
+          "path": "OPERATOR.md"
+        }
+      ],
+      "writable": false
+    },
+    "product": {
+      "kind": "workspace",
+      "path": "/Users/jim/src/apps/specification_methodology/a_c",
+      "read_scope": [
+        {
+          "kind": "file",
+          "path": "stdo_a_c.json"
+        },
+        {
+          "kind": "directory",
+          "path": "specification"
+        },
+        {
+          "kind": "directory",
+          "path": "build_tenants/graphify/design"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/test_env/fixtures/toy_model.json"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/examples/subject.md"
+        }
+      ],
+      "writable": false
+    }
+  }
+}

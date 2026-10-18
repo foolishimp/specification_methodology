@@ -1,0 +1,68 @@
+{
+  "schema": "a_c.effects-repair-after-discriminator/1",
+  "repaired_effects_sha256": "b7f6cb4dc66209e6bf463d41eb0d9100e80b4418188185d3d831205968dc4fb3",
+  "sealed_supervisor_modules": [
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py",
+      "sha256": "4d1ea7fe98ec1b53f2a19d9a2fef2b3fbb070624c955fbb1e9e48f5cc88011b1"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_core.py",
+      "sha256": "97b099812fc1f6964c83cd7df678e4a1fd0575e941c74549689fe4944f008820"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_effects.py",
+      "sha256": "b7f6cb4dc66209e6bf463d41eb0d9100e80b4418188185d3d831205968dc4fb3"
+    }
+  ],
+  "attempt": {
+    "path": "proof-after/test_ac_support_effects_ProcessTests_test_actor_side_public_mcp_writer_completes_before_actor_exit/evidence/objects/85768fb88f32b86a27eecf94d5e498af2b0ab5ae7082e432ce4ae2fb0bbdc5a8.json",
+    "sha256": "85768fb88f32b86a27eecf94d5e498af2b0ab5ae7082e432ce4ae2fb0bbdc5a8"
+  },
+  "complete_actual_actor_stdout": {
+    "path": "proof-after/test_ac_support_effects_ProcessTests_test_actor_side_public_mcp_writer_completes_before_actor_exit/evidence/objects/9da9922b3db0dc001629b0ebf3ec2ab69cec838c9b8a44367492141e185239e3.json",
+    "sha256": "9da9922b3db0dc001629b0ebf3ec2ab69cec838c9b8a44367492141e185239e3"
+  },
+  "actual_actor_stdout_bytes_sha256": "fbba7c18a6f827ab777ddbf42641883647ccb0269819a9dc085df294ed98a6b7",
+  "writer_progress_before_actor_exit": true,
+  "public_tool_status": "ok",
+  "public_mcp_raw_response_count": 2,
+  "raw_public_mcp_responses": [
+    "{\"id\":1,\"jsonrpc\":\"2.0\",\"result\":{\"capabilities\":{\"tools\":{\"listChanged\":false}},\"instructions\":\"Each tool takes the full a_c.fd-support.request/1 envelope. Keep its caller id stable for an exact retry. Discover authority, checked fragments and unsupported variants with tools.describe.\",\"protocolVersion\":\"2025-11-25\",\"serverInfo\":{\"name\":\"a_c.graphify.fd-support\",\"version\":\"0.1.0\"}}}\n",
+    "{\"id\":2,\"jsonrpc\":\"2.0\",\"result\":{\"content\":[{\"text\":\"{\\\"evidence\\\":{\\\"id\\\":\\\"sha256:9c4eb41e2914ebd2a9c98349515b5a1d3569b2758d1c3235ea3afb5b318090e6\\\",\\\"sha256\\\":\\\"9c4eb41e2914ebd2a9c98349515b5a1d3569b2758d1c3235ea3afb5b318090e6\\\"},\\\"id\\\":\\\"actor-side-public-write\\\",\\\"operation\\\":\\\"work.write\\\",\\\"operation_outcome\\\":{\\\"cause\\\":\\\"declared output available\\\",\\\"core_value\\\":\\\"satisfied\\\",\\\"evidence\\\":[],\\\"limits\\\":[\\\"output availability only; no semantic acceptance\\\"],\\\"predicate\\\":\\\"B(work.write): declared exact output/effect-evidence payload availability on the requested basis\\\",\\\"source_parent\\\":{\\\"clause\\\":\\\"results\\\",\\\"member\\\":\\\"FOUNDATIONS.md\\\",\\\"sha256\\\":\\\"fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f\\\"},\\\"value\\\":\\\"returned\\\"},\\\"refusal\\\":null,\\\"result\\\":{\\\"artifact\\\":{\\\"id\\\":\\\"sha256:ca8f78d3a209b75dc86122e84a3a09a4a721cd6b06e6a8373d1cb3101f7934a3\\\",\\\"sha256\\\":\\\"ca8f78d3a209b75dc86122e84a3a09a4a721cd6b06e6a8373d1cb3101f7934a3\\\"},\\\"value\\\":{\\\"effect\\\":{\\\"core_value\\\":\\\"satisfied\\\",\\\"end_established\\\":true,\\\"observed_interval\\\":{\\\"clock\\\":\\\"unix_ns\\\",\\\"ended_ns\\\":1792355604256500000,\\\"started_ns\\\":1792355604255993000},\\\"scope\\\":\\\"one qualified atomic target-file publication\\\",\\\"value\\\":\\\"completed\\\"},\\\"grant_id\\\":\\\"fixture-grant\\\",\\\"intent\\\":{\\\"id\\\":\\\"sha256:a381e8098bc3c723512e508e109ecd91d52d8ee2892e047b589b70ab91274657\\\",\\\"sha256\\\":\\\"a381e8098bc3c723512e508e109ecd91d52d8ee2892e047b589b70ab91274657\\\"},\\\"interpretation\\\":null,\\\"postimage\\\":{\\\"bytes\\\":24,\\\"exists\\\":true,\\\"mode\\\":384,\\\"sha256\\\":\\\"990332541d1cd926061a32a9368c57298bd20c2375f5534811efa8ae066fc046\\\",\\\"type\\\":\\\"regular\\\"},\\\"preimage\\\":{\\\"bytes\\\":0,\\\"exists\\\":false,\\\"mode\\\":null,\\\"sha256\\\":null,\\\"type\\\":\\\"absent\\\"},\\\"record\\\":{\\\"provenance\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"object\\\":null,\\\"path\\\":\\\"authority.txt\\\",\\\"root\\\":\\\"fixture\\\",\\\"selector\\\":null,\\\"sha256\\\":\\\"d7bb7da08e81e6355fc0680bbac1467b45d350e64d99961de40112eeb00169d8\\\"},\\\"text\\\":\\\"actor-side tool progress\\\"},\\\"schema\\\":\\\"a_c.fd-support.writer-result/1\\\",\\\"target\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"object\\\":null,\\\"path\\\":\\\"work/actor-effect.txt\\\",\\\"root\\\":\\\"fixture\\\",\\\"selector\\\":null,\\\"sha256\\\":null}}},\\\"schema\\\":\\\"a_c.fd-support.response/1\\\",\\\"status\\\":\\\"ok\\\"}\",\"type\":\"text\"}],\"isError\":false,\"structuredContent\":{\"evidence\":{\"id\":\"sha256:9c4eb41e2914ebd2a9c98349515b5a1d3569b2758d1c3235ea3afb5b318090e6\",\"sha256\":\"9c4eb41e2914ebd2a9c98349515b5a1d3569b2758d1c3235ea3afb5b318090e6\"},\"id\":\"actor-side-public-write\",\"operation\":\"work.write\",\"operation_outcome\":{\"cause\":\"declared output available\",\"core_value\":\"satisfied\",\"evidence\":[],\"limits\":[\"output availability only; no semantic acceptance\"],\"predicate\":\"B(work.write): declared exact output/effect-evidence payload availability on the requested basis\",\"source_parent\":{\"clause\":\"results\",\"member\":\"FOUNDATIONS.md\",\"sha256\":\"fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f\"},\"value\":\"returned\"},\"refusal\":null,\"result\":{\"artifact\":{\"id\":\"sha256:ca8f78d3a209b75dc86122e84a3a09a4a721cd6b06e6a8373d1cb3101f7934a3\",\"sha256\":\"ca8f78d3a209b75dc86122e84a3a09a4a721cd6b06e6a8373d1cb3101f7934a3\"},\"value\":{\"effect\":{\"core_value\":\"satisfied\",\"end_established\":true,\"observed_interval\":{\"clock\":\"unix_ns\",\"ended_ns\":1792355604256500000,\"started_ns\":1792355604255993000},\"scope\":\"one qualified atomic target-file publication\",\"value\":\"completed\"},\"grant_id\":\"fixture-grant\",\"intent\":{\"id\":\"sha256:a381e8098bc3c723512e508e109ecd91d52d8ee2892e047b589b70ab91274657\",\"sha256\":\"a381e8098bc3c723512e508e109ecd91d52d8ee2892e047b589b70ab91274657\"},\"interpretation\":null,\"postimage\":{\"bytes\":24,\"exists\":true,\"mode\":384,\"sha256\":\"990332541d1cd926061a32a9368c57298bd20c2375f5534811efa8ae066fc046\",\"type\":\"regular\"},\"preimage\":{\"bytes\":0,\"exists\":false,\"mode\":null,\"sha256\":null,\"type\":\"absent\"},\"record\":{\"provenance\":{\"engine\":\"workspace-regular-file\",\"object\":null,\"path\":\"authority.txt\",\"root\":\"fixture\",\"selector\":null,\"sha256\":\"d7bb7da08e81e6355fc0680bbac1467b45d350e64d99961de40112eeb00169d8\"},\"text\":\"actor-side tool progress\"},\"schema\":\"a_c.fd-support.writer-result/1\",\"target\":{\"engine\":\"workspace-regular-file\",\"object\":null,\"path\":\"work/actor-effect.txt\",\"root\":\"fixture\",\"selector\":null,\"sha256\":null}}},\"schema\":\"a_c.fd-support.response/1\",\"status\":\"ok\"}}}\n"
+  ],
+  "writer_intent": {
+    "path": "proof-after/test_ac_support_effects_ProcessTests_test_actor_side_public_mcp_writer_completes_before_actor_exit/evidence/requests/b74976edd9814cc7e729dc386781088ccfd843398c98bef6c95f9dda3a492c0f.intent.json",
+    "sha256": "a381e8098bc3c723512e508e109ecd91d52d8ee2892e047b589b70ab91274657"
+  },
+  "writer_result": {
+    "path": "proof-after/test_ac_support_effects_ProcessTests_test_actor_side_public_mcp_writer_completes_before_actor_exit/evidence/objects/ca8f78d3a209b75dc86122e84a3a09a4a721cd6b06e6a8373d1cb3101f7934a3.json",
+    "sha256": "ca8f78d3a209b75dc86122e84a3a09a4a721cd6b06e6a8373d1cb3101f7934a3"
+  },
+  "retained_target": {
+    "path": "proof-after/test_ac_support_effects_ProcessTests_test_actor_side_public_mcp_writer_completes_before_actor_exit/source/work/actor-effect.txt",
+    "sha256": "990332541d1cd926061a32a9368c57298bd20c2375f5534811efa8ae066fc046"
+  },
+  "writer_effect_interval": {
+    "clock": "unix_ns",
+    "ended_ns": 1792355604256500000,
+    "started_ns": 1792355604255993000
+  },
+  "actual_process_end": {
+    "descendants": "unknown",
+    "ended_ns": 1792355604303519000,
+    "observed": true,
+    "returncode": 0
+  },
+  "event_kinds": [
+    "reserved",
+    "supervisor_spawned",
+    "actor_launch_intent",
+    "actor_started",
+    "context_delivery",
+    "output_chunk",
+    "output_finalized",
+    "effect_observation"
+  ],
+  "interpretation": "The actual registered actor completed a public MCP work.write request and verified target bytes before exiting. The repaired supervisor retains the per-Attempt lock while releasing the Product lock after spawn/start; the actual Writer obtains its own Product/target locks. This scoped deterministic process control is not actual F_P/model usability or full ordinary Product admission."
+}

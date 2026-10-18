@@ -1,0 +1,119 @@
+{
+  "activation": "T-008-actor-transport-001",
+  "actual_actor_calls": 0,
+  "basis": {
+    "HOW_sha256": "32095ebef2f2bb1d5a5328faecc576f87fdaae788cdd23570374b0eea4fb9a70",
+    "T008_sha256": "f888154c1be0e435f834d71a494459b70e6fe2f5a56a36f17d076db10a4395ab",
+    "profile_sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1",
+    "protected_environment_clarification_sha256": "4b692949838c257d59cc2a5cb7de180f9eddccfb69c43f8a6c4b5d0ee2667160"
+  },
+  "capability_gaps": [
+    "No source-supported Codex only-selected-MCP-tools isolation established; read-only sandbox alone does not prove it",
+    "Actual configured Claude model/provider/effort not observed by this phase; no model choice invented",
+    "Existing actual selected model/effort must be preserved in future registered packet; helper settings are declarations only",
+    "Descendant/effect completion, host/model context and unreported usage/retries remain unknown",
+    "No real provider/CLI decoder compatibility, F_P usability, semantic benefit, independent review, acceptance or release established"
+  ],
+  "controls": [
+    {
+      "discriminator": "Plan, stdin Context and actual final payload stay byte-bound; no shell, prompt append, semantic repair or defaults.",
+      "id": "opaque_context_answer",
+      "tests": [
+        "test_claude_json_forwards_exact_context_and_opaque_answer_with_raw_float_metadata"
+      ]
+    },
+    {
+      "discriminator": "Explicit backend/profile selects one actual terminal text route; partials/commentary retained separately.",
+      "id": "fixed_decoders",
+      "tests": [
+        "test_claude_jsonl_selects_terminal_result_and_preserves_partial_events",
+        "test_codex_jsonl_selects_last_completed_message_without_concatenation"
+      ]
+    },
+    {
+      "discriminator": "Vendor decimals remain raw metadata; same decimal/exponent/nonfinite values and duplicate/fenced public answers fail.",
+      "id": "public_grammar",
+      "tests": [
+        "test_public_payload_decimal_exponent_duplicate_nonfinite_and_fences_are_not_repaired",
+        "test_malformed_duplicate_nonfinite_vendor_data_and_invalid_utf8_fail"
+      ]
+    },
+    {
+      "discriminator": "Missing/ambiguous/failed/nonterminal output or nonzero parent code never becomes a successful answer.",
+      "id": "actual_failure",
+      "tests": [
+        "test_missing_ambiguous_failed_or_nonterminal_claude_results_fail",
+        "test_codex_missing_message_failed_turn_or_multiple_turns_fail",
+        "test_valid_payload_with_nonzero_process_exit_is_not_a_success"
+      ]
+    },
+    {
+      "discriminator": "Timeout/output bounds retain actual partial traces and explicit unknown effects; input overflow launches no child.",
+      "id": "partial_bounds",
+      "tests": [
+        "test_timeout_preserves_raw_partials_and_keeps_unobserved_effect_scope_unknown",
+        "test_output_bound_does_not_turn_a_retained_prefix_into_success",
+        "test_input_bound_launches_no_actor_and_retains_the_actual_bounded_prefix"
+      ]
+    },
+    {
+      "discriminator": "Exact raw plan/dependencies, no symlinks, closed fields/backend/decoder and fixed CLI arguments.",
+      "id": "pins_closed_config",
+      "tests": [
+        "test_plan_digest_and_dependency_tamper_refuse_before_actor_launch",
+        "test_symlink_plan_and_dependency_are_refused",
+        "test_backend_decoder_unknown_fields_and_extra_cli_arguments_are_refused"
+      ]
+    },
+    {
+      "discriminator": "Only existing protected home path values pass unchanged, separate from plan environment; no plan override.",
+      "id": "protected_environment",
+      "tests": [
+        "test_protected_home_paths_are_only_unchanged_actual_pass_through"
+      ]
+    },
+    {
+      "discriminator": "Fresh evidence retains raw actual metadata; missing usage is not replaced with zero or an invented model.",
+      "id": "evidence_unknowns",
+      "tests": [
+        "test_evidence_is_fresh_and_missing_usage_is_not_invented"
+      ]
+    }
+  ],
+  "decoder_selection_limits": [
+    "The explicit Claude success/type/is_error/result profile is an operator-selected strict decoder contract; exact real CLI compatibility is not yet trialled",
+    "No structured_output fallback; absent final text is a failed trial",
+    "Opaque closed-return schema tag/JSON grammar only; method/activation/return contract validity belongs to existing core/callers"
+  ],
+  "live_call_prerequisites": [
+    "Closed integrated Core/Effects/adapter/helper subjects and retained exact implementation/dependency identities",
+    "Actual Product-located provisional task/owner/mechanism/evidence binding selected by Executive; current proposal alone confers no authority",
+    "Separately frozen approved call packet selecting role, finite task, territory, activation/return contract, model/effort/settings, actual executor/loader/configuration pins and policy",
+    "Executive uses ordinary public source/contract/dispatch/evidence operations; only activated Worker/Writer mutates the named task carrier",
+    "Fresh Reviewer acquires source-derived expectations before full declared candidate population; structured closed ReviewClaim and actual same-actor transport delivery required for broader source-first evidence",
+    "Actual Context exposes core activation identity; helper never substitutes request/frame/context/artifact hashes",
+    "Selected registered Attempt authenticates only actual finalized process output; no direct helper/persona/fixture authentication",
+    "Retain raw actual vendor streams, partial failures, invocation/settings/usage scope and observed producer limits; no answer repair/retry without new selection"
+  ],
+  "schema": "a_c.actor-transport-oracles/1",
+  "scope": "Transport-only helper and controlled process fixtures; no new a_c operation, admission, method rule, semantic result or live model call",
+  "source_observation_date": "2026-10-19 Australia/Sydney",
+  "sources": [
+    {
+      "url": "https://learn.chatgpt.com/docs/non-interactive-mode",
+      "use": "Codex JSONL terminal turn and completed agent-message text routes; current help decides installed flags"
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/cli/reference",
+      "use": "Codex stdin/JSON/ephemeral/configuration capability context; not a claim of MCP-only tool confinement"
+    },
+    {
+      "url": "https://code.claude.com/docs/en/headless",
+      "use": "Claude print mode, stdin, JSON result text and stream-JSON format; bare mode changes authentication"
+    },
+    {
+      "url": "https://code.claude.com/docs/en/cli-reference",
+      "use": "Claude explicit built-in tools/MCP/setting-source controls; capability observations only"
+    }
+  ]
+}

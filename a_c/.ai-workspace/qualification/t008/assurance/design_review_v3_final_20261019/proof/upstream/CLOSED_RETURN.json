@@ -1,0 +1,104 @@
+{
+  "activation": "T-008-upstream-001",
+  "closed_at": "2026-10-18T18:11:31.989400+00:00",
+  "consumer": "/root",
+  "contract_sha256": "1b24efb913fa1f07df09bb71da6039992fc3cd356db9a8c9dba6e0aecf81b79b",
+  "effects": {
+    "durable_effects": [
+      "own qualification/t008/upstream evidence files only"
+    ],
+    "package_or_global_config_installation": "none",
+    "previous_incomplete_checkout": "preserved, untouched",
+    "repository_git_index_ref_commit_push": "none",
+    "source_changes": "none",
+    "temporary_effects": [
+      "fresh checkout and empty temp Git configuration /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv",
+      "existing test harness disposable output directories"
+    ]
+  },
+  "evidence": {
+    "acquisition_commands_raw_outputs": "acquisition.json",
+    "checker_report": "actual_upstream_report.json",
+    "contract": "activation_contract.json",
+    "external_admission_receipt": "external_admission_receipt.json",
+    "manifest": "evidence_manifest.json",
+    "manifest_sha256": "7a06feef251727eb8544584f489e997804db689123be439574ce8df412abdd51",
+    "postcondition_commands_raw_outputs": "baseline_subject_after.json",
+    "source_precondition_observation": "activation_observation.json",
+    "test_summary": "baseline_test_summary.json",
+    "verification_commands_raw_outputs": "baseline_verification_attempts.json"
+  },
+  "exceptions": [
+    "Initial read-only upstream-URL rg inadvertently included assurance path/line match excerpts. No peer result was used as oracle; Executive explicitly permitted continuation as bounded mechanical baseline verification. Further discovery and evidence were confined."
+  ],
+  "inputs": {
+    "actual_python_executable": "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+    "baseline_source_manifest": "baseline_subject_before.json",
+    "baseline_source_manifest_sha256": "2e96dac96067de9b22e73cabd0b13c4e56c1fdc06a80000909e78ff36087a915",
+    "committed_what": "c2f67fec8154028d45d7cd7a2832dd4fade4d94b",
+    "dependency_versions": {
+      "mypy": "1.15.0",
+      "networkx": "3.4.2",
+      "numpy": "2.2.6",
+      "rapidfuzz": "3.13.0",
+      "tree-sitter": "0.25.2",
+      "tree-sitter-json": "0.24.8"
+    },
+    "python_version": "3.12.8 (v3.12.8:2dc476bcb91, Dec  3 2024, 14:43:19) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "upstream_commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+    "upstream_tree": "6e11ed7cda0437ff12a29a328ca785e8915ddbc0",
+    "upstream_url": "https://github.com/Graphify-Labs/graphify.git"
+  },
+  "method_binding": {
+    "builder_manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "builder_observation": "Exact builder premise supplied by Executive external admission; this baseline worker did not repeat installed status verification or change adoption.",
+    "builder_release": "v2.5.1-rc.2",
+    "execution_custody": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+    "execution_source": "c2cfa9b908d1722ae3f26c32fa4ece691083bdc3",
+    "execution_standards_tree": "98de394b352179c25dfa63b0b59a9b6bdd43632d"
+  },
+  "producer": "/root/ac_fd_upstream_qualification",
+  "residuals": [
+    "This baseline predates the new F_D support modules and does not qualify their interface, admission, executors, checks, MCP or ordinary actor usability.",
+    "Tests use fixture/mocked F_P authoring outputs where declared by existing harness; four actual upstream integration tests and the separate nine-check upstream boundary trial executed. No new model calls were made.",
+    "No semantic acceptance, complete calculus conformance, release readiness, efficiency or quality improvement is established.",
+    "Local checkout custody and exact clean Git/source/package observations were checked; no independent upstream publisher-signature or repository-host attestation is supplied.",
+    "The finite external bootstrap receipt is reported from the Executive; this work does not qualify a public admission mechanism."
+  ],
+  "results": {
+    "acquisition": "fresh exact clean temporary checkout",
+    "actual_upstream_checker": {
+      "checks": 9,
+      "codec_sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+      "edges": 372,
+      "fixture_sha256": "a72d423a222ecd84a429e28796c93ba07ac8b79d40caf3b74af02c36029f3b0b",
+      "nodes": 282,
+      "qualification_script_sha256": "e7c796e71b6143cd6314114fa3b5db6dae35f0a13fd6bcfed010402747182561",
+      "status": "passed",
+      "upstream_entrypoint_sha256": {
+        "graphify/build.py": "742075a82ec2797925a2e9d16d325b2e86a3e674eea04f06377f88bf7653fc17",
+        "graphify/export.py": "737cb97c5ca596f48a405a26e283140272b14d7ce5b63c89e6542ba8ac904e17",
+        "graphify/paths.py": "529cf874f7a990d8f318c8ca343bffced5378a5cff74f31c36404dc609ee5855",
+        "graphify/serve.py": "5ed6d9b150aae093b2f7e3b8cd7a7d4b922d73f88829b4b3992a1399159520be",
+        "graphify/validate.py": "be068c6b2ff4e514f31663e0155a9d63f35096d154b98ab6c9c467a23febd6f7"
+      }
+    },
+    "baseline_tests": {
+      "actual_upstream_cases": 4,
+      "failures": 0,
+      "outcome": "passed",
+      "run": 107,
+      "skipped": 0
+    },
+    "postconditions": {
+      "baseline_source_preimages_unchanged": true,
+      "upstream_exact_and_clean": true
+    }
+  },
+  "retained_checkout": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout",
+  "role": "Verification Worker/Writer",
+  "schema": "a_c.worker.closed-return/1",
+  "scope": "Bounded mechanical qualification of pre-existing Graphify tenant baseline only",
+  "status": "candidate_ready",
+  "stop": "Closed result returned to Executive; no continuation or acceptance inferred."
+}

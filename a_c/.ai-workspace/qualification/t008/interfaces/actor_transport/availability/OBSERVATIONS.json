@@ -1,0 +1,69 @@
+{
+  "actual_actor_calls": 0,
+  "limitations": [
+    "Installed flags are capability observations; no live packet/configuration selected",
+    "Configured Claude default model not observed; no invented choice",
+    "Codex only-selected-MCP-tools confinement option not established from the selected help/docs"
+  ],
+  "observations": [
+    {
+      "command": [
+        "/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex",
+        "--version"
+      ],
+      "ended_ns": 1792355645359259000,
+      "executable_sha256": "74c6a6d263f40d65f99c27a815275f5b4ed0bcc2baecc396b4cf3255498bdfc0",
+      "exit_code": 0,
+      "mode": "version",
+      "name": "codex",
+      "started_ns": 1792355645349592000,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "1df57fdc934f35bbd09e26308fbbd895698596f3be833ace1027c6bcfd2f81e2"
+    },
+    {
+      "command": [
+        "/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex",
+        "exec",
+        "--help"
+      ],
+      "ended_ns": 1792355645463575000,
+      "executable_sha256": "74c6a6d263f40d65f99c27a815275f5b4ed0bcc2baecc396b4cf3255498bdfc0",
+      "exit_code": 0,
+      "mode": "help",
+      "name": "codex",
+      "started_ns": 1792355645455066000,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "df0d864ca2076f7654288c6a1e3394e3eaa2ea8f15021df2524efdd90c70986c"
+    },
+    {
+      "command": [
+        "/Users/jim/.local/share/claude/versions/2.1.302",
+        "--version"
+      ],
+      "ended_ns": 1792355645575800000,
+      "executable_sha256": "5262ce9de86243fed0d21edc39b271555d56780d0112e2b194439fe1c6662d37",
+      "exit_code": 0,
+      "mode": "version",
+      "name": "claude",
+      "started_ns": 1792355645568440000,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "46456e3df7072c3a1af6131cd577e05b22296c630b3e7a4a60be70a7c3a5d896"
+    },
+    {
+      "command": [
+        "/Users/jim/.local/share/claude/versions/2.1.302",
+        "--help"
+      ],
+      "ended_ns": 1792355645721520000,
+      "executable_sha256": "5262ce9de86243fed0d21edc39b271555d56780d0112e2b194439fe1c6662d37",
+      "exit_code": 0,
+      "mode": "help",
+      "name": "claude",
+      "started_ns": 1792355645677350000,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "223ec71c6e89368ce9d8d4b36118ec535a3af755728b7868fd60f69f6af7c64e"
+    }
+  ],
+  "schema": "a_c.actor-cli-availability/1",
+  "scope": "read-only local help/version; no authentication files/credentials/model/provider call"
+}

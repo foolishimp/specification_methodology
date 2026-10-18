@@ -1,0 +1,148 @@
+{
+  "authored_test_names": [
+    "test_all_three_principals_discover_real_contracts",
+    "test_demo_is_readonly_and_does_not_overwrite_existing_configuration",
+    "test_documented_mcp_session_uses_shared_schemas_and_actual_source",
+    "test_file_and_stdin_acquire_actual_source_for_worker",
+    "test_framing_bound_refuses_before_parsing_or_effect",
+    "test_mcp_decimal_and_exponent_tokens_stay_refused_in_public_envelope",
+    "test_mcp_notifications_never_run_a_tool_or_emit_responses",
+    "test_mcp_numeric_transport_ids_roundtrip_without_float_rounding",
+    "test_mcp_optional_metadata_client_info_and_capabilities_are_data",
+    "test_mcp_protocol_errors_are_separate_from_bound_tool_refusal",
+    "test_mcp_strict_json_and_invalid_id_do_not_activate_tools",
+    "test_nonfinite_transport_metadata_and_duplicate_keys_remain_parse_errors",
+    "test_observe_sees_dirty_bytes_without_a_commit_proxy",
+    "test_original_operation_evidence_is_acquirable_in_fresh_cli",
+    "test_policy_digest_and_fixed_principal_cannot_be_replaced_by_request",
+    "test_source_symlink_refuses_through_public_source_route",
+    "test_strict_cli_input_rejects_unbound_grammar",
+    "test_valid_preflight_is_denied_without_work_grant_or_executor"
+  ],
+  "authored_tests": 18,
+  "authority": {
+    "HOW": "32095ebef2f2bb1d5a5328faecc576f87fdaae788cdd23570374b0eea4fb9a70",
+    "WHAT": "c2f67fec8154028d45d7cd7a2832dd4fade4d94b",
+    "draft_raw_sha256": "cec211506409eb4dddbad60804c4f37a906a8264e33e17223b9bc18169235e05",
+    "method_profile": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+  },
+  "controls": [
+    {
+      "adverse": "Unknown operation/profile, ambiguous startup Product, unknown field, unsupported type/version and forged role/principal cannot activate an unsupported operation or grant.",
+      "id": "INT-001",
+      "positive": "All three fixed principals discover actual versioned operations, full schemas, supported profile, prerequisites and qualification scope through ordinary interfaces.",
+      "source": "FD001; design public grammar and ordinary projection"
+    },
+    {
+      "adverse": "Changed inputs under the same caller id refuse; mismatched MCP tool name/request.operation is a protocol error; changing JSON-RPC id cannot create another semantic attempt or remove caller identity.",
+      "id": "INT-002",
+      "positive": "CLI file/stdin and MCP carry the same exact caller envelope to one dispatcher; an exact effect retry reuses its protected reservation.",
+      "source": "FD001/007; full request identity and MCP projection"
+    },
+    {
+      "adverse": "Duplicate keys, float/NaN/infinity, malformed UTF-8/JSON, trailing data, invalid envelope and malformed startup settings reach no dependent effect. Protocol stdout contains no diagnostic or child-process contamination.",
+      "id": "INT-003",
+      "positive": "UTF-8 integer-only JSON with allowed Unicode and significant array order reaches the shared parser; CLI emits one JSON response with documented exit code and stderr diagnostics.",
+      "source": "design strict wire grammar; pinned transport"
+    },
+    {
+      "adverse": "Invalid lifecycle/params, unknown method/tool and mismatched envelope return applicable protocol errors; notifications have no response; named operation refusals use isError rather than becoming protocol errors. Modern server/discover and task execution are unsupported.",
+      "id": "INT-004",
+      "positive": "A valid initialize returns supported protocolVersion2025-11-25 even for an unknown requested version; initialized precedes tools/list and tools/call; ping works; tool results include equal structuredContent and JSON text.",
+      "source": "legacy MCP2025-11-25 lifecycle/tools"
+    },
+    {
+      "adverse": "Locator-only content, denied route, stale source/precondition, fabricated receipt, unknown executor, excess context and absent host-context measurement retain exact gaps/refusals rather than hidden acquisition, truncation, authority or sufficiency.",
+      "id": "INT-005",
+      "positive": "An ordinary actor acquires actual raw source and retained context/evidence content, then a selected trusted registry admits and dispatches its exact contract under supplied authority.",
+      "source": "FD002/003/005/006/007; public currentness and acquisition path"
+    },
+    {
+      "adverse": "Timeout, lost response, partial output/effect, non-consumable return, duplicate/conflict, unauthorized Executive/Reviewer write and stale target preserve their distinct original facts. Process exit/transport/schema validity never becomes semantic success or rollback.",
+      "id": "INT-006",
+      "positive": "Public dispatch/observe/return/record routes expose actual invocation, original output, pre/post bytes, retained attempts and reconstructable fresh-process evidence.",
+      "source": "FD007/008/011/012/013; public effect and recovery path"
+    },
+    {
+      "adverse": "Fixture expected answers, author summaries, hidden implementation context, early candidate exposure or same-family fresh session alone cannot support independent semantic review or ordinary actor usability.",
+      "id": "INT-007",
+      "positive": "An approved nonauthor F_P Reviewer acquires governing raw source, records its actual expectations before candidate exposure, then acquires exact candidate/proof through public interfaces and returns an unedited source-bound assessment.",
+      "source": "FD009; FDV001/002; RC9 EVALUATION3 and ASSURANCE13"
+    },
+    {
+      "adverse": "Passing direct helpers or deterministic fixtures cannot close unexercised real actor/provider claims; a hidden fallback, manually edited response or silent retry cannot support the ordinary-path result.",
+      "id": "INT-008",
+      "positive": "One approved actual bounded a_c task retains distinct contract-sufficiency, boundary-congruence, path-realisation and user-usability evidence for the documented Executive/Worker/Reviewer chain.",
+      "source": "FDV001/002; ASSURANCE13 separate claim boundaries"
+    },
+    {
+      "adverse": "Duplicate/decimal JSON, unknown content keys/schema revisions, wrong role proof, null evidence mistaken for performed judgment, plan/basis/producer mismatch, invalid rate denominator, resource-owner conflict or undeclared invalidator produce the declared constraint/basis/capability distinction, never hidden private defaults or manufactured truth.",
+      "id": "INT-009",
+      "positive": "Ordinary tools.describe exposes the actual full content schemas and references used to parse acquired conjunction plans, refresh declarations/invalidators, accounting/resource bodies and each Worker/Reviewer/Executive return contract. Exact body shape and source-bound semantic/foreign-key conditions agree across CLI and MCP.",
+      "source": "repair004 closed acquired-content contracts and complete 44-definition catalog"
+    },
+    {
+      "adverse": "Null/absent/unknown dispatch selection, consumer mismatch, executor/request override, implicit sole-sink default or escaped endpoint refuses before reservation/launch; publication and consumer receipt remain separate observations.",
+      "id": "INT-010",
+      "positive": "A dispatch Grant explicitly selects an existing notification_sink id with a matching packet consumer; the immutable Attempt retains its full registered binding.",
+      "source": "repair004 event-sink contract"
+    },
+    {
+      "adverse": "Manual paste, external CLI response, private study/legacy actor path or matching producer label/hash cannot authenticate a new F_D return. External raw Reviewer material remains explicitly unauthenticated at this boundary rather than being silently promoted.",
+      "id": "INT-011",
+      "positive": "Registered Attempt final output is acquired with exact executor/actor/transport/output-slot/complete-byte binding and its original return is preserved.",
+      "source": "repair004 returns and authoritative-path exclusions"
+    },
+    {
+      "adverse": "Available rejected-admission/negative/unknown inner results must remain returned/ok, while actual pre-effect refusal and begun held observations/effects map to their exact exit/status/refusal fields. No unsupported code, result patch or guessed exception-message classification is allowed.",
+      "id": "INT-012",
+      "positive": "The dispatcher passes full requests and core plans only to their owners, preserves all five CoreOutcome keys, and returns the sole persist_outcome response with original inner results.",
+      "source": "repair004 CoreOutcome/effect/response seams and closed status map"
+    },
+    {
+      "adverse": "Stale applicability, successor presence or caller SourceRef cannot rewrite an immutable receipt into rejected/superseded/drafted or grant reactivation. Unsupported transition remains an explicit refusal/gap.",
+      "id": "INT-013",
+      "positive": "Public evidence preserves drafted plan, admitted/rejected complete receipt and separately owner-supported superseded projection, alongside independent fresh applicability.",
+      "source": "repair004 contract-state and applicability relations"
+    },
+    {
+      "adverse": "Explicit numeric/whole-host fit requirement stays required even if a caller supplies null, unknown host does not become known/zero or satisfied, measured excess is not trimmed, and no override manufactures fit.",
+      "id": "INT-014",
+      "positive": "Null capacity with no selected fit gate retains actual bytes and explicit host unknowns without a performed fit judgment; otherwise-complete authorized preflight may admit under a grant that requires no missing fit premise.",
+      "source": "repair004 ACT2 no-declared-capacity branch"
+    },
+    {
+      "adverse": "Missing/altered/incomplete anchor, wrong policy/principal/grant/target, stale executable/dependency or lost reservation cannot launch through reentry. No supervisor public tool, caller-selected argv, forged dispatch.start request, hidden Runtime mode or alternate admission branch may appear, and a zero supervisor exit cannot become semantic/Worker success.",
+      "id": "INT-015",
+      "positive": "The exact fixed adapter _supervise entry constructs an ArtifactRef from the protected anchor id/hash and calls only effects.supervise(runtime, attempt_ref), which recovers the complete original request/Context and rechecks all named bindings before the registered launch. Return int is observed OS supervisor process status only, and supervisor diagnostics remain separate from CLI/MCP and actual executor outputs.",
+      "source": "repair005 private fixed-supervisor export/call relation"
+    },
+    {
+      "adverse": "Absent applicability cannot become unconditional, unsupported/unauthenticated judgment cannot exclude, mapping presence cannot become semantic coverage, absent edges cannot prove non-influence and cross-model/wrong-basis/duplicate/dangling declarations keep their source-owned refusal or unknown distinction. Adapter neither duplicates those computations nor changes their result algebra.",
+      "id": "INT-016",
+      "positive": "Public discovery exposes the same typed relation input/result definitions used by core; exact model/native basis/represented subject/execution coordinates survive CLI/MCP. Query facts preserve seed-scoped declared support, complete edge records, explicit null versus missing applicability, conservative unresolved traversal and lexical deterministic path/closure domains.",
+      "source": "repair007 source-owned FD004 RelationDeclarations/RelationQueryResult catalog and semantics"
+    },
+    {
+      "adverse": "Partial/failed write or missing/in-flight/failed observation publication remains potential exposure/unknown; no second result/persistence wrapper, context-body delivery inferred from summary, mental receipt, ref patching or new authority appears.",
+      "id": "INT-017",
+      "positive": "After a full successful public CLI/MCP response write and flush, a separate complete transport observation derives exact public-response acquisition refs from verified OperationEvidence and binds response/wire hashes, principal and actual interval.",
+      "source": {
+        "path": "a_c/.ai-workspace/qualification/t008/interfaces/TRANSPORT.clarification.txt",
+        "sha256": "3235cb84ca02646cbc721db664c60d9d901ebbebf0f76ced587838ee2f3d46a0"
+      }
+    },
+    {
+      "adverse": "The exact complete public tool envelope is independently reparsed; 1.0/1e0/1E+0 stay refused even when mathematically integral. Duplicate transport keys and NaN/infinity refuse; protocol metadata cannot select principal, grants or operation fields.",
+      "id": "INT-018",
+      "positive": "Pinned MCP optional metadata/clientInfo/capabilities accept ordinary finite outer JSON; exact large/fractional numeric transport ids roundtrip without binary float conversion.",
+      "source": {
+        "path": "a_c/.ai-workspace/qualification/t008/interfaces/TRANSPORT.numeric.clarifications.json",
+        "sha256": "62936ffcd85893e7af5133921e56810b5e95b77c5193682f55c82ec6b7a4b5ab"
+      }
+    }
+  ],
+  "executed_support_interface_tests": 0,
+  "schema": "a_c.interfaces-source-oracles/1",
+  "scope": "Independent source-derived expectations for owned mechanical interface proof; construction authorship, not independent semantic review or actual F_P usability. Current peer-dependent runtime execution remains unperformed."
+}

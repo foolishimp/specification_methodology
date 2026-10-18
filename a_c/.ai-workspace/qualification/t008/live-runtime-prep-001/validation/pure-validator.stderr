@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/live-runtime-prep-001/validate.py", line 77, in <module>
+    main()
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/live-runtime-prep-001/validate.py", line 47, in main
+    plan = actor_cli.load_plan(BASE / "worker-actor-plan.json", config["helper_plan"]["sha256"])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/examples/fd-support/actor_cli.py", line 117, in load_plan
+    argv = [_text(item) for item in value["argv"]]
+            ^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/examples/fd-support/actor_cli.py", line 46, in _text
+    raise TransportError("Expected a nonempty string without NUL")
+actor_cli.TransportError: Expected a nonempty string without NUL

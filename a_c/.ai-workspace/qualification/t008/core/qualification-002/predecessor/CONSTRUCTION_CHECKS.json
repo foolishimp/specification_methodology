@@ -1,0 +1,45 @@
+{
+  "schema": "a_c.core-construction-checks/1",
+  "activation": "T-008-core-001",
+  "scope": "Core source-selected module/control tests plus strict typing and existing-member preservation; no integrated/independent semantic qualification",
+  "commands": [
+    {
+      "command": "PYTHONPYCACHEPREFIX=a_c/.ai-workspace/qualification/t008/core/cache python3 -m unittest discover -s a_c/build_tenants/graphify/test_env -p 'test_ac_support_core.py' -v",
+      "exit_code": 0,
+      "tests": 55,
+      "raw": "tests-final.txt"
+    },
+    {
+      "command": "PYTHONPYCACHEPREFIX=a_c/.ai-workspace/qualification/t008/core/cache a_c/.venv/bin/python -m mypy --strict --cache-dir a_c/.ai-workspace/qualification/t008/core/mypy-cache a_c/build_tenants/graphify/code/ac_support_core.py a_c/build_tenants/graphify/test_env/test_ac_support_core.py",
+      "exit_code": 0,
+      "files": 2,
+      "raw": "mypy-final.txt"
+    }
+  ],
+  "facts": {
+    "public_operations": 23,
+    "content_definitions": 58,
+    "source_discriminator_cases_in_frozen_draft": 66,
+    "all_existing_members_preserved": true,
+    "existing_members_checked": 3492,
+    "no_models_or_global_or_Git_mutations": true,
+    "draft_unchanged": true
+  },
+  "retained_supported_repairs": [
+    "Undeclared automatic predicate input binding in preflight and selected check helpers",
+    "Target role fixture canonical path alias, preserving exact source control",
+    "Nested required counterexample/gap conservation",
+    "Exact actual final-slot producer and activation binding",
+    "Model projection acquisition and inline retained-evidence exposure",
+    "Root-selected complete ReviewClaim population with conservative opaque-source unknowns"
+  ],
+  "coverage_gaps": [
+    "Actual F_P Executive/Worker/Reviewer ordinary public-interface task and independent semantic assessment are integration-owned and unperformed here.",
+    "Successful four-condition new-subject retention and full completeness-certified unchanged refresh frontier need dedicated execution evidence; conservative changed/unknown handoff was exercised.",
+    "All role-specific return contracts parse strictly; actual Reviewer/Executive returns and independent family-policy checks require ordinary actor qualification.",
+    "Source/host framing for material late reads cannot positively certify full-active numeric fit in this finite implementation; it retains indeterminate/excess.",
+    "Read-only Git exact object acquisition exercised against pinned RC9; no checkout/filter/hook/network mutation was performed.",
+    "FDV-003 matched accepted-result usefulness/cost, installed qualification, acceptance and release remain unqualified."
+  ],
+  "prior_attempt_evidence": "All earlier own tests/type logs remain; final success does not erase repaired-construction evidence."
+}

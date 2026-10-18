@@ -1,0 +1,28 @@
+{
+  "cause": "operator-selected temporary output path was recorded as a macOS symlink alias instead of actual canonical path",
+  "failed_cut": "interfaces-001",
+  "failures": 18,
+  "observed_failure": "path_refused at /var alias before trusted initialization",
+  "preimages": [
+    {
+      "bytes": 9493,
+      "path": "a_c/build_tenants/graphify/examples/fd-support/prepare_readonly.py",
+      "retained": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/repair-001/preimages/prepare_readonly.py",
+      "sha256": "4867a29f11ef91b6706974142a99ff65b03fe795ddcda99d099e9ea1534464f6"
+    },
+    {
+      "bytes": 43514,
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py",
+      "retained": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/repair-001/preimages/test_ac_support_interfaces.py",
+      "sha256": "5645358fc3c2c594ac734a8e9a9ce9bef052ee2e549c86caa6b4ddbba23c0f64"
+    },
+    {
+      "bytes": 10296,
+      "path": "a_c/build_tenants/graphify/examples/fd-support/README.md",
+      "retained": "a_c/.ai-workspace/qualification/t008/interfaces/integration-001/repair-001/preimages/README.md",
+      "sha256": "6f740e730487e52098f50d38e59199f36b03b0aadc80b105b4f8eb29b9b5dce5"
+    }
+  ],
+  "runtime_symlink_refusal": "preserved; no adapter/Core/Effects change, pin replacement or repin after admission",
+  "scope": "owned disposable setup/documentation/test path repair only"
+}

@@ -1,0 +1,1441 @@
+--- a_c/build_tenants/graphify/design/fd-support.md (repair-004 preimage)
++++ a_c/build_tenants/graphify/design/fd-support.md (repair-004 candidate)
+@@ -194,6 +194,25 @@
+ and limits. An unperformed evaluation has no such judgment. Refusals name the
+ unmet supported contract; they never fabricate a Worker work result.
+ 
++The boundary-to-wire map is closed and shared by CLI/MCP and persist_outcome:
++
++| Bound operation outcome | response.status / CLI exit | response.refusal |
++|---|---|---|
++| returned | ok / 0 | null; this includes a truthful available negative or unknown inner judgment/observation, and a completely available rejected-admission receipt. |
++| refused(constraint), refused(basis), refused(authority), refused(capability) | refused / 2 | Required exact code/reason/gaps/source_refs; code must map to that cause in the closed code table. The denied dependent effect has not begun. |
++| held(observation), held(effect) | error / 1 | Required exact held-cause code/reason/gaps/source_refs; retain any actual partial output, effect and publication uncertainty. |
++| no bound operation (parse/startup/protocol failure) | refused / 2 for a known guard violation; error / 1 for a caught observation/internal/publication failure | Exact applicable diagnostic code; operation_outcome is null, and no named evaluation is fabricated. |
++
++A timeout returning its contracted current unknown observation is returned/ok;
++an interrupted operation unable to provide its contracted output is held/error.
++The difference is output availability under that exact operation contract,
++not the inner effect value. A caught error cannot be relabeled returned merely
++because it has a diagnostic. Inner method/F_P results are never rewritten to
++match status. MCP isError is true exactly for refused/error tool responses;
++protocol parse/invalid-request/method/params failures use JSON-RPC errors and
++have no named operation outcome. A trusted store failure may leave evidence
++null with its exact publication gap as already specified; no false durable ref.
++
+ `SourceRef` has the exact keys below. `object` is null for workspace files and
+ retained evidence, and an exact full Git revision/object for Git sources.
+ `selector` is null, `{"lines":[first,last]}` (inclusive 1-based, UTF-8 text) or
+@@ -238,13 +257,13 @@
+ | `records.read` | `model`, `ids` | Exact payloads and typed references via `ac_graph.inspect`; unknown ids refuse the batch. |
+ | `graph.project` | `model`, `selections` (ordered `seeds`, optional `budget_records`) | `ac_graph.project_many` views with complete governing closure and untouched boundary/population semantics. |
+ | `relations.query` | `model`, `declarations` (SourceRef), `query` (`dependencies`, `path`, `impact`, `coverage`), `seeds` | Paths/closure/coverage from explicitly authored typed declarations, supplied applicability separated, incomplete-coverage boundaries. |
+-| `context.assemble` | `packet`, `models` (ModelRef plus selections), `sources` (SourceRefs), `late_acquisition` (SourceRefs), `envelope` | Protected Context artifact, actual acquisition manifest, byte measurement and method-bound fit judgment. Does not emit over-capacity content to an actor. |
++| `context.assemble` | `packet`, `models` (ModelRef plus selections), `sources` (SourceRefs), `late_acquisition` (SourceRefs), `envelope` | Protected Context artifact, actual acquisition manifest, exact bytes and selected-capacity measurement/fit judgment (unperformed when no such gate is selected). Does not emit over-capacity content to an actor. |
+ | `contract.preflight` | `context` (ArtifactRef), `grant_id`, `executor_id`, `result_key`, `observations` (ArtifactRefs), optional `admission_record` | Exact draft/admitted/rejected coordinates, deterministic findings and protected receipt bound to policy authority or explicitly registered owner override. |
+ | `dispatch.start` | `preflight` (ArtifactRef), optional `retry_of` (Attempt ref), optional `reconciliation` (ArtifactRef) | Named attempt receipt, exact effective invocation/input/settings and retained observations. No arbitrary argv/env/script argument. |
+ | `dispatch.observe` | `attempt` (ArtifactRef), `after_event` (integer) | Events/raw-output routes, available output and subject/effect/end observations; currentness gaps. |
+ | `dispatch.cancel` | `attempt`, `reason` | Retained cancellation request, any observed signal delivery/end; no automatic completed/not-effected value. |
+ | `events.wait` | `attempt`, `after_event`, `timeout_ms`, `cadence_ms`, `purpose`, `stop_condition` | Decision-relevant events or bounded timeout observation; notification sink delivery/receipt distinguished. |
+-| `return.capture` | `attempt`, `payload` (ArtifactRef), `return_contract` (SourceRef) | Original payload/provenance and source coordinates. Output must be from that attempt or an explicitly registered external producer, otherwise unauthenticated. |
++| `return.capture` | `attempt`, `payload` (ArtifactRef), `return_contract` (SourceRef) | Original payload/provenance and source coordinates. Only actual output acquired from that registered dispatched attempt can authenticate; external raw material is retained unauthenticated with binding gaps. External-producer authentication is unsupported. |
+ | `return.check` | `return` (ArtifactRef), `context`, `consumer`, `observations`, `predicates` (registered ids) | Binding/currentness/predicate findings, duplicate/conflict metadata, preserved historical verdicts and explicit non-consumable gaps. |
+ | `review.prepare` | `phase` (`expectation` or `candidate`), `claim` (SourceRef), `sources`, `candidate` (SourceRef or null), `proof` (SourceRefs), `comparison` (SourceRef or null), `expectations` (ArtifactRef or null), `expectation_body` (null or `text`/`source_inputs` object) | Raw acquired authority/candidate/proof/diff payloads, producer/assertion/execution provenance and observed exposure ordering. |
+ | `checks.evaluate` | `predicate_id`, `inputs` (ArtifactRef/SourceRef bindings), `subject`, `basis` | Actual finite `F_D[v]` judgment with source contract, domain, counterexample/missing premises and limits. |
+@@ -252,7 +271,7 @@
+ | `work.project` | `carrier` (SourceRef), `selection` (JSON pointers or Markdown headings) | Exact selected original content, source-linked facts and original owner wording; no inferred task state. |
+ | `work.write` | `grant_id`, `target` (SourceRef with preimage), `mode` (`append` or `replace`), `record`, `interpretation` (separate or null), `observations` | Named Writer-only exact record application, pre/post identities and actual effect/end evidence or refusal. |
+ | `refresh.prepare` | `previous`, `current` (Observation refs), `declarations` (SourceRef), `results` (ArtifactRefs), `invalidators` (SourceRef) | Material diffs, affected candidates, explicit unknown impact, surviving exact applicability checks and reconstructable handoff artifact. |
+-| `resources.aggregate` | `attempts` (unique ArtifactRefs), `accounting` (SourceRef) | Measured/unknown counters, all attempts/failures, elapsed versus summed intervals, overlapping/subcounter metadata and supported selected-limit checks. |
++| `resources.aggregate` | `attempts` (unique retained Attempt/Operation refs), `accounting` (SourceRef) | Measured/unknown counters, all attempts/failures, elapsed versus summed intervals, overlapping/subcounter metadata and supported selected-limit checks. |
+ 
+ `evidence.read` is additionally provided for all three roles: `artifact`
+ (ArtifactRef), optional `max_content_bytes`. It returns the retained exact
+@@ -298,8 +317,9 @@
+ 
+ This is a serialization of the selected method-owned relations, not an
+ additional result algebra or requirement that F_P judgment be deterministic.
+-Registered return-contract SourceRefs bind this exact carrier/schema and any
+-role-specific proof obligations. Unsupported return carriers remain retained
++Registered return-contract SourceRefs resolve the exact ReturnContract content
++schema and role-specific proof obligations in Closed acquired content contracts
++below; no arbitrary body or hidden proof convention is accepted. Unsupported return carriers remain retained
+ raw output with an explicit unsupported-format gap.
+ 
+ ### Packet carrier
+@@ -331,17 +351,30 @@
+ as acquired deciding material. Mandatory late reads have to be named by the
+ selected contract; a future read is not reported as already supplied.
+ 
+-Measure the exact UTF-8 stdin bytes, including template/framing and all embedded
+-content, before worker delivery. A known/bounded host contribution is included
+-only with its supporting source; unknown host context remains unmeasured and
+-full-active-context fit is indeterminate unless a measured excess falsifies it.
+-No declared capacity means no mandatory fit gate; observed byte count may still
+-be retained. Token capacities refuse as unsupported rather than use a guessed
+-ratio. Measured envelope excess never trims content. Whether an unresolved fit
+-blocks dispatch is the selected admission predicate; the supported profile
+-requires satisfied fit when a capacity applies, absent a separately registered
+-exact owner override lawful under its source contract. Fit and semantic
+-sufficiency remain separate.
++Where B declares a numeric context capacity, measure the exact full active
++input before delivery, including template/framing, material late-acquisition
++allowance and any host context, or use an actually supported host-inclusive
++upper bound as ACT §2 step 3 requires. Exact retained stdin bytes alone are not
++a whole-host measurement. A known/bounded host contribution needs actual
++supporting evidence; unknown host context makes a required full-active fit
++judgment indeterminate unless a measured excess already falsifies it. A
++positive required fit cannot follow from incomplete inputs or a guessed bound.
++Token capacities refuse as unsupported rather than use a guessed ratio, and
++measured excess never trims content.
++
++capacity_bytes:null means no numeric context capacity is declared. ACT §2 then
++requires no size measurement/fit gate; RF-002's other finite-attention and
++material-context conditions still apply. Exact rendered/dispatched bytes and
++any actual byte count are retained for identity/observation, but no numeric or
++whole-host fit result is invented or coerced to satisfied. A fit evaluation not
++selected is not performed (judgment null); host/full-fit unknown scope remains
++explicit. This branch allows ordinary admission only when the existing selected
++grant requires no numeric/whole-host fit predicate and all other authority,
++basis, outcome, material-context and capability premises hold. Null cannot hide
++a known required capacity or silently reduce the outcome. An explicitly required
++fit stays required. A separately lawful exact override may authorize its own
++stated action, but never manufactures a satisfied fit or removes its unknowns.
++Fit, attention in actual use and semantic sufficiency remain separate.
+ 
+ ## Source, state and graph mechanics
+ 
+@@ -402,7 +435,8 @@
+   metadata and allowed operations. A request cannot change these values.
+ - Each `grant` names id, existing owner/delegation SourceRefs, exact outcome,
+   permitted requester principals and activated targets, operations/tools/executors/territory, required material
+-  preconditions and admission mechanism/conditions. The operator verifies the
++  preconditions, admission mechanism/conditions and `notification_sink` selecting
++  an existing sink id (or null only for a non-dispatch grant). The operator verifies the
+   source owners; the tool checks these registered bindings, not the truth of
+   arbitrary supplied authority prose.
+ - Each `predicate` names id, exact source contract, subject/domain/basis and
+@@ -448,7 +482,7 @@
+ | Registry record | Exact fields |
+ |---|---|
+ | Principal | `actor_id`, `role`, `family`, `authorship`, `operations`, `role_binding`, `role_transition` |
+-| Grant | `id`, `authority_sources`, `outcome`, `principals`, `targets`, `operations`, `tools`, `executors`, `territory`, `preconditions`, `admission` |
++| Grant | `id`, `authority_sources`, `outcome`, `principals`, `targets`, `operations`, `tools`, `executors`, `territory`, `preconditions`, `admission`, `notification_sink` |
+ | Admission selection | `mechanism_id`, `mechanism_source`, `authority_source`, `required_predicates`, `allowed_override_sources` |
+ | Executor | `id`, `executable`, `argv`, `dependencies`, `cwd`, `environment`, `actor_id`, `settings`, `tools`, `effect_scope`, `stdin_mode`, `stdout_decoder`, `observers` |
+ | Predicate | `id`, `source`, `subject`, `basis`, `input_names`, `expression`, `limits` |
+@@ -527,8 +561,10 @@
+ observation named. A counterexample to a bounded outcome may establish
+ `not_effected` even when its end remains unknown, as that owner requires.
+ 
+-Notifications use a selected named durable event sink carrying consumer,
+-attempt, kind and cursor. Appending and syncing a sink record establishes
++Notifications use only the exact `grant.notification_sink` selection, carrying
++its registered consumer, attempt, kind and cursor. The fixed binding is sealed
++in the Attempt reservation and freshly rechecked before delivery; neither
++Executor settings nor public request arguments select or override it. Appending and syncing a sink record establishes
+ local delivery, not that the consumer saw it. Return, exception, observed basis
+ change and selected deadline/checkpoint events are distinct. The ordinary CLI
+ may use `events.wait` as declared bounded fallback with purpose, cadence,
+@@ -540,7 +576,14 @@
+ ## Returns, review and qualified checks
+ 
+ `return.capture` preserves original payload and provenance, including malformed
+-or partial output. `return.check` compares original activation, actor, consumer,
++or partial output. Authentication is supported only for the exact final output
++acquired and retained by the registered dispatched Attempt, with its actual
++executor/actor, transport, output-slot and complete-byte binding. Caller imports,
++manual pastes, externally run CLIs and a producer name or hash cannot authenticate
++a return in this increment. Their raw material remains evidence with explicit
++unauthenticated/producer-binding gaps; no external-producer registry or
++authentication branch is implemented. The presence of an `attempt` argument
++does not make supplied bytes that Attempt's output. `return.check` compares original activation, actor, consumer,
+ subject, method/basis/dependency and currentness coordinates, applies only the
+ selected registered predicates and reports exact gaps. A historical satisfied
+ result on another subject remains that result and is non-consumable here.
+@@ -706,6 +749,763 @@
+ or a counter's undocumented scope is not guessed. Selected limit checks are
+ finite declared predicates. No accounting result claims accepted-result benefit.
+ 
++### Closed acquired content contracts (repair-004)
++
++The SourceRefs in results.conjoin.plan, refresh.prepare.declarations and
++invalidators, resources.aggregate.accounting and return.capture.return_contract
++resolve **actual UTF-8 JSON bodies**, parsed with the same integer-only,
++duplicate-key-refusing grammar as public requests. They are not merely manifests
++or arbitrary dictionaries. Their exact keys/types are the following shared
++content schemas. `tools.describe` returns these `content_schemas` with the
++operation contract, including referenced definitions; request_schema describes
++the full request envelope and its SourceRef arguments, while core validates the
++acquired body against the same published content definition. No private builder
++or unstated implementation default supplies semantics. Unknown fields/schema
++revisions refuse unsupported_contract/contract_violation as appropriate; an
++unreadable or mismatched source retains the applicable basis gap. Policy bounds
++finite populations. Source/body validity supplies no semantic authority.
++
++The normative schema below is JSON Schema 2020-12 with closed object keys.
++The strict JSON parser additionally rejects all decimal/exponent number tokens
++(including 1.0), duplicate keys and nonfinite values before schema validation;
++JSON Schema's mathematical integer test alone does not enforce that lexical
++rule. All quantities are integers, exact integer ratios or explicit null; an
++integer is never a Boolean. No implicit null/empty/default substitution occurs.
++Id is a nonempty string; Sha256 is lowercase 64-hex. ArtifactRef.id must equal
++`sha256:` plus its sha256, beyond the shape check. SourceRef engine spellings
++are those already pinned in the unchanged method profile. Its object is a full
++40/64-hex Git object only for immutable-git-blob and null otherwise; selectors,
++regular-blob/path/read-scope and parent-hash laws above still apply. The schema
++is a finite serialization, not a replacement method or arbitrary schema engine.
++
++JudgmentRef names an exact pointer from the complete envelope root into an actually produced,
++verified retained record: an authenticated Return's original performed evaluation, or this tool's
++actual OperationEvidence result.value.judgment. Imported/caller-authored JSON
++with the same shape cannot satisfy it. The selected predicate, subject/basis,
++original domain outcome and provenance are checked; no pointer to an arbitrary
++Boolean is a judgment. ProofCondition.evaluation null means missing evidence,
++never a satisfied condition. Applicability null means the source-qualified plan
++states an unconditional obligation/assessment. A nonnull Applicability has an
++exact applicability predicate and actual judgment: satisfied requires it;
++falsified excludes it under ACT §1; unresolved/missing/other values leave it
++required and unresolved. Its exclusion is a state, not a result of the skipped
++obligation. This only serializes ACT Applicability, whose result is preserved.
++
++#### Conjunction plan
++
++ConjunctionPlan is the exact plan source registered on the qualified operator;
++operator id/rule/decision authority/plan digest must match that selection.
++`first_non_satisfied_in_plan_order` names this tenant's already-declared rule
++above, not a universal order. Array assessment order is the only selection
++order; object order or input-return order has no effect. Each id is unique in
++its namespace. Each coverage/constraint id resolves to a required obligation;
++unknown/different-source collisions are contract conflicts, not invented
++coverage. RequiredConstraint.predicate is the exact mandatory-constraint
++predicate; a retained falsified result counts as that constraint's
++counterexample only if its predicate/source and admitted coverage match. Raw
++prose cannot become a constraint verdict.
++
++Every Assessment key binds the genuine registered producer, activation digest,
++Attempt and evaluation id; exactly one original performed evaluation can
++contribute under it. Its expected predicate/subject/basis must match the
++returned original. The expected subject/basis equals the composite's under
++`exact_equal_to_composite`; other translations are unsupported. Assessments
++may be nonmandatory with empty coverage. Their results remain record-only
++except the explicitly matched required-constraint counterexample rule already
++stated. A conditional exclusion removes only its own obligation/assessment;
++unresolved applicability is not exclusion. Coverage C is the union admitted by
++the nonexcluded planned assessments, regardless of whether they have a closed
++return; missing returned evaluations are planned gaps, not uncovered coverage.
++Required R removes only separately supported excluded obligations.
++
++`inherited` names prior results.conjoin OperationEvidence records, rehashed and
++checked on their exact plans. Their original failures/planned gaps and obligation
++identities are carried, unioned by full source/provenance identity and combined
++with the new plan; uncovered coverage is recomputed over the combined required
++obligations and planned coverage. An inherited satisfied wrapper cannot erase
++a known failure or gap. Missing/stale inherited evidence creates an explicit
++inherited planned gap; it is not an empty successful nested result. Cardinality,
++fall-through and RF output are exactly the previously declared rules.
++
++#### Refresh declarations and invalidators
++
++RefreshDeclarations' nodes are exact declared dependency coordinates, not new
++work objects. Edge direction is dependent -> dependency; traversal includes
++the starting check node and terminates through visited identities even for
++cycles. Check.result is a JudgmentRef resolving one exact original supplied evaluation
++inside the request's acquired results population (never an ambiguous whole
++multi-evaluation return); null is an explicit
++unperformed/missing check. Obligations are source-owned identifiers, gates name
++existing check ids or new_obligation ids. Every node/edge/check/gate/reference
++must resolve unambiguously. The declaration's old/new subject and basis bind
++the actual previous/current observations and supplied results; no HEAD proxy.
++
++Invalidators.declarations_sha256 equals the whole declarations source hash.
++Its only event kinds are the three ACT §7 invalidators, with named nodes and
++actual supporting observations: material_input_change has previous/current
++SourceRefs (one null for creation/deletion, not both); changed_basis has the
++exact old/new Basis; declared_revising_observation names the exact trigger
++already declared by the affected result and its actual observation. An equal
++before/after assertion is not evidence of change. Empty events means no
++asserted event, not proof of no observed change. Actual unmodeled changes,
++missing/contradictory event evidence, unresolved materiality and unmatched
++triggers remain gaps and widen candidates; they cannot authorize reuse.
++
++`impact_cover` is the explicitly supplied conservative I(delta). For each
++check, core computes D*(check) intersection I(delta) from these declarations,
++not semantic influence from file proximity. coverage.population_source names
++the declared material universe; dependency_complete and impact_complete are
++source-bound ProofConditions. Missing/unknown completeness or an unmodeled
++observed change leaves the purported unaffected frontier unknown (conservatively
++include the undeclared frontier in reassessment or withhold its reuse). True
++completeness is never inferred from the mere absence of an edge. New obligations
++and mandatory gates survive selection. Selection produces no new execution
++result. `retention` is a list of exact original JudgmentRefs plus the four actual
++new-subject/new-basis ProofConditions named by FOUNDATIONS retain_applicable:
++claim/scope, assertion basis, observation basis and dependencies/preservation.
++All must be applicable satisfied judgments for supported retention; otherwise
++that applicability relation stays unresolved. Originals retain their original
++subject/value; a supported retention relation is recorded separately. Nothing
++here executes a refresh, changes a work carrier or supersedes source authority.
++
++#### Accounting and actual resource samples
++
++Accounting.records equals the request's explicit unique root-record set;
++`attempts` accepts retained Attempt or OperationEvidence refs. The protected
++resolver acquires their actual resource records/events and verified linked
++operations within the declared selected population. An incomplete history/link
++is an unknown population, not a zero-cost omitted attempt. No completeness
++outside that selected population or accepted-result cost benefit is claimed.
++Resource and CounterSample close the actual recorded content. Owner is the
++exact Attempt or OperationEvidence ref, never payload hash alone. A sample's
++full identity is owner/provider/counter_id/unit/scope/sample_id; exact replay
++counts once, conflicting bytes for that identity create an ambiguity, and equal
++values from different actual owners remain separate. Resource.owner and each
++sample.owner must agree; raw_source is actual acquired provider/observer data,
++not a caller's invented measurement. Missing raw usage is value null with a gap.
++There is no resource self-hash cycle: a Resource owned by an OperationEvidence
++ref is created only after that exact complete operation marker is published.
++It is a separate subsequent immutable history record, found by verified
++query_artifacts on that owner; that owner does not contain a ref back to its
++later Resource. Its resources array can reference only already-created,
++noncyclic records (for example Attempt-owned observations). Effects uses the
++same complete core envelope constructor after the owner ref is known, without
++placeholder patching. A missing/failed later resource publication or an
++unobserved tail remains an accounting gap, not zero cost or complete coverage.
++
++CounterRule's provider/counter_id/unit/scope is an exact documented population;
++its source declares delta or cumulative semantics. Unknown/undocumented units
++or scope produce an accounting gap, not a guessed conversion. Delta adds only
++unique actual samples. Cumulative selects the unique greatest sequence snapshot
++per owner/counter identity, never sums snapshots; conflicting maximum sequence
++or missing authoritative sequencing leaves that counter unknown. Replays of
++the same sample identity dedup; equal snapshot bytes at different sequence
++numbers are still retained observations. `subset_of` names another counter id
++with the same owner/provider/unit/scope, forms no cycle and references an
++existing rule. Subsets are displayed separately and excluded from additive
++root totals, including cached/reasoning subsets. No sum crosses different
++provider/unit/scope without an explicitly supported conversion (none here).
++
++Interval has integer Unix nanoseconds with ended_ns >= started_ns. Intervals
++are actual acquired attempt/operation observations; a missing endpoint is a
++null interval/gap. Accounting.elapsed.window null selects their full observed
++population; a nonnull window clips each interval to its intersection. The
++selected interval_union sums disjoint covered lengths; enclosing_interval uses
++min start to max end. Both report known support and unknown intervals separately;
++empty known population contributes 0 only for that explicitly empty known set.
++Summed observed actor duration is always a separate sum of selected actual
++Attempt intervals (including overlap), and each overlap is retained. Operation
++and Attempt intervals describing the same work cannot be added together as
++independent actor duration. No clock conversion or unobserved end is guessed.
++
++Pricing null means unselected/unknown price. A nonnull Pricing requires actual
++source-bound rates keyed by exact provider/counter/unit/scope; currency and
++minor_unit_scale identify the owner's denomination. Each rate is numerator
++minor units per denominator counter units, denominator > 0. Output price is an
++exact integer numerator/denominator in that denomination, with no implicit
++rounding, extrapolation or combination of currencies. Unpriced/unknown counts
++remain visible beside any known subtotal. limit_predicates are registered
++finite predicates over named inputs totals, unknowns, elapsed and actor_duration;
++missing deciding quantities remain unknown under their source-owned predicates.
++A limit or cost judgment is not acceptance or efficiency evidence.
++
++#### Role-specific return contract
++
++ReturnContract is the exact packet.evidence_relations.return_contract source;
++its authority_source, role and required_evaluations are checked against the
++registered grant/activated target and declared evaluation plan, not merely
++against its own words. It selects one final_stdout_object slot under the exact
++registered decoder; partial streams/protocol wrapper objects are not additional
++closed returns. The closed-return body's existing keys remain unchanged.
++required_evaluations has unique ids and exact predicate SourceRefs. Each is
++present exactly once as performed or in not_performed; no id appears in both,
++and unplanned evaluations are retained as additional evidence without satisfying
++a different obligation. Nonperformance has no verdict. Evidence entries are
++SourceRef or ArtifactRef routes, acquired and verified separately, never claims
++that listing a route means the actor read it.
++
++| Contract role | Closed proof fields and their exact use |
++|---|---|
++| Worker | transition_sources is the selected requirement/design/operation transition contract, not a new grant. For candidate_ready, work_result.candidate binds the actual exact candidate and work_result.evidence contains the actual transition/proof records matching those sources; absent/unestablished transition is a binding/proof gap. Other construction outcomes keep their own cause/evidence; no candidate is synthesized. predicate_ids selects only registered finite checks. |
++| Reviewer | claim equals the activated exact claim; expectations is the actual supplied Reviewer expectation artifact or null; proof_sources and comparison are exact selected source/test/fixture/proof/diff material, acquired under ordinary public tools. independence_policy equals the selected policy SourceRef or null. return.check compares these with actual actor/exposure/acquisition history, required evaluation evidence and known non-authorship. Null expectations or missing proof stays a gap wherever required, not a fabricated independent judgment. Reviewer work_result is null in this assessment-only fragment, and no record grants candidate/work-carrier mutation. |
++| Executive | mandate, consumed_results, conjunction and disposition_authority are the exact selected profile bindings. Null conjunction/disposition means no such result/authority was supplied; it cannot authorize or fabricate acceptance. Existing evaluations/evidence retain actual consumed results and any independently recorded decision; tools do not author a disposition. Executive work_result is null in this coordination-only fragment and no authoritative carrier mutation is allowed. |
++
++Each role's predicate_ids must resolve to source-bound supported predicates over
++named acquired inputs original, context, proof and history, with subject/basis
++coordinates checked independently. They decide only their stated finite
++properties. The real F_P author supplies its answer and semantic evidence;
++passing shape/proof-reference checks never accepts that answer. Unsupported
++role/carrier contracts retain raw output with a named gap; they do not invent
++an allowed execution path. A contract may explicitly require extra method-owned
++proof through registered predicates and cited source, but cannot introduce
++arbitrary executable predicates or a new authority category.
++
++The following is the complete shared type catalog for these acquired bodies.
++All object fields listed in a definition are required; explicit nullable
++branches have the meanings above. Identity/foreign-key/authority/currentness
++and cross-field constraints in this section supplement shape validation.
++
++```json
++{
++  "$schema": "https://json-schema.org/draft/2020-12/schema",
++  "$id": "urn:a-c:fd-support:content-schemas:1",
++  "$defs": {
++    "Id": {"type":"string","minLength":1},
++    "Sha256": {"type":"string","pattern":"^[0-9a-f]{64}$"},
++    "JsonPointer": {"type":"string","pattern":"^(?:/(?:[^~]|~[01])*)*$"},
++    "Json": {"oneOf":[{"type":"null"},{"type":"boolean"},{"type":"integer"},{"type":"string"},{"type":"array","items":{"$ref":"#/$defs/Json"}},{"type":"object","additionalProperties":{"$ref":"#/$defs/Json"}}]},
++    "Identity": {"type":"object","properties":{"id":{"$ref":"#/$defs/Id"},"sha256":{"$ref":"#/$defs/Sha256"}},"required":["id","sha256"],"additionalProperties":false},
++    "ArtifactRef": {"type":"object","properties":{"id":{"type":"string","pattern":"^sha256:[0-9a-f]{64}$"},"sha256":{"$ref":"#/$defs/Sha256"}},"required":["id","sha256"],"additionalProperties":false},
++    "SourceRef": {"type":"object","properties":{"engine":{"enum":["workspace-regular-file","immutable-git-blob","retained-evidence"]},"root":{"$ref":"#/$defs/Id"},"path":{"$ref":"#/$defs/Id"},"object":{"oneOf":[{"type":"null"},{"type":"string","pattern":"^(?:[0-9a-f]{40}|[0-9a-f]{64})$"}]},"sha256":{"$ref":"#/$defs/Sha256"},"selector":{"oneOf":[{"type":"null"},{"type":"object","properties":{"lines":{"type":"array","prefixItems":[{"type":"integer","minimum":1},{"type":"integer","minimum":1}],"items":false,"minItems":2,"maxItems":2}},"required":["lines"],"additionalProperties":false},{"type":"object","properties":{"json_pointer":{"$ref":"#/$defs/JsonPointer"}},"required":["json_pointer"],"additionalProperties":false}]}},"required":["engine","root","path","object","sha256","selector"],"additionalProperties":false},
++    "AcquiredRef": {"oneOf":[{"$ref":"#/$defs/SourceRef"},{"$ref":"#/$defs/ArtifactRef"}]},
++    "Basis": {"type":"object","properties":{"method_profile":{"$ref":"#/$defs/Identity"},"observations":{"type":"array","items":{"$ref":"#/$defs/ArtifactRef"}}},"required":["method_profile","observations"],"additionalProperties":false},
++    "JudgmentRef": {"type":"object","properties":{"record":{"$ref":"#/$defs/ArtifactRef"},"pointer":{"$ref":"#/$defs/JsonPointer"}},"required":["record","pointer"],"additionalProperties":false},
++    "ProofCondition": {"type":"object","properties":{"predicate":{"$ref":"#/$defs/SourceRef"},"evaluation":{"oneOf":[{"type":"null"},{"$ref":"#/$defs/JudgmentRef"}]}},"required":["predicate","evaluation"],"additionalProperties":false},
++    "Applicability": {"oneOf":[{"type":"null"},{"$ref":"#/$defs/ProofCondition"}]},
++    "Obligation": {"type":"object","properties":{"id":{"$ref":"#/$defs/Id"},"source":{"$ref":"#/$defs/SourceRef"},"applicability":{"$ref":"#/$defs/Applicability"}},"required":["id","source","applicability"],"additionalProperties":false},
++    "AssessmentKey": {"type":"object","properties":{"producer":{"$ref":"#/$defs/Id"},"activation":{"$ref":"#/$defs/Identity"},"attempt":{"$ref":"#/$defs/ArtifactRef"},"evaluation_id":{"$ref":"#/$defs/Id"}},"required":["producer","activation","attempt","evaluation_id"],"additionalProperties":false},
++    "Assessment": {"type":"object","properties":{"id":{"$ref":"#/$defs/Id"},"key":{"$ref":"#/$defs/AssessmentKey"},"predicate":{"$ref":"#/$defs/SourceRef"},"subject":{"$ref":"#/$defs/Identity"},"basis":{"$ref":"#/$defs/Basis"},"mandatory":{"type":"boolean"},"coverage":{"type":"array","items":{"$ref":"#/$defs/Id"}},"applicability":{"$ref":"#/$defs/Applicability"}},"required":["id","key","predicate","subject","basis","mandatory","coverage","applicability"],"additionalProperties":false},
++    "RequiredConstraint": {"type":"object","properties":{"obligation_id":{"$ref":"#/$defs/Id"},"predicate":{"$ref":"#/$defs/SourceRef"}},"required":["obligation_id","predicate"],"additionalProperties":false},
++    "Composite": {"type":"object","properties":{"predicate":{"$ref":"#/$defs/SourceRef"},"subject":{"$ref":"#/$defs/Identity"},"basis":{"$ref":"#/$defs/Basis"}},"required":["predicate","subject","basis"],"additionalProperties":false},
++    "ConjunctionPlan": {"type":"object","properties":{"schema":{"const":"a_c.fd-support.conjunction-plan/1"},"id":{"$ref":"#/$defs/Id"},"authority_source":{"$ref":"#/$defs/SourceRef"},"operator_id":{"const":"claude-rc9.conjunction/1"},"composite":{"$ref":"#/$defs/Composite"},"decision_authority":{"$ref":"#/$defs/SourceRef"},"rule":{"const":"first_non_satisfied_in_plan_order"},"basis_relation":{"const":"exact_equal_to_composite"},"required_obligations":{"type":"array","items":{"$ref":"#/$defs/Obligation"},"minItems":1},"required_constraints":{"type":"array","items":{"$ref":"#/$defs/RequiredConstraint"}},"assessments":{"type":"array","items":{"$ref":"#/$defs/Assessment"},"minItems":1},"inherited":{"type":"array","items":{"$ref":"#/$defs/ArtifactRef"}}},"required":["schema","id","authority_source","operator_id","composite","decision_authority","rule","basis_relation","required_obligations","required_constraints","assessments","inherited"],"additionalProperties":false},
++    "Node": {"type":"object","properties":{"id":{"$ref":"#/$defs/Id"},"source":{"$ref":"#/$defs/SourceRef"}},"required":["id","source"],"additionalProperties":false},
++    "Dependency": {"type":"object","properties":{"dependent":{"$ref":"#/$defs/Id"},"dependency":{"$ref":"#/$defs/Id"},"source":{"$ref":"#/$defs/SourceRef"}},"required":["dependent","dependency","source"],"additionalProperties":false},
++    "RefreshCheck": {"type":"object","properties":{"id":{"$ref":"#/$defs/Id"},"node":{"$ref":"#/$defs/Id"},"result":{"oneOf":[{"type":"null"},{"$ref":"#/$defs/JudgmentRef"}]},"obligations":{"type":"array","items":{"$ref":"#/$defs/Id"}}},"required":["id","node","result","obligations"],"additionalProperties":false},
++    "Coverage": {"type":"object","properties":{"population_source":{"$ref":"#/$defs/SourceRef"},"dependency_complete":{"oneOf":[{"type":"null"},{"$ref":"#/$defs/ProofCondition"}]},"impact_complete":{"oneOf":[{"type":"null"},{"$ref":"#/$defs/ProofCondition"}]}},"required":["population_source","dependency_complete","impact_complete"],"additionalProperties":false},
++    "Retention": {"type":"object","properties":{"result":{"$ref":"#/$defs/JudgmentRef"},"claim_scope":{"$ref":"#/$defs/ProofCondition"},"assertion_basis":{"$ref":"#/$defs/ProofCondition"},"observation_basis":{"$ref":"#/$defs/ProofCondition"},"dependencies":{"$ref":"#/$defs/ProofCondition"}},"required":["result","claim_scope","assertion_basis","observation_basis","dependencies"],"additionalProperties":false},
++    "RefreshDeclarations": {"type":"object","properties":{"schema":{"const":"a_c.fd-support.refresh-declarations/1"},"id":{"$ref":"#/$defs/Id"},"authority_source":{"$ref":"#/$defs/SourceRef"},"old_subject":{"$ref":"#/$defs/Identity"},"new_subject":{"$ref":"#/$defs/Identity"},"old_basis":{"$ref":"#/$defs/Basis"},"new_basis":{"$ref":"#/$defs/Basis"},"nodes":{"type":"array","items":{"$ref":"#/$defs/Node"}},"dependencies":{"type":"array","items":{"$ref":"#/$defs/Dependency"}},"checks":{"type":"array","items":{"$ref":"#/$defs/RefreshCheck"}},"coverage":{"$ref":"#/$defs/Coverage"},"impact_cover":{"type":"array","items":{"$ref":"#/$defs/Id"}},"new_obligations":{"type":"array","items":{"$ref":"#/$defs/Obligation"}},"mandatory_gates":{"type":"array","items":{"$ref":"#/$defs/Id"}},"retention":{"type":"array","items":{"$ref":"#/$defs/Retention"}}},"required":["schema","id","authority_source","old_subject","new_subject","old_basis","new_basis","nodes","dependencies","checks","coverage","impact_cover","new_obligations","mandatory_gates","retention"],"additionalProperties":false},
++    "MaterialChange": {"type":"object","properties":{"id":{"$ref":"#/$defs/Id"},"kind":{"const":"material_input_change"},"nodes":{"type":"array","items":{"$ref":"#/$defs/Id"}},"previous":{"oneOf":[{"type":"null"},{"$ref":"#/$defs/SourceRef"}]},"current":{"oneOf":[{"type":"null"},{"$ref":"#/$defs/SourceRef"}]},"evidence":{"type":"array","items":{"$ref":"#/$defs/ArtifactRef"}}},"required":["id","kind","nodes","previous","current","evidence"],"additionalProperties":false},
++    "BasisChange": {"type":"object","properties":{"id":{"$ref":"#/$defs/Id"},"kind":{"const":"changed_basis"},"nodes":{"type":"array","items":{"$ref":"#/$defs/Id"}},"previous":{"$ref":"#/$defs/Basis"},"current":{"$ref":"#/$defs/Basis"},"evidence":{"type":"array","items":{"$ref":"#/$defs/ArtifactRef"}}},"required":["id","kind","nodes","previous","current","evidence"],"additionalProperties":false},
++    "RevisingObservation": {"type":"object","properties":{"id":{"$ref":"#/$defs/Id"},"kind":{"const":"declared_revising_observation"},"nodes":{"type":"array","items":{"$ref":"#/$defs/Id"}},"declaration":{"$ref":"#/$defs/SourceRef"},"observation":{"$ref":"#/$defs/ArtifactRef"}},"required":["id","kind","nodes","declaration","observation"],"additionalProperties":false},
++    "Invalidator": {"oneOf":[{"$ref":"#/$defs/MaterialChange"},{"$ref":"#/$defs/BasisChange"},{"$ref":"#/$defs/RevisingObservation"}]},
++    "Invalidators": {"type":"object","properties":{"schema":{"const":"a_c.fd-support.invalidators/1"},"id":{"$ref":"#/$defs/Id"},"declarations_sha256":{"$ref":"#/$defs/Sha256"},"events":{"type":"array","items":{"$ref":"#/$defs/Invalidator"}}},"required":["schema","id","declarations_sha256","events"],"additionalProperties":false},
++    "Interval": {"type":"object","properties":{"clock":{"const":"unix_ns"},"started_ns":{"type":"integer","minimum":0},"ended_ns":{"type":"integer","minimum":0}},"required":["clock","started_ns","ended_ns"],"additionalProperties":false},
++    "CounterOwner": {"type":"object","properties":{"kind":{"enum":["attempt","operation"]},"record":{"$ref":"#/$defs/ArtifactRef"}},"required":["kind","record"],"additionalProperties":false},
++    "CounterSample": {"type":"object","properties":{"owner":{"$ref":"#/$defs/CounterOwner"},"provider":{"$ref":"#/$defs/Id"},"counter_id":{"$ref":"#/$defs/Id"},"unit":{"$ref":"#/$defs/Id"},"scope":{"$ref":"#/$defs/Id"},"sample_id":{"$ref":"#/$defs/Id"},"sequence":{"type":"integer","minimum":0},"value":{"oneOf":[{"type":"null"},{"type":"integer","minimum":0}]},"raw_source":{"$ref":"#/$defs/AcquiredRef"},"interval":{"oneOf":[{"type":"null"},{"$ref":"#/$defs/Interval"}]}},"required":["owner","provider","counter_id","unit","scope","sample_id","sequence","value","raw_source","interval"],"additionalProperties":false},
++    "Resource": {"type":"object","properties":{"schema":{"const":"a_c.fd-support.resource/1"},"owner":{"$ref":"#/$defs/CounterOwner"},"samples":{"type":"array","items":{"$ref":"#/$defs/CounterSample"}},"interval":{"oneOf":[{"type":"null"},{"$ref":"#/$defs/Interval"}]},"gaps":{"type":"array","items":{"$ref":"#/$defs/Json"}}},"required":["schema","owner","samples","interval","gaps"],"additionalProperties":false},
++    "CounterRule": {"type":"object","properties":{"provider":{"$ref":"#/$defs/Id"},"counter_id":{"$ref":"#/$defs/Id"},"unit":{"$ref":"#/$defs/Id"},"scope":{"$ref":"#/$defs/Id"},"source":{"$ref":"#/$defs/SourceRef"},"mode":{"enum":["delta","cumulative"]},"subset_of":{"oneOf":[{"type":"null"},{"$ref":"#/$defs/Id"}]}},"required":["provider","counter_id","unit","scope","source","mode","subset_of"],"additionalProperties":false},
++    "Rate": {"type":"object","properties":{"provider":{"$ref":"#/$defs/Id"},"counter_id":{"$ref":"#/$defs/Id"},"unit":{"$ref":"#/$defs/Id"},"scope":{"$ref":"#/$defs/Id"},"numerator":{"type":"integer","minimum":0},"denominator":{"type":"integer","minimum":1}},"required":["provider","counter_id","unit","scope","numerator","denominator"],"additionalProperties":false},
++    "Pricing": {"type":"object","properties":{"source":{"$ref":"#/$defs/SourceRef"},"currency":{"$ref":"#/$defs/Id"},"minor_unit_scale":{"type":"integer","minimum":0},"rates":{"type":"array","items":{"$ref":"#/$defs/Rate"}}},"required":["source","currency","minor_unit_scale","rates"],"additionalProperties":false},
++    "Elapsed": {"type":"object","properties":{"mode":{"enum":["interval_union","enclosing_interval"]},"window":{"oneOf":[{"type":"null"},{"$ref":"#/$defs/Interval"}]}},"required":["mode","window"],"additionalProperties":false},
++    "Accounting": {"type":"object","properties":{"schema":{"const":"a_c.fd-support.accounting/1"},"id":{"$ref":"#/$defs/Id"},"authority_source":{"$ref":"#/$defs/SourceRef"},"records":{"type":"array","items":{"$ref":"#/$defs/ArtifactRef"}},"counter_rules":{"type":"array","items":{"$ref":"#/$defs/CounterRule"}},"elapsed":{"$ref":"#/$defs/Elapsed"},"pricing":{"oneOf":[{"type":"null"},{"$ref":"#/$defs/Pricing"}]},"limit_predicates":{"type":"array","items":{"$ref":"#/$defs/Id"}}},"required":["schema","id","authority_source","records","counter_rules","elapsed","pricing","limit_predicates"],"additionalProperties":false},
++    "RequiredEvaluation": {"type":"object","properties":{"id":{"$ref":"#/$defs/Id"},"predicate":{"$ref":"#/$defs/SourceRef"}},"required":["id","predicate"],"additionalProperties":false},
++    "WorkerProof": {"type":"object","properties":{"transition_sources":{"type":"array","items":{"$ref":"#/$defs/SourceRef"}},"predicate_ids":{"type":"array","items":{"$ref":"#/$defs/Id"}}},"required":["transition_sources","predicate_ids"],"additionalProperties":false},
++    "ReviewerProof": {"type":"object","properties":{"claim":{"$ref":"#/$defs/SourceRef"},"expectations":{"oneOf":[{"type":"null"},{"$ref":"#/$defs/ArtifactRef"}]},"proof_sources":{"type":"array","items":{"$ref":"#/$defs/SourceRef"}},"comparison":{"oneOf":[{"type":"null"},{"$ref":"#/$defs/SourceRef"}]},"independence_policy":{"oneOf":[{"type":"null"},{"$ref":"#/$defs/SourceRef"}]},"predicate_ids":{"type":"array","items":{"$ref":"#/$defs/Id"}}},"required":["claim","expectations","proof_sources","comparison","independence_policy","predicate_ids"],"additionalProperties":false},
++    "ExecutiveProof": {"type":"object","properties":{"mandate":{"$ref":"#/$defs/SourceRef"},"consumed_results":{"type":"array","items":{"$ref":"#/$defs/ArtifactRef"}},"conjunction":{"oneOf":[{"type":"null"},{"$ref":"#/$defs/ArtifactRef"}]},"disposition_authority":{"oneOf":[{"type":"null"},{"$ref":"#/$defs/SourceRef"}]},"predicate_ids":{"type":"array","items":{"$ref":"#/$defs/Id"}}},"required":["mandate","consumed_results","conjunction","disposition_authority","predicate_ids"],"additionalProperties":false},
++    "ReturnContract": {"oneOf":[{"type":"object","properties":{"schema":{"const":"a_c.fd-support.return-contract/1"},"id":{"$ref":"#/$defs/Id"},"authority_source":{"$ref":"#/$defs/SourceRef"},"carrier":{"const":"a_c.fd-support.closed-return/1"},"output_slot":{"const":"final_stdout_object"},"required_evaluations":{"type":"array","items":{"$ref":"#/$defs/RequiredEvaluation"}},"role":{"const":"Worker"},"proof":{"$ref":"#/$defs/WorkerProof"}},"required":["schema","id","authority_source","carrier","output_slot","required_evaluations","role","proof"],"additionalProperties":false},{"type":"object","properties":{"schema":{"const":"a_c.fd-support.return-contract/1"},"id":{"$ref":"#/$defs/Id"},"authority_source":{"$ref":"#/$defs/SourceRef"},"carrier":{"const":"a_c.fd-support.closed-return/1"},"output_slot":{"const":"final_stdout_object"},"required_evaluations":{"type":"array","items":{"$ref":"#/$defs/RequiredEvaluation"}},"role":{"const":"Reviewer"},"proof":{"$ref":"#/$defs/ReviewerProof"}},"required":["schema","id","authority_source","carrier","output_slot","required_evaluations","role","proof"],"additionalProperties":false},{"type":"object","properties":{"schema":{"const":"a_c.fd-support.return-contract/1"},"id":{"$ref":"#/$defs/Id"},"authority_source":{"$ref":"#/$defs/SourceRef"},"carrier":{"const":"a_c.fd-support.closed-return/1"},"output_slot":{"const":"final_stdout_object"},"required_evaluations":{"type":"array","items":{"$ref":"#/$defs/RequiredEvaluation"}},"role":{"const":"Executive"},"proof":{"$ref":"#/$defs/ExecutiveProof"}},"required":["schema","id","authority_source","carrier","output_slot","required_evaluations","role","proof"],"additionalProperties":false}]},
++    "ContractSupersession": {"type":"object","properties":{"schema":{"const":"a_c.fd-support.contract-supersession/1"},"contract_sha256":{"$ref":"#/$defs/Sha256"},"successor_contract_sha256":{"$ref":"#/$defs/Sha256"},"authority_source":{"$ref":"#/$defs/SourceRef"},"reason":{"$ref":"#/$defs/Id"},"evidence":{"type":"array","items":{"$ref":"#/$defs/AcquiredRef"}}},"required":["schema","contract_sha256","successor_contract_sha256","authority_source","reason","evidence"],"additionalProperties":false}
++  },
++  "oneOf": [{"$ref":"#/$defs/ConjunctionPlan"},{"$ref":"#/$defs/RefreshDeclarations"},{"$ref":"#/$defs/Invalidators"},{"$ref":"#/$defs/Accounting"},{"$ref":"#/$defs/Resource"},{"$ref":"#/$defs/ReturnContract"},{"$ref":"#/$defs/ContractSupersession"}]
++}
++```
++
++These illustrative bodies use all-zero hash placeholders solely to make the
++ordinary content/key grammar concrete. They are **not active sources, grants,
++receipts or usable evidence**; ordinary use substitutes acquired exact bytes
++and their verified refs, including Invalidators.declarations_sha256. Each body
++is independently schema-valid; the examples make no executed/runtime claim.
++
++```json
++{
++  "conjunction_plan": {
++    "schema": "a_c.fd-support.conjunction-plan/1",
++    "id": "plan1",
++    "authority_source": {
++      "engine": "workspace-regular-file",
++      "root": "example-read-root",
++      "path": "work-grant.md",
++      "object": null,
++      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
++      "selector": null
++    },
++    "operator_id": "claude-rc9.conjunction/1",
++    "composite": {
++      "predicate": {
++        "engine": "workspace-regular-file",
++        "root": "example-read-root",
++        "path": "predicate.json",
++        "object": null,
++        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
++        "selector": null
++      },
++      "subject": {
++        "id": "subject",
++        "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
++      },
++      "basis": {
++        "method_profile": {
++          "id": "urn:a-c:fd-support:method:claude-rc9:executive:1",
++          "sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
++        },
++        "observations": [
++          {
++            "id": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
++            "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
++          }
++        ]
++      }
++    },
++    "decision_authority": {
++      "engine": "workspace-regular-file",
++      "root": "example-read-root",
++      "path": "decision-owner.md",
++      "object": null,
++      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
++      "selector": null
++    },
++    "rule": "first_non_satisfied_in_plan_order",
++    "basis_relation": "exact_equal_to_composite",
++    "required_obligations": [
++      {
++        "id": "o1",
++        "source": {
++          "engine": "workspace-regular-file",
++          "root": "example-read-root",
++          "path": "obligation.md",
++          "object": null,
++          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
++          "selector": null
++        },
++        "applicability": null
++      }
++    ],
++    "required_constraints": [
++      {
++        "obligation_id": "o1",
++        "predicate": {
++          "engine": "workspace-regular-file",
++          "root": "example-read-root",
++          "path": "predicate.json",
++          "object": null,
++          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
++          "selector": null
++        }
++      }
++    ],
++    "assessments": [
++      {
++        "id": "a1",
++        "key": {
++          "producer": "worker1",
++          "activation": {
++            "id": "activation1",
++            "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
++          },
++          "attempt": {
++            "id": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
++            "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
++          },
++          "evaluation_id": "e1"
++        },
++        "predicate": {
++          "engine": "workspace-regular-file",
++          "root": "example-read-root",
++          "path": "predicate.json",
++          "object": null,
++          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
++          "selector": null
++        },
++        "subject": {
++          "id": "subject",
++          "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
++        },
++        "basis": {
++          "method_profile": {
++            "id": "urn:a-c:fd-support:method:claude-rc9:executive:1",
++            "sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
++          },
++          "observations": [
++            {
++              "id": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
++              "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
++            }
++          ]
++        },
++        "mandatory": true,
++        "coverage": [
++          "o1"
++        ],
++        "applicability": null
++      }
++    ],
++    "inherited": []
++  },
++  "refresh_declarations": {
++    "schema": "a_c.fd-support.refresh-declarations/1",
++    "id": "deps1",
++    "authority_source": {
++      "engine": "workspace-regular-file",
++      "root": "example-read-root",
++      "path": "impact-owner.md",
++      "object": null,
++      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
++      "selector": null
++    },
++    "old_subject": {
++      "id": "subject",
++      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
++    },
++    "new_subject": {
++      "id": "subject",
++      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
++    },
++    "old_basis": {
++      "method_profile": {
++        "id": "urn:a-c:fd-support:method:claude-rc9:executive:1",
++        "sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
++      },
++      "observations": [
++        {
++          "id": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
++          "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
++        }
++      ]
++    },
++    "new_basis": {
++      "method_profile": {
++        "id": "urn:a-c:fd-support:method:claude-rc9:executive:1",
++        "sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
++      },
++      "observations": [
++        {
++          "id": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
++          "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
++        }
++      ]
++    },
++    "nodes": [
++      {
++        "id": "source1",
++        "source": {
++          "engine": "workspace-regular-file",
++          "root": "example-read-root",
++          "path": "input.md",
++          "object": null,
++          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
++          "selector": null
++        }
++      },
++      {
++        "id": "check1",
++        "source": {
++          "engine": "workspace-regular-file",
++          "root": "example-read-root",
++          "path": "predicate.json",
++          "object": null,
++          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
++          "selector": null
++        }
++      }
++    ],
++    "dependencies": [
++      {
++        "dependent": "check1",
++        "dependency": "source1",
++        "source": {
++          "engine": "workspace-regular-file",
++          "root": "example-read-root",
++          "path": "dependencies.md",
++          "object": null,
++          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
++          "selector": null
++        }
++      }
++    ],
++    "checks": [
++      {
++        "id": "check1",
++        "node": "check1",
++        "result": {
++          "record": {
++            "id": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
++            "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
++          },
++          "pointer": "/payload/original/evaluations/0"
++        },
++        "obligations": [
++          "o1"
++        ]
++      }
++    ],
++    "coverage": {
++      "population_source": {
++        "engine": "workspace-regular-file",
++        "root": "example-read-root",
++        "path": "population.md",
++        "object": null,
++        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
++        "selector": null
++      },
++      "dependency_complete": null,
++      "impact_complete": null
++    },
++    "impact_cover": [
++      "source1"
++    ],
++    "new_obligations": [],
++    "mandatory_gates": [
++      "check1"
++    ],
++    "retention": []
++  },
++  "invalidators": {
++    "schema": "a_c.fd-support.invalidators/1",
++    "id": "delta1",
++    "declarations_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
++    "events": [
++      {
++        "id": "change1",
++        "kind": "material_input_change",
++        "nodes": [
++          "source1"
++        ],
++        "previous": {
++          "engine": "workspace-regular-file",
++          "root": "example-read-root",
++          "path": "input.md",
++          "object": null,
++          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
++          "selector": null
++        },
++        "current": {
++          "engine": "workspace-regular-file",
++          "root": "example-read-root",
++          "path": "input.md",
++          "object": null,
++          "sha256": "1111111111111111111111111111111111111111111111111111111111111111",
++          "selector": null
++        },
++        "evidence": [
++          {
++            "id": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
++            "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
++          }
++        ]
++      }
++    ]
++  },
++  "accounting": {
++    "schema": "a_c.fd-support.accounting/1",
++    "id": "cost1",
++    "authority_source": {
++      "engine": "workspace-regular-file",
++      "root": "example-read-root",
++      "path": "accounting-owner.md",
++      "object": null,
++      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
++      "selector": null
++    },
++    "records": [
++      {
++        "id": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
++        "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
++      }
++    ],
++    "counter_rules": [
++      {
++        "provider": "provider1",
++        "counter_id": "input",
++        "unit": "tokens",
++        "scope": "request-input",
++        "source": {
++          "engine": "workspace-regular-file",
++          "root": "example-read-root",
++          "path": "counter-contract.md",
++          "object": null,
++          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
++          "selector": null
++        },
++        "mode": "cumulative",
++        "subset_of": null
++      }
++    ],
++    "elapsed": {
++      "mode": "interval_union",
++      "window": null
++    },
++    "pricing": null,
++    "limit_predicates": []
++  },
++  "worker_return_contract": {
++    "schema": "a_c.fd-support.return-contract/1",
++    "id": "worker-return1",
++    "authority_source": {
++      "engine": "workspace-regular-file",
++      "root": "example-read-root",
++      "path": "worker-role.md",
++      "object": null,
++      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
++      "selector": null
++    },
++    "carrier": "a_c.fd-support.closed-return/1",
++    "output_slot": "final_stdout_object",
++    "required_evaluations": [
++      {
++        "id": "e1",
++        "predicate": {
++          "engine": "workspace-regular-file",
++          "root": "example-read-root",
++          "path": "predicate.json",
++          "object": null,
++          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
++          "selector": null
++        }
++      }
++    ],
++    "role": "Worker",
++    "proof": {
++      "transition_sources": [
++        {
++          "engine": "workspace-regular-file",
++          "root": "example-read-root",
++          "path": "transition.md",
++          "object": null,
++          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
++          "selector": null
++        }
++      ],
++      "predicate_ids": []
++    }
++  },
++  "reviewer_return_contract": {
++    "schema": "a_c.fd-support.return-contract/1",
++    "id": "review-return1",
++    "authority_source": {
++      "engine": "workspace-regular-file",
++      "root": "example-read-root",
++      "path": "worker-role.md",
++      "object": null,
++      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
++      "selector": null
++    },
++    "carrier": "a_c.fd-support.closed-return/1",
++    "output_slot": "final_stdout_object",
++    "required_evaluations": [
++      {
++        "id": "e1",
++        "predicate": {
++          "engine": "workspace-regular-file",
++          "root": "example-read-root",
++          "path": "predicate.json",
++          "object": null,
++          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
++          "selector": null
++        }
++      }
++    ],
++    "role": "Reviewer",
++    "proof": {
++      "claim": {
++        "engine": "workspace-regular-file",
++        "root": "example-read-root",
++        "path": "predicate.json",
++        "object": null,
++        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
++        "selector": null
++      },
++      "expectations": null,
++      "proof_sources": [
++        {
++          "engine": "workspace-regular-file",
++          "root": "example-read-root",
++          "path": "proof.md",
++          "object": null,
++          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
++          "selector": null
++        }
++      ],
++      "comparison": null,
++      "independence_policy": null,
++      "predicate_ids": []
++    }
++  },
++  "executive_return_contract": {
++    "schema": "a_c.fd-support.return-contract/1",
++    "id": "executive-return1",
++    "authority_source": {
++      "engine": "workspace-regular-file",
++      "root": "example-read-root",
++      "path": "worker-role.md",
++      "object": null,
++      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
++      "selector": null
++    },
++    "carrier": "a_c.fd-support.closed-return/1",
++    "output_slot": "final_stdout_object",
++    "required_evaluations": [
++      {
++        "id": "e1",
++        "predicate": {
++          "engine": "workspace-regular-file",
++          "root": "example-read-root",
++          "path": "predicate.json",
++          "object": null,
++          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
++          "selector": null
++        }
++      }
++    ],
++    "role": "Executive",
++    "proof": {
++      "mandate": {
++        "engine": "workspace-regular-file",
++        "root": "example-read-root",
++        "path": "mandate.md",
++        "object": null,
++        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
++        "selector": null
++      },
++      "consumed_results": [
++        {
++          "id": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
++          "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
++        }
++      ],
++      "conjunction": null,
++      "disposition_authority": null,
++      "predicate_ids": []
++    }
++  }
++}
++```
++
++| Case / exact input variation | Contract-derived expected distinction |
++|---|---|
++| Plan above + one actual authenticated e1=satisfied with current exact basis | One contribution, no planned/uncovered gap, satisfied; returned/ok. |
++| Same plan + e1=falsified with its actual counterexample | Preserve original outcome/counterexample; declared rule reports falsified, RF decision(fails); returned/ok. |
++| Same plan + returns=[] or stale e1 | Planned a1 gap, not an invented indeterminate/invalid_basis component; composite indeterminate when no other deciding returned result; returned/ok. |
++| Two same-key different payloads; or coverage=["unknown-id"] | Cardinality conflict yields gap/no arbitrary winner; unknown coverage foreign key is contract_violation/refused. Distinct genuine equal-answer attempts stay distinct planned keys. |
++| Refresh above + actual matching changed source1 observation | check1 is affected through declared D* intersection I; gates survive; no refresh execution evidence is created. |
++| Same change but omit the edge or completeness proof | No supported unaffected conclusion; retain unknown frontier/widen candidates. A changed_basis or declared trigger event uses only its exact schema branch; newly invented kind is unsupported_contract. |
++| Retention entry with all four current satisfied ProofConditions | Record supported new-subject applicability; retain original subject/verdict. One null evaluation withdraws dependent direct reuse and leaves a named gap, without relabeling the original. |
++| Two actual owners each with input=10 under the same rule | Root token subtotal 20. Exact replay of one sample counts once; differing same-identity values are ambiguous. |
++| One cumulative owner sequence1=10, sequence2=14; subset=6 | Counter contribution 14, subset displayed separately; neither 24 nor 20. Highest-sequence conflict is unknown. |
++| One sample value=null, or undocumented scope, or pricing=null | Known subtotal and unknown/unpriced population remain separate; no missing count/price becomes zero. A rate denominator 0 or elapsed ended_ns < started_ns violates the contract. |
++| Worker candidate_ready with actual transition refs; Reviewer actual source-first expectations/proof | Preserve each original F_P answer and observed binding/proof; structural checks give only their named predicates, not semantic acceptance. |
++| ReturnContract.role=Reviewer with Worker proof keys; or external raw body pasted as an Attempt output | Wrong role shape refuses contract_violation at contract use; external body remains raw/unauthenticated and creates binding gaps, even with identical bytes/producer labels. |
++| Reviewer expectations=null; missing actual exposure evidence | Missing source-first/independence condition remains unknown/nonconsumable where required; never fills in expectations or certifies clean ordering. |
++
++
+ ## Module contracts and composition
+ 
+ Use Python 3.11+ stdlib, the existing codec and explicit typed JSON/dataclasses.
+@@ -715,8 +1515,8 @@
+ 
+ | Module | Owned boundary and exported seam |
+ |---|---|
+-| `code/ac_support_core.py` | Strict grammar and refusal type, Runtime/policy/source/profile binding, source/observation/model/context relations, read/query/review/return/check/conjunction/refresh/resource operations and inventory/schema data. Exports `SupportError(code, reason, gaps, source_refs)`, `Runtime.from_policy(path, expected_sha256, principal)`, `canonical(value)`, `digest(value)`, `read_source(runtime, ref)`, `observe(runtime, scope)`, `check_preconditions(runtime, recheck_set)`, `inventory(operation=None)`, `request_schema(operation=None)`, `parse_request(raw_bytes)`, `validate_request(request)`, `execute_read(runtime, request) -> CoreOutcome` and `build_preflight(runtime, request) -> EffectPlan`. No F_P actor, registered-executor or general-effect launches, and no authoritative carrier writes. Fixed-argv read-only Git plumbing is allowed solely as the immutable-source acquisition primitive, bound to the exact registered root, full object, member path and blob hash, with observed Git executable/configuration scope; no shell, hooks, filters, checkout, configuration mutation, moving-ref substitution or lazy network fetch. This allowance exposes no arbitrary subprocess primitive or new capability. |
+-| `code/ac_support_effects.py` | Protected EvidenceStore, exact preflight receipt persistence, attempt reservation/supervisor, fixed-executor dispatch/observe/cancel/events, Writer effect membrane and retained evidence. Imports core; core does not import effects. Exports `EvidenceStore(runtime)`, `dispatch(runtime, request)`, `supervise(runtime, attempt_ref)`, `observe_attempt(runtime, request)`, `cancel(runtime, request)`, `wait_events(runtime, request)`, `write_record(runtime, request)`, `retain_operation(runtime, request, response)`. |
++| `code/ac_support_core.py` | Strict grammar and refusal type, Runtime/policy/source/profile binding, source/observation/model/context relations, read/query/review/return/check/conjunction/refresh/resource operations and inventory/schema data. Exports `SupportError(code, reason, gaps, source_refs)`, `Runtime.from_policy(path, expected_sha256, principal)`, `canonical(value)`, `digest(value)`, `read_source(runtime, ref)`, `observe(runtime, scope)`, `check_preconditions(runtime, recheck_set)`, `inventory(operation=None)`, `request_schema(operation=None)`, `parse_request(raw_bytes)`, `validate_request(request)`, `make_artifact(kind, payload, provenance)`, `execute_read(runtime, request) -> CoreOutcome`, `build_preflight(runtime, request) -> EffectPlan` and `prepare_write(runtime, request) -> EffectPlan`. No F_P actor, registered-executor or general-effect launches, and no authoritative carrier writes. Fixed-argv read-only Git plumbing is allowed solely as the immutable-source acquisition primitive, bound to the exact registered root, full object, member path and blob hash, with observed Git executable/configuration scope; no shell, hooks, filters, checkout, configuration mutation, moving-ref substitution or lazy network fetch. This allowance exposes no arbitrary subprocess primitive or new capability. |
++| `code/ac_support_effects.py` | Protected EvidenceStore, exact preflight receipt persistence, attempt reservation/supervisor, fixed-executor dispatch/observe/cancel/events, Writer effect membrane and retained evidence. Imports core; core does not import effects. Exports only `EvidenceStore(runtime)`, `execute_effect(runtime, request, plan) -> CoreOutcome` and `persist_outcome(runtime, request, outcome) -> Response`. Dispatch/observe/cancel/events/supervisor/Writer functions are internal full-request helpers, never independent cross-module exports. Core constructs the Writer EffectPlan; effects only rechecks and executes it. |
+ | `code/ac_support.py` | Thin authoritative dispatcher, JSON CLI and legacy MCP stdio adapter. Imports both modules. Exports `execute(runtime, request)` and `main(argv=None)`. Validates once, routes to existing operations, retains exact response evidence; no independent method logic. Also owns the fixed internal supervisor entry point. |
+ | `design/fd-method-claude-rc9.json` | Exact data binding to RC9 member bytes and owner routes. Unchanged profile identity/digest required by supported Runtime. No method source-body copy. |
+ 
+@@ -788,7 +1588,7 @@
+ |---|---|
+ | observation | `schema` (`a_c.fd-support.observation/1`), `scope`, `observed_interval`, `entries`, `bindings`, `git`, `diff`, `gaps` |
+ | context | `schema` (`a_c.fd-support.context/1`), `packet`, `projections`, `sources`, `late_acquisition`, `boundaries`, `rendered_utf8`, `rendered_sha256`, `fit`, `observations` |
+-| preflight | `schema` (`a_c.fd-support.preflight/1`), `context`, `contract_sha256`, `grant_id`, `executor_id`, `result_key`, `requester`, `target`, `decision`, `mechanism`, `authority`, `evaluations`, `recheck`, `gaps` |
++| preflight | `schema` (`a_c.fd-support.preflight/1`), `context`, `contract_sha256`, `grant_id`, `executor_id`, `result_key`, `requester`, `target`, `contract_state`, `decision`, `state_evidence`, `mechanism`, `authority`, `evaluations`, `recheck`, `gaps` |
+ | attempt | `schema` (`a_c.fd-support.attempt/1`), `preflight`, `context`, `request`, `requester`, `target`, `executor`, `invocation`, `notification`, `result_key`, `retry_of`, `reconciliation` |
+ | return | `schema` (`a_c.fd-support.return/1`), `attempt`, `raw_payload`, `return_contract`, `original`, `producer`, `transport`, `binding_checks` |
+ | expectation | `schema` (`a_c.fd-support.expectation/1`), `claim`, `subject`, `producer`, `text`, `source_inputs`, `exposure_check`, `external_exposure` |
+@@ -822,8 +1622,8 @@
+ 
+ ### Pure plans and actual edge rechecks
+ 
+-V3 settles CoreOutcome as complete result/artifact envelopes, operation outcome
+-and acquisition facts (the Realization seam below); effects persists those exact
++V3 settles CoreOutcome as complete result/artifact envelopes, operation outcome,
++explicit refusal-or-null and acquisition facts (the Realization seam below); effects persists those exact
+ bytes and retains operation evidence without arbitrary placeholder patching. A CoreOutcome itself performs no persistence,
+ admission receipt, dispatch or carrier write. A prepared effect uses:
+ 
+@@ -860,8 +1660,11 @@
+ 
+ Effects exports `EvidenceStore.resolve(ref)->bytes`,
+ `EvidenceStore.query_artifacts(kind,exact_match_fields)->HistoryQuery` and
+-`EvidenceStore.retain(kind,payload,provenance)->ArtifactRef`. All public effect
+-handlers take `(runtime, request)`, not an arguments-only object or hidden
++`EvidenceStore.retain(envelope)->ArtifactRef`. Retain accepts the complete
++core-created provenance envelope, verifies its canonical bytes/ref and publishes
++those exact bytes; it never constructs or patches semantic payloads. The only
++public effect entry is `execute_effect(runtime,request,plan)`; every internal
++handler receives the full request, not an arguments-only object or hidden
+ mutable current-request global. Equivalent local immutable helper types are
+ allowed; these cross-module JSON meanings and effect ownership are fixed.
+ 
+@@ -1024,6 +1827,7 @@
+     +requester
+     +activatedTarget
+     +admissionEvidence
++    +contractState
+   }
+   class Attempt {
+     <<effect-edge>>
+@@ -1087,6 +1891,7 @@
+   Preflight "1" --> "1" OwnerPolicy : external authority
+   Attempt "0..*" --> "1" Preflight : rechecks before launch
+   Attempt "1" --> "1" Executor : fixed registered operation
++  Attempt "1" --> "1" EventSink : complete binding derived solely from Grant
+   Attempt "1" --> "0..*" ClosedReturn : retains originals
+   Attempt "1" --> "1..*" OperationEvidence : retains actual observations
+   ClosedReturn "1" --> "1..*" OperationEvidence : traceable evidence
+@@ -1109,23 +1914,23 @@
+   P->>R: select question, frame, sources and declared operation
+   R->>M: verify exact supported cut and source routes
+   R->>S: acquire current permitted bytes and declared closure
+-  R->>C: render selected packet and measure exact supplied boundary
++  R->>C: render exact packet; measure fit only for selected declared capacity
+   R->>E: query verified prior return and source exposure history
+   R->>O: check caller coordination grant and activated target separately
+-  R->>O: resolve existing grant and selected admission predicates
+-  alt missing authority, basis, closure or fit
++  R->>O: resolve existing grant, its sole sink/consumer and selected predicates
++  alt missing authority, basis, closure or required fit
+     R->>E: retain exact refusal and deciding gap
+     R-->>P: return source-owned refusal, no Worker result
+   else finite admission conditions hold
+     R->>F: bind contract digest, mechanism, authority and checked premises
+     P->>R: dispatch selected exact Preflight
+     R->>O: recheck policy, sources, dependencies and preimages
+-    R->>A: reserve named attempt before launch
++    R->>A: reserve attempt with complete Grant-selected sink binding before launch
+     A->>X: fixed invocation and exact retained context
+     X-->>A: acknowledgment, output and observed process end
+     A->>S: acquire declared subject/effect observations
+     A->>E: retain raw evidence, partial output, unknowns and notifications
+-    E-->>P: deliver named result/event routes to declared consumer
++    E-->>P: publish named result/event routes to Grant-selected sink; receipt separate
+     P->>R: capture/check return or request bounded reconciliation
+     R->>E: preserve original verdict and separate currentness findings
+     R-->>P: exact closed evidence or non-consumable gaps
+@@ -1175,7 +1980,7 @@
+ |---|---|---|---|---|---|---|---|---|---|
+ | Exact identity/basis and no implicit composition | SourceRef/ModelRef, invariants 1–3 | RF-005; PDEF | exact digest associations | exact binding/acquisition | changed-premise refusal | closed JSON/typed refs planned | policy/profile/preimage checks planned | pass for design | implementation/assessor |
+ | Authority conservation, no Executive/Reviewer mutation | policy/principal and invariant 4–5 | RF-006; EXEC §6 | Writer-only carrier association | separately selected grant | refusal before launch | fixed principal/op family planned | protected policy, exact territory planned | pass for design | implementation/assessor |
+-| Material closure and bounded context | Context, invariants 2/8 | ACT §2; AC-010/011 | acquired payload and fit evidence | closure then measure before delivery | refusal/unknown retained | existing project_many reused | no truncation, unknown host preserved | pass for design | implementation/assessor |
++| Material closure and bounded context | Context, invariants 2/8 | ACT §2; AC-010/011 | acquired payload and fit evidence | closure then selected-capacity measurement before delivery | refusal/unknown retained | existing project_many reused | no truncation, unknown host preserved | pass for design | implementation/assessor |
+ | Honest effects, cancellation and reuse | Attempt, invariants 6–7 | ACT Effects/§5/7 | invocation versus observers | output and end separate | uncertain/end/counterexample paths | separate variants planned | subject observer/reconciliation planned | pass for design | executor qualification |
+ | Closed results and joins retain gaps | ClosedReturn and invariant 7–8 | FOUND Results/Conjunction | original predicates retained | capture then checks | output never accepts Product | finite operator planned | exact plan/basis/coverage rules planned | pass for design | implementation/assessor |
+ | Source-first independent review | review acquisition contract | EVAL §§2–4 | separate principal/exposure evidence | source expectations then candidate | role change does not erase evidence | immutable expectation record planned | policy authorship/family checks planned | pass for design | independent assessor |
+@@ -1221,8 +2026,11 @@
+ not replace the prior codec's proof. Protocol tests run real subprocess stdio,
+ not only direct handler calls. A process fixture is a control for deterministic
+ transport/effect law, not an F_P semantic reviewer. Actual independently
+-source-derived assessment is separately activated by Executive and may use the
+-available Claude CLI with exact configuration/usage preserved. Fixtures do not
++source-derived assessment is separately activated by Executive and, for this
++new F_D dispatch/authentication claim, must use the registered public path with
++exact configuration/usage preserved. An externally launched CLI may supply
++separate unauthenticated raw assessment evidence but cannot satisfy this path
++or return-authentication claim. Fixtures do not
+ supply its expected answers. No expensive broad usefulness claim is selected.
+ 
+ ### Disjoint implementation grants proposed for Executive selection
+@@ -1368,7 +2176,7 @@
+ | graph.project | Budget violation is constraint cause; inexact input model/seed/dependency basis is basis cause. Actual AC-010/011 operation result separately uses AC-007: declared result/satisfied, hold/indeterminate, gap/invalid_basis, refusal(constraint)/falsified, refusal(basis)/invalid_basis on that AC operation's own predicate. |
+ | relations.query, refresh.prepare | Declared path/impact/coverage/diff and survivor-candidate sets are computed facts, never RF audit_coverage or semantic non-influence judgments. An explicitly executed applicability/reuse predicate keeps its own declared domain/core result. |
+ | context.assemble | Closure/basis failure is basis cause; measured excess is retained as a fit counterexample, not truncation. A rendered context may return with indeterminate/falsified fit; its boundary result establishes rendering availability only. If actual activation is requested by its contract, ACT §3 closure_unresolved/invalid_basis and RF §5 capability/authority/basis guards use their original activation predicate separately. |
+-| contract.preflight | Output availability is a complete receipt/decision, not lawful activation inferred from its presence. ACT §3 admission_refused(authority)/out_of_frame and admission_refused(basis)/invalid_basis are separately recorded with their original predicate when those guards actually run. Unknown full-context fit makes the required admission basis insufficient; measured non-fit identifies the unavailable actor capability. |
++| contract.preflight | Output availability is a complete receipt/decision, not lawful activation inferred from its presence. ACT §3 admission_refused(authority)/out_of_frame and admission_refused(basis)/invalid_basis are separately recorded with their original predicate when those guards actually run. Unknown full-context fit makes admission basis insufficient only when a selected declared-capacity/fit predicate requires that judgment; no-declared-capacity is not a universal gate and yields no invented fit result. Measured non-fit identifies the unavailable actor capability; an override never manufactures fit. |
+ | dispatch.start/observe/cancel, events.wait | Identity conflict is constraint cause; undecided launch/effect/end is held(effect) only when the contracted output requires that decision. A truthful receipt/current unknown observation can itself be returned. Actual Effects values are completed/satisfied, not_effected/falsified or completion_unknown/indeterminate for the intended effect, with end separately recorded. No Worker availability verdict is invented. |
+ | return.capture/check, review.prepare | Capturing malformed raw output can return successfully while schema/consumer/currentness checks falsify or invalidate their own predicates. Missing claim/source/exposure basis is reported; author/actor equality and exposure facts alone certify no semantic independence. |
+ | checks.evaluate | Returning an actual negative/unknown F_D judgment is returned/satisfied only for B(op). The requested declared predicate keeps satisfied, falsified, indeterminate, out_of_frame or invalid_basis on its own exact domain, with unperformed syntax left without a judgment. |
+@@ -1414,7 +2222,7 @@
+ 
+ The only public-runtime admission mechanism is product-policy-preflight/1. The
+ external bootstrap mechanisms in this ticket remain historical deliberately
+-independent realizations for the three named design-construction contracts.
++independent realizations for their exact named design-construction contracts.
+ Their records prove only those exact admissions. They are not callable tools,
+ default fallback, registered runtime competitors or permission for another
+ contract. Their code/evidence remains for historical reconstruction, not as an
+@@ -1443,7 +2251,7 @@
+ | Owner / transition | Enclosing relation and basis continuity | Complete commit unit and reconstruction | Competing path |
+ |---|---|---|---|
+ | Product mechanism / Preflight admission | Exact Product/authorized owner binding, outcome/grant, packet/context, caller/target, method/profile, all material observation/dependency refs, executor/surface, applicable predicates and preimages. Reacquire/lock and validate every join before commitment. | One immutable complete Preflight receipt envelope after all referenced payloads are present/verified. Draft/staging artifacts confer no admitted truth. Reconstruct exact receipt and its complete references; absent marker means no receipt. | Only selected authorized mechanism; bootstrap historical scope as above, no request-supplied bypass. |
+-| Effect membrane / Attempt reservation | Admitted receipt plus exact request key/hash, context, target/executor/settings, result surface, notification sink, retry/reconciliation and fresh required basis. | One complete immutable Attempt reservation anchor, atomically published before launch. No durable reservation means no launch. Exact replay returns the same reservation; conflicting key refuses. | Only registered supervisor path; no direct shell or user entry point establishes reservation/admission. |
++| Effect membrane / Attempt reservation | Admitted receipt plus exact request key/hash, context, target/executor/settings, result surface, the complete exact Grant-selected notification sink binding/consumer, retry/reconciliation and fresh required basis. | One complete immutable Attempt reservation anchor, atomically published before launch. No durable reservation means no launch. Exact replay returns the same reservation; conflicting key refuses. | Only registered supervisor path; no direct shell or user entry point establishes reservation/admission. |
+ | Registered executor edge / Invocation | Existing reservation, exact executable/helper/config preimages, caller/target authority and fresh locked inputs. | Admission is already complete. Actual process start is an external effect, not transactionally coupled to evidence. Intent exists first; lost spawn/ack leaves completion_unknown, never automatic repeat. Fresh observation uses the anchor and actual process/subject evidence. | Registered executor only; arbitrary argv/projection-triggered execution unsupported. |
+ | Writer membrane / one target record | Exact caller Worker/Writer grant, target preimage, intended whole postimage, authority/method/current dependencies, target lock and durable intent. | One whole target-file publication: complete new bytes or original/absent target. Existing replacement uses same-directory atomic replace; absent creation links a fully written/fsynced temp file exclusively into an absent target, never exposes a partially written new file. Reconstruct from durable intent and actual pre/post/other bytes; unknown other state cannot be reset or blindly retried. | Only named granted Writer interface for this tool domain; no Executive/Reviewer target impersonation or non-atomic fallback. |
+ | Evidence store / immutable artifact or event | Exact complete envelope, all dependencies, provenance and content digest; protected namespace and existing evidence grant. | Complete same-directory atomic publication of one verified envelope. Raw/staged payloads are not admission markers. History only treats complete verified marker records as admitted evidence; orphan staging is not success. | One envelope grammar/verification path; optional indexes are nonauthoritative and rebuildable. |
+@@ -1510,7 +2318,7 @@
+ | ModelRef | Existing codec verifies exact model/carrier identity; actors select it. | New model/grounding is separately authored; projection does not mutate it. | Model/source owners; unsupported transformations remain unsupported. |
+ | Observation | Acquisition produces immutable scope/time/material record. | Comparison derives current/stale/unknown facts; original record never changes. | New observation supersedes reliance only under exact invalidators; no deletion on session change. |
+ | Context | Selected packet/acquisition yields sealed exact rendering/fit evidence. | New source/frame/target/envelope requires a new Context; late reads remain named. | Owner-selected basis/invalidator withdraws applicability; original context stays evidence. |
+-| Preflight | Pure candidate is drafted; selected mechanism atomically commits admitted/rejected receipt. | Valid only while exact policy, Product/owner/grant, Context/basis, role, dependencies and allowed surface remain applicable. Recheck at each effect; no universal TTL. Explicit unsupported temporal-grant semantics refuse. | New support/authority or supersession creates separate finding/receipt; historical admitted decision is not relabeled. |
++| Preflight | Pure candidate is drafted; selected mechanism atomically commits admitted/rejected receipt. An exact separately authorized supersession record can project superseded; no public request creates it. | Valid only while exact policy, Product/owner/grant, Context/basis, role, dependencies and allowed surface remain applicable. Recheck at each effect; no universal TTL. Explicit unsupported temporal-grant semantics refuse. | Contract state is exactly drafted/admitted/rejected/superseded under the separate state relation below; applicability is a different current observation. Authorized supersession is a separate immutable exact-owner record. Historical admission is never relabeled. |
+ | Attempt | Effect edge reserves one exact key before launch; read anchor plus verified events. | Process/output/end/effect events add immutable facts; cancellation is a request. Retry has a new identity and required reconciliation. | No closure/retry inferred from silence. Owner retention preserves unresolved effects and original anchors. |
+ | ClosedReturn | Capture original bound producer/attempt payload; consumer checks without rewrite. | New consumer/currentness/applicability is another check. Same evidence replay is duplicate; genuine equal answers remain distinct. | Original subject/verdict persists; invalidated applicability does not erase original result. |
+ | OperationEvidence / expectation / acquisition | Protected store records actual operation, assertion/execution and source delivery. | Verified append of immutable records; exposure history spans sessions and reconstructs. | No automatic garbage collection or rewriting. First fragment retains indefinitely; any future destruction needs explicit external owner retirement outside this API. |
+@@ -1534,8 +2342,22 @@
+ The event-sink policy registry is concretely `event_sinks: {id: record}`. A record
+ has exactly `kind` (`durable-file-events`), `directory` (relative beneath the
+ protected evidence root), `consumer`, `authority_source` and `retention`
+-(`indefinite`). Grant/executor notification binding chooses only a registered
+-id. Unsupported kind, escaped path, absent consumer/authority or unknown sink
++(`indefinite`). The Grant has the sole notification selection field
++`notification_sink`, required in every Grant: an existing registered sink id or
++null. If its permitted operations include dispatch.start it must be a nonnull
++registered id; null is permitted only for a non-dispatch grant. Executor records
++have no notification-selection field or authority. Preflight resolves this id
++from the selected Grant, requires the sink consumer to equal the activated
++packet's declared consumer, and rechecks sink/Grant/policy bytes at the effect
++edge. Attempt.notification is exactly `{"sink_id":string,"binding":SinkRecord}`;
++`binding` is the complete exact registered record above, whose directory is
++resolved only beneath the same protected evidence root bound by policy. The
++consumer is derived only from that binding, never from request or Executor
++settings. No default sink or implicit sole-sink selection exists. Missing/null
++dispatch selection, mismatched consumer or unknown id refuses before
++reservation/launch as contract_violation (or authority_missing where the
++underlying grant itself is absent). Unsupported kind, escaped path, absent
++consumer/authority or unknown sink
+ refuses before delivery; public requests cannot register an endpoint. Sinks are
+ not independent sources of work-state truth. Indexes/cursors are projection
+ metadata, not an alternate admission ledger.
+@@ -1561,7 +2383,7 @@
+ | return.capture; return.check | Acquire+Record original, then Evaluate exact binding/currentness; core plus store. |
+ | review.prepare | Acquire+Project+Record supplied F_P assertion/exposure; no semantic-review oracle. |
+ | checks.evaluate; results.conjoin | Evaluate only qualified declared predicates/operators; core. |
+-| work.write | Admit+Record one existing-owner Writer transition, Observe actual result; effects. |
++| work.write | Core prepares exact existing-owner Writer relation; effects Admit+Record one transition and Observe actual result. |
+ | refresh.prepare | Acquire+Project+Evaluate selected impact/reuse, Render handoff; no autonomous refresh policy. |
+ | resources.aggregate | Acquire+Project counters and Evaluate selected limits; core, no benefit inference. |
+ 
+@@ -1578,23 +2400,71 @@
+ unsupported cross-method/calculus/provider/distributed forms are explicit
+ excluded domains, with no fallback route.
+ 
+-The additional state views project receipt validity and one target Writer
+-operation; no accepted Product state is inferred from them:
++Contract state is an explicit field separate from receipt decision and
++current application. Preflight.contract_state is exactly drafted, admitted,
++rejected or superseded; decision is admitted/rejected only for the corresponding
++mechanism decision and null for drafted/superseded. state_evidence is an array
++of exact SourceRef/ArtifactRef evidence. Core's pure candidate is drafted with
++no admission receipt; effects rechecks the relation and commits a new complete
++admitted or rejected receipt. The receipt's mechanism/authority/evidence never
++changes. Rejected is an actual recorded failed admission, not a relabeled
++candidate result. A later contract has its own digest and activation.
++
++Only an existing owner's exact ContractSupersession source, explicitly selected
++among the trusted Grant.authority_sources and authenticated by the operator's
++separate owner binding, may project superseded. Its closed schema is in the
++content catalog above; it binds the exact predecessor contract digest, a
++different exact successor contract digest, actual owner authority, reason and
++evidence. No request, caller label, matching hash or arbitrary SourceRef adds
++such authority. The tool has no supersede operation. It can acquire/project
++that authorized source or report its absence/ambiguity as a gap. A successor
++receipt alone is not evidence that its owner superseded the predecessor.
++Supported source transitions are drafted -> admitted or rejected by the named
++mechanism, and drafted/admitted/rejected -> superseded only under that separately
++owner-authorized exact record. Superseded has no in-place reactivation; a new
++contract is separately drafted/admitted. Prior receipts/evidence remain immutable
++history. An unsupported requested transition refuses; no receipt is rewritten.
++
++For an admitted receipt, fresh applicability is separately applicable,
++StaleForUse or unknown under the existing material invalidators. StaleForUse
++withdraws direct reliance; it is not superseded, rejected or a new core result.
++A current superseded projection also withholds use while preserving the original
++admission. There is no transition from stale applicability into an old contract's
++drafted state; a new exact contract begins another lifecycle. This distinction
++serializes ACT §1 Admission, §7 and TICKETS §5 without new supersession authority.
++
++The additional state views project contract state, receipt applicability and
++one target Writer operation; no accepted Product state is inferred:
+ 
+ ```mermaid
+ stateDiagram-v2
+-  [*] --> Draft: caller supplies exact contract
+-  Draft --> Rejected: selected mechanism records failed premise
+-  Draft --> Admitted: complete receipt marker committed on exact basis
+-  Admitted --> Applicable: fresh exact authority and basis check
+-  Admitted --> StaleForUse: changed or missing material premise observed
+-  Applicable --> Applicable: unchanged basis checked before effect
+-  Applicable --> StaleForUse: authority or material invalidator observed
+-  StaleForUse --> Draft: separately authorized new contract and basis
+-  Rejected --> [*]: preserve original decision
++  [*] --> drafted: exact new contract
++  drafted --> admitted: named mechanism commits complete admission
++  drafted --> rejected: named mechanism records failed admission
++  drafted --> superseded: exact authorized owner supersession record
++  admitted --> superseded: exact authorized owner supersession record
++  rejected --> superseded: exact authorized owner supersession record
++  superseded --> [*]: historical predecessor retained
++  note right of admitted
++    Every receipt is immutable.
++    Supersession is a separate exact owner record.
++    No public tool grants or performs supersession.
++  end note
++```
++
++```mermaid
++stateDiagram-v2
++  [*] --> UnknownForUse: inspect admitted receipt
++  UnknownForUse --> Applicable: sufficient fresh authority and basis
++  UnknownForUse --> StaleForUse: actual material invalidator
++  Applicable --> Applicable: exact pre-effect recheck
++  Applicable --> StaleForUse: observed invalidator or authorized supersession
++  Applicable --> UnknownForUse: required observation unavailable
++  StaleForUse --> [*]: withdraw reliance on this use
+   note right of StaleForUse
+-    Historical admitted receipt remains unchanged.
+-    Current applicability is a separate observation.
++    Original contract_state and receipts remain history.
++    StaleForUse is not superseded.
++    New work requires its own exact contract.
+   end note
+ ```
+ 
+@@ -1733,8 +2603,10 @@
+ itself grants no authority.
+ 
+ The settled CoreOutcome supersedes the v2 carrier draft: it has exactly
+-`result`, `artifacts`, `operation_outcome` and `acquisitions`. `result` is the
+-complete public object `{"artifact":ArtifactRef-or-null,"value":JSON}`.
++`result`, `artifacts`, `operation_outcome`, `refusal` and `acquisitions`. `refusal` is null for returned output and otherwise the exact closed
++code/reason/gaps/source_refs object required by the status table; no diagnostic
++is hidden in arbitrary result fields. `result` is null when none is available,
++otherwise the complete public object `{"artifact":ArtifactRef-or-null,"value":JSON}`.
+ `artifacts` is an ordered list of **complete provenance envelopes**, and every
+ reference in result/artifacts is computed from their final canonical bytes.
+ No random placeholder, mutable current request or post-hoc arbitrary result
+@@ -1770,10 +2642,17 @@
+ `prepare_write(runtime,request)->EffectPlan` receive the whole request.
+ `check_preconditions(runtime,recheck_set)` returns newly acquired observations,
+ changes and gaps; effects records and freshly reruns it at the actual edge.
+-Effects `execute_effect(runtime,request)->CoreOutcome` dispatches only the
+-registered named effect functions, and `persist_outcome(runtime,request,outcome)`
+-performs the declared retention/wrapper construction. The full-request handler
+-signatures for dispatch/observe/cancel/events/Writer remain normative. There is
++Effects `execute_effect(runtime,request,plan)->CoreOutcome` is the sole
++cross-module effect entry. `plan` is the core-produced immutable EffectPlan
++for contract.preflight/work.write and is null for the other named effect
++operations; these route only to fixed internal full-request helpers. Effects
++never constructs the Writer plan or accepts a CLI/MCP-supplied plan. It checks
++the exact request/plan/policy identity and reruns preconditions at the edge.
++`persist_outcome(runtime,request,outcome)->Response` is the sole retention and
++response-wrapper entry. It maps only the closed boundary status table, retaining
++inner judgments unchanged. Old names such as dispatch, write_record and
++retain_operation denote internal helpers only, or are absent; none is an
++alternative export or persistence path. There is
+ no arbitrary plan input accepted from CLI/MCP. Effects constructs actual post-
+ effect observations with the same core envelope constructor, then persists
+ complete final bytes. A prepared intent is not an actual post-effect record.
+@@ -1841,16 +2720,47 @@
+ response plus serialized text. Stdout remains newline-delimited protocol only.
+ There is no global MCP/host configuration effect or dependency on the study MCP.
+ 
++### Authoritative F_D path and explicit legacy exclusions
++
++The new F_D support path is CLI/MCP -> the single ac_support dispatcher ->
++core source/policy/Context/plan relation -> effects execute_effect and protected
++Attempt reservation/supervisor -> registered exact executor -> observed raw
++output/effects -> persist_outcome and the declared consumer. Only that actual
++path can establish the new FD-006/007 dispatch/admission/return-authentication
++claims. Path qualification acquires both the selected caller and executor edges,
++including the fixed supervisor and persistence boundary; equal output through
++another entry proves neither path realization nor new authority.
++
++Existing entries code/ac_graph.py::main, code/ac_generate.py::main and
++::run_actor, code/ac_grounding.py::main, and code/ac_repair.py::main (including
++its call to ac_generate.run_actor), plus every actor/provider entry beneath
++the seven exact frozen study roots in preservation-inventory-002, remain
++unchanged, available for their previously declared functions and explicitly
++excluded from this F_D dispatch/admission/authentication claim. They are not
++fallback entries, registered admission competitors or an implicit bypass.
++A future owner may separately register and qualify a fixed executor using
++existing functionality, but these legacy entry points gain no F_D authority
++merely by remaining present. No producer/consumer migration of their disjoint
++existing contract is required by this additive support increment; new support
++consumers use only the new declared path. This is the path-exclusion inventory
++for the changed boundary, not removal or redefinition of prior source authority.
++
+ ### Preservation and test authority
+ 
+ The exact [preservation inventory](../../../.ai-workspace/qualification/t008/design/preservation-inventory-002.json)
+ pins the existing code/test and seven frozen study directory trees, all 3,492
+ Git members and seven named realization/source-design blobs against current
+-checkpoint and initial source anchor. Current scoped status has no tracked
++checkpoint and initial source anchor. At that pre-implementation freeze, scoped status had no tracked
+ change or nonignored untracked source in those roots. Ignored local caches are
+ not frozen source. Code, source-authoring, grounding, repair and study bytes
+ remain unchanged; this design creates no regenerated models or new upstream
+-trial result.
++trial result. Future implementation preservation checks compare every pinned
++existing member by path/type/bytes and admit only the exact additions selected
++in that implementation grant. A changed code/test whole-tree hash is expected
++when approved members are added; old whole-tree equality is not a post-addition
++closure criterion. Unapproved additions, changed/removal/rename of any pinned
++member or a frozen-study tree change are material preservation failures, not
++explained away by a new tree digest.
+ 
+ Qualification must distinguish output availability from actual semantic/method
+ predicates in every applicable operation, exercise the concrete new outcome
+@@ -1861,4 +2771,10 @@
+ same public schema; fixed-id retries, separate genuine equal-answer attempts,
+ partial publication and fresh-process reconstruction are material controls.
+ Actual Worker/Reviewer use and independent source assessment remain separately
+-produced evidence. FDV-003 and formal acceptance/release remain unqualified.
++produced evidence. For an LLM-interface usability claim, ASSURANCE §13
++requires actual clean-room F_P use with only the ordinary supplied context and
++permitted tools: record source-derived expected outcomes before inspecting
++responses; cover the selected sunny, ambiguity and negative cases; retain exact
++unedited responses and every failure/retry; do not silently retry until green.
++Fixtures/replays and private implementation knowledge cannot establish that
++claim. Disclose substitutions and keep unexercised claims open. FDV-003 and formal acceptance/release remain unqualified.
+--- a_c/.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md (repair-004 preimage)
++++ a_c/.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md (repair-004 candidate)
+@@ -7,13 +7,18 @@
+ - status: active
+ - goal: Realize REQ-AC-FD-001..013 in the existing Graphify tenant and retain bounded qualification evidence.
+ - change_intent: Implement the committed a_c WHAT without duplicating STDO methodology or coordinating F_P judgment.
+-- change_class: design_local
++- change_class: design_reframe
+ - re_entry_point: Design
+-- triaged_at: 2026-10-18T18:23:38.987223Z
++- triaged_at: 2026-10-18T19:05:08.915054Z
+ - created_at: 2026-10-19
+ - updated_at: 2026-10-19
+ - affected_boundary: a_c Graphify tenant support operations and ordinary public interfaces
+ - dependencies: Committed common WHAT c2f67fec8154028d45d7cd7a2832dd4fade4d94b; exact installed builder; owner-selected Claude RC9 execution method.
++
++Current design state and exact repair routing are owned by
++[Current candidate after repair-004](#current-candidate-after-repair-004) below.
++Earlier closed returns/admissions in this ticket are history for their exact
++subjects and do not project current acceptance or implementation readiness.
+ 
+ ## Owner instruction
+ 
+@@ -233,7 +238,7 @@
+ }
+ ```
+ 
+-## Design candidate ready — closed Writer return
++## Historical initial design candidate — closed Writer return
+ 
+ Writer `/root/ac_fd_tenant_design` returns `candidate_ready` to Executive
+ `/root` for the lawfully admitted design activation `T-008-design-001` above.
+@@ -295,7 +300,7 @@
+ are exact source evidence for the next design review/disposition, not an
+ implementation grant or owner acceptance.
+ 
+-## Admitted A–G design-seam repair and v2 candidate
++## Historical admitted A–G repair and v2 candidate
+ 
+ Executive `/root` selected bounded A–G design clarifications from read-only
+ core/effect intakes, independently of the ongoing frozen-v1 source assessment.
+@@ -372,7 +377,7 @@
+   deliberately independent bounded realizations, not callable/default/runtime
+   competitors or fallback admission for another contract.
+ 
+-## Admitted F1–F5 repair and v3 candidate
++## Historical admitted F1–F5 repair and v3 candidate
+ 
+ The preceding A–G v2 availability return remains unchanged in its separate
+ artifact. Executive subsequently selected supported remaining gaps from the
+@@ -413,3 +418,106 @@
+ Independent assessment/Executive disposition, code selection, runtime/ordinary
+ actor qualification, usefulness, Product acceptance and release remain separate.
+ This Worker stops at that return; it activates no implementation itself.
++
++## Current candidate after repair-004
++
++The current work state is **active, design candidate available for independent
++assessment and Executive disposition**. No design acceptance, implementation
++activation, runtime qualification, usefulness, Product acceptance or release
++is recorded here. The previous v1/v2/v3/repair-003 returns retain their original
++subjects and bounded standing; none is projected as current acceptance.
++
++Current exact HOW: [fd-support.md](../../../build_tenants/graphify/design/fd-support.md),
++SHA-256 `2136f3582fc432786cb09345165edae94c368faf5ed45c91aa99cbe45a922d12`. The unchanged RC9 binding remains
++`bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1`.
++This ticket is the current work-state authority. Its own final hash and all
++seven current candidate members are recorded together in the Writer's exact
++[repair-004 closed return](../../qualification/t008/design/design-repair-004-return.json),
++avoiding a self-hash cycle. That return is evidence/projection, not a second
++work-state authority; future observations update this owning carrier through
++an authorized Writer. The original fixed Git/member preservation inventory
++remains unchanged and referenced, not regenerated.
++
++### Source-owned triage correction
++
++The current selected class is `design_reframe`, re-entering **Design**, under
++RC9 SPEC_METHOD §4 Change classes and TICKETS §4 Upward propagation check.
++The exact committed WHAT still governs the same Product outcome; no Goal,
++Intent, Product or Requirement truth is changed. This increment creates a
++material new public support boundary (23 operations and their acquired content
++contracts) and its realizing structure; it is not an already-accepted local
++realization refactor. The prior `design_local` label was not one of that
++selected source's classes and is corrected here. Its earlier triage recording
++`2026-10-18T18:23:38.987223Z` remains preserved in the frozen predecessor ticket;
++the current header timestamp records this actual re-triage, not a claimed
++historical event.
++
++`type: feature` and `ticket_category: ordinary` remain orthogonal, as TICKETS
++§4 Category/Change class requires. This is an additive, independently bounded
++support interface; it does not replace an old authoritative implementation
++truth path or require legacy generation/run_actor producers/consumers to
++migrate before closure. Those paths retain their declared disjoint contracts
++and are explicitly excluded from the new F_D dispatch/authority claim. The
++source's implementation_migration condition (governed replacement, or a new
++interface requiring producer/consumer migration) is therefore not asserted.
++No invented category or migration waiver is introduced. Independent review
++of the material new boundary still applies under the selected source/profile.
++The missing design disposition/runtime evidence remains an explicit closure
++gap; shape/schema validity supplies no accepted-design coverage or acceptance.
++
++### Fresh assessment and bounded repair authority
++
++The fresh nonauthor [final-design report](../../qualification/t008/assurance/design_review_v3_final_20261019/runs/claude_final_design_assessment_001/result.txt),
++SHA-256 `d988af4b2117f302035b3e16d111239c204323bcff87482969cbb7accd23a187`,
++evaluated exact subject
++`sha256:30472059b6dcfe05fb372c8a707748262210a38c73c05b821a2f6b973ccb4bce`
++as falsified for decision completeness. Its six causal findings are evidence;
++Executive separately selected their bounded repairs before this Writer acted.
++That verdict remains history on its exact predecessor, not relabeled as a
++current verdict or silently discarded after repair.
++
++Repair-003 had separately admitted the one immutable-Git acquisition wording
++clarification. Its [closed return](../../qualification/t008/design/design-repair-003-return.json)
++SHA-256 `773640e7600aa06311b92c28d55e9713249a1b7d97135b6db4247c66a1a7d233`
++pinned HOW `3c4c366d0ebc5a8cd5d78d897f89ffaa762668fe5228221f4daa254b41427c1c`.
++Repair-004 starts from that exact HOW and this ticket preimage
++`5202b98f6c510439d57b2e1f5a9488af59fd4cfcaad7ca973a96d681041d760d`.
++
++Only the explicitly authorized [draft carrier](../../qualification/t008/design/design-repair-004-contract.draft.json)
++was written before repair admission: raw
++`a473748bbe6612b6c272d614d48b9aa1eba5e451561a8e7eb17c8706a2f2d467`,
++canonical `8c090dbdecb025b6a6af469d842dd0f03a2585158269002f72eee4734f9ed6d1`.
++The exact Root-reported [external finite receipt](../../qualification/t008/design/design-repair-004-admission.json)
++SHA-256 `bdd1eecb2105f7a326b4e93a0afe977027cd9b15a9f30161bff0b327f61ca395`
++was retained before any source effect: admitted, exit 0, all 12 premises true
++(exact contract/actor/owner/Product/WHAT/builder/RC9/tree, two preimages, five
++preserved members, fresh report, three territories and no runtime actors/tests).
++This is admission of this exact design-construction contract under the existing
++owner outcome, not public-tool qualification, outcome admission or acceptance.
++The draft chronology is not retroactively admitted.
++
++The selected repair supplies one Grant-owned notification_sink and full fixed
++Attempt derivation; explicitly unsupported external-return authentication;
++consistent core Writer-plan/effects execution/persistence exports; closed
++integer-only content schemas and semantic constraints/examples for conjunction,
++refresh/invalidators, accounting and role-specific return contracts; separate
++contract-state/supersession versus application history; and one exact boundary
++status/exit map preserving inner results. It also states the ordinary F_D path
++and legacy exclusions, existing-member preservation plus exact approved
++additions, and real-F_P clean-room source-first/unmodified/no-silent-retry
++qualification. Executive's source-selected ACT §2 clarification keeps a
++no-declared-capacity branch unperformed for numeric/full-host fit while
++retaining exact bytes/unknowns and all other required premises; no owner
++override manufactures satisfied fit. These are finite support bindings, not
++new result/algebra, budget law, methodology or workflow ownership.
++
++Only this ticket and fd-support.md plus new own design evidence are changed.
++Profile and the other four original candidate files, all prior evidence,
++legacy implementation and frozen studies remain unchanged. The [repair-004
++checks](../../qualification/t008/design/design-repair-004-checks.json) and
++[exact source diff](../../qualification/t008/design/design-repair-004.diff)
++record performed document/schema/preservation facts only; no implementation,
++runtime actors/tests, new model/upstream calls, Git/global effects or peer
++edits occurred. This Writer returns candidate_ready and stops for independent
++current-subject assessment and Executive disposition; no continuation follows
++from its own return.

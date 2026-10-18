@@ -1,0 +1,492 @@
+{
+  "limits": [
+    "Memory store/operation wrapper is an explicitly supplied module test control. Finite checks really execute against bound inputs; no real F_P actor/independence/semantic-completeness claim.",
+    "No provider/model, actor process, work write or externally accepted-result benefit is exercised by these added controls."
+  ],
+  "runs": {
+    "execution-001": [
+      {
+        "affected_candidates": [],
+        "case": "test_refresh_falsified_preservation_condition_withholds_reuse_without_rewriting_history",
+        "conditions": {
+          "assertion_basis": "satisfied",
+          "claim_scope": "falsified",
+          "dependencies": "satisfied",
+          "dependency_complete": "satisfied",
+          "impact_complete": "satisfied",
+          "observation_basis": "satisfied"
+        },
+        "exact_input_operation_custody": "execution-001/test_refresh_falsified_preservation_condition_withholds_reuse_without_rewriting_history",
+        "historical_members": 11,
+        "new_subject": {
+          "id": "urn:test:preservation:new",
+          "sha256": "772f1c55bc7c145f5e9d8be8c37127c741d607b3a38706d535436ea9e48800a4"
+        },
+        "original_core_value": "falsified",
+        "original_history_members_unchanged": true,
+        "original_record": {
+          "id": "sha256:07f03b2e99d30fccce4de08ffe7a90680b64dabfac59890aab3345c4ab908c3d",
+          "sha256": "07f03b2e99d30fccce4de08ffe7a90680b64dabfac59890aab3345c4ab908c3d"
+        },
+        "original_subject": {
+          "id": "urn:test:preservation:old",
+          "sha256": "d11a429011f4fc9e84fec86e9d1aff65d7c3a672b1df9e53b343387857b7deab"
+        },
+        "raw_manifest": {
+          "bytes": 6583,
+          "sha256": "a146a745a730215bde6cb570d58812382d5ab5723b422d0ed10c3572d0c7eaa5"
+        },
+        "response_status": "ok",
+        "selected_claim_scope_evaluation": {
+          "pointer": "/payload/response_without_evidence/result/value/judgment",
+          "record": {
+            "id": "sha256:7435c8878dc30d8d35a1084f805318d60aeb4f7041a3c5bc02676d1dc626ae37",
+            "sha256": "7435c8878dc30d8d35a1084f805318d60aeb4f7041a3c5bc02676d1dc626ae37"
+          }
+        },
+        "selected_retention_condition_values": [
+          {
+            "condition": "claim_scope",
+            "core_value": "falsified",
+            "gaps": []
+          },
+          {
+            "condition": "assertion_basis",
+            "core_value": "satisfied",
+            "gaps": []
+          },
+          {
+            "condition": "observation_basis",
+            "core_value": "satisfied",
+            "gaps": []
+          },
+          {
+            "condition": "dependencies",
+            "core_value": "satisfied",
+            "gaps": []
+          }
+        ],
+        "supported_applicability": false,
+        "unchanged_candidates": [
+          {
+            "candidate": false,
+            "check": "stable-check",
+            "dependencies": [
+              "check",
+              "dependency"
+            ],
+            "impact_intersection": [],
+            "original": {
+              "pointer": "/payload/response_without_evidence/result/value/judgment",
+              "record": {
+                "id": "sha256:07f03b2e99d30fccce4de08ffe7a90680b64dabfac59890aab3345c4ab908c3d",
+                "sha256": "07f03b2e99d30fccce4de08ffe7a90680b64dabfac59890aab3345c4ab908c3d"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "affected_candidates": [],
+        "case": "test_refresh_missing_preservation_condition_withholds_reuse_without_rewriting_history",
+        "conditions": {
+          "assertion_basis": "satisfied",
+          "claim_scope": "satisfied",
+          "dependencies": "satisfied",
+          "dependency_complete": "satisfied",
+          "impact_complete": "satisfied",
+          "observation_basis": "satisfied"
+        },
+        "exact_input_operation_custody": "execution-001/test_refresh_missing_preservation_condition_withholds_reuse_without_rewriting_history",
+        "historical_members": 11,
+        "new_subject": {
+          "id": "urn:test:preservation:new",
+          "sha256": "6147396f8e32576156e3e8e19bda38cd04520faf9bfe2275987d68221cca85e5"
+        },
+        "original_core_value": "falsified",
+        "original_history_members_unchanged": true,
+        "original_record": {
+          "id": "sha256:7b38b74464267182a34a3ed91eab2f7a5c6fbdf09906537d5d49dc845e132614",
+          "sha256": "7b38b74464267182a34a3ed91eab2f7a5c6fbdf09906537d5d49dc845e132614"
+        },
+        "original_subject": {
+          "id": "urn:test:preservation:old",
+          "sha256": "d11a429011f4fc9e84fec86e9d1aff65d7c3a672b1df9e53b343387857b7deab"
+        },
+        "raw_manifest": {
+          "bytes": 6583,
+          "sha256": "d214e43a26f1a3a3c733185634c77230c2d02308ff4c66ee2c72db8ee2eccc6d"
+        },
+        "response_status": "ok",
+        "selected_claim_scope_evaluation": null,
+        "selected_retention_condition_values": [
+          {
+            "condition": "claim_scope",
+            "core_value": null,
+            "gaps": [
+              "Missing actual condition judgment"
+            ]
+          },
+          {
+            "condition": "assertion_basis",
+            "core_value": "satisfied",
+            "gaps": []
+          },
+          {
+            "condition": "observation_basis",
+            "core_value": "satisfied",
+            "gaps": []
+          },
+          {
+            "condition": "dependencies",
+            "core_value": "satisfied",
+            "gaps": []
+          }
+        ],
+        "supported_applicability": false,
+        "unchanged_candidates": [
+          {
+            "candidate": false,
+            "check": "stable-check",
+            "dependencies": [
+              "check",
+              "dependency"
+            ],
+            "impact_intersection": [],
+            "original": {
+              "pointer": "/payload/response_without_evidence/result/value/judgment",
+              "record": {
+                "id": "sha256:7b38b74464267182a34a3ed91eab2f7a5c6fbdf09906537d5d49dc845e132614",
+                "sha256": "7b38b74464267182a34a3ed91eab2f7a5c6fbdf09906537d5d49dc845e132614"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "affected_candidates": [],
+        "case": "test_refresh_preserves_falsified_original_with_four_conditions_and_certified_frontier",
+        "conditions": {
+          "assertion_basis": "satisfied",
+          "claim_scope": "satisfied",
+          "dependencies": "satisfied",
+          "dependency_complete": "satisfied",
+          "impact_complete": "satisfied",
+          "observation_basis": "satisfied"
+        },
+        "exact_input_operation_custody": "execution-001/test_refresh_preserves_falsified_original_with_four_conditions_and_certified_frontier",
+        "historical_members": 11,
+        "new_subject": {
+          "id": "urn:test:preservation:new",
+          "sha256": "6147396f8e32576156e3e8e19bda38cd04520faf9bfe2275987d68221cca85e5"
+        },
+        "original_core_value": "falsified",
+        "original_history_members_unchanged": true,
+        "original_record": {
+          "id": "sha256:f9c82308b2ecc118eda67c8c2db0afac5ae8201444b3cc37e0ce368d18ba665e",
+          "sha256": "f9c82308b2ecc118eda67c8c2db0afac5ae8201444b3cc37e0ce368d18ba665e"
+        },
+        "original_subject": {
+          "id": "urn:test:preservation:old",
+          "sha256": "d11a429011f4fc9e84fec86e9d1aff65d7c3a672b1df9e53b343387857b7deab"
+        },
+        "raw_manifest": {
+          "bytes": 6583,
+          "sha256": "06098953fd72f66437f3a37dcdea655e71b8ef3a1c614ff156637e6db5785892"
+        },
+        "response_status": "ok",
+        "selected_claim_scope_evaluation": {
+          "pointer": "/payload/response_without_evidence/result/value/judgment",
+          "record": {
+            "id": "sha256:91551f4f2d7e2bfd72c511daa10a8e14a61a9f9ad19e6dbe0710e5932550dd9d",
+            "sha256": "91551f4f2d7e2bfd72c511daa10a8e14a61a9f9ad19e6dbe0710e5932550dd9d"
+          }
+        },
+        "selected_retention_condition_values": [
+          {
+            "condition": "claim_scope",
+            "core_value": "satisfied",
+            "gaps": []
+          },
+          {
+            "condition": "assertion_basis",
+            "core_value": "satisfied",
+            "gaps": []
+          },
+          {
+            "condition": "observation_basis",
+            "core_value": "satisfied",
+            "gaps": []
+          },
+          {
+            "condition": "dependencies",
+            "core_value": "satisfied",
+            "gaps": []
+          }
+        ],
+        "supported_applicability": true,
+        "unchanged_candidates": [
+          {
+            "candidate": false,
+            "check": "stable-check",
+            "dependencies": [
+              "check",
+              "dependency"
+            ],
+            "impact_intersection": [],
+            "original": {
+              "pointer": "/payload/response_without_evidence/result/value/judgment",
+              "record": {
+                "id": "sha256:f9c82308b2ecc118eda67c8c2db0afac5ae8201444b3cc37e0ce368d18ba665e",
+                "sha256": "f9c82308b2ecc118eda67c8c2db0afac5ae8201444b3cc37e0ce368d18ba665e"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "execution-002": [
+      {
+        "affected_candidates": [],
+        "case": "test_refresh_falsified_preservation_condition_withholds_reuse_without_rewriting_history",
+        "conditions": {
+          "assertion_basis": "satisfied",
+          "claim_scope": "falsified",
+          "dependencies": "satisfied",
+          "dependency_complete": "satisfied",
+          "impact_complete": "satisfied",
+          "observation_basis": "satisfied"
+        },
+        "exact_input_operation_custody": "execution-002/test_refresh_falsified_preservation_condition_withholds_reuse_without_rewriting_history",
+        "historical_members": 11,
+        "new_subject": {
+          "id": "urn:test:preservation:new",
+          "sha256": "772f1c55bc7c145f5e9d8be8c37127c741d607b3a38706d535436ea9e48800a4"
+        },
+        "original_core_value": "falsified",
+        "original_history_members_unchanged": true,
+        "original_record": {
+          "id": "sha256:baa390f93a5a790120ea1a4df288a8a3e147540a8ad523cb36bfd16c865a724a",
+          "sha256": "baa390f93a5a790120ea1a4df288a8a3e147540a8ad523cb36bfd16c865a724a"
+        },
+        "original_subject": {
+          "id": "urn:test:preservation:old",
+          "sha256": "d11a429011f4fc9e84fec86e9d1aff65d7c3a672b1df9e53b343387857b7deab"
+        },
+        "raw_manifest": {
+          "bytes": 6583,
+          "sha256": "9cc2edc4723c2ca259948c316b3040ae29bdc5b1b9bc1ebf6786ae163f92f647"
+        },
+        "response_status": "ok",
+        "selected_claim_scope_evaluation": {
+          "pointer": "/payload/response_without_evidence/result/value/judgment",
+          "record": {
+            "id": "sha256:0b67062879de62300aee6f1bac6f56f596dcf53ed03646036cb198877dd50a28",
+            "sha256": "0b67062879de62300aee6f1bac6f56f596dcf53ed03646036cb198877dd50a28"
+          }
+        },
+        "selected_retention_condition_values": [
+          {
+            "condition": "claim_scope",
+            "core_value": "falsified",
+            "gaps": []
+          },
+          {
+            "condition": "assertion_basis",
+            "core_value": "satisfied",
+            "gaps": []
+          },
+          {
+            "condition": "observation_basis",
+            "core_value": "satisfied",
+            "gaps": []
+          },
+          {
+            "condition": "dependencies",
+            "core_value": "satisfied",
+            "gaps": []
+          }
+        ],
+        "supported_applicability": false,
+        "unchanged_candidates": [
+          {
+            "candidate": false,
+            "check": "stable-check",
+            "dependencies": [
+              "check",
+              "dependency"
+            ],
+            "impact_intersection": [],
+            "original": {
+              "pointer": "/payload/response_without_evidence/result/value/judgment",
+              "record": {
+                "id": "sha256:baa390f93a5a790120ea1a4df288a8a3e147540a8ad523cb36bfd16c865a724a",
+                "sha256": "baa390f93a5a790120ea1a4df288a8a3e147540a8ad523cb36bfd16c865a724a"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "affected_candidates": [],
+        "case": "test_refresh_missing_preservation_condition_withholds_reuse_without_rewriting_history",
+        "conditions": {
+          "assertion_basis": "satisfied",
+          "claim_scope": "satisfied",
+          "dependencies": "satisfied",
+          "dependency_complete": "satisfied",
+          "impact_complete": "satisfied",
+          "observation_basis": "satisfied"
+        },
+        "exact_input_operation_custody": "execution-002/test_refresh_missing_preservation_condition_withholds_reuse_without_rewriting_history",
+        "historical_members": 11,
+        "new_subject": {
+          "id": "urn:test:preservation:new",
+          "sha256": "6147396f8e32576156e3e8e19bda38cd04520faf9bfe2275987d68221cca85e5"
+        },
+        "original_core_value": "falsified",
+        "original_history_members_unchanged": true,
+        "original_record": {
+          "id": "sha256:6a2e419d71bc483c22be5ea0482e271ed0e8281a362021843337d969b6c4e51c",
+          "sha256": "6a2e419d71bc483c22be5ea0482e271ed0e8281a362021843337d969b6c4e51c"
+        },
+        "original_subject": {
+          "id": "urn:test:preservation:old",
+          "sha256": "d11a429011f4fc9e84fec86e9d1aff65d7c3a672b1df9e53b343387857b7deab"
+        },
+        "raw_manifest": {
+          "bytes": 6583,
+          "sha256": "cb786766c0b8edd34c3bfad51e5c599908d1b34c1c82d2de533f54f414c9f81d"
+        },
+        "response_status": "ok",
+        "selected_claim_scope_evaluation": null,
+        "selected_retention_condition_values": [
+          {
+            "condition": "claim_scope",
+            "core_value": null,
+            "gaps": [
+              "Missing actual condition judgment"
+            ]
+          },
+          {
+            "condition": "assertion_basis",
+            "core_value": "satisfied",
+            "gaps": []
+          },
+          {
+            "condition": "observation_basis",
+            "core_value": "satisfied",
+            "gaps": []
+          },
+          {
+            "condition": "dependencies",
+            "core_value": "satisfied",
+            "gaps": []
+          }
+        ],
+        "supported_applicability": false,
+        "unchanged_candidates": [
+          {
+            "candidate": false,
+            "check": "stable-check",
+            "dependencies": [
+              "check",
+              "dependency"
+            ],
+            "impact_intersection": [],
+            "original": {
+              "pointer": "/payload/response_without_evidence/result/value/judgment",
+              "record": {
+                "id": "sha256:6a2e419d71bc483c22be5ea0482e271ed0e8281a362021843337d969b6c4e51c",
+                "sha256": "6a2e419d71bc483c22be5ea0482e271ed0e8281a362021843337d969b6c4e51c"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "affected_candidates": [],
+        "case": "test_refresh_preserves_falsified_original_with_four_conditions_and_certified_frontier",
+        "conditions": {
+          "assertion_basis": "satisfied",
+          "claim_scope": "satisfied",
+          "dependencies": "satisfied",
+          "dependency_complete": "satisfied",
+          "impact_complete": "satisfied",
+          "observation_basis": "satisfied"
+        },
+        "exact_input_operation_custody": "execution-002/test_refresh_preserves_falsified_original_with_four_conditions_and_certified_frontier",
+        "historical_members": 11,
+        "new_subject": {
+          "id": "urn:test:preservation:new",
+          "sha256": "6147396f8e32576156e3e8e19bda38cd04520faf9bfe2275987d68221cca85e5"
+        },
+        "original_core_value": "falsified",
+        "original_history_members_unchanged": true,
+        "original_record": {
+          "id": "sha256:0ab08185c4dd22117b83ea9fd535017718a564c18138be56c019ba84c26692cc",
+          "sha256": "0ab08185c4dd22117b83ea9fd535017718a564c18138be56c019ba84c26692cc"
+        },
+        "original_subject": {
+          "id": "urn:test:preservation:old",
+          "sha256": "d11a429011f4fc9e84fec86e9d1aff65d7c3a672b1df9e53b343387857b7deab"
+        },
+        "raw_manifest": {
+          "bytes": 6583,
+          "sha256": "4fb1cb645ee3ca2f098664c1c3f65f47e99681dc692c8262a9481b6056317a91"
+        },
+        "response_status": "ok",
+        "selected_claim_scope_evaluation": {
+          "pointer": "/payload/response_without_evidence/result/value/judgment",
+          "record": {
+            "id": "sha256:2b3ee555cd1eb4cec2472b0356d1f10c613cd102e45a3f62f3041f2066226a74",
+            "sha256": "2b3ee555cd1eb4cec2472b0356d1f10c613cd102e45a3f62f3041f2066226a74"
+          }
+        },
+        "selected_retention_condition_values": [
+          {
+            "condition": "claim_scope",
+            "core_value": "satisfied",
+            "gaps": []
+          },
+          {
+            "condition": "assertion_basis",
+            "core_value": "satisfied",
+            "gaps": []
+          },
+          {
+            "condition": "observation_basis",
+            "core_value": "satisfied",
+            "gaps": []
+          },
+          {
+            "condition": "dependencies",
+            "core_value": "satisfied",
+            "gaps": []
+          }
+        ],
+        "supported_applicability": true,
+        "unchanged_candidates": [
+          {
+            "candidate": false,
+            "check": "stable-check",
+            "dependencies": [
+              "check",
+              "dependency"
+            ],
+            "impact_intersection": [],
+            "original": {
+              "pointer": "/payload/response_without_evidence/result/value/judgment",
+              "record": {
+                "id": "sha256:0ab08185c4dd22117b83ea9fd535017718a564c18138be56c019ba84c26692cc",
+                "sha256": "0ab08185c4dd22117b83ea9fd535017718a564c18138be56c019ba84c26692cc"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "schema": "a_c.core-qualification-execution-facts/1",
+  "scope": "After-execution observations, not source-selected expected oracle. Exact source authority was retained first as CONTROL_AUTHORITY.json."
+}

@@ -1,0 +1,250 @@
+# Bounded assessment: T-008 repair-006 current seven-file design subject
+
+## 1. Subject, basis, claim, producer binding and evidence population
+
+**Subject.** `sha256:4fbd947ec92347fa7f9b2ef2d13ec3d0938470f91ae2bdb08d7ec93540888bd4` (CANDIDATE_MANIFEST). It has seven members, all supplied as full exact bytes:
+
+| Member | SHA-256 prefix | Status in repair-006 |
+|---|---|---|
+| T-008 ticket | `6f5f141a` | the only changed member |
+| `fd-support.md` (HOW) | `3e356316` | unchanged |
+| `fd-method-claude-rc9.json` | `bdb93754` | unchanged |
+| design `README.md` | `f757ab63` | unchanged |
+| `GOALS.md` | `7f78e1a9` | unchanged |
+| `REFERENCE_FRAME_BASIS.md` | `5cda45d1` | unchanged |
+| `stdo_a_c.json` | `b0e013e6` | unchanged |
+
+**Basis.**
+- Committed WHAT `c2f67fec…`.
+- Installed builder v2.5.1-rc.2, manifest `3d860ff4…`.
+- Caller-selected Claude RC9 source `c2cfa9b9…`, custody `3a209713…`, tree `98de394b…`.
+- Profiles EXECUTIVE_BASELINE and DESIGN_MODULE.
+
+**Claim evaluated.** Whether this exact seven-file design is decision-complete for its declared finite FD-001..013/FDV fragment (REVIEW_ACTIVATION_DRAFT `evaluation_predicate`). This is design sufficiency only.
+
+**Producer binding.**
+- I am a Claude-family assessor. My model label is self-described and does not establish the actual producer. Transport metadata is recorded separately.
+- The candidate was authored by native GPT Worker `/root/ac_fd_tenant_design` together with `/root` Executive direction. That direction counts as authorship.
+- I authored none of the subject. The cross-family condition is declared, not statistical (EVALUATION §3; FOUNDATIONS Disjointness).
+
+**Evidence used.**
+- Unchanged governing source excerpts.
+- My pre-exposure expectation records V1 and A1.
+- Source additions: README route metadata, AC-018, and DESIGN_MODULE §11.
+- The current seven files.
+- The repair-004, repair-005 and repair-006 contract, admission, checks, diff and return records.
+- Upstream baseline proof: 107 pre-existing tests with 0 skips, and a 9-check upstream boundary trial.
+- The preservation projection.
+- Two historical finding excerpts.
+- The Root current-candidate record.
+
+**Not read.**
+- The 3,492 preservation leaf rows.
+- The 113,062-byte repair-004 diff.
+- Any live Git state.
+
+Producer check counts (17, 9 and 8), `candidate_ready` values and admissions are treated as producer evidence, not as semantic adequacy (AC-018; EVALUATION §2).
+
+## 2. Selected predicate: core value and ground
+
+**Result: `falsified`.** The algebra is FOUNDATIONS §4 Results, as applied by EVALUATION §4. The predicate is the composite decision-completeness claim above.
+
+**Ground.** One counterexample, Finding A in §3, shows that the network is not unique on a public FD-004 seam.
+
+DESIGN_MODULE §5 makes `decision_complete(B)` false when "implementation has to introduce a new material semantic decision" or "two materially non-equivalent networks remain admissible". It allows local choices to stay open only when every admitted choice is semantically equivalent. Finding A shows that the core Worker must choose the meaning of the `relations.query` coverage computation, and that the admissible choices give different FD-004 outputs.
+
+The uncertainty about this ground is stated with the finding. No other counterexample was established in the population I examined (§4). No severity, priority, boundary effect or disposition is assigned.
+
+## 3. Source-bound findings
+
+### Finding A — `relations.query` declaration content and coverage semantics remain open, while the parallel acquired-body carriers are closed
+
+**Locators in `fd-support.md`.**
+- **L259 (inventory).** `relations.query` takes `declarations` as a SourceRef and returns "Paths/closure/coverage from explicitly authored typed declarations, supplied applicability separated, incomplete-coverage boundaries."
+- **L414–422.** The carrier keys are `id, subject, basis, relations (id/source/target/kind), governing_kinds, coverage (obligations, mapped support and explicit unknowns)` and `applicability (source-bound supplied judgments or registered predicates)`. The operation "performs deterministic sorted-identity traversal and set operations only."
+- **L752–767 ("Closed acquired content contracts").** Exactly five SourceRef bodies are designated as actual closed JSON bodies "not merely manifests or arbitrary dictionaries". `tools.describe` returns their `content_schemas`, and "No private builder or unstated implementation default supplies semantics." The five are:
+  - `results.conjoin.plan`;
+  - `refresh.prepare.declarations`;
+  - `refresh.prepare.invalidators`;
+  - `resources.aggregate.accounting`;
+  - `return.capture.return_contract`.
+
+  `relations.query.declarations` is not in this set.
+- **L968–1019.** The `$defs` catalog contains no `RelationDeclarations` definition. The root `oneOf` has seven bodies, and none of them is this carrier.
+- **L1536–1542.** The core Worker owns the public schema inventory. If an implementation would change "a material semantic boundary, it returns the exact design gap" rather than choosing.
+
+**Entry and state.** A core Worker implementing FD-004 `relations.query` with `query: "coverage"` and `seeds`, under the accepted design, without hidden context (ACTIVATION §1 Intake; DESIGN_MODULE UP-018).
+
+**Causal path.**
+1. The FD-004 WHAT requires "included and missing declared obligations/dependencies, predicate results only for the supported supplied decidable contract". It also requires computed facts to be shown separately from supplied F_P judgments.
+2. The design names three ingredients only in prose and fixes neither their types nor their relations:
+   - "mapped support", with no stated target domain (relation ids, node ids or evidence refs);
+   - how `seeds` scope a coverage query (coverage of seed obligations, or coverage of obligations whose support meets the seed closure);
+   - whether a supplied applicability judgment removes an obligation from the reported missing coverage, or is only displayed beside it.
+3. The shape of a "source-bound supplied judgment" is open. The repair-004 JudgmentRef rule (L781–792) says caller-authored JSON of the same shape cannot satisfy a judgment reference, but that rule is stated only for the five closed carriers. Whether it governs this carrier is not stated.
+4. The admissible implementations therefore differ:
+   - one excludes a supplied false-applicability obligation from "missing coverage", and the other lists it;
+   - one computes coverage over the seed closure, and the other over seed obligations.
+
+   For the same declaration bytes, they return different missing-coverage sets to the F_P Executive, Worker or Reviewer.
+5. Under ACTIVATION §1 Applicability, an exclusion requires a falsified applicability result under cited authority, and unresolved applicability stays in required coverage. An implementation that let unauthenticated supplied text drop obligations would differ materially from one that did not. Neither is excluded by the text.
+
+**Affected actor and relation.**
+- The core Worker; FD-004 and SC-AC-FD-004/005.
+- ASSURANCE §13 contract sufficiency for F_P actors who author declarations. They cannot determine the exact body from the published contract, because `tools.describe` publishes no content schema for it.
+- DESIGN_MODULE §5 uniqueness.
+
+**Uncertainty.**
+- A reader may take "supplied applicability separated" (L259) together with the F1 row "computed facts, never RF audit_coverage" (L2177) to mean that supplied applicability never alters computed coverage. That reading narrows the third choice in step 2.
+- It does not settle the meaning of "mapped support" or the seed scoping of a coverage query.
+- A prior independent excerpt (PRIOR_FINDINGS_DATA, L126) called this carrier "fully closed". I do not inherit that judgment. My reading is that the closure the design itself requires for the sibling carriers is absent here.
+- If the Executive judges these choices to be semantically equivalent layout, the value would differ. I do not find support for that equivalence in the text.
+
+**Material consequence.** Under the design's own L1536–1542 rule, the core Worker must either invent FD-004 coverage semantics or return a design gap. Either way the design does not yet settle a material relation, so `decision_complete(B)` is not established.
+
+**Smallest bounded correction locus (evidence only, not a repair).** The closed content catalog and the relations.query paragraph.
+
+### Observation B (adjacent; not a ground for the result) — repair-004-tensed narrative under the current heading
+
+The ticket section "Current candidate after repair-006" (L422–525) now names the correct HOW `3e356316` and the repair-006 return. Its subsections "Fresh assessment and bounded repair authority" (L470–525) remain in the present tense of repair-004:
+- "Only this ticket and fd-support.md plus new own design evidence are changed" (L516);
+- "This Writer returns candidate_ready and stops" (L522).
+
+They do not mention the repair-005 or repair-006 activations, except at L441.
+
+This contradicts no current identity: the HOW hash, the profile hash, the repair-006 return and L441 all agree. It may slow reconstruction under TICKETS §7 UP-009. The repair-005 counterexample (stale current pointer) is not reproduced.
+
+### Observation C (adjacent; uncertain applicability) — fixed prompt prefix
+
+The design renders the fixed prefix "Use the activated frame and declared return contract below.\n" (L1602) and dispatches it unchanged.
+
+The newly supplied DESIGN_MODULE §11 paragraph (SOURCE_ADDITIONS L2084–2091) requires that a prompt clause existing "to enforce design law" carry provenance and proof that it still causes the intended behaviour. The design states neither for this clause.
+
+Whether the clause enforces design law is uncertain. Conformance is checked by `return.check`, not by the prompt. The planned clean-room qualification (L2781–2787) may cover it, but does not name it.
+
+## 4. Coverage, reconciliation and no-finding aspects
+
+The evidence below comes from the current bytes. Check counts and repair labels were not used as a verdict.
+
+**Repair-005 counterexample (stale ticket HOW pointer): closed.**
+- Ticket L18–19 and L430–441 name HOW `3e356316` and route to the repair-006 return.
+- That return (`candidate_freeze`) lists ticket `6f5f141a` and the six unchanged members. This matches CANDIDATE_MANIFEST.
+- The repair-006 diff is exactly five ticket substitutions.
+
+**Prior final-review findings, reconciled against current text.**
+- **Finding 1 (notification sink): closed.**
+  - Grant `notification_sink` appears in the closed field list (L485) and in the sink rules (L2342–2363).
+  - The Executor has no sink field.
+  - `Attempt.notification` binds `{sink_id, binding}`.
+  - The class diagram, sequence diagram and F2 reservation row agree.
+- **Finding 2 (external producer): closed.** It is declared unsupported (L266, L578–586, L2031–2033). Only actual output from a dispatched Attempt can authenticate.
+- **Finding 3 (export lists): closed.**
+  - The module table (L1518–1520), the effect-entry paragraph (L1661–1669) and the realization seam (L2640–2659) agree on core `prepare_write`/`make_artifact`, effects `execute_effect`/`persist_outcome`/`EvidenceStore`, and private `supervise(...)->int`.
+  - Old names are declared internal or absent.
+  - The supervisor argv and reentry are coherent (L2669–2691). I found no new public operation or admission path.
+- **Finding 4 (content contracts): closed for the four named carriers.** Conjunction plan, refresh declarations and invalidators, accounting, and role-specific return contracts have JSON Schema 2020-12 definitions plus cross-field rules. **Not closed for the adjacent `relations.query` carrier (Finding A).**
+- **Finding 5 (superseded): closed.**
+  - `contract_state` takes four values. The ContractSupersession schema exists.
+  - The state diagrams separate state from Applicable/StaleForUse/UnknownForUse.
+  - No public supersede operation exists.
+- **Finding 6 (wire map): closed.** The status/exit/refusal table (L199–214) is shared with `persist_outcome`. It defines MCP `isError`, and inner judgments are kept.
+
+**Author F1–F5 groupings (repair-002), assessed on current text.**
+- **F1 (operation outcomes): closed.**
+  - B(op) is defined. Seven values each map once to the FOUNDATIONS core, and the profile `operation_outcomes` agrees.
+  - Refusal codes are closed. Parse/protocol failures have a null outcome.
+  - Facts, transport status and requested F_D/F_P judgments keep separate predicates.
+  - Per-operation inner bindings are stated: AC-007 for graph.project, ACT §3 and RF §5 guards for context and preflight, Effects for dispatch.
+  - The cause-decision order is declared as a boundary discriminator only.
+- **F2 (admission and commit relations): closed for the declared operating model.**
+  - The Product `authority_binding` chain uses existing locators. No schema key is invented; the installed schema `e0a3b544…` lacks an admission key.
+  - There is one runtime mechanism. The bootstrap paths are disposed as historical, deliberately independent realizations.
+  - There are six commit/publication units, seven partial-failure boundaries, and all ten ACT §4 standing forms with composite/nested scope stated.
+  - The assumptions (local POSIX atomic publication, cooperative serialization) are declared rather than invented. Excluded hostile-filesystem and distributed forms are not demanded.
+- **F4 (carriers, authority, Prime, lifecycle): closed.**
+  - The carrier lifecycle table, the authority matrix, eight atoms with admitted domains, and the operation-to-atom mapping are present.
+  - The table's rows account for all 23 operations (22 tabled plus `evidence.read`).
+  - The ASSURANCE §16 phases are each answered or declared as reserved work.
+- **F5 (independence, severity, roles, domains): closed.**
+  - `independence_policy` is a SourceRef or null. With null, same-family judgments are not counted independent.
+  - `severity_scale` is a SourceRef or null, and no value is invented.
+  - `role_transition` must be recorded before the effect.
+  - Operand domain errors map to `invalid_basis` for the requested predicate.
+
+**A–G and integration seams.**
+- Expectation body and history/exposure: L1671–1727.
+- Requester versus target: L1728–1745.
+- Qualified-operator evidence: L1747–1764.
+- CoreOutcome and EffectPlan with the full request: L1623–1669, L2594–2659.
+- Authenticated cardinality and RF output under declared plan order (L2651–2703):
+  - RF `conflict` is conditional on the core already being `falsified`;
+  - no universal priority is asserted.
+
+  This matches RF §5 as qualified in the task.
+
+These seams are coherent and consistent with each other in the population I examined.
+
+**Fit (ACT §2 L732–760).**
+- With a declared capacity, the full active input or a supported host-inclusive bound is required. Otherwise the fit judgment is `indeterminate`, or `falsified` on a measured excess.
+- With `capacity_bytes: null`, no fit judgment is performed, actual bytes and unknowns are retained, and admission requires that the grant not need fit. Overrides do not manufacture fit (L354–377, L2179).
+
+This is consistent with the source clause and the Executive direction, and invents no numeric judgment.
+
+**Git primitive (L1518).** The fixed-argv, read-only immutable-blob acquisition is bound to an exact root, object, path and hash, with observed Git executable/config scope, no lazy fetch and no arbitrary subprocess. It is distinct from F_P, executor and general effect launches. I found it coherent and sufficient.
+
+**Profile (unchanged).**
+- It is a single exact RC9 binding. Other cuts and translations refuse as `out_of_frame` or capability refusals.
+- Common-map derivation history is kept, with no equivalence claim.
+- Every FD/FDV route names a member, hash and clause.
+- The design anchors it cites resolve to headings in the current HOW.
+- `stdo_a_c.json` adds only the T-008 authority locator. Basis, composition and registry are unchanged (consistent with A1 §A3).
+
+**Public CLI/MCP projection.**
+- MCP takes the full envelope with `name == request.operation` and a stable `request.id`.
+- Initialize negotiation follows the pinned revision.
+- Stdout carries protocol messages only, with no global configuration.
+
+**Ordinary-use and qualification plan.**
+- FD/FDV module-to-test trace (L2004–2021).
+- Clean-room real F_P use: source-first expectations, unedited responses, no silent retry.
+- Path-exclusion inventory for the legacy entries (L2741–2753).
+- Two plan orders, fixed-id retries, partial publication and fresh-process controls.
+
+This is sufficient as a plan. It is not executed evidence.
+
+**Preservation plan.**
+- Existing-member equality plus approved additions, with tree-hash change expected (L2755–2770).
+- Named blobs and root identities match between the projection and the upstream before/after manifests for the four code blobs.
+
+**Rejected candidate findings.**
+- `host_context` notation "known|bounded|unknown" reads as an enum by analogy with L238. Not material.
+- The illustrative return-contract examples reuse the placeholder "worker-role.md". They are declared as non-authoritative placeholders.
+- The `invalid_basis` branch in the conjunction rule is likely unreachable under the `exact_equal_to_composite` basis relation. This is harmless.
+
+## 5. Unperformed claims, residuals and invalidators
+
+**Unperformed (no result for any of these):**
+- runtime behaviour or code;
+- boundary congruence or path realisation;
+- ordinary live-user, LLM-interface or UAT claims;
+- FDV-001/002 execution;
+- FDV-003 benefit;
+- actual executor, effect, independence or exposure proof;
+- the standing-form observations;
+- Product acceptance, release or method qualification.
+
+**Not separately evaluated:** no HOW-only predicate or other separate predicate was evaluated.
+
+**Residuals:**
+- **Preservation leaves.** The 3,492 leaf rows and the live tree were not read. The preservation claim rests on the recorded projection only.
+- **Upstream baseline scope.** The 107/0 baseline and 9-check trial cover only the pre-existing codec, generation, grounding and repair path.
+- **Out of scope.**
+  - The bootstrap admissions are Executive-reported.
+  - Executive design disposition is reserved, as is Jim's acceptance and release.
+- **Finding A uncertainty.** As stated in §3.
+
+**Invalidators of this assessment:**
+- any change to the seven member bytes, basis, profile, source or authority;
+- an Executive or owner ruling that Finding A's choices are semantically equivalent;
+- a material counterexample showing that the closed-carrier rule already governs `relations.query`;
+- transport metadata showing that the actual producer does not meet the nonauthor, cross-family condition.

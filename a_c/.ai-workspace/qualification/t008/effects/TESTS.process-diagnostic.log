@@ -1,0 +1,29 @@
+test_real_registered_invocation_exact_replay_and_final_output (test_ac_support_effects.ProcessTests.test_real_registered_invocation_exact_replay_and_final_output) ... FAIL
+test_selected_actual_reconciliation_allows_one_explicit_retry (test_ac_support_effects.ProcessTests.test_selected_actual_reconciliation_allows_one_explicit_retry) ... FAIL
+
+======================================================================
+FAIL: test_real_registered_invocation_exact_replay_and_final_output (test_ac_support_effects.ProcessTests.test_real_registered_invocation_exact_replay_and_final_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py", line 387, in test_real_registered_invocation_exact_replay_and_final_output
+    value = self.finished(runtime, ref)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py", line 133, in finished
+    self.fail("Registered fixture process did not produce an observed end within the bounded test deadline; " + reason)
+AssertionError: Registered fixture process did not produce an observed end within the bounded test deadline; 
+
+======================================================================
+FAIL: test_selected_actual_reconciliation_allows_one_explicit_retry (test_ac_support_effects.ProcessTests.test_selected_actual_reconciliation_allows_one_explicit_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py", line 540, in test_selected_actual_reconciliation_allows_one_explicit_retry
+    self.finished(runtime, second)
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py", line 133, in finished
+    self.fail("Registered fixture process did not produce an observed end within the bounded test deadline; " + reason)
+AssertionError: Registered fixture process did not produce an observed end within the bounded test deadline; Supervisor reentry failed: SupportError: Supervisor cannot rely on incomplete event history
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 10.539s
+
+FAILED (failures=2)

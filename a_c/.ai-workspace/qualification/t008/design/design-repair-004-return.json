@@ -1,0 +1,106 @@
+{
+  "schema": "a_c.design-return/1",
+  "activation": "T-008-design-repair-004",
+  "state": "candidate_ready",
+  "actor": {
+    "id": "/root/ac_fd_tenant_design",
+    "role": "Writer/Worker",
+    "consumer": "/root"
+  },
+  "outcome": "All six selected final-design findings and bounded source-selected clarifications are represented in the exact current HOW/ticket candidate; return is availability for independent assessment and Executive disposition only.",
+  "contract": {
+    "raw_sha256": "a473748bbe6612b6c272d614d48b9aa1eba5e451561a8e7eb17c8706a2f2d467",
+    "canonical_sha256": "8c090dbdecb025b6a6af469d842dd0f03a2585158269002f72eee4734f9ed6d1"
+  },
+  "basis": {
+    "product": "urn:stdo:product-definition:a-c-implementations",
+    "WHAT": "c2f67fec8154028d45d7cd7a2832dd4fade4d94b",
+    "builder": {
+      "uri": "stdo://releases/v2.5.1-rc.2/",
+      "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782"
+    },
+    "execution_method": {
+      "source_commit": "c2cfa9b908d1722ae3f26c32fa4ece691083bdc3",
+      "custody_commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "standards_tree": "98de394b352179c25dfa63b0b59a9b6bdd43632d",
+      "selected_profiles": [
+        "EXECUTIVE_BASELINE.md",
+        "DESIGN_MODULE.md"
+      ],
+      "mode": "owner-selected work-scoped candidate dogfood"
+    }
+  },
+  "causal_review": {
+    "path": "a_c/.ai-workspace/qualification/t008/assurance/design_review_v3_final_20261019/runs/claude_final_design_assessment_001/result.txt",
+    "sha256": "d988af4b2117f302035b3e16d111239c204323bcff87482969cbb7accd23a187",
+    "subject": "sha256:30472059b6dcfe05fb372c8a707748262210a38c73c05b821a2f6b973ccb4bce",
+    "result": "falsified for decision completeness only",
+    "disposition": "Evidence and recommendations consumed through the Executive-selected supported repair; no automatic adoption or runtime/acceptance inference."
+  },
+  "source_preimages": {
+    "a_c/build_tenants/graphify/design/fd-support.md": "3c4c366d0ebc5a8cd5d78d897f89ffaa762668fe5228221f4daa254b41427c1c",
+    "a_c/.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md": "5202b98f6c510439d57b2e1f5a9488af59fd4cfcaad7ca973a96d681041d760d"
+  },
+  "candidate_freeze": {
+    "a_c/build_tenants/graphify/design/fd-support.md": "2136f3582fc432786cb09345165edae94c368faf5ed45c91aa99cbe45a922d12",
+    "a_c/.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md": "4eb3f32d735566f5178fb28ffb8f26a18b045a344d764bd1da20d506f528ebcd",
+    "a_c/build_tenants/graphify/design/fd-method-claude-rc9.json": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1",
+    "a_c/build_tenants/graphify/design/README.md": "f757ab636858c851cc500f5473ef0bc99a8d20ef2dfc209857917657895cf961",
+    "a_c/specification/REFERENCE_FRAME_BASIS.md": "5cda45d1f267a3f221703c7fcc42b100c7997d3a98c015b7faf4f46b21222b8a",
+    "a_c/specification/GOALS.md": "7f78e1a9834d1fc19fa421655e690c3b500138c66f94ff762337f57629351a03",
+    "a_c/stdo_a_c.json": "b0e013e6f9dabb9d3f31dd02c1a6909e9fc6418925a8d829f3bb1c2adf3dac1d"
+  },
+  "evidence": {
+    "a_c/.ai-workspace/qualification/t008/design/design-repair-004-contract.draft.json": "a473748bbe6612b6c272d614d48b9aa1eba5e451561a8e7eb17c8706a2f2d467",
+    "a_c/.ai-workspace/qualification/t008/design/design-repair-004-admission.json": "bdd1eecb2105f7a326b4e93a0afe977027cd9b15a9f30161bff0b327f61ca395",
+    "a_c/.ai-workspace/qualification/t008/design/design-repair-004.diff": "45b1e0f5a74af62303ca0fd274562c9ebb9a2fbcbe43dbd1ef23d389996a987a",
+    "a_c/.ai-workspace/qualification/t008/design/design-repair-004-checks.json": "330e221a75f5c9f3f9d630d0927a5feac0597f7c49b04f01268dc9bf9b768ce9"
+  },
+  "performed_document_checks": {
+    "passed": 17,
+    "total": 17,
+    "counts": {
+      "JSON_blocks": 8,
+      "shared_schema_definitions": 44,
+      "positive_shape_examples": 7,
+      "adverse_shape_examples": 4,
+      "source_local_links": 26,
+      "mermaid_assets": 7,
+      "prior_design_evidence_files": 15,
+      "other_preserved_candidate_files": 5,
+      "preserved_named_blobs": 7
+    }
+  },
+  "closed_decisions": [
+    "Grant notification_sink is sole selector; exact full fixed Attempt binding/consumer",
+    "No external-producer authentication in this increment",
+    "Core prepares Writer plan; execute_effect and persist_outcome are sole effect/persistence seams; CoreOutcome explicitly carries refusal",
+    "Closed acquired plan/refresh/invalidator/accounting/return-contract schemas and source-bound semantic constraints",
+    "Contract drafted/admitted/rejected/superseded states separate from applicability and immutable receipts",
+    "Closed status/exit/code map preserves inner results",
+    "Legacy path exclusions; existing-member-plus-approved-addition preservation; actual clean-room F_P qualification",
+    "T008 single current projection and source-owned design_reframe/ordinary additive-path classification",
+    "No-declared-capacity branch uses source applicability, no invented fit/override satisfaction"
+  ],
+  "actual_effects": [
+    "Retained exact Executive admission before source effects",
+    "Changed only fd-support.md and T008 plus new own repair-004 evidence",
+    "Preserved all five other candidate members and all prior design evidence"
+  ],
+  "open_qualification": [
+    "Independent current-subject semantic assessment and Executive design disposition",
+    "Implementation and runtime/public-path/ordinary-user qualification",
+    "Actual actor independence/exposure/effect proof under the supported operating model",
+    "FDV-003 benefit, Product acceptance and release"
+  ],
+  "runtime_actors": 0,
+  "runtime_tests": 0,
+  "gaps_in_selected_document_work": [],
+  "limits": [
+    "candidate_ready is not design acceptance or implementation authority",
+    "No implementation/model/upstream/Git/global/peer/frozen effects",
+    "No inference of new source law, external producer authority or supersession capability",
+    "No continuation from this return"
+  ],
+  "next": "Stop for Executive disposition and separately selected current-subject reassessment."
+}

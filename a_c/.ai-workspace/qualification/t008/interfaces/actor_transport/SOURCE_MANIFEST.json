@@ -1,0 +1,59 @@
+{
+  "activation": "T-008-actor-transport-001",
+  "actual_actor_calls": 0,
+  "core_parser_fixture_dependency": {
+    "observed_after": {
+      "path": "a_c/build_tenants/graphify/code/ac_support_core.py",
+      "sha256": "97b099812fc1f6964c83cd7df678e4a1fd0575e941c74549689fe4944f008820"
+    },
+    "observed_before": {
+      "path": "a_c/build_tenants/graphify/code/ac_support_core.py",
+      "sha256": "97b099812fc1f6964c83cd7df678e4a1fd0575e941c74549689fe4944f008820"
+    },
+    "status": "same bytes during controlled helper fixtures only; not a closed integrated peer qualification subject"
+  },
+  "mode": "provisional RC9 construction; no promotion",
+  "previous_construction_manifest_sha256": "b147f9ebd5cd98ef289e2936ba8dd97dd243a4850c4f8ee641cd5e41772749a4",
+  "previous_construction_return_sha256": "93a28698fb8b1578e81dbae034f7a01c7660c044f3d23a8091ddd627faa7a60c",
+  "schema": "a_c.actor-transport-source-manifest/1",
+  "sources": [
+    {
+      "bytes": 21280,
+      "path": "a_c/build_tenants/graphify/examples/fd-support/actor_cli.py",
+      "previous_sha256": null,
+      "sha256": "06cd55463fd23e45fbf56fa46de92b9ba49f6650e3dc5686e219544d5457b42c",
+      "snapshot": "a_c/.ai-workspace/qualification/t008/interfaces/actor_transport/snapshots/actor_cli.py"
+    },
+    {
+      "bytes": 39770,
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py",
+      "previous_sha256": "532f57efa742593ca8ea6c701b234a958aeece1e5aba3c4f2b92c95bf4be29f6",
+      "sha256": "d1f15c0702be4d744712372f038c1f4ed0a79c19e67c6743b462b0172fb5c301",
+      "snapshot": "a_c/.ai-workspace/qualification/t008/interfaces/actor_transport/snapshots/test_ac_support_interfaces.py"
+    },
+    {
+      "bytes": 10296,
+      "path": "a_c/build_tenants/graphify/examples/fd-support/README.md",
+      "previous_sha256": "ee17c9efe90ebae6cb5645a919b2484455b53fe4a7e194c1672bbf9b62e0df4e",
+      "sha256": "6f740e730487e52098f50d38e59199f36b03b0aadc80b105b4f8eb29b9b5dce5",
+      "snapshot": "a_c/.ai-workspace/qualification/t008/interfaces/actor_transport/snapshots/examples-fd-support-README.md"
+    }
+  ],
+  "unchanged_public_surfaces": [
+    {
+      "bytes": 20733,
+      "path": "a_c/build_tenants/graphify/code/ac_support.py",
+      "sha256": "4d1ea7fe98ec1b53f2a19d9a2fef2b3fbb070624c955fbb1e9e48f5cc88011b1"
+    },
+    {
+      "bytes": 9493,
+      "path": "a_c/build_tenants/graphify/examples/fd-support/prepare_readonly.py",
+      "sha256": "4867a29f11ef91b6706974142a99ff65b03fe795ddcda99d099e9ea1534464f6"
+    },
+    {
+      "bytes": 18050,
+      "path": "a_c/build_tenants/graphify/README.md",
+      "sha256": "3e1d0f099fc93e02af9472fd1a724fa3357e5554688577747e796da18c0861c9"
+    }
+  ]
+}

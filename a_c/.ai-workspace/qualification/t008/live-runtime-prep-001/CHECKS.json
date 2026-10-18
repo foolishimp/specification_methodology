@@ -1,0 +1,49 @@
+{
+  "driver_previews": {
+    "all_exit_zero": true,
+    "count": 3,
+    "files": [
+      "validation/03-contract-preview.json",
+      "validation/04-task-preview.json",
+      "validation/05-observe-preview.json"
+    ],
+    "operations": [
+      "tools.describe(work.write)",
+      "source.read(TASK,utf8)",
+      "workspace.observe(stable_scope)"
+    ]
+  },
+  "invariance": "INVARIANCE.json",
+  "pure_validator": {
+    "checks": [
+      "Exact policy parsing/Product/profile/role startup",
+      "Shared exact grant/principals/Product/owner/evidence and Worker no-executor cut",
+      "Actual context/packet/return source grammar and supported null/unknown branch",
+      "Frozen helper plan/dependency/native/config pins and nonempty argv",
+      "Outside-repository cwd empty and owned; target absent and exact writable grant route",
+      "Actual source/dependency paths available; explicit MCP policy digest and protected environment conservation"
+    ],
+    "exit_code": 0,
+    "not": "No Context, Preflight, operation receipt, actor or semantic result was created",
+    "path": "validation/02-pure-validator.json"
+  },
+  "read_only_help": {
+    "both_exit_zero": true,
+    "empty_tools_assignment": "availability/claude-empty-tools-help.json",
+    "first": "availability/claude-help.json",
+    "qualification": "Help/parser capability only; actual initialized native tool scope is not observed"
+  },
+  "retained_failure": {
+    "cause": "Shipped helper rejects an empty argv token for --tools followed by empty string",
+    "file": "validation/pure-validator.stderr",
+    "supported_repair": "Root selected nonempty --tools= spelling after read-only native parser/help evidence; helper unchanged"
+  },
+  "schema": "a_c.T008.worker-preparation-checks/1",
+  "syntax": "Python ast.parse passed for executive.py and validate.py",
+  "unperformed": [
+    "Actual public tool acquisition/context/preflight",
+    "Actual native init/effective-tool compatibility/model/provider call",
+    "Guide construction/F_P judgment/Reviewer expectation/assessment",
+    "Acceptance/release/benefit"
+  ]
+}

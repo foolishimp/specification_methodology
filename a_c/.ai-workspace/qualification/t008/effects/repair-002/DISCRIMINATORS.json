@@ -1,0 +1,82 @@
+{
+  "schema": "a_c.effects-repair-discriminators/1",
+  "before_source": "TESTS.before.json",
+  "after_source": "TESTS.final.json",
+  "matched_peer_cut": {
+    "code/ac_support_core.py": "97b099812fc1f6964c83cd7df678e4a1fd0575e941c74549689fe4944f008820",
+    "code/ac_support.py": "4d1ea7fe98ec1b53f2a19d9a2fef2b3fbb070624c955fbb1e9e48f5cc88011b1",
+    "test_env/support_fixtures/local_actor.py": "9c3c0fd8fe563f96db6cb00d95989fd319a6518b006f0efffcfd3d48caf6838a"
+  },
+  "public_missing_input": {
+    "before": {
+      "path": "proof-before/test_ac_support_effects_DependencyTests_test_public_missing_input_preserves_original_refusal_and_readable_operation/missing-public-input.stdout",
+      "sha256": "dae77efe4ca7b0e82c7d966841462f4db066e6cc7548190e03173a0b211612a6"
+    },
+    "before_status": "error",
+    "before_code": "evidence_publication_failed",
+    "before_durable_evidence": null,
+    "after": {
+      "path": "proof-final/test_ac_support_effects_DependencyTests_test_public_missing_input_preserves_original_refusal_and_readable_operation/missing-public-input.stdout",
+      "sha256": "8a809c1968a912a6ec60b06304d5cbaaf1ceede5dd63e9e578c12e100c10d665"
+    },
+    "after_status": "refused",
+    "after_code": "source_missing",
+    "after_operation_outcome": {
+      "cause": "source_missing",
+      "core_value": "invalid_basis",
+      "evidence": [],
+      "limits": [
+        "output availability only; no semantic acceptance"
+      ],
+      "predicate": "B(evidence.read): declared exact output/effect-evidence payload availability on the requested basis",
+      "source_parent": {
+        "clause": "results",
+        "member": "FOUNDATIONS.md",
+        "sha256": "fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f"
+      },
+      "value": "refused(basis)"
+    },
+    "after_durable_operation_ref": {
+      "id": "sha256:0a7afa6e8e44c164bef1771999c9f166989b20418756632ff01eb2cf83063037",
+      "sha256": "0a7afa6e8e44c164bef1771999c9f166989b20418756632ff01eb2cf83063037"
+    },
+    "fresh_public_reacquisition": {
+      "path": "proof-final/test_ac_support_effects_DependencyTests_test_public_missing_input_preserves_original_refusal_and_readable_operation/read-refused-operation.stdout",
+      "sha256": "d954574a68ba47fba4aef5d9f4ec522930ac05b1339d6b67c12ed3d8f24626a8"
+    },
+    "original_quoted_unavailable_input_preserved": true
+  },
+  "public_source_projection": {
+    "before": {
+      "path": "proof-before/test_ac_support_effects_DependencyTests_test_public_projected_source_identity_is_preserved_without_dereference/literal-public-projection.stdout",
+      "sha256": "1b887196e28bce0496c74e59b2d512cbca8c5d0ba5843e9617638e53491880d4"
+    },
+    "after": {
+      "path": "proof-final/test_ac_support_effects_DependencyTests_test_public_projected_source_identity_is_preserved_without_dereference/literal-public-projection.stdout",
+      "sha256": "1904f90898caa440033b5a6a0c92bf1ebe3920fe0271b3183910720b84375b93"
+    },
+    "identity_shaped_original_preserved": true
+  },
+  "public_predicate_literal": {
+    "raw": {
+      "path": "proof-final/test_ac_support_effects_DependencyTests_test_public_predicate_identity_subject_and_json_domain_are_data/literal-public-predicate.stdout",
+      "sha256": "5c9f9fa0b1ab0b0cd8a7c7c46ba535d92000596d84692cb43509bd6000141a0d"
+    },
+    "status": "ok",
+    "subject_and_domain_outcome_remain_original_data": true,
+    "inner_core_value": "invalid_basis"
+  },
+  "genuine_support_adversaries": {
+    "missing_declared_carrier_variants": 21,
+    "tamper": "Actual protected Observation bytes changed; Context parent publication refuses digest_mismatch",
+    "other": "Primary result and provenance Attempt dependencies still require actual protected objects"
+  },
+  "composed_graphs": {
+    "actual_process_public_MCP_Writer": "ProcessTests.test_actor_side_public_mcp_writer_completes_before_actor_exit passed in final suite",
+    "Return_ownership": "DependencyTests.test_return_ownership_graph_preserves_quoted_actor_and_qualification_data publishes reverse-order typed support graph and publicly reacquires it; synthetic retention shape only, no semantic Return admission qualification"
+  },
+  "limits": [
+    "No LLM/provider invocation",
+    "No cost/performance, semantic acceptance, model usability or complete method qualification is inferred."
+  ]
+}

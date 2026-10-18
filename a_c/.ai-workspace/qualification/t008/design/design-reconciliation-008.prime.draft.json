@@ -1,0 +1,298 @@
+{
+  "schema": "a_c.design-disposition-evidence-draft/1",
+  "state": "author-evidence-draft",
+  "author": "/root/ac_fd_tenant_design",
+  "consumer": "/root",
+  "scope": "Rebased existing eight-row Prime evidence for reconciliation-008; prior explicit Root refinements only, with no new atom, law, waiver or acceptance.",
+  "authority": "Jim existing instruction and Root admitted design reconciliation-008 grant.",
+  "candidate_freeze": {
+    "a_c/build_tenants/graphify/design/fd-support.md": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f",
+    "a_c/.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md": "a34425295fe5fd2cbbd21406f0b0fc609245152a374267a47b5dcd3bd08d7fa2",
+    "a_c/build_tenants/graphify/design/fd-method-claude-rc9.json": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1",
+    "a_c/build_tenants/graphify/design/README.md": "f757ab636858c851cc500f5473ef0bc99a8d20ef2dfc209857917657895cf961",
+    "a_c/specification/REFERENCE_FRAME_BASIS.md": "5cda45d1f267a3f221703c7fcc42b100c7997d3a98c015b7faf4f46b21222b8a",
+    "a_c/specification/GOALS.md": "7f78e1a9834d1fc19fa421655e690c3b500138c66f94ff762337f57629351a03",
+    "a_c/stdo_a_c.json": "b0e013e6f9dabb9d3f31dd02c1a6909e9fc6418925a8d829f3bb1c2adf3dac1d"
+  },
+  "sources": {
+    "HOW": {
+      "path": "a_c/build_tenants/graphify/design/fd-support.md",
+      "sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f"
+    },
+    "RC9_DESIGN_MODULE": {
+      "revision": "c2cfa9b908d1722ae3f26c32fa4ece691083bdc3",
+      "path": "specification_methodology/v3/build_tenants/claude/standards/DESIGN_MODULE.md",
+      "sha256": "9e2642d51d0b024a448fe7910dcb323fb3f3bb2a003ad33c27c39a5dda625220",
+      "clauses": [
+        {
+          "heading": "Prime semantic atoms and admitted domain",
+          "lines": [
+            996,
+            1022
+          ]
+        },
+        {
+          "heading": "Whole-family Prime contraction",
+          "lines": [
+            1024,
+            1051
+          ]
+        },
+        {
+          "heading": "Recursive Prime and root conservation (UP-003)",
+          "lines": [
+            1053,
+            1073
+          ]
+        }
+      ]
+    },
+    "WHAT": {
+      "revision": "c2f67fec8154028d45d7cd7a2832dd4fade4d94b",
+      "current_files_equal_committed_bytes": {
+        "a_c/specification/PRODUCT.md": "9ebc8342affe8c5e0afb08ebe22f3f98f73f7bdc64db00eee17674c47274bef7",
+        "a_c/specification/requirements/fd-support-tools.md": "e3fcebd7e9fbc60dc36ed4c02ee834a96f14226af134809c938169d4712dfc23",
+        "a_c/specification/requirements/fd-support-verification.md": "3746e614a5ddc3f0a551e926998f16d6101cc037c5c43b879b4447b017a8dbdf"
+      }
+    }
+  },
+  "source_contract_locators": {
+    "acquisition": {
+      "source": "HOW",
+      "heading": "Source, state and graph mechanics",
+      "lines": [
+        390,
+        437
+      ]
+    },
+    "predicate_join": {
+      "source": "HOW",
+      "heading": "Predicate and conjunction fragment",
+      "lines": [
+        652,
+        737
+      ]
+    },
+    "packet": {
+      "source": "HOW",
+      "heading": "Packet carrier",
+      "lines": [
+        336,
+        389
+      ]
+    },
+    "admission": {
+      "source": "HOW",
+      "heading": "Product-bound admission and exact dispatch",
+      "lines": [
+        438,
+        605
+      ]
+    },
+    "attempts": {
+      "source": "HOW",
+      "heading": "Attempts, notifications and uncertain effects",
+      "lines": [
+        542,
+        605
+      ]
+    },
+    "record": {
+      "source": "HOW",
+      "heading": "Existing records, refresh and accounting",
+      "lines": [
+        738,
+        1907
+      ]
+    },
+    "complete_commit": {
+      "source": "HOW",
+      "heading": "F2: Product-authorized admission and complete commit relations",
+      "lines": [
+        2605,
+        2720
+      ]
+    },
+    "prime_lifecycle": {
+      "source": "HOW",
+      "heading": "F4: carrier lifecycles, authority and Prime contraction",
+      "lines": [
+        2721,
+        2956
+      ]
+    },
+    "seam": {
+      "source": "HOW",
+      "heading": "Realization seam: exact envelopes, schema and persistence",
+      "lines": [
+        3010,
+        3160
+      ]
+    },
+    "legacy_exclusions": {
+      "source": "HOW",
+      "heading": "Authoritative F_D path and explicit legacy exclusions",
+      "lines": [
+        3199,
+        3223
+      ]
+    }
+  },
+  "prime_rows": [
+    {
+      "atom": "Acquire",
+      "irreducible_relation": "Bind actually acquired bytes/typed records to their exact permitted source identity, parent digest and selected scope.",
+      "declared_domain": "Registered regular workspace files, full immutable Git regular blobs, protected retained envelopes and exact validated model/carrier records; permitted selectors/read scopes only.",
+      "source_contracts": [
+        "acquisition",
+        "seam"
+      ],
+      "falsification_condition": "A source/record read returns locator-only, different-parent or different-hash content, follows an escaped/symlink path, or authenticates caller-imported bytes merely because their payload matches.",
+      "accepted_loss": {
+        "within_declared_contract": "none",
+        "existing_projection_or_observation_exclusion": null
+      }
+    },
+    {
+      "atom": "Project",
+      "irreducible_relation": "Select/traverse only declared typed relationships or original carrier content while preserving its source authority and governing closure.",
+      "declared_domain": "ac_graph.find/inspect/project_many, authored finite relations, exact JSON-pointer/Markdown projections and selected impact/accounting projections.",
+      "source_contracts": [
+        "acquisition",
+        "record",
+        "prime_lifecycle"
+      ],
+      "falsification_condition": "A projected selection omits a required governing closure record, promotes an inferred edge to authority, rewrites an original result, or treats absent edges as proof of non-influence.",
+      "accepted_loss": {
+        "within_declared_contract": "none",
+        "existing_projection_or_observation_exclusion": "Unselected payload is outside the explicit projection; complete governing closure, original grounding and declared population/boundary semantics remain required."
+      }
+    },
+    {
+      "atom": "Evaluate",
+      "irreducible_relation": "Compute only the exact registered qualified predicate/join and preserve its original domain outcome, basis, failures and both kinds of gap.",
+      "declared_domain": "The six finite typed JSON predicate primitives and qualified claude-rc9.conjunction/1 under its exact source-bound plan/order/equal-basis rule.",
+      "source_contracts": [
+        "predicate_join",
+        "seam"
+      ],
+      "falsification_condition": "A stale held result becomes a fresh invalid_basis component, missing coverage becomes satisfied, mandatory order is replaced by universal precedence, or an output-availability result is used as candidate acceptance.",
+      "accepted_loss": {
+        "within_declared_contract": "none",
+        "existing_projection_or_observation_exclusion": null
+      }
+    },
+    {
+      "atom": "Render",
+      "irreducible_relation": "Construct the exact sealed selected actor-context bytes and retain their acquisition/fit scope without silent omission.",
+      "declared_domain": "The declared packet, complete selected closure/source content and explicit late reads, fixed UTF-8 rendering, and only the selected declared-capacity fit judgment.",
+      "source_contracts": [
+        "packet",
+        "seam"
+      ],
+      "falsification_condition": "Dispatched bytes differ from retained rendering, material content is trimmed to fit, stdin-only evidence is called whole-host fit, or null capacity is coerced to satisfied fit.",
+      "accepted_loss": {
+        "within_declared_contract": "none",
+        "existing_projection_or_observation_exclusion": "Unmeasured host context remains explicit unknown; an unselected numeric fit judgment is unperformed. Neither excludes required material context or manufactures fit."
+      }
+    },
+    {
+      "atom": "Admit",
+      "irreducible_relation": "Decide the complete existing-authority Product/contract/grant/role/basis/result-surface relation through its selected mechanism, separately from drafting or upstream outcome authority.",
+      "declared_domain": "product-policy-preflight/1 on the exact protected owner-configured binding, including fresh material checks, durable receipt and historical state/application separation.",
+      "source_contracts": [
+        "admission",
+        "complete_commit"
+      ],
+      "falsification_condition": "Caller-minted grants or self-hashed receipts permit execution, a missing durable surface admits, a stale/superseded receipt remains usable without required recheck, or admission renews Product/outcome authority.",
+      "accepted_loss": {
+        "within_declared_contract": "none",
+        "existing_projection_or_observation_exclusion": null
+      }
+    },
+    {
+      "atom": "Invoke",
+      "irreducible_relation": "Perform one already-admitted registered exact invocation/cancellation through the reserved Attempt and fixed effect boundary.",
+      "declared_domain": "Fixed executable/argv/settings/dependencies/Context, Grant-selected sink and named result, private supervisor reconstruction and authorized retry/reconciliation under the cooperative local model.",
+      "source_contracts": [
+        "attempts",
+        "seam",
+        "legacy_exclusions"
+      ],
+      "falsification_condition": "An unreserved/forged request reaches launch, dependency drift is ignored, a public request injects shell/argv, or uncertain end/response loss silently causes another launch.",
+      "accepted_loss": {
+        "within_declared_contract": "none",
+        "existing_projection_or_observation_exclusion": "No OS confinement or arbitrary descendant/external-effect guarantee is claimed; unsupported enforcement refuses and actual unobserved effects/end remain unknown."
+      }
+    },
+    {
+      "atom": "Observe",
+      "irreducible_relation": "Retain actually observed subject/process/effect/event/time/resource facts with scope and unknowns, independently of assertions of success.",
+      "declared_domain": "Declared current file/config scopes, registered process-end/file-postimage observers, actual output/transport/sink delivery, bounded event waits and source-bound resource samples.",
+      "source_contracts": [
+        "attempts",
+        "record",
+        "complete_commit"
+      ],
+      "falsification_condition": "Process exit alone becomes external completion, cancellation becomes rollback, sink publication becomes consumer receipt, missing usage becomes zero, or equal counter values collapse distinct genuine attempts.",
+      "accepted_loss": {
+        "within_declared_contract": "none",
+        "existing_projection_or_observation_exclusion": "External exposure/mental attention, consumer acquisition and unobserved descendant/effect/usage scope remain explicitly unestablished unless separately observed; no fact is synthesized."
+      }
+    },
+    {
+      "atom": "Record",
+      "irreducible_relation": "Publish the exact authorized record/evidence unit with its preimage, source owner, provenance and actual publication/effect boundary; retain original history.",
+      "declared_domain": "Complete protected envelopes/markers/events and one granted Worker/Writer target transition under qualified local POSIX same-directory publication and cooperative serialization.",
+      "source_contracts": [
+        "record",
+        "complete_commit",
+        "seam"
+      ],
+      "falsification_condition": "An Executive/Reviewer mutates the work carrier, an incomplete/ref-patched envelope is durable support, a conflicting target is overwritten, or publication failure invents rollback/completion or erases history.",
+      "accepted_loss": {
+        "within_declared_contract": "none",
+        "existing_projection_or_observation_exclusion": "No cross-filesystem transaction is claimed; external-effect/evidence-publication gaps and uncertain target/end are retained and reconstructed, not hidden or waived."
+      }
+    }
+  ],
+  "whole_family_contraction": {
+    "basis": "Exact HOW F4: carrier lifecycles, authority and Prime contraction; complete 23-operation-to-atom mapping and carrier/lifecycle/authority matrix. No new atom or projection.",
+    "relation": "Read variants parameterize Acquire/Project, checks and joins parameterize Evaluate, one Context rendering owns Render, one Product-bound relation owns Admit, one reserved registered effect owns Invoke, actual facts share Observe, and existing-grant immutable/Writer publication shares Record. Identity, lifecycle, authority, effect and closure distinctions already recorded in the HOW remain explicit within this same family.",
+    "total_realisation_mapping": "Core owns typed Acquire/Project/Evaluate/Render and pure Admit/Writer preparation; effects owns the declared Admit/Invoke/Observe/Record publication edges; the adapter projects those contracts without an independent semantic center. The existing HOW operation table is the total mapping, not one atom per operation/module/schema.",
+    "standing": "Candidate rationale for design-authority assessment, not accepted Prime-conformance or proof from source size/type names."
+  },
+  "root_conservation": {
+    "before_and_after": "Product/FD/FDV WHAT, authority roots, installed builder and selected RC9/profile remain unchanged. Reconciliation-008 transcribes prior explicit Root representation/realization selections into HOW/current ticket, not code-derived authority.",
+    "builder_manifest": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "selected_profile_sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1",
+    "retained_relations": "F_D tools acquire/project/check/invoke/record the already-selected relations. F_P actors keep semantic authoring/judgment; actual owners retain operation, decision, acceptance and publication authority. Composition, hashes, tool output and evidence do not mint grants, admit outcomes or activate a next step.",
+    "semantic_delta": "This evidence changes no source meaning or candidate bytes. Prior selections refine whole-packet identity, supplied claim scope, actual process/transport provenance and bounded effect locking without a new atom, operation, method law or result algebra.",
+    "truth_surface": "This draft is downstream author evidence only. T008 remains work-state authority; policy indexes and evidence records are not rival work truth. Existing codec/generation/grounding/repair and frozen studies retain their disjoint contracts."
+  },
+  "Executive_ontology_disposition": null,
+  "Executive_design_disposition": null,
+  "independent_assessment": "The repair-006 negative remains historical on its exact subject. Root co-evolution-001 is a nonindependent provisional sequencing assessment of repair-007, not ontology/design acceptance. Composed qualification, actual registered F_P source-first assessment and integrated independent assessment/separate dispositions are pending.",
+  "tests": {
+    "state": "unperformed",
+    "runtime_tests": 0,
+    "actors": 0,
+    "qualification": "No runtime/FDV/benefit/acceptance/release claim."
+  },
+  "prospective_T008_projection": null,
+  "limits": [
+    "New author evidence only; no prior proof/peer/code edits",
+    "No model/runtime/Git/global effects",
+    "No ontology/design/Product acceptance or promotion",
+    "Root retains separate design dispositions; Product acceptance/release remain Jim’s"
+  ],
+  "next": "Return to Root and stop; no inferred actor or acceptance authority.",
+  "rebased_from": {
+    "path": "a_c/.ai-workspace/qualification/t008/design/design-disposition-007.draft.json",
+    "raw_sha256": "a7f12f3f71ee17f76f423e2a748ca7b47721cc24e6ed5bb9cdcad2b0bed25808",
+    "canonical_sha256": "83682a537e917b3a02b0b42c84e191228fb91492514a86548c856448069aae97",
+    "prime_rows_unchanged": true,
+    "original_unchanged": true
+  },
+  "prospective_sequence": "Integrated mechanical qualification, then actual registered F_P source-first assessment and integrated independent assessment/separate ontology/design dispositions. Exact live runtime binding selection remains separate. This evidence grants no continuation or promotion."
+}

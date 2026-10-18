@@ -1,0 +1,97 @@
+Historical independent finding DATA for reconciliation only. Exact old raw result SHA d988af4b2117f302035b3e16d111239c204323bcff87482969cbb7accd23a187; old subject sha256:30472059b6dcfe05fb372c8a707748262210a38c73c05b821a2f6b973ccb4bce; selected raw lines55–149. No old overall predicate result is supplied or inherited. Assess all current source obligations and new counterevidence, not a prescribed passlist.
+
+55: ## 3. Source-bound findings
+56: 
+57: ### Finding 1 — Notification sink binding is required but has no lawful home in the closed policy schema
+58: 
+59: **Locators (`fd-support.md`):**
+60: - Line 392–395: policy closed top-level keys, which include `event_sinks`.
+61: - Line 451: Grant exact fields: `id, authority_sources, outcome, principals, targets, operations, tools, executors, territory, preconditions, admission`.
+62: - Line 453: Executor exact fields, which also contain no notification field.
+63: - Line 441–443: "Registry populations are id-keyed objects; duplicate ids/unknown fields refuse."
+64: - Line 792: the Attempt payload has `notification`.
+65: - Line 1446: the reservation encloses the "notification sink".
+66: - Line 1536–1539: "Grant/executor notification binding chooses only a registered id … public requests cannot register an endpoint."
+67: - `dispatch.start` arguments (line 243) carry no sink selection.
+68: 
+69: **Entry and causal path.** An operator authors a policy for FD-007 notifications.
+70: - Any field placed on a Grant or Executor to name a sink is refused as an unknown field.
+71: - No request argument can select a sink.
+72: - The Attempt's `notification` value therefore has no policy-sourced derivation.
+73: - An implementation Worker must choose between at least three readings: a new Grant field, a new Executor field, or a single implicit sink. These differ in who selects the declared consumer of delivery, which is authority-relevant (EXEC §6 Event-driven attention; F4 sink rows).
+74: 
+75: **Affected actors and relations:**
+76: - The Effect Worker and Integration Worker, who hold the disjoint grants (lines 1238–1249).
+77: - FD-007 notifications, SC-AC-FD-014, and the Attempt reservation enclosing relation (F2, line 1446).
+78: 
+79: **Material consequence.** Implementation would establish a material public-contract and authority choice that the design was required to settle. This is exactly the DESIGN_MODULE §5 "implementation has to introduce a new material semantic decision" condition.
+80: 
+81: **Uncertainty.** An implementer might read lines 1536–1537 as implicitly extending the Grant/Executor schema. That reading still contradicts the "exact fields" tables. Either way the network is not unique.
+82: 
+83: ### Finding 2 — "Explicitly registered external producer" for returns has no registry
+84: 
+85: **Locators.**
+86: - Line 247: `return.capture` output "must be from that attempt or an explicitly registered external producer, otherwise unauthenticated."
+87: - Line 392–395: the closed policy keys contain no producer registry.
+88: - Line 449–451: the Principal registry is for startup requesters, not return producers.
+89: - Lines 617–626: conjunction cardinality depends on an "authenticated closed evaluation".
+90: 
+91: **Path.** A Reviewer or assessor run that was not launched through `dispatch.start` cannot be authenticated. This applies, for example, to the Claude CLI assessment that the plan says Executive "separately activates" (line 1224–1225).
+92: - A lawful fallback exists: such a return is treated as unauthenticated and therefore a planned-assessment gap.
+93: - The named "registered external producer" branch is nonetheless undecidable.
+94: 
+95: **Affected relations.** FD-008, FD-010, and the independence/assessment cardinality seam.
+96: 
+97: **Consequence.** Either the branch is dead text, or implementation invents a registry and its trust semantics. This is a secondary underconstraint. On its own it might be closed by declaring the branch unsupported.
+98: 
+99: ### Finding 3 — Cross-module export lists diverge between the module table and the realization seam
+100: 
+101: **Locators.**
+102: - Module table, lines 718–720:
+103:   - core exports `execute_read` and `build_preflight`, with no `prepare_write` or `make_artifact`;
+104:   - effects exports `dispatch, supervise, observe_attempt, cancel, wait_events, write_record, retain_operation`.
+105: - Realization seam, lines 1744–1779:
+106:   - core also exports `prepare_write -> EffectPlan` and `make_artifact`;
+107:   - effects exports `execute_effect` and `persist_outcome(runtime,request,outcome)`;
+108:   - `EvidenceStore.resolve/query_artifacts/retain` (lines 861–866) are also listed.
+109: 
+110: **What the seam says.** "Full-request handler signatures … remain normative." The seam supersedes the CoreOutcome draft, but it does not state whether `retain_operation(runtime,request,response)` and `persist_outcome` are the same function. It also does not state who constructs the Writer EffectPlan: core `prepare_write` or effects `write_record`.
+111: 
+112: **Affected actors.** Workers 1 and 2 develop disjoint modules "against these accepted contracts" in parallel, and Worker 3 integrates.
+113: 
+114: **Uncertainty.** These may be compatible supersets. Equivalent local helper names are allowed, but these are declared cross-module seams.
+115: 
+116: **Consequence.** There is a risk of an integration mismatch that a seam-defect re-entry would then have to resolve. This is ambiguity, not a demonstrated contradiction.
+117: 
+118: ### Finding 4 — Several public input carriers lack a closed content contract while the wire grammar is "closed versioned"
+119: 
+120: **Locators.**
+121: - `results.conjoin.plan` (line 251; content listed in prose at lines 610–614 without exact keys).
+122: - `refresh.prepare.invalidators` and `declarations` (line 254).
+123: - `resources.aggregate.accounting` (line 255; the elapsed boundary is "declared by the accounting contract", line 702–703).
+124: - `return_contract` role-specific proof obligations (line 301).
+125: 
+126: **Contrast.** The `relations.query` declaration (line 381–384), the packet, the envelope and other carriers are fully closed.
+127: 
+128: **Consequence.**
+129: - The FD-012 invalidator content is the ACTIVATION §7 three kinds plus their named instances, but no closed representation is given.
+130: - FD-013 counter identity, scope and pricing semantics depend on an unspecified carrier.
+131: - F_P actors cannot author these inputs from the ordinary contract alone. This bears on ASSURANCE §13 contract sufficiency.
+132: 
+133: **Uncertainty.** Part of this may be ordinary schema realization delegated to the core Worker (line 736). However, the semantics of an invalidator and a counter identity are not purely layout.
+134: 
+135: ### Finding 5 — Contract-state population omits `superseded`
+136: 
+137: **Locators.** ACTIVATION §1 Admission requires that contracts carry at minimum drafted, admitted, rejected and superseded states. The receipt-validity view (lines 1584–1599) and the lifecycle row (line 1513) use Draft, Rejected, Admitted, Applicable and StaleForUse. Supersession appears only as "separate finding/receipt". The `preflight` payload `decision` enum is not enumerated (line 791).
+138: 
+139: **Consequence.** The FD-006 representation of a method-owned state is incomplete. The material scope is narrow: admitted-then-superseded contracts are distinguishable only through prose.
+140: 
+141: ### Finding 6 — Wire mapping of held outcomes to status and exit code is underdetermined
+142: 
+143: **Locators.**
+144: - Lines 187–194 define status `ok|refused|error`, CLI exit codes 0/2/1, and "error preserves caught external failure and unknown effects".
+145: - Lines 1344–1352 put `held(observation)` and `held(effect)` codes (`internal_failure`, `effect_completion_unknown`) in the "refusal `code` population".
+146: - It is not stated whether a held outcome carries `status: error` with a refusal object, `status: refused`, or `status: ok` with a truthful unknown receipt. Lines 1372 and 1817 suggest the last of these is sometimes possible.
+147: 
+148: **Consequence.** Ordinary CLI callers could see different exit codes across implementations for the same operation outcome. This has minor contract-sufficiency impact. The `operation_outcome` value itself is unambiguous.
+149: 

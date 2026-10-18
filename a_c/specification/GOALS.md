@@ -1,6 +1,21 @@
 # Goals
 
-The current source increment is
+The current implementation increment is
+[T-008](../.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md):
+realize the committed F_D support tools in the existing Graphify build tenant
+for F_P Executives, Workers and Reviewers. Jim selects exact Claude RC9 source
+`c2cfa9b908d1722ae3f26c32fa4ece691083bdc3` and its Executive/software-design
+profiles for this bounded candidate dogfood. The installed v2.5.1-rc.2
+construction constitution and empty composition remain unchanged. The
+[tenant design candidate](../build_tenants/graphify/design/fd-support.md) and
+[exact RC9 binding](../build_tenants/graphify/design/fd-method-claude-rc9.json)
+route the work without replacing T-007's historical common derivation reference.
+The Executive coordinates and does not mutate; bounded Writer/Workers author
+candidates and independent Reviewers assess them. This record establishes no
+runtime qualification, semantic acceptance, benefit or release claim. Required
+design assessment/disposition precedes retained implementation.
+
+The completed specification increment is
 [T-007](../.ai-workspace/tickets/active/T-007-executive-lifecycle-tooling.md):
 specify additional [deterministic support tools](requirements/fd-support-tools.md)
 for F_P Executives, Workers and Reviewers. STDO3.0 owns the method/lifecycle

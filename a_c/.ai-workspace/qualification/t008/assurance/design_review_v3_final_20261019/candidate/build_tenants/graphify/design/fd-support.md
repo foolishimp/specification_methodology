@@ -1,0 +1,1864 @@
+# Deterministic support for F_P development actors
+
+Status: **design candidate v3 for T-008** (A–G seams and selected F1–F5 repairs). This is tenant HOW for
+[REQ-AC-FD-001..013](../../../specification/requirements/fd-support-tools.md)
+and the [qualification obligations](../../../specification/requirements/fd-support-verification.md).
+No executable support-tool behavior, semantic acceptance or benefit is claimed
+by this document. The unchanged codec and source-generation designs retain
+their existing checked scopes.
+
+## Boundary and method binding
+
+The Product is `urn:stdo:product-definition:a-c-implementations`; Graphify is
+its existing registered tenant. The increment adds tools to that tenant, not
+an Executive, scheduler, independent Product, graph-owned workflow, work ledger
+or method. F_P actors select work, frames, material relations, meaning,
+assurance claims and already-authorized actions. Named operations acquire,
+render, dispatch, retain and record. `F_D[v]` checks evaluate only declared
+supported predicates. An executor invoking F_P does not make its answer F_D.
+
+[T-008](../../../.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md)
+records the owner's instruction, exact design activation and external bootstrap
+admission. The installed construction constitution stays STDO v2.5.1-rc.2,
+manifest `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`.
+The owner selects Claude RC9 for this bounded work's execution, including its
+Executive and software-design profiles. This does not rewrite the installed
+constitution or assert a published/accepted V3 install.
+
+The [RC9 binding](fd-method-claude-rc9.json) pins source commit
+`c2cfa9b908d1722ae3f26c32fa4ece691083bdc3`, custody
+`3a2097137c3588ba44b98e3ea801ac7f2be1daf0`, standards tree
+`98de394b352179c25dfa63b0b59a9b6bdd43632d` and exact deciding members. The
+same profile is the first finite consumer contract supported by the toolset.
+The source-owner map from T-007 remains the prior common-candidate derivation,
+not a substituted execution basis. Exact model subjects remain a third basis
+role. Runtime imports no V3 code, native compiler, sibling Product, study MCP
+or generated study model. Method content is supplied through verified source
+references; its source repository need not be mutable or colocated.
+
+### Deciding owners and translation scope
+
+| Tool relation | Exact RC9 deciding owner |
+|---|---|
+| Activation carrier and source/identity relations | REFERENCE_FRAME §11 and RF-005/006/012/013/014 |
+| Contract admission, intake, context/fit, actor duties, effects and recovery | ACTIVATION §§1–3, 5 and 7; TICKETS §5 |
+| Result predicates, original domain outcomes, gaps, conjunction and reuse | FOUNDATIONS §4 Results, Conjunction of results, Change impact and evidence reuse |
+| Evidence versus semantic law, source-first expectations and independence | EVALUATION §§1–4; ASSURANCE §§3, 10, 13–16 |
+| Selected role additions, no Executive mutation and event-driven attention | EXECUTIVE_BASELINE §§6, 8–10, 12, 17 and 19 |
+| Work/evidence ownership and recorded decisions | TICKETS §7; PRODUCT_DEFINITION §8 |
+| This source-to-module gate | DESIGN_MODULE §5 Decision-complete symbolic design and §7 three-view gate |
+
+These routes retain source conditions and exclusions. A profile describes a
+finite serialization/check binding; it supplies no new method rule. An unknown
+cut, optional-profile selection, vocabulary, predicate primitive, translation
+or executor contract refuses specifically. A matching label or hash establishes
+neither applicability nor authority. No arbitrary cross-method join is supported.
+
+## Operating model and trust boundary
+
+A trusted local Product operator starts the CLI/server with an exact policy
+file, its expected SHA-256 and one fixed principal identity. The operator
+selects the Product, source roots/repositories, method profile, owner records,
+existing work grants, roles, predicate/operator definitions, executors and
+protected evidence root. The API caller is untrusted with respect to these
+choices. A request cannot create or replace policy, change its principal,
+register an executor, grant territory or declare itself owner. Policy bytes
+are acquired and checked again before effects. Their digest checks continuity;
+it does not authenticate whoever wrote them. Authority rests on the trusted
+operator's separately established Product/owner binding.
+
+The supported deployment is a cooperative local development account: the
+operator and registered executor programs are trusted to honor their declared
+operation contracts. Requests, workspace content and F_P output are untrusted
+input to the tool. Same-account actors able to rewrite protected policy,
+executables or retained evidence behind the server are outside this boundary;
+the tool provides no OS credential isolation, signing or adversarial concurrent
+filesystem sandbox. It still detects ordinary dirty state, dependency drift,
+conflicting tool writes, missing evidence and incorrect request boundaries.
+No internal path is trusted merely because it is internal.
+
+A registered process is **not OS-confined**. Preflight and dispatch enforce
+its exact invocation, input and configuration, check its registered dependency
+preimages, and observe declared effect surfaces. They do not prove that an
+arbitrary child cannot write elsewhere or create descendants. An executor's
+qualified contract must honestly declare its tools, local-effect behavior,
+dependency population, termination observations and unobserved host conditions.
+Unsupported enforcement requirements refuse; no `sandboxed` guarantee appears.
+
+Policy/source roots and the protected evidence root cannot be in any permitted
+Writer territory. All API-relative paths reject absolute paths, `..`, empty or
+ambiguous components and symlink components, including a symlink leaf; regular
+file opens use non-following checks. Immutable Git acquisition resolves an
+exact full object/revision and member, checks regular-blob mode and hash, then
+reads blob bytes without checkout, hooks, filters or a moving branch. Product
+read roots may exceed write territory only where explicitly configured. A
+missing or inaccessible root is a gap, never permission to search elsewhere.
+
+## Ontology and invariants
+
+The irreducible domain carriers are the selected policy/binding, exact acquired
+content/observations, activated context, one execution attempt, original return
+and downstream operation evidence. Files, CLI messages and MCP results are
+representations of those carriers. No separate mutable task object is needed.
+
+| Carrier | Identity, ownership and relationship |
+|---|---|
+| `OwnerPolicy` | One exact operator-selected id/digest per Runtime, binding one Product definition id/digest and fixed principal. Contains existing grants and approved operation/executor/predicate references. External authority, never public-tool output. |
+| `MethodBinding` | One exact registered profile id/digest and method cut plus member hashes. References owners; maps their packet/result contracts to tenant serialization. |
+| `SourceRef` | One engine, registered root/repository, exact relative path/object and whole-content SHA-256. One optional selector narrows acquisition, never changes parent identity. |
+| `Observation` | One named acquisition scope/time, enumerated path population, existence/mode/byte hashes and relevant configuration/dependency preconditions. Dirty/untracked bytes participate. |
+| `ModelRef` | One exact raw input digest, model id/digest, codec/profile and subject basis; source grounding is separately supplied. Model and carrier identities stay distinct. |
+| `Context` | One caller-selected method packet plus actual record/source payloads, late-acquisition manifest, projection boundaries, rendered stdin bytes and scoped fit evidence. |
+| `Preflight` | One exact activation/context/grant/executor/result-surface tuple, policy and source preimages, finite admission findings and receipt. It does not admit its cited outcome. |
+| `Attempt` | One protected identity/reservation, exact invocation/payload/settings, ordered retained observations, stdout/stderr and named result surface. May have predecessor attempt; never an inferred continuation. |
+| `ClosedReturn` | One original raw payload and producer/activation/subject/basis/consumer bindings, original predicates/domain values, provenance, residuals and invalidators. Checks do not rewrite it. |
+| `OperationEvidence` | One immutable request/response/content manifest and hash-linked observations. Reconstructable downstream evidence, not a work-state authority. |
+| `ExistingCarrier` | An externally owned work/evidence source. Projection does not own its state. Only a named, separately granted Writer operation changes it. |
+
+Cross-carrier invariants:
+
+1. Full semantic identities and content digests remain separate. No equality of
+   labels or payloads creates a join or grants authority.
+2. Acquired payload is distinct from a locator. Derived projections preserve
+   parent identity, all required closure records, qualifications and boundaries.
+3. Every dependency-sensitive effect rechecks its exact material preconditions,
+   policy, Product definition, method/profile and executor dependencies. It does
+   not silently rebase on new bytes. Effects are recorded before returning.
+4. Admission comes from the protected selected mechanism and existing policy
+   authority. A request's alleged grant/receipt is not trusted evidence.
+5. Role is startup-bound. Executive/Reviewer cannot call a candidate/work-carrier
+   Writer operation or receive mutation authority from a role label. Automatic
+   tool evidence stays outside the Product/worktree; it is not such a mutation.
+6. Receipt, evaluation, output, intended effect and observed end are independent
+   facts. Lost response, timeout, cancellation and process exit do not alone
+   establish external completion or rollback.
+7. Historical returns retain original subject, basis, predicate and verdict.
+   Current applicability is a new check/relation. Duplicate evidence is not an
+   additional assessment; inconsistent evidence remains visible.
+8. Unsupported/missing premises remain gaps. Negative reachability in incomplete
+   coverage proves no non-influence, fit proves no attention, and a necessary
+   condition proves no stronger claim.
+9. Evidence retention never creates a disposition, acceptance, release, role
+   transition, work-state ledger or next-action grant.
+
+## Public wire grammar
+
+All public operations use integer-only JSON, UTF-8, duplicate-key rejection,
+finite strings/arrays/objects, no NaN/infinity and a closed versioned request.
+Tenant canonical JSON uses the existing sorted-key compact UTF-8 grammar;
+array order is significant. It is not asserted to be JCS. `id` is a nonempty
+caller request identity; exact retries of an effect reuse its reservation,
+while the same id with different effective inputs refuses.
+
+```json
+{
+  "schema": "a_c.fd-support.request/1",
+  "id": "request-001",
+  "operation": "tools.describe",
+  "arguments": {}
+}
+```
+
+```json
+{
+  "schema": "a_c.fd-support.response/1",
+  "id": "request-001",
+  "operation": "tools.describe",
+  "status": "ok",
+  "result": {"artifact": null, "value": {}},
+  "refusal": null,
+  "operation_outcome": {
+    "predicate": "B(tools.describe): the declared exact inventory output is available",
+    "value": "returned",
+    "cause": "declared output available",
+    "core_value": "satisfied",
+    "source_parent": {
+      "member": "FOUNDATIONS.md",
+      "sha256": "fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f",
+      "clause": "results"
+    },
+    "evidence": [],
+    "limits": ["output availability only"]
+  },
+  "evidence": {"id": "operation-evidence-id", "sha256": "64 hex characters"}
+}
+```
+
+`status` is `ok`, `refused` or `error`, a transport distinction, never
+a semantic result algebra. The distinct operation-boundary outcome below has
+its own availability predicate and source-bound core mapping. Refusal contains exactly `code`, `reason`, `gaps`
+and `source_refs`; `result` may retain partial observations but cannot pretend
+that the refused effect occurred. `error` preserves caught external failure and
+unknown effects. An `F_D[v]` result appears separately under `result.value.judgment`
+with predicate, original domain outcome, core value, subject/basis, evidence
+and limits. An unperformed evaluation has no such judgment. Refusals name the
+unmet supported contract; they never fabricate a Worker work result.
+
+`SourceRef` has the exact keys below. `object` is null for workspace files and
+retained evidence, and an exact full Git revision/object for Git sources.
+`selector` is null, `{"lines":[first,last]}` (inclusive 1-based, UTF-8 text) or
+`{"json_pointer":"/path"}`. `sha256` always binds whole parent content.
+
+```json
+{
+  "engine": "workspace-regular-file",
+  "root": "registered-read-root",
+  "path": "relative/member.md",
+  "object": null,
+  "sha256": "64 lowercase hex characters",
+  "selector": null
+}
+```
+
+`ArtifactRef` is exactly `{"id":"protected-artifact-id","sha256":"..."}`.
+It resolves only in the Runtime's evidence store and checks the complete retained
+artifact envelope bytes below; it is not an arbitrary filesystem path. Raw blobs
+may share storage, but their provenance-bearing acquisition/return records do not
+share identity merely because their payload bytes match. `ModelRef` is exactly `{"source":SourceRef,
+"format":"model|carrier","model_id":"...","model_sha256":"..."}`.
+The `format` value is the enum `model` or `carrier`, not the literal string
+containing a vertical bar. A Writer target uses the same SourceRef fields;
+only there `sha256:null` denotes a required absent preimage for exclusive
+creation. Source reads never accept a null digest.
+Inputs requiring currentness take retained Observation refs, not a caller's
+unverified assertion that HEAD matches. Unknown fields and enum variants refuse.
+
+The inventory below is the closed operation family for this increment. All
+listed keys are required unless marked optional. Empty lists are explicit;
+semantically required nonempty populations are checked. Discovery publishes
+these same contracts and limits, including JSON Schemas; CLI/MCP do not have
+independent schemas or dispatch implementations.
+
+| Operation | `arguments` keys | Result payload |
+|---|---|---|
+| `tools.describe` | optional `operation`, optional `method_profile` | Inventory or exact contract, effect prerequisites, checked fragment, supported profile, qualification status and unsupported variants. |
+| `workspace.observe` | `scope` (registered file/directory scopes), optional `previous` (Observation ref) | Exact enumerated current observation, additions/removals/byte/config changes against previous, acquisition limits and current Git metadata as supplementary data. |
+| `source.read` | `source` (SourceRef), `encoding` (`utf8` or `base64`), optional `max_content_bytes` | Actual content, parent/selected hashes and routes, original line coordinates; no locator-only substitution. |
+| `records.find` | `model`, `text` | Exact literal matches and model scope, via `ac_graph.find`. |
+| `records.read` | `model`, `ids` | Exact payloads and typed references via `ac_graph.inspect`; unknown ids refuse the batch. |
+| `graph.project` | `model`, `selections` (ordered `seeds`, optional `budget_records`) | `ac_graph.project_many` views with complete governing closure and untouched boundary/population semantics. |
+| `relations.query` | `model`, `declarations` (SourceRef), `query` (`dependencies`, `path`, `impact`, `coverage`), `seeds` | Paths/closure/coverage from explicitly authored typed declarations, supplied applicability separated, incomplete-coverage boundaries. |
+| `context.assemble` | `packet`, `models` (ModelRef plus selections), `sources` (SourceRefs), `late_acquisition` (SourceRefs), `envelope` | Protected Context artifact, actual acquisition manifest, byte measurement and method-bound fit judgment. Does not emit over-capacity content to an actor. |
+| `contract.preflight` | `context` (ArtifactRef), `grant_id`, `executor_id`, `result_key`, `observations` (ArtifactRefs), optional `admission_record` | Exact draft/admitted/rejected coordinates, deterministic findings and protected receipt bound to policy authority or explicitly registered owner override. |
+| `dispatch.start` | `preflight` (ArtifactRef), optional `retry_of` (Attempt ref), optional `reconciliation` (ArtifactRef) | Named attempt receipt, exact effective invocation/input/settings and retained observations. No arbitrary argv/env/script argument. |
+| `dispatch.observe` | `attempt` (ArtifactRef), `after_event` (integer) | Events/raw-output routes, available output and subject/effect/end observations; currentness gaps. |
+| `dispatch.cancel` | `attempt`, `reason` | Retained cancellation request, any observed signal delivery/end; no automatic completed/not-effected value. |
+| `events.wait` | `attempt`, `after_event`, `timeout_ms`, `cadence_ms`, `purpose`, `stop_condition` | Decision-relevant events or bounded timeout observation; notification sink delivery/receipt distinguished. |
+| `return.capture` | `attempt`, `payload` (ArtifactRef), `return_contract` (SourceRef) | Original payload/provenance and source coordinates. Output must be from that attempt or an explicitly registered external producer, otherwise unauthenticated. |
+| `return.check` | `return` (ArtifactRef), `context`, `consumer`, `observations`, `predicates` (registered ids) | Binding/currentness/predicate findings, duplicate/conflict metadata, preserved historical verdicts and explicit non-consumable gaps. |
+| `review.prepare` | `phase` (`expectation` or `candidate`), `claim` (SourceRef), `sources`, `candidate` (SourceRef or null), `proof` (SourceRefs), `comparison` (SourceRef or null), `expectations` (ArtifactRef or null), `expectation_body` (null or `text`/`source_inputs` object) | Raw acquired authority/candidate/proof/diff payloads, producer/assertion/execution provenance and observed exposure ordering. |
+| `checks.evaluate` | `predicate_id`, `inputs` (ArtifactRef/SourceRef bindings), `subject`, `basis` | Actual finite `F_D[v]` judgment with source contract, domain, counterexample/missing premises and limits. |
+| `results.conjoin` | `operator_id`, `plan` (SourceRef), `returns` (ArtifactRefs), `current_observations` | Exact method-owned conjunction, original results, stale/absent planned assessments, uncovered obligations, conflicts and failures. |
+| `work.project` | `carrier` (SourceRef), `selection` (JSON pointers or Markdown headings) | Exact selected original content, source-linked facts and original owner wording; no inferred task state. |
+| `work.write` | `grant_id`, `target` (SourceRef with preimage), `mode` (`append` or `replace`), `record`, `interpretation` (separate or null), `observations` | Named Writer-only exact record application, pre/post identities and actual effect/end evidence or refusal. |
+| `refresh.prepare` | `previous`, `current` (Observation refs), `declarations` (SourceRef), `results` (ArtifactRefs), `invalidators` (SourceRef) | Material diffs, affected candidates, explicit unknown impact, surviving exact applicability checks and reconstructable handoff artifact. |
+| `resources.aggregate` | `attempts` (unique ArtifactRefs), `accounting` (SourceRef) | Measured/unknown counters, all attempts/failures, elapsed versus summed intervals, overlapping/subcounter metadata and supported selected-limit checks. |
+
+`evidence.read` is additionally provided for all three roles: `artifact`
+(ArtifactRef), optional `max_content_bytes`. It returns the retained exact
+payload, actual public schemas/prompts/invocation/raw proof and parent digest.
+It cannot reach unregistered private paths. Returned evidence refs remain
+acquisition routes; the caller chooses whether to acquire them.
+
+The exact ordinary CLI entry is:
+
+```sh
+python3 code/ac_support.py --policy POLICY.json --policy-sha256 POLICY_SHA256 --principal EXECUTIVE_ID call --request REQUEST.json
+python3 code/ac_support.py --policy POLICY.json --policy-sha256 POLICY_SHA256 --principal REVIEWER_ID mcp
+```
+
+`--request -` reads one JSON object from stdin. CLI emits exactly one response
+object on stdout and exits 0 for `ok`, 2 for `refused`, 1 for an external/internal
+`error`; diagnostics belong on stderr. `mcp` serves the protocol below. There
+is one internal fixed supervisor entry, inaccessible through public operation
+arguments. No interface changes the operator's host/global configuration.
+
+### Returned actor payload
+
+The supported closed-return carrier is `a_c.fd-support.closed-return/1`.
+Its exact keys are `schema`, `id`, `frame`, `activation`, `subject`, `basis`,
+`actor`, `consumer`, `evaluations`, `not_performed`, `work_result`, `residuals`
+and `invalidators`. Frame is id/revision; activation is id/SHA-256; subject is
+id/SHA-256; basis is the exact method-profile id/digest plus Observation refs;
+actor is id/family/authorship identity. These coordinates are checked against
+the original activation and protected identity bindings, never accepted merely
+because the answer asserts them.
+
+Each performed evaluation has exactly `id`, `predicate`, `domain_outcome`,
+`core_value`, `evidence`, `residuals` and `invalidators`. `predicate` is its exact
+source identity or explicitly supplied predicate body bound to the activation;
+`core_value` uses the source-owned five-value vocabulary. Domain outcome is the
+original JSON value, not a rewritten success flag. `not_performed` lists planned
+evaluation ids and contains no verdict. `work_result` is null for a return not
+asserting construction availability; otherwise it contains exactly `value`,
+`cause`, `candidate`, `evidence` and `residuals`, preserving RC9 ACTIVATION's
+value/cause relation. `candidate_ready` must resolve its exact candidate and
+transition evidence. The parser reports a wrong mapping without inventing the
+Worker's answer. The original bytes always survive invalid format or binding.
+
+This is a serialization of the selected method-owned relations, not an
+additional result algebra or requirement that F_P judgment be deterministic.
+Registered return-contract SourceRefs bind this exact carrier/schema and any
+role-specific proof obligations. Unsupported return carriers remain retained
+raw output with an explicit unsupported-format gap.
+
+### Packet carrier
+
+The `packet` object is a tenant serialization of REFERENCE_FRAME §11's minimum
+binding, with exactly the following source-owned groups, not a second packet
+law. The RC9 profile supplies each group's owner route. Group values are closed
+objects with the listed keys. Text is supplied by the F_P actor or referenced
+existing authority; tooling does not author its meaning.
+
+| Group | Keys and binding |
+|---|---|
+| `activation` | `id`, `revision`, `configuration` (SourceRef) |
+| `frame` | `id`, `revision`, `declaration` (SourceRef), `evaluation` (SourceRef), `result_algebra` (SourceRef) |
+| `subject_basis` | `subject` (`id`, `sha256`), `method_profile` (id/digest), `product` (id/definition SourceRef), `observations` (ArtifactRefs), `dependencies` (SourceRefs), `time_basis` (explicit string) |
+| `attention` | `material_relations` (SourceRefs), `invariants` (SourceRefs), `semantic_sources` (SourceRefs), `exclusions` (strings), `prohibited_assumptions` (strings) |
+| `actor_authority` | `actor_id`, `role`, `capability` (SourceRef), `semantic`, `evaluation`, `operation`, `decision`, `acceptance`, `publication` (authority SourceRefs or explicit null), `territory` (registered paths), `tools` (registered ids) |
+| `evidence_relations` | `admissible_evidence` (SourceRefs), `acquisition` (SourceRefs), `dependencies` (SourceRefs), `conjunction` (SourceRef or null), `translation` (null in this fragment), `consumer`, `return_contract` (SourceRef) |
+| `stop_change` | `invalidators`, `stop_conditions`, `residuals`, `re_entry`, `reconfiguration` (explicit arrays of source-bound supplied records) |
+| `profile_additions` | `worker` (operation-grant id, mutation subject and territory) or `reviewer` (claim, composition, population, oracle, ordinary/module path, falsification condition, independence/assurance SourceRefs and severity-scale SourceRef or explicit null) or `executive` (Product-role map, mandate, frontier, result/triage ledger, priority policy, conjunction and disposition grant SourceRefs), exactly the selected role |
+
+`envelope` is exactly `{"capacity_bytes": integer-or-null,
+"boundary":"executor-stdin-utf8","host_context":{"state":"known|bounded|unknown",
+"bytes":integer-or-null,"evidence":SourceRef-or-null}}`. The context artifact
+retains the supplied packet, full selected records and source content,
+projection boundaries, late-acquisition refs and exact canonical rendered body.
+A manifest distinguishes content supplied now, explicitly permitted late reads,
+failed/denied reads and unresolved sources. Source locators alone do not count
+as acquired deciding material. Mandatory late reads have to be named by the
+selected contract; a future read is not reported as already supplied.
+
+Measure the exact UTF-8 stdin bytes, including template/framing and all embedded
+content, before worker delivery. A known/bounded host contribution is included
+only with its supporting source; unknown host context remains unmeasured and
+full-active-context fit is indeterminate unless a measured excess falsifies it.
+No declared capacity means no mandatory fit gate; observed byte count may still
+be retained. Token capacities refuse as unsupported rather than use a guessed
+ratio. Measured envelope excess never trims content. Whether an unresolved fit
+blocks dispatch is the selected admission predicate; the supported profile
+requires satisfied fit when a capacity applies, absent a separately registered
+exact owner override lawful under its source contract. Fit and semantic
+sufficiency remain separate.
+
+## Source, state and graph mechanics
+
+`workspace.observe` enumerates configured relevant files and declared directory
+scopes, including new untracked paths and deletions, with byte hashes, type,
+existence and acquisition time. It hashes present bytes, not HEAD versions.
+Relevant Product, policy, method-source and executor configuration/dependency
+preimages participate. A declared tree scope detects newly added files; an
+explicit file list says nothing about unlisted additions. Enumeration or byte
+caps refuse incomplete observations instead of returning a complete-looking
+snapshot. Unreadable files, symlinks and scope changes remain named gaps.
+
+Every dependent effect compares a new observation over the same scope to the
+retained one, including path population, before its effect begins. Git HEAD and
+status are useful metadata, not authority for current bytes. Stable scope can
+coexist with unrelated dirty files outside it; those files are preserved.
+Read-modify-write operations acquire an exclusive per-target tool lock and
+recheck the target inside that lock. The declared threat model excludes a
+hostile non-tool filesystem swap between check and effect; this limitation is
+recorded rather than mislabeled atomic isolation.
+
+Acquisition supports regular workspace files, exact Git blobs and protected
+retained evidence. Whole-content digest and selected payload digest are both
+returned. Line reads retain original inclusive coordinates; JSON pointers are
+exact, and a missing pointer refuses rather than returns null. UTF-8 decoding
+failure is explicit; base64 returns actual binary content when requested.
+Missing mappings and source grounding do not become inferred mappings.
+
+`ModelRef` verification uses `ac_graph.validate` or `decode(GraphCarrier)` and
+checks exact model and raw carrier coordinates. Existing `find`, `inspect`,
+`project_many` and carrier identity are reused without editing their model
+schemas or dependency semantics. A model can be methodology-only; its declared
+subject/coverage are always returned. No operation calls it a complete Product
+workspace map. Composite/cross-model querying needs an explicit supported
+identity/translation rule; this first fragment refuses it.
+
+`relations.query` consumes one exact authored declaration carrier with keys
+`id`, `subject`, `basis`, `relations` (id/source/target/kind), `governing_kinds`,
+`coverage` (obligations, mapped support and explicit unknowns) and
+`applicability` (source-bound supplied judgments or registered predicates).
+It performs deterministic sorted-identity traversal and set operations only.
+A relation not declared governing cannot be promoted by proximity or extraction
+confidence. Impact returns an affected candidate set plus missing coverage;
+absence of a path never returns a semantic `unaffected` verdict.
+
+## Product-bound admission and exact dispatch
+
+Owner policy has schema `a_c.fd-support.policy/1`, with closed top-level keys
+`id`, `product`, `method_profile`, `sources`, `principals`, `grants`,
+`predicates`, `operators`, `executors`, `event_sinks`, `independence_policy`,
+`evidence_root`, `limits` and `authority_sources`. Operator startup supplies its path and expected digest;
+there is no public registration/write operation for it.
+
+- `product` binds definition id, exact definition SourceRef and work/outcome
+  source records. `sources` registers exact local roots/repositories, allowed
+  read scopes and immutable-source aliases.
+- `principals` binds startup requester principal to actor id, role, authorship/family
+  metadata and allowed operations. A request cannot change these values.
+- Each `grant` names id, existing owner/delegation SourceRefs, exact outcome,
+  permitted requester principals and activated targets, operations/tools/executors/territory, required material
+  preconditions and admission mechanism/conditions. The operator verifies the
+  source owners; the tool checks these registered bindings, not the truth of
+  arbitrary supplied authority prose.
+- Each `predicate` names id, exact source contract, subject/domain/basis and
+  supported expression; each `operator` names the exact source-owned
+  conjunction and selected declared rule, coverage/basis and decision-owner
+  requirements. These cannot be chosen by an unregistered request definition.
+- Each `executor` names a fixed executable and argv, dependency/configuration
+  SourceRefs, cwd, allowlisted environment, effective actor/settings, input and
+  stdout decoders, available tools, permitted local-effect contract and
+  termination/effect observation capabilities. Public requests choose its id.
+  No shell parsing, arbitrary executable, argument suffix, cwd or environment
+  injection is accepted.
+- `limits` names selected enumeration, message, attempt, observation and resource
+  bounds with their units/scope. They are this deployment's controls, not
+  universal method quotas. `authority_sources` names the trusted operator/owner
+  records; their hashes establish bytes, not author authenticity.
+
+`contract.preflight` re-acquires policy/definition/method/grant material and
+selected current observations, validates the exact packet and registered
+predicate premises, checks role/effects/tools/territory/result surface and
+executor dependencies, and binds the draft to the exact context digest.
+If the protected mechanism's conditions hold it records its actual admission
+receipt: mechanism id/digest, authority source, exact contract digest, decision,
+evidence and predicates actually evaluated. An optional existing admission or
+owner override is usable only when resolved through the trusted policy's
+registered source and exact contract binding. Caller-created receipt JSON,
+a ticket title or successful schema validation cannot substitute.
+
+The admitted artifact is not an indefinitely valid bearer token. Dispatch
+rechecks all material preimages and authority binding. Drift refuses before
+launch, names which premise changed and retains the historical receipt. It
+never silently substitutes new context or settings. Missing basis, authority,
+closure or capability is routed through the selected RC9 owners and is not
+reported as a Worker result.
+
+The following concrete registry carriers close the public policy seams. Registry
+populations are id-keyed objects; duplicate ids/unknown fields refuse. Source
+references use the grammar above. The policy's `method_profile` is the exact
+id/digest plus SourceRef of the shipped binding. Each local source root has
+exactly `path`, `read_scope`, `kind` (`workspace` or `git`), and `writable`;
+root paths are trusted startup configuration, never request fields.
+
+| Registry record | Exact fields |
+|---|---|
+| Principal | `actor_id`, `role`, `family`, `authorship`, `operations`, `role_binding`, `role_transition` |
+| Grant | `id`, `authority_sources`, `outcome`, `principals`, `targets`, `operations`, `tools`, `executors`, `territory`, `preconditions`, `admission` |
+| Admission selection | `mechanism_id`, `mechanism_source`, `authority_source`, `required_predicates`, `allowed_override_sources` |
+| Executor | `id`, `executable`, `argv`, `dependencies`, `cwd`, `environment`, `actor_id`, `settings`, `tools`, `effect_scope`, `stdin_mode`, `stdout_decoder`, `observers` |
+| Predicate | `id`, `source`, `subject`, `basis`, `input_names`, `expression`, `limits` |
+| Conjunction operator | `id`, `source`, `decision_authority`, `rule`, `plan_source`, `qualification` |
+
+`outcome` is id plus exact source; `territory` is a list of registered-root and
+relative file/directory scopes. `preconditions` are exact SourceRefs and retained
+Observation refs. `admission` may reference only the implemented finite
+mechanism `product-policy-preflight/1`: all source/identity, scope, role, effect,
+result-surface and selected registered predicate checks above. It is a real
+Product-bound mechanism under the protected policy, not mere shape validation.
+An unsupported mechanism id refuses. The mechanism's implementation and policy
+remain distinct provenance. An override source must be separately registered
+by the operator and explicitly bind the exact contract; the request cannot add
+one to that registry. No authority is inferred from the words in `outcome`.
+
+Executor `executable` is an exact absolute regular-file path/digest chosen by
+the operator; `argv` is its complete fixed string array including argv[0].
+Dependencies/configuration are SourceRefs rechecked before launch; environment
+is a complete explicit string map, not inherited arbitrary caller variables.
+The tool retains any required host/environment unknowns. `stdin_mode` is
+`context-utf8`; its byte payload is exactly the saved Context rendering, with no
+unmeasured appended prompt. `stdout_decoder` has exactly `format` (`json` or
+`utf8`), `pointer` (JSON pointer or null), and `decode_json_string` (Boolean).
+This permits a provider's JSON envelope containing the actual answer as a JSON
+string to be unwrapped reproducibly. Missing/invalid decoding retains raw output
+and a format gap. No decoder executes code. Observers are `process-end` and
+`file-postimages` with exact selected scope/expected hashes; they establish only
+their named predicates, not semantic task success. File completion/end is
+claimed only where the registered effect contract and actual observer establish
+both; otherwise external effects/descendants remain unknown. `effect_scope`
+declares the expected local-effect and unsupported enforcement boundary.
+
+`work.write.record` is exactly `{"text":"literal UTF-8 bytes as text",
+"provenance":SourceRef}`. Append adds precisely that UTF-8 text, with no
+implicit newline or method prose; replace supplies the whole target body.
+`interpretation` is null or `{"text":"...","author":SourceRef}` and is
+retained separately in operation evidence, not silently inserted as an owner
+ruling in the target. New absent targets and existing targets both use explicit
+grant/territory and expected preimages as described above.
+
+### Attempts, notifications and uncertain effects
+
+`dispatch.start` atomically reserves a unique request/activation key under the
+protected evidence root before launching a small per-attempt supervisor. This
+is process supervision for one named invocation, not task scheduling or
+method-workflow control. The supervisor rechecks admission/preimages again at
+the actual effect edge, starts the fixed executable with exact retained stdin,
+records acknowledgments, stdout/stderr, events, timestamps and observed process
+end, and writes the named result surface. Provider/actor settings are retained
+exactly; provider usage absent from its actual result stays unknown.
+
+A repeated exact request returns the existing attempt and its observations;
+a conflicting use of the key refuses. If the caller loses a response or a
+supervisor dies during the launch interval, the reservation remains and no
+automatic second launch occurs. A fresh actor can acquire the named attempt,
+reconcile observed effects/end, and supply an explicit already-authorized retry
+with predecessor/reconciliation evidence. `retry_of` is required for another
+attempt of the same activation. No success or retry grant follows from silence.
+
+The supervisor is launched through the tenant's own fixed entry point and
+pinned code dependencies, without user scripts or shell. Actual child receipt,
+process exit, effect snapshots, durable writes and unknown descendants are
+separate event kinds. Process exit establishes only that observed process's
+end. External work or descendants may remain unknown under that executor's
+contract. An actual executor-specific effect observer may establish more,
+within its declared checked scope; a return saying “done” alone does not.
+
+Cancellation and timeout retain request/signal/partial-output events and
+current subject observations. A terminate/kill request does not establish end,
+completion or rollback. On uncertain end, subsequent dependent actions and
+retries require the selected reconciliation predicate; no reset deletes the
+partial evidence. An effect value is emitted only when the registered observer
+establishes RC9 ACTIVATION Effects' premises. Otherwise it is
+`completion_unknown`, with end separately unestablished and its deciding
+observation named. A counterexample to a bounded outcome may establish
+`not_effected` even when its end remains unknown, as that owner requires.
+
+Notifications use a selected named durable event sink carrying consumer,
+attempt, kind and cursor. Appending and syncing a sink record establishes
+local delivery, not that the consumer saw it. Return, exception, observed basis
+change and selected deadline/checkpoint events are distinct. The ordinary CLI
+may use `events.wait` as declared bounded fallback with purpose, cadence,
+evidence target, deadline and stop/escalation condition; it cannot become an
+unbounded polling controller. MCP returns the same event records through tools;
+it does not claim unsupported push/task features. Notification failure is
+recorded and the declared fallback remains visible.
+
+## Returns, review and qualified checks
+
+`return.capture` preserves original payload and provenance, including malformed
+or partial output. `return.check` compares original activation, actor, consumer,
+subject, method/basis/dependency and currentness coordinates, applies only the
+selected registered predicates and reports exact gaps. A historical satisfied
+result on another subject remains that result and is non-consumable here.
+Replay of the same activation/evaluation/producer/attempt evidence identity is
+a duplicate and is not counted as a second assessment. Identical payload bytes
+from two genuine distinct attempts/producers retain separate evidence records;
+equal answers alone establish neither duplication nor independence. Different original results over the same bound predicate
+are retained and identified as conflict; neither is silently overwritten.
+
+Source/expectation provenance, execution/run provenance and authenticated
+producer binding are separate. Protected actor identity proves neither the
+independence of expected answers nor completeness of exposure history. Family
+independence requires an explicit governing policy; absent one, two activations
+of one family do not count independent for semantic judgment.
+
+`review.prepare` expectation phase permits exact governing-source and relevant
+proof-contract acquisition, records the Reviewer's source-derived expectations
+as its F_P evidence and excludes candidate content. Candidate phase acquires
+exact immutable candidate, source, actual tests/fixtures/proof and selected
+comparison directly, preserving expectation/preimage and observed exposure
+ordering. The author summary is optional evidence, never a replacement. The
+same public source/evidence operations are available to Workers for their
+implementation/proof context. Comparisons are exact byte and canonical-record
+diffs; neither labels a finding, severity, priority or disposition.
+
+Candidate exposure observed earlier for that principal/claim is reported, not
+forgotten by a fresh context. Unobserved external exposure remains unknown.
+The tool checks only supplied/observed independence premises; it does not
+certify all semantic independence or turn a nonauthor name into acceptance.
+Reviewer expectation evidence and automatic tool logs stay in the external
+protected evidence surface. They do not grant Reviewer write access to the
+candidate or authoritative work carrier.
+
+### Predicate and conjunction fragment
+
+Registered predicates operate over explicitly bound JSON observations. The
+finite expression grammar has `equals(left,right)`, `member(value,set)`,
+`contains_all(set,required)`, `all(expressions)`, `any(expressions)` and
+`not(expression)`. Operands are literals or exact JSON pointers into named
+acquired inputs. No code strings, import, shell, arbitrary calculus execution,
+model-authored predicate body or inferred truth is executed. Boolean operations
+use complete known values; missing premises are retained, and a decisive false
+for `all` or true for `any` may decide without discarding the missing premises.
+Every registered definition states its domain, predicate meaning and source
+provenance; support claims are only for this explicit decidable fragment.
+
+Actual evaluation returns satisfied/falsified for a decided predicate,
+indeterminate for missing deciding evidence inside its declared domain,
+invalid_basis for an input that cannot bind the required subject/basis, and
+out_of_frame for an undeclared material capability. Unsupported syntax refuses
+without pretending an evaluation ran. Semantic applicability and mandatory
+planning remain supplied F_P judgments. Checks over source identity or context
+fit establish only those predicates, never candidate fitness or acceptance.
+
+The expression carrier is closed: a literal is `{"literal":JSON}`, a bound
+input operand is `{"input":"name","pointer":"/exact/path"}`, and a call
+is `{"op":"equals","args":[operand,operand]}` with the named operator's
+fixed arity. `member`/`contains_all` have arity two, `not` arity one, and
+`all`/`any` a nonempty list of expressions. Bindings resolve only registered
+input names acquired in this request; unbound pointers remain explicit missing
+premises. Nested results preserve undecided premises even when another branch
+decides the Boolean. Integers are not Booleans. A wrong operand domain is a
+domain/basis failure, not a false applicability premise.
+
+The sole supported join is `claude-rc9.conjunction/1`, implementing FOUNDATIONS
+Conjunction of results under a qualified registered plan. The plan states its
+exact composite predicate/subject/basis, decision authority, ordered mandatory
+assessments, exact producer/activation/attempt/evaluation keys, coverage,
+required obligations, applicability premises, basis relations and selected rule.
+The qualified fragment uses finite nonempty required-obligation and planned-
+assessment populations. It supports equal exact bases only; composite-basis
+translations remain unsupported.
+
+One planned assessment names exactly one actual evaluation key and accepts zero
+or one authenticated closed evaluation. Zero is a planned-assessment gap. Exact
+replay of that evaluation/evidence is one contribution. A second different
+payload claiming that same key is a provenance/cardinality conflict, retained
+as evidence and excluded from direct reliance until the authority resolves it;
+that assessment contributes a gap, never a selected arbitrary winner. A genuine
+second actor/run/evaluation is a separate assessment id with its own key and
+explicit mandatory/coverage relation. The input list may contain any finite
+number of these records; list order never implicitly selects a winner.
+
+A return contract binds one exact final output slot per attempt; partial output
+or another stdout fragment is not an additional closed return. Multiple distinct
+performed predicates within one actor return are independently keyed by their
+evaluation ids. Each keeps its predicate, domain outcome, subject/basis and
+producer/run provenance. Matching bytes across distinct genuine keys remain
+distinct evaluations. Stale/wrong-subject held results remain original evidence
+and create gaps for current planned assessments; they are not relabeled new
+invalid_basis returns.
+
+The declared rule selects the first non-satisfied **mandatory applicable returned
+result in the plan's explicit assessment order**. There is no universal priority
+among the four non-satisfied values. All failures/counterexamples, original domain
+outcomes, provenance conflicts and both gap sets survive. When there is no such
+mandatory non-satisfied return, incoherent required basis relations report
+invalid_basis; otherwise any planned/uncovered gap reports indeterminate;
+otherwise a counterexample to a plan-declared required constraint falsifies the
+composite whichever contributor found it; otherwise satisfied is reported.
+Nonmandatory results are record-only except such exact required-constraint
+counterexamples. Required-constraint identity is source/plan-bound; tooling does
+not infer semantic materiality. Nested joins union inherited failures and
+planned gaps, recompute uncovered obligations and cannot hide them by wrapping
+a prior conjunction as a single satisfied component.
+
+The exact RF §5 output is computed **after** that core value: satisfied maps to
+`decision(holds)`; falsified maps to `conflict` only when mandatory evaluations
+for the same exact claim include both satisfied and falsified, otherwise to
+`decision(fails)`; indeterminate maps to `indeterminate`; out_of_frame and
+invalid_basis are returned directly as those core values. The RF `conflict`
+cause is conditional on the conjunction already reporting falsified. A later
+falsified return never overrides a different earlier non-satisfied mandatory
+value merely to manufacture conflict. Disagreement metadata and counterexamples
+remain present whichever core value the declared rule reports. Gaps are records
+beside this result, never synthesized component values. This entire method
+result is distinct from the tool operation's output-availability outcome.
+
+
+## Existing records, refresh and accounting
+
+`work.project` supports exact JSON-pointer and Markdown-heading projections of
+named authoritative carriers, keeping raw original content and source identity.
+It does not derive a work-state value from incidental prose. `work.write` is a
+named interface for an already-authorized Writer record. It checks fixed
+current caller Worker role and named Writer operation grant, exact target territory/preimage and
+material observations, acquires a per-target lock, rechecks them and writes
+complete exact bytes only under the qualified same-directory atomic publication
+contract below; an unsupported filesystem refuses before the effect. Appending
+preserves original bytes; replacing requires the explicit selected update grant.
+Absent-file creation publishes a fully written/fsynced temporary file by
+exclusive atomic link; any conflicting writer or unexpected target refuses
+rather than overwrites or exposes partial target bytes. Symlink and protected-policy/
+evidence aliases refuse. Caller record wording and optional interpretation
+remain separate; it neither invents an owner ruling nor adopts a recommendation.
+Actual postimage and observed write end are retained before returning.
+
+`refresh.prepare` compares actual observations and declared transitive evidence
+dependencies. Affected support is the intersection of declared dependency
+closure and the supplied conservative impact cover. It retains missing
+coverage/invalidator premises as unknowns, names new obligations and mandatory
+gates, and does not prove non-influence from absent edges. Retention on a new
+subject requires the registered applicability/preservation evidence; originals
+remain bound to old subjects. Unchanged applicable support survives role/session
+changes. Handoff names exact current work carriers, original/successor results,
+valid-support relations, source routes, residuals and unreconciled attempts;
+it needs no hidden conversation or replay of unaffected work. Frozen studies
+are never refresh targets.
+
+`resources.aggregate` accepts only actually retained attempt/operation records.
+It rejects conflicting records for the same evidence identity and deduplicates
+replays of that same attempt/counter identity. Equal counter values from distinct
+attempts remain distinct contributions. Original failures, partial outputs, repair/retry/review/acquisition
+attempts and unknown usage remain visible. Integer nanoseconds represent time;
+provider counters keep units and raw source. Counter identity is attempt plus
+provider/counter id, unit and measurement scope; repeated cumulative snapshots
+of one counter are not additive. Select a supported authoritative snapshot or
+retain ambiguity; equal content alone is not a deduplication key. Cache/reasoning subsets are marked
+as subsets and never added twice to totals. Wall elapsed is the union/enclosing
+boundary declared by the accounting contract; summed actor duration is reported
+separately and overlapping intervals are explicit. Known-subtotal and unknown
+population are both reported; missing usage is not zero. Unsupported pricing
+or a counter's undocumented scope is not guessed. Selected limit checks are
+finite declared predicates. No accounting result claims accepted-result benefit.
+
+## Module contracts and composition
+
+Use Python 3.11+ stdlib, the existing codec and explicit typed JSON/dataclasses.
+No package installation, global MCP configuration, network service, database
+or second runtime is required. Three files separate deterministic relations,
+local effects and public transport; no speculative generic framework is added.
+
+| Module | Owned boundary and exported seam |
+|---|---|
+| `code/ac_support_core.py` | Strict grammar and refusal type, Runtime/policy/source/profile binding, source/observation/model/context relations, read/query/review/return/check/conjunction/refresh/resource operations and inventory/schema data. Exports `SupportError(code, reason, gaps, source_refs)`, `Runtime.from_policy(path, expected_sha256, principal)`, `canonical(value)`, `digest(value)`, `read_source(runtime, ref)`, `observe(runtime, scope)`, `check_preconditions(runtime, recheck_set)`, `inventory(operation=None)`, `request_schema(operation=None)`, `parse_request(raw_bytes)`, `validate_request(request)`, `execute_read(runtime, request) -> CoreOutcome` and `build_preflight(runtime, request) -> EffectPlan`. No F_P actor, registered-executor or general-effect launches, and no authoritative carrier writes. Fixed-argv read-only Git plumbing is allowed solely as the immutable-source acquisition primitive, bound to the exact registered root, full object, member path and blob hash, with observed Git executable/configuration scope; no shell, hooks, filters, checkout, configuration mutation, moving-ref substitution or lazy network fetch. This allowance exposes no arbitrary subprocess primitive or new capability. |
+| `code/ac_support_effects.py` | Protected EvidenceStore, exact preflight receipt persistence, attempt reservation/supervisor, fixed-executor dispatch/observe/cancel/events, Writer effect membrane and retained evidence. Imports core; core does not import effects. Exports `EvidenceStore(runtime)`, `dispatch(runtime, request)`, `supervise(runtime, attempt_ref)`, `observe_attempt(runtime, request)`, `cancel(runtime, request)`, `wait_events(runtime, request)`, `write_record(runtime, request)`, `retain_operation(runtime, request, response)`. |
+| `code/ac_support.py` | Thin authoritative dispatcher, JSON CLI and legacy MCP stdio adapter. Imports both modules. Exports `execute(runtime, request)` and `main(argv=None)`. Validates once, routes to existing operations, retains exact response evidence; no independent method logic. Also owns the fixed internal supervisor entry point. |
+| `design/fd-method-claude-rc9.json` | Exact data binding to RC9 member bytes and owner routes. Unchanged profile identity/digest required by supported Runtime. No method source-body copy. |
+
+Core receives narrow read-only callbacks `resolve_artifact(ArtifactRef)->bytes`
+and `query_artifacts(kind, exact_match_fields)->HistoryQuery` from the effect
+edge. It never writes the store or imports effects. `Runtime.from_policy` may
+receive these callbacks as optional named parameters; an operation needing an
+absent callback returns the exact evidence gap, never an empty successful
+history. The immutable Runtime contains no mutable current-request slot.
+Core returns the complete-envelope CoreOutcome settled below or the exact EffectPlan below;
+the effect membrane retains the envelope and performs only its named operation.
+Every handler receives the full strict request, including its identity/hash;
+Writer and cancel calls cannot lose their idempotence/provenance key. Full raw
+bytes and canonical parsed/provenance identities are distinct. This seam avoids
+a circular import or hidden mutable request state.
+
+The core Worker owns the public argument/schema inventory in the core module;
+the integration Worker emits that one inventory and owns top-level routing
+tests. All Workers honor the operation names and argument keys above. If a
+required implementation changes a material semantic boundary,
+it returns the exact design gap to Executive; it does not silently pick another
+policy, algebra, state machine or authority route. Equivalent local algorithms,
+helper names and internal immutable types remain ordinary realization choices.
+
+## Repaired immutable carrier and history seams
+
+These are v2 clarifications/repairs A–G selected by Executive under the exact
+[T-008 repair contract](../../../.ai-workspace/qualification/t008/design/design-repair-001-contract.json).
+They preserve the frozen v1 subject and its original hashes; they do not claim
+that the v1 design passed independent assessment or that code already exists.
+Public request/response version 1 is still an unreleased construction contract;
+“v2” identifies this source design revision. Independent assessment of the
+separate frozen v1 subject returned falsified for decision completeness. That
+historical result is neither erased nor automatically adopted as disposition.
+V2 constructed only A–G and retained the additional supported review gaps.
+The separately admitted repair-002 now supplies the F1–F5 decisions below.
+Independent v3 assessment/disposition remains required; no historical review is
+rewritten and no overall design-acceptance or implementation-readiness decision
+is inferred from this authored candidate.
+
+### One retained envelope and stable payloads
+
+Every retained domain artifact has exactly these keys:
+
+```json
+{
+  "schema": "a_c.fd-support.artifact/1",
+  "kind": "context",
+  "provenance": {},
+  "payload": {}
+}
+```
+
+`provenance` has exact request id/hash, requester principal, activated target
+principal where present, Product/profile/policy digests, actual actor/producer,
+Attempt ref or null, and observed interval. These fields bind one actual
+operation, not just equal payload bytes. `ArtifactRef.sha256` covers the whole
+canonical envelope; its protected id resolves that immutable envelope. Raw blob
+storage may be content-addressed and shared; assessment and acquisition identity
+always retain activation/evaluation/producer/attempt provenance. Separate genuine
+executions with equal answers remain separate observations. Replaying one exact
+evidence identity is a duplicate, not a new independent assessment.
+
+The finite kind population is `observation`, `context`, `preflight`, `attempt`,
+`return`, `expectation`, `acquisition`, `operation`, `resource`, `raw` and
+`qualification`. Exact primary payload keys are settled as follows:
+
+| Kind | Exact payload keys |
+|---|---|
+| observation | `schema` (`a_c.fd-support.observation/1`), `scope`, `observed_interval`, `entries`, `bindings`, `git`, `diff`, `gaps` |
+| context | `schema` (`a_c.fd-support.context/1`), `packet`, `projections`, `sources`, `late_acquisition`, `boundaries`, `rendered_utf8`, `rendered_sha256`, `fit`, `observations` |
+| preflight | `schema` (`a_c.fd-support.preflight/1`), `context`, `contract_sha256`, `grant_id`, `executor_id`, `result_key`, `requester`, `target`, `decision`, `mechanism`, `authority`, `evaluations`, `recheck`, `gaps` |
+| attempt | `schema` (`a_c.fd-support.attempt/1`), `preflight`, `context`, `request`, `requester`, `target`, `executor`, `invocation`, `notification`, `result_key`, `retry_of`, `reconciliation` |
+| return | `schema` (`a_c.fd-support.return/1`), `attempt`, `raw_payload`, `return_contract`, `original`, `producer`, `transport`, `binding_checks` |
+| expectation | `schema` (`a_c.fd-support.expectation/1`), `claim`, `subject`, `producer`, `text`, `source_inputs`, `exposure_check`, `external_exposure` |
+| operation | `schema` (`a_c.fd-support.operation/1`), `request`, `response_without_evidence`, `artifacts`, `acquisitions`, `interval`, `resources`, `gaps` |
+
+Observation entries are exact root/path/existence/type/size/SHA-256 records,
+including untracked/new/deleted entries. Bindings hold policy/Product/profile
+and dependency references. Context retains full exact rendering; its ordinary
+public result is the selected summary/manifest and ArtifactRef, with actual
+content acquired through `evidence.read` or delivered by dispatch. Rendering is
+exactly the UTF-8 prefix `Use the activated frame and declared return contract below.\n` followed by tenant-canonical JSON with exactly `schema`
+(`a_c.fd-support.actor-context/1`), `packet`, `projections`, `sources`,
+`late_acquisition` and `boundaries`. Sources are actual acquired payloads with
+parent identities. Fit, rendered hash, store metadata and the rendering itself
+are outside that body, avoiding a self-counting/self-hashing context. The exact
+prefix plus JSON is measured and dispatched unchanged. An exceeded
+envelope never causes the full body to be supplied implicitly. A Return's
+`original` is the decoded original actor carrier or null if malformed; raw bytes
+survive both cases. Later binding/currentness checks are separate observations.
+
+Attempt is an **immutable reservation anchor**, not a mutable hash-bound file.
+Its later events, raw output, end/effect observations and final result are
+separate immutable records. `dispatch.observe` derives a current projection
+bound to that anchor and verified events. A stale snapshot remains a historical
+snapshot. No changing status invalidates or silently overwrites the Attempt ref.
+
+The operation-evidence payload's `response_without_evidence` uses null for the
+response evidence field. The final returned response points to this record;
+its hash never includes itself. This avoids circular identities while retaining
+the effective request/result and actual output artifact references.
+
+### Pure plans and actual edge rechecks
+
+V3 settles CoreOutcome as complete result/artifact envelopes, operation outcome
+and acquisition facts (the Realization seam below); effects persists those exact
+bytes and retains operation evidence without arbitrary placeholder patching. A CoreOutcome itself performs no persistence,
+admission receipt, dispatch or carrier write. A prepared effect uses:
+
+```json
+{
+  "schema": "a_c.fd-support.effect-plan/1",
+  "operation": "contract.preflight",
+  "request_id": "request-001",
+  "request_sha256": "64 hex characters",
+  "requester_principal": "executive",
+  "target_principal": "worker",
+  "policy_sha256": "64 hex characters",
+  "recheck": {},
+  "payload": {}
+}
+```
+
+`target_principal` is null where there is no activation target. The prepared
+payload contains the exact admitted operation binding above, not arbitrary
+executable instructions. No public request accepts a raw EffectPlan or changes
+its operator identity. The dispatcher constructs it from the validated request
+and trusted policy; the effect membrane compares the full request digest and
+policy and reruns the named checks at the actual effect edge.
+
+RecheckSet has exactly `schema` (`a_c.fd-support.recheck/1`), `policy_sha256`,
+`product_definition`, `method_profile`, `sources`, `observations` and
+`executor_dependencies`. `check_preconditions(runtime,recheck_set)` freshly
+acquires those exact source/preimage and Observation scopes and returns actual
+observations, changes and gaps. A required stale/missing premise prevents the
+dependent effect; new observations are retained by effects. An old successful
+boolean is not a fresh check. Core preflight returns a plan with its finite
+findings; the admission decision/receipt becomes durable only through the
+selected effect-owned mechanism and protected policy authority.
+
+Effects exports `EvidenceStore.resolve(ref)->bytes`,
+`EvidenceStore.query_artifacts(kind,exact_match_fields)->HistoryQuery` and
+`EvidenceStore.retain(kind,payload,provenance)->ArtifactRef`. All public effect
+handlers take `(runtime, request)`, not an arguments-only object or hidden
+mutable current-request global. Equivalent local immutable helper types are
+allowed; these cross-module JSON meanings and effect ownership are fixed.
+
+### Verified cross-process history and exposure
+
+HistoryQuery has exactly `refs`, `complete`, `gaps`, `scope` and
+`observed_at_ns`. The store enumerates/rebuilds its protected immutable operation
+history within the declared Product/principal/evidence scope. Any index is only
+an accelerator: entry bytes/hashes and exact match fields are verified, and a
+stale index cannot hide a later record. Core independently resolves and checks
+returned matching envelopes. Unreadable/corrupt/in-flight history or an unknown
+history prefix produces explicit incomplete coverage/gaps, never an apparently
+complete empty list. A caller can still acquire partial known records; a
+predicate requiring complete history cannot rely on that incomplete result.
+
+Every operation actually supplying source/candidate-derived content retains an
+acquisition record: recipient/requester actor, exact parent source/model/carrier
+identity, supplied selection/range/record population, operation, observed
+delivery interval and request/attempt provenance. This includes source.read,
+records.read/find, graph.project, evidence.read of such content, review content
+acquisition and actual dispatched context delivery. A manifest/hash alone is
+not recorded as full payload delivery. Partial/unknown delivery stays scoped.
+
+A known claim supplies its exact candidate-source population through its bound
+claim source and explicit candidate reference. Matching uses verified source
+identity/digest and actual selection overlap; model acquisition may additionally
+match an exact model id/digest under its declared representation equivalence.
+No guessed semantic source mapping is introduced. When a claim becomes known,
+its check queries earlier acquisitions retrospectively; source.read or record
+reads before review.prepare cannot disappear across CLI processes or sessions.
+Concurrent intervals that do not establish order remain uncertain. Unobserved
+external exposure is always a separate unknown, even when public history is
+complete. The tool reports observed ordering, not an unconditional certificate
+of independent reasoning or absence of prior knowledge.
+
+### Actual F_P expectation recording
+
+The new public `expectation_body` is null or exactly
+`{"text":"supplied F_P wording","source_inputs":[ArtifactRef]}`. In an
+expectation request with a null body, review.prepare acquires permitted source
+content only. A nonnull body records the fixed Reviewer's actual supplied text;
+`source_inputs` name prior protected acquisition records showing that exact
+authority was delivered to that same actor before this request. Missing or
+wrong-actor source delivery is a provenance gap. The tool retains the text even
+where those premises fail but does not claim that the source-first condition
+holds. It never generates the expectations itself.
+
+The resulting expectation ArtifactRef is the existing `expectations` input to
+candidate preparation. `candidate` can bind the exact candidate's coordinates
+in an expectation request without reading its bytes. Accidental source-input
+intersection with candidate material is still an exposure and is retained.
+This is acquisition versus supplied F_P recording through one operation, not
+a new methodology phase/stage sequence or universal extra review. Wording's
+semantic adequacy and whether its assertion was truly derived stay F_P review
+questions; acquisition, assertion producer and execution provenance remain
+separate. Executive can prepare source/context for a target Reviewer, but cannot
+impersonate that Reviewer by filling a packet role label or recording independent
+expectation text as that target. Direct Reviewer recording uses its own bound
+principal and existing read/evidence grant.
+
+### Requester versus activated target
+
+Runtime's startup principal is the **requester**, whose actual role/capability
+and allowed tool operation are checked. The packet's actor/role is the
+**activated target**, separately resolved through policy and the selected
+executor's actor. A grant's `principals` are allowed requesters; its new
+`targets` list names permitted activated principal ids. Preflight requires
+both relations, exact packet/profile additions and the selected executor target
+to agree. An Executive with coordination authority may therefore assemble,
+preflight and dispatch a Worker/Reviewer context without becoming its target.
+
+Direct work.write uses the current requester Worker role and exact named Writer
+operation grant. A Writer is that bounded Worker recording relation, not a
+fourth methodology role or an Executive temporarily impersonated by JSON.
+Executive/Reviewer requests cannot gain mutation from a target packet, delegated
+Worker capability or allowed dispatch. Tool evidence remains downstream outside
+the Product/worktree as before. A direct Worker record and dispatched Worker
+operation keep their distinct caller/target/effect provenance.
+
+### Supplied qualified-operator evidence
+
+The operator policy entry now includes `qualification`, a SourceRef or ArtifactRef
+to an externally supplied declared qualification claim/evidence. Runtime checks
+that this record binds the exact operator id/definition/rule, method/profile,
+actual implementation/dependency digests, exercised fragment and cited proof
+sources under the selected owner qualification contract. Missing, stale,
+wrong-rule or wrong-implementation support refuses `unqualified_operator`.
+
+Registration and matching labels/body hashes do not establish qualification.
+The trusted owner selects the external qualification claim; tooling checks its
+declared coordinates and actual cited bytes, not recursively inventing semantic
+qualification of itself. The semantic/evidence authority and qualification
+limits remain external and explicit. A finite source-derived operator-control
+proof can supply bounded evidence before actual use; the join cannot bootstrap
+its qualification merely by calling itself. All source-owned gap, original
+predicate/domain-outcome, unordered non-satisfied and failure-survival rules
+remain as specified above.
+
+### Exact requirement-to-RC9 routes
+
+The profile's `requirement_routes` maps every FD/FDV id to its ordinary operations
+and exact RC9 member/hash/clause references. These are the deciding support
+owners for this finite execution binding. The prior common-candidate owner map
+is still derivation history. No whole-corpus semantic equivalence or automatic
+translation from common to RC9 is asserted. Unresolved rules beyond these
+checked contracts remain F_P source questions or unsupported operations.
+
+## Three-view projection
+
+These are projections of the ontology and operation contracts above. The state
+view concerns **attempt/evidence observation**, not an a_c task lifecycle.
+The prior codec boundary is unchanged and cites [its design](README.md).
+
+```mermaid
+classDiagram
+  class OwnerPolicy {
+    <<authoritative>>
+    +id
+    +sha256
+    +productBinding
+    +existingGrants
+  }
+  class MethodBinding {
+    <<authoritative>>
+    +exactCut
+    +sourceRoutes
+  }
+  class Runtime {
+    <<effect-edge>>
+    +fixedPrincipal
+    +policyDigest
+  }
+  class SourceRef {
+    <<subordinate>>
+    +engine
+    +exactIdentity
+    +wholeDigest
+  }
+  class Observation {
+    <<downstream>>
+    +scope
+    +actualBytes
+    +time
+  }
+  class ModelRef {
+    <<subordinate>>
+    +modelIdentity
+    +carrierIdentity
+  }
+  class Context {
+    <<downstream>>
+    +selectedPacket
+    +acquiredPayload
+    +fitEvidence
+  }
+  class Preflight {
+    <<downstream>>
+    +contractDigest
+    +policyAuthority
+    +requester
+    +activatedTarget
+    +admissionEvidence
+  }
+  class Attempt {
+    <<effect-edge>>
+    +reservedIdentity
+    +invocation
+    +observedEffects
+    +endEvidence
+  }
+  class ClosedReturn {
+    <<downstream>>
+    +originalPredicate
+    +originalDomainOutcome
+    +exactBindings
+  }
+  class OperationEvidence {
+    <<downstream>>
+    +requestResponse
+    +provenance
+    +producerAttemptIdentity
+    +verifiedHistory
+  }
+  class ExistingCarrier {
+    <<authoritative>>
+    +ownerSource
+    +preimage
+  }
+  class EvidenceStore {
+    <<effect-edge>>
+    +protectedNamespace
+    +completeMarkers
+    +verifiedHistory
+  }
+  class EventSink {
+    <<effect-edge>>
+    +registeredIdentity
+    +declaredConsumer
+    +retention
+  }
+  class Principal {
+    <<authoritative>>
+    +role
+    +declaredCapabilities
+  }
+  class Executor {
+    <<effect-edge>>
+    +fixedInvocation
+    +qualifiedObservers
+  }
+  OwnerPolicy "1" --> "1" MethodBinding : selects exact binding
+  OwnerPolicy "1" --> "1..*" Principal : binds without role inference
+  Runtime "1" --> "1" OwnerPolicy : trusted startup
+  Runtime "1" --> "1" EvidenceStore : acquire verified history and persist
+  OwnerPolicy "1" --> "1" EvidenceStore : selects exact result surface
+  OwnerPolicy "1" --> "0..*" EventSink : registers exact endpoints
+  EvidenceStore "1" --> "0..*" OperationEvidence : publishes complete records
+  EventSink "1" --> "0..*" OperationEvidence : delivers existing event refs
+  Observation "1" *-- "1..*" SourceRef : exact acquired scope
+  Context "1" --> "1..*" Observation : uses current inputs
+  Context "1" --> "0..*" ModelRef : projects declared closure
+  Preflight "1" --> "1" Context : binds exact digest
+  Preflight "1" --> "1" OwnerPolicy : external authority
+  Attempt "0..*" --> "1" Preflight : rechecks before launch
+  Attempt "1" --> "1" Executor : fixed registered operation
+  Attempt "1" --> "0..*" ClosedReturn : retains originals
+  Attempt "1" --> "1..*" OperationEvidence : retains actual observations
+  ClosedReturn "1" --> "1..*" OperationEvidence : traceable evidence
+  ExistingCarrier "1" --> "0..*" Observation : projects no new authority
+  Principal "1" --> "0..*" ExistingCarrier : Writer only under exact grant
+```
+
+```mermaid
+sequenceDiagram
+  participant P as Principal
+  participant R as Runtime
+  participant M as MethodBinding
+  participant O as OwnerPolicy
+  participant S as SourceRef
+  participant C as Context
+  participant F as Preflight
+  participant A as Attempt
+  participant X as Executor
+  participant E as OperationEvidence
+  P->>R: select question, frame, sources and declared operation
+  R->>M: verify exact supported cut and source routes
+  R->>S: acquire current permitted bytes and declared closure
+  R->>C: render selected packet and measure exact supplied boundary
+  R->>E: query verified prior return and source exposure history
+  R->>O: check caller coordination grant and activated target separately
+  R->>O: resolve existing grant and selected admission predicates
+  alt missing authority, basis, closure or fit
+    R->>E: retain exact refusal and deciding gap
+    R-->>P: return source-owned refusal, no Worker result
+  else finite admission conditions hold
+    R->>F: bind contract digest, mechanism, authority and checked premises
+    P->>R: dispatch selected exact Preflight
+    R->>O: recheck policy, sources, dependencies and preimages
+    R->>A: reserve named attempt before launch
+    A->>X: fixed invocation and exact retained context
+    X-->>A: acknowledgment, output and observed process end
+    A->>S: acquire declared subject/effect observations
+    A->>E: retain raw evidence, partial output, unknowns and notifications
+    E-->>P: deliver named result/event routes to declared consumer
+    P->>R: capture/check return or request bounded reconciliation
+    R->>E: preserve original verdict and separate currentness findings
+    R-->>P: exact closed evidence or non-consumable gaps
+  end
+  Note over P,E: F_P selects/assesses/disposes; no tool output activates another step
+```
+
+```mermaid
+stateDiagram-v2
+  [*] --> Reserved: dispatch reserves exact request after preflight
+  Reserved --> RefusedBeforeLaunch: supervisor detects changed premise
+  Reserved --> Launched: registered executable start observed
+  Reserved --> CompletionUnknown: launch response or supervisor lost
+  Launched --> OutputObserved: actual output acquired
+  Launched --> CancellationRequested: authorized cancel or timeout request
+  OutputObserved --> EndObserved: process end actually observed
+  OutputObserved --> CompletionUnknown: end or external effect undecided
+  Launched --> EndObserved: process end observed without output
+  CancellationRequested --> EndObserved: actual process end observed
+  CancellationRequested --> CompletionUnknown: request does not establish end
+  EndObserved --> EffectChecked: registered subject observer executes
+  EndObserved --> CompletionUnknown: external effect or descendants unknown
+  EffectChecked --> Completed: full intended effect and end established
+  EffectChecked --> NotEffected: subject counterexample establishes outcome absent
+  EffectChecked --> CompletionUnknown: admitted evidence cannot decide
+  NotEffected --> EndUnestablished: counterexample retained but end still unknown
+  EndUnestablished --> EffectChecked: authorized reconciliation observes subject and end
+  CompletionUnknown --> EffectChecked: fresh authorized reconciliation acquires evidence
+  Completed --> [*]: retain closed effect observation
+  NotEffected --> [*]: retain counterexample and end evidence or explicit residual
+  RefusedBeforeLaunch --> [*]: retain no-launch evidence
+```
+
+`NotEffected -> EndUnestablished` does not rewrite the effect verdict; it names
+the attempt's unresolved-end observation state for reliance/retry. The retained
+not_effected outcome and counterexample survive. No terminal observation grants
+continuation; another attempt needs a new exact admitted invocation and, where
+applicable, reconciliation. Raw output never transitions to accepted Product.
+
+### Cross-view check of the candidate design
+
+These are Writer design evaluations, not independent acceptance. Source review
+must test their support. `pass` maps only to the design predicate named by
+DESIGN_MODULE §7; implementation enforcement remains unperformed.
+
+| Axiom | Ontology evidence | Authority | Domain evidence | Sequence evidence | State evidence | Native enforcement | Admission/compiler enforcement | Verdict | Gap owner |
+|---|---|---|---|---|---|---|---|---|---|
+| Exact identity/basis and no implicit composition | SourceRef/ModelRef, invariants 1–3 | RF-005; PDEF | exact digest associations | exact binding/acquisition | changed-premise refusal | closed JSON/typed refs planned | policy/profile/preimage checks planned | pass for design | implementation/assessor |
+| Authority conservation, no Executive/Reviewer mutation | policy/principal and invariant 4–5 | RF-006; EXEC §6 | Writer-only carrier association | separately selected grant | refusal before launch | fixed principal/op family planned | protected policy, exact territory planned | pass for design | implementation/assessor |
+| Material closure and bounded context | Context, invariants 2/8 | ACT §2; AC-010/011 | acquired payload and fit evidence | closure then measure before delivery | refusal/unknown retained | existing project_many reused | no truncation, unknown host preserved | pass for design | implementation/assessor |
+| Honest effects, cancellation and reuse | Attempt, invariants 6–7 | ACT Effects/§5/7 | invocation versus observers | output and end separate | uncertain/end/counterexample paths | separate variants planned | subject observer/reconciliation planned | pass for design | executor qualification |
+| Closed results and joins retain gaps | ClosedReturn and invariant 7–8 | FOUND Results/Conjunction | original predicates retained | capture then checks | output never accepts Product | finite operator planned | exact plan/basis/coverage rules planned | pass for design | implementation/assessor |
+| Source-first independent review | review acquisition contract | EVAL §§2–4 | separate principal/exposure evidence | source expectations then candidate | role change does not erase evidence | immutable expectation record planned | policy authorship/family checks planned | pass for design | independent assessor |
+| Reconstructable owned truth, no rival work ledger | ExistingCarrier/evidence | TICK §7; ACT §5 | downstream versus source stereotypes | named durable evidence | attempt observations only | immutable evidence refs planned | Writer preimage/grant membrane planned | pass for design | implementation/assessor |
+| Graph-owned workflow/runtime admission | no graph-native workflow Product selected | Product boundary; RF-016 | external Executor, no task graph | named local process effect | not a graph execution state machine | not applicable | method coordinates F_P externally | not_applicable | none: actual Product scope |
+| Complete a_c calculus execution | existing unsupported operations unchanged | AC-R-011/012; Product | finite model/projection reuse only | no arbitrary predicate execution | no transformation states | unsupported explicit | finite source-bound predicates only | not_applicable to full conformance claim | Product owner if scope changes |
+
+Every public operation maps to a carrier transform or explicit effect above.
+No lifecycle state uses a process-local controller as authoritative task truth.
+Unknowns in actual run/executor/independence evidence remain proof obligations;
+these design-level evaluations do not erase them.
+
+## Qualification plan and requirement-to-module trace
+
+Tests derive from the common requirement/scenario authority and the source-owned
+failure conditions, with source-selected expectations established separately
+from implementation. They must contain real positive paths as well as meaningful
+controls; a stub that always refuses or always reports satisfaction cannot pass.
+This is the complete planned first-fragment inventory, not executed evidence.
+
+| Requirement | Public operations and owning module | Deciding positive and adverse proof |
+|---|---|---|
+| FD-001 | describe; core inventory, integration CLI/MCP | Ordinary actors discover actual schemas; unsupported op/profile refuses; protocol/schema parity. |
+| FD-002 | observe/read; core, effect recheck | Dirty and new untracked bytes change observation while HEAD fixed; new path in tree scope and changed dependency/policy block dependent effect; unrelated scope preserved. |
+| FD-003 | source/records/evidence read/find; core | Direct raw authority and proof content, exact slices/grounding; stale hash, missing map, denied scope, symlink and malformed source refuse/gap. |
+| FD-004 | relations.query/project/checks; core | Authored closure cycles and conditional true/false/missing premises; inferred edge cannot govern, incomplete absence cannot prove unaffectedness. |
+| FD-005 | context.assemble; core | Real records/source acquired and exact stdin count; locator-only, denied late read, excess and unknown host remain distinct; no trimming. |
+| FD-006 | preflight; core + effects receipt | Product-bound trusted grant actually admits supported contract; fabricated receipt, wrong Product/outcome/basis and missing durable surface refuse. |
+| FD-007 | dispatch/observe/cancel/events; effects | Real registered process and actual F_P actor; invocation drift, changed helper/preimage, timeout, lost response, partial write, unknown descendant and bounded fallback retain actual distinctions. |
+| FD-008 | return capture/check; core + retention edge | Original valid/stale/wrong-subject/wrong-basis/malformed/duplicate/conflicting returns; no unperformed review result and no duplicate independence. |
+| FD-009 | review.prepare, raw proof access/diff; core | Nonauthor source-first expectations then exact candidate/tests/fixtures acquired through public tools; early exposure and same-family-without-policy cannot certify independence. |
+| FD-010 | checks/conjoin; core | Decidable truth/false/unknown, method gap-versus-invalid_basis, original domain outcomes, stale component and nested failure/gap survival; necessary-condition cannot satisfy stronger predicate. |
+| FD-011 | work.project/write; effects + core projections | Actual already-authorized Writer record with correct pre/postimage; forged grant, Executive/Reviewer mutation, symlink/protected path, conflict and out-of-territory writes refuse. |
+| FD-012 | refresh/handoff; core + retained evidence | Changed source affects declared dependent support, unchanged supported survivor remains; incomplete impact unknown, original verdict/history retained, fresh actor resumes without blind retry. |
+| FD-013 | resources.aggregate; core + effect observations | Partial/failed/retried calls and real acquisition/review recorded; unknown counter not zero, duplicate ids/subsets not double-counted, overlapping summed versus elapsed times distinct. |
+| FDV-001 | all ordinary JSON/MCP interfaces | One actual bounded Product task: Executive prepares/dispatches; Worker acquires source/proof; nonauthor Reviewer records expectations and accesses candidate/proof; no private builders or fixtures supply semantic answers. Retain exact raw interfaces and actor settings. |
+| FDV-002 | all adverse/control paths above | Execute SC-AC-FD-002..014 and fresh handoff with exact source/profile/candidate/assertion/run identities. Every unexercised variant stays an explicit gap. |
+| FDV-003 | resource/acceptance evidence capability only | SC-AC-FD-015 matched accepted-result benefit study remains unperformed. Support records the required accounting; it makes no efficiency/quality/compression claim. |
+
+Qualification runs include the existing tenant regressions appropriate to the
+unchanged codec reuse and an actual pinned-upstream compatibility trial before
+renewing a Graphify compatibility claim. New source/profile/dispatch tests do
+not replace the prior codec's proof. Protocol tests run real subprocess stdio,
+not only direct handler calls. A process fixture is a control for deterministic
+transport/effect law, not an F_P semantic reviewer. Actual independently
+source-derived assessment is separately activated by Executive and may use the
+available Claude CLI with exact configuration/usage preserved. Fixtures do not
+supply its expected answers. No expensive broad usefulness claim is selected.
+
+### Disjoint implementation grants proposed for Executive selection
+
+These are proposed territories, not active grants. Each activation must bind its
+exact accepted design preimage, source, grant, result surface and invalidators.
+
+1. **Core Worker**: new `code/ac_support_core.py`, new
+   `test_env/test_ac_support_core.py`. Own strict grammar/policy/source/model/
+   context/read/query/return/review/check/conjunction/refresh/accounting relations
+   and their source-derived tests. Read other seams; do not edit codec, effects,
+   adapter, common WHAT, frozen studies or another Worker's files.
+2. **Effect Worker**: new `code/ac_support_effects.py`, new
+   `test_env/test_ac_support_effects.py`, new regular-file process fixtures under
+   `test_env/support_fixtures/`. Own protected evidence, admission receipt,
+   exact executor lifecycle/observations, event fallback, Writer membrane and
+   adverse effect tests. Consume the declared core seam without changing it.
+3. **Integration Worker**: new `code/ac_support.py`, new
+   `test_env/test_ac_support_interfaces.py`, tenant README ordinary-use guidance,
+   new example policy/request carriers under `examples/fd-support/` and a new
+   qualification README/inventory. Own shared public schema/routing conformance,
+   CLI/MCP actual subprocess tests and runnable public path. Example policy is
+   visibly operator-authored demo configuration, never an active owner grant.
+
+Workers 1 and 2 may develop disjoint modules against these accepted contracts.
+Worker 3 integrates after their closed candidates, using supported public seams.
+A seam defect is returned to Executive and repaired only by a new named grant;
+workers do not silently edit each other's source. A separate Writer records
+Executive dispositions/evidence in T-008/basis/Goals and any authorized checkpoint.
+The independent assessor edits none of the assessed candidate. Design review
+must close material underconstraint before retained implementation.
+
+## Design-stage claim boundary
+
+This candidate settles a small finite implementation: one exact RC9 method
+binding, real public source/context/check/dispatch/evidence tools, registered
+local executors and a thin legacy MCP adapter. It promises no OS sandbox,
+universal method engine, semantic oracle, whole-workspace graph completeness,
+accepted-result benefit, Product acceptance or release. Complete calculus
+execution and unsupported methods/translations are outside this fragment.
+Executor/host evidence and actual use are qualified only when exercised. The
+finite design claim is available for independent source review; code and
+operational qualification remain downstream of Executive disposition.
+
+## Pinned protocol references
+
+The stdio adapter implements the **legacy MCP 2025-11-25** boundary only:
+`initialize`, `notifications/initialized`, `ping`, `tools/list`, `tools/call`.
+For every valid initialize it responds with supported revision 2025-11-25,
+including when the requested revision differs; the client may disconnect if
+it cannot use that revision. Malformed/incompatible initialization may refuse;
+it makes no latest/current-protocol claim and does not implement the modern
+`server/discover` era. Startup requires the fixed trusted policy and principal;
+there is no global host installation or configuration effect.
+
+Transport is newline-delimited UTF-8 JSON-RPC; stdout contains protocol messages
+only. Initialize/initialized precede tool calls. All tools expose the same
+argument schemas as CLI and return structuredContent plus serialized JSON text;
+operation refusals use tool `isError`, whereas malformed/unknown protocol/tool
+requests use the applicable JSON-RPC error. No task-augmented execution,
+resource/prompt endpoints or unsupported notification capability is advertised.
+Internal async Attempt handles are domain records, not claimed MCP Tasks.
+
+Primary exact-version references: [stdio transport](https://modelcontextprotocol.io/specification/2025-11-25/basic/transports),
+[lifecycle](https://modelcontextprotocol.io/specification/2025-11-25/basic/lifecycle)
+and [tools](https://modelcontextprotocol.io/specification/2025-11-25/server/tools).
+The adapter uses stdlib and does not import the I5 study server or an external
+MCP SDK. Actual protocol qualification remains to be executed.
+
+## V3 closing declarations for selected F1–F5
+
+These close the specific semantic choices exposed by the frozen-v1 assessment,
+under [repair-002](../../../.ai-workspace/qualification/t008/design/design-repair-002-contract.draft.json).
+They are tenant binding decisions under exact RC9 SPEC_METHOD §11, not changes
+to the method. The v1 assessment retains its original falsified predicate and
+subject. Review recommendations were inputs to Executive selection, not
+mechanically adopted rulings. Source parents are pinned in the profile.
+
+### F1: operation availability, facts and requested judgments
+
+Every supported named operation has the computational boundary predicate:
+**B(op): the operation yielded its declared exact output/effect-evidence payload
+on the requested supported basis under its input and effect contract.** This
+predicate says nothing about the requested F_P answer being true, an admission's
+upstream outcome being authorized, a candidate being fit or accepted, a diff
+being semantically material, or external work being complete. Its result is
+`operation_outcome`, distinct from transport `status`, computed facts and every
+returned method/F_D predicate. This is the tenant-declared operation refinement
+per SPEC_METHOD §11 and FOUNDATIONS Results, with the source parent in the
+core; it does not borrow a method refinement's value with a different predicate.
+
+`operation_outcome` is null when strict request/startup/protocol validation never
+bound a supported operation. Otherwise it has exactly `predicate`, `value`,
+`cause`, `core_value`, `source_parent`, `evidence` and `limits`. Predicate is B(op)
+with exact op/subject/basis. The closed values are:
+
+| Boundary value | Cause | Core parent, exact RC9 owner |
+|---|---|---|
+| `returned` | Declared exact payload, including an honest negative/unknown inner judgment, is available as contracted. | satisfied, FOUNDATIONS Results |
+| `held(observation)` | Operation began but external acquisition/observation or evidence publication cannot decide output availability. | indeterminate, FOUNDATIONS Results |
+| `held(effect)` | Operation began and its contracted effect/output cannot be decided; known partial facts and end uncertainty remain. | indeterminate, FOUNDATIONS Results; actual effect separately uses ACTIVATION Effects |
+| `refused(constraint)` | Demonstrated violation of this operation's declared request/effect constraint prevents its output. | falsified, FOUNDATIONS Results |
+| `refused(basis)` | Only missing/stale/mismatched/ambiguous exact input or qualified support prevents the operation; no input truth is rewritten. | invalid_basis, FOUNDATIONS Results |
+| `refused(authority)` | The named operation/acquisition/effect or durable surface has no applicable admitted authority. | out_of_frame, FOUNDATIONS Results; governing activation guard separately uses RF §5/ACTIVATION §3 |
+| `refused(capability)` | Requested capability/operation/measurement is outside the selected finite supported contract. | out_of_frame, FOUNDATIONS Results |
+
+These seven values map once. Where a performed operation observes several
+conditions it retains each separate check/fact. The reported boundary cause
+uses this decision order: no supporting exact basis; missing authority;
+unsupported capability; demonstrated operation-constraint violation;
+unresolved effect; unresolved observation; otherwise returned. This is only
+this computational boundary's qualified discriminator, not a precedence over
+returned semantic/core results. A check that actually demonstrates a constraint
+counterexample keeps its own falsified judgment even if the operation's missing
+basis prevents its declared output. No evidence or evaluation is discarded.
+
+The refusal `code` population is closed and maps to those causes:
+
+| Code(s) | Boundary value | Precise discriminator |
+|---|---|---|
+| `malformed_request`, `unknown_operation`, `invalid_initialize`, `unsupported_protocol_method` | none; operation_outcome null | No supported named operation was activated. These are parser/protocol facts, not evaluation verdicts. |
+| `unsupported_contract`, `unsupported_measurement`, `unsupported_translation`, `unsupported_executor`, `unsupported_check` | refused(capability) | Request needs an undeclared operation/capability in this finite binding. |
+| `authority_missing`, `acquisition_denied`, `result_surface_denied`, `role_effect_denied`, `transition_record_missing` | refused(authority) | Governing authority/role/territory/surface relation is absent, not manufactured from its request. |
+| `basis_missing`, `basis_ambiguous`, `basis_stale`, `source_missing`, `digest_mismatch`, `dependency_changed`, `history_incomplete`, `unqualified_operator`, `domain_invalid` | refused(basis) | Exact declared basis/reference/proof support cannot establish this operation's output. |
+| `path_refused`, `budget_exceeded`, `request_identity_conflict`, `target_conflict`, `contract_violation` | refused(constraint) | Concrete syntax/path/size/identity/preimage contract is demonstrably violated. |
+| `observation_unavailable`, `evidence_publication_failed`, `internal_failure` | held(observation) | Begun operation lacks deciding observation or published evidence. Internal failure is never a semantic counterexample. |
+| `effect_unreconciled`, `effect_completion_unknown` | held(effect) | Intended effect/output remains unknown or an effect's end is unestablished. |
+
+A failure known before any named operation began instead has null boundary
+outcome; the same textual diagnostic cannot be presented as a performed
+semantic evaluation. No arbitrary new exception code is added downstream.
+Unexpected exceptions are retained as `internal_failure` with actual failure
+scope; original actor/core results remain untouched.
+
+All operations admit returned plus authority/basis/capability/observation causes
+where their public inputs need those relations. The additional exercised
+constraint/effect cases and inner source-parent mappings are explicit:
+
+| Operations | Additional causes / inner result binding |
+|---|---|
+| tools.describe | Unsupported requested contract is capability refusal; returned inventory is a fact, not method selection. |
+| workspace.observe, source.read, records.find/read, evidence.read, work.project | Path/scope/size request violations are constraint causes. Deltas, search matches, raw content and selected next-action/support/owner fields are facts with no semantic core value. |
+| graph.project | Budget violation is constraint cause; inexact input model/seed/dependency basis is basis cause. Actual AC-010/011 operation result separately uses AC-007: declared result/satisfied, hold/indeterminate, gap/invalid_basis, refusal(constraint)/falsified, refusal(basis)/invalid_basis on that AC operation's own predicate. |
+| relations.query, refresh.prepare | Declared path/impact/coverage/diff and survivor-candidate sets are computed facts, never RF audit_coverage or semantic non-influence judgments. An explicitly executed applicability/reuse predicate keeps its own declared domain/core result. |
+| context.assemble | Closure/basis failure is basis cause; measured excess is retained as a fit counterexample, not truncation. A rendered context may return with indeterminate/falsified fit; its boundary result establishes rendering availability only. If actual activation is requested by its contract, ACT §3 closure_unresolved/invalid_basis and RF §5 capability/authority/basis guards use their original activation predicate separately. |
+| contract.preflight | Output availability is a complete receipt/decision, not lawful activation inferred from its presence. ACT §3 admission_refused(authority)/out_of_frame and admission_refused(basis)/invalid_basis are separately recorded with their original predicate when those guards actually run. Unknown full-context fit makes the required admission basis insufficient; measured non-fit identifies the unavailable actor capability. |
+| dispatch.start/observe/cancel, events.wait | Identity conflict is constraint cause; undecided launch/effect/end is held(effect) only when the contracted output requires that decision. A truthful receipt/current unknown observation can itself be returned. Actual Effects values are completed/satisfied, not_effected/falsified or completion_unknown/indeterminate for the intended effect, with end separately recorded. No Worker availability verdict is invented. |
+| return.capture/check, review.prepare | Capturing malformed raw output can return successfully while schema/consumer/currentness checks falsify or invalidate their own predicates. Missing claim/source/exposure basis is reported; author/actor equality and exposure facts alone certify no semantic independence. |
+| checks.evaluate | Returning an actual negative/unknown F_D judgment is returned/satisfied only for B(op). The requested declared predicate keeps satisfied, falsified, indeterminate, out_of_frame or invalid_basis on its own exact domain, with unperformed syntax left without a judgment. |
+| results.conjoin | Qualification/basis failure refuses output. When a join actually executes, its RF §5 domain output and composite core are exactly the cardinality/rule binding above; no availability result overwrites them. |
+| work.write | Unauthorized role/territory refuses authority; id/preimage/path contract conflict refuses constraint; stale material basis refuses basis; unresolved external write/end/publication retains held(effect)/held(observation) and actual partial subject evidence. |
+| resources.aggregate | Duplicate-counter conflict is constraint cause; unknown/cumulative/overlapping counters remain facts/gaps. An actually executed selected resource-limit predicate has its own result. No cost-benefit verdict follows. |
+
+Method refinements retain original predicates and owner values. RF §5 activation
+causes map authority/capability to out_of_frame and basis to invalid_basis;
+ACT §3 closure_unresolved maps invalid_basis. AC-007's basis-versus-constraint
+rule applies to the AC operation actually judged: an invalid model used as a
+projection input is basis, whereas a structural judgment *of that model* may
+falsify its declared constraint. A source absence whose resolution is still
+open is a gap; an evaluated dangling reference is a constraint refusal for the
+model judgment. The wrapper does not classify by matching exception-message
+phrases: it knows the invoked check, its subject-versus-basis role and exact
+failed premise. Existing ac_graph refusals remain unchanged implementation data.
+
+### F2: Product-authorized admission and complete commit relations
+
+Runtime `product` has exactly `definition_id`, exact `definition` SourceRef and
+`authority_binding`. The latter has exactly `definition_locator`, `owner_record`,
+`mechanism`, `result_surface` and `scope`. `definition_locator` is an exact JSON
+pointer into an existing permitted Product-definition authority/design locator;
+`owner_record` is the exact authorized record it resolves to; `mechanism` binds
+id/source/implementation digest; `result_surface` binds its registered evidence
+root/namespace and authorized consumer; `scope` is the bounded existing work.
+The resolved owner record explicitly selects the mechanism and surface. An
+operator policy cannot introduce a different owner merely by asserting this
+chain. Missing/unresolved/unauthorized trace refuses real admission authority.
+
+The installed v2.5.1-rc.2 Product-definition schema SHA-256 is
+`e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf`;
+it has no admission key. No new installed-schema key is invented. For this
+source project, the existing reference-frame authority locator to T-008 and
+existing HOW design locator permit acquisition of the explicit selected tenant
+binding record in T-008. That record is a proposed HOW selection until the
+Executive accepts its design within the owner mandate; it does not create a
+new work grant or grant future consumers a global RC9 adoption. Other consumers
+must supply their own exact Product-definition-located authorized binding.
+The policy projects that existing record and its bounded outcome, never admits
+or renews the upstream outcome itself.
+
+The only public-runtime admission mechanism is product-policy-preflight/1. The
+external bootstrap mechanisms in this ticket remain historical deliberately
+independent realizations for the three named design-construction contracts.
+Their records prove only those exact admissions. They are not callable tools,
+default fallback, registered runtime competitors or permission for another
+contract. Their code/evidence remains for historical reconstruction, not as an
+undisposed same-scope runtime admission path. Reinterpreting one historical
+receipt as a new runtime admission is unsupported and refuses.
+
+The first qualified local effect model requires a local POSIX filesystem with
+qualified atomic same-directory file publication and fsync behavior, and
+cooperative serialization of participating mutable material inputs. Tool
+Writers use the shared scope/target lock protocol; registered executors and
+operator-controlled other writers honor the selected quiescent commit scope.
+Immutable exact snapshots require no mutable lock. If the requested currentness
+requires unsynchronized external mutation to be excluded but that premise is
+not supported, admission refuses/holds the actual gap; it does not claim a
+multi-file or cross-filesystem snapshot transaction. Ordinary basis advance
+before lock/edge recheck is detected. Hostile same-account mutation, arbitrary
+network/distributed transactions and unqualified filesystem publication are
+outside this finite effect binding, not silently weaker alternate paths.
+
+Admission and each external effect are different transition domains. No receipt
+claims a later process/write/notification effect has occurred. Each transition
+has one complete semantic commit; downstream evidence publication is a separate
+observable transition, never an incomplete authoritative entity accepted as
+truth. The exact enclosing participants and units are:
+
+| Owner / transition | Enclosing relation and basis continuity | Complete commit unit and reconstruction | Competing path |
+|---|---|---|---|
+| Product mechanism / Preflight admission | Exact Product/authorized owner binding, outcome/grant, packet/context, caller/target, method/profile, all material observation/dependency refs, executor/surface, applicable predicates and preimages. Reacquire/lock and validate every join before commitment. | One immutable complete Preflight receipt envelope after all referenced payloads are present/verified. Draft/staging artifacts confer no admitted truth. Reconstruct exact receipt and its complete references; absent marker means no receipt. | Only selected authorized mechanism; bootstrap historical scope as above, no request-supplied bypass. |
+| Effect membrane / Attempt reservation | Admitted receipt plus exact request key/hash, context, target/executor/settings, result surface, notification sink, retry/reconciliation and fresh required basis. | One complete immutable Attempt reservation anchor, atomically published before launch. No durable reservation means no launch. Exact replay returns the same reservation; conflicting key refuses. | Only registered supervisor path; no direct shell or user entry point establishes reservation/admission. |
+| Registered executor edge / Invocation | Existing reservation, exact executable/helper/config preimages, caller/target authority and fresh locked inputs. | Admission is already complete. Actual process start is an external effect, not transactionally coupled to evidence. Intent exists first; lost spawn/ack leaves completion_unknown, never automatic repeat. Fresh observation uses the anchor and actual process/subject evidence. | Registered executor only; arbitrary argv/projection-triggered execution unsupported. |
+| Writer membrane / one target record | Exact caller Worker/Writer grant, target preimage, intended whole postimage, authority/method/current dependencies, target lock and durable intent. | One whole target-file publication: complete new bytes or original/absent target. Existing replacement uses same-directory atomic replace; absent creation links a fully written/fsynced temp file exclusively into an absent target, never exposes a partially written new file. Reconstruct from durable intent and actual pre/post/other bytes; unknown other state cannot be reset or blindly retried. | Only named granted Writer interface for this tool domain; no Executive/Reviewer target impersonation or non-atomic fallback. |
+| Evidence store / immutable artifact or event | Exact complete envelope, all dependencies, provenance and content digest; protected namespace and existing evidence grant. | Complete same-directory atomic publication of one verified envelope. Raw/staged payloads are not admission markers. History only treats complete verified marker records as admitted evidence; orphan staging is not success. | One envelope grammar/verification path; optional indexes are nonauthoritative and rebuildable. |
+| Sink / one notification delivery | Registered sink id/root/consumer/retention and exact event payload, all already committed evidence refs. | One complete atomic sink event record. Delivery is that local publication; consumption is unobserved unless separately evidenced. Failed sink publication retains gap/fallback. | Registered durable-file-events sink only; no request-supplied network/file target. |
+
+A Writer intent is complete and durable **before** target publication and names
+preimage, exact intended postimage, operation/grant and request identity. The
+external target update and its post-observation/result publication are not one
+cross-filesystem transaction. An after-target evidence failure reports the
+actual observed effect or uncertainty, never rollback. A receipt/event/index
+failure cannot expose a subset as the complete admitted relation. Public reads
+verify all referenced content and marker validity before using that relation.
+
+Every materially distinct post-validation failure boundary is tested, without
+replacing commit failure by final-validation failure:
+
+| Boundary | Before/after failure and fresh reconstruction discriminator |
+|---|---|
+| staging bytes + file fsync | No admitted marker or target until complete staging; truncation/failure exposes no complete truth. Temp bytes may remain private/orphaned. |
+| atomic receipt/artifact/reservation marker publication | Immediately before: no complete transition; immediately after: exactly one complete marker with all refs. Request replay reconstructs that same outcome, never a subset. |
+| directory fsync after publication | Complete visible bytes may exist but durable-survival guarantee is unknown until qualified sync/observation. Report this actual uncertainty; do not undo or duplicate. Process interruption reconstruction distinguishes complete present marker from none. |
+| executor spawn and acknowledgment | Intent/reservation already durable; lost response cannot distinguish start/no-start without observation. No replay launches another child. |
+| external target replace/exclusive link | Immediately before: preimage/absence; immediately after: exact complete postimage. Supported filesystem/lock assumptions apply; no partial target is admitted. |
+| post-effect observation and result envelope | Missing/unavailable proof leaves intent plus actual current subject; retain unknown/partial facts and reconcile. No fabricated completed/no-effect record. |
+| sink delivery and optional index/checkpoint | Missing sink/index is not absent work. Full committed events reconstruct from markers; bounded fallback and unknown consumer receipt remain explicit. |
+
+For independent immutable records the staging/publication/fsync algorithm is the
+same semantic boundary: each instance is nevertheless exercised per owning
+admission/Writer/sink relation. No equivalence is claimed between an external
+process spawn, target mutation and evidence publication. No cross-filesystem
+atomicity is claimed. This is the complete supported partial-failure surface;
+new external publication mechanisms require a new qualified binding.
+
+The ACT §4 ten standing forms are planned per Preflight, reservation and Writer
+owner, with the relevant store/sink publication observations above:
+
+| Standing form | Supported proof/control |
+|---|---|
+| direct | Derive complete one-Product relation and commit once; positive controls for each owner. |
+| supported composite/nested | Receipt→reservation→executor or Writer uses exact constituent refs, separate complete transitions and fresh basis checks; no constituent alone proves the outer effect. Generic cross-Product/distributed atomic composition is explicitly unsupported, not a weaker alternate route. |
+| forged | Reachable request-minted receipt/grant/target identity, mixed producer and altered reference fail without dependent effect under the declared model. |
+| ambiguous enclosing relation | Multiple unresolved Product/owner/target/sink joins refuse, with no guessed authority. |
+| stale/advanced basis | Mutate a material input after observation/preflight and before edge lock/recheck: effect-free refusal/re-entry, no mixed basis. |
+| incoherent multi-owner basis | Constituent owners must bind equal exact basis; unsupported composite-basis relation refuses. |
+| competing same-scope authority | Request-supplied or unregistered alternate admission cannot establish transition; historical bootstrap ids are not runtime admissions. |
+| fresh reconstruction | Fresh process reads protected markers/actual targets, derives complete same relation and exact original outcome or truthful unresolved effect. |
+| exact replay equality | Same request/basis/reservation reconstructs same complete admission/effect history and does not repeat effect. Genuine new observation/retry is separately keyed, not relabeled replay. |
+| atomic publication failure | Inject after complete validation at every boundary above, on both sides; reconstruct complete transition or none, retaining unknown external effect where atomic coupling is impossible and unclaimed. |
+
+
+### F4: carrier lifecycles, authority and Prime contraction
+
+These lifecycles belong to tool carriers and operation evidence. They add no
+Product task status, phase sequence, agent topology or automatic continuation.
+“Retire” below means stop relying on a carrier under its owner-selected
+invalidator; historical bytes remain immutable. The public API has no delete,
+policy-mutation, scope-adoption or acceptance operation.
+
+| Carrier | Declare/create and read | Transition/currentness | Retirement and source truth |
+|---|---|---|---|
+| OwnerPolicy | Trusted operator binds exact authorized Product record; Runtime reads actual bytes/digest. | A new externally authorized policy supersedes its exact predecessor; active effects recheck. No hot latest substitution. | Owner revokes/supersedes externally; retained old records remain historical. Policy cannot authorize itself. |
+| MethodBinding | Tenant publishes exact finite source/profile data; owner selects through policy. | Digest/cut/profile change invalidates dependent use; another cut is unsupported until qualified. | Source owner/tenant versioning, never tool discovery selecting latest. |
+| SourceRef | Existing source owner or caller selects exact authorized locator/digest; read verifies actual bytes. | Changed/missing bytes create a new observation/gap, not a rewritten old ref. | Source owner owns mutation/withdrawal; tool retains observed original data/provenance. |
+| ModelRef | Existing codec verifies exact model/carrier identity; actors select it. | New model/grounding is separately authored; projection does not mutate it. | Model/source owners; unsupported transformations remain unsupported. |
+| Observation | Acquisition produces immutable scope/time/material record. | Comparison derives current/stale/unknown facts; original record never changes. | New observation supersedes reliance only under exact invalidators; no deletion on session change. |
+| Context | Selected packet/acquisition yields sealed exact rendering/fit evidence. | New source/frame/target/envelope requires a new Context; late reads remain named. | Owner-selected basis/invalidator withdraws applicability; original context stays evidence. |
+| Preflight | Pure candidate is drafted; selected mechanism atomically commits admitted/rejected receipt. | Valid only while exact policy, Product/owner/grant, Context/basis, role, dependencies and allowed surface remain applicable. Recheck at each effect; no universal TTL. Explicit unsupported temporal-grant semantics refuse. | New support/authority or supersession creates separate finding/receipt; historical admitted decision is not relabeled. |
+| Attempt | Effect edge reserves one exact key before launch; read anchor plus verified events. | Process/output/end/effect events add immutable facts; cancellation is a request. Retry has a new identity and required reconciliation. | No closure/retry inferred from silence. Owner retention preserves unresolved effects and original anchors. |
+| ClosedReturn | Capture original bound producer/attempt payload; consumer checks without rewrite. | New consumer/currentness/applicability is another check. Same evidence replay is duplicate; genuine equal answers remain distinct. | Original subject/verdict persists; invalidated applicability does not erase original result. |
+| OperationEvidence / expectation / acquisition | Protected store records actual operation, assertion/execution and source delivery. | Verified append of immutable records; exposure history spans sessions and reconstructs. | No automatic garbage collection or rewriting. First fragment retains indefinitely; any future destruction needs explicit external owner retirement outside this API. |
+| ExistingCarrier | Owner's existing work/evidence surface; tool projects exact selected fields/content. | Named Worker/Writer operation publishes one exact preimage→postimage under its existing grant. | Existing carrier owner controls supersession/closure/retirement; tools cannot adopt recommendations or invent state. |
+| EvidenceStore | Operator selects protected root/namespace through Product-authorized binding. | Atomic complete envelopes/markers, verified histories and rebuildable indexes; gaps are explicit. | First fragment retains committed records indefinitely; no delete/overwrite public tool. Host backup/storage operations are external owner duties. |
+| Event sink | Owner registers exact durable-file-events endpoint and consumer. | Each atomic event publication is delivery; actual consumer acknowledgment separately observed. Missing delivery uses bounded declared fallback. | Indefinite retention in first fragment; revocation/sink change is a material policy change checked before next delivery. No silent relocation. |
+
+Authority is not determined by an actor count or these carrier names:
+
+| Boundary | Proposer / evaluator / verifier | Admitter / executor / projector / retirement owner |
+|---|---|---|
+| Policy/method/work grant | Owner's existing authority; tool verifies exact source and bindings only. | Authorized owner selects; operator deploys exact selection; read tools project; owner revokes. |
+| Context and dependency selection | F_P Executive/Worker/Reviewer selects; core computes declared closure/fit. | Existing grant permits acquisition; tool renders; F_P owner judges sufficiency/re-entry. |
+| Preflight receipt | Caller drafts; core evaluates full finite premises; source-bound policy supplies mechanism. | Product-selected mechanism alone commits receipt; effects persists; owner/consumer checks applicability. |
+| Actor invocation/effects | Executive selects already-authorized target; core/effects verify exact tuple. | Registered executor performs target's operation; observers retain only actual scope; owner reconciles/retire under existing authority. |
+| Return/check/join | Actor supplies original; core verifies/evaluates supported properties; independent assessor supplies independent judgment where required. | No automatic acceptance. Declared consumer/decision owner disposes; tools project and retain. |
+| Review expectation/candidate | Fixed Reviewer authors expectation and acquires proof; history verifies observed exposure. | Review grants no candidate mutation/disposition; Executive/owner consumes; original producer owns assertion. |
+| Work record | Already-authorized Worker/Writer supplies exact record; core validates grant/preimage. | Writer membrane commits target unit; source owner owns work truth; separate evidence is downstream. |
+| Evidence/sink | Tool supplies actual event under existing evidence grant; store verifies refs/bytes. | Protected store/sink publishes complete record; consumer acquisition is separate; external owner retains/revokes, not a task engine. |
+
+The event-sink policy registry is concretely `event_sinks: {id: record}`. A record
+has exactly `kind` (`durable-file-events`), `directory` (relative beneath the
+protected evidence root), `consumer`, `authority_source` and `retention`
+(`indefinite`). Grant/executor notification binding chooses only a registered
+id. Unsupported kind, escaped path, absent consumer/authority or unknown sink
+refuses before delivery; public requests cannot register an endpoint. Sinks are
+not independent sources of work-state truth. Indexes/cursors are projection
+metadata, not an alternate admission ledger.
+
+Whole-family contraction uses eight semantic atoms, with admitted domains:
+**Acquire** (permitted exact bytes/typed records); **Project** (authored finite
+relationships/content); **Evaluate** (supported source-bound predicate/join);
+**Render** (selected packet to measured exact context); **Admit** (complete
+Product-bound finite relation); **Invoke** (registered exact effect);
+**Observe** (declared external/effect/time/resource facts); and **Record**
+(atomic existing-grant evidence or Writer unit with explicit source owner).
+These are implementation operation families, not new functor kinds.
+
+| Public operations | Derived atoms / module projection |
+|---|---|
+| tools.describe | Acquire+Project registered contract data; core, thin adapter. |
+| workspace.observe; source.read; records.find/read; evidence.read; work.project | Acquire+Project; core with representation-specific adapters. Raw/source/record/carrier reads share authority/path/hash law instead of becoming competing acquisition centers. |
+| graph.project; relations.query | Acquire+Project finite declared relations; reuse codec closure; no inferred semantic dependency engine. |
+| context.assemble | Acquire+Project+Render+Evaluate fit; core, effect-owned immutable retention. |
+| contract.preflight | Acquire+Evaluate+Admit; core prepares exact relation, effect edge commits receipt once. |
+| dispatch.start | Admit existing receipt+Invoke+Record intent/actual observations; effects. |
+| dispatch.observe; dispatch.cancel; events.wait | Observe or already-authorized Invoke cancellation+Observe+Record; effects. No scheduler/continuation atom. |
+| return.capture; return.check | Acquire+Record original, then Evaluate exact binding/currentness; core plus store. |
+| review.prepare | Acquire+Project+Record supplied F_P assertion/exposure; no semantic-review oracle. |
+| checks.evaluate; results.conjoin | Evaluate only qualified declared predicates/operators; core. |
+| work.write | Admit+Record one existing-owner Writer transition, Observe actual result; effects. |
+| refresh.prepare | Acquire+Project+Evaluate selected impact/reuse, Render handoff; no autonomous refresh policy. |
+| resources.aggregate | Acquire+Project counters and Evaluate selected limits; core, no benefit inference. |
+
+The three modules are realization projections of these atoms. Core owns typed
+relations/complete envelopes, effects owns atomic persistence/external edges,
+and adapter owns only wire dispatch/serialization. Public read variants remain
+useful typed projections of Acquire/Project; they do not duplicate authority.
+The carrier inventory is irreducible for this selected boundary: trusted
+source/policy, observed exact inputs, activated Context/receipt, Attempt anchor,
+original Return and evidence cannot be merged without collapsing authority,
+currentness, invocation or predicate distinctions. Helper classes, indexes and
+protocol wrappers are subordinate representations, not additional semantic
+centers. No functionality row is unowned: all 23 operations are derived above;
+unsupported cross-method/calculus/provider/distributed forms are explicit
+excluded domains, with no fallback route.
+
+The additional state views project receipt validity and one target Writer
+operation; no accepted Product state is inferred from them:
+
+```mermaid
+stateDiagram-v2
+  [*] --> Draft: caller supplies exact contract
+  Draft --> Rejected: selected mechanism records failed premise
+  Draft --> Admitted: complete receipt marker committed on exact basis
+  Admitted --> Applicable: fresh exact authority and basis check
+  Admitted --> StaleForUse: changed or missing material premise observed
+  Applicable --> Applicable: unchanged basis checked before effect
+  Applicable --> StaleForUse: authority or material invalidator observed
+  StaleForUse --> Draft: separately authorized new contract and basis
+  Rejected --> [*]: preserve original decision
+  note right of StaleForUse
+    Historical admitted receipt remains unchanged.
+    Current applicability is a separate observation.
+  end note
+```
+
+```mermaid
+stateDiagram-v2
+  [*] --> IntentCommitted: validate complete Writer relation and persist intent
+  IntentCommitted --> NoTargetEffect: pre-publication failure observed
+  IntentCommitted --> PostimagePublished: atomic complete target publication
+  IntentCommitted --> EffectUncertain: publication acknowledgment lost
+  PostimagePublished --> EvidencePublished: actual postimage and end retained
+  PostimagePublished --> EvidenceGap: evidence publication fails
+  EffectUncertain --> Reconciled: authorized fresh target observation
+  EvidenceGap --> Reconciled: read intent and actual pre/post/other bytes
+  Reconciled --> EvidencePublished: complete supported observation retained
+  Reconciled --> Unresolved: current evidence cannot decide original effect
+  EvidencePublished --> [*]: return exact record/effect evidence
+  NoTargetEffect --> [*]: retain no-effect observation
+  Unresolved --> [*]: retain residual, no blind retry
+```
+
+```mermaid
+sequenceDiagram
+  participant P as Principal
+  participant R as Runtime
+  participant S as SourceRef
+  participant E as OperationEvidence
+  participant W as ExistingCarrier
+  P->>R: review.prepare source-only or supplied expectation request
+  R->>E: query verified acquisition/exposure history
+  R->>S: acquire exact permitted authority and proof
+  R->>E: record actual supplied F_P expectation and provenance
+  P->>R: review.prepare exact candidate and comparison
+  R->>S: acquire actual immutable candidate, fixtures and source
+  R->>E: retain exact diff and observed exposure boundaries
+  P->>R: return.check / results.conjoin on exact declared relations
+  R->>E: preserve original outcomes, all gaps and qualified check evidence
+  P->>R: refresh.prepare supplied dependency/invalidator/reuse inputs
+  R->>S: reacquire actual current material inputs
+  R->>E: retain affected/unknown/survivor facts and handoff
+  P->>R: work.write under current Worker and exact Writer grant
+  R->>W: lock/recheck whole predecessor and intended postimage
+  R->>E: persist complete Writer intent
+  R->>W: atomically publish one complete target unit
+  R->>E: retain actual postimage/end or honest uncertainty
+  E-->>P: return through declared consumer; no automatic disposition
+```
+
+Every participant is an ontology carrier or fixed external actor already named.
+Messages name the public operation/atom and its existing role authority. The
+expected source, prior/current observations, actual target and evidence stores
+are explicit far sides of the admission relation; no hidden helper becomes an
+admission owner.
+
+ASSURANCE §16 module lifecycle answers for core, effects, adapter, profile/data
+and their public functions are shared where the owning surface is identical:
+
+| Phase | Answer for this prototype boundary |
+|---|---|
+| Intent/requirements | Answered by common Product/FD/FDV and existing AC-R rows; no tenant-owned method semantics. |
+| Build/realization | Answered by the three selected module/test territories and exact source/profile binding; implementation remains downstream, not an unresolved design owner. |
+| Assurance/proof | Answered by FDV-001/002 ordinary actor paths, source-selected/adverse controls, all standing forms and unchanged realization inventory. Execution evidence pending under implementation/assurance owners. |
+| Release/packaging | Source-delivered local Python prototype in existing tenant; no formal RC/release claim selected. Jim retains later Product release and its qualification; a future release is not silently considered complete. |
+| Deploy/install | Answered by explicit source CLI or operator-started local stdio server, qualified Python/filesystem and exact policy. No global install or host configuration mutation. |
+| Live invocation | Answered by the single public request grammar and CLI/MCP routes; real actor proof remains an execution obligation, not an implied passed claim. |
+| Telemetry/projection | Answered by immutable invocation/acquisition/check/return/resource and sink records, actual usage/unknowns and verified history; no task-state ledger. |
+| Retire/revoke/supersede | Owner revokes policy/grant/profile externally, checked before effects. Current applicability withdraws; historical immutable proof retained indefinitely. No destructive cleanup API in this fragment. |
+| Owner/source truth | Jim/Product owner reserves meaning, scope, acceptance and release; consumer authority selects exact policy/binding; existing carrier owners retain truth. Executive/Worker/Reviewer boundaries remain RC9's. |
+
+No phase is answered by assumed future software behavior. The pending execution
+proof and later formal release are explicit reserved work under their owners,
+not asserted lifecycle closure. This candidate claims the operational posture
+is designed; it does not claim live use, installation qualification or release.
+
+### F5: explicit independence, severity and role/domain bindings
+
+`independence_policy` is an exact SourceRef to the Product-authorized governing
+conditions, or null. Its supported structured carrier has exactly `id`,
+`authority_source`, `claim_scope`, `require_non_author`, `allowed_family_pairs`,
+`source_first`, `mechanical_sharing` and `predicates`. Pair entries are explicit
+family-id pairs permitted by that source policy; an empty population permits no
+inference from family difference. `require_non_author` and `source_first` retain
+EVALUATION §3's conditions; tooling cannot weaken them. `predicates` names the
+registered finite checks over actual producer/source/exposure evidence, not
+arbitrary code or asserted mental independence. The selected record states claim scope, author/actor/family
+relations, required source-before-candidate exposure and permitted sharing of
+mechanical proof. Runtime acquires its actual bytes and checks its registered
+finite predicates; it cannot infer policy from family labels or new sessions.
+Null means no added family-independence policy: same-family semantic judgments
+are not counted independent, and any separately required unresolved independence
+condition remains a gap. A cross-family difference alone also supplies no proof
+of non-authorship or source-derived expectations.
+
+Reviewer packet `severity_scale` may be SourceRef or explicit null. Null records
+that no Product scale was selected; it never invents a severity value or blocks
+an otherwise lawful source assessment by requiring a nonexistent reference.
+If the particular claim requires scale-based complete triage, that missing
+premise is retained and the requested complete triage cannot be reported as
+performed/satisfied. Findings keep supported consequence/evidence and unknown
+triage fields. Numeric/priority/boundary/disposition values are not inferred.
+
+Each principal has `role_binding` (exact existing activation/work-carrier
+SourceRef) and `role_transition` (SourceRef or null). For the same actor changing
+from Executive to Worker/Writer, a prior existing-carrier transition must name
+actor, old/new activation and frame, operation/grant, subject/territory and
+source authority **before** the effect. Merely restarting the CLI under another
+principal is not that record. If history/policy shows the change but required
+record is absent, the effect refuses `transition_record_missing`. A separately
+activated Writer may record the authorized transition; an Executive cannot
+write the record itself as an exception. Different actual actor identities
+need their own role/grant bindings; a role switch alone establishes no review
+independence. The tool consumes a supplied transition; it never grants it.
+
+Operand-domain choice is exact: equals accepts any supported typed JSON values
+and compares their canonical typed values (integer and Boolean distinct);
+member/contains_all require finite arrays in their set positions; all/any/not
+require Boolean subexpressions under the declared missing-premise semantics.
+A well-formed requested predicate with acquired wrong-domain operands returns
+invalid_basis for that requested predicate, naming expected/observed domain;
+it does not report applicability false. Missing deciding input within the
+declared domain yields indeterminate, unless a valid decisive branch suffices
+under its exact Boolean rule, with gaps retained. Unsupported AST/operator or
+unqualified definition is not performed and receives no semantic predicate
+result; operation capability/basis refusal is separate. A separately requested
+input-domain predicate may itself falsify on a counterexample; that is a
+different named predicate, never a rewrite of the original one.
+
+### Realization seam: exact envelopes, schema and persistence
+
+The authoritative core exports `parse_request(raw_bytes)`,
+`validate_request(request)`, `inventory(operation=None)` and
+`request_schema(operation=None)`. One core catalog owns operation/argument/schema
+and closed outcome-code data. Adapter and effects import it; neither invents
+an operation schema, failure code or independent admission predicate.
+`parse_request` rejects duplicate keys/unsupported request grammar before
+`validate_request` binds the exact versioned request. Inventory/schema access
+itself grants no authority.
+
+The settled CoreOutcome supersedes the v2 carrier draft: it has exactly
+`result`, `artifacts`, `operation_outcome` and `acquisitions`. `result` is the
+complete public object `{"artifact":ArtifactRef-or-null,"value":JSON}`.
+`artifacts` is an ordered list of **complete provenance envelopes**, and every
+reference in result/artifacts is computed from their final canonical bytes.
+No random placeholder, mutable current request or post-hoc arbitrary result
+patching is allowed. The primary ref points to the corresponding typed envelope;
+Context's public value is only its manifest/fit summary, not implicit full body.
+
+Core `make_artifact(kind,payload,provenance)` returns the complete envelope and
+`{"id":"sha256:<digest>","sha256":"<digest>"}`, where digest hashes that
+whole envelope. The evidence store maps this protected id to its verified object
+file. Provenance has exactly `request_id`, `request_sha256`,
+`requester_principal`, `target_principal`, `product_id`, `definition_sha256`,
+`method_profile_sha256`, `policy_sha256`, `actor`, `attempt` and
+`observed_interval`. Target/attempt may be null. Interval has `started_ns`,
+`ended_ns` and `clock` (`unix_ns`), reflecting the actual scoped acquisition/
+operation observation, never assumed actor thought or external end. Clock and
+external-source observations are explicit inputs to reproducibility; replay
+of the same retained input observations preserves the same semantic relation.
+
+Effects persists exactly these envelopes using the qualified publication law;
+it may not silently add fields or change their references. `persist_outcome`
+verifies the complete outgoing result/artifact graph, publishes dependencies
+before its complete owning marker, and then builds one complete OperationEvidence
+from the original request and final response with evidence=null. Its final ref
+is inserted only into the specified response evidence field by the declared
+wrapper. That fixed nonrecursive wrapper construction is not permission to
+patch arbitrary core semantics. Typed artifacts and original raw bytes retain
+separate identities. The outer response always has the exact keys shown above,
+including `operation_outcome`; its result is the explicit artifact/value object
+or null where no result is available.
+
+Core `execute_read(runtime,request)->CoreOutcome`,
+`build_preflight(runtime,request)->EffectPlan` and
+`prepare_write(runtime,request)->EffectPlan` receive the whole request.
+`check_preconditions(runtime,recheck_set)` returns newly acquired observations,
+changes and gaps; effects records and freshly reruns it at the actual edge.
+Effects `execute_effect(runtime,request)->CoreOutcome` dispatches only the
+registered named effect functions, and `persist_outcome(runtime,request,outcome)`
+performs the declared retention/wrapper construction. The full-request handler
+signatures for dispatch/observe/cancel/events/Writer remain normative. There is
+no arbitrary plan input accepted from CLI/MCP. Effects constructs actual post-
+effect observations with the same core envelope constructor, then persists
+complete final bytes. A prepared intent is not an actual post-effect record.
+
+Every source/candidate-content acquisition records its exact prepared/supplied
+scope. Actual observed transport/context delivery, where available, is a
+separate complete event. A lost response never becomes proof of no exposure:
+prepared content with uncertain delivery is potential exposure/unknown in the
+history check. Actual public return or acknowledged context delivery is an
+observed route, not a claim that an actor mentally attended to every byte.
+Missing/in-flight delivery proof cannot certify clean source-first ordering.
+
+The internal supervisor entry is fixed:
+
+```text
+<registered Python> <exact ac_support.py> _supervise
+  --policy <operator-selected absolute policy path>
+  --policy-sha256 <exact digest>
+  --principal <original requester principal>
+  --attempt-id <protected immutable anchor id>
+  --attempt-sha256 <exact anchor digest>
+```
+
+Only the effects module creates this argv from the retained reservation; public
+requests supply none of these path/argv values. The internal entry validates
+exact policy, anchor, grant, target and dependency binding again. Supervisor
+stdout/stderr go to separate protected diagnostic files; they never contaminate
+CLI/MCP stdout or substitute for actual executor stdout/stderr. Exact stdin,
+worker outputs, invocation observations and unknown usage remain distinct.
+
+Startup failure before trusted policy/store binding emits a CLI refusal/error
+with null evidence and explicit unretained scope (or a protocol initialization
+error); it writes no untrusted location and creates no admission/result. A
+malformed call before a bound operation has id/operation null where they cannot
+be trusted, status refused and operation_outcome null; it may retain raw input
+as protected diagnostic evidence only if a trusted store is available. Store
+failure emits status error, null/unavailable durable refs and the actual
+publication gap. It never emits a computed-but-unpublished ref as durable
+support. If an external effect may have happened, the durable pre-effect intent
+and actual known/unknown subject state are retained/reconstructed; no failed
+recording path manufactures rollback or completed work. The caller can acquire
+valid partial evidence while the output-availability predicate remains held.
+
+### Ordinary CLI and pinned MCP projection
+
+CLI passes the exact full versioned request envelope to the single dispatcher.
+For MCP, each ordinary operation is published as its tool name, and
+`tools/call.arguments` is that same **full envelope**, including schema, stable
+request.id, operation and arguments. `tools/call.params.name` must equal
+request.operation; the published inputSchema is the core full-envelope schema
+with that operation fixed. The caller's request.id is the effect idempotence
+identity. JSON-RPC session/request ids are transport identities and never
+synthesize or replace it. A different RPC id can retry the same exact effect
+request without creating another effect.
+
+A valid initialize always responds with supported protocolVersion 2025-11-25,
+using the client's requested value when it equals that revision and otherwise
+the same supported server revision; the client may disconnect if incompatible.
+This follows the pinned lifecycle's negotiation rule, rather than falsely
+rejecting every different requested revision. Invalid initialization/capability
+syntax may return protocol error. Initialized precedes tools/list/tools/call;
+ping is supported. Modern server/discover and task execution are not advertised.
+JSON-RPC parse/invalid-request/method/params errors use the protocol error route;
+an actual bound tool refusal returns isError=true with the exact structured
+response plus serialized text. Stdout remains newline-delimited protocol only.
+There is no global MCP/host configuration effect or dependency on the study MCP.
+
+### Preservation and test authority
+
+The exact [preservation inventory](../../../.ai-workspace/qualification/t008/design/preservation-inventory-002.json)
+pins the existing code/test and seven frozen study directory trees, all 3,492
+Git members and seven named realization/source-design blobs against current
+checkpoint and initial source anchor. Current scoped status has no tracked
+change or nonignored untracked source in those roots. Ignored local caches are
+not frozen source. Code, source-authoring, grounding, repair and study bytes
+remain unchanged; this design creates no regenerated models or new upstream
+trial result.
+
+Qualification must distinguish output availability from actual semantic/method
+predicates in every applicable operation, exercise the concrete new outcome
+codes and all standing forms above, show correct cardinality/RF outputs under
+at least two plan orders, and show fact-only diffs/coverage never become semantic
+verdicts. Module tests derive from these exact relations and common scenarios,
+not private builder snapshots. Ordinary CLI and real subprocess MCP use the
+same public schema; fixed-id retries, separate genuine equal-answer attempts,
+partial publication and fresh-process reconstruction are material controls.
+Actual Worker/Reviewer use and independent source assessment remain separately
+produced evidence. FDV-003 and formal acceptance/release remain unqualified.

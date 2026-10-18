@@ -137,3 +137,14 @@ tampering, repeated and reversed relations, governing/residual closure, cycles
 and insufficient budgets. A separate actual-upstream build/read/decode trial
 qualifies the representation boundary. Semantic fidelity, complete calculus
 conformance, issuer authority, efficiency and Product acceptance remain open.
+
+## F_D support increment
+
+The [T-008 support design](fd-support.md) extends this existing tenant with
+ordinary deterministic tools for F_P Executives, Workers and Reviewers. The
+[exact Claude RC9 support binding](fd-method-claude-rc9.json) names method owners
+for the owner's work-scoped execution selection. The method remains external
+source authority; no replacement lifecycle, installed V3 basis, sibling runtime
+composition or change to the codec/source-authoring fragment is introduced.
+This additional design is a candidate; public implementation, operational
+qualification, accepted-result benefit and Product acceptance remain pending.

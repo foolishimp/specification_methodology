@@ -1,0 +1,68 @@
+{
+  "schema": "a_c.effects-implementation-checks/1",
+  "activation": "T-008-effects-001",
+  "scope": "Owned provisional local membrane implementation only",
+  "candidate_files": {
+    "a_c/build_tenants/graphify/code/ac_support_effects.py": "b6b09bc044894471ea38f7418eadfa988aaebd02f14a04e3030456037fa70fb4",
+    "a_c/build_tenants/graphify/test_env/test_ac_support_effects.py": "510e8167ec34ff58743c6ca7f108acdff9def95d800cc787372479962e726ee9",
+    "a_c/build_tenants/graphify/test_env/support_fixtures/local_actor.py": "991c3481dc86841f9c912321e635e57c93881117295a0a5e9866380356941819"
+  },
+  "observed_peer_test_cut": {
+    "a_c/build_tenants/graphify/code/ac_support_core.py": "1308459cfe92d55e12575b74a1a4933e0991fa2960c7504d79416d5ed97a0af0",
+    "a_c/build_tenants/graphify/code/ac_support.py": "4d1ea7fe98ec1b53f2a19d9a2fef2b3fbb070624c955fbb1e9e48f5cc88011b1",
+    "a_c/build_tenants/graphify/code/ac_graph.py": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+    "a_c/build_tenants/graphify/design/fd-method-claude-rc9.json": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+  },
+  "before_after_exact_source_cut_unchanged": true,
+  "tests": {
+    "command": "AC_SUPPORT_EFFECTS_PROOF_ROOT=/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/effects/proof-final python3 -m unittest discover -s a_c/build_tenants/graphify/test_env -p test_ac_support_effects.py -v",
+    "cwd": "/Users/jim/src/apps/specification_methodology",
+    "exit_code": 0,
+    "tests": 31,
+    "skips": 0,
+    "failures": 0,
+    "errors": 0,
+    "elapsed_seconds_reported": "3.060",
+    "raw_log": "TESTS.final.log"
+  },
+  "typing": {
+    "command": "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python -m mypy --strict --follow-imports=silent code/ac_support_effects.py test_env/test_ac_support_effects.py test_env/support_fixtures/local_actor.py",
+    "cwd": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify",
+    "exit_code": 0,
+    "checked_owned_files": 3,
+    "dependency_scope": "Typed imported seams; Core/Interfaces implementation typing independently owned, not claimed by this three-file check",
+    "raw_log": "TYPING.final.log"
+  },
+  "raw_logs": {
+    "TESTS.candidate.log": "f7957aef3870f3c7df50ec9338361a93bad7a1abfb3981c04d7143888c6e14c4",
+    "TESTS.expanded.log": "c361d1d83535d66f127d2c046e4bdfdde89136f1113b806f8a47afa9285a711f",
+    "TESTS.final.log": "8357fd91e5aa37eae1fccebc59fde5a56cf22f98dcb588ad1fa8bf6194440958",
+    "TESTS.initial.log": "8c436c21187624037cfce08290414dae3473fe74ba32a2fb9a549a6fd23e33fa",
+    "TESTS.process-diagnostic.log": "a70b88264fd4d7e0d8e99bb7b948fff97271ae8da25398b5eade1c9cf32011f7",
+    "TESTS.startup-repair.log": "6f2ab3a3d6dd8a1abe33e054e4f5767ba9130327a0a344e136ce9af858a7d496",
+    "TYPING.candidate.log": "8228fcc5ce46d42d01caf3cd941f4e9c5f2bcc372bb5b147a2f0572d2dd675a8",
+    "TYPING.expanded.log": "8228fcc5ce46d42d01caf3cd941f4e9c5f2bcc372bb5b147a2f0572d2dd675a8",
+    "TYPING.final.log": "8228fcc5ce46d42d01caf3cd941f4e9c5f2bcc372bb5b147a2f0572d2dd675a8"
+  },
+  "proof_manifest": {
+    "path": "PROOF.manifest.json",
+    "sha256": "09414e21da9c98e2e8d7c3b5883e9c8402cb8223295aee38a1f748358fcda3b8",
+    "members": 1880
+  },
+  "control_map": {
+    "path": "CONTROL_MAP.json",
+    "sha256": "66951da54010f38129f5bbcbdee8b6eac5cd6873b93e627a07099fd3341ca9b8"
+  },
+  "actual_actors": {
+    "registered_local_fixture_processes": true,
+    "LLM_or_provider_calls": 0,
+    "actual_FP_usability": false
+  },
+  "qualification_gaps": [
+    "Full ordinary Product-bound admission and public CLI/MCP integration",
+    "Actual clean-room F_P Executive/Worker/Reviewer task use and required independent assessment",
+    "All owner instances of every standing structural/publication form; per-control gaps are explicit in CONTROL_MAP.json",
+    "Installed qualification, hardware power-loss durability, complete calculus conformance, accepted-result benefit, Product acceptance and release"
+  ],
+  "prior_attempts": "Initial fixture/parser failures and genuine participating-stage/history race are preserved in earlier logs and diagnostic custody; no earlier verdict is rewritten."
+}

@@ -1,0 +1,106 @@
+--- approved-v1-launcher
++++ prepared-final-launcher
+@@ -1,5 +1,5 @@
+ #!/usr/bin/env python3
+-"""One bounded frozen-design assessment; work evidence, not a method engine."""
++"""One fresh final-repaired-design assessment; work evidence, not a method engine."""
+ from __future__ import annotations
+ import argparse
+ import datetime as dt
+@@ -38,7 +38,11 @@
+              ("REVIEW_ACTIVATION_DRAFT.json", "review_activation_sha256"),
+              ("CANDIDATE_MANIFEST.json", "candidate_manifest_sha256"),
+              ("COMMITTED_PREIMAGE_MANIFEST.json", "preimage_manifest_sha256"),
+-             ("GOVERNING_SOURCE_DATA.txt", "governing_source_data_sha256")]
++             ("GOVERNING_SOURCE_DATA.txt", "governing_source_data_sha256"),
++             ("PROOF_MANIFEST.json", "proof_manifest_sha256"),
++             ("REVIEW_PAYLOAD_MANIFEST.json", "review_payload_manifest_sha256"),
++             ("PRIOR_PACKET_PRESERVATION_HASHES.json", "prior_packet_preservation_sha256"),
++             ("PRESERVATION_INVENTORY_PROJECTION.json", "preservation_projection_sha256")]
+     for filename, key in pairs:
+         if sha(ROOT / filename) != plan[key]:
+             raise ValueError("Frozen input mismatch: " + filename)
+@@ -55,6 +59,20 @@
+     for entry in json.loads((ROOT / "COMMITTED_PREIMAGE_MANIFEST.json").read_text())["entries"]:
+         if entry["state"] == "present" and sha(ROOT / entry["packet_path"]) != entry["sha256"]:
+             raise ValueError("Committed preimage changed: " + entry["source_path"])
++    proof = json.loads((ROOT / "PROOF_MANIFEST.json").read_text())
++    for entry in proof["entries"]:
++        path = ROOT / entry["packet_path"]
++        if sha(path) != entry["sha256"] or path.stat().st_size != entry["bytes"]:
++            raise ValueError("Frozen proof changed: " + entry["packet_path"])
++    payload = json.loads((ROOT / "REVIEW_PAYLOAD_MANIFEST.json").read_text())
++    for entry in payload["components"]:
++        path = ROOT / entry["packet_path"]
++        if sha(path) != entry["sha256"] or path.stat().st_size != entry["bytes"]:
++            raise ValueError("Model DATA component changed: " + entry["packet_path"])
++    protected = json.loads((ROOT / "PRIOR_PACKET_PRESERVATION_HASHES.json").read_text())
++    for packet_path, expected_hash in protected.items():
++        if sha(ROOT.parent / packet_path) != expected_hash:
++            raise ValueError("Protected prior packet changed: " + packet_path)
+     exe = Path(plan["executable"])
+     if str(exe.resolve(strict=True)) != plan["executable_realpath"] or sha(exe.resolve()) != plan["executable_sha256"]:
+         raise ValueError("Claude executable changed")
+@@ -65,9 +83,9 @@
+                 "--permission-prompts", "none", "--output-format", "stream-json", "--verbose",
+                 "--system-prompt", system]
+     if plan["argv"] != expected:
+-        raise ValueError("Launch argv differs from fixed isolated source-only contract")
+-    if plan["stdin_sha256"] != "41e7abed3f78a3e87ac7bfb252db902dc636d5fe796f315e615240029f4e1fe2":
+-        raise ValueError("Source-only prompt lacks exact Executive approval")
++        raise ValueError("Launch argv differs from fixed isolated configured-CLI contract")
++    if plan["stdin_sha256"] != "146418da32a585ec2c22e79cc568a92eef76db7664ec5d864f1eaa1e0581b90b":
++        raise ValueError("Final-design prompt differs from exact prepared input")
+     if plan["calls"] != 1 or plan["automatic_retries"] != 0 or plan["process_wall_limit_seconds"] > 1200:
+         raise ValueError("Unapproved call/resource bound")
+     return plan
+@@ -84,20 +102,22 @@
+                 "contract_sha256": plan["contract_sha256"],
+                 "action_binding_sha256": plan["action_binding_sha256"],
+                 "review_activation_sha256": plan["review_activation_sha256"],
+-                "candidate_manifest_sha256": plan["candidate_manifest_sha256"]}
+-    if approval.get("producer") != "/root Executive" or approval.get("decision") != "approved_frozen_design_assessment_launch":
++                "candidate_manifest_sha256": plan["candidate_manifest_sha256"],
++                "proof_manifest_sha256": plan["proof_manifest_sha256"],
++                "review_payload_manifest_sha256": plan["review_payload_manifest_sha256"]}
++    if approval.get("producer") != "/root Executive" or approval.get("decision") != plan["required_approval_decision"]:
+         raise ValueError("Final approval producer/decision mismatch")
+     for key, value in required.items():
+         if approval.get(key) != value:
+             raise ValueError("Final approval mismatch: " + key)
+     attempt = ROOT / plan["attempt_directory"]
+     attempt.mkdir(parents=True, exist_ok=False)
+-    workdir = Path(tempfile.mkdtemp(prefix="ac_t008_source_review_"))
++    workdir = Path(tempfile.mkdtemp(prefix="ac_t008_final_design_review_"))
+     initial_files = sorted(p.name for p in workdir.iterdir())
+     if initial_files:
+         raise ValueError("Review workspace is not empty")
+     started = time.monotonic()
+-    record = {"kind": "raw-frozen-design-model-assessment-attempt", "started_utc": now(),
++    record = {"kind": "raw-final-repaired-design-model-assessment-attempt", "started_utc": now(),
+               "executable": plan["executable"], "executable_realpath": plan["executable_realpath"],
+               "executable_sha256": plan["executable_sha256"], "version": plan["version"],
+               "argv": plan["argv"], "prompt_sha256": plan["stdin_sha256"],
+@@ -201,7 +221,7 @@
+ 
+ def main() -> int:
+     parser = argparse.ArgumentParser()
+-    parser.add_argument("--run", action="store_true", help="Run exactly one frozen-design assessment after exact Executive activation/approval")
++    parser.add_argument("--run", action="store_true", help="Run exactly one fresh final-design assessment after exact Executive activation/approval")
+     args = parser.parse_args()
+     plan = verify()
+     if not args.run:
+@@ -209,7 +229,12 @@
+                           "launcher_sha256": sha(Path(__file__)), "launch_plan_sha256": sha(ROOT / "LAUNCH_PLAN.json"),
+                           "system_sha256": plan["system_sha256"], "prompt_sha256": plan["stdin_sha256"],
+                           "contract_sha256": plan["contract_sha256"], "executable_sha256": plan["executable_sha256"],
+-                          "candidate_exposure": plan["candidate_exposure"], "source_members_rehashed": len(json.loads((ROOT / "SOURCE_MANIFEST.json").read_text())["entries"])}, indent=2))
++                          "candidate_exposure": plan["candidate_exposure"], "source_members_rehashed": len(json.loads((ROOT / "SOURCE_MANIFEST.json").read_text())["entries"]),
++                          "candidate_manifest_sha256": plan["candidate_manifest_sha256"],
++                          "proof_manifest_sha256": plan["proof_manifest_sha256"],
++                          "review_payload_manifest_sha256": plan["review_payload_manifest_sha256"],
++                          "proof_files_rehashed": len(json.loads((ROOT / "PROOF_MANIFEST.json").read_text())["entries"]),
++                          "protected_prior_files": plan["protected_prior_files"]}, indent=2))
+         return 0
+     return run(plan)
+ 

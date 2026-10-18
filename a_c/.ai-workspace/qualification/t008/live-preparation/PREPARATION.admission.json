@@ -1,0 +1,53 @@
+{
+  "schema": "a_c.bootstrap.writer-admission-record/1",
+  "activation": "T-008-live-preparation-001",
+  "decision": "admitted",
+  "mechanism": "Root exact immediate bounded Writer grant; no public runtime admission claim",
+  "contract": {
+    "path": "a_c/.ai-workspace/qualification/t008/live-preparation/PREPARATION.contract.txt",
+    "sha256": "a4764c74588f8b6f2fd2760b2b280d63fed6f2edaa593d9784d22310804d4c12",
+    "form": "exact Root message; no added final newline"
+  },
+  "authority": {
+    "owner": "Jim",
+    "Executive": "/root",
+    "actor": "/root/ac_fd_tenant_design",
+    "role": "Writer/Worker",
+    "consumer": "/root",
+    "scope": "New live-preparation files only"
+  },
+  "basis": {
+    "product": "urn:stdo:product-definition:a-c-implementations",
+    "WHAT_commit": "c2f67fec8154028d45d7cd7a2832dd4fade4d94b",
+    "builder_manifest": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "RC9_source": "c2cfa9b908d1722ae3f26c32fa4ece691083bdc3",
+    "standards_tree": "98de394b352179c25dfa63b0b59a9b6bdd43632d",
+    "profile_sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+  },
+  "verified_source_preimages": {
+    "a_c/build_tenants/graphify/design/fd-support.md": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f",
+    "a_c/.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md": "a34425295fe5fd2cbbd21406f0b0fc609245152a374267a47b5dcd3bd08d7fa2",
+    "a_c/build_tenants/graphify/design/fd-method-claude-rc9.json": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1",
+    "a_c/stdo_a_c.json": "b0e013e6f9dabb9d3f31dd02c1a6909e9fc6418925a8d829f3bb1c2adf3dac1d"
+  },
+  "prior_absence": {
+    "live-preparation": true,
+    "TASK.md": true,
+    "runtime-binding.draft.json": true,
+    "public_guide": true
+  },
+  "Root_reported_pending": [
+    "Effects repair002",
+    "Integrated tests",
+    "Separate limited runtime binding selection",
+    "Exact per-call actual actor approval"
+  ],
+  "chronology": "Exact contract retained, then this separate Root-reported receipt, before task/draft/source-copy effects. The draft binding is not yet Product-located or selected.",
+  "excluded": [
+    "T008/HOW/common/README/code edits",
+    "Target guide write",
+    "Live evidence root creation",
+    "Model/actor/runtime/Git/global effects",
+    "Ontology/design/Product acceptance, installation, publication or release"
+  ]
+}

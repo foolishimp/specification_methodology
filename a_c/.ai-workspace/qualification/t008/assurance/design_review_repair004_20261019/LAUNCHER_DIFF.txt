@@ -1,0 +1,58 @@
+--- approved-final-v3-launcher
++++ prepared-repair004-launcher
+@@ -1,5 +1,5 @@
+ #!/usr/bin/env python3
+-"""One fresh final-repaired-design assessment; work evidence, not a method engine."""
++"""One fresh repair004 current-design assessment; work evidence, not a method engine."""
+ from __future__ import annotations
+ import argparse
+ import datetime as dt
+@@ -42,7 +42,9 @@
+              ("PROOF_MANIFEST.json", "proof_manifest_sha256"),
+              ("REVIEW_PAYLOAD_MANIFEST.json", "review_payload_manifest_sha256"),
+              ("PRIOR_PACKET_PRESERVATION_HASHES.json", "prior_packet_preservation_sha256"),
+-             ("PRESERVATION_INVENTORY_PROJECTION.json", "preservation_projection_sha256")]
++             ("PRESERVATION_INVENTORY_PROJECTION.json", "preservation_projection_sha256"),
++             ("SOURCE_ADDITIONS_MANIFEST.json", "source_additions_manifest_sha256"),
++             ("SOURCE_ADDITIONS.txt", "source_additions_sha256")]
+     for filename, key in pairs:
+         if sha(ROOT / filename) != plan[key]:
+             raise ValueError("Frozen input mismatch: " + filename)
+@@ -73,6 +75,13 @@
+     for packet_path, expected_hash in protected.items():
+         if sha(ROOT.parent / packet_path) != expected_hash:
+             raise ValueError("Protected prior packet changed: " + packet_path)
++    additions = json.loads((ROOT / "SOURCE_ADDITIONS_MANIFEST.json").read_text())
++    for entry in additions["entries"]:
++        path = Path(entry["packet_path"])
++        if not path.is_absolute():
++            path = ROOT / path
++        if sha(path) != entry["sha256"] or path.stat().st_size != entry["bytes"]:
++            raise ValueError("Source availability addition changed: " + entry["member"])
+     exe = Path(plan["executable"])
+     if str(exe.resolve(strict=True)) != plan["executable_realpath"] or sha(exe.resolve()) != plan["executable_sha256"]:
+         raise ValueError("Claude executable changed")
+@@ -84,7 +93,7 @@
+                 "--system-prompt", system]
+     if plan["argv"] != expected:
+         raise ValueError("Launch argv differs from fixed isolated configured-CLI contract")
+-    if plan["stdin_sha256"] != "146418da32a585ec2c22e79cc568a92eef76db7664ec5d864f1eaa1e0581b90b":
++    if plan["stdin_sha256"] != "b41a17426d1d694b2327f29425026ceaa7d5ce9f02a70d8f0d7c05b0a27d6778":
+         raise ValueError("Final-design prompt differs from exact prepared input")
+     if plan["calls"] != 1 or plan["automatic_retries"] != 0 or plan["process_wall_limit_seconds"] > 1200:
+         raise ValueError("Unapproved call/resource bound")
+@@ -112,12 +121,12 @@
+             raise ValueError("Final approval mismatch: " + key)
+     attempt = ROOT / plan["attempt_directory"]
+     attempt.mkdir(parents=True, exist_ok=False)
+-    workdir = Path(tempfile.mkdtemp(prefix="ac_t008_final_design_review_"))
++    workdir = Path(tempfile.mkdtemp(prefix="ac_t008_repair004_review_"))
+     initial_files = sorted(p.name for p in workdir.iterdir())
+     if initial_files:
+         raise ValueError("Review workspace is not empty")
+     started = time.monotonic()
+-    record = {"kind": "raw-final-repaired-design-model-assessment-attempt", "started_utc": now(),
++    record = {"kind": "raw-repair004-design-model-assessment-attempt", "started_utc": now(),
+               "executable": plan["executable"], "executable_realpath": plan["executable_realpath"],
+               "executable_sha256": plan["executable_sha256"], "version": plan["version"],
+               "argv": plan["argv"], "prompt_sha256": plan["stdin_sha256"],

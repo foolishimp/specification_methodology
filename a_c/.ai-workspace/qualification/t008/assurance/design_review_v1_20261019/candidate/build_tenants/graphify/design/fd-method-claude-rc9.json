@@ -1,0 +1,258 @@
+{
+  "schema": "a_c.fd-support.method-binding/1",
+  "id": "urn:a-c:fd-support:method:claude-rc9:executive:1",
+  "status": "design-candidate-not-operationally-qualified",
+  "method": {
+    "name": "STDO3.0 Claude RC9",
+    "source_commit": "c2cfa9b908d1722ae3f26c32fa4ece691083bdc3",
+    "custody_commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+    "package": "specification_methodology/v3/build_tenants/claude/",
+    "standards_tree": "98de394b352179c25dfa63b0b59a9b6bdd43632d",
+    "selected_profiles": [
+      "EXECUTIVE_BASELINE.md",
+      "DESIGN_MODULE.md"
+    ],
+    "use": "explicit work-scoped candidate dogfood; not an installed or released basis"
+  },
+  "builder": {
+    "uri": "stdo://releases/v2.5.1-rc.2/",
+    "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782"
+  },
+  "members": [
+    {
+      "member": "README.md",
+      "sha256": "8047171e730dc4bce556ce28989baf54f8232ff2552a3763447bfe0228258ede",
+      "bytes": 28087,
+      "clauses": [
+        "routes"
+      ]
+    },
+    {
+      "member": "FOUNDATIONS.md",
+      "sha256": "fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f",
+      "bytes": 146255,
+      "clauses": [
+        "results",
+        "conjunction-of-results",
+        "assertions-and-observation",
+        "change-impact-and-evidence-reuse"
+      ]
+    },
+    {
+      "member": "REFERENCE_FRAME.md",
+      "sha256": "d64ee5c05aaefac346116c2e43eabf193dd84123f1d461070ecd378ce5e9b551",
+      "bytes": 111611,
+      "clauses": [
+        "rf-005-exact-basis-and-coordinates",
+        "rf-006-authority-conservation",
+        "rf-012-closed-results",
+        "rf-013-reconstructable-activation",
+        "rf-014-capability-fit",
+        "11-the-activation-packet"
+      ]
+    },
+    {
+      "member": "ACTIVATION.md",
+      "sha256": "3bb7594a194950819d6aad65e3938358e8685bbbc2ebf67c0ad720c37bb04487",
+      "bytes": 156518,
+      "clauses": [
+        "intake",
+        "admission",
+        "applicability",
+        "roles-and-delegation",
+        "2-context-construction-under-an-envelope",
+        "staleness-of-derived-surfaces",
+        "3-step-results-and-disposition",
+        "effects",
+        "5-work-state-and-restart",
+        "resource-limits",
+        "7-closed-result-and-reuse"
+      ]
+    },
+    {
+      "member": "EVALUATION.md",
+      "sha256": "14f8816b1eb9cd146dd58a29bac35ea47a62e4e4b093b20f9892330e44922991",
+      "bytes": 93992,
+      "clauses": [
+        "1-claims",
+        "2-separation",
+        "3-independent-assessment",
+        "4-review-results",
+        "5-acceptance"
+      ]
+    },
+    {
+      "member": "SPEC_METHOD.md",
+      "sha256": "b4b8cafae7da0885f4177e9114d5effc21637ed5a44deb31c3791be658a77a24",
+      "bytes": 167323,
+      "clauses": [
+        "4-change-management",
+        "8-bounded-execution-in-this-method"
+      ]
+    },
+    {
+      "member": "PRODUCT_DEFINITION.md",
+      "sha256": "96e1f26a4f6b60571851a7bd78f5d8c84d09d393de3ebd3b75b4f43ba9158d8d",
+      "bytes": 83015,
+      "clauses": [
+        "4-shared-installed-release-basis-and-toolchain-manager",
+        "7-collective-reference-frame-basis",
+        "8-what-how-and-work-carriers",
+        "11-one-constitutional-surface-and-version-boundary",
+        "12-bootstrap"
+      ]
+    },
+    {
+      "member": "TICKETS.md",
+      "sha256": "8d244a16b11f17a9e1a85ecf8d7e1dfb3686ea79a09b885321727d620659c43e",
+      "bytes": 104228,
+      "clauses": [
+        "carrier-selection",
+        "execution-contract-admission",
+        "recorded-judgment-and-owner-ruling-continuity",
+        "condition-based-closure-and-reuse",
+        "one-truth-state-projection-and-drift-refusal-up-009"
+      ]
+    },
+    {
+      "member": "ASSURANCE.md",
+      "sha256": "e33a6e39e1e93d38dbd3ea212d8d9f0d2f44a366a9345fda762d2481c254d0bf",
+      "bytes": 98521,
+      "clauses": [
+        "3-test-authority",
+        "10-testing-evidence-composition",
+        "13-end-to-end-interface-integration-frame",
+        "14-design-to-module-evidence-route",
+        "15-module-derived-unit-tests",
+        "16-module-lifecycle-confirmation"
+      ]
+    },
+    {
+      "member": "EXECUTIVE_BASELINE.md",
+      "sha256": "e50b4ad70451fe84882053bc0dffef6f6c0c806a5dba68ac9933aa79029fb935",
+      "bytes": 178680,
+      "clauses": [
+        "6-executive-attention-evaluation-and-action",
+        "no-mutation-while-executive",
+        "event-driven-attention",
+        "drift-locks",
+        "8-derived-executive-frame",
+        "9-derived-worker-frame",
+        "10-derived-reviewer-frame",
+        "12-complete-engagement-transition",
+        "17-actor-binding-and-independence",
+        "19-baseline-specific-basis-and-activation-additions"
+      ]
+    },
+    {
+      "member": "DESIGN_MODULE.md",
+      "sha256": "9e2642d51d0b024a448fe7910dcb323fb3f3bb2a003ad33c27c39a5dda625220",
+      "bytes": 200271,
+      "clauses": [
+        "decision-complete-symbolic-design",
+        "7-ontology-and-three-view-design-gate",
+        "11-review"
+      ]
+    },
+    {
+      "member": "AXIOMATIC_CALCULUS.md",
+      "sha256": "56d0c1ad9889ad8d09b1d1249ad4bae1fb1717af22d01bdf4190b2d0bf71500a",
+      "bytes": 94172,
+      "clauses": [
+        "5-traversals-and-functor-kinds",
+        "ac-018-structural-and-semantic-separation"
+      ]
+    }
+  ],
+  "contract_routes": {
+    "packet": {
+      "owner": "REFERENCE_FRAME.md",
+      "clause": "11-the-activation-packet",
+      "tenant_mapping": "fd-support.md#packet-carrier"
+    },
+    "worker_additions": {
+      "owner": "EXECUTIVE_BASELINE.md",
+      "clause": "19-baseline-specific-basis-and-activation-additions"
+    },
+    "admission": {
+      "owner": "ACTIVATION.md",
+      "clause": "admission",
+      "carrier_owner": "TICKETS.md#execution-contract-admission"
+    },
+    "context_fit": {
+      "owner": "ACTIVATION.md",
+      "clause": "2-context-construction-under-an-envelope"
+    },
+    "closed_return": {
+      "owner": "ACTIVATION.md",
+      "clause": "7-closed-result-and-reuse"
+    },
+    "independence": {
+      "owner": "EVALUATION.md",
+      "clause": "3-independent-assessment"
+    },
+    "effects": {
+      "owner": "ACTIVATION.md",
+      "clause": "effects"
+    },
+    "conjunction": {
+      "owner": "FOUNDATIONS.md",
+      "clause": "conjunction-of-results"
+    },
+    "refresh": {
+      "owner": "FOUNDATIONS.md",
+      "clause": "change-impact-and-evidence-reuse"
+    },
+    "writer_boundary": {
+      "owner": "EXECUTIVE_BASELINE.md",
+      "clause": "no-mutation-while-executive"
+    }
+  },
+  "tool_fragment": {
+    "context_measurement_units": [
+      "utf8_bytes"
+    ],
+    "source_engines": [
+      "workspace-regular-file",
+      "immutable-git-blob",
+      "retained-evidence"
+    ],
+    "model_profiles": [
+      "a_c.graphify.model/1",
+      "a_c.graphify.carrier/1"
+    ],
+    "predicate_primitives": [
+      "equals",
+      "member",
+      "contains_all",
+      "all",
+      "any",
+      "not"
+    ],
+    "predicate_domains": [
+      "bound-json-observations"
+    ],
+    "conjunction_operator": "claude-rc9.conjunction/1",
+    "conjunction_rule": "mandatory non-satisfied inputs selected in the declared plan order; method gap/basis/survival rules apply; no universal priority",
+    "executor": "owner-registered local process; fixed argv/config; no OS confinement claim",
+    "transport": "public JSON CLI and legacy MCP stdio 2025-11-25",
+    "unsupported": [
+      "other method cuts or composite method translations",
+      "token measurement without an exact supported counter",
+      "arbitrary executable predicates or caller-supplied shell/argv",
+      "inferred semantic dependency edges",
+      "semantic sufficiency or fitness certification",
+      "OS sandboxing of executors",
+      "method/subject/Product acceptance or release",
+      "latest MCP server/discover protocol"
+    ]
+  },
+  "derivation_history": {
+    "common_commit": "494451522072ec34381c644f1ccfa2331f2b1e27",
+    "common_tree": "082df4ea2b7b3658aab528bbfbcfe81234ccc810",
+    "owner_map": "../../../specification/requirements/fd-source-owner-map.md",
+    "role": "unchanged historical requirement derivation, not this execution binding"
+  },
+  "design": "fd-support.md",
+  "authority": "../../../.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md#owner-instruction"
+}

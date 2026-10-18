@@ -1,0 +1,192 @@
+{
+  "activation": "T008-live-runtime-prep-001",
+  "actor": {
+    "consumer": "/root",
+    "id": "/root/ac_fd_effects_worker",
+    "role": "Writer/Worker"
+  },
+  "basis": {
+    "Core": "97b099812fc1f6964c83cd7df678e4a1fd0575e941c74549689fe4944f008820",
+    "Effects": "9108d6ad10e412f5a0e981c88c06c7b37cb913a24286282da9aae752f239a586",
+    "HOW": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f",
+    "Product": "urn:stdo:product-definition:a-c-implementations",
+    "Product_binding": "live-binding-001 exact Root-consumed T008ab065 owner lines668–728, Task6d777ece and selected bindingbc1fc91b",
+    "RC9_custody": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+    "RC9_source": "c2cfa9b908d1722ae3f26c32fa4ece691083bdc3",
+    "RC9_tree": "98de394b352179c25dfa63b0b59a9b6bdd43632d",
+    "WHAT_commit": "c2f67fec8154028d45d7cd7a2832dd4fade4d94b",
+    "adapter": "4d1ea7fe98ec1b53f2a19d9a2fef2b3fbb070624c955fbb1e9e48f5cc88011b1",
+    "builder_manifest": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "mode": "Provisional bounded real-use proposal, no ontology/design/Product acceptance",
+    "profile": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+  },
+  "checks": {
+    "driver_previews": {
+      "all_exit_zero": true,
+      "count": 3,
+      "files": [
+        "validation/03-contract-preview.json",
+        "validation/04-task-preview.json",
+        "validation/05-observe-preview.json"
+      ],
+      "operations": [
+        "tools.describe(work.write)",
+        "source.read(TASK,utf8)",
+        "workspace.observe(stable_scope)"
+      ]
+    },
+    "invariance": "INVARIANCE.json",
+    "pure_validator": {
+      "checks": [
+        "Exact policy parsing/Product/profile/role startup",
+        "Shared exact grant/principals/Product/owner/evidence and Worker no-executor cut",
+        "Actual context/packet/return source grammar and supported null/unknown branch",
+        "Frozen helper plan/dependency/native/config pins and nonempty argv",
+        "Outside-repository cwd empty and owned; target absent and exact writable grant route",
+        "Actual source/dependency paths available; explicit MCP policy digest and protected environment conservation"
+      ],
+      "exit_code": 0,
+      "not": "No Context, Preflight, operation receipt, actor or semantic result was created",
+      "path": "validation/02-pure-validator.json"
+    },
+    "read_only_help": {
+      "both_exit_zero": true,
+      "empty_tools_assignment": "availability/claude-empty-tools-help.json",
+      "first": "availability/claude-help.json",
+      "qualification": "Help/parser capability only; actual initialized native tool scope is not observed"
+    },
+    "retained_failure": {
+      "cause": "Shipped helper rejects an empty argv token for --tools followed by empty string",
+      "file": "validation/pure-validator.stderr",
+      "supported_repair": "Root selected nonempty --tools= spelling after read-only native parser/help evidence; helper unchanged"
+    },
+    "schema": "a_c.T008.worker-preparation-checks/1",
+    "syntax": "Python ast.parse passed for executive.py and validate.py",
+    "unperformed": [
+      "Actual public tool acquisition/context/preflight",
+      "Actual native init/effective-tool compatibility/model/provider call",
+      "Guide construction/F_P judgment/Reviewer expectation/assessment",
+      "Acceptance/release/benefit"
+    ]
+  },
+  "core_value": "satisfied",
+  "effects": {
+    "Context_Preflight_Attempt_markers": 0,
+    "actors_model_provider_calls": 0,
+    "authored_outputs": "a_c/.ai-workspace/qualification/t008/live-runtime-prep-001/ only",
+    "existing_source_edits": 0,
+    "global_Git_package_auth_configuration_changes": 0,
+    "guide_writes": 0,
+    "native_help_observations": 2,
+    "outside_exception": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/t008-claude-worker-001-n4hj0go7",
+    "public_tool_operations": 0
+  },
+  "evidence": {
+    "CHECKS.json": "f1834338047ba1efc139a5e2365db104612371e90a8740907b8c51bedcac319a",
+    "CONFIGURATION.json": "26efd5cd7f43bd1df91c837838bf659877a1755d4aabff5c2c6a10702e048f8d",
+    "CWD.selection.txt": "74cabe1119b5068960360c282a92935705317f98fe41a18566357bdd3ac750dc",
+    "DEFAULTS.metadata.json": "9652a1f4f1205d7f1b0b45b09612810f1da43899408bd56f0de2a5a54c485a06",
+    "EMPTY_TOOLS.selection.txt": "2559d6ba458b1218a17bddcc1b752525bdfd4e3bdbbdd7da44e477e214947544",
+    "ENVIRONMENT.selected.json": "3be0ffcf57a576e59f02ab0ab7894ebd21038cd9590b475ea6db44b631b6d282",
+    "GRANT.md": "bc26d713a2f162e61aaf96011f0931fa6d9b1656e21c611e6c4f23265f5b3ac8",
+    "INVARIANCE.json": "8d679d1887de6ff44153707849eb6c63492945aef552eecdda731d84339c31b5",
+    "PREPARATION.admission.json": "51c44f388f82f5decc839a66ac6354d8629cfc9319ce6f60c772affd592b42df",
+    "PREPARATION.contract.txt": "cba96a53d194a195db9daef2f34137b6ee802f4e37e467dbac950fc3ea0f0c41",
+    "PREREQUISITES.json": "91e4e42af6f0975c5155d186c0af589a7111d38f0ad04615b2f76cfe1ad86428",
+    "PROPOSAL.json": "55e3bc21cb830097987f84d3b767ccf27f912ae58460b92fe9453316d6b3e18b",
+    "README.md": "e4959ca75a7df35faaea6e99f79adffe164de9b8653bc02da5f3381efc617ba1",
+    "SCRATCH.json": "b7b0e5c90914b4f83c57aa69abccfd7691d34d24cee8b3cb2ba2722d9cb40686",
+    "SOURCE_MANIFEST.json": "eb8ac61936b88f3de2f970a394b152adfbde9f382aaff0c2edf2b516e066613a",
+    "TRANSPORT.selection.txt": "6e0189c6b9da73edcafd22beef332a41fda55d016939fedec3aaf8344ca155a0",
+    "TWO_POLICY.selection.txt": "edd6fac59b969506dfc2a95f1e5170b53faa1cc2cb558385aa5e977ff3a690ae",
+    "context.assemble.request.json": "6210e58eb05323e9241bc68fc2925045cebad5490386e20278a5751f80356b90",
+    "executive-policy.json": "c772a8808be376ec4757004efa15ae31418bc698f8c6cc5016c7f5ab5ae55517",
+    "executive.py": "e1e6cbf42c414061bb32c7e3069023cf9fbf82072b815c1e73f165929a308b43",
+    "root-observation-scope.json": "b23c4feaaf655f7e45537a4454299b96fc448b097298a282b96c227a14d910f4",
+    "source-index.json": "01b77ad3a61f3e1149a2f228f38f353ac8da42836a80b2a3aae8ff4b00d80518",
+    "system-instructions.txt": "112b9b304eee86108cbe2555e3eea2b8c422994d33cbbe7eaf51d49b8d0bdd97",
+    "validate.py": "8792540f538e315a2928579310786b5b7ee40acbe6a2894bcdbe3976cc2ccb84",
+    "worker-actor-plan.json": "bc5dbe3eaa9d35b49713676e9f2fb5c4a8f700f9da0419c8062b179c46075fa4",
+    "worker-call.json": "5b707f79122be7f733f39934d990122436b5586680210fd2547951c6dc001119",
+    "worker-instructions.md": "66bb45f919bc4f9ead81076a4acafbc2d2a46566df73c89f43147967eb5cc4b4",
+    "worker-packet.json": "89a48150f912dc9abffd5d18a9b590fd48be8f31bda2ab9684092be46e9d2759",
+    "worker-return-contract.json": "b548d16766a3486cc98a6cb7e8990c2824153d72bfc58cbb7e8003c626c3dcd7",
+    "worker-tool-policy.json": "c1d9ca385ba207d7fc392782e4e7c39436b435f77e36ac19a6bd6d84e932f21e",
+    "worker.mcp.json": "f48936df2c16d63bf0385a49553b5fd7a78bf46dafb3200fea13536659275a05"
+  },
+  "exact_next_entry": {
+    "first_argv": [
+      "python3",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/live-runtime-prep-001/executive.py",
+      "describe",
+      "--id",
+      "t008-contract-acquisition-001",
+      "--operation",
+      "work.write",
+      "--execute"
+    ],
+    "first_effect": "Only public tools.describe + exact response/evidence retention; no actor/admission/guide",
+    "next": "Root explicitly selects acquisition/observe/context/preflight, consumes actual refs, then separately approves dispatch",
+    "script": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/live-runtime-prep-001/executive.py"
+  },
+  "invalidators": [
+    "Any exact policy/packet/helper/config/source/native/default dependency drift",
+    "Target ceases absent before intended Writer edge, output evidence directory is no longer fresh, or selected cwd no longer empty",
+    "Changed Product owner/Task/method/grant or unresolved semantic relation",
+    "Actual public refusal/unknown or native/backend mismatch requiring supported separate repair/re-entry"
+  ],
+  "limits": [
+    "Pure preparation validation is not public runtime or semantic acceptance.",
+    "Help does not prove actual Claude MCP initialization, effective tool scope, model usability or mental acquisition.",
+    "No guide/findings/precomputed F_P verdict was authored.",
+    "No acceptance, installation, publication, release, complete-calculus, savings or quality claim."
+  ],
+  "next": "Stop. Root consumes this exact proposal, runs only explicit public preparation first, consumes actual Context/Preflight, and separately decides whether to approve the exact dispatch.",
+  "predicate": "Concrete exact Worker policy/packet/invocation/public-phase harness and bounded preparation evidence are available for Root review; this is not the guide candidate or an actual tool/actor admission.",
+  "preparation_outputs": {
+    "Context_preparation": "context.assemble.request.json",
+    "README": "README.md",
+    "default_metadata": "DEFAULTS.metadata.json",
+    "empty_cwd": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/t008-claude-worker-001-n4hj0go7",
+    "frozen_system_prompt": "system-instructions.txt",
+    "helper_plan": {
+      "path": "worker-actor-plan.json",
+      "sha256": "bc5dbe3eaa9d35b49713676e9f2fb5c4a8f700f9da0419c8062b179c46075fa4"
+    },
+    "native_empty_tools_help": "availability/claude-empty-tools-help.stdout",
+    "native_help": "availability/claude-help.stdout",
+    "packet": "worker-packet.json",
+    "policies": {
+      "Executive": {
+        "path": "executive-policy.json",
+        "sha256": "c772a8808be376ec4757004efa15ae31418bc698f8c6cc5016c7f5ab5ae55517"
+      },
+      "Worker": {
+        "path": "worker-tool-policy.json",
+        "sha256": "c1d9ca385ba207d7fc392782e4e7c39436b435f77e36ac19a6bd6d84e932f21e"
+      }
+    },
+    "proposal": {
+      "path": "PROPOSAL.json",
+      "raw_sha256": "55e3bc21cb830097987f84d3b767ccf27f912ae58460b92fe9453316d6b3e18b"
+    },
+    "public_harness": "executive.py"
+  },
+  "remaining_prerequisites": [
+    "Root actually executes and consumes explicit public acquisition/observation/Context/Preflight before the separate actual call decision.",
+    "Each actual native call needs Root exact approval; this preparation admits no dispatch.",
+    "Actual native authentication/default model/effort/tool initialization/effective tool scope and host capacity remain unobserved before trial.",
+    "Later nonauthor Reviewer has its own separately prepared source-first/exposure/settings relation and two exact approved activations with actual expectation reference.",
+    "All final pins/preimages/scratch/evidence-directory currentness must hold; no automatic retry or active repinning."
+  ],
+  "schema": "a_c.T008.worker-runtime-preparation-return/1",
+  "selected_integration_constraints": [
+    "Two separately pinned startup policies are necessary to avoid the policy/plan/MCP digest cycle. They share the exact single guide Grant/Product/actors/evidence scope; their observations remain separate.",
+    "Worker takes its own public observation for Writer checks; Root observes stable governing/configuration inputs, while the intended guide preimage/transition has separate explicit evidence.",
+    "Stock helper rejects empty argv items; --tools= has read-only native parser/help evidence and preserves the documented empty built-in-set intent without a source edit. Actual effective tool selection remains trial-unqualified.",
+    "Normal Worker configuration preserves default user/auth routes with frozen operational flags. Outside-repo cwd excludes checkout ancestors; unseen user/plugin/hooks/memory/default context is still unknown. No Worker source-first independence is asserted."
+  ],
+  "state": "closed-preparation",
+  "value": "candidate_ready"
+}

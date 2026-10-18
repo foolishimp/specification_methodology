@@ -1,0 +1,43 @@
+--- approved005launcher
++++ prepared006launcher
+@@ -1,5 +1,5 @@
+ #!/usr/bin/env python3
+-"""One fresh repair005 current-design assessment; work evidence, not a method engine."""
++"""One fresh repair006 current-design assessment; work evidence, not a method engine."""
+ from __future__ import annotations
+ import argparse
+ import datetime as dt
+@@ -44,7 +44,8 @@
+              ("PRIOR_PACKET_PRESERVATION_HASHES.json", "prior_packet_preservation_sha256"),
+              ("PRESERVATION_INVENTORY_PROJECTION.json", "preservation_projection_sha256"),
+              ("SOURCE_ADDITIONS_MANIFEST.json", "source_additions_manifest_sha256"),
+-             ("SOURCE_ADDITIONS.txt", "source_additions_sha256")]
++             ("SOURCE_ADDITIONS.txt", "source_additions_sha256"),
++             ("ROOT_CURRENT_CANDIDATE_RECORD.json", "root_current_candidate_record_sha256")]
+     for filename, key in pairs:
+         if sha(ROOT / filename) != plan[key]:
+             raise ValueError("Frozen input mismatch: " + filename)
+@@ -93,7 +94,7 @@
+                 "--system-prompt", system]
+     if plan["argv"] != expected:
+         raise ValueError("Launch argv differs from fixed isolated configured-CLI contract")
+-    if plan["stdin_sha256"] != "0c6e23910d3cf31ecd58c1fb332063ad19847cb57441a74e7f7405ac26eb4e9d":
++    if plan["stdin_sha256"] != "9078f1edb027a35094a56fd7df717f7dfc7a88cfadcedf21a2153f6bb4e4f235":
+         raise ValueError("Final-design prompt differs from exact prepared input")
+     if plan["calls"] != 1 or plan["automatic_retries"] != 0 or plan["process_wall_limit_seconds"] > 1200:
+         raise ValueError("Unapproved call/resource bound")
+@@ -121,12 +122,12 @@
+             raise ValueError("Final approval mismatch: " + key)
+     attempt = ROOT / plan["attempt_directory"]
+     attempt.mkdir(parents=True, exist_ok=False)
+-    workdir = Path(tempfile.mkdtemp(prefix="ac_t008_repair005_review_"))
++    workdir = Path(tempfile.mkdtemp(prefix="ac_t008_repair006_review_"))
+     initial_files = sorted(p.name for p in workdir.iterdir())
+     if initial_files:
+         raise ValueError("Review workspace is not empty")
+     started = time.monotonic()
+-    record = {"kind": "raw-repair005-design-model-assessment-attempt", "started_utc": now(),
++    record = {"kind": "raw-repair006-design-model-assessment-attempt", "started_utc": now(),
+               "executable": plan["executable"], "executable_realpath": plan["executable_realpath"],
+               "executable_sha256": plan["executable_sha256"], "version": plan["version"],
+               "argv": plan["argv"], "prompt_sha256": plan["stdin_sha256"],

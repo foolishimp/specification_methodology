@@ -1,0 +1,60 @@
+{
+  "schema": "a_c.effects-repair-checks/1",
+  "activation": "T-008-effects-repair-001",
+  "status": "bounded_owned_checks_passed",
+  "historical_before_failure": {
+    "raw_sha256": "34e75c59474a3c18b7568549f4bf70ba1ab47a210219621cb09fb668d9afbf4f",
+    "test_count": 1,
+    "reported_seconds": "2.244",
+    "exit_code_observed": 1,
+    "skips": 0,
+    "failures": 1,
+    "errors": 0
+  },
+  "affected_after_pass": {
+    "raw_sha256": "169652e5be420291f4394b2f813077ae4c45d17c0aee1fc0db173fcec4fe11dc",
+    "test_count": 1,
+    "reported_seconds": "0.302",
+    "exit_code_observed": 0,
+    "skips": 0,
+    "failures": 0,
+    "errors": 0
+  },
+  "final_owned_suite": {
+    "raw_sha256": "f6f9e1b1e97494f5bd3191b71479f19c96cf10a7bab166d91ec9d826ebeafda7",
+    "test_count": 32,
+    "reported_seconds": "3.322",
+    "exit_code_observed": 0,
+    "skips": 0,
+    "failures": 0,
+    "errors": 0
+  },
+  "strict_typing": {
+    "files": 3,
+    "issues": 0,
+    "exit_code": 0,
+    "flags": [
+      "--strict",
+      "--follow-imports=silent"
+    ],
+    "raw_sha256": "8228fcc5ce46d42d01caf3cd941f4e9c5f2bcc372bb5b147a2f0572d2dd675a8"
+  },
+  "source_cut": {
+    "code/ac_support_effects.py": "b7f6cb4dc66209e6bf463d41eb0d9100e80b4418188185d3d831205968dc4fb3",
+    "code/ac_support_core.py": "97b099812fc1f6964c83cd7df678e4a1fd0575e941c74549689fe4944f008820",
+    "code/ac_support.py": "4d1ea7fe98ec1b53f2a19d9a2fef2b3fbb070624c955fbb1e9e48f5cc88011b1",
+    "code/ac_graph.py": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+    "test_env/test_ac_support_effects.py": "0ddca158a8dddcae72c6a7e30c2ffe01a4ca07029031c51be6f58285ec75368e",
+    "test_env/support_fixtures/local_actor.py": "9c3c0fd8fe563f96db6cb00d95989fd319a6518b006f0efffcfd3d48caf6838a",
+    "design/fd-method-claude-rc9.json": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+  },
+  "final_source_invariance": "SOURCE.invariance.json",
+  "commands": "COMMANDS.json",
+  "actual_discriminators": [
+    "BEFORE.discriminator.json",
+    "AFTER.discriminator.json"
+  ],
+  "proof_manifest": "PROOF.manifest.json",
+  "original_evidence": "Original closed return, candidate manifest, their referenced evidence and snapshot files verified unchanged; SOURCE.invariance.json gives exact hashes.",
+  "qualification": "The new control traverses a real public MCP Writer under a registered deterministic fixture process. Its outer supplied lower-layer Context/receipt is synthetic; no actual F_P/model usability, full ordinary Product admission or independent acceptance follows. Before and after exact peer cuts are separately recorded; this is a source-selected regression discriminator, not a matched performance trial."
+}

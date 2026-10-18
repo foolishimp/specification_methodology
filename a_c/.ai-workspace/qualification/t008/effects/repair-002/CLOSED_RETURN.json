@@ -1,0 +1,192 @@
+{
+  "schema": "a_c.effects-implementation-repair-return/1",
+  "activation": "T-008-effects-repair-002",
+  "state": "candidate_ready",
+  "actor": {
+    "id": "/root/ac_fd_effects_worker",
+    "role": "Writer/Worker",
+    "consumer": "/root"
+  },
+  "basis": {
+    "Product": "urn:stdo:product-definition:a-c-implementations",
+    "WHAT": "c2f67fec8154028d45d7cd7a2832dd4fade4d94b",
+    "builder_uri": "stdo://releases/v2.5.1-rc.2/",
+    "builder_manifest": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "RC9_source": "c2cfa9b908d1722ae3f26c32fa4ece691083bdc3",
+    "RC9_custody": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+    "RC9_tree": "98de394b352179c25dfa63b0b59a9b6bdd43632d",
+    "HOW_sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f",
+    "T008_sha256": "a34425295fe5fd2cbbd21406f0b0fc609245152a374267a47b5dcd3bd08d7fa2",
+    "profile_sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1",
+    "mode": "Root-selected provisional co-evolution, not ontology/design acceptance or independent satisfaction"
+  },
+  "admission": {
+    "contract": "CONTRACT.txt",
+    "contract_raw_sha256": "c4b9692a8a034e2477cfac5718260f3d9b7a5369453b8a57c2039637f25ce311",
+    "receipt": "ADMISSION.json",
+    "receipt_raw_sha256": "e760a0a4028919e068059f9217062a366b6841cdc6431fe9f6275b871a37f729",
+    "qualification_clarification": "QUALIFICATION.clarification.txt",
+    "mechanism": "Root finite external bootstrap under existing owner instruction; no admission by this candidate tool"
+  },
+  "previous_subject": {
+    "closed_return": "../repair-001/CLOSED_RETURN.json",
+    "closed_return_raw_sha256": "d6e5aa7b829fcaa6fd22c488402e71c2e2b52a3997204710348828f223c58ef2",
+    "conservation": "All prior closed returns, manifests, referenced evidence and owned candidate snapshots were verified unchanged."
+  },
+  "construction_availability": {
+    "predicate": "The admitted typed support-reference repair, exact sources/snapshots, source-selected controls and actual results are available to Executive.",
+    "core_value": "satisfied",
+    "value": "candidate_ready",
+    "candidate": {
+      "id": "urn:a-c:graphify:fd-effects:T-008-effects-repair-002",
+      "sha256": "c2cf0dd8822b1164378cec1836f50eb300da110d61dcf75d1cefd36bb977bb08",
+      "manifest": "CANDIDATE.json",
+      "snapshot": "candidate/"
+    }
+  },
+  "realized_repair": [
+    "Declared field/operation traversal replaces recursive identity-shape inference. Provenance Attempt, primary result, actual artifacts/acquisitions and known Context/Preflight/Attempt/Return/event/Writer/resource/transport/qualified-operator support edges remain verified before their owning envelopes.",
+    "Original requests/refusals/gaps, actor/source/record JSON, ordinary subject/method Identity values, unknown qualification claims and unresolved condition candidates remain exact data. No new envelope field, public operation, authority/admission path or JSON namespace restriction.",
+    "Actual public missing-input refusal retains source_missing/refused(basis)/invalid_basis plus durable OperationEvidence, and fresh public evidence.read of that operation succeeds without dereferencing the quoted missing input.",
+    "Actual JSON source projection and finite predicate preserve protected-looking Identity/literal data while true missing/tampered support still refuses publication.",
+    "Existing per-Attempt supervision, bounded Product/target lock, publication recovery, fixed pins, retry/currentness and actual process/MCP Writer behavior remain in the final owned checks."
+  ],
+  "performed_evaluations": [
+    {
+      "id": "original-b7-regression",
+      "predicate": "The four initial source-selected controls expose the old shape-inference behavior at the recorded old module and exact unchanged peer cut.",
+      "core_value": "satisfied",
+      "domain_outcome": {
+        "tests": 4,
+        "failures": 2,
+        "errors": 1,
+        "passed": 1,
+        "reported_seconds": "0.109",
+        "metadata": "TESTS.before.json",
+        "raw": "TESTS.before.log"
+      },
+      "evidence": [
+        "TESTS.before.json",
+        "TESTS.before.log",
+        "BEFORE.source-custody.json",
+        "proof-before/"
+      ]
+    },
+    {
+      "id": "typed-reference-controls",
+      "predicate": "Eight new dependency/data ownership controls pass, including21true missing carrier-edge variants and actual tamper refusal.",
+      "core_value": "satisfied",
+      "domain_outcome": {
+        "tests": 8,
+        "passed": 8,
+        "reported_seconds": "0.339",
+        "metadata": "TESTS.expanded.json",
+        "raw": "TESTS.expanded.log"
+      },
+      "evidence": [
+        "TESTS.expanded.json",
+        "TESTS.expanded.log",
+        "DISCRIMINATORS.json"
+      ]
+    },
+    {
+      "id": "owned-final-suite",
+      "predicate": "All40owned tests pass at the final exact source/dependency cut.",
+      "core_value": "satisfied",
+      "domain_outcome": {
+        "tests": 40,
+        "passed": 40,
+        "skips": 0,
+        "failures": 0,
+        "errors": 0,
+        "reported_seconds": "3.632",
+        "metadata": "TESTS.final.json",
+        "raw": "TESTS.final.log"
+      },
+      "evidence": [
+        "TESTS.final.json",
+        "TESTS.final.log",
+        "proof-final/"
+      ]
+    },
+    {
+      "id": "owned-strict-typing",
+      "predicate": "Strict mypy reports no issue in the3owned source/test/fixture files after the final source change.",
+      "core_value": "satisfied",
+      "domain_outcome": {
+        "checked_owned_files": 3,
+        "issues": 0,
+        "metadata": "TYPING.final.json",
+        "raw": "TYPING.final.log"
+      },
+      "evidence": [
+        "TYPING.final.json",
+        "TYPING.final.log"
+      ]
+    },
+    {
+      "id": "cut-and-prior-conservation",
+      "predicate": "Final source dependencies stayed byte-identical across owned checks and all prior frozen returns/evidence/snapshots remain unchanged.",
+      "core_value": "satisfied",
+      "domain_outcome": true,
+      "evidence": [
+        "SOURCE.invariance.json",
+        "CANDIDATE.json"
+      ]
+    }
+  ],
+  "evidence": {
+    "CONTRACT.txt": "c4b9692a8a034e2477cfac5718260f3d9b7a5369453b8a57c2039637f25ce311",
+    "ADMISSION.json": "e760a0a4028919e068059f9217062a366b6841cdc6431fe9f6275b871a37f729",
+    "QUALIFICATION.clarification.txt": "2838c39e62417b22717b3cffb9616957a6d25a6c1e8c09ae7e1d7238fd01d4aa",
+    "ORACLES.json": "9bb93a991852bd1920a327b8df26300283eca54d9f71fd27489f3d5b0873b14a",
+    "BEFORE.source-custody.json": "1bc991b375a063e396f340f5e82dab9d78257ba2f123ad1a1d674b3b40993e96",
+    "FINAL.before-tests.json": "7a04b85d812b93304b9d452c1f746831c9fb41f3d7db9616580af236be16fc8d",
+    "SOURCE.invariance.json": "1fbe29b0fda6c1e4470933173c092823233fd38eda2d85d8813dcef050d61449",
+    "DISCRIMINATORS.json": "bf61b2d2db0565acaac788e8497e39d1d3526546cf1dee234ec36ff1aff78166",
+    "PROOF.manifest.json": "f1703bb57a5e50955721461b04ea2f20b872b9c9f2365183be4e88d3b954a960",
+    "CONTROL_MAP.json": "4724e017e4009d147673f5b528caafd182d2a9d32c2d077584a8f0f19fd00b39",
+    "CHECKS.json": "07ee7739ef4512dcde2bde5a96c1144daa949c5b2785ebe64e247642fb172efc",
+    "CANDIDATE.json": "12977e403acd6e3f173c3bb162e307a189fb90b1fdb39e36e28dbc6476d46339",
+    "TESTS.before.json": "0f42dc53ed5aaa0a83b0a372b4c89166bee617531e527ebb57fbb5669febe320",
+    "TESTS.before.log": "cc05f8b354dcb36722059a40c707aa7f7e9f1d064520d9bbd20ae03511677a9d",
+    "TESTS.after.json": "7604a4f0c7d99ba3a6ce1f007e0bdb32bcb2cbdb2f13bfd5cf901a8d6b495f8d",
+    "TESTS.after.log": "89da36d625ae599134c189565ca5fe176c2652a8f484597d6d644349378f7fd8",
+    "TESTS.expanded.json": "870c6637c5cbc3a7fa217344811464e99b1f26455629efb93670297d8dd690a3",
+    "TESTS.expanded.log": "d7256b3cf91a5e00149c91db54371f6cd30bc84be51e556b56e3fdf4febbc40f",
+    "TESTS.final.json": "c219cdd0343b51a2a8f6b6d7abfeea88c5f913c8e4d8dd5e63b2a4c81cbdc959",
+    "TESTS.final.log": "74eba16bba4986fc9f7d0abace4edd3e255ee8434301912e2a9067df8cd7befc",
+    "TYPING.first.json": "dda4f0d28cfdd7de32503e0db1b5d4d4206a6393bfc1d758d17a443591de63e0",
+    "TYPING.first.log": "5e81772a5a4d753f0b9c50b7577d46d25cddaa24166b749d65f24223d1e8d698",
+    "TYPING.final.json": "94899975d7556f947ea229983ee174e3008b0f65e2bdba0b5e4716087d0f4900",
+    "TYPING.final.log": "8228fcc5ce46d42d01caf3cd941f4e9c5f2bcc372bb5b147a2f0572d2dd675a8"
+  },
+  "qualification_limits": [
+    "Actual public CLI refusal/literal retention and registered deterministic process -> MCP -> Writer progress are established within local controlled fixtures.",
+    "The reverse-order Return ownership graph verifies retention dependencies only; synthetic lower-layer Context/receipt/Return bodies do not establish full ordinary Product admission, semantic Return capture or actual model/F_P use.",
+    "Not every possible typed owner-edge or every standing-form variant was independently exercised; original control-map gaps remain.",
+    "No independent semantic satisfaction, ontology/design acceptance, complete calculus conformance, installed qualification, efficiency/benefit, Product acceptance, promotion or release is inferred.",
+    "The cooperative local filesystem/process model does not provide OS confinement, hardware power-loss qualification, distributed atomicity or complete descendant/external effect end."
+  ],
+  "actual_effect_boundary": {
+    "source_writes": [
+      "a_c/build_tenants/graphify/code/ac_support_effects.py",
+      "a_c/build_tenants/graphify/test_env/test_ac_support_effects.py"
+    ],
+    "fixture_unchanged": {
+      "path": "a_c/build_tenants/graphify/test_env/support_fixtures/local_actor.py",
+      "sha256": "9c3c0fd8fe563f96db6cb00d95989fd319a6518b006f0efffcfd3d48caf6838a"
+    },
+    "evidence_writes": "a_c/.ai-workspace/qualification/t008/effects/repair-002/ only",
+    "runtime_effects": "Registered local deterministic fixtures, actual public CLI/MCP calls, isolated disposable test filesystem and fault effects",
+    "LLM_provider_calls": 0,
+    "peer_common_design_Git_package_global_configuration_edits": false
+  },
+  "invalidators": [
+    "Any owned candidate byte change",
+    "Material current peer/codec/profile/HOW/policy/method/owner changes affecting these controls",
+    "New unsupported semantic carrier/typed edge or changed protected-store/executor/publication assumptions",
+    "Missing/corrupt evidence markers or changed grant/currentness bindings"
+  ],
+  "next": "Stop. Executive consumes this exact successor before ordinary integration, actual F_P task use, independent assessment and separate acceptance decisions."
+}

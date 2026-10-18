@@ -1,0 +1,62 @@
+{
+  "Reviewer_proposed": {
+    "actor_id": "urn:a-c:T008:claude-reviewer:001",
+    "authorship": "t008-independent-reviewer-001",
+    "family": "anthropic-claude",
+    "principal": "claude-reviewer-001",
+    "standing": "proposed identity under Root selected nonauthor role; final per-call approval pending"
+  },
+  "Worker_reported_by_effects_prep": {
+    "actor_id": "urn:a-c:T008:claude-worker:001",
+    "authorship": "t008-guide-author-001",
+    "family": "anthropic-claude",
+    "grant_id": "urn:a-c:grant:T008:guide:001",
+    "principal": "claude-worker-001",
+    "return_contract_id": "urn:a-c:T008:worker-guide-return:001",
+    "target": "build_tenants/graphify/examples/fd-support/LIFECYCLE_QUICKSTART.md"
+  },
+  "consumer": "/root",
+  "family_meaning": "Root-selected epistemic group; not a runtime/model/provider attestation; no cross-family independence credit",
+  "implementation_group": "native-implementation-family-unobserved",
+  "native_implementation_authors": [
+    {
+      "id": "/root/ac_fd_core_worker",
+      "scope": "ac_support_core.py and own Core tests/proof"
+    },
+    {
+      "id": "/root/ac_fd_effects_worker",
+      "scope": "ac_support_effects.py and own Effects tests/fixture/proof"
+    },
+    {
+      "id": "/root/ac_fd_interfaces_worker",
+      "scope": "ac_support.py, public helpers/interfaces/tests/docs and own integration proof"
+    },
+    {
+      "id": "Root-selected HOW/Profile/T008 Writers",
+      "scope": "exact selected design/source contributions; retain closed work provenance, no raw model/config inference"
+    }
+  ],
+  "schema": "a_c.live-review-identities-draft/1",
+  "shared_owner": {
+    "engine": "workspace-regular-file",
+    "object": null,
+    "path": ".ai-workspace/tickets/active/T-008-fd-tenant-implementation.md",
+    "root": "product",
+    "selector": {
+      "lines": [
+        668,
+        728
+      ]
+    },
+    "sha256": "ab06521088409bc6efa21caf95ff4dec5b8eadb7686c32e3c8866dfd72dc7abc"
+  },
+  "state": "DRAFT; no registered actual actor call",
+  "task": {
+    "engine": "workspace-regular-file",
+    "object": null,
+    "path": ".ai-workspace/qualification/t008/live-binding-001/TASK.md",
+    "root": "product",
+    "selector": null,
+    "sha256": "6d777ece58832ec57185f47cbe69f714222329e600b3a190acac63d7d744fff2"
+  }
+}

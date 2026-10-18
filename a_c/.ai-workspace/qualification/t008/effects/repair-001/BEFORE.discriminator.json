@@ -1,0 +1,42 @@
+{
+  "schema": "a_c.effects-repair-before-discriminator/1",
+  "old_effects_sha256": "b6b09bc044894471ea38f7418eadfa988aaebd02f14a04e3030456037fa70fb4",
+  "sealed_supervisor_modules": [
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py",
+      "sha256": "4d1ea7fe98ec1b53f2a19d9a2fef2b3fbb070624c955fbb1e9e48f5cc88011b1"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_core.py",
+      "sha256": "23e5deacd66dd701a74745adbf7263478da9b10fb3ef9b2c2624fcb1ccd47051"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_effects.py",
+      "sha256": "b6b09bc044894471ea38f7418eadfa988aaebd02f14a04e3030456037fa70fb4"
+    }
+  ],
+  "event_kinds": [
+    "reserved",
+    "supervisor_spawned",
+    "actor_launch_intent",
+    "actor_started",
+    "context_delivery",
+    "deadline",
+    "signal_delivery",
+    "output_chunk",
+    "output_finalized",
+    "effect_observation"
+  ],
+  "actual_actor_stdout": {
+    "fixture": "public-writer",
+    "writer_progress_before_actor_exit": false,
+    "failure": "Actor timed out waiting for its public Writer result",
+    "mcp_raw_responses": [
+      "{\"id\":1,\"jsonrpc\":\"2.0\",\"result\":{\"capabilities\":{\"tools\":{\"listChanged\":false}},\"instructions\":\"Each tool takes the full a_c.fd-support.request/1 envelope. Keep its caller id stable for an exact retry. Discover authority, checked fragments and unsupported variants with tools.describe.\",\"protocolVersion\":\"2025-11-25\",\"serverInfo\":{\"name\":\"a_c.graphify.fd-support\",\"version\":\"0.1.0\"}}}\n"
+    ]
+  },
+  "public_writer_request_claim_present": true,
+  "writer_intent_present": false,
+  "target_present_in_raw_custody": false,
+  "interpretation": "Real actor reached public MCP initialization and a core-prepared work.write request claim, then timed out before Writer intent/target publication while supervisor held the Product scope lock. This failed control is historical and not relabeled by the repair."
+}
