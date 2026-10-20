@@ -1,0 +1,61 @@
+{
+  "role": "Writer",
+  "actor": "/root/common_rep_release_bundle",
+  "transition_from": "Closed Worker packaging role; new separate documentation activation",
+  "activated_at_utc": "2026-10-20T11:19:52.480037+00:00",
+  "root_decision": "SELECTED LOCAL REPRESENTATION CONSTRUCTION AND RELEASE PREPARATION COMPLETE, subject to factual handoff/link guards",
+  "triage": "realization_refactor/application handoff documentation; no implementation, method, WHAT or semantic acceptance change",
+  "builder": {
+    "uri": "stdo://releases/v2.5.1-rc.2/",
+    "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "calculus_sha256": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d"
+  },
+  "source": {
+    "commit": "35fb4824a064a84df5af214a0d0e2da597c18ac6",
+    "package_tree": "7f2070b61c848b42b4dfb3af1e0ce53869de1aa1"
+  },
+  "archive_sha256": "2b33530c20a17dd27033e8b34b1af497de7a4e0f3b8165a22d0821298516e386",
+  "consumed_results": [
+    {
+      "path": ".ai-workspace/qualification/t010/packaging/final-001/CLOSED.json",
+      "sha256": "17e755531863b97d07254bc733edb6dd49557cf2acef946c30e32aa14d768339"
+    },
+    {
+      "path": ".ai-workspace/qualification/t010/package-review/final-003/CLOSED.json",
+      "sha256": "b789e10347f6637b2ab6ede1f74e30ab83f008aa4f6d0fe2c8d6a4371bd1c5f0"
+    },
+    {
+      "path": ".ai-workspace/qualification/t010/package-review/final-003/REVIEW.md",
+      "sha256": "9406018d5a0a96afc114d9a28b7310bc6daa66453dfcef7474cf935d2dc717bf"
+    }
+  ],
+  "write_grant": [
+    "/Users/jim/src/apps/specification_methodology/a_c/applications/stdo-v3-common-35fb4824/README.md",
+    "/Users/jim/src/apps/specification_methodology/a_c/applications/stdo-v3-common-35fb4824/RELEASE-PREPARATION.md",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/tickets/active/T-010-common-representation-release-preparation.md",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t010/handoff/**",
+    "own new ac-common-release-* scratch"
+  ],
+  "preimages": [
+    {
+      "path": "applications/stdo-v3-common-35fb4824/RELEASE-PREPARATION.md",
+      "bytes": 8830,
+      "sha256": "d726e013bbe388dabd18d3a35a1af764a2c452580fe06b93f9decfa60ec89118",
+      "preserved_as": "preimages/RELEASE-PREPARATION.md"
+    },
+    {
+      "path": ".ai-workspace/tickets/active/T-010-common-representation-release-preparation.md",
+      "bytes": 6319,
+      "sha256": "3cbe2e8e5f0e41d57bcb9a0b1d8fe4175b8712096d05aa2661b236e4f29f22c5",
+      "preserved_as": "preimages/T-010-common-representation-release-preparation.md"
+    }
+  ],
+  "new_readme_absent": true,
+  "reserved": [
+    "No ticket move selected",
+    "No other existing file/code/WHAT/build/run/source/release_tools/report/Git or sealed bundle/dist changes",
+    "No heavy check suites/model/native/net/install/browser/server/publication/commit/push",
+    "No representation semantic acceptance, common source freezability/owner acceptance/covering review, actor-family independence, RC/Product/install qualification or measured benefit closed"
+  ],
+  "checks_selected": "Factual documentation/link and immutable/unrelated guards only; reuse closed qualification evidence"
+}

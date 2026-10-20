@@ -1,0 +1,48 @@
+{
+  "activation": "/root/fix_ac_effects",
+  "checks": {
+    "affected_timing_controls": "Shared fixture measurement now separates actual supervised intervals/finalization from CLI observer latency and witnesses descendant alive before cleanup. All four affected controls passed on final test bytes. The complete 66-case file was not repeated for the test-only update, as Root requested.",
+    "baseline": "8 tests: 6 failures, 2 passes. Five defect counterexamples plus one fixture cancellation-grant defect; all original outputs retained.",
+    "corrected_cancel_baseline": "Fixture Grant explicitly included dispatch.cancel; its single control then reproduced the held-pipe hang.",
+    "focused_candidate": "66 effects tests in one run: 64 passed, 2 observer wall-clock assertions failed after finalized output. Both failures retained. Production bytes were not changed afterward.",
+    "full_suite": "Not run by this Worker; Root joined integration remains required.",
+    "typing": "Strict mypy normal imports: effects plus tests passed (2 source files). After the test-only timing update the final effects test file passed again (1 target source file, normal imports)."
+  },
+  "closed_at_ns": 1792471293371777000,
+  "core_value_for_candidate_available": "satisfied",
+  "frame": "Worker",
+  "git_head": "bfe228511415d346459523cec44e7e8157e2991a",
+  "limits": [
+    "These are bounded cooperative local public CLI/process controls, not native F_P/model/provider/network usability or general qualification.",
+    "Every public regression uses actual context.assemble and contract.preflight receipts; the separate missing-legacy-support test is an explicitly lower-layer synthetic carrier control.",
+    "Protected-store enumeration completeness and historical Context support are required under the existing cooperative local trust model; no store forgery/OS-confinement claim is added.",
+    "The actual parent alone receives terminate/kill. No descendant kill permission, effect completion/rollback claim, automatic retry or new grant is introduced.",
+    "No method, schema, profile, dependency, documentation, Core, interface, frozen model or Git bytes were changed by this Worker.",
+    "Exact scratch snapshots and test custody preserve original absolute bindings as historical evidence; they are not re-admitted or silently rebased runtime receipts.",
+    "Independent assessment, final joined tests, owner acceptance and release are reserved to Root/owners."
+  ],
+  "lineage": "ACTIVATION.json and preimages/ bind the Root-inherited existing owner grant, exact installed builder, work-scoped RC9 basis and original dirty source bytes. worker-delta.patch is this Worker delta only. No old retry-repair evidence is reused.",
+  "non_owned_snapshot_drift_now": [],
+  "process_witnesses": "process-witness-summary.json",
+  "repairs": {
+    "A": "Complete protected Attempt history is resolved through retained Context Packets and the unchanged Core.activation_identity. Context-envelope reassembly cannot erase prior attempts. The existing activation-id lock, current preflight/authority/precondition checks and explicit predecessor/reconciliation paths remain. Missing identity support holds history_incomplete.",
+    "B": "Parent-end pipe finalization no longer depends on sent_at becoming null. Selected timeout/cancellation also bounds continuously readable tails; SIGTERM grace starts after the actual local terminate request. Retained partial stdout/stderr stays incomplete, parent process end is observed separately, descendant/external end and intended effect stay unknown."
+  },
+  "schema": "a_c.review-fix-worker-closure/1",
+  "source_after": [
+    {
+      "bytes": 88754,
+      "path": "build_tenants/graphify/code/ac_support_effects.py",
+      "sha256": "6c296de1bc888b8c18cb1cc211fd2eae7f242ac5ebb5df33c436596bed37bae9",
+      "verified_against": "candidate-timing-snapshot.json"
+    },
+    {
+      "bytes": 95597,
+      "path": "build_tenants/graphify/test_env/test_ac_support_effects.py",
+      "sha256": "b2e0399f4bbfa09549acbffb13d8a2745b74b4f6c5fd9c1bcfbb386292c661e4",
+      "verified_against": "candidate-timing-snapshot.json"
+    }
+  ],
+  "subject": "/Users/jim/src/apps/specification_methodology/a_c",
+  "work_result": "candidate_ready"
+}

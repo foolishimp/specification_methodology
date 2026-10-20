@@ -1,0 +1,112 @@
+{
+  "status": "closed-worker-result",
+  "operation": "One F_P semantic correction and deterministic separate proposal packaging",
+  "role": "Worker author, not independent assessor or acceptor",
+  "proposal_status": "unaccepted",
+  "model": {
+    "id": "urn:a-c:application:stdo-v3-rc9-claude-direct-review-correction:001:model",
+    "canonical_sha256": "acc476e820a93a3cca31762a2f582cf109e55bf5149919e37bd74f1f9d75b9d3",
+    "file_sha256": "12d3b8744a5edad502b19255306ffe7915f32aff39de9e8823ee0dae8e69da5a"
+  },
+  "carrier": {
+    "canonical_sha256": "b2126afc552739e35c7d69877c4bd6185e887f2231af7845bd9c42469119c681",
+    "file_sha256": "0ef9d1b55345045292b40d378ac36b567baacf677ff74d2345d52749e5d8b194"
+  },
+  "target": {
+    "record": "urn:a-c:generation:63c64519947babe1e3fec509:record:613311974eb7d572ca277ccf96b8f339",
+    "field": "predicate.exceptions[0]"
+  },
+  "changed_json_paths": [
+    "/id",
+    "/interpretation/contract/id",
+    "/interpretation/contract/sha256",
+    "/interpretation/interpreter/id",
+    "/interpretation/interpreter/sha256",
+    "/interpretation/provenance",
+    "/populations/constraints/16/predicate/exceptions/0"
+  ],
+  "semantic_fields_changed": 1,
+  "envelope_paths_changed": 6,
+  "records_total": 1980,
+  "unchanged_records": 1979,
+  "source_files_checked": 49,
+  "frozen_guard_files_unchanged": 65,
+  "public_codec_checks": {
+    "fragment_validation": true,
+    "materialization": true,
+    "exact_decode": true,
+    "recovered_file_bytes_equal": true,
+    "references": 16420
+  },
+  "application_controls": {
+    "positive": 1,
+    "negative_refusals": 5
+  },
+  "read_only_replay": "passed",
+  "source_first_expectations_sha256": "733d59c762f41dd1091f20d3628fde38aec5bddbb8ed5fa8c4b2bb8132fe8806",
+  "new_cli_model_dispatches": 0,
+  "backend_usage": "Unmeasured for this Worker session; no efficiency claim.",
+  "source_or_model_files_outside_grant_written": false,
+  "original_four_representations": "unchanged",
+  "independent_review": "pending",
+  "limitations": [
+    "No new whole-source generation",
+    "No semantic acceptance or Product/RC/install/release disposition",
+    "No global closure, full calculus conformance or accepted-result benefit qualification",
+    "No fresh upstream Graphify build/export trial for this new proposal"
+  ],
+  "artifacts": {
+    "dogfood/stdo-v3-generation-rc9-review-correction/README.md": {
+      "file_sha256": "01981999c40dfe448279c5b6ba2996edf15bb7768b06815fdd48a9e7bc970e18",
+      "bytes": 4346
+    },
+    "dogfood/stdo-v3-generation-rc9-review-correction/authoring-record.json": {
+      "file_sha256": "a7fdba3f89532aa5be84b373f7f7c03fa524bd9041563c585afe28772a38ab47",
+      "bytes": 2710
+    },
+    "dogfood/stdo-v3-generation-rc9-review-correction/build_correction.py": {
+      "file_sha256": "500bac4517cdbbe770626a88c73f1237a42ae54f9b52c40aead2c4a26429296d",
+      "bytes": 12501
+    },
+    "dogfood/stdo-v3-generation-rc9-review-correction/interpretation-contract.json": {
+      "file_sha256": "72709e508c06c18707b0f61315904946d4246d082bdb4fbc9dc144be864b1390",
+      "bytes": 560028
+    },
+    "dogfood/stdo-v3-generation-rc9-review-correction/interpreter.json": {
+      "file_sha256": "ef13187243c2957a70b15dab6474d4042518db76363f9d3771bf231384ae4c76",
+      "bytes": 1216
+    },
+    "dogfood/stdo-v3-generation-rc9-review-correction/proposal/carrier.json": {
+      "file_sha256": "0ef9d1b55345045292b40d378ac36b567baacf677ff74d2345d52749e5d8b194",
+      "bytes": 42009039
+    },
+    "dogfood/stdo-v3-generation-rc9-review-correction/proposal/coverage.json": {
+      "file_sha256": "2fc03cb82efa9775c209e722f73c57eb37d96721b8076a18ee60e2f358aacbd3",
+      "bytes": 1803
+    },
+    "dogfood/stdo-v3-generation-rc9-review-correction/proposal/delta.json": {
+      "file_sha256": "dca49a173b134604f71c8b9c7b119875d4b5a273f79de604bb4d5ba380b8305d",
+      "bytes": 3626
+    },
+    "dogfood/stdo-v3-generation-rc9-review-correction/proposal/model.json": {
+      "file_sha256": "12d3b8744a5edad502b19255306ffe7915f32aff39de9e8823ee0dae8e69da5a",
+      "bytes": 7212410
+    },
+    "dogfood/stdo-v3-generation-rc9-review-correction/proposal/result.json": {
+      "file_sha256": "4c2189f487aae4ea2271ad20af450f4518ffe3f76057f07323877d6be7be4b5c",
+      "bytes": 2828
+    },
+    "dogfood/stdo-v3-generation-rc9-review-correction/provenance-resolution.json": {
+      "file_sha256": "46b22c74f56fca20b8e76039963bbae572fb525b009185b8504548f86229baab",
+      "bytes": 2907
+    },
+    "dogfood/stdo-v3-generation-rc9-review-correction/semantic-patch.json": {
+      "file_sha256": "497296489f844307bef145e8b6ff7df3e62405e0bc49e9c3226b8ead1819ca5d",
+      "bytes": 1553
+    },
+    "dogfood/stdo-v3-generation-rc9-review-correction/source-manifest.json": {
+      "file_sha256": "4d07536880401a7f2a54ccd3807bc9575328610d4412a44a2e0e3892cf484d6f",
+      "bytes": 8306
+    }
+  }
+}

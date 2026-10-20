@@ -1,0 +1,469 @@
+{
+  "actual_actor_or_provider_calls": 0,
+  "actual_upstream_execution": false,
+  "cases": [
+    {
+      "case": "ordinary-complete-direct-proposal",
+      "detail": {
+        "claim": "Mechanically valid, source-grounded F_P proposal and lossless carrier; interpretation fidelity and semantic acceptance unassessed.",
+        "processing_complete": true,
+        "status": "proposed"
+      },
+      "status": "passed"
+    },
+    {
+      "case": "missing-answer.json",
+      "detail": {
+        "assembly": "GenerationError: incomplete actor evidence",
+        "selection": "GenerationError: incomplete actor evidence"
+      },
+      "status": "passed"
+    },
+    {
+      "case": "missing-result.json",
+      "error": "AssertionError: Expected refusal, operation succeeded",
+      "status": "failed",
+      "traceback": "Traceback (most recent call last):\n  File \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-review-generation-fixes-c9lzlcwr/review_controls.py\", line 40, in check\n    detail = fn()\n             ^^^^\n  File \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-review-generation-fixes-c9lzlcwr/review_controls.py\", line 240, in <lambda>\n    check('missing-'+filename,lambda filename=filename:custody_case('missing-'+filename,lambda output,author:(author/filename).unlink()))\n                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-review-generation-fixes-c9lzlcwr/review_controls.py\", line 148, in custody_case\n    selection=refused(lambda:g.successful_attempt(output,'author',chunk))\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-review-generation-fixes-c9lzlcwr/review_controls.py\", line 51, in refused\n    raise AssertionError('Expected refusal, operation succeeded')\nAssertionError: Expected refusal, operation succeeded\n"
+    },
+    {
+      "case": "missing-invocation.json",
+      "detail": {
+        "assembly": "GenerationError: incomplete actor evidence",
+        "selection": "GenerationError: incomplete actor evidence"
+      },
+      "status": "passed"
+    },
+    {
+      "case": "missing-prompt.txt",
+      "detail": {
+        "assembly": "GenerationError: incomplete actor evidence",
+        "selection": "GenerationError: incomplete actor evidence"
+      },
+      "status": "passed"
+    },
+    {
+      "case": "missing-events.jsonl",
+      "detail": {
+        "assembly": "GenerationError: incomplete actor evidence",
+        "selection": "GenerationError: incomplete actor evidence"
+      },
+      "status": "passed"
+    },
+    {
+      "case": "missing-stderr.txt",
+      "detail": {
+        "assembly": "GenerationError: incomplete actor evidence",
+        "selection": "GenerationError: incomplete actor evidence"
+      },
+      "status": "passed"
+    },
+    {
+      "case": "missing-usage.json",
+      "detail": {
+        "assembly": "GenerationError: incomplete actor evidence",
+        "selection": "GenerationError: incomplete actor evidence"
+      },
+      "status": "passed"
+    },
+    {
+      "case": "append-prompt-and-refresh-self-hash",
+      "detail": {
+        "assembly": "GenerationError: actor prompt does not belong to this exact source chunk and discovery context",
+        "selection": "GenerationError: actor prompt does not belong to this exact source chunk and discovery context"
+      },
+      "status": "passed"
+    },
+    {
+      "case": "wrong-schema",
+      "detail": {
+        "assembly": "GenerationError: actor schema identity differs",
+        "selection": "GenerationError: actor schema identity differs"
+      },
+      "status": "passed"
+    },
+    {
+      "case": "wrong-settings",
+      "detail": {
+        "assembly": "GenerationError: frozen actor settings differ",
+        "selection": "GenerationError: frozen actor settings differ"
+      },
+      "status": "passed"
+    },
+    {
+      "case": "wrong-actual-argv",
+      "detail": {
+        "assembly": "GenerationError: actor argv is not the isolated ephemeral source-authoring invocation",
+        "selection": "GenerationError: actor argv is not the isolated ephemeral source-authoring invocation"
+      },
+      "status": "passed"
+    },
+    {
+      "case": "changed-events-with-stale-result-hash",
+      "detail": {
+        "assembly": "GenerationError: stale original events.jsonl",
+        "selection": "GenerationError: stale original events.jsonl"
+      },
+      "status": "passed"
+    },
+    {
+      "case": "usage-contradiction",
+      "detail": {
+        "assembly": "GenerationError: retained CLI usage is absent or contradictory",
+        "selection": "GenerationError: retained CLI usage is absent or contradictory"
+      },
+      "status": "passed"
+    },
+    {
+      "case": "tool-event-despite-refreshed-event-hash",
+      "detail": {
+        "assembly": "GenerationError: actual actor tool/isolation violation",
+        "selection": "GenerationError: actual actor tool/isolation violation"
+      },
+      "status": "passed"
+    },
+    {
+      "case": "failed-turn-despite-refreshed-event-hash",
+      "detail": {
+        "assembly": "GenerationError: actor event stream contains a failed turn",
+        "selection": "GenerationError: actor event stream contains a failed turn"
+      },
+      "status": "passed"
+    },
+    {
+      "case": "retained-workspace-not-empty",
+      "detail": {
+        "assembly": "GenerationError: actor workspace is not retained empty and isolated",
+        "selection": "GenerationError: actor workspace is not retained empty and isolated"
+      },
+      "status": "passed"
+    },
+    {
+      "case": "newer-unfinished-no-fallback",
+      "detail": {
+        "assembly": "GenerationError: missing validated F_P chunks; normal assembly refuses. --allow-partial explicitly marks refused sections",
+        "older_attempt_retained": true,
+        "prepared_stage": "incomplete"
+      },
+      "status": "passed"
+    },
+    {
+      "case": "newer-failed-no-fallback",
+      "detail": {
+        "assembly": "GenerationError: missing validated F_P chunks; normal assembly refuses. --allow-partial explicitly marks refused sections",
+        "older_attempt_retained": true,
+        "prepared_stage": "incomplete"
+      },
+      "status": "passed"
+    },
+    {
+      "case": "ordinary-vs-grounding-source-failure",
+      "detail": {
+        "grounded": "proposed",
+        "ordinary": "GenerationError: missing validated F_P chunks; normal assembly refuses. --allow-partial explicitly marks refused sections",
+        "original_status": "failed",
+        "repair_preparation_model_calls": 0
+      },
+      "status": "passed"
+    },
+    {
+      "case": "graphify-ac-stage-custody",
+      "detail": {
+        "actual_upstream_execution": false,
+        "exact_author_custody": true,
+        "wrong_schema": "GenerationError: actor schema identity differs"
+      },
+      "status": "passed"
+    },
+    {
+      "case": "graphify-extract-stage-custody-and-source-revalidation",
+      "detail": {
+        "actual_upstream_execution": false,
+        "exact_author_and_extract_custody": true,
+        "refreshed_hash_wrong_source": "GenerationError: completed actor fails exact source validation: semantic fragment source_file is not a verbatim supplied source path"
+      },
+      "status": "passed"
+    },
+    {
+      "case": "fence-simple3",
+      "detail": {
+        "characters_conserved": true,
+        "headings": [
+          "Before",
+          "Actual"
+        ]
+      },
+      "status": "passed"
+    },
+    {
+      "case": "fence-wider-with-short-inner",
+      "detail": {
+        "characters_conserved": true,
+        "headings": [
+          "Before",
+          "Actual"
+        ]
+      },
+      "status": "passed"
+    },
+    {
+      "case": "fence-wider-with-longer-close",
+      "detail": {
+        "characters_conserved": true,
+        "headings": [
+          "Before",
+          "Actual"
+        ]
+      },
+      "status": "passed"
+    },
+    {
+      "case": "fence-tilde-marker",
+      "detail": {
+        "characters_conserved": true,
+        "headings": [
+          "Before",
+          "Actual"
+        ]
+      },
+      "status": "passed"
+    },
+    {
+      "case": "fence-other-marker-not-close",
+      "detail": {
+        "characters_conserved": true,
+        "headings": [
+          "Before",
+          "Actual"
+        ]
+      },
+      "status": "passed"
+    },
+    {
+      "case": "fence-closing-content-not-close",
+      "detail": {
+        "characters_conserved": true,
+        "headings": [
+          "Before",
+          "Actual"
+        ]
+      },
+      "status": "passed"
+    },
+    {
+      "case": "fence-three-space-indent",
+      "detail": {
+        "characters_conserved": true,
+        "headings": [
+          "Before",
+          "Actual"
+        ]
+      },
+      "status": "passed"
+    },
+    {
+      "case": "fence-four-space-not-close",
+      "detail": {
+        "characters_conserved": true,
+        "headings": [
+          "Before",
+          "Actual"
+        ]
+      },
+      "status": "passed"
+    },
+    {
+      "case": "fence-closing-horizontal-space",
+      "detail": {
+        "characters_conserved": true,
+        "headings": [
+          "Before",
+          "Actual"
+        ]
+      },
+      "status": "passed"
+    },
+    {
+      "case": "fence-invalid-backtick-info",
+      "detail": {
+        "characters_conserved": true,
+        "headings": [
+          "Before",
+          "Visible"
+        ]
+      },
+      "status": "passed"
+    },
+    {
+      "case": "line-convention-lf",
+      "detail": {
+        "non_grounding_equal": true,
+        "recovered_ranges": [
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "strict_noop": true
+      },
+      "status": "passed"
+    },
+    {
+      "case": "line-convention-vt",
+      "detail": {
+        "non_grounding_equal": true,
+        "recovered_ranges": [
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "strict_noop": true
+      },
+      "status": "passed"
+    },
+    {
+      "case": "line-convention-ff",
+      "detail": {
+        "non_grounding_equal": true,
+        "recovered_ranges": [
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "strict_noop": true
+      },
+      "status": "passed"
+    },
+    {
+      "case": "line-convention-fs",
+      "detail": {
+        "non_grounding_equal": true,
+        "recovered_ranges": [
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "strict_noop": true
+      },
+      "status": "passed"
+    },
+    {
+      "case": "line-convention-gs",
+      "detail": {
+        "non_grounding_equal": true,
+        "recovered_ranges": [
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "strict_noop": true
+      },
+      "status": "passed"
+    },
+    {
+      "case": "line-convention-rs",
+      "detail": {
+        "non_grounding_equal": true,
+        "recovered_ranges": [
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "strict_noop": true
+      },
+      "status": "passed"
+    },
+    {
+      "case": "line-convention-nel",
+      "detail": {
+        "non_grounding_equal": true,
+        "recovered_ranges": [
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "strict_noop": true
+      },
+      "status": "passed"
+    },
+    {
+      "case": "line-convention-ls",
+      "detail": {
+        "non_grounding_equal": true,
+        "recovered_ranges": [
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "strict_noop": true
+      },
+      "status": "passed"
+    },
+    {
+      "case": "line-convention-ps",
+      "detail": {
+        "non_grounding_equal": true,
+        "recovered_ranges": [
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "strict_noop": true
+      },
+      "status": "passed"
+    },
+    {
+      "case": "normalized-ambiguity-remains-refused",
+      "detail": "GroundingError: ambiguous whitespace-run-equivalent quote occurrences in the same supplied section",
+      "status": "passed"
+    }
+  ],
+  "failed": 1,
+  "passed": 41,
+  "profile": "a_c.review.generation-fixes.controls/1",
+  "scope": "Independent synthetic controls over exact owned code copies; no full suite or model-quality assessment.",
+  "script_sha256": "69c4a1666a765e3dfc1158c1cefe7848ad96efc11f9de5bc47284c9baa928ec5"
+}

@@ -1,0 +1,683 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>standards/EVALUATION.md</title><style>body{font:14px system-ui;margin:24px;background:#101720;color:#dfeaf4}a{color:#87c7ff}pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5;counter-reset:line}span{display:block}span:before{content:attr(data-line);display:inline-block;width:4em;color:#7392aa;user-select:none}span:target{background:#36481d}</style><h1>standards/EVALUATION.md</h1><p>Exact frozen source · SHA256 4c87b1286d9c721b6e050b64adb8f6804327c0d8e3dad67f7c3973cbef389fd6</p><pre><span id="L1" data-line="1"># EVALUATION</span>
+<span id="L2" data-line="2"></span>
+<span id="L3" data-line="3">Tier 1. Owns how claims are justified and accepted: claims, evidence,</span>
+<span id="L4" data-line="4">independent assessment, review results, acceptance, conformance of</span>
+<span id="L5" data-line="5">realisations and the equivalence ladder, the qualification of frames and</span>
+<span id="L6" data-line="6">of the method itself, and actual-use evidence of adequate attention.</span>
+<span id="L7" data-line="7">Consumes [FOUNDATIONS](FOUNDATIONS.md), whose</span>
+<span id="L8" data-line="8">[Results](FOUNDATIONS.md#results) own the core result values this member</span>
+<span id="L9" data-line="9">uses; it defines no result values of its own.</span>
+<span id="L10" data-line="10"></span>
+<span id="L11" data-line="11">## 1. Claims</span>
+<span id="L12" data-line="12"></span>
+<span id="L13" data-line="13">A load-bearing claim names its exact subject, the property claimed, the</span>
+<span id="L14" data-line="14">governing basis, the relation between witness and claim, the nearest weaker</span>
+<span id="L15" data-line="15">property it excludes, and its falsifier, before a witness is selected.</span>
+<span id="L16" data-line="16">Without these it is evidence discovery, not proof. Packaging, syntax,</span>
+<span id="L17" data-line="17">compilation, presence, invocation or local behaviour never substitutes for a</span>
+<span id="L18" data-line="18">semantic, authority-bearing, installed, release or end-to-end claim because</span>
+<span id="L19" data-line="19">the weaker property is easier to measure (P6).</span>
+<span id="L20" data-line="20"></span>
+<span id="L21" data-line="21">Where a claim about a construction concerns its recursive or repeated</span>
+<span id="L22" data-line="22">work, it is one of the four kinds the construction relation keeps apart,</span>
+<span id="L23" data-line="23">preservation, progress, termination and outcome satisfaction</span>
+<span id="L24" data-line="24">([ACTIVATION §1](ACTIVATION.md#construction-relation)), and states which.</span>
+<span id="L25" data-line="25">Its witness is an assertion whose predicate is the full obligation, a</span>
+<span id="L26" data-line="26">necessary condition of it or part of a sufficient conjunction, and the</span>
+<span id="L27" data-line="27">claim states which. Its expected result has assertion provenance and its</span>
+<span id="L28" data-line="28">execution has execution provenance, as</span>
+<span id="L29" data-line="29">[FOUNDATIONS §4 Assertions and observation](FOUNDATIONS.md#assertions-and-observation)</span>
+<span id="L30" data-line="30">and [Parallel derivation and mutual assurance](FOUNDATIONS.md#parallel-derivation-and-mutual-assurance)</span>
+<span id="L31" data-line="31">define them; a passing check of a necessary condition establishes that</span>
+<span id="L32" data-line="32">condition and no more (P1, P6).</span>
+<span id="L33" data-line="33"></span>
+<span id="L34" data-line="34">Boundary congruence. A checker, validator, harness, reviewer or other</span>
+<span id="L35" data-line="35">assurance surface supporting promotion or closure binds the exact claimed</span>
+<span id="L36" data-line="36">subject and its authoritative composition relation. Evidence over one file</span>
+<span id="L37" data-line="37">or carrier proves only that boundary; it cannot establish a multi-file or</span>
+<span id="L38" data-line="38">carrier-set claim. Cross-carrier satisfaction and conflict are decided at</span>
+<span id="L39" data-line="39">the declared composite boundary (P3, P6). A claim of mechanical enforcement</span>
+<span id="L40" data-line="40">names an executable or reproducible predicate and a witness reachable</span>
+<span id="L41" data-line="41">through the declared ordinary assurance path; a planned or</span>
+<span id="L42" data-line="42">specification-only harness is planned evidence, not observed verification,</span>
+<span id="L43" data-line="43">and until both the predicate and such a witness are observed the claim</span>
+<span id="L44" data-line="44">remains open or is explicitly downgraded to the planned property (P6).</span>
+<span id="L45" data-line="45"></span>
+<span id="L46" data-line="46">A claim&#x27;s quantifier, population and scope cannot exceed its evaluated</span>
+<span id="L47" data-line="47">evidence. Generalising a local defect or observation needs a declared</span>
+<span id="L48" data-line="48">inference relation, the relevant comparable population, explicit</span>
+<span id="L49" data-line="49">counterexample treatment and governing evidence. Later counterevidence</span>
+<span id="L50" data-line="50">invalidates every dependent verdict until the claim-evidence relation is</span>
+<span id="L51" data-line="51">superseded, withdrawn or requalified (P6). The quantifier rule and the</span>
+<span id="L52" data-line="52">boundary rule are false if assurance observes a weaker or different</span>
+<span id="L53" data-line="53">subject, if per-carrier evidence closes an unevaluated composite claim, if</span>
+<span id="L54" data-line="54">mechanical enforcement lacks its predicate or a reachable witness, if</span>
+<span id="L55" data-line="55">planned evidence is reported as observed verification, if a verdict outruns</span>
+<span id="L56" data-line="56">its evaluated population or declared inference relation, or if dependent</span>
+<span id="L57" data-line="57">verdicts survive material counterevidence without requalification.</span>
+<span id="L58" data-line="58"></span>
+<span id="L59" data-line="59">### Foundation to law: claims, evidence, assessment and acceptance</span>
+<span id="L60" data-line="60"></span>
+<span id="L61" data-line="61">This family, claims, evidence, assessment and acceptance (F6 in the index</span>
+<span id="L62" data-line="62">of [FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law)),</span>
+<span id="L63" data-line="63">decides when a claim is supported, how it is assessed and who accepts it.</span>
+<span id="L64" data-line="64">It covers §1 to §5 of this member. Its instance premises are: (a) claims</span>
+<span id="L65" data-line="65">about exact subjects are relied on for promotion, closure or release; (b)</span>
+<span id="L66" data-line="66">the evidence available is finite, and may observe a weaker or different</span>
+<span id="L67" data-line="67">subject, or another basis, than the one claimed; (c) a constructing actor</span>
+<span id="L68" data-line="68">may be probabilistic or otherwise fallible; (d) each boundary at which a</span>
+<span id="L69" data-line="69">claim is relied on has a decision owner. They are conditions of the work</span>
+<span id="L70" data-line="70">this family governs, not commitments, and do not follow from finite</span>
+<span id="L71" data-line="71">capacity alone.</span>
+<span id="L72" data-line="72">P0&#x27;s premise that a step&#x27;s output is a candidate until evaluated is cited</span>
+<span id="L73" data-line="73">by name. The standing of the consequences below is stated in</span>
+<span id="L74" data-line="74">[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law).</span>
+<span id="L75" data-line="75"></span>
+<span id="L76" data-line="76">| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |</span>
+<span id="L77" data-line="77">|---|---|---|---|---|</span>
+<span id="L78" data-line="78">| P6 (independent); instance premises a, b | By P6 evidence supports only the claim it is evidence for, and by (a) and (b) claims are relied on while the evidence is finite and may observe a weaker subject, so a load-bearing claim names its exact subject, the property claimed, the governing basis, the relation between witness and claim, the nearest weaker property it excludes and its falsifier before a witness is selected; without these it is evidence discovery, not proof. Packaging, syntax, compilation, presence, invocation or local behaviour never substitutes for a semantic, authority-bearing, installed, release or end-to-end claim because the weaker property is easier to measure | [§1](#1-claims), first paragraph | none | 9 |</span>
+<span id="L79" data-line="79">| P3 (independent), P6 (independent); instance premise b | By P3 a claim binds its exact subject, and by (b) evidence may observe another subject, so an assurance surface supporting promotion or closure binds the exact claimed subject and its authoritative composition relation; by P6 evidence over one file or carrier proves only that boundary and cannot establish a multi-file or carrier-set claim, so cross-carrier satisfaction and conflict are decided at the declared composite boundary | [§1](#1-claims), Boundary congruence | each claim&#x27;s composite boundary: the authority that declares the claimed subject and its composition relation | 2, 9 |</span>
+<span id="L80" data-line="80">| P6 (independent); instance premise b | By P6 a claim holds only on observed evidence, and by (b) a plan is not an observation, so a claim of mechanical enforcement names an executable or reproducible predicate and a witness reachable through the declared ordinary assurance path; a planned or specification-only harness is planned evidence, not observed verification, and until both are observed the claim stays open or is downgraded to the planned property | [§1](#1-claims), Boundary congruence, the sentences on mechanical enforcement | the ordinary assurance path: the project&#x27;s assurance design under [ASSURANCE](ASSURANCE.md#1-verification-layers) | 8, 9 |</span>
+<span id="L81" data-line="81">| P6 (independent); instance premise b | By P6 a claim holds only as far as its evidence, and by (b) the evidence is finite, so a claim&#x27;s quantifier, population and scope cannot exceed its evaluated evidence. Generalising a local defect or observation needs a declared inference relation, the comparable population, explicit counterexample treatment and governing evidence; later counterevidence invalidates every dependent verdict until the claim-evidence relation is superseded, withdrawn or requalified. The rules of §1 are false under the falsifiers §1 lists | [§1](#1-claims), the quantifier rule and its falsifiers | the inference relation and the comparable population of a generalisation: the author of the claim, who declares them with it | 9 |</span>
+<span id="L82" data-line="82">| P6 (independent), P1 (independent) | P1 keeps a representation apart from its meaning, and P6 makes a verdict a claim on evidence that a separate decision authority disposes. So the semantic basis, the evidence basis and the state projection stay distinct, as do semantic law, evidence, the evaluator&#x27;s application and the disposition, and the record keeps them distinguishable where one actor performs several. It follows that an evidence change can invalidate a verdict without any change of law, a projection change can invalidate a view without changing semantic truth, and a semantic change invalidates affected downstream acceptance; a changed broad digest shows a changed representation, not that every semantic relation changed | [§2](#2-separation), first two paragraphs | when an evidence change invalidates a verdict, with mandatory force where it does: [ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse) (family F4); when a derived view is stale: [ACTIVATION §2](ACTIVATION.md#staleness-of-derived-surfaces); the re-entry a semantic change takes: [SPEC_METHOD §4](SPEC_METHOD.md#4-change-management) (family F11); invalidating a review conservatively on a broad digest change: permitted by this section, required nowhere; the frame and a_c bindings of these separations: RF-007 and AC-018 | 6, 9 |</span>
+<span id="L83" data-line="83">| P1 (independent), P6 (independent), P3 (independent) | Structural conformance decides closed syntax, types, identities, references, bases and mechanically decidable predicates; semantic fidelity decides meaning and materiality. A checker decides the structural subset and claims a semantic or authority subset only under an exact lawful decision contract. A valid parse, a valid map, a green test and a historical judgment each establish exactly their own claim, and evidence bound to another basis is excluded, not admitted with a narrower scope | [§2](#2-separation), second paragraph | each decision contract under which a checker decides a semantic subset: the model that supplies it ([AXIOMATIC_CALCULUS §6](AXIOMATIC_CALCULUS.md#6-interpretation-and-models)) | 6, 8, 9 |</span>
+<span id="L84" data-line="84">| P6 (independent), P0 (recovered, with its premise that a step&#x27;s output is a candidate until evaluated); instance premise c | By P6 assessment is a separate authority from construction, and by P0 and (c) a step&#x27;s output is a fallible candidate until evaluated, so a constructor&#x27;s self-review is construction output, not assessment; where promotion needs independent assessment, the assessor evaluates the exact live subject, authority paths, proof and installed state, not the constructor&#x27;s summary | [§3](#3-independent-assessment), first paragraph | the boundaries at which this method requires independent assessment: the Spec Method policy at [TICKETS, UP-007](TICKETS.md#execution-and-verification-authority-separation-up-007); further boundaries: the governing basis of each promotion | 7, 9 |</span>
+<span id="L85" data-line="85">| P6 (independent), P3 (independent); instance premise c | By P3 a judgment binds the exact subject it read, and by P6 and (c) the assessor&#x27;s judgment must be its own, so assessment binds an exact subject: frozen by identity before material reference exposure where method qualification applies, and otherwise stabilised by an immutable identity or an equivalent exact-subject relation sufficient for the claim, never a mutable working tree; the assessor makes no repair and does not assess its own authorship. Shared mechanical evidence may be reused; the constructor&#x27;s judgment may not. A revision after exposure is a declared intervention or a new qualification subject, and cannot make the original frozen construction pass retroactively | [§3](#3-independent-assessment), Protocol | recording the assessor&#x27;s expectations from the governing source before it opens the candidate: a policy choice of this section; actor type and count, review rounds, engine, prompt and orchestration: the governing authority, through the configuration of [ACTIVATION §1](ACTIVATION.md#configuration); policies of this section: the assessor makes no repair, and a revision after exposure is a declared intervention or a new qualification subject; where the freeze applies: method qualification (§7) | 2, 7, 9 |</span>
+<span id="L86" data-line="86">| P6 (independent); instance premise c | By P6 independence is a relation between the author and the assessor, and by (c) an author&#x27;s judgment is fallible in a way that persists across its contexts, so independence rests on authorship and the evidence conditions, not on a new context, and the assessor may read the constructor&#x27;s governing sources. An author that opens a fresh context to review its own candidate is still its author; its review stays self-review and cannot be relabelled as independent assessment. Independence across actor families is declared, not assumed | [§3](#3-independent-assessment), the last two paragraphs | whether two activations of one model family are independent for a semantic judgment: the governing basis of the claim; the default where it is silent, that they are not: this section | 7, 9 |</span>
+<span id="L87" data-line="87">| P6 (independent), P3 (independent); instance premise c | Self-review is construction output (P6), and identities are scoped by kind (P3), so the party whose self-review is excluded must be identified apart from whoever performs an operation: author identity, the party responsible for the content of a realised subject, is distinct from actor identity, and independence is judged against the author | [§3](#3-independent-assessment), the author-identity paragraph | none | 2, 9 |</span>
+<span id="L88" data-line="88">| P6 (independent), P5 (derived from P0 and P6, with P0&#x27;s open-world premise) | By P6 a result must let its consumer check and dispose it, and by P5 an unevaluated predicate has no result, so a review result carries, for each predicate it evaluated, the exact subject and basis, the evidence consulted, the findings ranked by consequence with each finding&#x27;s evidence and smallest bounded correction, the residual uncertainty and the invalidation conditions. A recommended disposition is evidence only and never a disposition, and the review applies none; a finding without evidence a consumer can chase is commentary | [§4](#4-review-results), first paragraph | none | 3, 9 |</span>
+<span id="L89" data-line="89">| P6 (independent), P2 (independent), P1 (independent) | By P6 evaluation and decision are separate authorities, and by P1 a mapped value is not the value it maps, so severity, the assessor&#x27;s grade of consequence, is evaluation evidence, while priority, the effect on the current promotion boundary and the disposition are the decision owner&#x27;s and stay distinct values even where a policy maps one to another; a recommended disposition is never adopted mechanically. By P2 only a decided result serves the outcome, so the decision owner consumes no `indeterminate` or `out_of_frame` result as satisfaction or as a settled finding, and returns an `invalid_basis` result through the declared basis re-entry relation without consuming it. The payload classes `complete`, `indeterminate` and `not_applicable` classify the triage only and are not results, dispositions, priorities or lifecycle states | [Result and triage projection](#result-and-triage-projection), its first two paragraphs and the consumption column of its table | the triage fields: the profile that adopts the triage, such as [EXECUTIVE_BASELINE](EXECUTIVE_BASELINE.md#technical-triage-severity-priority-and-boundary-effect); the scales, and the priority and boundary policy: the adopting Product | 3, 9 |</span>
+<span id="L90" data-line="90">| P6 (independent), P2 (independent) | By P6 a verdict is bounded by its claim, and by P2 work outside the claim needs its own route to an outcome, so an observation outside the evaluated claim does not replace the claim-relative result: the assessor returns it separately with its repricing or re-entry pressure, and the decision owner returns it to its owner without a claim-relative block or another review round from its severity alone. By P6 the assessor holds no construction authority, so it returns to the decision owner, not to the constructor, and does not edit the candidate, direct the repair or authorise continuation | [Result and triage projection](#result-and-triage-projection), the last two paragraphs | none | 9 |</span>
+<span id="L91" data-line="91">| P6 (independent), P2 (independent), P0 (recovered, with its premise that a step&#x27;s output is a candidate until evaluated); instance premise d | By P6 and (d) acceptance is the decision owner&#x27;s act, and by P0 the subject accepted must be the evaluated one, so acceptance is the decision owner&#x27;s disposition over an unchanged subject; recording it cannot widen it, and by P2 it exhausts only the instance and interval it names. A work item closes by the condition it stated, and a reviewer result is an input to closure, never the closure; green labels, document counts, review counts and historical outcomes are not acceptance | [§5](#5-acceptance), first paragraph | the acceptance boundary, its interval and its decision owner: the governing basis that names them; the closing condition of a work item: that work item ([TICKETS](TICKETS.md#7-authority-judgment-closure-and-state)) | 9 |</span>
+<span id="L92" data-line="92">| P6 (independent), P3 (independent); instance premise d | By P6 and (d) a decision is the owner&#x27;s, exercised directly or through a grant it admits, and by P3 a proxy&#x27;s identity stays distinct from the human authority&#x27;s, so a human decision may be exercised directly or through an explicitly admitted bounded proxy; a change a proxy cannot make, under FOUNDATIONS §2&#x27;s proxy limit, re-enters at its owning relation | [§5](#5-acceptance), the proxy sentences | what a proxy grant names: [IDENTITY §6](IDENTITY.md#6-authority-identity-and-conservation-stdo-up-004); what a proxy can never decide: [FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds); whether a proxy is admitted, with its scope and exclusions: the human authority that grants it | 9 |</span>
+<span id="L93" data-line="93">| P6 (independent); instance premise d | By P6 a verdict is bounded by the exact claim it evaluated, so a finding can block current promotion only through a condition that bears on that claim&#x27;s acceptance at the current boundary, and an observation outside the claim blocks nothing by itself. By instance premise d blocking is the decision owner&#x27;s act, so no block follows mechanically from a finding or its severity; a non-waivable hard stop is by definition one that no decision waives, so a valid falsification of a mandatory claim under it blocks whatever the priority or cutoff | [§5, When a finding blocks promotion](#when-a-finding-blocks-promotion) | the four blocking conditions (falsifies the claim; competing or ambiguous authority on its acceptance path; violated active authority, safety or retained accepted behaviour; a durable architectural decision foreclosing an admitted Product outcome): this section, conserving UP-007; the decision cutoff and the severity and priority scales: the adopting Product; the hard stops and which are non-waivable: [ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement) and the owner of each stop; domain triggers, such as a design check&#x27;s: the profile or work carrier that refers to §5 | 9 |</span>
+<span id="L94" data-line="94">| P6 (independent), P3 (independent), P4b (derived from P0 and P2, with P0&#x27;s premise that step-produced facts are not re-acquirable); instance premise a | By P4b and P3 a successor&#x27;s predecessor claims persist and bind exact identities, and by P6 and (a) acceptance relies on qualified claims, so where the subject is a successor its acceptance evidence includes the successor disposition record. A claim whose disposition is unresolved cannot be qualified and so cannot be accepted; an intentionally removed disposition is a decision of the current Product authority, and its record is that decision | [§5](#5-acceptance), second paragraph | the disposition values and how the record is evaluated: [RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015) (family F15); each removal: the current Product authority | 1, 9 |</span>
+<span id="L95" data-line="95"></span>
+<span id="L96" data-line="96">The core result a review returns for each evaluated predicate, the rule</span>
+<span id="L97" data-line="97">that a planned predicate not evaluated has no result, and the projection of</span>
+<span id="L98" data-line="98">the triage payload over the core values (§4) apply the core result algebra;</span>
+<span id="L99" data-line="99">they are traced in family F3 at</span>
+<span id="L100" data-line="100">[FOUNDATIONS §4 Results](FOUNDATIONS.md#results), and the rows above trace</span>
+<span id="L101" data-line="101">what §4 decides about the review record, triage and returns.</span>
+<span id="L102" data-line="102"></span>
+<span id="L103" data-line="103">Consumers of these rows, where an actor enters them (FOUNDATIONS §3</span>
+<span id="L104" data-line="104">Foundation to law, Consumers), one list per row, each consumer linked to</span>
+<span id="L105" data-line="105">its own locus:</span>
+<span id="L106" data-line="106"></span>
+<span id="L107" data-line="107">- Row 1, the claim and its exact subject: [RELEASE §3 Exact-cut qualification](RELEASE.md#exact-cut-qualification), where evidence matches the exact claim, and [§9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015), where each successor disposition is a claim with its predicate; [ASSURANCE §2](ASSURANCE.md#2-testing-strategy-taxonomy), [§7 The set](ASSURANCE.md#the-set) and [Unit frame](ASSURANCE.md#unit-frame), where the weaker property never substitutes and unit green is no broader assurance; [ACTIVATION §4 Standing structural qualification](ACTIVATION.md#standing-structural-qualification), where a reconstruction compares the complete semantic result; [AXIOMATIC_CALCULUS §10](AXIOMATIC_CALCULUS.md#10-conformance-obligations), where nothing qualifies a law outside the exact claim it evaluates; [DESIGN_MODULE §5 Decision-complete symbolic design](DESIGN_MODULE.md#decision-complete-symbolic-design) and [§10 Post-ticket design review](DESIGN_MODULE.md#post-ticket-design-review); [EXECUTIVE_BASELINE §9](EXECUTIVE_BASELINE.md#9-derived-worker-frame) and [§10](EXECUTIVE_BASELINE.md#10-derived-reviewer-frame), where green tests are evidence only for the relations they exercise; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminator 1.</span>
+<span id="L108" data-line="108">- Row 2, boundary congruence: [DESIGN_MODULE §6 IACS revision](DESIGN_MODULE.md#iacs-revision), where a revision updates every conformance subject to the declared composite carrier relation under this law; [ASSURANCE §7 Integration frame](ASSURANCE.md#integration-frame), which binds the exact assurance boundary and establishes only the composition it exercised.</span>
+<span id="L109" data-line="109">- Row 3, claims of mechanical enforcement: no separate consumer applies. The ordinary assurance path along which a witness is reachable is the project&#x27;s assurance design under [ASSURANCE §1](ASSURANCE.md#1-verification-layers), as the choice column states, and whether an enforcement claim is observed or planned is assessed where the claim is relied on, under §3 and §4 of this member; no section of another member names these sentences.</span>
+<span id="L110" data-line="110">- Row 4, the quantifier rule and its falsifiers: [Frame qualification](#frame-qualification), whose qualification binds the exact frame revision, actor envelope, evaluation family, basis class and evidence conditions evaluated, and [Method self-qualification](#method-self-qualification), where an unevaluated function or branch stays open; [ASSURANCE §6](ASSURANCE.md#6-significant-path-coverage), where a claim&#x27;s scope cannot exceed its evaluated evidence; [EXECUTIVE_BASELINE §18](EXECUTIVE_BASELINE.md#18-profile-qualification), where the profile is qualified only for the revisions, envelopes, branches and populations evaluated.</span>
+<span id="L111" data-line="111">- Row 5, the three bases and the four roles: [REFERENCE_FRAME §3 RF-007](REFERENCE_FRAME.md#rf-007-semantic-evidence-and-verdict-separation), which binds the separation to a frame declaration; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminator 36.</span>
+<span id="L112" data-line="112">- Row 6, structural conformance and semantic fidelity: [AXIOMATIC_CALCULUS §6 AC-018](AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation), which binds the separation to a_c models, and [§9 Constraint surfaces](AXIOMATIC_CALCULUS.md#constraint-surfaces), Separate claims; [FOUNDATIONS §4](FOUNDATIONS.md#4-algebra), Formal fragment, for what a structural check of a representation establishes; [ASSURANCE §11](ASSURANCE.md#11-assurance-subject-acquisition-and-evaluation), whose evidence mechanics stay evidence evaluators; [EXECUTIVE_BASELINE §18](EXECUTIVE_BASELINE.md#18-profile-qualification), where mechanical document checks and a Reviewer evaluation are bound together and neither is claimed as the other; [PRODUCT_DEFINITION §9](PRODUCT_DEFINITION.md#9-recursive-discovery-and-explicit-composition), where the semantic subset of a check is a distinct claim; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), whose logical-review check no structural check establishes, discriminators 13, 14, 20, 24 and 40, and [§1](CONFORMANCE.md#1-counterexample-cases), case C-02.</span>
+<span id="L113" data-line="113">- Row 7, self-review and the live subject: [TICKETS §7](TICKETS.md#7-authority-judgment-closure-and-state), [UP-007](TICKETS.md#execution-and-verification-authority-separation-up-007), which names the boundaries at which independent assessment is required, and [Recorded judgment and owner-ruling continuity](TICKETS.md#recorded-judgment-and-owner-ruling-continuity), where reusing the author&#x27;s judgment satisfies no independence condition; [ACTIVATION §1 Roles and delegation](ACTIVATION.md#roles-and-delegation), where the assessor evaluates the subject and not the constructor&#x27;s summary, and [§2](ACTIVATION.md#2-context-construction-under-an-envelope), step 3, for a compression claim whose promotion needs independent assessment; [EXECUTIVE_BASELINE §5 Reviewer](EXECUTIVE_BASELINE.md#reviewer), [§10](EXECUTIVE_BASELINE.md#10-derived-reviewer-frame), [§12 step 4](EXECUTIVE_BASELINE.md#4-executive-evaluates-the-work-result) and [§17](EXECUTIVE_BASELINE.md#17-actor-binding-and-independence); [IDENTITY §6](IDENTITY.md#6-authority-identity-and-conservation-stdo-up-004), where proxy authority makes no self-review independent; [CONFORMANCE](CONFORMANCE.md#conformance), its preamble, [§5](CONFORMANCE.md#5-discriminator-coverage), whose logical-review check is made by a reviewer who meets this section, discriminator 43, and [§4](CONFORMANCE.md#4-cases-for-method-discriminators), case CD-02.</span>
+<span id="L114" data-line="114">- Row 8, the protocol: [ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse), for the mechanical evidence independent evaluations may share; [TICKETS UP-007](TICKETS.md#execution-and-verification-authority-separation-up-007), where the reviewer identifies the exact subject, basis, scope, exclusions, evidence, verdict and unresolved findings; [EXECUTIVE_BASELINE §5 Exact candidate](EXECUTIVE_BASELINE.md#exact-candidate), [§12 step 5B](EXECUTIVE_BASELINE.md#5b-candidate-requires-independent-review), [§13 Handoff projection](EXECUTIVE_BASELINE.md#13-handoff-projection), Reviewer activation, and [§20](EXECUTIVE_BASELINE.md#20-failure-classification), for a review of a moving tree and a Reviewer that implements the fix; [ASSURANCE §13 Obligations](ASSURANCE.md#obligations), expectations before exposure; [DESIGN_MODULE §7 Invariant reconstruction sufficiency](DESIGN_MODULE.md#invariant-reconstruction-sufficiency-up-018), where a sufficiency test is evaluated with history and folklore withheld; [FOUNDATIONS §4 Parallel derivation and mutual assurance](FOUNDATIONS.md#parallel-derivation-and-mutual-assurance), which keeps the authentication of a returned assessment apart from provenance; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminator 27.</span>
+<span id="L115" data-line="115">- Row 9, independence by authorship, not by context: [ACTIVATION §1 Configuration](ACTIVATION.md#configuration), where a fresh context alone meets no independence requirement; [EXECUTIVE_BASELINE §17](EXECUTIVE_BASELINE.md#17-actor-binding-and-independence), where a fresh context of the author is still the author; [FOUNDATIONS §2 Disjointness and independence](FOUNDATIONS.md#disjointness-and-independence), for what a verdict needs to count as independent assurance; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminator 28.</span>
+<span id="L116" data-line="116">- Row 10, author identity and actor identity: [SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding), where author identity and actor identity are as this section defines them; [EXECUTIVE_BASELINE §7 The executive configuration](EXECUTIVE_BASELINE.md#the-executive-configuration), where a coordinator that changed the subject is not independent of it, and [§17](EXECUTIVE_BASELINE.md#17-actor-binding-and-independence); [TICKETS UP-007](TICKETS.md#execution-and-verification-authority-separation-up-007), where the reviewer is not the author of the reviewed subject; [FOUNDATIONS §4 Parallel derivation and mutual assurance](FOUNDATIONS.md#parallel-derivation-and-mutual-assurance), where porting retains authorship; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminator 28, for the authorship of a received contribution.</span>
+<span id="L117" data-line="117">- Row 11, the review record: [ACTIVATION §3 Disposition](ACTIVATION.md#disposition), where a recommended disposition is evidence for the decision owner; [EXECUTIVE_BASELINE §12 step 6](EXECUTIVE_BASELINE.md#6-reviewer-returns-to-executive), where the Reviewer returns one closed evaluation in this section&#x27;s shape, and [§13 Handoff projection](EXECUTIVE_BASELINE.md#13-handoff-projection), review result; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), whose logical-review check returns a review result under this section, and [§1](CONFORMANCE.md#1-counterexample-cases), case C-02.</span>
+<span id="L118" data-line="118">- Row 12, severity, priority and the consumption of core values: [EXECUTIVE_BASELINE §5 Technical triage, severity, priority and boundary effect](EXECUTIVE_BASELINE.md#technical-triage-severity-priority-and-boundary-effect), whose per-result consumption this projection constrains, [§12 step 6](EXECUTIVE_BASELINE.md#6-reviewer-returns-to-executive), where the assessor is the Reviewer and the decision owner the Executive, and [Promotion constraint projection](EXECUTIVE_BASELINE.md#promotion-constraint-projection), which applies the `indeterminate` row of the consumption table.</span>
+<span id="L119" data-line="119">- Row 13, observations outside the claim and the return to the decision owner: [EXECUTIVE_BASELINE §12 step 6](EXECUTIVE_BASELINE.md#6-reviewer-returns-to-executive), where the Reviewer returns to the Executive, not to the Worker, and neither edits the candidate nor directs the repair, and the [EXECUTIVE_BASELINE family table](EXECUTIVE_BASELINE.md#foundation-to-law), whose row for technical triage imports F6 for an observation outside the claim that opens no review round.</span>
+<span id="L120" data-line="120">- Row 14, acceptance as the owner&#x27;s disposition and closure by condition: [ACTIVATION §1 Construction relation](ACTIVATION.md#construction-relation), where producing a candidate, proving a property and accepting delivery are distinct acts; [FOUNDATIONS §4 Results](FOUNDATIONS.md#results), availability, assessment and acceptance; [EXECUTIVE_BASELINE §12 step 7](EXECUTIVE_BASELINE.md#7-executive-disposes-and-checkpoints), where acceptance widens nothing, and [§22 Closure](EXECUTIVE_BASELINE.md#22-closure), where a work item closes by its condition and not by a reviewer&#x27;s approval; [TICKETS §7](TICKETS.md#7-authority-judgment-closure-and-state), whose closing condition is the work item&#x27;s; [RELEASE §8 Acceptance criteria](RELEASE.md#acceptance-criteria), where acceptance attaches to the immutable identity and adoption is evaluated separately; [SPEC_METHOD §3](SPEC_METHOD.md#3-outcome-conservation), where acceptance exhausts only the accepted instance, and [§4 Consistency gate](SPEC_METHOD.md#consistency-gate), where no review event, passing aggregate or status change substitutes for the closing condition; [ASSURANCE §3](ASSURANCE.md#3-test-authority), where green labels are not acceptance, and [§7 User-acceptance frame](ASSURANCE.md#user-acceptance-frame), which assumes no acceptance authority; [CONFORMANCE §1](CONFORMANCE.md#1-counterexample-cases), case C-11.</span>
+<span id="L121" data-line="121">- Row 15, proxies: [EXECUTIVE_BASELINE §5 Executive](EXECUTIVE_BASELINE.md#executive), a frame a bounded proxy may occupy under the proxy grant, and [§20](EXECUTIVE_BASELINE.md#20-failure-classification), where a decision outside the proxy grant re-enters; otherwise no separate consumer applies: what a proxy grant names is [IDENTITY §6](IDENTITY.md#6-authority-identity-and-conservation-stdo-up-004)&#x27;s, which this section applies to acceptance, and what a proxy can never decide is [FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds)&#x27;, as the choice column states.</span>
+<span id="L122" data-line="122">- Row 16, when a finding blocks promotion: [Result and triage projection](#result-and-triage-projection), for when a finding can block; [EXECUTIVE_BASELINE §5 Technical triage, severity, priority and boundary effect](EXECUTIVE_BASELINE.md#technical-triage-severity-priority-and-boundary-effect), [§12 step 7](EXECUTIVE_BASELINE.md#7-executive-disposes-and-checkpoints) and [Promotion constraint projection](EXECUTIVE_BASELINE.md#promotion-constraint-projection), read with the Executive as decision owner; [DESIGN_MODULE §10 Post-ticket design review](DESIGN_MODULE.md#post-ticket-design-review), whose determinations are domain triggers for the four conditions; [RELEASE §8 Acceptance criteria](RELEASE.md#acceptance-criteria), for the findings that block release; [TICKETS UP-007](TICKETS.md#execution-and-verification-authority-separation-up-007), which applies the section to a ticket&#x27;s review.</span>
+<span id="L123" data-line="123">- Row 17, the successor disposition record: [RELEASE §8 Acceptance criteria](RELEASE.md#acceptance-criteria), which requires a stable successor relation before acceptance, and the [RELEASE family table](RELEASE.md#foundation-to-law-release-and-successor-conservation), whose row for exact-cut qualification and acceptance imports F6 for a qualification that binds the successor relation; the disposition values and the evaluation of the record are [RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015)&#x27;s, as the choice column states.</span>
+<span id="L124" data-line="124"></span>
+<span id="L125" data-line="125">Each consumer applies the rule and decides nothing the owning section does</span>
+<span id="L126" data-line="126">not (P2, P6).</span>
+<span id="L127" data-line="127"></span>
+<span id="L128" data-line="128">## 2. Separation</span>
+<span id="L129" data-line="129"></span>
+<span id="L130" data-line="130">Three bases stay distinct (P6, P1): the semantic basis, the constitutional</span>
+<span id="L131" data-line="131">and accepted-design relations that define what a claim means; the evidence</span>
+<span id="L132" data-line="132">basis, the exact artifacts, events, logs, tests and observations used to</span>
+<span id="L133" data-line="133">evaluate it; and the state projection, a current view derived from admitted</span>
+<span id="L134" data-line="134">semantic and evidence bases. Semantic law defines what an evaluation means;</span>
+<span id="L135" data-line="135">evidence supplies observations; the evaluator applies the declared</span>
+<span id="L136" data-line="136">relation; decision authority disposes. One actor may lawfully perform</span>
+<span id="L137" data-line="137">several; the record keeps them distinguishable. This section owns these</span>
+<span id="L138" data-line="138">separations. [RF-007](REFERENCE_FRAME.md#rf-007-semantic-evidence-and-verdict-separation)</span>
+<span id="L139" data-line="139">binds them to a frame declaration and</span>
+<span id="L140" data-line="140">[AC-018](AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation)</span>
+<span id="L141" data-line="141">to an a_c model; each adds only its domain binding.</span>
+<span id="L142" data-line="142"></span>
+<span id="L143" data-line="143">An evidence change can invalidate a verdict without any change of law.</span>
+<span id="L144" data-line="144">Whether a given change does so is decided by the reuse rule of</span>
+<span id="L145" data-line="145">[ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse), and where it</span>
+<span id="L146" data-line="146">does, the invalidation is mandatory and takes effect before reliance. A</span>
+<span id="L147" data-line="147">projection change can invalidate a view without changing semantic truth;</span>
+<span id="L148" data-line="148">when a derived view is stale is decided by</span>
+<span id="L149" data-line="149">[ACTIVATION §2, Staleness of derived surfaces](ACTIVATION.md#staleness-of-derived-surfaces).</span>
+<span id="L150" data-line="150">A semantic change requires lawful re-entry and invalidates affected</span>
+<span id="L151" data-line="151">downstream acceptance. A broad digest may conservatively</span>
+<span id="L152" data-line="152">invalidate a review; it does not prove that every semantic relation</span>
+<span id="L153" data-line="153">changed (P1, P6).</span>
+<span id="L154" data-line="154"></span>
+<span id="L155" data-line="155">Structural conformance decides closed syntax, types, identities, references,</span>
+<span id="L156" data-line="156">bases and mechanically decidable predicates. Semantic fidelity decides</span>
+<span id="L157" data-line="157">meaning and materiality. Structural success is evidence for semantic</span>
+<span id="L158" data-line="158">review, not a substitute for it. A checker decides the structural subset; it claims a</span>
+<span id="L159" data-line="159">semantic or authority subset only under an exact lawful decision contract</span>
+<span id="L160" data-line="160">supplied by the model. For a_c models,</span>
+<span id="L161" data-line="161">[AC-018](AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation)</span>
+<span id="L162" data-line="162">and [AC-019](AXIOMATIC_CALCULUS.md#ac-019-valid-model) bind this rule to</span>
+<span id="L163" data-line="163">the model&#x27;s records and validity conditions (P1, P6).</span>
+<span id="L164" data-line="164">A valid parse, a valid map, a green test and a historical judgment each</span>
+<span id="L165" data-line="165">establish exactly their own claim. Evidence bound to a basis other than</span>
+<span id="L166" data-line="166">the evaluated one is excluded by basis; it is not admitted with a narrower</span>
+<span id="L167" data-line="167">scope (P3;</span>
+<span id="L168" data-line="168">[RF-005](REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates)).</span>
+<span id="L169" data-line="169"></span>
+<span id="L170" data-line="170">## 3. Independent assessment</span>
+<span id="L171" data-line="171"></span>
+<span id="L172" data-line="172">A constructor&#x27;s self-review is construction output, not assessment. Where</span>
+<span id="L173" data-line="173">promotion needs independent assessment, the assessor evaluates the exact</span>
+<span id="L174" data-line="174">live subject, authority paths, proof and installed state, not the</span>
+<span id="L175" data-line="175">constructor&#x27;s summary (P6, and P0 with its premise that a step&#x27;s output is</span>
+<span id="L176" data-line="176">a candidate until evaluated; instance premise (c) of §1 Foundation to law).</span>
+<span id="L177" data-line="177">This section decides what counts as independent assessment. Which</span>
+<span id="L178" data-line="178">boundaries require it is a policy choice of the Spec Method, owned by</span>
+<span id="L179" data-line="179">[TICKETS §7 Execution and verification authority separation](TICKETS.md#execution-and-verification-authority-separation-up-007);</span>
+<span id="L180" data-line="180">a governing basis may add boundaries.</span>
+<span id="L181" data-line="181"></span>
+<span id="L182" data-line="182">Protocol: where method qualification applies</span>
+<span id="L183" data-line="183">([§7 Method self-qualification](#method-self-qualification)), the subject is</span>
+<span id="L184" data-line="184">frozen by identity before material reference exposure; elsewhere it is</span>
+<span id="L185" data-line="185">stabilised by an immutable identity or an equivalent exact-subject relation</span>
+<span id="L186" data-line="186">sufficient for the claimed assessment. The assessor records its</span>
+<span id="L187" data-line="187">expectations from the governing source before opening the candidate; it</span>
+<span id="L188" data-line="188">reads the subject at that identity or relation, never a mutable working</span>
+<span id="L189" data-line="189">tree; it makes no repair; it does not assess its</span>
+<span id="L190" data-line="190">own authorship. Reusing the constructor&#x27;s judgment does not satisfy</span>
+<span id="L191" data-line="191">independence; shared mechanical evidence may be reused, judgment may not</span>
+<span id="L192" data-line="192">(ACTIVATION §7). Binding a returned assessment to its producer, subject,</span>
+<span id="L193" data-line="193">basis and evidence authenticates the result; it establishes neither the</span>
+<span id="L194" data-line="194">assertion provenance of its expected answer nor the execution provenance</span>
+<span id="L195" data-line="195">of its run, which</span>
+<span id="L196" data-line="196">[FOUNDATIONS §4 Parallel derivation and mutual assurance](FOUNDATIONS.md#parallel-derivation-and-mutual-assurance)</span>
+<span id="L197" data-line="197">requires separately (P6, P3). Membership in a plan authenticates nothing,</span>
+<span id="L198" data-line="198">an unauthenticated result satisfies no required assessment, and a result</span>
+<span id="L199" data-line="199">bound to another subject satisfies no planned assessment</span>
+<span id="L200" data-line="200">([FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results));</span>
+<span id="L201" data-line="201">no cryptographic or transport protocol is prescribed for the binding (P6). Any post-exposure revision is a declared intervention: it</span>
+<span id="L202" data-line="202">is either a method constituent with its own qualification boundary or a new</span>
+<span id="L203" data-line="203">qualification subject, and it cannot retroactively make the original</span>
+<span id="L204" data-line="204">frozen construction pass. This law prescribes no actor type or count,</span>
+<span id="L205" data-line="205">review-round count, engine, prompt or orchestration (P6).</span>
+<span id="L206" data-line="206"></span>
+<span id="L207" data-line="207">Author identity is the party responsible for the content of a realised</span>
+<span id="L208" data-line="208">subject. It is distinct from actor identity, whoever performs one</span>
+<span id="L209" data-line="209">operation, which is an identity and not an authority</span>
+<span id="L210" data-line="210">([FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds)).</span>
+<span id="L211" data-line="211">Authorship is one of the conditions on</span>
+<span id="L212" data-line="212">which the independence of an assessment rests; the evidence conditions are</span>
+<span id="L213" data-line="213">the other (P6, P3).</span>
+<span id="L214" data-line="214"></span>
+<span id="L215" data-line="215">Reporting a defect, supplying a counterexample or identifying behaviour</span>
+<span id="L216" data-line="216">already required by governing law does not by itself author the realised</span>
+<span id="L217" data-line="217">subject. Contributing wording, design or policy that is adopted into the</span>
+<span id="L218" data-line="218">subject, including through directions for a particular repair, is authorship</span>
+<span id="L219" data-line="219">of that contribution. A</span>
+<span id="L220" data-line="220">reporter may assess a later repair only when the existing assessment grant,</span>
+<span id="L221" data-line="221">authorship relation and evidence-independence conditions permit it; a</span>
+<span id="L222" data-line="222">reporter gains no review authority from having found the defect. A person</span>
+<span id="L223" data-line="223">who authored an adopted repair cannot supply its required independent</span>
+<span id="L224" data-line="224">assessment by calling that authorship a finding (P6, P3).</span>
+<span id="L225" data-line="225"></span>
+<span id="L226" data-line="226">Independence rests on authorship and on the evidence conditions above, not</span>
+<span id="L227" data-line="227">on a new context. The assessor may read the same governing sources as the</span>
+<span id="L228" data-line="228">constructor. A fresh context alone establishes no independence, and it</span>
+<span id="L229" data-line="229">supplies no review authority the author lacks: an author that opens a</span>
+<span id="L230" data-line="230">fresh context to review its own candidate is still its author, and its</span>
+<span id="L231" data-line="231">review is self-review, which stays construction output and cannot be</span>
+<span id="L232" data-line="232">relabelled as independent assessment (P6;</span>
+<span id="L233" data-line="233">[TICKETS UP-007](TICKETS.md#execution-and-verification-authority-separation-up-007)). A contribution received from another author stays that</span>
+<span id="L234" data-line="234">author&#x27;s wherever it is carried, and that author&#x27;s reading of it supplies</span>
+<span id="L235" data-line="235">no independent acceptance of it (P6).</span>
+<span id="L236" data-line="236"></span>
+<span id="L237" data-line="237">Independence across actor families is declared, not assumed. Whether two</span>
+<span id="L238" data-line="238">activations of one model family are independent for a semantic judgment is a</span>
+<span id="L239" data-line="239">policy the governing basis states for the claim; the default where it is not</span>
+<span id="L240" data-line="240">stated is that they are not independent.</span>
+<span id="L241" data-line="241"></span>
+<span id="L242" data-line="242">## 4. Review results</span>
+<span id="L243" data-line="243"></span>
+<span id="L244" data-line="244">A review returns one core result</span>
+<span id="L245" data-line="245">([FOUNDATIONS §4, Results](FOUNDATIONS.md#results)) for each declared</span>
+<span id="L246" data-line="246">predicate it evaluated, with: the exact subject and basis, the evidence</span>
+<span id="L247" data-line="247">consulted, the findings ranked by consequence, each finding&#x27;s evidence and</span>
+<span id="L248" data-line="248">the smallest bounded correction, the residual uncertainty, and the</span>
+<span id="L249" data-line="249">invalidation conditions. A declared predicate the review planned and did</span>
+<span id="L250" data-line="250">not evaluate has no result (FOUNDATIONS §4, Results). The review names it</span>
+<span id="L251" data-line="251">as not performed and reports no core value for it, neither</span>
+<span id="L252" data-line="252">`indeterminate` nor `falsified`, so that conjunction keeps it apart from</span>
+<span id="L253" data-line="253">an undecided predicate and from required coverage that no planned</span>
+<span id="L254" data-line="254">assessment addresses</span>
+<span id="L255" data-line="255">([FOUNDATIONS §4, Conjunction of results](FOUNDATIONS.md#conjunction-of-results);</span>
+<span id="L256" data-line="256">P5, P6). It may recommend a disposition</span>
+<span id="L257" data-line="257">([ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition)), which is</span>
+<span id="L258" data-line="258">evidence only and never a disposition; it does not apply one. A finding</span>
+<span id="L259" data-line="259">without evidence a consumer can chase is commentary.</span>
+<span id="L260" data-line="260"></span>
+<span id="L261" data-line="261">### Result and triage projection</span>
+<span id="L262" data-line="262"></span>
+<span id="L263" data-line="263">Where a review returns findings with technical triage, the triage is the</span>
+<span id="L264" data-line="264">assessor&#x27;s evidence-bound assessment of each finding against the exact</span>
+<span id="L265" data-line="265">evaluated claim and basis. Severity, the assessor&#x27;s grade of consequence,</span>
+<span id="L266" data-line="266">is evaluation evidence. Priority, the effect on the current promotion</span>
+<span id="L267" data-line="267">boundary and the disposition are the decision owner&#x27;s (ACTIVATION §1,</span>
+<span id="L268" data-line="268">Roles and delegation; when a finding can block is</span>
+<span id="L269" data-line="269">[§5, When a finding blocks promotion](#when-a-finding-blocks-promotion))</span>
+<span id="L270" data-line="270">and stay distinct values even where a</span>
+<span id="L271" data-line="271">Product-defined policy maps one to another. A recommended disposition</span>
+<span id="L272" data-line="272">is evidence for the decision owner: it is not a disposition, a</span>
+<span id="L273" data-line="273">priority or a boundary effect, and it is never adopted mechanically (P6,</span>
+<span id="L274" data-line="274">RF-007). The fields of a triage are declared by the profile that adopts it, and</span>
+<span id="L275" data-line="275">the scales it uses are bound by the adopting Product (P2, P6).</span>
+<span id="L276" data-line="276"></span>
+<span id="L277" data-line="277">The projection of the finding-level triage payload is total over the core</span>
+<span id="L278" data-line="278">values of [FOUNDATIONS §4, Results](FOUNDATIONS.md#results). A predicate</span>
+<span id="L279" data-line="279">not performed has no result and so no triage payload; the payload class</span>
+<span id="L280" data-line="280">`indeterminate` never stands for it. The payload classes `complete`,</span>
+<span id="L281" data-line="281">`indeterminate` and `not_applicable` classify the triage only; they are</span>
+<span id="L282" data-line="282">not new results, dispositions, priorities or lifecycle states (P5, P1).</span>
+<span id="L283" data-line="283"></span>
+<span id="L284" data-line="284">| Core result | Finding and triage payload | Decision-owner consumption constraint |</span>
+<span id="L285" data-line="285">|---|---|---|</span>
+<span id="L286" data-line="286">| satisfied | an explicit no-finding state; triage `not_applicable`; evidence, residuals and invalidation stay present | priority and boundary effect are `not_applicable` to this result unless another exact consumed result supplies a finding |</span>
+<span id="L287" data-line="287">| falsified | one or more exact findings; triage `complete` where supported, keeping `indeterminate` fields where evidence cannot close them | apply the Product-owned priority and boundary policy without mapping severity mechanically to a disposition |</span>
+<span id="L288" data-line="288">| indeterminate | a partial finding or observation state; triage `indeterminate`; the exact evidence gaps and residual uncertainty | keep the uncertainty or reactivate a capable evaluation; do not consume it as satisfaction or as a closed finding |</span>
+<span id="L289" data-line="289">| out_of_frame | the evaluated claim needs an undeclared material relation or evaluator capability; triage `indeterminate`; the missing relation or capability and the exact reconfiguration pressure are named | refine or reconfigure a capable activation and keep the claim unresolved; do not consume the result as satisfaction or falsification |</span>
+<span id="L290" data-line="290">| invalid_basis | a basis failure; triage `not_applicable`; invalidation evidence and basis-repair pressure | refuse to consume the result and return through the declared basis re-entry relation |</span>
+<span id="L291" data-line="291"></span>
+<span id="L292" data-line="292">An adjacent observation outside the evaluated claim does not replace the</span>
+<span id="L293" data-line="293">claim-relative result. The assessor returns it separately, with triage</span>
+<span id="L294" data-line="294">`not_applicable` to that claim and the exact repricing or re-entry</span>
+<span id="L295" data-line="295">pressure; the decision owner returns it to its declared owner without</span>
+<span id="L296" data-line="296">creating a claim-relative block, or another review round, from its</span>
+<span id="L297" data-line="297">severity alone (P6, P2).</span>
+<span id="L298" data-line="298"></span>
+<span id="L299" data-line="299">The assessor returns to the decision owner, not to the constructor. It does</span>
+<span id="L300" data-line="300">not edit the candidate, direct the repair or authorise continuation (P6,</span>
+<span id="L301" data-line="301">§3).</span>
+<span id="L302" data-line="302"></span>
+<span id="L303" data-line="303">Purpose and material relation: every configuration keeps severity,</span>
+<span id="L304" data-line="304">priority, boundary effect and disposition separate. The rule applies to any</span>
+<span id="L305" data-line="305">assessor and decision owner; [EXECUTIVE_BASELINE](EXECUTIVE_BASELINE.md)</span>
+<span id="L306" data-line="306">binds its Reviewer and Executive instance (P6).</span>
+<span id="L307" data-line="307"></span>
+<span id="L308" data-line="308">## 5. Acceptance</span>
+<span id="L309" data-line="309"></span>
+<span id="L310" data-line="310">Acceptance is the decision owner&#x27;s disposition over an unchanged subject;</span>
+<span id="L311" data-line="311">recording it cannot widen it, and it exhausts only the instance and interval</span>
+<span id="L312" data-line="312">it names (P6, P2).</span>
+<span id="L313" data-line="313">A work item closes by the condition it stated, not by a reviewer&#x27;s approval;</span>
+<span id="L314" data-line="314">a reviewer result is an input to closure, never the closure. Green labels,</span>
+<span id="L315" data-line="315">document counts, review counts and historical outcomes are not acceptance.</span>
+<span id="L316" data-line="316">A human decision may be exercised directly or through an explicitly admitted</span>
+<span id="L317" data-line="317">bounded proxy. What a proxy grant names is</span>
+<span id="L318" data-line="318">[IDENTITY §6](IDENTITY.md#6-authority-identity-and-conservation-stdo-up-004)&#x27;s,</span>
+<span id="L319" data-line="319">and what a proxy can never decide is</span>
+<span id="L320" data-line="320">[FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds)&#x27;;</span>
+<span id="L321" data-line="321">for acceptance, a change a proxy cannot make re-enters at its owning</span>
+<span id="L322" data-line="322">relation ([ACTIVATION §1 Roles and delegation](ACTIVATION.md#roles-and-delegation)).</span>
+<span id="L323" data-line="323"></span>
+<span id="L324" data-line="324">Where the subject is a successor, its acceptance evidence includes the</span>
+<span id="L325" data-line="325">successor disposition record of [RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015)</span>
+<span id="L326" data-line="326">(STDO-UP-015), which states the law: the exact predecessor immutable cut</span>
+<span id="L327" data-line="327">the successor evolves, and one semantic disposition for every predecessor</span>
+<span id="L328" data-line="328">claim capable of affecting the successor. A claim whose disposition is</span>
+<span id="L329" data-line="329">unresolved cannot be qualified and so cannot be accepted; how the record</span>
+<span id="L330" data-line="330">is evaluated is [RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015).</span>
+<span id="L331" data-line="331">An intentionally removed disposition is a decision of the current Product</span>
+<span id="L332" data-line="332">authority, and its record is that decision (P6, P3, P4b).</span>
+<span id="L333" data-line="333"></span>
+<span id="L334" data-line="334">### When a finding blocks promotion</span>
+<span id="L335" data-line="335"></span>
+<span id="L336" data-line="336">A finding is a defect a review reports against the exact claim it</span>
+<span id="L337" data-line="337">evaluated (§4). Blocking current promotion is the decision owner&#x27;s act</span>
+<span id="L338" data-line="338">over that finding (§4, Result and triage projection). This section is the</span>
+<span id="L339" data-line="339">one statement of when a finding can block; profiles and work carriers</span>
+<span id="L340" data-line="340">refer to it and add only their domain triggers.</span>
+<span id="L341" data-line="341"></span>
+<span id="L342" data-line="342">A review verdict is bounded by the exact reviewed claim and its applicable</span>
+<span id="L343" data-line="343">hard stops ([ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement)). A</span>
+<span id="L344" data-line="344">finding can block current promotion only when it:</span>
+<span id="L345" data-line="345"></span>
+<span id="L346" data-line="346">1. falsifies that claim;</span>
+<span id="L347" data-line="347">2. exposes competing or ambiguous authority on the claim&#x27;s acceptance</span>
+<span id="L348" data-line="348">   path;</span>
+<span id="L349" data-line="349">3. violates applicable active authority, safety or retained accepted</span>
+<span id="L350" data-line="350">   behaviour; or</span>
+<span id="L351" data-line="351">4. establishes a material architectural decision with durable</span>
+<span id="L352" data-line="352">   consequences that forecloses an admitted Product outcome.</span>
+<span id="L353" data-line="353"></span>
+<span id="L354" data-line="354">These conditions are necessary. Which of them suffice is decided as</span>
+<span id="L355" data-line="355">follows:</span>
+<span id="L356" data-line="356"></span>
+<span id="L357" data-line="357">| Consumed condition | Effect on the current promotion boundary |</span>
+<span id="L358" data-line="358">|---|---|</span>
+<span id="L359" data-line="359">| a valid falsification of a mandatory claim governed by a non-waivable hard stop | the boundary blocks, whatever the assigned priority or the decision cutoff |</span>
+<span id="L360" data-line="360">| any other finding meeting one of the four conditions | the decision owner decides blocking from the exact affected claim, the governed outcome or decision the work serves ([ACTIVATION §1, Intake](ACTIVATION.md#intake)), the applicable hard stops and the Product-owned cutoff policy; below that cutoff no block follows mechanically, and an accepted residual is retained explicitly |</span>
+<span id="L361" data-line="361">| a finding meeting none of the four conditions | it does not block |</span>
+<span id="L362" data-line="362">| an observation outside the exact reviewed claim | repricing or re-entry input, returned as §4 states: by itself it does not widen the reviewed subject, block its bounded claim, or require a new ticket, artifact, review round or implementation increment |</span>
+<span id="L363" data-line="363"></span>
+<span id="L364" data-line="364">Severity selects neither priority nor a block mechanically, and priority</span>
+<span id="L365" data-line="365">neither erases severity nor waives a hard stop. The decision cutoff is the</span>
+<span id="L366" data-line="366">adopting Product&#x27;s policy; this member sets no cutoff (P6, P2). This law</span>
+<span id="L367" data-line="367">applies at any promotion boundary; [EXECUTIVE_BASELINE](EXECUTIVE_BASELINE.md#promotion-constraint-projection)</span>
+<span id="L368" data-line="368">binds the Executive instance. Purpose and material relation: one owner</span>
+<span id="L369" data-line="369">gives every review consumer the same blocking condition. A bounded review</span>
+<span id="L370" data-line="370">does not block on observations outside its claim, while a non-waivable hard</span>
+<span id="L371" data-line="371">stop still blocks.</span>
+<span id="L372" data-line="372"></span>
+<span id="L373" data-line="373">## 6. Conformance of realisations</span>
+<span id="L374" data-line="374"></span>
+<span id="L375" data-line="375">A realisation aⱼ conforms to a specification Σ when its interpreted behaviour</span>
+<span id="L376" data-line="376">satisfies Σ under a declared interpretation contract (P1) and an independent</span>
+<span id="L377" data-line="377">judgment (P6). Several realisations may conform to one Σ; sufficiency does</span>
+<span id="L378" data-line="378">not require unique derivation or equality with an incumbent. A weak Σ that</span>
+<span id="L379" data-line="379">admits materially different behaviours either declares the latitude or is</span>
+<span id="L380" data-line="380">repaired before a decision-complete design is claimed.</span>
+<span id="L381" data-line="381"></span>
+<span id="L382" data-line="382">Equivalence ladder. The ladder is the list of the four claims named next,</span>
+<span id="L383" data-line="383">each a rung; the rungs are listed, not ordered, and no rung implies</span>
+<span id="L384" data-line="384">another. Conformance, semantic equivalence, computational equivalence and</span>
+<span id="L385" data-line="385">categorical equivalence are separate claims with separate evidence (P1,</span>
+<span id="L386" data-line="386">P6). Conformance establishes neither identical behaviour outside Σ nor</span>
+<span id="L387" data-line="387">equal cost. Semantic equivalence of realisations claims that two</span>
+<span id="L388" data-line="388">realisations, or a realisation and a declared reference outcome, have</span>
+<span id="L389" data-line="389">identical interpreted behaviour on a stated domain, behaviour outside Σ</span>
+<span id="L390" data-line="390">included. In this member semantic equivalence is always this equivalence</span>
+<span id="L391" data-line="391">of realisations, not the equivalence of concepts across bounded contexts</span>
+<span id="L392" data-line="392">that</span>
+<span id="L393" data-line="393">[PRODUCT_DEFINITION §5](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution)</span>
+<span id="L394" data-line="394">governs, and semantic conformance, in the comparison rule below, is</span>
+<span id="L395" data-line="395">conformance with the governing semantic basis as Σ. Computational</span>
+<span id="L396" data-line="396">equivalence claims that two realisations compute the same function at</span>
+<span id="L397" data-line="397">equal cost for declared workloads on a declared architecture H.</span>
+<span id="L398" data-line="398">Categorical equivalence is a claim about categories and the maps between</span>
+<span id="L399" data-line="399">them: FOUNDATIONS §4, Formal fragment, owns what a category or functor</span>
+<span id="L400" data-line="400">claim must show and defines the symbols 𝒜, ℐ and 𝒞_H used here, and a</span>
+<span id="L401" data-line="401">map&#x27;s preservation of identities and composition is a further claim</span>
+<span id="L402" data-line="402">distinct from every rung.</span>
+<span id="L403" data-line="403">For a proposed span 𝒜 → ℐ and 𝒜 → 𝒞_H, conformance to Σ, semantic</span>
+<span id="L404" data-line="404">equivalence and computational equivalence remain different claims.</span>
+<span id="L405" data-line="405">A claim of categorical equivalence meets each item of the Formal fragment</span>
+<span id="L406" data-line="406">that applies to it, as that section states them. This rung adds one</span>
+<span id="L407" data-line="407">requirement of its own to those items: a quasi-inverse functor, and</span>
+<span id="L408" data-line="408">natural isomorphisms between each composite of the functor with its</span>
+<span id="L409" data-line="409">quasi-inverse and the identity functor, on a stated domain. An analogy or matching result</span>
+<span id="L410" data-line="410">is insufficient. Evidence for one claim is not reported as a result for</span>
+<span id="L411" data-line="411">another (§1). The ladder keeps a matching output, an analogy</span>
+<span id="L412" data-line="412">or a passing conformance check from being read as equivalence or as</span>
+<span id="L413" data-line="413">preserved structure (P1, P6).</span>
+<span id="L414" data-line="414"></span>
+<span id="L415" data-line="415">Layered sufficiency. A specification arranged in layers is sufficient when</span>
+<span id="L416" data-line="416">a competent actor can derive a conformant next layer from each layer; the</span>
+<span id="L417" data-line="417">derivation need not be unique, since different realisations may satisfy the</span>
+<span id="L418" data-line="418">same upper layer, and the test is sufficiency, not determinism. A failure</span>
+<span id="L419" data-line="419">to derive at any boundary is a defect of the upper layer: unclear,</span>
+<span id="L420" data-line="420">contradictory, underspecified, not concrete or decomposable enough, or</span>
+<span id="L421" data-line="421">polluted with accidental lower-layer detail. A boundary that can be crossed</span>
+<span id="L422" data-line="422">only by hiding a major unresolved ambiguity is not yet sufficient even if</span>
+<span id="L423" data-line="423">some downstream artifact can be produced. For an already accepted relation,</span>
+<span id="L424" data-line="424">reconstruction may reuse its exact current basis and sufficient evidence</span>
+<span id="L425" data-line="425">after checking applicability and invalidation (ACTIVATION §7);</span>
+<span id="L426" data-line="426">reconstructability requires a correct reconstruction route, not its</span>
+<span id="L427" data-line="427">execution at every use, grants no restart authority and does not excuse</span>
+<span id="L428" data-line="428">stale success. The claim determines the reconstruction span; a local</span>
+<span id="L429" data-line="429">selected function does not require recreating the whole subject. New</span>
+<span id="L430" data-line="430">material counterexamples still challenge the affected relation (P2, P1,</span>
+<span id="L431" data-line="431">P0). [SPEC_METHOD §2 Reconstruction litmus](SPEC_METHOD.md#reconstruction-litmus)</span>
+<span id="L432" data-line="432">applies this law to the method&#x27;s own chain, with diagnosis per layer.</span>
+<span id="L433" data-line="433"></span>
+<span id="L434" data-line="434">Comparison. After freeze the evaluator compares the frozen result against</span>
+<span id="L435" data-line="435">the mandatory governing semantic basis for semantic conformance or</span>
+<span id="L436" data-line="436">equivalence. A separately held expected or reference outcome, if one exists</span>
+<span id="L437" data-line="437">and is applicable, is optional evidence and explicitly non-authoritative;</span>
+<span id="L438" data-line="438">semantic equivalence to it is required only where the governing basis</span>
+<span id="L439" data-line="439">requires it. A lawful alternative construction permitted by the basis</span>
+<span id="L440" data-line="440">passes. Subjective similarity to the basis or the reference is insufficient</span>
+<span id="L441" data-line="441">to establish conformance or equivalence. Byte or structural identity,</span>
+<span id="L442" data-line="442">unique derivation, determinism and incumbent equality are not generic</span>
+<span id="L443" data-line="443">comparison criteria. A construction outside the declared competence or</span>
+<span id="L444" data-line="444">configuration envelope cannot indict generic method sufficiency (P6, P1).</span>
+<span id="L445" data-line="445"></span>
+<span id="L446" data-line="446">### Return of a reconstruction</span>
+<span id="L447" data-line="447"></span>
+<span id="L448" data-line="448">A reconstruction return is the return of a task that builds or assesses</span>
+<span id="L449" data-line="449">one member of a successor against its predecessor. It states under three</span>
+<span id="L450" data-line="450">separate heads what it claims and the evidence for each, and claims none of</span>
+<span id="L451" data-line="451">them by a byte or size measure. Semantic conservation: a disposed claim of</span>
+<span id="L452" data-line="452">the predecessor keeps its meaning in the successor text, judged by reading</span>
+<span id="L453" data-line="453">both texts against the disposition</span>
+<span id="L454" data-line="454">([RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015)</span>
+<span id="L455" data-line="455">owns the dispositions and their conservation reading). Demonstrated</span>
+<span id="L456" data-line="456">reduction: a deciding path of the successor costs less than the same path</span>
+<span id="L457" data-line="457">in the predecessor on a declared measure, shown by the trace of both paths</span>
+<span id="L458" data-line="458">with the declared tradeoffs. Mere relocation: text moved from one owner or</span>
+<span id="L459" data-line="459">carrier to another without a change in meaning and without a traced</span>
+<span id="L460" data-line="460">change in any deciding path. Relocation reported as reduction, or</span>
+<span id="L461" data-line="461">conservation claimed from unchanged bytes, misreports the claim (§1, P1,</span>
+<span id="L462" data-line="462">P6). The three heads stay separate in the return as the rungs of the</span>
+<span id="L463" data-line="463">ladder do above; a frame for a reconstruction task binds this</span>
+<span id="L464" data-line="464">distinction.</span>
+<span id="L465" data-line="465"></span>
+<span id="L466" data-line="466">### Foundation to law: conformance, equivalence and qualification</span>
+<span id="L467" data-line="467"></span>
+<span id="L468" data-line="468">This family, conformance, equivalence and qualification (F7 in the index of</span>
+<span id="L469" data-line="469">[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law)),</span>
+<span id="L470" data-line="470">decides when a realisation, a frame or the method itself is shown fit for</span>
+<span id="L471" data-line="471">what it claims. It covers §6 and §7 of this member and the</span>
+<span id="L472" data-line="472">[CONFORMANCE](CONFORMANCE.md) member; a rule in CONFORMANCE is marked</span>
+<span id="L473" data-line="473">&quot;outside this member&quot; in the third column. Its instance premises are: (a)</span>
+<span id="L474" data-line="474">one specification may have several realisations; (b) realisations, frames</span>
+<span id="L475" data-line="475">and the method are made by fallible constructors and relied on by actors</span>
+<span id="L476" data-line="476">who did not make them; (c) qualification evidence comes from a finite set</span>
+<span id="L477" data-line="477">of cases, run by actors inside declared envelopes. They are conditions of</span>
+<span id="L478" data-line="478">the work this family governs, not commitments, and do not follow from</span>
+<span id="L479" data-line="479">finite capacity alone. P0&#x27;s actor-change premise, that the actor of one</span>
+<span id="L480" data-line="480">step need not be the actor of the next and may re-acquire declared sources</span>
+<span id="L481" data-line="481">but not private memory, is cited by name. The standing of the consequences</span>
+<span id="L482" data-line="482">below is stated in</span>
+<span id="L483" data-line="483">[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law).</span>
+<span id="L484" data-line="484"></span>
+<span id="L485" data-line="485">| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |</span>
+<span id="L486" data-line="486">|---|---|---|---|---|</span>
+<span id="L487" data-line="487">| P1 (independent), P6 (independent); instance premise a | By P1 behaviour has meaning only under an interpretation, and by P6 a judgment is separate from what it judges, so a realisation conforms to a specification when its interpreted behaviour satisfies it under a declared interpretation contract and an independent judgment. Several realisations may conform to one specification; sufficiency does not require unique derivation or equality with an incumbent. A specification that admits materially different behaviours either declares the latitude or is repaired before a decision-complete design is claimed | [§6](#6-conformance-of-realisations), first paragraph | the interpretation contract and any declared latitude: the owner of the specification ([FOUNDATIONS §4](FOUNDATIONS.md#4-algebra), Latitude) | 4, 6, 9 |</span>
+<span id="L488" data-line="488">| P1 (independent), P6 (independent) | By P1 each kind of equivalence is a different relation between meanings and representations, and by P6 evidence supports only the claim it is for, so conformance, semantic equivalence, computational equivalence and categorical equivalence are separate claims with separate evidence, and no rung implies another. Conformance establishes neither identical behaviour outside the specification nor equal cost; a categorical equivalence claim meets the items of the Formal fragment that apply to it and adds a quasi-inverse functor and natural isomorphisms on a stated domain, and a map&#x27;s preservation of identities and composition is a further claim. Evidence for one claim is never reported as a result for another | [§6](#6-conformance-of-realisations), Equivalence ladder | the four rungs and their definitions: this section; the stated domain, workloads and architecture H of an equivalence claim: the author of the claim; what a category or functor claim must show: [FOUNDATIONS §4](FOUNDATIONS.md#4-algebra), Formal fragment (family F3) | 3, 6, 9 |</span>
+<span id="L489" data-line="489">| P2 (independent), P1 (independent), P0 (recovered); instance premises a, b | By P2 a layer exists so the next can be derived from it, by P1 one meaning admits several representations, and by P0 a reconstruction must fit a finite actor, so a layered specification is sufficient when a competent actor can derive a conformant next layer from each layer, not necessarily uniquely. A failure to derive is a defect of the upper layer, and a boundary that can be crossed only by hiding a major unresolved ambiguity is not sufficient. Reconstruction of an accepted relation may reuse its exact current basis and sufficient evidence after checking applicability and invalidation; reconstructability requires a correct route, not its execution at every use, grants no restart authority and does not excuse stale success; the claim determines the reconstruction span, and new material counterexamples still challenge the relation | [§6](#6-conformance-of-realisations), Layered sufficiency | the layers of the method&#x27;s own chain and the diagnosis per layer: [SPEC_METHOD §2](SPEC_METHOD.md#reconstruction-litmus) (family F10) | 1, 4, 6 |</span>
+<span id="L490" data-line="490">| P6 (independent), P1 (independent); instance premise b | By P6 the governing basis, not a reference outcome, decides, and by P1 equal representation is not equal meaning, so after freeze, the evaluator compares the frozen result with the mandatory governing semantic basis. A separately held expected or reference outcome is optional and non-authoritative evidence; a lawful alternative construction the basis permits passes. Subjective similarity is insufficient, and byte or structural identity, unique derivation, determinism and incumbent equality are not generic comparison criteria. A construction outside the declared competence or configuration envelope cannot indict generic method sufficiency | [§6](#6-conformance-of-realisations), Comparison | whether equivalence to a reference outcome is required: the governing basis | 6, 9 |</span>
+<span id="L491" data-line="491">| P6 (independent), P2 (independent); instance premises b, c | By P6 a frame&#x27;s claims hold only on evidence, and by P2 the evidence needed follows the claims made, so a candidate frame is qualified in proportion to its claims, by at least the decision, reconstruction, sensitivity, irrelevance, basis, authority, counterexample, capability and result-consumption tests. Qualification binds the exact frame revision, actor envelope, evaluation family, basis class and evidence conditions evaluated, and does not generalise to an unevaluated population by naming the frame generically | [Frame qualification](#frame-qualification), the tests and the paragraph after them | the nine minimum tests: this section; the representative cases for each claim: the qualification that evaluates it | 7, 9 |</span>
+<span id="L492" data-line="492">| P0 (recovered), P6 (independent); instance premise c | By P0 fit is a property of the representation and the envelope, and by P6 attention is shown only by evidence of use, so fit and adequate attention are evaluated separately. Fit, for the context dimension, is the measured size of the selected representation against the declared capacity; adequate attention is established only by actual-use evidence, judged against expectations recorded from the governing sources before the results are opened. A size measurement or any byte or token threshold establishes fit and nothing about attention; actual-use evidence binds the frame revision, actor class, tasks and conditions evaluated and establishes no universal attention score | [Frame qualification](#frame-qualification), Adequate attention | the tasks and conditions evaluated: the qualification; the size measurement: [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) step 3 (family F1); time, spend and other resource limits: the selected execution binding, under [ACTIVATION §6](ACTIVATION.md#6-cost-and-proportionality) (family F5) | 7, 8, 9 |</span>
+<span id="L493" data-line="493">| P6 (independent), P0 (recovered, with its actor-change premise), P1 (independent); instance premises b, c | By P6 and P0&#x27;s actor-change premise the method&#x27;s claims need the same evidence as any other and must survive a change of actor, and by P1 a constructor&#x27;s private material is not the method, so the method is qualified the way it qualifies anything else, with no second process. A fresh competent constructor inside a declared envelope uses only the declared ordinary method and authority surfaces and declared trial subjects; an independently authorised evaluator has a declared governing basis and comparison predicate; expected or reference outcomes, source exemplars, incumbent realisations, author memory and ad hoc rescue are withheld from the constructor until its result is frozen wherever earlier exposure would compromise reconstructive independence; comparison follows §6. The qualification law is false under the falsifiers §7 lists | [Method self-qualification](#method-self-qualification), first paragraph and the falsifiers | the constructor, freeze, assessor, acceptance and release protocols: the governing authority | 1, 9 |</span>
+<span id="L494" data-line="494">| P6 (independent); instance premise c | By P6 each claimed relation is a separate claim that needs its own evidence, so the qualification population is every function and failure relation the method claims, each with its representative observations. One valid frame-set declaration and coverage result establishes only `declare` and the evaluated `audit_coverage`, and the other relations by no implication; each relation is exercised through positive, boundary and falsifying cases; every verdict states exactly what it evaluated, and an unevaluated function or branch stays open rather than inheriting a whole-method verdict. Prior exemplars are optional comparison evidence after freeze | [Method self-qualification](#method-self-qualification), the population table and the paragraph after it | the relations: [REFERENCE_FRAME §5](REFERENCE_FRAME.md#5-method-functions) (family F1); the representative observations listed: this section; staging: the governing authority | 3, 9 |</span>
+<span id="L495" data-line="495">| P6 (independent), P1 (independent); instance premise b | By P6 and P1 a derived guide is a representation whose fidelity is a separate claim, so changed derived guidance, such as a compression, a frame packet or a skill, is qualified against source-derived expected behaviour, including the affected permissions, exclusions and invalidators; a native use claim is shown by an ordinary actor applying it through its declared entry. Digest integrity and index generation establish identity and structure, not semantic fidelity or usability, and mechanical and operational claims require their own executable observations | [Method self-qualification](#method-self-qualification), Derived guidance | the applicable workload and operational assumptions: [ACTIVATION §6](ACTIVATION.md#6-cost-and-proportionality) (family F5) | 6, 9 |</span>
+<span id="L496" data-line="496">| P0 (recovered, with its actor-change premise), P6 (independent); instance premise b | By P0&#x27;s actor-change premise a document set must work for an actor without prior memory, and by P6 fidelity is judged on evidence, so for a selected activation, a fresh actor given only the published documents recovers the governing relations with fidelity judged independently, at a measured reconstruction cost. The fidelity judgment is actual-use evidence, and the size measured is not evidence of it. A document set that requires private validator knowledge, whole-corpus loading or a prior actor&#x27;s memory fails, whatever its content | [Method self-qualification](#method-self-qualification), Recoverability benchmark | the reported fidelity, reconstruction cost, completion and material errors: this section; the activation measured and any comparison baseline: the qualification that runs it; time and spend measurement: the selected execution binding | 6, 7, 9 |</span>
+<span id="L497" data-line="497">| P6 (independent), P5 (derived from P0 and P6, with P0&#x27;s open-world premise); instance premise c | By P6 a pass is an assessor&#x27;s verdict on evidence, and by P5 an evaluation not performed has no result, so a conformance case names its subject, the mechanism under test, an independently specified expected distinction and its status, and a status names what exists. A run is not a pass: only an assessment by an independent assessor records one. A case passes when the expected distinction is observed and no coerced success appears anywhere in the result; a case that cannot be run with its declared subject is a planned evaluation that was not performed, which has no result under [FOUNDATIONS §4 Results](FOUNDATIONS.md#results), so it is recorded as not run, never hidden and never given a core value | [CONFORMANCE](CONFORMANCE.md), preamble, outside this member | the cases, with their subjects and expected distinctions: [CONFORMANCE §1–§5](CONFORMANCE.md#1-counterexample-cases) | 3, 9 |</span>
+<span id="L498" data-line="498">| P0 (recovered), P6 (independent); instance premise c | By P0 an actor&#x27;s context is bounded, and by P6 acceptance criteria must not come from the constructing actor, so a trial of bounded construction declares its per-actor context cap and total-work budget before each run, counts the context transferred across every delegated actor, and keeps its acceptance criteria independent of the constructing actor | [CONFORMANCE §2](CONFORMANCE.md#2-construction-trials), the paragraph after the trial table, outside this member | a required basis larger than the cap, and repetition of probabilistic trials with varied task order: CONFORMANCE §2; each cap and budget: the trial&#x27;s declaration; a policy of CONFORMANCE §2: that a trial declares its cap and budget before each run and counts context across every delegated actor | 8, 9 |</span>
+<span id="L499" data-line="499">| P1 (independent), P6 (independent); instance premise b | By P1 moved text is not changed meaning and unchanged bytes are not conserved meaning, and by P6 each claim needs its own evidence, so a reconstruction return states semantic conservation, demonstrated reduction and mere relocation as separate claims with separate evidence, and no byte or size measure establishes any of them | [Return of a reconstruction](#return-of-a-reconstruction) | the dispositions and the conservation reading: [RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015) (family F15); the reduction measure, its baselines and the traced paths: the candidate&#x27;s design, declared before the trace | 1, 6, 9 |</span>
+<span id="L500" data-line="500"></span>
+<span id="L501" data-line="501">CONFORMANCE §1 to §4 list the cases, which are the choices named in the</span>
+<span id="L502" data-line="502">last two rows; its §5 maps the method discriminators to cases and</span>
+<span id="L503" data-line="503">logical-review checks.</span>
+<span id="L504" data-line="504"></span>
+<span id="L505" data-line="505">Consumers of these rows, where an actor enters them (FOUNDATIONS §3</span>
+<span id="L506" data-line="506">Foundation to law, Consumers), one list per row, each consumer linked to</span>
+<span id="L507" data-line="507">its own locus:</span>
+<span id="L508" data-line="508"></span>
+<span id="L509" data-line="509">- Row 1, conformance under an interpretation contract: [SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding), where a tenant&#x27;s conformance is judged under this section and conforming tenants need not behave identically outside the contract; [FOUNDATIONS §4 Formal representation](FOUNDATIONS.md#formal-representation), whose owners and consumers the member criteria assess under this section; [EXECUTIVE_BASELINE §16 Extension versus replacement](EXECUTIVE_BASELINE.md#extension-versus-replacement), where a departure from the execution law is a recorded non-conformance, never local frame selection.</span>
+<span id="L510" data-line="510">- Row 2, the equivalence ladder: [FOUNDATIONS §4](FOUNDATIONS.md#4-algebra), Formal fragment, for whether a claim asserts conformance, an equivalence or a map&#x27;s preservation of structure; [SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding), rule 4, where a claim that a binding preserves categorical structure stays distinct from conformance; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminators 20 and 51.</span>
+<span id="L511" data-line="511">- Row 3, layered sufficiency: [SPEC_METHOD §2 Reconstruction litmus](SPEC_METHOD.md#reconstruction-litmus), which applies it to the method&#x27;s own chain; [Method self-qualification](#method-self-qualification), which consumes it for generic method sufficiency.</span>
+<span id="L512" data-line="512">- Row 4, comparison after freeze: [Method self-qualification](#method-self-qualification), where the evaluator compares the frozen result under the comparison rule and prior exemplars are target answers only where the governing basis requires equivalence.</span>
+<span id="L513" data-line="513">- Row 5, the frame qualification tests: [ASSURANCE §13 Qualification](ASSURANCE.md#qualification), which qualifies the interface integration frame under this section; [ACTIVATION §1 Applicability](ACTIVATION.md#applicability), whose applicability rule is qualified against distinct expected outcomes; [EXECUTIVE_BASELINE §18](EXECUTIVE_BASELINE.md#18-profile-qualification), which applies frame qualification and creates no other protocol; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminator 26.</span>
+<span id="L514" data-line="514">- Row 6, fit and adequate attention: [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope), step 3, where the size shows fit and nothing else; [REFERENCE_FRAME §3 RF-002](REFERENCE_FRAME.md#rf-002-finite-attention); [AXIOMATIC_CALCULUS §9 Constraint surfaces](AXIOMATIC_CALCULUS.md#constraint-surfaces), Separate claims; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), whose logical-review check supplies no actual-use evidence and whose coverage paragraph counts no unassessed run as actual-use evidence for this revision, discriminators 26 and 27.</span>
+<span id="L515" data-line="515">- Row 7, method self-qualification: [§3 Independent assessment](#3-independent-assessment), Protocol, where the subject is frozen by identity where method qualification applies; [EXECUTIVE_BASELINE §5 Exact candidate](EXECUTIVE_BASELINE.md#exact-candidate), [§10](EXECUTIVE_BASELINE.md#10-derived-reviewer-frame), [§12 step 4](EXECUTIVE_BASELINE.md#4-executive-evaluates-the-work-result) and [step 5B](EXECUTIVE_BASELINE.md#5b-candidate-requires-independent-review), [§17](EXECUTIVE_BASELINE.md#17-actor-binding-and-independence), which adds this section&#x27;s declared envelope, and [§18](EXECUTIVE_BASELINE.md#18-profile-qualification), which creates no second qualification process; [CONFORMANCE](CONFORMANCE.md#conformance), its preamble, whose assessments are by an independent assessor under this section.</span>
+<span id="L516" data-line="516">- Row 8, the qualification population: [REFERENCE_FRAME §5 Method functions](REFERENCE_FRAME.md#5-method-functions), each of whose relations this section qualifies and whose `conjoin` returns `invalid_basis` as this section names it; [EXECUTIVE_BASELINE §18](EXECUTIVE_BASELINE.md#18-profile-qualification), whose profile trial establishes its declared obligations the same way; the relations themselves are REFERENCE_FRAME §5&#x27;s, as the choice column states.</span>
+<span id="L517" data-line="517">- Row 9, derived guidance: [PRODUCT_DEFINITION §11](PRODUCT_DEFINITION.md#11-one-constitutional-surface-and-version-boundary), where a matching digest establishes identity and structure and the raw owning members remain the deciding authority; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminators 18 and 40.</span>
+<span id="L518" data-line="518">- Row 10, the recoverability benchmark: [CONFORMANCE §3 Recoverability](CONFORMANCE.md#3-recoverability), whose cases R-01 and R-02 measure current recoverability and any explicitly declared comparison; the reported measures are this section&#x27;s, as the choice column states.</span>
+<span id="L519" data-line="519">- Row 11, the conformance case rule: [CONFORMANCE §1](CONFORMANCE.md#1-counterexample-cases), [§2](CONFORMANCE.md#2-construction-trials), [§3](CONFORMANCE.md#3-recoverability) and [§4](CONFORMANCE.md#4-cases-for-method-discriminators), whose cases name their subject, mechanism, expected distinction and status under it, and [§5](CONFORMANCE.md#5-discriminator-coverage), Coverage, which records no pass for a case not run and assessed on this revision; [FOUNDATIONS §4 Formal representation](FOUNDATIONS.md#formal-representation), whose demonstration cases are CONFORMANCE&#x27;s.</span>
+<span id="L520" data-line="520">- Row 12, trial declarations: no separate consumer applies. The paragraph governs the eight trials of [CONFORMANCE §2](CONFORMANCE.md#2-construction-trials), declared under it in the qualification cases its status column links; the cap and budget it requires are measured under [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) and [§6 Resource limits](ACTIVATION.md#resource-limits), which own their law, and no section of another member declares a trial.</span>
+<span id="L521" data-line="521">- Row 13, the return of a reconstruction: [RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015), whose conservation reading supplies the first head&#x27;s evidence; [Method self-qualification](#method-self-qualification), where a candidate&#x27;s claims against its predecessor are qualified on evidence of the kind each head names; the frame for the reconstruction task binds the distinction under [Return of a reconstruction](#return-of-a-reconstruction).</span>
+<span id="L522" data-line="522"></span>
+<span id="L523" data-line="523">Each consumer applies the rule and decides nothing the owning section does</span>
+<span id="L524" data-line="524">not (P2, P6).</span>
+<span id="L525" data-line="525"></span>
+<span id="L526" data-line="526">## 7. Qualification of frames and of the method</span>
+<span id="L527" data-line="527"></span>
+<span id="L528" data-line="528">### Frame qualification</span>
+<span id="L529" data-line="529"></span>
+<span id="L530" data-line="530">A candidate frame ([REFERENCE_FRAME](REFERENCE_FRAME.md)) is qualified in</span>
+<span id="L531" data-line="531">proportion to its claims (P6, P2).</span>
+<span id="L532" data-line="532">The minimum evaluation asks:</span>
+<span id="L533" data-line="533"></span>
+<span id="L534" data-line="534">1. Decision test: can a competent actor produce a result in the declared</span>
+<span id="L535" data-line="535">   algebra for representative in-domain evaluations?</span>
+<span id="L536" data-line="536">2. Reconstruction test: can a fresh competent actor activate the frame</span>
+<span id="L537" data-line="537">   from the declared packet without hidden history (RF-013)?</span>
+<span id="L538" data-line="538">3. Sensitivity test: do changes to declared material relations affect the</span>
+<span id="L539" data-line="539">   result where expected?</span>
+<span id="L540" data-line="540">4. Irrelevance test: do excluded unrelated changes leave the result stable</span>
+<span id="L541" data-line="541">   where expected?</span>
+<span id="L542" data-line="542">5. Basis test: does stale, mismatched or ambiguous basis information</span>
+<span id="L543" data-line="543">   invalidate or refuse the evaluation?</span>
+<span id="L544" data-line="544">6. Authority test: does frame selection preserve semantic and decision</span>
+<span id="L545" data-line="545">   authority and the exact inherited operation authority for every</span>
+<span id="L546" data-line="546">   material construction, transformation, admission, publication or</span>
+<span id="L547" data-line="547">   mutation?</span>
+<span id="L548" data-line="548">7. Counterexample test: does the frame detect the representative</span>
+<span id="L549" data-line="549">   historical or constructed violations it claims to cover?</span>
+<span id="L550" data-line="550">8. Capability test: can the declared actor class hold and operate the</span>
+<span id="L551" data-line="551">   frame within its envelope?</span>
+<span id="L552" data-line="552">9. Result-consumption test: can a declared consumer use the closed result</span>
+<span id="L553" data-line="553">   without importing hidden frame context?</span>
+<span id="L554" data-line="554"></span>
+<span id="L555" data-line="555">Qualification binds the exact frame revision, actor envelope, evaluation</span>
+<span id="L556" data-line="556">family, basis class and evidence conditions evaluated. It does not</span>
+<span id="L557" data-line="557">generalise to an unevaluated population by naming the frame generically</span>
+<span id="L558" data-line="558">(§1, the quantifier rule).</span>
+<span id="L559" data-line="559"></span>
+<span id="L560" data-line="560">Adequate attention. The capability test asks two questions, and they are</span>
+<span id="L561" data-line="561">evaluated separately. Whether the declared actor class can hold the frame</span>
+<span id="L562" data-line="562">is fit: for the context dimension, the size of the selected</span>
+<span id="L563" data-line="563">representation, measured as ACTIVATION §2 step 3 measures it, against the</span>
+<span id="L564" data-line="564">declared capacity; the envelope&#x27;s other dimensions are fitted as RF-014</span>
+<span id="L565" data-line="565">states. Whether the actor class</span>
+<span id="L566" data-line="566">operates the frame adequately is adequate attention, and only actual-use</span>
+<span id="L567" data-line="567">evidence establishes it: actors of the declared class apply the frame to</span>
+<span id="L568" data-line="568">its declared tasks under its declared conditions, and the results are</span>
+<span id="L569" data-line="569">judged against expectations recorded from the governing sources before the</span>
+<span id="L570" data-line="570">results are opened, by an assessor under §3 where the claim needs</span>
+<span id="L571" data-line="571">independent assessment. A size measurement, or any byte or token</span>
+<span id="L572" data-line="572">threshold, establishes fit and nothing about attention; a frame that fits</span>
+<span id="L573" data-line="573">is not thereby adequately attended. Actual-use evidence binds the frame</span>
+<span id="L574" data-line="574">revision, actor class, tasks and conditions evaluated, like the</span>
+<span id="L575" data-line="575">qualification above, and establishes no universal attention score (§1,</span>
+<span id="L576" data-line="576">the quantifier rule). Time, spend and other resource limits are those of</span>
+<span id="L577" data-line="577">the selected execution binding, under the resource-limit law of</span>
+<span id="L578" data-line="578">[ACTIVATION §6](ACTIVATION.md#6-cost-and-proportionality), not of this</span>
+<span id="L579" data-line="579">test. Finite attention makes fit necessary</span>
+<span id="L580" data-line="580">(RF-002), and only use shows that a frame that fits is applied, so a frame</span>
+<span id="L581" data-line="581">is never qualified for attention because it fits (P0, P6).</span>
+<span id="L582" data-line="582"></span>
+<span id="L583" data-line="583">### Method self-qualification</span>
+<span id="L584" data-line="584"></span>
+<span id="L585" data-line="585">The method is qualified the way it qualifies anything else. Qualification</span>
+<span id="L586" data-line="586">of generic method sufficiency consumes the work boundary (FOUNDATIONS §2),</span>
+<span id="L587" data-line="587">the construction and assessment relation of ACTIVATION §1 and the layered</span>
+<span id="L588" data-line="588">sufficiency of §6; it creates no second process. A fresh competent</span>
+<span id="L589" data-line="589">constructor operates inside a declared capability, context and</span>
+<span id="L590" data-line="590">configuration envelope, using only the declared ordinary method and</span>
+<span id="L591" data-line="591">authority surfaces and declared trial subjects. An independently</span>
+<span id="L592" data-line="592">authorised evaluator has a declared governing basis and comparison</span>
+<span id="L593" data-line="593">predicate. Material expected or reference outcomes, source exemplars or</span>
+<span id="L594" data-line="594">incumbent realisations, author memory and ad hoc rescue are withheld from</span>
+<span id="L595" data-line="595">the constructor until its construction result is frozen wherever earlier</span>
+<span id="L596" data-line="596">exposure would compromise reconstructive independence; then the evaluator</span>
+<span id="L597" data-line="597">compares the frozen result with the method&#x27;s mandatory relation population</span>
+<span id="L598" data-line="598">under the comparison rule of §6.</span>
+<span id="L599" data-line="599">[REFERENCE_FRAME RF-013](REFERENCE_FRAME.md#rf-013-reconstructable-activation)</span>
+<span id="L600" data-line="600">owns the reconstructability of the activation. The constructor, freeze,</span>
+<span id="L601" data-line="601">assessor, acceptance and release protocols are supplied by the governing</span>
+<span id="L602" data-line="602">authority; this member does not select a particular protocol for those</span>
+<span id="L603" data-line="603">roles.</span>
+<span id="L604" data-line="604"></span>
+<span id="L605" data-line="605">The qualification population is every function and failure relation the</span>
+<span id="L606" data-line="606">method claims (REFERENCE_FRAME §5), each with its required representative</span>
+<span id="L607" data-line="607">observations (P6):</span>
+<span id="L608" data-line="608"></span>
+<span id="L609" data-line="609">| Relation under qualification | Required representative observations |</span>
+<span id="L610" data-line="610">|---|---|</span>
+<span id="L611" data-line="611">| `declare` | a frame set derived from a governed workspace, outcome, practices, capability envelopes, evaluation inventory, authority and residual boundary; missing authority or evaluation basis refuses |</span>
+<span id="L612" data-line="612">| `activate` | activation with an exact subject and basis and a capable actor succeeds; stale, ambiguous, topology-mismatched, unauthorised and capability-incompatible activations refuse or return the applicable closed pressure |</span>
+<span id="L613" data-line="613">| `evaluate` | representative `satisfied`, `falsified`, `indeterminate`, `out_of_frame` and `invalid_basis` results; sensitivity to material changes and stability under established irrelevance |</span>
+<span id="L614" data-line="614">| `conjoin` | compatible closed results decide under the declared rule; a result conflict returns `conflict`, mandatory indeterminacy `indeterminate`, and a basis mismatch `invalid_basis` (Stale results, [FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results)); under a veto or deferral the decision rule declares, `conjoin` returns the [REFERENCE_FRAME §5](REFERENCE_FRAME.md#5-method-functions) outcome whose cause holds; none flattens frame meaning |</span>
+<span id="L615" data-line="615">| `translate` | preserved coordinates and provenance reach the target; declared loss stays explicit; identity, basis, authority or equality mismatch refuses |</span>
+<span id="L616" data-line="616">| `audit_coverage` | evaluation, interaction, semantic, operation and decision authority, failure, capability and required independently activated or assurance-independent coverage map to capable frames or explicit residuals; artifact or actor count cannot close coverage |</span>
+<span id="L617" data-line="617">| `revise` | historical failure, topology mutation, evidence change and capability change produce the declared frame-set delta and identify every prior activation, result, conjunction and coverage claim requiring reevaluation |</span>
+<span id="L618" data-line="618">| result consumption | a declared consumer uses one closed result without importing hidden frame context or authority; insufficient output produces a reconstructability failure |</span>
+<span id="L619" data-line="619">| material composition | a case requiring cross-frame execution declares composition, order where material, closure, failure and the conservation of semantic, operation and decision authority; a case not requiring composition stays uncomposed |</span>
+<span id="L620" data-line="620"></span>
+<span id="L621" data-line="621">One valid frame-set declaration and coverage result establishes only the</span>
+<span id="L622" data-line="622">`declare` and evaluated `audit_coverage` population; it proves activation,</span>
+<span id="L623" data-line="623">evaluation, conjunction, translation, revision, result consumption and</span>
+<span id="L624" data-line="624">material composition by no implication. Each relation is exercised through</span>
+<span id="L625" data-line="625">representative positive, boundary and falsifying cases. Qualification may</span>
+<span id="L626" data-line="626">be staged, and every verdict states the exact functions, frame revisions,</span>
+<span id="L627" data-line="627">actor envelopes, basis classes, result branches and evidence populations</span>
+<span id="L628" data-line="628">evaluated; an unevaluated function or branch stays open rather than</span>
+<span id="L629" data-line="629">inheriting a whole-method verdict (P6; §1). Prior exemplar frame sets or</span>
+<span id="L630" data-line="630">outcomes may serve as optional comparison evidence after freeze; they are</span>
+<span id="L631" data-line="631">not mandatory target answers unless the governing basis explicitly requires</span>
+<span id="L632" data-line="632">equivalence (§6).</span>
+<span id="L633" data-line="633"></span>
+<span id="L634" data-line="634">Derived guidance. Changed derived guidance, a compression, a frame packet,</span>
+<span id="L635" data-line="635">a skill or any other projection of the method, is qualified against</span>
+<span id="L636" data-line="636">source-derived expected behaviour, including the affected permissions,</span>
+<span id="L637" data-line="637">exclusions and invalidators. For a native use claim, an ordinary actor</span>
+<span id="L638" data-line="638">applies that guidance through its declared entry and available context.</span>
+<span id="L639" data-line="639">Digest integrity and index generation establish identity and structure,</span>
+<span id="L640" data-line="640">not semantic fidelity or usability. Mechanical and operational claims</span>
+<span id="L641" data-line="641">require their own executable observations, including the applicable</span>
+<span id="L642" data-line="642">workload and operational assumptions of ACTIVATION §6; semantic agreement</span>
+<span id="L643" data-line="643">cannot substitute for those observations (P6, P1).</span>
+<span id="L644" data-line="644"></span>
+<span id="L645" data-line="645">The qualification law is false if constructor competence or its</span>
+<span id="L646" data-line="646">capability, context or configuration envelope, or evaluator authority,</span>
+<span id="L647" data-line="647">governing basis or comparison predicate, is undeclared, or an</span>
+<span id="L648" data-line="648">out-of-envelope construction is used to indict the method; if the</span>
+<span id="L649" data-line="649">constructor uses supplemental method or authority input that is not</span>
+<span id="L650" data-line="650">declared; if a material expected or reference outcome, source exemplar or</span>
+<span id="L651" data-line="651">incumbent realisation, author memory or ad hoc rescue is exposed to the</span>
+<span id="L652" data-line="652">constructor before freeze where that exposure compromises reconstructive</span>
+<span id="L653" data-line="653">independence; if comparison omits the mandatory governing semantic basis,</span>
+<span id="L654" data-line="654">proceeds under constructor authority instead of independently authorised</span>
+<span id="L655" data-line="655">evaluator authority, or is self-adjusted after seeing the result; if a</span>
+<span id="L656" data-line="656">reference outcome is used as authority, reference equivalence is required</span>
+<span id="L657" data-line="657">where the governing basis does not require it, basis-required reference</span>
+<span id="L658" data-line="658">equivalence is omitted, subjective similarity is used as proof, or</span>
+<span id="L659" data-line="659">identity, unique derivation, determinism or incumbent equality substitutes</span>
+<span id="L660" data-line="660">for semantic conformance or equivalence; or if a post-exposure revision is</span>
+<span id="L661" data-line="661">unclassified or is used to make the original frozen construction pass</span>
+<span id="L662" data-line="662">retroactively (§3).</span>
+<span id="L663" data-line="663"></span>
+<span id="L664" data-line="664">Recoverability benchmark (P0 with the actor-change premise). For a selected</span>
+<span id="L665" data-line="665">activation, measure whether a fresh actor given only the published documents</span>
+<span id="L666" data-line="666">recovers the governing relations with fidelity judged independently, and at</span>
+<span id="L667" data-line="667">what reconstruction cost. The context transferred is measured as</span>
+<span id="L668" data-line="668">[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) step 3</span>
+<span id="L669" data-line="669">measures size; time and spend are measured where measurable, under the</span>
+<span id="L670" data-line="670">selected execution binding. The fidelity judgment is actual-use evidence</span>
+<span id="L671" data-line="671">under Frame qualification above, and measured size is not evidence of it.</span>
+<span id="L672" data-line="672">A document set that requires private validator knowledge, whole-corpus</span>
+<span id="L673" data-line="673">loading or a prior actor&#x27;s memory fails the benchmark regardless of its</span>
+<span id="L674" data-line="674">content.</span>
+<span id="L675" data-line="675"></span>
+<span id="L676" data-line="676">A comparative claim additionally declares its exact comparison baseline,</span>
+<span id="L677" data-line="677">task population, actor envelope, evidence conditions and measures before</span>
+<span id="L678" data-line="678">running the comparison. Material differences remain explicit and limit the</span>
+<span id="L679" data-line="679">inference under §1; the baseline is evidence for that declared comparison,</span>
+<span id="L680" data-line="680">not another source of method authority. No comparison baseline is required</span>
+<span id="L681" data-line="681">to measure the package&#x27;s own recoverability. Report fidelity, reconstruction</span>
+<span id="L682" data-line="682">cost, task completion and material errors detected as separate observations;</span>
+<span id="L683" data-line="683">one measure does not stand in for another (P3, P6).</span></pre></html>

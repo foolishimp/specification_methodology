@@ -1,0 +1,1163 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>standards/REFERENCE_FRAME.md</title><style>body{font:14px system-ui;margin:24px;background:#101720;color:#dfeaf4}a{color:#87c7ff}pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5;counter-reset:line}span{display:block}span:before{content:attr(data-line);display:inline-block;width:4em;color:#7392aa;user-select:none}span:target{background:#36481d}</style><h1>standards/REFERENCE_FRAME.md</h1><p>Exact frozen source · SHA256 8152838639950b09389f99181172792100e4470b4807b4e112870cd4e6f6ba21</p><pre><span id="L1" data-line="1"># REFERENCE_FRAME</span>
+<span id="L2" data-line="2"></span>
+<span id="L3" data-line="3">Tier 1. Owns the reference frame as a first-class object of engagement:</span>
+<span id="L4" data-line="4">the laws every frame obeys, how a frame set is declared and selected, how</span>
+<span id="L5" data-line="5">frames relate and act together, how coverage of a workspace is audited and</span>
+<span id="L6" data-line="6">bounded, how a frame set is revised, and what an actor receives when it is</span>
+<span id="L7" data-line="7">activated on a frame. The frame objects, the step that activates a frame,</span>
+<span id="L8" data-line="8">the core result algebra with its conjunction, and qualification belong to</span>
+<span id="L9" data-line="9">other members; this member imports them unchanged and defines none of them</span>
+<span id="L10" data-line="10">(§1, Imports into this context). Each clause names the principle that</span>
+<span id="L11" data-line="11">requires it (P0 to P6, FOUNDATIONS §3), as FOUNDATIONS §1 requires.</span>
+<span id="L12" data-line="12"></span>
+<span id="L13" data-line="13">## 1. The frame as the engagement unit</span>
+<span id="L14" data-line="14"></span>
+<span id="L15" data-line="15">An actor, human or computational, has finite context, attention, time and</span>
+<span id="L16" data-line="16">capability. A workspace may hold more material truth, history, topology,</span>
+<span id="L17" data-line="17">authority and evidence than one actor can evaluate at once. This member</span>
+<span id="L18" data-line="18">makes that limit explicit (P0):</span>
+<span id="L19" data-line="19"></span>
+<span id="L20" data-line="20">```text</span>
+<span id="L21" data-line="21">declared evaluation family</span>
+<span id="L22" data-line="22">  + exact workspace and topology basis</span>
+<span id="L23" data-line="23">  + finite material relations and coordinates</span>
+<span id="L24" data-line="24">  + applicable invariants and authorities</span>
+<span id="L25" data-line="25">  + admissible evidence and exclusions</span>
+<span id="L26" data-line="26">  + actor capability envelope</span>
+<span id="L27" data-line="27">  = activated reference frame</span>
+<span id="L28" data-line="28">  -&gt; one closed result in the core algebra of FOUNDATIONS §4 Results</span>
+<span id="L29" data-line="29">```</span>
+<span id="L30" data-line="30"></span>
+<span id="L31" data-line="31">A project engages a body of work through a declared frame set (P6, P2):</span>
+<span id="L32" data-line="32"></span>
+<span id="L33" data-line="33">```text</span>
+<span id="L34" data-line="34">workspace and governed outcome</span>
+<span id="L35" data-line="35">  + accumulated practice and historical failures</span>
+<span id="L36" data-line="36">  + available actor capabilities</span>
+<span id="L37" data-line="37">  + human judgment</span>
+<span id="L38" data-line="38">  -&gt; declared frame set</span>
+<span id="L39" data-line="39">  -&gt; bounded evaluations</span>
+<span id="L40" data-line="40">  -&gt; conjunction or translation where required</span>
+<span id="L41" data-line="41">  -&gt; coverage ledger and residual uncertainty</span>
+<span id="L42" data-line="42">  -&gt; empirical frame-set revision</span>
+<span id="L43" data-line="43">```</span>
+<span id="L44" data-line="44"></span>
+<span id="L45" data-line="45">The reference frame is the atomic engagement unit: the unit that is</span>
+<span id="L46" data-line="46">activated and evaluated as one bounded context. Frame-set selection,</span>
+<span id="L47" data-line="47">activation, evaluation, conjunction, translation, coverage and revision are</span>
+<span id="L48" data-line="48">separate functions over it (§5). A frame supports a bounded evaluation</span>
+<span id="L49" data-line="49">without first containing a universal theory of its possible relationships.</span>
+<span id="L50" data-line="50">&quot;Atomic&quot; is said at engagement altitude only. It does not assert that every</span>
+<span id="L51" data-line="51">relation inside the frame is one irreducible semantic atom; a frame may</span>
+<span id="L52" data-line="52">carry several semantic atoms and several owner relations without merging</span>
+<span id="L53" data-line="53">their meaning or authority (P1, P3).</span>
+<span id="L54" data-line="54"></span>
+<span id="L55" data-line="55">Scope. This member governs how finite actors construct and use bounded</span>
+<span id="L56" data-line="56">reasoning or execution contexts over a changing body of work. It applies to</span>
+<span id="L57" data-line="57">human work, agentic work, deterministic evaluation, probabilistic</span>
+<span id="L58" data-line="58">construction, assurance and mixed work wherever the governing product or</span>
+<span id="L59" data-line="59">method permits them. It is engagement law only: it defines no application</span>
+<span id="L60" data-line="60">profile, role mapping, product-owned frame-basis binding, domain product,</span>
+<span id="L61" data-line="61">specification taxonomy, design ontology, runtime, workflow, adoption</span>
+<span id="L62" data-line="62">relation or assurance implementation. Other members and products may import or</span>
+<span id="L63" data-line="63">specialise its relations under their own authority, and that external</span>
+<span id="L64" data-line="64">relation neither enters nor amends this member (P2: an obligation stops</span>
+<span id="L65" data-line="65">where its purpose stops). This member owns the reference-frame-evaluation</span>
+<span id="L66" data-line="66">bounded context, `urn:stdo:bounded-context:reference-frame-evaluation`,</span>
+<span id="L67" data-line="67">under its exact publication basis. This member owns only its frame</span>
+<span id="L68" data-line="68">declaration, activation, evaluation, basis, relation, result, coverage,</span>
+<span id="L69" data-line="69">revision and qualification concepts. The context also holds the concepts</span>
+<span id="L70" data-line="70">imported below, each kept by its owner. A same-spelled profile, product,</span>
+<span id="L71" data-line="71">role or runtime carrier is not imported by proximity or nominal match (P3,</span>
+<span id="L72" data-line="72">P1).</span>
+<span id="L73" data-line="73"></span>
+<span id="L74" data-line="74">Substrate. A reference frame may be represented in prose, structured data,</span>
+<span id="L75" data-line="75">a prompt, a design asset, a typed carrier, a runtime context or any other</span>
+<span id="L76" data-line="76">form its consumer selects. No class, aggregate, actor, controller, service,</span>
+<span id="L77" data-line="77">registry, graph or frame engine is required (P2; RF-016).</span>
+<span id="L78" data-line="78"></span>
+<span id="L79" data-line="79">### Imports into this context</span>
+<span id="L80" data-line="80"></span>
+<span id="L81" data-line="81">This member imports the concepts below into</span>
+<span id="L82" data-line="82">`urn:stdo:bounded-context:reference-frame-evaluation` under the import rule</span>
+<span id="L83" data-line="83">of [FOUNDATIONS §2](FOUNDATIONS.md#imports-between-members), which states</span>
+<span id="L84" data-line="84">what an import is, its direction and loss, and that it transfers no</span>
+<span id="L85" data-line="85">ownership and confers no authority. As that rule requires of a</span>
+<span id="L86" data-line="86">declaration: the direction is from each source member named below to</span>
+<span id="L87" data-line="87">this context, and the loss is none, for every concept in the table; the</span>
+<span id="L88" data-line="88">target context is `urn:stdo:bounded-context:reference-frame-evaluation`,</span>
+<span id="L89" data-line="89">owned by this member as Scope above declares. FOUNDATIONS, ACTIVATION and</span>
+<span id="L90" data-line="90">EVALUATION declare no bounded-context identity, so each row&#x27;s source</span>
+<span id="L91" data-line="91">context is its member (P1, P3).</span>
+<span id="L92" data-line="92"></span>
+<span id="L93" data-line="93">| Referenced concept | Source context | Exact source concept and owner |</span>
+<span id="L94" data-line="94">|---|---|---|</span>
+<span id="L95" data-line="95">| evaluation, evaluation family, workspace, material-relation manifold, coordinate, topology, capability envelope, reference frame, activated frame, frame set, active frame configuration, lens; role, persona, abstraction and component | FOUNDATIONS | [Frame objects](FOUNDATIONS.md#frame-objects), FOUNDATIONS §2 |</span>
+<span id="L96" data-line="96">| subject, outcome, basis, material relation, evidence, actor, claim, judgment, residual | FOUNDATIONS | [Ontology](FOUNDATIONS.md#2-ontology), FOUNDATIONS §2 |</span>
+<span id="L97" data-line="97">| frame-set, semantic, evaluation, operation and decision authority; actor identity | FOUNDATIONS | [Authority kinds](FOUNDATIONS.md#authority-kinds), FOUNDATIONS §2 |</span>
+<span id="L98" data-line="98">| frame disjointness, evaluation independence and assurance independence | FOUNDATIONS | [Disjointness and independence](FOUNDATIONS.md#disjointness-and-independence), FOUNDATIONS §2 |</span>
+<span id="L99" data-line="99">| the frame tuple ⟨Q, B, M, C, I, A, E, X, R, J, K, D⟩ | FOUNDATIONS | [The frame tuple](FOUNDATIONS.md#the-frame-tuple), FOUNDATIONS §2 |</span>
+<span id="L100" data-line="100">| the core result values, their meanings and standing, the evaluation not performed, and refinements of the core | FOUNDATIONS | [Results](FOUNDATIONS.md#results), FOUNDATIONS §4 |</span>
+<span id="L101" data-line="101">| conjunction and composition of results, with the declared decision rule | FOUNDATIONS | [Conjunction of results](FOUNDATIONS.md#conjunction-of-results), FOUNDATIONS §4 |</span>
+<span id="L102" data-line="102">| activation as a step: intake, admission, applicability, context construction with its size measurement, activation and evaluation | ACTIVATION | [The step](ACTIVATION.md#1-the-step), ACTIVATION §1; [Context construction under an envelope](ACTIVATION.md#2-context-construction-under-an-envelope), ACTIVATION §2 |</span>
+<span id="L103" data-line="103">| the step&#x27;s result refinements and disposition | ACTIVATION | [Step results and disposition](ACTIVATION.md#3-step-results-and-disposition), ACTIVATION §3 |</span>
+<span id="L104" data-line="104">| the closed result and its reuse | ACTIVATION | [Closed result and reuse](ACTIVATION.md#7-closed-result-and-reuse), ACTIVATION §7 |</span>
+<span id="L105" data-line="105">| qualification of a frame and of this method | EVALUATION | [Qualification of frames and of the method](EVALUATION.md#7-qualification-of-frames-and-of-the-method), EVALUATION §7 |</span>
+<span id="L106" data-line="106"></span>
+<span id="L107" data-line="107">Scope bounds what</span>
+<span id="L108" data-line="108">this member owns; a concept of those kinds that another member defines,</span>
+<span id="L109" data-line="109">such as evaluation, basis, the activation step, the core results or</span>
+<span id="L110" data-line="110">qualification, is imported here, and this member defines it no second</span>
+<span id="L111" data-line="111">time. A refinement this member states, such as the function outcomes of §5</span>
+<span id="L112" data-line="112">or the coverage statuses of §8, names its owner in this table and maps</span>
+<span id="L113" data-line="113">back to it. A frame or frame family that a profile or product declares in</span>
+<span id="L114" data-line="114">this context is that owner&#x27;s specialisation under Scope above and is not</span>
+<span id="L115" data-line="115">imported here (P1, P3, P6).</span>
+<span id="L116" data-line="116">Purpose and material relation: each</span>
+<span id="L117" data-line="117">concept used here keeps one owning section, so its meaning cannot diverge</span>
+<span id="L118" data-line="118">between that owner and this member (P1, P6).</span>
+<span id="L119" data-line="119"></span>
+<span id="L120" data-line="120">### Foundation to law</span>
+<span id="L121" data-line="121"></span>
+<span id="L122" data-line="122">This family, frames and context (F1 in the index of</span>
+<span id="L123" data-line="123">[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law)),</span>
+<span id="L124" data-line="124">decides how a finite actor engages a body of work through bounded reference</span>
+<span id="L125" data-line="125">frames: how a frame is declared, sized, bound, activated, related to other</span>
+<span id="L126" data-line="126">frames, used to audit coverage and revised. It covers this member; the</span>
+<span id="L127" data-line="127">context construction of</span>
+<span id="L128" data-line="128">[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope);</span>
+<span id="L129" data-line="129">and the frame objects, authority kinds, disjointness and independence and</span>
+<span id="L130" data-line="130">frame tuple of [FOUNDATIONS §2](FOUNDATIONS.md#frame-objects). A rule in</span>
+<span id="L131" data-line="131">another member is marked &quot;outside this member&quot; in the third column; the</span>
+<span id="L132" data-line="132">table owns none of the rules it names. Its instance premises are: (a) a</span>
+<span id="L133" data-line="133">workspace holds more material than one actor&#x27;s capability envelope (its</span>
+<span id="L134" data-line="134">competence, context capacity, tools and access) can evaluate at once; (b)</span>
+<span id="L135" data-line="135">the evaluations to be made are declared questions about a governed</span>
+<span id="L136" data-line="136">outcome; (c) several frames and actors may bear on one workspace, and their</span>
+<span id="L137" data-line="137">material may overlap; (d) the workspace, its topology and the actors&#x27;</span>
+<span id="L138" data-line="138">capabilities change between activations; (e) an actor may read both owning</span>
+<span id="L139" data-line="139">sources and surfaces derived from them by copying, projection or</span>
+<span id="L140" data-line="140">compression. They are conditions of the work this family governs, not</span>
+<span id="L141" data-line="141">commitments, and do not follow from finite capacity alone. Two of P0&#x27;s</span>
+<span id="L142" data-line="142">premises are cited by name: its actor-change premise, that the actor of one</span>
+<span id="L143" data-line="143">step need not be the actor of the next and may re-acquire declared sources</span>
+<span id="L144" data-line="144">but not private memory; and its open-world premise, that the world is open.</span>
+<span id="L145" data-line="145">The standing of the consequences below is stated in</span>
+<span id="L146" data-line="146">[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law).</span>
+<span id="L147" data-line="147"></span>
+<span id="L148" data-line="148">| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |</span>
+<span id="L149" data-line="149">|---|---|---|---|---|</span>
+<span id="L150" data-line="150">| P0 (recovered); instance premise a | By P0 an actor&#x27;s attention is finite, and by (a) the workspace exceeds it, so no finite actor is presumed to hold the complete workspace in active attention. The unit of engagement is one activated reference frame, activated and evaluated as one bounded context; frame-set selection, activation, evaluation, conjunction, translation, coverage and revision are separate functions over it | [§1](#1-the-frame-as-the-engagement-unit), the two compressions and the engagement unit; [§2](#2-core-claims) claim 1; [§12](#12-violations) item 1 | none | 7 |</span>
+<span id="L151" data-line="151">| P1 (independent), P3 (independent), P2 (independent); instance premise c | By P1 and P3 meaning and authority stay with their owners however material is grouped, and by P2 frames are chosen for the evaluation, so a frame is atomic at engagement altitude only: it may carry several semantic atoms and owner relations without merging their meaning or authority, and one semantic atom may take part in several frames. A frame set is not contracted to a disjoint minimum because its material variables overlap | [§1](#1-the-frame-as-the-engagement-unit), &quot;Atomic&quot;; [Engagement atom and semantic atom](#engagement-atom-and-semantic-atom) | a semantic-contraction law for a domain&#x27;s atoms: the adopting method that supplies it, such as the design profile&#x27;s [Prime law](DESIGN_MODULE.md#6-prime-law) | 6, 7 |</span>
+<span id="L152" data-line="152">| P2 (independent), P3 (independent), P1 (independent) | By P2 each member governs only the question it owns, and by P1 and P3 a specialisation keeps its own meaning and owner, so this member&#x27;s law stops at engagement: it defines no application profile, role mapping, product-owned frame-basis binding, domain product, runtime, workflow or assurance implementation. A member or product that specialises its relations does so under its own authority, and that relation neither enters nor amends this member; a same-spelled carrier enters the context by no proximity or nominal match | [§1](#1-the-frame-as-the-engagement-unit), Scope | the bounded-context identity `urn:stdo:bounded-context:reference-frame-evaluation`: this member; each specialisation: the profile or product that declares it | 1, 7 |</span>
+<span id="L153" data-line="153">| P1 (independent), P3 (independent), P6 (independent) | By P1 and P3 a concept means what its owner defines on its basis, and by P6 using it grants nothing, so a concept used here that another member defines keeps that owner and that meaning. It enters by a reference-only import, which grants no semantic, evaluation, operation or decision authority; a refinement this member states names its owner and maps back to the core | [Imports into this context](#imports-into-this-context) | which concepts are imported, and from which member: this member&#x27;s declaration; the import rule: [FOUNDATIONS §2 Imports between members](FOUNDATIONS.md#imports-between-members), traced in family F12 | 2, 7 |</span>
+<span id="L154" data-line="154">| P0 (recovered), P1 (independent), P2 (independent), P3 (independent), P6 (independent) | By P0 an actor engages only a finite specification, and by P1 and P3 a carrier is a representation of it, not the relation, so a reference frame is a finite specification of the attention, coordinates, authority, evidence and result relations one evaluation family requires. It specifies a relation, not a required schema or runtime carrier; a prompt, context packet or program is a projection of an activated frame, not the frame. A frame is bound only when every material coordinate resolves to an exact source, subject, basis, authority, evidence route, actor envelope, result relation and invalidation condition, and representation cannot create, widen or replace that binding | [FOUNDATIONS §2 The frame tuple](FOUNDATIONS.md#the-frame-tuple) and [Frame objects](FOUNDATIONS.md#frame-objects), Workspace, Material-relation manifold, Reference frame and Active frame configuration, outside this member | the twelve components ⟨Q, B, M, C, I, A, E, X, R, J, K, D⟩: FOUNDATIONS §2 The frame tuple | 6, 7 |</span>
+<span id="L155" data-line="155">| P2 (independent), P1 (independent); instance premise b | By P2 a frame exists for an evaluation, and by P1 wording carries no meaning of its own, so a frame&#x27;s sufficiency can be tested only against the evaluation family it declares, so every frame declares one; a module, file, service, role, persona, prompt or lens with no declared evaluation relation is not a frame. Similar wording does not show that two evaluations share a family: an evaluation is within a frame&#x27;s family only when the question it decides is one that family states at the frame&#x27;s declared coordinates, whatever the frame&#x27;s name or its membership in the set | [RF-001](#rf-001-evaluation-relativity); [FOUNDATIONS §2 Frame objects](FOUNDATIONS.md#frame-objects), Evaluation, Evaluation family and Role, persona, abstraction, component, outside this member; [Diagnostic order](#diagnostic-order), question 1; [§12](#12-violations) item 2 | each frame&#x27;s evaluation family: the frame&#x27;s declaration, made under the frame-set authority (§4) | 7 |</span>
+<span id="L156" data-line="156">| P0 (recovered, with its actor-change premise), P2 (independent), P6 (independent); instance premise a | By P0 and its actor-change premise an attention surface must fit and be reconstructable by the actor that uses it, so an activated frame&#x27;s attention surface is finite and fits the selected actor&#x27;s declared envelope; a frame that needs undeclared ambient memory, conversation history or an effectively global workspace context is not reconstructable for that actor. Where the envelope declares a context capacity, the selected context&#x27;s size is measured before the actor reads it, over a stated boundary, and recorded with the capacity and the comparison; context outside the boundary is recorded as not measured. The measurement applies there and only there, is no budget and no universal gate, and shows fit and nothing else | [RF-002](#rf-002-finite-attention); [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) step 3, the size measurement, outside this member; [§12](#12-violations) item 10 | the capacity and its unit, bytes or tokens: the actor&#x27;s declared envelope; the measured boundary, and time, spend and other resource limits: the selected execution binding ([SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding)) | 7, 8 |</span>
+<span id="L157" data-line="157">| P2 (independent), P0 (recovered, with its open-world premise), P5 (derived from P0 and P6, with P0&#x27;s open-world premise); instance premise a | By P2 and P5 a result is sound only if every relation that can change it is present, and by P0&#x27;s open-world premise relations not held are not thereby absent, so every known relation whose lawful change can alter the result, the validity of the basis, the sufficiency of evidence, operation authority or decision authority appears in the frame or enters through a declared authoritative input, and omitting one makes the frame insufficient; the law does not require proof that no undiscovered material relation exists. The context starts as the material closure of the intake&#x27;s seed set (the subject, outcome and affected relations it names) under that relation family, and a closure that is not finite and unique on the exact basis stops the step and is not guessed | [RF-003](#rf-003-material-sufficiency); [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) step 1, outside this member | the closure law: [AC-010](AXIOMATIC_CALCULUS.md#ac-010-material-closure); the stop&#x27;s outcome, `closure_unresolved`: [ACTIVATION §3 Admission and activation](ACTIVATION.md#admission-and-activation) | 6, 7 |</span>
+<span id="L158" data-line="158">| P2 (independent) | By P2 attention is spent only on what bears on the evaluation, so relations that cannot affect the declared evaluation stay outside active attention unless they are needed to establish that irrelevance; adjacent material, or the presence of the corpus, is no reason to load or read it. The closure is projected to the selected context with its boundary recorded | [RF-004](#rf-004-irrelevance-exclusion); [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) step 2 and Acquisition, outside this member | the seams the boundary records (excluded, external, unresolved, translated, invalidation-sensitive): ACTIVATION §2 step 2, applying [AC-011](AXIOMATIC_CALCULUS.md#ac-011-projection) | 7 |</span>
+<span id="L159" data-line="159">| P3 (independent), P1 (independent) | By P3 a result binds its exact basis, and by P1 equal names or shapes do not establish equal meaning, so every result binds its exact subject, basis, coordinates and evidence scope. A stale, advanced, ambiguous or mismatched basis returns `invalid_basis` or requires reactivation; equal names, values, shapes, locations or apparent topology positions never substitute for declared coordinate equality | [RF-005](#rf-005-exact-basis-and-coordinates); [FOUNDATIONS §2 Frame objects](FOUNDATIONS.md#frame-objects), Coordinate, outside this member; [§12](#12-violations) item 7 | each frame&#x27;s coordinate and equality law: its declaration (C of the frame tuple) | 2, 7 |</span>
+<span id="L160" data-line="160">| P6 (independent), P3 (independent); instance premise c | By P6 authority exists only through an admitted grant, and by P3 it binds its owner and scope, so a frame carries and applies admitted authority and never mints, widens, transfers or reconstructs it from actor identity, capability, evidence shape, implementation reachability or frame selection; declaring, selecting, activating or executing a frame, or naming a role, grants none. The kinds of authority may coincide in a lawful case and never collapse by default, and actor identity is not an authority. A read-only evaluation declares no operation authority; an effectful one inherits the exact operation grant from its existing owner. A proxy for human authority keeps its identity distinct from the human authority&#x27;s | [RF-006](#rf-006-authority-conservation); [FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds) and [Frame objects](FOUNDATIONS.md#frame-objects), Role, persona, abstraction, component, outside this member; [§2](#2-core-claims) claim 8; [§12](#12-violations) item 6 | the division into frame-set, semantic, evaluation, operation and decision authority, with actor identity apart, and frame-set authority as human authority: FOUNDATIONS §2 Authority kinds; when a bounded proxy may act: [IDENTITY §6](IDENTITY.md#6-authority-identity-and-conservation-stdo-up-004) | 7, 9 |</span>
+<span id="L161" data-line="161">| P6 (independent) | By P6 meaning, evidence, application, operation and decision are separate authorities, so semantic law defines what the evaluation means, evidence supplies observations, the evaluator applies the declared relation, the existing operation owner supplies any operation grant, and decision authority disposes the result; a frame declaration keeps these roles distinguishable even when one actor performs several. The evaluator applies the frame&#x27;s declared invariants, evidence rules and result algebra and records every assumption whose failure could change the result | [RF-007](#rf-007-semantic-evidence-and-verdict-separation); [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) Evaluation, outside this member | none; [EVALUATION §2](EVALUATION.md#2-separation) applies this law to review (family F6) | 7, 9 |</span>
+<span id="L162" data-line="162">| P1 (independent), P3 (independent); instance premise c | By P1 shared material does not share meaning, and by P3 each frame binds its own basis, so frames may share entities, variables, evidence or coordinates; shared material establishes neither identical meaning nor identical basis, authority or result, and every cross-frame equality or translation an evaluation uses is declared where it is used | [RF-008](#rf-008-overlap-without-identity-collapse); [§12](#12-violations) item 7 | none | 2, 7 |</span>
+<span id="L163" data-line="163">| P3 (independent), P1 (independent), P6 (independent), P2 (independent); instance premise c | By P3 and P1 a relation holds only where it is declared, and by P6 and P2 each structure answers its own question, so parent and child relations among frames apply only where declared. Functional decomposition, communication, authority precedence, frame configuration, subject topology and evaluation dependency are distinct relation structures, which a consumer may align where the governed subject warrants it and never silently treats as one hierarchy; an exchange of information grants no authority and establishes neither a decomposition nor an evaluation dependency. No frame relation is the default topology, and a project declares only the relations its evaluations and coverage claims need | [RF-009](#rf-009-no-assumed-hierarchy); [§7](#7-frame-relations); [§12](#12-violations) item 3 | the ten named frame relations: this member (§7); which relations a project declares, and where it aligns relation structures: that project, for its governed subject | 4, 7 |</span>
+<span id="L164" data-line="164">| P6 (independent), P1 (independent); instance premise c | By P6 and P1 each kind of independence is a different relation, so frame disjointness (structural), evaluation independence (procedural) and assurance independence (claim-relative) are three relations: disjoint frames need not be independently evaluated, independently activated evaluations need not be disjoint, and the unqualified word &quot;independent&quot; establishes none of them. Separately activated evaluations may overlap in subject, manifold or evidence, and neither consumes nor influences the other&#x27;s unclosed working result | [FOUNDATIONS §2 Disjointness and independence](FOUNDATIONS.md#disjointness-and-independence), outside this member; [Independently activated co-evaluation](#independently-activated-co-evaluation) | the conditions a verdict needs to count as independent assurance: the governing assurance law ([EVALUATION §3](EVALUATION.md#3-independent-assessment), family F6) | 7, 9 |</span>
+<span id="L165" data-line="165">| P4a (independent), P6 (independent), P2 (independent) | By P4a composition is needed only where parts combine through declared relations, and by P2 nothing is composed that the evaluation does not need, so using several frames does not require composing their internal manifolds. Composition law is required only when the evaluation combines their internal variables, transports evidence or values across them, or treats their operations as one material execution relation. Independently activated evaluations may instead return closed results to one declared conjunction or decision rule. A material composition is introduced only when the evaluation requires it, and declares its shared invariants, effect or decision order where material, closure, failure and the conservation of semantic, operation and decision authority | [RF-010](#rf-010-composition-on-demand); [§6](#6-frames-in-conjunction), Result conjunction and Material composition; [§12](#12-violations) items 4 and 5 | each material composition: the owning application; the conjunction: [FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results) (family F3); the choices its declared rule leaves open: the member or profile that applies the conjunction, in its declared rule | 3, 4, 7 |</span>
+<span id="L166" data-line="166">| P1 (independent), P4b (derived from P0 and P2, with P0&#x27;s premise that step-produced facts are not re-acquirable); instance premise c | By P1 a value carried across frames keeps its meaning only through a declared relation, and by P4b what is lost must travel with it, so where one frame supplies evidence or a value consumed inside another, the translation declares source and target coordinates, preserved meaning, accepted loss, provenance, equality law and refusal conditions; a loss inside the accepted loss travels with the value as a residual | [Evidence or coordinate translation](#evidence-or-coordinate-translation); [§5](#5-method-functions), the outcomes of `translate` | the accepted loss and the refusal conditions of each translation: its declarer | 3, 6, 7 |</span>
+<span id="L167" data-line="167">| P3 (independent), P4b (derived from P0 and P2, with P0&#x27;s premise that step-produced facts are not re-acquirable); instance premise d | By P3 a result binds coordinates that a topology change can alter, and by P4b a stale result persists until re-evaluated, so an activated frame declares the topology changes capable of invalidating its coordinates or its materiality judgment, and a detected material topology mutation causes reevaluation, frame revision or recharting before a previous result is reused. A material revision of a frame produces a new revision coordinate and states which prior activations, results and coverage claims need reevaluation; every result bound to the prior revision is reopened until a recorded re-check finds it independent of the change or it is re-evaluated, and silence keeps no result closed. A revision that changes no declaration of the frame needs no new coordinate, and an unchanged declaration is no ground for keeping a result closed: whether a closed result stays valid is decided by the reuse rule of ACTIVATION §7 | [RF-011](#rf-011-topology-mutation-and-recharting); [Revision actions](#revision-actions); [FOUNDATIONS §2 Frame objects](FOUNDATIONS.md#frame-objects), Topology, outside this member; [ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse), the reuse rule, outside this member; [§12](#12-violations) item 11 | each frame&#x27;s invalidation and rechart conditions: its declaration (J of the frame tuple); the revision actions listed: this member (§10) | 2, 7 |</span>
+<span id="L168" data-line="168">| P0 (recovered, with its actor-change premise), P6 (independent), P2 (independent), P3 (independent) | By P0&#x27;s actor-change premise a frame must work for a fresh actor, and by P6 and P3 that actor receives only declared, bound inputs, so a fresh competent actor inside the declared envelope can reconstruct the activated evaluation from the frame declaration, the exact subject, the basis and the admissible inputs, without undocumented conversational or historical context. An actor receives one activated frame or one declared active frame configuration, never an implied demand to reconstruct the workspace from ambient context; it may own its internal reasoning where the governing method permits, returns through the declared result relation, and hidden reasoning substitutes for no required evidence, provenance or authority. Every field of the binding resolves through stable identities and source references, for which paths, line numbers, counts, summaries and matching labels do not substitute | [RF-013](#rf-013-reconstructable-activation); [§11](#11-the-activation-packet); [Minimal activation binding](#minimal-activation-binding) | the packet&#x27;s minimum contents and the binding&#x27;s fields: this member; the carrier: its consumer (RF-016) | 7, 9 |</span>
+<span id="L169" data-line="169">| P0 (recovered), P5 (derived from P0 and P6, with P0&#x27;s open-world premise), P6 (independent); instance premise a | By P0 an actor&#x27;s envelope is finite, and by P5 a step cannot report success on what it did not hold, so frame adequacy includes actor usability. When the material manifold exceeds an actor&#x27;s envelope, the lawful responses are another actor, a refined frame or outer contract, sequenced activations, a lawful compression or `out_of_frame`; silently omitting material relations to fit is never one of them, and a frame never silently grows beyond the selected actor&#x27;s envelope. Actor capability may justify a different frame size or activation sequence, and can neither waive an invariant nor widen authority | [RF-014](#rf-014-capability-fit); [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) step 3, the responses when the context does not fit, outside this member; [FOUNDATIONS §2 Frame objects](FOUNDATIONS.md#frame-objects), Capability envelope, outside this member; [§11](#11-the-activation-packet), frame size; [§12](#12-violations) item 10 | the selection among these responses: human authority, directly or in advance through the grant; which responses a step selects within its grant (refinement, sequencing, compression) and which re-enter the owner of the grant or envelope (another actor, a larger envelope): ACTIVATION §2 step 3 | 7, 8 |</span>
+<span id="L170" data-line="170">| P2 (independent), P0 (recovered), P6 (independent) | By P2 a compression serves the evaluation, and by P0 it must fit the envelope, so a compression preserves the material distinctions and failure detections the evaluation family requires while fitting the envelope; it need not be a unique smallest frame. Intentional overlap is kept where it supplies independently activated evaluation, different capability fit, different evidence altitude or useful fault detection, and frames are merged only when the merged frame preserves evaluation meaning, authority, capability fit and proportional reasoning cost. Whether a compression preserved what the evaluation needs is a claim: the compressing step records the compression and its preservation argument | [RF-017](#rf-017-proportional-compression); [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) step 3, compression, outside this member; [§12](#12-violations) item 13 | whether that claim is assessed independently: the promotion it serves ([EVALUATION §3](EVALUATION.md#3-independent-assessment)) | 6, 7 |</span>
+<span id="L171" data-line="171">| P0 (recovered, with its open-world premise), P4b (derived from P0 and P2, with P0&#x27;s premise that step-produced facts are not re-acquirable), P6 (independent) | By P0&#x27;s open-world premise unknown relations exist, and by P4b and P6 an absence of a counterexample is not evidence, so coverage and evaluation results keep known uncertainty explicit: unresolved relations, uncovered evaluations, contested evidence and unknown capability. Absence of a recorded counterexample is not evidence of completeness. Without an independently established closed-domain completeness predicate, a finite frame set cannot establish, by inspecting its own inventory, that no material evaluation is undiscovered; coverage therefore stays falsifiable and states an explicit residual boundary | [RF-015](#rf-015-residual-uncertainty); [§9](#9-completeness-boundary) | a closed-domain completeness predicate, where one is used: the owner of that domain, who establishes it independently | 7, 9 |</span>
+<span id="L172" data-line="172">| P2 (independent), P0 (recovered) | By P2 the method requires only what the outcome needs, and by P0 an actor needs the relations, not a carrier, so this member requires the declared relations and the observable outcomes, and no frame runtime, universal carrier, registry, controller, prompt format, repository layout, collaboration topology, worker count or software framework. A frame and the method functions may be realised in any conforming form, and the signatures describe relations, not callable interfaces; the minimal declarations are the least content that declares a frame, a frame set and an evaluation result, in any carrier | [RF-016](#rf-016-implementation-neutrality); [§1](#1-the-frame-as-the-engagement-unit), Substrate; [§5](#5-method-functions), the signatures; [§13](#13-minimal-declarations); [§12](#12-violations) item 14 | the carrier: its consumer; the fields of the three minimal declarations: this member, with the out_of_frame residual field carrying what [FOUNDATIONS §4 Results](FOUNDATIONS.md#results) requires | 7, 8 |</span>
+<span id="L173" data-line="173">| P6 (independent), P2 (independent); instance premise b | By P6 human authority may declare what it owns, and by P2 and (b) a declaration serves the outcome from known evidence, so human authority may declare a project frame set from accumulated practice, known failure modes, domain expertise, the outcome&#x27;s risk and knowledge of the available actors, without reconstructing it from the workspace bottom up. The declaration records the governed workspace and outcome, the evaluation inventory, the frames and their envelopes, intentional overlaps, dependencies or translations, the authorities, exclusions and residual uncertainty, and the conditions for revision. Human selection proves neither that the set is complete nor that its frames hold authority over the relations they inspect, and a frame set need not be a partition, tree, stack or exhaustive ontology | [§4](#4-frame-set-declaration); [FOUNDATIONS §2 Frame objects](FOUNDATIONS.md#frame-objects), Frame set, outside this member; [§2](#2-core-claims) claim 4 | the frame set: the frame-set authority, which FOUNDATIONS §2 Authority kinds names as human authority; the items the declaration records: this member | 1, 7, 9 |</span>
+<span id="L174" data-line="174">| P2 (independent), P0 (recovered), P6 (independent); instance premises a, b | By P2 coverage serves the governed outcome, and by P0 each evaluation needs a capable actor, so a selected frame set meets the baseline coverage constraint when every known material evaluation has a frame in the set and an available actor inside that frame&#x27;s envelope capable of it. Selection weighs further considerations under no prescribed algorithm; they create no universal resource ledger, benchmark, budget or measurement gate, a resource control applies only through an explicitly selected frame and its owning scope, and selection waives no other semantic, authority, evidence or independence constraint | [Frame-set selection](#frame-set-selection) | the weighing, and whether a non-minimal set is accepted for its risk reduction or actor fit: human authority; the cost control where a cost claim is the governed question: [ACTIVATION §6](ACTIVATION.md#6-cost-and-proportionality) (family F5) | 5, 7 |</span>
+<span id="L175" data-line="175">| P5 (derived from P0 and P6, with P0&#x27;s open-world premise), P6 (independent) | By P5 each outcome answers its own predicate, and by P6 an outcome is not its acceptance, so the outcomes of `activate`, `conjoin` and `translate`, and the coverage statuses, each answer their own named predicate. A refused activation performs no evaluation; `decision(holds)` assesses the composite predicate and is not its acceptance; a coverage status is a result of the audit, never of the covered evaluation, and an excluded row is met by its cited exclusion, never covered or performed | [§5](#5-method-functions), the outcome table and the paragraph after it; [Coverage ledger](#coverage-ledger), the status table and the paragraph after it | the outcome and status names and their causes: this member; the mapping of each into one core value follows [FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Refinements (family F3) | 3, 7 |</span>
+<span id="L176" data-line="176">| P3 (independent), P2 (independent), P6 (independent), P4b (derived from P0 and P2, with P0&#x27;s premise that step-produced facts are not re-acquirable); instance premises b, d | By P3 coverage binds an exact tuple, and by P4b and P6 its inventory is a recorded, evidenced fact, so coverage is evaluated against an exact tuple of workspace, governed outcome, basis, evaluation inventory, frame set and time, and a change of any material member may invalidate it. The inventory is derived from every material available source and records provenance and materiality; artifact presence, file, operation, test, review or actor count proves no coverage. Coverage dimensions are lenses, which become frames only when instantiated as bounded evaluation families. The ledger holds, for each evaluation, its subject and basis, frames, envelope, authorities, evidence, dependencies, status and residual | [Coverage basis](#coverage-basis); [Evaluation inventory](#evaluation-inventory); [Coverage dimensions](#coverage-dimensions); [Coverage ledger](#coverage-ledger), the fields; [FOUNDATIONS §2 Frame objects](FOUNDATIONS.md#frame-objects), Lens, outside this member; [§2](#2-core-claims) claim 7; [§12](#12-violations) item 9 | the sources listed, the typical dimensions and the ledger&#x27;s minimum fields: this member | 7, 9 |</span>
+<span id="L177" data-line="177">| P4a (independent), P2 (independent), P6 (independent) | By P4a interacting relations compose only through declared relations, and by P2 an interaction that can change the outcome must be evaluated, so coverage by evaluation row is insufficient where two covered relations interact in a way capable of changing the governed outcome, so every material interaction is covered by one frame, a declared conjunction, a translation or a material composition. Every material evaluation identifies its semantic and decision authority and every material operation its existing operation authority; a frame set with an unresolved decision owner, or an effectful path without operation authority, is not closed | [Interaction coverage](#interaction-coverage); [Authority coverage](#authority-coverage) | none | 4, 7 |</span>
+<span id="L178" data-line="178">| P4b (derived from P0 and P2, with P0&#x27;s premise that step-produced facts are not re-acquirable), P5 (derived from P0 and P6, with P0&#x27;s open-world premise) | By P4b and P5 a known failure persists as an input until it is detected or excluded, so coverage includes known success, refusal, boundary, integration, recovery, reconstruction and competing-path cases where they are material, and a historical failure stays a coverage input until a declared frame detects or excludes its recurrence | [Failure coverage](#failure-coverage) | a policy of this member: the list of case kinds coverage includes where material (success, refusal, boundary, integration, recovery, reconstruction and competing path) | 7, 9 |</span>
+<span id="L179" data-line="179">| P6 (independent) | By P6 independence is a relation established by evidence, not a label, so independently activated coverage uses a separately activated evaluation relation and declares any additional assurance-independence conditions; a persona label establishes neither relation | [High-risk separately activated coverage](#high-risk-separately-activated-coverage) | which evaluations require it (high consequence, weak observability, strong confirmation bias or a history of local proof masking): human authority | 7, 9 |</span>
+<span id="L180" data-line="180">| P6 (independent), P0 (recovered, with its open-world premise) | By P6 a coverage claim holds only on its conditions, and by P0&#x27;s open-world premise unknown residuals stay explicit, so a frame set has operational full coverage for its declared tuple only when its eight conditions hold, among them that no unresolved frame-result conflict is hidden by aggregation and that uncovered and unknown residuals are explicit. The claim is relative to that tuple and is not a claim that no undiscovered evaluation exists | [Operational full coverage](#operational-full-coverage) | each exclusion: the governing authority the excluded row cites | 7, 9 |</span>
+<span id="L181" data-line="181">| P4b (derived from P0 and P2, with P0&#x27;s premise that step-produced facts are not re-acquirable), P5 (derived from P0 and P6, with P0&#x27;s open-world premise), P2 (independent), P6 (independent) | By P4b and P5 failures and violations are evidence that persists, and by P2 and P6 diagnosis serves the outcome without granting repair, so historical failures, resets and invisible violations are evidence for improving a frame declaration, activation, actor assignment or frame set, and the listed signals trigger frame diagnosis. Diagnosis excludes activation, basis, capability, evidence, missing-relation, missing-conjunction and evaluation-family defects before it adds another frame | [Missing-frame signals](#missing-frame-signals); [Diagnostic order](#diagnostic-order); [§2](#2-core-claims) claim 10; [§12](#12-violations) item 12 | the signals listed and the order of the eight questions: this member | 7, 9 |</span>
+<span id="L182" data-line="182">| P0 (recovered, with its actor-change premise), P3 (independent), P6 (independent); instance premise e | By P0&#x27;s actor-change premise and P3 an input is acquired by exact identity from the selected basis, and by P6 absence from view grants nothing, so declared inputs are acquired by exact identity, and only from the exact selected basis: a declared input absent from the actor&#x27;s view is neither licence to read elsewhere nor evidence that it is absent, and a candidate source, a moving selector or another basis is no substitute. Where a derived surface is stale, missing or insufficient for a named question, the deciding owner sections are acquired directly. Acquisition is read-only, grants no role, operation or decision, and a missing binding is returned with its outcome before any dependent action | [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) step 4 and Acquisition, outside this member | acquiring a current derived surface in preference to its owning sections where it serves the task: ACTIVATION §2 Acquisition; which derived surfaces are published: their publisher, and none owns a determination | 2, 7 |</span>
+<span id="L183" data-line="183">| P0 (recovered), P5 (derived from P0 and P6, with P0&#x27;s open-world premise), P3 (independent), P6 (independent) | By P0 an actor loads only what its frame declares, and by P5 and P3 a declaration is not evidence about one activation, so activation binds each reusable frame declaration to the exact subject and basis and loads the declared material relations and evidence sources, never an undifferentiated workspace dump; a reusable declaration is not evidence that a particular activation was correct. When no available frame and actor pairing can lawfully perform the evaluation, activation returns `out_of_frame` or the refusal whose cause holds, and work does not proceed through implied context | [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) Activation, outside this member; [FOUNDATIONS §2 Frame objects](FOUNDATIONS.md#frame-objects), Activated frame, outside this member | who selects the frame: the actor or the assigning authority, as the configuration allocates ([ACTIVATION §1 Configuration](ACTIVATION.md#configuration), family F2) | 7, 8 |</span>
+<span id="L184" data-line="184">| P6 (independent), P1 (independent); instance premise e | By P6 a derived surface owns no determination, and by P1 it is a representation of its sources, so a derived surface or projected frame decides standalone only the questions its own source members own. For a question another member owns, or one that joins the law of several owners, the step returns `out_of_frame` naming the owning members, and the question is decided from those members or from a derived surface whose declared sources include every owner | [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) Standalone scope, outside this member | none | 6, 7, 9 |</span>
+<span id="L185" data-line="185">| P6 (independent), P0 (recovered), P5 (derived from P0 and P6, with P0&#x27;s open-world premise) | By P6 a prompt holds no authority of its own, and by P0 and P5 it carries only what the step needs, so a prompt is a rendered contract over typed authority, not source law. It projects the current authority references, obligations, contracts, boundaries, proof expectations and fallback conditions the step needs, and the material Acquisition selects; it carries no historical workaround prose unless a current surface still needs that constraint. Construction starts from the highest live authority surface the question needs and names an unresolved upstream authority gap before fallback context is read | [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) Prompt construction, outside this member | the design, ODD, UX and ticket specialisations: [DESIGN_MODULE §11](DESIGN_MODULE.md#11-review), [ODD §11.5D](ODD.md#115d-constructive-evaluation-and-yield-loop) and [§11.7A](ODD.md#117a-conforming-agentic-development), [UX §7](UX.md#7-carrier-binding), and [TICKETS §5](TICKETS.md#5-from-carrier-to-execution) and [§7](TICKETS.md#7-authority-judgment-closure-and-state) | 6, 7 |</span>
+<span id="L186" data-line="186"></span>
+<span id="L187" data-line="187">RF-012, and the mapping of the outcomes of §5 and the coverage statuses of</span>
+<span id="L188" data-line="188">§8 into the core, apply the core result algebra and its refinement rule;</span>
+<span id="L189" data-line="189">they are traced in family F3 at</span>
+<span id="L190" data-line="190">[FOUNDATIONS §4 Results](FOUNDATIONS.md#results), and the rows above trace</span>
+<span id="L191" data-line="191">only what those rules decide about frames. Claim 9 of §2 and item 8 of §12</span>
+<span id="L192" data-line="192">state RF-012 and go with it to F3. §2 states ten core claims that the rules</span>
+<span id="L193" data-line="193">named in the rows, or RF-012, make precise; it adds no rule of its own. §12</span>
+<span id="L194" data-line="194">lists violations, each of the rule it cites, and each is traced in that</span>
+<span id="L195" data-line="195">rule&#x27;s row or, for item 8, in F3. §14 states when a project operates under this member: when the</span>
+<span id="L196" data-line="196">rules named in the rows hold for its frame set, with no frame machinery,</span>
+<span id="L197" data-line="197">global context, universal completeness or domain authority inferred from</span>
+<span id="L198" data-line="198">adopting the member.</span>
+<span id="L199" data-line="199"></span>
+<span id="L200" data-line="200">Consumers of these rows, where an actor enters them (FOUNDATIONS §3</span>
+<span id="L201" data-line="201">Foundation to law, Consumers), one list per row, each consumer linked to</span>
+<span id="L202" data-line="202">its own locus:</span>
+<span id="L203" data-line="203"></span>
+<span id="L204" data-line="204">- Row 1, the engagement unit: [ACTIVATION §1](ACTIVATION.md#1-the-step); [EXECUTIVE_BASELINE §5 Engagement frame](EXECUTIVE_BASELINE.md#engagement-frame) and the [EXECUTIVE_BASELINE family table](EXECUTIVE_BASELINE.md#foundation-to-law), whose rows import F1; [ASSURANCE §7 Terms](ASSURANCE.md#terms).</span>
+<span id="L205" data-line="205">- Row 2, atomic at engagement altitude: no separate consumer applies. The distinction binds the frame declarations that §4 and §13 of this member govern; the semantic-contraction law the choice column leaves to an adopting method, such as [DESIGN_MODULE §6 Prime law](DESIGN_MODULE.md#6-prime-law), is that method&#x27;s own rule and applies no row here.</span>
+<span id="L206" data-line="206">- Row 3, scope: [PRODUCT_DEFINITION §10](PRODUCT_DEFINITION.md#10-semantic-resolution-conformance-cases), whose `Frame` case keeps a same-spelled runtime carrier outside this context.</span>
+<span id="L207" data-line="207">- Row 4, imports: no separate consumer applies. The declaration binds this member alone; its rule is [FOUNDATIONS §2 Imports between members](FOUNDATIONS.md#imports-between-members), traced in family F12, and the sections of this member use the imported concepts under it.</span>
+<span id="L208" data-line="208">- Row 5, the frame as a finite specification: [ACTIVATION §1 Configuration](ACTIVATION.md#configuration), for the active frame configuration; the other objects the row names are used by this member&#x27;s own sections, which the rows below trace.</span>
+<span id="L209" data-line="209">- Row 6, evaluation relativity: [Revision actions](#revision-actions), through question 1 of the diagnostic order; the [EXECUTIVE_BASELINE family table](EXECUTIVE_BASELINE.md#foundation-to-law), whose row for specialist frames applies the declaration requirement.</span>
+<span id="L210" data-line="210">- Row 7, finite attention and the size measurement: [ACTIVATION §1](ACTIVATION.md#1-the-step); [CONFORMANCE §2](CONFORMANCE.md#2-construction-trials); [SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding); [EVALUATION §7 Frame qualification](EVALUATION.md#frame-qualification); [EXECUTIVE_BASELINE §6 The three duties](EXECUTIVE_BASELINE.md#the-three-duties).</span>
+<span id="L211" data-line="211">- Row 8, material sufficiency: [IDENTITY Boundaries and sufficiency claims](IDENTITY.md#boundaries-and-sufficiency-claims); [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminator 26.</span>
+<span id="L212" data-line="212">- Row 9, irrelevance exclusion: [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminator 26; otherwise no separate consumer applies, because exclusion is performed inside the context construction the row names.</span>
+<span id="L213" data-line="213">- Row 10, exact basis and coordinates: [AXIOMATIC_CALCULUS AC-006](AXIOMATIC_CALCULUS.md#ac-006-basis-coherence); [EVALUATION §2](EVALUATION.md#2-separation); [FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results); [ACTIVATION §3 Admission and activation](ACTIVATION.md#admission-and-activation); [EXECUTIVE_BASELINE Drift locks](EXECUTIVE_BASELINE.md#drift-locks) and [Refinement and conjunction](EXECUTIVE_BASELINE.md#refinement-and-conjunction); [Revision actions](#revision-actions); [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminators 21 and 24.</span>
+<span id="L214" data-line="214">- Row 11, authority conservation: [AXIOMATIC_CALCULUS AC-005](AXIOMATIC_CALCULUS.md#ac-005-authority-conservation) and [Latitude](AXIOMATIC_CALCULUS.md#latitude); [IDENTITY §6](IDENTITY.md#6-authority-identity-and-conservation-stdo-up-004); [ACTIVATION §1 Admission](ACTIVATION.md#admission), [Configuration](ACTIVATION.md#configuration) and [Roles and delegation](ACTIVATION.md#roles-and-delegation), [§2](ACTIVATION.md#2-context-construction-under-an-envelope) Acquisition and [§6](ACTIVATION.md#6-cost-and-proportionality); [EVALUATION §3](EVALUATION.md#3-independent-assessment) and [§5](EVALUATION.md#5-acceptance); [EXECUTIVE_BASELINE §16 Existing authority selects the configuration](EXECUTIVE_BASELINE.md#existing-authority-selects-the-configuration); [SPEC_METHOD §4 Computed classification and treatment](SPEC_METHOD.md#computed-classification-and-treatment); [DESIGN_MODULE Authority model](DESIGN_MODULE.md#authority-model), [Capability and foundation selection](DESIGN_MODULE.md#capability-and-foundation-selection-up-023), [Transformation admission completeness](DESIGN_MODULE.md#transformation-admission-completeness-up-016) and [Computational realisation projection](DESIGN_MODULE.md#computational-realisation-projection-up-019); [RF-009](#rf-009-no-assumed-hierarchy).</span>
+<span id="L215" data-line="215">- Row 12, semantic, evidence and verdict separation: [EVALUATION §2](EVALUATION.md#2-separation) and [§4 Result and triage projection](EVALUATION.md#result-and-triage-projection); [EXECUTIVE_BASELINE Attention cycle](EXECUTIVE_BASELINE.md#attention-cycle).</span>
+<span id="L216" data-line="216">- Row 13, overlap without identity collapse: [EXECUTIVE_BASELINE §7](EXECUTIVE_BASELINE.md#7-non-hierarchical-frame-configuration), [Generic specialist-frame family](EXECUTIVE_BASELINE.md#generic-specialist-frame-family) and [§11](EXECUTIVE_BASELINE.md#11-derived-generic-specialist-frame-set).</span>
+<span id="L217" data-line="217">- Row 14, no assumed hierarchy: [ACTIVATION §1 Configuration](ACTIVATION.md#configuration); [EXECUTIVE_BASELINE §7](EXECUTIVE_BASELINE.md#7-non-hierarchical-frame-configuration) and [§11](EXECUTIVE_BASELINE.md#11-derived-generic-specialist-frame-set).</span>
+<span id="L218" data-line="218">- Row 15, disjointness and independence: [EXECUTIVE_BASELINE §7](EXECUTIVE_BASELINE.md#7-non-hierarchical-frame-configuration), which keeps evaluation independence and assurance independence apart from frame topology; the conditions of assurance independence are [EVALUATION §3](EVALUATION.md#3-independent-assessment)&#x27;s, as the choice column states.</span>
+<span id="L219" data-line="219">- Row 16, composition on demand: [FOUNDATIONS §4](FOUNDATIONS.md#4-algebra), Composition; [SPEC_METHOD §4 Universal intake triage](SPEC_METHOD.md#universal-intake-triage); [ASSURANCE §7 The set](ASSURANCE.md#the-set) and [§10](ASSURANCE.md#10-testing-evidence-composition).</span>
+<span id="L220" data-line="220">- Row 17, translation: [EXECUTIVE_BASELINE Refinement and conjunction](EXECUTIVE_BASELINE.md#refinement-and-conjunction) and [§13 Handoff projection](EXECUTIVE_BASELINE.md#13-handoff-projection); [ASSURANCE §7 The set](ASSURANCE.md#the-set), [§10](ASSURANCE.md#10-testing-evidence-composition) and [§13 Obligations](ASSURANCE.md#obligations).</span>
+<span id="L221" data-line="221">- Row 18, topology mutation and recharting: [ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse), which applies Revision actions for the revision coordinate and owns the reuse rule the row names; [ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement), Reconfiguration; [Coverage basis](#coverage-basis); [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminator 36.</span>
+<span id="L222" data-line="222">- Row 19, reconstructable activation and the packet: [ACTIVATION §1](ACTIVATION.md#1-the-step) and [§2](ACTIVATION.md#2-context-construction-under-an-envelope), Activation; [EVALUATION §7 Frame qualification](EVALUATION.md#frame-qualification) and [Method self-qualification](EVALUATION.md#method-self-qualification); [EXECUTIVE_BASELINE §12 step 2](EXECUTIVE_BASELINE.md#2-executive-activates-worker), [§13 Handoff projection](EXECUTIVE_BASELINE.md#13-handoff-projection) and [§19 Activation additions](EXECUTIVE_BASELINE.md#activation-additions); [PRODUCT_DEFINITION §7](PRODUCT_DEFINITION.md#7-collective-reference-frame-basis); [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminators 37 and 50.</span>
+<span id="L223" data-line="223">- Row 20, capability fit: [EVALUATION §7 Frame qualification](EVALUATION.md#frame-qualification); [EXECUTIVE_BASELINE §4](EXECUTIVE_BASELINE.md#4-empirical-revision-boundary); [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminator 25.</span>
+<span id="L224" data-line="224">- Row 21, proportional compression: no separate consumer applies. The compressing step of ACTIVATION §2, which the row names, records the compression and its preservation argument; whether that claim is assessed independently belongs to the promotion it serves ([EVALUATION §3](EVALUATION.md#3-independent-assessment)), as the choice column states.</span>
+<span id="L225" data-line="225">- Row 22, residual uncertainty: [ACTIVATION §1 Transitions](ACTIVATION.md#transitions); [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminator 29.</span>
+<span id="L226" data-line="226">- Row 23, implementation neutrality and the minimal declarations: [ACTIVATION §1 Configuration](ACTIVATION.md#configuration) and [Roles and delegation](ACTIVATION.md#roles-and-delegation), and [§7](ACTIVATION.md#7-closed-result-and-reuse), for the minimal shape of a closed result; [EXECUTIVE_BASELINE Specialist frame](EXECUTIVE_BASELINE.md#specialist-frame), [Executive](EXECUTIVE_BASELINE.md#executive), [Attention cycle](EXECUTIVE_BASELINE.md#attention-cycle), [§7](EXECUTIVE_BASELINE.md#7-non-hierarchical-frame-configuration), [§11](EXECUTIVE_BASELINE.md#11-derived-generic-specialist-frame-set) and [§17](EXECUTIVE_BASELINE.md#17-actor-binding-and-independence); [ASSURANCE §7 The set](ASSURANCE.md#the-set).</span>
+<span id="L227" data-line="227">- Row 24, frame-set declaration: [EXECUTIVE_BASELINE §16 Define a project configuration](EXECUTIVE_BASELINE.md#define-a-project-configuration).</span>
+<span id="L228" data-line="228">- Row 25, frame-set selection: [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) and [§6 Resource limits](ACTIVATION.md#resource-limits).</span>
+<span id="L229" data-line="229">- Row 26, outcomes and coverage statuses: [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) and [§3 Admission and activation](ACTIVATION.md#admission-and-activation); [EXECUTIVE_BASELINE Work result](EXECUTIVE_BASELINE.md#work-result), [Drift locks](EXECUTIVE_BASELINE.md#drift-locks), [Refinement and conjunction](EXECUTIVE_BASELINE.md#refinement-and-conjunction), [§12 step 2](EXECUTIVE_BASELINE.md#2-executive-activates-worker) and, for the coverage statuses, [§14](EXECUTIVE_BASELINE.md#14-coverage-application); [EVALUATION §7 Method self-qualification](EVALUATION.md#method-self-qualification).</span>
+<span id="L230" data-line="230">- Row 27, coverage basis, inventory, dimensions and ledger: [EXECUTIVE_BASELINE §14](EXECUTIVE_BASELINE.md#14-coverage-application).</span>
+<span id="L231" data-line="231">- Row 28, interaction and authority coverage: [ASSURANCE §8](ASSURANCE.md#8-combinatorial-coverage-and-testing-value); [EXECUTIVE_BASELINE §14](EXECUTIVE_BASELINE.md#14-coverage-application).</span>
+<span id="L232" data-line="232">- Row 29, failure coverage: [ASSURANCE §8](ASSURANCE.md#8-combinatorial-coverage-and-testing-value).</span>
+<span id="L233" data-line="233">- Row 30, high-risk separately activated coverage: no separate consumer applies. Which evaluations require it is human authority&#x27;s choice, recorded in the frame-set declaration of §4 and audited under §8; a profile that activates a separate assessor, such as EXECUTIVE_BASELINE §10 and §17, does so under the independence law of [EVALUATION §3](EVALUATION.md#3-independent-assessment) and names this section nowhere.</span>
+<span id="L234" data-line="234">- Row 31, operational full coverage: [EXECUTIVE_BASELINE §14](EXECUTIVE_BASELINE.md#14-coverage-application); [ASSURANCE §10](ASSURANCE.md#10-testing-evidence-composition), item 6.</span>
+<span id="L235" data-line="235">- Row 32, missing-frame signals and diagnostic order: [EXECUTIVE_BASELINE §4](EXECUTIVE_BASELINE.md#4-empirical-revision-boundary), [§14](EXECUTIVE_BASELINE.md#14-coverage-application), [§15](EXECUTIVE_BASELINE.md#15-missing-frame-and-re-entry-application) and [§20](EXECUTIVE_BASELINE.md#20-failure-classification); [Revision actions](#revision-actions).</span>
+<span id="L236" data-line="236">- Row 33, acquisition: [ACTIVATION §5 The workspace and an actor&#x27;s account](ACTIVATION.md#the-workspace-and-an-actors-account); [AXIOMATIC_CALCULUS Constraint surfaces](AXIOMATIC_CALCULUS.md#constraint-surfaces); [ODD §11.7A](ODD.md#117a-conforming-agentic-development) and [§20](ODD.md#20-canonical-compression), and the [ODD family table](ODD.md#foundation-to-law), whose row imports F1 for acquisition; [TICKETS §5](TICKETS.md#5-from-carrier-to-execution); [UX §7](UX.md#7-carrier-binding).</span>
+<span id="L237" data-line="237">- Row 34, activation: [§5 Method functions](#5-method-functions), where `activate` returns `out_of_frame` itself; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminator 37.</span>
+<span id="L238" data-line="238">- Row 35, standalone scope: [ODD §11.7A](ODD.md#117a-conforming-agentic-development) and [§20](ODD.md#20-canonical-compression); [AXIOMATIC_CALCULUS Constraint surfaces](AXIOMATIC_CALCULUS.md#constraint-surfaces); [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminator 50.</span>
+<span id="L239" data-line="239">- Row 36, prompt construction: [DESIGN_MODULE §11](DESIGN_MODULE.md#11-review); [TICKETS §5](TICKETS.md#5-from-carrier-to-execution); [UX §7](UX.md#7-carrier-binding).</span>
+<span id="L240" data-line="240"></span>
+<span id="L241" data-line="241">Each consumer applies the rule and decides nothing the owning section does</span>
+<span id="L242" data-line="242">not (P2, P6).</span>
+<span id="L243" data-line="243"></span>
+<span id="L244" data-line="244">## 2. Core claims</span>
+<span id="L245" data-line="245"></span>
+<span id="L246" data-line="246">Ten claims that the laws of §3 make precise:</span>
+<span id="L247" data-line="247"></span>
+<span id="L248" data-line="248">1. No finite actor is presumed to hold the complete material workspace in</span>
+<span id="L249" data-line="249">   active attention (P0).</span>
+<span id="L250" data-line="250">2. A useful frame is finite and sufficient for a declared evaluation family</span>
+<span id="L251" data-line="251">   (P0, P2).</span>
+<span id="L252" data-line="252">3. The evaluations to be made determine the material attention surface</span>
+<span id="L253" data-line="253">   (P2).</span>
+<span id="L254" data-line="254">4. Human authority may declare a practical project frame set from</span>
+<span id="L255" data-line="255">   accumulated practice without deriving a unique frame partition</span>
+<span id="L256" data-line="256">   mechanically (P6).</span>
+<span id="L257" data-line="257">5. Frames may overlap, compose, refine, restrict, translate or succeed one</span>
+<span id="L258" data-line="258">   another; hierarchy is one optional relation among these (P3).</span>
+<span id="L259" data-line="259">6. Several frames may be used together without composing their internal</span>
+<span id="L260" data-line="260">   coordinate systems (P4a).</span>
+<span id="L261" data-line="261">7. Coverage is relative to a declared workspace, governed outcome,</span>
+<span id="L262" data-line="262">   evaluation inventory, basis and time (P3, P6).</span>
+<span id="L263" data-line="263">8. A frame selection or a frame result acquires no semantic, operation or</span>
+<span id="L264" data-line="264">   decision authority from its breadth, usefulness, actor or</span>
+<span id="L265" data-line="265">   implementation technology (P6).</span>
+<span id="L266" data-line="266">9. Unknown and out-of-frame results are lawful pressure for</span>
+<span id="L267" data-line="267">   reconfiguration; they are neither failed evaluations nor implied</span>
+<span id="L268" data-line="268">   acceptance (P5).</span>
+<span id="L269" data-line="269">10. Historical failures, resets and invisible violations are evidence for</span>
+<span id="L270" data-line="270">    improving a frame declaration, an activation, an actor assignment or a</span>
+<span id="L271" data-line="271">    frame set (P4b, P6).</span>
+<span id="L272" data-line="272"></span>
+<span id="L273" data-line="273">## 3. Laws</span>
+<span id="L274" data-line="274"></span>
+<span id="L275" data-line="275">Every frame, declared or activated, obeys the following. The objects named</span>
+<span id="L276" data-line="276">are defined in FOUNDATIONS §2.</span>
+<span id="L277" data-line="277"></span>
+<span id="L278" data-line="278">### RF-001 Evaluation relativity</span>
+<span id="L279" data-line="279"></span>
+<span id="L280" data-line="280">Every frame declares the evaluation family it supports. A frame with no</span>
+<span id="L281" data-line="281">declared evaluation family has no testable sufficiency boundary (P2).</span>
+<span id="L282" data-line="282"></span>
+<span id="L283" data-line="283">### RF-002 Finite attention</span>
+<span id="L284" data-line="284"></span>
+<span id="L285" data-line="285">An activated frame contains a finite attention surface that fits the</span>
+<span id="L286" data-line="286">selected actor&#x27;s declared capability envelope. A frame that needs</span>
+<span id="L287" data-line="287">undeclared ambient memory, conversation history or an effectively global</span>
+<span id="L288" data-line="288">workspace context is not reconstructable for that actor (P0). The fit is tested in</span>
+<span id="L289" data-line="289">[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope),</span>
+<span id="L290" data-line="290">which owns the measurement of the context&#x27;s size and when it applies.</span>
+<span id="L291" data-line="291">Whether the actor attends adequately to a frame that fits is a separate</span>
+<span id="L292" data-line="292">question, answered by actual-use evidence under</span>
+<span id="L293" data-line="293">[EVALUATION §7](EVALUATION.md#frame-qualification); a size measurement</span>
+<span id="L294" data-line="294">does not answer it (P0, P6).</span>
+<span id="L295" data-line="295"></span>
+<span id="L296" data-line="296">### RF-003 Material sufficiency</span>
+<span id="L297" data-line="297"></span>
+<span id="L298" data-line="298">Every known relation whose lawful change can alter the evaluation result,</span>
+<span id="L299" data-line="299">the validity of the basis, the sufficiency of evidence, operation authority</span>
+<span id="L300" data-line="300">or decision authority appears in the frame or enters through a declared</span>
+<span id="L301" data-line="301">authoritative input. Omitting a material relation makes the frame</span>
+<span id="L302" data-line="302">insufficient. The law does not require proving that no undiscovered</span>
+<span id="L303" data-line="303">material relation exists (P2; P0 with the open-world premise).</span>
+<span id="L304" data-line="304"></span>
+<span id="L305" data-line="305">### RF-004 Irrelevance exclusion</span>
+<span id="L306" data-line="306"></span>
+<span id="L307" data-line="307">Relations that cannot affect the declared evaluation stay outside active</span>
+<span id="L308" data-line="308">attention unless they are needed to establish that irrelevance. A frame</span>
+<span id="L309" data-line="309">does not expand because adjacent workspace material exists (P2).</span>
+<span id="L310" data-line="310"></span>
+<span id="L311" data-line="311">### RF-005 Exact basis and coordinates</span>
+<span id="L312" data-line="312"></span>
+<span id="L313" data-line="313">Every result binds its exact subject, basis, coordinates and evidence</span>
+<span id="L314" data-line="314">scope. An evaluation performed on a stale, advanced, ambiguous or mismatched</span>
+<span id="L315" data-line="315">basis that cannot support its required claim returns `invalid_basis` or</span>
+<span id="L316" data-line="316">requires reactivation. Apparent equality never substitutes for declared</span>
+<span id="L317" data-line="317">coordinate equality (P3, P1).</span>
+<span id="L318" data-line="318"></span>
+<span id="L319" data-line="319">Advancement does not rewrite a historical result. Reliance on the new</span>
+<span id="L320" data-line="320">subject or basis requires an established applicability relation, and</span>
+<span id="L321" data-line="321">reliance affected by the change is withdrawn until that relation is</span>
+<span id="L322" data-line="322">established. [FOUNDATIONS Change impact and evidence reuse](FOUNDATIONS.md#change-impact-and-evidence-reuse)</span>
+<span id="L323" data-line="323">and [ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse) own that decision;</span>
+<span id="L324" data-line="324">this law supplies no blanket prohibition on reusing applicable evidence.</span>
+<span id="L325" data-line="325"></span>
+<span id="L326" data-line="326">### RF-006 Authority conservation</span>
+<span id="L327" data-line="327"></span>
+<span id="L328" data-line="328">A frame carries and applies admitted authority. It does not mint, widen,</span>
+<span id="L329" data-line="329">transfer or reconstruct semantic, evaluation, operation or decision</span>
+<span id="L330" data-line="330">authority from anything that creates none. That list is</span>
+<span id="L331" data-line="331">[FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds)&#x27;; its</span>
+<span id="L332" data-line="332">instances in a frame include actor identity, available capability,</span>
+<span id="L333" data-line="333">evidence shape, implementation reachability and frame selection (P6).</span>
+<span id="L334" data-line="334"></span>
+<span id="L335" data-line="335">### RF-007 Semantic, evidence and verdict separation</span>
+<span id="L336" data-line="336"></span>
+<span id="L337" data-line="337">The separation of semantic law, evidence, the evaluator&#x27;s application</span>
+<span id="L338" data-line="338">and the disposing decision authority is</span>
+<span id="L339" data-line="339">[EVALUATION §2](EVALUATION.md#2-separation)&#x27;s. This law binds it to a</span>
+<span id="L340" data-line="340">frame: a frame declaration keeps these roles distinguishable even when</span>
+<span id="L341" data-line="341">one actor lawfully performs several of them, and where the evaluation</span>
+<span id="L342" data-line="342">performs a material operation, the existing operation owner supplies the</span>
+<span id="L343" data-line="343">exact grant as a further role the declaration keeps apart (P6).</span>
+<span id="L344" data-line="344"></span>
+<span id="L345" data-line="345">### RF-008 Overlap without identity collapse</span>
+<span id="L346" data-line="346"></span>
+<span id="L347" data-line="347">Frames may share entities, variables, evidence or coordinates. Shared</span>
+<span id="L348" data-line="348">material establishes neither identical meaning nor identical basis,</span>
+<span id="L349" data-line="349">authority or result. Every cross-frame equality or translation an</span>
+<span id="L350" data-line="350">evaluation uses is declared where it is used (P1, P3).</span>
+<span id="L351" data-line="351"></span>
+<span id="L352" data-line="352">### RF-009 No assumed hierarchy</span>
+<span id="L353" data-line="353"></span>
+<span id="L354" data-line="354">Frames may relate through disjointness, overlap, refinement, restriction,</span>
+<span id="L355" data-line="355">translation, temporal succession, composition or governance (§7). Parent</span>
+<span id="L356" data-line="356">and child relations apply only where explicitly declared. Functional</span>
+<span id="L357" data-line="357">decomposition, communication, authority precedence, frame configuration,</span>
+<span id="L358" data-line="358">subject topology and evaluation dependency are distinct relation</span>
+<span id="L359" data-line="359">structures; a consumer may align them where the governed subject warrants</span>
+<span id="L360" data-line="360">it and may not silently treat them as one hierarchy (P3, P1). Communication is the exchange of</span>
+<span id="L361" data-line="361">information between frames, or between the actors activated on them. An</span>
+<span id="L362" data-line="362">exchange by itself grants no authority, an instance of</span>
+<span id="L363" data-line="363">[FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds), What</span>
+<span id="L364" data-line="364">creates no authority, and establishes neither a decomposition nor an</span>
+<span id="L365" data-line="365">evaluation dependency (P6, P1). Purpose and material relation: a configuration assigns</span>
+<span id="L366" data-line="366">information exchanges as well as responsibilities</span>
+<span id="L367" data-line="367">([ACTIVATION §1](ACTIVATION.md#configuration)), and an exchange read as a</span>
+<span id="L368" data-line="368">grant or as a dependency would move authority or change a result without a</span>
+<span id="L369" data-line="369">declared relation.</span>
+<span id="L370" data-line="370"></span>
+<span id="L371" data-line="371">### RF-010 Composition on demand</span>
+<span id="L372" data-line="372"></span>
+<span id="L373" data-line="373">Using several frames does not require composing their internal manifolds.</span>
+<span id="L374" data-line="374">Composition law is required only when the governing evaluation combines</span>
+<span id="L375" data-line="375">their internal variables, transports evidence or values across them, or</span>
+<span id="L376" data-line="376">treats their operations as one material execution relation. Independently</span>
+<span id="L377" data-line="377">activated evaluations may instead return closed results to one declared</span>
+<span id="L378" data-line="378">conjunction or decision rule (P4a; §6).</span>
+<span id="L379" data-line="379"></span>
+<span id="L380" data-line="380">### RF-011 Topology mutation and recharting</span>
+<span id="L381" data-line="381"></span>
+<span id="L382" data-line="382">An activated frame declares the topology changes capable of invalidating</span>
+<span id="L383" data-line="383">its coordinates or its materiality judgment. A detected material topology</span>
+<span id="L384" data-line="384">mutation causes reevaluation, frame revision or recharting before the</span>
+<span id="L385" data-line="385">previous result is reused. Material revision of the frame itself</span>
+<span id="L386" data-line="386">invalidates for reuse every result bound to the prior revision coordinate;</span>
+<span id="L387" data-line="387">§10 Revision actions states that rule (P3, P4b).</span>
+<span id="L388" data-line="388"></span>
+<span id="L389" data-line="389">### RF-012 Closed results</span>
+<span id="L390" data-line="390"></span>
+<span id="L391" data-line="391">Every performed evaluation of a frame returns one closed result in the</span>
+<span id="L392" data-line="392">frame&#x27;s declared result algebra: the core algebra of</span>
+<span id="L393" data-line="393">[FOUNDATIONS §4 Results](FOUNDATIONS.md#results), or a refinement mapped</span>
+<span id="L394" data-line="394">into it under that section. That section owns the five core values</span>
+<span id="L395" data-line="395">(`satisfied`, `falsified`, `indeterminate`, `out_of_frame` and</span>
+<span id="L396" data-line="396">`invalid_basis`), their meanings and the rules over them: that nothing is</span>
+<span id="L397" data-line="397">coerced to success; that a refinement adds no core value, keeps</span>
+<span id="L398" data-line="398">indeterminate, out-of-frame and invalid-basis pressure explicit and raises</span>
+<span id="L399" data-line="399">no result&#x27;s standing; and that an evaluation not performed has no result,</span>
+<span id="L400" data-line="400">its stop state being</span>
+<span id="L401" data-line="401">[ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition). This law</span>
+<span id="L402" data-line="402">applies them to every frame and defines none of them (P5).</span>
+<span id="L403" data-line="403"></span>
+<span id="L404" data-line="404">### RF-013 Reconstructable activation</span>
+<span id="L405" data-line="405"></span>
+<span id="L406" data-line="406">A fresh competent actor inside the declared capability envelope can</span>
+<span id="L407" data-line="407">reconstruct the activated evaluation from the frame declaration, the exact</span>
+<span id="L408" data-line="408">subject, the basis and the admissible inputs, without undocumented</span>
+<span id="L409" data-line="409">conversational or historical context (P0 with the actor-change premise).</span>
+<span id="L410" data-line="410"></span>
+<span id="L411" data-line="411">### RF-014 Capability fit</span>
+<span id="L412" data-line="412"></span>
+<span id="L413" data-line="413">Frame adequacy includes actor usability. When the material manifold</span>
+<span id="L414" data-line="414">exceeds an actor&#x27;s capability envelope, the remedies are those of</span>
+<span id="L415" data-line="415">[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope)</span>
+<span id="L416" data-line="416">step 3, which owns the list: among them selecting another actor, refining</span>
+<span id="L417" data-line="417">the frame into steps, sequencing activations and a lawful compression</span>
+<span id="L418" data-line="418">(RF-017). Choosing among them is human authority&#x27;s, exercised directly or</span>
+<span id="L419" data-line="419">in advance through the grant; ACTIVATION §2 says which of them a step</span>
+<span id="L420" data-line="420">selects itself and which re-enter the grant&#x27;s owner. The actor may not</span>
+<span id="L421" data-line="421">silently omit material relations to fit its context (P0, P5).</span>
+<span id="L422" data-line="422"></span>
+<span id="L423" data-line="423">### RF-015 Residual uncertainty</span>
+<span id="L424" data-line="424"></span>
+<span id="L425" data-line="425">Coverage and evaluation results retain known uncertainty. Unresolved</span>
+<span id="L426" data-line="426">relations, uncovered evaluations, contested evidence and unknown capability</span>
+<span id="L427" data-line="427">stay explicit. Absence of a recorded counterexample is not evidence of</span>
+<span id="L428" data-line="428">universal completeness (P4b, P6; open-world premise).</span>
+<span id="L429" data-line="429"></span>
+<span id="L430" data-line="430">### RF-016 Implementation neutrality</span>
+<span id="L431" data-line="431"></span>
+<span id="L432" data-line="432">This member requires the declared relations and the observable outcomes.</span>
+<span id="L433" data-line="433">It requires no frame runtime, universal carrier, registry, controller,</span>
+<span id="L434" data-line="434">prompt format, repository layout, collaboration topology, worker count or</span>
+<span id="L435" data-line="435">software framework (P2).</span>
+<span id="L436" data-line="436"></span>
+<span id="L437" data-line="437">### RF-017 Proportional compression</span>
+<span id="L438" data-line="438"></span>
+<span id="L439" data-line="439">A frame compresses accumulated practice when its declaration preserves the</span>
+<span id="L440" data-line="440">material distinctions and failure detections its evaluation family requires</span>
+<span id="L441" data-line="441">while fitting its capability envelope. Compression does not require a</span>
+<span id="L442" data-line="442">unique smallest frame. Intentional overlap is retained where it supplies</span>
+<span id="L443" data-line="443">independently activated evaluation, different capability fit, different</span>
+<span id="L444" data-line="444">evidence altitude or useful fault detection. Frames are merged only when</span>
+<span id="L445" data-line="445">the merged frame preserves evaluation meaning, authority, capability fit</span>
+<span id="L446" data-line="446">and proportional reasoning cost (P2, P0).</span>
+<span id="L447" data-line="447"></span>
+<span id="L448" data-line="448">### Engagement atom and semantic atom</span>
+<span id="L449" data-line="449"></span>
+<span id="L450" data-line="450">A reference frame is atomic at engagement altitude: it is activated and</span>
+<span id="L451" data-line="451">evaluated as one bounded attention unit. Semantic irreducibility is a</span>
+<span id="L452" data-line="452">separate question: one frame may contain several semantic atoms, and one</span>
+<span id="L453" data-line="453">semantic atom may take part in several frames (P1, P3). Where an adopting</span>
+<span id="L454" data-line="454">method supplies a semantic-contraction law for its domain atoms, that law</span>
+<span id="L455" data-line="455">governs the domain atom family. Frame-set contraction asks a different</span>
+<span id="L456" data-line="456">question: whether two frame declarations support the same evaluation</span>
+<span id="L457" data-line="457">relation without material difference in evidence, authority, capability</span>
+<span id="L458" data-line="458">fit, evaluation or assurance independence, or failure detection. A frame</span>
+<span id="L459" data-line="459">set is not contracted to a disjoint minimum because its material variables</span>
+<span id="L460" data-line="460">overlap (P2; RF-017).</span>
+<span id="L461" data-line="461"></span>
+<span id="L462" data-line="462">## 4. Frame-set declaration</span>
+<span id="L463" data-line="463"></span>
+<span id="L464" data-line="464">Human authority may declare an initial project frame set from accumulated</span>
+<span id="L465" data-line="465">development practice, known failure modes, domain expertise, the governed</span>
+<span id="L466" data-line="466">outcome&#x27;s risk and knowledge of the available agents and other actors. The</span>
+<span id="L467" data-line="467">declaration need not reconstruct the set from the workspace bottom up (P6,</span>
+<span id="L468" data-line="468">P2). It records:</span>
+<span id="L469" data-line="469"></span>
+<span id="L470" data-line="470">- the governed workspace and outcome;</span>
+<span id="L471" data-line="471">- the known evaluation inventory;</span>
+<span id="L472" data-line="472">- the selected frames and their capability envelopes;</span>
+<span id="L473" data-line="473">- intentional overlaps and separately activated checks;</span>
+<span id="L474" data-line="474">- known frame dependencies or translations;</span>
+<span id="L475" data-line="475">- semantic, evaluation, operation where material, decision and acceptance</span>
+<span id="L476" data-line="476">  authority;</span>
+<span id="L477" data-line="477">- known exclusions and residual uncertainty; and</span>
+<span id="L478" data-line="478">- the conditions for revision.</span>
+<span id="L479" data-line="479"></span>
+<span id="L480" data-line="480">Human selection is a lawful source of method structure. It proves neither</span>
+<span id="L481" data-line="481">that the selected set is complete nor that the frames hold authority over</span>
+<span id="L482" data-line="482">the subject relations they inspect (P6; RF-006, RF-015).</span>
+<span id="L483" data-line="483"></span>
+<span id="L484" data-line="484">### Frame-set selection</span>
+<span id="L485" data-line="485"></span>
+<span id="L486" data-line="486">Frame-set selection is a constrained coverage problem. For the known</span>
+<span id="L487" data-line="487">material evaluations E(W, G) of workspace W and governed outcome G, a</span>
+<span id="L488" data-line="488">selected frame set S meets the baseline coverage constraint when, for every</span>
+<span id="L489" data-line="489">evaluation e in E(W, G), there is a frame F in S and an available actor a</span>
+<span id="L490" data-line="490">inside F&#x27;s capability envelope K_F such that F with a is capable of e (P2,</span>
+<span id="L491" data-line="491">P0). Selection also weighs actor context and</span>
+<span id="L492" data-line="492">competence; evaluation risk and consequence; acquisition and reasoning</span>
+<span id="L493" data-line="493">cost; evidence availability; useful independently activated overlap;</span>
+<span id="L494" data-line="494">translation and reconciliation cost; historical blind spots; and</span>
+<span id="L495" data-line="495">reversibility when the set proves inadequate. No optimisation algorithm is</span>
+<span id="L496" data-line="496">prescribed. Human authority may accept a non-minimal set where its added</span>
+<span id="L497" data-line="497">cost buys material risk reduction or better actor fit (P2, P6).</span>
+<span id="L498" data-line="498"></span>
+<span id="L499" data-line="499">These considerations create no universal resource ledger, benchmark,</span>
+<span id="L500" data-line="500">budget or measurement gate: cost is selected, not universal, under</span>
+<span id="L501" data-line="501">[ACTIVATION §6](ACTIVATION.md#6-cost-and-proportionality), which owns</span>
+<span id="L502" data-line="502">resource limits, and these four are its instances in frame selection. In</span>
+<span id="L503" data-line="503">frame selection a resource control applies only through an explicitly</span>
+<span id="L504" data-line="504">selected frame and its owning applicability and work scope; ACTIVATION §6</span>
+<span id="L505" data-line="505">is that selection where a cost claim is the governed question. The test</span>
+<span id="L506" data-line="506">that an activated frame&#x27;s context fits the selected actor is RF-002&#x27;s,</span>
+<span id="L507" data-line="507">distinct from the actor context that selection weighs, and</span>
+<span id="L508" data-line="508">[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope)</span>
+<span id="L509" data-line="509">owns its measurement and when the measurement applies. Frame selection</span>
+<span id="L510" data-line="510">cannot waive another applicable semantic, authority, evidence or</span>
+<span id="L511" data-line="511">independence constraint (P2, P6).</span>
+<span id="L512" data-line="512"></span>
+<span id="L513" data-line="513">## 5. Method functions</span>
+<span id="L514" data-line="514"></span>
+<span id="L515" data-line="515">The frame and the functions over it remain distinct. An application may</span>
+<span id="L516" data-line="516">realise the following relations in any conforming form; the signatures</span>
+<span id="L517" data-line="517">describe relations, not callable software interfaces (P2; RF-016):</span>
+<span id="L518" data-line="518"></span>
+<span id="L519" data-line="519">```text</span>
+<span id="L520" data-line="520">declare(human_authority, workspace, outcome, practices, capabilities)</span>
+<span id="L521" data-line="521">  -&gt; frame_set</span>
+<span id="L522" data-line="522"></span>
+<span id="L523" data-line="523">activate(frame, evaluation, subject, basis, actor)</span>
+<span id="L524" data-line="524">  -&gt; activated_frame | activation_refusal</span>
+<span id="L525" data-line="525"></span>
+<span id="L526" data-line="526">evaluate(activated_frame, admissible_evidence)</span>
+<span id="L527" data-line="527">  -&gt; result + evidence + residuals</span>
+<span id="L528" data-line="528"></span>
+<span id="L529" data-line="529">conjoin(decision_rule, frame_results)</span>
+<span id="L530" data-line="530">  -&gt; decision | conflict | indeterminate</span>
+<span id="L531" data-line="531"></span>
+<span id="L532" data-line="532">translate(source_frame, target_frame, value_or_evidence, mapping)</span>
+<span id="L533" data-line="533">  -&gt; translated_value | declared_loss | refusal</span>
+<span id="L534" data-line="534"></span>
+<span id="L535" data-line="535">audit_coverage(workspace, outcome, evaluation_inventory, frame_set)</span>
+<span id="L536" data-line="536">  -&gt; coverage_ledger</span>
+<span id="L537" data-line="537"></span>
+<span id="L538" data-line="538">revise(frame_set, new_evidence, failures, capability_change, topology_change)</span>
+<span id="L539" data-line="539">  -&gt; proposed_frame_set_delta</span>
+<span id="L540" data-line="540">```</span>
+<span id="L541" data-line="541"></span>
+<span id="L542" data-line="542">`declare` is §4; `activate` and `evaluate` are ACTIVATION §1 and §2;</span>
+<span id="L543" data-line="543">`evaluate` returns its result under RF-012, and the closed result is</span>
+<span id="L544" data-line="544">returned and reused under ACTIVATION §7; `conjoin` and `translate` are §6;</span>
+<span id="L545" data-line="545">`audit_coverage` is §8, which maps the statuses of its ledger to the core;</span>
+<span id="L546" data-line="546">`revise` is §10. EVALUATION §7 qualifies each.</span>
+<span id="L547" data-line="547"></span>
+<span id="L548" data-line="548">The outcomes of `activate`, `conjoin` and `translate` form a refinement of</span>
+<span id="L549" data-line="549">the core algebra, stated under the refinement rule of</span>
+<span id="L550" data-line="550">[FOUNDATIONS §4 Results](FOUNDATIONS.md#results): each outcome below maps</span>
+<span id="L551" data-line="551">to exactly one core value for the predicate its function names, the value</span>
+<span id="L552" data-line="552">travels with that predicate and with the outcome, whose meaning stays here,</span>
+<span id="L553" data-line="553">and an outcome named in the signatures above that would map to more than</span>
+<span id="L554" data-line="554">one core value according to its cause carries the cause in its name, as in</span>
+<span id="L555" data-line="555">`activation_refusal(basis)` (P5, P6). Purpose and material relation: a consumer that combines these</span>
+<span id="L556" data-line="556">outcomes with other results reads them in the one core, so a refusal, a</span>
+<span id="L557" data-line="557">conflict or a loss outside the accepted loss is neither mistaken for</span>
+<span id="L558" data-line="558">success nor merged with an evaluation that was not performed.</span>
+<span id="L559" data-line="559"></span>
+<span id="L560" data-line="560">| Function and predicate | Outcome | Cause | Core value |</span>
+<span id="L561" data-line="561">|---|---|---|---|</span>
+<span id="L562" data-line="562">| `activate`: the frame is activated for this evaluation, subject, basis and actor | `activated_frame` | the frame declaration is bound to the exact evaluation, subject, basis and actor | `satisfied` |</span>
+<span id="L563" data-line="563">| | `activation_refusal(capability)` | the frame declares a capability the evaluation needs, and the selected actor&#x27;s declared envelope lacks it; the refusal names that capability and its owner where the subject gives one | `out_of_frame` |</span>
+<span id="L564" data-line="564">| | `activation_refusal(authority)` | the activation needs semantic, evaluation, operation or decision authority that is not admitted to it; the refusal names that authority&#x27;s owner | `out_of_frame` |</span>
+<span id="L565" data-line="565">| | `activation_refusal(basis)` | the subject or basis is stale, advanced, ambiguous or mismatched (RF-005), a topology mismatch included: the subject&#x27;s topology is not the topology basis the frame declares (RF-011) | `invalid_basis` |</span>
+<span id="L566" data-line="566">| `conjoin`: the composite predicate holds under the declared decision rule | `decision(holds)` | the conjunction of FOUNDATIONS §4 reports `satisfied` | `satisfied` |</span>
+<span id="L567" data-line="567">| | `decision(fails)` | the conjunction reports `falsified`, and no mandatory result for the same claim is `satisfied` | `falsified` |</span>
+<span id="L568" data-line="568">| | `conflict` | the conjunction reports `falsified` while mandatory results for the same claim disagree, one `satisfied` and another `falsified`; the counterexample survives the join, and the disagreement stays unresolved for the decision authority | `falsified` |</span>
+<span id="L569" data-line="569">| | `indeterminate` | the conjunction reports `indeterminate` | `indeterminate` |</span>
+<span id="L570" data-line="570">| `translate`: the value or evidence enters the target frame as the declared translation states | `translated_value` | the value or evidence is carried into the target coordinates with its declared meaning | `satisfied` |</span>
+<span id="L571" data-line="571">| | `declared_loss` | the value or evidence is carried with a loss inside the declared accepted loss; the loss travels with it as a residual (P4b) | `satisfied` |</span>
+<span id="L572" data-line="572">| | `refusal(condition)` | a refusal condition the translation declares holds, a loss outside the accepted loss included; or the value or evidence fails identity or equality under the translation&#x27;s declared equality law | `falsified` |</span>
+<span id="L573" data-line="573">| | `refusal(authority)` | an authority mismatch the translation does not declare: the value or evidence carries semantic, evaluation, operation or decision authority whose relation to the target frame&#x27;s authority the translation states neither as preserved nor as a refusal condition; the refusal names that authority&#x27;s owner | `out_of_frame` |</span>
+<span id="L574" data-line="574">| | `refusal(basis)` | the source value or evidence binds a stale, advanced, ambiguous or mismatched basis or coordinate (RF-005) | `invalid_basis` |</span>
+<span id="L575" data-line="575"></span>
+<span id="L576" data-line="576">Where no frame the actor can use declares a material relation or</span>
+<span id="L577" data-line="577">capability the evaluation needs, `activate` returns `out_of_frame` itself</span>
+<span id="L578" data-line="578">([ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope),</span>
+<span id="L579" data-line="579">Activation). Where the conjunction reports `out_of_frame` or</span>
+<span id="L580" data-line="580">`invalid_basis`, `conjoin` returns that value; the signatures name no</span>
+<span id="L581" data-line="581">outcome for either case, and a basis mismatch is this returned</span>
+<span id="L582" data-line="582">`invalid_basis`, as EVALUATION §7 names it for `conjoin`. Under a</span>
+<span id="L583" data-line="583">declared veto or deferral, `conjoin` returns the outcome above whose cause</span>
+<span id="L584" data-line="584">holds for the value the conjunction reports</span>
+<span id="L585" data-line="585">([FOUNDATIONS §4](FOUNDATIONS.md#conjunction-of-results)), or that value</span>
+<span id="L586" data-line="586">itself where it is `out_of_frame` or `invalid_basis`. A planned</span>
+<span id="L587" data-line="587">assessment without a closed result, and required coverage that no planned</span>
+<span id="L588" data-line="588">assessment addresses, are no outcome of `conjoin`:</span>
+<span id="L589" data-line="589">[FOUNDATIONS §4](FOUNDATIONS.md#conjunction-of-results) records them</span>
+<span id="L590" data-line="590">beside the reported value, and they map to no core value. The outcomes of</span>
+<span id="L591" data-line="591">`activate` answer whether a frame was activated, never the</span>
+<span id="L592" data-line="592">evaluation&#x27;s claim: a refused activation performs no evaluation.</span>
+<span id="L593" data-line="593">`decision(holds)` assesses the composite predicate and is not its</span>
+<span id="L594" data-line="594">acceptance, which is a separate result</span>
+<span id="L595" data-line="595">([FOUNDATIONS §4](FOUNDATIONS.md#results)).</span>
+<span id="L596" data-line="596"></span>
+<span id="L597" data-line="597">## 6. Frames in conjunction</span>
+<span id="L598" data-line="598"></span>
+<span id="L599" data-line="599">Frames act together through four distinct relations, and only where the</span>
+<span id="L600" data-line="600">evaluation requires one (P4a; RF-010).</span>
+<span id="L601" data-line="601"></span>
+<span id="L602" data-line="602">### Independently activated co-evaluation</span>
+<span id="L603" data-line="603"></span>
+<span id="L604" data-line="604">Several frames may evaluate the same subject through separate activations</span>
+<span id="L605" data-line="605">and return closed results. They may overlap in subject, manifold or</span>
+<span id="L606" data-line="606">evidence sources; neither evaluation consumes or influences the other&#x27;s</span>
+<span id="L607" data-line="607">unclosed working result. This serves assurance independence, different</span>
+<span id="L608" data-line="608">evidence altitudes and distinct failure perspectives (P6; FOUNDATIONS §2,</span>
+<span id="L609" data-line="609">evaluation independence).</span>
+<span id="L610" data-line="610"></span>
+<span id="L611" data-line="611">### Result conjunction</span>
+<span id="L612" data-line="612"></span>
+<span id="L613" data-line="613">A declared decision rule consumes the closed results of several frames.</span>
+<span id="L614" data-line="614">The rule, what it must state, and the conjunction it computes are</span>
+<span id="L615" data-line="615">[FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results),</span>
+<span id="L616" data-line="616">over the core values of [FOUNDATIONS §4 Results](FOUNDATIONS.md#results);</span>
+<span id="L617" data-line="617">this member defines no conjunction of its own. The outcomes of `conjoin`</span>
+<span id="L618" data-line="618">map to the core as §5 states (P4a, P5, P6).</span>
+<span id="L619" data-line="619"></span>
+<span id="L620" data-line="620">### Evidence or coordinate translation</span>
+<span id="L621" data-line="621"></span>
+<span id="L622" data-line="622">One frame supplies evidence or a value consumed inside another. The</span>
+<span id="L623" data-line="623">translation declares source and target coordinates, preserved meaning,</span>
+<span id="L624" data-line="624">accepted loss, provenance, equality law and refusal conditions (P1, P4b). What a statement of preserved</span>
+<span id="L625" data-line="625">meaning and accepted loss must show, and the law that licenses the</span>
+<span id="L626" data-line="626">step, are</span>
+<span id="L627" data-line="627">[ACTIVATION §4, Refinement](ACTIVATION.md#refinement), and where the</span>
+<span id="L628" data-line="628">translation is represented in `a_c` it is recorded in the preservation,</span>
+<span id="L629" data-line="629">introduced, removed and residual fields of</span>
+<span id="L630" data-line="630">[AC-013](AXIOMATIC_CALCULUS.md#ac-013-transformation). This section adds</span>
+<span id="L631" data-line="631">only the frame fields: the source and target coordinates, the</span>
+<span id="L632" data-line="632">provenance, the equality law and the refusal conditions.</span>
+<span id="L633" data-line="633"></span>
+<span id="L634" data-line="634">### Material composition</span>
+<span id="L635" data-line="635"></span>
+<span id="L636" data-line="636">Several frame-governed operations form one material execution or reasoning</span>
+<span id="L637" data-line="637">relation. The owning application declares the composition, the shared</span>
+<span id="L638" data-line="638">invariants, the effect or decision order where material, closure, failure,</span>
+<span id="L639" data-line="639">and the conservation of semantic, operation and decision authority.</span>
+<span id="L640" data-line="640">Composition is introduced only when the evaluation requires it; a possible</span>
+<span id="L641" data-line="641">future interaction does not require a general composition law in every</span>
+<span id="L642" data-line="642">frame (P4a, P6, P2).</span>
+<span id="L643" data-line="643"></span>
+<span id="L644" data-line="644">## 7. Frame relations</span>
+<span id="L645" data-line="645"></span>
+<span id="L646" data-line="646">Frames may relate as:</span>
+<span id="L647" data-line="647"></span>
+<span id="L648" data-line="648">- disjoint: no material variable, coordinate, evidence or result dependency</span>
+<span id="L649" data-line="649">  is shared for the declared evaluations;</span>
+<span id="L650" data-line="650">- overlapping: some material variables, evidence or entities are shared;</span>
+<span id="L651" data-line="651">- complementary: distinct evaluations jointly inform one decision;</span>
+<span id="L652" data-line="652">- alternative: different frames can evaluate the same claim under declared</span>
+<span id="L653" data-line="653">  capability or evidence conditions;</span>
+<span id="L654" data-line="654">- refinement: one frame resolves a material distinction left aggregated in</span>
+<span id="L655" data-line="655">  another;</span>
+<span id="L656" data-line="656">- restriction: one frame evaluates a lawful subset of another frame&#x27;s</span>
+<span id="L657" data-line="657">  domain;</span>
+<span id="L658" data-line="658">- translated: values or evidence move through a declared coordinate map;</span>
+<span id="L659" data-line="659">- temporally successive: a later frame evaluates a changed basis;</span>
+<span id="L660" data-line="660">- composed: several frame relations form one governed evaluation or</span>
+<span id="L661" data-line="661">  action; or</span>
+<span id="L662" data-line="662">- governing and subordinate: one frame inherits declared constraints from</span>
+<span id="L663" data-line="663">  another where a real authority or decomposition relation exists.</span>
+<span id="L664" data-line="664"></span>
+<span id="L665" data-line="665">No relation is the default universal frame topology. A project declares</span>
+<span id="L666" data-line="666">only the relations its evaluations and coverage claims need (P3, P2;</span>
+<span id="L667" data-line="667">RF-009).</span>
+<span id="L668" data-line="668"></span>
+<span id="L669" data-line="669">## 8. Workspace coverage</span>
+<span id="L670" data-line="670"></span>
+<span id="L671" data-line="671">### Coverage basis</span>
+<span id="L672" data-line="672"></span>
+<span id="L673" data-line="673">Coverage is evaluated against the tuple Coverage(W, G, B, E, S, T): the</span>
+<span id="L674" data-line="674">workspace W, the governed outcome G, the exact basis B, the known</span>
+<span id="L675" data-line="675">evaluation inventory E, the declared frame set S and the time or immutable</span>
+<span id="L676" data-line="676">checkpoint T of the claim. Changing any material member may invalidate the</span>
+<span id="L677" data-line="677">coverage result; whether a change does is decided by</span>
+<span id="L678" data-line="678">[ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse): it does when it</span>
+<span id="L679" data-line="679">could change that result, as a material input change or a changed basis</span>
+<span id="L680" data-line="680">(P3, P6).</span>
+<span id="L681" data-line="681"></span>
+<span id="L682" data-line="682">### Evaluation inventory</span>
+<span id="L683" data-line="683"></span>
+<span id="L684" data-line="684">The coverage evaluator derives the known evaluation inventory from every</span>
+<span id="L685" data-line="685">material available source, including where applicable: goals, intent,</span>
+<span id="L686" data-line="686">product definition, requirements and accepted method; accepted design, its</span>
+<span id="L687" data-line="687">ontology, identities, lifecycles, authorities and algorithms;</span>
+<span id="L688" data-line="688">implementation capabilities and externally observable behaviour;</span>
+<span id="L689" data-line="689">operational, release, security, safety and governance obligations; direct</span>
+<span id="L690" data-line="690">and indirect dependencies and interaction seams; evidence, tests,</span>
+<span id="L691" data-line="691">scenarios, qualification and acceptance claims; historical tickets,</span>
+<span id="L692" data-line="692">check-ins, commentary, post-mortems, incidents and rejected candidates;</span>
+<span id="L693" data-line="693">days-long loops, resets, repeated repairs and discovered rival paths; known</span>
+<span id="L694" data-line="694">agent capability limits and prior invisible violations; and applicable</span>
+<span id="L695" data-line="695">external law, contracts or standards. The inventory records provenance and</span>
+<span id="L696" data-line="696">materiality. Artifact presence, file count, operation count, test count or</span>
+<span id="L697" data-line="697">repository reachability proves no evaluation coverage (P2, P6).</span>
+<span id="L698" data-line="698"></span>
+<span id="L699" data-line="699">### Coverage dimensions</span>
+<span id="L700" data-line="700"></span>
+<span id="L701" data-line="701">The audit applies cross-cutting lenses to the inventory. Typical</span>
+<span id="L702" data-line="702">dimensions are outcome and capability; identity and authority; lifecycle</span>
+<span id="L703" data-line="703">and temporal behaviour; topology and interaction seams; transport and</span>
+<span id="L704" data-line="704">representation; evidence and proof; change, failure, recovery and</span>
+<span id="L705" data-line="705">rollback; historical regression; and actor capability and context fit.</span>
+<span id="L706" data-line="706">These are lenses (FOUNDATIONS §2): they become frames only when separately</span>
+<span id="L707" data-line="707">instantiated as bounded evaluation families (P2).</span>
+<span id="L708" data-line="708"></span>
+<span id="L709" data-line="709">### Coverage ledger</span>
+<span id="L710" data-line="710"></span>
+<span id="L711" data-line="711">The ledger holds at least, for each evaluation (P4b, P6):</span>
+<span id="L712" data-line="712"></span>
+<span id="L713" data-line="713">| Field | Meaning |</span>
+<span id="L714" data-line="714">|---|---|</span>
+<span id="L715" data-line="715">| evaluation | the exact question or predicate |</span>
+<span id="L716" data-line="716">| provenance | the source establishing materiality |</span>
+<span id="L717" data-line="717">| subject and basis | the exact workspace coordinate |</span>
+<span id="L718" data-line="718">| selected frames | the frames capable of evaluating it |</span>
+<span id="L719" data-line="719">| actor envelope | the competence and context required |</span>
+<span id="L720" data-line="720">| semantic authority | the owner of the evaluated meaning |</span>
+<span id="L721" data-line="721">| operation authority | the existing owner grant for construction, transformation, admission, publication or mutation where the evaluation performs one; otherwise none |</span>
+<span id="L722" data-line="722">| decision authority | the owner of the disposition |</span>
+<span id="L723" data-line="723">| evidence | the required observations and their provenance |</span>
+<span id="L724" data-line="724">| dependencies | material frame or seam relations |</span>
+<span id="L725" data-line="725">| status | the coverage disposition |</span>
+<span id="L726" data-line="726">| residual | uncertainty, exclusion or re-entry condition |</span>
+<span id="L727" data-line="727"></span>
+<span id="L728" data-line="728">The baseline coverage statuses are `covered`, `separately_covered`,</span>
+<span id="L729" data-line="729">`conditionally_covered`, `conflicted`, `uncovered`, `unknown` and</span>
+<span id="L730" data-line="730">`excluded_by_authority`.</span>
+<span id="L731" data-line="731"></span>
+<span id="L732" data-line="732">The statuses form a refinement of the core, stated under the refinement</span>
+<span id="L733" data-line="733">rule of [FOUNDATIONS §4 Results](FOUNDATIONS.md#results). They answer</span>
+<span id="L734" data-line="734">whether a row&#x27;s coverage obligation is met, for the predicate &quot;on the</span>
+<span id="L735" data-line="735">declared coverage tuple, a capable frame of S covers the evaluation with</span>
+<span id="L736" data-line="736">no unresolved conflict among the frames, results or authorities that</span>
+<span id="L737" data-line="737">cover it, or a governing authority the row cites excludes it&quot;. Each status</span>
+<span id="L738" data-line="738">maps to exactly one core value, and the value travels with that predicate</span>
+<span id="L739" data-line="739">and with the status, whose meaning stays here (P5, P6):</span>
+<span id="L740" data-line="740"></span>
+<span id="L741" data-line="741">| Status | Cause | Core value |</span>
+<span id="L742" data-line="742">|---|---|---|</span>
+<span id="L743" data-line="743">| `covered` | a capable frame of S evaluates it on the tuple, with no unresolved conflict among what covers it | `satisfied` |</span>
+<span id="L744" data-line="744">| `separately_covered` | separately activated frames of S each evaluate it on the tuple, with no unresolved conflict among them (High-risk separately activated coverage) | `satisfied` |</span>
+<span id="L745" data-line="745">| `excluded_by_authority` | the governing authority the row cites excludes the evaluation from the claim (Operational full coverage, item 7) | `satisfied` |</span>
+<span id="L746" data-line="746">| `conditionally_covered` | a capable frame of S covers it only under a condition the audit has not established; the residual names the condition and the evidence that would decide it | `indeterminate` |</span>
+<span id="L747" data-line="747">| `conflicted` | the frames, results or authorities that cover it conflict, and the conflict is unresolved; the conflict is the counterexample and stays unresolved for the decision authority (Operational full coverage, item 6) | `falsified` |</span>
+<span id="L748" data-line="748">| `uncovered` | no capable frame of S evaluates it, and no cited authority excludes it; that absence is the counterexample | `falsified` |</span>
+<span id="L749" data-line="749">| `unknown` | the admissible evidence cannot decide whether a capable frame of S covers it, as where the actor capability or the materiality is unknown | `indeterminate` |</span>
+<span id="L750" data-line="750"></span>
+<span id="L751" data-line="751">These values are results of `audit_coverage` for this predicate, never</span>
+<span id="L752" data-line="752">results of the covered evaluation itself. `satisfied` for an excluded row</span>
+<span id="L753" data-line="753">establishes that the obligation is met by the cited exclusion, never that</span>
+<span id="L754" data-line="754">the evaluation is covered or was performed; the status keeps that</span>
+<span id="L755" data-line="755">distinction (FOUNDATIONS §4 Results, Recording). In a conjunction over the</span>
+<span id="L756" data-line="756">governed claim, an evaluation whose row is `uncovered` is required</span>
+<span id="L757" data-line="757">coverage that no planned assessment addresses</span>
+<span id="L758" data-line="758">([FOUNDATIONS §4](FOUNDATIONS.md#conjunction-of-results)), never a</span>
+<span id="L759" data-line="759">`falsified` component. Where the coverage tuple itself is stale, advanced,</span>
+<span id="L760" data-line="760">ambiguous or mismatched, the audit returns `invalid_basis` (RF-005) and</span>
+<span id="L761" data-line="761">assigns no status. Purpose and material</span>
+<span id="L762" data-line="762">relation: a coverage claim combined with other results is read in the one</span>
+<span id="L763" data-line="763">core, so a conditional, conflicted, unknown or uncovered row is never read</span>
+<span id="L764" data-line="764">as covered, and a cited exclusion is never read as a failure (P5, P6).</span>
+<span id="L765" data-line="765"></span>
+<span id="L766" data-line="766">### Interaction coverage</span>
+<span id="L767" data-line="767"></span>
+<span id="L768" data-line="768">Evaluation-row coverage is insufficient when two covered relations interact</span>
+<span id="L769" data-line="769">in a way capable of changing the governed outcome. Every material</span>
+<span id="L770" data-line="770">interaction is covered by one frame, a declared conjunction, a translation</span>
+<span id="L771" data-line="771">or a material composition evaluation (P4a, P2).</span>
+<span id="L772" data-line="772"></span>
+<span id="L773" data-line="773">### Authority coverage</span>
+<span id="L774" data-line="774"></span>
+<span id="L775" data-line="775">Every material evaluation identifies semantic and decision authority.</span>
+<span id="L776" data-line="776">Every material operation also identifies its existing construction,</span>
+<span id="L777" data-line="777">transformation, admission, publication or mutation authority. A frame set</span>
+<span id="L778" data-line="778">with broad observational reach, an unresolved decision owner or an</span>
+<span id="L779" data-line="779">effectful path without operation authority is not closed (P6).</span>
+<span id="L780" data-line="780"></span>
+<span id="L781" data-line="781">### Failure coverage</span>
+<span id="L782" data-line="782"></span>
+<span id="L783" data-line="783">Coverage includes known success, refusal, boundary, integration, recovery,</span>
+<span id="L784" data-line="784">reconstruction and competing-path cases where they are material.</span>
+<span id="L785" data-line="785">Historical failures stay first-class coverage inputs until a declared frame</span>
+<span id="L786" data-line="786">detects or excludes their recurrence (P4b, P5).</span>
+<span id="L787" data-line="787"></span>
+<span id="L788" data-line="788">### High-risk separately activated coverage</span>
+<span id="L789" data-line="789"></span>
+<span id="L790" data-line="790">Human authority may require independently activated frame coverage for</span>
+<span id="L791" data-line="791">evaluations whose failure has high consequence, weak observability, strong</span>
+<span id="L792" data-line="792">confirmation bias or a history of local proof masking. Such coverage uses a</span>
+<span id="L793" data-line="793">separately activated evaluation relation and declares any additional</span>
+<span id="L794" data-line="794">assurance-independence conditions. A persona label alone establishes</span>
+<span id="L795" data-line="795">neither relation (P6).</span>
+<span id="L796" data-line="796"></span>
+<span id="L797" data-line="797">### Operational full coverage</span>
+<span id="L798" data-line="798"></span>
+<span id="L799" data-line="799">A frame set has operational full coverage for its declared tuple when</span>
+<span id="L800" data-line="800">:</span>
+<span id="L801" data-line="801"></span>
+<span id="L802" data-line="802">1. every known material evaluation is covered by at least one capable</span>
+<span id="L803" data-line="803">   frame;</span>
+<span id="L804" data-line="804">2. every material interaction has a declared evaluation, conjunction,</span>
+<span id="L805" data-line="805">   translation or composition relation;</span>
+<span id="L806" data-line="806">3. every evaluation has semantic and decision authority, and every</span>
+<span id="L807" data-line="807">   material operation has its inherited operation authority;</span>
+<span id="L808" data-line="808">4. every mandatory claim has an admissible evidence path and a refusal</span>
+<span id="L809" data-line="809">   path;</span>
+<span id="L810" data-line="810">5. the required independently activated overlaps and</span>
+<span id="L811" data-line="811">   assurance-independence conditions are present;</span>
+<span id="L812" data-line="812">6. no unresolved frame-result conflict is hidden by aggregation;</span>
+<span id="L813" data-line="813">7. excluded evaluations cite their governing authority; and</span>
+<span id="L814" data-line="814">8. uncovered and unknown residuals are explicit and compatible with the</span>
+<span id="L815" data-line="815">   claim.</span>
+<span id="L816" data-line="816"></span>
+<span id="L817" data-line="817">Operational full coverage is relative to its tuple. It is not a claim that</span>
+<span id="L818" data-line="818">no undiscovered evaluation exists (P6; P0 with the open-world premise).</span>
+<span id="L819" data-line="819"></span>
+<span id="L820" data-line="820">## 9. Completeness boundary</span>
+<span id="L821" data-line="821"></span>
+<span id="L822" data-line="822">Without an independently established closed-domain completeness predicate,</span>
+<span id="L823" data-line="823">a finite frame set cannot establish the absence of every undiscovered</span>
+<span id="L824" data-line="824">material evaluation by inspecting its own declared inventory. A finite,</span>
+<span id="L825" data-line="825">formally closed domain may support exhaustive coverage relative to that</span>
+<span id="L826" data-line="826">domain and its completeness predicate; the result does not generalise</span>
+<span id="L827" data-line="827">beyond that boundary. Formal incompleteness results motivate this caution;</span>
+<span id="L828" data-line="828">they do not by themselves prove that a particular workspace or frame set is</span>
+<span id="L829" data-line="829">incomplete (P0 with the open-world premise; P6).</span>
+<span id="L830" data-line="830"></span>
+<span id="L831" data-line="831">Coverage therefore stays falsifiable and externally challengeable.</span>
+<span id="L832" data-line="832">Challenge sources include human knowledge outside the current frame set;</span>
+<span id="L833" data-line="833">independent review; historical failures and predecessor systems; mutation,</span>
+<span id="L834" data-line="834">adversarial and counterexample search; live operation and user behaviour;</span>
+<span id="L835" data-line="835">adjacent workspace or domain comparison; and changes in actor capability,</span>
+<span id="L836" data-line="836">law, dependencies or topology. The method requires an explicit residual</span>
+<span id="L837" data-line="837">boundary and never a claim of metaphysical or universal completeness</span>
+<span id="L838" data-line="838">(RF-015).</span>
+<span id="L839" data-line="839"></span>
+<span id="L840" data-line="840">## 10. Discovery and revision</span>
+<span id="L841" data-line="841"></span>
+<span id="L842" data-line="842">### Missing-frame signals</span>
+<span id="L843" data-line="843"></span>
+<span id="L844" data-line="844">These observations trigger frame diagnosis (P4b, P5):</span>
+<span id="L845" data-line="845"></span>
+<span id="L846" data-line="846">- a competent actor repeatedly cannot see a known material violation;</span>
+<span id="L847" data-line="847">- a local repair creates or duplicates another authority path;</span>
+<span id="L848" data-line="848">- work repeatedly resets after apparently valid local completion;</span>
+<span id="L849" data-line="849">- long implementation loops produce no stable closure;</span>
+<span id="L850" data-line="850">- proof passes while the claimed outcome stays unbound;</span>
+<span id="L851" data-line="851">- a material failure is visible only after broad integration;</span>
+<span id="L852" data-line="852">- reviewers repeatedly expand context without reaching a decidable</span>
+<span id="L853" data-line="853">  question;</span>
+<span id="L854" data-line="854">- two actors use the same frame name but evaluate different material</span>
+<span id="L855" data-line="855">  relations; or</span>
+<span id="L856" data-line="856">- a topology mutation leaves prior verdicts apparently current.</span>
+<span id="L857" data-line="857"></span>
+<span id="L858" data-line="858">### Diagnostic order</span>
+<span id="L859" data-line="859"></span>
+<span id="L860" data-line="860">Diagnosis asks, in this order (P2):</span>
+<span id="L861" data-line="861"></span>
+<span id="L862" data-line="862">1. Was the correct declared frame activated?</span>
+<span id="L863" data-line="863">2. Were the subject and basis exact?</span>
+<span id="L864" data-line="864">3. Was the actor inside the capability envelope?</span>
+<span id="L865" data-line="865">4. Was admissible evidence available?</span>
+<span id="L866" data-line="866">5. Is a material variable or invariant missing from the frame?</span>
+<span id="L867" data-line="867">6. Is a required conjunction or translation missing?</span>
+<span id="L868" data-line="868">7. Is the evaluation family itself wrong or incomplete?</span>
+<span id="L869" data-line="869">8. Is another frame required?</span>
+<span id="L870" data-line="870"></span>
+<span id="L871" data-line="871">Question 1 is answered by family inclusion, not by set membership. An</span>
+<span id="L872" data-line="872">evaluation is within a frame&#x27;s family when the question it decides is one</span>
+<span id="L873" data-line="873">the frame&#x27;s declared evaluation family states, at the frame&#x27;s declared</span>
+<span id="L874" data-line="874">coordinates (RF-001). Membership of the frame in the frame set, the frame&#x27;s</span>
+<span id="L875" data-line="875">name, a role label or similar wording of the question does not place an</span>
+<span id="L876" data-line="876">evaluation in the frame&#x27;s family; an activation of a frame on an evaluation</span>
+<span id="L877" data-line="877">outside its family answers question 1 no, whatever the frame&#x27;s standing in</span>
+<span id="L878" data-line="878">the set (P2, the evaluations determine the attention surface; P1, a name</span>
+<span id="L879" data-line="879">carries no meaning; the material relation drawn is evaluation-to-family</span>
+<span id="L880" data-line="880">inclusion).</span>
+<span id="L881" data-line="881"></span>
+<span id="L882" data-line="882">The order prevents every difficult evaluation from creating another frame.</span>
+<span id="L883" data-line="883"></span>
+<span id="L884" data-line="884">### Revision actions</span>
+<span id="L885" data-line="885"></span>
+<span id="L886" data-line="886">A revision may (P4b): clarify activation or</span>
+<span id="L887" data-line="887">evidence acquisition; change the capability envelope; add or remove a</span>
+<span id="L888" data-line="888">material relation; split an overloaded frame; merge duplicative frames</span>
+<span id="L889" data-line="889">where capability and authority stay sound; add intentional overlap; add or</span>
+<span id="L890" data-line="890">revise a conjunction or translation; retire a frame whose evaluation family</span>
+<span id="L891" data-line="891">is no longer material; or revise the project evaluation inventory. Every</span>
+<span id="L892" data-line="892">material revision changes frame identity or revision coordinates and states</span>
+<span id="L893" data-line="893">which prior activations, results and coverage claims require reevaluation</span>
+<span id="L894" data-line="894">(P3, P4b).</span>
+<span id="L895" data-line="895"></span>
+<span id="L896" data-line="896">Stated plainly: a material revision of a frame produces a new frame</span>
+<span id="L897" data-line="897">revision coordinate. Every prior closed result bound to the previous</span>
+<span id="L898" data-line="898">revision of a materially revised frame is bound to a mismatched coordinate</span>
+<span id="L899" data-line="899">(RF-005) and is invalidated for reuse until it is re-checked against the</span>
+<span id="L900" data-line="900">new revision (RF-011; ACTIVATION §7). The revision record lists those</span>
+<span id="L901" data-line="901">results as reopened; a result leaves that list only by a recorded re-check</span>
+<span id="L902" data-line="902">that finds it demonstrably independent of the change, or by re-evaluation</span>
+<span id="L903" data-line="903">on the new revision. A material revision does not select which of the</span>
+<span id="L904" data-line="904">results bound to the prior revision it reopens, and silence does not keep</span>
+<span id="L905" data-line="905">a result closed (P3, P4b).</span>
+<span id="L906" data-line="906"></span>
+<span id="L907" data-line="907">Whether a revision needs a new frame revision coordinate turns on the</span>
+<span id="L908" data-line="908">frame&#x27;s declarations; whether a result already closed stays valid is a</span>
+<span id="L909" data-line="909">separate question. A revision is material when it changes a frame</span>
+<span id="L910" data-line="910">declaration in a way that is material under</span>
+<span id="L911" data-line="911">[FOUNDATIONS §2](FOUNDATIONS.md#2-ontology). A revision that changes no</span>
+<span id="L912" data-line="912">declaration of the frame needs no new coordinate. That answer decides</span>
+<span id="L913" data-line="913">nothing about any result: an unchanged declaration is no ground for</span>
+<span id="L914" data-line="914">keeping a result closed. Whether a closed result stays valid is decided</span>
+<span id="L915" data-line="915">by the reuse rule of</span>
+<span id="L916" data-line="916">[ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse), with materiality</span>
+<span id="L917" data-line="917">as [FOUNDATIONS §2](FOUNDATIONS.md#2-ontology) defines it, and that rule</span>
+<span id="L918" data-line="918">can reopen results although no declaration changed; results it reopens</span>
+<span id="L919" data-line="919">without a material revision are recorded as reopened in the work state</span>
+<span id="L920" data-line="920">([ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart)). For example, a</span>
+<span id="L921" data-line="921">clarification that finds a recorded activation outside its frame&#x27;s family,</span>
+<span id="L922" data-line="922">so that the result fails the exact applicability check of ACTIVATION §7</span>
+<span id="L923" data-line="923">([RF-001](#rf-001-evaluation-relativity);</span>
+<span id="L924" data-line="924">[Diagnostic order](#diagnostic-order) question 1), or newly acquired</span>
+<span id="L925" data-line="925">admissible evidence that is material to a closed result, a material</span>
+<span id="L926" data-line="926">input change under ACTIVATION §7, reopens that result</span>
+<span id="L927" data-line="927">and every coverage ledger row and coverage claim that consumed it, and</span>
+<span id="L928" data-line="928">preserves every demonstrably independent surviving result. A harmless</span>
+<span id="L929" data-line="929">explanatory clarification, which changes no material input and is no</span>
+<span id="L930" data-line="930">revising observation, invalidates no result by itself;</span>
+<span id="L931" data-line="931">reuse still requires the consumer&#x27;s exact applicability check (P3, P6).</span>
+<span id="L932" data-line="932"></span>
+<span id="L933" data-line="933">## 11. The activation packet</span>
+<span id="L934" data-line="934"></span>
+<span id="L935" data-line="935">An actor receives one activated frame or one declared active frame</span>
+<span id="L936" data-line="936">configuration, never an implied demand to reconstruct the complete</span>
+<span id="L937" data-line="937">workspace from ambient context (P0). The minimum</span>
+<span id="L938" data-line="938">activation packet contains:</span>
+<span id="L939" data-line="939"></span>
+<span id="L940" data-line="940">- frame identity and revision;</span>
+<span id="L941" data-line="941">- the evaluation and its result algebra;</span>
+<span id="L942" data-line="942">- the exact subject and basis;</span>
+<span id="L943" data-line="943">- the material relations and applicable invariants;</span>
+<span id="L944" data-line="944">- semantic, evaluation, operation where material, and decision authority;</span>
+<span id="L945" data-line="945">- admissible evidence and tools;</span>
+<span id="L946" data-line="946">- the capability and context envelope;</span>
+<span id="L947" data-line="947">- exclusions and prohibited assumptions;</span>
+<span id="L948" data-line="948">- declared frame dependencies or conjunction outputs; and</span>
+<span id="L949" data-line="949">- invalidation, stop and reconfiguration conditions.</span>
+<span id="L950" data-line="950"></span>
+<span id="L951" data-line="951">The actor may own its internal reasoning and search where the governing</span>
+<span id="L952" data-line="952">method permits. It returns through the declared result relation. Hidden</span>
+<span id="L953" data-line="953">internal reasoning is no substitute for required evidence, provenance or</span>
+<span id="L954" data-line="954">authority (P6). Frame size is optimised for reliable evaluation, not for</span>
+<span id="L955" data-line="955">maximum context loading: a more capable actor may activate a broader frame</span>
+<span id="L956" data-line="956">and a less capable one may use a lawful refinement sequence, and both</span>
+<span id="L957" data-line="957">preserve the same material invariants and authority relations (P0, P2;</span>
+<span id="L958" data-line="958">RF-014).</span>
+<span id="L959" data-line="959"></span>
+<span id="L960" data-line="960">### Minimal activation binding</span>
+<span id="L961" data-line="961"></span>
+<span id="L962" data-line="962">The following carrier-neutral content is sufficient to bind one declared</span>
+<span id="L963" data-line="963">frame for one evaluation. It may be written in Markdown, structured data, a</span>
+<span id="L964" data-line="964">prompt or another consumer-selected carrier without changing the relation</span>
+<span id="L965" data-line="965">(P0, RF-016).</span>
+<span id="L966" data-line="966"></span>
+<span id="L967" data-line="967">```markdown</span>
+<span id="L968" data-line="968"># Reference-Frame Activation: &lt;stable activation identity&gt;</span>
+<span id="L969" data-line="969"></span>
+<span id="L970" data-line="970">## Frame</span>
+<span id="L971" data-line="971">- declaration identity and revision:</span>
+<span id="L972" data-line="972">- exact evaluation and closed result algebra:</span>
+<span id="L973" data-line="973"></span>
+<span id="L974" data-line="974">## Subject And Basis</span>
+<span id="L975" data-line="975">- exact subject or candidate identity:</span>
+<span id="L976" data-line="976">- workspace, authority, dependency, configuration, and time basis:</span>
+<span id="L977" data-line="977"></span>
+<span id="L978" data-line="978">## Attention Surface</span>
+<span id="L979" data-line="979">- material relations and applicable invariants:</span>
+<span id="L980" data-line="980">- exact source and semantic references:</span>
+<span id="L981" data-line="981">- explicit exclusions and prohibited assumptions:</span>
+<span id="L982" data-line="982"></span>
+<span id="L983" data-line="983">## Actor And Authority</span>
+<span id="L984" data-line="984">- actor and capability envelope:</span>
+<span id="L985" data-line="985">- semantic and evaluation authority:</span>
+<span id="L986" data-line="986">- operation authority, subject, and territory where material:</span>
+<span id="L987" data-line="987">- decision, acceptance, and publication authority:</span>
+<span id="L988" data-line="988"></span>
+<span id="L989" data-line="989">## Evidence And Relations</span>
+<span id="L990" data-line="990">- admissible evidence and acquisition route:</span>
+<span id="L991" data-line="991">- dependency, overlap, input, conjunction, or translation relations used:</span>
+<span id="L992" data-line="992">- expected result consumer and return relation:</span>
+<span id="L993" data-line="993"></span>
+<span id="L994" data-line="994">## Stop And Change</span>
+<span id="L995" data-line="995">- invalidation conditions:</span>
+<span id="L996" data-line="996">- stop, residual, re-entry, and reconfiguration conditions:</span>
+<span id="L997" data-line="997">```</span>
+<span id="L998" data-line="998"></span>
+<span id="L999" data-line="999">Every field resolves through stable identities and source references.</span>
+<span id="L1000" data-line="1000">Paths, line numbers, member counts, summaries and matching labels may aid</span>
+<span id="L1001" data-line="1001">navigation or diagnostics; they do not substitute for the declared identity</span>
+<span id="L1002" data-line="1002">and basis (P3).</span>
+<span id="L1003" data-line="1003"></span>
+<span id="L1004" data-line="1004">## 12. Violations</span>
+<span id="L1005" data-line="1005"></span>
+<span id="L1006" data-line="1006">Each of the following is a violation of this member where it supports a</span>
+<span id="L1007" data-line="1007">frame or coverage claim:</span>
+<span id="L1008" data-line="1008"></span>
+<span id="L1009" data-line="1009">1. one omniscient frame is presumed to contain the complete method or</span>
+<span id="L1010" data-line="1010">   workspace (P0);</span>
+<span id="L1011" data-line="1011">2. a module, file, service, role, persona, prompt or lens is called a</span>
+<span id="L1012" data-line="1012">   frame without a declared evaluation relation (RF-001);</span>
+<span id="L1013" data-line="1013">3. functional decomposition, authority hierarchy and frame topology are</span>
+<span id="L1014" data-line="1014">   silently treated as one tree (RF-009);</span>
+<span id="L1015" data-line="1015">4. every active frame is required to compose with every other frame</span>
+<span id="L1016" data-line="1016">   (RF-010);</span>
+<span id="L1017" data-line="1017">5. composition machinery is introduced without a material cross-frame</span>
+<span id="L1018" data-line="1018">   evaluation (RF-010);</span>
+<span id="L1019" data-line="1019">6. frame selection or broad visibility is treated as semantic authority</span>
+<span id="L1020" data-line="1020">   (RF-006);</span>
+<span id="L1021" data-line="1021">7. evidence is flattened across bases or coordinates and treated as one</span>
+<span id="L1022" data-line="1022">   executed or observed relation (RF-005, RF-008);</span>
+<span id="L1023" data-line="1023">8. `satisfied` is returned where the lawful result is `indeterminate`,</span>
+<span id="L1024" data-line="1024">   `out_of_frame` or `invalid_basis` (RF-012);</span>
+<span id="L1025" data-line="1025">9. coverage is inferred from artifact, file, operation, test, review or</span>
+<span id="L1026" data-line="1026">   actor count (§8);</span>
+<span id="L1027" data-line="1027">10. a frame silently grows beyond the selected actor&#x27;s capability envelope</span>
+<span id="L1028" data-line="1028">    (RF-002, RF-014);</span>
+<span id="L1029" data-line="1029">11. a topology mutation reuses a stale activation without recharting</span>
+<span id="L1030" data-line="1030">    (RF-011);</span>
+<span id="L1031" data-line="1031">12. every failure creates another frame before activation, basis,</span>
+<span id="L1032" data-line="1032">    evidence, capability and evaluation defects are excluded (§10);</span>
+<span id="L1033" data-line="1033">13. intentional overlap is contracted although it supplies independently</span>
+<span id="L1034" data-line="1034">    activated failure detection or materially different capability fit</span>
+<span id="L1035" data-line="1035">    (RF-017); or</span>
+<span id="L1036" data-line="1036">14. a generic runtime, registry, controller or universal carrier is</span>
+<span id="L1037" data-line="1037">    presented as required by this member (RF-016).</span>
+<span id="L1038" data-line="1038"></span>
+<span id="L1039" data-line="1039">## 13. Minimal declarations</span>
+<span id="L1040" data-line="1040"></span>
+<span id="L1041" data-line="1041">The three carrier-neutral shapes below are the least content that declares</span>
+<span id="L1042" data-line="1042">a frame, a frame set and an evaluation result. Each is sufficient as</span>
+<span id="L1043" data-line="1043">written in Markdown or any other consumer-selected carrier (P0, P2;</span>
+<span id="L1044" data-line="1044">RF-016).</span>
+<span id="L1045" data-line="1045"></span>
+<span id="L1046" data-line="1046">### Minimal frame declaration</span>
+<span id="L1047" data-line="1047"></span>
+<span id="L1048" data-line="1048">```markdown</span>
+<span id="L1049" data-line="1049"># Frame: &lt;stable local identity&gt;</span>
+<span id="L1050" data-line="1050"></span>
+<span id="L1051" data-line="1051">## Evaluation Family</span>
+<span id="L1052" data-line="1052">&lt;questions, predicates, and closed result algebra&gt;</span>
+<span id="L1053" data-line="1053"></span>
+<span id="L1054" data-line="1054">## Subject And Basis</span>
+<span id="L1055" data-line="1055">&lt;workspace boundary, exact identity, version/time/topology coordinates&gt;</span>
+<span id="L1056" data-line="1056"></span>
+<span id="L1057" data-line="1057">## Material Manifold</span>
+<span id="L1058" data-line="1058">&lt;entities, variables, relations, states, and interactions&gt;</span>
+<span id="L1059" data-line="1059"></span>
+<span id="L1060" data-line="1060">## Coordinates And Equality</span>
+<span id="L1061" data-line="1061">&lt;how positions are distinguished and related&gt;</span>
+<span id="L1062" data-line="1062"></span>
+<span id="L1063" data-line="1063">## Invariants</span>
+<span id="L1064" data-line="1064">&lt;applicable governing laws&gt;</span>
+<span id="L1065" data-line="1065"></span>
+<span id="L1066" data-line="1066">## Authorities</span>
+<span id="L1067" data-line="1067">&lt;frame-set, semantic, evaluation, operation where material, and decision authority&gt;</span>
+<span id="L1068" data-line="1068"></span>
+<span id="L1069" data-line="1069">## Evidence</span>
+<span id="L1070" data-line="1070">&lt;admissible sources, provenance, and exclusions&gt;</span>
+<span id="L1071" data-line="1071"></span>
+<span id="L1072" data-line="1072">## Capability Envelope</span>
+<span id="L1073" data-line="1073">&lt;competence, context, access, tools, evaluation/assurance independence, configuration&gt;</span>
+<span id="L1074" data-line="1074"></span>
+<span id="L1075" data-line="1075">## Boundary And Exclusions</span>
+<span id="L1076" data-line="1076">&lt;irrelevant material, prohibited assumptions, and out-of-frame conditions&gt;</span>
+<span id="L1077" data-line="1077"></span>
+<span id="L1078" data-line="1078">## Optional Frame Relations</span>
+<span id="L1079" data-line="1079">&lt;inputs, outputs, overlaps, conjunctions, or translations actually used&gt;</span>
+<span id="L1080" data-line="1080"></span>
+<span id="L1081" data-line="1081">## Invalidation And Recharting</span>
+<span id="L1082" data-line="1082">&lt;changes that stale this frame or its results&gt;</span>
+<span id="L1083" data-line="1083"></span>
+<span id="L1084" data-line="1084">## Qualification</span>
+<span id="L1085" data-line="1085">&lt;representative cases, counterexamples, and known residuals&gt;</span>
+<span id="L1086" data-line="1086">```</span>
+<span id="L1087" data-line="1087"></span>
+<span id="L1088" data-line="1088">### Minimal frame-set declaration</span>
+<span id="L1089" data-line="1089"></span>
+<span id="L1090" data-line="1090">```markdown</span>
+<span id="L1091" data-line="1091"># Frame Set: &lt;stable local identity&gt;</span>
+<span id="L1092" data-line="1092"></span>
+<span id="L1093" data-line="1093">## Governed Workspace And Outcome</span>
+<span id="L1094" data-line="1094">&lt;workspace, outcome, basis, and time&gt;</span>
+<span id="L1095" data-line="1095"></span>
+<span id="L1096" data-line="1096">## Human Authority</span>
+<span id="L1097" data-line="1097">&lt;declaration and acceptance authority&gt;</span>
+<span id="L1098" data-line="1098"></span>
+<span id="L1099" data-line="1099">## Evaluation Inventory</span>
+<span id="L1100" data-line="1100">&lt;known material evaluations and provenance&gt;</span>
+<span id="L1101" data-line="1101"></span>
+<span id="L1102" data-line="1102">## Selected Frames</span>
+<span id="L1103" data-line="1103">&lt;frame identities, revisions, and capability envelopes&gt;</span>
+<span id="L1104" data-line="1104"></span>
+<span id="L1105" data-line="1105">## Coverage Rationale</span>
+<span id="L1106" data-line="1106">&lt;mapping from evaluations to capable frames&gt;</span>
+<span id="L1107" data-line="1107"></span>
+<span id="L1108" data-line="1108">## Intentional Overlap</span>
+<span id="L1109" data-line="1109">&lt;separately activated checks, assurance-independence conditions, or alternative capability fit&gt;</span>
+<span id="L1110" data-line="1110"></span>
+<span id="L1111" data-line="1111">## Conjunction And Translation</span>
+<span id="L1112" data-line="1112">&lt;only the cross-frame relations required by evaluations&gt;</span>
+<span id="L1113" data-line="1113"></span>
+<span id="L1114" data-line="1114">## Residual Uncertainty</span>
+<span id="L1115" data-line="1115">&lt;uncovered, unknown, conditional, or excluded evaluations&gt;</span>
+<span id="L1116" data-line="1116"></span>
+<span id="L1117" data-line="1117">## Revision Triggers</span>
+<span id="L1118" data-line="1118">&lt;history, topology, capability, evidence, or outcome changes&gt;</span>
+<span id="L1119" data-line="1119">```</span>
+<span id="L1120" data-line="1120"></span>
+<span id="L1121" data-line="1121">### Minimal evaluation result</span>
+<span id="L1122" data-line="1122"></span>
+<span id="L1123" data-line="1123">```markdown</span>
+<span id="L1124" data-line="1124"># Frame Evaluation Result</span>
+<span id="L1125" data-line="1125"></span>
+<span id="L1126" data-line="1126">- frame identity and revision:</span>
+<span id="L1127" data-line="1127">- activation identity:</span>
+<span id="L1128" data-line="1128">- evaluation:</span>
+<span id="L1129" data-line="1129">- subject and basis:</span>
+<span id="L1130" data-line="1130">- actor and capability envelope:</span>
+<span id="L1131" data-line="1131">- semantic, evaluation, operation where material, and decision authority:</span>
+<span id="L1132" data-line="1132">- admissible evidence:</span>
+<span id="L1133" data-line="1133">- result:</span>
+<span id="L1134" data-line="1134">- inference relation:</span>
+<span id="L1135" data-line="1135">- residual uncertainty:</span>
+<span id="L1136" data-line="1136">- out_of_frame residual (missing relation or capability, owner, reconfiguration pressure):</span>
+<span id="L1137" data-line="1137">- invalidation conditions:</span>
+<span id="L1138" data-line="1138">- consuming decision or conjunction:</span>
+<span id="L1139" data-line="1139">```</span>
+<span id="L1140" data-line="1140"></span>
+<span id="L1141" data-line="1141">The out_of_frame residual field carries what</span>
+<span id="L1142" data-line="1142">[FOUNDATIONS §4 Results](FOUNDATIONS.md#results) requires an out_of_frame</span>
+<span id="L1143" data-line="1143">result to name, and reads `none` for any other result (P5).</span>
+<span id="L1144" data-line="1144"></span>
+<span id="L1145" data-line="1145">## 14. Closure</span>
+<span id="L1146" data-line="1146"></span>
+<span id="L1147" data-line="1147">A project operates under this member when:</span>
+<span id="L1148" data-line="1148"></span>
+<span id="L1149" data-line="1149">1. human authority has declared the governed workspace, outcome,</span>
+<span id="L1150" data-line="1150">   evaluation inventory and frame set (§4);</span>
+<span id="L1151" data-line="1151">2. every active frame is finite, evaluation-bound, basis-bound,</span>
+<span id="L1152" data-line="1152">   authority-safe and usable inside its actor capability envelope (§3);</span>
+<span id="L1153" data-line="1153">3. frame results preserve semantic, evidence, inference and decision</span>
+<span id="L1154" data-line="1154">   distinctions (RF-007);</span>
+<span id="L1155" data-line="1155">4. cross-frame conjunction, translation or composition exists only where a</span>
+<span id="L1156" data-line="1156">   material evaluation requires it (§6);</span>
+<span id="L1157" data-line="1157">5. workspace coverage maps every known material evaluation and interaction</span>
+<span id="L1158" data-line="1158">   to a capable frame or an explicit residual (§8);</span>
+<span id="L1159" data-line="1159">6. operational full coverage is stated relative to its exact tuple (§8);</span>
+<span id="L1160" data-line="1160">7. topology, capability, evidence and historical failures can trigger</span>
+<span id="L1161" data-line="1161">   frame revision or recharting (§10); and</span>
+<span id="L1162" data-line="1162">8. no executable frame machinery, global context, universal completeness</span>
+<span id="L1163" data-line="1163">   or domain authority is inferred from adopting this member (RF-016, §9).</span></pre></html>

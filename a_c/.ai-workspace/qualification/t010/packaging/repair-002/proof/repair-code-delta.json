@@ -1,0 +1,18 @@
+{
+  "status": "applied_in_isolated_copy_only",
+  "changes": [
+    {
+      "path": "app/package_release.py",
+      "before_sha256": "df5d8a22cd4f9ba5be465eed375806f50426f2e70a7e762ffd66e8be5b66a057",
+      "after_sha256": "324fe8242ecb4f67c6f6ed77c6ff3f674245f53c73f17ba1029f0e9f03b28ccb"
+    },
+    {
+      "path": "app/release_tools/public_receipts.py",
+      "before_sha256": "c400d1eb1ffac70d62bd257e1451d6b45542b5065c7c4f693d7a9e09fe70c0e5",
+      "after_sha256": "ab91aae1bd08d64c167833095735735235919e0dd32a040b39d95c60291cf3b3"
+    }
+  ],
+  "unchanged_checker_sha256": "74beb6365104bc4352b691725c9e18fe3521d01fe50a080c0c9cc735a4a141f5",
+  "source_readiness_input_contract": "Only the exact sealed original SHA114a458... or exact portable projection SHA2dec9cec...; projection is idempotent; no unverified flag",
+  "archive_layout_contract": "Resolved archive/checksum paths must be disjoint from bundle tree; a dist directory that safely contains the bundle and a sibling archive remains valid"
+}

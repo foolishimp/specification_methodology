@@ -1,0 +1,49 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md</title><style>body{font:14px system-ui;margin:24px;background:#101720;color:#dfeaf4}a{color:#87c7ff}pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5;counter-reset:line}span{display:block}span:before{content:attr(data-line);display:inline-block;width:4em;color:#7392aa;user-select:none}span:target{background:#36481d}</style><h1>standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md</h1><p>Exact frozen source · SHA256 8dd5d925a82f63683c9702a5fe8732eaa4afaead626ddfe49e270fb0a79e08a9</p><pre><span id="L1" data-line="1"># Tenant Registry</span>
+<span id="L2" data-line="2"></span>
+<span id="L3" data-line="3">This is an optional human-readable companion to the canonical</span>
+<span id="L4" data-line="4">`how.build_tenants` bindings in the Product&#x27;s `stdo_&lt;label&gt;.json` definition.</span>
+<span id="L5" data-line="5"></span>
+<span id="L6" data-line="6">The Product Definition Overlay owns build-tenant identity and location. Keep</span>
+<span id="L7" data-line="7">this table consistent with that JSON or generate it from the definition. This</span>
+<span id="L8" data-line="8">file must not become a second tenant registry.</span>
+<span id="L9" data-line="9"></span>
+<span id="L10" data-line="10">`build_tenants/` is the default project-owned realization root beneath the</span>
+<span id="L11" data-line="11">shared project specification. An existing project may bind another layout.</span>
+<span id="L12" data-line="12"></span>
+<span id="L13" data-line="13">Use build tenancy for one-to-many independent implementations of the same</span>
+<span id="L14" data-line="14">constitutional `WHAT`.</span>
+<span id="L15" data-line="15"></span>
+<span id="L16" data-line="16">The bound `WHAT` is singleton Product truth. The bound build tenants are</span>
+<span id="L17" data-line="17">many-valued realization structure beneath it.</span>
+<span id="L18" data-line="18"></span>
+<span id="L19" data-line="19">## Structure</span>
+<span id="L20" data-line="20"></span>
+<span id="L21" data-line="21">- `common/` is the default location for shared realization/design law adopted</span>
+<span id="L22" data-line="22">  across more than one tenant.</span>
+<span id="L23" data-line="23">- `&lt;family&gt;/&lt;variant&gt;/` is the recommended default location for one concrete</span>
+<span id="L24" data-line="24">  tenant realization. Single-label paths such as `&lt;variant&gt;/` and other</span>
+<span id="L25" data-line="25">  definition-bound layouts are also lawful.</span>
+<span id="L26" data-line="26"></span>
+<span id="L27" data-line="27">## Shared Surface</span>
+<span id="L28" data-line="28"></span>
+<span id="L29" data-line="29">When `how.common` is non-empty, list those shared realization references here</span>
+<span id="L30" data-line="30">for readers. `common` is not itself a build tenant and must not appear as a</span>
+<span id="L31" data-line="31">tenant identity.</span>
+<span id="L32" data-line="32"></span>
+<span id="L33" data-line="33">## Registry</span>
+<span id="L34" data-line="34"></span>
+<span id="L35" data-line="35">Suggested lifecycle states include:</span>
+<span id="L36" data-line="36"></span>
+<span id="L37" data-line="37">- `Planned`</span>
+<span id="L38" data-line="38">- `In Development`</span>
+<span id="L39" data-line="39">- `Paused`</span>
+<span id="L40" data-line="40">- `Released`</span>
+<span id="L41" data-line="41">- `Deprecated`</span>
+<span id="L42" data-line="42"></span>
+<span id="L43" data-line="43">| Entry | Kind | Path | Status | Notes |</span>
+<span id="L44" data-line="44">| --- | --- | --- | --- | --- |</span>
+<span id="L45" data-line="45">| `&lt;tenant-id-uri&gt;` | `&lt;family&gt;/&lt;variant&gt;` | `build_tenants/&lt;family&gt;/&lt;variant&gt;/` | Planned | Replace with the current tenant candidates for this project |</span>
+<span id="L46" data-line="46"></span>
+<span id="L47" data-line="47">Record the currently active realization focus explicitly in the table notes or</span>
+<span id="L48" data-line="48">an adjacent short section when more than one tenant exists. The entry identity</span>
+<span id="L49" data-line="49">must match the corresponding `how.build_tenants[].id`.</span></pre></html>

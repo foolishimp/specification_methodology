@@ -1,0 +1,286 @@
+{
+  "actual_overlap": {
+    "archive_members": 214,
+    "boundary": "Full build not repeated; direct old archive helper over exact valid213-file extracted bytes reproduces its final packaging failure.",
+    "embedded_archive_bytes": 2246935,
+    "extracted_cli": {
+      "returncode": 2,
+      "stderr": "{\"status\": \"refusal\", \"reason\": \"bundle has missing or extra unlisted files\"}\n",
+      "stdout": ""
+    },
+    "heavy_decode_reached": false,
+    "input_files_before": 213,
+    "old_helper_result": "returned_successfully",
+    "returned": {
+      "bytes": 12206843,
+      "file": "self-including.tar.gz",
+      "format": "deterministic tar.gz; sorted files, fixed0644 uid/gid/mtime0, blank owner names, gzip mtime0",
+      "sha256": "5003a7389342a67378b3b8f7a92bc9cd835f174156a44aeaf48f17057a258a05"
+    },
+    "self_included_member": "a_c-stdo-v3-common-35fb4824/dist/self-including.tar.gz"
+  },
+  "fixed_candidate_exposed": false,
+  "independent_STDO_trial_access": false,
+  "limits": [
+    "No fixed code copy/output exposure or judgment",
+    "No heavy carrier decode",
+    "No original artifact mutation/promotion",
+    "No semantic/acceptance/release/UI assessment"
+  ],
+  "native_LLM_calls": 0,
+  "network_browser_server_install_git_effects": 0,
+  "new_artifact_expected": "a_c-stdo-v3-common-35fb4824-packaging-r1",
+  "original_archive_sha256": "2b33530c20a17dd27033e8b34b1af497de7a4e0f3b8165a22d0821298516e386",
+  "original_guard_mismatches": [],
+  "path_matrix": [
+    {
+      "archive_members": [
+        "a_c-stdo-v3-common-35fb4824/artifact.tar.gz",
+        "a_c-stdo-v3-common-35fb4824/one.txt",
+        "a_c-stdo-v3-common-35fb4824/two.json"
+      ],
+      "case": "dist-equals-bundle",
+      "filesystem_changed": true,
+      "old_accepted": true,
+      "old_result": {
+        "bytes": 189,
+        "file": "artifact.tar.gz",
+        "format": "deterministic tar.gz; sorted files, fixed0644 uid/gid/mtime0, blank owner names, gzip mtime0",
+        "sha256": "04c06fcfe55e71c22db8e607211e790f768019d620b55c32f0813faaada1b0c8"
+      },
+      "refusal": null,
+      "resolved_output_inside_bundle": true
+    },
+    {
+      "archive_members": [
+        "a_c-stdo-v3-common-35fb4824/dist/artifact.tar.gz",
+        "a_c-stdo-v3-common-35fb4824/one.txt",
+        "a_c-stdo-v3-common-35fb4824/two.json"
+      ],
+      "case": "nested-dist",
+      "filesystem_changed": true,
+      "old_accepted": true,
+      "old_result": {
+        "bytes": 192,
+        "file": "artifact.tar.gz",
+        "format": "deterministic tar.gz; sorted files, fixed0644 uid/gid/mtime0, blank owner names, gzip mtime0",
+        "sha256": "f43781eae5c6fbae030a31b632ecd0c28ec1eb291534c7dfa94ea7f6b789f41b"
+      },
+      "refusal": null,
+      "resolved_output_inside_bundle": true
+    },
+    {
+      "archive_members": [
+        "a_c-stdo-v3-common-35fb4824/artifact.tar.gz",
+        "a_c-stdo-v3-common-35fb4824/one.txt",
+        "a_c-stdo-v3-common-35fb4824/two.json"
+      ],
+      "case": "resolved-dotdot-dist",
+      "filesystem_changed": true,
+      "old_accepted": true,
+      "old_result": {
+        "bytes": 189,
+        "file": "artifact.tar.gz",
+        "format": "deterministic tar.gz; sorted files, fixed0644 uid/gid/mtime0, blank owner names, gzip mtime0",
+        "sha256": "04c06fcfe55e71c22db8e607211e790f768019d620b55c32f0813faaada1b0c8"
+      },
+      "refusal": null,
+      "resolved_output_inside_bundle": true
+    },
+    {
+      "archive_members": [
+        "a_c-stdo-v3-common-35fb4824/artifact.tar.gz",
+        "a_c-stdo-v3-common-35fb4824/one.txt",
+        "a_c-stdo-v3-common-35fb4824/two.json"
+      ],
+      "case": "symlink-alias-dist",
+      "filesystem_changed": true,
+      "old_accepted": true,
+      "old_result": {
+        "bytes": 189,
+        "file": "artifact.tar.gz",
+        "format": "deterministic tar.gz; sorted files, fixed0644 uid/gid/mtime0, blank owner names, gzip mtime0",
+        "sha256": "04c06fcfe55e71c22db8e607211e790f768019d620b55c32f0813faaada1b0c8"
+      },
+      "refusal": null,
+      "resolved_output_inside_bundle": true
+    },
+    {
+      "archive_members": [
+        "a_c-stdo-v3-common-35fb4824/one.txt",
+        "a_c-stdo-v3-common-35fb4824/two.json"
+      ],
+      "case": "safe-sibling-dist",
+      "filesystem_changed": true,
+      "old_accepted": true,
+      "old_result": {
+        "bytes": 166,
+        "file": "artifact.tar.gz",
+        "format": "deterministic tar.gz; sorted files, fixed0644 uid/gid/mtime0, blank owner names, gzip mtime0",
+        "sha256": "567921ab2a0a8fd9d2b40f62dea62ee6e4db007c7b650ab5e27efaf8bcacdb03"
+      },
+      "refusal": null,
+      "resolved_output_inside_bundle": false
+    },
+    {
+      "archive_members": [
+        "a_c-stdo-v3-common-35fb4824/one.txt",
+        "a_c-stdo-v3-common-35fb4824/two.json"
+      ],
+      "case": "safe-parent-dist",
+      "filesystem_changed": true,
+      "old_accepted": true,
+      "old_result": {
+        "bytes": 166,
+        "file": "artifact.tar.gz",
+        "format": "deterministic tar.gz; sorted files, fixed0644 uid/gid/mtime0, blank owner names, gzip mtime0",
+        "sha256": "567921ab2a0a8fd9d2b40f62dea62ee6e4db007c7b650ab5e27efaf8bcacdb03"
+      },
+      "refusal": null,
+      "resolved_output_inside_bundle": false
+    },
+    {
+      "archive_members": null,
+      "case": "protected-existing-archive",
+      "filesystem_changed": false,
+      "old_accepted": false,
+      "old_result": null,
+      "refusal": "archive exists; preserve the previous result",
+      "resolved_output_inside_bundle": false
+    },
+    {
+      "archive_members": null,
+      "case": "protected-existing-sidecar",
+      "filesystem_changed": false,
+      "old_accepted": false,
+      "old_result": null,
+      "refusal": "archive checksum already exists",
+      "resolved_output_inside_bundle": false
+    }
+  ],
+  "readiness": {
+    "actual_second_generation_full_build": "not performed during preparation; direct exact formatter input/call-path refusal reproduced, fixed actual rebuild requires separately bound subject",
+    "direct_old_formatter_cases": [
+      {
+        "case": "exact-original",
+        "input_sha256": "114a4580a344daa1cf32bcbc19246ab189c26b3f50b58d47c105ae7a2b54bd1d",
+        "old_accepted": true,
+        "output_sha256": "2dec9cece18e6b9a318a75460b8c8191f75014f92bb4306691e55929b8df859a",
+        "reason": null
+      },
+      {
+        "case": "exact-extracted-portable",
+        "input_sha256": "2dec9cece18e6b9a318a75460b8c8191f75014f92bb4306691e55929b8df859a",
+        "old_accepted": false,
+        "output_sha256": null,
+        "reason": "sealed originating-workspace source-readiness record changed"
+      },
+      {
+        "case": "mutated-portable-prefix",
+        "input_sha256": "b28ef6f15c8fefcdfaa84d467da05dbcd0d56e3a2839689902c16202844f5e28",
+        "old_accepted": false,
+        "output_sha256": null,
+        "reason": "sealed originating-workspace source-readiness record changed"
+      },
+      {
+        "case": "mutated-portable-version",
+        "input_sha256": "894eadcc5f564e223479fdd189b97f32f1ff0a4ffd6f71e76da5cf1f63289e34",
+        "old_accepted": false,
+        "output_sha256": null,
+        "reason": "sealed originating-workspace source-readiness record changed"
+      },
+      {
+        "case": "mutated-portable-open-gate",
+        "input_sha256": "21ccf433f2617a330875c63db71abc9ca83b5d5be055e1ea5c93ba66974940cd",
+        "old_accepted": false,
+        "output_sha256": null,
+        "reason": "sealed originating-workspace source-readiness record changed"
+      },
+      {
+        "case": "portable-with-appended-claim",
+        "input_sha256": "1ca45e500105c8bab85deaa51ea95b3dfc832cbea54f113c888df6b4d86ecdaf",
+        "old_accepted": false,
+        "output_sha256": null,
+        "reason": "sealed originating-workspace source-readiness record changed"
+      }
+    ],
+    "original_raw_sha256": "114a4580a344daa1cf32bcbc19246ab189c26b3f50b58d47c105ae7a2b54bd1d",
+    "portable_raw_sha256": "2dec9cece18e6b9a318a75460b8c8191f75014f92bb4306691e55929b8df859a"
+  },
+  "release_duplicate_source_fields": {
+    "cases": [
+      {
+        "expected": "35fb4824a064a84df5af214a0d0e2da597c18ac6",
+        "field": "source_commit",
+        "gate_result": {
+          "bounded_review_receipts": 1,
+          "claim": "Types, exact source/model/artifact bindings and readable-report custody checked; receipt truth, issuer legitimacy, independence and semantic fitness remain external.",
+          "construction_receipt": "urn:a-c:common:35fb4824:public-construction-account:1"
+        },
+        "old_gate_accepted": true,
+        "operation": "wrong-zero",
+        "outer_inventory_and_checksums_consistent": true,
+        "reason": null,
+        "supplied": "0000000000000000000000000000000000000000"
+      },
+      {
+        "expected": "35fb4824a064a84df5af214a0d0e2da597c18ac6",
+        "field": "source_commit",
+        "gate_result": {
+          "bounded_review_receipts": 1,
+          "claim": "Types, exact source/model/artifact bindings and readable-report custody checked; receipt truth, issuer legitimacy, independence and semantic fitness remain external.",
+          "construction_receipt": "urn:a-c:common:35fb4824:public-construction-account:1"
+        },
+        "old_gate_accepted": true,
+        "operation": "missing",
+        "outer_inventory_and_checksums_consistent": true,
+        "reason": null,
+        "supplied": null
+      },
+      {
+        "expected": "7f2070b61c848b42b4dfb3af1e0ce53869de1aa1",
+        "field": "package_tree",
+        "gate_result": {
+          "bounded_review_receipts": 1,
+          "claim": "Types, exact source/model/artifact bindings and readable-report custody checked; receipt truth, issuer legitimacy, independence and semantic fitness remain external.",
+          "construction_receipt": "urn:a-c:common:35fb4824:public-construction-account:1"
+        },
+        "old_gate_accepted": true,
+        "operation": "wrong-zero",
+        "outer_inventory_and_checksums_consistent": true,
+        "reason": null,
+        "supplied": "0000000000000000000000000000000000000000"
+      },
+      {
+        "expected": "7f2070b61c848b42b4dfb3af1e0ce53869de1aa1",
+        "field": "package_tree",
+        "gate_result": {
+          "bounded_review_receipts": 1,
+          "claim": "Types, exact source/model/artifact bindings and readable-report custody checked; receipt truth, issuer legitimacy, independence and semantic fitness remain external.",
+          "construction_receipt": "urn:a-c:common:35fb4824:public-construction-account:1"
+        },
+        "old_gate_accepted": true,
+        "operation": "missing",
+        "outer_inventory_and_checksums_consistent": true,
+        "reason": null,
+        "supplied": null
+      },
+      {
+        "field": "subject",
+        "old_gate_accepted": false,
+        "operation": "existing-negative-control",
+        "reason": "release-preparation subject/model differs from its public evidence"
+      },
+      {
+        "field": "model",
+        "old_gate_accepted": false,
+        "operation": "existing-negative-control",
+        "reason": "release-preparation subject/model differs from its public evidence"
+      }
+    ],
+    "full_portable_checker_with_wrong_duplicate_fields": "not performed to avoid heavy unchanged carrier decode; direct old invoked gate plus independently consistent outer inventory reproduced omitted field checks",
+    "genuine_gate_passed": true
+  },
+  "scratch": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-common-package-review-4vnbhznh",
+  "status": "preparation_complete"
+}

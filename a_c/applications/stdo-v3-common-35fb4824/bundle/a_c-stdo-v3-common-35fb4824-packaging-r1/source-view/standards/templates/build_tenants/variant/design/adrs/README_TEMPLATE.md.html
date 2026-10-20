@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md</title><style>body{font:14px system-ui;margin:24px;background:#101720;color:#dfeaf4}a{color:#87c7ff}pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5;counter-reset:line}span{display:block}span:before{content:attr(data-line);display:inline-block;width:4em;color:#7392aa;user-select:none}span:target{background:#36481d}</style><h1>standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md</h1><p>Exact frozen source · SHA256 96c415caa86d9e6e5190c97f99f7fd36ae04a075e5c6da51594024728a562aa2</p><pre><span id="L1" data-line="1"># Tenant ADRs</span>
+<span id="L2" data-line="2"></span>
+<span id="L3" data-line="3">This folder holds the Architecture Decision Records that govern this build tenant.</span>
+<span id="L4" data-line="4"></span>
+<span id="L5" data-line="5">ADRs are the durable design memory for tenant-local realization choices. They are the form of `Design` defined in `SPEC_METHOD.md` section 10, Design records, not a separate constitutional layer above design, and not a second requirement surface.</span>
+<span id="L6" data-line="6"></span>
+<span id="L7" data-line="7">## When to write a tenant-local ADR</span>
+<span id="L8" data-line="8"></span>
+<span id="L9" data-line="9">Write an ADR here when the decision:</span>
+<span id="L10" data-line="10"></span>
+<span id="L11" data-line="11">- governs only this build tenant (the path segment(s) under `build_tenants/` that identify this tenant, e.g., `&lt;family&gt;/&lt;variant&gt;` or a single-label tenant path)</span>
+<span id="L12" data-line="12">- chooses a concrete realization that satisfies one or more requirements declared under `specification/requirements/`</span>
+<span id="L13" data-line="13">- introduces a structural or interface choice future maintainers will need to know about</span>
+<span id="L14" data-line="14">- supersedes a prior tenant-local decision</span>
+<span id="L15" data-line="15"></span>
+<span id="L16" data-line="16">If the decision applies across two or more tenants, write the ADR at `build_tenants/common/design/adrs/` instead.</span>
+<span id="L17" data-line="17"></span>
+<span id="L18" data-line="18">If the decision changes constitutional truth (intent / product / requirement), it does not belong in an ADR; re-enter through `SPEC_METHOD.md` section 4 intake triage and reprice the appropriate constitutional layer first.</span>
+<span id="L19" data-line="19"></span>
+<span id="L20" data-line="20">## File shape</span>
+<span id="L21" data-line="21"></span>
+<span id="L22" data-line="22">Filename: `ADR-&lt;local-id&gt;-short-slug.md`</span>
+<span id="L23" data-line="23"></span>
+<span id="L24" data-line="24">The local ID is unique within this `adrs/` directory. Numeric IDs (`ADR-001-...`, `ADR-002-...`) are the default. Namespace-prefixed IDs (`ADR-GM-005-...`) are allowed when this tenant&#x27;s design surface already uses them; pick one convention and stay with it.</span>
+<span id="L25" data-line="25"></span>
+<span id="L26" data-line="26">Each ADR carries the frontmatter required by `SPEC_METHOD.md` section 10, Design records:</span>
+<span id="L27" data-line="27"></span>
+<span id="L28" data-line="28">- `Status:` `active` | `superseded` | `retired`</span>
+<span id="L29" data-line="29">- `Implements:` REQ-* IDs this ADR makes true</span>
+<span id="L30" data-line="30">- `Derives from:` INT-* or strategy document that motivated the decision</span>
+<span id="L31" data-line="31">- `Supersedes:` prior ADR or doctrine this replaces (when applicable)</span>
+<span id="L32" data-line="32">- `Superseded by:` successor ADR (when `Status:` is `superseded`)</span>
+<span id="L33" data-line="33">- `Retained special case:` when earlier behavior is intentionally retained as a special case (when applicable)</span>
+<span id="L34" data-line="34"></span>
+<span id="L35" data-line="35">See `ADR_TEMPLATE.md` in this directory for the canonical body shape.</span>
+<span id="L36" data-line="36"></span>
+<span id="L37" data-line="37">## Boundary rule</span>
+<span id="L38" data-line="38"></span>
+<span id="L39" data-line="39">One ADR per decision boundary, not per requirement file. The ADR question is: *what design choice makes these acceptance criteria true?* Multiple requirements may share one ADR; one requirement may be implemented by multiple ADRs.</span>
+<span id="L40" data-line="40"></span>
+<span id="L41" data-line="41">## Supersession</span>
+<span id="L42" data-line="42"></span>
+<span id="L43" data-line="43">When a later ADR supersedes this one, set `Status: superseded` and `Superseded by:` to the successor ADR&#x27;s local ID, and leave the file in place. ADRs are append-only history; do not delete superseded ADRs unless they are being explicitly retired. `SPEC_METHOD.md` section 10, Design records, owns these rules.</span>
+<span id="L44" data-line="44"></span>
+<span id="L45" data-line="45">## Optional registry</span>
+<span id="L46" data-line="46"></span>
+<span id="L47" data-line="47">A `REGISTRY.md` index alongside the ADR files is recommended for tooling and review but not required. If you maintain one, treat it as a read model over the ADR files; the ADR files remain the accepted design authority.</span></pre></html>

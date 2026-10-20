@@ -1,0 +1,64 @@
+{
+  "schema": "codex.platform-review-publication.closed-return/1",
+  "producer_task": "/root/ac_fd_final_design_review",
+  "role": "Writer",
+  "operation": "Publish already closed selected-a881 delta review and provenance only",
+  "state": "publication_complete",
+  "manifest": {
+    "path": "manifest.json",
+    "sha256": "88cb7792241e24f19444a65bbf676fed1c29331e25e77868be08f005496f10bc",
+    "bytes": 595
+  },
+  "review": {
+    "path": "REVIEW.md",
+    "sha256": "2f660f3659d13d658589f5562cfb47e36793c21aee9fb4f0d66ba7e8b88b5b8e",
+    "bytes": 5641
+  },
+  "provenance": {
+    "path": "PROVENANCE.json",
+    "sha256": "581b0c4d7c33703c78b6e8b980756ad3805500a26959920a2871a5bc156d46ef",
+    "bytes": 19611
+  },
+  "assessed_subject_sha256": "a8817031fa078188f764e80bdda0d0625aefb0885de04390e177efc74dd539ba",
+  "retained_closed_results": [
+    {
+      "predicate": "Required whole-family contraction/projection evidence is supplied",
+      "core_value": "satisfied"
+    },
+    {
+      "predicate": "Required bounded foundation-selection evidence and trade-off resolution are supplied",
+      "core_value": "satisfied"
+    },
+    {
+      "predicate": "Changed Writer/Context realization relations conserve WHAT and declared authority/effect boundaries",
+      "core_value": "satisfied",
+      "limit": "design assessment only"
+    },
+    {
+      "predicate": "Public wire/catalog bytes remain preserved",
+      "core_value": "satisfied",
+      "limit": "bounded byte evidence"
+    },
+    {
+      "predicate": "Conjunction contract consistently preserves required-constraint counterexamples",
+      "core_value": "falsified"
+    },
+    {
+      "predicate": "Current decision_complete(B)",
+      "core_value": "falsified"
+    },
+    {
+      "predicate": "Current co_evolution_admissible(B)",
+      "core_value": "falsified",
+      "relation": "governing biconditional"
+    }
+  ],
+  "new_assessment_during_publication": false,
+  "new_conjunction_candidate_acquisition": false,
+  "Product_publicRuntime_producer": false,
+  "owner_disposition": null,
+  "accepted_Prime": null,
+  "Product_acceptance": null,
+  "runtime_qualification": null,
+  "next_action": "STOP; this record supplies no continuation authority"
+}

@@ -1,0 +1,53 @@
+{
+  "status": "CLOSED",
+  "work_result": "candidate_ready",
+  "candidate_available_core_value": "satisfied",
+  "source_after": {
+    "build_tenants/graphify/code/ac_support_core.py": "e321ed11f66db88a9d965331bf4069d8a4532e6b31df38d6adf8539b4cf25d6b",
+    "build_tenants/graphify/test_env/test_ac_support_core.py": "482531eb8dfa43f44bc5ca4f3d34d5a72c93db4f64bfca6362d943d4dd56174a",
+    "build_tenants/graphify/test_env/test_ac_support_interfaces.py": "01fcb236694e800dab49e58a530749c3c68ec7d5d13392eee9bc47d7f0e5bcd4"
+  },
+  "scope": "Bounded Worker repair; no independent review, semantic acceptance, Product acceptance/release, benefit or full-calculus claim.",
+  "first_failures": {
+    "tests": 7,
+    "failures": 9,
+    "subprocess_exit": 1,
+    "retained": "first-failure"
+  },
+  "focused_after": {
+    "tests": 75,
+    "failures": 0,
+    "skips": 0,
+    "exit": 0,
+    "retained": "focused-after"
+  },
+  "typing": {
+    "normal_imports": true,
+    "strict": true,
+    "files": 3,
+    "exit": 0,
+    "retained": "typing"
+  },
+  "public_after": {
+    "calls": 38,
+    "registered_processes": 4,
+    "all_public_calls_exit_zero": true
+  },
+  "diff_check_exit": 0,
+  "owned_sources_stable": true,
+  "unrelated_source_drift": {},
+  "remaining_risks": [
+    "Independent combined FD delta review and final integration remain with Root.",
+    "Controlled local fixture producer assertions do not establish F_P semantic correctness, actor usability, acceptance or release.",
+    "No public conjunction qualification was manufactured; existing bounded core conjunction/refresh controls passed."
+  ],
+  "mutation_scope": [
+    "build_tenants/graphify/code/ac_support_core.py",
+    "build_tenants/graphify/test_env/test_ac_support_core.py",
+    "build_tenants/graphify/test_env/test_ac_support_interfaces.py",
+    ".ai-workspace/qualification/t008/review-fixes-001/judgments/**",
+    "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-judgments-8bcbuu85/**"
+  ],
+  "no_git_mutation": true,
+  "stop_after_result": true
+}

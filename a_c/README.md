@@ -16,15 +16,20 @@ The exact calculus remains owned by the selected published STDO standard; this
 project does not create a competing definition of `a_c`.
 
 The additional [F_D support toolset](specification/PRODUCT.md#f_d-support-for-f_p-development-actors)
-is specified for F_P Executives, Workers and Reviewers. STDO3.0 owns the
-methodology; these tools support its exact caller-selected contracts through
-acquisition, context assembly, deterministic checks, dispatch/capture and
-evidence operations. The [requirements and source-owner map](specification/requirements/README.md#deterministic-support-tools)
-record the provisional common V3 derivation reference without adopting it as
-this Product's installed builder or a runtime dependency. [T-007](.ai-workspace/tickets/active/T-007-executive-lifecycle-tooling.md)
-is specification work only: new tenant design, public interfaces,
-implementation and qualification are pending. Existing scripts are building
-blocks, and frozen methodology models are not a live whole-workspace index.
+has a provisional public CLI/MCP implementation in the existing Graphify tenant.
+STDO3.0 owns the methodology; a_c supports its exact caller-selected contracts.
+The [current repair handoff](.ai-workspace/qualification/t008/review-fixes-001/README.md)
+records seven implementation repairs, closed nonauthor reviews and fresh
+303-test integration. [T-009](.ai-workspace/tickets/completed/T-009-review-repairs.md)
+closes that bounded repair work; [T-008](.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md#current-review-repairs--t-009)
+remains active for qualification, retaining partial/failed actor trials.
+A [separate Claude-direct correction](dogfood/stdo-v3-generation-rc9-review-correction/README.md)
+is an unaccepted proposal; the four frozen RC9 representations are unchanged.
+[T-007](.ai-workspace/tickets/active/T-007-executive-lifecycle-tooling.md)
+remains the historical specification-only increment. The installed builder,
+Product composition and method binding are unchanged. Accepted-result benefit
+remains Deferred/unqualified, and frozen methodology models are not a maintained
+whole-workspace index.
 
 This is a development candidate, with no Product acceptance or release claim.
 See the tenant README for runnable commands and the bounded qualification claim.

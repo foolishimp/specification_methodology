@@ -1,0 +1,568 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>standards/schemas/product-definition.schema.json</title><style>body{font:14px system-ui;margin:24px;background:#101720;color:#dfeaf4}a{color:#87c7ff}pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5;counter-reset:line}span{display:block}span:before{content:attr(data-line);display:inline-block;width:4em;color:#7392aa;user-select:none}span:target{background:#36481d}</style><h1>standards/schemas/product-definition.schema.json</h1><p>Exact frozen source · SHA256 e0a3b544dae6c83bf941096b440700d02fa988fd2767f3b4ab297a1a03f67abf</p><pre><span id="L1" data-line="1">{</span>
+<span id="L2" data-line="2">  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,</span>
+<span id="L3" data-line="3">  &quot;$id&quot;: &quot;urn:stdo:schema:product-definition:3&quot;,</span>
+<span id="L4" data-line="4">  &quot;title&quot;: &quot;STDO Product Definition Overlay&quot;,</span>
+<span id="L5" data-line="5">  &quot;description&quot;: &quot;Layout-neutral exact STDO basis, identity, authority-location, bounded-context disambiguation, collective reference-frame basis, realization, work-carrier, bootstrap, and composition bindings for one STDO-defined product WHAT.&quot;,</span>
+<span id="L6" data-line="6">  &quot;type&quot;: &quot;object&quot;,</span>
+<span id="L7" data-line="7">  &quot;required&quot;: [</span>
+<span id="L8" data-line="8">    &quot;$schema&quot;,</span>
+<span id="L9" data-line="9">    &quot;kind&quot;,</span>
+<span id="L10" data-line="10">    &quot;product&quot;,</span>
+<span id="L11" data-line="11">    &quot;constitution&quot;,</span>
+<span id="L12" data-line="12">    &quot;local_constitution&quot;,</span>
+<span id="L13" data-line="13">    &quot;reference_frame_bases&quot;,</span>
+<span id="L14" data-line="14">    &quot;what&quot;,</span>
+<span id="L15" data-line="15">    &quot;how&quot;,</span>
+<span id="L16" data-line="16">    &quot;ticketing&quot;,</span>
+<span id="L17" data-line="17">    &quot;composition&quot;</span>
+<span id="L18" data-line="18">  ],</span>
+<span id="L19" data-line="19">  &quot;properties&quot;: {</span>
+<span id="L20" data-line="20">    &quot;$schema&quot;: {</span>
+<span id="L21" data-line="21">      &quot;$ref&quot;: &quot;#/$defs/referenceUri&quot;</span>
+<span id="L22" data-line="22">    },</span>
+<span id="L23" data-line="23">    &quot;kind&quot;: {</span>
+<span id="L24" data-line="24">      &quot;const&quot;: &quot;stdo.product-definition&quot;</span>
+<span id="L25" data-line="25">    },</span>
+<span id="L26" data-line="26">    &quot;product&quot;: {</span>
+<span id="L27" data-line="27">      &quot;type&quot;: &quot;object&quot;,</span>
+<span id="L28" data-line="28">      &quot;required&quot;: [</span>
+<span id="L29" data-line="29">        &quot;definition_id&quot;,</span>
+<span id="L30" data-line="30">        &quot;name&quot;,</span>
+<span id="L31" data-line="31">        &quot;source_project&quot;,</span>
+<span id="L32" data-line="32">        &quot;bounded_context&quot;</span>
+<span id="L33" data-line="33">      ],</span>
+<span id="L34" data-line="34">      &quot;properties&quot;: {</span>
+<span id="L35" data-line="35">        &quot;definition_id&quot;: {</span>
+<span id="L36" data-line="36">          &quot;$ref&quot;: &quot;#/$defs/identityUri&quot;</span>
+<span id="L37" data-line="37">        },</span>
+<span id="L38" data-line="38">        &quot;name&quot;: {</span>
+<span id="L39" data-line="39">          &quot;type&quot;: &quot;string&quot;,</span>
+<span id="L40" data-line="40">          &quot;minLength&quot;: 1</span>
+<span id="L41" data-line="41">        },</span>
+<span id="L42" data-line="42">        &quot;source_project&quot;: {</span>
+<span id="L43" data-line="43">          &quot;$ref&quot;: &quot;#/$defs/referenceUri&quot;</span>
+<span id="L44" data-line="44">        },</span>
+<span id="L45" data-line="45">        &quot;bounded_context&quot;: {</span>
+<span id="L46" data-line="46">          &quot;description&quot;: &quot;Optional enclosing bounded context for this product WHAT. It is not an exhaustive registry of subordinate, peer, composed, tenant, user, or runtime contexts.&quot;,</span>
+<span id="L47" data-line="47">          &quot;oneOf&quot;: [</span>
+<span id="L48" data-line="48">            {</span>
+<span id="L49" data-line="49">              &quot;type&quot;: &quot;null&quot;</span>
+<span id="L50" data-line="50">            },</span>
+<span id="L51" data-line="51">            {</span>
+<span id="L52" data-line="52">              &quot;type&quot;: &quot;object&quot;,</span>
+<span id="L53" data-line="53">              &quot;required&quot;: [</span>
+<span id="L54" data-line="54">                &quot;id&quot;,</span>
+<span id="L55" data-line="55">                &quot;definition&quot;</span>
+<span id="L56" data-line="56">              ],</span>
+<span id="L57" data-line="57">              &quot;properties&quot;: {</span>
+<span id="L58" data-line="58">                &quot;id&quot;: {</span>
+<span id="L59" data-line="59">                  &quot;$ref&quot;: &quot;#/$defs/identityUri&quot;</span>
+<span id="L60" data-line="60">                },</span>
+<span id="L61" data-line="61">                &quot;definition&quot;: {</span>
+<span id="L62" data-line="62">                  &quot;$ref&quot;: &quot;#/$defs/referenceUri&quot;</span>
+<span id="L63" data-line="63">                }</span>
+<span id="L64" data-line="64">              },</span>
+<span id="L65" data-line="65">              &quot;additionalProperties&quot;: false</span>
+<span id="L66" data-line="66">            }</span>
+<span id="L67" data-line="67">          ]</span>
+<span id="L68" data-line="68">        }</span>
+<span id="L69" data-line="69">      },</span>
+<span id="L70" data-line="70">      &quot;additionalProperties&quot;: false</span>
+<span id="L71" data-line="71">    },</span>
+<span id="L72" data-line="72">    &quot;constitution&quot;: {</span>
+<span id="L73" data-line="73">      &quot;type&quot;: &quot;object&quot;,</span>
+<span id="L74" data-line="74">      &quot;required&quot;: [</span>
+<span id="L75" data-line="75">        &quot;stdo&quot;,</span>
+<span id="L76" data-line="76">        &quot;additional_authorities&quot;,</span>
+<span id="L77" data-line="77">        &quot;entrypoints&quot;,</span>
+<span id="L78" data-line="78">        &quot;agent_bootstrap&quot;</span>
+<span id="L79" data-line="79">      ],</span>
+<span id="L80" data-line="80">      &quot;properties&quot;: {</span>
+<span id="L81" data-line="81">        &quot;stdo&quot;: {</span>
+<span id="L82" data-line="82">          &quot;$ref&quot;: &quot;#/$defs/stdoBinding&quot;</span>
+<span id="L83" data-line="83">        },</span>
+<span id="L84" data-line="84">        &quot;additional_authorities&quot;: {</span>
+<span id="L85" data-line="85">          &quot;$ref&quot;: &quot;#/$defs/references&quot;</span>
+<span id="L86" data-line="86">        },</span>
+<span id="L87" data-line="87">        &quot;entrypoints&quot;: {</span>
+<span id="L88" data-line="88">          &quot;type&quot;: &quot;array&quot;,</span>
+<span id="L89" data-line="89">          &quot;minItems&quot;: 1,</span>
+<span id="L90" data-line="90">          &quot;items&quot;: {</span>
+<span id="L91" data-line="91">            &quot;$ref&quot;: &quot;#/$defs/constitutionalEntrypoint&quot;</span>
+<span id="L92" data-line="92">          },</span>
+<span id="L93" data-line="93">          &quot;uniqueItems&quot;: true</span>
+<span id="L94" data-line="94">        },</span>
+<span id="L95" data-line="95">        &quot;agent_bootstrap&quot;: {</span>
+<span id="L96" data-line="96">          &quot;$ref&quot;: &quot;#/$defs/agentBootstrap&quot;</span>
+<span id="L97" data-line="97">        }</span>
+<span id="L98" data-line="98">      },</span>
+<span id="L99" data-line="99">      &quot;additionalProperties&quot;: false</span>
+<span id="L100" data-line="100">    },</span>
+<span id="L101" data-line="101">    &quot;local_constitution&quot;: {</span>
+<span id="L102" data-line="102">      &quot;type&quot;: &quot;object&quot;,</span>
+<span id="L103" data-line="103">      &quot;required&quot;: [</span>
+<span id="L104" data-line="104">        &quot;axioms&quot;,</span>
+<span id="L105" data-line="105">        &quot;overrides&quot;,</span>
+<span id="L106" data-line="106">        &quot;disambiguations&quot;</span>
+<span id="L107" data-line="107">      ],</span>
+<span id="L108" data-line="108">      &quot;properties&quot;: {</span>
+<span id="L109" data-line="109">        &quot;axioms&quot;: {</span>
+<span id="L110" data-line="110">          &quot;type&quot;: &quot;array&quot;,</span>
+<span id="L111" data-line="111">          &quot;items&quot;: {</span>
+<span id="L112" data-line="112">            &quot;$ref&quot;: &quot;#/$defs/localAxiom&quot;</span>
+<span id="L113" data-line="113">          },</span>
+<span id="L114" data-line="114">          &quot;uniqueItems&quot;: true</span>
+<span id="L115" data-line="115">        },</span>
+<span id="L116" data-line="116">        &quot;overrides&quot;: {</span>
+<span id="L117" data-line="117">          &quot;type&quot;: &quot;array&quot;,</span>
+<span id="L118" data-line="118">          &quot;items&quot;: {</span>
+<span id="L119" data-line="119">            &quot;$ref&quot;: &quot;#/$defs/localOverride&quot;</span>
+<span id="L120" data-line="120">          },</span>
+<span id="L121" data-line="121">          &quot;uniqueItems&quot;: true</span>
+<span id="L122" data-line="122">        },</span>
+<span id="L123" data-line="123">        &quot;disambiguations&quot;: {</span>
+<span id="L124" data-line="124">          &quot;type&quot;: &quot;array&quot;,</span>
+<span id="L125" data-line="125">          &quot;items&quot;: {</span>
+<span id="L126" data-line="126">            &quot;$ref&quot;: &quot;#/$defs/localDisambiguation&quot;</span>
+<span id="L127" data-line="127">          },</span>
+<span id="L128" data-line="128">          &quot;uniqueItems&quot;: true</span>
+<span id="L129" data-line="129">        }</span>
+<span id="L130" data-line="130">      },</span>
+<span id="L131" data-line="131">      &quot;additionalProperties&quot;: false</span>
+<span id="L132" data-line="132">    },</span>
+<span id="L133" data-line="133">    &quot;reference_frame_bases&quot;: {</span>
+<span id="L134" data-line="134">      &quot;type&quot;: &quot;array&quot;,</span>
+<span id="L135" data-line="135">      &quot;minItems&quot;: 1,</span>
+<span id="L136" data-line="136">      &quot;items&quot;: {</span>
+<span id="L137" data-line="137">        &quot;$ref&quot;: &quot;#/$defs/referenceFrameBasis&quot;</span>
+<span id="L138" data-line="138">      },</span>
+<span id="L139" data-line="139">      &quot;uniqueItems&quot;: true</span>
+<span id="L140" data-line="140">    },</span>
+<span id="L141" data-line="141">    &quot;what&quot;: {</span>
+<span id="L142" data-line="142">      &quot;type&quot;: &quot;object&quot;,</span>
+<span id="L143" data-line="143">      &quot;required&quot;: [</span>
+<span id="L144" data-line="144">        &quot;intent&quot;,</span>
+<span id="L145" data-line="145">        &quot;product&quot;,</span>
+<span id="L146" data-line="146">        &quot;specification&quot;</span>
+<span id="L147" data-line="147">      ],</span>
+<span id="L148" data-line="148">      &quot;properties&quot;: {</span>
+<span id="L149" data-line="149">        &quot;intent&quot;: {</span>
+<span id="L150" data-line="150">          &quot;$ref&quot;: &quot;#/$defs/referenceUri&quot;</span>
+<span id="L151" data-line="151">        },</span>
+<span id="L152" data-line="152">        &quot;product&quot;: {</span>
+<span id="L153" data-line="153">          &quot;$ref&quot;: &quot;#/$defs/referenceUri&quot;</span>
+<span id="L154" data-line="154">        },</span>
+<span id="L155" data-line="155">        &quot;specification&quot;: {</span>
+<span id="L156" data-line="156">          &quot;$ref&quot;: &quot;#/$defs/nonEmptyReferences&quot;</span>
+<span id="L157" data-line="157">        }</span>
+<span id="L158" data-line="158">      },</span>
+<span id="L159" data-line="159">      &quot;additionalProperties&quot;: false</span>
+<span id="L160" data-line="160">    },</span>
+<span id="L161" data-line="161">    &quot;how&quot;: {</span>
+<span id="L162" data-line="162">      &quot;type&quot;: &quot;object&quot;,</span>
+<span id="L163" data-line="163">      &quot;required&quot;: [</span>
+<span id="L164" data-line="164">        &quot;common&quot;,</span>
+<span id="L165" data-line="165">        &quot;build_tenants&quot;</span>
+<span id="L166" data-line="166">      ],</span>
+<span id="L167" data-line="167">      &quot;properties&quot;: {</span>
+<span id="L168" data-line="168">        &quot;common&quot;: {</span>
+<span id="L169" data-line="169">          &quot;$ref&quot;: &quot;#/$defs/references&quot;</span>
+<span id="L170" data-line="170">        },</span>
+<span id="L171" data-line="171">        &quot;build_tenants&quot;: {</span>
+<span id="L172" data-line="172">          &quot;type&quot;: &quot;array&quot;,</span>
+<span id="L173" data-line="173">          &quot;minItems&quot;: 1,</span>
+<span id="L174" data-line="174">          &quot;items&quot;: {</span>
+<span id="L175" data-line="175">            &quot;$ref&quot;: &quot;#/$defs/buildTenant&quot;</span>
+<span id="L176" data-line="176">          },</span>
+<span id="L177" data-line="177">          &quot;uniqueItems&quot;: true</span>
+<span id="L178" data-line="178">        }</span>
+<span id="L179" data-line="179">      },</span>
+<span id="L180" data-line="180">      &quot;additionalProperties&quot;: false</span>
+<span id="L181" data-line="181">    },</span>
+<span id="L182" data-line="182">    &quot;ticketing&quot;: {</span>
+<span id="L183" data-line="183">      &quot;type&quot;: &quot;object&quot;,</span>
+<span id="L184" data-line="184">      &quot;required&quot;: [</span>
+<span id="L185" data-line="185">        &quot;goals&quot;,</span>
+<span id="L186" data-line="186">        &quot;tickets&quot;,</span>
+<span id="L187" data-line="187">        &quot;comments&quot;</span>
+<span id="L188" data-line="188">      ],</span>
+<span id="L189" data-line="189">      &quot;properties&quot;: {</span>
+<span id="L190" data-line="190">        &quot;goals&quot;: {</span>
+<span id="L191" data-line="191">          &quot;$ref&quot;: &quot;#/$defs/referenceUri&quot;</span>
+<span id="L192" data-line="192">        },</span>
+<span id="L193" data-line="193">        &quot;tickets&quot;: {</span>
+<span id="L194" data-line="194">          &quot;type&quot;: &quot;object&quot;,</span>
+<span id="L195" data-line="195">          &quot;required&quot;: [</span>
+<span id="L196" data-line="196">            &quot;root&quot;,</span>
+<span id="L197" data-line="197">            &quot;lanes&quot;</span>
+<span id="L198" data-line="198">          ],</span>
+<span id="L199" data-line="199">          &quot;properties&quot;: {</span>
+<span id="L200" data-line="200">            &quot;root&quot;: {</span>
+<span id="L201" data-line="201">              &quot;$ref&quot;: &quot;#/$defs/referenceUri&quot;</span>
+<span id="L202" data-line="202">            },</span>
+<span id="L203" data-line="203">            &quot;lanes&quot;: {</span>
+<span id="L204" data-line="204">              &quot;type&quot;: &quot;object&quot;,</span>
+<span id="L205" data-line="205">              &quot;required&quot;: [</span>
+<span id="L206" data-line="206">                &quot;backlog&quot;,</span>
+<span id="L207" data-line="207">                &quot;active&quot;,</span>
+<span id="L208" data-line="208">                &quot;completed&quot;</span>
+<span id="L209" data-line="209">              ],</span>
+<span id="L210" data-line="210">              &quot;properties&quot;: {</span>
+<span id="L211" data-line="211">                &quot;backlog&quot;: {</span>
+<span id="L212" data-line="212">                  &quot;$ref&quot;: &quot;#/$defs/referenceUri&quot;</span>
+<span id="L213" data-line="213">                },</span>
+<span id="L214" data-line="214">                &quot;active&quot;: {</span>
+<span id="L215" data-line="215">                  &quot;$ref&quot;: &quot;#/$defs/referenceUri&quot;</span>
+<span id="L216" data-line="216">                },</span>
+<span id="L217" data-line="217">                &quot;completed&quot;: {</span>
+<span id="L218" data-line="218">                  &quot;$ref&quot;: &quot;#/$defs/referenceUri&quot;</span>
+<span id="L219" data-line="219">                }</span>
+<span id="L220" data-line="220">              },</span>
+<span id="L221" data-line="221">              &quot;additionalProperties&quot;: false</span>
+<span id="L222" data-line="222">            }</span>
+<span id="L223" data-line="223">          },</span>
+<span id="L224" data-line="224">          &quot;additionalProperties&quot;: false</span>
+<span id="L225" data-line="225">        },</span>
+<span id="L226" data-line="226">        &quot;comments&quot;: {</span>
+<span id="L227" data-line="227">          &quot;$ref&quot;: &quot;#/$defs/carrierRoot&quot;</span>
+<span id="L228" data-line="228">        },</span>
+<span id="L229" data-line="229">        &quot;sprints&quot;: {</span>
+<span id="L230" data-line="230">          &quot;$ref&quot;: &quot;#/$defs/carrierRoot&quot;</span>
+<span id="L231" data-line="231">        }</span>
+<span id="L232" data-line="232">      },</span>
+<span id="L233" data-line="233">      &quot;additionalProperties&quot;: false</span>
+<span id="L234" data-line="234">    },</span>
+<span id="L235" data-line="235">    &quot;composition&quot;: {</span>
+<span id="L236" data-line="236">      &quot;type&quot;: &quot;array&quot;,</span>
+<span id="L237" data-line="237">      &quot;items&quot;: {</span>
+<span id="L238" data-line="238">        &quot;$ref&quot;: &quot;#/$defs/compositionEdge&quot;</span>
+<span id="L239" data-line="239">      },</span>
+<span id="L240" data-line="240">      &quot;uniqueItems&quot;: true</span>
+<span id="L241" data-line="241">    }</span>
+<span id="L242" data-line="242">  },</span>
+<span id="L243" data-line="243">  &quot;additionalProperties&quot;: false,</span>
+<span id="L244" data-line="244">  &quot;$defs&quot;: {</span>
+<span id="L245" data-line="245">    &quot;identityUri&quot;: {</span>
+<span id="L246" data-line="246">      &quot;type&quot;: &quot;string&quot;,</span>
+<span id="L247" data-line="247">      &quot;format&quot;: &quot;uri&quot;,</span>
+<span id="L248" data-line="248">      &quot;minLength&quot;: 1,</span>
+<span id="L249" data-line="249">      &quot;description&quot;: &quot;URI syntax annotation. Conformance requires an assertion-capable URI validator in addition to portable Draft 2020-12 structural validation.&quot;</span>
+<span id="L250" data-line="250">    },</span>
+<span id="L251" data-line="251">    &quot;referenceUri&quot;: {</span>
+<span id="L252" data-line="252">      &quot;type&quot;: &quot;string&quot;,</span>
+<span id="L253" data-line="253">      &quot;format&quot;: &quot;uri-reference&quot;,</span>
+<span id="L254" data-line="254">      &quot;minLength&quot;: 1,</span>
+<span id="L255" data-line="255">      &quot;description&quot;: &quot;URI-reference syntax annotation. Conformance requires an assertion-capable URI-reference validator in addition to portable Draft 2020-12 structural validation.&quot;</span>
+<span id="L256" data-line="256">    },</span>
+<span id="L257" data-line="257">    &quot;references&quot;: {</span>
+<span id="L258" data-line="258">      &quot;type&quot;: &quot;array&quot;,</span>
+<span id="L259" data-line="259">      &quot;items&quot;: {</span>
+<span id="L260" data-line="260">        &quot;$ref&quot;: &quot;#/$defs/referenceUri&quot;</span>
+<span id="L261" data-line="261">      },</span>
+<span id="L262" data-line="262">      &quot;uniqueItems&quot;: true</span>
+<span id="L263" data-line="263">    },</span>
+<span id="L264" data-line="264">    &quot;nonEmptyReferences&quot;: {</span>
+<span id="L265" data-line="265">      &quot;type&quot;: &quot;array&quot;,</span>
+<span id="L266" data-line="266">      &quot;minItems&quot;: 1,</span>
+<span id="L267" data-line="267">      &quot;items&quot;: {</span>
+<span id="L268" data-line="268">        &quot;$ref&quot;: &quot;#/$defs/referenceUri&quot;</span>
+<span id="L269" data-line="269">      },</span>
+<span id="L270" data-line="270">      &quot;uniqueItems&quot;: true</span>
+<span id="L271" data-line="271">    },</span>
+<span id="L272" data-line="272">    &quot;sha256&quot;: {</span>
+<span id="L273" data-line="273">      &quot;type&quot;: &quot;string&quot;,</span>
+<span id="L274" data-line="274">      &quot;pattern&quot;: &quot;^[0-9a-f]{64}$&quot;</span>
+<span id="L275" data-line="275">    },</span>
+<span id="L276" data-line="276">    &quot;stdoChannelUri&quot;: {</span>
+<span id="L277" data-line="277">      &quot;allOf&quot;: [</span>
+<span id="L278" data-line="278">        {</span>
+<span id="L279" data-line="279">          &quot;$ref&quot;: &quot;#/$defs/identityUri&quot;</span>
+<span id="L280" data-line="280">        },</span>
+<span id="L281" data-line="281">        {</span>
+<span id="L282" data-line="282">          &quot;pattern&quot;: &quot;^stdo://channels/(?![^/]*-rc\\.)[0-9A-Za-z][0-9A-Za-z._+-]*/?$&quot;</span>
+<span id="L283" data-line="283">        }</span>
+<span id="L284" data-line="284">      ]</span>
+<span id="L285" data-line="285">    },</span>
+<span id="L286" data-line="286">    &quot;stdoReleaseUri&quot;: {</span>
+<span id="L287" data-line="287">      &quot;allOf&quot;: [</span>
+<span id="L288" data-line="288">        {</span>
+<span id="L289" data-line="289">          &quot;$ref&quot;: &quot;#/$defs/identityUri&quot;</span>
+<span id="L290" data-line="290">        },</span>
+<span id="L291" data-line="291">        {</span>
+<span id="L292" data-line="292">          &quot;pattern&quot;: &quot;^stdo://releases/v[0-9A-Za-z][0-9A-Za-z._+-]*-rc\\.[1-9][0-9]*/?$&quot;</span>
+<span id="L293" data-line="293">        }</span>
+<span id="L294" data-line="294">      ]</span>
+<span id="L295" data-line="295">    },</span>
+<span id="L296" data-line="296">    &quot;stdoBinding&quot;: {</span>
+<span id="L297" data-line="297">      &quot;type&quot;: &quot;object&quot;,</span>
+<span id="L298" data-line="298">      &quot;required&quot;: [</span>
+<span id="L299" data-line="299">        &quot;source&quot;,</span>
+<span id="L300" data-line="300">        &quot;selector&quot;,</span>
+<span id="L301" data-line="301">        &quot;basis&quot;</span>
+<span id="L302" data-line="302">      ],</span>
+<span id="L303" data-line="303">      &quot;properties&quot;: {</span>
+<span id="L304" data-line="304">        &quot;source&quot;: {</span>
+<span id="L305" data-line="305">          &quot;type&quot;: &quot;object&quot;,</span>
+<span id="L306" data-line="306">          &quot;required&quot;: [</span>
+<span id="L307" data-line="307">            &quot;repository&quot;</span>
+<span id="L308" data-line="308">          ],</span>
+<span id="L309" data-line="309">          &quot;properties&quot;: {</span>
+<span id="L310" data-line="310">            &quot;repository&quot;: {</span>
+<span id="L311" data-line="311">              &quot;$ref&quot;: &quot;#/$defs/referenceUri&quot;,</span>
+<span id="L312" data-line="312">              &quot;description&quot;: &quot;Git repository carrying the selected STDO release line and immutable RC cuts.&quot;</span>
+<span id="L313" data-line="313">            }</span>
+<span id="L314" data-line="314">          },</span>
+<span id="L315" data-line="315">          &quot;additionalProperties&quot;: false</span>
+<span id="L316" data-line="316">        },</span>
+<span id="L317" data-line="317">        &quot;selector&quot;: {</span>
+<span id="L318" data-line="318">          &quot;$ref&quot;: &quot;#/$defs/stdoChannelUri&quot;,</span>
+<span id="L319" data-line="319">          &quot;description&quot;: &quot;Mutable version-line discovery selector carried by an annotated Git tag. It is never operative constitutional authority without digest-bound explicit resolution and adoption.&quot;</span>
+<span id="L320" data-line="320">        },</span>
+<span id="L321" data-line="321">        &quot;basis&quot;: {</span>
+<span id="L322" data-line="322">          &quot;type&quot;: &quot;object&quot;,</span>
+<span id="L323" data-line="323">          &quot;required&quot;: [</span>
+<span id="L324" data-line="324">            &quot;uri&quot;,</span>
+<span id="L325" data-line="325">            &quot;manifest_sha256&quot;</span>
+<span id="L326" data-line="326">          ],</span>
+<span id="L327" data-line="327">          &quot;properties&quot;: {</span>
+<span id="L328" data-line="328">            &quot;uri&quot;: {</span>
+<span id="L329" data-line="329">              &quot;$ref&quot;: &quot;#/$defs/stdoReleaseUri&quot;,</span>
+<span id="L330" data-line="330">              &quot;description&quot;: &quot;Exact immutable installed STDO cut selected by this Product Definition.&quot;</span>
+<span id="L331" data-line="331">            },</span>
+<span id="L332" data-line="332">            &quot;manifest_sha256&quot;: {</span>
+<span id="L333" data-line="333">              &quot;$ref&quot;: &quot;#/$defs/sha256&quot;,</span>
+<span id="L334" data-line="334">              &quot;description&quot;: &quot;Digest of the deterministic installed-release manifest carrying tag, commit, tree, and complete distribution identity.&quot;</span>
+<span id="L335" data-line="335">            }</span>
+<span id="L336" data-line="336">          },</span>
+<span id="L337" data-line="337">          &quot;additionalProperties&quot;: false</span>
+<span id="L338" data-line="338">        }</span>
+<span id="L339" data-line="339">      },</span>
+<span id="L340" data-line="340">      &quot;additionalProperties&quot;: false</span>
+<span id="L341" data-line="341">    },</span>
+<span id="L342" data-line="342">    &quot;constitutionalEntrypoint&quot;: {</span>
+<span id="L343" data-line="343">      &quot;type&quot;: &quot;object&quot;,</span>
+<span id="L344" data-line="344">      &quot;required&quot;: [</span>
+<span id="L345" data-line="345">        &quot;basis&quot;,</span>
+<span id="L346" data-line="346">        &quot;uri&quot;</span>
+<span id="L347" data-line="347">      ],</span>
+<span id="L348" data-line="348">      &quot;properties&quot;: {</span>
+<span id="L349" data-line="349">        &quot;basis&quot;: {</span>
+<span id="L350" data-line="350">          &quot;$ref&quot;: &quot;#/$defs/referenceUri&quot;,</span>
+<span id="L351" data-line="351">          &quot;description&quot;: &quot;Reference to the constitutional basis against which the entrypoint URI resolves.&quot;</span>
+<span id="L352" data-line="352">        },</span>
+<span id="L353" data-line="353">        &quot;uri&quot;: {</span>
+<span id="L354" data-line="354">          &quot;$ref&quot;: &quot;#/$defs/referenceUri&quot;,</span>
+<span id="L355" data-line="355">          &quot;description&quot;: &quot;Reading route relative to the referenced constitutional basis.&quot;</span>
+<span id="L356" data-line="356">        }</span>
+<span id="L357" data-line="357">      },</span>
+<span id="L358" data-line="358">      &quot;additionalProperties&quot;: false</span>
+<span id="L359" data-line="359">    },</span>
+<span id="L360" data-line="360">    &quot;agentBootstrap&quot;: {</span>
+<span id="L361" data-line="361">      &quot;type&quot;: &quot;object&quot;,</span>
+<span id="L362" data-line="362">      &quot;required&quot;: [</span>
+<span id="L363" data-line="363">        &quot;entrypoint&quot;,</span>
+<span id="L364" data-line="364">        &quot;targets&quot;</span>
+<span id="L365" data-line="365">      ],</span>
+<span id="L366" data-line="366">      &quot;properties&quot;: {</span>
+<span id="L367" data-line="367">        &quot;entrypoint&quot;: {</span>
+<span id="L368" data-line="368">          &quot;$ref&quot;: &quot;#/$defs/referenceUri&quot;,</span>
+<span id="L369" data-line="369">          &quot;description&quot;: &quot;Reference to the constitutional entrypoint loaded by the stable agent bootstrap.&quot;</span>
+<span id="L370" data-line="370">        },</span>
+<span id="L371" data-line="371">        &quot;targets&quot;: {</span>
+<span id="L372" data-line="372">          &quot;type&quot;: &quot;array&quot;,</span>
+<span id="L373" data-line="373">          &quot;minItems&quot;: 1,</span>
+<span id="L374" data-line="374">          &quot;items&quot;: {</span>
+<span id="L375" data-line="375">            &quot;$ref&quot;: &quot;#/$defs/bootstrapTarget&quot;</span>
+<span id="L376" data-line="376">          },</span>
+<span id="L377" data-line="377">          &quot;uniqueItems&quot;: true,</span>
+<span id="L378" data-line="378">          &quot;description&quot;: &quot;Instruction files, resolved relative to product.source_project, whose marker-bounded STDO bootstrap projection is managed by the toolchain manager.&quot;</span>
+<span id="L379" data-line="379">        }</span>
+<span id="L380" data-line="380">      },</span>
+<span id="L381" data-line="381">      &quot;additionalProperties&quot;: false</span>
+<span id="L382" data-line="382">    },</span>
+<span id="L383" data-line="383">    &quot;bootstrapTarget&quot;: {</span>
+<span id="L384" data-line="384">      &quot;allOf&quot;: [</span>
+<span id="L385" data-line="385">        {</span>
+<span id="L386" data-line="386">          &quot;$ref&quot;: &quot;#/$defs/referenceUri&quot;</span>
+<span id="L387" data-line="387">        },</span>
+<span id="L388" data-line="388">        {</span>
+<span id="L389" data-line="389">          &quot;pattern&quot;: &quot;^(?![A-Za-z][A-Za-z0-9+.-]*:)(?!//)(?!/)(?!\\.\\.(?:/|$))(?!.*\\/\\.\\.(?:\\/|$))[^?#\\\\]+$&quot;</span>
+<span id="L390" data-line="390">        }</span>
+<span id="L391" data-line="391">      ],</span>
+<span id="L392" data-line="392">      &quot;description&quot;: &quot;Portable relative file reference confined to the resolved product.source_project. Absolute paths, authorities, parent traversal, queries, fragments, backslashes, symlinks, and reparse points are refused by manager conformance.&quot;</span>
+<span id="L393" data-line="393">    },</span>
+<span id="L394" data-line="394">    &quot;carrierRoot&quot;: {</span>
+<span id="L395" data-line="395">      &quot;type&quot;: &quot;object&quot;,</span>
+<span id="L396" data-line="396">      &quot;required&quot;: [</span>
+<span id="L397" data-line="397">        &quot;root&quot;</span>
+<span id="L398" data-line="398">      ],</span>
+<span id="L399" data-line="399">      &quot;properties&quot;: {</span>
+<span id="L400" data-line="400">        &quot;root&quot;: {</span>
+<span id="L401" data-line="401">          &quot;$ref&quot;: &quot;#/$defs/referenceUri&quot;</span>
+<span id="L402" data-line="402">        }</span>
+<span id="L403" data-line="403">      },</span>
+<span id="L404" data-line="404">      &quot;additionalProperties&quot;: false</span>
+<span id="L405" data-line="405">    },</span>
+<span id="L406" data-line="406">    &quot;localAxiom&quot;: {</span>
+<span id="L407" data-line="407">      &quot;type&quot;: &quot;object&quot;,</span>
+<span id="L408" data-line="408">      &quot;required&quot;: [</span>
+<span id="L409" data-line="409">        &quot;uri&quot;,</span>
+<span id="L410" data-line="410">        &quot;authority&quot;,</span>
+<span id="L411" data-line="411">        &quot;applies_to&quot;</span>
+<span id="L412" data-line="412">      ],</span>
+<span id="L413" data-line="413">      &quot;properties&quot;: {</span>
+<span id="L414" data-line="414">        &quot;uri&quot;: {</span>
+<span id="L415" data-line="415">          &quot;$ref&quot;: &quot;#/$defs/referenceUri&quot;</span>
+<span id="L416" data-line="416">        },</span>
+<span id="L417" data-line="417">        &quot;authority&quot;: {</span>
+<span id="L418" data-line="418">          &quot;$ref&quot;: &quot;#/$defs/nonEmptyReferences&quot;</span>
+<span id="L419" data-line="419">        },</span>
+<span id="L420" data-line="420">        &quot;applies_to&quot;: {</span>
+<span id="L421" data-line="421">          &quot;$ref&quot;: &quot;#/$defs/nonEmptyReferences&quot;</span>
+<span id="L422" data-line="422">        }</span>
+<span id="L423" data-line="423">      },</span>
+<span id="L424" data-line="424">      &quot;additionalProperties&quot;: false</span>
+<span id="L425" data-line="425">    },</span>
+<span id="L426" data-line="426">    &quot;localOverride&quot;: {</span>
+<span id="L427" data-line="427">      &quot;type&quot;: &quot;object&quot;,</span>
+<span id="L428" data-line="428">      &quot;required&quot;: [</span>
+<span id="L429" data-line="429">        &quot;uri&quot;,</span>
+<span id="L430" data-line="430">        &quot;overrides&quot;,</span>
+<span id="L431" data-line="431">        &quot;authority&quot;,</span>
+<span id="L432" data-line="432">        &quot;applies_to&quot;</span>
+<span id="L433" data-line="433">      ],</span>
+<span id="L434" data-line="434">      &quot;properties&quot;: {</span>
+<span id="L435" data-line="435">        &quot;uri&quot;: {</span>
+<span id="L436" data-line="436">          &quot;$ref&quot;: &quot;#/$defs/referenceUri&quot;</span>
+<span id="L437" data-line="437">        },</span>
+<span id="L438" data-line="438">        &quot;overrides&quot;: {</span>
+<span id="L439" data-line="439">          &quot;$ref&quot;: &quot;#/$defs/nonEmptyReferences&quot;</span>
+<span id="L440" data-line="440">        },</span>
+<span id="L441" data-line="441">        &quot;authority&quot;: {</span>
+<span id="L442" data-line="442">          &quot;$ref&quot;: &quot;#/$defs/nonEmptyReferences&quot;</span>
+<span id="L443" data-line="443">        },</span>
+<span id="L444" data-line="444">        &quot;applies_to&quot;: {</span>
+<span id="L445" data-line="445">          &quot;$ref&quot;: &quot;#/$defs/nonEmptyReferences&quot;</span>
+<span id="L446" data-line="446">        }</span>
+<span id="L447" data-line="447">      },</span>
+<span id="L448" data-line="448">      &quot;additionalProperties&quot;: false</span>
+<span id="L449" data-line="449">    },</span>
+<span id="L450" data-line="450">    &quot;localDisambiguation&quot;: {</span>
+<span id="L451" data-line="451">      &quot;type&quot;: &quot;object&quot;,</span>
+<span id="L452" data-line="452">      &quot;required&quot;: [</span>
+<span id="L453" data-line="453">        &quot;uri&quot;,</span>
+<span id="L454" data-line="454">        &quot;term&quot;,</span>
+<span id="L455" data-line="455">        &quot;context&quot;,</span>
+<span id="L456" data-line="456">        &quot;disambiguates&quot;,</span>
+<span id="L457" data-line="457">        &quot;resolves_to&quot;,</span>
+<span id="L458" data-line="458">        &quot;authority&quot;,</span>
+<span id="L459" data-line="459">        &quot;basis&quot;,</span>
+<span id="L460" data-line="460">        &quot;applies_to&quot;</span>
+<span id="L461" data-line="461">      ],</span>
+<span id="L462" data-line="462">      &quot;properties&quot;: {</span>
+<span id="L463" data-line="463">        &quot;uri&quot;: {</span>
+<span id="L464" data-line="464">          &quot;$ref&quot;: &quot;#/$defs/referenceUri&quot;,</span>
+<span id="L465" data-line="465">          &quot;description&quot;: &quot;Resolution-carrier locator. For cross-context resolution, the carrier declares the complete authorized import, translation, equivalence, or disambiguation relation.&quot;</span>
+<span id="L466" data-line="466">        },</span>
+<span id="L467" data-line="467">        &quot;term&quot;: {</span>
+<span id="L468" data-line="468">          &quot;type&quot;: &quot;string&quot;,</span>
+<span id="L469" data-line="469">          &quot;minLength&quot;: 1,</span>
+<span id="L470" data-line="470">          &quot;description&quot;: &quot;Exact lexical label being resolved; the label is not a context-free concept identity.&quot;</span>
+<span id="L471" data-line="471">        },</span>
+<span id="L472" data-line="472">        &quot;context&quot;: {</span>
+<span id="L473" data-line="473">          &quot;$ref&quot;: &quot;#/$defs/identityUri&quot;,</span>
+<span id="L474" data-line="474">          &quot;description&quot;: &quot;Bounded-context identity in which the resolution applies.&quot;</span>
+<span id="L475" data-line="475">        },</span>
+<span id="L476" data-line="476">        &quot;disambiguates&quot;: {</span>
+<span id="L477" data-line="477">          &quot;$ref&quot;: &quot;#/$defs/nonEmptyReferences&quot;,</span>
+<span id="L478" data-line="478">          &quot;description&quot;: &quot;Complete material candidate concept or clause references for the declared term, context, basis, and scope.&quot;</span>
+<span id="L479" data-line="479">        },</span>
+<span id="L480" data-line="480">        &quot;resolves_to&quot;: {</span>
+<span id="L481" data-line="481">          &quot;$ref&quot;: &quot;#/$defs/referenceUri&quot;,</span>
+<span id="L482" data-line="482">          &quot;description&quot;: &quot;Exact concept reference selected by the owning resolution carrier. Conformance separately verifies that it is a member of disambiguates.&quot;</span>
+<span id="L483" data-line="483">        },</span>
+<span id="L484" data-line="484">        &quot;authority&quot;: {</span>
+<span id="L485" data-line="485">          &quot;$ref&quot;: &quot;#/$defs/nonEmptyReferences&quot;,</span>
+<span id="L486" data-line="486">          &quot;description&quot;: &quot;Existing lawful authorities owning the resolution and any cross-context relation.&quot;</span>
+<span id="L487" data-line="487">        },</span>
+<span id="L488" data-line="488">        &quot;basis&quot;: {</span>
+<span id="L489" data-line="489">          &quot;$ref&quot;: &quot;#/$defs/nonEmptyReferences&quot;,</span>
+<span id="L490" data-line="490">          &quot;description&quot;: &quot;Selected semantic bases needed to interpret the candidate concepts and resolution.&quot;</span>
+<span id="L491" data-line="491">        },</span>
+<span id="L492" data-line="492">        &quot;applies_to&quot;: {</span>
+<span id="L493" data-line="493">          &quot;$ref&quot;: &quot;#/$defs/nonEmptyReferences&quot;,</span>
+<span id="L494" data-line="494">          &quot;description&quot;: &quot;Exact governed scopes in which the resolution applies.&quot;</span>
+<span id="L495" data-line="495">        }</span>
+<span id="L496" data-line="496">      },</span>
+<span id="L497" data-line="497">      &quot;additionalProperties&quot;: false</span>
+<span id="L498" data-line="498">    },</span>
+<span id="L499" data-line="499">    &quot;referenceFrameBasis&quot;: {</span>
+<span id="L500" data-line="500">      &quot;type&quot;: &quot;object&quot;,</span>
+<span id="L501" data-line="501">      &quot;required&quot;: [</span>
+<span id="L502" data-line="502">        &quot;uri&quot;,</span>
+<span id="L503" data-line="503">        &quot;authority&quot;,</span>
+<span id="L504" data-line="504">        &quot;applies_to&quot;</span>
+<span id="L505" data-line="505">      ],</span>
+<span id="L506" data-line="506">      &quot;properties&quot;: {</span>
+<span id="L507" data-line="507">        &quot;uri&quot;: {</span>
+<span id="L508" data-line="508">          &quot;$ref&quot;: &quot;#/$defs/referenceUri&quot;</span>
+<span id="L509" data-line="509">        },</span>
+<span id="L510" data-line="510">        &quot;authority&quot;: {</span>
+<span id="L511" data-line="511">          &quot;$ref&quot;: &quot;#/$defs/nonEmptyReferences&quot;</span>
+<span id="L512" data-line="512">        },</span>
+<span id="L513" data-line="513">        &quot;applies_to&quot;: {</span>
+<span id="L514" data-line="514">          &quot;$ref&quot;: &quot;#/$defs/nonEmptyReferences&quot;</span>
+<span id="L515" data-line="515">        }</span>
+<span id="L516" data-line="516">      },</span>
+<span id="L517" data-line="517">      &quot;additionalProperties&quot;: false</span>
+<span id="L518" data-line="518">    },</span>
+<span id="L519" data-line="519">    &quot;buildTenant&quot;: {</span>
+<span id="L520" data-line="520">      &quot;type&quot;: &quot;object&quot;,</span>
+<span id="L521" data-line="521">      &quot;required&quot;: [</span>
+<span id="L522" data-line="522">        &quot;id&quot;,</span>
+<span id="L523" data-line="523">        &quot;root&quot;,</span>
+<span id="L524" data-line="524">        &quot;design&quot;,</span>
+<span id="L525" data-line="525">        &quot;implementation&quot;</span>
+<span id="L526" data-line="526">      ],</span>
+<span id="L527" data-line="527">      &quot;properties&quot;: {</span>
+<span id="L528" data-line="528">        &quot;id&quot;: {</span>
+<span id="L529" data-line="529">          &quot;$ref&quot;: &quot;#/$defs/identityUri&quot;</span>
+<span id="L530" data-line="530">        },</span>
+<span id="L531" data-line="531">        &quot;root&quot;: {</span>
+<span id="L532" data-line="532">          &quot;$ref&quot;: &quot;#/$defs/referenceUri&quot;</span>
+<span id="L533" data-line="533">        },</span>
+<span id="L534" data-line="534">        &quot;design&quot;: {</span>
+<span id="L535" data-line="535">          &quot;$ref&quot;: &quot;#/$defs/nonEmptyReferences&quot;</span>
+<span id="L536" data-line="536">        },</span>
+<span id="L537" data-line="537">        &quot;implementation&quot;: {</span>
+<span id="L538" data-line="538">          &quot;$ref&quot;: &quot;#/$defs/nonEmptyReferences&quot;</span>
+<span id="L539" data-line="539">        }</span>
+<span id="L540" data-line="540">      },</span>
+<span id="L541" data-line="541">      &quot;additionalProperties&quot;: false</span>
+<span id="L542" data-line="542">    },</span>
+<span id="L543" data-line="543">    &quot;compositionEdge&quot;: {</span>
+<span id="L544" data-line="544">      &quot;type&quot;: &quot;object&quot;,</span>
+<span id="L545" data-line="545">      &quot;required&quot;: [</span>
+<span id="L546" data-line="546">        &quot;product_definition&quot;,</span>
+<span id="L547" data-line="547">        &quot;target_definition_id&quot;,</span>
+<span id="L548" data-line="548">        &quot;relation&quot;,</span>
+<span id="L549" data-line="549">        &quot;contracts&quot;</span>
+<span id="L550" data-line="550">      ],</span>
+<span id="L551" data-line="551">      &quot;properties&quot;: {</span>
+<span id="L552" data-line="552">        &quot;product_definition&quot;: {</span>
+<span id="L553" data-line="553">          &quot;$ref&quot;: &quot;#/$defs/referenceUri&quot;</span>
+<span id="L554" data-line="554">        },</span>
+<span id="L555" data-line="555">        &quot;target_definition_id&quot;: {</span>
+<span id="L556" data-line="556">          &quot;$ref&quot;: &quot;#/$defs/identityUri&quot;</span>
+<span id="L557" data-line="557">        },</span>
+<span id="L558" data-line="558">        &quot;relation&quot;: {</span>
+<span id="L559" data-line="559">          &quot;$ref&quot;: &quot;#/$defs/referenceUri&quot;</span>
+<span id="L560" data-line="560">        },</span>
+<span id="L561" data-line="561">        &quot;contracts&quot;: {</span>
+<span id="L562" data-line="562">          &quot;$ref&quot;: &quot;#/$defs/nonEmptyReferences&quot;</span>
+<span id="L563" data-line="563">        }</span>
+<span id="L564" data-line="564">      },</span>
+<span id="L565" data-line="565">      &quot;additionalProperties&quot;: false</span>
+<span id="L566" data-line="566">    }</span>
+<span id="L567" data-line="567">  }</span>
+<span id="L568" data-line="568">}</span></pre></html>

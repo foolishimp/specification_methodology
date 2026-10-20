@@ -27,6 +27,8 @@ Otherwise the operation searches the **same exact supplied source section**:
 3. Map that unique occurrence back to its exact literal source substring and
    original absolute line range. Record old/new fields, section digest, normalized
    quote digest, normalized offsets, literal source offsets and uniqueness witness.
+   Offset mapping uses the same `splitlines(keepends=True)` convention as source
+   preparation and strict validation, including accepted Unicode line separators.
 4. Run the unchanged complete `author_check` against the derived draft. Any other
    defect, including a misspelled or unknown section identity, refuses. An earlier
    quote failure may have hidden later non-anchor defects; fixing the first error
@@ -44,7 +46,9 @@ Before deriving or consuming a draft, the layer rechecks the exact frozen source
 source manifest, chunk plan, generator, unchanged codec and generation assets.
 Graphify treatments also recheck discovery graph and extraction custody.
 
-Original actor eligibility requires retained answer, result, invocation, prompt,
+Original actor eligibility uses the same custody gate as ordinary generation
+reuse, with only the failed-draft eligibility below enabled for this layer.
+It requires retained answer, result, invocation, prompt,
 event stream, stderr and usage. Their hashes must agree. The invocation must use
 the pinned author schema, exactly the frozen chunk's recomputed `author_prompt`,
 the frozen CLI version and settings, an ephemeral read-only empty workspace, all

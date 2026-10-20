@@ -38,10 +38,14 @@ basis roles are in the [source-owner map](fd-source-owner-map.md).
 
 | Family | Category | Status and scope |
 |---|---|---|
-| [REQ-AC-FD-*](fd-support-tools.md) | Capability | Deferred: exact public tool inputs, deterministic output/checks, acquired content, executor observations and evidence interfaces; owning design and realization pending. |
-| [REQ-AC-FDV-*](fd-support-verification.md) | Verification | Deferred: ordinary actor use, source/evidence-bound refusal/recovery scenarios and accepted-result usefulness/cost; execution and qualification pending. |
+| [REQ-AC-FD-*](fd-support-tools.md) | Capability | Active: T-008's operative HOW and provisional public implementation; bounded implementation/review/technical integration complete, with qualification gaps retained. |
+| [REQ-AC-FDV-*](fd-support-verification.md) | Verification | Active: qualification begun and partial for FDV-001/002; ordinary actor/variant gaps remain. FDV-003 accepted-result benefit is Deferred/unqualified. |
 
-Deferred records delivery status without withdrawing the owner-requested
+Active records operative work and begun qualification, not satisfaction or
+acceptance. Earlier Deferred/design-pending wording is as-at T-007's historical
+specification cut. [T-008](../../.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md#current-provisional-implementation)
+and its [handoff](../../.ai-workspace/qualification/t008/handoff-001/README.md)
+record current evidence and remaining gaps without withdrawing the requested
 Product outcome. These families apply to implementations declaring the
 additional support capability and supplement, without rewriting, AC-R-001..015.
 They do not retrospectively qualify existing scripts or frozen study artifacts.

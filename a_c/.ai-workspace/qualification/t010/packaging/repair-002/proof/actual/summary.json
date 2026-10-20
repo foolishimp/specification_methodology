@@ -1,0 +1,134 @@
+{
+  "archive": {
+    "bytes": 10089542,
+    "path": "/Users/jim/tmp/a_c-common-rc1-packaging-repair-20261021/out/first/dist/a_c-stdo-v3-common-35fb4824-packaging-r1.tar.gz",
+    "sha256": "989c0efbbba90c1d444c6a1c24def4174ef8519bec5f63d9bef021f27dd75e2b"
+  },
+  "artifact": "a_c-stdo-v3-common-35fb4824-packaging-r1",
+  "bundle": {
+    "bytes": 110473751,
+    "files": 213,
+    "path": "/Users/jim/tmp/a_c-common-rc1-packaging-repair-20261021/out/first/bundle/a_c-stdo-v3-common-35fb4824-packaging-r1"
+  },
+  "independence": "Author self-controls only; nonauthor assessment downstream",
+  "interactive_behavior": "UNVERIFIED",
+  "model_canonical_sha256": "691c4ab0d0993312a31e7e2371070ea4758fdf74b32862ff4d5a32d05af79fbf",
+  "operations": [
+    {
+      "elapsed_seconds": 143.201,
+      "operation": "01-first-build",
+      "outcome": "passed",
+      "returncode": 0
+    },
+    {
+      "files": 213,
+      "operation": "safe_actual_archive_extraction",
+      "outcome": "passed"
+    },
+    {
+      "elapsed_seconds": 13.978,
+      "operation": "02-extracted-stdlib-check",
+      "outcome": "passed",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 6.76,
+      "operation": "03-decode-carrier.json",
+      "outcome": "passed",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 7.074,
+      "operation": "04-decode-graph.json",
+      "outcome": "passed",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 7.178,
+      "operation": "05-find",
+      "outcome": "passed",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 7.063,
+      "operation": "06-inspect",
+      "outcome": "passed",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 7.107,
+      "operation": "07-project",
+      "outcome": "passed",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 0.035,
+      "operation": "08-source-reentry",
+      "outcome": "passed",
+      "returncode": 0
+    },
+    {
+      "operation": "09-deterministic-repack",
+      "outcome": "passed"
+    },
+    {
+      "elapsed_seconds": 30.704,
+      "operation": "10-documented-extracted-build",
+      "outcome": "passed",
+      "returncode": 0
+    },
+    {
+      "operation": "11-second-generation-equivalence",
+      "outcome": "passed"
+    },
+    {
+      "elapsed_seconds": 14.272,
+      "operation": "12-rehash-wrong-source_commit",
+      "outcome": "passed",
+      "returncode": 2
+    },
+    {
+      "elapsed_seconds": 14.267,
+      "operation": "13-rehash-wrong-package_tree",
+      "outcome": "passed",
+      "returncode": 2
+    },
+    {
+      "elapsed_seconds": 14.153,
+      "operation": "14-rehash-missing-source_commit",
+      "outcome": "passed",
+      "returncode": 2
+    },
+    {
+      "elapsed_seconds": 14.193,
+      "operation": "15-rehash-missing-package_tree",
+      "outcome": "passed",
+      "returncode": 2
+    },
+    {
+      "elapsed_seconds": 0.048,
+      "operation": "16-modified-portable-input-refusal",
+      "outcome": "passed",
+      "returncode": 2
+    },
+    {
+      "elapsed_seconds": 0.042,
+      "operation": "17-public-overlap-refusal",
+      "outcome": "passed",
+      "returncode": 2
+    },
+    {
+      "operation": "18-static-display-source-evidence-conservation",
+      "outcome": "passed",
+      "selected_conserved_files": 188
+    }
+  ],
+  "raw_model_recovered_sha256": "70feb48cf657bcb20231dbfffe0c2076e5e69b24aeb0f226a001a22957b7f56a",
+  "second_generation_archive": {
+    "bytes": 10089542,
+    "path": "/Users/jim/tmp/a_c-common-rc1-packaging-repair-20261021/out/second/dist/a_c-stdo-v3-common-35fb4824-packaging-r1.tar.gz",
+    "sha256": "989c0efbbba90c1d444c6a1c24def4174ef8519bec5f63d9bef021f27dd75e2b"
+  },
+  "source_model_receipts_and_display_conserved": true,
+  "status": "all_selected_actual_controls_passed"
+}

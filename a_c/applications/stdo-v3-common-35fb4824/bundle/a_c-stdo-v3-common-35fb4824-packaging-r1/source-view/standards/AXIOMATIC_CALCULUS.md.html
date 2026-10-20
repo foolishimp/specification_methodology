@@ -1,0 +1,1406 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>standards/AXIOMATIC_CALCULUS.md</title><style>body{font:14px system-ui;margin:24px;background:#101720;color:#dfeaf4}a{color:#87c7ff}pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5;counter-reset:line}span{display:block}span:before{content:attr(data-line);display:inline-block;width:4em;color:#7392aa;user-select:none}span:target{background:#36481d}</style><h1>standards/AXIOMATIC_CALCULUS.md</h1><p>Exact frozen source · SHA256 2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf</p><pre><span id="L1" data-line="1"># AXIOMATIC_CALCULUS</span>
+<span id="L2" data-line="2"></span>
+<span id="L3" data-line="3">Tier 1. Owns the a_c theory in full: position and scope, the signature,</span>
+<span id="L4" data-line="4">the typed records, the laws AC-001 to AC-020, traversals and functor</span>
+<span id="L5" data-line="5">kinds, interpretation and models, the three governed layers, the law of</span>
+<span id="L6" data-line="6">calculus identity, the application boundary, external imports, exclusions</span>
+<span id="L7" data-line="7">and the conformance obligations of this member. Consumes the ontology of</span>
+<span id="L8" data-line="8">[FOUNDATIONS §2](FOUNDATIONS.md) (subject, representation, interpretation,</span>
+<span id="L9" data-line="9">context, object, claim, evidence, judgment, authority, residual, basis,</span>
+<span id="L10" data-line="10">material) and the core result algebra of</span>
+<span id="L11" data-line="11">[FOUNDATIONS §4 Results](FOUNDATIONS.md#results); it states laws over</span>
+<span id="L12" data-line="12">those objects and defines none of them a second time. Each clause names</span>
+<span id="L13" data-line="13">the principle (P0 to P6) that requires it, as</span>
+<span id="L14" data-line="14">[FOUNDATIONS §1](FOUNDATIONS.md#1-vocabulary-of-standing) requires.</span>
+<span id="L15" data-line="15"></span>
+<span id="L16" data-line="16">## 1. Position</span>
+<span id="L17" data-line="17"></span>
+<span id="L18" data-line="18">The STDO Axiomatic Calculus for Governed Symbolic Systems, written `a_c`,</span>
+<span id="L19" data-line="19">is this method&#x27;s domain-specific, carrier-neutral constitutional calculus</span>
+<span id="L20" data-line="20">for representing and relating governed symbolic systems. Its stable</span>
+<span id="L21" data-line="21">concept identity is `urn:stdo:concept:axiomatic-calculus:a-c`. This member</span>
+<span id="L22" data-line="22">owns that concept in the bounded context</span>
+<span id="L23" data-line="23">`urn:stdo:bounded-context:axiomatic-calculus`. Both identifiers are</span>
+<span id="L24" data-line="24">declared identities and do not change with the carrier or the directory</span>
+<span id="L25" data-line="25">that publishes them (P3).</span>
+<span id="L26" data-line="26"></span>
+<span id="L27" data-line="27">`a_c` is a separately identifiable calculus derived from the method&#x27;s</span>
+<span id="L28" data-line="28">principles. It defines sorts, typed objects, relations, constraints,</span>
+<span id="L29" data-line="29">latitude, residual uncertainty, traversals, functor kinds, judgments,</span>
+<span id="L30" data-line="30">closure, projections, transformations, models and validity laws. Those</span>
+<span id="L31" data-line="31">definitions depend on no derivation-source record layout, no selected</span>
+<span id="L32" data-line="32">subject interpretation, no particular carrier, no model provider, no</span>
+<span id="L33" data-line="33">runtime and no repository topology (P1, P2).</span>
+<span id="L34" data-line="34"></span>
+<span id="L35" data-line="35">`a_c` claims no universal applicability, logical completeness,</span>
+<span id="L36" data-line="36">consistency, decidability, soundness or category-theoretic status except</span>
+<span id="L37" data-line="37">where an exact, separately identified proof establishes that claim for a</span>
+<span id="L38" data-line="38">declared fragment, model or relation; for category-theoretic status that</span>
+<span id="L39" data-line="39">proof is the demonstration of</span>
+<span id="L40" data-line="40">[FOUNDATIONS §4](FOUNDATIONS.md#4-algebra), Formal fragment (P6).</span>
+<span id="L41" data-line="41"></span>
+<span id="L42" data-line="42">The principles are the derivation provenance of the calculus. Application</span>
+<span id="L43" data-line="43">of the calculus to any exact subject is a separately owned downstream</span>
+<span id="L44" data-line="44">relation. The relations are distinct (P3, P6):</span>
+<span id="L45" data-line="45"></span>
+<span id="L46" data-line="46">```text</span>
+<span id="L47" data-line="47">exact local governing principles             -&gt; derive    -&gt; a_c</span>
+<span id="L48" data-line="48">a_c + exact subject X                        -&gt; interpret -&gt; a_c.X</span>
+<span id="L49" data-line="49">a_c.X + exact accepted semantic judgment J_X</span>
+<span id="L50" data-line="50">      + exact carrier C                      -&gt; encode    -&gt; a_c.X.C</span>
+<span id="L51" data-line="51">```</span>
+<span id="L52" data-line="52"></span>
+<span id="L53" data-line="53">The calculus, an interpreted model and an encoded carrier are distinct</span>
+<span id="L54" data-line="54">governed layers with separate content identities and proof boundaries</span>
+<span id="L55" data-line="55">(§7). A layer becomes a released Product only through separately</span>
+<span id="L56" data-line="56">authorised Product acceptance and release. Neither interpretation nor</span>
+<span id="L57" data-line="57">encoding can redefine the calculus (P6).</span>
+<span id="L58" data-line="58"></span>
+<span id="L59" data-line="59">### Derivation provenance</span>
+<span id="L60" data-line="60"></span>
+<span id="L61" data-line="61">The calculus specialises the governing commitments declared in this</span>
+<span id="L62" data-line="62">package. Its derivation basis is the following finite set of current local</span>
+<span id="L63" data-line="63">owners, resolved to exact clauses by the identity record of §8 (P6):</span>
+<span id="L64" data-line="64"></span>
+<span id="L65" data-line="65">- scoped identity and authority conservation:</span>
+<span id="L66" data-line="66">  [FOUNDATIONS §2](FOUNDATIONS.md#2-ontology), including</span>
+<span id="L67" data-line="67">  [Authority kinds](FOUNDATIONS.md#authority-kinds), under P3 and P6;</span>
+<span id="L68" data-line="68">- exact bounded-context meaning and explicit cross-context relations:</span>
+<span id="L69" data-line="69">  [FOUNDATIONS §2](FOUNDATIONS.md#2-ontology), Interpretation and Context,</span>
+<span id="L70" data-line="70">  under P1;</span>
+<span id="L71" data-line="71">- probabilistic construction as a bounded evaluation class: P0 in</span>
+<span id="L72" data-line="72">  [FOUNDATIONS §3](FOUNDATIONS.md#3-commitments), with</span>
+<span id="L73" data-line="73">  [Work boundary](FOUNDATIONS.md#work-boundary) and</span>
+<span id="L74" data-line="74">  [ACTIVATION §1](ACTIVATION.md#1-the-step);</span>
+<span id="L75" data-line="75">- delegated construction, exact candidate production and the separation of</span>
+<span id="L76" data-line="76">  construction from assessment: [ACTIVATION §1](ACTIVATION.md#1-the-step),</span>
+<span id="L77" data-line="77">  Output and Roles and delegation, and</span>
+<span id="L78" data-line="78">  [EVALUATION §3](EVALUATION.md#3-independent-assessment);</span>
+<span id="L79" data-line="79">- governed ambiguity, bounded probabilistic processing, explicit human</span>
+<span id="L80" data-line="80">  adjudication and hard-stop separation:</span>
+<span id="L81" data-line="81">  [ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement);</span>
+<span id="L82" data-line="82">- exact-basis evaluation, evidence-and-verdict separation, authority</span>
+<span id="L83" data-line="83">  conservation and closed results:</span>
+<span id="L84" data-line="84">  [REFERENCE_FRAME RF-005](REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates),</span>
+<span id="L85" data-line="85">  [RF-006](REFERENCE_FRAME.md#rf-006-authority-conservation),</span>
+<span id="L86" data-line="86">  [RF-007](REFERENCE_FRAME.md#rf-007-semantic-evidence-and-verdict-separation),</span>
+<span id="L87" data-line="87">  [FOUNDATIONS Results](FOUNDATIONS.md#results) and</span>
+<span id="L88" data-line="88">  [Conjunction of results](FOUNDATIONS.md#conjunction-of-results);</span>
+<span id="L89" data-line="89">- constitutional derivation and re-entry:</span>
+<span id="L90" data-line="90">  [SPEC_METHOD §1](SPEC_METHOD.md#1-position-and-identity) and</span>
+<span id="L91" data-line="91">  [§4](SPEC_METHOD.md#4-change-management);</span>
+<span id="L92" data-line="92">- finite material closure, projection, authority conservation, residual</span>
+<span id="L93" data-line="93">  uncertainty and capability fit: [REFERENCE_FRAME §3](REFERENCE_FRAME.md#3-laws),</span>
+<span id="L94" data-line="94">  specialised by AC-010 and AC-011 below; and</span>
+<span id="L95" data-line="95">- singular released authority: [SPEC_METHOD §6](SPEC_METHOD.md#6-lineage-and-release)</span>
+<span id="L96" data-line="96">  and [PRODUCT_DEFINITION §4](PRODUCT_DEFINITION.md#4-shared-installed-release-basis-and-toolchain-manager).</span>
+<span id="L97" data-line="97"></span>
+<span id="L98" data-line="98">This member owns the calculus-specific definitions and specialisations of</span>
+<span id="L99" data-line="99">`a_c`. Its imported concepts keep their owners: in particular,</span>
+<span id="L100" data-line="100">[FOUNDATIONS Results](FOUNDATIONS.md#results) and</span>
+<span id="L101" data-line="101">[Conjunction of results](FOUNDATIONS.md#conjunction-of-results) own the result</span>
+<span id="L102" data-line="102">values and combination law consumed by AC-007 and AC-019. No calculus model,</span>
+<span id="L103" data-line="103">carrier or interpretation becomes another owner of those laws. A consumer</span>
+<span id="L104" data-line="104">needs no implicit representation of the method, particular carrier or</span>
+<span id="L105" data-line="105">downstream implementation to interpret the calculus (P1, P6).</span>
+<span id="L106" data-line="106"></span>
+<span id="L107" data-line="107">This member introduces the generic calculus identities `F_D`, `F_P` and</span>
+<span id="L108" data-line="108">`F_H` (§5). It does not import them from an equal-spelled shorthand owned</span>
+<span id="L109" data-line="109">by a runtime, profile, realisation or application. The local clauses above</span>
+<span id="L110" data-line="110">establish the substrate-neutral evaluation, probabilistic-processing,</span>
+<span id="L111" data-line="111">human-adjudication, authority, evidence and refusal principles from which</span>
+<span id="L112" data-line="112">the generic definitions are derived. Nominal equality with another</span>
+<span id="L113" data-line="113">shorthand creates no concept-identity, import or equivalence relation (P3,</span>
+<span id="L114" data-line="114">P1).</span>
+<span id="L115" data-line="115"></span>
+<span id="L116" data-line="116">Issuance of an exact `AxiomaticCalculusBasis` (§8) resolves the local routes</span>
+<span id="L117" data-line="117">above to absolute semantic addresses inside the selected immutable package</span>
+<span id="L118" data-line="118">and records them under `derivation_basis.principle_refs`. Each address</span>
+<span id="L119" data-line="119">identifies the actual clause it uses; a mutable authoring locator is not a</span>
+<span id="L120" data-line="120">digest-bound derivation reference (P3).</span>
+<span id="L121" data-line="121"></span>
+<span id="L122" data-line="122">The derivation direction is one-way. A model of the method under `a_c`,</span>
+<span id="L123" data-line="123">an encoded carrier, a proof tool or a successful application cannot amend</span>
+<span id="L124" data-line="124">the source principles or this calculus (P6).</span>
+<span id="L125" data-line="125"></span>
+<span id="L126" data-line="126">### Scope</span>
+<span id="L127" data-line="127"></span>
+<span id="L128" data-line="128">`a_c` governs the form of a symbolic axiomatic model (P2). It</span>
+<span id="L129" data-line="129">answers:</span>
+<span id="L130" data-line="130"></span>
+<span id="L131" data-line="131">- what identities and typed objects exist;</span>
+<span id="L132" data-line="132">- how relations bind exact endpoints;</span>
+<span id="L133" data-line="133">- how constraints, latitude and residuals remain explicit;</span>
+<span id="L134" data-line="134">- how traversals and judgments are typed;</span>
+<span id="L135" data-line="135">- how material closure, projection, overlay and transformation behave;</span>
+<span id="L136" data-line="136">- what a model must preserve from its subject; and</span>
+<span id="L137" data-line="137">- which claims are structural, semantic or authority decisions.</span>
+<span id="L138" data-line="138"></span>
+<span id="L139" data-line="139">`a_c` does not choose the subject vocabulary, decide which source</span>
+<span id="L140" data-line="140">declarations are material, supply semantic acceptance, select a carrier,</span>
+<span id="L141" data-line="141">execute a model or prove that one interpretation is uniquely correct (P2,</span>
+<span id="L142" data-line="142">P6).</span>
+<span id="L143" data-line="143"></span>
+<span id="L144" data-line="144">### Foundation to law</span>
+<span id="L145" data-line="145"></span>
+<span id="L146" data-line="146">This member is material family F9, the `a_c` calculus. The table below</span>
+<span id="L147" data-line="147">shows which of its rules follow from which premises, in the format of</span>
+<span id="L148" data-line="148">[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law),</span>
+<span id="L149" data-line="149">which also states the standing of the consequences. Instance premises,</span>
+<span id="L150" data-line="150">which the commitments do not supply:</span>
+<span id="L151" data-line="151"></span>
+<span id="L152" data-line="152">- (i) a governed symbolic system is represented by a finite model whose</span>
+<span id="L153" data-line="153">  records stand for its objects, relations, constraints, residuals,</span>
+<span id="L154" data-line="154">  traversals, transformations and judgments;</span>
+<span id="L155" data-line="155">- (ii) a model is interpreted from an exact subject and may be encoded in</span>
+<span id="L156" data-line="156">  a carrier, and subject, model and carrier are separately identified;</span>
+<span id="L157" data-line="157">- (iii) some predicates over a model are decided mechanically, and others</span>
+<span id="L158" data-line="158">  need bounded probabilistic construction or explicit human adjudication.</span>
+<span id="L159" data-line="159"></span>
+<span id="L160" data-line="160">| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |</span>
+<span id="L161" data-line="161">|---|---|---|---|---|</span>
+<span id="L162" data-line="162">| P1 (independent), P6 (independent); (i) | By P1 a model is a representation of its subject, by P6 encoding and interpreting are separate authorities, and by (i) a governed system is represented by a finite model, so the calculus is derived one way from the method&#x27;s principles and is separate from its application: interpreting a subject and encoding a model are distinct relations, and no model, carrier, proof tool or successful application amends the calculus or the principles | [§1](#1-position), [Derivation provenance](#derivation-provenance) | the concept identity, its bounded context and the name `a_c`: this member | 6, 10 |</span>
+<span id="L163" data-line="163">| P2 (independent), P6 (independent) | By P2 the calculus serves only the form a model needs, and by P6 a status needs its own proof, so the calculus governs the form of a symbolic model and claims no status that a separately identified proof has not established; it chooses no subject vocabulary or materiality, supplies no semantic acceptance, selects no carrier and executes nothing | [§1](#1-position), the claims it does not make; [Scope](#scope); [Exclusions](#exclusions) | none | 10 |</span>
+<span id="L164" data-line="164">| P3 (independent), P5 (derived from P0 and P6); (i) | By P3 every element binds one identity and basis, by P5 an unclosed population would leave results undecided, and by (i) the model is finite, so every model belongs to one closed, finite signature; every record occurs once in one population of eight fixed record families, every identity resolves once, locally or through one declared external relation, and an unknown, hidden, duplicated or dangling element refuses | [§2](#2-signature), [§3](#3-typed-records), [AC-001](#ac-001-closed-signature), [AC-003](#ac-003-reference-closure) | the eight core record kinds and the fields of each record: this member; a model family&#x27;s sorts, value domains, reference domains and admissible kinds: the owning signature | 3, 10 |</span>
+<span id="L165" data-line="165">| P3 (independent), P4a (independent) | By P3 identity is declared and scoped, and by P4a relations compose only by the types they declare, so identity is scoped, so equal spelling, payload, position or carrier establishes none; a relation is lawful only between the sorts its kind admits, with its required qualifiers, and its direction is material unless declared symmetric | [AC-002](#ac-002-scoped-identity), [AC-004](#ac-004-relation-typing) | each relation kind&#x27;s sorts, qualifiers and any declared symmetry: the owning signature | 2, 3, 10 |</span>
+<span id="L166" data-line="166">| P6 (independent), P4b (derived from P0 and P2), P3 (independent) | By P6 authority is not transferred by handling a record, by P3 every record binds its basis, and by P4b recorded facts persist, so copying, interpreting, encoding, evaluating or transporting a record transfers no authority, and every record, model and result binds an exact basis, mixed bases only under an owned composite-basis relation | [AC-005](#ac-005-authority-conservation), [AC-006](#ac-006-basis-coherence) | each composite-basis relation: the owner it names | 9, 10 |</span>
+<span id="L167" data-line="167">| P5 (derived from P0 and P6), P6 (independent) | By P5 a value decides only what its evidence establishes, and by P6 a judgment is separate from its acceptance, so a constraint&#x27;s judgment and every outcome of an operation of this member read as exactly one core value for a named predicate; no failed, missing or undecided result and no stop becomes success; a refusal&#x27;s cause is part of its value, a demonstrated violation it names mapping to falsified and a condition of the basis the operation acts on to invalid_basis | [AC-007](#ac-007-constraint-and-refusal); [§5](#5-traversals-and-functor-kinds), the stop algebra | the cause of a refusal that names both a demonstrated violation and a condition of the basis, `refusal(constraint)`, with the basis condition reported beside it as its own invalid_basis result: this member, in AC-007; the predicate language and judgment of each constraint kind: the owning signature; further stop values and their refinement: the signature&#x27;s stop contract; the stop mapping of one traversal: its record, under §5 | 3, 9, 10 |</span>
+<span id="L168" data-line="168">| P1 (independent), P6 (independent) | By P1 a difference in representation is not a difference in meaning unless declared, and by P6 latitude is granted only by its owner, so two values differ only through a declared latitude or transformation relation; silence is not latitude, and latitude grants no authority beyond its owner, scope, basis and invalidation law | [Latitude](#latitude), [AC-008](#ac-008-explicit-latitude) | each latitude record: its owner | 6, 10 |</span>
+<span id="L169" data-line="169">| P4b (derived from P0 and P2), P6 (independent) | By P4b an unresolved condition persists until disposed, and by P6 only an authority disposes it, so a material uncertainty stays in the model until an authorised disposition; no projection, compression, interpretation or encoding erases a residual, and absence from a projection is not resolution | [Residual](#residual), [AC-009](#ac-009-residual-conservation) | each residual kind&#x27;s domains: the owning signature; each disposition: the competent authority | 9, 10 |</span>
+<span id="L170" data-line="170">| P0 (recovered), P2 (independent), P4b (derived from P0 and P2) | By P0 an actor holds a bounded set of records, by P2 it needs those its task requires, and by P4b established records persist, so material closure is the least lawful record closure, defined only on exact inputs and claiming no minimal size or cost; a projection contains the closure, records its seams and never silently trims a required member to fit a carrier or capability budget | [AC-010](#ac-010-material-closure), [AC-011](#ac-011-projection) | the seed set and the relation family: the evaluation that applies them, for a step [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) | 7, 10 |</span>
+<span id="L171" data-line="171">| P3 (independent), P6 (independent) | By P3 a basis is immutable once bound, and by P6 a change to its meaning needs an owned relation, so an overlay adds records without mutating its basis; override, disambiguation, equivalence, specialisation or translation exists only as a typed relation with its authority | [AC-012](#ac-012-overlay) | each overlay relation: its owner | 2, 10 |</span>
+<span id="L172" data-line="172">| P4b (derived from P0 and P2), P3 (independent), P6 (independent) | By P4b a transformation&#x27;s effects are facts that persist, by P3 they bind exact records, and by P6 their classification is accountable, so a transformation proves a closed delta over local records and external resolutions, each classified once as preserved or removed, with preservation shown by byte or typed equality; its result is a proposed successor that admits nothing | [AC-013](#ac-013-transformation) | each transformation, with its operation authority and preservation relation: the owner of the transformation record | 3, 4, 10 |</span>
+<span id="L173" data-line="173">| P6 (independent), P3 (independent) | By P6 judgment and promotion are separate authorities, and by P3 a judgment binds its exact subject, so a judgment points to an unchanged subject, and promotion is a separate relation between that subject and its admission or acceptance judgment | [AC-014](#ac-014-judgment-separation) | none | 9, 10 |</span>
+<span id="L174" data-line="174">| P4a (independent), P3 (independent), P6 (independent); (iii) | By P4a a traversal composes only through its declared contract, by P3 it binds one functor kind, by P6 its authority is separate, and by (iii) some predicates are decided mechanically and others not, so a traversal is a typed contract applied under exactly one functor kind; deterministic evaluation, probabilistic construction and human adjudication are distinct kinds, each distinct from actor, executor and domain operation, and the name asserts no categorical functor; traversals compose only under typed composition, which keeps both identities and every intermediate fact | [§5](#5-traversals-and-functor-kinds), [AC-015](#ac-015-functor-classification), [AC-016](#ac-016-typed-composition) | the functor kinds permitted for each traversal: the owning signature; the order of kinds in an application: that application | 4, 8, 10 |</span>
+<span id="L175" data-line="175">| P1 (independent), P6 (independent), P4b (derived from P0 and P2); (ii), (iii) | By P1 an interpretation is a proposal about meaning, by P6 its acceptance is separate, by P4b its provenance persists, and by (ii) and (iii) models are interpreted from exact subjects and partly checked mechanically, so an interpretation proposes a model that its construction does not accept; every admitted record has exact provenance or is identified as model-local, every evaluated subject declaration has a disposition, structural success is evidence for semantic review and never a substitute, and a valid model satisfies every applicable law | [§6](#6-interpretation-and-models), [AC-017](#ac-017-interpretation-fidelity), [AC-018](#ac-018-structural-and-semantic-separation), [AC-019](#ac-019-valid-model) | the interpretation contract and the semantic selection and acceptance authority: the downstream authority of the subject; a decision contract for a semantic subset: the model that supplies it | 6, 10 |</span>
+<span id="L176" data-line="176">| P3 (independent), P6 (independent); (ii) | By P3 the calculus, a model and a carrier are distinct objects, by P6 each has its own proof obligation, and by (ii) a model may be encoded in several carriers, so the calculus, an interpreted model and an encoded carrier have separate identities, judgments and proof obligations; encoding needs an accepted judgment over the unchanged model, and a downstream success ratifies no upstream layer | [§7](#7-layers), [AC-020](#ac-020-layer-and-release-separation) | Product status of a layer: the external authority that selects and releases it | 6, 10 |</span>
+<span id="L177" data-line="177">| P3 (independent), P6 (independent) | By P3 an edition binds its exact published bytes, and by P6 its identity record is a separate authority, so an edition&#x27;s identity is an external record over its published bytes and its derivation clauses, created after the bytes exist; interpreted and encoded identities bind their upstream identities, and judgments stay outside the identities they judge | [§8](#8-calculus-identity) | the record shape, RFC 8785 canonicalisation, SHA-256 and the order of principle references: this member; the record grammar and issuance authority for interpreted and encoded identities: the owning Product; issuance of this edition&#x27;s record: its release, under [RELEASE](RELEASE.md) | 2, 10 |</span>
+<span id="L178" data-line="178">| P2 (independent), P6 (independent) | By P2 the calculus serves applications without choosing for them, and by P6 selection and release belong to their owners, so the calculus selects, constructs, accepts or releases no concrete interpretation or carrier, and an application&#x27;s import, translation or specialisation stays external to it | [Application boundary](#application-boundary), [External imports and specialisations](#external-imports-and-specialisations) | each application&#x27;s subject, interpretation, carrier and imports: the downstream authority that owns the application | 1, 10 |</span>
+<span id="L179" data-line="179">| P0 (recovered), P2 (independent), P4b (derived from P0 and P2), P6 (independent); (i), (iii) | P0 bounds what an actor can hold and P2 fixes the task&#x27;s destination, so an actor needs the constraints of one task, not the whole model, and the material closure and projection of AC-010 and AC-011 supply them as a constraint surface. P4b keeps every residual until an authorised disposition, so unresolved conditions travel with the surface and block the work that depends on them; P6 keeps authority, evidence and acceptance apart, so a surface grants no authority and its validity, fidelity and sufficiency for a task are separate claims | [Constraint surfaces](#constraint-surfaces) | the interpretation used and which one is current: the downstream authority of the subject; the seed set and relation family of a task: the activation that applies them, for a step [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope); a mechanical projection: a separately selected checking contract | 7, 10 |</span>
+<span id="L180" data-line="180">| P6 (independent) | By P6 a claim about this member holds only on evidence that tests each law, so a review or qualification of this member covers each law with positive and refusal cases, and no example, checker, model or carrier qualifies a law beyond the claim it evaluates | [§10](#10-conformance-obligations) | the ten obligations as the minimum coverage: this member; a policy of this member: each law is covered by positive and refusal cases | 9, 10 |</span>
+<span id="L181" data-line="181"></span>
+<span id="L182" data-line="182">Consumers of these rows, where an actor enters them (FOUNDATIONS §3</span>
+<span id="L183" data-line="183">Foundation to law, Consumers), one list per row, each consumer linked to</span>
+<span id="L184" data-line="184">its own locus:</span>
+<span id="L185" data-line="185"></span>
+<span id="L186" data-line="186">- Row 1, position and derivation provenance: [§8 Calculus identity](#8-calculus-identity), whose `derivation_basis` names the governing clauses identified under Derivation provenance and keeps their premise role distinct from the published calculus member; the family tables of [ODD](ODD.md#foundation-to-law), [TRAVERSAL_OCCURRENCE](TRAVERSAL_OCCURRENCE.md#foundation-to-law) and [WORLD_MODEL](WORLD_MODEL.md#foundation-to-law), whose rows import F9.</span>
+<span id="L187" data-line="187">- Row 2, scope and exclusions: [SPEC_METHOD §11 Build-tenant binding](SPEC_METHOD.md#11-build-tenant-binding), rule 6, where a representation in a_c prescribes no executor and establishes no execution conformance by itself; otherwise no separate consumer applies: the claims the calculus does not make are limits on this member&#x27;s own rules, and what an application selects, accepts or executes is that application&#x27;s under [Application boundary](#application-boundary), traced in row 17.</span>
+<span id="L188" data-line="188">- Row 3, closed signature, typed records and reference closure: [TRAVERSAL_OCCURRENCE Imported calculus boundary](TRAVERSAL_OCCURRENCE.md#imported-calculus-boundary), which instantiates its signature over `RecordKind_ac` and `Population_M` unchanged and refuses hidden records and ambiguous references, [Closed semantic-object sorts](TRAVERSAL_OCCURRENCE.md#closed-semantic-object-sorts), where every `_ref` resolves exactly once under AC-003, and [Closed constraint, judgment, residual and stop kinds](TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds), where a dangling reference refuses under AC-003; [AC-007](#ac-007-constraint-and-refusal), whose `refusal(constraint)` names a missing record family and a dangling reference; [AC-019](#ac-019-valid-model), clause 2.</span>
+<span id="L189" data-line="189">- Row 4, scoped identity and relation typing: [Constraint surfaces](#constraint-surfaces), whose objects carry identity under AC-002 and whose predicates and dependencies include the typed relations of AC-004; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminator 22. IDENTITY&#x27;s lead records that AC-002 applies the scoped identity of IDENTITY §2 and applies nothing of AC-002.</span>
+<span id="L190" data-line="190">- Row 5, authority conservation and basis coherence: [AC-007](#ac-007-constraint-and-refusal), whose `refusal(basis)` names mixed bases with no composite-basis relation; [Constraint surfaces](#constraint-surfaces), where the surface grants no authority and binds the calculus basis as a separate coordinate; [AC-019](#ac-019-valid-model), clause 2. No section of another member applies them: the generic rules they bind to a_c records are FOUNDATIONS §2 Authority kinds&#x27;, RF-005&#x27;s and RF-006&#x27;s, each applied by its own consumers.</span>
+<span id="L191" data-line="191">- Row 6, constraint judgment and the stop algebra: [TRAVERSAL_OCCURRENCE Closed constraint, judgment, residual and stop kinds](TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds), which maps its stops under AC-007 and refines them under the parent-value rule of §5; [AC-010](#ac-010-material-closure), [AC-011](#ac-011-projection), [AC-013](#ac-013-transformation), [AC-015](#ac-015-functor-classification), [§6 Interpretation and models](#6-interpretation-and-models) and [§7 Layers](#7-layers), each of which takes the core value of its stops or judgments under AC-007; [Constraint surfaces](#constraint-surfaces), required results and condition 2.</span>
+<span id="L192" data-line="192">- Row 7, latitude: [Constraint surfaces](#constraint-surfaces), permitted freedom and condition 1; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminators 17 and 18. The generic rule over any two values is FOUNDATIONS §4 Algebra, Latitude&#x27;s, which cites AC-008 as provenance only.</span>
+<span id="L193" data-line="193">- Row 8, residual conservation: [Constraint surfaces](#constraint-surfaces), unresolved conditions and condition 2; [AC-013](#ac-013-transformation), where material residuals remain in the successor unless an authorised disposition is in the transformation evidence; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminator 16.</span>
+<span id="L194" data-line="194">- Row 9, material closure and projection: [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope), steps 1 and 2, and [§3 Admission and activation](ACTIVATION.md#admission-and-activation), `closure_unresolved`; [Constraint surfaces](#constraint-surfaces), whose surface is the projection over the material closure of a task&#x27;s seed set; [TRAVERSAL_OCCURRENCE](TRAVERSAL_OCCURRENCE.md#traversal_occurrence), its lead, which keeps its `Projection` record apart from an AC-011 projection. The rule that no reference trims a required member is FOUNDATIONS §4 Algebra, Reference versus body&#x27;s, which AC-011 applies.</span>
+<span id="L195" data-line="195">- Row 10, overlay: [PRODUCT_DEFINITION §5](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution), which relates its four semantic-resolution kinds to the typed relations AC-012 names; [AC-019](#ac-019-valid-model), clause 3.</span>
+<span id="L196" data-line="196">- Row 11, transformation: [FOUNDATIONS §4](FOUNDATIONS.md#4-algebra), Conservation accounting; [REFERENCE_FRAME §6 Evidence or coordinate translation](REFERENCE_FRAME.md#evidence-or-coordinate-translation), where a translation represented in a_c is recorded in the fields of AC-013; [SPEC_METHOD §11 Build-tenant binding](SPEC_METHOD.md#11-build-tenant-binding), rule 7; [Constraint surfaces](#constraint-surfaces), admissible operations.</span>
+<span id="L197" data-line="197">- Row 12, judgment separation: [Constraint surfaces](#constraint-surfaces), evidence; [§7 Layers](#7-layers), where the acceptance judgment is over the unchanged model and neither judgment enters the identity of its subject; [§8 Calculus identity](#8-calculus-identity), where the semantic-acceptance and carrier-admission judgments point to unchanged identities and are embedded in neither. No section of another member applies it; EVALUATION §5 Acceptance states that a disposition is over an unchanged subject as its own rule and cites AC-014 as provenance only.</span>
+<span id="L198" data-line="198">- Row 13, traversals, functor kinds and typed composition: [ACTIVATION §4 Refinement](ACTIVATION.md#refinement), where each output satisfies the next step&#x27;s declared domain and preconditions as AC-016 requires; [TRAVERSAL_OCCURRENCE Closed constraint, judgment, residual and stop kinds](TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds), whose functor-kind refs leave their laws with §5, and [Occurrence identity](TRAVERSAL_OCCURRENCE.md#occurrence-identity), where every retained application under AC-016 has its own occurrence; [ODD](ODD.md#odd), its lead, and [ODD §5 Probabilistic compute](ODD.md#probabilistic-compute), which keep the profile&#x27;s F_D, F_P and F_H shorthands apart from the functor kinds of §5, and [ODD §5 Graph functions](ODD.md#graph-functions), where each inner function&#x27;s input satisfies its declared domain as AC-016 requires; [PROFILES §1](PROFILES.md#1-the-boundary), which keeps the traversal record and the functor kinds as this member&#x27;s terms and binds them only by declaration; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminators 22 and 51; [AC-013](#ac-013-transformation), as a specialisation of one traversal record, and [AC-007](#ac-007-constraint-and-refusal), whose `refusal(constraint)` names an application without its traversal.</span>
+<span id="L199" data-line="199">- Row 14, interpretation and models: [EVALUATION §2](EVALUATION.md#2-separation), which binds its separation to a_c models through AC-018 and AC-019; [SPEC_METHOD §11 Build-tenant binding](SPEC_METHOD.md#11-build-tenant-binding), rule 6; [TRAVERSAL_OCCURRENCE Imported calculus boundary](TRAVERSAL_OCCURRENCE.md#imported-calculus-boundary), where an occurrence model satisfies a_c under its signature; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminators 13, 14, 20, 40 and 45; [§7 Layers](#7-layers) and [§8 Calculus identity](#8-calculus-identity), where an interpreted model awaits a separate acceptance judgment and its identity binds the interpretation contract; [Constraint surfaces](#constraint-surfaces), which an interpretation yields, conditions 5 and 6.</span>
+<span id="L200" data-line="200">- Row 15, layers and release separation: [SPEC_METHOD §6 Lineage and release](SPEC_METHOD.md#6-lineage-and-release), where layer and release separation holds for release lineage; [FOUNDATIONS §4](FOUNDATIONS.md#4-algebra), Formal fragment, where the separate identities of a_c, its interpretations and their carriers are AC-020&#x27;s; [§8 Calculus identity](#8-calculus-identity), which binds the identity of each layer and issues this edition&#x27;s record under AC-020. RELEASE&#x27;s lead imports §7 and §8 and applies no rule of them.</span>
+<span id="L201" data-line="201">- Row 16, calculus identity: [TRAVERSAL_OCCURRENCE Closed profile signature](TRAVERSAL_OCCURRENCE.md#closed-profile-signature), whose calculus-basis identity resolves the record and the derivation account that §8 defines; otherwise no separate consumer applies: issuance of this edition&#x27;s record is its release&#x27;s act under RELEASE, whose lead imports §8 and applies no rule of it, and IDENTITY&#x27;s lead leaves the identity of a calculus edition to §8 without restating it.</span>
+<span id="L202" data-line="202">- Row 17, application boundary and external imports: [§5 Traversals and functor kinds](#5-traversals-and-functor-kinds), where a same-spelled term specialises the traversal record only through a declared binding under its owner&#x27;s authority; [Constraint surfaces](#constraint-surfaces), which selects, constructs and accepts no interpretation under the Application boundary; [§8 Calculus identity](#8-calculus-identity), where the owning Product defines the record grammar and issuance authority of the downstream identities. No section of another member applies them: [PROFILES §1](PROFILES.md#1-the-boundary) states the declared-binding rule from the profile&#x27;s side as its own, under which TRAVERSAL_OCCURRENCE imports this member, and ACTIVATION §4 Refinement states the declaration conditions of a specialised contract as its own.</span>
+<span id="L203" data-line="203">- Row 18, constraint surfaces: [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope), Acquisition, where a step acquires a current surface as a derived surface under this section&#x27;s conditions; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminators 15 to 18.</span>
+<span id="L204" data-line="204">- Row 19, conformance obligations: no separate consumer applies. The obligations bind a review or qualification of this member and are read where that claim is made; the conformance obligations of [TRAVERSAL_OCCURRENCE](TRAVERSAL_OCCURRENCE.md#conformance-obligations) are that profile&#x27;s own, over its signature, and name this section nowhere.</span>
+<span id="L205" data-line="205"></span>
+<span id="L206" data-line="206">Each consumer applies the rule and decides nothing the owning section does</span>
+<span id="L207" data-line="207">not (P2, P6).</span>
+<span id="L208" data-line="208"></span>
+<span id="L209" data-line="209">Purpose and material relation: an actor</span>
+<span id="L210" data-line="210">started on this member sees which rules of the calculus follow from the</span>
+<span id="L211" data-line="211">foundations and which are choices, with the owner of each choice, so no</span>
+<span id="L212" data-line="212">choice is presented as derived (P6, P1).</span>
+<span id="L213" data-line="213"></span>
+<span id="L214" data-line="214">## 2. Signature</span>
+<span id="L215" data-line="215"></span>
+<span id="L216" data-line="216">An `a_c` signature is (P3, P1):</span>
+<span id="L217" data-line="217"></span>
+<span id="L218" data-line="218">```text</span>
+<span id="L219" data-line="219">Sigma = (</span>
+<span id="L220" data-line="220">  RecordKind,</span>
+<span id="L221" data-line="221">  Sort,</span>
+<span id="L222" data-line="222">  RelationKind,</span>
+<span id="L223" data-line="223">  ConstraintKind,</span>
+<span id="L224" data-line="224">  ResidualKind,</span>
+<span id="L225" data-line="225">  FunctorKind,</span>
+<span id="L226" data-line="226">  JudgmentKind,</span>
+<span id="L227" data-line="227">  StopKind</span>
+<span id="L228" data-line="228">)</span>
+<span id="L229" data-line="229">```</span>
+<span id="L230" data-line="230"></span>
+<span id="L231" data-line="231">`a_c` fixes this finite core record-kind set:</span>
+<span id="L232" data-line="232"></span>
+<span id="L233" data-line="233">```text</span>
+<span id="L234" data-line="234">RecordKind_ac = {</span>
+<span id="L235" data-line="235">  urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object,</span>
+<span id="L236" data-line="236">  urn:stdo:concept:axiomatic-calculus:record-kind:typed-relation,</span>
+<span id="L237" data-line="237">  urn:stdo:concept:axiomatic-calculus:record-kind:constraint,</span>
+<span id="L238" data-line="238">  urn:stdo:concept:axiomatic-calculus:record-kind:latitude,</span>
+<span id="L239" data-line="239">  urn:stdo:concept:axiomatic-calculus:record-kind:residual,</span>
+<span id="L240" data-line="240">  urn:stdo:concept:axiomatic-calculus:record-kind:traversal,</span>
+<span id="L241" data-line="241">  urn:stdo:concept:axiomatic-calculus:record-kind:transformation,</span>
+<span id="L242" data-line="242">  urn:stdo:concept:axiomatic-calculus:record-kind:judgment</span>
+<span id="L243" data-line="243">}</span>
+<span id="L244" data-line="244">```</span>
+<span id="L245" data-line="245"></span>
+<span id="L246" data-line="246">Every `a_c` signature imports those identities unchanged. A model-family</span>
+<span id="L247" data-line="247">signature specialises their fields, value domains, reference domains and</span>
+<span id="L248" data-line="248">admissible kinds; it does not remove, rename, shadow or silently add a</span>
+<span id="L249" data-line="249">core record family. Another fundamental record family requires an explicit</span>
+<span id="L250" data-line="250">compatible calculus extension, never an extra subject sort (P3).</span>
+<span id="L251" data-line="251"></span>
+<span id="L252" data-line="252">Every signature member is a finite, closed identity set for one model</span>
+<span id="L253" data-line="253">family. The signature defines:</span>
+<span id="L254" data-line="254"></span>
+<span id="L255" data-line="255">- the fields and value domains of every sort and record family;</span>
+<span id="L256" data-line="256">- the reference domain and cardinality of every identity-bearing field;</span>
+<span id="L257" data-line="257">- the allowed source and target sorts for every relation kind;</span>
+<span id="L258" data-line="258">- the subject and predicate domains of every constraint kind;</span>
+<span id="L259" data-line="259">- the subject, uncertainty, consequence and re-entry domains of every</span>
+<span id="L260" data-line="260">  residual kind;</span>
+<span id="L261" data-line="261">- the input, output, evidence and stop contract of every judgment kind;</span>
+<span id="L262" data-line="262">  and</span>
+<span id="L263" data-line="263">- the functor kinds permitted for each traversal.</span>
+<span id="L264" data-line="264"></span>
+<span id="L265" data-line="265">Unknown kinds and fields are not extensions. They require a new signature</span>
+<span id="L266" data-line="266">or an explicit compatible extension relation (P1, P6).</span>
+<span id="L267" data-line="267"></span>
+<span id="L268" data-line="268">An `a_c` model over exact basis `b` is:</span>
+<span id="L269" data-line="269"></span>
+<span id="L270" data-line="270">```text</span>
+<span id="L271" data-line="271">M_b = (b, I, O, E, C, L, X, V, T, J)</span>
+<span id="L272" data-line="272"></span>
+<span id="L273" data-line="273">Population_M = {</span>
+<span id="L274" data-line="274">  urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object  -&gt; O,</span>
+<span id="L275" data-line="275">  urn:stdo:concept:axiomatic-calculus:record-kind:typed-relation  -&gt; E,</span>
+<span id="L276" data-line="276">  urn:stdo:concept:axiomatic-calculus:record-kind:constraint      -&gt; C,</span>
+<span id="L277" data-line="277">  urn:stdo:concept:axiomatic-calculus:record-kind:latitude        -&gt; L,</span>
+<span id="L278" data-line="278">  urn:stdo:concept:axiomatic-calculus:record-kind:residual        -&gt; X,</span>
+<span id="L279" data-line="279">  urn:stdo:concept:axiomatic-calculus:record-kind:traversal       -&gt; V,</span>
+<span id="L280" data-line="280">  urn:stdo:concept:axiomatic-calculus:record-kind:transformation  -&gt; T,</span>
+<span id="L281" data-line="281">  urn:stdo:concept:axiomatic-calculus:record-kind:judgment        -&gt; J</span>
+<span id="L282" data-line="282">}</span>
+<span id="L283" data-line="283">```</span>
+<span id="L284" data-line="284"></span>
+<span id="L285" data-line="285">where `I` is the closed identity universe; `O` the finite set of typed</span>
+<span id="L286" data-line="286">semantic objects; `E` the finite set of typed directed relations; `C` the</span>
+<span id="L287" data-line="287">finite set of constitutional constraints; `L` the finite set of declared</span>
+<span id="L288" data-line="288">latitude records; `X` the finite set of residual uncertainty records; `V`</span>
+<span id="L289" data-line="289">the finite set of traversal records; `T` the finite set of transformation</span>
+<span id="L290" data-line="290">records; and `J` the finite set of judgment records.</span>
+<span id="L291" data-line="291"></span>
+<span id="L292" data-line="292">`Population_M` is a total function over `RecordKind_ac`. Every population</span>
+<span id="L293" data-line="293">is finite, every fundamental record belongs to exactly one population, and</span>
+<span id="L294" data-line="294">record identities are unique across their disjoint union. Let `Local_M` be</span>
+<span id="L295" data-line="295">that union. Then `I = Local_M disjoint_union External_M`, where every</span>
+<span id="L296" data-line="296">member of `External_M` is admitted only through one signature-declared</span>
+<span id="L297" data-line="297">external reference domain and exact resolution relation. A hidden record,</span>
+<span id="L298" data-line="298">an unpopulated extra record family, an identity occurring in two</span>
+<span id="L299" data-line="299">populations, or an identity in `I` with neither one local record nor one</span>
+<span id="L300" data-line="300">lawful external resolution refuses the model. A population may be empty</span>
+<span id="L301" data-line="301">only when the selected signature does not require a member of that record</span>
+<span id="L302" data-line="302">kind (P3, P5).</span>
+<span id="L303" data-line="303"></span>
+<span id="L304" data-line="304">The signature declares a finite reference-domain function:</span>
+<span id="L305" data-line="305"></span>
+<span id="L306" data-line="306">```text</span>
+<span id="L307" data-line="307">RefDomain_Sigma(record_kind, field)</span>
+<span id="L308" data-line="308">  -&gt; (cardinality,</span>
+<span id="L309" data-line="309">      allowed_local_record_kinds,</span>
+<span id="L310" data-line="310">      allowed_semantic_object_sorts,</span>
+<span id="L311" data-line="311">      allowed_external_target_kinds,</span>
+<span id="L312" data-line="312">      required_basis_relation)</span>
+<span id="L313" data-line="313">```</span>
+<span id="L314" data-line="314"></span>
+<span id="L315" data-line="315">Every scalar or collection member that carries an identity reference is</span>
+<span id="L316" data-line="316">checked through that function. A local reference resolves across the exact</span>
+<span id="L317" data-line="317">`Population_M` family named by its target record kind; a reference to a</span>
+<span id="L318" data-line="318">semantic object also satisfies the declared target sort. An external</span>
+<span id="L319" data-line="319">reference resolves through exactly one declared external target kind and</span>
+<span id="L320" data-line="320">basis relation. No reference may resolve both locally and externally.</span>
+<span id="L321" data-line="321">Missing field domains, wrong-family targets, wrong-sort targets, ambiguous</span>
+<span id="L322" data-line="322">targets and dangling external identities refuse structural admission (P3,</span>
+<span id="L323" data-line="323">P6).</span>
+<span id="L324" data-line="324"></span>
+<span id="L325" data-line="325">The tuple is abstract. A carrier may use records, tables, terms, clauses,</span>
+<span id="L326" data-line="326">code or any other representation only when its encoding profile proves</span>
+<span id="L327" data-line="327">that every tuple relation is preserved or explicitly refused (P1, P4b).</span>
+<span id="L328" data-line="328"></span>
+<span id="L329" data-line="329">## 3. Typed records</span>
+<span id="L330" data-line="330"></span>
+<span id="L331" data-line="331">The following subsections define the exact shapes of five of the eight</span>
+<span id="L332" data-line="332">core record families. `SemanticObject`, `TypedRelation`, `Constraint`,</span>
+<span id="L333" data-line="333">`Latitude` and `Residual` populate `O`, `E`, `C`, `L` and `X`. The</span>
+<span id="L334" data-line="334">traversal record (§5), the transformation record (AC-013) and the judgment</span>
+<span id="L335" data-line="335">record (AC-014) populate `V`, `T` and `J`. A traversal, transformation or</span>
+<span id="L336" data-line="336">judgment is not placed in `O` merely by reifying its name as a semantic</span>
+<span id="L337" data-line="337">object. A subject model may independently represent the concept of a</span>
+<span id="L338" data-line="338">record kind, but that representation does not satisfy the core population</span>
+<span id="L339" data-line="339">law (P3, P1).</span>
+<span id="L340" data-line="340"></span>
+<span id="L341" data-line="341">### Semantic object</span>
+<span id="L342" data-line="342"></span>
+<span id="L343" data-line="343">Every semantic object has exactly (P3):</span>
+<span id="L344" data-line="344"></span>
+<span id="L345" data-line="345">```text</span>
+<span id="L346" data-line="346">SemanticObject = {</span>
+<span id="L347" data-line="347">  id,</span>
+<span id="L348" data-line="348">  sort,</span>
+<span id="L349" data-line="349">  context,</span>
+<span id="L350" data-line="350">  owner,</span>
+<span id="L351" data-line="351">  scope,</span>
+<span id="L352" data-line="352">  basis,</span>
+<span id="L353" data-line="353">  value</span>
+<span id="L354" data-line="354">}</span>
+<span id="L355" data-line="355">```</span>
+<span id="L356" data-line="356"></span>
+<span id="L357" data-line="357">`id`, `sort`, `context`, `owner` and `basis` are identities. `scope` is</span>
+<span id="L358" data-line="358">the closed governed domain. `value` is sort-defined carrier-neutral content</span>
+<span id="L359" data-line="359">or a reference to exact content. A semantic object is an Object of</span>
+<span id="L360" data-line="360">FOUNDATIONS §2 whose scoped identity is carried by `id`, `owner` and</span>
+<span id="L361" data-line="361">`sort` and whose boundary is `scope`.</span>
+<span id="L362" data-line="362"></span>
+<span id="L363" data-line="363">### Typed relation</span>
+<span id="L364" data-line="364"></span>
+<span id="L365" data-line="365">Every relation has exactly (P3, P4a):</span>
+<span id="L366" data-line="366"></span>
+<span id="L367" data-line="367">```text</span>
+<span id="L368" data-line="368">TypedRelation = {</span>
+<span id="L369" data-line="369">  id,</span>
+<span id="L370" data-line="370">  kind,</span>
+<span id="L371" data-line="371">  source,</span>
+<span id="L372" data-line="372">  target,</span>
+<span id="L373" data-line="373">  context,</span>
+<span id="L374" data-line="374">  owner,</span>
+<span id="L375" data-line="375">  scope,</span>
+<span id="L376" data-line="376">  basis,</span>
+<span id="L377" data-line="377">  qualifiers</span>
+<span id="L378" data-line="378">}</span>
+<span id="L379" data-line="379">```</span>
+<span id="L380" data-line="380"></span>
+<span id="L381" data-line="381">`source` and `target` resolve to members of `I`. `qualifiers` is the</span>
+<span id="L382" data-line="382">closed kind-specific record declaring direction, cardinality,</span>
+<span id="L383" data-line="383">preservation, loss, inverse, invalidation or other relation semantics</span>
+<span id="L384" data-line="384">required by the signature.</span>
+<span id="L385" data-line="385"></span>
+<span id="L386" data-line="386">### Constraint</span>
+<span id="L387" data-line="387"></span>
+<span id="L388" data-line="388">Every constraint has exactly (P6, P5):</span>
+<span id="L389" data-line="389"></span>
+<span id="L390" data-line="390">```text</span>
+<span id="L391" data-line="391">Constraint = {</span>
+<span id="L392" data-line="392">  id,</span>
+<span id="L393" data-line="393">  kind,</span>
+<span id="L394" data-line="394">  applies_to,</span>
+<span id="L395" data-line="395">  predicate,</span>
+<span id="L396" data-line="396">  context,</span>
+<span id="L397" data-line="397">  owner,</span>
+<span id="L398" data-line="398">  scope,</span>
+<span id="L399" data-line="399">  basis,</span>
+<span id="L400" data-line="400">  judgment_kind,</span>
+<span id="L401" data-line="401">  latitude_ref,</span>
+<span id="L402" data-line="402">  refusal</span>
+<span id="L403" data-line="403">}</span>
+<span id="L404" data-line="404">```</span>
+<span id="L405" data-line="405"></span>
+<span id="L406" data-line="406">`kind` resolves one declared `ConstraintKind`; `judgment_kind` resolves</span>
+<span id="L407" data-line="407">one declared `JudgmentKind`. The owning signature defines the predicate</span>
+<span id="L408" data-line="408">language and how its result is judged. A predicate that is not</span>
+<span id="L409" data-line="409">deterministically decidable states the required probabilistic or human</span>
+<span id="L410" data-line="410">judgment kind rather than pretending to be a machine proof (P6, P1).</span>
+<span id="L411" data-line="411"></span>
+<span id="L412" data-line="412">### Latitude</span>
+<span id="L413" data-line="413"></span>
+<span id="L414" data-line="414">Latitude is an explicit permission set inside a constraint boundary (P6):</span>
+<span id="L415" data-line="415"></span>
+<span id="L416" data-line="416">```text</span>
+<span id="L417" data-line="417">Latitude = {</span>
+<span id="L418" data-line="418">  id,</span>
+<span id="L419" data-line="419">  applies_to,</span>
+<span id="L420" data-line="420">  allowed_variation,</span>
+<span id="L421" data-line="421">  forbidden_variation,</span>
+<span id="L422" data-line="422">  context,</span>
+<span id="L423" data-line="423">  owner,</span>
+<span id="L424" data-line="424">  scope,</span>
+<span id="L425" data-line="425">  basis,</span>
+<span id="L426" data-line="426">  invalidation</span>
+<span id="L427" data-line="427">}</span>
+<span id="L428" data-line="428">```</span>
+<span id="L429" data-line="429"></span>
+<span id="L430" data-line="430">Silence is not latitude. Latitude grants no authority beyond its owner,</span>
+<span id="L431" data-line="431">scope, basis and invalidation law, an instance of</span>
+<span id="L432" data-line="432">[FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds), What</span>
+<span id="L433" data-line="433">creates no authority (P6).</span>
+<span id="L434" data-line="434"></span>
+<span id="L435" data-line="435">### Residual</span>
+<span id="L436" data-line="436"></span>
+<span id="L437" data-line="437">Residual uncertainty is first-class model content; a residual record is</span>
+<span id="L438" data-line="438">the Residual of FOUNDATIONS §2 carried inside a model (P4b):</span>
+<span id="L439" data-line="439"></span>
+<span id="L440" data-line="440">```text</span>
+<span id="L441" data-line="441">Residual = {</span>
+<span id="L442" data-line="442">  id,</span>
+<span id="L443" data-line="443">  subject,</span>
+<span id="L444" data-line="444">  kind,</span>
+<span id="L445" data-line="445">  uncertainty,</span>
+<span id="L446" data-line="446">  consequence,</span>
+<span id="L447" data-line="447">  context,</span>
+<span id="L448" data-line="448">  owner,</span>
+<span id="L449" data-line="449">  scope,</span>
+<span id="L450" data-line="450">  basis,</span>
+<span id="L451" data-line="451">  re_entry,</span>
+<span id="L452" data-line="452">  invalidation</span>
+<span id="L453" data-line="453">}</span>
+<span id="L454" data-line="454">```</span>
+<span id="L455" data-line="455"></span>
+<span id="L456" data-line="456">Projection, compression, interpretation or encoding cannot erase a</span>
+<span id="L457" data-line="457">residual. It remains represented, is explicitly dispositioned by competent</span>
+<span id="L458" data-line="458">authority, or causes refusal (P4b, P6).</span>
+<span id="L459" data-line="459"></span>
+<span id="L460" data-line="460">`kind` resolves one declared `ResidualKind`. The owning signature defines</span>
+<span id="L461" data-line="461">its lawful subject, uncertainty, consequence, re-entry and invalidation</span>
+<span id="L462" data-line="462">domains. An undeclared residual kind or value refuses structural admission</span>
+<span id="L463" data-line="463">(P3).</span>
+<span id="L464" data-line="464"></span>
+<span id="L465" data-line="465">## 4. Fundamental laws</span>
+<span id="L466" data-line="466"></span>
+<span id="L467" data-line="467">The objects these laws govern are the records of §2, §3 and §5 and the</span>
+<span id="L468" data-line="468">ontology of FOUNDATIONS §2; where a law names identity, authority, basis</span>
+<span id="L469" data-line="469">or residual, the definition is FOUNDATIONS&#x27; and the law is this member&#x27;s.</span>
+<span id="L470" data-line="470"></span>
+<span id="L471" data-line="471">### AC-001 Closed signature</span>
+<span id="L472" data-line="472"></span>
+<span id="L473" data-line="473">Every admitted object, relation, constraint, latitude, residual,</span>
+<span id="L474" data-line="474">traversal, transformation specialisation and judgment belongs to one</span>
+<span id="L475" data-line="475">declared signature. Every fundamental record also occurs exactly once in</span>
+<span id="L476" data-line="476">the total `Population_M` function under its declared `RecordKind_ac`.</span>
+<span id="L477" data-line="477">Missing, duplicate, shadowed or unknown record kinds and populations fail</span>
+<span id="L478" data-line="478">closed (P3, P5).</span>
+<span id="L479" data-line="479"></span>
+<span id="L480" data-line="480">### AC-002 Scoped identity</span>
+<span id="L481" data-line="481"></span>
+<span id="L482" data-line="482">This law applies the scoped identity of</span>
+<span id="L483" data-line="483">[IDENTITY §2](IDENTITY.md#scoped-identity), the identity of an Object of</span>
+<span id="L484" data-line="484">FOUNDATIONS §2, to every identity in `I`. Its coordinates map to that</span>
+<span id="L485" data-line="485">identity as follows: the owner is the identity&#x27;s authority, the type is</span>
+<span id="L486" data-line="486">its kind, and the member it resolves is what its value denotes; context,</span>
+<span id="L487" data-line="487">scope and basis are further coordinates, which IDENTITY §2 permits and</span>
+<span id="L488" data-line="488">`a_c` requires. So an identity resolves one member under one type,</span>
+<span id="L489" data-line="489">context, owner, scope and basis. That equal representations do not</span>
+<span id="L490" data-line="490">establish equal meaning is FOUNDATIONS §2, Representation. The `a_c`</span>
+<span id="L491" data-line="491">binding beside it: equal spelling, payload equality, position in any</span>
+<span id="L492" data-line="492">structure and carrier equality do not establish semantic identity (P3).</span>
+<span id="L493" data-line="493"></span>
+<span id="L494" data-line="494">### AC-003 Reference closure</span>
+<span id="L495" data-line="495"></span>
+<span id="L496" data-line="496">Every referenced identity resolves exactly once in the applicable model or</span>
+<span id="L497" data-line="497">through one explicit external relation. Resolution uses the exact</span>
+<span id="L498" data-line="498">`RefDomain_Sigma(source_record_kind, field)` declaration across the</span>
+<span id="L499" data-line="499">model&#x27;s record populations. Dangling, duplicate, wrong-record-kind,</span>
+<span id="L500" data-line="500">wrong-sort, wrong-basis, locally-and-externally ambiguous or</span>
+<span id="L501" data-line="501">undeclared-field references refuse structural admission (P3, P5).</span>
+<span id="L502" data-line="502"></span>
+<span id="L503" data-line="503">### AC-004 Relation typing</span>
+<span id="L504" data-line="504"></span>
+<span id="L505" data-line="505">A relation is lawful only when its kind admits the exact source and target</span>
+<span id="L506" data-line="506">sorts and all required qualifiers are present. Direction is material</span>
+<span id="L507" data-line="507">unless the relation kind explicitly declares symmetry (P4a, P3).</span>
+<span id="L508" data-line="508"></span>
+<span id="L509" data-line="509">### AC-005 Authority conservation</span>
+<span id="L510" data-line="510"></span>
+<span id="L511" data-line="511">Objects, relations, constraints, latitude, residuals, traversals,</span>
+<span id="L512" data-line="512">transformations, projections and judgments retain their declared semantic,</span>
+<span id="L513" data-line="513">operation, evaluation and decision authority (the kinds of</span>
+<span id="L514" data-line="514">[FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds)). What</span>
+<span id="L515" data-line="515">creates no authority is listed there; in `a_c` its instances are copying,</span>
+<span id="L516" data-line="516">interpreting, encoding, evaluating and transporting a record, none of</span>
+<span id="L517" data-line="517">which transfers authority (P6, P4b).</span>
+<span id="L518" data-line="518"></span>
+<span id="L519" data-line="519">### AC-006 Basis coherence</span>
+<span id="L520" data-line="520"></span>
+<span id="L521" data-line="521">Every result binds its exact basis under</span>
+<span id="L522" data-line="522">[RF-005](REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates), which</span>
+<span id="L523" data-line="523">owns the exact-basis rule for results; what a basis is, including that</span>
+<span id="L524" data-line="524">mixed bases need an explicit composite relation, is FOUNDATIONS §2,</span>
+<span id="L525" data-line="525">Basis. This law binds the same rule to every fundamental record and model</span>
+<span id="L526" data-line="526">of `a_c`: each binds an exact basis, the composite-basis relation of a</span>
+<span id="L527" data-line="527">mixed basis is an explicitly owned record, and individually valid</span>
+<span id="L528" data-line="528">coordinates do not create a coherent composite basis by proximity (P6, P3).</span>
+<span id="L529" data-line="529"></span>
+<span id="L530" data-line="530">### AC-007 Constraint and refusal</span>
+<span id="L531" data-line="531"></span>
+<span id="L532" data-line="532">Each constraint names its governed subject, predicate, judgment kind,</span>
+<span id="L533" data-line="533">latitude and refusal (§3, Constraint). The judgment of a constraint</span>
+<span id="L534" data-line="534">returns one value of the core result algebra of</span>
+<span id="L535" data-line="535">[FOUNDATIONS §4 Results](FOUNDATIONS.md#results), directly or through a</span>
+<span id="L536" data-line="536">refinement that the owning signature declares and that maps each of its</span>
+<span id="L537" data-line="537">values to exactly one core value. Under the no-coercion rule of</span>
+<span id="L538" data-line="538">FOUNDATIONS §4 Results, a failed, missing, indeterminate, out-of-scope or</span>
+<span id="L539" data-line="539">invalid-basis result of a constraint follows that algebra and is never</span>
+<span id="L540" data-line="540">coerced to satisfied (P5, P6). The</span>
+<span id="L541" data-line="541">core values, the rule that no mapping raises a result&#x27;s standing and the</span>
+<span id="L542" data-line="542">boundary among out_of_frame, indeterminate and an evaluation that was not</span>
+<span id="L543" data-line="543">performed are FOUNDATIONS §4 Results&#x27;. This law applies them to the</span>
+<span id="L544" data-line="544">judgment of a constraint and to the outcomes of the operations of this</span>
+<span id="L545" data-line="545">member, and adds no core value.</span>
+<span id="L546" data-line="546"></span>
+<span id="L547" data-line="547">Constraint results. The outcomes of a constraint&#x27;s judgment map for the</span>
+<span id="L548" data-line="548">predicate &quot;the constraint&#x27;s predicate holds for its governed subject on</span>
+<span id="L549" data-line="549">the exact basis&quot; (P5, P6):</span>
+<span id="L550" data-line="550"></span>
+<span id="L551" data-line="551">| Outcome | Core value | Ground |</span>
+<span id="L552" data-line="552">|---|---|---|</span>
+<span id="L553" data-line="553">| holds | satisfied | the judgment establishes the predicate on the exact basis |</span>
+<span id="L554" data-line="554">| failed | falsified | a counterexample defeats the predicate; the judgment names it |</span>
+<span id="L555" data-line="555">| indeterminate | indeterminate | the admissible evidence cannot decide the predicate; the judgment names the evidence that would decide |</span>
+<span id="L556" data-line="556">| out of scope | out_of_frame | the predicate is asked of a subject or relation outside the constraint&#x27;s declared `applies_to`, context or scope, so deciding it needs a relation the constraint does not declare; the judgment names that relation, with its owner where the subject gives one |</span>
+<span id="L557" data-line="557">| invalid basis | invalid_basis | the subject or basis cannot support the judgment; the judgment names the basis repair |</span>
+<span id="L558" data-line="558"></span>
+<span id="L559" data-line="559">A missing result is no value of this refinement: a judgment that was not</span>
+<span id="L560" data-line="560">performed has no closed result, is never `indeterminate`, and enters every</span>
+<span id="L561" data-line="561">conjunction over it as a planned assessment without a closed result</span>
+<span id="L562" data-line="562">(FOUNDATIONS §4 Results, Not performed).</span>
+<span id="L563" data-line="563"></span>
+<span id="L564" data-line="564">Operation outcomes. A closure (AC-010), a projection (AC-011), the</span>
+<span id="L565" data-line="565">structural admission of a record, model or carrier, the application of a</span>
+<span id="L566" data-line="566">transformation (AC-013) and an interpretation (§6) each end in their</span>
+<span id="L567" data-line="567">declared result or in one of the stops `hold`, `gap` and `refusal` that</span>
+<span id="L568" data-line="568">this member writes. Where this member says that a condition refuses, the</span>
+<span id="L569" data-line="569">operation returns `refusal` naming the condition; the record, model or</span>
+<span id="L570" data-line="570">carrier is not admitted, and nothing is dropped silently. Each outcome</span>
+<span id="L571" data-line="571">maps for the predicate &quot;the operation yields its declared result on the</span>
+<span id="L572" data-line="572">exact basis&quot; (P5, P6):</span>
+<span id="L573" data-line="573"></span>
+<span id="L574" data-line="574">| Outcome | Core value | Ground |</span>
+<span id="L575" data-line="575">|---|---|---|</span>
+<span id="L576" data-line="576">| declared result | satisfied | the closure, the projection with its boundary, the admission, the proposed successor `M_b_prime*` or the proposed model `M_subject*` is returned on the exact basis; a proposed successor or model establishes that it is available, never its acceptance or admission (FOUNDATIONS §4 Results) |</span>
+<span id="L577" data-line="577">| `hold` | indeterminate | the operation was applied and stops because evidence, an observation or a disposition it needs is not yet admitted, so the admissible evidence cannot decide whether it yields its result; its residual names what would decide |</span>
+<span id="L578" data-line="578">| `gap` | invalid_basis | the result needs a member, reference, resolution or declaration whose resolution on the basis is still open: the declared relation that resolves it has not yet decided it, as for an external resolution not yet evaluated; the result is undefined on this basis until it is supplied. A reference evaluated to no target is dangling and refuses (AC-003): a local reference with no record in the model&#x27;s closed population, and an external reference whose declared resolution has been evaluated and yields no target |</span>
+<span id="L579" data-line="579">| `refusal(constraint)` | falsified | every refusal that is not `refusal(basis)`: the refusal names a demonstrated violation of a declared law of this member or a constraint of its signature by the record, model, carrier, transformation or application under judgment, including a missing record family (AC-001), a dangling reference (AC-003) and an application without its traversal (AC-015), or it names no condition of the basis; the violation or other defect it names is the counterexample |</span>
+<span id="L580" data-line="580">| `refusal(basis)` | invalid_basis | the refusal names one or more conditions of the basis the operation acts on and no demonstrated violation of a declared law or constraint by the record, model, carrier, transformation or application under judgment: a seed set, relation family, required-edge semantics, basis or scope that is not exact; a fixed point that is not finite and unique; an input model, subject or carrier whose exact identity, basis or admission is not established; or mixed bases with no composite-basis relation (AC-006) |</span>
+<span id="L581" data-line="581"></span>
+<span id="L582" data-line="582">The cause is part of a refusal&#x27;s value, because a refusal would otherwise</span>
+<span id="L583" data-line="583">map to falsified or to invalid_basis according to its cause, and a refined</span>
+<span id="L584" data-line="584">value maps to exactly one core value (FOUNDATIONS §4 Results,</span>
+<span id="L585" data-line="585">Refinements). A refusal that names a demonstrated violation of a declared</span>
+<span id="L586" data-line="586">law or constraint by the record, model, carrier, transformation or</span>
+<span id="L587" data-line="587">application under judgment is `refusal(constraint)`, whatever condition of</span>
+<span id="L588" data-line="588">the basis it also names. The basis condition is recorded with the refusal</span>
+<span id="L589" data-line="589">and reported beside it as its own `invalid_basis` result, which names the</span>
+<span id="L590" data-line="590">basis repair and answers the predicate of the evaluation that the</span>
+<span id="L591" data-line="591">condition leaves without a supporting basis, never the operation-outcome</span>
+<span id="L592" data-line="592">predicate that the refusal answers</span>
+<span id="L593" data-line="593">([FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results),</span>
+<span id="L594" data-line="594">Predicates travel). A refusal that names only conditions of the basis is</span>
+<span id="L595" data-line="595">`refusal(basis)`. A violation inside an input that the operation acts on</span>
+<span id="L596" data-line="596">as its basis is a condition of the basis for that operation, not a</span>
+<span id="L597" data-line="597">violation by what it judges, as the projection below shows. Purpose and</span>
+<span id="L598" data-line="598">material relation: a demonstrated violation is a known failure, which</span>
+<span id="L599" data-line="599">survives every join only as a `falsified` result, so a basis condition</span>
+<span id="L600" data-line="600">named beside it neither hides the failure nor discards its counterexample,</span>
+<span id="L601" data-line="601">and the basis repair stays named (FOUNDATIONS §4 Conjunction of results,</span>
+<span id="L602" data-line="602">Survival; P5, P6). A basis mismatch inside a model or a record, a</span>
+<span id="L603" data-line="603">relation&#x27;s qualifier record included, is mixed bases with no</span>
+<span id="L604" data-line="604">composite-basis relation (AC-006): a coordinate of the model or record</span>
+<span id="L605" data-line="605">binds, or a reference in it resolves on, a basis that the governing basis</span>
+<span id="L606" data-line="606">relation does not admit, as a wrong-basis reference of AC-003 does. It is</span>
+<span id="L607" data-line="607">a condition of the basis, in the structural admission that judges that</span>
+<span id="L608" data-line="608">model or record as in every other operation, and never a violated</span>
+<span id="L609" data-line="609">constraint of a signature, even where the signature declares the basis</span>
+<span id="L610" data-line="610">relation; a refusal that names only such a mismatch is `refusal(basis)`.</span>
+<span id="L611" data-line="611">One defect can bear on two predicates: a model that violates AC-001 is</span>
+<span id="L612" data-line="612">`refusal(constraint)` in the structural admission that judges it and</span>
+<span id="L613" data-line="613">`refusal(basis)` in a projection over it, and each outcome answers its own</span>
+<span id="L614" data-line="614">predicate. An operation that was not applied has no outcome. A stop `gap`</span>
+<span id="L615" data-line="615">is a closed result with the value invalid_basis; it is not the absence of</span>
+<span id="L616" data-line="616">a result that</span>
+<span id="L617" data-line="617">[FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results)</span>
+<span id="L618" data-line="618">records as a gap. A signature&#x27;s stop contract and a traversal record map</span>
+<span id="L619" data-line="619">stops of their own under §5.</span>
+<span id="L620" data-line="620"></span>
+<span id="L621" data-line="621">Purpose and material relation: a</span>
+<span id="L622" data-line="622">constraint result or an operation&#x27;s stop combines with results of other</span>
+<span id="L623" data-line="623">members only through the one core, so a refusal, a hold or a gap is</span>
+<span id="L624" data-line="624">neither read as success nor mistaken for another case; and a closure or</span>
+<span id="L625" data-line="625">projection that is not established has the value invalid_basis here, as</span>
+<span id="L626" data-line="626">the activation outcome `closure_unresolved` of</span>
+<span id="L627" data-line="627">[ACTIVATION §3](ACTIVATION.md#admission-and-activation) has for its own</span>
+<span id="L628" data-line="628">predicate (P5, P6).</span>
+<span id="L629" data-line="629"></span>
+<span id="L630" data-line="630">### AC-008 Explicit latitude</span>
+<span id="L631" data-line="631"></span>
+<span id="L632" data-line="632">Two values may differ lawfully only through an applicable latitude record</span>
+<span id="L633" data-line="633">or transformation relation. An implementation preference, a probabilistic</span>
+<span id="L634" data-line="634">choice or a human presence is not implicit latitude. FOUNDATIONS §4 states</span>
+<span id="L635" data-line="635">the same rule for any two values; this law is its form over `L` and `T`</span>
+<span id="L636" data-line="636">(P6, P1).</span>
+<span id="L637" data-line="637"></span>
+<span id="L638" data-line="638">### AC-009 Residual conservation</span>
+<span id="L639" data-line="639"></span>
+<span id="L640" data-line="640">Every material uncertainty, omission, translation loss, unresolved</span>
+<span id="L641" data-line="641">boundary or unproven relation remains in `X` until an authorised</span>
+<span id="L642" data-line="642">disposition creates an exact successor model. Absence from a projection is</span>
+<span id="L643" data-line="643">not resolution (P4b).</span>
+<span id="L644" data-line="644"></span>
+<span id="L645" data-line="645">### AC-010 Material closure</span>
+<span id="L646" data-line="646"></span>
+<span id="L647" data-line="647">For model `M`, seed set `Z` and exact dependency relation family `R`,</span>
+<span id="L648" data-line="648">material closure is the least fixed point (P0, P2):</span>
+<span id="L649" data-line="649"></span>
+<span id="L650" data-line="650">```text</span>
+<span id="L651" data-line="651">closure_R(M, Z) = lfp(lambda Q: Z union required_R(M, Q))</span>
+<span id="L652" data-line="652">```</span>
+<span id="L653" data-line="653"></span>
+<span id="L654" data-line="654">The result is defined only when `Z`, `R`, required-edge semantics, basis</span>
+<span id="L655" data-line="655">and scope are exact and the fixed point is finite and unique. Failure to</span>
+<span id="L656" data-line="656">establish those conditions returns a gap or refusal: `gap` where a</span>
+<span id="L657" data-line="657">condition is unresolved on the basis, otherwise `refusal(basis)`, because</span>
+<span id="L658" data-line="658">each condition bears on the basis the closure acts on (AC-007). Least</span>
+<span id="L659" data-line="659">closure means least lawful record closure under `R`; it does not claim</span>
+<span id="L660" data-line="660">globally minimal prose, bytes, tokens, cost or cognitive effort.</span>
+<span id="L661" data-line="661">ACTIVATION §2 applies this closure to the construction of a step&#x27;s context</span>
+<span id="L662" data-line="662">under an envelope.</span>
+<span id="L663" data-line="663"></span>
+<span id="L664" data-line="664">### AC-011 Projection</span>
+<span id="L665" data-line="665"></span>
+<span id="L666" data-line="666">A projection selects a view of a model without changing selected meaning</span>
+<span id="L667" data-line="667">(P4b, P2):</span>
+<span id="L668" data-line="668"></span>
+<span id="L669" data-line="669">```text</span>
+<span id="L670" data-line="670">project(M, Z, R) -&gt; (M_Z, Boundary_Z) | gap | refusal</span>
+<span id="L671" data-line="671">```</span>
+<span id="L672" data-line="672"></span>
+<span id="L673" data-line="673">`M_Z` contains the material closure of `Z`, so a projection&#x27;s `gap` or</span>
+<span id="L674" data-line="674">`refusal` is that of the closure it contains or of the model it acts on:</span>
+<span id="L675" data-line="675">`gap` or `refusal(basis)` (AC-007). `Boundary_Z` records excluded,</span>
+<span id="L676" data-line="676">external, unresolved, translated and invalidation-sensitive seams. A</span>
+<span id="L677" data-line="677">projection is not a new semantic owner. It is a reference, so the rule</span>
+<span id="L678" data-line="678">that no reference trims a required member to fit a carrier or budget,</span>
+<span id="L679" data-line="679">stated at [FOUNDATIONS §4](FOUNDATIONS.md#4-algebra), Reference versus</span>
+<span id="L680" data-line="680">body, applies to it: here the required members are those of the material</span>
+<span id="L681" data-line="681">closure of `Z`, and a capability budget is one such budget. ACTIVATION §2</span>
+<span id="L682" data-line="682">applies the projection to a step&#x27;s context, and every projected frame of</span>
+<span id="L683" data-line="683">this corpus is one.</span>
+<span id="L684" data-line="684"></span>
+<span id="L685" data-line="685">### AC-012 Overlay</span>
+<span id="L686" data-line="686"></span>
+<span id="L687" data-line="687">An overlay adds explicit records to one or more declared `Population_M`</span>
+<span id="L688" data-line="688">families of a basis model. It does not mutate the basis. Override,</span>
+<span id="L689" data-line="689">disambiguation, equivalence, specialisation or translation exists only as</span>
+<span id="L690" data-line="690">a typed relation with exact authority, direction, scope, basis,</span>
+<span id="L691" data-line="691">preservation, loss, refusal and invalidation semantics (P3, P6).</span>
+<span id="L692" data-line="692"></span>
+<span id="L693" data-line="693">### AC-013 Transformation</span>
+<span id="L694" data-line="694"></span>
+<span id="L695" data-line="695">A transformation is an operation-bearing specialisation of one exact</span>
+<span id="L696" data-line="696">traversal record `v` (§5). Its record is (P4b, P3):</span>
+<span id="L697" data-line="697"></span>
+<span id="L698" data-line="698">```text</span>
+<span id="L699" data-line="699">t = {</span>
+<span id="L700" data-line="700">  id,</span>
+<span id="L701" data-line="701">  traversal,</span>
+<span id="L702" data-line="702">  domain_model,</span>
+<span id="L703" data-line="703">  codomain_model,</span>
+<span id="L704" data-line="704">  context,</span>
+<span id="L705" data-line="705">  owner,</span>
+<span id="L706" data-line="706">  scope,</span>
+<span id="L707" data-line="707">  basis,</span>
+<span id="L708" data-line="708">  operation_authority,</span>
+<span id="L709" data-line="709">  preconditions,</span>
+<span id="L710" data-line="710">  preservation_relation,</span>
+<span id="L711" data-line="711">  preserved,</span>
+<span id="L712" data-line="712">  introduced,</span>
+<span id="L713" data-line="713">  removed,</span>
+<span id="L714" data-line="714">  external_preserved,</span>
+<span id="L715" data-line="715">  external_introduced,</span>
+<span id="L716" data-line="716">  external_removed,</span>
+<span id="L717" data-line="717">  external_resolution_witnesses,</span>
+<span id="L718" data-line="718">  residuals,</span>
+<span id="L719" data-line="719">  evidence,</span>
+<span id="L720" data-line="720">  provenance,</span>
+<span id="L721" data-line="721">  stop_states,</span>
+<span id="L722" data-line="722">  invalidation,</span>
+<span id="L723" data-line="723">  re_entry</span>
+<span id="L724" data-line="724">}</span>
+<span id="L725" data-line="725">```</span>
+<span id="L726" data-line="726"></span>
+<span id="L727" data-line="727">`t.traversal` resolves one `v`; its context, owner, scope, basis,</span>
+<span id="L728" data-line="728">operation authority, evidence, provenance and stop contract equal or</span>
+<span id="L729" data-line="729">lawfully restrict the corresponding traversal coordinates. A broader or</span>
+<span id="L730" data-line="730">mismatched coordinate refuses (P6).</span>
+<span id="L731" data-line="731"></span>
+<span id="L732" data-line="732">`domain_model` and `codomain_model` resolve exact content identities of</span>
+<span id="L733" data-line="733">the complete input and proposed successor models. Each model identity</span>
+<span id="L734" data-line="734">commits to its exact calculus basis, signature identity, complete finite</span>
+<span id="L735" data-line="735">`Population_M`, complete `External_M`, exact external-resolution map and</span>
+<span id="L736" data-line="736">selected model-content identity under the owning identity law. A mutable</span>
+<span id="L737" data-line="737">locator, a model-family name, a partial projection or a population digest</span>
+<span id="L738" data-line="738">without the exact model identity refuses (P3).</span>
+<span id="L739" data-line="739"></span>
+<span id="L740" data-line="740">For each `x in External_M`, the model&#x27;s exact resolution relation</span>
+<span id="L741" data-line="741">determines:</span>
+<span id="L742" data-line="742"></span>
+<span id="L743" data-line="743">```text</span>
+<span id="L744" data-line="744">Resolution_M(x) = {</span>
+<span id="L745" data-line="745">  external_identity,</span>
+<span id="L746" data-line="746">  reference_domain,</span>
+<span id="L747" data-line="747">  external_target_kind,</span>
+<span id="L748" data-line="748">  resolved_target_identity,</span>
+<span id="L749" data-line="749">  basis_relation,</span>
+<span id="L750" data-line="750">  resolution_basis,</span>
+<span id="L751" data-line="751">  evidence_identity</span>
+<span id="L752" data-line="752">}</span>
+<span id="L753" data-line="753"></span>
+<span id="L754" data-line="754">ResolutionSet_M = { Resolution_M(x) | x in External_M }</span>
+<span id="L755" data-line="755">```</span>
+<span id="L756" data-line="756"></span>
+<span id="L757" data-line="757">`Resolution_M` is a model coordinate supplied by the signature-declared</span>
+<span id="L758" data-line="758">external reference relation, not a ninth fundamental record family. Every</span>
+<span id="L759" data-line="759">field is identity-bearing and exact. One external identity has exactly one</span>
+<span id="L760" data-line="760">resolution tuple in one model; a missing, ambiguous or extra tuple refuses</span>
+<span id="L761" data-line="761">(P3).</span>
+<span id="L762" data-line="762"></span>
+<span id="L763" data-line="763">For an ordinary same-basis transformation:</span>
+<span id="L764" data-line="764"></span>
+<span id="L765" data-line="765">```text</span>
+<span id="L766" data-line="766">basis(domain_model) = basis(codomain_model) = t.basis = basis(t.traversal)</span>
+<span id="L767" data-line="767">signature(domain_model) = signature(codomain_model)</span>
+<span id="L768" data-line="768">```</span>
+<span id="L769" data-line="769"></span>
+<span id="L770" data-line="770">A cross-basis or cross-signature migration requires a separately</span>
+<span id="L771" data-line="771">identified transformation specialisation whose exact composite-basis and</span>
+<span id="L772" data-line="772">compatible signature-extension relations name both sides. No identity</span>
+<span id="L773" data-line="773">whose basis or record kind changes belongs to `preserved`; the source</span>
+<span id="L774" data-line="774">identity is removed and the successor identity is introduced, with their</span>
+<span id="L775" data-line="775">continuity represented only by the exact migration relation (P3, P6).</span>
+<span id="L776" data-line="776"></span>
+<span id="L777" data-line="777">`preservation_relation` resolves one exact typed equality relation</span>
+<span id="L778" data-line="778">applicable to the declared domain and codomain model identities and record</span>
+<span id="L779" data-line="779">kinds. It binds both model identities, both exact bases, comparison</span>
+<span id="L780" data-line="780">domain, direction, authority, scope, evidence and equality law.</span>
+<span id="L781" data-line="781">Equivalence or meaning-preservation may relate a removed identity to an</span>
+<span id="L782" data-line="782">introduced identity; it cannot retain one identity in `preserved` (P1,</span>
+<span id="L783" data-line="783">P3).</span>
+<span id="L784" data-line="784"></span>
+<span id="L785" data-line="785">Let `Local_b` be the complete input-model local-record identity set, `P_t`</span>
+<span id="L786" data-line="786">the identities named by `preserved`, `R_t` those named by `removed`, and</span>
+<span id="L787" data-line="787">`N_t` the identities of the complete records named by `introduced`. A</span>
+<span id="L788" data-line="788">lawful transformation proves the closed local-record delta (P4b):</span>
+<span id="L789" data-line="789"></span>
+<span id="L790" data-line="790">```text</span>
+<span id="L791" data-line="791">Local_b       = P_t disjoint_union R_t</span>
+<span id="L792" data-line="792">Local_b_prime = P_t disjoint_union N_t</span>
+<span id="L793" data-line="793">N_t intersect Local_b = empty</span>
+<span id="L794" data-line="794">R_t intersect Local_b_prime = empty</span>
+<span id="L795" data-line="795">```</span>
+<span id="L796" data-line="796"></span>
+<span id="L797" data-line="797">For every identity in `P_t`, the input and successor records have the</span>
+<span id="L798" data-line="798">same record kind, identity, context, owner, scope and basis. They are</span>
+<span id="L799" data-line="799">either:</span>
+<span id="L800" data-line="800"></span>
+<span id="L801" data-line="801">1. byte-identical under one exact canonical record grammar selected for</span>
+<span id="L802" data-line="802">   both models; or</span>
+<span id="L803" data-line="803">2. equal under the exact `preservation_relation` when the abstract</span>
+<span id="L804" data-line="804">   records do not share such a byte grammar.</span>
+<span id="L805" data-line="805"></span>
+<span id="L806" data-line="806">Canonical-byte equality and typed record equality are alternative proofs</span>
+<span id="L807" data-line="807">of identity preservation, not carrier selection by the calculus. A changed</span>
+<span id="L808" data-line="808">field, changed basis, changed record kind, nominally equal identifier,</span>
+<span id="L809" data-line="809">equivalence or unbound assertion of preserved meaning refuses membership</span>
+<span id="L810" data-line="810">in `P_t` (P3, P1).</span>
+<span id="L811" data-line="811"></span>
+<span id="L812" data-line="812">Every removed identity is absent from the successor. Every introduced</span>
+<span id="L813" data-line="813">identity is absent from the input and carries a complete lawful record in</span>
+<span id="L814" data-line="814">exactly one successor population. Every input local-record identity is</span>
+<span id="L815" data-line="815">classified exactly once as preserved or removed; no local record may be</span>
+<span id="L816" data-line="816">silently dropped, retained or duplicated (P4b).</span>
+<span id="L817" data-line="817"></span>
+<span id="L818" data-line="818">The external-resolution coordinates form a distinct closed delta. Let</span>
+<span id="L819" data-line="819">`E_b` and `E_b_prime` be `ResolutionSet_M` for the domain and codomain</span>
+<span id="L820" data-line="820">models; `EP_t`, `ER_t` and `EN_t` are exactly the resolution coordinates</span>
+<span id="L821" data-line="821">named by `external_preserved`, `external_removed` and</span>
+<span id="L822" data-line="822">`external_introduced`:</span>
+<span id="L823" data-line="823"></span>
+<span id="L824" data-line="824">```text</span>
+<span id="L825" data-line="825">E_b       = EP_t disjoint_union ER_t</span>
+<span id="L826" data-line="826">E_b_prime = EP_t disjoint_union EN_t</span>
+<span id="L827" data-line="827">EN_t intersect E_b = empty</span>
+<span id="L828" data-line="828">ER_t intersect E_b_prime = empty</span>
+<span id="L829" data-line="829">```</span>
+<span id="L830" data-line="830"></span>
+<span id="L831" data-line="831">For every `x in EP_t`, `external_resolution_witnesses` contains exactly</span>
+<span id="L832" data-line="832">one:</span>
+<span id="L833" data-line="833"></span>
+<span id="L834" data-line="834">```text</span>
+<span id="L835" data-line="835">ExternalResolutionPreservationWitness = {</span>
+<span id="L836" data-line="836">  external_resolution: x,</span>
+<span id="L837" data-line="837">  domain_model,</span>
+<span id="L838" data-line="838">  codomain_model,</span>
+<span id="L839" data-line="839">  domain_resolution: Resolution_domain_model(x),</span>
+<span id="L840" data-line="840">  codomain_resolution: Resolution_codomain_model(x),</span>
+<span id="L841" data-line="841">  decision: equal,</span>
+<span id="L842" data-line="842">  evidence</span>
+<span id="L843" data-line="843">}</span>
+<span id="L844" data-line="844">```</span>
+<span id="L845" data-line="845"></span>
+<span id="L846" data-line="846">The two resolution tuples are exactly field-equal. A nominally equal</span>
+<span id="L847" data-line="847">external identifier, an equivalent target, a changed target kind, a</span>
+<span id="L848" data-line="848">changed resolved target, a changed reference domain, a changed basis</span>
+<span id="L849" data-line="849">relation, a changed resolution basis or a missing witness cannot enter</span>
+<span id="L850" data-line="850">`EP_t`. Every member of `ER_t` has its complete resolution only in the</span>
+<span id="L851" data-line="851">domain model; every member of `EN_t` has its complete resolution only in</span>
+<span id="L852" data-line="852">the codomain model. A changed external resolution is a removal followed by</span>
+<span id="L853" data-line="853">introduction of the new resolution coordinate and any separately declared</span>
+<span id="L854" data-line="854">continuity relation; the referenced external identity may remain</span>
+<span id="L855" data-line="855">unchanged, but the resolution is not preserved. Witnesses are total and</span>
+<span id="L856" data-line="856">unique over `EP_t` and name no other resolution coordinate (P4b, P3).</span>
+<span id="L857" data-line="857"></span>
+<span id="L858" data-line="858">Material residuals remain in the successor residual set unless an exact</span>
+<span id="L859" data-line="859">authorised disposition is included in the transformation evidence.</span>
+<span id="L860" data-line="860">Failure to establish any model identity, basis, population, local or</span>
+<span id="L861" data-line="861">external partition, equality, external-resolution witness, residual or</span>
+<span id="L862" data-line="862">codomain equation refuses (P4b, P5).</span>
+<span id="L863" data-line="863"></span>
+<span id="L864" data-line="864">Application is:</span>
+<span id="L865" data-line="865"></span>
+<span id="L866" data-line="866">```text</span>
+<span id="L867" data-line="867">T[t](M_b, inputs) -&gt; M_b_prime* | hold | gap | refusal</span>
+<span id="L868" data-line="868">```</span>
+<span id="L869" data-line="869"></span>
+<span id="L870" data-line="870">The exact transformation identity `t` declares every mutation it may</span>
+<span id="L871" data-line="871">perform. The input model remains unchanged; `M_b_prime*` is a proposed</span>
+<span id="L872" data-line="872">successor. A proposed successor does not accept or admit itself (P6). The</span>
+<span id="L873" data-line="873">stops `hold`, `gap` and `refusal` take their core values under AC-007 by</span>
+<span id="L874" data-line="874">their causes.</span>
+<span id="L875" data-line="875">FOUNDATIONS §4 consumes this law as the conservation accounting of every</span>
+<span id="L876" data-line="876">step: what was preserved, introduced and removed, the external resolution</span>
+<span id="L877" data-line="877">witnesses and the residuals.</span>
+<span id="L878" data-line="878"></span>
+<span id="L879" data-line="879">### AC-014 Judgment separation</span>
+<span id="L880" data-line="880"></span>
+<span id="L881" data-line="881">A judgment points to an unchanged subject; it is the Judgment of</span>
+<span id="L882" data-line="882">FOUNDATIONS §2 carried as a model record (P6):</span>
+<span id="L883" data-line="883"></span>
+<span id="L884" data-line="884">```text</span>
+<span id="L885" data-line="885">Judgment = {</span>
+<span id="L886" data-line="886">  id,</span>
+<span id="L887" data-line="887">  kind,</span>
+<span id="L888" data-line="888">  subject,</span>
+<span id="L889" data-line="889">  subject_digest,</span>
+<span id="L890" data-line="890">  context,</span>
+<span id="L891" data-line="891">  owner,</span>
+<span id="L892" data-line="892">  scope,</span>
+<span id="L893" data-line="893">  basis,</span>
+<span id="L894" data-line="894">  evaluator,</span>
+<span id="L895" data-line="895">  authority,</span>
+<span id="L896" data-line="896">  decision,</span>
+<span id="L897" data-line="897">  evidence,</span>
+<span id="L898" data-line="898">  provenance,</span>
+<span id="L899" data-line="899">  decided_at</span>
+<span id="L900" data-line="900">}</span>
+<span id="L901" data-line="901">```</span>
+<span id="L902" data-line="902"></span>
+<span id="L903" data-line="903">Issuing a judgment does not transform, rewrite, reissue or rename its</span>
+<span id="L904" data-line="904">subject. Promotion is an explicit relation between the unchanged subject</span>
+<span id="L905" data-line="905">and its admission or acceptance judgment (P6, P3).</span>
+<span id="L906" data-line="906"></span>
+<span id="L907" data-line="907">## 5. Traversals and functor kinds</span>
+<span id="L908" data-line="908"></span>
+<span id="L909" data-line="909">A traversal is a typed contract (P4a, P6):</span>
+<span id="L910" data-line="910"></span>
+<span id="L911" data-line="911">```text</span>
+<span id="L912" data-line="912">v = {</span>
+<span id="L913" data-line="913">  id,</span>
+<span id="L914" data-line="914">  domain,</span>
+<span id="L915" data-line="915">  codomain,</span>
+<span id="L916" data-line="916">  context,</span>
+<span id="L917" data-line="917">  owner,</span>
+<span id="L918" data-line="918">  scope,</span>
+<span id="L919" data-line="919">  basis,</span>
+<span id="L920" data-line="920">  preconditions,</span>
+<span id="L921" data-line="921">  postconditions,</span>
+<span id="L922" data-line="922">  authority,</span>
+<span id="L923" data-line="923">  evidence,</span>
+<span id="L924" data-line="924">  provenance,</span>
+<span id="L925" data-line="925">  stop_states</span>
+<span id="L926" data-line="926">}</span>
+<span id="L927" data-line="927">```</span>
+<span id="L928" data-line="928"></span>
+<span id="L929" data-line="929">The traversal record is this member&#x27;s own concept. A same-spelled term</span>
+<span id="L930" data-line="930">owned by a profile, a realisation or a runtime is not imported by nominal</span>
+<span id="L931" data-line="931">equality and does not specialise this record except through a declared</span>
+<span id="L932" data-line="932">binding under that owner&#x27;s authority (§9; P3, P1).</span>
+<span id="L933" data-line="933"></span>
+<span id="L934" data-line="934">`a_c` defines three fundamental functor-kind identities (P3):</span>
+<span id="L935" data-line="935"></span>
+<span id="L936" data-line="936">```text</span>
+<span id="L937" data-line="937">F_D = urn:stdo:concept:axiomatic-calculus:f-d</span>
+<span id="L938" data-line="938">F_P = urn:stdo:concept:axiomatic-calculus:f-p</span>
+<span id="L939" data-line="939">F_H = urn:stdo:concept:axiomatic-calculus:f-h</span>
+<span id="L940" data-line="940">```</span>
+<span id="L941" data-line="941"></span>
+<span id="L942" data-line="942">Application notation is:</span>
+<span id="L943" data-line="943"></span>
+<span id="L944" data-line="944">```text</span>
+<span id="L945" data-line="945">F_K[v](X_v) -&gt; Y_v | Omega_v</span>
+<span id="L946" data-line="946">```</span>
+<span id="L947" data-line="947"></span>
+<span id="L948" data-line="948">where `F_K` is one functor kind, `v` is one exact traversal identity,</span>
+<span id="L949" data-line="949">`X_v` and `Y_v` are its typed input and result domains, and `Omega_v` is</span>
+<span id="L950" data-line="950">its closed stop algebra. `Omega_v` is a refinement of the core result</span>
+<span id="L951" data-line="951">algebra of [FOUNDATIONS §4 Results](FOUNDATIONS.md#results): it adds no</span>
+<span id="L952" data-line="952">core value, and each of its stop values maps to exactly one core value,</span>
+<span id="L953" data-line="953">never to `satisfied`. A stop this member writes, `hold`, `gap`,</span>
+<span id="L954" data-line="954">`refusal(constraint)` or `refusal(basis)`, has the meaning and the core</span>
+<span id="L955" data-line="955">value that AC-007 gives it. The signature&#x27;s stop contract declares any</span>
+<span id="L956" data-line="956">further stop value with the one core value it maps to, and may refine a</span>
+<span id="L957" data-line="957">stop value by cause. A traversal record&#x27;s `stop_states` binds the stop</span>
+<span id="L958" data-line="958">mapping of that traversal, exactly one core value for each stop value; it</span>
+<span id="L959" data-line="959">may refine a value of the signature&#x27;s stop contract further by cause for</span>
+<span id="L960" data-line="960">that traversal. Each refined value, whether the stop contract or a</span>
+<span id="L961" data-line="961">`stop_states` declares it, names its parent value and its cause and maps</span>
+<span id="L962" data-line="962">to its parent&#x27;s core value: a value refined from `hold` to indeterminate,</span>
+<span id="L963" data-line="963">from `gap` or `refusal(basis)` to invalid_basis, and from</span>
+<span id="L964" data-line="964">`refusal(constraint)` to falsified. No refined value takes `satisfied`. A</span>
+<span id="L965" data-line="965">different core value needs a different parent value, which only the member</span>
+<span id="L966" data-line="966">that owns the parent declares; for these four stops that member is this</span>
+<span id="L967" data-line="967">one. Neither the stop contract nor a traversal&#x27;s `stop_states` raises a</span>
+<span id="L968" data-line="968">result&#x27;s standing (P5, P6). Purpose and material relation: one stop of one</span>
+<span id="L969" data-line="969">traversal has one core value, so its consumers cannot read it two ways,</span>
+<span id="L970" data-line="970">and no refinement gives a stop another core value, so a violated</span>
+<span id="L971" data-line="971">constraint never becomes a case that the evidence merely cannot decide.</span>
+<span id="L972" data-line="972"></span>
+<span id="L973" data-line="973">- `F_D` classifies deterministic evaluation or proof over declared</span>
+<span id="L974" data-line="974">  properties. It returns a judgment and does not perform the domain</span>
+<span id="L975" data-line="975">  construction being judged (P6).</span>
+<span id="L976" data-line="976">- `F_P` classifies bounded probabilistic interpretation, construction or</span>
+<span id="L977" data-line="977">  proposal under an exact traversal contract. Its result has no semantic,</span>
+<span id="L978" data-line="978">  admission, acceptance or closure authority merely because it is useful</span>
+<span id="L979" data-line="979">  or repeatable (P6, P0; instance premise (iii) of §1 Foundation to law).</span>
+<span id="L980" data-line="980">- `F_H` classifies explicit human adjudication under an exact identity,</span>
+<span id="L981" data-line="981">  authority grant, subject, basis and decision contract. Human presence</span>
+<span id="L982" data-line="982">  grants no ambient authority (P6).</span>
+<span id="L983" data-line="983"></span>
+<span id="L984" data-line="984">The actor, the executor, the domain operation and the functor kind are</span>
+<span id="L985" data-line="985">different coordinates. `Encode`, `Interpret`, `Serialize`, `Measure` and</span>
+<span id="L986" data-line="986">other named domain operations are not aliases for `F_D`, `F_P` or `F_H`.</span>
+<span id="L987" data-line="987">Different traversals may share one functor kind without sharing identity,</span>
+<span id="L988" data-line="988">semantics, inputs, outputs, authority or evidence (P3, P6).</span>
+<span id="L989" data-line="989"></span>
+<span id="L990" data-line="990">&quot;Functor kind&quot; is an `a_c` term for this traversal classification. It does</span>
+<span id="L991" data-line="991">not by itself assert a category-theoretic functor. A model that claims</span>
+<span id="L992" data-line="992">categorical functor laws carries the demonstration that</span>
+<span id="L993" data-line="993">[FOUNDATIONS §4](FOUNDATIONS.md#4-algebra), Formal fragment, requires of</span>
+<span id="L994" data-line="994">every categorical claim (P6, P1).</span>
+<span id="L995" data-line="995"></span>
+<span id="L996" data-line="996">### AC-015 Functor classification</span>
+<span id="L997" data-line="997"></span>
+<span id="L998" data-line="998">Every functor application binds exactly one functor kind and one traversal</span>
+<span id="L999" data-line="999">identity. Applying any `F_*` kind without the bracketed traversal identity</span>
+<span id="L1000" data-line="1000">`[v]` is incomplete (P3). Such an</span>
+<span id="L1001" data-line="1001">application violates this law, and its outcome is `refusal(constraint)`</span>
+<span id="L1002" data-line="1002">under AC-007; this sense of incomplete is not the construction-availability</span>
+<span id="L1003" data-line="1003">value `incomplete` of a step</span>
+<span id="L1004" data-line="1004">([ACTIVATION §3](ACTIVATION.md#construction-availability)). Purpose and</span>
+<span id="L1005" data-line="1005">material relation: an application without its traversal has one core</span>
+<span id="L1006" data-line="1006">value, and the shared word does not let it be read as a step&#x27;s stop (P5).</span>
+<span id="L1007" data-line="1007"></span>
+<span id="L1008" data-line="1008">### AC-016 Typed composition</span>
+<span id="L1009" data-line="1009"></span>
+<span id="L1010" data-line="1010">Two traversals compose only when the first result type and judgment</span>
+<span id="L1011" data-line="1011">satisfy the second traversal&#x27;s exact domain and preconditions (P4a):</span>
+<span id="L1012" data-line="1012"></span>
+<span id="L1013" data-line="1013">```text</span>
+<span id="L1014" data-line="1014">F_K2[w] compose F_K1[v]</span>
+<span id="L1015" data-line="1015">```</span>
+<span id="L1016" data-line="1016"></span>
+<span id="L1017" data-line="1017">Composition retains both traversal identities, intermediate results,</span>
+<span id="L1018" data-line="1018">judgments, evidence, authority, provenance and stop states. It cannot</span>
+<span id="L1019" data-line="1019">flatten probabilistic proposal, deterministic evaluation and human</span>
+<span id="L1020" data-line="1020">decision into one undifferentiated operation. `a_c` prescribes no</span>
+<span id="L1021" data-line="1021">universal `F_P -&gt; F_D -&gt; F_H` sequence; each application owns its lawful</span>
+<span id="L1022" data-line="1022">topology (P4a, P4b, P6). FOUNDATIONS §3 P4a consumes this law.</span>
+<span id="L1023" data-line="1023"></span>
+<span id="L1024" data-line="1024">## 6. Interpretation and models</span>
+<span id="L1025" data-line="1025"></span>
+<span id="L1026" data-line="1026">An interpretation applies `a_c` to an exact subject (P1):</span>
+<span id="L1027" data-line="1027"></span>
+<span id="L1028" data-line="1028">```text</span>
+<span id="L1029" data-line="1029">Interpret_a_c(subject_basis, signature, interpretation_contract)</span>
+<span id="L1030" data-line="1030">  -&gt; M_subject* | hold | gap | refusal</span>
+<span id="L1031" data-line="1031">```</span>
+<span id="L1032" data-line="1032"></span>
+<span id="L1033" data-line="1033">The stops `hold`, `gap` and `refusal` take their core values under AC-007</span>
+<span id="L1034" data-line="1034">by their causes. The trailing `*` marks a proposed model that has not</span>
+<span id="L1035" data-line="1035">received the</span>
+<span id="L1036" data-line="1036">applicable semantic acceptance judgment. The interpretation contract is</span>
+<span id="L1037" data-line="1037">the Interpretation of FOUNDATIONS §2 made exact for one subject and one</span>
+<span id="L1038" data-line="1038">signature. It declares:</span>
+<span id="L1039" data-line="1039"></span>
+<span id="L1040" data-line="1040">- the exact `a_c` basis;</span>
+<span id="L1041" data-line="1041">- the exact subject identity, inventory, and bytes or semantic addresses;</span>
+<span id="L1042" data-line="1042">- the selected signature and any compatible extension relation;</span>
+<span id="L1043" data-line="1043">- the mapping from subject declarations to every applicable model record</span>
+<span id="L1044" data-line="1044">  population, including objects, relations, constraints, latitude,</span>
+<span id="L1045" data-line="1045">  residuals, traversals, transformations and judgments;</span>
+<span id="L1046" data-line="1046">- the interpreter identity, capability, provenance and stop states;</span>
+<span id="L1047" data-line="1047">- the structural evaluation contract;</span>
+<span id="L1048" data-line="1048">- the semantic selection and acceptance authority; and</span>
+<span id="L1049" data-line="1049">- the source re-entry and invalidation rules.</span>
+<span id="L1050" data-line="1050"></span>
+<span id="L1051" data-line="1051">The proposed model `M_subject*` does not become accepted through</span>
+<span id="L1052" data-line="1052">construction. Structural evaluation can prove closed shape, reference</span>
+<span id="L1053" data-line="1053">typing, identity derivation and basis coherence. It cannot prove that</span>
+<span id="L1054" data-line="1054">probabilistic semantic selection retained every material subject meaning.</span>
+<span id="L1055" data-line="1055">Semantic acceptance remains a separately recorded authority judgment (P6,</span>
+<span id="L1056" data-line="1056">P1).</span>
+<span id="L1057" data-line="1057"></span>
+<span id="L1058" data-line="1058">### AC-017 Interpretation fidelity</span>
+<span id="L1059" data-line="1059"></span>
+<span id="L1060" data-line="1060">Every admitted model record maps to exact subject provenance or is</span>
+<span id="L1061" data-line="1061">explicitly identified as model-local content under competent authority.</span>
+<span id="L1062" data-line="1062">Every evaluated subject declaration has a retained, omitted, residual,</span>
+<span id="L1063" data-line="1063">inapplicable or refused disposition. Interpretation cannot treat absence</span>
+<span id="L1064" data-line="1064">as immateriality without a recorded basis and authority (P1, P4b, P6).</span>
+<span id="L1065" data-line="1065"></span>
+<span id="L1066" data-line="1066">### AC-018 Structural and semantic separation</span>
+<span id="L1067" data-line="1067"></span>
+<span id="L1068" data-line="1068">The separation of structural conformance from semantic fidelity, and the</span>
+<span id="L1069" data-line="1069">rule that structural success is evidence for semantic review and no</span>
+<span id="L1070" data-line="1070">substitute for it, are [EVALUATION §2](EVALUATION.md#2-separation)&#x27;s,</span>
+<span id="L1071" data-line="1071">which owns them for every review. This law binds them to `a_c`: the</span>
+<span id="L1072" data-line="1072">structural conformance of a model covers its closed syntax, types,</span>
+<span id="L1073" data-line="1073">identities, references, bases and mechanically decidable predicates, and</span>
+<span id="L1074" data-line="1074">the semantic fidelity of an interpretation covers its meaning and</span>
+<span id="L1075" data-line="1075">materiality (P1, P6).</span>
+<span id="L1076" data-line="1076"></span>
+<span id="L1077" data-line="1077">### AC-019 Valid model</span>
+<span id="L1078" data-line="1078"></span>
+<span id="L1079" data-line="1079">A model `M_b` is a valid model of `a_c` under signature `Sigma`, written</span>
+<span id="L1080" data-line="1080">`M_b satisfies a_c[Sigma]`, only when (P6, P1):</span>
+<span id="L1081" data-line="1081"></span>
+<span id="L1082" data-line="1082">1. `Sigma` and the exact `a_c` basis resolve;</span>
+<span id="L1083" data-line="1083">2. every record satisfies AC-001 through AC-009;</span>
+<span id="L1084" data-line="1084">3. every claimed closure, projection, overlay, transformation, judgment</span>
+<span id="L1085" data-line="1085">   and composition satisfies its applicable law;</span>
+<span id="L1086" data-line="1086">4. interpretation fidelity and residual dispositions bind the exact</span>
+<span id="L1087" data-line="1087">   subject;</span>
+<span id="L1088" data-line="1088">5. structural evaluation and semantic acceptance remain distinct and both</span>
+<span id="L1089" data-line="1089">   required where claimed; and</span>
+<span id="L1090" data-line="1090">6. all evidence, provenance, invalidation and re-entry coordinates</span>
+<span id="L1091" data-line="1091">   resolve.</span>
+<span id="L1092" data-line="1092"></span>
+<span id="L1093" data-line="1093">A checker may decide the structural subset. No generic checker may claim</span>
+<span id="L1094" data-line="1094">the semantic or authority subset unless the model supplies an exact lawful</span>
+<span id="L1095" data-line="1095">decision contract for it (P6, P1).</span>
+<span id="L1096" data-line="1096"></span>
+<span id="L1097" data-line="1097">## 7. Layers</span>
+<span id="L1098" data-line="1098"></span>
+<span id="L1099" data-line="1099">The three governed layers are (P3):</span>
+<span id="L1100" data-line="1100"></span>
+<span id="L1101" data-line="1101">```text</span>
+<span id="L1102" data-line="1102">a_c       = the pure calculus</span>
+<span id="L1103" data-line="1103">a_c.X     = subject X interpreted as a model of a_c</span>
+<span id="L1104" data-line="1104">a_c.X.C   = that accepted model encoded in carrier C</span>
+<span id="L1105" data-line="1105">```</span>
+<span id="L1106" data-line="1106"></span>
+<span id="L1107" data-line="1107">Their relations are:</span>
+<span id="L1108" data-line="1108"></span>
+<span id="L1109" data-line="1109">```text</span>
+<span id="L1110" data-line="1110">M_X = Interpret_a_c(X)</span>
+<span id="L1111" data-line="1111">J_X = Accept_X(M_X) -&gt; accepted | refuse</span>
+<span id="L1112" data-line="1112">G_C = Encode_C(M_X, J_X) where J_X = accepted</span>
+<span id="L1113" data-line="1113">D_C = F_D[v_carrier_admission](G_C, Profile_C, CarrierBasis_C)</span>
+<span id="L1114" data-line="1114">      -&gt; admitted | refuse</span>
+<span id="L1115" data-line="1115">```</span>
+<span id="L1116" data-line="1116"></span>
+<span id="L1117" data-line="1117">`J_X` is an external semantic-acceptance judgment over unchanged `M_X`.</span>
+<span id="L1118" data-line="1118">Encoding requires `J_X.decision = accepted` and exact equality between the</span>
+<span id="L1119" data-line="1119">judgment subject identity and digest and `M_X`; hold or refusal cannot be</span>
+<span id="L1120" data-line="1120">encoded. `D_C` is a judgment over unchanged carrier bytes; it is not a</span>
+<span id="L1121" data-line="1121">transformed carrier. The admitted encoding evidence relation is the exact</span>
+<span id="L1122" data-line="1122">triple `(G_C, J_X, D_C)`; neither judgment enters the identity of its</span>
+<span id="L1123" data-line="1123">subject (P6, P3). Each judgment answers its own predicate, that `M_X` is</span>
+<span id="L1124" data-line="1124">accepted and that the carrier bytes are admitted: `accepted` and</span>
+<span id="L1125" data-line="1125">`admitted` map to satisfied, a hold maps as AC-007&#x27;s `hold`, and `refuse`</span>
+<span id="L1126" data-line="1126">is a `refusal` that takes its core value under AC-007 by its cause (P5,</span>
+<span id="L1127" data-line="1127">P6). The mapping ensures that an acceptance or admission</span>
+<span id="L1128" data-line="1128">judgment combines with other results only through the one core, so a</span>
+<span id="L1129" data-line="1129">withheld or refused judgment is never read as accepted.</span>
+<span id="L1130" data-line="1130"></span>
+<span id="L1131" data-line="1131">### AC-020 Layer and release separation</span>
+<span id="L1132" data-line="1132"></span>
+<span id="L1133" data-line="1133">`a_c`, `a_c.X` and `a_c.X.C` have independent content identities,</span>
+<span id="L1134" data-line="1134">judgments, supersession relations and proof obligations (P3, P6):</span>
+<span id="L1135" data-line="1135"></span>
+<span id="L1136" data-line="1136">- `a_c` qualification evaluates internal coherence against its complete</span>
+<span id="L1137" data-line="1137">  declared calculus-law set;</span>
+<span id="L1138" data-line="1138">- `a_c.X` proves faithful interpretation of exact subject `X`; and</span>
+<span id="L1139" data-line="1139">- `a_c.X.C` proves faithful, canonical encoding of the accepted model in</span>
+<span id="L1140" data-line="1140">  carrier `C`.</span>
+<span id="L1141" data-line="1141"></span>
+<span id="L1142" data-line="1142">An encoding failure does not change `a_c.X`. An interpretation failure</span>
+<span id="L1143" data-line="1143">does not change `a_c`. A downstream success cannot ratify an upstream</span>
+<span id="L1144" data-line="1144">layer or basis. None of these layers is automatically an independently</span>
+<span id="L1145" data-line="1145">released Product. The external authority that selects and releases one</span>
+<span id="L1146" data-line="1146">owns that Product status. SPEC_METHOD §6 applies this law to release</span>
+<span id="L1147" data-line="1147">lineage.</span>
+<span id="L1148" data-line="1148"></span>
+<span id="L1149" data-line="1149">## 8. Calculus identity</span>
+<span id="L1150" data-line="1150"></span>
+<span id="L1151" data-line="1151">The stable concept identity does not identify one immutable calculus</span>
+<span id="L1152" data-line="1152">edition. An exact released calculus basis is an external record created</span>
+<span id="L1153" data-line="1153">after the publication bytes exist. It binds the governing premise clauses</span>
+<span id="L1154" data-line="1154">and the published calculus member as distinct roles inside one exact</span>
+<span id="L1155" data-line="1155">immutable package (P3, P6):</span>
+<span id="L1156" data-line="1156"></span>
+<span id="L1157" data-line="1157">```text</span>
+<span id="L1158" data-line="1158">AxiomaticCalculusBasis = {</span>
+<span id="L1159" data-line="1159">  kind: &quot;stdo.axiomatic-calculus-basis&quot;,</span>
+<span id="L1160" data-line="1160">  schema_version: 1,</span>
+<span id="L1161" data-line="1161">  concept_identity: &quot;urn:stdo:concept:axiomatic-calculus:a-c&quot;,</span>
+<span id="L1162" data-line="1162">  derivation_basis: {</span>
+<span id="L1163" data-line="1163">    release_uri: absolute immutable package release URI,</span>
+<span id="L1164" data-line="1164">    manifest_sha256: &quot;sha256:&quot; + 64 lowercase hexadecimal characters,</span>
+<span id="L1165" data-line="1165">    principle_refs: non-empty absolute semantic-address URI[]</span>
+<span id="L1166" data-line="1166">  },</span>
+<span id="L1167" data-line="1167">  publication_basis: {</span>
+<span id="L1168" data-line="1168">    release_uri: the same absolute immutable package release URI,</span>
+<span id="L1169" data-line="1169">    manifest_sha256: &quot;sha256:&quot; + 64 lowercase hexadecimal characters,</span>
+<span id="L1170" data-line="1170">    member_uri: absolute URI for this member in that release,</span>
+<span id="L1171" data-line="1171">    member_sha256: &quot;sha256:&quot; + 64 lowercase hexadecimal characters</span>
+<span id="L1172" data-line="1172">  }</span>
+<span id="L1173" data-line="1173">}</span>
+<span id="L1174" data-line="1174">```</span>
+<span id="L1175" data-line="1175"></span>
+<span id="L1176" data-line="1176">The record uses RFC 8785 JSON Canonicalization Scheme bytes. Duplicate</span>
+<span id="L1177" data-line="1177">object names are rejected before canonicalisation.</span>
+<span id="L1178" data-line="1178">`derivation_basis.principle_refs` is duplicate-free and sorted by</span>
+<span id="L1179" data-line="1179">ascending unsigned UTF-16 code units. The record&#x27;s identity is:</span>
+<span id="L1180" data-line="1180"></span>
+<span id="L1181" data-line="1181">```text</span>
+<span id="L1182" data-line="1182">urn:stdo:axiomatic-calculus-basis:sha256:</span>
+<span id="L1183" data-line="1183">  + sha256(JCS(AxiomaticCalculusBasis))</span>
+<span id="L1184" data-line="1184">```</span>
+<span id="L1185" data-line="1185"></span>
+<span id="L1186" data-line="1186">`derivation_basis` binds the complete finite set of governing clauses</span>
+<span id="L1187" data-line="1187">identified under §1 Derivation provenance. Every principle reference resolves</span>
+<span id="L1188" data-line="1188">inside the same exact immutable package named by `publication_basis`, and</span>
+<span id="L1189" data-line="1189">the two `release_uri` and `manifest_sha256` values are equal. The set is</span>
+<span id="L1190" data-line="1190">recomputed when those governing clauses change and is not inferred from a</span>
+<span id="L1191" data-line="1191">hard-coded member count. Local premise ownership does not move to the</span>
+<span id="L1192" data-line="1192">calculus member merely because both are published together (P3, P6).</span>
+<span id="L1193" data-line="1193"></span>
+<span id="L1194" data-line="1194">`publication_basis` binds this member&#x27;s exact bytes. Its member URI resolves</span>
+<span id="L1195" data-line="1195">inside its release URI. Every release URI in this record has the immutable</span>
+<span id="L1196" data-line="1196">`stdo://releases/v&lt;version&gt;-rc.&lt;positive-ordinal&gt;/` form defined by</span>
+<span id="L1197" data-line="1197">[RELEASE §2](RELEASE.md#2-release-identities). Acceptance is a verdict over</span>
+<span id="L1198" data-line="1198">that exact cut under [RELEASE §8](RELEASE.md#acceptance-criteria), not a</span>
+<span id="L1199" data-line="1199">second release identity. The record grants no acceptance or release status</span>
+<span id="L1200" data-line="1200">by its presence. A principle reference outside the bound package, a</span>
+<span id="L1201" data-line="1201">missing or ambiguous clause, an extra undeclared premise reference, or a</span>
+<span id="L1202" data-line="1202">manifest or member digest mismatch invalidates the record (P3, P6).</span>
+<span id="L1203" data-line="1203"></span>
+<span id="L1204" data-line="1204">The identity record is external to the member bytes and to the manifest</span>
+<span id="L1205" data-line="1205">member set whose digest it names. It is issued only after that set and its</span>
+<span id="L1206" data-line="1206">manifest are frozen, and may accompany them as release metadata outside</span>
+<span id="L1207" data-line="1207">that hashed member set. Neither the member nor that manifest embeds the</span>
+<span id="L1208" data-line="1208">record&#x27;s identity or final bytes. The dependency is one-way: the record</span>
+<span id="L1209" data-line="1209">hashes already-fixed basis coordinates; those coordinates do not depend on</span>
+<span id="L1210" data-line="1210">the record being created. This prevents a member or manifest from requiring</span>
+<span id="L1211" data-line="1211">its own final digest through the identity record (P3).</span>
+<span id="L1212" data-line="1212"></span>
+<span id="L1213" data-line="1213">An interpreted-subject identity binds at least:</span>
+<span id="L1214" data-line="1214"></span>
+<span id="L1215" data-line="1215">```text</span>
+<span id="L1216" data-line="1216">id(a_c.X) binds</span>
+<span id="L1217" data-line="1217">  exact id(a_c)</span>
+<span id="L1218" data-line="1218">  + exact subject basis id(X)</span>
+<span id="L1219" data-line="1219">  + exact interpretation contract</span>
+<span id="L1220" data-line="1220">  + selected model content identity</span>
+<span id="L1221" data-line="1221">  + semantic-selection ledger identity and digest</span>
+<span id="L1222" data-line="1222">```</span>
+<span id="L1223" data-line="1223"></span>
+<span id="L1224" data-line="1224">An external semantic-acceptance judgment points to that unchanged identity</span>
+<span id="L1225" data-line="1225">and content digest. It is not embedded in `id(a_c.X)`. The accepted</span>
+<span id="L1226" data-line="1226">interpretation is the pair `(a_c.X, J_X)` where `J_X` is the applicable</span>
+<span id="L1227" data-line="1227">accepted judgment. This one-way relation prevents the acceptance record</span>
+<span id="L1228" data-line="1228">and its subject from requiring each other&#x27;s final identity (P3, P6).</span>
+<span id="L1229" data-line="1229"></span>
+<span id="L1230" data-line="1230">An encoded-carrier identity binds at least:</span>
+<span id="L1231" data-line="1231"></span>
+<span id="L1232" data-line="1232">```text</span>
+<span id="L1233" data-line="1233">id(a_c.X.C) binds</span>
+<span id="L1234" data-line="1234">  exact id(a_c.X)</span>
+<span id="L1235" data-line="1235">  + exact carrier Product or cut</span>
+<span id="L1236" data-line="1236">  + exact encoding profile</span>
+<span id="L1237" data-line="1237">  + canonical carrier content identity</span>
+<span id="L1238" data-line="1238">```</span>
+<span id="L1239" data-line="1239"></span>
+<span id="L1240" data-line="1240">The accepted semantic judgment remains external to both content</span>
+<span id="L1241" data-line="1241">identities. Encoding mechanically verifies its subject identity and digest</span>
+<span id="L1242" data-line="1242">against the unchanged interpreted model and retains it in the evidence</span>
+<span id="L1243" data-line="1243">relation. The carrier-admission judgment points to the unchanged carrier</span>
+<span id="L1244" data-line="1244">identity and digest and is not embedded in `id(a_c.X.C)`. The admitted</span>
+<span id="L1245" data-line="1245">encoding relation is the triple `(a_c.X.C, J_X, D_C)`. Any Product</span>
+<span id="L1246" data-line="1246">acceptance and release likewise point to the unchanged content-first layer</span>
+<span id="L1247" data-line="1247">identity rather than entering it (P3, P6).</span>
+<span id="L1248" data-line="1248"></span>
+<span id="L1249" data-line="1249">The owning Product defines the canonical record grammar and issuance</span>
+<span id="L1250" data-line="1250">authority for those downstream identities. It cannot omit the upstream</span>
+<span id="L1251" data-line="1251">identities or replace them with mutable locators (P3).</span>
+<span id="L1252" data-line="1252"></span>
+<span id="L1253" data-line="1253">Publication binding. The `AxiomaticCalculusBasis` for this member is issued</span>
+<span id="L1254" data-line="1254">under [RELEASE](RELEASE.md) and AC-020 after the exact package bytes exist.</span>
+<span id="L1255" data-line="1255">Its `publication_basis` binds this member and its `derivation_basis` binds</span>
+<span id="L1256" data-line="1256">the local governing clauses listed in §1, all under that same package</span>
+<span id="L1257" data-line="1257">identity. A dependency on a released calculus binds that record&#x27;s identity,</span>
+<span id="L1258" data-line="1258">release, manifest digest and member digest. A mutable authoring copy or an</span>
+<span id="L1259" data-line="1259">unissued record is never substituted for that exact basis (P3, P6).</span>
+<span id="L1260" data-line="1260"></span>
+<span id="L1261" data-line="1261">## 9. Application boundary, imports and exclusions</span>
+<span id="L1262" data-line="1262"></span>
+<span id="L1263" data-line="1263">### Application boundary</span>
+<span id="L1264" data-line="1264"></span>
+<span id="L1265" data-line="1265">This member defines the generic relations `a_c.X` and `a_c.X.C`. It</span>
+<span id="L1266" data-line="1266">selects, constructs, accepts or releases no concrete interpretation or</span>
+<span id="L1267" data-line="1267">carrier. A downstream authority owns its exact subject population,</span>
+<span id="L1268" data-line="1268">interpretation, carrier, judgments and Product or release status. The</span>
+<span id="L1269" data-line="1269">downstream identity is never embedded back into the calculus or its</span>
+<span id="L1270" data-line="1270">publication basis (P2, P6).</span>
+<span id="L1271" data-line="1271"></span>
+<span id="L1272" data-line="1272">### External imports and specialisations</span>
+<span id="L1273" data-line="1273"></span>
+<span id="L1274" data-line="1274">An application may declare a typed import, translation or specialisation</span>
+<span id="L1275" data-line="1275">of an `a_c` concept under that application&#x27;s own exact authority, context,</span>
+<span id="L1276" data-line="1276">basis, scope, preservation, loss, refusal and invalidation law. Such a</span>
+<span id="L1277" data-line="1277">relation is external to the calculus. It neither changes `a_c` nor enters</span>
+<span id="L1278" data-line="1278">this member by being useful to an application (P6, P2). PROFILES §1 states the same</span>
+<span id="L1279" data-line="1279">rule from the profile&#x27;s side as the declared-binding rule.</span>
+<span id="L1280" data-line="1280"></span>
+<span id="L1281" data-line="1281">### Constraint surfaces</span>
+<span id="L1282" data-line="1282"></span>
+<span id="L1283" data-line="1283">A constraint surface states, for a declared subject and work boundary,</span>
+<span id="L1284" data-line="1284">the obligations and the permitted freedom of the work: its objects and</span>
+<span id="L1285" data-line="1285">their meanings, the predicates and dependencies that bear on it, the</span>
+<span id="L1286" data-line="1286">admissible operations, the required results, the authority, the evidence</span>
+<span id="L1287" data-line="1287">and the conditions still unresolved. It constrains the work without</span>
+<span id="L1288" data-line="1288">prescribing the worker&#x27;s internal solution strategy beyond those</span>
+<span id="L1289" data-line="1289">obligations (P2, P6).</span>
+<span id="L1290" data-line="1290"></span>
+<span id="L1291" data-line="1291">An interpretation of a subject in `a_c` (§6) yields the constraint surface</span>
+<span id="L1292" data-line="1292">of a task by projection. The task&#x27;s declared subject and work boundary</span>
+<span id="L1293" data-line="1293">are the seed set `Z`, with the dependency relation family `R` the task</span>
+<span id="L1294" data-line="1294">declares, and the surface is `project(M_subject, Z, R)` (AC-011) over the</span>
+<span id="L1295" data-line="1295">material closure of AC-010. Its parts come from the records of this</span>
+<span id="L1296" data-line="1296">member:</span>
+<span id="L1297" data-line="1297"></span>
+<span id="L1298" data-line="1298">| Part of the surface | Records and laws that supply it |</span>
+<span id="L1299" data-line="1299">|---|---|</span>
+<span id="L1300" data-line="1300">| objects and meanings | the semantic objects of `M_Z` (§3), with identity under AC-002 and provenance under AC-017 |</span>
+<span id="L1301" data-line="1301">| predicates and dependencies | the constraints (§3, AC-007) and typed relations (AC-004) in the closure; a premise shared by several constraints is one record, and the closure imposes no tree shape and no execution order |</span>
+<span id="L1302" data-line="1302">| admissible operations | the traversals and transformations in the closure (§5, AC-013), each with its preconditions and operation authority |</span>
+<span id="L1303" data-line="1303">| required results | each constraint&#x27;s judgment kind and its outcomes, mapped to the core values of [FOUNDATIONS §4 Results](FOUNDATIONS.md#results) under AC-007 |</span>
+<span id="L1304" data-line="1304">| permitted freedom | the latitude records (AC-008); what no obligation fixes and a latitude admits is the worker&#x27;s choice |</span>
+<span id="L1305" data-line="1305">| authority | the authority each record retains (AC-005); the surface grants none |</span>
+<span id="L1306" data-line="1306">| evidence | the judgments (AC-014) and the evidence, provenance and basis coordinates of the records (AC-006) |</span>
+<span id="L1307" data-line="1307">| unresolved conditions | the residuals in the closure (AC-009) and the seams recorded in `Boundary_Z` (AC-011) |</span>
+<span id="L1308" data-line="1308"></span>
+<span id="L1309" data-line="1309">Conditions on its use:</span>
+<span id="L1310" data-line="1310"></span>
+<span id="L1311" data-line="1311">1. **Standing kept.** Each element keeps the standing the interpretation</span>
+<span id="L1312" data-line="1312">   records for it: premise, derived consequence, policy choice,</span>
+<span id="L1313" data-line="1313">   observation or unresolved claim. A policy choice keeps its owner, and a</span>
+<span id="L1314" data-line="1314">   preference is never read as an obligation. An element of the</span>
+<span id="L1315" data-line="1315">   construction or assurance relations also keeps the kind of support</span>
+<span id="L1316" data-line="1316">   the interpretation records for it, one of the five that</span>
+<span id="L1317" data-line="1317">   [FOUNDATIONS §4 Formal representation](FOUNDATIONS.md#formal-representation)</span>
+<span id="L1318" data-line="1318">   distinguishes: a stated formula is not read as discharged, and an</span>
+<span id="L1319" data-line="1319">   externally assessed predicate keeps the source, scope and evidence</span>
+<span id="L1320" data-line="1320">   that establish it.</span>
+<span id="L1321" data-line="1321">2. **Unresolved blocks.** A residual, a `hold`, a `gap` or an external</span>
+<span id="L1322" data-line="1322">   predicate not yet established keeps its source and its required</span>
+<span id="L1323" data-line="1323">   acquisition, and it blocks every operation and result that depends on</span>
+<span id="L1324" data-line="1324">   it until its premise is established. A missing premise or an omitted</span>
+<span id="L1325" data-line="1325">   obligation never becomes permission or a satisfied result (AC-007,</span>
+<span id="L1326" data-line="1326">   AC-009).</span>
+<span id="L1327" data-line="1327">3. **Routes, not observations.** The surface carries the constraints and</span>
+<span id="L1328" data-line="1328">   the acquisition routes of the material inputs the task needs. It</span>
+<span id="L1329" data-line="1329">   supplies no observation, effect grant or task context: a step acquires</span>
+<span id="L1330" data-line="1330">   those from the workspace and its selected authoritative inputs, at the</span>
+<span id="L1331" data-line="1331">   acquisition step of</span>
+<span id="L1332" data-line="1332">   [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope),</span>
+<span id="L1333" data-line="1333">   which is where a step uses a surface. The workspace stays the basis for</span>
+<span id="L1334" data-line="1334">   reacquisition.</span>
+<span id="L1335" data-line="1335">4. **Exact subject and basis.** The surface binds the exact subject the</span>
+<span id="L1336" data-line="1336">   interpretation represents and, as a separate coordinate, the calculus</span>
+<span id="L1337" data-line="1337">   basis and signature used to represent it. A projection from an</span>
+<span id="L1338" data-line="1338">   interpretation bound to other subject bytes, or whose basis is not</span>
+<span id="L1339" data-line="1339">   established, returns `refusal(basis)`, which is `invalid_basis` (AC-006,</span>
+<span id="L1340" data-line="1340">   AC-011).</span>
+<span id="L1341" data-line="1341">5. **A derived view.** The surface is a derived view of the owning prose,</span>
+<span id="L1342" data-line="1342">   not a second owner. A surface that changes the permitted or required</span>
+<span id="L1343" data-line="1343">   work is a fidelity defect (AC-017), repaired at the source or the</span>
+<span id="L1344" data-line="1344">   derivation that caused it. An approximate surface declares its</span>
+<span id="L1345" data-line="1345">   adequacy relation and its end-to-end bound.</span>
+<span id="L1346" data-line="1346">6. **Separate claims.** Structural validity of a surface is a structural</span>
+<span id="L1347" data-line="1347">   claim that a checker may decide (AC-019); its fidelity is a semantic</span>
+<span id="L1348" data-line="1348">   judgment ([EVALUATION §2](EVALUATION.md#2-separation), AC-018); its</span>
+<span id="L1349" data-line="1349">   sufficiency for a task is shown only by actual use</span>
+<span id="L1350" data-line="1350">   ([EVALUATION §7](EVALUATION.md#frame-qualification)). A mechanical</span>
+<span id="L1351" data-line="1351">   projection runs only under a separately selected checking contract.</span>
+<span id="L1352" data-line="1352">   None of these claims grants operation or acceptance authority.</span>
+<span id="L1353" data-line="1353"></span>
+<span id="L1354" data-line="1354">This section states how any interpretation yields a surface; under the</span>
+<span id="L1355" data-line="1355">Application boundary above it selects, constructs and accepts no</span>
+<span id="L1356" data-line="1356">interpretation. The downstream authority of a subject owns its</span>
+<span id="L1357" data-line="1357">interpretation and which interpretation is current. Ordinary entry</span>
+<span id="L1358" data-line="1358">selects the current exact interpretation with its limits, and an earlier</span>
+<span id="L1359" data-line="1359">interpretation is identified as historical. Purpose and material</span>
+<span id="L1360" data-line="1360">relation: an actor has to recover the constraints of one task within</span>
+<span id="L1361" data-line="1361">finite context and attention (P0, P2); the surface carries them from</span>
+<span id="L1362" data-line="1362">their owners with their dependencies, freedom and open conditions, so</span>
+<span id="L1363" data-line="1363">the actor neither loads the whole model nor loses an uncertainty (P4b,</span>
+<span id="L1364" data-line="1364">P5, P6).</span>
+<span id="L1365" data-line="1365"></span>
+<span id="L1366" data-line="1366">### Exclusions</span>
+<span id="L1367" data-line="1367"></span>
+<span id="L1368" data-line="1368">`a_c` is not (P2):</span>
+<span id="L1369" data-line="1369"></span>
+<span id="L1370" data-line="1370">- a representation or compression of its derivation source;</span>
+<span id="L1371" data-line="1371">- a selected semantic model of any subject;</span>
+<span id="L1372" data-line="1372">- a carrier profile or carrier instance;</span>
+<span id="L1373" data-line="1373">- an executable language, interpreter, compiler implementation or</span>
+<span id="L1374" data-line="1374">  runtime;</span>
+<span id="L1375" data-line="1375">- a deterministic semantic assessor or theorem prover;</span>
+<span id="L1376" data-line="1376">- a required storage topology of any shape;</span>
+<span id="L1377" data-line="1377">- an ontology of any domain;</span>
+<span id="L1378" data-line="1378">- an authority registry; or</span>
+<span id="L1379" data-line="1379">- a claim that all governed systems share one vocabulary or relation set.</span>
+<span id="L1380" data-line="1380"></span>
+<span id="L1381" data-line="1381">## 10. Conformance obligations</span>
+<span id="L1382" data-line="1382"></span>
+<span id="L1383" data-line="1383">Review and qualification of this member cover at least (P6):</span>
+<span id="L1384" data-line="1384"></span>
+<span id="L1385" data-line="1385">1. closed signature, `RecordKind_ac`, population, field, value-domain and</span>
+<span id="L1386" data-line="1386">   reference-domain definitions;</span>
+<span id="L1387" data-line="1387">2. well-typed positive and refusal examples for every fundamental law;</span>
+<span id="L1388" data-line="1388">3. identity uniqueness and cross-context collision cases;</span>
+<span id="L1389" data-line="1389">4. closure, projection, overlay, transformation and composition laws,</span>
+<span id="L1390" data-line="1390">   including exact model identities, population partitions, basis</span>
+<span id="L1391" data-line="1391">   equality, and byte-or-typed-equality preservation refusal;</span>
+<span id="L1392" data-line="1392">5. strict separation of domain operations, functor kinds, actors and</span>
+<span id="L1393" data-line="1393">   judgments;</span>
+<span id="L1394" data-line="1394">6. residual and authority conservation through interpretation and</span>
+<span id="L1395" data-line="1395">   encoding;</span>
+<span id="L1396" data-line="1396">7. exact calculus-basis identity reconstruction;</span>
+<span id="L1397" data-line="1397">8. direct-coordinate, cross-family reference, wrong-family,</span>
+<span id="L1398" data-line="1398">   duplicate-family and dangling-reference refusal cases for every</span>
+<span id="L1399" data-line="1399">   fundamental record family;</span>
+<span id="L1400" data-line="1400">9. derivation-basis and publication-basis reconstruction with cyclic and</span>
+<span id="L1401" data-line="1401">   same-carrier counterexamples; and</span>
+<span id="L1402" data-line="1402">10. one neutral toy model demonstrating that the calculus has no hidden</span>
+<span id="L1403" data-line="1403">    derivation-source record, application-profile or carrier dependency.</span>
+<span id="L1404" data-line="1404"></span>
+<span id="L1405" data-line="1405">No example, checker, model or carrier can qualify a law outside the exact</span>
+<span id="L1406" data-line="1406">claim it evaluates (P6; EVALUATION §1).</span></pre></html>

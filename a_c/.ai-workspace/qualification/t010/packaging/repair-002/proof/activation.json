@@ -1,0 +1,47 @@
+{
+  "role": "Worker/Writer",
+  "actor": "/root/common_rep_release_bundle",
+  "activation": "Separate isolated three-defect packaging repair activation from Root",
+  "recorded_at_utc": "2026-10-20T13:14:59.977536+00:00",
+  "triage": "realization_refactor; supported packaging HOW defects only; no WHAT/core/model/semantic changes",
+  "write_territory": [
+    "/Users/jim/tmp/a_c-common-rc1-packaging-repair-20261021/**",
+    "own new ac-common-release-repair-* scratch"
+  ],
+  "original_application": "/Users/jim/src/apps/specification_methodology/a_c/applications/stdo-v3-common-35fb4824",
+  "represented_source": {
+    "commit": "35fb4824a064a84df5af214a0d0e2da597c18ac6",
+    "package_tree": "7f2070b61c848b42b4dfb3af1e0ce53869de1aa1"
+  },
+  "builder": {
+    "uri": "stdo://releases/v2.5.1-rc.2/",
+    "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782"
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "priority": "P2",
+      "description": "Archive output inside bundle includes a partially written self-member; reject resolved overlap before any output creation, including direct archive helper."
+    },
+    {
+      "id": "F2",
+      "priority": "P3",
+      "description": "Extracted build recipe refuses its authenticated portable SOURCE-READINESS projection; support exact original/projection closure."
+    },
+    {
+      "id": "F3",
+      "priority": "P3",
+      "description": "RELEASE source_commit/package_tree duplicates are not checked against authenticated source custody/receipts."
+    }
+  ],
+  "operation": "Preserve preimages/guards; reproduce on old copied code; minimal isolated repair; focused regressions and actual extracted second-generation build using explicit pinned upstream; freeze for nonauthor assessment",
+  "packaging_revision": "a_c-stdo-v3-common-35fb4824-packaging-r1",
+  "prohibited": [
+    "No original repository/application/proof/default-store/config/Git writes or promotion",
+    "No new native/model/provider calls, network/install/browser/server or agents",
+    "No new Product RC/version/acceptance/adoption/publication",
+    "No raw private authoring events/config/invocation/reasoning copies"
+  ],
+  "original_archive_sha256": "2b33530c20a17dd27033e8b34b1af497de7a4e0f3b8165a22d0821298516e386",
+  "model_canonical_sha256": "691c4ab0d0993312a31e7e2371070ea4758fdf74b32862ff4d5a32d05af79fbf"
+}

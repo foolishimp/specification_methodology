@@ -1,0 +1,19 @@
+{
+  "scope": "Proof comparator only; frozen artifact/code untouched",
+  "failed_assertion": "Expected model coordinate omitted the profile field returned by model_identity",
+  "actual_identity_fields": [
+    "id",
+    "profile",
+    "sha256"
+  ],
+  "canonical_model_sha256": "691c4ab0d0993312a31e7e2371070ea4758fdf74b32862ff4d5a32d05af79fbf",
+  "original_proof_script": "cli_controls-before-comparator-correction.py",
+  "original_proof_script_sha256": "7f8fa49dd45716be2dbbb9b17068f428da2a2bd6ae0d7dfe9279f8d84b334de5",
+  "preserved_native_completions": [
+    "validate-model",
+    "recover-carrier",
+    "recover-upstream",
+    "find-admission"
+  ],
+  "conservation": "Completed native operations were successful; reuse their exact retained invocation/stdout/empty stderr with frozen input identity, without repeating their derivation."
+}

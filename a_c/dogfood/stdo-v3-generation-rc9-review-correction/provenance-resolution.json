@@ -1,0 +1,55 @@
+{
+  "coordinates": [
+    {
+      "coordinate": {
+        "id": "urn:a-c:application:stdo-v3-rc9-claude-direct-review-correction:001:source-manifest",
+        "sha256": "b71bc2847e94eb4f22afa7e1fb38d5fcbb633ffdce305dd272bdc97bca1a62ea"
+      },
+      "file_sha256": "4d07536880401a7f2a54ccd3807bc9575328610d4412a44a2e0e3892cf484d6f",
+      "path": "dogfood/stdo-v3-generation-rc9-review-correction/source-manifest.json"
+    },
+    {
+      "coordinate": {
+        "id": "urn:a-c:application:stdo-v3-rc9-claude-direct-review-correction:001:patch",
+        "sha256": "b825a27bdb43dfba7f81dbb4f147b7b0f409e2045c9f5e112a2bcb1f0555c9e5"
+      },
+      "file_sha256": "497296489f844307bef145e8b6ff7df3e62405e0bc49e9c3226b8ead1819ca5d",
+      "path": "dogfood/stdo-v3-generation-rc9-review-correction/semantic-patch.json"
+    },
+    {
+      "coordinate": {
+        "id": "urn:a-c:application:stdo-v3-rc9-claude-direct-review-correction:001:interpreter:fp-semantic-worker",
+        "sha256": "649a89d625520bed4dbb09c63ca483346ea73fec661245480e452c31dd4d2f2b"
+      },
+      "file_sha256": "ef13187243c2957a70b15dab6474d4042518db76363f9d3771bf231384ae4c76",
+      "path": "dogfood/stdo-v3-generation-rc9-review-correction/interpreter.json"
+    },
+    {
+      "coordinate": {
+        "id": "urn:a-c:application:stdo-v3-rc9-claude-direct-review-correction:001:authoring-record",
+        "sha256": "69ad2723e34b6717b94d9eeb0a265a5d0486b8419e9c11eea7c6a3c930f63d5a"
+      },
+      "file_sha256": "a7fdba3f89532aa5be84b373f7f7c03fa524bd9041563c585afe28772a38ab47",
+      "path": "dogfood/stdo-v3-generation-rc9-review-correction/authoring-record.json"
+    },
+    {
+      "coordinate": {
+        "id": "urn:a-c:application:stdo-v3-rc9-claude-direct-review-correction:001:interpretation-contract",
+        "sha256": "0bcb126e8c78f5e19c6f95d89885fb7889107a5b0be4f3cb1cf340f31016cd8c"
+      },
+      "file_sha256": "72709e508c06c18707b0f61315904946d4246d082bdb4fbc9dc144be864b1390",
+      "path": "dogfood/stdo-v3-generation-rc9-review-correction/interpretation-contract.json"
+    }
+  ],
+  "hash_grammar": "UTF-8 JSON, sort_keys=True, ensure_ascii=False, separators comma/colon, array order retained; distinct from raw file SHA-256.",
+  "historical_coordinates": "The inherited generation plan/invocation, authority, selection, invalidation and source-reentry coordinates retain their historical parent meaning. They are not new correction authorship or acceptance.",
+  "parent": {
+    "coordinate": {
+      "id": "urn:a-c:generation:63c64519947babe1e3fec509:model:acb523c25ab7ce983045db1b",
+      "sha256": "fb1f15ca409fd302dcad56c86c4edf111ca00b1fb581ddae4d332fb18d338111"
+    },
+    "file_sha256": "bf12529fc3359c3d0a6238c6214693e022d665f1148a1543f7add2ac2b150704",
+    "path": "dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/repaired-proposal/model.json"
+  },
+  "profile": "a_c.application.provenance-resolution/1"
+}

@@ -1,0 +1,721 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>standards/RELEASE.md</title><style>body{font:14px system-ui;margin:24px;background:#101720;color:#dfeaf4}a{color:#87c7ff}pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5;counter-reset:line}span{display:block}span:before{content:attr(data-line);display:inline-block;width:4em;color:#7392aa;user-select:none}span:target{background:#36481d}</style><h1>standards/RELEASE.md</h1><p>Exact frozen source · SHA256 53f465d4d25b097c7da0df0e1f18805d273b032f6fe849b59a457b29b1349992</p><pre><span id="L1" data-line="1"># RELEASE</span>
+<span id="L2" data-line="2"></span>
+<span id="L3" data-line="3">Tier 2. Owns release publication: the release-publication bounded</span>
+<span id="L4" data-line="4">context, release identities, project-qualified refs and the project</span>
+<span id="L5" data-line="5">subtree, historical ref conservation, the three phases with candidate</span>
+<span id="L6" data-line="6">construction, immutable RC publication, exact-cut qualification and</span>
+<span id="L7" data-line="7">monotonic version-line advancement, the selector and its relation to</span>
+<span id="L8" data-line="8">consumer adoption, naming, release-scoped assets and the Product subject,</span>
+<span id="L9" data-line="9">coordinated release-matched asset cohorts, acceptance, external</span>
+<span id="L10" data-line="10">qualification dependencies and successor baseline conservation</span>
+<span id="L11" data-line="11">(STDO-UP-015) with its disposition values. Its family table (F15) is §1</span>
+<span id="L12" data-line="12">Foundation to law. It consumes [FOUNDATIONS](FOUNDATIONS.md) (§2 the</span>
+<span id="L13" data-line="13">product lineage objects, among them the release objects candidate source,</span>
+<span id="L14" data-line="14">release cut, release subject and version-line selector, defined there</span>
+<span id="L15" data-line="15">once; §4 [Results](FOUNDATIONS.md#results), the core result algebra, and</span>
+<span id="L16" data-line="16">[Conjunction of results](FOUNDATIONS.md#conjunction-of-results)),</span>
+<span id="L17" data-line="17">[ACTIVATION §3 Effects](ACTIVATION.md#effects) (the result of an intended</span>
+<span id="L18" data-line="18">effect), [IDENTITY](IDENTITY.md) (object identity and its boundary with release</span>
+<span id="L19" data-line="19">version), [EVALUATION](EVALUATION.md) (§1 claims, §5 acceptance),</span>
+<span id="L20" data-line="20">[AXIOMATIC_CALCULUS §7](AXIOMATIC_CALCULUS.md#7-layers) (AC-020, layer</span>
+<span id="L21" data-line="21">and release separation) and [§8](AXIOMATIC_CALCULUS.md#8-calculus-identity)</span>
+<span id="L22" data-line="22">(the calculus identity record issued at a release),</span>
+<span id="L23" data-line="23">[SPEC_METHOD §6](SPEC_METHOD.md#6-lineage-and-release) (lineage and the</span>
+<span id="L24" data-line="24">release version boundary) and</span>
+<span id="L25" data-line="25">[PRODUCT_DEFINITION §4](PRODUCT_DEFINITION.md#4-shared-installed-release-basis-and-toolchain-manager)</span>
+<span id="L26" data-line="26">(the installed release basis, the adoption plan and the toolchain manager);</span>
+<span id="L27" data-line="27">it defines none of those twice. Git, tag, branch, the `stdo://` URI forms</span>
+<span id="L28" data-line="28">and the Product names of the Specification Stack are this Product&#x27;s</span>
+<span id="L29" data-line="29">realisation and toolchain terms. Every clause names the principle that</span>
+<span id="L30" data-line="30">requires it (P0 to P6, FOUNDATIONS §3).</span>
+<span id="L31" data-line="31"></span>
+<span id="L32" data-line="32">## 1. Context and position</span>
+<span id="L33" data-line="33"></span>
+<span id="L34" data-line="34">This member owns the release-publication bounded context</span>
+<span id="L35" data-line="35">`urn:stdo:bounded-context:release-publication` under the selected complete</span>
+<span id="L36" data-line="36">STDO basis. It owns the identities and transitions used to qualify,</span>
+<span id="L37" data-line="37">publish and select released cuts. It does not own Product meaning or</span>
+<span id="L38" data-line="38">consumer adoption; the consumer side of adoption is PRODUCT_DEFINITION §4</span>
+<span id="L39" data-line="39">(P6, P3).</span>
+<span id="L40" data-line="40"></span>
+<span id="L41" data-line="41">Release process is distinct from live project specification. Live</span>
+<span id="L42" data-line="42">specification defines the current constitutional truth of the project.</span>
+<span id="L43" data-line="43">Release process defines how one published point-in-time cut is evaluated,</span>
+<span id="L44" data-line="44">bounded, named, published and made discoverable (P3).</span>
+<span id="L45" data-line="45"></span>
+<span id="L46" data-line="46">The product-local cut name is always:</span>
+<span id="L47" data-line="47"></span>
+<span id="L48" data-line="48">```text</span>
+<span id="L49" data-line="49">v&lt;version&gt;-rc.&lt;n&gt;</span>
+<span id="L50" data-line="50">```</span>
+<span id="L51" data-line="51"></span>
+<span id="L52" data-line="52">In a release source carrying one independently released project, that</span>
+<span id="L53" data-line="53">name may also be the Git tag name. In a shared release source it is the</span>
+<span id="L54" data-line="54">suffix of the project-qualified Git ref of §2. Equal product-local cut</span>
+<span id="L55" data-line="55">names do not collapse releases owned by different projects (P3).</span>
+<span id="L56" data-line="56"></span>
+<span id="L57" data-line="57">The product-local version-line selector name is:</span>
+<span id="L58" data-line="58"></span>
+<span id="L59" data-line="59">```text</span>
+<span id="L60" data-line="60">v&lt;version&gt;</span>
+<span id="L61" data-line="61">```</span>
+<span id="L62" data-line="62"></span>
+<span id="L63" data-line="63">It denotes a mutable version-line selector (FOUNDATIONS §2). The selector</span>
+<span id="L64" data-line="64">points to the latest published immutable RC cut on that line, where latest</span>
+<span id="L65" data-line="65">means the greatest positive RC ordinal published for that project and</span>
+<span id="L66" data-line="66">version line. It is convenient discovery, not immutable identity and not</span>
+<span id="L67" data-line="67">sufficient as an exact constitutional, dependency, evidence or replay</span>
+<span id="L68" data-line="68">basis (P3, P6).</span>
+<span id="L69" data-line="69"></span>
+<span id="L70" data-line="70">Release handling is downstream of intake triage. A bug, feature,</span>
+<span id="L71" data-line="71">regression or release blocker first receives its change class, lawful</span>
+<span id="L72" data-line="72">re-entry point, affected scope, downstream proof obligations and</span>
+<span id="L73" data-line="73">version-line disposition</span>
+<span id="L74" data-line="74">([SPEC_METHOD §4](SPEC_METHOD.md#universal-intake-triage)). The existence</span>
+<span id="L75" data-line="75">of an RC window does not authorise untriaged mutation (P0, P6).</span>
+<span id="L76" data-line="76"></span>
+<span id="L77" data-line="77">Results. This member defines no result values of its own. Where it says</span>
+<span id="L78" data-line="78">that an operation is refused, stops or fails closed, the operation does</span>
+<span id="L79" data-line="79">not complete; its intended effect, with any part of it that began, is</span>
+<span id="L80" data-line="80">reported under [ACTIVATION §3 Effects](ACTIVATION.md#effects), never as</span>
+<span id="L81" data-line="81">`completed`.</span>
+<span id="L82" data-line="82">Where it calls a release state invalid or a cohort incomplete, or says</span>
+<span id="L83" data-line="83">that a verification fails, the condition named is a counterexample to the</span>
+<span id="L84" data-line="84">predicate that check evaluates, and the check returns its value under</span>
+<span id="L85" data-line="85">[FOUNDATIONS §4 Results](FOUNDATIONS.md#results). What the disposition</span>
+<span id="L86" data-line="86">values of §9 are, §9 states. Purpose and material relation: release</span>
+<span id="L87" data-line="87">outcomes combine with every other result in the one core, so a refused</span>
+<span id="L88" data-line="88">publication or a failed verification is never read as a published or</span>
+<span id="L89" data-line="89">qualified cut (P5, P6).</span>
+<span id="L90" data-line="90"></span>
+<span id="L91" data-line="91">### Foundation to law: release and successor conservation</span>
+<span id="L92" data-line="92"></span>
+<span id="L93" data-line="93">This family (F15 in the index of</span>
+<span id="L94" data-line="94">[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law))</span>
+<span id="L95" data-line="95">decides how a product&#x27;s releases are identified, published, qualified,</span>
+<span id="L96" data-line="96">accepted and selected, and how a successor conserves its predecessor&#x27;s</span>
+<span id="L97" data-line="97">claims. Its instance premises, which the commitments do not supply, are</span>
+<span id="L98" data-line="98">named in the rows as follows: recursive products, a released product may</span>
+<span id="L99" data-line="99">build other products and the next version of itself; published cuts, a</span>
+<span id="L100" data-line="100">project publishes point-in-time cuts of its product for review, replay and</span>
+<span id="L101" data-line="101">adoption by consumers it does not control; mutable carriers, the carrier</span>
+<span id="L102" data-line="102">that holds a release has movable names and may hold several independently</span>
+<span id="L103" data-line="103">released projects; derived assets, some products are released with</span>
+<span id="L104" data-line="104">derived or distributed assets that must match their source; external</span>
+<span id="L105" data-line="105">services, some claims depend on services outside the carrier; successor</span>
+<span id="L106" data-line="106">lines, a product evolves from a predecessor release whose claims may</span>
+<span id="L107" data-line="107">affect it. The index also assigns to this family</span>
+<span id="L108" data-line="108">[FOUNDATIONS §2 Product lineage objects](FOUNDATIONS.md#product-lineage-objects);</span>
+<span id="L109" data-line="109">the table traces that section in its first two rows, whose rule column</span>
+<span id="L110" data-line="110">names it, and owns none of it. Each commitment&#x27;s standing is written as</span>
+<span id="L111" data-line="111">the table of commitments in FOUNDATIONS §3 states it.</span>
+<span id="L112" data-line="112"></span>
+<span id="L113" data-line="113">| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |</span>
+<span id="L114" data-line="114">|---|---|---|---|---|</span>
+<span id="L115" data-line="115">| P3 (independent); P6 (independent); instance: recursive products | By P3 each object binds its own identity and basis, so substrate, development product, source project, release cut, product, install, artifact and product definition are distinct objects. A mutable source workspace binds no fixed identity and so is not called a product; by P6 binding grants nothing, so an install acting as builder substrate is bound as a development product and transfers no meaning or authority to the product being authored, and a product definition is a source-project surface, not the released artifact. | [FOUNDATIONS §2 Product lineage objects](FOUNDATIONS.md#product-lineage-objects), the taxonomy and its governing rules | the eight roles, their concept identities and the compiler analogy as the intended model: choices of FOUNDATIONS §2; their application to lineage: [SPEC_METHOD §6](SPEC_METHOD.md#6-lineage-and-release) (family F10) | 1, 2 |</span>
+<span id="L116" data-line="116">| P3 (independent); P6 (independent); instance: published cuts, mutable carriers | By P3 an identity binds exact content, so a candidate source, a release cut, a release subject and a version-line selector are distinct, and equal version text collapses none. A selector or mutable carrier may move and a release cut never moves, so a selector is discovery, not identity and not an exact basis; by P6 sharing a carrier grants nothing, so material does not become a member by sharing one. | [FOUNDATIONS §2 Product lineage objects](FOUNDATIONS.md#product-lineage-objects), Release objects; [§1](#1-context-and-position), the selector paragraph; [§2](#2-release-identities) | the four generic objects: choices of FOUNDATIONS §2; their realisation as Git branches, tags and aliases in the seven identities: domain choices of this member | 1, 2 |</span>
+<span id="L117" data-line="117">| P3 (independent); P6 (independent); P0 (recovered); instance: published cuts | By P6 an authority owns only what it is admitted to decide, so release process is separate from live specification and owns neither Product meaning nor consumer adoption. By P3 and P0 a release changes what consumers bind, so release handling follows intake triage, and an open release window authorises no untriaged change. | [§1](#1-context-and-position) | the bounded-context identity and the cut and selector name forms: domain choices of this member; triage: [SPEC_METHOD §4](SPEC_METHOD.md#4-change-management) (family F11) | 1, 9 |</span>
+<span id="L118" data-line="118">| P5 (derived from P0 and P6, with P0&#x27;s open-world premise); P6 (independent) | By P5 a value decides only what its evidence establishes, and by P6 an operation&#x27;s outcome is not its acceptance, so a refused, stopped or fail-closed release operation, an invalid state and a failed check report in the one core, and none is read as success. | [§1](#1-context-and-position), Results | none | 3, 9 |</span>
+<span id="L119" data-line="119">| P3 (independent); P6 (independent); P4b (derived from P0 and P2, with P0&#x27;s premise that step-produced facts are not re-acquirable); instance: mutable carriers | By P3 a cut must be re-acquirable from what it binds, so a cut binds the namespace, exact ref and commit, subtree root and tree, member inventory, claims and dispositions, and an inventory without these is not a reacquirable identity. By P6 and P1 a name or path grants no membership, so each project&#x27;s refs carry the namespace Product release authority assigns, and a tag over a shared commit makes no sibling a member. By P4b published identities are not erased, so existing refs and public URIs are conserved, never recreated or moved. | [§2](#2-release-identities), Project-qualified Git refs, Project-subtree release identity, Historical ref and public-URI conservation; [§5](#5-naming); [§6 Product subject and repository carrier](#product-subject-and-repository-carrier) | the ref shapes, the namespace pattern, the canonical root spelling, the naming examples and the unqualified single-project profile: domain choices of this member; each namespace, the three allocated ones included: the Product release authority | 1, 2, 8 |</span>
+<span id="L120" data-line="120">| P3 (independent); P6 (independent); P0 (recovered); P5 (derived from P0 and P6, with P0&#x27;s open-world premise); instance: published cuts | By P3 review and replay need one fixed subject, so publication fixes one exact immutable subject, and a change to any qualifying byte, a release-scoped asset included, needs a higher immutable cut. By P6 and P0 consumers rely only on what was released, so mutable candidate source is non-operative for released consumers. | [§3](#3-phases), Mutable candidate construction and Immutable RC publication; [§6 Release-scoped assets](#release-scoped-assets) | the division into three phases (mutable candidate construction; immutable publication; exact-cut qualification, acceptance and explicit adoption), the rule that there is no second final cut, the ten publication steps, the six release-scoped surfaces and the RC ordinal: domain choices of this member | 1, 9 |</span>
+<span id="L121" data-line="121">| P6 (independent); P1 (independent); P3 (independent); instance: published cuts | By P3 and P6 a verdict holds for the exact subject and claim it binds, so qualification binds the exact cut, claims, basis, each claimed property with its observation boundary, evidence, verdicts, gaps and successor relation, and acceptance is the acceptance authority&#x27;s verdict over the exact immutable cut. By P1 a weaker kind of evidence does not stand for a stronger claim. A verdict moves no selector, and a change to a qualifying byte leaves the verdict on the old cut. | [§3 Exact-cut qualification](#exact-cut-qualification); [§8 Acceptance criteria](#acceptance-criteria) | the seven acceptance criteria: domain choices of this member; the generic claim and acceptance law: [EVALUATION §1](EVALUATION.md#1-claims) and [§5](EVALUATION.md#5-acceptance) (family F6); acceptance of each cut: the human Product authority | 7, 9 |</span>
+<span id="L122" data-line="122">| P3 (independent); P5 (derived from P0 and P6, with P0&#x27;s open-world premise); P6 (independent); instance: published cuts, mutable carriers | By P3 a selector names an existing cut and never governs, so it advances strictly by ordinal, only to an existing immutable cut, and is refused otherwise; it answers which highest cut exists, never which cut governs a consumer. By P6 a consumer&#x27;s basis changes only by its own authority, so it changes only by an explicit adoption whose presented plan is accepted; by P5 drift invalidates that acceptance, and resolution fails closed. | [§3 Monotonic version-line advancement](#monotonic-version-line-advancement); [§4](#4-selector-and-consumer-adoption) | the seven advancement steps, the four refusal conditions and the channel URI as discovery selector: domain choices of this member; the adoption plan, its hashing and the manager commands: [PRODUCT_DEFINITION §4](PRODUCT_DEFINITION.md#4-shared-installed-release-basis-and-toolchain-manager) (family F12) | 1, 9 |</span>
+<span id="L123" data-line="123">| P3 (independent); P4b (derived from P0 and P2, with P0&#x27;s premise that step-produced facts are not re-acquirable); P5 (derived from P0 and P6, with P0&#x27;s open-world premise); P6 (independent); instance: derived assets, mutable carriers | By P3 matching is a relation between exact versions, so a declared cohort carries one exact version suffix, and equal versions establish matching only. By P4b and P5 a derived member depends on its source, so a missing, stale or differently versioned member makes the cohort incomplete, and a source change invalidates the derived members, which are regenerated and released under the new cut. By P6 a partial cohort is not the declared one, so publication is atomic or refused, each ref guarded against an unexpected remote state, and verification refuses a partial cohort. | [§7](#7-coordinated-release-matched-asset-cohorts), Two-commit construction and one publication transaction, Qualification and recovery | declaring each cohort: the declaring Product authority; the five members of the STDO stack cohort, the two-commit construction and the per-ref lease: domain choices of this member; any same-version recovery: separately authorised recovery law | 1, 6, 9 |</span>
+<span id="L124" data-line="124">| P6 (independent); P5 (derived from P0 and P6, with P0&#x27;s open-world premise); instance: external services | By P5 a skipped evaluation has no result, and by P6 a claim is qualified only on its evidence, so a claim that depends on an external service is qualified against a healthy dependency or narrowed before acceptance, and a skipped evaluation establishes nothing about the dependent capability. | [§8 External qualification dependencies](#external-qualification-dependencies) | none | 9 |</span>
+<span id="L125" data-line="125">| P4b (derived from P0 and P2, with P0&#x27;s premise that step-produced facts are not re-acquirable); P3 (independent); P6 (independent); P1 (independent); P5 (derived from P0 and P6, with P0&#x27;s open-world premise); instance: successor lines | By P4b and P3 a successor evolves one exact, immutable predecessor whose established claims persist, so it names that predecessor, and every predecessor claim that can affect it receives one disposition. By P6 and P1 a disposition is a claim evaluated on evidence, so naming or code similarity does not prove conservation, and a missing patch does not prove loss when a successor-native realisation preserves behaviour; by P5 an unresolved disposition leaves a gap, so the affected claim cannot be qualified. | [§9](#9-successor-baseline-conservation-stdo-up-015) | the four disposition values: this member, restating UP-015; each removal: the current Product authority; the record of a successor&#x27;s dispositions: that successor&#x27;s construction | 1, 9 |</span>
+<span id="L126" data-line="126">| P4b (derived from P0 and P2, with P0&#x27;s premise that step-produced facts are not re-acquirable); P6 (independent); instance: successor lines | By P4b a change on a support line persists into what the successor retains, and by P6 its effect needs a disposition by evidence, so where a maintenance or support line may affect retained claims, the release basis names its watched source, observation boundary, inclusion policy and successor candidate, and relevant changes receive a disposition at integration and at qualification. | [§9](#9-successor-baseline-conservation-stdo-up-015), the support-line paragraph | the record, branch strategy, comparison and proof mechanism: the consumer; a policy of this member: the four items the release basis names (watched source, observation boundary, inclusion policy, successor candidate) | 1, 9 |</span>
+<span id="L127" data-line="127"></span>
+<span id="L128" data-line="128">The standing of these consequences is stated in</span>
+<span id="L129" data-line="129">[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law).</span>
+<span id="L130" data-line="130">The table accounts for §1 to §9 and for FOUNDATIONS §2 Product lineage</span>
+<span id="L131" data-line="131">objects. §10 records open questions and decides nothing.</span>
+<span id="L132" data-line="132"></span>
+<span id="L133" data-line="133">Consumers of these rows, where an actor enters them (FOUNDATIONS §3</span>
+<span id="L134" data-line="134">Foundation to law, Consumers), one list per row, each consumer linked to</span>
+<span id="L135" data-line="135">its own locus:</span>
+<span id="L136" data-line="136"></span>
+<span id="L137" data-line="137">- Row 1, the lineage objects: [SPEC_METHOD §6](SPEC_METHOD.md#6-lineage-and-release), where the roles are applied to lineage and the product definition is the source project&#x27;s present-tense surface; [EXECUTIVE_BASELINE §6 Product-chain basis](EXECUTIVE_BASELINE.md#product-chain-basis), whose basis records the distinct role of every lineage object in a chain, and the [EXECUTIVE_BASELINE family table](EXECUTIVE_BASELINE.md#foundation-to-law), whose row for the Product chain imports F15; [WORLD_MODEL §2](WORLD_MODEL.md#2-role-and-imports) and [Builder Project specialisation](WORLD_MODEL.md#builder-project-specialisation), which import the lineage concepts and narrow Source Project without aliasing it; the [ODD family table](ODD.md#foundation-to-law), whose row for builder, release and source distinctions imports F15.</span>
+<span id="L138" data-line="138">- Row 2, release objects and release identities: [IDENTITY §9](IDENTITY.md#9-release-version-boundary), where the immutable cut is the only exact operative release identifier and the selector only names the highest-ordinal published cut; [SPEC_METHOD §6](SPEC_METHOD.md#6-lineage-and-release), where the mutable tag is a discovery selector and not a dependency, evidence or constitutional basis; [PRODUCT_DEFINITION §4](PRODUCT_DEFINITION.md#4-shared-installed-release-basis-and-toolchain-manager), where the definition&#x27;s channel selector takes its alias semantics from the release law and is not operative authority; [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope), Acquisition, where a candidate source or a version-line selector is no substitute for the exact selected basis; the [ODD family table](ODD.md#foundation-to-law), whose row for builder, release and source distinctions imports F15 for the selected release and mutable source.</span>
+<span id="L139" data-line="139">- Row 3, position and triage: [ODD §15](ODD.md#15-release-boundary), where publication, selector advancement and acceptance stay a process surface apart from graph truth; [SPEC_METHOD §6](SPEC_METHOD.md#6-lineage-and-release), where the cut is release metadata and not part of the live project specification; [§3 Mutable candidate construction](#mutable-candidate-construction), where bounded fixes follow intake triage, and [Immutable RC publication](#immutable-rc-publication), step 1, which confirms the triaged scope.</span>
+<span id="L140" data-line="140">- Row 4, results of release operations: the clauses of this member that refuse, stop, fail closed or find a state invalid report under it: [§2 Historical ref and public-URI conservation](#historical-ref-and-public-uri-conservation), [§3 Immutable RC publication](#immutable-rc-publication) and [Monotonic version-line advancement](#monotonic-version-line-advancement), [§4](#4-selector-and-consumer-adoption), and [§7](#7-coordinated-release-matched-asset-cohorts) with [Two-commit construction and one publication transaction](#two-commit-construction-and-one-publication-transaction) and [Qualification and recovery](#qualification-and-recovery); no section of another member applies it, and PRODUCT_DEFINITION §4 maps its manager&#x27;s outcomes into the core through ACTIVATION §3 without this paragraph.</span>
+<span id="L141" data-line="141">- Row 5, refs, subtree, conservation, naming and the Product subject: [§3 Immutable RC publication](#immutable-rc-publication), steps 6 and 7, which record the namespace, subtree root and tree and create the project-qualified tags; [§3 Exact-cut qualification](#exact-cut-qualification), which binds the namespace, qualified ref, tag object, commit, trees and declared member set; [§4](#4-selector-and-consumer-adoption), whose channel resolution enumerates a namespace&#x27;s published tags, preserved historical cuts included; [§7](#7-coordinated-release-matched-asset-cohorts), whose cut names and refs render the cohort suffix and whose cut tags are create-only; otherwise no separate consumer applies: the ref shapes, namespaces and the Product subject are this member&#x27;s domain choices, and the installed-manifest binding of PRODUCT_DEFINITION §4 names the cut&#x27;s tag object, commit, tree and inventory without naming this section.</span>
+<span id="L142" data-line="142">- Row 6, candidate construction, immutable publication and release-scoped assets: [AXIOMATIC_CALCULUS §8](AXIOMATIC_CALCULUS.md#8-calculus-identity), whose edition identity record is issued at the release of its bytes and nowhere earlier; [§7](#7-coordinated-release-matched-asset-cohorts) and [Two-commit construction and one publication transaction](#two-commit-construction-and-one-publication-transaction), where derived members are regenerated and released under the new cut and the cut tags are published atomically or refused; [§8 Acceptance criteria](#acceptance-criteria), where release-scoped assets describe the exact cut; [§3 Exact-cut qualification](#exact-cut-qualification), where a qualifying-byte change leaves the verdict on the old cut and a higher cut is published.</span>
+<span id="L143" data-line="143">- Row 7, exact-cut qualification and acceptance criteria: [FOUNDATIONS §4 Change impact and evidence reuse](FOUNDATIONS.md#change-impact-and-evidence-reuse), where the acceptance criteria are the mandatory gates that stay applicable irrespective of the selection of checks; [§7 Qualification and recovery](#qualification-and-recovery), whose content, local-ref-graph and post-publication qualification bind the exact cut; [§8 External qualification dependencies](#external-qualification-dependencies), where a dependent claim is qualified or narrowed before acceptance; [§9](#9-successor-baseline-conservation-stdo-up-015), where an unresolved disposition blocks qualification of the affected claim.</span>
+<span id="L144" data-line="144">- Row 8, selector advancement and consumer adoption: [ODD §4](ODD.md#4-method-library-classes), where the selected immutable cut is consumer authority and mutable source and the moving selector cannot repair, replace or outrank it; [PRODUCT_DEFINITION §4](PRODUCT_DEFINITION.md#4-shared-installed-release-basis-and-toolchain-manager), whose `adopt` resolves the selector only to present an exact digest-bound plan and whose `sync` never consults it; [SPEC_METHOD §6](SPEC_METHOD.md#6-lineage-and-release), where the selector cannot silently change a consumer selection.</span>
+<span id="L145" data-line="145">- Row 9, release-matched cohorts: [PRODUCT_DEFINITION §4 Explicit complete consumer update](PRODUCT_DEFINITION.md#explicit-complete-consumer-update), which binds the complete companion population of one exact upstream cohort and verifies its dependency closure before relying on it; otherwise no separate consumer applies: declaring a cohort is the declaring Product authority&#x27;s act under this section, and SPEC_METHOD §6 refers the process for cutting a release to §2 to §8 and applies none of it.</span>
+<span id="L146" data-line="146">- Row 10, external qualification dependencies: no separate consumer applies. The rule acts inside this member&#x27;s qualification and acceptance (§3 Exact-cut qualification, §8 Acceptance criteria), where a claim that depends on an external service is qualified against a healthy dependency or narrowed; the result of a clean skip is FOUNDATIONS §4 Results&#x27;, Not performed, which this section applies, and no section of another member names this section.</span>
+<span id="L147" data-line="147">- Row 11, successor baseline conservation: [EVALUATION §5](EVALUATION.md#5-acceptance), where a successor&#x27;s acceptance evidence includes the disposition record and an unresolved disposition blocks acceptance; [SPEC_METHOD §2 Requirement categories and classification](SPEC_METHOD.md#requirement-categories-and-classification), where each predecessor claim takes its disposition by this section&#x27;s predicates and no lifecycle status supplies it, and [§7 Fundamental migration](SPEC_METHOD.md#fundamental-migration), where no migration class is or supplies a disposition; [FOUNDATIONS §1](FOUNDATIONS.md#1-vocabulary-of-standing), which keeps the standing of a commitment apart from a disposition, and [§4 Preservation through construction](FOUNDATIONS.md#preservation-through-construction), where a change to the governing meaning follows the successor rules; [TICKETS §7 Recorded judgment and owner-ruling continuity](TICKETS.md#recorded-judgment-and-owner-ruling-continuity) and [ODD §11.5D](ODD.md#115d-constructive-evaluation-and-yield-loop), which keep repricing dispositions and closure decisions apart from the disposition of a predecessor claim; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminators 7, 8 and 49; [§2 Project-subtree release identity](#project-subtree-release-identity) and [§3 Exact-cut qualification](#exact-cut-qualification), which bind the dispositions and the successor relation this section requires; the selected work carrier records the disposition values and supplies no decision by its presence.</span>
+<span id="L148" data-line="148">- Row 12, support lines: no separate consumer applies. The record, branch strategy, comparison and proof mechanism are the consumer&#x27;s, as the choice column states; a release basis that names a watched source does so under this paragraph, and no section of another member names it.</span>
+<span id="L149" data-line="149"></span>
+<span id="L150" data-line="150">Each consumer applies the rule and decides nothing the owning section does</span>
+<span id="L151" data-line="151">not (P2, P6).</span>
+<span id="L152" data-line="152"></span>
+<span id="L153" data-line="153">## 2. Release identities</span>
+<span id="L154" data-line="154"></span>
+<span id="L155" data-line="155">The release-publication context distinguishes (P3):</span>
+<span id="L156" data-line="156"></span>
+<span id="L157" data-line="157">- Project Release Namespace: a stable repository-local key assigned by</span>
+<span id="L158" data-line="158">  the Product release authority to one independently released source</span>
+<span id="L159" data-line="159">  project;</span>
+<span id="L160" data-line="160">- Project Subtree: the exact repository-relative source-project root and</span>
+<span id="L161" data-line="161">  Git tree object selected for one cut;</span>
+<span id="L162" data-line="162">- Candidate Source: the candidate source of FOUNDATIONS §2, the mutable</span>
+<span id="L163" data-line="163">  source-project state constructing a possible successor;</span>
+<span id="L164" data-line="164">- RC Branch: a mutable project-qualified carrier for the current</span>
+<span id="L165" data-line="165">  candidate window;</span>
+<span id="L166" data-line="166">- Immutable RC Cut: an annotated project-qualified Git tag plus its exact</span>
+<span id="L167" data-line="167">  Product release subject (FOUNDATIONS §2), naming one published candidate</span>
+<span id="L168" data-line="168">  and, once accepted, one released Product; it realises the release cut;</span>
+<span id="L169" data-line="169">- Version-Line Selector: the mutable project-qualified tag alias naming</span>
+<span id="L170" data-line="170">  the highest-ordinal published immutable RC cut for that project and</span>
+<span id="L171" data-line="171">  version line; it realises the version-line selector of FOUNDATIONS §2;</span>
+<span id="L172" data-line="172">  and</span>
+<span id="L173" data-line="173">- Release Branch: an optional mutable project-qualified convenience</span>
+<span id="L174" data-line="174">  carrier aligned to the same latest-published commit as the selector.</span>
+<span id="L175" data-line="175"></span>
+<span id="L176" data-line="176">Equal version text does not collapse these identities. Branches and the</span>
+<span id="L177" data-line="177">version-line selector may move. An immutable RC tag never moves (P3).</span>
+<span id="L178" data-line="178"></span>
+<span id="L179" data-line="179">### Project-qualified Git refs</span>
+<span id="L180" data-line="180"></span>
+<span id="L181" data-line="181">`&lt;project&gt;` is one explicit Project Release Namespace. It matches</span>
+<span id="L182" data-line="182">`[a-z0-9]+(?:[-_][a-z0-9]+)*`, contains no slash, is unique within the</span>
+<span id="L183" data-line="183">release source, and remains stable for the continuing release line. It is</span>
+<span id="L184" data-line="184">assigned by the Product release authority. A directory name, display name,</span>
+<span id="L185" data-line="185">definition label, package name or matching version cannot infer or</span>
+<span id="L186" data-line="186">reassign it (P3, P6).</span>
+<span id="L187" data-line="187"></span>
+<span id="L188" data-line="188">A shared release source uses these exact ref shapes for every future</span>
+<span id="L189" data-line="189">publication (P3):</span>
+<span id="L190" data-line="190"></span>
+<span id="L191" data-line="191">```text</span>
+<span id="L192" data-line="192">RC branch:              refs/heads/rc/&lt;project&gt;/&lt;version&gt;</span>
+<span id="L193" data-line="193">immutable RC cut tag:   refs/tags/&lt;project&gt;/v&lt;version&gt;-rc.&lt;n&gt;</span>
+<span id="L194" data-line="194">version-line selector:  refs/tags/&lt;project&gt;/v&lt;version&gt;</span>
+<span id="L195" data-line="195">release branch:         refs/heads/release/&lt;project&gt;/&lt;version&gt;</span>
+<span id="L196" data-line="196">```</span>
+<span id="L197" data-line="197"></span>
+<span id="L198" data-line="198">The short Git tag names are therefore `&lt;project&gt;/v&lt;version&gt;-rc.&lt;n&gt;` and</span>
+<span id="L199" data-line="199">`&lt;project&gt;/v&lt;version&gt;`. A shared release source does not publish a future</span>
+<span id="L200" data-line="200">cut or selector under the unqualified `v&lt;version&gt;-rc.&lt;n&gt;` or `v&lt;version&gt;`</span>
+<span id="L201" data-line="201">refs (P3).</span>
+<span id="L202" data-line="202"></span>
+<span id="L203" data-line="203">A single-project release source may retain the unqualified ref profile</span>
+<span id="L204" data-line="204">only while it has exactly one independently released project and its</span>
+<span id="L205" data-line="205">release record declares that profile. Adding a second independently</span>
+<span id="L206" data-line="206">released project requires project-qualified refs before either project</span>
+<span id="L207" data-line="207">publishes another cut (P3).</span>
+<span id="L208" data-line="208"></span>
+<span id="L209" data-line="209">For the Specification Stack shared source, the allocated namespaces are</span>
+<span id="L210" data-line="210">`specification_methodology`, `axiom_indexer` and `stdo_representation`.</span>
+<span id="L211" data-line="211">These keys distinguish release refs; they do not merge the three Products</span>
+<span id="L212" data-line="212">or imply a dependency or composition relation (P3, P6).</span>
+<span id="L213" data-line="213"></span>
+<span id="L214" data-line="214">### Project-subtree release identity</span>
+<span id="L215" data-line="215"></span>
+<span id="L216" data-line="216">In a shared release source, an immutable cut binds all of (P3):</span>
+<span id="L217" data-line="217"></span>
+<span id="L218" data-line="218">- the Project Release Namespace and owning Product authority;</span>
+<span id="L219" data-line="219">- the exact qualified Git ref and annotated tag object;</span>
+<span id="L220" data-line="220">- the peeled commit and repository-root tree;</span>
+<span id="L221" data-line="221">- the normalised repository-relative Project Subtree root at that commit;</span>
+<span id="L222" data-line="222">- the Git tree object at that exact Project Subtree root;</span>
+<span id="L223" data-line="223">- the declared Product member inventory and release-scoped claim bytes;</span>
+<span id="L224" data-line="224">  and</span>
+<span id="L225" data-line="225">- the predecessor and successor dispositions required by §9.</span>
+<span id="L226" data-line="226"></span>
+<span id="L227" data-line="227">The Project Subtree root is a locator inside the exact peeled commit, not</span>
+<span id="L228" data-line="228">Product identity. Its canonical spelling is the slash-separated Git path</span>
+<span id="L229" data-line="229">from the repository root, with no leading or trailing slash and no empty,</span>
+<span id="L230" data-line="230">`.` or `..` component; `.` alone denotes the repository root. Each</span>
+<span id="L231" data-line="231">non-root component names the exact tree entry bytes traversed at that</span>
+<span id="L232" data-line="232">commit. Moving a source project changes this locator and its cut identity</span>
+<span id="L233" data-line="233">without reassigning the Project Release Namespace. If the source project</span>
+<span id="L234" data-line="234">occupies the repository root, its project-subtree tree equals the</span>
+<span id="L235" data-line="235">repository-root tree (P3).</span>
+<span id="L236" data-line="236"></span>
+<span id="L237" data-line="237">A tag over a monorepo commit does not make sibling subtrees Product</span>
+<span id="L238" data-line="238">members. Unrelated sibling bytes remain carrier state outside the declared</span>
+<span id="L239" data-line="239">Product subject. Conversely, a member inventory or payload digest without</span>
+<span id="L240" data-line="240">the qualified ref, commit, Project Subtree root and Project Subtree tree is</span>
+<span id="L241" data-line="241">not a complete reacquirable release identity (P3, P6).</span>
+<span id="L242" data-line="242"></span>
+<span id="L243" data-line="243">### Historical ref and public-URI conservation</span>
+<span id="L244" data-line="244"></span>
+<span id="L245" data-line="245">Project qualification is prospective. Existing unqualified refs retain</span>
+<span id="L246" data-line="246">their names, objects, peels and public links. A historical tag object may</span>
+<span id="L247" data-line="247">remain reachable through an additional archival ref, but it is not</span>
+<span id="L248" data-line="248">recreated, re-annotated, moved or replaced. An immutable historical tag</span>
+<span id="L249" data-line="249">remains the same object regardless of which preserving ref reaches it</span>
+<span id="L250" data-line="250">(P3, P4b).</span>
+<span id="L251" data-line="251"></span>
+<span id="L252" data-line="252">Product-local cut names and public logical release URIs also remain</span>
+<span id="L253" data-line="253">unchanged. In particular, a logical STDO release remains</span>
+<span id="L254" data-line="254">`stdo://releases/v&lt;version&gt;-rc.&lt;n&gt;/`; the project-qualified Git ref is</span>
+<span id="L255" data-line="255">transport identity and is not inserted into that URI. Resolution binds</span>
+<span id="L256" data-line="256">the public logical cut to its exact historical or project-qualified Git</span>
+<span id="L257" data-line="257">ref and fails closed if one project-local coordinate names different tag</span>
+<span id="L258" data-line="258">objects (P3, P5).</span>
+<span id="L259" data-line="259"></span>
+<span id="L260" data-line="260">When one version line spans the transition, latest means the greatest</span>
+<span id="L261" data-line="261">positive RC ordinal across that project&#x27;s preserved historical cuts and</span>
+<span id="L262" data-line="262">its qualified future cuts. The first qualified publication creates the</span>
+<span id="L263" data-line="263">qualified selector. The historical unqualified selector is preserved at</span>
+<span id="L264" data-line="264">its existing object and ceases to be the current selector for the shared</span>
+<span id="L265" data-line="265">source; it is not force-moved to imitate the qualified namespace (P3).</span>
+<span id="L266" data-line="266"></span>
+<span id="L267" data-line="267">## 3. Phases</span>
+<span id="L268" data-line="268"></span>
+<span id="L269" data-line="269">The release process has three phases (P0, P3, P6):</span>
+<span id="L270" data-line="270"></span>
+<span id="L271" data-line="271">1. mutable candidate construction;</span>
+<span id="L272" data-line="272">2. immutable RC publication and monotonic version-line advancement; and</span>
+<span id="L273" data-line="273">3. exact-cut qualification, acceptance and explicit consumer adoption.</span>
+<span id="L274" data-line="274"></span>
+<span id="L275" data-line="275">There is no second final cut after an accepted RC. Publication immediately</span>
+<span id="L276" data-line="276">makes the new highest ordinal discoverable through the version-line</span>
+<span id="L277" data-line="277">selector; acceptance remains a verdict over the exact immutable RC rather</span>
+<span id="L278" data-line="278">than a second carrier. If any byte capable of affecting the Product or a</span>
+<span id="L279" data-line="279">release-scoped claim changes, the project publishes and reviews a higher</span>
+<span id="L280" data-line="280">immutable RC cut instead (P3, P6).</span>
+<span id="L281" data-line="281"></span>
+<span id="L282" data-line="282">### Mutable candidate construction</span>
+<span id="L283" data-line="283"></span>
+<span id="L284" data-line="284">During candidate construction (P0, P6):</span>
+<span id="L285" data-line="285"></span>
+<span id="L286" data-line="286">- bounded fixes are allowed after intake triage;</span>
+<span id="L287" data-line="287">- qualification and operator review may continue;</span>
+<span id="L288" data-line="288">- release notes may remain draft until RC publication;</span>
+<span id="L289" data-line="289">- the RC branch may move; and</span>
+<span id="L290" data-line="290">- mutable source is explicitly non-operative for released consumers.</span>
+<span id="L291" data-line="291"></span>
+<span id="L292" data-line="292">The intended Product boundary, release-scoped claims, excluded</span>
+<span id="L293" data-line="293">source-project state and qualification basis become explicit before RC</span>
+<span id="L294" data-line="294">publication. A material scope change is repriced instead of being silently</span>
+<span id="L295" data-line="295">absorbed (P2, P6).</span>
+<span id="L296" data-line="296"></span>
+<span id="L297" data-line="297">### Immutable RC publication</span>
+<span id="L298" data-line="298"></span>
+<span id="L299" data-line="299">A published RC cut exists to provide one exact subject for review, replay</span>
+<span id="L300" data-line="300">and possible acceptance. To publish it, the project (P3, P5, P6):</span>
+<span id="L301" data-line="301"></span>
+<span id="L302" data-line="302">1. confirms the triaged scope and lawful constitutional re-entry;</span>
+<span id="L303" data-line="303">2. declares the exact Product release subject and release-scoped claim</span>
+<span id="L304" data-line="304">   set;</span>
+<span id="L305" data-line="305">3. reconciles the release note and other release-facing assets to that</span>
+<span id="L306" data-line="306">   subject;</span>
+<span id="L307" data-line="307">4. runs the proportionate pre-RC qualification and operator checks;</span>
+<span id="L308" data-line="308">5. commits the exact carrier;</span>
+<span id="L309" data-line="309">6. resolves and records the exact Project Release Namespace, Project</span>
+<span id="L310" data-line="310">   Subtree root and Project Subtree tree;</span>
+<span id="L311" data-line="311">7. creates one annotated immutable `&lt;project&gt;/v&lt;version&gt;-rc.&lt;n&gt;` tag and</span>
+<span id="L312" data-line="312">   an annotated `&lt;project&gt;/v&lt;version&gt;` selector tag over that same commit</span>
+<span id="L313" data-line="313">   in a shared release source;</span>
+<span id="L314" data-line="314">8. atomically pushes the carrier, RC branch, immutable RC tag, selector</span>
+<span id="L315" data-line="315">   and optional release branch where the transport supports it;</span>
+<span id="L316" data-line="316">9. verifies remotely that the immutable tag, selector and release branch</span>
+<span id="L317" data-line="317">   resolve to the highest published RC commit; and</span>
+<span id="L318" data-line="318">10. records enough ref, subtree, identity and inventory evidence to</span>
+<span id="L319" data-line="319">    reacquire the cut without trusting a mutable checkout.</span>
+<span id="L320" data-line="320"></span>
+<span id="L321" data-line="321">Each published RC tag is immutable. Further work increments `&lt;n&gt;` on the</span>
+<span id="L322" data-line="322">same version line when the intended line remains applicable. It does not</span>
+<span id="L323" data-line="323">require a minor-version increment merely because review found a bounded</span>
+<span id="L324" data-line="324">repair. A published higher RC without matching selector advancement is an</span>
+<span id="L325" data-line="325">invalid, fail-closed release state; it never authorises resolution of the</span>
+<span id="L326" data-line="326">older cut as the version-line latest (P3, P5).</span>
+<span id="L327" data-line="327"></span>
+<span id="L328" data-line="328">### Exact-cut qualification</span>
+<span id="L329" data-line="329"></span>
+<span id="L330" data-line="330">Qualification binds (P6, P3):</span>
+<span id="L331" data-line="331"></span>
+<span id="L332" data-line="332">- the Project Release Namespace, qualified immutable RC ref, annotated tag</span>
+<span id="L333" data-line="333">  object, peeled commit, repository tree, Project Subtree root and tree,</span>
+<span id="L334" data-line="334">  and declared Product member set;</span>
+<span id="L335" data-line="335">- the exact release-scoped claim bytes;</span>
+<span id="L336" data-line="336">- the governing Product and release basis;</span>
+<span id="L337" data-line="337">- each claimed property and its observation boundary;</span>
+<span id="L338" data-line="338">- evidence subjects, owner verdicts and unresolved gaps; and</span>
+<span id="L339" data-line="339">- the complete successor relation to the declared predecessor (§9).</span>
+<span id="L340" data-line="340"></span>
+<span id="L341" data-line="341">Evidence matches the claim. Source success does not prove packaged or</span>
+<span id="L342" data-line="342">installed behaviour; packaging equivalence does not prove semantic</span>
+<span id="L343" data-line="343">behaviour; artifact presence does not prove usability unless presence is</span>
+<span id="L344" data-line="344">the exact claim (P6, P1; EVALUATION §1 is the generic claim law).</span>
+<span id="L345" data-line="345"></span>
+<span id="L346" data-line="346">An RC is accepted only when the required exact-cut review and operator</span>
+<span id="L347" data-line="347">checks are complete and the human authority accepts that exact subject. If</span>
+<span id="L348" data-line="348">review requires any qualifying-byte change, the verdict remains attached</span>
+<span id="L349" data-line="349">to the old RC and a higher RC is published. The selector already</span>
+<span id="L350" data-line="350">advertises the highest published RC; acceptance does not move it, rewrite</span>
+<span id="L351" data-line="351">it or create another final carrier (P6, P3).</span>
+<span id="L352" data-line="352"></span>
+<span id="L353" data-line="353">### Monotonic version-line advancement</span>
+<span id="L354" data-line="354"></span>
+<span id="L355" data-line="355">Version-line advancement makes the newly published highest RC for one</span>
+<span id="L356" data-line="356">Project Release Namespace discoverable (P3, P5):</span>
+<span id="L357" data-line="357"></span>
+<span id="L358" data-line="358">1. identify the exact new immutable RC tag, ordinal and peeled commit;</span>
+<span id="L359" data-line="359">2. confirm that no higher RC ordinal already exists on that line;</span>
+<span id="L360" data-line="360">3. confirm the project-qualified selector is absent or currently resolves</span>
+<span id="L361" data-line="361">   to a lower RC ordinal on the same project line;</span>
+<span id="L362" data-line="362">4. atomically create or force-update the annotated `&lt;project&gt;/v&lt;version&gt;`</span>
+<span id="L363" data-line="363">   selector to the new highest RC commit;</span>
+<span id="L364" data-line="364">5. create or update `release/&lt;project&gt;/&lt;version&gt;` to the same commit when</span>
+<span id="L365" data-line="365">   that optional carrier is used;</span>
+<span id="L366" data-line="366">6. push the carrier, RC branch, immutable RC tag, selector and optional</span>
+<span id="L367" data-line="367">   release branch atomically where the transport supports it; and</span>
+<span id="L368" data-line="368">7. verify remotely that the selector peels to the highest RC commit and</span>
+<span id="L369" data-line="369">   that the matching immutable annotated RC tag exists.</span>
+<span id="L370" data-line="370"></span>
+<span id="L371" data-line="371">Advancement is refused when the target has no matching immutable annotated</span>
+<span id="L372" data-line="372">RC tag, any higher ordinal already exists, the selector would move to a</span>
+<span id="L373" data-line="373">lower RC, or the selector and release branch would not align to the same</span>
+<span id="L374" data-line="374">highest commit (P5).</span>
+<span id="L375" data-line="375"></span>
+<span id="L376" data-line="376">Forward movement is strictly monotonic by RC ordinal. A later defect is</span>
+<span id="L377" data-line="377">repaired through a higher immutable RC, not by moving an old RC tag or</span>
+<span id="L378" data-line="378">rolling the selector backward. The selector is therefore equivalent to</span>
+<span id="L379" data-line="379">`v&lt;version&gt;-rc.latest`, while every concrete RC tag remains addressable</span>
+<span id="L380" data-line="380">(P3).</span>
+<span id="L381" data-line="381"></span>
+<span id="L382" data-line="382">## 4. Selector and consumer adoption</span>
+<span id="L383" data-line="383"></span>
+<span id="L384" data-line="384">The version-line selector answers only (P6, P3):</span>
+<span id="L385" data-line="385"></span>
+<span id="L386" data-line="386">&gt; Which highest-ordinal published immutable RC cut currently exists on</span>
+<span id="L387" data-line="387">&gt; this version line?</span>
+<span id="L388" data-line="388"></span>
+<span id="L389" data-line="389">It never answers:</span>
+<span id="L390" data-line="390"></span>
+<span id="L391" data-line="391">&gt; Which exact STDO cut governs this consumer?</span>
+<span id="L392" data-line="392"></span>
+<span id="L393" data-line="393">A Product Definition may retain `stdo://channels/&lt;version&gt;` as its</span>
+<span id="L394" data-line="394">discovery selector, but its operative basis is the exact</span>
+<span id="L395" data-line="395">`stdo://releases/v&lt;version&gt;-rc.&lt;n&gt;/` URI and installed-manifest digest,</span>
+<span id="L396" data-line="396">the installed release basis of PRODUCT_DEFINITION §4. Moving the Git</span>
+<span id="L397" data-line="397">version-line selector does not update any consumer. Adoption is a separate</span>
+<span id="L398" data-line="398">explicit Product-Definition transition that resolves, presents, installs,</span>
+<span id="L399" data-line="399">verifies and pins the selected immutable RC. Resolution requires an</span>
+<span id="L400" data-line="400">annotated selector with a distinct peeled commit; absence of a peeled</span>
+<span id="L401" data-line="401">selector ref fails closed and cannot be interpreted as a lightweight</span>
+<span id="L402" data-line="402">selector whose tag object is its commit (P6, P3, P5).</span>
+<span id="L403" data-line="403"></span>
+<span id="L404" data-line="404">Channel resolution enumerates the published RC tags for the selected</span>
+<span id="L405" data-line="405">Project Release Namespace, including preserved unqualified historical cuts</span>
+<span id="L406" data-line="406">during a namespace transition, selects the greatest positive ordinal,</span>
+<span id="L407" data-line="407">requires that cut and the current selector to be annotated tags peeling to</span>
+<span id="L408" data-line="408">the same commit, and fails closed when the selector lags or points</span>
+<span id="L409" data-line="409">elsewhere. Channel adoption also refuses a same-line target whose ordinal</span>
+<span id="L410" data-line="410">is below the Product Definition&#x27;s current exact basis. A consumer that</span>
+<span id="L411" data-line="411">intentionally retains an older cut names that immutable RC URI and digest</span>
+<span id="L412" data-line="412">explicitly and uses exact-basis operations such as `sync`; it does not</span>
+<span id="L413" data-line="413">express that choice through the latest-version channel (P5, P6).</span>
+<span id="L414" data-line="414"></span>
+<span id="L415" data-line="415">Presentation and mutation are separate invocations. The read-only plan,</span>
+<span id="L416" data-line="416">the Adoption Plan of PRODUCT_DEFINITION §4, binds the current Product</span>
+<span id="L417" data-line="417">Definition bytes and basis to the target immutable cut, annotated tag</span>
+<span id="L418" data-line="418">object, peeled commit, tree and installed-manifest digest, then emits a</span>
+<span id="L419" data-line="419">deterministic plan digest. Mutation requires that exact digest as the</span>
+<span id="L420" data-line="420">operator&#x27;s acceptance and re-derives it before changing any Product</span>
+<span id="L421" data-line="421">Definition. Selector, target, manifest or definition drift invalidates the</span>
+<span id="L422" data-line="422">acceptance. A fleet uses the same law with one aggregate digest over all</span>
+<span id="L423" data-line="423">exact per-definition plans. Planning inside a mutating invocation is not</span>
+<span id="L424" data-line="424">external presentation and cannot authorise itself. The plan&#x27;s hashing rule</span>
+<span id="L425" data-line="425">and the manager&#x27;s command boundaries are PRODUCT_DEFINITION §4 (P6, P3).</span>
+<span id="L426" data-line="426"></span>
+<span id="L427" data-line="427">This split lets operators refer to `v&lt;version&gt;` for the latest published</span>
+<span id="L428" data-line="428">RC without repeatedly incrementing the version line, while every governed</span>
+<span id="L429" data-line="429">project retains reproducible exact-cut authority and changes only through</span>
+<span id="L430" data-line="430">explicit adoption (P2, P3, P6).</span>
+<span id="L431" data-line="431"></span>
+<span id="L432" data-line="432">## 5. Naming</span>
+<span id="L433" data-line="433"></span>
+<span id="L434" data-line="434">The shared-source naming shape is (P3):</span>
+<span id="L435" data-line="435"></span>
+<span id="L436" data-line="436">- RC branch: `rc/&lt;project&gt;/&lt;version&gt;`;</span>
+<span id="L437" data-line="437">- immutable RC tag: `&lt;project&gt;/v&lt;version&gt;-rc.&lt;n&gt;`;</span>
+<span id="L438" data-line="438">- optional release branch: `release/&lt;project&gt;/&lt;version&gt;`; and</span>
+<span id="L439" data-line="439">- mutable version-line selector tag: `&lt;project&gt;/v&lt;version&gt;`.</span>
+<span id="L440" data-line="440"></span>
+<span id="L441" data-line="441">For example:</span>
+<span id="L442" data-line="442"></span>
+<span id="L443" data-line="443">- candidate branch: `rc/example/3.0.0`;</span>
+<span id="L444" data-line="444">- first immutable cut: `example/v3.0.0-rc.1`;</span>
+<span id="L445" data-line="445">- second immutable cut: `example/v3.0.0-rc.2`;</span>
+<span id="L446" data-line="446">- latest-release branch: `release/example/3.0.0`; and</span>
+<span id="L447" data-line="447">- latest-published selector: `example/v3.0.0`.</span>
+<span id="L448" data-line="448"></span>
+<span id="L449" data-line="449">The unqualified profile remains lawful only under the single-project and</span>
+<span id="L450" data-line="450">historical-conservation conditions of §2. Projects may choose another</span>
+<span id="L451" data-line="451">spelling only in a release source whose ref policy proves collision</span>
+<span id="L452" data-line="452">freedom and preserves the same project namespace, mutable carrier,</span>
+<span id="L453" data-line="453">immutable cut and mutable selector distinctions (P3).</span>
+<span id="L454" data-line="454"></span>
+<span id="L455" data-line="455">## 6. Release-scoped assets and the Product subject</span>
+<span id="L456" data-line="456"></span>
+<span id="L457" data-line="457">### Release-scoped assets</span>
+<span id="L458" data-line="458"></span>
+<span id="L459" data-line="459">An immutable RC cut may carry release-scoped surfaces such as (P3, P6):</span>
+<span id="L460" data-line="460"></span>
+<span id="L461" data-line="461">- release notes;</span>
+<span id="L462" data-line="462">- release and installed-distribution manifests;</span>
+<span id="L463" data-line="463">- dependency declarations;</span>
+<span id="L464" data-line="464">- package or installed-carrier metadata;</span>
+<span id="L465" data-line="465">- qualification receipts; and</span>
+<span id="L466" data-line="466">- branch and tag identity declarations.</span>
+<span id="L467" data-line="467"></span>
+<span id="L468" data-line="468">Before RC publication, each used surface is reconciled to the exact RC</span>
+<span id="L469" data-line="469">subject. After publication, changing one of those bytes creates a</span>
+<span id="L470" data-line="470">different candidate and therefore requires a higher RC tag. The</span>
+<span id="L471" data-line="471">version-line selector has no content-reconciliation phase because it adds</span>
+<span id="L472" data-line="472">no new Product bytes (P3).</span>
+<span id="L473" data-line="473"></span>
+<span id="L474" data-line="474">Exact version and RC identity belong in release-scoped carriers and</span>
+<span id="L475" data-line="475">consumer basis bindings (P3). How a live constitutional surface, Product</span>
+<span id="L476" data-line="476">and requirements surfaces included, uses version labels is the</span>
+<span id="L477" data-line="477">[SPEC_METHOD §2 Specification surface rule](SPEC_METHOD.md#specification-surface-rule).</span>
+<span id="L478" data-line="478"></span>
+<span id="L479" data-line="479">### Product subject and repository carrier</span>
+<span id="L480" data-line="480"></span>
+<span id="L481" data-line="481">Before qualification, the project declares (P3, P6):</span>
+<span id="L482" data-line="482"></span>
+<span id="L483" data-line="483">- its Project Release Namespace and exact Project Subtree root;</span>
+<span id="L484" data-line="484">- the exact Product member set or artifact constituting the release</span>
+<span id="L485" data-line="485">  subject;</span>
+<span id="L486" data-line="486">- the release-scoped claim surfaces describing that subject; and</span>
+<span id="L487" data-line="487">- co-located mutable source-project fields excluded from both.</span>
+<span id="L488" data-line="488"></span>
+<span id="L489" data-line="489">A repository commit carries those declared sets but does not make every</span>
+<span id="L490" data-line="490">co-located file or sibling Project Subtree a Product member. The exact</span>
+<span id="L491" data-line="491">Project Subtree tree and Product member inventory distinguish the subject</span>
+<span id="L492" data-line="492">from the wider carrier. Once the immutable RC is published, no post-review</span>
+<span id="L493" data-line="493">carrier delta is admitted into that cut. Publication-caused ticket or</span>
+<span id="L494" data-line="494">source-work bookkeeping is recorded afterward on the continuing source</span>
+<span id="L495" data-line="495">branch and cannot move the immutable RC tag (P3, P6).</span>
+<span id="L496" data-line="496"></span>
+<span id="L497" data-line="497">## 7. Coordinated release-matched asset cohorts</span>
+<span id="L498" data-line="498"></span>
+<span id="L499" data-line="499">A Product authority may declare an explicit cross-Product Release-Matched</span>
+<span id="L500" data-line="500">Asset Cohort when one source corpus and its required distributed or</span>
+<span id="L501" data-line="501">derived assets need to remain usable as one versioned set. The declaring</span>
+<span id="L502" data-line="502">relation names every required Product and asset, the exact source</span>
+<span id="L503" data-line="503">dependency, its owning authorities, the qualification boundary and the</span>
+<span id="L504" data-line="504">publication transaction. Path co-location, equal version text or a common</span>
+<span id="L505" data-line="505">actor cannot infer the relation (P3, P6).</span>
+<span id="L506" data-line="506"></span>
+<span id="L507" data-line="507">Every required member of one cohort uses one exact cohort version suffix</span>
+<span id="L508" data-line="508">`&lt;version&gt;-rc.&lt;n&gt;`. Product-local cut names and refs render it as</span>
+<span id="L509" data-line="509">`v&lt;version&gt;-rc.&lt;n&gt;`; embedded asset-version fields render the same suffix</span>
+<span id="L510" data-line="510">without `v`. Qualification normalises only that leading cut-name marker</span>
+<span id="L511" data-line="511">and requires exact suffix equality. Equal versions establish release</span>
+<span id="L512" data-line="512">matching only. They do not collapse Product identities, member</span>
+<span id="L513" data-line="513">inventories, tags, acceptance judgments or release authorities (P3, P6).</span>
+<span id="L514" data-line="514"></span>
+<span id="L515" data-line="515">For a release-matched STDO stack, the closed cohort contains all of (P3,</span>
+<span id="L516" data-line="516">P4b):</span>
+<span id="L517" data-line="517"></span>
+<span id="L518" data-line="518">1. the exact STDO standards corpus cut;</span>
+<span id="L519" data-line="519">2. the distributed `spec` plugin and host assets carried by that STDO cut;</span>
+<span id="L520" data-line="520">3. the exact Axiom Indexer mechanics Product used to validate and project</span>
+<span id="L521" data-line="521">   the index;</span>
+<span id="L522" data-line="522">4. the exact STDO Representation Product; and</span>
+<span id="L523" data-line="523">5. its released `a_c.STDO` axiomatic program and logical constraint map</span>
+<span id="L524" data-line="524">   or equivalent semantic index, with the complete source-STDO member</span>
+<span id="L525" data-line="525">   inventory, member digests, member-set digest and exact cut identity</span>
+<span id="L526" data-line="526">   used to derive it.</span>
+<span id="L527" data-line="527"></span>
+<span id="L528" data-line="528">The cohort is incomplete when a required member is missing, stale,</span>
+<span id="L529" data-line="529">differently versioned, built from another source cut, or unable to</span>
+<span id="L530" data-line="530">reproduce its declared source-member and digest closure. A change to any</span>
+<span id="L531" data-line="531">source member covered by the index invalidates the old derived candidate</span>
+<span id="L532" data-line="532">for the successor cohort. The index is regenerated, mechanically</span>
+<span id="L533" data-line="533">validated, independently qualified where required, and released under the</span>
+<span id="L534" data-line="534">same new cut name. A stale index may remain immutable history; it cannot</span>
+<span id="L535" data-line="535">accompany the changed source as the current cohort (P3, P5, P6).</span>
+<span id="L536" data-line="536"></span>
+<span id="L537" data-line="537">### Two-commit construction and one publication transaction</span>
+<span id="L538" data-line="538"></span>
+<span id="L539" data-line="539">Exact installed-manifest identity includes the annotated STDO tag object,</span>
+<span id="L540" data-line="540">so a same-commit carrier containing both that identity and derived child</span>
+<span id="L541" data-line="541">bytes would be self-referential. A coordinated STDO cohort therefore uses</span>
+<span id="L542" data-line="542">this bounded two-commit construction (P3, P5):</span>
+<span id="L543" data-line="543"></span>
+<span id="L544" data-line="544">1. commit A freezes the exact STDO corpus, plugin, release record and</span>
+<span id="L545" data-line="545">   their qualification bytes;</span>
+<span id="L546" data-line="546">2. the annotated STDO cut tag is created locally over commit A but is not</span>
+<span id="L547" data-line="547">   pushed;</span>
+<span id="L548" data-line="548">3. that exact local cut is installed and verified, producing the manifest</span>
+<span id="L549" data-line="549">   identity used by every derived Product and index;</span>
+<span id="L550" data-line="550">4. the Axiom Indexer, STDO Representation, semantic-index bytes and cohort</span>
+<span id="L551" data-line="551">   record are derived and frozen in commit B;</span>
+<span id="L552" data-line="552">5. prepublication qualification evaluates commit B against the exact</span>
+<span id="L553" data-line="553">   local STDO tag before child immutable tags are created;</span>
+<span id="L554" data-line="554">6. annotated child cut tags and every Product-local RC branch,</span>
+<span id="L555" data-line="555">   version-line selector and optional release branch are prepared</span>
+<span id="L556" data-line="556">   locally;</span>
+<span id="L557" data-line="557">7. a mandatory post-tag, pre-push gate re-runs qualification over every</span>
+<span id="L558" data-line="558">   local annotated tag object and peel, selector, RC and release branch,</span>
+<span id="L559" data-line="559">   normalised version mapping, target commit and the exact closed ref</span>
+<span id="L560" data-line="560">   set; it also fetches and binds the expected remote object ID or</span>
+<span id="L561" data-line="561">   required absence for every destination ref; and</span>
+<span id="L562" data-line="562">8. one transport transaction atomically publishes only that qualified</span>
+<span id="L563" data-line="563">   carrier branch and complete Product ref set.</span>
+<span id="L564" data-line="564"></span>
+<span id="L565" data-line="565">If the remote does not support atomic ref publication, publication</span>
+<span id="L566" data-line="566">refuses. The process has no sequential-push fallback. Every immutable cut</span>
+<span id="L567" data-line="567">tag is create-only and therefore requires bound remote absence. Every</span>
+<span id="L568" data-line="568">mutable carrier, RC branch, selector and release branch uses an explicit</span>
+<span id="L569" data-line="569">per-ref compare-and-swap lease, such as</span>
+<span id="L570" data-line="570">`--force-with-lease=&lt;ref&gt;:&lt;expected-oid&gt;`, in that same atomic</span>
+<span id="L571" data-line="571">transaction. A missing expected ref, unexpected existing tag or changed</span>
+<span id="L572" data-line="572">remote object ID stops publication; the operator refetches and repeats</span>
+<span id="L573" data-line="573">complete content and local-ref-graph qualification before constructing</span>
+<span id="L574" data-line="574">another push. A lease mismatch never falls back to an unguarded force, a</span>
+<span id="L575" data-line="575">partial push or an in-place expectation update (P5, P3).</span>
+<span id="L576" data-line="576"></span>
+<span id="L577" data-line="577">Remote verification fails closed when any required cohort ref is absent,</span>
+<span id="L578" data-line="578">lightweight, differently versioned, points to the wrong Product commit, or</span>
+<span id="L579" data-line="579">has a selector or release branch that does not match its immutable cut.</span>
+<span id="L580" data-line="580">Post-publication bookkeeping may use a later commit, but it cannot move</span>
+<span id="L581" data-line="581">any immutable cohort tag (P5, P3).</span>
+<span id="L582" data-line="582"></span>
+<span id="L583" data-line="583">### Qualification and recovery</span>
+<span id="L584" data-line="584"></span>
+<span id="L585" data-line="585">Prepublication content qualification binds the exact commit-A STDO tag</span>
+<span id="L586" data-line="586">and manifest, commit-B source tree, all Product-local target refs, version</span>
+<span id="L587" data-line="587">markers, Product member inventories, semantic-index bytes and complete</span>
+<span id="L588" data-line="588">source-corpus digest closure. It proves that the frozen candidate can be</span>
+<span id="L589" data-line="589">tagged without changing a qualifying byte. After tag and mutable ref</span>
+<span id="L590" data-line="590">creation, local-ref-graph qualification binds their annotated objects,</span>
+<span id="L591" data-line="591">peels, target commits, exact push set, and every fetched remote expected</span>
+<span id="L592" data-line="592">object ID or required absence to that unchanged content result.</span>
+<span id="L593" data-line="593">Post-publication qualification verifies the same relation from remote refs</span>
+<span id="L594" data-line="594">and refuses a partial cohort (P6, P3, P5).</span>
+<span id="L595" data-line="595"></span>
+<span id="L596" data-line="596">A historically published source cut may be the basis of a later</span>
+<span id="L597" data-line="597">same-version backfill only when separately authorised recovery law names</span>
+<span id="L598" data-line="598">that exception. Every recovered asset still binds the exact historical cut</span>
+<span id="L599" data-line="599">and same cut name, and remote completeness remains mandatory. Recovery</span>
+<span id="L600" data-line="600">cannot move the historical tag, add bytes to its Product subject, or be</span>
+<span id="L601" data-line="601">represented as an atomic cohort that existed at the original publication.</span>
+<span id="L602" data-line="602">Normal successor publication uses the atomic cohort process above (P3,</span>
+<span id="L603" data-line="603">P6).</span>
+<span id="L604" data-line="604"></span>
+<span id="L605" data-line="605">Adding or changing this cohort law changes qualifying bytes of this</span>
+<span id="L606" data-line="606">member. It governs only a higher immutable RC that contains those bytes</span>
+<span id="L607" data-line="607">and cannot retroactively make an earlier cut a coordinated cohort (P3).</span>
+<span id="L608" data-line="608"></span>
+<span id="L609" data-line="609">## 8. Acceptance</span>
+<span id="L610" data-line="610"></span>
+<span id="L611" data-line="611">### Acceptance criteria</span>
+<span id="L612" data-line="612"></span>
+<span id="L613" data-line="613">An RC may be accepted when (P6, P3):</span>
+<span id="L614" data-line="614"></span>
+<span id="L615" data-line="615">- pre-RC qualification passed for the declared subject;</span>
+<span id="L616" data-line="616">- independent exact-cut review passed where required;</span>
+<span id="L617" data-line="617">- required operator review is complete;</span>
+<span id="L618" data-line="618">- the intended release scope and successor relation are stable;</span>
+<span id="L619" data-line="619">- release-scoped assets accurately describe the exact cut;</span>
+<span id="L620" data-line="620">- all release-blocking gaps, including the findings that block promotion</span>
+<span id="L621" data-line="621">  under [EVALUATION §5 When a finding blocks promotion](EVALUATION.md#when-a-finding-blocks-promotion),</span>
+<span id="L622" data-line="622">  are closed or the claimed scope is explicitly narrowed; and</span>
+<span id="L623" data-line="623">- the human Product authority accepted the exact immutable RC identity.</span>
+<span id="L624" data-line="624"></span>
+<span id="L625" data-line="625">Each criterion is a mandatory gate in the sense of</span>
+<span id="L626" data-line="626">[FOUNDATIONS §4 Change impact and evidence reuse](FOUNDATIONS.md#change-impact-and-evidence-reuse):</span>
+<span id="L627" data-line="627">it applies irrespective of any selection of checks after a change, and</span>
+<span id="L628" data-line="628">retained evidence satisfies it only under the validity conditions stated</span>
+<span id="L629" data-line="629">there (P6).</span>
+<span id="L630" data-line="630"></span>
+<span id="L631" data-line="631">Acceptance attaches to that immutable RC identity. It neither advances</span>
+<span id="L632" data-line="632">nor rolls back the version-line selector. Consumer adoption separately</span>
+<span id="L633" data-line="633">evaluates the exact latest target presented by the channel and mutates</span>
+<span id="L634" data-line="634">only after its digest-bound plan is accepted (P6, P3; EVALUATION §5 is</span>
+<span id="L635" data-line="635">the generic acceptance law).</span>
+<span id="L636" data-line="636"></span>
+<span id="L637" data-line="637">### External qualification dependencies</span>
+<span id="L638" data-line="638"></span>
+<span id="L639" data-line="639">Some claims depend on external backends, transports or operator-facing</span>
+<span id="L640" data-line="640">services outside the local carrier. Such a dependency may remain out of</span>
+<span id="L641" data-line="641">Product for carrier and migration classification while still blocking the</span>
+<span id="L642" data-line="642">dependent release claim (P6, P5).</span>
+<span id="L643" data-line="643"></span>
+<span id="L644" data-line="644">A clean skip caused by an unhealthy external dependency is an evaluation</span>
+<span id="L645" data-line="645">not performed, which has no result</span>
+<span id="L646" data-line="646">([FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Not performed). It may</span>
+<span id="L647" data-line="647">preserve correct Product classification, but it cannot establish that the</span>
+<span id="L648" data-line="648">dependent capability passed. The claim is either qualified against a</span>
+<span id="L649" data-line="649">healthy dependency or narrowed before acceptance (P6, P5).</span>
+<span id="L650" data-line="650"></span>
+<span id="L651" data-line="651">## 9. Successor baseline conservation (STDO-UP-015)</span>
+<span id="L652" data-line="652"></span>
+<span id="L653" data-line="653">A successor identifies the exact predecessor immutable RC whose semantic</span>
+<span id="L654" data-line="654">claims it evolves. That origin remains immutable for the candidate. Every</span>
+<span id="L655" data-line="655">predecessor claim capable of affecting the successor receives one semantic</span>
+<span id="L656" data-line="656">disposition (P4b, P3, P6):</span>
+<span id="L657" data-line="657"></span>
+<span id="L658" data-line="658">- conserved: the successor retains the claim;</span>
+<span id="L659" data-line="659">- superseded: an accepted successor relation replaces it;</span>
+<span id="L660" data-line="660">- intentionally removed: current Product authority removes it; or</span>
+<span id="L661" data-line="661">- not applicable: it has no successor effect, with a bounded reason.</span>
+<span id="L662" data-line="662"></span>
+<span id="L663" data-line="663">Evidence for a disposition is retained or reassessed under</span>
+<span id="L664" data-line="664">[FOUNDATIONS §4 Change impact and evidence reuse](FOUNDATIONS.md#change-impact-and-evidence-reuse):</span>
+<span id="L665" data-line="665">a `conserved` reading made on an earlier successor text applies to a later</span>
+<span id="L666" data-line="666">one only where the owning text and the consumer bindings that carry it</span>
+<span id="L667" data-line="667">are unchanged, or the change is shown not to affect the claim (P3, P6).</span>
+<span id="L668" data-line="668"></span>
+<span id="L669" data-line="669">An unresolved disposition blocks qualification of the affected claim.</span>
+<span id="L670" data-line="670">Conservation is semantic: patch absence does not prove loss when a</span>
+<span id="L671" data-line="671">successor-native realisation preserves behaviour, and naming or code</span>
+<span id="L672" data-line="672">similarity does not prove conservation without relevant evidence (P6,</span>
+<span id="L673" data-line="673">P1). The comparison that decides `conserved` is made on the same material</span>
+<span id="L674" data-line="674">case, scope and authority: what must happen, what may happen, what is</span>
+<span id="L675" data-line="675">prohibited, and what follows when a trigger, exception or required</span>
+<span id="L676" data-line="676">premise is absent, in the owning text and in the consumer bindings that</span>
+<span id="L677" data-line="677">apply it, with the counterexamples that would expose a changed decision.</span>
+<span id="L678" data-line="678">Modal wording is judged by that meaning: indicative wording can state a</span>
+<span id="L679" data-line="679">binding law, and rewriting &quot;must&quot; or &quot;shall&quot; is neither conservation nor</span>
+<span id="L680" data-line="680">supersession by itself; an obligation stays obligatory, a preference</span>
+<span id="L681" data-line="681">stays a preference, and every permitted exception and scope condition</span>
+<span id="L682" data-line="682">survives, or the claim is not conserved. A statement that a whole</span>
+<span id="L683" data-line="683">package&#x27;s wording is equivalent establishes none of this for any claim</span>
+<span id="L684" data-line="684">(P6, P1). A `conserved` disposition recorded</span>
+<span id="L685" data-line="685">before this test applied is re-evaluated under it before the affected</span>
+<span id="L686" data-line="686">claim qualifies; until then its standing is `unresolved`.</span>
+<span id="L687" data-line="687"></span>
+<span id="L688" data-line="688">Each disposition is a claim the successor makes about one predecessor</span>
+<span id="L689" data-line="689">claim ([EVALUATION §1](EVALUATION.md#1-claims)), not a result value; its</span>
+<span id="L690" data-line="690">predicate is its value&#x27;s wording above. It is distinct from the decision</span>
+<span id="L691" data-line="691">owner&#x27;s disposition of an assessed candidate</span>
+<span id="L692" data-line="692">([ACTIVATION §3 Disposition](ACTIVATION.md#disposition)), which is an</span>
+<span id="L693" data-line="693">acceptance result. Qualification evaluates each</span>
+<span id="L694" data-line="694">disposition on evidence and records a value of the core result algebra</span>
+<span id="L695" data-line="695">([FOUNDATIONS §4 Results](FOUNDATIONS.md#results)) with that predicate.</span>
+<span id="L696" data-line="696">An unresolved disposition states no claim and so has no result: in the</span>
+<span id="L697" data-line="697">qualification of the affected claim it is a planned assessment without a</span>
+<span id="L698" data-line="698">closed result, which is why it blocks that qualification</span>
+<span id="L699" data-line="699">([FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results),</span>
+<span id="L700" data-line="700">Gaps). Purpose and material relation: a recorded disposition establishes</span>
+<span id="L701" data-line="701">nothing until it is evaluated, so no disposition stands as a result (P6,</span>
+<span id="L702" data-line="702">P5).</span>
+<span id="L703" data-line="703"></span>
+<span id="L704" data-line="704">Where a maintenance or support line may affect retained claims, the</span>
+<span id="L705" data-line="705">release basis identifies the watched source, observation boundary,</span>
+<span id="L706" data-line="706">inclusion policy and successor candidate. Relevant changes receive</span>
+<span id="L707" data-line="707">semantic disposition at material integration and exact-cut qualification.</span>
+<span id="L708" data-line="708">The consumer owns its record, branch strategy, comparison and proof</span>
+<span id="L709" data-line="709">mechanism (P4b, P6).</span>
+<span id="L710" data-line="710"></span>
+<span id="L711" data-line="711">[EVALUATION §5](EVALUATION.md#5-acceptance) states what acceptance</span>
+<span id="L712" data-line="712">requires of the disposition record; it applies this section and is not</span>
+<span id="L713" data-line="713">part of it (P4b, P6).</span>
+<span id="L714" data-line="714"></span>
+<span id="L715" data-line="715">## 10. Open questions</span>
+<span id="L716" data-line="716"></span>
+<span id="L717" data-line="717">These questions remain open (P2):</span>
+<span id="L718" data-line="718"></span>
+<span id="L719" data-line="719">- What exact qualification bundle is mandatory for each Product class?</span>
+<span id="L720" data-line="720">- What version-line compatibility rule requires a new `&lt;version&gt;` rather</span>
+<span id="L721" data-line="721">  than a higher RC ordinal?</span></pre></html>

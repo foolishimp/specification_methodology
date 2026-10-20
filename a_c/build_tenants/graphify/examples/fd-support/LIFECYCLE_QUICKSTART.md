@@ -1,8 +1,14 @@
 # Lifecycle quickstart: Executive, Worker and Reviewer
 
-Status: provisional candidate written by the T-008 Worker under grant `urn:a-c:grant:T008:guide:001`;
-not reviewed, disposed or accepted. The tools report "provisional construction; independent
-integrated qualification and owner acceptance pending", and REQ-AC-FD/FDV remain Deferred.
+> Historical guide/trial cut: the status and source identities below describe
+> the original guide and trial. See the [current handoff](../../../../.ai-workspace/qualification/t008/handoff-001/README.md)
+> and [retained before snapshot](../../../../.ai-workspace/qualification/t008/handoff-001/before/build_tenants/graphify/examples/fd-support/LIFECYCLE_QUICKSTART.md).
+> This note is Writer metadata; the original guide and its trial limits remain unchanged.
+
+Status: provisional guide initially written by the Claude Worker under grant `urn:a-c:grant:T008:guide:001`;
+provenance wording repaired by native Writer `/root/ac_fd_tenant_design` (actual model/provider unobserved).
+The Worker wrote late, then timed out (143) without a closed return; this edit fills no acquisition/FDV gap.
+Not independently reviewed, disposed or accepted; REQ-AC-FD/FDV remain Deferred.
 
 This page maps one bounded software task onto the public operations. What roles, results,
 admission, independence and acceptance mean stays with the method owners listed in the
@@ -79,14 +85,14 @@ python3 build_tenants/graphify/code/ac_support.py --policy "$POLICY" --policy-sh
 ```
 
 Discover with `{"schema": "a_c.fd-support.request/1", "id": "exec-describe-001", "operation":
-"tools.describe", "arguments": {"operation": "work.write"}}`. The write that created this file:
+"tools.describe", "arguments": {"operation": "work.write"}}`. Worker's initial write (before provenance correction):
 
 ```json
 {"schema": "a_c.fd-support.request/1", "id": "w022-write-guide", "operation": "work.write",
  "arguments": {"grant_id": "urn:a-c:grant:T008:guide:001", "mode": "replace", "interpretation": null,
   "target": {"engine": "workspace-regular-file", "root": "product", "object": null, "sha256": null,
    "selector": null, "path": "build_tenants/graphify/examples/fd-support/LIFECYCLE_QUICKSTART.md"},
-  "record": {"text": "<this file's bytes, elided>", "provenance": {"engine": "workspace-regular-file",
+  "record": {"text": "<original 48d55c28 postimage bytes, elided>", "provenance": {"engine": "workspace-regular-file",
    "root": "product", "path": ".ai-workspace/qualification/t008/live-binding-001/TASK.md", "object": null,
    "selector": null, "sha256": "6d777ece58832ec57185f47cbe69f714222329e600b3a190acac63d7d744fff2"}},
   "observations": [{"id": "sha256:96e3ffd13f76ecedb20dedb8443abb468c0d791bad4da4aa60eaf036465a68c4",
@@ -128,10 +134,10 @@ server's `source_read` tool with `operation: "source.read"`). "MCP server/discov
 - This guide claims no savings, quality gain, complete calculus, adoption or release. Its review
   and Root's disposition are separate later steps.
 
-## Sources acquired for this guide
+## Source references and actual Worker acquisition
 
-- [TASK](../../../../.ai-workspace/qualification/t008/live-binding-001/TASK.md) `6d777ece58832ec57185f47cbe69f714222329e600b3a190acac63d7d744fff2`
-- [Product](../../../../specification/PRODUCT.md) `9ebc8342affe8c5e0afb08ebe22f3f98f73f7bdc64db00eee17674c47274bef7`, [FD requirements](../../../../specification/requirements/fd-support-tools.md) `e3fcebd7e9fbc60dc36ed4c02ee834a96f14226af134809c938169d4712dfc23`, [FDV requirements](../../../../specification/requirements/fd-support-verification.md) `3746e614a5ddc3f0a551e926998f16d6101cc037c5c43b879b4447b017a8dbdf`
-- [Tenant HOW](../../design/fd-support.md) `faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f`: Public wire grammar, Returned actor payload, Packet carrier, Returns, review and qualified checks, Role-specific return contract
-- [Setup](README.md) `eca9c4cbfbd7ad4b712a7d1e8fc73f8cec42b0fb196967b77890833997018f94`
+- Recorded Worker UTF-8 `source.read`: [TASK](../../../../.ai-workspace/qualification/t008/live-binding-001/TASK.md) `6d777ece58832ec57185f47cbe69f714222329e600b3a190acac63d7d744fff2`
+- Basis/reference only (Context base64; no readable Worker `source.read`): [Product](../../../../specification/PRODUCT.md) `9ebc8342affe8c5e0afb08ebe22f3f98f73f7bdc64db00eee17674c47274bef7`, [FD requirements](../../../../specification/requirements/fd-support-tools.md) `e3fcebd7e9fbc60dc36ed4c02ee834a96f14226af134809c938169d4712dfc23`, [FDV requirements](../../../../specification/requirements/fd-support-verification.md) `3746e614a5ddc3f0a551e926998f16d6101cc037c5c43b879b4447b017a8dbdf`
+- [Historical HOW acquired by Worker](../../../../.ai-workspace/qualification/t008/retry-design-repair-001/HOW.before.md) `faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f`: readable Worker UTF-8 slices cover 145–389, 606–737 and 1125–1159 (Public wire/Actor/Packet/Returns/review/Role-specific narratives); full HOW acquisition is not proved.
+- Recorded Worker UTF-8 `source.read`: [Setup](README.md) `eca9c4cbfbd7ad4b712a7d1e8fc73f8cec42b0fb196967b77890833997018f94`
 - `tools.describe` for `work.write` and `workspace.observe`: method profile `urn:a-c:fd-support:method:claude-rc9:executive:1` `bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1`, builder STDO v2.5.1-rc.2 manifest `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`

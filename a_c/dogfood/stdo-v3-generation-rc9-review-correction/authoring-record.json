@@ -1,0 +1,35 @@
+{
+  "backend_usage": "Not measured for the current Worker session; no zero-token or cost-saving claim.",
+  "historical_cli_provenance": "Retained parent generation-plan/author-invocations coordinates describe original authoring. They did not produce this replacement. New interpreter and correction provenance identify this effect.",
+  "id": "urn:a-c:application:stdo-v3-rc9-claude-direct-review-correction:001:authoring-record",
+  "interpreter": {
+    "id": "urn:a-c:application:stdo-v3-rc9-claude-direct-review-correction:001:interpreter:fp-semantic-worker",
+    "sha256": "649a89d625520bed4dbb09c63ca483346ea73fec661245480e452c31dd4d2f2b"
+  },
+  "new_external_cli_dispatches": 0,
+  "packager_file_sha256": "500bac4517cdbbe770626a88c73f1237a42ae54f9b52c40aead2c4a26429296d",
+  "packager_path": "dogfood/stdo-v3-generation-rc9-review-correction/build_correction.py",
+  "parent": {
+    "canonical_sha256": "fb1f15ca409fd302dcad56c86c4edf111ca00b1fb581ddae4d332fb18d338111",
+    "file_sha256": "bf12529fc3359c3d0a6238c6214693e022d665f1148a1543f7add2ac2b150704",
+    "id": "urn:a-c:generation:63c64519947babe1e3fec509:model:acb523c25ab7ce983045db1b"
+  },
+  "preserved_target_grounding": "ACTIVATION478-492; no anchor repair or source section change is needed for this correction.",
+  "profile": "a_c.application.fp-correction-authoring/1",
+  "qualification": "Only the explicit source-bound target judgment is supplied here. Global model fidelity/closure/completeness and accepted-result benefit remain unqualified.",
+  "semantic_patch": {
+    "id": "urn:a-c:application:stdo-v3-rc9-claude-direct-review-correction:001:patch",
+    "sha256": "b825a27bdb43dfba7f81dbb4f147b7b0f409e2045c9f5e112a2bcb1f0555c9e5"
+  },
+  "source_first_expectations": {
+    "order": "Recorded after raw deciding source acquisition and before target payload inspection.",
+    "path": ".ai-workspace/qualification/t008/review-fixes-001/semantic/source-first-expectations.json",
+    "sha256": "733d59c762f41dd1091f20d3628fde38aec5bddbb8ed5fa8c4b2bb8132fe8806"
+  },
+  "source_judgment": "ACTIVATION permits unresolved applicability as indeterminate or out_of_frame on the undeclared-relation ground; FOUNDATIONS explicitly allows either where grounds coexist. No declared exclusive applicability refinement justifies the parent exception. The replacement restores that latitude while leaving required coverage and never-falsified behavior in the unchanged main predicate.",
+  "sources": {
+    "id": "urn:a-c:application:stdo-v3-rc9-claude-direct-review-correction:001:source-manifest",
+    "sha256": "b71bc2847e94eb4f22afa7e1fb38d5fcbb633ffdce305dd272bdc97bca1a62ea"
+  },
+  "status": "proposed-unaccepted; independent assessment pending"
+}

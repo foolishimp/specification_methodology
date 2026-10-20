@@ -1,0 +1,60 @@
+{
+  "controls": [
+    {
+      "case": "changed_frozen_source",
+      "result": {
+        "command": [
+          "/usr/local/bin/python3",
+          "-B",
+          "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-common-source-urcl7ckh/freeze_sources.py",
+          "--check"
+        ],
+        "returncode": 1,
+        "stderr": "{\"valid\": false, \"error\": \"stale frozen bytes: standards/README.md\"}\n",
+        "stdout": ""
+      }
+    },
+    {
+      "case": "changed_semantic_selection",
+      "result": {
+        "command": [
+          "/usr/local/bin/python3",
+          "-B",
+          "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-common-source-urcl7ckh/freeze_sources.py",
+          "--check"
+        ],
+        "returncode": 1,
+        "stderr": "{\"valid\": false, \"error\": \"semantic selection changed\"}\n",
+        "stdout": ""
+      }
+    },
+    {
+      "case": "unlisted_frozen_member",
+      "result": {
+        "command": [
+          "/usr/local/bin/python3",
+          "-B",
+          "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-common-source-urcl7ckh/freeze_sources.py",
+          "--check"
+        ],
+        "returncode": 1,
+        "stderr": "{\"valid\": false, \"error\": \"frozen source has missing or extra members\"}\n",
+        "stdout": ""
+      }
+    }
+  ],
+  "fixture": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-common-source-urcl7ckh",
+  "kind": "a_c.application-source-freeze-refusal-controls/1",
+  "restored_positive": {
+    "command": [
+      "/usr/local/bin/python3",
+      "-B",
+      "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-common-source-urcl7ckh/freeze_sources.py",
+      "--check"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "{\n  \"bytes\": 3298515,\n  \"claim\": \"Exact source custody and selection only; no interpretation fidelity, method acceptance or release qualification.\",\n  \"classes\": {\n    \"derived_frames\": {\n      \"bytes\": 1270927,\n      \"member_count\": 13\n    },\n    \"host_legal_release_metadata\": {\n      \"bytes\": 26700,\n      \"member_count\": 10\n    },\n    \"primary_semantic\": {\n      \"bytes\": 2000888,\n      \"member_count\": 58\n    }\n  },\n  \"exact_git_replay\": false,\n  \"inventory_digest\": \"740a3d1066a2b685c3985cf366f29dcb582c38e8ed98ddf5ee3a7576b993126d\",\n  \"kind\": \"a_c.application-source-freeze-check/1\",\n  \"member_count\": 81,\n  \"package_tree\": \"7f2070b61c848b42b4dfb3af1e0ce53869de1aa1\",\n  \"preserved_frame_owner_bindings\": 223,\n  \"semantic_inventory_digest\": \"7605efc789326de5f2d8568571a65113097cde54947743f622321193480af12f\",\n  \"subject_id\": \"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6\",\n  \"valid\": true\n}\n"
+  },
+  "source_changed": false
+}

@@ -146,5 +146,11 @@ ordinary deterministic tools for F_P Executives, Workers and Reviewers. The
 for the owner's work-scoped execution selection. The method remains external
 source authority; no replacement lifecycle, installed V3 basis, sibling runtime
 composition or change to the codec/source-authoring fragment is introduced.
-This additional design is a candidate; public implementation, operational
-qualification, accepted-result benefit and Product acceptance remain pending.
+This is T-008's operative provisional HOW with a public implementation selected
+by Root after bounded implementation/review/technical integration. Current
+evidence is 281 tests, strict normal-import checks on nine files, ten fresh
+CLI/MCP demo checks and nine retained actual-upstream checks with unchanged
+dependency applicability. The [current code review](../../../.ai-workspace/comments/codex/t008-platform-code-review-003/REVIEW.md)
+and [handoff](../../../.ai-workspace/qualification/t008/handoff-001/README.md)
+retain scope, historical cuts and actual-actor/variant gaps. Qualification is
+partial; benefit, Product acceptance and installed/RC/release remain open.

@@ -105,20 +105,24 @@ method acceptance or frozen-model regeneration follows from this source work.
 
 The [deterministic support requirements](requirements/fd-support-tools.md) and
 [qualification scenarios](requirements/fd-support-verification.md) specify the
-requested Product outcome. Their status is Deferred because owning design and
-realization are pending, not because the outcome is withdrawn. Current codecs,
-projections, source-generation scripts and worker launch facilities are building
-blocks; this increment does not claim the new public toolset, general contract
-binding/admission support or a maintained whole-workspace representation exists.
-Current frozen dogfood models represent selected methodology corpora.
+requested Product outcome. Their earlier Deferred/design-pending statements
+describe the T-007 specification-only cut. Under
+[T-008](../.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md#current-provisional-implementation),
+the Graphify tenant has an operative selected HOW and provisional public
+implementation; bounded implementation, independent code review and technical
+integration are complete. The FD family is Active for that operative work.
+FDV qualification is Active but partial; FDV-003 benefit remains Deferred and
+unqualified. The [handoff](../.ai-workspace/qualification/t008/handoff-001/README.md)
+retains exact evidence and gaps, including failed/partial ordinary actor trials.
+Current frozen dogfood models still represent selected methodology corpora.
 
 Qualification separates deterministic checked properties, actual acquisition
 and executor effects, ordinary actor usability, independent semantic assessment
 and owner disposition under the selected method. Benefit requires matched
 accepted-result quality/cost evidence, including acquisition, F_P authoring,
 refresh, invocation, retries, repair and review; graph use or fewer calls alone
-establishes no improvement. Implementation, qualification, acceptance and
-release remain downstream work.
+establishes no improvement. Further qualification, owner acceptance and
+release remain open.
 
 ## Independence
 
@@ -131,10 +135,14 @@ Upstream software used by a tenant is part of that tenant's HOW.
 ## Product disposition authority
 
 Jim, the Product owner, retains scope, meaning, acceptance and release decisions.
-T-001 authorizes its bounded implementation/verification work. The current
+T-001 authorizes its bounded implementation/verification work. The completed
 [T-007 instruction](../.ai-workspace/tickets/active/T-007-executive-lifecycle-tooling.md#owner-instruction)
-authorizes Product and requirement authoring for the additional F_D support
+authorized Product and requirement authoring for the additional F_D support
 tools. Neither instruction asserts semantic acceptance of fixtures, complete
 calculus conformance, release readiness or measured efficiency improvement.
-Design/implementation requires a subsequent bounded work selection.
+The subsequent [T-008 instruction](../.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md#owner-instruction)
+selected implementation. Root's [current work disposition](../.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md#current-provisional-implementation)
+selects the provisional realization after bounded implementation/review/technical
+integration; T-008 remains active for explicit qualification gaps. It supplies
+no Product acceptance, release decision or current runtime-call authority.
 Construction and independent assessment do not accept their own subjects.

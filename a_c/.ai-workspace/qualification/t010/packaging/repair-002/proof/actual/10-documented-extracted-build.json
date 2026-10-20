@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python3",
+    "-B",
+    "package_release.py",
+    "build",
+    "--proposal",
+    ".",
+    "--public-evidence",
+    "evidence/authoring-public.json",
+    "--review",
+    "evidence/reviews/review-001/receipt.json",
+    "--upstream",
+    "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout",
+    "--bundle",
+    "/Users/jim/tmp/a_c-common-rc1-packaging-repair-20261021/out/second/bundle/a_c-stdo-v3-common-35fb4824-packaging-r1",
+    "--dist",
+    "/Users/jim/tmp/a_c-common-rc1-packaging-repair-20261021/out/second/dist"
+  ],
+  "cwd": "/Users/jim/tmp/a_c-common-rc1-packaging-repair-20261021/out/extracted-first/a_c-stdo-v3-common-35fb4824-packaging-r1",
+  "elapsed_seconds": 30.704,
+  "returncode": 0,
+  "stderr": "",
+  "stdout": "{\n  \"archive\": {\n    \"bytes\": 10089542,\n    \"file\": \"a_c-stdo-v3-common-35fb4824-packaging-r1.tar.gz\",\n    \"format\": \"deterministic tar.gz; sorted files, fixed0644 uid/gid/mtime0, blank owner names, gzip mtime0\",\n    \"sha256\": \"989c0efbbba90c1d444c6a1c24def4174ef8519bec5f63d9bef021f27dd75e2b\"\n  },\n  \"bundle\": \"/Users/jim/tmp/a_c-common-rc1-packaging-repair-20261021/out/second/bundle/a_c-stdo-v3-common-35fb4824-packaging-r1\",\n  \"checks\": {\n    \"claim\": \"Exact bundle custody, bounded structural checks and carrier recovery; no semantic acceptance, source-method release, or public-distribution authorization.\",\n    \"displayed_records\": 1987,\n    \"inventory_files\": 211,\n    \"model\": {\n      \"id\": \"urn:a-c:generation:0657852b6fd1fa48457c3f7d:model:2e6f0d59737b5bca00691b60\",\n      \"sha256\": \"691c4ab0d0993312a31e7e2371070ea4758fdf74b32862ff4d5a32d05af79fbf\"\n    },\n    \"omitted_records\": 0,\n    \"physical_grounding_occurrences\": 2491,\n    \"public_evidence\": {\n      \"bounded_review_receipts\": 1,\n      \"claim\": \"Types, exact source/model/artifact bindings and readable-report custody checked; receipt truth, issuer legitimacy, independence and semantic fitness remain external.\",\n      \"construction_receipt\": \"urn:a-c:common:35fb4824:public-construction-account:1\"\n    },\n    \"records\": 1987,\n    \"source\": {\n      \"bytes\": 3298515,\n      \"files\": 81,\n      \"semantic_files\": 58\n    },\n    \"status\": \"passed\",\n    \"subject\": \"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6\"\n  },\n  \"claim\": \"Local release preparation; owner licensing/acceptance/publication decisions reserved.\",\n  \"status\": \"local_bundle_prepared\"\n}\n"
+}

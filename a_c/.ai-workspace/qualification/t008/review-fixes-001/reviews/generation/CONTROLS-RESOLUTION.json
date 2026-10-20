@@ -1,0 +1,15 @@
+{
+  "case": "missing-result.json",
+  "new_model_or_provider_calls": 0,
+  "ordinary_assembly": {
+    "reason": "missing validated F_P chunks; normal assembly refuses. --allow-partial explicitly marks refused sections",
+    "status": "refused"
+  },
+  "original_controls_preserved": "CONTROLS.json retains first-run 41 passed and one overly narrow reviewer assertion.",
+  "prepared_stage_status": "incomplete",
+  "profile": "a_c.review.control-resolution/1",
+  "reason": "The reviewer first required successful_attempt to throw for missing result; its declared selection API lawfully returns None for unfinished attempts. The governing expectation is no reuse/fallback and ordinary assembly refusal, not an exception from this internal selector.",
+  "script_sha256": "7ee257e9e46e550a683aeea110bf907546bfdf6400ea07803ec2d5bd5b614392",
+  "selection": null,
+  "status": "passed"
+}

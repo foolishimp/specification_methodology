@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "-S",
+    "-B",
+    "release_tools/bundle_check.py",
+    "."
+  ],
+  "cwd": "/Users/jim/tmp/a_c-common-rc1-packaging-review-20261021/assessment-001/metadata-cases/source_commit-missing",
+  "elapsed_seconds": 14.923944958020002,
+  "expected": "35fb4824a064a84df5af214a0d0e2da597c18ac6",
+  "field": "source_commit",
+  "operation": "missing",
+  "outer_inventory_checksums_independently_consistent": true,
+  "returncode": 2,
+  "stderr": "{\"status\": \"refusal\", \"reason\": \"release-preparation source commit/package tree differs from its public evidence\"}\n",
+  "stdout": ""
+}

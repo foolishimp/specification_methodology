@@ -1,0 +1,37 @@
+{
+  "all_negative_controls_refused": true,
+  "frozen_before_file_sha256": "9dc9da7669e51cfc615cbd1bc986215e036fd7f6131f66b9cd0f7dc403485eed",
+  "guard_files_checked": 65,
+  "guard_mismatches": [],
+  "independent_negative_controls": [
+    {
+      "case": "wrong-target",
+      "reason": "patch exceeds exact target",
+      "refused": true
+    },
+    {
+      "case": "wrong-preimage",
+      "reason": "target preimage changed",
+      "refused": true
+    },
+    {
+      "case": "extra-operation",
+      "reason": "one operation required",
+      "refused": true
+    },
+    {
+      "case": "changed-parent-bytes",
+      "reason": "frozen parent file changed",
+      "refused": true
+    },
+    {
+      "case": "changed-codec-bytes",
+      "reason": "codec changed; this application requires its exact reviewed codec",
+      "refused": true
+    }
+  ],
+  "profile": "ac.review-fixes.semantic-independent-checks/1",
+  "read_only_application_replay": "reproduced model/carrier/coverage/delta/result with exact canonical model acc476e820a93a3cca31762a2f582cf109e55bf5149919e37bd74f1f9d75b9d3",
+  "scope": "Deterministic supplied-input/delta and historical-file guards, not semantic oracle or generic transformation proof.",
+  "scratch": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-review-semantic-fixes-ew_zan9a"
+}

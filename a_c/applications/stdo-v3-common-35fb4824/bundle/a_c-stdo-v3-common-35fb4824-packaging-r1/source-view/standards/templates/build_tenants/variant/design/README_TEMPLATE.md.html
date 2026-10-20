@@ -1,0 +1,51 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>standards/templates/build_tenants/variant/design/README_TEMPLATE.md</title><style>body{font:14px system-ui;margin:24px;background:#101720;color:#dfeaf4}a{color:#87c7ff}pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5;counter-reset:line}span{display:block}span:before{content:attr(data-line);display:inline-block;width:4em;color:#7392aa;user-select:none}span:target{background:#36481d}</style><h1>standards/templates/build_tenants/variant/design/README_TEMPLATE.md</h1><p>Exact frozen source · SHA256 64237bb1766e83781e1c6e64f0eecf00e21524e007caae3a5651268cf94f7ec0</p><pre><span id="L1" data-line="1"># Tenant Design</span>
+<span id="L2" data-line="2"></span>
+<span id="L3" data-line="3">Tenant-local design surfaces live here.</span>
+<span id="L4" data-line="4"></span>
+<span id="L5" data-line="5">Resolve the governing method from the exact installed STDO basis in the</span>
+<span id="L6" data-line="6">applicable Product Definition and use `build_tenants/common/design/` for shared</span>
+<span id="L7" data-line="7">realization law.</span>
+<span id="L8" data-line="8"></span>
+<span id="L9" data-line="9">## Adopted Common Surfaces</span>
+<span id="L10" data-line="10"></span>
+<span id="L11" data-line="11">List the exact shared surfaces from `build_tenants/common/` that this tenant</span>
+<span id="L12" data-line="12">adopts.</span>
+<span id="L13" data-line="13"></span>
+<span id="L14" data-line="14">- Shared design law under `build_tenants/common/design/`</span>
+<span id="L15" data-line="15">- Shared qualification law under `build_tenants/common/qualification/` when it</span>
+<span id="L16" data-line="16">  constrains tenant-local tests or evidence</span>
+<span id="L17" data-line="17"></span>
+<span id="L18" data-line="18">If no common surface is currently adopted, say that explicitly.</span>
+<span id="L19" data-line="19"></span>
+<span id="L20" data-line="20">## Computational And Execution Binding</span>
+<span id="L21" data-line="21"></span>
+<span id="L22" data-line="22">Bind this tenant under the selected method&#x27;s `SPEC_METHOD.md` §11:</span>
+<span id="L23" data-line="23"></span>
+<span id="L24" data-line="24">- governing requirements and their exact basis:</span>
+<span id="L25" data-line="25">- computational calculus: the objects, operations, constraints and result</span>
+<span id="L26" data-line="26">  meanings used to realise those requirements:</span>
+<span id="L27" data-line="27">- concrete execution environment: technology stack, human process or mixed</span>
+<span id="L28" data-line="28">  process, with the capability and resource assumptions it requires:</span>
+<span id="L29" data-line="29">- binding from the calculus to that environment, including authority,</span>
+<span id="L30" data-line="30">  evidence, effects, uncertainty and recovery:</span>
+<span id="L31" data-line="31">- conformance evidence for the requirements and the execution binding:</span>
+<span id="L32" data-line="32">- remaining obligations, unsupported claims and their owners:</span>
+<span id="L33" data-line="33"></span>
+<span id="L34" data-line="34">A shared calculus may have several execution bindings. The actor&#x27;s identity</span>
+<span id="L35" data-line="35">selects neither a calculus nor an operation kind. Record any required</span>
+<span id="L36" data-line="36">independent assessment or human decision without replacing it with a matching</span>
+<span id="L37" data-line="37">output. Adopt a profile only through the existing authority that owns it.</span>
+<span id="L38" data-line="38"></span>
+<span id="L39" data-line="39">## ADRs</span>
+<span id="L40" data-line="40"></span>
+<span id="L41" data-line="41">Tenant-local Architecture Decision Records live under `design/adrs/`.</span>
+<span id="L42" data-line="42"></span>
+<span id="L43" data-line="43">ADRs are the durable design memory layer per `SPEC_METHOD.md` section 10, Design records. Use `design/adrs/ADR-NNN-short-slug.md` as the default filename pattern; namespace-prefixed local IDs are permitted when this tenant&#x27;s design surface already uses them.</span>
+<span id="L44" data-line="44"></span>
+<span id="L45" data-line="45">Cross-tenant decisions belong under `build_tenants/common/design/adrs/`, not here.</span>
+<span id="L46" data-line="46"></span>
+<span id="L47" data-line="47">See `design/adrs/README.md` for the full ADR conventions and `design/adrs/ADR_TEMPLATE.md` for the canonical ADR shape.</span>
+<span id="L48" data-line="48"></span>
+<span id="L49" data-line="49">## F_P Customization</span>
+<span id="L50" data-line="50"></span>
+<span id="L51" data-line="51">Use `design/fp/` to describe tenant-local F_P tuning for bounded constructive turns.</span></pre></html>

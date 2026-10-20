@@ -1,0 +1,100 @@
+# Common STDO proposal representation
+
+Prepared artifact `a_c-stdo-v3-common-35fb4824-packaging-r1` represents source commit
+`35fb4824a064a84df5af214a0d0e2da597c18ac6`, package tree
+`7f2070b61c848b42b4dfb3af1e0ce53869de1aa1`. It is a local release-preparation
+bundle, with no Product version, release tag, publication or acceptance.
+
+Open `index.html` or `records.html` locally. Serve the Graphify view through the
+loopback preview command below to retain its official integrity/CORS settings.
+The Graphify view
+displays 1987 of 1987 records. Its colours
+identify authored record families. Every record remains searchable in
+`records.html`; source links open line-addressed exact frozen source views.
+The browser needs no CDN, model provider or installed Python package.
+Interactive behavior has not been verified. The available browser surface
+blocked an older local I5 view; no server or alternate browser route was used
+to bypass that restriction. Static generation and exact-dependency checks do
+not establish search, selection, filtering or neighbor-navigation behavior.
+
+From this extracted directory, Python3 standard library is sufficient:
+
+```sh
+python3 -B release_tools/bundle_check.py .
+python3 -B codec/ac_graph.py validate model.json
+python3 -B codec/ac_graph.py decode carrier.json --out /tmp/common-model-recovered.json
+python3 -B codec/ac_graph.py decode graph.json --out /tmp/common-upstream-recovered.json
+python3 -B codec/ac_graph.py find carrier.json admission
+python3 -B codec/ac_graph.py inspect carrier.json urn:a-c:generation:0657852b6fd1fa48457c3f7d:record:3bdd99fa9dea377d5c73a4146c7b7e45
+python3 -B codec/ac_graph.py project carrier.json --seed urn:a-c:generation:0657852b6fd1fa48457c3f7d:record:3bdd99fa9dea377d5c73a4146c7b7e45 --out /tmp/common-projection.json
+python3 -B release_tools/source_reentry.py standards/ACTIVATION.md --start 1 --end 30
+python3 -B release_tools/serve_preview.py .
+```
+
+Decode/project output paths must be fresh; choose new filenames for another run.
+The last command prints a loopback-only HTTP URL; stop it with Ctrl-C.
+`model.json`, `carrier.json` and actual upstream `graph.json` retain separate raw
+file identities and exact model recovery. `records-graph.json` and the HTML are
+display projections, with exact displayed/omitted/parallel-reference scope in
+`view-scope.json`. They do not replace the complete reversible carrier or prove
+governing closure. `coverage.json` retains the F_P processing dispositions and
+unqualified semantic/cross-chunk boundaries. Search, inspection and acquisition
+report only the declared codec fragment.
+
+`source/` preserves all81 package members. `source-manifest.json` identifies the
+58 semantic inputs, while `source-classification.json` separately accounts for
+13 derived frame members and10 host/legal/release metadata members. Inclusion
+does not turn templates or optional profiles into a consumer constitution.
+`SOURCE-READINESS.md` is a labelled captured-workspace documentation projection.
+It retains the original workspace record's hash, exact source-freeze facts and
+open unaccepted/unpublished `not_ready`, owner, independent-review and actual-use
+gates. Its original helper commands and external private proof/ticket routes
+are explicitly workspace-only. Use the included bundle checker and typed bound
+public receipts from this archive; no private workspace proof or ticket is copied.
+The source candidate is the represented subject, not a newly adopted builder.
+The codec's selected builder remains exact STDO v2.5.1-rc.2; selected raw basis
+sources under `release_tools/builder_basis/` are a documented subset, not an
+Install or a complete STDO distribution.
+
+`evidence/` contains explicitly supplied public authoring/review receipts only.
+Both receipt types bind the exact source commitments, canonical model and raw
+model/carrier/export/coverage/result bytes. A readable Markdown/text review is
+copied only through its typed JSON receipt's explicit path/hash binding. See
+`release_tools/PUBLIC-RECEIPTS.md`. Receipt matching does not prove its issuer,
+its reported independence or the truth/sufficiency of its bounded assessment.
+Private native invocation bodies, event streams, settings files and any hidden
+reasoning are excluded. Opaque hashes and curated reported usage do not give a
+recipient complete private acquisition custody. They are retained locally by
+the construction record and remain a stated verification boundary.
+
+`inventory.json` accounts for every bundle file except itself and `SHA256SUMS`.
+`SHA256SUMS` also binds the inventory and omits only its own bytes. The archive's
+external `.sha256` file binds the complete deterministic tar.gz. Repackaging
+identical bytes uses sorted members, fixed modes/owners/timestamps and gzip
+mtime0. `package_release.py` and `release_tools/` preserve the packaging recipe,
+exact exporter source, offline asset and third-party licensing custody. Building
+requires the existing pinned Graphify checkout and networkx3.4.2 environment;
+viewing, codec use and bundle verification require no Graphify installation.
+
+To rebuild from this extracted directory, use that Python/networkx environment
+and an existing checkout at Graphify commit `fe085cedddde3a18554f8749b230bfe47f3dcce7`.
+All remaining inputs are included here; no originating-workspace source-readiness
+file or private run is needed. Choose fresh outputs outside this input bundle:
+
+```sh
+python3 -B package_release.py build \
+  --proposal . --public-evidence evidence/authoring-public.json \
+  --review evidence/reviews/review-001/receipt.json \
+  --upstream /absolute/path/to/the/pinned/graphify/checkout \
+  --bundle /tmp/a_c-common-packaging-r1-rebuilt \
+  --dist /tmp/a_c-common-packaging-r1-rebuilt-dist
+```
+
+Third-party licenses retain their own scope: frozen common source licenses,
+Graphify Apache2.0/MIT and notices, vis-network Apache2.0/MIT, and the selected
+builder source license are preserved unchanged. No applicable license for the
+a_c-owned codec, authored interpretation and new packaging has been selected
+here. Distribution terms and license metadata remain an owner choice; absence
+of a root license is not asserted as an automatic publication gate. This
+bundle does not apply a third-party license to those materials. Owner release
+disposition and any required semantic acceptance remain separate decisions.

@@ -1,0 +1,638 @@
+{
+  "actual_source_semantics": "not re-reviewed; exact source/record transport checks only",
+  "archive_sha256": "2b33530c20a17dd27033e8b34b1af497de7a4e0f3b8165a22d0821298516e386",
+  "canonical_model": {
+    "id": "urn:a-c:generation:0657852b6fd1fa48457c3f7d:model:2e6f0d59737b5bca00691b60",
+    "sha256": "691c4ab0d0993312a31e7e2371070ea4758fdf74b32862ff4d5a32d05af79fbf"
+  },
+  "controls": [
+    {
+      "expected": null,
+      "name": "exact-five-artifact-seal",
+      "observed": "9690964649fa2d6a0deb7a4278cf698a874995940d6b094d18968d07094b86e9",
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "semantic-review-closure-coordinate",
+      "observed": "1b81f8599de3ec38e7fe8748d1c6a3022d24664d15ccb3c2756ea5360d120145",
+      "passed": true
+    },
+    {
+      "expected": {
+        "files": 4296,
+        "mismatches": []
+      },
+      "name": "all-original-preexisting-custody-guards",
+      "observed": {
+        "mismatches": []
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "archive-safe-canonical-regular-unique-sorted-members",
+      "observed": {
+        "members": 213
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "archive-fixed-metadata",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "extracted-exactly-matches-frozen-bundle",
+      "observed": {
+        "files": 213
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "external-archive-checksum",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": 0,
+      "name": "public-cli:bundle-check",
+      "observed": {
+        "returncode": 0,
+        "stderr": ""
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "portable-check-exact-model-and-extent",
+      "observed": {
+        "claim": "Exact bundle custody, bounded structural checks and carrier recovery; no semantic acceptance, source-method release, or public-distribution authorization.",
+        "displayed_records": 1987,
+        "inventory_files": 211,
+        "model": {
+          "id": "urn:a-c:generation:0657852b6fd1fa48457c3f7d:model:2e6f0d59737b5bca00691b60",
+          "sha256": "691c4ab0d0993312a31e7e2371070ea4758fdf74b32862ff4d5a32d05af79fbf"
+        },
+        "omitted_records": 0,
+        "physical_grounding_occurrences": 2491,
+        "public_evidence": {
+          "bounded_review_receipts": 1,
+          "claim": "Types, exact source/model/artifact bindings and readable-report custody checked; receipt truth, issuer legitimacy, independence and semantic fitness remain external.",
+          "construction_receipt": "urn:a-c:common:35fb4824:public-construction-account:1"
+        },
+        "records": 1987,
+        "source": {
+          "bytes": 3298515,
+          "files": 81,
+          "semantic_files": 58
+        },
+        "status": "passed",
+        "subject": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6"
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "exact-codec-copied",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "canonical-model-sealed",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "sealed-raw-artifact:carrier.json",
+      "observed": {
+        "bytes": 42338082,
+        "sha256": "d07ab14f975e59184a39f21700e5913617c1dca93ccd94c37681bc1743a438c8"
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "sealed-raw-artifact:coverage.json",
+      "observed": {
+        "bytes": 491406,
+        "sha256": "7e6a3c1f37b7ee6884553930757d7adbd2aa707c82e6a4c6b96b2435e6aaad44"
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "sealed-raw-artifact:graph.json",
+      "observed": {
+        "bytes": 37021891,
+        "sha256": "d36fdb4df570c93506935d318197cbefd57f089fa258adb5ee04fbf9441b8ce1"
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "sealed-raw-artifact:model.json",
+      "observed": {
+        "bytes": 7399706,
+        "sha256": "70feb48cf657bcb20231dbfffe0c2076e5e69b24aeb0f226a001a22957b7f56a"
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "sealed-raw-artifact:result.json",
+      "observed": {
+        "bytes": 1237,
+        "sha256": "679d7c2b3ec990c9f2e132ea38d9f17c4cf815b4c70e450544f775b6b2c1ff17"
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "all-eightyone-source-members-sealed-and-git-blob-exact",
+      "observed": {
+        "bytes": 3298515,
+        "files": 81,
+        "mismatches": []
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "explicit-source-scope-58-13-10",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "source-manifest-exact:source-manifest.json",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "source-manifest-exact:source-classification.json",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "source-manifest-exact:package-custody.json",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "actual-public-construction-receipt-pin",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "actual-public-bounded-review-receipt-pin",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "four-readable-review-reports-unchanged",
+      "observed": {
+        "mismatches": [],
+        "reports": 4
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "all-eighthundredfortyfive-source-sections-exact",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "all-eighthundredfortyfive-section-dispositions-present",
+      "observed": {
+        "omitted": 24,
+        "residual": 162,
+        "retained": 659
+      },
+      "passed": true
+    },
+    {
+      "expected": {
+        "bad": [],
+        "physical": 2491
+      },
+      "name": "every-grounding-occurrence-replays-exact-source",
+      "observed": {
+        "authored_entries_without_mirrored_encoding": 2341,
+        "bad": [],
+        "mirror_encoded_latitude": 150,
+        "physical": 2491
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "eight-populations-and-declared-inert-fragment",
+      "observed": {
+        "constraints": 841,
+        "judgments": 0,
+        "latitude": 131,
+        "objects": 664,
+        "relations": 186,
+        "residuals": 165,
+        "transformations": 0,
+        "traversals": 0
+      },
+      "passed": true
+    },
+    {
+      "expected": 0,
+      "name": "public-cli:validate",
+      "observed": {
+        "returncode": 0,
+        "stderr": ""
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "cli-fragment-claims-bounded",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": 0,
+      "name": "public-cli:decode-carrier.json",
+      "observed": {
+        "returncode": 0,
+        "stderr": ""
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "public-decode-document-equality:carrier.json",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": 0,
+      "name": "public-cli:decode-graph.json",
+      "observed": {
+        "returncode": 0,
+        "stderr": ""
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "public-decode-document-equality:graph.json",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": 0,
+      "name": "public-cli:find",
+      "observed": {
+        "returncode": 0,
+        "stderr": ""
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "public-find-actual-literal-matches",
+      "observed": {
+        "matches": 210,
+        "scope": "literal case-insensitive record content; no inference or ranking"
+      },
+      "passed": true
+    },
+    {
+      "expected": 0,
+      "name": "public-cli:inspect",
+      "observed": {
+        "returncode": 0,
+        "stderr": ""
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "public-inspect-exact-record",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": 0,
+      "name": "public-cli:project",
+      "observed": {
+        "returncode": 0,
+        "stderr": ""
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "public-projection-parent-selection-and-boundaries",
+      "observed": {
+        "boundary_keys": [
+          "crossing_relations",
+          "external",
+          "invalidation",
+          "non_governing_references",
+          "unresolved_residuals"
+        ],
+        "excluded": 1985,
+        "included": 2
+      },
+      "passed": true
+    },
+    {
+      "expected": 0,
+      "name": "public-cli:source-reentry",
+      "observed": {
+        "returncode": 0,
+        "stderr": ""
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "source-reentry-public-cli-exact-lines",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "full-record-browser-data-equals-core-records",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "readable-graph-exact-local-reference-occurrences",
+      "observed": {
+        "external_occurrences_omitted": 14273,
+        "local_occurrences": 2225,
+        "pairs": 2218
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "display-exact-allrecords-partition-and-declared-omissions",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "readable-graph-exact-record-node-identities",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "embedded-record-json-exact",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "record-browser-static-anchors",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "actual-graphify-embedded-node-and-edge-populations",
+      "observed": {
+        "edges": 2218,
+        "nodes": 1987
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "actual-display-banner-and-parent-limits",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "all-runtime-script-assets-local-and-SRI-exact",
+      "observed": {
+        "scripts": [
+          "release_tools/vendor/vis-network-9.1.6.min.js"
+        ],
+        "sri": "sha384-Ux6phic9PEHJ38YtrijhkzyJ8yQlH8i/+buBR8s3mAZOJrP1gwyvAcIYl3GWtpX1"
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "all-eightyone-line-addressed-sourceviews-exact",
+      "observed": {
+        "mismatches": [],
+        "pages": 81
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "package-and-public-review-local-documentation-links",
+      "observed": [
+        {
+          "exists": true,
+          "from": "SOURCE-READINESS.md",
+          "in_bundle": true,
+          "target": "RELEASE.json"
+        },
+        {
+          "exists": true,
+          "from": "SOURCE-READINESS.md",
+          "in_bundle": true,
+          "target": "release_tools/PUBLIC-RECEIPTS.md"
+        },
+        {
+          "exists": true,
+          "from": "SOURCE-READINESS.md",
+          "in_bundle": true,
+          "target": "source/"
+        },
+        {
+          "exists": true,
+          "from": "SOURCE-READINESS.md",
+          "in_bundle": true,
+          "target": "package-custody.json"
+        },
+        {
+          "exists": true,
+          "from": "SOURCE-READINESS.md",
+          "in_bundle": true,
+          "target": "source-classification.json"
+        },
+        {
+          "exists": true,
+          "from": "SOURCE-READINESS.md",
+          "in_bundle": true,
+          "target": "source-manifest.json"
+        },
+        {
+          "exists": true,
+          "from": "evidence/reviews/review-001/REVIEW.md",
+          "in_bundle": true,
+          "target": "CASES.md"
+        },
+        {
+          "exists": true,
+          "from": "evidence/reviews/review-001/REVIEW.md",
+          "in_bundle": true,
+          "target": "ACQUISITION.md"
+        },
+        {
+          "exists": true,
+          "from": "evidence/reviews/review-001/REVIEW.md",
+          "in_bundle": true,
+          "target": "INTERVENTIONS.md"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "existing-node-available-for-static-syntax",
+      "observed": "/opt/homebrew/bin/node",
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "all-actual-inline-javascript-syntax",
+      "observed": [
+        {
+          "returncode": 0,
+          "script": "graph.html-inline-1.js",
+          "stderr": ""
+        },
+        {
+          "returncode": 0,
+          "script": "graph.html-inline-2.js",
+          "stderr": ""
+        },
+        {
+          "returncode": 0,
+          "script": "graph.html-inline-3.js",
+          "stderr": ""
+        },
+        {
+          "returncode": 0,
+          "script": "records.html-inline-1.js",
+          "stderr": ""
+        }
+      ],
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "release-standing-and-basis-honest",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "exact-explicit-public-evidence-file-set",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "no-private-native-event-config-file-inclusion",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "all-applicable-bundled-thirdparty-basis-license-and-custody-files-exact",
+      "observed": [
+        {
+          "matched": true,
+          "path": "release_tools/vendor/vis-network-9.1.6.min.js"
+        },
+        {
+          "matched": true,
+          "path": "release_tools/vendor/vis-network-9.1.6-package.json"
+        },
+        {
+          "matched": true,
+          "path": "release_tools/vendor/vis-network-9.1.6-LICENSE-APACHE-2.0"
+        },
+        {
+          "matched": true,
+          "path": "release_tools/vendor/vis-network-9.1.6-LICENSE-MIT"
+        },
+        {
+          "matched": true,
+          "path": "release_tools/upstream/LICENSE"
+        },
+        {
+          "matched": true,
+          "path": "release_tools/upstream/LICENSE-MIT"
+        },
+        {
+          "matched": true,
+          "path": "release_tools/upstream/NOTICE"
+        },
+        {
+          "matched": true,
+          "path": "release_tools/upstream/graphify/export.py"
+        },
+        {
+          "matched": true,
+          "path": "release_tools/upstream/graphify/exporters/html.py"
+        },
+        {
+          "matched": true,
+          "path": "release_tools/upstream/graphify/exporters/base.py"
+        },
+        {
+          "matched": true,
+          "path": "release_tools/builder_basis/LICENSE"
+        },
+        {
+          "matched": true,
+          "path": "release_tools/builder_basis/manifest.json"
+        },
+        {
+          "matched": true,
+          "path": "release_tools/builder_basis/standards/authority_compressions/stdo_bootstrap.md"
+        },
+        {
+          "matched": true,
+          "path": "release_tools/builder_basis/standards/AXIOMATIC_CALCULUS.md"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "independent-deterministic-repack-identical",
+      "observed": {
+        "bytes": 10087425,
+        "sha256": "2b33530c20a17dd27033e8b34b1af497de7a4e0f3b8165a22d0821298516e386"
+      },
+      "passed": true
+    }
+  ],
+  "controls_passed": 60,
+  "extracted": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-common-package-review-wxp9n7x5/extracted/a_c-stdo-v3-common-35fb4824",
+  "interactive_behavior": "unverified; no browser/server effects",
+  "scratch": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-common-package-review-wxp9n7x5",
+  "status": "passed"
+}

@@ -1,12 +1,15 @@
 # Deterministic Support Tools for F_P Actors
 
 **Family**: REQ-AC-FD-*
-**Status**: Deferred
+**Status**: Active
 **Category**: Capability
 
 This family specifies additional tools supporting F_P Executives, Workers and
-Reviewers. Deferred means owning design and realization are pending; the Product
-outcome is retained. STDO3.0 owns the methodology and its contracts. The
+Reviewers. Active records T-008's operative HOW and provisional implementation,
+with bounded implementation/review/technical integration complete; it asserts
+neither requirement satisfaction nor complete qualification. Earlier Deferred
+wording describes T-007's specification-only cut. Current evidence and gaps are
+in the [handoff](../../.ai-workspace/qualification/t008/handoff-001/README.md). STDO3.0 owns the methodology and its contracts. The
 [source-owner map](fd-source-owner-map.md) binds the exact provisional derivation
 reference and the owner clauses cited below. Runtime use consumes the caller's
 exact selected method/profile through a declared supported binding, without

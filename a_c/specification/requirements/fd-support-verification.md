@@ -1,12 +1,17 @@
 # Deterministic Support Tool Qualification
 
 **Family**: REQ-AC-FDV-*
-**Status**: Deferred
+**Status**: Active
 **Category**: Verification
 
 This family qualifies the [additional tools](fd-support-tools.md), not the
-STDO3.0 methodology or F_P actor judgments. Design, implementation and executed
-qualification remain pending. Owners are the exact provisional clauses in the
+STDO3.0 methodology or F_P actor judgments. Active records begun, partial
+qualification under T-008, not a Passed/Implemented or satisfaction claim.
+FDV-001/002 retain actual actor, operation/variant and host-boundary gaps;
+FDV-003 accepted-result benefit remains Deferred/unqualified. Earlier pending
+wording describes T-007's specification-only cut. The
+[handoff](../../.ai-workspace/qualification/t008/handoff-001/README.md) retains
+current technical evidence and failed/partial live trials. Owners are the exact provisional clauses in the
 [source-owner map](fd-source-owner-map.md), consumed through the caller-selected
 operative method rather than adopted as a new a_c builder basis.
 

@@ -129,7 +129,7 @@ def execute(runtime: core.Runtime, request: JSON) -> Object:
         if operation == "contract.preflight":
             outcome = effects.execute_effect(runtime, bound, core.build_preflight(runtime, bound))
         elif operation == "work.write":
-            outcome = effects.execute_effect(runtime, bound, core.prepare_write(runtime, bound))
+            outcome = effects.execute_effect(runtime, bound, None)
         elif operation in core.EFFECT_OPERATIONS:
             outcome = effects.execute_effect(runtime, bound, None)
         else:

@@ -577,15 +577,56 @@ def _check_plan(runtime: c.Runtime, request: c.Object, plan: c.EffectPlan) -> No
         raise c.SupportError("contract_violation", "Prepared effect does not bind this exact request/policy/principal", [], [])
 
 
+def _owner_binding(runtime: c.Runtime, request: c.Object, envelope: c.Object,
+                   schema: str) -> None:
+    payload = c.as_object(envelope["payload"])
+    provenance = c.as_object(envelope["provenance"])
+    c.make_artifact(c.text(envelope["kind"]), payload, provenance)
+    if payload.get("schema") != schema:
+        raise c.SupportError("history_incomplete", "Committed owner has an unexpected carrier", [], [])
+    saved = c.validate_request(payload["request"])
+    if provenance["request_id"] != saved["id"] or provenance["request_sha256"] != c.digest(saved):
+        raise c.SupportError("history_incomplete", "Committed owner request/provenance is incoherent", [], [])
+    if schema == "a_c.fd-support.request-claim/1" and payload["policy_sha256"] != provenance["policy_sha256"]:
+        raise c.SupportError("history_incomplete", "Committed claim policy/provenance is incoherent", [], [])
+    product = c.as_object(runtime.policy["product"])
+    expected: c.Object = {"product_id": product["definition_id"], "definition_sha256": c.as_object(product["definition"])["sha256"], "requester_principal": runtime.principal_id, "policy_sha256": runtime.policy_sha256, "method_profile_sha256": c.PROFILE_SHA256, "actor": runtime.principal}
+    if saved != request or any(provenance[name] != value for name, value in expected.items()):
+        raise c.SupportError("request_identity_conflict", "Committed owner binds different effective request/Product/principal/policy", [request["id"]], [])
+
+
+def _identity_history(runtime: c.Runtime, store: EvidenceStore, request: c.Object,
+                      schemas: tuple[str, ...]) -> c.Object:
+    refs: list[c.JSON] = []; gaps: list[c.JSON] = []
+    for schema in schemas:
+        kind = "attempt" if schema == "a_c.fd-support.attempt/1" else "raw"
+        query = store.query_artifacts(kind, {"provenance.product_id": _product(runtime),
+            "provenance.requester_principal": runtime.principal_id,
+            "payload.request.id": request["id"], "payload.schema": schema})
+        refs.extend(c.as_list(query["refs"]))
+        if query["complete"] is not True:
+            gaps.append(query)
+    return {"refs": refs, "complete": not gaps, "gaps": gaps,
+            "scope": {"product_id": _product(runtime), "principal": runtime.principal_id, "request_id": request["id"]}}
+
+
 def _claim(runtime: c.Runtime, store: EvidenceStore, request: c.Object) -> str:
     key = _key(runtime, request)
     path = store.root / "requests" / (key + ".claim.json")
-    old = _marker(store, path)
-    if old is not None:
-        payload = c.as_object(old["payload"])
-        if payload.get("request") != request or payload.get("policy_sha256") != runtime.policy_sha256:
-            raise c.SupportError("request_identity_conflict", "Same caller request identity has different effective inputs", [request["id"]], [])
+    owners: dict[str, c.Object] = {}
+    schemas = {"claim": "a_c.fd-support.request-claim/1", "outcome": "a_c.fd-support.effect-outcome/1", "intent": "a_c.fd-support.writer-intent/1", "attempt": "a_c.fd-support.attempt/1"}
+    for suffix, schema in schemas.items():
+        old = _marker(store, store.root / "requests" / (key + "." + suffix + ".json"))
+        if old is not None:
+            _owner_binding(runtime, request, old, schema)
+            owners[suffix] = old
+    if "claim" in owners:
         return key
+    if owners:
+        raise c.SupportError("history_incomplete", "Required request claim owner is absent; no reconstruction or new reservation", [request["id"]], [])
+    history = _identity_history(runtime, store, request, tuple(schemas.values()))
+    if history["complete"] is not True or c.as_list(history["refs"]):
+        raise c.SupportError("history_incomplete", "Stable request identity has unresolved owner/history absence", [history], [])
     selected_policy, selected_policy_ref = _selected_policy(runtime, request)
     store.retain(selected_policy)
     envelope, _ = _artifact(runtime, request, "raw", {"schema": "a_c.fd-support.request-claim/1", "request": request, "policy_sha256": runtime.policy_sha256, "selected_policy": selected_policy_ref})
@@ -593,9 +634,26 @@ def _claim(runtime: c.Runtime, store: EvidenceStore, request: c.Object) -> str:
     return key
 
 
-def _completed(store: EvidenceStore, key: str) -> c.CoreOutcome | None:
+def _completed(runtime: c.Runtime, store: EvidenceStore, request: c.Object, key: str) -> c.CoreOutcome | None:
     old = _marker(store, store.root / "requests" / (key + ".outcome.json"))
-    return None if old is None else c.as_object(c.as_object(old["payload"])["outcome"], "retained CoreOutcome")
+    if old is None:
+        return None
+    _owner_binding(runtime, request, old, "a_c.fd-support.effect-outcome/1")
+    return c.as_object(c.as_object(old["payload"])["outcome"], "retained CoreOutcome")
+
+
+def _verify_support_graph(store: EvidenceStore, references: list[c.Object]) -> None:
+    """Verify historical typed support without treating quoted data as edges."""
+    pending = list(references)
+    verified: set[str] = set()
+    while pending:
+        reference = pending.pop()
+        identity = c.text(reference["id"])
+        if identity in verified:
+            continue
+        envelope = c.as_object(c.parse_json(store.resolve(reference)))
+        verified.add(identity)
+        pending.extend(_references(envelope))
 
 
 def _complete(runtime: c.Runtime, store: EvidenceStore, request: c.Object, key: str, outcome: c.CoreOutcome) -> c.CoreOutcome:
@@ -643,6 +701,43 @@ def _target_state(path: Path) -> c.Object:
         raise
 
 
+def _write_recovery(runtime: c.Runtime, store: EvidenceStore, request: c.Object,
+                    old: c.Object, path: Path, target: c.Object) -> c.CoreOutcome:
+    """Observe an earlier intent under the request/Product/target locks."""
+    old_payload = c.as_object(old["payload"])
+    saved = c.as_object(old_payload["plan"])
+    if old_payload["request"] != request or saved["target"] != target or saved["requester"] != runtime.principal_id:
+        raise c.SupportError("request_identity_conflict", "Writer intent does not bind the exact request/principal", [], [])
+    state = _target_state(path)
+    intended = saved["intended_sha256"]
+    observation: c.Object = {"schema": "a_c.fd-support.writer-recovery/1", "intent": {"id": "sha256:" + c.digest(old), "sha256": c.digest(old)}, "target": target, "current": state, "matches_intended_postimage": state["sha256"] == intended, "effect": {"value": "completion_unknown", "end_established": False, "residual": "Original publication/result acknowledgment is not established; observed present bytes do not replay the operation."}, "repeated": False}
+    envelope, ref = _artifact(runtime, request, "raw", observation)
+    store.retain(envelope)
+    outcome = c.refusal_outcome(runtime, request, c.SupportError("effect_unreconciled", "Earlier Writer intent requires reconciliation before any repeated effect", [observation], []))
+    outcome["result"] = {"artifact": ref, "value": observation}
+    outcome["artifacts"] = [envelope]
+    return outcome
+
+
+def _recover_write(runtime: c.Runtime, store: EvidenceStore, request: c.Object,
+                   key: str) -> c.CoreOutcome | None:
+    old = _marker(store, store.root / "requests" / (key + ".intent.json"))
+    if old is None:
+        history = _identity_history(runtime, store, request, ("a_c.fd-support.writer-intent/1", "a_c.fd-support.effect-outcome/1"))
+        if history["complete"] is not True or c.as_list(history["refs"]):
+            raise c.SupportError("history_incomplete", "Cannot establish absence of an earlier Writer intent/owner", [history], [])
+        return None
+    _owner_binding(runtime, request, old, "a_c.fd-support.writer-intent/1")
+    _verify_support_graph(store, _references(old))
+    saved = c.as_object(c.as_object(old["payload"])["plan"])
+    target = c.as_object(c.as_object(request["arguments"])["target"])
+    path = c.source_path(runtime, target, write=True, allow_absent=True)
+    if saved["path"] != str(path):
+        raise c.SupportError("path_refused", "Retained Writer intent path differs from its target", [], [])
+    with store._lock("scope:" + _product(runtime)), store._lock("target:" + str(path), nonblocking=True):
+        return _write_recovery(runtime, store, request, old, path, target)
+
+
 def _write(runtime: c.Runtime, store: EvidenceStore, request: c.Object, plan: c.EffectPlan, key: str) -> c.CoreOutcome:
     payload = c.as_object(plan["payload"], "Writer plan")
     path = Path(c.text(payload["path"], "Writer target path"))
@@ -655,18 +750,7 @@ def _write(runtime: c.Runtime, store: EvidenceStore, request: c.Object, plan: c.
     with store._lock("scope:" + _product(runtime)), store._lock("target:" + str(path), nonblocking=True):
         old = _marker(store, intent_path)
         if old is not None:
-            # This may follow a lost post-replace acknowledgment. Never append
-            # again or claim the original effect absent from missing evidence.
-            state = _target_state(path)
-            old_payload = c.as_object(old["payload"])
-            intended = c.as_object(old_payload["plan"])["intended_sha256"]
-            observation: c.Object = {"schema": "a_c.fd-support.writer-recovery/1", "intent": {"id": "sha256:" + c.digest(old), "sha256": c.digest(old)}, "target": target, "current": state, "matches_intended_postimage": state["sha256"] == intended, "effect": {"value": "completion_unknown", "end_established": False, "residual": "Original publication/result acknowledgment is not established; observed present bytes do not replay the operation."}, "repeated": False}
-            envelope, ref = _artifact(runtime, request, "raw", observation)
-            store.retain(envelope)
-            outcome = c.refusal_outcome(runtime, request, c.SupportError("effect_unreconciled", "Earlier Writer intent requires reconciliation before any repeated effect", [observation], []))
-            outcome["result"] = {"artifact": ref, "value": observation}
-            outcome["artifacts"] = [envelope]
-            return outcome
+            return _write_recovery(runtime, store, request, old, path, target)
         _fresh(runtime, store, request, c.as_object(plan["recheck"]))
         before = _target_state(path)
         expected = target["sha256"]
@@ -930,6 +1014,30 @@ def _reconcile(runtime: c.Runtime, predecessor: c.Object, evidence: c.Object, gr
     return c.verify_reconciliation(runtime, evidence, predecessor, grant, basis)
 
 
+def _activation_attempts(runtime: c.Runtime, store: EvidenceStore, packet: c.Object) -> list[c.JSON]:
+    # Context envelopes include acquisition/provenance observations. Reassembly
+    # can change their artifact identity without changing the activated Packet.
+    # Derive the source-owned identity through retained Contexts, including old
+    # anchors; an absent optional index must never look like absent history.
+    history = store.query_artifacts("attempt", {})
+    if history["complete"] is not True:
+        raise c.SupportError("history_incomplete", "Cannot establish activation attempt population", c.as_list(history["gaps"]), [])
+    identity = c.activation_identity(packet)
+    previous: list[c.JSON] = []
+    for value in c.as_list(history["refs"]):
+        ref = _ref(value)
+        try:
+            _, anchor = _attempt(runtime, ref)
+            context = c.as_object(c.load_artifact(runtime, _ref(anchor.get("context")), "context")["payload"])
+            retained = c.as_object(context.get("packet"), "retained Attempt Packet")
+            c.text(c.as_object(retained.get("activation"), "retained activation").get("id"), "retained activation id")
+            if c.activation_identity(retained) == identity:
+                previous.append(ref)
+        except c.SupportError as error:
+            raise c.SupportError("history_incomplete", "Retained Attempt activation identity is unavailable", [ref, error.document()], []) from error
+    return previous
+
+
 def _dispatch(runtime: c.Runtime, store: EvidenceStore, request: c.Object, key: str) -> c.CoreOutcome:
     args = c.as_object(request["arguments"])
     receipt_ref = _ref(args["preflight"])
@@ -965,12 +1073,9 @@ def _dispatch(runtime: c.Runtime, store: EvidenceStore, request: c.Object, key: 
         raise c.SupportError("digest_mismatch", "Retained Context rendering changed", [], [])
     activation = c.as_object(packet["activation"])
     with store._lock("activation:" + c.text(activation["id"])):
-        prior = store.query_artifacts("attempt", {"payload.context.id": context_ref["id"]})
-        previous = c.as_list(prior["refs"])
+        previous = _activation_attempts(runtime, store, packet)
         retry = args.get("retry_of")
         reconciliation = args.get("reconciliation")
-        if prior["complete"] is not True:
-            raise c.SupportError("history_incomplete", "Cannot establish activation attempt population", c.as_list(prior["gaps"]), [])
         if previous and retry is None:
             raise c.SupportError("effect_unreconciled", "A new attempt of this activation requires its predecessor and reconciliation", previous, [])
         if retry is not None:
@@ -1008,14 +1113,14 @@ def _dispatch(runtime: c.Runtime, store: EvidenceStore, request: c.Object, key: 
 
 
 def execute_effect(runtime: c.Runtime, request: c.Object, plan: c.EffectPlan | None) -> c.CoreOutcome:
-    """The only public-request effect entry, consuming a core-created plan."""
+    """Public effect boundary; Writer plans follow locked authority/history."""
     request = c.validate_request(request)
     operation = c.text(request["operation"])
     c.require_operation(runtime, operation)
     _policy_current(runtime)
     if operation not in ("contract.preflight", "dispatch.start", "dispatch.observe", "dispatch.cancel", "events.wait", "work.write"):
         raise c.SupportError("unsupported_contract", "Operation is not a named effect entry", [operation], [])
-    if operation in ("contract.preflight", "work.write"):
+    if operation == "contract.preflight":
         if plan is None:
             raise c.SupportError("basis_missing", "Named effect requires its core-prepared plan", [], [])
         _check_plan(runtime, request, plan)
@@ -1023,15 +1128,32 @@ def execute_effect(runtime: c.Runtime, request: c.Object, plan: c.EffectPlan | N
         raise c.SupportError("contract_violation", "This named effect accepts no plan", [], [])
     runtime, store = _bound(runtime)
     with store._lock("request:" + _key(runtime, request)):
+        if operation == "work.write":
+            c.check_writer_authority(runtime, request)
         key = _claim(runtime, store, request)
-        previous = _completed(store, key)
+        if operation == "work.write":
+            claim = _marker(store, store.root / "requests" / (key + ".claim.json"))
+            if claim is None:
+                raise c.SupportError("history_incomplete", "Writer claim is unavailable after reservation", [], [])
+            _verify_support_graph(store, _references(claim))
+        previous = _completed(runtime, store, request, key)
         if previous is not None:
+            if operation == "work.write":
+                _verify_support_graph(store, _outcome_support(operation, previous))
             return previous
         try:
             if operation == "contract.preflight":
                 outcome = _preflight(runtime, store, request, cast(c.EffectPlan, plan))
             elif operation == "work.write":
-                outcome = _write(runtime, store, request, cast(c.EffectPlan, plan), key)
+                recovered = _recover_write(runtime, store, request, key)
+                if recovered is None:
+                    # Planning can acquire sources/history. It runs inside the
+                    # identity lock, before any Product/target/publication lock.
+                    prepared = c.prepare_write(runtime, request)
+                    _check_plan(runtime, request, prepared)
+                    outcome = _write(runtime, store, request, prepared, key)
+                else:
+                    outcome = recovered
             elif operation == "dispatch.start":
                 outcome = _dispatch(runtime, store, request, key)
             elif operation == "dispatch.observe":
@@ -1150,7 +1272,7 @@ def _run_process(runtime: c.Runtime, store: EvidenceStore, request: c.Object, re
             if (timed_out or cancelled) and not signaled and process.poll() is None:
                 _event(runtime, store, request, ref, "deadline" if timed_out else "cancel_observed", {"signal": "SIGTERM-request", "end_established": False, "partial_output": True})
                 process.terminate()
-                sent_at = now
+                sent_at = time.time_ns()
                 signaled = True
                 _event(runtime, store, request, ref, "signal_delivery", {"signal": "SIGTERM", "scope": "Popen local process", "end_established": False})
             if sent_at is not None and grace is not None and now - sent_at >= grace * 1_000_000 and process.poll() is None:
@@ -1187,10 +1309,12 @@ def _run_process(runtime: c.Runtime, store: EvidenceStore, request: c.Object, re
                     if remaining < len(chunk):
                         truncated[name] = True
                     _event(runtime, store, request, ref, "output_chunk", {"stream": name, "bytes_base64": base64.b64encode(chunk[:remaining]).decode("ascii"), "observed_bytes": len(chunk), "retained_bytes": min(remaining, len(chunk)), "complete_slot": False})
-            if process.poll() is not None and selector.get_map() and sent_at is None:
+            if process.poll() is not None and selector.get_map():
                 # Descendants may hold pipes open. Never wait indefinitely for
                 # their EOF or infer their end from the observed parent's exit.
-                if not selector.select(0):
+                # A prior signal cannot disable this path; selected timeout or
+                # cancellation also bounds an always-readable descendant tail.
+                if timed_out or cancelled or not selector.select(0):
                     for selected in list(selector.get_map().values()):
                         selector.unregister(selected.fileobj)
                     _event(runtime, store, request, ref, "pipe_tail_unknown", {"descendant_end": "unknown", "output_tail": "unobserved after parent process end"})

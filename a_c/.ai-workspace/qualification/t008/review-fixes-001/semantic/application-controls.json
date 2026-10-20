@@ -1,0 +1,49 @@
+{
+  "profile": "a_c.application.semantic-correction-controls/1",
+  "controls": [
+    {
+      "case": "changed parent identity",
+      "status": "refused",
+      "reason": "parent canonical identity changed"
+    },
+    {
+      "case": "different record",
+      "status": "refused",
+      "reason": "patch exceeds exact target"
+    },
+    {
+      "case": "different semantic field",
+      "status": "refused",
+      "reason": "patch exceeds exact target"
+    },
+    {
+      "case": "second operation",
+      "status": "refused",
+      "reason": "one operation required"
+    },
+    {
+      "case": "stale target preimage",
+      "status": "refused",
+      "reason": "target preimage changed"
+    },
+    {
+      "case": "exact parent plus explicit authorized patch",
+      "status": "applied",
+      "semantic_delta_paths": [
+        "/populations/constraints/16/predicate/exceptions/0"
+      ]
+    }
+  ],
+  "exact_delta_paths": [
+    "/id",
+    "/interpretation/contract/id",
+    "/interpretation/contract/sha256",
+    "/interpretation/interpreter/id",
+    "/interpretation/interpreter/sha256",
+    "/interpretation/provenance",
+    "/populations/constraints/16/predicate/exceptions/0"
+  ],
+  "unchanged_records": 1979,
+  "frozen_files_unchanged": 65,
+  "source_judgment_scope": "Controls establish deterministic custody/scope only. The source-based replacement remains F_P authoring for separate independent assessment."
+}

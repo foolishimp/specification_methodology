@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md</title><style>body{font:14px system-ui;margin:24px;background:#101720;color:#dfeaf4}a{color:#87c7ff}pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5;counter-reset:line}span{display:block}span:before{content:attr(data-line);display:inline-block;width:4em;color:#7392aa;user-select:none}span:target{background:#36481d}</style><h1>standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md</h1><p>Exact frozen source · SHA256 467c02cebf87d393ee7239cc1c80d66eda9485bb251097ef8e87dc7368e19089</p><pre><span id="L1" data-line="1"># ADR-&lt;local-id&gt; &lt;Short Decision Title&gt;</span>
+<span id="L2" data-line="2"></span>
+<span id="L3" data-line="3">| Field | Value |</span>
+<span id="L4" data-line="4">|-------|-------|</span>
+<span id="L5" data-line="5">| `Status:` | `active` |</span>
+<span id="L6" data-line="6">| `Implements:` | `REQ-*` IDs this ADR makes true |</span>
+<span id="L7" data-line="7">| `Derives from:` | `INT-*` or strategy/design doc that motivated the decision |</span>
+<span id="L8" data-line="8">| `Supersedes:` | Prior ADR or doctrine this replaces, or `none` |</span>
+<span id="L9" data-line="9">| `Superseded by:` | Successor ADR if this one becomes `superseded`, otherwise omit |</span>
+<span id="L10" data-line="10">| `Retained special case:` | When earlier behavior is intentionally retained, or `none` |</span>
+<span id="L11" data-line="11"></span>
+<span id="L12" data-line="12">## Context</span>
+<span id="L13" data-line="13"></span>
+<span id="L14" data-line="14">State the cross-tenant situation that demands a decision. Cite the requirements or strategy material that frames the choice. Identify the build tenants this decision is intended to govern. Keep this section to the constraints, not the answer.</span>
+<span id="L15" data-line="15"></span>
+<span id="L16" data-line="16">## Decision</span>
+<span id="L17" data-line="17"></span>
+<span id="L18" data-line="18">State the chosen design in present tense. One decision per ADR; split into multiple ADRs if the choice covers more than one decision boundary.</span>
+<span id="L19" data-line="19"></span>
+<span id="L20" data-line="20">Name concrete mechanisms when requirements name them. If a requirement names an operational mechanism, this ADR must name that mechanism too.</span>
+<span id="L21" data-line="21"></span>
+<span id="L22" data-line="22">## Consequences</span>
+<span id="L23" data-line="23"></span>
+<span id="L24" data-line="24">Describe what becomes true once this decision is in force across the tenants it governs:</span>
+<span id="L25" data-line="25"></span>
+<span id="L26" data-line="26">- positive consequences the decision enables</span>
+<span id="L27" data-line="27">- negative consequences or trade-offs the decision accepts</span>
+<span id="L28" data-line="28">- downstream design or implementation work the decision requires in each affected tenant</span>
+<span id="L29" data-line="29">- proof or qualification surfaces affected</span>
+<span id="L30" data-line="30">- migration cost for tenants that previously diverged from the decision</span>
+<span id="L31" data-line="31"></span>
+<span id="L32" data-line="32">## Alternatives Considered</span>
+<span id="L33" data-line="33"></span>
+<span id="L34" data-line="34">List the alternatives that were on the table, with one or two sentences on why each was rejected. Be specific enough that a future maintainer can recover the reasoning. Note any alternative that was kept lawful at the tenant-local level.</span>
+<span id="L35" data-line="35"></span>
+<span id="L36" data-line="36">## Notes</span>
+<span id="L37" data-line="37"></span>
+<span id="L38" data-line="38">Optional. Use for cross-references, related ADRs in tenant-local `design/adrs/` directories, or implementation hints that do not belong in the constitutional sections above. Do not put new requirements here: ADRs are durable design memory, not a second requirement surface.</span></pre></html>

@@ -1,0 +1,150 @@
+--- original/package_release.py
++++ candidate/package_release.py
+@@ -27,10 +27,11 @@
+ import bundle_check as checks
+ import public_receipts as receipts
+ 
+-ARTIFACT = "a_c-stdo-v3-common-35fb4824"
++ARTIFACT = "a_c-stdo-v3-common-35fb4824-packaging-r1"
+ UPSTREAM = "fe085cedddde3a18554f8749b230bfe47f3dcce7"
+ BUILDER_MANIFEST = "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782"
+ SOURCE_READINESS_SHA = "114a4580a344daa1cf32bcbc19246ab189c26b3f50b58d47c105ae7a2b54bd1d"
++SOURCE_READINESS_PROJECTION_SHA = "2dec9cece18e6b9a318a75460b8c8191f75014f92bb4306691e55929b8df859a"
+ 
+ 
+ def save(path: Path, value) -> None:
+@@ -226,9 +227,12 @@
+ 
+ 
+ def source_readiness_projection(original: bytes) -> str:
+-    """Adapt only workspace navigation; retain the sealed source-stage account."""
+-    checks.require(checks.sha(original) == SOURCE_READINESS_SHA,
+-                   "sealed originating-workspace source-readiness record changed")
++    """Accept the sealed original or its exact, idempotent portable projection."""
++    record_sha = checks.sha(original)
++    if record_sha == SOURCE_READINESS_PROJECTION_SHA:
++        return original.decode("utf-8")
++    checks.require(record_sha == SOURCE_READINESS_SHA,
++                   "sealed original or portable source-readiness record changed")
+     text = original.decode("utf-8")
+     heading = "# Common V3 represented-source readiness"
+     portable_heading = heading + " — captured-workspace projection\n\n" + (
+@@ -272,6 +276,8 @@
+     for before, after in replacements:
+         checks.require(text.count(before) == 1, "sealed source-readiness navigation does not match the declared projection")
+         text = text.replace(before, after, 1)
++    checks.require(checks.sha(text.encode("utf-8")) == SOURCE_READINESS_PROJECTION_SHA,
++                   "source-readiness projection differs from its authenticated portable bytes")
+     return text
+ 
+ 
+@@ -354,6 +360,20 @@
+ exact exporter source, offline asset and third-party licensing custody. Building
+ requires the existing pinned Graphify checkout and networkx3.4.2 environment;
+ viewing, codec use and bundle verification require no Graphify installation.
++
++To rebuild from this extracted directory, use that Python/networkx environment
++and an existing checkout at Graphify commit `fe085cedddde3a18554f8749b230bfe47f3dcce7`.
++All remaining inputs are included here; no originating-workspace source-readiness
++file or private run is needed. Choose fresh outputs outside this input bundle:
++
++```sh
++python3 -B package_release.py build \\
++  --proposal . --public-evidence evidence/authoring-public.json \\
++  --review evidence/reviews/review-001/receipt.json \\
++  --upstream /absolute/path/to/the/pinned/graphify/checkout \\
++  --bundle /tmp/a_c-common-packaging-r1-rebuilt \\
++  --dist /tmp/a_c-common-packaging-r1-rebuilt-dist
++```
+ 
+ Third-party licenses retain their own scope: frozen common source licenses,
+ Graphify Apache2.0/MIT and notices, vis-network Apache2.0/MIT, and the selected
+@@ -376,15 +396,30 @@
+     (bundle / "index.html").write_text(body, encoding="utf-8")
+ 
+ 
++def archive_output_check(bundle: Path, output: Path) -> None:
++    """Keep archive/checksum files disjoint from the resolved bundle tree."""
++    bundle_root = bundle.resolve()
++    sidecar = output.with_name(output.name + ".sha256")
++    for path in (output, sidecar):
++        resolved = path.resolve()
++        checks.require(not (resolved.is_relative_to(bundle_root)
++                            or bundle_root.is_relative_to(resolved)),
++                       "archive output/checksum overlaps the bundle; choose a path outside it")
++    checks.require(not output.exists() and not output.is_symlink(),
++                   "archive exists; preserve the previous result")
++    checks.require(not sidecar.exists() and not sidecar.is_symlink(),
++                   "archive checksum already exists")
++
++
+ def archive(bundle: Path, output: Path) -> dict:
+-    checks.require(not output.exists(), "archive exists; preserve the previous result")
++    archive_output_check(bundle, output)
+     sidecar = output.with_name(output.name + ".sha256")
+-    checks.require(not sidecar.exists(), "archive checksum already exists")
++    names = checks.files(bundle)
+     output.parent.mkdir(parents=True, exist_ok=True)
+     with output.open("xb") as stream:
+         with gzip.GzipFile(filename="", mode="wb", fileobj=stream, mtime=0, compresslevel=9) as compressed:
+             with tarfile.open(fileobj=compressed, mode="w", format=tarfile.PAX_FORMAT) as tar:
+-                for name in checks.files(bundle):
++                for name in names:
+                     data = (bundle / name).read_bytes()
+                     member = tarfile.TarInfo(ARTIFACT + "/" + name)
+                     member.size = len(data)
+@@ -399,6 +434,12 @@
+ 
+ 
+ def build(args) -> dict:
++    bundle = args.bundle or ROOT / "bundle" / ARTIFACT
++    dist = args.dist or ROOT / "dist"
++    archive_output_check(bundle, dist / (ARTIFACT + ".tar.gz"))
++    checks.require(not bundle.exists() and not bundle.is_symlink(),
++                   "bundle output exists; preserve its identity")
++    readiness = source_readiness_projection((ROOT / "SOURCE-READINESS.md").read_bytes())
+     preparation(args.upstream)
+     proposal = args.proposal.resolve(strict=True)
+     graph = args.graph.resolve(strict=True) if args.graph else proposal / "graph.json"
+@@ -430,9 +471,6 @@
+         checks.require(review["receipt_id"] not in receipt_ids, "public receipt identity collision")
+         receipt_ids.add(review["receipt_id"])
+         reviewed.append((path, review, reports))
+-    bundle = args.bundle or ROOT / "bundle" / ARTIFACT
+-    dist = args.dist or ROOT / "dist"
+-    checks.require(not bundle.exists(), "bundle output exists; preserve its identity")
+     bundle.mkdir(parents=True)
+     for name in ("model.json", "carrier.json", "coverage.json", "result.json"):
+         copy(proposal / name, bundle / name)
+@@ -440,7 +478,7 @@
+     for name in checks.SOURCE_PINS:
+         copy(ROOT / name, bundle / name)
+     (bundle / "SOURCE-READINESS.md").write_text(
+-        source_readiness_projection((ROOT / "SOURCE-READINESS.md").read_bytes()), encoding="utf-8")
++        readiness, encoding="utf-8")
+     for row in checks.load(ROOT / "package-custody.json")["members"]:
+         copy(ROOT / "source" / row["path"], bundle / "source" / row["path"])
+     copy(codec_input, bundle / "codec/ac_graph.py")
+@@ -471,8 +509,8 @@
+     (bundle / "records.html").write_text(template.replace("__RECORD_DATA__", embedded), encoding="utf-8")
+     source_views(bundle)
+     save(bundle / "RELEASE.json", {"kind": "a_c.common.representation-release-preparation/1", "artifact": ARTIFACT,
+-         "subject": checks.SUBJECT, "source_commit": "35fb4824a064a84df5af214a0d0e2da597c18ac6",
+-         "package_tree": "7f2070b61c848b42b4dfb3af1e0ce53869de1aa1", "model": {"id": model.identity, "sha256": model.sha256},
++         "subject": checks.SUBJECT, "source_commit": expected["source"]["commit"],
++         "package_tree": expected["source"]["package_tree"], "model": {"id": model.identity, "sha256": model.sha256},
+          "standing": "local_reviewable_preparation", "semantic_acceptance": "not_issued", "publication": "not_performed",
+          "interactive_verification": "not_performed; prior local I5 browser action was policy-blocked and not bypassed; this new artifact remains interactively unverified",
+          "source_method_release": "unaccepted_unpublished_not_ready", "product_version": None,
+--- original/release_tools/public_receipts.py
++++ candidate/release_tools/public_receipts.py
+@@ -119,6 +119,9 @@
+             "release public-receipt contract differs")
+     require(release["subject"] == expected["source"]["subject_id"] and release["model"] == expected["model"],
+             "release-preparation subject/model differs from its public evidence")
++    require(release.get("source_commit") == expected["source"]["commit"]
++            and release.get("package_tree") == expected["source"]["package_tree"],
++            "release-preparation source commit/package tree differs from its public evidence")
+     public = root / "evidence/authoring-public.json"
+     construction, _ = receipt(public, expected, CONSTRUCTION)
+     require(release["public_authoring_receipt_sha256"] == sha(public.read_bytes()), "construction receipt hash differs")

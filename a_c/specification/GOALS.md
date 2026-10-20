@@ -1,33 +1,31 @@
 # Goals
 
 The current implementation increment is
-[T-008](../.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md):
-realize the committed F_D support tools in the existing Graphify build tenant
-for F_P Executives, Workers and Reviewers. Jim selects exact Claude RC9 source
+[T-008](../.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md#current-provisional-implementation):
+the existing Graphify tenant now contains the provisional public F_D support
+implementation for F_P Executives, Workers and Reviewers. Root selected its exact
+current realization after bounded implementation, independent code review and
+technical integration. The [handoff](../.ai-workspace/qualification/t008/handoff-001/README.md)
+binds the current sources, fresh versus carried checks and explicit gaps.
+T-008 remains active for partial actual-actor/variant qualification; the failed
+and partial live trials remain evidence. FDV-003 benefit is Deferred/unqualified.
+There is no Product acceptance, installed/RC/release or full-calculus claim.
+
+Jim's work-scoped selection remains exact Claude RC9 source
 `c2cfa9b908d1722ae3f26c32fa4ece691083bdc3` and its Executive/software-design
-profiles for this bounded candidate dogfood. The installed v2.5.1-rc.2
-construction constitution and empty composition remain unchanged. The
-[tenant design candidate](../build_tenants/graphify/design/fd-support.md) and
-[exact RC9 binding](../build_tenants/graphify/design/fd-method-claude-rc9.json)
-route the work without replacing T-007's historical common derivation reference.
-The Executive coordinates and does not mutate; bounded Writer/Workers author
-candidates and independent Reviewers assess them. This record establishes no
-runtime qualification, semantic acceptance, benefit or release claim. Required
-design assessment/disposition precedes retained implementation.
+profiles. The [operative tenant HOW](../build_tenants/graphify/design/fd-support.md)
+and [exact RC9 profile](../build_tenants/graphify/design/fd-method-claude-rc9.json)
+leave the installed v2.5.1-rc.2 builder and empty composition unchanged. Executive,
+Writer/Worker, independent assessment and owner disposition retain their roles.
 
 The completed specification increment is
 [T-007](../.ai-workspace/tickets/active/T-007-executive-lifecycle-tooling.md):
-specify additional [deterministic support tools](requirements/fd-support-tools.md)
-for F_P Executives, Workers and Reviewers. STDO3.0 owns the method/lifecycle
-contracts; a_c specifies exact inputs/outputs, acquisition, assembly, declared
-checks, dispatch/capture and evidence operations. The
-[source-owner map](requirements/fd-source-owner-map.md) pins provisional common
-V3 clauses without changing the installed v2.5.1-rc.2 builder, adopting V3 or
-creating a sibling/runtime dependency. Product and requirement authoring are
-in scope; owning design, implementation, public runtime interfaces and
-qualification are pending (Deferred). Existing source-to-model F_P authoring
-and frozen comparison studies remain unchanged. No method acceptance,
-performance gain or release claim follows from this specification increment.
+it authored the common deterministic-support Product requirements and their
+[historical source-owner derivation](requirements/fd-source-owner-map.md).
+Design, realization and qualification were pending (Deferred) at that exact
+specification-only cut. T-008 supplies the later operative work and progress;
+this chronology does not rewrite the T-007 instruction or its historical result.
+Existing source-to-model authoring and frozen comparison studies are unchanged.
 
 The completed comparison-preparation increment is
 [T-006](../.ai-workspace/tickets/active/T-006-rc9-rebuild-comparison.md):

@@ -1,0 +1,61 @@
+{
+  "bundled_inputs": [
+    "package_release.py",
+    "SOURCE-READINESS.md",
+    "codec/ac_graph.py",
+    "model.json",
+    "carrier.json",
+    "graph.json",
+    "coverage.json",
+    "result.json",
+    "source/81members",
+    "three source manifests",
+    "evidence/typedreceipts+4reports",
+    "release_tools/"
+  ],
+  "cache_and_temp": "assessment-001 only",
+  "cwd": "/Users/jim/tmp/a_c-common-rc1-packaging-review-20261021/assessment-001/extracted/a_c-stdo-v3-common-35fb4824-packaging-r1",
+  "documented_command": [
+    "python3",
+    "-B",
+    "package_release.py",
+    "build",
+    "--proposal",
+    ".",
+    "--public-evidence",
+    "evidence/authoring-public.json",
+    "--review",
+    "evidence/reviews/review-001/receipt.json",
+    "--upstream",
+    "/absolute/path/to/the/pinned/graphify/checkout",
+    "--bundle",
+    "/tmp/a_c-common-packaging-r1-rebuilt",
+    "--dist",
+    "/tmp/a_c-common-packaging-r1-rebuilt-dist"
+  ],
+  "executed_argv": [
+    "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python3",
+    "-B",
+    "package_release.py",
+    "build",
+    "--proposal",
+    ".",
+    "--public-evidence",
+    "evidence/authoring-public.json",
+    "--review",
+    "evidence/reviews/review-001/receipt.json",
+    "--upstream",
+    "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout",
+    "--bundle",
+    "/Users/jim/tmp/a_c-common-rc1-packaging-review-20261021/assessment-001/rebuilt/bundle/a_c-stdo-v3-common-35fb4824-packaging-r1",
+    "--dist",
+    "/Users/jim/tmp/a_c-common-rc1-packaging-review-20261021/assessment-001/rebuilt/dist"
+  ],
+  "existing_runtime": "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python3",
+  "explicit_external_dependency": {
+    "commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+    "upstream": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout"
+  },
+  "omitted_original_workspace_readiness_imported": false,
+  "original_private_runs_or_proofs_imported": false
+}

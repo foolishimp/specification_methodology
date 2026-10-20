@@ -1,0 +1,91 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>plugins/spec/skills/stdo-review/SKILL.md</title><style>body{font:14px system-ui;margin:24px;background:#101720;color:#dfeaf4}a{color:#87c7ff}pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5;counter-reset:line}span{display:block}span:before{content:attr(data-line);display:inline-block;width:4em;color:#7392aa;user-select:none}span:target{background:#36481d}</style><h1>plugins/spec/skills/stdo-review/SKILL.md</h1><p>Exact frozen source · SHA256 1c5ab11aaa924be2d5142228832c2d3dae76fcb69d683e31fa0cd834721ba624</p><pre><span id="L1" data-line="1">---</span>
+<span id="L2" data-line="2">name: stdo-review</span>
+<span id="L3" data-line="3">description: Independently evaluate one exact STDO-governed candidate and return a closed technical result. Use when a user says stdo review or explicitly asks to review an STDO-governed candidate, release claim, qualification claim, or governed boundary. Do not invoke for generic review.</span>
+<span id="L4" data-line="4">---</span>
+<span id="L5" data-line="5"></span>
+<span id="L6" data-line="6"># STDO Review</span>
+<span id="L7" data-line="7"></span>
+<span id="L8" data-line="8">Act only as Reviewer for one exact claim. Review is read-only. It does not</span>
+<span id="L9" data-line="9">repair, assign Product priority, apply disposition, or activate the next work.</span>
+<span id="L10" data-line="10"></span>
+<span id="L11" data-line="11">## Select The Product Basis</span>
+<span id="L12" data-line="12"></span>
+<span id="L13" data-line="13">Read and apply</span>
+<span id="L14" data-line="14">[`PRODUCT_BASIS.md`](../../references/PRODUCT_BASIS.md) before activating review.</span>
+<span id="L15" data-line="15">Continue only from its exactly-one verified selection. This skill remains</span>
+<span id="L16" data-line="16">read-only.</span>
+<span id="L17" data-line="17"></span>
+<span id="L18" data-line="18">## Activate The Review</span>
+<span id="L19" data-line="19"></span>
+<span id="L20" data-line="20">1. From the verified definition and installed basis, bind candidate/checkpoint,</span>
+<span id="L21" data-line="21">   exact affected Product claims, authority, scope,</span>
+<span id="L22" data-line="22">   exclusions, evidence population, required independence, Reviewer capability</span>
+<span id="L23" data-line="23">   envelope, Executive baseline profile technical-triage fields where adopted, the</span>
+<span id="L24" data-line="24">   Product-selected severity scale, review time, and invalidation under the</span>
+<span id="L25" data-line="25">   three invalidators of `ACTIVATION.md` section 7, a subject, capability or</span>
+<span id="L26" data-line="26">   scale change being a named instance of a material input change or a</span>
+<span id="L27" data-line="27">   changed basis.</span>
+<span id="L28" data-line="28">2. Reacquire live authority, implementation, tests, fixtures, installed or</span>
+<span id="L29" data-line="29">   runtime evidence, and material history. Do not use the Worker summary as</span>
+<span id="L30" data-line="30">   evidence. Acquire owning sections under the selected basis&#x27;s</span>
+<span id="L31" data-line="31">   `ACTIVATION.md` section 2, Acquisition; review law is `EVALUATION.md`</span>
+<span id="L32" data-line="32">   sections 3 and 4.</span>
+<span id="L33" data-line="33">   Reuse exact applicable computed facts and traceable prior judgments after</span>
+<span id="L34" data-line="34">   checking their support and invalidation. This does not replace your own</span>
+<span id="L35" data-line="35">   assessment where the claim requires independence. Determine required</span>
+<span id="L36" data-line="36">   evaluations from the owning applicability conditions, not only the caller&#x27;s</span>
+<span id="L37" data-line="37">   selected frame list; unknown applicability or a missing required exact</span>
+<span id="L38" data-line="38">   result prevents a satisfied conjunction.</span>
+<span id="L39" data-line="39">3. Return the exact invalid, out-of-frame, or indeterminate result when subject,</span>
+<span id="L40" data-line="40">   basis, capability, independence, or evidence cannot support evaluation.</span>
+<span id="L41" data-line="41"></span>
+<span id="L42" data-line="42">## Evaluate</span>
+<span id="L43" data-line="43"></span>
+<span id="L44" data-line="44">- Search for counterexamples against the claim: authority seams, rival paths,</span>
+<span id="L45" data-line="45">  proof masking, failure/recovery, installed behavior, and reconstruction.</span>
+<span id="L46" data-line="46">- Inspect tests, fixtures, mutations, environment, and interpretation where</span>
+<span id="L47" data-line="47">  they can change the proof.</span>
+<span id="L48" data-line="48">- Bind findings and affected acceptance predicates to a violated property,</span>
+<span id="L49" data-line="49">  supported entry/state, governing operating/threat model and credible causal</span>
+<span id="L50" data-line="50">  path. An excluded threat gives no guard a retention claim; test presence</span>
+<span id="L51" data-line="51">  creates no authority (FOUNDATIONS §2 What creates no authority). Internal location alone does not establish trust.</span>
+<span id="L52" data-line="52">  Preserve supported input, mutable-state, authority and effect checks.</span>
+<span id="L53" data-line="53">- For material computational composition or recurrence, evaluate one complete</span>
+<span id="L54" data-line="54">  producer-to-consumer path, including established facts, invalidators, effects,</span>
+<span id="L55" data-line="55">  retained alternatives and accumulated work. Require the claimed operational</span>
+<span id="L56" data-line="56">  observations; local passes or semantic agreement cannot establish them.</span>
+<span id="L57" data-line="57">  Reuse still-valid support without substituting another actor&#x27;s judgment for</span>
+<span id="L58" data-line="58">  the required independent assessment.</span>
+<span id="L59" data-line="59">- Under an adopted Executive baseline profile, return technical severity, causal</span>
+<span id="L60" data-line="60">  assessment and confidence where supportable, blast radius, workaround or</span>
+<span id="L61" data-line="61">  containment, repair complexity, regression risk, and residual uncertainty.</span>
+<span id="L62" data-line="62">- Use only the Product-bound scale. Keep adjacent observations separate.</span>
+<span id="L63" data-line="63">- Never turn technical severity into Executive priority or promotion-boundary</span>
+<span id="L64" data-line="64">  effect. Whether a finding blocks promotion is decided by EVALUATION §5 When</span>
+<span id="L65" data-line="65">  a finding blocks promotion.</span>
+<span id="L66" data-line="66">- Distinguish repair of a nonconforming candidate under unchanged law from an</span>
+<span id="L67" data-line="67">  intentional governing change. A failure alone does not require repricing.</span>
+<span id="L68" data-line="68">- Check satisfied closure conditions; your review event cannot establish them</span>
+<span id="L69" data-line="69">  or create an additional closing ceremony.</span>
+<span id="L70" data-line="70"></span>
+<span id="L71" data-line="71">Keep the result projection total over the core values of `FOUNDATIONS.md`</span>
+<span id="L72" data-line="72">section 4, Results:</span>
+<span id="L73" data-line="73"></span>
+<span id="L74" data-line="74">- `satisfied`: no finding; triage is `not_applicable`;</span>
+<span id="L75" data-line="75">- `falsified`: findings carry complete triage or explicit field-level</span>
+<span id="L76" data-line="76">  indeterminate values;</span>
+<span id="L77" data-line="77">- `indeterminate` or `out_of_frame`: return the unresolved triage and basis;</span>
+<span id="L78" data-line="78">  and</span>
+<span id="L79" data-line="79">- `invalid_basis`: triage is `not_applicable`; return the basis re-entry.</span>
+<span id="L80" data-line="80"></span>
+<span id="L81" data-line="81">## Return</span>
+<span id="L82" data-line="82"></span>
+<span id="L83" data-line="83">Return one closed result containing exact subject and basis, claim, scope and</span>
+<span id="L84" data-line="84">exclusions, evidence, verdict, findings and counterexamples, triage, residuals,</span>
+<span id="L85" data-line="85">adjacent observations, uncertainty, invalidation, and owning re-entry point.</span>
+<span id="L86" data-line="86">Bind each reusable judgment to its question, subject/basis, supporting facts,</span>
+<span id="L87" data-line="87">actor/authority, conclusion/scope and revising observation in the existing</span>
+<span id="L88" data-line="88">result carrier. Preserve original owner rulings separately from interpretation.</span>
+<span id="L89" data-line="89">Return to the coordination the applicable configuration selects: the</span>
+<span id="L90" data-line="90">Executive when the Project Reference-Frame Basis adopts that frame;</span>
+<span id="L91" data-line="91">otherwise the Product-owned decision authority. Stop.</span></pre></html>

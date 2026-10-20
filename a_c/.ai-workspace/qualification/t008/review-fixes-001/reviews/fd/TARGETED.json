@@ -1,0 +1,103 @@
+{
+  "started_ns": 1792471694744317000,
+  "ended_ns": 1792471738455572000,
+  "tests": 17,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "successful": true,
+  "cases": [
+    "test_ac_support_interfaces.PublicJudgmentIngressTests.test_missing_judgment_preserves_unknown_required_dependency",
+    "test_ac_support_interfaces.PublicJudgmentIngressTests.test_wrong_activation_return_cannot_exclude_required_dependency",
+    "test_ac_support_interfaces.PublicJudgmentIngressTests.test_nested_not_performed_domain_data_cannot_exclude_required_dependency",
+    "test_ac_support_interfaces.PublicJudgmentIngressTests.test_direct_performed_satisfied_and_falsified_conditions_remain_usable",
+    "test_ac_support_effects.PublicRetryTests.test_public_reassembled_context_cannot_reset_activation_history",
+    "test_ac_support_effects.PublicRetryTests.test_public_distinct_activation_keeps_its_own_attempt_population",
+    "test_ac_support_effects.PublicRetryTests.test_public_selected_retry_survives_context_reassembly",
+    "test_ac_support_effects.PublicRetryTests.test_public_retry_requires_actual_check",
+    "test_ac_support_effects.PublicRetryTests.test_public_retry_refuses_invalid_check_basis",
+    "test_ac_support_effects.PublicRetryTests.test_public_retry_refuses_wrong_predecessor",
+    "test_ac_support_effects.PublicRetryTests.test_public_timeout_finalizes_while_descendant_still_holds_pipes",
+    "test_ac_support_effects.PublicRetryTests.test_public_cancel_finalizes_while_descendant_still_holds_pipes",
+    "test_ac_support_effects.PublicRetryTests.test_public_timeout_bounds_continuously_readable_descendant_tail",
+    "test_ac_support_effects.PublicRetryTests.test_public_timeout_honors_selected_grace_before_local_kill",
+    "ReviewerPublicControls.test_other_material_binding_coordinates_remain_unresolved",
+    "ReviewerPublicControls.test_canonical_membership_public_discriminators",
+    "ReviewerPublicControls.test_known_final_provenance_survives_unrelated_incomplete_history"
+  ],
+  "runtime_cwd": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-review-fd-fixes-gmjngkq0",
+  "scratch": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-review-fd-fixes-gmjngkq0",
+  "scope": "Targeted ordinary public CLI registered local-process controls; fixture judgments are supplied assertions, not semantic F_P assessments. Author tests are inspected harnesses; source-first EXPECTATIONS.md is oracle. No full suite.",
+  "copied_subject_pins": {
+    "build_tenants/graphify/code/ac_generate.py": {
+      "sha256": "fcb946e180ba8a30ecdfdb9e53044cd142d9bd450464c186dfbbe90e9da5ec93",
+      "bytes": 79851,
+      "mode": 420
+    },
+    "build_tenants/graphify/code/ac_graph.py": {
+      "sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+      "bytes": 49166,
+      "mode": 420
+    },
+    "build_tenants/graphify/code/ac_grounding.py": {
+      "sha256": "f850e7ceecd945455891e6cc941fc3a86c943ed27bbe74d86b0248169d9cf682",
+      "bytes": 22857,
+      "mode": 420
+    },
+    "build_tenants/graphify/code/ac_repair.py": {
+      "sha256": "5be5e738f12006dcb17066ccfb60d22e65e5929a8a9a96d52ee5c0a19efda928",
+      "bytes": 36708,
+      "mode": 420
+    },
+    "build_tenants/graphify/code/ac_support.py": {
+      "sha256": "4d41a2373def237136cefe8b186c196c2e4376137c221ae4675c274abed5ad31",
+      "bytes": 20703,
+      "mode": 420
+    },
+    "build_tenants/graphify/code/ac_support_core.py": {
+      "sha256": "e321ed11f66db88a9d965331bf4069d8a4532e6b31df38d6adf8539b4cf25d6b",
+      "bytes": 218115,
+      "mode": 420
+    },
+    "build_tenants/graphify/code/ac_support_effects.py": {
+      "sha256": "6c296de1bc888b8c18cb1cc211fd2eae7f242ac5ebb5df33c436596bed37bae9",
+      "bytes": 88754,
+      "mode": 420
+    },
+    "build_tenants/graphify/design/fd-method-claude-rc9.json": {
+      "sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1",
+      "bytes": 43077,
+      "mode": 420
+    },
+    "build_tenants/graphify/test_env/test_ac_support_core.py": {
+      "sha256": "482531eb8dfa43f44bc5ca4f3d34d5a72c93db4f64bfca6362d943d4dd56174a",
+      "bytes": 113644,
+      "mode": 420
+    },
+    "build_tenants/graphify/test_env/test_ac_support_effects.py": {
+      "sha256": "b2e0399f4bbfa09549acbffb13d8a2745b74b4f6c5fd9c1bcfbb386292c661e4",
+      "bytes": 95597,
+      "mode": 420
+    },
+    "build_tenants/graphify/test_env/test_ac_support_interfaces.py": {
+      "sha256": "01fcb236694e800dab49e58a530749c3c68ec7d5d13392eee9bc47d7f0e5bcd4",
+      "bytes": 81017,
+      "mode": 420
+    },
+    "build_tenants/graphify/test_env/fixture_support.py": {
+      "sha256": "39201a5147db14d2acf929e9065b3eb5fd7cca6eeda0218095a6e1f94499c3b6",
+      "bytes": 14839,
+      "mode": 420
+    },
+    "build_tenants/graphify/test_env/fixtures/toy_model.json": {
+      "sha256": "a72d423a222ecd84a429e28796c93ba07ac8b79d40caf3b74af02c36029f3b0b",
+      "bytes": 70776,
+      "mode": 420
+    },
+    "build_tenants/graphify/test_env/support_fixtures/local_actor.py": {
+      "sha256": "9c3c0fd8fe563f96db6cb00d95989fd319a6518b006f0efffcfd3d48caf6838a",
+      "bytes": 4388,
+      "mode": 420
+    }
+  }
+}

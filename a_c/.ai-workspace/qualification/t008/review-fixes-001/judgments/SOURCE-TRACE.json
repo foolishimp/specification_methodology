@@ -1,0 +1,46 @@
+{
+  "expected_from_source": [
+    {
+      "source": "specification/requirements/fd-support-tools.md",
+      "requirements": [
+        "REQ-AC-FD-004",
+        "REQ-AC-FD-008",
+        "REQ-AC-FD-010",
+        "REQ-AC-FD-012"
+      ],
+      "claim": "Expose nonconsumable bindings; preserve actual evaluations, original domain values, unknown applicability and valid unchanged evidence."
+    },
+    {
+      "source": "build_tenants/graphify/design/fd-support.md",
+      "lines": [
+        355,
+        379,
+        693
+      ],
+      "sha256": "5bbb2dd20b78f016f432f48ed92e9040f500e7b99aaff36c7ed5f0a6b5c4462f",
+      "claim": "Coordinates checked against original activation; performed evaluations distinct from opaque domain_outcome and not_performed; authentication distinct from consumability."
+    },
+    {
+      "source": ".ai-workspace/qualification/t008/live-review-runtime-002/authority/method/FOUNDATIONS.md",
+      "lines": [
+        790,
+        1008,
+        1409
+      ],
+      "claim": "A not-performed evaluation has no closed result; mismatched support remains historical with gap; valid reusable support is retained."
+    }
+  ],
+  "actual_implementation": {
+    "source": "build_tenants/graphify/code/ac_support_core.py",
+    "sha256": "e321ed11f66db88a9d965331bf4069d8a4532e6b31df38d6adf8539b4cf25d6b",
+    "mechanisms": [
+      "Shared _bound_original_return requires authentic original and rejects material capture coordinate gaps while retaining nonbinding history gaps.",
+      "JudgmentRef requires an exact canonical top-level /payload/original/evaluations/[index] pointer, resolved against an actual validated evaluation member.",
+      "_conjunction_returns applies the same original-return eligibility; original domain JSON is neither interpreted nor rewritten."
+    ]
+  },
+  "test_assertions": "ACTIVATION.json expected_controls and public fixture *-assertions.json precede fixture dispatch; synthetic deterministic verdicts are not new semantic authority.",
+  "execution_observations": "PUBLIC-OBSERVATIONS.json derives only retained fresh CLI request/response/execution records; final stdout and actual producer identity travel through public dispatch, evidence.read, return.capture and return.check.",
+  "ordinary_route_scope": "Fixture constructs only local Product/policy/source inputs. Its Memory store is not used for public ingress; no make_artifact, protected Return fabrication, caller authentication flag or injected resolver is used by the public regression class.",
+  "unrelated_changes_during_focused_run": {}
+}

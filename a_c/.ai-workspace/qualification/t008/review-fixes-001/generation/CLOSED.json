@@ -1,0 +1,81 @@
+{
+  "status": "CLOSED",
+  "actor": "/root/fix_ac_generation",
+  "role": "Worker",
+  "closed_at": "2026-10-20T04:39:03.405668+00:00",
+  "reentry": "realization_refactor",
+  "head": "bfe228511415d346459523cec44e7e8157e2991a",
+  "source_pins": {
+    "build_tenants/graphify/code/ac_generate.py": "fcb946e180ba8a30ecdfdb9e53044cd142d9bd450464c186dfbbe90e9da5ec93",
+    "build_tenants/graphify/code/ac_grounding.py": "f850e7ceecd945455891e6cc941fc3a86c943ed27bbe74d86b0248169d9cf682",
+    "build_tenants/graphify/test_env/test_ac_generate.py": "bf928fdb90c1df2cae5356336f0d56bd1c817515ef92c3a815348832d62a197d",
+    "build_tenants/graphify/test_env/test_ac_grounding.py": "1dbad9039775615e64e456107cf329d0ac44eaa9758e7299d573c7f4f031ef5f",
+    "build_tenants/graphify/design/generation.md": "c7e596146596ef0929832fff73c04b5cc79bd2c4a5dcdc6f671b8782e7ed16d2",
+    "build_tenants/graphify/design/grounding.md": "f131507ad95d8d941adaac02193e0612b76d35fbc77f657cbdf0714055964b6c"
+  },
+  "claims": {
+    "ordinary_custody": "Shared gate authenticates exact stage-specific frozen prompt, source/schema/assets/code, retained raw evidence, settings/argv/isolation/events/usage, and recomputed source validation before reuse.",
+    "latest_attempt": "Newer unfinished/failed attempts prevent older success reuse; explicit retry remains required. F_D source-validation-failed recovery does not relabel original success.",
+    "fence_partition": "Same marker, closing width >= opening width, at most three leading spaces, and trailing horizontal whitespace only; preserves source characters and lawful heading identities.",
+    "unicode_coordinates": "Recover-anchor offset mapping uses the same splitlines convention as preparation and strict validation, including U+2028/U+2029, with invariant non-grounding payload and SectionId."
+  },
+  "performed_checks": {
+    "initial_focused": {
+      "tests": 66,
+      "skipped": 4,
+      "exit_code": 0,
+      "evidence": "focused-001.json"
+    },
+    "preimage_sensitivity": {
+      "tests": 3,
+      "expected_failures": 12,
+      "expected_errors": 2,
+      "exit_code": 1,
+      "evidence": "preimage-regressions-001.json"
+    },
+    "final_focused": {
+      "tests": 67,
+      "skipped": 0,
+      "exit_code": 0,
+      "actual_upstream_cases": 4,
+      "evidence": "focused-002.json"
+    },
+    "frozen_studies": {
+      "files": 4198,
+      "changed": 0,
+      "added": 0,
+      "removed": 0,
+      "evidence": "frozen-study-guard.json"
+    },
+    "frozen_engine_boundary": {
+      "old_preimage_checkpoint_passes": 4,
+      "new_generator_correctly_refuses_old_frozen_plans": 4,
+      "evidence": "frozen-engine-boundary.json"
+    },
+    "diff_check": {
+      "exit_code": 0,
+      "evidence": "final-read-checks.json"
+    }
+  },
+  "limits": [
+    "Focused affected-source qualification only; no full suite was run by this Worker.",
+    "All actor artifacts are synthetic; no native, model, provider, vendor, network, installation or global configuration effects.",
+    "Actual upstream emitted retained cache-root-switch RuntimeWarnings while crossing temporary test roots in one process; all four boundary assertions passed.",
+    "No frozen source/model/carrier/receipt/plan/hash or historical study regeneration; new engine qualification is separate from old frozen engine evidence.",
+    "No F_P semantic corrections, semantic-fidelity/acceptance/full-calculus/release claim; owner disposition remains separate.",
+    "Whole worktree is pre-existing dirty and concurrently modified by other granted Workers; only the six granted source files and this proof/temp territory were written here."
+  ],
+  "exploratory_read_errors": [
+    {
+      "command": "cat build_tenants/graphify/test_env/pyproject.toml",
+      "exit_code": 1,
+      "reason": "No such optional configuration file; no effect."
+    },
+    {
+      "command": "git -C /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv rev-parse HEAD",
+      "exit_code": 128,
+      "reason": "Container directory was not checkout root; verified child checkout afterward."
+    }
+  ],
+  "next_owner": "Executive /root for integration and independent assessment; Worker stops after this closed return."
+}

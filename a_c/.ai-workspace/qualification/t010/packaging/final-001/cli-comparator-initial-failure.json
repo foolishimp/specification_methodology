@@ -1,0 +1,31 @@
+{
+  "record_kind": "Observed self-control failure, retained from tool result",
+  "tool_session": 95647,
+  "tool_chunk": "36f6e0",
+  "observed_exit_code": 1,
+  "completed_native_operations": [
+    {
+      "operation": "validate-model",
+      "observed_returncode": 0
+    },
+    {
+      "operation": "recover-carrier",
+      "observed_returncode": 0
+    },
+    {
+      "operation": "recover-upstream",
+      "observed_returncode": 0
+    },
+    {
+      "operation": "find-admission",
+      "observed_returncode": 0
+    }
+  ],
+  "observed_exception": "AssertionError",
+  "observed_assertion": "assert all(results[name]['model'] == expected_model for name in ('validate-model', 'recover-carrier', 'recover-upstream'))",
+  "source_location": "cli_controls.py:52 before comparator correction",
+  "diagnosis": "Proof expected id/sha256 only; actual codec coordinate additionally has profile=a_c.graphify.model/1. All returned id/digest/profile coordinates and both recovered models were correct.",
+  "candidate_changes": false,
+  "followup_record": "cli-comparator-correction.json",
+  "scope": "Self-authored proof assertion; not a defect in sealed model, codec or package."
+}

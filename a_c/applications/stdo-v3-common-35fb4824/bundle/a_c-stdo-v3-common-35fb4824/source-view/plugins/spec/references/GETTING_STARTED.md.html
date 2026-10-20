@@ -1,0 +1,655 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>plugins/spec/references/GETTING_STARTED.md</title><style>body{font:14px system-ui;margin:24px;background:#101720;color:#dfeaf4}a{color:#87c7ff}pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5;counter-reset:line}span{display:block}span:before{content:attr(data-line);display:inline-block;width:4em;color:#7392aa;user-select:none}span:target{background:#36481d}</style><h1>plugins/spec/references/GETTING_STARTED.md</h1><p>Exact frozen source · SHA256 e5f7402194c39192a9825603c0f6f69751e8aba01ca9f9eea8ef4a4c8969acec</p><pre><span id="L1" data-line="1"># Using STDO</span>
+<span id="L2" data-line="2"></span>
+<span id="L3" data-line="3">This guide is the practical entrypoint for a person or LLM entering an</span>
+<span id="L4" data-line="4">STDO-governed project. It answers four questions:</span>
+<span id="L5" data-line="5"></span>
+<span id="L6" data-line="6">1. How do I get ready to work?</span>
+<span id="L7" data-line="7">2. How do I iterate requirements?</span>
+<span id="L8" data-line="8">3. What authorizes code development and testing?</span>
+<span id="L9" data-line="9">4. How do I monitor progress and help triage?</span>
+<span id="L10" data-line="10"></span>
+<span id="L11" data-line="11">This guide and its companion skills are non-deciding interaction projections.</span>
+<span id="L12" data-line="12">The project&#x27;s exact installed STDO cut and Product-owned authority remain the</span>
+<span id="L13" data-line="13">governing sources.</span>
+<span id="L14" data-line="14"></span>
+<span id="L15" data-line="15">## Contents</span>
+<span id="L16" data-line="16"></span>
+<span id="L17" data-line="17">- [Get Ready To Work](#1-get-ready-to-work)</span>
+<span id="L18" data-line="18">- [Iterate Requirements](#2-iterate-requirements)</span>
+<span id="L19" data-line="19">- [Start Code Development And Testing](#3-start-code-development-and-testing)</span>
+<span id="L20" data-line="20">- [Monitor And Help Triage](#4-monitor-and-help-triage)</span>
+<span id="L21" data-line="21">- [Common Stops](#common-stops)</span>
+<span id="L22" data-line="22">- [Owning References](#owning-references)</span>
+<span id="L23" data-line="23"></span>
+<span id="L24" data-line="24">## The Operating Loop</span>
+<span id="L25" data-line="25"></span>
+<span id="L26" data-line="26">Keep these distinct:</span>
+<span id="L27" data-line="27"></span>
+<span id="L28" data-line="28">- an immutable STDO cut defines the selected method;</span>
+<span id="L29" data-line="29">- `stdo_&lt;label&gt;.json` selects that cut and locates the Product&#x27;s actual</span>
+<span id="L30" data-line="30">  authority, realization, and work carriers;</span>
+<span id="L31" data-line="31">- the project owns its Goals, Intent, Product, requirements, design, code,</span>
+<span id="L32" data-line="32">  tickets, decisions, and evidence; and</span>
+<span id="L33" data-line="33">- skills route common requests without becoming another method, workflow</span>
+<span id="L34" data-line="34">  engine, prompt engine, or source of truth.</span>
+<span id="L35" data-line="35"></span>
+<span id="L36" data-line="36">```text</span>
+<span id="L37" data-line="37">request</span>
+<span id="L38" data-line="38">  -&gt; verify the exact basis and current outcome</span>
+<span id="L39" data-line="39">  -&gt; triage, select the smallest work carrier, and admit a run contract</span>
+<span id="L40" data-line="40">  -&gt; re-enter at the first changed layer</span>
+<span id="L41" data-line="41">  -&gt; update constitutional truth and accepted design when required</span>
+<span id="L42" data-line="42">  -&gt; construct code and tests when authorized</span>
+<span id="L43" data-line="43">  -&gt; return an exact candidate</span>
+<span id="L44" data-line="44">  -&gt; independently review when required</span>
+<span id="L45" data-line="45">  -&gt; Product-owned disposition and checkpoint</span>
+<span id="L46" data-line="46">  -&gt; status, evidence, and the next authorized action</span>
+<span id="L47" data-line="47">```</span>
+<span id="L48" data-line="48"></span>
+<span id="L49" data-line="49">STDO constrains governed relations. It does not prescribe an actor count,</span>
+<span id="L50" data-line="50">repository layout, prompt construction engine, internal decomposition, search</span>
+<span id="L51" data-line="51">procedure, or tool sequence where those choices cannot change a governed</span>
+<span id="L52" data-line="52">semantic, authority, evidence, safety, or release property.</span>
+<span id="L53" data-line="53"></span>
+<span id="L54" data-line="54">## 1. Get Ready To Work</span>
+<span id="L55" data-line="55"></span>
+<span id="L56" data-line="56">### Existing STDO-Governed Project</span>
+<span id="L57" data-line="57"></span>
+<span id="L58" data-line="58">Locate the one Product Definition that applies to the requested Product scope.</span>
+<span id="L59" data-line="59">Directory nesting does not imply governance. Require exactly one applicable</span>
+<span id="L60" data-line="60">`stdo_&lt;label&gt;.json`.</span>
+<span id="L61" data-line="61"></span>
+<span id="L62" data-line="62">Start read-only:</span>
+<span id="L63" data-line="63"></span>
+<span id="L64" data-line="64">```sh</span>
+<span id="L65" data-line="65">stdo status --definition &lt;path-to-definition&gt; --verify</span>
+<span id="L66" data-line="66">```</span>
+<span id="L67" data-line="67"></span>
+<span id="L68" data-line="68">If the selected cut is absent and installation is authorized, synchronize that</span>
+<span id="L69" data-line="69">exact pinned basis and verify it again:</span>
+<span id="L70" data-line="70"></span>
+<span id="L71" data-line="71">```sh</span>
+<span id="L72" data-line="72">stdo sync --definition &lt;path-to-definition&gt;</span>
+<span id="L73" data-line="73">stdo status --definition &lt;path-to-definition&gt; --verify</span>
+<span id="L74" data-line="74">```</span>
+<span id="L75" data-line="75"></span>
+<span id="L76" data-line="76">`sync` may install bytes. It never follows the moving selector or edits the</span>
+<span id="L77" data-line="77">Product Definition. The shell command `stdo status` reports basis and install</span>
+<span id="L78" data-line="78">health; it is not a Product-delivery status report.</span>
+<span id="L79" data-line="79"></span>
+<span id="L80" data-line="80">Before acting, resolve:</span>
+<span id="L81" data-line="81"></span>
+<span id="L82" data-line="82">1. the Product Definition bootstrap entrypoint;</span>
+<span id="L83" data-line="83">2. the Product-owned accepted Project Reference-Frame Basis;</span>
+<span id="L84" data-line="84">3. current Goals;</span>
+<span id="L85" data-line="85">4. Intent and Product;</span>
+<span id="L86" data-line="86">5. only the affected requirements and accepted design;</span>
+<span id="L87" data-line="87">6. the admitted ticket, sprint entry, or equivalent work carrier; and</span>
+<span id="L88" data-line="88">7. only the exact owning standard needed for the action.</span>
+<span id="L89" data-line="89"></span>
+<span id="L90" data-line="90">Acquire item 7 under the basis&#x27;s `ACTIVATION.md` section 2, Acquisition: a</span>
+<span id="L91" data-line="91">derived surface whose sources are current where one serves the task,</span>
+<span id="L92" data-line="92">otherwise the owning sections that decide it. Do not bulk-load the</span>
+<span id="L93" data-line="93">standards corpus. A new LLM should be able to state this</span>
+<span id="L94" data-line="94">compact basis before it changes anything:</span>
+<span id="L95" data-line="95"></span>
+<span id="L96" data-line="96">```text</span>
+<span id="L97" data-line="97">Product definition: &lt;identity and path&gt;</span>
+<span id="L98" data-line="98">STDO basis: &lt;immutable cut and manifest digest&gt;</span>
+<span id="L99" data-line="99">Current outcome: &lt;Goal or Product outcome&gt;</span>
+<span id="L100" data-line="100">Work authority: &lt;carrier and re-entry point&gt;</span>
+<span id="L101" data-line="101">Role and grant: &lt;actor, operation, subject, write territory&gt;</span>
+<span id="L102" data-line="102">Proof boundary: &lt;claim and required evidence&gt;</span>
+<span id="L103" data-line="103">Stop/re-entry conditions: &lt;conditions&gt;</span>
+<span id="L104" data-line="104">ACTION: &lt;one bounded requested action&gt;</span>
+<span id="L105" data-line="105">```</span>
+<span id="L106" data-line="106"></span>
+<span id="L107" data-line="107">The action comes last. The preceding context qualifies the work without</span>
+<span id="L108" data-line="108">prescribing irrelevant internal procedure.</span>
+<span id="L109" data-line="109"></span>
+<span id="L110" data-line="110">### Verify The Host&#x27;s Plugin Copy</span>
+<span id="L111" data-line="111"></span>
+<span id="L112" data-line="112">Basis verification checks the selected installed method. If the host loads a</span>
+<span id="L113" data-line="113">separate copy of this plugin, also compare that actual loaded root against</span>
+<span id="L114" data-line="114">`auxiliary.plugin.members` in the verified installed-release manifest. Check</span>
+<span id="L115" data-line="115">every managed member&#x27;s relative path and SHA-256, including both host plugin</span>
+<span id="L116" data-line="116">manifests and all referenced skill and guidance files. Missing, changed or</span>
+<span id="L117" data-line="117">unexpected managed files are a mismatch. A matching plugin version string,</span>
+<span id="L118" data-line="118">name, repository or advertised install location does not establish identity.</span>
+<span id="L119" data-line="119">Record the host-selected plugin root and the exact manifest used for this</span>
+<span id="L120" data-line="120">comparison; if the host cannot identify that root, installed-plugin identity</span>
+<span id="L121" data-line="121">is unresolved. Keep host-managed caches or metadata outside the compared</span>
+<span id="L122" data-line="122">plugin member tree.</span>
+<span id="L123" data-line="123"></span>
+<span id="L124" data-line="124">Use [Product Basis Selection](PRODUCT_BASIS.md#read-a-member-from-that-basis)</span>
+<span id="L125" data-line="125">to resolve the actual method members and anchors before following a skill&#x27;s</span>
+<span id="L126" data-line="126">route. Neither a plugin installation nor a skill name changes the Product&#x27;s</span>
+<span id="L127" data-line="127">selected method basis.</span>
+<span id="L128" data-line="128"></span>
+<span id="L129" data-line="129">### New Project</span>
+<span id="L130" data-line="130"></span>
+<span id="L131" data-line="131">Select one immutable product-local cut and its qualified repository ref. For</span>
+<span id="L132" data-line="132">the coordinated STDO distribution after publication, with every value below</span>
+<span id="L133" data-line="133">bound at its RC cut under `RELEASE.md` sections 6 and 7:</span>
+<span id="L134" data-line="134"></span>
+<span id="L135" data-line="135">```sh</span>
+<span id="L136" data-line="136">STDO_CUT=&#x27;v&lt;version&gt;-rc.&lt;n&gt;&#x27;</span>
+<span id="L137" data-line="137">STDO_REF=&#x27;specification_methodology/v&lt;version&gt;-rc.&lt;n&gt;&#x27;</span>
+<span id="L138" data-line="138">STDO_TOOLCHAIN_MIN=&#x27;&lt;toolchain-minimum&gt;&#x27;</span>
+<span id="L139" data-line="139">STDO_TOOLCHAIN_SPEC=&#x27;git+https://github.com/foolishimp/specification_methodology.git@specification_methodology/v&lt;version&gt;-rc.&lt;n&gt;#subdirectory=specification_methodology&#x27;</span>
+<span id="L140" data-line="140"></span>
+<span id="L141" data-line="141">stdo_version_at_least() {</span>
+<span id="L142" data-line="142">  python3 - &quot;$1&quot; &quot;$2&quot; &lt;&lt;&#x27;PY&#x27;</span>
+<span id="L143" data-line="143">import re</span>
+<span id="L144" data-line="144">import sys</span>
+<span id="L145" data-line="145"></span>
+<span id="L146" data-line="146">def version(value):</span>
+<span id="L147" data-line="147">    match = re.fullmatch(r&quot;(\d+)\.(\d+)\.(\d+)(?:[.+-].*)?&quot;, value)</span>
+<span id="L148" data-line="148">    if match is None:</span>
+<span id="L149" data-line="149">        raise SystemExit(f&quot;invalid stdo-toolchain version: {value}&quot;)</span>
+<span id="L150" data-line="150">    return tuple(map(int, match.groups()))</span>
+<span id="L151" data-line="151"></span>
+<span id="L152" data-line="152">raise SystemExit(0 if version(sys.argv[1]) &gt;= version(sys.argv[2]) else 1)</span>
+<span id="L153" data-line="153">PY</span>
+<span id="L154" data-line="154">}</span>
+<span id="L155" data-line="155"></span>
+<span id="L156" data-line="156">if ! command -v stdo &gt;/dev/null 2&gt;&amp;1; then</span>
+<span id="L157" data-line="157">  pipx install &quot;$STDO_TOOLCHAIN_SPEC&quot;</span>
+<span id="L158" data-line="158">elif ! stdo_version_at_least \</span>
+<span id="L159" data-line="159">  &quot;$(stdo --version | awk &#x27;{print $NF}&#x27;)&quot; &quot;$STDO_TOOLCHAIN_MIN&quot;; then</span>
+<span id="L160" data-line="160">  pipx install --force &quot;$STDO_TOOLCHAIN_SPEC&quot;</span>
+<span id="L161" data-line="161">fi</span>
+<span id="L162" data-line="162"></span>
+<span id="L163" data-line="163">stdo --version</span>
+<span id="L164" data-line="164">stdo_version_at_least \</span>
+<span id="L165" data-line="165">  &quot;$(stdo --version | awk &#x27;{print $NF}&#x27;)&quot; &quot;$STDO_TOOLCHAIN_MIN&quot; || {</span>
+<span id="L166" data-line="166">    echo &quot;stdo-toolchain ${STDO_TOOLCHAIN_MIN} or newer is required&quot; &gt;&amp;2</span>
+<span id="L167" data-line="167">    exit 1</span>
+<span id="L168" data-line="168">  }</span>
+<span id="L169" data-line="169"></span>
+<span id="L170" data-line="170">stdo install &quot;$STDO_CUT&quot;</span>
+<span id="L171" data-line="171">stdo verify &quot;$STDO_CUT&quot;</span>
+<span id="L172" data-line="172">```</span>
+<span id="L173" data-line="173"></span>
+<span id="L174" data-line="174">The exact qualified cut install is the missing-tool path. The explicit</span>
+<span id="L175" data-line="175">`pipx install --force` branch upgrades an older installation. Do not continue</span>
+<span id="L176" data-line="176">to `stdo install` unless the final version check accepts `stdo-toolchain</span>
+<span id="L177" data-line="177">&lt;toolchain-minimum&gt;` or newer.</span>
+<span id="L178" data-line="178"></span>
+<span id="L179" data-line="179">Resolve and copy the Product Definition and Project Reference-Frame Basis</span>
+<span id="L180" data-line="180">templates from that same installed cut:</span>
+<span id="L181" data-line="181"></span>
+<span id="L182" data-line="182">```sh</span>
+<span id="L183" data-line="183">STDO_TEMPLATE_PATH=&quot;$(</span>
+<span id="L184" data-line="184">  stdo resolve \</span>
+<span id="L185" data-line="185">    &quot;stdo://releases/${STDO_CUT}/standards/templates/PRODUCT_DEFINITION_TEMPLATE.json&quot; |</span>
+<span id="L186" data-line="186">    python3 -c &#x27;import json, sys; print(json.load(sys.stdin)[&quot;path&quot;])&#x27;</span>
+<span id="L187" data-line="187">)&quot;</span>
+<span id="L188" data-line="188">STDO_FRAME_TEMPLATE_PATH=&quot;$(</span>
+<span id="L189" data-line="189">  stdo resolve \</span>
+<span id="L190" data-line="190">    &quot;stdo://releases/${STDO_CUT}/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md&quot; |</span>
+<span id="L191" data-line="191">    python3 -c &#x27;import json, sys; print(json.load(sys.stdin)[&quot;path&quot;])&#x27;</span>
+<span id="L192" data-line="192">)&quot;</span>
+<span id="L193" data-line="193"></span>
+<span id="L194" data-line="194">python3 - \</span>
+<span id="L195" data-line="195">  &quot;$STDO_TEMPLATE_PATH&quot; ./stdo_default.json \</span>
+<span id="L196" data-line="196">  &quot;$STDO_FRAME_TEMPLATE_PATH&quot; ./specification/REFERENCE_FRAME_BASIS.md &lt;&lt;&#x27;PY&#x27;</span>
+<span id="L197" data-line="197">import os</span>
+<span id="L198" data-line="198">import pathlib</span>
+<span id="L199" data-line="199">import sys</span>
+<span id="L200" data-line="200">import tempfile</span>
+<span id="L201" data-line="201"></span>
+<span id="L202" data-line="202">arguments = sys.argv[1:]</span>
+<span id="L203" data-line="203">if not arguments or len(arguments) % 2:</span>
+<span id="L204" data-line="204">    raise SystemExit(&quot;expected one or more source/target pairs&quot;)</span>
+<span id="L205" data-line="205"></span>
+<span id="L206" data-line="206">pairs = [</span>
+<span id="L207" data-line="207">    (pathlib.Path(source_name), pathlib.Path(target_name))</span>
+<span id="L208" data-line="208">    for source_name, target_name in zip(</span>
+<span id="L209" data-line="209">        arguments[::2], arguments[1::2], strict=True</span>
+<span id="L210" data-line="210">    )</span>
+<span id="L211" data-line="211">]</span>
+<span id="L212" data-line="212">if len({target.absolute() for _, target in pairs}) != len(pairs):</span>
+<span id="L213" data-line="213">    raise SystemExit(&quot;refusing duplicate STDO setup targets&quot;)</span>
+<span id="L214" data-line="214"></span>
+<span id="L215" data-line="215"># Preflight every source and target before creating a directory or file.</span>
+<span id="L216" data-line="216">prepared = []</span>
+<span id="L217" data-line="217">for source, target in pairs:</span>
+<span id="L218" data-line="218">    if not source.is_file():</span>
+<span id="L219" data-line="219">        raise SystemExit(f&quot;missing STDO setup source: {source}&quot;)</span>
+<span id="L220" data-line="220">    payload = source.read_bytes()</span>
+<span id="L221" data-line="221">    if target.exists() or target.is_symlink():</span>
+<span id="L222" data-line="222">        raise SystemExit(</span>
+<span id="L223" data-line="223">            f&quot;refusing to overwrite existing STDO setup file: {target}&quot;</span>
+<span id="L224" data-line="224">        )</span>
+<span id="L225" data-line="225"></span>
+<span id="L226" data-line="226">    ancestor = target.parent</span>
+<span id="L227" data-line="227">    while not ancestor.exists() and not ancestor.is_symlink():</span>
+<span id="L228" data-line="228">        ancestor = ancestor.parent</span>
+<span id="L229" data-line="229">    if not ancestor.is_dir():</span>
+<span id="L230" data-line="230">        raise SystemExit(f&quot;STDO setup target parent is not a directory: {ancestor}&quot;)</span>
+<span id="L231" data-line="231">    prepared.append((target, payload, source.stat().st_mode &amp; 0o777))</span>
+<span id="L232" data-line="232"></span>
+<span id="L233" data-line="233">created_directories = []</span>
+<span id="L234" data-line="234">staged = []</span>
+<span id="L235" data-line="235">owned_outputs = {}</span>
+<span id="L236" data-line="236"></span>
+<span id="L237" data-line="237"></span>
+<span id="L238" data-line="238">def create_parents(parent):</span>
+<span id="L239" data-line="239">    missing = []</span>
+<span id="L240" data-line="240">    cursor = parent</span>
+<span id="L241" data-line="241">    while not cursor.exists():</span>
+<span id="L242" data-line="242">        missing.append(cursor)</span>
+<span id="L243" data-line="243">        cursor = cursor.parent</span>
+<span id="L244" data-line="244">    for directory in reversed(missing):</span>
+<span id="L245" data-line="245">        try:</span>
+<span id="L246" data-line="246">            directory.mkdir()</span>
+<span id="L247" data-line="247">        except FileExistsError:</span>
+<span id="L248" data-line="248">            if not directory.is_dir():</span>
+<span id="L249" data-line="249">                raise</span>
+<span id="L250" data-line="250">        else:</span>
+<span id="L251" data-line="251">            created_directories.append(directory)</span>
+<span id="L252" data-line="252"></span>
+<span id="L253" data-line="253"></span>
+<span id="L254" data-line="254">def remember_owned(path, identity=None):</span>
+<span id="L255" data-line="255">    if identity is None:</span>
+<span id="L256" data-line="256">        stat = path.stat()</span>
+<span id="L257" data-line="257">        identity = (stat.st_dev, stat.st_ino)</span>
+<span id="L258" data-line="258">    owned_outputs.setdefault(path, set()).add(identity)</span>
+<span id="L259" data-line="259"></span>
+<span id="L260" data-line="260"></span>
+<span id="L261" data-line="261">def remove_if_owned(path):</span>
+<span id="L262" data-line="262">    identities = owned_outputs.get(path, set())</span>
+<span id="L263" data-line="263">    try:</span>
+<span id="L264" data-line="264">        stat = path.stat()</span>
+<span id="L265" data-line="265">    except FileNotFoundError:</span>
+<span id="L266" data-line="266">        return</span>
+<span id="L267" data-line="267">    if (stat.st_dev, stat.st_ino) in identities:</span>
+<span id="L268" data-line="268">        path.unlink()</span>
+<span id="L269" data-line="269"></span>
+<span id="L270" data-line="270">try:</span>
+<span id="L271" data-line="271">    for target, payload, mode in prepared:</span>
+<span id="L272" data-line="272">        create_parents(target.parent)</span>
+<span id="L273" data-line="273">        descriptor, stage_name = tempfile.mkstemp(</span>
+<span id="L274" data-line="274">            dir=target.parent,</span>
+<span id="L275" data-line="275">            prefix=f&quot;.{target.name}.stdo-stage-&quot;,</span>
+<span id="L276" data-line="276">        )</span>
+<span id="L277" data-line="277">        stage = pathlib.Path(stage_name)</span>
+<span id="L278" data-line="278">        staged.append(stage)</span>
+<span id="L279" data-line="279">        os.fchmod(descriptor, mode)</span>
+<span id="L280" data-line="280">        with os.fdopen(descriptor, &quot;wb&quot;) as output:</span>
+<span id="L281" data-line="281">            output.write(payload)</span>
+<span id="L282" data-line="282">            output.flush()</span>
+<span id="L283" data-line="283">            os.fsync(output.fileno())</span>
+<span id="L284" data-line="284"></span>
+<span id="L285" data-line="285">    # Reserve every final name without overwriting a racing existing file.</span>
+<span id="L286" data-line="286">    for target, _, _ in prepared:</span>
+<span id="L287" data-line="287">        descriptor = os.open(</span>
+<span id="L288" data-line="288">            target,</span>
+<span id="L289" data-line="289">            os.O_WRONLY | os.O_CREAT | os.O_EXCL,</span>
+<span id="L290" data-line="290">            0o600,</span>
+<span id="L291" data-line="291">        )</span>
+<span id="L292" data-line="292">        os.close(descriptor)</span>
+<span id="L293" data-line="293">        remember_owned(target)</span>
+<span id="L294" data-line="294"></span>
+<span id="L295" data-line="295">    # Each replacement is an atomic rename into a name reserved by this run.</span>
+<span id="L296" data-line="296">    for stage, (target, _, _) in zip(staged.copy(), prepared, strict=True):</span>
+<span id="L297" data-line="297">        stat = stage.stat()</span>
+<span id="L298" data-line="298">        remember_owned(target, (stat.st_dev, stat.st_ino))</span>
+<span id="L299" data-line="299">        os.replace(stage, target)</span>
+<span id="L300" data-line="300">        staged.remove(stage)</span>
+<span id="L301" data-line="301">except BaseException:</span>
+<span id="L302" data-line="302">    for target in reversed(list(owned_outputs)):</span>
+<span id="L303" data-line="303">        remove_if_owned(target)</span>
+<span id="L304" data-line="304">    for stage in staged:</span>
+<span id="L305" data-line="305">        stage.unlink(missing_ok=True)</span>
+<span id="L306" data-line="306">    for directory in reversed(created_directories):</span>
+<span id="L307" data-line="307">        try:</span>
+<span id="L308" data-line="308">            directory.rmdir()</span>
+<span id="L309" data-line="309">        except OSError:</span>
+<span id="L310" data-line="310">            pass</span>
+<span id="L311" data-line="311">    raise</span>
+<span id="L312" data-line="312">PY</span>
+<span id="L313" data-line="313">```</span>
+<span id="L314" data-line="314"></span>
+<span id="L315" data-line="315">Use the installed cut&#x27;s `templates/README.md` to fill the definition over the</span>
+<span id="L316" data-line="316">existing layout. Bind a real Product-owned reference-frame basis, `WHAT`,</span>
+<span id="L317" data-line="317">`HOW`, work carriers, and every known Product composition edge. Replace every</span>
+<span id="L318" data-line="318">placeholder. A delegated agent may draft a complete provisional basis, but it</span>
+<span id="L319" data-line="319">must return that exact draft and stop for Product-owner ratification. The</span>
+<span id="L320" data-line="320">Product owner records and admits acceptance; the drafting agent cannot record,</span>
+<span id="L321" data-line="321">admit, or infer that acceptance itself. A copied or completed template is not</span>
+<span id="L322" data-line="322">accepted merely because it exists.</span>
+<span id="L323" data-line="323"></span>
+<span id="L324" data-line="324">Then preview and install only the marker-owned agent bootstrap:</span>
+<span id="L325" data-line="325"></span>
+<span id="L326" data-line="326">```sh</span>
+<span id="L327" data-line="327">stdo sync --definition stdo_default.json</span>
+<span id="L328" data-line="328">stdo status --definition stdo_default.json --verify</span>
+<span id="L329" data-line="329">stdo bootstrap --definition stdo_default.json --dry-run</span>
+<span id="L330" data-line="330">stdo bootstrap --definition stdo_default.json</span>
+<span id="L331" data-line="331">```</span>
+<span id="L332" data-line="332"></span>
+<span id="L333" data-line="333">The packaged [Product Definition template guide](../../../standards/templates/README.md#product-definition-overlay)</span>
+<span id="L334" data-line="334">explains the fields and their required bindings; the</span>
+<span id="L335" data-line="335">[Project Reference-Frame Basis template](../../../standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md)</span>
+<span id="L336" data-line="336">provides the frame-basis declaration.</span>
+<span id="L337" data-line="337"></span>
+<span id="L338" data-line="338">### Install The Shared Skills</span>
+<span id="L339" data-line="339"></span>
+<span id="L340" data-line="340">The following install commands apply after coordinated publication.</span>
+<span id="L341" data-line="341">The `spec` plugin version and immutable repository cut are aligned at</span>
+<span id="L342" data-line="342">`&lt;version&gt;-rc.&lt;n&gt;`, bound at the RC cut under `RELEASE.md` section 7. An</span>
+<span id="L343" data-line="343">earlier cut retains its own plugin payload and never moves. The Specification Stack marketplace name is `specification_stack`.</span>
+<span id="L344" data-line="344"></span>
+<span id="L345" data-line="345">Claude Code:</span>
+<span id="L346" data-line="346"></span>
+<span id="L347" data-line="347">```sh</span>
+<span id="L348" data-line="348">SPEC_PLUGIN_REF=&#x27;specification_methodology/v&lt;version&gt;-rc.&lt;n&gt;&#x27;</span>
+<span id="L349" data-line="349">claude plugin marketplace add \</span>
+<span id="L350" data-line="350">  &quot;foolishimp/specification_methodology@${SPEC_PLUGIN_REF}&quot;</span>
+<span id="L351" data-line="351">claude plugin install spec@specification_stack</span>
+<span id="L352" data-line="352">```</span>
+<span id="L353" data-line="353"></span>
+<span id="L354" data-line="354">Codex:</span>
+<span id="L355" data-line="355"></span>
+<span id="L356" data-line="356">```sh</span>
+<span id="L357" data-line="357">SPEC_PLUGIN_REF=&#x27;specification_methodology/v&lt;version&gt;-rc.&lt;n&gt;&#x27;</span>
+<span id="L358" data-line="358">codex plugin marketplace add foolishimp/specification_methodology \</span>
+<span id="L359" data-line="359">  --ref &quot;$SPEC_PLUGIN_REF&quot;</span>
+<span id="L360" data-line="360">codex plugin add spec@specification_stack</span>
+<span id="L361" data-line="361">```</span>
+<span id="L362" data-line="362"></span>
+<span id="L363" data-line="363">Both hosts consume the same workflow skill bytes. Use this conversational</span>
+<span id="L364" data-line="364">convention:</span>
+<span id="L365" data-line="365"></span>
+<span id="L366" data-line="366">| Say | Portable skill | Claude | Codex |</span>
+<span id="L367" data-line="367">|---|---|---|---|</span>
+<span id="L368" data-line="368">| `stdo help` | `stdo-help` | `/spec:stdo-help` | `$spec:stdo-help` |</span>
+<span id="L369" data-line="369">| `stdo ticket` | `stdo-ticket` | `/spec:stdo-ticket` | `$spec:stdo-ticket` |</span>
+<span id="L370" data-line="370">| `stdo work` | `stdo-work` | `/spec:stdo-work` | `$spec:stdo-work` |</span>
+<span id="L371" data-line="371">| `stdo review` | `stdo-review` | `/spec:stdo-review` | `$spec:stdo-review` |</span>
+<span id="L372" data-line="372">| `stdo status` | `stdo-status` | `/spec:stdo-status` | `$spec:stdo-status` |</span>
+<span id="L373" data-line="373"></span>
+<span id="L374" data-line="374">Natural-language invocation remains valid. In chat, `stdo status` requests</span>
+<span id="L375" data-line="375">Product/work status through the skill. In a shell, `stdo status --definition</span>
+<span id="L376" data-line="376">...` remains the toolchain command for installed-basis health.</span>
+<span id="L377" data-line="377"></span>
+<span id="L378" data-line="378">## 2. Iterate Requirements</span>
+<span id="L379" data-line="379"></span>
+<span id="L380" data-line="380">Every feature, bug, failed test, operator finding, scenario failure, or release</span>
+<span id="L381" data-line="381">concern begins with intake triage. The intake label does not decide where work</span>
+<span id="L382" data-line="382">starts.</span>
+<span id="L383" data-line="383"></span>
+<span id="L384" data-line="384">Start with available facts: declared authority and owner routes, complete</span>
+<span id="L385" data-line="385">relevant Public serialization changes, and accepted-design trace coverage.</span>
+<span id="L386" data-line="386">Their tools report exact inputs, outputs and explicit unknowns. Judge the</span>
+<span id="L387" data-line="387">remaining question of meaning or materiality and record that judgment with its</span>
+<span id="L388" data-line="388">support in the existing work carrier. Reuse it while the question, subject,</span>
+<span id="L389" data-line="389">basis and supporting premises still apply; a role change alone is no reason to</span>
+<span id="L390" data-line="390">repeat the classification. The owning rule is `SPEC_METHOD.md` section 4,</span>
+<span id="L391" data-line="391">Computed classification and treatment, in a basis that contains that successor rule.</span>
+<span id="L392" data-line="392">On an earlier basis, re-enter its owning intake and construction law; this</span>
+<span id="L393" data-line="393">guide does not adopt a successor.</span>
+<span id="L394" data-line="394"></span>
+<span id="L395" data-line="395">A helper change that violates an unchanged requirement can be repaired within</span>
+<span id="L396" data-line="396">its existing grant. Repricing is needed when the selected outcome needs new</span>
+<span id="L397" data-line="397">governing meaning. Candidate bytes do not make that choice. When the intended</span>
+<span id="L398" data-line="398">outcome is unclear, keep the owner question explicit and resolve only what</span>
+<span id="L399" data-line="399">the next action needs.</span>
+<span id="L400" data-line="400"></span>
+<span id="L401" data-line="401">### Find The First Changed Layer</span>
+<span id="L402" data-line="402"></span>
+<span id="L403" data-line="403">The table quotes SPEC_METHOD §4 Change classes, which owns them.</span>
+<span id="L404" data-line="404"></span>
+<span id="L405" data-line="405">| Change | Change class | Re-entry point |</span>
+<span id="L406" data-line="406">|---|---|---|</span>
+<span id="L407" data-line="407">| current bounded work-wave focus changes | `goal_reprice` | Goals |</span>
+<span id="L408" data-line="408">| directional or scope change | `intent_reprice` | Intent |</span>
+<span id="L409" data-line="409">| current product realisation changes while directional intent stays stable | `product_reprice` | Product |</span>
+<span id="L410" data-line="410">| constitutional truth changes while project direction stays stable | `requirement_reprice` | Requirements |</span>
+<span id="L411" data-line="411">| realisation structure changes while active intent and requirement truth stay stable | `design_reframe` | Design |</span>
+<span id="L412" data-line="412">| local code, configuration or attribute change with no intended constitutional or structural change; it must prove no upstream drift | `realization_refactor` | the realised surface only |</span>
+<span id="L413" data-line="413"></span>
+<span id="L414" data-line="414">Before substantive execution, establish applicable upstream work authority,</span>
+<span id="L415" data-line="415">then derive and admit one run-scoped execution contract from the first matching</span>
+<span id="L416" data-line="416">row. A ticket cannot substitute for missing upstream authority. For work inside</span>
+<span id="L417" data-line="417">an admitted sprint, the local carrier boundary is that sprint; otherwise it is</span>
+<span id="L418" data-line="418">the current run.</span>
+<span id="L419" data-line="419"></span>
+<span id="L420" data-line="420">| Situation | Smallest carrier | New durable ticket? |</span>
+<span id="L421" data-line="421">|---|---|---|</span>
+<span id="L422" data-line="422">| no applicable upstream work authority exists | none | no substitute ticket; stop or re-enter |</span>
+<span id="L423" data-line="423">| an admitted ticket already covers the exact work | derive the run contract from it | no; reuse it |</span>
+<span id="L424" data-line="424">| no exact admitted ticket covers the work and independent state is needed beyond the local carrier boundary | durable ticket plus run contract | yes, under ticket-state authority |</span>
+<span id="L425" data-line="425">| no exact admitted ticket covers work that ends inside its admitted sprint | manifest-local iteration entry | no |</span>
+<span id="L426" data-line="426">| no exact admitted ticket or sprint covers authorized work that ends in this run | intake-drafted run contract | no |</span>
+<span id="L427" data-line="427"></span>
+<span id="L428" data-line="428">`Ticket-shaped` describes required execution-contract fields; it does not mean</span>
+<span id="L429" data-line="429">“create a ticket.” Drafting, admission, and execution may occur in the same</span>
+<span id="L430" data-line="430">invocation. A drafted or rejected contract stops before construction, while an</span>
+<span id="L431" data-line="431">admitted one does not require another ticket, turn, or approval ceremony.</span>
+<span id="L432" data-line="432">The admitted result names the Product-bound mechanism and authority, exact</span>
+<span id="L433" data-line="433">contract identity or digest, decision, and evidence; the drafting model cannot</span>
+<span id="L434" data-line="434">supply those coordinates by assertion. The contract also names an authorized</span>
+<span id="L435" data-line="435">Product-bound durable result/evidence surface. Every result, withheld closure,</span>
+<span id="L436" data-line="436">and residual is recorded there before return; a conversation return alone is</span>
+<span id="L437" data-line="437">not durable evidence.</span>
+<span id="L438" data-line="438">An exact owner instruction or admitted grant that already covers the bounded</span>
+<span id="L439" data-line="439">work is consumed once and cited. Establishing that binding does not require</span>
+<span id="L440" data-line="440">the owner to repeat the same authorization.</span>
+<span id="L441" data-line="441">If the run discovers an obligation that needs state beyond the local carrier</span>
+<span id="L442" data-line="442">boundary, persist it only when the current exact grant already includes the</span>
+<span id="L443" data-line="443">required ticket-state mutation. Otherwise retain it in the contract&#x27;s named</span>
+<span id="L444" data-line="444">durable result/evidence surface or an already-authorized enclosing carrier,</span>
+<span id="L445" data-line="445">mark closure withheld, and return the re-entry pressure plus an explicit `stdo</span>
+<span id="L446" data-line="446">ticket` route without invoking it.</span>
+<span id="L447" data-line="447"></span>
+<span id="L448" data-line="448">The base ticket fields are exactly `id`, `title`, `type`, `ticket_category`,</span>
+<span id="L449" data-line="449">`status`, `goal`, `change_intent`, `change_class`, `re_entry_point`,</span>
+<span id="L450" data-line="450">`triaged_at`, `created_at`, and `updated_at`. Execution admission additionally</span>
+<span id="L451" data-line="451">binds `target_truth`, relevant `superseded_truth`, `closure_law`,</span>
+<span id="L452" data-line="452">`evaluation_criteria`, `non_closure_conditions`, and `proof_surface`. Record</span>
+<span id="L453" data-line="453">dependencies where applicable. The Product Definition locates the actual</span>
+<span id="L454" data-line="454">lanes; `.ai-workspace/tickets/` is only the default.</span>
+<span id="L455" data-line="455"></span>
+<span id="L456" data-line="456">### Change Requirement Truth</span>
+<span id="L457" data-line="457"></span>
+<span id="L458" data-line="458">For `requirement_reprice`:</span>
+<span id="L459" data-line="459"></span>
+<span id="L460" data-line="460">1. confirm that Goals, Intent, and Product still support the requirement;</span>
+<span id="L461" data-line="461">2. establish the new present-tense requirement version as the sole operative</span>
+<span id="L462" data-line="462">   truth; supersede or withdraw a published live domain artifact instead of</span>
+<span id="L463" data-line="463">   silently correcting it in place;</span>
+<span id="L464" data-line="464">3. give each requirement family `Family`, lifecycle `Status`, and `Category`;</span>
+<span id="L465" data-line="465">4. state stable obligations and explicit acceptance criteria;</span>
+<span id="L466" data-line="466">5. provide written testcase or other proof authority;</span>
+<span id="L467" data-line="467">6. expose lifecycle gaps rather than letting design or code decide them;</span>
+<span id="L468" data-line="468">7. leave incidental realization choice in design; and</span>
+<span id="L469" data-line="469">8. re-derive affected design, scenarios, code, and proof.</span>
+<span id="L470" data-line="470"></span>
+<span id="L471" data-line="471">If the requirement already exists but its structural realization is missing,</span>
+<span id="L472" data-line="472">re-enter design. If requirements and design are current and code deviated, use</span>
+<span id="L473" data-line="473">`realization_refactor`. Current code is evidence, not authority.</span>
+<span id="L474" data-line="474"></span>
+<span id="L475" data-line="475">## 3. Start Code Development And Testing</span>
+<span id="L476" data-line="476"></span>
+<span id="L477" data-line="477">Raw prompt wording does not authorize implementation. Code work begins when an</span>
+<span id="L478" data-line="478">admitted work carrier supplies a reconstructable basis:</span>
+<span id="L479" data-line="479"></span>
+<span id="L480" data-line="480">- selected Product outcome;</span>
+<span id="L481" data-line="481">- lawful re-entry point and target truth;</span>
+<span id="L482" data-line="482">- governing requirement and accepted design where required;</span>
+<span id="L483" data-line="483">- smallest coherent affected relation set;</span>
+<span id="L484" data-line="484">- exact operation grant, mutation subject, and write territory;</span>
+<span id="L485" data-line="485">- closure law, evaluation criteria, and non-closure conditions; and</span>
+<span id="L486" data-line="486">- proof, review, stop, and upstream re-entry conditions.</span>
+<span id="L487" data-line="487"></span>
+<span id="L488" data-line="488">When the Product adopts the optional Executive baseline profile</span>
+<span id="L489" data-line="489">(`EXECUTIVE_BASELINE.md`), the practical</span>
+<span id="L490" data-line="490">split is:</span>
+<span id="L491" data-line="491"></span>
+<span id="L492" data-line="492">| Frame | Owns | Does not gain automatically |</span>
+<span id="L493" data-line="493">|---|---|---|</span>
+<span id="L494" data-line="494">| Executive | bounded attention, activation, result consumption, Product-owned priority and boundary effect, disposition, checkpoint, next already-authorized action | implementation, publication, or new decision authority |</span>
+<span id="L495" data-line="495">| Worker | bounded construction, tests, and self-review under the exact operation grant | acceptance, independent review, or continuation |</span>
+<span id="L496" data-line="496">| Reviewer | independent evaluation and evidence-bound technical triage for one exact claim | repair, Product priority, disposition, or next activation |</span>
+<span id="L497" data-line="497"></span>
+<span id="L498" data-line="498">The frame label grants nothing. The Project Reference-Frame Basis binds the</span>
+<span id="L499" data-line="499">actors, capabilities, authorities, results, scales, cutoff, hard stops, and</span>
+<span id="L500" data-line="500">invalidation law. One person or agent may occupy different frames across</span>
+<span id="L501" data-line="501">different claims only when every grant and any claimed independence remain</span>
+<span id="L502" data-line="502">valid.</span>
+<span id="L503" data-line="503"></span>
+<span id="L504" data-line="504">Select frames by their applicability conditions. A known false condition omits</span>
+<span id="L505" data-line="505">that evaluation; a true condition requires its exact result; an unknown</span>
+<span id="L506" data-line="506">condition remains unresolved until sufficient evidence or judgment resolves</span>
+<span id="L507" data-line="507">it. A caller&#x27;s list is not proof that every required owner evaluation was</span>
+<span id="L508" data-line="508">included. The accepted frame basis may allow a direct Writer to finish a</span>
+<span id="L509" data-line="509">single-context outcome under an existing exact grant. Use that path when</span>
+<span id="L510" data-line="510">sufficient. Material dependencies, authority boundaries or context limits can</span>
+<span id="L511" data-line="511">require Executive coordination; applicable independence can require Reviewer.</span>
+<span id="L512" data-line="512">Neither is an automatic step for every change. An actor occupying Executive</span>
+<span id="L513" data-line="513">must enter a separately bound Writer activation before editing files or Git.</span>
+<span id="L514" data-line="514"></span>
+<span id="L515" data-line="515">### Derive Tests From Authority</span>
+<span id="L516" data-line="516"></span>
+<span id="L517" data-line="517">```text</span>
+<span id="L518" data-line="518">work carrier -&gt; intake triage -&gt; re-entry point</span>
+<span id="L519" data-line="519">             -&gt; requirement/design/module/closure law -&gt; expected result</span>
+<span id="L520" data-line="520">```</span>
+<span id="L521" data-line="521"></span>
+<span id="L522" data-line="522">Use proof breadth that matches the claim:</span>
+<span id="L523" data-line="523"></span>
+<span id="L524" data-line="524">- unit tests prove module-owned law;</span>
+<span id="L525" data-line="525">- integration tests prove participating boundaries together;</span>
+<span id="L526" data-line="526">- harnessed sandbox UAT proves a composed Product path deterministically;</span>
+<span id="L527" data-line="527">- live sandbox UAT crosses the real external worker or service when the claim</span>
+<span id="L528" data-line="528">  depends on that live boundary; and</span>
+<span id="L529" data-line="529">- installed-development proof exercises the built or installed Product through</span>
+<span id="L530" data-line="530">  its declared public path.</span>
+<span id="L531" data-line="531"></span>
+<span id="L532" data-line="532">Start with the cheapest focused falsifier adequate for the active relation.</span>
+<span id="L533" data-line="533">Run broader qualification at the candidate boundary or earlier when risk</span>
+<span id="L534" data-line="534">requires it. Green evidence does not close a claim when it exercised the wrong</span>
+<span id="L535" data-line="535">subject, fixture, route, authority, or external-boundary substitute.</span>
+<span id="L536" data-line="536"></span>
+<span id="L537" data-line="537">A delegated Worker returns one exact candidate and evidence, then stops at its</span>
+<span id="L538" data-line="538">return boundary. Product-owned authority determines required assessment under</span>
+<span id="L539" data-line="539">the applicable law. Where required, Reviewer returns one closed result and</span>
+<span id="L540" data-line="540">the authorized consumer applies disposition. A sufficient direct Writer path</span>
+<span id="L541" data-line="541">records the bounded result without adding a review event.</span>
+<span id="L542" data-line="542"></span>
+<span id="L543" data-line="543">Closure means all applicable obligations are satisfied, supporting evidence</span>
+<span id="L544" data-line="544">is valid, required judgments and owner rulings are present, and no active</span>
+<span id="L545" data-line="545">non-closure condition remains. Review checks those conditions; holding a review</span>
+<span id="L546" data-line="546">does not close the work. Record state only under the existing mutation grant.</span>
+<span id="L547" data-line="547">Repair invalidates affected claims and support, while unrelated valid results</span>
+<span id="L548" data-line="548">remain usable. Candidate qualification, publication and adoption are distinct</span>
+<span id="L549" data-line="549">outcomes with their own conditions.</span>
+<span id="L550" data-line="550"></span>
+<span id="L551" data-line="551">## 4. Monitor And Help Triage</span>
+<span id="L552" data-line="552"></span>
+<span id="L553" data-line="553">Monitoring is read-only unless the user separately authorizes a state change.</span>
+<span id="L554" data-line="554">Read in this order:</span>
+<span id="L555" data-line="555"></span>
+<span id="L556" data-line="556">1. verify the selected STDO basis;</span>
+<span id="L557" data-line="557">2. read current Goals;</span>
+<span id="L558" data-line="558">3. read authoritative active, backlog, and completed work state;</span>
+<span id="L559" data-line="559">4. identify the accepted checkpoint and current workspace delta;</span>
+<span id="L560" data-line="560">5. inspect observed tests, installed/runtime evidence, and exact reviews; and</span>
+<span id="L561" data-line="561">6. compare claims only when they share the same subject and basis.</span>
+<span id="L562" data-line="562"></span>
+<span id="L563" data-line="563">Let tools produce identity, declared state, delta and freshness facts; retain</span>
+<span id="L564" data-line="564">an explicit unknown when the necessary producer or input is absent. Keep</span>
+<span id="L565" data-line="565">semantic sufficiency as a supported judgment. For continuation, consume the</span>
+<span id="L566" data-line="566">existing outcome, grant, facts, judgments and owner rulings, then refresh only</span>
+<span id="L567" data-line="567">changed inputs and affected support. Preserve each owner&#x27;s original ruling</span>
+<span id="L568" data-line="568">separately from interpretations. The existing ticket or proof carrier holds</span>
+<span id="L569" data-line="569">the question, exact subject/basis, supporting evidence, actor/authority,</span>
+<span id="L570" data-line="570">conclusion, uncertainty and observation that would revise a reusable judgment.</span>
+<span id="L571" data-line="571"></span>
+<span id="L572" data-line="572">For recovery, distinguish the requested outcome, observed effects and the</span>
+<span id="L573" data-line="573">effect owner&#x27;s retry rule. A refusal with no effect may leave work unfinished;</span>
+<span id="L574" data-line="574">it does not alone justify either completion or repetition. Unknown effects</span>
+<span id="L575" data-line="575">stay unknown until sufficient evidence resolves them. Suspend or conclude by</span>
+<span id="L576" data-line="576">recording the actual outcome and any surviving obligation under the existing</span>
+<span id="L577" data-line="577">grant; do not lose that obligation when a session ends.</span>
+<span id="L578" data-line="578"></span>
+<span id="L579" data-line="579">Default commands apply only when the Product Definition binds the default</span>
+<span id="L580" data-line="580">layout:</span>
+<span id="L581" data-line="581"></span>
+<span id="L582" data-line="582">```sh</span>
+<span id="L583" data-line="583">stdo status --definition stdo_default.json --verify</span>
+<span id="L584" data-line="584">rg --files .ai-workspace/tickets/active .ai-workspace/tickets/backlog</span>
+<span id="L585" data-line="585">git status --short --branch</span>
+<span id="L586" data-line="586">```</span>
+<span id="L587" data-line="587"></span>
+<span id="L588" data-line="588">A useful status report leads with the Product outcome and includes:</span>
+<span id="L589" data-line="589"></span>
+<span id="L590" data-line="590">- basis health;</span>
+<span id="L591" data-line="591">- accepted Product movement since the comparison point;</span>
+<span id="L592" data-line="592">- active work and dependencies;</span>
+<span id="L593" data-line="593">- exact proof and review state;</span>
+<span id="L594" data-line="594">- blockers, residuals, drift, and uncertainty;</span>
+<span id="L595" data-line="595">- proposed triage or decisions needed; and</span>
+<span id="L596" data-line="596">- the next already-authorized action.</span>
+<span id="L597" data-line="597"></span>
+<span id="L598" data-line="598">Do not use prose volume, commit count, test count, or review count as Product</span>
+<span id="L599" data-line="599">progress by itself.</span>
+<span id="L600" data-line="600"></span>
+<span id="L601" data-line="601">Reviewer technical triage and Executive delivery priority are distinct. Under</span>
+<span id="L602" data-line="602">the Executive baseline profile, Reviewer may return technical severity, impact,</span>
+<span id="L603" data-line="603">confidence, blast radius, workaround, repair complexity, regression risk, and</span>
+<span id="L604" data-line="604">uncertainty. Executive combines that evidence with the complete Product view</span>
+<span id="L605" data-line="605">and current release or MVP mandate to assign Product-owned priority,</span>
+<span id="L606" data-line="606">promotion-boundary effect, disposition, and action. The Project Reference-</span>
+<span id="L607" data-line="607">Frame Basis owns the concrete scales, cutoff, and non-waivable hard stops. STDO</span>
+<span id="L608" data-line="608">does not impose a universal P2 release cutoff.</span>
+<span id="L609" data-line="609"></span>
+<span id="L610" data-line="610">Status may propose a likely change class and re-entry point. It does not</span>
+<span id="L611" data-line="611">silently create a ticket, widen a release boundary, reprioritize the Product,</span>
+<span id="L612" data-line="612">or apply disposition.</span>
+<span id="L613" data-line="613"></span>
+<span id="L614" data-line="614">## Common Stops</span>
+<span id="L615" data-line="615"></span>
+<span id="L616" data-line="616">| Condition | Response |</span>
+<span id="L617" data-line="617">|---|---|</span>
+<span id="L618" data-line="618">| zero or several Product Definitions apply | stop and disambiguate Product scope |</span>
+<span id="L619" data-line="619">| installed cut or manifest does not verify | stop; never substitute mutable source |</span>
+<span id="L620" data-line="620">| reference-frame basis is missing or a placeholder | return the missing Product-owned acceptance basis |</span>
+<span id="L621" data-line="621">| no admitted run-scoped execution contract exists | select the smallest carrier, draft and validate the contract, then continue in the same invocation only if admitted |</span>
+<span id="L622" data-line="622">| requirement truth is missing | re-enter requirements, not code |</span>
+<span id="L623" data-line="623">| structural decision is missing | re-enter design |</span>
+<span id="L624" data-line="624">| code and test disagree | reconcile through governing authority |</span>
+<span id="L625" data-line="625">| independent review is required (the boundaries TICKETS §7 names) | stabilise one exact review subject as EVALUATION §3 Protocol states (frozen before material reference exposure where method qualification requires it; otherwise an immutable identity or an equivalent exact-subject relation sufficient for the claim) and activate Reviewer |</span>
+<span id="L626" data-line="626">| a finding is adjacent to the current claim | return it as triage input; do not automatically block |</span>
+<span id="L627" data-line="627">| requested effect exceeds the grant | refuse and return to Product-owned decision authority |</span>
+<span id="L628" data-line="628"></span>
+<span id="L629" data-line="629">## Owning References</span>
+<span id="L630" data-line="630"></span>
+<span id="L631" data-line="631">Resolve these from the exact installed basis selected by the Product</span>
+<span id="L632" data-line="632">Definition:</span>
+<span id="L633" data-line="633"></span>
+<span id="L634" data-line="634">- `SPEC_METHOD.md`: constitutional chain, triage, requirements,</span>
+<span id="L635" data-line="635">  construction, and proportional delivery (section 8);</span>
+<span id="L636" data-line="636">- `ACTIVATION.md`: the bounded construction step and proportionality;</span>
+<span id="L637" data-line="637">- `ASSURANCE.md`: testing;</span>
+<span id="L638" data-line="638">- `TICKETS.md`: work carriers, fields, states, execution contract, test</span>
+<span id="L639" data-line="639">  authority, and projection;</span>
+<span id="L640" data-line="640">- `RELEASE.md`: immutable cuts, qualified transport refs, publication,</span>
+<span id="L641" data-line="641">  successor identity, and release evidence;</span>
+<span id="L642" data-line="642">- `REFERENCE_FRAME.md`, `FOUNDATIONS.md` sections 2 and 4 (Results) and</span>
+<span id="L643" data-line="643">  `ACTIVATION.md` sections 2 and 3: bounded evaluation, acquisition and</span>
+<span id="L644" data-line="644">  result law;</span>
+<span id="L645" data-line="645">- `frames/` in the standards tree: verbatim frames, each copying the owning</span>
+<span id="L646" data-line="646">  sections one task needs, among them the bootstrap frame; a frame owns no</span>
+<span id="L647" data-line="647">  determination; and</span>
+<span id="L648" data-line="648">- `EXECUTIVE_BASELINE.md`: optional Executive, Worker, Reviewer,</span>
+<span id="L649" data-line="649">  technical-triage, and disposition profile, with its testing frames in</span>
+<span id="L650" data-line="650">  `ASSURANCE.md`.</span>
+<span id="L651" data-line="651"></span>
+<span id="L652" data-line="652">The Claude host provides a manual-only `refresh` loader for the full exact</span>
+<span id="L653" data-line="653">owning members of one registry entry. The Codex host resolves and reads those</span>
+<span id="L654" data-line="654">exact installed members directly; the five daily workflow skills remain</span>
+<span id="L655" data-line="655">byte-shared. Daily work should read the smallest relevant source surface.</span></pre></html>

@@ -478,6 +478,7 @@ class Runtime:
             exact_keys(grant, ("id", "authority_sources", "outcome", "principals", "targets", "operations", "tools", "executors", "territory", "preconditions", "admission", "notification_sink"), label="grant")
             if grant["id"] != grant_id:
                 raise SupportError("contract_violation", "Grant key/id mismatch")
+            _admission_selection(grant["admission"])
             for t in as_list(grant["territory"]):
                 territory = as_object(t)
                 validate_schema(territory, _SCOPE)
@@ -511,6 +512,17 @@ class Runtime:
 
 def _strings(value: JSON) -> list[str]:
     return [text(x) for x in as_list(value)]
+
+
+def _admission_selection(value: JSON) -> Object:
+    admission = as_object(value)
+    exact_keys(admission, ("mechanism_id", "mechanism_source", "authority_source",
+                          "required_predicates", "allowed_override_sources"),
+               ("required_reconciliation_predicates",), label="admission selection")
+    _strings(admission["required_predicates"])
+    if "required_reconciliation_predicates" in admission:
+        _strings(admission["required_reconciliation_predicates"])
+    return admission
 
 
 def _unique(values: list[str], label: str) -> None:
@@ -1154,6 +1166,19 @@ def evaluate_predicate(runtime: Runtime, predicate_id: str, inputs: Object,
             "limits": definition["limits"]})
 
 
+def _bound_original_return(payload: Object) -> Object:
+    """Select original judgments without conflating authentication and binding."""
+    if payload["original"] is None or as_object(payload["producer"]).get("authenticated") is not True:
+        raise SupportError("basis_missing", "Judgment is not an authenticated original performed evaluation")
+    binding_gaps: list[JSON] = [gap for gap in as_list(as_object(payload["binding_checks"])["gaps"])
+                                if isinstance(gap, dict) and "binding" in gap]
+    if binding_gaps:
+        raise SupportError("basis_missing", "Original return has material binding gaps", binding_gaps)
+    original = as_object(payload["original"])
+    _closed_format(original)
+    return original
+
+
 def _judgment(runtime: Runtime, ref: Object) -> Object:
     validate_content(ref, "JudgmentRef")
     envelope = load_artifact(runtime, as_object(ref["record"]))
@@ -1161,13 +1186,10 @@ def _judgment(runtime: Runtime, ref: Object) -> Object:
     payload = as_object(envelope["payload"])
     path = cast(str, ref["pointer"])
     if kind == "return":
-        producer = as_object(payload["producer"])
-        if producer.get("authenticated") is not True or not path.startswith("/payload/original/evaluations/"):
-            raise SupportError("basis_missing", "Judgment is not an authenticated original performed evaluation")
-        original = as_object(payload["original"])
-        result = copy.deepcopy(as_object(pointer(envelope, path)))
-        if set(result) != {"id", "predicate", "domain_outcome", "core_value", "evidence", "residuals", "invalidators"}:
+        original = _bound_original_return(payload)
+        if re.fullmatch(r"/payload/original/evaluations/(?:0|[1-9][0-9]*)", path) is None:
             raise SupportError("basis_missing", "Judgment pointer must identify one performed evaluation")
+        result = copy.deepcopy(as_object(pointer(envelope, path)))
         result["subject"] = original["subject"]; result["basis"] = original["basis"]
     elif kind == "operation":
         request = as_object(payload["request"])
@@ -1390,6 +1412,97 @@ def _evaluation_key(original: Object, attempt: JSON, evaluation: Object) -> Obje
             "attempt": attempt, "evaluation_id": evaluation["id"]})
 
 
+def _conjunction_returns(runtime: Runtime, references: list[JSON]) -> tuple[dict[str, list[Object]], list[JSON], list[JSON]]:
+    candidates: dict[str, list[Object]] = {}; originals: list[JSON] = []; failures: list[JSON] = []
+    seen: set[str] = set()
+    for raw in references:
+        ref = as_object(raw)
+        if text(ref["id"]) in seen:
+            continue
+        seen.add(text(ref["id"]))
+        payload = as_object(load_artifact(runtime, ref, "return")["payload"])
+        originals.append({"record": ref, "original": payload["original"], "producer": payload["producer"]})
+        try:
+            original = _bound_original_return(payload)
+        except SupportError:
+            continue
+        for raw_evaluation in as_list(original["evaluations"]):
+            evaluation = as_object(raw_evaluation)
+            key = _evaluation_key(original, payload["attempt"], evaluation)
+            entry = document({"key": key, "evaluation": evaluation, "subject": original["subject"], "basis": original["basis"], "return": ref})
+            candidates.setdefault(digest(key), []).append(entry)
+            if evaluation["core_value"] == "falsified":
+                failures.append(entry)
+    return candidates, originals, failures
+
+
+def _evaluation_identity(entry: Object) -> str:
+    return digest({name: entry[name] for name in ("key", "evaluation", "subject", "basis")})
+
+
+def _inherited_counterexamples(runtime: Runtime, references: list[JSON], current_returns: list[JSON],
+                              subject: Object, basis: Object) -> tuple[set[str], list[JSON]]:
+    """Revalidate typed original evidence; never import old mandatory order."""
+    pending = list(references); visited: set[str] = set()
+    plans: list[tuple[Object, Object, Object]] = []; returns = list(current_returns)
+    eligible: set[str] = set(); gaps: list[JSON] = []
+    maximum = integer(as_object(runtime.policy["limits"])["max_history_records"], minimum=1)
+    while pending:
+        ref = as_object(pending.pop())
+        if text(ref["id"]) in visited:
+            continue
+        if len(visited) >= maximum:
+            gaps.append({"cause": "inherited_history_exceeds_selected_limit", "limit": maximum}); break
+        visited.add(text(ref["id"]))
+        try:
+            old = as_object(load_artifact(runtime, ref, "operation")["payload"])
+            request = validate_request(old["request"])
+            if request["operation"] != "results.conjoin":
+                raise SupportError("basis_missing", "Inherited record is not a conjunction operation")
+            args = as_object(request["arguments"])
+            prior = as_object(as_object(as_object(old["response_without_evidence"])["result"])["value"])
+            if not _equal(prior["plan"], args["plan"]):
+                raise SupportError("basis_stale", "Inherited plan differs from its owning request")
+            plan = _source_json(runtime, as_object(args["plan"]), "ConjunctionPlan")
+            composite = as_object(plan["composite"]); judgment = as_object(prior["judgment"])
+            if any(not _equal(item["subject"], subject) or not _equal(item["basis"], basis) for item in (composite, judgment)) or not _equal(args["current_observations"], basis["observations"]):
+                raise SupportError("basis_stale", "Inherited counterexample is not on this exact subject/basis")
+            read_source(runtime, as_object(plan["authority_source"]))
+            read_source(runtime, as_object(composite["predicate"]))
+            plans.append((ref, plan, args))
+            returns.extend(as_list(args["returns"]))
+            pending.extend(as_list(plan["inherited"]))
+        except SupportError as error:
+            gaps.append({"inherited": ref, "cause": error.document()})
+    try:
+        population, _, _ = _conjunction_returns(runtime, returns)
+        for ref, plan, args in plans:
+            candidates, _, _ = _conjunction_returns(runtime, as_list(args["returns"]))
+            for raw in as_list(plan["assessments"]):
+                assessment = as_object(raw)
+                read_source(runtime, as_object(assessment["predicate"]))
+                if not _equal(assessment["subject"], subject) or not _equal(assessment["basis"], basis):
+                    raise SupportError("basis_stale", "Inherited assessment has another exact subject/basis")
+                condition, condition_gaps = _condition(runtime, assessment["applicability"], subject, basis)
+                if condition == "falsified":
+                    continue
+                if assessment["applicability"] is not None and condition != "satisfied":
+                    gaps.append({"inherited": ref, "assessment": assessment["id"], "cause": "unresolved_applicability", "gaps": condition_gaps}); continue
+                key = digest(assessment["key"])
+                local = {_evaluation_identity(row): row for row in candidates.get(key, [])}
+                complete = {_evaluation_identity(row): row for row in population.get(key, [])}
+                if len(local) != 1 or len(complete) != 1:
+                    gaps.append({"inherited": ref, "assessment": assessment["id"], "cause": "cardinality_conflict" if local else "not_performed_or_missing"}); continue
+                entry = next(iter(local.values())); evaluation = as_object(entry["evaluation"])
+                if not _equal(entry["subject"], subject) or not _equal(entry["basis"], basis) or not _equal(evaluation["predicate"], assessment["predicate"]):
+                    gaps.append({"inherited": ref, "assessment": assessment["id"], "cause": "stale_wrong_subject_basis_or_predicate"}); continue
+                if evaluation["core_value"] == "falsified":
+                    eligible.add(_evaluation_identity(entry))
+    except SupportError as error:
+        gaps.append({"cause": error.document()})
+    return eligible, gaps
+
+
 def conjoin(runtime: Runtime, args: Object) -> Object:
     plan_ref = as_object(args["plan"])
     operator = _qualified_operator(runtime, text(args["operator_id"]), plan_ref)
@@ -1420,25 +1533,8 @@ def conjoin(runtime: Runtime, args: Object) -> Object:
         read_source(runtime, as_object(constraint["predicate"]))
     if any(row["obligation_id"] not in obligation_ids for row in constraints):
         raise SupportError("contract_violation", "Required constraint names undeclared obligation")
-    candidates: dict[str, list[Object]] = {}; originals: list[JSON] = []; failures: list[JSON] = []; inherited_gaps: list[JSON] = []
-    seen_refs: set[str] = set()
-    for raw in as_list(args["returns"]):
-        ref = as_object(raw)
-        if text(ref["id"]) in seen_refs:
-            continue
-        seen_refs.add(text(ref["id"]))
-        envelope = load_artifact(runtime, ref, "return"); payload = as_object(envelope["payload"])
-        originals.append({"record": ref, "original": payload["original"], "producer": payload["producer"]})
-        if payload["original"] is None or as_object(payload["producer"]).get("authenticated") is not True or any(isinstance(gap, dict) and "binding" in gap for gap in as_list(as_object(payload["binding_checks"])["gaps"])):
-            continue
-        original = as_object(payload["original"])
-        for raw_evaluation in as_list(original["evaluations"]):
-            evaluation = as_object(raw_evaluation)
-            key = _evaluation_key(original, payload["attempt"], evaluation)
-            entry: Object = document({"key": key, "evaluation": evaluation, "subject": original["subject"], "basis": original["basis"], "return": ref})
-            candidates.setdefault(digest(key), []).append(entry)
-            if evaluation["core_value"] == "falsified":
-                failures.append(entry)
+    candidates, originals, failures = _conjunction_returns(runtime, as_list(args["returns"]))
+    inherited_gaps: list[JSON] = []
     planned_gaps: list[JSON] = []; coverage: set[str] = set(); applicable: list[Object] = []; conflicts: list[JSON] = []
     excluded: list[JSON] = []
     basis_disagreement = False
@@ -1498,6 +1594,8 @@ def conjoin(runtime: Runtime, args: Object) -> Object:
                     obligation_records[old_id] = old_obligation
         except SupportError as exc:
             inherited_gaps.append({"inherited": ref, "cause": exc.document()})
+    inherited_eligible, fresh_inherited_gaps = _inherited_counterexamples(runtime, as_list(plan["inherited"]), as_list(args["returns"]), subject, basis)
+    inherited_gaps.extend(fresh_inherited_gaps)
     required.update(inherited_required); coverage.update(inherited_coverage)
     uncovered = sorted(required - coverage); planned_gaps.extend(inherited_gaps)
     planned_gaps.extend(applicability_gaps)
@@ -1511,8 +1609,8 @@ def conjoin(runtime: Runtime, args: Object) -> Object:
         f = as_object(failure); evaluation = as_object(f["evaluation"])
         for constraint in constraints:
             if constraint["obligation_id"] in required and _equal(evaluation["predicate"], constraint["predicate"]):
-                admitted = [entry for entry in applicable if _equal(as_object(entry["result"])["key"], f["key"]) and constraint["obligation_id"] in as_list(as_object(entry["assessment"])["coverage"])]
-                if admitted:
+                admitted = [entry for entry in applicable if _evaluation_identity(as_object(entry["result"])) == _evaluation_identity(f)]
+                if admitted or _evaluation_identity(f) in inherited_eligible:
                     constraint_failures.append({"failure": f, "required_constraint": constraint, "obligation": obligation_records[text(constraint["obligation_id"])]})
     if core_value == "satisfied":
         if basis_disagreement:
@@ -1622,6 +1720,32 @@ def _effect_plan(runtime: Runtime, request: Object, target: str | None,
             "policy_sha256": runtime.policy_sha256, "recheck": recheck, "payload": payload})
 
 
+def _context_material_sources(context: Object) -> list[JSON]:
+    """Only declared acquired input positions, never their opaque contents."""
+    sources: list[JSON] = []
+    for acquired in as_list(context["sources"]):
+        source = as_object(acquired)["source"]
+        validate_content(source, "SourceRef")
+        sources.append(source)
+    for projection in as_list(context["projections"]):
+        model = as_object(as_object(projection)["model"])
+        validate_content(model, "ModelRef")
+        # The complete model identity remains in the immutable Context. Its
+        # exact source bytes are rechecked; new bytes never replace that model.
+        sources.append(model["source"])
+    fit = as_object(context["fit"])
+    if fit["selected"] is True:
+        host = as_object(fit["host_context"])
+        if host["state"] in ("known", "bounded"):
+            source = host["evidence"]
+            if source is not None:
+                validate_content(source, "SourceRef")
+                sources.append(source)
+            # Missing evidence already prevents the required fit guard from
+            # succeeding; do not replace its existing gap with assumed bytes.
+    return list({canonical(source): source for source in sources}.values())
+
+
 def build_preflight(runtime: Runtime, request: Object) -> EffectPlan:
     validate_request(request); require_operation(runtime, "contract.preflight")
     if request["operation"] != "contract.preflight":
@@ -1686,8 +1810,7 @@ def build_preflight(runtime: Runtime, request: Object) -> EffectPlan:
         raise SupportError("unsupported_executor", "Fixed executor argv/cwd not bound to executable")
     if any(not isinstance(value, str) for value in as_object(executor["environment"]).values()):
         raise SupportError("unsupported_executor", "Executor environment must be an explicit string map")
-    admission = as_object(grant["admission"])
-    exact_keys(admission, ("mechanism_id", "mechanism_source", "authority_source", "required_predicates", "allowed_override_sources"))
+    admission = _admission_selection(grant["admission"])
     if admission["mechanism_id"] != "product-policy-preflight/1":
         raise SupportError("unsupported_contract", "Unsupported selected admission mechanism")
     read_source(runtime, as_object(admission["mechanism_source"])); read_source(runtime, as_object(admission["authority_source"]))
@@ -1702,7 +1825,7 @@ def build_preflight(runtime: Runtime, request: Object) -> EffectPlan:
     fit_judgment = fit.get("judgment")
     if fit.get("selected") is True:
         guard("selected required full-active-input fit", isinstance(fit_judgment, dict) and fit_judgment.get("core_value") == "satisfied", "basis_missing")
-    sources: list[JSON] = list(_all_source_refs(packet)) + as_list(grant["authority_sources"]) + [as_object(grant["outcome"])["source"], admission["mechanism_source"], admission["authority_source"], as_object(as_object(runtime.policy["product"])["authority_binding"])["owner_record"]]
+    sources: list[JSON] = list(_all_source_refs(packet)) + _context_material_sources(context) + as_list(grant["authority_sources"]) + [as_object(grant["outcome"])["source"], admission["mechanism_source"], admission["authority_source"], as_object(as_object(runtime.policy["product"])["authority_binding"])["owner_record"]]
     if sink is not None:
         sources.append(sink["authority_source"])
     source_preconditions: list[JSON] = []
@@ -1741,24 +1864,41 @@ def build_preflight(runtime: Runtime, request: Object) -> EffectPlan:
     return _effect_plan(runtime, request, target_id, recheck, payload)
 
 
-def prepare_write(runtime: Runtime, request: Object) -> EffectPlan:
+def check_writer_authority(runtime: Runtime, request: Object) -> None:
+    """Current authority for this exact request, without target-byte planning."""
     validate_request(request); require_operation(runtime, "work.write")
     if request["operation"] != "work.write":
         raise SupportError("contract_violation", "Writer receives only its named whole request")
     if runtime.principal["role"] != "Worker":
         raise SupportError("role_effect_denied", "Executive/Reviewer cannot mutate an authoritative carrier")
+    read_source(runtime, as_object(runtime.principal["role_binding"]))
+    read_source(runtime, as_object(as_object(runtime.policy["method_profile"])["source"]))
+    _admission_authority(runtime)
+    for source in as_list(runtime.policy["authority_sources"]):
+        read_source(runtime, as_object(source))
     args = as_object(request["arguments"]); grant_id = text(args["grant_id"])
     grant = _grant(runtime, grant_id, "work.write")
+    admission = _admission_selection(grant["admission"])
+    read_source(runtime, as_object(admission["mechanism_source"]))
+    read_source(runtime, as_object(admission["authority_source"]))
     target = as_object(args["target"])
     exact_keys(target, ("engine", "root", "path", "object", "sha256", "selector"))
     if target["engine"] != "workspace-regular-file" or target["object"] is not None or target["selector"] is not None:
         raise SupportError("unsupported_contract", "Writer supports whole regular workspace files only")
     validate_schema(target["sha256"], _nullable(_ref("Sha256")))
-    path = source_path(runtime, target, write=True, allow_absent=target["sha256"] is None)
+    path = source_path(runtime, target, write=True, allow_absent=True)
     scope: Object = document({"root": target["root"], "path": target["path"], "kind": "file"})
     if not any(_within(scope, as_object(raw)) for raw in as_list(grant["territory"])):
         raise SupportError("role_effect_denied", "Target is outside the exact registered Writer territory")
     _role_transition(runtime, "work.write", grant_id, {"id": str(path), "sha256": target["sha256"]}, grant["territory"])
+
+
+def prepare_write(runtime: Runtime, request: Object) -> EffectPlan:
+    check_writer_authority(runtime, request)
+    args = as_object(request["arguments"]); grant_id = text(args["grant_id"])
+    grant = _grant(runtime, grant_id, "work.write")
+    target = as_object(args["target"])
+    path = source_path(runtime, target, write=True, allow_absent=target["sha256"] is None)
     exists = path.exists()
     if target["sha256"] is None:
         if exists:
@@ -2542,19 +2682,25 @@ def verify_reconciliation(runtime: Runtime, evidence_ref: Object, predecessor_re
                           grant: Object, basis: Object) -> Object:
     predecessor = load_artifact(runtime, predecessor_ref, "attempt")
     _profile_basis(runtime, basis)
-    selected = _strings(as_object(grant["admission"])["required_predicates"])
+    admission = _admission_selection(grant["admission"])
+    selected = _strings(admission.get("required_reconciliation_predicates", []))
     subject: Object = document({"id": predecessor_ref["id"], "sha256": predecessor_ref["sha256"]})
     definitions = as_object(runtime.policy["predicates"])
-    required = [identity for identity in selected if identity in definitions and _equal(as_object(definitions[identity])["subject"], subject) and _equal(as_object(definitions[identity])["basis"], basis)]
-    if not required:
+    if not selected:
         raise SupportError("effect_unreconciled", "Grant has no selected predecessor-bound reconciliation contract")
+    for identity in selected:
+        if identity not in definitions:
+            raise SupportError("effect_unreconciled", "Selected reconciliation predicate is not registered", [{"predicate_id": identity}])
+        definition = as_object(definitions[identity])
+        if not _equal(definition["subject"], subject) or not _equal(definition["basis"], basis):
+            raise SupportError("effect_unreconciled", "Selected reconciliation predicate does not bind this predecessor/current basis", [{"predicate_id": identity}])
     supplied = load_artifact(runtime, evidence_ref, "operation")
     records, query = _history(runtime, "operation", {"payload.request.operation": "checks.evaluate"})
     records.append(supplied)
     if query["complete"] is not True:
         raise SupportError("history_incomplete", "Reconciliation evidence history is incomplete", [query])
     actual: list[JSON] = []
-    for identity in required:
+    for identity in selected:
         matches: list[Object] = []
         for record in records:
             payload = as_object(record["payload"]); request = as_object(payload["request"])

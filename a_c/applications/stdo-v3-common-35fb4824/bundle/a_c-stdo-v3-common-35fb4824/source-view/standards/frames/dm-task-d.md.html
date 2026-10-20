@@ -1,0 +1,1573 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>standards/frames/dm-task-d.md</title><style>body{font:14px system-ui;margin:24px;background:#101720;color:#dfeaf4}a{color:#87c7ff}pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5;counter-reset:line}span{display:block}span:before{content:attr(data-line);display:inline-block;width:4em;color:#7392aa;user-select:none}span:target{background:#36481d}</style><h1>standards/frames/dm-task-d.md</h1><p>Exact frozen source · SHA256 8983333704e6b9a6304240e95bb6ce9acbee83f48453937778d1291abd759130</p><pre><span id="L1" data-line="1"># Reference frame dm-task-d</span>
+<span id="L2" data-line="2"></span>
+<span id="L3" data-line="3">Task: For a refactor inside an accepted boundary and a new boundary, decide decision completeness, the sequencing mode and the affected set of the design gate, what the Ontology and three-view gate requires and lacks, whether each change may be promoted and what standing retained code has, whether the substrate selection is acceptable, and whether the Prime evidence establishes a globally Prime family and conserves root authority.</span>
+<span id="L4" data-line="4"></span>
+<span id="L5" data-line="5">Purpose: The owning sections for ontology-first design, proportional design sequencing and decision completeness, native constructability, the authority model, Prime atoms with whole-family and recursive contraction and root conservation, the Ontology and three-view design gate with its axiom verdicts and the design verdict as a disposition, the change classes, and the core result algebra with its conjunction.</span>
+<span id="L6" data-line="6"></span>
+<span id="L7" data-line="7">Binds:</span>
+<span id="L8" data-line="8"></span>
+<span id="L9" data-line="9">- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task&#x27;s required outcome with the acceptance conditions the task states, and the actor&#x27;s claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)</span>
+<span id="L10" data-line="10">- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle&#x27;s fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545; section sha256=a7d5fc5930338c3fb3959017f41935ce742fbb1bf189c2f527dde4e0ba12d064 spanning to #formal-representation)</span>
+<span id="L11" data-line="11">- A reuse decision in this task acquires the change and the evidence-validity conditions that support applicability: the impact cover of the change, the dependencies of each retained result and its retention conditions ([../FOUNDATIONS.md#change-impact-and-evidence-reuse](../FOUNDATIONS.md#change-impact-and-evidence-reuse); member sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545; section sha256=e989bf4b8c0dd996e5545f18db94f8ba275d14485697c0b046429746ed3bfbc6)</span>
+<span id="L12" data-line="12"></span>
+<span id="L13" data-line="13">A `Binds:` item names an obligation the activation of this frame binds, with</span>
+<span id="L14" data-line="14">a link to the owning section, the digest of its member and the digest of that</span>
+<span id="L15" data-line="15">section, or of the span of sections it names, where it names one; the item</span>
+<span id="L16" data-line="16">copies no section and owns no determination, and where no route of this frame</span>
+<span id="L17" data-line="17">carries the section the item is a paraphrase of it.</span>
+<span id="L18" data-line="18"></span>
+<span id="L19" data-line="19">Each excerpt below copies one owning section of a member of this method</span>
+<span id="L20" data-line="20">byte for byte, except a `rows=k/n` excerpt (see below) and except that</span>
+<span id="L21" data-line="21">each relative link destination is rebased</span>
+<span id="L22" data-line="22">to resolve from this directory to the same target. Fenced code, inline</span>
+<span id="L23" data-line="23">code and absolute and `stdo://` links are unchanged. The `Source:` line</span>
+<span id="L24" data-line="24">before an excerpt names the member and the section&#x27;s anchor, and gives</span>
+<span id="L25" data-line="25">the SHA-256 of the whole owning member. The section digest recorded in</span>
+<span id="L26" data-line="26">FRAME_INPUTS.json is over the owner&#x27;s bytes, not over this copy. The</span>
+<span id="L27" data-line="27">owning section decides; this frame owns no determination. An excerpt</span>
+<span id="L28" data-line="28">whose `Source:` line says `rows=k/n` is a family table of which only</span>
+<span id="L29" data-line="29">the k rows that cite a section this frame carries are copied, with the</span>
+<span id="L30" data-line="30">table&#x27;s preamble, header and every non-family table; the other rows</span>
+<span id="L31" data-line="31">stay in the owning member and are not copied. The frame&#x27;s</span>
+<span id="L32" data-line="32">qualification, not this selection, decides whether the frame is</span>
+<span id="L33" data-line="33">sufficient for its task.</span>
+<span id="L34" data-line="34"></span>
+<span id="L35" data-line="35">Routes, in order:</span>
+<span id="L36" data-line="36"></span>
+<span id="L37" data-line="37">1. [DESIGN_MODULE.md#5-ontology-first-design](../DESIGN_MODULE.md#5-ontology-first-design)</span>
+<span id="L38" data-line="38">2. [DESIGN_MODULE.md#7-ontology-and-three-view-design-gate](../DESIGN_MODULE.md#7-ontology-and-three-view-design-gate)</span>
+<span id="L39" data-line="39">3. [ACTIVATION.md#disposition](../ACTIVATION.md#disposition)</span>
+<span id="L40" data-line="40">4. [SPEC_METHOD.md#change-classes](../SPEC_METHOD.md#change-classes)</span>
+<span id="L41" data-line="41">5. [FOUNDATIONS.md#results](../FOUNDATIONS.md#results)</span>
+<span id="L42" data-line="42">6. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)</span>
+<span id="L43" data-line="43">7. [DESIGN_MODULE.md#foundation-to-law](../DESIGN_MODULE.md#foundation-to-law)</span>
+<span id="L44" data-line="44">8. [SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity](../SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity)</span>
+<span id="L45" data-line="45"></span>
+<span id="L46" data-line="46">Size of this frame: 100681 bytes.</span>
+<span id="L47" data-line="47"></span>
+<span id="L48" data-line="48">Source: DESIGN_MODULE.md#5-ontology-first-design sha256=50e70c797c93718e85192aaf2de39596f62f53030507ca8242c1af7e8f0ebcbe</span>
+<span id="L49" data-line="49"></span>
+<span id="L50" data-line="50">## 5. Ontology-first design</span>
+<span id="L51" data-line="51"></span>
+<span id="L52" data-line="52">Every new or materially changed active semantic boundary derives its</span>
+<span id="L53" data-line="53">semantic model from one accepted Ontology (P1, P6). Before a new or changed entity, function,</span>
+<span id="L54" data-line="54">authority, effect, Prime-conformant carrier, module boundary, public</span>
+<span id="L55" data-line="55">operation or schema is promoted, the affected boundary first produces a</span>
+<span id="L56" data-line="56">candidate Ontology slice and carries it through the acceptance sequence</span>
+<span id="L57" data-line="57">below.</span>
+<span id="L58" data-line="58"></span>
+<span id="L59" data-line="59">The Ontology is the prior semantic-design authority for the boundary. It</span>
+<span id="L60" data-line="60">is subordinate to the constitutional WHAT: it derives from intent,</span>
+<span id="L61" data-line="61">product, requirements and the applicable graph or domain profile, and it</span>
+<span id="L62" data-line="62">does not invent product meaning. Once accepted, it governs semantic</span>
+<span id="L63" data-line="63">entities, relationships, invariants, lifecycle, authority, functions,</span>
+<span id="L64" data-line="64">composition and effects (P6, P2). It does not replace target architecture</span>
+<span id="L65" data-line="65">or module design: accepted design remains the structural HOW for topology,</span>
+<span id="L66" data-line="66">interfaces, carrier placement, module boundaries, algorithms and local</span>
+<span id="L67" data-line="67">realisation. Implementation and tests derive from requirements plus</span>
+<span id="L68" data-line="68">accepted design and preserve the accepted Ontology; they are not direct</span>
+<span id="L69" data-line="69">substitutes for either layer (P6; SPEC_METHOD §2 Constitutional chain).</span>
+<span id="L70" data-line="70"></span>
+<span id="L71" data-line="71">Ontology acceptance identifies the constitutional sources it derives from</span>
+<span id="L72" data-line="72">and the design authority that accepted it. It carries stable element and</span>
+<span id="L73" data-line="73">relation identities plus a version or basis that makes source change,</span>
+<span id="L74" data-line="74">staleness and the affected projection set decidable (P3; FOUNDATIONS §2,</span>
+<span id="L75" data-line="75">Basis). A reprice of a governing source invalidates only the affected</span>
+<span id="L76" data-line="76">Ontology relations and downstream projections until their impact is</span>
+<span id="L77" data-line="77">re-evaluated; the reprice is an instance of the material input change of</span>
+<span id="L78" data-line="78">[ACTIVATION §7](../ACTIVATION.md#7-closed-result-and-reuse), which owns the</span>
+<span id="L79" data-line="79">invalidators. Code, tests, generated schemas or a single implementing</span>
+<span id="L80" data-line="80">agent cannot self-ratify missing Ontology authority (P6). The Ontology</span>
+<span id="L81" data-line="81">verdict may live in the same design pack and acceptance record as the</span>
+<span id="L82" data-line="82">three-view verdict (§7); this rule does not require a second document,</span>
+<span id="L83" data-line="83">ticket or approval ceremony.</span>
+<span id="L84" data-line="84"></span>
+<span id="L85" data-line="85">Proportionality applies (ACTIVATION §6). A material semantic boundary is</span>
+<span id="L86" data-line="86">one whose change affects identity, authority, lifecycle, public contract,</span>
+<span id="L87" data-line="87">externally observable Product meaning, cross-module topology, or accepted</span>
+<span id="L88" data-line="88">effect or closure law. A `realization_refactor` wholly inside an accepted</span>
+<span id="L89" data-line="89">boundary may cite the existing Ontology and design basis and prove no</span>
+<span id="L90" data-line="90">Ontology delta; it does not require re-authoring or re-accepting unchanged</span>
+<span id="L91" data-line="91">evidence. A semantic or structural change publishes only the affected</span>
+<span id="L92" data-line="92">Ontology and design delta and its projection impact set. Unaffected</span>
+<span id="L93" data-line="93">maintenance and unrelated boundaries do not freeze merely because one</span>
+<span id="L94" data-line="94">source digest changed (P2, P0).</span>
+<span id="L95" data-line="95"></span>
+<span id="L96" data-line="96">For this profile (P1):</span>
+<span id="L97" data-line="97"></span>
+<span id="L98" data-line="98">```text</span>
+<span id="L99" data-line="99">Ontology =</span>
+<span id="L100" data-line="100">  entities + identities + relationships + invariants + lifecycle</span>
+<span id="L101" data-line="101">  + authority + atomic functions + higher-order composition</span>
+<span id="L102" data-line="102">  + effects + projections</span>
+<span id="L103" data-line="103">```</span>
+<span id="L104" data-line="104"></span>
+<span id="L105" data-line="105">A class inventory, schema list, endpoint list, command list or carrier</span>
+<span id="L106" data-line="106">census alone is not an Ontology (P1).</span>
+<span id="L107" data-line="107"></span>
+<span id="L108" data-line="108">### Proportional design sequencing</span>
+<span id="L109" data-line="109"></span>
+<span id="L110" data-line="110">For one governed boundary `B`, let `M(B)` be its complete material-relation</span>
+<span id="L111" data-line="111">set (decision-complete symbolic design, below) and `U(B)` the unresolved</span>
+<span id="L112" data-line="112">members of that set (P2, P0):</span>
+<span id="L113" data-line="113"></span>
+<span id="L114" data-line="114">```text</span>
+<span id="L115" data-line="115">U(B) = unresolved(M(B))</span>
+<span id="L116" data-line="116">decision_complete(B) iff</span>
+<span id="L117" data-line="117">  U(B) = empty</span>
+<span id="L118" data-line="118">  and M(B) is jointly satisfiable</span>
+<span id="L119" data-line="119">  and every network admitted by M(B) is semantically equivalent under the</span>
+<span id="L120" data-line="120">      governing Product, requirements and accepted design relations</span>
+<span id="L121" data-line="121">co_evolution_admissible(B) iff decision_complete(B)</span>
+<span id="L122" data-line="122">design_gate(B) =</span>
+<span id="L123" data-line="123">  the smallest causally closed affected set needed to establish</span>
+<span id="L124" data-line="124">  decision_complete(B)</span>
+<span id="L125" data-line="125">```</span>
+<span id="L126" data-line="126"></span>
+<span id="L127" data-line="127">Design sequencing follows `decision_complete(B)`, not one global authoring</span>
+<span id="L128" data-line="128">order (P2, P6). Co-evolution is lawful only when `decision_complete(B)` holds:</span>
+<span id="L129" data-line="129">design still owns the structural HOW, but design, implementation and tests</span>
+<span id="L130" data-line="130">may evolve together and reconcile before promotion or closure.</span>
+<span id="L131" data-line="131">Design-gated sequencing is required when implementation would otherwise</span>
+<span id="L132" data-line="132">establish an unresolved or contradictory relation, or choose between</span>
+<span id="L133" data-line="133">materially non-equivalent networks, with durable consequences for future</span>
+<span id="L134" data-line="134">change: the affected design decision is accepted before retained</span>
+<span id="L135" data-line="135">implementation establishes it. A disposable spike may supply evidence</span>
+<span id="L136" data-line="136">without becoming the selected design.</span>
+<span id="L137" data-line="137"></span>
+<span id="L138" data-line="138">Neither mode is the global default; the same proportionality relation</span>
+<span id="L139" data-line="139">selects between them. Proportionality decides which relations are material</span>
+<span id="L140" data-line="140">and bounds the smallest affected gate; decision completeness is the</span>
+<span id="L141" data-line="141">resulting admissibility test (ACTIVATION §6). Where a bounded symbolic</span>
+<span id="L142" data-line="142">model can contract the material semantic alternatives within effective</span>
+<span id="L143" data-line="143">reasoning capacity, the code, runtime-state, test, review and</span>
+<span id="L144" data-line="144">reconciliation space it removes is counterfactual evidence of that</span>
+<span id="L145" data-line="145">contraction, not an independent reason for a design gate. Where no</span>
+<span id="L146" data-line="146">material alternative remains, a separate prior gate adds ceremony without</span>
+<span id="L147" data-line="147">disambiguation (P2).</span>
+<span id="L148" data-line="148"></span>
+<span id="L149" data-line="149">The bidirectional design-and-implementation relation is an evidence</span>
+<span id="L150" data-line="150">relation, not bidirectional semantic authority. Implementation may provide</span>
+<span id="L151" data-line="151">a counterexample, falsify a constraint or expose hidden ambiguity. It may</span>
+<span id="L152" data-line="152">not select the missing semantic answer, rewrite upstream truth to legalise</span>
+<span id="L153" data-line="153">itself, or ratify a material design decision after establishing it (P6).</span>
+<span id="L154" data-line="154"></span>
+<span id="L155" data-line="155">The selected relation and its basis belong in the existing work or design</span>
+<span id="L156" data-line="156">carrier; this rule requires no separate artifact. If implementation</span>
+<span id="L157" data-line="157">exposes previously hidden architectural ambiguity, the boundary switches to</span>
+<span id="L158" data-line="158">design-gated sequencing at the smallest causally closed affected decision</span>
+<span id="L159" data-line="159">set rather than retroactively invalidating unrelated work. Serial</span>
+<span id="L160" data-line="160">implementation repairs do not establish design acceptance. Repeated or</span>
+<span id="L161" data-line="161">cross-cutting material surprises are evidence for diagnosis under</span>
+<span id="L162" data-line="162">[ACTIVATION §1 Feedback and diagnosis](../ACTIVATION.md#construction-relation),</span>
+<span id="L163" data-line="163">not a diagnosis. Where the diagnosis establishes that the affected design</span>
+<span id="L164" data-line="164">cut is underconstrained, so that `decision_complete(B)` fails, one bounded</span>
+<span id="L165" data-line="165">`design_reframe` follows (SPEC_METHOD §4 Change classes), and retained code</span>
+<span id="L166" data-line="166">remains provisional evidence until that reframe is accepted. Where the</span>
+<span id="L167" data-line="167">accepted design is decision-complete and the realisation alone deviates</span>
+<span id="L168" data-line="168">from it, the repair is a `realization_refactor`, however often the surprise</span>
+<span id="L169" data-line="169">recurs (P6, P2).</span>
+<span id="L170" data-line="170"></span>
+<span id="L171" data-line="171">This applies the governing proportionality law: a prior design gate is</span>
+<span id="L172" data-line="172">warranted when it removes material semantic ambiguity whose alternatives</span>
+<span id="L173" data-line="173">would establish materially different durable architecture, and that</span>
+<span id="L174" data-line="174">contraction justifies its reasoning load. It is disproportionate when</span>
+<span id="L175" data-line="175">upstream truth leaves no materially divergent architecture to adjudicate</span>
+<span id="L176" data-line="176">and a separate prior acceptance would add no disambiguation. Design still</span>
+<span id="L177" data-line="177">records and owns the resulting HOW before promotion or closure (P2, P6).</span>
+<span id="L178" data-line="178"></span>
+<span id="L179" data-line="179">### Decision-complete symbolic design</span>
+<span id="L180" data-line="180"></span>
+<span id="L181" data-line="181">For one governed boundary `B`, the complete material-relation set is (P1,</span>
+<span id="L182" data-line="182">P2):</span>
+<span id="L183" data-line="183"></span>
+<span id="L184" data-line="184">```text</span>
+<span id="L185" data-line="185">M(B) =</span>
+<span id="L186" data-line="186">  entities + identities + relationships + cardinalities + invariants</span>
+<span id="L187" data-line="187">  + authorities + authority transitions + functions</span>
+<span id="L188" data-line="188">  + higher-order composition laws + topology</span>
+<span id="L189" data-line="189">  + lifecycle states and transitions + public contracts</span>
+<span id="L190" data-line="190">  + externally observable Product meaning</span>
+<span id="L191" data-line="191">  + declared domains and admission conditions</span>
+<span id="L192" data-line="192">  + failure and refusal routes + effect and closure laws</span>
+<span id="L193" data-line="193">  + projections + module mappings + material algorithmic obligations</span>
+<span id="L194" data-line="194">```</span>
+<span id="L195" data-line="195"></span>
+<span id="L196" data-line="196">A design boundary is decision-complete when `U(B)` is empty, `M(B)` forms</span>
+<span id="L197" data-line="197">one jointly satisfiable constraint network, and every network admitted by</span>
+<span id="L198" data-line="198">`M(B)` is semantically equivalent under the governing Product,</span>
+<span id="L199" data-line="199">requirements and accepted design relations. This is the design gate&#x27;s</span>
+<span id="L200" data-line="200">acceptance criterion: a boundary is ready for retained implementation</span>
+<span id="L201" data-line="201">without a prior gate exactly when it is decision-complete, and a gate that</span>
+<span id="L202" data-line="202">cannot reach decision completeness has not closed (P2, P6).</span>
+<span id="L203" data-line="203"></span>
+<span id="L204" data-line="204">Ontology, Prime contraction, IACS, target design, the domain, sequence and</span>
+<span id="L205" data-line="205">state views, public contracts, module boundaries, implementation and tests</span>
+<span id="L206" data-line="206">are projections of that one network at different reasoning altitudes.</span>
+<span id="L207" data-line="207">Their presence, section names, individual plausibility or mechanical</span>
+<span id="L208" data-line="208">validity does not establish decision completeness (P1, EVALUATION §1).</span>
+<span id="L209" data-line="209"></span>
+<span id="L210" data-line="210">The boundary is underconstrained whenever `decision_complete(B)` is false,</span>
+<span id="L211" data-line="211">including when implementation has to introduce a new material semantic</span>
+<span id="L212" data-line="212">decision, projections contradict one another, or two materially</span>
+<span id="L213" data-line="213">non-equivalent networks remain admissible. Local algorithm and layout</span>
+<span id="L214" data-line="214">choices may remain open only when every admitted choice is semantically</span>
+<span id="L215" data-line="215">equivalent under the accepted network. Contradictory projections make the</span>
+<span id="L216" data-line="216">design unsatisfiable and block promotion (P1, P5): an unsatisfiable design</span>
+<span id="L217" data-line="217">fails the design gate&#x27;s acceptance criterion, so this block is a</span>
+<span id="L218" data-line="218">precondition of the gate (§7 Gate and retrospective work), not a decision</span>
+<span id="L219" data-line="219">on a review finding. Decision completeness</span>
+<span id="L220" data-line="220">does not require another document: the constraint network may be expressed</span>
+<span id="L221" data-line="221">through the existing Ontology, algebra, module mapping and views when those</span>
+<span id="L222" data-line="222">surfaces jointly carry the complete relation (P2).</span>
+<span id="L223" data-line="223"></span>
+<span id="L224" data-line="224">### Bounded frame conservation (UP-017)</span>
+<span id="L225" data-line="225"></span>
+<span id="L226" data-line="226">`M(B)` closes one governed boundary. A bounded local action is taken inside</span>
+<span id="L227" data-line="227">a design frame that derives from other accepted frames, and its lawfulness</span>
+<span id="L228" data-line="228">depends on relations the acting frame does not itself own (P4b, P0). Global and local are relative to</span>
+<span id="L229" data-line="229">the selected frame. Each material design frame identifies:</span>
+<span id="L230" data-line="230"></span>
+<span id="L231" data-line="231">- the governing frames and accepted relations from which it derives;</span>
+<span id="L232" data-line="232">- the bounded affected relation set of the proposed action;</span>
+<span id="L233" data-line="233">- the applicable inherited invariants;</span>
+<span id="L234" data-line="234">- the authority and composition seams crossing that set; and</span>
+<span id="L235" data-line="235">- the subordinate frames opened by unresolved material distinctions.</span>
+<span id="L236" data-line="236"></span>
+<span id="L237" data-line="237">A frame may derive from more than one governing frame. A persistence</span>
+<span id="L238" data-line="238">component belongs to an entity lifecycle boundary and an operational</span>
+<span id="L239" data-line="239">consistency boundary; an admission function belongs to a domain transition</span>
+<span id="L240" data-line="240">and a runtime-authority boundary; a shared callable may be consumed by</span>
+<span id="L241" data-line="241">several sibling domains without becoming subordinate to one. A single</span>
+<span id="L242" data-line="242">governing frame is lawful where the structure is genuinely hierarchical,</span>
+<span id="L243" data-line="243">and is not required. Governing frames form a constraint network for the</span>
+<span id="L244" data-line="244">same reason `M(B)` does (P4b, P6).</span>
+<span id="L245" data-line="245"></span>
+<span id="L246" data-line="246">The seam rule is [ACTIVATION §1 Execution unit](../ACTIVATION.md#execution-unit)</span>
+<span id="L247" data-line="247">and [§4](../ACTIVATION.md#4-totality-and-refinement). Applied to a design</span>
+<span id="L248" data-line="248">frame, it makes the declared set testable against its own declared seams without a closure algorithm or</span>
+<span id="L249" data-line="249">recursive expansion through irrelevant relations (P0).</span>
+<span id="L250" data-line="250"></span>
+<span id="L251" data-line="251">The result is evaluated against every affected governing frame, preserves</span>
+<span id="L252" data-line="252">each applicable accepted relation, and updates only affected subordinate</span>
+<span id="L253" data-line="253">projections. A bounded local action conserves governing truth; it does not</span>
+<span id="L254" data-line="254">rewrite it. A result that changes a governing relation re-enters at that</span>
+<span id="L255" data-line="255">relation before acceptance (P4b; FOUNDATIONS §3 P4b, frame instance). A</span>
+<span id="L256" data-line="256">subordinate frame opens only when a material distinction cannot be</span>
+<span id="L257" data-line="257">resolved at the governing altitude; this rule does not require recursively</span>
+<span id="L258" data-line="258">documenting irrelevant descendants (P2). The law is false if a change is</span>
+<span id="L259" data-line="259">locally valid inside the selected frame but violates, duplicates or</span>
+<span id="L260" data-line="260">silently reinterprets an invariant in any affected governing frame.</span>
+<span id="L261" data-line="261"></span>
+<span id="L262" data-line="262">Discovered functionality is evidence about required behaviour, not yet an</span>
+<span id="L263" data-line="263">architectural operation. A discovered verb, screen action, endpoint,</span>
+<span id="L264" data-line="264">command, ticket phrase or use case is not promoted directly into a public</span>
+<span id="L265" data-line="265">operation identity, peer carrier, module or implementation function; it is</span>
+<span id="L266" data-line="266">first derived through the Ontology (P6, P2). The derivation order:</span>
+<span id="L267" data-line="267"></span>
+<span id="L268" data-line="268">```text</span>
+<span id="L269" data-line="269">constitutional functionality</span>
+<span id="L270" data-line="270">  -&gt; candidate Ontology</span>
+<span id="L271" data-line="271">  -&gt; logical completeness</span>
+<span id="L272" data-line="272">  -&gt; whole-family Prime contraction</span>
+<span id="L273" data-line="273">  -&gt; accepted Ontology basis</span>
+<span id="L274" data-line="274">  -&gt; Irreducible Architectural Carrier Set</span>
+<span id="L275" data-line="275">  -&gt; target design and domain, sequence and state projections</span>
+<span id="L276" data-line="276">  -&gt; public contract and adapter projections</span>
+<span id="L277" data-line="277">  -&gt; implementation and test projections</span>
+<span id="L278" data-line="278">```</span>
+<span id="L279" data-line="279"></span>
+<span id="L280" data-line="280">### Native constructability (UP-002)</span>
+<span id="L281" data-line="281"></span>
+<span id="L282" data-line="282">A semantically coherent design is not acceptable when its selected</span>
+<span id="L283" data-line="283">substrate cannot natively construct the required identities,</span>
+<span id="L284" data-line="284">relationships, transitions, authority boundaries, effects, lifecycle,</span>
+<span id="L285" data-line="285">composition, publication and retirement behaviour (P2, P5). A missing</span>
+<span id="L286" data-line="286">substrate capability remains an explicit design gap or triggers lawful</span>
+<span id="L287" data-line="287">re-entry (SPEC_METHOD §4); it is not hidden behind a reference bridge,</span>
+<span id="L288" data-line="288">adapter, filesystem runner, test double or promised future feature (P6;</span>
+<span id="L289" data-line="289">SPEC_METHOD §7 Bridge prohibition). This is a constructability obligation,</span>
+<span id="L290" data-line="290">not a prescribed implementation; the consumer chooses the substrate and the</span>
+<span id="L291" data-line="291">evidence mechanism (P0).</span>
+<span id="L292" data-line="292"></span>
+<span id="L293" data-line="293">### Capability and foundation selection (UP-023)</span>
+<span id="L294" data-line="294"></span>
+<span id="L295" data-line="295">Native constructability proves that the selected substrate can realise the</span>
+<span id="L296" data-line="296">design; it does not prove that locally constructing another generic</span>
+<span id="L297" data-line="297">mechanism is the best realisation. Before constructing a material generic</span>
+<span id="L298" data-line="298">capability, common mechanic or algorithm, or selecting a material</span>
+<span id="L299" data-line="299">dependency, the active design boundary performs a proportional</span>
+<span id="L300" data-line="300">foundation-selection pass (P2, P6). Its governing law</span>
+<span id="L301" data-line="301">is [FOUNDATIONS §4](../FOUNDATIONS.md#4-algebra) Shared machinery; this</span>
+<span id="L302" data-line="302">section is its selection procedure.</span>
+<span id="L303" data-line="303"></span>
+<span id="L304" data-line="304">The pass first states the required capability without Product, domain,</span>
+<span id="L305" data-line="305">module, vendor, file or incumbent-implementation labels. It then</span>
+<span id="L306" data-line="306">distinguishes each irreducible semantic or authority-bearing relation,</span>
+<span id="L307" data-line="307">with its declared owner, role kind, subject, scope, basis and material</span>
+<span id="L308" data-line="308">lifecycle and refusal invariants, from the generic mechanics and</span>
+<span id="L309" data-line="309">foundation capabilities that may support those relations or realise an</span>
+<span id="L310" data-line="310">explicitly assigned role. This factoring concerns declared relations and</span>
+<span id="L311" data-line="311">roles, not source authorship (P6, P1).</span>
+<span id="L312" data-line="312"></span>
+<span id="L313" data-line="313">The bounded candidate population draws applicable compositions from:</span>
+<span id="L314" data-line="314">foundations already admitted in the current project; language, runtime,</span>
+<span id="L315" data-line="315">platform or standard-library capabilities; accepted predecessor or</span>
+<span id="L316" data-line="316">immutable-lineage realisations usable as evidence; maintained external</span>
+<span id="L317" data-line="317">foundations where the Product permits a dependency; and a bounded local</span>
+<span id="L318" data-line="318">implementation (P2).</span>
+<span id="L319" data-line="319"></span>
+<span id="L320" data-line="320">Candidate discovery is bounded, reproducible and explicitly</span>
+<span id="L321" data-line="321">non-exhaustive. For every candidate category the evidence record declares</span>
+<span id="L322" data-line="322">the sources or collections searched, cutoff time and relevant version</span>
+<span id="L323" data-line="323">basis, applicability and inclusion criteria, material exclusions,</span>
+<span id="L324" data-line="324">predecessor or incumbent status, discovered candidates and residual</span>
+<span id="L325" data-line="325">unknowns; a category not searched records `not_applicable` or a named gap</span>
+<span id="L326" data-line="326">with its reason. Discovery closes only for that declared basis and cutoff.</span>
+<span id="L327" data-line="327">A discovery gap that could materially alter the frontier prevents</span>
+<span id="L328" data-line="328">selection; an immaterial residual records why it cannot change the current</span>
+<span id="L329" data-line="329">decision. A later candidate that satisfies the applicability criteria and</span>
+<span id="L330" data-line="330">could materially alter the lawful frontier invalidates the affected</span>
+<span id="L331" data-line="331">selection evidence and re-enters this relation (P6, P5, P3); such a</span>
+<span id="L332" data-line="332">candidate is newly acquired admissible evidence material to the selection,</span>
+<span id="L333" data-line="333">an instance of the material input change of</span>
+<span id="L334" data-line="334">[ACTIVATION §7](../ACTIVATION.md#7-closed-result-and-reuse).</span>
+<span id="L335" data-line="335"></span>
+<span id="L336" data-line="336">This relation operates inside the Product boundary and, where applicable,</span>
+<span id="L337" data-line="337">the migration strategy already admitted by their existing owners. It does</span>
+<span id="L338" data-line="338">not choose bounded evolution versus fundamental re-adoption or override</span>
+<span id="L339" data-line="339">the rebuttable strategy presumption of SPEC_METHOD §7 Constitutional</span>
+<span id="L340" data-line="340">migration options. A working predecessor may therefore constrain the</span>
+<span id="L341" data-line="341">admitted candidate set at migration altitude. Within that admitted</span>
+<span id="L342" data-line="342">boundary and the generic-capability decision, discovery may begin with the</span>
+<span id="L343" data-line="343">incumbent or an already installed dependency, but selection has no</span>
+<span id="L344" data-line="344">source-order, familiarity, sunk-cost, local-code or dependency-count</span>
+<span id="L345" data-line="345">preference. Candidate compositions are evaluated, not only individual</span>
+<span id="L346" data-line="346">packages: a lawful result may use a foundation for generic mechanics and</span>
+<span id="L347" data-line="347">may also use it to realise a semantic or authority-bearing role explicitly</span>
+<span id="L348" data-line="348">assigned by accepted design. Neither case changes who owns the declared</span>
+<span id="L349" data-line="349">relation (P6, P2).</span>
+<span id="L350" data-line="350"></span>
+<span id="L351" data-line="351">For every material candidate admitted to the bounded population, one</span>
+<span id="L352" data-line="352">evidence ledger or equivalent design record compares the dimensions that</span>
+<span id="L353" data-line="353">can change the decision, including: functional and constructability fit;</span>
+<span id="L354" data-line="354">semantic or operation-authority leakage; adapter, integration, migration,</span>
+<span id="L355" data-line="355">deletion and future-code cost; licence, maintenance, security, upgrade and</span>
+<span id="L356" data-line="356">supply-chain posture; package, runtime, startup, storage and operational</span>
+<span id="L357" data-line="357">cost; determinism, concurrency, failure, recovery, reconstruction and</span>
+<span id="L358" data-line="358">replay; proof and assurance burden; and exit, replacement and reversibility</span>
+<span id="L359" data-line="359">cost (P2, P6).</span>
+<span id="L360" data-line="360"></span>
+<span id="L361" data-line="361">A hard authority, Product-contract, safety, security, licensing or</span>
+<span id="L362" data-line="362">native-constructability failure eliminates a candidate. Unknown evidence</span>
+<span id="L363" data-line="363">remains unknown and cannot be converted into a favourable score. A</span>
+<span id="L364" data-line="364">universal scalar is not required. Lawful candidates that remain materially</span>
+<span id="L365" data-line="365">incomparable form an explicit undominated frontier (P6, P5).</span>
+<span id="L366" data-line="366"></span>
+<span id="L367" data-line="367">One lawful candidate composition dominates another on the current basis</span>
+<span id="L368" data-line="368">only when every material decision dimension is comparable or evidenced as</span>
+<span id="L369" data-line="369">non-discriminating between them, it is no worse on every comparable</span>
+<span id="L370" data-line="370">dimension, and it is strictly better on at least one. A material unknown</span>
+<span id="L371" data-line="371">that could reverse the relation prevents dominance and remains a gap. A</span>
+<span id="L372" data-line="372">dominated candidate cannot be selected unless new evidence or another</span>
+<span id="L373" data-line="373">material dimension invalidates the dominance relation; therefore a local</span>
+<span id="L374" data-line="374">rebuild of generic mechanics is inadmissible when an existing lawful</span>
+<span id="L375" data-line="375">foundation composition dominates it. Unused feature breadth alone does not</span>
+<span id="L376" data-line="376">establish dominance and may itself add lifecycle cost (P2, P6).</span>
+<span id="L377" data-line="377"></span>
+<span id="L378" data-line="378">The existing trade-off owner may select an undominated lawful composition</span>
+<span id="L379" data-line="379">only by applying priorities and risk tolerances declared for the exact</span>
+<span id="L380" data-line="380">Product and basis and recording how they resolve the frontier. If those</span>
+<span id="L381" data-line="381">priorities and tolerances do not resolve the frontier, the choice remains</span>
+<span id="L382" data-line="382">an explicit design gap. The selected construction is not necessarily the</span>
+<span id="L383" data-line="383">fewest dependencies, smallest immediate edit, lowest local line count or</span>
+<span id="L384" data-line="384">richest feature set. A rejected material candidate records the decisive</span>
+<span id="L385" data-line="385">evidence or falsifier. Unsupported preference is not design closure (P6).</span>
+<span id="L386" data-line="386"></span>
+<span id="L387" data-line="387">Reuse does not automatically confer or transfer semantic, admission or</span>
+<span id="L388" data-line="388">other operation authority (IDENTITY §6; an instance of</span>
+<span id="L389" data-line="389">[FOUNDATIONS §2 Authority kinds](../FOUNDATIONS.md#authority-kinds), What</span>
+<span id="L390" data-line="390">creates no authority). A selected foundation may realise</span>
+<span id="L391" data-line="391">an explicitly assigned authority-bearing role when accepted design</span>
+<span id="L392" data-line="392">preserves the declared relation&#x27;s owner, role kind, subject, scope, basis</span>
+<span id="L393" data-line="393">and material lifecycle and refusal invariants. Foundation capability,</span>
+<span id="L394" data-line="394">provenance or source authorship cannot widen or remint that role.</span>
+<span id="L395" data-line="395">Ownership belongs to the declared relation, not necessarily to locally</span>
+<span id="L396" data-line="396">written code; an irreducible Product or domain relation retains its</span>
+<span id="L397" data-line="397">declared owner whether local code, a reused foundation or their</span>
+<span id="L398" data-line="398">composition realises it. Generic local code is lawful only when it wins</span>
+<span id="L399" data-line="399">the same comparison; it is not the default (P6).</span>
+<span id="L400" data-line="400"></span>
+<span id="L401" data-line="401">If construction exposes another material generic subproblem, that</span>
+<span id="L402" data-line="402">subproblem recursively re-enters this selection relation before its</span>
+<span id="L403" data-line="403">implementation is retained. This prior selection pass is distinct from</span>
+<span id="L404" data-line="404">recurrence extraction (§10): recurrence review detects repeated</span>
+<span id="L405" data-line="405">realisation after patterns exist, while this rule prevents avoidable</span>
+<span id="L406" data-line="406">reproduction before construction (P2). Apply the pass proportionally. It</span>
+<span id="L407" data-line="407">is mandatory for material algorithms, common mechanics, new dependencies</span>
+<span id="L408" data-line="408">and locally rebuilt foundation capabilities. It does not require a package</span>
+<span id="L409" data-line="409">survey or ledger for a trivial helper whose choice cannot materially affect</span>
+<span id="L410" data-line="410">authority, Product behaviour, lifecycle cost or the accepted design network</span>
+<span id="L411" data-line="411">(P2; ACTIVATION §6).</span>
+<span id="L412" data-line="412"></span>
+<span id="L413" data-line="413">### Entity and lifecycle completeness</span>
+<span id="L414" data-line="414"></span>
+<span id="L415" data-line="415">The Ontology enumerates the entities inside the active boundary, their</span>
+<span id="L416" data-line="416">identities, relationships, cardinalities, invariants, lifecycle states and</span>
+<span id="L417" data-line="417">authority owners (P3, P5). For</span>
+<span id="L418" data-line="418">each entity, design evidence provides this logical-completeness matrix or</span>
+<span id="L419" data-line="419">an equivalent closed representation:</span>
+<span id="L420" data-line="420"></span>
+<span id="L421" data-line="421">| Entity | Identity | Authority owner | Declare/create | Read/project | Update/transition | Delete/retire |</span>
+<span id="L422" data-line="422">|---|---|---|---|---|---|---|</span>
+<span id="L423" data-line="423"></span>
+<span id="L424" data-line="424">The matrix applies to identity-bearing entities and independently governed</span>
+<span id="L425" data-line="425">value families (P3, P2). A Subordinate Payload or value object inherits the</span>
+<span id="L426" data-line="426">lifecycle and authority of its owning entity unless it passes the</span>
+<span id="L427" data-line="427">Promotion Test (§6); it does not require a ceremonial peer lifecycle row.</span>
+<span id="L428" data-line="428"></span>
+<span id="L429" data-line="429">The lifecycle columns are completeness questions, not a mandate for</span>
+<span id="L430" data-line="430">mutable CRUD: create may be declaration, construction, admission or</span>
+<span id="L431" data-line="431">materialisation; read should normally be a typed projection over</span>
+<span id="L432" data-line="432">authoritative truth; update should normally be an admitted transition or</span>
+<span id="L433" data-line="433">new version rather than in-place semantic mutation; delete should normally</span>
+<span id="L434" data-line="434">be retirement, revocation, decommission or supersession where history or</span>
+<span id="L435" data-line="435">identity has to remain true (P3). Every cell identifies a lawful function,</span>
+<span id="L436" data-line="436">declares `not_applicable` with a reason, or names a `Gap:` or</span>
+<span id="L437" data-line="437">`Unanswered:` item and owner. Silence is not logical-completeness evidence</span>
+<span id="L438" data-line="438">(P5, P6).</span>
+<span id="L439" data-line="439"></span>
+<span id="L440" data-line="440">This entity lifecycle is distinct from the operational module lifecycle of</span>
+<span id="L441" data-line="441">ASSURANCE §16: the Ontology describes what states and transformations</span>
+<span id="L442" data-line="442">exist for domain entities; ASSURANCE §16 confirms how the resulting</span>
+<span id="L443" data-line="443">realisation is built, released, deployed, observed and retired (P1).</span>
+<span id="L444" data-line="444"></span>
+<span id="L445" data-line="445">### Authority model</span>
+<span id="L446" data-line="446"></span>
+<span id="L447" data-line="447">Authority is part of the Ontology, not metadata added to an operation</span>
+<span id="L448" data-line="448">after its shape has been selected (P6). For every</span>
+<span id="L449" data-line="449">Ontology function or lifecycle transition that crosses a semantic,</span>
+<span id="L450" data-line="450">authority, admission, effect, persistence or public boundary, design</span>
+<span id="L451" data-line="451">evidence provides this authority matrix or an equivalent closed</span>
+<span id="L452" data-line="452">representation:</span>
+<span id="L453" data-line="453"></span>
+<span id="L454" data-line="454">| Function or transition | Proposer | Evaluator | Verifier | Admitter | Executor | Projector | Retirement owner |</span>
+<span id="L455" data-line="455">|---|---|---|---|---|---|---|---|</span>
+<span id="L456" data-line="456"></span>
+<span id="L457" data-line="457">The model distinguishes actor identity from authority; available</span>
+<span id="L458" data-line="458">capability from authority admitted for the current basis; proposal from</span>
+<span id="L459" data-line="459">evaluation, verification, admission, execution, projection and retirement;</span>
+<span id="L460" data-line="460">attribution from permission; and ownership of domain meaning from</span>
+<span id="L461" data-line="461">ownership of runtime effects (P6; FOUNDATIONS §2 Authority kinds). One</span>
+<span id="L462" data-line="462">owner may lawfully occupy more than one role only when the governing</span>
+<span id="L463" data-line="463">authority explicitly says so; role coincidence is not inferred from</span>
+<span id="L464" data-line="464">implementation convenience. Pure subordinate helpers inherit the authority</span>
+<span id="L465" data-line="465">envelope of their owning Ontology function and do not require peer</span>
+<span id="L466" data-line="466">authority rows unless they cross one of those boundaries.</span>
+<span id="L467" data-line="467"></span>
+<span id="L468" data-line="468">What cannot create authority is stated once in</span>
+<span id="L469" data-line="469">[FOUNDATIONS §2 Authority kinds](../FOUNDATIONS.md#authority-kinds), What</span>
+<span id="L470" data-line="470">creates no authority. This paragraph applies its items on composition,</span>
+<span id="L471" data-line="471">projection, labels, capability strings and payload shape to the Ontology&#x27;s</span>
+<span id="L472" data-line="472">functions and adds only these design instances (P6; IDENTITY §6).</span>
+<span id="L473" data-line="473">Composition does not widen authority implicitly: a composed or</span>
+<span id="L474" data-line="474">higher-order function has no more authority than the authority law</span>
+<span id="L475" data-line="475">admitted for its inputs, constituent functions and current basis.</span>
+<span id="L476" data-line="476">Delegation, elevation, transfer or retirement authority requires a named</span>
+<span id="L477" data-line="477">typed transition and an owning admission boundary; these carry in the</span>
+<span id="L478" data-line="478">design the explicit authority decision that FOUNDATIONS requires and do not</span>
+<span id="L479" data-line="479">replace it. Projections cannot create authority, and downstream code</span>
+<span id="L480" data-line="480">cannot reconstruct an authority witness from actor labels, capability</span>
+<span id="L481" data-line="481">strings or payload shape.</span>
+<span id="L482" data-line="482"></span>
+<span id="L483" data-line="483">### Transformation admission completeness (UP-016)</span>
+<span id="L484" data-line="484"></span>
+<span id="L485" data-line="485">The authority matrix names who admits; it does not by itself establish the</span>
+<span id="L486" data-line="486">relation that decides which candidate transformation becomes durable</span>
+<span id="L487" data-line="487">entity truth. Two designs can complete the matrix plausibly and still leave</span>
+<span id="L488" data-line="488">two materially different ways to admit the same transformation (P6, P4b).</span>
+<span id="L489" data-line="489"></span>
+<span id="L490" data-line="490">For every consequential entity-transition domain, design evidence contains</span>
+<span id="L491" data-line="491">the complete transformation-admission relation over entity identity,</span>
+<span id="L492" data-line="492">predecessor basis, authority scope, candidate family, decision</span>
+<span id="L493" data-line="493">cardinality, admission predicate, resulting durable fact and supersession</span>
+<span id="L494" data-line="494">law, through the authority matrix or an equivalent closed representation</span>
+<span id="L495" data-line="495">(P6, P4b):</span>
+<span id="L496" data-line="496"></span>
+<span id="L497" data-line="497">| Entity transition domain | Predecessor basis | Candidate family | Admission relation | Durable result | Competing-path disposition |</span>
+<span id="L498" data-line="498">|---|---|---|---|---|---|</span>
+<span id="L499" data-line="499"></span>
+<span id="L500" data-line="500">For every material admission relation, accepted design declares, in one</span>
+<span id="L501" data-line="501">compact relation or equivalent representation (P6, P4b, P3):</span>
+<span id="L502" data-line="502"></span>
+<span id="L503" data-line="503">- each admission owner and supported admission boundary;</span>
+<span id="L504" data-line="504">- the exact admission-valid basis identity, predecessor and currentness</span>
+<span id="L505" data-line="505">  continuity through admission, and any equal or coherent composite</span>
+<span id="L506" data-line="506">  multi-owner basis;</span>
+<span id="L507" data-line="507">- the complete enclosing relation, participant identities and equality</span>
+<span id="L508" data-line="508">  joins;</span>
+<span id="L509" data-line="509">- refusal and effect boundaries;</span>
+<span id="L510" data-line="510">- the complete semantic commit unit and its decomposability: every</span>
+<span id="L511" data-line="511">  materially distinct post-validation commit or publication boundary</span>
+<span id="L512" data-line="512">  capable of exposing a subset, or a design-declared dominance or</span>
+<span id="L513" data-line="513">  equivalence proof that named representative observations cover the</span>
+<span id="L514" data-line="514">  complete partial-failure surface;</span>
+<span id="L515" data-line="515">- reconstruction and the supported direct, composite and nested forms; and</span>
+<span id="L516" data-line="516">- competing-path disposition.</span>
+<span id="L517" data-line="517"></span>
+<span id="L518" data-line="518">The declaration binds the admission and standing-test semantics of</span>
+<span id="L519" data-line="519">ACTIVATION §4 (Complete enclosing-relation admission; Standing structural</span>
+<span id="L520" data-line="520">qualification), which solely owns them. Qualification is instantiated per</span>
+<span id="L521" data-line="521">owner and supported boundary. Unsupported composite or nested forms use</span>
+<span id="L522" data-line="522">`not_applicable` only when accepted domain or design excludes the form and</span>
+<span id="L523" data-line="523">the boundary has no weaker or competing admission path (P6, P4b). This</span>
+<span id="L524" data-line="524">obligation is false if a field, owner or supported boundary is missing or</span>
+<span id="L525" data-line="525">invented downstream; if basis continuity, partial-failure boundary</span>
+<span id="L526" data-line="526">coverage or its dominance or equivalence proof, or reconstruction is left</span>
+<span id="L527" data-line="527">to implementation inference; or if non-applicability is established only</span>
+<span id="L528" data-line="528">by a parser, helper or manufactured refusal.</span>
+<span id="L529" data-line="529"></span>
+<span id="L530" data-line="530">Singularity attaches to the complete decision relation, not to one actor,</span>
+<span id="L531" data-line="531">callable or component. Several actors, stages or implementations are</span>
+<span id="L532" data-line="532">lawful as constituents or disjoint instances of that relation. A relation</span>
+<span id="L533" data-line="533">may lawfully require one actor, several signatures, a quorum, a human</span>
+<span id="L534" data-line="534">step-up, delegated proxy authority or jurisdictional partitioning, provided</span>
+<span id="L535" data-line="535">its cardinality and adjudication law are declared (P6).</span>
+<span id="L536" data-line="536"></span>
+<span id="L537" data-line="537">Competing-path disposition does not imply deletion. An equivalent path may</span>
+<span id="L538" data-line="538">be a lawful constituent, replica, replacement or deliberately independent</span>
+<span id="L539" data-line="539">realisation, provided its relationship to the singular admission law is</span>
+<span id="L540" data-line="540">explicit. A superseded responsibility remains subject to SPEC_METHOD §7</span>
+<span id="L541" data-line="541">Core interface migration: retention requires a distinct supported purpose,</span>
+<span id="L542" data-line="542">not merely a path label or an existing test (P6, P2). A projection may</span>
+<span id="L543" data-line="543">produce a candidate transformation, but projection status does not confer</span>
+<span id="L544" data-line="544">admission authority; any consequential result re-enters the governing</span>
+<span id="L545" data-line="545">admission relation against its explicit predecessor basis, and a</span>
+<span id="L546" data-line="546">reconstructed projection state is not self-authenticating admission</span>
+<span id="L547" data-line="547">evidence (P6; projection is an item of</span>
+<span id="L548" data-line="548">[FOUNDATIONS §2 Authority kinds](../FOUNDATIONS.md#authority-kinds), What</span>
+<span id="L549" data-line="549">creates no authority).</span>
+<span id="L550" data-line="550"></span>
+<span id="L551" data-line="551">This law is false if any of the following holds (P6, P4b): two materially</span>
+<span id="L552" data-line="552">non-equivalent admission relations remain reachable for the same governed</span>
+<span id="L553" data-line="553">transition domain on the same entity identity, authority scope and</span>
+<span id="L554" data-line="554">predecessor basis (disjoint scopes or identities are not a</span>
+<span id="L555" data-line="555">counterexample); a materially equivalent competing implementation remains</span>
+<span id="L556" data-line="556">reachable without being identified as a constituent, replica, replacement</span>
+<span id="L557" data-line="557">or deliberately independent realisation; or a projection-triggered</span>
+<span id="L558" data-line="558">reaction uses its own reconstructive state as self-authenticating</span>
+<span id="L559" data-line="559">admission evidence.</span>
+<span id="L560" data-line="560"></span>
+<span id="L561" data-line="561">### Atomic functions and higher-order composition</span>
+<span id="L562" data-line="562"></span>
+<span id="L563" data-line="563">The Ontology derives the smallest parameterised atomic function families</span>
+<span id="L564" data-line="564">that make the entity lifecycles logically complete. Variation that changes</span>
+<span id="L565" data-line="565">only an entity kind, projection kind, transition kind, policy or</span>
+<span id="L566" data-line="566">subordinate payload should normally be a typed parameter or closed variant</span>
+<span id="L567" data-line="567">of one function family, not another peer function (P4a, P3). The minimum</span>
+<span id="L568" data-line="568">function-derivation evidence is:</span>
+<span id="L569" data-line="569"></span>
+<span id="L570" data-line="570">| Discovered functionality | Entity | Atomic function or template | Higher-order composition | Effect class | Required authority | Disposition |</span>
+<span id="L571" data-line="571">|---|---|---|---|---|---|---|</span>
+<span id="L572" data-line="572"></span>
+<span id="L573" data-line="573">Every row is one of: derived through an admitted atomic function; derived</span>
+<span id="L574" data-line="574">through a declared higher-order composition; deferred with an owner and</span>
+<span id="L575" data-line="575">re-entry condition; excluded by current product authority; or unresolved</span>
+<span id="L576" data-line="576">as a named gap (P5, P6).</span>
+<span id="L577" data-line="577"></span>
+<span id="L578" data-line="578">Where the boundary has higher-order behaviour, the Ontology names the</span>
+<span id="L579" data-line="579">governing composition and effect algebra. Typical categories include unit</span>
+<span id="L580" data-line="580">or lift, sequential composition, parallel or applicative composition, fold</span>
+<span id="L581" data-line="581">or evaluation, retry or recovery, recursion or fixed point, and</span>
+<span id="L582" data-line="582">projection. The design states the applicable identity, closure,</span>
+<span id="L583" data-line="583">associativity, cardinality, effect and authority-conservation laws rather</span>
+<span id="L584" data-line="584">than hiding them in controller flow (P4a, P6; FOUNDATIONS §4 Composition).</span>
+<span id="L585" data-line="585">This does not require monadic or category-theory vocabulary</span>
+<span id="L586" data-line="586">(SPEC_METHOD §2 Realisation shape). A product under the graph-execution</span>
+<span id="L587" data-line="587">profile may bind the requirement to GTL composition and ABG</span>
+<span id="L588" data-line="588">interpretation; another product may use another explicit algebra.</span>
+<span id="L589" data-line="589"></span>
+<span id="L590" data-line="590">Composition, effects and implementation may be discovered iteratively only</span>
+<span id="L591" data-line="591">when `co_evolution_admissible(B)` holds. Otherwise only a disposable spike</span>
+<span id="L592" data-line="592">may supply evidence across the affected unresolved, contradictory or</span>
+<span id="L593" data-line="593">materially non-equivalent relation before its design is accepted. Every</span>
+<span id="L594" data-line="594">retained result is reconciled into accepted design before promotion or</span>
+<span id="L595" data-line="595">design-method closure. No private helper, loop, adapter or endpoint may</span>
+<span id="L596" data-line="596">become an undeclared constructor (P6, P2).</span>
+<span id="L597" data-line="597"></span>
+<span id="L598" data-line="598">### Prime semantic atoms and admitted domain</span>
+<span id="L599" data-line="599"></span>
+<span id="L600" data-line="600">A Prime semantic atom is one irreducible design relation: an atomic</span>
+<span id="L601" data-line="601">function family, identity, authority transition, lifecycle relation,</span>
+<span id="L602" data-line="602">topology, effect, closure law or composition law that cannot be expressed</span>
+<span id="L603" data-line="603">honestly by composing other accepted atoms while preserving the same</span>
+<span id="L604" data-line="604">meaning (P3, P1).</span>
+<span id="L605" data-line="605"></span>
+<span id="L606" data-line="606">Prime is decided at semantic-design altitude. A file, source function,</span>
+<span id="L607" data-line="607">class, schema record, public operation, diagram, module or owner category</span>
+<span id="L608" data-line="608">is not a Prime atom merely because it is small, typed, separately named or</span>
+<span id="L609" data-line="609">independently testable. One atom may project into several realisation</span>
+<span id="L610" data-line="610">units, and one realisation unit may implement several atoms, provided the</span>
+<span id="L611" data-line="611">mapping is explicit and introduces no rival meaning or authority. An</span>
+<span id="L612" data-line="612">atomic function is not proven Prime until the complete candidate family has</span>
+<span id="L613" data-line="613">been contracted (whole-family Prime contraction, below; P1, P6).</span>
+<span id="L614" data-line="614"></span>
+<span id="L615" data-line="615">Every accepted Prime atom declares the admitted domain over which its law</span>
+<span id="L616" data-line="616">holds, and within that domain it governs every admitted instance. A later</span>
+<span id="L617" data-line="617">use case composes or parameterises the atom; it does not fork, shadow,</span>
+<span id="L618" data-line="618">specialise or reinterpret the atom locally. An out-of-domain case may</span>
+<span id="L619" data-line="619">justify proposing another candidate atom for design admission. An</span>
+<span id="L620" data-line="620">in-domain counterexample falsifies the shared atom and re-enters at that</span>
+<span id="L621" data-line="621">atom&#x27;s design boundary rather than authorising a feature-local replacement</span>
+<span id="L622" data-line="622">(P3, P6). An atom without a declared admitted domain remains a candidate</span>
+<span id="L623" data-line="623">atom; it cannot supply Prime acceptance or Prime-conformance to a</span>
+<span id="L624" data-line="624">realisation projection.</span>
+<span id="L625" data-line="625"></span>
+<span id="L626" data-line="626">### Whole-family Prime contraction</span>
+<span id="L627" data-line="627"></span>
+<span id="L628" data-line="628">Prime review evaluates the complete candidate semantic-atom family and</span>
+<span id="L629" data-line="629">every proposed realisation projection, not only functions, carriers or</span>
+<span id="L630" data-line="630">each atom in isolation. The family includes every proposed identity,</span>
+<span id="L631" data-line="631">authority transition, lifecycle relation, topology, function, composition</span>
+<span id="L632" data-line="632">law, effect and closure law. A function-and-carrier-only pass does not</span>
+<span id="L633" data-line="633">establish whole-family Prime (P3, P2). Before promotion, review asks:</span>
+<span id="L634" data-line="634"></span>
+<span id="L635" data-line="635">- can several proposed operations be typed parameters of one atomic</span>
+<span id="L636" data-line="636">  function?</span>
+<span id="L637" data-line="637">- are several commands lifecycle transitions over one entity?</span>
+<span id="L638" data-line="638">- are several reads projections over one source truth?</span>
+<span id="L639" data-line="639">- are several implementations applications of one higher-order function?</span>
+<span id="L640" data-line="640">- does the candidate introduce independent identity, authority, effect,</span>
+<span id="L641" data-line="641">  lifecycle, reuse or public pattern-match semantics?</span>
+<span id="L642" data-line="642">- has every candidate atom kind entered the same contraction?</span>
+<span id="L643" data-line="643">- does every realisation unit map explicitly to its accepted atom or</span>
+<span id="L644" data-line="644">  atoms?</span>
+<span id="L645" data-line="645">- does any realisation projection introduce, duplicate or reinterpret</span>
+<span id="L646" data-line="646">  meaning or authority?</span>
+<span id="L647" data-line="647"></span>
+<span id="L648" data-line="648">A family of individually plausible functions is not Prime when one</span>
+<span id="L649" data-line="649">parameterised template plus closed variants carries the same meaning and</span>
+<span id="L650" data-line="650">authority. Recurrence is contracted during design when visible; the</span>
+<span id="L651" data-line="651">post-implementation recurrence rule (§10) is not a substitute for this</span>
+<span id="L652" data-line="652">prior pass (P2).</span>
+<span id="L653" data-line="653"></span>
+<span id="L654" data-line="654">### Recursive Prime and root conservation (UP-003)</span>
+<span id="L655" data-line="655"></span>
+<span id="L656" data-line="656">At a material semantic boundary, Prime contraction applies to each</span>
+<span id="L657" data-line="657">candidate semantic atom and then to the complete family produced by those</span>
+<span id="L658" data-line="658">contractions. A locally irreducible atom is not globally Prime when the</span>
+<span id="L659" data-line="659">family duplicates identity, authority, function, lifecycle, topology,</span>
+<span id="L660" data-line="660">effect or projection meaning. Local Prime-conformance of realisation units</span>
+<span id="L661" data-line="661">does not prove the semantic family globally Prime (P3, P6).</span>
+<span id="L662" data-line="662"></span>
+<span id="L663" data-line="663">Contraction preserves root authority and every retained semantic relation.</span>
+<span id="L664" data-line="664">Reducing files, functions, operations or authoring surfaces cannot</span>
+<span id="L665" data-line="665">compensate for introducing another authority source or truth path (P6,</span>
+<span id="L666" data-line="666">P4b). Prime evidence states the complete candidate semantic-atom family;</span>
+<span id="L667" data-line="667">each atom&#x27;s stable identity, irreducible relation, admitted domain and</span>
+<span id="L668" data-line="668">falsification condition; the whole-family contraction relation; retained</span>
+<span id="L669" data-line="669">meaning and authority before and after contraction; accepted loss; and the</span>
+<span id="L670" data-line="670">explicit total mapping from every proposed realisation projection to its</span>
+<span id="L671" data-line="671">accepted atom or atoms (P4b, FOUNDATIONS §4 Conservation accounting). Work</span>
+<span id="L672" data-line="672">inside an accepted boundary cites the existing Prime basis rather than</span>
+<span id="L673" data-line="673">recreating it (P2).</span>
+<span id="L674" data-line="674"></span>
+<span id="L675" data-line="675">### Ontology projection</span>
+<span id="L676" data-line="676"></span>
+<span id="L677" data-line="677">The Ontology is one semantic truth (P1, P6).</span>
+<span id="L678" data-line="678">These preserve it and do not become independent semantic authorities:</span>
+<span id="L679" data-line="679">class or domain diagrams; sequence diagrams; state and lifecycle diagrams;</span>
+<span id="L680" data-line="680">authority and effect matrices; the IACS; public APIs, operation registers,</span>
+<span id="L681" data-line="681">SDK and CLI surfaces; schemas, codecs, manifests and generated catalogues;</span>
+<span id="L682" data-line="682">target architecture and module design; implementation modules through</span>
+<span id="L683" data-line="683">accepted target design; and test and proof inventories through</span>
+<span id="L684" data-line="684">requirements and accepted design.</span>
+<span id="L685" data-line="685"></span>
+<span id="L686" data-line="686">Each design projection identifies its Ontology source and the identity,</span>
+<span id="L687" data-line="687">relationship, lifecycle, authority, function or effect law it preserves.</span>
+<span id="L688" data-line="688">Any intentional omission or flattening declares accepted loss and a</span>
+<span id="L689" data-line="689">failure condition (FOUNDATIONS §4 Reference versus body). Target design</span>
+<span id="L690" data-line="690">may add structural HOW absent from the Ontology, but it may not originate</span>
+<span id="L691" data-line="691">rival semantic meaning. Implementation and tests trace through that</span>
+<span id="L692" data-line="692">accepted design rather than bypassing it (P1, P6).</span>
+<span id="L693" data-line="693"></span>
+<span id="L694" data-line="694">If a public operation, sequence message, state transition, carrier or</span>
+<span id="L695" data-line="695">effect cannot be traced through accepted design to the accepted Ontology,</span>
+<span id="L696" data-line="696">it is ungrounded design and does not enter the active product line. An</span>
+<span id="L697" data-line="697">implementation branch or test expectation traces to requirements plus</span>
+<span id="L698" data-line="698">accepted design; it preserves, but need not be enumerated by, the</span>
+<span id="L699" data-line="699">Ontology (P6; SPEC_METHOD §2 Trace closure and anti-drift).</span>
+<span id="L700" data-line="700"></span>
+<span id="L701" data-line="701"></span>
+<span id="L702" data-line="702">Source: DESIGN_MODULE.md#7-ontology-and-three-view-design-gate sha256=50e70c797c93718e85192aaf2de39596f62f53030507ca8242c1af7e8f0ebcbe</span>
+<span id="L703" data-line="703"></span>
+<span id="L704" data-line="704">## 7. Ontology and three-view design gate</span>
+<span id="L705" data-line="705"></span>
+<span id="L706" data-line="706">Every new or materially changed semantic or typed module boundary carries</span>
+<span id="L707" data-line="707">one accepted Ontology and one complete three-view Mermaid design asset</span>
+<span id="L708" data-line="708">before the boundary is promoted or claims design-method closure (P6, P1). When</span>
+<span id="L709" data-line="709">`co_evolution_admissible(B)` holds, design evidence, implementation and</span>
+<span id="L710" data-line="710">tests may develop together before that gate; otherwise the affected</span>
+<span id="L711" data-line="711">unresolved, contradictory or materially non-equivalent relation is</span>
+<span id="L712" data-line="712">accepted before retained implementation establishes it. Unchanged</span>
+<span id="L713" data-line="713">boundaries cite their accepted basis; local realisation work with no</span>
+<span id="L714" data-line="714">material semantic-boundary delta does not recreate this gate (P2).</span>
+<span id="L715" data-line="715"></span>
+<span id="L716" data-line="716">The asset contains all three views: a Mermaid `classDiagram` domain model;</span>
+<span id="L717" data-line="717">a Mermaid `sequenceDiagram` execution model; and a Mermaid</span>
+<span id="L718" data-line="718">`stateDiagram-v2` lifecycle model. A project may ratify another text-native</span>
+<span id="L719" data-line="719">diagram format only when it preserves the same three distinct views and the</span>
+<span id="L720" data-line="720">same cross-view checks. One broad flowchart does not substitute for the</span>
+<span id="L721" data-line="721">three models. The three views may be sections of one existing design</span>
+<span id="L722" data-line="722">surface and may share one acceptance decision; this rule does not require</span>
+<span id="L723" data-line="723">three files, three tickets, three reviews or three approval ceremonies</span>
+<span id="L724" data-line="724">(P2). The views are not decorative and are not peer truth surfaces: they</span>
+<span id="L725" data-line="725">are fidelity-checked projections of the accepted Ontology, and together</span>
+<span id="L726" data-line="726">the sign-off surface for domain identity, authority, behaviour, lifecycle</span>
+<span id="L727" data-line="727">and axiom conformance (P1, P6).</span>
+<span id="L728" data-line="728"></span>
+<span id="L729" data-line="729">### Ontology evidence</span>
+<span id="L730" data-line="730"></span>
+<span id="L731" data-line="731">The design asset cites one accepted Ontology for the active boundary and</span>
+<span id="L732" data-line="732">includes or references its (P6): entity and</span>
+<span id="L733" data-line="733">relationship inventory; invariant and cardinality law; entity-lifecycle</span>
+<span id="L734" data-line="734">completeness matrix; authority matrix; atomic-function and</span>
+<span id="L735" data-line="735">higher-order-function derivation matrix; governing composition and effect</span>
+<span id="L736" data-line="736">algebra where applicable; whole-family Prime contraction, including every</span>
+<span id="L737" data-line="737">accepted atom&#x27;s admitted domain and realisation-projection mapping; and</span>
+<span id="L738" data-line="738">explicit deferred, excluded and unresolved functionality.</span>
+<span id="L739" data-line="739"></span>
+<span id="L740" data-line="740">The Ontology may be a boundary-bounded slice of a wider accepted product</span>
+<span id="L741" data-line="741">Ontology. The slice cites its parent and preserves parent identity,</span>
+<span id="L742" data-line="742">relationship, lifecycle, authority and function law. Copying selected rows</span>
+<span id="L743" data-line="743">into a new local model without that derivation creates another truth</span>
+<span id="L744" data-line="744">surface (P6, P3).</span>
+<span id="L745" data-line="745"></span>
+<span id="L746" data-line="746">### Invariant reconstruction sufficiency (UP-018)</span>
+<span id="L747" data-line="747"></span>
+<span id="L748" data-line="748">The evidence above is not a documentation deliverable. It is the durable</span>
+<span id="L749" data-line="749">reasoning state a bounded actor needs, because the actor selecting a local</span>
+<span id="L750" data-line="750">action generally does not hold the reasoning that produced the governing</span>
+<span id="L751" data-line="751">frames. Dialogue, commentary, prior-agent memory and implementation</span>
+<span id="L752" data-line="752">folklore are not that state (P0, P4b). The general</span>
+<span id="L753" data-line="753">reconstruction rule is [ACTIVATION §1 Intake](../ACTIVATION.md#intake); this</span>
+<span id="L754" data-line="754">clause states what design evidence supplies to it.</span>
+<span id="L755" data-line="755"></span>
+<span id="L756" data-line="756">Given an accepted material-frame basis, as determined by the material</span>
+<span id="L757" data-line="757">semantic boundary definition (§5), and a proposed bounded action, the</span>
+<span id="L758" data-line="758">selected method basis together with the accepted design is sufficient to</span>
+<span id="L759" data-line="759">recover every governing relation in the action&#x27;s causally closed affected</span>
+<span id="L760" data-line="760">set, and to decide whether the action preserves, changes, duplicates or</span>
+<span id="L761" data-line="761">violates each of those relations. The two inputs are distinct and neither</span>
+<span id="L762" data-line="762">substitutes for the other: the selected method describes which relations</span>
+<span id="L763" data-line="763">are required and how to reason about them; the accepted design supplies</span>
+<span id="L764" data-line="764">the concrete invariant values. A design that restates method decision law</span>
+<span id="L765" data-line="765">to satisfy this rule reproduces the local-method duplication this law</span>
+<span id="L766" data-line="766">exists to remove (P1, P6).</span>
+<span id="L767" data-line="767"></span>
+<span id="L768" data-line="768">| Decision | The action, against a governing relation | Core value |</span>
+<span id="L769" data-line="769">|---|---|---|</span>
+<span id="L770" data-line="770">| preserves | leaves the relation intact and operates inside it | `satisfied` |</span>
+<span id="L771" data-line="771">| changes | alters the relation itself, and therefore re-enters at that relation before acceptance | `invalid_basis` |</span>
+<span id="L772" data-line="772">| duplicates | establishes an equivalent path that is explicitly disposed as a constituent, replica, replacement or deliberately independent realisation | `satisfied` |</span>
+<span id="L773" data-line="773">| violates | contradicts the relation, or establishes an equivalent path that is left undisposed | `falsified` |</span>
+<span id="L774" data-line="774"></span>
+<span id="L775" data-line="775">The boundary between changes and violates is the locus of acceptance, not</span>
+<span id="L776" data-line="776">the size of the delta: an otherwise lawful change accepted inside the</span>
+<span id="L777" data-line="777">acting frame rather than at the relation it changes is a violation. The</span>
+<span id="L778" data-line="778">boundary between duplicates and violates is disposition, not equivalence:</span>
+<span id="L779" data-line="779">an equivalent path is lawful when disposed and a defect when not (P4b,</span>
+<span id="L780" data-line="780">P6). Sufficiency is bound to a declared action and its affected set; it is</span>
+<span id="L781" data-line="781">not a claim over an unbounded space of possible future changes, and the</span>
+<span id="L782" data-line="782">performance of any particular reviewer is not evidence either way (P0).</span>
+<span id="L783" data-line="783"></span>
+<span id="L784" data-line="784">The four decisions are a refinement of the core result algebra</span>
+<span id="L785" data-line="785">([FOUNDATIONS §4 Results](../FOUNDATIONS.md#results)). They answer what the</span>
+<span id="L786" data-line="786">action does to one governing relation, and each maps to exactly one core</span>
+<span id="L787" data-line="787">value for the predicate &quot;the action is admissible in the acting frame on</span>
+<span id="L788" data-line="788">the current governing basis&quot;; the value travels with that predicate and</span>
+<span id="L789" data-line="789">with the decision, whose meaning stays here (P5, P6). `preserves` and a</span>
+<span id="L790" data-line="790">disposed `duplicates` leave the relation as accepted. For `changes`, the</span>
+<span id="L791" data-line="791">relation itself must change at its own locus before the action can be</span>
+<span id="L792" data-line="792">accepted, so the current governing basis cannot support accepting it in</span>
+<span id="L793" data-line="793">the acting frame, as for the disposition `re_enter` of</span>
+<span id="L794" data-line="794">[ACTIVATION §3](../ACTIVATION.md#disposition). For `violates`, the</span>
+<span id="L795" data-line="795">contradiction or the undisposed equivalent path is the counterexample. An</span>
+<span id="L796" data-line="796">evaluation that reaches none of the four decisions returns the core value</span>
+<span id="L797" data-line="797">its cause selects, `indeterminate` where the admissible evidence cannot</span>
+<span id="L798" data-line="798">decide, naming what would decide (FOUNDATIONS §4 Results); where the</span>
+<span id="L799" data-line="799">cause is that the selected method basis and the accepted design do not</span>
+<span id="L800" data-line="800">suffice, the case falsifies this law, as stated below. Purpose and material relation: a lawful change is</span>
+<span id="L801" data-line="801">never read as a violation or as an action the acting frame may accept, and</span>
+<span id="L802" data-line="802">a violation is never read as a re-entry (P4b, P6).</span>
+<span id="L803" data-line="803"></span>
+<span id="L804" data-line="804">This obligation adds no artifact. It is satisfied through the Ontology</span>
+<span id="L805" data-line="805">evidence, authority matrix, transformation-admission relation, frame</span>
+<span id="L806" data-line="806">declaration, views and module mapping already required, and is a property</span>
+<span id="L807" data-line="807">of that material rather than a separate package (P2). The law is false if,</span>
+<span id="L808" data-line="808">for a declared bounded action, the accepted design does not expose a</span>
+<span id="L809" data-line="809">governing relation in that action&#x27;s causally closed affected set, or the</span>
+<span id="L810" data-line="810">preserve, change, duplicate or violate decision cannot be reached from the</span>
+<span id="L811" data-line="811">selected method basis and accepted design without conversation history,</span>
+<span id="L812" data-line="812">commentary, prior-worker memory or implementation folklore. Where the</span>
+<span id="L813" data-line="813">sufficiency of a boundary is tested, the test uses named cases with known</span>
+<span id="L814" data-line="814">governing relations and expected decisions, evaluated with conversation</span>
+<span id="L815" data-line="815">history, commentary, prior-worker memory and implementation folklore</span>
+<span id="L816" data-line="816">withheld (P6; EVALUATION §3).</span>
+<span id="L817" data-line="817"></span>
+<span id="L818" data-line="818">### Domain model</span>
+<span id="L819" data-line="819"></span>
+<span id="L820" data-line="820">The `classDiagram` is the structural domain projection of the Ontology</span>
+<span id="L821" data-line="821">(P1, P3). It shows, for the active boundary: domain</span>
+<span id="L822" data-line="822">identities and cardinalities rather than helper-class decomposition;</span>
+<span id="L823" data-line="823">entity ownership, invariants and lawful lifecycle relationships; atomic</span>
+<span id="L824" data-line="824">function families and their entity inputs and outputs where they cross the</span>
+<span id="L825" data-line="825">active boundary; higher-order composition relationships where they</span>
+<span id="L826" data-line="826">determine boundary shape; IACS carriers and their Prime-atom projection</span>
+<span id="L827" data-line="827">mappings; subordinate payloads; effect-edge-only payloads; downstream-only</span>
+<span id="L828" data-line="828">projections; deferred families outside the active slice; authoritative</span>
+<span id="L829" data-line="829">versus downstream role; public versus module-local visibility; and</span>
+<span id="L830" data-line="830">composition, containment, association and real variant-family structure.</span>
+<span id="L831" data-line="831"></span>
+<span id="L832" data-line="832">The standard stereotype vocabulary is `&lt;&lt;prime-conformant&gt;&gt;`,</span>
+<span id="L833" data-line="833">`&lt;&lt;subordinate&gt;&gt;`, `&lt;&lt;effect-edge&gt;&gt;`, `&lt;&lt;deferred&gt;&gt;`, `&lt;&lt;authoritative&gt;&gt;`</span>
+<span id="L834" data-line="834">and `&lt;&lt;downstream&gt;&gt;`. The standard visibility vocabulary is `+` public or</span>
+<span id="L835" data-line="835">exported and `-` module-local or private. The standard relationship</span>
+<span id="L836" data-line="836">expectations are composition for owned subordinate payloads, association</span>
+<span id="L837" data-line="837">for downstream consumption, and inheritance only for real variant or</span>
+<span id="L838" data-line="838">outcome families (P1).</span>
+<span id="L839" data-line="839"></span>
+<span id="L840" data-line="840">### Sequence model</span>
+<span id="L841" data-line="841"></span>
+<span id="L842" data-line="842">The `sequenceDiagram` is the behavioural projection of Ontology functions</span>
+<span id="L843" data-line="843">and authority (P1, P6). It shows the supported</span>
+<span id="L844" data-line="844">execution path from admitted input to result or truthful stop, and names</span>
+<span id="L845" data-line="845">the owner and required authority of every decision, admission, execution,</span>
+<span id="L846" data-line="846">projection and effect boundary. Where applicable it shows malformed input</span>
+<span id="L847" data-line="847">or output, retry, recursion, fan-out and fan-in, nested workflow and human</span>
+<span id="L848" data-line="848">escalation paths. Every participant exists in the domain model or is an</span>
+<span id="L849" data-line="849">explicitly external actor. Every message binds to a declared carrier</span>
+<span id="L850" data-line="850">transform, graph or computation constructor, interpreter action or</span>
+<span id="L851" data-line="851">effect-handler call; a private loop, service method, plugin, shell or</span>
+<span id="L852" data-line="852">script may not silently replace a declared workflow transition. Every</span>
+<span id="L853" data-line="853">message also binds to an Ontology function and its admitted authority</span>
+<span id="L854" data-line="854">role; actor identity or call reachability alone does not authorise a</span>
+<span id="L855" data-line="855">message (P6).</span>
+<span id="L856" data-line="856"></span>
+<span id="L857" data-line="857">### State model</span>
+<span id="L858" data-line="858"></span>
+<span id="L859" data-line="859">The `stateDiagram-v2` is the lifecycle projection of Ontology entities</span>
+<span id="L860" data-line="860">(P3, P5). It shows the complete admitted lifecycle for</span>
+<span id="L861" data-line="861">the active boundary, including refusal, blocked, continuation, retry,</span>
+<span id="L862" data-line="862">escalation and terminal states that the boundary can produce. Every</span>
+<span id="L863" data-line="863">transition binds to an Ontology function and names its owning authority,</span>
+<span id="L864" data-line="864">admission, compiler, interpreter, event, projection or external act.</span>
+<span id="L865" data-line="865">Controller-local memory is not a lawful source of lifecycle truth when the</span>
+<span id="L866" data-line="866">product declares replay, event, graph or carrier ownership (P6).</span>
+<span id="L867" data-line="867"></span>
+<span id="L868" data-line="868">### Cross-view axiom evaluation</span>
+<span id="L869" data-line="869"></span>
+<span id="L870" data-line="870">The design pack evaluates every applicable product, graph, language,</span>
+<span id="L871" data-line="871">runtime, handler and module axiom with one of `pass`, `fail` or</span>
+<span id="L872" data-line="872">`not_applicable` with a reason (P1, P6).</span>
+<span id="L873" data-line="873">The minimum evaluation columns are:</span>
+<span id="L874" data-line="874"></span>
+<span id="L875" data-line="875">| Axiom | Ontology evidence | Authority | Domain evidence | Sequence evidence | State evidence | Native enforcement | Admission/compiler enforcement | Verdict | Gap owner |</span>
+<span id="L876" data-line="876">|---|---|---|---|---|---|---|---|---|---|</span>
+<span id="L877" data-line="877"></span>
+<span id="L878" data-line="878">The cross-view evaluation proves that: every element in each view derives</span>
+<span id="L879" data-line="879">from the accepted Ontology; every discovered functionality row has a</span>
+<span id="L880" data-line="880">derived, deferred, excluded or gap disposition; every sequence participant</span>
+<span id="L881" data-line="881">and lifecycle carrier exists in the domain model; every sequence message</span>
+<span id="L882" data-line="882">has a declared semantic or effect boundary; every lifecycle transition is</span>
+<span id="L883" data-line="883">derivable from admitted truth; every function and transition has an</span>
+<span id="L884" data-line="884">explicit authority path and composition does not widen that authority</span>
+<span id="L885" data-line="885">implicitly; every public operation is a projection of an Ontology function</span>
+<span id="L886" data-line="886">rather than an independently authored semantic peer; raw probabilistic</span>
+<span id="L887" data-line="887">output cannot transition directly to accepted or closed; handlers and</span>
+<span id="L888" data-line="888">plugins own interiors only when the runtime owns admission, events,</span>
+<span id="L889" data-line="889">continuation and closure; native types enforce locally decidable</span>
+<span id="L890" data-line="890">relations; and admission or semantic compilation owns global references,</span>
+<span id="L891" data-line="891">completeness and realisation gaps (P1, P6, P5).</span>
+<span id="L892" data-line="892"></span>
+<span id="L893" data-line="893">For graph-native work, every batch, retry, recursion or nested workflow is</span>
+<span id="L894" data-line="894">visible through the product&#x27;s declared graph or compute algebra. A</span>
+<span id="L895" data-line="895">relied-on `semantic_not_realized` constructor is a blocking gap; it may</span>
+<span id="L896" data-line="896">not be replaced by imperative glue in a plugin, shell, service, script or</span>
+<span id="L897" data-line="897">test harness (P6, P5).</span>
+<span id="L898" data-line="898"></span>
+<span id="L899" data-line="899">Axiom verdicts. The three verdicts are a refinement of the core result</span>
+<span id="L900" data-line="900">algebra ([FOUNDATIONS §4 Results](../FOUNDATIONS.md#results)). They answer</span>
+<span id="L901" data-line="901">what the design pack concludes about one axiom for the active boundary,</span>
+<span id="L902" data-line="902">and each maps to exactly one core value for the predicate &quot;on the exact</span>
+<span id="L903" data-line="903">Ontology and design basis, the boundary&#x27;s design meets the axiom, or the</span>
+<span id="L904" data-line="904">axiom does not apply to the boundary&quot;; the value travels with that</span>
+<span id="L905" data-line="905">predicate and with the verdict, whose meaning stays here (P5, P6). This</span>
+<span id="L906" data-line="906">profile declares that predicate as a disjunction that includes</span>
+<span id="L907" data-line="907">non-application, the case that</span>
+<span id="L908" data-line="908">[ACTIVATION §1 Applicability](../ACTIVATION.md#applicability), Exclusion and</span>
+<span id="L909" data-line="909">the core, permits and bounds. That paragraph decides what follows for the</span>
+<span id="L910" data-line="910">verdicts: `not_applicable` rests on a false applicability premise, an</span>
+<span id="L911" data-line="911">unresolved premise supports no `not_applicable`, and the `satisfied` of a</span>
+<span id="L912" data-line="912">`not_applicable` verdict counts toward this disjunction only, never toward</span>
+<span id="L913" data-line="913">the predicate that the design meets the axiom:</span>
+<span id="L914" data-line="914"></span>
+<span id="L915" data-line="915">| Verdict | Ground | Core value |</span>
+<span id="L916" data-line="916">|---|---|---|</span>
+<span id="L917" data-line="917">| `pass` | the cited Ontology, view and enforcement evidence establishes that the design meets the axiom | `satisfied` |</span>
+<span id="L918" data-line="918">| `not_applicable` | the axiom&#x27;s applicability premise is false for the active boundary on basis-bound facts, and the reason names those facts and the authority whose scope declaration excludes the axiom ([ACTIVATION §1 Applicability](../ACTIVATION.md#applicability)) | `satisfied` |</span>
+<span id="L919" data-line="919">| `fail` | the axiom applies, and the evidence names an element, message, transition, authority path or enforcement that violates it; that is the counterexample | `falsified` |</span>
+<span id="L920" data-line="920"></span>
+<span id="L921" data-line="921">The verdict, recorded with its value, keeps the distinction between not</span>
+<span id="L922" data-line="922">applying and meeting the axiom (FOUNDATIONS §4 Results, Recording). An evaluated axiom that reaches none of the three</span>
+<span id="L923" data-line="923">verdicts records in the Verdict column the core value its cause selects,</span>
+<span id="L924" data-line="924">with what would decide it: `indeterminate` where the admissible evidence</span>
+<span id="L925" data-line="925">cannot decide the predicate, as where the applicability premise is</span>
+<span id="L926" data-line="926">unresolved and the design does not meet the axiom; `out_of_frame` where</span>
+<span id="L927" data-line="927">the evaluation needs a relation or evaluator capability that the activated</span>
+<span id="L928" data-line="928">frame does not declare; `invalid_basis` where the Ontology or design basis</span>
+<span id="L929" data-line="929">cannot support it. An applicable axiom that the pack did not evaluate has</span>
+<span id="L930" data-line="930">no result (FOUNDATIONS §4 Results, Not performed). None of these is</span>
+<span id="L931" data-line="931">`pass`. Purpose and material relation: a design gate that combines axiom verdicts</span>
+<span id="L932" data-line="932">with other results reads them in the one core, so an excluded axiom is</span>
+<span id="L933" data-line="933">never read as conforming or as failing, and an undecided or unevaluated</span>
+<span id="L934" data-line="934">axiom is never read as a pass or a fail (P5, P6).</span>
+<span id="L935" data-line="935"></span>
+<span id="L936" data-line="936">### Gate and retrospective work</span>
+<span id="L937" data-line="937"></span>
+<span id="L938" data-line="938">For a new or semantically changed boundary, the Ontology and design</span>
+<span id="L939" data-line="939">verdict are both `accepted` before the affected implementation, public</span>
+<span id="L940" data-line="940">contract or semantic carrier is promoted or the work claims design-method</span>
+<span id="L941" data-line="941">closure. Any failed applicable axiom, missing functionality disposition,</span>
+<span id="L942" data-line="942">unresolved authority path or blocking realisation gap keeps the verdict</span>
+<span id="L943" data-line="943">non-accepted (P6).</span>
+<span id="L944" data-line="944"></span>
+<span id="L945" data-line="945">The Ontology verdict and the design verdict are each an acceptance</span>
+<span id="L946" data-line="946">result: a decision that consumes the results of assessment, distinct from</span>
+<span id="L947" data-line="947">them. The decision owner is the</span>
+<span id="L948" data-line="948">design authority that accepts the Ontology (§5), and the verdict is its</span>
+<span id="L949" data-line="949">disposition of the Ontology or of the design pack at the design gate,</span>
+<span id="L950" data-line="950">under [ACTIVATION §3 Disposition](../ACTIVATION.md#disposition), which owns</span>
+<span id="L951" data-line="951">the dispositions and their core values. `accepted` is the disposition</span>
+<span id="L952" data-line="952">`accept`, which maps to `satisfied` for &quot;the candidate is accepted at its</span>
+<span id="L953" data-line="953">declared boundary&quot;, the candidate being the Ontology or the design pack</span>
+<span id="L954" data-line="954">and the boundary the design gate. A verdict that is not `accepted` is one</span>
+<span id="L955" data-line="955">of the other three dispositions, mapped there, or no disposition yet,</span>
+<span id="L956" data-line="956">which is no acceptance result. The verdict consumes the pack&#x27;s availability</span>
+<span id="L957" data-line="957">and assessment results, among them the evaluation of decision</span>
+<span id="L958" data-line="958">completeness, which is the design gate&#x27;s acceptance criterion</span>
+<span id="L959" data-line="959">([§5 Decision-complete symbolic design](../DESIGN_MODULE.md#decision-complete-symbolic-design)),</span>
+<span id="L960" data-line="960">the axiom verdicts and the cross-view proofs, and stays separate from both</span>
+<span id="L961" data-line="961">(FOUNDATIONS §4 Results, availability, assessment and acceptance): a matrix in which every applicable axiom is</span>
+<span id="L962" data-line="962">`pass` is evidence for the design authority, never the verdict, and a</span>
+<span id="L963" data-line="963">step that produced the pack establishes neither. An axiom whose result</span>
+<span id="L964" data-line="964">is not `satisfied`, whether `fail` or a core value recorded directly, an</span>
+<span id="L965" data-line="965">applicable axiom with no result, or an axiom with no result whose</span>
+<span id="L966" data-line="966">applicability is not established false, keeps the verdict non-accepted</span>
+<span id="L967" data-line="967">as a failed axiom does, because a combination with a non-satisfied</span>
+<span id="L968" data-line="968">mandatory result or a gap is never `satisfied`</span>
+<span id="L969" data-line="969">([FOUNDATIONS §4 Conjunction of results](../FOUNDATIONS.md#conjunction-of-results))</span>
+<span id="L970" data-line="970">(P6, P5). Purpose and material relation: neither a passing matrix nor a produced design pack is</span>
+<span id="L971" data-line="971">read as acceptance, and the design gate&#x27;s acceptance combines with other</span>
+<span id="L972" data-line="972">results in the one core (P6).</span>
+<span id="L973" data-line="973"></span>
+<span id="L974" data-line="974">For an unchanged `realization_refactor`, the gate is proportional: cite</span>
+<span id="L975" data-line="975">the accepted Ontology and design basis, identify the touched projection</span>
+<span id="L976" data-line="976">set, and prove that entities, relationships, lifecycle, authority,</span>
+<span id="L977" data-line="977">functions, effects and public semantics have no delta. That proof reuses</span>
+<span id="L978" data-line="978">the existing verdict; it does not create a new Ontology or acceptance</span>
+<span id="L979" data-line="979">ceremony (P2; ACTIVATION §7).</span>
+<span id="L980" data-line="980"></span>
+<span id="L981" data-line="981">When `co_evolution_admissible(B)` holds, implementation may precede or</span>
+<span id="L982" data-line="982">develop with design evidence and may be retained after reconciliation.</span>
+<span id="L983" data-line="983">Until the design gate is accepted it is provisional evidence: it does not</span>
+<span id="L984" data-line="984">author semantic truth, earn publication authority, or satisfy promotion or</span>
+<span id="L985" data-line="985">closure. Otherwise only a disposable spike may cross the affected</span>
+<span id="L986" data-line="986">unresolved, contradictory or materially non-equivalent relation before</span>
+<span id="L987" data-line="987">design acceptance (P6, P2).</span>
+<span id="L988" data-line="988"></span>
+<span id="L989" data-line="989">Existing implementation placed under retrospective review may continue to</span>
+<span id="L990" data-line="990">inform the affected design. Co-evolution remains lawful only while</span>
+<span id="L991" data-line="991">`co_evolution_admissible(B)` holds; newly discovered material ambiguity,</span>
+<span id="L992" data-line="992">contradiction or a materially non-equivalent network makes</span>
+<span id="L993" data-line="993">`decision_complete(B)` false and activates the design gate for that</span>
+<span id="L994" data-line="994">decision. Promotion and design-method closure remain blocked until the</span>
+<span id="L995" data-line="995">required Ontology, three-view asset and axiom evaluation are accepted. The</span>
+<span id="L996" data-line="996">design evaluates the code against prior authority; it does not rewrite the</span>
+<span id="L997" data-line="997">Ontology or diagrams merely to rationalise an unlawful implementation</span>
+<span id="L998" data-line="998">shape (P6).</span>
+<span id="L999" data-line="999"></span>
+<span id="L1000" data-line="1000">The asset stays boundary-bounded. It is a defect if it mixes an active</span>
+<span id="L1001" data-line="1001">semantic boundary with unrelated bootstrap, test-harness, projection or</span>
+<span id="L1002" data-line="1002">delivery shapes merely to look complete (P2). If the Ontology, any of the</span>
+<span id="L1003" data-line="1003">three views, the cross-view evaluation or either accepted verdict is</span>
+<span id="L1004" data-line="1004">absent, the boundary is not design-method complete. Work may continue as</span>
+<span id="L1005" data-line="1005">provisional co-evolution only when `co_evolution_admissible(B)` holds, but</span>
+<span id="L1006" data-line="1006">the affected boundary may not be promoted, published or closed (P6).</span>
+<span id="L1007" data-line="1007"></span>
+<span id="L1008" data-line="1008">### Computational realisation projection (UP-019)</span>
+<span id="L1009" data-line="1009"></span>
+<span id="L1010" data-line="1010">The three views project domain structure, execution and lifecycle. They</span>
+<span id="L1011" data-line="1011">deliberately show domain identities, so they do not reveal that two</span>
+<span id="L1012" data-line="1012">domain-distinct components rest on the same data structures and</span>
+<span id="L1013" data-line="1013">algorithms. Repeated machinery is therefore invisible to a domain-only</span>
+<span id="L1014" data-line="1014">reading, and each occurrence looks correctly owned and correctly named</span>
+<span id="L1015" data-line="1015">within its own entity (P1).</span>
+<span id="L1016" data-line="1016"></span>
+<span id="L1017" data-line="1017">Component role sets. Every material realisation component has an explicit</span>
+<span id="L1018" data-line="1018">set of semantic and operational roles. Technology capability does not</span>
+<span id="L1019" data-line="1019">confer authority (an instance of</span>
+<span id="L1020" data-line="1020">[FOUNDATIONS §2 Authority kinds](../FOUNDATIONS.md#authority-kinds), What</span>
+<span id="L1021" data-line="1021">creates no authority). A component&#x27;s declared role set is design authority;</span>
+<span id="L1022" data-line="1022">where a role carries authority, composition and use preserve the</span>
+<span id="L1023" data-line="1023">applicable authority relation under IDENTITY §6, which is supporting law</span>
+<span id="L1024" data-line="1024">here rather than the owner of the role model (P6). A component may</span>
+<span id="L1025" data-line="1025">lawfully hold several roles. Three cases are distinguished: behaviour</span>
+<span id="L1026" data-line="1026">already inside an abstract declared role is ordinary variation; a new</span>
+<span id="L1027" data-line="1027">operational responsibility and a new semantic or authoritative role are</span>
+<span id="L1028" data-line="1028">each design changes, and only those two require re-entry. Use of a</span>
+<span id="L1029" data-line="1029">component outside its declared role set does not silently establish</span>
+<span id="L1030" data-line="1030">identity, admission, lifecycle, ordering, closure or projection truth (P6,</span>
+<span id="L1031" data-line="1031">P3).</span>
+<span id="L1032" data-line="1032"></span>
+<span id="L1033" data-line="1033">The projection. At a material semantic boundary, the design projects the</span>
+<span id="L1034" data-line="1034">domain design into its computational realisation: abstract data types,</span>
+<span id="L1035" data-line="1035">identity and key structures, algorithms, algebraic laws, mutation and</span>
+<span id="L1036" data-line="1036">effect boundaries, selected implementations, and domain-to-computational</span>
+<span id="L1037" data-line="1037">mappings. The cross-view evaluation extends to prove that the domain views</span>
+<span id="L1038" data-line="1038">and this projection describe one system (P1). For a material</span>
+<span id="L1039" data-line="1039">producer-to-consumer path, the projection identifies fact establishment,</span>
+<span id="L1040" data-line="1040">consuming operations, applicable basis and invalidators, effect</span>
+<span id="L1041" data-line="1041">boundaries, retained alternatives and accumulated work, using the validity</span>
+<span id="L1042" data-line="1042">and reuse relation of ACTIVATION §4 (Complete enclosing-relation</span>
+<span id="L1043" data-line="1043">admission) and §7; method and assurance operations are included where</span>
+<span id="L1044" data-line="1044">material. Component-local success cannot establish the complete-path</span>
+<span id="L1045" data-line="1045">claim, and different names do not establish different computational</span>
+<span id="L1046" data-line="1046">responsibilities (P4b, P6; ASSURANCE §13 Computational whole-path</span>
+<span id="L1047" data-line="1047">evaluation).</span>
+<span id="L1048" data-line="1048"></span>
+<span id="L1049" data-line="1049">Operational assumptions. Material algorithmic work declares the supported</span>
+<span id="L1050" data-line="1050">input dimensions, workload and growth, and the operational assumptions</span>
+<span id="L1051" data-line="1051">needed for the selected outcome; the separation of material startup, framework</span>
+<span id="L1052" data-line="1052">processing, external computation, transport and assurance costs is</span>
+<span id="L1053" data-line="1053">ACTIVATION §6. Bind</span>
+<span id="L1054" data-line="1054">any acceptance limits and their owning authority before qualification;</span>
+<span id="L1055" data-line="1055">limits and workloads are Product-owned, not universal method constants.</span>
+<span id="L1056" data-line="1056">Challenge the assumptions on representative supported paths and material</span>
+<span id="L1057" data-line="1057">growth. Observe work directly where elapsed time cannot locate it, without</span>
+<span id="L1058" data-line="1058">repeating the operation merely to count it. Existing design and proof</span>
+<span id="L1059" data-line="1059">surfaces carry these relations; no additional accounting system or fixed</span>
+<span id="L1060" data-line="1060">algorithmic complexity is required (P2, P6).</span>
+<span id="L1061" data-line="1061"></span>
+<span id="L1062" data-line="1062">The projection is subordinate. It reveals repeated implementation</span>
+<span id="L1063" data-line="1063">structure; it cannot decide semantic identity, ownership or authority</span>
+<span id="L1064" data-line="1064">(FOUNDATIONS §4 Shared machinery). The evaluation sequence (P1, P6):</span>
+<span id="L1065" data-line="1065"></span>
+<span id="L1066" data-line="1066">```text</span>
+<span id="L1067" data-line="1067">computational similarity</span>
+<span id="L1068" data-line="1068">  -&gt; commonisation candidate</span>
+<span id="L1069" data-line="1069">  -&gt; semantic and operational equivalence evaluation</span>
+<span id="L1070" data-line="1070">  -&gt; reuse, parameterised common relation, or justified separation</span>
+<span id="L1071" data-line="1071">```</span>
+<span id="L1072" data-line="1072"></span>
+<span id="L1073" data-line="1073">Two components may share a map or an append-only sequence while differing</span>
+<span id="L1074" data-line="1074">in identity and key law, ownership, ordering, admissible mutation,</span>
+<span id="L1075" data-line="1075">consistency and concurrency, retention, failure semantics, access policy,</span>
+<span id="L1076" data-line="1076">lifecycle or authority over truth. A materially non-equivalent law among</span>
+<span id="L1077" data-line="1077">those dimensions requires separation. Other differences justify separation</span>
+<span id="L1078" data-line="1078">only when evaluation shows that parameterisation or adaptation would</span>
+<span id="L1079" data-line="1079">weaken ownership, authority, lifecycle, failure or operational</span>
+<span id="L1080" data-line="1080">constraints. The existence of a difference does not by itself discharge</span>
+<span id="L1081" data-line="1081">Prime contraction or recurrence review (P3, P6).</span>
+<span id="L1082" data-line="1082"></span>
+<span id="L1083" data-line="1083">Disposition is two-part. Each material algorithmic obligation in `M(B)`</span>
+<span id="L1084" data-line="1084">carries a semantic disposition (existing accepted relation, extension, or</span>
+<span id="L1085" data-line="1085">new candidate relation) and a realisation disposition (consume, implement</span>
+<span id="L1086" data-line="1086">locally, optimise, adapt, or deliberately duplicate under stated</span>
+<span id="L1087" data-line="1087">non-semantic constraints). Isolation, substrate, performance, security and</span>
+<span id="L1088" data-line="1088">dependency ownership are each lawful grounds for an independent</span>
+<span id="L1089" data-line="1089">implementation. The invariant is not that equivalent code is never</span>
+<span id="L1090" data-line="1090">rebuilt; it is that a local realisation does not present an existing</span>
+<span id="L1091" data-line="1091">accepted semantic or authoritative relation as newly owned local truth</span>
+<span id="L1092" data-line="1092">(P6, P4b).</span>
+<span id="L1093" data-line="1093"></span>
+<span id="L1094" data-line="1094">This law is false if any of the following holds (P6, P3): two domain-named</span>
+<span id="L1095" data-line="1095">components implement materially equivalent abstract data types or</span>
+<span id="L1096" data-line="1096">algorithms without a semantic disposition; a generic building block</span>
+<span id="L1097" data-line="1097">becomes a new semantic authority; superficially similar operations are</span>
+<span id="L1098" data-line="1098">commonised despite different identity, ordering, failure, ownership or</span>
+<span id="L1099" data-line="1099">lifecycle law; or a local realisation presents an existing accepted</span>
+<span id="L1100" data-line="1100">relation as newly owned local truth.</span>
+<span id="L1101" data-line="1101"></span>
+<span id="L1102" data-line="1102"></span>
+<span id="L1103" data-line="1103">Source: ACTIVATION.md#disposition sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf</span>
+<span id="L1104" data-line="1104"></span>
+<span id="L1105" data-line="1105">### Disposition</span>
+<span id="L1106" data-line="1106"></span>
+<span id="L1107" data-line="1107">The decision owner disposes an assessed candidate with one of four</span>
+<span id="L1108" data-line="1108">semantic dispositions (§1, Roles and delegation; P6, P5). An assessor may recommend one; the</span>
+<span id="L1109" data-line="1109">recommendation is evidence for the decision owner, never a disposition</span>
+<span id="L1110" data-line="1110">([EVALUATION §4](../EVALUATION.md#4-review-results)). The disposition is the</span>
+<span id="L1111" data-line="1111">acceptance result: it consumes the candidate&#x27;s availability and assessment</span>
+<span id="L1112" data-line="1112">results and stays separate from both (FOUNDATIONS §4 Results). Each maps</span>
+<span id="L1113" data-line="1113">to the core for the predicate &quot;the candidate is accepted at its declared</span>
+<span id="L1114" data-line="1114">boundary&quot;:</span>
+<span id="L1115" data-line="1115"></span>
+<span id="L1116" data-line="1116">| Disposition | Condition | Core value |</span>
+<span id="L1117" data-line="1117">|---|---|---|</span>
+<span id="L1118" data-line="1118">| `accept` | the candidate closes its declared cone and preserves every affected governing relation | satisfied |</span>
+<span id="L1119" data-line="1119">| `local_repair` | implementation or proof is locally defective while the governing relation remains coherent | falsified |</span>
+<span id="L1120" data-line="1120">| `re_enter` | the governing outcome, a requirement, an identity, a lifecycle, an authority, a public contract or the accepted design must change | invalid_basis |</span>
+<span id="L1121" data-line="1121">| `reject` | the candidate violates a governing relation or leaves an undisposed competing truth path | falsified |</span>
+<span id="L1122" data-line="1122"></span>
+<span id="L1123" data-line="1123">For `local_repair` the local defect, and for `reject` the violated relation</span>
+<span id="L1124" data-line="1124">or the competing truth path, is the counterexample to accepting this</span>
+<span id="L1125" data-line="1125">candidate; a repaired candidate is a new candidate with its own results.</span>
+<span id="L1126" data-line="1126">For `re_enter` the governing basis the candidate was built and assessed on</span>
+<span id="L1127" data-line="1127">must change, so that basis cannot support acceptance; the change re-enters</span>
+<span id="L1128" data-line="1128">at its owning relation (§4). The core values place</span>
+<span id="L1129" data-line="1129">acceptance in the one core, as FOUNDATIONS §4 Results requires, so that a</span>
+<span id="L1130" data-line="1130">consumer combining results cannot take availability or assessment as</span>
+<span id="L1131" data-line="1131">acceptance (P6).</span>
+<span id="L1132" data-line="1132"></span>
+<span id="L1133" data-line="1133">Global correctness means conserving every global relation affected by the</span>
+<span id="L1134" data-line="1134">bounded action; it does not require proving the whole product inside every</span>
+<span id="L1135" data-line="1135">local action (P4b). Repeated rejection against one unchanged boundary</span>
+<span id="L1136" data-line="1136">requires reassessment of the frame altitude, the causal cone, the common</span>
+<span id="L1137" data-line="1137">components, the design-versus-code placement and the authority</span>
+<span id="L1138" data-line="1138">sufficiency. The method sets no rejection-count threshold, mandatory</span>
+<span id="L1139" data-line="1139">review-round count or review state machine; it prohibits repeating an</span>
+<span id="L1140" data-line="1140">unchanged failed construction relation as if iteration alone could close</span>
+<span id="L1141" data-line="1141">it (P2).</span>
+<span id="L1142" data-line="1142"></span>
+<span id="L1143" data-line="1143"></span>
+<span id="L1144" data-line="1144">Source: SPEC_METHOD.md#change-classes sha256=c7b83b2b7e8c9a301d2e535fc3752c08f718d9fc679e32f8a91c15c285976e8e</span>
+<span id="L1145" data-line="1145"></span>
+<span id="L1146" data-line="1146">### Change classes</span>
+<span id="L1147" data-line="1147"></span>
+<span id="L1148" data-line="1148">The minimum lawful change classes, each with its re-entry point and the</span>
+<span id="L1149" data-line="1149">layers its repricing flows through (P4b, P2):</span>
+<span id="L1150" data-line="1150"></span>
+<span id="L1151" data-line="1151">| Class | Change | Re-enters at | Flows through |</span>
+<span id="L1152" data-line="1152">|---|---|---|---|</span>
+<span id="L1153" data-line="1153">| `goal_reprice` | current bounded work-wave focus changes | Goals | Intent, Product, Requirements, Design, Code and Evidence where that focus changes deeper constitutional truth |</span>
+<span id="L1154" data-line="1154">| `intent_reprice` | directional or scope change | Intent | Product, Requirements, Design, Code, Evidence |</span>
+<span id="L1155" data-line="1155">| `product_reprice` | current product realisation changes while directional intent stays stable | Product | Requirements, Design, Code, Evidence |</span>
+<span id="L1156" data-line="1156">| `requirement_reprice` | constitutional truth changes while project direction stays stable | Requirements | Design, Code, Evidence |</span>
+<span id="L1157" data-line="1157">| `design_reframe` | realisation structure changes while active intent and requirement truth stay stable | Design | Code, Evidence |</span>
+<span id="L1158" data-line="1158">| `realization_refactor` | local code, configuration or attribute change with no intended constitutional or structural change | the realised surface only | nothing upstream; it must prove no upstream drift |</span>
+<span id="L1159" data-line="1159"></span>
+<span id="L1160" data-line="1160">Smaller changes may re-enter below Goals only if they explicitly assert</span>
+<span id="L1161" data-line="1161">that no upstream constitutional surface is changing. The absence of a</span>
+<span id="L1162" data-line="1162">declared change class is process drift. A changed governing relation is</span>
+<span id="L1163" data-line="1163">accepted only at its owner; accepting it inside the acting frame is a</span>
+<span id="L1164" data-line="1164">violation whatever the size of the delta (ACTIVATION §1).</span>
+<span id="L1165" data-line="1165">Triage records the change intent, the class, the re-entry point and when</span>
+<span id="L1166" data-line="1166">triage occurred, wherever substantive work begins.</span>
+<span id="L1167" data-line="1167">[TICKETS §4](../TICKETS.md#change-class) records the class on the carrier.</span>
+<span id="L1168" data-line="1168"></span>
+<span id="L1169" data-line="1169">The change classes are declared states of a change that intake triage</span>
+<span id="L1170" data-line="1170">records, not results, and map to no core value. An evaluation that reads</span>
+<span id="L1171" data-line="1171">a declared class returns its own core value with its predicate under</span>
+<span id="L1172" data-line="1172">[FOUNDATIONS §4 Results](../FOUNDATIONS.md#results). A close classification</span>
+<span id="L1173" data-line="1173">of [TICKETS §3](../TICKETS.md#close-review) that names a layer, such as</span>
+<span id="L1174" data-line="1174">`design_reframe`, is a result for its own predicate, mapped there, and</span>
+<span id="L1175" data-line="1175">carries the class at which the work re-enters as its domain outcome.</span>
+<span id="L1176" data-line="1176">Purpose and material relation: a declared class is never combined as an</span>
+<span id="L1177" data-line="1177">evaluation result, so a change classed `realization_refactor` cannot stand</span>
+<span id="L1178" data-line="1178">in for a `satisfied` result that no upstream drift occurred (P5, P1).</span>
+<span id="L1179" data-line="1179"></span>
+<span id="L1180" data-line="1180"></span>
+<span id="L1181" data-line="1181">Source: FOUNDATIONS.md#results sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545 rows=6/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted</span>
+<span id="L1182" data-line="1182"></span>
+<span id="L1183" data-line="1183">### Results</span>
+<span id="L1184" data-line="1184"></span>
+<span id="L1185" data-line="1185">Every performed evaluation returns one value of the core result algebra,</span>
+<span id="L1186" data-line="1186">directly or as a refined value mapped into it (P5):</span>
+<span id="L1187" data-line="1187"></span>
+<span id="L1188" data-line="1188">| Value | Meaning |</span>
+<span id="L1189" data-line="1189">|---|---|</span>
+<span id="L1190" data-line="1190">| `satisfied` | the declared predicate holds on the exact basis |</span>
+<span id="L1191" data-line="1191">| `falsified` | a declared counterexample defeats it |</span>
+<span id="L1192" data-line="1192">| `indeterminate` | the available admissible evidence cannot decide it |</span>
+<span id="L1193" data-line="1193">| `out_of_frame` | the evaluation requires an undeclared material relation or capability |</span>
+<span id="L1194" data-line="1194">| `invalid_basis` | the subject or basis cannot support the evaluation |</span>
+<span id="L1195" data-line="1195"></span>
+<span id="L1196" data-line="1196">This core is the only one. Results of constraints, judgments, frame</span>
+<span id="L1197" data-line="1197">evaluations, stops, work steps and effects are stated in it or in a</span>
+<span id="L1198" data-line="1198">refinement mapped into it, so that results from any members combine under</span>
+<span id="L1199" data-line="1199">one rule ([Conjunction of results](../FOUNDATIONS.md#conjunction-of-results)). Purpose and</span>
+<span id="L1200" data-line="1200">material relation: no combination can report success while a failure, an</span>
+<span id="L1201" data-line="1201">undecided question, an unperformed evaluation or an uncertain effect</span>
+<span id="L1202" data-line="1202">remains, and none of these can be mistaken for another (P5, P6).</span>
+<span id="L1203" data-line="1203"></span>
+<span id="L1204" data-line="1204">Recording. A result records its core value together with the predicate</span>
+<span id="L1205" data-line="1205">evaluated and the original domain outcome, which is the refined value</span>
+<span id="L1206" data-line="1206">where a refinement produced it. A mapping into the core never owns domain</span>
+<span id="L1207" data-line="1207">meaning: the member, profile or adopting Product that defines the refined</span>
+<span id="L1208" data-line="1208">value keeps it, and a consumer that needs the domain distinction reads the</span>
+<span id="L1209" data-line="1209">domain outcome, never the core value alone (P1, P6).</span>
+<span id="L1210" data-line="1210"></span>
+<span id="L1211" data-line="1211">Standing. The standing of a result is what it establishes about its</span>
+<span id="L1212" data-line="1212">predicate; it is distinct from the standing of a commitment (§1). Only</span>
+<span id="L1213" data-line="1213">`satisfied` establishes the predicate. `falsified` establishes that the</span>
+<span id="L1214" data-line="1214">predicate fails and names the counterexample. `indeterminate`,</span>
+<span id="L1215" data-line="1215">`out_of_frame` and `invalid_basis` establish neither, and each names what</span>
+<span id="L1216" data-line="1216">would decide: the evidence, the missing relation or capability with its</span>
+<span id="L1217" data-line="1217">owner where the subject gives one, or the basis repair. By support for the</span>
+<span id="L1218" data-line="1218">predicate, `satisfied` stands above each other value, and the other four</span>
+<span id="L1219" data-line="1219">are not ordered among themselves.</span>
+<span id="L1220" data-line="1220"></span>
+<span id="L1221" data-line="1221">No refinement or mapping raises a result&#x27;s standing (P5, P6):</span>
+<span id="L1222" data-line="1222"></span>
+<span id="L1223" data-line="1223">- a falsified or failed result never maps to a satisfied or successful one;</span>
+<span id="L1224" data-line="1224">- a result that admissible evidence cannot decide never maps to</span>
+<span id="L1225" data-line="1225">  `satisfied`;</span>
+<span id="L1226" data-line="1226">- an evaluation that was not performed stays distinct from one whose</span>
+<span id="L1227" data-line="1227">  evidence cannot decide: it has no</span>
+<span id="L1228" data-line="1228">  [closed result](../ACTIVATION.md#7-closed-result-and-reuse), and it is never mapped</span>
+<span id="L1229" data-line="1229">  to `indeterminate` or to any other core value;</span>
+<span id="L1230" data-line="1230">- an effect whose completion is unknown never maps to no effect or to</span>
+<span id="L1231" data-line="1231">  completed.</span>
+<span id="L1232" data-line="1232"></span>
+<span id="L1233" data-line="1233">Not performed. An evaluation that is required or planned and was not</span>
+<span id="L1234" data-line="1234">performed has no closed result; an actor cannot report an evaluation it</span>
+<span id="L1235" data-line="1235">did not perform (P6). Nothing is coerced to success: a failed,</span>
+<span id="L1236" data-line="1236">indeterminate, out-of-frame, out-of-scope or invalid-basis result follows</span>
+<span id="L1237" data-line="1237">the declared result algebra and returns its own value under it, never</span>
+<span id="L1238" data-line="1238">`satisfied`, and a missing result, being no result, enters every</span>
+<span id="L1239" data-line="1239">conjunction over it as a gap: a planned assessment without a closed result</span>
+<span id="L1240" data-line="1240">where an assessment was planned, and uncovered coverage where none was.</span>
+<span id="L1241" data-line="1241">[REFERENCE_FRAME §3](../REFERENCE_FRAME.md#rf-012-closed-results) states</span>
+<span id="L1242" data-line="1242">RF-012 as a law over frames and</span>
+<span id="L1243" data-line="1243">[AXIOMATIC_CALCULUS §4](../AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal)</span>
+<span id="L1244" data-line="1244">states AC-007 as a law over constraints; each uses this core and neither</span>
+<span id="L1245" data-line="1245">defines it again.</span>
+<span id="L1246" data-line="1246"></span>
+<span id="L1247" data-line="1247">Refinements. A member, profile or adopting Product that needs finer</span>
+<span id="L1248" data-line="1248">outcomes defines a refinement. The refinement names the question it</span>
+<span id="L1249" data-line="1249">answers and the predicate its mapping is for, and maps every refined value</span>
+<span id="L1250" data-line="1250">to exactly one core value. No outcome exists outside the core; a</span>
+<span id="L1251" data-line="1251">refinement adds no core value and keeps the pressure of `indeterminate`,</span>
+<span id="L1252" data-line="1252">`out_of_frame` and `invalid_basis` explicit. Where a refined value would</span>
+<span id="L1253" data-line="1253">map to one of two core values according to its cause, the cause is part of</span>
+<span id="L1254" data-line="1254">the refined value and each resulting value maps once (P5, P1). A further</span>
+<span id="L1255" data-line="1255">refinement, by a member, profile, project or adopting Product, may split a</span>
+<span id="L1256" data-line="1256">refined value by cause. The parent-value rule governs every such split:</span>
+<span id="L1257" data-line="1257">each child value names its parent value and its cause and keeps its</span>
+<span id="L1258" data-line="1258">parent&#x27;s core value; a child that needs a different core value needs a</span>
+<span id="L1259" data-line="1259">different parent value, which only the owner of the parent declares; and</span>
+<span id="L1260" data-line="1260">no child takes `satisfied` from a parent that is not `satisfied`. No</span>
+<span id="L1261" data-line="1261">further refinement raises a result&#x27;s standing (P5, P6, P1). Purpose and</span>
+<span id="L1262" data-line="1262">material relation: a consumer that reads a parent value reads the same</span>
+<span id="L1263" data-line="1263">core value from each of its children, so a split by cause adds a domain</span>
+<span id="L1264" data-line="1264">distinction and never changes what the parent establishes (P5, P6). The</span>
+<span id="L1265" data-line="1265">refinements for admission, activation and steps are</span>
+<span id="L1266" data-line="1266">[ACTIVATION §3](../ACTIVATION.md#3-step-results-and-disposition); each other</span>
+<span id="L1267" data-line="1267">member, profile and adopting Product states its mapping where it defines</span>
+<span id="L1268" data-line="1268">its values.</span>
+<span id="L1269" data-line="1269"></span>
+<span id="L1270" data-line="1270">Availability, assessment and acceptance are separate results, each with its</span>
+<span id="L1271" data-line="1271">own predicate: that a step produced a candidate; that the candidate meets</span>
+<span id="L1272" data-line="1272">its declared criteria; and that the</span>
+<span id="L1273" data-line="1273">[decision owner](../ACTIVATION.md#roles-and-delegation) accepts it at its</span>
+<span id="L1274" data-line="1274">boundary. A step having produced a candidate never maps to the candidate&#x27;s</span>
+<span id="L1275" data-line="1275">fitness or acceptance, and acceptance is never inferred from a successful</span>
+<span id="L1276" data-line="1276">step (P6; [ACTIVATION §3](../ACTIVATION.md#3-step-results-and-disposition),</span>
+<span id="L1277" data-line="1277">[EVALUATION §4](../EVALUATION.md#4-review-results) and</span>
+<span id="L1278" data-line="1278">[§5](../EVALUATION.md#5-acceptance)).</span>
+<span id="L1279" data-line="1279"></span>
+<span id="L1280" data-line="1280">Out of frame or indeterminate. The boundary between these values is drawn</span>
+<span id="L1281" data-line="1281">on what the activated frame declares and on what the step did with it (P5,</span>
+<span id="L1282" data-line="1282">finite capacity and graceful total handling; the material relation drawn</span>
+<span id="L1283" data-line="1283">is the three-way out_of_frame boundary: capability not declared, capability</span>
+<span id="L1284" data-line="1284">declared and exercised, capability declared and not exercised). Three cases; the first two name core values, and</span>
+<span id="L1285" data-line="1285">the third names none:</span>
+<span id="L1286" data-line="1286"></span>
+<span id="L1287" data-line="1287">- `out_of_frame` when the claim requires a material relation or an</span>
+<span id="L1288" data-line="1288">  evaluator capability that the activated frame does not declare. The</span>
+<span id="L1289" data-line="1289">  result names the missing relation or capability, its owner where the</span>
+<span id="L1290" data-line="1290">  subject gives one, and the reconfiguration pressure it creates</span>
+<span id="L1291" data-line="1291">  ([ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement)). A term the claim depends on and the frame</span>
+<span id="L1292" data-line="1292">  leaves undefined is an undeclared material relation: its meaning can</span>
+<span id="L1293" data-line="1293">  alter the result and it enters through no declared input (RF-003; P1). Whether the step exercised anything is</span>
+<span id="L1294" data-line="1294">  irrelevant to this value; the ground is the missing declaration.</span>
+<span id="L1295" data-line="1295">- `indeterminate` when the available admissible evidence cannot decide the</span>
+<span id="L1296" data-line="1296">  claim. The result names the evidence that would decide, as</span>
+<span id="L1297" data-line="1297">  its residual uncertainty. Where the</span>
+<span id="L1298" data-line="1298">  claim also depends on an undeclared relation or capability,</span>
+<span id="L1299" data-line="1299">  `out_of_frame` and `indeterminate` each have a lawful ground; the result</span>
+<span id="L1300" data-line="1300">  names the value it returns and that ground, and this boundary excludes</span>
+<span id="L1301" data-line="1301">  neither (P5).</span>
+<span id="L1302" data-line="1302">- no value of its own when the step did not exercise a declared capability</span>
+<span id="L1303" data-line="1303">  the evaluation requires. A result is returned wherever a sufficient</span>
+<span id="L1304" data-line="1304">  evaluation or an applicable judgment exists without that capability,</span>
+<span id="L1305" data-line="1305">  identifying its evidence, verdict and residual uncertainty like any</span>
+<span id="L1306" data-line="1306">  closed result:</span>
+<span id="L1307" data-line="1307">  a counterexample found by what was exercised, as when source inspection</span>
+<span id="L1308" data-line="1308">  falsifies A in a claim of A and B, returns `falsified`, and common</span>
+<span id="L1309" data-line="1309">  agreement cannot discard it. Where none</span>
+<span id="L1310" data-line="1310">  exists because the capability was not exercised, the evaluation was not</span>
+<span id="L1311" data-line="1311">  performed and has no result: the step&#x27;s stop state carries it,</span>
+<span id="L1312" data-line="1312">  `incomplete` under</span>
+<span id="L1313" data-line="1313">  [construction availability](../ACTIVATION.md#construction-availability), and</span>
+<span id="L1314" data-line="1314">  its work state ([ACTIVATION §5](../ACTIVATION.md#5-work-state-and-restart))</span>
+<span id="L1315" data-line="1315">  carries the unexercised capability as a residual (P6). In either case</span>
+<span id="L1316" data-line="1316">  the unexercised part, B above, has no result: in every conjunction over</span>
+<span id="L1317" data-line="1317">  it, it is a planned assessment without a closed result, and the known</span>
+<span id="L1318" data-line="1318">  failure A survives with it ([Conjunction of results](../FOUNDATIONS.md#conjunction-of-results)).</span>
+<span id="L1319" data-line="1319">  The evaluation&#x27;s result and the step&#x27;s stop state answer different</span>
+<span id="L1320" data-line="1320">  questions, so the step&#x27;s stop value never becomes the evaluation&#x27;s</span>
+<span id="L1321" data-line="1321">  result.</span>
+<span id="L1322" data-line="1322"></span>
+<span id="L1323" data-line="1323">Foundation to law for results and their combination (family F3). The</span>
+<span id="L1324" data-line="1324">table covers every rule of §4 and the result grounds of §2 Imports</span>
+<span id="L1325" data-line="1325">between members, in the format of</span>
+<span id="L1326" data-line="1326">[Foundation to law](../FOUNDATIONS.md#foundation-to-law), which states the standing of its</span>
+<span id="L1327" data-line="1327">consequences. Purpose and material relation: a reader of §4 sees which</span>
+<span id="L1328" data-line="1328">commitments each result rule rests on and which choices it adds, with their</span>
+<span id="L1329" data-line="1329">owners (P6, P2). Instance premises, which the commitments do not supply:</span>
+<span id="L1330" data-line="1330">(i) an evaluation declares its predicate, subject and basis; (ii) results</span>
+<span id="L1331" data-line="1331">of several evaluations, steps or members are combined into one decision;</span>
+<span id="L1332" data-line="1332">(iii) members, profiles and adopting Products need outcomes finer than the</span>
+<span id="L1333" data-line="1333">core.</span>
+<span id="L1334" data-line="1334"></span>
+<span id="L1335" data-line="1335">| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |</span>
+<span id="L1336" data-line="1336">|---|---|---|---|---|</span>
+<span id="L1337" data-line="1337">| P6 (independent), P5 (derived from P0 and P6) | a result claims no more than it establishes: only `satisfied` establishes the predicate, and no refinement or mapping raises a result&#x27;s standing | [Results](../FOUNDATIONS.md#results), Standing, and the rule that nothing raises standing; for the choice, [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Reported value | the order among the four other values within one combination; owner: the member or profile that applies the conjunction, in its declared rule | 9 |</span>
+<span id="L1338" data-line="1338">| P4b (derived from P0 and P2), P5 (derived from P0 and P6), P6 (independent); (ii) | a combination keeps failures, unperformed assessments and uncovered obligations apart and carries each through every join; agreement among contributors discards no counterexample | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results): its three inputs, Gaps, Survival, Predicates travel | none | 3, 9 |</span>
+<span id="L1339" data-line="1339">| P3 (independent), P5 (derived from P0 and P6), P6 (independent); (i), (ii) | a result supports its predicate only on the basis it binds, so a component held only on another basis has, on the basis the composite requires, no performed evaluation and is a gap, while an evaluation performed on a basis that cannot support it decides its own predicate as `invalid_basis`; one component is never answered both ways | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Stale results | none | 3, 9 |</span>
+<span id="L1340" data-line="1340">| P5 (derived from P0 and P6), P6 (independent); (ii) | a composite with a gap or a non-satisfied mandatory result is never `satisfied`; where every mandatory result is `satisfied`, its own value is `invalid_basis` if the declared basis relations disagree, and otherwise `indeterminate` while a gap remains; with every mandatory result `satisfied`, agreeing bases and no gap, a material counterexample to a mandatory constraint falsifies it whichever contributor found it, and without one its value is the one its declared rule gives over the mandatory results; a `falsified` result that is not mandatory stays in its record | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Reported value | which non-satisfied value is reported; owner: the member or profile that applies the conjunction, in its declared rule | 3, 9 |</span>
+<span id="L1341" data-line="1341">| P6 (independent), P4a (independent); (ii) | a conjunction decides only under a declared rule and transfers no contributor&#x27;s semantic authority | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), The declared rule | the mandatory results, the handling of conflict and indeterminacy, the basis relations that must agree, the decision authority that owns the conjunction, how results that are not mandatory count, and any veto or deferral; owner: the member or profile that applies the conjunction, in its declared rule | 3, 9 |</span>
+<span id="L1342" data-line="1342">| P4a (independent), P4b (derived from P0 and P2) | composed steps exist only under typed composition; the composite carries both steps&#x27; step-produced facts, and its result for the outer predicate is the conjunction over the outer contract&#x27;s obligations | [§4](../FOUNDATIONS.md#4-algebra) Composition; [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Composition of results; [RF-010](../REFERENCE_FRAME.md#rf-010-composition-on-demand), outside this member | whether a composition law is needed, under the conditions RF-010 states; owner: the governing evaluation | 3, 4 |</span>
+<span id="L1343" data-line="1343"></span>
+<span id="L1344" data-line="1344">RF-012 in [REFERENCE_FRAME §3](../REFERENCE_FRAME.md#rf-012-closed-results),</span>
+<span id="L1345" data-line="1345">AC-007 in</span>
+<span id="L1346" data-line="1346">[AXIOMATIC_CALCULUS §4](../AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal)</span>
+<span id="L1347" data-line="1347">and [EVALUATION §4](../EVALUATION.md#4-review-results) apply the first row&#x27;s</span>
+<span id="L1348" data-line="1348">algebra to frames, constraints and reviews and add no choice of their own</span>
+<span id="L1349" data-line="1349">beyond any refinement they map under the fifth row;</span>
+<span id="L1350" data-line="1350">[ACTIVATION §3](../ACTIVATION.md#3-step-results-and-disposition) holds the</span>
+<span id="L1351" data-line="1351">step&#x27;s refinements of the fifth row and the stop state of the seventh.</span>
+<span id="L1352" data-line="1352"></span>
+<span id="L1353" data-line="1353"></span>
+<span id="L1354" data-line="1354">Source: FOUNDATIONS.md#conjunction-of-results sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545</span>
+<span id="L1355" data-line="1355"></span>
+<span id="L1356" data-line="1356">### Conjunction of results</span>
+<span id="L1357" data-line="1357"></span>
+<span id="L1358" data-line="1358">Conjunction combines results into one result for a composite predicate: a</span>
+<span id="L1359" data-line="1359">claim made of component claims, a decision over several evaluations, or</span>
+<span id="L1360" data-line="1360">the outer contract of composed steps. It is defined here once, over the</span>
+<span id="L1361" data-line="1361">core. A member or profile that combines results applies this rule and</span>
+<span id="L1362" data-line="1362">declares only the choices it leaves open (P4a, P4b, P5, P6). Purpose and</span>
+<span id="L1363" data-line="1363">material relation: failure, undecidability, non-performance and uncertain</span>
+<span id="L1364" data-line="1364">effects stay distinct after combination, so a composite can neither report</span>
+<span id="L1365" data-line="1365">success nor hide which kind of gap it has while one of them remains in</span>
+<span id="L1366" data-line="1366">what it requires.</span>
+<span id="L1367" data-line="1367"></span>
+<span id="L1368" data-line="1368">A conjunction takes three inputs and keeps them apart:</span>
+<span id="L1369" data-line="1369"></span>
+<span id="L1370" data-line="1370">1. the closed results returned, each a core value with its predicate and</span>
+<span id="L1371" data-line="1371">   domain outcome;</span>
+<span id="L1372" data-line="1372">2. the planned assessments that have no closed result applicable to the</span>
+<span id="L1373" data-line="1373">   composite: evaluations the composite requires that were not performed,</span>
+<span id="L1374" data-line="1374">   or whose result is absent, stale, bound to another subject or basis, or</span>
+<span id="L1375" data-line="1375">   incapable of establishing its claim;</span>
+<span id="L1376" data-line="1376">3. the required coverage that no planned assessment addresses: for a</span>
+<span id="L1377" data-line="1377">   required obligation set R and the coverage C that the planned</span>
+<span id="L1378" data-line="1378">   assessments admit, the uncovered coverage R minus C.</span>
+<span id="L1379" data-line="1379"></span>
+<span id="L1380" data-line="1380">Gaps. A conjunction with any item in the second or third input is never</span>
+<span id="L1381" data-line="1381">`satisfied`. Its record names which kind of gap it has, not performed,</span>
+<span id="L1382" data-line="1382">uncovered or both, and each item. An uncovered obligation is never</span>
+<span id="L1383" data-line="1383">reported as satisfied or as an omitted planned assessment; a planned</span>
+<span id="L1384" data-line="1384">assessment without a closed result is never reported as uncovered or as an</span>
+<span id="L1385" data-line="1385">`indeterminate` component.</span>
+<span id="L1386" data-line="1386"></span>
+<span id="L1387" data-line="1387">Stale results. A held result is stale for a composite when the basis it</span>
+<span id="L1388" data-line="1388">binds is not the basis the composite requires of that component, because</span>
+<span id="L1389" data-line="1389">a later state has superseded or advanced it or because it binds another</span>
+<span id="L1390" data-line="1390">subject or basis (§2, Basis). Two questions stay apart, so that one</span>
+<span id="L1391" data-line="1391">composite has one reported value (P3, P5, P6):</span>
+<span id="L1392" data-line="1392"></span>
+<span id="L1393" data-line="1393">- an evaluation performed on a subject or basis that is stale, advanced,</span>
+<span id="L1394" data-line="1394">  ambiguous or mismatched against the one it must bind returns</span>
+<span id="L1395" data-line="1395">  `invalid_basis` for its own predicate, or is reactivated on the current</span>
+<span id="L1396" data-line="1396">  basis; [RF-005](../REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates)</span>
+<span id="L1397" data-line="1397">  states this law over frames, and a conjunction that receives that</span>
+<span id="L1398" data-line="1398">  `invalid_basis` holds it as a returned result;</span>
+<span id="L1399" data-line="1399">- a component whose only held result is stale has no closed result</span>
+<span id="L1400" data-line="1400">  applicable to the composite: on the basis the composite requires, its</span>
+<span id="L1401" data-line="1401">  evaluation was not performed. It is a planned assessment without a</span>
+<span id="L1402" data-line="1402">  closed result, in the second input, and a gap. Its stale value is</span>
+<span id="L1403" data-line="1403">  neither counted as a returned result nor relabelled `invalid_basis` for</span>
+<span id="L1404" data-line="1404">  the composite, and it stays in the record with its own basis;</span>
+<span id="L1405" data-line="1405">- the declared basis relations disagree (Reported value below) only among</span>
+<span id="L1406" data-line="1406">  returned results, each bound to the basis the composite requires of it,</span>
+<span id="L1407" data-line="1407">  whose bases the declared rule requires to agree or to join in a coherent</span>
+<span id="L1408" data-line="1408">  composite basis, and which do not.</span>
+<span id="L1409" data-line="1409"></span>
+<span id="L1410" data-line="1410">A stale `satisfied` never counts toward the composite. Purpose and</span>
+<span id="L1411" data-line="1411">material relation: answering one stale component as a gap in one place and</span>
+<span id="L1412" data-line="1412">as `invalid_basis` in another would give one composite two reported</span>
+<span id="L1413" data-line="1413">values; keeping the evaluation&#x27;s own value apart from the composite&#x27;s gap</span>
+<span id="L1414" data-line="1414">keeps the reported value unique and the stale result visible.</span>
+<span id="L1415" data-line="1415"></span>
+<span id="L1416" data-line="1416">Survival. Every known failure (a `falsified` result with its</span>
+<span id="L1417" data-line="1417">counterexample), every planned assessment without a closed result and</span>
+<span id="L1418" data-line="1418">every uncovered obligation is carried with the composite and survives every</span>
+<span id="L1419" data-line="1419">join: combining conjunctions takes the union of known failures and of</span>
+<span id="L1420" data-line="1420">planned assessments without a closed result, and recomputes uncovered</span>
+<span id="L1421" data-line="1421">coverage over the combined obligations. A known failure and a gap of</span>
+<span id="L1422" data-line="1422">either kind survive every join. Common agreement among contributors</span>
+<span id="L1423" data-line="1423">cannot discard a constraint or a material counterexample that only one</span>
+<span id="L1424" data-line="1424">contributor found. A missing, wrong-subject, conflicted or indeterminate</span>
+<span id="L1425" data-line="1425">mandatory result stays unresolved under the declared rule, and aggregate</span>
+<span id="L1426" data-line="1426">satisfied status cannot replace it (P4b, P5).</span>
+<span id="L1427" data-line="1427"></span>
+<span id="L1428" data-line="1428">Predicates travel. Each component keeps its predicate and domain outcome</span>
+<span id="L1429" data-line="1429">through every join, so an uncertain effect stays distinct from a failure</span>
+<span id="L1430" data-line="1430">and from an undecided claim, and a `satisfied` for one predicate never</span>
+<span id="L1431" data-line="1431">counts toward another: a step&#x27;s `satisfied` for &quot;a candidate is available&quot;</span>
+<span id="L1432" data-line="1432">never counts toward the candidate&#x27;s fitness or acceptance.</span>
+<span id="L1433" data-line="1433"></span>
+<span id="L1434" data-line="1434">Reported value. The conjunction is `satisfied` only when every mandatory</span>
+<span id="L1435" data-line="1435">result is `satisfied` with valid applicable evidence, the declared basis</span>
+<span id="L1436" data-line="1436">relations agree, and the second and third inputs are empty. A composite</span>
+<span id="L1437" data-line="1437">with a material counterexample to a mandatory constraint or an uncovered</span>
+<span id="L1438" data-line="1438">required obligation cannot project success. Where a mandatory result is</span>
+<span id="L1439" data-line="1439">not `satisfied`, the conjunction</span>
+<span id="L1440" data-line="1440">reports a non-satisfied value chosen by its declared rule from those</span>
+<span id="L1441" data-line="1441">returned; no universal order among the non-satisfied values exists, and</span>
+<span id="L1442" data-line="1442">the member or profile that applies the conjunction declares its own in</span>
+<span id="L1443" data-line="1443">its declared rule. Where every mandatory returned result is `satisfied`</span>
+<span id="L1444" data-line="1444">and the declared basis relations disagree, the conjunction reports</span>
+<span id="L1445" data-line="1445">`invalid_basis`, because no coherent composite basis supports the</span>
+<span id="L1446" data-line="1446">composite predicate (§2, Basis); any gaps stay recorded by kind. Where</span>
+<span id="L1447" data-line="1447">every mandatory returned result is `satisfied`, the declared basis</span>
+<span id="L1448" data-line="1448">relations agree and a gap remains, the conjunction reports</span>
+<span id="L1449" data-line="1449">`indeterminate`, because the results it holds cannot decide the composite</span>
+<span id="L1450" data-line="1450">predicate; that value is the conjunction&#x27;s own, and the gaps stay</span>
+<span id="L1451" data-line="1451">recorded by kind. A `falsified` result that is not mandatory stays in the</span>
+<span id="L1452" data-line="1452">conjunction&#x27;s record with its predicate and is never discarded. Where</span>
+<span id="L1453" data-line="1453">every mandatory result is `satisfied`, the declared basis relations agree</span>
+<span id="L1454" data-line="1454">and no gap remains, a material counterexample to a mandatory constraint</span>
+<span id="L1455" data-line="1455">falsifies the conjunction whichever contributor found it, and without one</span>
+<span id="L1456" data-line="1456">the conjunction&#x27;s value is the one its declared rule gives over the</span>
+<span id="L1457" data-line="1457">mandatory results.</span>
+<span id="L1458" data-line="1458"></span>
+<span id="L1459" data-line="1459">The declared rule. A conjunction declares which results are mandatory; how</span>
+<span id="L1460" data-line="1460">conflict and indeterminacy are handled; which basis relations must agree,</span>
+<span id="L1461" data-line="1461">results on different bases combining only under a declared coherent</span>
+<span id="L1462" data-line="1462">composite basis (§2, Basis); which decision authority owns the</span>
+<span id="L1463" data-line="1463">conjunction; how results that are not mandatory count; and whether any</span>
+<span id="L1464" data-line="1464">result may veto or defer the decision.</span>
+<span id="L1465" data-line="1465">Conjunction does not transfer the semantic authority of a contributing</span>
+<span id="L1466" data-line="1466">evaluation (P6, P4a).</span>
+<span id="L1467" data-line="1467"></span>
+<span id="L1468" data-line="1468">Composition of results. The result of composed steps for the outer</span>
+<span id="L1469" data-line="1469">predicate is the conjunction of the steps&#x27; results, with the outer</span>
+<span id="L1470" data-line="1470">contract&#x27;s obligations as the required coverage. That each step returned</span>
+<span id="L1471" data-line="1471">`satisfied` supports the outer predicate only where the refinement&#x27;s</span>
+<span id="L1472" data-line="1472">premises hold ([ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement),</span>
+<span id="L1473" data-line="1473">Refinement).</span>
+<span id="L1474" data-line="1474"></span>
+<span id="L1475" data-line="1475"></span>
+<span id="L1476" data-line="1476">Source: DESIGN_MODULE.md#foundation-to-law sha256=50e70c797c93718e85192aaf2de39596f62f53030507ca8242c1af7e8f0ebcbe rows=3/26 selected by the anchors this frame carries; the consumers paragraph of 26 items is omitted</span>
+<span id="L1477" data-line="1477"></span>
+<span id="L1478" data-line="1478">### Foundation to law</span>
+<span id="L1479" data-line="1479"></span>
+<span id="L1480" data-line="1480">This member is material family F17, software design. The table below</span>
+<span id="L1481" data-line="1481">shows which of its rules follow from which premises, in the format of</span>
+<span id="L1482" data-line="1482">[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law),</span>
+<span id="L1483" data-line="1483">which also states the standing of the consequences. An actor enters the</span>
+<span id="L1484" data-line="1484">family here, when it designs, implements or reviews a boundary that this</span>
+<span id="L1485" data-line="1485">profile governs. The family imports these families under</span>
+<span id="L1486" data-line="1486">[PROFILES §1](../PROFILES.md#1-the-boundary), and its rows cite them as</span>
+<span id="L1487" data-line="1487">premises: F1, frames and context, for</span>
+<span id="L1488" data-line="1488">[FOUNDATIONS §2 Authority kinds](../FOUNDATIONS.md#authority-kinds); F2,</span>
+<span id="L1489" data-line="1489">transitions, steps and configuration ([ACTIVATION §1](../ACTIVATION.md#1-the-step));</span>
+<span id="L1490" data-line="1490">F3, results and their combination</span>
+<span id="L1491" data-line="1491">([FOUNDATIONS §4 Results](../FOUNDATIONS.md#results)); F4, work state,</span>
+<span id="L1492" data-line="1492">resumption and reuse ([ACTIVATION §7](../ACTIVATION.md#7-closed-result-and-reuse));</span>
+<span id="L1493" data-line="1493">F6, claims, evidence, assessment and acceptance</span>
+<span id="L1494" data-line="1494">([EVALUATION §1](../EVALUATION.md#1-claims)); F8, identity</span>
+<span id="L1495" data-line="1495">([IDENTITY §1](../IDENTITY.md#1-position)); F10, constitutional chain,</span>
+<span id="L1496" data-line="1496">outcome and build-tenant binding ([SPEC_METHOD §2](../SPEC_METHOD.md#2-the-chain));</span>
+<span id="L1497" data-line="1497">F12, binding a project to the method</span>
+<span id="L1498" data-line="1498">([PRODUCT_DEFINITION §1](../PRODUCT_DEFINITION.md#1-overlay-and-layout-independence));</span>
+<span id="L1499" data-line="1499">and F13, work carriers ([TICKETS §5](../TICKETS.md#5-from-carrier-to-execution)),</span>
+<span id="L1500" data-line="1500">whose implementation-migration rule Recurrence extraction refines.</span>
+<span id="L1501" data-line="1501">Standing of the commitments cited</span>
+<span id="L1502" data-line="1502">([FOUNDATIONS §3](../FOUNDATIONS.md#3-commitments)): P0 recovered; P1, P2,</span>
+<span id="L1503" data-line="1503">P3, P4a and P6 independent; P4b derived from P0 and P2, with P0&#x27;s premise</span>
+<span id="L1504" data-line="1504">that step-produced facts are not re-acquirable; P5 derived from P0 and P6,</span>
+<span id="L1505" data-line="1505">with P0&#x27;s open-world premise. Its instance premises hold where a project</span>
+<span id="L1506" data-line="1506">adopts this profile for a boundary; they are adopted with it and do not</span>
+<span id="L1507" data-line="1507">follow from the foundations (P1, P6):</span>
+<span id="L1508" data-line="1508">It also imports F18, graph-native construction ([ODD §1](../ODD.md#1-position)), for the constructive-carrier law its first row defers to.</span>
+<span id="L1509" data-line="1509"></span>
+<span id="L1510" data-line="1510">- I1: a Product has decided the outcomes and capabilities it builds, and</span>
+<span id="L1511" data-line="1511">  adopts this profile for a named boundary of its realisation;</span>
+<span id="L1512" data-line="1512">- I2: realisation code can hold one meaning in typed carriers and explicit</span>
+<span id="L1513" data-line="1513">  transforms or in orchestration, helpers, open payloads and shared</span>
+<span id="L1514" data-line="1514">  mutable state, and in more than one place;</span>
+<span id="L1515" data-line="1515">- I3: bounded actors design, implement, test, review and later change the</span>
+<span id="L1516" data-line="1516">  boundary, and an actor taking a later local action generally does not</span>
+<span id="L1517" data-line="1517">  hold the reasoning that produced the design;</span>
+<span id="L1518" data-line="1518">- I4: a mechanism the boundary needs can be built locally or taken from</span>
+<span id="L1519" data-line="1519">  existing foundations, and similar computation recurs across boundaries</span>
+<span id="L1520" data-line="1520">  and over time.</span>
+<span id="L1521" data-line="1521"></span>
+<span id="L1522" data-line="1522">| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |</span>
+<span id="L1523" data-line="1523">|---|---|---|---|---|</span>
+<span id="L1524" data-line="1524">| P1 (independent), P3 (independent), P6 (independent); F10 imported; I1 | the constitutional WHAT owns Product meaning (F10) and no realisation mints authority (P6), so a new or materially changed semantic boundary derives its semantic model from one accepted Ontology subordinate to that WHAT, and implementation cannot self-ratify missing Ontology authority; identities are declared and survive change (P3), so the Ontology carries stable identities and a basis that makes staleness decidable; a projection keeps meaning only through a declared contract (P1), so every design projection traces to the Ontology, an untraceable element is ungrounded, and a realisation derived from a reference line shows its derivation, not code comparison alone | [§5](../DESIGN_MODULE.md#5-ontology-first-design), its opening, [Ontology projection](../DESIGN_MODULE.md#ontology-projection); [§6 Reference-derived module design](../DESIGN_MODULE.md#reference-derived-module-design); [§7 Ontology evidence](../DESIGN_MODULE.md#ontology-evidence) | the ten terms of the Ontology, the definition of a material semantic boundary and the evidence items: this profile; who accepts the Ontology: the design authority ([§7 Gate and retrospective work](../DESIGN_MODULE.md#gate-and-retrospective-work)); proportionality: [ACTIVATION §6](../ACTIVATION.md#6-cost-and-proportionality); the invalidators, of which a reprice is an instance: [ACTIVATION §7](../ACTIVATION.md#7-closed-result-and-reuse) | 1, 2, 6 |</span>
+<span id="L1525" data-line="1525">| P1 (independent), P5 (derived from P0 and P6), P6 (independent); F3 imported; I3 | a view is a representation, not the meaning (P1), so each of three distinct views is a fidelity-checked projection of the accepted Ontology, not a peer truth surface, and a later actor reads the behaviour from them, not from memory (I3); a gate cannot report success on an axiom it did not decide (P5) and needs evidence for each claim (P6), so before promotion or a design-method closure claim every applicable axiom is evaluated across the views, and each verdict maps to one core value of F3; an axiom that does not apply satisfies only the declared disjunction and never counts as met | [§7](../DESIGN_MODULE.md#7-ontology-and-three-view-design-gate); [Domain model](../DESIGN_MODULE.md#domain-model), [Sequence model](../DESIGN_MODULE.md#sequence-model), [State model](../DESIGN_MODULE.md#state-model); [Cross-view axiom evaluation](../DESIGN_MODULE.md#cross-view-axiom-evaluation) | the three Mermaid views, the stereotypes, the ten matrix columns, and the axiom verdicts with their disjunctive predicate: this profile; another text-native format: the project&#x27;s ratification; applicability and exclusion: [ACTIVATION §1 Applicability](../ACTIVATION.md#applicability), Exclusion and the core | 6, 3, 9 |</span>
+<span id="L1526" data-line="1526">| P6 (independent), P0 (recovered, with its premise that a step&#x27;s output is a candidate until evaluated); F3, F4, F6 imported | a produced design pack is a candidate until evaluated (P0), and acceptance is the owner&#x27;s disposition, distinct from assessment (P6, F6), so the Ontology verdict and the design verdict are the design authority&#x27;s dispositions at the design gate, and no assessment result or produced pack is the verdict; a combination with a non-satisfied mandatory result or a gap is never `satisfied` (F3), so without both verdicts `accepted` a new or semantically changed boundary is not promoted, published or closed, and implementation under co-evolution stays provisional evidence until the gate is accepted; an unchanged consumer reuses a closed result (F4), so an unchanged `realization_refactor` reuses its verdict on a proof of no delta | [Gate and retrospective work](../DESIGN_MODULE.md#gate-and-retrospective-work) | the design gate as the acceptance boundary of a semantic boundary: this profile; the decision owner: the design authority that accepts the Ontology (§5); the dispositions and their core values: [ACTIVATION §3](../ACTIVATION.md#disposition) | 9, 3 |</span>
+<span id="L1527" data-line="1527"></span>
+<span id="L1528" data-line="1528">Consumers outside this member that apply these rows, each keeping its</span>
+<span id="L1529" data-line="1529">owner: [ASSURANCE §14 to §16](../ASSURANCE.md#14-design-to-module-evidence-route)</span>
+<span id="L1530" data-line="1530">apply the module-taxonomy row through the binding at the head;</span>
+<span id="L1531" data-line="1531">[UX](../UX.md#1-position) refines the §4 and §10 rows for modules that</span>
+<span id="L1532" data-line="1532">realise a UX surface ([PROFILES §4](../PROFILES.md#4-ux)); the recurrence row</span>
+<span id="L1533" data-line="1533">refines the ticket rule of TICKETS §6;</span>
+<span id="L1534" data-line="1534">[FOUNDATIONS §4](../FOUNDATIONS.md#4-algebra) Shared machinery is refined for</span>
+<span id="L1535" data-line="1535">software design by the capability-selection row; and</span>
+<span id="L1536" data-line="1536">[ACTIVATION §1 Intake](../ACTIVATION.md#intake) uses the design evidence of</span>
+<span id="L1537" data-line="1537">the frame-conservation row when this profile governs the boundary.</span>
+<span id="L1538" data-line="1538"></span>
+<span id="L1539" data-line="1539">The table accounts for this whole member: the head, §1 to §12 and the</span>
+<span id="L1540" data-line="1540">binding the head declares. Its Pillar column follows FOUNDATIONS §3.</span>
+<span id="L1541" data-line="1541">Purpose and material relation: a reader of this profile sees</span>
+<span id="L1542" data-line="1542">which of its rules rest on the commitments and imported families and which</span>
+<span id="L1543" data-line="1543">are choices this profile, the adopting Product or another owner makes, so</span>
+<span id="L1544" data-line="1544">no profile choice is presented as following from the foundations (P6, P2).</span>
+<span id="L1545" data-line="1545"></span>
+<span id="L1546" data-line="1546"></span>
+<span id="L1547" data-line="1547">Source: SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity sha256=c7b83b2b7e8c9a301d2e535fc3752c08f718d9fc679e32f8a91c15c285976e8e rows=1/10 selected by the anchors this frame carries; the consumers paragraph of 10 items is omitted</span>
+<span id="L1548" data-line="1548"></span>
+<span id="L1549" data-line="1549">### Foundation to law: change management and ambiguity</span>
+<span id="L1550" data-line="1550"></span>
+<span id="L1551" data-line="1551">This family (F11 in the index of</span>
+<span id="L1552" data-line="1552">[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law))</span>
+<span id="L1553" data-line="1553">decides how a change enters the chain, how its classification is computed</span>
+<span id="L1554" data-line="1554">and reused, how ambiguity is governed and how a shared interface is</span>
+<span id="L1555" data-line="1555">migrated. Its instance premises, which the commitments do not supply, are</span>
+<span id="L1556" data-line="1556">named in the rows as follows: changing specification, the specification</span>
+<span id="L1557" data-line="1557">changes while work proceeds; one front door, reports of every kind arrive</span>
+<span id="L1558" data-line="1558">at one product; shared interfaces, a shared interface has several</span>
+<span id="L1559" data-line="1559">producers and consumers; reserved decisions, a decision may be taken</span>
+<span id="L1560" data-line="1560">under declared policy or be reserved to a human authority. Standing of</span>
+<span id="L1561" data-line="1561">the commitments cited (FOUNDATIONS §3): P0 recovered; P1, P2, P3, P4a and</span>
+<span id="L1562" data-line="1562">P6 independent; P4b derived from P0 and P2, with P0&#x27;s premise that</span>
+<span id="L1563" data-line="1563">step-produced facts are not re-acquirable; P5 derived from P0 and P6,</span>
+<span id="L1564" data-line="1564">with P0&#x27;s open-world premise.</span>
+<span id="L1565" data-line="1565"></span>
+<span id="L1566" data-line="1566">| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |</span>
+<span id="L1567" data-line="1567">|---|---|---|---|---|</span>
+<span id="L1568" data-line="1568">| P6 independent; P2 independent; instance: changing specification, one front door | By P6 a governing relation is accepted only by its owner, so a change re-enters at the layer that owns what it changes and is accepted there. By P2 the work follows what changes, not what the report is called, so the label a report arrives under does not select its process, and a change that re-enters below Goals asserts that nothing above it changes. | [§4](../SPEC_METHOD.md#4-change-management); [Universal intake triage](../SPEC_METHOD.md#universal-intake-triage), the six determinations; [Change classes](../SPEC_METHOD.md#change-classes); [Procedures](../SPEC_METHOD.md#procedures) | the six change classes with their names, re-entry points and flows, and the four procedures: domain choices of this member; where the class is recorded: [TICKETS §4](../TICKETS.md#change-class) | 1, 9 |</span>
+<span id="L1569" data-line="1569"></span>
+<span id="L1570" data-line="1570">The standing of these consequences is stated in</span>
+<span id="L1571" data-line="1571">[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law).</span>
+<span id="L1572" data-line="1572">The table accounts for §4, §5 and §7.</span>
+<span id="L1573" data-line="1573"></span></pre></html>

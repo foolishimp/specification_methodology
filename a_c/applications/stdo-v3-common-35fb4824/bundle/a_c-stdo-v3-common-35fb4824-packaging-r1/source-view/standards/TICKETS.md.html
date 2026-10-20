@@ -1,0 +1,1450 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>standards/TICKETS.md</title><style>body{font:14px system-ui;margin:24px;background:#101720;color:#dfeaf4}a{color:#87c7ff}pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5;counter-reset:line}span{display:block}span:before{content:attr(data-line);display:inline-block;width:4em;color:#7392aa;user-select:none}span:target{background:#36481d}</style><h1>standards/TICKETS.md</h1><p>Exact frozen source · SHA256 5f7e4cb0785a27b9e6dda1fd91044e775183b6a0e6e80b33811e54665b144b57</p><pre><span id="L1" data-line="1"># TICKETS</span>
+<span id="L2" data-line="2"></span>
+<span id="L3" data-line="3">Tier 2. Owns the work carriers of the method: goals, tickets, sprints,</span>
+<span id="L4" data-line="4">comments and execution contracts as one model; the default layout and the</span>
+<span id="L5" data-line="5">bindings that locate the carriers; the sprint rules; the ticket rules,</span>
+<span id="L6" data-line="6">including triage-first intake, the change class the ticket records and the</span>
+<span id="L7" data-line="7">upward propagation check; the selection of the smallest lawful carrier for</span>
+<span id="L8" data-line="8">a piece of work and the carrier side of execution-contract admission; the</span>
+<span id="L9" data-line="9">separation of execution from verification authority; the continuity of</span>
+<span id="L10" data-line="10">recorded judgment and owner rulings; condition-based closure and reuse;</span>
+<span id="L11" data-line="11">test case authority; the implementation-migration ticket category with its</span>
+<span id="L12" data-line="12">declaration, checklist and review rules; one-truth state projection; the</span>
+<span id="L13" data-line="13">recommended ticket and sprint shape; the operating mode. It is realised</span>
+<span id="L14" data-line="14">from [FOUNDATIONS](FOUNDATIONS.md), [ACTIVATION](ACTIVATION.md) and</span>
+<span id="L15" data-line="15">[EVALUATION](EVALUATION.md) and is the T area named by</span>
+<span id="L16" data-line="16">[SPEC_METHOD §1](SPEC_METHOD.md#method-identity): nothing here is</span>
+<span id="L17" data-line="17">foundational, every clause names the principle that requires it (P0 to P6,</span>
+<span id="L18" data-line="18">FOUNDATIONS §3), and each mechanism could be realised differently under the</span>
+<span id="L19" data-line="19">same principles. The change classes a ticket records are</span>
+<span id="L20" data-line="20">[SPEC_METHOD §4](SPEC_METHOD.md#change-classes), which is the triage target</span>
+<span id="L21" data-line="21">of every clause here that names a class; the step side of admission is</span>
+<span id="L22" data-line="22">[ACTIVATION §1](ACTIVATION.md#admission); the generic law of claims,</span>
+<span id="L23" data-line="23">independent assessment and acceptance is EVALUATION §1, §3 and §5; the</span>
+<span id="L24" data-line="24">testing law is ASSURANCE. This member defines none of those twice. Its</span>
+<span id="L25" data-line="25">family table (F13) opens §5.</span>
+<span id="L26" data-line="26"></span>
+<span id="L27" data-line="27">## 1. Work carriers</span>
+<span id="L28" data-line="28"></span>
+<span id="L29" data-line="29">### Goals</span>
+<span id="L30" data-line="30"></span>
+<span id="L31" data-line="31">The product definition&#x27;s `ticketing.goals` binding locates the current epic</span>
+<span id="L32" data-line="32">layer; `GOALS.md` is the default file (PRODUCT_DEFINITION §1). Goals are</span>
+<span id="L33" data-line="33">broader than one ticket, narrower and more current than the intent surface,</span>
+<span id="L34" data-line="34">and the place to state the active work wave and what matters now. Goals are</span>
+<span id="L35" data-line="35">not the durable unit of execution tracking (P2, P3).</span>
+<span id="L36" data-line="36"></span>
+<span id="L37" data-line="37">### Ticket records</span>
+<span id="L38" data-line="38"></span>
+<span id="L39" data-line="39">Tickets are the enduring work records. Each ticket is one durable record,</span>
+<span id="L40" data-line="40">one markdown file being the default carrier; the source of truth for that</span>
+<span id="L41" data-line="41">unit of work; durable across sessions; and typed, so that bugs and features</span>
+<span id="L42" data-line="42">share one system. A ticket is used when work needs independent durable</span>
+<span id="L43" data-line="43">identity: feature work, bug tracking, spikes and chores (P3, P4b).</span>
+<span id="L44" data-line="44"></span>
+<span id="L45" data-line="45">### Sprints</span>
+<span id="L46" data-line="46"></span>
+<span id="L47" data-line="47">Sprints are bounded execution batches. Each sprint is one manifest under</span>
+<span id="L48" data-line="48">the product definition&#x27;s optional `ticketing.sprints.root` binding,</span>
+<span id="L49" data-line="49">`.ai-workspace/sprints/` being the default; a control surface for a bounded</span>
+<span id="L50" data-line="50">body of work; a place to batch repeated authority references, closure law,</span>
+<span id="L51" data-line="51">evidence expectations and deferred local compliance debt; and closed by an</span>
+<span id="L52" data-line="52">explicit sprint-close review. Sprints are not constitutional authority: they</span>
+<span id="L53" data-line="53">operate under SPEC_METHOD and the project surfaces they cite</span>
+<span id="L54" data-line="54">([SPEC_METHOD §4](SPEC_METHOD.md#sprint-execution-boundary) states the</span>
+<span id="L55" data-line="55">sprint boundary; this member states the mechanics) (P2, P6).</span>
+<span id="L56" data-line="56"></span>
+<span id="L57" data-line="57">A sprint may contain durable tickets, manifest-local iteration entries, or</span>
+<span id="L58" data-line="58">both. Tickets carry work items that need durable identity across sessions;</span>
+<span id="L59" data-line="59">manifest-local iteration entries carry small changes whose only independent</span>
+<span id="L60" data-line="60">value is traceability inside the sprint. The sprint is the batch authority;</span>
+<span id="L61" data-line="61">it does not erase the need for paydown tickets when close review finds debt</span>
+<span id="L62" data-line="62">that must survive past the sprint (P2, P4b).</span>
+<span id="L63" data-line="63"></span>
+<span id="L64" data-line="64">### Comments</span>
+<span id="L65" data-line="65"></span>
+<span id="L66" data-line="66">The product definition&#x27;s `ticketing.comments.root` binding is the message</span>
+<span id="L67" data-line="67">board; `.ai-workspace/comments/` is the default. Comments are for publishing</span>
+<span id="L68" data-line="68">ideas, strategy notes, reviews, handoffs, closure summaries, and decisions</span>
+<span id="L69" data-line="69">with their reasoning. Comments are not task status authority. A comment</span>
+<span id="L70" data-line="70">is a post of [POSTING_GUIDE](POSTING_GUIDE.md), which states what it</span>
+<span id="L71" data-line="71">carries, its structure and its discussion state. A decision recorded in a</span>
+<span id="L72" data-line="72">comment takes its authority from the surface that owns the decision, once</span>
+<span id="L73" data-line="73">it is adopted there ([POSTING_GUIDE §9](POSTING_GUIDE.md#9-ratification)),</span>
+<span id="L74" data-line="74">and has none of its own (P6, P3).</span>
+<span id="L75" data-line="75"></span>
+<span id="L76" data-line="76">### Execution contracts</span>
+<span id="L77" data-line="77"></span>
+<span id="L78" data-line="78">Tickets are durable work authority. An execution contract is the run-scoped</span>
+<span id="L79" data-line="79">admitted work surface derived from a ticket, from a sprint manifest plus an</span>
+<span id="L80" data-line="80">included ticket or iteration entry, or drafted during intake when no durable</span>
+<span id="L81" data-line="81">or sprint-local work identity is required. The three lifetimes differ: a</span>
+<span id="L82" data-line="82">ticket survives sessions and work waves; a sprint survives one bounded</span>
+<span id="L83" data-line="83">execution batch and its close review; an execution contract is the current</span>
+<span id="L84" data-line="84">admitted execution function for one run. Execution contracts are not a</span>
+<span id="L85" data-line="85">rival backlog or a second planning surface (P0, P3).</span>
+<span id="L86" data-line="86"></span>
+<span id="L87" data-line="87">They exist so that the system can classify the work before execution; admit</span>
+<span id="L88" data-line="88">or reject the drafted classification against deterministic criteria; record</span>
+<span id="L89" data-line="89">the admitted execution basis on the selected durable work carrier, including</span>
+<span id="L90" data-line="90">an event log where the execution binding requires one; assemble prompts</span>
+<span id="L91" data-line="91">from admitted work law instead of from raw user phrasing; and evaluate</span>
+<span id="L92" data-line="92">closure against the same admitted criteria. The intended loop: work</span>
+<span id="L93" data-line="93">arrives; the system selects the smallest lawful work carrier for its</span>
+<span id="L94" data-line="94">required lifetime (§5); an agent drafts one run-scoped execution contract</span>
+<span id="L95" data-line="95">from that carrier; the system validates and admits or rejects the contract</span>
+<span id="L96" data-line="96">(ACTIVATION §1, Admission); execution may proceed in the same invocation</span>
+<span id="L97" data-line="97">under the admitted contract; closure is checked against that same contract;</span>
+<span id="L98" data-line="98">the resulting state still flows through normal proof, gap analysis and</span>
+<span id="L99" data-line="99">repricing (P6, P2).</span>
+<span id="L100" data-line="100"></span>
+<span id="L101" data-line="101">### Milestones and phase-scoped truth (UP-006)</span>
+<span id="L102" data-line="102"></span>
+<span id="L103" data-line="103">A ticket may contain several closure-bearing milestones without becoming</span>
+<span id="L104" data-line="104">several tickets. Each milestone has stable identity, a bounded claim,</span>
+<span id="L105" data-line="105">relevant dependencies, current state, required evidence, and an explicit</span>
+<span id="L106" data-line="106">relation to ticket closure (P3).</span>
+<span id="L107" data-line="107"></span>
+<span id="L108" data-line="108">Milestone acceptance proves only its declared claim. Accepted design does</span>
+<span id="L109" data-line="109">not satisfy implementation, installed proof, qualification or release.</span>
+<span id="L110" data-line="110">Ticket completion requires every closure-bearing milestone to be accepted;</span>
+<span id="L111" data-line="111">optional or deferred work requires an explicit disposition and owner. Each</span>
+<span id="L112" data-line="112">milestone is a work claim under §7 Condition-based closure and reuse, so</span>
+<span id="L113" data-line="113">its acceptance follows that condition for its own declared claim, and a</span>
+<span id="L114" data-line="114">ticket is complete only when the condition holds for each of them.</span>
+<span id="L115" data-line="115">Commentary and generated summaries cannot mutate milestone or ticket truth</span>
+<span id="L116" data-line="116">(P6, P4b).</span>
+<span id="L117" data-line="117"></span>
+<span id="L118" data-line="118">## 2. Layout and authority</span>
+<span id="L119" data-line="119"></span>
+<span id="L120" data-line="120">### Default layout</span>
+<span id="L121" data-line="121"></span>
+<span id="L122" data-line="122">The starter file layout (P2, P3):</span>
+<span id="L123" data-line="123"></span>
+<span id="L124" data-line="124">```text</span>
+<span id="L125" data-line="125">stdo_default.json</span>
+<span id="L126" data-line="126"></span>
+<span id="L127" data-line="127">specification/</span>
+<span id="L128" data-line="128">├── GOALS.md</span>
+<span id="L129" data-line="129"></span>
+<span id="L130" data-line="130">.ai-workspace/</span>
+<span id="L131" data-line="131">├── sprints/</span>
+<span id="L132" data-line="132">├── tickets/</span>
+<span id="L133" data-line="133">│   ├── backlog/</span>
+<span id="L134" data-line="134">│   ├── active/</span>
+<span id="L135" data-line="135">│   └── completed/</span>
+<span id="L136" data-line="136">└── comments/</span>
+<span id="L137" data-line="137">    └── &lt;agent-id&gt;/</span>
+<span id="L138" data-line="138">```</span>
+<span id="L139" data-line="139"></span>
+<span id="L140" data-line="140">The applicable product definition resolves POSTING_GUIDE and this member</span>
+<span id="L141" data-line="141">from its exact shared installed basis (PRODUCT_DEFINITION §4); their</span>
+<span id="L142" data-line="142">absence from the project tree is not absence from the governing method. A</span>
+<span id="L143" data-line="143">conforming `stdo_&lt;label&gt;.json` definition may bind the same ticket, comment</span>
+<span id="L144" data-line="144">and sprint roles to existing directories, repository resources, tracker</span>
+<span id="L145" data-line="145">collections, API endpoints or product-scoped queries without restructuring</span>
+<span id="L146" data-line="146">the project (PRODUCT_DEFINITION §1).</span>
+<span id="L147" data-line="147"></span>
+<span id="L148" data-line="148">### Bindings and projections</span>
+<span id="L149" data-line="149"></span>
+<span id="L150" data-line="150">The bindings (P6, P3): `ticketing.goals` locates the epic</span>
+<span id="L151" data-line="151">layer; `ticketing.sprints.root`, when present, is the bounded</span>
+<span id="L152" data-line="152">execution-batch and sprint-close review layer;</span>
+<span id="L153" data-line="153">`ticketing.tickets.lanes.backlog`, `.active` and `.completed` locate the</span>
+<span id="L154" data-line="154">ticket authority; `ticketing.comments.root` locates the discussion and</span>
+<span id="L155" data-line="155">publication layer. The paths of the default layout are the bindings</span>
+<span id="L156" data-line="156">supplied by `stdo_default.json`. The definition locates these carriers and</span>
+<span id="L157" data-line="157">does not own their ticket or comment content.</span>
+<span id="L158" data-line="158"></span>
+<span id="L159" data-line="159">There is no separate mandatory `ACTIVE_TASKS.md` in this model. A project</span>
+<span id="L160" data-line="160">that wants a board view may generate one from the bound ticket authority;</span>
+<span id="L161" data-line="161">that board is a projection only and does not become the source of truth</span>
+<span id="L162" data-line="162">unless the product definition explicitly rebinds the ticket authority to</span>
+<span id="L163" data-line="163">that carrier and no rival remains (§7).</span>
+<span id="L164" data-line="164"></span>
+<span id="L165" data-line="165">### Carrier substitution</span>
+<span id="L166" data-line="166"></span>
+<span id="L167" data-line="167">The durable local-file model is the default and remains valid whenever it</span>
+<span id="L168" data-line="168">is selected. Another carrier is not required to reproduce its folders, but</span>
+<span id="L169" data-line="169">it preserves the same ticket authority and refusal laws (§3 and §4, one</span>
+<span id="L170" data-line="170">durable record). Growth the model admits includes a generated active board,</span>
+<span id="L171" data-line="171">ticket dependency checks, links from tickets to scenario, requirement or</span>
+<span id="L172" data-line="172">ADR surfaces, external sync with a real ticketing system, and message-board</span>
+<span id="L173" data-line="173">integration through a standard tool-protocol capability. Under the bindings</span>
+<span id="L174" data-line="174">above, a generated board is a projection, and a tracker that holds tickets</span>
+<span id="L175" data-line="175">is lawful only as an explicit rebinding of the ticket authority by the</span>
+<span id="L176" data-line="176">product definition with no rival surface remaining, so neither growth</span>
+<span id="L177" data-line="177">changes the authority or refusal laws (P2, P6).</span>
+<span id="L178" data-line="178"></span>
+<span id="L179" data-line="179">## 3. Sprint rules</span>
+<span id="L180" data-line="180"></span>
+<span id="L181" data-line="181">### One durable record per sprint</span>
+<span id="L182" data-line="182"></span>
+<span id="L183" data-line="183">Each sprint has one durable manifest record; the default carrier is one</span>
+<span id="L184" data-line="184">markdown file. Another bound carrier preserves the same identity, required</span>
+<span id="L185" data-line="185">fields, history, closure law and one-truth relation (P3, P4b). For a local file, the filename should</span>
+<span id="L186" data-line="186">carry a stable id and a short slug. Recommended local-file naming:</span>
+<span id="L187" data-line="187">`SPRINT-2026-04-30-process-navigator.md` and</span>
+<span id="L188" data-line="188">`SPRINT-2026-05-12-dashboard-density.md`.</span>
+<span id="L189" data-line="189"></span>
+<span id="L190" data-line="190">### Manifest fields</span>
+<span id="L191" data-line="191"></span>
+<span id="L192" data-line="192">Each sprint manifest records at least `id`, `title`, `status`, `goal`,</span>
+<span id="L193" data-line="193">`opened_at`, `updated_at`, `authority_refs`, `scope`, `excluded_boundaries`,</span>
+<span id="L194" data-line="194">`expected_change_classes`, `included_tickets` or `iterations`,</span>
+<span id="L195" data-line="195">`closure_trigger`, `closure_law`, `proof_surface`, `deferred_compliance`,</span>
+<span id="L196" data-line="196">`non_closure_conditions` and `paydown_policy` (P4b, P2).</span>
+<span id="L197" data-line="197"></span>
+<span id="L198" data-line="198">`authority_refs` names the upstream goals, intent, product, requirement,</span>
+<span id="L199" data-line="199">design or other governing surfaces the sprint operates under.</span>
+<span id="L200" data-line="200">`excluded_boundaries` names what the sprint is not allowed to change;</span>
+<span id="L201" data-line="201">typical exclusions are product truth, data contracts, runtime semantics,</span>
+<span id="L202" data-line="202">governance and closure law, public carrier shape and release criteria.</span>
+<span id="L203" data-line="203">`deferred_compliance` names any local proof, review, accessibility,</span>
+<span id="L204" data-line="204">screenshot, walkthrough, test, design wording or trace cleanup</span>
+<span id="L205" data-line="205">intentionally deferred until sprint close. `paydown_policy` states how</span>
+<span id="L206" data-line="206">deferred debt becomes accepted, ticketed, repriced or removed during close</span>
+<span id="L207" data-line="207">review (P6).</span>
+<span id="L208" data-line="208"></span>
+<span id="L209" data-line="209">### Sprint status</span>
+<span id="L210" data-line="210"></span>
+<span id="L211" data-line="211">The minimum sprint status model is `active`, `closing`, `closed` and</span>
+<span id="L212" data-line="212">`superseded` (P5, P3). `active`: iteration is admitted</span>
+<span id="L213" data-line="213">inside the sprint boundary. `closing`: new iteration is frozen while close</span>
+<span id="L214" data-line="214">review and paydown classification run. `closed`: close review finished and</span>
+<span id="L215" data-line="215">all remaining debt is accepted, ticketed, repriced or removed.</span>
+<span id="L216" data-line="216">`superseded`: the sprint boundary was wrong and a new authority surface,</span>
+<span id="L217" data-line="217">sprint or ticket set replaced it. A project may add `planned` or</span>
+<span id="L218" data-line="218">`cancelled`; those states do not replace close review.</span>
+<span id="L219" data-line="219"></span>
+<span id="L220" data-line="220">### Sprint admission</span>
+<span id="L221" data-line="221"></span>
+<span id="L222" data-line="222">A sprint may admit work only when the manifest makes the boundary</span>
+<span id="L223" data-line="223">reviewable. Admission requires a bounded scope, cited authority, expected</span>
+<span id="L224" data-line="224">change classes, explicit excluded boundaries, a closure law, non-closure</span>
+<span id="L225" data-line="225">conditions, and a paydown policy for deferred compliance (P6, P2).</span>
+<span id="L226" data-line="226"></span>
+<span id="L227" data-line="227">The sprint may batch repeated closure criteria that would otherwise be</span>
+<span id="L228" data-line="228">copied into every included ticket. It may not batch away intake triage:</span>
+<span id="L229" data-line="229">substantive included tickets still record their lawful `change_class` and</span>
+<span id="L230" data-line="230">`re_entry_point` (§4, Triage metadata). Manifest-local iteration entries</span>
+<span id="L231" data-line="231">may rely on the sprint&#x27;s declared class only while they remain inside the</span>
+<span id="L232" data-line="232">sprint scope and excluded boundaries (P4b).</span>
+<span id="L233" data-line="233"></span>
+<span id="L234" data-line="234">### Compliance escrow</span>
+<span id="L235" data-line="235"></span>
+<span id="L236" data-line="236">A sprint may defer local compliance proof only when the manifest names the</span>
+<span id="L237" data-line="237">deferred proof or cleanup class; the debt is local to the sprint&#x27;s admitted</span>
+<span id="L238" data-line="238">surface; the expected correction cost is lower than the per-change proof</span>
+<span id="L239" data-line="239">cost; the sprint is short enough that the debt remains reviewable; and the</span>
+<span id="L240" data-line="240">close review classifies and pays down the debt. Deferred compliance is not</span>
+<span id="L241" data-line="241">silent debt: it is escrow held by the sprint, and</span>
+<span id="L242" data-line="242">[SPEC_METHOD §4](SPEC_METHOD.md#sprint-execution-boundary) states that</span>
+<span id="L243" data-line="243">escrow satisfies no method, release or product closure until paid down,</span>
+<span id="L244" data-line="244">accepted or repriced (P2, P4b, P6).</span>
+<span id="L245" data-line="245"></span>
+<span id="L246" data-line="246">The following may be eligible for escrow when the governing method allows</span>
+<span id="L247" data-line="247">it: screenshots or</span>
+<span id="L248" data-line="248">walkthrough capture; visual review; accessibility cleanup; replay proof for</span>
+<span id="L249" data-line="249">product-meaningful user-interface interactions; design wording cleanup; trace cleanup;</span>
+<span id="L250" data-line="250">local realisation cleanup. The following may not be hidden in escrow: new</span>
+<span id="L251" data-line="251">product truth; new</span>
+<span id="L252" data-line="252">or changed data contracts; new runtime, governance, closure, provenance or</span>
+<span id="L253" data-line="253">evidence semantics; missing constructive carriers; changed public</span>
+<span id="L254" data-line="254">published-function or public carrier contracts; law-changing work that</span>
+<span id="L255" data-line="255">needs `goal_reprice`, `intent_reprice`, `product_reprice`,</span>
+<span id="L256" data-line="256">`requirement_reprice` or `design_reframe`. If one of those appears during</span>
+<span id="L257" data-line="257">the sprint, the sprint records the finding and the work exits the sprint</span>
+<span id="L258" data-line="258">path through a standalone ticket, a repricing action or sprint supersession</span>
+<span id="L259" data-line="259">(P6).</span>
+<span id="L260" data-line="260"></span>
+<span id="L261" data-line="261">### Close review</span>
+<span id="L262" data-line="262"></span>
+<span id="L263" data-line="263">Sprint close begins by moving the manifest to `status: closing`. While</span>
+<span id="L264" data-line="264">closing: new iteration inside that sprint is frozen; every included ticket</span>
+<span id="L265" data-line="265">or iteration entry is reviewed against the manifest; accumulated evidence</span>
+<span id="L266" data-line="266">is checked for durability; changed surfaces are walked against cited</span>
+<span id="L267" data-line="267">authority; deferred compliance is classified; paydown tickets are opened</span>
+<span id="L268" data-line="268">where debt must survive past the close review (P6, P4b).</span>
+<span id="L269" data-line="269"></span>
+<span id="L270" data-line="270">Each reviewed item is classified as one of `accepted` (compliant under the</span>
+<span id="L271" data-line="271">sprint authority), `local_paydown` (local debt remains and is captured by a</span>
+<span id="L272" data-line="272">paydown ticket), `design_reframe` (the work needs design repricing),</span>
+<span id="L273" data-line="273">`requirement_reprice` (the work needs requirement repricing),</span>
+<span id="L274" data-line="274">`product_reprice` (the work changes product definition) or `remove` (the</span>
+<span id="L275" data-line="275">work should be backed out or kept out of closure) (P5). A sprint may move to</span>
+<span id="L276" data-line="276">`closed` only when every item and every debt entry is classified and the</span>
+<span id="L277" data-line="277">resulting paydown or repricing work is durable. Sprint close can accept</span>
+<span id="L278" data-line="278">local paydown debt only when the governing method allows that debt to</span>
+<span id="L279" data-line="279">survive as explicit follow-up; it cannot accept hidden authority drift</span>
+<span id="L280" data-line="280">(P6).</span>
+<span id="L281" data-line="281"></span>
+<span id="L282" data-line="282">Close classifications and the core. A close classification is the</span>
+<span id="L283" data-line="283">outcome of close review for one reviewed item, made against the sprint</span>
+<span id="L284" data-line="284">authority the manifest cites; the close review must classify, under that</span>
+<span id="L285" data-line="285">authority. The classification uses</span>
+<span id="L286" data-line="286">[ACTIVATION §3 Disposition](ACTIVATION.md#disposition) only for its</span>
+<span id="L287" data-line="287">result mapping: the candidate is the reviewed item, its boundary is the</span>
+<span id="L288" data-line="288">sprint&#x27;s close under the cited authority, and the classification consumes</span>
+<span id="L289" data-line="289">the core results of the item&#x27;s review and stays separate from them, as</span>
+<span id="L290" data-line="290">acceptance stays separate from assessment</span>
+<span id="L291" data-line="291">([FOUNDATIONS §4 Results](FOUNDATIONS.md#results)). Each classification</span>
+<span id="L292" data-line="292">takes exactly one core value, for the predicate &quot;the reviewed item is</span>
+<span id="L293" data-line="293">accepted as compliant under the sprint authority&quot;, and the table names</span>
+<span id="L294" data-line="294">the disposition whose condition it matches, where one does (P5, P6):</span>
+<span id="L295" data-line="295"></span>
+<span id="L296" data-line="296">| Classification | Matching disposition | Core value | Ground, and how it narrows or differs from the disposition&#x27;s condition |</span>
+<span id="L297" data-line="297">|---|---|---|---|</span>
+<span id="L298" data-line="298">| `accepted` | `accept` | satisfied | the item is compliant under the sprint authority |</span>
+<span id="L299" data-line="299">| `local_paydown` | `local_repair` | falsified | local debt remains and is captured by a paydown ticket; the debt is the counterexample. The governing relation stays coherent, because an item whose governing authority must change takes a repricing classification instead. It differs from `local_repair` in where the repair is carried: by the paydown ticket, which survives the close where the method allows that debt to survive |</span>
+<span id="L300" data-line="300">| `design_reframe` | `re_enter` | invalid_basis | the accepted design that governs the item must change, so the authority the sprint cites cannot support accepting it |</span>
+<span id="L301" data-line="301">| `requirement_reprice` | `re_enter` | invalid_basis | a governing requirement must change, with the same consequence |</span>
+<span id="L302" data-line="302">| `product_reprice` | `re_enter` | invalid_basis | the work changes the product definition, which the authority the sprint cites cannot support |</span>
+<span id="L303" data-line="303">| `remove` | none | falsified | the work is backed out or kept out of closure; the reason for removal is the counterexample. No disposition of ACTIVATION §3 has this condition, because removal does not require a violated governing relation or a competing truth path |</span>
+<span id="L304" data-line="304"></span>
+<span id="L305" data-line="305">The layer that `design_reframe`, `requirement_reprice` and</span>
+<span id="L306" data-line="306">`product_reprice` name is a declared fact, not a further result: it is</span>
+<span id="L307" data-line="307">the change class of [SPEC_METHOD §4](SPEC_METHOD.md#change-classes) at</span>
+<span id="L308" data-line="308">which the work re-enters, and it travels with the core value as the</span>
+<span id="L309" data-line="309">domain outcome (FOUNDATIONS §4 Results, Recording). The outcome of a</span>
+<span id="L310" data-line="310">debt entry, accepted, ticketed, repriced or removed (Sprint status,</span>
+<span id="L311" data-line="311">`closed`), is likewise classified by the close review and mapped at the</span>
+<span id="L312" data-line="312">close boundary, for the predicate &quot;the debt entry is accepted under the</span>
+<span id="L313" data-line="313">sprint authority&quot;: accepted matches `accept` (`satisfied`), ticketed</span>
+<span id="L314" data-line="314">matches `local_repair` (`falsified`), removed takes `falsified` with no</span>
+<span id="L315" data-line="315">matching disposition, and repriced matches `re_enter`</span>
+<span id="L316" data-line="316">(`invalid_basis`), on the grounds of `accepted`, `local_paydown`,</span>
+<span id="L317" data-line="317">`remove` and the repricing classifications respectively. The mappings</span>
+<span id="L318" data-line="318">add no disposition and no core value. The condition for `closed`</span>
+<span id="L319" data-line="319">above requires an outcome for every item and debt entry, not a</span>
+<span id="L320" data-line="320">`satisfied` one. </span>
+<span id="L321" data-line="321">Purpose and material relation: a consumer that combines close outcomes</span>
+<span id="L322" data-line="322">with other results cannot read remaining debt, needed repricing or</span>
+<span id="L323" data-line="323">removal as compliance (P5, P6).</span>
+<span id="L324" data-line="324"></span>
+<span id="L325" data-line="325">## 4. Ticket rules</span>
+<span id="L326" data-line="326"></span>
+<span id="L327" data-line="327">### One durable record per ticket</span>
+<span id="L328" data-line="328"></span>
+<span id="L329" data-line="329">Each ticket has one durable authoritative record; the default carrier is</span>
+<span id="L330" data-line="330">one markdown file. A repository or external tracker carrier is lawful only</span>
+<span id="L331" data-line="331">when it preserves the required ticket contract, history, state transition,</span>
+<span id="L332" data-line="332">stable identity, searchability and closure semantics without a co-equal</span>
+<span id="L333" data-line="333">local copy (P3, P4b). For a local</span>
+<span id="L334" data-line="334">file, the filename should carry a stable id and a short slug. Recommended</span>
+<span id="L335" data-line="335">local-file naming:</span>
+<span id="L336" data-line="336">`T-001-add-product-layer.md`, `B-002-fix-reset-manifest-id.md`,</span>
+<span id="L337" data-line="337">`S-003-evaluate-integration-capability.md`,</span>
+<span id="L338" data-line="338">`C-004-clean-up-trace-tags.md`.</span>
+<span id="L339" data-line="339"></span>
+<span id="L340" data-line="340">### Multi-build-tenant independence</span>
+<span id="L341" data-line="341"></span>
+<span id="L342" data-line="342">This clause consumes the build-tenancy bounded context</span>
+<span id="L343" data-line="343">`urn:stdo:bounded-context:build-tenancy` declared by PRODUCT_DEFINITION §8.</span>
+<span id="L344" data-line="344">This member owns the multi-build-tenant work-item and ticket-lifecycle</span>
+<span id="L345" data-line="345">relation inside that context; it does not redefine build-tenant identity or</span>
+<span id="L346" data-line="346">realisation meaning (P3, P1).</span>
+<span id="L347" data-line="347"></span>
+<span id="L348" data-line="348">A multi-build-tenant work item is one admitted upstream work item with more</span>
+<span id="L349" data-line="349">than one build-tenant execution line. The upstream authority and each</span>
+<span id="L350" data-line="350">tenant-local ticket retain distinct identities and lifecycles. If one</span>
+<span id="L351" data-line="351">source, product or design work item must be realised in more than one build</span>
+<span id="L352" data-line="352">tenant, its tenant realisations are not tracked inside one ticket</span>
+<span id="L353" data-line="353">lifecycle. The rule governs backlog and active tickets; it is not</span>
+<span id="L354" data-line="354">retroactive for completed tickets unless a completed ticket is reopened or</span>
+<span id="L355" data-line="355">explicitly repriced. It does not make every ticket multi-tenant: tenant</span>
+<span id="L356" data-line="356">duplication is used only when the same admitted work item genuinely has</span>
+<span id="L357" data-line="357">more than one tenant execution line (P3).</span>
+<span id="L358" data-line="358"></span>
+<span id="L359" data-line="359">The three lawful cases: an upstream-only ticket (source, product or design</span>
+<span id="L360" data-line="360">authority only; no tenant duplicate yet); a single-tenant ticket (one</span>
+<span id="L361" data-line="361">tenant-local execution line; no sibling duplicate required); a multi-tenant</span>
+<span id="L362" data-line="362">work item (one upstream authority ticket and one suffixed tenant-local</span>
+<span id="L363" data-line="363">ticket per tenant execution line). For the multi-tenant case: keep the</span>
+<span id="L364" data-line="364">upstream source, product or design ticket as its own authority surface;</span>
+<span id="L365" data-line="365">duplicate the work item into one tenant-local ticket per build tenant;</span>
+<span id="L366" data-line="366">append a build-tenant mnemonic to the base ticket id and filename; keep</span>
+<span id="L367" data-line="367">status, proof, closure and reopen logic independent for each tenant.</span>
+<span id="L368" data-line="368">Recommended examples: `B-030-publish-capability-profile...` as the</span>
+<span id="L369" data-line="369">source ticket,</span>
+<span id="L370" data-line="370">`B-030-T1-publish-capability-profile...` and</span>
+<span id="L371" data-line="371">`B-030-T2-publish-capability-profile...` as the tenant tickets.</span>
+<span id="L372" data-line="372"></span>
+<span id="L373" data-line="373">The law: one ticket does not claim closure for more than one build-tenant</span>
+<span id="L374" data-line="374">lifecycle; a tenant-local blocker or false closure in one tenant is not</span>
+<span id="L375" data-line="375">hidden by green status in another; tenant-local proof, repricing and</span>
+<span id="L376" data-line="376">reopening remain tenant-local (P3, P6). If a tenant-local duplicate</span>
+<span id="L377" data-line="377">exists, it should record `source_ticket` and `build_tenant`. The</span>
+<span id="L378" data-line="378">`build_tenant` value identifies the</span>
+<span id="L379" data-line="379">applicable entry in the product&#x27;s `how.build_tenants` definition; a path</span>
+<span id="L380" data-line="380">name, display alias or tracker label does not replace that identity unless</span>
+<span id="L381" data-line="381">the product definition binds it as the identity. The unsuffixed base ticket</span>
+<span id="L382" data-line="382">may remain the upstream product or design authority. If the work item is</span>
+<span id="L383" data-line="383">multi-tenant, tenant execution and closure for backlog and active work live</span>
+<span id="L384" data-line="384">on the suffixed duplicates; if it is single-tenant, no sibling duplicate is</span>
+<span id="L385" data-line="385">required.</span>
+<span id="L386" data-line="386"></span>
+<span id="L387" data-line="387">### Required fields</span>
+<span id="L388" data-line="388"></span>
+<span id="L389" data-line="389">Each ticket records at least `id`, `title`, `type`, `ticket_category`,</span>
+<span id="L390" data-line="390">`status`, `goal`, `change_intent`, `change_class`, `re_entry_point`,</span>
+<span id="L391" data-line="391">`triaged_at`, `created_at` and `updated_at` (P4b, P3). Recommended additional fields: `priority`,</span>
+<span id="L392" data-line="392">`dependencies`, `links`, `intake_source`, `affected_boundary`,</span>
+<span id="L393" data-line="393">`source_ticket` when the ticket duplicates or derives from another ticket,</span>
+<span id="L394" data-line="394">and `build_tenant` when the ticket is tenant-local.</span>
+<span id="L395" data-line="395"></span>
+<span id="L396" data-line="396">For `ticket_category: implementation_migration` the ticket also carries</span>
+<span id="L397" data-line="397">`migration_strategy` and `library_usage`; `governing_library` when</span>
+<span id="L398" data-line="398">`library_usage` is `consume` or `extend`; and `library_rationale` when</span>
+<span id="L399" data-line="399">`library_usage` is `none` (§6). A tenant-local implementation migration</span>
+<span id="L400" data-line="400">also carries `build_tenant`, and `source_ticket` when it duplicates or</span>
+<span id="L401" data-line="401">derives from an upstream source, product or design ticket.</span>
+<span id="L402" data-line="402"></span>
+<span id="L403" data-line="403">For execution-contract admission the runtime-drafted contract should also</span>
+<span id="L404" data-line="404">carry, at minimum, `target_truth`, `superseded_truth` when relevant,</span>
+<span id="L405" data-line="405">`closure_law`, `evaluation_criteria`, `non_closure_conditions` and</span>
+<span id="L406" data-line="406">`proof_surface` (§5).</span>
+<span id="L407" data-line="407"></span>
+<span id="L408" data-line="408">### Types</span>
+<span id="L409" data-line="409"></span>
+<span id="L410" data-line="410">The minimum common set of ticket types is `feature`, `bug`, `spike` and</span>
+<span id="L411" data-line="411">`chore`. A project may add more; the default set should be enough for</span>
+<span id="L412" data-line="412">most cases</span>
+<span id="L413" data-line="413">(P3).</span>
+<span id="L414" data-line="414"></span>
+<span id="L415" data-line="415">### Category</span>
+<span id="L416" data-line="416"></span>
+<span id="L417" data-line="417">Ticket category is orthogonal to ticket type: type answers what kind of</span>
+<span id="L418" data-line="418">work record this is; category answers what execution or migration</span>
+<span id="L419" data-line="419">discipline governs the ticket (P3, P1). The minimum</span>
+<span id="L420" data-line="420">common set is `ordinary` and `implementation_migration`, so a `feature`,</span>
+<span id="L421" data-line="421">`bug`, `spike` or `chore` may carry either. `implementation_migration` is</span>
+<span id="L422" data-line="422">used when the ticket is not &quot;change code until tests pass&quot; but a governed</span>
+<span id="L423" data-line="423">replacement of one implementation truth path with another across producers,</span>
+<span id="L424" data-line="424">consumers, projections and proof surfaces: a bug ticket that replaces an old</span>
+<span id="L425" data-line="425">tracker or read-model family with one new authoritative carrier; a feature</span>
+<span id="L426" data-line="426">ticket that introduces a new public interface and requires every producer</span>
+<span id="L427" data-line="427">and consumer to migrate before closure; a refactor ticket that removes a</span>
+<span id="L428" data-line="428">bridge path or compatibility facade from an authoritative contract family.</span>
+<span id="L429" data-line="429"></span>
+<span id="L430" data-line="430">### Inside-out sequencing</span>
+<span id="L431" data-line="431"></span>
+<span id="L432" data-line="432">For `ticket_category: implementation_migration`, ticket sequencing reflects</span>
+<span id="L433" data-line="433">the inside-out rule of</span>
+<span id="L434" data-line="434">[SPEC_METHOD §7](SPEC_METHOD.md#inside-out-first-sequencing) (P4b, P6). Tickets that publish or admit</span>
+<span id="L435" data-line="435">the new authoritative source carrier are the upstream tickets in the wave.</span>
+<span id="L436" data-line="436">Tickets that harden prompt assembly, projections, reports, dossiers, review</span>
+<span id="L437" data-line="437">surfaces or other downstream consumers depend on those upstream source</span>
+<span id="L438" data-line="438">tickets. A downstream ticket may carry exploratory work while the source</span>
+<span id="L439" data-line="439">ticket is active, but that work is non-closure evidence until the source</span>
+<span id="L440" data-line="440">carrier is admitted and authoritative. A downstream ticket does not close</span>
+<span id="L441" data-line="441">while its upstream source-carrier ticket remains open. When one migration</span>
+<span id="L442" data-line="442">wave introduces a new source carrier and then its prompt, projection or</span>
+<span id="L443" data-line="443">read-model consumers, the dependency chain runs `source carrier -&gt;</span>
+<span id="L444" data-line="444">downstream consumers`, never the reverse.</span>
+<span id="L445" data-line="445"></span>
+<span id="L446" data-line="446">### Change class</span>
+<span id="L447" data-line="447"></span>
+<span id="L448" data-line="448">Ticket type and change class are orthogonal: type answers what kind of</span>
+<span id="L449" data-line="449">work record this is; change class answers where the change lawfully</span>
+<span id="L450" data-line="450">re-enters the constitutional chain. A ticket records the `change_class`</span>
+<span id="L451" data-line="451">declared by intake triage, using the classes of</span>
+<span id="L452" data-line="452">[SPEC_METHOD §4](SPEC_METHOD.md#change-classes) (P4b, P2).</span>
+<span id="L453" data-line="453"></span>
+<span id="L454" data-line="454">Common pairings: `feature` with `goal_reprice`, `intent_reprice`,</span>
+<span id="L455" data-line="455">`product_reprice`, `requirement_reprice` or `design_reframe`; `bug` with</span>
+<span id="L456" data-line="456">`requirement_reprice`, `design_reframe` or `realization_refactor`; `chore`</span>
+<span id="L457" data-line="457">with `design_reframe` or `realization_refactor`; `spike` as exploratory</span>
+<span id="L458" data-line="458">work that still carries the current triage class and should terminate</span>
+<span id="L459" data-line="459">either in a more specific downstream ticket or in an explicit decision</span>
+<span id="L460" data-line="460">that no further substantive change is required.</span>
+<span id="L461" data-line="461"></span>
+<span id="L462" data-line="462">Ticket category and change class are also orthogonal: `change_class`</span>
+<span id="L463" data-line="463">governs lawful constitutional re-entry; `ticket_category` governs ticket</span>
+<span id="L464" data-line="464">execution and closure discipline. A ticket may therefore be `type: bug`,</span>
+<span id="L465" data-line="465">`ticket_category: implementation_migration`, `change_class: design_reframe`</span>
+<span id="L466" data-line="466">without contradiction (P3).</span>
+<span id="L467" data-line="467"></span>
+<span id="L468" data-line="468">### Upward propagation check</span>
+<span id="L469" data-line="469"></span>
+<span id="L470" data-line="470">Triage consumes the computed classification of</span>
+<span id="L471" data-line="471">[SPEC_METHOD §4](SPEC_METHOD.md#computed-classification-and-treatment) for</span>
+<span id="L472" data-line="472">the declared owner and layer traversal, the complete relevant public</span>
+<span id="L473" data-line="473">membership and value delta, the accepted-design scope and trace coverage,</span>
+<span id="L474" data-line="474">and the rule-determined treatment. The owning work carrier references that</span>
+<span id="L475" data-line="475">exact result and its residuals; a new role does not repeat an unchanged</span>
+<span id="L476" data-line="476">walk (P4b, P2).</span>
+<span id="L477" data-line="477"></span>
+<span id="L478" data-line="478">Before declaring `realization_refactor` for a bug, establish that the</span>
+<span id="L479" data-line="479">current requirement and the accepted realising design govern the affected</span>
+<span id="L480" data-line="480">behaviour and remain sufficient for the authorised outcome. Their presence</span>
+<span id="L481" data-line="481">proves no coverage. Missing or ambiguous evidence leaves the affected</span>
+<span id="L482" data-line="482">treatment unknown; it is not proof that the governing layer itself is</span>
+<span id="L483" data-line="483">absent (P6).</span>
+<span id="L484" data-line="484"></span>
+<span id="L485" data-line="485">The re-entry rule is SPEC_METHOD §4&#x27;s: the</span>
+<span id="L486" data-line="486">[change classes](SPEC_METHOD.md#change-classes) with their re-entry</span>
+<span id="L487" data-line="487">points, and the smallest lawful re-entry that step 4 of</span>
+<span id="L488" data-line="488">[Computed classification and treatment](SPEC_METHOD.md#computed-classification-and-treatment)</span>
+<span id="L489" data-line="489">exposes, with the paragraph after the four steps: a candidate&#x27;s public</span>
+<span id="L490" data-line="490">violation does not select a new contract, and the governing owner is</span>
+<span id="L491" data-line="491">re-entered only for an explicitly changed desired outcome or an</span>
+<span id="L492" data-line="492">established governing insufficiency. For a bug, this check</span>
+<span id="L493" data-line="493">refines that rule into an upward walk from the realised surface that</span>
+<span id="L494" data-line="494">checks each layer and stops at the highest layer found missing or</span>
+<span id="L495" data-line="495">insufficient for the authorised outcome, and the class is the one that</span>
+<span id="L496" data-line="496">re-enters there:</span>
+<span id="L497" data-line="497"></span>
+<span id="L498" data-line="498">| Where the walk stops | Change class | Action |</span>
+<span id="L499" data-line="499">|---|---|---|</span>
+<span id="L500" data-line="500">| the governing requirement is missing or insufficient | `requirement_reprice` | re-enter the requirement&#x27;s owner |</span>
+<span id="L501" data-line="501">| the requirement is sufficient, and the realising design is missing or insufficient | `design_reframe` | re-enter Design |</span>
+<span id="L502" data-line="502">| an actual upstream Goal, Intent or Product change | `goal_reprice`, `intent_reprice` or `product_reprice` | follow the change to its owner rather than stopping at a familiar file |</span>
+<span id="L503" data-line="503">| the current requirement and accepted design suffice, and the implementation deviates | `realization_refactor` | repair or reject the candidate |</span>
+<span id="L504" data-line="504"></span>
+<span id="L505" data-line="505">Unresolved meaning remains J and a reserved choice remains O, as that</span>
+<span id="L506" data-line="506">paragraph states (P2, P6).</span>
+<span id="L507" data-line="507"></span>
+<span id="L508" data-line="508">### Triage metadata</span>
+<span id="L509" data-line="509"></span>
+<span id="L510" data-line="510">Because tickets are the durable authority surface for work tracking, a</span>
+<span id="L511" data-line="511">ticket for substantive work carries the minimum metadata required by the</span>
+<span id="L512" data-line="512">intake triage of [SPEC_METHOD §4](SPEC_METHOD.md#universal-intake-triage):</span>
+<span id="L513" data-line="513">the declared `change_intent`, the lawful `change_class`, the lawful</span>
+<span id="L514" data-line="514">`re_entry_point`, and when triage occurred in `triaged_at` (P4b, P2). The recorded values are those intake triage declared</span>
+<span id="L515" data-line="515">(Change class and Upward propagation check above).</span>
+<span id="L516" data-line="516"></span>
+<span id="L517" data-line="517">### Status</span>
+<span id="L518" data-line="518"></span>
+<span id="L519" data-line="519">The minimum ticket status model is `backlog`, `active` and `completed`. A</span>
+<span id="L520" data-line="520">project may add `blocked`, `cancelled` or other explicit local states; the</span>
+<span id="L521" data-line="521">base method starts with the three (P5, P3).</span>
+<span id="L522" data-line="522"></span>
+<span id="L523" data-line="523">The ticket statuses, any local state a project adds, the lanes below, the</span>
+<span id="L524" data-line="524">sprint statuses of §3 and the `migration_strategy` and `library_usage`</span>
+<span id="L525" data-line="525">values of §6 are declared states of their carriers, not results, and map</span>
+<span id="L526" data-line="526">to no core value; the recorded `change_class` is a declared state under</span>
+<span id="L527" data-line="527">[SPEC_METHOD §4](SPEC_METHOD.md#change-classes). The close</span>
+<span id="L528" data-line="528">classifications and debt-entry outcomes of §3</span>
+<span id="L529" data-line="529">Close review are results, mapped there. An evaluation that reads a</span>
+<span id="L530" data-line="530">declared state returns its own core value with its predicate under</span>
+<span id="L531" data-line="531">[FOUNDATIONS §4 Results](FOUNDATIONS.md#results). Purpose and material</span>
+<span id="L532" data-line="532">relation: a declared state is never combined as an evaluation result, so</span>
+<span id="L533" data-line="533">a ticket marked `completed`, or a sprint marked `closed`, cannot stand in</span>
+<span id="L534" data-line="534">for a `satisfied` result (P5, P1).</span>
+<span id="L535" data-line="535"></span>
+<span id="L536" data-line="536">### Lanes</span>
+<span id="L537" data-line="537"></span>
+<span id="L538" data-line="538">Backlog tickets live at the product definition&#x27;s</span>
+<span id="L539" data-line="539">`ticketing.tickets.lanes.backlog` binding, by default</span>
+<span id="L540" data-line="540">`.ai-workspace/tickets/backlog/`; active tickets at</span>
+<span id="L541" data-line="541">`ticketing.tickets.lanes.active`, by default `.ai-workspace/tickets/active/`;</span>
+<span id="L542" data-line="542">completed tickets move to `ticketing.tickets.lanes.completed`, by default</span>
+<span id="L543" data-line="543">`.ai-workspace/tickets/completed/` (P0, P3). `backlog`</span>
+<span id="L544" data-line="544">is accepted durable work that should remain visible but is not part of the</span>
+<span id="L545" data-line="545">current execution focus; `active` is the current bounded execution set;</span>
+<span id="L546" data-line="546">`completed` is closed work retained as history. The lanes keep the live</span>
+<span id="L547" data-line="547">execution set small enough that `rg` remains fast and readable without</span>
+<span id="L548" data-line="548">forcing deferred work into comments or goals.</span>
+<span id="L549" data-line="549"></span>
+<span id="L550" data-line="550">## 5. From carrier to execution</span>
+<span id="L551" data-line="551"></span>
+<span id="L552" data-line="552">If a derived surface or projected frame of this member is insufficient,</span>
+<span id="L553" data-line="553">the actor reads this member only for the named unresolved lifecycle or</span>
+<span id="L554" data-line="554">proof question and cites the clauses used (P2, P6; prompt construction is</span>
+<span id="L555" data-line="555">[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope)).</span>
+<span id="L556" data-line="556"></span>
+<span id="L557" data-line="557">Before the derivation table, the deciding routes are</span>
+<span id="L558" data-line="558">[Carrier selection](#carrier-selection) for the work record and its lifetime;</span>
+<span id="L559" data-line="559">[Execution contract admission](#execution-contract-admission) for execution;</span>
+<span id="L560" data-line="560">[Recorded judgment and owner-ruling continuity](#recorded-judgment-and-owner-ruling-continuity)</span>
+<span id="L561" data-line="561">for reusable judgments and repricing; and</span>
+<span id="L562" data-line="562">[Condition-based closure and reuse](#condition-based-closure-and-reuse) for</span>
+<span id="L563" data-line="563">completion. The table traces these owners; it does not decide their questions.</span>
+<span id="L564" data-line="564"></span>
+<span id="L565" data-line="565">### Foundation to law: work carriers</span>
+<span id="L566" data-line="566"></span>
+<span id="L567" data-line="567">This family (F13 in the index of</span>
+<span id="L568" data-line="568">[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law))</span>
+<span id="L569" data-line="569">decides which record carries a piece of work, what that record may claim</span>
+<span id="L570" data-line="570">and when the work closes. Its instance premises, which the commitments do</span>
+<span id="L571" data-line="571">not supply, are named in the rows as follows: lifetimes, work and its</span>
+<span id="L572" data-line="572">obligations last one run, one bounded batch or longer; several surfaces,</span>
+<span id="L573" data-line="573">goals, tickets, comments, boards and summaries can each appear to state</span>
+<span id="L574" data-line="574">the same work state; several tenants, one work item may be realised in</span>
+<span id="L575" data-line="575">more than one build tenant; migrations, some work replaces one</span>
+<span id="L576" data-line="576">authoritative truth path with another across producers, consumers and</span>
+<span id="L577" data-line="577">proofs; carriers vary, a project may keep its carriers in files, trackers</span>
+<span id="L578" data-line="578">or services. Each commitment&#x27;s standing is written as the table of</span>
+<span id="L579" data-line="579">commitments in FOUNDATIONS §3 states it.</span>
+<span id="L580" data-line="580"></span>
+<span id="L581" data-line="581">| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |</span>
+<span id="L582" data-line="582">|---|---|---|---|---|</span>
+<span id="L583" data-line="583">| P4b (derived from P0 and P2, with P0&#x27;s premise that step-produced facts are not re-acquirable); P3 (independent); P2 (independent); P6 (independent); P0 (recovered); instance: lifetimes | By P0 an actor&#x27;s context does not outlive its run, and by P4b a step-produced fact that is not recorded is lost, so an obligation that must outlive the run is recorded on a carrier whose lifetime covers it before the run returns. By P2 nothing is added that the outcome does not need, so every execution runs under one run-scoped contract drawn from the smallest such carrier (an admitted ticket, a sprint entry or the run itself), and a durable ticket is created only for state that must survive; by P6 creating one needs ticket-state authority. | [Carrier selection](#carrier-selection); §1 [Goals](#goals), [Ticket records](#ticket-records), [Execution contracts](#execution-contracts) | the carrier kinds and the selection table, which apply this order to named lifetimes: a policy of this member; where each carrier lives: the product definition ([PRODUCT_DEFINITION §8](PRODUCT_DEFINITION.md#8-what-how-and-work-carriers)) | 1, 8, 9 |</span>
+<span id="L584" data-line="584">| P6 (independent); P2 (independent); P4b (derived from P0 and P2, with P0&#x27;s premise that step-produced facts are not re-acquirable); P3 (independent); instance: lifetimes | By P6 work needs an admitted authority, and a record&#x27;s presence or prose creates none, so work executes only under admitted upstream work authority, and a carrier&#x27;s presence, lane, status or prose is neither the admission of a contract nor the admission of a growth basis. By P3 execution and closure bind one exact basis, so both read the same admitted contract, which shows what counts as completion and what still counts as failure. | [Carrier selection](#carrier-selection); [Execution contract admission](#execution-contract-admission); [Evaluation criteria and non-closure conditions](#evaluation-criteria-and-non-closure-conditions) | the contract&#x27;s minimum fields: this member; the admission mechanism and the result and evidence surface: the product definition. The step side of admission is law at [ACTIVATION §1](ACTIVATION.md#admission), not a choice | 1, 8, 9 |</span>
+<span id="L585" data-line="585">| P6 (independent); P3 (independent); P4b (derived from P0 and P2, with P0&#x27;s premise that step-produced facts are not re-acquirable); P2 (independent); P5 (derived from P0 and P6, with P0&#x27;s open-world premise); P0 (recovered); instance: several surfaces, carriers vary | By P3 one state binds one authority and basis, and by P6 a projection is not authority, so work state has one authority chain: goals own the work wave, the ticket owns its state and milestone authority its milestones, and a board, comment, index or summary is a projection that answers one question. By P5 contradictory authorities cannot both be read as satisfied, so contradiction among them blocks closure; by P4b a milestone&#x27;s acceptance establishes only its own claim. A comment is a post: provisional until its content is adopted into the owning surface, with its own discussion state. Another carrier is lawful only as an explicit rebinding with no rival left. | [One-truth state projection and drift refusal (UP-009)](#one-truth-state-projection-and-drift-refusal-up-009); §1 [Comments](#comments), [Milestones and phase-scoped truth (UP-006)](#milestones-and-phase-scoped-truth-up-006); §2 [Default layout](#default-layout), [Bindings and projections](#bindings-and-projections), [Carrier substitution](#carrier-substitution); §4 [Status](#status), [Lanes](#lanes); §9 [Relationship to other surfaces](#relationship-to-other-surfaces); [POSTING_GUIDE §2](POSTING_GUIDE.md#2-boundary), [§7](POSTING_GUIDE.md#7-discussion-state-and-mutability), [§9](POSTING_GUIDE.md#9-ratification) | the default layout, the lanes and the minimum status sets: domain choices of this member, which a project may extend; a rebinding of ticket authority: the product definition; the post categories, structure and discussion states: [POSTING_GUIDE](POSTING_GUIDE.md) | 1, 6, 9 |</span>
+<span id="L586" data-line="586">| P2 (independent); P4b (derived from P0 and P2, with P0&#x27;s premise that step-produced facts are not re-acquirable); P6 (independent); P5 (derived from P0 and P6, with P0&#x27;s open-world premise); P3 (independent); instance: lifetimes | By P2 closure law repeated over one bounded scope can be applied once, so a sprint batches it; by P4b a deferred proof persists until paid, and by P6 closure needs its evidence, so a sprint defers only declared local proof, as escrow paid down at close review, and never batches away triage. Law-changing work re-enters at its own layer (P2), so it leaves the sprint. By P5 each close outcome is a result, so the sprint closes only when the close review has classified every item and debt entry, each classification mapped into the core, and the follow-up work is durable. | [§3](#3-sprint-rules); §1 [Sprints](#sprints) | the manifest fields, the sprint statuses, the escrow lists and the six close classifications and the debt outcomes with their mappings: domain choices of this member; whether debt may survive as follow-up: the governing method; the decision to offer a sprint as a batching carrier at all: a policy of this member | 1, 3, 9 |</span>
+<span id="L587" data-line="587">| P4b (derived from P0 and P2, with P0&#x27;s premise that step-produced facts are not re-acquirable); P2 (independent); P6 (independent); P3 (independent); P1 (independent) | By P4b the reason a ticket exists must survive the run, so a ticket records the triage that admitted it: change intent, change class and re-entry point. By P2 work re-enters where the authorised outcome is unmet, and by P1 a familiar file carries no authority, so the upward walk checks each layer and re-enters at the highest layer found missing or insufficient, never at a familiar file. | §4 [Required fields](#required-fields), [Types](#types), [Category](#category), [Change class](#change-class), [Upward propagation check](#upward-propagation-check), [Triage metadata](#triage-metadata), [One durable record per ticket](#one-durable-record-per-ticket) | the required fields and the minimum types and categories: domain choices of this member, which a project may extend; the change classes: domain choices of [SPEC_METHOD §4](SPEC_METHOD.md#4-change-management) | 1, 9 |</span>
+<span id="L588" data-line="588">| P3 (independent); P6 (independent); P1 (independent); instance: several tenants | By P3 a lifecycle binds one exact subject, and each build tenant realises a separate subject, so one ticket closes at most one build-tenant lifecycle, and proof, closure, repricing and reopening stay tenant-local. By P6 one subject&#x27;s evidence decides nothing for another, so one tenant&#x27;s green status hides no other tenant&#x27;s blocker. | §4 [Multi-build-tenant independence](#multi-build-tenant-independence); §6 [Multi-build-tenant review](#multi-build-tenant-review) | the suffixed ticket identifier and the `source_ticket` and `build_tenant` fields: domain choices of this member; tenant identity: the product definition&#x27;s tenant registry | 1, 8, 9 |</span>
+<span id="L589" data-line="589">| P6 (independent); P4b (derived from P0 and P2, with P0&#x27;s premise that step-produced facts are not re-acquirable); P3 (independent); P5 (derived from P0 and P6, with P0&#x27;s open-world premise); P2 (independent); P4a (independent); P1 (independent); instance: migrations | By P6 two truth paths cannot both hold authority over one scope, and by P5 an absence is shown only by evidence, so a migration ticket closes only when the old truth path no longer holds authority in its declared scope, shown by negative or structural proof. By P1 a proxy or wrapper that imitates the new path is not it, so mixed state, proxies, wrappers and green tests alone do not count; by P4a a downstream path depends on its source, so a downstream ticket does not close while its source-carrier ticket is open. By P2 each further local rebuild adds cost with no new route to the outcome, and by P3 similar code does not establish one identity, so a credible recurrence forces an explicit library or commonisation review, never an automatic merge. | §6 [Declaration and checklist](#declaration-and-checklist), [Closure of a migration ticket](#closure-of-a-migration-ticket), [Strategy requirements](#strategy-requirements), [Recurring realisation and library declaration](#recurring-realisation-and-library-declaration), [Review disambiguation](#review-disambiguation), [Impacted interface review checklist](#impacted-interface-review-checklist), [Break order and break-to-closure map](#break-order-and-break-to-closure-map), [Mixed-state negative proof](#mixed-state-negative-proof); §4 [Inside-out sequencing](#inside-out-sequencing) | the declaration, the checklist, the strategy and library values, the recurrence thresholds, the review questions and the break order: domain choices of this member. The migration law is [SPEC_METHOD §7](SPEC_METHOD.md#7-migration), not a choice | 4, 9 |</span>
+<span id="L590" data-line="590">| P6 (independent); P1 (independent); P4b (derived from P0 and P2, with P0&#x27;s premise that step-produced facts are not re-acquirable); P5 (derived from P0 and P6, with P0&#x27;s open-world premise); P0 (recovered); P2 (independent); P3 (independent) | By P6 authority to author is not independent authority to verify. By P1 and P3 a verdict means only the claim it binds, so a review verdict is bounded by its claim and traceable to it. By P0 and P4b a judgment or ruling must survive a change of actor, so it is recorded once, in its original terms, and reused while it applies; by P5 changed evidence invalidates what it affects. | §7 [Execution and verification authority separation (UP-007)](#execution-and-verification-authority-separation-up-007), [Recorded judgment and owner-ruling continuity](#recorded-judgment-and-owner-ruling-continuity) | the four repricing dispositions and the predicate and refinement for a material repricing decision: this member. The assessment protocol and the reuse law are [EVALUATION §3](EVALUATION.md#3-independent-assessment) and [ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse), not choices | 7, 9 |</span>
+<span id="L591" data-line="591">| P6 (independent); P5 (derived from P0 and P6, with P0&#x27;s open-world premise); P2 (independent); P4b (derived from P0 and P2, with P0&#x27;s premise that step-produced facts are not re-acquirable) | By P5 a claim is satisfied only by valid evidence for each obligation, under the conjunction of FOUNDATIONS §4, so a work claim is complete only when every applicable obligation is satisfied and no non-closure condition remains. By P6 review evaluates and does not decide, so its occurrence is not the closing event; by P6 a test&#x27;s expected result needs work authority, so it comes from admitted work authority, never from the implementation. | §7 [Condition-based closure and reuse](#condition-based-closure-and-reuse), [Test case authority](#test-case-authority) | the five-step reconciliation order: this member. The conjunction and the general test law are [FOUNDATIONS §4](FOUNDATIONS.md#conjunction-of-results) and [ASSURANCE §3](ASSURANCE.md#3-test-authority), not choices | 3, 9 |</span>
+<span id="L592" data-line="592">| P1 (independent); P3 (independent); P6 (independent); P5 (derived from P0 and P6, with P0&#x27;s open-world premise) | By P1 a term&#x27;s spelling carries no meaning, and by P3 it resolves under one context and basis, so a ticket&#x27;s terms resolve under the project&#x27;s semantic resolution. By P5 an unresolved or multiply resolved material term leaves the claim undecided, so it blocks admission and closure of the affected claim until its owner resolves it. | [Bounded-context term binding](#bounded-context-term-binding) | none here: the resolution law is [PRODUCT_DEFINITION §5](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution) | 2, 6 |</span>
+<span id="L593" data-line="593">| P2 (independent); P6 (independent); P3 (independent); P4b (derived from P0 and P2, with P0&#x27;s premise that step-produced facts are not re-acquirable); P0 (recovered); instance: carriers vary | By P2 the method fixes only what the outcome needs, so any carrier shape that keeps the required fields and sections is lawful. By P0 an actor holds only bounded context, so it reads this member only for the question a derived surface leaves open. | [§8](#8-recommended-shapes); §9 [Operating mode](#operating-mode); the opening paragraph of this section | the three recommended shapes, the default local-file carrier and its search commands: domain choices of this member; a policy of this member: an actor reads this member only for the question a derived surface leaves open, applying ACTIVATION §2 Acquisition | 1, 6 |</span>
+<span id="L594" data-line="594"></span>
+<span id="L595" data-line="595">The standing of these consequences is stated in</span>
+<span id="L596" data-line="596">[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law).</span>
+<span id="L597" data-line="597">The table accounts for §1 to §9, and for POSTING_GUIDE §2, §7 and §9,</span>
+<span id="L598" data-line="598">which have no family table of their own.</span>
+<span id="L599" data-line="599"></span>
+<span id="L600" data-line="600">Consumers of these rows, where an actor enters them (FOUNDATIONS §3</span>
+<span id="L601" data-line="601">Foundation to law, Consumers), one list per row, each consumer linked to</span>
+<span id="L602" data-line="602">its own locus:</span>
+<span id="L603" data-line="603"></span>
+<span id="L604" data-line="604">- Row 1, the carrier for a lifetime: [SPEC_METHOD §4 Carriers](SPEC_METHOD.md#carriers), which selects a change&#x27;s carrier for its required lifetime and takes the smallest lawful carrier from Carrier selection; [PRODUCT_DEFINITION §8](PRODUCT_DEFINITION.md#8-what-how-and-work-carriers), which binds where each carrier kind lives and selects none; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminator 41, where a proposed change to work carriers is judged under Carrier selection; [Recorded judgment and owner-ruling continuity](#recorded-judgment-and-owner-ruling-continuity), whose record lives in the carrier selected under §5.</span>
+<span id="L605" data-line="605">- Row 2, execution under admitted authority: [ACTIVATION §1 Admission](ACTIVATION.md#admission), where a contract carries the states this section names and a carrier&#x27;s presence, lane or label is never admission; the [ODD family table](ODD.md#foundation-to-law), whose row for the manual walkthrough imports F13 for admission against deterministic criteria.</span>
+<span id="L606" data-line="606">- Row 3, one authority chain and its projections: [PRODUCT_DEFINITION §8](PRODUCT_DEFINITION.md#8-what-how-and-work-carriers), whose `ticketing` bindings locate the carriers and keep the work wave with goals, ticket state with the ticket and commentary outside authority; [§8](#8-recommended-shapes), where another shape is bound under §2 only with the same fields.</span>
+<span id="L607" data-line="607">- Row 4, sprints as batches: [SPEC_METHOD §4 Sprint execution boundary](SPEC_METHOD.md#sprint-execution-boundary), whose close review takes its mechanics, escrow and classifications from §3, and [Change classes](SPEC_METHOD.md#change-classes), where a close classification that names a layer is a result mapped at §3 and carries the class at which the work re-enters; [UX §12 UX sprint compliance escrow](UX.md#ux-sprint-compliance-escrow), where each finding takes one of the six close classifications, [UX §15](UX.md#15-results-of-this-profile), which maps none of them again, and the [UX family table](UX.md#foundation-to-law), whose row for scaffold, exemption and escrow imports F13; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminator 48, where a sprint status or classification decides no admission, compliance or closure; [Status](#status), where the sprint statuses are declared states and the close classifications are results mapped at §3; [Condition-based closure and reuse](#condition-based-closure-and-reuse), where sprint-close law still applies to a result recorded without review; [§8](#8-recommended-shapes), whose sprint manifest carries the fields of §3.</span>
+<span id="L608" data-line="608">- Row 5, the triage a ticket records and the upward walk: [SPEC_METHOD §4 Change classes](SPEC_METHOD.md#change-classes), which has the class recorded on the carrier under §4 Change class; [Sprint admission](#sprint-admission), whose included tickets still record their triage metadata; [Carrier selection](#carrier-selection), whose ticket-shaped contract carries the required fields of §4; [§8](#8-recommended-shapes), whose ordinary ticket carries the required fields and triage metadata.</span>
+<span id="L609" data-line="609">- Row 6, tenant-local lifecycles: [SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding), Development of several tenants, where the independence of each tenant&#x27;s ticket lifecycle and the review of its tickets are this section&#x27;s; [PRODUCT_DEFINITION §8](PRODUCT_DEFINITION.md#8-what-how-and-work-carriers), which names the multi-build-tenant work-item relation in the build-tenancy context and whose tenant registry supplies tenant identity.</span>
+<span id="L610" data-line="610">- Row 7, migration tickets: [DESIGN_MODULE §10 Recurrence extraction](DESIGN_MODULE.md#recurrence-extraction), which refines the recurrence rule of Recurring realisation and library declaration as a design-review obligation for a Product that adopts that profile; [Status](#status), where `migration_strategy` and `library_usage` are declared states of their carriers; [§8](#8-recommended-shapes), whose migration ticket carries the declaration and checklist of §6.</span>
+<span id="L611" data-line="611">- Row 8, authority to author, to verify and to rule: [EVALUATION §3](EVALUATION.md#3-independent-assessment), which takes from UP-007 the boundaries at which independent assessment is required and relabels no self-review in a fresh context; [EXECUTIVE_BASELINE §10](EXECUTIVE_BASELINE.md#10-derived-reviewer-frame), [§12 step 4](EXECUTIVE_BASELINE.md#4-executive-evaluates-the-work-result) and [§17](EXECUTIVE_BASELINE.md#17-actor-binding-and-independence), and the [EXECUTIVE_BASELINE family table](EXECUTIVE_BASELINE.md#foundation-to-law), whose row for the Reviewer imports F13 for when independent assessment is required; [SPEC_METHOD §4 Computed classification and treatment](SPEC_METHOD.md#computed-classification-and-treatment), where the recorded J and O continuity rules are Recorded judgment and owner-ruling continuity&#x27;s; [Recurring realisation and library declaration](#recurring-realisation-and-library-declaration), where a repricing input blocks no bounded claim unless the owning authority admits the follow-up.</span>
+<span id="L612" data-line="612">- Row 9, closure by condition and test authority: [SPEC_METHOD §4 Consistency gate](SPEC_METHOD.md#consistency-gate), which applies the closure condition as the gate over a change span and the ticket-local test-case rule to a code and test mismatch, and [§9](SPEC_METHOD.md#9-evidence), which names the evidence the condition requires for a realisation claim; [EXECUTIVE_BASELINE §22](EXECUTIVE_BASELINE.md#22-closure), where a work item closes by this condition, and the [EXECUTIVE_BASELINE family table](EXECUTIVE_BASELINE.md#foundation-to-law), whose row for qualification and closure imports F13 for the closure condition; [ASSURANCE §3](ASSURANCE.md#3-test-authority), where the derivation of each test case from admitted work authority is Test case authority&#x27;s; [Milestones and phase-scoped truth (UP-006)](#milestones-and-phase-scoped-truth-up-006), where each milestone is a work claim under the closure condition.</span>
+<span id="L613" data-line="613">- Row 10, term binding: no separate consumer applies. The resolution law a ticket&#x27;s terms resolve under is [PRODUCT_DEFINITION §5](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution)&#x27;s, as the choice column states; the block on admission and closure acts inside Execution contract admission and Condition-based closure and reuse of this member, and no section of another member names this binding.</span>
+<span id="L614" data-line="614">- Row 11, carrier shape and reading this member: no separate consumer applies. A project&#x27;s carrier layout is bound under [PRODUCT_DEFINITION §8](PRODUCT_DEFINITION.md#8-what-how-and-work-carriers) and scaffolded by [§12](PRODUCT_DEFINITION.md#12-bootstrap), which name their own defaults and not these shapes; the reading rule applies ACTIVATION §2 Acquisition, as the choice column states, and no other section applies it.</span>
+<span id="L615" data-line="615"></span>
+<span id="L616" data-line="616">Each consumer applies the rule and decides nothing the owning section does</span>
+<span id="L617" data-line="617">not (P2, P6).</span>
+<span id="L618" data-line="618"></span>
+<span id="L619" data-line="619">### Carrier selection</span>
+<span id="L620" data-line="620"></span>
+<span id="L621" data-line="621">Every execution governed by this method uses one run-scoped execution</span>
+<span id="L622" data-line="622">contract. The required lifetime of the work or obligation selects the</span>
+<span id="L623" data-line="623">smallest lawful source carrier: first establish the applicable upstream</span>
+<span id="L624" data-line="624">work authority, then select the first matching row below. For work inside</span>
+<span id="L625" data-line="625">an admitted sprint the local carrier boundary is that sprint; otherwise it</span>
+<span id="L626" data-line="626">is the current run (P2, P4b, P6).</span>
+<span id="L627" data-line="627"></span>
+<span id="L628" data-line="628">| Condition | Execution-contract source | Durable-ticket decision |</span>
+<span id="L629" data-line="629">|---|---|---|</span>
+<span id="L630" data-line="630">| no applicable upstream work authority exists | no execution contract is admitted | do not create a ticket as substitute authority; stop or re-enter |</span>
+<span id="L631" data-line="631">| applicable authority exists and an existing admitted ticket covers the exact work | derive the run-scoped contract from that ticket | reuse it; do not create another ticket |</span>
+<span id="L632" data-line="632">| applicable authority exists, no exact admitted ticket covers the work, and the work or an open obligation needs independent state beyond the local carrier boundary | one durable ticket plus the run-scoped contract | create or update the ticket only under ticket-state authority |</span>
+<span id="L633" data-line="633">| applicable authority exists, no exact admitted ticket covers the work, and the work stays inside one admitted sprint with no state required after sprint close | the sprint manifest plus one manifest-local iteration entry | do not create a durable ticket |</span>
+<span id="L634" data-line="634">| applicable authority exists, no exact admitted ticket or sprint covers the work, and the work ends in the current run with no independent surviving state | an intake-drafted run-scoped contract | do not create a durable ticket |</span>
+<span id="L635" data-line="635"></span>
+<span id="L636" data-line="636">&quot;Ticket-shaped&quot; describes the categorisation, closure criteria, proof</span>
+<span id="L637" data-line="637">surface, non-closure conditions and the other required execution-contract</span>
+<span id="L638" data-line="638">fields (§4, Required fields). It creates no durable ticket identity and no</span>
+<span id="L639" data-line="639">ticket-lane state (P3).</span>
+<span id="L640" data-line="640"></span>
+<span id="L641" data-line="641">Absence of a durable ticket neither requires nor authorises creating one.</span>
+<span id="L642" data-line="642">An exact product-authorised work instruction may supply the upstream work</span>
+<span id="L643" data-line="643">authority for a one-run contract; a generic request or a model-widened</span>
+<span id="L644" data-line="644">scope cannot. A durable ticket is created or updated only when the table</span>
+<span id="L645" data-line="645">requires surviving state and the actor holds ticket-state authority. An</span>
+<span id="L646" data-line="646">explicit instruction from ticket-state authority to create a durable record</span>
+<span id="L647" data-line="647">selects that durability; it does not admit an execution contract or widen</span>
+<span id="L648" data-line="648">its upstream work authority (P6, P2).</span>
+<span id="L649" data-line="649"></span>
+<span id="L650" data-line="650">The step side of admission is [ACTIVATION §1](ACTIVATION.md#admission) and</span>
+<span id="L651" data-line="651">is defined there once: drafting versus admission inside one invocation, the</span>
+<span id="L652" data-line="652">condition under which execution may begin, what admission may never be</span>
+<span id="L653" data-line="653">inferred from (including ticket or sprint presence, lane placement and</span>
+<span id="L654" data-line="654">`active` status), the coordinates an admitted result carries, the recording</span>
+<span id="L655" data-line="655">of every result, withheld closure and residual obligation before return,</span>
+<span id="L656" data-line="656">and refusal when no durable result and evidence surface is available. This</span>
+<span id="L657" data-line="657">member adds the carrier side (P6, P4b). The admission mechanism and the</span>
+<span id="L658" data-line="658">durable result and evidence surface are the ones the product definition</span>
+<span id="L659" data-line="659">binds. When that surface is the ticket or the sprint manifest, the admitted</span>
+<span id="L660" data-line="660">result with its coordinates is recorded there. A carrier&#x27;s lane, status or</span>
+<span id="L661" data-line="661">prose that asserts admission without those coordinates is not admission</span>
+<span id="L662" data-line="662">evidence, and the contract it describes remains drafted or rejected.</span>
+<span id="L663" data-line="663"></span>
+<span id="L664" data-line="664">When admission is absent or rejected, ACTIVATION §1 returns the missing</span>
+<span id="L665" data-line="665">work authority without execution. Before that return, an obligation that</span>
+<span id="L666" data-line="666">must survive the run is carried as follows (P4b, P6): it becomes a</span>
+<span id="L667" data-line="667">sprint-local entry when its lifetime stays inside the admitted sprint;</span>
+<span id="L668" data-line="668">otherwise it is recorded as a durable ticket, only under ticket-state</span>
+<span id="L669" data-line="669">authority; where that authority is absent, it is retained in the</span>
+<span id="L670" data-line="670">contract&#x27;s named durable result and evidence surface or in an</span>
+<span id="L671" data-line="671">already-authorised enclosing carrier, closure is marked withheld on</span>
+<span id="L672" data-line="672">ticket-state authority, and the required re-entry is returned.</span>
+<span id="L673" data-line="673"></span>
+<span id="L674" data-line="674">Execution and closure use the same admitted categorisation, criteria,</span>
+<span id="L675" data-line="675">proof surface and non-closure conditions. The resulting state still flows</span>
+<span id="L676" data-line="676">through proof, gap analysis and repricing (P6, P2).</span>
+<span id="L677" data-line="677"></span>
+<span id="L678" data-line="678">### Execution contract admission</span>
+<span id="L679" data-line="679"></span>
+<span id="L680" data-line="680">The runtime execution flow should treat a ticket, a sprint entry or a</span>
+<span id="L681" data-line="681">drafted work contract as an admission candidate, never as automatic truth;</span>
+<span id="L682" data-line="682">the contract carries at minimum the states named in ACTIVATION §1</span>
+<span id="L683" data-line="683">(drafted, admitted, rejected, superseded). An admitted execution contract</span>
+<span id="L684" data-line="684">should be recorded on the selected durable work carrier, including an event log</span>
+<span id="L685" data-line="685">where the execution binding requires one. It is available to prompt assembly</span>
+<span id="L686" data-line="686">where applicable, and to later closure checking, so that execution and</span>
+<span id="L687" data-line="687">closure read the same admitted basis. A binding that requires an event log</span>
+<span id="L688" data-line="688">still requires that log; a human or mixed binding may select another durable</span>
+<span id="L689" data-line="689">carrier under [SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding)</span>
+<span id="L690" data-line="690">(P6, P4b). The refusal of self-certification</span>
+<span id="L691" data-line="691">is ACTIVATION §1.</span>
+<span id="L692" data-line="692"></span>
+<span id="L693" data-line="693">Admission validates a contract against its cited product outcome,</span>
+<span id="L694" data-line="694">prerequisite or experiment basis and does not admit that basis (ACTIVATION</span>
+<span id="L695" data-line="695">§1). Admission or renewal of the basis belongs to the authority owning the</span>
+<span id="L696" data-line="696">selected goals work wave, or its explicitly bounded proxy, and stays</span>
+<span id="L697" data-line="697">durably legible in the existing goals or ticket authority</span>
+<span id="L698" data-line="698">([SPEC_METHOD §3](SPEC_METHOD.md#3-outcome-conservation)). A ticket&#x27;s</span>
+<span id="L699" data-line="699">`active` status, its lane, or an admitted or retained contract is therefore</span>
+<span id="L700" data-line="700">never the admission of a growth basis (P6, P2).</span>
+<span id="L701" data-line="701"></span>
+<span id="L702" data-line="702">### Evaluation criteria and non-closure conditions</span>
+<span id="L703" data-line="703"></span>
+<span id="L704" data-line="704">An execution contract should expose both what counts as progress or</span>
+<span id="L705" data-line="705">completion and what still counts as failure even when some local proof is</span>
+<span id="L706" data-line="706">green. At minimum it should make `evaluation_criteria` and</span>
+<span id="L707" data-line="707">`non_closure_conditions` visible. These are the local gain function for</span>
+<span id="L708" data-line="708">the work (P6, P2).</span>
+<span id="L709" data-line="709"></span>
+<span id="L710" data-line="710">For implementation migrations, typical non-closure conditions are: the old</span>
+<span id="L711" data-line="711">authoritative path still passes in normal execution within the declared</span>
+<span id="L712" data-line="712">affected scope; mixed old and new proof is still accepted; a proxy or</span>
+<span id="L713" data-line="713">partial interface implementation still stands in the acceptance path;</span>
+<span id="L714" data-line="714">competing or ambiguous executable authority remains reachable on the</span>
+<span id="L715" data-line="715">claimed product acceptance path; ticket wording, product wording and proof</span>
+<span id="L716" data-line="716">wording are not reconciled. These conditions are not optional commentary;</span>
+<span id="L717" data-line="717">they are the anti-self-deception surface for execution (P6).</span>
+<span id="L718" data-line="718"></span>
+<span id="L719" data-line="719">Residual implementation debt outside the claimed acceptance path is not by</span>
+<span id="L720" data-line="720">itself a non-closure condition. It may be deferred only under the</span>
+<span id="L721" data-line="721">path-relative authority and explicit disposition rules of</span>
+<span id="L722" data-line="722">[SPEC_METHOD §7](SPEC_METHOD.md#constitutional-migration-options) (P2).</span>
+<span id="L723" data-line="723"></span>
+<span id="L724" data-line="724">### Bounded-context term binding</span>
+<span id="L725" data-line="725"></span>
+<span id="L726" data-line="726">Ticket and work-instruction terms resolve under the bounded-context</span>
+<span id="L727" data-line="727">semantic resolution of PRODUCT_DEFINITION §5. A ticket may use an</span>
+<span id="L728" data-line="728">unqualified term when its cited product, re-entry surface, execution basis</span>
+<span id="L729" data-line="729">and affected scope select exactly one bounded-context meaning (P1, P3).</span>
+<span id="L730" data-line="730"></span>
+<span id="L731" data-line="731">When a ticket spans contexts, or a material term has competing meanings,</span>
+<span id="L732" data-line="732">the ticket cites the applicable product-definition disambiguation or the</span>
+<span id="L733" data-line="733">owner-authorised import, translation, equivalence or disambiguation</span>
+<span id="L734" data-line="734">carrier; it may reference that relation rather than duplicate it. Ticket</span>
+<span id="L735" data-line="735">prose, actor familiarity, a matching glossary heading, tenant placement or</span>
+<span id="L736" data-line="736">comment context cannot select meaning or transfer authority (P1, P6).</span>
+<span id="L737" data-line="737"></span>
+<span id="L738" data-line="738">An unresolved or multiply resolved material term blocks execution-contract</span>
+<span id="L739" data-line="739">admission and closure for the affected claim. Opening or updating the</span>
+<span id="L740" data-line="740">ticket records the pressure and does not cure it; resolution re-enters at</span>
+<span id="L741" data-line="741">the authority that owns the missing context or semantic relation (P1, P5).</span>
+<span id="L742" data-line="742"></span>
+<span id="L743" data-line="743">## 6. Implementation migration</span>
+<span id="L744" data-line="744"></span>
+<span id="L745" data-line="745">### Declaration and checklist</span>
+<span id="L746" data-line="746"></span>
+<span id="L747" data-line="747">A ticket with `ticket_category: implementation_migration` carries both an</span>
+<span id="L748" data-line="748">explicit migration declaration block and a hard migration checklist. Both</span>
+<span id="L749" data-line="749">are part of the ticket authority, not optional commentary.</span>
+<span id="L750" data-line="750">[SPEC_METHOD §7](SPEC_METHOD.md#7-migration) defines the migration law;</span>
+<span id="L751" data-line="751">this category defines the minimum ticket-local declaration and checklist</span>
+<span id="L752" data-line="752">that a reviewer can check before accepting a closure claim on one concrete</span>
+<span id="L753" data-line="753">work item, and is the local enforcement surface for the inside-out</span>
+<span id="L754" data-line="754">migration law of SPEC_METHOD §7 (P6, P4b, P3).</span>
+<span id="L755" data-line="755"></span>
+<span id="L756" data-line="756">The declaration states: the migration strategy used for this work item; the</span>
+<span id="L757" data-line="757">exact affected migration scope; every explicitly excluded or disjoint</span>
+<span id="L758" data-line="758">product or compatibility scope with its deterministic routing relation; the</span>
+<span id="L759" data-line="759">old truth path or superseded contract; the new truth path or authoritative</span>
+<span id="L760" data-line="760">contract; the producer set for the old and the new path; the consumer set</span>
+<span id="L761" data-line="761">for the old and the new path; every projection, report, status surface and</span>
+<span id="L762" data-line="762">proof surface derived from that contract family; and the closure law for</span>
+<span id="L763" data-line="763">the migration.</span>
+<span id="L764" data-line="764"></span>
+<span id="L765" data-line="765">The ticket carries at least this checklist in live markdown form:</span>
+<span id="L766" data-line="766"></span>
+<span id="L767" data-line="767">```md</span>
+<span id="L768" data-line="768">## Migration Checklist</span>
+<span id="L769" data-line="769"></span>
+<span id="L770" data-line="770">- [ ] exact affected migration scope is named</span>
+<span id="L771" data-line="771">- [ ] excluded or disjoint Product and compatibility scopes are named with deterministic routing</span>
+<span id="L772" data-line="772">- [ ] old truth path is named explicitly</span>
+<span id="L773" data-line="773">- [ ] new truth path is named explicitly</span>
+<span id="L774" data-line="774">- [ ] producer set for the new truth is listed</span>
+<span id="L775" data-line="775">- [ ] consumer set for the new truth is listed</span>
+<span id="L776" data-line="776">- [ ] projection/read-model surfaces are listed</span>
+<span id="L777" data-line="777">- [ ] old truth path is removed or explicitly demoted from authority within the affected scope</span>
+<span id="L778" data-line="778">- [ ] mixed-state behavior is no longer accepted as closure evidence</span>
+<span id="L779" data-line="779">- [ ] tests proving mixed old/new behavior are removed or repriced</span>
+<span id="L780" data-line="780">- [ ] recurring realization patterns are checked against existing library/commonization surfaces</span>
+<span id="L781" data-line="781">- [ ] ticket declares library usage and names the governing library or rationale</span>
+<span id="L782" data-line="782">- [ ] if the work exists in more than one build tenant, this backlog/active ticket carries only one tenant lifecycle and any sibling tenant work lives on its own suffixed ticket</span>
+<span id="L783" data-line="783">- [ ] ticket wording, product wording, and proof claims are reconciled before closure</span>
+<span id="L784" data-line="784">```</span>
+<span id="L785" data-line="785"></span>
+<span id="L786" data-line="786">Where no excluded or disjoint scope exists, the second item is satisfied by</span>
+<span id="L787" data-line="787">declaring that absence explicitly, as the migration example of §8 writes</span>
+<span id="L788" data-line="788">it; silence does not satisfy it (P6).</span>
+<span id="L789" data-line="789"></span>
+<span id="L790" data-line="790">The required fields are `migration_strategy`, with the values</span>
+<span id="L791" data-line="791">`inside_out_hard_break` and `fundamental_re_adoption`, and</span>
+<span id="L792" data-line="792">`library_usage`, with the values `none`, `consume` and `extend`. When</span>
+<span id="L793" data-line="793">`library_usage` is `consume` or `extend`, the ticket names the governing</span>
+<span id="L794" data-line="794">reusable library or commonisation surface in `governing_library`. When it</span>
+<span id="L795" data-line="795">is `none`, the ticket explains in `library_rationale` that no existing</span>
+<span id="L796" data-line="796">reusable surface applies, or that the pattern is still boundary-specific,</span>
+<span id="L797" data-line="797">or that it is not yet a lawful recurrence or commonisation candidate (P3,</span>
+<span id="L798" data-line="798">P2).</span>
+<span id="L799" data-line="799"></span>
+<span id="L800" data-line="800">### Closure of a migration ticket</span>
+<span id="L801" data-line="801"></span>
+<span id="L802" data-line="802">Closure is blocked while the old authoritative interface still passes in</span>
+<span id="L803" data-line="803">normal execution within the declared affected scope, unless the ticket</span>
+<span id="L804" data-line="804">explicitly declares a retained compatibility feature. A deterministically</span>
+<span id="L805" data-line="805">routed, non-overlapping product scope outside the declared affected scope</span>
+<span id="L806" data-line="806">remains governed by its own current authority (P6, P3). Accordingly: the</span>
+<span id="L807" data-line="807">old path may not remain silently authoritative within the affected scope;</span>
+<span id="L808" data-line="808">mixed old and new green tests do not count as migration completion; any</span>
+<span id="L809" data-line="809">retained old path within the affected scope is named as compatibility</span>
+<span id="L810" data-line="810">rather than current native truth; retained compatibility is justified in</span>
+<span id="L811" data-line="811">the ticket itself, never inferred from surviving code; proxy or partial</span>
+<span id="L812" data-line="812">implementations do not satisfy migration closure; and if a ticket was</span>
+<span id="L813" data-line="813">marked `completed` and later review shows checked closure items are false</span>
+<span id="L814" data-line="814">on the current tree, the ticket is reopened or an explicitly linked</span>
+<span id="L815" data-line="815">successor ticket is created, because a false closure claim is a</span>
+<span id="L816" data-line="816">ticket-method defect, not only a code defect (P6, P4b).</span>
+<span id="L817" data-line="817"></span>
+<span id="L818" data-line="818">An intermediate product-slice milestone inside an open migration ticket may</span>
+<span id="L819" data-line="819">be accepted under the path-relative promotion rule of SPEC_METHOD §7, which</span>
+<span id="L820" data-line="820">also states how the slice&#x27;s identity and acceptance criteria derive and</span>
+<span id="L821" data-line="821">that ticket wording cannot narrow that authority away. The ticket-local</span>
+<span id="L822" data-line="822">consequence: the ticket remains active and does not claim migration</span>
+<span id="L823" data-line="823">closure until the migration checklist and the final closure law are</span>
+<span id="L824" data-line="824">satisfied; its `active` status renews none of the accepted slice&#x27;s</span>
+<span id="L825" data-line="825">exhausted growth authority; and removal, demotion and closure-proof work</span>
+<span id="L826" data-line="826">may continue within the bound SPEC_METHOD §7 states, further material</span>
+<span id="L827" data-line="827">producer or consumer growth requiring another basis admitted under</span>
+<span id="L828" data-line="828">SPEC_METHOD §3 (P2, P6; §1, Milestones).</span>
+<span id="L829" data-line="829"></span>
+<span id="L830" data-line="830">### Strategy requirements</span>
+<span id="L831" data-line="831"></span>
+<span id="L832" data-line="832">When `migration_strategy: inside_out_hard_break`, the ticket carries a full</span>
+<span id="L833" data-line="833">best-guess interface inventory for the migrating contract family; the</span>
+<span id="L834" data-line="834">ordered break sequence from the deepest source truth outward; the old seam</span>
+<span id="L835" data-line="835">each break intentionally severs; and the negative proof expected for each</span>
+<span id="L836" data-line="836">break (P4b, P6).</span>
+<span id="L837" data-line="837"></span>
+<span id="L838" data-line="838">When `migration_strategy: fundamental_re_adoption`, the ticket carries the</span>
+<span id="L839" data-line="839">explicit selection of fundamental re-adoption by the human product</span>
+<span id="L840" data-line="840">authority; the comparison with bounded evolution across product value,</span>
+<span id="L841" data-line="841">feedback latency, authority risk, reversibility, total cost and retained</span>
+<span id="L842" data-line="842">predecessor semantics; the bounded abort or re-entry condition; the</span>
+<span id="L843" data-line="843">sideways reference line or prior implementation boundary treated as source</span>
+<span id="L844" data-line="844">material; the module and interface adjudication surface; and explicit</span>
+<span id="L845" data-line="845">classifications for inherited modules, interfaces, carriers, projections</span>
+<span id="L846" data-line="846">and proof surfaces, each `carry_across`, `redundant` or `rewrite`</span>
+<span id="L847" data-line="847">([SPEC_METHOD §7](SPEC_METHOD.md#fundamental-migration) defines the three).</span>
+<span id="L848" data-line="848">Unclassified inherited implementation blocks closure (P6, P3).</span>
+<span id="L849" data-line="849"></span>
+<span id="L850" data-line="850">### Recurring realisation and library declaration</span>
+<span id="L851" data-line="851"></span>
+<span id="L852" data-line="852">An implementation migration ticket declares whether the active boundary is</span>
+<span id="L853" data-line="853">rebuilding a pattern locally, consuming an existing reusable library or</span>
+<span id="L854" data-line="854">commonisation surface, or extending that surface before the local</span>
+<span id="L855" data-line="855">implementation lands; `library_usage` records which (P2, P4a).</span>
+<span id="L856" data-line="856"></span>
+<span id="L857" data-line="857">The recurrence rule is ticket law for every implementation migration</span>
+<span id="L858" data-line="858">ticket, whichever profiles the Product adopts (P2, P4a): the second</span>
+<span id="L859" data-line="859">credible recurrence forces an explicit</span>
+<span id="L860" data-line="860">library or commonisation review; the third local rebuild is not acceptable</span>
+<span id="L861" data-line="861">by default. If review shows the same realisation pattern already exists in</span>
+<span id="L862" data-line="862">two module boundaries or tickets, a third local rebuild blocks</span>
+<span id="L863" data-line="863">implementation unless the ticket declares `library_usage: consume`,</span>
+<span id="L864" data-line="864">declares `library_usage: extend`, or links an explicit do-not-commonise</span>
+<span id="L865" data-line="865">design decision in `library_rationale`. The preferred order is</span>
+<span id="L866" data-line="866">boundary-local cleanup, then a tenant-local reusable library or</span>
+<span id="L867" data-line="867">commonisation surface, then shared or common propagation only through</span>
+<span id="L868" data-line="868">separate design re-entry (P2, P3). A Product that adopts DESIGN_MODULE</span>
+<span id="L869" data-line="869">also applies its refinement,</span>
+<span id="L870" data-line="870">[§10 Recurrence extraction](DESIGN_MODULE.md#recurrence-extraction),</span>
+<span id="L871" data-line="871">which makes the same rule a design-review obligation and states what</span>
+<span id="L872" data-line="872">counts as a commonisation candidate; it adds no rival threshold.</span>
+<span id="L873" data-line="873"></span>
+<span id="L874" data-line="874">A reusable pattern discovered during the active ticket remains under the</span>
+<span id="L875" data-line="875">second- and third-recurrence rules. Outside those rules and the current</span>
+<span id="L876" data-line="876">claim&#x27;s applicable hard stops it is repricing input: it does not block the</span>
+<span id="L877" data-line="877">bounded claim or require a follow-up ticket unless the owning authority</span>
+<span id="L878" data-line="878">admits that follow-up (P2; §7, Execution and verification authority</span>
+<span id="L879" data-line="879">separation).</span>
+<span id="L880" data-line="880"></span>
+<span id="L881" data-line="881">### Multi-build-tenant review</span>
+<span id="L882" data-line="882"></span>
+<span id="L883" data-line="883">When the same work item is processed across several build tenants, review</span>
+<span id="L884" data-line="884">of backlog and active tickets checks that each tenant has its own suffixed</span>
+<span id="L885" data-line="885">ticket; each ticket names its `build_tenant`; each tenant ticket has its</span>
+<span id="L886" data-line="886">own proof surface and closure law; one tenant&#x27;s green proof does not stand</span>
+<span id="L887" data-line="887">in for another tenant&#x27;s closure; and reopening, repricing and successor</span>
+<span id="L888" data-line="888">work remain tenant-local unless the upstream source, product or design</span>
+<span id="L889" data-line="889">ticket itself must change (P3, P6;</span>
+<span id="L890" data-line="890">§4, Multi-build-tenant independence).</span>
+<span id="L891" data-line="891"></span>
+<span id="L892" data-line="892">### Review disambiguation</span>
+<span id="L893" data-line="893"></span>
+<span id="L894" data-line="894">An implementation migration ticket makes the review problem concrete enough</span>
+<span id="L895" data-line="895">that an implementor cannot land a rename, adapter, wrapper or happy-path</span>
+<span id="L896" data-line="896">proof and claim source-truth migration (P6, P1). For a core-interface or</span>
+<span id="L897" data-line="897">carrier migration the ticket should include a `Functional Review Criteria`</span>
+<span id="L898" data-line="898">section, specific to the ticket, such that a reviewer should be able to</span>
+<span id="L899" data-line="899">answer these generic questions:</span>
+<span id="L900" data-line="900"></span>
+<span id="L901" data-line="901">1. Did the change replace control-flow-owned meaning with carrier-owned,</span>
+<span id="L902" data-line="902">   algebra-owned, event-owned or otherwise admitted source truth?</span>
+<span id="L903" data-line="903">2. Did the change reduce or remove a semantic centre, or only rename and</span>
+<span id="L904" data-line="904">   relocate it behind helpers?</span>
+<span id="L905" data-line="905">3. Is the new law expressed as a typed or closed carrier, contract or</span>
+<span id="L906" data-line="906">   transition family rather than an open dict, string protocol or</span>
+<span id="L907" data-line="907">   config-shaped surface?</span>
+<span id="L908" data-line="908">4. Is the main step readable as a pure transform over admitted truth, or</span>
+<span id="L909" data-line="909">   does it still contain orchestration that decides the law procedurally?</span>
+<span id="L910" data-line="910">5. Are effects pushed to the edge, such as event emission, manifest</span>
+<span id="L911" data-line="911">   publication, file or output publication, or operator delivery, instead</span>
+<span id="L912" data-line="912">   of being mixed into source-truth interpretation?</span>
+<span id="L913" data-line="913">6. Do downstream consumers pattern-match or otherwise consume the admitted</span>
+<span id="L914" data-line="914">   carrier directly, or do they reconstruct truth from payloads,</span>
+<span id="L915" data-line="915">   `.get(...)`, fallback defaults, raw text or legacy files?</span>
+<span id="L916" data-line="916">7. Are projections and reports derived from event or source truth, or can</span>
+<span id="L917" data-line="917">   they still close independently as a second authority surface?</span>
+<span id="L918" data-line="918">8. If deterministic gates, validation or other deterministic checks exist,</span>
+<span id="L919" data-line="919">   do they inform the current state without structurally blocking the</span>
+<span id="L920" data-line="920">   lawful constructive or probabilistic path that the admitted contract</span>
+<span id="L921" data-line="921">   permits?</span>
+<span id="L922" data-line="922">9. If the same realisation pattern already exists elsewhere, does the</span>
+<span id="L923" data-line="923">   ticket explicitly consume or extend a reusable library or commonisation</span>
+<span id="L924" data-line="924">   surface rather than rebuild it locally again?</span>
+<span id="L925" data-line="925"></span>
+<span id="L926" data-line="926">Passing tests do not satisfy this section by themselves. A slice that keeps</span>
+<span id="L927" data-line="927">the same semantic centre alive behind typed wrappers, adapter-local policy,</span>
+<span id="L928" data-line="928">old lists beside new algebra, fallback config or rehydrated dict payloads</span>
+<span id="L929" data-line="929">still fails migration review even when public behaviour remains green</span>
+<span id="L930" data-line="930">(P6).</span>
+<span id="L931" data-line="931"></span>
+<span id="L932" data-line="932">### Impacted interface review checklist</span>
+<span id="L933" data-line="933"></span>
+<span id="L934" data-line="934">For a core-interface, carrier or authoritative-contract migration, the</span>
+<span id="L935" data-line="935">ticket includes an `Impacted Interface Review Checklist` before tests can be</span>
+<span id="L936" data-line="936">used as closure evidence. The checklist is a named walk of every live</span>
+<span id="L937" data-line="937">interface that can still bypass, reinterpret, replay or project the</span>
+<span id="L938" data-line="938">migrating truth path (P4b, P6).</span>
+<span id="L939" data-line="939">At minimum it should enumerate, where they exist: the source-carrier builder;</span>
+<span id="L940" data-line="940">closure, register and projection builders; the deepest semantic kernel and</span>
+<span id="L941" data-line="941">adapter boundaries; public wrappers and the bootstrap, replay, ingest,</span>
+<span id="L942" data-line="942">resume and query entrypoints; prompt, report, projection and read-model</span>
+<span id="L943" data-line="943">surfaces; constructor and materialisation paths; proof lanes and</span>
+<span id="L944" data-line="944">negative-proof fixtures.</span>
+<span id="L945" data-line="945"></span>
+<span id="L946" data-line="946">Each checklist item states what counts as closure for that interface, for</span>
+<span id="L947" data-line="947">example:</span>
+<span id="L948" data-line="948"></span>
+<span id="L949" data-line="949">- &quot;`&lt;conformance-module&gt;::consume_projection` consumes the admitted carrier</span>
+<span id="L950" data-line="950">  or projection and does not import raw helper authority&quot;</span>
+<span id="L951" data-line="951">- &quot;`&lt;query-module&gt;::project_domain` exposes a read model only and does not</span>
+<span id="L952" data-line="952">  silently rebuild the carrier when publication is absent&quot;</span>
+<span id="L953" data-line="953">- &quot;`&lt;gap-module&gt;::build_canonical_gap` does not aggregate open payload rows</span>
+<span id="L954" data-line="954">  into an independent closure decision&quot;</span>
+<span id="L955" data-line="955"></span>
+<span id="L956" data-line="956">Review rules (P6): a checked box asserts truth on the current tree, not</span>
+<span id="L957" data-line="957">intended direction; if review shows a checked interface item is false, the</span>
+<span id="L958" data-line="958">ticket is not closure-ready; an intentionally deferred interface either</span>
+<span id="L959" data-line="959">names its successor ticket or stays unchecked; compatibility shims do not</span>
+<span id="L960" data-line="960">satisfy the checklist unless explicitly justified as retained</span>
+<span id="L961" data-line="961">compatibility; for `inside_out_hard_break` the checklist describes the</span>
+<span id="L962" data-line="962">seam inventory before tests are used as closure evidence; for</span>
+<span id="L963" data-line="963">`fundamental_re_adoption` the checklist covers the inherited modules and</span>
+<span id="L964" data-line="964">interfaces being carried, dropped or rewritten, and implicit carry-forward</span>
+<span id="L965" data-line="965">does not count.</span>
+<span id="L966" data-line="966"></span>
+<span id="L967" data-line="967">### Break order and break-to-closure map</span>
+<span id="L968" data-line="968"></span>
+<span id="L969" data-line="969">An implementation migration ticket that touches a core interface includes</span>
+<span id="L970" data-line="970">a `Required Break Order` or an equivalent ordered execution section. The</span>
+<span id="L971" data-line="971">order starts at the authoritative source carrier and moves outward</span>
+<span id="L972" data-line="972">(P4b, P6;</span>
+<span id="L973" data-line="973">[SPEC_METHOD §7](SPEC_METHOD.md#hard-break-discipline)):</span>
+<span id="L974" data-line="974"></span>
+<span id="L975" data-line="975">1. discover the full best-guess interface family;</span>
+<span id="L976" data-line="976">2. publish or admit the new source carrier;</span>
+<span id="L977" data-line="977">3. deliberately sever one old authoritative seam and keep it broken;</span>
+<span id="L978" data-line="978">4. rebind the deepest semantic kernel to that carrier;</span>
+<span id="L979" data-line="979">5. remove or demote old producers;</span>
+<span id="L980" data-line="980">6. rebind old consumers;</span>
+<span id="L981" data-line="981">7. reprice projections, reports, prompts, delivery bindings and tests.</span>
+<span id="L982" data-line="982"></span>
+<span id="L983" data-line="983">When the migration has several old interfaces, the ticket also includes a</span>
+<span id="L984" data-line="984">`Break-To-Closure Map` stating which break closes which closure-law clause;</span>
+<span id="L985" data-line="985">without it a partial landing can look like a full landing (P6).</span>
+<span id="L986" data-line="986"></span>
+<span id="L987" data-line="987">Reviewers treat these as explicit defects: a typed wrapper that still</span>
+<span id="L988" data-line="988">carries old semantic authority; a new carrier added beside the old</span>
+<span id="L989" data-line="989">authoritative read model; a proxy or partial implementation that keeps the</span>
+<span id="L990" data-line="990">old interface alive behind a new name; constructor, replay, ingest, resume,</span>
+<span id="L991" data-line="991">bootstrap or public-wrapper paths that bypass admission; a projection or</span>
+<span id="L992" data-line="992">test that can pass without the new carrier; a fallback path that invents</span>
+<span id="L993" data-line="993">missing policy, identity, target or closure truth; a downstream proof that</span>
+<span id="L994" data-line="994">passes while upstream source-carrier work remains open (P6, P3).</span>
+<span id="L995" data-line="995"></span>
+<span id="L996" data-line="996">### Mixed-state negative proof</span>
+<span id="L997" data-line="997"></span>
+<span id="L998" data-line="998">For a migration ticket, positive behaviour proof is not enough. The proof</span>
+<span id="L999" data-line="999">surface should include at least one negative or structural proof that</span>
+<span id="L1000" data-line="1000">the old path can no longer satisfy the closure law (P6, P5). Examples: the severed seam in the current</span>
+<span id="L1001" data-line="1001">break is rejected before downstream repair is accepted as progress;</span>
+<span id="L1002" data-line="1002">removing the new carrier makes advancement, closure, prompt assembly or</span>
+<span id="L1003" data-line="1003">projection fail closed rather than silently fall back; a legacy payload</span>
+<span id="L1004" data-line="1004">without the admitted carrier is rejected instead of rehydrated into current</span>
+<span id="L1005" data-line="1005">truth; old and new truth intentionally disagree in a fixture and the new</span>
+<span id="L1006" data-line="1006">truth wins or the run fails closed; a same-name carrier, published</span>
+<span id="L1007" data-line="1007">function, route, policy or projection source with different structure fails</span>
+<span id="L1008" data-line="1008">closed instead of being accepted as equivalent; required closure proof</span>
+<span id="L1009" data-line="1009">does not depend on undeclared local fixtures or mutable sibling workspaces.</span>
+<span id="L1010" data-line="1010"></span>
+<span id="L1011" data-line="1011">If the old path still works in normal execution within the declared</span>
+<span id="L1012" data-line="1012">affected scope, or remains reachable on the claimed acceptance path, the</span>
+<span id="L1013" data-line="1013">ticket remains open unless that path is explicitly specified as retained</span>
+<span id="L1014" data-line="1014">compatibility. A deterministically routed, non-overlapping product scope</span>
+<span id="L1015" data-line="1015">outside the declared affected scope remains governed by its own current</span>
+<span id="L1016" data-line="1016">authority and does not block the migration merely because its path still</span>
+<span id="L1017" data-line="1017">works (P3, P6).</span>
+<span id="L1018" data-line="1018"></span>
+<span id="L1019" data-line="1019">For a ticket with an `Impacted Interface Review Checklist`, the negative</span>
+<span id="L1020" data-line="1020">proof exercises the named public consumers that matter for closure. Proving</span>
+<span id="L1021" data-line="1021">that one legacy shim is bypassed is not sufficient when the live authority</span>
+<span id="L1022" data-line="1022">path already bypasses that shim through other helpers, loaders or rebuild</span>
+<span id="L1023" data-line="1023">paths (P4b, P6).</span>
+<span id="L1024" data-line="1024"></span>
+<span id="L1025" data-line="1025">## 7. Authority, judgment, closure and state</span>
+<span id="L1026" data-line="1026"></span>
+<span id="L1027" data-line="1027">The generic law is tier 1: a constructor&#x27;s self-review is construction</span>
+<span id="L1028" data-line="1028">output and the independent-assessment protocol is</span>
+<span id="L1029" data-line="1029">[EVALUATION §3](EVALUATION.md#3-independent-assessment); acceptance as the</span>
+<span id="L1030" data-line="1030">decision owner&#x27;s disposition, and closure by stated condition rather than</span>
+<span id="L1031" data-line="1031">by reviewer approval, is [EVALUATION §5](EVALUATION.md#5-acceptance); reuse</span>
+<span id="L1032" data-line="1032">of a closed result is [ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse).</span>
+<span id="L1033" data-line="1033">This section states what those laws require of work carriers.</span>
+<span id="L1034" data-line="1034"></span>
+<span id="L1035" data-line="1035">### Execution and verification authority separation (UP-007)</span>
+<span id="L1036" data-line="1036"></span>
+<span id="L1037" data-line="1037">Authority to author or implement a change is not independent authority to</span>
+<span id="L1038" data-line="1038">verify it. What counts as independent, including that the reviewer is</span>
+<span id="L1039" data-line="1039">not the author of the reviewed subject, and the protocol an independent</span>
+<span id="L1040" data-line="1040">assessment follows are</span>
+<span id="L1041" data-line="1041">[EVALUATION §3](EVALUATION.md#3-independent-assessment). Where</span>
+<span id="L1042" data-line="1042">independent review is required, the reviewer identifies the exact</span>
+<span id="L1043" data-line="1043">subject, basis, scope, exclusions, evidence, verdict and unresolved</span>
+<span id="L1044" data-line="1044">findings (P6). Review</span>
+<span id="L1045" data-line="1045">findings must cite current authority and the code or proof paths they</span>
+<span id="L1046" data-line="1046">rest on, not only historical commentary (P6, P1).</span>
+<span id="L1047" data-line="1047"></span>
+<span id="L1048" data-line="1048">Self-review remains useful authoring evidence and cannot be relabelled as</span>
+<span id="L1049" data-line="1049">independent. Human authority may accept or reject the claim; it does not</span>
+<span id="L1050" data-line="1050">make implementer self-review independent. The boundaries at which this</span>
+<span id="L1051" data-line="1051">method requires independent assessment are this member&#x27;s policy, which</span>
+<span id="L1052" data-line="1052">EVALUATION §3 names; a governing basis may add others, as that section</span>
+<span id="L1053" data-line="1053">states. Independent review is required at</span>
+<span id="L1054" data-line="1054">product, qualification, release and explicitly risk-bearing boundaries that</span>
+<span id="L1055" data-line="1055">claim it, not for every local implementation step (P6, P2).</span>
+<span id="L1056" data-line="1056"></span>
+<span id="L1057" data-line="1057">A claimed independent review may support promotion or closure only when its</span>
+<span id="L1058" data-line="1058">exact subject and verdict are durably traceable through an existing ticket,</span>
+<span id="L1059" data-line="1059">commentary, qualification or release-evidence carrier. A statement that</span>
+<span id="L1060" data-line="1060">review occurred, an unbound conversation summary or an unavailable draft is</span>
+<span id="L1061" data-line="1061">not the review verdict. This rule requires no separate receipt, carrier or</span>
+<span id="L1062" data-line="1062">review round (P6, P4b).</span>
+<span id="L1063" data-line="1063"></span>
+<span id="L1064" data-line="1064">A ticket&#x27;s review verdict is bounded by the exact reviewed claim and its</span>
+<span id="L1065" data-line="1065">applicable hard stops. When a finding blocks current promotion, and what a</span>
+<span id="L1066" data-line="1066">valid observation outside that boundary does, are stated once at</span>
+<span id="L1067" data-line="1067">[EVALUATION §5 When a finding blocks promotion](EVALUATION.md#when-a-finding-blocks-promotion);</span>
+<span id="L1068" data-line="1068">this carrier applies that section to a ticket&#x27;s review and adds no</span>
+<span id="L1069" data-line="1069">trigger (P2, P6).</span>
+<span id="L1070" data-line="1070"></span>
+<span id="L1071" data-line="1071">A direct or lawfully proxied human ruling receives a durable disposition</span>
+<span id="L1072" data-line="1072">before the next affected acceptance boundary. Its source wording stays</span>
+<span id="L1073" data-line="1073">distinct from agent interpretation. Opening a ticket records the</span>
+<span id="L1074" data-line="1074">obligation and does not satisfy it, and an agent cannot widen the ruling</span>
+<span id="L1075" data-line="1075">while recording it (P6, P4b).</span>
+<span id="L1076" data-line="1076"></span>
+<span id="L1077" data-line="1077">Where the agentic construction relation applies (ACTIVATION §1, bound to</span>
+<span id="L1078" data-line="1078">this method by [SPEC_METHOD §8](SPEC_METHOD.md#8-bounded-execution-in-this-method)),</span>
+<span id="L1079" data-line="1079">the active work item identifies the selected execution basis, the bounded</span>
+<span id="L1080" data-line="1080">affected relation set, the delegated construction and assessment authority,</span>
+<span id="L1081" data-line="1081">and the re-entry conditions. It may point to accepted design and existing</span>
+<span id="L1082" data-line="1082">evidence carriers rather than restate them. Ticket state, ticket prose or</span>
+<span id="L1083" data-line="1083">an admitted execution contract cannot widen that basis or substitute for</span>
+<span id="L1084" data-line="1084">the live-surface assessment the relation requires (P6, P0).</span>
+<span id="L1085" data-line="1085"></span>
+<span id="L1086" data-line="1086">The reviewable transition (ACTIVATION §7, Transition evidence) may be</span>
+<span id="L1087" data-line="1087">carried by an existing ticket, commentary, commit, qualification or</span>
+<span id="L1088" data-line="1088">release-evidence surface. No new ticket state, document type, review round</span>
+<span id="L1089" data-line="1089">or approval ceremony is required. This member carries selection and</span>
+<span id="L1090" data-line="1090">traceability; ACTIVATION §1 and SPEC_METHOD §8 own the execution semantics</span>
+<span id="L1091" data-line="1091">(P2, P6).</span>
+<span id="L1092" data-line="1092"></span>
+<span id="L1093" data-line="1093">### Recorded judgment and owner-ruling continuity</span>
+<span id="L1094" data-line="1094"></span>
+<span id="L1095" data-line="1095">A residual judgment that another activation needs is recorded once, with</span>
+<span id="L1096" data-line="1096">its owning work, in the existing carrier selected under §5. The record</span>
+<span id="L1097" data-line="1097">identifies the question; the exact subject and governing basis; the</span>
+<span id="L1098" data-line="1098">supporting computed facts and evidence; the responsible actor and its</span>
+<span id="L1099" data-line="1099">authority; the conclusion and its scope; the uncertainty; and a concrete</span>
+<span id="L1100" data-line="1100">revising observation that lets a consumer determine whether the conclusion</span>
+<span id="L1101" data-line="1101">still applies. A question settled by rule needs no invented J record (P4b,</span>
+<span id="L1102" data-line="1102">P6; C, J and O are</span>
+<span id="L1103" data-line="1103">the annotations of [SPEC_METHOD §4](SPEC_METHOD.md#computed-classification-and-treatment)).</span>
+<span id="L1104" data-line="1104"></span>
+<span id="L1105" data-line="1105">Later roles and resumed runs recover the result and check its</span>
+<span id="L1106" data-line="1106">applicability rather than re-author unchanged judgment. Reuse and</span>
+<span id="L1107" data-line="1107">invalidation are</span>
+<span id="L1108" data-line="1108">[ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse): changed material</span>
+<span id="L1109" data-line="1109">inputs, a declared revising observation or a changed basis invalidate</span>
+<span id="L1110" data-line="1110">the affected result, preserving the original result and its successor</span>
+<span id="L1111" data-line="1111">relation and keeping only demonstrably independent results, and a new</span>
+<span id="L1112" data-line="1112">role or conversation alone invalidates nothing. For a recorded judgment</span>
+<span id="L1113" data-line="1113">the material inputs include its supporting computed facts and evidence,</span>
+<span id="L1114" data-line="1114">and its declared revising observation is the one the record states;</span>
+<span id="L1115" data-line="1115">reassessment covers what the change affects. The result may reference</span>
+<span id="L1116" data-line="1116">current C outputs; reuse cannot silently turn unknown facts into</span>
+<span id="L1117" data-line="1117">established premises (P4b, P5). Required independent assessment may consume valid C, but</span>
+<span id="L1118" data-line="1118">its assessor acquires sufficient exact evidence and supplies its own</span>
+<span id="L1119" data-line="1119">judgment under the actual independence condition; reusing the author&#x27;s J</span>
+<span id="L1120" data-line="1120">cannot satisfy that condition (P6; EVALUATION §3).</span>
+<span id="L1121" data-line="1121"></span>
+<span id="L1122" data-line="1122">A direct or lawfully proxied owner ruling is recorded in its original</span>
+<span id="L1123" data-line="1123">wording, with its owner, exact subject and basis, permitted scope and</span>
+<span id="L1124" data-line="1124">effects, conditions and source, separately from agent interpretation. Later</span>
+<span id="L1125" data-line="1125">work consumes that same ruling while it applies; it neither widens the</span>
+<span id="L1126" data-line="1126">ruling nor requests unchanged authority again. New ambiguity or a</span>
+<span id="L1127" data-line="1127">materially changed decision returns only the affected question to its</span>
+<span id="L1128" data-line="1128">owner. J is not O, and recording either cannot create admission,</span>
+<span id="L1129" data-line="1129">acceptance, effects or continuation beyond the original grant (P6, P3).</span>
+<span id="L1130" data-line="1130"></span>
+<span id="L1131" data-line="1131">These results follow the lifetime of the existing run, sprint or durable</span>
+<span id="L1132" data-line="1132">ticket and its named result and evidence surface. They require no separate</span>
+<span id="L1133" data-line="1133">judgment registry, no ticket per judgment and no additional approval</span>
+<span id="L1134" data-line="1134">ceremony (P2).</span>
+<span id="L1135" data-line="1135"></span>
+<span id="L1136" data-line="1136">Repricing gives each affected obligation a disposition in that same</span>
+<span id="L1137" data-line="1137">carrier: retained, superseded, deferred or withdrawn, with its owning</span>
+<span id="L1138" data-line="1138">authority and applicable evidence links. Surviving work is preserved and</span>
+<span id="L1139" data-line="1139">changed dependencies are explained; unaffected history is not copied into</span>
+<span id="L1140" data-line="1140">a parallel ledger. An owner decision is presented as the short consequence</span>
+<span id="L1141" data-line="1141">delta needed to decide it, with the original ruling preserved separately.</span>
+<span id="L1142" data-line="1142">A general instruction to continue does not accept an undisclosed</span>
+<span id="L1143" data-line="1143">architectural or scope change (P4b, P6, P2).</span>
+<span id="L1144" data-line="1144"></span>
+<span id="L1145" data-line="1145">The four repricing dispositions are lifecycle states of an obligation,</span>
+<span id="L1146" data-line="1146">set by its owning authority. A state label is not an evaluation result and</span>
+<span id="L1147" data-line="1147">has no automatic core mapping. A material repricing decision is the separate</span>
+<span id="L1148" data-line="1148">owner decision that establishes one such state for an exact obligation,</span>
+<span id="L1149" data-line="1149">subject and basis. Its record names the chosen disposition, the decision</span>
+<span id="L1150" data-line="1150">owner and grant, the governing conditions, evidence, affected dependencies,</span>
+<span id="L1151" data-line="1151">remaining obligations and any conditions for revisiting the decision (P3,</span>
+<span id="L1152" data-line="1152">P4b, P6).</span>
+<span id="L1153" data-line="1153"></span>
+<span id="L1154" data-line="1154">A performed evaluation of that decision answers the predicate: **the named</span>
+<span id="L1155" data-line="1155">owner lawfully establishes the recorded disposition for this exact</span>
+<span id="L1156" data-line="1156">obligation, subject and basis, with every applicable condition satisfied</span>
+<span id="L1157" data-line="1157">and every surviving obligation preserved.** This is the repricing predicate</span>
+<span id="L1158" data-line="1158">owned here; it is not candidate acceptance under</span>
+<span id="L1159" data-line="1159">[ACTIVATION §3 Disposition](ACTIVATION.md#disposition), and it does not claim</span>
+<span id="L1160" data-line="1160">that the underlying work was delivered. The result retains the decision,</span>
+<span id="L1161" data-line="1161">its chosen state and its evidence, and refines the core values of</span>
+<span id="L1162" data-line="1162">[FOUNDATIONS §4 Results](FOUNDATIONS.md#results) as follows:</span>
+<span id="L1163" data-line="1163"></span>
+<span id="L1164" data-line="1164">| Repricing result | Core value | Meaning for the repricing predicate |</span>
+<span id="L1165" data-line="1165">|---|---|---|</span>
+<span id="L1166" data-line="1166">| `repricing_established` | satisfied | the exact applicable owner decision, authority, evidence and preservation of surviving obligations establish the predicate |</span>
+<span id="L1167" data-line="1167">| `repricing_falsified` | falsified | a counterexample defeats the predicate, including a disposition outside the actor&#x27;s grant or contrary to an applicable obligation |</span>
+<span id="L1168" data-line="1168">| `repricing_indeterminate` | indeterminate | admissible evidence cannot decide whether the decision meets an applicable condition; the undecided condition and needed evidence remain explicit |</span>
+<span id="L1169" data-line="1169">| `repricing_out_of_frame` | out_of_frame | a material relation or capability needed to evaluate the decision is undeclared in the frame; the missing relation or capability remains explicit |</span>
+<span id="L1170" data-line="1170">| `repricing_invalid_basis` | invalid_basis | the decision is evaluated on an absent, stale, ambiguous or mismatched required basis that cannot support the predicate |</span>
+<span id="L1171" data-line="1171"></span>
+<span id="L1172" data-line="1172">An evaluation that was not performed has no result. The evaluation records</span>
+<span id="L1173" data-line="1173">all applicable failure grounds and supplies no decision authority; the</span>
+<span id="L1174" data-line="1174">state changes only through the owner&#x27;s authorised act. A lawful deferral</span>
+<span id="L1175" data-line="1175">may therefore yield `repricing_established` while the delivery claim remains</span>
+<span id="L1176" data-line="1176">failed or outstanding. An unauthorised `withdrawn` label cannot close an</span>
+<span id="L1177" data-line="1177">obligation. Neither retention nor a satisfied repricing predicate establishes</span>
+<span id="L1178" data-line="1178">delivery, and a superseded, deferred or withdrawn state cannot erase</span>
+<span id="L1179" data-line="1179">unresolved obligations or evidence (P5, P1, P6).</span>
+<span id="L1180" data-line="1180"></span>
+<span id="L1181" data-line="1181">### Condition-based closure and reuse</span>
+<span id="L1182" data-line="1182"></span>
+<span id="L1183" data-line="1183">A work claim is complete only when every applicable declared obligation is</span>
+<span id="L1184" data-line="1184">satisfied by valid evidence for its exact subject, basis and scope; every</span>
+<span id="L1185" data-line="1185">required judgment and owner ruling is present and applicable; and no active</span>
+<span id="L1186" data-line="1186">non-closure condition remains. A mandatory obligation whose applicability is</span>
+<span id="L1187" data-line="1187">unknown, or whose evidence is insufficient, withholds the dependent claim;</span>
+<span id="L1188" data-line="1188">evidence presence alone is not satisfaction. The existing owner decides any</span>
+<span id="L1189" data-line="1189">reserved acceptance (P6, P5).</span>
+<span id="L1190" data-line="1190">This condition is the</span>
+<span id="L1191" data-line="1191">[conjunction of results](FOUNDATIONS.md#conjunction-of-results) with the</span>
+<span id="L1192" data-line="1192">declared obligations as required coverage. This section owns the</span>
+<span id="L1193" data-line="1193">closure condition of a work claim;</span>
+<span id="L1194" data-line="1194">[SPEC_METHOD §4 Consistency gate](SPEC_METHOD.md#consistency-gate)</span>
+<span id="L1195" data-line="1195">applies it as the gate over a declared change span.</span>
+<span id="L1196" data-line="1196"></span>
+<span id="L1197" data-line="1197">Review evaluates these conditions; its occurrence is not the closing event.</span>
+<span id="L1198" data-line="1198">Where applicable law requires no independent review or reserved</span>
+<span id="L1199" data-line="1199">acceptance, a work claim is recorded as</span>
+<span id="L1200" data-line="1200">[ACTIVATION §1 Roles and delegation](ACTIVATION.md#roles-and-delegation)</span>
+<span id="L1201" data-line="1201">states in Recording a result without review, with the ticket as the</span>
+<span id="L1202" data-line="1202">existing carrier. The conditions that still apply include sprint-close</span>
+<span id="L1203" data-line="1203">law (§3) and the design profile&#x27;s law (P6, P2).</span>
+<span id="L1204" data-line="1204"></span>
+<span id="L1205" data-line="1205">An unchanged obligation reuses valid applicable evidence and recorded J</span>
+<span id="L1206" data-line="1206">and O under the reuse rule of</span>
+<span id="L1207" data-line="1207">[ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse). For a work</span>
+<span id="L1208" data-line="1208">claim, the changed material inputs and revising observations that rule</span>
+<span id="L1209" data-line="1209">names include a material counterexample, changed evidence and a stated</span>
+<span id="L1210" data-line="1210">revising observation of a recorded J; with a changed basis, each</span>
+<span id="L1211" data-line="1211">invalidates the affected claim and its dependent results before further</span>
+<span id="L1212" data-line="1212">reliance. An unrelated observation is retained as bounded repricing input;</span>
+<span id="L1213" data-line="1213">it does not reopen a satisfied claim or expand the work automatically.</span>
+<span id="L1214" data-line="1214">Closure recording preserves the exact evaluated scope, the satisfied</span>
+<span id="L1215" data-line="1215">conditions, the evidence and the remaining residuals (P4b, P2).</span>
+<span id="L1216" data-line="1216"></span>
+<span id="L1217" data-line="1217">### Test case authority</span>
+<span id="L1218" data-line="1218"></span>
+<span id="L1219" data-line="1219">Tests are proof projections from admitted work authority. Every</span>
+<span id="L1220" data-line="1220">substantive test case should derive along this chain (P6, P2):</span>
+<span id="L1221" data-line="1221"></span>
+<span id="L1222" data-line="1222">```text</span>
+<span id="L1223" data-line="1223">ticket -&gt; intake triage -&gt; lawful re-entry point -&gt; governing requirement,</span>
+<span id="L1224" data-line="1224">design, module, published function, carrier, or closure surface -&gt; test expectation</span>
+<span id="L1225" data-line="1225">```</span>
+<span id="L1226" data-line="1226"></span>
+<span id="L1227" data-line="1227">Tests do not derive authority from the current implementation. An</span>
+<span id="L1228" data-line="1228">acceptance predicate also needs an applicable supported entry or state and</span>
+<span id="L1229" data-line="1229">an obligation under the governing operating or threat model. Existing test</span>
+<span id="L1230" data-line="1230">presence cannot authorise an excluded threat or retain a superseded guard.</span>
+<span id="L1231" data-line="1231">When that responsibility changes, the affected predicates are audited, and</span>
+<span id="L1232" data-line="1232">unsupported expectations are retired under the owning basis without</span>
+<span id="L1233" data-line="1233">inventing a replacement guard. An actual conflict in live authority</span>
+<span id="L1234" data-line="1234">requires re-entry, not a test-only waiver (P6, P2).</span>
+<span id="L1235" data-line="1235"></span>
+<span id="L1236" data-line="1236">Implementation behaviour is evidence. The code is never the arbiter of a</span>
+<span id="L1237" data-line="1237">test&#x27;s expected result when code and test disagree (P6). When a ticket is</span>
+<span id="L1238" data-line="1238">fixed and a mismatch appears between implementation behaviour and test</span>
+<span id="L1239" data-line="1239">expectation, review reconciles the mismatch in this order:</span>
+<span id="L1240" data-line="1240"></span>
+<span id="L1241" data-line="1241">1. the ticket&#x27;s `change_intent`, `change_class`, `re_entry_point`,</span>
+<span id="L1242" data-line="1242">   `target_truth`, `superseded_truth`, `closure_law`,</span>
+<span id="L1243" data-line="1243">   `evaluation_criteria` and `non_closure_conditions`;</span>
+<span id="L1244" data-line="1244">2. the ticket&#x27;s intake triage and lawful owning re-entry;</span>
+<span id="L1245" data-line="1245">3. the governing requirement, design, module, published-function, carrier</span>
+<span id="L1246" data-line="1246">   or other cited authority surface;</span>
+<span id="L1247" data-line="1247">4. the test case expectation;</span>
+<span id="L1248" data-line="1248">5. the implementation.</span>
+<span id="L1249" data-line="1249"></span>
+<span id="L1250" data-line="1250">The implementation may show that a test is stale, incomplete or too</span>
+<span id="L1251" data-line="1251">narrow; it cannot by itself authorise changing the expected result.</span>
+<span id="L1252" data-line="1252">Changing a test only because the current code behaves differently is a</span>
+<span id="L1253" data-line="1253">ticket-method defect. A test that predates a lawful ticket repricing is</span>
+<span id="L1254" data-line="1254">updated or removed only after naming the governing ticket and the authority</span>
+<span id="L1255" data-line="1255">change that superseded the old expectation. If the ticket is stale,</span>
+<span id="L1256" data-line="1256">ambiguous or missing the authority needed to decide the expectation, the</span>
+<span id="L1257" data-line="1257">work re-enters triage (§4) before either the code or the test is treated as</span>
+<span id="L1258" data-line="1258">correct. A passing test is closure evidence only when its expectation</span>
+<span id="L1259" data-line="1259">traces back to the admitted ticket and its governing authority chain (P6,</span>
+<span id="L1260" data-line="1260">P4b). The general test authority law is ASSURANCE §3; this clause is its</span>
+<span id="L1261" data-line="1261">ticket-local rule.</span>
+<span id="L1262" data-line="1262"></span>
+<span id="L1263" data-line="1263">### One-truth state projection and drift refusal (UP-009)</span>
+<span id="L1264" data-line="1264"></span>
+<span id="L1265" data-line="1265">Work state has one authority chain: goals own the bounded work wave, the</span>
+<span id="L1266" data-line="1266">ticket owns ticket state, milestone authority owns subordinate milestone</span>
+<span id="L1267" data-line="1267">state (§1), and accepted design owns realisation decisions. Comments,</span>
+<span id="L1268" data-line="1268">dashboards, registers, indexes and generated summaries are projections</span>
+<span id="L1269" data-line="1269">(P6, P3).</span>
+<span id="L1270" data-line="1270"></span>
+<span id="L1271" data-line="1271">Recency, visibility or repetition does not turn a projection into truth.</span>
+<span id="L1272" data-line="1272">Contradiction between the owning ticket, its required milestones, the</span>
+<span id="L1273" data-line="1273">current goals or the cited acceptance evidence blocks closure. Superseded</span>
+<span id="L1274" data-line="1274">evidence remains history and cannot be projected as current acceptance</span>
+<span id="L1275" data-line="1275">(P6, P4b).</span>
+<span id="L1276" data-line="1276"></span>
+<span id="L1277" data-line="1277">## 8. Recommended shapes</span>
+<span id="L1278" data-line="1278"></span>
+<span id="L1279" data-line="1279">These shapes are the recommended carriers of the fields and sections the</span>
+<span id="L1280" data-line="1280">rules above require; a project may bind another shape that carries the</span>
+<span id="L1281" data-line="1281">same fields (§2; P3, P4b).</span>
+<span id="L1282" data-line="1282"></span>
+<span id="L1283" data-line="1283">The sprint manifest, carrying the fields of §3:</span>
+<span id="L1284" data-line="1284"></span>
+<span id="L1285" data-line="1285">```md</span>
+<span id="L1286" data-line="1286"># SPRINT-2026-04-30 Operational Projection UX Iteration</span>
+<span id="L1287" data-line="1287"></span>
+<span id="L1288" data-line="1288">- id: SPRINT-2026-04-30-operational-projection</span>
+<span id="L1289" data-line="1289">- status: active</span>
+<span id="L1290" data-line="1290">- goal: operational-projection-ux</span>
+<span id="L1291" data-line="1291">- opened_at: 2026-04-30T09:00:00Z</span>
+<span id="L1292" data-line="1292">- updated_at: 2026-04-30T09:00:00Z</span>
+<span id="L1293" data-line="1293"></span>
+<span id="L1294" data-line="1294">## Authority</span>
+<span id="L1295" data-line="1295"></span>
+<span id="L1296" data-line="1296">- specification/GOALS.md#operational-projection-ux</span>
+<span id="L1297" data-line="1297">- specification/PRODUCT.md#operational-projection</span>
+<span id="L1298" data-line="1298">- &lt;governing-design-surface&gt;/OPERATIONAL_PROJECTION.md</span>
+<span id="L1299" data-line="1299"></span>
+<span id="L1300" data-line="1300">## Scope</span>
+<span id="L1301" data-line="1301"></span>
+<span id="L1302" data-line="1302">Iterate an operational projection surface for layout, readability,</span>
+<span id="L1303" data-line="1303">interaction affordance, and visual evidence quality.</span>
+<span id="L1304" data-line="1304"></span>
+<span id="L1305" data-line="1305">## Excluded Boundaries</span>
+<span id="L1306" data-line="1306"></span>
+<span id="L1307" data-line="1307">- no product truth changes</span>
+<span id="L1308" data-line="1308">- no data contract changes</span>
+<span id="L1309" data-line="1309">- no runtime or governance semantics changes</span>
+<span id="L1310" data-line="1310">- no new constructive carrier</span>
+<span id="L1311" data-line="1311"></span>
+<span id="L1312" data-line="1312">## Expected Change Classes</span>
+<span id="L1313" data-line="1313"></span>
+<span id="L1314" data-line="1314">- realization_refactor</span>
+<span id="L1315" data-line="1315"></span>
+<span id="L1316" data-line="1316">## Iterations</span>
+<span id="L1317" data-line="1317"></span>
+<span id="L1318" data-line="1318">- id: UXI-001</span>
+<span id="L1319" data-line="1319">  intent: improve relation-line readability</span>
+<span id="L1320" data-line="1320">  evidence_ref: screenshots/2026-04-30/UXI-001.png</span>
+<span id="L1321" data-line="1321">  debt: accessibility contrast check pending</span>
+<span id="L1322" data-line="1322"></span>
+<span id="L1323" data-line="1323">## Closure</span>
+<span id="L1324" data-line="1324"></span>
+<span id="L1325" data-line="1325">- closure_trigger: timebox, changed surface volume, or design-lead close request</span>
+<span id="L1326" data-line="1326">- closure_law: forensic walkthrough reviews each changed state against authority</span>
+<span id="L1327" data-line="1327">- proof_surface: screenshots plus walkthrough notes</span>
+<span id="L1328" data-line="1328">- deferred_compliance: screenshots, accessibility check, event-replay review</span>
+<span id="L1329" data-line="1329">- non_closure_conditions: product truth or data contract drift remains hidden</span>
+<span id="L1330" data-line="1330">- paydown_policy: open paydown tickets for accepted local debt; reprice authority drift</span>
+<span id="L1331" data-line="1331">```</span>
+<span id="L1332" data-line="1332"></span>
+<span id="L1333" data-line="1333">An ordinary ticket, carrying the required fields and triage metadata of §4:</span>
+<span id="L1334" data-line="1334"></span>
+<span id="L1335" data-line="1335">```md</span>
+<span id="L1336" data-line="1336"># T-001 Add Product Layer To SPEC_METHOD</span>
+<span id="L1337" data-line="1337"></span>
+<span id="L1338" data-line="1338">- id: T-001</span>
+<span id="L1339" data-line="1339">- type: feature</span>
+<span id="L1340" data-line="1340">- ticket_category: ordinary</span>
+<span id="L1341" data-line="1341">- status: active</span>
+<span id="L1342" data-line="1342">- goal: methodology-bootstrap</span>
+<span id="L1343" data-line="1343">- change_intent: make the product-definition layer explicit in the constitutional chain</span>
+<span id="L1344" data-line="1344">- change_class: product_reprice</span>
+<span id="L1345" data-line="1345">- re_entry_point: product</span>
+<span id="L1346" data-line="1346">- triaged_at: 2026-04-07</span>
+<span id="L1347" data-line="1347">- priority: high</span>
+<span id="L1348" data-line="1348">- created_at: 2026-04-07</span>
+<span id="L1349" data-line="1349">- updated_at: 2026-04-07</span>
+<span id="L1350" data-line="1350"></span>
+<span id="L1351" data-line="1351">## Context</span>
+<span id="L1352" data-line="1352"></span>
+<span id="L1353" data-line="1353">`SPEC_METHOD.md` included intent and requirements flow but omitted the explicit</span>
+<span id="L1354" data-line="1354">product-definition layer.</span>
+<span id="L1355" data-line="1355"></span>
+<span id="L1356" data-line="1356">## Acceptance</span>
+<span id="L1357" data-line="1357"></span>
+<span id="L1358" data-line="1358">- `PRODUCT.md` is part of the constitutional chain</span>
+<span id="L1359" data-line="1359">- bootstrap sequence includes `intent -&gt; product -&gt; requirements`</span>
+<span id="L1360" data-line="1360">- examples and reconstruction logic reflect the new layer</span>
+<span id="L1361" data-line="1361"></span>
+<span id="L1362" data-line="1362">## Links</span>
+<span id="L1363" data-line="1363"></span>
+<span id="L1364" data-line="1364">- comment: `.ai-workspace/comments/&lt;agent-id&gt;/...`</span>
+<span id="L1365" data-line="1365">```</span>
+<span id="L1366" data-line="1366"></span>
+<span id="L1367" data-line="1367">An implementation migration ticket, carrying the declaration, fields and</span>
+<span id="L1368" data-line="1368">checklist of §6:</span>
+<span id="L1369" data-line="1369"></span>
+<span id="L1370" data-line="1370">```md</span>
+<span id="L1371" data-line="1371"># B-010 Replace Mixed Gap Projection With One Authoritative Carrier</span>
+<span id="L1372" data-line="1372"></span>
+<span id="L1373" data-line="1373">- id: B-010</span>
+<span id="L1374" data-line="1374">- type: bug</span>
+<span id="L1375" data-line="1375">- ticket_category: implementation_migration</span>
+<span id="L1376" data-line="1376">- migration_strategy: inside_out_hard_break</span>
+<span id="L1377" data-line="1377">- library_usage: none</span>
+<span id="L1378" data-line="1378">- library_rationale: this migration is boundary-specific and does not establish a recurring realization pattern</span>
+<span id="L1379" data-line="1379">- status: active</span>
+<span id="L1380" data-line="1380">- goal: operator-gap-truth</span>
+<span id="L1381" data-line="1381">- change_intent: replace the mixed operator gap truth with one authoritative declared carrier</span>
+<span id="L1382" data-line="1382">- change_class: design_reframe</span>
+<span id="L1383" data-line="1383">- re_entry_point: design_surface</span>
+<span id="L1384" data-line="1384">- triaged_at: 2026-04-20</span>
+<span id="L1385" data-line="1385">- created_at: 2026-04-20</span>
+<span id="L1386" data-line="1386">- updated_at: 2026-04-20</span>
+<span id="L1387" data-line="1387"></span>
+<span id="L1388" data-line="1388">## Migration Declaration</span>
+<span id="L1389" data-line="1389"></span>
+<span id="L1390" data-line="1390">- affected_scope: gap projection on the declared operator-query acceptance path</span>
+<span id="L1391" data-line="1391">- excluded_or_disjoint_scopes: none</span>
+<span id="L1392" data-line="1392">- old_truth_path: fallback gap projection with synthetic convergence fields</span>
+<span id="L1393" data-line="1393">- new_truth_path: explicit declared-obligation projection plus separately classified fallback gaps</span>
+<span id="L1394" data-line="1394">- producers_old: `&lt;gap-module&gt;::build_fallback_gap`</span>
+<span id="L1395" data-line="1395">- producers_new: `&lt;obligation-module&gt;::collect_declared_obligations`, `&lt;gap-module&gt;::build_canonical_gap`</span>
+<span id="L1396" data-line="1396">- consumers_old: `&lt;query-module&gt;::project_gaps`, `&lt;summary-module&gt;::project_span`, `&lt;review-surface&gt;::render`</span>
+<span id="L1397" data-line="1397">- consumers_new: `&lt;query-module&gt;::project_gaps`, `&lt;summary-module&gt;::project_span`, `&lt;review-surface&gt;::render`</span>
+<span id="L1398" data-line="1398">- derived_surfaces:</span>
+<span id="L1399" data-line="1399">  - `&lt;query-surface&gt;::gaps`</span>
+<span id="L1400" data-line="1400">  - `&lt;summary-surface&gt;::span`</span>
+<span id="L1401" data-line="1401">  - `&lt;proof-surface&gt;::first_slice_negative`</span>
+<span id="L1402" data-line="1402">- closure_law: migration closes only when the old projection is no longer authoritative within the affected scope and mixed old/new proof does not count as acceptance</span>
+<span id="L1403" data-line="1403"></span>
+<span id="L1404" data-line="1404">## Migration Checklist</span>
+<span id="L1405" data-line="1405"></span>
+<span id="L1406" data-line="1406">- [ ] exact affected migration scope is named</span>
+<span id="L1407" data-line="1407">- [ ] excluded or disjoint Product and compatibility scopes are named with deterministic routing, or explicitly declared absent</span>
+<span id="L1408" data-line="1408">- [ ] old truth path is named explicitly</span>
+<span id="L1409" data-line="1409">- [ ] new truth path is named explicitly</span>
+<span id="L1410" data-line="1410">- [ ] producer set for the new truth is listed</span>
+<span id="L1411" data-line="1411">- [ ] consumer set for the new truth is listed</span>
+<span id="L1412" data-line="1412">- [ ] projection/read-model surfaces are listed</span>
+<span id="L1413" data-line="1413">- [ ] old truth path is removed or explicitly demoted from authority within the affected scope</span>
+<span id="L1414" data-line="1414">- [ ] mixed-state behavior is no longer accepted as closure evidence</span>
+<span id="L1415" data-line="1415">- [ ] tests proving mixed old/new behavior are removed or repriced</span>
+<span id="L1416" data-line="1416">- [ ] recurring realization patterns are checked against existing library/commonization surfaces</span>
+<span id="L1417" data-line="1417">- [ ] ticket declares library usage and names the governing library or rationale</span>
+<span id="L1418" data-line="1418">- [ ] if the work exists in more than one build tenant, this backlog/active ticket carries only one tenant lifecycle and any sibling tenant work lives on its own suffixed ticket</span>
+<span id="L1419" data-line="1419">- [ ] ticket wording, product wording, and proof claims are reconciled before closure</span>
+<span id="L1420" data-line="1420">```</span>
+<span id="L1421" data-line="1421"></span>
+<span id="L1422" data-line="1422">## 9. Operating mode and relationships</span>
+<span id="L1423" data-line="1423"></span>
+<span id="L1424" data-line="1424">### Operating mode</span>
+<span id="L1425" data-line="1425"></span>
+<span id="L1426" data-line="1426">The default local-file carrier assumes that humans and agents can read the</span>
+<span id="L1427" data-line="1427">active ticket folder directly; that backlog remains searchable durable work</span>
+<span id="L1428" data-line="1428">without competing with the active lane for immediate attention; that `rg`</span>
+<span id="L1429" data-line="1429">is sufficient for finding active work; and that no database or board is</span>
+<span id="L1430" data-line="1430">required (P0, P2). Typical commands for that carrier:</span>
+<span id="L1431" data-line="1431"></span>
+<span id="L1432" data-line="1432">```bash</span>
+<span id="L1433" data-line="1433">rg -n &quot;^#|^- status:|^- type:|^- goal:&quot;.ai-workspace/tickets/active</span>
+<span id="L1434" data-line="1434">rg -n &quot;^#|^- status:|^- type:|^- goal:&quot;.ai-workspace/tickets/backlog</span>
+<span id="L1435" data-line="1435">rg -n &quot;T-001|B-002&quot;.ai-workspace/tickets</span>
+<span id="L1436" data-line="1436">```</span>
+<span id="L1437" data-line="1437"></span>
+<span id="L1438" data-line="1438">### Relationship to other surfaces</span>
+<span id="L1439" data-line="1439"></span>
+<span id="L1440" data-line="1440">Each surface answers one question (P3, P6). The goals surface: what broad work wave</span>
+<span id="L1441" data-line="1441">matters now. SPEC_METHOD: what constitutional change class and re-entry</span>
+<span id="L1442" data-line="1442">point govern the work. Sprints: what bounded execution batch is currently</span>
+<span id="L1443" data-line="1443">pricing proof, evidence and paydown. Tickets: what durable units of work</span>
+<span id="L1444" data-line="1444">exist and what state they are in. Comments: what was proposed, argued,</span>
+<span id="L1445" data-line="1445">decided, reviewed or handed off. POSTING_GUIDE: how comment-layer</span>
+<span id="L1446" data-line="1446">publications are structured and named.</span>
+<span id="L1447" data-line="1447"></span>
+<span id="L1448" data-line="1448">The separation prevents goals becoming an overloaded backlog; active work</span>
+<span id="L1449" data-line="1449">being diluted by every deferred ticket; comments becoming informal task</span>
+<span id="L1450" data-line="1450">status; and task boards becoming accidental authority (§2, §7).</span></pre></html>

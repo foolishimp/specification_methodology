@@ -1,0 +1,124 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>standards/templates/README.md</title><style>body{font:14px system-ui;margin:24px;background:#101720;color:#dfeaf4}a{color:#87c7ff}pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5;counter-reset:line}span{display:block}span:before{content:attr(data-line);display:inline-block;width:4em;color:#7392aa;user-select:none}span:target{background:#36481d}</style><h1>standards/templates/README.md</h1><p>Exact frozen source · SHA256 0cad976e5d9c9b6b272aa5d417f2d4f9626b93980e26b2195ae25f7517d52438</p><pre><span id="L1" data-line="1"># Standards Templates</span>
+<span id="L2" data-line="2"></span>
+<span id="L3" data-line="3">This directory holds starter templates for shared specification surfaces and</span>
+<span id="L4" data-line="4">agent bootstrap surfaces.</span>
+<span id="L5" data-line="5"></span>
+<span id="L6" data-line="6">Use these templates as source material for project-local files such as:</span>
+<span id="L7" data-line="7"></span>
+<span id="L8" data-line="8">- `stdo_default.json` or `stdo_&lt;label&gt;.json`, copied from</span>
+<span id="L9" data-line="9">  `PRODUCT_DEFINITION_TEMPLATE.json`</span>
+<span id="L10" data-line="10">- `GOALS.md`</span>
+<span id="L11" data-line="11">- `INTENT.md`</span>
+<span id="L12" data-line="12">- `PRODUCT.md`</span>
+<span id="L13" data-line="13">- `CLAUDE.md`</span>
+<span id="L14" data-line="14">- `AGENTS.md`</span>
+<span id="L15" data-line="15">- a Product-owned Project Reference-Frame Basis copied from</span>
+<span id="L16" data-line="16">  `PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md`</span>
+<span id="L17" data-line="17"></span>
+<span id="L18" data-line="18">## Product Definition Overlay</span>
+<span id="L19" data-line="19"></span>
+<span id="L20" data-line="20">`PRODUCT_DEFINITION_TEMPLATE.json` is the one per-product fill-in overlay. Its</span>
+<span id="L21" data-line="21">normative schema is `../schemas/product-definition.schema.json`.</span>
+<span id="L22" data-line="22"></span>
+<span id="L23" data-line="23">The schema identity is `urn:stdo:schema:product-definition:3`. It declares one</span>
+<span id="L24" data-line="24">explicit STDO source, mutable version-line selector, exact installed basis and</span>
+<span id="L25" data-line="25">manifest digest, plus `additional_authorities`. Constitutional entrypoints are</span>
+<span id="L26" data-line="26">basis-qualified objects, and `agent_bootstrap` declares the entrypoint and local</span>
+<span id="L27" data-line="27">instruction targets managed between stable markers. The complete definition</span>
+<span id="L28" data-line="28">relations are stated in [PRODUCT_DEFINITION](../PRODUCT_DEFINITION.md#2-required-definition-relations).</span>
+<span id="L29" data-line="29"></span>
+<span id="L30" data-line="30">Copy it to the logical root of one product definition:</span>
+<span id="L31" data-line="31"></span>
+<span id="L32" data-line="32">- use `stdo_default.json` for a singleton default project;</span>
+<span id="L33" data-line="33">- use `stdo_&lt;label&gt;.json` for a named product;</span>
+<span id="L34" data-line="34">- place several `stdo_&lt;label&gt;.json` files at one monorepo root when that root</span>
+<span id="L35" data-line="35">  hosts several distinct product `WHAT` definitions; or</span>
+<span id="L36" data-line="36">- place one or more definitions at arbitrarily deep nested project roots in a</span>
+<span id="L37" data-line="37">  hierarchical repository.</span>
+<span id="L38" data-line="38"></span>
+<span id="L39" data-line="39">The containing directory is the definition root. Resolve relative URI</span>
+<span id="L40" data-line="40">references from the copied JSON file. Fill its bindings over the project&#x27;s</span>
+<span id="L41" data-line="41">existing files and systems; do not restructure an existing project merely to</span>
+<span id="L42" data-line="42">match the default paths in the template.</span>
+<span id="L43" data-line="43"></span>
+<span id="L44" data-line="44">The template&#x27;s `$schema` value is relative to the same exact logical release</span>
+<span id="L45" data-line="45">basis selected in `constitution.stdo.basis`; it contains no machine-local store</span>
+<span id="L46" data-line="46">path. Install the cut once through the STDO toolchain manager and resolve the</span>
+<span id="L47" data-line="47">`stdo:` URI through that manager. A project-local `.genesis` copy is not</span>
+<span id="L48" data-line="48">required.</span>
+<span id="L49" data-line="49"></span>
+<span id="L50" data-line="50">One definition represents one distinct product `WHAT`. Put multiple</span>
+<span id="L51" data-line="51">independent realizations of that same `WHAT` in `how.build_tenants`, not in</span>
+<span id="L52" data-line="52">additional definition files.</span>
+<span id="L53" data-line="53"></span>
+<span id="L54" data-line="54">`reference_frame_bases` is required and non-empty. Point each `uri` at the</span>
+<span id="L55" data-line="55">accepted project frame-basis declaration already carried by Product,</span>
+<span id="L56" data-line="56">requirements, local constitutional authority, accepted design, or another</span>
+<span id="L57" data-line="57">lawful surface. Bind every admitting authority and exact governed scope. The</span>
+<span id="L58" data-line="58">default path uses `./specification/REFERENCE_FRAME_BASIS.md`; replace it when</span>
+<span id="L59" data-line="59">the owning project chooses another layout. Do not put agent identities or</span>
+<span id="L60" data-line="60">temporary frame activations in the Product Definition Overlay; their authorized</span>
+<span id="L61" data-line="61">work instruction or activation packet cites the applicable basis.</span>
+<span id="L62" data-line="62"></span>
+<span id="L63" data-line="63">`PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md` is the copyable structured-prose</span>
+<span id="L64" data-line="64">starter for that referenced declaration. It projects the normative binding law</span>
+<span id="L65" data-line="65">from `PRODUCT_DEFINITION.md` section 7; it does not become authority by being</span>
+<span id="L66" data-line="66">copied. A project</span>
+<span id="L67" data-line="67">may use another carrier when it preserves the same exact sources, roles,</span>
+<span id="L68" data-line="68">frames, grants, results, coverage, invalidation, and re-entry relations.</span>
+<span id="L69" data-line="69"></span>
+<span id="L70" data-line="70">The template includes one `local_constitution.disambiguations` placeholder to</span>
+<span id="L71" data-line="71">show the complete binding. Replace it for every material local term resolution,</span>
+<span id="L72" data-line="72">or remove it and retain an empty array when the product has none. Each binding</span>
+<span id="L73" data-line="73">names the exact term, target bounded context, complete material candidate set,</span>
+<span id="L74" data-line="74">selected concept, owning resolution carrier and authority, semantic bases, and</span>
+<span id="L75" data-line="75">governed scope. When candidates cross contexts, the referenced `uri` also owns</span>
+<span id="L76" data-line="76">the complete import, translation, or equivalence relation required by</span>
+<span id="L77" data-line="77">`PRODUCT_DEFINITION.md` section 5; the JSON entry does not restate that</span>
+<span id="L78" data-line="78">meaning.</span>
+<span id="L79" data-line="79"></span>
+<span id="L80" data-line="80">Replace at least:</span>
+<span id="L81" data-line="81"></span>
+<span id="L82" data-line="82">- `$schema` with the exact immutable release URI selected below;</span>
+<span id="L83" data-line="83">- `product.definition_id`, name, source-project locator, and bounded-context</span>
+<span id="L84" data-line="84">  declaration, keeping definition identity distinct from immutable Product and</span>
+<span id="L85" data-line="85">  release identities;</span>
+<span id="L86" data-line="86">- `constitution.stdo.source.repository`, the non-operative</span>
+<span id="L87" data-line="87">  `stdo://channels/&lt;version&gt;` selector, and the exact</span>
+<span id="L88" data-line="88">  `stdo://releases/&lt;immutable-rc&gt;/` basis plus installed-manifest digest;</span>
+<span id="L89" data-line="89">- every additional constitutional authority, basis-qualified entrypoint, agent</span>
+<span id="L90" data-line="90">  bootstrap target, and local constitutional relation;</span>
+<span id="L91" data-line="91">- every retained disambiguation placeholder, including its term, context,</span>
+<span id="L92" data-line="92">  candidate concepts, selected concept, authority, basis, and scope;</span>
+<span id="L93" data-line="93">- collective reference-frame basis URIs, admitting authorities, and scopes;</span>
+<span id="L94" data-line="94">- Intent, Product, and specification URIs;</span>
+<span id="L95" data-line="95">- shared and tenant-local `HOW` URIs;</span>
+<span id="L96" data-line="96">- Goals, ticket, comment, and optional sprint carrier URIs; and</span>
+<span id="L97" data-line="97">- explicit composition edges to other `stdo_*.json` definitions, including</span>
+<span id="L98" data-line="98">  expected target definition identity, relation authority, and at least one</span>
+<span id="L99" data-line="99">  governing contract.</span>
+<span id="L100" data-line="100"></span>
+<span id="L101" data-line="101">Set `product.bounded_context` to `null` when the product does not claim a</span>
+<span id="L102" data-line="102">separate enclosing bounded context. The field is not an exhaustive registry;</span>
+<span id="L103" data-line="103">subordinate, peer, composed, tenant, user, and runtime contexts remain in their</span>
+<span id="L104" data-line="104">own authority and are related explicitly. Remove the illustrative</span>
+<span id="L105" data-line="105">disambiguation when it does not apply. Empty local-constitution and composition</span>
+<span id="L106" data-line="106">arrays are explicit declarations of none.</span>
+<span id="L107" data-line="107"></span>
+<span id="L108" data-line="108">Portable Draft 2020-12 schema validation proves JSON shape. Use an</span>
+<span id="L109" data-line="109">assertion-capable RFC 3986 validator for the annotated URI and URI-reference</span>
+<span id="L110" data-line="110">formats, then resolve every URI and fragment, verify the selected immutable</span>
+<span id="L111" data-line="111">constitutional set, confirm unique definition and tenant identities, verify</span>
+<span id="L112" data-line="112">composition target identities and contracts, and evaluate constitutional</span>
+<span id="L113" data-line="113">sufficiency, semantic resolution, cross-context relation completeness, and</span>
+<span id="L114" data-line="114">authority congruence under `PRODUCT_DEFINITION.md` section 9.</span>
+<span id="L115" data-line="115"></span>
+<span id="L116" data-line="116">For a filled definition, `stdo sync --definition &lt;file&gt;` installs and verifies</span>
+<span id="L117" data-line="117">only its already selected exact basis. Run</span>
+<span id="L118" data-line="118">`stdo adopt --definition &lt;file&gt; --dry-run` to show the immutable cut currently</span>
+<span id="L119" data-line="119">advertised by its annotated version-line selector and its exact plan digest;</span>
+<span id="L120" data-line="120">apply with `--accept-plan-sha256 &lt;digest&gt;` in a separate invocation only after</span>
+<span id="L121" data-line="121">explicitly accepting that basis change. `stdo bootstrap --definition &lt;file&gt;`</span>
+<span id="L122" data-line="122">preflights targets relative to `product.source_project` and refreshes only the</span>
+<span id="L123" data-line="123">declared marker-bounded agent bootstrap. Fleet writes require `--all`; fleet</span>
+<span id="L124" data-line="124">adoption also requires its separately presented aggregate plan digest.</span></pre></html>

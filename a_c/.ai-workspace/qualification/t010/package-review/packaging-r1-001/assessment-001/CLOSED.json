@@ -1,0 +1,115 @@
+{
+  "STDOtrial_native_outputs_accessed": false,
+  "actual_portable_rebuild": {
+    "all_bundle_and_archive_bytes_identical": true,
+    "only_bundled_inputs_plus_explicit_pinned_upstream_and_existing_runtime": true,
+    "performed": true
+  },
+  "artifact": {
+    "archive_bytes": 10089542,
+    "archive_sha256": "989c0efbbba90c1d444c6a1c24def4174ef8519bec5f63d9bef021f27dd75e2b",
+    "bundle_bytes": 110473751,
+    "bundle_files": 213,
+    "file_vector_sha256": "22def4fbec18e4ec543d01ddf2ae71a59fc1cf5e2d20c3601b09ede4f84df6fd",
+    "id": "a_c-stdo-v3-common-35fb4824-packaging-r1",
+    "sidecar_sha256": "39c3d997f3a75f38b9599cf970ba962df76a3d42ee0beb8825e7e4527a9bcb76"
+  },
+  "candidate_pins": {
+    "app/codec/ac_graph.py": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+    "app/package_release.py": "324fe8242ecb4f67c6f6ed77c6ff3f674245f53c73f17ba1029f0e9f03b28ccb",
+    "app/release_tools/bundle_check.py": "74beb6365104bc4352b691725c9e18fe3521d01fe50a080c0c9cc735a4a141f5",
+    "app/release_tools/public_receipts.py": "ab91aae1bd08d64c167833095735735235919e0dd32a040b39d95c60291cf3b3",
+    "out/first/dist/a_c-stdo-v3-common-35fb4824-packaging-r1.tar.gz": "989c0efbbba90c1d444c6a1c24def4174ef8519bec5f63d9bef021f27dd75e2b",
+    "out/first/dist/a_c-stdo-v3-common-35fb4824-packaging-r1.tar.gz.sha256": "39c3d997f3a75f38b9599cf970ba962df76a3d42ee0beb8825e7e4527a9bcb76",
+    "proof/CLOSED.json": "dfae7c7fbe60c1f8f81b6383fc31ea2796bef13cdcf1ee23fbf09c6fdd06be04",
+    "proof/code.diff": "77f451af2fb3720038c7d240edae14109442f8a85e5790b6bd19e105bb21d305",
+    "proof/frozen-bundle-files.json": "81fdbd49f4e582f5691ccd18c7fec6babac34ab49d32201330f7e8f91be31c09"
+  },
+  "candidate_root": "/Users/jim/tmp/a_c-common-rc1-packaging-repair-20261021",
+  "controls": {
+    "all_passed": true,
+    "independent_code_diff_matches": true,
+    "old_new_files_changed": 7,
+    "old_new_payload_files_byte_identical": 206,
+    "stage1": 31,
+    "stage2": 17,
+    "total": 48
+  },
+  "effects": "own assessment territory only; no repair, promotion or original/candidate mutation",
+  "elapsed_seconds": 614.245612,
+  "finished_at": "2026-10-20T13:48:25.623172+00:00",
+  "guard_mismatches": [],
+  "independence": "nonauthor; same family/context, provider-family independence not certified",
+  "native_model_network_install_browser_server_git_store_effects": 0,
+  "original_candidate_preparation_guarded_paths": 659,
+  "outcome": "no_actionable_defect_found_within_PKG_R01_R04",
+  "outer_cap_minutes": 45,
+  "owner_promotion_or_release_decision": "not issued",
+  "predicate_coverage": {
+    "PKG-R01": "satisfied within selected path/effect and valid-layout controls",
+    "PKG-R02": "actual documented bundled-input rebuild and authentication controls passed",
+    "PKG-R03": "genuine verifier and four full rehashed wrong/missing source-field refusals passed",
+    "PKG-R04": "rawfive/source81/source3/receipts/static payloads/original archive and new identifier conserved"
+  },
+  "preparation_conserved": {
+    "all_preparation_proof_files_unchanged": true,
+    "closure_sha256": "cc8dbb8adf78599a1e36306eb136aee2042a8cff3ff93237cde688e5bba4b11e",
+    "oracle_sha256": "28f29e74cb26df78e0fbe069ca2ef3e045e47309bb8696f71f4a655be44326f8"
+  },
+  "proof": {
+    "ACTIVATION.json": {
+      "bytes": 3362,
+      "sha256": "226734ea664d34b4a9e7aef3b6e379b01f936526da1d8462c6ed84604b30d97c"
+    },
+    "ACTUAL-REBUILD-INPUT-CLOSURE.json": {
+      "bytes": 2044,
+      "sha256": "aaba2d90a4f59139b30a820a092183e2118b6af9fbf55f5535c74477068ccb6b"
+    },
+    "DELTA-CONSERVATION.json": {
+      "bytes": 749,
+      "sha256": "437783889532508c5b1a60bc0adbd837104d8f4eaa6f47440749b9930ab04768"
+    },
+    "READONLY-GUARDS.json": {
+      "bytes": 146407,
+      "sha256": "e589f3084312b76c8b9e9e2bcedf072924a5e80aa98c54efc6663b6413705905"
+    },
+    "REVIEW.md": {
+      "bytes": 7424,
+      "sha256": "61f8b119216cf7991bebacb7deb48e24cafd26019bc73a0cff38b6737bcbcfcc"
+    },
+    "STAGE1.json": {
+      "bytes": 26705,
+      "sha256": "7041e27726af917a4852adf34cbf44d11d094a363d33aa2be15f39796bad9ab4"
+    },
+    "STAGE2.json": {
+      "bytes": 8219,
+      "sha256": "5d8c0f28712ca758ce2716e9d67f3206cedb5f50971c05430d0c3b0a7cc83fb3"
+    },
+    "independent-code.diff": {
+      "bytes": 8425,
+      "sha256": "77f451af2fb3720038c7d240edae14109442f8a85e5790b6bd19e105bb21d305"
+    },
+    "stage1_focus.py": {
+      "bytes": 11355,
+      "sha256": "f4d8f230119882107cd9d38feedb600803771c3a18894c884ac1997ee227fc1c"
+    },
+    "stage2_actual.py": {
+      "bytes": 9175,
+      "sha256": "5a0f79a228b85befdb340ab26e09a3fca6c2b23b5afdd0b96baa86a9f3767591"
+    }
+  },
+  "role": "nonauthor focused actual Reviewer / proof-only Writer",
+  "source": {
+    "commit": "35fb4824a064a84df5af214a0d0e2da597c18ac6",
+    "model_canonical_sha256": "691c4ab0d0993312a31e7e2371070ea4758fdf74b32862ff4d5a32d05af79fbf",
+    "package_tree": "7f2070b61c848b42b4dfb3af1e0ce53869de1aa1"
+  },
+  "status": "CLOSED",
+  "unresolved": [
+    "interactive behavior",
+    "complete semantic/calculus/global governing qualification",
+    "F_P actual-use/benefit",
+    "A3 concrete invariant reconstruction",
+    "source/representation acceptance and release"
+  ]
+}

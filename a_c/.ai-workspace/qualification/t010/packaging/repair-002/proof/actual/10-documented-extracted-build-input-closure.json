@@ -1,0 +1,29 @@
+{
+  "all_source_readiness_model_source_and_receipt_inputs": "Bundled relative inputs in extracted first archive; no omitted originating-workspace document/private run required",
+  "cwd": "/Users/jim/tmp/a_c-common-rc1-packaging-repair-20261021/out/extracted-first/a_c-stdo-v3-common-35fb4824-packaging-r1",
+  "documented_recipe": "python3 -B package_release.py build \\\n  --proposal . --public-evidence evidence/authoring-public.json \\\n  --review evidence/reviews/review-001/receipt.json \\\n  --upstream /absolute/path/to/the/pinned/graphify/checkout \\\n  --bundle /tmp/a_c-common-packaging-r1-rebuilt \\\n  --dist /tmp/a_c-common-packaging-r1-rebuilt-dist",
+  "executed_argv": [
+    "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python3",
+    "-B",
+    "package_release.py",
+    "build",
+    "--proposal",
+    ".",
+    "--public-evidence",
+    "evidence/authoring-public.json",
+    "--review",
+    "evidence/reviews/review-001/receipt.json",
+    "--upstream",
+    "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout",
+    "--bundle",
+    "/Users/jim/tmp/a_c-common-rc1-packaging-repair-20261021/out/second/bundle/a_c-stdo-v3-common-35fb4824-packaging-r1",
+    "--dist",
+    "/Users/jim/tmp/a_c-common-rc1-packaging-repair-20261021/out/second/dist"
+  ],
+  "only_external_build_dependencies": {
+    "existing_python_networkx_environment": "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python3",
+    "graphify_checkout": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout",
+    "graphify_commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7"
+  },
+  "source_readme_sha256": "2ad1c97f39b1b982ac938dba4500f425f2b160b3b1f314a2cc1cf69bcbb76e3f"
+}

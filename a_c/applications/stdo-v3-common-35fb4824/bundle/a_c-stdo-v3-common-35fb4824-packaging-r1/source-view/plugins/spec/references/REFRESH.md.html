@@ -1,0 +1,102 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>plugins/spec/references/REFRESH.md</title><style>body{font:14px system-ui;margin:24px;background:#101720;color:#dfeaf4}a{color:#87c7ff}pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5;counter-reset:line}span{display:block}span:before{content:attr(data-line);display:inline-block;width:4em;color:#7392aa;user-select:none}span:target{background:#36481d}</style><h1>plugins/spec/references/REFRESH.md</h1><p>Exact frozen source · SHA256 12b9524ea60e58eaa6c3b96c1d547625483e030ba91a2f834e4881be0eaf2a89</p><pre><span id="L1" data-line="1"># STDO Refresh Procedure</span>
+<span id="L2" data-line="2"></span>
+<span id="L3" data-line="3">Reload one complete registry entry from exactly one selected STDO basis. An</span>
+<span id="L4" data-line="4">entry is a declared bundle, owning member or task frame of this method. This is a read-only context</span>
+<span id="L5" data-line="5">projection; it does not create a partial constitution.</span>
+<span id="L6" data-line="6"></span>
+<span id="L7" data-line="7">## Inputs</span>
+<span id="L8" data-line="8"></span>
+<span id="L9" data-line="9">Exactly one basis mode is required:</span>
+<span id="L10" data-line="10"></span>
+<span id="L11" data-line="11">- `--installed`: discover the applicable Product Definition and use its pinned,</span>
+<span id="L12" data-line="12">  verified installed basis;</span>
+<span id="L13" data-line="13">- `--release &lt;product-local-cut&gt;`: resolve immutable product-local cut</span>
+<span id="L14" data-line="14">  `v&lt;version&gt;-rc.&lt;n&gt;` through the STDO manager; or</span>
+<span id="L15" data-line="15">- `--candidate`: load mutable methodology source and label it non-operative.</span>
+<span id="L16" data-line="16"></span>
+<span id="L17" data-line="17">Optional `--doc &lt;name&gt;` selects one registry entry. `--list` prints the</span>
+<span id="L18" data-line="18">registry and stops. With neither, load the `spec` entry.</span>
+<span id="L19" data-line="19"></span>
+<span id="L20" data-line="20">## Registry</span>
+<span id="L21" data-line="21"></span>
+<span id="L22" data-line="22">Each bundle loads its listed members in order. Owner and task entries</span>
+<span id="L23" data-line="23">select narrower acquisition without changing the complete selected basis. A member listed without sections</span>
+<span id="L24" data-line="24">loads in full. A listed section loads in full with all its subsections, up</span>
+<span id="L25" data-line="25">to the next heading at its own level or shallower.</span>
+<span id="L26" data-line="26"></span>
+<span id="L27" data-line="27">| Name | Members |</span>
+<span id="L28" data-line="28">|---|---|</span>
+<span id="L29" data-line="29">| `frame` | `REFERENCE_FRAME.md`; `FOUNDATIONS.md` §2 and §4; `ACTIVATION.md` §1 to §4 and §7; `EVALUATION.md` §7 |</span>
+<span id="L30" data-line="30">| `frame-baseline` | `EXECUTIVE_BASELINE.md`; `ASSURANCE.md` §7 to §13; `EVALUATION.md` §4 |</span>
+<span id="L31" data-line="31">| `spec` | `SPEC_METHOD.md`; `ACTIVATION.md`; `PRODUCT_DEFINITION.md`; `ASSURANCE.md`; `EVALUATION.md`; `TICKETS.md`; `FOUNDATIONS.md` §2 and §3; `PROFILES.md` §2 and §3 |</span>
+<span id="L32" data-line="32">| `design` | `DESIGN_MODULE.md`; `ASSURANCE.md` §14 to §16; `ACTIVATION.md` §1, §4 and §6; `SPEC_METHOD.md` §2; `FOUNDATIONS.md` §4 |</span>
+<span id="L33" data-line="33">| `odd` | `ODD.md` |</span>
+<span id="L34" data-line="34">| `ux` | `UX.md`; `TICKETS.md` §3; `PROFILES.md` §2 |</span>
+<span id="L35" data-line="35">| `writing` | `WRITING_GUIDE.md` |</span>
+<span id="L36" data-line="36">| `posting` | `POSTING_GUIDE.md`; `SPEC_METHOD.md` §6 |</span>
+<span id="L37" data-line="37">| `ticket` | `TICKETS.md`; `ACTIVATION.md` §1; `SPEC_METHOD.md` §3 and §7 |</span>
+<span id="L38" data-line="38">| `release` | `RELEASE.md`; `FOUNDATIONS.md` §1 and §2; `PRODUCT_DEFINITION.md` §4; `EVALUATION.md` §5 |</span>
+<span id="L39" data-line="39">| `identity` | `IDENTITY.md`; `RELEASE.md` §1, §3 and §8; `DESIGN_MODULE.md` §12 |</span>
+<span id="L40" data-line="40">| `world` | `WORLD_MODEL.md`; `FOUNDATIONS.md` §3 |</span>
+<span id="L41" data-line="41">| `glossary` | `GLOSSARY.md`; `PROFILES.md` §2 |</span>
+<span id="L42" data-line="42">| `calculus` | `AXIOMATIC_CALCULUS.md` |</span>
+<span id="L43" data-line="43">| `traversal` | `TRAVERSAL_OCCURRENCE.md`; `AXIOMATIC_CALCULUS.md` §8 |</span>
+<span id="L44" data-line="44">| `library` | `README.md`; `PRODUCT_DEFINITION.md` §4 and §12; `RELEASE.md` §3 and §4 |</span>
+<span id="L45" data-line="45"></span>
+<span id="L46" data-line="46">## Owner And Task Entries</span>
+<span id="L47" data-line="47"></span>
+<span id="L48" data-line="48">The bundle names above remain available. `owner:&lt;member&gt;` selects one owning</span>
+<span id="L49" data-line="49">member, using its exact filename without `.md`, such as</span>
+<span id="L50" data-line="50">`owner:FOUNDATIONS`, `owner:ACTIVATION` or `owner:WORLD_MODEL`. Accept only a</span>
+<span id="L51" data-line="51">member listed in the verified standards inventory; the local</span>
+<span id="L52" data-line="52">[method entry](../../../standards/README.md) locates its scope. A full owner</span>
+<span id="L53" data-line="53">read has its own acquisition cost; select a task entry when it is sufficient.</span>
+<span id="L54" data-line="54"></span>
+<span id="L55" data-line="55">| Name | Member |</span>
+<span id="L56" data-line="56">|---|---|</span>
+<span id="L57" data-line="57">| `task:rf-task-a` | `frames/rf-task-a.md` |</span>
+<span id="L58" data-line="58">| `task:rf-task-b` | `frames/rf-task-b.md` |</span>
+<span id="L59" data-line="59">| `task:ac-task-a` | `frames/ac-task-a.md` |</span>
+<span id="L60" data-line="60">| `task:traversal-task-f` | `frames/traversal-task-f.md` |</span>
+<span id="L61" data-line="61">| `task:eb-task-d` | `frames/eb-task-d.md` |</span>
+<span id="L62" data-line="62">| `task:dm-task-d` | `frames/dm-task-d.md` |</span>
+<span id="L63" data-line="63">| `task:configuration` | `frames/configuration.md` |</span>
+<span id="L64" data-line="64">| `task:binding` | `frames/binding.md` |</span>
+<span id="L65" data-line="65">| `task:stale-summary` | `frames/stale-summary.md` |</span>
+<span id="L66" data-line="66">| `task:bootstrap` | `frames/bootstrap.md` |</span>
+<span id="L67" data-line="67">| `task:acceptance-release` | `frames/acceptance-release.md` |</span>
+<span id="L68" data-line="68">| `task:member-build-assess` | `frames/member-build-assess.md` |</span>
+<span id="L69" data-line="69"></span>
+<span id="L70" data-line="70">Task frames own no determination. Check their current source bindings and</span>
+<span id="L71" data-line="71">acquire missing deciding owner sections under ACTIVATION §2; do not treat a</span>
+<span id="L72" data-line="72">route as proof that the frame is sufficient for every task.</span>
+<span id="L73" data-line="73"></span>
+<span id="L74" data-line="74">## Procedure</span>
+<span id="L75" data-line="75"></span>
+<span id="L76" data-line="76">1. Resolve exactly one basis. For installed mode, require one Product</span>
+<span id="L77" data-line="77">   Definition and verify its URI and manifest. For release mode, resolve the</span>
+<span id="L78" data-line="78">   product-local cut through the manager; its Git transport may be</span>
+<span id="L79" data-line="79">   project-qualified. Never substitute the moving selector. For candidate</span>
+<span id="L80" data-line="80">   mode, emit:</span>
+<span id="L81" data-line="81"></span>
+<span id="L82" data-line="82">   ```text</span>
+<span id="L83" data-line="83">   [CANDIDATE] Mutable STDO authoring source loaded. This is not released consumer law.</span>
+<span id="L84" data-line="84">   ```</span>
+<span id="L85" data-line="85"></span>
+<span id="L86" data-line="86">2. Resolve the selected entry and each of its members and sections using</span>
+<span id="L87" data-line="87">   [Product Basis Selection](PRODUCT_BASIS.md#read-a-member-from-that-basis),</span>
+<span id="L88" data-line="88">   checking the manifest, member digest and anchor. Candidate mode uses the</span>
+<span id="L89" data-line="89">   explicitly selected package and carries no released-consumer standing. Refuse</span>
+<span id="L90" data-line="90">   unknown names and any fallback to a different install, local copy,</span>
+<span id="L91" data-line="91">   mutable source, or nearby Product.</span>
+<span id="L92" data-line="92">3. For each listed member or section, in order, read and surface it in full</span>
+<span id="L93" data-line="93">   with its name, exact basis, resolved source, full content, and explicit</span>
+<span id="L94" data-line="94">   end marker.</span>
+<span id="L95" data-line="95">4. Conclude:</span>
+<span id="L96" data-line="96"></span>
+<span id="L97" data-line="97">   ```text</span>
+<span id="L98" data-line="98">   Active context: &lt;name&gt; from &lt;basis&gt;. The complete selected basis remains constitutional authority.</span>
+<span id="L99" data-line="99">   ```</span>
+<span id="L100" data-line="100"></span>
+<span id="L101" data-line="101">Multiple explicit calls may build a multi-document context. Daily workflow</span>
+<span id="L102" data-line="102">skills should normally read only the smallest relevant source surface.</span></pre></html>

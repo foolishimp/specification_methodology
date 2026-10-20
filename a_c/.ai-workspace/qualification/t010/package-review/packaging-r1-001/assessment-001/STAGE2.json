@@ -1,0 +1,231 @@
+{
+  "STDOtrial_native_output_access": false,
+  "actual_rehashed_duplicate_source_refusals": 4,
+  "candidate_guard_mismatches": [],
+  "controls": [
+    {
+      "name": "actual-stdlib-portable-verifier",
+      "observed": {
+        "returncode": 0,
+        "stderr": ""
+      },
+      "passed": true
+    },
+    {
+      "name": "actual-genuine-source-and-model-replay",
+      "observed": {
+        "claim": "Exact bundle custody, bounded structural checks and carrier recovery; no semantic acceptance, source-method release, or public-distribution authorization.",
+        "displayed_records": 1987,
+        "inventory_files": 211,
+        "model": {
+          "id": "urn:a-c:generation:0657852b6fd1fa48457c3f7d:model:2e6f0d59737b5bca00691b60",
+          "sha256": "691c4ab0d0993312a31e7e2371070ea4758fdf74b32862ff4d5a32d05af79fbf"
+        },
+        "omitted_records": 0,
+        "physical_grounding_occurrences": 2491,
+        "public_evidence": {
+          "bounded_review_receipts": 1,
+          "claim": "Types, exact source/model/artifact bindings and readable-report custody checked; receipt truth, issuer legitimacy, independence and semantic fitness remain external.",
+          "construction_receipt": "urn:a-c:common:35fb4824:public-construction-account:1"
+        },
+        "records": 1987,
+        "source": {
+          "bytes": 3298515,
+          "files": 81,
+          "semantic_files": 58
+        },
+        "status": "passed",
+        "subject": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6"
+      },
+      "passed": true
+    },
+    {
+      "name": "exact-recovery-carrier.json",
+      "observed": {
+        "returncode": 0,
+        "stderr": ""
+      },
+      "passed": true
+    },
+    {
+      "name": "unchanged-document-canonical-recovery:carrier.json",
+      "observed": {
+        "model": {
+          "id": "urn:a-c:generation:0657852b6fd1fa48457c3f7d:model:2e6f0d59737b5bca00691b60",
+          "profile": "a_c.graphify.model/1",
+          "sha256": "691c4ab0d0993312a31e7e2371070ea4758fdf74b32862ff4d5a32d05af79fbf"
+        },
+        "status": "decoded"
+      },
+      "passed": true
+    },
+    {
+      "name": "exact-recovery-graph.json",
+      "observed": {
+        "returncode": 0,
+        "stderr": ""
+      },
+      "passed": true
+    },
+    {
+      "name": "unchanged-document-canonical-recovery:graph.json",
+      "observed": {
+        "model": {
+          "id": "urn:a-c:generation:0657852b6fd1fa48457c3f7d:model:2e6f0d59737b5bca00691b60",
+          "profile": "a_c.graphify.model/1",
+          "sha256": "691c4ab0d0993312a31e7e2371070ea4758fdf74b32862ff4d5a32d05af79fbf"
+        },
+        "status": "decoded"
+      },
+      "passed": true
+    },
+    {
+      "name": "actual-modified-portable-input-pre-effect-refusal",
+      "observed": {
+        "returncode": 2,
+        "stderr": "{\"status\": \"refusal\", \"reason\": \"sealed original or portable source-readiness record changed\"}\n"
+      },
+      "passed": true
+    },
+    {
+      "name": "modified-portable-input-no-output-effects",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "name": "actual-documented-extracted-build",
+      "observed": {
+        "returncode": 0,
+        "stderr": ""
+      },
+      "passed": true
+    },
+    {
+      "name": "actual-second-generation-build-reported-success",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "name": "actual-second-generation-all213files-and-archive-identical",
+      "observed": {
+        "archive_bytes": 10089542,
+        "archive_sha256": "989c0efbbba90c1d444c6a1c24def4174ef8519bec5f63d9bef021f27dd75e2b",
+        "files": 213,
+        "vector_sha256": "22def4fbec18e4ec543d01ddf2ae71a59fc1cf5e2d20c3601b09ede4f84df6fd"
+      },
+      "passed": true
+    },
+    {
+      "name": "actual-outer-rehashed-source-refusal:source_commit:wrong-zero",
+      "observed": {
+        "argv": [
+          "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+          "-S",
+          "-B",
+          "release_tools/bundle_check.py",
+          "."
+        ],
+        "cwd": "/Users/jim/tmp/a_c-common-rc1-packaging-review-20261021/assessment-001/metadata-cases/source_commit-wrong-zero",
+        "elapsed_seconds": 14.947621458908543,
+        "expected": "35fb4824a064a84df5af214a0d0e2da597c18ac6",
+        "field": "source_commit",
+        "operation": "wrong-zero",
+        "outer_inventory_checksums_independently_consistent": true,
+        "returncode": 2,
+        "stderr": "{\"status\": \"refusal\", \"reason\": \"release-preparation source commit/package tree differs from its public evidence\"}\n",
+        "stdout": ""
+      },
+      "passed": true
+    },
+    {
+      "name": "actual-outer-rehashed-source-refusal:source_commit:missing",
+      "observed": {
+        "argv": [
+          "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+          "-S",
+          "-B",
+          "release_tools/bundle_check.py",
+          "."
+        ],
+        "cwd": "/Users/jim/tmp/a_c-common-rc1-packaging-review-20261021/assessment-001/metadata-cases/source_commit-missing",
+        "elapsed_seconds": 14.923944958020002,
+        "expected": "35fb4824a064a84df5af214a0d0e2da597c18ac6",
+        "field": "source_commit",
+        "operation": "missing",
+        "outer_inventory_checksums_independently_consistent": true,
+        "returncode": 2,
+        "stderr": "{\"status\": \"refusal\", \"reason\": \"release-preparation source commit/package tree differs from its public evidence\"}\n",
+        "stdout": ""
+      },
+      "passed": true
+    },
+    {
+      "name": "actual-outer-rehashed-source-refusal:package_tree:wrong-zero",
+      "observed": {
+        "argv": [
+          "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+          "-S",
+          "-B",
+          "release_tools/bundle_check.py",
+          "."
+        ],
+        "cwd": "/Users/jim/tmp/a_c-common-rc1-packaging-review-20261021/assessment-001/metadata-cases/package_tree-wrong-zero",
+        "elapsed_seconds": 15.015689291991293,
+        "expected": "7f2070b61c848b42b4dfb3af1e0ce53869de1aa1",
+        "field": "package_tree",
+        "operation": "wrong-zero",
+        "outer_inventory_checksums_independently_consistent": true,
+        "returncode": 2,
+        "stderr": "{\"status\": \"refusal\", \"reason\": \"release-preparation source commit/package tree differs from its public evidence\"}\n",
+        "stdout": ""
+      },
+      "passed": true
+    },
+    {
+      "name": "actual-outer-rehashed-source-refusal:package_tree:missing",
+      "observed": {
+        "argv": [
+          "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+          "-S",
+          "-B",
+          "release_tools/bundle_check.py",
+          "."
+        ],
+        "cwd": "/Users/jim/tmp/a_c-common-rc1-packaging-review-20261021/assessment-001/metadata-cases/package_tree-missing",
+        "elapsed_seconds": 15.081695665838197,
+        "expected": "7f2070b61c848b42b4dfb3af1e0ce53869de1aa1",
+        "field": "package_tree",
+        "operation": "missing",
+        "outer_inventory_checksums_independently_consistent": true,
+        "returncode": 2,
+        "stderr": "{\"status\": \"refusal\", \"reason\": \"release-preparation source commit/package tree differs from its public evidence\"}\n",
+        "stdout": ""
+      },
+      "passed": true
+    },
+    {
+      "name": "all-readonly-candidate-original-preparation-guards-unchanged",
+      "observed": {
+        "guarded_paths": 659,
+        "mismatches": []
+      },
+      "passed": true
+    },
+    {
+      "name": "within45minute-cap-zero-model-spend",
+      "observed": {
+        "elapsed_seconds": 375.833269,
+        "native_model_calls": 0
+      },
+      "passed": true
+    }
+  ],
+  "controls_passed": 17,
+  "elapsed_seconds": 375.833269,
+  "findings": [],
+  "native_model_network_install_browser_server_git_mutation_effects": 0,
+  "second_generation_archive_sha256": "989c0efbbba90c1d444c6a1c24def4174ef8519bec5f63d9bef021f27dd75e2b",
+  "second_generation_file_vector_sha256": "22def4fbec18e4ec543d01ddf2ae71a59fc1cf5e2d20c3601b09ede4f84df6fd",
+  "status": "passed",
+  "timing_scope": "Artifact checks only; no benchmark/efficiency inference"
+}

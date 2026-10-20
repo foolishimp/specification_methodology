@@ -1,0 +1,52 @@
+{
+  "corpus_manifest": {
+    "file_sha256": "3733fbb9c41734769a3c1f38e2e3a5b455505f6467a58ef88bae043f16866ab4",
+    "path": "dogfood/stdo-v3-generation-rc9/corpora/claude/manifest.json"
+  },
+  "custody_checkpoint": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+  "deciding_sources": [
+    {
+      "file_sha256": "3bb7594a194950819d6aad65e3938358e8685bbbc2ebf67c0ad720c37bb04487",
+      "path": "dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/ACTIVATION.md",
+      "witnesses": [
+        {
+          "end_line": 499,
+          "exact_source": "Exclusion and the core. Deciding applicability is an evaluation of the\npredicate \"the obligation applies to the exact subject\", and its result is\na core value of [FOUNDATIONS §4 Results](FOUNDATIONS.md#results): a true\npredicate is `satisfied`; a false predicate is `falsified`, the\nbasis-bound fact that makes it false being the counterexample; a missing\nor ambiguous premise is `indeterminate`, or `out_of_frame` where the\npremise needs a relation the frame does not declare, and never\n`falsified`. An exclusion is the state of the excluded obligation after a\n`falsified` applicability result: it is no result, the obligation's own\nevaluation is not performed and maps to no core value, and the obligation\nleaves the required coverage of a dependent conjunction under the cited\nauthority of that applicability result. An obligation whose applicability is\nunresolved stays in that required coverage. A predicate that its owner\ndeclares as a disjunction that includes non-application, such as \"meets\nthe axiom or does not apply\", may be `satisfied` because the obligation\ndoes not apply; that `satisfied` is for the declared disjunction only and\nnever counts toward the predicate that the obligation holds\n([FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results),\nPredicates travel). Members, profiles and projects refer to this\nparagraph for exclusions and do not decide them again (P5, P6, P1).\nPurpose and material relation: an exclusion read as a result of the\nexcluded obligation, or a \"does not apply\" counted toward that obligation,\nwould report a skipped obligation as met; an unresolved premise read as an\nexclusion would drop an obligation that may apply.\n",
+          "question": "Applicability core outcomes and exclusion boundary",
+          "start_line": 476
+        },
+        {
+          "end_line": 971,
+          "exact_source": "## 3. Step results and disposition\n\nA step returns its results in the core algebra of\n[FOUNDATIONS §4 Results](FOUNDATIONS.md#results): each evaluation it\nperformed returns one core value with its predicate and domain outcome,\nand an evaluation it did not perform has no result. The outcomes of\nadmitting and activating a step, and the step's own outcomes, answer other\nquestions than its evaluations do. This section owns them as five\nrefinements of the core. Each names the question it answers and the\npredicate its mapping is for, and maps each of its values to exactly one\ncore value; the predicate travels with the value, so no refinement's\n`satisfied` counts toward another predicate\n([FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results)).\nPurpose and material relation: admission, work, decisions and effects\nstand in the one core (P5, P6), so a consumer that combines them cannot\nread a refused activation as a step's stop, availability as fitness or\nacceptance, a carried ambiguity as resolved, or an unknown effect as none.\n\n| Refinement | Question | Predicate of the mapping |\n|---|---|---|\n| admission and activation | may the step begin | the step is lawfully admitted and activated on the exact subject and basis |\n| construction availability | did the step yield its output | a candidate is available |\n| disposition | what the decision owner does with an assessed candidate | the candidate is accepted at its declared boundary |\n| ambiguity outcome | what happened to a declared ambiguity | the declared ambiguity is resolved on the exact basis |\n| effects | did an intended external effect occur | the intended effect occurred |\n\nA profile that refines these values for its own units maps each of its\nvalues to exactly one core value under FOUNDATIONS §4 Results and adds no\ncore value.\n",
+          "question": "Result/refinement mapping boundary",
+          "start_line": 943
+        }
+      ]
+    },
+    {
+      "file_sha256": "fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f",
+      "path": "dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/FOUNDATIONS.md",
+      "witnesses": [
+        {
+          "end_line": 883,
+          "exact_source": "Refinements. A member, profile or adopting Product that needs finer\noutcomes defines a refinement. The refinement names the question it\nanswers and the predicate its mapping is for, and maps every refined value\nto exactly one core value. No outcome exists outside the core; a\nrefinement adds no core value and keeps the pressure of `indeterminate`,\n`out_of_frame` and `invalid_basis` explicit. Where a refined value would\nmap to one of two core values according to its cause, the cause is part of\nthe refined value and each resulting value maps once (P5, P1). A further\nrefinement, by a member, profile, project or adopting Product, may split a\nrefined value by cause. The parent-value rule governs every such split:\neach child value names its parent value and its cause and keeps its\nparent's core value; a child that needs a different core value needs a\ndifferent parent value, which only the owner of the parent declares; and\nno child takes `satisfied` from a parent that is not `satisfied`. No\nfurther refinement raises a result's standing (P5, P6, P1). Purpose and\nmaterial relation: a consumer that reads a parent value reads the same\ncore value from each of its children, so a split by cause adds a domain\ndistinction and never changes what the parent establishes (P5, P6). The\nrefinements for admission, activation and steps are\n[ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition); each other\nmember, profile and adopting Product states its mapping where it defines\nits values.\n",
+          "question": "Explicit refinement mapping and parent core conservation",
+          "start_line": 862
+        },
+        {
+          "end_line": 919,
+          "exact_source": "- `out_of_frame` when the claim requires a material relation or an\n  evaluator capability that the activated frame does not declare. The\n  result names the missing relation or capability, its owner where the\n  subject gives one, and the reconfiguration pressure it creates\n  ([ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement); rc.2 RF\n  #reconfigure-when-necessary). A term the claim depends on and the frame\n  leaves undefined is an undeclared material relation: its meaning can\n  alter the result and it enters through no declared input (rc.2 RF\n  #material-relation, RF-003; P1). Whether the step exercised anything is\n  irrelevant to this value; the ground is the missing declaration.\n- `indeterminate` when the available admissible evidence cannot decide the\n  claim (rc.2 RF-012). The result names the evidence that would decide, as\n  its residual uncertainty (rc.2 RF #return-a-closed-result). Where the\n  claim also depends on an undeclared relation or capability,\n  `out_of_frame` and `indeterminate` each have a lawful ground; the result\n  names the value it returns and that ground, and this boundary excludes\n  neither (P5).\n",
+          "question": "Distinct out_of_frame/indeterminate grounds and lawful coexistence",
+          "start_line": 903
+        }
+      ]
+    }
+  ],
+  "frozen_bytes": 2147989,
+  "frozen_file_count": 49,
+  "id": "urn:a-c:application:stdo-v3-rc9-claude-direct-review-correction:001:source-manifest",
+  "profile": "a_c.application.correction-sources/1",
+  "selection": "Deciding clauses for one semantic exception correction. The complete parent source basis/inventory and all source dispositions remain unchanged. This is not a new source-generation study.",
+  "source_revision": "c2cfa9b908d1722ae3f26c32fa4ece691083bdc3",
+  "subject_id": "repo://stdo-v3-generation-rc9/claude/c2cfa9b908d1722ae3f26c32fa4ece691083bdc3/"
+}

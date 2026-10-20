@@ -27,6 +27,12 @@ once in the chunk plan. Small sections and files pack together into bounded
 chunks, default 120,000 Unicode characters. Prompt metadata and output consume
 additional context; this is not a token-budget guarantee.
 
+The bounded fence recognizer retains its opening backtick or tilde marker and
+width. A closing fence uses the same marker at least that width, at most three
+leading spaces, and only spaces or tabs afterward. Shorter markers and apparent
+closers with content remain inside the example. Backtick opening info cannot
+contain a backtick. This section partitioner is not a full Markdown parser.
+
 The generic workflow trusts the owner's explicit source selection. It cannot
 recognize every possible historical model or generated answer disguised as prose;
 consumer manifests must select semantic source only when claiming fresh creation.
@@ -147,7 +153,16 @@ prompts, schemas, event stream, stderr, reported backend usage, timing, answer,
 shape/source validation and configuration digest are retained per attempt. No
 pricing or cached-token discount is inferred.
 
-Stages are resumable. A validated unchanged successful chunk is reused. Failed
+Stages are resumable. A validated unchanged successful chunk is reused only after
+the shared actor-evidence gate rechecks the exact frozen source/chunk/code/assets,
+recomputed stage prompt, retained answer/result/invocation/events/stderr/usage,
+schema, settings, actual isolation argv and event item types. It reruns the
+stage's source validation: upstream semantic-fragment checks for extraction and
+`author_check` for authoring. A prompt's matching self-hash alone is insufficient.
+Only the latest attempt may be reused; a newer failed or unfinished attempt blocks
+an older success. Ordinary reuse requires completed status and strict validation;
+the optional grounding layer's narrow failed-draft eligibility does not make an
+original actor successful. Failed
 or interrupted attempts remain in separate directories; another attempt requires
 `--retry-failed`. In the two-pass alternative, a supplied source chunk missing
 validated extraction blocks the discovery build. Both Graphify modes require

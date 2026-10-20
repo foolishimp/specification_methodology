@@ -1,0 +1,1229 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>standards/frames/ac-task-a.md</title><style>body{font:14px system-ui;margin:24px;background:#101720;color:#dfeaf4}a{color:#87c7ff}pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5;counter-reset:line}span{display:block}span:before{content:attr(data-line);display:inline-block;width:4em;color:#7392aa;user-select:none}span:target{background:#36481d}</style><h1>standards/frames/ac-task-a.md</h1><p>Exact frozen source · SHA256 2adafe0fb01051a84cb9cb18d9a08ac08e46eaf0e80996ea7cf88c9f2b1802b7</p><pre><span id="L1" data-line="1"># Reference frame ac-task-a</span>
+<span id="L2" data-line="2"></span>
+<span id="L3" data-line="3">Task: Write the transformation record for one step between two exact models, state which application outcome the record supports, write a judgment record over the successor, and state what promoting the successor would require and who holds it.</span>
+<span id="L4" data-line="4"></span>
+<span id="L5" data-line="5">Purpose: The owning sections for the model signature and typed records, the laws a transformation and its application obey with their outcomes, judgment separation and promotion, traversals, authority kinds, and the core result algebra with its conjunction.</span>
+<span id="L6" data-line="6"></span>
+<span id="L7" data-line="7">Binds:</span>
+<span id="L8" data-line="8"></span>
+<span id="L9" data-line="9">- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task&#x27;s required outcome with the acceptance conditions the task states, and the actor&#x27;s claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)</span>
+<span id="L10" data-line="10">- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle&#x27;s fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545; section sha256=a7d5fc5930338c3fb3959017f41935ce742fbb1bf189c2f527dde4e0ba12d064 spanning to #formal-representation)</span>
+<span id="L11" data-line="11"></span>
+<span id="L12" data-line="12">A `Binds:` item names an obligation the activation of this frame binds, with</span>
+<span id="L13" data-line="13">a link to the owning section, the digest of its member and the digest of that</span>
+<span id="L14" data-line="14">section, or of the span of sections it names, where it names one; the item</span>
+<span id="L15" data-line="15">copies no section and owns no determination, and where no route of this frame</span>
+<span id="L16" data-line="16">carries the section the item is a paraphrase of it.</span>
+<span id="L17" data-line="17"></span>
+<span id="L18" data-line="18">Each excerpt below copies one owning section of a member of this method</span>
+<span id="L19" data-line="19">byte for byte, except a `rows=k/n` excerpt (see below) and except that</span>
+<span id="L20" data-line="20">each relative link destination is rebased</span>
+<span id="L21" data-line="21">to resolve from this directory to the same target. Fenced code, inline</span>
+<span id="L22" data-line="22">code and absolute and `stdo://` links are unchanged. The `Source:` line</span>
+<span id="L23" data-line="23">before an excerpt names the member and the section&#x27;s anchor, and gives</span>
+<span id="L24" data-line="24">the SHA-256 of the whole owning member. The section digest recorded in</span>
+<span id="L25" data-line="25">FRAME_INPUTS.json is over the owner&#x27;s bytes, not over this copy. The</span>
+<span id="L26" data-line="26">owning section decides; this frame owns no determination. An excerpt</span>
+<span id="L27" data-line="27">whose `Source:` line says `rows=k/n` is a family table of which only</span>
+<span id="L28" data-line="28">the k rows that cite a section this frame carries are copied, with the</span>
+<span id="L29" data-line="29">table&#x27;s preamble, header and every non-family table; the other rows</span>
+<span id="L30" data-line="30">stay in the owning member and are not copied. The frame&#x27;s</span>
+<span id="L31" data-line="31">qualification, not this selection, decides whether the frame is</span>
+<span id="L32" data-line="32">sufficient for its task.</span>
+<span id="L33" data-line="33"></span>
+<span id="L34" data-line="34">Routes, in order:</span>
+<span id="L35" data-line="35"></span>
+<span id="L36" data-line="36">1. [FOUNDATIONS.md#authority-kinds](../FOUNDATIONS.md#authority-kinds)</span>
+<span id="L37" data-line="37">2. [AXIOMATIC_CALCULUS.md#2-signature](../AXIOMATIC_CALCULUS.md#2-signature)</span>
+<span id="L38" data-line="38">3. [AXIOMATIC_CALCULUS.md#3-typed-records](../AXIOMATIC_CALCULUS.md#3-typed-records)</span>
+<span id="L39" data-line="39">4. [AXIOMATIC_CALCULUS.md#ac-002-scoped-identity](../AXIOMATIC_CALCULUS.md#ac-002-scoped-identity)</span>
+<span id="L40" data-line="40">5. [AXIOMATIC_CALCULUS.md#ac-003-reference-closure](../AXIOMATIC_CALCULUS.md#ac-003-reference-closure)</span>
+<span id="L41" data-line="41">6. [AXIOMATIC_CALCULUS.md#ac-005-authority-conservation](../AXIOMATIC_CALCULUS.md#ac-005-authority-conservation)</span>
+<span id="L42" data-line="42">7. [AXIOMATIC_CALCULUS.md#ac-006-basis-coherence](../AXIOMATIC_CALCULUS.md#ac-006-basis-coherence)</span>
+<span id="L43" data-line="43">8. [AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal](../AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal)</span>
+<span id="L44" data-line="44">9. [AXIOMATIC_CALCULUS.md#ac-008-explicit-latitude](../AXIOMATIC_CALCULUS.md#ac-008-explicit-latitude)</span>
+<span id="L45" data-line="45">10. [AXIOMATIC_CALCULUS.md#ac-009-residual-conservation](../AXIOMATIC_CALCULUS.md#ac-009-residual-conservation)</span>
+<span id="L46" data-line="46">11. [AXIOMATIC_CALCULUS.md#ac-013-transformation](../AXIOMATIC_CALCULUS.md#ac-013-transformation)</span>
+<span id="L47" data-line="47">12. [AXIOMATIC_CALCULUS.md#ac-014-judgment-separation](../AXIOMATIC_CALCULUS.md#ac-014-judgment-separation)</span>
+<span id="L48" data-line="48">13. [AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds](../AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds)</span>
+<span id="L49" data-line="49">14. [FOUNDATIONS.md#results](../FOUNDATIONS.md#results)</span>
+<span id="L50" data-line="50">15. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)</span>
+<span id="L51" data-line="51">16. [AXIOMATIC_CALCULUS.md#foundation-to-law](../AXIOMATIC_CALCULUS.md#foundation-to-law)</span>
+<span id="L52" data-line="52"></span>
+<span id="L53" data-line="53">Size of this frame: 69466 bytes.</span>
+<span id="L54" data-line="54"></span>
+<span id="L55" data-line="55">Source: FOUNDATIONS.md#authority-kinds sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545</span>
+<span id="L56" data-line="56"></span>
+<span id="L57" data-line="57">### Authority kinds</span>
+<span id="L58" data-line="58"></span>
+<span id="L59" data-line="59">Authority takes these kinds (P6): frame-set authority, the human authority</span>
+<span id="L60" data-line="60">that declares or accepts a project frame set; semantic authority, the</span>
+<span id="L61" data-line="61">owner of meaning for a material relation; evaluation authority, the role</span>
+<span id="L62" data-line="62">permitted to perform an evaluation; operation authority, the owner-issued</span>
+<span id="L63" data-line="63">grant to construct, transform, admit, publish or mutate a material subject</span>
+<span id="L64" data-line="64">where an evaluation performs such an operation; decision authority, the</span>
+<span id="L65" data-line="65">role permitted to accept, reject or otherwise dispose a result; and actor</span>
+<span id="L66" data-line="66">identity, the human, agent, tool or process performing the work, which is</span>
+<span id="L67" data-line="67">an identity and not an authority. These may coincide in a lawful case and</span>
+<span id="L68" data-line="68">never collapse by default. A read-only evaluation declares no operation</span>
+<span id="L69" data-line="69">authority; an effectful evaluation inherits the exact operation grant from</span>
+<span id="L70" data-line="70">its existing owner, and the frame does not create that grant (P6, P3).</span>
+<span id="L71" data-line="71"></span>
+<span id="L72" data-line="72">What creates no authority. Authority of any kind exists only by an</span>
+<span id="L73" data-line="73">admitted grant or an explicit authority decision of its owner, with an</span>
+<span id="L74" data-line="74">identifiable basis. None of the following mints, widens, transfers or</span>
+<span id="L75" data-line="75">reconstructs semantic, evaluation, operation or decision authority (P6,</span>
+<span id="L76" data-line="76">P3):</span>
+<span id="L77" data-line="77"></span>
+<span id="L78" data-line="78">- actor identity, an actor&#x27;s capability, its tools or its access;</span>
+<span id="L79" data-line="79">- a name, label, display label, status label, role name, capability</span>
+<span id="L80" data-line="80">  string, locator, file name or path;</span>
+<span id="L81" data-line="81">- declaring, naming, selecting, activating or executing a frame, or</span>
+<span id="L82" data-line="82">  occupying a role;</span>
+<span id="L83" data-line="83">- implementation reachability, a reachable code path or an available</span>
+<span id="L84" data-line="84">  operation;</span>
+<span id="L85" data-line="85">- the shape of evidence or of a payload, or the availability of evidence</span>
+<span id="L86" data-line="86">  inside a frame;</span>
+<span id="L87" data-line="87">- a passing check, a successful step, a completed review or a count of</span>
+<span id="L88" data-line="88">  any of them;</span>
+<span id="L89" data-line="89">- copying, interpreting, encoding, evaluating, transporting, projecting,</span>
+<span id="L90" data-line="90">  compressing, importing or acquiring material;</span>
+<span id="L91" data-line="91">- drafting, admitting or retaining a work contract, beyond what its owner</span>
+<span id="L92" data-line="92">  has admitted;</span>
+<span id="L93" data-line="93">- composition, delegation, adapters, wrappers and registries, which may</span>
+<span id="L94" data-line="94">  restrict admitted authority or carry it faithfully, and never widen its</span>
+<span id="L95" data-line="95">  scope, add a role, increase its cardinality or change its kind.</span>
+<span id="L96" data-line="96"></span>
+<span id="L97" data-line="97">Elevation, transfer, split, merge, proxy grant, revocation and retirement</span>
+<span id="L98" data-line="98">each need an explicit authority decision with an identifiable basis. A</span>
+<span id="L99" data-line="99">member that names an instance of this list for its own domain cites this</span>
+<span id="L100" data-line="100">paragraph and adds only the instance.</span>
+<span id="L101" data-line="101"></span>
+<span id="L102" data-line="102">Proxy limit. Human authority may act directly, or through an explicitly</span>
+<span id="L103" data-line="103">admitted bounded proxy where the governing identity and authority law</span>
+<span id="L104" data-line="104">permits it; proxy identity and human-authority identity stay distinct</span>
+<span id="L105" data-line="105">(P6, P3). A proxy acts only inside its existing grant. It cannot change</span>
+<span id="L106" data-line="106">the governing outcome&#x27;s meaning, the requirements, the governing authority</span>
+<span id="L107" data-line="107">or the accepted design; such a change re-enters at its owning relation.</span>
+<span id="L108" data-line="108">Proxy authority does not make a constructor&#x27;s self-review independent,</span>
+<span id="L109" data-line="109">confers no unrelated runtime or domain authority, and does not replace</span>
+<span id="L110" data-line="110">direct human acceptance where the governing product or release law</span>
+<span id="L111" data-line="111">requires it. The contents of a proxy grant are</span>
+<span id="L112" data-line="112">[IDENTITY §6](../IDENTITY.md#6-authority-identity-and-conservation-stdo-up-004)&#x27;s,</span>
+<span id="L113" data-line="113">and the decisions a proxy may take inside a step are</span>
+<span id="L114" data-line="114">[ACTIVATION §1 Roles and delegation](../ACTIVATION.md#roles-and-delegation)&#x27;s.</span>
+<span id="L115" data-line="115"></span>
+<span id="L116" data-line="116">Purpose and material relation of the list and the proxy limit: each</span>
+<span id="L117" data-line="117">member that names what cannot create authority decides the same question,</span>
+<span id="L118" data-line="118">so one list keeps the answer the same in every member, and a capability,</span>
+<span id="L119" data-line="119">a label or a passing check can never be read as a permission (P6).</span>
+<span id="L120" data-line="120"></span>
+<span id="L121" data-line="121"></span>
+<span id="L122" data-line="122">Source: AXIOMATIC_CALCULUS.md#2-signature sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf</span>
+<span id="L123" data-line="123"></span>
+<span id="L124" data-line="124">## 2. Signature</span>
+<span id="L125" data-line="125"></span>
+<span id="L126" data-line="126">An `a_c` signature is (P3, P1):</span>
+<span id="L127" data-line="127"></span>
+<span id="L128" data-line="128">```text</span>
+<span id="L129" data-line="129">Sigma = (</span>
+<span id="L130" data-line="130">  RecordKind,</span>
+<span id="L131" data-line="131">  Sort,</span>
+<span id="L132" data-line="132">  RelationKind,</span>
+<span id="L133" data-line="133">  ConstraintKind,</span>
+<span id="L134" data-line="134">  ResidualKind,</span>
+<span id="L135" data-line="135">  FunctorKind,</span>
+<span id="L136" data-line="136">  JudgmentKind,</span>
+<span id="L137" data-line="137">  StopKind</span>
+<span id="L138" data-line="138">)</span>
+<span id="L139" data-line="139">```</span>
+<span id="L140" data-line="140"></span>
+<span id="L141" data-line="141">`a_c` fixes this finite core record-kind set:</span>
+<span id="L142" data-line="142"></span>
+<span id="L143" data-line="143">```text</span>
+<span id="L144" data-line="144">RecordKind_ac = {</span>
+<span id="L145" data-line="145">  urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object,</span>
+<span id="L146" data-line="146">  urn:stdo:concept:axiomatic-calculus:record-kind:typed-relation,</span>
+<span id="L147" data-line="147">  urn:stdo:concept:axiomatic-calculus:record-kind:constraint,</span>
+<span id="L148" data-line="148">  urn:stdo:concept:axiomatic-calculus:record-kind:latitude,</span>
+<span id="L149" data-line="149">  urn:stdo:concept:axiomatic-calculus:record-kind:residual,</span>
+<span id="L150" data-line="150">  urn:stdo:concept:axiomatic-calculus:record-kind:traversal,</span>
+<span id="L151" data-line="151">  urn:stdo:concept:axiomatic-calculus:record-kind:transformation,</span>
+<span id="L152" data-line="152">  urn:stdo:concept:axiomatic-calculus:record-kind:judgment</span>
+<span id="L153" data-line="153">}</span>
+<span id="L154" data-line="154">```</span>
+<span id="L155" data-line="155"></span>
+<span id="L156" data-line="156">Every `a_c` signature imports those identities unchanged. A model-family</span>
+<span id="L157" data-line="157">signature specialises their fields, value domains, reference domains and</span>
+<span id="L158" data-line="158">admissible kinds; it does not remove, rename, shadow or silently add a</span>
+<span id="L159" data-line="159">core record family. Another fundamental record family requires an explicit</span>
+<span id="L160" data-line="160">compatible calculus extension, never an extra subject sort (P3).</span>
+<span id="L161" data-line="161"></span>
+<span id="L162" data-line="162">Every signature member is a finite, closed identity set for one model</span>
+<span id="L163" data-line="163">family. The signature defines:</span>
+<span id="L164" data-line="164"></span>
+<span id="L165" data-line="165">- the fields and value domains of every sort and record family;</span>
+<span id="L166" data-line="166">- the reference domain and cardinality of every identity-bearing field;</span>
+<span id="L167" data-line="167">- the allowed source and target sorts for every relation kind;</span>
+<span id="L168" data-line="168">- the subject and predicate domains of every constraint kind;</span>
+<span id="L169" data-line="169">- the subject, uncertainty, consequence and re-entry domains of every</span>
+<span id="L170" data-line="170">  residual kind;</span>
+<span id="L171" data-line="171">- the input, output, evidence and stop contract of every judgment kind;</span>
+<span id="L172" data-line="172">  and</span>
+<span id="L173" data-line="173">- the functor kinds permitted for each traversal.</span>
+<span id="L174" data-line="174"></span>
+<span id="L175" data-line="175">Unknown kinds and fields are not extensions. They require a new signature</span>
+<span id="L176" data-line="176">or an explicit compatible extension relation (P1, P6).</span>
+<span id="L177" data-line="177"></span>
+<span id="L178" data-line="178">An `a_c` model over exact basis `b` is:</span>
+<span id="L179" data-line="179"></span>
+<span id="L180" data-line="180">```text</span>
+<span id="L181" data-line="181">M_b = (b, I, O, E, C, L, X, V, T, J)</span>
+<span id="L182" data-line="182"></span>
+<span id="L183" data-line="183">Population_M = {</span>
+<span id="L184" data-line="184">  urn:stdo:concept:axiomatic-calculus:record-kind:semantic-object  -&gt; O,</span>
+<span id="L185" data-line="185">  urn:stdo:concept:axiomatic-calculus:record-kind:typed-relation  -&gt; E,</span>
+<span id="L186" data-line="186">  urn:stdo:concept:axiomatic-calculus:record-kind:constraint      -&gt; C,</span>
+<span id="L187" data-line="187">  urn:stdo:concept:axiomatic-calculus:record-kind:latitude        -&gt; L,</span>
+<span id="L188" data-line="188">  urn:stdo:concept:axiomatic-calculus:record-kind:residual        -&gt; X,</span>
+<span id="L189" data-line="189">  urn:stdo:concept:axiomatic-calculus:record-kind:traversal       -&gt; V,</span>
+<span id="L190" data-line="190">  urn:stdo:concept:axiomatic-calculus:record-kind:transformation  -&gt; T,</span>
+<span id="L191" data-line="191">  urn:stdo:concept:axiomatic-calculus:record-kind:judgment        -&gt; J</span>
+<span id="L192" data-line="192">}</span>
+<span id="L193" data-line="193">```</span>
+<span id="L194" data-line="194"></span>
+<span id="L195" data-line="195">where `I` is the closed identity universe; `O` the finite set of typed</span>
+<span id="L196" data-line="196">semantic objects; `E` the finite set of typed directed relations; `C` the</span>
+<span id="L197" data-line="197">finite set of constitutional constraints; `L` the finite set of declared</span>
+<span id="L198" data-line="198">latitude records; `X` the finite set of residual uncertainty records; `V`</span>
+<span id="L199" data-line="199">the finite set of traversal records; `T` the finite set of transformation</span>
+<span id="L200" data-line="200">records; and `J` the finite set of judgment records.</span>
+<span id="L201" data-line="201"></span>
+<span id="L202" data-line="202">`Population_M` is a total function over `RecordKind_ac`. Every population</span>
+<span id="L203" data-line="203">is finite, every fundamental record belongs to exactly one population, and</span>
+<span id="L204" data-line="204">record identities are unique across their disjoint union. Let `Local_M` be</span>
+<span id="L205" data-line="205">that union. Then `I = Local_M disjoint_union External_M`, where every</span>
+<span id="L206" data-line="206">member of `External_M` is admitted only through one signature-declared</span>
+<span id="L207" data-line="207">external reference domain and exact resolution relation. A hidden record,</span>
+<span id="L208" data-line="208">an unpopulated extra record family, an identity occurring in two</span>
+<span id="L209" data-line="209">populations, or an identity in `I` with neither one local record nor one</span>
+<span id="L210" data-line="210">lawful external resolution refuses the model. A population may be empty</span>
+<span id="L211" data-line="211">only when the selected signature does not require a member of that record</span>
+<span id="L212" data-line="212">kind (P3, P5).</span>
+<span id="L213" data-line="213"></span>
+<span id="L214" data-line="214">The signature declares a finite reference-domain function:</span>
+<span id="L215" data-line="215"></span>
+<span id="L216" data-line="216">```text</span>
+<span id="L217" data-line="217">RefDomain_Sigma(record_kind, field)</span>
+<span id="L218" data-line="218">  -&gt; (cardinality,</span>
+<span id="L219" data-line="219">      allowed_local_record_kinds,</span>
+<span id="L220" data-line="220">      allowed_semantic_object_sorts,</span>
+<span id="L221" data-line="221">      allowed_external_target_kinds,</span>
+<span id="L222" data-line="222">      required_basis_relation)</span>
+<span id="L223" data-line="223">```</span>
+<span id="L224" data-line="224"></span>
+<span id="L225" data-line="225">Every scalar or collection member that carries an identity reference is</span>
+<span id="L226" data-line="226">checked through that function. A local reference resolves across the exact</span>
+<span id="L227" data-line="227">`Population_M` family named by its target record kind; a reference to a</span>
+<span id="L228" data-line="228">semantic object also satisfies the declared target sort. An external</span>
+<span id="L229" data-line="229">reference resolves through exactly one declared external target kind and</span>
+<span id="L230" data-line="230">basis relation. No reference may resolve both locally and externally.</span>
+<span id="L231" data-line="231">Missing field domains, wrong-family targets, wrong-sort targets, ambiguous</span>
+<span id="L232" data-line="232">targets and dangling external identities refuse structural admission (P3,</span>
+<span id="L233" data-line="233">P6).</span>
+<span id="L234" data-line="234"></span>
+<span id="L235" data-line="235">The tuple is abstract. A carrier may use records, tables, terms, clauses,</span>
+<span id="L236" data-line="236">code or any other representation only when its encoding profile proves</span>
+<span id="L237" data-line="237">that every tuple relation is preserved or explicitly refused (P1, P4b).</span>
+<span id="L238" data-line="238"></span>
+<span id="L239" data-line="239"></span>
+<span id="L240" data-line="240">Source: AXIOMATIC_CALCULUS.md#3-typed-records sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf</span>
+<span id="L241" data-line="241"></span>
+<span id="L242" data-line="242">## 3. Typed records</span>
+<span id="L243" data-line="243"></span>
+<span id="L244" data-line="244">The following subsections define the exact shapes of five of the eight</span>
+<span id="L245" data-line="245">core record families. `SemanticObject`, `TypedRelation`, `Constraint`,</span>
+<span id="L246" data-line="246">`Latitude` and `Residual` populate `O`, `E`, `C`, `L` and `X`. The</span>
+<span id="L247" data-line="247">traversal record (§5), the transformation record (AC-013) and the judgment</span>
+<span id="L248" data-line="248">record (AC-014) populate `V`, `T` and `J`. A traversal, transformation or</span>
+<span id="L249" data-line="249">judgment is not placed in `O` merely by reifying its name as a semantic</span>
+<span id="L250" data-line="250">object. A subject model may independently represent the concept of a</span>
+<span id="L251" data-line="251">record kind, but that representation does not satisfy the core population</span>
+<span id="L252" data-line="252">law (P3, P1).</span>
+<span id="L253" data-line="253"></span>
+<span id="L254" data-line="254">### Semantic object</span>
+<span id="L255" data-line="255"></span>
+<span id="L256" data-line="256">Every semantic object has exactly (P3):</span>
+<span id="L257" data-line="257"></span>
+<span id="L258" data-line="258">```text</span>
+<span id="L259" data-line="259">SemanticObject = {</span>
+<span id="L260" data-line="260">  id,</span>
+<span id="L261" data-line="261">  sort,</span>
+<span id="L262" data-line="262">  context,</span>
+<span id="L263" data-line="263">  owner,</span>
+<span id="L264" data-line="264">  scope,</span>
+<span id="L265" data-line="265">  basis,</span>
+<span id="L266" data-line="266">  value</span>
+<span id="L267" data-line="267">}</span>
+<span id="L268" data-line="268">```</span>
+<span id="L269" data-line="269"></span>
+<span id="L270" data-line="270">`id`, `sort`, `context`, `owner` and `basis` are identities. `scope` is</span>
+<span id="L271" data-line="271">the closed governed domain. `value` is sort-defined carrier-neutral content</span>
+<span id="L272" data-line="272">or a reference to exact content. A semantic object is an Object of</span>
+<span id="L273" data-line="273">FOUNDATIONS §2 whose scoped identity is carried by `id`, `owner` and</span>
+<span id="L274" data-line="274">`sort` and whose boundary is `scope`.</span>
+<span id="L275" data-line="275"></span>
+<span id="L276" data-line="276">### Typed relation</span>
+<span id="L277" data-line="277"></span>
+<span id="L278" data-line="278">Every relation has exactly (P3, P4a):</span>
+<span id="L279" data-line="279"></span>
+<span id="L280" data-line="280">```text</span>
+<span id="L281" data-line="281">TypedRelation = {</span>
+<span id="L282" data-line="282">  id,</span>
+<span id="L283" data-line="283">  kind,</span>
+<span id="L284" data-line="284">  source,</span>
+<span id="L285" data-line="285">  target,</span>
+<span id="L286" data-line="286">  context,</span>
+<span id="L287" data-line="287">  owner,</span>
+<span id="L288" data-line="288">  scope,</span>
+<span id="L289" data-line="289">  basis,</span>
+<span id="L290" data-line="290">  qualifiers</span>
+<span id="L291" data-line="291">}</span>
+<span id="L292" data-line="292">```</span>
+<span id="L293" data-line="293"></span>
+<span id="L294" data-line="294">`source` and `target` resolve to members of `I`. `qualifiers` is the</span>
+<span id="L295" data-line="295">closed kind-specific record declaring direction, cardinality,</span>
+<span id="L296" data-line="296">preservation, loss, inverse, invalidation or other relation semantics</span>
+<span id="L297" data-line="297">required by the signature.</span>
+<span id="L298" data-line="298"></span>
+<span id="L299" data-line="299">### Constraint</span>
+<span id="L300" data-line="300"></span>
+<span id="L301" data-line="301">Every constraint has exactly (P6, P5):</span>
+<span id="L302" data-line="302"></span>
+<span id="L303" data-line="303">```text</span>
+<span id="L304" data-line="304">Constraint = {</span>
+<span id="L305" data-line="305">  id,</span>
+<span id="L306" data-line="306">  kind,</span>
+<span id="L307" data-line="307">  applies_to,</span>
+<span id="L308" data-line="308">  predicate,</span>
+<span id="L309" data-line="309">  context,</span>
+<span id="L310" data-line="310">  owner,</span>
+<span id="L311" data-line="311">  scope,</span>
+<span id="L312" data-line="312">  basis,</span>
+<span id="L313" data-line="313">  judgment_kind,</span>
+<span id="L314" data-line="314">  latitude_ref,</span>
+<span id="L315" data-line="315">  refusal</span>
+<span id="L316" data-line="316">}</span>
+<span id="L317" data-line="317">```</span>
+<span id="L318" data-line="318"></span>
+<span id="L319" data-line="319">`kind` resolves one declared `ConstraintKind`; `judgment_kind` resolves</span>
+<span id="L320" data-line="320">one declared `JudgmentKind`. The owning signature defines the predicate</span>
+<span id="L321" data-line="321">language and how its result is judged. A predicate that is not</span>
+<span id="L322" data-line="322">deterministically decidable states the required probabilistic or human</span>
+<span id="L323" data-line="323">judgment kind rather than pretending to be a machine proof (P6, P1).</span>
+<span id="L324" data-line="324"></span>
+<span id="L325" data-line="325">### Latitude</span>
+<span id="L326" data-line="326"></span>
+<span id="L327" data-line="327">Latitude is an explicit permission set inside a constraint boundary (P6):</span>
+<span id="L328" data-line="328"></span>
+<span id="L329" data-line="329">```text</span>
+<span id="L330" data-line="330">Latitude = {</span>
+<span id="L331" data-line="331">  id,</span>
+<span id="L332" data-line="332">  applies_to,</span>
+<span id="L333" data-line="333">  allowed_variation,</span>
+<span id="L334" data-line="334">  forbidden_variation,</span>
+<span id="L335" data-line="335">  context,</span>
+<span id="L336" data-line="336">  owner,</span>
+<span id="L337" data-line="337">  scope,</span>
+<span id="L338" data-line="338">  basis,</span>
+<span id="L339" data-line="339">  invalidation</span>
+<span id="L340" data-line="340">}</span>
+<span id="L341" data-line="341">```</span>
+<span id="L342" data-line="342"></span>
+<span id="L343" data-line="343">Silence is not latitude. Latitude grants no authority beyond its owner,</span>
+<span id="L344" data-line="344">scope, basis and invalidation law, an instance of</span>
+<span id="L345" data-line="345">[FOUNDATIONS §2 Authority kinds](../FOUNDATIONS.md#authority-kinds), What</span>
+<span id="L346" data-line="346">creates no authority (P6).</span>
+<span id="L347" data-line="347"></span>
+<span id="L348" data-line="348">### Residual</span>
+<span id="L349" data-line="349"></span>
+<span id="L350" data-line="350">Residual uncertainty is first-class model content; a residual record is</span>
+<span id="L351" data-line="351">the Residual of FOUNDATIONS §2 carried inside a model (P4b):</span>
+<span id="L352" data-line="352"></span>
+<span id="L353" data-line="353">```text</span>
+<span id="L354" data-line="354">Residual = {</span>
+<span id="L355" data-line="355">  id,</span>
+<span id="L356" data-line="356">  subject,</span>
+<span id="L357" data-line="357">  kind,</span>
+<span id="L358" data-line="358">  uncertainty,</span>
+<span id="L359" data-line="359">  consequence,</span>
+<span id="L360" data-line="360">  context,</span>
+<span id="L361" data-line="361">  owner,</span>
+<span id="L362" data-line="362">  scope,</span>
+<span id="L363" data-line="363">  basis,</span>
+<span id="L364" data-line="364">  re_entry,</span>
+<span id="L365" data-line="365">  invalidation</span>
+<span id="L366" data-line="366">}</span>
+<span id="L367" data-line="367">```</span>
+<span id="L368" data-line="368"></span>
+<span id="L369" data-line="369">Projection, compression, interpretation or encoding cannot erase a</span>
+<span id="L370" data-line="370">residual. It remains represented, is explicitly dispositioned by competent</span>
+<span id="L371" data-line="371">authority, or causes refusal (P4b, P6).</span>
+<span id="L372" data-line="372"></span>
+<span id="L373" data-line="373">`kind` resolves one declared `ResidualKind`. The owning signature defines</span>
+<span id="L374" data-line="374">its lawful subject, uncertainty, consequence, re-entry and invalidation</span>
+<span id="L375" data-line="375">domains. An undeclared residual kind or value refuses structural admission</span>
+<span id="L376" data-line="376">(P3).</span>
+<span id="L377" data-line="377"></span>
+<span id="L378" data-line="378"></span>
+<span id="L379" data-line="379">Source: AXIOMATIC_CALCULUS.md#ac-002-scoped-identity sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf</span>
+<span id="L380" data-line="380"></span>
+<span id="L381" data-line="381">### AC-002 Scoped identity</span>
+<span id="L382" data-line="382"></span>
+<span id="L383" data-line="383">This law applies the scoped identity of</span>
+<span id="L384" data-line="384">[IDENTITY §2](../IDENTITY.md#scoped-identity), the identity of an Object of</span>
+<span id="L385" data-line="385">FOUNDATIONS §2, to every identity in `I`. Its coordinates map to that</span>
+<span id="L386" data-line="386">identity as follows: the owner is the identity&#x27;s authority, the type is</span>
+<span id="L387" data-line="387">its kind, and the member it resolves is what its value denotes; context,</span>
+<span id="L388" data-line="388">scope and basis are further coordinates, which IDENTITY §2 permits and</span>
+<span id="L389" data-line="389">`a_c` requires. So an identity resolves one member under one type,</span>
+<span id="L390" data-line="390">context, owner, scope and basis. That equal representations do not</span>
+<span id="L391" data-line="391">establish equal meaning is FOUNDATIONS §2, Representation. The `a_c`</span>
+<span id="L392" data-line="392">binding beside it: equal spelling, payload equality, position in any</span>
+<span id="L393" data-line="393">structure and carrier equality do not establish semantic identity (P3).</span>
+<span id="L394" data-line="394"></span>
+<span id="L395" data-line="395"></span>
+<span id="L396" data-line="396">Source: AXIOMATIC_CALCULUS.md#ac-003-reference-closure sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf</span>
+<span id="L397" data-line="397"></span>
+<span id="L398" data-line="398">### AC-003 Reference closure</span>
+<span id="L399" data-line="399"></span>
+<span id="L400" data-line="400">Every referenced identity resolves exactly once in the applicable model or</span>
+<span id="L401" data-line="401">through one explicit external relation. Resolution uses the exact</span>
+<span id="L402" data-line="402">`RefDomain_Sigma(source_record_kind, field)` declaration across the</span>
+<span id="L403" data-line="403">model&#x27;s record populations. Dangling, duplicate, wrong-record-kind,</span>
+<span id="L404" data-line="404">wrong-sort, wrong-basis, locally-and-externally ambiguous or</span>
+<span id="L405" data-line="405">undeclared-field references refuse structural admission (P3, P5).</span>
+<span id="L406" data-line="406"></span>
+<span id="L407" data-line="407"></span>
+<span id="L408" data-line="408">Source: AXIOMATIC_CALCULUS.md#ac-005-authority-conservation sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf</span>
+<span id="L409" data-line="409"></span>
+<span id="L410" data-line="410">### AC-005 Authority conservation</span>
+<span id="L411" data-line="411"></span>
+<span id="L412" data-line="412">Objects, relations, constraints, latitude, residuals, traversals,</span>
+<span id="L413" data-line="413">transformations, projections and judgments retain their declared semantic,</span>
+<span id="L414" data-line="414">operation, evaluation and decision authority (the kinds of</span>
+<span id="L415" data-line="415">[FOUNDATIONS §2 Authority kinds](../FOUNDATIONS.md#authority-kinds)). What</span>
+<span id="L416" data-line="416">creates no authority is listed there; in `a_c` its instances are copying,</span>
+<span id="L417" data-line="417">interpreting, encoding, evaluating and transporting a record, none of</span>
+<span id="L418" data-line="418">which transfers authority (P6, P4b).</span>
+<span id="L419" data-line="419"></span>
+<span id="L420" data-line="420"></span>
+<span id="L421" data-line="421">Source: AXIOMATIC_CALCULUS.md#ac-006-basis-coherence sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf</span>
+<span id="L422" data-line="422"></span>
+<span id="L423" data-line="423">### AC-006 Basis coherence</span>
+<span id="L424" data-line="424"></span>
+<span id="L425" data-line="425">Every result binds its exact basis under</span>
+<span id="L426" data-line="426">[RF-005](../REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates), which</span>
+<span id="L427" data-line="427">owns the exact-basis rule for results; what a basis is, including that</span>
+<span id="L428" data-line="428">mixed bases need an explicit composite relation, is FOUNDATIONS §2,</span>
+<span id="L429" data-line="429">Basis. This law binds the same rule to every fundamental record and model</span>
+<span id="L430" data-line="430">of `a_c`: each binds an exact basis, the composite-basis relation of a</span>
+<span id="L431" data-line="431">mixed basis is an explicitly owned record, and individually valid</span>
+<span id="L432" data-line="432">coordinates do not create a coherent composite basis by proximity (P6, P3).</span>
+<span id="L433" data-line="433"></span>
+<span id="L434" data-line="434"></span>
+<span id="L435" data-line="435">Source: AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf</span>
+<span id="L436" data-line="436"></span>
+<span id="L437" data-line="437">### AC-007 Constraint and refusal</span>
+<span id="L438" data-line="438"></span>
+<span id="L439" data-line="439">Each constraint names its governed subject, predicate, judgment kind,</span>
+<span id="L440" data-line="440">latitude and refusal (§3, Constraint). The judgment of a constraint</span>
+<span id="L441" data-line="441">returns one value of the core result algebra of</span>
+<span id="L442" data-line="442">[FOUNDATIONS §4 Results](../FOUNDATIONS.md#results), directly or through a</span>
+<span id="L443" data-line="443">refinement that the owning signature declares and that maps each of its</span>
+<span id="L444" data-line="444">values to exactly one core value. Under the no-coercion rule of</span>
+<span id="L445" data-line="445">FOUNDATIONS §4 Results, a failed, missing, indeterminate, out-of-scope or</span>
+<span id="L446" data-line="446">invalid-basis result of a constraint follows that algebra and is never</span>
+<span id="L447" data-line="447">coerced to satisfied (P5, P6). The</span>
+<span id="L448" data-line="448">core values, the rule that no mapping raises a result&#x27;s standing and the</span>
+<span id="L449" data-line="449">boundary among out_of_frame, indeterminate and an evaluation that was not</span>
+<span id="L450" data-line="450">performed are FOUNDATIONS §4 Results&#x27;. This law applies them to the</span>
+<span id="L451" data-line="451">judgment of a constraint and to the outcomes of the operations of this</span>
+<span id="L452" data-line="452">member, and adds no core value.</span>
+<span id="L453" data-line="453"></span>
+<span id="L454" data-line="454">Constraint results. The outcomes of a constraint&#x27;s judgment map for the</span>
+<span id="L455" data-line="455">predicate &quot;the constraint&#x27;s predicate holds for its governed subject on</span>
+<span id="L456" data-line="456">the exact basis&quot; (P5, P6):</span>
+<span id="L457" data-line="457"></span>
+<span id="L458" data-line="458">| Outcome | Core value | Ground |</span>
+<span id="L459" data-line="459">|---|---|---|</span>
+<span id="L460" data-line="460">| holds | satisfied | the judgment establishes the predicate on the exact basis |</span>
+<span id="L461" data-line="461">| failed | falsified | a counterexample defeats the predicate; the judgment names it |</span>
+<span id="L462" data-line="462">| indeterminate | indeterminate | the admissible evidence cannot decide the predicate; the judgment names the evidence that would decide |</span>
+<span id="L463" data-line="463">| out of scope | out_of_frame | the predicate is asked of a subject or relation outside the constraint&#x27;s declared `applies_to`, context or scope, so deciding it needs a relation the constraint does not declare; the judgment names that relation, with its owner where the subject gives one |</span>
+<span id="L464" data-line="464">| invalid basis | invalid_basis | the subject or basis cannot support the judgment; the judgment names the basis repair |</span>
+<span id="L465" data-line="465"></span>
+<span id="L466" data-line="466">A missing result is no value of this refinement: a judgment that was not</span>
+<span id="L467" data-line="467">performed has no closed result, is never `indeterminate`, and enters every</span>
+<span id="L468" data-line="468">conjunction over it as a planned assessment without a closed result</span>
+<span id="L469" data-line="469">(FOUNDATIONS §4 Results, Not performed).</span>
+<span id="L470" data-line="470"></span>
+<span id="L471" data-line="471">Operation outcomes. A closure (AC-010), a projection (AC-011), the</span>
+<span id="L472" data-line="472">structural admission of a record, model or carrier, the application of a</span>
+<span id="L473" data-line="473">transformation (AC-013) and an interpretation (§6) each end in their</span>
+<span id="L474" data-line="474">declared result or in one of the stops `hold`, `gap` and `refusal` that</span>
+<span id="L475" data-line="475">this member writes. Where this member says that a condition refuses, the</span>
+<span id="L476" data-line="476">operation returns `refusal` naming the condition; the record, model or</span>
+<span id="L477" data-line="477">carrier is not admitted, and nothing is dropped silently. Each outcome</span>
+<span id="L478" data-line="478">maps for the predicate &quot;the operation yields its declared result on the</span>
+<span id="L479" data-line="479">exact basis&quot; (P5, P6):</span>
+<span id="L480" data-line="480"></span>
+<span id="L481" data-line="481">| Outcome | Core value | Ground |</span>
+<span id="L482" data-line="482">|---|---|---|</span>
+<span id="L483" data-line="483">| declared result | satisfied | the closure, the projection with its boundary, the admission, the proposed successor `M_b_prime*` or the proposed model `M_subject*` is returned on the exact basis; a proposed successor or model establishes that it is available, never its acceptance or admission (FOUNDATIONS §4 Results) |</span>
+<span id="L484" data-line="484">| `hold` | indeterminate | the operation was applied and stops because evidence, an observation or a disposition it needs is not yet admitted, so the admissible evidence cannot decide whether it yields its result; its residual names what would decide |</span>
+<span id="L485" data-line="485">| `gap` | invalid_basis | the result needs a member, reference, resolution or declaration whose resolution on the basis is still open: the declared relation that resolves it has not yet decided it, as for an external resolution not yet evaluated; the result is undefined on this basis until it is supplied. A reference evaluated to no target is dangling and refuses (AC-003): a local reference with no record in the model&#x27;s closed population, and an external reference whose declared resolution has been evaluated and yields no target |</span>
+<span id="L486" data-line="486">| `refusal(constraint)` | falsified | every refusal that is not `refusal(basis)`: the refusal names a demonstrated violation of a declared law of this member or a constraint of its signature by the record, model, carrier, transformation or application under judgment, including a missing record family (AC-001), a dangling reference (AC-003) and an application without its traversal (AC-015), or it names no condition of the basis; the violation or other defect it names is the counterexample |</span>
+<span id="L487" data-line="487">| `refusal(basis)` | invalid_basis | the refusal names one or more conditions of the basis the operation acts on and no demonstrated violation of a declared law or constraint by the record, model, carrier, transformation or application under judgment: a seed set, relation family, required-edge semantics, basis or scope that is not exact; a fixed point that is not finite and unique; an input model, subject or carrier whose exact identity, basis or admission is not established; or mixed bases with no composite-basis relation (AC-006) |</span>
+<span id="L488" data-line="488"></span>
+<span id="L489" data-line="489">The cause is part of a refusal&#x27;s value, because a refusal would otherwise</span>
+<span id="L490" data-line="490">map to falsified or to invalid_basis according to its cause, and a refined</span>
+<span id="L491" data-line="491">value maps to exactly one core value (FOUNDATIONS §4 Results,</span>
+<span id="L492" data-line="492">Refinements). A refusal that names a demonstrated violation of a declared</span>
+<span id="L493" data-line="493">law or constraint by the record, model, carrier, transformation or</span>
+<span id="L494" data-line="494">application under judgment is `refusal(constraint)`, whatever condition of</span>
+<span id="L495" data-line="495">the basis it also names. The basis condition is recorded with the refusal</span>
+<span id="L496" data-line="496">and reported beside it as its own `invalid_basis` result, which names the</span>
+<span id="L497" data-line="497">basis repair and answers the predicate of the evaluation that the</span>
+<span id="L498" data-line="498">condition leaves without a supporting basis, never the operation-outcome</span>
+<span id="L499" data-line="499">predicate that the refusal answers</span>
+<span id="L500" data-line="500">([FOUNDATIONS §4 Conjunction of results](../FOUNDATIONS.md#conjunction-of-results),</span>
+<span id="L501" data-line="501">Predicates travel). A refusal that names only conditions of the basis is</span>
+<span id="L502" data-line="502">`refusal(basis)`. A violation inside an input that the operation acts on</span>
+<span id="L503" data-line="503">as its basis is a condition of the basis for that operation, not a</span>
+<span id="L504" data-line="504">violation by what it judges, as the projection below shows. Purpose and</span>
+<span id="L505" data-line="505">material relation: a demonstrated violation is a known failure, which</span>
+<span id="L506" data-line="506">survives every join only as a `falsified` result, so a basis condition</span>
+<span id="L507" data-line="507">named beside it neither hides the failure nor discards its counterexample,</span>
+<span id="L508" data-line="508">and the basis repair stays named (FOUNDATIONS §4 Conjunction of results,</span>
+<span id="L509" data-line="509">Survival; P5, P6). A basis mismatch inside a model or a record, a</span>
+<span id="L510" data-line="510">relation&#x27;s qualifier record included, is mixed bases with no</span>
+<span id="L511" data-line="511">composite-basis relation (AC-006): a coordinate of the model or record</span>
+<span id="L512" data-line="512">binds, or a reference in it resolves on, a basis that the governing basis</span>
+<span id="L513" data-line="513">relation does not admit, as a wrong-basis reference of AC-003 does. It is</span>
+<span id="L514" data-line="514">a condition of the basis, in the structural admission that judges that</span>
+<span id="L515" data-line="515">model or record as in every other operation, and never a violated</span>
+<span id="L516" data-line="516">constraint of a signature, even where the signature declares the basis</span>
+<span id="L517" data-line="517">relation; a refusal that names only such a mismatch is `refusal(basis)`.</span>
+<span id="L518" data-line="518">One defect can bear on two predicates: a model that violates AC-001 is</span>
+<span id="L519" data-line="519">`refusal(constraint)` in the structural admission that judges it and</span>
+<span id="L520" data-line="520">`refusal(basis)` in a projection over it, and each outcome answers its own</span>
+<span id="L521" data-line="521">predicate. An operation that was not applied has no outcome. A stop `gap`</span>
+<span id="L522" data-line="522">is a closed result with the value invalid_basis; it is not the absence of</span>
+<span id="L523" data-line="523">a result that</span>
+<span id="L524" data-line="524">[FOUNDATIONS §4 Conjunction of results](../FOUNDATIONS.md#conjunction-of-results)</span>
+<span id="L525" data-line="525">records as a gap. A signature&#x27;s stop contract and a traversal record map</span>
+<span id="L526" data-line="526">stops of their own under §5.</span>
+<span id="L527" data-line="527"></span>
+<span id="L528" data-line="528">Purpose and material relation: a</span>
+<span id="L529" data-line="529">constraint result or an operation&#x27;s stop combines with results of other</span>
+<span id="L530" data-line="530">members only through the one core, so a refusal, a hold or a gap is</span>
+<span id="L531" data-line="531">neither read as success nor mistaken for another case; and a closure or</span>
+<span id="L532" data-line="532">projection that is not established has the value invalid_basis here, as</span>
+<span id="L533" data-line="533">the activation outcome `closure_unresolved` of</span>
+<span id="L534" data-line="534">[ACTIVATION §3](../ACTIVATION.md#admission-and-activation) has for its own</span>
+<span id="L535" data-line="535">predicate (P5, P6).</span>
+<span id="L536" data-line="536"></span>
+<span id="L537" data-line="537"></span>
+<span id="L538" data-line="538">Source: AXIOMATIC_CALCULUS.md#ac-008-explicit-latitude sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf</span>
+<span id="L539" data-line="539"></span>
+<span id="L540" data-line="540">### AC-008 Explicit latitude</span>
+<span id="L541" data-line="541"></span>
+<span id="L542" data-line="542">Two values may differ lawfully only through an applicable latitude record</span>
+<span id="L543" data-line="543">or transformation relation. An implementation preference, a probabilistic</span>
+<span id="L544" data-line="544">choice or a human presence is not implicit latitude. FOUNDATIONS §4 states</span>
+<span id="L545" data-line="545">the same rule for any two values; this law is its form over `L` and `T`</span>
+<span id="L546" data-line="546">(P6, P1).</span>
+<span id="L547" data-line="547"></span>
+<span id="L548" data-line="548"></span>
+<span id="L549" data-line="549">Source: AXIOMATIC_CALCULUS.md#ac-009-residual-conservation sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf</span>
+<span id="L550" data-line="550"></span>
+<span id="L551" data-line="551">### AC-009 Residual conservation</span>
+<span id="L552" data-line="552"></span>
+<span id="L553" data-line="553">Every material uncertainty, omission, translation loss, unresolved</span>
+<span id="L554" data-line="554">boundary or unproven relation remains in `X` until an authorised</span>
+<span id="L555" data-line="555">disposition creates an exact successor model. Absence from a projection is</span>
+<span id="L556" data-line="556">not resolution (P4b).</span>
+<span id="L557" data-line="557"></span>
+<span id="L558" data-line="558"></span>
+<span id="L559" data-line="559">Source: AXIOMATIC_CALCULUS.md#ac-013-transformation sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf</span>
+<span id="L560" data-line="560"></span>
+<span id="L561" data-line="561">### AC-013 Transformation</span>
+<span id="L562" data-line="562"></span>
+<span id="L563" data-line="563">A transformation is an operation-bearing specialisation of one exact</span>
+<span id="L564" data-line="564">traversal record `v` (§5). Its record is (P4b, P3):</span>
+<span id="L565" data-line="565"></span>
+<span id="L566" data-line="566">```text</span>
+<span id="L567" data-line="567">t = {</span>
+<span id="L568" data-line="568">  id,</span>
+<span id="L569" data-line="569">  traversal,</span>
+<span id="L570" data-line="570">  domain_model,</span>
+<span id="L571" data-line="571">  codomain_model,</span>
+<span id="L572" data-line="572">  context,</span>
+<span id="L573" data-line="573">  owner,</span>
+<span id="L574" data-line="574">  scope,</span>
+<span id="L575" data-line="575">  basis,</span>
+<span id="L576" data-line="576">  operation_authority,</span>
+<span id="L577" data-line="577">  preconditions,</span>
+<span id="L578" data-line="578">  preservation_relation,</span>
+<span id="L579" data-line="579">  preserved,</span>
+<span id="L580" data-line="580">  introduced,</span>
+<span id="L581" data-line="581">  removed,</span>
+<span id="L582" data-line="582">  external_preserved,</span>
+<span id="L583" data-line="583">  external_introduced,</span>
+<span id="L584" data-line="584">  external_removed,</span>
+<span id="L585" data-line="585">  external_resolution_witnesses,</span>
+<span id="L586" data-line="586">  residuals,</span>
+<span id="L587" data-line="587">  evidence,</span>
+<span id="L588" data-line="588">  provenance,</span>
+<span id="L589" data-line="589">  stop_states,</span>
+<span id="L590" data-line="590">  invalidation,</span>
+<span id="L591" data-line="591">  re_entry</span>
+<span id="L592" data-line="592">}</span>
+<span id="L593" data-line="593">```</span>
+<span id="L594" data-line="594"></span>
+<span id="L595" data-line="595">`t.traversal` resolves one `v`; its context, owner, scope, basis,</span>
+<span id="L596" data-line="596">operation authority, evidence, provenance and stop contract equal or</span>
+<span id="L597" data-line="597">lawfully restrict the corresponding traversal coordinates. A broader or</span>
+<span id="L598" data-line="598">mismatched coordinate refuses (P6).</span>
+<span id="L599" data-line="599"></span>
+<span id="L600" data-line="600">`domain_model` and `codomain_model` resolve exact content identities of</span>
+<span id="L601" data-line="601">the complete input and proposed successor models. Each model identity</span>
+<span id="L602" data-line="602">commits to its exact calculus basis, signature identity, complete finite</span>
+<span id="L603" data-line="603">`Population_M`, complete `External_M`, exact external-resolution map and</span>
+<span id="L604" data-line="604">selected model-content identity under the owning identity law. A mutable</span>
+<span id="L605" data-line="605">locator, a model-family name, a partial projection or a population digest</span>
+<span id="L606" data-line="606">without the exact model identity refuses (P3).</span>
+<span id="L607" data-line="607"></span>
+<span id="L608" data-line="608">For each `x in External_M`, the model&#x27;s exact resolution relation</span>
+<span id="L609" data-line="609">determines:</span>
+<span id="L610" data-line="610"></span>
+<span id="L611" data-line="611">```text</span>
+<span id="L612" data-line="612">Resolution_M(x) = {</span>
+<span id="L613" data-line="613">  external_identity,</span>
+<span id="L614" data-line="614">  reference_domain,</span>
+<span id="L615" data-line="615">  external_target_kind,</span>
+<span id="L616" data-line="616">  resolved_target_identity,</span>
+<span id="L617" data-line="617">  basis_relation,</span>
+<span id="L618" data-line="618">  resolution_basis,</span>
+<span id="L619" data-line="619">  evidence_identity</span>
+<span id="L620" data-line="620">}</span>
+<span id="L621" data-line="621"></span>
+<span id="L622" data-line="622">ResolutionSet_M = { Resolution_M(x) | x in External_M }</span>
+<span id="L623" data-line="623">```</span>
+<span id="L624" data-line="624"></span>
+<span id="L625" data-line="625">`Resolution_M` is a model coordinate supplied by the signature-declared</span>
+<span id="L626" data-line="626">external reference relation, not a ninth fundamental record family. Every</span>
+<span id="L627" data-line="627">field is identity-bearing and exact. One external identity has exactly one</span>
+<span id="L628" data-line="628">resolution tuple in one model; a missing, ambiguous or extra tuple refuses</span>
+<span id="L629" data-line="629">(P3).</span>
+<span id="L630" data-line="630"></span>
+<span id="L631" data-line="631">For an ordinary same-basis transformation:</span>
+<span id="L632" data-line="632"></span>
+<span id="L633" data-line="633">```text</span>
+<span id="L634" data-line="634">basis(domain_model) = basis(codomain_model) = t.basis = basis(t.traversal)</span>
+<span id="L635" data-line="635">signature(domain_model) = signature(codomain_model)</span>
+<span id="L636" data-line="636">```</span>
+<span id="L637" data-line="637"></span>
+<span id="L638" data-line="638">A cross-basis or cross-signature migration requires a separately</span>
+<span id="L639" data-line="639">identified transformation specialisation whose exact composite-basis and</span>
+<span id="L640" data-line="640">compatible signature-extension relations name both sides. No identity</span>
+<span id="L641" data-line="641">whose basis or record kind changes belongs to `preserved`; the source</span>
+<span id="L642" data-line="642">identity is removed and the successor identity is introduced, with their</span>
+<span id="L643" data-line="643">continuity represented only by the exact migration relation (P3, P6).</span>
+<span id="L644" data-line="644"></span>
+<span id="L645" data-line="645">`preservation_relation` resolves one exact typed equality relation</span>
+<span id="L646" data-line="646">applicable to the declared domain and codomain model identities and record</span>
+<span id="L647" data-line="647">kinds. It binds both model identities, both exact bases, comparison</span>
+<span id="L648" data-line="648">domain, direction, authority, scope, evidence and equality law.</span>
+<span id="L649" data-line="649">Equivalence or meaning-preservation may relate a removed identity to an</span>
+<span id="L650" data-line="650">introduced identity; it cannot retain one identity in `preserved` (P1,</span>
+<span id="L651" data-line="651">P3).</span>
+<span id="L652" data-line="652"></span>
+<span id="L653" data-line="653">Let `Local_b` be the complete input-model local-record identity set, `P_t`</span>
+<span id="L654" data-line="654">the identities named by `preserved`, `R_t` those named by `removed`, and</span>
+<span id="L655" data-line="655">`N_t` the identities of the complete records named by `introduced`. A</span>
+<span id="L656" data-line="656">lawful transformation proves the closed local-record delta (P4b):</span>
+<span id="L657" data-line="657"></span>
+<span id="L658" data-line="658">```text</span>
+<span id="L659" data-line="659">Local_b       = P_t disjoint_union R_t</span>
+<span id="L660" data-line="660">Local_b_prime = P_t disjoint_union N_t</span>
+<span id="L661" data-line="661">N_t intersect Local_b = empty</span>
+<span id="L662" data-line="662">R_t intersect Local_b_prime = empty</span>
+<span id="L663" data-line="663">```</span>
+<span id="L664" data-line="664"></span>
+<span id="L665" data-line="665">For every identity in `P_t`, the input and successor records have the</span>
+<span id="L666" data-line="666">same record kind, identity, context, owner, scope and basis. They are</span>
+<span id="L667" data-line="667">either:</span>
+<span id="L668" data-line="668"></span>
+<span id="L669" data-line="669">1. byte-identical under one exact canonical record grammar selected for</span>
+<span id="L670" data-line="670">   both models; or</span>
+<span id="L671" data-line="671">2. equal under the exact `preservation_relation` when the abstract</span>
+<span id="L672" data-line="672">   records do not share such a byte grammar.</span>
+<span id="L673" data-line="673"></span>
+<span id="L674" data-line="674">Canonical-byte equality and typed record equality are alternative proofs</span>
+<span id="L675" data-line="675">of identity preservation, not carrier selection by the calculus. A changed</span>
+<span id="L676" data-line="676">field, changed basis, changed record kind, nominally equal identifier,</span>
+<span id="L677" data-line="677">equivalence or unbound assertion of preserved meaning refuses membership</span>
+<span id="L678" data-line="678">in `P_t` (P3, P1).</span>
+<span id="L679" data-line="679"></span>
+<span id="L680" data-line="680">Every removed identity is absent from the successor. Every introduced</span>
+<span id="L681" data-line="681">identity is absent from the input and carries a complete lawful record in</span>
+<span id="L682" data-line="682">exactly one successor population. Every input local-record identity is</span>
+<span id="L683" data-line="683">classified exactly once as preserved or removed; no local record may be</span>
+<span id="L684" data-line="684">silently dropped, retained or duplicated (P4b).</span>
+<span id="L685" data-line="685"></span>
+<span id="L686" data-line="686">The external-resolution coordinates form a distinct closed delta. Let</span>
+<span id="L687" data-line="687">`E_b` and `E_b_prime` be `ResolutionSet_M` for the domain and codomain</span>
+<span id="L688" data-line="688">models; `EP_t`, `ER_t` and `EN_t` are exactly the resolution coordinates</span>
+<span id="L689" data-line="689">named by `external_preserved`, `external_removed` and</span>
+<span id="L690" data-line="690">`external_introduced`:</span>
+<span id="L691" data-line="691"></span>
+<span id="L692" data-line="692">```text</span>
+<span id="L693" data-line="693">E_b       = EP_t disjoint_union ER_t</span>
+<span id="L694" data-line="694">E_b_prime = EP_t disjoint_union EN_t</span>
+<span id="L695" data-line="695">EN_t intersect E_b = empty</span>
+<span id="L696" data-line="696">ER_t intersect E_b_prime = empty</span>
+<span id="L697" data-line="697">```</span>
+<span id="L698" data-line="698"></span>
+<span id="L699" data-line="699">For every `x in EP_t`, `external_resolution_witnesses` contains exactly</span>
+<span id="L700" data-line="700">one:</span>
+<span id="L701" data-line="701"></span>
+<span id="L702" data-line="702">```text</span>
+<span id="L703" data-line="703">ExternalResolutionPreservationWitness = {</span>
+<span id="L704" data-line="704">  external_resolution: x,</span>
+<span id="L705" data-line="705">  domain_model,</span>
+<span id="L706" data-line="706">  codomain_model,</span>
+<span id="L707" data-line="707">  domain_resolution: Resolution_domain_model(x),</span>
+<span id="L708" data-line="708">  codomain_resolution: Resolution_codomain_model(x),</span>
+<span id="L709" data-line="709">  decision: equal,</span>
+<span id="L710" data-line="710">  evidence</span>
+<span id="L711" data-line="711">}</span>
+<span id="L712" data-line="712">```</span>
+<span id="L713" data-line="713"></span>
+<span id="L714" data-line="714">The two resolution tuples are exactly field-equal. A nominally equal</span>
+<span id="L715" data-line="715">external identifier, an equivalent target, a changed target kind, a</span>
+<span id="L716" data-line="716">changed resolved target, a changed reference domain, a changed basis</span>
+<span id="L717" data-line="717">relation, a changed resolution basis or a missing witness cannot enter</span>
+<span id="L718" data-line="718">`EP_t`. Every member of `ER_t` has its complete resolution only in the</span>
+<span id="L719" data-line="719">domain model; every member of `EN_t` has its complete resolution only in</span>
+<span id="L720" data-line="720">the codomain model. A changed external resolution is a removal followed by</span>
+<span id="L721" data-line="721">introduction of the new resolution coordinate and any separately declared</span>
+<span id="L722" data-line="722">continuity relation; the referenced external identity may remain</span>
+<span id="L723" data-line="723">unchanged, but the resolution is not preserved. Witnesses are total and</span>
+<span id="L724" data-line="724">unique over `EP_t` and name no other resolution coordinate (P4b, P3).</span>
+<span id="L725" data-line="725"></span>
+<span id="L726" data-line="726">Material residuals remain in the successor residual set unless an exact</span>
+<span id="L727" data-line="727">authorised disposition is included in the transformation evidence.</span>
+<span id="L728" data-line="728">Failure to establish any model identity, basis, population, local or</span>
+<span id="L729" data-line="729">external partition, equality, external-resolution witness, residual or</span>
+<span id="L730" data-line="730">codomain equation refuses (P4b, P5).</span>
+<span id="L731" data-line="731"></span>
+<span id="L732" data-line="732">Application is:</span>
+<span id="L733" data-line="733"></span>
+<span id="L734" data-line="734">```text</span>
+<span id="L735" data-line="735">T[t](M_b, inputs) -&gt; M_b_prime* | hold | gap | refusal</span>
+<span id="L736" data-line="736">```</span>
+<span id="L737" data-line="737"></span>
+<span id="L738" data-line="738">The exact transformation identity `t` declares every mutation it may</span>
+<span id="L739" data-line="739">perform. The input model remains unchanged; `M_b_prime*` is a proposed</span>
+<span id="L740" data-line="740">successor. A proposed successor does not accept or admit itself (P6). The</span>
+<span id="L741" data-line="741">stops `hold`, `gap` and `refusal` take their core values under AC-007 by</span>
+<span id="L742" data-line="742">their causes.</span>
+<span id="L743" data-line="743">FOUNDATIONS §4 consumes this law as the conservation accounting of every</span>
+<span id="L744" data-line="744">step: what was preserved, introduced and removed, the external resolution</span>
+<span id="L745" data-line="745">witnesses and the residuals.</span>
+<span id="L746" data-line="746"></span>
+<span id="L747" data-line="747"></span>
+<span id="L748" data-line="748">Source: AXIOMATIC_CALCULUS.md#ac-014-judgment-separation sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf</span>
+<span id="L749" data-line="749"></span>
+<span id="L750" data-line="750">### AC-014 Judgment separation</span>
+<span id="L751" data-line="751"></span>
+<span id="L752" data-line="752">A judgment points to an unchanged subject; it is the Judgment of</span>
+<span id="L753" data-line="753">FOUNDATIONS §2 carried as a model record (P6):</span>
+<span id="L754" data-line="754"></span>
+<span id="L755" data-line="755">```text</span>
+<span id="L756" data-line="756">Judgment = {</span>
+<span id="L757" data-line="757">  id,</span>
+<span id="L758" data-line="758">  kind,</span>
+<span id="L759" data-line="759">  subject,</span>
+<span id="L760" data-line="760">  subject_digest,</span>
+<span id="L761" data-line="761">  context,</span>
+<span id="L762" data-line="762">  owner,</span>
+<span id="L763" data-line="763">  scope,</span>
+<span id="L764" data-line="764">  basis,</span>
+<span id="L765" data-line="765">  evaluator,</span>
+<span id="L766" data-line="766">  authority,</span>
+<span id="L767" data-line="767">  decision,</span>
+<span id="L768" data-line="768">  evidence,</span>
+<span id="L769" data-line="769">  provenance,</span>
+<span id="L770" data-line="770">  decided_at</span>
+<span id="L771" data-line="771">}</span>
+<span id="L772" data-line="772">```</span>
+<span id="L773" data-line="773"></span>
+<span id="L774" data-line="774">Issuing a judgment does not transform, rewrite, reissue or rename its</span>
+<span id="L775" data-line="775">subject. Promotion is an explicit relation between the unchanged subject</span>
+<span id="L776" data-line="776">and its admission or acceptance judgment (P6, P3).</span>
+<span id="L777" data-line="777"></span>
+<span id="L778" data-line="778"></span>
+<span id="L779" data-line="779">Source: AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf</span>
+<span id="L780" data-line="780"></span>
+<span id="L781" data-line="781">## 5. Traversals and functor kinds</span>
+<span id="L782" data-line="782"></span>
+<span id="L783" data-line="783">A traversal is a typed contract (P4a, P6):</span>
+<span id="L784" data-line="784"></span>
+<span id="L785" data-line="785">```text</span>
+<span id="L786" data-line="786">v = {</span>
+<span id="L787" data-line="787">  id,</span>
+<span id="L788" data-line="788">  domain,</span>
+<span id="L789" data-line="789">  codomain,</span>
+<span id="L790" data-line="790">  context,</span>
+<span id="L791" data-line="791">  owner,</span>
+<span id="L792" data-line="792">  scope,</span>
+<span id="L793" data-line="793">  basis,</span>
+<span id="L794" data-line="794">  preconditions,</span>
+<span id="L795" data-line="795">  postconditions,</span>
+<span id="L796" data-line="796">  authority,</span>
+<span id="L797" data-line="797">  evidence,</span>
+<span id="L798" data-line="798">  provenance,</span>
+<span id="L799" data-line="799">  stop_states</span>
+<span id="L800" data-line="800">}</span>
+<span id="L801" data-line="801">```</span>
+<span id="L802" data-line="802"></span>
+<span id="L803" data-line="803">The traversal record is this member&#x27;s own concept. A same-spelled term</span>
+<span id="L804" data-line="804">owned by a profile, a realisation or a runtime is not imported by nominal</span>
+<span id="L805" data-line="805">equality and does not specialise this record except through a declared</span>
+<span id="L806" data-line="806">binding under that owner&#x27;s authority (§9; P3, P1).</span>
+<span id="L807" data-line="807"></span>
+<span id="L808" data-line="808">`a_c` defines three fundamental functor-kind identities (P3):</span>
+<span id="L809" data-line="809"></span>
+<span id="L810" data-line="810">```text</span>
+<span id="L811" data-line="811">F_D = urn:stdo:concept:axiomatic-calculus:f-d</span>
+<span id="L812" data-line="812">F_P = urn:stdo:concept:axiomatic-calculus:f-p</span>
+<span id="L813" data-line="813">F_H = urn:stdo:concept:axiomatic-calculus:f-h</span>
+<span id="L814" data-line="814">```</span>
+<span id="L815" data-line="815"></span>
+<span id="L816" data-line="816">Application notation is:</span>
+<span id="L817" data-line="817"></span>
+<span id="L818" data-line="818">```text</span>
+<span id="L819" data-line="819">F_K[v](X_v) -&gt; Y_v | Omega_v</span>
+<span id="L820" data-line="820">```</span>
+<span id="L821" data-line="821"></span>
+<span id="L822" data-line="822">where `F_K` is one functor kind, `v` is one exact traversal identity,</span>
+<span id="L823" data-line="823">`X_v` and `Y_v` are its typed input and result domains, and `Omega_v` is</span>
+<span id="L824" data-line="824">its closed stop algebra. `Omega_v` is a refinement of the core result</span>
+<span id="L825" data-line="825">algebra of [FOUNDATIONS §4 Results](../FOUNDATIONS.md#results): it adds no</span>
+<span id="L826" data-line="826">core value, and each of its stop values maps to exactly one core value,</span>
+<span id="L827" data-line="827">never to `satisfied`. A stop this member writes, `hold`, `gap`,</span>
+<span id="L828" data-line="828">`refusal(constraint)` or `refusal(basis)`, has the meaning and the core</span>
+<span id="L829" data-line="829">value that AC-007 gives it. The signature&#x27;s stop contract declares any</span>
+<span id="L830" data-line="830">further stop value with the one core value it maps to, and may refine a</span>
+<span id="L831" data-line="831">stop value by cause. A traversal record&#x27;s `stop_states` binds the stop</span>
+<span id="L832" data-line="832">mapping of that traversal, exactly one core value for each stop value; it</span>
+<span id="L833" data-line="833">may refine a value of the signature&#x27;s stop contract further by cause for</span>
+<span id="L834" data-line="834">that traversal. Each refined value, whether the stop contract or a</span>
+<span id="L835" data-line="835">`stop_states` declares it, names its parent value and its cause and maps</span>
+<span id="L836" data-line="836">to its parent&#x27;s core value: a value refined from `hold` to indeterminate,</span>
+<span id="L837" data-line="837">from `gap` or `refusal(basis)` to invalid_basis, and from</span>
+<span id="L838" data-line="838">`refusal(constraint)` to falsified. No refined value takes `satisfied`. A</span>
+<span id="L839" data-line="839">different core value needs a different parent value, which only the member</span>
+<span id="L840" data-line="840">that owns the parent declares; for these four stops that member is this</span>
+<span id="L841" data-line="841">one. Neither the stop contract nor a traversal&#x27;s `stop_states` raises a</span>
+<span id="L842" data-line="842">result&#x27;s standing (P5, P6). Purpose and material relation: one stop of one</span>
+<span id="L843" data-line="843">traversal has one core value, so its consumers cannot read it two ways,</span>
+<span id="L844" data-line="844">and no refinement gives a stop another core value, so a violated</span>
+<span id="L845" data-line="845">constraint never becomes a case that the evidence merely cannot decide.</span>
+<span id="L846" data-line="846"></span>
+<span id="L847" data-line="847">- `F_D` classifies deterministic evaluation or proof over declared</span>
+<span id="L848" data-line="848">  properties. It returns a judgment and does not perform the domain</span>
+<span id="L849" data-line="849">  construction being judged (P6).</span>
+<span id="L850" data-line="850">- `F_P` classifies bounded probabilistic interpretation, construction or</span>
+<span id="L851" data-line="851">  proposal under an exact traversal contract. Its result has no semantic,</span>
+<span id="L852" data-line="852">  admission, acceptance or closure authority merely because it is useful</span>
+<span id="L853" data-line="853">  or repeatable (P6, P0; instance premise (iii) of §1 Foundation to law).</span>
+<span id="L854" data-line="854">- `F_H` classifies explicit human adjudication under an exact identity,</span>
+<span id="L855" data-line="855">  authority grant, subject, basis and decision contract. Human presence</span>
+<span id="L856" data-line="856">  grants no ambient authority (P6).</span>
+<span id="L857" data-line="857"></span>
+<span id="L858" data-line="858">The actor, the executor, the domain operation and the functor kind are</span>
+<span id="L859" data-line="859">different coordinates. `Encode`, `Interpret`, `Serialize`, `Measure` and</span>
+<span id="L860" data-line="860">other named domain operations are not aliases for `F_D`, `F_P` or `F_H`.</span>
+<span id="L861" data-line="861">Different traversals may share one functor kind without sharing identity,</span>
+<span id="L862" data-line="862">semantics, inputs, outputs, authority or evidence (P3, P6).</span>
+<span id="L863" data-line="863"></span>
+<span id="L864" data-line="864">&quot;Functor kind&quot; is an `a_c` term for this traversal classification. It does</span>
+<span id="L865" data-line="865">not by itself assert a category-theoretic functor. A model that claims</span>
+<span id="L866" data-line="866">categorical functor laws carries the demonstration that</span>
+<span id="L867" data-line="867">[FOUNDATIONS §4](../FOUNDATIONS.md#4-algebra), Formal fragment, requires of</span>
+<span id="L868" data-line="868">every categorical claim (P6, P1).</span>
+<span id="L869" data-line="869"></span>
+<span id="L870" data-line="870">### AC-015 Functor classification</span>
+<span id="L871" data-line="871"></span>
+<span id="L872" data-line="872">Every functor application binds exactly one functor kind and one traversal</span>
+<span id="L873" data-line="873">identity. Applying any `F_*` kind without the bracketed traversal identity</span>
+<span id="L874" data-line="874">`[v]` is incomplete (P3). Such an</span>
+<span id="L875" data-line="875">application violates this law, and its outcome is `refusal(constraint)`</span>
+<span id="L876" data-line="876">under AC-007; this sense of incomplete is not the construction-availability</span>
+<span id="L877" data-line="877">value `incomplete` of a step</span>
+<span id="L878" data-line="878">([ACTIVATION §3](../ACTIVATION.md#construction-availability)). Purpose and</span>
+<span id="L879" data-line="879">material relation: an application without its traversal has one core</span>
+<span id="L880" data-line="880">value, and the shared word does not let it be read as a step&#x27;s stop (P5).</span>
+<span id="L881" data-line="881"></span>
+<span id="L882" data-line="882">### AC-016 Typed composition</span>
+<span id="L883" data-line="883"></span>
+<span id="L884" data-line="884">Two traversals compose only when the first result type and judgment</span>
+<span id="L885" data-line="885">satisfy the second traversal&#x27;s exact domain and preconditions (P4a):</span>
+<span id="L886" data-line="886"></span>
+<span id="L887" data-line="887">```text</span>
+<span id="L888" data-line="888">F_K2[w] compose F_K1[v]</span>
+<span id="L889" data-line="889">```</span>
+<span id="L890" data-line="890"></span>
+<span id="L891" data-line="891">Composition retains both traversal identities, intermediate results,</span>
+<span id="L892" data-line="892">judgments, evidence, authority, provenance and stop states. It cannot</span>
+<span id="L893" data-line="893">flatten probabilistic proposal, deterministic evaluation and human</span>
+<span id="L894" data-line="894">decision into one undifferentiated operation. `a_c` prescribes no</span>
+<span id="L895" data-line="895">universal `F_P -&gt; F_D -&gt; F_H` sequence; each application owns its lawful</span>
+<span id="L896" data-line="896">topology (P4a, P4b, P6). FOUNDATIONS §3 P4a consumes this law.</span>
+<span id="L897" data-line="897"></span>
+<span id="L898" data-line="898"></span>
+<span id="L899" data-line="899">Source: FOUNDATIONS.md#results sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545 rows=7/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted</span>
+<span id="L900" data-line="900"></span>
+<span id="L901" data-line="901">### Results</span>
+<span id="L902" data-line="902"></span>
+<span id="L903" data-line="903">Every performed evaluation returns one value of the core result algebra,</span>
+<span id="L904" data-line="904">directly or as a refined value mapped into it (P5):</span>
+<span id="L905" data-line="905"></span>
+<span id="L906" data-line="906">| Value | Meaning |</span>
+<span id="L907" data-line="907">|---|---|</span>
+<span id="L908" data-line="908">| `satisfied` | the declared predicate holds on the exact basis |</span>
+<span id="L909" data-line="909">| `falsified` | a declared counterexample defeats it |</span>
+<span id="L910" data-line="910">| `indeterminate` | the available admissible evidence cannot decide it |</span>
+<span id="L911" data-line="911">| `out_of_frame` | the evaluation requires an undeclared material relation or capability |</span>
+<span id="L912" data-line="912">| `invalid_basis` | the subject or basis cannot support the evaluation |</span>
+<span id="L913" data-line="913"></span>
+<span id="L914" data-line="914">This core is the only one. Results of constraints, judgments, frame</span>
+<span id="L915" data-line="915">evaluations, stops, work steps and effects are stated in it or in a</span>
+<span id="L916" data-line="916">refinement mapped into it, so that results from any members combine under</span>
+<span id="L917" data-line="917">one rule ([Conjunction of results](../FOUNDATIONS.md#conjunction-of-results)). Purpose and</span>
+<span id="L918" data-line="918">material relation: no combination can report success while a failure, an</span>
+<span id="L919" data-line="919">undecided question, an unperformed evaluation or an uncertain effect</span>
+<span id="L920" data-line="920">remains, and none of these can be mistaken for another (P5, P6).</span>
+<span id="L921" data-line="921"></span>
+<span id="L922" data-line="922">Recording. A result records its core value together with the predicate</span>
+<span id="L923" data-line="923">evaluated and the original domain outcome, which is the refined value</span>
+<span id="L924" data-line="924">where a refinement produced it. A mapping into the core never owns domain</span>
+<span id="L925" data-line="925">meaning: the member, profile or adopting Product that defines the refined</span>
+<span id="L926" data-line="926">value keeps it, and a consumer that needs the domain distinction reads the</span>
+<span id="L927" data-line="927">domain outcome, never the core value alone (P1, P6).</span>
+<span id="L928" data-line="928"></span>
+<span id="L929" data-line="929">Standing. The standing of a result is what it establishes about its</span>
+<span id="L930" data-line="930">predicate; it is distinct from the standing of a commitment (§1). Only</span>
+<span id="L931" data-line="931">`satisfied` establishes the predicate. `falsified` establishes that the</span>
+<span id="L932" data-line="932">predicate fails and names the counterexample. `indeterminate`,</span>
+<span id="L933" data-line="933">`out_of_frame` and `invalid_basis` establish neither, and each names what</span>
+<span id="L934" data-line="934">would decide: the evidence, the missing relation or capability with its</span>
+<span id="L935" data-line="935">owner where the subject gives one, or the basis repair. By support for the</span>
+<span id="L936" data-line="936">predicate, `satisfied` stands above each other value, and the other four</span>
+<span id="L937" data-line="937">are not ordered among themselves.</span>
+<span id="L938" data-line="938"></span>
+<span id="L939" data-line="939">No refinement or mapping raises a result&#x27;s standing (P5, P6):</span>
+<span id="L940" data-line="940"></span>
+<span id="L941" data-line="941">- a falsified or failed result never maps to a satisfied or successful one;</span>
+<span id="L942" data-line="942">- a result that admissible evidence cannot decide never maps to</span>
+<span id="L943" data-line="943">  `satisfied`;</span>
+<span id="L944" data-line="944">- an evaluation that was not performed stays distinct from one whose</span>
+<span id="L945" data-line="945">  evidence cannot decide: it has no</span>
+<span id="L946" data-line="946">  [closed result](../ACTIVATION.md#7-closed-result-and-reuse), and it is never mapped</span>
+<span id="L947" data-line="947">  to `indeterminate` or to any other core value;</span>
+<span id="L948" data-line="948">- an effect whose completion is unknown never maps to no effect or to</span>
+<span id="L949" data-line="949">  completed.</span>
+<span id="L950" data-line="950"></span>
+<span id="L951" data-line="951">Not performed. An evaluation that is required or planned and was not</span>
+<span id="L952" data-line="952">performed has no closed result; an actor cannot report an evaluation it</span>
+<span id="L953" data-line="953">did not perform (P6). Nothing is coerced to success: a failed,</span>
+<span id="L954" data-line="954">indeterminate, out-of-frame, out-of-scope or invalid-basis result follows</span>
+<span id="L955" data-line="955">the declared result algebra and returns its own value under it, never</span>
+<span id="L956" data-line="956">`satisfied`, and a missing result, being no result, enters every</span>
+<span id="L957" data-line="957">conjunction over it as a gap: a planned assessment without a closed result</span>
+<span id="L958" data-line="958">where an assessment was planned, and uncovered coverage where none was.</span>
+<span id="L959" data-line="959">[REFERENCE_FRAME §3](../REFERENCE_FRAME.md#rf-012-closed-results) states</span>
+<span id="L960" data-line="960">RF-012 as a law over frames and</span>
+<span id="L961" data-line="961">[AXIOMATIC_CALCULUS §4](../AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal)</span>
+<span id="L962" data-line="962">states AC-007 as a law over constraints; each uses this core and neither</span>
+<span id="L963" data-line="963">defines it again.</span>
+<span id="L964" data-line="964"></span>
+<span id="L965" data-line="965">Refinements. A member, profile or adopting Product that needs finer</span>
+<span id="L966" data-line="966">outcomes defines a refinement. The refinement names the question it</span>
+<span id="L967" data-line="967">answers and the predicate its mapping is for, and maps every refined value</span>
+<span id="L968" data-line="968">to exactly one core value. No outcome exists outside the core; a</span>
+<span id="L969" data-line="969">refinement adds no core value and keeps the pressure of `indeterminate`,</span>
+<span id="L970" data-line="970">`out_of_frame` and `invalid_basis` explicit. Where a refined value would</span>
+<span id="L971" data-line="971">map to one of two core values according to its cause, the cause is part of</span>
+<span id="L972" data-line="972">the refined value and each resulting value maps once (P5, P1). A further</span>
+<span id="L973" data-line="973">refinement, by a member, profile, project or adopting Product, may split a</span>
+<span id="L974" data-line="974">refined value by cause. The parent-value rule governs every such split:</span>
+<span id="L975" data-line="975">each child value names its parent value and its cause and keeps its</span>
+<span id="L976" data-line="976">parent&#x27;s core value; a child that needs a different core value needs a</span>
+<span id="L977" data-line="977">different parent value, which only the owner of the parent declares; and</span>
+<span id="L978" data-line="978">no child takes `satisfied` from a parent that is not `satisfied`. No</span>
+<span id="L979" data-line="979">further refinement raises a result&#x27;s standing (P5, P6, P1). Purpose and</span>
+<span id="L980" data-line="980">material relation: a consumer that reads a parent value reads the same</span>
+<span id="L981" data-line="981">core value from each of its children, so a split by cause adds a domain</span>
+<span id="L982" data-line="982">distinction and never changes what the parent establishes (P5, P6). The</span>
+<span id="L983" data-line="983">refinements for admission, activation and steps are</span>
+<span id="L984" data-line="984">[ACTIVATION §3](../ACTIVATION.md#3-step-results-and-disposition); each other</span>
+<span id="L985" data-line="985">member, profile and adopting Product states its mapping where it defines</span>
+<span id="L986" data-line="986">its values.</span>
+<span id="L987" data-line="987"></span>
+<span id="L988" data-line="988">Availability, assessment and acceptance are separate results, each with its</span>
+<span id="L989" data-line="989">own predicate: that a step produced a candidate; that the candidate meets</span>
+<span id="L990" data-line="990">its declared criteria; and that the</span>
+<span id="L991" data-line="991">[decision owner](../ACTIVATION.md#roles-and-delegation) accepts it at its</span>
+<span id="L992" data-line="992">boundary. A step having produced a candidate never maps to the candidate&#x27;s</span>
+<span id="L993" data-line="993">fitness or acceptance, and acceptance is never inferred from a successful</span>
+<span id="L994" data-line="994">step (P6; [ACTIVATION §3](../ACTIVATION.md#3-step-results-and-disposition),</span>
+<span id="L995" data-line="995">[EVALUATION §4](../EVALUATION.md#4-review-results) and</span>
+<span id="L996" data-line="996">[§5](../EVALUATION.md#5-acceptance)).</span>
+<span id="L997" data-line="997"></span>
+<span id="L998" data-line="998">Out of frame or indeterminate. The boundary between these values is drawn</span>
+<span id="L999" data-line="999">on what the activated frame declares and on what the step did with it (P5,</span>
+<span id="L1000" data-line="1000">finite capacity and graceful total handling; the material relation drawn</span>
+<span id="L1001" data-line="1001">is the three-way out_of_frame boundary: capability not declared, capability</span>
+<span id="L1002" data-line="1002">declared and exercised, capability declared and not exercised). Three cases; the first two name core values, and</span>
+<span id="L1003" data-line="1003">the third names none:</span>
+<span id="L1004" data-line="1004"></span>
+<span id="L1005" data-line="1005">- `out_of_frame` when the claim requires a material relation or an</span>
+<span id="L1006" data-line="1006">  evaluator capability that the activated frame does not declare. The</span>
+<span id="L1007" data-line="1007">  result names the missing relation or capability, its owner where the</span>
+<span id="L1008" data-line="1008">  subject gives one, and the reconfiguration pressure it creates</span>
+<span id="L1009" data-line="1009">  ([ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement)). A term the claim depends on and the frame</span>
+<span id="L1010" data-line="1010">  leaves undefined is an undeclared material relation: its meaning can</span>
+<span id="L1011" data-line="1011">  alter the result and it enters through no declared input (RF-003; P1). Whether the step exercised anything is</span>
+<span id="L1012" data-line="1012">  irrelevant to this value; the ground is the missing declaration.</span>
+<span id="L1013" data-line="1013">- `indeterminate` when the available admissible evidence cannot decide the</span>
+<span id="L1014" data-line="1014">  claim. The result names the evidence that would decide, as</span>
+<span id="L1015" data-line="1015">  its residual uncertainty. Where the</span>
+<span id="L1016" data-line="1016">  claim also depends on an undeclared relation or capability,</span>
+<span id="L1017" data-line="1017">  `out_of_frame` and `indeterminate` each have a lawful ground; the result</span>
+<span id="L1018" data-line="1018">  names the value it returns and that ground, and this boundary excludes</span>
+<span id="L1019" data-line="1019">  neither (P5).</span>
+<span id="L1020" data-line="1020">- no value of its own when the step did not exercise a declared capability</span>
+<span id="L1021" data-line="1021">  the evaluation requires. A result is returned wherever a sufficient</span>
+<span id="L1022" data-line="1022">  evaluation or an applicable judgment exists without that capability,</span>
+<span id="L1023" data-line="1023">  identifying its evidence, verdict and residual uncertainty like any</span>
+<span id="L1024" data-line="1024">  closed result:</span>
+<span id="L1025" data-line="1025">  a counterexample found by what was exercised, as when source inspection</span>
+<span id="L1026" data-line="1026">  falsifies A in a claim of A and B, returns `falsified`, and common</span>
+<span id="L1027" data-line="1027">  agreement cannot discard it. Where none</span>
+<span id="L1028" data-line="1028">  exists because the capability was not exercised, the evaluation was not</span>
+<span id="L1029" data-line="1029">  performed and has no result: the step&#x27;s stop state carries it,</span>
+<span id="L1030" data-line="1030">  `incomplete` under</span>
+<span id="L1031" data-line="1031">  [construction availability](../ACTIVATION.md#construction-availability), and</span>
+<span id="L1032" data-line="1032">  its work state ([ACTIVATION §5](../ACTIVATION.md#5-work-state-and-restart))</span>
+<span id="L1033" data-line="1033">  carries the unexercised capability as a residual (P6). In either case</span>
+<span id="L1034" data-line="1034">  the unexercised part, B above, has no result: in every conjunction over</span>
+<span id="L1035" data-line="1035">  it, it is a planned assessment without a closed result, and the known</span>
+<span id="L1036" data-line="1036">  failure A survives with it ([Conjunction of results](../FOUNDATIONS.md#conjunction-of-results)).</span>
+<span id="L1037" data-line="1037">  The evaluation&#x27;s result and the step&#x27;s stop state answer different</span>
+<span id="L1038" data-line="1038">  questions, so the step&#x27;s stop value never becomes the evaluation&#x27;s</span>
+<span id="L1039" data-line="1039">  result.</span>
+<span id="L1040" data-line="1040"></span>
+<span id="L1041" data-line="1041">Foundation to law for results and their combination (family F3). The</span>
+<span id="L1042" data-line="1042">table covers every rule of §4 and the result grounds of §2 Imports</span>
+<span id="L1043" data-line="1043">between members, in the format of</span>
+<span id="L1044" data-line="1044">[Foundation to law](../FOUNDATIONS.md#foundation-to-law), which states the standing of its</span>
+<span id="L1045" data-line="1045">consequences. Purpose and material relation: a reader of §4 sees which</span>
+<span id="L1046" data-line="1046">commitments each result rule rests on and which choices it adds, with their</span>
+<span id="L1047" data-line="1047">owners (P6, P2). Instance premises, which the commitments do not supply:</span>
+<span id="L1048" data-line="1048">(i) an evaluation declares its predicate, subject and basis; (ii) results</span>
+<span id="L1049" data-line="1049">of several evaluations, steps or members are combined into one decision;</span>
+<span id="L1050" data-line="1050">(iii) members, profiles and adopting Products need outcomes finer than the</span>
+<span id="L1051" data-line="1051">core.</span>
+<span id="L1052" data-line="1052"></span>
+<span id="L1053" data-line="1053">| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |</span>
+<span id="L1054" data-line="1054">|---|---|---|---|---|</span>
+<span id="L1055" data-line="1055">| P6 (independent), P5 (derived from P0 and P6) | a result claims no more than it establishes: only `satisfied` establishes the predicate, and no refinement or mapping raises a result&#x27;s standing | [Results](../FOUNDATIONS.md#results), Standing, and the rule that nothing raises standing; for the choice, [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Reported value | the order among the four other values within one combination; owner: the member or profile that applies the conjunction, in its declared rule | 9 |</span>
+<span id="L1056" data-line="1056">| P4b (derived from P0 and P2), P5 (derived from P0 and P6), P6 (independent); (ii) | a combination keeps failures, unperformed assessments and uncovered obligations apart and carries each through every join; agreement among contributors discards no counterexample | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results): its three inputs, Gaps, Survival, Predicates travel | none | 3, 9 |</span>
+<span id="L1057" data-line="1057">| P3 (independent), P5 (derived from P0 and P6), P6 (independent); (i), (ii) | a result supports its predicate only on the basis it binds, so a component held only on another basis has, on the basis the composite requires, no performed evaluation and is a gap, while an evaluation performed on a basis that cannot support it decides its own predicate as `invalid_basis`; one component is never answered both ways | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Stale results | none | 3, 9 |</span>
+<span id="L1058" data-line="1058">| P5 (derived from P0 and P6), P6 (independent); (ii) | a composite with a gap or a non-satisfied mandatory result is never `satisfied`; where every mandatory result is `satisfied`, its own value is `invalid_basis` if the declared basis relations disagree, and otherwise `indeterminate` while a gap remains; with every mandatory result `satisfied`, agreeing bases and no gap, a material counterexample to a mandatory constraint falsifies it whichever contributor found it, and without one its value is the one its declared rule gives over the mandatory results; a `falsified` result that is not mandatory stays in its record | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Reported value | which non-satisfied value is reported; owner: the member or profile that applies the conjunction, in its declared rule | 3, 9 |</span>
+<span id="L1059" data-line="1059">| P6 (independent), P4a (independent); (ii) | a conjunction decides only under a declared rule and transfers no contributor&#x27;s semantic authority | [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), The declared rule | the mandatory results, the handling of conflict and indeterminacy, the basis relations that must agree, the decision authority that owns the conjunction, how results that are not mandatory count, and any veto or deferral; owner: the member or profile that applies the conjunction, in its declared rule | 3, 9 |</span>
+<span id="L1060" data-line="1060">| P4a (independent), P4b (derived from P0 and P2) | composed steps exist only under typed composition; the composite carries both steps&#x27; step-produced facts, and its result for the outer predicate is the conjunction over the outer contract&#x27;s obligations | [§4](../FOUNDATIONS.md#4-algebra) Composition; [Conjunction of results](../FOUNDATIONS.md#conjunction-of-results), Composition of results; [RF-010](../REFERENCE_FRAME.md#rf-010-composition-on-demand), outside this member | whether a composition law is needed, under the conditions RF-010 states; owner: the governing evaluation | 3, 4 |</span>
+<span id="L1061" data-line="1061">| P4b (derived from P0 and P2), P3 (independent) | every transformation records what it preserved, introduced and removed, its external witnesses and its residuals, so no fact is lost unrecorded | [§4](../FOUNDATIONS.md#4-algebra) Conservation accounting | the record&#x27;s fields; owner: [AC-013](../AXIOMATIC_CALCULUS.md#ac-013-transformation) | 3 |</span>
+<span id="L1062" data-line="1062"></span>
+<span id="L1063" data-line="1063">RF-012 in [REFERENCE_FRAME §3](../REFERENCE_FRAME.md#rf-012-closed-results),</span>
+<span id="L1064" data-line="1064">AC-007 in</span>
+<span id="L1065" data-line="1065">[AXIOMATIC_CALCULUS §4](../AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal)</span>
+<span id="L1066" data-line="1066">and [EVALUATION §4](../EVALUATION.md#4-review-results) apply the first row&#x27;s</span>
+<span id="L1067" data-line="1067">algebra to frames, constraints and reviews and add no choice of their own</span>
+<span id="L1068" data-line="1068">beyond any refinement they map under the fifth row;</span>
+<span id="L1069" data-line="1069">[ACTIVATION §3](../ACTIVATION.md#3-step-results-and-disposition) holds the</span>
+<span id="L1070" data-line="1070">step&#x27;s refinements of the fifth row and the stop state of the seventh.</span>
+<span id="L1071" data-line="1071"></span>
+<span id="L1072" data-line="1072"></span>
+<span id="L1073" data-line="1073">Source: FOUNDATIONS.md#conjunction-of-results sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545</span>
+<span id="L1074" data-line="1074"></span>
+<span id="L1075" data-line="1075">### Conjunction of results</span>
+<span id="L1076" data-line="1076"></span>
+<span id="L1077" data-line="1077">Conjunction combines results into one result for a composite predicate: a</span>
+<span id="L1078" data-line="1078">claim made of component claims, a decision over several evaluations, or</span>
+<span id="L1079" data-line="1079">the outer contract of composed steps. It is defined here once, over the</span>
+<span id="L1080" data-line="1080">core. A member or profile that combines results applies this rule and</span>
+<span id="L1081" data-line="1081">declares only the choices it leaves open (P4a, P4b, P5, P6). Purpose and</span>
+<span id="L1082" data-line="1082">material relation: failure, undecidability, non-performance and uncertain</span>
+<span id="L1083" data-line="1083">effects stay distinct after combination, so a composite can neither report</span>
+<span id="L1084" data-line="1084">success nor hide which kind of gap it has while one of them remains in</span>
+<span id="L1085" data-line="1085">what it requires.</span>
+<span id="L1086" data-line="1086"></span>
+<span id="L1087" data-line="1087">A conjunction takes three inputs and keeps them apart:</span>
+<span id="L1088" data-line="1088"></span>
+<span id="L1089" data-line="1089">1. the closed results returned, each a core value with its predicate and</span>
+<span id="L1090" data-line="1090">   domain outcome;</span>
+<span id="L1091" data-line="1091">2. the planned assessments that have no closed result applicable to the</span>
+<span id="L1092" data-line="1092">   composite: evaluations the composite requires that were not performed,</span>
+<span id="L1093" data-line="1093">   or whose result is absent, stale, bound to another subject or basis, or</span>
+<span id="L1094" data-line="1094">   incapable of establishing its claim;</span>
+<span id="L1095" data-line="1095">3. the required coverage that no planned assessment addresses: for a</span>
+<span id="L1096" data-line="1096">   required obligation set R and the coverage C that the planned</span>
+<span id="L1097" data-line="1097">   assessments admit, the uncovered coverage R minus C.</span>
+<span id="L1098" data-line="1098"></span>
+<span id="L1099" data-line="1099">Gaps. A conjunction with any item in the second or third input is never</span>
+<span id="L1100" data-line="1100">`satisfied`. Its record names which kind of gap it has, not performed,</span>
+<span id="L1101" data-line="1101">uncovered or both, and each item. An uncovered obligation is never</span>
+<span id="L1102" data-line="1102">reported as satisfied or as an omitted planned assessment; a planned</span>
+<span id="L1103" data-line="1103">assessment without a closed result is never reported as uncovered or as an</span>
+<span id="L1104" data-line="1104">`indeterminate` component.</span>
+<span id="L1105" data-line="1105"></span>
+<span id="L1106" data-line="1106">Stale results. A held result is stale for a composite when the basis it</span>
+<span id="L1107" data-line="1107">binds is not the basis the composite requires of that component, because</span>
+<span id="L1108" data-line="1108">a later state has superseded or advanced it or because it binds another</span>
+<span id="L1109" data-line="1109">subject or basis (§2, Basis). Two questions stay apart, so that one</span>
+<span id="L1110" data-line="1110">composite has one reported value (P3, P5, P6):</span>
+<span id="L1111" data-line="1111"></span>
+<span id="L1112" data-line="1112">- an evaluation performed on a subject or basis that is stale, advanced,</span>
+<span id="L1113" data-line="1113">  ambiguous or mismatched against the one it must bind returns</span>
+<span id="L1114" data-line="1114">  `invalid_basis` for its own predicate, or is reactivated on the current</span>
+<span id="L1115" data-line="1115">  basis; [RF-005](../REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates)</span>
+<span id="L1116" data-line="1116">  states this law over frames, and a conjunction that receives that</span>
+<span id="L1117" data-line="1117">  `invalid_basis` holds it as a returned result;</span>
+<span id="L1118" data-line="1118">- a component whose only held result is stale has no closed result</span>
+<span id="L1119" data-line="1119">  applicable to the composite: on the basis the composite requires, its</span>
+<span id="L1120" data-line="1120">  evaluation was not performed. It is a planned assessment without a</span>
+<span id="L1121" data-line="1121">  closed result, in the second input, and a gap. Its stale value is</span>
+<span id="L1122" data-line="1122">  neither counted as a returned result nor relabelled `invalid_basis` for</span>
+<span id="L1123" data-line="1123">  the composite, and it stays in the record with its own basis;</span>
+<span id="L1124" data-line="1124">- the declared basis relations disagree (Reported value below) only among</span>
+<span id="L1125" data-line="1125">  returned results, each bound to the basis the composite requires of it,</span>
+<span id="L1126" data-line="1126">  whose bases the declared rule requires to agree or to join in a coherent</span>
+<span id="L1127" data-line="1127">  composite basis, and which do not.</span>
+<span id="L1128" data-line="1128"></span>
+<span id="L1129" data-line="1129">A stale `satisfied` never counts toward the composite. Purpose and</span>
+<span id="L1130" data-line="1130">material relation: answering one stale component as a gap in one place and</span>
+<span id="L1131" data-line="1131">as `invalid_basis` in another would give one composite two reported</span>
+<span id="L1132" data-line="1132">values; keeping the evaluation&#x27;s own value apart from the composite&#x27;s gap</span>
+<span id="L1133" data-line="1133">keeps the reported value unique and the stale result visible.</span>
+<span id="L1134" data-line="1134"></span>
+<span id="L1135" data-line="1135">Survival. Every known failure (a `falsified` result with its</span>
+<span id="L1136" data-line="1136">counterexample), every planned assessment without a closed result and</span>
+<span id="L1137" data-line="1137">every uncovered obligation is carried with the composite and survives every</span>
+<span id="L1138" data-line="1138">join: combining conjunctions takes the union of known failures and of</span>
+<span id="L1139" data-line="1139">planned assessments without a closed result, and recomputes uncovered</span>
+<span id="L1140" data-line="1140">coverage over the combined obligations. A known failure and a gap of</span>
+<span id="L1141" data-line="1141">either kind survive every join. Common agreement among contributors</span>
+<span id="L1142" data-line="1142">cannot discard a constraint or a material counterexample that only one</span>
+<span id="L1143" data-line="1143">contributor found. A missing, wrong-subject, conflicted or indeterminate</span>
+<span id="L1144" data-line="1144">mandatory result stays unresolved under the declared rule, and aggregate</span>
+<span id="L1145" data-line="1145">satisfied status cannot replace it (P4b, P5).</span>
+<span id="L1146" data-line="1146"></span>
+<span id="L1147" data-line="1147">Predicates travel. Each component keeps its predicate and domain outcome</span>
+<span id="L1148" data-line="1148">through every join, so an uncertain effect stays distinct from a failure</span>
+<span id="L1149" data-line="1149">and from an undecided claim, and a `satisfied` for one predicate never</span>
+<span id="L1150" data-line="1150">counts toward another: a step&#x27;s `satisfied` for &quot;a candidate is available&quot;</span>
+<span id="L1151" data-line="1151">never counts toward the candidate&#x27;s fitness or acceptance.</span>
+<span id="L1152" data-line="1152"></span>
+<span id="L1153" data-line="1153">Reported value. The conjunction is `satisfied` only when every mandatory</span>
+<span id="L1154" data-line="1154">result is `satisfied` with valid applicable evidence, the declared basis</span>
+<span id="L1155" data-line="1155">relations agree, and the second and third inputs are empty. A composite</span>
+<span id="L1156" data-line="1156">with a material counterexample to a mandatory constraint or an uncovered</span>
+<span id="L1157" data-line="1157">required obligation cannot project success. Where a mandatory result is</span>
+<span id="L1158" data-line="1158">not `satisfied`, the conjunction</span>
+<span id="L1159" data-line="1159">reports a non-satisfied value chosen by its declared rule from those</span>
+<span id="L1160" data-line="1160">returned; no universal order among the non-satisfied values exists, and</span>
+<span id="L1161" data-line="1161">the member or profile that applies the conjunction declares its own in</span>
+<span id="L1162" data-line="1162">its declared rule. Where every mandatory returned result is `satisfied`</span>
+<span id="L1163" data-line="1163">and the declared basis relations disagree, the conjunction reports</span>
+<span id="L1164" data-line="1164">`invalid_basis`, because no coherent composite basis supports the</span>
+<span id="L1165" data-line="1165">composite predicate (§2, Basis); any gaps stay recorded by kind. Where</span>
+<span id="L1166" data-line="1166">every mandatory returned result is `satisfied`, the declared basis</span>
+<span id="L1167" data-line="1167">relations agree and a gap remains, the conjunction reports</span>
+<span id="L1168" data-line="1168">`indeterminate`, because the results it holds cannot decide the composite</span>
+<span id="L1169" data-line="1169">predicate; that value is the conjunction&#x27;s own, and the gaps stay</span>
+<span id="L1170" data-line="1170">recorded by kind. A `falsified` result that is not mandatory stays in the</span>
+<span id="L1171" data-line="1171">conjunction&#x27;s record with its predicate and is never discarded. Where</span>
+<span id="L1172" data-line="1172">every mandatory result is `satisfied`, the declared basis relations agree</span>
+<span id="L1173" data-line="1173">and no gap remains, a material counterexample to a mandatory constraint</span>
+<span id="L1174" data-line="1174">falsifies the conjunction whichever contributor found it, and without one</span>
+<span id="L1175" data-line="1175">the conjunction&#x27;s value is the one its declared rule gives over the</span>
+<span id="L1176" data-line="1176">mandatory results.</span>
+<span id="L1177" data-line="1177"></span>
+<span id="L1178" data-line="1178">The declared rule. A conjunction declares which results are mandatory; how</span>
+<span id="L1179" data-line="1179">conflict and indeterminacy are handled; which basis relations must agree,</span>
+<span id="L1180" data-line="1180">results on different bases combining only under a declared coherent</span>
+<span id="L1181" data-line="1181">composite basis (§2, Basis); which decision authority owns the</span>
+<span id="L1182" data-line="1182">conjunction; how results that are not mandatory count; and whether any</span>
+<span id="L1183" data-line="1183">result may veto or defer the decision.</span>
+<span id="L1184" data-line="1184">Conjunction does not transfer the semantic authority of a contributing</span>
+<span id="L1185" data-line="1185">evaluation (P6, P4a).</span>
+<span id="L1186" data-line="1186"></span>
+<span id="L1187" data-line="1187">Composition of results. The result of composed steps for the outer</span>
+<span id="L1188" data-line="1188">predicate is the conjunction of the steps&#x27; results, with the outer</span>
+<span id="L1189" data-line="1189">contract&#x27;s obligations as the required coverage. That each step returned</span>
+<span id="L1190" data-line="1190">`satisfied` supports the outer predicate only where the refinement&#x27;s</span>
+<span id="L1191" data-line="1191">premises hold ([ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement),</span>
+<span id="L1192" data-line="1192">Refinement).</span>
+<span id="L1193" data-line="1193"></span>
+<span id="L1194" data-line="1194"></span>
+<span id="L1195" data-line="1195">Source: AXIOMATIC_CALCULUS.md#foundation-to-law sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf rows=9/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted</span>
+<span id="L1196" data-line="1196"></span>
+<span id="L1197" data-line="1197">### Foundation to law</span>
+<span id="L1198" data-line="1198"></span>
+<span id="L1199" data-line="1199">This member is material family F9, the `a_c` calculus. The table below</span>
+<span id="L1200" data-line="1200">shows which of its rules follow from which premises, in the format of</span>
+<span id="L1201" data-line="1201">[FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law),</span>
+<span id="L1202" data-line="1202">which also states the standing of the consequences. Instance premises,</span>
+<span id="L1203" data-line="1203">which the commitments do not supply:</span>
+<span id="L1204" data-line="1204"></span>
+<span id="L1205" data-line="1205">- (i) a governed symbolic system is represented by a finite model whose</span>
+<span id="L1206" data-line="1206">  records stand for its objects, relations, constraints, residuals,</span>
+<span id="L1207" data-line="1207">  traversals, transformations and judgments;</span>
+<span id="L1208" data-line="1208">- (ii) a model is interpreted from an exact subject and may be encoded in</span>
+<span id="L1209" data-line="1209">  a carrier, and subject, model and carrier are separately identified;</span>
+<span id="L1210" data-line="1210">- (iii) some predicates over a model are decided mechanically, and others</span>
+<span id="L1211" data-line="1211">  need bounded probabilistic construction or explicit human adjudication.</span>
+<span id="L1212" data-line="1212"></span>
+<span id="L1213" data-line="1213">| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |</span>
+<span id="L1214" data-line="1214">|---|---|---|---|---|</span>
+<span id="L1215" data-line="1215">| P3 (independent), P5 (derived from P0 and P6); (i) | By P3 every element binds one identity and basis, by P5 an unclosed population would leave results undecided, and by (i) the model is finite, so every model belongs to one closed, finite signature; every record occurs once in one population of eight fixed record families, every identity resolves once, locally or through one declared external relation, and an unknown, hidden, duplicated or dangling element refuses | [§2](../AXIOMATIC_CALCULUS.md#2-signature), [§3](../AXIOMATIC_CALCULUS.md#3-typed-records), [AC-001](../AXIOMATIC_CALCULUS.md#ac-001-closed-signature), [AC-003](../AXIOMATIC_CALCULUS.md#ac-003-reference-closure) | the eight core record kinds and the fields of each record: this member; a model family&#x27;s sorts, value domains, reference domains and admissible kinds: the owning signature | 3, 10 |</span>
+<span id="L1216" data-line="1216">| P3 (independent), P4a (independent) | By P3 identity is declared and scoped, and by P4a relations compose only by the types they declare, so identity is scoped, so equal spelling, payload, position or carrier establishes none; a relation is lawful only between the sorts its kind admits, with its required qualifiers, and its direction is material unless declared symmetric | [AC-002](../AXIOMATIC_CALCULUS.md#ac-002-scoped-identity), [AC-004](../AXIOMATIC_CALCULUS.md#ac-004-relation-typing) | each relation kind&#x27;s sorts, qualifiers and any declared symmetry: the owning signature | 2, 3, 10 |</span>
+<span id="L1217" data-line="1217">| P6 (independent), P4b (derived from P0 and P2), P3 (independent) | By P6 authority is not transferred by handling a record, by P3 every record binds its basis, and by P4b recorded facts persist, so copying, interpreting, encoding, evaluating or transporting a record transfers no authority, and every record, model and result binds an exact basis, mixed bases only under an owned composite-basis relation | [AC-005](../AXIOMATIC_CALCULUS.md#ac-005-authority-conservation), [AC-006](../AXIOMATIC_CALCULUS.md#ac-006-basis-coherence) | each composite-basis relation: the owner it names | 9, 10 |</span>
+<span id="L1218" data-line="1218">| P5 (derived from P0 and P6), P6 (independent) | By P5 a value decides only what its evidence establishes, and by P6 a judgment is separate from its acceptance, so a constraint&#x27;s judgment and every outcome of an operation of this member read as exactly one core value for a named predicate; no failed, missing or undecided result and no stop becomes success; a refusal&#x27;s cause is part of its value, a demonstrated violation it names mapping to falsified and a condition of the basis the operation acts on to invalid_basis | [AC-007](../AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal); [§5](../AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds), the stop algebra | the cause of a refusal that names both a demonstrated violation and a condition of the basis, `refusal(constraint)`, with the basis condition reported beside it as its own invalid_basis result: this member, in AC-007; the predicate language and judgment of each constraint kind: the owning signature; further stop values and their refinement: the signature&#x27;s stop contract; the stop mapping of one traversal: its record, under §5 | 3, 9, 10 |</span>
+<span id="L1219" data-line="1219">| P1 (independent), P6 (independent) | By P1 a difference in representation is not a difference in meaning unless declared, and by P6 latitude is granted only by its owner, so two values differ only through a declared latitude or transformation relation; silence is not latitude, and latitude grants no authority beyond its owner, scope, basis and invalidation law | [Latitude](../AXIOMATIC_CALCULUS.md#latitude), [AC-008](../AXIOMATIC_CALCULUS.md#ac-008-explicit-latitude) | each latitude record: its owner | 6, 10 |</span>
+<span id="L1220" data-line="1220">| P4b (derived from P0 and P2), P6 (independent) | By P4b an unresolved condition persists until disposed, and by P6 only an authority disposes it, so a material uncertainty stays in the model until an authorised disposition; no projection, compression, interpretation or encoding erases a residual, and absence from a projection is not resolution | [Residual](../AXIOMATIC_CALCULUS.md#residual), [AC-009](../AXIOMATIC_CALCULUS.md#ac-009-residual-conservation) | each residual kind&#x27;s domains: the owning signature; each disposition: the competent authority | 9, 10 |</span>
+<span id="L1221" data-line="1221">| P4b (derived from P0 and P2), P3 (independent), P6 (independent) | By P4b a transformation&#x27;s effects are facts that persist, by P3 they bind exact records, and by P6 their classification is accountable, so a transformation proves a closed delta over local records and external resolutions, each classified once as preserved or removed, with preservation shown by byte or typed equality; its result is a proposed successor that admits nothing | [AC-013](../AXIOMATIC_CALCULUS.md#ac-013-transformation) | each transformation, with its operation authority and preservation relation: the owner of the transformation record | 3, 4, 10 |</span>
+<span id="L1222" data-line="1222">| P6 (independent), P3 (independent) | By P6 judgment and promotion are separate authorities, and by P3 a judgment binds its exact subject, so a judgment points to an unchanged subject, and promotion is a separate relation between that subject and its admission or acceptance judgment | [AC-014](../AXIOMATIC_CALCULUS.md#ac-014-judgment-separation) | none | 9, 10 |</span>
+<span id="L1223" data-line="1223">| P4a (independent), P3 (independent), P6 (independent); (iii) | By P4a a traversal composes only through its declared contract, by P3 it binds one functor kind, by P6 its authority is separate, and by (iii) some predicates are decided mechanically and others not, so a traversal is a typed contract applied under exactly one functor kind; deterministic evaluation, probabilistic construction and human adjudication are distinct kinds, each distinct from actor, executor and domain operation, and the name asserts no categorical functor; traversals compose only under typed composition, which keeps both identities and every intermediate fact | [§5](../AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds), [AC-015](../AXIOMATIC_CALCULUS.md#ac-015-functor-classification), [AC-016](../AXIOMATIC_CALCULUS.md#ac-016-typed-composition) | the functor kinds permitted for each traversal: the owning signature; the order of kinds in an application: that application | 4, 8, 10 |</span>
+<span id="L1224" data-line="1224"></span>
+<span id="L1225" data-line="1225">Purpose and material relation: an actor</span>
+<span id="L1226" data-line="1226">started on this member sees which rules of the calculus follow from the</span>
+<span id="L1227" data-line="1227">foundations and which are choices, with the owner of each choice, so no</span>
+<span id="L1228" data-line="1228">choice is presented as derived (P6, P1).</span>
+<span id="L1229" data-line="1229"></span></pre></html>

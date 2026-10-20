@@ -1,0 +1,15 @@
+{
+  "candidate_bytes_changed": false,
+  "candidate_defect": false,
+  "diagnosis": "Public codec CLI model_identity lawfully returns id,sha256,profile; exact decoded model document equality was true. Seal intentionally retains only id,sha256. Compare declared coordinate fields and separately preserve actual profile, rather than requiring whole-dictionary shape equality.",
+  "kind": "review-harness-correction",
+  "original_failed_assertion": {
+    "expected": null,
+    "name": "public-decode-document-equality:carrier.json",
+    "observed": null,
+    "passed": false
+  },
+  "original_progress_sha256": "932960dca32c02e2bdbe3460a045722ef8905b4dde78f657fd429a096f197891",
+  "prior_completed_checks": "Conserved; do not rerun baseline checker, validate or completed carrier decode.",
+  "source": "assess_artifact.py:93 and analogous parent comparisons"
+}

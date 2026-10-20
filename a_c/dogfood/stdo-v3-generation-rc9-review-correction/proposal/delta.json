@@ -1,0 +1,76 @@
+{
+  "changes": [
+    {
+      "after": "urn:a-c:application:stdo-v3-rc9-claude-direct-review-correction:001:model",
+      "before": "urn:a-c:generation:63c64519947babe1e3fec509:model:acb523c25ab7ce983045db1b",
+      "path": "/id"
+    },
+    {
+      "after": "urn:a-c:application:stdo-v3-rc9-claude-direct-review-correction:001:interpretation-contract",
+      "before": "urn:a-c:generation:63c64519947babe1e3fec509:interpretation-contract",
+      "path": "/interpretation/contract/id"
+    },
+    {
+      "after": "0bcb126e8c78f5e19c6f95d89885fb7889107a5b0be4f3cb1cf340f31016cd8c",
+      "before": "de0c523005e51b2e9cedb909671f697be4aba999698ecdd024d316dceaa6a7d4",
+      "path": "/interpretation/contract/sha256"
+    },
+    {
+      "after": "urn:a-c:application:stdo-v3-rc9-claude-direct-review-correction:001:interpreter:fp-semantic-worker",
+      "before": "urn:a-c:generation:63c64519947babe1e3fec509:interpreter:f-p-cli",
+      "path": "/interpretation/interpreter/id"
+    },
+    {
+      "after": "649a89d625520bed4dbb09c63ca483346ea73fec661245480e452c31dd4d2f2b",
+      "before": "150d970f5668b10a93df768c4ec3f806758a5a9d03a674304263f52f8d22f856",
+      "path": "/interpretation/interpreter/sha256"
+    },
+    {
+      "after": [
+        {
+          "id": "urn:a-c:generation:63c64519947babe1e3fec509:provenance:generation-plan",
+          "sha256": "1f33d6dc97ecd04444fc52412512bdf57edf7f04a97cc0f6d8ab63f76b8fc1e1"
+        },
+        {
+          "id": "urn:a-c:generation:63c64519947babe1e3fec509:provenance:author-invocations",
+          "sha256": "150d970f5668b10a93df768c4ec3f806758a5a9d03a674304263f52f8d22f856"
+        },
+        {
+          "id": "urn:a-c:generation:63c64519947babe1e3fec509:model:acb523c25ab7ce983045db1b",
+          "sha256": "fb1f15ca409fd302dcad56c86c4edf111ca00b1fb581ddae4d332fb18d338111"
+        },
+        {
+          "id": "urn:a-c:application:stdo-v3-rc9-claude-direct-review-correction:001:authoring-record",
+          "sha256": "69ad2723e34b6717b94d9eeb0a265a5d0486b8419e9c11eea7c6a3c930f63d5a"
+        },
+        {
+          "id": "urn:a-c:application:stdo-v3-rc9-claude-direct-review-correction:001:source-manifest",
+          "sha256": "b71bc2847e94eb4f22afa7e1fb38d5fcbb633ffdce305dd272bdc97bca1a62ea"
+        },
+        {
+          "id": "urn:a-c:application:stdo-v3-rc9-claude-direct-review-correction:001:patch",
+          "sha256": "b825a27bdb43dfba7f81dbb4f147b7b0f409e2045c9f5e112a2bcb1f0555c9e5"
+        }
+      ],
+      "before": [
+        {
+          "id": "urn:a-c:generation:63c64519947babe1e3fec509:provenance:generation-plan",
+          "sha256": "1f33d6dc97ecd04444fc52412512bdf57edf7f04a97cc0f6d8ab63f76b8fc1e1"
+        },
+        {
+          "id": "urn:a-c:generation:63c64519947babe1e3fec509:provenance:author-invocations",
+          "sha256": "150d970f5668b10a93df768c4ec3f806758a5a9d03a674304263f52f8d22f856"
+        }
+      ],
+      "path": "/interpretation/provenance"
+    },
+    {
+      "after": "A missing or ambiguous premise requiring an undeclared frame relation can have both lawful out_of_frame and indeterminate grounds when the admissible evidence cannot decide the claim. The result names the value it returns and that ground; neither value is excluded.",
+      "before": "A missing or ambiguous premise requiring an undeclared frame relation yields out_of_frame rather than indeterminate.",
+      "path": "/populations/constraints/16/predicate/exceptions/0"
+    }
+  ],
+  "claim": "Exact syntactic delta only; no AC-013 transformation or semantic-preservation judgment.",
+  "profile": "a_c.application.semantic-delta/1",
+  "semantic_change_count": 1
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>STDO common proposal · exact records</title>
+  <style>
+    :root{color-scheme:light dark;font-family:system-ui,sans-serif}body{margin:0;background:#101720;color:#e5edf5}
+    header{padding:18px 24px;border-bottom:1px solid #334456;background:#172330}header h1{margin:0 0 8px;font-size:21px}
+    p{line-height:1.5}a{color:#87c7ff}main{display:grid;grid-template-columns:minmax(280px,35%) 1fr;height:calc(100vh - 150px)}
+    aside{padding:16px;overflow:auto;border-right:1px solid #334456}article{padding:18px 24px;overflow:auto}
+    input,select{box-sizing:border-box;width:100%;padding:10px;margin:0 0 10px;background:#1b2a3a;color:inherit;border:1px solid #52708b;border-radius:5px}
+    button{display:block;width:100%;padding:10px;text-align:left;color:inherit;background:transparent;border:0;border-bottom:1px solid #253a4c;cursor:pointer}
+    button:hover,button[aria-current=true]{background:#26445b}.family{font-size:12px;color:#9cb6cb}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.5 ui-monospace,monospace;background:#142231;padding:14px}
+    h2{font-size:18px;overflow-wrap:anywhere}li{margin:8px 0;line-height:1.45}#matches{font-size:12px;color:#b5c9d9;margin:8px 0}
+    @media(max-width:700px){main{display:block;height:auto}aside{max-height:40vh}header{padding:14px}article{padding:14px}}
+  </style>
+</head>
+<body>
+<header>
+  <h1>Common STDO · proposal representation</h1>
+  <p>Exact records and source grounding. Meaning remains a proposed F_P interpretation; mechanical checks and graph connections supply no acceptance.</p>
+  <p><a href="index.html">Bundle guide</a> · <a href="graph.html">Interactive Graphify view</a> · <a href="coverage.json">Coverage and unresolved scope</a> · <a href="RELEASE.json">Release preparation standing</a></p>
+</header>
+<main>
+  <aside aria-label="Find records">
+    <label for="query">Search exact record text</label><input id="query" type="search" placeholder="e.g. admission, worker, indeterminate">
+    <label for="family">Record family</label><select id="family"><option value="">All families</option></select>
+    <div id="matches" aria-live="polite"></div><nav id="results" aria-label="Matching records"></nav>
+  </aside>
+  <article id="details"><p>Select a record to inspect its unchanged JSON payload and source grounding.</p></article>
+</main>
+<script id="record-data" type="application/json">__RECORD_DATA__</script>
+<script>
+  'use strict';
+  const data=JSON.parse(document.getElementById('record-data').textContent);
+  const rows=data.records;
+  const sources=new Set(data.source_paths);
+  const families=[...new Set(rows.map(x=>x.family))].sort();
+  const family=document.getElementById('family'),query=document.getElementById('query'),results=document.getElementById('results');
+  const details=document.getElementById('details');
+  function el(tag,text){const node=document.createElement(tag);if(text!==undefined)node.textContent=text;return node;}
+  function label(row){const r=row.record;const v=r.value||r.predicate||r.qualifiers||r.uncertainty||r.allowed_variation||{};return v.label||v.statement||v.definition||v.meaning||v.detail||(v.statements&&v.statements[0])||r.id;}
+  function groundings(value,out){if(Array.isArray(value)){value.forEach(x=>groundings(x,out));return;}if(!value||typeof value!=='object')return;
+    if(typeof value.path==='string'&&typeof value.quote==='string'&&Number.isInteger(value.start_line)&&Number.isInteger(value.end_line))out.push(value);
+    Object.values(value).forEach(x=>groundings(x,out));}
+  function show(row){
+    details.replaceChildren();
+    details.append(el('div',row.family),el('h2',label(row)),el('p',row.record.id));
+    const gs=[];groundings(row.record,gs);
+    details.append(el('h3','Source grounding ('+gs.length+' recorded occurrences)'));
+    const list=el('ul');
+    for(const g of gs){const li=el('li');
+      if(sources.has(g.path)){const link=el('a',g.path+':'+g.start_line+'–'+g.end_line);link.href='source-view/'+g.path.split('/').map(encodeURIComponent).join('/')+'.html#L'+g.start_line;link.target='_blank';link.rel='noopener';li.append(link);}
+      else li.append(el('span','Unresolved local source route: '+g.path));
+      li.append(el('pre',g.quote));list.append(li);
+    }
+    details.append(list,el('h3','Unchanged full record'),el('pre',JSON.stringify(row.record,null,2)));
+    location.hash=encodeURIComponent(row.record.id);
+    for(const b of results.querySelectorAll('button'))b.setAttribute('aria-current',String(b.dataset.id===row.record.id));
+  }
+  const search=rows.map(row=>({row,text:JSON.stringify(row.record).toLocaleLowerCase()}));
+  function refresh(){const q=query.value.toLocaleLowerCase();const matches=search.filter(x=>(!family.value||x.row.family===family.value)&&x.text.includes(q));
+    results.replaceChildren();document.getElementById('matches').textContent=matches.length+' matches · showing first '+Math.min(200,matches.length)+' · all '+rows.length+' records searchable';
+    for(const item of matches.slice(0,200)){const b=el('button');b.type='button';b.dataset.id=item.row.record.id;
+      b.append(el('div',label(item.row).slice(0,150)),el('div',item.row.family));b.lastChild.className='family';b.onclick=()=>show(item.row);results.append(b);}
+  }
+  for(const name of families){const option=el('option',name);option.value=name;family.append(option);}
+  query.addEventListener('input',refresh);family.addEventListener('change',refresh);refresh();
+  let selected='';try{selected=decodeURIComponent(location.hash.slice(1));}catch(e){}
+  if(selected){const row=rows.find(x=>x.record.id===selected);if(row)show(row);}
+</script>
+</body>
+</html>

@@ -13,19 +13,28 @@ entry for the additional [F_D support requirements](../../specification/requirem
 It projects the core's single operation/schema catalog and the protected effect
 boundary. The exact [Claude RC9 profile](design/fd-method-claude-rc9.json) is a
 work-scoped method binding; the installed a_c builder remains v2.5.1-rc.2.
-This is provisional construction under the selected design co-evolution mode.
-Integrated independent assessment, separate ontology/design dispositions,
-Product acceptance, installed qualification and benefit remain separate claims.
+Root selects the seven reviewed implementation repairs as the current
+provisional realization for continued authorized T-008 dogfood. The
+[current repair handoff](../../.ai-workspace/qualification/t008/review-fixes-001/README.md)
+binds exact subjects and the separate [Root disposition](../../.ai-workspace/qualification/t008/review-fixes-001/EXECUTIVE-DISPOSITION.json).
+Closed nonauthor [FD](../../.ai-workspace/qualification/t008/review-fixes-001/reviews/fd/REPORT.md)
+and [generation](../../.ai-workspace/qualification/t008/review-fixes-001/reviews/generation/REPORT.md)
+delta reviews found no supported residual defect within their predicates.
+The operative HOW network and its ontology/design dispositions are unchanged.
 
-The integrated mechanical cut passes 242 tests: the 107 existing codec,
-generation, grounding and repair regressions, 58 core controls, 40 effect
-controls and 37 public-interface/helper controls. Joined strict typing passes
-for nine files with normal import checking. The documented fresh read-only
-CLI/MCP path and a separate nine-check trial against the pinned upstream pass.
-Exact subjects, raw failed and successful runs, and remaining variants are in
-the [integration evidence](../../.ai-workspace/qualification/t008/interfaces/integration-001/README.md).
-Actual model/actor usability and independent semantic review remain unperformed
-at that cut; fixture process success does not establish either.
+The fresh [joined integration](../../.ai-workspace/qualification/t008/review-fixes-001/integration/REPORT.md)
+passed one 303-test run with zero skips/failures/errors, strict normal-import
+typing of nine support/helper files and nine standalone actual-upstream checks.
+Its exact source/study guards closed before the factual documentation updates.
+Earlier integration/review cuts and all failing regressions, timing assertions
+and reviewer harness corrections retain their original subjects and evidence.
+The [separate Claude-direct semantic correction](../../dogfood/stdo-v3-generation-rc9-review-correction/README.md)
+has closed bounded nonauthor review and remains an unaccepted proposal; the four
+frozen RC9 representations are unchanged. T-009 closes only the repair work.
+T-008 actual-actor/operation/variant qualification remains partial and active,
+including prior timeout and unconsumable returns. FDV-003 benefit remains
+Deferred/unqualified. Product acceptance and installed/RC/release qualification
+remain open; no runtime authority or native-call budget is renewed.
 
 Start with the [read-only public example](examples/fd-support/README.md). It
 prepares a fresh operator configuration, exact source requests and a complete

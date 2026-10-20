@@ -1,0 +1,1 @@
+Keep the handoff README concise and navigable; use links to detailed immutable reports rather than reproducing their contents. Exact identities and all gaps can live in machine-readable manifest/projection companions. No additional substantive review or tests for these factual Markdown metadata changes.

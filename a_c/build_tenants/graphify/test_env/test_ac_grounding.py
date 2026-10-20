@@ -99,6 +99,9 @@ class GroundingTests(unittest.TestCase):
                   "answer_sha256": generation.sha((attempt / "answer.json").read_bytes()), "events_sha256": generation.sha((attempt / "events.jsonl").read_bytes()),
                   "stderr_sha256": generation.sha((attempt / "stderr.txt").read_bytes()), "settings": settings, "cli_version": version, "usage_events": usage}
         generation.save(attempt / "result.json", result)
+        if not failed and validation_error is None:
+            generation.save(attempt / "validation.json", {"status": "structurally_valid_proposal",
+                            "answer_sha256": result["answer_sha256"], "chunk_sha256": generation.digest(chunk)})
         return attempt
 
     def test_wrapped_indent_recovery_preserves_exact_words_and_boundaries(self) -> None:
@@ -113,6 +116,42 @@ class GroundingTests(unittest.TestCase):
         self.assertEqual(recovered["quote"], "Complete evidence.")
         self.assertEqual(recovered["start_line"], 11)
         self.assertEqual(witness["normalized_occurrence_count"], 1)
+
+    def test_offset_mapping_matches_splitlines_for_all_accepted_line_breaks(self) -> None:
+        for separator in ("\n", "\v", "\f", "\x1c", "\x1d", "\x1e", "\x85", "\u2028", "\u2029"):
+            with self.subTest(separator=repr(separator)):
+                source = "Heading" + separator + "Complete evidence.\n"
+                supplied = section(source)
+                recovered, witness = grounding.recover_anchor(misplaced("Complete evidence."), supplied)
+                self.assertEqual((recovered["start_line"], recovered["end_line"]), (11, 11))
+                self.assertEqual(recovered["section_id"], supplied["id"])
+                self.assertEqual(recovered["quote"], "Complete evidence.")
+                self.assertTrue(grounding.strict_anchor(recovered, supplied))
+                self.assertEqual(witness["normalized_occurrence_count"], 1)
+
+    def test_public_utf8_unicode_line_coordinates_preserve_nongrounding_payload(self) -> None:
+        for ordinal, separator in enumerate(("\n", "\u2028", "\u2029")):
+            with self.subTest(separator=repr(separator)):
+                source = "Heading" + separator + "Complete" + separator + "  evidence.\n"
+                (self.corpus / "unicode.md").write_text(source)
+                manifest = self.root / f"unicode-{ordinal}.json"
+                generation.save(manifest, {"subject_id": "repo://test/unicode/", "files": [{"path": "unicode.md", "sha256": generation.sha(source.encode())}]})
+                output = self.root / f"unicode-{ordinal}"
+                generation.prepare(self.corpus, manifest, output, "direct", None, 1000)
+                chunk = generation.load(output / "chunks.json")[0]
+                self.assertEqual("".join(s["text"] for s in chunk["segments"]), source)
+                raw = answer_for(chunk)
+                for _, _, ground in grounding.anchors(raw):
+                    ground.update(quote="Complete evidence.", start_line=500, end_line=500)
+                preserved = generation.canonical(grounding.nongrounding(raw))
+                derived, changes = grounding.normalize_answer(raw, chunk)
+                generation.author_check(derived, chunk)
+                self.assertEqual(generation.canonical(grounding.nongrounding(derived)), preserved)
+                self.assertEqual(len(changes), 2)
+                for _, _, ground in grounding.anchors(derived):
+                    self.assertEqual((ground["start_line"], ground["end_line"]), (2, 3))
+                    self.assertEqual(ground["section_id"], chunk["segments"][0]["id"])
+                    self.assertEqual(ground["quote"], "Complete" + separator + "  evidence.")
 
     def test_lexical_word_boundary_case_and_punctuation_changes_refuse(self) -> None:
         for quote, source in (("in valid", "invalid"), ("ab", "a b"), ("a b", "ab"), ("Evidence", "evidence"), ("Evidence!", "Evidence.")):
@@ -160,6 +199,9 @@ class GroundingTests(unittest.TestCase):
         raw["concepts"][0]["grounding"][0]["quote"] = raw["concepts"][0]["grounding"][0]["quote"].replace("\n  ", "\n")
         attempt = self.actor(raw, failed=True)
         original = {path.name: path.read_bytes() for path in attempt.iterdir() if path.is_file()}
+        self.assertIsNone(generation.successful_attempt(self.output, "author", self.chunk))
+        with self.assertRaisesRegex(generation.GenerationError, "missing validated F_P"):
+            generation.assemble(self.output)
         result = grounding.normalize(self.output)
         self.assertEqual(result["chunks"][0]["status"], "derived_validated")
         self.assertEqual(result["new_fp_calls"], 0)
@@ -175,6 +217,8 @@ class GroundingTests(unittest.TestCase):
         self.assertEqual(assembled["status"], "proposed")
         self.assertEqual(assembled["new_fp_calls"], 0)
         self.assertFalse((self.output / "proposal").exists())
+        self.assertIsNone(generation.successful_attempt(self.output, "author", self.chunk))
+        self.assertEqual(generation.load(attempt / "result.json")["status"], "failed")
 
     def test_clean_original_noop_and_stale_original_sha_refusal(self) -> None:
         attempt = self.actor(self.answer)

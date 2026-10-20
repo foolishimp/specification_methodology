@@ -5,8 +5,10 @@ make no F_P usability, independent semantic review or benefit claim.
 """
 from __future__ import annotations
 
+import base64
 from collections.abc import Iterator, Sequence
 from decimal import Decimal
+import fcntl
 import hashlib
 import json
 import os
@@ -14,8 +16,11 @@ from pathlib import Path
 import subprocess
 import sys
 import tempfile
+import time
 from typing import Any, cast
 import unittest
+from test_ac_support_core import Fixture
+import ac_support_core as core
 
 
 TENANT = Path(__file__).resolve().parents[1]
@@ -443,6 +448,534 @@ class PublicInterfaceTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, after)
         self.assertIn(hashlib.sha256(b"after\n").hexdigest(), list(descendants(after["result"])))
         self.assertIn(hashlib.sha256(b"before\n").hexdigest(), list(descendants(after["result"])))
+
+
+class PublicWriterReplayTests(unittest.TestCase):
+    """Real CLI/MCP Writer composition; injected barriers are test-only."""
+
+    def setUp(self) -> None:
+        self.temporary = tempfile.TemporaryDirectory(prefix="ac-public-writer-")
+        self.root = Path(self.temporary.name).resolve()
+        self.f = Fixture(self.root)
+        self.sequence = 0
+        self.python = Path(sys.executable).resolve()
+        self.environment = {"PATH": os.defpath, "PYTHONDONTWRITEBYTECODE": "1"}
+        self.policy = self.root / "policy.json"
+        self.select_policy()
+
+    def tearDown(self) -> None:
+        selected = os.environ.get("AC_PUBLIC_INTERFACE_TEST_EVIDENCE")
+        if selected is not None:
+            import shutil
+            shutil.copytree(self.root, Path(selected) / self.id().rsplit(".", 1)[-1])
+        self.temporary.cleanup()
+
+    def select_policy(self) -> None:
+        raw = canonical(self.f.policy)
+        self.policy.write_bytes(raw)
+        self.policy_sha = hashlib.sha256(raw).hexdigest()
+
+    def request(self, identity: str, mode: str = "append") -> dict[str, Any]:
+        target = self.f.write("outputs/" + identity + ".txt", b"before\n")
+        return {"schema": "a_c.fd-support.request/1", "id": identity, "operation": "work.write", "arguments": {"grant_id": "work", "target": target, "mode": mode, "record": {"text": "after\n", "provenance": self.f.law}, "interpretation": None, "observations": []}}
+
+    def prepare_call(self, request: dict[str, Any], *, principal: str = "worker", transport: str = "cli", hook: str | None = None) -> tuple[list[str], bytes | None, Path]:
+        self.sequence += 1
+        folder = self.root / "calls" / str(self.sequence).zfill(3)
+        folder.mkdir(parents=True)
+        (folder / "request.json").write_bytes(canonical(request))
+        entry = ADAPTER
+        if hook is not None:
+            entry = folder / "barrier.py"
+            source = "import sys,time\nfrom pathlib import Path\nfrom contextlib import contextmanager\n"
+            source += f"sys.path.insert(0,{str(ADAPTER.parent)!r})\nimport ac_support as a,ac_support_core as c,ac_support_effects as e\n"
+            if hook in ("plan", "contender"):
+                source += "original_plan=c.prepare_write\ndef plan(runtime,request):\n"
+                source += f" Path({str(self.root / (hook + '-planning'))!r}).write_text(str(time.time_ns()))\n"
+                if hook == "plan":
+                    source += f" deadline=time.monotonic()+8\n while not Path({str(self.root / 'release-planning')!r}).exists():\n  if time.monotonic()>deadline: raise RuntimeError('Test barrier expired')\n  time.sleep(0.005)\n"
+                source += " return original_plan(runtime,request)\nc.prepare_write=plan\n"
+                if hook == "contender":
+                    source += "original_lock=e.EvidenceStore._lock\n@contextmanager\ndef lock(store,identity,*,nonblocking=False):\n"
+                    source += f" if identity.startswith('request:'): Path({str(self.root / 'contender-attempted')!r}).write_text(str(time.time_ns()))\n"
+                    source += " with original_lock(store,identity,nonblocking=nonblocking):\n"
+                    source += f"  if identity.startswith('request:'): Path({str(self.root / 'contender-acquired')!r}).write_text(str(time.time_ns()))\n  yield\ne.EvidenceStore._lock=lock\n"
+            else:
+                boundary = "writer:after_target_publication" if hook == "fatal-target" else "writer_intent:before_publish"
+                source += f"def fault(point):\n if point=={boundary!r}: raise SystemExit(77)\ne._fault=fault\n"
+            entry.write_text(source + "raise SystemExit(a.main())\n")
+        argv = [str(self.python), "-B", str(entry), "--policy", str(self.policy), "--policy-sha256", self.policy_sha, "--principal", principal]
+        wire = None
+        if transport == "mcp":
+            argv.append("mcp")
+            messages = [{"jsonrpc": "2.0", "id": 1, "method": "initialize", "params": {"protocolVersion": "2025-11-25", "capabilities": {}, "clientInfo": {"name": "writer-control", "version": "1"}}}, {"jsonrpc": "2.0", "method": "notifications/initialized"}, {"jsonrpc": "2.0", "id": 2, "method": "tools/call", "params": {"name": "work.write", "arguments": request}}]
+            wire = b"".join(canonical(message) + b"\n" for message in messages)
+            (folder / "stdin").write_bytes(wire)
+        else:
+            argv += ["call", "--request", str(folder / "request.json")]
+        (folder / "command.json").write_bytes(canonical({"argv": argv, "cwd": str(self.root), "policy_sha256": self.policy_sha, "transport": transport, "test_hook": hook, "started_ns": time.time_ns()}))
+        return argv, wire, folder
+
+    def record(self, folder: Path, result: subprocess.CompletedProcess[bytes]) -> None:
+        (folder / "stdout").write_bytes(result.stdout); (folder / "stderr").write_bytes(result.stderr)
+        (folder / "ended.json").write_bytes(canonical({"returncode": result.returncode, "ended_ns": time.time_ns()}))
+
+    @staticmethod
+    def response(folder: Path, transport: str = "cli") -> dict[str, Any]:
+        if transport == "mcp":
+            messages = [json.loads(line) for line in (folder / "stdout").read_bytes().splitlines()]
+            return cast(dict[str, Any], next(message for message in messages if message.get("id") == 2)["result"]["structuredContent"])
+        return cast(dict[str, Any], json.loads((folder / "stdout").read_bytes()))
+
+    def call(self, request: dict[str, Any], *, principal: str = "worker", transport: str = "cli", hook: str | None = None) -> Path:
+        argv, wire, folder = self.prepare_call(request, principal=principal, transport=transport, hook=hook)
+        result = subprocess.run(argv, input=wire, capture_output=True, cwd=self.root, env=self.environment, timeout=12, check=False)
+        self.record(folder, result)
+        return folder
+
+    def target(self, request: dict[str, Any]) -> Path:
+        return self.f.workspace / cast(str, request["arguments"]["target"]["path"])
+
+    def isolated(self, name: str) -> None:
+        root = self.root / name; root.mkdir()
+        self.f = Fixture(root)
+        self.select_policy()
+
+    def remove_owner(self, request: dict[str, Any], suffix: str) -> None:
+        key = core.digest({"product": "urn:test:product", "principal": "worker", "id": request["id"]})
+        marker = self.f.evidence / "requests" / (key + "." + suffix + ".json")
+        before = {str(path.relative_to(self.f.evidence)): hashlib.sha256(path.read_bytes()).hexdigest() for path in self.f.evidence.rglob("*") if path.is_file()}
+        saved = self.root / "removed-owners" / (str(self.sequence) + "-" + suffix)
+        saved.mkdir(parents=True)
+        (saved / "marker.bin").write_bytes(marker.read_bytes())
+        marker.unlink()
+        after = {str(path.relative_to(self.f.evidence)): hashlib.sha256(path.read_bytes()).hexdigest() for path in self.f.evidence.rglob("*") if path.is_file()}
+        self.assertEqual(set(before) - set(after), {str(marker.relative_to(self.f.evidence))})
+        self.assertTrue(all(before[name] == value for name, value in after.items()))
+        (saved / "removal.json").write_bytes(canonical({"removed_only": str(marker), "sha256": hashlib.sha256((saved / "marker.bin").read_bytes()).hexdigest(), "other_files_unchanged": len(after)}))
+
+    def claim_path(self, request: dict[str, Any]) -> Path:
+        key = core.digest({"product": "urn:test:product", "principal": "worker", "id": request["id"]})
+        return self.f.evidence / "requests" / (key + ".claim.json")
+
+    def test_lost_claim_cli_mcp_distinguish_known_conflict_from_exact_history_gap(self) -> None:
+        for transport in ("cli", "mcp"):
+            for changed in (False, True):
+                with self.subTest(transport=transport, changed=changed):
+                    self.isolated(transport + "-" + str(changed))
+                    request = self.request("lost-claim")
+                    first = self.response(self.call(request, transport=transport), transport)
+                    self.assertEqual(first["status"], "ok", first)
+                    self.remove_owner(request, "claim")
+                    replay = json.loads(json.dumps(request))
+                    if changed:
+                        replay["arguments"]["record"]["text"] = "different requested record\n"
+                    response = self.response(self.call(replay, transport=transport), transport)
+                    self.assertEqual(response["refusal"]["code"], "request_identity_conflict" if changed else "history_incomplete")
+                    self.assertIsNone(response["result"])
+                    self.assertFalse(self.claim_path(request).exists())
+                    self.assertEqual(self.target(request).read_bytes(), b"before\nafter\n")
+                    if changed and transport == "cli":
+                        fresh = json.loads(json.dumps(replay)); fresh["id"] = "genuine-fresh-id"
+                        fresh["arguments"]["target"]["sha256"] = hashlib.sha256(self.target(request).read_bytes()).hexdigest()
+                        response = self.response(self.call(fresh))
+                        self.assertEqual(response["status"], "ok", response)
+                        self.assertEqual(self.target(request).read_bytes(), b"before\nafter\ndifferent requested record\n")
+
+    def test_lost_claim_changed_valid_policy_cannot_attribute_old_completion(self) -> None:
+        request = self.request("lost-policy")
+        first = self.response(self.call(request)); self.assertEqual(first["status"], "ok", first)
+        self.remove_owner(request, "claim")
+        self.f.policy["id"] = "distinct-valid-policy"
+        self.select_policy()
+        replay = self.response(self.call(request))
+        self.assertEqual(replay["refusal"]["code"], "request_identity_conflict")
+        self.assertIsNone(replay["result"])
+        self.assertFalse(self.claim_path(request).exists())
+        self.assertEqual(self.target(request).read_bytes(), b"before\nafter\n")
+
+    def test_lost_claim_uncertain_intent_and_further_owner_loss_never_repeat(self) -> None:
+        for variant in ("exact", "changed", "all-owners"):
+            with self.subTest(variant=variant):
+                self.isolated(variant)
+                request = self.request("uncertain-lost-claim")
+                failed = self.call(request, hook="fatal-target")
+                self.assertEqual(json.loads((failed / "ended.json").read_text())["returncode"], 77)
+                self.remove_owner(request, "claim")
+                if variant == "all-owners":
+                    self.remove_owner(request, "intent")
+                replay = json.loads(json.dumps(request))
+                if variant == "changed":
+                    replay["arguments"]["record"]["text"] = "changed uncertain request"
+                response = self.response(self.call(replay))
+                self.assertEqual(response["refusal"]["code"], "request_identity_conflict" if variant == "changed" else "history_incomplete")
+                self.assertFalse(self.claim_path(request).exists())
+                self.assertEqual(self.target(request).read_bytes(), b"before\nafter\n")
+
+    def test_ownerless_same_id_history_blocks_a_changed_request_digest(self) -> None:
+        request = self.request("pre-owner-changed")
+        failed = self.call(request, hook="uncommitted-intent")
+        self.assertEqual(json.loads((failed / "ended.json").read_text())["returncode"], 77)
+        self.remove_owner(request, "claim")
+        replay = json.loads(json.dumps(request))
+        replay["arguments"]["record"]["text"] = "a different digest at the same identity\n"
+        response = self.response(self.call(replay))
+        self.assertEqual(response["refusal"]["code"], "history_incomplete")
+        self.assertIsNone(response["result"])
+        self.assertFalse(self.claim_path(request).exists())
+        self.assertEqual(list((self.f.evidence / "requests").glob("*.intent.json")), [])
+        self.assertEqual(self.target(request).read_bytes(), b"before\n")
+
+    def test_cli_mcp_append_replace_recover_original_unconsumed_result(self) -> None:
+        for transport in ("cli", "mcp"):
+            for mode in ("append", "replace"):
+                with self.subTest(transport=transport, mode=mode):
+                    request = self.request(transport + "-" + mode, mode)
+                    prior_intents = len(list((self.f.evidence / "requests").glob("*.intent.json"))) if (self.f.evidence / "requests").exists() else 0
+                    first_path = self.call(request, transport=transport)
+                    # Keep exact first bytes without consuming the response yet.
+                    postimage = self.target(request).read_bytes()
+                    replay = self.response(self.call(request, transport=transport), transport)
+                    first = self.response(first_path, transport)
+                    self.assertEqual(first["status"], "ok", first)
+                    self.assertEqual(replay["status"], "ok", replay)
+                    self.assertEqual(first["result"], replay["result"])
+                    self.assertEqual(self.target(request).read_bytes(), postimage)
+                    self.assertEqual(len(list((self.f.evidence / "requests").glob("*.intent.json"))), prior_intents + 1)
+                    conflict = json.loads(json.dumps(request)); conflict["arguments"]["record"]["text"] = "conflict"
+                    refused = self.response(self.call(conflict, transport=transport), transport)
+                    self.assertEqual(refused["refusal"]["code"], "request_identity_conflict")
+                    self.assertEqual(self.target(request).read_bytes(), postimage)
+
+    def wait_for(self, path: Path) -> None:
+        deadline = time.monotonic() + 5
+        while not path.exists() and time.monotonic() < deadline:
+            time.sleep(0.005)
+        self.assertTrue(path.exists(), path)
+
+    def test_simultaneous_identical_cli_calls_serialize_before_fresh_planning(self) -> None:
+        request = self.request("concurrent")
+        first_argv, _, first_folder = self.prepare_call(request, hook="plan")
+        second_argv, _, second_folder = self.prepare_call(request, hook="contender")
+        first = subprocess.Popen(first_argv, stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=self.root, env=self.environment)
+        second: subprocess.Popen[bytes] | None = None
+        try:
+            self.wait_for(self.root / "plan-planning")
+            second = subprocess.Popen(second_argv, stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=self.root, env=self.environment)
+            self.wait_for(self.root / "contender-attempted")
+            key = core.digest({"product": "urn:test:product", "principal": "worker", "id": request["id"]})
+            lock_path = self.f.evidence / "locks" / (hashlib.sha256(("request:" + key).encode()).hexdigest() + ".lock")
+            with lock_path.open("rb") as handle, self.assertRaises(BlockingIOError):
+                fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+            self.assertFalse((self.root / "contender-acquired").exists())
+            self.assertFalse((self.root / "contender-planning").exists())
+        finally:
+            (self.root / "release-planning").write_text("release after observed request lock contention")
+            stdout, stderr = first.communicate(timeout=10)
+            self.record(first_folder, subprocess.CompletedProcess(first_argv, first.returncode, stdout, stderr))
+            if second is not None:
+                stdout, stderr = second.communicate(timeout=10)
+                self.record(second_folder, subprocess.CompletedProcess(second_argv, second.returncode, stdout, stderr))
+        first_response = self.response(first_folder); second_response = self.response(second_folder)
+        self.assertEqual(first_response["status"], "ok", first_response)
+        self.assertEqual(second_response["status"], "ok", second_response)
+        self.assertEqual(first_response["result"], second_response["result"])
+        self.assertEqual(self.target(request).read_bytes(), b"before\nafter\n")
+        self.assertTrue((self.root / "contender-acquired").exists())
+        self.assertFalse((self.root / "contender-planning").exists())
+
+    def test_replay_checks_current_roles_principals_grants_and_authority(self) -> None:
+        authority = self.f.write("inputs/writer-authority.txt", b"exact current Writer authority")
+        core.as_list(core.as_object(core.as_object(self.f.policy["grants"])["work"])["authority_sources"]).append(authority)
+        self.select_policy()
+        request = self.request("authority")
+        first = self.response(self.call(request)); self.assertEqual(first["status"], "ok", first)
+        postimage = self.target(request).read_bytes()
+        for principal in ("executive", "reviewer", "unregistered"):
+            response = self.response(self.call(request, principal=principal))
+            self.assertEqual(response["refusal"]["code"], "authority_missing" if principal == "unregistered" else "role_effect_denied")
+        grant = core.as_object(core.as_object(self.f.policy["grants"])["work"])
+        grant["principals"] = ["executive"]
+        self.select_policy()
+        self.assertEqual(self.response(self.call(request))["refusal"]["code"], "authority_missing")
+        grant["principals"] = ["executive", "worker"]
+        self.select_policy()
+        (self.f.workspace / "inputs/writer-authority.txt").write_bytes(b"authority advanced")
+        self.assertEqual(self.response(self.call(request))["refusal"]["code"], "digest_mismatch")
+        self.assertEqual(self.target(request).read_bytes(), postimage)
+
+    def test_fatal_post_target_publication_recovers_held_intent_without_repeat(self) -> None:
+        request = self.request("uncertain")
+        failed = self.call(request, hook="fatal-target")
+        self.assertEqual(json.loads((failed / "ended.json").read_text())["returncode"], 77)
+        self.assertEqual((failed / "stdout").read_bytes(), b"")
+        self.assertEqual(self.target(request).read_bytes(), b"before\nafter\n")
+        recovered = self.response(self.call(request))
+        self.assertEqual(recovered["refusal"]["code"], "effect_unreconciled")
+        self.assertEqual(recovered["operation_outcome"]["value"], "held(effect)")
+        self.assertFalse(recovered["result"]["value"]["repeated"])
+        self.assertEqual(self.response(self.call(request))["result"], recovered["result"])
+        self.assertEqual(self.target(request).read_bytes(), b"before\nafter\n")
+
+    def test_same_request_under_different_valid_policy_is_a_conflict(self) -> None:
+        request = self.request("policy-conflict")
+        first = self.response(self.call(request)); self.assertEqual(first["status"], "ok", first)
+        self.f.policy["id"] = "valid-distinct-policy-identity"
+        self.select_policy()
+        refused = self.response(self.call(request))
+        self.assertEqual(refused["refusal"]["code"], "request_identity_conflict")
+        self.assertEqual(self.target(request).read_bytes(), b"before\nafter\n")
+
+    def test_uncommitted_intent_envelope_is_unknown_history_not_effect_proof(self) -> None:
+        request = self.request("uncommitted")
+        failed = self.call(request, hook="uncommitted-intent")
+        self.assertEqual(json.loads((failed / "ended.json").read_text())["returncode"], 77)
+        self.assertEqual(self.target(request).read_bytes(), b"before\n")
+        self.assertEqual(list((self.f.evidence / "requests").glob("*.intent.json")), [])
+        held = self.response(self.call(request))
+        self.assertEqual(held["refusal"]["code"], "history_incomplete")
+        self.assertIsNone(held["result"])
+        self.assertEqual(self.target(request).read_bytes(), b"before\n")
+
+    def test_missing_tampered_support_and_missing_owner_never_repeat(self) -> None:
+        for variant in ("missing-support", "tampered-support", "missing-owner"):
+            with self.subTest(variant=variant):
+                isolated = self.root / variant
+                isolated.mkdir()
+                self.f = Fixture(isolated)
+                self.select_policy()
+                request = self.request(variant)
+                first = self.response(self.call(request)); self.assertEqual(first["status"], "ok", first)
+                if variant == "missing-owner":
+                    key = core.digest({"product": "urn:test:product", "principal": "worker", "id": request["id"]})
+                    for suffix in ("outcome", "intent"):
+                        (self.f.evidence / "requests" / (key + "." + suffix + ".json")).unlink()
+                else:
+                    support = self.f.evidence / "objects" / (first["result"]["artifact"]["sha256"] + ".json")
+                    if variant == "missing-support":
+                        support.unlink()
+                    else:
+                        support.write_bytes(b"tampered protected support")
+                replay = self.response(self.call(request))
+                self.assertEqual(replay["refusal"]["code"], {"missing-support": "source_missing", "tampered-support": "digest_mismatch", "missing-owner": "history_incomplete"}[variant])
+                self.assertEqual(self.target(request).read_bytes(), b"before\nafter\n")
+
+
+class PublicJudgmentIngressTests(unittest.TestCase):
+    """Registered local stdout -> public capture/check -> relation conditions.
+
+    Fixture verdicts are supplied assertions. Process/capture/consumer evidence
+    is observed through fresh public CLI calls, without protected-record writes.
+    """
+
+    def setUp(self) -> None:
+        self.temporary = tempfile.TemporaryDirectory(prefix="ac-fix-judgments-public-")
+        self.addCleanup(self.temporary.cleanup)
+        self.root = Path(self.temporary.name).resolve()
+        self.addCleanup(self.retain_fixture_evidence)
+        self.f = Fixture(self.root)
+        self.sequence = 0
+        self.environment = dict(os.environ)
+        self.environment.update({"PYTHONDONTWRITEBYTECODE": "1", "TMPDIR": str(self.root)})
+        self.policy = self.root / "policy.json"
+        self.write_policy()
+        self.declarations = self.f.relations()
+        for raw in core.as_list(self.declarations["applicability"]):
+            row = core.as_object(raw)
+            if row["target"] == {"kind": "relation", "id": "e1"}:
+                row["condition"] = {"predicate": self.f.law, "evaluation": None}
+        self.missing = self.query("missing", None)
+        self.f.subject = core.as_object(self.edge(self.missing)["expected_subject"])
+        self.script = self.f.write("inputs/local-return-producer.py", (
+            b"import sys\nfrom pathlib import Path\n"
+            b"Path(sys.argv[2]).write_bytes(sys.stdin.buffer.read())\n"
+            b"sys.stdout.buffer.write(Path(sys.argv[1]).read_bytes())\n"
+            b"sys.stdout.buffer.flush()\n"
+        ))
+
+    def retain_fixture_evidence(self) -> None:
+        destination = os.environ.get("AC_JUDGMENT_INGRESS_TEST_EVIDENCE")
+        if destination is not None:
+            import shutil
+            target = Path(destination) / self.id().rsplit(".", 1)[-1]
+            shutil.copytree(self.root, target)
+
+    def write_policy(self) -> None:
+        raw = canonical(self.f.policy)
+        self.policy.write_bytes(raw)
+        self.policy_sha256 = hashlib.sha256(raw).hexdigest()
+
+    def public(self, operation: str, arguments: object) -> dict[str, Any]:
+        self.sequence += 1
+        request = {"schema": core.REQUEST, "id": "judgment-ingress-" + str(self.sequence),
+                   "operation": operation, "arguments": arguments}
+        command = [sys.executable, "-B", str(ADAPTER), "--policy", str(self.policy),
+                   "--policy-sha256", self.policy_sha256, "--principal", "executive",
+                   "call", "--request", "-"]
+        raw = canonical(request)
+        started = time.time_ns()
+        result = subprocess.run(command, input=raw, capture_output=True, cwd=self.root,
+                                timeout=15, env=self.environment, check=False)
+        directory = self.root / "calls" / str(self.sequence)
+        directory.mkdir(parents=True)
+        (directory / "request.json").write_bytes(raw)
+        (directory / "stdout").write_bytes(result.stdout)
+        (directory / "stderr").write_bytes(result.stderr)
+        (directory / "execution.json").write_bytes(canonical({
+            "argv": command, "cwd": str(self.root), "exit": result.returncode,
+            "started_ns": started, "ended_ns": time.time_ns(),
+            "scope": "actual public CLI observation; controlled local producer only",
+        }))
+        self.assertEqual(result.returncode, 0, (operation, result.stdout, result.stderr))
+        response = cast(dict[str, Any], json.loads(result.stdout))
+        self.assertEqual(response["status"], "ok", response)
+        self.assertIsNotNone(response["evidence"], response)
+        return response
+
+    @staticmethod
+    def edge(result: dict[str, Any]) -> dict[str, Any]:
+        return next(cast(dict[str, Any], row) for row in result["applicability"]
+                    if row["target"] == {"kind": "relation", "id": "e1"})
+
+    def query(self, label: str, evaluation: object) -> dict[str, Any]:
+        declarations = core.document(self.declarations)
+        for raw in core.as_list(declarations["applicability"]):
+            row = core.as_object(raw)
+            if row["target"] == {"kind": "relation", "id": "e1"}:
+                row["condition"] = core.document({"predicate": self.f.law, "evaluation": evaluation})
+        source = self.f.write("inputs/relations-" + label + ".json", declarations)
+        response = self.public("relations.query", {"model": self.f.model, "declarations": source,
+                                                 "query": "dependencies", "seeds": ["urn:a-c:toy:object:a"]})
+        return cast(dict[str, Any], response["result"]["value"])
+
+    def roundtrip(self, label: str, value: str, *, wrong_activation: bool = False,
+                  nested: bool = False) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
+        packet = self.f.packet()
+        core.as_object(packet["activation"])["id"] = "activation-" + label
+        domain: object = {"original_domain": value, "arbitrary": [None, True, 4, {"a/b~": "unchanged"}]}
+        if nested:
+            domain = {"nested": {"id": "nested-not-performed", "predicate": self.f.law,
+                                 "domain_outcome": False, "core_value": "falsified",
+                                 "evidence": [self.f.data], "residuals": [], "invalidators": []},
+                      "arbitrary": domain}
+        original = core.document({
+            "schema": "a_c.fd-support.closed-return/1", "id": "return-" + label,
+            "frame": {"id": "frame", "revision": "1"}, "activation": core.activation_identity(packet),
+            "subject": self.f.subject, "basis": self.f.basis,
+            "actor": {"id": "worker", "family": "A", "authorship": "worker"}, "consumer": "executive",
+            "evaluations": [{"id": "actual-evaluation", "predicate": self.f.law,
+                             "domain_outcome": domain, "core_value": value,
+                             "evidence": [self.f.data], "residuals": [], "invalidators": []}],
+            "not_performed": ["nested-not-performed"] if nested else [],
+            "work_result": None, "residuals": [], "invalidators": [],
+        })
+        if wrong_activation:
+            core.as_object(original["activation"])["sha256"] = "0" * 64
+        payload = self.f.write("inputs/stdout-" + label + ".json", original)
+        stdin_path = self.f.workspace / "outputs" / (label + ".stdin")
+        executor_id = "local-" + label
+        executor = core.document(core.as_object(self.f.policy["executors"])["registered"])
+        executor.update({
+            "id": executor_id,
+            "argv": [str(Path(sys.executable).resolve()), "-B", str(self.f.workspace / "inputs/local-return-producer.py"),
+                     str(self.f.workspace / core.text(payload["path"])), str(stdin_path)],
+            "dependencies": [self.script, payload],
+            "environment": {"PYTHONDONTWRITEBYTECODE": "1", "TMPDIR": str(self.root)},
+            "settings": {"timeout_ms": 2000, "termination_grace_ms": 100},
+        })
+        core.as_object(self.f.policy["executors"])[executor_id] = executor
+        core.as_list(core.as_object(core.as_object(self.f.policy["grants"])["work"])["executors"]).append(executor_id)
+        self.write_policy()
+        (self.root / (label + "-assertions.json")).write_bytes(canonical({
+            "kind": "fixture assertions, not execution observations", "original": original,
+            "expected_binding_gap": "activation" if wrong_activation else None,
+            "expected_nested_pointer_eligible": False if nested else None,
+        }))
+        assembled = self.public("context.assemble", {
+            "packet": packet, "models": [], "sources": [self.f.law], "late_acquisition": [],
+            "envelope": {"capacity_bytes": None, "boundary": "executor-stdin-utf8",
+                         "host_context": {"state": "unknown", "bytes": None, "evidence": None}},
+        })
+        self.assertEqual(assembled["result"]["value"]["activation_identity"], core.activation_identity(packet))
+        context = assembled["result"]["artifact"]
+        preflight = self.public("contract.preflight", {"context": context, "grant_id": "work",
+                                                      "executor_id": executor_id, "result_key": label, "observations": []})
+        self.assertEqual(preflight["result"]["value"]["decision"], "admitted")
+        dispatched = self.public("dispatch.start", {"preflight": preflight["result"]["artifact"]})
+        attempt = dispatched["result"]["artifact"]
+        deadline = time.monotonic() + 6
+        while True:
+            observed = self.public("dispatch.observe", {"attempt": attempt, "after_event": 0})["result"]["value"]
+            if observed["process_end"] is not None and observed["output"] is not None:
+                break
+            self.assertLess(time.monotonic(), deadline, observed)
+            time.sleep(0.03)
+        self.assertEqual(observed["process_end"]["returncode"], 0)
+        self.assertTrue(stdin_path.read_bytes())
+        raw_ref = observed["output"]["stdout"]
+        raw = self.public("evidence.read", {"artifact": raw_ref})["result"]["value"]["envelope"]["payload"]
+        self.assertEqual(base64.b64decode(raw["bytes_base64"], validate=True), canonical(original))
+        self.assertIs(raw["complete"], True)
+        self.assertEqual(raw["slot"], "final_stdout_object")
+        captured = self.public("return.capture", {"attempt": attempt, "payload": raw_ref,
+                                                  "return_contract": self.f.return_contract})
+        capture = cast(dict[str, Any], captured["result"]["value"])
+        self.assertIs(capture["producer"]["authenticated"], True)
+        self.assertIs(capture["binding_checks"]["format_valid"], True)
+        self.assertEqual(capture["original"], original)
+        reference = cast(dict[str, Any], captured["result"]["artifact"])
+        checked = self.public("return.check", {"return": reference, "context": context,
+                                               "consumer": "executive", "observations": [], "predicates": []})
+        return reference, capture, cast(dict[str, Any], checked["result"]["value"])
+
+    def assert_unresolved_dependency(self, result: dict[str, Any]) -> dict[str, Any]:
+        fact = self.edge(result)
+        self.assertIsNone(fact["core_value"])
+        self.assertIs(fact["excluded"], False); self.assertIs(fact["unresolved"], True)
+        self.assertEqual(result["records"], ["urn:a-c:toy:object:a", "urn:a-c:toy:object:b"])
+        self.assertIn("e1", result["traversed_relations"])
+        self.assertIn("e1", result["boundary"]["unresolved_traversal_relations"])
+        self.assertTrue(fact["gaps"])
+        return fact
+
+    def test_missing_judgment_preserves_unknown_required_dependency(self) -> None:
+        fact = self.assert_unresolved_dependency(self.missing)
+        self.assertEqual(fact["gaps"], ["Missing actual condition judgment"])
+
+    def test_wrong_activation_return_cannot_exclude_required_dependency(self) -> None:
+        reference, capture, checked = self.roundtrip("wrong-activation", "falsified", wrong_activation=True)
+        self.assertFalse(checked["consumable"])
+        binding_gaps = capture["binding_checks"]["gaps"]
+        self.assertEqual([gap["binding"] for gap in binding_gaps if isinstance(gap, dict) and "binding" in gap], ["activation"])
+        result = self.query("wrong-activation", {"record": reference, "pointer": "/payload/original/evaluations/0"})
+        fact = self.assert_unresolved_dependency(result)
+        self.assertTrue(any(isinstance(gap, dict) and gap.get("code") == "basis_missing"
+                            and gap.get("gaps") == binding_gaps for gap in fact["gaps"]))
+
+    def test_nested_not_performed_domain_data_cannot_exclude_required_dependency(self) -> None:
+        reference, capture, checked = self.roundtrip("nested", "satisfied", nested=True)
+        self.assertTrue(checked["consumable"])
+        self.assertEqual(capture["original"]["not_performed"], ["nested-not-performed"])
+        nested = self.query("nested-data", {"record": reference, "pointer": "/payload/original/evaluations/0/domain_outcome/nested"})
+        fact = self.assert_unresolved_dependency(nested)
+        self.assertTrue(any(isinstance(gap, dict) and gap.get("code") == "basis_missing" for gap in fact["gaps"]))
+        direct = self.query("nested-direct", {"record": reference, "pointer": "/payload/original/evaluations/0"})
+        self.assertEqual(self.edge(direct)["core_value"], "satisfied")
+        self.assertFalse(self.edge(direct)["unresolved"])
+        self.assertEqual(direct["records"], ["urn:a-c:toy:object:a", "urn:a-c:toy:object:b"])
+
+    def test_direct_performed_satisfied_and_falsified_conditions_remain_usable(self) -> None:
+        for value in ("satisfied", "falsified"):
+            with self.subTest(value=value):
+                reference, _, checked = self.roundtrip(value, value)
+                self.assertTrue(checked["consumable"])
+                result = self.query(value, {"record": reference, "pointer": "/payload/original/evaluations/0"})
+                fact = self.edge(result)
+                self.assertEqual(fact["core_value"], value)
+                self.assertEqual(fact["excluded"], value == "falsified")
+                self.assertFalse(fact["unresolved"]); self.assertEqual(fact["gaps"], [])
+                expected = ["urn:a-c:toy:object:a"] if value == "falsified" else ["urn:a-c:toy:object:a", "urn:a-c:toy:object:b"]
+                self.assertEqual(result["records"], expected)
 
 
 class ActorCliTransportTests(unittest.TestCase):

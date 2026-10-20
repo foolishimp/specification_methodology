@@ -11,14 +11,14 @@
 - re_entry_point: Design
 - triaged_at: 2026-10-18T19:05:08.915054Z
 - created_at: 2026-10-19
-- updated_at: 2026-10-19
+- updated_at: 2026-10-20
 - affected_boundary: a_c Graphify tenant support operations and ordinary public interfaces
 - dependencies: Committed common WHAT c2f67fec8154028d45d7cd7a2832dd4fade4d94b; exact installed builder; owner-selected Claude RC9 execution method.
 
-Current design state and exact repair routing are owned by
-[Current candidate after reconciliation-008](#current-candidate-after-reconciliation-008) below.
-Earlier closed returns/admissions in this ticket are history for their exact
-subjects and do not project current acceptance or implementation readiness.
+Current repair standing and remaining qualification are recorded in
+[Current review repairs — T-009](#current-review-repairs--t-009) below.
+Earlier implementation, closed returns/admissions and their source tables retain
+their exact historical subjects; they do not project current acceptance.
 
 ## Owner instruction
 
@@ -727,3 +727,287 @@ historical proposals, exact source cuts and assessments retain their standing.
   }
 }
 ```
+
+
+## CURRENT qualification runtime binding live-binding-002
+
+Root selects the following qualification-only runtime binding on current HOW
+`b38eedbe85ee32ef11d945d6a60ed3f9bb2312ac10e873d8ddc9b7986744a005`
+and actual guarded Core
+`78f70fa8da1a29ce4fadc8cb78743c2293bf7f35947b353218dc2a6b1e03ae94`.
+The [closed Core return](../../qualification/t008/retry-repair-001/CLOSED_RETURN.json)
+`949bbe49f7df27e8df4dc45ec98caf3e7027f008a09472e5619de498b6b80c54`
+was consumed by Root before the [exact GO](../../qualification/t008/live-binding-002/APPLY_GO.contract.txt)
+and [pre-effect receipt](../../qualification/t008/live-binding-002/APPLY_GO.admission.json).
+This is a genuine SOURCE/BASIS RE-ENTRY on revised source/code and a newly
+frozen review claim, not retry of old Attempt 03df, cosmetic relabeling or an
+accepted earlier return. Exact final claim/packet/candidate coordinates are
+subsequent bounded runtime inputs; this record invents none of their hashes.
+
+The former binding-001 body and all prior T-008 bytes remain historical on their
+exact original parent. The original Worker native1 late write and missing
+consumable closed return remain unfilled. The prior Reviewer helper Attempt
+`03df642a257f37d2ff9b4c0b7432edce25aae2fcad8a94a4a324acd378717838`,
+capture `d1310998cdc4fc9d88dba0090d540db223f6e02145583e385d7304842709b810`
+and check `3b2d272bca71db6717b53bd9857d9523b4f282f47c3eaec25adb4fb871e469ed`
+retain their mechanical history: no actual native Reviewer launch or Context
+delivery, and no actual Reviewer F_P source exposure. No finding or completed
+assessment is inferred from that helper boundary.
+
+Only two remaining actual registered nonauthor Reviewer activations are in
+scope, each separately approved by Root: source-derived expectations before
+candidate bytes, then candidate/proof assessment with the actual earlier
+expectation frozen in its ReturnContract. They have separate processes and
+Contexts; mental continuity remains unknown and same model family supplies no
+independence. No new Worker call or target write is granted by this binding.
+The separately named [native guide citation contribution](../../qualification/t008/live-binding-002/GUIDE.contribution.json)
+keeps actual Worker provenance and native Writer authorship distinct.
+
+The selected authority JSON below is neutral identity/rights/call-count/current
+source-basis and mechanical exposure data. Initial Reviewer governing inputs
+must not include enclosing technical findings, repair algorithms or expected
+semantic answers. Detailed prior dispositions and candidate/proof/repair traces
+are acquired only after actual source-derived expectations. The current
+selection is neither ontology/design/Product acceptance nor a per-call launch
+approval; Root task disposition and Jim's Product acceptance/release remain
+separate. Historical policies/receipts are never silently repinned or called
+current admission; future effects acquire this new current binding and exact
+actual material preconditions.
+
+The existing Product Definition locator `/reference_frame_bases/0/authority/3`
+continues to resolve this T-008 owner record. The fenced interior is the exact
+selected three-field body. Its full parent SHA-256 and shipped SourceRef
+inclusive JSON-line selector are recorded outside this ticket in the
+[closed apply return](../../qualification/t008/live-binding-002/CLOSED_RETURN.json),
+avoiding a self-hash cycle or future policy/Attempt refs in the owner body.
+
+```json
+{
+  "mechanism": {
+    "id": "product-policy-preflight/1",
+    "source": {
+      "engine": "workspace-regular-file",
+      "root": "product",
+      "path": "build_tenants/graphify/design/fd-support.md",
+      "object": null,
+      "sha256": "b38eedbe85ee32ef11d945d6a60ed3f9bb2312ac10e873d8ddc9b7986744a005",
+      "selector": null
+    },
+    "implementation_sha256": "78f70fa8da1a29ce4fadc8cb78743c2293bf7f35947b353218dc2a6b1e03ae94"
+  },
+  "result_surface": {
+    "root": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/live/evidence",
+    "namespace": "t008-fp-qualification-001",
+    "consumer": "/root"
+  },
+  "scope": {
+    "product_definition": "urn:stdo:product-definition:a-c-implementations",
+    "work_id": "T-008",
+    "task_id": "urn:a-c:fd-support:T008:live-task:001",
+    "purpose": "Existing provisional support-tool qualification, genuine source/basis re-entry on a newly frozen review subject",
+    "Executive": "/root",
+    "actor_calls": [
+      {
+        "role": "Reviewer",
+        "backend": "actual-claude-cli",
+        "count": 2
+      }
+    ],
+    "actor_relation": "The same registered nonauthor Reviewer has two separate actual activations/processes/Contexts; mental continuity unknown. Same model family supplies no independence; actual source-bound premises remain checked.",
+    "per_call_authority": "Each of the two future actual registered Reviewer activations requires separate exact Root approval after current-source mechanical qualification. No Worker rerun, automatic retry or earlier call approval is reused.",
+    "target": {
+      "root": "product",
+      "path": "build_tenants/graphify/examples/fd-support/LIFECYCLE_QUICKSTART.md",
+      "rights": "Candidate acquisition and F_P assessment only; no guide modification. Existing writes remain historical or separately delegated native Writer contributions."
+    },
+    "excluded": [
+      "External publication",
+      "Installation or global configuration",
+      "Ontology/design/Product acceptance",
+      "Release or adoption",
+      "Savings, quality gain or complete-calculus claims"
+    ],
+    "next_action_authority": "Caller /root selects only already-authorized next actions; task disposition remains separate from Product acceptance.",
+    "call_sequence": [
+      "Same registered nonauthor Reviewer activation1: source-first expectations before candidate exposure; no candidate assessment required in this activation",
+      "Same registered nonauthor Reviewer activation2: candidate/proof assessment with the actual earlier expectation frozen in its ReturnContract"
+    ],
+    "historical_worker": {
+      "native_calls": 1,
+      "guide_written_late": true,
+      "consumable_closed_return": false,
+      "new_Worker_call_authorized": false
+    },
+    "source_basis_reentry": "Genuine new frozen source/basis subject and claim; earlier failed attempt/pins retain historical identity. No cosmetic relabel or old-candidate retry.",
+    "prior_reviewer_mechanical_attempt": {
+      "attempt": {
+        "id": "sha256:03df642a257f37d2ff9b4c0b7432edce25aae2fcad8a94a4a324acd378717838",
+        "sha256": "03df642a257f37d2ff9b4c0b7432edce25aae2fcad8a94a4a324acd378717838"
+      },
+      "capture": {
+        "id": "sha256:d1310998cdc4fc9d88dba0090d540db223f6e02145583e385d7304842709b810",
+        "sha256": "d1310998cdc4fc9d88dba0090d540db223f6e02145583e385d7304842709b810"
+      },
+      "check": {
+        "id": "sha256:3b2d272bca71db6717b53bd9857d9523b4f282f47c3eaec25adb4fb871e469ed",
+        "sha256": "3b2d272bca71db6717b53bd9857d9523b4f282f47c3eaec25adb4fb871e469ed"
+      },
+      "native_launches": 0,
+      "native_context_deliveries": 0,
+      "exposure_scope": "Root-reported mechanical failure before native launch/context delivery; no actual Reviewer F_P source exposure. Not a completed assessment."
+    }
+  }
+}
+```
+
+## Current T-008 construction basis — publication-001
+
+Root separately selects the reviewed finite semantic-relation and carrier/IACS
+network as this work's operative construction basis, with its exact admitted
+domains, external owners and falsifiers. This ONTOLOGY disposition adds no
+Product meaning or universal calculus claim.
+
+Root's DESIGN disposition accepts the reviewed network as
+decision-complete/co-evolution-admissible for the provisional implementation
+boundary, under the unchanged conditional platform premises and foundation
+priority/risk selection. Only semantically equivalent incidental realizations
+remain open. This is a current bounded construction disposition, separate from
+Jim's Product acceptance and from runtime qualification.
+
+The current HOW is
+[fd-support.md](../../../build_tenants/graphify/design/fd-support.md),
+SHA-256 `e3c5e6e83d9be525a0ca44fc4e64c9077e33958337bc29807014715a50592939`. Its reviewed subject was
+`d08fe97e4920b10030eb0406325503772e678d9ed0391394558cfc358b59ff7b`;
+the [header-only preservation proof](../../qualification/t008/design-review-repair-001/publication-001/HEADER-PRESERVATION.json)
+retains the complete reviewed body. This current construction-basis pointer
+supersedes earlier pointer use for future construction, not their historical
+evidence or grants.
+
+The actual [review003](../../comments/codex/t008-platform-design-review-003/REVIEW.md)
+at `89d4ffe794b1171f1857a6a707297915bbb794f7616b99ce694a88fe0171a2c7`
+reports bounded satisfied for the counterexample correction, applicable
+preservation, decision completeness and co-evolution. Its
+[closed publication](../../comments/codex/t008-platform-design-review-003/CLOSED_RETURN.json)
+is `5227ccb24bab4a2e42be8be5b577cf9827be5907792d4036546dc368c2403c30`.
+The [corrected proposal](../../qualification/t008/design-review-repair-001/conjunction-001/CLOSED_RETURN.json)
+is `91141f6a859ddd29a002589becbcc6fa82fdb98cd7f8d88389b1899ae67038f3`.
+The [exact Root dispositions](../../qualification/t008/design-review-repair-001/publication-001/ROOT-DISPOSITION.json)
+are external Executive input, not this Writer's semantic assessment.
+
+WORK disposition: publish this basis, then await a separate exact Worker grant
+for only the three reproduced implementation deviations: required-constraint
+counterexample coverage gating, typed actual Context input rechecks and public
+Writer replay/history-before-planning. Existing code is provisional and remains
+unrepaired at this checkpoint. This append neither implements those repairs nor
+activates their Workers. T-008 remains active.
+
+Original review F/I/S subjects, the a881 contradiction F and older
+co-evolution-001 on HOW32095ebe remain immutable. They are not repointed or
+relabeled as this current result; no old whole FD-010 satisfaction is transferred.
+
+The binding002 JSON at original lines785-860 and the preceding ticket bytes
+remain byte-exact. Its original parent
+`51082af52a4126aa85a9f2b7c361ce00e2ddc845af6d0654dd2016aa97633013`,
+source HOWb38 and Core78 pins now identify a historical qualification cut.
+They are not current admission, silently refreshed policy or future effect
+permission. Future dependent actions must acquire a separately selected exact
+current binding and material preconditions. No additional native actor calls,
+automatic retries or reused per-call approvals are granted by this publication.
+
+Jim's Product acceptance, installed/RC/release qualification, current-cut runtime
+F_P qualification and benefit remain unperformed/unaccepted. Prior actor/process
+observations keep their exact historical scope. Root must consume this closed
+publication before any separate implementation GO.
+
+## Current provisional implementation
+
+Root WORK disposition selects the exact repaired realization below for further
+provisional T-008 dogfood, after consuming the closed implementation, independent
+code review003 and integration-004. This completes bounded implementation,
+review and technical integration. T-008 remains **active** for explicit remaining
+qualification; this is not Jim's Product acceptance or installed/RC/release,
+actual F_P, full-calculus or accepted-result benefit qualification.
+
+| Current source | SHA-256 |
+|---|---|
+| `code/ac_support_core.py` | `842f3f136478b6948196fdd431f207f236c8c3e6ebb5573503726061c5d7bcc5` |
+| `code/ac_support_effects.py` | `23dfafb2d7177d64287fc22002ec039ecc451d03c864a647f3c2deade7b2145c` |
+| `code/ac_support.py` | `4d41a2373def237136cefe8b186c196c2e4376137c221ae4675c274abed5ad31` |
+| `test_env/test_ac_support_core.py` | `c2ff9be121ee7ccdf6974e257c0d3f0e86b6f92c84a7020d5f2b1f632cd0530f` |
+| `test_env/test_ac_support_effects.py` | `d944ba73369d3c672ba1b830419260f239d8d1bbfdc6558461412ae1f8978dda` |
+| `test_env/test_ac_support_interfaces.py` | `597f33aae147fdc0ecc7c85638bf77615a59b856f6ee4ffe65041d1e9b82ef9e` |
+
+The operative reviewed HOW network remains
+`d08fe97e4920b10030eb0406325503772e678d9ed0391394558cfc358b59ff7b`, with
+the separate existing ontology/design dispositions and conditional premises.
+The [HOW](../../../build_tenants/graphify/design/fd-support.md) now has only
+factual opening updates, whole-document SHA-256 `5bbb2dd20b78f016f432f48ed92e9040f500e7b99aaff36c7ed5f0a6b5c4462f`;
+the complete body beginning `## Boundary and method binding` is unchanged from
+HOWe3c5 and the reviewed network. Profilebdb, installed builder, common normative
+WHAT and Product Definition remain unchanged.
+
+The consumed [review003](../../comments/codex/t008-platform-code-review-003/REVIEW.md)
+is `e4d97b80b9973cabfba5019bc93226836733461adfb03143f38f1dd2fc2bbc7c`,
+closed publication `a972ca4ccb1fbdad4f837329395507e6dd4ab310d4cfead2f6fc211164c95bbb`.
+It reports scoped E10/E11 satisfied and no actionable supported current defect;
+other prior scoped results keep their prior limits. Old review002 F remains
+bound to its old source. This does not qualify F_P actors or a public operator.
+
+The consumed [integration-004](../../qualification/t008/interfaces/integration-004/CLOSED_RETURN.json)
+is `b895994e7c43e6c8da750828fe0899edf221988721430d0fb8a748d5d08a1175`:
+one full run passed 281 tests/zero skips in 58.068s; strict normal-import checks
+passed nine files and ten fresh ordinary CLI/MCP demo checks passed. Nine actual
+upstream checks are retained from integration-003 with exact unchanged boundary
+applicability, not a new standalone run. Earlier 242/254/273-test cuts and all
+original/repaired failure evidence remain historical.
+
+The [handoff index](../../qualification/t008/handoff-001/README.md) and
+[projection](../../qualification/t008/handoff-001/PROJECTION.json) retain the
+remaining operation/variant/host limits, ten current owning-witness gaps and
+original expectation-source/independence limits. The real Worker timed out
+without a closed return; phase1 was partial/indeterminate with an unconsumable
+check and phase2 timed out without a final assessment. No later technical S
+erases those facts. FD capability work and partial FDV qualification are Active;
+FDV-003 accepted-result benefit remains Deferred/unqualified.
+
+Binding002 at original lines785–860 is byte-exact **HISTORICAL/stale**. Its old
+HOW/Core/source pins and runtime configurations are not renewed, repinned or
+current authority. No binding003, native-call budget, retry, runtime policy or
+future real effect is selected. Future effects need separately selected exact
+current authority/basis and material preconditions.
+
+The full [before ticket](../../qualification/t008/handoff-001/before/.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md)
+retains all original bytes, including the earlier 52,350-byte prefix. Current
+ticket differences are exactly the two authorized top navigation lines and this
+append; the modified prefix is not claimed byte-exact current. The guide has
+only a historical-cut header note; its original `Status:` and remainder are
+unchanged. Complete raw-document pins in earlier reviews/integrations now name
+their historical documents, while identical code/tests and unchanged normative
+requirement/design bodies support only the explicit bounded applicability.
+
+## Current review repairs — T-009
+
+Root selects the seven reviewed implementation repairs as the current operative
+provisional Graphify-tenant realization for continued authorized dogfood. The
+[repair index](../../qualification/t008/review-fixes-001/README.md) and exact
+[Executive disposition](../../qualification/t008/review-fixes-001/EXECUTIVE-DISPOSITION.json)
+bind current code/test subjects, closed FD/generation/semantic delta reviews and
+fresh integration: one 303-test run with zero skips/failures/errors, strict
+normal-import typing of nine support/helper files and nine fresh standalone
+actual-upstream checks. Source/study guards closed before the factual metadata
+updates. The prior source table, review003, integration-004 and handoff-001 above
+remain history for their exact cuts; none is silently repinned to this repair.
+
+[T-009](../completed/T-009-review-repairs.md) is completed only for this bounded
+repair work. T-008 remains **active** for qualification, with all prior failed
+and partial real-actor trials retained. FDV-003 benefit remains
+Deferred/unqualified. The independently reviewed
+[Claude-direct correction](../../../dogfood/stdo-v3-generation-rc9-review-correction/README.md)
+is a separate unaccepted proposal; the four frozen RC9 originals are unchanged.
+The complete normative FD HOW body, installed builder, RC9 method binding,
+common WHAT and Product Definition are unchanged. Original failing controls,
+effects timing assertions and reviewer harness corrections retain their actual
+outcomes. No whole-source closure, full-calculus, real actor/operator usability,
+accepted-result benefit, Product acceptance or installed/RC/release claim is
+added. No runtime authority, binding, native-call budget, adoption, Product
+composition, commit or push is granted by this record.

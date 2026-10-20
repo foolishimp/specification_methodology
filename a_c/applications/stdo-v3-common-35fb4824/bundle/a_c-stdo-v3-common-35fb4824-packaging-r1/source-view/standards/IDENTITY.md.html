@@ -1,0 +1,400 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>standards/IDENTITY.md</title><style>body{font:14px system-ui;margin:24px;background:#101720;color:#dfeaf4}a{color:#87c7ff}pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5;counter-reset:line}span{display:block}span:before{content:attr(data-line);display:inline-block;width:4em;color:#7392aa;user-select:none}span:target{background:#36481d}</style><h1>standards/IDENTITY.md</h1><p>Exact frozen source · SHA256 2e7026aeec957ebb9b1aa0b01ae76b81b4236f02db93b040f158eadf31f5e08b</p><pre><span id="L1" data-line="1"># IDENTITY</span>
+<span id="L2" data-line="2"></span>
+<span id="L3" data-line="3">Tier 1. Owns identity law: scoped identity with its uniqueness, type and</span>
+<span id="L4" data-line="4">stability laws; readable and opaque identity; the identity hierarchy; the</span>
+<span id="L5" data-line="5">split between engine-owned and domain-owned identity; authority identity</span>
+<span id="L6" data-line="6">and its conservation (STDO-UP-004); domain overrides of default identity</span>
+<span id="L7" data-line="7">formats and their publication; parsing; the boundary between object</span>
+<span id="L8" data-line="8">identity and release version; the minimum questions for an identity</span>
+<span id="L9" data-line="9">surface; lawful and unlawful examples; and the consequence for</span>
+<span id="L10" data-line="10">implementations. It consumes [FOUNDATIONS](FOUNDATIONS.md) §2, where</span>
+<span id="L11" data-line="11">Object (a subject with scoped identity of authority, kind and value),</span>
+<span id="L12" data-line="12">Authority with its kinds, and Basis are defined once, and adds no</span>
+<span id="L13" data-line="13">definition to tier 1. [AC-002](AXIOMATIC_CALCULUS.md#ac-002-scoped-identity)</span>
+<span id="L14" data-line="14">applies the scoped identity of §2 to every identity within the calculus,</span>
+<span id="L15" data-line="15">with a map of its coordinates to authority, kind and value. The identity</span>
+<span id="L16" data-line="16">of one calculus edition is</span>
+<span id="L17" data-line="17">[AXIOMATIC_CALCULUS §8](AXIOMATIC_CALCULUS.md#8-calculus-identity), which</span>
+<span id="L18" data-line="18">this member does not restate. Release identity, its names and its forms are</span>
+<span id="L19" data-line="19">the release law of [RELEASE](RELEASE.md); this member states only the</span>
+<span id="L20" data-line="20">boundary between it and object identity. Each clause names the principle</span>
+<span id="L21" data-line="21">(P0 to P6) that requires it, as</span>
+<span id="L22" data-line="22">[FOUNDATIONS §1](FOUNDATIONS.md#1-vocabulary-of-standing) requires:</span>
+<span id="L23" data-line="23">identity is P3&#x27;s commitment and authority P6&#x27;s.</span>
+<span id="L24" data-line="24"></span>
+<span id="L25" data-line="25">## 1. Position</span>
+<span id="L26" data-line="26"></span>
+<span id="L27" data-line="27">Identity is scoped, typed, unique, and stable enough for the governed</span>
+<span id="L28" data-line="28">purpose. Identity is not a flat global string convention; it is made</span>
+<span id="L29" data-line="29">unique by hierarchy and type (P3). That means:</span>
+<span id="L30" data-line="30"></span>
+<span id="L31" data-line="31">- the same literal token may be lawful in different scopes when its</span>
+<span id="L32" data-line="32">  authority and kind differ;</span>
+<span id="L33" data-line="33">- one string format is not sufficient to define identity across all</span>
+<span id="L34" data-line="34">  products and runtime surfaces; and</span>
+<span id="L35" data-line="35">- a human-readable form may help recognition, but readability is</span>
+<span id="L36" data-line="36">  secondary to uniqueness and stable governed meaning.</span>
+<span id="L37" data-line="37"></span>
+<span id="L38" data-line="38">The engine should carry identity safely. The domain should define</span>
+<span id="L39" data-line="39">semantic identity law for its own constitutional objects (P3, P6).</span>
+<span id="L40" data-line="40"></span>
+<span id="L41" data-line="41">### Foundation to law</span>
+<span id="L42" data-line="42"></span>
+<span id="L43" data-line="43">This member is material family F8, identity. The table below shows which</span>
+<span id="L44" data-line="44">of its rules follow from which premises, in the format of</span>
+<span id="L45" data-line="45">[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law),</span>
+<span id="L46" data-line="46">which also states the standing of the consequences. Instance premises,</span>
+<span id="L47" data-line="47">which the commitments do not supply:</span>
+<span id="L48" data-line="48"></span>
+<span id="L49" data-line="49">- (i) a governed project holds objects of many kinds, some owned by a</span>
+<span id="L50" data-line="50">  runtime or engine and some by the domain that defines them;</span>
+<span id="L51" data-line="51">- (ii) identities are written in serialised or readable forms that people</span>
+<span id="L52" data-line="52">  and parsers read;</span>
+<span id="L53" data-line="53">- (iii) a project publishes releases, whose versions are coordinates of</span>
+<span id="L54" data-line="54">  the release and not of each object.</span>
+<span id="L55" data-line="55"></span>
+<span id="L56" data-line="56">| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |</span>
+<span id="L57" data-line="57">|---|---|---|---|---|</span>
+<span id="L58" data-line="58">| P3 (independent); (i) | By P3 an identity is declared as (authority, kind, value), and by (i) a project holds objects of many kinds and owners, so identity is always scoped and should be interpretable at minimum through authority, kind and value; it is unique within its lawful scope rather than as a naked global string, and, because kind is a coordinate, different kinds of thing should not be collapsed into one identity space | [Scoped identity](#scoped-identity), [Uniqueness](#uniqueness), [Type](#type) | the optional further coordinates and the identity kinds in use: the authority that owns the objects, under [§5](#5-authority-split) | 2 |</span>
+<span id="L59" data-line="59">| P3 (independent), P4b (derived from P0 and P2) | By P3 identity survives admissible change, and by P4b a recorded identity is a fact later steps rely on, so identity should remain stable for the lifecycle it serves, and a changed identity should be related explicitly to the old one, never silently reused for a different object | [Stability](#stability) | none | 2, 9 |</span>
+<span id="L60" data-line="60">| P3 (independent), P6 (independent), P5 (derived from P0 and P6, with P0&#x27;s open-world premise); (i) | By P3 a boundary is a claim with a proof obligation, and by P6 a claim holds only on its evidence, so a boundary claim names its object, evidence and basis and holds only as far as that evidence goes. By P5 a claim beyond the evidence is undecided, so a sufficiency claim is bounded by its task and is not completeness, and the stronger statistical Markov boundary stays a hypothesis that no work relies on as established | [Boundaries and sufficiency claims](#boundaries-and-sufficiency-claims) | the Markov-object construct and its epistemic status: [WORLD_MODEL §4](WORLD_MODEL.md#4-the-markov-object-construct), a refinement; material sufficiency: [RF-003](REFERENCE_FRAME.md#rf-003-material-sufficiency) | 2, 6, 9 |</span>
+<span id="L61" data-line="61">| P3 (independent), P1 (independent); (ii) | By P1 a readable form carries no meaning of its own, and by P3 uniqueness is a property of the scope, so readability is a convenience for recognition: by (ii) people and parsers read the form, an opaque identity is lawful, a readable one is lawful only while it preserves uniqueness in scope, and no reader should infer that a readable form is safer or more authoritative | [§3](#3-readable-and-opaque-identity) | whether an identity is opaque, readable or hybrid: the authority that owns it, under §5 | 2, 6 |</span>
+<span id="L62" data-line="62">| P3 (independent); (i), (ii) | By P3 kind is a coordinate of identity, and by (i) and (ii) different kinds and owners serialise alike, so identity should be made unique by hierarchy where appropriate, and a family and its members, or a runtime identity and a domain identity, stay distinct kinds even where both serialise as strings | [§4](#4-identity-hierarchy) | the general model `authority / kind / value / revision`: this member; which segments a serialisation shows: the authority that owns the identity | 2 |</span>
+<span id="L63" data-line="63">| P3 (independent), P6 (independent); (i) | By P6 an authority decides only what it owns, and by (i) a runtime and a domain own different objects, so a runtime may give its own objects opaque identities under its own generation rules and should not impose domain grammar on domain objects; the domain owns the semantic identity grammar of its constitutional objects, which the runtime may transport but should not silently invent their meaning | [§5](#5-authority-split) | the generation rules of runtime identities: the runtime; the domain&#x27;s identity kinds, distinctions, uniqueness and parsing: the domain | 2, 9 |</span>
+<span id="L64" data-line="64">| P6 (independent), P3 (independent), P4b (derived from P0 and P2) | P6 makes authority a permission that capability, labels and reachability never create, and P3 scopes every identity by authority and kind, so authority is an identity-bearing relation whose owner, kind, subject, scope and basis must survive every carrier: composition, delegation and projection restrict it or carry it faithfully and never widen it. P4b makes an authority decision a step-produced fact that cannot be re-acquired, so elevation, transfer, split, merge, proxy grant, revocation and retirement need an explicit authority decision with an identifiable basis, and a recorded ruling keeps its coordinates and cannot be widened by recording. Proxy identity and human-authority identity stay distinct for the same reason as any two kinds under P3 | [§6](#6-authority-identity-and-conservation-stdo-up-004) | what creates no authority and what a proxy can never decide: [FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds), with this section&#x27;s instances; the nine grant fields: this section; each authority decision and proxy grant: the authority that issues it; the term under which a profile projects the human-authority relation: that profile | 2, 7, 9 |</span>
+<span id="L65" data-line="65">| P3 (independent), P6 (independent) | By P3 an identity&#x27;s grammar belongs to its owner, and by P6 a default is not that owner&#x27;s decision, so a default identity format that a runtime realisation publishes is lawful only while derived domains may override it; an override must keep what P3 requires (scoped uniqueness, kind distinction, deterministic parsing or reading, non-aliasing between family and member identities and stable downstream traceability), and by P6 it is published in domain authority, not only as regex assumptions hidden in implementation code | [§7](#7-default-formats-and-overrides) | the defaults: the bound runtime realisation ([DESIGN_MODULE §12](DESIGN_MODULE.md#identity-defaults-from-a-bound-runtime-realisation)); each override and its publication surface: the domain | 2, 8 |</span>
+<span id="L66" data-line="66">| P3 (independent), P1 (independent); (ii) | By P1 a pattern over prose is not the identity it matches, and by P3 kinds stay distinct, so regex over prose is at most a provisional extractor, and a parser distinguishes concrete identity kinds from grouping labels, and subordinate identities from the identity their readable form derives from | [§8](#8-parsing) | whether the domain needs family identities: the domain | 2, 6 |</span>
+<span id="L67" data-line="67">| P3 (independent), P6 (independent); (iii) | By P3 an object&#x27;s identity and a release&#x27;s identity are different coordinates, and by (iii) versions belong to releases, so release version is not object identity, and object identity, release identity, publication or revision coordinates and mutable discovery selectors may relate and are not interchangeable; by P6 none grants the other&#x27;s authority | [§9](#9-release-version-boundary) | release identity, its names and its forms: [RELEASE](RELEASE.md) | 1, 2 |</span>
+<span id="L68" data-line="68">| P3 (independent), P6 (independent) | By P3 and P6 an identity surface must let a reader recover owner, kind, scope and relations, so an identity surface that cannot answer the minimum questions is under-defined | [§10](#10-minimum-questions) | the seven questions: this member | 2 |</span>
+<span id="L69" data-line="69">| P3 (independent), P1 (independent), P0 (recovered) | By P3 and P1 identity is read through its published law, not mined from text, so implementations should prefer typed identity readers and published identity law over regex mining; by P0 a repair is bounded to the step at hand, so the first lawful repair contains the immediate bug, and the enduring repair publishes identity law and moves implementations onto it | [§12](#12-consequence-for-implementations) | a policy of this member: the enduring repair publishes identity law and moves implementations onto it | 2, 8 |</span>
+<span id="L70" data-line="70"></span>
+<span id="L71" data-line="71">§11 applies these rows to examples and decides nothing beyond them. The</span>
+<span id="L72" data-line="72">table is stated here. Purpose and material relation: an actor</span>
+<span id="L73" data-line="73">started on this member sees which identity rules follow from the</span>
+<span id="L74" data-line="74">foundations and which are choices, with the owner of each choice, so no</span>
+<span id="L75" data-line="75">choice is presented as derived (P6, P3).</span>
+<span id="L76" data-line="76"></span>
+<span id="L77" data-line="77">Consumers of these rows, where an actor enters them (FOUNDATIONS §3</span>
+<span id="L78" data-line="78">Foundation to law, Consumers), one list per row, each consumer linked to</span>
+<span id="L79" data-line="79">its own locus:</span>
+<span id="L80" data-line="80"></span>
+<span id="L81" data-line="81">- Row 1, scoped, unique and typed identity: [AXIOMATIC_CALCULUS §4 AC-002](AXIOMATIC_CALCULUS.md#ac-002-scoped-identity), which applies the scoped identity to every identity in the calculus with a map of its coordinates; [WORLD_MODEL §5](WORLD_MODEL.md#5-core-claims), where fully qualified naming applies it, and the [WORLD_MODEL family table](WORLD_MODEL.md#foundation-to-law), whose row for the entity cut imports F8; [PRODUCT_DEFINITION §1](PRODUCT_DEFINITION.md#1-overlay-and-layout-independence), where a definition, Product, context or tenant URI is an identity carrier under this law and not a self-authorising string; [§3](#3-readable-and-opaque-identity), where a readable identity is lawful only while it preserves uniqueness in scope; [§7 Derived domain overrides](#derived-domain-overrides), whose override keeps scoped uniqueness and kind distinction; [§10](#10-minimum-questions), questions 1 to 3.</span>
+<span id="L82" data-line="82">- Row 2, stability: [§7 Derived domain overrides](#derived-domain-overrides), whose override keeps stable downstream traceability; [§10](#10-minimum-questions), question 4; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminator 21.</span>
+<span id="L83" data-line="83">- Row 3, boundaries and sufficiency claims: [WORLD_MODEL §4](WORLD_MODEL.md#4-the-markov-object-construct), which refines it and states the epistemic status of its construct; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminators 10 and 12.</span>
+<span id="L84" data-line="84">- Row 4, readable and opaque identity: [§10](#10-minimum-questions), question 5, which asks whether the readable form is over-trusted; otherwise no separate consumer applies, because whether an identity is opaque, readable or hybrid is the owning authority&#x27;s choice under §5, and no section of another member names this rule.</span>
+<span id="L85" data-line="85">- Row 5, identity hierarchy: [§7 Derived domain overrides](#derived-domain-overrides), whose override keeps family and member identities from aliasing; [§8](#8-parsing), where a family identity is published as its own kind and not read from string shape; [§10](#10-minimum-questions), question 6; [§12](#12-consequence-for-implementations), which avoids silent coercion between family and concrete identities.</span>
+<span id="L86" data-line="86">- Row 6, the authority split: [§7 Derived domain overrides](#derived-domain-overrides) and [Override publication surface](#override-publication-surface), where a domain overrides a runtime&#x27;s defaults for its own kinds and publishes the override in domain authority; [§10](#10-minimum-questions), question 7; [§12](#12-consequence-for-implementations), which avoids leaking engine identity grammar into domain semantics.</span>
+<span id="L87" data-line="87">- Row 7, authority identity and conservation: [FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds), whose proxy limit takes the contents of a proxy grant from this section; [EVALUATION §5](EVALUATION.md#5-acceptance), which applies the proxy sentences to acceptance; [DESIGN_MODULE §5 Authority model](DESIGN_MODULE.md#authority-model), where delegation, elevation, transfer and retirement carry an explicit authority decision, [Capability and foundation selection (UP-023)](DESIGN_MODULE.md#capability-and-foundation-selection-up-023), where reuse transfers no authority, and [§7 Computational realisation projection (UP-019)](DESIGN_MODULE.md#computational-realisation-projection-up-019), where a component&#x27;s roles preserve the authority relation under this section.</span>
+<span id="L88" data-line="88">- Row 8, default formats and overrides: [DESIGN_MODULE §12 Identity defaults from a bound runtime realisation](DESIGN_MODULE.md#identity-defaults-from-a-bound-runtime-realisation), whose published defaults take their standing and override law from here, and the [DESIGN_MODULE family table](DESIGN_MODULE.md#foundation-to-law), whose row for identity defaults imports F8 for the owner&#x27;s override; [§12](#12-consequence-for-implementations), whose enduring repair publishes explicit identity law.</span>
+<span id="L89" data-line="89">- Row 9, parsing: [§7 Derived domain overrides](#derived-domain-overrides), whose override keeps deterministic parsing or reading; [§10](#10-minimum-questions), question 6; [§12](#12-consequence-for-implementations), which prefers typed identity readers over regex mining.</span>
+<span id="L90" data-line="90">- Row 10, the release version boundary: [§10](#10-minimum-questions), question 7, which asks whether an identity is a release identity; otherwise no separate consumer applies: release identity, its names and its forms are RELEASE&#x27;s, as the choice column states, which imports this member at its lead and applies no rule of this section, and SPEC_METHOD §6 states the boundary from the lineage side and names this section nowhere.</span>
+<span id="L91" data-line="91">- Row 11, the minimum questions: no separate consumer applies. The questions are asked by whoever defines or audits an identity surface, each applying a rule traced above; the seven questions are this member&#x27;s choice, and no section of another member names them.</span>
+<span id="L92" data-line="92">- Row 12, the consequence for implementations: no separate consumer applies. The preference for typed readers and the two-step repair are a policy of this member for implementations; a project that repairs an implementation applies them under its own design authority, and no section of another member names this section.</span>
+<span id="L93" data-line="93"></span>
+<span id="L94" data-line="94">Each consumer applies the rule and decides nothing the owning section does</span>
+<span id="L95" data-line="95">not (P2, P6).</span>
+<span id="L96" data-line="96"></span>
+<span id="L97" data-line="97">## 2. Core law</span>
+<span id="L98" data-line="98"></span>
+<span id="L99" data-line="99">### Scoped identity</span>
+<span id="L100" data-line="100"></span>
+<span id="L101" data-line="101">Identity is always scoped. At minimum, identity should be interpretable</span>
+<span id="L102" data-line="102">through authority, kind and value. So the minimum semantic model is:</span>
+<span id="L103" data-line="103"></span>
+<span id="L104" data-line="104">```text</span>
+<span id="L105" data-line="105">identity = authority + kind + value</span>
+<span id="L106" data-line="106">```</span>
+<span id="L107" data-line="107"></span>
+<span id="L108" data-line="108">This is the scoped identity of an Object (FOUNDATIONS §2). Optional</span>
+<span id="L109" data-line="109">additional coordinates may include parent scope, revision, publication</span>
+<span id="L110" data-line="110">version and temporal coordinates (P3).</span>
+<span id="L111" data-line="111"></span>
+<span id="L112" data-line="112">### Uniqueness</span>
+<span id="L113" data-line="113"></span>
+<span id="L114" data-line="114">Identity is unique within its lawful scope. The requirement is not that</span>
+<span id="L115" data-line="115">every identity looks globally unique as a naked string. The requirement is</span>
+<span id="L116" data-line="116">(P3):</span>
+<span id="L117" data-line="117"></span>
+<span id="L118" data-line="118">- no two live objects of the same kind may share the same identity within</span>
+<span id="L119" data-line="119">  the same authority scope;</span>
+<span id="L120" data-line="120">- aliasing across scopes remains explicit; and</span>
+<span id="L121" data-line="121">- serialisation preserves enough hierarchy to prevent accidental</span>
+<span id="L122" data-line="122">  collision.</span>
+<span id="L123" data-line="123"></span>
+<span id="L124" data-line="124">### Type</span>
+<span id="L125" data-line="125"></span>
+<span id="L126" data-line="126">Identity is typed. Different kinds of thing should not be collapsed into</span>
+<span id="L127" data-line="127">one undifferentiated identity space. Examples of distinct identity kinds</span>
+<span id="L128" data-line="128">include goal, intent, requirement, requirement_family,</span>
+<span id="L129" data-line="129">acceptance_criterion, scenario, design_decision, published_function,</span>
+<span id="L130" data-line="130">carrier_surface, release, install, run, function_call, continuation and</span>
+<span id="L131" data-line="131">event. The method does not treat a family identity as if it were a</span>
+<span id="L132" data-line="132">concrete requirement identity, or a release version as if it were object</span>
+<span id="L133" data-line="133">identity (P3).</span>
+<span id="L134" data-line="134"></span>
+<span id="L135" data-line="135">### Stability</span>
+<span id="L136" data-line="136"></span>
+<span id="L137" data-line="137">Identity should remain stable for the governed lifecycle it serves. This</span>
+<span id="L138" data-line="138">does not mean every identity is immutable forever. It means identity is</span>
+<span id="L139" data-line="139">stable enough to support traceability, comparison, replay, publication</span>
+<span id="L140" data-line="140">and supersession. If an identity changes, the method should make the</span>
+<span id="L141" data-line="141">relationship explicit rather than silently reusing the old identity for a</span>
+<span id="L142" data-line="142">different object (P3, P4b).</span>
+<span id="L143" data-line="143"></span>
+<span id="L144" data-line="144">### Boundaries and sufficiency claims</span>
+<span id="L145" data-line="145"></span>
+<span id="L146" data-line="146">An object&#x27;s boundary, what belongs to the object and what its identity</span>
+<span id="L147" data-line="147">does not depend on, is a claim with a proof obligation</span>
+<span id="L148" data-line="148">([FOUNDATIONS §3](FOUNDATIONS.md#3-commitments), P3), not a property that</span>
+<span id="L149" data-line="149">its storage, schema or name establishes. A boundary claim names its</span>
+<span id="L150" data-line="150">object, the evidence that supports it and the basis it holds on, and it</span>
+<span id="L151" data-line="151">holds only as far as that evidence goes (P3, P6). A claim that an</span>
+<span id="L152" data-line="152">object&#x27;s observed boundary state is sufficient for a task is a material</span>
+<span id="L153" data-line="153">sufficiency claim of</span>
+<span id="L154" data-line="154">[RF-003](REFERENCE_FRAME.md#rf-003-material-sufficiency), bounded by</span>
+<span id="L155" data-line="155">that task: it is not completeness, and it does not establish that the</span>
+<span id="L156" data-line="156">boundary screens the object&#x27;s interior from everything outside it. That</span>
+<span id="L157" data-line="157">stronger claim, a statistical Markov boundary, is a hypothesis</span>
+<span id="L158" data-line="158">([FOUNDATIONS §5](FOUNDATIONS.md#5-hypotheses)); no work relies on it as</span>
+<span id="L159" data-line="159">established, and a profile that uses such a construct states its</span>
+<span id="L160" data-line="160">epistemic status (P5). Purpose and material relation: this law was</span>
+<span id="L161" data-line="161">decided only in the optional world-model profile, so a Product that does</span>
+<span id="L162" data-line="162">not adopt that profile had no rule for boundary claims, and the common</span>
+<span id="L163" data-line="163">single ownership requirement, item 8, requires generic law to be</span>
+<span id="L164" data-line="164">available without an optional profile; [WORLD_MODEL §4](WORLD_MODEL.md#4-the-markov-object-construct)</span>
+<span id="L165" data-line="165">refines it.</span>
+<span id="L166" data-line="166"></span>
+<span id="L167" data-line="167">## 3. Readable and opaque identity</span>
+<span id="L168" data-line="168"></span>
+<span id="L169" data-line="169">Identity may be opaque, such as a GUID or UUID; human-readable, such as</span>
+<span id="L170" data-line="170">`REQ-F-CAPABILITY-001`; or hybrid, where one component is readable and</span>
+<span id="L171" data-line="171">another is opaque. The governing rule is that readability is a</span>
+<span id="L172" data-line="172">convenience for recognition, and uniqueness and scoped meaning are the</span>
+<span id="L173" data-line="173">actual law (P3, P1). Therefore:</span>
+<span id="L174" data-line="174"></span>
+<span id="L175" data-line="175">- a GUID is lawful even when it carries no human meaning;</span>
+<span id="L176" data-line="176">- a readable identity is lawful only if it still preserves uniqueness in</span>
+<span id="L177" data-line="177">  scope; and</span>
+<span id="L178" data-line="178">- no reader should infer that a readable identity is safer or more</span>
+<span id="L179" data-line="179">  authoritative than an opaque one merely because it looks meaningful.</span>
+<span id="L180" data-line="180"></span>
+<span id="L181" data-line="181">## 4. Identity hierarchy</span>
+<span id="L182" data-line="182"></span>
+<span id="L183" data-line="183">Identity should be made unique by hierarchy where appropriate. One useful</span>
+<span id="L184" data-line="184">general model is:</span>
+<span id="L185" data-line="185"></span>
+<span id="L186" data-line="186">```text</span>
+<span id="L187" data-line="187">authority / kind / value / revision</span>
+<span id="L188" data-line="188">```</span>
+<span id="L189" data-line="189"></span>
+<span id="L190" data-line="190">Not every serialisation needs all four visible segments, but the semantic</span>
+<span id="L191" data-line="191">model should be available (P3). Examples:</span>
+<span id="L192" data-line="192"></span>
+<span id="L193" data-line="193">- `(&lt;product-authority&gt;, requirement, REQ-F-CAPABILITY-001)`</span>
+<span id="L194" data-line="194">- `(&lt;product-authority&gt;, requirement_family, REQ-F-CAPABILITY)`</span>
+<span id="L195" data-line="195">- `(&lt;runtime-authority&gt;, run, 550e8400-e29b-41d4-a716-446655440000)`</span>
+<span id="L196" data-line="196">- `(&lt;release-authority&gt;, release, 1.0.0-rc.1)`</span>
+<span id="L197" data-line="197"></span>
+<span id="L198" data-line="198">The important point is that `REQ-F-CAPABILITY` and `REQ-F-CAPABILITY-001`</span>
+<span id="L199" data-line="199">are not the same kind of identity, and that a runtime `run_id` and a</span>
+<span id="L200" data-line="200">domain requirement identity do not belong to the same semantic category</span>
+<span id="L201" data-line="201">even if both serialise as strings (P3).</span>
+<span id="L202" data-line="202"></span>
+<span id="L203" data-line="203">## 5. Authority split</span>
+<span id="L204" data-line="204"></span>
+<span id="L205" data-line="205">### Engine-owned identity</span>
+<span id="L206" data-line="206"></span>
+<span id="L207" data-line="207">The substrate or runtime may define default identities for runtime-owned</span>
+<span id="L208" data-line="208">objects, such as runs, function calls, jobs, execution frames,</span>
+<span id="L209" data-line="209">continuations and events. For these, the engine may use opaque identities and engine-local</span>
+<span id="L210" data-line="210">generation rules. Those rules should optimise for uniqueness, replay</span>
+<span id="L211" data-line="211">safety and event-stream integrity. The engine should not impose</span>
+<span id="L212" data-line="212">domain-specific semantic grammar on domain-owned objects (P3, P6).</span>
+<span id="L213" data-line="213"></span>
+<span id="L214" data-line="214">### Domain-owned identity</span>
+<span id="L215" data-line="215"></span>
+<span id="L216" data-line="216">Derived domains own the semantic identity grammar for their own</span>
+<span id="L217" data-line="217">constitutional objects, such as requirements, requirement families,</span>
+<span id="L218" data-line="218">acceptance criteria, scenarios, ADRs or design decisions, and published</span>
+<span id="L219" data-line="219">domain assets. The domain defines which identity kinds exist, how they</span>
+<span id="L220" data-line="220">are distinguished, what makes them unique, and how they are parsed or</span>
+<span id="L221" data-line="221">read. The runtime may transport those identities, but it should not</span>
+<span id="L222" data-line="222">silently invent their meaning (P3, P6).</span>
+<span id="L223" data-line="223"></span>
+<span id="L224" data-line="224">## 6. Authority identity and conservation (STDO-UP-004)</span>
+<span id="L225" data-line="225"></span>
+<span id="L226" data-line="226">Authority is an identity-bearing semantic relation, not a display label,</span>
+<span id="L227" data-line="227">capability string, actor identity or reachable code path. Its identity</span>
+<span id="L228" data-line="228">preserves owner, kind, governed subject, scope and governing basis (P6,</span>
+<span id="L229" data-line="229">P3; the Authority</span>
+<span id="L230" data-line="230">object and its kinds are FOUNDATIONS §2).</span>
+<span id="L231" data-line="231"></span>
+<span id="L232" data-line="232">What composition, delegation, adapters, wrappers and registries may do</span>
+<span id="L233" data-line="233">with admitted authority, what creates none, and which changes need an</span>
+<span id="L234" data-line="234">explicit authority decision are stated once at</span>
+<span id="L235" data-line="235">[FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds), What</span>
+<span id="L236" data-line="236">creates no authority. Its instances for an identity-bearing relation are</span>
+<span id="L237" data-line="237">these: a projection is such a carrier, and actor identity, payload shape</span>
+<span id="L238" data-line="238">and available capability create no authority (P6, P4b).</span>
+<span id="L239" data-line="239"></span>
+<span id="L240" data-line="240">Human authority may act directly or through an explicitly admitted</span>
+<span id="L241" data-line="241">bounded proxy. Proxy actor identity and human-authority identity remain</span>
+<span id="L242" data-line="242">distinct; a profile&#x27;s own surfaces may project the human-authority</span>
+<span id="L243" data-line="243">relation under that profile&#x27;s term (PROFILES). A proxy grant names its</span>
+<span id="L244" data-line="244">grantor, actor, subject, scope, permitted and excluded decisions,</span>
+<span id="L245" data-line="245">validity, delegation rights, revocation and provenance (P6, P3).</span>
+<span id="L246" data-line="246"></span>
+<span id="L247" data-line="247">A direct or proxied decision preserves its source, subject and basis,</span>
+<span id="L248" data-line="248">acting identity and mode, scope, change class, disposition and</span>
+<span id="L249" data-line="249">supersession. Recording a ruling cannot widen it. What a proxy can never</span>
+<span id="L250" data-line="250">decide is stated at</span>
+<span id="L251" data-line="251">[FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds); for</span>
+<span id="L252" data-line="252">authority identity its instances are that proxy authority does not make</span>
+<span id="L253" data-line="253">implementer self-review independent</span>
+<span id="L254" data-line="254">([EVALUATION §3](EVALUATION.md#3-independent-assessment)) and confers no</span>
+<span id="L255" data-line="255">unrelated runtime or domain authority (P6, P4b). EVALUATION §5 applies</span>
+<span id="L256" data-line="256">this law to acceptance.</span>
+<span id="L257" data-line="257"></span>
+<span id="L258" data-line="258">## 7. Default formats and overrides</span>
+<span id="L259" data-line="259"></span>
+<span id="L260" data-line="260">### Derived domain overrides</span>
+<span id="L261" data-line="261"></span>
+<span id="L262" data-line="262">Default identity formats that a bound runtime realisation publishes are</span>
+<span id="L263" data-line="263">starter conventions and convenience contracts, not universal doctrine;</span>
+<span id="L264" data-line="264">they are lawful only so long as derived domains may override them (P3,</span>
+<span id="L265" data-line="265">P6). What such a realisation publishes, and for which surfaces, is</span>
+<span id="L266" data-line="266">realisation law outside this member</span>
+<span id="L267" data-line="267">([DESIGN_MODULE §12](DESIGN_MODULE.md#identity-defaults-from-a-bound-runtime-realisation)).</span>
+<span id="L268" data-line="268"></span>
+<span id="L269" data-line="269">Derived domains may override identity format and structure for their own</span>
+<span id="L270" data-line="270">kinds. An override is lawful only if it preserves (P3):</span>
+<span id="L271" data-line="271"></span>
+<span id="L272" data-line="272">- scoped uniqueness;</span>
+<span id="L273" data-line="273">- explicit kind distinction;</span>
+<span id="L274" data-line="274">- deterministic parsing or reading;</span>
+<span id="L275" data-line="275">- non-aliasing between family and member identities; and</span>
+<span id="L276" data-line="276">- stable downstream traceability.</span>
+<span id="L277" data-line="277"></span>
+<span id="L278" data-line="278">Overrides are published in domain authority. They do not exist only as</span>
+<span id="L279" data-line="279">ad hoc regex assumptions hidden in implementation code (P6, P3).</span>
+<span id="L280" data-line="280"></span>
+<span id="L281" data-line="281">### Override publication surface</span>
+<span id="L282" data-line="282"></span>
+<span id="L283" data-line="283">When a domain overrides defaults published by its bound runtime</span>
+<span id="L284" data-line="284">realisation, the override is published in a lawful domain authority</span>
+<span id="L285" data-line="285">surface rather than inferred only from implementation code (P6, P3).</span>
+<span id="L286" data-line="286"></span>
+<span id="L287" data-line="287">At minimum, the domain should publish (P3, P6):</span>
+<span id="L288" data-line="288"></span>
+<span id="L289" data-line="289">- the identity kinds in scope;</span>
+<span id="L290" data-line="290">- the serialisation or readable form used for those kinds;</span>
+<span id="L291" data-line="291">- the scope or hierarchy that makes them unique; and</span>
+<span id="L292" data-line="292">- the distinction between grouping identities and concrete executable or</span>
+<span id="L293" data-line="293">  traceable identities.</span>
+<span id="L294" data-line="294"></span>
+<span id="L295" data-line="295">Suitable publication surfaces include (P6, P3):</span>
+<span id="L296" data-line="296"></span>
+<span id="L297" data-line="297">- the product definition (conventionally `PRODUCT.md`) for the active</span>
+<span id="L298" data-line="298">  identity kinds and their governed role;</span>
+<span id="L299" data-line="299">- requirement surfaces for obligations around identity stability or</span>
+<span id="L300" data-line="300">  uniqueness;</span>
+<span id="L301" data-line="301">- design or ADR surfaces for parsing, serialisation or normalisation</span>
+<span id="L302" data-line="302">  rules; and</span>
+<span id="L303" data-line="303">- a dedicated identity registry surface, such as a project&#x27;s own</span>
+<span id="L304" data-line="304">  `IDENTITY.md`, when the domain has enough complexity to justify one.</span>
+<span id="L305" data-line="305"></span>
+<span id="L306" data-line="306">The important rule is that identity overrides are visible in domain</span>
+<span id="L307" data-line="307">authority, auditable, and recoverable without reverse-engineering regexes</span>
+<span id="L308" data-line="308">from implementation code (P6, P3).</span>
+<span id="L309" data-line="309"></span>
+<span id="L310" data-line="310">## 8. Parsing</span>
+<span id="L311" data-line="311"></span>
+<span id="L312" data-line="312">Regex extraction from prose is not a complete identity model. At most,</span>
+<span id="L313" data-line="313">regex may be a provisional extractor over a surface whose identity law is</span>
+<span id="L314" data-line="314">already defined elsewhere (P3, P1). Therefore:</span>
+<span id="L315" data-line="315"></span>
+<span id="L316" data-line="316">- a parser distinguishes concrete identity kinds from grouping labels;</span>
+<span id="L317" data-line="317">- family markers, display aliases and prose headings are not promoted</span>
+<span id="L318" data-line="318">  into executable or traceable object identities unless the governing</span>
+<span id="L319" data-line="319">  identity law says they are first-class identities of their own kind;</span>
+<span id="L320" data-line="320">  and</span>
+<span id="L321" data-line="321">- acceptance criteria, test cases and similar subordinate identities are</span>
+<span id="L322" data-line="322">  not collapsed into requirement identity merely because their readable</span>
+<span id="L323" data-line="323">  form is derived from a requirement token.</span>
+<span id="L324" data-line="324"></span>
+<span id="L325" data-line="325">If a domain needs family identities, it should publish them explicitly as</span>
+<span id="L326" data-line="326">`requirement_family` identities rather than rely on string-shape</span>
+<span id="L327" data-line="327">accidents (P3).</span>
+<span id="L328" data-line="328"></span>
+<span id="L329" data-line="329">## 9. Release version boundary</span>
+<span id="L330" data-line="330"></span>
+<span id="L331" data-line="331">Release version is not the same thing as object identity (P3). Under the release law</span>
+<span id="L332" data-line="332">([RELEASE §1 and §2](RELEASE.md#2-release-identities), with</span>
+<span id="L333" data-line="333">[SPEC_METHOD §6](SPEC_METHOD.md#6-lineage-and-release)):</span>
+<span id="L334" data-line="334"></span>
+<span id="L335" data-line="335">- an immutable release cut is the only exact operative release</span>
+<span id="L336" data-line="336">  identifier;</span>
+<span id="L337" data-line="337">- the mutable version-line selector only names the highest-ordinal</span>
+<span id="L338" data-line="338">  published immutable cut on its line (FOUNDATIONS §2);</span>
+<span id="L339" data-line="339">- release version is a release-process fact; and</span>
+<span id="L340" data-line="340">- release version is not the live constitutional identity of every</span>
+<span id="L341" data-line="341">  object in the project.</span>
+<span id="L342" data-line="342"></span>
+<span id="L343" data-line="343">So the method distinguishes object identity, release identity,</span>
+<span id="L344" data-line="344">publication or revision coordinates, and mutable discovery selectors.</span>
+<span id="L345" data-line="345">These may relate, but they are not interchangeable (P3, P6).</span>
+<span id="L346" data-line="346"></span>
+<span id="L347" data-line="347">## 10. Minimum questions</span>
+<span id="L348" data-line="348"></span>
+<span id="L349" data-line="349">When defining or auditing an identity surface, ask (P3, P6):</span>
+<span id="L350" data-line="350"></span>
+<span id="L351" data-line="351">1. What authority owns this identity?</span>
+<span id="L352" data-line="352">2. What kind of thing does this identity denote?</span>
+<span id="L353" data-line="353">3. What scope makes it unique?</span>
+<span id="L354" data-line="354">4. Is the identity stable enough for the governed lifecycle?</span>
+<span id="L355" data-line="355">5. Is the readable form only convenience, or is it being over-trusted?</span>
+<span id="L356" data-line="356">6. Can a parser distinguish families, members, aliases and revisions</span>
+<span id="L357" data-line="357">   without ambiguity?</span>
+<span id="L358" data-line="358">7. Is this an engine or runtime identity, a domain semantic identity, or</span>
+<span id="L359" data-line="359">   a release identity?</span>
+<span id="L360" data-line="360"></span>
+<span id="L361" data-line="361">If those questions cannot be answered, the identity surface is</span>
+<span id="L362" data-line="362">under-defined (P3).</span>
+<span id="L363" data-line="363"></span>
+<span id="L364" data-line="364">## 11. Examples</span>
+<span id="L365" data-line="365"></span>
+<span id="L366" data-line="366">### Lawful</span>
+<span id="L367" data-line="367"></span>
+<span id="L368" data-line="368">Lawful (P3):</span>
+<span id="L369" data-line="369"></span>
+<span id="L370" data-line="370">- runtime event identities generated as UUIDs by a consumer-bound runtime</span>
+<span id="L371" data-line="371">  realisation;</span>
+<span id="L372" data-line="372">- requirement identities such as `REQ-F-CAPABILITY-001` when the domain</span>
+<span id="L373" data-line="373">  defines them as concrete `requirement` identities;</span>
+<span id="L374" data-line="374">- family identities such as `REQ-F-CAPABILITY` when the domain defines</span>
+<span id="L375" data-line="375">  them separately as `requirement_family`; and</span>
+<span id="L376" data-line="376">- acceptance-criterion identities such as `REQ-F-CAPABILITY-001-AC-01`</span>
+<span id="L377" data-line="377">  when the domain defines them as a separate `acceptance_criterion`</span>
+<span id="L378" data-line="378">  identity kind.</span>
+<span id="L379" data-line="379"></span>
+<span id="L380" data-line="380">### Unlawful</span>
+<span id="L381" data-line="381"></span>
+<span id="L382" data-line="382">Unlawful (P3):</span>
+<span id="L383" data-line="383"></span>
+<span id="L384" data-line="384">- treating `REQ-F-CAPABILITY-*` or `REQ-F-CAPABILITY` as a concrete</span>
+<span id="L385" data-line="385">  requirement merely because a broad regex matched it;</span>
+<span id="L386" data-line="386">- using release version as the identity of every live source object; and</span>
+<span id="L387" data-line="387">- assuming a readable string is globally unique without its authority</span>
+<span id="L388" data-line="388">  and kind.</span>
+<span id="L389" data-line="389"></span>
+<span id="L390" data-line="390">## 12. Consequence for implementations</span>
+<span id="L391" data-line="391"></span>
+<span id="L392" data-line="392">Implementations should prefer typed identity readers, explicit</span>
+<span id="L393" data-line="393">identity-kind distinctions, and source-of-authority parsing contracts.</span>
+<span id="L394" data-line="394">They should avoid broad regex mining as the real identity model, silent</span>
+<span id="L395" data-line="395">coercion between family identities and concrete identities, and leaking</span>
+<span id="L396" data-line="396">engine identity grammar into domain semantics (P3, P1).</span>
+<span id="L397" data-line="397"></span>
+<span id="L398" data-line="398">If a project currently relies on those patterns, the first lawful repair</span>
+<span id="L399" data-line="399">is to contain the immediate bug. The enduring repair is to publish</span>
+<span id="L400" data-line="400">explicit identity law and move implementations onto it (P3, P0).</span></pre></html>

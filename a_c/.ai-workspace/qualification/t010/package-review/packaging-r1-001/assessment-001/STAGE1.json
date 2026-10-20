@@ -1,0 +1,850 @@
+{
+  "candidate_file_vector_sha256": "22def4fbec18e4ec543d01ddf2ae71a59fc1cf5e2d20c3601b09ede4f84df6fd",
+  "controls": [
+    {
+      "name": "named-candidate-original-and-preparation-pins-match",
+      "observed": {
+        "unique_paths": 659
+      },
+      "passed": true
+    },
+    {
+      "name": "frozen-r1-safe213-member-archive",
+      "observed": {
+        "bytes": 10089542,
+        "members": 213,
+        "sha256": "989c0efbbba90c1d444c6a1c24def4174ef8519bec5f63d9bef021f27dd75e2b"
+      },
+      "passed": true
+    },
+    {
+      "name": "actual-extracted213-file-vector-exact",
+      "observed": {
+        "bytes": 110473751,
+        "files": 213,
+        "vector_sha256": "22def4fbec18e4ec543d01ddf2ae71a59fc1cf5e2d20c3601b09ede4f84df6fd"
+      },
+      "passed": true
+    },
+    {
+      "name": "archive-sidecar-exact",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "name": "extracted-code-is-bound-repair",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "name": "direct-archive:equal-dist",
+      "observed": {
+        "accepted": false,
+        "filesystem_changed": false,
+        "members": null,
+        "reason": "archive output/checksum overlaps the bundle; choose a path outside it"
+      },
+      "passed": true
+    },
+    {
+      "name": "direct-archive:nested-dist",
+      "observed": {
+        "accepted": false,
+        "filesystem_changed": false,
+        "members": null,
+        "reason": "archive output/checksum overlaps the bundle; choose a path outside it"
+      },
+      "passed": true
+    },
+    {
+      "name": "direct-archive:dotdot-dist",
+      "observed": {
+        "accepted": false,
+        "filesystem_changed": false,
+        "members": null,
+        "reason": "archive output/checksum overlaps the bundle; choose a path outside it"
+      },
+      "passed": true
+    },
+    {
+      "name": "direct-archive:symlink-dist-alias",
+      "observed": {
+        "accepted": false,
+        "filesystem_changed": false,
+        "members": null,
+        "reason": "archive output/checksum overlaps the bundle; choose a path outside it"
+      },
+      "passed": true
+    },
+    {
+      "name": "direct-archive:output-equals-bundle",
+      "observed": {
+        "accepted": false,
+        "filesystem_changed": false,
+        "members": null,
+        "reason": "archive output/checksum overlaps the bundle; choose a path outside it"
+      },
+      "passed": true
+    },
+    {
+      "name": "direct-archive:output-is-ancestor",
+      "observed": {
+        "accepted": false,
+        "filesystem_changed": false,
+        "members": null,
+        "reason": "archive output/checksum overlaps the bundle; choose a path outside it"
+      },
+      "passed": true
+    },
+    {
+      "name": "direct-archive:safe-sibling-dist",
+      "observed": {
+        "accepted": true,
+        "filesystem_changed": true,
+        "members": [
+          "a_c-stdo-v3-common-35fb4824-packaging-r1/one.txt",
+          "a_c-stdo-v3-common-35fb4824-packaging-r1/two.txt"
+        ],
+        "reason": null
+      },
+      "passed": true
+    },
+    {
+      "name": "direct-archive:safe-parent-dist",
+      "observed": {
+        "accepted": true,
+        "filesystem_changed": true,
+        "members": [
+          "a_c-stdo-v3-common-35fb4824-packaging-r1/one.txt",
+          "a_c-stdo-v3-common-35fb4824-packaging-r1/two.txt"
+        ],
+        "reason": null
+      },
+      "passed": true
+    },
+    {
+      "name": "direct-archive:protected-archive",
+      "observed": {
+        "accepted": false,
+        "filesystem_changed": false,
+        "members": null,
+        "reason": "archive exists; preserve the previous result"
+      },
+      "passed": true
+    },
+    {
+      "name": "direct-archive:protected-sidecar",
+      "observed": {
+        "accepted": false,
+        "filesystem_changed": false,
+        "members": null,
+        "reason": "archive checksum already exists"
+      },
+      "passed": true
+    },
+    {
+      "name": "direct-archive:protected-dangling-symlink",
+      "observed": {
+        "accepted": false,
+        "filesystem_changed": false,
+        "members": null,
+        "reason": "archive exists; preserve the previous result"
+      },
+      "passed": true
+    },
+    {
+      "name": "exact-original-and-portable-readiness-accepted",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "name": "mutated-readiness-refused:prefix",
+      "observed": "sealed original or portable source-readiness record changed",
+      "passed": true
+    },
+    {
+      "name": "mutated-readiness-refused:version",
+      "observed": "sealed original or portable source-readiness record changed",
+      "passed": true
+    },
+    {
+      "name": "mutated-readiness-refused:gate",
+      "observed": "sealed original or portable source-readiness record changed",
+      "passed": true
+    },
+    {
+      "name": "mutated-readiness-refused:append",
+      "observed": "sealed original or portable source-readiness record changed",
+      "passed": true
+    },
+    {
+      "name": "documented-inputs-are-bundled-only",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "name": "public-build-pre-effect:equal-dist",
+      "observed": {
+        "filesystem_changed": false,
+        "returncode": 2,
+        "stderr": "{\"status\": \"refusal\", \"reason\": \"archive output/checksum overlaps the bundle; choose a path outside it\"}\n"
+      },
+      "passed": true
+    },
+    {
+      "name": "public-build-pre-effect:nested-dist",
+      "observed": {
+        "filesystem_changed": false,
+        "returncode": 2,
+        "stderr": "{\"status\": \"refusal\", \"reason\": \"archive output/checksum overlaps the bundle; choose a path outside it\"}\n"
+      },
+      "passed": true
+    },
+    {
+      "name": "public-build-pre-effect:dotdot-dist",
+      "observed": {
+        "filesystem_changed": false,
+        "returncode": 2,
+        "stderr": "{\"status\": \"refusal\", \"reason\": \"archive output/checksum overlaps the bundle; choose a path outside it\"}\n"
+      },
+      "passed": true
+    },
+    {
+      "name": "public-build-pre-effect:symlink-dist-alias",
+      "observed": {
+        "filesystem_changed": false,
+        "returncode": 2,
+        "stderr": "{\"status\": \"refusal\", \"reason\": \"archive output/checksum overlaps the bundle; choose a path outside it\"}\n"
+      },
+      "passed": true
+    },
+    {
+      "name": "public-build-pre-effect:protected-archive",
+      "observed": {
+        "filesystem_changed": false,
+        "returncode": 2,
+        "stderr": "{\"status\": \"refusal\", \"reason\": \"archive exists; preserve the previous result\"}\n"
+      },
+      "passed": true
+    },
+    {
+      "name": "same-five-raw-artifacts",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "name": "same81-source-and-three-manifests",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "name": "same-public-construction-and-semantic-review-receipts",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "name": "packaging-revision-and-honest-proposal-limits",
+      "observed": null,
+      "passed": true
+    }
+  ],
+  "controls_passed": 31,
+  "documented_command": [
+    "python3",
+    "-B",
+    "package_release.py",
+    "build",
+    "--proposal",
+    ".",
+    "--public-evidence",
+    "evidence/authoring-public.json",
+    "--review",
+    "evidence/reviews/review-001/receipt.json",
+    "--upstream",
+    "/absolute/path/to/the/pinned/graphify/checkout",
+    "--bundle",
+    "/tmp/a_c-common-packaging-r1-rebuilt",
+    "--dist",
+    "/tmp/a_c-common-packaging-r1-rebuilt-dist"
+  ],
+  "extracted": "/Users/jim/tmp/a_c-common-rc1-packaging-review-20261021/assessment-001/extracted/a_c-stdo-v3-common-35fb4824-packaging-r1",
+  "fixed_code_review": "Minimal scoped changes; overlap checks precede effects, filenames captured before archive open, readiness exact byte pins/idempotence, duplicate source fields compared with bound custody expectations. No actionable static issue found; actual rebuild/portable metadata controls pending.",
+  "helper_cases": [
+    {
+      "accepted": false,
+      "after": {
+        "bundle": {
+          "directory": true
+        },
+        "bundle/one.txt": {
+          "bytes": 4,
+          "sha256": "2c8b08da5ce60398e1f19af0e5dccc744df274b826abe585eaba68c525434806"
+        },
+        "bundle/two.txt": {
+          "bytes": 4,
+          "sha256": "27dd8ed44a83ff94d557f9fd0412ed5a8cbca69ea04922d88c01184a07300a5a"
+        }
+      },
+      "before": {
+        "bundle": {
+          "directory": true
+        },
+        "bundle/one.txt": {
+          "bytes": 4,
+          "sha256": "2c8b08da5ce60398e1f19af0e5dccc744df274b826abe585eaba68c525434806"
+        },
+        "bundle/two.txt": {
+          "bytes": 4,
+          "sha256": "27dd8ed44a83ff94d557f9fd0412ed5a8cbca69ea04922d88c01184a07300a5a"
+        }
+      },
+      "case": "equal-dist",
+      "reason": "archive output/checksum overlaps the bundle; choose a path outside it"
+    },
+    {
+      "accepted": false,
+      "after": {
+        "bundle": {
+          "directory": true
+        },
+        "bundle/one.txt": {
+          "bytes": 4,
+          "sha256": "2c8b08da5ce60398e1f19af0e5dccc744df274b826abe585eaba68c525434806"
+        },
+        "bundle/two.txt": {
+          "bytes": 4,
+          "sha256": "27dd8ed44a83ff94d557f9fd0412ed5a8cbca69ea04922d88c01184a07300a5a"
+        }
+      },
+      "before": {
+        "bundle": {
+          "directory": true
+        },
+        "bundle/one.txt": {
+          "bytes": 4,
+          "sha256": "2c8b08da5ce60398e1f19af0e5dccc744df274b826abe585eaba68c525434806"
+        },
+        "bundle/two.txt": {
+          "bytes": 4,
+          "sha256": "27dd8ed44a83ff94d557f9fd0412ed5a8cbca69ea04922d88c01184a07300a5a"
+        }
+      },
+      "case": "nested-dist",
+      "reason": "archive output/checksum overlaps the bundle; choose a path outside it"
+    },
+    {
+      "accepted": false,
+      "after": {
+        "bundle": {
+          "directory": true
+        },
+        "bundle/one.txt": {
+          "bytes": 4,
+          "sha256": "2c8b08da5ce60398e1f19af0e5dccc744df274b826abe585eaba68c525434806"
+        },
+        "bundle/two.txt": {
+          "bytes": 4,
+          "sha256": "27dd8ed44a83ff94d557f9fd0412ed5a8cbca69ea04922d88c01184a07300a5a"
+        }
+      },
+      "before": {
+        "bundle": {
+          "directory": true
+        },
+        "bundle/one.txt": {
+          "bytes": 4,
+          "sha256": "2c8b08da5ce60398e1f19af0e5dccc744df274b826abe585eaba68c525434806"
+        },
+        "bundle/two.txt": {
+          "bytes": 4,
+          "sha256": "27dd8ed44a83ff94d557f9fd0412ed5a8cbca69ea04922d88c01184a07300a5a"
+        }
+      },
+      "case": "dotdot-dist",
+      "reason": "archive output/checksum overlaps the bundle; choose a path outside it"
+    },
+    {
+      "accepted": false,
+      "after": {
+        "alias": {
+          "symlink": "/Users/jim/tmp/a_c-common-rc1-packaging-review-20261021/assessment-001/helper-cases/symlink-dist-alias/bundle"
+        },
+        "bundle": {
+          "directory": true
+        },
+        "bundle/one.txt": {
+          "bytes": 4,
+          "sha256": "2c8b08da5ce60398e1f19af0e5dccc744df274b826abe585eaba68c525434806"
+        },
+        "bundle/two.txt": {
+          "bytes": 4,
+          "sha256": "27dd8ed44a83ff94d557f9fd0412ed5a8cbca69ea04922d88c01184a07300a5a"
+        }
+      },
+      "before": {
+        "alias": {
+          "symlink": "/Users/jim/tmp/a_c-common-rc1-packaging-review-20261021/assessment-001/helper-cases/symlink-dist-alias/bundle"
+        },
+        "bundle": {
+          "directory": true
+        },
+        "bundle/one.txt": {
+          "bytes": 4,
+          "sha256": "2c8b08da5ce60398e1f19af0e5dccc744df274b826abe585eaba68c525434806"
+        },
+        "bundle/two.txt": {
+          "bytes": 4,
+          "sha256": "27dd8ed44a83ff94d557f9fd0412ed5a8cbca69ea04922d88c01184a07300a5a"
+        }
+      },
+      "case": "symlink-dist-alias",
+      "reason": "archive output/checksum overlaps the bundle; choose a path outside it"
+    },
+    {
+      "accepted": false,
+      "after": {
+        "bundle": {
+          "directory": true
+        },
+        "bundle/one.txt": {
+          "bytes": 4,
+          "sha256": "2c8b08da5ce60398e1f19af0e5dccc744df274b826abe585eaba68c525434806"
+        },
+        "bundle/two.txt": {
+          "bytes": 4,
+          "sha256": "27dd8ed44a83ff94d557f9fd0412ed5a8cbca69ea04922d88c01184a07300a5a"
+        }
+      },
+      "before": {
+        "bundle": {
+          "directory": true
+        },
+        "bundle/one.txt": {
+          "bytes": 4,
+          "sha256": "2c8b08da5ce60398e1f19af0e5dccc744df274b826abe585eaba68c525434806"
+        },
+        "bundle/two.txt": {
+          "bytes": 4,
+          "sha256": "27dd8ed44a83ff94d557f9fd0412ed5a8cbca69ea04922d88c01184a07300a5a"
+        }
+      },
+      "case": "output-equals-bundle",
+      "reason": "archive output/checksum overlaps the bundle; choose a path outside it"
+    },
+    {
+      "accepted": false,
+      "after": {
+        "bundle": {
+          "directory": true
+        },
+        "bundle/one.txt": {
+          "bytes": 4,
+          "sha256": "2c8b08da5ce60398e1f19af0e5dccc744df274b826abe585eaba68c525434806"
+        },
+        "bundle/two.txt": {
+          "bytes": 4,
+          "sha256": "27dd8ed44a83ff94d557f9fd0412ed5a8cbca69ea04922d88c01184a07300a5a"
+        }
+      },
+      "before": {
+        "bundle": {
+          "directory": true
+        },
+        "bundle/one.txt": {
+          "bytes": 4,
+          "sha256": "2c8b08da5ce60398e1f19af0e5dccc744df274b826abe585eaba68c525434806"
+        },
+        "bundle/two.txt": {
+          "bytes": 4,
+          "sha256": "27dd8ed44a83ff94d557f9fd0412ed5a8cbca69ea04922d88c01184a07300a5a"
+        }
+      },
+      "case": "output-is-ancestor",
+      "reason": "archive output/checksum overlaps the bundle; choose a path outside it"
+    },
+    {
+      "accepted": true,
+      "after": {
+        "bundle": {
+          "directory": true
+        },
+        "bundle/one.txt": {
+          "bytes": 4,
+          "sha256": "2c8b08da5ce60398e1f19af0e5dccc744df274b826abe585eaba68c525434806"
+        },
+        "bundle/two.txt": {
+          "bytes": 4,
+          "sha256": "27dd8ed44a83ff94d557f9fd0412ed5a8cbca69ea04922d88c01184a07300a5a"
+        },
+        "dist": {
+          "directory": true
+        },
+        "dist/artifact.tar.gz": {
+          "bytes": 158,
+          "sha256": "67fb3dd98e730ff01dc7334f63dd79de95db92f3c949af2a8ef07d25ddd4d087"
+        },
+        "dist/artifact.tar.gz.sha256": {
+          "bytes": 82,
+          "sha256": "4a334fdfda2b92e197f687981384b5ffcae6ada70e63f07576bd768950bd2b9a"
+        }
+      },
+      "before": {
+        "bundle": {
+          "directory": true
+        },
+        "bundle/one.txt": {
+          "bytes": 4,
+          "sha256": "2c8b08da5ce60398e1f19af0e5dccc744df274b826abe585eaba68c525434806"
+        },
+        "bundle/two.txt": {
+          "bytes": 4,
+          "sha256": "27dd8ed44a83ff94d557f9fd0412ed5a8cbca69ea04922d88c01184a07300a5a"
+        }
+      },
+      "case": "safe-sibling-dist",
+      "reason": null
+    },
+    {
+      "accepted": true,
+      "after": {
+        "artifact.tar.gz": {
+          "bytes": 158,
+          "sha256": "67fb3dd98e730ff01dc7334f63dd79de95db92f3c949af2a8ef07d25ddd4d087"
+        },
+        "artifact.tar.gz.sha256": {
+          "bytes": 82,
+          "sha256": "4a334fdfda2b92e197f687981384b5ffcae6ada70e63f07576bd768950bd2b9a"
+        },
+        "bundle": {
+          "directory": true
+        },
+        "bundle/one.txt": {
+          "bytes": 4,
+          "sha256": "2c8b08da5ce60398e1f19af0e5dccc744df274b826abe585eaba68c525434806"
+        },
+        "bundle/two.txt": {
+          "bytes": 4,
+          "sha256": "27dd8ed44a83ff94d557f9fd0412ed5a8cbca69ea04922d88c01184a07300a5a"
+        }
+      },
+      "before": {
+        "bundle": {
+          "directory": true
+        },
+        "bundle/one.txt": {
+          "bytes": 4,
+          "sha256": "2c8b08da5ce60398e1f19af0e5dccc744df274b826abe585eaba68c525434806"
+        },
+        "bundle/two.txt": {
+          "bytes": 4,
+          "sha256": "27dd8ed44a83ff94d557f9fd0412ed5a8cbca69ea04922d88c01184a07300a5a"
+        }
+      },
+      "case": "safe-parent-dist",
+      "reason": null
+    },
+    {
+      "accepted": false,
+      "after": {
+        "bundle": {
+          "directory": true
+        },
+        "bundle/one.txt": {
+          "bytes": 4,
+          "sha256": "2c8b08da5ce60398e1f19af0e5dccc744df274b826abe585eaba68c525434806"
+        },
+        "bundle/two.txt": {
+          "bytes": 4,
+          "sha256": "27dd8ed44a83ff94d557f9fd0412ed5a8cbca69ea04922d88c01184a07300a5a"
+        },
+        "dist": {
+          "directory": true
+        },
+        "dist/artifact.tar.gz": {
+          "bytes": 12,
+          "sha256": "d4426505003219fadfe688e87206c08ca9960e1d8f50a495243e6981f501d474"
+        }
+      },
+      "before": {
+        "bundle": {
+          "directory": true
+        },
+        "bundle/one.txt": {
+          "bytes": 4,
+          "sha256": "2c8b08da5ce60398e1f19af0e5dccc744df274b826abe585eaba68c525434806"
+        },
+        "bundle/two.txt": {
+          "bytes": 4,
+          "sha256": "27dd8ed44a83ff94d557f9fd0412ed5a8cbca69ea04922d88c01184a07300a5a"
+        },
+        "dist": {
+          "directory": true
+        },
+        "dist/artifact.tar.gz": {
+          "bytes": 12,
+          "sha256": "d4426505003219fadfe688e87206c08ca9960e1d8f50a495243e6981f501d474"
+        }
+      },
+      "case": "protected-archive",
+      "reason": "archive exists; preserve the previous result"
+    },
+    {
+      "accepted": false,
+      "after": {
+        "bundle": {
+          "directory": true
+        },
+        "bundle/one.txt": {
+          "bytes": 4,
+          "sha256": "2c8b08da5ce60398e1f19af0e5dccc744df274b826abe585eaba68c525434806"
+        },
+        "bundle/two.txt": {
+          "bytes": 4,
+          "sha256": "27dd8ed44a83ff94d557f9fd0412ed5a8cbca69ea04922d88c01184a07300a5a"
+        },
+        "dist": {
+          "directory": true
+        },
+        "dist/artifact.tar.gz.sha256": {
+          "bytes": 12,
+          "sha256": "b29e2223c8bc080a4c84bf10b96302b842db413a2c8a1e93aabdee533923fdf8"
+        }
+      },
+      "before": {
+        "bundle": {
+          "directory": true
+        },
+        "bundle/one.txt": {
+          "bytes": 4,
+          "sha256": "2c8b08da5ce60398e1f19af0e5dccc744df274b826abe585eaba68c525434806"
+        },
+        "bundle/two.txt": {
+          "bytes": 4,
+          "sha256": "27dd8ed44a83ff94d557f9fd0412ed5a8cbca69ea04922d88c01184a07300a5a"
+        },
+        "dist": {
+          "directory": true
+        },
+        "dist/artifact.tar.gz.sha256": {
+          "bytes": 12,
+          "sha256": "b29e2223c8bc080a4c84bf10b96302b842db413a2c8a1e93aabdee533923fdf8"
+        }
+      },
+      "case": "protected-sidecar",
+      "reason": "archive checksum already exists"
+    },
+    {
+      "accepted": false,
+      "after": {
+        "bundle": {
+          "directory": true
+        },
+        "bundle/one.txt": {
+          "bytes": 4,
+          "sha256": "2c8b08da5ce60398e1f19af0e5dccc744df274b826abe585eaba68c525434806"
+        },
+        "bundle/two.txt": {
+          "bytes": 4,
+          "sha256": "27dd8ed44a83ff94d557f9fd0412ed5a8cbca69ea04922d88c01184a07300a5a"
+        },
+        "dist": {
+          "directory": true
+        },
+        "dist/artifact.tar.gz": {
+          "symlink": "/Users/jim/tmp/a_c-common-rc1-packaging-review-20261021/assessment-001/helper-cases/protected-dangling-symlink/absent-target"
+        }
+      },
+      "before": {
+        "bundle": {
+          "directory": true
+        },
+        "bundle/one.txt": {
+          "bytes": 4,
+          "sha256": "2c8b08da5ce60398e1f19af0e5dccc744df274b826abe585eaba68c525434806"
+        },
+        "bundle/two.txt": {
+          "bytes": 4,
+          "sha256": "27dd8ed44a83ff94d557f9fd0412ed5a8cbca69ea04922d88c01184a07300a5a"
+        },
+        "dist": {
+          "directory": true
+        },
+        "dist/artifact.tar.gz": {
+          "symlink": "/Users/jim/tmp/a_c-common-rc1-packaging-review-20261021/assessment-001/helper-cases/protected-dangling-symlink/absent-target"
+        }
+      },
+      "case": "protected-dangling-symlink",
+      "reason": "archive exists; preserve the previous result"
+    }
+  ],
+  "public_overlap_cases": [
+    {
+      "after": {},
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python3",
+        "-B",
+        "package_release.py",
+        "build",
+        "--proposal",
+        ".",
+        "--public-evidence",
+        "evidence/authoring-public.json",
+        "--review",
+        "evidence/reviews/review-001/receipt.json",
+        "--upstream",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout",
+        "--bundle",
+        "/Users/jim/tmp/a_c-common-rc1-packaging-review-20261021/assessment-001/cli-cases/equal-dist/bundle",
+        "--dist",
+        "/Users/jim/tmp/a_c-common-rc1-packaging-review-20261021/assessment-001/cli-cases/equal-dist/bundle"
+      ],
+      "before": {},
+      "case": "equal-dist",
+      "returncode": 2,
+      "stderr": "{\"status\": \"refusal\", \"reason\": \"archive output/checksum overlaps the bundle; choose a path outside it\"}\n"
+    },
+    {
+      "after": {},
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python3",
+        "-B",
+        "package_release.py",
+        "build",
+        "--proposal",
+        ".",
+        "--public-evidence",
+        "evidence/authoring-public.json",
+        "--review",
+        "evidence/reviews/review-001/receipt.json",
+        "--upstream",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout",
+        "--bundle",
+        "/Users/jim/tmp/a_c-common-rc1-packaging-review-20261021/assessment-001/cli-cases/nested-dist/bundle",
+        "--dist",
+        "/Users/jim/tmp/a_c-common-rc1-packaging-review-20261021/assessment-001/cli-cases/nested-dist/bundle/nested"
+      ],
+      "before": {},
+      "case": "nested-dist",
+      "returncode": 2,
+      "stderr": "{\"status\": \"refusal\", \"reason\": \"archive output/checksum overlaps the bundle; choose a path outside it\"}\n"
+    },
+    {
+      "after": {},
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python3",
+        "-B",
+        "package_release.py",
+        "build",
+        "--proposal",
+        ".",
+        "--public-evidence",
+        "evidence/authoring-public.json",
+        "--review",
+        "evidence/reviews/review-001/receipt.json",
+        "--upstream",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout",
+        "--bundle",
+        "/Users/jim/tmp/a_c-common-rc1-packaging-review-20261021/assessment-001/cli-cases/dotdot-dist/bundle",
+        "--dist",
+        "/Users/jim/tmp/a_c-common-rc1-packaging-review-20261021/assessment-001/cli-cases/dotdot-dist/bundle/staging/.."
+      ],
+      "before": {},
+      "case": "dotdot-dist",
+      "returncode": 2,
+      "stderr": "{\"status\": \"refusal\", \"reason\": \"archive output/checksum overlaps the bundle; choose a path outside it\"}\n"
+    },
+    {
+      "after": {
+        "alias": {
+          "symlink": "/Users/jim/tmp/a_c-common-rc1-packaging-review-20261021/assessment-001/cli-cases/symlink-dist-alias/bundle"
+        }
+      },
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python3",
+        "-B",
+        "package_release.py",
+        "build",
+        "--proposal",
+        ".",
+        "--public-evidence",
+        "evidence/authoring-public.json",
+        "--review",
+        "evidence/reviews/review-001/receipt.json",
+        "--upstream",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout",
+        "--bundle",
+        "/Users/jim/tmp/a_c-common-rc1-packaging-review-20261021/assessment-001/cli-cases/symlink-dist-alias/bundle",
+        "--dist",
+        "/Users/jim/tmp/a_c-common-rc1-packaging-review-20261021/assessment-001/cli-cases/symlink-dist-alias/alias"
+      ],
+      "before": {
+        "alias": {
+          "symlink": "/Users/jim/tmp/a_c-common-rc1-packaging-review-20261021/assessment-001/cli-cases/symlink-dist-alias/bundle"
+        }
+      },
+      "case": "symlink-dist-alias",
+      "returncode": 2,
+      "stderr": "{\"status\": \"refusal\", \"reason\": \"archive output/checksum overlaps the bundle; choose a path outside it\"}\n"
+    },
+    {
+      "after": {
+        "dist": {
+          "directory": true
+        },
+        "dist/a_c-stdo-v3-common-35fb4824-packaging-r1.tar.gz": {
+          "bytes": 21,
+          "sha256": "94778e7763a64e6a6274cb51b1ef920208ee3e3afd3cf50b78a49ffb218ef358"
+        }
+      },
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python3",
+        "-B",
+        "package_release.py",
+        "build",
+        "--proposal",
+        ".",
+        "--public-evidence",
+        "evidence/authoring-public.json",
+        "--review",
+        "evidence/reviews/review-001/receipt.json",
+        "--upstream",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout",
+        "--bundle",
+        "/Users/jim/tmp/a_c-common-rc1-packaging-review-20261021/assessment-001/cli-cases/protected-archive/bundle",
+        "--dist",
+        "/Users/jim/tmp/a_c-common-rc1-packaging-review-20261021/assessment-001/cli-cases/protected-archive/dist"
+      ],
+      "before": {
+        "dist": {
+          "directory": true
+        },
+        "dist/a_c-stdo-v3-common-35fb4824-packaging-r1.tar.gz": {
+          "bytes": 21,
+          "sha256": "94778e7763a64e6a6274cb51b1ef920208ee3e3afd3cf50b78a49ffb218ef358"
+        }
+      },
+      "case": "protected-archive",
+      "returncode": 2,
+      "stderr": "{\"status\": \"refusal\", \"reason\": \"archive exists; preserve the previous result\"}\n"
+    }
+  ],
+  "status": "passed",
+  "substituted_command_base": [
+    "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python3",
+    "-B",
+    "package_release.py",
+    "build",
+    "--proposal",
+    ".",
+    "--public-evidence",
+    "evidence/authoring-public.json",
+    "--review",
+    "evidence/reviews/review-001/receipt.json",
+    "--upstream",
+    "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout",
+    "--bundle",
+    "/tmp/a_c-common-packaging-r1-rebuilt",
+    "--dist",
+    "/tmp/a_c-common-packaging-r1-rebuilt-dist"
+  ]
+}

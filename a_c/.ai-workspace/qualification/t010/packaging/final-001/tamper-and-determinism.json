@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "scope": "Actual sealed bytes; own-copy structural/receipt tamper checks and scratch repack only. No semantic assessment or changes to frozen outputs.",
+  "work": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-common-release-final-tamper-xsh0v03d",
+  "deterministic_scratch_repack": {
+    "file": "repacked-frozen-bytes.tar.gz",
+    "bytes": 10087425,
+    "sha256": "2b33530c20a17dd27033e8b34b1af497de7a4e0f3b8165a22d0821298516e386",
+    "format": "deterministic tar.gz; sorted files, fixed0644 uid/gid/mtime0, blank owner names, gzip mtime0"
+  },
+  "negative_cases": [
+    {
+      "case": "actual_review_wrong_model_binding",
+      "status": "refused",
+      "property": "Actual portable receipt/report gate after outer inventory and receipt-index hashes were regenerated",
+      "reason": "public receipt source/model/raw-artifact bindings differ from the actual candidate"
+    },
+    {
+      "case": "actual_bound_review_report_changed",
+      "status": "refused",
+      "property": "Actual portable receipt/report gate after outer inventory and receipt-index hashes were regenerated",
+      "reason": "readable review report bytes differ from its explicit receipt binding"
+    },
+    {
+      "case": "actual_construction_stale_section_commitment",
+      "status": "refused",
+      "property": "Actual portable receipt/report gate after outer inventory and receipt-index hashes were regenerated",
+      "reason": "public receipt source/model/raw-artifact bindings differ from the actual candidate"
+    },
+    {
+      "case": "actual_bounded_review_receipt_removed",
+      "status": "refused",
+      "property": "Actual portable receipt/report gate after outer inventory and receipt-index hashes were regenerated",
+      "reason": "missing or redirected public JSON receipt"
+    },
+    {
+      "case": "actual_inventory_tamper",
+      "status": "refused",
+      "interface": "extracted Python-S checker CLI",
+      "returncode": 2,
+      "reason": "bundle bytes changed: README.md"
+    },
+    {
+      "case": "actual_reference_occurrence_removed",
+      "status": "refused",
+      "interface": "extracted Python-S codec decode CLI",
+      "returncode": 2,
+      "reason": "dangling graph edge",
+      "removed_node": "urn:a-c:graph:occurrence:0"
+    }
+  ],
+  "actual_archive_sha256_unchanged": "2b33530c20a17dd27033e8b34b1af497de7a4e0f3b8165a22d0821298516e386",
+  "browser_or_server_started": false,
+  "new_model_calls": 0
+}

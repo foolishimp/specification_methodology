@@ -1,0 +1,299 @@
+{
+  "actual_platform_task": "/root/ac_fd_final_code_review",
+  "closed_assessment": {
+    "direct_original_counterexamples_on_repaired_cut": "supported as addressed within the inspected direct relations",
+    "owner_disposition": null,
+    "static_residual_cases": [
+      {
+        "case": "Inherited authenticated applicable P counterexample becomes an exact required constraint only in outer plan, but current-applicable-key filter misses it.",
+        "executed_by_reviewer": false,
+        "expectation": "E10"
+      },
+      {
+        "case": "Completed same-key conflicting-request replay after loss of only the claim marker returns an old applied record for the new request.",
+        "distinct_from": "Uncertain committed-intent recovery, which is separately described as a supported holding/no-repeat relation.",
+        "executed_by_reviewer": false,
+        "expectation": "E11",
+        "minimal_case_repeats_effect": false
+      }
+    ],
+    "technical_implementation_conservation": "falsified",
+    "typed_support_limit_as_returned": "Historical typed-support verification does not establish equality of the old completed outcome to a conflicting new request when the claim marker is absent."
+  },
+  "consumer": "/root",
+  "existing_expectation_basis": {
+    "Stage1": {
+      "bytes": 13295,
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/comments/codex/t008-platform-code-review-001/STAGE1.md",
+      "sha256": "6b87a277bef5e620252459cd996ebb9dd9d871ce490fb960d41f277e57f9fa5a"
+    },
+    "new_source_first_claim": false,
+    "original_Stage2": {
+      "bytes": 8042,
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/comments/codex/t008-platform-code-review-001/STAGE2.md",
+      "sha256": "39d1c74ab79968c17ce1937b897114052b925f180e4d3ff99234efb6d1474187"
+    },
+    "original_findings_subjects": "The original F findings remain falsified against their original frozen subjects; this delta report does not rewrite them.",
+    "original_provenance": {
+      "bytes": 9101,
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/comments/codex/t008-platform-code-review-001/PROVENANCE.json",
+      "sha256": "9fe70b95311c7e6006d4621180d18e1d11a5ccfb5b0ba4dd6f3b5ca11ed74e02"
+    }
+  },
+  "exposure": {
+    "Root_E10_lead": {
+      "message": "One composition lead for your existing E10 survival check, not an asserted verdict or new oracle: inspect whether the repaired required-constraint fold also recognizes an authenticated applicable inherited contributor when its failure becomes an exact required constraint only in the OUTER plan. Possible deciding case: inner conjunction has required obligation r2 covered by S, plus optional exact-P F with coverage[] but no inner required-P constraint, so inner legitimately returns S while retaining that applicable F in failures. Outer same-subject/basis plan adds required r with constraint P, mandatory S covers r, inherits inner (r2/coverage preserved), no gaps/basis conflict. Current fold extends failures from prior but `admitted` filters only current `applicable` keys; prior.constraint_failures is empty because P was not required there. Does outer incorrectly remain S despite its now-required P counterexample? Check directly against HOW nested-survival rule and FOUNDATIONS1068–1118. Reject the lead if a declared qualification/applicability relation excludes it; otherwise report the smallest supported case. Do not patch or execute. Root source remains frozen and integration continues unchanged.",
+      "received_during": "Current delta review, before its closed return",
+      "sender": "/root",
+      "status": "Disclosed composition lead, then source-checked follow-up; not represented as an independently originated counterexample or new source-first review."
+    },
+    "candidate_and_author_claims": "The repaired candidate, current tests, construction report, control map and selected proof were acquired after existing Stage 1 expectations were closed. Author evidence was treated as candidate claims and scoped execution evidence.",
+    "complete_host_context": "unqualified",
+    "earlier_other_independent_reviews_opened": false,
+    "original_GOALS": {
+      "displayed_lines": [
+        1,
+        97
+      ],
+      "goals_path": "specification/GOALS.md",
+      "historical_synopsis_exposure_lines": [
+        18,
+        97
+      ],
+      "limit": "Required bootstrap acquisition exposed T001-T007 synopsis/counts. This was disclosed before Stage 1 closed and not used as current implementation evidence. No exposure reset is claimed.",
+      "sha256": "7f78e1a9834d1fc19fa421655e690c3b500138c66f94ff762337f57629351a03"
+    },
+    "prior_actor_exposure": "unqualified",
+    "provider_and_family_independence": "unqualified"
+  },
+  "limits": {
+    "FDV001_002_actual_qualification": "Separate; not closed by this platform assessment or deterministic fixture tests.",
+    "FDV003_benefit": "Unqualified and separate.",
+    "cross_family_independence_claim": false,
+    "new_semantic_assessment_in_Writer_role": false,
+    "platform_review_is_Product_public_runtime_qualification": false,
+    "public_runtime_producer": false,
+    "static_cases_are_reproduced": false,
+    "whole_calculus_install_acceptance_release": "No claim."
+  },
+  "method_basis": {
+    "builder_manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "builder_release": "stdo://releases/v2.5.1-rc.2/",
+    "custody": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+    "local_twelve_members": "Selected owner subset, not whole method tree; exact source ranges and exposure limits are preserved in STAGE1.md.",
+    "standards_tree": "98de394b352179c25dfa63b0b59a9b6bdd43632d",
+    "work_scoped_RC9_source": "c2cfa9b908d1722ae3f26c32fa4ece691083bdc3"
+  },
+  "next_action": "Close publication and stop. Any subsequent repair or review requires a separate explicit role/task transition.",
+  "ordered_platform_events": [
+    {
+      "event": "Original source-first Stage 1 was closed before candidate body acquisition; original GOALS exposure was disclosed and retained.",
+      "ordinal": 1
+    },
+    {
+      "event": "Root consumed Stage 1, authorized Stage 2 and consumed its three static findings and scoped E01-E13 results.",
+      "ordinal": 2
+    },
+    {
+      "event": "Separate Reviewer-to-Writer grant published the unchanged original Stage 1 and Stage 2 records in code-review-001.",
+      "ordinal": 3
+    },
+    {
+      "event": "Root explicitly transitioned this task from Writer to read-only Reviewer and instructed it to wait during implementation changes.",
+      "ordinal": 4
+    },
+    {
+      "event": "Root supplied the exact closed repaired cut and GO for bounded independent delta review using the existing E01-E13 expectations and original F subjects.",
+      "ordinal": 5
+    },
+    {
+      "event": "During delta review, after current source acquisition had begun, Root supplied the inherited-conjunction composition lead recorded below. The actual report preserves that exposure.",
+      "ordinal": 6
+    },
+    {
+      "event": "This task closed its delta assessment with support for the three direct repairs and two static residual findings; no counterexample was executed.",
+      "ordinal": 7
+    },
+    {
+      "event": "A later Root message requested preservation of completed-replay versus uncertain-intent distinctions and announced a green integration result. No integration-003 content was acquired or assessed.",
+      "ordinal": 8
+    },
+    {
+      "event": "Root consumed the closed assessment and explicitly authorized this publication-only Reviewer-to-Writer transition.",
+      "ordinal": 9
+    }
+  ],
+  "product": "urn:stdo:product-definition:a-c-implementations",
+  "publication_guard_checks": {
+    "after_report_publication": {
+      "all_match": true,
+      "method_members": 12,
+      "observed_at_utc": "2026-10-19T06:36:18.201757Z",
+      "readonly_guards": 9,
+      "snapshots": 6,
+      "sources": 17
+    },
+    "before_publication": {
+      "all_match": true,
+      "method_members": 12,
+      "observed_at_utc": "2026-10-19T06:33:58Z",
+      "readonly_guards": 9,
+      "sources": 17
+    },
+    "current_source_raw_sha256": {
+      ".ai-workspace/tickets/active/T-008-fd-tenant-implementation.md": "2f59468cbecac464589ee99d79f32e4a12f551cd308c8a3d3e9ac52df8d7278f",
+      "build_tenants/graphify/code/ac_support.py": "4d41a2373def237136cefe8b186c196c2e4376137c221ae4675c274abed5ad31",
+      "build_tenants/graphify/code/ac_support_core.py": "5395fd2947157541255168c6a1235136df64e9197d5032b25b31a0f071a4fe74",
+      "build_tenants/graphify/code/ac_support_effects.py": "36f75671b9dbce14e5f06811e180b662deb635b37921695668337466ace9bf25",
+      "build_tenants/graphify/design/fd-method-claude-rc9.json": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1",
+      "build_tenants/graphify/design/fd-support.md": "e3c5e6e83d9be525a0ca44fc4e64c9077e33958337bc29807014715a50592939",
+      "build_tenants/graphify/examples/fd-support/actor_cli.py": "06cd55463fd23e45fbf56fa46de92b9ba49f6650e3dc5686e219544d5457b42c",
+      "build_tenants/graphify/examples/fd-support/prepare_readonly.py": "8bb5f22182af4b08816bbeff208fe43c650803f7f094cae6bb1465b325f2d8f3",
+      "build_tenants/graphify/test_env/test_ac_support_core.py": "6b1ce2819e0e96aad32fb87feccb3aeaee1cd37a85c91aa4e1b693b9a15dd709",
+      "build_tenants/graphify/test_env/test_ac_support_effects.py": "4c96735d16f6dd67d24b89fb5a6b5b7bdc376de13d8c98c14b833ce346c0662e",
+      "build_tenants/graphify/test_env/test_ac_support_interfaces.py": "7722ddcbc48ab7dd48e824ccdbec320f30e80dc3b63c0881564ff7ed97ee3450",
+      "specification/INTENT.md": "09d9740d9f05d67ab2dbf2bac62e717f320fe665bdbc410594852c29fc2630cd",
+      "specification/PRODUCT.md": "9ebc8342affe8c5e0afb08ebe22f3f98f73f7bdc64db00eee17674c47274bef7",
+      "specification/REFERENCE_FRAME_BASIS.md": "5cda45d1f267a3f221703c7fcc42b100c7997d3a98c015b7faf4f46b21222b8a",
+      "specification/requirements/fd-support-tools.md": "e3fcebd7e9fbc60dc36ed4c02ee834a96f14226af134809c938169d4712dfc23",
+      "specification/requirements/fd-support-verification.md": "3746e614a5ddc3f0a551e926998f16d6101cc037c5c43b879b4447b017a8dbdf",
+      "stdo_a_c.json": "b0e013e6f9dabb9d3f31dd02c1a6909e9fc6418925a8d829f3bb1c2adf3dac1d"
+    },
+    "method_raw_sha256": {
+      ".ai-workspace/qualification/t008/live-review-runtime-002/authority/method/ACTIVATION.md": "3bb7594a194950819d6aad65e3938358e8685bbbc2ebf67c0ad720c37bb04487",
+      ".ai-workspace/qualification/t008/live-review-runtime-002/authority/method/ASSURANCE.md": "e33a6e39e1e93d38dbd3ea212d8d9f0d2f44a366a9345fda762d2481c254d0bf",
+      ".ai-workspace/qualification/t008/live-review-runtime-002/authority/method/AXIOMATIC_CALCULUS.md": "56d0c1ad9889ad8d09b1d1249ad4bae1fb1717af22d01bdf4190b2d0bf71500a",
+      ".ai-workspace/qualification/t008/live-review-runtime-002/authority/method/DESIGN_MODULE.md": "9e2642d51d0b024a448fe7910dcb323fb3f3bb2a003ad33c27c39a5dda625220",
+      ".ai-workspace/qualification/t008/live-review-runtime-002/authority/method/EVALUATION.md": "14f8816b1eb9cd146dd58a29bac35ea47a62e4e4b093b20f9892330e44922991",
+      ".ai-workspace/qualification/t008/live-review-runtime-002/authority/method/EXECUTIVE_BASELINE.md": "e50b4ad70451fe84882053bc0dffef6f6c0c806a5dba68ac9933aa79029fb935",
+      ".ai-workspace/qualification/t008/live-review-runtime-002/authority/method/FOUNDATIONS.md": "fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f",
+      ".ai-workspace/qualification/t008/live-review-runtime-002/authority/method/PRODUCT_DEFINITION.md": "96e1f26a4f6b60571851a7bd78f5d8c84d09d393de3ebd3b75b4f43ba9158d8d",
+      ".ai-workspace/qualification/t008/live-review-runtime-002/authority/method/README.md": "8047171e730dc4bce556ce28989baf54f8232ff2552a3763447bfe0228258ede",
+      ".ai-workspace/qualification/t008/live-review-runtime-002/authority/method/REFERENCE_FRAME.md": "d64ee5c05aaefac346116c2e43eabf193dd84123f1d461070ecd378ce5e9b551",
+      ".ai-workspace/qualification/t008/live-review-runtime-002/authority/method/SPEC_METHOD.md": "b4b8cafae7da0885f4177e9114d5effc21637ed5a44deb31c3791be658a77a24",
+      ".ai-workspace/qualification/t008/live-review-runtime-002/authority/method/TICKETS.md": "8d244a16b11f17a9e1a85ecf8d7e1dfb3686ea79a09b885321727d620659c43e"
+    },
+    "readonly_guard_raw_sha256": {
+      "a_c/.ai-workspace/qualification/t008/code-review-repair-001/REPAIR_PROPOSAL.md": "653ec05538d92f71d92d4ad9bb32162fa07d1b874fa9fe17edc2561edaab8bbb",
+      "a_c/.ai-workspace/qualification/t008/design-review-repair-001/publication-001/CLOSED_RETURN.json": "d93b934577fec5fd86a2906ac5aab3a19fd5ce24d982d5002b7ad5ca2ed1af43",
+      "a_c/.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md": "2f59468cbecac464589ee99d79f32e4a12f551cd308c8a3d3e9ac52df8d7278f",
+      "a_c/build_tenants/graphify/design/fd-method-claude-rc9.json": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1",
+      "a_c/build_tenants/graphify/design/fd-support.md": "e3c5e6e83d9be525a0ca44fc4e64c9077e33958337bc29807014715a50592939",
+      "a_c/build_tenants/graphify/examples/fd-support/LIFECYCLE_QUICKSTART.md": "4d03920c625ac77bc7f38794bccf73003b08fd883ca2ad06022cfc4164dd6b84",
+      "a_c/build_tenants/graphify/test_env/fixture_support.py": "39201a5147db14d2acf929e9065b3eb5fd7cca6eeda0218095a6e1f94499c3b6",
+      "a_c/build_tenants/graphify/test_env/support_fixtures/local_actor.py": "9c3c0fd8fe563f96db6cb00d95989fd319a6518b006f0efffcfd3d48caf6838a",
+      "a_c/stdo_a_c.json": "b0e013e6f9dabb9d3f31dd02c1a6909e9fc6418925a8d829f3bb1c2adf3dac1d"
+    }
+  },
+  "publication_started_at_utc": "2026-10-19T06:33:58Z",
+  "purpose": "Publish the already-closed actual platform delta assessment without reopening its review or modifying its substantive findings.",
+  "recorded_at_utc": "2026-10-19T06:36:18.201757Z",
+  "report": {
+    "bytes": 8507,
+    "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/comments/codex/t008-platform-code-review-002/REVIEW.md",
+    "sha256": "867f964f688041c1f5a87c3af303ea0d73fb20a30fd6278215726423b1963351"
+  },
+  "report_authorship": "This platform task authored the assessment and publication. It did not author or repair the implementation under review.",
+  "report_representation": "REVIEW.md copies the complete already-returned delta assessment. Its statements about no writes and stopped describe the completed Reviewer stage, before this separately authorized Writer publication.",
+  "review_operations": {
+    "Git_commands": 0,
+    "candidate_imports": 0,
+    "model_calls": 0,
+    "native_actor_calls": 0,
+    "ordinary_readonly_local_acquisition": true,
+    "passive_AST_schema_and_diff_hash_processing": true,
+    "provider_calls": 0,
+    "source_or_evidence_mutations": 0,
+    "support_runtime_calls": 0,
+    "tests_executed": 0
+  },
+  "review_preservation": {
+    "complete_six_file_diff_recomputed_against_original_hash_before_snapshots": true,
+    "diff": {
+      "bytes": 67725,
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/code-review-repair-001/implementation-001/PATCH.diff",
+      "sha256": "6f7aa7c764fccf3d7793f06139e15d42095d54c20bfde1f1ea4a259e2f85b973"
+    },
+    "full_method_or_full_qualification_claim": false,
+    "unchanged_paths": "Prior scoped E evidence was reused only for byte-preserved paths outside the changed fold, preflight and Writer relations; affected call relationships were inspected in the closed delta review."
+  },
+  "review_wall_clock_timestamps": null,
+  "role_transition": {
+    "authority": "Explicit subsequent /root platform task, after Root consumed and closed the delta assessment.",
+    "excluded": [
+      "New semantic assessment or substantive findings",
+      "Source, candidate, policy, status, historical comments or other evidence mutations",
+      "Git operations",
+      "Tests, candidate imports, runtime, native actor, provider or model calls",
+      "Repairs, qualification, acceptance or source disposition"
+    ],
+    "from": "Reviewer",
+    "operation": "Publish the already-closed REVIEW.md and provenance/manifest/CLOSED_RETURN only.",
+    "territory_absent_before_creation": true,
+    "to": "Writer",
+    "write_territory": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/comments/codex/t008-platform-code-review-002"
+  },
+  "schema": "a_c.T008.platform-code-delta-review-publication-provenance/1",
+  "selected_evidence": {
+    "adverse_symlinks": "No adverse symlink was followed; only manifest target-text metadata was inspected.",
+    "all_historical_reproduction_members_inspected": false,
+    "author_report": {
+      "bytes": 5396,
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/code-review-repair-001/implementation-001/REPORT.md",
+      "sha256": "99fa2326a77f02a2e55ce65be7508330e7dea54c6510395d0d5bfd03452264a1"
+    },
+    "complete_4933_regular_file_population_reverified": false,
+    "control_map": {
+      "bytes": 9144,
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/code-review-repair-001/implementation-001/CONTROL_MAP.json",
+      "sha256": "27a993a2cee9fcb1c6434f69970510173998046f67889a11a6e933cc89936a85"
+    },
+    "implementation_closed_return": {
+      "bytes": 7738,
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/code-review-repair-001/implementation-001/CLOSED_RETURN.json",
+      "sha256": "8a09b5a3397a5dc33ba5729ee60be6dcfb53b279ddd5cc52244c2f7018d33c31"
+    },
+    "inspected_scope": "Changed test bodies, source-located fixture owner, causal concurrency/supervisor wrappers, retained public Writer calls and material-input control records. Selected manifest entries matched.",
+    "integration_003": "Not acquired or reviewed; later Root announcement is not part of this review evidence.",
+    "invariance": {
+      "bytes": 5425,
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/code-review-repair-001/implementation-001/INVARIANCE.json",
+      "sha256": "0f62d91b72762a62707fc02322267d8dd16e641de98ebface0bc44833a097b6f"
+    },
+    "manifest": {
+      "bytes": 1755540,
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/code-review-repair-001/implementation-001/MANIFEST.json",
+      "sha256": "57f62d0f359d59f8e1a3a127067fbe559df9b81bad5cf8a7d94c2495c196d4bf"
+    },
+    "not_reviewer_execution": true,
+    "results": {
+      "bytes": 1875,
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/code-review-repair-001/implementation-001/RESULTS.json",
+      "sha256": "65f44427b2765a95071bd72f420d3764376d1b3cb0c9ac426a8b73e09679b2c2"
+    },
+    "selected_test_execution": {
+      "bytes": 4817,
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/code-review-repair-001/implementation-001/runs/004-final-selected/execution.json",
+      "sha256": "a8e8dee65c99be90ddb9a83408489b9dca7c63137f36541e769162b11ba543c0"
+    },
+    "selected_test_stderr": {
+      "bytes": 6545,
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/code-review-repair-001/implementation-001/runs/004-final-selected/stderr",
+      "sha256": "93d4665a85c9874b52a3e7d2ad2f3b30c455d251ad8763afae401fb3a448e097"
+    },
+    "strict_execution": {
+      "bytes": 3090,
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/code-review-repair-001/implementation-001/runs/005-final-strict/execution.json",
+      "sha256": "28dea8c438ae8449ddbe9619363811cd702782e45afb49c986c40bf8f0d2ba90"
+    },
+    "strict_stdout": {
+      "bytes": 43,
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/code-review-repair-001/implementation-001/runs/005-final-strict/stdout",
+      "sha256": "ab35ee42183d4d6d3ba483825ab037d18a5a15622d03be01d82220b1564851ff"
+    },
+    "supported_author_execution": "38 selected passing tests; six-file normal-import strict pass; deterministic local fixtures only.",
+    "typing_caches": "Not authority; not consumed as a semantic oracle."
+  },
+  "timestamp_limit": "Exact original review closure timestamps were not exposed as platform metadata; event ordering is recorded without invented times.",
+  "work": "T-008"
+}

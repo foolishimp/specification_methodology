@@ -1,0 +1,75 @@
+{
+  "actor": "/root/ac_current_generation_review",
+  "basis": {
+    "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "uri": "stdo://releases/v2.5.1-rc.2/"
+  },
+  "claims": {
+    "actual_upstream_compatibility_tested_here": false,
+    "frozen_studies_reexecuted_or_repinned": false,
+    "full_suite_run_here": false,
+    "prior_three_repairs_supported": true,
+    "product_acceptance": false,
+    "provider_independence": false,
+    "semantic_acceptance": false
+  },
+  "closed_at": "2026-10-20T04:46:50.225367+00:00",
+  "disposition": "no_actionable_defect_within_scope",
+  "evidence_sha256": {
+    "ACTIVATION.json": "78a69e2f0e4259330dee8862f22502980f5cde7f9ea957f821d6623a0d428c9f",
+    "COMMANDS.json": "c4940dc846b2c4bc51ce4e198a535257e96ceea37549123ba5fb500fe514e224",
+    "CONTROL-SCRIPT.py": "69c4a1666a765e3dfc1158c1cefe7848ad96efc11f9de5bc47284c9baa928ec5",
+    "CONTROLS-RESOLUTION.json": "b9c81252497435be7d56f21b24ba871d41279c9b752606a98f8f3224541c578e",
+    "CONTROLS.json": "e6cf9177861fa3b1b260c9aa11d885df425fffdaf28481d4dca7d504d5543cc8",
+    "COPY-IDENTITIES.json": "379c3482f42ef0c20862215a090eb057db1791fd37c1cce4e736e25eaa472ab0",
+    "HARNESS-INTAKE.json": "60485961e01beb1ffcca7185469676c17e1d8009385a693c23c928bf6513006e",
+    "ORACLE.md": "b2899db02712486c18f01f5378890b3af5c4ed79b0dc78d850135e604a5d7483",
+    "REPORT.md": "712c97a09ada9ee743d1f62ddd2cee3e98bfc8eddaea7b9e9db2226343454640",
+    "RESOLUTION-SCRIPT.py": "7ee257e9e46e550a683aeea110bf907546bfdf6400ea07803ec2d5bd5b614392",
+    "SUBJECT.json": "985776775ccdb9c0512731f5c944a79c7abe3c4539e2a5e0dd3549c384a8cef8"
+  },
+  "head": "bfe228511415d346459523cec44e7e8157e2991a",
+  "independent_controls": {
+    "initial_passed": 41,
+    "initial_reviewer_predicate_error": 1,
+    "logical_cases": 42,
+    "resolved_public_path_cases": 1,
+    "supported_unresolved_defects": 0
+  },
+  "profile": "a_c.review.generation-fixes.result/1",
+  "report_sha256": "712c97a09ada9ee743d1f62ddd2cee3e98bfc8eddaea7b9e9db2226343454640",
+  "source_expectations": "ORACLE.md",
+  "status": "CLOSED",
+  "subject": [
+    {
+      "bytes": 79851,
+      "path": "build_tenants/graphify/code/ac_generate.py",
+      "sha256": "fcb946e180ba8a30ecdfdb9e53044cd142d9bd450464c186dfbbe90e9da5ec93"
+    },
+    {
+      "bytes": 22857,
+      "path": "build_tenants/graphify/code/ac_grounding.py",
+      "sha256": "f850e7ceecd945455891e6cc941fc3a86c943ed27bbe74d86b0248169d9cf682"
+    },
+    {
+      "bytes": 45945,
+      "path": "build_tenants/graphify/test_env/test_ac_generate.py",
+      "sha256": "bf928fdb90c1df2cae5356336f0d56bd1c817515ef92c3a815348832d62a197d"
+    },
+    {
+      "bytes": 22579,
+      "path": "build_tenants/graphify/test_env/test_ac_grounding.py",
+      "sha256": "1dbad9039775615e64e456107cf329d0ac44eaa9758e7299d573c7f4f031ef5f"
+    },
+    {
+      "bytes": 13844,
+      "path": "build_tenants/graphify/design/generation.md",
+      "sha256": "c7e596146596ef0929832fff73c04b5cc79bd2c4a5dcdc6f671b8782e7ed16d2"
+    },
+    {
+      "bytes": 8047,
+      "path": "build_tenants/graphify/design/grounding.md",
+      "sha256": "f131507ad95d8d941adaac02193e0612b76d35fbc77f657cbdf0714055964b6c"
+    }
+  ]
+}

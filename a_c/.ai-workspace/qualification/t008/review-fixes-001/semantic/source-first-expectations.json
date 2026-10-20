@@ -1,0 +1,25 @@
+{
+  "status": "source_first_expectation_recorded_before_target_payload_inspection",
+  "sources": {
+    "dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/ACTIVATION.md": "3bb7594a194950819d6aad65e3938358e8685bbbc2ebf67c0ad720c37bb04487",
+    "dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/FOUNDATIONS.md": "fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f"
+  },
+  "expectations": [
+    {
+      "id": "S1",
+      "source": "standards/ACTIVATION.md:476-499",
+      "expected": "Applicability is evaluation of the applies predicate. A missing or ambiguous premise cannot be falsified; it is indeterminate, or out_of_frame where a needed relation is undeclared. Unresolved applicability remains required coverage."
+    },
+    {
+      "id": "S2",
+      "source": "standards/FOUNDATIONS.md:900-919",
+      "expected": "Out_of_frame has ground in an undeclared material relation/capability. Indeterminate has ground in insufficient available admissible evidence. If both grounds coexist, either returned value is lawful when it names that ground; neither is excluded."
+    },
+    {
+      "id": "S3",
+      "source": "standards/FOUNDATIONS.md:862-883 and standards/ACTIVATION.md:943-971",
+      "expected": "A refinement names the mapping question/predicate and maps each value exactly once to its named parent/core value. The given applicability paragraph does not supply an exclusive override choosing out_of_frame over indeterminate whenever grounds coexist."
+    }
+  ],
+  "target_expected_repair": "Remove the exclusive rather-than precedence while retaining missing/ambiguous premise conditions, the undeclared relation ground, and the governing non-falsified unresolved outcome. Author the exact replacement only after inspecting the bounded target record."
+}

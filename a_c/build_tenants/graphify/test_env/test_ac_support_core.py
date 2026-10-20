@@ -17,6 +17,7 @@ import sys
 import tempfile
 import time
 import unittest
+from unittest.mock import patch
 from typing import cast
 
 CODE = Path(__file__).resolve().parents[1] / "code"
@@ -180,6 +181,37 @@ class CoreTests(unittest.TestCase):
     def value(self, response: Object) -> Object:
         self.assertEqual(response["status"], "ok", response.get("refusal"))
         return c.as_object(c.as_object(response["result"])["value"])
+
+    def test_reconciliation_selection_is_optional_and_closed(self) -> None:
+        admission = c.as_object(c.as_object(c.as_object(self.f.policy["grants"])["work"])["admission"])
+        self.f.runtime()  # Existing policy/1 without the new optional field.
+        for selected in ([], ["predecessor-settled"]):
+            admission["required_reconciliation_predicates"] = c._json(selected)
+            self.f.runtime()
+        for invalid_selected in (None, "predecessor-settled", [1], [""], [True]):
+            with self.subTest(selected=invalid_selected):
+                admission["required_reconciliation_predicates"] = c._json(invalid_selected)
+                with self.assertRaises(c.SupportError):
+                    self.f.runtime()
+        admission["required_reconciliation_predicates"] = []
+        admission["reconciliation_predicate_ids"] = []
+        with self.assertRaises(c.SupportError):
+            self.f.runtime()
+
+    def test_preflight_does_not_apply_predecessor_predicate_to_task_subject(self) -> None:
+        predecessor = obj({"id": "sha256:" + "b" * 64, "sha256": "b" * 64})
+        self.f.predicate("predecessor-settled", {"literal": False}, subject=predecessor)
+        admission = c.as_object(c.as_object(c.as_object(self.f.policy["grants"])["work"])["admission"])
+        admission["required_reconciliation_predicates"] = ["predecessor-settled"]
+        runtime = self.f.runtime()
+        response, _ = self.f.context(runtime)
+        context = c.as_object(c.as_object(response["result"])["artifact"])
+        plan = c.build_preflight(runtime, self.f.request("contract.preflight", {
+            "context": context, "grant_id": "work", "executor_id": "registered",
+            "result_key": "task-result", "observations": [],
+        }))
+        self.assertEqual(c.as_object(plan["payload"])["gaps"], [])
+        self.assertNotEqual(self.f.subject, predecessor)
 
     def test_strict_json_lexical_and_duplicate_controls(self) -> None:
         for raw in (b'{"x":1,"x":2}', b'{"x":1.0}', b'{"x":1e0}', b'{"x":NaN}', b'\xff'):
@@ -382,6 +414,45 @@ class CoreTests(unittest.TestCase):
         with self.assertRaises(c.SupportError) as caught: c.prepare_write(self.f.runtime("worker"), self.f.request("work.write", args))
         self.assertEqual(caught.exception.code, "target_conflict")
 
+    def test_writer_authority_is_current_without_obsolete_target_preimage(self) -> None:
+        target = self.f.write("outputs/authority-only.md", b"original")
+        runtime = self.f.runtime("worker")
+        request = self.f.request("work.write", {"grant_id": "work", "target": target, "mode": "append", "record": {"text": "new", "provenance": self.f.law}, "interpretation": None, "observations": []})
+        c.check_writer_authority(runtime, request)
+        (self.f.workspace / "outputs/authority-only.md").write_bytes(b"already published")
+        c.check_writer_authority(runtime, request)
+        with self.assertRaises(c.SupportError) as caught:
+            c.prepare_write(runtime, request)
+        self.assertEqual(caught.exception.code, "target_conflict")
+        (self.f.workspace / "inputs/law.txt").write_bytes(b"changed authority")
+        with self.assertRaises(c.SupportError) as caught:
+            c.check_writer_authority(runtime, request)
+        self.assertEqual(caught.exception.code, "digest_mismatch")
+
+    def test_context_typed_recheck_does_not_mine_opaque_source_content(self) -> None:
+        quoted = obj({"engine": "workspace-regular-file", "root": "workspace", "path": "inputs/unavailable.txt", "object": None, "sha256": "0" * 64, "selector": None})
+        source = self.f.write("inputs/opaque.json", {"supplied_literal": quoted})
+        runtime = self.f.runtime()
+        response, _ = self.f.run(runtime, "context.assemble", {"packet": self.f.packet(), "models": [], "sources": [source], "late_acquisition": [], "envelope": {"capacity_bytes": None, "boundary": "executor-stdin-utf8", "host_context": {"state": "unknown", "bytes": None, "evidence": None}}})
+        context = c.as_object(c.as_object(response["result"])["artifact"])
+        plan = c.build_preflight(runtime, self.f.request("contract.preflight", {"context": context, "grant_id": "work", "executor_id": "registered", "result_key": "opaque", "observations": []}))
+        sources = c.as_list(c.as_object(plan["recheck"])["sources"])
+        self.assertIn(source, sources); self.assertNotIn(quoted, sources)
+        self.assertEqual(c.check_preconditions(runtime, c.as_object(plan["recheck"]))["gaps"], [])
+
+    def test_unselected_fit_and_late_source_keep_their_declared_boundary(self) -> None:
+        source = self.f.write("inputs/host-only.json", {"bound": 0})
+        late = self.f.write("inputs/late.txt", b"late route, not supplied actor bytes")
+        runtime = self.f.runtime()
+        response, _ = self.f.run(runtime, "context.assemble", {"packet": self.f.packet(), "models": [], "sources": [late], "late_acquisition": [late], "envelope": {"capacity_bytes": None, "boundary": "executor-stdin-utf8", "host_context": {"state": "known", "bytes": 0, "evidence": source}}})
+        context = c.as_object(c.as_object(response["result"])["artifact"])
+        plan = c.build_preflight(runtime, self.f.request("contract.preflight", {"context": context, "grant_id": "work", "executor_id": "registered", "result_key": "boundaries", "observations": []}))
+        sources = c.as_list(c.as_object(plan["recheck"])["sources"])
+        self.assertNotIn(source, sources); self.assertNotIn(late, sources)
+        payload = c.as_object(c.load_artifact(runtime, context, "context")["payload"])
+        self.assertEqual(payload["late_acquisition"], [late])
+        self.assertFalse(c.as_object(payload["fit"])["selected"])
+
     def test_projection_keeps_original_ruling_without_task_state(self) -> None:
         carrier = self.f.write("inputs/work.md", b'# Decision\nOwner said pending.\n## Notes\nReview recommends accept.\n# Other\nNo closure.\n')
         runtime = self.f.runtime(); value = self.value(self.f.run(runtime, "work.project", {"carrier": carrier, "selection": ["Decision"]})[0])
@@ -447,7 +518,7 @@ class CoreTests(unittest.TestCase):
         with self.assertRaises(c.SupportError): c.validate_content(bad, "Basis")
 
 
-    def protected_return(self, runtime: c.Runtime, core_value: str, evaluation_id: str = "evaluation", wrong_subject: bool = False, raw_override: bytes | None = None) -> tuple[Object, Object, Object]:
+    def protected_return(self, runtime: c.Runtime, core_value: str, evaluation_id: str = "evaluation", wrong_subject: bool = False, raw_override: bytes | None = None, predicate: Object | None = None) -> tuple[Object, Object, Object]:
         response, _ = self.f.context(runtime); context_ref = c.as_object(c.as_object(response["result"])["artifact"])
         context = c.as_object(c.load_artifact(runtime, context_ref, "context")["payload"]); packet = c.as_object(context["packet"])
         request = self.f.request("dispatch.start", {"preflight": context_ref})
@@ -455,6 +526,8 @@ class CoreTests(unittest.TestCase):
         anchor = obj({"schema": "a_c.fd-support.attempt/1", "preflight": context_ref, "context": context_ref, "request": request, "requester": "executive", "target": "worker", "executor": executor, "invocation": {}, "notification": {"sink_id": "events", "binding": c.as_object(self.f.policy["event_sinks"])["events"]}, "result_key": "return", "retry_of": None, "reconciliation": None})
         attempt_ref = self.f.artifact(runtime, "attempt", anchor, request)
         original = obj({"schema": "a_c.fd-support.closed-return/1", "id": "return", "frame": {"id": "frame", "revision": "1"}, "activation": c.activation_identity(packet), "subject": {"id": "wrong", "sha256": "0" * 64} if wrong_subject else self.f.subject, "basis": self.f.basis, "actor": {"id": "worker", "family": "A", "authorship": "worker"}, "consumer": "executive", "evaluations": [{"id": evaluation_id, "predicate": self.f.law, "domain_outcome": {"retained_original": core_value}, "core_value": core_value, "evidence": [self.f.data], "residuals": [], "invalidators": []}], "not_performed": [], "work_result": None, "residuals": [], "invalidators": []})
+        if predicate is not None:
+            c.as_object(c.as_list(original["evaluations"])[0])["predicate"] = predicate
         output = obj({"schema": "a_c.fd-support.process-output/1", "attempt": attempt_ref, "stream": "stdout", "slot": "final_stdout_object", "bytes_base64": base64.b64encode(c.canonical(original) if raw_override is None else raw_override).decode(), "complete": True, "decoder": executor["stdout_decoder"], "producer": {"principal_id": "worker", "actor": c.as_object(self.f.policy["principals"])["worker"], "executor_id": "registered", "executable": executor["executable"]}, "interval": {"clock": "unix_ns", "started_ns": 10, "ended_ns": 20}})
         output_ref = self.f.artifact(runtime, "raw", output)
         event = {"schema": "a_c.fd-support.attempt-event/1", "attempt": attempt_ref, "cursor": 1, "kind": "output_finalized", "data": {"stdout": output_ref, "stderr": None, "process_end": {"observed": True, "returncode": 0}}, "previous": None, "observed_at_ns": 20}
@@ -463,6 +536,138 @@ class CoreTests(unittest.TestCase):
         returned = c.as_object(c.as_object(captured["result"])["artifact"])
         self.assertTrue(c.as_object(c.as_object(self.value(captured)["producer"]))["authenticated"])
         return returned, original, context_ref
+
+    def required_counterexample(self, variant: str) -> Object:
+        """Isolated fold; controlled protected producer, no operator qualification."""
+        runtime = self.f.runtime()
+        mandatory_value = "indeterminate" if variant == "mandatory-precedence" else "satisfied"
+        passed, first, _ = self.protected_return(runtime, mandatory_value, "mandatory")
+        predicate = self.f.data if variant == "unrelated" else self.f.law
+        failed, second, _ = self.protected_return(runtime, "falsified", "counterexample", variant == "stale", predicate=predicate)
+        assessments: list[JSON] = []
+        for index, (reference, original) in enumerate(((passed, first), (failed, second))):
+            payload = c.as_object(c.load_artifact(runtime, reference, "return")["payload"])
+            evaluation = c.as_object(c.as_list(original["evaluations"])[0])
+            assessments.append(obj({"id": "assessment-" + str(index), "key": {"producer": "worker", "activation": original["activation"], "attempt": payload["attempt"], "evaluation_id": evaluation["id"]}, "predicate": self.f.data if variant == "wrong-predicate" and index else evaluation["predicate"], "subject": self.f.subject, "basis": self.f.basis, "mandatory": index == 0, "coverage": ["R"] if index == 0 or variant == "covered" else [], "applicability": None}))
+        plan = obj({"schema": "a_c.fd-support.conjunction-plan/1", "id": "counterexample-" + variant, "authority_source": self.f.owner, "operator_id": "claude-rc9.conjunction/1", "composite": {"predicate": self.f.law, "subject": self.f.subject, "basis": self.f.basis}, "decision_authority": self.f.owner, "rule": "first_non_satisfied_in_plan_order", "basis_relation": "exact_equal_to_composite", "required_obligations": [{"id": "R", "source": self.f.law, "applicability": None}], "required_constraints": [{"obligation_id": "R", "predicate": self.f.law}], "assessments": assessments, "inherited": []})
+        source = self.f.write("inputs/counterexample-" + variant + ".json", plan)
+        operator = obj({"id": "claude-rc9.conjunction/1", "source": self.f.law, "decision_authority": self.f.owner, "rule": "first_non_satisfied_in_plan_order", "plan_source": source})
+        returns: list[JSON] = [passed, failed]
+        if variant in ("wrong-basis", "cardinality"):
+            payload = copy.deepcopy(c.as_object(c.load_artifact(runtime, failed, "return")["payload"]))
+            original = c.as_object(payload["original"])
+            if variant == "wrong-basis":
+                c.as_object(original["basis"])["observations"] = [{"id": "sha256:" + "0" * 64, "sha256": "0" * 64}]
+                returns = [passed]
+            else:
+                c.as_object(c.as_list(original["evaluations"])[0])["core_value"] = "satisfied"
+            returns.append(self.f.artifact(runtime, "return", payload))
+        with patch.object(c, "_qualified_operator", return_value=operator):
+            return c.conjoin(runtime, {"operator_id": "claude-rc9.conjunction/1", "plan": source, "returns": returns, "current_observations": []})
+
+    def test_required_counterexample_does_not_require_contributor_coverage(self) -> None:
+        for variant in ("empty", "covered"):
+            with self.subTest(variant=variant):
+                value = self.required_counterexample(variant)
+                self.assertEqual(c.as_object(value["judgment"])["core_value"], "falsified")
+                self.assertEqual(len(c.as_list(value["constraint_failures"])), 1)
+                self.assertEqual(value["uncovered"], [])
+
+    def test_required_counterexample_exclusions_and_mandatory_precedence(self) -> None:
+        for variant, expected in (("unrelated", "satisfied"), ("stale", "indeterminate"), ("wrong-basis", "indeterminate"), ("wrong-predicate", "indeterminate"), ("cardinality", "indeterminate"), ("mandatory-precedence", "indeterminate")):
+            with self.subTest(variant=variant):
+                value = self.required_counterexample(variant)
+                self.assertEqual(c.as_object(value["judgment"])["core_value"], expected)
+                if variant != "mandatory-precedence":
+                    self.assertEqual(value["constraint_failures"], [])
+
+    def nested_counterexample(self, variant: str, depth: int = 1) -> Object:
+        """Controlled protected producer and isolated operator gate, not qualification."""
+        runtime = self.f.runtime()
+        passed, first, _ = self.protected_return(runtime, "satisfied", "nested-S")
+        predicate = self.f.data if variant == "unrelated" else self.f.law
+        failed, second, _ = self.protected_return(runtime, "falsified", "nested-F", variant == "wrong-subject", predicate=predicate)
+        rows = [(passed, first), (failed, second)]
+        extra_returns: list[JSON] = []
+        if variant in ("wrong-basis", "cardinality"):
+            payload = copy.deepcopy(c.as_object(c.load_artifact(runtime, failed, "return")["payload"]))
+            original = c.as_object(payload["original"])
+            if variant == "wrong-basis":
+                c.as_object(original["basis"])["observations"] = [{"id": "sha256:" + "0" * 64, "sha256": "0" * 64}]
+                changed = self.f.artifact(runtime, "return", payload)
+                rows[1] = (changed, original)
+            else:
+                c.as_object(c.as_list(original["evaluations"])[0])["core_value"] = "satisfied"
+                extra_returns.append(self.f.artifact(runtime, "return", payload))
+        condition: JSON = None
+        if variant == "excluded":
+            self.f.predicate("exclude-nested", {"literal": False})
+            runtime = self.f.runtime()
+            response, _ = self.f.run(runtime, "checks.evaluate", {"predicate_id": "exclude-nested", "inputs": {}, "subject": self.f.subject, "basis": self.f.basis})
+            condition = obj({"predicate": self.f.law, "evaluation": {"record": response["evidence"], "pointer": "/payload/response_without_evidence/result/value/judgment"}})
+
+        def join(identity: str, entries: list[tuple[Object, Object]], inherited: list[JSON], required: bool, inner: bool = False) -> tuple[Object, Object]:
+            assessments: list[JSON] = []
+            for index, (reference, original) in enumerate(entries):
+                payload = c.as_object(c.load_artifact(runtime, reference, "return")["payload"])
+                evaluation = c.as_object(c.as_list(original["evaluations"])[0])
+                assessments.append(obj({"id": "assessment-" + str(index), "key": {"producer": "worker", "activation": original["activation"], "attempt": payload["attempt"], "evaluation_id": evaluation["id"]}, "predicate": self.f.data if inner and index and variant == "wrong-predicate" else evaluation["predicate"], "subject": self.f.subject, "basis": self.f.basis, "mandatory": index == 0, "coverage": [identity] if index == 0 else [], "applicability": condition if inner and index else None}))
+            if not inner and required and variant == "gap":
+                missing = copy.deepcopy(c.as_object(assessments[0])); missing["id"] = "not-performed"
+                c.as_object(missing["key"])["evaluation_id"] = "not-performed"
+                assessments.append(missing)
+            plan = obj({"schema": "a_c.fd-support.conjunction-plan/1", "id": identity, "authority_source": self.f.owner, "operator_id": "claude-rc9.conjunction/1", "composite": {"predicate": self.f.law, "subject": self.f.subject, "basis": self.f.basis}, "decision_authority": self.f.owner, "rule": "first_non_satisfied_in_plan_order", "basis_relation": "exact_equal_to_composite", "required_obligations": [{"id": identity, "source": self.f.law, "applicability": None}], "required_constraints": [{"obligation_id": identity, "predicate": self.f.law}] if required else [], "assessments": assessments, "inherited": inherited})
+            self.f.counter += 1
+            source = self.f.write("inputs/nested-plan-" + str(self.f.counter) + ".json", plan)
+            operator = obj({"id": "claude-rc9.conjunction/1", "source": self.f.law, "decision_authority": self.f.owner, "rule": "first_non_satisfied_in_plan_order", "plan_source": source})
+            returns: list[JSON] = [reference for reference, _ in entries]
+            if inner:
+                returns.extend(extra_returns)
+            with patch.object(c, "_qualified_operator", return_value=operator):
+                response, _ = self.f.run(runtime, "results.conjoin", {"operator_id": "claude-rc9.conjunction/1", "plan": source, "returns": returns, "current_observations": []})
+            return self.value(response), c.as_object(response["evidence"])
+
+        inner_value, inherited = join("r2", rows, [], variant == "already-required", True)
+        if variant in ("new-P", "excluded", "unrelated"):
+            self.assertEqual(c.as_object(inner_value["judgment"])["core_value"], "satisfied")
+        for level in range(depth - 1):
+            _, inherited = join("middle-" + str(level), [(passed, first)], [inherited], False)
+        outer = [(passed, first)]
+        if variant == "mandatory-precedence":
+            held, held_original, _ = self.protected_return(runtime, "indeterminate", "outer-held")
+            outer = [(held, held_original)]
+        value, _ = join("r", outer, [inherited], True)
+        self.assertEqual(len(c.as_list(value["applicable"])), 1)
+        if variant == "wrong-subject":
+            # Binding rejects this carrier for the current subject. Its raw
+            # original survives; it is not an authenticated applicable F.
+            retained = c.as_object(c.load_artifact(runtime, failed, "return")["payload"])
+            self.assertEqual(retained["original"], second)
+        else:
+            self.assertTrue(value["failures"])
+        return value
+
+    def test_new_outer_required_constraint_revalidates_nested_counterexample(self) -> None:
+        for depth in (1, 2):
+            with self.subTest(depth=depth):
+                value = self.nested_counterexample("new-P", depth)
+                self.assertEqual(c.as_object(value["judgment"])["core_value"], "falsified")
+                self.assertTrue(value["constraint_failures"])
+                self.assertEqual(value["planned_gaps"], []); self.assertEqual(value["uncovered"], [])
+
+    def test_inherited_counterexample_cannot_grant_excluded_or_invalid_results(self) -> None:
+        for variant, expected in (("unrelated", "satisfied"), ("excluded", "satisfied"), ("wrong-subject", "indeterminate"), ("wrong-basis", "indeterminate"), ("wrong-predicate", "indeterminate"), ("cardinality", "indeterminate")):
+            with self.subTest(variant=variant):
+                value = self.nested_counterexample(variant, 2)
+                self.assertEqual(c.as_object(value["judgment"])["core_value"], expected)
+                self.assertEqual(value["constraint_failures"], [])
+
+    def test_inherited_counterexample_preserves_gaps_and_current_mandatory_order(self) -> None:
+        for variant, expected in (("gap", "indeterminate"), ("mandatory-precedence", "indeterminate"), ("already-required", "falsified")):
+            with self.subTest(variant=variant):
+                value = self.nested_counterexample(variant, 2)
+                self.assertEqual(c.as_object(value["judgment"])["core_value"], expected)
+                self.assertTrue(value["constraint_failures"])
 
     def qualified_plan(self, runtime: c.Runtime, returned: list[tuple[Object, Object]], missing: bool = False) -> tuple[Object, c.Runtime]:
         assessments = []
@@ -491,6 +696,82 @@ class CoreTests(unittest.TestCase):
         historical = c.as_object(value["original"]); self.assertEqual(c.as_object(c.as_list(historical["evaluations"])[0])["core_value"], "satisfied")
         self.assertEqual(historical["subject"], original["subject"])
         self.assertTrue(value["gaps"])
+
+    def test_original_judgment_rejects_material_capture_binding_gaps(self) -> None:
+        runtime = self.f.runtime()
+        _, original, _ = self.protected_return(runtime, "falsified")
+        wrong_coordinates = obj({
+            "frame": {"id": "other-frame", "revision": "1"},
+            "activation": {"id": "other-activation", "sha256": "0" * 64},
+            "subject": {"id": "other-subject", "sha256": "0" * 64},
+            "basis": {"method_profile": self.f.basis["method_profile"],
+                      "observations": [{"id": "sha256:" + "0" * 64, "sha256": "0" * 64}]},
+            "actor": {"id": "other-worker", "family": "A", "authorship": "other-worker"},
+            "consumer": "other-consumer",
+        })
+        for coordinate, replacement in wrong_coordinates.items():
+            with self.subTest(coordinate=coordinate):
+                historical = copy.deepcopy(original); historical[coordinate] = replacement
+                returned, _, _ = self.protected_return(runtime, "falsified", raw_override=c.canonical(historical))
+                payload = c.as_object(c.load_artifact(runtime, returned, "return")["payload"])
+                binding_gaps = c.as_list(c.as_object(payload["binding_checks"])["gaps"])
+                self.assertTrue(any(isinstance(gap, dict) and gap.get("binding") == coordinate for gap in binding_gaps))
+                reference = obj({"record": returned, "pointer": "/payload/original/evaluations/0"})
+                with self.assertRaises(c.SupportError) as caught:
+                    c.judgment(runtime, reference)
+                self.assertEqual(caught.exception.code, "basis_missing")
+                self.assertEqual(caught.exception.gaps, binding_gaps)
+                value, gaps = c._condition(runtime, {"predicate": self.f.law, "evaluation": reference}, self.f.subject, self.f.basis)
+                self.assertIsNone(value); self.assertTrue(gaps)
+                candidates, originals, failures = c._conjunction_returns(runtime, [returned])
+                self.assertEqual(candidates, {}); self.assertEqual(failures, [])
+                self.assertEqual(c.as_object(originals[0])["original"], historical)
+                self.assertEqual(payload["original"], historical)
+
+    def test_original_judgment_requires_exact_performed_evaluation_membership(self) -> None:
+        runtime = self.f.runtime()
+        _, original, _ = self.protected_return(runtime, "satisfied", "actual-satisfied")
+        first = c.as_object(c.as_list(original["evaluations"])[0])
+        nested = copy.deepcopy(first)
+        nested.update({"id": "nested-not-performed", "domain_outcome": False, "core_value": "falsified"})
+        domain = obj({"nested": nested, "arbitrary": [None, True, 4, {"a/b~": "unchanged"}]})
+        first["domain_outcome"] = domain
+        second = copy.deepcopy(first)
+        second.update({"id": "actual-falsified", "domain_outcome": [False, {"original": "domain value"}], "core_value": "falsified"})
+        c.as_list(original["evaluations"]).append(second)
+        original["not_performed"] = ["nested-not-performed"]
+        returned, _, _ = self.protected_return(runtime, "satisfied", raw_override=c.canonical(original))
+        for index, expected in enumerate((first, second)):
+            reference = obj({"record": returned, "pointer": "/payload/original/evaluations/" + str(index)})
+            actual = c.judgment(runtime, reference)
+            self.assertEqual(actual["core_value"], expected["core_value"])
+            self.assertEqual(actual["domain_outcome"], expected["domain_outcome"])
+        for suffix in ("0/domain_outcome/nested", "0/domain_outcome", "00", "-1", "2", "0/"):
+            with self.subTest(suffix=suffix):
+                reference = obj({"record": returned, "pointer": "/payload/original/evaluations/" + suffix})
+                with self.assertRaises(c.SupportError) as caught:
+                    c.judgment(runtime, reference)
+                self.assertEqual(caught.exception.code, "basis_missing")
+                value, gaps = c._condition(runtime, {"predicate": self.f.law, "evaluation": reference}, self.f.subject, self.f.basis)
+                self.assertIsNone(value); self.assertTrue(gaps)
+        retained = c.as_object(c.load_artifact(runtime, returned, "return")["payload"])
+        self.assertEqual(retained["original"], original)
+
+    def test_original_judgment_retains_known_provenance_with_unrelated_history_gap(self) -> None:
+        runtime = self.f.runtime(); self.f.store.complete = False
+        returned, original, _ = self.protected_return(runtime, "falsified")
+        payload = c.as_object(c.load_artifact(runtime, returned, "return")["payload"])
+        self.assertTrue(c.as_list(c.as_object(payload["binding_checks"])["gaps"]))
+        reference = obj({"record": returned, "pointer": "/payload/original/evaluations/0"})
+        actual = c.judgment(runtime, reference)
+        self.assertEqual(actual["core_value"], "falsified")
+        self.assertEqual(actual["domain_outcome"], c.as_object(c.as_list(original["evaluations"])[0])["domain_outcome"])
+        value, gaps = c._condition(runtime, {"predicate": self.f.law, "evaluation": reference}, self.f.subject, self.f.basis)
+        self.assertEqual(value, "falsified"); self.assertEqual(gaps, [])
+        candidates, _, failures = c._conjunction_returns(runtime, [returned])
+        self.assertEqual(len(candidates), 1); self.assertEqual(len(failures), 1)
+        missing, missing_gaps = c._condition(runtime, {"predicate": self.f.law, "evaluation": None}, self.f.subject, self.f.basis)
+        self.assertIsNone(missing); self.assertEqual(missing_gaps, ["Missing actual condition judgment"])
 
     def test_pasted_raw_payload_cannot_borrow_attempt_authentication(self) -> None:
         runtime = self.f.runtime(); returned, original, _ = self.protected_return(runtime, "satisfied")

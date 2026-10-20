@@ -1,0 +1,84 @@
+{
+  "schema": "a_c.fd-repair-review/1",
+  "status": "CLOSED",
+  "role": "Reviewer",
+  "utc": "2026-10-20T04:51:21.280508+00:00",
+  "predicate": "The four named joined repair properties and their direct inspected consumers preserve the conserved source contracts under the declared local operating model.",
+  "core_value": "satisfied",
+  "domain_outcome": "bounded_no_supported_residual_defect_found",
+  "findings": [],
+  "subject": {
+    "git_head": "bfe228511415d346459523cec44e7e8157e2991a",
+    "files": {
+      "build_tenants/graphify/code/ac_support_core.py": {
+        "sha256": "e321ed11f66db88a9d965331bf4069d8a4532e6b31df38d6adf8539b4cf25d6b",
+        "bytes": 218115,
+        "mode": 420
+      },
+      "build_tenants/graphify/code/ac_support_effects.py": {
+        "sha256": "6c296de1bc888b8c18cb1cc211fd2eae7f242ac5ebb5df33c436596bed37bae9",
+        "bytes": 88754,
+        "mode": 420
+      },
+      "build_tenants/graphify/test_env/test_ac_support_core.py": {
+        "sha256": "482531eb8dfa43f44bc5ca4f3d34d5a72c93db4f64bfca6362d943d4dd56174a",
+        "bytes": 113644,
+        "mode": 420
+      },
+      "build_tenants/graphify/test_env/test_ac_support_effects.py": {
+        "sha256": "b2e0399f4bbfa09549acbffb13d8a2745b74b4f6c5fd9c1bcfbb386292c661e4",
+        "bytes": 95597,
+        "mode": 420
+      },
+      "build_tenants/graphify/test_env/test_ac_support_interfaces.py": {
+        "sha256": "01fcb236694e800dab49e58a530749c3c68ec7d5d13392eee9bc47d7f0e5bcd4",
+        "bytes": 81017,
+        "mode": 420
+      }
+    }
+  },
+  "source_expectations": "EXPECTATIONS.md closed before changed candidate exposure; BASIS.json binds exact source oracle.",
+  "checks": {
+    "targeted_ordinary_public_controls": {
+      "tests": 17,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "elapsed_seconds": 43.711255
+    },
+    "all_source_copy_and_oracle_drift_empty": true,
+    "checkout_pyc_exact_unchanged": true,
+    "held_pipe_live_descendant_witnesses": 4,
+    "public_proof_files": 3213
+  },
+  "not_performed": [
+    "full suite",
+    "real native/model/provider F_P actor qualification",
+    "qualified public conjunction or new semantic judgment qualification",
+    "accepted-result benefit",
+    "Product acceptance/release"
+  ],
+  "independence_limits": [
+    "Reviewer did not author repairs; prior original implementation review exposure retained.",
+    "Original nested-pointer lead was Root-derived; no provider-family or historical-context independence certification.",
+    "Author tests reused as inspected harness evidence only; expectations derive from conserved exact deciding owners."
+  ],
+  "write_scope": [
+    "NEW .ai-workspace/qualification/t008/review-fixes-001/reviews/fd/**",
+    "NEW OS temp prefix /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-review-fd-fixes-gmjngkq0/**"
+  ],
+  "records": [
+    "BASIS.json",
+    "EXPECTATIONS.md",
+    "COPY.json",
+    "RUNNER.py",
+    "TARGETED.json",
+    "targeted.stdout",
+    "targeted.stderr",
+    "CONSERVATION.json",
+    "PUBLIC-PROOF-MANIFEST.json",
+    "REPORT.md"
+  ],
+  "acceptance_or_release": false,
+  "stop_after_result": true
+}

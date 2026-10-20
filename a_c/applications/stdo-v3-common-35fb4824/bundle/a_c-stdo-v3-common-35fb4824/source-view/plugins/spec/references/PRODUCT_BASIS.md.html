@@ -1,0 +1,74 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>plugins/spec/references/PRODUCT_BASIS.md</title><style>body{font:14px system-ui;margin:24px;background:#101720;color:#dfeaf4}a{color:#87c7ff}pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5;counter-reset:line}span{display:block}span:before{content:attr(data-line);display:inline-block;width:4em;color:#7392aa;user-select:none}span:target{background:#36481d}</style><h1>plugins/spec/references/PRODUCT_BASIS.md</h1><p>Exact frozen source · SHA256 d4d1528af1af32e6951cc42e83ce8c55f0b95cfd3594e85a85493ef871ea1979</p><pre><span id="L1" data-line="1"># Product Basis Selection</span>
+<span id="L2" data-line="2"></span>
+<span id="L3" data-line="3">Use this read-only procedure before every STDO workflow skill. It selects and</span>
+<span id="L4" data-line="4">verifies one Product basis; it grants no mutation, execution, review,</span>
+<span id="L5" data-line="5">disposition, installation, or continuation authority.</span>
+<span id="L6" data-line="6"></span>
+<span id="L7" data-line="7">## Procedure</span>
+<span id="L8" data-line="8"></span>
+<span id="L9" data-line="9">1. State the requested Product scope from the exact request and Product-owned</span>
+<span id="L10" data-line="10">   identities or claims. If the request does not distinguish the Product, keep</span>
+<span id="L11" data-line="11">   the scope unresolved.</span>
+<span id="L12" data-line="12">2. Discover candidate `stdo_&lt;label&gt;.json` definitions within the authorized</span>
+<span id="L13" data-line="13">   workspace search boundary. A filename, current directory, nearest file, or</span>
+<span id="L14" data-line="14">   directory nesting is discovery evidence only and cannot select a Product or</span>
+<span id="L15" data-line="15">   imply composition.</span>
+<span id="L16" data-line="16">3. Determine applicability from each definition&#x27;s Product-definition identity</span>
+<span id="L17" data-line="17">   and its Product-owned `what`, `how`, `ticketing`, bounded-context, and</span>
+<span id="L18" data-line="18">   explicit composition bindings. A path is selecting evidence only when the</span>
+<span id="L19" data-line="19">   definition itself binds it to the requested Product scope.</span>
+<span id="L20" data-line="20">4. Require exactly one applicable definition. For zero applicable definitions,</span>
+<span id="L21" data-line="21">   return the unresolved scope. For multiple applicable definitions, return</span>
+<span id="L22" data-line="22">   every remaining definition identity and path and request Product-scope</span>
+<span id="L23" data-line="23">   disambiguation. Do not choose by proximity, familiarity, recency, or label.</span>
+<span id="L24" data-line="24">5. Verify the selected definition read-only:</span>
+<span id="L25" data-line="25"></span>
+<span id="L26" data-line="26">   ```sh</span>
+<span id="L27" data-line="27">   stdo status --definition &lt;selected-definition&gt; --verify</span>
+<span id="L28" data-line="28">   ```</span>
+<span id="L29" data-line="29"></span>
+<span id="L30" data-line="30">   Require the reported definition path and identity, immutable basis URI, and</span>
+<span id="L31" data-line="31">   manifest SHA-256 to match the selected definition, with `installed: true`,</span>
+<span id="L32" data-line="32">   `valid: true`, and no failures. Do not sync, adopt, install, fall back to</span>
+<span id="L33" data-line="33">   mutable source, or select a nearby Product during this procedure.</span>
+<span id="L34" data-line="34">6. Return the requested Product scope, definition identity and path, immutable</span>
+<span id="L35" data-line="35">   basis URI or cut, manifest SHA-256, and verification result. Only then may</span>
+<span id="L36" data-line="36">   the calling skill continue under its own effect and authority boundary.</span>
+<span id="L37" data-line="37"></span>
+<span id="L38" data-line="38">Zero definitions, multiple applicable definitions, failed verification, or any</span>
+<span id="L39" data-line="39">identity, path, basis, manifest, installation, or validity mismatch stops the</span>
+<span id="L40" data-line="40">calling skill before effects. Report the exact candidates or mismatch and the</span>
+<span id="L41" data-line="41">required re-entry; do not repair it implicitly.</span>
+<span id="L42" data-line="42"></span>
+<span id="L43" data-line="43">## Read A Member From That Basis</span>
+<span id="L44" data-line="44"></span>
+<span id="L45" data-line="45">After the selected basis has verified, resolve each required member through</span>
+<span id="L46" data-line="46">that same immutable basis. A route consists of the member&#x27;s package-relative</span>
+<span id="L47" data-line="47">path and, where needed, a heading anchor within it. For example:</span>
+<span id="L48" data-line="48"></span>
+<span id="L49" data-line="49">```sh</span>
+<span id="L50" data-line="50">STDO_BASIS_URI=&#x27;stdo://releases/&lt;selected-immutable-cut&gt;/&#x27;</span>
+<span id="L51" data-line="51">stdo resolve &quot;${STDO_BASIS_URI}manifest.json&quot;</span>
+<span id="L52" data-line="52">stdo resolve &quot;${STDO_BASIS_URI}standards/ACTIVATION.md&quot;</span>
+<span id="L53" data-line="53">```</span>
+<span id="L54" data-line="54"></span>
+<span id="L55" data-line="55">Use the basis URI returned by the verified Product Definition. Read the</span>
+<span id="L56" data-line="56">manifest whose digest equals that definition&#x27;s `manifest_sha256`. Require</span>
+<span id="L57" data-line="57">`ACTIVATION.md` in its standards inventory and require the resolved file&#x27;s</span>
+<span id="L58" data-line="58">SHA-256 to equal that member&#x27;s declared digest. Apply the same check to every</span>
+<span id="L59" data-line="59">other selected member. The resolver&#x27;s returned URI must equal the requested</span>
+<span id="L60" data-line="60">URI, and its path must be in that verified installation. A path alone proves</span>
+<span id="L61" data-line="61">neither membership nor content identity.</span>
+<span id="L62" data-line="62"></span>
+<span id="L63" data-line="63">Resolve the member without its fragment, then locate the exact anchor in</span>
+<span id="L64" data-line="64">those verified bytes; for example, `#7-closed-result-and-reuse` selects</span>
+<span id="L65" data-line="65">ACTIVATION&#x27;s reuse owner. A missing member, anchor, manifest mismatch or</span>
+<span id="L66" data-line="66">content mismatch leaves the route unresolved. Acquire no replacement from a</span>
+<span id="L67" data-line="67">checkout, moving selector, later cut or neighbouring Product. A frame is a</span>
+<span id="L68" data-line="68">member too: verify its own bytes and the local sources and section digests</span>
+<span id="L69" data-line="69">listed in `standards/frames/FRAME_INPUTS.json` before treating it as current.</span>
+<span id="L70" data-line="70">This identity check does not establish semantic fidelity or task sufficiency.</span>
+<span id="L71" data-line="71"></span>
+<span id="L72" data-line="72">Return the exact basis URI and manifest digest with each acquired member,</span>
+<span id="L73" data-line="73">its member digest, selected anchor and any unresolved dependency. The</span>
+<span id="L74" data-line="74">calling skill retains its own authority and effect boundary.</span></pre></html>

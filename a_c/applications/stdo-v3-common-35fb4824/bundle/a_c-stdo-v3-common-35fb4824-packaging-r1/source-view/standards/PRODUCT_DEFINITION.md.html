@@ -1,0 +1,1062 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>standards/PRODUCT_DEFINITION.md</title><style>body{font:14px system-ui;margin:24px;background:#101720;color:#dfeaf4}a{color:#87c7ff}pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5;counter-reset:line}span{display:block}span:before{content:attr(data-line);display:inline-block;width:4em;color:#7392aa;user-select:none}span:target{background:#36481d}</style><h1>standards/PRODUCT_DEFINITION.md</h1><p>Exact frozen source · SHA256 95afb85e4cf8f248a6f430be34ef288add61445dc43d9c8121239409b9fac231</p><pre><span id="L1" data-line="1"># PRODUCT_DEFINITION</span>
+<span id="L2" data-line="2"></span>
+<span id="L3" data-line="3">Tier 2. Owns how one project binds to this method: the product definition</span>
+<span id="L4" data-line="4">overlay and its independence from layout, the relations a definition</span>
+<span id="L5" data-line="5">carries, what a constitutional set must make recoverable, the installed</span>
+<span id="L6" data-line="6">release basis and the toolchain manager that realises it, bounded-context</span>
+<span id="L7" data-line="7">semantic resolution, local constitutional binding, the project&#x27;s collective</span>
+<span id="L8" data-line="8">reference-frame basis, the WHAT, HOW and work-carrier bindings, recursive</span>
+<span id="L9" data-line="9">discovery with explicit composition, the semantic-resolution conformance</span>
+<span id="L10" data-line="10">cases, the one constitutional surface and version boundary</span>
+<span id="L11" data-line="11">(STDO-SURFACE-001), and the bootstrap of a project. Consumes</span>
+<span id="L12" data-line="12">[FOUNDATIONS](FOUNDATIONS.md) (object, authority and its kinds, basis,</span>
+<span id="L13" data-line="13">residual, imports between members, results),</span>
+<span id="L14" data-line="14">[REFERENCE_FRAME](REFERENCE_FRAME.md) (frame set, frame-set declaration,</span>
+<span id="L15" data-line="15">activation packet), [ACTIVATION](ACTIVATION.md) (the step) and</span>
+<span id="L16" data-line="16">[EVALUATION](EVALUATION.md) (claims, separation, conformance); adds no</span>
+<span id="L17" data-line="17">definition to tier 1. The generic WHAT and HOW law is</span>
+<span id="L18" data-line="18">[SPEC_METHOD §2](SPEC_METHOD.md#2-the-chain); the recursive product</span>
+<span id="L19" data-line="19">taxonomy is</span>
+<span id="L20" data-line="20">[FOUNDATIONS §2 Product lineage objects](FOUNDATIONS.md#product-lineage-objects),</span>
+<span id="L21" data-line="21">which SPEC_METHOD §6 applies; the relation</span>
+<span id="L22" data-line="22">between a WHAT and the build tenants that realise it is</span>
+<span id="L23" data-line="23">[SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding); release identities, cohorts and selectors are the</span>
+<span id="L24" data-line="24">release law (the [RELEASE](RELEASE.md) member); assurance and testing law is</span>
+<span id="L25" data-line="25">[ASSURANCE](ASSURANCE.md). The schemas, templates, filenames, manifest</span>
+<span id="L26" data-line="26">fields and commands named here are this Product&#x27;s own realisation shapes,</span>
+<span id="L27" data-line="27">accepted as interoperability boundaries under §11; they are not profile</span>
+<span id="L28" data-line="28">terms. Three bounded contexts are</span>
+<span id="L29" data-line="29">owned here: product-definition-routing (§1 to §4, §9, §12),</span>
+<span id="L30" data-line="30">semantic-resolution (§5, §6, §10) and build-tenancy (§8). Every clause</span>
+<span id="L31" data-line="31">names the principle that requires it (P0 to P6, FOUNDATIONS §3); the</span>
+<span id="L32" data-line="32">member&#x27;s family table (F12) closes §1.</span>
+<span id="L33" data-line="33"></span>
+<span id="L34" data-line="34">## 1. Overlay and layout independence</span>
+<span id="L35" data-line="35"></span>
+<span id="L36" data-line="36">This member owns the product-definition-routing bounded context,</span>
+<span id="L37" data-line="37">`urn:stdo:bounded-context:product-definition-routing`, under the selected</span>
+<span id="L38" data-line="38">complete STDO basis, and defines that context&#x27;s overlay, definition,</span>
+<span id="L39" data-line="39">discovery, locator and composition concepts. The JSON schema named below</span>
+<span id="L40" data-line="40">realises the accepted interoperability shape of the overlay and is not a</span>
+<span id="L41" data-line="41">second semantic owner (P6).</span>
+<span id="L42" data-line="42"></span>
+<span id="L43" data-line="43">Every product defined under this method publishes one JSON definition for</span>
+<span id="L44" data-line="44">each distinct current product WHAT. Its conventional filename is</span>
+<span id="L45" data-line="45">`stdo_&lt;label&gt;.json`; `stdo_default.json` is the default for a source</span>
+<span id="L46" data-line="46">project with one product definition. A directory may hold more than one</span>
+<span id="L47" data-line="47">definition when it hosts more than one distinct product WHAT, and only</span>
+<span id="L48" data-line="48">then. Several build tenants realising the same WHAT are entries in one definition and</span>
+<span id="L49" data-line="49">never add definition files (P3).</span>
+<span id="L50" data-line="50"></span>
+<span id="L51" data-line="51">The suffix `&lt;label&gt;` is the Definition Label: a stable lowercase local</span>
+<span id="L52" data-line="52">discovery label of ASCII letters, digits, hyphens or underscores, unique</span>
+<span id="L53" data-line="53">only among the definitions in the same directory. It is not Product</span>
+<span id="L54" data-line="54">identity. The `product.definition_id` URI inside the definition is the</span>
+<span id="L55" data-line="55">Product-Definition Identity: the stable identity of the mutable</span>
+<span id="L56" data-line="56">product-definition line, unique within the discovered workspace definition</span>
+<span id="L57" data-line="57">set. It identifies one continuing WHAT definition, not one immutable</span>
+<span id="L58" data-line="58">released Product (P3).</span>
+<span id="L59" data-line="59"></span>
+<span id="L60" data-line="60">The definition identity may stay stable while that source line authors</span>
+<span id="L61" data-line="61">successive Product releases. Every immutable Product or release produced</span>
+<span id="L62" data-line="62">from the line keeps its own Product and release identity. A fork, a</span>
+<span id="L63" data-line="63">replacement or an independently governed WHAT definition receives another</span>
+<span id="L64" data-line="64">`product.definition_id`; changing a released Product does not repurpose</span>
+<span id="L65" data-line="65">the definition identity as release identity (P3; SPEC_METHOD §6).</span>
+<span id="L66" data-line="66"></span>
+<span id="L67" data-line="67">Product-definition, immutable Product, bounded-context and build-tenant</span>
+<span id="L68" data-line="68">identity URIs are identity carriers, not self-authorising strings. They</span>
+<span id="L69" data-line="69">stay subject to the identity law (the [IDENTITY](IDENTITY.md) member) and to the owning</span>
+<span id="L70" data-line="70">Product, release or domain authority. A URI locator, filename, path or</span>
+<span id="L71" data-line="71">display label cannot mint or widen identity authority (P6, P3).</span>
+<span id="L72" data-line="72"></span>
+<span id="L73" data-line="73">The directory containing a definition is its definition root. Relative URI</span>
+<span id="L74" data-line="74">references resolve against the definition file&#x27;s retrieval URI. The</span>
+<span id="L75" data-line="75">`product.source_project` reference identifies the source-project root and</span>
+<span id="L76" data-line="76">may resolve to the definition root or elsewhere. File proximity creates no</span>
+<span id="L77" data-line="77">authority (P6).</span>
+<span id="L78" data-line="78"></span>
+<span id="L79" data-line="79">The normative schema is `schemas/product-definition.schema.json`; the</span>
+<span id="L80" data-line="80">single fill-in form is `templates/PRODUCT_DEFINITION_TEMPLATE.json`. This</span>
+<span id="L81" data-line="81">concrete JSON shape is an accepted interoperability boundary under</span>
+<span id="L82" data-line="82">STDO-SURFACE-001 (§11). It standardises only identity, location, relation</span>
+<span id="L83" data-line="83">and discovery fields and absorbs no meaning owned by a referenced</span>
+<span id="L84" data-line="84">constitutional, Product, requirement, design, ticket or commentary surface</span>
+<span id="L85" data-line="85">(P6, P2).</span>
+<span id="L86" data-line="86"></span>
+<span id="L87" data-line="87">### Foundation to law: binding a project to the method</span>
+<span id="L88" data-line="88"></span>
+<span id="L89" data-line="89">This family (F12 in the index of</span>
+<span id="L90" data-line="90">[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law))</span>
+<span id="L91" data-line="91">decides how one project binds to the method. Its instance premises, which</span>
+<span id="L92" data-line="92">the commitments do not supply, are named in the rows as follows: own</span>
+<span id="L93" data-line="93">authorities, a project has its own product WHAT under its own authorities</span>
+<span id="L94" data-line="94">and adopts the method without becoming part of it; chosen layout, the</span>
+<span id="L95" data-line="95">project&#x27;s governing documents, realisations and work carriers already</span>
+<span id="L96" data-line="96">live where the project placed them; shared workspace, several projects,</span>
+<span id="L97" data-line="97">product definitions, tenants and actors share one workspace or machine;</span>
+<span id="L98" data-line="98">recurring terms, one term occurs in several bounded contexts with</span>
+<span id="L99" data-line="99">different meanings; released method, the method is published as</span>
+<span id="L100" data-line="100">immutable released versions that a project selects, installs and later</span>
+<span id="L101" data-line="101">replaces. The index also assigns to this family the rule of</span>
+<span id="L102" data-line="102">[FOUNDATIONS §2 Imports between members](FOUNDATIONS.md#imports-between-members);</span>
+<span id="L103" data-line="103">the table traces that rule in its sixth row, whose rule column names that</span>
+<span id="L104" data-line="104">section, and owns none of it. Each commitment&#x27;s standing is written as the</span>
+<span id="L105" data-line="105">table of commitments in FOUNDATIONS §3 states it.</span>
+<span id="L106" data-line="106"></span>
+<span id="L107" data-line="107">| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |</span>
+<span id="L108" data-line="108">|---|---|---|---|---|</span>
+<span id="L109" data-line="109">| P6 (independent); P3 (independent); P2 (independent); P1 (independent); instance: own authorities, chosen layout | By P6 each surface keeps its own authority, and by P2 binding adds only what the outcome needs, so a project binds to the method through one definition for each distinct product WHAT, which locates the governing surfaces and records their relations without holding their content; adoption therefore needs no restructuring, and by P3 content repeated in the definition would be a second record of one fact, a rival authority. | [§1](#1-overlay-and-layout-independence); [§2](#2-required-definition-relations) | the JSON overlay, the filename convention and Definition Label, the schema and template, and the relation fields of §2: interoperability choices of this member, accepted under [§11](#11-one-constitutional-surface-and-version-boundary) | 1, 9 |</span>
+<span id="L110" data-line="110">| P3 (independent); P6 (independent); P5 (derived from P0 and P6, with P0&#x27;s open-world premise); P1 (independent); instance: own authorities, shared workspace | By P3 each identity binds its own exact basis, and by P1 a locator, filename, path or nesting carries no meaning, so each definition line, Product, release, tenant and project keeps its own identity, and location mints no identity, authority, inheritance or composition. By P5 an ambiguous selection is no selection, so discovery selects exactly one applicable definition for a scope or fails closed, and by P6 composition is explicit and verifies the identity it expects. | [§1](#1-overlay-and-layout-independence), the identity paragraphs; [§9](#9-recursive-discovery-and-explicit-composition) | the composition entry fields and the checks of a conforming discovered set: domain choices of this member | 1, 2 |</span>
+<span id="L111" data-line="111">| P2 (independent); P1 (independent); P3 (independent); P6 (independent); instance: own authorities | By P2 the selected documents exist to let actors interpret the project, so together they make recoverable what those actors need, whatever their number. By P1 and P6 an entry point or a design ontology is a representation without Product authority, so a derived entry point neither narrows nor replaces the complete selected set, and a design ontology supplies no missing Product meaning. | [§3](#3-constitutional-set-sufficiency) | the five dimensions, axioms, ontology, epistemology, taxonomy and semantics: a domain choice of this member | 1, 6 |</span>
+<span id="L112" data-line="112">| P3 (independent); P6 (independent); P5 (derived from P0 and P6, with P0&#x27;s open-world premise); P4b (derived from P0 and P2, with P0&#x27;s premise that step-produced facts are not re-acquirable); P2 (independent); P1 (independent); instance: released method, shared workspace | By P3 a project&#x27;s law binds one exact basis, so one complete immutable release governs it, selected by exact identity and verified before use, and no mutable selector, cache, registry entry, alias or local copy replaces that selection. By P6 a change takes effect only through its owner&#x27;s acceptance, so a change of release or a consumer update takes effect only on acceptance of the exact plan presented; by P5 and P4b a state that cannot be verified fails closed, with prior state kept or recovered. | [§4](#4-shared-installed-release-basis-and-toolchain-manager); [Explicit complete consumer update](#explicit-complete-consumer-update); [§12](#12-bootstrap), the authority split | the toolchain manager, its shared store, its commands and their boundaries, the canonical hashing rule, the marker-bounded bootstrap block and the discovery prune list: interoperability choices of this member under §11 | 1, 8, 9 |</span>
+<span id="L113" data-line="113">| P1 (independent); P3 (independent); P6 (independent); P5 (derived from P0 and P6, with P0&#x27;s open-world premise); P4b (derived from P0 and P2, with P0&#x27;s premise that step-produced facts are not re-acquirable); instance: recurring terms | By P1 spelling, location and proximity carry no meaning, and by P3 a term resolves under one context and basis, so a material term occurrence admits exactly one concept under an explicit bounded context, and by P5 zero or several candidates fail closed. By P6 meaning crosses contexts only by an explicit owner-authorised relation, so a local disambiguation names its owner, scope and candidates. | [§5](#5-bounded-context-semantic-resolution); [§6](#6-local-constitutional-binding); [§10](#10-semantic-resolution-conformance-cases) | the semantic address, the resolution order, the relation kinds other than import, the carrier coordinates and the minimum conformance cases: domain choices of this member; each local axiom, override and disambiguation: the authority its entry names | 2, 6 |</span>
+<span id="L114" data-line="114">| P1 (independent); P3 (independent); P6 (independent); P5 (derived from P0 and P6, with P0&#x27;s open-world premise); instance: shared workspace | By P1 and P3 a concept means what its owner defines on its basis, so a member that uses it outside the owning section refers to that owner, defines nothing again, loses nothing, and by P6 gains no authority over it. By P5 a missing binding leaves the use undecided, so an activation binds each member&#x27;s coordinates, re-establishes applicability after a change, and reports a missing source meaning, adoption or authority binding before relying on the concept. | [FOUNDATIONS §2 Imports between members](FOUNDATIONS.md#imports-between-members); its use between a project&#x27;s bounded contexts: [§5](#5-bounded-context-semantic-resolution), Semantic Import | the contents of an import declaration and the two forms of an import: choices of FOUNDATIONS §2 | 2, 6, 9 |</span>
+<span id="L115" data-line="115">| P0 (recovered); P6 (independent); P3 (independent); P2 (independent); P1 (independent); instance: own authorities | By P0 actors are finite and engage the Product only through what they acquire, and by P6 that engagement needs an admitted basis, so they engage through a frame basis the Product&#x27;s authority admits. By P6 availability grants nothing, so profile availability, Product adoption and activation for one actor and subject are distinct relations, and by P3 frames, actors and lineage identities stay distinct; the definition locates the shared basis and records no activation, agent or temporary configuration. | [§7](#7-collective-reference-frame-basis) | who adopts an available profile or a project configuration, its frame set and every grant: the adopting Product&#x27;s authority, which is the one adopter every profile refers to; the basis template: a starter of this member, not authority | 1, 7, 9 |</span>
+<span id="L116" data-line="116">| P3 (independent); P2 (independent); P6 (independent); P1 (independent); instance: own authorities, chosen layout | By P6 each surface keeps its own authority, and by P3 each realisation is a separate subject, so the definition locates the constitutional WHAT, each independent realisation of it and each work carrier, and each keeps its own authority: one registry identifies the tenants, goals own the work wave, tickets own ticket state and comments stay commentary. | [§8](#8-what-how-and-work-carriers) | the `what`, `how` and `ticketing` fields and the registry companion as a projection: choices of this member; each tenant&#x27;s binding of the WHAT: that tenant&#x27;s design, under [SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding) | 1, 4, 9 |</span>
+<span id="L117" data-line="117">| P6 (independent); P3 (independent); P4b (derived from P0 and P2, with P0&#x27;s premise that step-produced facts are not re-acquirable); P1 (independent); P5 (derived from P0 and P6, with P0&#x27;s open-world premise); P2 (independent); instance: released method | By P6 and P3 one law has one owner on one released basis, so the method has one authority surface, each law has one owning member, and the members govern only together, as one released version. By P4b a derived surface depends on its sources, so it preserves the owning clauses&#x27; conditions, carries their digests and is stale when one changes; by P1 a matching digest establishes identity, not fidelity. | [§11](#11-one-constitutional-surface-and-version-boundary) | the generic staleness law, which the digest binding refines for the carriers of a cut or installation: [ACTIVATION §2 Staleness of derived surfaces](ACTIVATION.md#staleness-of-derived-surfaces); which concrete forms the method accepts as interoperability boundaries: this member (§1, §4); any widening of Product scope to an executable tool, runtime or realisation: separate explicit human authorisation; a policy of this member: the members govern only together, as one released version | 1, 6, 9 |</span>
+<span id="L118" data-line="118">| P2 (independent); P3 (independent); P6 (independent); instance: chosen layout, released method | By P3 a project binds one exact release, and by P6 a local copy of the method would be a rival authority, so a project begins by copying the definition template from its selected release and binding its existing surfaces, and creates no competing local method root; by P2 its first requirement surface may come from any legitimate constitutional input. | [§12](#12-bootstrap) | the default scaffold, the folder shape and the order of the fourteen steps: template defaults of this member, not path law | 1 |</span>
+<span id="L119" data-line="119"></span>
+<span id="L120" data-line="120">The standing of these consequences is stated in</span>
+<span id="L121" data-line="121">[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law).</span>
+<span id="L122" data-line="122">The table accounts for §1 to §12 and for FOUNDATIONS §2 Imports between</span>
+<span id="L123" data-line="123">members; the grounds of `out_of_frame` and `invalid_basis` stated there</span>
+<span id="L124" data-line="124">are traced by family F3 at</span>
+<span id="L125" data-line="125">[FOUNDATIONS §4 Results](FOUNDATIONS.md#results).</span>
+<span id="L126" data-line="126"></span>
+<span id="L127" data-line="127">Consumers of these rows, where an actor enters them (FOUNDATIONS §3</span>
+<span id="L128" data-line="128">Foundation to law, Consumers), one list per row, each consumer linked to</span>
+<span id="L129" data-line="129">its own locus:</span>
+<span id="L130" data-line="130"></span>
+<span id="L131" data-line="131">- Row 1, the definition overlay and its relations: [SPEC_METHOD §1 Process constitution](SPEC_METHOD.md#process-constitution), where the definition binds the actual authority locations of the chain&#x27;s surfaces, and [§10 Design records](SPEC_METHOD.md#10-design-records), whose ADR convention records the tenant identity and locations the definition binds; [ODD §6](ODD.md#6-product-boundary), where the target project owns the surfaces the definition locates, and [§10](ODD.md#10-what-an-odd-product-is), where the definition binds the actual locations of an ODD product&#x27;s topology; [TICKETS §1 Goals](TICKETS.md#goals), whose default file the definition binds, and [§2 Default layout](TICKETS.md#default-layout), where a conforming definition binds the ticket, comment and sprint roles to existing carriers without restructuring the project; [§12](#12-bootstrap), step 3, which copies the template to the definition root.</span>
+<span id="L132" data-line="132">- Row 2, identity, discovery and composition: [§4](#4-shared-installed-release-basis-and-toolchain-manager), whose fleet discovery fails closed on ambiguous discovery and infers no composition or inheritance from directory nesting; [§7](#7-collective-reference-frame-basis), whose Product-role map records each composition edge with its roles, authority, contracts, lifecycle and invalidation; [§12](#12-bootstrap), steps 4 and 13 and its discovery paragraph; otherwise no separate consumer applies, because discovery and composition are checked by the tooling that resolves a definition under §9, and no section of another member names §9 or the identity paragraphs of §1.</span>
+<span id="L133" data-line="133">- Row 3, constitutional-set sufficiency: [§12](#12-bootstrap), step 5, which confirms that the bound set defines the five dimensions, and [§9](#9-recursive-discovery-and-explicit-composition), whose conformance checks include constitutional sufficiency; otherwise no separate consumer applies: the design profile derives its Ontology from the constitutional WHAT under its own rule and names this section nowhere, and the standing of an entry point is decided here.</span>
+<span id="L134" data-line="134">- Row 4, the installed release basis and consumer update: [RELEASE §4](RELEASE.md#4-selector-and-consumer-adoption), where a consumer&#x27;s operative basis is the installed release basis and adoption uses the Adoption Plan, its hashing and the manager&#x27;s commands defined here; [ODD §4](ODD.md#4-method-library-classes), where a definition addresses the installed distribution by exact release URI and manifest digest and a project-local copy is not the default; [SPEC_METHOD §6 Shared method adoption and propagation (STDO-UP-012)](SPEC_METHOD.md#shared-method-adoption-and-propagation-stdo-up-012), where a consumer selects one complete released version rather than mixing cuts; [TICKETS §2 Default layout](TICKETS.md#default-layout), which resolves POSTING_GUIDE and TICKETS from the exact installed basis; [§3](#3-constitutional-set-sufficiency), where the STDO basis identifies one complete immutable cut and its manifest; [§9](#9-recursive-discovery-and-explicit-composition), whose fail-closed discovery restates this section; [§12](#12-bootstrap), steps 1, 2 and 14.</span>
+<span id="L135" data-line="135">- Row 5, bounded-context semantic resolution: [TICKETS §5 Bounded-context term binding](TICKETS.md#bounded-context-term-binding), where ticket and work-instruction terms resolve under this law; [EXECUTIVE_BASELINE §11](EXECUTIVE_BASELINE.md#11-derived-generic-specialist-frame-set), where the family labels do not become equal to same-spelled Product, authority or runtime concepts; [EVALUATION §6](EVALUATION.md#6-conformance-of-realisations), which keeps semantic equivalence of realisations apart from the equivalence of concepts across bounded contexts; [WORLD_MODEL §2](WORLD_MODEL.md#2-role-and-imports) and [Builder Project specialisation](WORLD_MODEL.md#builder-project-specialisation), whose import and specialisation carry the coordinates this section requires; [SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding), Development of several tenants, where a project&#x27;s mechanics for several tenants are bound as local axioms under §6; [GLOSSARY §1](GLOSSARY.md#1-index-contract), where resolution follows this section and the index supplies no fallback; [§8](#8-what-how-and-work-carriers), whose concepts owned in other members enter the build-tenancy context by an explicit owner relation; [§9](#9-recursive-discovery-and-explicit-composition), whose conforming set resolves every material cross-context seam through an explicit relation; [§12](#12-bootstrap), step 7.</span>
+<span id="L136" data-line="136">- Row 6, imports between members and bounded contexts: [PROFILES §1](PROFILES.md#1-the-boundary), whose import rule has a profile import each concept it uses under that rule; [REFERENCE_FRAME §1 Imports into this context](REFERENCE_FRAME.md#imports-into-this-context), whose declaration states the direction, loss and target context the rule requires; [WORLD_MODEL §2](WORLD_MODEL.md#2-role-and-imports), whose import of the lineage concepts is a Semantic Import under §5; [GLOSSARY §2](GLOSSARY.md#2-locator-law), where a concept defined outside every declared context has its member as source context and a context holds it only by its own import; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminators 3, 5, 9 and 46.</span>
+<span id="L137" data-line="137">- Row 7, the collective reference-frame basis: [EXECUTIVE_BASELINE §1](EXECUTIVE_BASELINE.md#1-canonical-compression), [§2](EXECUTIVE_BASELINE.md#2-status-and-authority-boundary), [§5 Baseline-adoption projection](EXECUTIVE_BASELINE.md#baseline-adoption-projection), [§6 Product-chain basis](EXECUTIVE_BASELINE.md#product-chain-basis), [§12 step 1](EXECUTIVE_BASELINE.md#1-existing-authority-selects-the-basis), [§16 Existing authority selects the configuration](EXECUTIVE_BASELINE.md#existing-authority-selects-the-configuration) and [§19 Project-basis additions](EXECUTIVE_BASELINE.md#project-basis-additions), where inclusion in a cut makes the profile available, only Product authority adopts it and the Product-owned basis records the adoption and the Product-role map, and the [EXECUTIVE_BASELINE family table](EXECUTIVE_BASELINE.md#foundation-to-law), whose row for status and bindings applies that distinction; [DESIGN_MODULE §12 Adoption](DESIGN_MODULE.md#adoption) and the [DESIGN_MODULE family table](DESIGN_MODULE.md#foundation-to-law), whose row for adoption imports F12; [TRAVERSAL_OCCURRENCE Authority and adoption](TRAVERSAL_OCCURRENCE.md#authority-and-adoption); [UX §1 Authority](UX.md#authority); [ASSURANCE §7 The set](ASSURANCE.md#the-set), where the governing frame configuration selects testing frames; [ODD §10](ODD.md#10-what-an-odd-product-is), where the `reference_frame_bases` bindings carry the evaluation-frame meaning and a runtime Frame enters the collective frame set only by an explicit declaration, and the [ODD family table](ODD.md#foundation-to-law), whose row for the ownership split imports F12 for that; [§9](#9-recursive-discovery-and-explicit-composition), where every governed scope has a resolvable applicable basis; [§12](#12-bootstrap), step 8.</span>
+<span id="L138" data-line="138">- Row 8, WHAT, HOW and work carriers: [SPEC_METHOD §1 Process constitution](SPEC_METHOD.md#process-constitution), where the conventional surface names are bound here, and [§11](SPEC_METHOD.md#11-build-tenant-binding), whose build tenant is named in this context and located by the tenant registry; [TICKETS §4 Multi-build-tenant independence](TICKETS.md#multi-build-tenant-independence), which consumes the build-tenancy context and identifies a tenant by its registry entry; [TICKETS §1 Goals](TICKETS.md#goals), [Sprints](TICKETS.md#sprints) and [Comments](TICKETS.md#comments), [§2 Bindings and projections](TICKETS.md#bindings-and-projections) and [Carrier substitution](TICKETS.md#carrier-substitution), [§4 Lanes](TICKETS.md#lanes) and [§5 Carrier selection](TICKETS.md#carrier-selection), which take their carriers from the `ticketing` bindings; [POSTING_GUIDE §3](POSTING_GUIDE.md#3-location), where posts live at the comments binding; [§12](#12-bootstrap), steps 11 and 12.</span>
+<span id="L139" data-line="139">- Row 9, one constitutional surface and the version boundary: [GLOSSARY §2](GLOSSARY.md#2-locator-law), Index watch, where locator drift makes a surface that relies on the index stale under the staleness binding; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminators 19 and 46; [§1](#1-overlay-and-layout-independence), whose schema and template are accepted interoperability boundaries under this section.</span>
+<span id="L140" data-line="140">- Row 10, bootstrap: [SPEC_METHOD §4 Procedures](SPEC_METHOD.md#procedures), where bootstrapping a project resolves the applicable definition, verifies its basis and loads the bootstrap entrypoint this section declares.</span>
+<span id="L141" data-line="141"></span>
+<span id="L142" data-line="142">Each consumer applies the rule and decides nothing the owning section does</span>
+<span id="L143" data-line="143">not (P2, P6).</span>
+<span id="L144" data-line="144"></span>
+<span id="L145" data-line="145">## 2. Required definition relations</span>
+<span id="L146" data-line="146"></span>
+<span id="L147" data-line="147">Each definition contains (P3, P6):</span>
+<span id="L148" data-line="148"></span>
+<span id="L149" data-line="149">- `product`: the stable product-definition identity, display name,</span>
+<span id="L150" data-line="150">  source-project locator and an explicit bounded-context declaration or</span>
+<span id="L151" data-line="151">  `null`;</span>
+<span id="L152" data-line="152">- `constitution.stdo`: the STDO source repository, the mutable</span>
+<span id="L153" data-line="153">  version-line discovery selector, and the exact installed release basis</span>
+<span id="L154" data-line="154">  with its deterministic manifest digest;</span>
+<span id="L155" data-line="155">- `constitution.additional_authorities`: every non-STDO constitutional</span>
+<span id="L156" data-line="156">  set;</span>
+<span id="L157" data-line="157">- `constitution.entrypoints`: basis-qualified useful reading routes;</span>
+<span id="L158" data-line="158">- `constitution.agent_bootstrap`: the constitutional entrypoint and the</span>
+<span id="L159" data-line="159">  marker-managed agent-instruction targets;</span>
+<span id="L160" data-line="160">- `local_constitution`: local axioms, overrides and disambiguations with</span>
+<span id="L161" data-line="161">  their owning authority, target, basis and scope, including</span>
+<span id="L162" data-line="162">  context-qualified term resolution where applicable;</span>
+<span id="L163" data-line="163">- `reference_frame_bases`: one or more accepted collective</span>
+<span id="L164" data-line="164">  reference-frame basis declarations with their admitting authorities and</span>
+<span id="L165" data-line="165">  governed scopes;</span>
+<span id="L166" data-line="166">- `what`: the current Intent, Product and specification bindings;</span>
+<span id="L167" data-line="167">- `how`: any shared realisation surfaces and one or more independent</span>
+<span id="L168" data-line="168">  build tenants;</span>
+<span id="L169" data-line="169">- `ticketing`: the Goals, ticket, comment and optional sprint carrier</span>
+<span id="L170" data-line="170">  bindings;</span>
+<span id="L171" data-line="171">- `composition`: explicit relations to other product definitions; and</span>
+<span id="L172" data-line="172">- `$schema` and `kind`: the schema locator and the</span>
+<span id="L173" data-line="173">  `stdo.product-definition` discriminator.</span>
+<span id="L174" data-line="174"></span>
+<span id="L175" data-line="175">The overlay owns this locator and relation map; the referenced documents</span>
+<span id="L176" data-line="176">own their content. Repeating source truth inside the JSON creates a rival</span>
+<span id="L177" data-line="177">authority and is non-conformant (P6).</span>
+<span id="L178" data-line="178"></span>
+<span id="L179" data-line="179">`product.bounded_context` identifies the enclosing bounded context of the</span>
+<span id="L180" data-line="180">definition&#x27;s own product WHAT, or is `null` when no separate enclosing</span>
+<span id="L181" data-line="181">context is claimed. It is not an exhaustive registry and does not flatten</span>
+<span id="L182" data-line="182">subordinate, peer, composed, tenant, user or runtime contexts into one</span>
+<span id="L183" data-line="183">namespace. Those contexts stay defined by their owning authorities, and</span>
+<span id="L184" data-line="184">every local disambiguation names the exact context in which its resolution</span>
+<span id="L185" data-line="185">applies (P1, P3).</span>
+<span id="L186" data-line="186"></span>
+<span id="L187" data-line="187">## 3. Constitutional-set sufficiency</span>
+<span id="L188" data-line="188"></span>
+<span id="L189" data-line="189">A Constitutional Set is the complete set of governing documents selected</span>
+<span id="L190" data-line="190">for a product, not a prescribed number of files. Collectively the selected</span>
+<span id="L191" data-line="191">set makes five things recoverable for the governed scope (P2, P1):</span>
+<span id="L192" data-line="192"></span>
+<span id="L193" data-line="193">- axioms: irreducible starting truths, invariants and refusal conditions;</span>
+<span id="L194" data-line="194">- ontology: the kinds of things treated as real and their material</span>
+<span id="L195" data-line="195">  identities, relations, boundaries and lifecycle;</span>
+<span id="L196" data-line="196">- epistemology: how claims become knowable or acceptable, including</span>
+<span id="L197" data-line="197">  admissible evidence, observation, uncertainty, falsification and</span>
+<span id="L198" data-line="198">  decision authority;</span>
+<span id="L199" data-line="199">- taxonomy: the classifications and kind distinctions that prevent</span>
+<span id="L200" data-line="200">  category collapse; and</span>
+<span id="L201" data-line="201">- semantics: the governed meaning of terms, relations, states, operations</span>
+<span id="L202" data-line="202">  and outcomes.</span>
+<span id="L203" data-line="203"></span>
+<span id="L204" data-line="204">These are sufficiency dimensions of the complete set, not filename classes,</span>
+<span id="L205" data-line="205">required folders or a one-document-per-dimension partition. One document</span>
+<span id="L206" data-line="206">may cover several dimensions and one dimension may be distributed across</span>
+<span id="L207" data-line="207">several owning documents (P2).</span>
+<span id="L208" data-line="208"></span>
+<span id="L209" data-line="209">`constitution.stdo.basis` locates the complete selected STDO constitutional</span>
+<span id="L210" data-line="210">set; `constitution.additional_authorities` locates every additional</span>
+<span id="L211" data-line="211">constitutional set or source. The STDO basis identifies one complete</span>
+<span id="L212" data-line="212">immutable RC cut and its exact installed-release manifest, never a</span>
+<span id="L213" data-line="213">hand-selected subset. Each `constitution.entrypoints[]` member names the</span>
+<span id="L214" data-line="214">basis against which its URI resolves. Entry points are derived navigation</span>
+<span id="L215" data-line="215">and can neither narrow nor replace a complete selected constitution (P3,</span>
+<span id="L216" data-line="216">P6).</span>
+<span id="L217" data-line="217"></span>
+<span id="L218" data-line="218">This rule promotes no concrete design ontology into constitutional WHAT.</span>
+<span id="L219" data-line="219">Product-level ontology that fixes Product meaning belongs in, or is cited</span>
+<span id="L220" data-line="220">by, the bound WHAT. An accepted design ontology of a realisation boundary</span>
+<span id="L221" data-line="221">(the design profile&#x27;s) stays semantic-design authority for that boundary,</span>
+<span id="L222" data-line="222">derives from constitutional WHAT and the applicable domain methods, and</span>
+<span id="L223" data-line="223">cannot invent missing Product meaning (P6, P2).</span>
+<span id="L224" data-line="224"></span>
+<span id="L225" data-line="225">## 4. Shared installed release basis and toolchain manager</span>
+<span id="L226" data-line="226"></span>
+<span id="L227" data-line="227">Within the product-definition-routing context an Installed Release Basis</span>
+<span id="L228" data-line="228">is the pair (P3):</span>
+<span id="L229" data-line="229"></span>
+<span id="L230" data-line="230">```text</span>
+<span id="L231" data-line="231">(immutable stdo://releases/&lt;cut&gt;/ URI, installed-manifest SHA-256)</span>
+<span id="L232" data-line="232">```</span>
+<span id="L233" data-line="233"></span>
+<span id="L234" data-line="234">The URI identifies one immutable annotated RC cut. The digest identifies</span>
+<span id="L235" data-line="235">the deterministic installed-release manifest, which binds the cut&#x27;s tag</span>
+<span id="L236" data-line="236">object, commit, repository tree, standards subtree, exact standards</span>
+<span id="L237" data-line="237">inventory, member bytes and admitted auxiliary payloads. The manifest shape</span>
+<span id="L238" data-line="238">is owned by `schemas/installed-release-manifest.schema.json`. The manifest</span>
+<span id="L239" data-line="239">is transport and integrity evidence, not a replacement constitution (P6).</span>
+<span id="L240" data-line="240"></span>
+<span id="L241" data-line="241">An Adoption Plan is the read-only, deterministic acceptance object that</span>
+<span id="L242" data-line="242">binds one current Product Definition&#x27;s identity and bytes to its current</span>
+<span id="L243" data-line="243">basis and to one resolved immutable target&#x27;s cut, annotated tag object,</span>
+<span id="L244" data-line="244">commit, tree and installed-manifest digest. Its SHA-256 is the</span>
+<span id="L245" data-line="245">operator-presentable acceptance token. Possession of the token alone grants</span>
+<span id="L246" data-line="246">no authority; a mismatch proves that the presented subject is no longer the</span>
+<span id="L247" data-line="247">subject being mutated (P6, P3). A Fleet Adoption Plan binds an authorised</span>
+<span id="L248" data-line="248">fleet root and the complete ordered set of per-definition plan digests</span>
+<span id="L249" data-line="249">under the same law.</span>
+<span id="L250" data-line="250"></span>
+<span id="L251" data-line="251">Plan hashing covers the acceptance object only: local installation status</span>
+<span id="L252" data-line="252">and machine-local install paths are excluded. The canonical bytes are UTF-8</span>
+<span id="L253" data-line="253">JSON with recursively sorted object keys, two-space indentation, LF line</span>
+<span id="L254" data-line="254">endings and one final LF. Fleet order is deterministic discovery-path</span>
+<span id="L255" data-line="255">order. These rules make a presented digest independently reproducible</span>
+<span id="L256" data-line="256">rather than an opaque session token (P3, P6).</span>
+<span id="L257" data-line="257"></span>
+<span id="L258" data-line="258">The STDO Toolchain Manager is the bounded executable realisation that (P2,</span>
+<span id="L259" data-line="259">P3):</span>
+<span id="L260" data-line="260"></span>
+<span id="L261" data-line="261">- installs each immutable cut once in a shared, versioned release store;</span>
+<span id="L262" data-line="262">- resolves logical `stdo://releases/...` URIs to verified installed bytes;</span>
+<span id="L263" data-line="263">- inventories and verifies complete installed distributions;</span>
+<span id="L264" data-line="264">- synchronises the exact basis already selected by a Product Definition;</span>
+<span id="L265" data-line="265">- emits an exact digest-bound adoption plan from a mutable version-line</span>
+<span id="L266" data-line="266">  selector and performs adoption only when that plan is explicitly</span>
+<span id="L267" data-line="267">  accepted;</span>
+<span id="L268" data-line="268">- manages the stable marker-bounded bootstrap in declared agent files; and</span>
+<span id="L269" data-line="269">- applies those operations to an explicitly discovered fleet of Product</span>
+<span id="L270" data-line="270">  Definitions.</span>
+<span id="L271" data-line="271"></span>
+<span id="L272" data-line="272">The store may live at any machine-local path. Its registry maps logical</span>
+<span id="L273" data-line="273">release URIs to installed paths and manifest digests and owns neither</span>
+<span id="L274" data-line="274">Product selection nor method meaning. A consumer repository therefore needs</span>
+<span id="L275" data-line="275">no project-local standards copy and no prescribed folder structure, and</span>
+<span id="L276" data-line="276">several Product Definitions on one machine may select different installed</span>
+<span id="L277" data-line="277">cuts concurrently (P3, P6). Every manager-owned component from the</span>
+<span id="L278" data-line="278">configured store root downward is a physical directory or regular file of</span>
+<span id="L279" data-line="279">its declared type; a symlink, junction, reparse point, device, socket or</span>
+<span id="L280" data-line="280">other redirection or special entry fails closed. Verification inventories</span>
+<span id="L281" data-line="281">every filesystem entry type, directories included, rejects any entry not</span>
+<span id="L282" data-line="282">derived from the manifest&#x27;s exact file paths, and never follows an</span>
+<span id="L283" data-line="283">unmanifested alias (P5, P3).</span>
+<span id="L284" data-line="284"></span>
+<span id="L285" data-line="285">`constitution.stdo.source.repository` identifies the transport source.</span>
+<span id="L286" data-line="286">`constitution.stdo.selector` is a mutable `stdo://channels/&lt;version&gt;`</span>
+<span id="L287" data-line="287">discovery selector whose alias semantics are owned by the release law (the</span>
+<span id="L288" data-line="288">[RELEASE](RELEASE.md) member). Neither is operative authority.</span>
+<span id="L289" data-line="289">`constitution.stdo.basis.uri` and `constitution.stdo.basis.manifest_sha256`</span>
+<span id="L290" data-line="290">are the sole authored STDO selection for that Product Definition (P6, P3).</span>
+<span id="L291" data-line="291"></span>
+<span id="L292" data-line="292">The manager observes these command boundaries (P6, P5):</span>
+<span id="L293" data-line="293"></span>
+<span id="L294" data-line="294">- `install` admits one explicitly named immutable RC cut without changing</span>
+<span id="L295" data-line="295">  any Product Definition;</span>
+<span id="L296" data-line="296">- `sync` installs and verifies only the exact basis already selected by</span>
+<span id="L297" data-line="297">  the Product Definition and never consults its mutable selector;</span>
+<span id="L298" data-line="298">- `adopt --dry-run` resolves the annotated selector and immutable RC, and</span>
+<span id="L299" data-line="299">  presents the target cut, tag object, commit, tree, manifest digest,</span>
+<span id="L300" data-line="300">  current Product-Definition byte digest and a deterministic</span>
+<span id="L301" data-line="301">  adoption-plan digest, without mutation;</span>
+<span id="L302" data-line="302">- mutating `adopt` requires that exact prior plan digest as explicit</span>
+<span id="L303" data-line="303">  acceptance, re-derives it before installation, installs only the bound</span>
+<span id="L304" data-line="304">  target, rechecks the Product Definition bytes, and atomically changes</span>
+<span id="L305" data-line="305">  only its basis and its basis-relative schema locator; any drift refuses</span>
+<span id="L306" data-line="306">  mutation;</span>
+<span id="L307" data-line="307">- `status`, `verify`, `list`, `manifest` and `resolve` are read-only with</span>
+<span id="L308" data-line="308">  respect to Product Definitions; and</span>
+<span id="L309" data-line="309">- fleet adoption emits, and requires explicit acceptance of, one aggregate</span>
+<span id="L310" data-line="310">  plan digest over every per-definition plan; all fleet writes require</span>
+<span id="L311" data-line="311">  explicit whole-selection authorisation and infer no composition or</span>
+<span id="L312" data-line="312">  inheritance from directory nesting.</span>
+<span id="L313" data-line="313"></span>
+<span id="L314" data-line="314">Missing cuts, moved immutable tags, tag-to-commit mismatch, manifest-digest</span>
+<span id="L315" data-line="315">mismatch, missing, extra or changed installed members, ambiguous Product</span>
+<span id="L316" data-line="316">Definition discovery, unaccepted or stale adoption plans, URI escape,</span>
+<span id="L317" data-line="317">physical store redirection, undeclared filesystem entry types and malformed</span>
+<span id="L318" data-line="318">bootstrap markers fail closed (P5). Every `stdo:` schema locator is parsed</span>
+<span id="L319" data-line="319">before schema loading under URI scheme case-insensitivity and names the</span>
+<span id="L320" data-line="320">same immutable cut as `constitution.stdo.basis`; spelling variation cannot</span>
+<span id="L321" data-line="321">cross that basis. No cache, registry entry, source checkout, version alias,</span>
+<span id="L322" data-line="322">schema or agent file may silently replace the basis selected in the</span>
+<span id="L323" data-line="323">Product Definition (P6, P3).</span>
+<span id="L324" data-line="324"></span>
+<span id="L325" data-line="325">`constitution.agent_bootstrap` embeds no other constitution. It names one</span>
+<span id="L326" data-line="326">basis-qualified bootstrap entrypoint and the local instruction files (such</span>
+<span id="L327" data-line="327">as `AGENTS.md` or `CLAUDE.md` targets) whose small discovery block the</span>
+<span id="L328" data-line="328">manager owns between explicit markers. Each target is a portable relative</span>
+<span id="L329" data-line="329">path resolved against `product.source_project`; absolute paths, parent</span>
+<span id="L330" data-line="330">traversal, redirected path components and escape from that boundary fail</span>
+<span id="L331" data-line="331">closed. A fleet additionally confines every resolved source project to its</span>
+<span id="L332" data-line="332">explicitly authorised fleet root and preflights every target before the</span>
+<span id="L333" data-line="333">first write. Exactly one correctly ordered marker span may be replaced;</span>
+<span id="L334" data-line="334">the bytes before and after it, trailing whitespace included, stay</span>
+<span id="L335" data-line="335">project-owned and byte-identical, and appending a new span preserves all</span>
+<span id="L336" data-line="336">existing bytes as an exact prefix. The bootstrap routes agents to the</span>
+<span id="L337" data-line="337">applicable Product Definition, the exact installed basis and the owning</span>
+<span id="L338" data-line="338">sources; it can neither restate nor override them (P6, P3, P5).</span>
+<span id="L339" data-line="339"></span>
+<span id="L340" data-line="340">Recursive fleet discovery prunes these exact directory names as</span>
+<span id="L341" data-line="341">version-control, dependency, generated, cache or managed-store internals:</span>
+<span id="L342" data-line="342">`.git`, `.hg`, `.svn`, `.bzr`, `.venv`, `venv`, `node_modules`, `vendor`,</span>
+<span id="L343" data-line="343">`site-packages`, `build`, `dist`, `out`, `target`, `.gradle`, `.tox`,</span>
+<span id="L344" data-line="344">`.nox`, `.cache`, `.ruff_cache`, `.mypy_cache`, `.pytest_cache`,</span>
+<span id="L345" data-line="345">`__pycache__`, `.genesis` and `.stdo`. A discovered Product Definition may</span>
+<span id="L346" data-line="346">not itself be a symlink. These exclusions are discovery law, not evidence</span>
+<span id="L347" data-line="347">that an excluded tree lacks another independently governed Product (P5,</span>
+<span id="L348" data-line="348">P6).</span>
+<span id="L349" data-line="349"></span>
+<span id="L350" data-line="350">### Explicit complete consumer update</span>
+<span id="L351" data-line="351"></span>
+<span id="L352" data-line="352">A Complete Consumer Update Plan binds one explicitly selected Product</span>
+<span id="L353" data-line="353">Definition and the complete companion population of one exact upstream</span>
+<span id="L354" data-line="354">release-matched cohort to the consumer bindings selected by the</span>
+<span id="L355" data-line="355">invocation&#x27;s owner. The Product Definition continues to own composition;</span>
+<span id="L356" data-line="356">the upstream cohort and each Product&#x27;s release record own release and</span>
+<span id="L357" data-line="357">member identity. An invocation selection and its derived plan and result</span>
+<span id="L358" data-line="358">are operation evidence, not another persistent dependency declaration,</span>
+<span id="L359" data-line="359">registry or lock. The caller selects every native route and derived context</span>
+<span id="L360" data-line="360">for the claimed update scope; directory proximity or an empty discovery</span>
+<span id="L361" data-line="361">result cannot supply that selection, and an empty derived-context</span>
+<span id="L362" data-line="362">population means the owner selected none, not that the manager established</span>
+<span id="L363" data-line="363">the absence of semantic context (P6, P3).</span>
+<span id="L364" data-line="364"></span>
+<span id="L365" data-line="365">The separate `cohort-update` operation presents the whole plan without</span>
+<span id="L366" data-line="366">consumer effects. Unlike the basis-only Adoption Plan above, its acceptance</span>
+<span id="L367" data-line="367">object also binds the physical effect destinations and binding preimages,</span>
+<span id="L368" data-line="368">the exact selected cohort bytes, the companion annotated tags, commits,</span>
+<span id="L369" data-line="369">subtrees and inventories, the replacement dependency locators, the native</span>
+<span id="L370" data-line="370">routes and the declared derived-source observations. It uses the same</span>
+<span id="L371" data-line="371">canonical JSON hashing rule. Already-installed status supplies no</span>
+<span id="L372" data-line="372">additional authority and does not change the digest. Mutation requires</span>
+<span id="L373" data-line="373">explicit acceptance of this exact plan and re-derives it; possession of its</span>
+<span id="L374" data-line="374">digest alone grants no operation authority. The `adopt`, `sync` and fleet</span>
+<span id="L375" data-line="375">contracts above keep their narrower boundaries (P6, P3).</span>
+<span id="L376" data-line="376"></span>
+<span id="L377" data-line="377">The complete operation verifies the selected cohort&#x27;s dependency closure</span>
+<span id="L378" data-line="378">and each exact companion&#x27;s definition, release record and admitted members</span>
+<span id="L379" data-line="379">before relying on them. It stages absent immutable installs, verifies</span>
+<span id="L380" data-line="380">existing installs without repairing them in place, and preflights every</span>
+<span id="L381" data-line="381">consumer target. Only the selected basis and schema, the existing</span>
+<span id="L382" data-line="382">composition locators and contracts, and the selected native and install</span>
+<span id="L383" data-line="383">links may change; historical installs and unrelated consumer content stay</span>
+<span id="L384" data-line="384">available and unchanged. It creates no consumer-local checker and changes</span>
+<span id="L385" data-line="385">no Product meaning or local semantic map (P3, P6, P2).</span>
+<span id="L386" data-line="386"></span>
+<span id="L387" data-line="387">For each selected derived context, missing, ambiguous, changed or</span>
+<span id="L388" data-line="388">unavailable program, map or source evidence holds the complete update</span>
+<span id="L389" data-line="389">before any consumer effect. The source owner performs any semantic re-entry</span>
+<span id="L390" data-line="390">that is needed; the manager cannot mechanically relabel an older map as</span>
+<span id="L391" data-line="391">current. Exact source freshness is integrity evidence, not semantic</span>
+<span id="L392" data-line="392">conformance and not an independent semantic verdict (P1, P6). After</span>
+<span id="L393" data-line="393">immutable staging the manager rechecks the consumer preimages and the</span>
+<span id="L394" data-line="394">source evidence. It reports completion only after verifying every selected</span>
+<span id="L395" data-line="395">resulting binding and companion. Refusal before consumer effects retains</span>
+<span id="L396" data-line="396">the prior state; a caught application failure restores the affected</span>
+<span id="L397" data-line="397">consumer preimages and does not report completion; newly staged immutable</span>
+<span id="L398" data-line="398">installs may stay unused. The operation requires an exclusive consumer</span>
+<span id="L399" data-line="399">write scope during application. It claims no crash-atomic transaction</span>
+<span id="L400" data-line="400">across independent filesystem paths: abrupt process or host loss, or</span>
+<span id="L401" data-line="401">unavailable rollback storage, requires recovery from the presented</span>
+<span id="L402" data-line="402">preimages before the complete relation can be claimed (P5, P4b).</span>
+<span id="L403" data-line="403"></span>
+<span id="L404" data-line="404">Outcomes as results. The outcomes of the manager&#x27;s operations in §4,</span>
+<span id="L405" data-line="405">its refusals, its reported completion and the recovery that</span>
+<span id="L406" data-line="406">loss requires, are stated in the core result algebra of</span>
+<span id="L407" data-line="407">[FOUNDATIONS §4 Results](FOUNDATIONS.md#results) through the refinements</span>
+<span id="L408" data-line="408">of [ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition), each</span>
+<span id="L409" data-line="409">for its own predicate; the cause of an outcome selects its value, and the</span>
+<span id="L410" data-line="410">mapping adds no core value (P5, P6):</span>
+<span id="L411" data-line="411"></span>
+<span id="L412" data-line="412">- Effect. An operation that writes, such as `install`, `sync`, a mutating</span>
+<span id="L413" data-line="413">  `adopt`, fleet adoption or the complete consumer update, has an</span>
+<span id="L414" data-line="414">  intended external effect, recorded under</span>
+<span id="L415" data-line="415">  [ACTIVATION §3 Effects](ACTIVATION.md#effects) for the predicate &quot;the</span>
+<span id="L416" data-line="416">  intended effect occurred&quot;. Reported completion is `completed`</span>
+<span id="L417" data-line="417">  (`satisfied`) only where evidence about the subject establishes the</span>
+<span id="L418" data-line="418">  effect in full, as the complete update&#x27;s verification of every</span>
+<span id="L419" data-line="419">  selected resulting binding and companion does. The cause selects the</span>
+<span id="L420" data-line="420">  other values. A refusal before any effect, with the retained prior</span>
+<span id="L421" data-line="421">  state as the evidence about the subject, is `not_effected`</span>
+<span id="L422" data-line="422">  (`falsified`), and the effect has ended. A caught application failure</span>
+<span id="L423" data-line="423">  is also `not_effected` (`falsified`): the failure observed on the</span>
+<span id="L424" data-line="424">  subject establishes that the complete update is not attained, and the</span>
+<span id="L425" data-line="425">  operation applies no later part of it, so no later completion of this</span>
+<span id="L426" data-line="426">  effect can attain it. Whether its restored preimages are verified</span>
+<span id="L427" data-line="427">  decides only whether the effect&#x27;s end is established, never the value:</span>
+<span id="L428" data-line="428">  verified, the effect has ended; a restoration not verified, or rollback</span>
+<span id="L429" data-line="429">  storage unavailable after the failure, leaves the end not established,</span>
+<span id="L430" data-line="430">  recorded beside the value as a residual naming the verification that</span>
+<span id="L431" data-line="431">  would establish it. Newly staged immutable installs left unused are</span>
+<span id="L432" data-line="432">  named with the value as the part that did occur. Abrupt process or</span>
+<span id="L433" data-line="433">  host loss, where no caught failure establishes that the update fell</span>
+<span id="L434" data-line="434">  short, is `completion_unknown` (`indeterminate`), never `completed` or</span>
+<span id="L435" data-line="435">  `not_effected`. `completion_unknown`, and `not_effected` with its end</span>
+<span id="L436" data-line="436">  not established, are effects of uncertain completion under</span>
+<span id="L437" data-line="437">  [ACTIVATION §3 Effects](ACTIVATION.md#effects): recovery from the</span>
+<span id="L438" data-line="438">  presented preimages reconciles them, as</span>
+<span id="L439" data-line="439">  [ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart) states, before</span>
+<span id="L440" data-line="440">  any repetition or claim of the complete relation.</span>
+<span id="L441" data-line="441">- Refusal. A refusal also answers whether the operation may apply its</span>
+<span id="L442" data-line="442">  effect on the exact subject and basis it binds. Found before the</span>
+<span id="L443" data-line="443">  operation begins, it is an outcome of</span>
+<span id="L444" data-line="444">  [ACTIVATION §3 Admission and activation](ACTIVATION.md#admission-and-activation),</span>
+<span id="L445" data-line="445">  for &quot;the step is lawfully admitted and activated on the exact subject</span>
+<span id="L446" data-line="446">  and basis&quot;; found after it has begun, as by the recheck after immutable</span>
+<span id="L447" data-line="447">  staging, it is a value of</span>
+<span id="L448" data-line="448">  [construction availability](ACTIVATION.md#construction-availability),</span>
+<span id="L449" data-line="449">  for &quot;a candidate is available&quot;. A missing explicit acceptance of the</span>
+<span id="L450" data-line="450">  exact plan, or missing whole-selection authorisation of a fleet write,</span>
+<span id="L451" data-line="451">  is missing operation authority: `admission_refused(authority)`</span>
+<span id="L452" data-line="452">  (`out_of_frame`), naming the acceptance or authorisation needed and</span>
+<span id="L453" data-line="453">  its owner. Every other refusal has a basis cause: drift of the Product</span>
+<span id="L454" data-line="454">  Definition bytes or of a consumer preimage; a stale plan; each other</span>
+<span id="L455" data-line="455">  condition of the fail-closed list above, ambiguous discovery included</span>
+<span id="L456" data-line="456">  because it leaves no exact subject; a path, locator or marker span that</span>
+<span id="L457" data-line="457">  escapes or breaks its boundary; and missing, ambiguous, changed or</span>
+<span id="L458" data-line="458">  unavailable derived-context evidence, which holds the complete update.</span>
+<span id="L459" data-line="459">  It is `admission_refused(basis)` before the operation begins and</span>
+<span id="L460" data-line="460">  `re_entry_requested(basis)` after, `invalid_basis` in both, and names</span>
+<span id="L461" data-line="461">  the basis coordinate that fails and, for derived-context evidence, the</span>
+<span id="L462" data-line="462">  source owner whose re-entry repairs it.</span>
+<span id="L463" data-line="463">- Command without an intended effect. A command without an intended</span>
+<span id="L464" data-line="464">  external effect, such as `verify` or `adopt --dry-run`, has no value</span>
+<span id="L465" data-line="465">  under Effects, and its refusal maps by cause as above. A condition it</span>
+<span id="L466" data-line="466">  reports about the subject it evaluates, such as a member that `verify`</span>
+<span id="L467" data-line="467">  finds missing, extra or changed, is a counterexample to that command&#x27;s</span>
+<span id="L468" data-line="468">  own predicate, `falsified`, not a refusal.</span>
+<span id="L469" data-line="469"></span>
+<span id="L470" data-line="470">Purpose and material relation: a consumer that combines the manager&#x27;s</span>
+<span id="L471" data-line="471">outcomes with other results cannot read a refused or failed operation as</span>
+<span id="L472" data-line="472">completed, an operation whose value is `completion_unknown` as either</span>
+<span id="L473" data-line="473">completed or not effected, a caught failure whose restoration is not</span>
+<span id="L474" data-line="474">verified as undecided when the update is known to have fallen short, or</span>
+<span id="L475" data-line="475">a refusal for missing acceptance as one for a defective basis (P5, P6).</span>
+<span id="L476" data-line="476"></span>
+<span id="L477" data-line="477">## 5. Bounded-context semantic resolution</span>
+<span id="L478" data-line="478"></span>
+<span id="L479" data-line="479">This member owns this law in the semantic-resolution bounded context,</span>
+<span id="L480" data-line="480">`urn:stdo:bounded-context:semantic-resolution`, under the selected complete</span>
+<span id="L481" data-line="481">STDO basis. A glossary may index this identity and does not participate in</span>
+<span id="L482" data-line="482">its declaration (P1, P6).</span>
+<span id="L483" data-line="483"></span>
+<span id="L484" data-line="484">A term is a lexical label used in an occurrence, not a context-free concept</span>
+<span id="L485" data-line="485">identity. A bounded context is an explicitly identified semantic scope in</span>
+<span id="L486" data-line="486">which a governed vocabulary, concept set and relation set are jointly</span>
+<span id="L487" data-line="487">interpretable under named authority. A concept reference is an exact,</span>
+<span id="L488" data-line="488">resolvable reference to a meaning owned by an authority under a selected</span>
+<span id="L489" data-line="489">basis; the reference locates that meaning and mints neither the meaning nor</span>
+<span id="L490" data-line="490">its authority (P1, P3, P6).</span>
+<span id="L491" data-line="491"></span>
+<span id="L492" data-line="492">A bounded context exists only when an owning authority declares its stable</span>
+<span id="L493" data-line="493">identity, owner, selected basis and governed semantic scope. A consuming</span>
+<span id="L494" data-line="494">member may define a concept inside that context only through an explicit</span>
+<span id="L495" data-line="495">owner relation. A filename, heading, index row, glossary section, schema</span>
+<span id="L496" data-line="496">value or bare URI cannot constitute the context (P6).</span>
+<span id="L497" data-line="497"></span>
+<span id="L498" data-line="498">Every material term occurrence resolves under this semantic address (P1):</span>
+<span id="L499" data-line="499"></span>
+<span id="L500" data-line="500">```text</span>
+<span id="L501" data-line="501">(term, bounded-context identity, owning authority, selected basis, governed scope)</span>
+<span id="L502" data-line="502">```</span>
+<span id="L503" data-line="503"></span>
+<span id="L504" data-line="504">Equal spelling, capitalisation, shape, file location, directory nesting,</span>
+<span id="L505" data-line="505">actor or implementation does not establish equal meaning, concept identity,</span>
+<span id="L506" data-line="506">equivalence, inheritance or authority; different spelling does not prove</span>
+<span id="L507" data-line="507">different meaning. Those relations follow only from the applicable semantic</span>
+<span id="L508" data-line="508">address or from an explicit authorised relation (P1, P3). This applies the</span>
+<span id="L509" data-line="509">Representation row of [FOUNDATIONS §2](FOUNDATIONS.md#2-ontology) to</span>
+<span id="L510" data-line="510">terms; the list names the representations a term takes in this member.</span>
+<span id="L511" data-line="511"></span>
+<span id="L512" data-line="512">Resolution proceeds in this order (P1, P5):</span>
+<span id="L513" data-line="513"></span>
+<span id="L514" data-line="514">1. identify the occurrence&#x27;s governed scope and nearest explicit</span>
+<span id="L515" data-line="515">   bounded-context declaration;</span>
+<span id="L516" data-line="516">2. identify the exact selected basis and the authorities applicable to</span>
+<span id="L517" data-line="517">   that context and scope;</span>
+<span id="L518" data-line="518">3. collect the context-local definitions and the explicitly imported</span>
+<span id="L519" data-line="519">   concept references admitted by those authorities and that basis;</span>
+<span id="L520" data-line="520">4. apply every applicable owner-authorised override or disambiguation; and</span>
+<span id="L521" data-line="521">5. admit the occurrence only when exactly one concept remains.</span>
+<span id="L522" data-line="522"></span>
+<span id="L523" data-line="523">A document, section, schema field, operation or other owning surface may</span>
+<span id="L524" data-line="524">declare a context for all subordinate occurrences, so uniquely resolved</span>
+<span id="L525" data-line="525">prose need not repeat a qualifier on every term. A repository, directory,</span>
+<span id="L526" data-line="526">filename, heading, glossary match, prompt, actor or nearby definition does</span>
+<span id="L527" data-line="527">not declare a bounded context by accident (P1, P6).</span>
+<span id="L528" data-line="528"></span>
+<span id="L529" data-line="529">Zero applicable concepts is unresolved meaning; more than one is ambiguous</span>
+<span id="L530" data-line="530">meaning. Both fail closed at a material boundary: an agent, design, schema,</span>
+<span id="L531" data-line="531">implementation, test, translation or reviewer must not select one by</span>
+<span id="L532" data-line="532">familiarity, frequency, recency, nominal match or a context-free glossary</span>
+<span id="L533" data-line="533">fallback (P5, P1). For an evaluation that depends on such an occurrence,</span>
+<span id="L534" data-line="534">the definition, import or disambiguation that would select one concept is</span>
+<span id="L535" data-line="535">a material relation its frame does not declare: the evaluation returns</span>
+<span id="L536" data-line="536">`out_of_frame` and names that relation and its owner, or returns</span>
+<span id="L537" data-line="537">`indeterminate` where the admissible evidence also cannot decide the</span>
+<span id="L538" data-line="538">claim and so gives that ground too, and in either case names the ground,</span>
+<span id="L539" data-line="539">as [FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Out of frame or</span>
+<span id="L540" data-line="540">indeterminate, states (P5, P1).</span>
+<span id="L541" data-line="541"></span>
+<span id="L542" data-line="542">The glossary (the [GLOSSARY](GLOSSARY.md) member) is a non-deciding locator index. Each</span>
+<span id="L543" data-line="543">record points to an exact source clause that declares the bounded context</span>
+<span id="L544" data-line="544">and owns the indexed concept. The glossary defines neither and cannot</span>
+<span id="L545" data-line="545">repair a missing declaration. An indexed concept applies only when the</span>
+<span id="L546" data-line="546">semantic address selects its owning clause or the target context explicitly</span>
+<span id="L547" data-line="547">imports it; appearance in the glossary creates no shared default (P6, P1).</span>
+<span id="L548" data-line="548"></span>
+<span id="L549" data-line="549">A cross-context relation is explicit and owner-authorised. Its carrier</span>
+<span id="L550" data-line="550">states (P1, P6, P4b):</span>
+<span id="L551" data-line="551"></span>
+<span id="L552" data-line="552">- the exact source and target concept references and bounded-context</span>
+<span id="L553" data-line="553">  identities;</span>
+<span id="L554" data-line="554">- whether the relation imports unchanged meaning, disambiguates a use,</span>
+<span id="L555" data-line="555">  translates directionally (a specialisation included) or establishes the</span>
+<span id="L556" data-line="556">  stronger equivalence claim;</span>
+<span id="L557" data-line="557">- its direction and any lawful inverse where material;</span>
+<span id="L558" data-line="558">- the preserved meaning, changed meaning, loss and refusal conditions;</span>
+<span id="L559" data-line="559">- the source and target semantic owners, without transferring either</span>
+<span id="L560" data-line="560">  authority;</span>
+<span id="L561" data-line="561">- the selected source and target bases, the governed scope and</span>
+<span id="L562" data-line="562">  provenance; and</span>
+<span id="L563" data-line="563">- its lifecycle and invalidation conditions.</span>
+<span id="L564" data-line="564"></span>
+<span id="L565" data-line="565">The four relation kinds refine the rule of</span>
+<span id="L566" data-line="566">[FOUNDATIONS §2 Imports between members](FOUNDATIONS.md#imports-between-members),</span>
+<span id="L567" data-line="567">which owns what an import is, its direction, its loss and its lack of</span>
+<span id="L568" data-line="568">authority, and states that a use that changes, narrows or loses the source</span>
+<span id="L569" data-line="569">meaning is not an import. That rule is stated for members. Here it</span>
+<span id="L570" data-line="570">applies between any two bounded contexts, with the context an owning</span>
+<span id="L571" data-line="571">authority declares as source or target. A carrier&#x27;s concept references,</span>
+<span id="L572" data-line="572">bounded-context identities, direction and loss are the contents of an</span>
+<span id="L573" data-line="573">import declaration under that rule; its semantic owners are authorities,</span>
+<span id="L574" data-line="574">distinct from the owning clause to which a concept reference resolves.</span>
+<span id="L575" data-line="575">Each kind reads in the owner&#x27;s terms once (P1, P6):</span>
+<span id="L576" data-line="576"></span>
+<span id="L577" data-line="577">| Kind | In the terms of FOUNDATIONS §2 Imports between members |</span>
+<span id="L578" data-line="578">|---|---|</span>
+<span id="L579" data-line="579">| Semantic Import | an import, applied for its declared target scope; its unchanged meaning, direction, loss and lack of authority are those FOUNDATIONS §2 states |</span>
+<span id="L580" data-line="580">| Semantic Translation | not an import, because it declares how meaning changes in one direction; its carrier states the coordinates an import declaration states (the concept, its owner, the source and target contexts and the direction) and declares the changed meaning and the loss. A specialisation (below) is a translation |</span>
+<span id="L581" data-line="581">| Semantic Equivalence | not an import: each concept keeps its own owner and context, and neither adopts the other&#x27;s meaning. It requires the governing authorities to establish the claimed equality; neither identical spelling nor two opposing translations proves it automatically |</span>
+<span id="L582" data-line="582">| Semantic Disambiguation | not an import: it selects one meaning for one scope and does not make competing concepts equal. Where the selected concept is owned in another bounded context, it enters that scope only by the import, translation or equivalence its carrier declares (§6) |</span>
+<span id="L583" data-line="583"></span>
+<span id="L584" data-line="584">No relation widens its source or target authority; for an import,</span>
+<span id="L585" data-line="585">FOUNDATIONS §2 states this, and for the other three kinds this section</span>
+<span id="L586" data-line="586">does (P1, P6). These four kinds are related to the typed relations that</span>
+<span id="L587" data-line="587">AC-012, AXIOMATIC_CALCULUS §4, names. The reading of each kind in the</span>
+<span id="L588" data-line="588">owner&#x27;s terms is stated here. Purpose and material relation: an</span>
+<span id="L589" data-line="589">import has one definition, so a translation, equivalence or</span>
+<span id="L590" data-line="590">disambiguation cannot pass as an import that adopts meaning unchanged</span>
+<span id="L591" data-line="591">(P1, P6).</span>
+<span id="L592" data-line="592"></span>
+<span id="L593" data-line="593">A specialisation is a directional translation whose target preserves the</span>
+<span id="L594" data-line="594">declared source meaning while narrowing its admissible instances or adding</span>
+<span id="L595" data-line="595">target-context constraints. It identifies the exact target concept, the</span>
+<span id="L596" data-line="596">preserved and narrowed meaning, the excluded source instances, and the</span>
+<span id="L597" data-line="597">absence or law of any inverse. Calling a term a specialisation without</span>
+<span id="L598" data-line="598">those coordinates establishes nothing (P1, P3).</span>
+<span id="L599" data-line="599"></span>
+<span id="L600" data-line="600">## 6. Local constitutional binding</span>
+<span id="L601" data-line="601"></span>
+<span id="L602" data-line="602">A local axiom, override or disambiguation gains no authority from its file</span>
+<span id="L603" data-line="603">category or from being listed in the overlay. Every local entry names (P6):</span>
+<span id="L604" data-line="604"></span>
+<span id="L605" data-line="605">- the URI carrying the local decision;</span>
+<span id="L606" data-line="606">- the existing Product, requirement, accepted-design or other lawful</span>
+<span id="L607" data-line="607">  authority that owns it;</span>
+<span id="L608" data-line="608">- the clause or ambiguity it overrides or resolves, where applicable; and</span>
+<span id="L609" data-line="609">- the exact scope to which it applies.</span>
+<span id="L610" data-line="610"></span>
+<span id="L611" data-line="611">Each `local_constitution.disambiguations` binding additionally names (P1,</span>
+<span id="L612" data-line="612">P3):</span>
+<span id="L613" data-line="613"></span>
+<span id="L614" data-line="614">- `term`: the exact lexical label being resolved;</span>
+<span id="L615" data-line="615">- `context`: the bounded-context identity in which the resolution applies;</span>
+<span id="L616" data-line="616">- `disambiguates`: the complete material candidate concept or clause</span>
+<span id="L617" data-line="617">  references;</span>
+<span id="L618" data-line="618">- `resolves_to`: the exact selected concept reference, which is one member</span>
+<span id="L619" data-line="619">  of `disambiguates`;</span>
+<span id="L620" data-line="620">- `basis`: every selected semantic basis needed to interpret the</span>
+<span id="L621" data-line="621">  candidates and the resolution; and</span>
+<span id="L622" data-line="622">- `uri`, `authority` and `applies_to`: the owning resolution carrier, the</span>
+<span id="L623" data-line="623">  lawful authority and the exact governed scope.</span>
+<span id="L624" data-line="624"></span>
+<span id="L625" data-line="625">The referenced `uri` owns the resolution. When the candidates cross bounded</span>
+<span id="L626" data-line="626">contexts, that carrier also declares the complete import, translation or</span>
+<span id="L627" data-line="627">equivalence relation §5 requires. The overlay metadata makes the relation</span>
+<span id="L628" data-line="628">discoverable and checkable; it neither restates the source-owned meanings</span>
+<span id="L629" data-line="629">nor mints the decision (P6).</span>
+<span id="L630" data-line="630"></span>
+<span id="L631" data-line="631">An empty local array explicitly declares that no local entry of that kind</span>
+<span id="L632" data-line="632">is bound for the product. Omission is not an equivalent declaration (P6,</span>
+<span id="L633" data-line="633">P4b).</span>
+<span id="L634" data-line="634"></span>
+<span id="L635" data-line="635">## 7. Collective reference-frame basis</span>
+<span id="L636" data-line="636"></span>
+<span id="L637" data-line="637">A Project Reference-Frame Basis is the Product-owned accepted declaration</span>
+<span id="L638" data-line="638">of the shared frame set through which finite actors collectively engage one</span>
+<span id="L639" data-line="639">governed Product scope or outcome (P0, P6). It binds:</span>
+<span id="L640" data-line="640"></span>
+<span id="L641" data-line="641">```text</span>
+<span id="L642" data-line="642">Project Reference-Frame Basis</span>
+<span id="L643" data-line="643">  = exact reference-frame law and optional profile basis</span>
+<span id="L644" data-line="644">  + admitting authorities and governed scopes</span>
+<span id="L645" data-line="645">  + frame declarations and evaluation inventory</span>
+<span id="L646" data-line="646">  + actor-binding rules and capability envelopes</span>
+<span id="L647" data-line="647">  + semantic, evaluation, operation and decision grants</span>
+<span id="L648" data-line="648">  + result, conjunction, translation and coverage relations</span>
+<span id="L649" data-line="649">  + lifecycle activation triggers and invalidation law</span>
+<span id="L650" data-line="650">```</span>
+<span id="L651" data-line="651"></span>
+<span id="L652" data-line="652">[REFERENCE_FRAME](REFERENCE_FRAME.md) supplies frame principles only, and</span>
+<span id="L653" data-line="653">its §4 the shape of a frame-set declaration; a profile member (the</span>
+<span id="L654" data-line="654">Executive baseline, tier 3) supplies one optional profile only. Neither</span>
+<span id="L655" data-line="655">selects, adopts or owns a Product binding. The adopting Product&#x27;s existing</span>
+<span id="L656" data-line="656">authority owns the concrete declaration and every grant it contains (P6).</span>
+<span id="L657" data-line="657"></span>
+<span id="L658" data-line="658">`reference_frame_bases` is the non-empty locator set for the accepted</span>
+<span id="L659" data-line="659">frame bases through which finite actors collectively engage the governed</span>
+<span id="L660" data-line="660">Product and its work. Each entry names (P6, P3):</span>
+<span id="L661" data-line="661"></span>
+<span id="L662" data-line="662">- the URI carrying one accepted frame-basis declaration;</span>
+<span id="L663" data-line="663">- every existing Goals, Product, requirement, accepted-design or other</span>
+<span id="L664" data-line="664">  lawful authority that admits the declaration; and</span>
+<span id="L665" data-line="665">- the exact Product, bounded context, build tenant, outcome or other</span>
+<span id="L666" data-line="666">  governed scope to which it applies.</span>
+<span id="L667" data-line="667"></span>
+<span id="L668" data-line="668">The referenced declaration owns the selected frame set, the method or</span>
+<span id="L669" data-line="669">profile basis, the governed outcome, the actor-binding rules, the</span>
+<span id="L670" data-line="670">capability envelopes, the grant requirements, the triggers, the coverage,</span>
+<span id="L671" data-line="671">the result relations and the invalidation law. It may adopt an available</span>
+<span id="L672" data-line="672">profile or define a project configuration. The JSON entry locates that</span>
+<span id="L673" data-line="673">declaration and its authority relation; it does not contain the binding,</span>
+<span id="L674" data-line="674">adopt the profile, restate the frames or create frame-set authority (P6).</span>
+<span id="L675" data-line="675"></span>
+<span id="L676" data-line="676">Profile availability, Product adoption and execution-scoped activation are</span>
+<span id="L677" data-line="677">three distinct relations. Inclusion in a selected method cut makes a</span>
+<span id="L678" data-line="678">profile available; only Product authority may adopt it; only an exact</span>
+<span id="L679" data-line="679">authorised work instruction may activate one bound frame for an actor and</span>
+<span id="L680" data-line="680">subject (P6, P3).</span>
+<span id="L681" data-line="681"></span>
+<span id="L682" data-line="682">The collective basis and an actor activation are distinct. An Agent Frame</span>
+<span id="L683" data-line="683">Activation is the execution-scoped binding of one agent to an applicable</span>
+<span id="L684" data-line="684">frame declaration or active configuration, an exact evaluation, subject,</span>
+<span id="L685" data-line="685">basis, evidence boundary and capability envelope; what the agent receives</span>
+<span id="L686" data-line="686">is the activation packet of REFERENCE_FRAME §11, and the step it performs</span>
+<span id="L687" data-line="687">is ACTIVATION §1. The Product Definition records the durable shared basis;</span>
+<span id="L688" data-line="688">a ticket or other authorised work instruction carries the activation</span>
+<span id="L689" data-line="689">packet. An Agent Frame Activation does not mutate the overlay, and the overlay</span>
+<span id="L690" data-line="690">registers no agents, assigns no permanent frames and persists no temporary</span>
+<span id="L691" data-line="691">active frame configuration (P3, P0).</span>
+<span id="L692" data-line="692"></span>
+<span id="L693" data-line="693">Frames and actors keep separate identities. Several agents may activate</span>
+<span id="L694" data-line="694">overlapping subsets of one frame set; one agent may activate different</span>
+<span id="L695" data-line="695">frames over time. Neither an actor name nor a broad frame grants semantic,</span>
+<span id="L696" data-line="696">operation, review, acceptance or disposition authority beyond the cited</span>
+<span id="L697" data-line="697">owners and the exact activation (P6, P3).</span>
+<span id="L698" data-line="698"></span>
+<span id="L699" data-line="699">The Project Reference-Frame Basis also records the Product-role map when</span>
+<span id="L700" data-line="700">the governed outcome crosses a chain of Products. The map keeps mutable</span>
+<span id="L701" data-line="701">source projects, Product Definitions, candidate checkpoints, release cuts,</span>
+<span id="L702" data-line="702">released Products, installs, artifacts and dependent Products as distinct</span>
+<span id="L703" data-line="703">identities (SPEC_METHOD §6), and records each development product as a</span>
+<span id="L704" data-line="704">role binding over its exact underlying install identity. Every directed</span>
+<span id="L705" data-line="705">Product-composition edge names its source and target roles, governing</span>
+<span id="L706" data-line="706">authority and contracts, lifecycle, evidence boundary, refusal and</span>
+<span id="L707" data-line="707">invalidation conditions. Common actors, repositories, files,</span>
+<span id="L708" data-line="708">implementations, outputs or tool access create no composition or identity</span>
+<span id="L709" data-line="709">relation (P3, P6).</span>
+<span id="L710" data-line="710"></span>
+<span id="L711" data-line="711">An accepted Project Reference-Frame Basis may be expressed entirely as</span>
+<span id="L712" data-line="712">source-linked prose. The starter at</span>
+<span id="L713" data-line="713">`templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md` projects this binding</span>
+<span id="L714" data-line="714">law into one copyable shape. The template is not authority, and no schema,</span>
+<span id="L715" data-line="715">axiomatic representation, prompt framework or runtime frame engine is</span>
+<span id="L716" data-line="716">needed to use the method. An adopting Product replaces every placeholder</span>
+<span id="L717" data-line="717">with its own exact identities, owners, scopes, sources, grants, results and</span>
+<span id="L718" data-line="718">invalidation conditions, then admits that completed declaration under</span>
+<span id="L719" data-line="719">existing authority (P2, P6).</span>
+<span id="L720" data-line="720"></span>
+<span id="L721" data-line="721">A Product, domain or runtime carrier also named `Frame` is not included by</span>
+<span id="L722" data-line="722">nominal match. It stays governed by its bound WHAT and HOW and may be the</span>
+<span id="L723" data-line="723">subject or a coordinate of an evaluation frame. It enters the collective</span>
+<span id="L724" data-line="724">frame set only through an explicit frame declaration with the required</span>
+<span id="L725" data-line="725">evaluation and authority relations (P1, P3).</span>
+<span id="L726" data-line="726"></span>
+<span id="L727" data-line="727">## 8. WHAT, HOW and work carriers</span>
+<span id="L728" data-line="728"></span>
+<span id="L729" data-line="729">This member owns the build-tenancy bounded context,</span>
+<span id="L730" data-line="730">`urn:stdo:bounded-context:build-tenancy`, under the selected complete STDO</span>
+<span id="L731" data-line="731">basis. These concepts of the context are owned in other members, each by</span>
+<span id="L732" data-line="732">an explicit owner relation (§5) (P1, P3):</span>
+<span id="L733" data-line="733"></span>
+<span id="L734" data-line="734">- the build tenant, the relation by which one constitutional product WHAT</span>
+<span id="L735" data-line="735">  is realised by one or more independent project-owned HOW tenants, and</span>
+<span id="L736" data-line="736">  each tenant&#x27;s build-tenant binding:</span>
+<span id="L737" data-line="737">  [SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding), its terms and</span>
+<span id="L738" data-line="738">  rule 1;</span>
+<span id="L739" data-line="739">- the multi-build-tenant work-item relation:</span>
+<span id="L740" data-line="740">  [TICKETS §4](TICKETS.md#multi-build-tenant-independence).</span>
+<span id="L741" data-line="741"></span>
+<span id="L742" data-line="742">In this context build tenancy is that one-or-more relation; one tenant is</span>
+<span id="L743" data-line="743">its singleton case, and multi-build-tenancy begins when the same WHAT has</span>
+<span id="L744" data-line="744">more than one independent realisation (P3, P2).</span>
+<span id="L745" data-line="745"></span>
+<span id="L746" data-line="746">`what.intent`, `what.product` and `what.specification` locate the current</span>
+<span id="L747" data-line="747">constitutional WHAT. Intent and Product each have one canonical entrypoint;</span>
+<span id="L748" data-line="748">specification may cite more than one requirement or specification surface</span>
+<span id="L749" data-line="749">(P3).</span>
+<span id="L750" data-line="750"></span>
+<span id="L751" data-line="751">The Tenant Registry is the canonical `how.build_tenants` collection for the</span>
+<span id="L752" data-line="752">product&#x27;s independent HOW realisations. Each entry has stable identity and</span>
+<span id="L753" data-line="753">locates its root, design and implementation surfaces; the tenant&#x27;s</span>
+<span id="L754" data-line="754">binding, which those surfaces declare, is governed by SPEC_METHOD §11.</span>
+<span id="L755" data-line="755">The Common Build-Tenant Surface is the realisation law bound by `how.common` and</span>
+<span id="L756" data-line="756">explicitly adopted across more than one tenant. A separate</span>
+<span id="L757" data-line="757">`TENANT_REGISTRY.md` may remain as a human-readable companion or generated</span>
+<span id="L758" data-line="758">projection and cannot become a second tenant-identity or location</span>
+<span id="L759" data-line="759">authority (P3, P6).</span>
+<span id="L760" data-line="760"></span>
+<span id="L761" data-line="761">`ticketing.goals` locates the current work-wave carrier.</span>
+<span id="L762" data-line="762">`ticketing.tickets` locates the durable ticket root and the minimum</span>
+<span id="L763" data-line="763">backlog, active and completed lanes. `ticketing.comments` locates the</span>
+<span id="L764" data-line="764">commentary root. `ticketing.sprints` optionally locates bounded</span>
+<span id="L765" data-line="765">execution-batch manifests. These bindings may resolve to directories,</span>
+<span id="L766" data-line="766">repository resources, tracker collections, API endpoints or product-scoped</span>
+<span id="L767" data-line="767">queries. Goals own the bounded work wave, ticket state stays ticket</span>
+<span id="L768" data-line="768">authority, and comments stay non-authoritative commentary (P6, P3). Which</span>
+<span id="L769" data-line="769">carrier a given work item takes is SPEC_METHOD §4 and the [TICKETS](TICKETS.md) member;</span>
+<span id="L770" data-line="770">this section binds where each carrier kind lives.</span>
+<span id="L771" data-line="771"></span>
+<span id="L772" data-line="772">## 9. Recursive discovery and explicit composition</span>
+<span id="L773" data-line="773"></span>
+<span id="L774" data-line="774">Tools discover `stdo_*.json` recursively within the selected workspace</span>
+<span id="L775" data-line="775">boundary: definitions at the workspace root and definitions at arbitrarily</span>
+<span id="L776" data-line="776">deep nested project roots (P3).</span>
+<span id="L777" data-line="777"></span>
+<span id="L778" data-line="778">For a requested Product scope exactly one applicable definition is</span>
+<span id="L779" data-line="779">selected; zero or several unresolved definitions fail closed, and a</span>
+<span id="L780" data-line="780">symlinked definition is refused (P6, P5).</span>
+<span id="L781" data-line="781"></span>
+<span id="L782" data-line="782">Directory nesting creates no implicit inheritance, ownership, composition</span>
+<span id="L783" data-line="783">or constitutional override. Parent and child definitions stay independent</span>
+<span id="L784" data-line="784">until `composition` explicitly relates them. Each composition entry records</span>
+<span id="L785" data-line="785">(P6, P3):</span>
+<span id="L786" data-line="786"></span>
+<span id="L787" data-line="787">- `product_definition`: the current locator for the target definition;</span>
+<span id="L788" data-line="788">- `target_definition_id`: the stable identity expected from the target&#x27;s</span>
+<span id="L789" data-line="789">  `product.definition_id`;</span>
+<span id="L790" data-line="790">- `relation`: the authority defining the directed composition kind, the</span>
+<span id="L791" data-line="791">  source and target roles, owner, scope, lifecycle and invalidation</span>
+<span id="L792" data-line="792">  conditions; and</span>
+<span id="L793" data-line="793">- `contracts`: one or more exact interface, capability, identity,</span>
+<span id="L794" data-line="794">  lifecycle, data, evidence or other governing contract references</span>
+<span id="L795" data-line="795">  consumed by that relation.</span>
+<span id="L796" data-line="796"></span>
+<span id="L797" data-line="797">Resolution verifies both the locator and the expected identity. Moving a</span>
+<span id="L798" data-line="798">definition requires a locator update and does not change its identity.</span>
+<span id="L799" data-line="799">Replacing the content at the same locator with another definition identity</span>
+<span id="L800" data-line="800">fails closed. When an edge binds exact immutable Product or release</span>
+<span id="L801" data-line="801">versions, the cited relation and contracts also carry and verify those</span>
+<span id="L802" data-line="802">identities; the mutable definition identity cannot substitute for them</span>
+<span id="L803" data-line="803">(P3, P5).</span>
+<span id="L804" data-line="804"></span>
+<span id="L805" data-line="805">A conforming discovered set satisfies all of the following (P3, P6, P1):</span>
+<span id="L806" data-line="806"></span>
+<span id="L807" data-line="807">- every definition validates against its selected released schema;</span>
+<span id="L808" data-line="808">- every required URI and fragment resolves under the declared workspace</span>
+<span id="L809" data-line="809">  and resolver boundary;</span>
+<span id="L810" data-line="810">- every `product.definition_id` is unique;</span>
+<span id="L811" data-line="811">- every build-tenant identity is unique within its overlay;</span>
+<span id="L812" data-line="812">- every governed scope has a resolvable applicable reference-frame basis,</span>
+<span id="L813" data-line="813">  and overlapping basis bindings are reconciled by their cited authority;</span>
+<span id="L814" data-line="814">- every local disambiguation binds one exact term, target context,</span>
+<span id="L815" data-line="815">  complete material candidate set, selected concept, authority, basis and</span>
+<span id="L816" data-line="816">  scope; `resolves_to` is a member of `disambiguates`; and its referenced</span>
+<span id="L817" data-line="817">  resolution carrier is congruent with those bindings;</span>
+<span id="L818" data-line="818">- every material cross-context term seam resolves through an explicit</span>
+<span id="L819" data-line="819">  import, disambiguation, translation or equivalence relation rather than</span>
+<span id="L820" data-line="820">  nominal match;</span>
+<span id="L821" data-line="821">- every composition target resolves to another product definition whose</span>
+<span id="L822" data-line="822">  `product.definition_id` equals `target_definition_id`, and every</span>
+<span id="L823" data-line="823">  relation and non-empty contract set resolves; and</span>
+<span id="L824" data-line="824">- no two carriers claim authority for the same Product, tenant, ticket</span>
+<span id="L825" data-line="825">  state or constitutional relation.</span>
+<span id="L826" data-line="826"></span>
+<span id="L827" data-line="827">Portable Draft 2020-12 JSON Schema validation establishes structural shape.</span>
+<span id="L828" data-line="828">The schema&#x27;s `uri` and `uri-reference` formats are annotations unless the</span>
+<span id="L829" data-line="829">declared validator implements format assertion. Conformance therefore</span>
+<span id="L830" data-line="830">performs an explicit RFC 3986 URI and URI-reference syntax check with an</span>
+<span id="L831" data-line="831">assertion-capable validator, followed separately by resolution, fragment</span>
+<span id="L832" data-line="832">existence, selected-release identity, uniqueness across files,</span>
+<span id="L833" data-line="833">constitutional sufficiency, semantic-resolution and cross-context-relation</span>
+<span id="L834" data-line="834">completeness, and authority-congruence checks. The structural subset and</span>
+<span id="L835" data-line="835">the semantic subset of these checks are distinct claims (EVALUATION §2;</span>
+<span id="L836" data-line="836">P1, P6).</span>
+<span id="L837" data-line="837"></span>
+<span id="L838" data-line="838">## 10. Semantic-resolution conformance cases</span>
+<span id="L839" data-line="839"></span>
+<span id="L840" data-line="840">Conformance covers both uniquely resolved use and material collision. At</span>
+<span id="L841" data-line="841">minimum it establishes these cases under an exact selected basis (P1, P6):</span>
+<span id="L842" data-line="842"></span>
+<span id="L843" data-line="843">| Term | Candidate contexts | Required result without an explicit cross-context relation |</span>
+<span id="L844" data-line="844">|---|---|---|</span>
+<span id="L845" data-line="845">| `Frame` | the reference-frame-evaluation context (REFERENCE_FRAME §1) and a consumer-owned runtime carrier | remain distinct; nominal match cannot enrol the runtime carrier as an evaluation frame |</span>
+<span id="L846" data-line="846">| `Owner` | a generic specialist evaluation family and a semantic or decision authority owner | remain distinct; the evaluation family acquires no owner authority |</span>
+<span id="L847" data-line="847">| `Product` | an immutable released Product and a mutable Product Definition | remain distinct and select only through the occurrence&#x27;s declared context |</span>
+<span id="L848" data-line="848">| `Tenant` | an STDO build realisation and hosted, customer, account, runtime or data tenancy | remain distinct; build tenancy supplies no default for the other contexts |</span>
+<span id="L849" data-line="849">| `User` | a Product role, human person, identity principal, account, actor, operator or data subject | unresolved until downstream authority defines or explicitly relates the applicable meanings |</span>
+<span id="L850" data-line="850"></span>
+<span id="L851" data-line="851">A positive local case declares one context and resolves exactly one</span>
+<span id="L852" data-line="852">concept. A positive cross-context case supplies the complete authorised</span>
+<span id="L853" data-line="853">relation. Negative cases cover zero candidates, multiple candidates after</span>
+<span id="L854" data-line="854">disambiguation, a selected concept outside the candidate set, a</span>
+<span id="L855" data-line="855">context-free glossary fallback, incomplete relation coordinates, authority</span>
+<span id="L856" data-line="856">or basis mismatch, undeclared loss and invalidated relations. Correct</span>
+<span id="L857" data-line="857">downstream behaviour produced through a guessed meaning does not pass</span>
+<span id="L858" data-line="858">semantic conformance (P6, P1). [CONFORMANCE](CONFORMANCE.md) may index</span>
+<span id="L859" data-line="859">these cases; it does not redefine them.</span>
+<span id="L860" data-line="860"></span>
+<span id="L861" data-line="861">## 11. One constitutional surface and version boundary</span>
+<span id="L862" data-line="862"></span>
+<span id="L863" data-line="863">STDO-SURFACE-001. The shared methodology is modular in authorship and</span>
+<span id="L864" data-line="864">singular in authority. Each law has one owning member; other members</span>
+<span id="L865" data-line="865">consume it by reference. The members become operative only as one complete</span>
+<span id="L866" data-line="866">released version of the method (P6, P3).</span>
+<span id="L867" data-line="867"></span>
+<span id="L868" data-line="868">A released cut identifies its exact member set, member digests, review</span>
+<span id="L869" data-line="869">basis, human acceptance and immutable identity. Compressions, templates,</span>
+<span id="L870" data-line="870">comments, candidate work, installed copies and mutable source are derived,</span>
+<span id="L871" data-line="871">evidential or authoring surfaces. They cannot become a selectable partial</span>
+<span id="L872" data-line="872">constitution and cannot reinterpret the owning members (P3, P6).</span>
+<span id="L873" data-line="873"></span>
+<span id="L874" data-line="874">Within their declared scope, derived instructions preserve the owning</span>
+<span id="L875" data-line="875">clauses&#x27; applicability, obligations, permissions, exclusions, decision</span>
+<span id="L876" data-line="876">owners and invalidators. A projected prohibition cannot lose its condition</span>
+<span id="L877" data-line="877">or its lawful alternative, even when every source digest is correct. A</span>
+<span id="L878" data-line="878">summary, bootstrap or index cannot require a stricter or weaker relation by</span>
+<span id="L879" data-line="879">compression. Its references are resolvable within the declared actor&#x27;s</span>
+<span id="L880" data-line="880">access; otherwise the required meaning is supplied directly (P4b, P1;</span>
+<span id="L881" data-line="881">FOUNDATIONS §4, reference versus body).</span>
+<span id="L882" data-line="882"></span>
+<span id="L883" data-line="883">Staleness binding. What a derived surface is, when it is stale, and</span>
+<span id="L884" data-line="884">what an actor uses in its place are</span>
+<span id="L885" data-line="885">[ACTIVATION §2 Staleness of derived surfaces](ACTIVATION.md#staleness-of-derived-surfaces);</span>
+<span id="L886" data-line="886">which questions a derived surface decides on its own is ACTIVATION §2,</span>
+<span id="L887" data-line="887">Standalone scope. This member refines that law for the derived surfaces</span>
+<span id="L888" data-line="888">a released cut or an installation carries, among them compressions,</span>
+<span id="L889" data-line="889">templates, bootstraps, indexes and projected frames. Each carries the</span>
+<span id="L890" data-line="890">path and digest of each deciding source it was derived from, and of each</span>
+<span id="L891" data-line="891">index it watches (GLOSSARY §2). A change to any of those digests is the</span>
+<span id="L892" data-line="892">source change that makes it stale under that law, and it must be</span>
+<span id="L893" data-line="893">regenerated or explicitly re-accepted before an installation treats it</span>
+<span id="L894" data-line="894">as current. What a matching digest establishes is stated above</span>
+<span id="L895" data-line="895">(EVALUATION §7). The raw owning members of the same</span>
+<span id="L896" data-line="896">selected cut remain the deciding authority: a question that a stale or</span>
+<span id="L897" data-line="897">insufficient carrier cannot decide is decided from them, as ACTIVATION</span>
+<span id="L898" data-line="898">§2 states (P3, P5, P6).</span>
+<span id="L899" data-line="899"></span>
+<span id="L900" data-line="900">The method owns normative construction algebra, authority relations,</span>
+<span id="L901" data-line="901">abstract state and transition laws, admissibility conditions, necessary</span>
+<span id="L902" data-line="902">causal order and evidence invariants. Consumers own concrete Product</span>
+<span id="L903" data-line="903">realisation: instantiated types and schemas, files, tools, runtime and</span>
+<span id="L904" data-line="904">orchestration machinery, tests and executable conformance implementation.</span>
+<span id="L905" data-line="905">A concrete form is method law only when the method explicitly accepts it</span>
+<span id="L906" data-line="906">as an interoperability boundary, as §1 does for the definition schema and</span>
+<span id="L907" data-line="907">template (P2, P6).</span>
+<span id="L908" data-line="908"></span>
+<span id="L909" data-line="909">A shared-method amendment cannot create an executable tool, workflow</span>
+<span id="L910" data-line="910">engine, runtime, assurance system or consumer realisation as STDO Product</span>
+<span id="L911" data-line="911">scope without separate explicit human authorisation. An agent recording a</span>
+<span id="L912" data-line="912">ruling cannot widen its subject, implication, authority or change class</span>
+<span id="L913" data-line="913">(P6).</span>
+<span id="L914" data-line="914"></span>
+<span id="L915" data-line="915">Only a released method version is publication authority. Mutable method</span>
+<span id="L916" data-line="916">source may author a future cut; it must not silently govern a consumer</span>
+<span id="L917" data-line="917">(P6, P3).</span>
+<span id="L918" data-line="918"></span>
+<span id="L919" data-line="919">## 12. Bootstrap</span>
+<span id="L920" data-line="920"></span>
+<span id="L921" data-line="921">Every product defined under this method begins from</span>
+<span id="L922" data-line="922">`templates/PRODUCT_DEFINITION_TEMPLATE.json`, copied to the product&#x27;s</span>
+<span id="L923" data-line="923">definition root as `stdo_default.json` for a singleton default project or</span>
+<span id="L924" data-line="924">as `stdo_&lt;label&gt;.json` for a named product definition. An existing project</span>
+<span id="L925" data-line="925">fills the URI bindings over its current layout; adoption requires no</span>
+<span id="L926" data-line="926">moving, renaming or duplicating of existing authority or realisation</span>
+<span id="L927" data-line="927">surfaces (P2, P3).</span>
+<span id="L928" data-line="928"></span>
+<span id="L929" data-line="929">The default scaffold binds:</span>
+<span id="L930" data-line="930"></span>
+<span id="L931" data-line="931">- a shared versioned STDO store, addressed through the exact</span>
+<span id="L932" data-line="932">  `constitution.stdo.basis`, as the installed distribution of the selected</span>
+<span id="L933" data-line="933">  process constitution;</span>
+<span id="L934" data-line="934">- `specification/GOALS.md` as current work-wave orientation;</span>
+<span id="L935" data-line="935">- `specification/INTENT.md` as domain direction;</span>
+<span id="L936" data-line="936">- `specification/PRODUCT.md` as the current product-definition surface;</span>
+<span id="L937" data-line="937">- `specification/requirements/` as the live requirement surface;</span>
+<span id="L938" data-line="938">- `build_tenants/` as the root for shared and tenant-local realisation</span>
+<span id="L939" data-line="939">  surfaces; and</span>
+<span id="L940" data-line="940">- `.ai-workspace/` as the sprint, ticket and comment carrier root.</span>
+<span id="L941" data-line="941"></span>
+<span id="L942" data-line="942">These are template defaults, not universal path law; the definition&#x27;s URI</span>
+<span id="L943" data-line="943">bindings select the actual project carriers (P2).</span>
+<span id="L944" data-line="944"></span>
+<span id="L945" data-line="945">The authority split is (P6, P3):</span>
+<span id="L946" data-line="946"></span>
+<span id="L947" data-line="947">- mutable methodology authoring lives in the method&#x27;s own source workspace</span>
+<span id="L948" data-line="948">  (the standards of its source project) and governs only a future</span>
+<span id="L949" data-line="949">  candidate cut;</span>
+<span id="L950" data-line="950">- released methodology authority is the exact immutable STDO version</span>
+<span id="L951" data-line="951">  selected by the consumer;</span>
+<span id="L952" data-line="952">- installed methodology distribution lives in the toolchain manager&#x27;s</span>
+<span id="L953" data-line="953">  shared versioned store by default and matches the basis URI and manifest</span>
+<span id="L954" data-line="954">  digest;</span>
+<span id="L955" data-line="955">- project-owned constitutional surfaces live at the definition&#x27;s `what`</span>
+<span id="L956" data-line="956">  bindings; and</span>
+<span id="L957" data-line="957">- project-owned realisation and work surfaces live at its `how` and</span>
+<span id="L958" data-line="958">  `ticketing` bindings.</span>
+<span id="L959" data-line="959"></span>
+<span id="L960" data-line="960">A project creates no competing local methodology root, such as a default</span>
+<span id="L961" data-line="961">`specification/standards/`, and binds no mutable or partial method source</span>
+<span id="L962" data-line="962">as if it were the selected immutable release (P6).</span>
+<span id="L963" data-line="963"></span>
+<span id="L964" data-line="964">Method authority is singular: the selected immutable STDO release</span>
+<span id="L965" data-line="965">authority, projected into the installed distribution located by the</span>
+<span id="L966" data-line="966">overlay; and the project constitutional authority at the definition&#x27;s</span>
+<span id="L967" data-line="967">bound WHAT surfaces (P6). When editing or repricing methodology, the</span>
+<span id="L968" data-line="968">mutable source path is authoring authority for the candidate being</span>
+<span id="L969" data-line="969">constructed; it is not operative consumer law before release and explicit</span>
+<span id="L970" data-line="970">selection (P3, P6). When operating inside a governed workspace, the</span>
+<span id="L971" data-line="971">resolved installed basis is the operative distribution of the selected</span>
+<span id="L972" data-line="972">immutable release until the consumer explicitly adopts another cut. A</span>
+<span id="L973" data-line="973">project-local exact copy stays lawful when explicitly bound and verified;</span>
+<span id="L974" data-line="974">it is not the default, and file proximity cannot select it (P6, P3).</span>
+<span id="L975" data-line="975"></span>
+<span id="L976" data-line="976">The corresponding default folder shape is:</span>
+<span id="L977" data-line="977"></span>
+<span id="L978" data-line="978">```text</span>
+<span id="L979" data-line="979">stdo_default.json</span>
+<span id="L980" data-line="980"></span>
+<span id="L981" data-line="981">specification/</span>
+<span id="L982" data-line="982">├── GOALS.md</span>
+<span id="L983" data-line="983">├── INTENT.md</span>
+<span id="L984" data-line="984">├── PRODUCT.md</span>
+<span id="L985" data-line="985">└── requirements/</span>
+<span id="L986" data-line="986">    └── *.md</span>
+<span id="L987" data-line="987"></span>
+<span id="L988" data-line="988">build_tenants/</span>
+<span id="L989" data-line="989">├── common/</span>
+<span id="L990" data-line="990">└── default/</span>
+<span id="L991" data-line="991"></span>
+<span id="L992" data-line="992">.ai-workspace/</span>
+<span id="L993" data-line="993">├── sprints/</span>
+<span id="L994" data-line="994">├── tickets/</span>
+<span id="L995" data-line="995">│   ├── backlog/</span>
+<span id="L996" data-line="996">│   ├── active/</span>
+<span id="L997" data-line="997">│   └── completed/</span>
+<span id="L998" data-line="998">└── comments/</span>
+<span id="L999" data-line="999">```</span>
+<span id="L1000" data-line="1000"></span>
+<span id="L1001" data-line="1001">This is a starter topology, not a conformance requirement. A monorepo may</span>
+<span id="L1002" data-line="1002">place several `stdo_&lt;label&gt;.json` definitions at one root and bind each to</span>
+<span id="L1003" data-line="1003">a different WHAT. A hierarchical repository may place one or more</span>
+<span id="L1004" data-line="1004">definitions at any nested project root. Recursive discovery (§9) finds both</span>
+<span id="L1005" data-line="1005">shapes; explicit composition, never directory nesting, relates their</span>
+<span id="L1006" data-line="1006">products (P3, P2).</span>
+<span id="L1007" data-line="1007"></span>
+<span id="L1008" data-line="1008">A project need not start with a complete `requirements/` tree on day zero.</span>
+<span id="L1009" data-line="1009">Requirements may be sourced from any legitimate constitutional input</span>
+<span id="L1010" data-line="1010">regardless of its path, including `GOALS.md`, `INTENT.md`, `PRODUCT.md`,</span>
+<span id="L1011" data-line="1011">existing requirement documents, imported standards or policy material,</span>
+<span id="L1012" data-line="1012">prior project versions, and migration or repricing source material. Most</span>
+<span id="L1013" data-line="1013">projects begin by deriving `INTENT.md` from `GOALS.md`, then `PRODUCT.md`</span>
+<span id="L1014" data-line="1014">from `INTENT.md`, then the first requirement surface from the product</span>
+<span id="L1015" data-line="1015">definition; that is the usual starting point, not the only lawful source</span>
+<span id="L1016" data-line="1016">(P2).</span>
+<span id="L1017" data-line="1017"></span>
+<span id="L1018" data-line="1018">The bootstrap sequence is (P3, P6, P2):</span>
+<span id="L1019" data-line="1019"></span>
+<span id="L1020" data-line="1020">1. Install the STDO toolchain manager once, resolve one version-line</span>
+<span id="L1021" data-line="1021">   selector, and explicitly select one immutable RC cut.</span>
+<span id="L1022" data-line="1022">2. Install that complete cut in the shared release store and retain its</span>
+<span id="L1023" data-line="1023">   deterministic installed-manifest digest.</span>
+<span id="L1024" data-line="1024">3. Copy `PRODUCT_DEFINITION_TEMPLATE.json` from that exact cut to the</span>
+<span id="L1025" data-line="1025">   product definition root as `stdo_default.json` or `stdo_&lt;label&gt;.json`.</span>
+<span id="L1026" data-line="1026">4. Assign the stable `product.definition_id` for the mutable WHAT</span>
+<span id="L1027" data-line="1027">   definition line, its source-project locator and its bounded-context</span>
+<span id="L1028" data-line="1028">   declaration; keep it distinct from every immutable Product and release</span>
+<span id="L1029" data-line="1029">   identity.</span>
+<span id="L1030" data-line="1030">5. Bind `constitution.stdo.source`, its non-operative selector, the exact</span>
+<span id="L1031" data-line="1031">   basis URI and manifest digest, every additional constitutional</span>
+<span id="L1032" data-line="1032">   authority and the relevant basis-qualified entrypoints; confirm that</span>
+<span id="L1033" data-line="1033">   the set collectively defines axioms, ontology, epistemology, taxonomy</span>
+<span id="L1034" data-line="1034">   and semantics for the governed scope (§3).</span>
+<span id="L1035" data-line="1035">6. Bind the agent bootstrap entrypoint and portable targets relative to</span>
+<span id="L1036" data-line="1036">   the resolved `product.source_project`, then let the manager preflight</span>
+<span id="L1037" data-line="1037">   every target and install or refresh only their marker-bounded</span>
+<span id="L1038" data-line="1038">   discovery blocks.</span>
+<span id="L1039" data-line="1039">7. Bind, or explicitly empty, the local axiom, override and</span>
+<span id="L1040" data-line="1040">   disambiguation collections (§6).</span>
+<span id="L1041" data-line="1041">8. Bind at least one accepted collective reference-frame basis, its</span>
+<span id="L1042" data-line="1042">   admitting authorities and its exact governed scope (§7).</span>
+<span id="L1043" data-line="1043">9. Write or confirm the current Goals carrier, run the goals to intent to</span>
+<span id="L1044" data-line="1044">   product steps, and bind the resulting Intent and Product entrypoints.</span>
+<span id="L1045" data-line="1045">10. Gather, derive, classify and bind the live specification or</span>
+<span id="L1046" data-line="1046">    requirement surfaces without creating a co-equal rival.</span>
+<span id="L1047" data-line="1047">11. Bind at least one build tenant, including its root, design and</span>
+<span id="L1048" data-line="1048">    implementation surfaces, and bind any shared realisation law (§8).</span>
+<span id="L1049" data-line="1049">12. Bind the Goals carrier, the ticket lanes, the comments root and the</span>
+<span id="L1050" data-line="1050">    optional sprint root.</span>
+<span id="L1051" data-line="1051">13. Bind every known product-composition edge explicitly, including its</span>
+<span id="L1052" data-line="1052">    target definition identity, relation authority and non-empty contract</span>
+<span id="L1053" data-line="1053">    set (§9).</span>
+<span id="L1054" data-line="1054">14. Validate the JSON shape, assert URI and URI-reference syntax,</span>
+<span id="L1055" data-line="1055">    synchronise and verify the exact installed basis, then resolve every</span>
+<span id="L1056" data-line="1056">    URI and perform the cross-definition identity, composition,</span>
+<span id="L1057" data-line="1057">    constitutional-sufficiency and authority-congruence checks.</span>
+<span id="L1058" data-line="1058"></span>
+<span id="L1059" data-line="1059">Once a bound requirement set is the live constitutional surface, no rival</span>
+<span id="L1060" data-line="1060">monolithic requirements document should remain co-equal authority with it. This</span>
+<span id="L1061" data-line="1061">keeps requirement truth structurally clear, derivable and non-monolithic</span>
+<span id="L1062" data-line="1062">without prescribing its folder (P6, P2).</span></pre></html>
