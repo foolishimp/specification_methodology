@@ -1,7 +1,9 @@
 # T-010: Common V3 representation and release preparation
 
-Status: reviewed packaging-r1 construction/materialization complete; public
-checkpoint and release **PREPARED**, awaiting actual publication receipt.
+Status: reviewed packaging-r1 construction/materialization and public delivery
+complete. Checkpoint B and the separate standalone native RC1 prerelease are
+**PUBLISHED**; the [public handoff](../../../applications/stdo-v3-common-35fb4824/PUBLICATION.md)
+and [receipt](../../qualification/t010/publication-rc1/PUBLISHED.json) bind actual availability.
 No ticket move selected; this record remains in `active/`.
 Owner: Jim. Coordinating Executive: `/root`.
 Change class: `realization_refactor`, an application of existing a_c HOW.
@@ -16,7 +18,7 @@ steering selected an actual public checkpoint and standalone STDO RC1 test
 release with this separate supplemental representation. No a_c Product release,
 method adoption or source/model rebase is selected. The current
 [public handoff](../../../applications/stdo-v3-common-35fb4824/PUBLICATION.md)
-records planned assets and the publication-receipt boundary.
+records published assets, exact installation and the publication-receipt boundary.
 
 Represented common checkpoint:
 `35fb4824a064a84df5af214a0d0e2da597c18ac6`, payload commit
@@ -67,7 +69,7 @@ The correct original representation archive/bundle are preserved. The earlier
 [72-control review](../../qualification/t010/package-review/final-003/REVIEW.md)
 applies to that original bounded baseline, not the new code's qualification.
 
-The [prepared standalone STDO 3.0.0 RC1 release](https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology%2Fv3.0.0-rc.1)
+The [published standalone STDO 3.0.0 RC1 prerelease](https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology/v3.0.0-rc.1)
 retains its exact checked native cut and three nonsemantic packaging deltas.
 Its RC1 identity is separate from packaging-r1 and does not rebase a_c model/source
 custody or add a dependency. Captured workspace/private proof routes remain
@@ -83,11 +85,13 @@ provider-family independence, global governing acquisition, whole-calculus
 conformance, efficiency/benefit and Product/RC/installed qualification remain
 unqualified. Interactive UI behavior remains unverified.
 
-Public availability is PREPARED and awaits its separate receipt. This
+Public availability is PUBLISHED with all six downloads/hash checks and fresh
+public native reacquisition verified. This
 supplemental representation has no a_c Product semver/RC/tag, installation or
 adoption; the standalone native RC1 identity remains separate. Private invocations/events/configuration and
 hidden reasoning remain excluded; public receipts are not complete private
 actor replay. Existing licenses retain their scope, with distribution terms
-for a_c-owned/new material an owner choice. Owner acceptance and publication
-remain reserved outside this completed bounded delivery. The original local promotion had no Git effects. The main checkpoint is now
-authorized; remote publication remains a separate operation.
+for a_c-owned/new material an owner choice. Owner acceptance and adoption
+remain reserved. The original local promotion had no Git effects; the later
+main checkpoint B and original native RC1 refs are public. This factual
+bookkeeping preserves the native Product tag and all frozen preparation bytes.

@@ -1,9 +1,10 @@
 # Common V3 representation
 
-The reviewed **packaging-r1** representation is prepared for public availability
-with the standalone STDO v3.0.0 RC1 test release. Publication is **PREPARED**;
-actual remote availability awaits its separate receipt. See [PUBLICATION](PUBLICATION.md)
-for planned downloads, exact native installation and public rebuild routes.
+The reviewed **packaging-r1** representation is **PUBLISHED** with the
+[standalone STDO v3.0.0 RC1 prerelease](https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology/v3.0.0-rc.1).
+All six asset downloads and a fresh public native installation were verified.
+See [PUBLICATION](PUBLICATION.md) for downloads, exact native installation and
+public rebuild routes, and the [publication receipt](../../.ai-workspace/qualification/t010/publication-rc1/PUBLISHED.json).
 The represented source remains common checkpoint
 `35fb4824a064a84df5af214a0d0e2da597c18ac6`, package tree
 `7f2070b61c848b42b4dfb3af1e0ce53869de1aa1`. This supplemental proposal has no
@@ -27,8 +28,8 @@ content remains in the reversible carriers and
 
 ## Portable use
 
-Download the [current archive](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.0-rc.1/a_c-stdo-v3-common-35fb4824-packaging-r1.tar.gz)
-and [external checksum](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.0-rc.1/a_c-stdo-v3-common-35fb4824-packaging-r1.tar.gz.sha256).
+Download the [current archive](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology/v3.0.0-rc.1/a_c-stdo-v3-common-35fb4824-packaging-r1.tar.gz)
+and [external checksum](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology/v3.0.0-rc.1/a_c-stdo-v3-common-35fb4824-packaging-r1.tar.gz.sha256).
 It contains 213 files, 110,473,751 bytes unpacked and 10,089,542 bytes compressed.
 Archive SHA256:
 
@@ -65,7 +66,7 @@ and archives. [Repair/promotion record](../../.ai-workspace/qualification/t010/p
 and [handoff](../../.ai-workspace/qualification/t010/handoff/packaging-r1-001/)
 retain exact subjects and preimages.
 
-The correct [original representation archive](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.0-rc.1/a_c-stdo-v3-common-35fb4824.tar.gz)
+The correct [original representation archive](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology/v3.0.0-rc.1/a_c-stdo-v3-common-35fb4824.tar.gz)
 and [bundle](bundle/a_c-stdo-v3-common-35fb4824/README.md) are preserved. Its
 [72-control review](../../.ai-workspace/qualification/t010/package-review/final-003/REVIEW.md)
 applies to that original bounded baseline; it does not qualify the new code.
@@ -81,7 +82,7 @@ required provider-family independence, global governing acquisition,
 whole-calculus conformance, efficiency/benefit and Product/RC/installed
 qualification remain unqualified. The a_c builder remains STDO 2.5.1-rc.2.
 
-The [prepared standalone STDO 3.0.0 RC1 release](https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology%2Fv3.0.0-rc.1)
+The [published standalone STDO 3.0.0 RC1 prerelease](https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology/v3.0.0-rc.1)
 uses the separately checked native cut, with three nonsemantic packaging deltas.
 Its RC1 identity is separate from this packaging-r1 identifier; it neither rebases
 the a_c model/source custody nor adds a dependency. [PUBLICATION](PUBLICATION.md)

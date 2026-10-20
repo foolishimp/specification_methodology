@@ -1,12 +1,13 @@
-# Public release preparation
+# Published RC1 and supplemental representation
 
-Status: **PREPARED**. The selected destination is the
-[standalone STDO v3.0.0 RC1 test release](https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology%2Fv3.0.0-rc.1); no public-availability receipt
-has yet been recorded here. This main checkpoint carries public source and
-curated evidence. The separately authorized push, release assets and subsequent
-publication receipt establish actual availability.
+Status: **PUBLISHED**. The [standalone STDO v3.0.0 RC1 prerelease](https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology/v3.0.0-rc.1)
+is public, nondraft and not marked latest (GitHub release ID `418547214`).
+The [publication receipt](../../.ai-workspace/qualification/t010/publication-rc1/PUBLISHED.json) records the native identities, first public
+main carrier B `38516579d09e2866eeed3f58ce0bdfb91905b527`, six verified assets
+and fresh public native reacquisition. The native tag still targets Product C;
+it does not point to main or this later factual bookkeeping.
 
-## Native STDO installation after publication
+## Native STDO installation
 
 The exact native manifest is `069285ad5a79d59ca2dd835e34a54b3e537b0eeef99c29994b18c339dbe62232`. Use:
 
@@ -17,20 +18,24 @@ stdo install v3.0.0-rc.1 --repository https://github.com/foolishimp/specificatio
 Native commit C is `0a04feb788c080183b58cf4a162e88372be1d87e`; annotated tag object
 T is `dde3e5f70d36f95369f88cc3b4130c6909678326` for
 `specification_methodology/v3.0.0-rc.1`. This test candidate installs alongside
-V2 and does not adopt V3 for any project or activate a global plugin. No V2
-cohort or legacy peer-Product upgrade is selected.
+V2 and does not adopt V3 for any project or activate a global plugin. A fresh
+HTTPS installation recovered the exact reviewed 82-file native distribution
+(81 payload members plus manifest). Shared V2/V3 verification and bootstrap
+routes also passed; all 127 V2 ref entries, common and old refs were preserved.
+No V2 cohort or legacy peer-Product upgrade is selected.
 
 ## Separate supplemental representation
 
-| Planned asset | Exact identity |
+| Published asset | Exact identity |
 |---|---|
-| [Current packaging-r1 archive](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.0-rc.1/a_c-stdo-v3-common-35fb4824-packaging-r1.tar.gz) | 10,089,542 bytes; SHA256 `989c0efbbba90c1d444c6a1c24def4174ef8519bec5f63d9bef021f27dd75e2b` |
-| [Current checksum](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.0-rc.1/a_c-stdo-v3-common-35fb4824-packaging-r1.tar.gz.sha256) | Unchanged archive checksum sidecar |
-| [Historical original archive](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.0-rc.1/a_c-stdo-v3-common-35fb4824.tar.gz) | 10,087,425 bytes; SHA256 `2b33530c20a17dd27033e8b34b1af497de7a4e0f3b8165a22d0821298516e386` |
-| [Historical original checksum](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.0-rc.1/a_c-stdo-v3-common-35fb4824.tar.gz.sha256) | Original baseline sidecar |
+| [Current packaging-r1 archive](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology/v3.0.0-rc.1/a_c-stdo-v3-common-35fb4824-packaging-r1.tar.gz) | 10,089,542 bytes; SHA256 `989c0efbbba90c1d444c6a1c24def4174ef8519bec5f63d9bef021f27dd75e2b` |
+| [Current checksum](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology/v3.0.0-rc.1/a_c-stdo-v3-common-35fb4824-packaging-r1.tar.gz.sha256) | Unchanged archive checksum sidecar |
+| [Historical original archive](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology/v3.0.0-rc.1/a_c-stdo-v3-common-35fb4824.tar.gz) | 10,087,425 bytes; SHA256 `2b33530c20a17dd27033e8b34b1af497de7a4e0f3b8165a22d0821298516e386` |
+| [Historical original checksum](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology/v3.0.0-rc.1/a_c-stdo-v3-common-35fb4824.tar.gz.sha256) | Original baseline sidecar |
 
-These links are prospective until the actual publication receipt. Archives stay
-out of Git; the exact [current bundle](bundle/a_c-stdo-v3-common-35fb4824-packaging-r1/README.md) and
+The [six-asset manifest](../../.ai-workspace/qualification/t010/publication-rc1/six-assets.json)
+also includes the exact native manifest and its checksum. Every published URL
+was downloaded and hash-checked. Archives stay out of Git; the exact [current bundle](bundle/a_c-stdo-v3-common-35fb4824-packaging-r1/README.md) and
 [original bundle](bundle/a_c-stdo-v3-common-35fb4824/README.md) are present in this
 checkpoint. They retain their complete 213-file inventories. The current bundle
 is 110,473,751 bytes, ordered file-vector SHA256

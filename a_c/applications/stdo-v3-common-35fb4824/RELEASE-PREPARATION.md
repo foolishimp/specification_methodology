@@ -1,11 +1,12 @@
 # Common representation release preparation
 
-Public release preparation is **PREPARED** for the reviewed
-`a_c-stdo-v3-common-35fb4824-packaging-r1` supplemental representation. The
-Executive selected the exact public main checkpoint and planned inclusion with
-the standalone STDO v3.0.0 RC1 test release after consuming the bounded reviews.
-Remote availability awaits its separate publication receipt. The
-[application README](README.md) and [PUBLICATION](PUBLICATION.md) give planned
+Public availability is **PUBLISHED** for the reviewed
+`a_c-stdo-v3-common-35fb4824-packaging-r1` supplemental representation with the
+standalone STDO v3.0.0 RC1 prerelease. The first public main checkpoint is
+`38516579d09e2866eeed3f58ce0bdfb91905b527`. All six assets were downloaded and
+hash-checked; fresh public native installation recovered all 82 exact files.
+The [publication receipt](../../.ai-workspace/qualification/t010/publication-rc1/PUBLISHED.json) binds the actual release and asset identities.
+The [application README](README.md) and [PUBLICATION](PUBLICATION.md) give
 GitHub assets, native installation and the complete bundled-input rebuild.
 This representation remains a proposal, without semantic acceptance, an a_c
 Product version/RC/tag, installation or adoption.
@@ -21,9 +22,9 @@ The builder remains exact STDO 2.5.1-rc.2. [BUILD](BUILD.md) and
 
 The [current bundle](bundle/a_c-stdo-v3-common-35fb4824-packaging-r1/README.md)
 has 213 files and 110,473,751 bytes. The
-[archive](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.0-rc.1/a_c-stdo-v3-common-35fb4824-packaging-r1.tar.gz) has 10,089,542 bytes,
+[archive](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology/v3.0.0-rc.1/a_c-stdo-v3-common-35fb4824-packaging-r1.tar.gz) has 10,089,542 bytes,
 SHA256 `989c0efbbba90c1d444c6a1c24def4174ef8519bec5f63d9bef021f27dd75e2b`;
-[external checksum](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.0-rc.1/a_c-stdo-v3-common-35fb4824-packaging-r1.tar.gz.sha256)
+[external checksum](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology/v3.0.0-rc.1/a_c-stdo-v3-common-35fb4824-packaging-r1.tar.gz.sha256)
 file SHA256 is `39c3d997f3a75f38b9599cf970ba962df76a3d42ee0beb8825e7e4527a9bcb76`.
 Complete 213-file vector SHA256 is
 `22def4fbec18e4ec543d01ddf2ae71a59fc1cf5e2d20c3601b09ede4f84df6fd`.
@@ -84,7 +85,7 @@ promotion.
 
 ## Preserved baseline and limits
 
-The correct [original representation archive](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.0-rc.1/a_c-stdo-v3-common-35fb4824.tar.gz)
+The correct [original representation archive](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology/v3.0.0-rc.1/a_c-stdo-v3-common-35fb4824.tar.gz)
 (10,087,425 bytes, SHA256
 `2b33530c20a17dd27033e8b34b1af497de7a4e0f3b8165a22d0821298516e386`)
 and its [bundle](bundle/a_c-stdo-v3-common-35fb4824/README.md) remain unchanged.
@@ -107,7 +108,7 @@ qualification remain open. Connectivity supplies no governing closure or truth.
 Interactive UI remains unverified; static conservation/CLI replay supplies no
 interactive qualification. No browser/server workaround was used.
 
-The [prepared standalone STDO 3.0.0 RC1 release](https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology%2Fv3.0.0-rc.1)
+The [published standalone STDO 3.0.0 RC1 prerelease](https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology/v3.0.0-rc.1)
 retains the exact separately checked native cut and three nonsemantic packaging
 deltas. It does not rebase this a_c model/source custody, replace the selected
 builder or add a dependency. Packaging-r1 is this representation's packaging
@@ -117,6 +118,8 @@ routes as historical, without rewriting frozen evidence.
 
 Existing licenses retain their scope. No license was assigned here to
 a_c-owned/new material; distribution terms remain an owner choice without an
-invented automatic publication gate. Owner acceptance, publication and adoption
-remain reserved. The earlier local promotion performed no Git effects. This main checkpoint is
-now selected; remote publication awaits its receipt. No ticket move is selected.
+invented automatic publication gate. Owner acceptance and adoption remain
+reserved. The earlier local promotion performed no Git effects; checkpoint B
+and the separate native RC1 refs are now public. This factual bookkeeping
+does not move the native tag or rewrite frozen preparation records. No ticket
+move is selected.
