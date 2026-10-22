@@ -66,3 +66,24 @@ contracts, not as wording:
    which were unnamed classes, so the structure grows from evidence.
 
 Source evidence: `abiogenesis/.ai-workspace/work/T287_COMMON_LIBRARY_DELIVERY_01/realization/stdo3-library/step-1.md` to `step-8.md`, the plan post's Ledger, and the closing post `20261022T060245Z_CLOSE_library_consolidation.md` ("Lesson for the next cycle").
+
+## Post-close evidence (2026-10-23)
+
+The same delivery's post-close cycle (four repairs after three pasted
+reviews) bears on items 1 and 3 above:
+
+- Item 3 held in every case. The first closing statement accepted local
+  evidence at six sites the third review refuted on the whole path (a child
+  process's thrown error taken as "facts reach the log"; a copied fold taken
+  as "advances in place"; a boundary premise untested at the provider). The
+  repair that closed the last of them was accepted only on an installed
+  end-to-end case that read the admitted subject cold from the store.
+- A named stop rule in the activation is cheap. The repair Worker that met
+  a contract-shape change stopped on the rule, reverted its code and wrote
+  a one-paragraph delta; the Executive decided it from the design's own
+  earlier text, and the next activation realized it. The unnamed version of
+  the same event (a Worker proceeding through a contract change) would have
+  cost a review round.
+- One Executive decision row was looser than the Worker's realization; the
+  Worker reported the difference with a probe instead of applying the row.
+  Item 2 as stated.
