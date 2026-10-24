@@ -1,0 +1,76 @@
+{
+  "actor": {
+    "cli_version": "codex-cli 0.164.0",
+    "effective_mcp_inventory": [
+      {
+        "enabled": false,
+        "name": "codex_app"
+      },
+      {
+        "enabled": false,
+        "name": "computer-use"
+      },
+      {
+        "enabled": false,
+        "name": "cua_repl"
+      },
+      {
+        "enabled": false,
+        "name": "node_repl"
+      },
+      {
+        "enabled": false,
+        "name": "playwright"
+      }
+    ],
+    "model_call_performed": false,
+    "python_source_parser_available": true,
+    "settings": {
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "max",
+      "service_tier": "default"
+    }
+  },
+  "claim": "Curated terminal accounting/index only; private prompts, answers, configuration and raw events remain outside public records.",
+  "closed_at": "2026-10-24T14:12:56.063665+00:00",
+  "grant_sha256": "22494df86d9d39ddd9951328c3e4e822cd93bceabb248a91c16b3819d43d6460",
+  "kind": "a_c.stdo301.initial-batch-public-index/1",
+  "plan_sha256": "d47af9e9dce792b97d50e91fcac79e09bb86225f692d186828718b277090bd66",
+  "private_plan_path": "/Users/jim/src/apps/specification_methodology-301/a_c/applications/stdo-v3-3.0.1-rc.1/private/batches/batch-001/plan.json",
+  "private_result_path": "/Users/jim/src/apps/specification_methodology-301/a_c/applications/stdo-v3-3.0.1-rc.1/private/batches/batch-001/result.json",
+  "reserved_calls": 2,
+  "result_sha256": "b6ce366feeb278dff1a4b9d6be279e76b302412a1ad34fc9279904b1497cbd6c",
+  "results": [
+    {
+      "attempt": "actors/author/chunk-ed68f0f7afc9d78ed250/attempt-001",
+      "chunk": "chunk-ed68f0f7afc9d78ed250",
+      "elapsed_seconds": 1324.8642286248505,
+      "failures": [],
+      "result_sha256": "d3c85612c26b298eba7825249013deaee04dfb5f1bff33c4dd065ce6288585df",
+      "status": "completed",
+      "usage_events": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 0,
+          "input_tokens": 78809,
+          "output_tokens": 62878,
+          "reasoning_output_tokens": 8407
+        }
+      ]
+    },
+    {
+      "attempt": "actors/author/chunk-d408217517441b8ab74a/attempt-001",
+      "chunk": "chunk-d408217517441b8ab74a",
+      "elapsed_seconds": 1800.0254547500517,
+      "failures": [
+        "process_timeout",
+        "missing_backend_usage",
+        "output_schema_failure"
+      ],
+      "result_sha256": "d9b3515bf111d653bf91e2417379911da130dc4450be80c51b44c8600bce7862",
+      "status": "failed",
+      "usage_events": []
+    }
+  ],
+  "state": "failure_stop"
+}

@@ -1,0 +1,110 @@
+{
+  "actors": [
+    {
+      "attempt": "actors/author/chunk-d408217517441b8ab74a/attempt-001",
+      "cli_version": "codex-cli 0.164.0",
+      "effective_mcp_inventory": [
+        {
+          "enabled": false,
+          "name": "codex_app"
+        },
+        {
+          "enabled": false,
+          "name": "computer-use"
+        },
+        {
+          "enabled": false,
+          "name": "cua_repl"
+        },
+        {
+          "enabled": false,
+          "name": "node_repl"
+        },
+        {
+          "enabled": false,
+          "name": "playwright"
+        }
+      ],
+      "invocation_sha256": "5749ee7458cc1aae9f4b305cffd0065e26ed6322b93473de1dce9c40ee59d04e",
+      "result_present": false,
+      "settings": {
+        "model": "gpt-6-astra",
+        "model_reasoning_effort": "max",
+        "service_tier": "default"
+      },
+      "timeout_seconds": 1800
+    },
+    {
+      "attempt": "actors/author/chunk-ed68f0f7afc9d78ed250/attempt-001",
+      "cli_version": "codex-cli 0.164.0",
+      "effective_mcp_inventory": [
+        {
+          "enabled": false,
+          "name": "codex_app"
+        },
+        {
+          "enabled": false,
+          "name": "computer-use"
+        },
+        {
+          "enabled": false,
+          "name": "cua_repl"
+        },
+        {
+          "enabled": false,
+          "name": "node_repl"
+        },
+        {
+          "enabled": false,
+          "name": "playwright"
+        }
+      ],
+      "invocation_sha256": "78273e45bbc80f43c92e291cab721d7431bd1dbd4e7e2bdd2f7e8a66c17b3e73",
+      "result_present": false,
+      "settings": {
+        "model": "gpt-6-astra",
+        "model_reasoning_effort": "max",
+        "service_tier": "default"
+      },
+      "timeout_seconds": 1800
+    }
+  ],
+  "invocation_records": 2,
+  "kind": "a_c.stdo301.initial-actor-launch-observation/1",
+  "observed_at": "2026-10-24T13:43:22.387796+00:00",
+  "private_event_bodies_read": false,
+  "processes": [
+    {
+      "executable": "/Library/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+      "pgid": 86266,
+      "pid": 86266,
+      "ppid": 86264
+    },
+    {
+      "executable": "node",
+      "pgid": 86293,
+      "pid": 86293,
+      "ppid": 86266
+    },
+    {
+      "executable": "node",
+      "pgid": 86294,
+      "pid": 86294,
+      "ppid": 86266
+    },
+    {
+      "executable": "/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex",
+      "pgid": 86293,
+      "pid": 86295,
+      "ppid": 86293
+    },
+    {
+      "executable": "/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex",
+      "pgid": 86294,
+      "pid": 86296,
+      "ppid": 86294
+    }
+  ],
+  "scheduler_pid": 86266,
+  "tool_session_id": 70106
+}

@@ -1,6 +1,6 @@
 # T-004 — STDO 3.0.1 delivery
 
-Status: active. Standards construction and representation renewal selected; exact-subject acceptance and publication pending.
+Status: active. Native 3.0.1 RC1 is published and public reacquisition verified. Supplemental representation renewal remains incomplete; exact-subject acceptance remains pending.
 
 ## Owner selection and triage
 
@@ -134,3 +134,23 @@ native bytes, C/T/M, inherited standing or owner acceptance changed. The initial
 release claims explicitly exclude a completed representation. The decision and
 actual asset profile are retained in
 `native-release/runs/rc1-002/native-only-publication.md` and `assets.json`.
+
+### Native publication verified; representation recovery open
+
+The native RC is public at
+<https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology/v3.0.1-rc.1>.
+The five intended refs were atomically pushed, with main carrier
+`31f81c6c026c1c9a03283868edbae62df484c0d5`; the annotated RC and selector
+peel to the unchanged native commit. Other observed refs were preserved.
+The release is nondraft, prerelease and not latest. Both exact native assets
+were downloaded and checked; a fresh HTTPS-repository installation reproduces
+all 83 payload files plus the exact manifest. `NATIVE-PUBLISHED.json` binds the
+actual public observations and independent publication-claim check.
+
+The first Graphify batch closed with one strict original and one 1,800-second
+timeout. Sixteen chunks are untouched. The successful attempt reports 78,809
+input and 62,878 output tokens; failed-attempt usage is unknown. All local
+process groups terminated. The failure and accounting remain preserved under
+`representation/generation-initial-1/`; no automatic retry or completed-model
+claim follows. The Executive is selecting a bounded recovery path. Native
+publication is complete independently of this supplemental work.

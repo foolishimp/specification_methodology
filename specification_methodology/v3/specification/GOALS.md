@@ -10,7 +10,14 @@ The owner selects STDO 3.0.1 delivery under
 `3.0.1-rc.1`, constructed from exact published native `3.0.0-rc.1` in the
 isolated common tenant on `codex/stdo-3.0.1-delivery`. Source amendment,
 coherent native frames and metadata, source-matched supplemental
-representation, qualification and release preparation are selected.
+representation, qualification and release preparation are selected. Native
+`3.0.1-rc.1` is now published at commit
+`fe4941f56a52ed3697a2b516d8d68948b0ea65d9`, manifest
+`60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8`;
+fresh public installation is verified. Four installed-use tasks support the
+bounded amendment predicates, with their recorded limitations. The separate
+Graphify representation remains incomplete after one completed chunk and one
+timeout; its recovery and artifact assessment remain selected under T-004.
 Construction does not satisfy independent review, inherited obligations or
 exact-cut acceptance. Older consumers and the installed builder keep their
 selected meanings. The version label promises no automatic patch compatibility.

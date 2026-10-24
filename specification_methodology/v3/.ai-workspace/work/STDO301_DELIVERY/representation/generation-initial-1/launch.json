@@ -1,0 +1,28 @@
+{
+  "claim": "Scheduler launched under exact grant. Actual actor launch and terminal evidence are separately observed.",
+  "command": [
+    "/Users/jim/src/apps/specification_methodology-301/a_c/applications/stdo-v3-3.0.1-rc.1/.venv/bin/python",
+    "-B",
+    "/Users/jim/src/apps/specification_methodology-301/a_c/applications/stdo-v3-3.0.1-rc.1/run_generation.py",
+    "initial-batch",
+    "--grant",
+    "/Users/jim/src/apps/specification_methodology-301/specification_methodology/v3/.ai-workspace/work/STDO301_DELIVERY/representation/grants/initial-001.json",
+    "--grant-sha256",
+    "22494df86d9d39ddd9951328c3e4e822cd93bceabb248a91c16b3819d43d6460"
+  ],
+  "grant_sha256": "22494df86d9d39ddd9951328c3e4e822cd93bceabb248a91c16b3819d43d6460",
+  "kind": "a_c.stdo301.initial-batch-launch/1",
+  "maximum_new_calls": 2,
+  "operation": "initial-batch",
+  "scheduler_pgid": 86266,
+  "scheduler_pid": 86266,
+  "settings": {
+    "effort": "max",
+    "jobs": 2,
+    "model": "gpt-6-astra",
+    "service_tier": "default",
+    "timeout_seconds": 1800
+  },
+  "started_at": "2026-10-24T13:42:55.245598+00:00",
+  "supervisor_pid": 86264
+}

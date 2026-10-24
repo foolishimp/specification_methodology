@@ -1,0 +1,83 @@
+{
+  "actual_invocations_recorded": 2,
+  "attempts": [
+    {
+      "answer_sha256": "081f1bec98361d5cd2b33b46bf5981b04cd5dd19b1bd22b6545c78f02e14a7a7",
+      "attempt": "actors/author/chunk-ed68f0f7afc9d78ed250/attempt-001",
+      "chunk": "chunk-ed68f0f7afc9d78ed250",
+      "cli_version": "codex-cli 0.164.0",
+      "elapsed_seconds": 1324.8642286248505,
+      "events_sha256": "a9106ca1aed312d721a4dbff14746e8a6fef177ae44e5c2b860fb3709cb602c1",
+      "failures": [],
+      "family": "author",
+      "invocation_recorded": true,
+      "reservation": {
+        "batch": "batch-001",
+        "plan_sha256": "d47af9e9dce792b97d50e91fcac79e09bb86225f692d186828718b277090bd66",
+        "result_sha256": "b6ce366feeb278dff1a4b9d6be279e76b302412a1ad34fc9279904b1497cbd6c",
+        "selection": 0,
+        "state": "failure_stop"
+      },
+      "result_sha256": "d3c85612c26b298eba7825249013deaee04dfb5f1bff33c4dd065ce6288585df",
+      "settings": {
+        "model": "gpt-6-astra",
+        "model_reasoning_effort": "max",
+        "service_tier": "default"
+      },
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "usage": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 0,
+          "input_tokens": 78809,
+          "output_tokens": 62878,
+          "reasoning_output_tokens": 8407
+        }
+      ]
+    },
+    {
+      "answer_sha256": null,
+      "attempt": "actors/author/chunk-d408217517441b8ab74a/attempt-001",
+      "chunk": "chunk-d408217517441b8ab74a",
+      "cli_version": "codex-cli 0.164.0",
+      "elapsed_seconds": 1800.0254547500517,
+      "events_sha256": "316b9f730649c758e758319ea2b581e9008d8890a3c44910ae5f9199bb4cefac",
+      "failures": [
+        "process_timeout",
+        "missing_backend_usage",
+        "output_schema_failure"
+      ],
+      "family": "author",
+      "invocation_recorded": true,
+      "reservation": {
+        "batch": "batch-001",
+        "plan_sha256": "d47af9e9dce792b97d50e91fcac79e09bb86225f692d186828718b277090bd66",
+        "result_sha256": "b6ce366feeb278dff1a4b9d6be279e76b302412a1ad34fc9279904b1497cbd6c",
+        "selection": 1,
+        "state": "failure_stop"
+      },
+      "result_sha256": "d9b3515bf111d653bf91e2417379911da130dc4450be80c51b44c8600bce7862",
+      "settings": {
+        "model": "gpt-6-astra",
+        "model_reasoning_effort": "max",
+        "service_tier": "default"
+      },
+      "status": "failed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "usage": []
+    }
+  ],
+  "calls_including_reservations": 2,
+  "claim": "Retained actual actor usage only, including failures. No prices, accepted-result benefit, semantic acceptance, review or construction receipt is inferred. Nested counters remain explicit in each usage record; scalar totals are not a billing formula.",
+  "complete_attempt_account": true,
+  "kind": "a_c.stdo301.actual-call-account/1",
+  "reported_scalar_counter_totals": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 0,
+    "input_tokens": 78809,
+    "output_tokens": 62878,
+    "reasoning_output_tokens": 8407
+  },
+  "subject": "repo://stdo-v3-native/fe4941f56a52ed3697a2b516d8d68948b0ea65d9"
+}

@@ -1,0 +1,100 @@
+{
+  "kind": "stdo301.native-publication/1",
+  "issuer": "/root",
+  "publication": "public_test_candidate",
+  "native": {
+    "commit": "fe4941f56a52ed3697a2b516d8d68948b0ea65d9",
+    "cut": "v3.0.1-rc.1",
+    "manifest_path": "specification_methodology/v3/.ai-workspace/work/STDO301_DELIVERY/native-release/runs/rc1-002/stdo-v3.0.1-rc.1-manifest.json",
+    "manifest_sha256": "60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8",
+    "package_path": "specification_methodology/v3",
+    "package_tree": "f6d6183a4902811b4201ec446a9d1a3a39df498f",
+    "parent": "0a04feb788c080183b58cf4a162e88372be1d87e",
+    "qualified_ref": "refs/tags/specification_methodology/v3.0.1-rc.1",
+    "standards_tree": "f372cbcf030e7bfe4be18b754b621ba0431c052b",
+    "tag_object": "6e96ce1d2422508e5620bd12afceda890c556fd6",
+    "tree": "3aa889d2749e05f5c9c1d1375fb27391a8159e99"
+  },
+  "source_candidate": {
+    "commit": "9f70f54d13929b4629808030077da0f1691ce7bd",
+    "package_path": "specification_methodology/v3/build_tenants/common",
+    "package_tree": "f6d6183a4902811b4201ec446a9d1a3a39df498f"
+  },
+  "initial_main_carrier": "31f81c6c026c1c9a03283868edbae62df484c0d5",
+  "selector_object": "969aff5a9b71814c1550f05840e5811a2248bb8c",
+  "release": {
+    "id": 422770275,
+    "url": "https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology/v3.0.1-rc.1",
+    "draft": false,
+    "prerelease": true,
+    "latest": false,
+    "published_at": "2026-10-24T14:11:07Z"
+  },
+  "assets": [
+    {
+      "name": "stdo-v3.0.1-rc.1-manifest.json",
+      "bytes": 13792,
+      "url": "https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology/v3.0.1-rc.1/stdo-v3.0.1-rc.1-manifest.json"
+    },
+    {
+      "name": "stdo-v3.0.1-rc.1-manifest.json.sha256",
+      "bytes": 97,
+      "url": "https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology/v3.0.1-rc.1/stdo-v3.0.1-rc.1-manifest.json.sha256"
+    }
+  ],
+  "proofs": {
+    "publication-plan.json": {
+      "bytes": 17630,
+      "sha256": "6f1779e60b3cc18ffa3b0d2781aa78ac5166693fef38f70e9fb1b6c5b76fa4d8"
+    },
+    "published-refs.json": {
+      "bytes": 962,
+      "sha256": "cb6259891026d06a263499a67d438b3558ba6232cfb5b4dbfd0ccaafc0cb1873"
+    },
+    "assets.json": {
+      "bytes": 1323,
+      "sha256": "072cddec1af5641de966bf32e5341bb9124947357532f4b00b082a9512b13229"
+    },
+    "github-notes.md": {
+      "bytes": 2433,
+      "sha256": "4221dbdb84a11cac847391174466cad272ee120aa77d0750fe35f6ad1bd70290"
+    },
+    "github-release.json": {
+      "bytes": 7678,
+      "sha256": "bf1e0d0abba707f1ddad500a18994824cb9b3fc1ba4ccd5afcac1fa6cc2ffd26"
+    },
+    "github-latest.json": {
+      "bytes": 16915,
+      "sha256": "3d4e8a885e2317366e300f7d6bbb2be31c712d1185f90353d34efe5d9ffa5cbd"
+    },
+    "public-download-proof.json": {
+      "bytes": 221,
+      "sha256": "d1055af0a9885f89b58d3ce48a9fc98c0cd32e709d811bec7fb2109108ec58fa"
+    },
+    "install-public.json": {
+      "bytes": 1063,
+      "sha256": "fe60abd04c128521ca5e8fb955e67a85506cbe597070fbf80b7b9fa9e6c8ec36"
+    },
+    "verify-public.json": {
+      "bytes": 14917,
+      "sha256": "e7828735191c05eaf6f99b65f34591de45109d67096bd5de57707bcf411bc242"
+    },
+    "installed-public.json": {
+      "bytes": 662,
+      "sha256": "a3490fab460f596e81ca25799eacaa9ba35f215c367c78ab0d66b3e734790b0b"
+    }
+  },
+  "result": "Exact atomic refs published; other initially observed refs preserved; both public assets downloaded byte for byte; fresh public Git installation reproduced all 83 payload files plus the manifest.",
+  "claim_review": {
+    "actor": "/root/stdo301_application_review",
+    "outcome": "bounded satisfied",
+    "scope_document_sha256": "7d83b57787135fe75dd86ee7de069f53a3da2be96e341defebeee03344225bca",
+    "notes_sha256": "4221dbdb84a11cac847391174466cad272ee120aa77d0750fe35f6ad1bd70290",
+    "asset_inventory_sha256": "072cddec1af5641de966bf32e5341bb9124947357532f4b00b082a9512b13229",
+    "actual_check": "Exact pins and both asset hashes, installed-manifest equality, unchanged native C/T/M and 83 members including 12 frames; claims preserve acceptance/adoption limits and the pending separate representation. The reviewer made no edits or Git effects."
+  },
+  "representation": "Separate pending artifact: initial batch has one complete chunk, one timeout and sixteen untouched chunks. No completed representation is included in this native publication.",
+  "owner_acceptance": "not_performed",
+  "consumer_adoption": "not_performed",
+  "original_worktree": "Untouched; remote main updated through isolated delivery worktree, no reset or checkout of original dirty main."
+}
