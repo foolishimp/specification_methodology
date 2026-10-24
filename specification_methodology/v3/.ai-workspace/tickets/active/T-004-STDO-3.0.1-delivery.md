@@ -152,5 +152,29 @@ timeout. Sixteen chunks are untouched. The successful attempt reports 78,809
 input and 62,878 output tokens; failed-attempt usage is unknown. All local
 process groups terminated. The failure and accounting remain preserved under
 `representation/generation-initial-1/`; no automatic retry or completed-model
-claim follows. The Executive is selecting a bounded recovery path. Native
-publication is complete independently of this supplemental work.
+claim follows. Native publication is complete independently of this supplemental
+work. The subsequent bounded recovery experiment is recorded below.
+
+### Concise trial closed without answers
+
+A separate private run retained the same source, schema, partition, generator,
+model and effort, appending economical-output instructions to the author prompt.
+Its two concurrent calls each reached the 600-second limit without an answer or
+backend usage record. Neither passes the full actor-evidence gate. This does not
+establish faster generation or assess the proposed output's semantic quality.
+The original successful answer and all prior public/run files remain unchanged;
+all local process groups terminated. No retry or further call is running.
+
+The trial's exact activation, observations and closure are under
+`representation/concise-trial-1/`. The Executive disposition is
+`representation/concise-trial-disposition.json`. Before trial answers existed,
+the nonauthor reviewer selected four source-derived checks and found no defect
+in the available original chunk's sampled authority/admission distinctions.
+No concise answer exists to compare against that baseline.
+
+The native RC remains published and verified. Representation completion remains
+selected and unachieved. After the owner's elapsed-time concern and the failed
+fast-path trial, the Executive requested a resource preference: continue the
+full generation, potentially taking several more hours with no guaranteed
+completion time, or defer the representation. No owner answer, acceptance or
+deferral is inferred. The exhausted grants authorize no additional calls.

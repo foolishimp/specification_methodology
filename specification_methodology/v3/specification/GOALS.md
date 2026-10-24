@@ -17,7 +17,11 @@ representation, qualification and release preparation are selected. Native
 fresh public installation is verified. Four installed-use tasks support the
 bounded amendment predicates, with their recorded limitations. The separate
 Graphify representation remains incomplete after one completed chunk and one
-timeout; its recovery and artifact assessment remain selected under T-004.
+timeout. A separate concise-prompt trial also timed out on both calls at ten
+minutes without answers. All local processes are closed; no further calls are
+running. Representation recovery and artifact assessment remain selected under
+T-004; the owner has been asked to choose continued long-running generation or
+deferral after the timing feedback. Neither choice has been inferred.
 Construction does not satisfy independent review, inherited obligations or
 exact-cut acceptance. Older consumers and the installed builder keep their
 selected meanings. The version label promises no automatic patch compatibility.

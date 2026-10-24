@@ -1,0 +1,59 @@
+{
+  "byte_identical_chunks": true,
+  "chunks_sha256": "e351f2d280dc9adef6abd65b7e05f8e10077d7a945b5c3fb36028a4310b4854e",
+  "model_calls": 0,
+  "modified_author_prompt_sha256": "68e6a55b6c531a387567b6d1e918a284831639ddb313fe36e7cb6697574f93cc",
+  "plan_sha256": "c01a7a13a93d6073463d66d645c036a910e75ac6cc61ae27eacdf9d8c209e0b3",
+  "private_original_guards_sha256": "37b6bf7fe500c6c453f24745c68494ff4611674829a7da02a772e5a567926deb",
+  "six_unchanged_files_verified": true,
+  "source_manifest_sha256": "2d11ec4a6b6dd4646442cd49c915d01549713023a074373f1204dd63524ef8a1",
+  "status": "prepared",
+  "steps": [
+    {
+      "closed_at": "2026-10-24T14:33:40.152883+00:00",
+      "command": [
+        "/Users/jim/src/apps/specification_methodology-301/a_c/applications/stdo-v3-3.0.1-rc.1/.venv/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology-301/a_c/applications/stdo-v3-3.0.1-rc.1/private/concise-probe-1/code/ac_generate.py",
+        "prepare",
+        "--corpus",
+        "/Users/jim/src/apps/specification_methodology-301/a_c/applications/stdo-v3-3.0.1-rc.1/source",
+        "--manifest",
+        "/Users/jim/src/apps/specification_methodology-301/a_c/applications/stdo-v3-3.0.1-rc.1/source-manifest.json",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology-301/a_c/applications/stdo-v3-3.0.1-rc.1/private/concise-probe-1/run",
+        "--mode",
+        "graphify-ac",
+        "--upstream",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout",
+        "--chunk-chars",
+        "120000",
+        "--graph-chars",
+        "40000"
+      ],
+      "exit_code": 0,
+      "operation": "prepare",
+      "started_at": "2026-10-24T14:33:39.913374+00:00",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "c01a7a13a93d6073463d66d645c036a910e75ac6cc61ae27eacdf9d8c209e0b3"
+    },
+    {
+      "closed_at": "2026-10-24T14:33:41.154830+00:00",
+      "command": [
+        "/Users/jim/src/apps/specification_methodology-301/a_c/applications/stdo-v3-3.0.1-rc.1/.venv/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology-301/a_c/applications/stdo-v3-3.0.1-rc.1/private/concise-probe-1/code/ac_generate.py",
+        "graph",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology-301/a_c/applications/stdo-v3-3.0.1-rc.1/private/concise-probe-1/run",
+        "--upstream",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout"
+      ],
+      "exit_code": 0,
+      "operation": "graph",
+      "started_at": "2026-10-24T14:33:40.153164+00:00",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "a4c2325918bc626369ee82717f7774e5aa246db63083639d833cd67cd29953de"
+    }
+  ]
+}
