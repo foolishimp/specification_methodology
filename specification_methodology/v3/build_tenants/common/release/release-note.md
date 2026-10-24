@@ -16,6 +16,10 @@ The substantive amendment makes [F_D](../standards/AXIOMATIC_CALCULUS.md#5-trave
 total deterministic processing, with separate operation permissions and
 unchanged-subject evaluation profiles. ODD imports that common kind by exact
 edition while preserving its operation and runtime authority contracts.
+The former ODD kind-level F_D authority shorthand is proposed to be
+superseded by explicit Product/ABG admission and closure owners; evaluator
+proposals remain ineffective until admitted, and deterministic admission
+obligations remain in force.
 Supporting clarification concerns continuation-sensitive sufficiency,
 qualified references, structural laws versus consumer adequacy and optional
 information-equivalent comparison. Native [finite examples](../standards/examples/DETERMINISTIC_CONTRACTS.md)
@@ -28,14 +32,18 @@ automatically patch-compatible. Each existing operation follows the
 unknown eligibility stays pending. Immutable consumers keep their selected
 meanings and permissions, and no automatic adoption follows.
 
-Whole-method semantic qualification, inherited acceptance obligations,
-covering independent assessment, actual-use evidence and exact-cut human
-acceptance retain their separate gates. Construction checks alone establish
-none of them. Publication or test-release qualification cannot silently
+Inherited whole-method standing remains `not_ready`; owner acceptance is
+`not_given`, covering acceptance review is `unassigned`, and actual-use
+qualification on the amended source is unperformed. Working amendment review
+and construction checks do not discharge those obligations. The deterministic
+kind's purpose/qualification amendment and ODD import/authority supersessions
+remain pending exact-subject meaning acceptance. Whole-method semantic
+qualification and exact-cut human acceptance retain their separate gates.
+Publication or test-release qualification cannot silently
 raise those claims, change the v2 matched cohort or activate a plugin globally.
 
-A source-matched supplemental a_c/Graphify representation is prepared and
-assessed separately from this native payload. Historical representations keep
+A source-matched supplemental a_c/Graphify representation remains to be
+prepared and assessed separately from this native payload. Historical representations keep
 their own source identities. Its source binding and publication evidence
 must name this candidate's exact frozen cut before a matching claim is made;
 it is not selected as an installed dependency by this payload.

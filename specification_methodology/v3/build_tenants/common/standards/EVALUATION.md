@@ -129,8 +129,8 @@ not (P2, P6).
 
 An unchanged-subject deterministic evaluation uses the operation profile of
 [AXIOMATIC_CALCULUS §5](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds).
-Its kind supplies neither operation permission nor a quality conclusion;
-authorized witness persistence and construction of the judged domain
+That owner's authority boundary applies; kind classification establishes no quality conclusion.
+Authorized witness persistence and construction of the judged domain
 subject remain separate. The total deterministic qualification is additional
 to the evaluation profile, under the [migration relation](RELEASE.md#deterministic-kind-migration).
 

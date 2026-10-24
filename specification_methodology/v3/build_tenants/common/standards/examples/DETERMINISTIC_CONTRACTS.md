@@ -6,8 +6,11 @@ These self-contained finite examples apply
 and [ACTIVATION results](../ACTIVATION.md#3-step-results-and-disposition).
 They select no runtime or mandatory representation. Each fixture's finite
 domain, policy and oracle below are its basis Γ. The companion
-[Python program](deterministic_contracts.py) exhausts those domains using
-only the standard library. Run `python3 -I deterministic_contracts.py` in
+[Python program](deterministic_contracts.py) exhausts the computational
+domains identified below using
+only the standard library. Authority, witness-log permission and the
+unperformed-assessment case are source-first logical-review cases, not
+executable permission proofs. Run `python3 -I deterministic_contracts.py` in
 this directory. A passing run supplies bounded model evidence; it is neither
 independent review nor whole-method qualification.
 
@@ -32,8 +35,9 @@ below prove termination independently of observing a successful run.
 | B | A / request put_A | B / refusal |
 
 The request is a modeled effect proposal, not physical completion. A
-denial's evaluated predicate is “this request is authorized”; its
-`permission_denied` signature stop maps to falsified. Unknown physical
+denial's evaluated predicate is “this request is authorized”; the table and
+code's `refusal` denotes the cause-qualified `permission_denied` signature
+stop, which maps to falsified. Unknown physical
 completion belongs to the actual effect owner's contract. Likewise, under
 a construction-only grant, `v_double(2)` establishes candidate availability
 only; a separate judgment, admission or closure claim has no supporting
@@ -42,9 +46,12 @@ operation or evidence.
 Negative evaluation case: sorting `[2,1]` in place and then calling it an
 assessment of the original violates the unchanged-subject profile. The
 changed list may be a construction output under a construction grant; its
-sortedness is not the original list's sortedness. The executable checks
-both the mutation and this false attribution. Manual evaluation and mixed
-human/software witness logging have the same permission boundary.
+sortedness is not the original list's sortedness. The executable shows the
+mutation and opposite original/successor sortedness results; logical review
+applies the evaluation profile to reject the false attribution. Manual
+evaluation and mixed human/software witness logging have the same permission
+boundary. The script does not implement an authorization or log-admission
+mechanism, so it makes no executable claim about that boundary.
 
 ## Exhaustion
 
@@ -54,15 +61,17 @@ candidate. It terminates after at most two copies. `v_sorted` accepts lists
 of length at most three over `{0,1}` and the same fuel. It inspects one
 adjacent pair per fuel unit, stopping at the first inversion, when every
 pair has been checked, or when fuel ends. It terminates after at most two
-comparisons. Its declared output is a closed assessment report containing
+comparisons. Its one declared outcome is a closed assessment report containing
 the exact input/basis, inspected-pair evidence and any residual; such a
-report can contain an indeterminate result.
+report can carry the `assessment_exhausted` stop with its indeterminate
+result. The stop/report is one declared outcome; its availability to an
+enclosing step is assessed separately.
 
 | Selected application and observation | Assessed predicate and result | Work result | Signature and traversal stop |
 |---|---|---|---|
 | `v_copy([0,1],1)` retains prefix `[0]`, with no complete candidate | Complete copy is available: falsified | `incomplete` → falsified for output availability | `copy_exhausted` maps to falsified, cause fuel ended before the required output |
 | `v_sorted([0,1,0],1)` inspects `(0,1)`, with the second pair unexamined | Whole list is sorted: indeterminate on admitted inspected-pair evidence | `candidate_ready` → satisfied for the closed report and transition evidence being available only | `assessment_exhausted` maps to indeterminate, cause performed assessment has insufficient evidence |
-| An activated assessing step spends its budget in setup and never invokes `v_sorted` | No assessment result | `incomplete` → falsified for the step's own output availability; the unperformed assessment remains residual work | No traversal application exists and therefore no `v_sorted` judgment or stop exists |
+| An activated assessing step spends its budget in setup and never invokes `v_sorted` | No assessment result | `incomplete` → falsified for the step's own output availability; the unperformed assessment remains residual work | No traversal application exists and therefore no `v_sorted` judgment or stop exists; the enclosing step retains its own stop and cause |
 
 The two declared exhaustion stops have different predicates and parent core
 values. Neither maps to satisfied. A report's availability and its assessed
@@ -70,7 +79,8 @@ predicate are not one judgment. Lists of length zero or one are sorted
 without inspecting a pair. An observed inversion falsifies sortedness even
 when later pairs remain unexamined. No result is inferred from a planned
 invocation. These are distinct bounded traversals, not totality proofs for
-an unbounded operation.
+an unbounded operation. The setup-before-invocation row is a logical-review
+case under ACTIVATION §3, not a result of the executable example.
 
 ## Continuation-sensitive sufficiency
 
@@ -120,8 +130,24 @@ bytes/identity; S and I then require different continuations, falsifying
 its sufficiency for that consumer. Adding a type name alone cannot repair
 missing standing.
 
-The fixture assumes exact local key resolution and accessible immutable
-records. A hash-based realization would additionally state its collision,
+The acquisition model takes three report keys and the explicit booleans
+accessible, target-present and basis-current. Its complete eight-row oracle
+per key is: all four inaccessible cases return `inaccessible`; of the four
+accessible cases, both absent-target cases return `missing`, the present but
+old-basis case returns `stale`, and only the present/current case returns the
+qualified record as `resolved`. This yields 24 tested cells. Unavailable,
+missing and stale targets yield no usable record and keep the dependent
+sufficiency claim unsupported; their actual gap, invalidation, refusal or
+residual follows the consuming operation's owner, not a universal result
+mapping added by this fixture. The executable also checks that resolution
+does not mutate the record store and that valid readouts survive.
+
+These access flags and version comparisons model an acquisition boundary;
+they are not observed filesystem, transport or human-handover behavior.
+The currentness test covers the declared basis-version invalidator only.
+Other material invalidators require their own scoped evidence. Logical review
+checks the human handover and required residual meanings; actual use remains
+unperformed. A hash-based realization would additionally state its collision,
 authenticity and access assumptions; no digest alone proves semantic
 sufficiency. A manual document reference and a mixed handover can use the
 same record and policy without any annotation architecture or event log.
@@ -143,6 +169,8 @@ finite-function equality; composition is ordinary composition and identities
 return their inputs. The constant subject-only projection cannot factor j:
 hS and hI share its output but require different readouts.
 
+The following is a finite mathematical argument and executable structural
+check, not a qualified categorical demonstration under FOUNDATIONS.
 For the structural counterexample, take the finite chain category with
 objects X,H,V,D and exactly the displayed generated function for each ordered
 pair in that chain, including all identities and composites. There are ten
@@ -159,9 +187,13 @@ tables do not replace those obligations or discharge unresolved H1.
 
 ## Migration and comparison
 
-The six finite operations above have explicit closed dependencies, bounded
-loops and declared outcomes; their eligibility is witnessed within these
-domains. An old evaluator with an undeclared clock dependency or missing
+The five declared traversals `v_double`, `v_sorted_full`, `v_put_A`,
+`v_copy` and `v_sorted` have explicit closed dependencies, bounded operation
+arguments and declared outcomes. Their finite proofs establish the eligibility
+conditions of RELEASE's first row within their exact domains and profiles;
+this is author evidence, not independent acceptance. The transition and
+reference-acquisition functions are finite mathematical fixtures, not additional
+adopted a_c operations. An old evaluator with an undeclared clock dependency or missing
 termination evidence fails new-kind qualification despite preserving its
 subject. It takes the pending-evidence or unresolved row of
 [RELEASE's migration relation](../RELEASE.md#deterministic-kind-migration),

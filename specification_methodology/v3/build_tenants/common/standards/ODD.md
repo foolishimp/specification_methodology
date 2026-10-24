@@ -1081,13 +1081,22 @@ and violates A0 (P6).
 
 A5 Bounded construction and declared authority. F_P may inspect, discover, reason, draft,
 transform and propose within the bounded action. F_P must not close the
-edge, emit runtime events, mutate ledgers or decide re-entry. Durable
-evidence and closure truth are established by the declared evaluation,
-ABG and Product admission and closure operations under their respective
-contracts and grants. Each operation names its authority, admissible evidence
-and permitted consequences; its use of the common F_D regime requires the
-total deterministic contract. F_D classification grants no assessment,
-runtime admission, ledger-writing or closure authority (P0, P6). An F_P
+edge, emit runtime events, mutate ledgers or decide re-entry. Product admission
+owns admission of Product facts; ABG's declared admission mechanisms own
+admission of typed evidence and evaluator outputs into L/E (A1/A1a).
+Closure truth is ABG's admitted `evaluate_action` fold over admitted evidence,
+recorded as `EdgeClosureDecision` under A4a, A6 and A8. F_P evaluator outputs
+remain proposals until their own admission; merely declaring an evaluation
+does not establish durable evidence, closure or permission.
+
+These admission gates retain deterministic validation against their declared
+criteria and their own grants; §11.7A applies that obligation to method
+artifacts. A gate claiming common F_D additionally establishes §5's
+total-domain eligibility. The kind's no-authority rule is
+[AXIOMATIC_CALCULUS §5](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds)'s;
+here it preserves the separate Product and ABG admission and closure owners.
+Each operation names its admissible evidence and permitted consequences
+(P0, P6). An F_P
 worker must not be given an F_D-authored semantic extraction recipe when
 the edge requires F_P judgment (P0, P6).
 

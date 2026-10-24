@@ -6,8 +6,8 @@ Purpose: The owning sections for the model signature and typed records, the laws
 
 Binds:
 
-- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=9928b0bd70065b299d17ea767be46bc7ead5d749bb08940a7a9acc5ea7e008b0; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=6fc3127e2a64272ac41afa0f14246daaecb2ddfa8dd391b1df4cd2fc05b25474; section sha256=e8348ef0606660ec194dabedcd1a2df488019d865c2451a1a4daa9c014e2d673 spanning to #formal-representation)
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5; section sha256=4598dccee4a65f206b604ea9a4c19db8aaff855a6b2fdc8e151dcc37f1439cb1 spanning to #formal-representation)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 a link to the owning section, the digest of its member and the digest of that
@@ -50,9 +50,9 @@ Routes, in order:
 15. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
 16. [AXIOMATIC_CALCULUS.md#foundation-to-law](../AXIOMATIC_CALCULUS.md#foundation-to-law)
 
-Size of this frame: 72259 bytes.
+Size of this frame: 75112 bytes.
 
-Source: FOUNDATIONS.md#authority-kinds sha256=6fc3127e2a64272ac41afa0f14246daaecb2ddfa8dd391b1df4cd2fc05b25474
+Source: FOUNDATIONS.md#authority-kinds sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5
 
 ### Authority kinds
 
@@ -119,7 +119,7 @@ so one list keeps the answer the same in every member, and a capability,
 a label or a passing check can never be read as a permission (P6).
 
 
-Source: AXIOMATIC_CALCULUS.md#2-signature sha256=7a89fafe5a870a5cf9babdd79fff0c1cc442e4377eb8c49a76d188ba791102de
+Source: AXIOMATIC_CALCULUS.md#2-signature sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
 
 ## 2. Signature
 
@@ -237,7 +237,7 @@ code or any other representation only when its encoding profile proves
 that every tuple relation is preserved or explicitly refused (P1, P4b).
 
 
-Source: AXIOMATIC_CALCULUS.md#3-typed-records sha256=7a89fafe5a870a5cf9babdd79fff0c1cc442e4377eb8c49a76d188ba791102de
+Source: AXIOMATIC_CALCULUS.md#3-typed-records sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
 
 ## 3. Typed records
 
@@ -376,7 +376,7 @@ domains. An undeclared residual kind or value refuses structural admission
 (P3).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-002-scoped-identity sha256=7a89fafe5a870a5cf9babdd79fff0c1cc442e4377eb8c49a76d188ba791102de
+Source: AXIOMATIC_CALCULUS.md#ac-002-scoped-identity sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
 
 ### AC-002 Scoped identity
 
@@ -393,7 +393,7 @@ binding beside it: equal spelling, payload equality, position in any
 structure and carrier equality do not establish semantic identity (P3).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-003-reference-closure sha256=7a89fafe5a870a5cf9babdd79fff0c1cc442e4377eb8c49a76d188ba791102de
+Source: AXIOMATIC_CALCULUS.md#ac-003-reference-closure sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
 
 ### AC-003 Reference closure
 
@@ -405,7 +405,7 @@ wrong-sort, wrong-basis, locally-and-externally ambiguous or
 undeclared-field references refuse structural admission (P3, P5).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-005-authority-conservation sha256=7a89fafe5a870a5cf9babdd79fff0c1cc442e4377eb8c49a76d188ba791102de
+Source: AXIOMATIC_CALCULUS.md#ac-005-authority-conservation sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
 
 ### AC-005 Authority conservation
 
@@ -418,7 +418,7 @@ interpreting, encoding, evaluating and transporting a record, none of
 which transfers authority (P6, P4b).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-006-basis-coherence sha256=7a89fafe5a870a5cf9babdd79fff0c1cc442e4377eb8c49a76d188ba791102de
+Source: AXIOMATIC_CALCULUS.md#ac-006-basis-coherence sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
 
 ### AC-006 Basis coherence
 
@@ -432,7 +432,7 @@ mixed basis is an explicitly owned record, and individually valid
 coordinates do not create a coherent composite basis by proximity (P6, P3).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal sha256=7a89fafe5a870a5cf9babdd79fff0c1cc442e4377eb8c49a76d188ba791102de
+Source: AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
 
 ### AC-007 Constraint and refusal
 
@@ -535,7 +535,7 @@ the activation outcome `closure_unresolved` of
 predicate (P5, P6).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-008-explicit-latitude sha256=7a89fafe5a870a5cf9babdd79fff0c1cc442e4377eb8c49a76d188ba791102de
+Source: AXIOMATIC_CALCULUS.md#ac-008-explicit-latitude sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
 
 ### AC-008 Explicit latitude
 
@@ -546,7 +546,7 @@ the same rule for any two values; this law is its form over `L` and `T`
 (P6, P1).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-009-residual-conservation sha256=7a89fafe5a870a5cf9babdd79fff0c1cc442e4377eb8c49a76d188ba791102de
+Source: AXIOMATIC_CALCULUS.md#ac-009-residual-conservation sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
 
 ### AC-009 Residual conservation
 
@@ -556,7 +556,7 @@ disposition creates an exact successor model. Absence from a projection is
 not resolution (P4b).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-013-transformation sha256=7a89fafe5a870a5cf9babdd79fff0c1cc442e4377eb8c49a76d188ba791102de
+Source: AXIOMATIC_CALCULUS.md#ac-013-transformation sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
 
 ### AC-013 Transformation
 
@@ -745,7 +745,7 @@ step: what was preserved, introduced and removed, the external resolution
 witnesses and the residuals.
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-014-judgment-separation sha256=7a89fafe5a870a5cf9babdd79fff0c1cc442e4377eb8c49a76d188ba791102de
+Source: AXIOMATIC_CALCULUS.md#ac-014-judgment-separation sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
 
 ### AC-014 Judgment separation
 
@@ -776,7 +776,7 @@ subject. Promotion is an explicit relation between the unchanged subject
 and its admission or acceptance judgment (P6, P3).
 
 
-Source: AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds sha256=7a89fafe5a870a5cf9babdd79fff0c1cc442e4377eb8c49a76d188ba791102de
+Source: AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
 
 ## 5. Traversals and functor kinds
 
@@ -853,6 +853,13 @@ constraint never becomes a case that the evidence merely cannot decide.
   semantic choice and undeclared clock, filesystem or global dependencies
   are outside this contract (P3, P4a, P6).
 
+  Here B is the exact basis of v, D_B is its declared logical input domain
+  X_v (including material state and resource inputs), and Outcome_B is the
+  declared result-or-stop domain Y_v | Omega_v. The function f_B determines
+  one such outcome, including a stop with its closed report where declared;
+  that report and its stop are not two outcomes. An enclosing step's output
+  availability remains a separate predicate.
+
   State-dependent processing declares input state and the meaning of its
   returned next state and value. Refusal and exhaustion retain their cause
   and evaluated predicate. The signature and traversal bind each stop to
@@ -877,6 +884,13 @@ other named domain operations are not aliases for `F_D`, `F_P` or `F_H`.
 Different traversals may share one functor kind without sharing identity,
 semantics, inputs, outputs, authority or evidence (P3, P6).
 
+Classifying an operation as F_D grants no semantic, evaluation, operation
+or decision authority. This is the kind-specific application of
+[AC-005](../AXIOMATIC_CALCULUS.md#ac-005-authority-conservation) and
+[FOUNDATIONS Authority kinds](../FOUNDATIONS.md#authority-kinds): the exact
+operation contract and admitted grant determine its permissions and
+consequences. Consumers apply this boundary to their own operations.
+
 Evaluation-operation profile. An operation declared to evaluate an unchanged
 subject identifies that subject, admissible reads, witness or log outputs,
 permitted writes, stops and results, authority and invalidation conditions.
@@ -890,6 +904,13 @@ Closedness concerns dependencies material to the computation, not complete
 world knowledge. This kind's totality is stronger than total handling of
 conditions in [ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement).
 Unbounded work is not automatically `F_P` when a totality argument is missing.
+The calculus does not classify every executable process as one of its kinds.
+A new non-total deterministic process is outside qualifying F_D. A route to
+an F_D claim is a separately identified bounded successor with its own
+domain, outcomes, dependency closure and termination argument; a fuel bound
+is one possible construction. This proves nothing about the unbounded
+original. Other work remains governed by its selected operation and execution
+basis without being asserted to be a qualifying a_c application.
 Existing operations enter this edition only through the evidence-sensitive
 [migration relation](../RELEASE.md#deterministic-kind-migration). The
 [finite examples](../examples/DETERMINISTIC_CONTRACTS.md) distinguish construction,
@@ -913,6 +934,26 @@ value `incomplete` of a step
 material relation: an application without its traversal has one core
 value, and the shared word does not let it be read as a step's stop (P5).
 
+A claimed application also meets its bound kind's contract in §5. A missing
+required declaration (for example the F_D termination argument), a demonstrated
+undeclared material dependency, a disallowed kind or a demonstrated
+non-totality is a contract violation. A judgment of that violation is
+`falsified` under AC-007; structural admission of the unlawful application
+returns `refusal(constraint)`. This is not a judgment that every unproved
+operation diverges. If a performed assessment on a valid basis cannot decide
+the declared operation's totality, its totality judgment is `indeterminate`
+under AC-007 and the F_D eligibility claim remains unestablished. An
+unperformed assessment has no result.
+
+No invocation is admitted as qualifying F_D by an unestablished claim.
+Before a step exists, missing authority, unsupported basis or unresolved
+closure follows the distinct admission/activation outcomes of
+[ACTIVATION §3](../ACTIVATION.md#admission-and-activation). If a lawful a_c
+operation has been applied and awaits admissible evidence, its declared
+`hold`/`gap`/`refusal` follows AC-007 by cause. These predicates and boundaries
+are not interchangeable, and this clause creates no universal stop for all
+unproved processes, no new kind and no automatic F_P classification.
+
 ### AC-016 Typed composition
 
 Two traversals compose only when the first result type and judgment
@@ -924,7 +965,7 @@ F_K2[w] compose F_K1[v]
 
 Composition retains both traversal identities, intermediate results,
 judgments, evidence, authority, provenance and stop states. It cannot
-flatten construction, evaluation and human
+flatten probabilistic proposal, deterministic construction or evaluation and human
 decision into one undifferentiated operation. `a_c` prescribes no
 universal `F_P -> F_D -> F_H` sequence; each application owns its lawful
 topology (P4a, P4b, P6). FOUNDATIONS §3 P4a consumes this law.
@@ -936,7 +977,7 @@ law in [FOUNDATIONS §4](../FOUNDATIONS.md#assertions-and-observation); composit
 alone establishes neither adequate observations nor a Markov property.
 
 
-Source: FOUNDATIONS.md#results sha256=6fc3127e2a64272ac41afa0f14246daaecb2ddfa8dd391b1df4cd2fc05b25474 rows=7/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
+Source: FOUNDATIONS.md#results sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5 rows=7/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -1110,7 +1151,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=6fc3127e2a64272ac41afa0f14246daaecb2ddfa8dd391b1df4cd2fc05b25474
+Source: FOUNDATIONS.md#conjunction-of-results sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5
 
 ### Conjunction of results
 
@@ -1232,7 +1273,7 @@ premises hold ([ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement),
 Refinement).
 
 
-Source: AXIOMATIC_CALCULUS.md#foundation-to-law sha256=7a89fafe5a870a5cf9babdd79fff0c1cc442e4377eb8c49a76d188ba791102de rows=9/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
+Source: AXIOMATIC_CALCULUS.md#foundation-to-law sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c rows=9/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
 
 ### Foundation to law
 
@@ -1247,8 +1288,10 @@ which the commitments do not supply:
   traversals, transformations and judgments;
 - (ii) a model is interpreted from an exact subject and may be encoded in
   a carrier, and subject, model and carrier are separately identified;
-- (iii) some predicates over a model are decided mechanically, and others
-  need bounded probabilistic construction or explicit human adjudication.
+- (iii) model applications may construct values or proposed successors as
+  well as decide predicates; some operations are determined by closed
+  computation, while others need bounded probabilistic processing or
+  explicit human adjudication.
 
 | Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
 |---|---|---|---|---|
@@ -1260,7 +1303,7 @@ which the commitments do not supply:
 | P4b (derived from P0 and P2), P6 (independent) | By P4b an unresolved condition persists until disposed, and by P6 only an authority disposes it, so a material uncertainty stays in the model until an authorised disposition; no projection, compression, interpretation or encoding erases a residual, and absence from a projection is not resolution | [Residual](../AXIOMATIC_CALCULUS.md#residual), [AC-009](../AXIOMATIC_CALCULUS.md#ac-009-residual-conservation) | each residual kind's domains: the owning signature; each disposition: the competent authority | 9, 10 |
 | P4b (derived from P0 and P2), P3 (independent), P6 (independent) | By P4b a transformation's effects are facts that persist, by P3 they bind exact records, and by P6 their classification is accountable, so a transformation proves a closed delta over local records and external resolutions, each classified once as preserved or removed, with preservation shown by byte or typed equality; its result is a proposed successor that admits nothing | [AC-013](../AXIOMATIC_CALCULUS.md#ac-013-transformation) | each transformation, with its operation authority and preservation relation: the owner of the transformation record | 3, 4, 10 |
 | P6 (independent), P3 (independent) | By P6 judgment and promotion are separate authorities, and by P3 a judgment binds its exact subject, so a judgment points to an unchanged subject, and promotion is a separate relation between that subject and its admission or acceptance judgment | [AC-014](../AXIOMATIC_CALCULUS.md#ac-014-judgment-separation) | none | 9, 10 |
-| P4a (independent), P3 (independent), P6 (independent); (iii) | By P4a a traversal composes only through its declared contract, by P3 it binds one functor kind, by P6 its authority is separate, and by (iii) some predicates are decided mechanically and others not, so a traversal is a typed contract applied under exactly one functor kind; total deterministic processing, bounded probabilistic construction and human adjudication are distinct kinds, each distinct from actor, executor and domain operation, and the name asserts no categorical functor; traversals compose only under typed composition, which keeps both identities and every intermediate fact | [§5](../AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds), [AC-015](../AXIOMATIC_CALCULUS.md#ac-015-functor-classification), [AC-016](../AXIOMATIC_CALCULUS.md#ac-016-typed-composition) | the total-domain requirement for F_D and the unchanged-subject evaluation profile: §5; the functor kinds permitted for each traversal: the owning signature; the order of kinds in an application: that application | 4, 8, 10 |
+| P4a (independent), P3 (independent), P6 (independent); (iii) | By P4a a traversal composes only through its declared contract, by P3 it binds one functor kind, by P6 its authority is separate, and by (iii) applications include construction and judgment under different processing conditions, so a traversal is a typed contract applied under exactly one functor kind; total deterministic processing, bounded probabilistic construction and human adjudication are distinct kinds, each distinct from actor, executor and domain operation, and the name asserts no categorical functor; traversals compose only under typed composition, which keeps both identities and every intermediate fact | [§5](../AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds), [AC-015](../AXIOMATIC_CALCULUS.md#ac-015-functor-classification), [AC-016](../AXIOMATIC_CALCULUS.md#ac-016-typed-composition) | F_D purpose extending to deterministic construction, its total-domain requirement and the unchanged-subject evaluation profile: §5; the functor kinds permitted for each traversal: the owning signature; the order of kinds in an application: that application | 4, 8, 10 |
 
 Purpose and material relation: an actor
 started on this member sees which rules of the calculus follow from the

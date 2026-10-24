@@ -6,8 +6,8 @@ Purpose: The owning sections for build-tenant binding, ambiguity governance with
 
 Binds:
 
-- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=9928b0bd70065b299d17ea767be46bc7ead5d749bb08940a7a9acc5ea7e008b0; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=6fc3127e2a64272ac41afa0f14246daaecb2ddfa8dd391b1df4cd2fc05b25474; section sha256=e8348ef0606660ec194dabedcd1a2df488019d865c2451a1a4daa9c014e2d673 spanning to #formal-representation)
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5; section sha256=4598dccee4a65f206b604ea9a4c19db8aaff855a6b2fdc8e151dcc37f1439cb1 spanning to #formal-representation)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 a link to the owning section, the digest of its member and the digest of that
@@ -49,9 +49,9 @@ Routes, in order:
 14. [SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding](../SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding)
 15. [SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity](../SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity)
 
-Size of this frame: 96894 bytes.
+Size of this frame: 97117 bytes.
 
-Source: SPEC_METHOD.md#11-build-tenant-binding sha256=8fed1d4e7e7f2748b0b3a573d0571d7f753dd13948a2757c49c3505a0cdea950
+Source: SPEC_METHOD.md#11-build-tenant-binding sha256=b2773dc0c9feb429b6b357bcfd60e7df46e54db8adcb04dc8d6dbfa023b73677
 
 ## 11. Build-tenant binding
 
@@ -100,8 +100,8 @@ Terms used in this section:
 
 The common deterministic functor kind is a separate coordinate owned by
 [AXIOMATIC_CALCULUS §5](../AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds).
-A binding that claims it establishes its total-domain contract while
-retaining the operation's subject, evidence and effect permissions. Human,
+A binding that claims F_D establishes the common kind's total-domain contract.
+It retains the operation's subject, evidence and effect permissions. Human,
 machine and mixed bindings preserve these same distinctions; no runtime,
 event log or annotation carrier follows from the classification.
 
@@ -254,7 +254,7 @@ tenant-local realisation derivative until ratified (rule 1). Rule 4 applies
 tenants need not behave identically outside the contract.
 
 
-Source: SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle sha256=8fed1d4e7e7f2748b0b3a573d0571d7f753dd13948a2757c49c3505a0cdea950
+Source: SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle sha256=b2773dc0c9feb429b6b357bcfd60e7df46e54db8adcb04dc8d6dbfa023b73677
 
 ## 5. Ambiguity governance and lifecycle
 
@@ -325,7 +325,7 @@ to lifecycle phases: an unanswered phase is a recorded gap, never a silent
 absence.
 
 
-Source: FOUNDATIONS.md#2-ontology sha256=6fc3127e2a64272ac41afa0f14246daaecb2ddfa8dd391b1df4cd2fc05b25474
+Source: FOUNDATIONS.md#2-ontology sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5
 
 ## 2. Ontology
 
@@ -617,14 +617,14 @@ members cannot answer one question two ways, and using a concept grants
 no authority over it (P1, P6).
 
 
-Source: EVALUATION.md#2-separation sha256=4255b875803924b3731e9b518934c0b5949ce4bc6ce12a17c40ec61c02cd8550
+Source: EVALUATION.md#2-separation sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff
 
 ## 2. Separation
 
 An unchanged-subject deterministic evaluation uses the operation profile of
 [AXIOMATIC_CALCULUS §5](../AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds).
-Its kind supplies neither operation permission nor a quality conclusion;
-authorized witness persistence and construction of the judged domain
+That owner's authority boundary applies; kind classification establishes no quality conclusion.
+Authorized witness persistence and construction of the judged domain
 subject remain separate. The total deterministic qualification is additional
 to the evaluation profile, under the [migration relation](../RELEASE.md#deterministic-kind-migration).
 
@@ -669,7 +669,7 @@ scope (P3;
 [RF-005](../REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates)).
 
 
-Source: EVALUATION.md#3-independent-assessment sha256=4255b875803924b3731e9b518934c0b5949ce4bc6ce12a17c40ec61c02cd8550
+Source: EVALUATION.md#3-independent-assessment sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff
 
 ## 3. Independent assessment
 
@@ -744,7 +744,7 @@ policy the governing basis states for the claim; the default where it is not
 stated is that they are not independent.
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation sha256=7a89fafe5a870a5cf9babdd79fff0c1cc442e4377eb8c49a76d188ba791102de
+Source: AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
 
 ### AC-018 Structural and semantic separation
 
@@ -758,7 +758,7 @@ the semantic fidelity of an interpretation covers its meaning and
 materiality (P1, P6).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-019-valid-model sha256=7a89fafe5a870a5cf9babdd79fff0c1cc442e4377eb8c49a76d188ba791102de
+Source: AXIOMATIC_CALCULUS.md#ac-019-valid-model sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
 
 ### AC-019 Valid model
 
@@ -768,7 +768,8 @@ A model `M_b` is a valid model of `a_c` under signature `Sigma`, written
 1. `Sigma` and the exact `a_c` basis resolve;
 2. every record satisfies AC-001 through AC-009;
 3. every claimed closure, projection, overlay, transformation, judgment
-   and composition satisfies its applicable law;
+   and composition satisfies its applicable law, and every claimed functor
+   application satisfies AC-015 and its bound kind's §5 contract;
 4. interpretation fidelity and residual dispositions bind the exact
    subject;
 5. structural evaluation and semantic acceptance remain distinct and both
@@ -781,7 +782,7 @@ the semantic or authority subset unless the model supplies an exact lawful
 decision contract for it (P6, P1).
 
 
-Source: ACTIVATION.md#effects sha256=9928b0bd70065b299d17ea767be46bc7ead5d749bb08940a7a9acc5ea7e008b0
+Source: ACTIVATION.md#effects sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
 
 ### Effects
 
@@ -834,7 +835,7 @@ counterexample already established for the declared outcome, and an
 effect that may still be acting.
 
 
-Source: FOUNDATIONS.md#results sha256=6fc3127e2a64272ac41afa0f14246daaecb2ddfa8dd391b1df4cd2fc05b25474 rows=6/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
+Source: FOUNDATIONS.md#results sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5 rows=6/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -1007,7 +1008,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=6fc3127e2a64272ac41afa0f14246daaecb2ddfa8dd391b1df4cd2fc05b25474
+Source: FOUNDATIONS.md#conjunction-of-results sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5
 
 ### Conjunction of results
 
@@ -1129,7 +1130,7 @@ premises hold ([ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement),
 Refinement).
 
 
-Source: AXIOMATIC_CALCULUS.md#foundation-to-law sha256=7a89fafe5a870a5cf9babdd79fff0c1cc442e4377eb8c49a76d188ba791102de rows=1/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
+Source: AXIOMATIC_CALCULUS.md#foundation-to-law sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c rows=1/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
 
 ### Foundation to law
 
@@ -1144,8 +1145,10 @@ which the commitments do not supply:
   traversals, transformations and judgments;
 - (ii) a model is interpreted from an exact subject and may be encoded in
   a carrier, and subject, model and carrier are separately identified;
-- (iii) some predicates over a model are decided mechanically, and others
-  need bounded probabilistic construction or explicit human adjudication.
+- (iii) model applications may construct values or proposed successors as
+  well as decide predicates; some operations are determined by closed
+  computation, while others need bounded probabilistic processing or
+  explicit human adjudication.
 
 | Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
 |---|---|---|---|---|
@@ -1157,7 +1160,7 @@ foundations and which are choices, with the owner of each choice, so no
 choice is presented as derived (P6, P1).
 
 
-Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=4255b875803924b3731e9b518934c0b5949ce4bc6ce12a17c40ec61c02cd8550 rows=6/17 selected by the anchors this frame carries; the consumers paragraph of 17 items is omitted
+Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff rows=6/17 selected by the anchors this frame carries; the consumers paragraph of 17 items is omitted
 
 ### Foundation to law: claims, evidence, assessment and acceptance
 
@@ -1193,7 +1196,7 @@ they are traced in family F3 at
 what §4 decides about the review record, triage and returns.
 
 
-Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=4255b875803924b3731e9b518934c0b5949ce4bc6ce12a17c40ec61c02cd8550 rows=0/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
+Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff rows=0/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
 
 ### Foundation to law: conformance, equivalence and qualification
 
@@ -1222,7 +1225,7 @@ last two rows; its §5 maps the method discriminators to cases and
 logical-review checks.
 
 
-Source: SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding sha256=8fed1d4e7e7f2748b0b3a573d0571d7f753dd13948a2757c49c3505a0cdea950 rows=3/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
+Source: SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding sha256=b2773dc0c9feb429b6b357bcfd60e7df46e54db8adcb04dc8d6dbfa023b73677 rows=3/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
 
 ### Foundation to law: chain, outcome and build-tenant binding
 
@@ -1257,7 +1260,7 @@ the rows §8 applies and the families that trace its statement of the
 step's results and its use of the tenant's binding.
 
 
-Source: SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity sha256=8fed1d4e7e7f2748b0b3a573d0571d7f753dd13948a2757c49c3505a0cdea950 rows=1/10 selected by the anchors this frame carries; the consumers paragraph of 10 items is omitted
+Source: SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity sha256=b2773dc0c9feb429b6b357bcfd60e7df46e54db8adcb04dc8d6dbfa023b73677 rows=1/10 selected by the anchors this frame carries; the consumers paragraph of 10 items is omitted
 
 ### Foundation to law: change management and ambiguity
 

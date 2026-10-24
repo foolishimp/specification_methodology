@@ -36,11 +36,16 @@ are unchanged. Missing totality proof never automatically selects F_P.
 ODD imports the common F_D kind by exact edition while retaining distinct
 operation grants, evidence and closure contracts. Its former kind-level
 authority wording is superseded by explicit authority owners; evaluation
-profiles remain enforceable. Each existing use receives one evidence-sensitive
-migration disposition: established common-kind eligibility with preserved
-profile; pending additional evidence or a separately identified bounded
-implementation; or retained exact legacy meaning with an open successor
-classification. Stable URN spelling cannot migrate immutable history.
+profiles remain enforceable. Each existing operation proposed for migration
+receives a disposition based on its eligibility evidence and declared
+successor/remediation status: established common-kind eligibility with
+preserved profile; identified missing evidence or a separately selected
+bounded successor pending completion; or unresolved successor classification
+without that supported selection. Both pending cases preserve only the
+legacy operation's lawful standing on its exact old basis while applicable.
+Generic role descriptions are not actual operations to qualify. Stable URN
+spelling cannot migrate immutable history, and no general procedure for
+deciding termination follows.
 
 Refusal and exhaustion retain their cause and evaluated predicate. Missing
 candidate output, an available indeterminate assessment report, and an

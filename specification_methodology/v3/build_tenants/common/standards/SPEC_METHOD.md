@@ -1799,8 +1799,8 @@ Terms used in this section:
 
 The common deterministic functor kind is a separate coordinate owned by
 [AXIOMATIC_CALCULUS §5](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds).
-A binding that claims it establishes its total-domain contract while
-retaining the operation's subject, evidence and effect permissions. Human,
+A binding that claims F_D establishes the common kind's total-domain contract.
+It retains the operation's subject, evidence and effect permissions. Human,
 machine and mixed bindings preserve these same distinctions; no runtime,
 event log or annotation carrier follows from the classification.
 

@@ -705,8 +705,8 @@ reference; no mandatory carrier or registry follows (P1, P3, P6).
 An exact local reference to a complete assessed record can preserve the
 consumer-required distinctions. A candidate-only pointer can lose them when
 unchanged candidate bytes have satisfied and indeterminate assessments that
-require different continuations. Hash matching states its collision and
-access assumptions. Unknown semantic relations retain their owning gap or
+require different continuations. A sufficiency claim relying on hash matching
+states its collision and access assumptions. Unknown semantic relations retain their owning gap or
 result; they do not all become one error class. A declared but unperformed
 evaluation has no assessment result; an undeclared required capability is
 a different condition. The [qualified-reference example](examples/DETERMINISTIC_CONTRACTS.md#qualified-references)

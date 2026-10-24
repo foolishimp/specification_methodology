@@ -57,3 +57,23 @@ Consumer dispositions and the cached-expertise note's triage are retained in
 `../../work/STDO301_DELIVERY/source/`. The exact source return preserves
 pending independent semantic review, whole-method/inherited obligations,
 source-matched representation, actual-use qualification and owner acceptance.
+
+### Source repair 1
+
+Cross-family working review of source `3204b84d` returned `falsified` for
+bounded amendment reconciliation; its original report and subject are retained.
+The Executive selected bounded repairs F1–F10 and affected clarity items.
+The Source Writer's repair dispositions and preimages are recorded under
+`../../work/STDO301_DELIVERY/source/repair-1/`; they are author evidence,
+pending independent readback. The repair restores design-governance scope,
+connects kind eligibility to the existing admission/result owners, names ODD's
+actual durable-truth owners, repairs derivation traces and inherited standing,
+and narrows or strengthens the finite evidence claims.
+
+The new 83-member native freeze has inventory SHA256
+`0277fc407eb6f14deda3398a2cc245a89a22b3e79473e347ca48265a3b123737`.
+Finite checks, all twelve frame reproductions and package verification
+(5,976 local references, no failures) pass as bounded construction evidence.
+Dependent model generation waits for the new source readback; original
+source inventories and returns remain historical. No meaning acceptance,
+actual-use qualification, installation or publication follows from this return.

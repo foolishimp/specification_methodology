@@ -63,6 +63,7 @@ current state under explicit uncertainty.
 | [POSTING_GUIDE.md](POSTING_GUIDE.md) | guide | the commentary layer: a post's purposes and boundary, location binding, carrier identity, categories, structure, discussion state, posting rules and ratification |
 | [WRITING_GUIDE.md](WRITING_GUIDE.md) | guide | writing discipline: core rule, style rules, habits to remove, good and bad prose, tone by authority layer, specification artifact practice, layer checks, current-surface writing |
 | [GLOSSARY.md](GLOSSARY.md) | guide | the non-deciding locator index: index contract, locator law, rows by bounded context, and rows for concepts whose member declares no context |
+| [DETERMINISTIC_CONTRACTS](examples/DETERMINISTIC_CONTRACTS.md) and [finite model](examples/deterministic_contracts.py) | example | complete finite fixture contracts and oracles for D301; bounded mathematical and executable evidence, no generic law or acceptance authority |
 
 The constitutional method members of this corpus are its tier 1 and tier 2
 standards and, when a project selects them, its tier 3 profiles (P6, P3).
@@ -119,6 +120,9 @@ also carry subordinate executable and interaction tooling (P6, P3). A cut carrie
 - the non-deciding semantic locator index [GLOSSARY](GLOSSARY.md), whose
   rows point to the clauses that own each indexed concept and the contexts
   that hold it, and never define a shared default;
+- self-contained example members under `examples/`, including the D301
+  contracts and executable finite model, with their stated local policies and
+  evidence limits;
 - task frames under `frames/`, copied from their local owning sections
   with the source identity and permitted excerpt transformations recorded;
 - normative interoperability schemas under `schemas/`, among them the

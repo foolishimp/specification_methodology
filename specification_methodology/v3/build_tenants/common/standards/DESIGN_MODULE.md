@@ -279,9 +279,7 @@ movement from one typed asset state to another, the governing shape is:
    terms); and
 3. deterministic module realisation under this profile.
 
-This profile may govern common `F_D` operations qualified under
-[AXIOMATIC_CALCULUS §5](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds),
-including evaluators with its unchanged-subject profile, carrier constructors
+This profile may govern evaluators and proofs, carrier constructors
 and admissions, deterministic transforms inside an edge traversal, effect
 shells that publish the traversal result, and projections over
 already-admitted carrier truth. It is not used to hide graph functions
@@ -291,8 +289,12 @@ controllers, semantic target movement inside constructors, materialisers
 or projections, or probabilistic worker boundaries inside imperative
 prompt or dispatch code (P0 boundary commitment, P6).
 
-The operation's contract grants its writes, admission and effects; its kind
-grants none. A deterministic transform or effect shell is not automatically
+That governance scope does not depend on F_D eligibility. An operation
+claiming common `F_D` additionally meets
+[AXIOMATIC_CALCULUS §5](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds),
+with its unchanged-subject profile when it evaluates that subject. The
+kind's authority boundary is owned there, not by this profile. A
+deterministic transform or effect shell is not automatically
 qualified as total deterministic processing, and a modeled effect request
 does not establish completion. Existing helpers use the evidence-sensitive
 [migration relation](RELEASE.md#deterministic-kind-migration), preserving
@@ -2462,7 +2464,7 @@ defaults and the identity law of their override, its preservation
 conditions and its publication surface are
 [IDENTITY §7](IDENTITY.md#7-default-formats-and-overrides).
 
-The helper's F_D eligibility is the common §5 contract imported in §2; an
+The helper's F_D eligibility is the common §5 contract referenced in §2; an
 identity default grants neither that eligibility nor additional writes.
 
 ### Non-goals

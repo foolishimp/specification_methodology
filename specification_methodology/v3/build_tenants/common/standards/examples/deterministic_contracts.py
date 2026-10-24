@@ -62,6 +62,18 @@ def abstract_transition(record, action):
     return (subject, basis, action[-1]), "recorded"
 
 
+def resolve_reference(key, records, accessible, required_basis):
+    """Finite acquisition model; statuses are observations, not universal core results."""
+    if not accessible:
+        return "inaccessible", None
+    record = records.get(key)
+    if record is None:
+        return "missing", None
+    if record["basis"] != required_basis:
+        return "stale", None
+    return "resolved", record.copy()
+
+
 def compose(g, f):
     return {key: g[value] for key, value in f.items()}
 
@@ -86,9 +98,6 @@ def run():
         if not expected:
             i = next(i for i in range(len(xs) - 1) if xs[i] > xs[i + 1])
             assert report["witness"] == {"index": i, "left": xs[i], "right": xs[i + 1]}
-        witness_log = []
-        witness_log.append(report)  # explicit separate log permission in fixture
-        assert subject == list(xs) and witness_log[0]["subject"] == xs
     assert sorted_report([2, 1], 2)["witness"] == {"index": 0, "left": 2, "right": 1}
     original = [2, 1]
     mutated = original.copy()
@@ -106,9 +115,6 @@ def run():
              ("B", "deny"): ("B", "refusal")}
     for inputs, expected in table.items():
         assert put_a(*inputs) == expected
-    construction_grant = {"construct"}
-    assert double(2) == {"n": 2, "double": 4}
-    assert not construction_grant.intersection({"assess", "admit", "close", "physical_write"})
     counts["logical_store"] = len(table)
 
     stop_map = {"copy_exhausted": "falsified", "assessment_exhausted": "indeterminate",
@@ -141,15 +147,15 @@ def run():
         assert result["subject"] == xs  # an exact closed assessment report exists
     exhausted = sorted_report((0, 1, 0), 1)
     assert exhausted["result"] == "indeterminate" and exhausted["residual"] == [1]
-    unperformed = {"invoked": False, "assessment": None, "traversal_stop": None,
-                   "work": "incomplete", "availability": "falsified"}
-    assert unperformed["assessment"] is None and unperformed["traversal_stop"] is None
     counts["bounded_assessment"] = len(assessments) * 3
 
     states = ("U", "S", "F", "I")
     actions = ("assess_S", "assess_F", "assess_I", "advance")
-    assert ("U" == "S") == ("I" == "S")
-    assert transition("U", "assess_S")[1] != transition("I", "assess_S")[1]
+    weak_observation = {s: transition(s, "advance")[1] == "advance" for s in states}
+    counterexamples = [(s, t) for s, t in product(states, repeat=2)
+                       if weak_observation[s] == weak_observation[t]
+                       and transition(s, "assess_S")[1] != transition(t, "assess_S")[1]]
+    assert ("U", "I") in counterexamples
     assert len({alpha(s) for s in states}) == 4  # no state aggregation
     for state, action in product(states, actions):
         successor, decision = transition(state, action)
@@ -168,13 +174,28 @@ def run():
                "standing": s, "producer": "assessor-v1", "obligation": "review-v1",
                "authority": "assessment-only", "invalidators": ["subject", "policy", "evidence"]}
                for s in ("S", "F", "I")}
+    access_oracle = {
+        # access, target present, current basis -> expected acquisition observation
+        (False, False, False): "inaccessible", (False, False, True): "inaccessible",
+        (False, True, False): "inaccessible", (False, True, True): "inaccessible",
+        (True, False, False): "missing", (True, False, True): "missing",
+        (True, True, False): "stale", (True, True, True): "resolved",
+    }
     for key, record in records.items():
-        resolved = json.loads(json.dumps(records[key]))
-        assert resolved == record
-        assert transition(resolved["standing"], "advance") == transition(record["standing"], "advance")
+        for (accessible, present, current), expected in access_oracle.items():
+            target = dict(record, basis="policy-v1" if current else "policy-v0")
+            store = {key: target} if present else {}
+            before = json.dumps(store, sort_keys=True)
+            status, resolved = resolve_reference(key, store, accessible, "policy-v1")
+            assert status == expected and json.dumps(store, sort_keys=True) == before
+            if expected == "resolved":
+                assert resolved == record
+                assert transition(resolved["standing"], "advance") == transition(record["standing"], "advance")
+            else:
+                assert resolved is None  # unavailable/stale target cannot supply a usable record
     assert records["report:S"]["subject"] == records["report:I"]["subject"]
     assert transition("S", "advance")[1] != transition("I", "advance")[1]
-    counts["qualified_reference_records"] = len(records)
+    counts["reference_resolution_cells"] = len(records) * len(access_oracle)
 
     objects = (("S", "F", "I"), ("hS", "hF", "hI"), ("vS", "vF", "vI"),
                ("advance", "block_falsified", "block_indeterminate"))

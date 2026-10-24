@@ -8,6 +8,19 @@ The product owner owns the common specification (the WHAT) and its decisions. Co
 
 ## Current Task
 
+The current common-tenant task is [T-004](../.ai-workspace/tickets/active/T-004-STDO-3.0.1-delivery.md):
+the bounded [3.0.1 amendment](../specification/requirements/STDO_3_0_1.md),
+targeting `3.0.1-rc.1` from exact native `3.0.0-rc.1` in the isolated
+`codex/stdo-3.0.1-delivery` worktree. Its design route is
+[common-design](common-design/README.md), outside the installed `common/`
+payload; its construction records are under
+`../.ai-workspace/work/STDO301_DELIVERY/`. Source repair, independent review,
+representation and qualification keep separate activations and evidence.
+Neither this entry nor construction accepts the proposed supersessions or
+waives inherited release gates.
+
+### Earlier common construction
+
 The owner admits a third concrete tenant, `common/`, under [T-003](../.ai-workspace/tickets/active/T-003-COMMON-standalone-v3-construction.md). Codex holds the pen for a standalone package based on the frozen Claude candidate and the unified enhancement register. Its construction records live outside the package in `.ai-workspace/common-build/`. This explicit tenant identity is distinct from the Product Definition's `how.common` shared references. Its branch, worktree, exact inputs, contribution limits and review conditions are bound by T-003. The two original candidate lines remain preserved.
 
 Its first candidate is committed at `494451522072ec34381c644f1ccfa2331f2b1e27` on `tenant/common/standalone-v3`. The [handoff](../.ai-workspace/comments/codex/20261018T160429Z_COMMON_FIRST_BUILD_CHECKPOINT.md) locates the package, reviewable proposals and evidence. No candidate merge, acceptance or release is implied.

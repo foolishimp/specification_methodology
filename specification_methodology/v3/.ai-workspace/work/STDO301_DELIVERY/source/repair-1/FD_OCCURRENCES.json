@@ -1,0 +1,692 @@
+{
+  "kind": "literal-navigation-inventory",
+  "baseline_commit": "3204b84d5fbd85996374d87b88ee2d87bad9349b",
+  "pattern": "\\bF_D\\b|axiomatic-calculus:f-d|graph-native-odd:f-d",
+  "baseline": [
+    {
+      "path": "specification_methodology/v3/build_tenants/common/release/release-note.md",
+      "sha256": "b6ef53a2b2eb099b14b19f1d2243067fa2f0e0c4a3624eaff8bd0a7ead8768ee",
+      "occurrences": [
+        {
+          "line": 15,
+          "text": "The substantive amendment makes [F_D](../standards/AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds)"
+        }
+      ]
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/AXIOMATIC_CALCULUS.md",
+      "sha256": "7a89fafe5a870a5cf9babdd79fff0c1cc442e4377eb8c49a76d188ba791102de",
+      "occurrences": [
+        {
+          "line": 107,
+          "text": "This member introduces the generic calculus identities `F_D`, `F_P` and"
+        },
+        {
+          "line": 174,
+          "text": "| P4a (independent), P3 (independent), P6 (independent); (iii) | By P4a a traversal composes only through its declared contract, by P3 it binds one functor kind, by P6 its authority is separate, and by (iii) some predicates are decided mechanically and others not, so a traversal is a typed contract applied under exactly one functor kind; total deterministic processing, bounded probabilistic construction and human adjudication are distinct kinds, each distinct from actor, executor and domain operation, and the name asserts no categorical functor; traversals compose only under typed composition, which keeps both identities and every intermediate fact | [\u00a75](#5-traversals-and-functor-kinds), [AC-015](#ac-015-functor-classification), [AC-016](#ac-016-typed-composition) | the total-domain requirement for F_D and the unchanged-subject evaluation profile: \u00a75; the functor kinds permitted for each traversal: the owning signature; the order of kinds in an application: that application | 4, 8, 10 |"
+        },
+        {
+          "line": 198,
+          "text": "- Row 13, traversals, functor kinds and typed composition: [ACTIVATION \u00a74 Refinement](ACTIVATION.md#refinement), where each output satisfies the next step's declared domain and preconditions as AC-016 requires; [TRAVERSAL_OCCURRENCE Closed constraint, judgment, residual and stop kinds](TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds), whose functor-kind refs leave their laws with \u00a75, and [Occurrence identity](TRAVERSAL_OCCURRENCE.md#occurrence-identity), where every retained application under AC-016 has its own occurrence; [ODD](ODD.md#odd), its lead, and [ODD \u00a75 Probabilistic compute](ODD.md#probabilistic-compute), which imports common F_D by exact edition and retains the separately bound F_P and F_H specialisations, and [ODD \u00a75 Graph functions](ODD.md#graph-functions), where each inner function's input satisfies its declared domain as AC-016 requires; [PROFILES \u00a71](PROFILES.md#1-the-boundary), which keeps the traversal record and the functor kinds as this member's terms and binds them only by declaration; [CONFORMANCE \u00a75](CONFORMANCE.md#5-discriminator-coverage), discriminators 22 and 51; [AC-013](#ac-013-transformation), as a specialisation of one traversal record, and [AC-007](#ac-007-constraint-and-refusal), whose `refusal(constraint)` names an application without its traversal."
+        },
+        {
+          "line": 943,
+          "text": "F_D = urn:stdo:concept:axiomatic-calculus:f-d"
+        },
+        {
+          "line": 979,
+          "text": "- `F_D` classifies total deterministic processing under an exact traversal"
+        },
+        {
+          "line": 1008,
+          "text": "other named domain operations are not aliases for `F_D`, `F_P` or `F_H`."
+        },
+        {
+          "line": 1061,
+          "text": "universal `F_P -> F_D -> F_H` sequence; each application owns its lawful"
+        },
+        {
+          "line": 1159,
+          "text": "D_C = F_D[v_carrier_admission](G_C, Profile_C, CarrierBasis_C)"
+        },
+        {
+          "line": 1164,
+          "text": "The `F_D[v_carrier_admission]` notation requires \u00a75's total-domain evidence"
+        }
+      ]
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/CONFORMANCE.md",
+      "sha256": "474e346603ed6d1060d55a72dc2ffb8c3817c538831efc8d1f85d42a53ec0e0d",
+      "occurrences": [
+        {
+          "line": 231,
+          "text": "| D301-08 | A legacy evaluator's unchanged-subject guarantee survives; hidden dependencies or missing termination proof prevent automatic common-F_D qualification. New bounded contracts retain separate identities/exhaustion evidence. Unresolved uses keep their exact legacy basis and an open successor obligation. | RELEASE \u00a79 Deterministic-kind migration; ODD \u00a75; discriminator 22 |"
+        }
+      ]
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/DESIGN_MODULE.md",
+      "sha256": "93d565e1a303dde3cced12616764d49b8b87dafc6cd5539ac50438856bff4b18",
+      "occurrences": [
+        {
+          "line": 282,
+          "text": "This profile may govern common `F_D` operations qualified under"
+        },
+        {
+          "line": 2128,
+          "text": "31. Do `F_D` uses establish the common total-domain contract and retain their"
+        },
+        {
+          "line": 2459,
+          "text": "kinds used by default `F_D` helpers; the permission is scoped to that role"
+        },
+        {
+          "line": 2465,
+          "text": "The helper's F_D eligibility is the common \u00a75 contract imported in \u00a72; an"
+        }
+      ]
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/GLOSSARY.md",
+      "sha256": "987550940ea4c9cda2a823315bfc65fbd83ccb446e5f105d0d6b40fbb6be670e",
+      "occurrences": [
+        {
+          "line": 99,
+          "text": "| `Functor Kind`; `F_D`; `F_P`; `F_H` | `urn:stdo:bounded-context:axiomatic-calculus` | [`AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds`](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds) | none |"
+        },
+        {
+          "line": 295,
+          "text": "creates no identity between those concepts. F_D imports the common concept"
+        },
+        {
+          "line": 306,
+          "text": "| `F_D` (imported use) | `urn:stdo:bounded-context:axiomatic-calculus` | [`AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds`](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds) | [`ODD.md#probabilistic-compute`](ODD.md#probabilistic-compute) |"
+        }
+      ]
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/ODD.md",
+      "sha256": "420e7edf0b3be4dbb53786f983ed6709a4c3096389f4762d7f3a82834ede8c5a",
+      "occurrences": [
+        {
+          "line": 9,
+          "text": "ABG, F_P and F_H (P0, P1). `F_D` is the exact-edition common import below."
+        },
+        {
+          "line": 16,
+          "text": "own concepts and are not those records by spelling. Its F_D use imports"
+        },
+        {
+          "line": 120,
+          "text": "| P1 (independent), P3 (independent); F9 (imported), F11 (imported) | By P1 equal spelling fixes no meaning and by P3 identity is declared, so this profile's traversal and its F_P and F_H shorthands are concepts of its own bounded context and not the `a_c` traversal record or functor kinds by equal spelling (F9); common F_D is imported by exact edition with total-domain evidence and separate operation authority, while F_P and F_H relate to the source concepts of SPEC_METHOD \u00a75 only through declared specialisations that state direction, preserved meaning, narrowed scope and invalidation (F11) | this member's lead; [\u00a71](#1-position), the bounded-context paragraph; [\u00a75 Probabilistic compute](#probabilistic-compute) | the bounded context, F_P and F_H specialisations, and F_D import with operation bindings: this member, under PROFILES \u00a71; the F_D definition remains AXIOMATIC_CALCULUS \u00a75 | 5, 6 |"
+        },
+        {
+          "line": 149,
+          "text": "- Row 2, the bounded probabilistic step: [PROFILES \u00a71](PROFILES.md#1-the-boundary), whose declared-binding rule takes its shape from the F_P and F_H specialisations \u00a75 owns, and [PROFILES \u00a72](PROFILES.md#2-graph-execution), which keeps the bounded-step binding and the worker's internal solution strategy outside the framework; [CONFORMANCE \u00a71](CONFORMANCE.md#1-counterexample-cases), case C-09; [ACTIVATION \u00a72](ACTIVATION.md#2-context-construction-under-an-envelope), which names A5 as the ODD specialisation of prompt construction; [DESIGN_MODULE \u00a72](DESIGN_MODULE.md#2-graph-execution-alignment-and-escalation), which keeps probabilistic worker boundaries out of imperative prompt or dispatch code; [\u00a711.5B](#115b-execution-authority-audit) and [\u00a711.7A](#117a-conforming-agentic-development), which read F_P and F_D at the audit and at the method layer."
+        },
+        {
+          "line": 332,
+          "text": "- `F_D` imports `urn:stdo:concept:axiomatic-calculus:f-d` from"
+        },
+        {
+          "line": 371,
+          "text": "The F_D import runs from the common concept to its use under this profile,"
+        },
+        {
+          "line": 377,
+          "text": "`urn:stdo:concept:graph-native-odd:f-d` remains a historical concept on its"
+        },
+        {
+          "line": 652,
+          "text": "ambiguity or gap obligation; allowed `F_D`, `F_P` and `F_H` bindings. The"
+        },
+        {
+          "line": 1088,
+          "text": "and permitted consequences; its use of the common F_D regime requires the"
+        },
+        {
+          "line": 1089,
+          "text": "total deterministic contract. F_D classification grants no assessment,"
+        },
+        {
+          "line": 1091,
+          "text": "worker must not be given an F_D-authored semantic extraction recipe when"
+        },
+        {
+          "line": 1477,
+          "text": "artifacts under its evidence contract and grant. A gate claiming F_D also"
+        },
+        {
+          "line": 1540,
+          "text": "This keeps the F_P and F_D split at the method layer. The agentic coder is"
+        },
+        {
+          "line": 1542,
+          "text": "uses F_D only when the \u00a75 total-domain contract is established, and its own"
+        }
+      ]
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/PROFILES.md",
+      "sha256": "076d5c17a06d372ed1efdc7909f9dc93c3193513ff233c48df2915810ffeffa4",
+      "occurrences": [
+        {
+          "line": 14,
+          "text": "profile's IACS and Prime. The traversal record and the functor kinds F_D,"
+        },
+        {
+          "line": 24,
+          "text": "of the declared-binding rule are ODD's exact-edition F_D import and"
+        },
+        {
+          "line": 60,
+          "text": "| [ODD](ODD.md) | the bounded step of FOUNDATIONS P0 to one vector or edge traversal and common F_D through an exact-edition import with separate operation profiles, and graph-native F_P and F_H as declared specialisations of SPEC_METHOD \u00a75 ([\u00a75 Probabilistic compute](ODD.md#probabilistic-compute)); the refinement of ACTIVATION \u00a74 to graph functions, with the cumulative environment law of \u00a711.8 declared as its specialised contract for carrying earlier outputs ([\u00a75 Graph functions](ODD.md#graph-functions), [\u00a711.8](ODD.md#118-cumulative-environment-law-is-mandatory)) |"
+        }
+      ]
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/README.md",
+      "sha256": "ecb47caddf6f599bb4f74a7e02a21ab11976e99e13d6137ce4af40ca91fee654",
+      "occurrences": [
+        {
+          "line": 59,
+          "text": "| [ODD.md](ODD.md) | 3 | the Outcome-Driven Development profile: position, method role and composition, library classes, graph model with probabilistic compute and graph-native F_P and F_H and the exact-edition common F_D import, product and self-host boundaries, responsibility layers, governance, what an ODD product is, core law 11.1 to 11.9 with the execution-authority audit, the constructive evaluation and yield loop (A0 to A16), UP-010 and the cumulative environment law, scenario, installed-dev, dogfooding, release boundary, failure pattern, invocation, reading order, ramp-up |"
+        }
+      ]
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/RELEASE.md",
+      "sha256": "c49ca330d8dcb2e94f62d9ffb6139c20985d34bb690fd75384c0f4fd835c3f3c",
+      "occurrences": [
+        {
+          "line": 727,
+          "text": "| Establishes the new totality, closed-dependency and outcome contract | Map to common F_D plus the unchanged operation profile and exact traversal binding. Preserve the evidence and grants. |"
+        },
+        {
+          "line": 729,
+          "text": "| Successor classification remains unresolved | Retain the exact legacy meaning and evidence and an explicit successor obligation until its owner disposes it. Grant neither new F_D standing nor an automatic F_P label; the affected successor claim stays open. |"
+        }
+      ]
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/TRAVERSAL_OCCURRENCE.md",
+      "sha256": "7809ec20f4cf47a299ea3892616b449532a568feeccb50d49d46bbc72be9cba5",
+      "occurrences": [
+        {
+          "line": 11,
+          "text": "record and the functor kinds F_D, F_P and F_H are"
+        },
+        {
+          "line": 1078,
+          "text": "`Sigma_occurrence.FunctorKind` contains exact refs to `F_D`, `F_P` and"
+        },
+        {
+          "line": 1083,
+          "text": "stable concept URN. A successor occurrence that claims common `F_D` requires"
+        },
+        {
+          "line": 1309,
+          "text": "effect invocation are different coordinates. An `F_P`, `F_D` or `F_H`"
+        }
+      ]
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/frames/ac-task-a.md",
+      "sha256": "33c4fc1826dc17bf9d4c0ca591515a3428039c8fcaeb6d647b9d627a53423c7d",
+      "occurrences": [
+        {
+          "line": 811,
+          "text": "F_D = urn:stdo:concept:axiomatic-calculus:f-d"
+        },
+        {
+          "line": 847,
+          "text": "- `F_D` classifies total deterministic processing under an exact traversal"
+        },
+        {
+          "line": 876,
+          "text": "other named domain operations are not aliases for `F_D`, `F_P` or `F_H`."
+        },
+        {
+          "line": 929,
+          "text": "universal `F_P -> F_D -> F_H` sequence; each application owns its lawful"
+        },
+        {
+          "line": 1263,
+          "text": "| P4a (independent), P3 (independent), P6 (independent); (iii) | By P4a a traversal composes only through its declared contract, by P3 it binds one functor kind, by P6 its authority is separate, and by (iii) some predicates are decided mechanically and others not, so a traversal is a typed contract applied under exactly one functor kind; total deterministic processing, bounded probabilistic construction and human adjudication are distinct kinds, each distinct from actor, executor and domain operation, and the name asserts no categorical functor; traversals compose only under typed composition, which keeps both identities and every intermediate fact | [\u00a75](../AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds), [AC-015](../AXIOMATIC_CALCULUS.md#ac-015-functor-classification), [AC-016](../AXIOMATIC_CALCULUS.md#ac-016-typed-composition) | the total-domain requirement for F_D and the unchanged-subject evaluation profile: \u00a75; the functor kinds permitted for each traversal: the owning signature; the order of kinds in an application: that application | 4, 8, 10 |"
+        }
+      ]
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/frames/acceptance-release.md",
+      "sha256": "c13a52a88ffab31824ca68d0b00f05279d9e9ab04a5ca5091378acffd1eeb6f5",
+      "occurrences": [
+        {
+          "line": 687,
+          "text": "| Establishes the new totality, closed-dependency and outcome contract | Map to common F_D plus the unchanged operation profile and exact traversal binding. Preserve the evidence and grants. |"
+        },
+        {
+          "line": 689,
+          "text": "| Successor classification remains unresolved | Retain the exact legacy meaning and evidence and an explicit successor obligation until its owner disposes it. Grant neither new F_D standing nor an automatic F_P label; the affected successor claim stays open. |"
+        }
+      ]
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/frames/member-build-assess.md",
+      "sha256": "e1ca20b428e984509fa1cba3509a966c482c86b8adda96ae4c249c501df8e5b6",
+      "occurrences": [
+        {
+          "line": 702,
+          "text": "| Establishes the new totality, closed-dependency and outcome contract | Map to common F_D plus the unchanged operation profile and exact traversal binding. Preserve the evidence and grants. |"
+        },
+        {
+          "line": 704,
+          "text": "| Successor classification remains unresolved | Retain the exact legacy meaning and evidence and an explicit successor obligation until its owner disposes it. Grant neither new F_D standing nor an automatic F_P label; the affected successor claim stays open. |"
+        },
+        {
+          "line": 845,
+          "text": "| D301-08 | A legacy evaluator's unchanged-subject guarantee survives; hidden dependencies or missing termination proof prevent automatic common-F_D qualification. New bounded contracts retain separate identities/exhaustion evidence. Unresolved uses keep their exact legacy basis and an open successor obligation. | RELEASE \u00a79 Deterministic-kind migration; ODD \u00a75; discriminator 22 |"
+        }
+      ]
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/frames/traversal-task-f.md",
+      "sha256": "71af35fc426217df704751c39c08e83ad6dadbfd248e757cc8864028a4ff278c",
+      "occurrences": [
+        {
+          "line": 748,
+          "text": "`Sigma_occurrence.FunctorKind` contains exact refs to `F_D`, `F_P` and"
+        },
+        {
+          "line": 753,
+          "text": "stable concept URN. A successor occurrence that claims common `F_D` requires"
+        },
+        {
+          "line": 991,
+          "text": "effect invocation are different coordinates. An `F_P`, `F_D` or `F_H`"
+        }
+      ]
+    }
+  ],
+  "candidate": [
+    {
+      "path": "specification_methodology/v3/build_tenants/common/release/release-note.md",
+      "sha256": "5fca5c9f7ce9a1b5d9dfce4af8b5cda7abf1c230041980f34e309957829cd38c",
+      "occurrences": [
+        {
+          "line": 15,
+          "text": "The substantive amendment makes [F_D](../standards/AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds)"
+        },
+        {
+          "line": 19,
+          "text": "The former ODD kind-level F_D authority shorthand is proposed to be"
+        }
+      ]
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/AXIOMATIC_CALCULUS.md",
+      "sha256": "8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c",
+      "occurrences": [
+        {
+          "line": 109,
+          "text": "This member introduces the generic calculus identities `F_D`, `F_P` and"
+        },
+        {
+          "line": 114,
+          "text": "those constraints \u00a75 declares the processing purposes of F_D, its total-domain"
+        },
+        {
+          "line": 180,
+          "text": "| P4a (independent), P3 (independent), P6 (independent); (iii) | By P4a a traversal composes only through its declared contract, by P3 it binds one functor kind, by P6 its authority is separate, and by (iii) applications include construction and judgment under different processing conditions, so a traversal is a typed contract applied under exactly one functor kind; total deterministic processing, bounded probabilistic construction and human adjudication are distinct kinds, each distinct from actor, executor and domain operation, and the name asserts no categorical functor; traversals compose only under typed composition, which keeps both identities and every intermediate fact | [\u00a75](#5-traversals-and-functor-kinds), [AC-015](#ac-015-functor-classification), [AC-016](#ac-016-typed-composition) | F_D purpose extending to deterministic construction, its total-domain requirement and the unchanged-subject evaluation profile: \u00a75; the functor kinds permitted for each traversal: the owning signature; the order of kinds in an application: that application | 4, 8, 10 |"
+        },
+        {
+          "line": 204,
+          "text": "- Row 13, traversals, functor kinds and typed composition: [ACTIVATION \u00a74 Refinement](ACTIVATION.md#refinement), where each output satisfies the next step's declared domain and preconditions as AC-016 requires; [TRAVERSAL_OCCURRENCE Closed constraint, judgment, residual and stop kinds](TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds), whose functor-kind refs leave their laws with \u00a75, and [Occurrence identity](TRAVERSAL_OCCURRENCE.md#occurrence-identity), where every retained application under AC-016 has its own occurrence; [ODD](ODD.md#odd), its lead, and [ODD \u00a75 Probabilistic compute](ODD.md#probabilistic-compute), which imports common F_D by exact edition and retains the separately bound F_P and F_H specialisations, and [ODD \u00a75 Graph functions](ODD.md#graph-functions), where each inner function's input satisfies its declared domain as AC-016 requires; [PROFILES \u00a71](PROFILES.md#1-the-boundary), which keeps the traversal record and the functor kinds as this member's terms and binds them only by declaration; [CONFORMANCE \u00a75](CONFORMANCE.md#5-discriminator-coverage), discriminators 22 and 51; [AC-013](#ac-013-transformation), as a specialisation of one traversal record, and [AC-007](#ac-007-constraint-and-refusal), whose `refusal(constraint)` names an application without its traversal. Additional common-kind consumers: [EVALUATION \u00a72](EVALUATION.md#2-separation), the unchanged-subject profile; [SPEC_METHOD \u00a711](SPEC_METHOD.md#11-build-tenant-binding), operation versus kind; [DESIGN_MODULE \u00a72](DESIGN_MODULE.md#2-graph-execution-alignment-and-escalation), independent governance scope and conditional eligibility; [RELEASE \u00a79 Deterministic-kind migration](RELEASE.md#deterministic-kind-migration), legacy evidence and successor status; [ACTIVATION \u00a74](ACTIVATION.md#4-totality-and-refinement), total handling versus termination; [ODD A5](ODD.md#115d-constructive-evaluation-and-yield-loop) and [\u00a711.7A](ODD.md#117a-conforming-agentic-development), actual admission and closure owners; [CONFORMANCE D301](CONFORMANCE.md#deterministic-kind-and-continuation-discriminators), with [the finite examples](examples/DETERMINISTIC_CONTRACTS.md), the affected distinctions."
+        },
+        {
+          "line": 949,
+          "text": "F_D = urn:stdo:concept:axiomatic-calculus:f-d"
+        },
+        {
+          "line": 985,
+          "text": "- `F_D` classifies total deterministic processing under an exact traversal"
+        },
+        {
+          "line": 1021,
+          "text": "other named domain operations are not aliases for `F_D`, `F_P` or `F_H`."
+        },
+        {
+          "line": 1025,
+          "text": "Classifying an operation as F_D grants no semantic, evaluation, operation"
+        },
+        {
+          "line": 1046,
+          "text": "A new non-total deterministic process is outside qualifying F_D. A route to"
+        },
+        {
+          "line": 1047,
+          "text": "an F_D claim is a separately identified bounded successor with its own"
+        },
+        {
+          "line": 1076,
+          "text": "required declaration (for example the F_D termination argument), a demonstrated"
+        },
+        {
+          "line": 1083,
+          "text": "under AC-007 and the F_D eligibility claim remains unestablished. An"
+        },
+        {
+          "line": 1086,
+          "text": "No invocation is admitted as qualifying F_D by an unestablished claim."
+        },
+        {
+          "line": 1108,
+          "text": "universal `F_P -> F_D -> F_H` sequence; each application owns its lawful"
+        },
+        {
+          "line": 1207,
+          "text": "D_C = F_D[v_carrier_admission](G_C, Profile_C, CarrierBasis_C)"
+        },
+        {
+          "line": 1212,
+          "text": "The `F_D[v_carrier_admission]` notation requires \u00a75's total-domain evidence"
+        }
+      ]
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/DESIGN_MODULE.md",
+      "sha256": "741b798ea2e71797bd884817eb6903ae1a1431c97a989ab5741ffa315a3bd1e2",
+      "occurrences": [
+        {
+          "line": 292,
+          "text": "That governance scope does not depend on F_D eligibility. An operation"
+        },
+        {
+          "line": 293,
+          "text": "claiming common `F_D` additionally meets"
+        },
+        {
+          "line": 2130,
+          "text": "31. Do `F_D` uses establish the common total-domain contract and retain their"
+        },
+        {
+          "line": 2461,
+          "text": "kinds used by default `F_D` helpers; the permission is scoped to that role"
+        },
+        {
+          "line": 2467,
+          "text": "The helper's F_D eligibility is the common \u00a75 contract referenced in \u00a72; an"
+        }
+      ]
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/GLOSSARY.md",
+      "sha256": "987550940ea4c9cda2a823315bfc65fbd83ccb446e5f105d0d6b40fbb6be670e",
+      "occurrences": [
+        {
+          "line": 99,
+          "text": "| `Functor Kind`; `F_D`; `F_P`; `F_H` | `urn:stdo:bounded-context:axiomatic-calculus` | [`AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds`](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds) | none |"
+        },
+        {
+          "line": 295,
+          "text": "creates no identity between those concepts. F_D imports the common concept"
+        },
+        {
+          "line": 306,
+          "text": "| `F_D` (imported use) | `urn:stdo:bounded-context:axiomatic-calculus` | [`AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds`](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds) | [`ODD.md#probabilistic-compute`](ODD.md#probabilistic-compute) |"
+        }
+      ]
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/ODD.md",
+      "sha256": "9580be6e6e0a5e6c4e378b9bb8bc60392d1e4e0e342f7350f3463ddf5e3b321c",
+      "occurrences": [
+        {
+          "line": 9,
+          "text": "ABG, F_P and F_H (P0, P1). `F_D` is the exact-edition common import below."
+        },
+        {
+          "line": 16,
+          "text": "own concepts and are not those records by spelling. Its F_D use imports"
+        },
+        {
+          "line": 120,
+          "text": "| P1 (independent), P3 (independent); F9 (imported), F11 (imported) | By P1 equal spelling fixes no meaning and by P3 identity is declared, so this profile's traversal and its F_P and F_H shorthands are concepts of its own bounded context and not the `a_c` traversal record or functor kinds by equal spelling (F9); common F_D is imported by exact edition with total-domain evidence and separate operation authority, while F_P and F_H relate to the source concepts of SPEC_METHOD \u00a75 only through declared specialisations that state direction, preserved meaning, narrowed scope and invalidation (F11) | this member's lead; [\u00a71](#1-position), the bounded-context paragraph; [\u00a75 Probabilistic compute](#probabilistic-compute) | the bounded context, F_P and F_H specialisations, and F_D import with operation bindings: this member, under PROFILES \u00a71; the F_D definition remains AXIOMATIC_CALCULUS \u00a75 | 5, 6 |"
+        },
+        {
+          "line": 149,
+          "text": "- Row 2, the bounded probabilistic step: [PROFILES \u00a71](PROFILES.md#1-the-boundary), whose declared-binding rule takes its shape from the F_P and F_H specialisations \u00a75 owns, and [PROFILES \u00a72](PROFILES.md#2-graph-execution), which keeps the bounded-step binding and the worker's internal solution strategy outside the framework; [CONFORMANCE \u00a71](CONFORMANCE.md#1-counterexample-cases), case C-09; [ACTIVATION \u00a72](ACTIVATION.md#2-context-construction-under-an-envelope), which names A5 as the ODD specialisation of prompt construction; [DESIGN_MODULE \u00a72](DESIGN_MODULE.md#2-graph-execution-alignment-and-escalation), which keeps probabilistic worker boundaries out of imperative prompt or dispatch code; [\u00a711.5B](#115b-execution-authority-audit) and [\u00a711.7A](#117a-conforming-agentic-development), which read F_P and F_D at the audit and at the method layer."
+        },
+        {
+          "line": 332,
+          "text": "- `F_D` imports `urn:stdo:concept:axiomatic-calculus:f-d` from"
+        },
+        {
+          "line": 371,
+          "text": "The F_D import runs from the common concept to its use under this profile,"
+        },
+        {
+          "line": 377,
+          "text": "`urn:stdo:concept:graph-native-odd:f-d` remains a historical concept on its"
+        },
+        {
+          "line": 652,
+          "text": "ambiguity or gap obligation; allowed `F_D`, `F_P` and `F_H` bindings. The"
+        },
+        {
+          "line": 1094,
+          "text": "artifacts. A gate claiming common F_D additionally establishes \u00a75's"
+        },
+        {
+          "line": 1100,
+          "text": "worker must not be given an F_D-authored semantic extraction recipe when"
+        },
+        {
+          "line": 1486,
+          "text": "artifacts under its evidence contract and grant. A gate claiming F_D also"
+        },
+        {
+          "line": 1549,
+          "text": "This keeps the F_P and F_D split at the method layer. The agentic coder is"
+        },
+        {
+          "line": 1551,
+          "text": "uses F_D only when the \u00a75 total-domain contract is established, and its own"
+        }
+      ]
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/PROFILES.md",
+      "sha256": "076d5c17a06d372ed1efdc7909f9dc93c3193513ff233c48df2915810ffeffa4",
+      "occurrences": [
+        {
+          "line": 14,
+          "text": "profile's IACS and Prime. The traversal record and the functor kinds F_D,"
+        },
+        {
+          "line": 24,
+          "text": "of the declared-binding rule are ODD's exact-edition F_D import and"
+        },
+        {
+          "line": 60,
+          "text": "| [ODD](ODD.md) | the bounded step of FOUNDATIONS P0 to one vector or edge traversal and common F_D through an exact-edition import with separate operation profiles, and graph-native F_P and F_H as declared specialisations of SPEC_METHOD \u00a75 ([\u00a75 Probabilistic compute](ODD.md#probabilistic-compute)); the refinement of ACTIVATION \u00a74 to graph functions, with the cumulative environment law of \u00a711.8 declared as its specialised contract for carrying earlier outputs ([\u00a75 Graph functions](ODD.md#graph-functions), [\u00a711.8](ODD.md#118-cumulative-environment-law-is-mandatory)) |"
+        }
+      ]
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/README.md",
+      "sha256": "fe983b8ecf2514b8169bb4f337a769990e9142385539444945ad161e3a9763ee",
+      "occurrences": [
+        {
+          "line": 59,
+          "text": "| [ODD.md](ODD.md) | 3 | the Outcome-Driven Development profile: position, method role and composition, library classes, graph model with probabilistic compute and graph-native F_P and F_H and the exact-edition common F_D import, product and self-host boundaries, responsibility layers, governance, what an ODD product is, core law 11.1 to 11.9 with the execution-authority audit, the constructive evaluation and yield loop (A0 to A16), UP-010 and the cumulative environment law, scenario, installed-dev, dogfooding, release boundary, failure pattern, invocation, reading order, ramp-up |"
+        }
+      ]
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/RELEASE.md",
+      "sha256": "497697a0c3f88f472af5dfffb89d9ccebf77f8b94d2673d43c476363c457b071",
+      "occurrences": [
+        {
+          "line": 728,
+          "text": "| Establishes the new totality, closed-dependency and outcome contract | Map to common F_D plus the unchanged operation profile and exact traversal binding. Preserve the evidence and grants. |"
+        },
+        {
+          "line": 729,
+          "text": "| New-kind eligibility is unestablished, and the owner has identified the missing evidence or a separately declared bounded successor and its remediation obligation | Keep that identified migration pending. The legacy operation retains only its lawful standing on its exact old basis while it remains applicable; it gains no successor F_D standing. A narrower domain or fuel-bounded implementation has its own contract, identity, exhaustion outcomes and affected preservation evidence; it does not retrospectively prove the old operation total or preserve every old continuation. |"
+        },
+        {
+          "line": 730,
+          "text": "| New-kind eligibility is unestablished and no supported remediation or successor classification has been selected | Retain the exact legacy meaning and evidence with an explicit unresolved successor-classification obligation until its owner disposes it. The legacy operation retains only its lawful standing on its exact old basis while applicable. Grant neither new F_D standing nor an automatic F_P label; the affected successor claim stays open. |"
+        }
+      ]
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/SPEC_METHOD.md",
+      "sha256": "b2773dc0c9feb429b6b357bcfd60e7df46e54db8adcb04dc8d6dbfa023b73677",
+      "occurrences": [
+        {
+          "line": 1802,
+          "text": "A binding that claims F_D establishes the common kind's total-domain contract."
+        }
+      ]
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/TRAVERSAL_OCCURRENCE.md",
+      "sha256": "7809ec20f4cf47a299ea3892616b449532a568feeccb50d49d46bbc72be9cba5",
+      "occurrences": [
+        {
+          "line": 11,
+          "text": "record and the functor kinds F_D, F_P and F_H are"
+        },
+        {
+          "line": 1078,
+          "text": "`Sigma_occurrence.FunctorKind` contains exact refs to `F_D`, `F_P` and"
+        },
+        {
+          "line": 1083,
+          "text": "stable concept URN. A successor occurrence that claims common `F_D` requires"
+        },
+        {
+          "line": 1309,
+          "text": "effect invocation are different coordinates. An `F_P`, `F_D` or `F_H`"
+        }
+      ]
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/frames/ac-task-a.md",
+      "sha256": "1dfa9d3bb097e5f5dc0a8a361aaeca405567840bd9d34021697de19d57d018f6",
+      "occurrences": [
+        {
+          "line": 811,
+          "text": "F_D = urn:stdo:concept:axiomatic-calculus:f-d"
+        },
+        {
+          "line": 847,
+          "text": "- `F_D` classifies total deterministic processing under an exact traversal"
+        },
+        {
+          "line": 883,
+          "text": "other named domain operations are not aliases for `F_D`, `F_P` or `F_H`."
+        },
+        {
+          "line": 887,
+          "text": "Classifying an operation as F_D grants no semantic, evaluation, operation"
+        },
+        {
+          "line": 908,
+          "text": "A new non-total deterministic process is outside qualifying F_D. A route to"
+        },
+        {
+          "line": 909,
+          "text": "an F_D claim is a separately identified bounded successor with its own"
+        },
+        {
+          "line": 938,
+          "text": "required declaration (for example the F_D termination argument), a demonstrated"
+        },
+        {
+          "line": 945,
+          "text": "under AC-007 and the F_D eligibility claim remains unestablished. An"
+        },
+        {
+          "line": 948,
+          "text": "No invocation is admitted as qualifying F_D by an unestablished claim."
+        },
+        {
+          "line": 970,
+          "text": "universal `F_P -> F_D -> F_H` sequence; each application owns its lawful"
+        },
+        {
+          "line": 1306,
+          "text": "| P4a (independent), P3 (independent), P6 (independent); (iii) | By P4a a traversal composes only through its declared contract, by P3 it binds one functor kind, by P6 its authority is separate, and by (iii) applications include construction and judgment under different processing conditions, so a traversal is a typed contract applied under exactly one functor kind; total deterministic processing, bounded probabilistic construction and human adjudication are distinct kinds, each distinct from actor, executor and domain operation, and the name asserts no categorical functor; traversals compose only under typed composition, which keeps both identities and every intermediate fact | [\u00a75](../AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds), [AC-015](../AXIOMATIC_CALCULUS.md#ac-015-functor-classification), [AC-016](../AXIOMATIC_CALCULUS.md#ac-016-typed-composition) | F_D purpose extending to deterministic construction, its total-domain requirement and the unchanged-subject evaluation profile: \u00a75; the functor kinds permitted for each traversal: the owning signature; the order of kinds in an application: that application | 4, 8, 10 |"
+        }
+      ]
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/frames/acceptance-release.md",
+      "sha256": "3ce8a95089eb2a16255c83a0daeb42b95dd23964ff91f9cf09bb2ecc83a055cd",
+      "occurrences": [
+        {
+          "line": 688,
+          "text": "| Establishes the new totality, closed-dependency and outcome contract | Map to common F_D plus the unchanged operation profile and exact traversal binding. Preserve the evidence and grants. |"
+        },
+        {
+          "line": 689,
+          "text": "| New-kind eligibility is unestablished, and the owner has identified the missing evidence or a separately declared bounded successor and its remediation obligation | Keep that identified migration pending. The legacy operation retains only its lawful standing on its exact old basis while it remains applicable; it gains no successor F_D standing. A narrower domain or fuel-bounded implementation has its own contract, identity, exhaustion outcomes and affected preservation evidence; it does not retrospectively prove the old operation total or preserve every old continuation. |"
+        },
+        {
+          "line": 690,
+          "text": "| New-kind eligibility is unestablished and no supported remediation or successor classification has been selected | Retain the exact legacy meaning and evidence with an explicit unresolved successor-classification obligation until its owner disposes it. The legacy operation retains only its lawful standing on its exact old basis while applicable. Grant neither new F_D standing nor an automatic F_P label; the affected successor claim stays open. |"
+        }
+      ]
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/frames/binding.md",
+      "sha256": "97e24d9a5b5c540da76bbba47a69753dcb2947bcd934b75b14b4df0502b29462",
+      "occurrences": [
+        {
+          "line": 103,
+          "text": "A binding that claims F_D establishes the common kind's total-domain contract."
+        }
+      ]
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/frames/member-build-assess.md",
+      "sha256": "ac831fab5551b9a443daf59016722ede6ce258571b1cb48d01fe9abe4691a1ca",
+      "occurrences": [
+        {
+          "line": 709,
+          "text": "| Establishes the new totality, closed-dependency and outcome contract | Map to common F_D plus the unchanged operation profile and exact traversal binding. Preserve the evidence and grants. |"
+        },
+        {
+          "line": 710,
+          "text": "| New-kind eligibility is unestablished, and the owner has identified the missing evidence or a separately declared bounded successor and its remediation obligation | Keep that identified migration pending. The legacy operation retains only its lawful standing on its exact old basis while it remains applicable; it gains no successor F_D standing. A narrower domain or fuel-bounded implementation has its own contract, identity, exhaustion outcomes and affected preservation evidence; it does not retrospectively prove the old operation total or preserve every old continuation. |"
+        },
+        {
+          "line": 711,
+          "text": "| New-kind eligibility is unestablished and no supported remediation or successor classification has been selected | Retain the exact legacy meaning and evidence with an explicit unresolved successor-classification obligation until its owner disposes it. The legacy operation retains only its lawful standing on its exact old basis while applicable. Grant neither new F_D standing nor an automatic F_P label; the affected successor claim stays open. |"
+        }
+      ]
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/frames/traversal-task-f.md",
+      "sha256": "a4bc2ffb6445f59dc9737d65edb6ab04a26ec1dbf903c85570a1f85c07d6417e",
+      "occurrences": [
+        {
+          "line": 748,
+          "text": "`Sigma_occurrence.FunctorKind` contains exact refs to `F_D`, `F_P` and"
+        },
+        {
+          "line": 753,
+          "text": "stable concept URN. A successor occurrence that claims common `F_D` requires"
+        },
+        {
+          "line": 991,
+          "text": "effect invocation are different coordinates. An `F_P`, `F_D` or `F_H`"
+        }
+      ]
+    }
+  ],
+  "standing": "Navigation census only; DISPOSITIONS.md records semantic reconciliation."
+}
