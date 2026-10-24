@@ -1,0 +1,42 @@
+{
+  "kind": "stdo301.source-review/1",
+  "subject_commit": "3204b84d5fbd85996374d87b88ee2d87bad9349b",
+  "native_inventory_sha256": "f48b43e462a8030395387b47ba230860590ec20c5f040298a24618bddcf06283",
+  "review_sha256": "f13957be3c3d526a1ea815d17ce55346ebc24c3397d17f3d3762df2a4ab57218",
+  "model": "claude-opus-5-5",
+  "tools": [
+    "Glob",
+    "Grep",
+    "Read"
+  ],
+  "mcp_servers": [],
+  "actual_tool_names": [
+    "Glob",
+    "Grep",
+    "Read"
+  ],
+  "completion": {
+    "exit_code": 0,
+    "timed_out": false,
+    "elapsed_seconds": 1927.087
+  },
+  "budget_extension": {
+    "kind": "review.supervision-extension",
+    "initial_seconds": 1800,
+    "extended_seconds": 2700,
+    "reason": "Continuing source-first acquisition; preserve same reviewer context",
+    "spend_cap_usd": 30,
+    "tools_unchanged": true,
+    "wrapper_pid": 13750,
+    "reviewer_pid": 13752,
+    "started_at_epoch": 1792845713.699022,
+    "resume_reason": "reviewer_exited",
+    "resumed_at_epoch": 1792845858.176704
+  },
+  "num_turns": 145,
+  "total_cost_usd": 11.373659800000002,
+  "result": "falsified",
+  "source_reverified_after_review": true,
+  "private_transcript_published": false,
+  "limits": "Cross-family bounded semantic assessment; no owner or whole-method acceptance; review itself did not hash/run code."
+}

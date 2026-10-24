@@ -1,0 +1,97 @@
+{
+  "actor": "/root/stdo301_representation_plan",
+  "basis": {
+    "branch": "codex/stdo-3.0.1-delivery",
+    "builder": "stdo://releases/v2.5.1-rc.2/",
+    "definition_sha256": "b0e013e6f9dabb9d3f31dd02c1a6909e9fc6418925a8d829f3bb1c2adf3dac1d",
+    "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "represented_source": "pending exact nativeC; source selection grants no new operative method binding",
+    "source_preparation_head": "e809897b2ddcbb94d63397ad09bd8d4087bd3132"
+  },
+  "created_at": "2026-10-24T12:43:28.022895+00:00",
+  "grant": "Root bounded repair Writer activation: fix reviewed plan binding, complete release identity cross-checks and reservation accounting; preserve historical evidence; 25-minute initial envelope.",
+  "guards": {
+    "a_c/applications/stdo-v3-common-35fb4824/freeze_sources.py": "891025421de215c0185ba649fc8564051195d726dae0383c35190e7e41e66b89",
+    "a_c/applications/stdo-v3-common-35fb4824/package_release.py": "324fe8242ecb4f67c6f6ed77c6ff3f674245f53c73f17ba1029f0e9f03b28ccb",
+    "a_c/applications/stdo-v3-common-35fb4824/release_tools/bundle_check.py": "74beb6365104bc4352b691725c9e18fe3521d01fe50a080c0c9cc735a4a141f5",
+    "a_c/applications/stdo-v3-common-35fb4824/release_tools/public_receipts.py": "ab91aae1bd08d64c167833095735735235919e0dd32a040b39d95c60291cf3b3",
+    "a_c/build_tenants/graphify/code/ac_generate.py": "fcb946e180ba8a30ecdfdb9e53044cd142d9bd450464c186dfbbe90e9da5ec93",
+    "a_c/build_tenants/graphify/code/ac_graph.py": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+    "a_c/build_tenants/graphify/code/ac_grounding.py": "f850e7ceecd945455891e6cc941fc3a86c943ed27bbe74d86b0248169d9cf682",
+    "a_c/build_tenants/graphify/code/ac_repair.py": "5be5e738f12006dcb17066ccfb60d22e65e5929a8a9a96d52ee5c0a19efda928"
+  },
+  "kind": "a_c.stdo301.tooling-repair-writer-activation/1",
+  "preimages": [
+    {
+      "bytes": 21520,
+      "path": "a_c/applications/stdo-v3-3.0.1-rc.1/run_generation.py",
+      "preimage": "preimages/application/run_generation.py",
+      "sha256": "85869b0cd883edb983cc70c46374490764b974e12500bf9193c2cd21c2f6364f"
+    },
+    {
+      "bytes": 10616,
+      "path": "a_c/applications/stdo-v3-3.0.1-rc.1/release_tools/bundle_check.py",
+      "preimage": "preimages/application/release_tools/bundle_check.py",
+      "sha256": "fa2975b9803c1571b33480a596986f496eb52bef97cf36a582ca56240c68aa7b"
+    },
+    {
+      "bytes": 22899,
+      "path": "a_c/applications/stdo-v3-3.0.1-rc.1/test_env/test_application.py",
+      "preimage": "preimages/application/test_env/test_application.py",
+      "sha256": "ec9712f6ff54cf42bb172e9901abf00b94ebdf275530a1b102358f954a90f03a"
+    },
+    {
+      "bytes": 7678,
+      "path": "a_c/applications/stdo-v3-3.0.1-rc.1/test_env/test_upstream_packaging.py",
+      "preimage": "preimages/application/test_env/test_upstream_packaging.py",
+      "sha256": "f798965f60772345492742b89a14ddc7851e8d88601dd1ea2e90df27167e52d9"
+    },
+    {
+      "bytes": 9864,
+      "path": "a_c/applications/stdo-v3-3.0.1-rc.1/README.md",
+      "preimage": "preimages/application/README.md",
+      "sha256": "ede8fe61f4e90bec005d22846df7ad95440c5e38594295fdceb24534ee6fcd9e"
+    },
+    {
+      "bytes": 8263,
+      "path": "a_c/applications/stdo-v3-3.0.1-rc.1/PUBLIC-FILES.json",
+      "preimage": "preimages/application/PUBLIC-FILES.json",
+      "sha256": "b253ab7cfec8bb5bdfefc88b20ec598d28b0bd2e76ca632bde4abc96ee11f785"
+    },
+    {
+      "bytes": 4334,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO301_DELIVERY/representation/CLOSED.json",
+      "preimage": "preimages/original-proof/CLOSED.json",
+      "sha256": "0a8833680823b7f115642ec030ff3ef2b3ba13687be9b59044511ed444895dc9"
+    },
+    {
+      "bytes": 6588,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO301_DELIVERY/representation/RETURN.md",
+      "preimage": "preimages/original-proof/RETURN.md",
+      "sha256": "88e8698b30c659ac6fb432ee1a849e4414d7efa539a3bc4fae20a6c96699dbd5"
+    },
+    {
+      "bytes": 6046,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO301_DELIVERY/representation/checkpoint-selection.json",
+      "preimage": "preimages/original-proof/checkpoint-selection.json",
+      "sha256": "134b80d21267d8f5cd1a870dccf05e2356303526d961de670526015d978d39b6"
+    }
+  ],
+  "prohibited": [
+    "Historical application mutation",
+    "Generic tenant/runtime mutation",
+    "Source payload mutation",
+    "Model calls",
+    "Actual source freezing before nativeC grant",
+    "Git/ref effects",
+    "Installations or global state changes",
+    "Semantic judgment or invented construction/review receipt"
+  ],
+  "return_rule": "Return to Executive with exact hashes, actual focused tests and limits; no reviewer activation by Writer.",
+  "reviewed_closure_sha256": "0a8833680823b7f115642ec030ff3ef2b3ba13687be9b59044511ed444895dc9",
+  "role": "Writer",
+  "territory": [
+    "a_c/applications/stdo-v3-3.0.1-rc.1/",
+    "specification_methodology/v3/.ai-workspace/work/STDO301_DELIVERY/representation/"
+  ]
+}

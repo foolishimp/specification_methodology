@@ -1,0 +1,221 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "edges": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "confidence": {
+            "enum": [
+              "EXTRACTED",
+              "INFERRED",
+              "AMBIGUOUS"
+            ],
+            "type": "string"
+          },
+          "confidence_score": {
+            "maximum": 1,
+            "minimum": 0.1,
+            "type": "number"
+          },
+          "relation": {
+            "minLength": 1,
+            "pattern": "[a-z][a-z0-9_]*",
+            "type": "string"
+          },
+          "source": {
+            "minLength": 1,
+            "pattern": "[a-z][a-z0-9_]*",
+            "type": "string"
+          },
+          "source_file": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "source_location": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "target": {
+            "minLength": 1,
+            "pattern": "[a-z][a-z0-9_]*",
+            "type": "string"
+          },
+          "weight": {
+            "minimum": 0,
+            "type": "number"
+          }
+        },
+        "required": [
+          "source",
+          "target",
+          "relation",
+          "confidence",
+          "confidence_score",
+          "source_file",
+          "source_location",
+          "weight"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "hyperedges": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "confidence": {
+            "enum": [
+              "EXTRACTED",
+              "INFERRED"
+            ],
+            "type": "string"
+          },
+          "confidence_score": {
+            "maximum": 1,
+            "minimum": 0.1,
+            "type": "number"
+          },
+          "id": {
+            "minLength": 1,
+            "pattern": "[a-z][a-z0-9_]*",
+            "type": "string"
+          },
+          "label": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "nodes": {
+            "items": {
+              "minLength": 1,
+              "pattern": "[a-z][a-z0-9_]*",
+              "type": "string"
+            },
+            "minItems": 3,
+            "type": "array"
+          },
+          "relation": {
+            "minLength": 1,
+            "pattern": "[a-z][a-z0-9_]*",
+            "type": "string"
+          },
+          "source_file": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "nodes",
+          "relation",
+          "confidence",
+          "confidence_score",
+          "source_file"
+        ],
+        "type": "object"
+      },
+      "maxItems": 3,
+      "type": "array"
+    },
+    "input_tokens": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "nodes": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "author": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "captured_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "contributor": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "file_type": {
+            "enum": [
+              "code",
+              "document",
+              "paper",
+              "image",
+              "rationale",
+              "concept"
+            ],
+            "type": "string"
+          },
+          "id": {
+            "minLength": 1,
+            "pattern": "[a-z][a-z0-9_]*",
+            "type": "string"
+          },
+          "label": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "rationale": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source_file": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "source_location": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source_url": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "file_type",
+          "source_file",
+          "source_location",
+          "source_url",
+          "captured_at",
+          "author",
+          "contributor",
+          "rationale"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "output_tokens": {
+      "minimum": 0,
+      "type": "integer"
+    }
+  },
+  "required": [
+    "nodes",
+    "edges",
+    "hyperedges",
+    "input_tokens",
+    "output_tokens"
+  ],
+  "type": "object"
+}

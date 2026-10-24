@@ -1,0 +1,18 @@
+{
+  "kind": "stdo301.native-preparation-writer/1",
+  "role": "Writer",
+  "preceding_role": "Read-only bounded release-obligation evaluator",
+  "authority": "Root's explicit native release-preparation Writer activation, after the selected do it delivery instruction",
+  "territory": "specification_methodology/v3/.ai-workspace/work/STDO301_DELIVERY/native-release/",
+  "target": "v3.0.1-rc.1",
+  "builder": "stdo://releases/v2.5.1-rc.2/",
+  "builder_manifest": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+  "predecessor_native_commit": "0a04feb788c080183b58cf4a162e88372be1d87e",
+  "proposal_sha256": "fd412ace60d56b942f9ddb4b14c5c0fda42fc04f26ae12760182a26ce0532554",
+  "permitted": ["write tools and bounded records in territory", "source-independent synthetic controls in territory", "prepare at most four fresh-actor task packets and separate expected outcomes"],
+  "reserved_to_root": ["all Git effects", "real candidate staging execution", "all installs", "fresh actor invocation", "publication", "owner acceptance"],
+  "bounds": {"tool_record_bytes": 262144, "wall_minutes": 30},
+  "stops": ["missing or changed exact source identity", "outside-territory writes", "candidate mutation", "unselected acceptance or publication authority", "bound exhausted"],
+  "return": "candidate_ready for reviewed preparation artifacts only; actual release gates remain separate",
+  "independence": "Author checks are not independent assessment of this Writer's outputs"
+}

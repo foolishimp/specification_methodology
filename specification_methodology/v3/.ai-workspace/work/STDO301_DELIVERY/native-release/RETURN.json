@@ -1,0 +1,71 @@
+{
+  "builder": "stdo://releases/v2.5.1-rc.2/",
+  "builder_manifest": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+  "candidate_author_changes_consumed_for_oracles": false,
+  "checks": {
+    "failures": 0,
+    "fresh_actor_task_packets": 4,
+    "oracle_json_valid": true,
+    "source_independent_controls": 20,
+    "syntax_checked": true
+  },
+  "effects": {
+    "candidate_builds": false,
+    "fresh_actor_invocations": false,
+    "git_writes": false,
+    "new_dependencies": false,
+    "real_installs": false,
+    "remote_mutations": false,
+    "writes": "This native-release directory only; synthetic control fixtures created and removed under scratch."
+  },
+  "entrypoints": {
+    "actor_inputs": "qualification/tasks/",
+    "assessor_oracles": "qualification/oracles/expected.json",
+    "controls": "test_native_release.py",
+    "harness": "native_release.py",
+    "recipe": "README.md"
+  },
+  "evidence": [
+    "control-results.json",
+    "control-results.txt",
+    "release-gates.md"
+  ],
+  "independence": "Author controls are bounded observations. This Writer does not independently assess its own script, recipe or oracle.",
+  "kind": "stdo301.native-preparation-return/1",
+  "measurement": {
+    "active_context_fit": "not measured; no fit claim",
+    "control_wall_seconds": 0.07,
+    "elapsed_upper_bound_seconds_since_enclosing_activation": 1305.651,
+    "enclosing_activation_utc": "2026-10-24T11:54:57.349009+00:00",
+    "last_clock_observation_utc": "2026-10-24T12:16:43+00:00",
+    "spend": "not instrumented",
+    "tool_record_limit_bytes": 262144,
+    "writer_started_after_enclosing_activation": true
+  },
+  "overall_result": "satisfied",
+  "predecessor_native_commit": "0a04feb788c080183b58cf4a162e88372be1d87e",
+  "predicate": "The authorized bounded release-preparation tools, executable recipe, prior gate audit and up to four independent-expectation task packets are concrete and reviewable within territory.",
+  "proposal_sha256": "fd412ace60d56b942f9ddb4b14c5c0fda42fc04f26ae12760182a26ce0532554",
+  "remaining_gates": [
+    "Root or independent nonauthor reviews this preparation before effects",
+    "Finish exact frozen-source semantic review and applicable owner decisions",
+    "Root creates exact native commit/tag and executes manifest plus isolated install proof",
+    "Separate fresh actors and nonauthor assessor run selected installed-route tasks with measured envelopes",
+    "Representation freeze/build/review binds the emitted SOURCE_SELECTION",
+    "Root qualifies exact assets/ref plan, executes guarded atomic publication, verifies actual downloads and fresh public installation",
+    "Final exact-cut acceptance and consumer adoption retain their separate owners and standing"
+  ],
+  "role": "Writer",
+  "scope": "Preparation artifacts only; not candidate qualification, independent review of authored tools, release acceptance or publication.",
+  "selection_interface": {
+    "candidate_path": "Supplied explicitly after source freeze",
+    "consumer": "Representation Writer freeze with externally selected selection SHA256",
+    "inventory": "Dynamic complete payload rows; no historical count assumption",
+    "kind": "a_c.stdo301.native-source-selection/1",
+    "native_path": "specification_methodology/v3",
+    "producer": "native_release.py seal, after genuine local annotated tag and manager manifest"
+  },
+  "source_freeze_received_from_root": "3204b84d5fbd85996374d87b88ee2d87bad9349b",
+  "target": "v3.0.1-rc.1",
+  "work_result": "candidate_ready"
+}
