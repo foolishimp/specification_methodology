@@ -14,7 +14,11 @@ representation, qualification and release preparation are selected. Native
 `3.0.1-rc.1` is now published at commit
 `fe4941f56a52ed3697a2b516d8d68948b0ea65d9`, manifest
 `60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8`;
-fresh public installation is verified. Four installed-use tasks support the
+fresh public installation is verified. This is a proper published immutable
+release; `rc.1` identifies the cut and does not require a later final release.
+The owner's [publication correction](../.ai-workspace/work/STDO301_DELIVERY/native-release/publication-correction-001/README.md)
+separates publication classification from qualification and consumer adoption.
+Four installed-use tasks support the
 bounded amendment predicates, with their recorded limitations. The separate
 Graphify representation remains incomplete after one completed chunk and one
 timeout. A separate concise-prompt trial also timed out on both calls at ten

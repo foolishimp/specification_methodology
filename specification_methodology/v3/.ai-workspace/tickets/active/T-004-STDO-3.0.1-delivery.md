@@ -1,6 +1,22 @@
 # T-004 — STDO 3.0.1 delivery
 
-Status: active. Native 3.0.1 RC1 is published and public reacquisition verified. Supplemental representation renewal remains incomplete; exact-subject acceptance remains pending.
+Status: active. Native 3.0.1 RC1 is a proper published immutable release; public reacquisition is verified. Supplemental representation renewal remains incomplete. Qualification and consumer adoption are separate from publication; no second final release is required.
+
+### Current publication classification
+
+Jim clarified that each release is a proper release, then instructed: “fix it
+and push to remote.” The initial GitHub `prerelease: true` flag and “test
+candidate” presentation were an assistant publication error. The correction
+sets `prerelease: false`, uses the title “STDO 3.0.1 RC1”, and states that this
+is the published immutable release for the cut. The `rc.1` suffix is retained
+as its immutable identity. Qualification findings, actual adoption decisions
+and the unfinished supplemental representation remain separately recorded.
+
+See [the correction record](../../work/STDO301_DELIVERY/native-release/publication-correction-001/README.md).
+Earlier entries below and frozen run records describe their historical states;
+their candidate/prerelease wording does not define the current publication
+classification. This correction changes no native tag, payload, manifest or
+asset and asserts no new semantic or runtime proof.
 
 ## Owner selection and triage
 

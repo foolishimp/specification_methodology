@@ -1,0 +1,28 @@
+STDO 3.0.1 RC1 is a **published, immutable STDO release**. The `rc.1` suffix identifies its first immutable cut. There is no separate final cut required to make this a release. Qualification and acceptance are verdicts over this exact cut; each consumer's adoption is a separate decision.
+
+This release establishes the common total deterministic processing contract while keeping operation permissions, evaluation, admission and closure authority separate. It adds bounded continuation-preservation and qualified-reference guidance, worked finite examples, and explicit legacy migration obligations. The stronger totality/dependency requirements mean the version label does not promise automatic compatibility for old operations.
+
+- Native commit: `fe4941f56a52ed3697a2b516d8d68948b0ea65d9`
+- Immutable tag: `specification_methodology/v3.0.1-rc.1`
+- Annotated tag object: `6e96ce1d2422508e5620bd12afceda890c556fd6`
+- Source checkpoint: `9f70f54d13929b4629808030077da0f1691ce7bd`
+- Canonical manifest SHA256: `60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8`
+- Payload: 83 files, including 12 regenerated native reference frames.
+
+The affected source received cross-family semantic review and supported repairs. A fresh installation acquired from the public release reproduces all 83 payload files and the exact manifest. Four installed-route tasks support the selected amendment distinctions; the retained assessment qualifies one actor's categorical-equivalence overstatement.
+
+The supplemental a_c/Graphify representation is **incomplete and is not included in this release**. It is a separate artifact representing this exact native cut and is not a dependency of the native install. Whole-method qualification and measured efficiency benefit remain open. These limits do not change this cut's published-release status. The construction builder remains STDO 2.5.1 RC2.
+
+Install and verify this exact release:
+
+```sh
+stdo --store ./stdo-3.0.1-store install v3.0.1-rc.1 \
+  --repository https://github.com/foolishimp/specification_methodology.git \
+  --manifest-sha256 60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8
+stdo --store ./stdo-3.0.1-store verify v3.0.1-rc.1 \
+  --manifest-sha256 60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8
+```
+
+Installation does not automatically change an existing Product Definition's selected basis.
+
+Publication correction: the original GitHub prerelease flag and test-candidate presentation were incorrect. The owner clarified that each published cut is a proper release. This correction supersedes any implication in earlier publication or bundled candidate wording that another final release must be awaited. It changes the publication classification and presentation; the tag, payload, manifest, assets and recorded qualification evidence are unchanged. [Correction record](https://github.com/foolishimp/specification_methodology/blob/main/specification_methodology/v3/.ai-workspace/work/STDO301_DELIVERY/native-release/publication-correction-001/README.md).

@@ -1,6 +1,6 @@
-# Native 3.0.1 RC1 preparation
+# Native 3.0.1 RC1 release operations
 
-This is a bounded Writer's preparation, not independent assessment of its own output. It targets an immutable **test candidate** with the predecessor's claim scope unless subsequent evidence establishes more. No inherited acceptance, method qualification or consumer adoption is asserted.
+STDO 3.0.1 RC1 is a published immutable release. The `rc.1` suffix identifies its first immutable cut; no separate final cut is required to make it a release. Qualification verdicts and consumer adoption remain separate decisions. The owner's publication-classification correction is recorded in [publication-correction-001](publication-correction-001/README.md); earlier frozen run records retain the metadata actually published at their dates.
 
 Root reviews the script and this recipe before effects. Root exclusively performs every Git write/ref operation, installation, fresh-actor invocation and publication. `native_release.py` itself permits only read-only Git verbs and writes new records inside this directory. It never commits, tags, fetches, installs or pushes. All output names are create-only. A failed step leaves its partial run visible; do not repurpose it or overwrite its records. Use a new run directory after repair. The preparation delivered here has no candidate-dependent outputs.
 
@@ -96,7 +96,7 @@ Record the emitted `assets.json` SHA256 as `assets_sha256`. The selected files a
 Root creates the local selector and native branches only after the preceding gates and applicable source/review decisions are satisfied. `carrier_commit` is the reviewed main carrier B containing the source freeze and selected records/assets. It must descend from both the source candidate and the observed current remote main. Do not retarget either native immutable cut to B.
 
 ```sh
-git -C "$release_repo" tag -a -m 'STDO 3.0.1 selector: immutable RC1 test candidate; acceptance pending' \
+git -C "$release_repo" tag -a -m 'STDO 3.0.1 selector: published immutable RC1 release' \
   specification_methodology/v3.0.1 "$native_commit"
 git -C "$release_repo" branch rc/specification_methodology/3.0.1 "$native_commit"
 git -C "$release_repo" branch release/specification_methodology/3.0.1 "$native_commit"
@@ -127,9 +127,9 @@ Root may then publish the exact selected assets and previously reviewed notes wi
 
 ```sh
 gh release create specification_methodology/v3.0.1-rc.1 \
-  --repo foolishimp/specification_methodology --verify-tag --prerelease --latest=false \
+  --repo foolishimp/specification_methodology --verify-tag --prerelease=false --latest=false \
   --target "$native_commit" \
-  --title 'STDO 3.0.1 RC1 test candidate' --notes-file "$reviewed_release_notes" \
+  --title 'STDO 3.0.1 RC1' --notes-file "$reviewed_release_notes" \
   "$native_run/stdo-v3.0.1-rc.1-manifest.json" \
   "$native_run/asset-checksums/stdo-v3.0.1-rc.1-manifest.json.sha256" \
   "$representation_archive" "$representation_checksum"
@@ -150,7 +150,7 @@ gh release download specification_methodology/v3.0.1-rc.1 \
   --pattern "$representation_name" --pattern "$representation_name.sha256"
 ```
 
-Check the actual release has `draft: false`, `prerelease: true`, target C and the selected tag; its ID differs from `github-latest.json`. Compare actual asset names/byte lengths to `assets.json`, preserve the published URLs, then verify the downloaded bytes and public install:
+Check the actual release has `draft: false`, `prerelease: false`, target C and the selected tag; its ID differs from `github-latest.json`. The GitHub prerelease flag must not be inferred from the STDO cut's `rc` spelling. Compare actual asset names/byte lengths to `assets.json`, preserve the published URLs, then verify the downloaded bytes and public install:
 
 ```sh
 python3 -I -S -B "$native_tool" check-assets --run "$native_run" \
@@ -166,7 +166,7 @@ python3 -I -S -B "$native_tool" installed --run "$native_run" \
   --verify-report "$native_run/verify-public.json" --label public
 ```
 
-Fresh public reacquisition must reproduce the same manifest and complete payload. Verify nondraft/prerelease/not-latest flags explicitly. No consumer adoption or global plugin activation is part of this sequence. Final source bookkeeping uses a later carrier commit and cannot move the native tag.
+Fresh public reacquisition must reproduce the same manifest and complete payload. Verify nondraft/published-release/not-latest flags explicitly. No consumer adoption or global plugin activation is part of this sequence. Final source bookkeeping uses a later carrier commit and cannot move the native tag.
 
 ## Focused installed-route tasks
 
