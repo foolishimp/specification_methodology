@@ -1,0 +1,39 @@
+# T-004 — STDO 3.0.1 delivery
+
+Status: active. Standards construction and representation renewal selected; exact-subject acceptance and publication pending.
+
+## Owner selection and triage
+
+On 24 October 2026 Jim instructed “do it” after the seven-stage plan covering amendment ratification, common construction, native acquisition assets, a fresh supplemental Graphify representation, independent assessment, installation and publication. This admits execution of that plan. The repaired proposal is `20261024T070735Z_STRATEGY_STDO_3_0_1_CHANGE_PROPOSAL.md`, SHA256 `fd412ace60d56b942f9ddb4b14c5c0fda42fc04f26ae12760182a26ce0532554`.
+
+Re-entry: `requirement_reprice` for P301-01 and its compatibility duties; `design_reframe` for P301-02–05 insofar as they explain existing obligations; `realization_refactor` for source-coherent regeneration. Any broader normative change returns to the owning requirement. The explicit cross-Product relation is standalone STDO native release plus an a_c application representing the same frozen payload. No v2 cohort, peer Product version, ABI/GTL implementation or downstream adoption is selected.
+
+## Exact subjects
+
+- Builder: installed `v2.5.1-rc.2`, manifest `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`.
+- Native predecessor: published `v3.0.0-rc.1`, commit `0a04feb788c080183b58cf4a162e88372be1d87e`, manifest `069285ad5a79d59ca2dd835e34a54b3e537b0eeef99c29994b18c339dbe62232`. It is a prerelease; no final 3.0.0 acceptance is inferred.
+- Candidate: `build_tenants/common/` on `codex/stdo-3.0.1-delivery`, worktree `/Users/jim/src/apps/specification_methodology-301`. Initial 81-file payload is byte-exact to that native predecessor, relocated without semantic changes.
+- First target cut: `3.0.1-rc.1`. Its version assessment must state that the deterministic kind broadens purpose and strengthens qualification; the label promises no automatic patch compatibility.
+- Supplemental predecessor: `a_c/applications/stdo-v3-common-35fb4824`, historical and immutable for this work. The successor application must bind the new source commit and cannot relabel the old representation.
+
+## Outcome and sequence
+
+1. Bind source delta, consumers, compatibility and inherited acceptance obligations.
+2. Implement P301-01–06 in the common owners and affected consumers, with one definition and explicit operation authority. Preserve historical installed meanings.
+3. Refresh native frames and plugin/release metadata; freeze source after relevant checks and independent review.
+4. Generate the source-matched supplemental a_c/Graphify representation through declared fresh semantic actors; validate grounding, exact carrier recovery, custody and portable packaging.
+5. Assess source and representation semantics, targeted actual use and applicable inherited obligations. Reuse evidence only on supported validity grounds.
+6. Qualify the exact staged cut through clean-store installation, native acquisition, extracted supplemental operations, rebuild/tamper checks and interactive HTML.
+7. Present exact subjects and remaining decisions for acceptance where reserved; publish authorized accepted or explicitly scoped prerelease claims, verify remote refs/assets and fresh public acquisition.
+
+## Activations and limits
+
+The root actor occupies Executive for coordination. The setup Writer may create this isolated worktree, copy exact predecessor/tooling inputs, and record this ticket/activation; it returns to Executive before further delegation. A source Writer owns common standards and directly affected source WHAT, migration/discriminator records and native derivation tooling in this worktree. A representation Writer is activated only after its source dependency is frozen. Reviewers independently acquire exact subjects and return findings without repairs. A separate checkpoint/release Writer owns Git/package/install/publication effects when that frontier is ready.
+
+Read-only release-gate and representation-tooling evaluations run alongside setup. They grant no acceptance. Each implementation/review activation binds purpose, subject, basis, territory, resources, evidence and stop conditions in its return. Same-family working reviews are disclosed; required independence and owner decisions remain governed by their original contracts.
+
+Do not alter the original worktree, historical frozen records, other tenant candidates, existing tags, installed releases or unrelated dirty work. Do not treat package checks, publication, or a good representation as inherited semantic acceptance. Stop a dependent effect on missing authority, incompatible source identity, material failed obligation or unverifiable evidence; continue independent authorized work.
+
+## Current state
+
+Setup complete: isolated branch, exact RC1 payload and prior frame/package tooling acquired. See `../../work/STDO301_DELIVERY/activation.json`. Source construction, representation generation, qualification and acceptance are outstanding.
