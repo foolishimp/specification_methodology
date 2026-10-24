@@ -122,3 +122,15 @@ contract `92c752ee7c333350b4bd5483c771b7108e59fa5d3a07bff758474ccda80aae76`:
 explicit bounded grants; completion, model review, packaging/browser checks and
 publication remain pending. Existing preparation wording is historical at its
 own cut; later results are recorded separately without retargeting those freezes.
+
+### Native-first publication order
+
+After the owner's timing feedback, the Executive removed its unnecessary
+publication dependency on supplemental model generation. The selected relation
+remains standalone native STDO plus a separate exact-source a_c artifact. The
+completed native test RC publishes now with its canonical manifest and checksum;
+the representation remains selected, pending, and separately identified. No
+native bytes, C/T/M, inherited standing or owner acceptance changed. The initial
+release claims explicitly exclude a completed representation. The decision and
+actual asset profile are retained in
+`native-release/runs/rc1-002/native-only-publication.md` and `assets.json`.
