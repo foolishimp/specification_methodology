@@ -1,0 +1,47 @@
+{
+  "kind": "stdo301.review-expectation-applicability/1",
+  "issuer": "/root",
+  "protocol": {
+    "path": "SOURCE_DERIVED_REVIEW_PROTOCOL_001.md",
+    "sha256": "a67cdf9c2f1378ea8d3e42d41d7ab7c65ab83e5aa26c3d551071fb8fdb1ef824"
+  },
+  "original_subject": "a17aa1e98abeda5a2f191b0117468788adfbe450",
+  "selected_source_candidate": {
+    "commit": "9f70f54d13929b4629808030077da0f1691ce7bd",
+    "package_path": "specification_methodology/v3/build_tenants/common",
+    "package_tree": "f6d6183a4902811b4201ec446a9d1a3a39df498f"
+  },
+  "selected_native": {
+    "commit": "fe4941f56a52ed3697a2b516d8d68948b0ea65d9",
+    "cut": "v3.0.1-rc.1",
+    "manifest_path": "specification_methodology/v3/.ai-workspace/work/STDO301_DELIVERY/native-release/runs/rc1-002/stdo-v3.0.1-rc.1-manifest.json",
+    "manifest_sha256": "60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8",
+    "package_path": "specification_methodology/v3",
+    "package_tree": "f6d6183a4902811b4201ec446a9d1a3a39df498f",
+    "parent": "0a04feb788c080183b58cf4a162e88372be1d87e",
+    "qualified_ref": "refs/tags/specification_methodology/v3.0.1-rc.1",
+    "standards_tree": "f372cbcf030e7bfe4be18b754b621ba0431c052b",
+    "tag_object": "6e96ce1d2422508e5620bd12afceda890c556fd6",
+    "tree": "3aa889d2749e05f5c9c1d1375fb27391a8159e99"
+  },
+  "source_contract_sha256": "92c752ee7c333350b4bd5483c771b7108e59fa5d3a07bff758474ccda80aae76",
+  "validity": "Exact four-reference-only primary delta independently reversed to preimage; all deciding clauses and examples unchanged, line numbers preserved, affected frames reproduce; native payload equals source candidate byte for byte. Original expectations remain applicable to this distinct exact subject.",
+  "evidence": [
+    "../../independent-review/SOURCE-REVIEW-003.md",
+    "../../source/repair-2/NATIVE_INVENTORY.json",
+    "../../native-release/runs/rc1-002/installed-local.json"
+  ],
+  "changed_native_paths": [
+    "specification_methodology/v3/build_tenants/common/standards/AXIOMATIC_CALCULUS.md",
+    "specification_methodology/v3/build_tenants/common/standards/RELEASE.md",
+    "specification_methodology/v3/build_tenants/common/standards/frames/FRAME_INPUTS.json",
+    "specification_methodology/v3/build_tenants/common/standards/frames/ac-task-a.md",
+    "specification_methodology/v3/build_tenants/common/standards/frames/acceptance-release.md",
+    "specification_methodology/v3/build_tenants/common/standards/frames/binding.md",
+    "specification_methodology/v3/build_tenants/common/standards/frames/member-build-assess.md",
+    "specification_methodology/v3/build_tenants/common/standards/frames/traversal-task-f.md"
+  ],
+  "semantic_model": "not yet complete or assessed",
+  "authoring_input": false,
+  "limits": "Expectation reuse and custody only; no generated-model judgment, acceptance or benefit claim."
+}

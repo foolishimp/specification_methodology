@@ -1,0 +1,146 @@
+{
+  "canonical_manifest_bytes_checked": true,
+  "frozen_public_inventory_sha256": "5c62d5db40b342d0b5fa32aff290ffc19b5d8eb246d84a055fbbba65470e223c",
+  "kind": "a_c.stdo301.source-freeze-observation/1",
+  "model_calls": 0,
+  "native": {
+    "commit": "fe4941f56a52ed3697a2b516d8d68948b0ea65d9",
+    "cut": "v3.0.1-rc.1",
+    "manifest_path": "specification_methodology/v3/.ai-workspace/work/STDO301_DELIVERY/native-release/runs/rc1-002/stdo-v3.0.1-rc.1-manifest.json",
+    "manifest_sha256": "60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8",
+    "package_path": "specification_methodology/v3",
+    "package_tree": "f6d6183a4902811b4201ec446a9d1a3a39df498f",
+    "parent": "0a04feb788c080183b58cf4a162e88372be1d87e",
+    "qualified_ref": "refs/tags/specification_methodology/v3.0.1-rc.1",
+    "standards_tree": "f372cbcf030e7bfe4be18b754b621ba0431c052b",
+    "tag_object": "6e96ce1d2422508e5620bd12afceda890c556fd6",
+    "tree": "3aa889d2749e05f5c9c1d1375fb27391a8159e99"
+  },
+  "preflight": {
+    "cli_version": "codex-cli 0.164.0",
+    "effective_mcp_inventory": [
+      {
+        "enabled": false,
+        "name": "codex_app"
+      },
+      {
+        "enabled": false,
+        "name": "computer-use"
+      },
+      {
+        "enabled": false,
+        "name": "cua_repl"
+      },
+      {
+        "enabled": false,
+        "name": "node_repl"
+      },
+      {
+        "enabled": false,
+        "name": "playwright"
+      }
+    ],
+    "model_call_performed": false,
+    "python_source_parser_available": true,
+    "settings": {
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "max",
+      "service_tier": "default"
+    },
+    "upstream": "fe085cedddde3a18554f8749b230bfe47f3dcce7"
+  },
+  "preflight_record_sha256": "e7c7eb3b1e2500d38976fdab7e975786e0d9c012456eb8673e53745ff692dd3f",
+  "preflight_stdout_sha256": "5c9b07882fc9a218198c4a7e006fc0d7408f9d44508f108ce3a88c15590552b8",
+  "prepare_performed": false,
+  "reviewed_application_guards": {
+    ".gitignore": true,
+    "PUBLIC-FILES.json": true,
+    "README.md": true,
+    "application.json": true,
+    "checkpoint_files.py": true,
+    "freeze_sources.py": true,
+    "implementation/code/ac_generate.py": true,
+    "implementation/code/ac_graph.py": true,
+    "implementation/code/ac_grounding.py": true,
+    "implementation/code/ac_repair.py": true,
+    "implementation/code/generation/author.schema.json": true,
+    "implementation/code/generation/author.txt": true,
+    "implementation/code/generation/extraction.schema.json": true,
+    "implementation/code/generation/isolation.txt": true,
+    "implementation/code/generation/requirements.txt": true,
+    "implementation/code/grounding_repair/patch.schema.json": true,
+    "implementation/code/grounding_repair/repair.txt": true,
+    "implementation/manifest.json": true,
+    "package_release.py": true,
+    "release_tools/PUBLIC-RECEIPTS.md": true,
+    "release_tools/application_contract.py": true,
+    "release_tools/builder_basis/LICENSE": true,
+    "release_tools/builder_basis/custody.json": true,
+    "release_tools/builder_basis/manifest.json": true,
+    "release_tools/builder_basis/standards/AXIOMATIC_CALCULUS.md": true,
+    "release_tools/builder_basis/standards/authority_compressions/stdo_bootstrap.md": true,
+    "release_tools/bundle_check.py": true,
+    "release_tools/public_receipts.py": true,
+    "release_tools/records-template.html": true,
+    "release_tools/serve_preview.py": true,
+    "release_tools/source_reentry.py": true,
+    "release_tools/upstream/LICENSE": true,
+    "release_tools/upstream/LICENSE-MIT": true,
+    "release_tools/upstream/NOTICE": true,
+    "release_tools/upstream/custody.json": true,
+    "release_tools/upstream/graphify/export.py": true,
+    "release_tools/upstream/graphify/exporters/base.py": true,
+    "release_tools/upstream/graphify/exporters/html.py": true,
+    "release_tools/vendor/custody.json": true,
+    "release_tools/vendor/vis-network-9.1.6-LICENSE-APACHE-2.0": true,
+    "release_tools/vendor/vis-network-9.1.6-LICENSE-MIT": true,
+    "release_tools/vendor/vis-network-9.1.6-package.json": true,
+    "release_tools/vendor/vis-network-9.1.6.min.js": true,
+    "run_generation.py": true,
+    "test_env/test_application.py": true,
+    "test_env/test_upstream_packaging.py": true
+  },
+  "reviewed_application_inventory_sha256": "5180ea1b54bd8954557251fa9817e392e26c2d55a5823a929fe73fc658afbf48",
+  "runtime_outputs_absent": {
+    "bundle": true,
+    "dist": true,
+    "private": true,
+    "run": true
+  },
+  "scheduler_sha256": "8ab9ddffc46777c1558b2430fb1d1d434fa1495a858d76f81782fa77a03fce05",
+  "semantic_python_companion_included": true,
+  "source_candidate": {
+    "commit": "9f70f54d13929b4629808030077da0f1691ce7bd",
+    "package_path": "specification_methodology/v3/build_tenants/common",
+    "package_tree": "f6d6183a4902811b4201ec446a9d1a3a39df498f"
+  },
+  "source_contract_sha256": "92c752ee7c333350b4bd5483c771b7108e59fa5d3a07bff758474ccda80aae76",
+  "source_counts": {
+    "bytes": 3383211,
+    "chunk_count": 18,
+    "claim": "Exact payload/selection/frame-owner custody; no frame semantic sufficiency or interpretation judgment.",
+    "classes": {
+      "derived_frames": {
+        "bytes": 1297914,
+        "member_count": 13
+      },
+      "host_legal_release_metadata": {
+        "bytes": 29021,
+        "member_count": 10
+      },
+      "primary_semantic": {
+        "bytes": 2056276,
+        "member_count": 60
+      }
+    },
+    "exact_git_replay": true,
+    "files": 83,
+    "frame_owner_bindings": 223,
+    "inventory_sha256": "e51dbe0001e1ad98ab4262718745d00d4dc4c681e465bf47c8efc57dbca2cd32",
+    "section_count": 855,
+    "semantic_bytes": 2056276,
+    "semantic_files": 60
+  },
+  "source_selection_sha256": "c7e15e0f81d6fe6031c77b1227e50e1b81f92d3d482af4766cb28078259d63b3",
+  "subject": "repo://stdo-v3-native/fe4941f56a52ed3697a2b516d8d68948b0ea65d9"
+}

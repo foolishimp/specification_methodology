@@ -1,0 +1,232 @@
+{
+  "kind": "stdo301.installed-task-observation/1",
+  "task": "task-04",
+  "subject_commit": "fe4941f56a52ed3697a2b516d8d68948b0ea65d9",
+  "manifest_sha256": "60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8",
+  "model": "claude-opus-5-5",
+  "requested_effort": "xhigh",
+  "model_tools": [
+    "Glob",
+    "Grep",
+    "Read"
+  ],
+  "mcp_servers": [],
+  "prompt_sha256": "6e5033d05de3e59ff4e75a08446b07dad6d89afce761034eed8f510fa6cc0197",
+  "supplied_prompt_utf8_bytes": 4007,
+  "tool_result_content_utf8_bytes": 129946,
+  "acquisition_measure": "Cumulative returned tool-content text bytes including rendered line labels; not unique source bytes or peak context",
+  "peak_active_context": "not instrumented",
+  "calls": [
+    {
+      "id": "toolu_01GxfoYMv6Y4P9YaxP2jw4by",
+      "name": "Read",
+      "input": {
+        "file_path": "/Users/jim/src/apps/specification_methodology-301/specification_methodology/v3/.ai-workspace/work/STDO301_DELIVERY/native-release/runs/rc1-002/local-store/releases/v3.0.1-rc.1/standards/README.md"
+      },
+      "resolved_root_relative": "standards/README.md"
+    },
+    {
+      "id": "toolu_01BJ6M8t5YghjPtzLn5X4hs9",
+      "name": "Grep",
+      "input": {
+        "pattern": "factori|terminal|useful preservation|policy distinction|plain-text|plain text|retention",
+        "path": "/Users/jim/src/apps/specification_methodology-301/specification_methodology/v3/.ai-workspace/work/STDO301_DELIVERY/native-release/runs/rc1-002/local-store/releases/v3.0.1-rc.1/standards",
+        "-i": true,
+        "output_mode": "content",
+        "glob": "{FOUNDATIONS,EVALUATION,AXIOMATIC_CALCULUS}.md"
+      },
+      "resolved_root_relative": "standards"
+    },
+    {
+      "id": "toolu_01LhqDa2UrcpsuxdmKZS9EHD",
+      "name": "Grep",
+      "input": {
+        "pattern": "^#{1,4} ",
+        "path": "/Users/jim/src/apps/specification_methodology-301/specification_methodology/v3/.ai-workspace/work/STDO301_DELIVERY/native-release/runs/rc1-002/local-store/releases/v3.0.1-rc.1/standards",
+        "output_mode": "content",
+        "glob": "{FOUNDATIONS,EVALUATION,AXIOMATIC_CALCULUS}.md"
+      },
+      "resolved_root_relative": "standards"
+    },
+    {
+      "id": "toolu_01Ub5kC83rmq2Wexi2FY4FTA",
+      "name": "Read",
+      "input": {
+        "file_path": "/Users/jim/src/apps/specification_methodology-301/specification_methodology/v3/.ai-workspace/work/STDO301_DELIVERY/native-release/runs/rc1-002/local-store/releases/v3.0.1-rc.1/standards/FOUNDATIONS.md",
+        "offset": 1100,
+        "limit": 400
+      },
+      "resolved_root_relative": "standards/FOUNDATIONS.md"
+    },
+    {
+      "id": "toolu_01My9AFkMr4f97ptBJWb7QF9",
+      "name": "Read",
+      "input": {
+        "file_path": "/Users/jim/src/apps/specification_methodology-301/specification_methodology/v3/.ai-workspace/work/STDO301_DELIVERY/native-release/runs/rc1-002/local-store/releases/v3.0.1-rc.1/standards/EVALUATION.md",
+        "offset": 380,
+        "limit": 175
+      },
+      "resolved_root_relative": "standards/EVALUATION.md"
+    },
+    {
+      "id": "toolu_01Jefouh9xypS93JmNG3PX3z",
+      "name": "Grep",
+      "input": {
+        "pattern": "Formal fragment|categorical demonstration|functor laws|identities and composition|commuting",
+        "path": "/Users/jim/src/apps/specification_methodology-301/specification_methodology/v3/.ai-workspace/work/STDO301_DELIVERY/native-release/runs/rc1-002/local-store/releases/v3.0.1-rc.1/standards/FOUNDATIONS.md",
+        "output_mode": "content"
+      },
+      "resolved_root_relative": "standards/FOUNDATIONS.md"
+    },
+    {
+      "id": "toolu_01Ka6arAHufYTnjvGQX9nfG7",
+      "name": "Read",
+      "input": {
+        "file_path": "/Users/jim/src/apps/specification_methodology-301/specification_methodology/v3/.ai-workspace/work/STDO301_DELIVERY/native-release/runs/rc1-002/local-store/releases/v3.0.1-rc.1/standards/FOUNDATIONS.md",
+        "offset": 640,
+        "limit": 92
+      },
+      "resolved_root_relative": "standards/FOUNDATIONS.md"
+    },
+    {
+      "id": "toolu_018jeUVxjU8dk3hEiGZQGpda",
+      "name": "Read",
+      "input": {
+        "file_path": "/Users/jim/src/apps/specification_methodology-301/specification_methodology/v3/.ai-workspace/work/STDO301_DELIVERY/native-release/runs/rc1-002/local-store/releases/v3.0.1-rc.1/standards/AXIOMATIC_CALCULUS.md",
+        "offset": 1063,
+        "limit": 130
+      },
+      "resolved_root_relative": "standards/AXIOMATIC_CALCULUS.md"
+    },
+    {
+      "id": "toolu_01Mn57nB5gNqzcSF4xi1Yich",
+      "name": "Grep",
+      "input": {
+        "pattern": "adequa|faithful|forgetful|constant|collaps",
+        "path": "/Users/jim/src/apps/specification_methodology-301/specification_methodology/v3/.ai-workspace/work/STDO301_DELIVERY/native-release/runs/rc1-002/local-store/releases/v3.0.1-rc.1/standards/AXIOMATIC_CALCULUS.md",
+        "-i": true,
+        "output_mode": "content"
+      },
+      "resolved_root_relative": "standards/AXIOMATIC_CALCULUS.md"
+    },
+    {
+      "id": "toolu_012MaUjCjmQj39NSon3eWEpP",
+      "name": "Read",
+      "input": {
+        "file_path": "/Users/jim/src/apps/specification_methodology-301/specification_methodology/v3/.ai-workspace/work/STDO301_DELIVERY/native-release/runs/rc1-002/local-store/releases/v3.0.1-rc.1/standards/AXIOMATIC_CALCULUS.md",
+        "offset": 919,
+        "limit": 40
+      },
+      "resolved_root_relative": "standards/AXIOMATIC_CALCULUS.md"
+    },
+    {
+      "id": "toolu_013akMH5bo4rQwZEiMwQJx22",
+      "name": "Read",
+      "input": {
+        "file_path": "/Users/jim/src/apps/specification_methodology-301/specification_methodology/v3/.ai-workspace/work/STDO301_DELIVERY/native-release/runs/rc1-002/local-store/releases/v3.0.1-rc.1/standards/AXIOMATIC_CALCULUS.md",
+        "offset": 670,
+        "limit": 30
+      },
+      "resolved_root_relative": "standards/AXIOMATIC_CALCULUS.md"
+    },
+    {
+      "id": "toolu_016ioR5htyLvB9ECCCi8ib4S",
+      "name": "Read",
+      "input": {
+        "file_path": "/Users/jim/src/apps/specification_methodology-301/specification_methodology/v3/.ai-workspace/work/STDO301_DELIVERY/native-release/runs/rc1-002/local-store/releases/v3.0.1-rc.1/standards/AXIOMATIC_CALCULUS.md",
+        "offset": 1380,
+        "limit": 86
+      },
+      "resolved_root_relative": "standards/AXIOMATIC_CALCULUS.md"
+    },
+    {
+      "id": "toolu_01C5PVQAKGVayNc255egkcE8",
+      "name": "Grep",
+      "input": {
+        "pattern": "^#{1,4} ",
+        "path": "/Users/jim/src/apps/specification_methodology-301/specification_methodology/v3/.ai-workspace/work/STDO301_DELIVERY/native-release/runs/rc1-002/local-store/releases/v3.0.1-rc.1/standards/examples/DETERMINISTIC_CONTRACTS.md",
+        "output_mode": "content"
+      },
+      "resolved_root_relative": "standards/examples/DETERMINISTIC_CONTRACTS.md"
+    },
+    {
+      "id": "toolu_01EwfdtjyqdmEJxr2UpZQ4xZ",
+      "name": "Grep",
+      "input": {
+        "pattern": "^#{2,4} ",
+        "path": "/Users/jim/src/apps/specification_methodology-301/specification_methodology/v3/.ai-workspace/work/STDO301_DELIVERY/native-release/runs/rc1-002/local-store/releases/v3.0.1-rc.1/standards/ACTIVATION.md",
+        "output_mode": "content"
+      },
+      "resolved_root_relative": "standards/ACTIVATION.md"
+    },
+    {
+      "id": "toolu_01LrNYPFUrTdLE3XFePnpzN1",
+      "name": "Read",
+      "input": {
+        "file_path": "/Users/jim/src/apps/specification_methodology-301/specification_methodology/v3/.ai-workspace/work/STDO301_DELIVERY/native-release/runs/rc1-002/local-store/releases/v3.0.1-rc.1/standards/examples/DETERMINISTIC_CONTRACTS.md",
+        "offset": 1,
+        "limit": 16
+      },
+      "resolved_root_relative": "standards/examples/DETERMINISTIC_CONTRACTS.md"
+    },
+    {
+      "id": "toolu_01PgtdiNzgWdDSiLgTLd7vpn",
+      "name": "Read",
+      "input": {
+        "file_path": "/Users/jim/src/apps/specification_methodology-301/specification_methodology/v3/.ai-workspace/work/STDO301_DELIVERY/native-release/runs/rc1-002/local-store/releases/v3.0.1-rc.1/standards/examples/DETERMINISTIC_CONTRACTS.md",
+        "offset": 155,
+        "limit": 70
+      },
+      "resolved_root_relative": "standards/examples/DETERMINISTIC_CONTRACTS.md"
+    },
+    {
+      "id": "toolu_01AMsKgKJFPXAg6vao4xpcGj",
+      "name": "Read",
+      "input": {
+        "file_path": "/Users/jim/src/apps/specification_methodology-301/specification_methodology/v3/.ai-workspace/work/STDO301_DELIVERY/native-release/runs/rc1-002/local-store/releases/v3.0.1-rc.1/standards/ACTIVATION.md",
+        "offset": 1519,
+        "limit": 110
+      },
+      "resolved_root_relative": "standards/ACTIVATION.md"
+    },
+    {
+      "id": "toolu_01CmxDPShnsawkbLUA2TP9U8",
+      "name": "Read",
+      "input": {
+        "file_path": "/Users/jim/src/apps/specification_methodology-301/specification_methodology/v3/.ai-workspace/work/STDO301_DELIVERY/native-release/runs/rc1-002/local-store/releases/v3.0.1-rc.1/standards/EVALUATION.md",
+        "offset": 128,
+        "limit": 50
+      },
+      "resolved_root_relative": "standards/EVALUATION.md"
+    }
+  ],
+  "reported_usage": {
+    "input_tokens": 22,
+    "cache_creation_input_tokens": 57889,
+    "cache_read_input_tokens": 387434,
+    "output_tokens": 17760
+  },
+  "reported_cost_usd": 0.8958868,
+  "num_turns": 19,
+  "completion": {
+    "exit_code": 0,
+    "timed_out": false,
+    "interrupted_signal": null,
+    "exception_type": null,
+    "process_group": {
+      "confirmed": true,
+      "signals": []
+    },
+    "elapsed_seconds": 180.126
+  },
+  "answer": {
+    "path": "task-04.md",
+    "bytes": 13376,
+    "sha256": "011f67209dc9e0d82a4f42dbf5d6ef119e1f7d23903c77f8c8951bb4f168ca66"
+  },
+  "source_access_confined": true,
+  "installed_payload_and_manifest_unchanged": true,
+  "oracle_supplied": false,
+  "assessment": "pending independent assessor; transport completion is not task correctness",
+  "private_events_published": false
+}
