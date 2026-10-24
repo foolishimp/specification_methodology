@@ -692,6 +692,27 @@ applicable; an operation grant covering the sequence does not lift it
 
 ## 2. Context construction under an envelope
 
+Qualified-reference guidance. Under
+[AC-003](AXIOMATIC_CALCULUS.md#ac-003-reference-closure) and
+[AC-011](AXIOMATIC_CALCULUS.md#ac-011-projection), a reference can supply
+sufficient context when its accessible target and qualifications preserve
+the consuming contract. Check the required subject and basis, assessment
+standing, provenance, active obligation and version, and invalidators, rather
+than candidate identity alone. A typed annotation supplies no evidence of
+sufficiency by itself. Preserve the required body or a qualified resolvable
+reference; no mandatory carrier or registry follows (P1, P3, P6).
+
+An exact local reference to a complete assessed record can preserve the
+consumer-required distinctions. A candidate-only pointer can lose them when
+unchanged candidate bytes have satisfied and indeterminate assessments that
+require different continuations. A sufficiency claim relying on hash matching
+states its collision and access assumptions. Unknown semantic relations retain their owning gap or
+result; they do not all become one error class. A declared but unperformed
+evaluation has no assessment result; an undeclared required capability is
+a different condition. The [qualified-reference example](examples/DETERMINISTIC_CONTRACTS.md#qualified-references)
+applies the sufficiency law owned by
+[FOUNDATIONS §4](FOUNDATIONS.md#assertions-and-observation).
+
 Given a seed set Z (the subject, outcome and affected relations named in the
 intake), a relation family R (the dependency relations whose change can
 alter the result, basis validity, evidence sufficiency or authority), and
@@ -1150,6 +1171,14 @@ claim that every external condition is recognised, that an invoked provider
 terminates, or that every request can be completed. A hanging external call,
 an unsatisfiable demand and a lost post-effect response are three different
 cases and none is solved by adding a value to the algebra.
+
+Claiming the common deterministic kind adds the total-domain and termination
+contract of [AXIOMATIC_CALCULUS §5](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds).
+This section's total handling does not establish that qualification. Fuel
+exhaustion retains the evaluated predicate; candidate absence, an available
+indeterminate assessment report and an unperformed assessment take the
+different results of [§3](#construction-availability), as the
+[finite cases](examples/DETERMINISTIC_CONTRACTS.md#exhaustion) demonstrate.
 
 Which outcome of [§3 Ambiguity outcome](#ambiguity-outcome) a declared
 ambiguity takes is decided by the applicable ambiguity policy and its risk
@@ -1661,6 +1690,12 @@ without changing the result. Independent evaluations may share valid
 mechanical evidence under the declared independence conditions of
 [EVALUATION §3](EVALUATION.md#3-independent-assessment), which owns that
 permission (P4b, P0).
+
+The sufficiency of a handed-off result or reference for subsequent decisions
+is [FOUNDATIONS §4 Observation sufficiency](FOUNDATIONS.md#assertions-and-observation)'s
+consumer-relative claim. Reuse preserves the material standing and
+continuation distinctions, including unassessed versus indeterminate; a
+role change alone requires no full-history scan or new representation.
 
 The selection of affected results after a change and the conditions for
 retaining evidence on a new subject are

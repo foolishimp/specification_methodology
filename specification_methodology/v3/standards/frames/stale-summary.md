@@ -6,9 +6,9 @@ Purpose: The owning sections for transitions, context construction with acquisit
 
 Binds:
 
-- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545; section sha256=a7d5fc5930338c3fb3959017f41935ce742fbb1bf189c2f527dde4e0ba12d064 spanning to #formal-representation)
-- A reuse decision in this task acquires the change and the evidence-validity conditions that support applicability: the impact cover of the change, the dependencies of each retained result and its retention conditions ([../FOUNDATIONS.md#change-impact-and-evidence-reuse](../FOUNDATIONS.md#change-impact-and-evidence-reuse); member sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545; section sha256=e989bf4b8c0dd996e5545f18db94f8ba275d14485697c0b046429746ed3bfbc6)
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5; section sha256=4598dccee4a65f206b604ea9a4c19db8aaff855a6b2fdc8e151dcc37f1439cb1 spanning to #formal-representation)
+- A reuse decision in this task acquires the change and the evidence-validity conditions that support applicability: the impact cover of the change, the dependencies of each retained result and its retention conditions ([../FOUNDATIONS.md#change-impact-and-evidence-reuse](../FOUNDATIONS.md#change-impact-and-evidence-reuse); member sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5; section sha256=e989bf4b8c0dd996e5545f18db94f8ba275d14485697c0b046429746ed3bfbc6)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 a link to the owning section, the digest of its member and the digest of that
@@ -48,9 +48,9 @@ Routes, in order:
 12. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
 13. [TICKETS.md#foundation-to-law-work-carriers](../TICKETS.md#foundation-to-law-work-carriers)
 
-Size of this frame: 94394 bytes.
+Size of this frame: 96165 bytes.
 
-Source: ACTIVATION.md#transitions sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf
+Source: ACTIVATION.md#transitions sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
 
 ### Transitions
 
@@ -136,9 +136,30 @@ obligations are those that the intake and the work state already bind; no
 further carrier is required. 
 
 
-Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf
+Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
 
 ## 2. Context construction under an envelope
+
+Qualified-reference guidance. Under
+[AC-003](../AXIOMATIC_CALCULUS.md#ac-003-reference-closure) and
+[AC-011](../AXIOMATIC_CALCULUS.md#ac-011-projection), a reference can supply
+sufficient context when its accessible target and qualifications preserve
+the consuming contract. Check the required subject and basis, assessment
+standing, provenance, active obligation and version, and invalidators, rather
+than candidate identity alone. A typed annotation supplies no evidence of
+sufficiency by itself. Preserve the required body or a qualified resolvable
+reference; no mandatory carrier or registry follows (P1, P3, P6).
+
+An exact local reference to a complete assessed record can preserve the
+consumer-required distinctions. A candidate-only pointer can lose them when
+unchanged candidate bytes have satisfied and indeterminate assessments that
+require different continuations. A sufficiency claim relying on hash matching
+states its collision and access assumptions. Unknown semantic relations retain their owning gap or
+result; they do not all become one error class. A declared but unperformed
+evaluation has no assessment result; an undeclared required capability is
+a different condition. The [qualified-reference example](../examples/DETERMINISTIC_CONTRACTS.md#qualified-references)
+applies the sufficiency law owned by
+[FOUNDATIONS §4](../FOUNDATIONS.md#assertions-and-observation).
 
 Given a seed set Z (the subject, outcome and affected relations named in the
 intake), a relation family R (the dependency relations whose change can
@@ -363,7 +384,7 @@ relation is whether a decision rests on a surface whose sources are not
 those of the selected basis. This rule applies to derived surfaces under every selected carrier.
 
 
-Source: ACTIVATION.md#construction-availability sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf
+Source: ACTIVATION.md#construction-availability sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
 
 ### Construction availability
 
@@ -413,7 +434,7 @@ because a decision cannot be taken on a basis that cannot support it (P5,
 P3).
 
 
-Source: ACTIVATION.md#effects sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf
+Source: ACTIVATION.md#effects sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
 
 ### Effects
 
@@ -466,7 +487,7 @@ counterexample already established for the declared outcome, and an
 effect that may still be acting.
 
 
-Source: ACTIVATION.md#5-work-state-and-restart sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf
+Source: ACTIVATION.md#5-work-state-and-restart sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
 
 ## 5. Work state and restart
 
@@ -618,7 +639,7 @@ work state and the closed results carry it, and no further carrier is
 required.
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
 
 ## 7. Closed result and reuse
 
@@ -632,6 +653,12 @@ without changing the result. Independent evaluations may share valid
 mechanical evidence under the declared independence conditions of
 [EVALUATION §3](../EVALUATION.md#3-independent-assessment), which owns that
 permission (P4b, P0).
+
+The sufficiency of a handed-off result or reference for subsequent decisions
+is [FOUNDATIONS §4 Observation sufficiency](../FOUNDATIONS.md#assertions-and-observation)'s
+consumer-relative claim. Reuse preserves the material standing and
+continuation distinctions, including unassessed versus indeterminate; a
+role change alone requires no full-history scan or new representation.
 
 The selection of affected results after a change and the conditions for
 retaining evidence on a new subject are
@@ -912,7 +939,7 @@ evidence remains history and cannot be projected as current acceptance
 (P6, P4b).
 
 
-Source: FOUNDATIONS.md#results sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545 rows=7/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
+Source: FOUNDATIONS.md#results sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5 rows=7/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -1086,7 +1113,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545
+Source: FOUNDATIONS.md#conjunction-of-results sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5
 
 ### Conjunction of results
 

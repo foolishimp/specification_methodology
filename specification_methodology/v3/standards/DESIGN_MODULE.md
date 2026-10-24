@@ -279,7 +279,7 @@ movement from one typed asset state to another, the governing shape is:
    terms); and
 3. deterministic module realisation under this profile.
 
-This profile may govern `F_D` evaluators and proofs, carrier constructors
+This profile may govern evaluators and proofs, carrier constructors
 and admissions, deterministic transforms inside an edge traversal, effect
 shells that publish the traversal result, and projections over
 already-admitted carrier truth. It is not used to hide graph functions
@@ -288,6 +288,17 @@ orchestration, continuation or re-entry decisions inside deterministic
 controllers, semantic target movement inside constructors, materialisers
 or projections, or probabilistic worker boundaries inside imperative
 prompt or dispatch code (P0 boundary commitment, P6).
+
+That governance scope does not depend on F_D eligibility. An operation
+claiming common `F_D` additionally meets
+[AXIOMATIC_CALCULUS §5](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds),
+with its unchanged-subject profile when it evaluates that subject. The
+kind's authority boundary is owned there, not by this profile. A
+deterministic transform or effect shell is not automatically
+qualified as total deterministic processing, and a modeled effect request
+does not establish completion. Existing helpers use the evidence-sensitive
+[migration relation](RELEASE.md#deterministic-kind-migration), preserving
+their original domain and permissions until the successor claim is established.
 
 If a deterministic module appears to own what work is next, what target is
 being moved to, what closes the traversal or what graph function is being
@@ -2116,7 +2127,8 @@ When reviewing code under this profile, ask (P6):
 30. Has review checked whether a deterministic module boundary is actually
     an operative edge traversal that should be declared under the
     graph-execution profile?
-31. Do `F_D` evaluators, deterministic transforms and effect shells remain
+31. Do `F_D` uses establish the common total-domain contract and retain their
+    operation profiles, and do evaluators, deterministic transforms and effect shells remain
     subordinate to the GTL and ABG graph carrier rather than becoming the
     hidden program?
 32. Does the boundary have a lifecycle confirmation against the canonical
@@ -2451,6 +2463,9 @@ and does not extend to other runtime realisations (P3, P6). Their standing as
 defaults and the identity law of their override, its preservation
 conditions and its publication surface are
 [IDENTITY §7](IDENTITY.md#7-default-formats-and-overrides).
+
+The helper's F_D eligibility is the common §5 contract referenced in §2; an
+identity default grants neither that eligibility nor additional writes.
 
 ### Non-goals
 

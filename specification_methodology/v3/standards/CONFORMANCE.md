@@ -211,6 +211,27 @@ not a claim that those cases ran or passed. A selected case without a
 current assessment remains a planned evaluation without a closed result,
 as FOUNDATIONS §4 requires.
 
+### Deterministic kind and continuation discriminators
+
+These cases apply when the corresponding kind, migration or sufficiency
+claim is made. Their contracts and finite oracles are in
+[Deterministic contracts](examples/DETERMINISTIC_CONTRACTS.md). The check
+column separates source-first logical review (L-D301), finite mathematical
+arguments and executable model checks (M-D301). None is actual-use evidence
+or a completed review merely because it is listed; source obligations and
+required independent assessment retain their owners.
+
+| Case | Required distinction | Source owner | Check |
+|---|---|---|---|
+| D301-01 | The three-value constructor has a total finite contract; its construction-only grant supports no assessment, admission or closure claim. ODD keeps the actual operations, evidence and grants. | AXIOMATIC_CALCULUS §5; ODD §11.5D A4a–A8 | M-D301-01: three constructor results; L-D301-01: authority boundary, no executable authorization claim |
+| D301-02 | The unchanged-subject evaluator returns the first inversion witness. Witness persistence needs its separate log grant; in-place sort followed by “original passed” violates the profile. Manual and mixed evaluation keep the same permission. | AXIOMATIC_CALCULUS §5 evaluation-operation profile; EVALUATION §2 | M-D301-02: 40 sortedness cases and mutation counterexample; L-D301-02: attribution and witness-write permission |
+| D301-03 | The six logical put_A cells determine modeled next state and request/refusal; the decision establishes no physical completion. | AXIOMATIC_CALCULUS §5; ACTIVATION §3 Effects | M-D301-03: six store cells; L-D301-03: effect completion boundary |
+| D301-04 | Copy exhaustion has no candidate and falsified availability; assessment exhaustion is one stop/report with indeterminate property and satisfied report availability; setup exhaustion before invocation gives no assessment result while the enclosing step keeps its own stop. | AXIOMATIC_CALCULUS §5; ACTIVATION §3 Construction availability | M-D301-04: 21 copy and 45 assessment cases; L-D301-04: predicate separation and unperformed setup case |
+| D301-05 | Under fixed Γ, U and I share “no satisfied assessment” but need different first-assessment decisions. Four retained states preserve modeled transitions/readouts without proving compression. A manual handover distinguishes first assessment from a closed undecidable report and uses the declared follow-up policy. | FOUNDATIONS §4 Observation sufficiency; ACTIVATION §7 | M-D301-05: 16 transition cells and finite compositions; L-D301-05: human/mixed handover and its permitted continuation; actual use outstanding |
+| D301-06 | A qualified current accessible reference preserves the record/readout; inaccessible, missing or stale targets supply no usable record and keep the owning residual/gap distinctions. A candidate-only pointer merges S/I and fails sufficiency. No typed carrier is mandatory. | ACTIVATION §2; AC-003 and AC-011 | M-D301-06: 24 closed acquisition cells plus S/I collision; L-D301-06: owner-specific result mapping, other invalidators and human handover; real acquisition/use outstanding |
+| D301-07 | The finite mathematical equality j=h∘view preserves the stated readout. A constant projection cannot factor j although a terminal map preserves structural laws. A full categorical claim still needs its applicable a_c representation; H1 stays unresolved. | FOUNDATIONS §4 Formal fragment; EVALUATION §6; discriminator 51 | M-D301-07: pointwise maps and 10-arrow structural laws; L-D301-07: finite scope versus categorical qualification |
+| D301-08 | Legacy unchanged-subject guarantees survive; hidden dependencies or missing termination evidence prevent automatic eligibility. Known contract violations and unknown totality judgments remain distinct. Identified remediation is pending; unselected successor classification is unresolved. Both retain only lawful legacy standing on the exact old basis while applicable. | AC-015 and AC-019; RELEASE §9 Deterministic-kind migration; ODD §5; discriminator 22 | L-D301-08: source-first migration/admission cases; finite traversal eligibility uses M-D301-01–04, not a generic termination decision procedure |
+
 ### Universal-construction and assurance discriminators
 
 The following nine construction cases and twelve assurance cases state

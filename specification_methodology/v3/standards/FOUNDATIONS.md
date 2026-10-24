@@ -620,6 +620,12 @@ Members and sections with no family table, each with its reason:
 - GLOSSARY: a locator index; it decides nothing.
 - The standards README and the other packaging (templates, schemas and
   plugin files): they own no determination.
+- [DETERMINISTIC_CONTRACTS](examples/DETERMINISTIC_CONTRACTS.md) and its
+  [executable finite model](examples/deterministic_contracts.py): example
+  members applying the owners named in CONFORMANCE D301. They declare only
+  their local fixture domains, policies and oracles, not generic method law;
+  their mathematical arguments and execution evidence have the stated finite
+  scope and do not receive a separate generic family table.
 
 Purpose and material relation of the family table and its format,
 instance premises, the standing of the consequences and this index: for
@@ -699,6 +705,16 @@ asserts no categorical functor. Purpose and material relation of
 arrow equality, associativity, the representation in a_c and the supporting
 evidence: a categorical statement is useful only where its constructions
 preserve meaning, and these are what preservation must show (P1, P6).
+
+A claim of semantic preservation or adequacy names the consumer observations
+and required distinctions and demonstrates their preservation. Category and
+functor laws establish their stated structural claim; they do not alone
+establish that the chosen interpretation or projection is sufficient for
+the intended use. A background lemma applies only after its source and
+target objects, arrows, equality and actual maps are bound to the subject.
+The [finite qualified-record example](examples/DETERMINISTIC_CONTRACTS.md#finite-maps-and-consumer-adequacy)
+shows the difference without establishing H1 or replacing the applicable
+a_c representation obligation above (P1, P6).
 
 Formal fragment, hypothesis H1, categorical structure: with 𝒜 the free category on typed primitives, ℐ the selected
 carrier sets with total functions and 𝒞_H pairs of functions with additive
@@ -1068,7 +1084,7 @@ conditions of the situations the family governs, not commitments.
 | P4a (independent), P1 (independent), P6 (independent); instance premise a | By P4a a composite exists only where each boundary is compatible, by P1 a relation written down is not thereby discharged, and by P6 a preservation claim is a claim on evidence, so each claimed step states its domains, relation and property, the implication is a proof obligation, and a relation covering completion alone says nothing about refusal, failure, interruption or unknown effects | [Preservation through construction](#preservation-through-construction) | the adequacy relation and bound of an approximate step: the owner of the step's law | 3, 4, 9 |
 | P4a (independent), P2 (independent), P6 (independent); instance premise a | By P4a the composite's property follows only through compatible boundaries, by P2 the final property matters only through its connection to Z, and by P6 that connection is argued, not assumed, so an end-to-end argument establishes the initial condition, each step's premises, compatibility at each boundary and the connection to Z, and preservation is distinct from progress and termination | [Preservation through construction](#preservation-through-construction) | the composition law for concurrency, branches and external effects: the owner of the construction's design | 3, 4, 7 |
 | P1 (independent), P6 (independent), P5 (derived from P0 and P6, with P0's open-world premise); instance premises a, b | By P1 an assertion's predicate is distinct from the obligation it is derived from, by P6 passing a necessary condition establishes no more than that condition, and by P5 a conjunction's coverage is a claim of its own, so each assertion states whether its predicate is the obligation, a necessary condition or part of a sufficient conjunction, conditional on Γ and Ω | [Assertions and observation](#assertions-and-observation) | the declared domain Ω and the interpretation: the owner of the obligation and the assessor's activation | 6, 9 |
-| P3 (independent), P1 (independent), P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent); instance premises b, c | By P3 two admissible cases can differ while their observations agree, by P1 agreement of observations is not agreement of meaning, by P5 an undecidable case is `indeterminate` and never `satisfied`, and by P6 soundness covers every admitted conclusion, so a checker is sound only where its observation separates the cases, and otherwise acquires evidence, narrows its scope or returns `indeterminate` | [Assertions and observation](#assertions-and-observation), Observation sufficiency | the checker's admitted relation T and its observation π: the owner of the assessment frame | 6, 7, 9 |
+| P3 (independent), P1 (independent), P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent); instance premises b, c | By P3 two admissible cases can differ while their observations agree, by P1 agreement of observations is not agreement of meaning, by P5 an undecidable case is `indeterminate` and never `satisfied`, and by P6 soundness covers every admitted conclusion, so a checker claiming sound complete decision needs observations that separate the cases, and otherwise acquires evidence, narrows its scope or returns `indeterminate`; a continuation-sufficiency claim likewise preserves the fixed consumer-required decision and transition distinctions | [Assertions and observation](#assertions-and-observation), Observation sufficiency | the checker's admitted relation T and observation π, and the consumer's declared policy, domain, horizon and readouts: the owner of the assessment or consuming contract | 6, 7, 9 |
 | P6 (independent), P1 (independent), P4a (independent); instance premises a, c | By P6 an expected answer is justified by its derivation from the obligation and an execution by its record, by P1 a copied answer carries no independent interpretation, and by P4a shared dependencies compose into shared causes of error, so assertion provenance and execution provenance are both required, agreement among paths with shared causes is not independent evidence, and disagreement requires diagnosis | [Parallel derivation and mutual assurance](#parallel-derivation-and-mutual-assurance) | which paths are run and compared: the strategy's owner; the authorship of ported material: [EVALUATION §3](EVALUATION.md#3-independent-assessment) | 6, 9 |
 | P6 (independent), P5 (derived from P0 and P6, with P0's open-world premise), P1 (independent); instance premise c | By P6 a number is a claim on its model and evidence, by P5 an unsupported estimate stays unknown, and by P1 a probability over outcomes is distinct from the truth of the predicate, so a quantified assurance claim states its population, priors, likelihoods, shared causes and calibration limits, and no threshold is imposed by this member | [Quantified assurance](#quantified-assurance) | the risk policy and any threshold: the actor exercising the admitted work authority, under the adopting Product | 9 |
 | P3 (independent), P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable), P5 (derived from P0 and P6, with P0's open-world premise), P6 (independent); instance premise a | By P3 a changed dependency changes what an earlier observation applies to, by P4b retained evidence is conserved with its subject, by P5 unknown impact leaves the dependent assurance undecided, and by P6 retention is justified and not assumed, so validity dependencies are kept apart from justification links, affected checks are selected conservatively, and evidence is retained only under its validity conditions while mandatory gates stay applicable, which ACTIVATION §7 applies to closed results and handoffs | [Change impact and evidence reuse](#change-impact-and-evidence-reuse) | the representation of dependencies and the selection model: the realisation; mandatory gates: RELEASE §8 and the adopting Product | 2, 9 |
@@ -1080,7 +1096,7 @@ locus:
 - Row 1, the step obligation: [ACTIVATION §1 Composition boundaries](ACTIVATION.md#construction-relation); [ACTIVATION §4 Refinement](ACTIVATION.md#refinement).
 - Row 2, the end-to-end argument: [ACTIVATION §1 Composition boundaries](ACTIVATION.md#construction-relation) and [ACTIVATION §4 Refinement](ACTIVATION.md#refinement), as for row 1.
 - Row 3, assertion directions: [EVALUATION §1](EVALUATION.md#1-claims); [ASSURANCE §3](ASSURANCE.md#3-test-authority); [ASSURANCE §10](ASSURANCE.md#10-testing-evidence-composition).
-- Row 4, observation sufficiency: [ASSURANCE §1](ASSURANCE.md#1-verification-layers), where a failing scenario shows a disagreement of actual behaviour only where its observation binding is supported; [ASSURANCE §11](ASSURANCE.md#11-assurance-subject-acquisition-and-evaluation).
+- Row 4, observation sufficiency: [ASSURANCE §1](ASSURANCE.md#1-verification-layers), where a failing scenario shows a disagreement of actual behaviour only where its observation binding is supported; [ASSURANCE §11](ASSURANCE.md#11-assurance-subject-acquisition-and-evaluation). [AC-011](AXIOMATIC_CALCULUS.md#ac-011-projection) and [AC-016](AXIOMATIC_CALCULUS.md#ac-016-typed-composition) apply consumer-relative sufficiency to projections and composition; [ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) applies it to qualified references, and [§7](ACTIVATION.md#7-closed-result-and-reuse) to handoff and reuse; [CONFORMANCE D301-05/06](CONFORMANCE.md#deterministic-kind-and-continuation-discriminators) and their [finite examples](examples/DETERMINISTIC_CONTRACTS.md) exercise the distinctions.
 - Row 5, provenance and mutual assurance: [EVALUATION §1](EVALUATION.md#1-claims); [EVALUATION §3](EVALUATION.md#3-independent-assessment), including its authorship rule for a received contribution; [ASSURANCE §3](ASSURANCE.md#3-test-authority); [ASSURANCE §14](ASSURANCE.md#14-design-to-module-evidence-route).
 - Row 6, quantified assurance: [EXECUTIVE_BASELINE Technical triage](EXECUTIVE_BASELINE.md#technical-triage-severity-priority-and-boundary-effect), whose causal assessment records a confidence; [SPEC_METHOD §8](SPEC_METHOD.md#8-bounded-execution-in-this-method), where a probability informs priority; [ASSURANCE §8](ASSURANCE.md#8-combinatorial-coverage-and-testing-value), where a project may define a testing-value scalar. At each, an unsupported numeric confidence remains unresolved.
 - Row 7, change impact and reuse: [ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse), through which [ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart) and [EVALUATION §3](EVALUATION.md#3-independent-assessment) reach it; [RELEASE §8](RELEASE.md#8-acceptance) and [§9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015); [SPEC_METHOD §4 Universal intake triage](SPEC_METHOD.md#universal-intake-triage), whose determination of the surfaces and evidence to re-derive is the selection `S_Δ`.
@@ -1213,6 +1229,42 @@ predicate on the image of π; it establishes neither an executable decision
 procedure nor its cost. Unknown effects and unavailable observations
 retain their distinctions from falsehood and from an evaluation that was
 not performed (Results) (P3, P1, P5, P6).
+
+Where a representation is claimed sufficient for subsequent decisions,
+identify the consumer-required observations and readouts and material
+applicability conditions, directly or by reference to the consuming contract.
+Identify input and policy scope and horizon where the claim depends on them.
+Retain the standing, obligations, currentness and invalidation, causal
+producer and authority distinctions those consumers require. Two cases with
+the same representation but incompatible required decisions under those
+fixed conditions falsify the sufficiency claim. This requires no anticipation
+of all future uses (P1, P2, P6).
+
+When a chosen functional account claims decision preservation, define its
+functions and domain: s is a state, u a permitted input under the fixed
+conditions Γ, alpha maps states to representations, delta(s,u) is the
+consumer's decision, and delta_hat is that decision on representations.
+Demonstrate `delta(s,u) = delta_hat(alpha(s),u)` on the declared domain
+(equivalently factor delta through alpha with u held fixed). When it
+claims transition preservation, also demonstrate
+`alpha(T(s,u)) ≈ T_hat(alpha(s),u)`, where T and T_hat are the state and
+representation transitions and ≈ is the declared adequacy relation, and
+demonstrate the declared readout preservation on
+that domain and horizon. Other frames preserve their consumer-required
+relational distinctions under the owning contracts; these equations impose
+no universal functional model or executable decision procedure. Mandatory
+authority and hold distinctions remain exact where their contracts require
+exactness. Approximation needs explicit latitude and a justified horizon
+bound; a one-step bound alone supplies no multi-step guarantee (P1, P4a, P6).
+
+The [one-assessment example](examples/DETERMINISTIC_CONTRACTS.md#continuation-sensitive-sufficiency)
+separates an unperformed assessment from a closed indeterminate assessment.
+Its four-state representation retains every modeled state distinction under
+fixed conditions Γ. It is a sufficiency witness with no state aggregation,
+not a proof of compression, minimal context or general task selection. A
+smallest or cheapest sufficient-material claim needs its own objective,
+scope and evidence; representation size and total operating cost are
+different quantities (P2, P6).
 
 ### Parallel derivation and mutual assurance
 

@@ -6,8 +6,8 @@ Purpose: The owning sections for occurrence events, relation families, constrain
 
 Binds:
 
-- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545; section sha256=a7d5fc5930338c3fb3959017f41935ce742fbb1bf189c2f527dde4e0ba12d064 spanning to #formal-representation)
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5; section sha256=4598dccee4a65f206b604ea9a4c19db8aaff855a6b2fdc8e151dcc37f1439cb1 spanning to #formal-representation)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 a link to the owning section, the digest of its member and the digest of that
@@ -51,9 +51,9 @@ Routes, in order:
 16. [AXIOMATIC_CALCULUS.md#foundation-to-law](../AXIOMATIC_CALCULUS.md#foundation-to-law)
 17. [TRAVERSAL_OCCURRENCE.md#foundation-to-law](../TRAVERSAL_OCCURRENCE.md#foundation-to-law)
 
-Size of this frame: 105855 bytes.
+Size of this frame: 106442 bytes.
 
-Source: AXIOMATIC_CALCULUS.md#ac-003-reference-closure sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf
+Source: AXIOMATIC_CALCULUS.md#ac-003-reference-closure sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5
 
 ### AC-003 Reference closure
 
@@ -65,7 +65,7 @@ wrong-sort, wrong-basis, locally-and-externally ambiguous or
 undeclared-field references refuse structural admission (P3, P5).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-004-relation-typing sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf
+Source: AXIOMATIC_CALCULUS.md#ac-004-relation-typing sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5
 
 ### AC-004 Relation typing
 
@@ -74,7 +74,7 @@ sorts and all required qualifiers are present. Direction is material
 unless the relation kind explicitly declares symmetry (P4a, P3).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf
+Source: AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5
 
 ### AC-007 Constraint and refusal
 
@@ -177,7 +177,7 @@ the activation outcome `closure_unresolved` of
 predicate (P5, P6).
 
 
-Source: TRAVERSAL_OCCURRENCE.md#closed-event-kind-population sha256=f60c670ed5ed2b18e39f75fe4cf4004e8737b8d58526a6733fcaa10a5b660543
+Source: TRAVERSAL_OCCURRENCE.md#closed-event-kind-population sha256=7809ec20f4cf47a299ea3892616b449532a568feeccb50d49d46bbc72be9cba5
 
 ## Closed event-kind population
 
@@ -209,7 +209,7 @@ to this signature; it cannot add an undeclared value to this population
 (P3, P5).
 
 
-Source: TRAVERSAL_OCCURRENCE.md#closed-relation-families sha256=f60c670ed5ed2b18e39f75fe4cf4004e8737b8d58526a6733fcaa10a5b660543
+Source: TRAVERSAL_OCCURRENCE.md#closed-relation-families sha256=7809ec20f4cf47a299ea3892616b449532a568feeccb50d49d46bbc72be9cba5
 
 ## Closed relation families
 
@@ -384,7 +384,7 @@ relations are finite and free of duplicates. `inverse_kind_ref_or_none`
 is explicit; silence implies no inverse (P3, P4a).
 
 
-Source: TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds sha256=f60c670ed5ed2b18e39f75fe4cf4004e8737b8d58526a6733fcaa10a5b660543
+Source: TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds sha256=7809ec20f4cf47a299ea3892616b449532a568feeccb50d49d46bbc72be9cba5
 
 ## Closed constraint, judgment, residual and stop kinds
 
@@ -749,8 +749,16 @@ repetition (P5, P4b).
 `F_H` from `b_ac` and no other functor kind. The profile changes none of
 their laws, which are AXIOMATIC_CALCULUS §5 (P3, P6).
 
+`b_ac` selects an immutable calculus edition, not the latest meaning of a
+stable concept URN. A successor occurrence that claims common `F_D` requires
+that edition's total-domain eligibility and its separate operation profile;
+legacy occurrences keep their exact basis and evidence. The three-way
+[migration relation](../RELEASE.md#deterministic-kind-migration) governs a changed
+claim. An occurrence record or an effect proposal establishes no physical
+completion or new effect authority.
 
-Source: TRAVERSAL_OCCURRENCE.md#occurrence-identity sha256=f60c670ed5ed2b18e39f75fe4cf4004e8737b8d58526a6733fcaa10a5b660543
+
+Source: TRAVERSAL_OCCURRENCE.md#occurrence-identity sha256=7809ec20f4cf47a299ea3892616b449532a568feeccb50d49d46bbc72be9cba5
 
 ## Occurrence identity
 
@@ -804,7 +812,7 @@ future result or event cannot be smuggled into its own occurrence seed
 (P3).
 
 
-Source: TRAVERSAL_OCCURRENCE.md#candidate-judgment-event-and-relation-separation sha256=f60c670ed5ed2b18e39f75fe4cf4004e8737b8d58526a6733fcaa10a5b660543
+Source: TRAVERSAL_OCCURRENCE.md#candidate-judgment-event-and-relation-separation sha256=7809ec20f4cf47a299ea3892616b449532a568feeccb50d49d46bbc72be9cba5
 
 ## Candidate, judgment, event and relation separation
 
@@ -924,7 +932,7 @@ delete, rewrite or retrospectively re-identify the corrected fact (P3,
 P4b).
 
 
-Source: TRAVERSAL_OCCURRENCE.md#causality-and-typed-lineage sha256=f60c670ed5ed2b18e39f75fe4cf4004e8737b8d58526a6733fcaa10a5b660543
+Source: TRAVERSAL_OCCURRENCE.md#causality-and-typed-lineage sha256=7809ec20f4cf47a299ea3892616b449532a568feeccb50d49d46bbc72be9cba5
 
 ## Causality and typed lineage
 
@@ -954,7 +962,7 @@ authority are explicit. The coordinate orders eligible facts; it gains no
 semantic, admission, causal or decision authority (P6, P3).
 
 
-Source: TRAVERSAL_OCCURRENCE.md#mutable-subject-effect-relation sha256=f60c670ed5ed2b18e39f75fe4cf4004e8737b8d58526a6733fcaa10a5b660543
+Source: TRAVERSAL_OCCURRENCE.md#mutable-subject-effect-relation sha256=7809ec20f4cf47a299ea3892616b449532a568feeccb50d49d46bbc72be9cba5
 
 ## Mutable-subject effect relation
 
@@ -1096,7 +1104,7 @@ subject, so the admitted occurrence and event history is append-only even
 when the external subject changes repeatedly (P3, P4b).
 
 
-Source: TRAVERSAL_OCCURRENCE.md#event-frontier-and-projection sha256=f60c670ed5ed2b18e39f75fe4cf4004e8737b8d58526a6733fcaa10a5b660543
+Source: TRAVERSAL_OCCURRENCE.md#event-frontier-and-projection sha256=7809ec20f4cf47a299ea3892616b449532a568feeccb50d49d46bbc72be9cba5
 
 ## Event frontier and projection
 
@@ -1127,7 +1135,7 @@ subject-wide, publication-wide or otherwise independent of any occurrence
 stay independent (P3).
 
 
-Source: TRAVERSAL_OCCURRENCE.md#authority-and-adoption sha256=f60c670ed5ed2b18e39f75fe4cf4004e8737b8d58526a6733fcaa10a5b660543
+Source: TRAVERSAL_OCCURRENCE.md#authority-and-adoption sha256=7809ec20f4cf47a299ea3892616b449532a568feeccb50d49d46bbc72be9cba5
 
 ## Authority and adoption
 
@@ -1156,7 +1164,7 @@ An absent or incomplete adoption means the profile is available but
 inactive for that Product (P6).
 
 
-Source: ACTIVATION.md#effects sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf
+Source: ACTIVATION.md#effects sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
 
 ### Effects
 
@@ -1209,7 +1217,7 @@ counterexample already established for the declared outcome, and an
 effect that may still be acting.
 
 
-Source: FOUNDATIONS.md#results sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545 rows=6/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
+Source: FOUNDATIONS.md#results sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5 rows=6/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -1382,7 +1390,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545
+Source: FOUNDATIONS.md#conjunction-of-results sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5
 
 ### Conjunction of results
 
@@ -1504,7 +1512,7 @@ premises hold ([ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement),
 Refinement).
 
 
-Source: AXIOMATIC_CALCULUS.md#foundation-to-law sha256=2b24d3679cac3dd7a383c9ef382232acc8e99055709dc1a330e6f18a7b4cebbf rows=3/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
+Source: AXIOMATIC_CALCULUS.md#foundation-to-law sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5 rows=3/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
 
 ### Foundation to law
 
@@ -1519,8 +1527,10 @@ which the commitments do not supply:
   traversals, transformations and judgments;
 - (ii) a model is interpreted from an exact subject and may be encoded in
   a carrier, and subject, model and carrier are separately identified;
-- (iii) some predicates over a model are decided mechanically, and others
-  need bounded probabilistic construction or explicit human adjudication.
+- (iii) model applications may construct values or proposed successors as
+  well as decide predicates; some operations are determined by closed
+  computation, while others need bounded probabilistic processing or
+  explicit human adjudication.
 
 | Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
 |---|---|---|---|---|
@@ -1534,7 +1544,7 @@ foundations and which are choices, with the owner of each choice, so no
 choice is presented as derived (P6, P1).
 
 
-Source: TRAVERSAL_OCCURRENCE.md#foundation-to-law sha256=f60c670ed5ed2b18e39f75fe4cf4004e8737b8d58526a6733fcaa10a5b660543 rows=8/9 selected by the anchors this frame carries; the consumers paragraph of 9 items is omitted
+Source: TRAVERSAL_OCCURRENCE.md#foundation-to-law sha256=7809ec20f4cf47a299ea3892616b449532a568feeccb50d49d46bbc72be9cba5 rows=8/9 selected by the anchors this frame carries; the consumers paragraph of 9 items is omitted
 
 ### Foundation to law
 

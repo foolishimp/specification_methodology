@@ -6,8 +6,8 @@ Purpose: The owning sections for the frame declaration, its activation on an exa
 
 Binds:
 
-- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545; section sha256=a7d5fc5930338c3fb3959017f41935ce742fbb1bf189c2f527dde4e0ba12d064 spanning to #formal-representation)
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5; section sha256=4598dccee4a65f206b604ea9a4c19db8aaff855a6b2fdc8e151dcc37f1439cb1 spanning to #formal-representation)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 a link to the owning section, the digest of its member and the digest of that
@@ -61,9 +61,9 @@ Routes, in order:
 26. [EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification](../EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification)
 27. [REFERENCE_FRAME.md#foundation-to-law](../REFERENCE_FRAME.md#foundation-to-law)
 
-Size of this frame: 111743 bytes.
+Size of this frame: 112124 bytes.
 
-Source: FOUNDATIONS.md#2-ontology sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545
+Source: FOUNDATIONS.md#2-ontology sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5
 
 ## 2. Ontology
 
@@ -769,7 +769,7 @@ The out_of_frame residual field carries what
 result to name, and reads `none` for any other result (P5).
 
 
-Source: EVALUATION.md#frame-qualification sha256=4c87b1286d9c721b6e050b64adb8f6804327c0d8e3dad67f7c3973cbef389fd6
+Source: EVALUATION.md#frame-qualification sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff
 
 ### Frame qualification
 
@@ -827,7 +827,7 @@ test. Finite attention makes fit necessary
 is never qualified for attention because it fits (P0, P6).
 
 
-Source: ACTIVATION.md#admission-and-activation sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf
+Source: ACTIVATION.md#admission-and-activation sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
 
 ### Admission and activation
 
@@ -864,7 +864,7 @@ reported with its cause in the one core, so it is neither mistaken for a
 step that stopped nor for one that ran.
 
 
-Source: ACTIVATION.md#disposition sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf
+Source: ACTIVATION.md#disposition sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
 
 ### Disposition
 
@@ -905,7 +905,7 @@ unchanged failed construction relation as if iteration alone could close
 it (P2).
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
 
 ## 7. Closed result and reuse
 
@@ -919,6 +919,12 @@ without changing the result. Independent evaluations may share valid
 mechanical evidence under the declared independence conditions of
 [EVALUATION §3](../EVALUATION.md#3-independent-assessment), which owns that
 permission (P4b, P0).
+
+The sufficiency of a handed-off result or reference for subsequent decisions
+is [FOUNDATIONS §4 Observation sufficiency](../FOUNDATIONS.md#assertions-and-observation)'s
+consumer-relative claim. Reuse preserves the material standing and
+continuation distinctions, including unassessed versus indeterminate; a
+role change alone requires no full-history scan or new representation.
 
 The selection of affected results after a change and the conditions for
 retaining evidence on a new subject are
@@ -991,7 +997,7 @@ proof when loss of incidental process state is a material counterexample:
 the proof destroys or excludes the incidental authority and compares the
 reconstructed semantic outcomes (P5, P6).
 
-Source: FOUNDATIONS.md#results sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545 rows=6/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
+Source: FOUNDATIONS.md#results sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5 rows=6/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -1164,7 +1170,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545
+Source: FOUNDATIONS.md#conjunction-of-results sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5
 
 ### Conjunction of results
 
@@ -1286,7 +1292,7 @@ premises hold ([ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement),
 Refinement).
 
 
-Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=4c87b1286d9c721b6e050b64adb8f6804327c0d8e3dad67f7c3973cbef389fd6 rows=1/17 selected by the anchors this frame carries; the consumers paragraph of 17 items is omitted
+Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff rows=1/17 selected by the anchors this frame carries; the consumers paragraph of 17 items is omitted
 
 ### Foundation to law: claims, evidence, assessment and acceptance
 
@@ -1317,7 +1323,7 @@ they are traced in family F3 at
 what §4 decides about the review record, triage and returns.
 
 
-Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=4c87b1286d9c721b6e050b64adb8f6804327c0d8e3dad67f7c3973cbef389fd6 rows=3/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
+Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff rows=3/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
 
 ### Foundation to law: conformance, equivalence and qualification
 

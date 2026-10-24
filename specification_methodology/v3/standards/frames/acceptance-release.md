@@ -6,8 +6,8 @@ Purpose: The owning sections for review results and triage, acceptance and when 
 
 Binds:
 
-- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545; section sha256=a7d5fc5930338c3fb3959017f41935ce742fbb1bf189c2f527dde4e0ba12d064 spanning to #formal-representation)
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5; section sha256=4598dccee4a65f206b604ea9a4c19db8aaff855a6b2fdc8e151dcc37f1439cb1 spanning to #formal-representation)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 a link to the owning section, the digest of its member and the digest of that
@@ -46,9 +46,9 @@ Routes, in order:
 11. [RELEASE.md#foundation-to-law-release-and-successor-conservation](../RELEASE.md#foundation-to-law-release-and-successor-conservation)
 12. [TICKETS.md#foundation-to-law-work-carriers](../TICKETS.md#foundation-to-law-work-carriers)
 
-Size of this frame: 59504 bytes.
+Size of this frame: 63934 bytes.
 
-Source: EVALUATION.md#4-review-results sha256=4c87b1286d9c721b6e050b64adb8f6804327c0d8e3dad67f7c3973cbef389fd6
+Source: EVALUATION.md#4-review-results sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff
 
 ## 4. Review results
 
@@ -117,7 +117,7 @@ assessor and decision owner; [EXECUTIVE_BASELINE](../EXECUTIVE_BASELINE.md)
 binds its Reviewer and Executive instance (P6).
 
 
-Source: EVALUATION.md#5-acceptance sha256=4c87b1286d9c721b6e050b64adb8f6804327c0d8e3dad67f7c3973cbef389fd6
+Source: EVALUATION.md#5-acceptance sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff
 
 ## 5. Acceptance
 
@@ -185,7 +185,7 @@ does not block on observations outside its claim, while a non-waivable hard
 stop still blocks.
 
 
-Source: ACTIVATION.md#disposition sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf
+Source: ACTIVATION.md#disposition sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
 
 ### Disposition
 
@@ -226,7 +226,7 @@ unchanged failed construction relation as if iteration alone could close
 it (P2).
 
 
-Source: FOUNDATIONS.md#results sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545 rows=7/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
+Source: FOUNDATIONS.md#results sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5 rows=7/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -400,7 +400,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545
+Source: FOUNDATIONS.md#conjunction-of-results sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5
 
 ### Conjunction of results
 
@@ -561,7 +561,7 @@ Closure recording preserves the exact evaluated scope, the satisfied
 conditions, the evidence and the remaining residuals (P4b, P2).
 
 
-Source: RELEASE.md#8-acceptance sha256=53f465d4d25b097c7da0df0e1f18805d273b032f6fe849b59a457b29b1349992
+Source: RELEASE.md#8-acceptance sha256=1ec805a4acb60f7ce0d061cf4ba6656690500e27ae6756866eaafa34aad071e0
 
 ## 8. Acceptance
 
@@ -606,7 +606,7 @@ dependent capability passed. The claim is either qualified against a
 healthy dependency or narrowed before acceptance (P6, P5).
 
 
-Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=53f465d4d25b097c7da0df0e1f18805d273b032f6fe849b59a457b29b1349992
+Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=1ec805a4acb60f7ce0d061cf4ba6656690500e27ae6756866eaafa34aad071e0
 
 ## 9. Successor baseline conservation (STDO-UP-015)
 
@@ -672,8 +672,59 @@ mechanism (P4b, P6).
 requires of the disposition record; it applies this section and is not
 part of it (P4b, P6).
 
+### Deterministic-kind migration
 
-Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=4c87b1286d9c721b6e050b64adb8f6804327c0d8e3dad67f7c3973cbef389fd6 rows=4/17 selected by the anchors this frame carries; the consumers paragraph of 17 items is omitted
+A successor that adopts the total deterministic kind of
+[AXIOMATIC_CALCULUS §5](../AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds)
+preserves each existing evaluation operation's unchanged subject, admissible
+reads, witness/log outputs, permitted writes, stops/results, authority and
+invalidation conditions. That profile alone does not
+establish the new kind's totality, closed dependencies or declared outcomes.
+The old deterministic evaluation/proof definition supplies no general
+termination argument. Assess each proposed use against this relation (P3, P6):
+
+| Evidence and declared migration status | Successor disposition |
+|---|---|
+| Establishes the new totality, closed-dependency and outcome contract | Map to common F_D plus the unchanged operation profile and exact traversal binding. Preserve the evidence and grants. |
+| New-kind eligibility is unestablished, and the owner has identified the missing evidence or a separately declared bounded successor and its remediation obligation | Keep that identified migration pending. The legacy operation retains only its lawful standing on its exact old basis while it remains applicable; it gains no successor F_D standing. A narrower domain or fuel-bounded implementation has its own contract, identity, exhaustion outcomes and affected preservation evidence; it does not retrospectively prove the old operation total or preserve every old continuation. |
+| New-kind eligibility is unestablished and no supported remediation or successor classification has been selected | Retain the exact legacy meaning and evidence with an explicit unresolved successor-classification obligation until its owner disposes it. The legacy operation retains only its lawful standing on its exact old basis while applicable. Grant neither new F_D standing nor an automatic F_P label; the affected successor claim stays open. |
+
+An old deterministic evaluator with unestablished termination or an
+undeclared material dependency takes the second or third row, even if it
+preserves the judged subject: the second row requires an identified evidence
+gap/remediation or selected bounded successor; absent that, the third records
+the unresolved classification. Evidence alone need not choose the owner's
+remediation. This relation imposes no general decision procedure for totality.
+These eligibility/remediation cases are not additional semantic dispositions
+under this section. Generic role descriptions and schematic traversal contracts are not concrete
+operations with an implementation to qualify; their use still binds the
+kind and operation contracts when instantiated.
+
+ODD admission and closure retain their named operation owners under
+[AXIOMATIC_CALCULUS §5's authority boundary](../AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds).
+Exhaustion
+retains the evaluated predicate and its signature/traversal stop mapping,
+as [the conformance examples](../examples/DETERMINISTIC_CONTRACTS.md) distinguish.
+
+Immutable consumers keep their selected edition's meaning. New consumers
+explicitly select the complete successor and operation profiles. A stable
+concept URN is not its immutable calculus edition
+([AXIOMATIC_CALCULUS §8](../AXIOMATIC_CALCULUS.md#8-calculus-identity)). Migration
+records the old release, manifest, member and clauses and the applicable row
+above. Current URN lookup never reinterprets history. A versioned import or
+alias records its justified supersession and grants no broader permission.
+Disposition and qualification retain the separate obligations of this
+section; unresolved mappings block the affected successor claim.
+
+Broadening operation purpose while strengthening totality, dependency and
+evidence requirements is a substantive semantic change. A patch-shaped
+version label by itself promises no compatibility. The release's version
+assessment identifies the selected predecessor, affected consumer mappings
+and remaining obligations. This relation settles no general version-line
+policy and waives no acceptance gate.
+
+
+Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff rows=4/17 selected by the anchors this frame carries; the consumers paragraph of 17 items is omitted
 
 ### Foundation to law: claims, evidence, assessment and acceptance
 
@@ -707,7 +758,7 @@ they are traced in family F3 at
 what §4 decides about the review record, triage and returns.
 
 
-Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=4c87b1286d9c721b6e050b64adb8f6804327c0d8e3dad67f7c3973cbef389fd6 rows=1/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
+Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff rows=1/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
 
 ### Foundation to law: conformance, equivalence and qualification
 
@@ -737,7 +788,7 @@ last two rows; its §5 maps the method discriminators to cases and
 logical-review checks.
 
 
-Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=53f465d4d25b097c7da0df0e1f18805d273b032f6fe849b59a457b29b1349992 rows=3/12 selected by the anchors this frame carries; the consumers paragraph of 12 items is omitted
+Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=1ec805a4acb60f7ce0d061cf4ba6656690500e27ae6756866eaafa34aad071e0 rows=3/12 selected by the anchors this frame carries; the consumers paragraph of 12 items is omitted
 
 ### Foundation to law: release and successor conservation
 
@@ -764,7 +815,7 @@ the table of commitments in FOUNDATIONS §3 states it.
 | Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
 |---|---|---|---|---|
 | P6 (independent); P1 (independent); P3 (independent); instance: published cuts | By P3 and P6 a verdict holds for the exact subject and claim it binds, so qualification binds the exact cut, claims, basis, each claimed property with its observation boundary, evidence, verdicts, gaps and successor relation, and acceptance is the acceptance authority's verdict over the exact immutable cut. By P1 a weaker kind of evidence does not stand for a stronger claim. A verdict moves no selector, and a change to a qualifying byte leaves the verdict on the old cut. | [§3 Exact-cut qualification](../RELEASE.md#exact-cut-qualification); [§8 Acceptance criteria](../RELEASE.md#acceptance-criteria) | the seven acceptance criteria: domain choices of this member; the generic claim and acceptance law: [EVALUATION §1](../EVALUATION.md#1-claims) and [§5](../EVALUATION.md#5-acceptance) (family F6); acceptance of each cut: the human Product authority | 7, 9 |
-| P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); P3 (independent); P6 (independent); P1 (independent); P5 (derived from P0 and P6, with P0's open-world premise); instance: successor lines | By P4b and P3 a successor evolves one exact, immutable predecessor whose established claims persist, so it names that predecessor, and every predecessor claim that can affect it receives one disposition. By P6 and P1 a disposition is a claim evaluated on evidence, so naming or code similarity does not prove conservation, and a missing patch does not prove loss when a successor-native realisation preserves behaviour; by P5 an unresolved disposition leaves a gap, so the affected claim cannot be qualified. | [§9](../RELEASE.md#9-successor-baseline-conservation-stdo-up-015) | the four disposition values: this member, restating UP-015; each removal: the current Product authority; the record of a successor's dispositions: that successor's construction | 1, 9 |
+| P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); P3 (independent); P6 (independent); P1 (independent); P5 (derived from P0 and P6, with P0's open-world premise); instance: successor lines | By P4b and P3 a successor evolves one exact, immutable predecessor whose established claims persist, so it names that predecessor, and every predecessor claim that can affect it receives one disposition. By P6 and P1 a disposition is a claim evaluated on evidence, so naming or code similarity does not prove conservation, and a missing patch does not prove loss when a successor-native realisation preserves behaviour; by P5 an unresolved disposition leaves a gap, so the affected claim cannot be qualified; a changed deterministic kind preserves exact legacy standing and evaluates successor eligibility with its declared remediation status. | [§9](../RELEASE.md#9-successor-baseline-conservation-stdo-up-015), including [Deterministic-kind migration](../RELEASE.md#deterministic-kind-migration) | the four disposition values: this member, restating UP-015; each removal: the current Product authority; the record of a successor's dispositions: that successor's construction; the three eligibility/remediation cases: this member, distinct from semantic disposition values; the selected bounded successor or remediation: the operation owner | 1, 9 |
 | P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); P6 (independent); instance: successor lines | By P4b a change on a support line persists into what the successor retains, and by P6 its effect needs a disposition by evidence, so where a maintenance or support line may affect retained claims, the release basis names its watched source, observation boundary, inclusion policy and successor candidate, and relevant changes receive a disposition at integration and at qualification. | [§9](../RELEASE.md#9-successor-baseline-conservation-stdo-up-015), the support-line paragraph | the record, branch strategy, comparison and proof mechanism: the consumer; a policy of this member: the four items the release basis names (watched source, observation boundary, inclusion policy, successor candidate) | 1, 9 |
 
 The standing of these consequences is stated in
