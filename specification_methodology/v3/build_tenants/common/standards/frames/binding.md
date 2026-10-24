@@ -744,7 +744,7 @@ policy the governing basis states for the claim; the default where it is not
 stated is that they are not independent.
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
+Source: AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5
 
 ### AC-018 Structural and semantic separation
 
@@ -758,7 +758,7 @@ the semantic fidelity of an interpretation covers its meaning and
 materiality (P1, P6).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-019-valid-model sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
+Source: AXIOMATIC_CALCULUS.md#ac-019-valid-model sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5
 
 ### AC-019 Valid model
 
@@ -1130,7 +1130,7 @@ premises hold ([ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement),
 Refinement).
 
 
-Source: AXIOMATIC_CALCULUS.md#foundation-to-law sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c rows=1/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
+Source: AXIOMATIC_CALCULUS.md#foundation-to-law sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5 rows=1/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
 
 ### Foundation to law
 

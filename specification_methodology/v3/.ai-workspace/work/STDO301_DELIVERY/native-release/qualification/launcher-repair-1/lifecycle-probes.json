@@ -1,0 +1,73 @@
+{
+  "scope": "Synthetic Python subprocess supervision only; no model invocation",
+  "launcher_sha256": "fd2a8d60582d2b323083575d11dd06e5a80cf00b8a4ad9b0d72af071a1ed88d9",
+  "results": [
+    {
+      "case": "ordinary",
+      "launcher_exit": 0,
+      "completion": {
+        "exit_code": 0,
+        "timed_out": false,
+        "interrupted_signal": null,
+        "exception_type": null,
+        "process_group": {
+          "confirmed": true,
+          "signals": []
+        },
+        "elapsed_seconds": 0.038
+      }
+    },
+    {
+      "case": "supervisor_sigterm",
+      "launcher_exit": 1,
+      "completion": {
+        "exit_code": -15,
+        "timed_out": false,
+        "interrupted_signal": 15,
+        "exception_type": null,
+        "process_group": {
+          "confirmed": true,
+          "signals": [
+            15
+          ]
+        },
+        "elapsed_seconds": 0.307
+      }
+    },
+    {
+      "case": "parent_exits_descendant_lives",
+      "launcher_exit": 0,
+      "completion": {
+        "exit_code": 0,
+        "timed_out": false,
+        "interrupted_signal": null,
+        "exception_type": null,
+        "process_group": {
+          "confirmed": true,
+          "signals": [
+            15
+          ]
+        },
+        "elapsed_seconds": 0.09
+      }
+    },
+    {
+      "case": "sigkill_escalation",
+      "launcher_exit": 1,
+      "completion": {
+        "exit_code": -9,
+        "timed_out": false,
+        "interrupted_signal": 15,
+        "exception_type": null,
+        "process_group": {
+          "confirmed": true,
+          "signals": [
+            15,
+            9
+          ]
+        },
+        "elapsed_seconds": 5.343
+      }
+    }
+  ]
+}

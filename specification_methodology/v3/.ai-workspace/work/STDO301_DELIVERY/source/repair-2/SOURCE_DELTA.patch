@@ -1,0 +1,539 @@
+diff --git a/specification_methodology/v3/build_tenants/common/standards/AXIOMATIC_CALCULUS.md b/specification_methodology/v3/build_tenants/common/standards/AXIOMATIC_CALCULUS.md
+index bcabc267..0048d311 100644
+--- a/specification_methodology/v3/build_tenants/common/standards/AXIOMATIC_CALCULUS.md
++++ b/specification_methodology/v3/build_tenants/common/standards/AXIOMATIC_CALCULUS.md
+@@ -193,7 +193,7 @@ its own locus:
+ - Row 2, scope and exclusions: [SPEC_METHOD §11 Build-tenant binding](SPEC_METHOD.md#11-build-tenant-binding), rule 6, where a representation in a_c prescribes no executor and establishes no execution conformance by itself; otherwise no separate consumer applies: the claims the calculus does not make are limits on this member's own rules, and what an application selects, accepts or executes is that application's under [Application boundary](#application-boundary), traced in row 17.
+ - Row 3, closed signature, typed records and reference closure: [TRAVERSAL_OCCURRENCE Imported calculus boundary](TRAVERSAL_OCCURRENCE.md#imported-calculus-boundary), which instantiates its signature over `RecordKind_ac` and `Population_M` unchanged and refuses hidden records and ambiguous references, [Closed semantic-object sorts](TRAVERSAL_OCCURRENCE.md#closed-semantic-object-sorts), where every `_ref` resolves exactly once under AC-003, and [Closed constraint, judgment, residual and stop kinds](TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds), where a dangling reference refuses under AC-003; [AC-007](#ac-007-constraint-and-refusal), whose `refusal(constraint)` names a missing record family and a dangling reference; [AC-019](#ac-019-valid-model), clause 2.
+ - Row 4, scoped identity and relation typing: [Constraint surfaces](#constraint-surfaces), whose objects carry identity under AC-002 and whose predicates and dependencies include the typed relations of AC-004; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminator 22. IDENTITY's lead records that AC-002 applies the scoped identity of IDENTITY §2 and applies nothing of AC-002.
+-- Row 5, authority conservation and basis coherence: [AC-007](#ac-007-constraint-and-refusal), whose `refusal(basis)` names mixed bases with no composite-basis relation; [Constraint surfaces](#constraint-surfaces), where the surface grants no authority and binds the calculus basis as a separate coordinate; [AC-019](#ac-019-valid-model), clause 2. No section of another member applies them: the generic rules they bind to a_c records are FOUNDATIONS §2 Authority kinds', RF-005's and RF-006's, each applied by its own consumers.
++- Row 5, authority conservation and basis coherence: [AC-007](#ac-007-constraint-and-refusal), whose `refusal(basis)` names mixed bases with no composite-basis relation; [Constraint surfaces](#constraint-surfaces), where the surface grants no authority and binds the calculus basis as a separate coordinate; [AC-019](#ac-019-valid-model), clause 2; [§5](#5-traversals-and-functor-kinds), the kind-specific no-authority application of AC-005. No section of another member applies them: the generic rules they bind to a_c records are FOUNDATIONS §2 Authority kinds', RF-005's and RF-006's, each applied by its own consumers.
+ - Row 6, constraint judgment and the stop algebra: [TRAVERSAL_OCCURRENCE Closed constraint, judgment, residual and stop kinds](TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds), which maps its stops under AC-007 and refines them under the parent-value rule of §5; [AC-010](#ac-010-material-closure), [AC-011](#ac-011-projection), [AC-013](#ac-013-transformation), [AC-015](#ac-015-functor-classification), [§6 Interpretation and models](#6-interpretation-and-models) and [§7 Layers](#7-layers), each of which takes the core value of its stops or judgments under AC-007; [Constraint surfaces](#constraint-surfaces), required results and condition 2.
+ - Row 7, latitude: [Constraint surfaces](#constraint-surfaces), permitted freedom and condition 1; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminators 17 and 18. The generic rule over any two values is FOUNDATIONS §4 Algebra, Latitude's, which cites AC-008 as provenance only.
+ - Row 8, residual conservation: [Constraint surfaces](#constraint-surfaces), unresolved conditions and condition 2; [AC-013](#ac-013-transformation), where material residuals remain in the successor unless an authorised disposition is in the transformation evidence; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminator 16.
+@@ -201,7 +201,7 @@ its own locus:
+ - Row 10, overlay: [PRODUCT_DEFINITION §5](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution), which relates its four semantic-resolution kinds to the typed relations AC-012 names; [AC-019](#ac-019-valid-model), clause 3.
+ - Row 11, transformation: [FOUNDATIONS §4](FOUNDATIONS.md#4-algebra), Conservation accounting; [REFERENCE_FRAME §6 Evidence or coordinate translation](REFERENCE_FRAME.md#evidence-or-coordinate-translation), where a translation represented in a_c is recorded in the fields of AC-013; [SPEC_METHOD §11 Build-tenant binding](SPEC_METHOD.md#11-build-tenant-binding), rule 7; [Constraint surfaces](#constraint-surfaces), admissible operations.
+ - Row 12, judgment separation: [Constraint surfaces](#constraint-surfaces), evidence; [§7 Layers](#7-layers), where the acceptance judgment is over the unchanged model and neither judgment enters the identity of its subject; [§8 Calculus identity](#8-calculus-identity), where the semantic-acceptance and carrier-admission judgments point to unchanged identities and are embedded in neither. No section of another member applies it; EVALUATION §5 Acceptance states that a disposition is over an unchanged subject as its own rule and cites AC-014 as provenance only.
+-- Row 13, traversals, functor kinds and typed composition: [ACTIVATION §4 Refinement](ACTIVATION.md#refinement), where each output satisfies the next step's declared domain and preconditions as AC-016 requires; [TRAVERSAL_OCCURRENCE Closed constraint, judgment, residual and stop kinds](TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds), whose functor-kind refs leave their laws with §5, and [Occurrence identity](TRAVERSAL_OCCURRENCE.md#occurrence-identity), where every retained application under AC-016 has its own occurrence; [ODD](ODD.md#odd), its lead, and [ODD §5 Probabilistic compute](ODD.md#probabilistic-compute), which imports common F_D by exact edition and retains the separately bound F_P and F_H specialisations, and [ODD §5 Graph functions](ODD.md#graph-functions), where each inner function's input satisfies its declared domain as AC-016 requires; [PROFILES §1](PROFILES.md#1-the-boundary), which keeps the traversal record and the functor kinds as this member's terms and binds them only by declaration; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminators 22 and 51; [AC-013](#ac-013-transformation), as a specialisation of one traversal record, and [AC-007](#ac-007-constraint-and-refusal), whose `refusal(constraint)` names an application without its traversal. Additional common-kind consumers: [EVALUATION §2](EVALUATION.md#2-separation), the unchanged-subject profile; [SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding), operation versus kind; [DESIGN_MODULE §2](DESIGN_MODULE.md#2-graph-execution-alignment-and-escalation), independent governance scope and conditional eligibility; [RELEASE §9 Deterministic-kind migration](RELEASE.md#deterministic-kind-migration), legacy evidence and successor status; [ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement), total handling versus termination; [ODD A5](ODD.md#115d-constructive-evaluation-and-yield-loop) and [§11.7A](ODD.md#117a-conforming-agentic-development), actual admission and closure owners; [CONFORMANCE D301](CONFORMANCE.md#deterministic-kind-and-continuation-discriminators), with [the finite examples](examples/DETERMINISTIC_CONTRACTS.md), the affected distinctions.
++- Row 13, traversals, functor kinds and typed composition: [ACTIVATION §4 Refinement](ACTIVATION.md#refinement), where each output satisfies the next step's declared domain and preconditions as AC-016 requires; [TRAVERSAL_OCCURRENCE Closed constraint, judgment, residual and stop kinds](TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds), whose functor-kind refs leave their laws with §5, and [Occurrence identity](TRAVERSAL_OCCURRENCE.md#occurrence-identity), where every retained application under AC-016 has its own occurrence; [ODD](ODD.md#odd), its lead, and [ODD §5 Probabilistic compute](ODD.md#probabilistic-compute), which imports common F_D by exact edition and retains the separately bound F_P and F_H specialisations, and [ODD §5 Graph functions](ODD.md#graph-functions), where each inner function's input satisfies its declared domain as AC-016 requires; [PROFILES §1](PROFILES.md#1-the-boundary), which keeps the traversal record and the functor kinds as this member's terms and binds them only by declaration; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminators 22 and 51; [AC-013](#ac-013-transformation), as a specialisation of one traversal record, and [AC-007](#ac-007-constraint-and-refusal), whose `refusal(constraint)` names an application without its traversal. Additional common-kind consumers: [AC-019](#ac-019-valid-model), clause 3, which applies AC-015 and the bound kind contract to model validity; [§7](#7-layers), which applies the total-domain contract and evaluation profile to carrier admission; [EVALUATION §2](EVALUATION.md#2-separation), the unchanged-subject profile; [SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding), operation versus kind; [DESIGN_MODULE §2](DESIGN_MODULE.md#2-graph-execution-alignment-and-escalation), independent governance scope and conditional eligibility; [RELEASE §9 Deterministic-kind migration](RELEASE.md#deterministic-kind-migration), legacy evidence and successor status; [ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement), total handling versus termination; [ODD A5](ODD.md#115d-constructive-evaluation-and-yield-loop) and [§11.7A](ODD.md#117a-conforming-agentic-development), actual admission and closure owners; [CONFORMANCE D301](CONFORMANCE.md#deterministic-kind-and-continuation-discriminators), with [the finite examples](examples/DETERMINISTIC_CONTRACTS.md), the affected distinctions.
+ - Row 14, interpretation and models: [EVALUATION §2](EVALUATION.md#2-separation), which binds its separation to a_c models through AC-018 and AC-019; [SPEC_METHOD §11 Build-tenant binding](SPEC_METHOD.md#11-build-tenant-binding), rule 6; [TRAVERSAL_OCCURRENCE Imported calculus boundary](TRAVERSAL_OCCURRENCE.md#imported-calculus-boundary), where an occurrence model satisfies a_c under its signature; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminators 13, 14, 20, 40 and 45; [§7 Layers](#7-layers) and [§8 Calculus identity](#8-calculus-identity), where an interpreted model awaits a separate acceptance judgment and its identity binds the interpretation contract; [Constraint surfaces](#constraint-surfaces), which an interpretation yields, conditions 5 and 6.
+ - Row 15, layers and release separation: [SPEC_METHOD §6 Lineage and release](SPEC_METHOD.md#6-lineage-and-release), where layer and release separation holds for release lineage; [FOUNDATIONS §4](FOUNDATIONS.md#4-algebra), Formal fragment, where the separate identities of a_c, its interpretations and their carriers are AC-020's; [§8 Calculus identity](#8-calculus-identity), which binds the identity of each layer and issues this edition's record under AC-020. RELEASE's lead imports §7 and §8 and applies no rule of them.
+ - Row 16, calculus identity: [TRAVERSAL_OCCURRENCE Closed profile signature](TRAVERSAL_OCCURRENCE.md#closed-profile-signature), whose calculus-basis identity resolves the record and the derivation account that §8 defines; otherwise no separate consumer applies: issuance of this edition's record is its release's act under RELEASE, whose lead imports §8 and applies no rule of it, and IDENTITY's lead leaves the identity of a calculus edition to §8 without restating it.
+diff --git a/specification_methodology/v3/build_tenants/common/standards/RELEASE.md b/specification_methodology/v3/build_tenants/common/standards/RELEASE.md
+index 12224ac5..86222179 100644
+--- a/specification_methodology/v3/build_tenants/common/standards/RELEASE.md
++++ b/specification_methodology/v3/build_tenants/common/standards/RELEASE.md
+@@ -144,7 +144,7 @@ its own locus:
+ - Row 8, selector advancement and consumer adoption: [ODD §4](ODD.md#4-method-library-classes), where the selected immutable cut is consumer authority and mutable source and the moving selector cannot repair, replace or outrank it; [PRODUCT_DEFINITION §4](PRODUCT_DEFINITION.md#4-shared-installed-release-basis-and-toolchain-manager), whose `adopt` resolves the selector only to present an exact digest-bound plan and whose `sync` never consults it; [SPEC_METHOD §6](SPEC_METHOD.md#6-lineage-and-release), where the selector cannot silently change a consumer selection.
+ - Row 9, release-matched cohorts: [PRODUCT_DEFINITION §4 Explicit complete consumer update](PRODUCT_DEFINITION.md#explicit-complete-consumer-update), which binds the complete companion population of one exact upstream cohort and verifies its dependency closure before relying on it; otherwise no separate consumer applies: declaring a cohort is the declaring Product authority's act under this section, and SPEC_METHOD §6 refers the process for cutting a release to §2 to §8 and applies none of it.
+ - Row 10, external qualification dependencies: no separate consumer applies. The rule acts inside this member's qualification and acceptance (§3 Exact-cut qualification, §8 Acceptance criteria), where a claim that depends on an external service is qualified against a healthy dependency or narrowed; the result of a clean skip is FOUNDATIONS §4 Results', Not performed, which this section applies, and no section of another member names this section.
+-- Row 11, successor baseline conservation: [EVALUATION §5](EVALUATION.md#5-acceptance), where a successor's acceptance evidence includes the disposition record and an unresolved disposition blocks acceptance; [SPEC_METHOD §2 Requirement categories and classification](SPEC_METHOD.md#requirement-categories-and-classification), where each predecessor claim takes its disposition by this section's predicates and no lifecycle status supplies it, and [§7 Fundamental migration](SPEC_METHOD.md#fundamental-migration), where no migration class is or supplies a disposition; [FOUNDATIONS §1](FOUNDATIONS.md#1-vocabulary-of-standing), which keeps the standing of a commitment apart from a disposition, and [§4 Preservation through construction](FOUNDATIONS.md#preservation-through-construction), where a change to the governing meaning follows the successor rules; [TICKETS §7 Recorded judgment and owner-ruling continuity](TICKETS.md#recorded-judgment-and-owner-ruling-continuity) and [ODD §11.5D](ODD.md#115d-constructive-evaluation-and-yield-loop), which keep repricing dispositions and closure decisions apart from the disposition of a predecessor claim; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminators 7, 8 and 49; [§2 Project-subtree release identity](#project-subtree-release-identity) and [§3 Exact-cut qualification](#exact-cut-qualification), which bind the dispositions and the successor relation this section requires; the selected work carrier records the disposition values and supplies no decision by its presence. Deterministic-kind migration is consumed by [AXIOMATIC_CALCULUS §5](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds) and [§7](AXIOMATIC_CALCULUS.md#7-layers), [ODD §5](ODD.md#probabilistic-compute), [TRAVERSAL_OCCURRENCE kind binding](TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds), [DESIGN_MODULE §2](DESIGN_MODULE.md#2-graph-execution-alignment-and-escalation), [EVALUATION §2](EVALUATION.md#2-separation), and [CONFORMANCE D301-08](CONFORMANCE.md#deterministic-kind-and-continuation-discriminators).
++- Row 11, successor baseline conservation: [EVALUATION §5](EVALUATION.md#5-acceptance), where a successor's acceptance evidence includes the disposition record and an unresolved disposition blocks acceptance; [SPEC_METHOD §2 Requirement categories and classification](SPEC_METHOD.md#requirement-categories-and-classification), where each predecessor claim takes its disposition by this section's predicates and no lifecycle status supplies it, and [§7 Fundamental migration](SPEC_METHOD.md#fundamental-migration), where no migration class is or supplies a disposition; [FOUNDATIONS §1](FOUNDATIONS.md#1-vocabulary-of-standing), which keeps the standing of a commitment apart from a disposition, and [§4 Preservation through construction](FOUNDATIONS.md#preservation-through-construction), where a change to the governing meaning follows the successor rules; [TICKETS §7 Recorded judgment and owner-ruling continuity](TICKETS.md#recorded-judgment-and-owner-ruling-continuity) and [ODD §11.5D](ODD.md#115d-constructive-evaluation-and-yield-loop), which keep repricing dispositions and closure decisions apart from the disposition of a predecessor claim; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminators 7, 8 and 49; [§2 Project-subtree release identity](#project-subtree-release-identity) and [§3 Exact-cut qualification](#exact-cut-qualification), which bind the dispositions and the successor relation this section requires; the selected work carrier records the disposition values and supplies no decision by its presence. Deterministic-kind migration is consumed by [AXIOMATIC_CALCULUS §5](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds) and [§7](AXIOMATIC_CALCULUS.md#7-layers), [ODD §5](ODD.md#probabilistic-compute) and [§11.7A](ODD.md#117a-conforming-agentic-development), whose unresolved admission-gate eligibility stays open under the migration relation, [TRAVERSAL_OCCURRENCE kind binding](TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds), [DESIGN_MODULE §2](DESIGN_MODULE.md#2-graph-execution-alignment-and-escalation), [EVALUATION §2](EVALUATION.md#2-separation), and [CONFORMANCE D301-08](CONFORMANCE.md#deterministic-kind-and-continuation-discriminators).
+ - Row 12, support lines: no separate consumer applies. The record, branch strategy, comparison and proof mechanism are the consumer's, as the choice column states; a release basis that names a watched source does so under this paragraph, and no section of another member names it.
+ 
+ Each consumer applies the rule and decides nothing the owning section does
+diff --git a/specification_methodology/v3/build_tenants/common/standards/frames/FRAME_INPUTS.json b/specification_methodology/v3/build_tenants/common/standards/frames/FRAME_INPUTS.json
+index e354a84b..569bac4e 100644
+--- a/specification_methodology/v3/build_tenants/common/standards/frames/FRAME_INPUTS.json
++++ b/specification_methodology/v3/build_tenants/common/standards/frames/FRAME_INPUTS.json
+@@ -382,7 +382,7 @@
+       "path": "standards/frames/ac-task-a.md",
+       "task": "Write the transformation record for one step between two exact models, state which application outcome the record supports, write a judgment record over the successor, and state what promoting the successor would require and who holds it.",
+       "bytes": 75112,
+-      "sha256": "1dfa9d3bb097e5f5dc0a8a361aaeca405567840bd9d34021697de19d57d018f6",
++      "sha256": "d18dc8db89915995cff2399dcc8a331e9ee05794fbf96c4416e4e439fdaa1754",
+       "scope": "The owning sections for the model signature and typed records, the laws a transformation and its application obey with their outcomes, judgment separation and promotion, traversals, authority kinds, and the core result algebra with its conjunction.",
+       "binds": [
+         {
+@@ -410,73 +410,73 @@
+         },
+         {
+           "owner": "standards/AXIOMATIC_CALCULUS.md",
+-          "owner_sha256": "8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c",
++          "owner_sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5",
+           "anchor": "2-signature",
+           "section_sha256": "5e74619ee1056913c0c8d9dc17c0462f4a0203e462da50000b93c3d2754b16a7"
+         },
+         {
+           "owner": "standards/AXIOMATIC_CALCULUS.md",
+-          "owner_sha256": "8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c",
++          "owner_sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5",
+           "anchor": "3-typed-records",
+           "section_sha256": "6ceaf43e565f1bf4618964d326b68d1776f0a80bd5b0fc2142b12547c9b98905"
+         },
+         {
+           "owner": "standards/AXIOMATIC_CALCULUS.md",
+-          "owner_sha256": "8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c",
++          "owner_sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5",
+           "anchor": "ac-002-scoped-identity",
+           "section_sha256": "5bdbdf77523d0499f0a47216ab9198ddb73dfa602ac59bc3d6e1117b8a50fe76"
+         },
+         {
+           "owner": "standards/AXIOMATIC_CALCULUS.md",
+-          "owner_sha256": "8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c",
++          "owner_sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5",
+           "anchor": "ac-003-reference-closure",
+           "section_sha256": "0d039ababb7405e6c97b5a2a0cafa42d4cd23f8f9c46c5b84c6683df6ee00d2e"
+         },
+         {
+           "owner": "standards/AXIOMATIC_CALCULUS.md",
+-          "owner_sha256": "8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c",
++          "owner_sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5",
+           "anchor": "ac-005-authority-conservation",
+           "section_sha256": "ee29b94b8bdec9373adbc7169323da01e8537bc7891eeaaf3608b0e40b817011"
+         },
+         {
+           "owner": "standards/AXIOMATIC_CALCULUS.md",
+-          "owner_sha256": "8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c",
++          "owner_sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5",
+           "anchor": "ac-006-basis-coherence",
+           "section_sha256": "5db54d8c401e8835c39ef52af6a722c64f3f735454624110c7e63decf728d6a5"
+         },
+         {
+           "owner": "standards/AXIOMATIC_CALCULUS.md",
+-          "owner_sha256": "8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c",
++          "owner_sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5",
+           "anchor": "ac-007-constraint-and-refusal",
+           "section_sha256": "e476536499c81ef3294db1007956c7d3eb83314cee81a3f22bf1090798d13267"
+         },
+         {
+           "owner": "standards/AXIOMATIC_CALCULUS.md",
+-          "owner_sha256": "8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c",
++          "owner_sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5",
+           "anchor": "ac-008-explicit-latitude",
+           "section_sha256": "23f3ee970e3c8dc8ca04973641344de931646d8587c3466c5676f891318ba147"
+         },
+         {
+           "owner": "standards/AXIOMATIC_CALCULUS.md",
+-          "owner_sha256": "8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c",
++          "owner_sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5",
+           "anchor": "ac-009-residual-conservation",
+           "section_sha256": "684d8db7b7dc3f7cb295bac7e9ce1a7bf2fbbf7e3666df28d5abdcad0c4a3a75"
+         },
+         {
+           "owner": "standards/AXIOMATIC_CALCULUS.md",
+-          "owner_sha256": "8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c",
++          "owner_sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5",
+           "anchor": "ac-013-transformation",
+           "section_sha256": "9433ceb327c80b4b4ea933fd922bba987767adbc4245367ce47a3aac6538b0eb"
+         },
+         {
+           "owner": "standards/AXIOMATIC_CALCULUS.md",
+-          "owner_sha256": "8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c",
++          "owner_sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5",
+           "anchor": "ac-014-judgment-separation",
+           "section_sha256": "b7f575510fce6c0e9a827aa6bfb26f7f50e1a13c5983294e4969c44c6a490386"
+         },
+         {
+           "owner": "standards/AXIOMATIC_CALCULUS.md",
+-          "owner_sha256": "8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c",
++          "owner_sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5",
+           "anchor": "5-traversals-and-functor-kinds",
+           "section_sha256": "9302a4d9d40ed25bdaf69212c5e1e68efd508bf910887c4669ed59e22de2c261"
+         },
+@@ -501,9 +501,9 @@
+         },
+         {
+           "owner": "standards/AXIOMATIC_CALCULUS.md",
+-          "owner_sha256": "8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c",
++          "owner_sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5",
+           "anchor": "foundation-to-law",
+-          "section_sha256": "ac410f4a3319c7904bb534af89335a9cda98b3e41ea7808c44a671e37a80f058",
++          "section_sha256": "c536c89db55e2c9fff777a6d5b91785ed27e95c5ac7c2319ad587e534d5bd18a",
+           "rows": {
+             "mode": "frame-anchors",
+             "selected": 9,
+@@ -519,7 +519,7 @@
+       "path": "standards/frames/traversal-task-f.md",
+       "task": "Judge causal claims, an event correction, a typed lineage edge and a precedence coordinate in an occurrence history, and give each stopped occurrence its stop kind, its core result value and what must survive beside that value.",
+       "bytes": 106442,
+-      "sha256": "a4bc2ffb6445f59dc9737d65edb6ab04a26ec1dbf903c85570a1f85c07d6417e",
++      "sha256": "014a88d4e32373ac456f66832474c257ae7e6b1b0de81ee1a76261e504de707d",
+       "scope": "The owning sections for occurrence events, relation families, constraint, judgment, residual and stop kinds with their core mapping, occurrence identity, admission and correction, causality and precedence, effects, frontiers, authority, the calculus laws they import, and the core result algebra with its conjunction.",
+       "binds": [
+         {
+@@ -541,19 +541,19 @@
+       "routes": [
+         {
+           "owner": "standards/AXIOMATIC_CALCULUS.md",
+-          "owner_sha256": "8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c",
++          "owner_sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5",
+           "anchor": "ac-003-reference-closure",
+           "section_sha256": "0d039ababb7405e6c97b5a2a0cafa42d4cd23f8f9c46c5b84c6683df6ee00d2e"
+         },
+         {
+           "owner": "standards/AXIOMATIC_CALCULUS.md",
+-          "owner_sha256": "8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c",
++          "owner_sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5",
+           "anchor": "ac-004-relation-typing",
+           "section_sha256": "09f42183a888aa9af42f2d82bae368a603c9e2d827fddb0496aab0cb6755f5ce"
+         },
+         {
+           "owner": "standards/AXIOMATIC_CALCULUS.md",
+-          "owner_sha256": "8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c",
++          "owner_sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5",
+           "anchor": "ac-007-constraint-and-refusal",
+           "section_sha256": "e476536499c81ef3294db1007956c7d3eb83314cee81a3f22bf1090798d13267"
+         },
+@@ -638,9 +638,9 @@
+         },
+         {
+           "owner": "standards/AXIOMATIC_CALCULUS.md",
+-          "owner_sha256": "8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c",
++          "owner_sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5",
+           "anchor": "foundation-to-law",
+-          "section_sha256": "ac410f4a3319c7904bb534af89335a9cda98b3e41ea7808c44a671e37a80f058",
++          "section_sha256": "c536c89db55e2c9fff777a6d5b91785ed27e95c5ac7c2319ad587e534d5bd18a",
+           "rows": {
+             "mode": "frame-anchors",
+             "selected": 3,
+@@ -1167,7 +1167,7 @@
+       "path": "standards/frames/binding.md",
+       "task": "State the build-tenant binding of a software tenant and a human-process tenant of one requirement set, keep author, actor and operation kind distinct, say what a zero-diagnostic structural check of a process model establishes, and give the result value of a conformance predicate for a faster plan that merges independent assessments and automates a required human decision.",
+       "bytes": 97117,
+-      "sha256": "97e24d9a5b5c540da76bbba47a69753dcb2947bcd934b75b14b4df0502b29462",
++      "sha256": "0fede0d1b04007c57394b80a273bdbad272882ab8258230eb676055dc4ed697d",
+       "scope": "The owning sections for build-tenant binding, ambiguity governance with the admission that makes an operation human adjudication, the ontology with actor, authority, representation and interpretation, separation of semantic and evidence bases with structural conformance, independent assessment, structural and semantic separation and the valid model of a_c, effects, and the core result algebra with its conjunction.",
+       "binds": [
+         {
+@@ -1219,13 +1219,13 @@
+         },
+         {
+           "owner": "standards/AXIOMATIC_CALCULUS.md",
+-          "owner_sha256": "8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c",
++          "owner_sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5",
+           "anchor": "ac-018-structural-and-semantic-separation",
+           "section_sha256": "a6797eac85489c7f6037a19a74651040ae9e2145b56e664b0d075d5502230adf"
+         },
+         {
+           "owner": "standards/AXIOMATIC_CALCULUS.md",
+-          "owner_sha256": "8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c",
++          "owner_sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5",
+           "anchor": "ac-019-valid-model",
+           "section_sha256": "5d90fe60d4024a589836ddaf5798a9070208cf96d73ca6e3b010f2fd4146cd43"
+         },
+@@ -1256,9 +1256,9 @@
+         },
+         {
+           "owner": "standards/AXIOMATIC_CALCULUS.md",
+-          "owner_sha256": "8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c",
++          "owner_sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5",
+           "anchor": "foundation-to-law",
+-          "section_sha256": "ac410f4a3319c7904bb534af89335a9cda98b3e41ea7808c44a671e37a80f058",
++          "section_sha256": "c536c89db55e2c9fff777a6d5b91785ed27e95c5ac7c2319ad587e534d5bd18a",
+           "rows": {
+             "mode": "frame-anchors",
+             "selected": 1,
+@@ -1589,7 +1589,7 @@
+       "path": "standards/frames/acceptance-release.md",
+       "task": "Decide whether an assessed candidate or an exact release cut is accepted: read the review results, decide whether any finding blocks promotion, apply one disposition with its core value, check closure by condition, and check the acceptance criteria and successor dispositions of a release.",
+       "bytes": 63934,
+-      "sha256": "3ce8a95089eb2a16255c83a0daeb42b95dd23964ff91f9cf09bb2ecc83a055cd",
++      "sha256": "a0bb908c8c8b35eea9214fdf87abeca06a056b320a9ef24f007797d5118e53d8",
+       "scope": "The owning sections for review results and triage, acceptance and when a finding blocks promotion, the four dispositions, the core result algebra and its conjunction, condition-based closure, release acceptance criteria, and successor baseline conservation.",
+       "binds": [
+         {
+@@ -1654,13 +1654,13 @@
+         },
+         {
+           "owner": "standards/RELEASE.md",
+-          "owner_sha256": "497697a0c3f88f472af5dfffb89d9ccebf77f8b94d2673d43c476363c457b071",
++          "owner_sha256": "1ec805a4acb60f7ce0d061cf4ba6656690500e27ae6756866eaafa34aad071e0",
+           "anchor": "8-acceptance",
+           "section_sha256": "d2af19e55b93fc5c46d716b23c46fd738f8657d29ff11e4c746db79f0f3a6d23"
+         },
+         {
+           "owner": "standards/RELEASE.md",
+-          "owner_sha256": "497697a0c3f88f472af5dfffb89d9ccebf77f8b94d2673d43c476363c457b071",
++          "owner_sha256": "1ec805a4acb60f7ce0d061cf4ba6656690500e27ae6756866eaafa34aad071e0",
+           "anchor": "9-successor-baseline-conservation-stdo-up-015",
+           "section_sha256": "b560b65f9985756fb9383c640c34034ec3dd055b1c68c37bf10fde07c3e54b84"
+         },
+@@ -1692,9 +1692,9 @@
+         },
+         {
+           "owner": "standards/RELEASE.md",
+-          "owner_sha256": "497697a0c3f88f472af5dfffb89d9ccebf77f8b94d2673d43c476363c457b071",
++          "owner_sha256": "1ec805a4acb60f7ce0d061cf4ba6656690500e27ae6756866eaafa34aad071e0",
+           "anchor": "foundation-to-law-release-and-successor-conservation",
+-          "section_sha256": "454d128100b194b7de3577d0831d01256cd1fbf6459bfae92d138f6b05377e89",
++          "section_sha256": "5c28fb6a49f44bcccb889dd363f47116bf56d2a374e19cdb31d00979a639a206",
+           "rows": {
+             "mode": "frame-anchors",
+             "selected": 3,
+@@ -1723,7 +1723,7 @@
+       "path": "standards/frames/member-build-assess.md",
+       "task": "Build or assess one member of this corpus: state its family table in the required format with premises, consequences, choices and pillars, keep one owner per rule with rivals referring or refining, dispose its predecessor claims, and assess it against the local CONFORMANCE discriminators without self-review standing in for independent review.",
+       "bytes": 103133,
+-      "sha256": "ac831fab5551b9a443daf59016722ede6ce258571b1cb48d01fe9abe4691a1ca",
++      "sha256": "088cd7c976cb2b1207a5ebe0b2bd6cf38a50c4948f31cccfbfbb584d02c2d0b8",
+       "scope": "The owning sections for the foundation-to-law table format and family index, authority kinds, imports between members, the core result algebra, independent assessment and review results, successor dispositions, and the coverage of the common conformance discriminators.",
+       "binds": [
+         {
+@@ -1795,7 +1795,7 @@
+         },
+         {
+           "owner": "standards/RELEASE.md",
+-          "owner_sha256": "497697a0c3f88f472af5dfffb89d9ccebf77f8b94d2673d43c476363c457b071",
++          "owner_sha256": "1ec805a4acb60f7ce0d061cf4ba6656690500e27ae6756866eaafa34aad071e0",
+           "anchor": "9-successor-baseline-conservation-stdo-up-015",
+           "section_sha256": "b560b65f9985756fb9383c640c34034ec3dd055b1c68c37bf10fde07c3e54b84"
+         },
+@@ -1833,9 +1833,9 @@
+         },
+         {
+           "owner": "standards/RELEASE.md",
+-          "owner_sha256": "497697a0c3f88f472af5dfffb89d9ccebf77f8b94d2673d43c476363c457b071",
++          "owner_sha256": "1ec805a4acb60f7ce0d061cf4ba6656690500e27ae6756866eaafa34aad071e0",
+           "anchor": "foundation-to-law-release-and-successor-conservation",
+-          "section_sha256": "454d128100b194b7de3577d0831d01256cd1fbf6459bfae92d138f6b05377e89",
++          "section_sha256": "5c28fb6a49f44bcccb889dd363f47116bf56d2a374e19cdb31d00979a639a206",
+           "rows": {
+             "mode": "frame-anchors",
+             "selected": 2,
+diff --git a/specification_methodology/v3/build_tenants/common/standards/frames/ac-task-a.md b/specification_methodology/v3/build_tenants/common/standards/frames/ac-task-a.md
+index 2959fb16..b29674f1 100644
+--- a/specification_methodology/v3/build_tenants/common/standards/frames/ac-task-a.md
++++ b/specification_methodology/v3/build_tenants/common/standards/frames/ac-task-a.md
+@@ -119,7 +119,7 @@ so one list keeps the answer the same in every member, and a capability,
+ a label or a passing check can never be read as a permission (P6).
+ 
+ 
+-Source: AXIOMATIC_CALCULUS.md#2-signature sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
++Source: AXIOMATIC_CALCULUS.md#2-signature sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5
+ 
+ ## 2. Signature
+ 
+@@ -237,7 +237,7 @@ code or any other representation only when its encoding profile proves
+ that every tuple relation is preserved or explicitly refused (P1, P4b).
+ 
+ 
+-Source: AXIOMATIC_CALCULUS.md#3-typed-records sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
++Source: AXIOMATIC_CALCULUS.md#3-typed-records sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5
+ 
+ ## 3. Typed records
+ 
+@@ -376,7 +376,7 @@ domains. An undeclared residual kind or value refuses structural admission
+ (P3).
+ 
+ 
+-Source: AXIOMATIC_CALCULUS.md#ac-002-scoped-identity sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
++Source: AXIOMATIC_CALCULUS.md#ac-002-scoped-identity sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5
+ 
+ ### AC-002 Scoped identity
+ 
+@@ -393,7 +393,7 @@ binding beside it: equal spelling, payload equality, position in any
+ structure and carrier equality do not establish semantic identity (P3).
+ 
+ 
+-Source: AXIOMATIC_CALCULUS.md#ac-003-reference-closure sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
++Source: AXIOMATIC_CALCULUS.md#ac-003-reference-closure sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5
+ 
+ ### AC-003 Reference closure
+ 
+@@ -405,7 +405,7 @@ wrong-sort, wrong-basis, locally-and-externally ambiguous or
+ undeclared-field references refuse structural admission (P3, P5).
+ 
+ 
+-Source: AXIOMATIC_CALCULUS.md#ac-005-authority-conservation sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
++Source: AXIOMATIC_CALCULUS.md#ac-005-authority-conservation sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5
+ 
+ ### AC-005 Authority conservation
+ 
+@@ -418,7 +418,7 @@ interpreting, encoding, evaluating and transporting a record, none of
+ which transfers authority (P6, P4b).
+ 
+ 
+-Source: AXIOMATIC_CALCULUS.md#ac-006-basis-coherence sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
++Source: AXIOMATIC_CALCULUS.md#ac-006-basis-coherence sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5
+ 
+ ### AC-006 Basis coherence
+ 
+@@ -432,7 +432,7 @@ mixed basis is an explicitly owned record, and individually valid
+ coordinates do not create a coherent composite basis by proximity (P6, P3).
+ 
+ 
+-Source: AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
++Source: AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5
+ 
+ ### AC-007 Constraint and refusal
+ 
+@@ -535,7 +535,7 @@ the activation outcome `closure_unresolved` of
+ predicate (P5, P6).
+ 
+ 
+-Source: AXIOMATIC_CALCULUS.md#ac-008-explicit-latitude sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
++Source: AXIOMATIC_CALCULUS.md#ac-008-explicit-latitude sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5
+ 
+ ### AC-008 Explicit latitude
+ 
+@@ -546,7 +546,7 @@ the same rule for any two values; this law is its form over `L` and `T`
+ (P6, P1).
+ 
+ 
+-Source: AXIOMATIC_CALCULUS.md#ac-009-residual-conservation sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
++Source: AXIOMATIC_CALCULUS.md#ac-009-residual-conservation sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5
+ 
+ ### AC-009 Residual conservation
+ 
+@@ -556,7 +556,7 @@ disposition creates an exact successor model. Absence from a projection is
+ not resolution (P4b).
+ 
+ 
+-Source: AXIOMATIC_CALCULUS.md#ac-013-transformation sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
++Source: AXIOMATIC_CALCULUS.md#ac-013-transformation sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5
+ 
+ ### AC-013 Transformation
+ 
+@@ -745,7 +745,7 @@ step: what was preserved, introduced and removed, the external resolution
+ witnesses and the residuals.
+ 
+ 
+-Source: AXIOMATIC_CALCULUS.md#ac-014-judgment-separation sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
++Source: AXIOMATIC_CALCULUS.md#ac-014-judgment-separation sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5
+ 
+ ### AC-014 Judgment separation
+ 
+@@ -776,7 +776,7 @@ subject. Promotion is an explicit relation between the unchanged subject
+ and its admission or acceptance judgment (P6, P3).
+ 
+ 
+-Source: AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
++Source: AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5
+ 
+ ## 5. Traversals and functor kinds
+ 
+@@ -1273,7 +1273,7 @@ premises hold ([ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement),
+ Refinement).
+ 
+ 
+-Source: AXIOMATIC_CALCULUS.md#foundation-to-law sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c rows=9/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
++Source: AXIOMATIC_CALCULUS.md#foundation-to-law sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5 rows=9/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
+ 
+ ### Foundation to law
+ 
+diff --git a/specification_methodology/v3/build_tenants/common/standards/frames/acceptance-release.md b/specification_methodology/v3/build_tenants/common/standards/frames/acceptance-release.md
+index cf96afce..a8e45194 100644
+--- a/specification_methodology/v3/build_tenants/common/standards/frames/acceptance-release.md
++++ b/specification_methodology/v3/build_tenants/common/standards/frames/acceptance-release.md
+@@ -561,7 +561,7 @@ Closure recording preserves the exact evaluated scope, the satisfied
+ conditions, the evidence and the remaining residuals (P4b, P2).
+ 
+ 
+-Source: RELEASE.md#8-acceptance sha256=497697a0c3f88f472af5dfffb89d9ccebf77f8b94d2673d43c476363c457b071
++Source: RELEASE.md#8-acceptance sha256=1ec805a4acb60f7ce0d061cf4ba6656690500e27ae6756866eaafa34aad071e0
+ 
+ ## 8. Acceptance
+ 
+@@ -606,7 +606,7 @@ dependent capability passed. The claim is either qualified against a
+ healthy dependency or narrowed before acceptance (P6, P5).
+ 
+ 
+-Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=497697a0c3f88f472af5dfffb89d9ccebf77f8b94d2673d43c476363c457b071
++Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=1ec805a4acb60f7ce0d061cf4ba6656690500e27ae6756866eaafa34aad071e0
+ 
+ ## 9. Successor baseline conservation (STDO-UP-015)
+ 
+@@ -788,7 +788,7 @@ last two rows; its §5 maps the method discriminators to cases and
+ logical-review checks.
+ 
+ 
+-Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=497697a0c3f88f472af5dfffb89d9ccebf77f8b94d2673d43c476363c457b071 rows=3/12 selected by the anchors this frame carries; the consumers paragraph of 12 items is omitted
++Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=1ec805a4acb60f7ce0d061cf4ba6656690500e27ae6756866eaafa34aad071e0 rows=3/12 selected by the anchors this frame carries; the consumers paragraph of 12 items is omitted
+ 
+ ### Foundation to law: release and successor conservation
+ 
+diff --git a/specification_methodology/v3/build_tenants/common/standards/frames/binding.md b/specification_methodology/v3/build_tenants/common/standards/frames/binding.md
+index eb0fa8fd..5989c692 100644
+--- a/specification_methodology/v3/build_tenants/common/standards/frames/binding.md
++++ b/specification_methodology/v3/build_tenants/common/standards/frames/binding.md
+@@ -744,7 +744,7 @@ policy the governing basis states for the claim; the default where it is not
+ stated is that they are not independent.
+ 
+ 
+-Source: AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
++Source: AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5
+ 
+ ### AC-018 Structural and semantic separation
+ 
+@@ -758,7 +758,7 @@ the semantic fidelity of an interpretation covers its meaning and
+ materiality (P1, P6).
+ 
+ 
+-Source: AXIOMATIC_CALCULUS.md#ac-019-valid-model sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
++Source: AXIOMATIC_CALCULUS.md#ac-019-valid-model sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5
+ 
+ ### AC-019 Valid model
+ 
+@@ -1130,7 +1130,7 @@ premises hold ([ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement),
+ Refinement).
+ 
+ 
+-Source: AXIOMATIC_CALCULUS.md#foundation-to-law sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c rows=1/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
++Source: AXIOMATIC_CALCULUS.md#foundation-to-law sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5 rows=1/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
+ 
+ ### Foundation to law
+ 
+diff --git a/specification_methodology/v3/build_tenants/common/standards/frames/member-build-assess.md b/specification_methodology/v3/build_tenants/common/standards/frames/member-build-assess.md
+index 0fdfb5f9..575eaf55 100644
+--- a/specification_methodology/v3/build_tenants/common/standards/frames/member-build-assess.md
++++ b/specification_methodology/v3/build_tenants/common/standards/frames/member-build-assess.md
+@@ -627,7 +627,7 @@ assessor and decision owner; [EXECUTIVE_BASELINE](../EXECUTIVE_BASELINE.md)
+ binds its Reviewer and Executive instance (P6).
+ 
+ 
+-Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=497697a0c3f88f472af5dfffb89d9ccebf77f8b94d2673d43c476363c457b071
++Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=1ec805a4acb60f7ce0d061cf4ba6656690500e27ae6756866eaafa34aad071e0
+ 
+ ## 9. Successor baseline conservation (STDO-UP-015)
+ 
+@@ -969,7 +969,7 @@ last two rows; its §5 maps the method discriminators to cases and
+ logical-review checks.
+ 
+ 
+-Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=497697a0c3f88f472af5dfffb89d9ccebf77f8b94d2673d43c476363c457b071 rows=2/12 selected by the anchors this frame carries; the consumers paragraph of 12 items is omitted
++Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=1ec805a4acb60f7ce0d061cf4ba6656690500e27ae6756866eaafa34aad071e0 rows=2/12 selected by the anchors this frame carries; the consumers paragraph of 12 items is omitted
+ 
+ ### Foundation to law: release and successor conservation
+ 
+diff --git a/specification_methodology/v3/build_tenants/common/standards/frames/traversal-task-f.md b/specification_methodology/v3/build_tenants/common/standards/frames/traversal-task-f.md
+index 2412c446..a8666051 100644
+--- a/specification_methodology/v3/build_tenants/common/standards/frames/traversal-task-f.md
++++ b/specification_methodology/v3/build_tenants/common/standards/frames/traversal-task-f.md
+@@ -53,7 +53,7 @@ Routes, in order:
+ 
+ Size of this frame: 106442 bytes.
+ 
+-Source: AXIOMATIC_CALCULUS.md#ac-003-reference-closure sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
++Source: AXIOMATIC_CALCULUS.md#ac-003-reference-closure sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5
+ 
+ ### AC-003 Reference closure
+ 
+@@ -65,7 +65,7 @@ wrong-sort, wrong-basis, locally-and-externally ambiguous or
+ undeclared-field references refuse structural admission (P3, P5).
+ 
+ 
+-Source: AXIOMATIC_CALCULUS.md#ac-004-relation-typing sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
++Source: AXIOMATIC_CALCULUS.md#ac-004-relation-typing sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5
+ 
+ ### AC-004 Relation typing
+ 
+@@ -74,7 +74,7 @@ sorts and all required qualifiers are present. Direction is material
+ unless the relation kind explicitly declares symmetry (P4a, P3).
+ 
+ 
+-Source: AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
++Source: AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5
+ 
+ ### AC-007 Constraint and refusal
+ 
+@@ -1512,7 +1512,7 @@ premises hold ([ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement),
+ Refinement).
+ 
+ 
+-Source: AXIOMATIC_CALCULUS.md#foundation-to-law sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c rows=3/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
++Source: AXIOMATIC_CALCULUS.md#foundation-to-law sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5 rows=3/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
+ 
+ ### Foundation to law
+ 

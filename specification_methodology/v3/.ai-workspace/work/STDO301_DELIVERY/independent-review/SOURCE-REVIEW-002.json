@@ -1,0 +1,37 @@
+{
+  "kind": "stdo301.source-review/1",
+  "subject_commit": "a17aa1e98abeda5a2f191b0117468788adfbe450",
+  "native_inventory_sha256": "0277fc407eb6f14deda3398a2cc245a89a22b3e79473e347ca48265a3b123737",
+  "review_sha256": "5f5fc2d2b29167f8dff4362ac5242c2eac03f9af852f828ed5efb88575615429",
+  "model": "claude-opus-5-5",
+  "tools": [
+    "Glob",
+    "Grep",
+    "Read"
+  ],
+  "mcp_servers": [],
+  "actual_tool_names": [
+    "Glob",
+    "Grep",
+    "Read"
+  ],
+  "completion": {
+    "exit_code": 0,
+    "timed_out": false,
+    "elapsed_seconds": 1065.151
+  },
+  "num_turns": 82,
+  "total_cost_usd": 6.468470399999999,
+  "usage": {
+    "input_tokens": 116,
+    "cache_creation_input_tokens": 275556,
+    "cache_read_input_tokens": 9569592,
+    "output_tokens": 117482
+  },
+  "result": "falsified",
+  "scope": "Only F5 trace completeness remains falsified; F1-F4/F6-F10 and listed S4 satisfied; no S0-S2 or semantic defect supported",
+  "source_reverified_after_review": true,
+  "verified_rows": 123,
+  "private_transcript_published": false,
+  "limits": "Cross-family bounded repair readback, not owner/whole-method acceptance; reviewer did not hash/run code; root verified frozen custody."
+}

@@ -561,7 +561,7 @@ Closure recording preserves the exact evaluated scope, the satisfied
 conditions, the evidence and the remaining residuals (P4b, P2).
 
 
-Source: RELEASE.md#8-acceptance sha256=497697a0c3f88f472af5dfffb89d9ccebf77f8b94d2673d43c476363c457b071
+Source: RELEASE.md#8-acceptance sha256=1ec805a4acb60f7ce0d061cf4ba6656690500e27ae6756866eaafa34aad071e0
 
 ## 8. Acceptance
 
@@ -606,7 +606,7 @@ dependent capability passed. The claim is either qualified against a
 healthy dependency or narrowed before acceptance (P6, P5).
 
 
-Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=497697a0c3f88f472af5dfffb89d9ccebf77f8b94d2673d43c476363c457b071
+Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=1ec805a4acb60f7ce0d061cf4ba6656690500e27ae6756866eaafa34aad071e0
 
 ## 9. Successor baseline conservation (STDO-UP-015)
 
@@ -788,7 +788,7 @@ last two rows; its §5 maps the method discriminators to cases and
 logical-review checks.
 
 
-Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=497697a0c3f88f472af5dfffb89d9ccebf77f8b94d2673d43c476363c457b071 rows=3/12 selected by the anchors this frame carries; the consumers paragraph of 12 items is omitted
+Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=1ec805a4acb60f7ce0d061cf4ba6656690500e27ae6756866eaafa34aad071e0 rows=3/12 selected by the anchors this frame carries; the consumers paragraph of 12 items is omitted
 
 ### Foundation to law: release and successor conservation
 

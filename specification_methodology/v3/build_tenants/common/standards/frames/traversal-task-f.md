@@ -53,7 +53,7 @@ Routes, in order:
 
 Size of this frame: 106442 bytes.
 
-Source: AXIOMATIC_CALCULUS.md#ac-003-reference-closure sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
+Source: AXIOMATIC_CALCULUS.md#ac-003-reference-closure sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5
 
 ### AC-003 Reference closure
 
@@ -65,7 +65,7 @@ wrong-sort, wrong-basis, locally-and-externally ambiguous or
 undeclared-field references refuse structural admission (P3, P5).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-004-relation-typing sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
+Source: AXIOMATIC_CALCULUS.md#ac-004-relation-typing sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5
 
 ### AC-004 Relation typing
 
@@ -74,7 +74,7 @@ sorts and all required qualifiers are present. Direction is material
 unless the relation kind explicitly declares symmetry (P4a, P3).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c
+Source: AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5
 
 ### AC-007 Constraint and refusal
 
@@ -1512,7 +1512,7 @@ premises hold ([ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement),
 Refinement).
 
 
-Source: AXIOMATIC_CALCULUS.md#foundation-to-law sha256=8140c983b3466fcf845d2fa182f3a1a2dbfcd42c8fa1bdc5596598563d231d7c rows=3/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
+Source: AXIOMATIC_CALCULUS.md#foundation-to-law sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5 rows=3/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
 
 ### Foundation to law
 
