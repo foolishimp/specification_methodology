@@ -95,3 +95,30 @@ nonblocking S4 clarity observations remain recorded. This delta closure does
 not close inherited whole-method obligations, supersessions, owner acceptance
 or actual use. See `../../work/STDO301_DELIVERY/independent-review/` and
 `../../work/STDO301_DELIVERY/source/repair-2/` for exact subjects and limits.
+
+### Native cut and bounded installed use
+
+Source checkpoint `9f70f54d13929b4629808030077da0f1691ce7bd` is projected
+byte-for-byte into native RC commit
+`fe4941f56a52ed3697a2b516d8d68948b0ea65d9`, local annotated tag object
+`6e96ce1d2422508e5620bd12afceda890c556fd6`, manifest
+`60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8`.
+The isolated installation reproduces all 83 payload files plus the manifest.
+Its native parent is the exact published 3.0.0 RC1, not the source carrier.
+
+Four fresh read-only Claude Opus 5.5 tasks acquired the installed owners and
+returned source-cited answers. The nonauthor assessor supports all essential
+task predicates: operation authority, predicate-specific exhaustion, U/I
+continuations/qualified references, and factorization/comparison limits. One
+S3 actor-answer overstatement about categorical equivalence is retained and
+qualified; it is not a source defect or a reason to repeat the task. Assessment
+and Executive disposition are under `native-release/qualification/assessment-001/`.
+This is bounded amendment-use evidence, not whole-method qualification, measured
+benefit or owner acceptance.
+
+The supplemental application freezes the same native C/T/M under source
+contract `92c752ee7c333350b4bd5483c771b7108e59fa5d3a07bff758474ccda80aae76`:
+60 semantic files, 855 sections and 18 chunks. Generation is active under
+explicit bounded grants; completion, model review, packaging/browser checks and
+publication remain pending. Existing preparation wording is historical at its
+own cut; later results are recorded separately without retargeting those freezes.
