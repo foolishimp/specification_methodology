@@ -6,9 +6,9 @@ Purpose: The owning sections for the foundation-to-law table format and family i
 
 Binds:
 
-- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545; section sha256=a7d5fc5930338c3fb3959017f41935ce742fbb1bf189c2f527dde4e0ba12d064 spanning to #formal-representation)
-- As the reconstruction task, its return distinguishes semantic conservation, demonstrated reduction and mere relocation ([../EVALUATION.md#return-of-a-reconstruction](../EVALUATION.md#return-of-a-reconstruction); member sha256=4c87b1286d9c721b6e050b64adb8f6804327c0d8e3dad67f7c3973cbef389fd6; section sha256=562980b12fdfe47dc66ec7f5eb13f27b4ea24730184ae7e0aba51102bdc74346)
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=9928b0bd70065b299d17ea767be46bc7ead5d749bb08940a7a9acc5ea7e008b0; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=6fc3127e2a64272ac41afa0f14246daaecb2ddfa8dd391b1df4cd2fc05b25474; section sha256=e8348ef0606660ec194dabedcd1a2df488019d865c2451a1a4daa9c014e2d673 spanning to #formal-representation)
+- As the reconstruction task, its return distinguishes semantic conservation, demonstrated reduction and mere relocation ([../EVALUATION.md#return-of-a-reconstruction](../EVALUATION.md#return-of-a-reconstruction); member sha256=4255b875803924b3731e9b518934c0b5949ce4bc6ce12a17c40ec61c02cd8550; section sha256=562980b12fdfe47dc66ec7f5eb13f27b4ea24730184ae7e0aba51102bdc74346)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 a link to the owning section, the digest of its member and the digest of that
@@ -46,9 +46,9 @@ Routes, in order:
 10. [EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification](../EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification)
 11. [RELEASE.md#foundation-to-law-release-and-successor-conservation](../RELEASE.md#foundation-to-law-release-and-successor-conservation)
 
-Size of this frame: 94028 bytes.
+Size of this frame: 99876 bytes.
 
-Source: FOUNDATIONS.md#authority-kinds sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545
+Source: FOUNDATIONS.md#authority-kinds sha256=6fc3127e2a64272ac41afa0f14246daaecb2ddfa8dd391b1df4cd2fc05b25474
 
 ### Authority kinds
 
@@ -115,7 +115,7 @@ so one list keeps the answer the same in every member, and a capability,
 a label or a passing check can never be read as a permission (P6).
 
 
-Source: FOUNDATIONS.md#imports-between-members sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545
+Source: FOUNDATIONS.md#imports-between-members sha256=6fc3127e2a64272ac41afa0f14246daaecb2ddfa8dd391b1df4cd2fc05b25474
 
 ### Imports between members
 
@@ -172,7 +172,7 @@ members cannot answer one question two ways, and using a concept grants
 no authority over it (P1, P6).
 
 
-Source: FOUNDATIONS.md#foundation-to-law sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545
+Source: FOUNDATIONS.md#foundation-to-law sha256=6fc3127e2a64272ac41afa0f14246daaecb2ddfa8dd391b1df4cd2fc05b25474
 
 ### Foundation to law
 
@@ -309,7 +309,7 @@ contributions it helps account for, so a contribution that no row names
 is visible as unaccounted (P2).
 
 
-Source: FOUNDATIONS.md#results sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545 rows=1/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
+Source: FOUNDATIONS.md#results sha256=6fc3127e2a64272ac41afa0f14246daaecb2ddfa8dd391b1df4cd2fc05b25474 rows=1/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -477,7 +477,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: EVALUATION.md#3-independent-assessment sha256=4c87b1286d9c721b6e050b64adb8f6804327c0d8e3dad67f7c3973cbef389fd6
+Source: EVALUATION.md#3-independent-assessment sha256=4255b875803924b3731e9b518934c0b5949ce4bc6ce12a17c40ec61c02cd8550
 
 ## 3. Independent assessment
 
@@ -552,7 +552,7 @@ policy the governing basis states for the claim; the default where it is not
 stated is that they are not independent.
 
 
-Source: EVALUATION.md#4-review-results sha256=4c87b1286d9c721b6e050b64adb8f6804327c0d8e3dad67f7c3973cbef389fd6
+Source: EVALUATION.md#4-review-results sha256=4255b875803924b3731e9b518934c0b5949ce4bc6ce12a17c40ec61c02cd8550
 
 ## 4. Review results
 
@@ -621,7 +621,7 @@ assessor and decision owner; [EXECUTIVE_BASELINE](../EXECUTIVE_BASELINE.md)
 binds its Reviewer and Executive instance (P6).
 
 
-Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=53f465d4d25b097c7da0df0e1f18805d273b032f6fe849b59a457b29b1349992
+Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=c49ca330d8dcb2e94f62d9ffb6139c20985d34bb690fd75384c0f4fd835c3f3c
 
 ## 9. Successor baseline conservation (STDO-UP-015)
 
@@ -687,8 +687,48 @@ mechanism (P4b, P6).
 requires of the disposition record; it applies this section and is not
 part of it (P4b, P6).
 
+### Deterministic-kind migration
 
-Source: CONFORMANCE.md#5-discriminator-coverage sha256=7db0c1f67160ca5e96aa7e39dbdb79cacf1b41b58c93cf84600670f6ad6a88c0
+A successor that adopts the total deterministic kind of
+[AXIOMATIC_CALCULUS §5](../AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds)
+preserves each existing evaluation operation's unchanged-subject, read,
+witness-write, result and authority profile. That profile alone does not
+establish the new kind's totality, closed dependencies or declared outcomes.
+The old deterministic evaluation/proof definition supplies no general
+termination argument. Assess each proposed use against this relation (P3, P6):
+
+| Existing operation's evidence | Successor disposition |
+|---|---|
+| Establishes the new totality, closed-dependency and outcome contract | Map to common F_D plus the unchanged operation profile and exact traversal binding. Preserve the evidence and grants. |
+| Needs additional evidence or an explicitly changed bounded implementation | Keep new-kind qualification pending. A narrower domain or fuel-bounded implementation has its own contract, identity, exhaustion outcomes and affected preservation evidence; it does not retrospectively prove the old operation total or preserve every old continuation. |
+| Successor classification remains unresolved | Retain the exact legacy meaning and evidence and an explicit successor obligation until its owner disposes it. Grant neither new F_D standing nor an automatic F_P label; the affected successor claim stays open. |
+
+An old deterministic evaluator with unestablished termination or an
+undeclared material dependency takes the second or third row, even if it
+preserves the judged subject. ODD admission and closure retain their named
+operation owners; the common kind cannot mint those powers. Exhaustion
+retains the evaluated predicate and its signature/traversal stop mapping,
+as [the conformance examples](../examples/DETERMINISTIC_CONTRACTS.md) distinguish.
+
+Immutable consumers keep their selected edition's meaning. New consumers
+explicitly select the complete successor and operation profiles. A stable
+concept URN is not its immutable calculus edition
+([AXIOMATIC_CALCULUS §8](../AXIOMATIC_CALCULUS.md#8-calculus-identity)). Migration
+records the old release, manifest, member and clauses and the applicable row
+above. Current URN lookup never reinterprets history. A versioned import or
+alias records its justified supersession and grants no broader permission.
+Disposition and qualification retain the separate obligations of this
+section; unresolved mappings block the affected successor claim.
+
+Broadening operation purpose while strengthening totality, dependency and
+evidence requirements is a substantive semantic change. A patch-shaped
+version label by itself promises no compatibility. The release's version
+assessment identifies the selected predecessor, affected consumer mappings
+and remaining obligations. This relation settles no general version-line
+policy and waives no acceptance gate.
+
+
+Source: CONFORMANCE.md#5-discriminator-coverage sha256=474e346603ed6d1060d55a72dc2ffb8c3817c538831efc8d1f85d42a53ec0e0d
 
 ## 5. Discriminator coverage
 
@@ -785,6 +825,25 @@ not a claim that those cases ran or passed. A selected case without a
 current assessment remains a planned evaluation without a closed result,
 as FOUNDATIONS §4 requires.
 
+### Deterministic kind and continuation discriminators
+
+These cases apply when the corresponding kind, migration or sufficiency
+claim is made. Their contracts, complete finite oracles and executable
+model checks are in [Deterministic contracts](../examples/DETERMINISTIC_CONTRACTS.md).
+The source obligations retain their owners. A coverage row records no
+execution, independent assessment, adoption or acceptance by itself.
+
+| Case | Required distinction | Source owner |
+|---|---|---|
+| D301-01 | The three-value constructor qualifies on its finite domain, yet its construction-only grant supports no assessment, admission or closure claim. ODD retains the actual operations, evidence and grants. | AXIOMATIC_CALCULUS §5; ODD §11.5D A4a–A8 |
+| D301-02 | An unchanged-subject sortedness evaluator returns the first inversion witness and can persist it only under its separate log grant. In-place sort followed by “original passed” violates that profile. The same permission applies to manual and mixed evaluation. | AXIOMATIC_CALCULUS §5 evaluation-operation profile; EVALUATION §2 |
+| D301-03 | The six logical put_A cells determine modeled next state and request/refusal; the decision does not establish a physical effect's completion. | AXIOMATIC_CALCULUS §5; ACTIVATION §3 Effects |
+| D301-04 | Copy exhaustion gives no candidate and falsified availability; assessment exhaustion supplies an indeterminate property report with satisfied report availability; setup exhaustion before invocation supplies no assessment result. Signature and traversal stops retain each predicate and core value. | AXIOMATIC_CALCULUS §5; ACTIVATION §3 Construction availability |
+| D301-05 | Under fixed Γ, U and I share “no satisfied assessment” but require different first-assessment decisions. Four retained states preserve all modeled transitions/readouts without proving compression or general context selection. | FOUNDATIONS §4 Observation sufficiency; ACTIVATION §7 |
+| D301-06 | A qualified accessible reference preserves the complete assessed record and its consumer readout; a candidate-only pointer merges S/I and fails that claim. No typed carrier is mandatory. | ACTIVATION §2; AC-003 and AC-011 |
+| D301-07 | Finite j=h∘view preserves the stated readout. The constant projection cannot factor j even though a terminal-category map can preserve structural laws. A full categorical claim still carries its applicable a_c representation; H1 remains unresolved. | FOUNDATIONS §4 Formal fragment; EVALUATION §6; discriminator 51 |
+| D301-08 | A legacy evaluator's unchanged-subject guarantee survives; hidden dependencies or missing termination proof prevent automatic common-F_D qualification. New bounded contracts retain separate identities/exhaustion evidence. Unresolved uses keep their exact legacy basis and an open successor obligation. | RELEASE §9 Deterministic-kind migration; ODD §5; discriminator 22 |
+
 ### Universal-construction and assurance discriminators
 
 The following nine construction cases and twelve assurance cases state
@@ -824,7 +883,7 @@ current subjects and evidence independently. A mapped case never becomes
 a pass by its presence, and a mapping does not exempt a material owner or
 consumer from review (P6, P2).
 
-Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=4c87b1286d9c721b6e050b64adb8f6804327c0d8e3dad67f7c3973cbef389fd6 rows=7/17 selected by the anchors this frame carries; the consumers paragraph of 17 items is omitted
+Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=4255b875803924b3731e9b518934c0b5949ce4bc6ce12a17c40ec61c02cd8550 rows=7/17 selected by the anchors this frame carries; the consumers paragraph of 17 items is omitted
 
 ### Foundation to law: claims, evidence, assessment and acceptance
 
@@ -861,7 +920,7 @@ they are traced in family F3 at
 what §4 decides about the review record, triage and returns.
 
 
-Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=4c87b1286d9c721b6e050b64adb8f6804327c0d8e3dad67f7c3973cbef389fd6 rows=1/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
+Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=4255b875803924b3731e9b518934c0b5949ce4bc6ce12a17c40ec61c02cd8550 rows=1/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
 
 ### Foundation to law: conformance, equivalence and qualification
 
@@ -891,7 +950,7 @@ last two rows; its §5 maps the method discriminators to cases and
 logical-review checks.
 
 
-Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=53f465d4d25b097c7da0df0e1f18805d273b032f6fe849b59a457b29b1349992 rows=2/12 selected by the anchors this frame carries; the consumers paragraph of 12 items is omitted
+Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=c49ca330d8dcb2e94f62d9ffb6139c20985d34bb690fd75384c0f4fd835c3f3c rows=2/12 selected by the anchors this frame carries; the consumers paragraph of 12 items is omitted
 
 ### Foundation to law: release and successor conservation
 

@@ -171,7 +171,7 @@ which the commitments do not supply:
 | P3 (independent), P6 (independent) | By P3 a basis is immutable once bound, and by P6 a change to its meaning needs an owned relation, so an overlay adds records without mutating its basis; override, disambiguation, equivalence, specialisation or translation exists only as a typed relation with its authority | [AC-012](#ac-012-overlay) | each overlay relation: its owner | 2, 10 |
 | P4b (derived from P0 and P2), P3 (independent), P6 (independent) | By P4b a transformation's effects are facts that persist, by P3 they bind exact records, and by P6 their classification is accountable, so a transformation proves a closed delta over local records and external resolutions, each classified once as preserved or removed, with preservation shown by byte or typed equality; its result is a proposed successor that admits nothing | [AC-013](#ac-013-transformation) | each transformation, with its operation authority and preservation relation: the owner of the transformation record | 3, 4, 10 |
 | P6 (independent), P3 (independent) | By P6 judgment and promotion are separate authorities, and by P3 a judgment binds its exact subject, so a judgment points to an unchanged subject, and promotion is a separate relation between that subject and its admission or acceptance judgment | [AC-014](#ac-014-judgment-separation) | none | 9, 10 |
-| P4a (independent), P3 (independent), P6 (independent); (iii) | By P4a a traversal composes only through its declared contract, by P3 it binds one functor kind, by P6 its authority is separate, and by (iii) some predicates are decided mechanically and others not, so a traversal is a typed contract applied under exactly one functor kind; deterministic evaluation, probabilistic construction and human adjudication are distinct kinds, each distinct from actor, executor and domain operation, and the name asserts no categorical functor; traversals compose only under typed composition, which keeps both identities and every intermediate fact | [§5](#5-traversals-and-functor-kinds), [AC-015](#ac-015-functor-classification), [AC-016](#ac-016-typed-composition) | the functor kinds permitted for each traversal: the owning signature; the order of kinds in an application: that application | 4, 8, 10 |
+| P4a (independent), P3 (independent), P6 (independent); (iii) | By P4a a traversal composes only through its declared contract, by P3 it binds one functor kind, by P6 its authority is separate, and by (iii) some predicates are decided mechanically and others not, so a traversal is a typed contract applied under exactly one functor kind; total deterministic processing, bounded probabilistic construction and human adjudication are distinct kinds, each distinct from actor, executor and domain operation, and the name asserts no categorical functor; traversals compose only under typed composition, which keeps both identities and every intermediate fact | [§5](#5-traversals-and-functor-kinds), [AC-015](#ac-015-functor-classification), [AC-016](#ac-016-typed-composition) | the total-domain requirement for F_D and the unchanged-subject evaluation profile: §5; the functor kinds permitted for each traversal: the owning signature; the order of kinds in an application: that application | 4, 8, 10 |
 | P1 (independent), P6 (independent), P4b (derived from P0 and P2); (ii), (iii) | By P1 an interpretation is a proposal about meaning, by P6 its acceptance is separate, by P4b its provenance persists, and by (ii) and (iii) models are interpreted from exact subjects and partly checked mechanically, so an interpretation proposes a model that its construction does not accept; every admitted record has exact provenance or is identified as model-local, every evaluated subject declaration has a disposition, structural success is evidence for semantic review and never a substitute, and a valid model satisfies every applicable law | [§6](#6-interpretation-and-models), [AC-017](#ac-017-interpretation-fidelity), [AC-018](#ac-018-structural-and-semantic-separation), [AC-019](#ac-019-valid-model) | the interpretation contract and the semantic selection and acceptance authority: the downstream authority of the subject; a decision contract for a semantic subset: the model that supplies it | 6, 10 |
 | P3 (independent), P6 (independent); (ii) | By P3 the calculus, a model and a carrier are distinct objects, by P6 each has its own proof obligation, and by (ii) a model may be encoded in several carriers, so the calculus, an interpreted model and an encoded carrier have separate identities, judgments and proof obligations; encoding needs an accepted judgment over the unchanged model, and a downstream success ratifies no upstream layer | [§7](#7-layers), [AC-020](#ac-020-layer-and-release-separation) | Product status of a layer: the external authority that selects and releases it | 6, 10 |
 | P3 (independent), P6 (independent) | By P3 an edition binds its exact published bytes, and by P6 its identity record is a separate authority, so an edition's identity is an external record over its published bytes and its derivation clauses, created after the bytes exist; interpreted and encoded identities bind their upstream identities, and judgments stay outside the identities they judge | [§8](#8-calculus-identity) | the record shape, RFC 8785 canonicalisation, SHA-256 and the order of principle references: this member; the record grammar and issuance authority for interpreted and encoded identities: the owning Product; issuance of this edition's record: its release, under [RELEASE](RELEASE.md) | 2, 10 |
@@ -195,7 +195,7 @@ its own locus:
 - Row 10, overlay: [PRODUCT_DEFINITION §5](PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution), which relates its four semantic-resolution kinds to the typed relations AC-012 names; [AC-019](#ac-019-valid-model), clause 3.
 - Row 11, transformation: [FOUNDATIONS §4](FOUNDATIONS.md#4-algebra), Conservation accounting; [REFERENCE_FRAME §6 Evidence or coordinate translation](REFERENCE_FRAME.md#evidence-or-coordinate-translation), where a translation represented in a_c is recorded in the fields of AC-013; [SPEC_METHOD §11 Build-tenant binding](SPEC_METHOD.md#11-build-tenant-binding), rule 7; [Constraint surfaces](#constraint-surfaces), admissible operations.
 - Row 12, judgment separation: [Constraint surfaces](#constraint-surfaces), evidence; [§7 Layers](#7-layers), where the acceptance judgment is over the unchanged model and neither judgment enters the identity of its subject; [§8 Calculus identity](#8-calculus-identity), where the semantic-acceptance and carrier-admission judgments point to unchanged identities and are embedded in neither. No section of another member applies it; EVALUATION §5 Acceptance states that a disposition is over an unchanged subject as its own rule and cites AC-014 as provenance only.
-- Row 13, traversals, functor kinds and typed composition: [ACTIVATION §4 Refinement](ACTIVATION.md#refinement), where each output satisfies the next step's declared domain and preconditions as AC-016 requires; [TRAVERSAL_OCCURRENCE Closed constraint, judgment, residual and stop kinds](TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds), whose functor-kind refs leave their laws with §5, and [Occurrence identity](TRAVERSAL_OCCURRENCE.md#occurrence-identity), where every retained application under AC-016 has its own occurrence; [ODD](ODD.md#odd), its lead, and [ODD §5 Probabilistic compute](ODD.md#probabilistic-compute), which keep the profile's F_D, F_P and F_H shorthands apart from the functor kinds of §5, and [ODD §5 Graph functions](ODD.md#graph-functions), where each inner function's input satisfies its declared domain as AC-016 requires; [PROFILES §1](PROFILES.md#1-the-boundary), which keeps the traversal record and the functor kinds as this member's terms and binds them only by declaration; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminators 22 and 51; [AC-013](#ac-013-transformation), as a specialisation of one traversal record, and [AC-007](#ac-007-constraint-and-refusal), whose `refusal(constraint)` names an application without its traversal.
+- Row 13, traversals, functor kinds and typed composition: [ACTIVATION §4 Refinement](ACTIVATION.md#refinement), where each output satisfies the next step's declared domain and preconditions as AC-016 requires; [TRAVERSAL_OCCURRENCE Closed constraint, judgment, residual and stop kinds](TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds), whose functor-kind refs leave their laws with §5, and [Occurrence identity](TRAVERSAL_OCCURRENCE.md#occurrence-identity), where every retained application under AC-016 has its own occurrence; [ODD](ODD.md#odd), its lead, and [ODD §5 Probabilistic compute](ODD.md#probabilistic-compute), which imports common F_D by exact edition and retains the separately bound F_P and F_H specialisations, and [ODD §5 Graph functions](ODD.md#graph-functions), where each inner function's input satisfies its declared domain as AC-016 requires; [PROFILES §1](PROFILES.md#1-the-boundary), which keeps the traversal record and the functor kinds as this member's terms and binds them only by declaration; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminators 22 and 51; [AC-013](#ac-013-transformation), as a specialisation of one traversal record, and [AC-007](#ac-007-constraint-and-refusal), whose `refusal(constraint)` names an application without its traversal.
 - Row 14, interpretation and models: [EVALUATION §2](EVALUATION.md#2-separation), which binds its separation to a_c models through AC-018 and AC-019; [SPEC_METHOD §11 Build-tenant binding](SPEC_METHOD.md#11-build-tenant-binding), rule 6; [TRAVERSAL_OCCURRENCE Imported calculus boundary](TRAVERSAL_OCCURRENCE.md#imported-calculus-boundary), where an occurrence model satisfies a_c under its signature; [CONFORMANCE §5](CONFORMANCE.md#5-discriminator-coverage), discriminators 13, 14, 20, 40 and 45; [§7 Layers](#7-layers) and [§8 Calculus identity](#8-calculus-identity), where an interpreted model awaits a separate acceptance judgment and its identity binds the interpretation contract; [Constraint surfaces](#constraint-surfaces), which an interpretation yields, conditions 5 and 6.
 - Row 15, layers and release separation: [SPEC_METHOD §6 Lineage and release](SPEC_METHOD.md#6-lineage-and-release), where layer and release separation holds for release lineage; [FOUNDATIONS §4](FOUNDATIONS.md#4-algebra), Formal fragment, where the separate identities of a_c, its interpretations and their carriers are AC-020's; [§8 Calculus identity](#8-calculus-identity), which binds the identity of each layer and issues this edition's record under AC-020. RELEASE's lead imports §7 and §8 and applies no rule of them.
 - Row 16, calculus identity: [TRAVERSAL_OCCURRENCE Closed profile signature](TRAVERSAL_OCCURRENCE.md#closed-profile-signature), whose calculus-basis identity resolves the record and the derivation account that §8 defines; otherwise no separate consumer applies: issuance of this edition's record is its release's act under RELEASE, whose lead imports §8 and applies no rule of it, and IDENTITY's lead leaves the identity of a calculus edition to §8 without restating it.
@@ -682,6 +682,12 @@ closure of `Z`, and a capability budget is one such budget. ACTIVATION §2
 applies the projection to a step's context, and every projected frame of
 this corpus is one.
 
+Sufficiency for later decisions consumes
+[FOUNDATIONS §4 Observation sufficiency](FOUNDATIONS.md#assertions-and-observation),
+including the distinctions required by the bound consumer and continuation.
+A projection by itself establishes neither a Markov property nor a
+categorical-functor claim (P1, P6).
+
 ### AC-012 Overlay
 
 An overlay adds explicit records to one or more declared `Population_M`
@@ -970,9 +976,25 @@ traversal has one core value, so its consumers cannot read it two ways,
 and no refinement gives a stop another core value, so a violated
 constraint never becomes a case that the evidence merely cannot decide.
 
-- `F_D` classifies deterministic evaluation or proof over declared
-  properties. It returns a judgment and does not perform the domain
-  construction being judged (P6).
+- `F_D` classifies total deterministic processing under an exact traversal
+  contract. An application declares `f_B:D_B->Outcome_B`, its closed logical
+  domain, exact basis, all material computational state and dependencies,
+  and its termination argument. For every domain input it terminates with
+  exactly one declared outcome. Closed domains may be infinite when
+  termination and outcome determination are established. Open-world
+  semantic choice and undeclared clock, filesystem or global dependencies
+  are outside this contract (P3, P4a, P6).
+
+  State-dependent processing declares input state and the meaning of its
+  returned next state and value. Refusal and exhaustion retain their cause
+  and evaluated predicate. The signature and traversal bind each stop to
+  exactly one core value, never satisfied; an exhausted tag alone supplies
+  no mapping. Construction availability and assessment retain their
+  separate predicates and results, and an unperformed assessment has no
+  result. A fuel-bounded operation is distinct from the potentially
+  divergent operation it bounds. A deterministic decision or effect proposal
+  establishes no physical completion, runtime admission, permission or
+  quality (P5, P6; [ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition)).
 - `F_P` classifies bounded probabilistic interpretation, construction or
   proposal under an exact traversal contract. Its result has no semantic,
   admission, acceptance or closure authority merely because it is useful
@@ -986,6 +1008,24 @@ different coordinates. `Encode`, `Interpret`, `Serialize`, `Measure` and
 other named domain operations are not aliases for `F_D`, `F_P` or `F_H`.
 Different traversals may share one functor kind without sharing identity,
 semantics, inputs, outputs, authority or evidence (P3, P6).
+
+Evaluation-operation profile. An operation declared to evaluate an unchanged
+subject identifies that subject, admissible reads, witness or log outputs,
+permitted writes, stops and results, authority and invalidation conditions.
+It preserves the judged subject and does not perform the domain construction
+it judges. Separately authorized persistence of a witness does not perform
+the judged domain construction. A construction or mutation needs its own
+operation contract and grant; reporting a changed subject's property as the
+original subject's property violates this evaluation contract (P6, P3).
+
+Closedness concerns dependencies material to the computation, not complete
+world knowledge. This kind's totality is stronger than total handling of
+conditions in [ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement).
+Unbounded work is not automatically `F_P` when a totality argument is missing.
+Existing operations enter this edition only through the evidence-sensitive
+[migration relation](RELEASE.md#deterministic-kind-migration). The
+[finite examples](examples/DETERMINISTIC_CONTRACTS.md) distinguish construction,
+assessment, proposed effects and three predicate-specific exhaustion cases.
 
 "Functor kind" is an `a_c` term for this traversal classification. It does
 not by itself assert a category-theoretic functor. A model that claims
@@ -1016,10 +1056,16 @@ F_K2[w] compose F_K1[v]
 
 Composition retains both traversal identities, intermediate results,
 judgments, evidence, authority, provenance and stop states. It cannot
-flatten probabilistic proposal, deterministic evaluation and human
+flatten construction, evaluation and human
 decision into one undifferentiated operation. `a_c` prescribes no
 universal `F_P -> F_D -> F_H` sequence; each application owns its lawful
 topology (P4a, P4b, P6). FOUNDATIONS §3 P4a consumes this law.
+
+A deterministic constructor feeding a deterministic evaluator still has
+two exact traversal identities and retains both results and stops. A claimed
+projection of their continuation follows the consumer-relative sufficiency
+law in [FOUNDATIONS §4](FOUNDATIONS.md#assertions-and-observation); composition
+alone establishes neither adequate observations nor a Markov property.
 
 ## 6. Interpretation and models
 
@@ -1115,6 +1161,11 @@ D_C = F_D[v_carrier_admission](G_C, Profile_C, CarrierBasis_C)
 ```
 
 `J_X` is an external semantic-acceptance judgment over unchanged `M_X`.
+The `F_D[v_carrier_admission]` notation requires §5's total-domain evidence
+for the actual admission traversal and its unchanged-subject evaluation
+profile. The diagram supplies neither that evidence nor admission authority;
+an unresolved implementation retains its migration obligation under
+[RELEASE §9](RELEASE.md#deterministic-kind-migration).
 Encoding requires `J_X.decision = accepted` and exact equality between the
 judgment subject identity and digest and `M_X`; hold or refusal cannot be
 encoded. `D_C` is a judgment over unchanged carrier bytes; it is not a

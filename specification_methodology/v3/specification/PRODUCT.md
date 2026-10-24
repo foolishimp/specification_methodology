@@ -14,6 +14,13 @@ Under the [standalone successor requirement](requirements/README.md#standalone-s
 
 Each rule has one owning section, under [Method Structure](#method-structure) and the [single ownership requirement](requirements/README.md#single-ownership-requirement).
 
+The current bounded common successor work is the
+[selected 3.0.1 amendment](requirements/STDO_3_0_1.md) under T-004, targeting
+`3.0.1-rc.1` from the exact native `3.0.0-rc.1` predecessor it names. That
+amendment owns the changed deterministic-kind obligation and compatibility
+scope. The historical v3 reconstruction and inherited acceptance duties
+below retain their original subjects and standing; the builder is unchanged.
+
 The method distinguishes three accounts of a construction. They apply across the tiers:
 
 - the algorithmic description: the steps;

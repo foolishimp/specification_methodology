@@ -20,8 +20,9 @@ meaning, narrowed scope and invalidation. In this member "binding" means
 that declared binding of a core mechanism; a Product's adoption binding is
 [PRODUCT_DEFINITION §7](PRODUCT_DEFINITION.md#7-collective-reference-frame-basis)'s,
 and a carrier binding to a typed contract is [UX §7](UX.md#7-carrier-binding)'s;
-the three are not interchanged (P0 boundary, P1). A concrete application
-of the declared-binding rule is ODD's specialisation of F_P and F_H, which
+the three are not interchanged (P0 boundary, P1). Concrete applications
+of the declared-binding rule are ODD's exact-edition F_D import and
+specialisations of F_P and F_H, which
 [ODD §5 Probabilistic compute](ODD.md#probabilistic-compute) owns in the
 graph-native context.
 
@@ -56,7 +57,7 @@ law in full and declares its bindings under §1 (P0 boundary, P1):
 
 | Member | Binds or adds |
 |---|---|
-| [ODD](ODD.md) | the bounded step of FOUNDATIONS P0 to one vector or edge traversal and the graph-native F_P, F_D and F_H shorthands, with F_P and F_H as declared specialisations of SPEC_METHOD §5 ([§5 Probabilistic compute](ODD.md#probabilistic-compute)); the refinement of ACTIVATION §4 to graph functions, with the cumulative environment law of §11.8 declared as its specialised contract for carrying earlier outputs ([§5 Graph functions](ODD.md#graph-functions), [§11.8](ODD.md#118-cumulative-environment-law-is-mandatory)) |
+| [ODD](ODD.md) | the bounded step of FOUNDATIONS P0 to one vector or edge traversal and common F_D through an exact-edition import with separate operation profiles, and graph-native F_P and F_H as declared specialisations of SPEC_METHOD §5 ([§5 Probabilistic compute](ODD.md#probabilistic-compute)); the refinement of ACTIVATION §4 to graph functions, with the cumulative environment law of §11.8 declared as its specialised contract for carrying earlier outputs ([§5 Graph functions](ODD.md#graph-functions), [§11.8](ODD.md#118-cumulative-environment-law-is-mandatory)) |
 | [TRAVERSAL_OCCURRENCE](TRAVERSAL_OCCURRENCE.md) | an optional closed model-family signature over one exact `a_c` basis of AXIOMATIC_CALCULUS for immutable occurrence histories over a mutable subject, with OP-001 to OP-007 |
 
 The ownership split of graph execution (runtime, product, service layers)

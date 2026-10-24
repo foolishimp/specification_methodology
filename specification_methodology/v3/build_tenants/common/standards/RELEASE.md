@@ -712,6 +712,46 @@ mechanism (P4b, P6).
 requires of the disposition record; it applies this section and is not
 part of it (P4b, P6).
 
+### Deterministic-kind migration
+
+A successor that adopts the total deterministic kind of
+[AXIOMATIC_CALCULUS §5](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds)
+preserves each existing evaluation operation's unchanged-subject, read,
+witness-write, result and authority profile. That profile alone does not
+establish the new kind's totality, closed dependencies or declared outcomes.
+The old deterministic evaluation/proof definition supplies no general
+termination argument. Assess each proposed use against this relation (P3, P6):
+
+| Existing operation's evidence | Successor disposition |
+|---|---|
+| Establishes the new totality, closed-dependency and outcome contract | Map to common F_D plus the unchanged operation profile and exact traversal binding. Preserve the evidence and grants. |
+| Needs additional evidence or an explicitly changed bounded implementation | Keep new-kind qualification pending. A narrower domain or fuel-bounded implementation has its own contract, identity, exhaustion outcomes and affected preservation evidence; it does not retrospectively prove the old operation total or preserve every old continuation. |
+| Successor classification remains unresolved | Retain the exact legacy meaning and evidence and an explicit successor obligation until its owner disposes it. Grant neither new F_D standing nor an automatic F_P label; the affected successor claim stays open. |
+
+An old deterministic evaluator with unestablished termination or an
+undeclared material dependency takes the second or third row, even if it
+preserves the judged subject. ODD admission and closure retain their named
+operation owners; the common kind cannot mint those powers. Exhaustion
+retains the evaluated predicate and its signature/traversal stop mapping,
+as [the conformance examples](examples/DETERMINISTIC_CONTRACTS.md) distinguish.
+
+Immutable consumers keep their selected edition's meaning. New consumers
+explicitly select the complete successor and operation profiles. A stable
+concept URN is not its immutable calculus edition
+([AXIOMATIC_CALCULUS §8](AXIOMATIC_CALCULUS.md#8-calculus-identity)). Migration
+records the old release, manifest, member and clauses and the applicable row
+above. Current URN lookup never reinterprets history. A versioned import or
+alias records its justified supersession and grants no broader permission.
+Disposition and qualification retain the separate obligations of this
+section; unresolved mappings block the affected successor claim.
+
+Broadening operation purpose while strengthening totality, dependency and
+evidence requirements is a substantive semantic change. A patch-shaped
+version label by itself promises no compatibility. The release's version
+assessment identifies the selected predecessor, affected consumer mappings
+and remaining obligations. This relation settles no general version-line
+policy and waives no acceptance gate.
+
 ## 10. Open questions
 
 These questions remain open (P2):

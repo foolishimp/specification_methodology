@@ -127,6 +127,13 @@ not (P2, P6).
 
 ## 2. Separation
 
+An unchanged-subject deterministic evaluation uses the operation profile of
+[AXIOMATIC_CALCULUS §5](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds).
+Its kind supplies neither operation permission nor a quality conclusion;
+authorized witness persistence and construction of the judged domain
+subject remain separate. The total deterministic qualification is additional
+to the evaluation profile, under the [migration relation](RELEASE.md#deterministic-kind-migration).
+
 Three bases stay distinct (P6, P1): the semantic basis, the constitutional
 and accepted-design relations that define what a claim means; the evidence
 basis, the exact artifacts, events, logs, tests and observations used to
@@ -442,6 +449,24 @@ to establish conformance or equivalence. Byte or structural identity,
 unique derivation, determinism and incumbent equality are not generic
 comparison criteria. A construction outside the declared competence or
 configuration envelope cannot indict generic method sufficiency (P6, P1).
+
+For representation-benefit experiments, an optional design is to compare
+equivalent substantive information and access while independently varying
+relevant counterexamples retained, absent, or stale and out of scope.
+Include the existing contract and the simplest adequate qualified plain-text
+fix. State outcome oracles and the units and boundaries of acquisition,
+rendering, reasoning, repair and assurance cost. Scale trials to the claim,
+risk and resources; this guidance prescribes no universal trial count or
+new review cycle (P2, P6).
+
+Information-equivalent benefit can support an architecture decision;
+retention benefit supports context-selection policy; stale-material failure
+targets provenance and invalidation. No benefit or higher total cost supports
+retaining the existing construction. Outcome correctness and unresolved
+obligations remain visible. A Propose–Probe–Compose harness is one possible
+experiment strategy, not a dependency or acceptance oracle. Consumer
+adequacy remains distinct from functor laws under
+[FOUNDATIONS §4 Formal fragment](FOUNDATIONS.md#4-algebra).
 
 ### Return of a reconstruction
 

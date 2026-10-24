@@ -4,6 +4,19 @@ This file states the current work wave of this source project: what is being wor
 
 ## Current Selection
 
+The owner selects STDO 3.0.1 delivery under
+[T-004](../.ai-workspace/tickets/active/T-004-STDO-3.0.1-delivery.md) and the
+[bounded common amendment](requirements/STDO_3_0_1.md). The first target is
+`3.0.1-rc.1`, constructed from exact published native `3.0.0-rc.1` in the
+isolated common tenant on `codex/stdo-3.0.1-delivery`. Source amendment,
+coherent native frames and metadata, source-matched supplemental
+representation, qualification and release preparation are selected.
+Construction does not satisfy independent review, inherited obligations or
+exact-cut acceptance. Older consumers and the installed builder keep their
+selected meanings. The version label promises no automatic patch compatibility.
+
+### Earlier common-candidate selection
+
 The owner selects construction of the standalone V3 `common/` candidate, with Codex holding the pen, under [T-003](../.ai-workspace/tickets/active/T-003-COMMON-standalone-v3-construction.md). The candidate takes the frozen Claude implementation and the unified enhancement register as construction inputs. It is complete in its own text; source history and decision records remain outside the package. The owner has authorised checkpoint commits and construction. Meaning changes remain proposed until their exact decisions and covering review are complete; release and adoption are not selected.
 
 The first construction checkpoint is `494451522072ec34381c644f1ccfa2331f2b1e27` on `tenant/common/standalone-v3`. The [common build handoff](../.ai-workspace/comments/codex/20261018T160429Z_COMMON_FIRST_BUILD_CHECKPOINT.md) identifies its isolated worktree, current evidence and pending decisions. This is a work-state projection, not acceptance of the candidate.

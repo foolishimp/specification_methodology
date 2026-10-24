@@ -6,14 +6,16 @@ authoring over a declared asset graph. It imports the families that
 [PROFILES §1](PROFILES.md#1-the-boundary) and restates none of them. Inside
 its bounded context it uses its own terms freely: graph, node, asset,
 vector, edge, graph function, traversal, worksite, ledger, event log, GTL,
-ABG, F_D, F_P and F_H (P0, P1).
+ABG, F_P and F_H (P0, P1). `F_D` is the exact-edition common import below.
 
 Two definitions are used here and owned elsewhere. The a_c traversal record
 and the functor kinds are
 [AXIOMATIC_CALCULUS §5](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds);
 the core result algebra is [FOUNDATIONS §4 Results](FOUNDATIONS.md#results).
-This profile's graph traversal and its F_D, F_P and F_H shorthands are its
-own concepts and are not those records by spelling. The Executive, Worker
+This profile's graph traversal and its F_P and F_H shorthands are its
+own concepts and are not those records by spelling. Its F_D use imports
+the common kind through [§5](#probabilistic-compute), without inheriting
+any operation authority. The Executive, Worker
 and Reviewer of [EXECUTIVE_BASELINE](EXECUTIVE_BASELINE.md) are roles, and roles
 are relations over steps in which no role name confers an operation
 ([ACTIVATION §1](ACTIVATION.md#roles-and-delegation)); the actor, the
@@ -115,7 +117,7 @@ Each commitment in the premise column carries its standing from
 |---|---|---|---|---|
 | P3 (independent), P4a (independent), P0 (recovered); I2 | By P3 identity is declared, so each bounded state is a node over explicit typed assets with a declared identity, never one hidden workspace object (I2); by P4a steps compose only through declared result types and domains, so each admissible transition is a vector that declares its required upstream assets, target, evaluators and gates, and output contract; by P0 an actor holds only what it acquired in a bounded step, so the work is a traversal that takes one admissible vector at a time until the selected target closes | [§5](#5-graph-model), with [Nodes](#nodes), [Vectors](#vectors) and [Traversal](#traversal); [§11.1](#111-typed-assets-and-nodes-are-explicit) | the graph as the product's process model and traversal as its workflow, and `asset_surface` as the declaration of a produced or consumed boundary: this member; which nodes, vectors and assets a product declares: the product | 5, 2, 3 |
 | P0 (recovered), P6 (independent); I3; F2 (imported) | within one bounded step the worker's internal path is its own and the traversal contract is its admissible external space; the worker cannot close the edge, emit runtime events, mutate ledgers or decide re-entry, because its output is a candidate until evaluated and its report is an observation, not authority | [§5 Probabilistic compute](#probabilistic-compute); A5 in [§11.5D](#115d-constructive-evaluation-and-yield-loop) | one vector or edge traversal as the bounded step, declared as a binding in §5 Probabilistic compute: this member | 5, 8, 9 |
-| P1 (independent), P3 (independent); F9 (imported), F11 (imported) | By P1 equal spelling fixes no meaning and by P3 identity is declared, so this profile's traversal and its F_D, F_P and F_H shorthands are concepts of its own bounded context and not the `a_c` traversal record or functor kinds by equal spelling (F9); F_P and F_H relate to the source concepts of SPEC_METHOD §5 only through declared specialisations that state direction, preserved meaning, narrowed scope and invalidation (F11) | this member's lead; [§1](#1-position), the bounded-context paragraph; [§5 Probabilistic compute](#probabilistic-compute) | the bounded context and the F_P and F_H specialisations: this member, under PROFILES §1 | 5, 6 |
+| P1 (independent), P3 (independent); F9 (imported), F11 (imported) | By P1 equal spelling fixes no meaning and by P3 identity is declared, so this profile's traversal and its F_P and F_H shorthands are concepts of its own bounded context and not the `a_c` traversal record or functor kinds by equal spelling (F9); common F_D is imported by exact edition with total-domain evidence and separate operation authority, while F_P and F_H relate to the source concepts of SPEC_METHOD §5 only through declared specialisations that state direction, preserved meaning, narrowed scope and invalidation (F11) | this member's lead; [§1](#1-position), the bounded-context paragraph; [§5 Probabilistic compute](#probabilistic-compute) | the bounded context, F_P and F_H specialisations, and F_D import with operation bindings: this member, under PROFILES §1; the F_D definition remains AXIOMATIC_CALCULUS §5 | 5, 6 |
 | P4a (independent), P4b (derived from P0 and P2); F2 (imported) | By P4a a step composes only through its declared contract, so a graph function realises an outer vector, which stays the callable contract; by P4b a later step needs step-produced facts recorded, so where the function refines that vector into inner steps the inner boundaries are published and a later step reads earlier outputs only through its declared environment; and F2 makes the loop govern each published inner boundary as it governs the outer one | [§5 Graph functions](#graph-functions); [§11.4](#114-the-gtl-module-is-the-operative-publication-surface), second paragraph; [§11.8](#118-cumulative-environment-law-is-mandatory); A14 in [§11.5D](#115d-constructive-evaluation-and-yield-loop) | the cumulative carried environment as the specialised contract for carrying earlier outputs, with its three declarations at "should": this member | 5, 3, 4 |
 | P0 (recovered), P3 (independent), P6 (independent) | every operative constructive step has a named, typed and published carrier that a later actor and the runtime can re-acquire, because a later actor holds declared sources and not another actor's private memory, and no undeclared surface carries authority; no operative step, callable surface or capability stays only in prose, prompt memory, an orchestration loop or a service method, and a caller binds to the published outer carrier, never to a hidden inner vector | [§11.2](#112-graph-functions-are-the-primary-constructive-carrier); [§11.3](#113-the-function-catalogue-is-published); [§11.4](#114-the-gtl-module-is-the-operative-publication-surface), first paragraph; [§8](#8-responsibility-layers-and-local-binding), last paragraph | `GraphFunction` as the carrier; a machine-readable function catalogue whose retained functions should expose at minimum name, inputs, outputs, intent and public or helper role; the GTL module as the publication surface: this member; which functions, graphs and catalogue entries a product publishes: the product | 5, 4, 1 |
 | P0 (recovered), P6 (independent); I3 | imperative code transports or persists facts and decides nothing that the declared carrier owns: domain meaning, semantic target movement, step selection, closure, lineage and constructive workflow truth, because what is decided only in imperative code is decided by no declared owner | [§11.2A](#112a-outcome-first-realisation-order); [§14](#14-dogfooding-rule) | the order outcome traversal, declarative carrier, minimal adapter code, with the outcome traversal's declarations; building the product's own framework behaviour through its graph functions: this member | 5, 4 |
@@ -318,28 +320,34 @@ boundary does not constrain remains worker-internal HOW: hidden LLM
 reasoning, heuristic search, domain implementation strategy, tool-local
 execution detail and product-specific business choice (P0, P6).
 
-Three shorthands name the graph and runtime classifications of work inside
-one traversal. They are concepts of this bounded context; the a_c functor
-kinds of AXIOMATIC_CALCULUS §5 are different concepts and are not imported
-by spelling (P1, P3):
+The classifications of work inside one traversal bind two profile
+specialisations and one common import. Equal spelling alone establishes
+none of those relations (P1, P3):
 
 - `F_P` (`urn:stdo:concept:graph-native-odd:f-p`) is the shorthand for the
   bounded probabilistic worker turn. It specialises substrate-neutral
   lawful probabilistic processing: it keeps bounded non-human construction
   under declared policy and narrows that meaning to one graph traversal
   contract.
-- `F_D` (`urn:stdo:concept:graph-native-odd:f-d`) is the shorthand for
-  deterministic evaluation or proof over declared properties of the
-  traversal. F_D may optimise or validate a domain-local path where the
-  domain can make part of the work precise; it does not move domain HOW
-  into GTL, ABG or the framework.
+- `F_D` imports `urn:stdo:concept:axiomatic-calculus:f-d` from
+  [AXIOMATIC_CALCULUS §5](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds)
+  in the exact complete STDO release selected by the application, including
+  its immutable calculus edition. It adds the graph traversal's operation
+  contract, scope and authority, not another definition of the kind.
+  Existing evaluation and proof operations retain the unchanged-subject
+  evaluation profile; admission and construction operations retain their
+  own evidence contracts and grants. Use of the common kind is conditional
+  on the total-domain eligibility assessment in
+  [RELEASE §9](RELEASE.md#deterministic-kind-migration). Domain-local
+  optimization or validation moves no domain HOW into GTL, ABG or the
+  framework and grants no broader consequences.
 - `F_H` (`urn:stdo:concept:graph-native-odd:f-h`) is the shorthand for
   explicit human adjudication invoked under the traversal's declared
   authority and ambiguity policy. It specialises the substrate-neutral
   human-adjudication concept and grants a human no ambient traversal,
   semantic or closure authority.
 
-These are the two declared bindings that PROFILES §1 requires. The F_P
+F_P and F_H are the two declared specialisations that PROFILES §1 requires. The F_P
 specialisation runs from
 `urn:stdo:concept:ambiguity-governance:lawful-probabilistic-processing` to
 `urn:stdo:concept:graph-native-odd:f-p`; the F_H specialisation runs from
@@ -359,6 +367,17 @@ provenance carrier. A change to either concept or context, to the basis,
 to the scope, to the preserved or narrowed meaning or to the control
 contract invalidates the affected specialisation until it is evaluated
 again (P1, P3, P6).
+
+The F_D import runs from the common concept to its use under this profile,
+preserves the common total deterministic contract, and narrows each use to
+its declared ODD operation. Its source and target basis is the exact
+selected complete release; a change to that edition, traversal contract,
+material dependency, termination evidence or authority invalidates the
+affected eligibility claim. The former
+`urn:stdo:concept:graph-native-odd:f-d` remains a historical concept on its
+legacy edition. It is not an unconditional alias: only the explicit
+[migration mapping](RELEASE.md#deterministic-kind-migration) licenses a
+successor use, preserving the original evidence, permissions and results.
 
 The profile governs the traversal contract, its evidence, its provenance
 and its control truth. It does not make the framework the executor of the
@@ -1060,10 +1079,15 @@ the admitted `EdgeClosureDecision`. A module that lets one of these
 functions exercise another's authority creates a rival control surface
 and violates A0 (P6).
 
-A5 F_P freedom, F_D authority. F_P may inspect, discover, reason, draft,
+A5 Bounded construction and declared authority. F_P may inspect, discover, reason, draft,
 transform and propose within the bounded action. F_P must not close the
-edge, emit runtime events, mutate ledgers or decide re-entry. F_D, ABG and
-product admission own durable evidence and closure truth (P0, P6). An F_P
+edge, emit runtime events, mutate ledgers or decide re-entry. Durable
+evidence and closure truth are established by the declared evaluation,
+ABG and Product admission and closure operations under their respective
+contracts and grants. Each operation names its authority, admissible evidence
+and permitted consequences; its use of the common F_D regime requires the
+total deterministic contract. F_D classification grants no assessment,
+runtime admission, ledger-writing or closure authority (P0, P6). An F_P
 worker must not be given an F_D-authored semantic extraction recipe when
 the edge requires F_P judgment (P0, P6).
 
@@ -1448,8 +1472,11 @@ the general constitutional process and [TICKETS](TICKETS.md) governs
 artifact admission; this section names the ODD specialisation and composes
 that law without declaring it again (P6, P0).
 
-Conformance has two halves: an F_P proof that the process can be followed,
-and an F_D gate that admits the produced artifacts (P6).
+Conformance has two halves: an F_P walkthrough supplying evidence that the
+process can be followed, and a declared admission gate assessing the produced
+artifacts under its evidence contract and grant. A gate claiming F_D also
+establishes the common kind's eligibility under §5; its kind is no authority
+to admit (P6).
 
 The walkthrough is the conformance proof. §11.7 requires automation to
 stay true for a manual walkthrough; its agentic form is a conformance test
@@ -1512,7 +1539,10 @@ enforced by its constructor (§11.1) (P6, P3).
 
 This keeps the F_P and F_D split at the method layer. The agentic coder is
 F_P: it reasons, drafts and proposes within the declared packet. Admission
-is F_D: it decides whether the produced artifact conforms. The walkthrough
+uses F_D only when the §5 total-domain contract is established, and its own
+contract and authority determine what artifact-conformance decision it may
+make. An unresolved eligibility assessment stays open under the migration
+relation; an unchanged-subject evaluator still preserves that subject. The walkthrough
 establishes that the process can be followed; admission establishes that
 each act of following it conforms (P6, P0).
 

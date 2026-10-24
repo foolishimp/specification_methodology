@@ -1,24 +1,41 @@
-# STDO v3.0.0 RC1 local trial
+# STDO 3.0.1 candidate
 
-This package is an isolated, test-only RC1 build. Its release identity is
-`v3.0.0-rc.1` in a private local Git source. It is prepared to exercise local
-check-in, annotated release refs, guarded atomic publication to a local bare
-remote, native installation in a dedicated test store, and a fresh test
-consumer's schema, bootstrap and source routes. Passing receipts for those
-operations are recorded outside this package after execution.
+The first target cut is `3.0.1-rc.1`. This candidate evolves published native
+`3.0.0-rc.1`, commit `0a04feb788c080183b58cf4a162e88372be1d87e`, manifest
+`069285ad5a79d59ca2dd835e34a54b3e537b0eeef99c29994b18c339dbe62232`.
+That predecessor is a prerelease; no accepted final 3.0.0 identity is implied.
+These are release-scoped candidate statements, not an acceptance receipt.
 
-The trial covers the standalone method documents and distributed `spec` plugin
+The candidate covers the standalone method documents and distributed `spec` plugin
 payload. Start with the [method entry](../standards/README.md),
 [templates](../standards/templates/README.md) and
 [plugin guidance](../plugins/spec/references/GETTING_STARTED.md).
 The [licence](../LICENSE) applies to the package.
 
-The source candidate remains `not_ready`: owner acceptance is `not_given`,
-covering independent source review is `unassigned`, and actual-use qualification
-on repaired source is unperformed in the frozen source record. This trial
-supplies no whole-method semantic qualification, Product acceptance, public
-STDO stack release, global plugin activation or existing-consumer adoption.
+The substantive amendment makes [F_D](../standards/AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds)
+total deterministic processing, with separate operation permissions and
+unchanged-subject evaluation profiles. ODD imports that common kind by exact
+edition while preserving its operation and runtime authority contracts.
+Supporting clarification concerns continuation-sensitive sufficiency,
+qualified references, structural laws versus consumer adequacy and optional
+information-equivalent comparison. Native [finite examples](../standards/examples/DETERMINISTIC_CONTRACTS.md)
+state the positive and negative oracles, including predicate-specific exhaustion.
 
-A separately prepared a_c representation is outside this trial payload. It
-remains bound to its original source checkpoint; it is neither rebased to this
-RC1 identity nor selected as an installed dependency by this trial.
+Version assessment: the requested patch-shaped target broadens purposes and
+strengthens totality, dependency and evidence requirements. It is not
+automatically patch-compatible. Each existing operation follows the
+[three-way migration relation](../standards/RELEASE.md#deterministic-kind-migration);
+unknown eligibility stays pending. Immutable consumers keep their selected
+meanings and permissions, and no automatic adoption follows.
+
+Whole-method semantic qualification, inherited acceptance obligations,
+covering independent assessment, actual-use evidence and exact-cut human
+acceptance retain their separate gates. Construction checks alone establish
+none of them. Publication or test-release qualification cannot silently
+raise those claims, change the v2 matched cohort or activate a plugin globally.
+
+A source-matched supplemental a_c/Graphify representation is prepared and
+assessed separately from this native payload. Historical representations keep
+their own source identities. Its source binding and publication evidence
+must name this candidate's exact frozen cut before a matching claim is made;
+it is not selected as an installed dependency by this payload.

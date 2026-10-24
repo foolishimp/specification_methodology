@@ -700,6 +700,16 @@ arrow equality, associativity, the representation in a_c and the supporting
 evidence: a categorical statement is useful only where its constructions
 preserve meaning, and these are what preservation must show (P1, P6).
 
+A claim of semantic preservation or adequacy names the consumer observations
+and required distinctions and demonstrates their preservation. Category and
+functor laws establish their stated structural claim; they do not alone
+establish that the chosen interpretation or projection is sufficient for
+the intended use. A background lemma applies only after its source and
+target objects, arrows, equality and actual maps are bound to the subject.
+The [finite qualified-record example](examples/DETERMINISTIC_CONTRACTS.md#finite-maps-and-consumer-adequacy)
+shows the difference without establishing H1 or replacing the applicable
+a_c representation obligation above (P1, P6).
+
 Formal fragment, hypothesis H1, categorical structure: with 𝒜 the free category on typed primitives, ℐ the selected
 carrier sets with total functions and 𝒞_H pairs of functions with additive
 costs, S: 𝒜 → ℐ and R_H: 𝒜 → 𝒞_H would be
@@ -1213,6 +1223,36 @@ predicate on the image of π; it establishes neither an executable decision
 procedure nor its cost. Unknown effects and unavailable observations
 retain their distinctions from falsehood and from an evaluation that was
 not performed (Results) (P3, P1, P5, P6).
+
+Where a representation is claimed sufficient for subsequent decisions,
+identify the consumer-required observations and readouts and material
+applicability conditions, directly or by reference to the consuming contract.
+Identify input and policy scope and horizon where the claim depends on them.
+Retain the standing, obligations, currentness and invalidation, causal
+producer and authority distinctions those consumers require. Two cases with
+the same representation but incompatible required decisions under those
+fixed conditions falsify the sufficiency claim. This requires no anticipation
+of all future uses (P1, P2, P6).
+
+When a chosen functional account claims decision preservation, define its
+functions and domain and demonstrate `delta = delta_hat o alpha`. When it
+claims transition preservation, also demonstrate
+`alpha(T(s,u)) ≈ T_hat(alpha(s),u)` and the declared readout preservation on
+that domain and horizon. Other frames preserve their consumer-required
+relational distinctions under the owning contracts; these equations impose
+no universal functional model or executable decision procedure. Mandatory
+authority and hold distinctions remain exact where their contracts require
+exactness. Approximation needs explicit latitude and a justified horizon
+bound; a one-step bound alone supplies no multi-step guarantee (P1, P4a, P6).
+
+The [one-assessment example](examples/DETERMINISTIC_CONTRACTS.md#continuation-sensitive-sufficiency)
+separates an unperformed assessment from a closed indeterminate assessment.
+Its four-state representation retains every modeled state distinction under
+fixed conditions Γ. It is a sufficiency witness with no state aggregation,
+not a proof of compression, minimal context or general task selection. A
+smallest or cheapest sufficient-material claim needs its own objective,
+scope and evidence; representation size and total operating cost are
+different quantities (P2, P6).
 
 ### Parallel derivation and mutual assurance
 

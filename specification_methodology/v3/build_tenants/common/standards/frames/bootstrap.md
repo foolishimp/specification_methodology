@@ -6,7 +6,7 @@ Purpose: The owning sections for the method's canonical statement; the product l
 
 Binds:
 
-- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=9928b0bd70065b299d17ea767be46bc7ead5d749bb08940a7a9acc5ea7e008b0; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 a link to the owning section, the digest of its member and the digest of that
@@ -48,9 +48,9 @@ Routes, in order:
 14. [REFERENCE_FRAME.md#foundation-to-law](../REFERENCE_FRAME.md#foundation-to-law)
 15. [SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding](../SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding)
 
-Size of this frame: 83085 bytes.
+Size of this frame: 84444 bytes.
 
-Source: SPEC_METHOD.md#canonical-statement sha256=c7b83b2b7e8c9a301d2e535fc3752c08f718d9fc679e32f8a91c15c285976e8e
+Source: SPEC_METHOD.md#canonical-statement sha256=8fed1d4e7e7f2748b0b3a573d0571d7f753dd13948a2757c49c3505a0cdea950
 
 ### Canonical statement
 
@@ -95,7 +95,7 @@ cost and forcing close review; they are not authority layers and cannot hide
 drift (§4).
 
 
-Source: FOUNDATIONS.md#product-lineage-objects sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545
+Source: FOUNDATIONS.md#product-lineage-objects sha256=6fc3127e2a64272ac41afa0f14246daaecb2ddfa8dd391b1df4cd2fc05b25474
 
 ### Product lineage objects
 
@@ -324,7 +324,7 @@ source may author a future cut; it must not silently govern a consumer
 (P6, P3).
 
 
-Source: FOUNDATIONS.md#authority-kinds sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545
+Source: FOUNDATIONS.md#authority-kinds sha256=6fc3127e2a64272ac41afa0f14246daaecb2ddfa8dd391b1df4cd2fc05b25474
 
 ### Authority kinds
 
@@ -391,7 +391,7 @@ so one list keeps the answer the same in every member, and a capability,
 a label or a passing check can never be read as a permission (P6).
 
 
-Source: FOUNDATIONS.md#the-frame-tuple sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545
+Source: FOUNDATIONS.md#the-frame-tuple sha256=6fc3127e2a64272ac41afa0f14246daaecb2ddfa8dd391b1df4cd2fc05b25474
 
 ### The frame tuple
 
@@ -490,7 +490,7 @@ navigation or diagnostics; they do not substitute for the declared identity
 and basis (P3).
 
 
-Source: ACTIVATION.md#intake sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf
+Source: ACTIVATION.md#intake sha256=9928b0bd70065b299d17ea767be46bc7ead5d749bb08940a7a9acc5ea7e008b0
 
 ### Intake
 
@@ -531,7 +531,7 @@ this section consumes those laws and creates no second design package
 ([DESIGN_MODULE](../DESIGN_MODULE.md)).
 
 
-Source: ACTIVATION.md#admission sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf
+Source: ACTIVATION.md#admission sha256=9928b0bd70065b299d17ea767be46bc7ead5d749bb08940a7a9acc5ea7e008b0
 
 ### Admission
 
@@ -571,9 +571,30 @@ The selection of the carrier (ticket, sprint entry, run-scoped contract)
 is owned by [TICKETS §5](../TICKETS.md#5-from-carrier-to-execution).
 
 
-Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=7ad7b69b5ad8ec20678b3ef866a26fb328f2fa6f60c4d1d06ca0b926845b89bf
+Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=9928b0bd70065b299d17ea767be46bc7ead5d749bb08940a7a9acc5ea7e008b0
 
 ## 2. Context construction under an envelope
+
+Qualified-reference guidance. Under
+[AC-003](../AXIOMATIC_CALCULUS.md#ac-003-reference-closure) and
+[AC-011](../AXIOMATIC_CALCULUS.md#ac-011-projection), a reference can supply
+sufficient context when its accessible target and qualifications preserve
+the consuming contract. Check the required subject and basis, assessment
+standing, provenance, active obligation and version, and invalidators, rather
+than candidate identity alone. A typed annotation supplies no evidence of
+sufficiency by itself. Preserve the required body or a qualified resolvable
+reference; no mandatory carrier or registry follows (P1, P3, P6).
+
+An exact local reference to a complete assessed record can preserve the
+consumer-required distinctions. A candidate-only pointer can lose them when
+unchanged candidate bytes have satisfied and indeterminate assessments that
+require different continuations. Hash matching states its collision and
+access assumptions. Unknown semantic relations retain their owning gap or
+result; they do not all become one error class. A declared but unperformed
+evaluation has no assessment result; an undeclared required capability is
+a different condition. The [qualified-reference example](../examples/DETERMINISTIC_CONTRACTS.md#qualified-references)
+applies the sufficiency law owned by
+[FOUNDATIONS §4](../FOUNDATIONS.md#assertions-and-observation).
 
 Given a seed set Z (the subject, outcome and affected relations named in the
 intake), a relation family R (the dependency relations whose change can
@@ -798,7 +819,7 @@ relation is whether a decision rests on a surface whose sources are not
 those of the selected basis. This rule applies to derived surfaces under every selected carrier.
 
 
-Source: FOUNDATIONS.md#results sha256=3e85b8d01360dfae6758566fd3aca309c977e7d9e15cdd2f9e8f2904f18f2545 rows=0/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
+Source: FOUNDATIONS.md#results sha256=6fc3127e2a64272ac41afa0f14246daaecb2ddfa8dd391b1df4cd2fc05b25474 rows=0/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -1061,7 +1082,7 @@ global context, universal completeness or domain authority inferred from
 adopting the member.
 
 
-Source: SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding sha256=c7b83b2b7e8c9a301d2e535fc3752c08f718d9fc679e32f8a91c15c285976e8e rows=1/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
+Source: SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding sha256=8fed1d4e7e7f2748b0b3a573d0571d7f753dd13948a2757c49c3505a0cdea950 rows=1/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
 
 ### Foundation to law: chain, outcome and build-tenant binding
 

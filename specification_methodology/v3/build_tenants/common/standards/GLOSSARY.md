@@ -290,9 +290,11 @@ Context declared by
 
 ## 14. Graph-native ODD
 
-Context declared by [ODD §1](ODD.md#1-position) (P3). `F_D`, `F_P` and
-`F_H` are also indexed in the axiomatic-calculus context in §4; the two
-rows create no identity between the contexts (P1).
+Context declared by [ODD §1](ODD.md#1-position) (P3). `F_P` and `F_H`
+are also indexed in the axiomatic-calculus context in §4; equal spelling
+creates no identity between those concepts. F_D imports the common concept
+through the exact-edition relation in ODD §5; the historical ODD concept
+keeps its legacy basis and requires an explicit migration (P1, P3).
 
 | Indexed term | Bounded-context identity | Owning concept clause | Relation clause |
 |---|---|---|---|
@@ -301,7 +303,7 @@ rows create no identity between the contexts (P1).
 | `ABG` | `urn:stdo:bounded-context:graph-native-odd` | [`ODD.md#1-position`](ODD.md#1-position) | [`ODD.md#abg`](ODD.md#abg) |
 | `Edge Traversal`; `Traversal` | `urn:stdo:bounded-context:graph-native-odd` | [`ODD.md#traversal`](ODD.md#traversal) | none |
 | `Probabilistic Compute` | `urn:stdo:bounded-context:graph-native-odd` | [`ODD.md#probabilistic-compute`](ODD.md#probabilistic-compute) | none |
-| `F_D` | `urn:stdo:bounded-context:graph-native-odd` | [`ODD.md#probabilistic-compute`](ODD.md#probabilistic-compute) | none |
+| `F_D` (imported use) | `urn:stdo:bounded-context:axiomatic-calculus` | [`AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds`](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds) | [`ODD.md#probabilistic-compute`](ODD.md#probabilistic-compute) |
 | `F_P` | `urn:stdo:bounded-context:graph-native-odd` | [`ODD.md#probabilistic-compute`](ODD.md#probabilistic-compute) | [`SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle`](SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle) |
 | `F_H` | `urn:stdo:bounded-context:graph-native-odd` | [`ODD.md#probabilistic-compute`](ODD.md#probabilistic-compute) | [`SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle`](SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle) |
 | closure decision: `close`; `yield`; `retry(defeated)`; `retry(undecided)`; `repair(implementation)`; `repair(proof)`; `re-enter(undeclared)`; `re-enter(basis)`; `reprice`; `block(undeclared)`; `block(basis)` | `urn:stdo:bounded-context:graph-native-odd` | [`ODD.md#115d-constructive-evaluation-and-yield-loop`](ODD.md#115d-constructive-evaluation-and-yield-loop) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |

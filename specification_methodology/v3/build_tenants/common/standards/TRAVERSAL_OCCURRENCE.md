@@ -1079,6 +1079,14 @@ repetition (P5, P4b).
 `F_H` from `b_ac` and no other functor kind. The profile changes none of
 their laws, which are AXIOMATIC_CALCULUS §5 (P3, P6).
 
+`b_ac` selects an immutable calculus edition, not the latest meaning of a
+stable concept URN. A successor occurrence that claims common `F_D` requires
+that edition's total-domain eligibility and its separate operation profile;
+legacy occurrences keep their exact basis and evidence. The three-way
+[migration relation](RELEASE.md#deterministic-kind-migration) governs a changed
+claim. An occurrence record or an effect proposal establishes no physical
+completion or new effect authority.
+
 ## Occurrence identity
 
 One occurrence identity binds only facts available before that occurrence

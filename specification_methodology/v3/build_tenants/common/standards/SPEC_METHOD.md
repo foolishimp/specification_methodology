@@ -1797,6 +1797,13 @@ Terms used in this section:
   relay, record, measure or decide, together with the authority that kind
   of operation requires.
 
+The common deterministic functor kind is a separate coordinate owned by
+[AXIOMATIC_CALCULUS §5](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds).
+A binding that claims it establishes its total-domain contract while
+retaining the operation's subject, evidence and effect permissions. Human,
+machine and mixed bindings preserve these same distinctions; no runtime,
+event log or annotation carrier follows from the classification.
+
 Rules:
 
 1. Realisations of one WHAT. One WHAT is realised by one or more

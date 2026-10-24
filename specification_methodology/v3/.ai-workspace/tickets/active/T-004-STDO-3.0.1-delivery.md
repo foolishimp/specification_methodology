@@ -36,4 +36,24 @@ Do not alter the original worktree, historical frozen records, other tenant cand
 
 ## Current state
 
-Setup complete: isolated branch, exact RC1 payload and prior frame/package tooling acquired. See `../../work/STDO301_DELIVERY/activation.json`. Source construction, representation generation, qualification and acceptance are outstanding.
+Setup acquired the isolated branch, exact RC1 payload and prior frame/package tooling. See `../../work/STDO301_DELIVERY/activation.json`. The source return below records the next completed construction step; representation generation, qualification and acceptance remain outstanding.
+
+### Source Writer return
+
+The bounded source Writer returns a first `candidate_ready` source for
+independent assessment: P301-01–06 are realized in common owners, affected
+consumers, common WHAT and native derived frames. The Definition's preexisting
+missing common design binding was repaired through the Executive's extended
+grant, using `build_tenants/common-design/` outside the installed payload;
+exact-builder status now verifies. No builder, old consumer or peer basis
+was adopted or changed.
+
+The native inventory is 83 files, SHA256
+`f48b43e462a8030395387b47ba230860590ec20c5f040298a24618bddcf06283`, at
+`../../work/STDO301_DELIVERY/source/NATIVE_INVENTORY.json`. Finite examples,
+frame regeneration/check, package verification (5,934 local references,
+zero failures) and whitespace checks pass. These are bounded author evidence.
+Consumer dispositions and the cached-expertise note's triage are retained in
+`../../work/STDO301_DELIVERY/source/`. The exact source return preserves
+pending independent semantic review, whole-method/inherited obligations,
+source-matched representation, actual-use qualification and owner acceptance.

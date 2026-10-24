@@ -211,6 +211,25 @@ not a claim that those cases ran or passed. A selected case without a
 current assessment remains a planned evaluation without a closed result,
 as FOUNDATIONS §4 requires.
 
+### Deterministic kind and continuation discriminators
+
+These cases apply when the corresponding kind, migration or sufficiency
+claim is made. Their contracts, complete finite oracles and executable
+model checks are in [Deterministic contracts](examples/DETERMINISTIC_CONTRACTS.md).
+The source obligations retain their owners. A coverage row records no
+execution, independent assessment, adoption or acceptance by itself.
+
+| Case | Required distinction | Source owner |
+|---|---|---|
+| D301-01 | The three-value constructor qualifies on its finite domain, yet its construction-only grant supports no assessment, admission or closure claim. ODD retains the actual operations, evidence and grants. | AXIOMATIC_CALCULUS §5; ODD §11.5D A4a–A8 |
+| D301-02 | An unchanged-subject sortedness evaluator returns the first inversion witness and can persist it only under its separate log grant. In-place sort followed by “original passed” violates that profile. The same permission applies to manual and mixed evaluation. | AXIOMATIC_CALCULUS §5 evaluation-operation profile; EVALUATION §2 |
+| D301-03 | The six logical put_A cells determine modeled next state and request/refusal; the decision does not establish a physical effect's completion. | AXIOMATIC_CALCULUS §5; ACTIVATION §3 Effects |
+| D301-04 | Copy exhaustion gives no candidate and falsified availability; assessment exhaustion supplies an indeterminate property report with satisfied report availability; setup exhaustion before invocation supplies no assessment result. Signature and traversal stops retain each predicate and core value. | AXIOMATIC_CALCULUS §5; ACTIVATION §3 Construction availability |
+| D301-05 | Under fixed Γ, U and I share “no satisfied assessment” but require different first-assessment decisions. Four retained states preserve all modeled transitions/readouts without proving compression or general context selection. | FOUNDATIONS §4 Observation sufficiency; ACTIVATION §7 |
+| D301-06 | A qualified accessible reference preserves the complete assessed record and its consumer readout; a candidate-only pointer merges S/I and fails that claim. No typed carrier is mandatory. | ACTIVATION §2; AC-003 and AC-011 |
+| D301-07 | Finite j=h∘view preserves the stated readout. The constant projection cannot factor j even though a terminal-category map can preserve structural laws. A full categorical claim still carries its applicable a_c representation; H1 remains unresolved. | FOUNDATIONS §4 Formal fragment; EVALUATION §6; discriminator 51 |
+| D301-08 | A legacy evaluator's unchanged-subject guarantee survives; hidden dependencies or missing termination proof prevent automatic common-F_D qualification. New bounded contracts retain separate identities/exhaustion evidence. Unresolved uses keep their exact legacy basis and an open successor obligation. | RELEASE §9 Deterministic-kind migration; ODD §5; discriminator 22 |
+
 ### Universal-construction and assurance discriminators
 
 The following nine construction cases and twelve assurance cases state
