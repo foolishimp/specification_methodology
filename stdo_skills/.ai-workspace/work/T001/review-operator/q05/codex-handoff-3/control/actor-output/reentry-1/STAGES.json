@@ -1,0 +1,48 @@
+{
+  "prior": {
+    "engine": "workspace-regular-file",
+    "object": null,
+    "path": "PRIOR.json",
+    "root": "phase",
+    "selector": null,
+    "sha256": "a78e13be6d998b2a8023cbca074376b713366d616b338847df40f47c00a44811"
+  },
+  "roles": {
+    "reviewer": {
+      "claim": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "roles/CLAIM.json",
+        "root": "control",
+        "selector": null,
+        "sha256": "a31fa1c00cf19183cb92cb05339db6a4e0b51afb1d47b3c362ced081199c4cb3"
+      },
+      "consumer": "urn:stdo-skills:T001:q05:codex:handoff:3:executive",
+      "context": {
+        "id": "sha256:507675ed5ecc414733bcde31f88b162496fc1361de9d8a935d037c9f4c0f6c39",
+        "sha256": "507675ed5ecc414733bcde31f88b162496fc1361de9d8a935d037c9f4c0f6c39"
+      },
+      "executor_id": "reviewer",
+      "grant_id": "urn:stdo-skills:T001:q05:codex:handoff:3:dispatch-reviewer",
+      "note": "Actual Executive must preflight and dispatch; operator has not done either.",
+      "observations": [
+        {
+          "id": "sha256:3977672b76a9a3891b42edb01a58f29e22c18d2ce9cf478d3f64e892bf3fe437",
+          "sha256": "3977672b76a9a3891b42edb01a58f29e22c18d2ce9cf478d3f64e892bf3fe437"
+        }
+      ],
+      "result_key": "urn:stdo-skills:T001:q05:codex:handoff:3:reviewer:stage1:reentry1",
+      "return_contract": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "roles/reviewer-RETURN-CONTRACT.json",
+        "root": "phase",
+        "selector": null,
+        "sha256": "6d2b086a2c92911e7d834ccfce89493d1b9604952a4bd339e3f2c9f97923abff"
+      }
+    }
+  },
+  "scope": "No candidate-review yet; consume actual partial results and stop for real expectation binding.",
+  "stage": "source-only-correction",
+  "worker_rerun": false
+}

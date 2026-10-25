@@ -1,0 +1,36 @@
+{
+  "acquisition": {
+    "blob": "0048d3116f7983e4e7f96ce972eae21b10eb8f54",
+    "configuration_scope": "registered repository plus explicit isolated environment/read-only overrides; no hooks/filters/checkout/lazy fetch",
+    "git_executable": {
+      "path": "/usr/bin/git",
+      "sha256": "5b1ddb7e9c11b87a034fc88b212e8ac243cfe2b4db696d767aa44c79595fc09a"
+    },
+    "mode": "100644",
+    "object": "fe4941f56a52ed3697a2b516d8d68948b0ea65d9"
+  },
+  "content": "- `F_D` classifies total deterministic processing under an exact traversal\n  contract. An application declares `f_B:D_B->Outcome_B`, its closed logical\n  domain, exact basis, all material computational state and dependencies,\n  and its termination argument. For every domain input it terminates with\n  exactly one declared outcome. Closed domains may be infinite when\n  termination and outcome determination are established. Open-world\n  semantic choice and undeclared clock, filesystem or global dependencies\n  are outside this contract (P3, P4a, P6).\n\n  Here B is the exact basis of v, D_B is its declared logical input domain\n  X_v (including material state and resource inputs), and Outcome_B is the\n  declared result-or-stop domain Y_v | Omega_v. The function f_B determines\n  one such outcome, including a stop with its closed report where declared;\n  that report and its stop are not two outcomes. An enclosing step's output\n  availability remains a separate predicate.\n\n  State-dependent processing declares input state and the meaning of its\n  returned next state and value. Refusal and exhaustion retain their cause\n  and evaluated predicate. The signature and traversal bind each stop to\n  exactly one core value, never satisfied; an exhausted tag alone supplies\n  no mapping. Construction availability and assessment retain their\n  separate predicates and results, and an unperformed assessment has no\n  result. A fuel-bounded operation is distinct from the potentially\n  divergent operation it bounds. A deterministic decision or effect proposal\n  establishes no physical completion, runtime admission, permission or\n  quality (P5, P6; [ACTIVATION \u00a73](ACTIVATION.md#3-step-results-and-disposition)).\n- `F_P` classifies bounded probabilistic interpretation, construction or\n  proposal under an exact traversal contract. Its result has no semantic,\n  admission, acceptance or closure authority merely because it is useful\n  or repeatable (P6, P0; instance premise (iii) of \u00a71 Foundation to law).\n- `F_H` classifies explicit human adjudication under an exact identity,\n  authority grant, subject, basis and decision contract. Human presence\n  grants no ambient authority (P6).\n\nThe actor, the executor, the domain operation and the functor kind are\ndifferent coordinates. `Encode`, `Interpret`, `Serialize`, `Measure` and\nother named domain operations are not aliases for `F_D`, `F_P` or `F_H`.\nDifferent traversals may share one functor kind without sharing identity,\nsemantics, inputs, outputs, authority or evidence (P3, P6).\n\nClassifying an operation as F_D grants no semantic, evaluation, operation\nor decision authority. This is the kind-specific application of\n[AC-005](#ac-005-authority-conservation) and\n[FOUNDATIONS Authority kinds](FOUNDATIONS.md#authority-kinds): the exact\noperation contract and admitted grant determine its permissions and\nconsequences. Consumers apply this boundary to their own operations.\n\nEvaluation-operation profile. An operation declared to evaluate an unchanged\nsubject identifies that subject, admissible reads, witness or log outputs,\npermitted writes, stops and results, authority and invalidation conditions.\nIt preserves the judged subject and does not perform the domain construction\nit judges. Separately authorized persistence of a witness does not perform\nthe judged domain construction. A construction or mutation needs its own\noperation contract and grant; reporting a changed subject's property as the\noriginal subject's property violates this evaluation contract (P6, P3).\n\nClosedness concerns dependencies material to the computation, not complete\nworld knowledge. This kind's totality is stronger than total handling of\nconditions in [ACTIVATION \u00a74](ACTIVATION.md#4-totality-and-refinement).\nUnbounded work is not automatically `F_P` when a totality argument is missing.\nThe calculus does not classify every executable process as one of its kinds.\nA new non-total deterministic process is outside qualifying F_D. A route to\nan F_D claim is a separately identified bounded successor with its own\ndomain, outcomes, dependency closure and termination argument; a fuel bound\nis one possible construction. This proves nothing about the unbounded\noriginal. Other work remains governed by its selected operation and execution\nbasis without being asserted to be a qualifying a_c application.\nExisting operations enter this edition only through the evidence-sensitive\n[migration relation](RELEASE.md#deterministic-kind-migration). The\n[finite examples](examples/DETERMINISTIC_CONTRACTS.md) distinguish construction,\nassessment, proposed effects and three predicate-specific exhaustion cases.\n\n\"Functor kind\" is an `a_c` term for this traversal classification. It does\nnot by itself assert a category-theoretic functor. A model that claims\n",
+  "coordinates": {
+    "lines": [
+      985,
+      1058
+    ]
+  },
+  "encoding": "utf8",
+  "parent_sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5",
+  "selected_sha256": "8bcb3f243bd7e95443b7007a5e39f1a1d1b33fd28c18d4a505b0800001c89689",
+  "size_bytes": 4797,
+  "source": {
+    "engine": "immutable-git-blob",
+    "object": "fe4941f56a52ed3697a2b516d8d68948b0ea65d9",
+    "path": "specification_methodology/v3/standards/AXIOMATIC_CALCULUS.md",
+    "root": "native301",
+    "selector": {
+      "lines": [
+        985,
+        1058
+      ]
+    },
+    "sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5"
+  }
+}

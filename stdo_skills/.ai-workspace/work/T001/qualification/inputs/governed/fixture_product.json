@@ -1,0 +1,71 @@
+{
+  "$schema": "stdo://releases/v3.0.1-rc.1/standards/schemas/product-definition.schema.json",
+  "kind": "stdo.product-definition",
+  "product": {
+    "definition_id": "urn:stdo:product-definition:qualification-greeting",
+    "name": "Qualification Greeting Fixture",
+    "source_project": "./",
+    "bounded_context": {
+      "id": "urn:stdo-skills:qualification:greeting",
+      "definition": "./specification/PRODUCT.md#product-boundary"
+    }
+  },
+  "constitution": {
+    "stdo": {
+      "source": {
+        "repository": "https://github.com/foolishimp/specification_methodology.git"
+      },
+      "selector": "stdo://releases/v3.0.1-rc.1/",
+      "basis": {
+        "uri": "stdo://releases/v3.0.1-rc.1/",
+        "manifest_sha256": "60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8"
+      }
+    },
+    "additional_authorities": [
+      "./specification/INTENT.md",
+      "./specification/PRODUCT.md"
+    ],
+    "entrypoints": [
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/frames/bootstrap.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/SPEC_METHOD.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/REFERENCE_FRAME.md"
+      }
+    ],
+    "agent_bootstrap": {
+      "entrypoint": "#/constitution/entrypoints/0",
+      "targets": [
+        "./AGENTS.md",
+        "./CLAUDE.md"
+      ]
+    }
+  },
+  "local_constitution": {
+    "axioms": [],
+    "overrides": [],
+    "disambiguations": []
+  },
+  "reference_frame_bases": [],
+  "what": {
+    "intent": "./specification/INTENT.md",
+    "product": "./specification/PRODUCT.md",
+    "specification": [
+      "./specification/REQUIREMENT.md"
+    ]
+  },
+  "how": {
+    "common": [
+      "./design/DESIGN.md",
+      "./.qualification/OWNER.json"
+    ],
+    "build_tenants": []
+  },
+  "composition": []
+}

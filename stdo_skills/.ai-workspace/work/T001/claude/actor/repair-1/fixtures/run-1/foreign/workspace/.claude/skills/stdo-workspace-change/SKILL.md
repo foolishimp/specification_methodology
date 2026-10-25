@@ -1,0 +1,1 @@
+foreign same-name

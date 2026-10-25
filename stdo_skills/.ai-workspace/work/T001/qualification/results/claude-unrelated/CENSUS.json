@@ -1,0 +1,254 @@
+{
+  "schema": "stdo_skills.qualification-census/1",
+  "tenant": "claude",
+  "lane": "unrelated",
+  "original_workspace": "/private/tmp/stdo-skills-qualification-yfa1t8ik/claude-unrelated/workspace",
+  "original_control": "/private/tmp/stdo-skills-qualification-yfa1t8ik/claude-unrelated/control",
+  "custody": "Exact observations copied; absolute runtime policies are not rebased or advertised as portable executable grants",
+  "native_process": {
+    "ended_ns": 1792897109753209000,
+    "failure": null,
+    "input_bytes": 100,
+    "input_forwarded_bytes": 100,
+    "output_available": true,
+    "pid": 61276,
+    "returncode": 0,
+    "schema": "a_c.fd-support.actor-cli-observation/1",
+    "started_ns": 1792897096460830000,
+    "stderr_bytes": 0,
+    "stderr_eof": true,
+    "stdout_bytes": 7397,
+    "stdout_eof": true,
+    "termination_requests": [],
+    "unknowns": [
+      "descendant/process-tree end and external side effects",
+      "host/model active-context size",
+      "backend retries or unreported usage",
+      "semantic outcome and owner disposition"
+    ]
+  },
+  "declared_settings": {
+    "actual_models": "Retain all raw vendor model identifiers, including helper/classifier events",
+    "cost": "unknown",
+    "effort_default": "high",
+    "environment_passthrough": [
+      "CLAUDE_CODE_OAUTH_TOKEN"
+    ],
+    "fixture_case": "unrelated",
+    "host_context_bytes": "unknown",
+    "host_scope": "cooperative exact territory; scoped mkdir/read-compute/validation; artifact content through work.write",
+    "model_default": "fable",
+    "model_override": false,
+    "resolved_backend": "unobserved until actual run",
+    "retry_policy": "no automatic actor retry",
+    "selected_host": "Claude Code 2.1.306"
+  },
+  "actual_model_observations": [
+    {
+      "line": 1,
+      "event": "system",
+      "model": "claude-fable-5-1"
+    },
+    {
+      "line": 2,
+      "event": "assistant",
+      "model": "claude-fable-5-1"
+    },
+    {
+      "line": 4,
+      "event": "result.modelUsage",
+      "models": {
+        "claude-fable-5-1": {
+          "inputTokens": 2,
+          "outputTokens": 26,
+          "cacheReadInputTokens": 12789,
+          "cacheCreationInputTokens": 9098,
+          "webSearchRequests": 0,
+          "costUSD": 0.18647725,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 64000,
+          "thinkingTokens": 0,
+          "canonicalModel": "claude-fable-5-1",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      }
+    }
+  ],
+  "model_limit": "Absent native model observations stay unknown; configured aliases are not treated as resolved backend identities",
+  "usage_events": [
+    {
+      "line": 4,
+      "event": "result",
+      "reported_usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 9098,
+        "cache_read_input_tokens": 12789,
+        "output_tokens": 26,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 9098,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "global",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 26,
+            "cache_read_input_tokens": 12789,
+            "cache_creation_input_tokens": 9098,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 9098
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "reported_cost_usd": 0.18647725
+    }
+  ],
+  "usage_limit": "Exact native usage observations, no inferred monetary cost or hidden retry estimate",
+  "commands": [],
+  "completed_commands": 0,
+  "tool_failures": [],
+  "skill_acquisitions": [],
+  "final_messages": [
+    {
+      "line": 4,
+      "text": "The area is 7 cm \u00d7 4 cm = 28 square centimetres."
+    }
+  ],
+  "jsonl_parse_errors": [],
+  "public_operation_counts": {},
+  "public_operations": [],
+  "public_artifact_closure": {
+    "copied": 0,
+    "missing": [],
+    "digest_mismatches": []
+  },
+  "native_initialization": [
+    {
+      "line": 1,
+      "session_id": "11dfa59e-eb52-4c0b-b9ce-68915e4bf41d",
+      "tools": [
+        "Task",
+        "Bash",
+        "CronCreate",
+        "CronDelete",
+        "CronList",
+        "DesignSync",
+        "Edit",
+        "EnterWorktree",
+        "ExitWorktree",
+        "Glob",
+        "Grep",
+        "ListAgents",
+        "Monitor",
+        "NotebookEdit",
+        "PushNotification",
+        "Read",
+        "RemoteTrigger",
+        "ReportFindings",
+        "ScheduleWakeup",
+        "SendMessage",
+        "Skill",
+        "TaskStop",
+        "ToolSearch",
+        "WebFetch",
+        "WebSearch",
+        "Workflow",
+        "Write",
+        "mcp__stdo_ac__checks_evaluate",
+        "mcp__stdo_ac__context_assemble",
+        "mcp__stdo_ac__contract_preflight",
+        "mcp__stdo_ac__dispatch_cancel",
+        "mcp__stdo_ac__dispatch_observe",
+        "mcp__stdo_ac__dispatch_start",
+        "mcp__stdo_ac__events_wait",
+        "mcp__stdo_ac__evidence_read",
+        "mcp__stdo_ac__graph_project",
+        "mcp__stdo_ac__records_find",
+        "mcp__stdo_ac__records_read",
+        "mcp__stdo_ac__refresh_prepare",
+        "mcp__stdo_ac__relations_query",
+        "mcp__stdo_ac__resources_aggregate",
+        "mcp__stdo_ac__return_capture",
+        "mcp__stdo_ac__return_check",
+        "mcp__stdo_ac__review_prepare",
+        "mcp__stdo_ac__source_read",
+        "mcp__stdo_ac__tools_describe",
+        "mcp__stdo_ac__work_project",
+        "mcp__stdo_ac__work_write",
+        "mcp__stdo_ac__workspace_observe"
+      ],
+      "skills": [
+        "stdo-continuation",
+        "stdo-delegate-review",
+        "stdo-release-install",
+        "stdo-tool-operations",
+        "stdo-workspace-change",
+        "deep-research",
+        "spec:stdo-help",
+        "spec:stdo-review",
+        "spec:stdo-status",
+        "spec:stdo-ticket",
+        "spec:stdo-work",
+        "spec:refresh",
+        "design",
+        "design-sync",
+        "dataviz",
+        "update-config",
+        "verify",
+        "debug",
+        "code-review",
+        "simplify",
+        "batch",
+        "fewer-permission-prompts",
+        "doctor",
+        "loop",
+        "schedule",
+        "claude-api",
+        "workflow-authoring",
+        "run",
+        "run-skill-generator",
+        "plugin-authoring"
+      ],
+      "model": "claude-fable-5-1",
+      "host_version": "2.1.306"
+    }
+  ],
+  "native_tool_calls": [],
+  "workspace": {
+    "before": {
+      "unrelated/sentinel.txt": "56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3",
+      ".claude/skills/stdo-continuation/SKILL.md": "90f3778a97df92796c8d052e4d46ca01e01b1913d3421fa8f421310d03c3cd61",
+      ".claude/skills/stdo-delegate-review/SKILL.md": "f8bd00924ad601c7e38d9c36eae95364246dab33d3f31fc6c2e8eea076b7b8cf",
+      ".claude/skills/stdo-release-install/SKILL.md": "e29457bf87fd34032e3ad5339549888766b54ebff18cb97051a6293c547127c1",
+      ".claude/skills/stdo-tool-operations/SKILL.md": "a850e36e8136b0db0d233d0bdfc4e8c6b4bc88949be5ea08cc7bb9c2ec4b09a0",
+      ".claude/skills/stdo-workspace-change/SKILL.md": "840bc1eeadcd575b15be7bc426a66f1407624a433ef49edf827671b9c1a6b3d1"
+    },
+    "after": {
+      ".claude/skills/stdo-continuation/SKILL.md": "90f3778a97df92796c8d052e4d46ca01e01b1913d3421fa8f421310d03c3cd61",
+      ".claude/skills/stdo-delegate-review/SKILL.md": "f8bd00924ad601c7e38d9c36eae95364246dab33d3f31fc6c2e8eea076b7b8cf",
+      ".claude/skills/stdo-release-install/SKILL.md": "e29457bf87fd34032e3ad5339549888766b54ebff18cb97051a6293c547127c1",
+      ".claude/skills/stdo-tool-operations/SKILL.md": "a850e36e8136b0db0d233d0bdfc4e8c6b4bc88949be5ea08cc7bb9c2ec4b09a0",
+      ".claude/skills/stdo-workspace-change/SKILL.md": "840bc1eeadcd575b15be7bc426a66f1407624a433ef49edf827671b9c1a6b3d1",
+      "unrelated/sentinel.txt": "56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3"
+    },
+    "changed": [],
+    "added": [],
+    "missing": [],
+    "symlinks": []
+  },
+  "assessment": "Finite source census; a named source-oracle assessor judges the observed path and outcomes separately"
+}

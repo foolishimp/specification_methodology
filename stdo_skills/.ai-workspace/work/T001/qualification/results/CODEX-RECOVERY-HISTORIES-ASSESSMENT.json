@@ -1,0 +1,75 @@
+{
+  "schema": "stdo_skills.host-case-assessment/1",
+  "assessor": "/root/skills_tool_binding_assessment",
+  "role": "fixture Writer source-oracle assessment, not independent review or owner acceptance",
+  "cases": [
+    "Q07",
+    "Q09",
+    "Q10"
+  ],
+  "candidate_inventory_sha256": "337d274efde96147c8e9a2db3e3b25f7631731fc8486562c9022ad087833aa36",
+  "oracle": {
+    "path": "stdo_skills/.ai-workspace/work/T001/qualification/recovery/ORACLE.json",
+    "sha256": "dabb630441a68c2dfbdb39396ce3fdc5609c9db1aa953c4d74aec1f4678d18c1"
+  },
+  "portable_inventory": {
+    "path": "codex-recovery-histories/INVENTORY.json",
+    "sha256": "21ff25658dcf658d9f14e545e5226717bcaa3618dcf9dea14ec7b5ddeff530fa"
+  },
+  "report": {
+    "path": "codex-recovery-histories/postimages/outputs/continuation.md",
+    "sha256": "964cd3f2b3edb82a21cb7e6ac7983514766754c174f627effbe0189bd3dc17d9"
+  },
+  "value": "supported finite case witness with execution limits separately retained",
+  "reason": "The actual report distinguishes current conditional A eligibility from B counterexample-blocked reliance despite identical candidate bytes; C withdraws changed-requirement reliance and retains unchanged sentinel evidence; D/E/F separately preserve incomplete construction, performed indeterminate assessment and no assessment.",
+  "workspace_effects": {
+    "changed": [
+      "outputs/continuation.md"
+    ],
+    "added": [],
+    "missing": []
+  },
+  "actual_public_operations": {
+    "tools.describe": 4,
+    "source.read": 30,
+    "workspace.observe": 1,
+    "work.write": 1
+  },
+  "elapsed_seconds": 300.097045,
+  "native_execution": {
+    "ended_ns": 1792897515708605000,
+    "failure": "timeout; output/effect completion remains unknown",
+    "input_bytes": 311,
+    "input_forwarded_bytes": 311,
+    "output_available": false,
+    "pid": 62926,
+    "returncode": -15,
+    "schema": "a_c.fd-support.actor-cli-observation/1",
+    "started_ns": 1792897215611560000,
+    "stderr_bytes": 0,
+    "stderr_eof": false,
+    "stdout_bytes": 463096,
+    "stdout_eof": false,
+    "termination_requests": [
+      {
+        "at_ns": 1792897515704612000,
+        "delivery": "requested",
+        "scope": "registered parent process only",
+        "signal": "terminate"
+      }
+    ],
+    "unknowns": [
+      "descendant/process-tree end and external side effects",
+      "host/model active-context size",
+      "backend retries or unreported usage",
+      "semantic outcome and owner disposition"
+    ]
+  },
+  "actual_usage": [],
+  "actual_model_observations": [],
+  "limits": [
+    "Native host timed out after300s; returncode -15, streams incomplete, no final turn/closed actor return. Actual report availability and native Writer completion are separately established.",
+    "Historical assessment/exhaustion records are controlled inputs; result qualifies continuation under those premises, not production/authentication of the histories.",
+    "No reliability, comparative benefit or full mandatory scenario acceptance follows."
+  ]
+}

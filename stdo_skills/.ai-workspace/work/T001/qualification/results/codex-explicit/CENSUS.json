@@ -1,0 +1,1407 @@
+{
+  "schema": "stdo_skills.qualification-census/1",
+  "tenant": "codex",
+  "lane": "explicit",
+  "original_workspace": "/private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/workspace",
+  "original_control": "/private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/control",
+  "custody": "Exact observations copied; absolute runtime policies are not rebased or advertised as portable executable grants",
+  "native_process": {
+    "ended_ns": 1792895708753231000,
+    "failure": null,
+    "input_bytes": 191,
+    "input_forwarded_bytes": 191,
+    "output_available": true,
+    "pid": 39599,
+    "returncode": 0,
+    "schema": "a_c.fd-support.actor-cli-observation/1",
+    "started_ns": 1792895543924210000,
+    "stderr_bytes": 0,
+    "stderr_eof": true,
+    "stdout_bytes": 393878,
+    "stdout_eof": true,
+    "termination_requests": [],
+    "unknowns": [
+      "descendant/process-tree end and external side effects",
+      "host/model active-context size",
+      "backend retries or unreported usage",
+      "semantic outcome and owner disposition"
+    ]
+  },
+  "declared_settings": {
+    "actual_models": "Retain all raw vendor model identifiers, including helper/classifier events",
+    "cost": "unknown",
+    "effort_default": "max",
+    "fixture_case": "explicit",
+    "host_context_bytes": "unknown",
+    "host_scope": "cooperative exact territory; scoped mkdir/read-compute/validation; artifact content through work.write",
+    "model_default": "gpt-6-astra",
+    "model_override": false,
+    "resolved_backend": "unobserved until actual run",
+    "retry_policy": "no automatic actor retry",
+    "selected_host": "codex-cli 0.164.0"
+  },
+  "actual_model_observations": [],
+  "model_limit": "Absent native model observations stay unknown; configured aliases are not treated as resolved backend identities",
+  "usage_events": [
+    {
+      "line": 86,
+      "event": "turn.completed",
+      "reported_usage": {
+        "input_tokens": 939259,
+        "cached_input_tokens": 843776,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 6781,
+        "reasoning_output_tokens": 2561
+      },
+      "reported_cost_usd": null
+    }
+  ],
+  "usage_limit": "Exact native usage observations, no inferred monetary cost or hidden retry estimate",
+  "commands": [
+    {
+      "line": 5,
+      "id": "item_1",
+      "command": "/bin/zsh -lc 'cat .agents/skills/stdo-work/SKILL.md .agents/skills/stdo-work/references/basis.md .agents/skills/stdo-work/references/tools.md'",
+      "exit_code": 0
+    },
+    {
+      "line": 8,
+      "id": "item_2",
+      "command": "/bin/zsh -lc \"rg -n 'stdo-work|one-file|direct Writer|qualification.*skill|skills.*qualification' /Users/jim/.codex/memories/MEMORY.md\"",
+      "exit_code": 1
+    },
+    {
+      "line": 9,
+      "id": "item_3",
+      "command": "/bin/zsh -lc \"pwd; rg --files -g AGENTS.md -g TASK.md -g TOOLING.md -g fixture_product.json -g REQUIREMENT.md -g DESIGN.md -g name.txt -g greeting.txt -g sentinel.txt -g '\"'!**/.git/**'\"'\"",
+      "exit_code": 0
+    },
+    {
+      "line": 11,
+      "id": "item_4",
+      "command": "/bin/zsh -lc 'cat AGENTS.md fixture_product.json TASK.md TOOLING.md specification/REQUIREMENT.md design/DESIGN.md inputs/name.txt outputs/greeting.txt unrelated/sentinel.txt .agents/skills/stdo-work/source-routes.json'",
+      "exit_code": 0
+    },
+    {
+      "line": 13,
+      "id": "item_5",
+      "command": "/bin/zsh -lc 'stdo status --definition /private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/workspace/fixture_product.json --verify'",
+      "exit_code": 0
+    },
+    {
+      "line": 15,
+      "id": "item_6",
+      "command": "/bin/zsh -lc 'cat specification/INTENT.md specification/PRODUCT.md .qualification/OWNER.json /private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/control/worker-policy.json'",
+      "exit_code": 0
+    },
+    {
+      "line": 17,
+      "id": "item_7",
+      "command": "/bin/zsh -lc \"python3 -B - <<'PY'\nimport hashlib, json, os, pathlib, subprocess\np = pathlib.Path.cwd()\ns = subprocess.run(['stdo', 'status', '--definition', str(p/'fixture_product.json'), '--verify'], capture_output=True, text=True)\nd = json.loads(s.stdout)\nprint(json.dumps({'manager_exit':s.returncode,'status':{k:v for k,v in d.items() if k\"'!='\"'manifest'}},sort_keys=True))\nfiles = {}\nfor parent, dirs, names in os.walk(p):\n    dirs[:] = [v for v in dirs if v \"'!= '\"'.git']\n    for name in names:\n        f = pathlib.Path(parent)/name\n        if f.is_symlink():\n            files[str(f.relative_to(p))] = {'symlink':str(f.readlink())}\n        else:\n            files[str(f.relative_to(p))] = {'sha256':hashlib.sha256(f.read_bytes()).hexdigest()}\nprint(json.dumps({'workspace_preimage':files},sort_keys=True))\nmethod=pathlib.Path('/Users/jim/Library/Application Support/STDO/releases/v3.0.1-rc.1')\nfor rel in ['standards/frames/bootstrap.md','standards/ACTIVATION.md']:\n    print(json.dumps({'method_source':rel,'sha256':hashlib.sha256((method/rel).read_bytes()).hexdigest()}))\nprint(subprocess.run(['codex','--version'], capture_output=True, text=True).stdout.strip())\nPY\"",
+      "exit_code": 0
+    },
+    {
+      "line": 27,
+      "id": "item_13",
+      "command": "/bin/zsh -lc 'cat .agents/skills/stdo-work/references/recovery.md'",
+      "exit_code": 0
+    },
+    {
+      "line": 29,
+      "id": "item_14",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/control/worker-policy.json --policy-sha256 fd4acccb471164a926d1be306bdc36e5e49e205799f3e49b820f5417b84849cb --principal host call --request - <<'JSON'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"greeting-cli-describe-source-read-001\\\",\\\"operation\\\":\\\"tools.describe\\\",\\\"arguments\\\":{\\\"operation\\\":\\\"source.read\\\",\\\"method_profile\\\":{\\\"id\\\":\\\"urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1\\\",\\\"sha256\\\":\\\"a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7\\\"}}}\nJSON\"",
+      "exit_code": 0
+    },
+    {
+      "line": 31,
+      "id": "item_15",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/control/worker-policy.json --policy-sha256 fd4acccb471164a926d1be306bdc36e5e49e205799f3e49b820f5417b84849cb --principal host call --request - <<'JSON'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"greeting-cli-describe-workspace-observe-001\\\",\\\"operation\\\":\\\"tools.describe\\\",\\\"arguments\\\":{\\\"operation\\\":\\\"workspace.observe\\\",\\\"method_profile\\\":{\\\"id\\\":\\\"urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1\\\",\\\"sha256\\\":\\\"a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7\\\"}}}\nJSON\"",
+      "exit_code": 0
+    },
+    {
+      "line": 33,
+      "id": "item_16",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/control/worker-policy.json --policy-sha256 fd4acccb471164a926d1be306bdc36e5e49e205799f3e49b820f5417b84849cb --principal host call --request - <<'JSON'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"greeting-cli-describe-work-write-001\\\",\\\"operation\\\":\\\"tools.describe\\\",\\\"arguments\\\":{\\\"operation\\\":\\\"work.write\\\",\\\"method_profile\\\":{\\\"id\\\":\\\"urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1\\\",\\\"sha256\\\":\\\"a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7\\\"}}}\nJSON\"",
+      "exit_code": 0
+    },
+    {
+      "line": 35,
+      "id": "item_17",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/control/worker-policy.json --policy-sha256 fd4acccb471164a926d1be306bdc36e5e49e205799f3e49b820f5417b84849cb --principal host call --request - <<'JSON'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"greeting-read-bootstrap-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"method\\\",\\\"path\\\":\\\"standards/frames/bootstrap.md\\\",\\\"object\\\":null,\\\"sha256\\\":\\\"cbf4a10e8d0b4ca2ab4a1f3ee28a85ffedc3298a0fba666949d9b091e82cc714\\\",\\\"selector\\\":null},\\\"encoding\\\":\\\"utf8\\\"}}\nJSON\"",
+      "exit_code": 0
+    },
+    {
+      "line": 38,
+      "id": "item_18",
+      "command": "/bin/zsh -lc \"rg -n '\"'^(#{1,4} )|Writer|existing authority|existing grant'\"' '/Users/jim/Library/Application Support/STDO/releases/v3.0.1-rc.1/standards/ACTIVATION.md'\"",
+      "exit_code": 0
+    },
+    {
+      "line": 39,
+      "id": "item_19",
+      "command": "/bin/zsh -lc \"rg -n '\"'^Source:|''^### |''^## '\"' '/Users/jim/Library/Application Support/STDO/releases/v3.0.1-rc.1/standards/frames/bootstrap.md'\"",
+      "exit_code": 0
+    },
+    {
+      "line": 51,
+      "id": "item_20",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/control/worker-policy.json --policy-sha256 fd4acccb471164a926d1be306bdc36e5e49e205799f3e49b820f5417b84849cb --principal host call --request - <<'JSON'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"greeting-source-0-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"fixture_product.json\\\",\\\"object\\\":null,\\\"selector\\\":null,\\\"sha256\\\":\\\"b7eba5930df53d05e2d5285b810313774f765adef48814803557b30cf08611d4\\\"},\\\"encoding\\\":\\\"utf8\\\"}}\nJSON\"",
+      "exit_code": 0
+    },
+    {
+      "line": 52,
+      "id": "item_21",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/control/worker-policy.json --policy-sha256 fd4acccb471164a926d1be306bdc36e5e49e205799f3e49b820f5417b84849cb --principal host call --request - <<'JSON'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"greeting-source-1-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/INTENT.md\\\",\\\"object\\\":null,\\\"selector\\\":null,\\\"sha256\\\":\\\"d5d433896a50370a023126e60a170a0c9e3b0920d1489b4ea27a30d56670d0e1\\\"},\\\"encoding\\\":\\\"utf8\\\"}}\nJSON\"",
+      "exit_code": 0
+    },
+    {
+      "line": 53,
+      "id": "item_22",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/control/worker-policy.json --policy-sha256 fd4acccb471164a926d1be306bdc36e5e49e205799f3e49b820f5417b84849cb --principal host call --request - <<'JSON'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"greeting-source-2-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/PRODUCT.md\\\",\\\"object\\\":null,\\\"selector\\\":null,\\\"sha256\\\":\\\"ff4546f54cbc888373c8d7b50ca485999d951b13aecd4d597ffd095be60044a2\\\"},\\\"encoding\\\":\\\"utf8\\\"}}\nJSON\"",
+      "exit_code": 0
+    },
+    {
+      "line": 54,
+      "id": "item_23",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/control/worker-policy.json --policy-sha256 fd4acccb471164a926d1be306bdc36e5e49e205799f3e49b820f5417b84849cb --principal host call --request - <<'JSON'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"greeting-source-3-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"TASK.md\\\",\\\"object\\\":null,\\\"selector\\\":null,\\\"sha256\\\":\\\"fcd0da4ebac96a38dd22b1aa29746be5a87d16e9843279cb7e241fa798e8bf58\\\"},\\\"encoding\\\":\\\"utf8\\\"}}\nJSON\"",
+      "exit_code": 0
+    },
+    {
+      "line": 55,
+      "id": "item_24",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/control/worker-policy.json --policy-sha256 fd4acccb471164a926d1be306bdc36e5e49e205799f3e49b820f5417b84849cb --principal host call --request - <<'JSON'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"greeting-source-4-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/REQUIREMENT.md\\\",\\\"object\\\":null,\\\"selector\\\":null,\\\"sha256\\\":\\\"48a34de6cf1ea24dc661d0c6f730bf2c21f6791bc4a9cdee1a6b46d3aa8548d9\\\"},\\\"encoding\\\":\\\"utf8\\\"}}\nJSON\"",
+      "exit_code": 0
+    },
+    {
+      "line": 56,
+      "id": "item_25",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/control/worker-policy.json --policy-sha256 fd4acccb471164a926d1be306bdc36e5e49e205799f3e49b820f5417b84849cb --principal host call --request - <<'JSON'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"greeting-source-5-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"design/DESIGN.md\\\",\\\"object\\\":null,\\\"selector\\\":null,\\\"sha256\\\":\\\"d9b7a1ac02fe76a18f1e46edc47bbefdba8634f823dd07f81636587c3ba75bb2\\\"},\\\"encoding\\\":\\\"utf8\\\"}}\nJSON\"",
+      "exit_code": 0
+    },
+    {
+      "line": 57,
+      "id": "item_26",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/control/worker-policy.json --policy-sha256 fd4acccb471164a926d1be306bdc36e5e49e205799f3e49b820f5417b84849cb --principal host call --request - <<'JSON'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"greeting-source-6-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"inputs/name.txt\\\",\\\"object\\\":null,\\\"selector\\\":null,\\\"sha256\\\":\\\"c4b7d45359e10813d1787293eb7ffa9a074e837fcf99c0281610eab5fe907e79\\\"},\\\"encoding\\\":\\\"utf8\\\"}}\nJSON\"",
+      "exit_code": 0
+    },
+    {
+      "line": 58,
+      "id": "item_27",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/control/worker-policy.json --policy-sha256 fd4acccb471164a926d1be306bdc36e5e49e205799f3e49b820f5417b84849cb --principal host call --request - <<'JSON'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"greeting-source-7-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"outputs/greeting.txt\\\",\\\"object\\\":null,\\\"selector\\\":null,\\\"sha256\\\":\\\"dbfa3fcacaedf5e16d125ee1410774c6cb2d0bbd0a9fb07cacfe87fd362d29c7\\\"},\\\"encoding\\\":\\\"utf8\\\"}}\nJSON\"",
+      "exit_code": 0
+    },
+    {
+      "line": 59,
+      "id": "item_28",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/control/worker-policy.json --policy-sha256 fd4acccb471164a926d1be306bdc36e5e49e205799f3e49b820f5417b84849cb --principal host call --request - <<'JSON'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"greeting-source-8-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"unrelated/sentinel.txt\\\",\\\"object\\\":null,\\\"selector\\\":null,\\\"sha256\\\":\\\"56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3\\\"},\\\"encoding\\\":\\\"utf8\\\"}}\nJSON\"",
+      "exit_code": 0
+    },
+    {
+      "line": 60,
+      "id": "item_29",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/control/worker-policy.json --policy-sha256 fd4acccb471164a926d1be306bdc36e5e49e205799f3e49b820f5417b84849cb --principal host call --request - <<'JSON'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"greeting-source-9-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".qualification/OWNER.json\\\",\\\"object\\\":null,\\\"selector\\\":null,\\\"sha256\\\":\\\"44fd0f343553e4379e7cd63fe1ec33cf1b3e0206c2fa30848ff04cf77c77dc7f\\\"},\\\"encoding\\\":\\\"utf8\\\"}}\nJSON\"",
+      "exit_code": 0
+    },
+    {
+      "line": 61,
+      "id": "item_30",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/control/worker-policy.json --policy-sha256 fd4acccb471164a926d1be306bdc36e5e49e205799f3e49b820f5417b84849cb --principal host call --request - <<'JSON'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"greeting-source-10-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"control\\\",\\\"path\\\":\\\"TASK.md\\\",\\\"object\\\":null,\\\"selector\\\":null,\\\"sha256\\\":\\\"18aed14c626d2212b22edabd6a32020437616e353ed708b1bfdbdf5a5a03b56a\\\"},\\\"encoding\\\":\\\"utf8\\\"}}\nJSON\"",
+      "exit_code": 0
+    },
+    {
+      "line": 64,
+      "id": "item_31",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/control/worker-policy.json --policy-sha256 fd4acccb471164a926d1be306bdc36e5e49e205799f3e49b820f5417b84849cb --principal host call --request - <<'JSON'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"greeting-method-1-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"method\\\",\\\"path\\\":\\\"standards/ACTIVATION.md\\\",\\\"object\\\":null,\\\"sha256\\\":\\\"56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d\\\",\\\"selector\\\":{\\\"lines\\\":[580,618]}},\\\"encoding\\\":\\\"utf8\\\"}}\nJSON\"",
+      "exit_code": 0
+    },
+    {
+      "line": 65,
+      "id": "item_32",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/control/worker-policy.json --policy-sha256 fd4acccb471164a926d1be306bdc36e5e49e205799f3e49b820f5417b84849cb --principal host call --request - <<'JSON'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"greeting-method-0-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"method\\\",\\\"path\\\":\\\"standards/ACTIVATION.md\\\",\\\"object\\\":null,\\\"sha256\\\":\\\"56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d\\\",\\\"selector\\\":{\\\"lines\\\":[353,438]}},\\\"encoding\\\":\\\"utf8\\\"}}\nJSON\"",
+      "exit_code": 0
+    },
+    {
+      "line": 68,
+      "id": "item_33",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/control/worker-policy.json --policy-sha256 fd4acccb471164a926d1be306bdc36e5e49e205799f3e49b820f5417b84849cb --principal host call --request - <<'JSON'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"greeting-method-2-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"method\\\",\\\"path\\\":\\\"standards/ACTIVATION.md\\\",\\\"object\\\":null,\\\"sha256\\\":\\\"56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d\\\",\\\"selector\\\":{\\\"lines\\\":[1002,1048]}},\\\"encoding\\\":\\\"utf8\\\"}}\nJSON\"",
+      "exit_code": 0
+    },
+    {
+      "line": 69,
+      "id": "item_34",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/control/worker-policy.json --policy-sha256 fd4acccb471164a926d1be306bdc36e5e49e205799f3e49b820f5417b84849cb --principal host call --request - <<'JSON'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"greeting-method-3-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"method\\\",\\\"path\\\":\\\"standards/ACTIVATION.md\\\",\\\"object\\\":null,\\\"sha256\\\":\\\"56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d\\\",\\\"selector\\\":{\\\"lines\\\":[1750,1768]}},\\\"encoding\\\":\\\"utf8\\\"}}\nJSON\"",
+      "exit_code": 0
+    },
+    {
+      "line": 71,
+      "id": "item_35",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/control/worker-policy.json --policy-sha256 fd4acccb471164a926d1be306bdc36e5e49e205799f3e49b820f5417b84849cb --principal host call --request - <<'JSON'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"greeting-observe-inputs-001\\\",\\\"operation\\\":\\\"workspace.observe\\\",\\\"arguments\\\":{\\\"scope\\\":[{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"fixture_product.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/INTENT.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/PRODUCT.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"TASK.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/REQUIREMENT.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"design/DESIGN.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"inputs/name.txt\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"unrelated/sentinel.txt\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".qualification/OWNER.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"control\\\",\\\"path\\\":\\\"TASK.md\\\",\\\"kind\\\":\\\"file\\\"}]}}\nJSON\"",
+      "exit_code": 0
+    },
+    {
+      "line": 73,
+      "id": "item_36",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/control/worker-policy.json --policy-sha256 fd4acccb471164a926d1be306bdc36e5e49e205799f3e49b820f5417b84849cb --principal host call --request - <<'JSON'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"greeting-observe-output-parent-001\\\",\\\"operation\\\":\\\"workspace.observe\\\",\\\"arguments\\\":{\\\"scope\\\":[{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"outputs\\\",\\\"kind\\\":\\\"directory\\\"}]}}\nJSON\"",
+      "exit_code": 0
+    },
+    {
+      "line": 75,
+      "id": "item_37",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/control/worker-policy.json --policy-sha256 fd4acccb471164a926d1be306bdc36e5e49e205799f3e49b820f5417b84849cb --principal host call --request - <<'JSON'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"greeting-write-correction-001\\\",\\\"operation\\\":\\\"work.write\\\",\\\"arguments\\\":{\\\"grant_id\\\":\\\"urn:stdo-skills:qualification:codex:explicit:write\\\",\\\"target\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"outputs/greeting.txt\\\",\\\"object\\\":null,\\\"selector\\\":null,\\\"sha256\\\":\\\"dbfa3fcacaedf5e16d125ee1410774c6cb2d0bbd0a9fb07cacfe87fd362d29c7\\\"},\\\"mode\\\":\\\"replace\\\",\\\"record\\\":{\\\"text\\\":\\\"Hello, Ada.\\\\n\\\",\\\"provenance\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"TASK.md\\\",\\\"object\\\":null,\\\"selector\\\":null,\\\"sha256\\\":\\\"fcd0da4ebac96a38dd22b1aa29746be5a87d16e9843279cb7e241fa798e8bf58\\\"}},\\\"interpretation\\\":null,\\\"observations\\\":[{\\\"id\\\":\\\"sha256:288d9e8d8e97590f9ec2f22e95d38e51e8002e7b63110e65af294e6dfe35a7f7\\\",\\\"sha256\\\":\\\"288d9e8d8e97590f9ec2f22e95d38e51e8002e7b63110e65af294e6dfe35a7f7\\\"},{\\\"id\\\":\\\"sha256:c660f1b9cb9a09051d0318be82e276b2ee3dd2386545e267653eb282d85ac944\\\",\\\"sha256\\\":\\\"c660f1b9cb9a09051d0318be82e276b2ee3dd2386545e267653eb282d85ac944\\\"}]}}\nJSON\"",
+      "exit_code": 0
+    },
+    {
+      "line": 78,
+      "id": "item_39",
+      "command": "/bin/zsh -lc \"rg --files /private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/control/evidence -g '*21f67b907957da500c1f084d9f5717ad5a69fa2825de9cabadc261996d20cca9*' -g '*7516199b5d32ef939bca09f419da2d8c449d3267178f3d849359d655309a58d8*'\"",
+      "exit_code": 0
+    },
+    {
+      "line": 80,
+      "id": "item_40",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/control/worker-policy.json --policy-sha256 fd4acccb471164a926d1be306bdc36e5e49e205799f3e49b820f5417b84849cb --principal host call --request - <<'JSON'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"greeting-read-postimage-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"outputs/greeting.txt\\\",\\\"object\\\":null,\\\"selector\\\":null,\\\"sha256\\\":\\\"8b1560f395c0248eca4d2d6cc361825a9f8c00d11ce6f52b26eea2872573c2c1\\\"},\\\"encoding\\\":\\\"utf8\\\"}}\nJSON\"",
+      "exit_code": 0
+    },
+    {
+      "line": 82,
+      "id": "item_41",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/control/worker-policy.json --policy-sha256 fd4acccb471164a926d1be306bdc36e5e49e205799f3e49b820f5417b84849cb --principal host call --request - <<'JSON'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"greeting-observe-inputs-after-001\\\",\\\"operation\\\":\\\"workspace.observe\\\",\\\"arguments\\\":{\\\"scope\\\":[{\\\"kind\\\":\\\"file\\\",\\\"path\\\":\\\"fixture_product.json\\\",\\\"root\\\":\\\"product\\\"},{\\\"kind\\\":\\\"file\\\",\\\"path\\\":\\\"specification/INTENT.md\\\",\\\"root\\\":\\\"product\\\"},{\\\"kind\\\":\\\"file\\\",\\\"path\\\":\\\"specification/PRODUCT.md\\\",\\\"root\\\":\\\"product\\\"},{\\\"kind\\\":\\\"file\\\",\\\"path\\\":\\\"TASK.md\\\",\\\"root\\\":\\\"product\\\"},{\\\"kind\\\":\\\"file\\\",\\\"path\\\":\\\"specification/REQUIREMENT.md\\\",\\\"root\\\":\\\"product\\\"},{\\\"kind\\\":\\\"file\\\",\\\"path\\\":\\\"design/DESIGN.md\\\",\\\"root\\\":\\\"product\\\"},{\\\"kind\\\":\\\"file\\\",\\\"path\\\":\\\"inputs/name.txt\\\",\\\"root\\\":\\\"product\\\"},{\\\"kind\\\":\\\"file\\\",\\\"path\\\":\\\"unrelated/sentinel.txt\\\",\\\"root\\\":\\\"product\\\"},{\\\"kind\\\":\\\"file\\\",\\\"path\\\":\\\".qualification/OWNER.json\\\",\\\"root\\\":\\\"product\\\"},{\\\"kind\\\":\\\"file\\\",\\\"path\\\":\\\"TASK.md\\\",\\\"root\\\":\\\"control\\\"}],\\\"previous\\\":{\\\"id\\\":\\\"sha256:288d9e8d8e97590f9ec2f22e95d38e51e8002e7b63110e65af294e6dfe35a7f7\\\",\\\"sha256\\\":\\\"288d9e8d8e97590f9ec2f22e95d38e51e8002e7b63110e65af294e6dfe35a7f7\\\"}}}\nJSON\"",
+      "exit_code": 0
+    },
+    {
+      "line": 84,
+      "id": "item_42",
+      "command": "/bin/zsh -lc \"python3 -B - <<'PY'\nimport hashlib, json, os, pathlib\np=pathlib.Path.cwd()\nbaseline={\\\".agents/skills/stdo-work/SKILL.md\\\":{\\\"sha256\\\":\\\"ba6f7ab1e6de875e2f019b049f7817e771474f1b511a74fe2392a55a37078ee8\\\"},\\\".agents/skills/stdo-work/references/basis.md\\\":{\\\"sha256\\\":\\\"7b409d4895e7be3291e4e41c32e497ae045e9fb4b62f01b9622b10888d449cda\\\"},\\\".agents/skills/stdo-work/references/delegation.md\\\":{\\\"sha256\\\":\\\"0bb621b4d6edb17f2100878a567596f85a52b517edfafbb2ceba7119dce8bfde\\\"},\\\".agents/skills/stdo-work/references/qualification.md\\\":{\\\"sha256\\\":\\\"dda296ed053f3e8ed5ab4cdc7c7b9f162754832fc89ded9280044d96f9dc795c\\\"},\\\".agents/skills/stdo-work/references/recovery.md\\\":{\\\"sha256\\\":\\\"d7f7f118eea492bb64456a56c4cb4987e6e23acd8b3c0143ba87cf5ec9a92c80\\\"},\\\".agents/skills/stdo-work/references/release-install.md\\\":{\\\"sha256\\\":\\\"ec7cb5a407f6690936d0bf79ab5fc8796c2cfca4c34772f61ceff4b68f337cfb\\\"},\\\".agents/skills/stdo-work/references/tools.md\\\":{\\\"sha256\\\":\\\"8bb49c0dfe0eb87fbfbe5063c4a43e15f074e25fdd4ff90ffdec24ef14e75c8b\\\"},\\\".agents/skills/stdo-work/source-routes.json\\\":{\\\"sha256\\\":\\\"09972e4af512645c43207aa3edd5114e1e81c24ef344c76a6af2e99852920403\\\"},\\\".qualification/OWNER.json\\\":{\\\"sha256\\\":\\\"44fd0f343553e4379e7cd63fe1ec33cf1b3e0206c2fa30848ff04cf77c77dc7f\\\"},\\\"AGENTS.md\\\":{\\\"sha256\\\":\\\"f2760c66c95d5ecff4224a698461306b83303ea4369c22dccf1a1ae6f8339fe5\\\"},\\\"CLAUDE.md\\\":{\\\"sha256\\\":\\\"f2760c66c95d5ecff4224a698461306b83303ea4369c22dccf1a1ae6f8339fe5\\\"},\\\"TASK.md\\\":{\\\"sha256\\\":\\\"fcd0da4ebac96a38dd22b1aa29746be5a87d16e9843279cb7e241fa798e8bf58\\\"},\\\"TOOLING.md\\\":{\\\"sha256\\\":\\\"85cdd994b7123fff94019bc04a9b116afa504eebca38f11c3c223244e609ab87\\\"},\\\"design/DESIGN.md\\\":{\\\"sha256\\\":\\\"d9b7a1ac02fe76a18f1e46edc47bbefdba8634f823dd07f81636587c3ba75bb2\\\"},\\\"fixture_product.json\\\":{\\\"sha256\\\":\\\"b7eba5930df53d05e2d5285b810313774f765adef48814803557b30cf08611d4\\\"},\\\"inputs/name.txt\\\":{\\\"sha256\\\":\\\"c4b7d45359e10813d1787293eb7ffa9a074e837fcf99c0281610eab5fe907e79\\\"},\\\"outputs/greeting.txt\\\":{\\\"sha256\\\":\\\"dbfa3fcacaedf5e16d125ee1410774c6cb2d0bbd0a9fb07cacfe87fd362d29c7\\\"},\\\"specification/GOALS.md\\\":{\\\"sha256\\\":\\\"373b460ff66fb9bf68c1ea8ce699291efdf5fd49d2c2e43425927e8e77687d18\\\"},\\\"specification/INTENT.md\\\":{\\\"sha256\\\":\\\"d5d433896a50370a023126e60a170a0c9e3b0920d1489b4ea27a30d56670d0e1\\\"},\\\"specification/PRODUCT.md\\\":{\\\"sha256\\\":\\\"ff4546f54cbc888373c8d7b50ca485999d951b13aecd4d597ffd095be60044a2\\\"},\\\"specification/REQUIREMENT.md\\\":{\\\"sha256\\\":\\\"48a34de6cf1ea24dc661d0c6f730bf2c21f6791bc4a9cdee1a6b46d3aa8548d9\\\"},\\\"unrelated/sentinel.txt\\\":{\\\"sha256\\\":\\\"56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3\\\"}}\ncurrent={}\nfor parent, dirs, names in os.walk(p):\n    dirs[:]=[v for v in dirs if v\"'!='\"'.git']\n    for name in names:\n        f=pathlib.Path(parent)/name\n        current[str(f.relative_to(p))]={'symlink':str(f.readlink())} if f.is_symlink() else {'sha256':hashlib.sha256(f.read_bytes()).hexdigest()}\nchanged=sorted(k for k in baseline.keys()|current.keys() if baseline.get(k)\"'!=current.get(k))\nname=(p/'\"'inputs/name.txt').read_bytes().decode('utf8')\nname=name[:-1] if name.endswith('\\\\n') else name\nexpected=('Hello, '+name+'.\\\\n').encode('utf8')\nactual=(p/'outputs/greeting.txt').read_bytes()\nassert actual==expected, 'Greeting bytes do not match R1 and D1'\nassert changed==['outputs/greeting.txt'], changed\nassert current['unrelated/sentinel.txt']==baseline['unrelated/sentinel.txt']\nprint(json.dumps({'proof':'passed','actual_utf8':actual.decode('utf8'),'bytes':len(actual),'sha256':hashlib.sha256(actual).hexdigest(),'changed_files':changed,'sentinel_unchanged':True,'other_workspace_files_unchanged':True,'workspace_file_count':len(current)}))\nPY\"",
+      "exit_code": 0
+    }
+  ],
+  "completed_commands": 36,
+  "tool_failures": [
+    {
+      "line": 20,
+      "item": {
+        "id": "item_9",
+        "type": "mcp_tool_call",
+        "server": "stdo_ac",
+        "tool": "tools.describe",
+        "arguments": {
+          "schema": "a_c.fd-support.request/1",
+          "id": "greeting-describe-source-read-001",
+          "operation": "tools.describe",
+          "arguments": {
+            "operation": "source.read",
+            "method_profile": {
+              "id": "urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1",
+              "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+            }
+          }
+        },
+        "result": null,
+        "error": {
+          "message": "MCP tool call requires approval, but approval policy is never"
+        },
+        "status": "failed"
+      }
+    },
+    {
+      "line": 22,
+      "item": {
+        "id": "item_10",
+        "type": "mcp_tool_call",
+        "server": "stdo_ac",
+        "tool": "tools.describe",
+        "arguments": {
+          "schema": "a_c.fd-support.request/1",
+          "id": "greeting-describe-workspace-observe-001",
+          "operation": "tools.describe",
+          "arguments": {
+            "operation": "workspace.observe",
+            "method_profile": {
+              "id": "urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1",
+              "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+            }
+          }
+        },
+        "result": null,
+        "error": {
+          "message": "MCP tool call requires approval, but approval policy is never"
+        },
+        "status": "failed"
+      }
+    },
+    {
+      "line": 24,
+      "item": {
+        "id": "item_11",
+        "type": "mcp_tool_call",
+        "server": "stdo_ac",
+        "tool": "tools.describe",
+        "arguments": {
+          "schema": "a_c.fd-support.request/1",
+          "id": "greeting-describe-work-write-001",
+          "operation": "tools.describe",
+          "arguments": {
+            "operation": "work.write",
+            "method_profile": {
+              "id": "urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1",
+              "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+            }
+          }
+        },
+        "result": null,
+        "error": {
+          "message": "MCP tool call requires approval, but approval policy is never"
+        },
+        "status": "failed"
+      }
+    }
+  ],
+  "skill_acquisitions": [
+    {
+      "line": 5,
+      "id": "item_1",
+      "command": "/bin/zsh -lc 'cat .agents/skills/stdo-work/SKILL.md .agents/skills/stdo-work/references/basis.md .agents/skills/stdo-work/references/tools.md'",
+      "exit_code": 0,
+      "installed_path": ".agents/skills/stdo-work/SKILL.md",
+      "installed_sha256": "ba6f7ab1e6de875e2f019b049f7817e771474f1b511a74fe2392a55a37078ee8",
+      "complete_selected_body_in_observed_output": true
+    },
+    {
+      "line": 84,
+      "id": "item_42",
+      "command": "/bin/zsh -lc \"python3 -B - <<'PY'\nimport hashlib, json, os, pathlib\np=pathlib.Path.cwd()\nbaseline={\\\".agents/skills/stdo-work/SKILL.md\\\":{\\\"sha256\\\":\\\"ba6f7ab1e6de875e2f019b049f7817e771474f1b511a74fe2392a55a37078ee8\\\"},\\\".agents/skills/stdo-work/references/basis.md\\\":{\\\"sha256\\\":\\\"7b409d4895e7be3291e4e41c32e497ae045e9fb4b62f01b9622b10888d449cda\\\"},\\\".agents/skills/stdo-work/references/delegation.md\\\":{\\\"sha256\\\":\\\"0bb621b4d6edb17f2100878a567596f85a52b517edfafbb2ceba7119dce8bfde\\\"},\\\".agents/skills/stdo-work/references/qualification.md\\\":{\\\"sha256\\\":\\\"dda296ed053f3e8ed5ab4cdc7c7b9f162754832fc89ded9280044d96f9dc795c\\\"},\\\".agents/skills/stdo-work/references/recovery.md\\\":{\\\"sha256\\\":\\\"d7f7f118eea492bb64456a56c4cb4987e6e23acd8b3c0143ba87cf5ec9a92c80\\\"},\\\".agents/skills/stdo-work/references/release-install.md\\\":{\\\"sha256\\\":\\\"ec7cb5a407f6690936d0bf79ab5fc8796c2cfca4c34772f61ceff4b68f337cfb\\\"},\\\".agents/skills/stdo-work/references/tools.md\\\":{\\\"sha256\\\":\\\"8bb49c0dfe0eb87fbfbe5063c4a43e15f074e25fdd4ff90ffdec24ef14e75c8b\\\"},\\\".agents/skills/stdo-work/source-routes.json\\\":{\\\"sha256\\\":\\\"09972e4af512645c43207aa3edd5114e1e81c24ef344c76a6af2e99852920403\\\"},\\\".qualification/OWNER.json\\\":{\\\"sha256\\\":\\\"44fd0f343553e4379e7cd63fe1ec33cf1b3e0206c2fa30848ff04cf77c77dc7f\\\"},\\\"AGENTS.md\\\":{\\\"sha256\\\":\\\"f2760c66c95d5ecff4224a698461306b83303ea4369c22dccf1a1ae6f8339fe5\\\"},\\\"CLAUDE.md\\\":{\\\"sha256\\\":\\\"f2760c66c95d5ecff4224a698461306b83303ea4369c22dccf1a1ae6f8339fe5\\\"},\\\"TASK.md\\\":{\\\"sha256\\\":\\\"fcd0da4ebac96a38dd22b1aa29746be5a87d16e9843279cb7e241fa798e8bf58\\\"},\\\"TOOLING.md\\\":{\\\"sha256\\\":\\\"85cdd994b7123fff94019bc04a9b116afa504eebca38f11c3c223244e609ab87\\\"},\\\"design/DESIGN.md\\\":{\\\"sha256\\\":\\\"d9b7a1ac02fe76a18f1e46edc47bbefdba8634f823dd07f81636587c3ba75bb2\\\"},\\\"fixture_product.json\\\":{\\\"sha256\\\":\\\"b7eba5930df53d05e2d5285b810313774f765adef48814803557b30cf08611d4\\\"},\\\"inputs/name.txt\\\":{\\\"sha256\\\":\\\"c4b7d45359e10813d1787293eb7ffa9a074e837fcf99c0281610eab5fe907e79\\\"},\\\"outputs/greeting.txt\\\":{\\\"sha256\\\":\\\"dbfa3fcacaedf5e16d125ee1410774c6cb2d0bbd0a9fb07cacfe87fd362d29c7\\\"},\\\"specification/GOALS.md\\\":{\\\"sha256\\\":\\\"373b460ff66fb9bf68c1ea8ce699291efdf5fd49d2c2e43425927e8e77687d18\\\"},\\\"specification/INTENT.md\\\":{\\\"sha256\\\":\\\"d5d433896a50370a023126e60a170a0c9e3b0920d1489b4ea27a30d56670d0e1\\\"},\\\"specification/PRODUCT.md\\\":{\\\"sha256\\\":\\\"ff4546f54cbc888373c8d7b50ca485999d951b13aecd4d597ffd095be60044a2\\\"},\\\"specification/REQUIREMENT.md\\\":{\\\"sha256\\\":\\\"48a34de6cf1ea24dc661d0c6f730bf2c21f6791bc4a9cdee1a6b46d3aa8548d9\\\"},\\\"unrelated/sentinel.txt\\\":{\\\"sha256\\\":\\\"56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3\\\"}}\ncurrent={}\nfor parent, dirs, names in os.walk(p):\n    dirs[:]=[v for v in dirs if v\"'!='\"'.git']\n    for name in names:\n        f=pathlib.Path(parent)/name\n        current[str(f.relative_to(p))]={'symlink':str(f.readlink())} if f.is_symlink() else {'sha256':hashlib.sha256(f.read_bytes()).hexdigest()}\nchanged=sorted(k for k in baseline.keys()|current.keys() if baseline.get(k)\"'!=current.get(k))\nname=(p/'\"'inputs/name.txt').read_bytes().decode('utf8')\nname=name[:-1] if name.endswith('\\\\n') else name\nexpected=('Hello, '+name+'.\\\\n').encode('utf8')\nactual=(p/'outputs/greeting.txt').read_bytes()\nassert actual==expected, 'Greeting bytes do not match R1 and D1'\nassert changed==['outputs/greeting.txt'], changed\nassert current['unrelated/sentinel.txt']==baseline['unrelated/sentinel.txt']\nprint(json.dumps({'proof':'passed','actual_utf8':actual.decode('utf8'),'bytes':len(actual),'sha256':hashlib.sha256(actual).hexdigest(),'changed_files':changed,'sentinel_unchanged':True,'other_workspace_files_unchanged':True,'workspace_file_count':len(current)}))\nPY\"",
+      "exit_code": 0,
+      "installed_path": ".agents/skills/stdo-work/SKILL.md",
+      "installed_sha256": "ba6f7ab1e6de875e2f019b049f7817e771474f1b511a74fe2392a55a37078ee8",
+      "complete_selected_body_in_observed_output": false
+    }
+  ],
+  "final_messages": [
+    {
+      "line": 3,
+      "text": "I\u2019m using the stdo-work skill to check the existing requirement, design, and tool binding, then correct only `outputs/greeting.txt` and verify the sentinel is unchanged.\n"
+    },
+    {
+      "line": 18,
+      "text": "The requirement and design call for `Hello, Ada.` followed by one newline. The pinned STDO installation is valid, and the existing grant covers this correction. I\u2019m checking the Writer contract before applying it.\n"
+    },
+    {
+      "line": 25,
+      "text": "The MCP interface requires approval that this session cannot grant. `TOOLING.md` also declares an authorized CLI for the same operations; I\u2019ll use that binding.\n"
+    },
+    {
+      "line": 76,
+      "text": "The Writer operation completed and recorded `Hello, Ada.` with one newline. I\u2019m checking the saved bytes against the input and confirming that every other workspace file, including the sentinel, is unchanged.\n"
+    },
+    {
+      "line": 85,
+      "text": "Corrected only [outputs/greeting.txt](/private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/workspace/outputs/greeting.txt) to exactly `Hello, Ada.\\n`.\n\nVerification against R1 and D1 passed. All 21 other workspace files, including `unrelated/sentinel.txt`, are unchanged.\n\nThe declared CLI completed the STDO `v3.0.1-rc.1` write after MCP approval was unavailable. [Write evidence](/private/tmp/stdo-skills-qualification-yfa1t8ik/codex-explicit/control/evidence/objects/21f67b907957da500c1f084d9f5717ad5a69fa2825de9cabadc261996d20cca9.json) retains the exact candidate and hashes.\n\nCandidate ready; author verification passed. Independent review and owner acceptance were not performed. No correction work remains; verification applies to the current input, requirement, design, and output."
+    }
+  ],
+  "jsonl_parse_errors": [],
+  "public_operation_counts": {
+    "tools.describe": 3,
+    "source.read": 17,
+    "workspace.observe": 3,
+    "work.write": 1
+  },
+  "public_operations": [
+    {
+      "artifact": "30e5a5592d287abbbce9e8350e43afb02c838e688f193308a8260cc818f5ed0c",
+      "operation": "tools.describe",
+      "request_id": "greeting-cli-describe-source-read-001",
+      "arguments": {
+        "method_profile": {
+          "id": "urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1",
+          "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+        },
+        "operation": "source.read"
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(tools.describe)[request_sha256=8ad6aa0e9c3ab7acfbed922c773312fd719b4ddeaf455213586e6170546b8b21]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792895599899800000
+    },
+    {
+      "artifact": "00e5f6023ddbce1059311a7c821c5f393d21c453762d063e370e027f532a568b",
+      "operation": "tools.describe",
+      "request_id": "greeting-cli-describe-workspace-observe-001",
+      "arguments": {
+        "method_profile": {
+          "id": "urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1",
+          "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+        },
+        "operation": "workspace.observe"
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(tools.describe)[request_sha256=ccea74b91baa61c24cfc7048a27fe55c3e88f9e4cb9ecb51ac9de03c340fc8f6]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792895599899845000
+    },
+    {
+      "artifact": "e4bb485c00634cabfd9ef8dba83cc4342a0e791e95fb5d238e774980dc6da7a8",
+      "operation": "tools.describe",
+      "request_id": "greeting-cli-describe-work-write-001",
+      "arguments": {
+        "method_profile": {
+          "id": "urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1",
+          "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+        },
+        "operation": "work.write"
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(tools.describe)[request_sha256=aee803bcf7dfb0324922398a4526b02e0e20a7a71fac05efc2c56cdfdc1437ca]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792895599901665000
+    },
+    {
+      "artifact": "a07a3bb5d650a795d10215dca98035739cd9cf3eaf16dab2a03e93c703b22173",
+      "operation": "source.read",
+      "request_id": "greeting-read-bootstrap-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "standards/frames/bootstrap.md",
+          "root": "method",
+          "selector": null,
+          "sha256": "cbf4a10e8d0b4ca2ab4a1f3ee28a85ffedc3298a0fba666949d9b091e82cc714"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=4c35b2108a9d3e1386cb64b383e6bfed2f7f9062b06b53b9cc918a62857c7bd8]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792895604119034000
+    },
+    {
+      "artifact": "75ffe71085b43883ec7613a9e1e11ab8661df3c3fb1513dbe5333023e73dedb2",
+      "operation": "source.read",
+      "request_id": "greeting-source-0-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "fixture_product.json",
+          "root": "product",
+          "selector": null,
+          "sha256": "b7eba5930df53d05e2d5285b810313774f765adef48814803557b30cf08611d4"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=841600787c811596c0ac735b70be2cc34e37a0a383847f9c45a26aa34c8df9f0]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792895615852580000
+    },
+    {
+      "artifact": "0f5b61f1f28c0040740b0e8b67b4fb361fe14511493f4ebe48787419dea2917e",
+      "operation": "source.read",
+      "request_id": "greeting-source-1-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "specification/INTENT.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "d5d433896a50370a023126e60a170a0c9e3b0920d1489b4ea27a30d56670d0e1"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=2879a779c2a07aa4204506463bf4aa1a4c536c47eff0508fe0cdbe3d339c2b54]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792895615852624000
+    },
+    {
+      "artifact": "8ccafdab818b20670e9fa6f30a30510507c9c3a719586b263cb65db1fa4928bd",
+      "operation": "source.read",
+      "request_id": "greeting-source-2-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "specification/PRODUCT.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "ff4546f54cbc888373c8d7b50ca485999d951b13aecd4d597ffd095be60044a2"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=d92ae4f76926f9c0c4dfc73a5a576698484565ac97ed0ed613c0d83728574340]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792895615854428000
+    },
+    {
+      "artifact": "6959f70849fb3b6a6347631c1cb3b4d18d117ef1716892c099f770a279139511",
+      "operation": "source.read",
+      "request_id": "greeting-source-3-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "TASK.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "fcd0da4ebac96a38dd22b1aa29746be5a87d16e9843279cb7e241fa798e8bf58"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=3064f1e078a61b37789c3b8dfe884185189521cceafc2dee9dc4579df281897b]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792895615855703000
+    },
+    {
+      "artifact": "f989921bd72f202d8f5059c9ce5aceee4056986a90bedee0caab0d15bf1783e1",
+      "operation": "source.read",
+      "request_id": "greeting-source-4-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "specification/REQUIREMENT.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "48a34de6cf1ea24dc661d0c6f730bf2c21f6791bc4a9cdee1a6b46d3aa8548d9"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=e6754ffaa7f8c00a5af8db17be2957d668c71e3d6f7343b6972de21d7f836b59]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792895615856083000
+    },
+    {
+      "artifact": "b9c68d860edf5fa47d942508321984e4ec8745fa50399d6cde22168bba61921e",
+      "operation": "source.read",
+      "request_id": "greeting-source-5-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "design/DESIGN.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "d9b7a1ac02fe76a18f1e46edc47bbefdba8634f823dd07f81636587c3ba75bb2"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=1f3c7babc2bda092c33377652c656f14f77dda956a94114ef88d98552c813cc7]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792895615859712000
+    },
+    {
+      "artifact": "9b826a1be4cc1a99fbc5ef65d9a2e25c4a29eb9fe8ceed38d092834c63bc3698",
+      "operation": "source.read",
+      "request_id": "greeting-source-6-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "inputs/name.txt",
+          "root": "product",
+          "selector": null,
+          "sha256": "c4b7d45359e10813d1787293eb7ffa9a074e837fcf99c0281610eab5fe907e79"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=e25fab6974155c41280193e7a98c48ad0a97a5a56d28e3737ed9b9a09cc8e35e]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792895615861402000
+    },
+    {
+      "artifact": "5ce369a1e7f355e9b2abe97ae0033c7944609edea553806d60f767618099ab1a",
+      "operation": "source.read",
+      "request_id": "greeting-source-7-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "outputs/greeting.txt",
+          "root": "product",
+          "selector": null,
+          "sha256": "dbfa3fcacaedf5e16d125ee1410774c6cb2d0bbd0a9fb07cacfe87fd362d29c7"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=2348843def6dc1ddbd7e8798dc4afae793f2b774db542886c36e7547307b8b6d]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792895615863064000
+    },
+    {
+      "artifact": "8e176e60e05eda1b0789d0a745b27618c6947dc77bb5c2027288c7b004d44fb9",
+      "operation": "source.read",
+      "request_id": "greeting-source-8-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "unrelated/sentinel.txt",
+          "root": "product",
+          "selector": null,
+          "sha256": "56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=56a35a19e97011f4e2141ce39525e003dc86a8746caebf57bb23a328d315fd9a]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792895615864683000
+    },
+    {
+      "artifact": "70e10d7689524e866ea41aeb84f7919b2b57104758ff9cf9fd07788ef48b27e7",
+      "operation": "source.read",
+      "request_id": "greeting-source-9-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": ".qualification/OWNER.json",
+          "root": "product",
+          "selector": null,
+          "sha256": "44fd0f343553e4379e7cd63fe1ec33cf1b3e0206c2fa30848ff04cf77c77dc7f"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=b83b5a6cf3058ec66cacdeb3408889bac7eb61106139acbcaae402f473477c8d]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792895615869268000
+    },
+    {
+      "artifact": "d3abfcc5a1e7fdd16006440ff4daaffd0178d130ad5b9ef05a6401196375d986",
+      "operation": "source.read",
+      "request_id": "greeting-source-10-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "TASK.md",
+          "root": "control",
+          "selector": null,
+          "sha256": "18aed14c626d2212b22edabd6a32020437616e353ed708b1bfdbdf5a5a03b56a"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=f11173346de5f17e25772a02063bb624216828d5f6e9f327f440a5accd4f1532]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792895615870834000
+    },
+    {
+      "artifact": "74834e54f9ab3916e54361c740bd8735d735807bd04a9f4b36f82fde3e31483e",
+      "operation": "source.read",
+      "request_id": "greeting-method-1-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "standards/ACTIVATION.md",
+          "root": "method",
+          "selector": {
+            "lines": [
+              580,
+              618
+            ]
+          },
+          "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=1b901a80f9b0a6f53c65a94cc10aa7ecc22fb05fee024dd26f3436cdd36aa463]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792895625976650000
+    },
+    {
+      "artifact": "241dd4491ccc34391546871756ba4bbc8b5bdc977dc84865c31c2698063fada1",
+      "operation": "source.read",
+      "request_id": "greeting-method-0-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "standards/ACTIVATION.md",
+          "root": "method",
+          "selector": {
+            "lines": [
+              353,
+              438
+            ]
+          },
+          "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=46e937bed94d6f5c5c288e90b6699a8dab32012f02031099c0ddcfcf2af74573]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792895625977135000
+    },
+    {
+      "artifact": "e0098cce2de7a6a6efd0005ddf6ef7b4c43148851434ecb0a542ff9d16ca048d",
+      "operation": "source.read",
+      "request_id": "greeting-method-2-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "standards/ACTIVATION.md",
+          "root": "method",
+          "selector": {
+            "lines": [
+              1002,
+              1048
+            ]
+          },
+          "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=e0ec63325edfb639b87c09c0b1c8dbd04e29f39040a44b74c287554fba591480]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792895625977152000
+    },
+    {
+      "artifact": "fb158212736b0c5aa5e9346ca05271b6a0e36777b1da32278fc8301ed70184f5",
+      "operation": "source.read",
+      "request_id": "greeting-method-3-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "standards/ACTIVATION.md",
+          "root": "method",
+          "selector": {
+            "lines": [
+              1750,
+              1768
+            ]
+          },
+          "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=fcf1006a1783fbe2ffae2d758efcdd0bc8e7d3e752af69bb62f9f709a05687a5]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792895625977226000
+    },
+    {
+      "artifact": "36c44937c76508dd0e568f073203c03705b043bf909703ba21bddb051c1d06d6",
+      "operation": "workspace.observe",
+      "request_id": "greeting-observe-inputs-001",
+      "arguments": {
+        "scope": [
+          {
+            "kind": "file",
+            "path": "fixture_product.json",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "specification/INTENT.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "specification/PRODUCT.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "TASK.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "specification/REQUIREMENT.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "design/DESIGN.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "inputs/name.txt",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "unrelated/sentinel.txt",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": ".qualification/OWNER.json",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "TASK.md",
+            "root": "control"
+          }
+        ]
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(workspace.observe)[request_sha256=9283ecdbd5ded4b765ee0d6fb9666a715da9a31fcb2f2ba616abcfc7c30e7b84]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792895637534847000
+    },
+    {
+      "artifact": "c4703c03a08b8aebbffb0981ac8cc0ae408963499271655a49d5bfb0b8b3124c",
+      "operation": "workspace.observe",
+      "request_id": "greeting-observe-output-parent-001",
+      "arguments": {
+        "scope": [
+          {
+            "kind": "directory",
+            "path": "outputs",
+            "root": "product"
+          }
+        ]
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(workspace.observe)[request_sha256=e25351a80d28465d1b7cce1d5c3ab27398738d66439caabddecded40c9c578a3]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792895646263743000
+    },
+    {
+      "artifact": "7516199b5d32ef939bca09f419da2d8c449d3267178f3d849359d655309a58d8",
+      "operation": "work.write",
+      "request_id": "greeting-write-correction-001",
+      "arguments": {
+        "grant_id": "urn:stdo-skills:qualification:codex:explicit:write",
+        "interpretation": null,
+        "mode": "replace",
+        "observations": [
+          {
+            "id": "sha256:288d9e8d8e97590f9ec2f22e95d38e51e8002e7b63110e65af294e6dfe35a7f7",
+            "sha256": "288d9e8d8e97590f9ec2f22e95d38e51e8002e7b63110e65af294e6dfe35a7f7"
+          },
+          {
+            "id": "sha256:c660f1b9cb9a09051d0318be82e276b2ee3dd2386545e267653eb282d85ac944",
+            "sha256": "c660f1b9cb9a09051d0318be82e276b2ee3dd2386545e267653eb282d85ac944"
+          }
+        ],
+        "record": {
+          "provenance": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "TASK.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "fcd0da4ebac96a38dd22b1aa29746be5a87d16e9843279cb7e241fa798e8bf58"
+          },
+          "text": "Hello, Ada.\n"
+        },
+        "target": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "outputs/greeting.txt",
+          "root": "product",
+          "selector": null,
+          "sha256": "dbfa3fcacaedf5e16d125ee1410774c6cb2d0bbd0a9fb07cacfe87fd362d29c7"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(work.write): declared exact output/effect-evidence payload availability on the requested basis",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792895651917816000
+    },
+    {
+      "artifact": "bfd70bfbe08173330b5598fb608c703eb06c610d1fc5e75ed56def717c48d231",
+      "operation": "source.read",
+      "request_id": "greeting-read-postimage-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "outputs/greeting.txt",
+          "root": "product",
+          "selector": null,
+          "sha256": "8b1560f395c0248eca4d2d6cc361825a9f8c00d11ce6f52b26eea2872573c2c1"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=1d70b3d3d53a6652f622f13124cd9630db031c0cfb5bf7962eef509eadbe4c1a]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792895678096977000
+    },
+    {
+      "artifact": "850d31809030f9153f6fa9c646e005439de0ed2a4a70b6d3777262c0e1c303e4",
+      "operation": "workspace.observe",
+      "request_id": "greeting-observe-inputs-after-001",
+      "arguments": {
+        "previous": {
+          "id": "sha256:288d9e8d8e97590f9ec2f22e95d38e51e8002e7b63110e65af294e6dfe35a7f7",
+          "sha256": "288d9e8d8e97590f9ec2f22e95d38e51e8002e7b63110e65af294e6dfe35a7f7"
+        },
+        "scope": [
+          {
+            "kind": "file",
+            "path": "fixture_product.json",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "specification/INTENT.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "specification/PRODUCT.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "TASK.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "specification/REQUIREMENT.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "design/DESIGN.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "inputs/name.txt",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "unrelated/sentinel.txt",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": ".qualification/OWNER.json",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "TASK.md",
+            "root": "control"
+          }
+        ]
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(workspace.observe)[request_sha256=d21d73e6ad89d90cc304cad547aad856d21ce988e6528b7c652f7f0a9d28003c]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792895678099772000
+    }
+  ],
+  "public_artifact_closure": {
+    "copied": 70,
+    "missing": [],
+    "digest_mismatches": []
+  },
+  "workspace": {
+    "before": {
+      "AGENTS.md": "f2760c66c95d5ecff4224a698461306b83303ea4369c22dccf1a1ae6f8339fe5",
+      "CLAUDE.md": "f2760c66c95d5ecff4224a698461306b83303ea4369c22dccf1a1ae6f8339fe5",
+      "TASK.md": "fcd0da4ebac96a38dd22b1aa29746be5a87d16e9843279cb7e241fa798e8bf58",
+      "design/DESIGN.md": "d9b7a1ac02fe76a18f1e46edc47bbefdba8634f823dd07f81636587c3ba75bb2",
+      "fixture_product.json": "b7eba5930df53d05e2d5285b810313774f765adef48814803557b30cf08611d4",
+      "inputs/name.txt": "c4b7d45359e10813d1787293eb7ffa9a074e837fcf99c0281610eab5fe907e79",
+      "outputs/greeting.txt": "dbfa3fcacaedf5e16d125ee1410774c6cb2d0bbd0a9fb07cacfe87fd362d29c7",
+      "specification/GOALS.md": "373b460ff66fb9bf68c1ea8ce699291efdf5fd49d2c2e43425927e8e77687d18",
+      "specification/INTENT.md": "d5d433896a50370a023126e60a170a0c9e3b0920d1489b4ea27a30d56670d0e1",
+      "specification/PRODUCT.md": "ff4546f54cbc888373c8d7b50ca485999d951b13aecd4d597ffd095be60044a2",
+      "specification/REQUIREMENT.md": "48a34de6cf1ea24dc661d0c6f730bf2c21f6791bc4a9cdee1a6b46d3aa8548d9",
+      "unrelated/sentinel.txt": "56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3",
+      ".agents/skills/stdo-work/SKILL.md": "ba6f7ab1e6de875e2f019b049f7817e771474f1b511a74fe2392a55a37078ee8",
+      ".agents/skills/stdo-work/references/basis.md": "7b409d4895e7be3291e4e41c32e497ae045e9fb4b62f01b9622b10888d449cda",
+      ".agents/skills/stdo-work/references/delegation.md": "0bb621b4d6edb17f2100878a567596f85a52b517edfafbb2ceba7119dce8bfde",
+      ".agents/skills/stdo-work/references/qualification.md": "dda296ed053f3e8ed5ab4cdc7c7b9f162754832fc89ded9280044d96f9dc795c",
+      ".agents/skills/stdo-work/references/recovery.md": "d7f7f118eea492bb64456a56c4cb4987e6e23acd8b3c0143ba87cf5ec9a92c80",
+      ".agents/skills/stdo-work/references/release-install.md": "ec7cb5a407f6690936d0bf79ab5fc8796c2cfca4c34772f61ceff4b68f337cfb",
+      ".agents/skills/stdo-work/references/tools.md": "8bb49c0dfe0eb87fbfbe5063c4a43e15f074e25fdd4ff90ffdec24ef14e75c8b",
+      ".agents/skills/stdo-work/source-routes.json": "09972e4af512645c43207aa3edd5114e1e81c24ef344c76a6af2e99852920403",
+      ".qualification/OWNER.json": "44fd0f343553e4379e7cd63fe1ec33cf1b3e0206c2fa30848ff04cf77c77dc7f",
+      "TOOLING.md": "85cdd994b7123fff94019bc04a9b116afa504eebca38f11c3c223244e609ab87"
+    },
+    "after": {
+      ".agents/skills/stdo-work/SKILL.md": "ba6f7ab1e6de875e2f019b049f7817e771474f1b511a74fe2392a55a37078ee8",
+      ".agents/skills/stdo-work/references/basis.md": "7b409d4895e7be3291e4e41c32e497ae045e9fb4b62f01b9622b10888d449cda",
+      ".agents/skills/stdo-work/references/delegation.md": "0bb621b4d6edb17f2100878a567596f85a52b517edfafbb2ceba7119dce8bfde",
+      ".agents/skills/stdo-work/references/qualification.md": "dda296ed053f3e8ed5ab4cdc7c7b9f162754832fc89ded9280044d96f9dc795c",
+      ".agents/skills/stdo-work/references/recovery.md": "d7f7f118eea492bb64456a56c4cb4987e6e23acd8b3c0143ba87cf5ec9a92c80",
+      ".agents/skills/stdo-work/references/release-install.md": "ec7cb5a407f6690936d0bf79ab5fc8796c2cfca4c34772f61ceff4b68f337cfb",
+      ".agents/skills/stdo-work/references/tools.md": "8bb49c0dfe0eb87fbfbe5063c4a43e15f074e25fdd4ff90ffdec24ef14e75c8b",
+      ".agents/skills/stdo-work/source-routes.json": "09972e4af512645c43207aa3edd5114e1e81c24ef344c76a6af2e99852920403",
+      ".qualification/OWNER.json": "44fd0f343553e4379e7cd63fe1ec33cf1b3e0206c2fa30848ff04cf77c77dc7f",
+      "AGENTS.md": "f2760c66c95d5ecff4224a698461306b83303ea4369c22dccf1a1ae6f8339fe5",
+      "CLAUDE.md": "f2760c66c95d5ecff4224a698461306b83303ea4369c22dccf1a1ae6f8339fe5",
+      "TASK.md": "fcd0da4ebac96a38dd22b1aa29746be5a87d16e9843279cb7e241fa798e8bf58",
+      "TOOLING.md": "85cdd994b7123fff94019bc04a9b116afa504eebca38f11c3c223244e609ab87",
+      "design/DESIGN.md": "d9b7a1ac02fe76a18f1e46edc47bbefdba8634f823dd07f81636587c3ba75bb2",
+      "fixture_product.json": "b7eba5930df53d05e2d5285b810313774f765adef48814803557b30cf08611d4",
+      "inputs/name.txt": "c4b7d45359e10813d1787293eb7ffa9a074e837fcf99c0281610eab5fe907e79",
+      "outputs/greeting.txt": "8b1560f395c0248eca4d2d6cc361825a9f8c00d11ce6f52b26eea2872573c2c1",
+      "specification/GOALS.md": "373b460ff66fb9bf68c1ea8ce699291efdf5fd49d2c2e43425927e8e77687d18",
+      "specification/INTENT.md": "d5d433896a50370a023126e60a170a0c9e3b0920d1489b4ea27a30d56670d0e1",
+      "specification/PRODUCT.md": "ff4546f54cbc888373c8d7b50ca485999d951b13aecd4d597ffd095be60044a2",
+      "specification/REQUIREMENT.md": "48a34de6cf1ea24dc661d0c6f730bf2c21f6791bc4a9cdee1a6b46d3aa8548d9",
+      "unrelated/sentinel.txt": "56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3"
+    },
+    "changed": [
+      "outputs/greeting.txt"
+    ],
+    "added": [],
+    "missing": [],
+    "symlinks": []
+  },
+  "assessment": "Finite source census; a named source-oracle assessor judges the observed path and outcomes separately"
+}

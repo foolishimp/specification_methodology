@@ -1,0 +1,22 @@
+{
+  "actor": "/root/skills_bootstrap_writer",
+  "role": "Worker",
+  "consumer": "/root",
+  "operation": "prepare Codex tenant design only",
+  "input_inventory_sha256": "a6d348b8385ea453ce29362fb9d74559304b1b91743b3c9ea31a83a9f02b5f2d",
+  "method": "stdo://releases/v3.0.1-rc.1/",
+  "manifest_sha256": "60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8",
+  "write_territory": [
+    "stdo_skills/build_tenants/codex/design/",
+    "stdo_skills/.ai-workspace/work/T001/codex/design/"
+  ],
+  "exclusions": [
+    "implementation",
+    "host installs",
+    "external model calls",
+    "Git mutation"
+  ],
+  "host": "codex-cli 0.164.0",
+  "model_setting": "gpt-6-astra/max selected by Executive; no override",
+  "stop": "Return design candidate and exact inventory; dependent implementation waits for Executive disposition."
+}

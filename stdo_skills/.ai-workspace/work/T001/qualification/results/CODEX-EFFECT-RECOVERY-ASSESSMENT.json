@@ -1,0 +1,127 @@
+{
+  "schema": "stdo_skills.host-case-assessment/1",
+  "assessor": "/root/skills_tool_binding_assessment",
+  "role": "fixture Writer source-oracle assessment, not independent review or owner acceptance",
+  "cases": [
+    "Q08"
+  ],
+  "candidate_inventory_sha256": "337d274efde96147c8e9a2db3e3b25f7631731fc8486562c9022ad087833aa36",
+  "oracle": {
+    "path": "stdo_skills/.ai-workspace/work/T001/qualification/effect-recovery/ORACLE.json",
+    "sha256": "dbcaa43144a057c00f46c97d7808b3172f2b58ca8d60b56e6e6bfdf715767061"
+  },
+  "portable_inventory": {
+    "path": "codex-effect-recovery/INVENTORY.json",
+    "sha256": "a3612e5e1f75f00b53a4280528c4b66beb70bc91506d6d73a10db73bf98878a6"
+  },
+  "report": {
+    "path": "codex-effect-recovery/postimages/outputs/recovery.md",
+    "sha256": "e960e42cdb7ac56c79dae93a2e22d1b44aeb91a4614916da89466cc1ae307d48"
+  },
+  "value": "supported finite case witness with execution limits separately retained",
+  "reason": "The host reads exact original operation/intent/receipt/policy, freshly observes and reads the target, establishes the one completed effect, makes zero counter writes, and writes only the recovery report. It preserves the historical lost acknowledgment.",
+  "workspace_effects": {
+    "changed": [
+      "outputs/recovery.md"
+    ],
+    "added": [],
+    "missing": []
+  },
+  "actual_public_operations": {
+    "tools.describe": 5,
+    "evidence.read": 4,
+    "source.read": 13,
+    "workspace.observe": 3,
+    "work.write": 1
+  },
+  "elapsed_seconds": 287.18612,
+  "native_execution": {
+    "ended_ns": 1792897877077606000,
+    "failure": null,
+    "input_bytes": 326,
+    "input_forwarded_bytes": 326,
+    "output_available": true,
+    "pid": 68500,
+    "returncode": 0,
+    "schema": "a_c.fd-support.actor-cli-observation/1",
+    "started_ns": 1792897589891486000,
+    "stderr_bytes": 0,
+    "stderr_eof": true,
+    "stdout_bytes": 838130,
+    "stdout_eof": true,
+    "termination_requests": [],
+    "unknowns": [
+      "descendant/process-tree end and external side effects",
+      "host/model active-context size",
+      "backend retries or unreported usage",
+      "semantic outcome and owner disposition"
+    ]
+  },
+  "actual_usage": [
+    {
+      "line": 104,
+      "event": "turn.completed",
+      "reported_usage": {
+        "input_tokens": 1399382,
+        "cached_input_tokens": 1300608,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 14381,
+        "reasoning_output_tokens": 3957
+      },
+      "reported_cost_usd": null
+    }
+  ],
+  "actual_model_observations": [],
+  "limits": [
+    "Fixture is a real local fixed response-withholding transport, not an interrupted prior LLM or remote service.",
+    "No inference that all process-tree or external effects are observable; scope is the qualified local target publication.",
+    "No reliability, comparative benefit or full mandatory scenario acceptance follows."
+  ],
+  "counter_publication_census": {
+    "path": "stdo_skills/.ai-workspace/work/T001/qualification/effect-recovery/codex-publication-census.json",
+    "sha256": "5f5acd2c547b0230d3364321a210d8badf68793160cbdf59ae71ca3ae4548ba1",
+    "counter_expected_publications": 1,
+    "actual_successful_counter_publications": 1,
+    "operations": [
+      {
+        "artifact": "aabe1eeb18a8d1a1ba34fc6566a59a3ab495e42a7e31b04b23eaeced26dd2df9",
+        "principal": "primer",
+        "request_id": "qualification-q08-increment-once",
+        "target": "effects/counter.txt",
+        "status": "ok",
+        "effect": {
+          "core_value": "satisfied",
+          "end_established": true,
+          "observed_interval": {
+            "clock": "unix_ns",
+            "ended_ns": 1792897490043349000,
+            "started_ns": 1792897490043074000
+          },
+          "scope": "one qualified atomic target-file publication",
+          "value": "completed"
+        }
+      },
+      {
+        "artifact": "9ea4d9329122a1d1edd6ba9546c142cffc390d250d8f822f17352875f177c0f6",
+        "principal": "host",
+        "request_id": "recovery-publish-report-08",
+        "target": "outputs/recovery.md",
+        "status": "ok",
+        "effect": {
+          "core_value": "satisfied",
+          "end_established": true,
+          "observed_interval": {
+            "clock": "unix_ns",
+            "ended_ns": 1792897817669571000,
+            "started_ns": 1792897817669305000
+          },
+          "scope": "one qualified atomic target-file publication",
+          "value": "completed"
+        }
+      }
+    ],
+    "counter_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "evidence_root": "/private/tmp/stdo-skills-effect-recovery-ijcoy9aa/codex/control/evidence",
+    "standing": "Actual retained public native operation census across primer and resumed host; no inference from final bytes alone"
+  }
+}

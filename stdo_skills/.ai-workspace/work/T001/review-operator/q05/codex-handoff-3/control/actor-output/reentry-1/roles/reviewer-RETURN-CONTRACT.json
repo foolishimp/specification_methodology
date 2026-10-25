@@ -1,0 +1,50 @@
+{
+  "authority_source": {
+    "engine": "workspace-regular-file",
+    "object": null,
+    "path": "roles/reviewer-TASK.md",
+    "root": "phase",
+    "selector": null,
+    "sha256": "ec68b8a2722b9dbef6d9650f5d551b8f41065149762d6cfedd0c7c55f63ce6b9"
+  },
+  "carrier": "a_c.fd-support.closed-return/1",
+  "id": "urn:stdo-skills:T001:q05:codex:handoff:3:reviewer-return:reentry1",
+  "output_slot": "final_stdout_object",
+  "proof": {
+    "claim": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "roles/CLAIM.json",
+      "root": "control",
+      "selector": null,
+      "sha256": "a31fa1c00cf19183cb92cb05339db6a4e0b51afb1d47b3c362ced081199c4cb3"
+    },
+    "comparison": null,
+    "expectations": null,
+    "independence_policy": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "roles/INDEPENDENCE.json",
+      "root": "phase",
+      "selector": null,
+      "sha256": "4ebf6eff3b37ba04e6d240d83e9c6f149df48208bedd41e0f5b0ec990dd99aa4"
+    },
+    "predicate_ids": [],
+    "proof_sources": []
+  },
+  "required_evaluations": [
+    {
+      "id": "expectation-recording",
+      "predicate": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "roles/PREDICATES.md",
+        "root": "control",
+        "selector": null,
+        "sha256": "724dee7972dc6f7429bbbd2c018ea76f4b7e05887b6f636db6a07a525ed4c1db"
+      }
+    }
+  ],
+  "role": "Reviewer",
+  "schema": "a_c.fd-support.return-contract/1"
+}

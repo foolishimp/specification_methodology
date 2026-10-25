@@ -7,7 +7,7 @@ Methodology product has two source projects side by side under its
 the toolchain manager; `v3/` constructs v3.0.0 of the same product. Select a
 child Product before working on its source.
 
-This repository co-locates five peer source projects:
+This repository co-locates six peer source projects:
 
 | Project | Purpose |
 |---|---|
@@ -16,6 +16,7 @@ This repository co-locates five peer source projects:
 | [`axiom_indexer/`](axiom_indexer/) | LLM-first `a_c` authoring, mechanical validation, logical-map projection, and ordered joining |
 | [`stdo_representation/`](stdo_representation/) | Release-matched `a_c.STDO` compression, constraint index, and native Codex and Claude instructions |
 | [`a_c/`](a_c/) | Independent axiomatic-calculus implementations, with Graphify as the first build tenant |
+| [`stdo_skills/`](stdo_skills/) | Shared agent-skill requirements with independent Codex and Claude skill build tenants, using static released STDO 3.0.1 |
 
 Both STDO source projects share one release namespace, `specification_methodology`,
 and one Product identity. Release tags and rc/release branches keep that
@@ -48,6 +49,12 @@ The independent [`a_c/`](a_c/) source project realizes the selected published
 axiomatic calculus through its own build tenants. Its Graphify tenant does not
 depend on v3, Axiom Indexer or STDO Representation and is outside the existing
 release-matched cohort. This adds no dependency or member to those Products.
+
+The independent [`stdo_skills/`](stdo_skills/) Product applies the static installed
+STDO 3.0.1 basis selected in its [Product Definition](stdo_skills/stdo_skills.json).
+Its two skill tenants share requirements while owning their host-specific designs
+and tuning. It has a separate lifecycle from the release-matched cohort; its
+[local bootstrap](stdo_skills/AGENTS.md) routes construction and tool use.
 
 Work from the applicable child root. From this root, inspect all Product
 Definitions without changing them:

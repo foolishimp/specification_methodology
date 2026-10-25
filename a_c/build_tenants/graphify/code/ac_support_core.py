@@ -34,6 +34,10 @@ ARTIFACT = "a_c.fd-support.artifact/1"
 PROFILE_ID = "urn:a-c:fd-support:method:claude-rc9:executive:1"
 PROFILE_SHA256 = "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
 METHOD_SOURCE = "c2cfa9b908d1722ae3f26c32fa4ece691083bdc3"
+NATIVE_PROFILE_ID = 'urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1'
+NATIVE_PROFILE_SHA256 = 'a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7'
+NATIVE_MANIFEST_SHA256 = '60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8'
+NATIVE_FOUNDATIONS_SHA256 = '92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5'
 BUILDER_SHA256 = "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782"
 CORE_VALUES = ("satisfied", "falsified", "indeterminate", "out_of_frame", "invalid_basis")
 KINDS = ("observation", "context", "preflight", "attempt", "return", "expectation", "acquisition", "operation", "resource", "raw", "qualification")
@@ -327,11 +331,39 @@ def request_schema(operation: str | None = None) -> Object:
     return result
 
 
-def inventory(operation: str | None = None) -> Object:
+# This reserved settings member selects names, never credential values.
+# Expanding the fixed allowlist requires a reviewed tool change.
+_ENVIRONMENT_PASSTHROUGH = frozenset({"CLAUDE_CODE_OAUTH_TOKEN"})
+
+
+def environment_passthrough(settings: JSON, environment: JSON) -> list[str]:
+    selected = as_object(settings).get("environment_passthrough", [])
+    if (not isinstance(selected, list)
+            or any(not isinstance(name, str) or name not in _ENVIRONMENT_PASSTHROUGH for name in selected)
+            or len(set(selected)) != len(selected)):
+        raise SupportError("unsupported_executor", "Environment pass-through must list distinct supported names")
+    if _ENVIRONMENT_PASSTHROUGH.intersection(as_object(environment)):
+        raise SupportError("unsupported_executor", "Pass-through credentials cannot appear in a serialized environment")
+    return cast(list[str], selected)
+
+
+def method_identity(profile: Object | None = None) -> Object:
+    identity = {"id": PROFILE_ID, "sha256": PROFILE_SHA256} if profile is None else {"id": profile.get("id"), "sha256": profile.get("sha256")}
+    if identity not in ({"id": PROFILE_ID, "sha256": PROFILE_SHA256},
+                        {"id": NATIVE_PROFILE_ID, "sha256": NATIVE_PROFILE_SHA256}):
+        raise SupportError("unsupported_contract", "Method profile is not an exact supported binding")
+    return document(identity)
+
+
+def inventory(operation: str | None = None, *, profile: Object | None = None) -> Object:
     if operation is not None and operation not in _ARGUMENTS:
         raise SupportError("unknown_operation", "Unknown operation: " + operation)
-    names = [operation] if operation is not None else sorted(_ARGUMENTS)
-    return document({"schema": "a_c.fd-support.inventory/1", "method_profile": {"id": PROFILE_ID, "sha256": PROFILE_SHA256},
+    identity = method_identity(profile)
+    native = identity["id"] == NATIVE_PROFILE_ID
+    if native and operation == "results.conjoin":
+        raise SupportError("unsupported_check", "Native conjunction operator is not qualified")
+    names = [operation] if operation is not None else [name for name in sorted(_ARGUMENTS) if not (native and name == "results.conjoin")]
+    return document({"schema": "a_c.fd-support.inventory/1", "method_profile": identity,
             "builder": {"uri": "stdo://releases/v2.5.1-rc.2/", "manifest_sha256": BUILDER_SHA256},
             "operations": [{"name": name, "input_schema": request_schema(name),
                             "effect": name in EFFECT_OPERATIONS,
@@ -340,7 +372,7 @@ def inventory(operation: str | None = None) -> Object:
                             "checked_fragment": "selected finite declared contract only"} for name in names],
             "content_schemas": copy.deepcopy(CONTENT_SCHEMAS), "refusal_codes": cast(Object, dict(CODES)),
             "qualification": "provisional construction; independent integrated qualification and owner acceptance pending",
-            "unsupported": ["other method cuts", "semantic sufficiency certification", "inferred semantic edges", "arbitrary executable predicates", "OS sandboxing", "external producer authentication", "MCP server/discover", "benefit or acceptance claims"]})
+            "unsupported": (["native results.conjoin: operator unqualified"] if native else []) + ["other method cuts", "semantic sufficiency certification", "inferred semantic edges", "arbitrary executable predicates", "OS sandboxing", "external producer authentication", "MCP server/discover", "benefit or acceptance claims"]})
 
 
 def validate_request(request: JSON) -> Object:
@@ -359,7 +391,9 @@ def parse_request(raw_bytes: bytes) -> Object:
 
 
 def operation_outcome(operation: str, value: str = "returned", code: str | None = None,
-                      evidence: list[JSON] | None = None, limits: list[JSON] | None = None) -> Object:
+                      evidence: list[JSON] | None = None, limits: list[JSON] | None = None,
+                      *, profile: Object | None = None) -> Object:
+    identity = method_identity(profile)
     if code is not None:
         mapped = CODES[code]
         if mapped is None:
@@ -373,16 +407,15 @@ def operation_outcome(operation: str, value: str = "returned", code: str | None 
     return document({"predicate": "B(" + operation + "): declared exact output/effect-evidence payload availability on the requested basis",
             "value": value, "cause": code if code is not None else "declared output available",
             "core_value": parents[value],
-            "source_parent": {"member": "FOUNDATIONS.md", "sha256": "fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f", "clause": "results"},
+            "source_parent": {"member": "FOUNDATIONS.md", "sha256": NATIVE_FOUNDATIONS_SHA256 if identity["id"] == NATIVE_PROFILE_ID else "fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f", "clause": "results"},
             "evidence": evidence if evidence is not None else [],
             "limits": limits if limits is not None else ["output availability only; no semantic acceptance"]})
 
 
 def refusal_outcome(runtime: Runtime, request: Object, error: SupportError) -> CoreOutcome:
-    del runtime
     op = request.get("operation")
     bound = isinstance(op, str) and op in _ARGUMENTS and CODES[error.code] is not None
-    return document({"result": None, "artifacts": [], "operation_outcome": operation_outcome(cast(str, op), code=error.code) if bound else None,
+    return document({"result": None, "artifacts": [], "operation_outcome": operation_outcome(cast(str, op), code=error.code, profile=runtime.method_profile) if bound else None,
             "refusal": error.document(), "acquisitions": []})
 
 @dataclass(frozen=True)
@@ -399,6 +432,10 @@ class Runtime:
     @property
     def policy(self) -> Object:
         return copy.deepcopy(self._policy)
+
+    @property
+    def method_profile(self) -> Object:
+        return method_identity(as_object(self._policy["method_profile"]))
 
     @property
     def principal(self) -> Object:
@@ -448,8 +485,7 @@ class Runtime:
                 validate_content(p["role_transition"], "SourceRef")
         profile = as_object(policy["method_profile"])
         exact_keys(profile, ("id", "sha256", "source"))
-        if profile["id"] != PROFILE_ID or profile["sha256"] != PROFILE_SHA256:
-            raise SupportError("unsupported_contract", "Only the exact Claude RC9 binding is supported")
+        selected_profile = method_identity(profile)
         validate_content(profile["source"], "SourceRef")
         product = as_object(policy["product"])
         exact_keys(product, ("definition_id", "definition", "authority_binding"))
@@ -500,9 +536,14 @@ class Runtime:
                       as_object(principals[principal]), evidence_root,
                       resolve_artifact, query_artifacts)
         actual_profile = read_source(runtime, as_object(profile["source"]))
-        if actual_profile["parent_sha256"] != PROFILE_SHA256:
+        if actual_profile["parent_sha256"] != selected_profile["sha256"]:
             raise SupportError("unsupported_contract", "Profile content is not the supported exact binding")
-        read_source(runtime, as_object(product["definition"]))
+        definition = read_source(runtime, as_object(product["definition"]))
+        if selected_profile["id"] == NATIVE_PROFILE_ID:
+            definition_value = parse_json(base64.b64decode(text(definition["content_base64"])))
+            selected_basis = pointer(definition_value, "/constitution/stdo/basis")
+            if selected_basis != {"uri": "stdo://releases/v3.0.1-rc.1/", "manifest_sha256": NATIVE_MANIFEST_SHA256}:
+                raise SupportError("basis_stale", "Native profile requires the exact released 3.0.1 Product basis")
         read_source(runtime, as_object(runtime.principal["role_binding"]))
         return runtime
 
@@ -720,7 +761,7 @@ def provenance(runtime: Runtime, request: Object, started_ns: int, ended_ns: int
     return document({"request_id": request["id"], "request_sha256": digest(request),
             "requester_principal": runtime.principal_id, "target_principal": target,
             "product_id": product["definition_id"], "definition_sha256": as_object(product["definition"])["sha256"],
-            "method_profile_sha256": PROFILE_SHA256, "policy_sha256": runtime.policy_sha256,
+            "method_profile_sha256": runtime.method_profile["sha256"], "policy_sha256": runtime.policy_sha256,
             "actor": copy.deepcopy(runtime.principal), "attempt": attempt,
             "observed_interval": document({"clock": "unix_ns", "started_ns": started_ns, "ended_ns": ended_ns})})
 
@@ -737,6 +778,8 @@ def make_artifact(kind: str, payload: JSON, provenance: Object) -> tuple[Object,
 def require_operation(runtime: Runtime, operation: str) -> None:
     if _sha(_regular_bytes(runtime.policy_path)) != runtime.policy_sha256:
         raise SupportError("basis_stale", "Trusted policy changed; no hot reload or stale authority use")
+    if runtime.method_profile["id"] == NATIVE_PROFILE_ID and operation == "results.conjoin":
+        raise SupportError("unsupported_check", "Native conjunction operator is not qualified")
     if operation not in _strings(runtime.principal["operations"]):
         raise SupportError("authority_missing", "Startup principal has no selected operation capability")
 
@@ -850,7 +893,7 @@ def _history(runtime: Runtime, kind: str, matches: Object) -> tuple[list[Object]
 def _profile_basis(runtime: Runtime, basis: Object, observations: bool = True) -> None:
     validate_content(basis, "Basis")
     identity = as_object(basis["method_profile"])
-    if identity != {"id": PROFILE_ID, "sha256": PROFILE_SHA256}:
+    if identity != runtime.method_profile:
         raise SupportError("basis_stale", "Execution basis is not this exact selected method/profile")
     if observations:
         for ref in as_list(basis["observations"]):
@@ -1069,7 +1112,7 @@ def _assemble(runtime: Runtime, request: Object, args: Object, started: int) -> 
     artifact, ref = make_artifact("context", payload, provenance(runtime, request, started, time.time_ns(), target_id))
     artifacts.append(artifact)
     return document({"result": {"artifact": ref, "value": {"fit": fit, "activation_identity": activation_identity(packet), "manifest": {"acquired": [{k: v for k, v in as_object(s).items() if k != "content_base64"} for s in sources], "late_acquisition": cast(list[JSON], late)}, "rendered_sha256": payload["rendered_sha256"], "boundaries": boundaries}},
-            "artifacts": artifacts, "operation_outcome": operation_outcome("context.assemble"), "refusal": None, "acquisitions": acquisitions})
+            "artifacts": artifacts, "operation_outcome": operation_outcome("context.assemble", profile=runtime.method_profile), "refusal": None, "acquisitions": acquisitions})
 
 
 @dataclass(frozen=True)
@@ -1810,6 +1853,7 @@ def build_preflight(runtime: Runtime, request: Object) -> EffectPlan:
         raise SupportError("unsupported_executor", "Fixed executor argv/cwd not bound to executable")
     if any(not isinstance(value, str) for value in as_object(executor["environment"]).values()):
         raise SupportError("unsupported_executor", "Executor environment must be an explicit string map")
+    environment_passthrough(executor["settings"], executor["environment"])
     admission = _admission_selection(grant["admission"])
     if admission["mechanism_id"] != "product-policy-preflight/1":
         raise SupportError("unsupported_contract", "Unsupported selected admission mechanism")
@@ -2050,7 +2094,7 @@ def _capture_return(runtime: Runtime, request: Object, args: Object, started: in
                        "transport": {"raw_sha256": _sha(raw_bytes), "complete": raw_payload.get("complete"), "slot": raw_payload.get("slot")},
                        "binding_checks": {"gaps": gaps, "format_valid": original is not None}})
     envelope, ref = make_artifact("return", payload, provenance(runtime, request, started, time.time_ns(), text(attempt["target"]), attempt_ref))
-    return document({"result": {"artifact": ref, "value": payload}, "artifacts": [envelope], "operation_outcome": operation_outcome("return.capture"), "refusal": None, "acquisitions": []})
+    return document({"result": {"artifact": ref, "value": payload}, "artifacts": [envelope], "operation_outcome": operation_outcome("return.capture", profile=runtime.method_profile), "refusal": None, "acquisitions": []})
 
 
 def activation_identity(packet: Object) -> Object:
@@ -2149,6 +2193,8 @@ def _check_return(runtime: Runtime, args: Object) -> Object:
             joined = as_object(load_artifact(runtime, as_object(proof["conjunction"]), "operation")["payload"])
             if as_object(joined["request"])["operation"] != "results.conjoin":
                 gaps.append("Executive conjunction route is not an actual conjunction record")
+            if runtime.method_profile["id"] == NATIVE_PROFILE_ID:
+                gaps.append("Native conjunction proof is unsupported; historical evidence grants no translation")
     predicate_ids = _strings(args["predicates"])
     if set(predicate_ids) - set(_strings(proof["predicate_ids"])):
         raise SupportError("unsupported_check", "Return check predicate is not selected by the role contract")
@@ -2347,7 +2393,7 @@ def _review(runtime: Runtime, request: Object, args: Object, started: int) -> Co
                      "exposure": exposure, "comparison": comparison, "independence": independence,
                      "gaps": gaps, "limits": ["acquisition/diff/exposure facts only; no severity, disposition or mental-independence certificate"]})
     return document({"result": {"artifact": expectation_ref, "value": value}, "artifacts": artifacts,
-            "operation_outcome": operation_outcome("review.prepare"), "refusal": None, "acquisitions": acquisition_refs})
+            "operation_outcome": operation_outcome("review.prepare", profile=runtime.method_profile), "refusal": None, "acquisitions": acquisition_refs})
 
 
 # Public pure verifier for the effect membrane; no new predicate/authority.
@@ -2740,9 +2786,9 @@ def execute_read(runtime: Runtime, request: Object) -> CoreOutcome:
         artifacts: list[JSON] = []; acquisitions: list[JSON] = []; primary: JSON = None
         value: JSON
         if operation == "tools.describe":
-            if "method_profile" in args and not _equal(args["method_profile"], {"id": PROFILE_ID, "sha256": PROFILE_SHA256}):
+            if "method_profile" in args and not _equal(args["method_profile"], runtime.method_profile):
                 raise SupportError("unsupported_contract", "Requested exact method/profile is unsupported")
-            value = inventory(cast(str | None, args.get("operation")))
+            value = inventory(cast(str | None, args.get("operation")), profile=runtime.method_profile)
         elif operation == "workspace.observe":
             payload = observe(runtime, as_list(args["scope"]))
             if "previous" in args:
@@ -2814,7 +2860,7 @@ def execute_read(runtime: Runtime, request: Object) -> CoreOutcome:
             artifacts.append(artifact); acquisitions.append(acquisition_ref)
         else:
             raise SupportError("unknown_operation", "Operation is not implemented by the finite core")
-        boundary = operation_outcome(operation)
+        boundary = operation_outcome(operation, profile=runtime.method_profile)
         boundary["predicate"] = "B(" + operation + ")[request_sha256=" + digest(request) + "]: declared output availability"
         return document({"result": {"artifact": primary, "value": value}, "artifacts": artifacts,
                 "operation_outcome": boundary, "refusal": None, "acquisitions": acquisitions})

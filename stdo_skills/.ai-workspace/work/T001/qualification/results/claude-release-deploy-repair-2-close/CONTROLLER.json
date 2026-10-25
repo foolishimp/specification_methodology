@@ -1,0 +1,107 @@
+{
+  "$schema": "stdo://releases/v3.0.1-rc.1/standards/schemas/product-definition.schema.json",
+  "composition": [],
+  "constitution": {
+    "additional_authorities": [
+      "./INTENT.md",
+      "./PRODUCT.md"
+    ],
+    "agent_bootstrap": {
+      "entrypoint": "#/constitution/entrypoints/0",
+      "targets": [
+        "./TASK.md"
+      ]
+    },
+    "entrypoints": [
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/frames/bootstrap.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/SPEC_METHOD.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/REFERENCE_FRAME.md"
+      }
+    ],
+    "stdo": {
+      "basis": {
+        "manifest_sha256": "60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8",
+        "uri": "stdo://releases/v3.0.1-rc.1/"
+      },
+      "selector": "stdo://channels/3.0.1",
+      "source": {
+        "repository": "https://github.com/foolishimp/specification_methodology.git"
+      }
+    }
+  },
+  "how": {
+    "build_tenants": [
+      {
+        "design": [
+          "./TASK.md"
+        ],
+        "id": "urn:stdo-skills:qualification:claude:release-deploy-repair-2-close:fixed-launcher",
+        "implementation": [
+          "./launch.json"
+        ],
+        "root": "./actor-output/"
+      }
+    ],
+    "common": [
+      "./OWNER.json"
+    ]
+  },
+  "kind": "stdo.product-definition",
+  "local_constitution": {
+    "axioms": [],
+    "disambiguations": [],
+    "overrides": []
+  },
+  "product": {
+    "bounded_context": {
+      "definition": "./PRODUCT.md#product-boundary",
+      "id": "urn:stdo-skills:qualification:claude:release-deploy-repair-2-close:boundary"
+    },
+    "definition_id": "urn:stdo-skills:qualification:claude:release-deploy-repair-2-close:controller",
+    "name": "Read-only close control",
+    "source_project": "./"
+  },
+  "reference_frame_bases": [
+    {
+      "applies_to": [
+        "urn:stdo-skills:qualification:claude:release-deploy-repair-2-close:controller"
+      ],
+      "authority": [
+        "./PRODUCT.md#construction-authority"
+      ],
+      "uri": "./TASK.md"
+    }
+  ],
+  "ticketing": {
+    "comments": {
+      "root": "./.ai-workspace/comments/"
+    },
+    "goals": "./GOALS.md",
+    "sprints": {
+      "root": "./.ai-workspace/sprints/"
+    },
+    "tickets": {
+      "lanes": {
+        "active": "./.ai-workspace/tickets/active/",
+        "backlog": "./.ai-workspace/tickets/backlog/",
+        "completed": "./.ai-workspace/tickets/completed/"
+      },
+      "root": "./.ai-workspace/tickets/"
+    }
+  },
+  "what": {
+    "intent": "./INTENT.md",
+    "product": "./PRODUCT.md",
+    "specification": [
+      "./TASK.md"
+    ]
+  }
+}

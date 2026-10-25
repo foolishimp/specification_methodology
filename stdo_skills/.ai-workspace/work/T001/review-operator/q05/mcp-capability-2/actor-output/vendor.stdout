@@ -1,0 +1,9 @@
+{"type":"thread.started","thread_id":"01a17121-4306-7492-863d-97db92c6e5bd"}
+{"type":"item.completed","item":{"id":"item_0","type":"error","message":"Codex is ignoring 1 unrecognized configuration setting. Check for typos or deprecated settings.\n  session-flags: `mcp_servers.stdo_q05_probe.tools.\"tools.describe\"` is ignored."}}
+{"type":"item.completed","item":{"id":"item_1","type":"error","message":"Codex is ignoring 1 unrecognized configuration setting. Check for typos or deprecated settings.\n  session-flags: `mcp_servers.stdo_q05_probe.tools.\"tools.describe\"` is ignored."}}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_2","type":"agent_message","text":"I’ll call the exposed probe once with the exact envelope and report the result.\n"}}
+{"type":"item.started","item":{"id":"item_3","type":"mcp_tool_call","server":"stdo_q05_probe","tool":"tools.describe","arguments":{"schema":"a_c.fd-support.request/1","id":"q05-codex-mcp-control-describe-1","operation":"tools.describe","arguments":{"operation":"dispatch.start"}},"result":null,"error":null,"status":"in_progress"}}
+{"type":"item.completed","item":{"id":"item_3","type":"mcp_tool_call","server":"stdo_q05_probe","tool":"tools.describe","arguments":{"schema":"a_c.fd-support.request/1","id":"q05-codex-mcp-control-describe-1","operation":"tools.describe","arguments":{"operation":"dispatch.start"}},"result":null,"error":{"message":"MCP tool call requires approval, but approval policy is never"},"status":"failed"}}
+{"type":"item.completed","item":{"id":"item_4","type":"agent_message","text":"The MCP call was refused: “MCP tool call requires approval, but approval policy is never”. No retry or bypass was attempted."}}
+{"type":"turn.completed","usage":{"input_tokens":50235,"cached_input_tokens":38144,"cache_write_input_tokens":0,"output_tokens":421,"reasoning_output_tokens":197}}

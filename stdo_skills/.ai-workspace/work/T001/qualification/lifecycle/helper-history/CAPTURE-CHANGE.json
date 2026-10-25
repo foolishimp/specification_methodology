@@ -1,0 +1,126 @@
+{
+  "changes": [
+    "Copy configured install-checks directory when present; original copy behavior retained.",
+    "When absent, retain observed absence and source path in CENSUS; infer no check result."
+  ],
+  "checks": [
+    "AST parse passed.",
+    "Actual previously failing finalized Claude updated invocation captured successfully with explicit absent-checks metadata.",
+    "Original raw outputs, selection, INSTALL receipt and runtime artifacts retained; no fixture input changed."
+  ],
+  "dependency_audit": [
+    {
+      "actor_plan_sha256": "89fa8ad91907c4708063d70d6295b243a55aa68b9414908781a300ff122ffa2c",
+      "capture_helper_in_runtime_dependencies": false,
+      "prepared": "prepared/claude-automatic.json"
+    },
+    {
+      "actor_plan_sha256": "bb9c6485b540f30ffc63da9d551d6fe651429675998dcd7eade58b06fd094912",
+      "capture_helper_in_runtime_dependencies": false,
+      "prepared": "prepared/claude-basis-tool-diagnostics.json"
+    },
+    {
+      "actor_plan_sha256": "4d8928485eedef482f4ca4e2e77075d7f8e026037a6744c294208bf8a4f69064",
+      "capture_helper_in_runtime_dependencies": false,
+      "prepared": "prepared/claude-combined-recovery-ready.json"
+    },
+    {
+      "actor_plan_sha256": "4d8928485eedef482f4ca4e2e77075d7f8e026037a6744c294208bf8a4f69064",
+      "capture_helper_in_runtime_dependencies": false,
+      "prepared": "prepared/claude-combined-recovery.json"
+    },
+    {
+      "actor_plan_sha256": "7aea6a5a5bcad894ed9c22aca5e3318ec9a1afc4d4a16b5fd93e0415f511d5c6",
+      "capture_helper_in_runtime_dependencies": false,
+      "prepared": "prepared/claude-explicit.json"
+    },
+    {
+      "actor_plan_sha256": "2f0797aa2086e85fa304b489917f0d15356e38c679ed6915ef0a521e56ffc9c8",
+      "capture_helper_in_runtime_dependencies": false,
+      "prepared": "prepared/claude-installation-update.json"
+    },
+    {
+      "actor_plan_sha256": "82439b1d39669fea93e4005a9c96d86b846735591bd2bb7a73acd62c5bf2836c",
+      "capture_helper_in_runtime_dependencies": false,
+      "prepared": "prepared/claude-release-deploy.json"
+    },
+    {
+      "actor_plan_sha256": "73ec420f837bf5571d84e984c21857f8ed4ed83ebc4e33d6c6971cafb7ac2f6e",
+      "capture_helper_in_runtime_dependencies": false,
+      "prepared": "prepared/claude-release-prepare.json"
+    },
+    {
+      "actor_plan_sha256": "f99623fa34ff450c2407dce3003550f05697cbd09e2e038656327e716ca7f014",
+      "capture_helper_in_runtime_dependencies": false,
+      "prepared": "prepared/claude-unrelated.json"
+    },
+    {
+      "actor_plan_sha256": "59105219789b6e28428a85e4f69b01e7941eb9e7402ca9c3d3e882afa67a60f5",
+      "capture_helper_in_runtime_dependencies": false,
+      "prepared": "prepared/codex-automatic.json"
+    },
+    {
+      "actor_plan_sha256": "258645c280b3eaec6004d165190d09d402dcfaff800b5fbd65f90845131b9a22",
+      "capture_helper_in_runtime_dependencies": false,
+      "prepared": "prepared/codex-basis-tool-diagnostics.json"
+    },
+    {
+      "actor_plan_sha256": "3ce5ad3fbedfe229e17dedcda0991635c22434da11df5dc5682b41f534312e59",
+      "capture_helper_in_runtime_dependencies": false,
+      "prepared": "prepared/codex-effect-recovery-ready.json"
+    },
+    {
+      "actor_plan_sha256": "3ce5ad3fbedfe229e17dedcda0991635c22434da11df5dc5682b41f534312e59",
+      "capture_helper_in_runtime_dependencies": false,
+      "prepared": "prepared/codex-effect-recovery.json"
+    },
+    {
+      "actor_plan_sha256": "5cf4424a8561b1bf1d04c331d8f424bb7d43e09e8772c2637ee04792173c02ae",
+      "capture_helper_in_runtime_dependencies": false,
+      "prepared": "prepared/codex-explicit.json"
+    },
+    {
+      "actor_plan_sha256": "f10f00e8c97c3f85d7243e4bbf0a664840a5dd2368c31716e6d2d05644388ba8",
+      "capture_helper_in_runtime_dependencies": false,
+      "prepared": "prepared/codex-installation-update.json"
+    },
+    {
+      "actor_plan_sha256": "62c21a96f04809a1f4fa9678b7a3838154fc56281bb13d3f35402245d315cda6",
+      "capture_helper_in_runtime_dependencies": false,
+      "prepared": "prepared/codex-recovery-histories.json"
+    },
+    {
+      "actor_plan_sha256": "b5c9530872e88022084a4a28f40c6ef44d04c41e31d24f11c397c7250ae8e237",
+      "capture_helper_in_runtime_dependencies": false,
+      "prepared": "prepared/codex-release-deploy.json"
+    },
+    {
+      "actor_plan_sha256": "08e4269eeedbe3f395b1ff19d5750e482467116ec34f650e7d9642859e689406",
+      "capture_helper_in_runtime_dependencies": false,
+      "prepared": "prepared/codex-release-prepare.json"
+    },
+    {
+      "actor_plan_sha256": "b2a0bfcb38aba22e2f5042007e1ba180f0ef1be111a60a56856bae3e252cad52",
+      "capture_helper_in_runtime_dependencies": false,
+      "prepared": "prepared/codex-unrelated.json"
+    }
+  ],
+  "failed_capture_record": {
+    "path": "lifecycle/helper-history/CAPTURE-FAILURE-01.json",
+    "sha256": "2b63fc96641da9c67c5c27cd7a5f26f21b59088f292e0c5fb732640a1ce503ce"
+  },
+  "original": {
+    "path": "lifecycle/helper-history/capture_observation.0ab04531c39150a601cf9fcc11eb98bef932a6e669dd867cac5a5d85b59bfe5c.py",
+    "sha256": "0ab04531c39150a601cf9fcc11eb98bef932a6e669dd867cac5a5d85b59bfe5c"
+  },
+  "root_selection": "Narrow missing-directory collection repair after actual failed capture; no runtime change or native retry.",
+  "schema": "stdo_skills.collector-change/1",
+  "successor": {
+    "path": "capture_observation.py",
+    "sha256": "88d9b3d7c51deadd9fed0abfc12a9768a80729b2b253e592790b219655e38efe"
+  },
+  "successor_capture_inventory": {
+    "path": "results/claude-installation-update/INVENTORY.json",
+    "sha256": "fe2ab5b188936fb63e1c22d70b02560c8b13f12a9f23b2a1d7568d1c430ef815"
+  }
+}

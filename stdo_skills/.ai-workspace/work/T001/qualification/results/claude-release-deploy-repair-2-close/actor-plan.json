@@ -1,0 +1,147 @@
+{
+  "argv": [
+    "/Users/jim/.local/share/claude/versions/2.1.306",
+    "--resume",
+    "3f43aa78-a75d-4a83-a00a-f53a718022d2",
+    "--print",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--permission-mode",
+    "default",
+    "--permission-prompts",
+    "none",
+    "--strict-mcp-config",
+    "--mcp-config",
+    "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/deployment/claude/close-control/mcp.json",
+    "--tools",
+    "Read,Glob,Grep",
+    "--allowedTools",
+    "Read,Glob,Grep,mcp__stdo_ac__source_read,mcp__stdo_ac__workspace_observe,mcp__stdo_ac__evidence_read,mcp__stdo_ac__tools_describe",
+    "--disallowedTools",
+    "Bash,Write,Edit,Skill,mcp__stdo_ac__work_write"
+  ],
+  "backend": "claude",
+  "cwd": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/deployment/claude/workspace",
+  "decoder": "claude-result-jsonl/1",
+  "dependencies": [
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support_core.py",
+      "sha256": "bf72a28444e0497cd564066e41c7e5943810d5a2e0be5488c92fa5add5a67209"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/examples/fd-support/actor_cli.py",
+      "sha256": "3f0bd239339e635f4e49ae89a00f0857f4672cb177a5dd2ce03f124f0b116528"
+    },
+    {
+      "path": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/deployment/claude/close-control/worker-policy.json",
+      "sha256": "8d02b334a8d5a1b68e92b4204d2a349e0e1b26dd1e907c8e51fa66b710d2c99b"
+    },
+    {
+      "path": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/deployment/claude/close-control/mcp.json",
+      "sha256": "9f35b9da83f944222a44f3d655aa05a22518d815193ab497ccc9e1ca32a928b2"
+    },
+    {
+      "path": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/deployment/claude/workspace/.claude/skills/stdo-continuation/SKILL.md",
+      "sha256": "90f3778a97df92796c8d052e4d46ca01e01b1913d3421fa8f421310d03c3cd61"
+    },
+    {
+      "path": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/deployment/claude/workspace/.claude/skills/stdo-delegate-review/SKILL.md",
+      "sha256": "382466083cfb1c76870afbc6b3eda707615a94a7cd90ae692995d6a9d4ecbc13"
+    },
+    {
+      "path": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/deployment/claude/workspace/.claude/skills/stdo-release-install/SKILL.md",
+      "sha256": "ef4831511f78d11015149394ea26c9e899980fb8c9cb40eac278f62de72b6841"
+    },
+    {
+      "path": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/deployment/claude/workspace/.claude/skills/stdo-release-install/references/maintenance.md",
+      "sha256": "84450465fd14720ef1ddaf66f30d9b7716c114ab01799a318aa5166f02fe36e1"
+    },
+    {
+      "path": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/deployment/claude/workspace/.claude/skills/stdo-release-install/scripts/manage_install.py",
+      "sha256": "c10608336639fcf6ed87443666dab5e7ca79d3cc84df2f7a80b6ef33c603fabe"
+    },
+    {
+      "path": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/deployment/claude/workspace/.claude/skills/stdo-tool-operations/SKILL.md",
+      "sha256": "63ad43e77c36ae35a9f1c7b0721a09abab0d4c9b8dc90d2a557c2f7bfab95afe"
+    },
+    {
+      "path": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/deployment/claude/workspace/.claude/skills/stdo-workspace-change/SKILL.md",
+      "sha256": "5c30fd460432895ce19ec0711df8e5ddd715f1e37496d6fd29234b2e3642901c"
+    },
+    {
+      "path": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/deployment/claude/workspace/.claude/stdo-skills-claude.receipt.json",
+      "sha256": "b2dbf4f45545869147c2ae791da064e6995bd4e73bf75dcd1775686038e34d43"
+    },
+    {
+      "path": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/deployment/claude/close-control/RECONCILIATION.json",
+      "sha256": "2a93f5037dc92a7bf91740470ef75efdc77248389668e26b2a7c17cdc02dff40"
+    },
+    {
+      "path": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/deployment/claude/workspace/retained/SOURCE.json",
+      "sha256": "7a34839974623e792f9cd5e9a887a1e8231d851ca96b0f71e0b2355f48716ced"
+    },
+    {
+      "path": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/deployment/claude/workspace/retained/release/payload.txt",
+      "sha256": "b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2"
+    },
+    {
+      "path": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/deployment/claude/workspace/retained/release/manifest.json",
+      "sha256": "ce71758abbf18193dfc3a2c588c228668e0b9065ed1b5e3cf96fb80a01acac35"
+    },
+    {
+      "path": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/deployment/claude/workspace/deploy-test/payload.txt",
+      "sha256": "b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2"
+    },
+    {
+      "path": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/deployment/claude/workspace/deploy-test/manifest.json",
+      "sha256": "ce71758abbf18193dfc3a2c588c228668e0b9065ed1b5e3cf96fb80a01acac35"
+    },
+    {
+      "path": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/deployment/claude/workspace/outputs/deployment.md",
+      "sha256": "d8da0cd244db1d0816f70dfe6c7429861d29e507760394cd775bdd0a8b34f5bf"
+    }
+  ],
+  "environment": {
+    "AC_ENTRY": "/Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py",
+    "AC_POLICY": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/deployment/claude/close-control/worker-policy.json",
+    "AC_POLICY_SHA256": "8d02b334a8d5a1b68e92b4204d2a349e0e1b26dd1e907c8e51fa66b710d2c99b",
+    "AC_PRINCIPAL": "host",
+    "AC_PYTHON": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "PATH": "/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/Library/Apple/usr/bin:/Library/TeX/texbin:/Users/jim/.codex/packages/app-server-daemon/releases/0.164.0-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0-macos/codex-arg0Mp340K:/Users/jim/.codex/tmp/arg0-macos/codex-arg0yvg77P:/Users/jim/.codex/packages/app-server-daemon/releases/0.163.0-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg0CDnCoA:/Users/jim/.codex/packages/app-server-daemon/releases/0.162.1-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg0Bb4u1U:/Users/jim/.codex/packages/app-server-daemon/releases/0.162.0-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg0LxzuXl:/Users/jim/.codex/packages/app-server-daemon/releases/0.161.0-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg03BXQTA:/Users/jim/.codex/packages/app-server-daemon/releases/0.160.1-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg00N7H4l:/Users/jim/.codex/packages/app-server-daemon/releases/0.160.0-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg0KdMMgl:/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/codex-path:/Users/jim/.grok/bin:/Users/jim/.bun/bin:/Users/jim/google-cloud-sdk/bin:/opt/homebrew/opt/openjdk/bin:/Users/jim/bin:/usr/local/opt/openjdk@17/bin:/Users/jim/.pyenv/shims:/Users/jim/.pyenv/bin:/opt/homebrew/opt/curl/bin:/opt/homebrew/opt/openssl/bin:/Users/jim/.local/bin:/opt/homebrew/bin:/Users/jim/.cargo/bin:/Applications/iTerm.app/Contents/Resources/utilities:/opt/homebrew/bin/flutter",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "TMPDIR": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/"
+  },
+  "evidence_directory": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/deployment/claude/close-control/actor-output",
+  "executable": {
+    "path": "/Users/jim/.local/share/claude/versions/2.1.306",
+    "sha256": "b5d795b7760032d79954b55a9cd1876dcf3a8dc9608fd6bb9f618593f69fd44b"
+  },
+  "id": "urn:stdo-skills:qualification:claude:release-deploy-repair-2-close:native-plan",
+  "limits": {
+    "max_input_bytes": 4194304,
+    "max_output_bytes": 4194304,
+    "termination_grace_ms": 3000,
+    "timeout_ms": 180000
+  },
+  "schema": "a_c.fd-support.actor-cli-plan/1",
+  "settings": {
+    "actual_models": "Retain all raw vendor model identifiers, including helper/classifier events",
+    "cost": "unknown",
+    "effort_default": "high",
+    "environment_passthrough": [
+      "CLAUDE_CODE_OAUTH_TOKEN"
+    ],
+    "fixture_case": "release-deploy-repair-2-close",
+    "host_context_bytes": "unknown",
+    "host_scope": "read-only continuation; no workspace mutations or prior write grant reuse",
+    "model_default": "fable",
+    "model_override": false,
+    "resolved_backend": "unobserved until actual run",
+    "resumed_native_session": "3f43aa78-a75d-4a83-a00a-f53a718022d2",
+    "retry_policy": "no automatic actor retry",
+    "selected_host": "Claude Code 2.1.306"
+  }
+}

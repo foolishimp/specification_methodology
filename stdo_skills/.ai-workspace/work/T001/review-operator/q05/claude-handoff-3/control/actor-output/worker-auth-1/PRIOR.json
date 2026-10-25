@@ -1,0 +1,165 @@
+{
+  "consumer": "urn:stdo-skills:T001:q05:claude:handoff:3:executive",
+  "executive_credential_selection": [
+    {
+      "name": "CLAUDE_CODE_OAUTH_TOKEN",
+      "present": true
+    }
+  ],
+  "executive_session": "99e1b978-3749-4e94-9bdf-921d776df3c8",
+  "expectation_acquisition": {
+    "id": "sha256:1d756800b5774a975853081d84e58671388e448d8e7539f220d28fa00855f0fe",
+    "sha256": "1d756800b5774a975853081d84e58671388e448d8e7539f220d28fa00855f0fe"
+  },
+  "failed-worker-check_acquisition": {
+    "id": "sha256:fcc35ef8b8973ac4f039f9637c40df32fbbe6dc108ee47cd9b256da1a377d818",
+    "sha256": "fcc35ef8b8973ac4f039f9637c40df32fbbe6dc108ee47cd9b256da1a377d818"
+  },
+  "failed-worker-return_acquisition": {
+    "id": "sha256:28e900fbf574d613ab02b28a47171deddf05bc2c7ee24a9dc54b1d9b83da49b7",
+    "sha256": "28e900fbf574d613ab02b28a47171deddf05bc2c7ee24a9dc54b1d9b83da49b7"
+  },
+  "failed_worker_attempt": {
+    "id": "sha256:893360167954fa4ad5076b976f06bc4c4f9a2931550282566843c67f5d180890",
+    "sha256": "893360167954fa4ad5076b976f06bc4c4f9a2931550282566843c67f5d180890"
+  },
+  "failed_worker_check": {
+    "id": "sha256:ac4e68cd641d2db46855622a195f39a140f27756cc9d4e01a358be5c1801bdc1",
+    "sha256": "ac4e68cd641d2db46855622a195f39a140f27756cc9d4e01a358be5c1801bdc1"
+  },
+  "failed_worker_return": {
+    "id": "sha256:ef4a121147e7aee65a3cc383fce246bbea70fbb4908a74d12c51378131b3a93b",
+    "sha256": "ef4a121147e7aee65a3cc383fce246bbea70fbb4908a74d12c51378131b3a93b"
+  },
+  "limits": "Recorded process PIDs absent and public artifacts examined; external effects and whole descendant tree remain unknown.",
+  "parent_disposition": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/actor-output/worker-auth-1/proof/PARENT-DISPOSITION.txt",
+    "sha256": "03d4317f98d13693362a1bfdc81a3475409a96d64dec7fe9f082aebdb5f2242e"
+  },
+  "processes": [
+    {
+      "pid_absent": true,
+      "process": {
+        "ended_ns": 1792902635701170000,
+        "failure": null,
+        "input_bytes": 1199,
+        "input_forwarded_bytes": 1199,
+        "output_available": true,
+        "pid": 38263,
+        "returncode": 0,
+        "schema": "a_c.fd-support.actor-cli-observation/1",
+        "started_ns": 1792902127527034000,
+        "stderr_bytes": 0,
+        "stderr_eof": true,
+        "stdout_bytes": 779326,
+        "stdout_eof": true,
+        "termination_requests": [],
+        "unknowns": [
+          "descendant/process-tree end and external side effects",
+          "host/model active-context size",
+          "backend retries or unreported usage",
+          "semantic outcome and owner disposition"
+        ]
+      },
+      "role": "executive",
+      "trace": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/actor-output/reentry-1/actor-output/vendor.stdout",
+        "sha256": "0c879b608c5a61d236e83f9d105ef13368118142027ac24550cb249d8b37d8cd"
+      }
+    },
+    {
+      "pid_absent": true,
+      "process": {
+        "ended_ns": 1792902250683863000,
+        "failure": "nonzero parent exit or incomplete input/output transport",
+        "input_bytes": 17968,
+        "input_forwarded_bytes": 17968,
+        "output_available": false,
+        "pid": 41268,
+        "returncode": 1,
+        "schema": "a_c.fd-support.actor-cli-observation/1",
+        "started_ns": 1792902249465099000,
+        "stderr_bytes": 0,
+        "stderr_eof": true,
+        "stdout_bytes": 6473,
+        "stdout_eof": true,
+        "termination_requests": [],
+        "unknowns": [
+          "descendant/process-tree end and external side effects",
+          "host/model active-context size",
+          "backend retries or unreported usage",
+          "semantic outcome and owner disposition"
+        ]
+      },
+      "role": "worker",
+      "trace": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/child-output/worker-reentry1/vendor.stdout",
+        "sha256": "f5fc5c6856c9c6f45f1caf12b666ea3b574ea00626e07bfa748c9805c01cca55"
+      }
+    },
+    {
+      "pid_absent": true,
+      "process": {
+        "ended_ns": 1792902424396016000,
+        "failure": null,
+        "input_bytes": 19592,
+        "input_forwarded_bytes": 19592,
+        "output_available": true,
+        "pid": 41330,
+        "returncode": 0,
+        "schema": "a_c.fd-support.actor-cli-observation/1",
+        "started_ns": 1792902252241275000,
+        "stderr_bytes": 39,
+        "stderr_eof": true,
+        "stdout_bytes": 341860,
+        "stdout_eof": true,
+        "termination_requests": [],
+        "unknowns": [
+          "descendant/process-tree end and external side effects",
+          "host/model active-context size",
+          "backend retries or unreported usage",
+          "semantic outcome and owner disposition"
+        ]
+      },
+      "role": "reviewer",
+      "trace": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/child-output/reviewer-reentry1/vendor.stdout",
+        "sha256": "f0b91bd84450c348292063562a6d59fa5545f9839923de322bd51e087a30da2e"
+      }
+    }
+  ],
+  "retained_expectation": {
+    "id": "sha256:9f6e54ebe544dcc4617512915684f55e85be7445a54cca6738aa98586dd0744f",
+    "sha256": "9f6e54ebe544dcc4617512915684f55e85be7445a54cca6738aa98586dd0744f"
+  },
+  "reviewer-return_acquisition": {
+    "id": "sha256:192a68dda2765e6cdef3324c03221c0785d4349c23463be5cb7f56a3c8288e55",
+    "sha256": "192a68dda2765e6cdef3324c03221c0785d4349c23463be5cb7f56a3c8288e55"
+  },
+  "reviewer_check": {
+    "id": "sha256:48799ef559f30d09c18edc82bb5cda3fd7f5d5b91cd92ef9e9e6beff6e2c00b9",
+    "sha256": "48799ef559f30d09c18edc82bb5cda3fd7f5d5b91cd92ef9e9e6beff6e2c00b9"
+  },
+  "reviewer_return": {
+    "id": "sha256:d8594ce1d6ada067aeeb6b3711e56c34caf398cd0a67cdaae2a14b4424ba83cc",
+    "sha256": "d8594ce1d6ada067aeeb6b3711e56c34caf398cd0a67cdaae2a14b4424ba83cc"
+  },
+  "reviewer_session": "01a1714d-47be-7883-9259-baa385c22aa8",
+  "sentinel": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/workspace/unrelated/sentinel.txt",
+    "sha256": "56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3"
+  },
+  "standing": "Retained authentication failure before Worker construction; no candidate acceptance.",
+  "target_preimage": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/workspace/outputs/greeting.txt",
+    "sha256": "dbfa3fcacaedf5e16d125ee1410774c6cb2d0bbd0a9fb07cacfe87fd362d29c7"
+  },
+  "worker_credential_selection": [
+    {
+      "name": "CLAUDE_CODE_OAUTH_TOKEN",
+      "present": false
+    }
+  ],
+  "worker_family": "anthropic-claude",
+  "worker_identity": "urn:stdo-skills:T001:q05:claude:handoff:3:worker"
+}

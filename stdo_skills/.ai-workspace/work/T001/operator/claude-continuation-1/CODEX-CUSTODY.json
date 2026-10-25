@@ -1,0 +1,87 @@
+{
+  "recorded_at": "2026-10-25T02:17:34.367288+00:00",
+  "standing": "Observed candidate after timeout; no closed Worker return or semantic acceptance",
+  "inventory": {
+    "path": "build_tenants/codex/inventory.json",
+    "sha256": "337d274efde96147c8e9a2db3e3b25f7631731fc8486562c9022ad087833aa36"
+  },
+  "whole_population_matches_inventory_plus_self": true,
+  "files": [
+    {
+      "path": "build_tenants/codex/README.md",
+      "sha256": "0ee72656c36d7fb0dc5d6cc10ea9b7b4bfa04e8152dbb54ff8434714e83029c1",
+      "bytes": 4048
+    },
+    {
+      "path": "build_tenants/codex/design/DESIGN.md",
+      "sha256": "b051cc738cc6e9a7d80a3c13e0ad6887fe64f01a8d1f87cce4a0ceb5aa7caca9",
+      "bytes": 8835
+    },
+    {
+      "path": "build_tenants/codex/inventory.json",
+      "sha256": "337d274efde96147c8e9a2db3e3b25f7631731fc8486562c9022ad087833aa36",
+      "bytes": 2098
+    },
+    {
+      "path": "build_tenants/codex/skills/stdo-work/SKILL.md",
+      "sha256": "ba6f7ab1e6de875e2f019b049f7817e771474f1b511a74fe2392a55a37078ee8",
+      "bytes": 3116
+    },
+    {
+      "path": "build_tenants/codex/skills/stdo-work/references/basis.md",
+      "sha256": "7b409d4895e7be3291e4e41c32e497ae045e9fb4b62f01b9622b10888d449cda",
+      "bytes": 2694
+    },
+    {
+      "path": "build_tenants/codex/skills/stdo-work/references/delegation.md",
+      "sha256": "0bb621b4d6edb17f2100878a567596f85a52b517edfafbb2ceba7119dce8bfde",
+      "bytes": 2969
+    },
+    {
+      "path": "build_tenants/codex/skills/stdo-work/references/qualification.md",
+      "sha256": "dda296ed053f3e8ed5ab4cdc7c7b9f162754832fc89ded9280044d96f9dc795c",
+      "bytes": 3001
+    },
+    {
+      "path": "build_tenants/codex/skills/stdo-work/references/recovery.md",
+      "sha256": "d7f7f118eea492bb64456a56c4cb4987e6e23acd8b3c0143ba87cf5ec9a92c80",
+      "bytes": 3010
+    },
+    {
+      "path": "build_tenants/codex/skills/stdo-work/references/release-install.md",
+      "sha256": "ec7cb5a407f6690936d0bf79ab5fc8796c2cfca4c34772f61ceff4b68f337cfb",
+      "bytes": 2422
+    },
+    {
+      "path": "build_tenants/codex/skills/stdo-work/references/tools.md",
+      "sha256": "8bb49c0dfe0eb87fbfbe5063c4a43e15f074e25fdd4ff90ffdec24ef14e75c8b",
+      "bytes": 4116
+    },
+    {
+      "path": "build_tenants/codex/skills/stdo-work/source-routes.json",
+      "sha256": "09972e4af512645c43207aa3edd5114e1e81c24ef344c76a6af2e99852920403",
+      "bytes": 3501
+    },
+    {
+      "path": "build_tenants/codex/tests/verify_package.py",
+      "sha256": "65ec9851967a60ab6f25f4c988b2ddbc05642ce44ae71401d6f1bf99f5ec0086",
+      "bytes": 4512
+    }
+  ],
+  "assessment": {
+    "path": ".ai-workspace/work/T001/codex/actor/successor-1/ASSESSMENT.json",
+    "sha256": "6211a14cfc253060efe8e7a00b828d4a999a26a859ed34fb2c6655eb940be60b"
+  },
+  "direct_pid_check": {
+    "argv": [
+      "ps",
+      "-p",
+      "15228,15534",
+      "-o",
+      "pid=,comm="
+    ],
+    "returncode": 1,
+    "stdout": ""
+  },
+  "root_process_search": "Root reported no remaining successor-1/tenant commands; this record does not infer universal external/descendant effect absence"
+}

@@ -1,0 +1,485 @@
+{
+  "authority_sources": [
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": ".ai-workspace/tickets/active/T-001-skills-dogfood.md",
+      "root": "product",
+      "selector": null,
+      "sha256": "68b017d73184733647531a56348026e1b1b37c2f230f6d891e8550c4c3a892f5"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "DECISIONS.md",
+      "root": "successor",
+      "selector": null,
+      "sha256": "f76473b29ea33fa724466b209740c9e3d11e267b25afedbd898b89d0df60ae24"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "SELECTION.json",
+      "root": "publication",
+      "selector": null,
+      "sha256": "ed43991c87bc27471f8f9676aa515229d29a6503d1a407b2d63b351bd30c8794"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "TASK.md",
+      "root": "publication",
+      "selector": null,
+      "sha256": "6d3390321f90f06668bbea9c6f83ea679d9ae3a593ffb139f5dc6812734414fc"
+    }
+  ],
+  "event_sinks": {},
+  "evidence_root": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/operator/protected-evidence",
+  "executors": {},
+  "grants": {
+    "urn:stdo-skills:T001:final-status-publication:1:write": {
+      "admission": {
+        "allowed_override_sources": [],
+        "authority_source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "OWNER.json",
+          "root": "successor",
+          "selector": null,
+          "sha256": "b242da1143fba21ea62742c1d1e5e92687e5fd7bba48ddbd34f405ef542e83ab"
+        },
+        "mechanism_id": "product-policy-preflight/1",
+        "mechanism_source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/code/ac_support_core.py",
+          "root": "tool",
+          "selector": null,
+          "sha256": "bf72a28444e0497cd564066e41c7e5943810d5a2e0be5488c92fa5add5a67209"
+        },
+        "required_predicates": []
+      },
+      "authority_sources": [
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": ".ai-workspace/tickets/active/T-001-skills-dogfood.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "68b017d73184733647531a56348026e1b1b37c2f230f6d891e8550c4c3a892f5"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "DECISIONS.md",
+          "root": "successor",
+          "selector": null,
+          "sha256": "f76473b29ea33fa724466b209740c9e3d11e267b25afedbd898b89d0df60ae24"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "SELECTION.json",
+          "root": "publication",
+          "selector": null,
+          "sha256": "ed43991c87bc27471f8f9676aa515229d29a6503d1a407b2d63b351bd30c8794"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "TASK.md",
+          "root": "publication",
+          "selector": null,
+          "sha256": "6d3390321f90f06668bbea9c6f83ea679d9ae3a593ffb139f5dc6812734414fc"
+        }
+      ],
+      "executors": [],
+      "id": "urn:stdo-skills:T001:final-status-publication:1:write",
+      "notification_sink": null,
+      "operations": [
+        "work.write"
+      ],
+      "outcome": {
+        "id": "urn:stdo-skills:T001:final-status-publication:1:selected-status",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "TASK.md",
+          "root": "publication",
+          "selector": null,
+          "sha256": "6d3390321f90f06668bbea9c6f83ea679d9ae3a593ffb139f5dc6812734414fc"
+        }
+      },
+      "preconditions": [
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "specification/INTENT.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "c6c8d5083ce154fa5f1782b4a789c4ff96b65a18eabc28339c79857b131ad895"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "specification/requirements/README.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "dcc2564e597d3d3c8fcff025a515f4a92a62e7f3aa2f7ba80af97f7db75f6acc"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "specification/requirements/SCENARIOS.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "089221fb9d7eee532f91c6ef40a4bfdaaa18c00fcc28bc2f538ddd6b6e3ff03e"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "specification/SOURCE_OWNERS.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "15300e9871b842cb6ab81b360fe9717766638e82abc2d1cf06c5cebc2febfca3"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "stdo_skills.json",
+          "root": "product",
+          "selector": null,
+          "sha256": "4339a7dbc735052c08962154966fc13a4e30206d42ba2e80b53c6009a5008c22"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/design/fd-method-stdo-3.0.1.json",
+          "root": "tool",
+          "selector": null,
+          "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "PAYLOADS.json",
+          "root": "staged",
+          "selector": null,
+          "sha256": "6b0e10903240b2809b1fe003f338020f4dd97656d936d4bd5fa0a9eef02d8fb5"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "CUSTODY.json",
+          "root": "staged",
+          "selector": null,
+          "sha256": "4a4d05c7e500ab175609de76d51d40bfa4efcbb2f264adabcb1bea3d8471b7c4"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "SELECTION.json",
+          "root": "publication",
+          "selector": null,
+          "sha256": "ed43991c87bc27471f8f9676aa515229d29a6503d1a407b2d63b351bd30c8794"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "TASK.md",
+          "root": "publication",
+          "selector": null,
+          "sha256": "6d3390321f90f06668bbea9c6f83ea679d9ae3a593ffb139f5dc6812734414fc"
+        }
+      ],
+      "principals": [
+        "writer"
+      ],
+      "targets": [
+        "writer"
+      ],
+      "territory": [
+        {
+          "kind": "file",
+          "path": ".ai-workspace/tickets/active/T-001-skills-dogfood.md",
+          "root": "product"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/work/T001/DELIVERY.md",
+          "root": "product"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/work/T001/EVIDENCE-INDEX.json",
+          "root": "product"
+        },
+        {
+          "kind": "file",
+          "path": "README.md",
+          "root": "product"
+        },
+        {
+          "kind": "file",
+          "path": "specification/GOALS.md",
+          "root": "product"
+        },
+        {
+          "kind": "file",
+          "path": "specification/PRODUCT.md",
+          "root": "product"
+        },
+        {
+          "kind": "file",
+          "path": "specification/REFERENCE_FRAME_BASIS.md",
+          "root": "product"
+        }
+      ],
+      "tools": [
+        "a_c.public-native301"
+      ]
+    }
+  },
+  "id": "urn:stdo-skills:T001:final-status-publication:1",
+  "independence_policy": null,
+  "limits": {
+    "max_bytes": 67108864,
+    "max_files": 2048,
+    "max_history_records": 50000,
+    "max_message_bytes": 4194304,
+    "max_wait_ms": 1000
+  },
+  "method_profile": {
+    "id": "urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1",
+    "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7",
+    "source": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "build_tenants/graphify/design/fd-method-stdo-3.0.1.json",
+      "root": "tool",
+      "selector": null,
+      "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+    }
+  },
+  "operators": {},
+  "predicates": {},
+  "principals": {
+    "writer": {
+      "actor_id": "/root/skills_common_writer",
+      "authorship": "Bounded native collaboration Writer publishing Root-selected status bytes; no external dispatch identity claimed",
+      "family": "openai-codex",
+      "operations": [
+        "tools.describe",
+        "workspace.observe",
+        "source.read",
+        "evidence.read",
+        "work.write"
+      ],
+      "role": "Worker",
+      "role_binding": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "TASK.md",
+        "root": "publication",
+        "selector": null,
+        "sha256": "6d3390321f90f06668bbea9c6f83ea679d9ae3a593ffb139f5dc6812734414fc"
+      },
+      "role_transition": null
+    }
+  },
+  "product": {
+    "authority_binding": {
+      "definition_locator": "/how/common/1",
+      "mechanism": {
+        "id": "product-policy-preflight/1",
+        "implementation_sha256": "bf72a28444e0497cd564066e41c7e5943810d5a2e0be5488c92fa5add5a67209",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/code/ac_support_core.py",
+          "root": "tool",
+          "selector": null,
+          "sha256": "bf72a28444e0497cd564066e41c7e5943810d5a2e0be5488c92fa5add5a67209"
+        }
+      },
+      "owner_record": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "OWNER.json",
+        "root": "successor",
+        "selector": null,
+        "sha256": "b242da1143fba21ea62742c1d1e5e92687e5fd7bba48ddbd34f405ef542e83ab"
+      },
+      "result_surface": {
+        "consumer": "root-executive",
+        "namespace": "T001",
+        "root": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/operator/protected-evidence"
+      },
+      "scope": {
+        "common_inventory_sha256": "a6d348b8385ea453ce29362fb9d74559304b1b91743b3c9ea31a83a9f02b5f2d",
+        "executive": "/root",
+        "manifest_sha256": "60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8",
+        "method": "stdo://releases/v3.0.1-rc.1/",
+        "no_global_configuration_changes": true,
+        "no_publication": true,
+        "owner": "Jim",
+        "product": "urn:stdo:product-definition:stdo-skills",
+        "work": "T001 successor construction of two independent skill tenants"
+      }
+    },
+    "definition": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "stdo_skills.json",
+      "root": "product",
+      "selector": null,
+      "sha256": "4339a7dbc735052c08962154966fc13a4e30206d42ba2e80b53c6009a5008c22"
+    },
+    "definition_id": "urn:stdo:product-definition:stdo-skills"
+  },
+  "schema": "a_c.fd-support.policy/1",
+  "sources": {
+    "method": {
+      "kind": "workspace",
+      "path": "/Users/jim/Library/Application Support/STDO/releases/v3.0.1-rc.1",
+      "read_scope": [
+        {
+          "kind": "directory",
+          "path": "standards"
+        },
+        {
+          "kind": "file",
+          "path": "manifest.json"
+        }
+      ],
+      "writable": false
+    },
+    "product": {
+      "kind": "workspace",
+      "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills",
+      "read_scope": [
+        {
+          "kind": "file",
+          "path": ".ai-workspace/tickets/active/T-001-skills-dogfood.md"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/work/T001/DELIVERY.md"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/work/T001/EVIDENCE-INDEX.json"
+        },
+        {
+          "kind": "file",
+          "path": "README.md"
+        },
+        {
+          "kind": "file",
+          "path": "specification/GOALS.md"
+        },
+        {
+          "kind": "file",
+          "path": "specification/INTENT.md"
+        },
+        {
+          "kind": "file",
+          "path": "specification/PRODUCT.md"
+        },
+        {
+          "kind": "file",
+          "path": "specification/REFERENCE_FRAME_BASIS.md"
+        },
+        {
+          "kind": "file",
+          "path": "specification/SOURCE_OWNERS.md"
+        },
+        {
+          "kind": "file",
+          "path": "specification/requirements/README.md"
+        },
+        {
+          "kind": "file",
+          "path": "specification/requirements/SCENARIOS.md"
+        },
+        {
+          "kind": "file",
+          "path": "stdo_skills.json"
+        }
+      ],
+      "writable": true
+    },
+    "publication": {
+      "kind": "workspace",
+      "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/final-integration/publication-1",
+      "read_scope": [
+        {
+          "kind": "file",
+          "path": "SELECTION.json"
+        },
+        {
+          "kind": "file",
+          "path": "TASK.md"
+        }
+      ],
+      "writable": false
+    },
+    "staged": {
+      "kind": "workspace",
+      "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/final-integration/draft-2",
+      "read_scope": [
+        {
+          "kind": "file",
+          "path": "PAYLOADS.json"
+        },
+        {
+          "kind": "file",
+          "path": "CUSTODY.json"
+        },
+        {
+          "kind": "file",
+          "path": "FREEZE.json"
+        },
+        {
+          "kind": "directory",
+          "path": "payloads"
+        },
+        {
+          "kind": "directory",
+          "path": "custody"
+        }
+      ],
+      "writable": false
+    },
+    "successor": {
+      "kind": "workspace",
+      "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/operator/successor-1",
+      "read_scope": [
+        {
+          "kind": "file",
+          "path": "OWNER.json"
+        },
+        {
+          "kind": "file",
+          "path": "DECISIONS.md"
+        },
+        {
+          "kind": "file",
+          "path": "TOOL-BASIS.json"
+        }
+      ],
+      "writable": false
+    },
+    "tool": {
+      "kind": "workspace",
+      "path": "/Users/jim/src/apps/specification_methodology-skills/a_c",
+      "read_scope": [
+        {
+          "kind": "directory",
+          "path": "build_tenants/graphify"
+        }
+      ],
+      "writable": false
+    }
+  }
+}

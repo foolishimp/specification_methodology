@@ -1,0 +1,3 @@
+# One read-only same-session close
+
+Root selected reentry to session 3f43aa78-a75d-4a83-a00a-f53a718022d2 only to return a truthful final observation of acknowledged deployment effects. No workspace or report writes, work.write, scratch, cleanup, publication, acceptance, redeployment or retries. Prior mutation grants are suspended for this turn. The new native policy has no mutation operation or grant; exposed built-in tools are Read, Glob and Grep. A distinct control Product owns only read observation, transport and evidence custody. Old Product files and their old authority records are historical inputs, not grants for this continuation. No tool or package update occurs. Root separately selects actual dispatch.

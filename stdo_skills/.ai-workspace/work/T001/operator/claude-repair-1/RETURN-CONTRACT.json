@@ -1,0 +1,54 @@
+{
+  "authority_source": {
+    "engine": "workspace-regular-file",
+    "object": null,
+    "path": "TASK.md",
+    "root": "repair",
+    "selector": null,
+    "sha256": "554062cf5564213b58e3621b1aa50698f51767e5a17bc0acaf32aedcca22ff9f"
+  },
+  "carrier": "a_c.fd-support.closed-return/1",
+  "id": "urn:stdo-skills:T001:claude:direct-repair:1:return",
+  "output_slot": "final_stdout_object",
+  "proof": {
+    "predicate_ids": [],
+    "transition_sources": []
+  },
+  "required_evaluations": [
+    {
+      "id": "F-C02",
+      "predicate": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "PREDICATES.md",
+        "root": "repair",
+        "selector": null,
+        "sha256": "532a47573d81e74d4b3f67571542baa870e0efa6a384935ab065c0de308a119c"
+      }
+    },
+    {
+      "id": "F-C03",
+      "predicate": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "PREDICATES.md",
+        "root": "repair",
+        "selector": null,
+        "sha256": "532a47573d81e74d4b3f67571542baa870e0efa6a384935ab065c0de308a119c"
+      }
+    },
+    {
+      "id": "F-C04",
+      "predicate": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "PREDICATES.md",
+        "root": "repair",
+        "selector": null,
+        "sha256": "532a47573d81e74d4b3f67571542baa870e0efa6a384935ab065c0de308a119c"
+      }
+    }
+  ],
+  "role": "Worker",
+  "schema": "a_c.fd-support.return-contract/1"
+}

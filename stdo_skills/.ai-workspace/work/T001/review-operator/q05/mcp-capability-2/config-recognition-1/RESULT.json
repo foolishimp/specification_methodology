@@ -1,0 +1,104 @@
+{
+  "standing": "Local configuration parser control only; no model or MCP invocation",
+  "utc": "2026-10-25T03:43:53.694071+00:00",
+  "executable": {
+    "path": "/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex",
+    "sha256": "d8990e3ee7acfbc26f91265b12a1a83f0fee40d0e0f8f1f40a37d4ec21f499cf"
+  },
+  "cases": [
+    {
+      "case": "quoted-valid",
+      "argv": [
+        "/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex",
+        "-c",
+        "mcp_servers.stdo_q05_probe.command=\"python3\"",
+        "-c",
+        "mcp_servers.stdo_q05_probe.tools.\"tools.describe\".approval_mode=\"approve\"",
+        "features",
+        "list"
+      ],
+      "returncode": 0,
+      "stdout": {
+        "path": "quoted-valid.stdout",
+        "sha256": "4dfbad513b863240aa75bf0acec2388d3ed8bc1a57c382e80f9de3d3cdc757df"
+      },
+      "stderr": {
+        "path": "quoted-valid.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "case": "quoted-invalid",
+      "argv": [
+        "/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex",
+        "-c",
+        "mcp_servers.stdo_q05_probe.command=\"python3\"",
+        "-c",
+        "mcp_servers.stdo_q05_probe.tools.\"tools.describe\".approval_mode=\"not-a-valid-mode\"",
+        "features",
+        "list"
+      ],
+      "returncode": 0,
+      "stdout": {
+        "path": "quoted-invalid.stdout",
+        "sha256": "4dfbad513b863240aa75bf0acec2388d3ed8bc1a57c382e80f9de3d3cdc757df"
+      },
+      "stderr": {
+        "path": "quoted-invalid.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "case": "table-valid",
+      "argv": [
+        "/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex",
+        "-c",
+        "mcp_servers.stdo_q05_probe.command=\"python3\"",
+        "-c",
+        "mcp_servers.stdo_q05_probe.tools={\"tools.describe\"={approval_mode=\"approve\"}}",
+        "features",
+        "list"
+      ],
+      "returncode": 0,
+      "stdout": {
+        "path": "table-valid.stdout",
+        "sha256": "4dfbad513b863240aa75bf0acec2388d3ed8bc1a57c382e80f9de3d3cdc757df"
+      },
+      "stderr": {
+        "path": "table-valid.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "case": "table-invalid",
+      "argv": [
+        "/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex",
+        "-c",
+        "mcp_servers.stdo_q05_probe.command=\"python3\"",
+        "-c",
+        "mcp_servers.stdo_q05_probe.tools={\"tools.describe\"={approval_mode=\"not-a-valid-mode\"}}",
+        "features",
+        "list"
+      ],
+      "returncode": 1,
+      "stdout": {
+        "path": "table-invalid.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "table-invalid.stderr",
+        "sha256": "30296e2834b9f0ec0084864a048326043dd368045df2f5024ed950943b417825",
+        "text": "Error: failed to load bootstrap configuration\n\nCaused by:\n    unknown variant `not-a-valid-mode`, expected one of `auto`, `prompt`, `writes`, `approve`\n    in `mcp_servers.stdo_q05_probe.tools.tools.describe.approval_mode`\n    \n"
+      }
+    }
+  ],
+  "result": "The table-valued override reaches the exact host schema: valid approve succeeds and invalid enum refuses. The quoted dotted-key override does not validate the invalid enum. Its actual prior host trace explicitly ignored that quoted dotted key.",
+  "limits": [
+    "Metadata command acceptance establishes configuration parsing, not successful MCP approval or dispatch.",
+    "--strict-config is unsupported by codex features and codex mcp; no strict-config success claimed.",
+    "No global configuration, sandbox, network, approval-policy or model setting changed."
+  ]
+}

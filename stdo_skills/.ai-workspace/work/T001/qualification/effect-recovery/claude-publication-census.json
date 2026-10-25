@@ -1,0 +1,79 @@
+{
+  "schema": "stdo_skills.actual-effect-census/1",
+  "counter_expected_publications": 1,
+  "actual_successful_counter_publications": 1,
+  "host_counter_write_attempts": 0,
+  "operations": [
+    {
+      "artifact": "01baed3fe41a475085a2c87ad027e229d9633debc8b214baea0cd75d6068fc76",
+      "principal": "primer",
+      "request_id": "qualification-q08-increment-once",
+      "target": "effects/counter.txt",
+      "status": "ok",
+      "effect": {
+        "core_value": "satisfied",
+        "end_established": true,
+        "observed_interval": {
+          "clock": "unix_ns",
+          "ended_ns": 1792899048231716000,
+          "started_ns": 1792899048231436000
+        },
+        "scope": "one qualified atomic target-file publication",
+        "value": "completed"
+      },
+      "started_ns": 1792899048235906000
+    },
+    {
+      "artifact": "20e47669f8b0b0157c149918256fb28c1851569d2551016aac1c2ae8ac2e8385",
+      "principal": "host",
+      "request_id": "combined-recovery-write-continuation-1",
+      "target": "outputs/continuation.md",
+      "status": "ok",
+      "effect": {
+        "core_value": "satisfied",
+        "end_established": true,
+        "observed_interval": {
+          "clock": "unix_ns",
+          "ended_ns": 1792899622047995000,
+          "started_ns": 1792899622047522000
+        },
+        "scope": "one qualified atomic target-file publication",
+        "value": "completed"
+      },
+      "started_ns": 1792899622053663000
+    },
+    {
+      "artifact": "564f6a8623d60d57c53dcc1ad453bd01c447482748cf0d438319066d5ded2bf8",
+      "principal": "host",
+      "request_id": "combined-recovery-write-recovery-1",
+      "target": "outputs/recovery.md",
+      "status": "refused",
+      "effect": null,
+      "started_ns": 1792899751438378000
+    },
+    {
+      "artifact": "fe3c69f1a0887bbfe20427235a8fda2b6247244fd0c80673dd64f5189cd3f1f8",
+      "principal": "host",
+      "request_id": "combined-recovery-write-recovery-2",
+      "target": "outputs/recovery.md",
+      "status": "ok",
+      "effect": {
+        "core_value": "satisfied",
+        "end_established": true,
+        "observed_interval": {
+          "clock": "unix_ns",
+          "ended_ns": 1792899854221944000,
+          "started_ns": 1792899854221486000
+        },
+        "scope": "one qualified atomic target-file publication",
+        "value": "completed"
+      },
+      "started_ns": 1792899854226713000
+    }
+  ],
+  "counter_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+  "evidence_root": "/private/tmp/stdo-skills-claude-recovery-95upc9_0/control/evidence",
+  "portable_operation_population": "Each listed exact object is retained in results/claude-combined-recovery/public-evidence",
+  "native_command_trace_checked": "11 Bash commands are source listing/reading, hashing and status inspection; no direct counter mutation",
+  "standing": "Complete retained native work.write census across primer and host plus actual command/postimage inspection; not inferred from final bytes alone"
+}

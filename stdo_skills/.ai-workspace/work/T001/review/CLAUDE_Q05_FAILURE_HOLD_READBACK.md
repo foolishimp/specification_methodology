@@ -1,0 +1,21 @@
+# Claude Q05: actual failure and Executive hold
+
+Native Reviewer `/root/skills_independent_review`; bounded independent readback against the pre-existing expectations, common Q05 and frozen Claude transport boundary. Only this review artifact is written by the directly permitted review-directory route. No candidate/configuration edits, credential-value inspection, actor launch or repair.
+
+**Mandatory Claude ordinary-CLI Q05 remains OPEN/unestablished.** The observed MCP-mediated attempts supply supplemental operator-assisted integration evidence outside the frozen tenant's declared ordinary transport. They establish failed child execution and an actual Executive hold, not successful construction/review or a diagnosed skill implementation defect. Root selected no further authentication repair, family substitution or fixture.
+
+## Bound subject and actual path
+
+`review-operator/q05/claude-handoff-3/control/Q05-CAPTURE-1/RETURN.json` SHA-256 `a071b82fa284d4c66bb1089e1873deb163fe8f6ff45140e4429850f4c61db36c`; FILE-INVENTORY.json `352a5cc6857c7d3e6272ee90e2d54bbead653e53650d71043c04d9922667fb6e`. All 266 selected member hashes match. This supplements the earlier transport-boundary record `970e145c…` and prelaunch relation appraisal `c9e0ff44…`; preparation fitness did not establish runtime authentication.
+
+Both actual Worker captures (`child-output/worker-reentry1` and `child-output/worker-auth1`) contain three public events: host initialization, the login-refusal text, and an error result. Neither contains a tool call. Both process records report exit 1 with complete streams and unavailable declared actor output. The later selected attempt is `2bf679761388a7ca685a5b2898b4bc97c68709b31dbc827a74c0bd1c09c75cf5`; despite the directory name worker-auth1, its invocation plan matches the unchanged plan selected by worker-auth-2.
+
+The final Executive really performs preflight (raw line 27), dispatch (56), observe (62), capture (98), then check. Its first check (132) mistypes the Context hash and is refused; the corrected call (145) uses exact Context `e00fc354…`. Capture `4bc519a5fb2b0ab5106efc69c13d14ce25a9e0b12c3b794cd12a80a1a7322a65` retains `original=null` and the empty payload. Check `ff01f353eb6d8bc748bc14bf85357bda517d739b5828b24424e52b1d48a5fe25` is nonconsumable with malformed-JSON gap and no performed checks. No semantic Worker result can be inferred from it. The Executive's original final answer at raw line 188 stops and withholds candidate review; its own process exits 0 with complete streams. That parent closure is not child or Q05 success.
+
+Current greeting remains `Hello, Grace.\n`, hash `dbfa3fcacaedf5e16d125ee1410774c6cb2d0bbd0a9fb07cacfe87fd362d29c7`; sentinel remains `56686d9c…`. The inspected native store contains zero work.write operations. The final phase's Bash calls read/compute; they do not construct a candidate. The actual source-first Reviewer expectation `9f6e54eb…` remains retained, with candidate assessment unperformed.
+
+## Precision and retained limits
+
+**S4 report-precision note:** the parent's final contrast between selected-token presence and empty protected-environment metadata is not contradictory credential evidence. Frozen `actor_cli.py` lines 386–404 show that `protected_environment_pass_through` contains only HOME/home/CODEX_HOME; `environment_passthrough` separately records allowlisted credential-name presence. The first nested attempt records false, the later attempt true. The host still reports not logged in. These observations do not identify why authentication failed or establish credential validity. The report's proposed reconciliation is not a further repair selection.
+
+Retain the earlier tool-name denial, malformed policy refusal, observation-array mismatch and failed login, not a clean first-pass story. The supplied local-settings exposure audit (`1d3243c5…`) is finite and does not prove general absence of secret exposure; no clean-scope claim follows. Seven recorded actor PIDs were absent at capture, while full descendant/external effects remain unknown. Cost and host-context size are unknown. The gap concerns qualification and Executive fixture selection; it does not automatically demonstrate an implementation defect in the Claude skill. Owner acceptance, publication and full Product qualification remain separate.

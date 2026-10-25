@@ -1,0 +1,122 @@
+{
+  "$schema": "stdo://releases/v3.0.1-rc.1/standards/schemas/product-definition.schema.json",
+  "composition": [],
+  "constitution": {
+    "additional_authorities": [
+      "./specification/INTENT.md",
+      "./specification/PRODUCT.md"
+    ],
+    "agent_bootstrap": {
+      "entrypoint": "#/constitution/entrypoints/0",
+      "targets": [
+        "./AGENTS.md",
+        "./CLAUDE.md"
+      ]
+    },
+    "entrypoints": [
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/frames/bootstrap.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/SPEC_METHOD.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/REFERENCE_FRAME.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/EXECUTIVE_BASELINE.md"
+      }
+    ],
+    "stdo": {
+      "basis": {
+        "manifest_sha256": "60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8",
+        "uri": "stdo://releases/v3.0.1-rc.1/"
+      },
+      "selector": "stdo://channels/3.0.1",
+      "source": {
+        "repository": "https://github.com/foolishimp/specification_methodology.git"
+      }
+    }
+  },
+  "how": {
+    "build_tenants": [
+      {
+        "design": [
+          "./build_tenants/codex/design/"
+        ],
+        "id": "urn:stdo-skills:build-tenant:codex",
+        "implementation": [
+          "./build_tenants/codex/skills/"
+        ],
+        "root": "./build_tenants/codex/"
+      },
+      {
+        "design": [
+          "./build_tenants/claude/design/"
+        ],
+        "id": "urn:stdo-skills:build-tenant:claude",
+        "implementation": [
+          "./build_tenants/claude/skills/"
+        ],
+        "root": "./build_tenants/claude/"
+      }
+    ],
+    "common": [
+      "./.ai-workspace/work/T001/operator/OWNER.json"
+    ]
+  },
+  "kind": "stdo.product-definition",
+  "local_constitution": {
+    "axioms": [],
+    "disambiguations": [],
+    "overrides": []
+  },
+  "product": {
+    "bounded_context": {
+      "definition": "./specification/PRODUCT.md#product-boundary",
+      "id": "urn:stdo-skills:bounded-context:agent-method-application"
+    },
+    "definition_id": "urn:stdo:product-definition:stdo-skills",
+    "name": "STDO Skills",
+    "source_project": "./"
+  },
+  "reference_frame_bases": [
+    {
+      "applies_to": [
+        "urn:stdo:product-definition:stdo-skills"
+      ],
+      "authority": [
+        "./specification/PRODUCT.md#construction-authority"
+      ],
+      "uri": "./specification/REFERENCE_FRAME_BASIS.md"
+    }
+  ],
+  "ticketing": {
+    "comments": {
+      "root": "./.ai-workspace/comments/"
+    },
+    "goals": "./specification/GOALS.md",
+    "sprints": {
+      "root": "./.ai-workspace/sprints/"
+    },
+    "tickets": {
+      "lanes": {
+        "active": "./.ai-workspace/tickets/active/",
+        "backlog": "./.ai-workspace/tickets/backlog/",
+        "completed": "./.ai-workspace/tickets/completed/"
+      },
+      "root": "./.ai-workspace/tickets/"
+    }
+  },
+  "what": {
+    "intent": "./specification/INTENT.md",
+    "product": "./specification/PRODUCT.md",
+    "specification": [
+      "./specification/requirements/"
+    ]
+  }
+}

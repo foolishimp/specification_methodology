@@ -1,0 +1,397 @@
+{
+  "actual_parent_disposition": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/Q05-CAPTURE-1/ACTUAL-EXECUTIVE-DISPOSITION.md",
+    "sha256": "1e77f90c3f6c6fd623708143246236a645d09a83e90e93b682a2661da6271e44",
+    "size_bytes": 3830
+  },
+  "actual_return_check": {
+    "id": "sha256:ff01f353eb6d8bc748bc14bf85357bda517d739b5828b24424e52b1d48a5fe25",
+    "sha256": "ff01f353eb6d8bc748bc14bf85357bda517d739b5828b24424e52b1d48a5fe25"
+  },
+  "actual_source_first_expectation": "9f6e54ebe544dcc4617512915684f55e85be7445a54cca6738aa98586dd0744f",
+  "candidate_effects_observed": false,
+  "candidate_review_performed": false,
+  "capture_evidence": {
+    "id": "sha256:a9e3ea6c82af0b5a0e04a8a0b19f5f1500f7747db934eb0788e4dda08ddcd500",
+    "sha256": "a9e3ea6c82af0b5a0e04a8a0b19f5f1500f7747db934eb0788e4dda08ddcd500"
+  },
+  "captured_failure": {
+    "id": "sha256:4bc519a5fb2b0ab5106efc69c13d14ce25a9e0b12c3b794cd12a80a1a7322a65",
+    "sha256": "4bc519a5fb2b0ab5106efc69c13d14ce25a9e0b12c3b794cd12a80a1a7322a65"
+  },
+  "case": "Claude Q05 supplemental operator-assisted MCP handoff",
+  "consumable": false,
+  "credential_boundary": "The selected name was absent on first nested attempt and present on the explicit local-env attempt; both actual hosts failed login before tools. Presence does not establish valid credential transport. Values were never read, printed or hashed for diagnosis.",
+  "credential_observations": [
+    {
+      "observation": [
+        {
+          "name": "CLAUDE_CODE_OAUTH_TOKEN",
+          "present": true
+        }
+      ],
+      "source": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/actor-output/reentry-1/actor-output/invocation.json",
+        "sha256": "a2fc8d9e1b0772afe60b120a2dc9441d03020640f21371c8f475e4c8b177f24c",
+        "size_bytes": 4003
+      }
+    },
+    {
+      "observation": [
+        {
+          "name": "CLAUDE_CODE_OAUTH_TOKEN",
+          "present": false
+        }
+      ],
+      "source": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/child-output/worker-reentry1/invocation.json",
+        "sha256": "ec35fb9aca37e6bcc1d48d5dd27ee96499f6238a05a02ef6ac8f4e26006a8573",
+        "size_bytes": 8179
+      }
+    },
+    {
+      "observation": [
+        {
+          "name": "CLAUDE_CODE_OAUTH_TOKEN",
+          "present": true
+        }
+      ],
+      "source": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/actor-output/worker-auth-2/actor-output/invocation.json",
+        "sha256": "9305269eda5ec412060ad0ba8253edb7d30f6220965965695d093d575f7c9578",
+        "size_bytes": 4011
+      }
+    },
+    {
+      "observation": [
+        {
+          "name": "CLAUDE_CODE_OAUTH_TOKEN",
+          "present": true
+        }
+      ],
+      "source": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/child-output/worker-auth1/invocation.json",
+        "sha256": "c5dfb2d083432f5c62eb06102445b452a172f7704152517ce73a4e3361f3f47a",
+        "size_bytes": 8194
+      }
+    }
+  ],
+  "greeting_unchanged": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/workspace/outputs/greeting.txt",
+    "sha256": "dbfa3fcacaedf5e16d125ee1410774c6cb2d0bbd0a9fb07cacfe87fd362d29c7",
+    "size_bytes": 14
+  },
+  "helpers": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/Q05-CAPTURE-1/SELECTED-HELPERS.json",
+    "sha256": "16e8568bf1e1fe8c082b8cffe82d63c18fd92765269eef71285733fa904f5d4a",
+    "size_bytes": 8576
+  },
+  "installed_skill_acquisition": {
+    "line": 43,
+    "operation": "Actual Skill invocation of stdo-delegate-review",
+    "source": {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/actor-output/vendor.stdout",
+      "sha256": "b28ad09eae28a98b2b6a850b07da29d71e37ad870952edaa61e00366ea3db806",
+      "size_bytes": 698665
+    }
+  },
+  "inventory": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/Q05-CAPTURE-1/FILE-INVENTORY.json",
+    "sha256": "352a5cc6857c7d3e6272ee90e2d54bbead653e53650d71043c04d9922667fb6e",
+    "size_bytes": 84698
+  },
+  "latest_worker_attempt": "2bf679761388a7ca685a5b2898b4bc97c68709b31dbc827a74c0bd1c09c75cf5",
+  "latest_worker_dispatch_evidence": "e745b07a38fdc38e5be21edea0dc19ad554980f9f9477a64c7fa46384592f25e",
+  "limits": [
+    "No mandatory Claude ordinary-CLI Q05 pass, candidate semantic result, candidate review, owner acceptance or publication.",
+    "These failures do not automatically establish a skill implementation defect.",
+    "No additional auth repair, credential alias, mixed-host substitution or fixture selected.",
+    "Known actor PIDs absent; full descendant/external-effect absence remains unknown.",
+    "Explicit operator preparation/correction and host settings are part of this supplemental evidence.",
+    "Total cost and host context size unknown; no efficiency claim."
+  ],
+  "processes": [
+    {
+      "pid_absent": true,
+      "process": {
+        "ended_ns": 1792901596226529000,
+        "failure": null,
+        "input_bytes": 1012,
+        "input_forwarded_bytes": 1012,
+        "output_available": true,
+        "pid": 22934,
+        "returncode": 0,
+        "schema": "a_c.fd-support.actor-cli-observation/1",
+        "started_ns": 1792901329037201000,
+        "stderr_bytes": 0,
+        "stderr_eof": true,
+        "stdout_bytes": 698665,
+        "stdout_eof": true,
+        "termination_requests": [],
+        "unknowns": [
+          "descendant/process-tree end and external side effects",
+          "host/model active-context size",
+          "backend retries or unreported usage",
+          "semantic outcome and owner disposition"
+        ]
+      },
+      "process_source": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/actor-output/process.json",
+        "sha256": "279f0cadc3aa7dc3dda7c3aa23f5f5b536dc361396d7242793d70c9d61d989fd",
+        "size_bytes": 512
+      },
+      "role_path": "actor-output",
+      "trace": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/actor-output/vendor.stdout",
+        "sha256": "b28ad09eae28a98b2b6a850b07da29d71e37ad870952edaa61e00366ea3db806",
+        "size_bytes": 698665
+      }
+    },
+    {
+      "pid_absent": true,
+      "process": {
+        "ended_ns": 1792902635701170000,
+        "failure": null,
+        "input_bytes": 1199,
+        "input_forwarded_bytes": 1199,
+        "output_available": true,
+        "pid": 38263,
+        "returncode": 0,
+        "schema": "a_c.fd-support.actor-cli-observation/1",
+        "started_ns": 1792902127527034000,
+        "stderr_bytes": 0,
+        "stderr_eof": true,
+        "stdout_bytes": 779326,
+        "stdout_eof": true,
+        "termination_requests": [],
+        "unknowns": [
+          "descendant/process-tree end and external side effects",
+          "host/model active-context size",
+          "backend retries or unreported usage",
+          "semantic outcome and owner disposition"
+        ]
+      },
+      "process_source": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/actor-output/reentry-1/actor-output/process.json",
+        "sha256": "ccad3396a9f4677015017b52352bb87885cbb8eda6270ad4f70f166c2e61ed59",
+        "size_bytes": 512
+      },
+      "role_path": "actor-output/reentry-1/actor-output",
+      "trace": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/actor-output/reentry-1/actor-output/vendor.stdout",
+        "sha256": "0c879b608c5a61d236e83f9d105ef13368118142027ac24550cb249d8b37d8cd",
+        "size_bytes": 779326
+      }
+    },
+    {
+      "pid_absent": true,
+      "process": {
+        "ended_ns": 1792903430813644000,
+        "failure": null,
+        "input_bytes": 1424,
+        "input_forwarded_bytes": 1424,
+        "output_available": true,
+        "pid": 58395,
+        "returncode": 0,
+        "schema": "a_c.fd-support.actor-cli-observation/1",
+        "started_ns": 1792903175951845000,
+        "stderr_bytes": 0,
+        "stderr_eof": true,
+        "stdout_bytes": 240589,
+        "stdout_eof": true,
+        "termination_requests": [],
+        "unknowns": [
+          "descendant/process-tree end and external side effects",
+          "host/model active-context size",
+          "backend retries or unreported usage",
+          "semantic outcome and owner disposition"
+        ]
+      },
+      "process_source": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/actor-output/worker-auth-1/actor-output/process.json",
+        "sha256": "3fc7e0ed550ba11c7e1c6180f9d8f8775c8ec119c34d83359427491806ac24d9",
+        "size_bytes": 512
+      },
+      "role_path": "actor-output/worker-auth-1/actor-output",
+      "trace": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/actor-output/worker-auth-1/actor-output/vendor.stdout",
+        "sha256": "ddf2f1bf70822c75c72ead46d763478fe8397bc34932cf0dede3f7fb2a40b988",
+        "size_bytes": 240589
+      }
+    },
+    {
+      "pid_absent": true,
+      "process": {
+        "ended_ns": 1792904353686174000,
+        "failure": null,
+        "input_bytes": 1504,
+        "input_forwarded_bytes": 1504,
+        "output_available": true,
+        "pid": 68043,
+        "returncode": 0,
+        "schema": "a_c.fd-support.actor-cli-observation/1",
+        "started_ns": 1792903847955537000,
+        "stderr_bytes": 0,
+        "stderr_eof": true,
+        "stdout_bytes": 390556,
+        "stdout_eof": true,
+        "termination_requests": [],
+        "unknowns": [
+          "descendant/process-tree end and external side effects",
+          "host/model active-context size",
+          "backend retries or unreported usage",
+          "semantic outcome and owner disposition"
+        ]
+      },
+      "process_source": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/actor-output/worker-auth-2/actor-output/process.json",
+        "sha256": "5f65650c5ac3de322e47a664196b0a250bbb10fbca930a1c31968548873c07c0",
+        "size_bytes": 512
+      },
+      "role_path": "actor-output/worker-auth-2/actor-output",
+      "trace": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/actor-output/worker-auth-2/actor-output/vendor.stdout",
+        "sha256": "7f32f270e600c168fe1c15c68c826f55789a5028af7d93679ff22aec4d5f1b25",
+        "size_bytes": 390556
+      }
+    },
+    {
+      "pid_absent": true,
+      "process": {
+        "ended_ns": 1792902250683863000,
+        "failure": "nonzero parent exit or incomplete input/output transport",
+        "input_bytes": 17968,
+        "input_forwarded_bytes": 17968,
+        "output_available": false,
+        "pid": 41268,
+        "returncode": 1,
+        "schema": "a_c.fd-support.actor-cli-observation/1",
+        "started_ns": 1792902249465099000,
+        "stderr_bytes": 0,
+        "stderr_eof": true,
+        "stdout_bytes": 6473,
+        "stdout_eof": true,
+        "termination_requests": [],
+        "unknowns": [
+          "descendant/process-tree end and external side effects",
+          "host/model active-context size",
+          "backend retries or unreported usage",
+          "semantic outcome and owner disposition"
+        ]
+      },
+      "process_source": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/child-output/worker-reentry1/process.json",
+        "sha256": "265692cc91dd7e3c8b20a22811e9ff5f6e6a66d6018f0a08b3b73da3aaeac608",
+        "size_bytes": 567
+      },
+      "role_path": "child-output/worker-reentry1",
+      "trace": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/child-output/worker-reentry1/vendor.stdout",
+        "sha256": "f5fc5c6856c9c6f45f1caf12b666ea3b574ea00626e07bfa748c9805c01cca55",
+        "size_bytes": 6473
+      }
+    },
+    {
+      "pid_absent": true,
+      "process": {
+        "ended_ns": 1792902424396016000,
+        "failure": null,
+        "input_bytes": 19592,
+        "input_forwarded_bytes": 19592,
+        "output_available": true,
+        "pid": 41330,
+        "returncode": 0,
+        "schema": "a_c.fd-support.actor-cli-observation/1",
+        "started_ns": 1792902252241275000,
+        "stderr_bytes": 39,
+        "stderr_eof": true,
+        "stdout_bytes": 341860,
+        "stdout_eof": true,
+        "termination_requests": [],
+        "unknowns": [
+          "descendant/process-tree end and external side effects",
+          "host/model active-context size",
+          "backend retries or unreported usage",
+          "semantic outcome and owner disposition"
+        ]
+      },
+      "process_source": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/child-output/reviewer-reentry1/process.json",
+        "sha256": "ef772f6b97afd0e405aac9e54e71cb8a6caff36aaff7e561117fa8b62420038d",
+        "size_bytes": 515
+      },
+      "role_path": "child-output/reviewer-reentry1",
+      "trace": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/child-output/reviewer-reentry1/vendor.stdout",
+        "sha256": "f0b91bd84450c348292063562a6d59fa5545f9839923de322bd51e087a30da2e",
+        "size_bytes": 341860
+      }
+    },
+    {
+      "pid_absent": true,
+      "process": {
+        "ended_ns": 1792903912900140000,
+        "failure": "nonzero parent exit or incomplete input/output transport",
+        "input_bytes": 19479,
+        "input_forwarded_bytes": 19479,
+        "output_available": false,
+        "pid": 69315,
+        "returncode": 1,
+        "schema": "a_c.fd-support.actor-cli-observation/1",
+        "started_ns": 1792903911645542000,
+        "stderr_bytes": 0,
+        "stderr_eof": true,
+        "stdout_bytes": 6473,
+        "stdout_eof": true,
+        "termination_requests": [],
+        "unknowns": [
+          "descendant/process-tree end and external side effects",
+          "host/model active-context size",
+          "backend retries or unreported usage",
+          "semantic outcome and owner disposition"
+        ]
+      },
+      "process_source": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/child-output/worker-auth1/process.json",
+        "sha256": "0279c7ef42c5b4e004fd42be84b0f9f29f929279a2c9da1366f91744379f5a68",
+        "size_bytes": 567
+      },
+      "role_path": "child-output/worker-auth1",
+      "trace": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/child-output/worker-auth1/vendor.stdout",
+        "sha256": "3d100e21d9ee44465ef25add3d996712c9f2b76495baed88028b1b4e7452b6f8",
+        "size_bytes": 6473
+      }
+    }
+  ],
+  "retained_history": [
+    "Initial dotted allowedTools names denied before server execution; no child.",
+    "Original malformed IndependencePolicy corrected before successful actual source-only expectation.",
+    "First actual Claude Worker failed login with selected name absent.",
+    "worker-auth-1 preflight array mismatch rejected; actual parent held, no child.",
+    "worker-auth-2 corrected preflight admitted; nested name present but host still failed login.",
+    "Final parent initially mistyped Context SHA for return.check, received source_missing, then used actual Context; both calls retained.",
+    "Initial diagnostic local-settings/prior-control exposure remains recorded in LOCAL-CONFIG-EXPOSURE-AUDIT.json, without a clean-scope claim."
+  ],
+  "sentinel_unchanged": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/workspace/unrelated/sentinel.txt",
+    "sha256": "56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3",
+    "size_bytes": 33
+  },
+  "source_boundary": {
+    "MCP_out_of_scope_line": 121,
+    "design": {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/build_tenants/claude/design/DESIGN.md",
+      "sha256": "86ef9c44fd8293b3120ad5ba5f508e20e20adf10b7b1f10eae51b7f3c9a1e43e",
+      "size_bytes": 10438
+    },
+    "independent_review": {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review/CLAUDE_Q05_TRANSPORT_AND_HOST_BOUNDARY.md",
+      "sha256": "970e145c73903702df82a4db8713cbd3d6cf9274bfac4bd2439bc128ae8d43af",
+      "size_bytes": 2802
+    },
+    "supported_transport_line": 25
+  },
+  "standing": "Mandatory ordinary CLI Q05 remains OPEN/unestablished. MCP-mediated attempts are supplemental integration evidence outside the frozen tenant transport scope.",
+  "worker_tools_observed": 0
+}

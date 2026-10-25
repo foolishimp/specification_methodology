@@ -1,0 +1,195 @@
+{
+  "writer": "/root/skills_bootstrap_writer",
+  "authorship": "Native Codex direct Writer; no external-dispatch authentication claimed",
+  "grant_id": "urn:stdo-skills:T001:claude:direct-repair:2:write",
+  "policy_sha256": "9a54123f8289daf0411b5e1e54dc183c1eadd57413a2aa5f69e979723f32dce3",
+  "task_sha256": "ffb4933dcb5c6eb68ec2e31513877894d4de777446b1123c183118f41451c8be",
+  "context": "fbff97a58354db325e41e03fc272962b0bce0061ffac925386acd809e7c2528a",
+  "candidate": {
+    "engine": "workspace-regular-file",
+    "root": "product",
+    "path": ".ai-workspace/work/T001/claude/actor/repair-2/CANDIDATE.json",
+    "object": null,
+    "sha256": "98ccd21419342480898c31aaeba24b40862e2fcd590e465271184470f650acb1",
+    "selector": null
+  },
+  "assessments": [
+    {
+      "id": "LC-01-guidance",
+      "result": "satisfied",
+      "kind": "author interpretation of exact instruction content",
+      "basis": "Both actual one-file entry and tool operation guidance classify scratch/redirection/deletion as effects, deny authority from temporary names, provide in-memory/native receipt path without scratch grant, and preserve legitimately granted scratch with current ownership and lifecycle scope."
+    },
+    {
+      "id": "candidate-integrity",
+      "result": "satisfied",
+      "kind": "bounded mechanical verifier plus exact population comparison",
+      "basis": "Shipped package verifier passes; exactly two SKILL instructions and INVENTORY differ across the preserved 13-file population."
+    }
+  ],
+  "verification": {
+    "argv": [
+      "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+      "-I",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/build_tenants/claude/tests/check_package.py"
+    ],
+    "returncode": 0,
+    "stdout": "{\n  \"status\": \"ok\",\n  \"errors\": []\n}\n",
+    "stderr": ""
+  },
+  "effects": [
+    {
+      "id": "claude-repair2-acquire-task",
+      "operation": "source.read",
+      "evidence": {
+        "id": "sha256:309b153bf3a78d470ed39dbe77c8599e56d49aa466e32dafc9e98bdeb8c95767",
+        "sha256": "309b153bf3a78d470ed39dbe77c8599e56d49aa466e32dafc9e98bdeb8c95767"
+      },
+      "artifact": null
+    },
+    {
+      "id": "claude-repair2-acquire-finding",
+      "operation": "source.read",
+      "evidence": {
+        "id": "sha256:0b8628e15f9b50898360bc4005c430a3a297b883824567926f18fef5caf15f27",
+        "sha256": "0b8628e15f9b50898360bc4005c430a3a297b883824567926f18fef5caf15f27"
+      },
+      "artifact": null
+    },
+    {
+      "id": "claude-repair2-acquire-entry",
+      "operation": "source.read",
+      "evidence": {
+        "id": "sha256:88d15ca019b5c62484d115f0ef39359c8e4301dc82905c0169fb140e0b011020",
+        "sha256": "88d15ca019b5c62484d115f0ef39359c8e4301dc82905c0169fb140e0b011020"
+      },
+      "artifact": null
+    },
+    {
+      "id": "claude-repair2-acquire-tools",
+      "operation": "source.read",
+      "evidence": {
+        "id": "sha256:f29e4c82676792992b21c7f4b17a4ca8c603797764c3dc04fc86ea6e65bf32c2",
+        "sha256": "f29e4c82676792992b21c7f4b17a4ca8c603797764c3dc04fc86ea6e65bf32c2"
+      },
+      "artifact": null
+    },
+    {
+      "id": "claude-repair2-acquire-inventory",
+      "operation": "source.read",
+      "evidence": {
+        "id": "sha256:ebeba444dcf7e405339e965ab57bbecaf38f66e1ee62c60fc5090833e0b4b44c",
+        "sha256": "ebeba444dcf7e405339e965ab57bbecaf38f66e1ee62c60fc5090833e0b4b44c"
+      },
+      "artifact": null
+    },
+    {
+      "id": "claude-repair2-observe-entry",
+      "operation": "workspace.observe",
+      "evidence": {
+        "id": "sha256:4a0cd1c4436e95805268ad4981337865889fed1f19ab54f8b028b265ef001fcd",
+        "sha256": "4a0cd1c4436e95805268ad4981337865889fed1f19ab54f8b028b265ef001fcd"
+      },
+      "artifact": {
+        "id": "sha256:ba83a76215188a5b89a5590ab69b100ee9a9ff286bf8dc75317b171b4bd968a7",
+        "sha256": "ba83a76215188a5b89a5590ab69b100ee9a9ff286bf8dc75317b171b4bd968a7"
+      }
+    },
+    {
+      "id": "claude-repair2-write-entry",
+      "operation": "work.write",
+      "evidence": {
+        "id": "sha256:9ce7fa1d1a831f78b724b7fbed5febd1b91e6e4cf3514d1420c05eddf82d382d",
+        "sha256": "9ce7fa1d1a831f78b724b7fbed5febd1b91e6e4cf3514d1420c05eddf82d382d"
+      },
+      "artifact": {
+        "id": "sha256:7a301bdf200ebfa0cc4c68ec28acd6c61d77eed30d84630470ea3962eec00875",
+        "sha256": "7a301bdf200ebfa0cc4c68ec28acd6c61d77eed30d84630470ea3962eec00875"
+      }
+    },
+    {
+      "id": "claude-repair2-observe-tools",
+      "operation": "workspace.observe",
+      "evidence": {
+        "id": "sha256:7c39b15c995426c5aca7a96028cf35ef99c0e0739ba45e99d3d85821bf9184c7",
+        "sha256": "7c39b15c995426c5aca7a96028cf35ef99c0e0739ba45e99d3d85821bf9184c7"
+      },
+      "artifact": {
+        "id": "sha256:550a71fde078f631ab71fba32637f2f232b0fb4530f7b4eff7786e40bb24309a",
+        "sha256": "550a71fde078f631ab71fba32637f2f232b0fb4530f7b4eff7786e40bb24309a"
+      }
+    },
+    {
+      "id": "claude-repair2-write-tools",
+      "operation": "work.write",
+      "evidence": {
+        "id": "sha256:31c1c59b865252eb955794d5c241bf2cda6871f71ce8a58bb196d4519dbe3bae",
+        "sha256": "31c1c59b865252eb955794d5c241bf2cda6871f71ce8a58bb196d4519dbe3bae"
+      },
+      "artifact": {
+        "id": "sha256:ddef45d4e633f9ce1d709a9e8c2f4148ac499c2a384cd6dae95c0fd82a54f593",
+        "sha256": "ddef45d4e633f9ce1d709a9e8c2f4148ac499c2a384cd6dae95c0fd82a54f593"
+      }
+    },
+    {
+      "id": "claude-repair2-observe-inventory",
+      "operation": "workspace.observe",
+      "evidence": {
+        "id": "sha256:d81e84b84bcbfb6342114bbc7d4b1efbb7055b2c8d3df5d17b0eb4357404a0b4",
+        "sha256": "d81e84b84bcbfb6342114bbc7d4b1efbb7055b2c8d3df5d17b0eb4357404a0b4"
+      },
+      "artifact": {
+        "id": "sha256:0b86c289c145e0c84b80f3ab9e6c22c9b2b421de9939b7150735a16710b4ab44",
+        "sha256": "0b86c289c145e0c84b80f3ab9e6c22c9b2b421de9939b7150735a16710b4ab44"
+      }
+    },
+    {
+      "id": "claude-repair2-write-inventory",
+      "operation": "work.write",
+      "evidence": {
+        "id": "sha256:28b836880e07a4ffbbd82ab1e3c20aafb5f159c2ce1c67587463ec36740fd0b3",
+        "sha256": "28b836880e07a4ffbbd82ab1e3c20aafb5f159c2ce1c67587463ec36740fd0b3"
+      },
+      "artifact": {
+        "id": "sha256:04f584304e59a736e465b6052126ca9c197856029663364649920e77390d1699",
+        "sha256": "04f584304e59a736e465b6052126ca9c197856029663364649920e77390d1699"
+      }
+    },
+    {
+      "id": "claude-repair2-observe-candidate",
+      "operation": "workspace.observe",
+      "evidence": {
+        "id": "sha256:5e32e9bf5344b277df9e1221e0997800bc267d4d32bbd8725edfb535b68a99f3",
+        "sha256": "5e32e9bf5344b277df9e1221e0997800bc267d4d32bbd8725edfb535b68a99f3"
+      },
+      "artifact": {
+        "id": "sha256:7bc5d0c8fe5560b7fd5c211d4448e50d4ecb07f328502152ce6c0988c7c77bff",
+        "sha256": "7bc5d0c8fe5560b7fd5c211d4448e50d4ecb07f328502152ce6c0988c7c77bff"
+      }
+    },
+    {
+      "id": "claude-repair2-write-candidate",
+      "operation": "work.write",
+      "evidence": {
+        "id": "sha256:1de8c5ab79013f90ae9ac540898a3d3d7b9529b4e5c098c790839fe694c937d7",
+        "sha256": "1de8c5ab79013f90ae9ac540898a3d3d7b9529b4e5c098c790839fe694c937d7"
+      },
+      "artifact": {
+        "id": "sha256:eb0cd847fbe5dca7d5db2216cd0e2532bc1d33048ba75670edf39f0d937e8b23",
+        "sha256": "eb0cd847fbe5dca7d5db2216cd0e2532bc1d33048ba75670edf39f0d937e8b23"
+      }
+    }
+  ],
+  "remaining": [
+    "LC-01 original observed host failure remains recorded; no actual data loss is established.",
+    "Fresh affected actual-host trial and independent readback are required before behavioral closure.",
+    "Instructions are not an enforcement guarantee.",
+    "Earlier author scope failures/timeouts and other qualification limits remain."
+  ],
+  "no_changes": [
+    "installer/runtime/tests/design/common/Product Definition/method/a_c/Codex tenant",
+    "original installed packages and trial inputs/outputs",
+    "Git/remotes/global configuration"
+  ]
+}

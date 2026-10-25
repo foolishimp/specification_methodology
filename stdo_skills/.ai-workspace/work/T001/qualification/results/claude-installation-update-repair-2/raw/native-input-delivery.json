@@ -1,0 +1,40 @@
+{
+  "source_path": "/Users/jim/.claude/projects/-private-tmp-stdo-skills-claude-repair2--t2diw0q-installation-claude-workspace/16d0a658-b0e1-458a-bcc9-0689be86668c.jsonl",
+  "source_sha256": "6c23f5a4a5717386e5efd70c005aa1c1c25e203112148b796bf6f33988d8c5c7",
+  "observed_session_ids": [
+    "16d0a658-b0e1-458a-bcc9-0689be86668c"
+  ],
+  "deliveries": [
+    {
+      "line": 27,
+      "raw_record": {
+        "parentUuid": "4001cf8e-1313-4bc1-9be4-09f159b300bb",
+        "isSidechain": false,
+        "promptId": "1e01ff73-1073-43fa-b18b-c7556e78cb59",
+        "type": "user",
+        "message": {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Base directory for this skill: /private/tmp/stdo-skills-claude-repair2-_t2diw0q/installation/claude/workspace/.claude/skills/stdo-workspace-change\n\n# STDO workspace change \u2014 entry, basis, intake\n\nThis skill is the entry point when someone asks you to do governed\nspecification-methodology work in this repository: change a requirement, design,\nor code owner; re-enter at the right layer; or set up and verify the method.\n\n## When this applies\n\nApply when the request concerns a workspace that selects an STDO Product\nDefinition (for example `stdo_skills.json`) and asks you to change, review, or\nset up governed artifacts under that method. Automatic selection comes from this\nskill's `description`; a user may also invoke it explicitly with\n`/stdo-workspace-change`.\n\n## When this does not apply (SK-01 discriminator, Q02)\n\nIf the request is an unrelated factual question or a non-governed task, do not\nforce an STDO setup, do not create a work carrier, and do not run any tool\nsequence. Answer the actual question or hand off. Presence of this skill is not a\nreason to STDO-ify unrelated work.\n\n## Verify the basis first (SK-02, Q03)\n\nBefore relying on any method contract, resolve and verify the exact basis:\n\n1. Identify the selected Product Definition in the workspace (e.g.\n   `stdo_skills.json`) and the installed method it pins.\n2. Verify the installed cut with the manager, for example:\n   `stdo status --definition stdo_skills.json --verify`.\n3. Confirm the resolved manifest equals the one the Product Definition pins\n   (for STDO Skills: `stdo://releases/v3.0.1-rc.1/`, manifest\n   `60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8`).\n\nIf the basis is ambiguous, missing, or altered \u2014 the install is absent, a member\nis modified, or Product selection is ambiguous \u2014 **withhold the dependent work\nand report the specific cause**. Do not substitute the latest discovered cut or a\nsibling source checkout for the pin. Setup may install or pin only within an\nexplicit grant; ordinary execution never adopts a newer cut implicitly.\n\n## Intake triage (SK-03)\n\nName three things before acting: the required outcome, the owner that must\nchange (goal, intent, product, requirement, design, or realization), and the\nexisting work basis you can reuse. Choose the smallest lawful re-entry point for\nthat owner. No bug, feature, or request skips triage straight to code.\n\n## Proportional work (SK-03 discriminator, Q04)\n\nDo the smallest sufficient authorized work.\n\n- A small, already-authorized one-file change with a sufficient existing\n  requirement/design proceeds directly as a Writer: make the change and record\n  focused evidence. Do **not** invent a mandatory ticket, a coordinating actor,\n  or an independent review that the conditions do not require, and do not write\n  outside the authorized scope.\n  Verification scratch files, shell redirection and deletion are also effects;\n  a temporary name grants neither territory nor ownership. Without a scratch\n  grant, compare bytes or hashes in memory and retain native operation receipts.\n  Never overwrite or delete fixed `/tmp` paths as a verification shortcut.\n  Legitimately granted scratch still requires current ownership and scoped\n  creation, use and cleanup.\n- Activate material coordination or independent review only when the actual\n  conditions require them (material context, capability, or independence\n  boundary) \u2014 then route to [stdo-delegate-review](../stdo-delegate-review/SKILL.md).\n- Reuse existing sufficient authorization without repeating a permission\n  ceremony; keep any genuinely missing authority explicit.\n\n## Routing\n\n- Tool calls, context acquisition, or a failing tool: [stdo-tool-operations](../stdo-tool-operations/SKILL.md).\n- Delegation or required review: [stdo-delegate-review](../stdo-delegate-review/SKILL.md).\n- Resume, interruption, status, or evidence: [stdo-continuation](../stdo-continuation/SKILL.md).\n- Release preparation or install/update/remove: [stdo-release-install](../stdo-release-install/SKILL.md).\n\n## Method sources (cited, not reproduced)\n\nWithin the installed cut `stdo://releases/v3.0.1-rc.1/standards/`:\n`PRODUCT_DEFINITION.md` (sections 2, 4, 7, 9, 12) for exact Product and installed\nbasis; `ACTIVATION.md` section 1 for intake, operation scope, admission, and\napplicability; `ACTIVATION.md` section 6 for cost and proportionality. The owner\nindex is `specification/SOURCE_OWNERS.md`.\n\n## Scope and limits\n\nThis skill does not itself qualify host behavior or claim acceptance. Discovery\nis tested separately from whether a loaded skill completes the task; report host\nlimits and observed failures instead of claiming guaranteed model compliance.\n"
+            }
+          ]
+        },
+        "isMeta": true,
+        "turnCompanion": true,
+        "uuid": "c5fbe8fd-5ba1-4032-9610-122ab10774ea",
+        "timestamp": "2026-10-25T03:55:39.391Z",
+        "sourceToolUseID": "toolu_01SYHYtbPPDrGsi8aRbJvLM4",
+        "userType": "external",
+        "entrypoint": "sdk-cli",
+        "cwd": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/installation/claude/workspace",
+        "sessionId": "16d0a658-b0e1-458a-bcc9-0689be86668c",
+        "version": "2.1.306",
+        "gitBranch": "HEAD"
+      },
+      "installed_path": ".claude/skills/stdo-workspace-change/SKILL.md",
+      "installed_sha256": "5c30fd460432895ce19ec0711df8e5ddd715f1e37496d6fd29234b2e3642901c"
+    }
+  ]
+}

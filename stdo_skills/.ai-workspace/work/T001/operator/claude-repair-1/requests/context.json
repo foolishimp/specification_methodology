@@ -1,0 +1,588 @@
+{
+  "arguments": {
+    "envelope": {
+      "boundary": "executor-stdin-utf8",
+      "capacity_bytes": null,
+      "host_context": {
+        "bytes": null,
+        "evidence": null,
+        "state": "unknown"
+      }
+    },
+    "late_acquisition": [],
+    "models": [],
+    "packet": {
+      "activation": {
+        "configuration": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "TASK.md",
+          "root": "repair",
+          "selector": null,
+          "sha256": "554062cf5564213b58e3621b1aa50698f51767e5a17bc0acaf32aedcca22ff9f"
+        },
+        "id": "urn:stdo-skills:T001:claude:direct-repair:1",
+        "revision": "1"
+      },
+      "actor_authority": {
+        "acceptance": null,
+        "actor_id": "/root/skills_bootstrap_writer",
+        "capability": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "TASK.md",
+          "root": "repair",
+          "selector": null,
+          "sha256": "554062cf5564213b58e3621b1aa50698f51767e5a17bc0acaf32aedcca22ff9f"
+        },
+        "decision": null,
+        "evaluation": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "PREDICATES.md",
+          "root": "repair",
+          "selector": null,
+          "sha256": "532a47573d81e74d4b3f67571542baa870e0efa6a384935ab065c0de308a119c"
+        },
+        "operation": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "TASK.md",
+          "root": "repair",
+          "selector": null,
+          "sha256": "554062cf5564213b58e3621b1aa50698f51767e5a17bc0acaf32aedcca22ff9f"
+        },
+        "publication": null,
+        "role": "Worker",
+        "semantic": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "specification/PRODUCT.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "7e667a594717645aa51fa23b757a95283ad60e5eca4e59d24246a62ce2716803"
+        },
+        "territory": [
+          {
+            "kind": "directory",
+            "path": "build_tenants/claude",
+            "root": "product"
+          },
+          {
+            "kind": "directory",
+            "path": ".ai-workspace/work/T001/claude/actor/repair-1",
+            "root": "product"
+          }
+        ],
+        "tools": [
+          "a_c.public-native301",
+          "host.scoped-mkdir-read-compute-validation"
+        ]
+      },
+      "attention": {
+        "exclusions": [
+          "common/tool/method/other tenant mutation",
+          "Git/remote/global installs",
+          "external model dispatch"
+        ],
+        "invariants": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "specification/requirements/README.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "dcc2564e597d3d3c8fcff025a515f4a92a62e7f3aa2f7ba80af97f7db75f6acc"
+          }
+        ],
+        "material_relations": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "TASK.md",
+            "root": "repair",
+            "selector": null,
+            "sha256": "554062cf5564213b58e3621b1aa50698f51767e5a17bc0acaf32aedcca22ff9f"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".ai-workspace/work/T001/review/CLAUDE_STATIC_APPRAISAL.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "56ca283d8087459eb8de2f114722212661a9251ec4cded5e8e6c456ea0521d3f"
+          }
+        ],
+        "prohibited_assumptions": [
+          "direct operation implies external dispatch authentication",
+          "focused checks establish host qualification"
+        ],
+        "semantic_sources": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "specification/PRODUCT.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "7e667a594717645aa51fa23b757a95283ad60e5eca4e59d24246a62ce2716803"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "specification/INTENT.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "c6c8d5083ce154fa5f1782b4a789c4ff96b65a18eabc28339c79857b131ad895"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "specification/requirements/README.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "dcc2564e597d3d3c8fcff025a515f4a92a62e7f3aa2f7ba80af97f7db75f6acc"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "specification/requirements/SCENARIOS.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "089221fb9d7eee532f91c6ef40a4bfdaaa18c00fcc28bc2f538ddd6b6e3ff03e"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "specification/REFERENCE_FRAME_BASIS.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "00a91bb5a16ba8802cb2d3132c08677c978f3ef50d4e6c61d864c5afdb960baa"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "specification/SOURCE_OWNERS.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "15300e9871b842cb6ab81b360fe9717766638e82abc2d1cf06c5cebc2febfca3"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "ORIGINAL-CUSTODY.json",
+            "root": "repair",
+            "selector": null,
+            "sha256": "5aabf0b8f9cd073887e3d42fc07592a311168809e58587bf7ea005a6951743b9"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".ai-workspace/work/T001/review/CLAUDE_STATIC_APPRAISAL.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "56ca283d8087459eb8de2f114722212661a9251ec4cded5e8e6c456ea0521d3f"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "stdo_skills.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "4339a7dbc735052c08962154966fc13a4e30206d42ba2e80b53c6009a5008c22"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "build_tenants/graphify/design/fd-method-stdo-3.0.1.json",
+            "root": "tool",
+            "selector": null,
+            "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "TASK.md",
+            "root": "repair",
+            "selector": null,
+            "sha256": "554062cf5564213b58e3621b1aa50698f51767e5a17bc0acaf32aedcca22ff9f"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "PREDICATES.md",
+            "root": "repair",
+            "selector": null,
+            "sha256": "532a47573d81e74d4b3f67571542baa870e0efa6a384935ab065c0de308a119c"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "RETURN-CONTRACT.json",
+            "root": "repair",
+            "selector": null,
+            "sha256": "1d4d46e25a2137308185b11853feaa8a0e1b0f6d1c0a6295d1a52d2cf7d06063"
+          }
+        ]
+      },
+      "evidence_relations": {
+        "acquisition": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "specification/PRODUCT.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "7e667a594717645aa51fa23b757a95283ad60e5eca4e59d24246a62ce2716803"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "specification/INTENT.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "c6c8d5083ce154fa5f1782b4a789c4ff96b65a18eabc28339c79857b131ad895"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "specification/requirements/README.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "dcc2564e597d3d3c8fcff025a515f4a92a62e7f3aa2f7ba80af97f7db75f6acc"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "specification/requirements/SCENARIOS.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "089221fb9d7eee532f91c6ef40a4bfdaaa18c00fcc28bc2f538ddd6b6e3ff03e"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "specification/REFERENCE_FRAME_BASIS.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "00a91bb5a16ba8802cb2d3132c08677c978f3ef50d4e6c61d864c5afdb960baa"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "specification/SOURCE_OWNERS.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "15300e9871b842cb6ab81b360fe9717766638e82abc2d1cf06c5cebc2febfca3"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "ORIGINAL-CUSTODY.json",
+            "root": "repair",
+            "selector": null,
+            "sha256": "5aabf0b8f9cd073887e3d42fc07592a311168809e58587bf7ea005a6951743b9"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".ai-workspace/work/T001/review/CLAUDE_STATIC_APPRAISAL.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "56ca283d8087459eb8de2f114722212661a9251ec4cded5e8e6c456ea0521d3f"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "stdo_skills.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "4339a7dbc735052c08962154966fc13a4e30206d42ba2e80b53c6009a5008c22"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "build_tenants/graphify/design/fd-method-stdo-3.0.1.json",
+            "root": "tool",
+            "selector": null,
+            "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "TASK.md",
+            "root": "repair",
+            "selector": null,
+            "sha256": "554062cf5564213b58e3621b1aa50698f51767e5a17bc0acaf32aedcca22ff9f"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "PREDICATES.md",
+            "root": "repair",
+            "selector": null,
+            "sha256": "532a47573d81e74d4b3f67571542baa870e0efa6a384935ab065c0de308a119c"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "RETURN-CONTRACT.json",
+            "root": "repair",
+            "selector": null,
+            "sha256": "1d4d46e25a2137308185b11853feaa8a0e1b0f6d1c0a6295d1a52d2cf7d06063"
+          }
+        ],
+        "admissible_evidence": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "PREDICATES.md",
+            "root": "repair",
+            "selector": null,
+            "sha256": "532a47573d81e74d4b3f67571542baa870e0efa6a384935ab065c0de308a119c"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "TASK.md",
+            "root": "repair",
+            "selector": null,
+            "sha256": "554062cf5564213b58e3621b1aa50698f51767e5a17bc0acaf32aedcca22ff9f"
+          }
+        ],
+        "conjunction": null,
+        "consumer": "root-executive",
+        "dependencies": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "ORIGINAL-CUSTODY.json",
+            "root": "repair",
+            "selector": null,
+            "sha256": "5aabf0b8f9cd073887e3d42fc07592a311168809e58587bf7ea005a6951743b9"
+          }
+        ],
+        "return_contract": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "RETURN-CONTRACT.json",
+          "root": "repair",
+          "selector": null,
+          "sha256": "1d4d46e25a2137308185b11853feaa8a0e1b0f6d1c0a6295d1a52d2cf7d06063"
+        },
+        "translation": null
+      },
+      "frame": {
+        "declaration": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "specification/REFERENCE_FRAME_BASIS.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "00a91bb5a16ba8802cb2d3132c08677c978f3ef50d4e6c61d864c5afdb960baa"
+        },
+        "evaluation": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "PREDICATES.md",
+          "root": "repair",
+          "selector": null,
+          "sha256": "532a47573d81e74d4b3f67571542baa870e0efa6a384935ab065c0de308a119c"
+        },
+        "id": "skills.worker/1",
+        "result_algebra": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "standards/ACTIVATION.md",
+          "root": "method",
+          "selector": {
+            "lines": [
+              1004,
+              1055
+            ]
+          },
+          "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d"
+        },
+        "revision": "direct-repair-1"
+      },
+      "profile_additions": {
+        "worker": {
+          "mutation_subject": {
+            "id": "urn:stdo-skills:T001:claude:direct-repair:1:candidate",
+            "sha256": "5aabf0b8f9cd073887e3d42fc07592a311168809e58587bf7ea005a6951743b9"
+          },
+          "operation_grant_id": "urn:stdo-skills:T001:claude:direct-repair:1:write",
+          "territory": [
+            {
+              "kind": "directory",
+              "path": "build_tenants/claude",
+              "root": "product"
+            },
+            {
+              "kind": "directory",
+              "path": ".ai-workspace/work/T001/claude/actor/repair-1",
+              "root": "product"
+            }
+          ]
+        }
+      },
+      "stop_change": {
+        "invalidators": [
+          "deciding source drift",
+          "unreconciled effect"
+        ],
+        "re_entry": [
+          "retain exact partial artifacts and missing premise"
+        ],
+        "reconfiguration": [
+          "Root-selected direct native Writer repair of retained original candidate; no historical admission invented"
+        ],
+        "residuals": [
+          "F-C01 and author timeout remain",
+          "Q01-Q12 and independent review/acceptance separate"
+        ],
+        "stop_conditions": [
+          "genuine unsupported operation",
+          "repair exceeds selected findings"
+        ]
+      },
+      "subject_basis": {
+        "dependencies": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "specification/PRODUCT.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "7e667a594717645aa51fa23b757a95283ad60e5eca4e59d24246a62ce2716803"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "specification/INTENT.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "c6c8d5083ce154fa5f1782b4a789c4ff96b65a18eabc28339c79857b131ad895"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "specification/requirements/README.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "dcc2564e597d3d3c8fcff025a515f4a92a62e7f3aa2f7ba80af97f7db75f6acc"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "specification/requirements/SCENARIOS.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "089221fb9d7eee532f91c6ef40a4bfdaaa18c00fcc28bc2f538ddd6b6e3ff03e"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "specification/REFERENCE_FRAME_BASIS.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "00a91bb5a16ba8802cb2d3132c08677c978f3ef50d4e6c61d864c5afdb960baa"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "specification/SOURCE_OWNERS.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "15300e9871b842cb6ab81b360fe9717766638e82abc2d1cf06c5cebc2febfca3"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "ORIGINAL-CUSTODY.json",
+            "root": "repair",
+            "selector": null,
+            "sha256": "5aabf0b8f9cd073887e3d42fc07592a311168809e58587bf7ea005a6951743b9"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".ai-workspace/work/T001/review/CLAUDE_STATIC_APPRAISAL.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "56ca283d8087459eb8de2f114722212661a9251ec4cded5e8e6c456ea0521d3f"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "stdo_skills.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "4339a7dbc735052c08962154966fc13a4e30206d42ba2e80b53c6009a5008c22"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "build_tenants/graphify/design/fd-method-stdo-3.0.1.json",
+            "root": "tool",
+            "selector": null,
+            "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "TASK.md",
+            "root": "repair",
+            "selector": null,
+            "sha256": "554062cf5564213b58e3621b1aa50698f51767e5a17bc0acaf32aedcca22ff9f"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "PREDICATES.md",
+            "root": "repair",
+            "selector": null,
+            "sha256": "532a47573d81e74d4b3f67571542baa870e0efa6a384935ab065c0de308a119c"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "RETURN-CONTRACT.json",
+            "root": "repair",
+            "selector": null,
+            "sha256": "1d4d46e25a2137308185b11853feaa8a0e1b0f6d1c0a6295d1a52d2cf7d06063"
+          }
+        ],
+        "method_profile": {
+          "id": "urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1",
+          "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+        },
+        "observations": [
+          {
+            "id": "sha256:7b18cbd648fc19fb0b16159fd387329fb4e9bb0da6a2aaa0fb276b8c873cb051",
+            "sha256": "7b18cbd648fc19fb0b16159fd387329fb4e9bb0da6a2aaa0fb276b8c873cb051"
+          }
+        ],
+        "product": {
+          "definition": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "stdo_skills.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "4339a7dbc735052c08962154966fc13a4e30206d42ba2e80b53c6009a5008c22"
+          },
+          "id": "urn:stdo:product-definition:stdo-skills"
+        },
+        "subject": {
+          "id": "urn:stdo-skills:T001:claude:direct-repair:1:candidate",
+          "sha256": "5aabf0b8f9cd073887e3d42fc07592a311168809e58587bf7ea005a6951743b9"
+        },
+        "time_basis": "Stable deciding inputs only; target observation is preparation evidence, every write reacquires fresh preimage"
+      }
+    },
+    "sources": []
+  },
+  "id": "claude-direct-repair-1-context",
+  "operation": "context.assemble",
+  "schema": "a_c.fd-support.request/1"
+}

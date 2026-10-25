@@ -1,0 +1,23 @@
+{
+  "schema": "stdo_skills.auth-repair-activation/1",
+  "created_utc": "2026-10-25T01:55:12.183185+00:00",
+  "role": "Tool Writer",
+  "authority": "Root confirms both initial actors closed; permits applying bounded prepared authentication repair after copied-source controls pass",
+  "scope": [
+    "a_c/build_tenants/graphify/code/ac_support_core.py",
+    "a_c/build_tenants/graphify/code/ac_support_effects.py",
+    "a_c/build_tenants/graphify/examples/fd-support/actor_cli.py",
+    "a_c/build_tenants/graphify/examples/fd-support/README.md",
+    "a_c/build_tenants/graphify/test_env/test_ac_support_environment_passthrough.py"
+  ],
+  "proof_before_apply": {
+    "new_tests": "7 passed, 5.218 s",
+    "before_counterexample": "1 fails as expected: actual child lacks selected synthetic credential",
+    "copied_regression": "95 passed; one location-dependent immutable Git acquisition failed because the copy changed the registered repository-relative prefix; retain and rerun in actual checkout"
+  },
+  "limitations": [
+    "No Product acceptance or actual provider qualification",
+    "No credential value read or serialized",
+    "No retrospective admission for initial construction"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "expectation": {
+    "id": "sha256:f5abc066c958303db0fddb9c71d19c4b5e053066a3b713d221ab39b7b078f961",
+    "sha256": "f5abc066c958303db0fddb9c71d19c4b5e053066a3b713d221ab39b7b078f961"
+  },
+  "no_worker_grant": true,
+  "prior": {
+    "engine": "workspace-regular-file",
+    "object": null,
+    "path": "PRIOR.json",
+    "root": "candidate_phase",
+    "selector": null,
+    "sha256": "522947287541d1507099b33594ef27b818519394d2e939cee0e2db57e2d87a92"
+  },
+  "reviewer": {
+    "consumer": "urn:stdo-skills:T001:q05:codex:handoff:3:executive",
+    "context": {
+      "id": "sha256:e50cbec231166e5cb657bcc33c24cd1f63963264ab500305e15f51082c8f313c",
+      "sha256": "e50cbec231166e5cb657bcc33c24cd1f63963264ab500305e15f51082c8f313c"
+    },
+    "executor_id": "reviewer",
+    "grant_id": "urn:stdo-skills:T001:q05:codex:handoff:3:dispatch-reviewer",
+    "observations": [
+      {
+        "id": "sha256:c8b30f165899c9d1ca908e421f0f0cbd020086a4cf9d1909be10b9eb9fd39ac2",
+        "sha256": "c8b30f165899c9d1ca908e421f0f0cbd020086a4cf9d1909be10b9eb9fd39ac2"
+      }
+    ],
+    "result_key": "urn:stdo-skills:T001:q05:codex:handoff:3:candidate-review",
+    "return_contract": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "roles/reviewer-RETURN-CONTRACT.json",
+      "root": "candidate_phase",
+      "selector": null,
+      "sha256": "ad5ef0e18f16ee1d5b901d39703259e95ba63d472f77daa42ec7de249fadf4c7"
+    }
+  },
+  "stage": "candidate-review",
+  "worker_check": "d5e0d849c676f1c27df399e250b8570d53687015cdfdd73af4453763adb6b5fc",
+  "worker_return": {
+    "id": "sha256:c1a7999736110519063878c168653bd1759c3c16b70d62a078d28aebab3c3f59",
+    "sha256": "c1a7999736110519063878c168653bd1759c3c16b70d62a078d28aebab3c3f59"
+  }
+}

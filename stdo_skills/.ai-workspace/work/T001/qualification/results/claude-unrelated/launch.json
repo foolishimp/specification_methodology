@@ -1,0 +1,60 @@
+{
+  "activation_id": "urn:stdo-skills:qualification:claude:unrelated:activation:1",
+  "actor_plan": {
+    "path": "/private/tmp/stdo-skills-qualification-yfa1t8ik/claude-unrelated/control/actor-plan.json",
+    "sha256": "f99623fa34ff450c2407dce3003550f05697cbd09e2e038656327e716ca7f014"
+  },
+  "case": {
+    "lane": "unrelated",
+    "tenant": "claude"
+  },
+  "max_outer_bytes": 4194304,
+  "ordinary_prompt": {
+    "path": "/private/tmp/stdo-skills-qualification-yfa1t8ik/claude-unrelated/control/ordinary-prompt.txt",
+    "sha256": "44d631e8b7d17ad66e039bc6fb43d97866f26cb0d73020ada8c652fb04f04535"
+  },
+  "package": {
+    "candidate_record": {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/build_tenants/claude/INVENTORY.md",
+      "sha256": "63095869d5f4e2a5b85a9bec17598ebf0e683d0ae45bb06f4d1abc85821ba9c7"
+    },
+    "documentation": {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/build_tenants/claude/INSTALL.md",
+      "sha256": "650a83518d996b83546be7b287e77e6aae08e88521831372e4ef66e61e909f60"
+    },
+    "files": [
+      {
+        "path": ".claude/skills/stdo-continuation/SKILL.md",
+        "sha256": "90f3778a97df92796c8d052e4d46ca01e01b1913d3421fa8f421310d03c3cd61"
+      },
+      {
+        "path": ".claude/skills/stdo-delegate-review/SKILL.md",
+        "sha256": "f8bd00924ad601c7e38d9c36eae95364246dab33d3f31fc6c2e8eea076b7b8cf"
+      },
+      {
+        "path": ".claude/skills/stdo-release-install/SKILL.md",
+        "sha256": "e29457bf87fd34032e3ad5339549888766b54ebff18cb97051a6293c547127c1"
+      },
+      {
+        "path": ".claude/skills/stdo-tool-operations/SKILL.md",
+        "sha256": "a850e36e8136b0db0d233d0bdfc4e8c6b4bc88949be5ea08cc7bb9c2ec4b09a0"
+      },
+      {
+        "path": ".claude/skills/stdo-workspace-change/SKILL.md",
+        "sha256": "840bc1eeadcd575b15be7bc426a66f1407624a433ef49edf827671b9c1a6b3d1"
+      }
+    ],
+    "install_relative": ".claude/skills",
+    "source_root": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/build_tenants/claude/skills"
+  },
+  "return_actor": {
+    "authorship": "pinned projection/capture implementation; no semantic host assessment",
+    "family": "fixed-local-qualification-executor",
+    "id": "urn:stdo-skills:qualification:claude:unrelated:physical-launcher"
+  },
+  "schema": "stdo_skills.qualification-launch/1",
+  "transport": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/examples/fd-support/actor_cli.py",
+    "sha256": "3f0bd239339e635f4e49ae89a00f0857f4672cb177a5dd2ce03f124f0b116528"
+  }
+}

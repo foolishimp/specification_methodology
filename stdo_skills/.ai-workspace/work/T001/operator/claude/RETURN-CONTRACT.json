@@ -1,0 +1,43 @@
+{
+  "authority_source": {
+    "engine": "workspace-regular-file",
+    "object": null,
+    "path": "claude/TASK.md",
+    "root": "operator",
+    "selector": null,
+    "sha256": "32e9ab98a604b39b417863d99d4167088d8b642cba060c236f387c607b2052d2"
+  },
+  "carrier": "a_c.fd-support.closed-return/1",
+  "id": "urn:stdo-skills:T001:claude:return:1",
+  "output_slot": "final_stdout_object",
+  "proof": {
+    "predicate_ids": [],
+    "transition_sources": []
+  },
+  "required_evaluations": [
+    {
+      "id": "requirements-realization",
+      "predicate": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "specification/requirements/README.md",
+        "root": "product",
+        "selector": null,
+        "sha256": "dcc2564e597d3d3c8fcff025a515f4a92a62e7f3aa2f7ba80af97f7db75f6acc"
+      }
+    },
+    {
+      "id": "tenant-artifact-integrity",
+      "predicate": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "claude/TASK.md",
+        "root": "operator",
+        "selector": null,
+        "sha256": "32e9ab98a604b39b417863d99d4167088d8b642cba060c236f387c607b2052d2"
+      }
+    }
+  ],
+  "role": "Worker",
+  "schema": "a_c.fd-support.return-contract/1"
+}

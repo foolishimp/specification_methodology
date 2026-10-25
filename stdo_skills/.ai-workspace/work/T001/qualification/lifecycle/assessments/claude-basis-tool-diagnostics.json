@@ -1,0 +1,150 @@
+{
+  "actual_failed_calls": [
+    {
+      "evidence": "429e99766ddb5e5adb0c05352aa9a9587ebe9563cf5bb396b5989adba09aac5c",
+      "operation": "tools.describe",
+      "refusal": {
+        "code": "unsupported_check",
+        "gaps": [],
+        "reason": "Native conjunction operator is not qualified",
+        "source_refs": []
+      }
+    }
+  ],
+  "assessor": "skills_lifecycle_fixture_writer",
+  "attempt": "d53fdbbd0c828f7be0ef1253e21849acebcda895272ce09fac189edbc5b7f2bb",
+  "case_lane": "claude-basis-tool-diagnostics",
+  "census": {
+    "path": "results/claude-basis-tool-diagnostics/CENSUS.json",
+    "sha256": "d72c7f9ee8ddd4bdb6e72d2803e24d2b5e6bfa8b15ab05f56f15e9b55f70b643"
+  },
+  "cost": {
+    "billing_limit": "Native list-price report retained; actual charged amount and unreported retries unknown",
+    "native_model_result": [
+      {
+        "event": "result.modelUsage",
+        "line": 286,
+        "models": {
+          "claude-fable-5-1": {
+            "cacheCreationInputTokens": 131046,
+            "cacheReadInputTokens": 789105,
+            "canonicalModel": "claude-fable-5-1",
+            "contextWindow": 1000000,
+            "costBasis": "list",
+            "costUSD": 4.11774625,
+            "inputTokens": 290,
+            "maxOutputTokens": 64000,
+            "outputTokens": 25933,
+            "provider": "firstParty",
+            "thinkingTokens": 10425,
+            "webSearchRequests": 0
+          }
+        }
+      }
+    ],
+    "native_result_usage": [
+      {
+        "event": "result",
+        "line": 286,
+        "reported_cost_usd": 4.11774625,
+        "reported_usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 131046,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 131046,
+          "cache_read_input_tokens": 789105,
+          "fallback_credit": null,
+          "inference_geo": "global",
+          "input_tokens": 290,
+          "iterations": [
+            {
+              "cache_creation": {
+                "ephemeral_1h_input_tokens": 1360,
+                "ephemeral_5m_input_tokens": 0
+              },
+              "cache_creation_input_tokens": 1360,
+              "cache_read_input_tokens": 142475,
+              "input_tokens": 32,
+              "output_tokens": 724,
+              "type": "message"
+            }
+          ],
+          "output_tokens": 25933,
+          "output_tokens_details": {
+            "thinking_tokens": 10425
+          },
+          "server_tool_use": {
+            "web_fetch_requests": 0,
+            "web_search_requests": 0
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      }
+    ],
+    "wall_seconds": 409.025699
+  },
+  "dispatch_evidence": "b7bdec3c1b5f502f0708b0c20dc9b432d7f556928103ab9102d1ba342b8103fb",
+  "effects": {
+    "added": [],
+    "changed": [
+      "outputs/diagnostics.md"
+    ],
+    "missing": [],
+    "symlinks": []
+  },
+  "limits": [
+    "One finite witness; no statistical reliability, whole-method acceptance or efficiency benefit claim.",
+    "Workspace hash census does not by itself establish absence of external effects; actual command trace was separately inspected."
+  ],
+  "observations": {
+    "path": "results/claude-basis-tool-diagnostics/INVENTORY.json",
+    "sha256": "9ce21adb59649f5b925b568ccbba0fb2bbfb1a9b5c32c2993bc24a65e76c7a17"
+  },
+  "oracle": {
+    "path": "lifecycle/ORACLE.json",
+    "sha256": "d5cef9339d10523baf6005980b3c7a09d5eb53c615fba33a89f925f482ec1467"
+  },
+  "predicates": [
+    {
+      "case": "Q03",
+      "evidence": {
+        "raw_changed_member_result_line": 112,
+        "raw_control_result_line": 108,
+        "raw_missing_store_result_line": 110,
+        "raw_two_valid_candidates_result_line": 114
+      },
+      "interpretation": "Control exact pin verified. Alpha actual own-store status is absent; Beta actual altered AXIOMATIC_CALCULUS member fails verification. Both Gamma Products individually verify, but selection remains absent; valid installation does not resolve authority ambiguity. All three greeting targets and stores remain unchanged.",
+      "outcome": "supported",
+      "predicate": "Valid control basis and invalid child bases retain different dispositions"
+    },
+    {
+      "case": "Q06",
+      "evidence": {
+        "actual_build_error": "FileNotFoundError: inputs/dependency.txt",
+        "actual_build_result_line": 116,
+        "actual_build_returncode": 1,
+        "actual_python": "/usr/local/bin/python3; Python 3.12.8",
+        "unsupported_evidence": "429e99766ddb5e5adb0c05352aa9a9587ebe9563cf5bb396b5989adba09aac5c",
+        "unsupported_operation": "tools.describe(operation=results.conjoin)",
+        "unsupported_result_line": 164
+      },
+      "interpretation": "No join performed; no built output produced. Existing built-message placeholder preserved and explicitly named as no built artifact. Supported re-entry is named for each missing basis/capability/dependency. This is not a native results.conjoin invocation.",
+      "outcome": "supported for selected discovery and local execution-error witnesses",
+      "predicate": "Actual unsupported capability and actual failed build are not converted into success"
+    }
+  ],
+  "report": {
+    "path": "results/claude-basis-tool-diagnostics/postimages/outputs/diagnostics.md",
+    "sha256": "485ad244e68702d4b300f8e0e4701958c5b7bcf033a2f4a14ed7f8998e335dfd"
+  },
+  "schema": "stdo_skills.lifecycle-assessment/1",
+  "standing": "Writer source-oracle assessment; Root and independent Reviewer retain their decisions",
+  "tool_counts": {
+    "tools.describe": 2,
+    "work.write": 1,
+    "workspace.observe": 2
+  },
+  "write_evidence": "10590b00c0bed4492dfd98e4d729f6b1b3c46fb9bb52f9678c1401d0d87a60f7"
+}

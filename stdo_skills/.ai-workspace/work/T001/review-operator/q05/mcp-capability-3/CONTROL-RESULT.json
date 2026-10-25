@@ -1,0 +1,81 @@
+{
+  "standing": "Actual exact-host read-only MCP control succeeded with recognized table-valued per-tool approval binding",
+  "activation_id": "urn:stdo-skills:T001:q05:mcp-capability:2:launch",
+  "native_root_attempt": "Root owns dispatch/observe record; not inferred from host output",
+  "elapsed_seconds": 10.720765,
+  "host_exit": 0,
+  "selected_binding": "Only tools.describe enabled and permitted; table-valued tools={\"tools.describe\"={approval_mode=\"approve\"}}. No MCP grants/executors, global approval or sandbox change.",
+  "mcp_completed_calls": [
+    {
+      "line": 5,
+      "server": "stdo_q05_probe",
+      "tool": "tools.describe",
+      "status": "completed",
+      "error": null,
+      "request": {
+        "schema": "a_c.fd-support.request/1",
+        "id": "q05-codex-mcp-control-describe-2",
+        "operation": "tools.describe",
+        "arguments": {
+          "operation": "dispatch.start"
+        }
+      },
+      "response_status": "ok",
+      "operation_evidence": {
+        "id": "sha256:7b752d6cb7f888d44210c850608887eb51dfa0c536b0712dbe848504f88b4e7e",
+        "sha256": "7b752d6cb7f888d44210c850608887eb51dfa0c536b0712dbe848504f88b4e7e"
+      }
+    }
+  ],
+  "configuration_errors": [],
+  "shell_commands_observed": 0,
+  "limits": [
+    "This establishes one metadata call through the exact per-tool binding. Nested external actor dispatch and installed-skill Q05 behavior remain unestablished.",
+    "No assertion of universal process-tree or external effect closure."
+  ],
+  "predecessor": {
+    "path": "../mcp-capability-2/CONTROL-RESULT.json",
+    "sha256": "b106611496543c6d6173f4795745428c8c0ee212f2c04c2d7d84ec3464960f4b",
+    "standing": "Ignored quoted dotted key, followed by approval refusal; preserved separately."
+  },
+  "process_reconciliation": {
+    "pid": 3996,
+    "ps_exit": 1,
+    "ps_stdout": "",
+    "scope": "Recorded host PID only"
+  },
+  "custody": [
+    {
+      "path": "actor-plan.json",
+      "sha256": "38fc1b840526e0bcc23096888be08247ebec0dca7b4df93870ce5db30df2d880"
+    },
+    {
+      "path": "MCP-POLICY.json",
+      "sha256": "ea342c22ff196e2fb2b92a0f57d9b2299160665734b3dacce99d690059c979f6"
+    },
+    {
+      "path": "executive-policy.json",
+      "sha256": "a3d7a02a976eea6e9021b1a4cf29f2f9790cc82abfbc0dbdadbf184e8952c968"
+    },
+    {
+      "path": "SOURCE-NOTES.json",
+      "sha256": "c6ce398e1ca0ad49bf1b07d9bdd522db7452087be9fb4c0169db7513f1105701"
+    },
+    {
+      "path": "actor-output/vendor.stdout",
+      "sha256": "b28657ce27d82ea3c8c9ac2d614b1b6a902925e26b92969e5c581059fddbf5f5"
+    },
+    {
+      "path": "actor-output/vendor.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "actor-output/process.json",
+      "sha256": "48449aadc025ff44041d94496815c095411ff223032f5685566864497ba38838"
+    },
+    {
+      "path": "actor-output/projection.json",
+      "sha256": "7c572ecf4e9c3e1d8cae5c3ee50b1f96adae537a4bf3526c11e557ff1817ebcb"
+    }
+  ]
+}

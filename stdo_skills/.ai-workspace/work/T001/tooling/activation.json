@@ -1,0 +1,33 @@
+{
+  "role": "Writer",
+  "actor": "/root/skills_tool_binding_assessment",
+  "authority": "Root explicit Tool Writer instruction in current conversation, implementing user-selected stdo_skills dogfood and tool harmonisation",
+  "operation": "Add bounded native3.0.1 runtime method profile and actual public-path tests",
+  "basis": "stdo://releases/v3.0.1-rc.1/",
+  "manifest_sha256": "60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8",
+  "builder": "stdo://releases/v2.5.1-rc.2/",
+  "write_territory": [
+    "a_c/build_tenants/graphify/code/ac_support_core.py",
+    "a_c/build_tenants/graphify/code/ac_support_effects.py",
+    "a_c/build_tenants/graphify/code/ac_support.py",
+    "a_c/build_tenants/graphify/design/fd-method-stdo-3.0.1.json",
+    "a_c/build_tenants/graphify/design/fd-support-stdo-3.0.1.md",
+    "a_c/build_tenants/graphify/test_env/",
+    "a_c/specification/requirements/fd-stdo-3.0.1-binding.md",
+    "stdo_skills/.ai-workspace/work/T001/tooling/"
+  ],
+  "preimages": [
+    {
+      "path": "a_c/build_tenants/graphify/code/ac_support_core.py",
+      "sha256": "e321ed11f66db88a9d965331bf4069d8a4532e6b31df38d6adf8539b4cf25d6b"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/ac_support_effects.py",
+      "sha256": "6c296de1bc888b8c18cb1cc211fd2eae7f242ac5ebb5df33c436596bed37bae9"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/ac_support.py",
+      "sha256": "4d41a2373def237136cefe8b186c196c2e4376137c221ae4675c274abed5ad31"
+    }
+  ]
+}

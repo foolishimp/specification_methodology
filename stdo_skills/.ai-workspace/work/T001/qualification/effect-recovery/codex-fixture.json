@@ -1,0 +1,35 @@
+{
+  "tenant": "codex",
+  "lane": "effect-recovery",
+  "workspace": "/private/tmp/stdo-skills-effect-recovery-ijcoy9aa/codex/workspace",
+  "control": "/private/tmp/stdo-skills-effect-recovery-ijcoy9aa/codex/control",
+  "artifact_paths": [
+    "effects/counter.txt",
+    "outputs/recovery.md"
+  ],
+  "stable_input_paths": [
+    "AGENTS.md",
+    "CLAUDE.md",
+    "TASK.md",
+    "design/DESIGN.md",
+    "fixture_product.json",
+    "retained/attempt.json",
+    "specification/GOALS.md",
+    "specification/INTENT.md",
+    "specification/PRODUCT.md",
+    "specification/REQUIREMENT.md",
+    "unrelated/sentinel.txt"
+  ],
+  "fixture_premise_effects": [
+    {
+      "actor": "fixed-response-withholding-fixture",
+      "selected_by": "Root message selecting real Q08 write/withheld-ack transport",
+      "operation": "one actual admitted native work.write",
+      "target": "effects/counter.txt",
+      "from": "0\n",
+      "to": "1\n",
+      "boundary": "acknowledgment withheld from caller after child publication, then transport exits nonzero",
+      "claim": "controlled actual effect/transport premise; not an LLM or historical review"
+    }
+  ]
+}

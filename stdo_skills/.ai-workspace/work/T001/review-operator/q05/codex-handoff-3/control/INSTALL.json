@@ -1,0 +1,69 @@
+{
+  "actual_recipe": [
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/build_tenants/codex/tests/verify_package.py",
+        "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/build_tenants/codex",
+        "--destination",
+        "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/workspace/.agents/skills/stdo-work"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"destination_checked\": true, \"files\": 11, \"installed_checked\": false, \"inventory_sha256\": \"337d274efde96147c8e9a2db3e3b25f7631731fc8486562c9022ad087833aa36\", \"limits\": \"finite bytes/metadata/resources/custody only; no semantic or actual-host qualification\", \"local_links\": 14, \"status\": \"passed\"}\n"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/build_tenants/codex/tests/verify_package.py",
+        "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/build_tenants/codex",
+        "--installed",
+        "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/workspace/.agents/skills/stdo-work"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"destination_checked\": false, \"files\": 11, \"installed_checked\": true, \"inventory_sha256\": \"337d274efde96147c8e9a2db3e3b25f7631731fc8486562c9022ad087833aa36\", \"limits\": \"finite bytes/metadata/resources/custody only; no semantic or actual-host qualification\", \"local_links\": 14, \"status\": \"passed\"}\n"
+    }
+  ],
+  "candidate": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/build_tenants/codex/inventory.json",
+    "sha256": "337d274efde96147c8e9a2db3e3b25f7631731fc8486562c9022ad087833aa36"
+  },
+  "installed": [
+    {
+      "path": ".agents/skills/stdo-work/SKILL.md",
+      "sha256": "ba6f7ab1e6de875e2f019b049f7817e771474f1b511a74fe2392a55a37078ee8"
+    },
+    {
+      "path": ".agents/skills/stdo-work/references/basis.md",
+      "sha256": "7b409d4895e7be3291e4e41c32e497ae045e9fb4b62f01b9622b10888d449cda"
+    },
+    {
+      "path": ".agents/skills/stdo-work/references/delegation.md",
+      "sha256": "0bb621b4d6edb17f2100878a567596f85a52b517edfafbb2ceba7119dce8bfde"
+    },
+    {
+      "path": ".agents/skills/stdo-work/references/qualification.md",
+      "sha256": "dda296ed053f3e8ed5ab4cdc7c7b9f162754832fc89ded9280044d96f9dc795c"
+    },
+    {
+      "path": ".agents/skills/stdo-work/references/recovery.md",
+      "sha256": "d7f7f118eea492bb64456a56c4cb4987e6e23acd8b3c0143ba87cf5ec9a92c80"
+    },
+    {
+      "path": ".agents/skills/stdo-work/references/release-install.md",
+      "sha256": "ec7cb5a407f6690936d0bf79ab5fc8796c2cfca4c34772f61ceff4b68f337cfb"
+    },
+    {
+      "path": ".agents/skills/stdo-work/references/tools.md",
+      "sha256": "8bb49c0dfe0eb87fbfbe5063c4a43e15f074e25fdd4ff90ffdec24ef14e75c8b"
+    },
+    {
+      "path": ".agents/skills/stdo-work/source-routes.json",
+      "sha256": "09972e4af512645c43207aa3edd5114e1e81c24ef344c76a6af2e99852920403"
+    }
+  ],
+  "source_root": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/build_tenants/codex"
+}

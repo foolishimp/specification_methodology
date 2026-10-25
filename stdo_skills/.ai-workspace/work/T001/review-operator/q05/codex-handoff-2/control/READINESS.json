@@ -1,0 +1,101 @@
+{
+  "actor_plan_validation": "passed all three",
+  "children": {
+    "reviewer": {
+      "claim": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "roles/CLAIM.json",
+        "root": "control",
+        "selector": null,
+        "sha256": "e83255aea4785d78f7a967f62987e49995c2de376f3dfd20b57f07b60b778824"
+      },
+      "consumer": "root-executive",
+      "context": {
+        "id": "sha256:e705dd2e2160dd0c602670017d926ce0f3406dfd91a8fa81e1391bfd2bceb731",
+        "sha256": "e705dd2e2160dd0c602670017d926ce0f3406dfd91a8fa81e1391bfd2bceb731"
+      },
+      "executor_id": "reviewer",
+      "grant_id": "urn:stdo-skills:T001:q05:codex:handoff:2:dispatch-reviewer",
+      "note": "Actual Executive must preflight and dispatch; operator has not done either.",
+      "observations": [
+        {
+          "id": "sha256:2b389ac9e9a60e9a689289c47801c6adc34ffca8ebb7897f6739a1b8bf765b8c",
+          "sha256": "2b389ac9e9a60e9a689289c47801c6adc34ffca8ebb7897f6739a1b8bf765b8c"
+        }
+      ],
+      "result_key": "urn:stdo-skills:T001:q05:codex:handoff:2:reviewer:stage1",
+      "return_contract": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "roles/reviewer-RETURN-CONTRACT.json",
+        "root": "control",
+        "selector": null,
+        "sha256": "1006a6ab99de8ede5271dffb897eafa616dad9dcb26064017de7d02901697898"
+      }
+    },
+    "worker": {
+      "claim": null,
+      "consumer": "root-executive",
+      "context": {
+        "id": "sha256:a6a22b95eb30257fa9cbe5229754686a72d7280ac613012e04e28b6a2a83f757",
+        "sha256": "a6a22b95eb30257fa9cbe5229754686a72d7280ac613012e04e28b6a2a83f757"
+      },
+      "executor_id": "worker",
+      "grant_id": "urn:stdo-skills:T001:q05:codex:handoff:2:worker-grant",
+      "note": "Actual Executive must preflight and dispatch; operator has not done either.",
+      "observations": [
+        {
+          "id": "sha256:2b389ac9e9a60e9a689289c47801c6adc34ffca8ebb7897f6739a1b8bf765b8c",
+          "sha256": "2b389ac9e9a60e9a689289c47801c6adc34ffca8ebb7897f6739a1b8bf765b8c"
+        }
+      ],
+      "result_key": "urn:stdo-skills:T001:q05:codex:handoff:2:worker:stage1",
+      "return_contract": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "roles/worker-RETURN-CONTRACT.json",
+        "root": "control",
+        "selector": null,
+        "sha256": "c7345efa467d694233d07dab81e0f7a1ac0074076e6222a1c73f82b4b6a47144"
+      }
+    }
+  },
+  "context": {
+    "id": "sha256:2818270085e04bd95f2ba67d620d220b49c69bfee5fc53083665cc5a6a179551",
+    "sha256": "2818270085e04bd95f2ba67d620d220b49c69bfee5fc53083665cc5a6a179551"
+  },
+  "contract_sha256": "eaf71a8fddcf758a9c2b7bc2664c357b2e4273fd07f1debcca85caa28b366926",
+  "control": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-2/control",
+  "decision": "admitted",
+  "executive_plan": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-2/control/plans/executive-actor-plan.json",
+    "sha256": "240bb005434e12ac3094c0392a71fc1973a270e09499ead11f57789f095dc8c8"
+  },
+  "executive_policy": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-2/control/executive-policy.json",
+    "sha256": "fd02a50c026f4aef32e863c6021eec5aca0802ebf0bd7101538a333d5ebe6f11"
+  },
+  "gaps": [],
+  "installed": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-2/control/INSTALL.json",
+    "sha256": "b4c08fee263f8a7772a2455ec247473649dd9c7ebb1c6d84e4a7bcded23bfe19"
+  },
+  "limits": [
+    "candidate-review phase remains unprepared until real expectation/Worker evidence",
+    "same-family limit for Codex",
+    "no automatic success from transport or instruction text"
+  ],
+  "policy": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-2/control/root-policy.json",
+    "sha256": "a1e6cd1b85b0731fcdba31511afff2caa57efe95576d23f8b9ad7f7f343639b5"
+  },
+  "preflight": {
+    "id": "sha256:e2bf9451fc71968b0a2081e58ac5a0e281314c0ca77c5e51e9320941ebd5fc2d",
+    "sha256": "e2bf9451fc71968b0a2081e58ac5a0e281314c0ca77c5e51e9320941ebd5fc2d"
+  },
+  "root_dispatch_selected": false,
+  "standing": "Prepared stage1 only; Root exact launch selection required",
+  "tenant": "codex",
+  "workspace": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-2/workspace"
+}

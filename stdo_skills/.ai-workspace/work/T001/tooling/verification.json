@@ -1,0 +1,32 @@
+{
+  "affected_support_command": "python3 -B -m unittest test_ac_support_native301.Native301PublicTests test_ac_support_core test_ac_support_effects test_ac_support_interfaces",
+  "affected_support_result": {
+    "exit_code": 0,
+    "tests": 195,
+    "elapsed_seconds_reported": "63.472",
+    "raw_log": "tool output in current session; separately retained native rerun below"
+  },
+  "native_rerun": {
+    "command": [
+      "/usr/local/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "test_ac_support_native301.Native301PublicTests"
+    ],
+    "exit_code": 0,
+    "raw_stdout": "native-public-proof.stdout",
+    "raw_stderr": "native-public-proof.stderr",
+    "custody": "native-public-proof-001/"
+  },
+  "native_setup": {
+    "path": "native-readonly-001/",
+    "operations": [
+      "tools.describe",
+      "source.read",
+      "workspace.observe"
+    ],
+    "status": "all exit0",
+    "claim": "actual consumer acquisition only; no work grant or admission"
+  }
+}

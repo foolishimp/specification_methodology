@@ -1,0 +1,371 @@
+{
+  "capsule_readback": "Every indexed capsule inventory member rehashed and matched when this index was written; this is custody, not semantic proof.",
+  "cases": [
+    {
+      "assessment": {
+        "path": "lifecycle/assessments/claude-basis-tool-diagnostics.json",
+        "sha256": "2748f448203d7ef46651115ce312b3843e731d758dc69f2b91a212eb4b12722d"
+      },
+      "attempt": "d53fdbbd0c828f7be0ef1253e21849acebcda895272ce09fac189edbc5b7f2bb",
+      "candidate_inventory_sha256": "42d246cbe2fcf1414b0fd7ed094be74d6f2607595525555caa52618d8999f79a",
+      "capsule": {
+        "path": "results/claude-basis-tool-diagnostics/INVENTORY.json",
+        "sha256": "9ce21adb59649f5b925b568ccbba0fb2bbfb1a9b5c32c2993bc24a65e76c7a17"
+      },
+      "lane": "claude-basis-tool-diagnostics",
+      "predicate_outcomes": [
+        {
+          "case": "Q03",
+          "outcome": "supported",
+          "predicate": "Valid control basis and invalid child bases retain different dispositions"
+        },
+        {
+          "case": "Q06",
+          "outcome": "supported for selected discovery and local execution-error witnesses",
+          "predicate": "Actual unsupported capability and actual failed build are not converted into success"
+        }
+      ]
+    },
+    {
+      "assessment": {
+        "path": "lifecycle/assessments/claude-installation-update-repair-2.json",
+        "sha256": "b790bd84187eea839d497774b0e9de029a1cd558b78bc78e9dce32b95118a0d3"
+      },
+      "attempt": "4380fd6c5b90328382923137c6e15ba06817efb8ba44d8bec66f471878f96263",
+      "candidate_inventory_sha256": "33472e5e2b9adf5ba616bd6980d7f84b3c10de168968727919de32378f045704",
+      "capsule": {
+        "path": "results/claude-installation-update-repair-2/INVENTORY.json",
+        "sha256": "f6cefeb7799e544ab3c1f5d05d0fbbc85a1c833861acd014916b9b3dc639d5d4"
+      },
+      "lane": "claude-installation-update-repair-2",
+      "predicate_outcomes": [
+        {
+          "case": "Q12.update-invoke",
+          "outcome": "supported",
+          "predicate": "Fresh actual repaired package after compatible update is acquired and performs exact scoped effect"
+        },
+        {
+          "case": "LC-01 affected effect-scope predicate",
+          "outcome": "supported on this successor",
+          "predicate": "Verification does not create or delete actor-authored files outside the selected target"
+        },
+        {
+          "case": "Q12.remove-repair-2",
+          "outcome": "not yet performed",
+          "predicate": "Any new successor removal requires Root closed-result selection"
+        }
+      ]
+    },
+    {
+      "assessment": {
+        "path": "lifecycle/assessments/claude-installation-update.json",
+        "sha256": "7c4f95af07775f0e59bee367ef0e6866d1cf21e271e23d68b1f4d7ed9387bc42"
+      },
+      "attempt": "dc0100ce370bb536e4889a49a6246a4dd5ac67622fb6cbdc2329b100e46e4527",
+      "candidate_inventory_sha256": "d09796d0cdbdcc9975b98580f766b3ca11397bfdf83b0d9382e650e11c6b9d09",
+      "capsule": {
+        "path": "results/claude-installation-update/INVENTORY.json",
+        "sha256": "fe2ab5b188936fb63e1c22d70b02560c8b13f12a9f23b2a1d7568d1c430ef815"
+      },
+      "lane": "claude-installation-update",
+      "predicate_outcomes": [
+        {
+          "case": "Q12.update-invoke",
+          "outcome": "supported",
+          "predicate": "Actual updated installed bundle is acquired and performs declared greeting effect"
+        },
+        {
+          "case": "Q12.update-invoke/effect-scope",
+          "outcome": "not satisfied",
+          "predicate": "No effects outside the sole selected target except supported mechanism storage"
+        },
+        {
+          "case": "Q12.remove",
+          "outcome": "not yet performed",
+          "predicate": "Only target bundle removed while other actual STDO tenant/configs preserved"
+        }
+      ]
+    },
+    {
+      "assessment": {
+        "path": "lifecycle/assessments/claude-release-deploy-repair-2-close.json",
+        "sha256": "5021f0a32ce6d274cab415837f72c65b6f68a8f82ce65280a06541172c5800c5"
+      },
+      "attempt": "fb1d292c13b7c4928d924fdd9d2473fd44c1a395a3a15f0ab9ae205cd3c69c84",
+      "candidate_inventory_sha256": "33472e5e2b9adf5ba616bd6980d7f84b3c10de168968727919de32378f045704",
+      "capsule": {
+        "path": "results/claude-release-deploy-repair-2-close/INVENTORY.json",
+        "sha256": "438ea8638e5f5b62c69043c626a94c202a01a5d75a9e61f6eac95be7b4a5fbaf"
+      },
+      "lane": "claude-release-deploy-repair-2-close",
+      "predicate_outcomes": [
+        {
+          "case": "Q11.deploy.return",
+          "outcome": "supported",
+          "predicate": "One same-session read-only close returns truthful final status without repeating effects"
+        },
+        {
+          "case": "Q11.deploy.close.effects",
+          "outcome": "supported",
+          "predicate": "Current workspace content and installed package remain unchanged during selected close"
+        }
+      ]
+    },
+    {
+      "assessment": {
+        "path": "lifecycle/assessments/claude-release-deploy-repair-2.json",
+        "sha256": "6922f3e4fc0c155b979de7537e5f738f46faf52484c8ce088b36e3693f2be327"
+      },
+      "attempt": "657e9666e081eacd8893db39ea3366eafd71659399e8e31243f2ce3de83afbcc",
+      "candidate_inventory_sha256": "33472e5e2b9adf5ba616bd6980d7f84b3c10de168968727919de32378f045704",
+      "capsule": {
+        "path": "results/claude-release-deploy-repair-2/INVENTORY.json",
+        "sha256": "1d62af6b6bca3eaaacd18cd51168fc741e5bdbdbd5c3771274ed36c3c7d4fc9f"
+      },
+      "lane": "claude-release-deploy-repair-2",
+      "predicate_outcomes": [
+        {
+          "case": "Q11.deploy",
+          "outcome": "supported",
+          "predicate": "Separately selected local deployment installs exact prepared bytes and performs actual verification"
+        },
+        {
+          "case": "Q11.deploy.effects",
+          "outcome": "supported_with_observation_limits",
+          "predicate": "No ungranted scratch or other workspace effect in the observed successor"
+        },
+        {
+          "case": "Q11.deploy.return",
+          "outcome": "not_established",
+          "predicate": "Original bounded invocation returns a compact final native host status"
+        }
+      ]
+    },
+    {
+      "assessment": {
+        "path": "lifecycle/assessments/claude-release-prepare.json",
+        "sha256": "a17a8be66a6c8ecc783778b3b5f4185c0fe1a69600f0cd3031f0e0b6500e14d7"
+      },
+      "attempt": "53f17e8f67f86e9d9b910573e67a271d5b4e442656a2b777c73e95ea95858a91",
+      "candidate_inventory_sha256": "42d246cbe2fcf1414b0fd7ed094be74d6f2607595525555caa52618d8999f79a",
+      "capsule": {
+        "path": "results/claude-release-prepare/INVENTORY.json",
+        "sha256": "82a5799eaa57bd6cadcc390b994dd217b26ef3861a9a3eb4e8fa791d5caccd77"
+      },
+      "lane": "claude-release-prepare",
+      "predicate_outcomes": [
+        {
+          "case": "Q11.prepare",
+          "outcome": "supported",
+          "predicate": "Exact local candidate prepared and actually verified without deployment/publication authority"
+        },
+        {
+          "case": "Q11.deploy",
+          "outcome": "not yet performed",
+          "predicate": "Separate selected local deployment verifies actual installed bytes"
+        }
+      ]
+    },
+    {
+      "assessment": {
+        "path": "lifecycle/assessments/codex-basis-tool-diagnostics.json",
+        "sha256": "fa5613f242c2fc6cd3dc024debfd2368e675b94bc5d4e9d10aca7a5fdeb0e788"
+      },
+      "attempt": "87f9cf9d0857cfa053b015649c7544559f859f6764d0b8f6db7b7fb99b9324eb",
+      "candidate_inventory_sha256": "337d274efde96147c8e9a2db3e3b25f7631731fc8486562c9022ad087833aa36",
+      "capsule": {
+        "path": "results/codex-basis-tool-diagnostics/INVENTORY.json",
+        "sha256": "0fa779ad27853da6a4fc21c0bdc6803b0213cabd4b0886e59fd6c2ae269ef6d4"
+      },
+      "lane": "codex-basis-tool-diagnostics",
+      "predicate_outcomes": [
+        {
+          "case": "Q03",
+          "outcome": "supported",
+          "predicate": "Valid control basis actually verified; missing/altered/ambiguous child bases do not acquire correction authority"
+        },
+        {
+          "case": "Q06",
+          "outcome": "supported for the selected capability-discovery witness",
+          "predicate": "Unsupported native capability is retained without fabricated result"
+        },
+        {
+          "case": "Q06",
+          "outcome": "supported",
+          "predicate": "Actual local execution error remains failed, with no successful built artifact"
+        },
+        {
+          "case": "Q03/Q06",
+          "outcome": "supported",
+          "predicate": "Independent diagnostic result remains usable and identifies supported re-entry"
+        }
+      ]
+    },
+    {
+      "assessment": {
+        "path": "lifecycle/assessments/codex-installation-update.json",
+        "sha256": "521711bd75daa1739ca67589bf9cd21165588d93814336877216b067b0082cd1"
+      },
+      "attempt": "7928f68708f5c2efd4ac9c8f3dd0c7cf702e08c6afad5577d126d5a314c4b9c1",
+      "candidate_inventory_sha256": "3bca145678d2abe0d9da0d6839700c25db40cc19f694d8fa1771360af40f4137",
+      "capsule": {
+        "path": "results/codex-installation-update/INVENTORY.json",
+        "sha256": "fe8f3868c8ab0849013885c8bff970f04d31839bb38116e01aff1d5420513b97"
+      },
+      "lane": "codex-installation-update",
+      "predicate_outcomes": [
+        {
+          "case": "Q12.update-invoke",
+          "outcome": "supported",
+          "predicate": "Actual host acquires the current updated package and completes one governed effect"
+        },
+        {
+          "case": "Q12.remove",
+          "outcome": "not yet performed",
+          "predicate": "Remove target while actual other selected STDO tenant and configs remain intact"
+        }
+      ]
+    },
+    {
+      "assessment": {
+        "path": "lifecycle/assessments/codex-release-deploy.json",
+        "sha256": "b6826d68a1cb07ca29722a5ed0adc2bffba9d5d3f212d20584603f05c29f63c1"
+      },
+      "attempt": "b74995164c8b9e954490462cc6a81ccaac6a6551d3f9db87c0ab7660a9bb40b6",
+      "candidate_inventory_sha256": "337d274efde96147c8e9a2db3e3b25f7631731fc8486562c9022ad087833aa36",
+      "capsule": {
+        "path": "results/codex-release-deploy/INVENTORY.json",
+        "sha256": "5cb19436a50a69fed0ef3647b5cd95bb370fb65e3e003dbde8ef5893d492a6cb"
+      },
+      "lane": "codex-release-deploy",
+      "predicate_outcomes": [
+        {
+          "case": "Q11.deploy",
+          "outcome": "supported",
+          "predicate": "Separate Root-selected exact local deployment installs and verifies original prepared bytes"
+        }
+      ]
+    },
+    {
+      "assessment": {
+        "path": "lifecycle/assessments/codex-release-prepare.json",
+        "sha256": "f4fc60aaebec80974071fe3c5d60404a4774b10be76f06751d5fccad16cd8a35"
+      },
+      "attempt": "a734bb023b07c934b4dd5b01784ea5f6fd5f55d2e29ff6a4945275889568c96f",
+      "candidate_inventory_sha256": "337d274efde96147c8e9a2db3e3b25f7631731fc8486562c9022ad087833aa36",
+      "capsule": {
+        "path": "results/codex-release-prepare/INVENTORY.json",
+        "sha256": "3a7d26fcdb38aa5ccdf830030fcd2cc816432097d04f1ffa3770ef5eddd18ab1"
+      },
+      "lane": "codex-release-prepare",
+      "predicate_outcomes": [
+        {
+          "case": "Q11.prepare",
+          "outcome": "supported",
+          "predicate": "Exact reviewable selected release bytes are prepared and actually verified"
+        },
+        {
+          "case": "Q11.prepare",
+          "outcome": "supported in observed fixture",
+          "predicate": "Preparation does not exercise deployment or publication authority"
+        },
+        {
+          "case": "Q11.deploy",
+          "outcome": "not yet performed",
+          "predicate": "Separately authorized actual local installation is verified"
+        }
+      ]
+    }
+  ],
+  "cost": "Keep per-invocation actual native usage and time. Resumed session cost may be cumulative and is not summed. Total billed and delivery cost unknown.",
+  "current_tenant_inventory_sha256": {
+    "claude": "33472e5e2b9adf5ba616bd6980d7f84b3c10de168968727919de32378f045704",
+    "codex": "337d274efde96147c8e9a2db3e3b25f7631731fc8486562c9022ad087833aa36"
+  },
+  "custody_and_history": [
+    {
+      "path": "lifecycle/installations/codex/UPDATE-CUSTODY.json",
+      "sha256": "0de384b9f4b83dfd206a839e55de1bf78553186f78ea3e6c13f25f7c555f921b"
+    },
+    {
+      "path": "lifecycle/installations/codex/REMOVAL-CUSTODY.json",
+      "sha256": "55bba8635cbd312ebc8c624ca074911070294f7711b173c99287ba280e0912d6"
+    },
+    {
+      "path": "lifecycle/installations/codex/PACKAGE-CUSTODY.json",
+      "sha256": "3b7ecd0e4f8f594b77fd672581df07f39224f1d0ff8b57ae160c6205f1db1643"
+    },
+    {
+      "path": "lifecycle/installations/claude/UPDATE-CUSTODY.json",
+      "sha256": "5e99ce09b0f68bb9ff67a7360bfca5269a94a7e5b8bb21442196025f95173be4"
+    },
+    {
+      "path": "lifecycle/installations/claude/REMOVAL-CUSTODY.json",
+      "sha256": "5de06c30fee87e61e0cc65ddf1dfb1b5df210795c07caf567258d43fa4048e5e"
+    },
+    {
+      "path": "lifecycle/installations/claude/PACKAGE-CUSTODY.json",
+      "sha256": "2f39db3bea51745a9231e0e667327179686395c7ec8ca6df05ac2a88e28efc51"
+    },
+    {
+      "path": "lifecycle/installations-repair-2/claude/UPDATE-CUSTODY.json",
+      "sha256": "3b3f2c0d7345fd12d29a65a1cdef2ffb9e876f1e838585737a6aea938fd658b3"
+    },
+    {
+      "path": "lifecycle/installations-repair-2/claude/REMOVAL-CUSTODY.json",
+      "sha256": "fd54bf92c6593227a8cdd1aa771a1fff137a1687d4b0170835457ef29e783e19"
+    },
+    {
+      "path": "lifecycle/installations-repair-2/claude/SOURCE-REUSE.json",
+      "sha256": "e9c1de03e5c40c36baea28699bbbd3259d22e183a6b6cfef5978581c3354b9e0"
+    },
+    {
+      "path": "lifecycle/release-deploy/claude/SUPERSEDED-UNRUN.json",
+      "sha256": "ac75516c10a95672f58ab423c20ca2ff9a3664b2b1e0079f63ba894c1ef11c9d"
+    },
+    {
+      "path": "lifecycle/findings/LC-01-claude-updated-invocation-scratch-effects.md",
+      "sha256": "fdefd0055dc326404662494b969365b695b36541d57d83e187ef3af140bebf6b"
+    },
+    {
+      "path": "lifecycle/helper-history/CAPTURE-FAILURE-01.json",
+      "sha256": "2b63fc96641da9c67c5c27cd7a5f26f21b59088f292e0c5fb732640a1ce503ce"
+    },
+    {
+      "path": "lifecycle/helper-history/CAPTURE-CHANGE.json",
+      "sha256": "5379bbff1ab33c32d1dd28b540f0662c3e39737d55dc52b3456e6a0fc4c0992b"
+    },
+    {
+      "path": "lifecycle/DEPLOY-CLOSE-READY.json",
+      "sha256": "3751b2ced0854124597747622ca91d1b82452b91fce2d12f23c80a57336085cb"
+    }
+  ],
+  "no_further_host_loop_selected": true,
+  "oracle": {
+    "path": "lifecycle/ORACLE.json",
+    "sha256": "d5cef9339d10523baf6005980b3c7a09d5eb53c615fba33a89f925f482ec1467"
+  },
+  "out_of_scope": [
+    "other shared qualification scenarios",
+    "remote publication",
+    "tenant acceptance",
+    "whole-method qualification",
+    "statistical reliability",
+    "comparative quality or efficiency"
+  ],
+  "reuse": {
+    "claim": "Installer/verifier bytes and installed roster unchanged. Reuse actual prior deterministic installer controls only for these unchanged mechanisms. Earlier diagnostic/release-preparation host evidence remains tied to42d246; affected host scratch behavior was exercised on33472. No automatic conversion of prior results into whole-new-cut acceptance.",
+    "claude_repair_2": {
+      "path": "lifecycle/installations-repair-2/claude/SOURCE-REUSE.json",
+      "sha256": "e9c1de03e5c40c36baea28699bbbd3259d22e183a6b6cfef5978581c3354b9e0"
+    }
+  },
+  "schema": "stdo_skills.lifecycle-case-index/1",
+  "scope": [
+    "Q03",
+    "Q06",
+    "Q11",
+    "Q12"
+  ],
+  "standing": "Writer evidence index for Executive and independent review; not Product acceptance or release"
+}

@@ -1,0 +1,938 @@
+{
+  "schema": "stdo-skills.codex.author-assessment/1",
+  "actor": {
+    "id": "urn:stdo-skills:T001:codex:worker:2",
+    "family": "openai-codex",
+    "authorship": "codex tenant candidate author; successor activation"
+  },
+  "assessment_scope": "Bounded author instruction assessment and executed finite package facts only.",
+  "source_refs": [
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "specification/PRODUCT.md",
+      "root": "product",
+      "selector": null,
+      "sha256": "7e667a594717645aa51fa23b757a95283ad60e5eca4e59d24246a62ce2716803"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "specification/INTENT.md",
+      "root": "product",
+      "selector": null,
+      "sha256": "c6c8d5083ce154fa5f1782b4a789c4ff96b65a18eabc28339c79857b131ad895"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "specification/requirements/README.md",
+      "root": "product",
+      "selector": null,
+      "sha256": "dcc2564e597d3d3c8fcff025a515f4a92a62e7f3aa2f7ba80af97f7db75f6acc"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "specification/requirements/SCENARIOS.md",
+      "root": "product",
+      "selector": null,
+      "sha256": "089221fb9d7eee532f91c6ef40a4bfdaaa18c00fcc28bc2f538ddd6b6e3ff03e"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "specification/REFERENCE_FRAME_BASIS.md",
+      "root": "product",
+      "selector": null,
+      "sha256": "00a91bb5a16ba8802cb2d3132c08677c978f3ef50d4e6c61d864c5afdb960baa"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "specification/SOURCE_OWNERS.md",
+      "root": "product",
+      "selector": null,
+      "sha256": "15300e9871b842cb6ab81b360fe9717766638e82abc2d1cf06c5cebc2febfca3"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "stdo_skills.json",
+      "root": "product",
+      "selector": null,
+      "sha256": "4339a7dbc735052c08962154966fc13a4e30206d42ba2e80b53c6009a5008c22"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "codex/PREDICATES.md",
+      "root": "successor",
+      "selector": null,
+      "sha256": "7753acef3a52d4e8ae15bf2c2d2ce8d0bbab80626d3c0f2edc8127cfac1c3e66"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "codex/HOST.md",
+      "root": "successor",
+      "selector": null,
+      "sha256": "6f940ea5514cf8ea3e0b359adbb0337d3ff020c414aca54c502befab9665213e"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "codex/HISTORY.json",
+      "root": "successor",
+      "selector": null,
+      "sha256": "21c30f02798ae39e60d89bba6f3489eb73afa451d266383e0566a916bfbe5f68"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "standards/ACTIVATION.md",
+      "root": "method",
+      "selector": {
+        "lines": [
+          1750,
+          1768
+        ]
+      },
+      "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "standards/ACTIVATION.md",
+      "root": "method",
+      "selector": {
+        "lines": [
+          1004,
+          1055
+        ]
+      },
+      "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "codex/PRIOR-PROPOSAL.md",
+      "root": "successor",
+      "selector": null,
+      "sha256": "3364d66e885f7a8b66bf6a9b2fc903b606ff7fdeacbaba4aabc5fc6f2d6f9df6"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "build_tenants/graphify/design/fd-method-stdo-3.0.1.json",
+      "root": "tool",
+      "selector": null,
+      "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+    }
+  ],
+  "source_acquisition_evidence": [
+    {
+      "id": "sha256:083fbf79922b7107a5aa4848ec1aa426a41b533780a950711d34bcafc9c35d96",
+      "sha256": "083fbf79922b7107a5aa4848ec1aa426a41b533780a950711d34bcafc9c35d96"
+    },
+    {
+      "id": "sha256:9428e8da483568533fdbd6afd1f863375fac72f5b1bd7ecae77a71fc6e71b938",
+      "sha256": "9428e8da483568533fdbd6afd1f863375fac72f5b1bd7ecae77a71fc6e71b938"
+    },
+    {
+      "id": "sha256:9ff476e254083127f3213a7eca7c929b32524010a20e32265f7aaf75c3494d55",
+      "sha256": "9ff476e254083127f3213a7eca7c929b32524010a20e32265f7aaf75c3494d55"
+    },
+    {
+      "id": "sha256:3544be0b353855b3d377b1a79bd3bb7c695c5d9c25b907907478e40185a07f86",
+      "sha256": "3544be0b353855b3d377b1a79bd3bb7c695c5d9c25b907907478e40185a07f86"
+    },
+    {
+      "id": "sha256:14b425bf72071bd6bf210162d595c5dcf81b6e3d85277c5995e0400221315378",
+      "sha256": "14b425bf72071bd6bf210162d595c5dcf81b6e3d85277c5995e0400221315378"
+    },
+    {
+      "id": "sha256:3a5c1f18f334f2a097fed49a3567bbe77ed89f74d2e0f295668c6365027ace35",
+      "sha256": "3a5c1f18f334f2a097fed49a3567bbe77ed89f74d2e0f295668c6365027ace35"
+    },
+    {
+      "id": "sha256:b270d6eac70e9f0ad92d4b424b50acb0505a747f7987e7fe663aed3bfc85ee16",
+      "sha256": "b270d6eac70e9f0ad92d4b424b50acb0505a747f7987e7fe663aed3bfc85ee16"
+    },
+    {
+      "id": "sha256:65b56823e2bccf56f90e2525afb0b9ef7d8973b7201f1e97bb77d76e0b65f6b3",
+      "sha256": "65b56823e2bccf56f90e2525afb0b9ef7d8973b7201f1e97bb77d76e0b65f6b3"
+    },
+    {
+      "id": "sha256:a4aef505cc2afc51c3d83662778138bd1cadb8cb12729e3218779868c7401059",
+      "sha256": "a4aef505cc2afc51c3d83662778138bd1cadb8cb12729e3218779868c7401059"
+    },
+    {
+      "id": "sha256:e876bf6edd10d1dd591bcc0ac5d8c4c20d99beaaace999f8a72cd08a5fda521e",
+      "sha256": "e876bf6edd10d1dd591bcc0ac5d8c4c20d99beaaace999f8a72cd08a5fda521e"
+    },
+    {
+      "id": "sha256:0b98429411f9ae3ed55efcc3db6acc5a96ff4647aa5876de7fb4cfcfb9dcf2e6",
+      "sha256": "0b98429411f9ae3ed55efcc3db6acc5a96ff4647aa5876de7fb4cfcfb9dcf2e6"
+    },
+    {
+      "id": "sha256:0d3b895c495c1c1b1c12389e160ed8294c9e843ca7eaa6ccb81ae62476148f29",
+      "sha256": "0d3b895c495c1c1b1c12389e160ed8294c9e843ca7eaa6ccb81ae62476148f29"
+    },
+    {
+      "id": "sha256:8f40aec0ac5042f3d9e99896b07d6eeee534a8defb8b0929f4b46d58e169124c",
+      "sha256": "8f40aec0ac5042f3d9e99896b07d6eeee534a8defb8b0929f4b46d58e169124c"
+    },
+    {
+      "id": "sha256:320af0af67100f305bc2bf31a47e5725254d69ca019aa01e9e39de86f71c40ab",
+      "sha256": "320af0af67100f305bc2bf31a47e5725254d69ca019aa01e9e39de86f71c40ab"
+    }
+  ],
+  "instruction_assessment": {
+    "core_value": "satisfied",
+    "required_paths": [
+      {
+        "requirements": [
+          "SK-01"
+        ],
+        "locations": [
+          "skills/stdo-work/SKILL.md:frontmatter and Normal invocation"
+        ],
+        "reason": "Relevant governed-task description enables normal host selection; explicit $stdo-work path is given; unrelated requests excluded; lanes remain distinct."
+      },
+      {
+        "requirements": [
+          "SK-02"
+        ],
+        "locations": [
+          "skills/stdo-work/references/basis.md:Bind the exact workspace and method"
+        ],
+        "reason": "Executable stdo status command checks selected target definition, valid/installed/failures and immutable manifest; ambiguity, missing install and changed members withhold dependence without latest adoption."
+      },
+      {
+        "requirements": [
+          "SK-03",
+          "SK-06"
+        ],
+        "locations": [
+          "skills/stdo-work/SKILL.md:steps 1-4",
+          "skills/stdo-work/references/delegation.md"
+        ],
+        "reason": "Existing sufficient grant is reused; direct Writer one-file path performs effect and focused proof without forced ticket/Executive/reviewer. Material handoff preserves exact grant/basis/consumer, actual transport and original return."
+      },
+      {
+        "requirements": [
+          "SK-04"
+        ],
+        "locations": [
+          "skills/stdo-work/references/tools.md"
+        ],
+        "reason": "Ordinary supported CLI envelope on stdin, tools.describe schemas, current observation, exact preimage, work.write provenance and actual response/effect evidence are concrete. Native results.conjoin remains unsupported. Required unsupported operations withhold claims."
+      },
+      {
+        "requirements": [
+          "SK-05"
+        ],
+        "locations": [
+          "skills/stdo-work/references/delegation.md:Before handoff retain",
+          "skills/stdo-work/references/recovery.md:identical candidate bytes"
+        ],
+        "reason": "Outcome/basis/authority/material relations/context limits, failures and return bindings retained; dependency-ready frontier never removes counterexamples."
+      },
+      {
+        "requirements": [
+          "SK-07"
+        ],
+        "locations": [
+          "skills/stdo-work/references/delegation.md:A required Reviewer"
+        ],
+        "reason": "Expectations acquired from source before exact candidate, real exposure and family limits recorded; reviewer neither repairs nor promotes; affected material changes require fresh assessment."
+      },
+      {
+        "requirements": [
+          "SK-08",
+          "SK-09"
+        ],
+        "locations": [
+          "skills/stdo-work/references/recovery.md"
+        ],
+        "reason": "Current target and original operation evidence precede retry; retained histories distinguish current support from unresolved counterexample; availability, performed inconclusive assessment and not_performed remain separate."
+      },
+      {
+        "requirements": [
+          "SK-10",
+          "SK-11"
+        ],
+        "locations": [
+          "skills/stdo-work/references/release-install.md",
+          "README.md:Repository-local installation and Update or remove"
+        ],
+        "reason": "Preparation binds exact candidate/destination and withholds absent publication grant; installation is one complete skill directory; exact old receipt governs update/remove and preserves unrelated configuration. Host and tool drift routes affected qualification."
+      },
+      {
+        "requirements": [
+          "SK-12"
+        ],
+        "locations": [
+          "skills/stdo-work/references/qualification.md"
+        ],
+        "reason": "Every Q01-Q12 remains visible; independent expected outcomes, actual host/tool trace, separate lanes, all failed attempts and unknown cost are retained; structural checks never claim behavior or benefit."
+      }
+    ],
+    "discriminators": [
+      {
+        "id": "Q04-author-walkthrough",
+        "source": "SK-03 and SCENARIOS Q04",
+        "premise": "One-file authorized correction with adequate existing requirement/design and direct Writer scope.",
+        "observed_instruction": "SKILL step 3 and delegation first paragraph select current preimage, one exact effect and focused proof, explicitly avoiding mandatory ticket, Executive and review.",
+        "conclusion": "The permitted direct path reaches a bounded return without introducing any such mandatory gate.",
+        "core_value": "satisfied",
+        "limits": "Reasoning over exact instruction bytes; no actual-host Q04 trial."
+      },
+      {
+        "id": "Q07-author-walkthrough",
+        "source": "SK-05/SK-08 and SCENARIOS Q07",
+        "premise": "Equal candidate bytes; history A has current accepted assessment, history B retains an unresolved defeating counterexample.",
+        "observed_instruction": "recovery.md distinguishes the two histories and preserves the counterexample as an obligation affecting continuation.",
+        "conclusion": "A may take only an already authorized next action; B withholds the dependent claim and re-enters repair/reassessment. Candidate hash equality cannot collapse the distinction.",
+        "core_value": "satisfied",
+        "limits": "Paired semantic walkthrough, not host reliability evidence."
+      },
+      {
+        "id": "Q06-Q08-author-walkthrough",
+        "source": "SK-04/SK-08 and SCENARIOS Q06/Q08",
+        "premise": "Required operation unsupported/error; separately a target changes before acknowledgment.",
+        "observed_instruction": "tools.md retains status/refusal/effect evidence; recovery.md forbids resend before new observation and original effect reconciliation, distinguishing visible bytes from custody/completion.",
+        "conclusion": "Unsupported required operation yields no dependent success. Changed target with uncertain acknowledgment yields no duplicate effect; unresolved custody remains open.",
+        "core_value": "satisfied",
+        "limits": "Instruction walkthrough; current construction also retained and reconciled one actual dependency_changed refusal, without claiming full Q06/Q08 host trials."
+      }
+    ],
+    "counterexamples_after_assessment": [],
+    "limits": [
+      "Author assessment is not independent review",
+      "No automatic or explicit host invocation trial",
+      "No actual-host Q01-Q12 qualification",
+      "No general efficiency or reliability claim"
+    ]
+  },
+  "package_assessment": {
+    "core_value": "satisfied",
+    "limits": [
+      "Finite package facts only; installation/discovery/update/removal not executed"
+    ],
+    "reason": "Observed 11 regular payload files match inventory; 14 local links resolve inside their package boundary; skill metadata validator passed; Python verifier compiled; exact authored bytes match all 11 files. Deployment recipe names one scoped directory and requires complete old receipt comparison before update/removal.",
+    "checks": [
+      {
+        "argv": [
+          "python3",
+          "-B",
+          "/Users/jim/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+          "build_tenants/codex/skills/stdo-work"
+        ],
+        "exit_code": 0,
+        "stdout": "Skill is valid!\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "/Users/jim/.pyenv/versions/3.11.5/bin/python3",
+          "-B",
+          "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/build_tenants/codex/tests/verify_package.py",
+          "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/build_tenants/codex"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"destination_checked\":false,\"files\":11,\"installed_checked\":false,\"inventory_sha256\":\"337d274efde96147c8e9a2db3e3b25f7631731fc8486562c9022ad087833aa36\",\"limits\":\"finite bytes/metadata/resources/custody only; no semantic or actual-host qualification\",\"local_links\":14,\"status\":\"passed\"}\n",
+        "stderr": ""
+      },
+      {
+        "check": "exact-authored-content-and-python-syntax",
+        "files": 11,
+        "status": "passed"
+      }
+    ],
+    "static_method_verification": {
+      "argv": [
+        "stdo",
+        "status",
+        "--definition",
+        "stdo_skills.json",
+        "--verify"
+      ],
+      "exit_code": 0,
+      "installed": true,
+      "valid": true,
+      "failures": [],
+      "manifest_sha256": "60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8"
+    },
+    "design_precedes_implementation": true
+  },
+  "transition": {
+    "changed_relations": "Common SK-01..SK-12 requirements now have a Codex instruction realization, packaged references, deploy recipe and finite verifier under the granted tenant.",
+    "changed_paths": "build_tenants/codex design, skill, references, README, verifier and inventory; actor assessment record.",
+    "authority_paths": "No new admission, semantic, acceptance or publication authority; current TASK grant used for all content.",
+    "retained_seams": [
+      "Exact immutable STDO pin",
+      "Independent Claude realization",
+      "Existing owner acceptance/release",
+      "Public tool evidence versus semantic assessment"
+    ],
+    "open_seams": [
+      "Actual-host Q01-Q12",
+      "Independent source-first review",
+      "Automatic/explicit discovery",
+      "Publication and owner acceptance"
+    ],
+    "explicit_non_changes": [
+      "Common specification unchanged",
+      "Immutable method unchanged",
+      "No peer/Git/global/model effects"
+    ],
+    "assessor_recommendation": "Submit this exact candidate for Executive consumption and later authorized qualification; no next stage activated.",
+    "decision_owner_disposition": null
+  },
+  "failure_history": {
+    "refusal": {
+      "id": "sha256:6568add29797a9b6181748c9af15cef2716a91960258e84b9ea89e411ead5a38",
+      "sha256": "6568add29797a9b6181748c9af15cef2716a91960258e84b9ea89e411ead5a38"
+    },
+    "cause": "README work.write observed tenant root while an already running skill write added recovery.md; writer refused dependency_changed before README effect.",
+    "reconciliation": {
+      "id": "sha256:da84510a7bffb78cfcadb9ad890380b767401db969e7f65f25c662ff48d32ec4",
+      "sha256": "da84510a7bffb78cfcadb9ad890380b767401db969e7f65f25c662ff48d32ec4"
+    },
+    "resolution": "Observed README and verifier absent, consumed completed skill writer, then submitted new requests sequentially with fresh containing-directory observations. No automatic retry or duplicate effect.",
+    "prior_attempt": "HISTORY.json retains original failure and unknown external/descendant effects; no prior success invented."
+  },
+  "not_performed": [
+    "independent-review",
+    "actual-host-Q01",
+    "actual-host-Q02",
+    "actual-host-Q03",
+    "actual-host-Q04",
+    "actual-host-Q05",
+    "actual-host-Q06",
+    "actual-host-Q07",
+    "actual-host-Q08",
+    "actual-host-Q09",
+    "actual-host-Q10",
+    "actual-host-Q11",
+    "actual-host-Q12",
+    "automatic-discovery",
+    "explicit-host-invocation",
+    "installation-update-removal",
+    "publication",
+    "owner-acceptance"
+  ],
+  "cost": {
+    "elapsed_seconds": 566,
+    "tokens": null,
+    "cost": null,
+    "unknowns": [
+      "Resolved model and effort not independently established",
+      "Reported tokens/cost unavailable",
+      "Historical descendant/external effect end remains limited as recorded in HISTORY"
+    ]
+  },
+  "candidate": {
+    "engine": "workspace-regular-file",
+    "root": "product",
+    "path": "build_tenants/codex/inventory.json",
+    "object": null,
+    "sha256": "337d274efde96147c8e9a2db3e3b25f7631731fc8486562c9022ad087833aa36",
+    "selector": null
+  },
+  "write_receipts": [
+    {
+      "request_id": "codex-s1-support-0",
+      "evidence": {
+        "id": "sha256:6568add29797a9b6181748c9af15cef2716a91960258e84b9ea89e411ead5a38",
+        "sha256": "6568add29797a9b6181748c9af15cef2716a91960258e84b9ea89e411ead5a38"
+      },
+      "status": "refused",
+      "target": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/codex/README.md",
+        "root": "product",
+        "selector": null,
+        "sha256": null
+      },
+      "postimage": null,
+      "effect": null,
+      "interval": {
+        "clock": "unix_ns",
+        "ended_ns": 1792894237281448000,
+        "started_ns": 1792894236456331000
+      }
+    },
+    {
+      "request_id": "codex-s1-package-2",
+      "evidence": {
+        "id": "sha256:d9329aa2febba865543e27ef817263b490219d70a28dd78d2fbf663029851520",
+        "sha256": "d9329aa2febba865543e27ef817263b490219d70a28dd78d2fbf663029851520"
+      },
+      "status": "ok",
+      "target": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/codex/skills/stdo-work/references/tools.md",
+        "root": "product",
+        "selector": null,
+        "sha256": null
+      },
+      "postimage": {
+        "bytes": 4116,
+        "exists": true,
+        "mode": 384,
+        "sha256": "8bb49c0dfe0eb87fbfbe5063c4a43e15f074e25fdd4ff90ffdec24ef14e75c8b",
+        "type": "regular"
+      },
+      "effect": {
+        "core_value": "satisfied",
+        "end_established": true,
+        "observed_interval": {
+          "clock": "unix_ns",
+          "ended_ns": 1792894201078820000,
+          "started_ns": 1792894201078354000
+        },
+        "scope": "one qualified atomic target-file publication",
+        "value": "completed"
+      },
+      "interval": {
+        "clock": "unix_ns",
+        "ended_ns": 1792894203053879000,
+        "started_ns": 1792894202263908000
+      }
+    },
+    {
+      "request_id": "codex-s1-package-6",
+      "evidence": {
+        "id": "sha256:7879bed5b9648459aee68ad575926ca9983c08a2550669c582f5c107bace688a",
+        "sha256": "7879bed5b9648459aee68ad575926ca9983c08a2550669c582f5c107bace688a"
+      },
+      "status": "ok",
+      "target": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/codex/skills/stdo-work/references/qualification.md",
+        "root": "product",
+        "selector": null,
+        "sha256": null
+      },
+      "postimage": {
+        "bytes": 3001,
+        "exists": true,
+        "mode": 384,
+        "sha256": "dda296ed053f3e8ed5ab4cdc7c7b9f162754832fc89ded9280044d96f9dc795c",
+        "type": "regular"
+      },
+      "effect": {
+        "core_value": "satisfied",
+        "end_established": true,
+        "observed_interval": {
+          "clock": "unix_ns",
+          "ended_ns": 1792894260302400000,
+          "started_ns": 1792894260301909000
+        },
+        "scope": "one qualified atomic target-file publication",
+        "value": "completed"
+      },
+      "interval": {
+        "clock": "unix_ns",
+        "ended_ns": 1792894262467363000,
+        "started_ns": 1792894261600717000
+      }
+    },
+    {
+      "request_id": "codex-s1-package-3",
+      "evidence": {
+        "id": "sha256:89ecca5422199abc7cb2054b6d84ed38443bbab6f79899ec70d9de1f0da9fd2b",
+        "sha256": "89ecca5422199abc7cb2054b6d84ed38443bbab6f79899ec70d9de1f0da9fd2b"
+      },
+      "status": "ok",
+      "target": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/codex/skills/stdo-work/references/delegation.md",
+        "root": "product",
+        "selector": null,
+        "sha256": null
+      },
+      "postimage": {
+        "bytes": 2969,
+        "exists": true,
+        "mode": 384,
+        "sha256": "0bb621b4d6edb17f2100878a567596f85a52b517edfafbb2ceba7119dce8bfde",
+        "type": "regular"
+      },
+      "effect": {
+        "core_value": "satisfied",
+        "end_established": true,
+        "observed_interval": {
+          "clock": "unix_ns",
+          "ended_ns": 1792894214571161000,
+          "started_ns": 1792894214570698000
+        },
+        "scope": "one qualified atomic target-file publication",
+        "value": "completed"
+      },
+      "interval": {
+        "clock": "unix_ns",
+        "ended_ns": 1792894216584057000,
+        "started_ns": 1792894215774852000
+      }
+    },
+    {
+      "request_id": "codex-s1-package-1",
+      "evidence": {
+        "id": "sha256:d8b0bfa90251e634c10fc336c5c56750c7cdd842cb876f9e132d527298292a99",
+        "sha256": "d8b0bfa90251e634c10fc336c5c56750c7cdd842cb876f9e132d527298292a99"
+      },
+      "status": "ok",
+      "target": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/codex/skills/stdo-work/references/basis.md",
+        "root": "product",
+        "selector": null,
+        "sha256": null
+      },
+      "postimage": {
+        "bytes": 2694,
+        "exists": true,
+        "mode": 384,
+        "sha256": "7b409d4895e7be3291e4e41c32e497ae045e9fb4b62f01b9622b10888d449cda",
+        "type": "regular"
+      },
+      "effect": {
+        "core_value": "satisfied",
+        "end_established": true,
+        "observed_interval": {
+          "clock": "unix_ns",
+          "ended_ns": 1792894187809088000,
+          "started_ns": 1792894187808624000
+        },
+        "scope": "one qualified atomic target-file publication",
+        "value": "completed"
+      },
+      "interval": {
+        "clock": "unix_ns",
+        "ended_ns": 1792894189748117000,
+        "started_ns": 1792894188972781000
+      }
+    },
+    {
+      "request_id": "codex-s1-support-reconciled-0",
+      "evidence": {
+        "id": "sha256:fd2e93af91fd9ae3b6f2eaade36bed01b0c65131e3f04fc3f3b9b9db26a06ea7",
+        "sha256": "fd2e93af91fd9ae3b6f2eaade36bed01b0c65131e3f04fc3f3b9b9db26a06ea7"
+      },
+      "status": "ok",
+      "target": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/codex/README.md",
+        "root": "product",
+        "selector": null,
+        "sha256": null
+      },
+      "postimage": {
+        "bytes": 4048,
+        "exists": true,
+        "mode": 384,
+        "sha256": "0ee72656c36d7fb0dc5d6cc10ea9b7b4bfa04e8152dbb54ff8434714e83029c1",
+        "type": "regular"
+      },
+      "effect": {
+        "core_value": "satisfied",
+        "end_established": true,
+        "observed_interval": {
+          "clock": "unix_ns",
+          "ended_ns": 1792894312978945000,
+          "started_ns": 1792894312978514000
+        },
+        "scope": "one qualified atomic target-file publication",
+        "value": "completed"
+      },
+      "interval": {
+        "clock": "unix_ns",
+        "ended_ns": 1792894315308719000,
+        "started_ns": 1792894314353529000
+      }
+    },
+    {
+      "request_id": "codex-s1-package-7",
+      "evidence": {
+        "id": "sha256:7dec4dc7899bbce3bd97269ceea874ba960ed88133e0ea11e1c39ed628a251a5",
+        "sha256": "7dec4dc7899bbce3bd97269ceea874ba960ed88133e0ea11e1c39ed628a251a5"
+      },
+      "status": "ok",
+      "target": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/codex/skills/stdo-work/source-routes.json",
+        "root": "product",
+        "selector": null,
+        "sha256": null
+      },
+      "postimage": {
+        "bytes": 3501,
+        "exists": true,
+        "mode": 384,
+        "sha256": "09972e4af512645c43207aa3edd5114e1e81c24ef344c76a6af2e99852920403",
+        "type": "regular"
+      },
+      "effect": {
+        "core_value": "satisfied",
+        "end_established": true,
+        "observed_interval": {
+          "clock": "unix_ns",
+          "ended_ns": 1792894275033667000,
+          "started_ns": 1792894275033182000
+        },
+        "scope": "one qualified atomic target-file publication",
+        "value": "completed"
+      },
+      "interval": {
+        "clock": "unix_ns",
+        "ended_ns": 1792894277243172000,
+        "started_ns": 1792894276359579000
+      }
+    },
+    {
+      "request_id": "codex-s1-package-5",
+      "evidence": {
+        "id": "sha256:b55e14dacf95cce99a502e5ccc7678ea77328afa4f178fc2700787720a26e9b1",
+        "sha256": "b55e14dacf95cce99a502e5ccc7678ea77328afa4f178fc2700787720a26e9b1"
+      },
+      "status": "ok",
+      "target": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/codex/skills/stdo-work/references/release-install.md",
+        "root": "product",
+        "selector": null,
+        "sha256": null
+      },
+      "postimage": {
+        "bytes": 2422,
+        "exists": true,
+        "mode": 384,
+        "sha256": "ec7cb5a407f6690936d0bf79ab5fc8796c2cfca4c34772f61ceff4b68f337cfb",
+        "type": "regular"
+      },
+      "effect": {
+        "core_value": "satisfied",
+        "end_established": true,
+        "observed_interval": {
+          "clock": "unix_ns",
+          "ended_ns": 1792894245987418000,
+          "started_ns": 1792894245986904000
+        },
+        "scope": "one qualified atomic target-file publication",
+        "value": "completed"
+      },
+      "interval": {
+        "clock": "unix_ns",
+        "ended_ns": 1792894248084508000,
+        "started_ns": 1792894247244848000
+      }
+    },
+    {
+      "request_id": "codex-s1-package-0",
+      "evidence": {
+        "id": "sha256:35c50506d71c4d1352a1d11f065852ff5663c8762e0d0cd89718f752fe4f0059",
+        "sha256": "35c50506d71c4d1352a1d11f065852ff5663c8762e0d0cd89718f752fe4f0059"
+      },
+      "status": "ok",
+      "target": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/codex/skills/stdo-work/SKILL.md",
+        "root": "product",
+        "selector": null,
+        "sha256": null
+      },
+      "postimage": {
+        "bytes": 3116,
+        "exists": true,
+        "mode": 384,
+        "sha256": "ba6f7ab1e6de875e2f019b049f7817e771474f1b511a74fe2392a55a37078ee8",
+        "type": "regular"
+      },
+      "effect": {
+        "core_value": "satisfied",
+        "end_established": true,
+        "observed_interval": {
+          "clock": "unix_ns",
+          "ended_ns": 1792894174789817000,
+          "started_ns": 1792894174789323000
+        },
+        "scope": "one qualified atomic target-file publication",
+        "value": "completed"
+      },
+      "interval": {
+        "clock": "unix_ns",
+        "ended_ns": 1792894176706221000,
+        "started_ns": 1792894175939621000
+      }
+    },
+    {
+      "request_id": "codex-s1-package-4",
+      "evidence": {
+        "id": "sha256:ac27c2e924497a55a0b149ff32820d7c26b0ecea236e9be7a9b0953a6a853e24",
+        "sha256": "ac27c2e924497a55a0b149ff32820d7c26b0ecea236e9be7a9b0953a6a853e24"
+      },
+      "status": "ok",
+      "target": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/codex/skills/stdo-work/references/recovery.md",
+        "root": "product",
+        "selector": null,
+        "sha256": null
+      },
+      "postimage": {
+        "bytes": 3010,
+        "exists": true,
+        "mode": 384,
+        "sha256": "d7f7f118eea492bb64456a56c4cb4987e6e23acd8b3c0143ba87cf5ec9a92c80",
+        "type": "regular"
+      },
+      "effect": {
+        "core_value": "satisfied",
+        "end_established": true,
+        "observed_interval": {
+          "clock": "unix_ns",
+          "ended_ns": 1792894228296164000,
+          "started_ns": 1792894228295696000
+        },
+        "scope": "one qualified atomic target-file publication",
+        "value": "completed"
+      },
+      "interval": {
+        "clock": "unix_ns",
+        "ended_ns": 1792894230999116000,
+        "started_ns": 1792894229533711000
+      }
+    },
+    {
+      "request_id": "codex-s1-inventory",
+      "evidence": {
+        "id": "sha256:5ed2258816d74cdd568b3ec58ddf6d845884ece775497a7adb2ecc866c6d825d",
+        "sha256": "5ed2258816d74cdd568b3ec58ddf6d845884ece775497a7adb2ecc866c6d825d"
+      },
+      "status": "ok",
+      "target": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/codex/inventory.json",
+        "root": "product",
+        "selector": null,
+        "sha256": null
+      },
+      "postimage": {
+        "bytes": 2098,
+        "exists": true,
+        "mode": 384,
+        "sha256": "337d274efde96147c8e9a2db3e3b25f7631731fc8486562c9022ad087833aa36",
+        "type": "regular"
+      },
+      "effect": {
+        "core_value": "satisfied",
+        "end_established": true,
+        "observed_interval": {
+          "clock": "unix_ns",
+          "ended_ns": 1792894345533274000,
+          "started_ns": 1792894345532794000
+        },
+        "scope": "one qualified atomic target-file publication",
+        "value": "completed"
+      },
+      "interval": {
+        "clock": "unix_ns",
+        "ended_ns": 1792894347973362000,
+        "started_ns": 1792894346998443000
+      }
+    },
+    {
+      "request_id": "codex-s1-support-reconciled-1",
+      "evidence": {
+        "id": "sha256:e025b6d0e9244af8ca7650b45ea3939ddb0c6945e045e6a03e262eff25b2fb5c",
+        "sha256": "e025b6d0e9244af8ca7650b45ea3939ddb0c6945e045e6a03e262eff25b2fb5c"
+      },
+      "status": "ok",
+      "target": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/codex/tests/verify_package.py",
+        "root": "product",
+        "selector": null,
+        "sha256": null
+      },
+      "postimage": {
+        "bytes": 4512,
+        "exists": true,
+        "mode": 384,
+        "sha256": "65ec9851967a60ab6f25f4c988b2ddbc05642ce44ae71401d6f1bf99f5ec0086",
+        "type": "regular"
+      },
+      "effect": {
+        "core_value": "satisfied",
+        "end_established": true,
+        "observed_interval": {
+          "clock": "unix_ns",
+          "ended_ns": 1792894329072459000,
+          "started_ns": 1792894329072025000
+        },
+        "scope": "one qualified atomic target-file publication",
+        "value": "completed"
+      },
+      "interval": {
+        "clock": "unix_ns",
+        "ended_ns": 1792894331494085000,
+        "started_ns": 1792894330520037000
+      }
+    },
+    {
+      "request_id": "codex-s1-design",
+      "evidence": {
+        "id": "sha256:60730135ae38ab4d6dfa61735190d64d74f77f0e3b94531d39e10e69708b7223",
+        "sha256": "60730135ae38ab4d6dfa61735190d64d74f77f0e3b94531d39e10e69708b7223"
+      },
+      "status": "ok",
+      "target": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/codex/design/DESIGN.md",
+        "root": "product",
+        "selector": null,
+        "sha256": null
+      },
+      "postimage": {
+        "bytes": 8835,
+        "exists": true,
+        "mode": 384,
+        "sha256": "b051cc738cc6e9a7d80a3c13e0ad6887fe64f01a8d1f87cce4a0ceb5aa7caca9",
+        "type": "regular"
+      },
+      "effect": {
+        "core_value": "satisfied",
+        "end_established": true,
+        "observed_interval": {
+          "clock": "unix_ns",
+          "ended_ns": 1792893986484533000,
+          "started_ns": 1792893986484094000
+        },
+        "scope": "one qualified atomic target-file publication",
+        "value": "completed"
+      },
+      "interval": {
+        "clock": "unix_ns",
+        "ended_ns": 1792893988063187000,
+        "started_ns": 1792893987431228000
+      }
+    }
+  ]
+}

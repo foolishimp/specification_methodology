@@ -1,0 +1,50 @@
+{
+  "schema": "stdo_skills.auth-repair-return/1",
+  "actor": "/root/skills_tool_binding_assessment",
+  "role": "bounded Tool Writer",
+  "status": "implemented and frozen; ready for independent readback; source effects stopped",
+  "source_freeze": {
+    "path": "stdo_skills/.ai-workspace/work/T001/tooling/auth-repair-prep/source-freeze.json",
+    "sha256": "9f30837e4ffad6c1be7dcad1067ff59856ef6c1b0f251dd6ae5eac4ccf50004b"
+  },
+  "deliverable_inventory": {
+    "path": "stdo_skills/.ai-workspace/work/T001/tooling/auth-repair-prep/deliverable-inventory.json",
+    "sha256": "9ab75ddce983d9124fe24d1f6988dbcd827590ad0f5f308e8362b4f18e86d03b",
+    "files": 988
+  },
+  "unchanged_method_profiles": {
+    "fd-method-claude-rc9.json": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1",
+    "fd-method-stdo-3.0.1.json": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+  },
+  "mechanism_sha256": "bf72a28444e0497cd564066e41c7e5943810d5a2e0be5488c92fa5add5a67209",
+  "evidence": {
+    "counterexample": "before.stderr: original path loses selected synthetic credential; one expected failure",
+    "final_run": "final-check-execution.json + final-check.stdout/stderr",
+    "final_result": "103 tests passed in 13.826 s; no skips; no real models or real credential acquisition",
+    "composition": "71 core + 6 native public-path + 3 conjunction repair + 16 actor helper + 7 authentication controls",
+    "decisive_raw_records": "before-evidence/test_ac_support_environment_passthrough_* and final-evidence/test_ac_support_environment_passthrough_*",
+    "harness_failures": "copied Git prefix and protected-root alias from nested temporary workspace; retained and resolved by ordinary actual-checkout/external-temp harness placement; production code unchanged"
+  },
+  "operator_binding": {
+    "executor_settings": {
+      "environment_passthrough": [
+        "CLAUDE_CODE_OAUTH_TOKEN"
+      ]
+    },
+    "claude_plan_settings": {
+      "environment_passthrough": [
+        "CLAUDE_CODE_OAUTH_TOKEN"
+      ]
+    },
+    "private_precondition": "public dispatcher already inherits selected authentication from invoking environment; never serialize its value",
+    "retained_auth_observation": "selected variable names and presence only"
+  },
+  "limitations": [
+    "No semantic actor qualification, Product acceptance, credential identity proof or authentication-success inference",
+    "Exact vendor output is retained, not redacted; no guarantee against vendor-originated credential emission",
+    "Original initial-construction admission residual remains; no retrospective admission",
+    "Open S3 unknown nested tools.describe target misclassified as evidence_publication_failed; see OPEN_DISCOVERY_DEFECT.md",
+    "Duplicate construction scratch is explicitly outside deliverable inventory; see SCRATCH.md"
+  ],
+  "writes": "No Git/global configuration writes; live source updated only after Root confirmed both prior actors closed."
+}

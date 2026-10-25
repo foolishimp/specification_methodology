@@ -1,0 +1,71 @@
+{
+  "source_path": "/Users/jim/.claude/projects/-private-tmp-stdo-skills-installation-w8g-16zt-claude-workspace/77c68056-c6c9-483e-9faa-2ab2c7d7322a.jsonl",
+  "source_sha256": "90a1d8dadf592aaeed0bb1c1c7a4f38cc7c7110a852dbace5164578c303cfad2",
+  "observed_session_ids": [
+    "77c68056-c6c9-483e-9faa-2ab2c7d7322a"
+  ],
+  "deliveries": [
+    {
+      "line": 81,
+      "raw_record": {
+        "parentUuid": "787b02d1-4257-4836-a979-208d7bbf4fd2",
+        "isSidechain": false,
+        "promptId": "fe7aa6db-82a9-448e-b8c0-bd66ed2ae7ba",
+        "type": "user",
+        "message": {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Base directory for this skill: /private/tmp/stdo-skills-installation-w8g_16zt/claude/workspace/.claude/skills/stdo-workspace-change\n\n# STDO workspace change \u2014 entry, basis, intake\n\nThis skill is the entry point when someone asks you to do governed\nspecification-methodology work in this repository: change a requirement, design,\nor code owner; re-enter at the right layer; or set up and verify the method.\n\n## When this applies\n\nApply when the request concerns a workspace that selects an STDO Product\nDefinition (for example `stdo_skills.json`) and asks you to change, review, or\nset up governed artifacts under that method. Automatic selection comes from this\nskill's `description`; a user may also invoke it explicitly with\n`/stdo-workspace-change`.\n\n## When this does not apply (SK-01 discriminator, Q02)\n\nIf the request is an unrelated factual question or a non-governed task, do not\nforce an STDO setup, do not create a work carrier, and do not run any tool\nsequence. Answer the actual question or hand off. Presence of this skill is not a\nreason to STDO-ify unrelated work.\n\n## Verify the basis first (SK-02, Q03)\n\nBefore relying on any method contract, resolve and verify the exact basis:\n\n1. Identify the selected Product Definition in the workspace (e.g.\n   `stdo_skills.json`) and the installed method it pins.\n2. Verify the installed cut with the manager, for example:\n   `stdo status --definition stdo_skills.json --verify`.\n3. Confirm the resolved manifest equals the one the Product Definition pins\n   (for STDO Skills: `stdo://releases/v3.0.1-rc.1/`, manifest\n   `60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8`).\n\nIf the basis is ambiguous, missing, or altered \u2014 the install is absent, a member\nis modified, or Product selection is ambiguous \u2014 **withhold the dependent work\nand report the specific cause**. Do not substitute the latest discovered cut or a\nsibling source checkout for the pin. Setup may install or pin only within an\nexplicit grant; ordinary execution never adopts a newer cut implicitly.\n\n## Intake triage (SK-03)\n\nName three things before acting: the required outcome, the owner that must\nchange (goal, intent, product, requirement, design, or realization), and the\nexisting work basis you can reuse. Choose the smallest lawful re-entry point for\nthat owner. No bug, feature, or request skips triage straight to code.\n\n## Proportional work (SK-03 discriminator, Q04)\n\nDo the smallest sufficient authorized work.\n\n- A small, already-authorized one-file change with a sufficient existing\n  requirement/design proceeds directly as a Writer: make the change and record\n  focused evidence. Do **not** invent a mandatory ticket, a coordinating actor,\n  or an independent review that the conditions do not require, and do not write\n  outside the authorized scope.\n- Activate material coordination or independent review only when the actual\n  conditions require them (material context, capability, or independence\n  boundary) \u2014 then route to [stdo-delegate-review](../stdo-delegate-review/SKILL.md).\n- Reuse existing sufficient authorization without repeating a permission\n  ceremony; keep any genuinely missing authority explicit.\n\n## Routing\n\n- Tool calls, context acquisition, or a failing tool: [stdo-tool-operations](../stdo-tool-operations/SKILL.md).\n- Delegation or required review: [stdo-delegate-review](../stdo-delegate-review/SKILL.md).\n- Resume, interruption, status, or evidence: [stdo-continuation](../stdo-continuation/SKILL.md).\n- Release preparation or install/update/remove: [stdo-release-install](../stdo-release-install/SKILL.md).\n\n## Method sources (cited, not reproduced)\n\nWithin the installed cut `stdo://releases/v3.0.1-rc.1/standards/`:\n`PRODUCT_DEFINITION.md` (sections 2, 4, 7, 9, 12) for exact Product and installed\nbasis; `ACTIVATION.md` section 1 for intake, operation scope, admission, and\napplicability; `ACTIVATION.md` section 6 for cost and proportionality. The owner\nindex is `specification/SOURCE_OWNERS.md`.\n\n## Scope and limits\n\nThis skill does not itself qualify host behavior or claim acceptance. Discovery\nis tested separately from whether a loaded skill completes the task; report host\nlimits and observed failures instead of claiming guaranteed model compliance.\n"
+            }
+          ]
+        },
+        "isMeta": true,
+        "turnCompanion": true,
+        "uuid": "19b2d95d-2b71-452d-9fcc-ec1c559eeb31",
+        "timestamp": "2026-10-25T03:31:00.705Z",
+        "sourceToolUseID": "toolu_018D7MvyC6wQNKsUM3wF54DB",
+        "userType": "external",
+        "entrypoint": "sdk-cli",
+        "cwd": "/private/tmp/stdo-skills-installation-w8g_16zt/claude/workspace",
+        "sessionId": "77c68056-c6c9-483e-9faa-2ab2c7d7322a",
+        "version": "2.1.306",
+        "gitBranch": "HEAD"
+      },
+      "installed_path": ".claude/skills/stdo-workspace-change/SKILL.md",
+      "installed_sha256": "ead38d8c2abd89c9ef680d98fc954bd5ff73196850308ee9d375455eba139379"
+    },
+    {
+      "line": 99,
+      "raw_record": {
+        "parentUuid": "06bc49a9-8b09-4dd5-8f9e-00f5627a0daa",
+        "isSidechain": false,
+        "promptId": "fe7aa6db-82a9-448e-b8c0-bd66ed2ae7ba",
+        "type": "user",
+        "message": {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Base directory for this skill: /private/tmp/stdo-skills-installation-w8g_16zt/claude/workspace/.claude/skills/stdo-tool-operations\n\n# STDO tool operations \u2014 supported use and bounded context\n\nUse this skill to bind each required operation to an exact, supported tool\ncontract, and to acquire only the context the task needs.\n\n## Transport and operations (SK-04)\n\nThe ordinary transport is the a_c public CLI. Send one full request envelope on\nstdin; no request file is needed:\n\n```\n<python> -B <a_c>/build_tenants/graphify/code/ac_support.py \\\n  --policy <worker-policy.json> --policy-sha256 <sha256> \\\n  --principal <principal-id> call --request -\n```\n\nThe policy path, `--policy-sha256`, `--principal`, and the `grant_id` used by\neffect operations are supplied by the current activation context. Do not embed a\nspecific activation's policy, sha, principal, or grant in reusable instructions.\n\nDiscover exact schemas with `tools.describe` before first use, then reuse the\nacquired schema; do not reload it for ceremony. Supported, commonly used\noperations:\n\n- `source.read` \u2014 `arguments {source: SourceRef, encoding: \"utf8\"}`; returns the\n  content plus a retained acquisition artifact.\n- `workspace.observe` \u2014 `arguments {scope: [{root, path, kind}], previous?}`;\n  returns an observation artifact at `result.artifact` (pass that ref, not the\n  top-level operation evidence, where an observation basis is required).\n- `work.write` \u2014 `arguments {grant_id, target: SourceRef (sha256 null only for a\n  confirmed-absent file), mode: \"replace\"|\"append\", record: {text, provenance:\n  SourceRef}, interpretation: null|{text, author}, observations: [observation\n  ArtifactRef]}`. Each effect needs a unique request `id`; ensure the target's\n  parent exists and observe the target before writing. Retain the returned\n  postimage and effect evidence.\n\nEach operation used for a 3.0.1 claim needs an established compatible contract.\nReading opaque bytes under an honest legacy acquisition contract makes only that\nacquisition claim; it does not upgrade a lifecycle profile.\n\n## Acquire only the deciding context (SK-05)\n\nAcquire the deciding Product, requirements, scenarios, frame, and owner material\nthrough the declared source routes, plus the specific sources your change\ntouches. Retain each acquisition's evidence id. Keep in the working context the\nexact outcome, subject/basis, material relations, authority, required evidence,\ncapability limits, return consumer, and invalidators. Equal candidate bytes do\nnot erase a differing retained assessment, an unresolved obligation, or a\ncurrentness fact \u2014 those still require different handling. A sufficient task\ncontext implies no general optimal-compression claim.\n\n## When a tool fails (SK-04 discriminator, Q06)\n\n- If an operation returns an **unsupported method** (for example native\n  `results.conjoin`, which `tools.describe` lists as unsupported), retain the\n  actual refusal and withhold the dependent claim. Do not relabel another path\n  as the result.\n- If an operation returns an **execution error**, retain the error and the\n  unknown-effect state, withhold the dependent claim, and identify the next\n  supported re-entry.\n- Never replace a required tool result with an invented check, a narrative of\n  intended calls, or an unqualified alternate path. Independent useful work may\n  continue within the grant, but the blocked claim stays blocked.\n\n## After an uncertain effect (Q08)\n\nIf an effect's completion is uncertain (timeout, interrupted acknowledgment),\nreconcile by re-observing the target before any retry. A repeated request must\nnot duplicate an uncertain effect, and a timeout does not prove rollback. See\n`stdo-continuation`.\n\n## Method sources (cited, not reproduced)\n\nWithin `stdo://releases/v3.0.1-rc.1/standards/`: `ACTIVATION.md` section 2 and\n`REFERENCE_FRAME.md` sections 3 and 11 for context sufficiency, currentness, and\nacquisition; `ACTIVATION.md` section 3 and `AXIOMATIC_CALCULUS.md` sections 5 and\n7 for result, effects, and disposition; `ASSURANCE.md` sections 7 to 9 for\nactual-path proof semantics.\n\n## Scope and limits\n\nTool harmonisation is owned by a_c; this skill consumes supported contracts and\nreports defects, it does not fork tool semantics. Output availability from an\noperation is not semantic acceptance of the result.\n"
+            }
+          ]
+        },
+        "isMeta": true,
+        "turnCompanion": true,
+        "uuid": "3c86f11d-3c14-43fd-99e3-067c646e2978",
+        "timestamp": "2026-10-25T03:31:22.046Z",
+        "sourceToolUseID": "toolu_01FvyxUFsrB63tDFPT3tZD1h",
+        "userType": "external",
+        "entrypoint": "sdk-cli",
+        "cwd": "/private/tmp/stdo-skills-installation-w8g_16zt/claude/workspace",
+        "sessionId": "77c68056-c6c9-483e-9faa-2ab2c7d7322a",
+        "version": "2.1.306",
+        "gitBranch": "HEAD"
+      },
+      "installed_path": ".claude/skills/stdo-tool-operations/SKILL.md",
+      "installed_sha256": "a850e36e8136b0db0d233d0bdfc4e8c6b4bc88949be5ea08cc7bb9c2ec4b09a0"
+    }
+  ]
+}

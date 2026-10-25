@@ -1,0 +1,94 @@
+{
+  "candidate_record": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/build_tenants/claude/INVENTORY.md",
+    "sha256": "42d246cbe2fcf1414b0fd7ed094be74d6f2607595525555caa52618d8999f79a"
+  },
+  "duration_standing": "Bounded preparation for Root launch selection; no model call made",
+  "explicit_prefix": "/stdo-workspace-change",
+  "fixture_record": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/qualification/lifecycle/diagnostics/claude/fixture.json",
+    "sha256": "00b2431df9d902e5e55d1c21d9121b6b6212ed532030aa93a4bf2f5b7f5a174e"
+  },
+  "host_plan_source": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/operator/successor-1/claude/actor-plan.json",
+    "sha256": "8baa38b7a057e524f837427c2173e018076b3bf7a05600e578f3a6b993f89b89"
+  },
+  "install_binding": {
+    "action": "install",
+    "helper": {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/build_tenants/claude/skills/stdo-release-install/scripts/manage_install.py",
+      "sha256": "c10608336639fcf6ed87443666dab5e7ca79d3cc84df2f7a80b6ef33c603fabe"
+    },
+    "kind": "claude-bundle-installer/1"
+  },
+  "install_checks": {
+    "after": [],
+    "before": [
+      {
+        "argv": [
+          "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+          "-I",
+          "-B",
+          "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/build_tenants/claude/tests/check_package.py"
+        ],
+        "dependencies": [
+          {
+            "path": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+            "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b"
+          },
+          {
+            "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/build_tenants/claude/tests/check_package.py",
+            "sha256": "535303a0da1fd0b8508aa599f4542feb4b2903985a3e2f7f7c715091e46c6ead"
+          },
+          {
+            "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/build_tenants/claude/skills/stdo-release-install/scripts/manage_install.py",
+            "sha256": "c10608336639fcf6ed87443666dab5e7ca79d3cc84df2f7a80b6ef33c603fabe"
+          }
+        ]
+      }
+    ]
+  },
+  "install_documentation": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/build_tenants/claude/INSTALL.md",
+    "sha256": "f03480153672f204963622d564b1a03440c9ca3aca612e49412772b4ea2bfc9b"
+  },
+  "install_relative": ".claude/skills",
+  "install_scope": "Complete five-skill bundle and its actual shipped installer receipt; no individual-skill sufficiency claim",
+  "lane": "basis-tool-diagnostics",
+  "package_files": [
+    {
+      "path": "stdo-continuation/SKILL.md",
+      "sha256": "90f3778a97df92796c8d052e4d46ca01e01b1913d3421fa8f421310d03c3cd61"
+    },
+    {
+      "path": "stdo-delegate-review/SKILL.md",
+      "sha256": "382466083cfb1c76870afbc6b3eda707615a94a7cd90ae692995d6a9d4ecbc13"
+    },
+    {
+      "path": "stdo-release-install/SKILL.md",
+      "sha256": "ef4831511f78d11015149394ea26c9e899980fb8c9cb40eac278f62de72b6841"
+    },
+    {
+      "path": "stdo-release-install/references/maintenance.md",
+      "sha256": "84450465fd14720ef1ddaf66f30d9b7716c114ab01799a318aa5166f02fe36e1"
+    },
+    {
+      "path": "stdo-release-install/scripts/manage_install.py",
+      "sha256": "c10608336639fcf6ed87443666dab5e7ca79d3cc84df2f7a80b6ef33c603fabe"
+    },
+    {
+      "path": "stdo-tool-operations/SKILL.md",
+      "sha256": "a850e36e8136b0db0d233d0bdfc4e8c6b4bc88949be5ea08cc7bb9c2ec4b09a0"
+    },
+    {
+      "path": "stdo-workspace-change/SKILL.md",
+      "sha256": "ead38d8c2abd89c9ef680d98fc954bd5ff73196850308ee9d375455eba139379"
+    }
+  ],
+  "package_root": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/build_tenants/claude/skills",
+  "schema": "stdo_skills.qualification-selection/1",
+  "standing": "Root selected exact repaired physical candidate for bounded trials; independent semantic readback and acceptance remain separate",
+  "tenant": "claude",
+  "tenant_root": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/build_tenants/claude",
+  "timeout_ms": 600000
+}

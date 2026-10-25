@@ -1,0 +1,335 @@
+{
+  "actor_families": {
+    "executive": "openai-codex",
+    "reviewer": "openai-codex",
+    "worker": "openai-codex"
+  },
+  "actual_parent_disposition": "ready-for-owner-review",
+  "candidate": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/workspace/outputs/greeting.txt",
+    "sha256": "8b1560f395c0248eca4d2d6cc361825a9f8c00d11ce6f52b26eea2872573c2c1",
+    "size_bytes": 12
+  },
+  "candidate_review_check": {
+    "id": "sha256:ff59c5b566d9768ccc34937c8dc5bd7f41aed0e4bf57b4fb94a32f4d32b0aef0",
+    "sha256": "ff59c5b566d9768ccc34937c8dc5bd7f41aed0e4bf57b4fb94a32f4d32b0aef0"
+  },
+  "candidate_review_consumable": true,
+  "candidate_review_return": "91eb67920bad264e824d4e7fbd070e47d03cec6ef45cbcafc9b606f23abf0a2d",
+  "case": "Q05 Codex installed-skill Executive/Worker/Reviewer handoff",
+  "expectation": "f5abc066c958303db0fddb9c71d19c4b5e053066a3b713d221ab39b7b078f961",
+  "installed_skill_acquisition": {
+    "line": 5,
+    "operation": "actual command reads .agents/skills/stdo-work/SKILL.md before bounded handoff",
+    "source": {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/control/actor-output/vendor.stdout",
+      "sha256": "d28ff1b62d74b92e6999855b54bec93f9debaa927c7cd5fa62aab6cf071c1b68",
+      "size_bytes": 1305172
+    }
+  },
+  "inventory": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/control/Q05-CAPTURE-1/FILE-INVENTORY.json",
+    "sha256": "1c753d5406bb5ceed543514cc22182356ca53fa06bafa89fb92d23515269d75c",
+    "size_bytes": 64196
+  },
+  "limits": [
+    "Original malformed IndependencePolicy refusal retained; source-only partial returns are not retroactively passed.",
+    "Nonauthor same-family review does not establish cross-family semantic independence.",
+    "Native/visible effects only; external effects, full process-tree closure and external exposure unknown.",
+    "Known recorded PIDs absent; no Worker rerun after its successful candidate.",
+    "Cost and host context size unknown; no efficiency or autonomous unassisted setup claim.",
+    "No owner acceptance/publication; this case does not alone establish the whole skill product."
+  ],
+  "original_disposition": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/control/Q05-CAPTURE-1/ACTUAL-EXECUTIVE-DISPOSITION.md",
+    "sha256": "4e5bbd402e3a6f97eb2d6d7a1c6913cfbafbe3d53afbb21eefd4426d91abffc4",
+    "size_bytes": 3243
+  },
+  "original_setup_refusal": "d63e792dccb1e9c591650ac140dff639eadd2ac9b27728854302b39ccdf3e03f",
+  "processes": [
+    {
+      "pid_absent": true,
+      "process": {
+        "ended_ns": 1792901631322573000,
+        "failure": null,
+        "input_bytes": 1011,
+        "input_forwarded_bytes": 1011,
+        "output_available": true,
+        "pid": 21132,
+        "returncode": 0,
+        "schema": "a_c.fd-support.actor-cli-observation/1",
+        "started_ns": 1792901249516750000,
+        "stderr_bytes": 0,
+        "stderr_eof": true,
+        "stdout_bytes": 1305172,
+        "stdout_eof": true,
+        "termination_requests": [],
+        "unknowns": [
+          "descendant/process-tree end and external side effects",
+          "host/model active-context size",
+          "backend retries or unreported usage",
+          "semantic outcome and owner disposition"
+        ]
+      },
+      "process_source": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/control/actor-output/process.json",
+        "sha256": "772ff1d44258ac14fed7c3707e9adea5dd5696d41bca8593a56776cf0575b21c",
+        "size_bytes": 513
+      },
+      "return": null,
+      "role_path": "actor-output",
+      "trace": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/control/actor-output/vendor.stdout",
+        "sha256": "d28ff1b62d74b92e6999855b54bec93f9debaa927c7cd5fa62aab6cf071c1b68",
+        "size_bytes": 1305172
+      }
+    },
+    {
+      "pid_absent": true,
+      "process": {
+        "ended_ns": 1792902482215140000,
+        "failure": null,
+        "input_bytes": 1102,
+        "input_forwarded_bytes": 1102,
+        "output_available": true,
+        "pid": 37350,
+        "returncode": 0,
+        "schema": "a_c.fd-support.actor-cli-observation/1",
+        "started_ns": 1792902093994883000,
+        "stderr_bytes": 0,
+        "stderr_eof": true,
+        "stdout_bytes": 628639,
+        "stdout_eof": true,
+        "termination_requests": [],
+        "unknowns": [
+          "descendant/process-tree end and external side effects",
+          "host/model active-context size",
+          "backend retries or unreported usage",
+          "semantic outcome and owner disposition"
+        ]
+      },
+      "process_source": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/control/actor-output/reentry-1/actor-output/process.json",
+        "sha256": "1fe27492c4061f9742b17966be760cc17cdf407f339391430e4ce8dcc6784359",
+        "size_bytes": 512
+      },
+      "return": null,
+      "role_path": "actor-output/reentry-1/actor-output",
+      "trace": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/control/actor-output/reentry-1/actor-output/vendor.stdout",
+        "sha256": "34e2b182b78a8ad0081e35d2a082520308afb11dc5cec5f856c8409d61ee21ed",
+        "size_bytes": 628639
+      }
+    },
+    {
+      "pid_absent": true,
+      "process": {
+        "ended_ns": 1792903302520868000,
+        "failure": null,
+        "input_bytes": 910,
+        "input_forwarded_bytes": 910,
+        "output_available": true,
+        "pid": 50691,
+        "returncode": 0,
+        "schema": "a_c.fd-support.actor-cli-observation/1",
+        "started_ns": 1792902755879773000,
+        "stderr_bytes": 0,
+        "stderr_eof": true,
+        "stdout_bytes": 721211,
+        "stdout_eof": true,
+        "termination_requests": [],
+        "unknowns": [
+          "descendant/process-tree end and external side effects",
+          "host/model active-context size",
+          "backend retries or unreported usage",
+          "semantic outcome and owner disposition"
+        ]
+      },
+      "process_source": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/control/actor-output/candidate-1/actor-output/process.json",
+        "sha256": "b6c8edf13b0cd35dfb6fc3ac7f7b7304ee3f5215eb2f5ca9606e55ea161aa507",
+        "size_bytes": 510
+      },
+      "return": null,
+      "role_path": "actor-output/candidate-1/actor-output",
+      "trace": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/control/actor-output/candidate-1/actor-output/vendor.stdout",
+        "sha256": "12990358cb83dffd10dd4bf86cd00fb1e0119ce5245f4aa481177aa64bb0fc07",
+        "size_bytes": 721211
+      }
+    },
+    {
+      "pid_absent": true,
+      "process": {
+        "ended_ns": 1792901513388239000,
+        "failure": null,
+        "input_bytes": 17834,
+        "input_forwarded_bytes": 17834,
+        "output_available": true,
+        "pid": 23364,
+        "returncode": 0,
+        "schema": "a_c.fd-support.actor-cli-observation/1",
+        "started_ns": 1792901341545100000,
+        "stderr_bytes": 39,
+        "stderr_eof": true,
+        "stdout_bytes": 220007,
+        "stdout_eof": true,
+        "termination_requests": [],
+        "unknowns": [
+          "descendant/process-tree end and external side effects",
+          "host/model active-context size",
+          "backend retries or unreported usage",
+          "semantic outcome and owner disposition"
+        ]
+      },
+      "process_source": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/control/child-output/worker/process.json",
+        "sha256": "4d8aa5ea8b91aed545a502acb901f4c5f2aeb986867b9abaf7b84b289c991702",
+        "size_bytes": 515
+      },
+      "return": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/control/child-output/worker/final.payload",
+        "sha256": "eb489aeab9a645ac3b823eeb5cda9a88affff76f54dec4f77dbe9e9def2e72be",
+        "size_bytes": 8641
+      },
+      "role_path": "child-output/worker",
+      "trace": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/control/child-output/worker/vendor.stdout",
+        "sha256": "df52863053898c0445be0ac2d695a064213a8b3dcaceeb0fc8b3d63d56f35bce",
+        "size_bytes": 220007
+      }
+    },
+    {
+      "pid_absent": true,
+      "process": {
+        "ended_ns": 1792901491830421000,
+        "failure": null,
+        "input_bytes": 20481,
+        "input_forwarded_bytes": 20481,
+        "output_available": true,
+        "pid": 23038,
+        "returncode": 0,
+        "schema": "a_c.fd-support.actor-cli-observation/1",
+        "started_ns": 1792901337972877000,
+        "stderr_bytes": 39,
+        "stderr_eof": true,
+        "stdout_bytes": 147866,
+        "stdout_eof": true,
+        "termination_requests": [],
+        "unknowns": [
+          "descendant/process-tree end and external side effects",
+          "host/model active-context size",
+          "backend retries or unreported usage",
+          "semantic outcome and owner disposition"
+        ]
+      },
+      "process_source": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/control/child-output/reviewer/process.json",
+        "sha256": "9a849f3d2bd82b72ccdc5a37b9c5874ffe72df2f6a45b86c15c16c17451d7a30",
+        "size_bytes": 515
+      },
+      "return": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/control/child-output/reviewer/final.payload",
+        "sha256": "34ac867e0a849afe74db15a5c3c3b44ea70ec6a3a96f48e91e220a35187efb27",
+        "size_bytes": 4862
+      },
+      "role_path": "child-output/reviewer",
+      "trace": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/control/child-output/reviewer/vendor.stdout",
+        "sha256": "a4b88d946b1bc8c51f731a0a8183a7f0abc0ce35be0a6766f7ed7dca1cb7e43b",
+        "size_bytes": 147866
+      }
+    },
+    {
+      "pid_absent": true,
+      "process": {
+        "ended_ns": 1792902355266612000,
+        "failure": null,
+        "input_bytes": 19587,
+        "input_forwarded_bytes": 19587,
+        "output_available": true,
+        "pid": 38966,
+        "returncode": 0,
+        "schema": "a_c.fd-support.actor-cli-observation/1",
+        "started_ns": 1792902155316445000,
+        "stderr_bytes": 0,
+        "stderr_eof": true,
+        "stdout_bytes": 318004,
+        "stdout_eof": true,
+        "termination_requests": [],
+        "unknowns": [
+          "descendant/process-tree end and external side effects",
+          "host/model active-context size",
+          "backend retries or unreported usage",
+          "semantic outcome and owner disposition"
+        ]
+      },
+      "process_source": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/control/child-output/reviewer-reentry1/process.json",
+        "sha256": "2795088237cf7c99a34e333248cf587284bc581980d7af8e05ff7c5702afa5eb",
+        "size_bytes": 514
+      },
+      "return": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/control/child-output/reviewer-reentry1/final.payload",
+        "sha256": "669b98ceecc065e1b2616121e61a51ebcb3ba0d27226ddf52cecef30e9b1168d",
+        "size_bytes": 4564
+      },
+      "role_path": "child-output/reviewer-reentry1",
+      "trace": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/control/child-output/reviewer-reentry1/vendor.stdout",
+        "sha256": "0e653c121179bffa10aeda7739cf1c85627593a1268df94181da0fc11f045da6",
+        "size_bytes": 318004
+      }
+    },
+    {
+      "pid_absent": true,
+      "process": {
+        "ended_ns": 1792903097364439000,
+        "failure": null,
+        "input_bytes": 22204,
+        "input_forwarded_bytes": 22204,
+        "output_available": true,
+        "pid": 52045,
+        "returncode": 0,
+        "schema": "a_c.fd-support.actor-cli-observation/1",
+        "started_ns": 1792902822543220000,
+        "stderr_bytes": 0,
+        "stderr_eof": true,
+        "stdout_bytes": 302097,
+        "stdout_eof": true,
+        "termination_requests": [],
+        "unknowns": [
+          "descendant/process-tree end and external side effects",
+          "host/model active-context size",
+          "backend retries or unreported usage",
+          "semantic outcome and owner disposition"
+        ]
+      },
+      "process_source": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/control/child-output/reviewer-candidate1/process.json",
+        "sha256": "2127cb217cc21767736b4c800febaf70ff53d3a841cb4c8ce2f67da5dfaff1a6",
+        "size_bytes": 514
+      },
+      "return": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/control/child-output/reviewer-candidate1/final.payload",
+        "sha256": "0f7105ce081d376e63168b674fd5517b3f98788c0999269aa436517e83644f8c",
+        "size_bytes": 6933
+      },
+      "role_path": "child-output/reviewer-candidate1",
+      "trace": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/control/child-output/reviewer-candidate1/vendor.stdout",
+        "sha256": "20cb45e127e0e60624d7fb31a983aec72c15738562614e976a38223151b46100",
+        "size_bytes": 302097
+      }
+    }
+  ],
+  "same_family_limit": true,
+  "sentinel": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/workspace/unrelated/sentinel.txt",
+    "sha256": "56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3",
+    "size_bytes": 33
+  },
+  "standing": "Bounded actual execution and operator readback; independent assessment and owner disposition remain separate.",
+  "worker_check": "d5e0d849c676f1c27df399e250b8570d53687015cdfdd73af4453763adb6b5fc",
+  "worker_return": "c1a7999736110519063878c168653bd1759c3c16b70d62a078d28aebab3c3f59"
+}

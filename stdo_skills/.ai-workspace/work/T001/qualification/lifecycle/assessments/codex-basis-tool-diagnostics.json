@@ -1,0 +1,135 @@
+{
+  "assessor": "skills_lifecycle_fixture_writer",
+  "attempt": "87f9cf9d0857cfa053b015649c7544559f859f6764d0b8f6db7b7fb99b9324eb",
+  "case_lane": "codex-basis-tool-diagnostics",
+  "census": {
+    "path": "results/codex-basis-tool-diagnostics/CENSUS.json",
+    "sha256": "149c4e28209688f5ec3cacee408c00bdde6be569121590b510ca2181ac238b00"
+  },
+  "cost": {
+    "all_host_commands": 45,
+    "monetary_cost": "unknown",
+    "native_usage": [
+      {
+        "event": "turn.completed",
+        "line": 106,
+        "reported_cost_usd": null,
+        "reported_usage": {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 1076352,
+          "input_tokens": 1187429,
+          "output_tokens": 13389,
+          "reasoning_output_tokens": 3666
+        }
+      }
+    ],
+    "resolved_backend": "not observed; configured alias is not resolution evidence",
+    "wall_seconds": 284.683933
+  },
+  "dispatch_evidence": "05f0dfb66da93b9d1e3025661f5177392a9c8aaae06d34955bee89d1c6cda290",
+  "effects": {
+    "added": [],
+    "changed": [
+      "outputs/diagnostics.md"
+    ],
+    "missing": [],
+    "symlinks": []
+  },
+  "limits": [
+    "One finite witness; no reliability estimate, whole-method acceptance, context-cost or benefit claim.",
+    "Cooperative fixture authority, not operating-system isolation or proof of all external effects."
+  ],
+  "mcp_failures_retained": 4,
+  "observations": {
+    "path": "results/codex-basis-tool-diagnostics/INVENTORY.json",
+    "sha256": "0fa779ad27853da6a4fc21c0bdc6803b0213cabd4b0886e59fd6c2ae269ef6d4"
+  },
+  "oracle": {
+    "path": "lifecycle/ORACLE.json",
+    "sha256": "d5cef9339d10523baf6005980b3c7a09d5eb53c615fba33a89f925f482ec1467"
+  },
+  "predicates": [
+    {
+      "case": "Q03",
+      "evidence": "Actual own-store status results and Product reads in raw/vendor.stdout, retained in report. Alpha returned installed:false; Beta returned member-integrity failure for AXIOMATIC_CALCULUS.md; Gamma retained both Product definitions without selection. All three greetings remain preimage-identical.",
+      "outcome": "supported",
+      "predicate": "Valid control basis actually verified; missing/altered/ambiguous child bases do not acquire correction authority"
+    },
+    {
+      "case": "Q06",
+      "evidence": {
+        "code": "unsupported_check",
+        "core_value": "out_of_frame",
+        "operation": "tools.describe",
+        "operation_evidence": "2ebdc492e360ef581172f18d8150bf1a71f39af5af568961f6a8e498a942402c",
+        "selected_operation": "results.conjoin",
+        "status": "refused"
+      },
+      "limit": "No results.conjoin execution or generic unsupported-method matrix is claimed.",
+      "outcome": "supported for the selected capability-discovery witness",
+      "predicate": "Unsupported native capability is retained without fabricated result"
+    },
+    {
+      "case": "Q06",
+      "evidence": {
+        "child_returncode": 1,
+        "error": "FileNotFoundError: inputs/dependency.txt",
+        "host_item": "item_22",
+        "invocation": [
+          "python3",
+          "-B",
+          "tools/build_message.py"
+        ],
+        "observed_python_path": "/Users/jim/.pyenv/versions/3.11.5/lib/python3.11/pathlib.py",
+        "raw_vendor_stdout_line": 48,
+        "wrapper_returncode": 0
+      },
+      "interpretation": "Wrapper transport success is distinguished from the actual build failure. The existing built-message placeholder remains unchanged and is described as no built output.",
+      "outcome": "supported",
+      "predicate": "Actual local execution error remains failed, with no successful built artifact"
+    },
+    {
+      "case": "Q03/Q06",
+      "evidence": "Report preserves actual responses and requests exact missing install restoration, altered-member restoration, owner Product selection, qualified conjunction capability, and missing dependency before dependent work resumes. Only the authorized report changed.",
+      "outcome": "supported",
+      "predicate": "Independent diagnostic result remains usable and identifies supported re-entry"
+    }
+  ],
+  "process": {
+    "ended_ns": 1792898869468549000,
+    "failure": null,
+    "input_bytes": 283,
+    "input_forwarded_bytes": 283,
+    "output_available": true,
+    "pid": 80804,
+    "returncode": 0,
+    "schema": "a_c.fd-support.actor-cli-observation/1",
+    "started_ns": 1792898584784616000,
+    "stderr_bytes": 0,
+    "stderr_eof": true,
+    "stdout_bytes": 848883,
+    "stdout_eof": true,
+    "termination_requests": [],
+    "unknowns": [
+      "descendant/process-tree end and external side effects",
+      "host/model active-context size",
+      "backend retries or unreported usage",
+      "semantic outcome and owner disposition"
+    ]
+  },
+  "report": {
+    "path": "results/codex-basis-tool-diagnostics/postimages/outputs/diagnostics.md",
+    "sha256": "95e5a3f21a3397ec9fb07dbe5989727327533d52e77d81322e1941e7b1455604"
+  },
+  "schema": "stdo_skills.lifecycle-assessment/1",
+  "standing": "Writer assessment against prior independent source-derived oracle; Root and independent Reviewer retain their decisions",
+  "tool_counts": {
+    "evidence.read": 1,
+    "source.read": 18,
+    "tools.describe": 4,
+    "work.write": 1,
+    "workspace.observe": 1
+  },
+  "transport_note": "MCP requests were refused by host approval policy; actor explicitly used the exact native CLI already declared in TOOLING.md. Raw failed attempts remain in the trace.",
+  "write_evidence": "7d89a63d6094a40a60b7205f9627d0895399ff4ba185d24fbabaccdf5eaa0c81"
+}

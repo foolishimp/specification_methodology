@@ -1,0 +1,78 @@
+{
+  "authority_source": {
+    "engine": "workspace-regular-file",
+    "object": null,
+    "path": "roles/reviewer-TASK.md",
+    "root": "candidate_phase",
+    "selector": null,
+    "sha256": "15a57bb25acc24e40df13f1deebba86a1b9fedfa5ec11201c0ca3144abbade6a"
+  },
+  "carrier": "a_c.fd-support.closed-return/1",
+  "id": "urn:stdo-skills:T001:q05:codex:handoff:3:reviewer-return:reentry1:candidate",
+  "output_slot": "final_stdout_object",
+  "proof": {
+    "claim": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "roles/CLAIM.json",
+      "root": "control",
+      "selector": null,
+      "sha256": "a31fa1c00cf19183cb92cb05339db6a4e0b51afb1d47b3c362ced081199c4cb3"
+    },
+    "comparison": null,
+    "expectations": {
+      "id": "sha256:f5abc066c958303db0fddb9c71d19c4b5e053066a3b713d221ab39b7b078f961",
+      "sha256": "f5abc066c958303db0fddb9c71d19c4b5e053066a3b713d221ab39b7b078f961"
+    },
+    "independence_policy": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "roles/INDEPENDENCE.json",
+      "root": "phase",
+      "selector": null,
+      "sha256": "4ebf6eff3b37ba04e6d240d83e9c6f149df48208bedd41e0f5b0ec990dd99aa4"
+    },
+    "predicate_ids": [],
+    "proof_sources": [
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "proof/WORKER-RETURN.json",
+        "root": "candidate_phase",
+        "selector": null,
+        "sha256": "c1a7999736110519063878c168653bd1759c3c16b70d62a078d28aebab3c3f59"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "proof/WRITE-OPERATION.json",
+        "root": "candidate_phase",
+        "selector": null,
+        "sha256": "268666afd9f9c5107e3e5fc76e1253940848a10da2ad9d0a879a46939f18c159"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "proof/WORKER-PUBLIC-EVENTS.json",
+        "root": "candidate_phase",
+        "selector": null,
+        "sha256": "7a56ec16fd73fda8a451c35bc5c0312333ee3945e600dca7425aaf0965ec2be5"
+      }
+    ]
+  },
+  "required_evaluations": [
+    {
+      "id": "candidate-review",
+      "predicate": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "roles/PREDICATES.md",
+        "root": "control",
+        "selector": null,
+        "sha256": "724dee7972dc6f7429bbbd2c018ea76f4b7e05887b6f636db6a07a525ed4c1db"
+      }
+    }
+  ],
+  "role": "Reviewer",
+  "schema": "a_c.fd-support.return-contract/1"
+}

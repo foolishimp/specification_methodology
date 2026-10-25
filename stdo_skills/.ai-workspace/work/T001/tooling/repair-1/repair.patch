@@ -1,0 +1,11 @@
+--- ac_support_core.before.py
++++ ac_support_core.py
+@@ -2176,6 +2176,8 @@
+             joined = as_object(load_artifact(runtime, as_object(proof["conjunction"]), "operation")["payload"])
+             if as_object(joined["request"])["operation"] != "results.conjoin":
+                 gaps.append("Executive conjunction route is not an actual conjunction record")
++            if runtime.method_profile["id"] == NATIVE_PROFILE_ID:
++                gaps.append("Native conjunction proof is unsupported; historical evidence grants no translation")
+     predicate_ids = _strings(args["predicates"])
+     if set(predicate_ids) - set(_strings(proof["predicate_ids"])):
+         raise SupportError("unsupported_check", "Return check predicate is not selected by the role contract")

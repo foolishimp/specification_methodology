@@ -1,0 +1,76 @@
+{
+  "schema": "stdo-skills.tool-writer-return/1",
+  "actor": "/root/skills_tool_binding_assessment",
+  "role": "Writer",
+  "result": "candidate_ready_for_independent_review",
+  "candidate_sha256": "d885f593e994d325ae88343b7f23f842f74465488ebfe6af7777e7b244f0b5a6",
+  "source_checks": [
+    {
+      "path": "a_c/build_tenants/graphify/code/ac_support_core.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/ac_support_effects.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/ac_support.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "a_c/build_tenants/graphify/design/fd-method-stdo-3.0.1.json",
+      "matches_frozen": true
+    },
+    {
+      "path": "a_c/build_tenants/graphify/design/fd-support-stdo-3.0.1.md",
+      "matches_frozen": true
+    },
+    {
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_native301.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "a_c/specification/requirements/fd-stdo-3.0.1-binding.md",
+      "matches_frozen": true
+    },
+    {
+      "path": "a_c/build_tenants/graphify/examples/fd-support/prepare_readonly.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "a_c/build_tenants/graphify/examples/fd-support/README.md",
+      "matches_frozen": true
+    }
+  ],
+  "actual_verification": {
+    "affected_tests": {
+      "count": 195,
+      "exit_code": 0,
+      "elapsed_seconds_reported": "56.254",
+      "invocation": "affected-test-invocation.json",
+      "stdout": "affected-tests.stdout",
+      "stderr": "affected-tests.stderr"
+    },
+    "native_public_cases": {
+      "count": 6,
+      "exit_code": 0,
+      "custody": "native-public-proof-001/",
+      "stderr": "native-public-proof.stderr"
+    },
+    "ordinary_native_acquisition": [
+      "tools.describe",
+      "source.read",
+      "workspace.observe"
+    ],
+    "ordinary_native_acquisition_root": "native-readonly-001/"
+  },
+  "handoff": "Operator-preparation Writer received current code/profile pins and exact owner/grant/executor/ReturnContract recipe; real host execution belongs to Root activation.",
+  "limits": [
+    "No model call or independent semantic appraisal performed",
+    "No retrospective admission of earlier source authoring",
+    "Native conjunction deliberately unavailable",
+    "Potential legacy conjunction evidence consumption seam notified to independent reviewer for assessment; not reproduced or repaired by this closed Writer",
+    "No Git writes, install, release or Product acceptance"
+  ],
+  "writes_stopped": true
+}

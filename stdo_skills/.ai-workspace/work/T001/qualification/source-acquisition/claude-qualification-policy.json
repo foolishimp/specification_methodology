@@ -1,0 +1,178 @@
+{
+  "authority_sources": [
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "OPERATOR.md",
+      "root": "operator",
+      "selector": null,
+      "sha256": "1c66b6dd374617a3f31e86604ea91fb36187588ed319fa3dddd97b0ccb379794"
+    }
+  ],
+  "event_sinks": {},
+  "evidence_root": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/qualification/source-acquisition/evidence",
+  "executors": {},
+  "grants": {},
+  "id": "urn:stdo-skills:qualification:source-acquisition:1:claude-acquisition",
+  "independence_policy": null,
+  "limits": {
+    "max_bytes": 8388608,
+    "max_files": 1024,
+    "max_history_records": 10000,
+    "max_message_bytes": 1048576,
+    "max_wait_ms": 1000
+  },
+  "method_profile": {
+    "id": "urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1",
+    "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7",
+    "source": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "build_tenants/graphify/design/fd-method-stdo-3.0.1.json",
+      "root": "tool",
+      "selector": null,
+      "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+    }
+  },
+  "operators": {},
+  "predicates": {},
+  "principals": {
+    "qualification-writer": {
+      "actor_id": "/root/skills_tool_binding_assessment",
+      "authorship": "Qualification fixture preparation; source acquisition only",
+      "family": "native-orchestrator-worker",
+      "operations": [
+        "tools.describe",
+        "workspace.observe",
+        "source.read",
+        "records.find",
+        "records.read",
+        "graph.project",
+        "relations.query",
+        "evidence.read",
+        "work.project"
+      ],
+      "role": "Worker",
+      "role_binding": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "OPERATOR.md",
+        "root": "operator",
+        "selector": null,
+        "sha256": "1c66b6dd374617a3f31e86604ea91fb36187588ed319fa3dddd97b0ccb379794"
+      },
+      "role_transition": null
+    }
+  },
+  "product": {
+    "authority_binding": {
+      "definition_locator": "/reference_frame_bases/0/authority/0",
+      "mechanism": {
+        "id": "product-policy-preflight/1",
+        "implementation_sha256": "bf72a28444e0497cd564066e41c7e5943810d5a2e0be5488c92fa5add5a67209",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/code/ac_support_core.py",
+          "root": "tool",
+          "selector": null,
+          "sha256": "bf72a28444e0497cd564066e41c7e5943810d5a2e0be5488c92fa5add5a67209"
+        }
+      },
+      "owner_record": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "OPERATOR.md",
+        "root": "operator",
+        "selector": null,
+        "sha256": "1c66b6dd374617a3f31e86604ea91fb36187588ed319fa3dddd97b0ccb379794"
+      },
+      "result_surface": {
+        "consumer": "read-only-example",
+        "namespace": "readonly-demo",
+        "root": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/qualification/source-acquisition/evidence"
+      },
+      "scope": {
+        "Product_work_authority": false,
+        "kind": "read-only-example"
+      }
+    },
+    "definition": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "stdo_skills.json",
+      "root": "product",
+      "selector": null,
+      "sha256": "4339a7dbc735052c08962154966fc13a4e30206d42ba2e80b53c6009a5008c22"
+    },
+    "definition_id": "urn:stdo:product-definition:stdo-skills"
+  },
+  "schema": "a_c.fd-support.policy/1",
+  "sources": {
+    "operator": {
+      "kind": "workspace",
+      "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/qualification/source-acquisition/control",
+      "read_scope": [
+        {
+          "kind": "file",
+          "path": "OPERATOR.md"
+        }
+      ],
+      "writable": false
+    },
+    "product": {
+      "kind": "workspace",
+      "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills",
+      "read_scope": [
+        {
+          "kind": "file",
+          "path": "stdo_skills.json"
+        },
+        {
+          "kind": "directory",
+          "path": "specification"
+        },
+        {
+          "kind": "directory",
+          "path": "build_tenants/graphify/design"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/test_env/fixtures/toy_model.json"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/examples/subject.md"
+        },
+        {
+          "kind": "directory",
+          "path": "build_tenants/codex"
+        },
+        {
+          "path": "build_tenants/claude",
+          "kind": "directory"
+        }
+      ],
+      "writable": false
+    },
+    "tool": {
+      "kind": "workspace",
+      "path": "/Users/jim/src/apps/specification_methodology-skills/a_c",
+      "read_scope": [
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/design/fd-method-stdo-3.0.1.json"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/design/fd-support.md"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/code/ac_support_core.py"
+        }
+      ],
+      "writable": false
+    }
+  }
+}

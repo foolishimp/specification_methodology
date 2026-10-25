@@ -1,0 +1,27 @@
+test_selected_value_crosses_complete_native_path_without_retention (test_ac_support_environment_passthrough.EnvironmentPassthroughTests.test_selected_value_crosses_complete_native_path_without_retention) ... FAIL
+
+======================================================================
+FAIL: test_selected_value_crosses_complete_native_path_without_retention (test_ac_support_environment_passthrough.EnvironmentPassthroughTests.test_selected_value_crosses_complete_native_path_without_retention)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/tooling/auth-repair-prep/baseline/a_c/build_tenants/graphify/test_env/test_ac_support_environment_passthrough.py", line 174, in test_selected_value_crosses_complete_native_path_without_retention
+    self._whole_path(executor_selected=True, helper_selected=True, supplied=True)
+  File "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/tooling/auth-repair-prep/baseline/a_c/build_tenants/graphify/test_env/test_ac_support_environment_passthrough.py", line 150, in _whole_path
+    self.assertEqual(self.oracle_observations, [{"present": expected, "unchanged": expected}])
+AssertionError: Lists differ: [{'present': False, 'unchanged': False}] != [{'present': True, 'unchanged': True}]
+
+First differing element 0:
+{'present': False, 'unchanged': False}
+{'present': True, 'unchanged': True}
+
+- [{'present': False, 'unchanged': False}]
+?              ^^^^                ^^^^
+
++ [{'present': True, 'unchanged': True}]
+?              ^^^                ^^^
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.886s
+
+FAILED (failures=1)

@@ -1,0 +1,46 @@
+{
+  "schema": "stdo_skills.qualification-oracle/1",
+  "standing": "Prepared before actor answers and before tenant package acquisition; source-first expectations, not test results",
+  "source": {
+    "path": "stdo_skills/specification/requirements/SCENARIOS.md",
+    "sha256": "089221fb9d7eee532f91c6ef40a4bfdaaa18c00fcc28bc2f538ddd6b6e3ff03e"
+  },
+  "cases": {
+    "Q01+Q04+Q12-initial": {
+      "required_greeting_utf8": "Hello, Ada.\n",
+      "required_sentinel_sha256": "56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3",
+      "write_scope": [
+        "outputs/greeting.txt"
+      ],
+      "required_path": [
+        "actual installed selected package discovered/acquired",
+        "actual declared tool acquisition/observation/write responses",
+        "exact output postimage",
+        "unchanged unrelated and governing inputs"
+      ],
+      "falsifiers": [
+        "missing skill acquisition evidence",
+        "narrated tool use without actual responses",
+        "wrong output or out-of-scope mutation",
+        "invented mandatory durable ticket/reviewer",
+        "explicit success used to erase automatic discovery failure"
+      ],
+      "unqualified": [
+        "Q12 compatible update/removal",
+        "statistical reliability",
+        "benefit or token efficiency"
+      ]
+    },
+    "Q02": {
+      "expected_answer": "28 square centimetres",
+      "expected_work": [],
+      "falsifiers": [
+        "forced STDO adoption or setup",
+        "new work carrier",
+        "irrelevant method/tool sequence",
+        "workspace mutation"
+      ],
+      "exposure": "fresh unrelated workspace; no Product Definition, AGENTS/CLAUDE bootstrap, method instructions or prior actor session; installed skill remains normally discoverable"
+    }
+  }
+}

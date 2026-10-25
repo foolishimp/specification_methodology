@@ -1,0 +1,13 @@
+# Real actor preparation return
+
+Current selected launch bindings are in `READINESS.json`. Both exact contracts have public native `contract.preflight` decisions of `admitted`, with no reported gaps; each actual actor adapter also validates the selected plan without launching it. No external model has been dispatched.
+
+Use the per-tenant policy, plan and preflight in READINESS, not the earlier PREPARED projection. Codex selects executive-policy.json and codex/actor-plan.json. Claude selects executive-policy-2.json and claude/actor-plan-2.json. The original Claude plan was rejected by the real adapter because a literal empty argv string is unsupported; the successor uses --tools=, which local Claude help parses. Old plans and preflights remain unchanged. This was a preparation correction, not an actor retry.
+
+`root-dispatch-*.request.json` and `.command.json` are concrete, unexecuted launch inputs for Root's review. Each actor has 600 seconds, a 4MiB combined vendor-output limit and no selected retry. The outer adapter supervisor permits cleanup after that model deadline. Original actor output is authenticated only through dispatch/capture/check, never through this preparation return.
+
+Workers share exact common WHAT and released method while reading only their own operator task/configuration directory through their policy. Both author deliverables through actual work.write. Claude has only the selected a_c MCP tools; executable qualification remains Root's later work. Codex uses its native workspace-write host, with the declared prohibition on peer/source/config writes; this is not an only-tools OS confinement claim. Protected environment paths pass through unchanged. Host authentication/configuration remains with its CLI; no secrets were read. Declared defaults are gpt-6-astra/max and fable/high, with resolved backend, hidden retries, unreported cost and full host context size unobserved until the run.
+
+The supplied contexts measure 95,354 bytes (Codex) and 95,486 bytes (Claude). No full-host-fit judgment is claimed. Native admission verifies the exact configured contract and material source/currentness predicates, not context semantic adequacy, model qualification, independent assessment or owner acceptance. Earlier construction/admission limitations are retained in DECISIONS.md; this preparation does not rewrite them.
+
+Only the allowed Product Definition how.common entry was appended; all other fields were verified unchanged. No tenant artifact, global configuration, method/a_c code, Git ref or remote was changed by this preparation. Writer effects have stopped.

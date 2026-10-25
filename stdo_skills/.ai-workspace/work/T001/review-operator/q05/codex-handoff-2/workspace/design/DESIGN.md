@@ -1,0 +1,2 @@
+# D1
+Read inputs/name.txt, remove its terminal newline, and construct the UTF-8 concatenation of literal `Hello, `, the selected name, literal `.`, and one newline. The Worker effects only outputs/greeting.txt through its actual admitted native Writer operation. A separate Reviewer first derives criteria from the governing requirement, design and authority, then assesses the exact postimage and scope evidence. The Executive consumes both actual bound returns before its continuation decision.

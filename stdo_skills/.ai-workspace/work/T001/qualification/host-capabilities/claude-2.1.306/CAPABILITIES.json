@@ -1,0 +1,42 @@
+{
+  "executable": {
+    "path": "/Users/jim/.local/share/claude/versions/2.1.306",
+    "sha256": "b5d795b7760032d79954b55a9cd1876dcf3a8dc9608fd6bb9f618593f69fd44b"
+  },
+  "commands": [
+    {
+      "argv": [
+        "/Users/jim/.local/share/claude/versions/2.1.306",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "dc3d56549d7ae73a42ae7c663cd0656c0b9847e6beb1a98c63ba4efd92a3f785",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/claude/versions/2.1.306",
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "b10f5c36adfe3285f6c5a0d18284f466e6c4486499de56ef62745e13312a7fbc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "relevant_help_lines": [
+    "  --allowedTools, --allowed-tools <tools...>",
+    "  --bare                                Minimal mode: skip hooks (those defined",
+    "  --disable-slash-commands              Disable all skills and commands",
+    "  --permission-prompts <target>         Who answers permission prompts with",
+    "                                        tools) and WebFetch unless --tools names",
+    "  --safe-mode                           Start with all customizations",
+    "                                        default, except under --bare outside",
+    "  --tools <tools...>                    Specify the list of available tools from"
+  ],
+  "selected_behavior": "Normal built-in tool set; explicitly allow Skill, Bash, Read, Glob, Grep and scoped a_c MCP. Do not pass --tools restricting native Skill, --bare, --safe-mode or --disable-slash-commands. No model/effort override.",
+  "actual_trial_initial_tools": "Unobserved until native trial; inspect retained init event before claiming supported Skill use.",
+  "documentation": {
+    "url": "https://code.claude.com/docs/en/skills",
+    "note": "Official current documentation supports project-local .claude/skills discovery and native Skill invocation. Version-specific selected flags verified against this binary help, not assumed from current docs."
+  }
+}

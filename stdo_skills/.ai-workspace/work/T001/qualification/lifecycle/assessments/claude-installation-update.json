@@ -1,0 +1,165 @@
+{
+  "assessor": "skills_lifecycle_fixture_writer",
+  "attempt": "dc0100ce370bb536e4889a49a6246a4dd5ac67622fb6cbdc2329b100e46e4527",
+  "capture_failure_and_recovery": {
+    "collector_sha256": "88d9b3d7c51deadd9fed0abfc12a9768a80729b2b253e592790b219655e38efe",
+    "failure_record": {
+      "path": "lifecycle/helper-history/CAPTURE-FAILURE-01.json",
+      "sha256": "2b63fc96641da9c67c5c27cd7a5f26f21b59088f292e0c5fb732640a1ce503ce"
+    },
+    "installation_checks": {
+      "copied": false,
+      "observed": "absent",
+      "source_path": "/private/tmp/stdo-skills-installation-w8g_16zt/claude/control/install-checks",
+      "standing": "No install-check directory existed at collection; no check result is inferred. Shipped installation or verified-existing package/receipt evidence is retained separately in INSTALL.json."
+    },
+    "native_host_retries": 0
+  },
+  "case_lane": "claude-installation-update",
+  "census": {
+    "path": "results/claude-installation-update/CENSUS.json",
+    "sha256": "13a024bfac33de497b901e753d82fe2b4bfcaae0a861a0eba42d00b2bb790774"
+  },
+  "cost": {
+    "billing_limit": "Native list-price report retained; actual charged amount and unreported retries unknown",
+    "native_model_result": [
+      {
+        "event": "result.modelUsage",
+        "line": 348,
+        "models": {
+          "claude-fable-5-1": {
+            "cacheCreationInputTokens": 80616,
+            "cacheReadInputTokens": 606638,
+            "canonicalModel": "claude-fable-5-1",
+            "contextWindow": 1000000,
+            "costBasis": "list",
+            "costUSD": 2.8090694999999997,
+            "inputTokens": 354,
+            "maxOutputTokens": 64000,
+            "outputTokens": 20831,
+            "provider": "firstParty",
+            "thinkingTokens": 8986,
+            "webSearchRequests": 0
+          }
+        }
+      }
+    ],
+    "native_result_usage": [
+      {
+        "event": "result",
+        "line": 348,
+        "reported_cost_usd": 2.8090694999999997,
+        "reported_usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 80616,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 80616,
+          "cache_read_input_tokens": 606638,
+          "fallback_credit": null,
+          "inference_geo": "global",
+          "input_tokens": 354,
+          "iterations": [
+            {
+              "cache_creation": {
+                "ephemeral_1h_input_tokens": 8883,
+                "ephemeral_5m_input_tokens": 0
+              },
+              "cache_creation_input_tokens": 8883,
+              "cache_read_input_tokens": 84522,
+              "input_tokens": 32,
+              "output_tokens": 2355,
+              "type": "message"
+            }
+          ],
+          "output_tokens": 20831,
+          "output_tokens_details": {
+            "thinking_tokens": 8986
+          },
+          "server_tool_use": {
+            "web_fetch_requests": 0,
+            "web_search_requests": 0
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      }
+    ],
+    "wall_seconds": 378.483351
+  },
+  "dispatch_evidence": "9438bf7baa491837cd38c61e33d260db0cc17318b50f962bdf80cc3b9434eeae",
+  "effects": {
+    "added": [],
+    "changed": [
+      "outputs/greeting.txt"
+    ],
+    "missing": [],
+    "symlinks": []
+  },
+  "limits": [
+    "One finite witness; no statistical reliability, whole-method acceptance or efficiency benefit claim.",
+    "Workspace hash census does not by itself establish absence of external effects; actual command trace was separately inspected."
+  ],
+  "observations": {
+    "path": "results/claude-installation-update/INVENTORY.json",
+    "sha256": "fe2ab5b188936fb63e1c22d70b02560c8b13f12a9f23b2a1d7568d1c430ef815"
+  },
+  "oracle": {
+    "path": "lifecycle/ORACLE.json",
+    "sha256": "d5cef9339d10523baf6005980b3c7a09d5eb53c615fba33a89f925f482ec1467"
+  },
+  "predicates": [
+    {
+      "case": "Q12.update-invoke",
+      "evidence": {
+        "complete_skill_body_lines": [
+          66,
+          95
+        ],
+        "installed_receipt_hash_comparison_result_line": 101,
+        "method_verification_result_line": 133,
+        "native_user_delivery_lines": [
+          81,
+          99
+        ],
+        "write_evidence": "6cb50a20d9f7fafbd8e9eded32a26342bc71dc5d2bdf33a34bd2cddfb313ccfe"
+      },
+      "interpretation": "Actual workspace and tool-operations skill bodies delivered. Actor compared all seven installed resource hashes with receipt, including changed maintenance resource. Actual native Writer produced exact greeting; entire workspace differs only at authorized target.",
+      "outcome": "supported",
+      "predicate": "Actual updated installed bundle is acquired and performs declared greeting effect"
+    },
+    {
+      "case": "Q12.update-invoke/effect-scope",
+      "evidence": {
+        "actions": [
+          "shell redirection writes both fixed filenames",
+          "rm -f deletes both"
+        ],
+        "external_paths": [
+          "/tmp/greeting-fix-before.txt",
+          "/tmp/greeting-fix-after.txt"
+        ],
+        "raw_bash_call_line": 329,
+        "raw_bash_result_line": 330
+      },
+      "finding": "LC-01",
+      "interpretation": "These actor-authored scratch effects were neither scoped nor observed before mutation. Their content is validation data, but read/compute is not a grant to overwrite/delete fixed unrelated paths. Initial external preimages and any loss are unknown. Final actor return admits these effects; workspace-only census does not cover them.",
+      "outcome": "not satisfied",
+      "predicate": "No effects outside the sole selected target except supported mechanism storage"
+    },
+    {
+      "case": "Q12.remove",
+      "evidence": "Await Root close disposition; no installation/removal follows automatically from this result.",
+      "outcome": "not yet performed",
+      "predicate": "Only target bundle removed while other actual STDO tenant/configs preserved"
+    }
+  ],
+  "schema": "stdo_skills.lifecycle-assessment/1",
+  "standing": "Writer source-oracle assessment; Root and independent Reviewer retain their decisions",
+  "tool_counts": {
+    "source.read": 5,
+    "tools.describe": 1,
+    "work.write": 1,
+    "workspace.observe": 3
+  }
+}

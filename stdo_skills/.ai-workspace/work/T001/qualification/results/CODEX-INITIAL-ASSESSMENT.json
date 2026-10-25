@@ -1,0 +1,220 @@
+{
+  "schema": "stdo_skills.initial-host-assessment/1",
+  "assessor": "/root/skills_tool_binding_assessment",
+  "role": "qualification fixture Writer; source-oracle assessment, not independent reviewer or owner acceptance",
+  "source_oracle": {
+    "path": "ORACLE.json",
+    "sha256": "bb274a366177a7ec31f28b7d4df9ba500c146a4f956ec8a54697d6ceca629f2c"
+  },
+  "candidate_inventory_sha256": "337d274efde96147c8e9a2db3e3b25f7631731fc8486562c9022ad087833aa36",
+  "lanes": {
+    "codex-automatic": {
+      "inventory_sha256": "d0ca2aa06a9bb157ab00c815859e3ca276bed0cdd8369f38b1a3a90d342034b3",
+      "census_sha256": "b5433e7f640eca9a455c00156f06e36cd122df5e542d02686e6c40cfc1fcc7d0",
+      "elapsed_seconds": 137.361963,
+      "vendor_returncode": 0,
+      "usage_events": [
+        {
+          "line": 83,
+          "event": "turn.completed",
+          "reported_usage": {
+            "input_tokens": 614720,
+            "cached_input_tokens": 558208,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 5887,
+            "reasoning_output_tokens": 2003
+          },
+          "reported_cost_usd": null
+        }
+      ],
+      "reported_dollar_cost": null,
+      "actual_model_identifier": null,
+      "public_operation_counts": {
+        "tools.describe": 3,
+        "source.read": 17,
+        "workspace.observe": 2,
+        "work.write": 1
+      },
+      "completed_commands": 35,
+      "artifact_closure": {
+        "copied": 67,
+        "missing": [],
+        "digest_mismatches": []
+      },
+      "workspace_change": {
+        "changed": [
+          "outputs/greeting.txt"
+        ],
+        "added": [],
+        "missing": []
+      },
+      "failed_commands": [
+        {
+          "line": 13,
+          "exit_code": 128,
+          "command": "/bin/zsh -lc \"git status --short && python3 -c 'from pathlib import Path; import hashlib; paths=[\\\"inputs/name.txt\\\",\\\"outputs/greeting.txt\\\",\\\"unrelated/sentinel.txt\\\"]; [(print(p,repr(Path(p).read_bytes()),hashlib.sha256(Path(p).read_bytes()).hexdigest())) for p in paths]'\""
+        }
+      ],
+      "mcp_errors": [
+        {
+          "line": 19,
+          "error": {
+            "message": "MCP tool call requires approval, but approval policy is never"
+          }
+        },
+        {
+          "line": 21,
+          "error": {
+            "message": "MCP tool call requires approval, but approval policy is never"
+          }
+        },
+        {
+          "line": 23,
+          "error": {
+            "message": "MCP tool call requires approval, but approval policy is never"
+          }
+        }
+      ]
+    },
+    "codex-explicit": {
+      "inventory_sha256": "8b44f15a8c7c22b23716dee231e1b1c27973ee406bc9473e392641bca252adc4",
+      "census_sha256": "de7f5f68984e2d8b5f9b48aab09f175af6e6073f4f38bf0f2a9d12db7c2252ff",
+      "elapsed_seconds": 164.829021,
+      "vendor_returncode": 0,
+      "usage_events": [
+        {
+          "line": 86,
+          "event": "turn.completed",
+          "reported_usage": {
+            "input_tokens": 939259,
+            "cached_input_tokens": 843776,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 6781,
+            "reasoning_output_tokens": 2561
+          },
+          "reported_cost_usd": null
+        }
+      ],
+      "reported_dollar_cost": null,
+      "actual_model_identifier": null,
+      "public_operation_counts": {
+        "tools.describe": 3,
+        "source.read": 17,
+        "workspace.observe": 3,
+        "work.write": 1
+      },
+      "completed_commands": 36,
+      "artifact_closure": {
+        "copied": 70,
+        "missing": [],
+        "digest_mismatches": []
+      },
+      "workspace_change": {
+        "changed": [
+          "outputs/greeting.txt"
+        ],
+        "added": [],
+        "missing": []
+      },
+      "failed_commands": [
+        {
+          "line": 8,
+          "exit_code": 1,
+          "command": "/bin/zsh -lc \"rg -n 'stdo-work|one-file|direct Writer|qualification.*skill|skills.*qualification' /Users/jim/.codex/memories/MEMORY.md\""
+        }
+      ],
+      "mcp_errors": [
+        {
+          "line": 20,
+          "error": {
+            "message": "MCP tool call requires approval, but approval policy is never"
+          }
+        },
+        {
+          "line": 22,
+          "error": {
+            "message": "MCP tool call requires approval, but approval policy is never"
+          }
+        },
+        {
+          "line": 24,
+          "error": {
+            "message": "MCP tool call requires approval, but approval policy is never"
+          }
+        }
+      ]
+    },
+    "codex-unrelated": {
+      "inventory_sha256": "7fa94475f3321a8675ebc88e4df6302ec78e96321b24cdbed80bc80ec3e7c7f4",
+      "census_sha256": "624c94b76d849e4048afc67a5de419ec172e8ed36cc465f8f7dc31214640e7b1",
+      "elapsed_seconds": 6.522038,
+      "vendor_returncode": 0,
+      "usage_events": [
+        {
+          "line": 4,
+          "event": "turn.completed",
+          "reported_usage": {
+            "input_tokens": 23773,
+            "cached_input_tokens": 13184,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 64,
+            "reasoning_output_tokens": 49
+          },
+          "reported_cost_usd": null
+        }
+      ],
+      "reported_dollar_cost": null,
+      "actual_model_identifier": null,
+      "public_operation_counts": {},
+      "completed_commands": 0,
+      "artifact_closure": {
+        "copied": 0,
+        "missing": [],
+        "digest_mismatches": []
+      },
+      "workspace_change": {
+        "changed": [],
+        "added": [],
+        "missing": []
+      },
+      "failed_commands": [],
+      "mcp_errors": []
+    }
+  },
+  "decisions": [
+    {
+      "case": "Q01 automatic",
+      "value": "supported finite witness",
+      "reason": "Unprompted actual acquisition of the exact full installed skill body; verified immutable method; admitted native source/observation/write operations produced exact correction."
+    },
+    {
+      "case": "Q01 explicit",
+      "value": "supported separate finite witness",
+      "reason": "Fresh ordinary task prefixed with native $stdo-work; full installed skill acquired; distinct exact effect evidence and correct postimage."
+    },
+    {
+      "case": "Q02",
+      "value": "supported finite witness",
+      "reason": "Correct 28-square-centimetre answer in one sentence, no commands, public operations, skill acquisition or workspace change."
+    },
+    {
+      "case": "Q04",
+      "value": "supported task/effect predicates; automatic attempt has scope exception",
+      "reason": "Only greeting output changed; no invented durable ticket/reviewer. Automatic actor attempted forbidden read-only Git status, which failed without effects."
+    },
+    {
+      "case": "Q12 initial install/invoke",
+      "value": "supported selected-fragment witness",
+      "reason": "Exact package and references verified before/after install and actually acquired in both governed lanes; update/removal not exercised."
+    }
+  ],
+  "limitations": [
+    "One finite witness per lane; no reliability, compression or comparative cost claim.",
+    "Raw vendor stream gives token usage but no actual backend model identifier or dollar cost. Configuration gpt-6-astra/max is not substituted for backend observation.",
+    "MCP approval failed in both governed lanes; the independently declared CLI route completed. This does not qualify successful MCP invocation.",
+    "Automatic read-only git status attempted despite blanket Git exclusion; no Git effects, but full attempt-scope conformance is not claimed.",
+    "Author construction timed out without closed return; these direct current-candidate trials neither create that return nor erase earlier procedural residuals.",
+    "Other mandatory scenarios and Q12 update/removal remain open.",
+    "Physical wrapper candidate_ready means observation-report availability only. Root and independent assessment disposition are separate."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schema": "a_c.fd-support.request/1",
+  "id": "qualification-q08-increment-once",
+  "operation": "work.write",
+  "arguments": {
+    "grant_id": "qualification-q08-primer-write",
+    "target": {
+      "engine": "workspace-regular-file",
+      "root": "product",
+      "path": "effects/counter.txt",
+      "object": null,
+      "selector": null,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    "mode": "replace",
+    "record": {
+      "text": "1\n",
+      "provenance": {
+        "engine": "workspace-regular-file",
+        "root": "product",
+        "path": "TASK.md",
+        "object": null,
+        "selector": null,
+        "sha256": "8d4642ac98f0d786e674a518045e0088a6c05d01ef027b5dc5b3f9b94b363821"
+      }
+    },
+    "interpretation": null,
+    "observations": [
+      {
+        "id": "sha256:159a680ef90d558861b724362bac30522c6c3f792454fd96a12bc800fbba011a",
+        "sha256": "159a680ef90d558861b724362bac30522c6c3f792454fd96a12bc800fbba011a"
+      }
+    ]
+  }
+}

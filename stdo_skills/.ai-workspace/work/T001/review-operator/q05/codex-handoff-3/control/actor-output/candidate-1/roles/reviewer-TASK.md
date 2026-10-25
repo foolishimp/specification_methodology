@@ -1,0 +1,7 @@
+# Exact greeting candidate review
+
+Same actual nonauthor Reviewer, continued after your real source-first expectation. The retained expectation is pinned in this activation's ReturnContract and SOURCE-ROUTES. Acquire it through evidence.read; use your earlier criteria and deciding source acquisitions where current. Then call review.prepare phase=candidate with exact claim, governing sources, candidate and proof refs from SOURCE-ROUTES, comparison=null, expectations=the actual pinned ArtifactRef, expectation_body=null. Require exact source-first/population continuity; do not substitute a missing premise.
+
+Assess the actual 12-byte candidate against R1/D1 and the Worker handoff/receipt/scope against R2. Inspect actual native effect evidence and the complete public event projection; the retained raw trace is available for any disputed projection. Keep external/descendant-effect uncertainty and same-family nonauthor limits explicit. Report S0-S4 findings with paths/lines when applicable, exact affected predicate and basis. No candidate repair, scratch, next-stage launch, acceptance or publication. Use the cheapest deciding frontier, not a full corpus reload.
+
+Return original a_c.fd-support.closed-return/1 JSON per the retained roles/RETURN.md shape. Evaluate candidate-review on the exact predicate from ReturnContract; work_result=null. Use this new Context's original identities/observations and actual acquired evidence. 600s ceiling.

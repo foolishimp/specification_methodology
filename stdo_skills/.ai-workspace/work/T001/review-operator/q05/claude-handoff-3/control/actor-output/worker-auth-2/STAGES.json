@@ -1,0 +1,62 @@
+{
+  "expectation": {
+    "id": "sha256:9f6e54ebe544dcc4617512915684f55e85be7445a54cca6738aa98586dd0744f",
+    "sha256": "9f6e54ebe544dcc4617512915684f55e85be7445a54cca6738aa98586dd0744f"
+  },
+  "native_contract_correction": "preflight observations equal Context observations exactly; no added mutable output in return basis.",
+  "no_reviewer_grant": true,
+  "prior": {
+    "engine": "workspace-regular-file",
+    "object": null,
+    "path": "PRIOR.json",
+    "root": "auth_correction",
+    "selector": null,
+    "sha256": "23273b74b2edc229da166d9d4a5087e3c62306f8d73765a61b6fd2cf88575022"
+  },
+  "stage": "worker-authentication-successor-preflight-correction",
+  "target_dispatch_precondition": {
+    "engine": "workspace-regular-file",
+    "object": null,
+    "path": "outputs/greeting.txt",
+    "root": "product",
+    "selector": null,
+    "sha256": "dbfa3fcacaedf5e16d125ee1410774c6cb2d0bbd0a9fb07cacfe87fd362d29c7"
+  },
+  "unchanged_worker_activation": "Prior Worker Context/plan never dispatched; reused exactly. Fresh per-write target observation remains Worker-owned.",
+  "worker": {
+    "consumer": "urn:stdo-skills:T001:q05:claude:handoff:3:executive",
+    "context": {
+      "id": "sha256:e00fc3546d89d3d2548f85e0be2736125305510bd643454a945fad8d3bd786a8",
+      "sha256": "e00fc3546d89d3d2548f85e0be2736125305510bd643454a945fad8d3bd786a8"
+    },
+    "executor_id": "worker",
+    "grant_id": "urn:stdo-skills:T001:q05:claude:handoff:3:worker-grant",
+    "observations": [
+      {
+        "id": "sha256:9951515725fc2ee89bad841a65f11aabc783b4b07dc701746be7c99f430027b2",
+        "sha256": "9951515725fc2ee89bad841a65f11aabc783b4b07dc701746be7c99f430027b2"
+      }
+    ],
+    "predecessor": {
+      "id": "sha256:893360167954fa4ad5076b976f06bc4c4f9a2931550282566843c67f5d180890",
+      "sha256": "893360167954fa4ad5076b976f06bc4c4f9a2931550282566843c67f5d180890"
+    },
+    "reconciliation": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "PRIOR.json",
+      "root": "worker_phase",
+      "selector": null,
+      "sha256": "1f2bce19e16e81c75a4aab97341520da660cad5c06f4c70abe324cde4b7d2803"
+    },
+    "result_key": "urn:stdo-skills:T001:q05:claude:handoff:3:worker-auth1:observations-correction",
+    "return_contract": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "roles/worker-RETURN-CONTRACT.json",
+      "root": "worker_phase",
+      "selector": null,
+      "sha256": "ac5c4dd8260c53b75ba1d84676eda07bc5224df1e2b8303cbad5876cc35e954d"
+    }
+  }
+}

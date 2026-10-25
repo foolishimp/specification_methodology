@@ -1,0 +1,59 @@
+{
+  "actual_disposition": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/actor-output/worker-auth-1/ACTUAL-HOLD.md",
+    "sha256": "9b9bc1b9b9e4568951175eb07473e42e747be815f6b592ddb59eb29c9fc8a295"
+  },
+  "actual_worker_dispatch": false,
+  "actual_worker_return": false,
+  "binding_scope": "Local MCP served public source reads and preflight. No credential value read or recorded.",
+  "cause": "Operator STAGES supplied stable and target observations; native contract requires exact equality to Context observations containing only stable.",
+  "context": {
+    "id": "sha256:e00fc3546d89d3d2548f85e0be2736125305510bd643454a945fad8d3bd786a8",
+    "sha256": "e00fc3546d89d3d2548f85e0be2736125305510bd643454a945fad8d3bd786a8"
+  },
+  "decision": "rejected",
+  "gap": "basis_stale: context observation currentness",
+  "nested_credential_transport": "unestablished; no child launched",
+  "pid_absent": true,
+  "preflight_artifact": "7a4e861abaa0f729af09c635a6d236441e999aae6d41636ca18c12f76a4f1529",
+  "preflight_evidence": "bb04b070c636dd0eb632b64175e67296496645bb8a7f551f8b1a0b8dfbab9046",
+  "process": {
+    "ended_ns": 1792903430813644000,
+    "failure": null,
+    "input_bytes": 1424,
+    "input_forwarded_bytes": 1424,
+    "output_available": true,
+    "pid": 58395,
+    "returncode": 0,
+    "schema": "a_c.fd-support.actor-cli-observation/1",
+    "started_ns": 1792903175951845000,
+    "stderr_bytes": 0,
+    "stderr_eof": true,
+    "stdout_bytes": 240589,
+    "stdout_eof": true,
+    "termination_requests": [],
+    "unknowns": [
+      "descendant/process-tree end and external side effects",
+      "host/model active-context size",
+      "backend retries or unreported usage",
+      "semantic outcome and owner disposition"
+    ]
+  },
+  "standing": "Actual held Executive phase; preparation defect, not source drift or authentication result.",
+  "supplied_observations": [
+    {
+      "id": "sha256:9951515725fc2ee89bad841a65f11aabc783b4b07dc701746be7c99f430027b2",
+      "sha256": "9951515725fc2ee89bad841a65f11aabc783b4b07dc701746be7c99f430027b2"
+    },
+    {
+      "id": "sha256:43e58934e501daa70699bac732f1c20100bdbf991112bd16606eb13700806d41",
+      "sha256": "43e58934e501daa70699bac732f1c20100bdbf991112bd16606eb13700806d41"
+    }
+  ],
+  "supported_correction": "Keep stable Context/preflight observation; put exact target SourceRef in grant.preconditions and retain separate Worker pre-write observation. Root selection required.",
+  "target": "unchanged Hello, Grace. LF",
+  "trace": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/actor-output/worker-auth-1/actor-output/vendor.stdout",
+    "sha256": "ddf2f1bf70822c75c72ead46d763478fe8397bc34932cf0dede3f7fb2a40b988"
+  }
+}

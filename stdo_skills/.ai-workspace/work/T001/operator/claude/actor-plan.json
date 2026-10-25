@@ -1,0 +1,105 @@
+{
+  "argv": [
+    "/Users/jim/.local/share/claude/versions/2.1.306",
+    "--print",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--permission-mode",
+    "acceptEdits",
+    "--permission-prompts",
+    "none",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--mcp-config",
+    "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/operator/claude/mcp.json",
+    "--allowedTools",
+    "mcp__stdo_ac__*",
+    "--append-system-prompt",
+    "You are the separately admitted claude Worker for STDO Skills. The stdin Context is your exact activation, not a request to redesign the method. Use the configured stdo_ac MCP tools to source.read TASK at {\"engine\":\"workspace-regular-file\",\"root\":\"operator\",\"path\":\"claude/TASK.md\",\"object\":null,\"sha256\":\"32e9ab98a604b39b417863d99d4167088d8b642cba060c236f387c607b2052d2\",\"selector\":null}, then its required sources. Tool calls require the full JSON envelope with schema='a_c.fd-support.request/1', a unique id, the exact operation name, and an arguments object; use tools.describe for schemas. Public CLI alternative is /opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/operator/claude/worker-policy.json --policy-sha256 6dfbc69a64b0ce8d0f35bffa00270b228c4728a57a7715de19c0ac03f88dd718 --principal claude call --request <own-actor-evidence-request.json>. Write deliverables only through work.write under grant urn:stdo-skills:T001:claude:construction:1. Do not edit operator configuration, shared WHAT or peer tenant. No external model calls or Git. Emit original closed-return JSON as final output as TASK specifies. Do not summarize or repair a return after submission. Your time budget is 600 seconds; prioritize coherent usable artifacts and truthful partial results."
+  ],
+  "backend": "claude",
+  "cwd": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills",
+  "decoder": "claude-result-jsonl/1",
+  "dependencies": [
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_generate.py",
+      "sha256": "fcb946e180ba8a30ecdfdb9e53044cd142d9bd450464c186dfbbe90e9da5ec93"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_graph.py",
+      "sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_grounding.py",
+      "sha256": "f850e7ceecd945455891e6cc941fc3a86c943ed27bbe74d86b0248169d9cf682"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_repair.py",
+      "sha256": "5be5e738f12006dcb17066ccfb60d22e65e5929a8a9a96d52ee5c0a19efda928"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py",
+      "sha256": "d238c15bd2ea5b94789417efd00339f4a610d4637ddfdfe661441424661134c7"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support_core.py",
+      "sha256": "790ebfb748735a3aaae71ea05b064304ed00ea3f3e2ce98a8427e0920fa3a820"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support_effects.py",
+      "sha256": "471b7e2bb0372083e34f8c3959e59fc86476837d0e1cf8e398f17c617412d5c4"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/examples/fd-support/actor_cli.py",
+      "sha256": "06cd55463fd23e45fbf56fa46de92b9ba49f6650e3dc5686e219544d5457b42c"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/design/fd-method-stdo-3.0.1.json",
+      "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/operator/claude/worker-policy.json",
+      "sha256": "6dfbc69a64b0ce8d0f35bffa00270b228c4728a57a7715de19c0ac03f88dd718"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/operator/claude/mcp.json",
+      "sha256": "a7b16285df50f504162e99ce67dcb9f9d7df7fdb9026202bc6adad7261b323a0"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/operator/claude/STARTUP.txt",
+      "sha256": "f925c23779e2b57795ea46fa3814362c2c918b803ebf32bc44336dc2e2aaa2f5"
+    }
+  ],
+  "environment": {
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "PATH": "/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/Library/Apple/usr/bin:/Library/TeX/texbin:/Users/jim/.codex/packages/app-server-daemon/releases/0.164.0-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0-macos/codex-arg0Mp340K:/Users/jim/.codex/tmp/arg0-macos/codex-arg0yvg77P:/Users/jim/.codex/packages/app-server-daemon/releases/0.163.0-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg0CDnCoA:/Users/jim/.codex/packages/app-server-daemon/releases/0.162.1-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg0Bb4u1U:/Users/jim/.codex/packages/app-server-daemon/releases/0.162.0-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg0LxzuXl:/Users/jim/.codex/packages/app-server-daemon/releases/0.161.0-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg03BXQTA:/Users/jim/.codex/packages/app-server-daemon/releases/0.160.1-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg00N7H4l:/Users/jim/.codex/packages/app-server-daemon/releases/0.160.0-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg0KdMMgl:/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/codex-path:/Users/jim/.grok/bin:/Users/jim/.bun/bin:/Users/jim/google-cloud-sdk/bin:/opt/homebrew/opt/openjdk/bin:/Users/jim/bin:/usr/local/opt/openjdk@17/bin:/Users/jim/.pyenv/shims:/Users/jim/.pyenv/bin:/opt/homebrew/opt/curl/bin:/opt/homebrew/opt/openssl/bin:/Users/jim/.local/bin:/opt/homebrew/bin:/Users/jim/.cargo/bin:/Applications/iTerm.app/Contents/Resources/utilities:/opt/homebrew/bin/flutter",
+    "TMPDIR": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/"
+  },
+  "evidence_directory": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/operator/claude/actor-cli-output",
+  "executable": {
+    "path": "/Users/jim/.local/share/claude/versions/2.1.306",
+    "sha256": "b5d795b7760032d79954b55a9cd1876dcf3a8dc9608fd6bb9f618593f69fd44b"
+  },
+  "id": "urn:stdo-skills:T001:claude:actor-plan:1",
+  "limits": {
+    "max_input_bytes": 4194304,
+    "max_output_bytes": 4194304,
+    "termination_grace_ms": 3000,
+    "timeout_ms": 600000
+  },
+  "schema": "a_c.fd-support.actor-cli-plan/1",
+  "settings": {
+    "cost": "unknown",
+    "effort_default": "high",
+    "host_context_bytes": "unknown",
+    "host_scope": "only explicitly configured a_c MCP tools; host context/settings remain inherited",
+    "model_default": "fable",
+    "model_override": false,
+    "resolved_backend": "unobserved until actual run",
+    "retry_policy": "no actor retry",
+    "selected_host": "Claude Code 2.1.306"
+  }
+}

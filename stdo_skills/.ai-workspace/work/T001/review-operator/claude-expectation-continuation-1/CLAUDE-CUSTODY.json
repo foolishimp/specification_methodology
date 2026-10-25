@@ -1,0 +1,100 @@
+{
+  "time": "2026-10-25T02:51:30.904258+00:00",
+  "standing": "Root-selected observed candidate after timeout; no closed Worker return or contract-conformance claim",
+  "inventory": {
+    "path": "build_tenants/claude/INVENTORY.md",
+    "sha256": "63095869d5f4e2a5b85a9bec17598ebf0e683d0ae45bb06f4d1abc85821ba9c7"
+  },
+  "whole_population_matches_inventory_plus_self": true,
+  "files": [
+    {
+      "path": "build_tenants/claude/INSTALL.md",
+      "sha256": "650a83518d996b83546be7b287e77e6aae08e88521831372e4ef66e61e909f60",
+      "bytes": 2511
+    },
+    {
+      "path": "build_tenants/claude/INVENTORY.md",
+      "sha256": "63095869d5f4e2a5b85a9bec17598ebf0e683d0ae45bb06f4d1abc85821ba9c7",
+      "bytes": 1108
+    },
+    {
+      "path": "build_tenants/claude/README.md",
+      "sha256": "8427582db2e83449700ec600bfb8ab48e922ead27930acde250ac5a5c066a4ce",
+      "bytes": 1604
+    },
+    {
+      "path": "build_tenants/claude/design/DESIGN.md",
+      "sha256": "767f29e03e9edf3bec7673d5bc5461c73d6dbd0d06dff8b0eef816d590c3a95e",
+      "bytes": 8105
+    },
+    {
+      "path": "build_tenants/claude/skills/stdo-continuation/SKILL.md",
+      "sha256": "90f3778a97df92796c8d052e4d46ca01e01b1913d3421fa8f421310d03c3cd61",
+      "bytes": 3400
+    },
+    {
+      "path": "build_tenants/claude/skills/stdo-delegate-review/SKILL.md",
+      "sha256": "f8bd00924ad601c7e38d9c36eae95364246dab33d3f31fc6c2e8eea076b7b8cf",
+      "bytes": 2864
+    },
+    {
+      "path": "build_tenants/claude/skills/stdo-release-install/SKILL.md",
+      "sha256": "e29457bf87fd34032e3ad5339549888766b54ebff18cb97051a6293c547127c1",
+      "bytes": 4388
+    },
+    {
+      "path": "build_tenants/claude/skills/stdo-tool-operations/SKILL.md",
+      "sha256": "a850e36e8136b0db0d233d0bdfc4e8c6b4bc88949be5ea08cc7bb9c2ec4b09a0",
+      "bytes": 4565
+    },
+    {
+      "path": "build_tenants/claude/skills/stdo-workspace-change/SKILL.md",
+      "sha256": "840bc1eeadcd575b15be7bc426a66f1407624a433ef49edf827671b9c1a6b3d1",
+      "bytes": 4351
+    },
+    {
+      "path": "build_tenants/claude/tests/check_package.py",
+      "sha256": "5d05378a72322ac0d64c383a7b79d5fe9fb7c25378570ec0dc1cdfe65345a70c",
+      "bytes": 5811
+    }
+  ],
+  "actor_evidence_files": [
+    {
+      "path": ".ai-workspace/work/T001/claude/actor/successor-1/ASSESSMENT.md",
+      "sha256": "3d5ee0b6fac1c05d681cd81dff832f07bcebd4349c03ab915cfcf983f1bb2b48",
+      "bytes": 5221
+    },
+    {
+      "path": ".ai-workspace/work/T001/claude/actor/successor-1/_probe.txt",
+      "sha256": "25be323556dad377abb57fe7ec8c4b99a6527f488dda28d0c9b686528659c909",
+      "bytes": 6
+    },
+    {
+      "path": ".ai-workspace/work/T001/claude/actor/successor-1/check_package_report.txt",
+      "sha256": "3d9f0d2636865a2cff2470dc303072a2ae923d3ed372dbe7f6e5601da362d884",
+      "bytes": 2145
+    }
+  ],
+  "direct_pid_observation": {
+    "argv": [
+      "ps",
+      "-p",
+      "30278,37598",
+      "-o",
+      "pid=,comm="
+    ],
+    "returncode": 1,
+    "stdout": ""
+  },
+  "known_scope_breach": {
+    "finding": "F-C01 S2",
+    "source": ".ai-workspace/work/T001/review/CLAUDE_CONTINUATION_SCOPE_FINDING.md",
+    "sha256": "05279f8d113ac53fc3af8adf7629c455c973a51df41eaf9166be0cf1631ce66f",
+    "effect": "Out-of-territory /tmp/claude_build Bash writes retained; bytes remain independently assessable"
+  },
+  "actual_author_model_observation": "claude-opus-4-8 in resumed author init, versus earlier claude-fable-5-1; no --model override selected by operator",
+  "limits": [
+    "Direct PIDs absent does not prove all descendants/external effects absent",
+    "No further author run selected"
+  ]
+}

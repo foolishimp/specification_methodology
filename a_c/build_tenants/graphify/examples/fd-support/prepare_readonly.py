@@ -59,7 +59,7 @@ def _request(identity: str, operation: str, arguments: Object) -> Object:
     return {"schema": core.REQUEST, "id": identity, "operation": operation, "arguments": arguments}
 
 
-def prepare(output: Path, product_root: Path) -> Object:
+def prepare(output: Path, product_root: Path, *, profile: str = "claude-rc9", definition_name: str = "stdo_a_c.json") -> Object:
     """Create only a new operator-selected example directory."""
     output = output.absolute()
     product_root = product_root.resolve(strict=True)
@@ -68,19 +68,34 @@ def prepare(output: Path, product_root: Path) -> Object:
     # The trusted setup selects the real new directory once, before policy or
     # SourceRef hashes exist. Runtime paths still refuse symlink aliases.
     output = output.resolve(strict=False)
-    definition_raw = (product_root / "stdo_a_c.json").read_bytes()
+    core._relative(definition_name)
+    definition_raw = (product_root / definition_name).read_bytes()
     definition = cast(Object, core.parse_json(definition_raw))
     product_id = cast(str, cast(Object, definition["product"])["definition_id"])
-    profile_path = "build_tenants/graphify/design/fd-method-claude-rc9.json"
-    profile_raw = (product_root / profile_path).read_bytes()
-    if hashlib.sha256(profile_raw).hexdigest() != core.PROFILE_SHA256:
+    native = profile == "stdo-3.0.1"
+    if profile not in ("claude-rc9", "stdo-3.0.1"):
+        raise ValueError("Select one explicit supported profile")
+    tool_root = Path(__file__).resolve().parents[4]
+    profile_path = "build_tenants/graphify/design/fd-method-" + ("stdo-3.0.1" if native else "claude-rc9") + ".json"
+    profile_raw = (tool_root / profile_path).read_bytes()
+    profile_id = core.NATIVE_PROFILE_ID if native else core.PROFILE_ID
+    profile_sha = core.NATIVE_PROFILE_SHA256 if native else core.PROFILE_SHA256
+    if native and core.pointer(definition, "/constitution/stdo/basis") != {"uri": "stdo://releases/v3.0.1-rc.1/", "manifest_sha256": core.NATIVE_MANIFEST_SHA256}:
+        raise ValueError("Native setup requires the exact released 3.0.1 Product basis")
+    if hashlib.sha256(profile_raw).hexdigest() != profile_sha:
         raise ValueError("The selected source does not contain the exact supported Claude RC9 profile")
     design_path = "build_tenants/graphify/design/fd-support.md"
-    design_raw = (product_root / design_path).read_bytes()
-    definition_ref = _source("product", "stdo_a_c.json", definition_raw)
-    profile_ref = _source("product", profile_path, profile_raw)
-    design_ref = _source("product", design_path, design_raw)
-    operator_ref = _source("operator", "OPERATOR.md", NOTICE.encode("utf-8"))
+    design_raw = (tool_root / design_path).read_bytes()
+    definition_ref = _source("product", definition_name, definition_raw)
+    profile_ref = _source("tool", profile_path, profile_raw)
+    design_ref = _source("tool", design_path, design_raw)
+    implementation_path = "build_tenants/graphify/code/ac_support_core.py"
+    implementation_raw = (tool_root / implementation_path).read_bytes()
+    implementation_ref = _source("tool", implementation_path, implementation_raw)
+    notice = NOTICE
+    if native:
+        notice = notice.replace("an unqualified all-zero implementation\ndigest", "the actual current implementation\ndigest")
+    operator_ref = _source("operator", "OPERATOR.md", notice.encode("utf-8"))
     evidence_root = output / "evidence"
     principals: Object = {}
     for role in ("Executive", "Worker", "Reviewer"):
@@ -96,24 +111,26 @@ def prepare(output: Path, product_root: Path) -> Object:
             "authority_binding": {
                 "definition_locator": "/reference_frame_bases/0/authority/0",
                 "owner_record": operator_ref,
-                "mechanism": {"id": "product-policy-preflight/1", "source": design_ref,
-                              "implementation_sha256": "0" * 64},
+                "mechanism": {"id": "product-policy-preflight/1", "source": implementation_ref if native else design_ref,
+                              "implementation_sha256": hashlib.sha256(implementation_raw).hexdigest() if native else "0" * 64},
                 "result_surface": {"root": str(evidence_root), "namespace": "readonly-demo", "consumer": "read-only-example"},
                 "scope": {"kind": "read-only-example", "Product_work_authority": False},
             },
         },
-        "method_profile": {"id": core.PROFILE_ID, "sha256": core.PROFILE_SHA256, "source": profile_ref},
+        "method_profile": {"id": profile_id, "sha256": profile_sha, "source": profile_ref},
         "sources": {
             "product": {
                 "path": str(product_root), "kind": "workspace", "writable": False,
                 "read_scope": [
-                    {"path": "stdo_a_c.json", "kind": "file"},
+                    {"path": definition_name, "kind": "file"},
                     {"path": "specification", "kind": "directory"},
                     {"path": "build_tenants/graphify/design", "kind": "directory"},
                     {"path": "build_tenants/graphify/test_env/fixtures/toy_model.json", "kind": "file"},
                     {"path": "build_tenants/graphify/examples/subject.md", "kind": "file"},
                 ],
             },
+            "tool": {"path": str(tool_root), "kind": "workspace", "writable": False,
+                     "read_scope": [{"path": profile_path, "kind": "file"}, {"path": design_path, "kind": "file"}, {"path": implementation_path, "kind": "file"}]},
             "operator": {"path": str(output / "control"), "kind": "workspace", "writable": False,
                          "read_scope": [{"path": "OPERATOR.md", "kind": "file"}]},
         },
@@ -128,7 +145,7 @@ def prepare(output: Path, product_root: Path) -> Object:
         "describe.json": _request("readonly-describe-001", "tools.describe", {}),
         "read-product.json": _request("readonly-product-001", "source.read", {"source": definition_ref, "encoding": "utf8"}),
         "observe.json": _request("readonly-observe-001", "workspace.observe", {
-            "scope": [{"root": "product", "path": "stdo_a_c.json", "kind": "file"}],
+            "scope": [{"root": "product", "path": definition_name, "kind": "file"}],
         }),
         "denied-preflight.json": _request("readonly-denied-001", "contract.preflight", {
             "context": {"id": "sha256:" + "0" * 64, "sha256": "0" * 64},
@@ -142,7 +159,7 @@ def prepare(output: Path, product_root: Path) -> Object:
     (output / "control").mkdir()
     (output / "requests").mkdir()
     evidence_root.mkdir()
-    (output / "control" / "OPERATOR.md").write_bytes(NOTICE.encode("utf-8"))
+    (output / "control" / "OPERATOR.md").write_bytes(notice.encode("utf-8"))
     policy_raw = _write_json(output / "policy.json", policy)
     for name, request in requests.items():
         _write_json(output / "requests" / name, request)
@@ -175,9 +192,11 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--out", required=True, type=Path, help="Fresh directory beneath an existing parent")
     parser.add_argument("--product-root", type=Path, default=Path(__file__).resolve().parents[4])
+    parser.add_argument("--profile", choices=("claude-rc9", "stdo-3.0.1"), default="claude-rc9")
+    parser.add_argument("--definition-name", default="stdo_a_c.json", help="Product-relative exact definition path")
     args = parser.parse_args()
     try:
-        result = prepare(cast(Path, args.out), cast(Path, args.product_root))
+        result = prepare(cast(Path, args.out), cast(Path, args.product_root), profile=args.profile, definition_name=args.definition_name)
         print(core.canonical(result).decode("utf-8"))
         return 0
     except (OSError, ValueError, core.SupportError, KeyError) as exc:

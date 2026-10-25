@@ -1,0 +1,11 @@
+# Actual review predicates
+
+## expectation-recording
+
+On the exact selected claim population, did this Reviewer acquire the deciding governing sources and record its own falsifiable expectations before candidate exposure through review.prepare? Evidence is the actual expectation ArtifactRef, its source_inputs acquisitions, observed ordering and declared external-exposure limits. Merely reading another review or naming a source cannot satisfy this predicate. The expectation phase returns this bounded preparation assessment only; candidate assessment is not performed and work_result is null. Its return contract has expectations null and final-review consumability remains false by design until the second contract is bound.
+
+## candidate-assessment
+
+On the exact frozen candidate and selected factual evidence, does the claimed capability follow from its governing source and actual implementation path, without a demonstrated actionable defect? Derive expectations first, then inspect the actual sources, realization, ordinary call path and evidence. Trace each material finding across producer, transport and consumer where relevant. For skills, distinguish supported discovery/tool behavior from package syntax and unperformed host trials; inspect useful task behavior, source ownership, proportionality, context/recovery and installation scope. For the native tool increment, distinguish the selected method binding and authentication path from a claim that all a_c operations or F_D semantics have been qualified. For common WHAT, assess the user outcome and STDO ownership boundaries rather than requirement totals.
+
+Return one evidence-bound result for each selected component with S0–S4 findings and exact locations. A bounded no-actionable-defect conclusion concerns the inspected population and stated claims, not complete qualification, universal reliability, efficiency or acceptance. A concrete violated supported relation is falsified; performed but insufficient assessment is indeterminate; unusable basis is invalid_basis; unavailable assessment capability is out_of_frame. If an assessment was not performed, put it in not_performed with no invented core result. Retain actual tool failures, unknowns and any omitted population. Reviewer work_result is null and it makes no acceptance or repair decision.

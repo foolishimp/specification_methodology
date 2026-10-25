@@ -1,0 +1,44 @@
+{
+  "time": "2026-10-25T02:03:45.009589+00:00",
+  "readiness_sha256": "bca2d99e552e204f53698d70a2ce6c3e9b38561501d7fd1f38e4ed5b3b53db58",
+  "correction": "READINESS compact contract_sha256 field incorrectly looked for exact_contract.sha256 and is null. Actual native receipts are authoritative; correct values are copied below. No plan/policy/context/receipt mutation.",
+  "receipts": {
+    "claude": {
+      "contract_sha256": "7db76342d2882175dc037a25dfb52760611f4793b77d7195e06e57f2f5f38ccb",
+      "decision": "admitted",
+      "contract_state": "admitted",
+      "gaps": [],
+      "preflight": {
+        "id": "sha256:fa24fc5c5a1a862944cd83b06489f5b495208851033bc940a560694909aedb72",
+        "sha256": "fa24fc5c5a1a862944cd83b06489f5b495208851033bc940a560694909aedb72"
+      },
+      "plan": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/operator/successor-1/claude/actor-plan.json",
+        "sha256": "8baa38b7a057e524f837427c2173e018076b3bf7a05600e578f3a6b993f89b89"
+      },
+      "public_dispatch_request": "stdo_skills/.ai-workspace/work/T001/operator/successor-1/root-dispatch-claude.request.json"
+    },
+    "codex": {
+      "contract_sha256": "7e35d35207064dd5a9cf593b3b3b523b536f8532aebfb0f8f981b63820171d5e",
+      "decision": "admitted",
+      "contract_state": "admitted",
+      "gaps": [],
+      "preflight": {
+        "id": "sha256:923bbfacf7485fe93bc7903bc1bd0f0884fd16d661894de4359bd6b267e1cef9",
+        "sha256": "923bbfacf7485fe93bc7903bc1bd0f0884fd16d661894de4359bd6b267e1cef9"
+      },
+      "plan": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/operator/successor-1/codex/actor-plan.json",
+        "sha256": "70c129e56887338681a1b68d0ef4c97f9005a2d6ca91edfbf24cf05eb67242a7"
+      },
+      "public_dispatch_request": "stdo_skills/.ai-workspace/work/T001/operator/successor-1/root-dispatch-codex.request.json"
+    }
+  },
+  "no_model_dispatch": true,
+  "open_limits": [
+    "Authentication success not yet observed; selected credential present only",
+    "Host active context size and backend hidden retries/cost unknown",
+    "Candidate author assessments do not establish actual-host Q01-Q12 or independent review",
+    "Original direct PIDs absent; generic external/descendant effects remain unknown"
+  ]
+}

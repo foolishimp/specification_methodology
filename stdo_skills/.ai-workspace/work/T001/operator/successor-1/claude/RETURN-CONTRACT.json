@@ -1,0 +1,43 @@
+{
+  "authority_source": {
+    "engine": "workspace-regular-file",
+    "object": null,
+    "path": "claude/TASK.md",
+    "root": "successor",
+    "selector": null,
+    "sha256": "45ba08e37aea20bbb12ff65904e4d60e4aa0a939876b9dc181120aac70167ac8"
+  },
+  "carrier": "a_c.fd-support.closed-return/1",
+  "id": "urn:stdo-skills:T001:claude:return:successor-1",
+  "output_slot": "final_stdout_object",
+  "proof": {
+    "predicate_ids": [],
+    "transition_sources": []
+  },
+  "required_evaluations": [
+    {
+      "id": "tenant-instruction-fitness",
+      "predicate": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "claude/PREDICATES.md",
+        "root": "successor",
+        "selector": null,
+        "sha256": "7753acef3a52d4e8ae15bf2c2d2ce8d0bbab80626d3c0f2edc8127cfac1c3e66"
+      }
+    },
+    {
+      "id": "tenant-package-integrity",
+      "predicate": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "claude/PREDICATES.md",
+        "root": "successor",
+        "selector": null,
+        "sha256": "7753acef3a52d4e8ae15bf2c2d2ce8d0bbab80626d3c0f2edc8127cfac1c3e66"
+      }
+    }
+  ],
+  "role": "Worker",
+  "schema": "a_c.fd-support.return-contract/1"
+}

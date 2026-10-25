@@ -1,0 +1,2135 @@
+{
+  "schema": "stdo_skills.qualification-census/1",
+  "tenant": "codex",
+  "lane": "release-deploy",
+  "original_workspace": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/workspace",
+  "original_control": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control",
+  "custody": "Exact observations copied; absolute runtime policies are not rebased or advertised as portable executable grants",
+  "native_process": {
+    "ended_ns": 1792899687467997000,
+    "failure": null,
+    "input_bytes": 256,
+    "input_forwarded_bytes": 256,
+    "output_available": true,
+    "pid": 93255,
+    "returncode": 0,
+    "schema": "a_c.fd-support.actor-cli-observation/1",
+    "started_ns": 1792899366878368000,
+    "stderr_bytes": 0,
+    "stderr_eof": true,
+    "stdout_bytes": 528718,
+    "stdout_eof": true,
+    "termination_requests": [],
+    "unknowns": [
+      "descendant/process-tree end and external side effects",
+      "host/model active-context size",
+      "backend retries or unreported usage",
+      "semantic outcome and owner disposition"
+    ]
+  },
+  "declared_settings": {
+    "actual_models": "Retain all raw vendor model identifiers, including helper/classifier events",
+    "cost": "unknown",
+    "effort_default": "max",
+    "fixture_case": "release-deploy",
+    "host_context_bytes": "unknown",
+    "host_scope": "cooperative exact territory; scoped mkdir/read-compute/validation; artifact content through work.write",
+    "model_default": "gpt-6-astra",
+    "model_override": false,
+    "resolved_backend": "unobserved until actual run",
+    "retry_policy": "no automatic actor retry",
+    "selected_host": "codex-cli 0.164.0"
+  },
+  "actual_model_observations": [],
+  "model_limit": "Absent native model observations stay unknown; configured aliases are not treated as resolved backend identities",
+  "usage_events": [
+    {
+      "line": 116,
+      "event": "turn.completed",
+      "reported_usage": {
+        "input_tokens": 1191306,
+        "cached_input_tokens": 1117440,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 13962,
+        "reasoning_output_tokens": 4134
+      },
+      "reported_cost_usd": null
+    }
+  ],
+  "usage_limit": "Exact native usage observations, no inferred monetary cost or hidden retry estimate",
+  "commands": [
+    {
+      "line": 5,
+      "id": "item_1",
+      "command": "/bin/zsh -lc 'cat .agents/skills/stdo-work/SKILL.md'",
+      "exit_code": 0
+    },
+    {
+      "line": 7,
+      "id": "item_2",
+      "command": "/bin/zsh -lc \"rg -n 'deployment|retained|stdo-work' /Users/jim/.codex/memories/MEMORY.md\"",
+      "exit_code": 0
+    },
+    {
+      "line": 9,
+      "id": "item_3",
+      "command": "/bin/zsh -lc \"pwd && rg --files -g 'AGENTS.md' -g 'TASK.md' -g 'TOOLING.md' -g 'fixture_product.json' -g 'REQUIREMENT.md' -g 'DESIGN.md' -g 'SKILL.md'\"",
+      "exit_code": 0
+    },
+    {
+      "line": 11,
+      "id": "item_4",
+      "command": "/bin/zsh -lc \"for reference_file in .agents/skills/stdo-work/references/basis.md .agents/skills/stdo-work/references/tools.md .agents/skills/stdo-work/references/release-install.md; do printf '\\\\n--- %s ---\\\\n' \\\"\"'$reference_file\"; cat \"$reference_file\"; done'",
+      "exit_code": 0
+    },
+    {
+      "line": 14,
+      "id": "item_5",
+      "command": "/bin/zsh -lc \"rg --files -uu -g '\"'!.git/**'\"'\"",
+      "exit_code": 0
+    },
+    {
+      "line": 15,
+      "id": "item_6",
+      "command": "/bin/zsh -lc \"for task_file in AGENTS.md fixture_product.json specification/REQUIREMENT.md design/DESIGN.md TASK.md TOOLING.md; do printf '\\\\n--- %s ---\\\\n' \\\"\"'$task_file\"; cat \"$task_file\"; done'",
+      "exit_code": 0
+    },
+    {
+      "line": 17,
+      "id": "item_7",
+      "command": "/bin/zsh -lc 'git status --short --branch'",
+      "exit_code": 128
+    },
+    {
+      "line": 20,
+      "id": "item_8",
+      "command": "/bin/zsh -lc 'cat retained/SOURCE.json retained/release/manifest.json retained/release/payload.txt specification/INTENT.md specification/PRODUCT.md .qualification/OWNER.json outputs/deployment.md'",
+      "exit_code": 0
+    },
+    {
+      "line": 21,
+      "id": "item_9",
+      "command": "/bin/zsh -lc 'cat /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json .agents/skills/stdo-work/source-routes.json'",
+      "exit_code": 0
+    },
+    {
+      "line": 23,
+      "id": "item_10",
+      "command": "/bin/zsh -lc 'stdo status --definition /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/workspace/fixture_product.json --verify'",
+      "exit_code": 0
+    },
+    {
+      "line": 28,
+      "id": "item_13",
+      "command": "/bin/zsh -lc \"rg -n '\"'^#{1,4} |deployment|install|retained|acceptance'\"' '/Users/jim/Library/Application Support/STDO/releases/v3.0.1-rc.1/standards/RELEASE.md' '/Users/jim/Library/Application Support/STDO/releases/v3.0.1-rc.1/standards/IDENTITY.md' '/Users/jim/Library/Application Support/STDO/releases/v3.0.1-rc.1/standards/frames/bootstrap.md'\"",
+      "exit_code": 0
+    },
+    {
+      "line": 30,
+      "id": "item_14",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-describe-work-write-cli-001\\\",\\\"operation\\\":\\\"tools.describe\\\",\\\"arguments\\\":{\\\"operation\\\":\\\"work.write\\\"}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 32,
+      "id": "item_15",
+      "command": "/bin/zsh -lc \"python3 -B - <<'PY'\nfrom pathlib import Path\nimport hashlib,json,stat\nroot=Path.cwd()\nfiles={}\nfor p in sorted(root.rglob('*')):\n    st=p.lstat()\n    rel=p.relative_to(root).as_posix()\n    if stat.S_ISLNK(st.st_mode):\n        raise SystemExit('Symlink not permitted: '+rel)\n    if stat.S_ISREG(st.st_mode):\n        data=p.read_bytes()\n        files[rel]={'sha256':hashlib.sha256(data).hexdigest(),'size':len(data),'mode':stat.S_IMODE(st.st_mode)}\n    elif not stat.S_ISDIR(st.st_mode):\n        raise SystemExit('Unexpected file type: '+rel)\nprint(json.dumps({'files':files},sort_keys=True))\nPY\"",
+      "exit_code": 0
+    },
+    {
+      "line": 34,
+      "id": "item_16",
+      "command": "/bin/zsh -lc \"rg -n '\"'^#{1,4} '\"' '/Users/jim/Library/Application Support/STDO/releases/v3.0.1-rc.1/standards/IDENTITY.md' '/Users/jim/Library/Application Support/STDO/releases/v3.0.1-rc.1/standards/frames/bootstrap.md'\"",
+      "exit_code": 0
+    },
+    {
+      "line": 36,
+      "id": "item_17",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-describe-source-read-001\\\",\\\"operation\\\":\\\"tools.describe\\\",\\\"arguments\\\":{\\\"operation\\\":\\\"source.read\\\"}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 38,
+      "id": "item_18",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-describe-workspace-observe-001\\\",\\\"operation\\\":\\\"tools.describe\\\",\\\"arguments\\\":{\\\"operation\\\":\\\"workspace.observe\\\"}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 40,
+      "id": "item_19",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-describe-evidence-read-001\\\",\\\"operation\\\":\\\"tools.describe\\\",\\\"arguments\\\":{\\\"operation\\\":\\\"evidence.read\\\"}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 42,
+      "id": "item_20",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-read-bootstrap-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"method\\\",\\\"path\\\":\\\"standards/frames/bootstrap.md\\\",\\\"object\\\":null,\\\"sha256\\\":\\\"cbf4a10e8d0b4ca2ab4a1f3ee28a85ffedc3298a0fba666949d9b091e82cc714\\\",\\\"selector\\\":{\\\"lines\\\":[1,99]}},\\\"encoding\\\":\\\"utf8\\\"}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 44,
+      "id": "item_21",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-read-release-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"method\\\",\\\"path\\\":\\\"standards/RELEASE.md\\\",\\\"object\\\":null,\\\"sha256\\\":\\\"1ec805a4acb60f7ce0d061cf4ba6656690500e27ae6756866eaafa34aad071e0\\\",\\\"selector\\\":{\\\"lines\\\":[267,351]}},\\\"encoding\\\":\\\"utf8\\\"}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 46,
+      "id": "item_22",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-read-identity-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"method\\\",\\\"path\\\":\\\"standards/IDENTITY.md\\\",\\\"object\\\":null,\\\"sha256\\\":\\\"2e7026aeec957ebb9b1aa0b01ae76b81b4236f02db93b040f158eadf31f5e08b\\\",\\\"selector\\\":{\\\"lines\\\":[97,166]}},\\\"encoding\\\":\\\"utf8\\\"}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 48,
+      "id": "item_23",
+      "command": "/bin/zsh -lc 'codex --version'",
+      "exit_code": 0
+    },
+    {
+      "line": 50,
+      "id": "item_24",
+      "command": "/bin/zsh -lc \"python3 -B - <<'PY'\nfrom pathlib import Path\nimport hashlib,json,stat\nroot=Path.cwd()\nsource=json.loads((root/'retained/SOURCE.json').read_bytes())\nrecords={}\nfor key in ['original_manifest','original_payload','prior_prepared']:\n    record=source[key]\n    p=Path(record['path'])\n    st=p.lstat()\n    assert stat.S_ISREG(st.st_mode),p\n    actual=hashlib.sha256(p.read_bytes()).hexdigest()\n    records[key]={'path':str(p),'recorded_sha256':record['sha256'],'actual_sha256':actual,'matches':actual==record['sha256'],'bytes':st.st_size}\ncontrol={}\nfor name in ['TASK.md','SELECTION.json','worker-policy.json','RETURN-CONTRACT.json']:\n    p=root.parent/'control'/name\n    if p.is_file():\n        control[name]={'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'size':p.stat().st_size}\nprint(json.dumps({'recorded_identities':records,'control':control},sort_keys=True))\nassert all(v['matches'] for v in records.values())\nPY\"",
+      "exit_code": 0
+    },
+    {
+      "line": 53,
+      "id": "item_26",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-acquire-01-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"fixture_product.json\\\",\\\"object\\\":null,\\\"sha256\\\":\\\"7a4b9eb49b26f190f0e829070e87565130e1e9a279be6eb5c76e399bf323173e\\\",\\\"selector\\\":null},\\\"encoding\\\":\\\"utf8\\\"}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 55,
+      "id": "item_27",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-acquire-02-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/REQUIREMENT.md\\\",\\\"object\\\":null,\\\"sha256\\\":\\\"27a0059a874367342962057444f66aeb84372613ef43988744a938064eadbf5d\\\",\\\"selector\\\":null},\\\"encoding\\\":\\\"utf8\\\"}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 57,
+      "id": "item_28",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-acquire-03-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"design/DESIGN.md\\\",\\\"object\\\":null,\\\"sha256\\\":\\\"105a9d16d580a97f1e9d6ba7ac219118022bbf299ecd5a87e2c0af541faa4687\\\",\\\"selector\\\":null},\\\"encoding\\\":\\\"utf8\\\"}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 59,
+      "id": "item_29",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-acquire-04-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"TASK.md\\\",\\\"object\\\":null,\\\"sha256\\\":\\\"25dfdd5bca9988f67ddc6e649d0b8bc8869b2092c7bf0682ecab14222cd11963\\\",\\\"selector\\\":null},\\\"encoding\\\":\\\"utf8\\\"}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 61,
+      "id": "item_30",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-acquire-05-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"TOOLING.md\\\",\\\"object\\\":null,\\\"sha256\\\":\\\"c214a6b54c9b831cb624d2a49a1ed56407ac04575e153ea867b9f97d35849d9d\\\",\\\"selector\\\":null},\\\"encoding\\\":\\\"utf8\\\"}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 63,
+      "id": "item_31",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-acquire-06-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".qualification/OWNER.json\\\",\\\"object\\\":null,\\\"sha256\\\":\\\"8e49cb278d4f71a8bd6074c0e5b92bc83882e9abd53530447d2f1c326515e11d\\\",\\\"selector\\\":null},\\\"encoding\\\":\\\"utf8\\\"}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 65,
+      "id": "item_32",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-acquire-07-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"retained/SOURCE.json\\\",\\\"object\\\":null,\\\"sha256\\\":\\\"07c04d61597e7d1415426b6228b9dec24d0c61c682536d8e0580c8f85f4aa434\\\",\\\"selector\\\":null},\\\"encoding\\\":\\\"utf8\\\"}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 67,
+      "id": "item_33",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-acquire-08-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"retained/release/payload.txt\\\",\\\"object\\\":null,\\\"sha256\\\":\\\"b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2\\\",\\\"selector\\\":null},\\\"encoding\\\":\\\"utf8\\\"}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 69,
+      "id": "item_34",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-acquire-09-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"retained/release/manifest.json\\\",\\\"object\\\":null,\\\"sha256\\\":\\\"ce71758abbf18193dfc3a2c588c228668e0b9065ed1b5e3cf96fb80a01acac35\\\",\\\"selector\\\":null},\\\"encoding\\\":\\\"utf8\\\"}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 71,
+      "id": "item_35",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-acquire-10-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"deploy-test/payload.txt\\\",\\\"object\\\":null,\\\"sha256\\\":\\\"a1959b8fe0e3dbef5bf912f3cff5e3f73f56cb3f2efacfbbc016b0f046f4b1ae\\\",\\\"selector\\\":null},\\\"encoding\\\":\\\"utf8\\\"}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 73,
+      "id": "item_36",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-acquire-11-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"deploy-test/manifest.json\\\",\\\"object\\\":null,\\\"sha256\\\":\\\"ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356\\\",\\\"selector\\\":null},\\\"encoding\\\":\\\"utf8\\\"}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 75,
+      "id": "item_37",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-acquire-12-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"outputs/deployment.md\\\",\\\"object\\\":null,\\\"sha256\\\":\\\"e4b998929134aea72cc864ae2597f31923ab688c82f2db0bc1120883eae36712\\\",\\\"selector\\\":null},\\\"encoding\\\":\\\"utf8\\\"}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 77,
+      "id": "item_38",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-acquire-13-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"control\\\",\\\"path\\\":\\\"TASK.md\\\",\\\"object\\\":null,\\\"sha256\\\":\\\"18aed14c626d2212b22edabd6a32020437616e353ed708b1bfdbdf5a5a03b56a\\\",\\\"selector\\\":null},\\\"encoding\\\":\\\"utf8\\\"}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 79,
+      "id": "item_39",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-acquire-14-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"control\\\",\\\"path\\\":\\\"SELECTION.json\\\",\\\"object\\\":null,\\\"sha256\\\":\\\"ef615df989c4336c1177a467169365fd7163cef2d761622c2aabb6c1932f3185\\\",\\\"selector\\\":null},\\\"encoding\\\":\\\"utf8\\\"}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 81,
+      "id": "item_40",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-acquire-15-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"control\\\",\\\"path\\\":\\\"RETURN-CONTRACT.json\\\",\\\"object\\\":null,\\\"sha256\\\":\\\"8a64983fad0a991a6789d0d8cdef4944243e2435dc611fca09f76da93f87198a\\\",\\\"selector\\\":null},\\\"encoding\\\":\\\"utf8\\\"}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 83,
+      "id": "item_41",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-observe-preservation-before-001\\\",\\\"operation\\\":\\\"workspace.observe\\\",\\\"arguments\\\":{\\\"scope\\\":[{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/SKILL.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/basis.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/delegation.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/qualification.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/recovery.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/release-install.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/tools.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/source-routes.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".qualification/OWNER.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"AGENTS.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"CLAUDE.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"TASK.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"TOOLING.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"deploy-test/unrelated.txt\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"design/DESIGN.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"fixture_product.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"retained/SOURCE.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"retained/release/manifest.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"retained/release/payload.txt\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/GOALS.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/INTENT.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/PRODUCT.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/REQUIREMENT.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"unrelated/sentinel.txt\\\",\\\"kind\\\":\\\"file\\\"}]}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 85,
+      "id": "item_42",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-read-preimage-evidence-001\\\",\\\"operation\\\":\\\"evidence.read\\\",\\\"arguments\\\":{\\\"artifact\\\":{\\\"id\\\":\\\"sha256:6c08729a9a40f7bf0b96d2e13a333c8793df5e19295f05e80f14efa2790c5ffb\\\",\\\"sha256\\\":\\\"6c08729a9a40f7bf0b96d2e13a333c8793df5e19295f05e80f14efa2790c5ffb\\\"}}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 87,
+      "id": "item_43",
+      "command": "/bin/zsh -lc \"python3 -B - <<'PY'\nfrom pathlib import Path\nimport json,stat\nroot=Path.cwd()\nchecked=set()\nfor target in [root/'deploy-test/payload.txt',root/'deploy-test/manifest.json',root/'outputs/deployment.md']:\n    assert target.is_relative_to(root)\n    for p in [target,*target.parents]:\n        st=p.lstat()\n        assert not stat.S_ISLNK(st.st_mode),p\n        if p==target:\n            assert stat.S_ISREG(st.st_mode),p\n        else:\n            assert stat.S_ISDIR(st.st_mode),p\n        checked.add(str(p))\nsource=json.loads((root/'retained/SOURCE.json').read_bytes())\nfor key,name in [('original_payload','payload.txt'),('original_manifest','manifest.json')]:\n    assert (root/'retained/release'/name).read_bytes()==Path(source[key]['path']).read_bytes()\nprint(json.dumps({'destination_ancestors_checked':len(checked),'symlinks':False,'destinations':'existing regular files','retained_matches_original_bytes':True}))\nPY\"",
+      "exit_code": 0
+    },
+    {
+      "line": 89,
+      "id": "item_44",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-observe-payload-parent-001\\\",\\\"operation\\\":\\\"workspace.observe\\\",\\\"arguments\\\":{\\\"scope\\\":[{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"deploy-test\\\",\\\"kind\\\":\\\"directory\\\"}]}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 91,
+      "id": "item_45",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-write-payload-001\\\",\\\"operation\\\":\\\"work.write\\\",\\\"arguments\\\":{\\\"grant_id\\\":\\\"urn:stdo-skills:qualification:codex:release-deploy:write\\\",\\\"target\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"object\\\":null,\\\"path\\\":\\\"deploy-test/payload.txt\\\",\\\"root\\\":\\\"product\\\",\\\"selector\\\":null,\\\"sha256\\\":\\\"a1959b8fe0e3dbef5bf912f3cff5e3f73f56cb3f2efacfbbc016b0f046f4b1ae\\\"},\\\"mode\\\":\\\"replace\\\",\\\"record\\\":{\\\"text\\\":\\\"Release fixture payload.\\\\n\\\",\\\"provenance\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"object\\\":null,\\\"path\\\":\\\".qualification/OWNER.json\\\",\\\"root\\\":\\\"product\\\",\\\"selector\\\":null,\\\"sha256\\\":\\\"8e49cb278d4f71a8bd6074c0e5b92bc83882e9abd53530447d2f1c326515e11d\\\"}},\\\"interpretation\\\":null,\\\"observations\\\":[{\\\"id\\\":\\\"sha256:3782724fe126199fabd0c99c71bfc032a35b9f8dbbf5228e87765a156440809b\\\",\\\"sha256\\\":\\\"3782724fe126199fabd0c99c71bfc032a35b9f8dbbf5228e87765a156440809b\\\"}]}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 93,
+      "id": "item_46",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-observe-manifest-parent-001\\\",\\\"operation\\\":\\\"workspace.observe\\\",\\\"arguments\\\":{\\\"scope\\\":[{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"deploy-test\\\",\\\"kind\\\":\\\"directory\\\"}]}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 95,
+      "id": "item_47",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-write-manifest-001\\\",\\\"operation\\\":\\\"work.write\\\",\\\"arguments\\\":{\\\"grant_id\\\":\\\"urn:stdo-skills:qualification:codex:release-deploy:write\\\",\\\"target\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"object\\\":null,\\\"path\\\":\\\"deploy-test/manifest.json\\\",\\\"root\\\":\\\"product\\\",\\\"selector\\\":null,\\\"sha256\\\":\\\"ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356\\\"},\\\"mode\\\":\\\"replace\\\",\\\"record\\\":{\\\"text\\\":\\\"{\\\\n  \\\\\\\"schema\\\\\\\": \\\\\\\"fixture.release/1\\\\\\\",\\\\n  \\\\\\\"release_id\\\\\\\": \\\\\\\"demo/v1.0.0-rc.1\\\\\\\",\\\\n  \\\\\\\"payload\\\\\\\": {\\\\n    \\\\\\\"path\\\\\\\": \\\\\\\"payload.txt\\\\\\\",\\\\n    \\\\\\\"sha256\\\\\\\": \\\\\\\"b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2\\\\\\\"\\\\n  }\\\\n}\\\\n\\\",\\\"provenance\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"object\\\":null,\\\"path\\\":\\\".qualification/OWNER.json\\\",\\\"root\\\":\\\"product\\\",\\\"selector\\\":null,\\\"sha256\\\":\\\"8e49cb278d4f71a8bd6074c0e5b92bc83882e9abd53530447d2f1c326515e11d\\\"}},\\\"interpretation\\\":null,\\\"observations\\\":[{\\\"id\\\":\\\"sha256:b1dcf073a6276935c988c672712896e757d98886621351fd53c3d68db4630f1f\\\",\\\"sha256\\\":\\\"b1dcf073a6276935c988c672712896e757d98886621351fd53c3d68db4630f1f\\\"}]}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 97,
+      "id": "item_48",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-read-installed-payload-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"deploy-test/payload.txt\\\",\\\"object\\\":null,\\\"sha256\\\":\\\"b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2\\\",\\\"selector\\\":null},\\\"encoding\\\":\\\"utf8\\\"}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 99,
+      "id": "item_49",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-read-installed-manifest-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"deploy-test/manifest.json\\\",\\\"object\\\":null,\\\"sha256\\\":\\\"ce71758abbf18193dfc3a2c588c228668e0b9065ed1b5e3cf96fb80a01acac35\\\",\\\"selector\\\":null},\\\"encoding\\\":\\\"utf8\\\"}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 101,
+      "id": "item_50",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-observe-preservation-after-install-001\\\",\\\"operation\\\":\\\"workspace.observe\\\",\\\"arguments\\\":{\\\"scope\\\":[{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/SKILL.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/basis.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/delegation.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/qualification.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/recovery.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/release-install.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/tools.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/source-routes.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".qualification/OWNER.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"AGENTS.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"CLAUDE.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"TASK.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"TOOLING.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"deploy-test/unrelated.txt\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"design/DESIGN.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"fixture_product.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"retained/SOURCE.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"retained/release/manifest.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"retained/release/payload.txt\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/GOALS.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/INTENT.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/PRODUCT.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/REQUIREMENT.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"unrelated/sentinel.txt\\\",\\\"kind\\\":\\\"file\\\"}],\\\"previous\\\":{\\\"id\\\":\\\"sha256:5462e9f0a680b86d9f4b1dea8afae9a60cedb889e5ad1710805d6d931d22ad04\\\",\\\"sha256\\\":\\\"5462e9f0a680b86d9f4b1dea8afae9a60cedb889e5ad1710805d6d931d22ad04\\\"}}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 103,
+      "id": "item_51",
+      "command": "/bin/zsh -lc \"python3 -B - <<'PY'\nfrom pathlib import Path\nimport hashlib,json,stat\nbaseline=json.loads(\\\"{\\\\\\\".agents/skills/stdo-work/SKILL.md\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"ba6f7ab1e6de875e2f019b049f7817e771474f1b511a74fe2392a55a37078ee8\\\\\\\",\\\\\\\"size\\\\\\\":3116},\\\\\\\".agents/skills/stdo-work/references/basis.md\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"7b409d4895e7be3291e4e41c32e497ae045e9fb4b62f01b9622b10888d449cda\\\\\\\",\\\\\\\"size\\\\\\\":2694},\\\\\\\".agents/skills/stdo-work/references/delegation.md\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"0bb621b4d6edb17f2100878a567596f85a52b517edfafbb2ceba7119dce8bfde\\\\\\\",\\\\\\\"size\\\\\\\":2969},\\\\\\\".agents/skills/stdo-work/references/qualification.md\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"dda296ed053f3e8ed5ab4cdc7c7b9f162754832fc89ded9280044d96f9dc795c\\\\\\\",\\\\\\\"size\\\\\\\":3001},\\\\\\\".agents/skills/stdo-work/references/recovery.md\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"d7f7f118eea492bb64456a56c4cb4987e6e23acd8b3c0143ba87cf5ec9a92c80\\\\\\\",\\\\\\\"size\\\\\\\":3010},\\\\\\\".agents/skills/stdo-work/references/release-install.md\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"ec7cb5a407f6690936d0bf79ab5fc8796c2cfca4c34772f61ceff4b68f337cfb\\\\\\\",\\\\\\\"size\\\\\\\":2422},\\\\\\\".agents/skills/stdo-work/references/tools.md\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"8bb49c0dfe0eb87fbfbe5063c4a43e15f074e25fdd4ff90ffdec24ef14e75c8b\\\\\\\",\\\\\\\"size\\\\\\\":4116},\\\\\\\".agents/skills/stdo-work/source-routes.json\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"09972e4af512645c43207aa3edd5114e1e81c24ef344c76a6af2e99852920403\\\\\\\",\\\\\\\"size\\\\\\\":3501},\\\\\\\".qualification/OWNER.json\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"8e49cb278d4f71a8bd6074c0e5b92bc83882e9abd53530447d2f1c326515e11d\\\\\\\",\\\\\\\"size\\\\\\\":1601},\\\\\\\"AGENTS.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"7f2f29c47cba5b9695b6d138201ea7b8c8570d0783b54c0a97164e2ebabec9c2\\\\\\\",\\\\\\\"size\\\\\\\":197},\\\\\\\"CLAUDE.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"7f2f29c47cba5b9695b6d138201ea7b8c8570d0783b54c0a97164e2ebabec9c2\\\\\\\",\\\\\\\"size\\\\\\\":197},\\\\\\\"TASK.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"25dfdd5bca9988f67ddc6e649d0b8bc8869b2092c7bf0682ecab14222cd11963\\\\\\\",\\\\\\\"size\\\\\\\":520},\\\\\\\"TOOLING.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"c214a6b54c9b831cb624d2a49a1ed56407ac04575e153ea867b9f97d35849d9d\\\\\\\",\\\\\\\"size\\\\\\\":1043},\\\\\\\"deploy-test/manifest.json\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356\\\\\\\",\\\\\\\"size\\\\\\\":3},\\\\\\\"deploy-test/payload.txt\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"a1959b8fe0e3dbef5bf912f3cff5e3f73f56cb3f2efacfbbc016b0f046f4b1ae\\\\\\\",\\\\\\\"size\\\\\\\":42},\\\\\\\"deploy-test/unrelated.txt\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"77cd8d24e225d961d85580f1e0cd11da86b63c0c691d109d6974178a0b6bac94\\\\\\\",\\\\\\\"size\\\\\\\":35},\\\\\\\"design/DESIGN.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"105a9d16d580a97f1e9d6ba7ac219118022bbf299ecd5a87e2c0af541faa4687\\\\\\\",\\\\\\\"size\\\\\\\":414},\\\\\\\"fixture_product.json\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"7a4b9eb49b26f190f0e829070e87565130e1e9a279be6eb5c76e399bf323173e\\\\\\\",\\\\\\\"size\\\\\\\":2960},\\\\\\\"outputs/deployment.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"e4b998929134aea72cc864ae2597f31923ab688c82f2db0bc1120883eae36712\\\\\\\",\\\\\\\"size\\\\\\\":28},\\\\\\\"retained/SOURCE.json\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"07c04d61597e7d1415426b6228b9dec24d0c61c682536d8e0580c8f85f4aa434\\\\\\\",\\\\\\\"size\\\\\\\":845},\\\\\\\"retained/release/manifest.json\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"ce71758abbf18193dfc3a2c588c228668e0b9065ed1b5e3cf96fb80a01acac35\\\\\\\",\\\\\\\"size\\\\\\\":200},\\\\\\\"retained/release/payload.txt\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2\\\\\\\",\\\\\\\"size\\\\\\\":25},\\\\\\\"specification/GOALS.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"5fb2442f5c0db7b5e0060ebe1f86013332dc32f5d4b35872ca67ce57aa680628\\\\\\\",\\\\\\\"size\\\\\\\":172},\\\\\\\"specification/INTENT.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"19c552ef03a9a4acadef9c2522d8fb931a98f534fe9b56f19780edab3f838c71\\\\\\\",\\\\\\\"size\\\\\\\":88},\\\\\\\"specification/PRODUCT.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"ba28450c503070a65c08a1ba28ca082d019ce0232522b2ac6251d865e219f47a\\\\\\\",\\\\\\\"size\\\\\\\":296},\\\\\\\"specification/REQUIREMENT.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"27a0059a874367342962057444f66aeb84372613ef43988744a938064eadbf5d\\\\\\\",\\\\\\\"size\\\\\\\":402},\\\\\\\"unrelated/sentinel.txt\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3\\\\\\\",\\\\\\\"size\\\\\\\":33}}\\\")\nroot=Path.cwd()\ncurrent={}\nfor p in sorted(root.rglob('*')):\n    st=p.lstat()\n    assert not stat.S_ISLNK(st.st_mode),p\n    if stat.S_ISREG(st.st_mode):\n        data=p.read_bytes()\n        current[p.relative_to(root).as_posix()]={'sha256':hashlib.sha256(data).hexdigest(),'size':len(data),'mode':stat.S_IMODE(st.st_mode)}\n    else:\n        assert stat.S_ISDIR(st.st_mode),p\nassert set(current)==set(baseline),'File inventory changed'\nchanged=sorted(k for k in baseline if baseline[k]\"'!=current[k])\nassert changed==['\"'deploy-test/manifest.json','deploy-test/payload.txt'],changed\nsource=json.loads((root/'retained/SOURCE.json').read_bytes())\nmanifest=json.loads((root/'deploy-test/manifest.json').read_bytes())\nassert manifest['schema']=='fixture.release/1'\nassert manifest['release_id']==source['release_id']=='demo/v1.0.0-rc.1'\nassert manifest['payload']['path']=='payload.txt'\nchecks={}\nfor name,key in [('payload.txt','original_payload'),('manifest.json','original_manifest')]:\n    installed=(root/'deploy-test'/name).read_bytes()\n    retained=(root/'retained/release'/name).read_bytes()\n    original=Path(source[key]['path']).read_bytes()\n    sha=hashlib.sha256(installed).hexdigest()\n    assert installed==retained==original\n    assert sha==source[key]['sha256']\n    if name=='payload.txt':\n        assert sha==manifest['payload']['sha256']\n    checks[name]={'bytes':len(installed),'sha256':sha,'equal_retained_and_original':True}\nfor key in ['original_payload','original_manifest','prior_prepared']:\n    assert hashlib.sha256(Path(source[key]['path']).read_bytes()).hexdigest()==source[key]['sha256']\nprint(json.dumps({'release_id':manifest['release_id'],'checks':checks,'changed_files':changed,'unchanged_files':len(current)-len(changed),'inventory_preserved':True,'all_source_record_identities_valid':True},sort_keys=True))\nPY\"",
+      "exit_code": 0
+    },
+    {
+      "line": 106,
+      "id": "item_53",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-observe-report-parent-001\\\",\\\"operation\\\":\\\"workspace.observe\\\",\\\"arguments\\\":{\\\"scope\\\":[{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"outputs\\\",\\\"kind\\\":\\\"directory\\\"}]}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 108,
+      "id": "item_54",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-write-report-001\\\",\\\"operation\\\":\\\"work.write\\\",\\\"arguments\\\":{\\\"grant_id\\\":\\\"urn:stdo-skills:qualification:codex:release-deploy:write\\\",\\\"target\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"object\\\":null,\\\"path\\\":\\\"outputs/deployment.md\\\",\\\"root\\\":\\\"product\\\",\\\"selector\\\":null,\\\"sha256\\\":\\\"e4b998929134aea72cc864ae2597f31923ab688c82f2db0bc1120883eae36712\\\"},\\\"mode\\\":\\\"replace\\\",\\\"record\\\":{\\\"text\\\":\\\"The exact selected retained release \"'`demo/v1.0.0-rc.1` is installed in `deploy-test`. Author verification passed at 2026-10-25T03:39:25.858Z: the installed payload and manifest equal both `retained/release` and their recorded original preparation files byte for byte. The release identity was preserved.'\"\\\\n\\\\nThe governing Product is \"'`urn:stdo:product-definition:qualification-release-deployment`. This execution follows R1 and D1 under the bounded local deployment authorized in `TASK.md`, using grant `urn:stdo-skills:qualification:codex:release-deploy:write` as principal `host`. The authorized files are `deploy-test/payload.txt`, `deploy-test/manifest.json`, and this report.'\"\\\\n\\\\n| Governing or retained source | SHA-256 |\\\\n| --- | --- |\\\\n| \"'`fixture_product.json` | `7a4b9eb49b26f190f0e829070e87565130e1e9a279be6eb5c76e399bf323173e` |'\"\\\\n| \"'`TASK.md` | `25dfdd5bca9988f67ddc6e649d0b8bc8869b2092c7bf0682ecab14222cd11963` |'\"\\\\n| \"'`specification/REQUIREMENT.md` | `27a0059a874367342962057444f66aeb84372613ef43988744a938064eadbf5d` |'\"\\\\n| \"'`design/DESIGN.md` | `105a9d16d580a97f1e9d6ba7ac219118022bbf299ecd5a87e2c0af541faa4687` |'\"\\\\n| \"'`.qualification/OWNER.json` | `8e49cb278d4f71a8bd6074c0e5b92bc83882e9abd53530447d2f1c326515e11d` |'\"\\\\n| \"'`retained/SOURCE.json` | `07c04d61597e7d1415426b6228b9dec24d0c61c682536d8e0580c8f85f4aa434` |'\"\\\\n\\\\n\"'`stdo status --definition <workspace>/fixture_product.json --verify` returned `installed: true`, `valid: true`, and no failures. The exact method is `stdo://releases/v3.0.1-rc.1/`, installed at `/Users/jim/Library/Application Support/STDO/releases/v3.0.1-rc.1`, with manifest SHA-256 `60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8`. The eight installed STDO skill files exactly match the selection inventory, with no extra members.'\"\\\\n\\\\nThe deciding method sources were acquired through native \"'`source.read`: `RELEASE.md` lines 267\u2013351, member SHA-256 `1ec805a4acb60f7ce0d061cf4ba6656690500e27ae6756866eaafa34aad071e0`, and `IDENTITY.md` lines 97\u2013166, member SHA-256 `2e7026aeec957ebb9b1aa0b01ae76b81b4236f02db93b040f158eadf31f5e08b`.'\"\\\\n\\\\nThe native MCP discovery attempt returned \u201cMCP tool call requires approval, but approval policy is never.\u201d The explicitly authorized CLI in \"'`TOOLING.md` was used successfully for native discovery, acquisition, observations, Writer effects and readback. Its entrypoint is `/Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py`, invoked with the pinned Python 3.13.7 path. The policy SHA-256 is `28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463`; the native method profile is `urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1`, SHA-256 `a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7`. The tool'\"'s separately reported legacy builder identity is \"'`stdo://releases/v2.5.1-rc.2/`; it is not the selected method. The observed host version is `codex-cli 0.164.0`; resolved model and effort were not independently observed.'\"\\\\n\\\\n| Installed member | Bytes | SHA-256 | Verification |\\\\n| --- | ---: | --- | --- |\\\\n| \"'`deploy-test/payload.txt` | 25 | `b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2` | Exact retained/original bytes; matches manifest payload digest |'\"\\\\n| \"'`deploy-test/manifest.json` | 200 | `ce71758abbf18193dfc3a2c588c228668e0b9065ed1b5e3cf96fb80a01acac35` | Exact retained/original bytes; schema `fixture.release/1`; release_id `demo/v1.0.0-rc.1`; payload path `payload.txt` |'\"\\\\n\\\\nAll three identities recorded by \"'`retained/SOURCE.json` were checked against their actual files before and after installation:'\"\\\\n\\\\n- Original payload: \"'`/private/tmp/stdo-skills-release-2ahz8bo2/codex/workspace/outputs/release/payload.txt`, SHA-256 `b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2`.'\"\\\\n- Original manifest: \"'`/private/tmp/stdo-skills-release-2ahz8bo2/codex/workspace/outputs/release/manifest.json`, SHA-256 `ce71758abbf18193dfc3a2c588c228668e0b9065ed1b5e3cf96fb80a01acac35`.'\"\\\\n- Prior preparation record: \"'`/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/qualification/prepared/codex-release-prepare.json`, SHA-256 `44b3036fb69b3489ee68e85c1429a40d6299fda5ca1dbeec98e9df4be07c9c47`. Only its byte identity was verified; this is not a new assessment of that preparation.'\"\\\\n\\\\nThe current preimages were acquired separately from stable governing inputs and retained in native OperationEvidence. Their exact previous text was \"'`'\"\\\\\\\"PREEXISTING: authorized exact replacement\\\\\\\\n\\\\\\\"\"'`, `'\"\\\\\\\"{}\\\\\\\\n\\\\\\\"\"'`, and `'\"\\\\\\\"# Pending deployment report\\\\\\\\n\\\\\\\"\"'`, respectively.'\"\\\\n\\\\n| Target preimage | Bytes | SHA-256 | Acquisition OperationEvidence |\\\\n| --- | ---: | --- | --- |\\\\n| \"'`deploy-test/payload.txt` | 42 | `a1959b8fe0e3dbef5bf912f3cff5e3f73f56cb3f2efacfbbc016b0f046f4b1ae` | `sha256:6c08729a9a40f7bf0b96d2e13a333c8793df5e19295f05e80f14efa2790c5ffb` |'\"\\\\n| \"'`deploy-test/manifest.json` | 3 | `ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356` | `sha256:3e200955bb7fe18121a004cc505149e1e4a91cbef542893c520a16657147e365` |'\"\\\\n| \"'`outputs/deployment.md` | 28 | `e4b998929134aea72cc864ae2597f31923ab688c82f2db0bc1120883eae36712` | `sha256:5db2573c299cd5453a5dd619ef8307853eae4917c280eac5e1bfb6cf5aad33c7` |'\"\\\\n\\\\nDestination paths and all ancestors were checked: the targets were existing regular files, no symlinks or path escape were found, and no directory creation was needed. Each installation write used a fresh, separate observation of \"'`deploy-test` immediately before native `work.write`. Each response returned `status: ok`, no refusal, effect `completed`, `end_established: true`, and the expected postimage. Each effect was scoped to one atomic target-file publication; the two-file deployment is not claimed to be one atomic transaction.'\"\\\\n\\\\n| Installed target | Parent observation artifact | Writer result artifact | Writer OperationEvidence | Installed source.read OperationEvidence |\\\\n| --- | --- | --- | --- | --- |\\\\n| \"'`deploy-test/payload.txt` | `sha256:3782724fe126199fabd0c99c71bfc032a35b9f8dbbf5228e87765a156440809b` | `sha256:83a37cd877d83532d1432e5215f6322fff87abe441cdb9500c1f989aae97c252` | `sha256:59438cfe408f7b208493d6ae929e73c2b51bbb3248c634598e7d162aa32b53c1` | `sha256:ac8fea66686551ee8b44c1d01cddd6b42300213fa68c16c2084f768a128cfab6` |'\"\\\\n| \"'`deploy-test/manifest.json` | `sha256:b1dcf073a6276935c988c672712896e757d98886621351fd53c3d68db4630f1f` | `sha256:cefafa44c626449b4fa5eced76d65ca67cb8dfbabeeb8983ffd4a1089505bff5` | `sha256:221f25421976c64b7cc2060ebdceeaa559cd3d571a29a95c02fc338ad2cb4660` | `sha256:687bf400471b1e70eccfcebaff9cbf7e6c33fb610b300f7ff4257c0e9ba7d910` |'\"\\\\n\\\\n| Retained acquisition | OperationEvidence |\\\\n| --- | --- |\\\\n| \"'`retained/SOURCE.json` | `sha256:5f3fc02691985e7fb71e46cddfb59d49a836c5f3284a063f9af3841ee9dfb58a` |'\"\\\\n| \"'`retained/release/payload.txt` | `sha256:764f8225bc45f71d09e59f82530a86fac6d18032722710061f8da86763caebca` |'\"\\\\n| \"'`retained/release/manifest.json` | `sha256:61f2fe977216894f55fc1688a8055a96432a9d886c2bcede67fcfbc8b578e74f` |'\"\\\\n\\\\nNative preservation observations cover all 24 files outside the three authorized targets. The before artifact is \"'`sha256:5462e9f0a680b86d9f4b1dea8afae9a60cedb889e5ad1710805d6d931d22ad04`; the after-install artifact is `sha256:f359f3e11e8dde4a9da85d512d9ca81e49eb045c6fa983b49f6a9a86bc8faede`, with `diff: []` and `gaps: []`. Its OperationEvidence is `sha256:9f5415acf4ec46366fee2175329565154ea102e5af944a9b7b4e1e0123189056`. A separate host read/compute scan confirmed the same 27-file inventory and only the two deployment-file changes before this report was written; all 25 other files were unchanged at that point, including this report'\"'s prior placeholder.\\\\n\\\\nIn particular, \"'`deploy-test/unrelated.txt` remains SHA-256 `77cd8d24e225d961d85580f1e0cd11da86b63c0c691d109d6974178a0b6bac94`, and `unrelated/sentinel.txt` remains SHA-256 `56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3`. The retained candidate, specification, design, Product definition, installed skill, and configuration remain unchanged.'\"\\\\n\\\\nThis report is submitted separately through native \"'`work.write` request `deploy-write-report-001`, using its recorded preimage and a fresh observation of `outputs`. Its actual response and subsequent final verification are retained outside the report, avoiding a circular report hash. Native artifacts and complete OperationEvidence are retained under `../control/evidence` relative to the workspace and can be acquired by `evidence.read`; each `sha256:` identifier above carries the same digest in the ArtifactRef'\"'s \"'`sha256` field.'\"\\\\n\\\\nThe established result is local installation availability and author verification of exact bytes, manifest linkage and preservation. Independent review, owner acceptance and remote publication are not established by these checks. No release was renamed, no additional final cut was created, and no Git mutation, remote publication, global configuration change, new actor or further stage was performed. The initial read-only Git status probe reported that this fixture is not a Git repository. No native \"'`results.conjoin` operator was used. There are no unresolved local deployment failures; the checks become stale if the installed files, retained sources, governing inputs or bound policy change.'\"\\\\n\\\",\\\"provenance\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"object\\\":null,\\\"path\\\":\\\".qualification/OWNER.json\\\",\\\"root\\\":\\\"product\\\",\\\"selector\\\":null,\\\"sha256\\\":\\\"8e49cb278d4f71a8bd6074c0e5b92bc83882e9abd53530447d2f1c326515e11d\\\"}},\\\"interpretation\\\":null,\\\"observations\\\":[{\\\"id\\\":\\\"sha256:c43a7f864a115ac52321f0e7e89aa8f666994645326359c2c81c121c0bca4d9b\\\",\\\"sha256\\\":\\\"c43a7f864a115ac52321f0e7e89aa8f666994645326359c2c81c121c0bca4d9b\\\"}]}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 110,
+      "id": "item_55",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-read-installed-report-001\\\",\\\"operation\\\":\\\"source.read\\\",\\\"arguments\\\":{\\\"source\\\":{\\\"engine\\\":\\\"workspace-regular-file\\\",\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"outputs/deployment.md\\\",\\\"object\\\":null,\\\"sha256\\\":\\\"fdf3245b56401007aaf7beb98fd9d84aa4d8d9a3b86f5d2f331e50540ba678d6\\\",\\\"selector\\\":null},\\\"encoding\\\":\\\"utf8\\\"}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 112,
+      "id": "item_56",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-observe-preservation-final-001\\\",\\\"operation\\\":\\\"workspace.observe\\\",\\\"arguments\\\":{\\\"scope\\\":[{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/SKILL.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/basis.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/delegation.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/qualification.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/recovery.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/release-install.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/tools.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/source-routes.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".qualification/OWNER.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"AGENTS.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"CLAUDE.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"TASK.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"TOOLING.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"deploy-test/unrelated.txt\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"design/DESIGN.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"fixture_product.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"retained/SOURCE.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"retained/release/manifest.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"retained/release/payload.txt\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/GOALS.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/INTENT.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/PRODUCT.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/REQUIREMENT.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"unrelated/sentinel.txt\\\",\\\"kind\\\":\\\"file\\\"}],\\\"previous\\\":{\\\"id\\\":\\\"sha256:5462e9f0a680b86d9f4b1dea8afae9a60cedb889e5ad1710805d6d931d22ad04\\\",\\\"sha256\\\":\\\"5462e9f0a680b86d9f4b1dea8afae9a60cedb889e5ad1710805d6d931d22ad04\\\"}}}\nSTDO_REQUEST\"",
+      "exit_code": 0
+    },
+    {
+      "line": 114,
+      "id": "item_57",
+      "command": "/bin/zsh -lc \"python3 -B - <<'PY'\nfrom pathlib import Path\nimport hashlib,json,stat\nbaseline=json.loads(\\\"{\\\\\\\".agents/skills/stdo-work/SKILL.md\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"ba6f7ab1e6de875e2f019b049f7817e771474f1b511a74fe2392a55a37078ee8\\\\\\\",\\\\\\\"size\\\\\\\":3116},\\\\\\\".agents/skills/stdo-work/references/basis.md\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"7b409d4895e7be3291e4e41c32e497ae045e9fb4b62f01b9622b10888d449cda\\\\\\\",\\\\\\\"size\\\\\\\":2694},\\\\\\\".agents/skills/stdo-work/references/delegation.md\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"0bb621b4d6edb17f2100878a567596f85a52b517edfafbb2ceba7119dce8bfde\\\\\\\",\\\\\\\"size\\\\\\\":2969},\\\\\\\".agents/skills/stdo-work/references/qualification.md\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"dda296ed053f3e8ed5ab4cdc7c7b9f162754832fc89ded9280044d96f9dc795c\\\\\\\",\\\\\\\"size\\\\\\\":3001},\\\\\\\".agents/skills/stdo-work/references/recovery.md\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"d7f7f118eea492bb64456a56c4cb4987e6e23acd8b3c0143ba87cf5ec9a92c80\\\\\\\",\\\\\\\"size\\\\\\\":3010},\\\\\\\".agents/skills/stdo-work/references/release-install.md\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"ec7cb5a407f6690936d0bf79ab5fc8796c2cfca4c34772f61ceff4b68f337cfb\\\\\\\",\\\\\\\"size\\\\\\\":2422},\\\\\\\".agents/skills/stdo-work/references/tools.md\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"8bb49c0dfe0eb87fbfbe5063c4a43e15f074e25fdd4ff90ffdec24ef14e75c8b\\\\\\\",\\\\\\\"size\\\\\\\":4116},\\\\\\\".agents/skills/stdo-work/source-routes.json\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"09972e4af512645c43207aa3edd5114e1e81c24ef344c76a6af2e99852920403\\\\\\\",\\\\\\\"size\\\\\\\":3501},\\\\\\\".qualification/OWNER.json\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"8e49cb278d4f71a8bd6074c0e5b92bc83882e9abd53530447d2f1c326515e11d\\\\\\\",\\\\\\\"size\\\\\\\":1601},\\\\\\\"AGENTS.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"7f2f29c47cba5b9695b6d138201ea7b8c8570d0783b54c0a97164e2ebabec9c2\\\\\\\",\\\\\\\"size\\\\\\\":197},\\\\\\\"CLAUDE.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"7f2f29c47cba5b9695b6d138201ea7b8c8570d0783b54c0a97164e2ebabec9c2\\\\\\\",\\\\\\\"size\\\\\\\":197},\\\\\\\"TASK.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"25dfdd5bca9988f67ddc6e649d0b8bc8869b2092c7bf0682ecab14222cd11963\\\\\\\",\\\\\\\"size\\\\\\\":520},\\\\\\\"TOOLING.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"c214a6b54c9b831cb624d2a49a1ed56407ac04575e153ea867b9f97d35849d9d\\\\\\\",\\\\\\\"size\\\\\\\":1043},\\\\\\\"deploy-test/manifest.json\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356\\\\\\\",\\\\\\\"size\\\\\\\":3},\\\\\\\"deploy-test/payload.txt\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"a1959b8fe0e3dbef5bf912f3cff5e3f73f56cb3f2efacfbbc016b0f046f4b1ae\\\\\\\",\\\\\\\"size\\\\\\\":42},\\\\\\\"deploy-test/unrelated.txt\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"77cd8d24e225d961d85580f1e0cd11da86b63c0c691d109d6974178a0b6bac94\\\\\\\",\\\\\\\"size\\\\\\\":35},\\\\\\\"design/DESIGN.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"105a9d16d580a97f1e9d6ba7ac219118022bbf299ecd5a87e2c0af541faa4687\\\\\\\",\\\\\\\"size\\\\\\\":414},\\\\\\\"fixture_product.json\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"7a4b9eb49b26f190f0e829070e87565130e1e9a279be6eb5c76e399bf323173e\\\\\\\",\\\\\\\"size\\\\\\\":2960},\\\\\\\"outputs/deployment.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"e4b998929134aea72cc864ae2597f31923ab688c82f2db0bc1120883eae36712\\\\\\\",\\\\\\\"size\\\\\\\":28},\\\\\\\"retained/SOURCE.json\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"07c04d61597e7d1415426b6228b9dec24d0c61c682536d8e0580c8f85f4aa434\\\\\\\",\\\\\\\"size\\\\\\\":845},\\\\\\\"retained/release/manifest.json\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"ce71758abbf18193dfc3a2c588c228668e0b9065ed1b5e3cf96fb80a01acac35\\\\\\\",\\\\\\\"size\\\\\\\":200},\\\\\\\"retained/release/payload.txt\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2\\\\\\\",\\\\\\\"size\\\\\\\":25},\\\\\\\"specification/GOALS.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"5fb2442f5c0db7b5e0060ebe1f86013332dc32f5d4b35872ca67ce57aa680628\\\\\\\",\\\\\\\"size\\\\\\\":172},\\\\\\\"specification/INTENT.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"19c552ef03a9a4acadef9c2522d8fb931a98f534fe9b56f19780edab3f838c71\\\\\\\",\\\\\\\"size\\\\\\\":88},\\\\\\\"specification/PRODUCT.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"ba28450c503070a65c08a1ba28ca082d019ce0232522b2ac6251d865e219f47a\\\\\\\",\\\\\\\"size\\\\\\\":296},\\\\\\\"specification/REQUIREMENT.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"27a0059a874367342962057444f66aeb84372613ef43988744a938064eadbf5d\\\\\\\",\\\\\\\"size\\\\\\\":402},\\\\\\\"unrelated/sentinel.txt\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3\\\\\\\",\\\\\\\"size\\\\\\\":33}}\\\")\nroot=Path.cwd()\ncurrent={}\nfor p in sorted(root.rglob('*')):\n    st=p.lstat()\n    assert not stat.S_ISLNK(st.st_mode),p\n    if stat.S_ISREG(st.st_mode):\n        data=p.read_bytes()\n        current[p.relative_to(root).as_posix()]={'sha256':hashlib.sha256(data).hexdigest(),'size':len(data),'mode':stat.S_IMODE(st.st_mode)}\n    else:\n        assert stat.S_ISDIR(st.st_mode),p\nassert set(current)==set(baseline),'File inventory changed'\nchanged=sorted(k for k in baseline if baseline[k]\"'!=current[k])\nassert changed==['\"'deploy-test/manifest.json','deploy-test/payload.txt','outputs/deployment.md'],changed\nassert all(current[k]['mode']==baseline[k]['mode'] for k in baseline)\nassert current['outputs/deployment.md']['sha256']==\\\"fdf3245b56401007aaf7beb98fd9d84aa4d8d9a3b86f5d2f331e50540ba678d6\\\"\nsource=json.loads((root/'retained/SOURCE.json').read_bytes())\nmanifest=json.loads((root/'deploy-test/manifest.json').read_bytes())\nassert manifest['schema']=='fixture.release/1'\nassert manifest['release_id']==source['release_id']=='demo/v1.0.0-rc.1'\nassert manifest['payload']['path']=='payload.txt'\nfor name,key in [('payload.txt','original_payload'),('manifest.json','original_manifest')]:\n    installed=(root/'deploy-test'/name).read_bytes()\n    assert installed==(root/'retained/release'/name).read_bytes()==Path(source[key]['path']).read_bytes()\n    assert hashlib.sha256(installed).hexdigest()==source[key]['sha256']\nassert current['deploy-test/payload.txt']['sha256']==manifest['payload']['sha256']\nfor key in ['original_payload','original_manifest','prior_prepared']:\n    assert hashlib.sha256(Path(source[key]['path']).read_bytes()).hexdigest()==source[key]['sha256']\nprint(json.dumps({'result':'PASS','release_id':manifest['release_id'],'changed_files':changed,'unchanged_files':len(current)-len(changed),'inventory_preserved':True,'all_file_modes_preserved':True,'installed_bytes_match_retained_and_original':True,'report':current['outputs/deployment.md']},sort_keys=True))\nPY\"",
+      "exit_code": 0
+    }
+  ],
+  "completed_commands": 53,
+  "tool_failures": [
+    {
+      "line": 25,
+      "item": {
+        "id": "item_11",
+        "type": "mcp_tool_call",
+        "server": "stdo_ac",
+        "tool": "tools.describe",
+        "arguments": {
+          "schema": "a_c.fd-support.request/1",
+          "id": "deploy-describe-work-write-001",
+          "operation": "tools.describe",
+          "arguments": {
+            "operation": "work.write"
+          }
+        },
+        "result": null,
+        "error": {
+          "message": "MCP tool call requires approval, but approval policy is never"
+        },
+        "status": "failed"
+      }
+    }
+  ],
+  "skill_acquisitions": [
+    {
+      "line": 5,
+      "id": "item_1",
+      "command": "/bin/zsh -lc 'cat .agents/skills/stdo-work/SKILL.md'",
+      "exit_code": 0,
+      "installed_path": ".agents/skills/stdo-work/SKILL.md",
+      "installed_sha256": "ba6f7ab1e6de875e2f019b049f7817e771474f1b511a74fe2392a55a37078ee8",
+      "complete_selected_body_in_observed_output": true
+    },
+    {
+      "line": 83,
+      "id": "item_41",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-observe-preservation-before-001\\\",\\\"operation\\\":\\\"workspace.observe\\\",\\\"arguments\\\":{\\\"scope\\\":[{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/SKILL.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/basis.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/delegation.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/qualification.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/recovery.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/release-install.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/tools.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/source-routes.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".qualification/OWNER.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"AGENTS.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"CLAUDE.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"TASK.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"TOOLING.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"deploy-test/unrelated.txt\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"design/DESIGN.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"fixture_product.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"retained/SOURCE.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"retained/release/manifest.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"retained/release/payload.txt\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/GOALS.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/INTENT.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/PRODUCT.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/REQUIREMENT.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"unrelated/sentinel.txt\\\",\\\"kind\\\":\\\"file\\\"}]}}\nSTDO_REQUEST\"",
+      "exit_code": 0,
+      "installed_path": ".agents/skills/stdo-work/SKILL.md",
+      "installed_sha256": "ba6f7ab1e6de875e2f019b049f7817e771474f1b511a74fe2392a55a37078ee8",
+      "complete_selected_body_in_observed_output": false
+    },
+    {
+      "line": 101,
+      "id": "item_50",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-observe-preservation-after-install-001\\\",\\\"operation\\\":\\\"workspace.observe\\\",\\\"arguments\\\":{\\\"scope\\\":[{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/SKILL.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/basis.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/delegation.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/qualification.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/recovery.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/release-install.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/tools.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/source-routes.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".qualification/OWNER.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"AGENTS.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"CLAUDE.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"TASK.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"TOOLING.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"deploy-test/unrelated.txt\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"design/DESIGN.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"fixture_product.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"retained/SOURCE.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"retained/release/manifest.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"retained/release/payload.txt\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/GOALS.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/INTENT.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/PRODUCT.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/REQUIREMENT.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"unrelated/sentinel.txt\\\",\\\"kind\\\":\\\"file\\\"}],\\\"previous\\\":{\\\"id\\\":\\\"sha256:5462e9f0a680b86d9f4b1dea8afae9a60cedb889e5ad1710805d6d931d22ad04\\\",\\\"sha256\\\":\\\"5462e9f0a680b86d9f4b1dea8afae9a60cedb889e5ad1710805d6d931d22ad04\\\"}}}\nSTDO_REQUEST\"",
+      "exit_code": 0,
+      "installed_path": ".agents/skills/stdo-work/SKILL.md",
+      "installed_sha256": "ba6f7ab1e6de875e2f019b049f7817e771474f1b511a74fe2392a55a37078ee8",
+      "complete_selected_body_in_observed_output": false
+    },
+    {
+      "line": 103,
+      "id": "item_51",
+      "command": "/bin/zsh -lc \"python3 -B - <<'PY'\nfrom pathlib import Path\nimport hashlib,json,stat\nbaseline=json.loads(\\\"{\\\\\\\".agents/skills/stdo-work/SKILL.md\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"ba6f7ab1e6de875e2f019b049f7817e771474f1b511a74fe2392a55a37078ee8\\\\\\\",\\\\\\\"size\\\\\\\":3116},\\\\\\\".agents/skills/stdo-work/references/basis.md\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"7b409d4895e7be3291e4e41c32e497ae045e9fb4b62f01b9622b10888d449cda\\\\\\\",\\\\\\\"size\\\\\\\":2694},\\\\\\\".agents/skills/stdo-work/references/delegation.md\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"0bb621b4d6edb17f2100878a567596f85a52b517edfafbb2ceba7119dce8bfde\\\\\\\",\\\\\\\"size\\\\\\\":2969},\\\\\\\".agents/skills/stdo-work/references/qualification.md\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"dda296ed053f3e8ed5ab4cdc7c7b9f162754832fc89ded9280044d96f9dc795c\\\\\\\",\\\\\\\"size\\\\\\\":3001},\\\\\\\".agents/skills/stdo-work/references/recovery.md\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"d7f7f118eea492bb64456a56c4cb4987e6e23acd8b3c0143ba87cf5ec9a92c80\\\\\\\",\\\\\\\"size\\\\\\\":3010},\\\\\\\".agents/skills/stdo-work/references/release-install.md\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"ec7cb5a407f6690936d0bf79ab5fc8796c2cfca4c34772f61ceff4b68f337cfb\\\\\\\",\\\\\\\"size\\\\\\\":2422},\\\\\\\".agents/skills/stdo-work/references/tools.md\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"8bb49c0dfe0eb87fbfbe5063c4a43e15f074e25fdd4ff90ffdec24ef14e75c8b\\\\\\\",\\\\\\\"size\\\\\\\":4116},\\\\\\\".agents/skills/stdo-work/source-routes.json\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"09972e4af512645c43207aa3edd5114e1e81c24ef344c76a6af2e99852920403\\\\\\\",\\\\\\\"size\\\\\\\":3501},\\\\\\\".qualification/OWNER.json\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"8e49cb278d4f71a8bd6074c0e5b92bc83882e9abd53530447d2f1c326515e11d\\\\\\\",\\\\\\\"size\\\\\\\":1601},\\\\\\\"AGENTS.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"7f2f29c47cba5b9695b6d138201ea7b8c8570d0783b54c0a97164e2ebabec9c2\\\\\\\",\\\\\\\"size\\\\\\\":197},\\\\\\\"CLAUDE.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"7f2f29c47cba5b9695b6d138201ea7b8c8570d0783b54c0a97164e2ebabec9c2\\\\\\\",\\\\\\\"size\\\\\\\":197},\\\\\\\"TASK.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"25dfdd5bca9988f67ddc6e649d0b8bc8869b2092c7bf0682ecab14222cd11963\\\\\\\",\\\\\\\"size\\\\\\\":520},\\\\\\\"TOOLING.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"c214a6b54c9b831cb624d2a49a1ed56407ac04575e153ea867b9f97d35849d9d\\\\\\\",\\\\\\\"size\\\\\\\":1043},\\\\\\\"deploy-test/manifest.json\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356\\\\\\\",\\\\\\\"size\\\\\\\":3},\\\\\\\"deploy-test/payload.txt\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"a1959b8fe0e3dbef5bf912f3cff5e3f73f56cb3f2efacfbbc016b0f046f4b1ae\\\\\\\",\\\\\\\"size\\\\\\\":42},\\\\\\\"deploy-test/unrelated.txt\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"77cd8d24e225d961d85580f1e0cd11da86b63c0c691d109d6974178a0b6bac94\\\\\\\",\\\\\\\"size\\\\\\\":35},\\\\\\\"design/DESIGN.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"105a9d16d580a97f1e9d6ba7ac219118022bbf299ecd5a87e2c0af541faa4687\\\\\\\",\\\\\\\"size\\\\\\\":414},\\\\\\\"fixture_product.json\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"7a4b9eb49b26f190f0e829070e87565130e1e9a279be6eb5c76e399bf323173e\\\\\\\",\\\\\\\"size\\\\\\\":2960},\\\\\\\"outputs/deployment.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"e4b998929134aea72cc864ae2597f31923ab688c82f2db0bc1120883eae36712\\\\\\\",\\\\\\\"size\\\\\\\":28},\\\\\\\"retained/SOURCE.json\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"07c04d61597e7d1415426b6228b9dec24d0c61c682536d8e0580c8f85f4aa434\\\\\\\",\\\\\\\"size\\\\\\\":845},\\\\\\\"retained/release/manifest.json\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"ce71758abbf18193dfc3a2c588c228668e0b9065ed1b5e3cf96fb80a01acac35\\\\\\\",\\\\\\\"size\\\\\\\":200},\\\\\\\"retained/release/payload.txt\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2\\\\\\\",\\\\\\\"size\\\\\\\":25},\\\\\\\"specification/GOALS.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"5fb2442f5c0db7b5e0060ebe1f86013332dc32f5d4b35872ca67ce57aa680628\\\\\\\",\\\\\\\"size\\\\\\\":172},\\\\\\\"specification/INTENT.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"19c552ef03a9a4acadef9c2522d8fb931a98f534fe9b56f19780edab3f838c71\\\\\\\",\\\\\\\"size\\\\\\\":88},\\\\\\\"specification/PRODUCT.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"ba28450c503070a65c08a1ba28ca082d019ce0232522b2ac6251d865e219f47a\\\\\\\",\\\\\\\"size\\\\\\\":296},\\\\\\\"specification/REQUIREMENT.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"27a0059a874367342962057444f66aeb84372613ef43988744a938064eadbf5d\\\\\\\",\\\\\\\"size\\\\\\\":402},\\\\\\\"unrelated/sentinel.txt\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3\\\\\\\",\\\\\\\"size\\\\\\\":33}}\\\")\nroot=Path.cwd()\ncurrent={}\nfor p in sorted(root.rglob('*')):\n    st=p.lstat()\n    assert not stat.S_ISLNK(st.st_mode),p\n    if stat.S_ISREG(st.st_mode):\n        data=p.read_bytes()\n        current[p.relative_to(root).as_posix()]={'sha256':hashlib.sha256(data).hexdigest(),'size':len(data),'mode':stat.S_IMODE(st.st_mode)}\n    else:\n        assert stat.S_ISDIR(st.st_mode),p\nassert set(current)==set(baseline),'File inventory changed'\nchanged=sorted(k for k in baseline if baseline[k]\"'!=current[k])\nassert changed==['\"'deploy-test/manifest.json','deploy-test/payload.txt'],changed\nsource=json.loads((root/'retained/SOURCE.json').read_bytes())\nmanifest=json.loads((root/'deploy-test/manifest.json').read_bytes())\nassert manifest['schema']=='fixture.release/1'\nassert manifest['release_id']==source['release_id']=='demo/v1.0.0-rc.1'\nassert manifest['payload']['path']=='payload.txt'\nchecks={}\nfor name,key in [('payload.txt','original_payload'),('manifest.json','original_manifest')]:\n    installed=(root/'deploy-test'/name).read_bytes()\n    retained=(root/'retained/release'/name).read_bytes()\n    original=Path(source[key]['path']).read_bytes()\n    sha=hashlib.sha256(installed).hexdigest()\n    assert installed==retained==original\n    assert sha==source[key]['sha256']\n    if name=='payload.txt':\n        assert sha==manifest['payload']['sha256']\n    checks[name]={'bytes':len(installed),'sha256':sha,'equal_retained_and_original':True}\nfor key in ['original_payload','original_manifest','prior_prepared']:\n    assert hashlib.sha256(Path(source[key]['path']).read_bytes()).hexdigest()==source[key]['sha256']\nprint(json.dumps({'release_id':manifest['release_id'],'checks':checks,'changed_files':changed,'unchanged_files':len(current)-len(changed),'inventory_preserved':True,'all_source_record_identities_valid':True},sort_keys=True))\nPY\"",
+      "exit_code": 0,
+      "installed_path": ".agents/skills/stdo-work/SKILL.md",
+      "installed_sha256": "ba6f7ab1e6de875e2f019b049f7817e771474f1b511a74fe2392a55a37078ee8",
+      "complete_selected_body_in_observed_output": false
+    },
+    {
+      "line": 112,
+      "id": "item_56",
+      "command": "/bin/zsh -lc \"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13 -B /Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py --policy /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/control/worker-policy.json --policy-sha256 28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463 --principal host call --request - <<'STDO_REQUEST'\n{\\\"schema\\\":\\\"a_c.fd-support.request/1\\\",\\\"id\\\":\\\"deploy-observe-preservation-final-001\\\",\\\"operation\\\":\\\"workspace.observe\\\",\\\"arguments\\\":{\\\"scope\\\":[{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/SKILL.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/basis.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/delegation.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/qualification.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/recovery.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/release-install.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/references/tools.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".agents/skills/stdo-work/source-routes.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\".qualification/OWNER.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"AGENTS.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"CLAUDE.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"TASK.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"TOOLING.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"deploy-test/unrelated.txt\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"design/DESIGN.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"fixture_product.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"retained/SOURCE.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"retained/release/manifest.json\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"retained/release/payload.txt\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/GOALS.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/INTENT.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/PRODUCT.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"specification/REQUIREMENT.md\\\",\\\"kind\\\":\\\"file\\\"},{\\\"root\\\":\\\"product\\\",\\\"path\\\":\\\"unrelated/sentinel.txt\\\",\\\"kind\\\":\\\"file\\\"}],\\\"previous\\\":{\\\"id\\\":\\\"sha256:5462e9f0a680b86d9f4b1dea8afae9a60cedb889e5ad1710805d6d931d22ad04\\\",\\\"sha256\\\":\\\"5462e9f0a680b86d9f4b1dea8afae9a60cedb889e5ad1710805d6d931d22ad04\\\"}}}\nSTDO_REQUEST\"",
+      "exit_code": 0,
+      "installed_path": ".agents/skills/stdo-work/SKILL.md",
+      "installed_sha256": "ba6f7ab1e6de875e2f019b049f7817e771474f1b511a74fe2392a55a37078ee8",
+      "complete_selected_body_in_observed_output": false
+    },
+    {
+      "line": 114,
+      "id": "item_57",
+      "command": "/bin/zsh -lc \"python3 -B - <<'PY'\nfrom pathlib import Path\nimport hashlib,json,stat\nbaseline=json.loads(\\\"{\\\\\\\".agents/skills/stdo-work/SKILL.md\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"ba6f7ab1e6de875e2f019b049f7817e771474f1b511a74fe2392a55a37078ee8\\\\\\\",\\\\\\\"size\\\\\\\":3116},\\\\\\\".agents/skills/stdo-work/references/basis.md\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"7b409d4895e7be3291e4e41c32e497ae045e9fb4b62f01b9622b10888d449cda\\\\\\\",\\\\\\\"size\\\\\\\":2694},\\\\\\\".agents/skills/stdo-work/references/delegation.md\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"0bb621b4d6edb17f2100878a567596f85a52b517edfafbb2ceba7119dce8bfde\\\\\\\",\\\\\\\"size\\\\\\\":2969},\\\\\\\".agents/skills/stdo-work/references/qualification.md\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"dda296ed053f3e8ed5ab4cdc7c7b9f162754832fc89ded9280044d96f9dc795c\\\\\\\",\\\\\\\"size\\\\\\\":3001},\\\\\\\".agents/skills/stdo-work/references/recovery.md\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"d7f7f118eea492bb64456a56c4cb4987e6e23acd8b3c0143ba87cf5ec9a92c80\\\\\\\",\\\\\\\"size\\\\\\\":3010},\\\\\\\".agents/skills/stdo-work/references/release-install.md\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"ec7cb5a407f6690936d0bf79ab5fc8796c2cfca4c34772f61ceff4b68f337cfb\\\\\\\",\\\\\\\"size\\\\\\\":2422},\\\\\\\".agents/skills/stdo-work/references/tools.md\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"8bb49c0dfe0eb87fbfbe5063c4a43e15f074e25fdd4ff90ffdec24ef14e75c8b\\\\\\\",\\\\\\\"size\\\\\\\":4116},\\\\\\\".agents/skills/stdo-work/source-routes.json\\\\\\\":{\\\\\\\"mode\\\\\\\":384,\\\\\\\"sha256\\\\\\\":\\\\\\\"09972e4af512645c43207aa3edd5114e1e81c24ef344c76a6af2e99852920403\\\\\\\",\\\\\\\"size\\\\\\\":3501},\\\\\\\".qualification/OWNER.json\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"8e49cb278d4f71a8bd6074c0e5b92bc83882e9abd53530447d2f1c326515e11d\\\\\\\",\\\\\\\"size\\\\\\\":1601},\\\\\\\"AGENTS.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"7f2f29c47cba5b9695b6d138201ea7b8c8570d0783b54c0a97164e2ebabec9c2\\\\\\\",\\\\\\\"size\\\\\\\":197},\\\\\\\"CLAUDE.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"7f2f29c47cba5b9695b6d138201ea7b8c8570d0783b54c0a97164e2ebabec9c2\\\\\\\",\\\\\\\"size\\\\\\\":197},\\\\\\\"TASK.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"25dfdd5bca9988f67ddc6e649d0b8bc8869b2092c7bf0682ecab14222cd11963\\\\\\\",\\\\\\\"size\\\\\\\":520},\\\\\\\"TOOLING.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"c214a6b54c9b831cb624d2a49a1ed56407ac04575e153ea867b9f97d35849d9d\\\\\\\",\\\\\\\"size\\\\\\\":1043},\\\\\\\"deploy-test/manifest.json\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356\\\\\\\",\\\\\\\"size\\\\\\\":3},\\\\\\\"deploy-test/payload.txt\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"a1959b8fe0e3dbef5bf912f3cff5e3f73f56cb3f2efacfbbc016b0f046f4b1ae\\\\\\\",\\\\\\\"size\\\\\\\":42},\\\\\\\"deploy-test/unrelated.txt\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"77cd8d24e225d961d85580f1e0cd11da86b63c0c691d109d6974178a0b6bac94\\\\\\\",\\\\\\\"size\\\\\\\":35},\\\\\\\"design/DESIGN.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"105a9d16d580a97f1e9d6ba7ac219118022bbf299ecd5a87e2c0af541faa4687\\\\\\\",\\\\\\\"size\\\\\\\":414},\\\\\\\"fixture_product.json\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"7a4b9eb49b26f190f0e829070e87565130e1e9a279be6eb5c76e399bf323173e\\\\\\\",\\\\\\\"size\\\\\\\":2960},\\\\\\\"outputs/deployment.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"e4b998929134aea72cc864ae2597f31923ab688c82f2db0bc1120883eae36712\\\\\\\",\\\\\\\"size\\\\\\\":28},\\\\\\\"retained/SOURCE.json\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"07c04d61597e7d1415426b6228b9dec24d0c61c682536d8e0580c8f85f4aa434\\\\\\\",\\\\\\\"size\\\\\\\":845},\\\\\\\"retained/release/manifest.json\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"ce71758abbf18193dfc3a2c588c228668e0b9065ed1b5e3cf96fb80a01acac35\\\\\\\",\\\\\\\"size\\\\\\\":200},\\\\\\\"retained/release/payload.txt\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2\\\\\\\",\\\\\\\"size\\\\\\\":25},\\\\\\\"specification/GOALS.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"5fb2442f5c0db7b5e0060ebe1f86013332dc32f5d4b35872ca67ce57aa680628\\\\\\\",\\\\\\\"size\\\\\\\":172},\\\\\\\"specification/INTENT.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"19c552ef03a9a4acadef9c2522d8fb931a98f534fe9b56f19780edab3f838c71\\\\\\\",\\\\\\\"size\\\\\\\":88},\\\\\\\"specification/PRODUCT.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"ba28450c503070a65c08a1ba28ca082d019ce0232522b2ac6251d865e219f47a\\\\\\\",\\\\\\\"size\\\\\\\":296},\\\\\\\"specification/REQUIREMENT.md\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"27a0059a874367342962057444f66aeb84372613ef43988744a938064eadbf5d\\\\\\\",\\\\\\\"size\\\\\\\":402},\\\\\\\"unrelated/sentinel.txt\\\\\\\":{\\\\\\\"mode\\\\\\\":420,\\\\\\\"sha256\\\\\\\":\\\\\\\"56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3\\\\\\\",\\\\\\\"size\\\\\\\":33}}\\\")\nroot=Path.cwd()\ncurrent={}\nfor p in sorted(root.rglob('*')):\n    st=p.lstat()\n    assert not stat.S_ISLNK(st.st_mode),p\n    if stat.S_ISREG(st.st_mode):\n        data=p.read_bytes()\n        current[p.relative_to(root).as_posix()]={'sha256':hashlib.sha256(data).hexdigest(),'size':len(data),'mode':stat.S_IMODE(st.st_mode)}\n    else:\n        assert stat.S_ISDIR(st.st_mode),p\nassert set(current)==set(baseline),'File inventory changed'\nchanged=sorted(k for k in baseline if baseline[k]\"'!=current[k])\nassert changed==['\"'deploy-test/manifest.json','deploy-test/payload.txt','outputs/deployment.md'],changed\nassert all(current[k]['mode']==baseline[k]['mode'] for k in baseline)\nassert current['outputs/deployment.md']['sha256']==\\\"fdf3245b56401007aaf7beb98fd9d84aa4d8d9a3b86f5d2f331e50540ba678d6\\\"\nsource=json.loads((root/'retained/SOURCE.json').read_bytes())\nmanifest=json.loads((root/'deploy-test/manifest.json').read_bytes())\nassert manifest['schema']=='fixture.release/1'\nassert manifest['release_id']==source['release_id']=='demo/v1.0.0-rc.1'\nassert manifest['payload']['path']=='payload.txt'\nfor name,key in [('payload.txt','original_payload'),('manifest.json','original_manifest')]:\n    installed=(root/'deploy-test'/name).read_bytes()\n    assert installed==(root/'retained/release'/name).read_bytes()==Path(source[key]['path']).read_bytes()\n    assert hashlib.sha256(installed).hexdigest()==source[key]['sha256']\nassert current['deploy-test/payload.txt']['sha256']==manifest['payload']['sha256']\nfor key in ['original_payload','original_manifest','prior_prepared']:\n    assert hashlib.sha256(Path(source[key]['path']).read_bytes()).hexdigest()==source[key]['sha256']\nprint(json.dumps({'result':'PASS','release_id':manifest['release_id'],'changed_files':changed,'unchanged_files':len(current)-len(changed),'inventory_preserved':True,'all_file_modes_preserved':True,'installed_bytes_match_retained_and_original':True,'report':current['outputs/deployment.md']},sort_keys=True))\nPY\"",
+      "exit_code": 0,
+      "installed_path": ".agents/skills/stdo-work/SKILL.md",
+      "installed_sha256": "ba6f7ab1e6de875e2f019b049f7817e771474f1b511a74fe2392a55a37078ee8",
+      "complete_selected_body_in_observed_output": false
+    }
+  ],
+  "final_messages": [
+    {
+      "line": 3,
+      "text": "I\u2019m using the installed STDO skill to check the deployment scope, deploy the selected retained release, and verify the installed result.\n"
+    },
+    {
+      "line": 26,
+      "text": "The retained selection is `demo/v1.0.0-rc.1`, and the pinned STDO installation verified successfully. The MCP endpoint is unavailable under this session\u2019s approval policy, so I\u2019m using the CLI binding explicitly authorized in `TOOLING.md`.\n"
+    },
+    {
+      "line": 51,
+      "text": "The retained payload, manifest, and prior preparation record all match the hashes in `retained/SOURCE.json`. I\u2019m checking the selected deployment grant and preserving the target preimages before the two installation writes.\n"
+    },
+    {
+      "line": 104,
+      "text": "Both files are installed and match the retained release byte for byte. The installed manifest\u2019s release ID and payload hash also match. Preservation checks passed; I\u2019m writing the evidence report and then checking the final three-file change scope.\n"
+    },
+    {
+      "line": 115,
+      "text": "Deployed `demo/v1.0.0-rc.1` to `deploy-test` and verified both files byte for byte against the retained release.\n\nWrote [outputs/deployment.md](/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skills-deployment-vup0_dwe/codex/workspace/outputs/deployment.md) with evidence and limits. Only the three authorized files changed; all 24 other files were preserved. Owner acceptance remains separate; no remote publication occurred."
+    }
+  ],
+  "jsonl_parse_errors": [],
+  "public_operation_counts": {
+    "tools.describe": 4,
+    "source.read": 21,
+    "workspace.observe": 6,
+    "evidence.read": 1,
+    "work.write": 3
+  },
+  "public_operations": [
+    {
+      "artifact": "4b9c1f9d047bed2e50c752b7d3049867a705a7f24f82d2e04f6ac67584484ef1",
+      "operation": "tools.describe",
+      "request_id": "deploy-describe-work-write-cli-001",
+      "arguments": {
+        "operation": "work.write"
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(tools.describe)[request_sha256=44dc3f39d6622a0d9ba61ff95025f0deb68b8e903dbf55b8499b09093cc56520]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899417121171000
+    },
+    {
+      "artifact": "e1a07d665b122176ac90e3514384423f5c20708aebdb9d17c97bbc333e0227cc",
+      "operation": "tools.describe",
+      "request_id": "deploy-describe-source-read-001",
+      "arguments": {
+        "operation": "source.read"
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(tools.describe)[request_sha256=5c2848bd11d8865a230d048ae253ae9b5e632a8ec32f2588f2ddaf44ef67935d]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899431278047000
+    },
+    {
+      "artifact": "ba172862c5643d4b330e31715611d68f09660a47c814981bf48208ceb3822f46",
+      "operation": "tools.describe",
+      "request_id": "deploy-describe-workspace-observe-001",
+      "arguments": {
+        "operation": "workspace.observe"
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(tools.describe)[request_sha256=69f2660e1a9f112f0261a099aa33f460b8a773d212d552ec94fa66104bb6f808]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899431396815000
+    },
+    {
+      "artifact": "ce1c24467c251132814a188809fc6b66654b6438581c49638d47017c89c4a71a",
+      "operation": "tools.describe",
+      "request_id": "deploy-describe-evidence-read-001",
+      "arguments": {
+        "operation": "evidence.read"
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(tools.describe)[request_sha256=84617e04ea10510147643e0b3f3934d9471b39ae69028d0cfeb445be99c2b3c3]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899431516115000
+    },
+    {
+      "artifact": "e7eeae2c836421d6765e85a97df1f91e9bcfdfe5c013bb1d20d77b164135efd2",
+      "operation": "source.read",
+      "request_id": "deploy-read-bootstrap-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "standards/frames/bootstrap.md",
+          "root": "method",
+          "selector": {
+            "lines": [
+              1,
+              99
+            ]
+          },
+          "sha256": "cbf4a10e8d0b4ca2ab4a1f3ee28a85ffedc3298a0fba666949d9b091e82cc714"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=09abf0fe7d7832fef1bbb801351ec704c5e0063ff0850c5ebed8ddd74d8e7872]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899440611602000
+    },
+    {
+      "artifact": "d485e71a4f70bf2ec3bb735eea2313d160be8d81fc42988f6cb0b97fb4fff0af",
+      "operation": "source.read",
+      "request_id": "deploy-read-release-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "standards/RELEASE.md",
+          "root": "method",
+          "selector": {
+            "lines": [
+              267,
+              351
+            ]
+          },
+          "sha256": "1ec805a4acb60f7ce0d061cf4ba6656690500e27ae6756866eaafa34aad071e0"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=b01c93a02aca57f953d165d47e32992a50b91d9f57cf292dec69c77f596f40bc]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899463944585000
+    },
+    {
+      "artifact": "1547c1ca9e7b43d6349384aead03a2c4b40214566d0520173f96685e36eb7af3",
+      "operation": "source.read",
+      "request_id": "deploy-read-identity-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "standards/IDENTITY.md",
+          "root": "method",
+          "selector": {
+            "lines": [
+              97,
+              166
+            ]
+          },
+          "sha256": "2e7026aeec957ebb9b1aa0b01ae76b81b4236f02db93b040f158eadf31f5e08b"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=8761ac96432913e35e2b52425cddb101d5704f4608da80c2545576b9b3272dba]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899464110757000
+    },
+    {
+      "artifact": "826ef8f684ba81d8f9430785b5638fc5f8c823fd59ff48bbc208a9ca49f9b178",
+      "operation": "source.read",
+      "request_id": "deploy-acquire-01-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "fixture_product.json",
+          "root": "product",
+          "selector": null,
+          "sha256": "7a4b9eb49b26f190f0e829070e87565130e1e9a279be6eb5c76e399bf323173e"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=ae61e9e57e422b443c26a3b066c4aef6d1f31afc3a9b74539092eda980957da7]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899480238224000
+    },
+    {
+      "artifact": "009db1bf64b43d22f8e9265d3b2737b96228a14db203319edc79931e5bc223a3",
+      "operation": "source.read",
+      "request_id": "deploy-acquire-02-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "specification/REQUIREMENT.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "27a0059a874367342962057444f66aeb84372613ef43988744a938064eadbf5d"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=c1a62403468c1aab0e7768edff9650c9e92274147660a6bf4cdfd0e73c1e9243]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899480395955000
+    },
+    {
+      "artifact": "ddf7377f81c474a751b818676089b6de5bd268c0bd3612f9b25b700273eda1bc",
+      "operation": "source.read",
+      "request_id": "deploy-acquire-03-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "design/DESIGN.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "105a9d16d580a97f1e9d6ba7ac219118022bbf299ecd5a87e2c0af541faa4687"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=8e7aedf8602ebd7b32ba3a9ab2da461bd832d1f20f5de513efb20cb181068fbc]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899480559455000
+    },
+    {
+      "artifact": "001fc293c9df2310648c3a1381a7f1a1e88aeaafb5b09a04fb7b0cc9bab4dd0c",
+      "operation": "source.read",
+      "request_id": "deploy-acquire-04-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "TASK.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "25dfdd5bca9988f67ddc6e649d0b8bc8869b2092c7bf0682ecab14222cd11963"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=e146b7157da0be96f93baeb3bf187a632ca1f499d62035777ff1036ccddb0691]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899480669628000
+    },
+    {
+      "artifact": "9b274d9421ae47e8dbafb0f1a3a38d608bab7060556e58997b524257b43f6a36",
+      "operation": "source.read",
+      "request_id": "deploy-acquire-05-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "TOOLING.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "c214a6b54c9b831cb624d2a49a1ed56407ac04575e153ea867b9f97d35849d9d"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=048fa3d6a92daf970b31e432529c5457d23cb96a897d829dfbbedab1ef5a752d]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899480778480000
+    },
+    {
+      "artifact": "67611515d4aa2808e03a3a0070e10e18186fb0b163010046cc3e74f0691180db",
+      "operation": "source.read",
+      "request_id": "deploy-acquire-06-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": ".qualification/OWNER.json",
+          "root": "product",
+          "selector": null,
+          "sha256": "8e49cb278d4f71a8bd6074c0e5b92bc83882e9abd53530447d2f1c326515e11d"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=0b7f70d9d43c3dbdd941d08618bfce2e169f3fa0c6eb1af64f63e1dcbd3e71b6]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899480927374000
+    },
+    {
+      "artifact": "5f3fc02691985e7fb71e46cddfb59d49a836c5f3284a063f9af3841ee9dfb58a",
+      "operation": "source.read",
+      "request_id": "deploy-acquire-07-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "retained/SOURCE.json",
+          "root": "product",
+          "selector": null,
+          "sha256": "07c04d61597e7d1415426b6228b9dec24d0c61c682536d8e0580c8f85f4aa434"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=fb1bb082d6faee9b0ece383c30728b8ca173e31f5ac5899d5184078674988440]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899481102219000
+    },
+    {
+      "artifact": "764f8225bc45f71d09e59f82530a86fac6d18032722710061f8da86763caebca",
+      "operation": "source.read",
+      "request_id": "deploy-acquire-08-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "retained/release/payload.txt",
+          "root": "product",
+          "selector": null,
+          "sha256": "b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=d22f9562b41bc95f27cc09f0a591a99109f01dc1a951e654761b380ed175bbe5]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899481283266000
+    },
+    {
+      "artifact": "61f2fe977216894f55fc1688a8055a96432a9d886c2bcede67fcfbc8b578e74f",
+      "operation": "source.read",
+      "request_id": "deploy-acquire-09-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "retained/release/manifest.json",
+          "root": "product",
+          "selector": null,
+          "sha256": "ce71758abbf18193dfc3a2c588c228668e0b9065ed1b5e3cf96fb80a01acac35"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=c7ab0722d2c771ddee1d76b46e0b9abf708ddc2e830a88c0879b003a4a6204bc]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899481460642000
+    },
+    {
+      "artifact": "6c08729a9a40f7bf0b96d2e13a333c8793df5e19295f05e80f14efa2790c5ffb",
+      "operation": "source.read",
+      "request_id": "deploy-acquire-10-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "deploy-test/payload.txt",
+          "root": "product",
+          "selector": null,
+          "sha256": "a1959b8fe0e3dbef5bf912f3cff5e3f73f56cb3f2efacfbbc016b0f046f4b1ae"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=789f3bf2f007f87affd231d78f8eca8854ca5c8e481102cae149fd5567b7ad3a]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899481616167000
+    },
+    {
+      "artifact": "3e200955bb7fe18121a004cc505149e1e4a91cbef542893c520a16657147e365",
+      "operation": "source.read",
+      "request_id": "deploy-acquire-11-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "deploy-test/manifest.json",
+          "root": "product",
+          "selector": null,
+          "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=3d675393412ec500b10df4db7994191631c961478145376ea5cb79b3e04feb1e]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899481723849000
+    },
+    {
+      "artifact": "5db2573c299cd5453a5dd619ef8307853eae4917c280eac5e1bfb6cf5aad33c7",
+      "operation": "source.read",
+      "request_id": "deploy-acquire-12-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "outputs/deployment.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "e4b998929134aea72cc864ae2597f31923ab688c82f2db0bc1120883eae36712"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=b97114ebb367cdf591e9a2e642d48df5eacc9710815ed49450580be4b5eb6408]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899481831157000
+    },
+    {
+      "artifact": "c3300127bbc3def7129555b6de183eeca991e4b4b8fe99021d2bf1534c106403",
+      "operation": "source.read",
+      "request_id": "deploy-acquire-13-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "TASK.md",
+          "root": "control",
+          "selector": null,
+          "sha256": "18aed14c626d2212b22edabd6a32020437616e353ed708b1bfdbdf5a5a03b56a"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=8bfba9ec04a1c0ad483c6c17d609ed73168bc09b405940b1cd52309fd81615e5]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899481989306000
+    },
+    {
+      "artifact": "55f48e1db1535d8ca20c0c2e723f7c75f7cc2a4b42263ad6705b081ea270cca5",
+      "operation": "source.read",
+      "request_id": "deploy-acquire-14-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "SELECTION.json",
+          "root": "control",
+          "selector": null,
+          "sha256": "ef615df989c4336c1177a467169365fd7163cef2d761622c2aabb6c1932f3185"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=8d5a9842c4c541d480da7d0a2b096d57b4ac162784c7b53825cae0197b78218c]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899482100606000
+    },
+    {
+      "artifact": "dc91c78830087423d335cf304b4146f1a13ad6db6de7553959a3e2310da25bf4",
+      "operation": "source.read",
+      "request_id": "deploy-acquire-15-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "RETURN-CONTRACT.json",
+          "root": "control",
+          "selector": null,
+          "sha256": "8a64983fad0a991a6789d0d8cdef4944243e2435dc611fca09f76da93f87198a"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=0f54be720064c88d78d5e837831019a96cd268e91c3ec8e3893f6b8ba8edefd2]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899482211272000
+    },
+    {
+      "artifact": "48b29328ec91a71c1ad7ee0c907c653f7dbc358060d7e46cb795c4b7b0ac01e1",
+      "operation": "workspace.observe",
+      "request_id": "deploy-observe-preservation-before-001",
+      "arguments": {
+        "scope": [
+          {
+            "kind": "file",
+            "path": ".agents/skills/stdo-work/SKILL.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": ".agents/skills/stdo-work/references/basis.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": ".agents/skills/stdo-work/references/delegation.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": ".agents/skills/stdo-work/references/qualification.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": ".agents/skills/stdo-work/references/recovery.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": ".agents/skills/stdo-work/references/release-install.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": ".agents/skills/stdo-work/references/tools.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": ".agents/skills/stdo-work/source-routes.json",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": ".qualification/OWNER.json",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "AGENTS.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "CLAUDE.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "TASK.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "TOOLING.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "deploy-test/unrelated.txt",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "design/DESIGN.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "fixture_product.json",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "retained/SOURCE.json",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "retained/release/manifest.json",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "retained/release/payload.txt",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "specification/GOALS.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "specification/INTENT.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "specification/PRODUCT.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "specification/REQUIREMENT.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "unrelated/sentinel.txt",
+            "root": "product"
+          }
+        ]
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(workspace.observe)[request_sha256=b60563a929fa925843a3c903c431f132c33571ed5f68ae1aa85561989e12c195]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899507478816000
+    },
+    {
+      "artifact": "361aa47b635536646e77e8fd3a01888c07edf7907c3ecd4b96c26393f3b4deca",
+      "operation": "evidence.read",
+      "request_id": "deploy-read-preimage-evidence-001",
+      "arguments": {
+        "artifact": {
+          "id": "sha256:6c08729a9a40f7bf0b96d2e13a333c8793df5e19295f05e80f14efa2790c5ffb",
+          "sha256": "6c08729a9a40f7bf0b96d2e13a333c8793df5e19295f05e80f14efa2790c5ffb"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(evidence.read)[request_sha256=228b033296b7b0f45e2409437ad9ad9e8b71f9dfcdfe198a98aac5c4caa4011f]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899507589093000
+    },
+    {
+      "artifact": "61a309feb0fb4b943cf0950aca005380b2955a920f1618d9beb2c9156e4145e8",
+      "operation": "workspace.observe",
+      "request_id": "deploy-observe-payload-parent-001",
+      "arguments": {
+        "scope": [
+          {
+            "kind": "directory",
+            "path": "deploy-test",
+            "root": "product"
+          }
+        ]
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(workspace.observe)[request_sha256=af188d6eea0022cf02e3b7c40dc47b411bb5517cf8446897ba7dd638a234d06b]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899527440332000
+    },
+    {
+      "artifact": "59438cfe408f7b208493d6ae929e73c2b51bbb3248c634598e7d162aa32b53c1",
+      "operation": "work.write",
+      "request_id": "deploy-write-payload-001",
+      "arguments": {
+        "grant_id": "urn:stdo-skills:qualification:codex:release-deploy:write",
+        "interpretation": null,
+        "mode": "replace",
+        "observations": [
+          {
+            "id": "sha256:3782724fe126199fabd0c99c71bfc032a35b9f8dbbf5228e87765a156440809b",
+            "sha256": "3782724fe126199fabd0c99c71bfc032a35b9f8dbbf5228e87765a156440809b"
+          }
+        ],
+        "record": {
+          "provenance": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".qualification/OWNER.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "8e49cb278d4f71a8bd6074c0e5b92bc83882e9abd53530447d2f1c326515e11d"
+          },
+          "text": "Release fixture payload.\n"
+        },
+        "target": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "deploy-test/payload.txt",
+          "root": "product",
+          "selector": null,
+          "sha256": "a1959b8fe0e3dbef5bf912f3cff5e3f73f56cb3f2efacfbbc016b0f046f4b1ae"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(work.write): declared exact output/effect-evidence payload availability on the requested basis",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899528521015000
+    },
+    {
+      "artifact": "a34bf477591667c8d729800b6aac9b56ad45cc44f507620bb053393475383660",
+      "operation": "workspace.observe",
+      "request_id": "deploy-observe-manifest-parent-001",
+      "arguments": {
+        "scope": [
+          {
+            "kind": "directory",
+            "path": "deploy-test",
+            "root": "product"
+          }
+        ]
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(workspace.observe)[request_sha256=68572e58bcd60309c515190c8eee74e4248ba115e70d03d321303bdf75c60929]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899538329825000
+    },
+    {
+      "artifact": "221f25421976c64b7cc2060ebdceeaa559cd3d571a29a95c02fc338ad2cb4660",
+      "operation": "work.write",
+      "request_id": "deploy-write-manifest-001",
+      "arguments": {
+        "grant_id": "urn:stdo-skills:qualification:codex:release-deploy:write",
+        "interpretation": null,
+        "mode": "replace",
+        "observations": [
+          {
+            "id": "sha256:b1dcf073a6276935c988c672712896e757d98886621351fd53c3d68db4630f1f",
+            "sha256": "b1dcf073a6276935c988c672712896e757d98886621351fd53c3d68db4630f1f"
+          }
+        ],
+        "record": {
+          "provenance": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".qualification/OWNER.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "8e49cb278d4f71a8bd6074c0e5b92bc83882e9abd53530447d2f1c326515e11d"
+          },
+          "text": "{\n  \"schema\": \"fixture.release/1\",\n  \"release_id\": \"demo/v1.0.0-rc.1\",\n  \"payload\": {\n    \"path\": \"payload.txt\",\n    \"sha256\": \"b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2\"\n  }\n}\n"
+        },
+        "target": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "deploy-test/manifest.json",
+          "root": "product",
+          "selector": null,
+          "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(work.write): declared exact output/effect-evidence payload availability on the requested basis",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899539298812000
+    },
+    {
+      "artifact": "ac8fea66686551ee8b44c1d01cddd6b42300213fa68c16c2084f768a128cfab6",
+      "operation": "source.read",
+      "request_id": "deploy-read-installed-payload-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "deploy-test/payload.txt",
+          "root": "product",
+          "selector": null,
+          "sha256": "b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=79e251710ad40de3436d3b505512df931fae94b89447e46de5d852570e960f7f]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899565503180000
+    },
+    {
+      "artifact": "687bf400471b1e70eccfcebaff9cbf7e6c33fb610b300f7ff4257c0e9ba7d910",
+      "operation": "source.read",
+      "request_id": "deploy-read-installed-manifest-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "deploy-test/manifest.json",
+          "root": "product",
+          "selector": null,
+          "sha256": "ce71758abbf18193dfc3a2c588c228668e0b9065ed1b5e3cf96fb80a01acac35"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=e9c9c01bcb37fc2b333900db6b52774d40a0b02f839071643f3d00381e50b777]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899565666637000
+    },
+    {
+      "artifact": "9f5415acf4ec46366fee2175329565154ea102e5af944a9b7b4e1e0123189056",
+      "operation": "workspace.observe",
+      "request_id": "deploy-observe-preservation-after-install-001",
+      "arguments": {
+        "previous": {
+          "id": "sha256:5462e9f0a680b86d9f4b1dea8afae9a60cedb889e5ad1710805d6d931d22ad04",
+          "sha256": "5462e9f0a680b86d9f4b1dea8afae9a60cedb889e5ad1710805d6d931d22ad04"
+        },
+        "scope": [
+          {
+            "kind": "file",
+            "path": ".agents/skills/stdo-work/SKILL.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": ".agents/skills/stdo-work/references/basis.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": ".agents/skills/stdo-work/references/delegation.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": ".agents/skills/stdo-work/references/qualification.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": ".agents/skills/stdo-work/references/recovery.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": ".agents/skills/stdo-work/references/release-install.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": ".agents/skills/stdo-work/references/tools.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": ".agents/skills/stdo-work/source-routes.json",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": ".qualification/OWNER.json",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "AGENTS.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "CLAUDE.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "TASK.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "TOOLING.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "deploy-test/unrelated.txt",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "design/DESIGN.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "fixture_product.json",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "retained/SOURCE.json",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "retained/release/manifest.json",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "retained/release/payload.txt",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "specification/GOALS.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "specification/INTENT.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "specification/PRODUCT.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "specification/REQUIREMENT.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "unrelated/sentinel.txt",
+            "root": "product"
+          }
+        ]
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(workspace.observe)[request_sha256=8db9a65dc0e706ffea2d29fc20b8736078e9e494b8ddbd091b0e50000bdf51d3]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899565859665000
+    },
+    {
+      "artifact": "e193b58056d69460dd91e90c759469b827a7a9de3bede16db7bbb998cfe31b37",
+      "operation": "workspace.observe",
+      "request_id": "deploy-observe-report-parent-001",
+      "arguments": {
+        "scope": [
+          {
+            "kind": "directory",
+            "path": "outputs",
+            "root": "product"
+          }
+        ]
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(workspace.observe)[request_sha256=be77c56bdddbb21c37c9374f5a993374b85cc628fb08b5724a6d354b9b4c2b0d]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899641147220000
+    },
+    {
+      "artifact": "9000bbec8d25b8738577f6399259c9ae65d45a28a9cff49776784d6923624090",
+      "operation": "work.write",
+      "request_id": "deploy-write-report-001",
+      "arguments": {
+        "grant_id": "urn:stdo-skills:qualification:codex:release-deploy:write",
+        "interpretation": null,
+        "mode": "replace",
+        "observations": [
+          {
+            "id": "sha256:c43a7f864a115ac52321f0e7e89aa8f666994645326359c2c81c121c0bca4d9b",
+            "sha256": "c43a7f864a115ac52321f0e7e89aa8f666994645326359c2c81c121c0bca4d9b"
+          }
+        ],
+        "record": {
+          "provenance": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".qualification/OWNER.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "8e49cb278d4f71a8bd6074c0e5b92bc83882e9abd53530447d2f1c326515e11d"
+          },
+          "text": "The exact selected retained release `demo/v1.0.0-rc.1` is installed in `deploy-test`. Author verification passed at 2026-10-25T03:39:25.858Z: the installed payload and manifest equal both `retained/release` and their recorded original preparation files byte for byte. The release identity was preserved.\n\nThe governing Product is `urn:stdo:product-definition:qualification-release-deployment`. This execution follows R1 and D1 under the bounded local deployment authorized in `TASK.md`, using grant `urn:stdo-skills:qualification:codex:release-deploy:write` as principal `host`. The authorized files are `deploy-test/payload.txt`, `deploy-test/manifest.json`, and this report.\n\n| Governing or retained source | SHA-256 |\n| --- | --- |\n| `fixture_product.json` | `7a4b9eb49b26f190f0e829070e87565130e1e9a279be6eb5c76e399bf323173e` |\n| `TASK.md` | `25dfdd5bca9988f67ddc6e649d0b8bc8869b2092c7bf0682ecab14222cd11963` |\n| `specification/REQUIREMENT.md` | `27a0059a874367342962057444f66aeb84372613ef43988744a938064eadbf5d` |\n| `design/DESIGN.md` | `105a9d16d580a97f1e9d6ba7ac219118022bbf299ecd5a87e2c0af541faa4687` |\n| `.qualification/OWNER.json` | `8e49cb278d4f71a8bd6074c0e5b92bc83882e9abd53530447d2f1c326515e11d` |\n| `retained/SOURCE.json` | `07c04d61597e7d1415426b6228b9dec24d0c61c682536d8e0580c8f85f4aa434` |\n\n`stdo status --definition <workspace>/fixture_product.json --verify` returned `installed: true`, `valid: true`, and no failures. The exact method is `stdo://releases/v3.0.1-rc.1/`, installed at `/Users/jim/Library/Application Support/STDO/releases/v3.0.1-rc.1`, with manifest SHA-256 `60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8`. The eight installed STDO skill files exactly match the selection inventory, with no extra members.\n\nThe deciding method sources were acquired through native `source.read`: `RELEASE.md` lines 267\u2013351, member SHA-256 `1ec805a4acb60f7ce0d061cf4ba6656690500e27ae6756866eaafa34aad071e0`, and `IDENTITY.md` lines 97\u2013166, member SHA-256 `2e7026aeec957ebb9b1aa0b01ae76b81b4236f02db93b040f158eadf31f5e08b`.\n\nThe native MCP discovery attempt returned \u201cMCP tool call requires approval, but approval policy is never.\u201d The explicitly authorized CLI in `TOOLING.md` was used successfully for native discovery, acquisition, observations, Writer effects and readback. Its entrypoint is `/Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py`, invoked with the pinned Python 3.13.7 path. The policy SHA-256 is `28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463`; the native method profile is `urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1`, SHA-256 `a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7`. The tool's separately reported legacy builder identity is `stdo://releases/v2.5.1-rc.2/`; it is not the selected method. The observed host version is `codex-cli 0.164.0`; resolved model and effort were not independently observed.\n\n| Installed member | Bytes | SHA-256 | Verification |\n| --- | ---: | --- | --- |\n| `deploy-test/payload.txt` | 25 | `b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2` | Exact retained/original bytes; matches manifest payload digest |\n| `deploy-test/manifest.json` | 200 | `ce71758abbf18193dfc3a2c588c228668e0b9065ed1b5e3cf96fb80a01acac35` | Exact retained/original bytes; schema `fixture.release/1`; release_id `demo/v1.0.0-rc.1`; payload path `payload.txt` |\n\nAll three identities recorded by `retained/SOURCE.json` were checked against their actual files before and after installation:\n\n- Original payload: `/private/tmp/stdo-skills-release-2ahz8bo2/codex/workspace/outputs/release/payload.txt`, SHA-256 `b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2`.\n- Original manifest: `/private/tmp/stdo-skills-release-2ahz8bo2/codex/workspace/outputs/release/manifest.json`, SHA-256 `ce71758abbf18193dfc3a2c588c228668e0b9065ed1b5e3cf96fb80a01acac35`.\n- Prior preparation record: `/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/qualification/prepared/codex-release-prepare.json`, SHA-256 `44b3036fb69b3489ee68e85c1429a40d6299fda5ca1dbeec98e9df4be07c9c47`. Only its byte identity was verified; this is not a new assessment of that preparation.\n\nThe current preimages were acquired separately from stable governing inputs and retained in native OperationEvidence. Their exact previous text was `\"PREEXISTING: authorized exact replacement\\n\"`, `\"{}\\n\"`, and `\"# Pending deployment report\\n\"`, respectively.\n\n| Target preimage | Bytes | SHA-256 | Acquisition OperationEvidence |\n| --- | ---: | --- | --- |\n| `deploy-test/payload.txt` | 42 | `a1959b8fe0e3dbef5bf912f3cff5e3f73f56cb3f2efacfbbc016b0f046f4b1ae` | `sha256:6c08729a9a40f7bf0b96d2e13a333c8793df5e19295f05e80f14efa2790c5ffb` |\n| `deploy-test/manifest.json` | 3 | `ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356` | `sha256:3e200955bb7fe18121a004cc505149e1e4a91cbef542893c520a16657147e365` |\n| `outputs/deployment.md` | 28 | `e4b998929134aea72cc864ae2597f31923ab688c82f2db0bc1120883eae36712` | `sha256:5db2573c299cd5453a5dd619ef8307853eae4917c280eac5e1bfb6cf5aad33c7` |\n\nDestination paths and all ancestors were checked: the targets were existing regular files, no symlinks or path escape were found, and no directory creation was needed. Each installation write used a fresh, separate observation of `deploy-test` immediately before native `work.write`. Each response returned `status: ok`, no refusal, effect `completed`, `end_established: true`, and the expected postimage. Each effect was scoped to one atomic target-file publication; the two-file deployment is not claimed to be one atomic transaction.\n\n| Installed target | Parent observation artifact | Writer result artifact | Writer OperationEvidence | Installed source.read OperationEvidence |\n| --- | --- | --- | --- | --- |\n| `deploy-test/payload.txt` | `sha256:3782724fe126199fabd0c99c71bfc032a35b9f8dbbf5228e87765a156440809b` | `sha256:83a37cd877d83532d1432e5215f6322fff87abe441cdb9500c1f989aae97c252` | `sha256:59438cfe408f7b208493d6ae929e73c2b51bbb3248c634598e7d162aa32b53c1` | `sha256:ac8fea66686551ee8b44c1d01cddd6b42300213fa68c16c2084f768a128cfab6` |\n| `deploy-test/manifest.json` | `sha256:b1dcf073a6276935c988c672712896e757d98886621351fd53c3d68db4630f1f` | `sha256:cefafa44c626449b4fa5eced76d65ca67cb8dfbabeeb8983ffd4a1089505bff5` | `sha256:221f25421976c64b7cc2060ebdceeaa559cd3d571a29a95c02fc338ad2cb4660` | `sha256:687bf400471b1e70eccfcebaff9cbf7e6c33fb610b300f7ff4257c0e9ba7d910` |\n\n| Retained acquisition | OperationEvidence |\n| --- | --- |\n| `retained/SOURCE.json` | `sha256:5f3fc02691985e7fb71e46cddfb59d49a836c5f3284a063f9af3841ee9dfb58a` |\n| `retained/release/payload.txt` | `sha256:764f8225bc45f71d09e59f82530a86fac6d18032722710061f8da86763caebca` |\n| `retained/release/manifest.json` | `sha256:61f2fe977216894f55fc1688a8055a96432a9d886c2bcede67fcfbc8b578e74f` |\n\nNative preservation observations cover all 24 files outside the three authorized targets. The before artifact is `sha256:5462e9f0a680b86d9f4b1dea8afae9a60cedb889e5ad1710805d6d931d22ad04`; the after-install artifact is `sha256:f359f3e11e8dde4a9da85d512d9ca81e49eb045c6fa983b49f6a9a86bc8faede`, with `diff: []` and `gaps: []`. Its OperationEvidence is `sha256:9f5415acf4ec46366fee2175329565154ea102e5af944a9b7b4e1e0123189056`. A separate host read/compute scan confirmed the same 27-file inventory and only the two deployment-file changes before this report was written; all 25 other files were unchanged at that point, including this report's prior placeholder.\n\nIn particular, `deploy-test/unrelated.txt` remains SHA-256 `77cd8d24e225d961d85580f1e0cd11da86b63c0c691d109d6974178a0b6bac94`, and `unrelated/sentinel.txt` remains SHA-256 `56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3`. The retained candidate, specification, design, Product definition, installed skill, and configuration remain unchanged.\n\nThis report is submitted separately through native `work.write` request `deploy-write-report-001`, using its recorded preimage and a fresh observation of `outputs`. Its actual response and subsequent final verification are retained outside the report, avoiding a circular report hash. Native artifacts and complete OperationEvidence are retained under `../control/evidence` relative to the workspace and can be acquired by `evidence.read`; each `sha256:` identifier above carries the same digest in the ArtifactRef's `sha256` field.\n\nThe established result is local installation availability and author verification of exact bytes, manifest linkage and preservation. Independent review, owner acceptance and remote publication are not established by these checks. No release was renamed, no additional final cut was created, and no Git mutation, remote publication, global configuration change, new actor or further stage was performed. The initial read-only Git status probe reported that this fixture is not a Git repository. No native `results.conjoin` operator was used. There are no unresolved local deployment failures; the checks become stale if the installed files, retained sources, governing inputs or bound policy change.\n"
+        },
+        "target": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "outputs/deployment.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "e4b998929134aea72cc864ae2597f31923ab688c82f2db0bc1120883eae36712"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(work.write): declared exact output/effect-evidence payload availability on the requested basis",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899642342594000
+    },
+    {
+      "artifact": "28b7022e9df403b83b6cdb6a2e349f886ff709307b7b5b7181f913a5420ce0ec",
+      "operation": "source.read",
+      "request_id": "deploy-read-installed-report-001",
+      "arguments": {
+        "encoding": "utf8",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "outputs/deployment.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "fdf3245b56401007aaf7beb98fd9d84aa4d8d9a3b86f5d2f331e50540ba678d6"
+        }
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(source.read)[request_sha256=4fb1e5e4ea8d335e018f59fe00ef0e8731818fa0f3eec48395fcffa79a48182f]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899668712230000
+    },
+    {
+      "artifact": "f56def93d6a439906db9c02f11d4c15434bdbf5bfd905c11eb2d58082174931e",
+      "operation": "workspace.observe",
+      "request_id": "deploy-observe-preservation-final-001",
+      "arguments": {
+        "previous": {
+          "id": "sha256:5462e9f0a680b86d9f4b1dea8afae9a60cedb889e5ad1710805d6d931d22ad04",
+          "sha256": "5462e9f0a680b86d9f4b1dea8afae9a60cedb889e5ad1710805d6d931d22ad04"
+        },
+        "scope": [
+          {
+            "kind": "file",
+            "path": ".agents/skills/stdo-work/SKILL.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": ".agents/skills/stdo-work/references/basis.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": ".agents/skills/stdo-work/references/delegation.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": ".agents/skills/stdo-work/references/qualification.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": ".agents/skills/stdo-work/references/recovery.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": ".agents/skills/stdo-work/references/release-install.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": ".agents/skills/stdo-work/references/tools.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": ".agents/skills/stdo-work/source-routes.json",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": ".qualification/OWNER.json",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "AGENTS.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "CLAUDE.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "TASK.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "TOOLING.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "deploy-test/unrelated.txt",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "design/DESIGN.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "fixture_product.json",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "retained/SOURCE.json",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "retained/release/manifest.json",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "retained/release/payload.txt",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "specification/GOALS.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "specification/INTENT.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "specification/PRODUCT.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "specification/REQUIREMENT.md",
+            "root": "product"
+          },
+          {
+            "kind": "file",
+            "path": "unrelated/sentinel.txt",
+            "root": "product"
+          }
+        ]
+      },
+      "status": "ok",
+      "refusal": null,
+      "operation_outcome": {
+        "cause": "declared output available",
+        "core_value": "satisfied",
+        "evidence": [],
+        "limits": [
+          "output availability only; no semantic acceptance"
+        ],
+        "predicate": "B(workspace.observe)[request_sha256=487a5f6052f28e957240d9aad6b9adee506f470d804caad22b39ca0dc08ace4c]: declared output availability",
+        "source_parent": {
+          "clause": "results",
+          "member": "FOUNDATIONS.md",
+          "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+        },
+        "value": "returned"
+      },
+      "started_ns": 1792899668839756000
+    }
+  ],
+  "public_artifact_closure": {
+    "copied": 104,
+    "missing": [],
+    "digest_mismatches": []
+  },
+  "native_initialization": [],
+  "native_tool_calls": [],
+  "workspace": {
+    "before": {
+      ".agents/skills/stdo-work/SKILL.md": "ba6f7ab1e6de875e2f019b049f7817e771474f1b511a74fe2392a55a37078ee8",
+      ".agents/skills/stdo-work/references/basis.md": "7b409d4895e7be3291e4e41c32e497ae045e9fb4b62f01b9622b10888d449cda",
+      ".agents/skills/stdo-work/references/delegation.md": "0bb621b4d6edb17f2100878a567596f85a52b517edfafbb2ceba7119dce8bfde",
+      ".agents/skills/stdo-work/references/qualification.md": "dda296ed053f3e8ed5ab4cdc7c7b9f162754832fc89ded9280044d96f9dc795c",
+      ".agents/skills/stdo-work/references/recovery.md": "d7f7f118eea492bb64456a56c4cb4987e6e23acd8b3c0143ba87cf5ec9a92c80",
+      ".agents/skills/stdo-work/references/release-install.md": "ec7cb5a407f6690936d0bf79ab5fc8796c2cfca4c34772f61ceff4b68f337cfb",
+      ".agents/skills/stdo-work/references/tools.md": "8bb49c0dfe0eb87fbfbe5063c4a43e15f074e25fdd4ff90ffdec24ef14e75c8b",
+      ".agents/skills/stdo-work/source-routes.json": "09972e4af512645c43207aa3edd5114e1e81c24ef344c76a6af2e99852920403",
+      ".qualification/OWNER.json": "8e49cb278d4f71a8bd6074c0e5b92bc83882e9abd53530447d2f1c326515e11d",
+      "AGENTS.md": "7f2f29c47cba5b9695b6d138201ea7b8c8570d0783b54c0a97164e2ebabec9c2",
+      "CLAUDE.md": "7f2f29c47cba5b9695b6d138201ea7b8c8570d0783b54c0a97164e2ebabec9c2",
+      "TASK.md": "25dfdd5bca9988f67ddc6e649d0b8bc8869b2092c7bf0682ecab14222cd11963",
+      "TOOLING.md": "c214a6b54c9b831cb624d2a49a1ed56407ac04575e153ea867b9f97d35849d9d",
+      "deploy-test/manifest.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "deploy-test/payload.txt": "a1959b8fe0e3dbef5bf912f3cff5e3f73f56cb3f2efacfbbc016b0f046f4b1ae",
+      "deploy-test/unrelated.txt": "77cd8d24e225d961d85580f1e0cd11da86b63c0c691d109d6974178a0b6bac94",
+      "design/DESIGN.md": "105a9d16d580a97f1e9d6ba7ac219118022bbf299ecd5a87e2c0af541faa4687",
+      "fixture_product.json": "7a4b9eb49b26f190f0e829070e87565130e1e9a279be6eb5c76e399bf323173e",
+      "outputs/deployment.md": "e4b998929134aea72cc864ae2597f31923ab688c82f2db0bc1120883eae36712",
+      "retained/SOURCE.json": "07c04d61597e7d1415426b6228b9dec24d0c61c682536d8e0580c8f85f4aa434",
+      "retained/release/manifest.json": "ce71758abbf18193dfc3a2c588c228668e0b9065ed1b5e3cf96fb80a01acac35",
+      "retained/release/payload.txt": "b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2",
+      "specification/GOALS.md": "5fb2442f5c0db7b5e0060ebe1f86013332dc32f5d4b35872ca67ce57aa680628",
+      "specification/INTENT.md": "19c552ef03a9a4acadef9c2522d8fb931a98f534fe9b56f19780edab3f838c71",
+      "specification/PRODUCT.md": "ba28450c503070a65c08a1ba28ca082d019ce0232522b2ac6251d865e219f47a",
+      "specification/REQUIREMENT.md": "27a0059a874367342962057444f66aeb84372613ef43988744a938064eadbf5d",
+      "unrelated/sentinel.txt": "56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3"
+    },
+    "after": {
+      ".agents/skills/stdo-work/SKILL.md": "ba6f7ab1e6de875e2f019b049f7817e771474f1b511a74fe2392a55a37078ee8",
+      ".agents/skills/stdo-work/references/basis.md": "7b409d4895e7be3291e4e41c32e497ae045e9fb4b62f01b9622b10888d449cda",
+      ".agents/skills/stdo-work/references/delegation.md": "0bb621b4d6edb17f2100878a567596f85a52b517edfafbb2ceba7119dce8bfde",
+      ".agents/skills/stdo-work/references/qualification.md": "dda296ed053f3e8ed5ab4cdc7c7b9f162754832fc89ded9280044d96f9dc795c",
+      ".agents/skills/stdo-work/references/recovery.md": "d7f7f118eea492bb64456a56c4cb4987e6e23acd8b3c0143ba87cf5ec9a92c80",
+      ".agents/skills/stdo-work/references/release-install.md": "ec7cb5a407f6690936d0bf79ab5fc8796c2cfca4c34772f61ceff4b68f337cfb",
+      ".agents/skills/stdo-work/references/tools.md": "8bb49c0dfe0eb87fbfbe5063c4a43e15f074e25fdd4ff90ffdec24ef14e75c8b",
+      ".agents/skills/stdo-work/source-routes.json": "09972e4af512645c43207aa3edd5114e1e81c24ef344c76a6af2e99852920403",
+      ".qualification/OWNER.json": "8e49cb278d4f71a8bd6074c0e5b92bc83882e9abd53530447d2f1c326515e11d",
+      "AGENTS.md": "7f2f29c47cba5b9695b6d138201ea7b8c8570d0783b54c0a97164e2ebabec9c2",
+      "CLAUDE.md": "7f2f29c47cba5b9695b6d138201ea7b8c8570d0783b54c0a97164e2ebabec9c2",
+      "TASK.md": "25dfdd5bca9988f67ddc6e649d0b8bc8869b2092c7bf0682ecab14222cd11963",
+      "TOOLING.md": "c214a6b54c9b831cb624d2a49a1ed56407ac04575e153ea867b9f97d35849d9d",
+      "deploy-test/manifest.json": "ce71758abbf18193dfc3a2c588c228668e0b9065ed1b5e3cf96fb80a01acac35",
+      "deploy-test/payload.txt": "b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2",
+      "deploy-test/unrelated.txt": "77cd8d24e225d961d85580f1e0cd11da86b63c0c691d109d6974178a0b6bac94",
+      "design/DESIGN.md": "105a9d16d580a97f1e9d6ba7ac219118022bbf299ecd5a87e2c0af541faa4687",
+      "fixture_product.json": "7a4b9eb49b26f190f0e829070e87565130e1e9a279be6eb5c76e399bf323173e",
+      "outputs/deployment.md": "fdf3245b56401007aaf7beb98fd9d84aa4d8d9a3b86f5d2f331e50540ba678d6",
+      "retained/SOURCE.json": "07c04d61597e7d1415426b6228b9dec24d0c61c682536d8e0580c8f85f4aa434",
+      "retained/release/manifest.json": "ce71758abbf18193dfc3a2c588c228668e0b9065ed1b5e3cf96fb80a01acac35",
+      "retained/release/payload.txt": "b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2",
+      "specification/GOALS.md": "5fb2442f5c0db7b5e0060ebe1f86013332dc32f5d4b35872ca67ce57aa680628",
+      "specification/INTENT.md": "19c552ef03a9a4acadef9c2522d8fb931a98f534fe9b56f19780edab3f838c71",
+      "specification/PRODUCT.md": "ba28450c503070a65c08a1ba28ca082d019ce0232522b2ac6251d865e219f47a",
+      "specification/REQUIREMENT.md": "27a0059a874367342962057444f66aeb84372613ef43988744a938064eadbf5d",
+      "unrelated/sentinel.txt": "56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3"
+    },
+    "changed": [
+      "deploy-test/manifest.json",
+      "deploy-test/payload.txt",
+      "outputs/deployment.md"
+    ],
+    "added": [],
+    "missing": [],
+    "symlinks": []
+  },
+  "assessment": "Finite source census; a named source-oracle assessor judges the observed path and outcomes separately"
+}

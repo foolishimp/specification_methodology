@@ -1,0 +1,108 @@
+{
+  "schema": "a_c.fd-support.closed-return/1",
+  "id": "urn:stdo-skills:T001:q05:codex:handoff:3:reviewer-return",
+  "frame": {
+    "id": "qualification.q05.reviewer",
+    "revision": "1"
+  },
+  "activation": {
+    "id": "urn:stdo-skills:T001:q05:codex:handoff:3:reviewer:activation:1",
+    "sha256": "f7378d0b787d1277e671dfbc47f6470621ecddd59b48b12c12f58e82abb295b4"
+  },
+  "subject": {
+    "id": "urn:stdo-skills:T001:q05:codex:handoff:3:reviewer-subject",
+    "sha256": "a31fa1c00cf19183cb92cb05339db6a4e0b51afb1d47b3c362ced081199c4cb3"
+  },
+  "basis": {
+    "method_profile": {
+      "id": "urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1",
+      "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+    },
+    "observations": [
+      {
+        "id": "sha256:645b5bffe0112db95112aaea33f32cc8be3b035fb6837c88f45b1e5fccd5f435",
+        "sha256": "645b5bffe0112db95112aaea33f32cc8be3b035fb6837c88f45b1e5fccd5f435"
+      }
+    ]
+  },
+  "actor": {
+    "id": "urn:stdo-skills:T001:q05:codex:handoff:3:reviewer",
+    "family": "openai-codex",
+    "authorship": "Fresh nonauthor Codex Reviewer; no candidate authorship"
+  },
+  "consumer": "urn:stdo-skills:T001:q05:codex:handoff:3:executive",
+  "evaluations": [
+    {
+      "id": "expectation-recording",
+      "predicate": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "roles/PREDICATES.md",
+        "root": "control",
+        "selector": null,
+        "sha256": "724dee7972dc6f7429bbbd2c018ea76f4b7e05887b6f636db6a07a525ed4c1db"
+      },
+      "domain_outcome": "Required expectation recording did not complete. Governing sources were acquired before any candidate acquisition. R1/D1 determine exactly Hello, Ada. followed by one newline; R2 requires exact handoff identities, the admitted Worker operation and single-output scope evidence. The prescribed initial review.prepare expectation call returned refused(constraint), contract_violation, result=null. The bound independence document lacks allowed_family_pairs, authority_source, claim_scope, id, mechanical_sharing, predicates, require_non_author and source_first; family_limit and policy were reported as unknown fields. Operation evidence contains no acquisitions. No expectation ArtifactRef was produced, so the dependent recording call was not attempted. This finding concerns expectation recording only.",
+      "core_value": "falsified",
+      "evidence": [
+        {
+          "id": "sha256:d63e792dccb1e9c591650ac140dff639eadd2ac9b27728854302b39ccdf3e03f",
+          "sha256": "d63e792dccb1e9c591650ac140dff639eadd2ac9b27728854302b39ccdf3e03f"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "roles/INDEPENDENCE.json",
+          "root": "control",
+          "selector": null,
+          "sha256": "3ea82ca2183ff0b1fe9a747d0390880024ff73c1a622aa9d01aa051c31073e79"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "specification/REQUIREMENT.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "2a1c18649904d1930a9f75d3102ca781c9bb0f2a40b3c572c015fdfcd08b0483"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "design/DESIGN.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "1fe6e572c99a823202dbab45f27b1839cc98e665df85a601f6bc5c1d8e74c090"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "inputs/name.txt",
+          "root": "product",
+          "selector": null,
+          "sha256": "c4b7d45359e10813d1787293eb7ffa9a074e837fcf99c0281610eab5fe907e79"
+        }
+      ],
+      "residuals": [
+        "No retained expectation artifact is available for the later candidate phase."
+      ],
+      "invalidators": []
+    }
+  ],
+  "not_performed": [
+    "candidate-review"
+  ],
+  "work_result": null,
+  "residuals": [
+    "Root must resolve the independence-contract incompatibility and select an exact successor before re-entry, preserving this refused attempt.",
+    "The later same-Reviewer candidate phase requires an actual expectation ArtifactRef pinned in a new contract.",
+    "No greeting candidate, Worker output or Worker proof was acquired; no candidate assessment or acceptance is claimed.",
+    "Worker grant identity remains urn:stdo-skills:T001:q05:codex:handoff:3:worker-grant; its exercise was not assessed.",
+    "Cross-family semantic independence is unestablished under the declared same-family limitation.",
+    "Total model cost and host context size remain unknown; external/process-tree effects remain unknown."
+  ],
+  "invalidators": [
+    "source/package drift",
+    "unreconciled effects",
+    "candidate differs from selected population"
+  ]
+}

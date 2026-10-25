@@ -1,0 +1,101 @@
+{
+  "actor_plan_validation": "passed all three",
+  "children": {
+    "reviewer": {
+      "claim": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "roles/CLAIM.json",
+        "root": "control",
+        "selector": null,
+        "sha256": "47bcca49d17b80edc732e10381550f93ba508cd868cd5c2bc93960a63870e484"
+      },
+      "consumer": "urn:stdo-skills:T001:q05:claude:handoff:3:executive",
+      "context": {
+        "id": "sha256:73d0cacd5f00c510d628d89b3eec39b3e62148c106f5149236fc55adf78237a5",
+        "sha256": "73d0cacd5f00c510d628d89b3eec39b3e62148c106f5149236fc55adf78237a5"
+      },
+      "executor_id": "reviewer",
+      "grant_id": "urn:stdo-skills:T001:q05:claude:handoff:3:dispatch-reviewer",
+      "note": "Actual Executive must preflight and dispatch; operator has not done either.",
+      "observations": [
+        {
+          "id": "sha256:8b1139e6065fcd26c5c0c16e65a00fbd8ce067c02aebcb0a7bceadf09b64bd2d",
+          "sha256": "8b1139e6065fcd26c5c0c16e65a00fbd8ce067c02aebcb0a7bceadf09b64bd2d"
+        }
+      ],
+      "result_key": "urn:stdo-skills:T001:q05:claude:handoff:3:reviewer:stage1",
+      "return_contract": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "roles/reviewer-RETURN-CONTRACT.json",
+        "root": "control",
+        "selector": null,
+        "sha256": "ff253cad1d12ffe76af7687c3aaefff2b4679d85af8b851eed186412988f952f"
+      }
+    },
+    "worker": {
+      "claim": null,
+      "consumer": "urn:stdo-skills:T001:q05:claude:handoff:3:executive",
+      "context": {
+        "id": "sha256:46c496a8356808de0b9308352fa371a7bae220dcdcc049385d0831b71389d5b5",
+        "sha256": "46c496a8356808de0b9308352fa371a7bae220dcdcc049385d0831b71389d5b5"
+      },
+      "executor_id": "worker",
+      "grant_id": "urn:stdo-skills:T001:q05:claude:handoff:3:worker-grant",
+      "note": "Actual Executive must preflight and dispatch; operator has not done either.",
+      "observations": [
+        {
+          "id": "sha256:8b1139e6065fcd26c5c0c16e65a00fbd8ce067c02aebcb0a7bceadf09b64bd2d",
+          "sha256": "8b1139e6065fcd26c5c0c16e65a00fbd8ce067c02aebcb0a7bceadf09b64bd2d"
+        }
+      ],
+      "result_key": "urn:stdo-skills:T001:q05:claude:handoff:3:worker:stage1",
+      "return_contract": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "roles/worker-RETURN-CONTRACT.json",
+        "root": "control",
+        "selector": null,
+        "sha256": "3ab3f474f28cb6cf7e12b6b7e0701b1e9d85c9abd825256cb1fabfefac566829"
+      }
+    }
+  },
+  "context": {
+    "id": "sha256:0924f088039789e6efe1ecbdd86e3d1726f6876a0e7d5d2c3ff63600722aba21",
+    "sha256": "0924f088039789e6efe1ecbdd86e3d1726f6876a0e7d5d2c3ff63600722aba21"
+  },
+  "contract_sha256": "707c422e4140f24864d4a147b1b357975674930ec0b32d929376da76c6668d2d",
+  "control": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control",
+  "decision": "admitted",
+  "executive_plan": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/plans/executive-actor-plan.json",
+    "sha256": "366d86efb865c495bff2550f22fbdaccd09e6e72a8592d4131899c0f3a0600b9"
+  },
+  "executive_policy": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/executive-policy.json",
+    "sha256": "a8ad603755800a159ef428c389894d90c985e92e1036dbf14904148eb97bb810"
+  },
+  "gaps": [],
+  "installed": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/INSTALL.json",
+    "sha256": "8ae8fcc97bccc6dea6b598e76ca357f1bfc7911084c4b7a27d13a0201b41c85f"
+  },
+  "limits": [
+    "candidate-review phase remains unprepared until real expectation/Worker evidence",
+    "same-family limit for Codex",
+    "no automatic success from transport or instruction text"
+  ],
+  "policy": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/root-policy.json",
+    "sha256": "b24497c0a9f609ba4436e96670792004c0525f0a1059660a285dd3c0e65c48d7"
+  },
+  "preflight": {
+    "id": "sha256:f45002a9392c8bef80c5f901c6a0918171e62bce009eb6223543855697c24e94",
+    "sha256": "f45002a9392c8bef80c5f901c6a0918171e62bce009eb6223543855697c24e94"
+  },
+  "root_dispatch_selected": false,
+  "standing": "Prepared stage1 only; Root exact launch selection required",
+  "tenant": "claude",
+  "workspace": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/workspace"
+}

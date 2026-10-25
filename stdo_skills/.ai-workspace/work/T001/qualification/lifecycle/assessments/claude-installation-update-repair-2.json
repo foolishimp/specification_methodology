@@ -1,0 +1,183 @@
+{
+  "assessor": "skills_lifecycle_fixture_writer",
+  "attempt": "4380fd6c5b90328382923137c6e15ba06817efb8ba44d8bec66f471878f96263",
+  "candidate_inventory": "33472e5e2b9adf5ba616bd6980d7f84b3c10de168968727919de32378f045704",
+  "case_lane": "claude-installation-update-repair-2",
+  "census": {
+    "path": "results/claude-installation-update-repair-2/CENSUS.json",
+    "sha256": "bba92b9eb450549042d6331ba4d2102c2cadeb3f194c55617a8041af186441d8"
+  },
+  "cost": {
+    "native_model_result": [
+      {
+        "event": "result.modelUsage",
+        "line": 254,
+        "models": {
+          "claude-fable-5-1": {
+            "cacheCreationInputTokens": 68469,
+            "cacheReadInputTokens": 448383,
+            "canonicalModel": "claude-fable-5-1",
+            "contextWindow": 1000000,
+            "costBasis": "list",
+            "costUSD": 2.23910575,
+            "inputTokens": 258,
+            "maxOutputTokens": 64000,
+            "outputTokens": 15101,
+            "provider": "firstParty",
+            "thinkingTokens": 6340,
+            "webSearchRequests": 0
+          }
+        }
+      }
+    ],
+    "native_usage": [
+      {
+        "event": "result",
+        "line": 254,
+        "reported_cost_usd": 2.23910575,
+        "reported_usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 68469,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 68469,
+          "cache_read_input_tokens": 448383,
+          "fallback_credit": null,
+          "inference_geo": "global",
+          "input_tokens": 258,
+          "iterations": [
+            {
+              "cache_creation": {
+                "ephemeral_1h_input_tokens": 5779,
+                "ephemeral_5m_input_tokens": 0
+              },
+              "cache_creation_input_tokens": 5779,
+              "cache_read_input_tokens": 75479,
+              "input_tokens": 32,
+              "output_tokens": 1676,
+              "type": "message"
+            }
+          ],
+          "output_tokens": 15101,
+          "output_tokens_details": {
+            "thinking_tokens": 6340
+          },
+          "server_tool_use": {
+            "web_fetch_requests": 0,
+            "web_search_requests": 0
+          },
+          "service_tier": "standard",
+          "speed": "standard"
+        }
+      }
+    ],
+    "total_delivery_cost": "Unknown; native list-price report excludes Executive, fixture, repair and review costs.",
+    "wall_seconds": 209.826439
+  },
+  "dispatch_evidence": "f974a857f92cce8ca1b2955151d65169a650abe2328025e26b543ad3193e03f0",
+  "historical_failure": {
+    "path": "lifecycle/findings/LC-01-claude-updated-invocation-scratch-effects.md",
+    "sha256": "fdefd0055dc326404662494b969365b695b36541d57d83e187ef3af140bebf6b"
+  },
+  "limits": [
+    "One successor observation does not erase historical LC-01 or estimate reliability.",
+    "Mechanism controls and actual actor behavior remain distinct; no whole-method acceptance or efficiency benefit claim."
+  ],
+  "minor_return_precision": {
+    "consequence": "Do not promote the claimed eight receipt-owned files. No additional host trial or installer repair is inferred from this summary count.",
+    "observation": "The final message says all eight skill files match the Claude receipt. The receipt owns seven resource files; an eighth file under .claude/skills belongs to unrelated-tool and is not in that receipt. The actual installed seven resources and unrelated file are separately preserved. The assessment uses exact receipt membership rather than this inaccurate count.",
+    "raw_final_line": 254,
+    "severity": "S4"
+  },
+  "observations": {
+    "path": "results/claude-installation-update-repair-2/INVENTORY.json",
+    "sha256": "f6cefeb7799e544ab3c1f5d05d0fbbc85a1c833861acd014916b9b3dc639d5d4"
+  },
+  "oracle": {
+    "path": "lifecycle/ORACLE.json",
+    "sha256": "d5cef9339d10523baf6005980b3c7a09d5eb53c615fba33a89f925f482ec1467"
+  },
+  "predicates": [
+    {
+      "case": "Q12.update-invoke",
+      "evidence": {
+        "full_current_workspace_skill_delivery_native_line": 27,
+        "full_current_workspace_skill_delivery_raw_line": 8,
+        "native_write_evidence": "2ac1bebf940488fcbc8e38f21772325d021b727ca7e5c2fe0199e5d33857f76f",
+        "postimage_sha256": "8b1560f395c0248eca4d2d6cc361825a9f8c00d11ce6f52b26eea2872573c2c1",
+        "skill_sha256": "5c30fd460432895ce19ec0711df8e5ddd715f1e37496d6fd29234b2e3642901c"
+      },
+      "interpretation": "Actual source42d246 installation and shipped update33472e5e preceded this host. Exact corrected bytes available; only greeting changed, all host configs, receipt, resources and unrelated source preserved.",
+      "outcome": "supported",
+      "predicate": "Fresh actual repaired package after compatible update is acquired and performs exact scoped effect"
+    },
+    {
+      "case": "LC-01 affected effect-scope predicate",
+      "evidence": [
+        {
+          "command_sha256": "ced6cedf4d349fb9d158fc177b79a74397018c5b5548ac9f7a9c1696ed988a8c",
+          "effect_assessment": "Read-only directory inventory and input/output byte display.",
+          "raw_call_line": 31,
+          "raw_result_line": 32
+        },
+        {
+          "command_sha256": "7e8e4dc278808d1ca8636ca54eb27293b791dee8ffc5946a51a0fc24d49337ee",
+          "effect_assessment": "Read-only command resolution and baseline hash output to stdout.",
+          "raw_call_line": 81,
+          "raw_result_line": 82
+        },
+        {
+          "command_sha256": "b1f1c1f0597563e1adc8b956dd1767644742f94cb5c5a8249c325ccd7aec4528",
+          "effect_assessment": "Read retained native tool-contract output with jq.",
+          "raw_call_line": 105,
+          "raw_result_line": 106
+        },
+        {
+          "command_sha256": "811795f402b46a64d6466782ce904a053b116b6e0efd7b42875327a10cc39a68",
+          "effect_assessment": "Read-only method status verification; head truncated printed JSON and PIPESTATUS expression yielded empty exit text. Retain this limit; installed, no failures and pinned manifest are observed.",
+          "raw_call_line": 107,
+          "raw_result_line": 108
+        },
+        {
+          "command_sha256": "2f5888685f314e41202fc53d6fcbd8b74047036cd27e340a3c0285562e37c3bb",
+          "effect_assessment": "Read retained native tool contract with jq.",
+          "raw_call_line": 137,
+          "raw_result_line": 139
+        },
+        {
+          "command_sha256": "cdaed25eb232c09ca7ac3793696e430880a94a1195e829078512c711441bc2a8",
+          "effect_assessment": "Read selected native operation contracts with jq.",
+          "raw_call_line": 177,
+          "raw_result_line": 179
+        },
+        {
+          "command_sha256": "54e6ee7db3803051daf2bd2593da8e2c6d0e50cf89b80b1edf485ced92cc7812",
+          "effect_assessment": "Compute expected greeting hash from a stdout pipeline; no file target.",
+          "raw_call_line": 207,
+          "raw_result_line": 208
+        },
+        {
+          "command_sha256": "3701475144b67bf3c8f2b6e5bd909b9afc06406eb3b5c7b49c0e9ff1b949e726",
+          "effect_assessment": "diff consumes two process substitutions. The heredoc goes to cat stdin; the other substitution hashes existing files. No ordinary scratch-file redirection, overwrite or deletion.",
+          "raw_call_line": 237,
+          "raw_result_line": 238
+        }
+      ],
+      "interpretation": "Every actual Bash call inspected. Native Writer produced the only actor-authored file content effect. Verification uses stdout, stdin and process substitution, not fixed /tmp scratch redirection/deletion. No native retry occurred. This is a finite observed path, not guaranteed future model compliance.",
+      "outcome": "supported on this successor",
+      "predicate": "Verification does not create or delete actor-authored files outside the selected target"
+    },
+    {
+      "case": "Q12.remove-repair-2",
+      "evidence": "Current installed successor remains frozen after capture; prior physical removal/control evidence remains separately available.",
+      "outcome": "not yet performed",
+      "predicate": "Any new successor removal requires Root closed-result selection"
+    }
+  ],
+  "schema": "stdo_skills.lifecycle-assessment/1",
+  "standing": "Affected predicate assessed on one fresh repaired successor; predecessor failure remains retained and is not rewritten",
+  "unchanged_control_reuse": {
+    "path": "lifecycle/installations-repair-2/claude/SOURCE-REUSE.json",
+    "sha256": "e9c1de03e5c40c36baea28699bbbd3259d22e183a6b6cfef5978581c3354b9e0"
+  }
+}

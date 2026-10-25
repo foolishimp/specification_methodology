@@ -1,0 +1,86 @@
+{
+  "authority_source": {
+    "engine": "workspace-regular-file",
+    "object": null,
+    "path": "claude-setup2/candidate/TASK.md",
+    "root": "review",
+    "selector": null,
+    "sha256": "a71ae90521ac254c8bfe8277cdc7419cb781e9eb11c44aa81927f9f14141285d"
+  },
+  "carrier": "a_c.fd-support.closed-return/1",
+  "id": "urn:stdo-skills:T001:claude:review:candidate:return",
+  "output_slot": "final_stdout_object",
+  "proof": {
+    "claim": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "claude-setup2/CLAIM.json",
+      "root": "review",
+      "selector": null,
+      "sha256": "0cd02093ab7668e7db8d54250e887524e42a614b8e9c0b035df0c9d4a67f31a1"
+    },
+    "comparison": null,
+    "expectations": {
+      "id": "sha256:9ed61889acb0caaec032092f45fbfa888ea63b6ae74b0be56d1301990c67bc4a",
+      "sha256": "9ed61889acb0caaec032092f45fbfa888ea63b6ae74b0be56d1301990c67bc4a"
+    },
+    "independence_policy": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "claude-setup2/INDEPENDENCE.json",
+      "root": "review",
+      "selector": null,
+      "sha256": "80c4cd3f64976bb920d04c6859e65391cc9e52439e28ab4aad02478b0cd5cbfc"
+    },
+    "predicate_ids": [],
+    "proof_sources": [
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": ".ai-workspace/work/T001/codex/actor/successor-1/ASSESSMENT.json",
+        "root": "product",
+        "selector": null,
+        "sha256": "6211a14cfc253060efe8e7a00b828d4a999a26a859ed34fb2c6655eb940be60b"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": ".ai-workspace/work/T001/operator/claude-continuation-1/CODEX-CUSTODY.json",
+        "root": "product",
+        "selector": null,
+        "sha256": "b848f968193d8dd1300714856fef6ff34efcf687571a347c47c4c7ff4f44128d"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": ".ai-workspace/work/T001/tooling/auth-repair-prep/RETURN.json",
+        "root": "product",
+        "selector": null,
+        "sha256": "dbd282f9888e8070850d3ca51b48eea9323deb930f712640dd9055b798cf25de"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": ".ai-workspace/work/T001/tooling/repair-1/RETURN.json",
+        "root": "product",
+        "selector": null,
+        "sha256": "8a13345777f10d1d2f8c3c16ac9d10d2693925a4c257fa232ad6585ad50e958e"
+      }
+    ]
+  },
+  "required_evaluations": [
+    {
+      "id": "candidate-assessment",
+      "predicate": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "PREDICATES.md",
+        "root": "review",
+        "selector": null,
+        "sha256": "84c3436e6e3797f973ec7e98684fecfe6936bdcd4037c581a877edbaac5fa901"
+      }
+    }
+  ],
+  "role": "Reviewer",
+  "schema": "a_c.fd-support.return-contract/1"
+}

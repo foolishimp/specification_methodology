@@ -1,0 +1,47 @@
+{
+  "provenance": "Commands and observed results transcribed from this Writer tool transcript immediately after execution; subsequent worktree observations retained separately.",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "worktree",
+        "add",
+        "--no-checkout",
+        "-b",
+        "codex/stdo-skills",
+        "/Users/jim/src/apps/specification_methodology-skills",
+        "a2e56d8bd2882068c84e45b2423cecc246c62525"
+      ],
+      "returncode": 0,
+      "stdout": "Preparing worktree (new branch 'codex/stdo-skills')\n"
+    },
+    {
+      "argv": [
+        "git",
+        "sparse-checkout",
+        "set",
+        "--cone",
+        "stdo_skills",
+        "a_c/specification",
+        "a_c/build_tenants/graphify",
+        "a_c/scripts",
+        "a_c/.ai-workspace/tickets",
+        "scripts"
+      ],
+      "returncode": 0,
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "git",
+        "checkout",
+        "--no-overlay",
+        "HEAD",
+        "--",
+        "."
+      ],
+      "returncode": 0,
+      "stdout": ""
+    }
+  ]
+}

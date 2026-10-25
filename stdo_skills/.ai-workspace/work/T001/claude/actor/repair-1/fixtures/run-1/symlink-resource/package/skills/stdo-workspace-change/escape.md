@@ -1,0 +1,1 @@
+/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/claude/actor/repair-1/fixtures/run-1/outside.md

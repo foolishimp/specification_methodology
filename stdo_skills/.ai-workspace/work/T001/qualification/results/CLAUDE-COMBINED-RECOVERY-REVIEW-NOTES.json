@@ -1,0 +1,44 @@
+{
+  "schema": "stdo_skills.source-appraisal-referral/1",
+  "standing": "Read-only source-level appraisal requested by Root; supplements exact Writer assessment, does not edit its source or oracle",
+  "assessment": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/qualification/results/CLAUDE-COMBINED-RECOVERY-ASSESSMENT.json",
+    "sha256": "96fda0493b3bdb20ba0e7a4826ba9c70591f6ddead8a26ccfe471cca548acf68"
+  },
+  "report": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/qualification/results/claude-combined-recovery/postimages/outputs/continuation.md",
+    "sha256": "4b07b053f9c6f65382ebd0de676e077ef3388830a064933e42f4810ceb92e87f"
+  },
+  "native_owner": {
+    "path": "/Users/jim/Library/Application Support/STDO/releases/v3.0.1-rc.1/standards/ACTIVATION.md",
+    "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d"
+  },
+  "items": [
+    {
+      "id": "C-current-predicate",
+      "report_lines": [
+        23,
+        30
+      ],
+      "common_Q09": "Affected reliance withdrawn, reassessment left open and unaffected sentinel retained; observed",
+      "frozen_oracle_extra": "Current candidate fails the changed punctuation requirement; host explicitly declines deciding this at line27, so unestablished",
+      "review_question": "Assess the actual request/design and common Q09 boundary. Preserve the exact-oracle miss without silently weakening it, and determine whether deferring the visible new fitness judgment is a required-task defect or a stronger oracle expectation."
+    },
+    {
+      "id": "D-availability-mapping",
+      "report_lines": [
+        32,
+        35
+      ],
+      "source_lines": [
+        1002,
+        1032
+      ],
+      "observed": "D reports performed bounded construction, candidate_available false, no candidate or fitness assessment, and unfinished construction requiring a selected new bound. Line34 says neither a failure verdict nor completion.",
+      "mapping": "ACTIVATION construction availability maps incomplete to falsified for a candidate is available; it does not falsify candidate fitness or a never-performed assessment.",
+      "not_explicitly_demonstrated": "The report does not explicitly name incomplete or the falsified availability mapping. Its no-failure-verdict wording has to be judged in the adjacent availability-versus-fitness context, not converted automatically into the algebraic claim.",
+      "review_question": "Determine whether the reported semantics preserve the required predicate distinction or the phrase obscures it materially. Do not invent a broad skill failure or demand another run solely to add a label."
+    }
+  ],
+  "no_effects": "No actor rerun, report rewrite or source/runtime/candidate modification selected"
+}

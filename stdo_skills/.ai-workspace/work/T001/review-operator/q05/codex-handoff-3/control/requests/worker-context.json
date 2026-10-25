@@ -1,0 +1,358 @@
+{
+  "arguments": {
+    "envelope": {
+      "boundary": "executor-stdin-utf8",
+      "capacity_bytes": null,
+      "host_context": {
+        "bytes": null,
+        "evidence": null,
+        "state": "unknown"
+      }
+    },
+    "late_acquisition": [
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "standards/ACTIVATION.md",
+        "root": "method",
+        "selector": {
+          "lines": [
+            938,
+            1055
+          ]
+        },
+        "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "fixture_product.json",
+        "root": "product",
+        "selector": null,
+        "sha256": "6ed980a5e19a81445c4c0ecc33bd6185a3bb42afc07b8a4d1a3bdc3b30209433"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": ".qualification/OWNER.json",
+        "root": "product",
+        "selector": null,
+        "sha256": "eed988f799576ba8b33bfe2af830edd6d7fe53ac0c8bde13d760268df6102089"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "unrelated/sentinel.txt",
+        "root": "product",
+        "selector": null,
+        "sha256": "56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "roles/worker-RETURN-CONTRACT.json",
+        "root": "control",
+        "selector": null,
+        "sha256": "978569d691fbee234ccf7d86f6eb9cd55197f0b6875e7f453b2679aaadb23b5e"
+      }
+    ],
+    "models": [],
+    "packet": {
+      "activation": {
+        "configuration": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "roles/worker-TASK.md",
+          "root": "control",
+          "selector": null,
+          "sha256": "6a2a4955d07f8ae3d2145650f0a1e3aa8881ca87d88f45bec7ebda0e43882900"
+        },
+        "id": "urn:stdo-skills:T001:q05:codex:handoff:3:worker:activation:1",
+        "revision": "1"
+      },
+      "actor_authority": {
+        "acceptance": null,
+        "actor_id": "urn:stdo-skills:T001:q05:codex:handoff:3:worker",
+        "capability": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "roles/worker-TASK.md",
+          "root": "control",
+          "selector": null,
+          "sha256": "6a2a4955d07f8ae3d2145650f0a1e3aa8881ca87d88f45bec7ebda0e43882900"
+        },
+        "decision": null,
+        "evaluation": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "roles/PREDICATES.md",
+          "root": "control",
+          "selector": null,
+          "sha256": "724dee7972dc6f7429bbbd2c018ea76f4b7e05887b6f636db6a07a525ed4c1db"
+        },
+        "operation": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "roles/worker-TASK.md",
+          "root": "control",
+          "selector": null,
+          "sha256": "6a2a4955d07f8ae3d2145650f0a1e3aa8881ca87d88f45bec7ebda0e43882900"
+        },
+        "publication": null,
+        "role": "Worker",
+        "semantic": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "roles/worker-TASK.md",
+          "root": "control",
+          "selector": null,
+          "sha256": "6a2a4955d07f8ae3d2145650f0a1e3aa8881ca87d88f45bec7ebda0e43882900"
+        },
+        "territory": [
+          {
+            "kind": "file",
+            "path": "outputs/greeting.txt",
+            "root": "product"
+          }
+        ],
+        "tools": [
+          "a_c.public-native301",
+          "native-codex-worker"
+        ]
+      },
+      "attention": {
+        "exclusions": [
+          "unrelated files/oracle/peer lane",
+          "ungranted writes or launches"
+        ],
+        "invariants": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".qualification/OWNER.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "eed988f799576ba8b33bfe2af830edd6d7fe53ac0c8bde13d760268df6102089"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "unrelated/sentinel.txt",
+            "root": "product",
+            "selector": null,
+            "sha256": "56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3"
+          }
+        ],
+        "material_relations": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/SOURCE-ROUTES.json",
+            "root": "control",
+            "selector": null,
+            "sha256": "30241e5d5303d02e9d4404a7665fdf98f0d296793ca523d5ead7404d8d111cf5"
+          }
+        ],
+        "prohibited_assumptions": [
+          "transport completion is semantic fitness",
+          "temporary name is write authority",
+          "source-only expectation is candidate acceptance"
+        ],
+        "semantic_sources": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/worker-TASK.md",
+            "root": "control",
+            "selector": null,
+            "sha256": "6a2a4955d07f8ae3d2145650f0a1e3aa8881ca87d88f45bec7ebda0e43882900"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/PREDICATES.md",
+            "root": "control",
+            "selector": null,
+            "sha256": "724dee7972dc6f7429bbbd2c018ea76f4b7e05887b6f636db6a07a525ed4c1db"
+          }
+        ]
+      },
+      "evidence_relations": {
+        "acquisition": [],
+        "admissible_evidence": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/worker-TASK.md",
+            "root": "control",
+            "selector": null,
+            "sha256": "6a2a4955d07f8ae3d2145650f0a1e3aa8881ca87d88f45bec7ebda0e43882900"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/PREDICATES.md",
+            "root": "control",
+            "selector": null,
+            "sha256": "724dee7972dc6f7429bbbd2c018ea76f4b7e05887b6f636db6a07a525ed4c1db"
+          }
+        ],
+        "conjunction": null,
+        "consumer": "urn:stdo-skills:T001:q05:codex:handoff:3:executive",
+        "dependencies": [],
+        "return_contract": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "roles/worker-RETURN-CONTRACT.json",
+          "root": "control",
+          "selector": null,
+          "sha256": "978569d691fbee234ccf7d86f6eb9cd55197f0b6875e7f453b2679aaadb23b5e"
+        },
+        "translation": null
+      },
+      "frame": {
+        "declaration": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "roles/worker-TASK.md",
+          "root": "control",
+          "selector": null,
+          "sha256": "6a2a4955d07f8ae3d2145650f0a1e3aa8881ca87d88f45bec7ebda0e43882900"
+        },
+        "evaluation": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "roles/PREDICATES.md",
+          "root": "control",
+          "selector": null,
+          "sha256": "724dee7972dc6f7429bbbd2c018ea76f4b7e05887b6f636db6a07a525ed4c1db"
+        },
+        "id": "qualification.q05.worker",
+        "result_algebra": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "standards/ACTIVATION.md",
+          "root": "method",
+          "selector": {
+            "lines": [
+              938,
+              1055
+            ]
+          },
+          "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d"
+        },
+        "revision": "1"
+      },
+      "profile_additions": {
+        "worker": {
+          "mutation_subject": {
+            "id": "urn:stdo-skills:T001:q05:codex:handoff:3:worker-subject",
+            "sha256": "2a1c18649904d1930a9f75d3102ca781c9bb0f2a40b3c572c015fdfcd08b0483"
+          },
+          "operation_grant_id": "urn:stdo-skills:T001:q05:codex:handoff:3:worker-grant",
+          "territory": [
+            {
+              "kind": "file",
+              "path": "outputs/greeting.txt",
+              "root": "product"
+            }
+          ]
+        }
+      },
+      "stop_change": {
+        "invalidators": [
+          "source/package drift",
+          "unreconciled effects",
+          "candidate differs from selected population"
+        ],
+        "re_entry": [
+          "Root selects exact successor; preserve every attempt"
+        ],
+        "reconfiguration": [],
+        "residuals": [
+          "total model cost and host context size unknown",
+          "external/process-tree effects unknown",
+          "same-family limitation where declared"
+        ],
+        "stop_conditions": [
+          "selected ceiling",
+          "unsupported required operation"
+        ]
+      },
+      "subject_basis": {
+        "dependencies": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "fixture_product.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "6ed980a5e19a81445c4c0ecc33bd6185a3bb42afc07b8a4d1a3bdc3b30209433"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".qualification/OWNER.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "eed988f799576ba8b33bfe2af830edd6d7fe53ac0c8bde13d760268df6102089"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/worker-TASK.md",
+            "root": "control",
+            "selector": null,
+            "sha256": "6a2a4955d07f8ae3d2145650f0a1e3aa8881ca87d88f45bec7ebda0e43882900"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/PREDICATES.md",
+            "root": "control",
+            "selector": null,
+            "sha256": "724dee7972dc6f7429bbbd2c018ea76f4b7e05887b6f636db6a07a525ed4c1db"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/SOURCE-ROUTES.json",
+            "root": "control",
+            "selector": null,
+            "sha256": "30241e5d5303d02e9d4404a7665fdf98f0d296793ca523d5ead7404d8d111cf5"
+          }
+        ],
+        "method_profile": {
+          "id": "urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1",
+          "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+        },
+        "observations": [
+          {
+            "id": "sha256:645b5bffe0112db95112aaea33f32cc8be3b035fb6837c88f45b1e5fccd5f435",
+            "sha256": "645b5bffe0112db95112aaea33f32cc8be3b035fb6837c88f45b1e5fccd5f435"
+          }
+        ],
+        "product": {
+          "definition": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "fixture_product.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "6ed980a5e19a81445c4c0ecc33bd6185a3bb42afc07b8a4d1a3bdc3b30209433"
+          },
+          "id": "urn:stdo:product-definition:qualification-reviewed-handoff"
+        },
+        "subject": {
+          "id": "urn:stdo-skills:T001:q05:codex:handoff:3:worker-subject",
+          "sha256": "2a1c18649904d1930a9f75d3102ca781c9bb0f2a40b3c572c015fdfcd08b0483"
+        },
+        "time_basis": "Stable deciding inputs only; mutable greeting preimage is separate"
+      }
+    },
+    "sources": []
+  },
+  "id": "urn:stdo-skills:T001:q05:codex:handoff:3:prepare:worker-context",
+  "operation": "context.assemble",
+  "schema": "a_c.fd-support.request/1"
+}

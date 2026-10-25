@@ -449,8 +449,8 @@ def _selected_policy(runtime: c.Runtime, request: c.Object) -> tuple[c.Object, c
     return _artifact(runtime, request, "raw", {"schema": "a_c.fd-support.selected-policy/1", "startup_path": str(runtime.policy_path), "sha256": runtime.policy_sha256, "bytes_base64": base64.b64encode(raw).decode("ascii"), "authority": "Existing operator-selected source only; retention grants no authority."})
 
 
-def _ok(request: c.Object, value: c.JSON, artifacts: list[c.JSON] | None = None, reference: c.Object | None = None, acquisitions: list[c.JSON] | None = None) -> c.CoreOutcome:
-    return {"result": {"artifact": reference, "value": value}, "artifacts": [] if artifacts is None else artifacts, "operation_outcome": c.operation_outcome(c.text(request["operation"], "operation")), "refusal": None, "acquisitions": [] if acquisitions is None else acquisitions}
+def _ok(runtime: c.Runtime, request: c.Object, value: c.JSON, artifacts: list[c.JSON] | None = None, reference: c.Object | None = None, acquisitions: list[c.JSON] | None = None) -> c.CoreOutcome:
+    return {"result": {"artifact": reference, "value": value}, "artifacts": [] if artifacts is None else artifacts, "operation_outcome": c.operation_outcome(c.text(request["operation"], "operation"), profile=runtime.method_profile), "refusal": None, "acquisitions": [] if acquisitions is None else acquisitions}
 
 
 def _publish_graph(store: EvidenceStore, envelopes: list[c.JSON]) -> list[c.JSON]:
@@ -522,7 +522,7 @@ def persist_outcome(runtime: c.Runtime, request: c.Object, outcome: c.CoreOutcom
         response["result"] = None
         response["evidence"] = None
         response["refusal"] = {"code": "evidence_publication_failed", "reason": "Output durable publication is not established", "gaps": [original.code, original.reason, *original.gaps], "source_refs": original.source_refs}
-        response["operation_outcome"] = c.operation_outcome(c.text(request["operation"], "operation"), code="evidence_publication_failed")
+        response["operation_outcome"] = c.operation_outcome(c.text(request["operation"], "operation"), code="evidence_publication_failed", profile=runtime.method_profile)
         return response
 
 
@@ -590,7 +590,7 @@ def _owner_binding(runtime: c.Runtime, request: c.Object, envelope: c.Object,
     if schema == "a_c.fd-support.request-claim/1" and payload["policy_sha256"] != provenance["policy_sha256"]:
         raise c.SupportError("history_incomplete", "Committed claim policy/provenance is incoherent", [], [])
     product = c.as_object(runtime.policy["product"])
-    expected: c.Object = {"product_id": product["definition_id"], "definition_sha256": c.as_object(product["definition"])["sha256"], "requester_principal": runtime.principal_id, "policy_sha256": runtime.policy_sha256, "method_profile_sha256": c.PROFILE_SHA256, "actor": runtime.principal}
+    expected: c.Object = {"product_id": product["definition_id"], "definition_sha256": c.as_object(product["definition"])["sha256"], "requester_principal": runtime.principal_id, "policy_sha256": runtime.policy_sha256, "method_profile_sha256": runtime.method_profile["sha256"], "actor": runtime.principal}
     if saved != request or any(provenance[name] != value for name, value in expected.items()):
         raise c.SupportError("request_identity_conflict", "Committed owner binds different effective request/Product/principal/policy", [request["id"]], [])
 
@@ -672,7 +672,7 @@ def _preflight(runtime: c.Runtime, store: EvidenceStore, request: c.Object, plan
     if refs:
         ref = c.as_object(refs[0])
         payload = c.load_artifact(runtime, ref, "preflight")["payload"]
-        return _ok(request, payload, reference=ref)
+        return _ok(runtime, request, payload, reference=ref)
     if previous["complete"] is not True:
         raise c.SupportError("history_incomplete", "Cannot establish absence of an earlier complete receipt", c.as_list(previous["gaps"]), [])
     with store._lock("scope:" + _product(runtime)):
@@ -688,7 +688,7 @@ def _preflight(runtime: c.Runtime, store: EvidenceStore, request: c.Object, plan
         # self-reference is inserted into its own immutable receipt.
         envelope, ref = _artifact(runtime, request, "preflight", payload, target=cast(str | None, plan["target_principal"]))
         store.retain(envelope)
-        return _ok(request, payload, [envelope], ref)
+        return _ok(runtime, request, payload, [envelope], ref)
 
 
 def _target_state(path: Path) -> c.Object:
@@ -778,7 +778,7 @@ def _write(runtime: c.Runtime, store: EvidenceStore, request: c.Object, plan: c.
             result_envelope, ref = _artifact(runtime, request, "raw", result, started=started)
             store.retain(result_envelope)
             _fault("writer:after_result_observation")
-            return _ok(request, result, [result_envelope], ref)
+            return _ok(runtime, request, result, [result_envelope], ref)
         except (OSError, c.SupportError) as error:
             state = _target_state(path)
             detail = error.document() if isinstance(error, c.SupportError) else {"external_failure": str(error)}
@@ -876,7 +876,7 @@ def _observe(runtime: c.Runtime, store: EvidenceStore, request: c.Object) -> c.C
         elif payload["kind"] == "effect_observation":
             effect = c.as_object(payload["data"])["effect"]
     value: c.Object = {"attempt": ref, "anchor": anchor, "events": selected, "cursor": len(events), "process_end": process_end, "output": output, "effect": effect, "history_gaps": gaps, "consumer_receipt": "unknown", "limits": ["Process exit alone proves neither intended outcome nor descendant/external end."]}
-    return _ok(request, value)
+    return _ok(runtime, request, value)
 
 
 def _cancel(runtime: c.Runtime, store: EvidenceStore, request: c.Object) -> c.CoreOutcome:
@@ -896,9 +896,9 @@ def _cancel(runtime: c.Runtime, store: EvidenceStore, request: c.Object) -> c.Co
     if len(prior_refs) > 1:
         raise c.SupportError("basis_ambiguous", "Conflicting cancellation identities require reconciliation", prior_refs, [])
     if prior_refs:
-        return _ok(request, {"attempt": ref, "request_event": prior_refs[0], "effect": "completion_unknown", "end_established": False, "limits": ["Existing cancellation request returned without another signal request."]})
+        return _ok(runtime, request, {"attempt": ref, "request_event": prior_refs[0], "effect": "completion_unknown", "end_established": False, "limits": ["Existing cancellation request returned without another signal request."]})
     event = _event(runtime, store, request, ref, "cancel_requested", {"reason": args["reason"], "requester": runtime.principal_id, "signal_delivery": "not-yet-observed", "end_established": False})
-    return _ok(request, {"attempt": ref, "request_event": event, "effect": "completion_unknown", "end_established": False, "limits": ["The live supervisor may deliver the request; cancellation is not completion or rollback."]})
+    return _ok(runtime, request, {"attempt": ref, "request_event": event, "effect": "completion_unknown", "end_established": False, "limits": ["The live supervisor may deliver the request; cancellation is not completion or rollback."]})
 
 
 def _wait(runtime: c.Runtime, store: EvidenceStore, request: c.Object) -> c.CoreOutcome:
@@ -919,7 +919,7 @@ def _wait(runtime: c.Runtime, store: EvidenceStore, request: c.Object) -> c.Core
         result = c.as_object(c.as_object(outcome["result"])["value"])
         if c.as_list(result["events"]) or time.monotonic_ns() >= end:
             result["fallback"] = {"purpose": args["purpose"], "stop_condition": args["stop_condition"], "timeout_ms": timeout, "cadence_ms": cadence, "timed_out": not c.as_list(result["events"])}
-            return _ok(request, result)
+            return _ok(runtime, request, result)
         remaining = max(0, end - time.monotonic_ns())
         time.sleep(min(cadence * 1_000_000, remaining) / 1_000_000_000)
 
@@ -972,6 +972,7 @@ def _executor(runtime: c.Runtime, executor_id: str) -> c.Object:
     environment = c.as_object(executor["environment"])
     if any(not isinstance(value, str) for value in environment.values()):
         raise c.SupportError("contract_violation", "Registered environment must be an exact string map", [], [])
+    c.environment_passthrough(executor["settings"], environment)
     _directory(Path(c.text(executor["cwd"])))
     for value in c.as_list(executor["observers"]):
         observer = c.as_object(value, "registered observer")
@@ -1050,7 +1051,7 @@ def _dispatch(runtime: c.Runtime, store: EvidenceStore, request: c.Object, key: 
     old = _marker(store, store.root / "requests" / (key + ".attempt.json"))
     if old is not None:
         ref: c.Object = {"id": "sha256:" + c.digest(old), "sha256": c.digest(old)}
-        return _ok(request, {"attempt": ref, "reservation": "existing", "launch": "consult retained observations; never repeated"}, reference=ref)
+        return _ok(runtime, request, {"attempt": ref, "reservation": "existing", "launch": "consult retained observations; never repeated"}, reference=ref)
     grant = c.as_object(c.as_object(runtime.policy["grants"])[c.text(receipt["grant_id"])])
     if "dispatch.start" not in c.as_list(grant["operations"]) or runtime.principal_id not in c.as_list(grant["principals"]):
         raise c.SupportError("authority_missing", "Selected grant does not permit this dispatch requester", [], [])
@@ -1090,6 +1091,10 @@ def _dispatch(runtime: c.Runtime, store: EvidenceStore, request: c.Object, key: 
             binding = _supervisor_binding(runtime, {"id": "anchor-coordinate", "sha256": "anchor-coordinate"})
             binding["argv"] = [*c.as_list(binding["argv"])[:-4], "--attempt-id", "<immutable-anchor-id>", "--attempt-sha256", "<immutable-anchor-sha256>"]
             invocation: c.Object = {"executable": executor["executable"], "argv": executor["argv"], "cwd": executor["cwd"], "environment": executor["environment"], "settings": executor["settings"], "stdin_sha256": context["rendered_sha256"], "stdin_bytes": len(rendered), "supervisor": binding}
+            inherited_names = c.environment_passthrough(executor["settings"], executor["environment"])
+            inherited = {name: os.environ[name] for name in inherited_names if name in os.environ}
+            if inherited_names:
+                invocation["environment_passthrough"] = [{"name": name, "present": name in inherited} for name in inherited_names]
             anchor: c.Object = {"schema": "a_c.fd-support.attempt/1", "preflight": receipt_ref, "context": context_ref, "request": request, "requester": runtime.principal_id, "target": target, "executor": executor_id, "invocation": invocation, "notification": {"sink_id": sink_id, "binding": sink}, "result_key": receipt["result_key"], "retry_of": retry, "reconciliation": reconciliation}
             envelope, reference = _artifact(runtime, request, "attempt", anchor, target=target)
             _mark(store, store.root / "requests" / (key + ".attempt.json"), envelope, "attempt_reservation")
@@ -1100,7 +1105,7 @@ def _dispatch(runtime: c.Runtime, store: EvidenceStore, request: c.Object, key: 
         try:
             _fault("supervisor:before_spawn")
             with open(diagnostics / (prefix + ".stdout"), "xb") as out, open(diagnostics / (prefix + ".stderr"), "xb") as err:
-                process = subprocess.Popen(argv, stdin=subprocess.DEVNULL, stdout=out, stderr=err, cwd=str(Path(__file__).resolve().parent), env={"PATH": os.defpath}, start_new_session=True, close_fds=True)
+                process = subprocess.Popen(argv, stdin=subprocess.DEVNULL, stdout=out, stderr=err, cwd=str(Path(__file__).resolve().parent), env={"PATH": os.defpath, **inherited}, start_new_session=True, close_fds=True)
                 # This local reaper only releases a Popen OS resource. Durable
                 # Attempt/events remain the sole reconstruction evidence.
                 threading.Thread(target=process.wait, name="a_c-supervisor-reaper", daemon=True).start()
@@ -1109,7 +1114,7 @@ def _dispatch(runtime: c.Runtime, store: EvidenceStore, request: c.Object, key: 
         except (OSError, c.SupportError) as error:
             failure = error.document() if isinstance(error, c.SupportError) else {"external_failure": str(error)}
             _event(runtime, store, request, reference, "supervisor_launch_uncertain", {"failure": failure, "effect": "completion_unknown", "repeat_permitted": False})
-        return _ok(request, {"attempt": reference, "reservation": "complete", "launch": "consult retained observations", "unknowns": ["Supervisor receipt is not an actor result or external completion."]}, [envelope], reference)
+        return _ok(runtime, request, {"attempt": reference, "reservation": "complete", "launch": "consult retained observations", "unknowns": ["Supervisor receipt is not an actor result or external completion."]}, [envelope], reference)
 
 
 def execute_effect(runtime: c.Runtime, request: c.Object, plan: c.EffectPlan | None) -> c.CoreOutcome:
@@ -1203,6 +1208,11 @@ def supervise(runtime: c.Runtime, attempt_ref: c.Object) -> int:
         for name in ("executable", "argv", "cwd", "environment", "settings"):
             if invocation[name] != executor[name]:
                 raise c.SupportError("dependency_changed", "Registered invocation differs from the sealed anchor", [name], [])
+        inherited_names = c.environment_passthrough(executor["settings"], executor["environment"])
+        inherited = {name: os.environ[name] for name in inherited_names if name in os.environ}
+        presence = [{"name": name, "present": name in inherited} for name in inherited_names]
+        if invocation.get("environment_passthrough", []) != presence:
+            raise c.SupportError("dependency_changed", "Selected environment presence differs from the sealed launch observation", [], [])
         raw = cast(str, context["rendered_utf8"]).encode("utf-8")
         if _hash(raw) != invocation["stdin_sha256"] or len(raw) != invocation["stdin_bytes"]:
             raise c.SupportError("digest_mismatch", "Actual stdin differs from its sealed Context", [], [])
@@ -1219,7 +1229,7 @@ def supervise(runtime: c.Runtime, attempt_ref: c.Object) -> int:
                     _event(runtime, store, request, ref, "reconciliation_verified", checked)
                 _event(runtime, store, request, ref, "actor_launch_intent", {"invocation": invocation, "external_effect": "not-transactionally-coupled-to-evidence"})
                 _fault("actor:before_spawn")
-                process = subprocess.Popen([c.text(item) for item in c.as_list(executor["argv"])], executable=c.text(c.as_object(executor["executable"])["path"]), stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=c.text(executor["cwd"]), env={key: cast(str, value) for key, value in c.as_object(executor["environment"]).items()}, start_new_session=True, close_fds=True)
+                process = subprocess.Popen([c.text(item) for item in c.as_list(executor["argv"])], executable=c.text(c.as_object(executor["executable"])["path"]), stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=c.text(executor["cwd"]), env={**{key: cast(str, value) for key, value in c.as_object(executor["environment"]).items()}, **inherited}, start_new_session=True, close_fds=True)
                 _fault("actor:after_spawn")
                 _event(runtime, store, request, ref, "actor_started", {"pid": process.pid, "executable": executor["executable"], "settings": executor["settings"], "receipt_scope": "local-process-start-only"})
             # The per-Attempt supervision lock still spans the invocation; only

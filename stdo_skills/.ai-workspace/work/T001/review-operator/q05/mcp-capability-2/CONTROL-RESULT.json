@@ -1,0 +1,139 @@
+{
+  "standing": "Actual control failed after the selected quoted dotted CLI setting was ignored, then host approval refused; no corrected-binding host trial performed",
+  "attempt": "ecff7cf2794db91567c10f6c733ae4c602a277540d952765b16f13c4ec76ded4",
+  "native_observation_evidence": "8c65c6acde05306cf6a21e6cfd9f12a66d457fffe50d2ef25f795f843ebe5ab3",
+  "elapsed_seconds": 13.432916,
+  "host_exit": 0,
+  "mcp_attempts": 1,
+  "actual_refusal": "MCP tool call requires approval, but approval policy is never",
+  "shell_commands_observed": 0,
+  "selected_binding": "Intended only tools.describe exposed and authorized, per-tool approve; actual quoted dotted CLI key was ignored. Workspace-write/global approval/model defaults unchanged.",
+  "actual_public_tool_execution": "No structured tools.describe result reached this host; refusal occurred before tool execution",
+  "consequence": "Do not repeat the ignored quoted-key binding. Exact host supports parsing the table-valued field. Root may select a new narrow read-only control using that form; Executive-authenticated dispatch remains unestablished until actual supported-path evidence exists.",
+  "process_reconciliation": {
+    "pid": 93328,
+    "ps_exit": 1,
+    "ps_stdout": "",
+    "scope": "Only the recorded host PID; external and descendant effects remain unknown"
+  },
+  "public_events": [
+    {
+      "line": 6,
+      "event": "item.started",
+      "item": {
+        "id": "item_3",
+        "type": "mcp_tool_call",
+        "server": "stdo_q05_probe",
+        "tool": "tools.describe",
+        "arguments": {
+          "schema": "a_c.fd-support.request/1",
+          "id": "q05-codex-mcp-control-describe-1",
+          "operation": "tools.describe",
+          "arguments": {
+            "operation": "dispatch.start"
+          }
+        },
+        "result": null,
+        "error": null,
+        "status": "in_progress"
+      }
+    },
+    {
+      "line": 7,
+      "event": "item.completed",
+      "item": {
+        "id": "item_3",
+        "type": "mcp_tool_call",
+        "server": "stdo_q05_probe",
+        "tool": "tools.describe",
+        "arguments": {
+          "schema": "a_c.fd-support.request/1",
+          "id": "q05-codex-mcp-control-describe-1",
+          "operation": "tools.describe",
+          "arguments": {
+            "operation": "dispatch.start"
+          }
+        },
+        "result": null,
+        "error": {
+          "message": "MCP tool call requires approval, but approval policy is never"
+        },
+        "status": "failed"
+      }
+    }
+  ],
+  "custody": [
+    {
+      "path": "actor-plan.json",
+      "sha256": "5e2d7a691a0d3ab450d0b64d562245794214753e72cb57820a58da16e9533464"
+    },
+    {
+      "path": "MCP-POLICY.json",
+      "sha256": "7ca848a9ae6c99178e4d69ad8511b4a159a766167d5177182ce05fa4efd55ab3"
+    },
+    {
+      "path": "executive-policy.json",
+      "sha256": "68a814d002b87d0e29203bbee2f022a57f210acf30899163716471f6f27fec5d"
+    },
+    {
+      "path": "ordinary-prompt.txt",
+      "sha256": "7ea5f335c9c96e30feaeb71b7bd033612abefef8db0e53570ba893ce169a0710"
+    },
+    {
+      "path": "SOURCE-NOTES.json",
+      "sha256": "12cabf2f57fbe7d81bac215a780a554140e1eab91737b68a4c169ad0133c5d3a"
+    },
+    {
+      "path": "CONTROL-OBSERVATION-1.json",
+      "sha256": "9e70fd702057a8ad31a89224cd12a1f2b1b0dff7c24afb8870bad99539b3a831"
+    },
+    {
+      "path": "actor-output/vendor.stdout",
+      "sha256": "459d6bbc885da0ef8d09a0a6e6094ee740ecba6001908373c3951b7e70107d0c"
+    },
+    {
+      "path": "actor-output/vendor.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "actor-output/process.json",
+      "sha256": "c2f93da2e37c3c850bd77fcd04f43886b481867ff9494a0943c000ca8ad14cd8"
+    },
+    {
+      "path": "actor-output/projection.json",
+      "sha256": "5814e593353db5daddc2e88374b0d66745e60d3f6dad9452011a8f70e4a31db5"
+    }
+  ],
+  "predecessor": {
+    "path": "CONTROL-RESULT-PREDECESSOR.json",
+    "sha256": "8fea861a298ec77461dbceac22190ebc4744e7c2c31f6b87cee6acb9423a1f61",
+    "correction": "The earlier result omitted two preceding host configuration errors and could incorrectly imply that a recognized approval binding had failed."
+  },
+  "configuration_errors": [
+    {
+      "line": 2,
+      "event": "item.completed",
+      "item": {
+        "id": "item_0",
+        "type": "error",
+        "message": "Codex is ignoring 1 unrecognized configuration setting. Check for typos or deprecated settings.\n  session-flags: `mcp_servers.stdo_q05_probe.tools.\"tools.describe\"` is ignored."
+      }
+    },
+    {
+      "line": 3,
+      "event": "item.completed",
+      "item": {
+        "id": "item_1",
+        "type": "error",
+        "message": "Codex is ignoring 1 unrecognized configuration setting. Check for typos or deprecated settings.\n  session-flags: `mcp_servers.stdo_q05_probe.tools.\"tools.describe\"` is ignored."
+      }
+    }
+  ],
+  "causal_attribution": "The two ignored-key errors precede the sole MCP call. This attempt does not test a recognized per-tool approval binding.",
+  "local_configuration_followup": {
+    "path": "config-recognition-1/RESULT.json",
+    "sha256": "ce574e8036e1376a97019978ad90f81b694c794ce1a5fc50eba04317aa48472c",
+    "recognized_form": "mcp_servers.stdo_q05_probe.tools={\"tools.describe\"={approval_mode=\"approve\"}}",
+    "standing": "Validated by actual host config enum controls; approval behavior remains untested for this recognized form."
+  }
+}

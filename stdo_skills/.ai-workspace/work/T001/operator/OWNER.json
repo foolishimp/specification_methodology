@@ -1,0 +1,48 @@
+{
+  "authority_sources": [
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": ".ai-workspace/tickets/active/T-001-skills-dogfood.md",
+      "root": "product",
+      "selector": null,
+      "sha256": "68b017d73184733647531a56348026e1b1b37c2f230f6d891e8550c4c3a892f5"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "DECISIONS.md",
+      "root": "operator",
+      "selector": null,
+      "sha256": "56b5d5fecca4df9d739e4554bf4ac01f32cab52a7e86968ca408ead7aee3280a"
+    }
+  ],
+  "mechanism": {
+    "id": "product-policy-preflight/1",
+    "implementation_sha256": "790ebfb748735a3aaae71ea05b064304ed00ea3f3e2ce98a8427e0920fa3a820",
+    "source": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "build_tenants/graphify/code/ac_support_core.py",
+      "root": "tool",
+      "selector": null,
+      "sha256": "790ebfb748735a3aaae71ea05b064304ed00ea3f3e2ce98a8427e0920fa3a820"
+    }
+  },
+  "result_surface": {
+    "consumer": "root-executive",
+    "namespace": "T001",
+    "root": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/operator/protected-evidence"
+  },
+  "scope": {
+    "common_inventory_sha256": "a6d348b8385ea453ce29362fb9d74559304b1b91743b3c9ea31a83a9f02b5f2d",
+    "executive": "/root",
+    "manifest_sha256": "60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8",
+    "method": "stdo://releases/v3.0.1-rc.1/",
+    "no_global_configuration_changes": true,
+    "no_publication": true,
+    "owner": "Jim",
+    "product": "urn:stdo:product-definition:stdo-skills",
+    "work": "T001 two independent skill tenant candidates"
+  }
+}

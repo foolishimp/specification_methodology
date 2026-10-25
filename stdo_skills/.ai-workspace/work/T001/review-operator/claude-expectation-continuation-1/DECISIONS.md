@@ -1,0 +1,7 @@
+# One source-only expectation continuation
+
+Root selected one 600-second continuation of actual review session 628dfe7c-13d9-4c76-8146-64fd9787ee38 after its300-second source-only phase timed out. Same declared Reviewer, same36-file claim, exact released methodology, tool implementation and inherited model/effort settings. No candidate bytes may be acquired before recording actual source-derived expectations. Prior source acquisitions remain attributed to their original operation and actor; no earlier review judgment is substituted.
+
+The actual operation cdd9ae5b2b78e83285dd9ab22a0d09727bd24351a73c2bf1f0ca76f4f5e99157 already delivered the9 governing slices. This continuation should use that retained source knowledge and those exact AcquisitionRefs, derive compact falsifiable expectations and record them through review.prepare. No schema/inventory research, scratch files, or on-disk decoding loops. If selected text is genuinely missing, source.read with encoding=utf8 or decode base64 in memory only.
+
+The same Product owner and protected evidence surface apply. This is a new activation, not replay of the timed-out dispatch. Direct process closure is observed; unknown external effects remain explicit. --resume selects the exact session and --system-prompt-snapshot off makes the new bounded instruction effective. No global, source, candidate or model override is made. Root will select later900-second candidate assessment only after actual expectation evidence exists.

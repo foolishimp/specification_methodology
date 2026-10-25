@@ -1,0 +1,89 @@
+{
+  "assessor": "skills_lifecycle_fixture_writer",
+  "attempt": "b74995164c8b9e954490462cc6a81ccaac6a6551d3f9db87c0ab7660a9bb40b6",
+  "case_lane": "codex-release-deploy",
+  "census": {
+    "path": "results/codex-release-deploy/CENSUS.json",
+    "sha256": "9bc922e542279735677f21c0c93839b75966750676ad50d78ba2cbb6249849fe"
+  },
+  "cost": {
+    "monetary_cost": "unknown",
+    "native_usage": [
+      {
+        "event": "turn.completed",
+        "line": 116,
+        "reported_cost_usd": null,
+        "reported_usage": {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 1117440,
+          "input_tokens": 1191306,
+          "output_tokens": 13962,
+          "reasoning_output_tokens": 4134
+        }
+      }
+    ],
+    "resolved_backend": "not observed",
+    "wall_seconds": 320.589629
+  },
+  "dispatch_evidence": "b3263fe6f946ffdec15e873af7cb34ca16cef0427fe2897f5a479b89bc54384f",
+  "limits": [
+    "One finite local deployment witness; not remote publication or Product acceptance.",
+    "No statistical reliability, comparative efficiency or whole-method qualification claim."
+  ],
+  "observations": {
+    "path": "results/codex-release-deploy/INVENTORY.json",
+    "sha256": "5cb19436a50a69fed0ef3647b5cd95bb370fb65e3e003dbde8ef5893d492a6cb"
+  },
+  "oracle": {
+    "path": "lifecycle/ORACLE.json",
+    "sha256": "d5cef9339d10523baf6005980b3c7a09d5eb53c615fba33a89f925f482ec1467"
+  },
+  "predicates": [
+    {
+      "case": "Q11.deploy",
+      "evidence": {
+        "actual_final_verification_raw_line": 114,
+        "actual_final_verification_returncode": 0,
+        "manifest": {
+          "path": "results/codex-release-deploy/postimages/deploy-test/manifest.json",
+          "sha256": "ce71758abbf18193dfc3a2c588c228668e0b9065ed1b5e3cf96fb80a01acac35"
+        },
+        "payload": {
+          "path": "results/codex-release-deploy/postimages/deploy-test/payload.txt",
+          "sha256": "b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2"
+        },
+        "report": {
+          "path": "results/codex-release-deploy/postimages/outputs/deployment.md",
+          "sha256": "fdf3245b56401007aaf7beb98fd9d84aa4d8d9a3b86f5d2f331e50540ba678d6"
+        }
+      },
+      "interpretation": "Actual native Writer replaced two scoped destination files, then wrote report. Source-linked original/retained/installed bytes and manifest linkage match. Only the three selected files changed, all 24 other files and file modes preserved. Selected RC identifier retained; no second final cut, publication or acceptance inferred.",
+      "outcome": "supported",
+      "predicate": "Separate Root-selected exact local deployment installs and verifies original prepared bytes"
+    }
+  ],
+  "prior_preparation_assessment": {
+    "path": "lifecycle/assessments/codex-release-prepare.json",
+    "sha256": "f4fc60aaebec80974071fe3c5d60404a4774b10be76f06751d5fccad16cd8a35"
+  },
+  "schema": "stdo_skills.lifecycle-assessment/1",
+  "standing": "Bounded Writer assessment for Root and independent review",
+  "transport": "One MCP discovery approval refusal retained; exact previously declared native CLI used. Actual read-only git status returned 128 because fixture is not a Git repository; no git effect claimed.",
+  "writes": [
+    {
+      "evidence": "59438cfe408f7b208493d6ae929e73c2b51bbb3248c634598e7d162aa32b53c1",
+      "request_id": "deploy-write-payload-001",
+      "status": "ok"
+    },
+    {
+      "evidence": "221f25421976c64b7cc2060ebdceeaa559cd3d571a29a95c02fc338ad2cb4660",
+      "request_id": "deploy-write-manifest-001",
+      "status": "ok"
+    },
+    {
+      "evidence": "9000bbec8d25b8738577f6399259c9ae65d45a28a9cff49776784d6923624090",
+      "request_id": "deploy-write-report-001",
+      "status": "ok"
+    }
+  ]
+}

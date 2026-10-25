@@ -102,9 +102,28 @@ claim that it covers all host effects or all dynamically loaded dependencies.
 `HOME`, `home` and `CODEX_HOME` cannot appear in the plan environment. If already
 present in the registered helper process, they pass through unchanged and are
 recorded separately with that provenance. Absent values stay absent. The
-helper reads no credentials or authentication files. Other selected environment
-values are explicit; an operator must not place credential values in the plan
-or its retained evidence. Existing CLI authentication stays with that CLI.
+helper reads no authentication files. Other selected environment values are
+explicit; an operator must not place credential values in the plan or its
+retained evidence.
+
+For Claude OAuth supplied through the invoking process environment, the trusted
+operator may select `settings.environment_passthrough` as
+`["CLAUDE_CODE_OAUTH_TOKEN"]` in **both** the registered Executor and the fixed
+actor plan. This is a reserved setting with a fixed supported-name allowlist;
+it does not accept caller selectors, token values or alternate variable names.
+The named credential is forbidden in either serialized `environment` map.
+Without the setting, the existing exact environment behavior is unchanged.
+
+Dispatch privately copies the existing selected value into the supervisor;
+the supervisor privately copies it into the registered helper; the helper
+privately copies it into the vendor process. Values are unchanged, never
+serialized or hashed by these boundaries. Attempt and helper invocation
+records contain selected names and presence booleans only. Absence stays
+absent, and authentication success is never inferred from presence. A selected
+name present in the dispatcher but absent in a resumed supervisor is refused
+as a changed launch observation. Credential identity is deliberately not
+pinned or proven by this mechanism. Raw vendor output remains exact; the
+registered vendor must not emit credential values into its own output.
 
 The selected decoder is part of the frozen plan:
 
@@ -164,3 +183,13 @@ any proposed Codex packet rather than claiming only-tools isolation.
 The helper tests use controlled Python subprocesses with simulated vendor
 streams. They establish transport discriminators and never establish actual
 model usability, independence, cost/quality benefit or a Product acceptance.
+
+## Explicit native STDO 3.0.1 consumer
+
+The read-only setup also accepts `--profile stdo-3.0.1 --product-root <consumer>
+--definition-name <consumer-definition.json>`. It checks the consumer's exact
+released 3.0.1 basis and uses the shipped native profile. Its mechanism pin is
+the actual current implementation; it still registers no grants/executors and
+cannot admit work. The [native binding and real-work operator recipe](../../design/fd-support-stdo-3.0.1.md#public-setup-and-use)
+explains the supported lifecycle path and the real Product-located owner/grant
+needed for effects. Native `results.conjoin` remains explicitly unsupported.

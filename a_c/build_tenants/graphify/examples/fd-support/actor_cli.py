@@ -136,7 +136,9 @@ def load_plan(path: Path, expected_sha256: str) -> Plan:
             raise TransportError("Environment must be an explicit string map")
         if name in {"HOME", "home", "CODEX_HOME"}:
             raise TransportError("HOME/home/CODEX_HOME overrides are unsupported")
-    _object(value["settings"])
+    inherited_names = core.environment_passthrough(value["settings"], environment)
+    if inherited_names and value["backend"] != "claude":
+        raise TransportError("The selected credential pass-through is supported only for the Claude backend")
     if DECODERS.get(_text(value["decoder"])) != value["backend"]:
         raise TransportError("Decoder does not match the fixed backend")
     _path(value["evidence_directory"])
@@ -379,8 +381,11 @@ def run(plan: Plan, source: BinaryIO, target: BinaryIO) -> int:
     payload = source.read(_integer(limits["max_input_bytes"]) + 1)
     _save(output / "context.bin", payload)
     # These paths come unchanged from the actual registered helper process,
-    # never from the plan/request. No credential files or values are acquired.
+    # never from the plan/request. Selected credential values are acquired only
+    # into the private child environment and are never recorded or hashed.
     inherited = {name: os.environ[name] for name in ("HOME", "home", "CODEX_HOME") if name in os.environ}
+    inherited_names = core.environment_passthrough(plan.document["settings"], plan.document["environment"])
+    credentials = {name: os.environ[name] for name in inherited_names if name in os.environ}
     invocation: Object = {
         "schema": "a_c.fd-support.actor-cli-invocation/1", "plan_sha256": plan.sha256,
         "backend": plan.document["backend"], "executable": plan.document["executable"],
@@ -395,11 +400,13 @@ def run(plan: Plan, source: BinaryIO, target: BinaryIO) -> int:
         "limitations": ["No shell, prompt append, helper retry, model migration, global configuration or HOME/CODEX_HOME override",
                         "Selected settings/default preservation and complete helper/loader dependencies require exact operator proof; labels are declarations"],
     }
+    if inherited_names:
+        invocation["environment_passthrough"] = [{"name": name, "present": name in credentials} for name in inherited_names]
     _save_json(output / "invocation.json", invocation)
     if not invocation["input_complete"]:
         _save_json(output / "result.json", {"output_available": False, "actor_launched": False, "failure": "input byte bound exceeded; retained Context prefix only"})
         return 2
-    observed = _capture(plan, payload, output, inherited)
+    observed = _capture(plan, payload, output, {**inherited, **credentials})
     _save_json(output / "process.json", observed)
     if not observed["output_available"]:
         _save_json(output / "result.json", {"output_available": False, "actor_launched": observed["pid"] is not None, "failure": observed["failure"], "semantic_result": None})

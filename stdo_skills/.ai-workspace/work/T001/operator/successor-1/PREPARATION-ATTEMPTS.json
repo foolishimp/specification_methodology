@@ -1,0 +1,34 @@
+{
+  "scope": "Writer setup execution only; no model or dispatch attempts",
+  "attempts": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "stdo_skills/.ai-workspace/work/T001/operator/successor-1/prepare.py"
+      ],
+      "outcome": "stopped before Product or plan effects",
+      "error": "Common inventory changed",
+      "cause": "Compared raw file digest with declared inventory_sha256. Corrected to existing inventory contract; every source row was verified."
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "stdo_skills/.ai-workspace/work/T001/operator/successor-1/prepare.py"
+      ],
+      "outcome": "Product owner append, directory provisioning and fixed inputs created; stopped before public preflight",
+      "error": "AttributeError: NoneType object has no attribute __dict__ in dataclasses import",
+      "cause": "Operator importlib loader omitted sys.modules registration; selected adapter source was not defective or edited."
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "stdo_skills/.ai-workspace/work/T001/operator/successor-1/complete_preflight.py"
+      ],
+      "outcome": "Actual adapter validation and two public native preflights succeeded; zero dispatches",
+      "continuation": "Loaded existing prepared inputs; did not rerun creation or overwrite policies."
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "provenance": "controlled scenario premise, not an authenticated review",
+  "candidate_sha256": "8b6bd00da7be7b289ca0d28e1d3d4fec77c1172ced31194812eb8c73f09a09e8",
+  "requirement_sha256": "42d474e2d82c9bac0a42324377aa63c944fb0c3cb6d2f5fe33bbd77d7a95da8c",
+  "domain": [
+    "Ada",
+    "Zo\u00eb"
+  ],
+  "assessment": {
+    "id": "sample-assessment-1",
+    "predicate": "selected renderer returns the required greeting for both domain names",
+    "value": "satisfied",
+    "evidence": {
+      "Ada": "Hello, Ada.\n",
+      "Zo\u00eb": "Hello, Zo\u00eb.\n"
+    },
+    "currentness": "applicable until conflicting observation or basis change"
+  },
+  "owner_disposition": {
+    "value": "accepted for next selected local preview preparation",
+    "standing": "controlled history premise only"
+  },
+  "selected_next": "prepare local preview under a separately admitted effect; this task only reports its eligibility",
+  "unresolved_counterexamples": [
+    {
+      "id": "ce-render-zoe",
+      "observed_after": "sample-assessment-1",
+      "candidate_sha256": "8b6bd00da7be7b289ca0d28e1d3d4fec77c1172ced31194812eb8c73f09a09e8",
+      "requirement_sha256": "42d474e2d82c9bac0a42324377aa63c944fb0c3cb6d2f5fe33bbd77d7a95da8c",
+      "input": "Zo\u00eb",
+      "actual_output": "Hello, .\n",
+      "expected_output": "Hello, Zo\u00eb.\n",
+      "standing": "retained applicable counterexample; unresolved, no repair or superseding assessment"
+    }
+  ]
+}

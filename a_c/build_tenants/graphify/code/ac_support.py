@@ -210,9 +210,9 @@ def _rpc_result(request_id: Wire, value: Object) -> WireObject:
     return {"jsonrpc": "2.0", "id": request_id, "result": cast(Wire, value)}
 
 
-def _tool_entries() -> list[JSON]:
+def _tool_entries(runtime: core.Runtime | None = None) -> list[JSON]:
     result: list[JSON] = []
-    entries = cast(list[JSON], core.inventory()["operations"])
+    entries = cast(list[JSON], core.inventory(profile=None if runtime is None else runtime.method_profile)["operations"])
     for entry in entries:
         contract = cast(Object, entry)
         name = cast(str, contract["name"])
@@ -253,7 +253,7 @@ def serve_mcp(
     maximum = _message_limit(runtime) if runtime is not None else BOOTSTRAP_MAX_MESSAGE_BYTES
     initializing = False
     initialized = False
-    tools = _tool_entries() if runtime is not None else []
+    tools = _tool_entries(runtime) if runtime is not None else []
     names = {cast(str, cast(Object, tool)["name"]) for tool in tools}
     while True:
         raw = source.readline(maximum + 1)

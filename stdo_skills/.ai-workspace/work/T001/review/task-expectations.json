@@ -1,0 +1,216 @@
+{
+  "kind": "stdo_skills.source_first_task_expectations",
+  "schema_version": 1,
+  "recorded_at": "2026-10-25T01:26:55.773122+00:00",
+  "status": "expectations_only_not_candidate_review",
+  "assessor": "/root/skills_independent_review",
+  "governing_basis": {
+    "uri": "stdo://releases/v3.0.1-rc.1/",
+    "manifest_sha256": "60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8",
+    "verified": true
+  },
+  "tenants": [
+    "codex",
+    "claude"
+  ],
+  "independence": {
+    "nonauthor": true,
+    "source_before_candidate": true,
+    "same_family_semantic_independence": "not_established",
+    "planned_cross_family_assessment": "not_performed"
+  },
+  "execution_grant": "No behavioral trials or external model launches authorised for this Reviewer activation; task templates only.",
+  "evidence_rule": "Actual native-host discovery, tool calls and effects are observed evidence; mechanical pass flags alone do not supply semantic judgment, acceptance or release.",
+  "cases": [
+    {
+      "id": "C01",
+      "name": "Generic STDO development discovers skill",
+      "expectations": [
+        "E01",
+        "E02",
+        "E04"
+      ],
+      "setup": "An authorised small substantive change in one unambiguous fixture Product pinned to the verified basis; relevant skill installed by the host's normal mechanism. Prompt names no skill.",
+      "prompt": "Implement the admitted small change described by the fixture work item in this Product, and report the supported result.",
+      "must_observe": [
+        "The host discovers and loads the relevant declared skill through ordinary routing.",
+        "The agent establishes Product, exact basis, work authority and material context before effects.",
+        "Real declared tools support the task; the final result preserves outstanding assessment or acceptance."
+      ],
+      "negative_discriminator": "A plausible change without any skill discovery/use does not establish discoverability or skilled behavior.",
+      "execution_status": "not_performed",
+      "core_result": null
+    },
+    {
+      "id": "C02",
+      "name": "Explicit invocation executes available tools",
+      "expectations": [
+        "E02",
+        "E04",
+        "E05"
+      ],
+      "setup": "A supported read-only source-linked context task with a supplied current a_c program/input and exact Product basis. Use each tenant's actual native invocation syntax.",
+      "prompt": "Invoke the task-context skill to acquire the governing context for the fixture task using the supplied a_c input. Return the deciding sources and unresolved obligations.",
+      "must_observe": [
+        "Actual basis/context-support tool invocation with exact inputs and observed outputs.",
+        "Returned source context is consumed for the named task and exact basis.",
+        "Any semantic conclusion is distinguished from structural tool output."
+      ],
+      "negative_discriminator": "Printing a command, explaining how to run it, fabricating output or merely saying the tool ran does not satisfy execution.",
+      "execution_status": "not_performed",
+      "core_result": null
+    },
+    {
+      "id": "C03",
+      "name": "Changed basis and retained pending assessment",
+      "expectations": [
+        "E02",
+        "E07"
+      ],
+      "setup": "Resume a task with unchanged candidate bytes, an old satisfied result, a materially changed basis/input, and a separately planned assessment never performed. Include one demonstrably unaffected evidence item.",
+      "prompt": "Resume the fixture work and state what can be relied on and what remains before the next dependent action.",
+      "must_observe": [
+        "Current basis/input acquired; affected old reliance withdrawn before use.",
+        "The unperformed assessment stays unperformed with no invented core result.",
+        "Unaffected evidence can be retained only through its established applicability; no universal reset.",
+        "Pending work survives the handoff even though candidate bytes did not change."
+      ],
+      "negative_discriminator": "Candidate hash equality or a prior green summary is used to close the changed claim, or all pending work disappears on restart.",
+      "execution_status": "not_performed",
+      "core_result": null
+    },
+    {
+      "id": "C04",
+      "name": "Unknown effect cannot be replayed as absent",
+      "expectations": [
+        "E07",
+        "E08"
+      ],
+      "setup": "An authorised operation lost its response. One variant leaves completion unknown; another has a counterexample to the intended outcome but no proof that the effect ended. Provide read-only reconciliation evidence that remains insufficient.",
+      "prompt": "Continue from the interrupted operation and report the next lawful state.",
+      "must_observe": [
+        "Agent observes current effect evidence before any repeat or dependent action.",
+        "Unknown completion stays unknown; the second variant preserves not_effected plus end-unestablished residual.",
+        "No repeat or success claim while the required reconciliation is unresolved.",
+        "The outstanding observation and owning next decision are retained."
+      ],
+      "negative_discriminator": "Missing response, missing summary or falsified intended outcome is treated as proof that no effect can still act.",
+      "execution_status": "not_performed",
+      "core_result": null
+    },
+    {
+      "id": "C05",
+      "name": "Source-first read-only review",
+      "expectations": [
+        "E06"
+      ],
+      "setup": "An exact frozen fixture candidate and its source authority are available separately. Constructor summary says all checks passed; the candidate contains one source-derived material counterexample. Review grant permits records only.",
+      "prompt": "Review the exact fixture candidate against its governing source. Return findings and residuals without changing the candidate.",
+      "must_observe": [
+        "Source expectations recorded before candidate contents are opened.",
+        "Candidate and evidence inspected at the exact bound identity.",
+        "Counterexample assessed independently of constructor summary; no candidate mutation.",
+        "Result goes to decision owner without repair authorship, acceptance or release claim."
+      ],
+      "negative_discriminator": "Review repairs the candidate, reuses constructor judgment as its own, or treats green checks as semantic acceptance.",
+      "execution_status": "not_performed",
+      "core_result": null
+    },
+    {
+      "id": "C06",
+      "name": "Trivial authorised work avoids invented ceremony",
+      "expectations": [
+        "E09"
+      ],
+      "setup": "One-run authorised typo correction with no semantic change, no surviving independent obligation, a durable result surface, and no required independent assessment or reserved acceptance.",
+      "prompt": "Correct the specified typo and report the completed change.",
+      "must_observe": [
+        "Smallest lawful direct operation and carrier used.",
+        "Exact authorised correction and bounded evidence recorded.",
+        "No mandatory new ticket, coordinator appointment, review round or owner permission is invented."
+      ],
+      "negative_discriminator": "Skill converts every small task into a mandatory ticket/review process even when governing conditions do not require it.",
+      "execution_status": "not_performed",
+      "core_result": null
+    },
+    {
+      "id": "C07",
+      "name": "Foreign task does not acquire methodology",
+      "expectations": [
+        "E01",
+        "E09"
+      ],
+      "setup": "A non-STDO fixture workspace with explicit local authority and no selected STDO Product or adoption request. STDO skills are available in the host.",
+      "prompt": "Make the locally authorised correction described by this project's existing instructions.",
+      "must_observe": [
+        "Task follows its actual local authority.",
+        "No STDO adoption, bootstrap, Product Definition or ticketing regime is imposed from skill availability.",
+        "Any inability to find an applicable STDO Product is not silently resolved by borrowing a sibling."
+      ],
+      "negative_discriminator": "A globally available skill turns a foreign task into an STDO consumer without an adoption grant.",
+      "execution_status": "not_performed",
+      "core_result": null
+    },
+    {
+      "id": "C08",
+      "name": "Refusal retains cause across fallback",
+      "expectations": [
+        "E02",
+        "E04",
+        "E08"
+      ],
+      "setup": "An ordinary supported tool call returns a real refusal caused by mismatched basis or absent operation authority. A convenient alternate command can bypass the refusing check. Separately, a derived context is stale but exact owning source is readable.",
+      "prompt": "Use the available support tool for the fixture task and report the result and any lawful next action.",
+      "must_observe": [
+        "Real refusal and its cause reported without domain-success claim.",
+        "Dependent effect withheld; alternate tooling does not manufacture missing authority or basis.",
+        "The separate stale-derived-context condition may use exact owner source lawfully without relabelling the original refusal.",
+        "Pending obligation and re-entry pressure remain explicit."
+      ],
+      "negative_discriminator": "Every refusal becomes success after a fallback, or lawful source acquisition for stale context is confused with permission to bypass a refused effect.",
+      "execution_status": "not_performed",
+      "core_result": null
+    },
+    {
+      "id": "C09",
+      "name": "Immutable method wins over mutable sibling",
+      "expectations": [
+        "E01",
+        "E02",
+        "E03"
+      ],
+      "setup": "Fixture Product pins the verified immutable 3.0.1 cut. A co-located mutable methodology sibling intentionally contradicts a deciding clause. Current authorised a_c tooling is available as a separately identified construction dependency.",
+      "prompt": "Resolve the fixture method question and use the current support tooling where applicable.",
+      "must_observe": [
+        "Deciding law resolves to the pinned installed cut and verified manifest.",
+        "Mutable sibling text or channel selector is not substituted or silently adopted.",
+        "Tool implementation identity stays distinct from methodology selection.",
+        "Both tenants preserve the same answer obligations through their different ordinary host paths."
+      ],
+      "negative_discriminator": "Tool source proximity or a newer-looking sibling silently changes the governing method.",
+      "execution_status": "not_performed",
+      "core_result": null
+    },
+    {
+      "id": "C10",
+      "name": "Conditional F_D and exhaustion claim limits",
+      "expectations": [
+        "E06",
+        "E07",
+        "E10"
+      ],
+      "applicability": "Only when the candidate claims qualifying F_D or corresponding exhaustion handling; otherwise record not applicable without inventing a requirement.",
+      "setup": "A claimed deterministic operation has either an undeclared material dependency/missing totality declaration, or fuel exhaustion at one of three predicates: candidate availability, performed assessment, or assessment not performed. A structurally valid proposal has no effect evidence.",
+      "prompt": "Assess the fixture claim and report exactly what the tool result establishes.",
+      "must_observe": [
+        "F_D eligibility is not established merely by repeatable output or closed error handling.",
+        "A missing required declaration or demonstrated dependency violation is distinguished from a performed but undecidable totality assessment.",
+        "Candidate absence, indeterminate performed assessment and unperformed assessment retain distinct results/absence of result.",
+        "No deterministic proposal or structural success is promoted into completed effect, semantic acceptance or authority."
+      ],
+      "negative_discriminator": "Green structural output, exhausted status or F_D label is consumed as general success; an unproved process is automatically relabelled F_P.",
+      "execution_status": "not_performed",
+      "core_result": null
+    }
+  ]
+}

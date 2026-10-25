@@ -1,0 +1,431 @@
+{
+  "arguments": {
+    "envelope": {
+      "boundary": "executor-stdin-utf8",
+      "capacity_bytes": null,
+      "host_context": {
+        "bytes": null,
+        "evidence": null,
+        "state": "unknown"
+      }
+    },
+    "late_acquisition": [
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "standards/ACTIVATION.md",
+        "root": "method",
+        "selector": {
+          "lines": [
+            938,
+            1055
+          ]
+        },
+        "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "fixture_product.json",
+        "root": "product",
+        "selector": null,
+        "sha256": "6ed980a5e19a81445c4c0ecc33bd6185a3bb42afc07b8a4d1a3bdc3b30209433"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": ".qualification/OWNER.json",
+        "root": "product",
+        "selector": null,
+        "sha256": "eed988f799576ba8b33bfe2af830edd6d7fe53ac0c8bde13d760268df6102089"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "unrelated/sentinel.txt",
+        "root": "product",
+        "selector": null,
+        "sha256": "56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "roles/reviewer-RETURN-CONTRACT.json",
+        "root": "candidate_phase",
+        "selector": null,
+        "sha256": "ad5ef0e18f16ee1d5b901d39703259e95ba63d472f77daa42ec7de249fadf4c7"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "roles/CLAIM.json",
+        "root": "control",
+        "selector": null,
+        "sha256": "a31fa1c00cf19183cb92cb05339db6a4e0b51afb1d47b3c362ced081199c4cb3"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "roles/INDEPENDENCE.json",
+        "root": "phase",
+        "selector": null,
+        "sha256": "4ebf6eff3b37ba04e6d240d83e9c6f149df48208bedd41e0f5b0ec990dd99aa4"
+      }
+    ],
+    "models": [],
+    "packet": {
+      "activation": {
+        "configuration": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "roles/reviewer-TASK.md",
+          "root": "candidate_phase",
+          "selector": null,
+          "sha256": "15a57bb25acc24e40df13f1deebba86a1b9fedfa5ec11201c0ca3144abbade6a"
+        },
+        "id": "urn:stdo-skills:T001:q05:codex:handoff:3:reviewer:activation:1:reentry1:candidate",
+        "revision": "3"
+      },
+      "actor_authority": {
+        "acceptance": null,
+        "actor_id": "urn:stdo-skills:T001:q05:codex:handoff:3:reviewer",
+        "capability": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "roles/reviewer-TASK.md",
+          "root": "candidate_phase",
+          "selector": null,
+          "sha256": "15a57bb25acc24e40df13f1deebba86a1b9fedfa5ec11201c0ca3144abbade6a"
+        },
+        "decision": null,
+        "evaluation": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "roles/PREDICATES.md",
+          "root": "control",
+          "selector": null,
+          "sha256": "724dee7972dc6f7429bbbd2c018ea76f4b7e05887b6f636db6a07a525ed4c1db"
+        },
+        "operation": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "roles/reviewer-TASK.md",
+          "root": "candidate_phase",
+          "selector": null,
+          "sha256": "15a57bb25acc24e40df13f1deebba86a1b9fedfa5ec11201c0ca3144abbade6a"
+        },
+        "publication": null,
+        "role": "Reviewer",
+        "semantic": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "roles/reviewer-TASK.md",
+          "root": "candidate_phase",
+          "selector": null,
+          "sha256": "15a57bb25acc24e40df13f1deebba86a1b9fedfa5ec11201c0ca3144abbade6a"
+        },
+        "territory": [],
+        "tools": [
+          "a_c.public-native301",
+          "native-codex-reviewer"
+        ]
+      },
+      "attention": {
+        "exclusions": [
+          "unrelated files/oracle/peer lane",
+          "ungranted writes or launches"
+        ],
+        "invariants": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".qualification/OWNER.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "eed988f799576ba8b33bfe2af830edd6d7fe53ac0c8bde13d760268df6102089"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "unrelated/sentinel.txt",
+            "root": "product",
+            "selector": null,
+            "sha256": "56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3"
+          }
+        ],
+        "material_relations": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/SOURCE-ROUTES.json",
+            "root": "candidate_phase",
+            "selector": null,
+            "sha256": "f7e41d905eec8f356af47ed7e70bfcc7b52472b48e32c53c15a4701bb2a264ea"
+          }
+        ],
+        "prohibited_assumptions": [
+          "transport completion is semantic fitness",
+          "temporary name is write authority",
+          "source-only expectation is candidate acceptance"
+        ],
+        "semantic_sources": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/reviewer-TASK.md",
+            "root": "candidate_phase",
+            "selector": null,
+            "sha256": "15a57bb25acc24e40df13f1deebba86a1b9fedfa5ec11201c0ca3144abbade6a"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/PREDICATES.md",
+            "root": "control",
+            "selector": null,
+            "sha256": "724dee7972dc6f7429bbbd2c018ea76f4b7e05887b6f636db6a07a525ed4c1db"
+          }
+        ]
+      },
+      "evidence_relations": {
+        "acquisition": [],
+        "admissible_evidence": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/reviewer-TASK.md",
+            "root": "candidate_phase",
+            "selector": null,
+            "sha256": "15a57bb25acc24e40df13f1deebba86a1b9fedfa5ec11201c0ca3144abbade6a"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/PREDICATES.md",
+            "root": "control",
+            "selector": null,
+            "sha256": "724dee7972dc6f7429bbbd2c018ea76f4b7e05887b6f636db6a07a525ed4c1db"
+          }
+        ],
+        "conjunction": null,
+        "consumer": "urn:stdo-skills:T001:q05:codex:handoff:3:executive",
+        "dependencies": [],
+        "return_contract": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "roles/reviewer-RETURN-CONTRACT.json",
+          "root": "candidate_phase",
+          "selector": null,
+          "sha256": "ad5ef0e18f16ee1d5b901d39703259e95ba63d472f77daa42ec7de249fadf4c7"
+        },
+        "translation": null
+      },
+      "frame": {
+        "declaration": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "roles/reviewer-TASK.md",
+          "root": "candidate_phase",
+          "selector": null,
+          "sha256": "15a57bb25acc24e40df13f1deebba86a1b9fedfa5ec11201c0ca3144abbade6a"
+        },
+        "evaluation": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "roles/PREDICATES.md",
+          "root": "control",
+          "selector": null,
+          "sha256": "724dee7972dc6f7429bbbd2c018ea76f4b7e05887b6f636db6a07a525ed4c1db"
+        },
+        "id": "qualification.q05.reviewer",
+        "result_algebra": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "standards/ACTIVATION.md",
+          "root": "method",
+          "selector": {
+            "lines": [
+              938,
+              1055
+            ]
+          },
+          "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d"
+        },
+        "revision": "3"
+      },
+      "profile_additions": {
+        "reviewer": {
+          "assurance": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/PREDICATES.md",
+            "root": "control",
+            "selector": null,
+            "sha256": "724dee7972dc6f7429bbbd2c018ea76f4b7e05887b6f636db6a07a525ed4c1db"
+          },
+          "claim": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/CLAIM.json",
+            "root": "control",
+            "selector": null,
+            "sha256": "a31fa1c00cf19183cb92cb05339db6a4e0b51afb1d47b3c362ced081199c4cb3"
+          },
+          "composition": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/reviewer-TASK.md",
+            "root": "candidate_phase",
+            "selector": null,
+            "sha256": "15a57bb25acc24e40df13f1deebba86a1b9fedfa5ec11201c0ca3144abbade6a"
+          },
+          "falsification_condition": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/PREDICATES.md",
+            "root": "control",
+            "selector": null,
+            "sha256": "724dee7972dc6f7429bbbd2c018ea76f4b7e05887b6f636db6a07a525ed4c1db"
+          },
+          "independence": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/INDEPENDENCE.json",
+            "root": "phase",
+            "selector": null,
+            "sha256": "4ebf6eff3b37ba04e6d240d83e9c6f149df48208bedd41e0f5b0ec990dd99aa4"
+          },
+          "oracle": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/PREDICATES.md",
+            "root": "control",
+            "selector": null,
+            "sha256": "724dee7972dc6f7429bbbd2c018ea76f4b7e05887b6f636db6a07a525ed4c1db"
+          },
+          "ordinary_module_path": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/reviewer-TASK.md",
+            "root": "candidate_phase",
+            "selector": null,
+            "sha256": "15a57bb25acc24e40df13f1deebba86a1b9fedfa5ec11201c0ca3144abbade6a"
+          },
+          "population": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/CLAIM.json",
+            "root": "control",
+            "selector": null,
+            "sha256": "a31fa1c00cf19183cb92cb05339db6a4e0b51afb1d47b3c362ced081199c4cb3"
+          },
+          "severity_scale": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/PREDICATES.md",
+            "root": "control",
+            "selector": null,
+            "sha256": "724dee7972dc6f7429bbbd2c018ea76f4b7e05887b6f636db6a07a525ed4c1db"
+          }
+        }
+      },
+      "stop_change": {
+        "invalidators": [
+          "source/package drift",
+          "unreconciled effects",
+          "candidate differs from selected population"
+        ],
+        "re_entry": [
+          "Root selects exact successor; preserve every attempt"
+        ],
+        "reconfiguration": [
+          "Root-selected setup correction after retained refusal; no candidate exposure or Worker retry in Codex lane",
+          "Actual expectation pinned; candidate/proof now selected after source-first phase"
+        ],
+        "residuals": [
+          "total model cost and host context size unknown",
+          "external/process-tree effects unknown",
+          "same-family limitation where declared"
+        ],
+        "stop_conditions": [
+          "selected ceiling",
+          "unsupported required operation"
+        ]
+      },
+      "subject_basis": {
+        "dependencies": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "fixture_product.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "6ed980a5e19a81445c4c0ecc33bd6185a3bb42afc07b8a4d1a3bdc3b30209433"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".qualification/OWNER.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "eed988f799576ba8b33bfe2af830edd6d7fe53ac0c8bde13d760268df6102089"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/reviewer-TASK.md",
+            "root": "candidate_phase",
+            "selector": null,
+            "sha256": "15a57bb25acc24e40df13f1deebba86a1b9fedfa5ec11201c0ca3144abbade6a"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/PREDICATES.md",
+            "root": "control",
+            "selector": null,
+            "sha256": "724dee7972dc6f7429bbbd2c018ea76f4b7e05887b6f636db6a07a525ed4c1db"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/SOURCE-ROUTES.json",
+            "root": "candidate_phase",
+            "selector": null,
+            "sha256": "f7e41d905eec8f356af47ed7e70bfcc7b52472b48e32c53c15a4701bb2a264ea"
+          }
+        ],
+        "method_profile": {
+          "id": "urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1",
+          "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+        },
+        "observations": [
+          {
+            "id": "sha256:c8b30f165899c9d1ca908e421f0f0cbd020086a4cf9d1909be10b9eb9fd39ac2",
+            "sha256": "c8b30f165899c9d1ca908e421f0f0cbd020086a4cf9d1909be10b9eb9fd39ac2"
+          }
+        ],
+        "product": {
+          "definition": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "fixture_product.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "6ed980a5e19a81445c4c0ecc33bd6185a3bb42afc07b8a4d1a3bdc3b30209433"
+          },
+          "id": "urn:stdo:product-definition:qualification-reviewed-handoff"
+        },
+        "subject": {
+          "id": "urn:stdo-skills:T001:q05:codex:handoff:3:reviewer-subject",
+          "sha256": "a31fa1c00cf19183cb92cb05339db6a4e0b51afb1d47b3c362ced081199c4cb3"
+        },
+        "time_basis": "Stable deciding inputs only; mutable greeting preimage is separate"
+      }
+    },
+    "sources": []
+  },
+  "id": "urn:stdo-skills:T001:q05:codex:handoff:3:candidate-preparation:reviewer-context",
+  "operation": "context.assemble",
+  "schema": "a_c.fd-support.request/1"
+}

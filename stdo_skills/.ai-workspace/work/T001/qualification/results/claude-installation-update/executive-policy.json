@@ -1,0 +1,696 @@
+{
+  "authority_sources": [
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": ".qualification/OWNER.json",
+      "root": "product",
+      "selector": null,
+      "sha256": "0d9e33531eb24a4f7b3587085dc5c212f20c90bd0aa77bd6132d8c22a697b730"
+    }
+  ],
+  "event_sinks": {
+    "events": {
+      "authority_source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": ".qualification/OWNER.json",
+        "root": "product",
+        "selector": null,
+        "sha256": "0d9e33531eb24a4f7b3587085dc5c212f20c90bd0aa77bd6132d8c22a697b730"
+      },
+      "consumer": "qualification-executive",
+      "directory": "notifications",
+      "kind": "durable-file-events",
+      "retention": "indefinite"
+    }
+  },
+  "evidence_root": "/private/tmp/stdo-skills-installation-w8g_16zt/claude/control/evidence",
+  "executors": {
+    "trial": {
+      "actor_id": "urn:stdo-skills:qualification:claude:installation-update:physical-launcher",
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/qualification/launch_fixture.py",
+        "--config",
+        "/private/tmp/stdo-skills-installation-w8g_16zt/claude/control/launch.json",
+        "--config-sha256",
+        "9905dbc36449bfc14ed3ffb1017f61ed8863099786c9b4dbb5628bf437366333"
+      ],
+      "cwd": "/private/tmp/stdo-skills-installation-w8g_16zt/claude/workspace",
+      "dependencies": [
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "launch_fixture.py",
+          "root": "fixture_code",
+          "selector": null,
+          "sha256": "69934b44a39e22437f105c3906e15cf42f70ad96bb4ea03047bea5927d9d2b8b"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/code/ac_support_core.py",
+          "root": "tool",
+          "selector": null,
+          "sha256": "bf72a28444e0497cd564066e41c7e5943810d5a2e0be5488c92fa5add5a67209"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/examples/fd-support/actor_cli.py",
+          "root": "tool",
+          "selector": null,
+          "sha256": "3f0bd239339e635f4e49ae89a00f0857f4672cb177a5dd2ce03f124f0b116528"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "launch.json",
+          "root": "control",
+          "selector": null,
+          "sha256": "9905dbc36449bfc14ed3ffb1017f61ed8863099786c9b4dbb5628bf437366333"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "actor-plan.json",
+          "root": "control",
+          "selector": null,
+          "sha256": "2f0797aa2086e85fa304b489917f0d15356e38c679ed6915ef0a521e56ffc9c8"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "ordinary-prompt.txt",
+          "root": "control",
+          "selector": null,
+          "sha256": "34171c56605fe7772fdc49e479c73c741cb7647fb5908c7ee1bf4fffc7bb90c2"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "worker-policy.json",
+          "root": "control",
+          "selector": null,
+          "sha256": "60c7b41a65b430308d4b37bb930cfe31e311e6106b6926ba0ac7d0b5381ff0da"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "mcp.json",
+          "root": "control",
+          "selector": null,
+          "sha256": "2f3cdf098dd609ff7b69d45951fb0fbdbf6d8e8743403f7a7e84ed5acf90437c"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "2.1.306",
+          "root": "host_vendor",
+          "selector": null,
+          "sha256": "b5d795b7760032d79954b55a9cd1876dcf3a8dc9608fd6bb9f618593f69fd44b"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": ".claude/skills/stdo-continuation/SKILL.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "90f3778a97df92796c8d052e4d46ca01e01b1913d3421fa8f421310d03c3cd61"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": ".claude/skills/stdo-delegate-review/SKILL.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "382466083cfb1c76870afbc6b3eda707615a94a7cd90ae692995d6a9d4ecbc13"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": ".claude/skills/stdo-release-install/SKILL.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "ef4831511f78d11015149394ea26c9e899980fb8c9cb40eac278f62de72b6841"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": ".claude/skills/stdo-release-install/references/maintenance.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "54836f3f47e18b2d7c10c05610f8e1dcd4f5b52efa06385ec1c2aa8de05646d0"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": ".claude/skills/stdo-release-install/scripts/manage_install.py",
+          "root": "product",
+          "selector": null,
+          "sha256": "c10608336639fcf6ed87443666dab5e7ca79d3cc84df2f7a80b6ef33c603fabe"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": ".claude/skills/stdo-tool-operations/SKILL.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "a850e36e8136b0db0d233d0bdfc4e8c6b4bc88949be5ea08cc7bb9c2ec4b09a0"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": ".claude/skills/stdo-workspace-change/SKILL.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "ead38d8c2abd89c9ef680d98fc954bd5ff73196850308ee9d375455eba139379"
+        }
+      ],
+      "effect_scope": {
+        "case": "installation-update",
+        "forbidden": [
+          "Git mutations/publication",
+          "remote publication",
+          "global configuration",
+          "oracle acquisition",
+          "unrelated mutation"
+        ],
+        "host_artifact_writes": [
+          "outputs/greeting.txt"
+        ],
+        "physical_executor_writes": [
+          "control/actor-output"
+        ],
+        "projection": "Pinned launcher forwards only the exact selected ordinary prompt; context bookkeeping remains with operator",
+        "purpose": "Owner-selected finite skill qualification; no host semantic result preaccepted",
+        "selection_sha256": "9acf2d7ebb9163f99f3776079f3718b7fc69059d20062342a7fe91358b6f66b1"
+      },
+      "environment": {
+        "AC_ENTRY": "/Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py",
+        "AC_POLICY": "/private/tmp/stdo-skills-installation-w8g_16zt/claude/control/worker-policy.json",
+        "AC_POLICY_SHA256": "60c7b41a65b430308d4b37bb930cfe31e311e6106b6926ba0ac7d0b5381ff0da",
+        "AC_PRINCIPAL": "host",
+        "AC_PYTHON": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "CODEX_HOME": "/Users/jim/.codex",
+        "HOME": "/Users/jim",
+        "LANG": "C.UTF-8",
+        "LC_ALL": "C.UTF-8",
+        "PATH": "/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/Library/Apple/usr/bin:/Library/TeX/texbin:/Users/jim/.codex/packages/app-server-daemon/releases/0.164.0-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0-macos/codex-arg0Mp340K:/Users/jim/.codex/tmp/arg0-macos/codex-arg0yvg77P:/Users/jim/.codex/packages/app-server-daemon/releases/0.163.0-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg0CDnCoA:/Users/jim/.codex/packages/app-server-daemon/releases/0.162.1-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg0Bb4u1U:/Users/jim/.codex/packages/app-server-daemon/releases/0.162.0-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg0LxzuXl:/Users/jim/.codex/packages/app-server-daemon/releases/0.161.0-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg03BXQTA:/Users/jim/.codex/packages/app-server-daemon/releases/0.160.1-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg00N7H4l:/Users/jim/.codex/packages/app-server-daemon/releases/0.160.0-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg0KdMMgl:/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/codex-path:/Users/jim/.grok/bin:/Users/jim/.bun/bin:/Users/jim/google-cloud-sdk/bin:/opt/homebrew/opt/openjdk/bin:/Users/jim/bin:/usr/local/opt/openjdk@17/bin:/Users/jim/.pyenv/shims:/Users/jim/.pyenv/bin:/opt/homebrew/opt/curl/bin:/opt/homebrew/opt/openssl/bin:/Users/jim/.local/bin:/opt/homebrew/bin:/Users/jim/.cargo/bin:/Applications/iTerm.app/Contents/Resources/utilities:/opt/homebrew/bin/flutter",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "TMPDIR": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/"
+      },
+      "executable": {
+        "path": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b"
+      },
+      "id": "trial",
+      "observers": [
+        {
+          "kind": "process-end"
+        }
+      ],
+      "settings": {
+        "environment_passthrough": [
+          "CLAUDE_CODE_OAUTH_TOKEN"
+        ],
+        "termination_grace_ms": 5000,
+        "timeout_ms": 610000
+      },
+      "stdin_mode": "context-utf8",
+      "stdout_decoder": {
+        "decode_json_string": false,
+        "format": "json",
+        "pointer": null
+      },
+      "tools": [
+        "native-host",
+        "a_c.public-native301",
+        "host.read-compute",
+        "host.directory-create"
+      ]
+    }
+  },
+  "grants": {
+    "urn:stdo-skills:qualification:claude:installation-update:launch": {
+      "admission": {
+        "allowed_override_sources": [],
+        "authority_source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": ".qualification/OWNER.json",
+          "root": "product",
+          "selector": null,
+          "sha256": "0d9e33531eb24a4f7b3587085dc5c212f20c90bd0aa77bd6132d8c22a697b730"
+        },
+        "mechanism_id": "product-policy-preflight/1",
+        "mechanism_source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/code/ac_support_core.py",
+          "root": "tool",
+          "selector": null,
+          "sha256": "bf72a28444e0497cd564066e41c7e5943810d5a2e0be5488c92fa5add5a67209"
+        },
+        "required_predicates": []
+      },
+      "authority_sources": [
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": ".qualification/OWNER.json",
+          "root": "product",
+          "selector": null,
+          "sha256": "0d9e33531eb24a4f7b3587085dc5c212f20c90bd0aa77bd6132d8c22a697b730"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "TASK.md",
+          "root": "control",
+          "selector": null,
+          "sha256": "18aed14c626d2212b22edabd6a32020437616e353ed708b1bfdbdf5a5a03b56a"
+        }
+      ],
+      "executors": [
+        "trial"
+      ],
+      "id": "urn:stdo-skills:qualification:claude:installation-update:launch",
+      "notification_sink": "events",
+      "operations": [
+        "contract.preflight",
+        "dispatch.start"
+      ],
+      "outcome": {
+        "id": "urn:stdo-skills:qualification:claude:installation-update",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "TASK.md",
+          "root": "control",
+          "selector": null,
+          "sha256": "18aed14c626d2212b22edabd6a32020437616e353ed708b1bfdbdf5a5a03b56a"
+        }
+      },
+      "preconditions": [
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "TASK.md",
+          "root": "control",
+          "selector": null,
+          "sha256": "18aed14c626d2212b22edabd6a32020437616e353ed708b1bfdbdf5a5a03b56a"
+        }
+      ],
+      "principals": [
+        "executive"
+      ],
+      "targets": [
+        "launcher"
+      ],
+      "territory": [
+        {
+          "kind": "file",
+          "path": "outputs/greeting.txt",
+          "root": "product"
+        }
+      ],
+      "tools": [
+        "native-host",
+        "a_c.public-native301",
+        "host.read-compute",
+        "host.directory-create"
+      ]
+    }
+  },
+  "id": "urn:stdo-skills:qualification:claude:installation-update:policy",
+  "independence_policy": "Source-first oracle remains outside actor input; Root independently assesses exact native trial observations",
+  "limits": {
+    "max_bytes": 67108864,
+    "max_files": 2048,
+    "max_history_records": 50000,
+    "max_message_bytes": 4194304,
+    "max_wait_ms": 1000
+  },
+  "method_profile": {
+    "id": "urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1",
+    "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7",
+    "source": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "build_tenants/graphify/design/fd-method-stdo-3.0.1.json",
+      "root": "tool",
+      "selector": null,
+      "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+    }
+  },
+  "operators": {},
+  "predicates": {},
+  "principals": {
+    "executive": {
+      "actor_id": "qualification-executive",
+      "authorship": "Root qualification coordination",
+      "family": "orchestrator",
+      "operations": [
+        "tools.describe",
+        "workspace.observe",
+        "source.read",
+        "records.find",
+        "records.read",
+        "graph.project",
+        "relations.query",
+        "evidence.read",
+        "work.project",
+        "context.assemble",
+        "contract.preflight",
+        "dispatch.start",
+        "dispatch.observe",
+        "return.capture",
+        "return.check"
+      ],
+      "role": "Executive",
+      "role_binding": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "TASK.md",
+        "root": "control",
+        "selector": null,
+        "sha256": "18aed14c626d2212b22edabd6a32020437616e353ed708b1bfdbdf5a5a03b56a"
+      },
+      "role_transition": null
+    },
+    "host": {
+      "actor_id": "urn:stdo-skills:qualification:claude:installation-update:host",
+      "authorship": "actual native host trial; model observations remain raw",
+      "family": "claude",
+      "operations": [
+        "tools.describe",
+        "workspace.observe",
+        "source.read",
+        "records.find",
+        "records.read",
+        "graph.project",
+        "relations.query",
+        "evidence.read",
+        "work.project",
+        "work.write"
+      ],
+      "role": "Worker",
+      "role_binding": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "TASK.md",
+        "root": "control",
+        "selector": null,
+        "sha256": "18aed14c626d2212b22edabd6a32020437616e353ed708b1bfdbdf5a5a03b56a"
+      },
+      "role_transition": null
+    },
+    "launcher": {
+      "actor_id": "urn:stdo-skills:qualification:claude:installation-update:physical-launcher",
+      "authorship": "pinned projection/capture implementation; no semantic host assessment",
+      "family": "fixed-local-qualification-executor",
+      "operations": [
+        "tools.describe",
+        "workspace.observe",
+        "source.read",
+        "records.find",
+        "records.read",
+        "graph.project",
+        "relations.query",
+        "evidence.read",
+        "work.project"
+      ],
+      "role": "Worker",
+      "role_binding": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "TASK.md",
+        "root": "control",
+        "selector": null,
+        "sha256": "18aed14c626d2212b22edabd6a32020437616e353ed708b1bfdbdf5a5a03b56a"
+      },
+      "role_transition": null
+    }
+  },
+  "product": {
+    "authority_binding": {
+      "definition_locator": "/how/common/1",
+      "mechanism": {
+        "id": "product-policy-preflight/1",
+        "implementation_sha256": "bf72a28444e0497cd564066e41c7e5943810d5a2e0be5488c92fa5add5a67209",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/code/ac_support_core.py",
+          "root": "tool",
+          "selector": null,
+          "sha256": "bf72a28444e0497cd564066e41c7e5943810d5a2e0be5488c92fa5add5a67209"
+        }
+      },
+      "owner_record": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": ".qualification/OWNER.json",
+        "root": "product",
+        "selector": null,
+        "sha256": "0d9e33531eb24a4f7b3587085dc5c212f20c90bd0aa77bd6132d8c22a697b730"
+      },
+      "result_surface": {
+        "consumer": "qualification-executive",
+        "namespace": "results",
+        "root": "/private/tmp/stdo-skills-installation-w8g_16zt/claude/control/evidence"
+      },
+      "scope": {
+        "case": "installation-update",
+        "forbidden": [
+          "Git mutations/publication",
+          "remote publication",
+          "global configuration",
+          "oracle acquisition",
+          "unrelated mutation"
+        ],
+        "host_artifact_writes": [
+          "outputs/greeting.txt"
+        ],
+        "physical_executor_writes": [
+          "control/actor-output"
+        ],
+        "projection": "Pinned launcher forwards only the exact selected ordinary prompt; context bookkeeping remains with operator",
+        "purpose": "Owner-selected finite skill qualification; no host semantic result preaccepted",
+        "selection_sha256": "9acf2d7ebb9163f99f3776079f3718b7fc69059d20062342a7fe91358b6f66b1"
+      }
+    },
+    "definition": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "fixture_product.json",
+      "root": "product",
+      "selector": null,
+      "sha256": "f224396383edd22ff4d2d9b68ef001f9804a099ca3b86c3a009839476c8a5f1e"
+    },
+    "definition_id": "urn:stdo:product-definition:qualification-installed-update"
+  },
+  "schema": "a_c.fd-support.policy/1",
+  "sources": {
+    "control": {
+      "kind": "workspace",
+      "path": "/private/tmp/stdo-skills-installation-w8g_16zt/claude/control",
+      "read_scope": [
+        {
+          "kind": "file",
+          "path": "OWNER.json"
+        },
+        {
+          "kind": "file",
+          "path": "TASK.md"
+        },
+        {
+          "kind": "file",
+          "path": "worker-policy.json"
+        },
+        {
+          "kind": "file",
+          "path": "mcp.json"
+        },
+        {
+          "kind": "file",
+          "path": "actor-plan.json"
+        },
+        {
+          "kind": "file",
+          "path": "launch.json"
+        },
+        {
+          "kind": "file",
+          "path": "executive-policy.json"
+        },
+        {
+          "kind": "file",
+          "path": "RETURN-CONTRACT.json"
+        },
+        {
+          "kind": "file",
+          "path": "ordinary-prompt.txt"
+        },
+        {
+          "kind": "file",
+          "path": "ordinary-prompt.base.txt"
+        },
+        {
+          "kind": "file",
+          "path": "INSTALL.json"
+        },
+        {
+          "kind": "file",
+          "path": "SELECTION.json"
+        },
+        {
+          "kind": "file",
+          "path": "CONTROLLER.json"
+        },
+        {
+          "kind": "file",
+          "path": "INTENT.md"
+        },
+        {
+          "kind": "file",
+          "path": "PRODUCT.md"
+        },
+        {
+          "kind": "file",
+          "path": "GOALS.md"
+        },
+        {
+          "kind": "directory",
+          "path": "actor-output"
+        }
+      ],
+      "writable": false
+    },
+    "fixture_code": {
+      "kind": "workspace",
+      "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/qualification",
+      "read_scope": [
+        {
+          "kind": "file",
+          "path": "launch_fixture.py"
+        }
+      ],
+      "writable": false
+    },
+    "host_python": {
+      "kind": "workspace",
+      "path": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin",
+      "read_scope": [
+        {
+          "kind": "file",
+          "path": "python3.13"
+        }
+      ],
+      "writable": false
+    },
+    "host_vendor": {
+      "kind": "workspace",
+      "path": "/Users/jim/.local/share/claude/versions",
+      "read_scope": [
+        {
+          "kind": "file",
+          "path": "2.1.306"
+        }
+      ],
+      "writable": false
+    },
+    "method": {
+      "kind": "workspace",
+      "path": "/Users/jim/Library/Application Support/STDO/releases/v3.0.1-rc.1",
+      "read_scope": [
+        {
+          "kind": "directory",
+          "path": "standards"
+        },
+        {
+          "kind": "file",
+          "path": "manifest.json"
+        }
+      ],
+      "writable": false
+    },
+    "product": {
+      "kind": "workspace",
+      "path": "/private/tmp/stdo-skills-installation-w8g_16zt/claude/workspace",
+      "read_scope": [
+        {
+          "kind": "directory",
+          "path": ".agents"
+        },
+        {
+          "kind": "directory",
+          "path": ".claude"
+        },
+        {
+          "kind": "directory",
+          "path": ".codex"
+        },
+        {
+          "kind": "directory",
+          "path": ".qualification"
+        },
+        {
+          "kind": "file",
+          "path": "AGENTS.md"
+        },
+        {
+          "kind": "file",
+          "path": "CLAUDE.md"
+        },
+        {
+          "kind": "file",
+          "path": "TASK.md"
+        },
+        {
+          "kind": "directory",
+          "path": "design"
+        },
+        {
+          "kind": "file",
+          "path": "fixture_product.json"
+        },
+        {
+          "kind": "directory",
+          "path": "inputs"
+        },
+        {
+          "kind": "directory",
+          "path": "outputs"
+        },
+        {
+          "kind": "directory",
+          "path": "specification"
+        },
+        {
+          "kind": "directory",
+          "path": "unrelated"
+        },
+        {
+          "kind": "file",
+          "path": "TOOLING.md"
+        }
+      ],
+      "writable": true
+    },
+    "tool": {
+      "kind": "workspace",
+      "path": "/Users/jim/src/apps/specification_methodology-skills/a_c",
+      "read_scope": [
+        {
+          "kind": "directory",
+          "path": "build_tenants/graphify"
+        }
+      ],
+      "writable": false
+    }
+  }
+}

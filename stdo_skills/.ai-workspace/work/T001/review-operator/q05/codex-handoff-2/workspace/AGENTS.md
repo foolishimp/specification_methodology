@@ -1,0 +1,1 @@
+Governing Product: fixture_product.json. Existing requirement: specification/REQUIREMENT.md. Existing design: design/DESIGN.md. Bounded owner instruction: TASK.md. Local tool binding: TOOLING.md. Preserve unrelated files.

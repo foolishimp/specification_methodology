@@ -1,0 +1,43 @@
+# check_package.py report (retained)
+
+Command: python3 -I -B build_tenants/claude/tests/check_package.py
+Return code: 0
+
+```
+PASS no symlinks in package
+PASS name equals directory: stdo-workspace-change (name=stdo-workspace-change)
+PASS name is lowercase-hyphen: stdo-workspace-change
+PASS description present and substantive: stdo-workspace-change (len=339)
+PASS model invocation not disabled: stdo-workspace-change
+PASS name equals directory: stdo-tool-operations (name=stdo-tool-operations)
+PASS name is lowercase-hyphen: stdo-tool-operations
+PASS description present and substantive: stdo-tool-operations (len=314)
+PASS model invocation not disabled: stdo-tool-operations
+PASS name equals directory: stdo-delegate-review (name=stdo-delegate-review)
+PASS name is lowercase-hyphen: stdo-delegate-review
+PASS description present and substantive: stdo-delegate-review (len=324)
+PASS model invocation not disabled: stdo-delegate-review
+PASS name equals directory: stdo-continuation (name=stdo-continuation)
+PASS name is lowercase-hyphen: stdo-continuation
+PASS description present and substantive: stdo-continuation (len=305)
+PASS model invocation not disabled: stdo-continuation
+PASS name equals directory: stdo-release-install (name=stdo-release-install)
+PASS name is lowercase-hyphen: stdo-release-install
+PASS description present and substantive: stdo-release-install (len=355)
+PASS model invocation not disabled: stdo-release-install
+PASS no forbidden path in INVENTORY.md
+PASS no forbidden path in INSTALL.md
+PASS no forbidden path in README.md
+PASS no forbidden path in design/DESIGN.md
+PASS no forbidden path in skills/stdo-tool-operations/SKILL.md
+PASS no forbidden path in skills/stdo-continuation/SKILL.md
+PASS no forbidden path in skills/stdo-delegate-review/SKILL.md
+PASS no forbidden path in skills/stdo-workspace-change/SKILL.md
+PASS no forbidden path in skills/stdo-release-install/SKILL.md
+PASS no skill reference escapes its directory
+PASS no inventory entries missing from disk
+PASS no disk files missing from inventory
+PASS inventory digests match disk
+PASS inventory is non-empty (9 entries)
+SUMMARY: 35/35 checks passed
+```

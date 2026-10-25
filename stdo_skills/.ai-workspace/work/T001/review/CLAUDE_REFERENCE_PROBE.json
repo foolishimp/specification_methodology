@@ -1,0 +1,46 @@
+{
+  "schema": "stdo-skills.review.claude-reference-probe/1",
+  "candidate_inventory_sha256": "63095869d5f4e2a5b85a9bec17598ebf0e683d0ae45bb06f4d1abc85821ba9c7",
+  "verifier_sha256": "5d05378a72322ac0d64c383a7b79d5fe9fb7c25378570ec0dc1cdfe65345a70c",
+  "execution": "Exact frozen verifier executed against read-only in-memory file maps; negative-map inventory hashes honestly recomputed. No candidate or external fixture files written. This probes verifier behavior, not an actual host invocation.",
+  "cases": [
+    {
+      "label": "unchanged package control",
+      "added_text": "",
+      "inventory_refreshed": false,
+      "skill_sha256": "840bc1eeadcd575b15be7bc426a66f1407624a433ef49edf827671b9c1a6b3d1",
+      "inventory_sha256": "63095869d5f4e2a5b85a9bec17598ebf0e683d0ae45bb06f4d1abc85821ba9c7",
+      "exit_code": 0,
+      "stdout": "PASS no symlinks in package\nPASS name equals directory: stdo-workspace-change (name=stdo-workspace-change)\nPASS name is lowercase-hyphen: stdo-workspace-change\nPASS description present and substantive: stdo-workspace-change (len=339)\nPASS model invocation not disabled: stdo-workspace-change\nPASS name equals directory: stdo-tool-operations (name=stdo-tool-operations)\nPASS name is lowercase-hyphen: stdo-tool-operations\nPASS description present and substantive: stdo-tool-operations (len=314)\nPASS model invocation not disabled: stdo-tool-operations\nPASS name equals directory: stdo-delegate-review (name=stdo-delegate-review)\nPASS name is lowercase-hyphen: stdo-delegate-review\nPASS description present and substantive: stdo-delegate-review (len=324)\nPASS model invocation not disabled: stdo-delegate-review\nPASS name equals directory: stdo-continuation (name=stdo-continuation)\nPASS name is lowercase-hyphen: stdo-continuation\nPASS description present and substantive: stdo-continuation (len=305)\nPASS model invocation not disabled: stdo-continuation\nPASS name equals directory: stdo-release-install (name=stdo-release-install)\nPASS name is lowercase-hyphen: stdo-release-install\nPASS description present and substantive: stdo-release-install (len=355)\nPASS model invocation not disabled: stdo-release-install\nPASS no forbidden path in INSTALL.md\nPASS no forbidden path in INVENTORY.md\nPASS no forbidden path in README.md\nPASS no forbidden path in design/DESIGN.md\nPASS no forbidden path in skills/stdo-continuation/SKILL.md\nPASS no forbidden path in skills/stdo-delegate-review/SKILL.md\nPASS no forbidden path in skills/stdo-release-install/SKILL.md\nPASS no forbidden path in skills/stdo-tool-operations/SKILL.md\nPASS no forbidden path in skills/stdo-workspace-change/SKILL.md\nPASS no skill reference escapes its directory\nPASS no inventory entries missing from disk\nPASS no disk files missing from inventory\nPASS inventory digests match disk\nPASS inventory is non-empty (9 entries)\nSUMMARY: 35/35 checks passed\n",
+      "expected_verifier_exit_nonzero": false
+    },
+    {
+      "label": "missing local link",
+      "added_text": "\nRead [required detail](missing.md).\n",
+      "inventory_refreshed": true,
+      "skill_sha256": "dac979f08ebc9ef45e236d5526cfada66e6e7deda94eaece90052d70fc83d587",
+      "inventory_sha256": "5d25e5bf26b49e5324226bf765ea75ecadd000b3d942de98bd09ca1f676a32af",
+      "exit_code": 0,
+      "stdout": "PASS no symlinks in package\nPASS name equals directory: stdo-workspace-change (name=stdo-workspace-change)\nPASS name is lowercase-hyphen: stdo-workspace-change\nPASS description present and substantive: stdo-workspace-change (len=339)\nPASS model invocation not disabled: stdo-workspace-change\nPASS name equals directory: stdo-tool-operations (name=stdo-tool-operations)\nPASS name is lowercase-hyphen: stdo-tool-operations\nPASS description present and substantive: stdo-tool-operations (len=314)\nPASS model invocation not disabled: stdo-tool-operations\nPASS name equals directory: stdo-delegate-review (name=stdo-delegate-review)\nPASS name is lowercase-hyphen: stdo-delegate-review\nPASS description present and substantive: stdo-delegate-review (len=324)\nPASS model invocation not disabled: stdo-delegate-review\nPASS name equals directory: stdo-continuation (name=stdo-continuation)\nPASS name is lowercase-hyphen: stdo-continuation\nPASS description present and substantive: stdo-continuation (len=305)\nPASS model invocation not disabled: stdo-continuation\nPASS name equals directory: stdo-release-install (name=stdo-release-install)\nPASS name is lowercase-hyphen: stdo-release-install\nPASS description present and substantive: stdo-release-install (len=355)\nPASS model invocation not disabled: stdo-release-install\nPASS no forbidden path in INSTALL.md\nPASS no forbidden path in INVENTORY.md\nPASS no forbidden path in README.md\nPASS no forbidden path in design/DESIGN.md\nPASS no forbidden path in skills/stdo-continuation/SKILL.md\nPASS no forbidden path in skills/stdo-delegate-review/SKILL.md\nPASS no forbidden path in skills/stdo-release-install/SKILL.md\nPASS no forbidden path in skills/stdo-tool-operations/SKILL.md\nPASS no forbidden path in skills/stdo-workspace-change/SKILL.md\nPASS no skill reference escapes its directory\nPASS no inventory entries missing from disk\nPASS no disk files missing from inventory\nPASS inventory digests match disk\nPASS inventory is non-empty (9 entries)\nSUMMARY: 35/35 checks passed\n",
+      "target": "missing.md",
+      "normalized_package_relative_target": "skills/stdo-workspace-change/missing.md",
+      "resource_exists_in_case": false,
+      "target_contained_in_skill": true,
+      "expected_verifier_exit_nonzero": true
+    },
+    {
+      "label": "cross-skill link hidden by prefix",
+      "added_text": "\nRead [peer detail](references/../../stdo-tool-operations/SKILL.md).\n",
+      "inventory_refreshed": true,
+      "skill_sha256": "b7a6f952ec447326bcb43f1a338fec4e2f1f06d36cf6f098b160161de887794b",
+      "inventory_sha256": "d73e0b8771fb646cf2dc25bdcd0fe0372a4d97c4d6bc31ae78f354050ca1c086",
+      "exit_code": 0,
+      "stdout": "PASS no symlinks in package\nPASS name equals directory: stdo-workspace-change (name=stdo-workspace-change)\nPASS name is lowercase-hyphen: stdo-workspace-change\nPASS description present and substantive: stdo-workspace-change (len=339)\nPASS model invocation not disabled: stdo-workspace-change\nPASS name equals directory: stdo-tool-operations (name=stdo-tool-operations)\nPASS name is lowercase-hyphen: stdo-tool-operations\nPASS description present and substantive: stdo-tool-operations (len=314)\nPASS model invocation not disabled: stdo-tool-operations\nPASS name equals directory: stdo-delegate-review (name=stdo-delegate-review)\nPASS name is lowercase-hyphen: stdo-delegate-review\nPASS description present and substantive: stdo-delegate-review (len=324)\nPASS model invocation not disabled: stdo-delegate-review\nPASS name equals directory: stdo-continuation (name=stdo-continuation)\nPASS name is lowercase-hyphen: stdo-continuation\nPASS description present and substantive: stdo-continuation (len=305)\nPASS model invocation not disabled: stdo-continuation\nPASS name equals directory: stdo-release-install (name=stdo-release-install)\nPASS name is lowercase-hyphen: stdo-release-install\nPASS description present and substantive: stdo-release-install (len=355)\nPASS model invocation not disabled: stdo-release-install\nPASS no forbidden path in INSTALL.md\nPASS no forbidden path in INVENTORY.md\nPASS no forbidden path in README.md\nPASS no forbidden path in design/DESIGN.md\nPASS no forbidden path in skills/stdo-continuation/SKILL.md\nPASS no forbidden path in skills/stdo-delegate-review/SKILL.md\nPASS no forbidden path in skills/stdo-release-install/SKILL.md\nPASS no forbidden path in skills/stdo-tool-operations/SKILL.md\nPASS no forbidden path in skills/stdo-workspace-change/SKILL.md\nPASS no skill reference escapes its directory\nPASS no inventory entries missing from disk\nPASS no disk files missing from inventory\nPASS inventory digests match disk\nPASS inventory is non-empty (9 entries)\nSUMMARY: 35/35 checks passed\n",
+      "target": "references/../../stdo-tool-operations/SKILL.md",
+      "normalized_package_relative_target": "skills/stdo-tool-operations/SKILL.md",
+      "resource_exists_in_case": true,
+      "target_contained_in_skill": false,
+      "expected_verifier_exit_nonzero": true
+    }
+  ]
+}

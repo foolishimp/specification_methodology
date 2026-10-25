@@ -1,0 +1,491 @@
+{
+  "arguments": {
+    "envelope": {
+      "boundary": "executor-stdin-utf8",
+      "capacity_bytes": null,
+      "host_context": {
+        "bytes": null,
+        "evidence": null,
+        "state": "unknown"
+      }
+    },
+    "late_acquisition": [],
+    "models": [],
+    "packet": {
+      "activation": {
+        "configuration": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "TASK.md",
+          "root": "control",
+          "selector": null,
+          "sha256": "ed983c9524fe336f5ee3fa252046dd43d3e0326f4c3b80cf659243aec73cbdd9"
+        },
+        "id": "urn:stdo-skills:T001:q05:mcp-capability:1:launch",
+        "revision": "1"
+      },
+      "actor_authority": {
+        "acceptance": null,
+        "actor_id": "urn:stdo-skills:T001:q05:mcp-capability:1:physical-launcher",
+        "capability": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "TASK.md",
+          "root": "control",
+          "selector": null,
+          "sha256": "ed983c9524fe336f5ee3fa252046dd43d3e0326f4c3b80cf659243aec73cbdd9"
+        },
+        "decision": null,
+        "evaluation": null,
+        "operation": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "TASK.md",
+          "root": "control",
+          "selector": null,
+          "sha256": "ed983c9524fe336f5ee3fa252046dd43d3e0326f4c3b80cf659243aec73cbdd9"
+        },
+        "publication": null,
+        "role": "Worker",
+        "semantic": null,
+        "territory": [],
+        "tools": [
+          "native-host-readonly-capability",
+          "a_c.tools.describe"
+        ]
+      },
+      "attention": {
+        "exclusions": [
+          "any dispatch capability through host MCP",
+          "any host shell/source mutation",
+          "Q05 behavioral qualification"
+        ],
+        "invariants": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "TASK.md",
+            "root": "control",
+            "selector": null,
+            "sha256": "ed983c9524fe336f5ee3fa252046dd43d3e0326f4c3b80cf659243aec73cbdd9"
+          }
+        ],
+        "material_relations": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "TASK.md",
+            "root": "control",
+            "selector": null,
+            "sha256": "ed983c9524fe336f5ee3fa252046dd43d3e0326f4c3b80cf659243aec73cbdd9"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "stdo_skills.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "4339a7dbc735052c08962154966fc13a4e30206d42ba2e80b53c6009a5008c22"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "build_tenants/graphify/design/fd-method-stdo-3.0.1.json",
+            "root": "tool",
+            "selector": null,
+            "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "MCP-POLICY.json",
+            "root": "control",
+            "selector": null,
+            "sha256": "7ca848a9ae6c99178e4d69ad8511b4a159a766167d5177182ce05fa4efd55ab3"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "actor-plan.json",
+            "root": "control",
+            "selector": null,
+            "sha256": "5e2d7a691a0d3ab450d0b64d562245794214753e72cb57820a58da16e9533464"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "ordinary-prompt.txt",
+            "root": "control",
+            "selector": null,
+            "sha256": "7ea5f335c9c96e30feaeb71b7bd033612abefef8db0e53570ba893ce169a0710"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "launch.json",
+            "root": "control",
+            "selector": null,
+            "sha256": "0ad206485a4d38204c42c1ee38a5b7d1dea810b27058d02de9cb15dbbef5664c"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "RETURN-CONTRACT.json",
+            "root": "control",
+            "selector": null,
+            "sha256": "759787d5e589f2a11e7ffffec1d3a563cdf0213eb4c8a8d689b75cd5757df890"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "SOURCE-NOTES.json",
+            "root": "control",
+            "selector": null,
+            "sha256": "12cabf2f57fbe7d81bac215a780a554140e1eab91737b68a4c169ad0133c5d3a"
+          }
+        ],
+        "prohibited_assumptions": [
+          "mcp get accepted key proves runtime support"
+        ],
+        "semantic_sources": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "TASK.md",
+            "root": "control",
+            "selector": null,
+            "sha256": "ed983c9524fe336f5ee3fa252046dd43d3e0326f4c3b80cf659243aec73cbdd9"
+          }
+        ]
+      },
+      "evidence_relations": {
+        "acquisition": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "TASK.md",
+            "root": "control",
+            "selector": null,
+            "sha256": "ed983c9524fe336f5ee3fa252046dd43d3e0326f4c3b80cf659243aec73cbdd9"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "stdo_skills.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "4339a7dbc735052c08962154966fc13a4e30206d42ba2e80b53c6009a5008c22"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "build_tenants/graphify/design/fd-method-stdo-3.0.1.json",
+            "root": "tool",
+            "selector": null,
+            "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "MCP-POLICY.json",
+            "root": "control",
+            "selector": null,
+            "sha256": "7ca848a9ae6c99178e4d69ad8511b4a159a766167d5177182ce05fa4efd55ab3"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "actor-plan.json",
+            "root": "control",
+            "selector": null,
+            "sha256": "5e2d7a691a0d3ab450d0b64d562245794214753e72cb57820a58da16e9533464"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "ordinary-prompt.txt",
+            "root": "control",
+            "selector": null,
+            "sha256": "7ea5f335c9c96e30feaeb71b7bd033612abefef8db0e53570ba893ce169a0710"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "launch.json",
+            "root": "control",
+            "selector": null,
+            "sha256": "0ad206485a4d38204c42c1ee38a5b7d1dea810b27058d02de9cb15dbbef5664c"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "RETURN-CONTRACT.json",
+            "root": "control",
+            "selector": null,
+            "sha256": "759787d5e589f2a11e7ffffec1d3a563cdf0213eb4c8a8d689b75cd5757df890"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "SOURCE-NOTES.json",
+            "root": "control",
+            "selector": null,
+            "sha256": "12cabf2f57fbe7d81bac215a780a554140e1eab91737b68a4c169ad0133c5d3a"
+          }
+        ],
+        "admissible_evidence": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "TASK.md",
+            "root": "control",
+            "selector": null,
+            "sha256": "ed983c9524fe336f5ee3fa252046dd43d3e0326f4c3b80cf659243aec73cbdd9"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "stdo_skills.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "4339a7dbc735052c08962154966fc13a4e30206d42ba2e80b53c6009a5008c22"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "build_tenants/graphify/design/fd-method-stdo-3.0.1.json",
+            "root": "tool",
+            "selector": null,
+            "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "MCP-POLICY.json",
+            "root": "control",
+            "selector": null,
+            "sha256": "7ca848a9ae6c99178e4d69ad8511b4a159a766167d5177182ce05fa4efd55ab3"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "actor-plan.json",
+            "root": "control",
+            "selector": null,
+            "sha256": "5e2d7a691a0d3ab450d0b64d562245794214753e72cb57820a58da16e9533464"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "ordinary-prompt.txt",
+            "root": "control",
+            "selector": null,
+            "sha256": "7ea5f335c9c96e30feaeb71b7bd033612abefef8db0e53570ba893ce169a0710"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "launch.json",
+            "root": "control",
+            "selector": null,
+            "sha256": "0ad206485a4d38204c42c1ee38a5b7d1dea810b27058d02de9cb15dbbef5664c"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "RETURN-CONTRACT.json",
+            "root": "control",
+            "selector": null,
+            "sha256": "759787d5e589f2a11e7ffffec1d3a563cdf0213eb4c8a8d689b75cd5757df890"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "SOURCE-NOTES.json",
+            "root": "control",
+            "selector": null,
+            "sha256": "12cabf2f57fbe7d81bac215a780a554140e1eab91737b68a4c169ad0133c5d3a"
+          }
+        ],
+        "conjunction": null,
+        "consumer": "root-executive",
+        "dependencies": [],
+        "return_contract": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "RETURN-CONTRACT.json",
+          "root": "control",
+          "selector": null,
+          "sha256": "759787d5e589f2a11e7ffffec1d3a563cdf0213eb4c8a8d689b75cd5757df890"
+        },
+        "translation": null
+      },
+      "frame": {
+        "declaration": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "TASK.md",
+          "root": "control",
+          "selector": null,
+          "sha256": "ed983c9524fe336f5ee3fa252046dd43d3e0326f4c3b80cf659243aec73cbdd9"
+        },
+        "evaluation": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "TASK.md",
+          "root": "control",
+          "selector": null,
+          "sha256": "ed983c9524fe336f5ee3fa252046dd43d3e0326f4c3b80cf659243aec73cbdd9"
+        },
+        "id": "qualification.physical-executor/1",
+        "result_algebra": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "standards/ACTIVATION.md",
+          "root": "method",
+          "selector": {
+            "lines": [
+              1004,
+              1055
+            ]
+          },
+          "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d"
+        },
+        "revision": "1"
+      },
+      "profile_additions": {
+        "worker": {
+          "mutation_subject": {
+            "id": "urn:stdo-skills:T001:q05:mcp-capability:1",
+            "sha256": "7ea5f335c9c96e30feaeb71b7bd033612abefef8db0e53570ba893ce169a0710"
+          },
+          "operation_grant_id": "urn:stdo-skills:T001:q05:mcp-capability:1:grant",
+          "territory": []
+        }
+      },
+      "stop_change": {
+        "invalidators": [
+          "selected source/config drift"
+        ],
+        "re_entry": [
+          "Root chooses any supported successor"
+        ],
+        "reconfiguration": [],
+        "residuals": [
+          "nested dispatch unestablished",
+          "hidden effects and full host input unknown"
+        ],
+        "stop_conditions": [
+          "120 seconds",
+          "any refusal"
+        ]
+      },
+      "subject_basis": {
+        "dependencies": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "TASK.md",
+            "root": "control",
+            "selector": null,
+            "sha256": "ed983c9524fe336f5ee3fa252046dd43d3e0326f4c3b80cf659243aec73cbdd9"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "stdo_skills.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "4339a7dbc735052c08962154966fc13a4e30206d42ba2e80b53c6009a5008c22"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "build_tenants/graphify/design/fd-method-stdo-3.0.1.json",
+            "root": "tool",
+            "selector": null,
+            "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "MCP-POLICY.json",
+            "root": "control",
+            "selector": null,
+            "sha256": "7ca848a9ae6c99178e4d69ad8511b4a159a766167d5177182ce05fa4efd55ab3"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "actor-plan.json",
+            "root": "control",
+            "selector": null,
+            "sha256": "5e2d7a691a0d3ab450d0b64d562245794214753e72cb57820a58da16e9533464"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "ordinary-prompt.txt",
+            "root": "control",
+            "selector": null,
+            "sha256": "7ea5f335c9c96e30feaeb71b7bd033612abefef8db0e53570ba893ce169a0710"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "launch.json",
+            "root": "control",
+            "selector": null,
+            "sha256": "0ad206485a4d38204c42c1ee38a5b7d1dea810b27058d02de9cb15dbbef5664c"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "RETURN-CONTRACT.json",
+            "root": "control",
+            "selector": null,
+            "sha256": "759787d5e589f2a11e7ffffec1d3a563cdf0213eb4c8a8d689b75cd5757df890"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "SOURCE-NOTES.json",
+            "root": "control",
+            "selector": null,
+            "sha256": "12cabf2f57fbe7d81bac215a780a554140e1eab91737b68a4c169ad0133c5d3a"
+          }
+        ],
+        "method_profile": {
+          "id": "urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1",
+          "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+        },
+        "observations": [
+          {
+            "id": "sha256:529d811553a54b11b28bccf9ceba059f64276521c275a3bd10df562ac6139e71",
+            "sha256": "529d811553a54b11b28bccf9ceba059f64276521c275a3bd10df562ac6139e71"
+          }
+        ],
+        "product": {
+          "definition": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "stdo_skills.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "4339a7dbc735052c08962154966fc13a4e30206d42ba2e80b53c6009a5008c22"
+          },
+          "id": "urn:stdo:product-definition:stdo-skills"
+        },
+        "subject": {
+          "id": "urn:stdo-skills:T001:q05:mcp-capability:1",
+          "sha256": "7ea5f335c9c96e30feaeb71b7bd033612abefef8db0e53570ba893ce169a0710"
+        },
+        "time_basis": "Stable exact control inputs only"
+      }
+    },
+    "sources": []
+  },
+  "id": "q05-mcp-probe-assemble",
+  "operation": "context.assemble",
+  "schema": "a_c.fd-support.request/1"
+}

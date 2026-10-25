@@ -1,0 +1,39 @@
+{
+  "source_path": "/Users/jim/.claude/projects/-private-tmp-stdo-skills-qualification-yfa1t8ik-claude-explicit-workspace/1050b227-946f-4be0-992d-736b9ee8c71a.jsonl",
+  "source_sha256": "66cc0a6dc54a4537f08a7f8ed85bed27fcb10f6141778519838249d0c940ad37",
+  "observed_session_ids": [
+    "1050b227-946f-4be0-992d-736b9ee8c71a"
+  ],
+  "deliveries": [
+    {
+      "line": 4,
+      "raw_record": {
+        "parentUuid": "9b681b8a-274a-433c-b7d0-9783b913a9bf",
+        "isSidechain": false,
+        "promptId": "fc9e9c5b-8f2e-48a9-ada4-425643ccc5cf",
+        "type": "user",
+        "message": {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Base directory for this skill: /private/tmp/stdo-skills-qualification-yfa1t8ik/claude-explicit/workspace/.claude/skills/stdo-workspace-change\n\n# STDO workspace change \u2014 entry, basis, intake\n\nThis skill is the entry point when someone asks you to do governed\nspecification-methodology work in this repository: change a requirement, design,\nor code owner; re-enter at the right layer; or set up and verify the method.\n\n## When this applies\n\nApply when the request concerns a workspace that selects an STDO Product\nDefinition (for example `stdo_skills.json`) and asks you to change, review, or\nset up governed artifacts under that method. Automatic selection comes from this\nskill's `description`; a user may also invoke it explicitly with\n`/stdo-workspace-change`.\n\n## When this does not apply (SK-01 discriminator, Q02)\n\nIf the request is an unrelated factual question or a non-governed task, do not\nforce an STDO setup, do not create a work carrier, and do not run any tool\nsequence. Answer the actual question or hand off. Presence of this skill is not a\nreason to STDO-ify unrelated work.\n\n## Verify the basis first (SK-02, Q03)\n\nBefore relying on any method contract, resolve and verify the exact basis:\n\n1. Identify the selected Product Definition in the workspace (e.g.\n   `stdo_skills.json`) and the installed method it pins.\n2. Verify the installed cut with the manager, for example:\n   `stdo status --definition stdo_skills.json --verify`.\n3. Confirm the resolved manifest equals the one the Product Definition pins\n   (for STDO Skills: `stdo://releases/v3.0.1-rc.1/`, manifest\n   `60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8`).\n\nIf the basis is ambiguous, missing, or altered \u2014 the install is absent, a member\nis modified, or Product selection is ambiguous \u2014 **withhold the dependent work\nand report the specific cause**. Do not substitute the latest discovered cut or a\nsibling source checkout for the pin. Setup may install or pin only within an\nexplicit grant; ordinary execution never adopts a newer cut implicitly.\n\n## Intake triage (SK-03)\n\nName three things before acting: the required outcome, the owner that must\nchange (goal, intent, product, requirement, design, or realization), and the\nexisting work basis you can reuse. Choose the smallest lawful re-entry point for\nthat owner. No bug, feature, or request skips triage straight to code.\n\n## Proportional work (SK-03 discriminator, Q04)\n\nDo the smallest sufficient authorized work.\n\n- A small, already-authorized one-file change with a sufficient existing\n  requirement/design proceeds directly as a Writer: make the change and record\n  focused evidence. Do **not** invent a mandatory ticket, a coordinating actor,\n  or an independent review that the conditions do not require, and do not write\n  outside the authorized scope.\n- Activate material coordination or independent review only when the actual\n  conditions require them (material context, capability, or independence\n  boundary) \u2014 then route to `stdo-delegate-review`.\n- Reuse existing sufficient authorization without repeating a permission\n  ceremony; keep any genuinely missing authority explicit.\n\n## Routing\n\n- Tool calls, context acquisition, or a failing tool: `stdo-tool-operations`.\n- Delegation or required review: `stdo-delegate-review`.\n- Resume, interruption, status, or evidence: `stdo-continuation`.\n- Release preparation or install/update/remove: `stdo-release-install`.\n\n## Method sources (cited, not reproduced)\n\nWithin the installed cut `stdo://releases/v3.0.1-rc.1/standards/`:\n`PRODUCT_DEFINITION.md` (sections 2, 4, 7, 9, 12) for exact Product and installed\nbasis; `ACTIVATION.md` section 1 for intake, operation scope, admission, and\napplicability; `ACTIVATION.md` section 6 for cost and proportionality. The owner\nindex is `specification/SOURCE_OWNERS.md`.\n\n## Scope and limits\n\nThis skill does not itself qualify host behavior or claim acceptance. Discovery\nis tested separately from whether a loaded skill completes the task; report host\nlimits and observed failures instead of claiming guaranteed model compliance.\n\n\nARGUMENTS: Please correct only outputs/greeting.txt so it meets the existing requirement and design for inputs/name.txt. Preserve unrelated/sentinel.txt. I authorize this bounded correction."
+            }
+          ]
+        },
+        "isMeta": true,
+        "turnCompanion": true,
+        "uuid": "68020689-5f30-4c3c-bd72-1d93813aa19a",
+        "timestamp": "2026-10-25T02:58:16.476Z",
+        "userType": "external",
+        "entrypoint": "sdk-cli",
+        "cwd": "/private/tmp/stdo-skills-qualification-yfa1t8ik/claude-explicit/workspace",
+        "sessionId": "1050b227-946f-4be0-992d-736b9ee8c71a",
+        "version": "2.1.306",
+        "gitBranch": "HEAD"
+      },
+      "installed_path": ".claude/skills/stdo-workspace-change/SKILL.md",
+      "installed_sha256": "840bc1eeadcd575b15be7bc426a66f1407624a433ef49edf827671b9c1a6b3d1"
+    }
+  ]
+}

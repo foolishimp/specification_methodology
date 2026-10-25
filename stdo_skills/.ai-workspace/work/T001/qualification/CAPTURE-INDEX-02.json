@@ -1,0 +1,86 @@
+{
+  "schema": "stdo_skills.qualification-capture-index/1",
+  "recorded_at": "2026-10-25T03:48:34.566717+00:00",
+  "standing": "Exact Writer-produced portable custody and bounded source-oracle assessments. Does not replace Root decisions or independent review. All earlier failures and execution limits remain in selected records.",
+  "lanes": [
+    {
+      "lane": "claude-automatic",
+      "path": "results/claude-automatic/INVENTORY.json",
+      "sha256": "9853e66387a1b8c8204cbe26694f4430ab4ae945bd1ae246a748a820be66b9c8"
+    },
+    {
+      "lane": "claude-explicit",
+      "path": "results/claude-explicit/INVENTORY.json",
+      "sha256": "38f6fb76efef0aaf017b8b3e873f8cf9c7c7a237c1e3b502184aa58b5cbbb783"
+    },
+    {
+      "lane": "claude-unrelated",
+      "path": "results/claude-unrelated/INVENTORY.json",
+      "sha256": "52f50435cd6b84a44f3ea540878b5b10d800f30ca2c377fa5032c90583fa7487"
+    },
+    {
+      "lane": "codex-automatic",
+      "path": "results/codex-automatic/INVENTORY.json",
+      "sha256": "d0ca2aa06a9bb157ab00c815859e3ca276bed0cdd8369f38b1a3a90d342034b3"
+    },
+    {
+      "lane": "codex-effect-recovery",
+      "path": "results/codex-effect-recovery/INVENTORY.json",
+      "sha256": "a3612e5e1f75f00b53a4280528c4b66beb70bc91506d6d73a10db73bf98878a6"
+    },
+    {
+      "lane": "codex-explicit",
+      "path": "results/codex-explicit/INVENTORY.json",
+      "sha256": "8b44f15a8c7c22b23716dee231e1b1c27973ee406bc9473e392641bca252adc4"
+    },
+    {
+      "lane": "codex-recovery-histories",
+      "path": "results/codex-recovery-histories/INVENTORY.json",
+      "sha256": "21ff25658dcf658d9f14e545e5226717bcaa3618dcf9dea14ec7b5ddeff530fa"
+    },
+    {
+      "lane": "codex-unrelated",
+      "path": "results/codex-unrelated/INVENTORY.json",
+      "sha256": "7fa94475f3321a8675ebc88e4df6302ec78e96321b24cdbed80bc80ec3e7c7f4"
+    },
+    {
+      "lane": "claude-combined-recovery",
+      "path": "results/claude-combined-recovery/INVENTORY.json",
+      "sha256": "171e070549bba8c2ec827ffde740a8dcdff68e961f9d461efab4aa25de8cff96"
+    }
+  ],
+  "assessments": [
+    {
+      "path": "results/CLAUDE-INITIAL-ASSESSMENT.json",
+      "sha256": "c77afa6d4b091cd4bdf342961786a0d57a73f99da40ab7a8215605aa4ec7e93e"
+    },
+    {
+      "path": "results/CODEX-EFFECT-RECOVERY-ASSESSMENT.json",
+      "sha256": "db2855ca74b655ba5eeecd7050da1708a913406d8914040846060c0103e4f252"
+    },
+    {
+      "path": "results/CODEX-INITIAL-ASSESSMENT.json",
+      "sha256": "74245f6cdfccecca0f0e172b0a301fdc1d59a950093a995dc4f2f63b5628c89d"
+    },
+    {
+      "path": "results/CODEX-RECOVERY-HISTORIES-ASSESSMENT.json",
+      "sha256": "c8628d67faaf992cb4b3c3d0f3193654aa32199910f684431eb3bd42fc3bf4d3"
+    },
+    {
+      "path": "results/CLAUDE-COMBINED-RECOVERY-ASSESSMENT.json",
+      "sha256": "96fda0493b3bdb20ba0e7a4826ba9c70591f6ddead8a26ccfe471cca548acf68"
+    }
+  ],
+  "pending_in_this_writer_scope": [],
+  "separate_lifecycle_writer": [
+    "Q03",
+    "Q06",
+    "Q11",
+    "Q12 update/removal"
+  ],
+  "previous_index": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/qualification/CAPTURE-INDEX-01.json",
+    "sha256": "5ff3a762fc7a2282614440d0fe17119ce3382f72a412077d9e8561e12432c1fe"
+  },
+  "limits_added": "Claude combined core predicates supported; stronger C-stale current-failure discriminator remains unestablished. Q05 and lifecycle lanes stay under their separate Writers and are not inferred from this index."
+}

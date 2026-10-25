@@ -1,0 +1,107 @@
+{
+  "argv": [
+    "/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex",
+    "exec",
+    "--json",
+    "--color",
+    "never",
+    "--sandbox",
+    "workspace-write",
+    "--skip-git-repo-check",
+    "--cd",
+    "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/workspace",
+    "--add-dir",
+    "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/control/evidence",
+    "-c",
+    "mcp_servers.stdo_q05.command=\"/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13\"",
+    "-c",
+    "mcp_servers.stdo_q05.args=[\"-B\", \"/Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py\", \"--policy\", \"/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/control/plans/reviewer-policy.json\", \"--policy-sha256\", \"2a69bc0934c14fba8c009ddfe3cc1b7e4bd78b611d4b73d41b09c13ffa811c9f\", \"--principal\", \"reviewer\", \"mcp\"]",
+    "-c",
+    "mcp_servers.stdo_q05.enabled_tools=[\"tools.describe\", \"workspace.observe\", \"source.read\", \"evidence.read\", \"review.prepare\"]",
+    "-c",
+    "mcp_servers.stdo_q05.tools={\"tools.describe\"={approval_mode=\"approve\"},\"workspace.observe\"={approval_mode=\"approve\"},\"source.read\"={approval_mode=\"approve\"},\"evidence.read\"={approval_mode=\"approve\"},\"review.prepare\"={approval_mode=\"approve\"}}",
+    "You are the reviewer under the exact attached Context. Acquire the exact task from packet.actor_authority.capability and control:roles/SOURCE-ROUTES.json (its SourceRef is in packet.subject_basis.dependencies) through stdo_q05 source.read with encoding=utf8, then perform the tiny bounded task. Tool requests use the full {schema:\"a_c.fd-support.request/1\",id:unique,operation,arguments} envelope. Actor family=openai-codex; authorship=Fresh nonauthor Codex Reviewer; no candidate authorship. Context.boundaries.activation_identity is the exact return activation. Worker write grant=urn:stdo-skills:T001:q05:codex:handoff:3:worker-grant. Use original Context identities, actual evidence and final original closed-return JSON. No scratch writes or new model launches. Do not repeat full schema/corpus research."
+  ],
+  "backend": "codex",
+  "cwd": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/workspace",
+  "decoder": "codex-final-jsonl/1",
+  "dependencies": [
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support_core.py",
+      "sha256": "bf72a28444e0497cd564066e41c7e5943810d5a2e0be5488c92fa5add5a67209"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/examples/fd-support/actor_cli.py",
+      "sha256": "3f0bd239339e635f4e49ae89a00f0857f4672cb177a5dd2ce03f124f0b116528"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/control/plans/reviewer-policy.json",
+      "sha256": "2a69bc0934c14fba8c009ddfe3cc1b7e4bd78b611d4b73d41b09c13ffa811c9f"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/workspace/.agents/skills/stdo-work/SKILL.md",
+      "sha256": "ba6f7ab1e6de875e2f019b049f7817e771474f1b511a74fe2392a55a37078ee8"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/workspace/.agents/skills/stdo-work/references/basis.md",
+      "sha256": "7b409d4895e7be3291e4e41c32e497ae045e9fb4b62f01b9622b10888d449cda"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/workspace/.agents/skills/stdo-work/references/delegation.md",
+      "sha256": "0bb621b4d6edb17f2100878a567596f85a52b517edfafbb2ceba7119dce8bfde"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/workspace/.agents/skills/stdo-work/references/qualification.md",
+      "sha256": "dda296ed053f3e8ed5ab4cdc7c7b9f162754832fc89ded9280044d96f9dc795c"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/workspace/.agents/skills/stdo-work/references/recovery.md",
+      "sha256": "d7f7f118eea492bb64456a56c4cb4987e6e23acd8b3c0143ba87cf5ec9a92c80"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/workspace/.agents/skills/stdo-work/references/release-install.md",
+      "sha256": "ec7cb5a407f6690936d0bf79ab5fc8796c2cfca4c34772f61ceff4b68f337cfb"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/workspace/.agents/skills/stdo-work/references/tools.md",
+      "sha256": "8bb49c0dfe0eb87fbfbe5063c4a43e15f074e25fdd4ff90ffdec24ef14e75c8b"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/workspace/.agents/skills/stdo-work/source-routes.json",
+      "sha256": "09972e4af512645c43207aa3edd5114e1e81c24ef344c76a6af2e99852920403"
+    }
+  ],
+  "environment": {
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "PATH": "/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/Library/Apple/usr/bin:/Library/TeX/texbin:/Users/jim/.codex/packages/app-server-daemon/releases/0.164.0-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0-macos/codex-arg0Mp340K:/Users/jim/.codex/tmp/arg0-macos/codex-arg0yvg77P:/Users/jim/.codex/packages/app-server-daemon/releases/0.163.0-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg0CDnCoA:/Users/jim/.codex/packages/app-server-daemon/releases/0.162.1-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg0Bb4u1U:/Users/jim/.codex/packages/app-server-daemon/releases/0.162.0-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg0LxzuXl:/Users/jim/.codex/packages/app-server-daemon/releases/0.161.0-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg03BXQTA:/Users/jim/.codex/packages/app-server-daemon/releases/0.160.1-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg00N7H4l:/Users/jim/.codex/packages/app-server-daemon/releases/0.160.0-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg0KdMMgl:/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/codex-path:/Users/jim/.grok/bin:/Users/jim/.bun/bin:/Users/jim/google-cloud-sdk/bin:/opt/homebrew/opt/openjdk/bin:/Users/jim/bin:/usr/local/opt/openjdk@17/bin:/Users/jim/.pyenv/shims:/Users/jim/.pyenv/bin:/opt/homebrew/opt/curl/bin:/opt/homebrew/opt/openssl/bin:/Users/jim/.local/bin:/opt/homebrew/bin:/Users/jim/.cargo/bin:/Applications/iTerm.app/Contents/Resources/utilities:/opt/homebrew/bin/flutter",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "TMPDIR": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/control/tmp/reviewer"
+  },
+  "evidence_directory": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/codex-handoff-3/control/child-output/reviewer",
+  "executable": {
+    "path": "/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex",
+    "sha256": "d8990e3ee7acfbc26f91265b12a1a83f0fee40d0e0f8f1f40a37d4ec21f499cf"
+  },
+  "id": "urn:stdo-skills:T001:q05:codex:handoff:3:reviewer-plan",
+  "limits": {
+    "max_input_bytes": 4194304,
+    "max_output_bytes": 4194304,
+    "termination_grace_ms": 3000,
+    "timeout_ms": 600000
+  },
+  "schema": "a_c.fd-support.actor-cli-plan/1",
+  "settings": {
+    "cost": "unknown",
+    "effort_default": "max",
+    "host_context_bytes": "unknown",
+    "host_scope": "cooperative exact territory; scoped mkdir/read-compute/validation; artifact content through work.write",
+    "model_default": "gpt-6-astra",
+    "model_override": false,
+    "purpose": "Actual bounded Q05 reviewer",
+    "resolved_backend": "unobserved until actual run",
+    "retry_policy": "no automatic actor retry",
+    "scope": "Read/in-memory compute; only the selected role operations/effects",
+    "selected_host": "codex-cli 0.164.0"
+  }
+}

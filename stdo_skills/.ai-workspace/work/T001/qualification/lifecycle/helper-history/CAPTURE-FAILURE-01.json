@@ -1,0 +1,94 @@
+{
+  "attempt": "Claude installation-update capture 1; not a host attempt",
+  "failure": "FileNotFoundError copying absent control/install-checks directory at capture_observation.py:51. Verified-existing Claude binding had no configured install-check commands; actual package and receipt verification is in INSTALL.json.",
+  "native_fixture_mutations": [],
+  "partial_capture": "results/claude-installation-update-capture-failed-01",
+  "retained_files": [
+    {
+      "path": "INSTALL.json",
+      "sha256": "e5236bffb35764fafca0fd1386830653f2c4c4643a55c381adcad3c4dc2d9645"
+    },
+    {
+      "path": "OWNER.json",
+      "sha256": "0d9e33531eb24a4f7b3587085dc5c212f20c90bd0aa77bd6132d8c22a697b730"
+    },
+    {
+      "path": "PREPARED.json",
+      "sha256": "a0dfc87978769bb1f85bcf4bbca5f53c80c5774e90d0a4489c23731a21d7a8db"
+    },
+    {
+      "path": "RETURN-CONTRACT.json",
+      "sha256": "525f70b7f59fcd727cbad34bdb0a07c4b68972b1772ddfd1b3f941f3fc12caf2"
+    },
+    {
+      "path": "SELECTION.json",
+      "sha256": "9acf2d7ebb9163f99f3776079f3718b7fc69059d20062342a7fe91358b6f66b1"
+    },
+    {
+      "path": "TASK.md",
+      "sha256": "18aed14c626d2212b22edabd6a32020437616e353ed708b1bfdbdf5a5a03b56a"
+    },
+    {
+      "path": "actor-plan.json",
+      "sha256": "2f0797aa2086e85fa304b489917f0d15356e38c679ed6915ef0a521e56ffc9c8"
+    },
+    {
+      "path": "executive-policy.json",
+      "sha256": "c63a4a18fbbe9f86ef784e8a762499ce6b44e0ffb4634c5b7acd8622fa00fd97"
+    },
+    {
+      "path": "launch.json",
+      "sha256": "9905dbc36449bfc14ed3ffb1017f61ed8863099786c9b4dbb5628bf437366333"
+    },
+    {
+      "path": "mcp.json",
+      "sha256": "2f3cdf098dd609ff7b69d45951fb0fbdbf6d8e8743403f7a7e84ed5acf90437c"
+    },
+    {
+      "path": "raw/invocation.json",
+      "sha256": "c9ed1c583f11864d140fe1eac76a9329b3c009dddf3393262f923b9f9755694d"
+    },
+    {
+      "path": "raw/ordinary-prompt.bin",
+      "sha256": "34171c56605fe7772fdc49e479c73c741cb7647fb5908c7ee1bf4fffc7bb90c2"
+    },
+    {
+      "path": "raw/outer-context.bin",
+      "sha256": "ed48f45b4e9b75c1e1759dfbc172b6474367328bee3075f4e6bded8278dc3947"
+    },
+    {
+      "path": "raw/plan.json",
+      "sha256": "2f0797aa2086e85fa304b489917f0d15356e38c679ed6915ef0a521e56ffc9c8"
+    },
+    {
+      "path": "raw/process.json",
+      "sha256": "503aa63f0448503dd9e8043674e6f131739847c838b1529245a75cee87d2fe9a"
+    },
+    {
+      "path": "raw/projection.json",
+      "sha256": "b2a1d5161a70417fe27d313db494460c9a464a2917e57b6b39ad9760cf5d9a39"
+    },
+    {
+      "path": "raw/result.json",
+      "sha256": "ef2f9def103c9b3a3cbf21964c104d8a43412782d324b29bde05005214d13603"
+    },
+    {
+      "path": "raw/vendor.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/vendor.stdout",
+      "sha256": "6eccf0305edf2179498140d56add464877d76109a4c6eefaca8f68fc1de468b5"
+    },
+    {
+      "path": "worker-policy.json",
+      "sha256": "60c7b41a65b430308d4b37bb930cfe31e311e6106b6926ba0ac7d0b5381ff0da"
+    }
+  ],
+  "root_selection": "Root selected narrow conditional absence handling with explicit collection provenance; preserve prior helper, failed partial capture and completed captures; no host rerun or live fixture mutation.",
+  "schema": "stdo_skills.capture-failure/1",
+  "source_helper": {
+    "path": "lifecycle/helper-history/capture_observation.0ab04531c39150a601cf9fcc11eb98bef932a6e669dd867cac5a5d85b59bfe5c.py",
+    "sha256": "0ab04531c39150a601cf9fcc11eb98bef932a6e669dd867cac5a5d85b59bfe5c"
+  }
+}

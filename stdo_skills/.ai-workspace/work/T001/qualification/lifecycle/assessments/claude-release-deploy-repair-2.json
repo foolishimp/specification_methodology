@@ -1,0 +1,150 @@
+{
+  "assessor": "skills_lifecycle_fixture_writer",
+  "attempt": "657e9666e081eacd8893db39ea3366eafd71659399e8e31243f2ce3de83afbcc",
+  "candidate_inventory_sha256": "33472e5e2b9adf5ba616bd6980d7f84b3c10de168968727919de32378f045704",
+  "case_lane": "claude-release-deploy-repair-2",
+  "census": {
+    "path": "results/claude-release-deploy-repair-2/CENSUS.json",
+    "sha256": "5a8cb2480f695a6a6572acfca33956e92c22ab60aee07a6a4e5b9d08b618d1fe"
+  },
+  "cost": {
+    "actual_model": "claude-fable-5-1",
+    "delivery_cost": "unknown",
+    "monetary_cost": "unknown",
+    "native_total_usage": null,
+    "wall_seconds": 600.710795
+  },
+  "dispatch_evidence": "cacbbae8e8468d536c412f4cb06688e673edd593051a3f7cb63b66bbb343657f",
+  "limits": [
+    "Exactly one local deployment witness, with timeout and returned-observation gap retained; no further target write is selected.",
+    "53 retained public closure objects match their digest names; this custody check is not semantic acceptance.",
+    "Native EOF remains incomplete, process-tree end and hidden usage/retries remain unknown.",
+    "No remote publication, whole-method qualification, statistical reliability or comparative benefit claim."
+  ],
+  "native_session": "3f43aa78-a75d-4a83-a00a-f53a718022d2",
+  "observations": {
+    "path": "results/claude-release-deploy-repair-2/INVENTORY.json",
+    "sha256": "1d62af6b6bca3eaaacd18cd51168fc741e5bdbdbd5c3771274ed36c3c7d4fc9f"
+  },
+  "oracle": {
+    "path": "lifecycle/ORACLE.json",
+    "sha256": "d5cef9339d10523baf6005980b3c7a09d5eb53c615fba33a89f925f482ec1467"
+  },
+  "predicates": [
+    {
+      "case": "Q11.deploy",
+      "evidence": {
+        "actual_cmp_and_manifest_link_raw_lines": [
+          359,
+          360
+        ],
+        "actual_cmp_exit_codes": [
+          0,
+          0
+        ],
+        "installed_source_read_raw_lines": [
+          355,
+          356,
+          357,
+          358
+        ],
+        "last_public_call_and_acknowledgment_raw_lines": [
+          504,
+          505
+        ],
+        "manifest": {
+          "path": "results/claude-release-deploy-repair-2/postimages/deploy-test/manifest.json",
+          "sha256": "ce71758abbf18193dfc3a2c588c228668e0b9065ed1b5e3cf96fb80a01acac35"
+        },
+        "payload": {
+          "path": "results/claude-release-deploy-repair-2/postimages/deploy-test/payload.txt",
+          "sha256": "b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2"
+        },
+        "report": {
+          "path": "results/claude-release-deploy-repair-2/postimages/outputs/deployment.md",
+          "sha256": "d8da0cd244db1d0816f70dfe6c7429861d29e507760394cd775bdd0a8b34f5bf"
+        }
+      },
+      "interpretation": "Payload and manifest match the actual preparation and retained artifacts. Native source.read recovered installed bytes and native Bash cmp returned0 for both; manifest payload hash matched and exact selected RC identifier remained. Both report writes were acknowledged; the second corrects the first report after acquiring its preimage. No public tool call lacks a result. Only the two selected deployed files and selected report changed; all24other workspace files preserved. Native parent timeout does not erase established output effects.",
+      "outcome": "supported",
+      "predicate": "Separately selected local deployment installs exact prepared bytes and performs actual verification"
+    },
+    {
+      "case": "Q11.deploy.effects",
+      "interpretation": "All12 native Bash commands inspected: reads and computation only. 2>&1 merges streams, it does not write a scratch file. Four native work.write calls publish only the three selected targets, with the report corrected once against its acknowledged preimage. No additions, missing files or links in workspace census. No blanket assertion about unobserved external effects or detached descendants.",
+      "outcome": "supported_with_observation_limits",
+      "predicate": "No ungranted scratch or other workspace effect in the observed successor"
+    },
+    {
+      "case": "Q11.deploy.return",
+      "interpretation": "The parent timed out with returncode143 after final report acknowledgment. No native final message or total usage was emitted. Root selected exactly one distinct read-only same-session close; that successor cannot turn this attempt into a successful transport.",
+      "outcome": "not_established",
+      "predicate": "Original bounded invocation returns a compact final native host status"
+    }
+  ],
+  "prior_preparation_assessment": {
+    "path": "lifecycle/assessments/claude-release-prepare.json",
+    "sha256": "a17a8be66a6c8ecc783778b3b5f4185c0fe1a69600f0cd3031f0e0b6500e14d7"
+  },
+  "retained_refusals": [
+    {
+      "cause": "basis_ambiguous",
+      "meaning": "Earlier observation used a mismatched prior scope; actual refusal retained and later exact same-scope acquisition corrected it.",
+      "raw_line": 219
+    }
+  ],
+  "schema": "stdo_skills.lifecycle-assessment/1",
+  "source_currentness_limit": "Timed-out actor did not reacquire SOURCE.prior_prepared and stated that limit. Preparation and subsequent fixture Writer readback establish those exact original references separately; do not attribute the later observation to the actor. New readback is pinned by lifecycle/DEPLOY-CLOSE-READY.json and the selected close RECONCILIATION.json.",
+  "standing": "Bounded Writer assessment of exact prior attempt; Root independently consumes, no Product acceptance inferred",
+  "transport": {
+    "ended_ns": 1792901136128789000,
+    "failure": "timeout; output/effect completion remains unknown",
+    "input_bytes": 256,
+    "input_forwarded_bytes": 256,
+    "output_available": false,
+    "pid": 8819,
+    "returncode": 143,
+    "schema": "a_c.fd-support.actor-cli-observation/1",
+    "started_ns": 1792900535417994000,
+    "stderr_bytes": 0,
+    "stderr_eof": false,
+    "stdout_bytes": 788758,
+    "stdout_eof": false,
+    "termination_requests": [
+      {
+        "at_ns": 1792901135525885000,
+        "delivery": "requested",
+        "scope": "registered parent process only",
+        "signal": "terminate"
+      }
+    ],
+    "unknowns": [
+      "descendant/process-tree end and external side effects",
+      "host/model active-context size",
+      "backend retries or unreported usage",
+      "semantic outcome and owner disposition"
+    ]
+  },
+  "writes": [
+    {
+      "evidence": "995204894dc8c2ed8bda38608cd8dcd2075a8e50c478d932b5af57cfd7b1d5cc",
+      "request_id": "deploy-write-payload-1",
+      "status": "ok"
+    },
+    {
+      "evidence": "a4b809305881c243ff2da6fdfc33bf67e01615a2f5ade086a4f8fab82df928ba",
+      "request_id": "deploy-write-manifest-1",
+      "status": "ok"
+    },
+    {
+      "evidence": "fce7dd942d0b28f3e0a02b4cef814803b558e84a928ebed98fdc60d68b60a512",
+      "request_id": "deploy-write-report-1",
+      "status": "ok"
+    },
+    {
+      "evidence": "571095b9b62a64eecff7c62fb13c2564660ef92644c5d4b2e2da0aa80b6acdfb",
+      "request_id": "deploy-write-report-2",
+      "status": "ok"
+    }
+  ]
+}

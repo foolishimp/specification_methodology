@@ -1,0 +1,281 @@
+{
+  "schema": "stdo_skills.initial-host-assessment/1",
+  "assessor": "/root/skills_tool_binding_assessment",
+  "role": "qualification fixture Writer source-oracle assessment; independent assessment and Root acceptance separate",
+  "candidate_inventory_sha256": "63095869d5f4e2a5b85a9bec17598ebf0e683d0ae45bb06f4d1abc85821ba9c7",
+  "oracle": {
+    "path": "../ORACLE.json",
+    "sha256": "bb274a366177a7ec31f28b7d4df9ba500c146a4f956ec8a54697d6ceca629f2c"
+  },
+  "lanes": {
+    "claude-automatic": {
+      "inventory_sha256": "9853e66387a1b8c8204cbe26694f4430ab4ae945bd1ae246a748a820be66b9c8",
+      "census_sha256": "c24f6dc14596bd5b9e6fb99c3f34e06936d85a030ee155a04c8fa253c6075da1",
+      "elapsed_seconds": 236.918432,
+      "vendor_returncode": 0,
+      "skills_acquired": [
+        {
+          "line": 10,
+          "mechanism": "native skill-body delivery",
+          "installed_path": ".claude/skills/stdo-workspace-change/SKILL.md",
+          "installed_sha256": "840bc1eeadcd575b15be7bc426a66f1407624a433ef49edf827671b9c1a6b3d1",
+          "complete_selected_body_in_observed_output": true
+        },
+        {
+          "line": 58,
+          "mechanism": "native skill-body delivery",
+          "installed_path": ".claude/skills/stdo-tool-operations/SKILL.md",
+          "installed_sha256": "a850e36e8136b0db0d233d0bdfc4e8c6b4bc88949be5ea08cc7bb9c2ec4b09a0",
+          "complete_selected_body_in_observed_output": true
+        }
+      ],
+      "actual_models": [
+        "claude-fable-5-1"
+      ],
+      "final_reported_usage": {
+        "line": 230,
+        "event": "result",
+        "reported_usage": {
+          "input_tokens": 228,
+          "cache_creation_input_tokens": 62127,
+          "cache_read_input_tokens": 383058,
+          "output_tokens": 12608,
+          "output_tokens_details": {
+            "thinking_tokens": 5256
+          },
+          "server_tool_use": {
+            "web_search_requests": 0,
+            "web_fetch_requests": 0
+          },
+          "service_tier": "standard",
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 62127,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "inference_geo": "global",
+          "iterations": [
+            {
+              "input_tokens": 32,
+              "output_tokens": 1014,
+              "cache_read_input_tokens": 73037,
+              "cache_creation_input_tokens": 1879,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 1879
+              },
+              "type": "message"
+            }
+          ],
+          "speed": "standard",
+          "fallback_credit": null
+        },
+        "reported_cost_usd": 1.9709845
+      },
+      "public_operation_counts": {
+        "tools.describe": 1,
+        "source.read": 4,
+        "workspace.observe": 2,
+        "work.write": 1
+      },
+      "refused_operations": [],
+      "native_tool_calls": 30,
+      "workspace_change": {
+        "changed": [
+          "outputs/greeting.txt"
+        ],
+        "added": [],
+        "missing": []
+      },
+      "artifact_closure": {
+        "copied": 24,
+        "missing": [],
+        "digest_mismatches": []
+      }
+    },
+    "claude-explicit": {
+      "inventory_sha256": "38f6fb76efef0aaf017b8b3e873f8cf9c7c7a237c1e3b502184aa58b5cbbb783",
+      "census_sha256": "955a5528c5391c59ff66aaba22d4417827bead619b259c0902ea89b5ce432243",
+      "elapsed_seconds": 202.907147,
+      "vendor_returncode": 0,
+      "skills_acquired": [
+        {
+          "native_transcript_line": 4,
+          "mechanism": "native slash-command expansion",
+          "installed_path": ".claude/skills/stdo-workspace-change/SKILL.md",
+          "installed_sha256": "840bc1eeadcd575b15be7bc426a66f1407624a433ef49edf827671b9c1a6b3d1",
+          "complete_selected_body_in_observed_output": true
+        }
+      ],
+      "actual_models": [
+        "claude-fable-5-1"
+      ],
+      "final_reported_usage": {
+        "line": 254,
+        "event": "result",
+        "reported_usage": {
+          "input_tokens": 290,
+          "cache_creation_input_tokens": 67208,
+          "cache_read_input_tokens": 479112,
+          "output_tokens": 14284,
+          "output_tokens_details": {
+            "thinking_tokens": 6780
+          },
+          "server_tool_use": {
+            "web_search_requests": 0,
+            "web_fetch_requests": 0
+          },
+          "service_tier": "standard",
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 67208,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "inference_geo": "global",
+          "iterations": [
+            {
+              "input_tokens": 32,
+              "output_tokens": 867,
+              "cache_read_input_tokens": 76944,
+              "cache_creation_input_tokens": 3053,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 3053
+              },
+              "type": "message"
+            }
+          ],
+          "speed": "standard",
+          "fallback_credit": null
+        },
+        "reported_cost_usd": 2.181038
+      },
+      "public_operation_counts": {
+        "tools.describe": 1,
+        "source.read": 3,
+        "workspace.observe": 5,
+        "work.write": 1
+      },
+      "refused_operations": [
+        {
+          "operation": "workspace.observe",
+          "evidence": "e74135add2c7a9a8defd7a2eb5db1ef14938860e03182edda63f9a85ffaa0df3",
+          "refusal": {
+            "code": "basis_ambiguous",
+            "gaps": [],
+            "reason": "Observation scopes differ",
+            "source_refs": []
+          }
+        }
+      ],
+      "native_tool_calls": 19,
+      "workspace_change": {
+        "changed": [
+          "outputs/greeting.txt"
+        ],
+        "added": [],
+        "missing": []
+      },
+      "artifact_closure": {
+        "copied": 29,
+        "missing": [],
+        "digest_mismatches": []
+      }
+    },
+    "claude-unrelated": {
+      "inventory_sha256": "52f50435cd6b84a44f3ea540878b5b10d800f30ca2c377fa5032c90583fa7487",
+      "census_sha256": "e045551a04b201d162a9a29bb18ec0b8994e8c8faeb26b2d49c457d28c741d09",
+      "elapsed_seconds": 13.292379,
+      "vendor_returncode": 0,
+      "skills_acquired": [],
+      "actual_models": [
+        "claude-fable-5-1"
+      ],
+      "final_reported_usage": {
+        "line": 4,
+        "event": "result",
+        "reported_usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 9098,
+          "cache_read_input_tokens": 12789,
+          "output_tokens": 26,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "server_tool_use": {
+            "web_search_requests": 0,
+            "web_fetch_requests": 0
+          },
+          "service_tier": "standard",
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 9098,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "inference_geo": "global",
+          "iterations": [
+            {
+              "input_tokens": 2,
+              "output_tokens": 26,
+              "cache_read_input_tokens": 12789,
+              "cache_creation_input_tokens": 9098,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 9098
+              },
+              "type": "message"
+            }
+          ],
+          "speed": "standard",
+          "fallback_credit": null
+        },
+        "reported_cost_usd": 0.18647725
+      },
+      "public_operation_counts": {},
+      "refused_operations": [],
+      "native_tool_calls": 0,
+      "workspace_change": {
+        "changed": [],
+        "added": [],
+        "missing": []
+      },
+      "artifact_closure": {
+        "copied": 0,
+        "missing": [],
+        "digest_mismatches": []
+      }
+    }
+  },
+  "decisions": [
+    {
+      "case": "Q01 automatic",
+      "value": "supported finite witness",
+      "reason": "Actual native Skill invocations and complete selected body deliveries for entry and tool skills, verified exact basis, actual native source/observation/write operations, exact correction."
+    },
+    {
+      "case": "Q01 explicit",
+      "value": "supported separate finite witness",
+      "reason": "Ordinary prompt uses native slash invocation; exact selected full body delivered by native client in observed session transcript line4, retained portably. Actual native tool/effect path completes correction."
+    },
+    {
+      "case": "Q02",
+      "value": "supported finite witness",
+      "reason": "Correct one-sentence area answer, zero native tools/commands/a_c operations/skill acquisitions, no workspace effects."
+    },
+    {
+      "case": "Q04",
+      "value": "supported finite task/effect witness",
+      "reason": "Exactly greeting changes; no invented durable ticket/review or out-of-scope write. Explicit retains a read-command option error and an observation basis refusal, then recovers without a repeat write."
+    },
+    {
+      "case": "Q12 initial install/invoke",
+      "value": "supported full-bundle fragment only",
+      "reason": "Five exact documented skills installed and source bodies acquired on actual host. Individual-unit sufficiency, update/removal and modified-content preservation unqualified."
+    }
+  ],
+  "limits": [
+    "Original author timeout/no closed return and F-C01 scope exception are not repaired by these physical-candidate trials.",
+    "Independent static F-C02/F-C03/F-C04 deployment/resource findings remain with original candidate; no repair inferred from full-bundle initial invocation.",
+    "Explicit basis_ambiguous observation refusal remains actual evidence; equal scope re-observation and separate sentinel read completed afterward.",
+    "Native host reports claude-fable-5-1 in these trials. Earlier author/backend observations remain distinct; no alias-wide model claim.",
+    "Reported vendor costs use list basis and are not billing confirmation or comparative efficiency results.",
+    "One finite witness per lane, not reliability, compression benefit or full mandatory scenario closure."
+  ]
+}

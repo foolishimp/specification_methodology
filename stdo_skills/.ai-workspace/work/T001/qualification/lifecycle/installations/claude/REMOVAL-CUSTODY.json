@@ -1,0 +1,853 @@
+{
+  "actual_operations": [
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/qualification/lifecycle/installations/codex/retained-packages/source-old/tests/verify_package.py",
+        "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/qualification/lifecycle/installations/codex/retained-packages/source-old",
+        "--destination",
+        "/private/tmp/stdo-skills-installation-w8g_16zt/claude/workspace/.agents/skills/stdo-work"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"destination_checked\": true, \"files\": 11, \"installed_checked\": false, \"inventory_sha256\": \"337d274efde96147c8e9a2db3e3b25f7631731fc8486562c9022ad087833aa36\", \"limits\": \"finite bytes/metadata/resources/custody only; no semantic or actual-host qualification\", \"local_links\": 14, \"status\": \"passed\"}\n"
+    },
+    {
+      "argv": [
+        "/bin/cp",
+        "-R",
+        "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/qualification/lifecycle/installations/codex/retained-packages/source-old/skills/stdo-work",
+        "/private/tmp/stdo-skills-installation-w8g_16zt/claude/workspace/.agents/skills/stdo-work"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/qualification/lifecycle/installations/codex/retained-packages/source-old/tests/verify_package.py",
+        "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/qualification/lifecycle/installations/codex/retained-packages/source-old",
+        "--installed",
+        "/private/tmp/stdo-skills-installation-w8g_16zt/claude/workspace/.agents/skills/stdo-work"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"destination_checked\": false, \"files\": 11, \"installed_checked\": true, \"inventory_sha256\": \"337d274efde96147c8e9a2db3e3b25f7631731fc8486562c9022ad087833aa36\", \"limits\": \"finite bytes/metadata/resources/custody only; no semantic or actual-host qualification\", \"local_links\": 14, \"status\": \"passed\"}\n"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-I",
+        "-B",
+        "/private/tmp/stdo-skills-installation-w8g_16zt/claude/workspace/.claude/skills/stdo-release-install/scripts/manage_install.py",
+        "remove",
+        "--workspace",
+        "/private/tmp/stdo-skills-installation-w8g_16zt/claude/workspace",
+        "--receipt-sha256",
+        "90f5cc5bfaf55b3240513e5811e0cf7eab60fbaaae6e602f84f70ed111f3d243"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"status\": \"ok\", \"action\": \"remove\", \"removed_receipt_sha256\": \"90f5cc5bfaf55b3240513e5811e0cf7eab60fbaaae6e602f84f70ed111f3d243\"}\n"
+    }
+  ],
+  "after_target_removal": {
+    ".agents": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".agents/skills": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".agents/skills/stdo-work": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".agents/skills/stdo-work/SKILL.md": {
+      "bytes": 3116,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "ba6f7ab1e6de875e2f019b049f7817e771474f1b511a74fe2392a55a37078ee8"
+    },
+    ".agents/skills/stdo-work/references": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".agents/skills/stdo-work/references/basis.md": {
+      "bytes": 2694,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "7b409d4895e7be3291e4e41c32e497ae045e9fb4b62f01b9622b10888d449cda"
+    },
+    ".agents/skills/stdo-work/references/delegation.md": {
+      "bytes": 2969,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "0bb621b4d6edb17f2100878a567596f85a52b517edfafbb2ceba7119dce8bfde"
+    },
+    ".agents/skills/stdo-work/references/qualification.md": {
+      "bytes": 3001,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "dda296ed053f3e8ed5ab4cdc7c7b9f162754832fc89ded9280044d96f9dc795c"
+    },
+    ".agents/skills/stdo-work/references/recovery.md": {
+      "bytes": 3010,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "d7f7f118eea492bb64456a56c4cb4987e6e23acd8b3c0143ba87cf5ec9a92c80"
+    },
+    ".agents/skills/stdo-work/references/release-install.md": {
+      "bytes": 2422,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "ec7cb5a407f6690936d0bf79ab5fc8796c2cfca4c34772f61ceff4b68f337cfb"
+    },
+    ".agents/skills/stdo-work/references/tools.md": {
+      "bytes": 4116,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "8bb49c0dfe0eb87fbfbe5063c4a43e15f074e25fdd4ff90ffdec24ef14e75c8b"
+    },
+    ".agents/skills/stdo-work/source-routes.json": {
+      "bytes": 3501,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "09972e4af512645c43207aa3edd5114e1e81c24ef344c76a6af2e99852920403"
+    },
+    ".agents/skills/unrelated-tool": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".agents/skills/unrelated-tool/SKILL.md": {
+      "bytes": 88,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "8170204b0026411fc7100078bb36fe38f4376915738440279c2b85ccfd4998f2"
+    },
+    ".claude": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".claude/settings.json": {
+      "bytes": 3,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    ".claude/skills": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".claude/skills/unrelated-tool": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".claude/skills/unrelated-tool/SKILL.md": {
+      "bytes": 88,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "8170204b0026411fc7100078bb36fe38f4376915738440279c2b85ccfd4998f2"
+    },
+    ".codex": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".codex/config.toml": {
+      "bytes": 50,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "fc13073c3b37fb254b469b10e99040138400cdd06f2834019c6580968274c8b8"
+    },
+    ".qualification": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".qualification/OWNER.json": {
+      "bytes": 1496,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "0d9e33531eb24a4f7b3587085dc5c212f20c90bd0aa77bd6132d8c22a697b730"
+    },
+    "AGENTS.md": {
+      "bytes": 197,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "7f2f29c47cba5b9695b6d138201ea7b8c8570d0783b54c0a97164e2ebabec9c2"
+    },
+    "CLAUDE.md": {
+      "bytes": 197,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "7f2f29c47cba5b9695b6d138201ea7b8c8570d0783b54c0a97164e2ebabec9c2"
+    },
+    "TASK.md": {
+      "bytes": 382,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "0efcc1bb1274ed9b74b065132e6a537b55ccb4950b04992e7f535d5183011944"
+    },
+    "TOOLING.md": {
+      "bytes": 1008,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "7a8d2762dee8e6605afdeb06a6210986694193786e6aa1c03552be01e3d89f49"
+    },
+    "design": {
+      "kind": "directory",
+      "mode": 493
+    },
+    "design/DESIGN.md": {
+      "bytes": 259,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "453731f36b24af2a5495d7d7b497a430c6c5b578b1ac2070cd6bd84f1ad06824"
+    },
+    "fixture_product.json": {
+      "bytes": 2869,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "f224396383edd22ff4d2d9b68ef001f9804a099ca3b86c3a009839476c8a5f1e"
+    },
+    "inputs": {
+      "kind": "directory",
+      "mode": 493
+    },
+    "inputs/name.txt": {
+      "bytes": 4,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "c4b7d45359e10813d1787293eb7ffa9a074e837fcf99c0281610eab5fe907e79"
+    },
+    "outputs": {
+      "kind": "directory",
+      "mode": 493
+    },
+    "outputs/greeting.txt": {
+      "bytes": 12,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "8b1560f395c0248eca4d2d6cc361825a9f8c00d11ce6f52b26eea2872573c2c1"
+    },
+    "specification": {
+      "kind": "directory",
+      "mode": 493
+    },
+    "specification/GOALS.md": {
+      "bytes": 172,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "5fb2442f5c0db7b5e0060ebe1f86013332dc32f5d4b35872ca67ce57aa680628"
+    },
+    "specification/INTENT.md": {
+      "bytes": 88,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "19c552ef03a9a4acadef9c2522d8fb931a98f534fe9b56f19780edab3f838c71"
+    },
+    "specification/PRODUCT.md": {
+      "bytes": 296,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "ba28450c503070a65c08a1ba28ca082d019ce0232522b2ac6251d865e219f47a"
+    },
+    "specification/REQUIREMENT.md": {
+      "bytes": 144,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "90b54e5eb05b41d850bff21fb75b1bce6e367ffb741e6c0c7cc5b5118fc4348c"
+    },
+    "unrelated": {
+      "kind": "directory",
+      "mode": 493
+    },
+    "unrelated/sentinel.txt": {
+      "bytes": 33,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3"
+    }
+  },
+  "before_other_tenant_install": {
+    ".agents": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".agents/skills": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".agents/skills/unrelated-tool": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".agents/skills/unrelated-tool/SKILL.md": {
+      "bytes": 88,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "8170204b0026411fc7100078bb36fe38f4376915738440279c2b85ccfd4998f2"
+    },
+    ".claude": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".claude/settings.json": {
+      "bytes": 3,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    ".claude/skills": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".claude/skills/stdo-continuation": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".claude/skills/stdo-continuation/SKILL.md": {
+      "bytes": 3400,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "90f3778a97df92796c8d052e4d46ca01e01b1913d3421fa8f421310d03c3cd61"
+    },
+    ".claude/skills/stdo-delegate-review": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".claude/skills/stdo-delegate-review/SKILL.md": {
+      "bytes": 2895,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "382466083cfb1c76870afbc6b3eda707615a94a7cd90ae692995d6a9d4ecbc13"
+    },
+    ".claude/skills/stdo-release-install": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".claude/skills/stdo-release-install/SKILL.md": {
+      "bytes": 4329,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "ef4831511f78d11015149394ea26c9e899980fb8c9cb40eac278f62de72b6841"
+    },
+    ".claude/skills/stdo-release-install/references": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".claude/skills/stdo-release-install/references/maintenance.md": {
+      "bytes": 1712,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "54836f3f47e18b2d7c10c05610f8e1dcd4f5b52efa06385ec1c2aa8de05646d0"
+    },
+    ".claude/skills/stdo-release-install/scripts": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".claude/skills/stdo-release-install/scripts/manage_install.py": {
+      "bytes": 10783,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "c10608336639fcf6ed87443666dab5e7ca79d3cc84df2f7a80b6ef33c603fabe"
+    },
+    ".claude/skills/stdo-tool-operations": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".claude/skills/stdo-tool-operations/SKILL.md": {
+      "bytes": 4565,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "a850e36e8136b0db0d233d0bdfc4e8c6b4bc88949be5ea08cc7bb9c2ec4b09a0"
+    },
+    ".claude/skills/stdo-workspace-change": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".claude/skills/stdo-workspace-change/SKILL.md": {
+      "bytes": 4518,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "ead38d8c2abd89c9ef680d98fc954bd5ff73196850308ee9d375455eba139379"
+    },
+    ".claude/skills/unrelated-tool": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".claude/skills/unrelated-tool/SKILL.md": {
+      "bytes": 88,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "8170204b0026411fc7100078bb36fe38f4376915738440279c2b85ccfd4998f2"
+    },
+    ".claude/stdo-skills-claude.receipt.json": {
+      "bytes": 1443,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "90f5cc5bfaf55b3240513e5811e0cf7eab60fbaaae6e602f84f70ed111f3d243"
+    },
+    ".codex": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".codex/config.toml": {
+      "bytes": 50,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "fc13073c3b37fb254b469b10e99040138400cdd06f2834019c6580968274c8b8"
+    },
+    ".qualification": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".qualification/OWNER.json": {
+      "bytes": 1496,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "0d9e33531eb24a4f7b3587085dc5c212f20c90bd0aa77bd6132d8c22a697b730"
+    },
+    "AGENTS.md": {
+      "bytes": 197,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "7f2f29c47cba5b9695b6d138201ea7b8c8570d0783b54c0a97164e2ebabec9c2"
+    },
+    "CLAUDE.md": {
+      "bytes": 197,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "7f2f29c47cba5b9695b6d138201ea7b8c8570d0783b54c0a97164e2ebabec9c2"
+    },
+    "TASK.md": {
+      "bytes": 382,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "0efcc1bb1274ed9b74b065132e6a537b55ccb4950b04992e7f535d5183011944"
+    },
+    "TOOLING.md": {
+      "bytes": 1008,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "7a8d2762dee8e6605afdeb06a6210986694193786e6aa1c03552be01e3d89f49"
+    },
+    "design": {
+      "kind": "directory",
+      "mode": 493
+    },
+    "design/DESIGN.md": {
+      "bytes": 259,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "453731f36b24af2a5495d7d7b497a430c6c5b578b1ac2070cd6bd84f1ad06824"
+    },
+    "fixture_product.json": {
+      "bytes": 2869,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "f224396383edd22ff4d2d9b68ef001f9804a099ca3b86c3a009839476c8a5f1e"
+    },
+    "inputs": {
+      "kind": "directory",
+      "mode": 493
+    },
+    "inputs/name.txt": {
+      "bytes": 4,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "c4b7d45359e10813d1787293eb7ffa9a074e837fcf99c0281610eab5fe907e79"
+    },
+    "outputs": {
+      "kind": "directory",
+      "mode": 493
+    },
+    "outputs/greeting.txt": {
+      "bytes": 12,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "8b1560f395c0248eca4d2d6cc361825a9f8c00d11ce6f52b26eea2872573c2c1"
+    },
+    "specification": {
+      "kind": "directory",
+      "mode": 493
+    },
+    "specification/GOALS.md": {
+      "bytes": 172,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "5fb2442f5c0db7b5e0060ebe1f86013332dc32f5d4b35872ca67ce57aa680628"
+    },
+    "specification/INTENT.md": {
+      "bytes": 88,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "19c552ef03a9a4acadef9c2522d8fb931a98f534fe9b56f19780edab3f838c71"
+    },
+    "specification/PRODUCT.md": {
+      "bytes": 296,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "ba28450c503070a65c08a1ba28ca082d019ce0232522b2ac6251d865e219f47a"
+    },
+    "specification/REQUIREMENT.md": {
+      "bytes": 144,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "90b54e5eb05b41d850bff21fb75b1bce6e367ffb741e6c0c7cc5b5118fc4348c"
+    },
+    "unrelated": {
+      "kind": "directory",
+      "mode": 493
+    },
+    "unrelated/sentinel.txt": {
+      "bytes": 33,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3"
+    }
+  },
+  "before_target_removal": {
+    ".agents": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".agents/skills": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".agents/skills/stdo-work": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".agents/skills/stdo-work/SKILL.md": {
+      "bytes": 3116,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "ba6f7ab1e6de875e2f019b049f7817e771474f1b511a74fe2392a55a37078ee8"
+    },
+    ".agents/skills/stdo-work/references": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".agents/skills/stdo-work/references/basis.md": {
+      "bytes": 2694,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "7b409d4895e7be3291e4e41c32e497ae045e9fb4b62f01b9622b10888d449cda"
+    },
+    ".agents/skills/stdo-work/references/delegation.md": {
+      "bytes": 2969,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "0bb621b4d6edb17f2100878a567596f85a52b517edfafbb2ceba7119dce8bfde"
+    },
+    ".agents/skills/stdo-work/references/qualification.md": {
+      "bytes": 3001,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "dda296ed053f3e8ed5ab4cdc7c7b9f162754832fc89ded9280044d96f9dc795c"
+    },
+    ".agents/skills/stdo-work/references/recovery.md": {
+      "bytes": 3010,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "d7f7f118eea492bb64456a56c4cb4987e6e23acd8b3c0143ba87cf5ec9a92c80"
+    },
+    ".agents/skills/stdo-work/references/release-install.md": {
+      "bytes": 2422,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "ec7cb5a407f6690936d0bf79ab5fc8796c2cfca4c34772f61ceff4b68f337cfb"
+    },
+    ".agents/skills/stdo-work/references/tools.md": {
+      "bytes": 4116,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "8bb49c0dfe0eb87fbfbe5063c4a43e15f074e25fdd4ff90ffdec24ef14e75c8b"
+    },
+    ".agents/skills/stdo-work/source-routes.json": {
+      "bytes": 3501,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "09972e4af512645c43207aa3edd5114e1e81c24ef344c76a6af2e99852920403"
+    },
+    ".agents/skills/unrelated-tool": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".agents/skills/unrelated-tool/SKILL.md": {
+      "bytes": 88,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "8170204b0026411fc7100078bb36fe38f4376915738440279c2b85ccfd4998f2"
+    },
+    ".claude": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".claude/settings.json": {
+      "bytes": 3,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    ".claude/skills": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".claude/skills/stdo-continuation": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".claude/skills/stdo-continuation/SKILL.md": {
+      "bytes": 3400,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "90f3778a97df92796c8d052e4d46ca01e01b1913d3421fa8f421310d03c3cd61"
+    },
+    ".claude/skills/stdo-delegate-review": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".claude/skills/stdo-delegate-review/SKILL.md": {
+      "bytes": 2895,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "382466083cfb1c76870afbc6b3eda707615a94a7cd90ae692995d6a9d4ecbc13"
+    },
+    ".claude/skills/stdo-release-install": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".claude/skills/stdo-release-install/SKILL.md": {
+      "bytes": 4329,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "ef4831511f78d11015149394ea26c9e899980fb8c9cb40eac278f62de72b6841"
+    },
+    ".claude/skills/stdo-release-install/references": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".claude/skills/stdo-release-install/references/maintenance.md": {
+      "bytes": 1712,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "54836f3f47e18b2d7c10c05610f8e1dcd4f5b52efa06385ec1c2aa8de05646d0"
+    },
+    ".claude/skills/stdo-release-install/scripts": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".claude/skills/stdo-release-install/scripts/manage_install.py": {
+      "bytes": 10783,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "c10608336639fcf6ed87443666dab5e7ca79d3cc84df2f7a80b6ef33c603fabe"
+    },
+    ".claude/skills/stdo-tool-operations": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".claude/skills/stdo-tool-operations/SKILL.md": {
+      "bytes": 4565,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "a850e36e8136b0db0d233d0bdfc4e8c6b4bc88949be5ea08cc7bb9c2ec4b09a0"
+    },
+    ".claude/skills/stdo-workspace-change": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".claude/skills/stdo-workspace-change/SKILL.md": {
+      "bytes": 4518,
+      "kind": "file",
+      "mode": 384,
+      "sha256": "ead38d8c2abd89c9ef680d98fc954bd5ff73196850308ee9d375455eba139379"
+    },
+    ".claude/skills/unrelated-tool": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".claude/skills/unrelated-tool/SKILL.md": {
+      "bytes": 88,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "8170204b0026411fc7100078bb36fe38f4376915738440279c2b85ccfd4998f2"
+    },
+    ".claude/stdo-skills-claude.receipt.json": {
+      "bytes": 1443,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "90f5cc5bfaf55b3240513e5811e0cf7eab60fbaaae6e602f84f70ed111f3d243"
+    },
+    ".codex": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".codex/config.toml": {
+      "bytes": 50,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "fc13073c3b37fb254b469b10e99040138400cdd06f2834019c6580968274c8b8"
+    },
+    ".qualification": {
+      "kind": "directory",
+      "mode": 493
+    },
+    ".qualification/OWNER.json": {
+      "bytes": 1496,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "0d9e33531eb24a4f7b3587085dc5c212f20c90bd0aa77bd6132d8c22a697b730"
+    },
+    "AGENTS.md": {
+      "bytes": 197,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "7f2f29c47cba5b9695b6d138201ea7b8c8570d0783b54c0a97164e2ebabec9c2"
+    },
+    "CLAUDE.md": {
+      "bytes": 197,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "7f2f29c47cba5b9695b6d138201ea7b8c8570d0783b54c0a97164e2ebabec9c2"
+    },
+    "TASK.md": {
+      "bytes": 382,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "0efcc1bb1274ed9b74b065132e6a537b55ccb4950b04992e7f535d5183011944"
+    },
+    "TOOLING.md": {
+      "bytes": 1008,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "7a8d2762dee8e6605afdeb06a6210986694193786e6aa1c03552be01e3d89f49"
+    },
+    "design": {
+      "kind": "directory",
+      "mode": 493
+    },
+    "design/DESIGN.md": {
+      "bytes": 259,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "453731f36b24af2a5495d7d7b497a430c6c5b578b1ac2070cd6bd84f1ad06824"
+    },
+    "fixture_product.json": {
+      "bytes": 2869,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "f224396383edd22ff4d2d9b68ef001f9804a099ca3b86c3a009839476c8a5f1e"
+    },
+    "inputs": {
+      "kind": "directory",
+      "mode": 493
+    },
+    "inputs/name.txt": {
+      "bytes": 4,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "c4b7d45359e10813d1787293eb7ffa9a074e837fcf99c0281610eab5fe907e79"
+    },
+    "outputs": {
+      "kind": "directory",
+      "mode": 493
+    },
+    "outputs/greeting.txt": {
+      "bytes": 12,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "8b1560f395c0248eca4d2d6cc361825a9f8c00d11ce6f52b26eea2872573c2c1"
+    },
+    "specification": {
+      "kind": "directory",
+      "mode": 493
+    },
+    "specification/GOALS.md": {
+      "bytes": 172,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "5fb2442f5c0db7b5e0060ebe1f86013332dc32f5d4b35872ca67ce57aa680628"
+    },
+    "specification/INTENT.md": {
+      "bytes": 88,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "19c552ef03a9a4acadef9c2522d8fb931a98f534fe9b56f19780edab3f838c71"
+    },
+    "specification/PRODUCT.md": {
+      "bytes": 296,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "ba28450c503070a65c08a1ba28ca082d019ce0232522b2ac6251d865e219f47a"
+    },
+    "specification/REQUIREMENT.md": {
+      "bytes": 144,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "90b54e5eb05b41d850bff21fb75b1bce6e367ffb741e6c0c7cc5b5118fc4348c"
+    },
+    "unrelated": {
+      "kind": "directory",
+      "mode": 493
+    },
+    "unrelated/sentinel.txt": {
+      "bytes": 33,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3"
+    }
+  },
+  "captured_native_invocation": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/qualification/results/claude-installation-update/INVENTORY.json",
+    "sha256": "fe2ab5b188936fb63e1c22d70b02560c8b13f12a9f23b2a1d7568d1c430ef815"
+  },
+  "fixture_driver": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/qualification/lifecycle/finish_installation.py",
+    "sha256": "045afe2628e6c08c6140020cec6f17a0aa6d71b3ee39fcecfba9f91b0194594a"
+  },
+  "limits": [
+    "One finite lifecycle fixture under exclusive cooperative access, not a concurrent/crash-atomic or OS-isolation guarantee.",
+    "The compatible update is a controlled metadata-only derivative, not a Product release."
+  ],
+  "other_tenant_preserved": "codex",
+  "preserved_package_custody": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/qualification/lifecycle/installations/codex/PACKAGE-CUSTODY.json",
+    "sha256": "3b7ecd0e4f8f594b77fd672581df07f39224f1d0ff8b57ae160c6205f1db1643"
+  },
+  "removed_entries": [
+    ".claude/skills/stdo-continuation",
+    ".claude/skills/stdo-continuation/SKILL.md",
+    ".claude/skills/stdo-delegate-review",
+    ".claude/skills/stdo-delegate-review/SKILL.md",
+    ".claude/skills/stdo-release-install",
+    ".claude/skills/stdo-release-install/SKILL.md",
+    ".claude/skills/stdo-release-install/references",
+    ".claude/skills/stdo-release-install/references/maintenance.md",
+    ".claude/skills/stdo-release-install/scripts",
+    ".claude/skills/stdo-release-install/scripts/manage_install.py",
+    ".claude/skills/stdo-tool-operations",
+    ".claude/skills/stdo-tool-operations/SKILL.md",
+    ".claude/skills/stdo-workspace-change",
+    ".claude/skills/stdo-workspace-change/SKILL.md",
+    ".claude/stdo-skills-claude.receipt.json"
+  ],
+  "root_close_reference": "Root consumed LC-01 as a real failed effect-scope predicate and selected separate deterministic old-fixture removal after captured native invocation dc0100ce370bb536e4889a49a6246a4dd5ac67622fb6cbdc2329b100e46e4527. This removal does not repair or erase LC-01; affected host successor requires repaired package and separate selection.",
+  "schema": "stdo_skills.actual-removal-custody/1",
+  "standing": "Actual scoped removal after captured host invocation; exact other selected tenant, both host configurations, unrelated skills, outputs and source preserved. No invocation of the removed skill body is claimed.",
+  "target_package_custody": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/qualification/lifecycle/installations/claude/PACKAGE-CUSTODY.json",
+    "sha256": "2f39db3bea51745a9231e0e667327179686395c7ec8ca6df05ac2a88e28efc51"
+  },
+  "target_update_custody": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/qualification/lifecycle/installations/claude/UPDATE-CUSTODY.json",
+    "sha256": "5e99ce09b0f68bb9ff67a7360bfca5269a94a7e5b8bb21442196025f95173be4"
+  },
+  "tenant_removed": "claude"
+}

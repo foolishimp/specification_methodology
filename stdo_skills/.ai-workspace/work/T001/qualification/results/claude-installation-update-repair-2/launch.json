@@ -1,0 +1,84 @@
+{
+  "activation_id": "urn:stdo-skills:qualification:claude:installation-update-repair-2:activation:1",
+  "actor_plan": {
+    "path": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/installation/claude/control/actor-plan.json",
+    "sha256": "c00d0256243cda92f850be006e67e79c4ba39cd2f8cbd962eda332cc35981180"
+  },
+  "case": {
+    "lane": "installation-update-repair-2",
+    "tenant": "claude"
+  },
+  "max_outer_bytes": 4194304,
+  "ordinary_prompt": {
+    "path": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/installation/claude/control/ordinary-prompt.txt",
+    "sha256": "34171c56605fe7772fdc49e479c73c741cb7647fb5908c7ee1bf4fffc7bb90c2"
+  },
+  "package": {
+    "candidate_record": {
+      "path": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/installation/claude/control/source-repair-2/INVENTORY.md",
+      "sha256": "33472e5e2b9adf5ba616bd6980d7f84b3c10de168968727919de32378f045704"
+    },
+    "documentation": {
+      "path": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/installation/claude/control/source-repair-2/INSTALL.md",
+      "sha256": "f03480153672f204963622d564b1a03440c9ca3aca612e49412772b4ea2bfc9b"
+    },
+    "files": [
+      {
+        "path": ".claude/skills/stdo-continuation/SKILL.md",
+        "sha256": "90f3778a97df92796c8d052e4d46ca01e01b1913d3421fa8f421310d03c3cd61"
+      },
+      {
+        "path": ".claude/skills/stdo-delegate-review/SKILL.md",
+        "sha256": "382466083cfb1c76870afbc6b3eda707615a94a7cd90ae692995d6a9d4ecbc13"
+      },
+      {
+        "path": ".claude/skills/stdo-release-install/SKILL.md",
+        "sha256": "ef4831511f78d11015149394ea26c9e899980fb8c9cb40eac278f62de72b6841"
+      },
+      {
+        "path": ".claude/skills/stdo-release-install/references/maintenance.md",
+        "sha256": "84450465fd14720ef1ddaf66f30d9b7716c114ab01799a318aa5166f02fe36e1"
+      },
+      {
+        "path": ".claude/skills/stdo-release-install/scripts/manage_install.py",
+        "sha256": "c10608336639fcf6ed87443666dab5e7ca79d3cc84df2f7a80b6ef33c603fabe"
+      },
+      {
+        "path": ".claude/skills/stdo-tool-operations/SKILL.md",
+        "sha256": "63ad43e77c36ae35a9f1c7b0721a09abab0d4c9b8dc90d2a557c2f7bfab95afe"
+      },
+      {
+        "path": ".claude/skills/stdo-workspace-change/SKILL.md",
+        "sha256": "5c30fd460432895ce19ec0711df8e5ddd715f1e37496d6fd29234b2e3642901c"
+      }
+    ],
+    "install_relative": ".claude/skills",
+    "installation_binding": {
+      "action": "verified-existing",
+      "helper": {
+        "path": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/installation/claude/control/source-repair-2/skills/stdo-release-install/scripts/manage_install.py",
+        "sha256": "c10608336639fcf6ed87443666dab5e7ca79d3cc84df2f7a80b6ef33c603fabe"
+      },
+      "kind": "claude-bundle-installer/1",
+      "prior_lifecycle_custody": {
+        "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/qualification/lifecycle/installations-repair-2/claude/UPDATE-CUSTODY.json",
+        "sha256": "3b3f2c0d7345fd12d29a65a1cdef2ffb9e876f1e838585737a6aea938fd658b3"
+      },
+      "receipt": {
+        "path": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/installation/claude/workspace/.claude/stdo-skills-claude.receipt.json",
+        "sha256": "b2dbf4f45545869147c2ae791da064e6995bd4e73bf75dcd1775686038e34d43"
+      }
+    },
+    "source_root": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/installation/claude/control/source-repair-2/skills"
+  },
+  "return_actor": {
+    "authorship": "pinned projection/capture implementation; no semantic host assessment",
+    "family": "fixed-local-qualification-executor",
+    "id": "urn:stdo-skills:qualification:claude:installation-update-repair-2:physical-launcher"
+  },
+  "schema": "stdo_skills.qualification-launch/1",
+  "transport": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/examples/fd-support/actor_cli.py",
+    "sha256": "3f0bd239339e635f4e49ae89a00f0857f4672cb177a5dd2ce03f124f0b116528"
+  }
+}

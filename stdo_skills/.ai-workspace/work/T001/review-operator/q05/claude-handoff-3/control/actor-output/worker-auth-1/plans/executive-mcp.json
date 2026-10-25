@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "stdo_q05": {
+      "args": [
+        "-B",
+        "/Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py",
+        "--policy",
+        "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/claude-handoff-3/control/actor-output/worker-auth-1/plans/executive-policy.json",
+        "--policy-sha256",
+        "6a19a4bee24f96912496479a12de1832ddc4efa13e4c3bb59a411d44ee98df0c",
+        "--principal",
+        "executive",
+        "mcp"
+      ],
+      "command": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+      "env": {
+        "CLAUDE_CODE_OAUTH_TOKEN": "${CLAUDE_CODE_OAUTH_TOKEN}"
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "urn:stdo-skills:T001:final-integration:draft-1",
+  "actor": "/root/skills_common_writer",
+  "role": "bounded status Writer",
+  "consumer": "/root",
+  "authorized": "Root final-integration task; prepare payloads/readiness only until live Q05 inputs close and Root selects exact publication",
+  "write_territory": [
+    ".ai-workspace/work/T001/final-integration/"
+  ],
+  "pending_publication_targets": [
+    "README.md",
+    "specification/GOALS.md",
+    "specification/PRODUCT.md",
+    "specification/REFERENCE_FRAME_BASIS.md",
+    ".ai-workspace/tickets/active/T-001-skills-dogfood.md",
+    ".ai-workspace/work/T001/DELIVERY.md",
+    ".ai-workspace/work/T001/EVIDENCE-INDEX.json"
+  ],
+  "exclusions": [
+    "common criteria changes",
+    "method pin changes",
+    "Product Definition changes",
+    "tenant package changes",
+    "runtime changes",
+    "old freeze changes",
+    "Git effects"
+  ],
+  "recorded_at": "2026-10-25T04:04:35.325391+00:00"
+}

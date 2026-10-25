@@ -1,0 +1,250 @@
+{
+  "continuation": "Root explicitly selects same actual Claude session with a new activation and existing fixed method/tool/model basis; no old dispatch is replayed",
+  "current_direct_pid": {
+    "argv": [
+      "ps",
+      "-p",
+      "15534",
+      "-o",
+      "pid=,comm="
+    ],
+    "returncode": 1,
+    "stdout": ""
+  },
+  "limits": [
+    "Timeout is not rollback; generic external/descendant effects remain unknown",
+    "No closed Worker return or candidate assessment was produced",
+    "Retained source acquisitions have original provenance, not current observations"
+  ],
+  "prior_attempt": {
+    "id": "sha256:a8f5dd10d123bcc8d5be3353eee07e954f8b837c37044dba83fab7acf1ec0997",
+    "sha256": "a8f5dd10d123bcc8d5be3353eee07e954f8b837c37044dba83fab7acf1ec0997"
+  },
+  "process": {
+    "ended_ns": 1792894448543293000,
+    "failure": "timeout; output/effect completion remains unknown",
+    "input_bytes": 29792,
+    "input_forwarded_bytes": 29792,
+    "output_available": false,
+    "pid": 15534,
+    "returncode": 143,
+    "schema": "a_c.fd-support.actor-cli-observation/1",
+    "started_ns": 1792893847896810000,
+    "stderr_bytes": 0,
+    "stderr_eof": false,
+    "stdout_bytes": 420540,
+    "stdout_eof": false,
+    "termination_requests": [
+      {
+        "at_ns": 1792894447989231000,
+        "delivery": "requested",
+        "scope": "registered parent process only",
+        "signal": "terminate"
+      }
+    ],
+    "unknowns": [
+      "descendant/process-tree end and external side effects",
+      "host/model active-context size",
+      "backend retries or unreported usage",
+      "semantic outcome and owner disposition"
+    ]
+  },
+  "reported_model": [
+    "claude-fable-5-1"
+  ],
+  "retained_acquisitions": [
+    {
+      "bytes_still_match": true,
+      "operation_evidence": {
+        "id": "sha256:e5592f3d0b138ad21783ad8740c89717c39ad7b1d20cd86e9d2b48af8810fe8c",
+        "sha256": "e5592f3d0b138ad21783ad8740c89717c39ad7b1d20cd86e9d2b48af8810fe8c"
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "claude/HISTORY.json",
+        "root": "successor",
+        "selector": null,
+        "sha256": "b413c8218d7b68e498a73065028f239e7c559eead5065a5406e71441f129bb74"
+      }
+    },
+    {
+      "bytes_still_match": true,
+      "operation_evidence": {
+        "id": "sha256:6d1d7d5a970d80dcb3c5f646d30156d68a83e2bfa2912802cc11712ca5155d16",
+        "sha256": "6d1d7d5a970d80dcb3c5f646d30156d68a83e2bfa2912802cc11712ca5155d16"
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "claude/HOST.md",
+        "root": "successor",
+        "selector": null,
+        "sha256": "cdd34bf4c1b18d43ff1f922367c282959f579aa4384583fb21513bf90a3d8408"
+      }
+    },
+    {
+      "bytes_still_match": true,
+      "operation_evidence": {
+        "id": "sha256:1f4d33facc5fc40725f851d162f7c671e11031a497e84a84e096f6acee6231e0",
+        "sha256": "1f4d33facc5fc40725f851d162f7c671e11031a497e84a84e096f6acee6231e0"
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "specification/REFERENCE_FRAME_BASIS.md",
+        "root": "product",
+        "selector": null,
+        "sha256": "00a91bb5a16ba8802cb2d3132c08677c978f3ef50d4e6c61d864c5afdb960baa"
+      }
+    },
+    {
+      "bytes_still_match": true,
+      "operation_evidence": {
+        "id": "sha256:8c21b1ac0422c361c23f99bf416d7c9bd7dd383495709c9b87b66259701ac321",
+        "sha256": "8c21b1ac0422c361c23f99bf416d7c9bd7dd383495709c9b87b66259701ac321"
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "standards/ACTIVATION.md",
+        "root": "method",
+        "selector": {
+          "lines": [
+            1750,
+            1768
+          ]
+        },
+        "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d"
+      }
+    },
+    {
+      "bytes_still_match": true,
+      "operation_evidence": {
+        "id": "sha256:74b056ef7e3e37a967e63208b51a9ab7a07109befb04c66b970c259b1d68b281",
+        "sha256": "74b056ef7e3e37a967e63208b51a9ab7a07109befb04c66b970c259b1d68b281"
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "claude/SOURCE-ROUTES.json",
+        "root": "successor",
+        "selector": null,
+        "sha256": "4601339d232697ab8af6d3bdb16ae9db7656ea13924bb2287b85423890d11ad1"
+      }
+    },
+    {
+      "bytes_still_match": true,
+      "operation_evidence": {
+        "id": "sha256:6f4af70acf3112ab8037b130b9d4b7e378374b5081267b5fac78a7b7322d6309",
+        "sha256": "6f4af70acf3112ab8037b130b9d4b7e378374b5081267b5fac78a7b7322d6309"
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "specification/PRODUCT.md",
+        "root": "product",
+        "selector": null,
+        "sha256": "7e667a594717645aa51fa23b757a95283ad60e5eca4e59d24246a62ce2716803"
+      }
+    },
+    {
+      "bytes_still_match": true,
+      "operation_evidence": {
+        "id": "sha256:52c9942f1fe6fdadac4ca9cf690e4f312e9860935484bfac79c56d81a92f25fe",
+        "sha256": "52c9942f1fe6fdadac4ca9cf690e4f312e9860935484bfac79c56d81a92f25fe"
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "specification/requirements/SCENARIOS.md",
+        "root": "product",
+        "selector": null,
+        "sha256": "089221fb9d7eee532f91c6ef40a4bfdaaa18c00fcc28bc2f538ddd6b6e3ff03e"
+      }
+    },
+    {
+      "bytes_still_match": true,
+      "operation_evidence": {
+        "id": "sha256:846d038a1d0cdba1507746a8637b78280e4f780f9ddd2d898ffbc3ad5093bdf5",
+        "sha256": "846d038a1d0cdba1507746a8637b78280e4f780f9ddd2d898ffbc3ad5093bdf5"
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "specification/requirements/README.md",
+        "root": "product",
+        "selector": null,
+        "sha256": "dcc2564e597d3d3c8fcff025a515f4a92a62e7f3aa2f7ba80af97f7db75f6acc"
+      }
+    },
+    {
+      "bytes_still_match": true,
+      "operation_evidence": {
+        "id": "sha256:4287de9fc7230a6ee2d8e79c3255e3067f66eed9fd3927b465cc432c0b049249",
+        "sha256": "4287de9fc7230a6ee2d8e79c3255e3067f66eed9fd3927b465cc432c0b049249"
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "specification/INTENT.md",
+        "root": "product",
+        "selector": null,
+        "sha256": "c6c8d5083ce154fa5f1782b4a789c4ff96b65a18eabc28339c79857b131ad895"
+      }
+    },
+    {
+      "bytes_still_match": true,
+      "operation_evidence": {
+        "id": "sha256:59dfe96f593262a411023881c1bcc693c0ec0bd56c8d93c3859365e8fc25b414",
+        "sha256": "59dfe96f593262a411023881c1bcc693c0ec0bd56c8d93c3859365e8fc25b414"
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "claude/TASK.md",
+        "root": "successor",
+        "selector": null,
+        "sha256": "45ba08e37aea20bbb12ff65904e4d60e4aa0a939876b9dc181120aac70167ac8"
+      }
+    },
+    {
+      "bytes_still_match": true,
+      "operation_evidence": {
+        "id": "sha256:b03dee8abdecaf843f3e0fce805dfac315c06da4c444c486b781c9ea09f3dd28",
+        "sha256": "b03dee8abdecaf843f3e0fce805dfac315c06da4c444c486b781c9ea09f3dd28"
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "standards/ACTIVATION.md",
+        "root": "method",
+        "selector": {
+          "lines": [
+            1004,
+            1055
+          ]
+        },
+        "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d"
+      }
+    },
+    {
+      "bytes_still_match": true,
+      "operation_evidence": {
+        "id": "sha256:d2a4b1cd0c32419febcbbe2cbcaefe34adedbfa1109f2a818440be5095148fa4",
+        "sha256": "d2a4b1cd0c32419febcbbe2cbcaefe34adedbfa1109f2a818440be5095148fa4"
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "specification/SOURCE_OWNERS.md",
+        "root": "product",
+        "selector": null,
+        "sha256": "15300e9871b842cb6ab81b360fe9717766638e82abc2d1cf06c5cebc2febfca3"
+      }
+    }
+  ],
+  "root_observation": "Root reported no remaining successor-1/tenant commands",
+  "session": "9069a765-b3ee-4a03-8f71-6288ce3b57b6",
+  "tenant_files": []
+}

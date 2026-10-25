@@ -1,0 +1,619 @@
+{
+  "assessment": "Source-derived read-only continuation assessment remains separate; prior timeout is not rewritten",
+  "custody": "Exact native capture and public control evidence; historical source roots remain explicit, no grant rebasing",
+  "final_messages": [
+    {
+      "is_error": false,
+      "line": 35,
+      "subtype": "success",
+      "text": "Final status, read-only close. No file was written or rewritten this turn.\n\n**Deployed and verified.** The exact retained release demo/v1.0.0-rc.1 is installed in deploy-test and still matches byte for byte. A fresh native observation this turn (deploy-close-observe-2, artifact sha256:19c4a504...) agrees with every entry in the reconciliation record's current targets.\n\n| Path | current sha256 | equals |\n|---|---|---|\n| deploy-test/payload.txt | b31b59c9...84da2 | retained/release/payload.txt |\n| deploy-test/manifest.json | ce71758a...acac35 | retained/release/manifest.json |\n| outputs/deployment.md | d8da0cd2...34f5bf | postimage of the last acknowledged report write |\n| deploy-test/unrelated.txt | 77cd8d24...6bac94 | baseline, unchanged |\n| unrelated/sentinel.txt | 56686d9c...6cb51b3 | baseline, unchanged |\n\n**Reconciliation.** The four acknowledged effects in the reconciliation record are exactly the four work.write receipts from the earlier invocation: payload, manifest, report version one, report version two. The report on disk is the second version, so the final write completed before the timeout. No unresolved or partial target write exists, and nothing needed repeating.\n\n**Fresh source-identity readback.** The reconciliation record shows all three SOURCE.json identities matched at their original paths, including the prior prepared record. That readback was performed by the fixture Writer after my invocation. It is not my evidence. My report states the prior prepared record's currentness as unknown, which was accurate when written and is now superseded by the Writer's readback. The report was not updated because no report-edit authority is selected this turn.\n\n**Limited by the earlier timeout.**\n- The earlier process ended with return code 143 and an incomplete EOF. Native usage totals for that invocation are missing and stay unknown.\n- No matching live process was observed. Detached descendants and any external effects remain unknown. No kill or cleanup was performed.\n- This close ran under a different controller basis. The earlier session's observation artifacts are not visible here, so a diff against the original baseline was refused with source_missing and I observed without a previous basis instead. That refusal had no effect.\n\n**Unresolved work.** None within the TASK.md grant. Owner acceptance, remote publication, and any further stage remain out of scope and were not performed."
+    }
+  ],
+  "host_operations": [
+    {
+      "evidence": "0371af0ff02910f552c7e5db1a3956601bfda1802c4732307707d6c1a3d87cc0",
+      "request": {
+        "arguments": {
+          "scope": [
+            {
+              "kind": "directory",
+              "path": "deploy-test",
+              "root": "product"
+            },
+            {
+              "kind": "directory",
+              "path": "outputs",
+              "root": "product"
+            },
+            {
+              "kind": "file",
+              "path": "deploy-test/unrelated.txt",
+              "root": "product"
+            },
+            {
+              "kind": "file",
+              "path": "unrelated/sentinel.txt",
+              "root": "product"
+            },
+            {
+              "kind": "file",
+              "path": "retained/release/payload.txt",
+              "root": "product"
+            },
+            {
+              "kind": "file",
+              "path": "retained/release/manifest.json",
+              "root": "product"
+            },
+            {
+              "kind": "file",
+              "path": "retained/SOURCE.json",
+              "root": "product"
+            }
+          ]
+        },
+        "id": "deploy-close-observe-2",
+        "operation": "workspace.observe",
+        "schema": "a_c.fd-support.request/1"
+      },
+      "response_without_evidence": {
+        "evidence": null,
+        "id": "deploy-close-observe-2",
+        "operation": "workspace.observe",
+        "operation_outcome": {
+          "cause": "declared output available",
+          "core_value": "satisfied",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(workspace.observe)[request_sha256=fb546f3732e89fabc21bc77b56d6dbf9771a67f752a7fbe3642fcfa64fc29ad6]: declared output availability",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "returned"
+        },
+        "refusal": null,
+        "result": {
+          "artifact": {
+            "id": "sha256:19c4a5041f27bafa0487ebbe5311d9d1e1240aeda9b03cb03c8c31fd5a7dcc55",
+            "sha256": "19c4a5041f27bafa0487ebbe5311d9d1e1240aeda9b03cb03c8c31fd5a7dcc55"
+          },
+          "value": {
+            "bindings": {
+              "method_profile": {
+                "engine": "workspace-regular-file",
+                "object": null,
+                "path": "build_tenants/graphify/design/fd-method-stdo-3.0.1.json",
+                "root": "tool",
+                "selector": null,
+                "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+              },
+              "policy_sha256": "8d02b334a8d5a1b68e92b4204d2a349e0e1b26dd1e907c8e51fa66b710d2c99b",
+              "product_definition": {
+                "engine": "workspace-regular-file",
+                "object": null,
+                "path": "CONTROLLER.json",
+                "root": "control",
+                "selector": null,
+                "sha256": "5969523dc288a749af28330caa927eb1ace5eaec5e0906e9e3079995d245ec4c"
+              }
+            },
+            "diff": [],
+            "entries": [
+              {
+                "exists": true,
+                "path": "deploy-test",
+                "root": "product",
+                "sha256": null,
+                "size": null,
+                "type": "directory"
+              },
+              {
+                "exists": true,
+                "path": "deploy-test/manifest.json",
+                "root": "product",
+                "sha256": "ce71758abbf18193dfc3a2c588c228668e0b9065ed1b5e3cf96fb80a01acac35",
+                "size": 200,
+                "type": "file"
+              },
+              {
+                "exists": true,
+                "path": "deploy-test/payload.txt",
+                "root": "product",
+                "sha256": "b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2",
+                "size": 25,
+                "type": "file"
+              },
+              {
+                "exists": true,
+                "path": "deploy-test/unrelated.txt",
+                "root": "product",
+                "sha256": "77cd8d24e225d961d85580f1e0cd11da86b63c0c691d109d6974178a0b6bac94",
+                "size": 35,
+                "type": "file"
+              },
+              {
+                "exists": true,
+                "path": "outputs",
+                "root": "product",
+                "sha256": null,
+                "size": null,
+                "type": "directory"
+              },
+              {
+                "exists": true,
+                "path": "outputs/deployment.md",
+                "root": "product",
+                "sha256": "d8da0cd244db1d0816f70dfe6c7429861d29e507760394cd775bdd0a8b34f5bf",
+                "size": 10059,
+                "type": "file"
+              },
+              {
+                "exists": true,
+                "path": "retained/SOURCE.json",
+                "root": "product",
+                "sha256": "7a34839974623e792f9cd5e9a887a1e8231d851ca96b0f71e0b2355f48716ced",
+                "size": 848,
+                "type": "file"
+              },
+              {
+                "exists": true,
+                "path": "retained/release/manifest.json",
+                "root": "product",
+                "sha256": "ce71758abbf18193dfc3a2c588c228668e0b9065ed1b5e3cf96fb80a01acac35",
+                "size": 200,
+                "type": "file"
+              },
+              {
+                "exists": true,
+                "path": "retained/release/payload.txt",
+                "root": "product",
+                "sha256": "b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2",
+                "size": 25,
+                "type": "file"
+              },
+              {
+                "exists": true,
+                "path": "unrelated/sentinel.txt",
+                "root": "product",
+                "sha256": "56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3",
+                "size": 33,
+                "type": "file"
+              }
+            ],
+            "gaps": [],
+            "git": null,
+            "observed_interval": {
+              "clock": "unix_ns",
+              "ended_ns": 1792902069055213000,
+              "started_ns": 1792902069053541000
+            },
+            "schema": "a_c.fd-support.observation/1",
+            "scope": [
+              {
+                "kind": "directory",
+                "path": "deploy-test",
+                "root": "product"
+              },
+              {
+                "kind": "directory",
+                "path": "outputs",
+                "root": "product"
+              },
+              {
+                "kind": "file",
+                "path": "deploy-test/unrelated.txt",
+                "root": "product"
+              },
+              {
+                "kind": "file",
+                "path": "unrelated/sentinel.txt",
+                "root": "product"
+              },
+              {
+                "kind": "file",
+                "path": "retained/release/payload.txt",
+                "root": "product"
+              },
+              {
+                "kind": "file",
+                "path": "retained/release/manifest.json",
+                "root": "product"
+              },
+              {
+                "kind": "file",
+                "path": "retained/SOURCE.json",
+                "root": "product"
+              }
+            ]
+          }
+        },
+        "schema": "a_c.fd-support.response/1",
+        "status": "ok"
+      }
+    },
+    {
+      "evidence": "1316fa875a959a70b68edeff3415aca44fc90987743008b9a64ee33e31a515ea",
+      "request": {
+        "arguments": {
+          "previous": {
+            "id": "sha256:10a6d87db97098bfcd00398291bb24d7db3fdd3e8e674bfc43e7d75c11e71cc9",
+            "sha256": "10a6d87db97098bfcd00398291bb24d7db3fdd3e8e674bfc43e7d75c11e71cc9"
+          },
+          "scope": [
+            {
+              "kind": "directory",
+              "path": "deploy-test",
+              "root": "product"
+            },
+            {
+              "kind": "directory",
+              "path": "outputs",
+              "root": "product"
+            },
+            {
+              "kind": "file",
+              "path": "deploy-test/unrelated.txt",
+              "root": "product"
+            },
+            {
+              "kind": "file",
+              "path": "unrelated/sentinel.txt",
+              "root": "product"
+            }
+          ]
+        },
+        "id": "deploy-close-observe-1",
+        "operation": "workspace.observe",
+        "schema": "a_c.fd-support.request/1"
+      },
+      "response_without_evidence": {
+        "evidence": null,
+        "id": "deploy-close-observe-1",
+        "operation": "workspace.observe",
+        "operation_outcome": {
+          "cause": "source_missing",
+          "core_value": "invalid_basis",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(workspace.observe): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "refused(basis)"
+        },
+        "refusal": {
+          "code": "source_missing",
+          "gaps": [
+            "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/deployment/claude/close-control/evidence/objects/10a6d87db97098bfcd00398291bb24d7db3fdd3e8e674bfc43e7d75c11e71cc9.json"
+          ],
+          "reason": "Required regular file is absent",
+          "source_refs": []
+        },
+        "result": null,
+        "schema": "a_c.fd-support.response/1",
+        "status": "refused"
+      }
+    }
+  ],
+  "install_checks": {
+    "new_checks": "not performed; no reinstall/update selected",
+    "prior_installation": {
+      "path": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/deployment/claude/close-control/INSTALL.json",
+      "sha256": "2ffeda1c7b3118e5a3003a1d646b07d4da96f52826a61c52bc01f9ce849390ec"
+    }
+  },
+  "jsonl_parse_errors": [],
+  "native_initialization": [
+    {
+      "claude_code_version": "2.1.306",
+      "line": 1,
+      "model": "claude-fable-5-1",
+      "session_id": "3f43aa78-a75d-4a83-a00a-f53a718022d2",
+      "tools": [
+        "Glob",
+        "Grep",
+        "Read",
+        "mcp__stdo_ac__checks_evaluate",
+        "mcp__stdo_ac__context_assemble",
+        "mcp__stdo_ac__contract_preflight",
+        "mcp__stdo_ac__dispatch_cancel",
+        "mcp__stdo_ac__dispatch_observe",
+        "mcp__stdo_ac__dispatch_start",
+        "mcp__stdo_ac__events_wait",
+        "mcp__stdo_ac__evidence_read",
+        "mcp__stdo_ac__graph_project",
+        "mcp__stdo_ac__records_find",
+        "mcp__stdo_ac__records_read",
+        "mcp__stdo_ac__refresh_prepare",
+        "mcp__stdo_ac__relations_query",
+        "mcp__stdo_ac__resources_aggregate",
+        "mcp__stdo_ac__return_capture",
+        "mcp__stdo_ac__return_check",
+        "mcp__stdo_ac__review_prepare",
+        "mcp__stdo_ac__source_read",
+        "mcp__stdo_ac__tools_describe",
+        "mcp__stdo_ac__work_project",
+        "mcp__stdo_ac__workspace_observe"
+      ]
+    }
+  ],
+  "native_process": {
+    "ended_ns": 1792902099397035000,
+    "failure": null,
+    "input_bytes": 848,
+    "input_forwarded_bytes": 848,
+    "output_available": true,
+    "pid": 36235,
+    "returncode": 0,
+    "schema": "a_c.fd-support.actor-cli-observation/1",
+    "started_ns": 1792902030652168000,
+    "stderr_bytes": 0,
+    "stderr_eof": true,
+    "stdout_bytes": 78676,
+    "stdout_eof": true,
+    "termination_requests": [],
+    "unknowns": [
+      "descendant/process-tree end and external side effects",
+      "host/model active-context size",
+      "backend retries or unreported usage",
+      "semantic outcome and owner disposition"
+    ]
+  },
+  "native_tool_calls": [
+    {
+      "id": "toolu_01Szq9i25LyptLQX1Fuvsizq",
+      "input": {
+        "file_path": "/private/tmp/stdo-skills-claude-repair2-_t2diw0q/deployment/claude/close-control/RECONCILIATION.json"
+      },
+      "is_error": false,
+      "line": 7,
+      "name": "Read",
+      "result_line": 8
+    },
+    {
+      "id": "toolu_01CWbNBwGKK44GtvN49gCEJr",
+      "input": {
+        "command": "cd /private/tmp/stdo-skills-claude-repair2-_t2diw0q/deployment/claude/workspace && shasum -a 256 deploy-test/payload.txt deploy-test/manifest.json deploy-test/unrelated.txt unrelated/sentinel.txt outputs/deployment.md retained/release/payload.txt retained/release/manifest.json retained/SOURCE.json && wc -c outputs/deployment.md && ls -la deploy-test outputs unrelated && ls -la /private/tmp/stdo-skills-claude-repair2-_t2diw0q/deployment/claude/close-control/",
+        "description": "Read-only hash and listing of deployed files and close-control"
+      },
+      "is_error": true,
+      "line": 9,
+      "name": "Bash",
+      "result_line": 10
+    },
+    {
+      "id": "toolu_017cbda5Rz6ZFmKC4pkiha4c",
+      "input": {
+        "arguments": {
+          "previous": {
+            "id": "sha256:10a6d87db97098bfcd00398291bb24d7db3fdd3e8e674bfc43e7d75c11e71cc9",
+            "sha256": "10a6d87db97098bfcd00398291bb24d7db3fdd3e8e674bfc43e7d75c11e71cc9"
+          },
+          "scope": [
+            {
+              "kind": "directory",
+              "path": "deploy-test",
+              "root": "product"
+            },
+            {
+              "kind": "directory",
+              "path": "outputs",
+              "root": "product"
+            },
+            {
+              "kind": "file",
+              "path": "deploy-test/unrelated.txt",
+              "root": "product"
+            },
+            {
+              "kind": "file",
+              "path": "unrelated/sentinel.txt",
+              "root": "product"
+            }
+          ]
+        },
+        "id": "deploy-close-observe-1",
+        "operation": "workspace.observe",
+        "schema": "a_c.fd-support.request/1"
+      },
+      "is_error": true,
+      "line": 17,
+      "name": "mcp__stdo_ac__workspace_observe",
+      "result_line": 18
+    },
+    {
+      "id": "toolu_01KfEQf3eqZZpgzVjMgrt8Ng",
+      "input": {
+        "arguments": {
+          "scope": [
+            {
+              "kind": "directory",
+              "path": "deploy-test",
+              "root": "product"
+            },
+            {
+              "kind": "directory",
+              "path": "outputs",
+              "root": "product"
+            },
+            {
+              "kind": "file",
+              "path": "deploy-test/unrelated.txt",
+              "root": "product"
+            },
+            {
+              "kind": "file",
+              "path": "unrelated/sentinel.txt",
+              "root": "product"
+            },
+            {
+              "kind": "file",
+              "path": "retained/release/payload.txt",
+              "root": "product"
+            },
+            {
+              "kind": "file",
+              "path": "retained/release/manifest.json",
+              "root": "product"
+            },
+            {
+              "kind": "file",
+              "path": "retained/SOURCE.json",
+              "root": "product"
+            }
+          ]
+        },
+        "id": "deploy-close-observe-2",
+        "operation": "workspace.observe",
+        "schema": "a_c.fd-support.request/1"
+      },
+      "is_error": false,
+      "line": 23,
+      "name": "mcp__stdo_ac__workspace_observe",
+      "result_line": 24
+    }
+  ],
+  "owner_attribution": {
+    "current_controller": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "OWNER.json",
+      "root": "control",
+      "selector": null,
+      "sha256": "31029231d4f5a1bd37a9de3cff771b15c1bb99e3a7e025b5661a793eccdb3143"
+    },
+    "historical_workspace_owner_sha256": "41fcc7829c226148f408f6d6558dcef39b922db05b14897f73232ac75d61634f",
+    "replacement_applied": false
+  },
+  "public_object_digest_mismatches": [],
+  "schema": "stdo_skills.readonly-close-census/1",
+  "unmatched_tool_calls": [],
+  "usage_events": [
+    {
+      "line": 35,
+      "modelUsage": {
+        "claude-fable-5-1": {
+          "cacheCreationInputTokens": 221760,
+          "cacheReadInputTokens": 1496052,
+          "canonicalModel": "claude-fable-5-1",
+          "contextWindow": 1000000,
+          "costBasis": "list",
+          "costUSD": 6.601323,
+          "inputTokens": 646,
+          "maxOutputTokens": 64000,
+          "outputTokens": 35713,
+          "provider": "firstParty",
+          "thinkingTokens": 12985,
+          "webSearchRequests": 0
+        }
+      },
+      "reported_cost_usd": 6.601323,
+      "usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 128223,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 128223,
+        "cache_read_input_tokens": 371293,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 98,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 2298,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 2298,
+            "cache_read_input_tokens": 125925,
+            "input_tokens": 32,
+            "output_tokens": 1514,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 3308,
+        "output_tokens_details": {
+          "thinking_tokens": 1301
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    }
+  ],
+  "workspace": {
+    "added": [],
+    "after": {
+      ".claude/skills/stdo-continuation/SKILL.md": "90f3778a97df92796c8d052e4d46ca01e01b1913d3421fa8f421310d03c3cd61",
+      ".claude/skills/stdo-delegate-review/SKILL.md": "382466083cfb1c76870afbc6b3eda707615a94a7cd90ae692995d6a9d4ecbc13",
+      ".claude/skills/stdo-release-install/SKILL.md": "ef4831511f78d11015149394ea26c9e899980fb8c9cb40eac278f62de72b6841",
+      ".claude/skills/stdo-release-install/references/maintenance.md": "84450465fd14720ef1ddaf66f30d9b7716c114ab01799a318aa5166f02fe36e1",
+      ".claude/skills/stdo-release-install/scripts/manage_install.py": "c10608336639fcf6ed87443666dab5e7ca79d3cc84df2f7a80b6ef33c603fabe",
+      ".claude/skills/stdo-tool-operations/SKILL.md": "63ad43e77c36ae35a9f1c7b0721a09abab0d4c9b8dc90d2a557c2f7bfab95afe",
+      ".claude/skills/stdo-workspace-change/SKILL.md": "5c30fd460432895ce19ec0711df8e5ddd715f1e37496d6fd29234b2e3642901c",
+      ".claude/stdo-skills-claude.receipt.json": "b2dbf4f45545869147c2ae791da064e6995bd4e73bf75dcd1775686038e34d43",
+      ".qualification/OWNER.json": "41fcc7829c226148f408f6d6558dcef39b922db05b14897f73232ac75d61634f",
+      "AGENTS.md": "7f2f29c47cba5b9695b6d138201ea7b8c8570d0783b54c0a97164e2ebabec9c2",
+      "CLAUDE.md": "7f2f29c47cba5b9695b6d138201ea7b8c8570d0783b54c0a97164e2ebabec9c2",
+      "TASK.md": "25dfdd5bca9988f67ddc6e649d0b8bc8869b2092c7bf0682ecab14222cd11963",
+      "TOOLING.md": "8689777028002d48122ebc38b11e33b725151e073d2696b836f93eefcca8ac91",
+      "deploy-test/manifest.json": "ce71758abbf18193dfc3a2c588c228668e0b9065ed1b5e3cf96fb80a01acac35",
+      "deploy-test/payload.txt": "b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2",
+      "deploy-test/unrelated.txt": "77cd8d24e225d961d85580f1e0cd11da86b63c0c691d109d6974178a0b6bac94",
+      "design/DESIGN.md": "105a9d16d580a97f1e9d6ba7ac219118022bbf299ecd5a87e2c0af541faa4687",
+      "fixture_product.json": "7a4b9eb49b26f190f0e829070e87565130e1e9a279be6eb5c76e399bf323173e",
+      "outputs/deployment.md": "d8da0cd244db1d0816f70dfe6c7429861d29e507760394cd775bdd0a8b34f5bf",
+      "retained/SOURCE.json": "7a34839974623e792f9cd5e9a887a1e8231d851ca96b0f71e0b2355f48716ced",
+      "retained/release/manifest.json": "ce71758abbf18193dfc3a2c588c228668e0b9065ed1b5e3cf96fb80a01acac35",
+      "retained/release/payload.txt": "b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2",
+      "specification/GOALS.md": "5fb2442f5c0db7b5e0060ebe1f86013332dc32f5d4b35872ca67ce57aa680628",
+      "specification/INTENT.md": "19c552ef03a9a4acadef9c2522d8fb931a98f534fe9b56f19780edab3f838c71",
+      "specification/PRODUCT.md": "ba28450c503070a65c08a1ba28ca082d019ce0232522b2ac6251d865e219f47a",
+      "specification/REQUIREMENT.md": "27a0059a874367342962057444f66aeb84372613ef43988744a938064eadbf5d",
+      "unrelated/sentinel.txt": "56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3"
+    },
+    "before": {
+      ".claude/skills/stdo-continuation/SKILL.md": "90f3778a97df92796c8d052e4d46ca01e01b1913d3421fa8f421310d03c3cd61",
+      ".claude/skills/stdo-delegate-review/SKILL.md": "382466083cfb1c76870afbc6b3eda707615a94a7cd90ae692995d6a9d4ecbc13",
+      ".claude/skills/stdo-release-install/SKILL.md": "ef4831511f78d11015149394ea26c9e899980fb8c9cb40eac278f62de72b6841",
+      ".claude/skills/stdo-release-install/references/maintenance.md": "84450465fd14720ef1ddaf66f30d9b7716c114ab01799a318aa5166f02fe36e1",
+      ".claude/skills/stdo-release-install/scripts/manage_install.py": "c10608336639fcf6ed87443666dab5e7ca79d3cc84df2f7a80b6ef33c603fabe",
+      ".claude/skills/stdo-tool-operations/SKILL.md": "63ad43e77c36ae35a9f1c7b0721a09abab0d4c9b8dc90d2a557c2f7bfab95afe",
+      ".claude/skills/stdo-workspace-change/SKILL.md": "5c30fd460432895ce19ec0711df8e5ddd715f1e37496d6fd29234b2e3642901c",
+      ".claude/stdo-skills-claude.receipt.json": "b2dbf4f45545869147c2ae791da064e6995bd4e73bf75dcd1775686038e34d43",
+      ".qualification/OWNER.json": "41fcc7829c226148f408f6d6558dcef39b922db05b14897f73232ac75d61634f",
+      "AGENTS.md": "7f2f29c47cba5b9695b6d138201ea7b8c8570d0783b54c0a97164e2ebabec9c2",
+      "CLAUDE.md": "7f2f29c47cba5b9695b6d138201ea7b8c8570d0783b54c0a97164e2ebabec9c2",
+      "TASK.md": "25dfdd5bca9988f67ddc6e649d0b8bc8869b2092c7bf0682ecab14222cd11963",
+      "TOOLING.md": "8689777028002d48122ebc38b11e33b725151e073d2696b836f93eefcca8ac91",
+      "deploy-test/manifest.json": "ce71758abbf18193dfc3a2c588c228668e0b9065ed1b5e3cf96fb80a01acac35",
+      "deploy-test/payload.txt": "b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2",
+      "deploy-test/unrelated.txt": "77cd8d24e225d961d85580f1e0cd11da86b63c0c691d109d6974178a0b6bac94",
+      "design/DESIGN.md": "105a9d16d580a97f1e9d6ba7ac219118022bbf299ecd5a87e2c0af541faa4687",
+      "fixture_product.json": "7a4b9eb49b26f190f0e829070e87565130e1e9a279be6eb5c76e399bf323173e",
+      "outputs/deployment.md": "d8da0cd244db1d0816f70dfe6c7429861d29e507760394cd775bdd0a8b34f5bf",
+      "retained/SOURCE.json": "7a34839974623e792f9cd5e9a887a1e8231d851ca96b0f71e0b2355f48716ced",
+      "retained/release/manifest.json": "ce71758abbf18193dfc3a2c588c228668e0b9065ed1b5e3cf96fb80a01acac35",
+      "retained/release/payload.txt": "b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2",
+      "specification/GOALS.md": "5fb2442f5c0db7b5e0060ebe1f86013332dc32f5d4b35872ca67ce57aa680628",
+      "specification/INTENT.md": "19c552ef03a9a4acadef9c2522d8fb931a98f534fe9b56f19780edab3f838c71",
+      "specification/PRODUCT.md": "ba28450c503070a65c08a1ba28ca082d019ce0232522b2ac6251d865e219f47a",
+      "specification/REQUIREMENT.md": "27a0059a874367342962057444f66aeb84372613ef43988744a938064eadbf5d",
+      "unrelated/sentinel.txt": "56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3"
+    },
+    "changed": [],
+    "missing": [],
+    "symlinks": []
+  }
+}

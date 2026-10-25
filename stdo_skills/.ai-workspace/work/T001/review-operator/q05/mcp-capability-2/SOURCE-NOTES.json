@@ -1,0 +1,23 @@
+{
+  "claim": "Observe one actual MCP metadata call or its refusal; no dispatch capability or Q05 qualification inferred",
+  "control_change": "Per-tool tools.describe approval_mode=approve only, with policy operations=[tools.describe] and enabled_tools=[tools.describe]. No default server approval, network enablement, sandbox bypass, global config or model override.",
+  "host": {
+    "path": "/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex",
+    "sha256": "d8990e3ee7acfbc26f91265b12a1a83f0fee40d0e0f8f1f40a37d4ec21f499cf"
+  },
+  "known_prior": "Original Codex ordinary/recovery MCP calls refused under never; no successful current MCP assumption",
+  "local_readback": "mcp get accepts both approve and an invalid enum, so it did not establish semantic support; --strict-config is unsupported for that command",
+  "selected_by": "Root explicitly selected one read-only MCP capability control before Q05; dispatch remains unselected",
+  "source_docs": [
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/mcp-capability-2/docs/official-mcp.md",
+      "sha256": "5e87f831d27e68f5c156438d710231d3052aa69fab8e57e3cf2b0ceda9f8530a",
+      "url": "https://learn.chatgpt.com/docs/extend/mcp.md"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/review-operator/q05/mcp-capability-2/docs/official-config.md",
+      "sha256": "fe48af085a53345cf171cf492f3147eb2bb297b8ab28f83e67b8e9e62f715a21",
+      "url": "https://learn.chatgpt.com/docs/config-file/config-reference.md"
+    }
+  ]
+}

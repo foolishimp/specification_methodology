@@ -1,0 +1,464 @@
+diff --git a/a_c/build_tenants/graphify/code/ac_support.py b/a_c/build_tenants/graphify/code/ac_support.py
+index d16f454b..f53e34ab 100644
+--- a/a_c/build_tenants/graphify/code/ac_support.py
++++ b/a_c/build_tenants/graphify/code/ac_support.py
+@@ -210,9 +210,9 @@ def _rpc_result(request_id: Wire, value: Object) -> WireObject:
+     return {"jsonrpc": "2.0", "id": request_id, "result": cast(Wire, value)}
+ 
+ 
+-def _tool_entries() -> list[JSON]:
++def _tool_entries(runtime: core.Runtime | None = None) -> list[JSON]:
+     result: list[JSON] = []
+-    entries = cast(list[JSON], core.inventory()["operations"])
++    entries = cast(list[JSON], core.inventory(profile=None if runtime is None else runtime.method_profile)["operations"])
+     for entry in entries:
+         contract = cast(Object, entry)
+         name = cast(str, contract["name"])
+@@ -253,7 +253,7 @@ def serve_mcp(
+     maximum = _message_limit(runtime) if runtime is not None else BOOTSTRAP_MAX_MESSAGE_BYTES
+     initializing = False
+     initialized = False
+-    tools = _tool_entries() if runtime is not None else []
++    tools = _tool_entries(runtime) if runtime is not None else []
+     names = {cast(str, cast(Object, tool)["name"]) for tool in tools}
+     while True:
+         raw = source.readline(maximum + 1)
+diff --git a/a_c/build_tenants/graphify/code/ac_support_core.py b/a_c/build_tenants/graphify/code/ac_support_core.py
+index 6b3cc8f5..f38f5d7d 100644
+--- a/a_c/build_tenants/graphify/code/ac_support_core.py
++++ b/a_c/build_tenants/graphify/code/ac_support_core.py
+@@ -34,6 +34,10 @@ ARTIFACT = "a_c.fd-support.artifact/1"
+ PROFILE_ID = "urn:a-c:fd-support:method:claude-rc9:executive:1"
+ PROFILE_SHA256 = "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+ METHOD_SOURCE = "c2cfa9b908d1722ae3f26c32fa4ece691083bdc3"
++NATIVE_PROFILE_ID = 'urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1'
++NATIVE_PROFILE_SHA256 = 'a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7'
++NATIVE_MANIFEST_SHA256 = '60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8'
++NATIVE_FOUNDATIONS_SHA256 = '92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5'
+ BUILDER_SHA256 = "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782"
+ CORE_VALUES = ("satisfied", "falsified", "indeterminate", "out_of_frame", "invalid_basis")
+ KINDS = ("observation", "context", "preflight", "attempt", "return", "expectation", "acquisition", "operation", "resource", "raw", "qualification")
+@@ -327,11 +331,23 @@ def request_schema(operation: str | None = None) -> Object:
+     return result
+ 
+ 
+-def inventory(operation: str | None = None) -> Object:
++def method_identity(profile: Object | None = None) -> Object:
++    identity = {"id": PROFILE_ID, "sha256": PROFILE_SHA256} if profile is None else {"id": profile.get("id"), "sha256": profile.get("sha256")}
++    if identity not in ({"id": PROFILE_ID, "sha256": PROFILE_SHA256},
++                        {"id": NATIVE_PROFILE_ID, "sha256": NATIVE_PROFILE_SHA256}):
++        raise SupportError("unsupported_contract", "Method profile is not an exact supported binding")
++    return document(identity)
++
++
++def inventory(operation: str | None = None, *, profile: Object | None = None) -> Object:
+     if operation is not None and operation not in _ARGUMENTS:
+         raise SupportError("unknown_operation", "Unknown operation: " + operation)
+-    names = [operation] if operation is not None else sorted(_ARGUMENTS)
+-    return document({"schema": "a_c.fd-support.inventory/1", "method_profile": {"id": PROFILE_ID, "sha256": PROFILE_SHA256},
++    identity = method_identity(profile)
++    native = identity["id"] == NATIVE_PROFILE_ID
++    if native and operation == "results.conjoin":
++        raise SupportError("unsupported_check", "Native conjunction operator is not qualified")
++    names = [operation] if operation is not None else [name for name in sorted(_ARGUMENTS) if not (native and name == "results.conjoin")]
++    return document({"schema": "a_c.fd-support.inventory/1", "method_profile": identity,
+             "builder": {"uri": "stdo://releases/v2.5.1-rc.2/", "manifest_sha256": BUILDER_SHA256},
+             "operations": [{"name": name, "input_schema": request_schema(name),
+                             "effect": name in EFFECT_OPERATIONS,
+@@ -340,7 +356,7 @@ def inventory(operation: str | None = None) -> Object:
+                             "checked_fragment": "selected finite declared contract only"} for name in names],
+             "content_schemas": copy.deepcopy(CONTENT_SCHEMAS), "refusal_codes": cast(Object, dict(CODES)),
+             "qualification": "provisional construction; independent integrated qualification and owner acceptance pending",
+-            "unsupported": ["other method cuts", "semantic sufficiency certification", "inferred semantic edges", "arbitrary executable predicates", "OS sandboxing", "external producer authentication", "MCP server/discover", "benefit or acceptance claims"]})
++            "unsupported": (["native results.conjoin: operator unqualified"] if native else []) + ["other method cuts", "semantic sufficiency certification", "inferred semantic edges", "arbitrary executable predicates", "OS sandboxing", "external producer authentication", "MCP server/discover", "benefit or acceptance claims"]})
+ 
+ 
+ def validate_request(request: JSON) -> Object:
+@@ -359,7 +375,9 @@ def parse_request(raw_bytes: bytes) -> Object:
+ 
+ 
+ def operation_outcome(operation: str, value: str = "returned", code: str | None = None,
+-                      evidence: list[JSON] | None = None, limits: list[JSON] | None = None) -> Object:
++                      evidence: list[JSON] | None = None, limits: list[JSON] | None = None,
++                      *, profile: Object | None = None) -> Object:
++    identity = method_identity(profile)
+     if code is not None:
+         mapped = CODES[code]
+         if mapped is None:
+@@ -373,16 +391,15 @@ def operation_outcome(operation: str, value: str = "returned", code: str | None
+     return document({"predicate": "B(" + operation + "): declared exact output/effect-evidence payload availability on the requested basis",
+             "value": value, "cause": code if code is not None else "declared output available",
+             "core_value": parents[value],
+-            "source_parent": {"member": "FOUNDATIONS.md", "sha256": "fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f", "clause": "results"},
++            "source_parent": {"member": "FOUNDATIONS.md", "sha256": NATIVE_FOUNDATIONS_SHA256 if identity["id"] == NATIVE_PROFILE_ID else "fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f", "clause": "results"},
+             "evidence": evidence if evidence is not None else [],
+             "limits": limits if limits is not None else ["output availability only; no semantic acceptance"]})
+ 
+ 
+ def refusal_outcome(runtime: Runtime, request: Object, error: SupportError) -> CoreOutcome:
+-    del runtime
+     op = request.get("operation")
+     bound = isinstance(op, str) and op in _ARGUMENTS and CODES[error.code] is not None
+-    return document({"result": None, "artifacts": [], "operation_outcome": operation_outcome(cast(str, op), code=error.code) if bound else None,
++    return document({"result": None, "artifacts": [], "operation_outcome": operation_outcome(cast(str, op), code=error.code, profile=runtime.method_profile) if bound else None,
+             "refusal": error.document(), "acquisitions": []})
+ 
+ @dataclass(frozen=True)
+@@ -400,6 +417,10 @@ class Runtime:
+     def policy(self) -> Object:
+         return copy.deepcopy(self._policy)
+ 
++    @property
++    def method_profile(self) -> Object:
++        return method_identity(as_object(self._policy["method_profile"]))
++
+     @property
+     def principal(self) -> Object:
+         return copy.deepcopy(self._principal)
+@@ -448,8 +469,7 @@ class Runtime:
+                 validate_content(p["role_transition"], "SourceRef")
+         profile = as_object(policy["method_profile"])
+         exact_keys(profile, ("id", "sha256", "source"))
+-        if profile["id"] != PROFILE_ID or profile["sha256"] != PROFILE_SHA256:
+-            raise SupportError("unsupported_contract", "Only the exact Claude RC9 binding is supported")
++        selected_profile = method_identity(profile)
+         validate_content(profile["source"], "SourceRef")
+         product = as_object(policy["product"])
+         exact_keys(product, ("definition_id", "definition", "authority_binding"))
+@@ -500,9 +520,14 @@ class Runtime:
+                       as_object(principals[principal]), evidence_root,
+                       resolve_artifact, query_artifacts)
+         actual_profile = read_source(runtime, as_object(profile["source"]))
+-        if actual_profile["parent_sha256"] != PROFILE_SHA256:
++        if actual_profile["parent_sha256"] != selected_profile["sha256"]:
+             raise SupportError("unsupported_contract", "Profile content is not the supported exact binding")
+-        read_source(runtime, as_object(product["definition"]))
++        definition = read_source(runtime, as_object(product["definition"]))
++        if selected_profile["id"] == NATIVE_PROFILE_ID:
++            definition_value = parse_json(base64.b64decode(text(definition["content_base64"])))
++            selected_basis = pointer(definition_value, "/constitution/stdo/basis")
++            if selected_basis != {"uri": "stdo://releases/v3.0.1-rc.1/", "manifest_sha256": NATIVE_MANIFEST_SHA256}:
++                raise SupportError("basis_stale", "Native profile requires the exact released 3.0.1 Product basis")
+         read_source(runtime, as_object(runtime.principal["role_binding"]))
+         return runtime
+ 
+@@ -720,7 +745,7 @@ def provenance(runtime: Runtime, request: Object, started_ns: int, ended_ns: int
+     return document({"request_id": request["id"], "request_sha256": digest(request),
+             "requester_principal": runtime.principal_id, "target_principal": target,
+             "product_id": product["definition_id"], "definition_sha256": as_object(product["definition"])["sha256"],
+-            "method_profile_sha256": PROFILE_SHA256, "policy_sha256": runtime.policy_sha256,
++            "method_profile_sha256": runtime.method_profile["sha256"], "policy_sha256": runtime.policy_sha256,
+             "actor": copy.deepcopy(runtime.principal), "attempt": attempt,
+             "observed_interval": document({"clock": "unix_ns", "started_ns": started_ns, "ended_ns": ended_ns})})
+ 
+@@ -737,6 +762,8 @@ def make_artifact(kind: str, payload: JSON, provenance: Object) -> tuple[Object,
+ def require_operation(runtime: Runtime, operation: str) -> None:
+     if _sha(_regular_bytes(runtime.policy_path)) != runtime.policy_sha256:
+         raise SupportError("basis_stale", "Trusted policy changed; no hot reload or stale authority use")
++    if runtime.method_profile["id"] == NATIVE_PROFILE_ID and operation == "results.conjoin":
++        raise SupportError("unsupported_check", "Native conjunction operator is not qualified")
+     if operation not in _strings(runtime.principal["operations"]):
+         raise SupportError("authority_missing", "Startup principal has no selected operation capability")
+ 
+@@ -850,7 +877,7 @@ def _history(runtime: Runtime, kind: str, matches: Object) -> tuple[list[Object]
+ def _profile_basis(runtime: Runtime, basis: Object, observations: bool = True) -> None:
+     validate_content(basis, "Basis")
+     identity = as_object(basis["method_profile"])
+-    if identity != {"id": PROFILE_ID, "sha256": PROFILE_SHA256}:
++    if identity != runtime.method_profile:
+         raise SupportError("basis_stale", "Execution basis is not this exact selected method/profile")
+     if observations:
+         for ref in as_list(basis["observations"]):
+@@ -1069,7 +1096,7 @@ def _assemble(runtime: Runtime, request: Object, args: Object, started: int) ->
+     artifact, ref = make_artifact("context", payload, provenance(runtime, request, started, time.time_ns(), target_id))
+     artifacts.append(artifact)
+     return document({"result": {"artifact": ref, "value": {"fit": fit, "activation_identity": activation_identity(packet), "manifest": {"acquired": [{k: v for k, v in as_object(s).items() if k != "content_base64"} for s in sources], "late_acquisition": cast(list[JSON], late)}, "rendered_sha256": payload["rendered_sha256"], "boundaries": boundaries}},
+-            "artifacts": artifacts, "operation_outcome": operation_outcome("context.assemble"), "refusal": None, "acquisitions": acquisitions})
++            "artifacts": artifacts, "operation_outcome": operation_outcome("context.assemble", profile=runtime.method_profile), "refusal": None, "acquisitions": acquisitions})
+ 
+ 
+ @dataclass(frozen=True)
+@@ -2050,7 +2077,7 @@ def _capture_return(runtime: Runtime, request: Object, args: Object, started: in
+                        "transport": {"raw_sha256": _sha(raw_bytes), "complete": raw_payload.get("complete"), "slot": raw_payload.get("slot")},
+                        "binding_checks": {"gaps": gaps, "format_valid": original is not None}})
+     envelope, ref = make_artifact("return", payload, provenance(runtime, request, started, time.time_ns(), text(attempt["target"]), attempt_ref))
+-    return document({"result": {"artifact": ref, "value": payload}, "artifacts": [envelope], "operation_outcome": operation_outcome("return.capture"), "refusal": None, "acquisitions": []})
++    return document({"result": {"artifact": ref, "value": payload}, "artifacts": [envelope], "operation_outcome": operation_outcome("return.capture", profile=runtime.method_profile), "refusal": None, "acquisitions": []})
+ 
+ 
+ def activation_identity(packet: Object) -> Object:
+@@ -2347,7 +2374,7 @@ def _review(runtime: Runtime, request: Object, args: Object, started: int) -> Co
+                      "exposure": exposure, "comparison": comparison, "independence": independence,
+                      "gaps": gaps, "limits": ["acquisition/diff/exposure facts only; no severity, disposition or mental-independence certificate"]})
+     return document({"result": {"artifact": expectation_ref, "value": value}, "artifacts": artifacts,
+-            "operation_outcome": operation_outcome("review.prepare"), "refusal": None, "acquisitions": acquisition_refs})
++            "operation_outcome": operation_outcome("review.prepare", profile=runtime.method_profile), "refusal": None, "acquisitions": acquisition_refs})
+ 
+ 
+ # Public pure verifier for the effect membrane; no new predicate/authority.
+@@ -2740,9 +2767,9 @@ def execute_read(runtime: Runtime, request: Object) -> CoreOutcome:
+         artifacts: list[JSON] = []; acquisitions: list[JSON] = []; primary: JSON = None
+         value: JSON
+         if operation == "tools.describe":
+-            if "method_profile" in args and not _equal(args["method_profile"], {"id": PROFILE_ID, "sha256": PROFILE_SHA256}):
++            if "method_profile" in args and not _equal(args["method_profile"], runtime.method_profile):
+                 raise SupportError("unsupported_contract", "Requested exact method/profile is unsupported")
+-            value = inventory(cast(str | None, args.get("operation")))
++            value = inventory(cast(str | None, args.get("operation")), profile=runtime.method_profile)
+         elif operation == "workspace.observe":
+             payload = observe(runtime, as_list(args["scope"]))
+             if "previous" in args:
+@@ -2814,7 +2841,7 @@ def execute_read(runtime: Runtime, request: Object) -> CoreOutcome:
+             artifacts.append(artifact); acquisitions.append(acquisition_ref)
+         else:
+             raise SupportError("unknown_operation", "Operation is not implemented by the finite core")
+-        boundary = operation_outcome(operation)
++        boundary = operation_outcome(operation, profile=runtime.method_profile)
+         boundary["predicate"] = "B(" + operation + ")[request_sha256=" + digest(request) + "]: declared output availability"
+         return document({"result": {"artifact": primary, "value": value}, "artifacts": artifacts,
+                 "operation_outcome": boundary, "refusal": None, "acquisitions": acquisitions})
+diff --git a/a_c/build_tenants/graphify/code/ac_support_effects.py b/a_c/build_tenants/graphify/code/ac_support_effects.py
+index 68e7de97..70e469ef 100644
+--- a/a_c/build_tenants/graphify/code/ac_support_effects.py
++++ b/a_c/build_tenants/graphify/code/ac_support_effects.py
+@@ -449,8 +449,8 @@ def _selected_policy(runtime: c.Runtime, request: c.Object) -> tuple[c.Object, c
+     return _artifact(runtime, request, "raw", {"schema": "a_c.fd-support.selected-policy/1", "startup_path": str(runtime.policy_path), "sha256": runtime.policy_sha256, "bytes_base64": base64.b64encode(raw).decode("ascii"), "authority": "Existing operator-selected source only; retention grants no authority."})
+ 
+ 
+-def _ok(request: c.Object, value: c.JSON, artifacts: list[c.JSON] | None = None, reference: c.Object | None = None, acquisitions: list[c.JSON] | None = None) -> c.CoreOutcome:
+-    return {"result": {"artifact": reference, "value": value}, "artifacts": [] if artifacts is None else artifacts, "operation_outcome": c.operation_outcome(c.text(request["operation"], "operation")), "refusal": None, "acquisitions": [] if acquisitions is None else acquisitions}
++def _ok(runtime: c.Runtime, request: c.Object, value: c.JSON, artifacts: list[c.JSON] | None = None, reference: c.Object | None = None, acquisitions: list[c.JSON] | None = None) -> c.CoreOutcome:
++    return {"result": {"artifact": reference, "value": value}, "artifacts": [] if artifacts is None else artifacts, "operation_outcome": c.operation_outcome(c.text(request["operation"], "operation"), profile=runtime.method_profile), "refusal": None, "acquisitions": [] if acquisitions is None else acquisitions}
+ 
+ 
+ def _publish_graph(store: EvidenceStore, envelopes: list[c.JSON]) -> list[c.JSON]:
+@@ -522,7 +522,7 @@ def persist_outcome(runtime: c.Runtime, request: c.Object, outcome: c.CoreOutcom
+         response["result"] = None
+         response["evidence"] = None
+         response["refusal"] = {"code": "evidence_publication_failed", "reason": "Output durable publication is not established", "gaps": [original.code, original.reason, *original.gaps], "source_refs": original.source_refs}
+-        response["operation_outcome"] = c.operation_outcome(c.text(request["operation"], "operation"), code="evidence_publication_failed")
++        response["operation_outcome"] = c.operation_outcome(c.text(request["operation"], "operation"), code="evidence_publication_failed", profile=runtime.method_profile)
+         return response
+ 
+ 
+@@ -590,7 +590,7 @@ def _owner_binding(runtime: c.Runtime, request: c.Object, envelope: c.Object,
+     if schema == "a_c.fd-support.request-claim/1" and payload["policy_sha256"] != provenance["policy_sha256"]:
+         raise c.SupportError("history_incomplete", "Committed claim policy/provenance is incoherent", [], [])
+     product = c.as_object(runtime.policy["product"])
+-    expected: c.Object = {"product_id": product["definition_id"], "definition_sha256": c.as_object(product["definition"])["sha256"], "requester_principal": runtime.principal_id, "policy_sha256": runtime.policy_sha256, "method_profile_sha256": c.PROFILE_SHA256, "actor": runtime.principal}
++    expected: c.Object = {"product_id": product["definition_id"], "definition_sha256": c.as_object(product["definition"])["sha256"], "requester_principal": runtime.principal_id, "policy_sha256": runtime.policy_sha256, "method_profile_sha256": runtime.method_profile["sha256"], "actor": runtime.principal}
+     if saved != request or any(provenance[name] != value for name, value in expected.items()):
+         raise c.SupportError("request_identity_conflict", "Committed owner binds different effective request/Product/principal/policy", [request["id"]], [])
+ 
+@@ -672,7 +672,7 @@ def _preflight(runtime: c.Runtime, store: EvidenceStore, request: c.Object, plan
+     if refs:
+         ref = c.as_object(refs[0])
+         payload = c.load_artifact(runtime, ref, "preflight")["payload"]
+-        return _ok(request, payload, reference=ref)
++        return _ok(runtime, request, payload, reference=ref)
+     if previous["complete"] is not True:
+         raise c.SupportError("history_incomplete", "Cannot establish absence of an earlier complete receipt", c.as_list(previous["gaps"]), [])
+     with store._lock("scope:" + _product(runtime)):
+@@ -688,7 +688,7 @@ def _preflight(runtime: c.Runtime, store: EvidenceStore, request: c.Object, plan
+         # self-reference is inserted into its own immutable receipt.
+         envelope, ref = _artifact(runtime, request, "preflight", payload, target=cast(str | None, plan["target_principal"]))
+         store.retain(envelope)
+-        return _ok(request, payload, [envelope], ref)
++        return _ok(runtime, request, payload, [envelope], ref)
+ 
+ 
+ def _target_state(path: Path) -> c.Object:
+@@ -778,7 +778,7 @@ def _write(runtime: c.Runtime, store: EvidenceStore, request: c.Object, plan: c.
+             result_envelope, ref = _artifact(runtime, request, "raw", result, started=started)
+             store.retain(result_envelope)
+             _fault("writer:after_result_observation")
+-            return _ok(request, result, [result_envelope], ref)
++            return _ok(runtime, request, result, [result_envelope], ref)
+         except (OSError, c.SupportError) as error:
+             state = _target_state(path)
+             detail = error.document() if isinstance(error, c.SupportError) else {"external_failure": str(error)}
+@@ -876,7 +876,7 @@ def _observe(runtime: c.Runtime, store: EvidenceStore, request: c.Object) -> c.C
+         elif payload["kind"] == "effect_observation":
+             effect = c.as_object(payload["data"])["effect"]
+     value: c.Object = {"attempt": ref, "anchor": anchor, "events": selected, "cursor": len(events), "process_end": process_end, "output": output, "effect": effect, "history_gaps": gaps, "consumer_receipt": "unknown", "limits": ["Process exit alone proves neither intended outcome nor descendant/external end."]}
+-    return _ok(request, value)
++    return _ok(runtime, request, value)
+ 
+ 
+ def _cancel(runtime: c.Runtime, store: EvidenceStore, request: c.Object) -> c.CoreOutcome:
+@@ -896,9 +896,9 @@ def _cancel(runtime: c.Runtime, store: EvidenceStore, request: c.Object) -> c.Co
+     if len(prior_refs) > 1:
+         raise c.SupportError("basis_ambiguous", "Conflicting cancellation identities require reconciliation", prior_refs, [])
+     if prior_refs:
+-        return _ok(request, {"attempt": ref, "request_event": prior_refs[0], "effect": "completion_unknown", "end_established": False, "limits": ["Existing cancellation request returned without another signal request."]})
++        return _ok(runtime, request, {"attempt": ref, "request_event": prior_refs[0], "effect": "completion_unknown", "end_established": False, "limits": ["Existing cancellation request returned without another signal request."]})
+     event = _event(runtime, store, request, ref, "cancel_requested", {"reason": args["reason"], "requester": runtime.principal_id, "signal_delivery": "not-yet-observed", "end_established": False})
+-    return _ok(request, {"attempt": ref, "request_event": event, "effect": "completion_unknown", "end_established": False, "limits": ["The live supervisor may deliver the request; cancellation is not completion or rollback."]})
++    return _ok(runtime, request, {"attempt": ref, "request_event": event, "effect": "completion_unknown", "end_established": False, "limits": ["The live supervisor may deliver the request; cancellation is not completion or rollback."]})
+ 
+ 
+ def _wait(runtime: c.Runtime, store: EvidenceStore, request: c.Object) -> c.CoreOutcome:
+@@ -919,7 +919,7 @@ def _wait(runtime: c.Runtime, store: EvidenceStore, request: c.Object) -> c.Core
+         result = c.as_object(c.as_object(outcome["result"])["value"])
+         if c.as_list(result["events"]) or time.monotonic_ns() >= end:
+             result["fallback"] = {"purpose": args["purpose"], "stop_condition": args["stop_condition"], "timeout_ms": timeout, "cadence_ms": cadence, "timed_out": not c.as_list(result["events"])}
+-            return _ok(request, result)
++            return _ok(runtime, request, result)
+         remaining = max(0, end - time.monotonic_ns())
+         time.sleep(min(cadence * 1_000_000, remaining) / 1_000_000_000)
+ 
+@@ -1050,7 +1050,7 @@ def _dispatch(runtime: c.Runtime, store: EvidenceStore, request: c.Object, key:
+     old = _marker(store, store.root / "requests" / (key + ".attempt.json"))
+     if old is not None:
+         ref: c.Object = {"id": "sha256:" + c.digest(old), "sha256": c.digest(old)}
+-        return _ok(request, {"attempt": ref, "reservation": "existing", "launch": "consult retained observations; never repeated"}, reference=ref)
++        return _ok(runtime, request, {"attempt": ref, "reservation": "existing", "launch": "consult retained observations; never repeated"}, reference=ref)
+     grant = c.as_object(c.as_object(runtime.policy["grants"])[c.text(receipt["grant_id"])])
+     if "dispatch.start" not in c.as_list(grant["operations"]) or runtime.principal_id not in c.as_list(grant["principals"]):
+         raise c.SupportError("authority_missing", "Selected grant does not permit this dispatch requester", [], [])
+@@ -1109,7 +1109,7 @@ def _dispatch(runtime: c.Runtime, store: EvidenceStore, request: c.Object, key:
+         except (OSError, c.SupportError) as error:
+             failure = error.document() if isinstance(error, c.SupportError) else {"external_failure": str(error)}
+             _event(runtime, store, request, reference, "supervisor_launch_uncertain", {"failure": failure, "effect": "completion_unknown", "repeat_permitted": False})
+-        return _ok(request, {"attempt": reference, "reservation": "complete", "launch": "consult retained observations", "unknowns": ["Supervisor receipt is not an actor result or external completion."]}, [envelope], reference)
++        return _ok(runtime, request, {"attempt": reference, "reservation": "complete", "launch": "consult retained observations", "unknowns": ["Supervisor receipt is not an actor result or external completion."]}, [envelope], reference)
+ 
+ 
+ def execute_effect(runtime: c.Runtime, request: c.Object, plan: c.EffectPlan | None) -> c.CoreOutcome:
+diff --git a/a_c/build_tenants/graphify/examples/fd-support/README.md b/a_c/build_tenants/graphify/examples/fd-support/README.md
+index 44623282..3616f085 100644
+--- a/a_c/build_tenants/graphify/examples/fd-support/README.md
++++ b/a_c/build_tenants/graphify/examples/fd-support/README.md
+@@ -164,3 +164,13 @@ any proposed Codex packet rather than claiming only-tools isolation.
+ The helper tests use controlled Python subprocesses with simulated vendor
+ streams. They establish transport discriminators and never establish actual
+ model usability, independence, cost/quality benefit or a Product acceptance.
++
++## Explicit native STDO 3.0.1 consumer
++
++The read-only setup also accepts `--profile stdo-3.0.1 --product-root <consumer>
++--definition-name <consumer-definition.json>`. It checks the consumer's exact
++released 3.0.1 basis and uses the shipped native profile. Its mechanism pin is
++the actual current implementation; it still registers no grants/executors and
++cannot admit work. The [native binding and real-work operator recipe](../../design/fd-support-stdo-3.0.1.md#public-setup-and-use)
++explains the supported lifecycle path and the real Product-located owner/grant
++needed for effects. Native `results.conjoin` remains explicitly unsupported.
+diff --git a/a_c/build_tenants/graphify/examples/fd-support/prepare_readonly.py b/a_c/build_tenants/graphify/examples/fd-support/prepare_readonly.py
+index 4239a90c..c944438f 100644
+--- a/a_c/build_tenants/graphify/examples/fd-support/prepare_readonly.py
++++ b/a_c/build_tenants/graphify/examples/fd-support/prepare_readonly.py
+@@ -59,7 +59,7 @@ def _request(identity: str, operation: str, arguments: Object) -> Object:
+     return {"schema": core.REQUEST, "id": identity, "operation": operation, "arguments": arguments}
+ 
+ 
+-def prepare(output: Path, product_root: Path) -> Object:
++def prepare(output: Path, product_root: Path, *, profile: str = "claude-rc9", definition_name: str = "stdo_a_c.json") -> Object:
+     """Create only a new operator-selected example directory."""
+     output = output.absolute()
+     product_root = product_root.resolve(strict=True)
+@@ -68,19 +68,34 @@ def prepare(output: Path, product_root: Path) -> Object:
+     # The trusted setup selects the real new directory once, before policy or
+     # SourceRef hashes exist. Runtime paths still refuse symlink aliases.
+     output = output.resolve(strict=False)
+-    definition_raw = (product_root / "stdo_a_c.json").read_bytes()
++    core._relative(definition_name)
++    definition_raw = (product_root / definition_name).read_bytes()
+     definition = cast(Object, core.parse_json(definition_raw))
+     product_id = cast(str, cast(Object, definition["product"])["definition_id"])
+-    profile_path = "build_tenants/graphify/design/fd-method-claude-rc9.json"
+-    profile_raw = (product_root / profile_path).read_bytes()
+-    if hashlib.sha256(profile_raw).hexdigest() != core.PROFILE_SHA256:
++    native = profile == "stdo-3.0.1"
++    if profile not in ("claude-rc9", "stdo-3.0.1"):
++        raise ValueError("Select one explicit supported profile")
++    tool_root = Path(__file__).resolve().parents[4]
++    profile_path = "build_tenants/graphify/design/fd-method-" + ("stdo-3.0.1" if native else "claude-rc9") + ".json"
++    profile_raw = (tool_root / profile_path).read_bytes()
++    profile_id = core.NATIVE_PROFILE_ID if native else core.PROFILE_ID
++    profile_sha = core.NATIVE_PROFILE_SHA256 if native else core.PROFILE_SHA256
++    if native and core.pointer(definition, "/constitution/stdo/basis") != {"uri": "stdo://releases/v3.0.1-rc.1/", "manifest_sha256": core.NATIVE_MANIFEST_SHA256}:
++        raise ValueError("Native setup requires the exact released 3.0.1 Product basis")
++    if hashlib.sha256(profile_raw).hexdigest() != profile_sha:
+         raise ValueError("The selected source does not contain the exact supported Claude RC9 profile")
+     design_path = "build_tenants/graphify/design/fd-support.md"
+-    design_raw = (product_root / design_path).read_bytes()
+-    definition_ref = _source("product", "stdo_a_c.json", definition_raw)
+-    profile_ref = _source("product", profile_path, profile_raw)
+-    design_ref = _source("product", design_path, design_raw)
+-    operator_ref = _source("operator", "OPERATOR.md", NOTICE.encode("utf-8"))
++    design_raw = (tool_root / design_path).read_bytes()
++    definition_ref = _source("product", definition_name, definition_raw)
++    profile_ref = _source("tool", profile_path, profile_raw)
++    design_ref = _source("tool", design_path, design_raw)
++    implementation_path = "build_tenants/graphify/code/ac_support_core.py"
++    implementation_raw = (tool_root / implementation_path).read_bytes()
++    implementation_ref = _source("tool", implementation_path, implementation_raw)
++    notice = NOTICE
++    if native:
++        notice = notice.replace("an unqualified all-zero implementation\ndigest", "the actual current implementation\ndigest")
++    operator_ref = _source("operator", "OPERATOR.md", notice.encode("utf-8"))
+     evidence_root = output / "evidence"
+     principals: Object = {}
+     for role in ("Executive", "Worker", "Reviewer"):
+@@ -96,24 +111,26 @@ def prepare(output: Path, product_root: Path) -> Object:
+             "authority_binding": {
+                 "definition_locator": "/reference_frame_bases/0/authority/0",
+                 "owner_record": operator_ref,
+-                "mechanism": {"id": "product-policy-preflight/1", "source": design_ref,
+-                              "implementation_sha256": "0" * 64},
++                "mechanism": {"id": "product-policy-preflight/1", "source": implementation_ref if native else design_ref,
++                              "implementation_sha256": hashlib.sha256(implementation_raw).hexdigest() if native else "0" * 64},
+                 "result_surface": {"root": str(evidence_root), "namespace": "readonly-demo", "consumer": "read-only-example"},
+                 "scope": {"kind": "read-only-example", "Product_work_authority": False},
+             },
+         },
+-        "method_profile": {"id": core.PROFILE_ID, "sha256": core.PROFILE_SHA256, "source": profile_ref},
++        "method_profile": {"id": profile_id, "sha256": profile_sha, "source": profile_ref},
+         "sources": {
+             "product": {
+                 "path": str(product_root), "kind": "workspace", "writable": False,
+                 "read_scope": [
+-                    {"path": "stdo_a_c.json", "kind": "file"},
++                    {"path": definition_name, "kind": "file"},
+                     {"path": "specification", "kind": "directory"},
+                     {"path": "build_tenants/graphify/design", "kind": "directory"},
+                     {"path": "build_tenants/graphify/test_env/fixtures/toy_model.json", "kind": "file"},
+                     {"path": "build_tenants/graphify/examples/subject.md", "kind": "file"},
+                 ],
+             },
++            "tool": {"path": str(tool_root), "kind": "workspace", "writable": False,
++                     "read_scope": [{"path": profile_path, "kind": "file"}, {"path": design_path, "kind": "file"}, {"path": implementation_path, "kind": "file"}]},
+             "operator": {"path": str(output / "control"), "kind": "workspace", "writable": False,
+                          "read_scope": [{"path": "OPERATOR.md", "kind": "file"}]},
+         },
+@@ -128,7 +145,7 @@ def prepare(output: Path, product_root: Path) -> Object:
+         "describe.json": _request("readonly-describe-001", "tools.describe", {}),
+         "read-product.json": _request("readonly-product-001", "source.read", {"source": definition_ref, "encoding": "utf8"}),
+         "observe.json": _request("readonly-observe-001", "workspace.observe", {
+-            "scope": [{"root": "product", "path": "stdo_a_c.json", "kind": "file"}],
++            "scope": [{"root": "product", "path": definition_name, "kind": "file"}],
+         }),
+         "denied-preflight.json": _request("readonly-denied-001", "contract.preflight", {
+             "context": {"id": "sha256:" + "0" * 64, "sha256": "0" * 64},
+@@ -142,7 +159,7 @@ def prepare(output: Path, product_root: Path) -> Object:
+     (output / "control").mkdir()
+     (output / "requests").mkdir()
+     evidence_root.mkdir()
+-    (output / "control" / "OPERATOR.md").write_bytes(NOTICE.encode("utf-8"))
++    (output / "control" / "OPERATOR.md").write_bytes(notice.encode("utf-8"))
+     policy_raw = _write_json(output / "policy.json", policy)
+     for name, request in requests.items():
+         _write_json(output / "requests" / name, request)
+@@ -175,9 +192,11 @@ def main() -> int:
+     parser = argparse.ArgumentParser(description=__doc__)
+     parser.add_argument("--out", required=True, type=Path, help="Fresh directory beneath an existing parent")
+     parser.add_argument("--product-root", type=Path, default=Path(__file__).resolve().parents[4])
++    parser.add_argument("--profile", choices=("claude-rc9", "stdo-3.0.1"), default="claude-rc9")
++    parser.add_argument("--definition-name", default="stdo_a_c.json", help="Product-relative exact definition path")
+     args = parser.parse_args()
+     try:
+-        result = prepare(cast(Path, args.out), cast(Path, args.product_root))
++        result = prepare(cast(Path, args.out), cast(Path, args.product_root), profile=args.profile, definition_name=args.definition_name)
+         print(core.canonical(result).decode("utf-8"))
+         return 0
+     except (OSError, ValueError, core.SupportError, KeyError) as exc:

@@ -1,0 +1,45 @@
+{
+  "counter_expected_publications": 1,
+  "actual_successful_counter_publications": 1,
+  "operations": [
+    {
+      "artifact": "aabe1eeb18a8d1a1ba34fc6566a59a3ab495e42a7e31b04b23eaeced26dd2df9",
+      "principal": "primer",
+      "request_id": "qualification-q08-increment-once",
+      "target": "effects/counter.txt",
+      "status": "ok",
+      "effect": {
+        "core_value": "satisfied",
+        "end_established": true,
+        "observed_interval": {
+          "clock": "unix_ns",
+          "ended_ns": 1792897490043349000,
+          "started_ns": 1792897490043074000
+        },
+        "scope": "one qualified atomic target-file publication",
+        "value": "completed"
+      }
+    },
+    {
+      "artifact": "9ea4d9329122a1d1edd6ba9546c142cffc390d250d8f822f17352875f177c0f6",
+      "principal": "host",
+      "request_id": "recovery-publish-report-08",
+      "target": "outputs/recovery.md",
+      "status": "ok",
+      "effect": {
+        "core_value": "satisfied",
+        "end_established": true,
+        "observed_interval": {
+          "clock": "unix_ns",
+          "ended_ns": 1792897817669571000,
+          "started_ns": 1792897817669305000
+        },
+        "scope": "one qualified atomic target-file publication",
+        "value": "completed"
+      }
+    }
+  ],
+  "counter_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+  "evidence_root": "/private/tmp/stdo-skills-effect-recovery-ijcoy9aa/codex/control/evidence",
+  "standing": "Actual retained public native operation census across primer and resumed host; no inference from final bytes alone"
+}

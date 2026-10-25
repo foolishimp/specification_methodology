@@ -1,0 +1,48 @@
+Stage result: the Reviewer's source-only expectation phase completed and is retained by ref. The Worker produced no candidate because its Claude host was not authenticated. The greeting file is unchanged. Neither return is consumable as a candidate review, and no next stage can be bound until a Worker successor runs.
+
+**Worker.** The attempt ran, the Claude host started, replied "Not logged in · Please run /login" with an error flag, and exited 1 after one turn. The declared OAuth token passthrough was absent in the supervisor environment and the host reported no API key source. Stdout was empty, so the return capture and check both record a malformed payload with no original return. No write occurred.
+
+**Reviewer.** The Codex Reviewer acquired the deciding sources through source.read, ran review.prepare in expectation phase, recorded its own expectation, read it back, and returned a format-valid closed return. All seven identity checks against the new Context passed. The check is intentionally non-consumable because the frozen contract carries no pinned expectation. The expectation artifact derives exactly `Hello, Ada.` plus one newline from R1 and D1, binds the unchanged claim, shows source-first acquisition with no prior candidate exposure, and marks candidate-review not performed.
+
+```json
+{
+  "schema": "stage-return/executive-source-only-correction",
+  "executive": "urn:stdo-skills:T001:q05:claude:handoff:3:executive",
+  "phase": {
+    "stages": {"root":"phase","path":"STAGES.json","sha256":"cf2f3ab6da94148b81a5af32903a1504ce837c2653c46fb01fe56e1cc3dff825","read_evidence":"sha256:4fdce082da5b923690a1c1fd26fb9ef633603dd578ba7880ce154a5390cbcea5"},
+    "prior": {"root":"phase","path":"PRIOR.json","sha256":"5645f6059dad1fe8462b64c08b6b93a7dc45d9d2edef84d2acf0c83aaf1dafb5"},
+    "executive_policy_sha256": "a3f9d5588e24fdc138ae04fb6502d8572d64b629f1c4c964f11d5f2b61a212f4",
+    "currentness_observation": "sha256:45e33132d263a1a7dcc7e782f218bee3e75a06e3390532800af861a0a534b6b3"
+  },
+  "worker": {
+    "context": "sha256:da42d9cd9cbf5956f5d55245f6ad2baad80aeedd72594ea22d86a9084245d3bb",
+    "preflight": {"artifact":"sha256:33e3584771304a8c2f15f6c3c9c9773c71278b012225a9847d1a1535bafc6641","contract_sha256":"6b111e055504cb640cbdb8c0a1aee1bdc65e5486a574231fc21e9df75f0adec4","decision":"admitted","gaps":[]},
+    "attempt": "sha256:893360167954fa4ad5076b976f06bc4c4f9a2931550282566843c67f5d180890",
+    "observe": {"evidence":"sha256:a4c31978ca71db4cc44663c0edaa3a978b37f990e3f70764872c11640b6038cf","cursor":8,"returncode":1,"stdout":"sha256:c8e8786ec3a9195ef2be462506e41d5ace5a1a837435a930ccebe2080f87d893 (0 bytes)","stderr":"sha256:8d7ccd62970cee572025a56987ead281d66937a8f94f1134d2648fed7737b920 (96 bytes: actor transport failed)"},
+    "return": {"artifact":"sha256:ef4a121147e7aee65a3cc383fce246bbea70fbb4908a74d12c51378131b3a93b","format_valid":false,"original":null},
+    "check": {"evidence":"sha256:ac4e68cd641d2db46855622a195f39a140f27756cc9d4e01a358be5c1801bdc1","consumable":false,"gap":"malformed_request: empty stdout slot"},
+    "cause": "Claude host 2.1.306 'Not logged in'; CLAUDE_CODE_OAUTH_TOKEN passthrough declared but present=false; apiKeySource none; raw capture control/child-output/worker-reentry1/{vendor.stdout,result.json,process.json}",
+    "work_result": null, "candidate": null,
+    "effect_observation": "no changes, no gaps across observed deciding population"
+  },
+  "reviewer": {
+    "context": "sha256:d68205fc75f96e09c46b4ad26ea4551c59e615200c88c92f8e02c58f2ad9e484",
+    "preflight": {"artifact":"sha256:b66d24bf75b490265bd70941eef759fbd3919df8792f741c84e0b31c0dc8475a","contract_sha256":"21ea9e5ecfc468f0b15350c382f492b4b0b08348f2072afd2d5ad6e7919c94ab","decision":"admitted","gaps":[]},
+    "attempt": "sha256:d1c71f9095b3492a53af58925530273a44b6cc28dddcfc0a8bc7137b9fa91d42",
+    "observe": {"evidence":["sha256:99278880219aebaf0b608813574da71ee9275285b44c1831f69f4e9d2c0fb265","sha256:51e08325f20c73c84c28737e593d3243a3d10d8481fdb8108756473307b86ae3"],"cursor":8,"returncode":0,"stdout":"sha256:38974d74f76506a631077c839803ab1b5a5a90215c248123586e21960289ff86 (4479 bytes)","stderr":"sha256:dd005d5e39924f2d91f94021d38ba43be43cb9079ccd9324981c33a541f9e0ad (0 bytes)"},
+    "return": {"artifact":"sha256:d8594ce1d6ada067aeeb6b3711e56c34caf398cd0a67cdaae2a14b4424ba83cc","format_valid":true,"original_id":"urn:stdo-skills:T001:q05:claude:handoff:3:reviewer:closed-return:reentry1","evaluations":{"expectation-recording":"satisfied"},"not_performed":["candidate-review"],"work_result":null},
+    "check": {"evidence":"sha256:48799ef559f30d09c18edc82bb5cda3fd7f5d5b91cd92ef9e9e6beff6e2c00b9","identity_checks":"7/7 satisfied (frame, activation, subject, basis, consumer, actor, producer)","consumable":false,"gap":"Required Reviewer source-derived expectation is missing (contract expectations=null by design)"},
+    "expectation": {"artifact":"sha256:9f6e54ebe544dcc4617512915684f55e85be7445a54cca6738aa98586dd0744f","schema":"a_c.fd-support.expectation/1","read_evidence":"sha256:437253871a3a75356a8e812231e81d8f2ab0765bc0803af99ca489d3bc10f929","claim_sha256":"47bcca49d17b80edc732e10381550f93ba508cd868cd5c2bc93960a63870e484","candidate_population":"outputs/greeting.txt @ 8b1560f395c0248eca4d2d6cc361825a9f8c00d11ce6f52b26eea2872573c2c1","source_first_observed":true,"history_complete":true,"prior_exposure":[],"source_inputs":9,"external_exposure":"unknown"},
+    "supporting_operations": ["sha256:23fd3313…(source.read capability)","sha256:eb82ea5c…(source.read routes)","sha256:ae57bd28…(review.prepare acquire)","sha256:d9f74f50…(review.prepare record)","sha256:acc66328…(evidence.read read-back)"]
+  },
+  "fixture": {"greeting_sha256":"dbfa3fcacaedf5e16d125ee1410774c6cb2d0bbd0a9fb07cacfe87fd362d29c7 (Hello, Grace. unchanged)","sentinel_sha256":"56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3 (unchanged)","name_sha256":"c4b7d45359e10813d1787293eb7ffa9a074e837fcf99c0281610eab5fe907e79"},
+  "retained_prior_failures": ["reentry-0: MCP calls denied before server execution (dotted tool names); no children existed","reentry-0: operator IndependencePolicy shape rejected natively","reentry-1: Worker host unauthenticated, transport failed"],
+  "disposition": "stop; no next action authorized under this STAGES",
+  "limits": ["Worker and Executive share the anthropic-claude family; Reviewer declared openai-codex; exposure unknown","process exit does not establish descendant or external end","Reviewer vendor stream not read; closed return taken from the finalized stdout slot only","no acceptance, promotion or candidate-review claim made"]
+}
+```
+
+**For Root's next binding.**
+- A candidate-review stage cannot be bound yet. There is no Worker candidate or effect evidence to pin.
+- Run a Worker successor first with the supervisor environment carrying a valid Claude login or OAuth token. Reference the failed attempt `sha256:89336016…` as its predecessor.
+- When the Worker candidate exists, pin the Reviewer contract's expectations to `sha256:9f6e54eb…` and the actual candidate and effect refs for the candidate-review phase.

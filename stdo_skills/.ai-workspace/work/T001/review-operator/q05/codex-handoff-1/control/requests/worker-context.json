@@ -1,0 +1,733 @@
+{
+  "arguments": {
+    "envelope": {
+      "boundary": "executor-stdin-utf8",
+      "capacity_bytes": null,
+      "host_context": {
+        "bytes": null,
+        "evidence": null,
+        "state": "unknown"
+      }
+    },
+    "late_acquisition": [],
+    "models": [],
+    "packet": {
+      "activation": {
+        "configuration": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "roles/worker-TASK.md",
+          "root": "control",
+          "selector": null,
+          "sha256": "6a2a4955d07f8ae3d2145650f0a1e3aa8881ca87d88f45bec7ebda0e43882900"
+        },
+        "id": "urn:stdo-skills:T001:q05:codex:handoff:1:worker:activation:1",
+        "revision": "1"
+      },
+      "actor_authority": {
+        "acceptance": null,
+        "actor_id": "urn:stdo-skills:T001:q05:codex:handoff:1:worker",
+        "capability": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "roles/worker-TASK.md",
+          "root": "control",
+          "selector": null,
+          "sha256": "6a2a4955d07f8ae3d2145650f0a1e3aa8881ca87d88f45bec7ebda0e43882900"
+        },
+        "decision": null,
+        "evaluation": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "roles/PREDICATES.md",
+          "root": "control",
+          "selector": null,
+          "sha256": "724dee7972dc6f7429bbbd2c018ea76f4b7e05887b6f636db6a07a525ed4c1db"
+        },
+        "operation": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "roles/worker-TASK.md",
+          "root": "control",
+          "selector": null,
+          "sha256": "6a2a4955d07f8ae3d2145650f0a1e3aa8881ca87d88f45bec7ebda0e43882900"
+        },
+        "publication": null,
+        "role": "Worker",
+        "semantic": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "roles/worker-TASK.md",
+          "root": "control",
+          "selector": null,
+          "sha256": "6a2a4955d07f8ae3d2145650f0a1e3aa8881ca87d88f45bec7ebda0e43882900"
+        },
+        "territory": [
+          {
+            "kind": "file",
+            "path": "outputs/greeting.txt",
+            "root": "product"
+          }
+        ],
+        "tools": [
+          "a_c.public-native301",
+          "native-codex-worker"
+        ]
+      },
+      "attention": {
+        "exclusions": [
+          "unrelated files/oracle/peer lane",
+          "ungranted writes or launches"
+        ],
+        "invariants": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".qualification/OWNER.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "aea0b9bb44cada559adc04df2aaa1cfd3261d97eda1cc14ca7ee0914d0f2b831"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "unrelated/sentinel.txt",
+            "root": "product",
+            "selector": null,
+            "sha256": "56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3"
+          }
+        ],
+        "material_relations": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "fixture_product.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "439f8258f80400c7cfee91ccd2c0d5b0fadb0128326bb6c17b0fa20bb82b9f2d"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "TASK.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "5218736258f2edf3ef22c01464ebf50547e9ddc7dd15ee3b67dc0f63e851a0c1"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "specification/PRODUCT.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "ff4546f54cbc888373c8d7b50ca485999d951b13aecd4d597ffd095be60044a2"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "specification/REQUIREMENT.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "2a1c18649904d1930a9f75d3102ca781c9bb0f2a40b3c572c015fdfcd08b0483"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "design/DESIGN.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "1fe6e572c99a823202dbab45f27b1839cc98e665df85a601f6bc5c1d8e74c090"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "inputs/name.txt",
+            "root": "product",
+            "selector": null,
+            "sha256": "c4b7d45359e10813d1787293eb7ffa9a074e837fcf99c0281610eab5fe907e79"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".qualification/OWNER.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "aea0b9bb44cada559adc04df2aaa1cfd3261d97eda1cc14ca7ee0914d0f2b831"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "standards/EVALUATION.md",
+            "root": "method",
+            "selector": {
+              "lines": [
+                177,
+                248
+              ]
+            },
+            "sha256": "478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff"
+          }
+        ],
+        "prohibited_assumptions": [
+          "transport completion is semantic fitness",
+          "temporary name is write authority",
+          "source-only expectation is candidate acceptance"
+        ],
+        "semantic_sources": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/worker-TASK.md",
+            "root": "control",
+            "selector": null,
+            "sha256": "6a2a4955d07f8ae3d2145650f0a1e3aa8881ca87d88f45bec7ebda0e43882900"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/PREDICATES.md",
+            "root": "control",
+            "selector": null,
+            "sha256": "724dee7972dc6f7429bbbd2c018ea76f4b7e05887b6f636db6a07a525ed4c1db"
+          }
+        ]
+      },
+      "evidence_relations": {
+        "acquisition": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "fixture_product.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "439f8258f80400c7cfee91ccd2c0d5b0fadb0128326bb6c17b0fa20bb82b9f2d"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "TASK.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "5218736258f2edf3ef22c01464ebf50547e9ddc7dd15ee3b67dc0f63e851a0c1"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "specification/PRODUCT.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "ff4546f54cbc888373c8d7b50ca485999d951b13aecd4d597ffd095be60044a2"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "specification/REQUIREMENT.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "2a1c18649904d1930a9f75d3102ca781c9bb0f2a40b3c572c015fdfcd08b0483"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "design/DESIGN.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "1fe6e572c99a823202dbab45f27b1839cc98e665df85a601f6bc5c1d8e74c090"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "inputs/name.txt",
+            "root": "product",
+            "selector": null,
+            "sha256": "c4b7d45359e10813d1787293eb7ffa9a074e837fcf99c0281610eab5fe907e79"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".qualification/OWNER.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "aea0b9bb44cada559adc04df2aaa1cfd3261d97eda1cc14ca7ee0914d0f2b831"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "standards/EVALUATION.md",
+            "root": "method",
+            "selector": {
+              "lines": [
+                177,
+                248
+              ]
+            },
+            "sha256": "478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/PREDICATES.md",
+            "root": "control",
+            "selector": null,
+            "sha256": "724dee7972dc6f7429bbbd2c018ea76f4b7e05887b6f636db6a07a525ed4c1db"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/INDEPENDENCE.json",
+            "root": "control",
+            "selector": null,
+            "sha256": "3ea82ca2183ff0b1fe9a747d0390880024ff73c1a622aa9d01aa051c31073e79"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/RETURN.md",
+            "root": "control",
+            "selector": null,
+            "sha256": "f28265754cecf0ac8762e0ecaee72d91c70361380f55642fc794a5346dee2510"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/SOURCE-ROUTES.json",
+            "root": "control",
+            "selector": null,
+            "sha256": "12e054165b3f8af78782bee8707900e7d82e1c9eae3ba4c2a6cf6e25d50079a3"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".agents/skills/stdo-work/SKILL.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "ba6f7ab1e6de875e2f019b049f7817e771474f1b511a74fe2392a55a37078ee8"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".agents/skills/stdo-work/references/basis.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "7b409d4895e7be3291e4e41c32e497ae045e9fb4b62f01b9622b10888d449cda"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".agents/skills/stdo-work/references/delegation.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "0bb621b4d6edb17f2100878a567596f85a52b517edfafbb2ceba7119dce8bfde"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".agents/skills/stdo-work/references/qualification.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "dda296ed053f3e8ed5ab4cdc7c7b9f162754832fc89ded9280044d96f9dc795c"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".agents/skills/stdo-work/references/recovery.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "d7f7f118eea492bb64456a56c4cb4987e6e23acd8b3c0143ba87cf5ec9a92c80"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".agents/skills/stdo-work/references/release-install.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "ec7cb5a407f6690936d0bf79ab5fc8796c2cfca4c34772f61ceff4b68f337cfb"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".agents/skills/stdo-work/references/tools.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "8bb49c0dfe0eb87fbfbe5063c4a43e15f074e25fdd4ff90ffdec24ef14e75c8b"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".agents/skills/stdo-work/source-routes.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "09972e4af512645c43207aa3edd5114e1e81c24ef344c76a6af2e99852920403"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "unrelated/sentinel.txt",
+            "root": "product",
+            "selector": null,
+            "sha256": "56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3"
+          }
+        ],
+        "admissible_evidence": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "fixture_product.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "439f8258f80400c7cfee91ccd2c0d5b0fadb0128326bb6c17b0fa20bb82b9f2d"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "TASK.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "5218736258f2edf3ef22c01464ebf50547e9ddc7dd15ee3b67dc0f63e851a0c1"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "specification/PRODUCT.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "ff4546f54cbc888373c8d7b50ca485999d951b13aecd4d597ffd095be60044a2"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "specification/REQUIREMENT.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "2a1c18649904d1930a9f75d3102ca781c9bb0f2a40b3c572c015fdfcd08b0483"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "design/DESIGN.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "1fe6e572c99a823202dbab45f27b1839cc98e665df85a601f6bc5c1d8e74c090"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "inputs/name.txt",
+            "root": "product",
+            "selector": null,
+            "sha256": "c4b7d45359e10813d1787293eb7ffa9a074e837fcf99c0281610eab5fe907e79"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".qualification/OWNER.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "aea0b9bb44cada559adc04df2aaa1cfd3261d97eda1cc14ca7ee0914d0f2b831"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "standards/EVALUATION.md",
+            "root": "method",
+            "selector": {
+              "lines": [
+                177,
+                248
+              ]
+            },
+            "sha256": "478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff"
+          }
+        ],
+        "conjunction": null,
+        "consumer": "root-executive",
+        "dependencies": [],
+        "return_contract": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "roles/worker-RETURN-CONTRACT.json",
+          "root": "control",
+          "selector": null,
+          "sha256": "5b3384a94c277ed1f937f20119c3e7dcabd7be3d52ac28c7077718d9ba88c076"
+        },
+        "translation": null
+      },
+      "frame": {
+        "declaration": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "roles/worker-TASK.md",
+          "root": "control",
+          "selector": null,
+          "sha256": "6a2a4955d07f8ae3d2145650f0a1e3aa8881ca87d88f45bec7ebda0e43882900"
+        },
+        "evaluation": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "roles/PREDICATES.md",
+          "root": "control",
+          "selector": null,
+          "sha256": "724dee7972dc6f7429bbbd2c018ea76f4b7e05887b6f636db6a07a525ed4c1db"
+        },
+        "id": "qualification.q05.worker",
+        "result_algebra": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "standards/ACTIVATION.md",
+          "root": "method",
+          "selector": {
+            "lines": [
+              938,
+              1055
+            ]
+          },
+          "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d"
+        },
+        "revision": "1"
+      },
+      "profile_additions": {
+        "worker": {
+          "mutation_subject": {
+            "id": "urn:stdo-skills:T001:q05:codex:handoff:1:worker-subject",
+            "sha256": "2a1c18649904d1930a9f75d3102ca781c9bb0f2a40b3c572c015fdfcd08b0483"
+          },
+          "operation_grant_id": "urn:stdo-skills:T001:q05:codex:handoff:1:worker-grant",
+          "territory": [
+            {
+              "kind": "file",
+              "path": "outputs/greeting.txt",
+              "root": "product"
+            }
+          ]
+        }
+      },
+      "stop_change": {
+        "invalidators": [
+          "source/package drift",
+          "unreconciled effects",
+          "candidate differs from selected population"
+        ],
+        "re_entry": [
+          "Root selects exact successor; preserve every attempt"
+        ],
+        "reconfiguration": [],
+        "residuals": [
+          "total model cost and host context size unknown",
+          "external/process-tree effects unknown",
+          "same-family limitation where declared"
+        ],
+        "stop_conditions": [
+          "selected ceiling",
+          "unsupported required operation"
+        ]
+      },
+      "subject_basis": {
+        "dependencies": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "fixture_product.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "439f8258f80400c7cfee91ccd2c0d5b0fadb0128326bb6c17b0fa20bb82b9f2d"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "TASK.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "5218736258f2edf3ef22c01464ebf50547e9ddc7dd15ee3b67dc0f63e851a0c1"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "specification/PRODUCT.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "ff4546f54cbc888373c8d7b50ca485999d951b13aecd4d597ffd095be60044a2"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "specification/REQUIREMENT.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "2a1c18649904d1930a9f75d3102ca781c9bb0f2a40b3c572c015fdfcd08b0483"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "design/DESIGN.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "1fe6e572c99a823202dbab45f27b1839cc98e665df85a601f6bc5c1d8e74c090"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "inputs/name.txt",
+            "root": "product",
+            "selector": null,
+            "sha256": "c4b7d45359e10813d1787293eb7ffa9a074e837fcf99c0281610eab5fe907e79"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".qualification/OWNER.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "aea0b9bb44cada559adc04df2aaa1cfd3261d97eda1cc14ca7ee0914d0f2b831"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "standards/EVALUATION.md",
+            "root": "method",
+            "selector": {
+              "lines": [
+                177,
+                248
+              ]
+            },
+            "sha256": "478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/PREDICATES.md",
+            "root": "control",
+            "selector": null,
+            "sha256": "724dee7972dc6f7429bbbd2c018ea76f4b7e05887b6f636db6a07a525ed4c1db"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/INDEPENDENCE.json",
+            "root": "control",
+            "selector": null,
+            "sha256": "3ea82ca2183ff0b1fe9a747d0390880024ff73c1a622aa9d01aa051c31073e79"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/RETURN.md",
+            "root": "control",
+            "selector": null,
+            "sha256": "f28265754cecf0ac8762e0ecaee72d91c70361380f55642fc794a5346dee2510"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "roles/SOURCE-ROUTES.json",
+            "root": "control",
+            "selector": null,
+            "sha256": "12e054165b3f8af78782bee8707900e7d82e1c9eae3ba4c2a6cf6e25d50079a3"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".agents/skills/stdo-work/SKILL.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "ba6f7ab1e6de875e2f019b049f7817e771474f1b511a74fe2392a55a37078ee8"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".agents/skills/stdo-work/references/basis.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "7b409d4895e7be3291e4e41c32e497ae045e9fb4b62f01b9622b10888d449cda"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".agents/skills/stdo-work/references/delegation.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "0bb621b4d6edb17f2100878a567596f85a52b517edfafbb2ceba7119dce8bfde"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".agents/skills/stdo-work/references/qualification.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "dda296ed053f3e8ed5ab4cdc7c7b9f162754832fc89ded9280044d96f9dc795c"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".agents/skills/stdo-work/references/recovery.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "d7f7f118eea492bb64456a56c4cb4987e6e23acd8b3c0143ba87cf5ec9a92c80"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".agents/skills/stdo-work/references/release-install.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "ec7cb5a407f6690936d0bf79ab5fc8796c2cfca4c34772f61ceff4b68f337cfb"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".agents/skills/stdo-work/references/tools.md",
+            "root": "product",
+            "selector": null,
+            "sha256": "8bb49c0dfe0eb87fbfbe5063c4a43e15f074e25fdd4ff90ffdec24ef14e75c8b"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": ".agents/skills/stdo-work/source-routes.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "09972e4af512645c43207aa3edd5114e1e81c24ef344c76a6af2e99852920403"
+          },
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "unrelated/sentinel.txt",
+            "root": "product",
+            "selector": null,
+            "sha256": "56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3"
+          }
+        ],
+        "method_profile": {
+          "id": "urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1",
+          "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+        },
+        "observations": [
+          {
+            "id": "sha256:500e4877c2e70ba03f4e9d6afef895579132261840e079b205916812800e1080",
+            "sha256": "500e4877c2e70ba03f4e9d6afef895579132261840e079b205916812800e1080"
+          }
+        ],
+        "product": {
+          "definition": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "fixture_product.json",
+            "root": "product",
+            "selector": null,
+            "sha256": "439f8258f80400c7cfee91ccd2c0d5b0fadb0128326bb6c17b0fa20bb82b9f2d"
+          },
+          "id": "urn:stdo:product-definition:qualification-reviewed-handoff"
+        },
+        "subject": {
+          "id": "urn:stdo-skills:T001:q05:codex:handoff:1:worker-subject",
+          "sha256": "2a1c18649904d1930a9f75d3102ca781c9bb0f2a40b3c572c015fdfcd08b0483"
+        },
+        "time_basis": "Stable deciding inputs only; mutable greeting preimage is separate"
+      }
+    },
+    "sources": []
+  },
+  "id": "urn:stdo-skills:T001:q05:codex:handoff:1:prepare:worker-context",
+  "operation": "context.assemble",
+  "schema": "a_c.fd-support.request/1"
+}

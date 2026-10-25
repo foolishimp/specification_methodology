@@ -1,0 +1,9 @@
+# Selected local stdio credential-name binding
+
+Root selected exactly one explicit environment binding on the trusted local `stdo_q05` MCP server: `CLAUDE_CODE_OAUTH_TOKEN: "${CLAUDE_CODE_OAUTH_TOKEN}"`. This is a variable-name placeholder, never the credential value. Existing native allowlisted passthrough remains selected on the Claude Worker plan and registered executor. No new credential name, alias, remote server, raw-value configuration, global change, or permission expansion is selected.
+
+The previous outer Claude invocation recorded the name present; the nested Claude Worker invocation recorded it absent and failed login before construction. The actual Executive consumed that failure and held continuation. The independently produced source-first Reviewer expectation is retained unchanged. This successor launches only the same logical Claude Worker, with a new activation after that reconciled failure, from the same actual Executive session. The authentication-failed child session has no useful construction state; no resume of that empty child is claimed.
+
+Official primary reference: https://code.claude.com/docs/en/mcp#environment-variable-expansion-in-mcp-json , inspected 2026-10-25. The documented substitution includes local server env fields. Its credential-empty restriction is stated for remote URL/header fields. Runtime success for this exact local binding is unestablished until the selected actual attempt. If the host refuses it, retain the refusal and stop; do not work around it or broaden configuration.
+
+Only presence booleans may be inspected or retained. Do not read, print, hash, copy, or place the credential value in argv, plans, evidence, or prompts. Known process PIDs are absent and target bytes remain unchanged; no universal external-effect absence is inferred.

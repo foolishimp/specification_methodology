@@ -1,0 +1,11 @@
+# Claude repair-2: bounded source adequacy
+
+The exact localized instruction delta adequately addresses LC-01's demonstrated verification-scratch misunderstanding. It is source adequacy only; LC-01 behavioral closure remains open pending the selected fresh affected host trial. No new material defect was found in the delta.
+
+Current INVENTORY.md SHA33472e5e2b9adf5ba616bd6980d7f84b3c10de168968727919de32378f045704 retains the same 13-file population as predecessor 42d246cbe2fcf1414b0fd7ed094be74d6f2607595525555caa52618d8999f79a. Direct comparison against operator/claude-repair-2/original-candidate finds only entry SKILL.md, tool-operations SKILL.md and inventory changed. Installer, verifier, release/delegation/continuation paths and maintenance resource are byte-identical, so prior F-C02/F-C03/F-C04 closure remains applicable within its bounds.
+
+The entry adds guidance directly within the loaded one-file work path. Tool operations adds the same concrete effect distinction: actor-authored scratch, redirection and deletion are effects; temporary names confer neither territory nor ownership; absent scratch authority, compare in memory and retain native receipts. It prohibits fixed /tmp verification shortcuts and explains that deletion does not undo overwrite. Separately granted scratch remains usable with current ownership/preimage and scoped creation/use/cleanup. This preserves proportionate authorized work and does not invent a mandatory ticket/reviewer or new confirmation ceremony.
+
+Exact modified file hashes: entry 5c30fd460432895ce19ec0711df8e5ddd715f1e37496d6fd29234b2e3642901c; tool operations 63ad43e77c36ae35a9f1c7b0721a09abab0d4c9b8dc90d2a557c2f7bfab95afe. T001/claude/actor/repair-2/CANDIDATE.json SHA98ccd21419342480898c31aaeba24b40862e2fcd590e465271184470f650acb1; author ASSESSMENT.json SHA0ec53dce39c51aef6f816fb20f0e36992efae20e2e293e750bd483930025cf41. The recorded structural verifier pass is bounded evidence, not behavior.
+
+Native Codex nonauthor Reviewer, same-family relative to the localized Codex Writer. Existing independent expectations precede the candidate; no source or fixture was edited, no host dispatched and no a_c Reviewer receipt fabricated. Historical LC-01 and earlier F-C01/admission/timeout facts remain unchanged. No unchanged runtime/common re-review or methodology change was performed.

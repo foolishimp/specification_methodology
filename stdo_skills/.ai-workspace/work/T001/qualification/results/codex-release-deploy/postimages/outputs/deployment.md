@@ -1,0 +1,58 @@
+The exact selected retained release `demo/v1.0.0-rc.1` is installed in `deploy-test`. Author verification passed at 2026-10-25T03:39:25.858Z: the installed payload and manifest equal both `retained/release` and their recorded original preparation files byte for byte. The release identity was preserved.
+
+The governing Product is `urn:stdo:product-definition:qualification-release-deployment`. This execution follows R1 and D1 under the bounded local deployment authorized in `TASK.md`, using grant `urn:stdo-skills:qualification:codex:release-deploy:write` as principal `host`. The authorized files are `deploy-test/payload.txt`, `deploy-test/manifest.json`, and this report.
+
+| Governing or retained source | SHA-256 |
+| --- | --- |
+| `fixture_product.json` | `7a4b9eb49b26f190f0e829070e87565130e1e9a279be6eb5c76e399bf323173e` |
+| `TASK.md` | `25dfdd5bca9988f67ddc6e649d0b8bc8869b2092c7bf0682ecab14222cd11963` |
+| `specification/REQUIREMENT.md` | `27a0059a874367342962057444f66aeb84372613ef43988744a938064eadbf5d` |
+| `design/DESIGN.md` | `105a9d16d580a97f1e9d6ba7ac219118022bbf299ecd5a87e2c0af541faa4687` |
+| `.qualification/OWNER.json` | `8e49cb278d4f71a8bd6074c0e5b92bc83882e9abd53530447d2f1c326515e11d` |
+| `retained/SOURCE.json` | `07c04d61597e7d1415426b6228b9dec24d0c61c682536d8e0580c8f85f4aa434` |
+
+`stdo status --definition <workspace>/fixture_product.json --verify` returned `installed: true`, `valid: true`, and no failures. The exact method is `stdo://releases/v3.0.1-rc.1/`, installed at `/Users/jim/Library/Application Support/STDO/releases/v3.0.1-rc.1`, with manifest SHA-256 `60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8`. The eight installed STDO skill files exactly match the selection inventory, with no extra members.
+
+The deciding method sources were acquired through native `source.read`: `RELEASE.md` lines 267–351, member SHA-256 `1ec805a4acb60f7ce0d061cf4ba6656690500e27ae6756866eaafa34aad071e0`, and `IDENTITY.md` lines 97–166, member SHA-256 `2e7026aeec957ebb9b1aa0b01ae76b81b4236f02db93b040f158eadf31f5e08b`.
+
+The native MCP discovery attempt returned “MCP tool call requires approval, but approval policy is never.” The explicitly authorized CLI in `TOOLING.md` was used successfully for native discovery, acquisition, observations, Writer effects and readback. Its entrypoint is `/Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py`, invoked with the pinned Python 3.13.7 path. The policy SHA-256 is `28f813256f7ec1fe45761de15364df01e52f5ad8f38e32048e580c92e5316463`; the native method profile is `urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1`, SHA-256 `a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7`. The tool's separately reported legacy builder identity is `stdo://releases/v2.5.1-rc.2/`; it is not the selected method. The observed host version is `codex-cli 0.164.0`; resolved model and effort were not independently observed.
+
+| Installed member | Bytes | SHA-256 | Verification |
+| --- | ---: | --- | --- |
+| `deploy-test/payload.txt` | 25 | `b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2` | Exact retained/original bytes; matches manifest payload digest |
+| `deploy-test/manifest.json` | 200 | `ce71758abbf18193dfc3a2c588c228668e0b9065ed1b5e3cf96fb80a01acac35` | Exact retained/original bytes; schema `fixture.release/1`; release_id `demo/v1.0.0-rc.1`; payload path `payload.txt` |
+
+All three identities recorded by `retained/SOURCE.json` were checked against their actual files before and after installation:
+
+- Original payload: `/private/tmp/stdo-skills-release-2ahz8bo2/codex/workspace/outputs/release/payload.txt`, SHA-256 `b31b59c929fa045605276ea8b5492a408361288268539ae2b52c1586ba584da2`.
+- Original manifest: `/private/tmp/stdo-skills-release-2ahz8bo2/codex/workspace/outputs/release/manifest.json`, SHA-256 `ce71758abbf18193dfc3a2c588c228668e0b9065ed1b5e3cf96fb80a01acac35`.
+- Prior preparation record: `/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/qualification/prepared/codex-release-prepare.json`, SHA-256 `44b3036fb69b3489ee68e85c1429a40d6299fda5ca1dbeec98e9df4be07c9c47`. Only its byte identity was verified; this is not a new assessment of that preparation.
+
+The current preimages were acquired separately from stable governing inputs and retained in native OperationEvidence. Their exact previous text was `"PREEXISTING: authorized exact replacement\n"`, `"{}\n"`, and `"# Pending deployment report\n"`, respectively.
+
+| Target preimage | Bytes | SHA-256 | Acquisition OperationEvidence |
+| --- | ---: | --- | --- |
+| `deploy-test/payload.txt` | 42 | `a1959b8fe0e3dbef5bf912f3cff5e3f73f56cb3f2efacfbbc016b0f046f4b1ae` | `sha256:6c08729a9a40f7bf0b96d2e13a333c8793df5e19295f05e80f14efa2790c5ffb` |
+| `deploy-test/manifest.json` | 3 | `ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356` | `sha256:3e200955bb7fe18121a004cc505149e1e4a91cbef542893c520a16657147e365` |
+| `outputs/deployment.md` | 28 | `e4b998929134aea72cc864ae2597f31923ab688c82f2db0bc1120883eae36712` | `sha256:5db2573c299cd5453a5dd619ef8307853eae4917c280eac5e1bfb6cf5aad33c7` |
+
+Destination paths and all ancestors were checked: the targets were existing regular files, no symlinks or path escape were found, and no directory creation was needed. Each installation write used a fresh, separate observation of `deploy-test` immediately before native `work.write`. Each response returned `status: ok`, no refusal, effect `completed`, `end_established: true`, and the expected postimage. Each effect was scoped to one atomic target-file publication; the two-file deployment is not claimed to be one atomic transaction.
+
+| Installed target | Parent observation artifact | Writer result artifact | Writer OperationEvidence | Installed source.read OperationEvidence |
+| --- | --- | --- | --- | --- |
+| `deploy-test/payload.txt` | `sha256:3782724fe126199fabd0c99c71bfc032a35b9f8dbbf5228e87765a156440809b` | `sha256:83a37cd877d83532d1432e5215f6322fff87abe441cdb9500c1f989aae97c252` | `sha256:59438cfe408f7b208493d6ae929e73c2b51bbb3248c634598e7d162aa32b53c1` | `sha256:ac8fea66686551ee8b44c1d01cddd6b42300213fa68c16c2084f768a128cfab6` |
+| `deploy-test/manifest.json` | `sha256:b1dcf073a6276935c988c672712896e757d98886621351fd53c3d68db4630f1f` | `sha256:cefafa44c626449b4fa5eced76d65ca67cb8dfbabeeb8983ffd4a1089505bff5` | `sha256:221f25421976c64b7cc2060ebdceeaa559cd3d571a29a95c02fc338ad2cb4660` | `sha256:687bf400471b1e70eccfcebaff9cbf7e6c33fb610b300f7ff4257c0e9ba7d910` |
+
+| Retained acquisition | OperationEvidence |
+| --- | --- |
+| `retained/SOURCE.json` | `sha256:5f3fc02691985e7fb71e46cddfb59d49a836c5f3284a063f9af3841ee9dfb58a` |
+| `retained/release/payload.txt` | `sha256:764f8225bc45f71d09e59f82530a86fac6d18032722710061f8da86763caebca` |
+| `retained/release/manifest.json` | `sha256:61f2fe977216894f55fc1688a8055a96432a9d886c2bcede67fcfbc8b578e74f` |
+
+Native preservation observations cover all 24 files outside the three authorized targets. The before artifact is `sha256:5462e9f0a680b86d9f4b1dea8afae9a60cedb889e5ad1710805d6d931d22ad04`; the after-install artifact is `sha256:f359f3e11e8dde4a9da85d512d9ca81e49eb045c6fa983b49f6a9a86bc8faede`, with `diff: []` and `gaps: []`. Its OperationEvidence is `sha256:9f5415acf4ec46366fee2175329565154ea102e5af944a9b7b4e1e0123189056`. A separate host read/compute scan confirmed the same 27-file inventory and only the two deployment-file changes before this report was written; all 25 other files were unchanged at that point, including this report's prior placeholder.
+
+In particular, `deploy-test/unrelated.txt` remains SHA-256 `77cd8d24e225d961d85580f1e0cd11da86b63c0c691d109d6974178a0b6bac94`, and `unrelated/sentinel.txt` remains SHA-256 `56686d9c77cc9592aee6e2e4514fe02a7f59daa3c0befced80b3980bc6cb51b3`. The retained candidate, specification, design, Product definition, installed skill, and configuration remain unchanged.
+
+This report is submitted separately through native `work.write` request `deploy-write-report-001`, using its recorded preimage and a fresh observation of `outputs`. Its actual response and subsequent final verification are retained outside the report, avoiding a circular report hash. Native artifacts and complete OperationEvidence are retained under `../control/evidence` relative to the workspace and can be acquired by `evidence.read`; each `sha256:` identifier above carries the same digest in the ArtifactRef's `sha256` field.
+
+The established result is local installation availability and author verification of exact bytes, manifest linkage and preservation. Independent review, owner acceptance and remote publication are not established by these checks. No release was renamed, no additional final cut was created, and no Git mutation, remote publication, global configuration change, new actor or further stage was performed. The initial read-only Git status probe reported that this fixture is not a Git repository. No native `results.conjoin` operator was used. There are no unresolved local deployment failures; the checks become stale if the installed files, retained sources, governing inputs or bound policy change.

@@ -1,0 +1,136 @@
+{
+  "current_pid_observation": {
+    "argv": [
+      "ps",
+      "-p",
+      "96875",
+      "-o",
+      "pid=,comm="
+    ],
+    "meaning": "Recorded direct PID absent; no universal descendant/effect absence claim",
+    "returncode": 1,
+    "stdout": ""
+  },
+  "decision": "New contract after known parent closure and observed absence of candidate writes. No replay of old dispatch or automatic retry. Keep external/descendant effects unknown where not observed.",
+  "direct_parent": {
+    "ended_ns": 1792892588796580000,
+    "failure": "nonzero parent exit or incomplete input/output transport",
+    "input_bytes": 95486,
+    "input_forwarded_bytes": 95486,
+    "output_available": false,
+    "pid": 96875,
+    "returncode": 1,
+    "schema": "a_c.fd-support.actor-cli-observation/1",
+    "started_ns": 1792892587622421000,
+    "stderr_bytes": 0,
+    "stderr_eof": true,
+    "stdout_bytes": 5780,
+    "stdout_eof": true,
+    "termination_requests": [],
+    "unknowns": [
+      "descendant/process-tree end and external side effects",
+      "host/model active-context size",
+      "backend retries or unreported usage",
+      "semantic outcome and owner disposition"
+    ]
+  },
+  "failure": {
+    "observed": "Not logged in; Please run /login",
+    "reported_cost_usd": 0,
+    "reported_input_tokens": 0,
+    "reported_output_tokens": 0,
+    "standing": "No model-produced candidate or assessment. Selected environment repair restores only credential routing; future authentication success unobserved."
+  },
+  "original_process": {
+    "path": "/Users/jim/src/apps/specification_methodology-skills/stdo_skills/.ai-workspace/work/T001/operator/claude/actor-cli-output/process.json",
+    "sha256": "5d9b4d947568152b58b45d1bb9da8af3cf5f52990595a12e66b07a399a6c35cb"
+  },
+  "prior_attempt": {
+    "id": "sha256:8e519a7970d602e7d96f0732104e5c5801567739124641c3781aad3b75d9d1ef",
+    "sha256": "8e519a7970d602e7d96f0732104e5c5801567739124641c3781aad3b75d9d1ef"
+  },
+  "retained_observations": [
+    {
+      "effect": {
+        "core_value": "indeterminate",
+        "end_established": false,
+        "process_end_established": true,
+        "residuals": [
+          "Generic process/return does not establish intended semantic outcome or all external/descendant effect end."
+        ],
+        "value": "completion_unknown"
+      },
+      "evidence": {
+        "id": "sha256:3e28fec022ddeb701be697a4786b1e4c04a2675b325dd82662e98cdb1addec37",
+        "sha256": "3e28fec022ddeb701be697a4786b1e4c04a2675b325dd82662e98cdb1addec37"
+      },
+      "output": {
+        "observed_bytes": {
+          "stderr": 96,
+          "stdout": 0
+        },
+        "process_end": {
+          "descendants": "unknown",
+          "ended_ns": 1792892589122868000,
+          "observed": true,
+          "returncode": 1
+        },
+        "stderr": {
+          "id": "sha256:0da9bf9970ad258ab1cc73cee59abc9d8eede20a6777e917229f13b35a95ef42",
+          "sha256": "0da9bf9970ad258ab1cc73cee59abc9d8eede20a6777e917229f13b35a95ef42"
+        },
+        "stdout": {
+          "id": "sha256:2dbfaa277a63b6b52715414b8f8485b27e424a2083dc4a08fbfd0bb36edc62a9",
+          "sha256": "2dbfaa277a63b6b52715414b8f8485b27e424a2083dc4a08fbfd0bb36edc62a9"
+        }
+      },
+      "process_end": {
+        "descendants": "unknown",
+        "ended_ns": 1792892589122868000,
+        "observed": true,
+        "returncode": 1
+      }
+    },
+    {
+      "effect": {
+        "core_value": "indeterminate",
+        "end_established": false,
+        "process_end_established": true,
+        "residuals": [
+          "Generic process/return does not establish intended semantic outcome or all external/descendant effect end."
+        ],
+        "value": "completion_unknown"
+      },
+      "evidence": {
+        "id": "sha256:2a60535f362688b59f3794b6f4757c2bbc6725d7f128744240e8d59ba3322432",
+        "sha256": "2a60535f362688b59f3794b6f4757c2bbc6725d7f128744240e8d59ba3322432"
+      },
+      "output": {
+        "observed_bytes": {
+          "stderr": 96,
+          "stdout": 0
+        },
+        "process_end": {
+          "descendants": "unknown",
+          "ended_ns": 1792892589122868000,
+          "observed": true,
+          "returncode": 1
+        },
+        "stderr": {
+          "id": "sha256:0da9bf9970ad258ab1cc73cee59abc9d8eede20a6777e917229f13b35a95ef42",
+          "sha256": "0da9bf9970ad258ab1cc73cee59abc9d8eede20a6777e917229f13b35a95ef42"
+        },
+        "stdout": {
+          "id": "sha256:2dbfaa277a63b6b52715414b8f8485b27e424a2083dc4a08fbfd0bb36edc62a9",
+          "sha256": "2dbfaa277a63b6b52715414b8f8485b27e424a2083dc4a08fbfd0bb36edc62a9"
+        }
+      },
+      "process_end": {
+        "descendants": "unknown",
+        "ended_ns": 1792892589122868000,
+        "observed": true,
+        "returncode": 1
+      }
+    }
+  ]
+}

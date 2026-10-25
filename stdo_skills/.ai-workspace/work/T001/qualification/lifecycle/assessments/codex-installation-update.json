@@ -1,0 +1,64 @@
+{
+  "assessor": "skills_lifecycle_fixture_writer",
+  "attempt": "7928f68708f5c2efd4ac9c8f3dd0c7cf702e08c6afad5577d126d5a314c4b9c1",
+  "case_lane": "codex-installation-update",
+  "cost": {
+    "monetary_cost": "unknown",
+    "native_usage": [
+      {
+        "event": "turn.completed",
+        "line": 90,
+        "reported_cost_usd": null,
+        "reported_usage": {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 837888,
+          "input_tokens": 915454,
+          "output_tokens": 8693,
+          "reasoning_output_tokens": 3654
+        }
+      }
+    ],
+    "resolved_backend": "not observed",
+    "wall_seconds": 211.178581
+  },
+  "dispatch_evidence": "adf45f89803802cb28c654ec1f8ad0cbfe897eb779c5cee104ca4b9bda9540f1",
+  "limits": [
+    "One actual native invocation after one controlled metadata-only update; not a claim about arbitrary updates.",
+    "Finite evidence does not establish reliability, overall benefit or whole-method acceptance."
+  ],
+  "mcp_transport_refusals": 3,
+  "observations": {
+    "path": "results/codex-installation-update/INVENTORY.json",
+    "sha256": "fe8f3868c8ab0849013885c8bff970f04d31839bb38116e01aff1d5420513b97"
+  },
+  "oracle": {
+    "path": "lifecycle/ORACLE.json",
+    "sha256": "d5cef9339d10523baf6005980b3c7a09d5eb53c615fba33a89f925f482ec1467"
+  },
+  "predicates": [
+    {
+      "case": "Q12.update-invoke",
+      "evidence": {
+        "changed": [
+          "outputs/greeting.txt"
+        ],
+        "complete_skill_body_line": 5,
+        "identity_route_line": 12,
+        "native_write": "403067b2788bfc74754d93d7ad020d3330a5bc1ddba76fba13b795a878b98f2b",
+        "output": "Hello, Ada. with exactly one newline"
+      },
+      "interpretation": "Shipped update recipe and compatible source identity are retained in UPDATE-CUSTODY; the host read the new source-routes marker and unchanged complete skill body. All installed files and both configs are preimage-identical after the host task.",
+      "outcome": "supported",
+      "predicate": "Actual host acquires the current updated package and completes one governed effect"
+    },
+    {
+      "case": "Q12.remove",
+      "evidence": "Await Root close review; then distinct selected post-close phase installs other selected tenant, freezes both, and runs target shipped scoped removal.",
+      "outcome": "not yet performed",
+      "predicate": "Remove target while actual other selected STDO tenant and configs remain intact"
+    }
+  ],
+  "schema": "stdo_skills.lifecycle-assessment/1",
+  "standing": "Bounded Writer assessment; actual removal and Root close review remain separate",
+  "transport": "Failed MCP approval requests retained; exact declared native CLI alternative completed the Writer effect."
+}
