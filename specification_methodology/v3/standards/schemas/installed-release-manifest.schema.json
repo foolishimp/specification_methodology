@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "urn:stdo:schema:installed-release-manifest:1",
   "title": "STDO Installed Release Manifest",
-  "description": "Deterministic identity and exact installed-member inventory for one immutable STDO RC cut.",
+  "description": "Deterministic identity and exact installed-member inventory for one immutable STDO RC or stable-v1 cut.",
   "type": "object",
   "required": [
     "kind",
@@ -50,7 +50,7 @@
         },
         "qualified_ref": {
           "type": "string",
-          "pattern": "^refs/tags/[a-z0-9][a-z0-9._-]*/v[^/]+-rc\\.[1-9][0-9]*$"
+          "pattern": "^refs/tags/[a-z0-9][a-z0-9._-]*/(?:v[^/]+-rc\\.[1-9][0-9]*|v(?:0|[1-9][0-9]*)\\.(?:0|[1-9][0-9]*)\\.(?:0|[1-9][0-9]*))$"
         },
         "project_subtree_root": {
           "type": "string",
@@ -59,6 +59,9 @@
         },
         "project_subtree_tree": {
           "$ref": "#/$defs/gitObjectId"
+        },
+        "profile": {
+          "const": "stable-v1"
         }
       },
       "dependentRequired": {
@@ -83,7 +86,45 @@
           "project_subtree_root"
         ]
       },
-      "additionalProperties": false
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "cut": {
+                "pattern": "^v(?:0|[1-9][0-9]*)\\.(?:0|[1-9][0-9]*)\\.(?:0|[1-9][0-9]*)$"
+              }
+            },
+            "required": [
+              "cut"
+            ]
+          },
+          "then": {
+            "required": [
+              "profile",
+              "project_release_namespace",
+              "qualified_ref",
+              "project_subtree_root",
+              "project_subtree_tree"
+            ],
+            "properties": {
+              "project_release_namespace": {
+                "const": "specification_methodology"
+              },
+              "qualified_ref": {
+                "pattern": "^refs/tags/specification_methodology/v(?:0|[1-9][0-9]*)\\.(?:0|[1-9][0-9]*)\\.(?:0|[1-9][0-9]*)$"
+              }
+            }
+          },
+          "else": {
+            "not": {
+              "required": [
+                "profile"
+              ]
+            }
+          }
+        }
+      ]
     },
     "standards": {
       "allOf": [
@@ -180,7 +221,14 @@
   "$defs": {
     "immutableCut": {
       "type": "string",
-      "pattern": "^v(?!.*-rc\\..*-rc\\.)[0-9A-Za-z][0-9A-Za-z._+-]*-rc\\.[1-9][0-9]*$"
+      "anyOf": [
+        {
+          "pattern": "^v(?!.*-rc\\..*-rc\\.)[0-9A-Za-z][0-9A-Za-z._+-]*-rc\\.[1-9][0-9]*$"
+        },
+        {
+          "pattern": "^v(?:0|[1-9][0-9]*)\\.(?:0|[1-9][0-9]*)\\.(?:0|[1-9][0-9]*)$"
+        }
+      ]
     },
     "gitObjectId": {
       "type": "string",

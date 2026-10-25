@@ -7,8 +7,8 @@ Purpose: The owning sections for the Executive and Reviewer frames, technical tr
 Binds:
 
 - This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5; section sha256=4598dccee4a65f206b604ea9a4c19db8aaff855a6b2fdc8e151dcc37f1439cb1 spanning to #formal-representation)
-- A reuse decision in this task acquires the change and the evidence-validity conditions that support applicability: the impact cover of the change, the dependencies of each retained result and its retention conditions ([../FOUNDATIONS.md#change-impact-and-evidence-reuse](../FOUNDATIONS.md#change-impact-and-evidence-reuse); member sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5; section sha256=e989bf4b8c0dd996e5545f18db94f8ba275d14485697c0b046429746ed3bfbc6)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e; section sha256=4598dccee4a65f206b604ea9a4c19db8aaff855a6b2fdc8e151dcc37f1439cb1 spanning to #formal-representation)
+- A reuse decision in this task acquires the change and the evidence-validity conditions that support applicability: the impact cover of the change, the dependencies of each retained result and its retention conditions ([../FOUNDATIONS.md#change-impact-and-evidence-reuse](../FOUNDATIONS.md#change-impact-and-evidence-reuse); member sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e; section sha256=e989bf4b8c0dd996e5545f18db94f8ba275d14485697c0b046429746ed3bfbc6)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 a link to the owning section, the digest of its member and the digest of that
@@ -55,9 +55,9 @@ Routes, in order:
 19. [EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification](../EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification)
 20. [EXECUTIVE_BASELINE.md#foundation-to-law](../EXECUTIVE_BASELINE.md#foundation-to-law)
 
-Size of this frame: 116131 bytes.
+Size of this frame: 116673 bytes.
 
-Source: EXECUTIVE_BASELINE.md#executive sha256=fcef434630e270d216f494de97ee727ad46690db89a4b73edac4b88ff921c62e
+Source: EXECUTIVE_BASELINE.md#executive sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a
 
 ### Executive
 
@@ -75,7 +75,7 @@ universal semantic owner, controller, manager service or runtime executive
 observer (P6, RF-016).
 
 
-Source: EXECUTIVE_BASELINE.md#reviewer sha256=fcef434630e270d216f494de97ee727ad46690db89a4b73edac4b88ff921c62e
+Source: EXECUTIVE_BASELINE.md#reviewer sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a
 
 ### Reviewer
 
@@ -88,7 +88,7 @@ technical triage when a finding exists. It does not implement the repair,
 assign priority, apply disposition or activate the next frame (P6).
 
 
-Source: EXECUTIVE_BASELINE.md#technical-triage-severity-priority-and-boundary-effect sha256=fcef434630e270d216f494de97ee727ad46690db89a4b73edac4b88ff921c62e
+Source: EXECUTIVE_BASELINE.md#technical-triage-severity-priority-and-boundary-effect sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a
 
 ### Technical triage, severity, priority and boundary effect
 
@@ -151,7 +151,7 @@ constrains its consumption is EVALUATION §4 (Result and triage
 projection).
 
 
-Source: EXECUTIVE_BASELINE.md#work-result sha256=fcef434630e270d216f494de97ee727ad46690db89a4b73edac4b88ff921c62e
+Source: EXECUTIVE_BASELINE.md#work-result sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a
 
 ### Work result
 
@@ -211,7 +211,7 @@ revises only the affected results, preserving originals and supported
 surviving claims (ACTIVATION §7; P4b).
 
 
-Source: EXECUTIVE_BASELINE.md#6-executive-attention-evaluation-and-action sha256=fcef434630e270d216f494de97ee727ad46690db89a4b73edac4b88ff921c62e
+Source: EXECUTIVE_BASELINE.md#6-executive-attention-evaluation-and-action sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a
 
 ## 6. Executive attention, evaluation and action
 
@@ -386,6 +386,14 @@ P6).
 
 ### Product-chain basis
 
+Capability composition, including recursive and shared constituents, applies
+[PRODUCT_DEFINITION §9](../PRODUCT_DEFINITION.md#product-composition-contract).
+Select the outcome-owning frame and the actual dependency-ready work; retain
+path-specific authority and material far-side reliance. A cycle in Product
+relations is not itself a work deadlock, and naming a lead supplies no missing
+current prerequisite. An enclosing Product is not required for a constituent's
+scoped standalone entry when its declared dependencies suffice (P3, P6).
+
 A governed outcome may concern one Product or an explicit directed chain of
 Products. Its basis records the distinct role of every mutable Source
 Project, current Product Definition, exact candidate checkpoint, Release
@@ -413,7 +421,7 @@ Cut or exact Install stays immutable under its own lifecycle law and imposes
 no immutability on the Source Project constructing a successor (P3, P4b).
 
 
-Source: EXECUTIVE_BASELINE.md#the-executive-configuration sha256=fcef434630e270d216f494de97ee727ad46690db89a4b73edac4b88ff921c62e
+Source: EXECUTIVE_BASELINE.md#the-executive-configuration sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a
 
 ### The executive configuration
 
@@ -496,7 +504,7 @@ allocation only where it fits, and whether its prohibitions and its
 reporting of blockers hold wherever it is used.
 
 
-Source: EXECUTIVE_BASELINE.md#12-complete-engagement-transition sha256=fcef434630e270d216f494de97ee727ad46690db89a4b73edac4b88ff921c62e
+Source: EXECUTIVE_BASELINE.md#12-complete-engagement-transition sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a
 
 ## 12. Complete engagement transition
 
@@ -697,7 +705,7 @@ and of the Executive's exclusions (§8):
 | an unsupported or materially incomplete technical assessment | a capable evaluation is reactivated, or `indeterminate` is kept; Reviewer evidence is not rewritten |
 
 
-Source: EXECUTIVE_BASELINE.md#17-actor-binding-and-independence sha256=fcef434630e270d216f494de97ee727ad46690db89a4b73edac4b88ff921c62e
+Source: EXECUTIVE_BASELINE.md#17-actor-binding-and-independence sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a
 
 ## 17. Actor binding and independence
 
@@ -1088,7 +1096,7 @@ FOUNDATIONS §4 Conjunction of results, Survival; REFERENCE_FRAME §8,
 operational full coverage item 6).
 
 
-Source: FOUNDATIONS.md#results sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5 rows=7/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
+Source: FOUNDATIONS.md#results sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e rows=7/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -1262,7 +1270,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5
+Source: FOUNDATIONS.md#conjunction-of-results sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e
 
 ### Conjunction of results
 
@@ -1479,7 +1487,7 @@ last two rows; its §5 maps the method discriminators to cases and
 logical-review checks.
 
 
-Source: EXECUTIVE_BASELINE.md#foundation-to-law sha256=fcef434630e270d216f494de97ee727ad46690db89a4b73edac4b88ff921c62e rows=10/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
+Source: EXECUTIVE_BASELINE.md#foundation-to-law sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a rows=10/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
 
 ### Foundation to law
 

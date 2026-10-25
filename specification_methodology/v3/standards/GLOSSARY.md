@@ -129,6 +129,9 @@ Context declared by
 | Indexed term | Bounded-context identity | Owning concept clause | Relation clause |
 |---|---|---|---|
 | `STDO Product Definition Overlay` | `urn:stdo:bounded-context:product-definition-routing` | [`PRODUCT_DEFINITION.md#1-overlay-and-layout-independence`](PRODUCT_DEFINITION.md#1-overlay-and-layout-independence) | none |
+| `Product composition` | `urn:stdo:bounded-context:product-definition-routing` | [`PRODUCT_DEFINITION.md#product-composition-contract`](PRODUCT_DEFINITION.md#product-composition-contract) | none |
+| `Leaf Product`, `Composite Product` | `urn:stdo:bounded-context:product-definition-routing` | [`PRODUCT_DEFINITION.md#pc-01--recursive-product-boundaries`](PRODUCT_DEFINITION.md#pc-01--recursive-product-boundaries) | none |
+| `Standalone Product entry` | `urn:stdo:bounded-context:product-definition-routing` | [`PRODUCT_DEFINITION.md#pc-02--independent-entry-and-the-integrated-outcome`](PRODUCT_DEFINITION.md#pc-02--independent-entry-and-the-integrated-outcome) | none |
 | `Definition Root` | `urn:stdo:bounded-context:product-definition-routing` | [`PRODUCT_DEFINITION.md#1-overlay-and-layout-independence`](PRODUCT_DEFINITION.md#1-overlay-and-layout-independence) | none |
 | `Definition Label` | `urn:stdo:bounded-context:product-definition-routing` | [`PRODUCT_DEFINITION.md#1-overlay-and-layout-independence`](PRODUCT_DEFINITION.md#1-overlay-and-layout-independence) | none |
 | `Product-Definition Identity` | `urn:stdo:bounded-context:product-definition-routing` | [`PRODUCT_DEFINITION.md#1-overlay-and-layout-independence`](PRODUCT_DEFINITION.md#1-overlay-and-layout-independence) | none |

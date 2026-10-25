@@ -209,7 +209,7 @@ several owning documents (P2).
 `constitution.stdo.basis` locates the complete selected STDO constitutional
 set; `constitution.additional_authorities` locates every additional
 constitutional set or source. The STDO basis identifies one complete
-immutable RC cut and its exact installed-release manifest, never a
+immutable release cut and its exact installed-release manifest, never a
 hand-selected subset. Each `constitution.entrypoints[]` member names the
 basis against which its URI resolves. Entry points are derived navigation
 and can neither narrow nor replace a complete selected constitution (P3,
@@ -231,7 +231,7 @@ is the pair (P3):
 (immutable stdo://releases/<cut>/ URI, installed-manifest SHA-256)
 ```
 
-The URI identifies one immutable annotated RC cut. The digest identifies
+The URI identifies one immutable annotated release cut. The digest identifies
 the deterministic installed-release manifest, which binds the cut's tag
 object, commit, repository tree, standards subtree, exact standards
 inventory, member bytes and admitted auxiliary payloads. The manifest shape
@@ -262,8 +262,8 @@ P3):
 - resolves logical `stdo://releases/...` URIs to verified installed bytes;
 - inventories and verifies complete installed distributions;
 - synchronises the exact basis already selected by a Product Definition;
-- emits an exact digest-bound adoption plan from a mutable version-line
-  selector and performs adoption only when that plan is explicitly
+- emits an exact digest-bound adoption plan from a release-profile discovery
+  route and performs adoption only when that plan is explicitly
   accepted;
 - manages the stable marker-bounded bootstrap in declared agent files; and
 - applies those operations to an explicitly discovered fleet of Product
@@ -283,19 +283,21 @@ derived from the manifest's exact file paths, and never follows an
 unmanifested alias (P5, P3).
 
 `constitution.stdo.source.repository` identifies the transport source.
-`constitution.stdo.selector` is a mutable `stdo://channels/<version>`
-discovery selector whose alias semantics are owned by the release law (the
-[RELEASE](RELEASE.md) member). Neither is operative authority.
+`constitution.stdo.selector` is a `stdo://channels/<version>` discovery
+route whose profile semantics are owned by [RELEASE §4](RELEASE.md#4-selector-and-consumer-adoption).
+An RC line resolves its mutable selector; a stable line resolves its exact
+immutable cut without a second selector. Neither discovery nor the transport
+source is operative authority.
 `constitution.stdo.basis.uri` and `constitution.stdo.basis.manifest_sha256`
 are the sole authored STDO selection for that Product Definition (P6, P3).
 
 The manager observes these command boundaries (P6, P5):
 
-- `install` admits one explicitly named immutable RC cut without changing
+- `install` admits one explicitly named immutable release cut without changing
   any Product Definition;
 - `sync` installs and verifies only the exact basis already selected by
   the Product Definition and never consults its mutable selector;
-- `adopt --dry-run` resolves the annotated selector and immutable RC, and
+- `adopt --dry-run` resolves the selected release profile and immutable cut, and
   presents the target cut, tag object, commit, tree, manifest digest,
   current Product-Definition byte digest and a deterministic
   adoption-plan digest, without mutation;
@@ -706,7 +708,10 @@ Product-composition edge names its source and target roles, governing
 authority and contracts, lifecycle, evidence boundary, refusal and
 invalidation conditions. Common actors, repositories, files,
 implementations, outputs or tool access create no composition or identity
-relation (P3, P6).
+relation (P3, P6). The recursive capability, authority and context bindings
+of [§9](#9-recursive-discovery-and-explicit-composition) apply equally to
+peer Products and enclosing/constituent outcomes; the Product-role map
+retains those separate uses rather than flattening their grants.
 
 An accepted Project Reference-Frame Basis may be expressed entirely as
 source-linked prose. The starter at
@@ -834,6 +839,159 @@ constitutional sufficiency, semantic-resolution and cross-context-relation
 completeness, and authority-congruence checks. The structural subset and
 the semantic subset of these checks are distinct claims (EVALUATION §2;
 P1, P6).
+
+### Product composition contract
+
+The following clauses apply the shared authority, identity, context,
+preservation and change laws to Product composition. They define no second
+admission or result algebra. A Product may consume, coordinate or assess
+another Product through its declared relation; these roles are neither a closed
+nor disjoint kind taxonomy, and none confers authority (P6, P3).
+
+[The contract template](templates/PRODUCT_COMPOSITION_CONTRACT_TEMPLATE.md)
+projects these coordinates; [the recursive example](examples/PRODUCT_COMPOSITION.md)
+works them through a shared leaf and an independently enterable composite.
+[CONFORMANCE](CONFORMANCE.md#product-composition-discriminators) names their
+positive and adverse discriminators. These artifacts apply this owner (P1, P6).
+
+### PC-01 — Recursive Product boundaries
+
+A Product identifies one coherent WHAT and its owning authority. Alternative
+realizations of that WHAT are build tenants. A decomposition into Products names
+which distinct outcomes and authorities each constituent owns, and which outer
+outcome the composition owns.
+
+Under the identity and ownership laws (P3, P6), within a declared decomposition scope, a leaf has no further constituent Product
+boundary exposed by that decomposition. It may contain modules and declared
+external dependencies. A composite relates two or more constituent capabilities
+or an outer capability to its constituent capability; its own capability may in
+turn be consumed as a constituent. The same definition, contract and authority
+laws apply at every depth. Shared constituents keep one identity and their
+separately bound uses; a hierarchy view may show several references to one leaf.
+
+Decomposition, capability/data dependency, inspection permission, authority and
+work prerequisites are distinct relations. A directory tree establishes none of
+them. A named composition view states its root, participating identities,
+selected boundaries and relation kinds rather than treating all reachable edges
+as one hierarchy.
+
+### PC-02 — Independent entry and the integrated outcome
+
+A Product offered as a standalone constituent must be enterable through its own
+Product Definition and a Product-authorized applicable frame basis, with the
+dependency closure and capabilities its contract declares. Entry must not require
+an enclosing composition's activation unless that enclosing capability is itself
+an explicit prerequisite. Such a prerequisite is disclosed as a limit on the
+standalone claim. Shared or externally located frame documents are permitted
+where adoption, scope and availability are established; file ownership alone is
+not the deciding test.
+
+Standalone does not imply dependency-free, separately deployable or able to
+supply every host itself. The claim names which construction, evaluation or use
+can be performed independently and its required inputs. The composition owner
+separately establishes interface compatibility, material joins and its complete
+outcome. Successful constituent checks do not establish that outer predicate.
+
+### PC-03 — The edge's contract and authority record
+
+For each directed relation, the `relation` authority and referenced `contracts`
+state, directly or by exact reference:
+
+1. Source and target Product identities and roles; the consumed capability,
+   outcome, purpose, selected basis and currentness policy.
+2. The existing owners and grants for each material operation: acquisition,
+   disclosure, use, execution, mutation, assessment and disposition. A kind or
+   role label records no grant by itself.
+3. Admissible inputs and exports; material assumptions, effects, failures,
+   obligations and evidence; restrictions on implementation material and derived
+   information where applicable.
+4. The acting principals or binding rule, task/phase scope, permitted delegation,
+   return consumer, stop/refusal conditions and revocation/invalidation route.
+
+These coordinates may be supplied by source-linked prose. The relation locates
+and constrains lawfully granted authority; it cannot manufacture the target's
+permission or the source's admission. Missing material authority or an unresolved
+conflict withholds the dependent action. The execution-scoped activation remains
+the place where a particular actor, input, effect and return are bound.
+
+### PC-04 — Recursive authority and information eligibility
+
+A permitted A → B use does not entail A's access to B's dependencies. Neither
+A → B plus B → C nor two routes to a shared leaf imply a union of their grants.
+Each onward acquisition, disclosure or delegated effect needs authority for that
+actor, purpose and path, including any permitted onward use of returned material.
+Existing delegation may authorize a chain explicitly; its scope cannot expand
+silently at a recursive step.
+
+A provider may encapsulate internal dependencies behind an adequate contract.
+Consumers need not flatten every implementation dependency into a direct edge.
+Where an outer claim materially relies on a far-side contract, assumption,
+evidence item or acquisition, that reliance and its applicable authority must be
+preserved through the boundary. Unknown impact is not evidence of encapsulation.
+
+Durable Product consumption and bounded authorized inspection are different
+relations. A Reviewer or diagnostic Worker may inspect a larger causal cone under
+an explicit access grant without thereby adopting those internals as a runtime
+dependency or gaining a write grant. If findings become a continuing construction
+constraint or dependency, their producer, applicability and governing relation
+must be retained.
+
+### PC-05 — Context construction and clean-room conditions
+
+An actor's selected context must satisfy both permission and adequacy for its
+engagement. Permission covers the source information and permitted derivations,
+not only paths or filenames. The boundary identifies eligible source classes,
+exports and tool outputs, material provenance, intended use, later acquisitions
+and the effect of prior exposure. An allowed file location or a fresh summary
+does not sanitize prohibited information.
+
+A target owner may authorize an export, but clean-room eligibility additionally
+requires that the engagement's information policy admits that export and its
+provenance. The actual delivered/acquired material must be recorded to the extent
+required by the claim. An uncertain or prohibited exposure follows the declared
+hold/re-entry rule; it cannot be repaired by deleting its receipt or relabeling
+the same actor fresh. Prior actor knowledge and external acquisition channels are
+part of the declared limits.
+
+Adequacy retains the distinctions required for the task's decisions and
+continuations, including unresolved obligations, result standing, currentness and
+authority. If the permitted material is insufficient, acquire an authorized
+extension, narrow the task with the owner, use a suitable actor or return the
+unresolved outcome. Permission is not evidence of sufficiency, and a budget is
+not permission to omit a deciding condition. This applies [FOUNDATIONS Observation sufficiency](FOUNDATIONS.md#assurance-relations)
+and its scoped preservation law; it supplies no general optimal context selector (P1, P2, P6).
+
+### PC-06 — Readiness, cycles and replacement
+
+Work selects a dependency-ready frontier at the required subjects and revisions.
+A cycle in declared Product relationships need not be a cycle in the selected
+work. A cycle of current prerequisite claims requires an executable resolution:
+for example an admitted prior revision, explicit seed, staged contract or bounded
+iteration with its continuation/stop conditions. Naming a lead alone does not
+supply a missing prerequisite or establish convergence.
+
+Replacing a constituent or refining it into further Products preserves the
+consumer's material contract: meaning, preconditions, effects, failures,
+authority, lifecycle, evidence and subsequent obligations. A semantic change
+requires an authorized successor relation and affected reassessment. The [ACTIVATION refinement contract](ACTIVATION.md#refinement) governs this
+preservation. Matching signatures, labels or a sample output is insufficient (P4a, P6). New capabilities may be
+added without silently widening existing consumers' duties or grants.
+
+### PC-07 — Change, evidence and reliance
+
+Each cross-boundary use binds the actual selected sources and material execution
+basis, including uncommitted bytes where relevant. A moving selection identifies
+how advancement is detected and which reliance must be reassessed. Git is one
+possible carrier, not a mandatory identity system.
+
+Changes and new counterexamples propagate through material assertion, execution
+and evidence-use dependencies under [FOUNDATIONS Change impact and evidence reuse](FOUNDATIONS.md#change-impact-and-evidence-reuse). Historical
+evidence remains about its original subject. Reuse on a changed subject needs an
+established applicability or preservation relation; rereading alone does not
+establish it. A new release does not invalidate a still-selected older release,
+and a changed hash alone establishes neither semantic incompatibility nor
+continued validity. Unknown impact holds the dependent assurance or widens
+assessment; it does not require unrelated work to restart.
 
 ## 10. Semantic-resolution conformance cases
 
@@ -1017,8 +1175,8 @@ definition; that is the usual starting point, not the only lawful source
 
 The bootstrap sequence is (P3, P6, P2):
 
-1. Install the STDO toolchain manager once, resolve one version-line
-   selector, and explicitly select one immutable RC cut.
+1. Install the STDO toolchain manager once, resolve the applicable release-profile
+   discovery route (§4), and explicitly select one immutable release cut.
 2. Install that complete cut in the shared release store and retain its
    deterministic installed-manifest digest.
 3. Copy `PRODUCT_DEFINITION_TEMPLATE.json` from that exact cut to the
@@ -1050,11 +1208,15 @@ The bootstrap sequence is (P3, P6, P2):
     optional sprint root.
 13. Bind every known product-composition edge explicitly, including its
     target definition identity, relation authority and non-empty contract
-    set (§9).
+    set (§9). Bind the standalone/composed outcome, material recursive
+    reliance and each actor's information boundary under PC-01–PC-07;
+    separate authorized inspection from durable consumption.
 14. Validate the JSON shape, assert URI and URI-reference syntax,
     synchronise and verify the exact installed basis, then resolve every
     URI and perform the cross-definition identity, composition,
-    constitutional-sufficiency and authority-congruence checks.
+    constitutional-sufficiency and authority-congruence checks. Mechanical
+    resolution alone establishes neither the grants nor context adequacy
+    of an admitted activation; unresolved material conditions remain open.
 
 Once a bound requirement set is the live constitutional surface, no rival
 monolithic requirements document should remain co-equal authority with it. This

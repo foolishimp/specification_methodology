@@ -7,7 +7,7 @@ Purpose: The owning sections for the foundation-to-law table format and family i
 Binds:
 
 - This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5; section sha256=4598dccee4a65f206b604ea9a4c19db8aaff855a6b2fdc8e151dcc37f1439cb1 spanning to #formal-representation)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e; section sha256=4598dccee4a65f206b604ea9a4c19db8aaff855a6b2fdc8e151dcc37f1439cb1 spanning to #formal-representation)
 - As the reconstruction task, its return distinguishes semantic conservation, demonstrated reduction and mere relocation ([../EVALUATION.md#return-of-a-reconstruction](../EVALUATION.md#return-of-a-reconstruction); member sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff; section sha256=562980b12fdfe47dc66ec7f5eb13f27b4ea24730184ae7e0aba51102bdc74346)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
@@ -46,9 +46,9 @@ Routes, in order:
 10. [EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification](../EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification)
 11. [RELEASE.md#foundation-to-law-release-and-successor-conservation](../RELEASE.md#foundation-to-law-release-and-successor-conservation)
 
-Size of this frame: 103133 bytes.
+Size of this frame: 105866 bytes.
 
-Source: FOUNDATIONS.md#authority-kinds sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5
+Source: FOUNDATIONS.md#authority-kinds sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e
 
 ### Authority kinds
 
@@ -115,7 +115,7 @@ so one list keeps the answer the same in every member, and a capability,
 a label or a passing check can never be read as a permission (P6).
 
 
-Source: FOUNDATIONS.md#imports-between-members sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5
+Source: FOUNDATIONS.md#imports-between-members sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e
 
 ### Imports between members
 
@@ -172,7 +172,7 @@ members cannot answer one question two ways, and using a concept grants
 no authority over it (P1, P6).
 
 
-Source: FOUNDATIONS.md#foundation-to-law sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5
+Source: FOUNDATIONS.md#foundation-to-law sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e
 
 ### Foundation to law
 
@@ -315,7 +315,7 @@ contributions it helps account for, so a contribution that no row names
 is visible as unaccounted (P2).
 
 
-Source: FOUNDATIONS.md#results sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5 rows=1/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
+Source: FOUNDATIONS.md#results sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e rows=1/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -627,11 +627,11 @@ assessor and decision owner; [EXECUTIVE_BASELINE](../EXECUTIVE_BASELINE.md)
 binds its Reviewer and Executive instance (P6).
 
 
-Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=1ec805a4acb60f7ce0d061cf4ba6656690500e27ae6756866eaafa34aad071e0
+Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=b5aedcbfc68c6a168bc4c220828146f94b181a3c0fc3925405259890f6fe6886
 
 ## 9. Successor baseline conservation (STDO-UP-015)
 
-A successor identifies the exact predecessor immutable RC whose semantic
+A successor identifies the exact predecessor immutable cut whose semantic
 claims it evolves. That origin remains immutable for the candidate. Every
 predecessor claim capable of affecting the successor receives one semantic
 disposition (P4b, P3, P6):
@@ -745,7 +745,7 @@ and remaining obligations. This relation settles no general version-line
 policy and waives no acceptance gate.
 
 
-Source: CONFORMANCE.md#5-discriminator-coverage sha256=907be152c8bed1c968a6a0faadd6a87812df2e25db080fb46f5c14c12adef035
+Source: CONFORMANCE.md#5-discriminator-coverage sha256=d49e75f64dbdc4ca787062a9044da9d74e16fa0ae7b9321c29d3c1dd4a41ee03
 
 ## 5. Discriminator coverage
 
@@ -902,6 +902,26 @@ current subjects and evidence independently. A mapped case never becomes
 a pass by its presence, and a mapping does not exempt a material owner or
 consumer from review (P6, P2).
 
+
+### Product composition discriminators
+
+These cases apply [PRODUCT_DEFINITION §9](../PRODUCT_DEFINITION.md#product-composition-contract)
+and the [worked recursive example](../examples/PRODUCT_COMPOSITION.md). Their
+presence establishes no execution or whole-method qualification (P6).
+
+| Case | Subject and mechanism | Required distinction |
+|---|---|---|
+| PC-C01 Resolution | A valid edge and isolated missing-target, wrong-identity, missing-anchor and missing-contract variants | Valid references resolve; each broken required reference or identity fails its mechanical check. This is not grant or semantic validation. |
+| PC-C02 Standalone recursion | Enter B with its declared C/D closure, without enclosing A; D is also shared by A | B's scoped local outcome remains enterable; shared identity preserves separate use/authority coordinates. |
+| PC-C03 Integrated outcome | B uses D1's AUD exponent 2 while A uses D2's exponent 3 | Local availability cannot satisfy the incompatible monetary join; the outer claim is withheld. |
+| PC-C04 Replacement | Cbad keeps the interface but rounds prices; Dplus preserves AUD and adds JPY | Reject Cbad; retain only justified AUD applicability for Dplus; new JPY obligations and grants are separately selected. |
+| PC-C05 Authority across depth | A→B and B→C, with no A access to C internals; two differently scoped paths to D | No transitive grant or union at D. Adequate encapsulated internals need no flattened direct edge. |
+| PC-C06 Derived exposure | Allowed notes/tool output contain a forbidden donor algorithm; an approved behavioral export has separately established policy eligibility | The summary remains prohibited; allow the export only under both lawful authority and the receiver's information policy. |
+| PC-C07 Exposure and host | Revocation follows delivery; mediated receipts coexist with an unrestricted shell route | Preserve prior exposure and hold the affected claim; deleting a file does not unexpose an actor, and partial logs do not prove isolation. |
+| PC-C08 Adequacy and change | Same candidate bytes, current join evidence versus unresolved changed basis; an unrelated leaf stays valid | Distinct continuations survive the context; reassess affected reliance while retaining justified evidence and original historical subjects. |
+| PC-C09 Cycles | B consumes immutable A0 fixtures versus B1/A1 waiting for each other's current acceptance | Explicit seeded work can proceed; a lead name alone cannot close an unexecutable prerequisite cycle. |
+| PC-C10 Inspection | Reviewer has a separately authorized broader causal-cone read | The review may inspect it without granting Worker exposure, cross-boundary mutation or automatic dependency adoption. |
+
 Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff rows=7/17 selected by the anchors this frame carries; the consumers paragraph of 17 items is omitted
 
 ### Foundation to law: claims, evidence, assessment and acceptance
@@ -969,7 +989,7 @@ last two rows; its §5 maps the method discriminators to cases and
 logical-review checks.
 
 
-Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=1ec805a4acb60f7ce0d061cf4ba6656690500e27ae6756866eaafa34aad071e0 rows=2/12 selected by the anchors this frame carries; the consumers paragraph of 12 items is omitted
+Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=b5aedcbfc68c6a168bc4c220828146f94b181a3c0fc3925405259890f6fe6886 rows=2/12 selected by the anchors this frame carries; the consumers paragraph of 12 items is omitted
 
 ### Foundation to law: release and successor conservation
 
