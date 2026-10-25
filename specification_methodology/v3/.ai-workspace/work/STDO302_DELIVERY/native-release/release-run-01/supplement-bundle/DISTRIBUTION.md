@@ -1,0 +1,1 @@
+Native source/LICENSE retains its native-source scope. The pinned a_c decoder, authored interpretation and packaging keep their source ownership; this bundle assigns them no new license. Distribution is selected by the Product owner; see the exact release record.

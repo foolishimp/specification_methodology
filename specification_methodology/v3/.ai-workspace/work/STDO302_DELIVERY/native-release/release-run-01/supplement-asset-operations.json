@@ -1,0 +1,97 @@
+{
+  "operations": [
+    {
+      "at_utc": "2026-10-25T16:40:09.945947+00:00",
+      "name": "supplement-build",
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/supplement.py",
+        "build",
+        "--repo",
+        "/Users/jim/src/apps/specification_methodology",
+        "--representation",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/representation",
+        "--selection",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/SOURCE_SELECTION.json",
+        "--selection-sha256",
+        "0b0e94fe5e81f0c6905065e5424c182dc2b3191f51659efb96d212b55dd1261e",
+        "--bundle",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/supplement-bundle",
+        "--archive",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/stdo-v3.0.2-composition-release-supplement.tar.gz"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "environment": {
+        "PYTHONPATH": "absent",
+        "PYTHONHOME": "absent",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "exit": 0,
+      "stdout_path": "supplement-build.stdout",
+      "stdout_sha256": "c94bef8eb455fadd18a74e834a477b3d3a0a24dc0384d4d5d50509319c1487f0",
+      "stderr_path": "supplement-build.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "at_utc": "2026-10-25T16:40:10.339163+00:00",
+      "name": "supplement-extracted-verify",
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/supplement-extracted/stdo-v3.0.2-supplement/supplement.py",
+        "verify",
+        "--bundle",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/supplement-extracted/stdo-v3.0.2-supplement"
+      ],
+      "cwd": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-portable-verify-isgugmk0",
+      "environment": {
+        "PYTHONPATH": "absent",
+        "PYTHONHOME": "absent",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "exit": 0,
+      "stdout_path": "supplement-extracted-verify.stdout",
+      "stdout_sha256": "aadbe9da0f9b5a51028b0ef723572bb666ec6d7fb1c6ae1e5e2b4f8c29d9f97e",
+      "stderr_path": "supplement-extracted-verify.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "at_utc": "2026-10-25T16:40:10.374726+00:00",
+      "name": "assets-build",
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/native_release.py",
+        "assets",
+        "--run",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01",
+        "--selection-sha256",
+        "0b0e94fe5e81f0c6905065e5424c182dc2b3191f51659efb96d212b55dd1261e",
+        "--file",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/stdo-v3.0.2-manifest.json",
+        "--file",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/manager/package-03/stdo_toolchain-0.1.6-py3-none-any.whl",
+        "--file",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/stdo-v3.0.2-composition-release-supplement.tar.gz"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "environment": {
+        "PYTHONPATH": "absent",
+        "PYTHONHOME": "absent",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "exit": 0,
+      "stdout_path": "assets-build.stdout",
+      "stdout_sha256": "d8f3a9fcb81e02ebcf23a7b86b7dde5eca73f70fce0885060c4b38a1b0d4d8b1",
+      "stderr_path": "assets-build.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "at_utc": "2026-10-25T16:52:35.899639+00:00",
+  "operations": [
+    {
+      "name": "release-300",
+      "endpoint": "repos/foolishimp/specification_methodology/releases/tags/specification_methodology%2Fv3.0.0-rc.1",
+      "exit": 0,
+      "stdout_sha256": "dfe8d9a0a2ad08881dd9bebe6f50a365ccfad5ee3fbabc7cc5d1730db3923675",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "release-301",
+      "endpoint": "repos/foolishimp/specification_methodology/releases/tags/specification_methodology%2Fv3.0.1-rc.1",
+      "exit": 0,
+      "stdout_sha256": "335ac70bac10814347f569f7acb48f311da055efd38769d82bb541083c207998",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "latest",
+      "endpoint": "repos/foolishimp/specification_methodology/releases/latest",
+      "exit": 0,
+      "stdout_sha256": "3d4e8a885e2317366e300f7d6bbb2be31c712d1185f90353d34efe5d9ffa5cbd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "release-302-absence",
+      "endpoint": "repos/foolishimp/specification_methodology/releases/tags/specification_methodology%2Fv3.0.2",
+      "exit": 1,
+      "stdout_sha256": "010563d2cfb8f1e87f700936ce59ee3a33364da46e3db41b0049227918ece74d",
+      "stderr_sha256": "d2c8985c89b29a842ac4946d13bdbc297709f44f20bb968faf9682664b211db6"
+    }
+  ],
+  "old300_preconditions": "exact original publication fields/body/assets/refs match",
+  "new302": "release API404, no existing release",
+  "latest_before": {
+    "id": 370105645,
+    "tag_name": "v2.4.0"
+  },
+  "release301_before": {
+    "id": 422770275,
+    "tag_name": "specification_methodology/v3.0.1-rc.1",
+    "name": "STDO 3.0.1 RC1",
+    "prerelease": false,
+    "draft": false
+  }
+}

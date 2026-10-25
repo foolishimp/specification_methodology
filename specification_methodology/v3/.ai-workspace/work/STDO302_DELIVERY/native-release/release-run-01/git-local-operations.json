@@ -1,0 +1,136 @@
+{
+  "operations": [
+    {
+      "at_utc": "2026-10-25T16:36:22.075098+00:00",
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/native_release.py",
+        "prepare",
+        "--repo",
+        "/Users/jim/src/apps/specification_methodology",
+        "--run",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01",
+        "--source-commit",
+        "44448b14ecc9c5636d0e7972c7a4f1a80a07c623",
+        "--source-path",
+        "specification_methodology/v3/build_tenants/common"
+      ],
+      "exit": 0,
+      "stdout": "{\"path\": \"/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/source.json\", \"sha256\": \"d335ae69c5aaa824acfafd2849d6b4b0dc5b12864bfc99fc29f6d077f04c788c\"}\n",
+      "stderr": ""
+    },
+    {
+      "at_utc": "2026-10-25T16:36:23.097038+00:00",
+      "argv": [
+        "git",
+        "-C",
+        "/Users/jim/src/apps/specification_methodology",
+        "read-tree",
+        "--empty"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "at_utc": "2026-10-25T16:36:23.109528+00:00",
+      "argv": [
+        "git",
+        "-C",
+        "/Users/jim/src/apps/specification_methodology",
+        "update-index",
+        "-z",
+        "--index-info"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "at_utc": "2026-10-25T16:36:23.121221+00:00",
+      "argv": [
+        "git",
+        "-C",
+        "/Users/jim/src/apps/specification_methodology",
+        "write-tree"
+      ],
+      "exit": 0,
+      "stdout": "c64345a9b2127df3cddc0e26f49bc9dac2a24bff\n",
+      "stderr": ""
+    },
+    {
+      "at_utc": "2026-10-25T16:36:23.135281+00:00",
+      "argv": [
+        "git",
+        "-C",
+        "/Users/jim/src/apps/specification_methodology",
+        "commit-tree",
+        "c64345a9b2127df3cddc0e26f49bc9dac2a24bff",
+        "-p",
+        "fe4941f56a52ed3697a2b516d8d68948b0ea65d9",
+        "-F",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/native-commit-message.txt"
+      ],
+      "exit": 0,
+      "stdout": "23ca9c0929d7be8570edafaf30542e3daeb8dc1f\n",
+      "stderr": ""
+    },
+    {
+      "at_utc": "2026-10-25T16:36:23.148210+00:00",
+      "argv": [
+        "git",
+        "-C",
+        "/Users/jim/src/apps/specification_methodology",
+        "tag",
+        "-a",
+        "specification_methodology/v3.0.2",
+        "23ca9c0929d7be8570edafaf30542e3daeb8dc1f",
+        "-F",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/tag-message.txt"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "at_utc": "2026-10-25T16:36:23.161895+00:00",
+      "argv": [
+        "git",
+        "-C",
+        "/Users/jim/src/apps/specification_methodology",
+        "update-ref",
+        "refs/heads/release/specification_methodology/3.0.2",
+        "23ca9c0929d7be8570edafaf30542e3daeb8dc1f",
+        "0000000000000000000000000000000000000000"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "at_utc": "2026-10-25T16:36:23.175191+00:00",
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/native_release.py",
+        "attest",
+        "--repo",
+        "/Users/jim/src/apps/specification_methodology",
+        "--run",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01",
+        "--source-sha256",
+        "d335ae69c5aaa824acfafd2849d6b4b0dc5b12864bfc99fc29f6d077f04c788c",
+        "--native-commit",
+        "23ca9c0929d7be8570edafaf30542e3daeb8dc1f"
+      ],
+      "exit": 0,
+      "stdout": "{\"path\": \"/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/native.json\", \"sha256\": \"71eb0f822598f4f861d3c94e8b864514477f84470272186f716e918f8222ee24\"}\n",
+      "stderr": ""
+    }
+  ]
+}

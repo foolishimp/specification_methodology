@@ -1,0 +1,82 @@
+{
+  "local_proof_sha256": "45c77f72db25cf1ab4aa75c652f50e23770402135f2d67fe4dcc6afe0a97ff9b",
+  "files_verified": 195,
+  "native_source_A": "44448b14ecc9c5636d0e7972c7a4f1a80a07c623",
+  "native_commit_C": "23ca9c0929d7be8570edafaf30542e3daeb8dc1f",
+  "native_tag_T": "d03b00a7fdf8972dc236b52eb09f3eccba7f62cb",
+  "native_manifest_M": "f7f3f824ee1ac3e048d1b1ea86ce3aae84866e2e9d5010fe5eda2e38e12f4477",
+  "closed_review_union_members": 86,
+  "native_payload_members": 86,
+  "native_modes_blobs_and_full_root_equal": true,
+  "installed_files_including_manifest": 87,
+  "schema_and_materialization": "passed",
+  "URI_checks": 4,
+  "operation_log_counts": {
+    "manager-local-operations.json": 6,
+    "local-install-operations.json": 7,
+    "supplement-asset-operations.json": 3
+  },
+  "asset_inventory_sha256": "bdcd9a2b64f64071cb1bd9cf480825b45cfce2c4777b66536145a801e936d758",
+  "assets_verified": 6,
+  "supplement_archive_sha256": "d402887043fde5c16e951eb7dcb8d9f44750c54b83df74bc68705338adf86139",
+  "supplement_members": 24,
+  "reviewed_representation_members_equal": 17,
+  "portable": {
+    "argv": [
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/manager-local/bin/python",
+      "-I",
+      "-S",
+      "-B",
+      "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-independent-portable-kkz3784n/bundle/supplement.py",
+      "verify",
+      "--bundle",
+      "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-independent-portable-kkz3784n/bundle"
+    ],
+    "cwd": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-independent-portable-kkz3784n/empty",
+    "environment": {
+      "PYTHONPATH": "/nonexistent-reviewer-poison",
+      "PYTHONHOME": "absent"
+    },
+    "exit": 0,
+    "result": {
+      "commands": [
+        {
+          "argv": [
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/manager-local/bin/python",
+            "-I",
+            "-B",
+            "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-independent-portable-kkz3784n/bundle/tools/ac_graph.py",
+            "decode",
+            "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-independent-portable-kkz3784n/bundle/CARRIER.json",
+            "--out",
+            "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-supplement-verify-yl6ck_y8/CARRIER.json.recovered.json"
+          ],
+          "exit": 0,
+          "stderr": "",
+          "stdout": "{\n  \"model\": {\n    \"id\": \"urn:stdo:3.0.2:composition-release:interpretation:1\",\n    \"profile\": \"a_c.graphify.model/1\",\n    \"sha256\": \"b3f97a2667c277c21417230421aca02c26b3a7b19baa598197e94f67c5439151\"\n  },\n  \"status\": \"decoded\"\n}\n"
+        },
+        {
+          "argv": [
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/manager-local/bin/python",
+            "-I",
+            "-B",
+            "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-independent-portable-kkz3784n/bundle/tools/ac_graph.py",
+            "decode",
+            "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-independent-portable-kkz3784n/bundle/GRAPHIFY_EXTRACTION.json",
+            "--out",
+            "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-supplement-verify-yl6ck_y8/GRAPHIFY_EXTRACTION.json.recovered.json"
+          ],
+          "exit": 0,
+          "stderr": "",
+          "stdout": "{\n  \"model\": {\n    \"id\": \"urn:stdo:3.0.2:composition-release:interpretation:1\",\n    \"profile\": \"a_c.graphify.model/1\",\n    \"sha256\": \"b3f97a2667c277c21417230421aca02c26b3a7b19baa598197e94f67c5439151\"\n  },\n  \"status\": \"decoded\"\n}\n"
+        }
+      ],
+      "files": 23,
+      "kind": "stdo302.supplement-verification/1",
+      "limits": "Source custody and carrier recovery; no independent semantic acceptance or whole-method coverage",
+      "recovery": "equal JSON values; raw serialization equality not claimed",
+      "selection_sha256": "0b0e94fe5e81f0c6905065e5424c182dc2b3191f51659efb96d212b55dd1261e"
+    }
+  },
+  "limits": "Local cut/install/asset readiness only; no remote publication or public reacquisition performed by this review."
+}

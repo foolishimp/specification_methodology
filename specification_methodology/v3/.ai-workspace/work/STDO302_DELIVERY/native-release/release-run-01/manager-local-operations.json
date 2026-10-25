@@ -1,0 +1,165 @@
+{
+  "wheel_sha256": "ef726f780220a4be93c8ce014e2838d140851ec0e3d47902ea2ddd36a26c3242",
+  "operations": [
+    {
+      "at_utc": "2026-10-25T16:37:35.599718+00:00",
+      "name": "venv-create",
+      "argv": [
+        "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a/runtime-venv/bin/python",
+        "-I",
+        "-B",
+        "-m",
+        "venv",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/manager-local"
+      ],
+      "environment": {
+        "PYTHONPATH": "absent",
+        "PYTHONHOME": "absent",
+        "TMPDIR": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/tmp",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PIP_DISABLE_PIP_VERSION_CHECK": "1"
+      },
+      "exit": 0,
+      "stdout_path": "venv-create.stdout",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_path": "venv-create.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "at_utc": "2026-10-25T16:37:36.721137+00:00",
+      "name": "wheel-install",
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/manager-local/bin/python",
+        "-I",
+        "-B",
+        "-m",
+        "pip",
+        "--disable-pip-version-check",
+        "install",
+        "--no-input",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/manager/package-03/stdo_toolchain-0.1.6-py3-none-any.whl"
+      ],
+      "environment": {
+        "PYTHONPATH": "absent",
+        "PYTHONHOME": "absent",
+        "TMPDIR": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/tmp",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PIP_DISABLE_PIP_VERSION_CHECK": "1"
+      },
+      "exit": 0,
+      "stdout_path": "wheel-install.stdout",
+      "stdout_sha256": "522a18a42100042cc3937c992ad780d5bd8dc9e355b8673eb72bd3970a4e67cd",
+      "stderr_path": "wheel-install.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "at_utc": "2026-10-25T16:37:36.766760+00:00",
+      "name": "manager-import",
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/manager-local/bin/python",
+        "-I",
+        "-B",
+        "-c",
+        "import sys,hashlib,json,importlib.metadata,stdo_toolchain;from pathlib import Path;p=Path(stdo_toolchain.__file__).resolve();print(json.dumps({'python':sys.version,'executable':sys.executable,'prefix':sys.prefix,'module':str(p),'module_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'distribution_version':importlib.metadata.version('stdo-toolchain')}))"
+      ],
+      "environment": {
+        "PYTHONPATH": "absent",
+        "PYTHONHOME": "absent",
+        "TMPDIR": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/tmp",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PIP_DISABLE_PIP_VERSION_CHECK": "1"
+      },
+      "exit": 0,
+      "stdout_path": "manager-import.stdout",
+      "stdout_sha256": "0c840d1edc5c2b95362b8f91591d3d5522ddc554319518f7b620c0bf896a015b",
+      "stderr_path": "manager-import.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "at_utc": "2026-10-25T16:37:36.882699+00:00",
+      "name": "manager-packages",
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/manager-local/bin/python",
+        "-I",
+        "-B",
+        "-m",
+        "pip",
+        "list",
+        "--format=json"
+      ],
+      "environment": {
+        "PYTHONPATH": "absent",
+        "PYTHONHOME": "absent",
+        "TMPDIR": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/tmp",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PIP_DISABLE_PIP_VERSION_CHECK": "1"
+      },
+      "exit": 0,
+      "stdout_path": "manager-packages.stdout",
+      "stdout_sha256": "b9adda7c4ba3cc616605e445fbe9d3440f4219e98efd17954008331ecb7d1bdb",
+      "stderr_path": "manager-packages.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "at_utc": "2026-10-25T16:37:38.277295+00:00",
+      "name": "manifest-local",
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/manager-local/bin/python",
+        "-I",
+        "-B",
+        "-m",
+        "stdo_toolchain.cli",
+        "manifest",
+        "v3.0.2",
+        "--repository",
+        "/Users/jim/src/apps/specification_methodology"
+      ],
+      "environment": {
+        "PYTHONPATH": "absent",
+        "PYTHONHOME": "absent",
+        "TMPDIR": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/tmp",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PIP_DISABLE_PIP_VERSION_CHECK": "1"
+      },
+      "exit": 0,
+      "stdout_path": "manifest-local.stdout",
+      "stdout_sha256": "85fca15c74bb5c8792778524c8fdbfad9c4244e6613aec8e17efbf899be26786",
+      "stderr_path": "manifest-local.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "at_utc": "2026-10-25T16:37:39.449737+00:00",
+      "name": "seal",
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/native_release.py",
+        "seal",
+        "--repo",
+        "/Users/jim/src/apps/specification_methodology",
+        "--run",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01",
+        "--source-sha256",
+        "d335ae69c5aaa824acfafd2849d6b4b0dc5b12864bfc99fc29f6d077f04c788c",
+        "--native-sha256",
+        "71eb0f822598f4f861d3c94e8b864514477f84470272186f716e918f8222ee24",
+        "--manifest-report",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/manifest-report.json"
+      ],
+      "environment": {
+        "PYTHONPATH": "absent",
+        "PYTHONHOME": "absent",
+        "TMPDIR": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/tmp",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PIP_DISABLE_PIP_VERSION_CHECK": "1"
+      },
+      "exit": 0,
+      "stdout_path": "seal.stdout",
+      "stdout_sha256": "15b5f717f4469d0e6bfa5cdb01eb8ecea5e80c54f58005fabc67cd9b089c4fc3",
+      "stderr_path": "seal.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}
