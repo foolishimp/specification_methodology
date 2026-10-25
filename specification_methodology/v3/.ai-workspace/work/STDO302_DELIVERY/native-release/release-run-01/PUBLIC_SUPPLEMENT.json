@@ -1,0 +1,64 @@
+{
+  "at_utc": "2026-10-25T17:02:59.587065+00:00",
+  "archive_path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/downloaded-assets/stdo-v3.0.2-composition-release-supplement.tar.gz",
+  "archive_sha256": "d402887043fde5c16e951eb7dcb8d9f44750c54b83df74bc68705338adf86139",
+  "archive_regular_members": 24,
+  "argv": [
+    "python3",
+    "-I",
+    "-S",
+    "-B",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/public-supplement-extracted/stdo-v3.0.2-supplement/supplement.py",
+    "verify",
+    "--bundle",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/public-supplement-extracted/stdo-v3.0.2-supplement"
+  ],
+  "cwd": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-public-portable-wlpshsrm",
+  "environment": {
+    "PYTHONPATH": "absent",
+    "PYTHONHOME": "absent",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "exit": 0,
+  "stdout_sha256": "0a2ac3ce3618fa78e7fa0d303b73c7dbc55b21643b6fe6b5cd6c1ef5310cbcf0",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "result": {
+    "commands": [
+      {
+        "argv": [
+          "/usr/local/bin/python3",
+          "-I",
+          "-B",
+          "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/public-supplement-extracted/stdo-v3.0.2-supplement/tools/ac_graph.py",
+          "decode",
+          "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/public-supplement-extracted/stdo-v3.0.2-supplement/CARRIER.json",
+          "--out",
+          "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-supplement-verify-o_coqxw3/CARRIER.json.recovered.json"
+        ],
+        "exit": 0,
+        "stderr": "",
+        "stdout": "{\n  \"model\": {\n    \"id\": \"urn:stdo:3.0.2:composition-release:interpretation:1\",\n    \"profile\": \"a_c.graphify.model/1\",\n    \"sha256\": \"b3f97a2667c277c21417230421aca02c26b3a7b19baa598197e94f67c5439151\"\n  },\n  \"status\": \"decoded\"\n}\n"
+      },
+      {
+        "argv": [
+          "/usr/local/bin/python3",
+          "-I",
+          "-B",
+          "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/public-supplement-extracted/stdo-v3.0.2-supplement/tools/ac_graph.py",
+          "decode",
+          "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/public-supplement-extracted/stdo-v3.0.2-supplement/GRAPHIFY_EXTRACTION.json",
+          "--out",
+          "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-supplement-verify-o_coqxw3/GRAPHIFY_EXTRACTION.json.recovered.json"
+        ],
+        "exit": 0,
+        "stderr": "",
+        "stdout": "{\n  \"model\": {\n    \"id\": \"urn:stdo:3.0.2:composition-release:interpretation:1\",\n    \"profile\": \"a_c.graphify.model/1\",\n    \"sha256\": \"b3f97a2667c277c21417230421aca02c26b3a7b19baa598197e94f67c5439151\"\n  },\n  \"status\": \"decoded\"\n}\n"
+      }
+    ],
+    "files": 23,
+    "kind": "stdo302.supplement-verification/1",
+    "limits": "Source custody and carrier recovery; no independent semantic acceptance or whole-method coverage",
+    "recovery": "equal JSON values; raw serialization equality not claimed",
+    "selection_sha256": "0b0e94fe5e81f0c6905065e5424c182dc2b3191f51659efb96d212b55dd1261e"
+  }
+}

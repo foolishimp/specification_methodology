@@ -1,0 +1,66 @@
+[
+  {
+    "at_utc": "2026-10-25T16:59:19.718760+00:00",
+    "name": "draft-list",
+    "argv": [
+      "gh",
+      "api",
+      "repos/foolishimp/specification_methodology/releases?per_page=100"
+    ],
+    "exit": 0,
+    "stdout_sha256": "12351e05df8bbd9a76377ba656181d3e6d4154ff05a1c9e370119392d9611b5a",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "at_utc": "2026-10-25T16:59:20.107484+00:00",
+    "name": "draft-by-id",
+    "argv": [
+      "gh",
+      "api",
+      "repos/foolishimp/specification_methodology/releases/423535606"
+    ],
+    "exit": 0,
+    "stdout_sha256": "2b92203514c87917432dcf3dba03734232ddb82b7287528b32c7f96b56d1c4dd",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "at_utc": "2026-10-25T16:59:20.826283+00:00",
+    "name": "publish-patch",
+    "argv": [
+      "gh",
+      "api",
+      "--method",
+      "PATCH",
+      "repos/foolishimp/specification_methodology/releases/423535606",
+      "--input",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/github-publication/publish-request.json"
+    ],
+    "exit": 0,
+    "stdout_sha256": "dcf0f2c03cabe7706ac8627bdaa71e82e6fca27dec396bb5ff5b18271a9f81a9",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "at_utc": "2026-10-25T16:59:21.291824+00:00",
+    "name": "release-final",
+    "argv": [
+      "gh",
+      "api",
+      "repos/foolishimp/specification_methodology/releases/tags/specification_methodology%2Fv3.0.2"
+    ],
+    "exit": 0,
+    "stdout_sha256": "dcf0f2c03cabe7706ac8627bdaa71e82e6fca27dec396bb5ff5b18271a9f81a9",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "at_utc": "2026-10-25T16:59:21.719784+00:00",
+    "name": "latest-final",
+    "argv": [
+      "gh",
+      "api",
+      "repos/foolishimp/specification_methodology/releases/latest"
+    ],
+    "exit": 0,
+    "stdout_sha256": "dcf0f2c03cabe7706ac8627bdaa71e82e6fca27dec396bb5ff5b18271a9f81a9",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

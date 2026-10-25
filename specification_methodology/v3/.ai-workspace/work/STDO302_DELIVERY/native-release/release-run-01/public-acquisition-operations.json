@@ -1,0 +1,159 @@
+{
+  "operations": [
+    {
+      "at_utc": "2026-10-25T17:00:59.719223+00:00",
+      "name": "download-public-assets",
+      "argv": [
+        "gh",
+        "release",
+        "download",
+        "specification_methodology/v3.0.2",
+        "--repo",
+        "foolishimp/specification_methodology",
+        "--dir",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/downloaded-assets"
+      ],
+      "environment": {
+        "PYTHONPATH": "absent",
+        "PYTHONHOME": "absent",
+        "TMPDIR": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/tmp",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PIP_DISABLE_PIP_VERSION_CHECK": "1"
+      },
+      "exit": 0,
+      "stdout_path": "download-public-assets.stdout",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_path": "download-public-assets.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "at_utc": "2026-10-25T17:00:59.756786+00:00",
+      "name": "check-downloaded-assets",
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/native_release.py",
+        "check-assets",
+        "--run",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01",
+        "--assets-sha256",
+        "bdcd9a2b64f64071cb1bd9cf480825b45cfce2c4777b66536145a801e936d758",
+        "--directory",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/downloaded-assets"
+      ],
+      "environment": {
+        "PYTHONPATH": "absent",
+        "PYTHONHOME": "absent",
+        "TMPDIR": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/tmp",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PIP_DISABLE_PIP_VERSION_CHECK": "1"
+      },
+      "exit": 0,
+      "stdout_path": "check-downloaded-assets.stdout",
+      "stdout_sha256": "3806f782268918c977d976c222cd7415f36e641ba911bf29287c09f50f9d162d",
+      "stderr_path": "check-downloaded-assets.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "at_utc": "2026-10-25T17:01:01.253419+00:00",
+      "name": "public-venv-create",
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/manager-local/bin/python",
+        "-I",
+        "-B",
+        "-m",
+        "venv",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/manager-public"
+      ],
+      "environment": {
+        "PYTHONPATH": "absent",
+        "PYTHONHOME": "absent",
+        "TMPDIR": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/tmp",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PIP_DISABLE_PIP_VERSION_CHECK": "1"
+      },
+      "exit": 0,
+      "stdout_path": "public-venv-create.stdout",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_path": "public-venv-create.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "at_utc": "2026-10-25T17:01:02.357807+00:00",
+      "name": "public-wheel-install",
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/manager-public/bin/python",
+        "-I",
+        "-B",
+        "-m",
+        "pip",
+        "--disable-pip-version-check",
+        "install",
+        "--no-input",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/downloaded-assets/stdo_toolchain-0.1.6-py3-none-any.whl"
+      ],
+      "environment": {
+        "PYTHONPATH": "absent",
+        "PYTHONHOME": "absent",
+        "TMPDIR": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/tmp",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PIP_DISABLE_PIP_VERSION_CHECK": "1"
+      },
+      "exit": 0,
+      "stdout_path": "public-wheel-install.stdout",
+      "stdout_sha256": "b675a9a36d0f25d36911e737ba909ff9dba606645fc37e441e75ea9d7c550145",
+      "stderr_path": "public-wheel-install.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "at_utc": "2026-10-25T17:01:02.405188+00:00",
+      "name": "public-manager-import",
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/manager-public/bin/python",
+        "-I",
+        "-B",
+        "-c",
+        "import sys,hashlib,json,importlib.metadata,stdo_toolchain;from pathlib import Path;p=Path(stdo_toolchain.__file__).resolve();print(json.dumps({'python':sys.version,'executable':sys.executable,'prefix':sys.prefix,'module':str(p),'module_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'distribution_version':importlib.metadata.version('stdo-toolchain')}))"
+      ],
+      "environment": {
+        "PYTHONPATH": "absent",
+        "PYTHONHOME": "absent",
+        "TMPDIR": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/tmp",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PIP_DISABLE_PIP_VERSION_CHECK": "1"
+      },
+      "exit": 0,
+      "stdout_path": "public-manager-import.stdout",
+      "stdout_sha256": "45ced2932ca2eaec858c75a3434c88325e04136d528f9a42a450e6e4c79ef8d8",
+      "stderr_path": "public-manager-import.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "at_utc": "2026-10-25T17:01:02.533342+00:00",
+      "name": "public-manager-packages",
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/manager-public/bin/python",
+        "-I",
+        "-B",
+        "-m",
+        "pip",
+        "list",
+        "--format=json"
+      ],
+      "environment": {
+        "PYTHONPATH": "absent",
+        "PYTHONHOME": "absent",
+        "TMPDIR": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/tmp",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PIP_DISABLE_PIP_VERSION_CHECK": "1"
+      },
+      "exit": 0,
+      "stdout_path": "public-manager-packages.stdout",
+      "stdout_sha256": "b9adda7c4ba3cc616605e445fbe9d3440f4219e98efd17954008331ecb7d1bdb",
+      "stderr_path": "public-manager-packages.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

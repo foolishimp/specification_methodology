@@ -1,0 +1,54 @@
+[
+  {
+    "at_utc": "2026-10-25T16:56:49.883851+00:00",
+    "name": "before",
+    "argv": [
+      "gh",
+      "api",
+      "repos/foolishimp/specification_methodology/releases/418547214"
+    ],
+    "exit": 0,
+    "stdout_sha256": "dfe8d9a0a2ad08881dd9bebe6f50a365ccfad5ee3fbabc7cc5d1730db3923675",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "at_utc": "2026-10-25T16:56:51.158897+00:00",
+    "name": "patch",
+    "argv": [
+      "gh",
+      "api",
+      "--method",
+      "PATCH",
+      "repos/foolishimp/specification_methodology/releases/418547214",
+      "--input",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/prior300-correction/request.json"
+    ],
+    "exit": 0,
+    "stdout_sha256": "25de22aa3c3d955fbcc1384d5ddeb119b60bdaba0ea911b166d8693ac5aa26a5",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "at_utc": "2026-10-25T16:56:51.632882+00:00",
+    "name": "after",
+    "argv": [
+      "gh",
+      "api",
+      "repos/foolishimp/specification_methodology/releases/418547214"
+    ],
+    "exit": 0,
+    "stdout_sha256": "25de22aa3c3d955fbcc1384d5ddeb119b60bdaba0ea911b166d8693ac5aa26a5",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "at_utc": "2026-10-25T16:56:52.541268+00:00",
+    "name": "release-301-after",
+    "argv": [
+      "gh",
+      "api",
+      "repos/foolishimp/specification_methodology/releases/tags/specification_methodology%2Fv3.0.1-rc.1"
+    ],
+    "exit": 0,
+    "stdout_sha256": "335ac70bac10814347f569f7acb48f311da055efd38769d82bb541083c207998",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

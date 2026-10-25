@@ -9,15 +9,14 @@ of the same product. Select a child Product before working on its source.
 
 ## STDO 3.0.2 release
 
-The owner has selected **STDO 3.0.2 as a normal standalone release**, without an
-RC suffix. Publication is pending the actual release receipt. Its selected public
-target is [STDO 3.0.2](https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology%2Fv3.0.2),
+**STDO 3.0.2 is published as a normal standalone release and GitHub Latest**,
+without an RC suffix: [download the release](https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology%2Fv3.0.2),
 immutable tag `specification_methodology/v3.0.2`. The
 [installation instructions](specification_methodology/v3/build_tenants/common/plugins/spec/references/GETTING_STARTED.md#new-project)
-acquire the exact distributed manager wheel and native manifest; their download
-commands become usable when the selected assets are published. The
-[publication selection](specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/PUBLICATION_SELECTION.md)
-also selects this release as GitHub Latest.
+acquire the distributed manager wheel and native manifest. All six assets were
+downloaded and verified, followed by a fresh isolated public installation and
+portable supplement verification. The [release record](specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/RELEASED.md)
+binds the exact identities, evidence and retained qualification limits.
 
 This standalone payload is the methodology and its `spec` plugin, with a separate
 bounded representation supplement. It does not select the older v2 matched cohort

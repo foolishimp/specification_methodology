@@ -1,0 +1,57 @@
+[
+  {
+    "at_utc": "2026-10-25T16:58:11.209607+00:00",
+    "name": "before-api",
+    "argv": [
+      "gh",
+      "api",
+      "repos/foolishimp/specification_methodology/releases/tags/specification_methodology%2Fv3.0.2"
+    ],
+    "exit": 1,
+    "stdout_sha256": "010563d2cfb8f1e87f700936ce59ee3a33364da46e3db41b0049227918ece74d",
+    "stderr_sha256": "d2c8985c89b29a842ac4946d13bdbc297709f44f20bb968faf9682664b211db6"
+  },
+  {
+    "at_utc": "2026-10-25T16:58:13.811220+00:00",
+    "name": "create-draft",
+    "argv": [
+      "gh",
+      "release",
+      "create",
+      "specification_methodology/v3.0.2",
+      "--repo",
+      "foolishimp/specification_methodology",
+      "--verify-tag",
+      "--target",
+      "23ca9c0929d7be8570edafaf30542e3daeb8dc1f",
+      "--title",
+      "STDO 3.0.2",
+      "--notes-file",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/GITHUB_RELEASE_NOTES.md",
+      "--draft",
+      "--prerelease=false",
+      "--latest=false",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/stdo-v3.0.2-composition-release-supplement.tar.gz",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/asset-checksums/stdo-v3.0.2-composition-release-supplement.tar.gz.sha256",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/stdo-v3.0.2-manifest.json",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/asset-checksums/stdo-v3.0.2-manifest.json.sha256",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/manager/package-03/stdo_toolchain-0.1.6-py3-none-any.whl",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/native-release/release-run-01/asset-checksums/stdo_toolchain-0.1.6-py3-none-any.whl.sha256"
+    ],
+    "exit": 0,
+    "stdout_sha256": "5e92f64aa3b55bafafa568a578bcdf1c43fe239012f52bced70b8149b3aac6e9",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "at_utc": "2026-10-25T16:58:14.202494+00:00",
+    "name": "draft-api",
+    "argv": [
+      "gh",
+      "api",
+      "repos/foolishimp/specification_methodology/releases/tags/specification_methodology%2Fv3.0.2"
+    ],
+    "exit": 1,
+    "stdout_sha256": "010563d2cfb8f1e87f700936ce59ee3a33364da46e3db41b0049227918ece74d",
+    "stderr_sha256": "d2c8985c89b29a842ac4946d13bdbc297709f44f20bb968faf9682664b211db6"
+  }
+]

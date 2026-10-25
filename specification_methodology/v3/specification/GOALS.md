@@ -4,15 +4,20 @@ This file states the current work wave of this source project: what is being wor
 
 ## Current Selection
 
-The owner selects **STDO 3.0.2**, without an RC suffix, as the next proper
-immutable standalone native release. The reviewed recursive composition
-increment at checkpoint `88305bef5dbd9d56db4668ef85611941f5e67705` is retained.
-The [3.0.2 delivery selection](../.ai-workspace/work/STDO302_DELIVERY/SELECTION.md)
-binds the stable release profile, exact native predecessor, manager distribution,
-package and bounded representation work. The old v2 matched cohort is unchanged.
-Skills remains on installed 3.0.1 and a_c construction on 2.5.1; publication
-alone does not adopt the successor for either Product. Independent source review,
-exact packaging and public acquisition checks precede the corresponding claims.
+**STDO 3.0.2 delivery is complete and published as a normal standalone release
+and GitHub Latest**, without an RC suffix. The owner's later release selection
+and the Executive's closed independent review, packaging and public-acquisition
+readback are recorded in [T-005](../.ai-workspace/tickets/active/T-005-product-composition-implementation.md#later-owner-release-selection-and-closure).
+The [release record](../.ai-workspace/work/STDO302_DELIVERY/RELEASED.md) binds
+native commit `23ca9c0929d7be8570edafaf30542e3daeb8dc1f`, the immutable tag,
+manifest, six verified assets, fresh public installation and 32-record supplement.
+
+Whole-method representation and practical qualification, host-use obligations
+including Claude Q05, and efficiency evidence retain their recorded open standing.
+The bounded supplement does not close them. The old v2 matched cohort is unchanged.
+Skills remains on installed 3.0.1 and a_c construction on 2.5.1; no global manager
+or consumer basis was changed. Release publication does not adopt a successor
+for either Product.
 
 ### Earlier 3.0.1 delivery and retained obligations
 
