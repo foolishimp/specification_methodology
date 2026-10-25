@@ -58,7 +58,12 @@ class CompositionTests(unittest.TestCase):
         if resolver_root is not None:
             command += ["--resolver-root", str(resolver_root)]
         environment = dict(os.environ)
-        environment["PYTHONPATH"] = str(Path(__file__).resolve().parents[1] / "src")
+        if environment.get("STDO_TEST_INSTALLED_MANAGER") == "1":
+            command.insert(1, "-I")
+            environment.pop("PYTHONPATH", None)
+            environment.pop("PYTHONHOME", None)
+        else:
+            environment["PYTHONPATH"] = str(Path(__file__).resolve().parents[1] / "src")
         result = subprocess.run(command, capture_output=True, text=True, env=environment, timeout=30)
         self.assertEqual(result.stderr, "", result.stderr)
         return json.loads(result.stdout), result.returncode
@@ -197,6 +202,48 @@ class CompositionTests(unittest.TestCase):
                 self.assertFalse(edge["valid"])
                 self.assertEqual(edge["references"]["relation"]["status"], "failed")
                 self.assertEqual(edge["references"]["relation"]["code"], "missing_fragment")
+
+    def test_nested_fences_and_unfinished_comments_cannot_supply_relation(self) -> None:
+        cases = {
+            "direct-list": '- ```markdown\n  # Absent\n  <a id="absent"></a>\n  ```\n',
+            "ordered-list": '2. ~~~markdown\n   <a id="absent"></a>\n   ~~~\n',
+            "nested-lists": '- - ```\n    <a id="absent"></a>\n    ```\n',
+            "quote-list": '> - ~~~\n>   <a id="absent"></a>\n>   ~~~\n',
+            "list-quote": '- > ~~~\n  > <a id="absent"></a>\n  > ~~~\n',
+            "unfinished-comment": '<!-- unfinished\n# Absent\n<a id="absent"></a>\n',
+            "unfinished-comment-paragraph": '<!-- unfinished\n\n# Absent\n<a id="absent"></a>\n',
+            "ordered-paragraph-heading": 'paragraph\n2. # Absent\n',
+        }
+        doc = json.loads(self.a.read_text())
+        doc["composition"][0]["relation"] = "contract.md#absent"
+        self.write(self.a, doc)
+        for name, text in cases.items():
+            with self.subTest(case=name):
+                (self.a.parent / "contract.md").write_text(text)
+                report = self.assert_failure("missing_fragment")
+                relation = self.source(report)["composition"][0]["references"]["relation"]
+                self.assertEqual(relation["code"], "missing_fragment")
+
+    def test_genuine_anchors_after_and_within_containers_remain_available(self) -> None:
+        cases = {
+            "after-list-fence": '- ```\n  literal\n  ```\n\n# Actual\n',
+            "after-container-end": '- ```\n  literal\n<a id="actual"></a>\n',
+            "quote-list-html": '> - <a id="actual"></a>\n',
+            "list-quote-html": '- > <a id="actual"></a>\n',
+            "after-closed-comment": '<!-- closed -->\n# Actual\n',
+            "literal-comment-opener": '`<!--` <a id="actual"></a>\n',
+            "escaped-comment-opener": '\\<!-- literal <a id="actual"></a>\n',
+            "atomic-attribute-opener": '<a title="<!--" id="actual"></a>\n',
+        }
+        doc = json.loads(self.a.read_text())
+        doc["composition"][0]["relation"] = "contract.md#actual"
+        self.write(self.a, doc)
+        for name, text in cases.items():
+            with self.subTest(case=name):
+                (self.a.parent / "contract.md").write_text(text)
+                report, status = self.cli()
+                self.assertEqual(status, 0, report)
+                self.assertTrue(report["valid"])
 
     def test_real_markdown_anchors_survive_inline_literal_filter(self) -> None:
         (self.a.parent / "contract.md").write_text(

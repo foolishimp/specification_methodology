@@ -1,0 +1,56 @@
+{
+  "kind": "stdo302.method-repair/1",
+  "finding": "Low: bootstrap still demanded a mutable version-line selector",
+  "repair": "Use \u00a74 release-profile discovery route, preserving both RC selector and stable exact-cut paths",
+  "original_manifest_sha256": "f3b81dcbf13c1d9ff5bd18b35c0eb2f8173d1c6d6b54da1db1f14ae0ad287b39",
+  "preimages": "repair1/PRE_METHOD_01.zip",
+  "changes": [
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/PRODUCT_DEFINITION.md",
+      "before": "c14c81489eba5a45017f48cad225b68e948c9a614c74ee3c4b27a2fe1025caa5",
+      "after": "7ee46438de5e4cb33cd8920814ecc90cfef95fb5eaee269f6f1a4fa389f4e523"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/frames/FRAME_INPUTS.json",
+      "before": "6af22347b3d1d767cfd01e9fe3dae998f4f43273ccfa60ebe0038a8c0f47e193",
+      "after": "09c706caf22cf9d2cbd16ea9ba56620e40c969600456b56048edf56512a69d9c"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/frames/bootstrap.md",
+      "before": "db7e2f18043528a887121fbca034e286c90bc7c24de503fb15bade02743be98b",
+      "after": "9fb337b2c8462e9d6788f52f11ca75199253a3a66a10774bc05a9798a772e502"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/frames/product-composition.md",
+      "before": "c73a3a30190f6527c2c33a79e025e7f74eb41bbed8379aa4b05f4c5dbe434415",
+      "after": "239e7f9e11cd9e3f4a7c75360851901932a8eb3824ccf7a4fea4a5ae696cc73a"
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "specification_methodology/v3/.ai-workspace/common-build/frame-tools/generate_frames.py",
+        "--root",
+        "specification_methodology/v3/build_tenants/common"
+      ],
+      "exit": 0,
+      "stdout": "standards/frames/rf-task-a.md 112828 bytes sha256=4987196d194761f03a30357192d65707c4bf6522f6c3607d84f8f7b5fc150200\nstandards/frames/rf-task-b.md 96378 bytes sha256=7dfae737281f057b08ce079fc87b33e6f71c6ea57d03cd4dc5e035a9c23e191c\nstandards/frames/ac-task-a.md 75112 bytes sha256=88280e8164b30b855673d17d44ae2f0cc7e3761917dd22703bbcacfec0f133b4\nstandards/frames/traversal-task-f.md 106442 bytes sha256=8350586b8a6e4c02a04b5064b6fd4eb33bb2625f80f7578f3a5b3090a210ccf9\nstandards/frames/eb-task-d.md 116673 bytes sha256=be2d6436615830554aa41fdbd049fc687802628446d9930e58e7fd8187f23836\nstandards/frames/dm-task-d.md 100681 bytes sha256=e53ead1a63da1675f70f4ef2b4897b7a36ee2a7c6e33f92401c735d8404e00e6\nstandards/frames/configuration.md 144114 bytes sha256=d274551dea3aecdbff9122fb52948a0a45562114640c83c93fe2e82b19ddb7a1\nstandards/frames/binding.md 97263 bytes sha256=422a4876c67e8ee945cb7e3d41a36f78a9350e12b05d93c2769c3c84b1e0a34f\nstandards/frames/stale-summary.md 96165 bytes sha256=465a838eaa08b70d3c4a067b120138c2f6bccbda3301c6c347f69e055e35cef7\nstandards/frames/bootstrap.md 94520 bytes sha256=9fb337b2c8462e9d6788f52f11ca75199253a3a66a10774bc05a9798a772e502\nstandards/frames/acceptance-release.md 63967 bytes sha256=91c2a25905e084fd070ab715cb3928d2ab30dfad0a6f7fc6d06feaa7941d2fca\nstandards/frames/member-build-assess.md 105866 bytes sha256=0ff16a1b2902b80d2c79cd4e2ae83c260f9ab35140a33c2bf690e14356cc7755\nstandards/frames/product-composition.md 15977 bytes sha256=239e7f9e11cd9e3f4a7c75360851901932a8eb3824ccf7a4fea4a5ae696cc73a\nstandards/frames/FRAME_INPUTS.json 105110 bytes sha256=09c706caf22cf9d2cbd16ea9ba56620e40c969600456b56048edf56512a69d9c\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "specification_methodology/v3/.ai-workspace/common-build/frame-tools/generate_frames.py",
+        "--root",
+        "specification_methodology/v3/build_tenants/common",
+        "--check"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

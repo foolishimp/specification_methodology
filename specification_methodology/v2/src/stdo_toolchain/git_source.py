@@ -13,7 +13,10 @@ from .errors import StdoError
 _CUT_RE = re.compile(
     r"^v(?!.*-rc\..*-rc\.)[0-9A-Za-z][0-9A-Za-z._+-]*-rc\.[1-9][0-9]*$"
 )
+_STABLE_CUT_RE = re.compile(r"^v(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)$")
 _VERSION_RE = re.compile(r"^(?!.*-rc\.)[0-9A-Za-z][0-9A-Za-z._+-]*$")
+STABLE_PROFILE = "stable-v1"
+STABLE_TAG_MARKER = f"STDO-Release-Profile: {STABLE_PROFILE}"
 
 _LEGACY_PROJECT_ROOT = ""
 _MONOREPO_PROJECT_ROOT = "specification_methodology"
@@ -66,6 +69,33 @@ def _remote_tag_refs(repository: str, refs: list[str]) -> dict[str, str]:
     return resolved
 
 
+def _profile_lines(message: str) -> list[str]:
+    return [
+        line for line in message.splitlines()
+        if line.lstrip().startswith("STDO-Release-Profile:")
+    ]
+
+
+def _require_legacy_selector(repository: str, ref: str, expected_object: str) -> None:
+    """An explicit final-cut tag cannot turn into a selector when RC refs appear."""
+    with tempfile.TemporaryDirectory(prefix="stdo-selector-") as temporary:
+        git_dir = Path(temporary) / "objects.git"
+        _git(["init", "--bare", str(git_dir)])
+        args = ["--git-dir", str(git_dir)]
+        _git([*args, "fetch", "--quiet", "--no-tags", repository, f"+{ref}:{ref}"])
+        actual = _git([*args, "rev-parse", ref])
+        assert isinstance(actual, str)
+        if actual.strip() != expected_object:
+            raise StdoError("STDO selector identity changed during channel resolution")
+        raw = _git([*args, "cat-file", "tag", expected_object])
+        assert isinstance(raw, str)
+        if _profile_lines(raw.partition("\n\n")[2]):
+            raise StdoError(
+                "An explicit release-profile tag cannot be used as a legacy RC "
+                f"selector: {ref}"
+            )
+
+
 def _candidate_cut_refs(cut: str) -> tuple[str, str]:
     return (
         f"refs/tags/{cut}",
@@ -74,6 +104,8 @@ def _candidate_cut_refs(cut: str) -> tuple[str, str]:
 
 
 def _resolve_cut_ref(repository: str, cut: str) -> str:
+    if is_stable_cut(cut):
+        return _resolve_stable_ref(repository, cut)
     candidates = _candidate_cut_refs(cut)
     refs = _remote_tag_refs(repository, list(candidates))
     present = [ref for ref in candidates if ref in refs]
@@ -92,10 +124,37 @@ def _resolve_cut_ref(repository: str, cut: str) -> str:
     return candidates[0] if candidates[0] in present else candidates[1]
 
 
+def is_stable_cut(cut: str) -> bool:
+    """Recognize stable syntax, not evidence that a Git ref is immutable."""
+    return _STABLE_CUT_RE.fullmatch(cut) is not None
+
+
+def _resolve_stable_ref(repository: str, cut: str) -> str:
+    historical, qualified = _candidate_cut_refs(cut)
+    refs = _remote_tag_refs(
+        repository, [historical, qualified, f"{historical}-rc.*", f"{qualified}-rc.*"]
+    )
+    if historical in refs or any(
+        ref.startswith(f"{prefix}-rc.") for ref in refs for prefix in (historical, qualified)
+    ):
+        raise StdoError(
+            f"Stable cut {cut} requires a fresh version line: historical bare aliases "
+            "and same-version RC refs are forbidden; legacy bare tags remain selectors"
+        )
+    if qualified not in refs:
+        raise StdoError(f"Immutable stable STDO cut tag is missing: {qualified}")
+    if f"{qualified}^{{}}" not in refs:
+        raise StdoError(f"Immutable stable cut {cut} must be an annotated tag")
+    return qualified
+
+
 def normalize_cut(cut: str) -> str:
     value = cut.removeprefix("refs/tags/")
-    if not _CUT_RE.fullmatch(value):
-        raise StdoError(f"Immutable STDO cut must match v<version>-rc.<n>, got {cut!r}")
+    if not (_CUT_RE.fullmatch(value) or is_stable_cut(value)):
+        raise StdoError(
+            "Immutable STDO cut must match v<version>-rc.<n> or the stable-v1 "
+            f"vMAJOR.MINOR.PATCH profile, got {cut!r}"
+        )
     return value
 
 
@@ -106,10 +165,12 @@ def normalize_version_line(version_line: str) -> str:
     return value
 
 
-def cut_coordinates(cut: str) -> tuple[str, int]:
-    """Return the version line and positive RC ordinal for an immutable cut."""
+def cut_coordinates(cut: str) -> tuple[str, int | None]:
+    """Return a version and RC ordinal, or None for stable-v1 syntax."""
 
     normalized = normalize_cut(cut)
+    if is_stable_cut(normalized):
+        return normalized.removeprefix("v"), None
     version, ordinal = normalized.removeprefix("v").rsplit("-rc.", 1)
     return version, int(ordinal)
 
@@ -119,7 +180,14 @@ def ensure_channel_not_downgrade(current_cut: str, target_cut: str) -> None:
 
     current_version, current_ordinal = cut_coordinates(current_cut)
     target_version, target_ordinal = cut_coordinates(target_cut)
-    if current_version == target_version and target_ordinal < current_ordinal:
+    if current_version == target_version and (
+        (current_ordinal is None and target_ordinal is not None)
+        or (
+            current_ordinal is not None
+            and target_ordinal is not None
+            and target_ordinal < current_ordinal
+        )
+    ):
         raise StdoError(
             "STDO channel adoption cannot move backward on one version line: "
             f"current {current_cut}, target {target_cut}. Pin an older immutable "
@@ -134,13 +202,13 @@ class ChannelResolution:
     selector_object: str
     commit: str
     cut: str
-    cut_ordinal: int
+    cut_ordinal: int | None
     cut_ref: str
     cut_tag_object: str
 
 
 def resolve_channel(repository: str, version_line: str) -> ChannelResolution:
-    """Resolve a version-line tag only when it names the highest published RC."""
+    """Resolve a legacy highest-RC selector or an explicit stable-v1 exact tag."""
 
     version = normalize_version_line(version_line)
     historical_selector_ref = f"refs/tags/v{version}"
@@ -206,6 +274,25 @@ def resolve_channel(repository: str, version_line: str) -> ChannelResolution:
             )
 
     if not historical and not qualified:
+        if is_stable_cut(f"v{version}") and qualified_selector_ref in refs:
+            # A bare tag is never classified by spelling or by RC absence alone.
+            # Fetch its annotated object and require the explicit stable marker.
+            with GitSnapshot(repository, f"v{version}") as snapshot:
+                if (
+                    snapshot.tag_object != refs[qualified_selector_ref]
+                    or snapshot.commit != refs.get(f"{qualified_selector_ref}^{{}}")
+                ):
+                    raise StdoError("Stable release identity changed during channel resolution")
+                return ChannelResolution(
+                    version_line=version,
+                    selector_ref=snapshot.ref,
+                    selector_object=snapshot.tag_object,
+                    commit=snapshot.commit,
+                    cut=snapshot.cut,
+                    cut_ordinal=None,
+                    cut_ref=snapshot.ref,
+                    cut_tag_object=snapshot.tag_object,
+                )
         raise StdoError(
             "STDO channel has no published immutable RC cuts: "
             f"{historical_selector_ref} or {qualified_selector_ref}"
@@ -296,6 +383,11 @@ def resolve_channel(repository: str, version_line: str) -> ChannelResolution:
             "Refusing to select an older cut through a latest-version channel."
         )
 
+    _require_legacy_selector(repository, selector_ref, selector_object)
+    if qualified and historical:
+        assert historical_selector_object is not None
+        _require_legacy_selector(repository, historical_selector_ref, historical_selector_object)
+
     return ChannelResolution(
         version_line=version,
         selector_ref=selector_ref,
@@ -324,6 +416,7 @@ class GitSnapshot:
         self.project_root = ""
         self.project_tree = ""
         self.project_release_namespace = ""
+        self.release_profile: str | None = None
         self._standards_root = _STANDARDS_ROOT
 
     def __enter__(self) -> "GitSnapshot":
@@ -353,6 +446,20 @@ class GitSnapshot:
                     f"found {object_type}"
                 )
             self.tag_object = self._text(["rev-parse", self.ref]).strip()
+            if is_stable_cut(self.cut):
+                raw_tag = self._text(["cat-file", "tag", self.tag_object])
+                headers, _separator, message = raw_tag.partition("\n\n")
+                profile_lines = _profile_lines(message)
+                if profile_lines != [STABLE_TAG_MARKER]:
+                    raise StdoError(
+                        f"Stable cut {self.cut} requires exactly one explicit "
+                        f"tag-message marker: {STABLE_TAG_MARKER}"
+                    )
+                if "type commit" not in headers.splitlines():
+                    raise StdoError(f"Stable cut {self.cut} must directly annotate a commit")
+                if f"tag {_PROJECT_RELEASE_NAMESPACE}/{self.cut}" not in headers.splitlines():
+                    raise StdoError(f"Stable cut {self.cut} tag name does not match its exact ref")
+                self.release_profile = STABLE_PROFILE
             self.commit = self._text(["rev-parse", f"{self.ref}^{{commit}}"]).strip()
             self.tree = self._text(["rev-parse", f"{self.commit}^{{tree}}"]).strip()
             self.project_root, self._standards_root = self._detect_project_layout()

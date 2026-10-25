@@ -1,0 +1,1 @@
+Exact freeze04 selected sources copied and SHA-256 verified before repair-05 source or test mutations. These are retained byte preimages, not reconstructed files. Source and provider freeze04 records are retained alongside this directory.

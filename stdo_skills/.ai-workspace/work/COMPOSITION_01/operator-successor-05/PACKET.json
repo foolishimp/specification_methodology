@@ -1,0 +1,236 @@
+{
+  "activation": {
+    "id": "urn:stdo-skills:T002:read-context:3",
+    "revision": "3",
+    "configuration": {
+      "engine": "workspace-regular-file",
+      "root": "product",
+      "path": ".ai-workspace/work/COMPOSITION_01/operator-successor-05/OPERATOR_SELECTION.md",
+      "object": null,
+      "sha256": "f3bb1e3a8ec895876feffacde61b1b59c06f8f96983c13073dfc18e4cdf6d5c3",
+      "selector": null
+    }
+  },
+  "frame": {
+    "id": "urn:stdo-skills:T002:read-context-frame",
+    "revision": "3",
+    "declaration": {
+      "engine": "workspace-regular-file",
+      "root": "product",
+      "path": "specification/REFERENCE_FRAME_BASIS.md",
+      "object": null,
+      "sha256": "19a738781f5eaf25dcbf5a69f19b7e8d4786078f709228748c175f4da01e5d33",
+      "selector": null
+    },
+    "evaluation": {
+      "engine": "workspace-regular-file",
+      "root": "product",
+      "path": ".ai-workspace/work/COMPOSITION_01/operator-successor-05/OPERATOR_SELECTION.md",
+      "object": null,
+      "sha256": "f3bb1e3a8ec895876feffacde61b1b59c06f8f96983c13073dfc18e4cdf6d5c3",
+      "selector": null
+    },
+    "result_algebra": {
+      "engine": "workspace-regular-file",
+      "root": "product",
+      "path": "specification/REFERENCE_FRAME_BASIS.md",
+      "object": null,
+      "sha256": "19a738781f5eaf25dcbf5a69f19b7e8d4786078f709228748c175f4da01e5d33",
+      "selector": null
+    }
+  },
+  "subject_basis": {
+    "subject": {
+      "id": "urn:stdo-skills:T002:source-selection",
+      "sha256": "f4346909abc106c14e4dad2b4951140a5d46ed166165afb03df991df5be4ca3c"
+    },
+    "method_profile": {
+      "id": "urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1",
+      "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+    },
+    "product": {
+      "id": "urn:stdo:product-definition:stdo-skills",
+      "definition": {
+        "engine": "workspace-regular-file",
+        "root": "product",
+        "path": "stdo_skills.json",
+        "object": null,
+        "sha256": "16e1ac70c593e243aae3cc9bd071e742bd842309167ff9213608f49a35448398",
+        "selector": null
+      }
+    },
+    "observations": [],
+    "dependencies": [
+      {
+        "engine": "workspace-regular-file",
+        "root": "product",
+        "path": "specification/composition/A_C_SUPPORT.md",
+        "object": null,
+        "sha256": "a024e684e324738b54af3e8cad9a062f86148f03ce1e29aa50166e71aa7dd822",
+        "selector": null
+      },
+      {
+        "engine": "workspace-regular-file",
+        "root": "product",
+        "path": "specification/composition/SOURCE_MANIFEST.json",
+        "object": null,
+        "sha256": "f4346909abc106c14e4dad2b4951140a5d46ed166165afb03df991df5be4ca3c",
+        "selector": null
+      },
+      {
+        "engine": "workspace-regular-file",
+        "root": "tool",
+        "path": "build_tenants/graphify/design/fd-composition.md",
+        "object": null,
+        "sha256": "00a0449a5d2fd75eb091f487ba08377815567d3db42e95a8702063785aa88f07",
+        "selector": null
+      }
+    ],
+    "time_basis": "Exact local development source selection; no currentness inference from the base commit"
+  },
+  "attention": {
+    "material_relations": [
+      {
+        "engine": "workspace-regular-file",
+        "root": "product",
+        "path": "specification/composition/A_C_SUPPORT.md",
+        "object": null,
+        "sha256": "a024e684e324738b54af3e8cad9a062f86148f03ce1e29aa50166e71aa7dd822",
+        "selector": null
+      }
+    ],
+    "invariants": [
+      {
+        "engine": "workspace-regular-file",
+        "root": "product",
+        "path": ".ai-workspace/work/COMPOSITION_01/operator-successor-05/OPERATOR_SELECTION.md",
+        "object": null,
+        "sha256": "f3bb1e3a8ec895876feffacde61b1b59c06f8f96983c13073dfc18e4cdf6d5c3",
+        "selector": null
+      }
+    ],
+    "semantic_sources": [
+      {
+        "engine": "workspace-regular-file",
+        "root": "product",
+        "path": "specification/requirements/README.md",
+        "object": null,
+        "sha256": "5e88f0c2d751d089047b5b3181f8c8d25e14a607b487a3fc0322164e71a77dac",
+        "selector": null
+      },
+      {
+        "engine": "workspace-regular-file",
+        "root": "tool",
+        "path": "build_tenants/graphify/design/fd-composition.md",
+        "object": null,
+        "sha256": "00a0449a5d2fd75eb091f487ba08377815567d3db42e95a8702063785aa88f07",
+        "selector": null
+      }
+    ],
+    "exclusions": [],
+    "prohibited_assumptions": [
+      "Prior actor knowledge is not fully recorded.",
+      "No acceptance, dispatch, write or isolation authority follows from this Context."
+    ]
+  },
+  "actor_authority": {
+    "actor_id": "/root/composition_proposal_writer",
+    "role": "Worker",
+    "capability": {
+      "engine": "workspace-regular-file",
+      "root": "product",
+      "path": ".ai-workspace/work/COMPOSITION_01/operator-successor-05/OPERATOR_SELECTION.md",
+      "object": null,
+      "sha256": "f3bb1e3a8ec895876feffacde61b1b59c06f8f96983c13073dfc18e4cdf6d5c3",
+      "selector": null
+    },
+    "semantic": null,
+    "evaluation": null,
+    "operation": {
+      "engine": "workspace-regular-file",
+      "root": "product",
+      "path": ".ai-workspace/work/COMPOSITION_01/operator-successor-05/OWNER.json",
+      "object": null,
+      "sha256": "7254b510508976404c1a4ad34681c1c2dfb9506a3b3cde938c7fc4939abeea9e",
+      "selector": null
+    },
+    "decision": null,
+    "acceptance": null,
+    "publication": null,
+    "territory": [],
+    "tools": [
+      "tools.describe",
+      "composition.inspect",
+      "source.read",
+      "context.assemble"
+    ]
+  },
+  "evidence_relations": {
+    "admissible_evidence": [
+      {
+        "engine": "workspace-regular-file",
+        "root": "product",
+        "path": ".ai-workspace/work/COMPOSITION_01/operator-successor-05/OWNER.json",
+        "object": null,
+        "sha256": "7254b510508976404c1a4ad34681c1c2dfb9506a3b3cde938c7fc4939abeea9e",
+        "selector": null
+      }
+    ],
+    "acquisition": [
+      {
+        "engine": "workspace-regular-file",
+        "root": "product",
+        "path": ".ai-workspace/work/COMPOSITION_01/operator-successor-05/OPERATOR_SELECTION.md",
+        "object": null,
+        "sha256": "f3bb1e3a8ec895876feffacde61b1b59c06f8f96983c13073dfc18e4cdf6d5c3",
+        "selector": null
+      }
+    ],
+    "dependencies": [
+      {
+        "engine": "workspace-regular-file",
+        "root": "product",
+        "path": "specification/composition/SOURCE_MANIFEST.json",
+        "object": null,
+        "sha256": "f4346909abc106c14e4dad2b4951140a5d46ed166165afb03df991df5be4ca3c",
+        "selector": null
+      }
+    ],
+    "conjunction": null,
+    "translation": null,
+    "consumer": "/root",
+    "return_contract": {
+      "engine": "workspace-regular-file",
+      "root": "product",
+      "path": ".ai-workspace/work/COMPOSITION_01/operator-successor-05/RETURN_CONTRACT.json",
+      "object": null,
+      "sha256": "b97cf1dd29381f56c88297af4dd164787958188b84ffaaebc0caad1c34c17ab5",
+      "selector": null
+    }
+  },
+  "stop_change": {
+    "invalidators": [
+      "Selected source or mechanism changed"
+    ],
+    "stop_conditions": [
+      "Missing required authority or deciding source"
+    ],
+    "residuals": [
+      "Prior actor context and complete output provenance unknown"
+    ],
+    "re_entry": [
+      "Preserve original evidence and select affected current sources"
+    ],
+    "reconfiguration": []
+  },
+  "profile_additions": {
+    "worker": {
+      "operation_grant_id": "urn:stdo-skills:T002:composition-read-context:3",
+      "mutation_subject": {
+        "id": "urn:stdo-skills:T002:source-selection",
+        "sha256": "f4346909abc106c14e4dad2b4951140a5d46ed166165afb03df991df5be4ca3c"
+      },
+      "territory": []
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "kind": "stdo302.method-checks/1",
+  "scope": "Early method candidate; two schemas are manager-owned and not frozen in METHOD-01",
+  "repaired_before_freeze": "release-note section link; initial PACKAGE_CHECK-01 retained",
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "specification_methodology/v3/.ai-workspace/common-build/frame-tools/generate_frames.py",
+        "--check",
+        "--root",
+        "specification_methodology/v3/build_tenants/common"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "specification_methodology/v3/.ai-workspace/common-build/tools/package_tools.py",
+        "freeze",
+        "--root",
+        "specification_methodology/v3/build_tenants/common",
+        "--inventory",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/method/PACKAGE_INVENTORY-02.json"
+      ],
+      "exit": 0,
+      "stdout": "{\"inventory\": \"/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/method/PACKAGE_INVENTORY-02.json\", \"inventory_sha256\": \"4ba5a969f3beda7e6e28a83df616352d8df4160c781ae980a00052378019c4f2\", \"member_count\": 86, \"standing\": \"identity capture, not validation or acceptance\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "specification_methodology/v3/.ai-workspace/common-build/tools/package_tools.py",
+        "check",
+        "--root",
+        "specification_methodology/v3/build_tenants/common",
+        "--inventory",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/method/PACKAGE_INVENTORY-02.json",
+        "--inventory-sha256",
+        "4ba5a969f3beda7e6e28a83df616352d8df4160c781ae980a00052378019c4f2",
+        "--report",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/method/PACKAGE_CHECK-02.json"
+      ],
+      "exit": 0,
+      "stdout": "{\"failures\": [], \"advisory_signals\": [{\"path\": \"plugins/spec/references/GETTING_STARTED.md\", \"line\": 596, \"pattern\": \"complete Product view\", \"text\": \"uncertainty. Executive combines that evidence with the complete Product view\", \"context\": \"visible_text\", \"standing\": \"advisory search signal; requires semantic review\"}, {\"path\": \"standards/EXECUTIVE_BASELINE.md\", \"line\": 370, \"pattern\": \"complete Product view\", \"text\": \"complete Product view and the current MVP or release mandate needed to\", \"context\": \"visible_text\", \"standing\": \"advisory search signal; requires semantic review\"}, {\"path\": \"standards/EXECUTIVE_BASELINE.md\", \"line\": 1282, \"pattern\": \"complete Product view\", \"text\": \"current subject and basis, revalidates the complete Product view and the\", \"context\": \"visible_text\", \"standing\": \"advisory search signal; requires semantic review\"}, {\"path\": \"standards/EXECUTIVE_BASELINE.md\", \"line\": 1833, \"pattern\": \"complete Product view\", \"text\": \"against the complete Product view and the current MVP or release\", \"context\": \"visible_text\", \"standing\": \"advisory search signal; requires semantic review\"}, {\"path\": \"standards/ODD.md\", \"line\": 14, \"pattern\": \"result algebra is\", \"text\": \"the core result algebra is [FOUNDATIONS \u00a74 Results](FOUNDATIONS.md#results).\", \"context\": \"visible_text\", \"standing\": \"advisory search signal; requires semantic review\"}, {\"path\": \"standards/TRAVERSAL_OCCURRENCE.md\", \"line\": 15, \"pattern\": \"result algebra is\", \"text\": \"core result algebra is [FOUNDATIONS \u00a74 Results](FOUNDATIONS.md#results),\", \"context\": \"visible_text\", \"standing\": \"advisory search signal; requires semantic review\"}, {\"path\": \"standards/UX.md\", \"line\": 16, \"pattern\": \"result algebra is\", \"text\": \"again: the core result algebra is\", \"context\": \"visible_text\", \"standing\": \"advisory search signal; requires semantic review\"}, {\"path\": \"standards/frames/eb-task-d.md\", \"line\": 67, \"pattern\": \"complete Product view\", \"text\": \"complete Product view and the current MVP or release mandate needed to\", \"context\": \"visible_text\", \"standing\": \"advisory search signal; requires semantic review\"}, {\"path\": \"standards/frames/eb-task-d.md\", \"line\": 659, \"pattern\": \"complete Product view\", \"text\": \"current subject and basis, revalidates the complete Product view and the\", \"context\": \"visible_text\", \"standing\": \"advisory search signal; requires semantic review\"}], \"parsed_json_count\": 7, \"checked_local_reference_count\": 6029, \"external_or_template_references\": [], \"reference_scope\": \"Markdown inline/reference/HTML links outside code examples; JSON $ref, explicit standards/plugins routes and non-template path-shaped fields. Prose and generated-project paths require review.\", \"kind\": \"stdo.common-package-check\", \"publication_policy\": \"standalone-v3-publication-1\", \"package_root\": \"/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common\", \"inventory_sha256\": \"4ba5a969f3beda7e6e28a83df616352d8df4160c781ae980a00052378019c4f2\", \"member_count\": 86, \"empty_directories\": [], \"checker_sha256\": \"30b70f6e7771535cf50b37e56a51bb595b477364b6c1112acf044c7b76e4ceac\", \"checker_authentication\": \"not attested by this invocation; use the pinned inline launcher\", \"project_helpers\": [], \"valid\": true, \"standing\": \"mechanical package checks only; no semantic qualification, acceptance or installation\"}\n",
+      "stderr": ""
+    }
+  ]
+}

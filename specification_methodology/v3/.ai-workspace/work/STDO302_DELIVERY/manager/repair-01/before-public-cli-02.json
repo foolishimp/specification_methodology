@@ -1,0 +1,761 @@
+[
+  {
+    "case": "direct-list",
+    "body": "- ```markdown\n  # Support\n  <a id=\"support\"></a>\n  ```\n",
+    "definition": {
+      "$schema": "stdo://releases/v1.0.0-rc.1/standards/schemas/product-definition.schema.json",
+      "kind": "stdo.product-definition",
+      "product": {
+        "definition_id": "urn:test:composition:a",
+        "name": "Test Product",
+        "source_project": "./",
+        "bounded_context": null
+      },
+      "constitution": {
+        "stdo": {
+          "source": {
+            "repository": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/repository"
+          },
+          "selector": "stdo://channels/1.0.0",
+          "basis": {
+            "uri": "stdo://releases/v1.0.0-rc.1/",
+            "manifest_sha256": "c76b6711681e814086b15bf3839ba5e43809ad5b4e22fb894658276669d88e41"
+          }
+        },
+        "additional_authorities": [],
+        "entrypoints": [
+          {
+            "basis": "#/constitution/stdo/basis",
+            "uri": "standards/SPEC_METHOD.md"
+          }
+        ],
+        "agent_bootstrap": {
+          "entrypoint": "#/constitution/entrypoints/0",
+          "targets": [
+            "./AGENTS.md",
+            "./CLAUDE.md"
+          ]
+        }
+      },
+      "local_constitution": {
+        "axioms": [],
+        "overrides": [],
+        "disambiguations": []
+      },
+      "reference_frame_bases": [
+        {
+          "uri": "./specification/PRODUCT.md#frames",
+          "authority": [
+            "./specification/PRODUCT.md"
+          ],
+          "applies_to": [
+            "urn:test:product-definition:one"
+          ]
+        }
+      ],
+      "what": {
+        "intent": "./specification/INTENT.md",
+        "product": "./specification/PRODUCT.md",
+        "specification": [
+          "./specification/requirements/"
+        ]
+      },
+      "how": {
+        "common": [],
+        "build_tenants": [
+          {
+            "id": "urn:test:build-tenant:default",
+            "root": "./",
+            "design": [
+              "./design/"
+            ],
+            "implementation": [
+              "./src/"
+            ]
+          }
+        ]
+      },
+      "ticketing": {
+        "goals": "./specification/PRODUCT.md",
+        "tickets": {
+          "root": "./.ai-workspace/tickets/",
+          "lanes": {
+            "backlog": "./.ai-workspace/tickets/backlog/",
+            "active": "./.ai-workspace/tickets/active/",
+            "completed": "./.ai-workspace/tickets/completed/"
+          }
+        },
+        "comments": {
+          "root": "./.ai-workspace/comments/"
+        }
+      },
+      "composition": [
+        {
+          "product_definition": "../b/stdo_b.json",
+          "target_definition_id": "urn:test:composition:b",
+          "relation": "contract.md#support",
+          "contracts": [
+            "../b/contract.md#contract"
+          ]
+        }
+      ],
+      "unrelated": {
+        "preserved": true
+      }
+    },
+    "exit": 0,
+    "report": {
+      "authority_and_semantic_adequacy": "not evaluated",
+      "definitions": [
+        {
+          "basis": "stdo://releases/v1.0.0-rc.1/",
+          "composition": [
+            {
+              "failures": [],
+              "index": 0,
+              "references": {
+                "contracts": [
+                  {
+                    "bytes": 29,
+                    "fragment": "contract",
+                    "fragment_kind": "markdown",
+                    "kind": "file",
+                    "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace/b/contract.md",
+                    "reference": "../b/contract.md#contract",
+                    "sha256": "26cf40e1b3235ddab3ef61cbaf6f5d106ade65034a43d0136f7b85402b1a07f3",
+                    "status": "resolved"
+                  }
+                ],
+                "product_definition": {
+                  "bytes": 2224,
+                  "kind": "file",
+                  "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace/b/stdo_b.json",
+                  "reference": "../b/stdo_b.json",
+                  "sha256": "b3fc340f2f4713bdfae457d5d781bc31490916bd30601fa3cfdf26bc6097cb47",
+                  "status": "resolved"
+                },
+                "relation": {
+                  "bytes": 55,
+                  "fragment": "support",
+                  "fragment_kind": "markdown",
+                  "kind": "file",
+                  "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace/a/contract.md",
+                  "reference": "contract.md#support",
+                  "sha256": "8970b4663b2b7bf3c03e1159148e18b88d9a7e77a8a04153ef813cee5a861c9c",
+                  "status": "resolved"
+                }
+              },
+              "source_definition": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace/a/stdo_a.json",
+              "source_definition_id": "urn:test:composition:a",
+              "target_definition": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace/b/stdo_b.json",
+              "target_definition_id": "urn:test:composition:b",
+              "valid": true
+            }
+          ],
+          "cut": "v1.0.0-rc.1",
+          "definition": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace/a/stdo_a.json",
+          "definition_id": "urn:test:composition:a",
+          "document_sha256": "ab0cbe54a863e1f6b957c1db98726167ca3909a46a76ee1a718545d023593d2d",
+          "failures": [],
+          "installed": true,
+          "manifest_sha256": "c76b6711681e814086b15bf3839ba5e43809ad5b4e22fb894658276669d88e41",
+          "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/store/releases/v1.0.0-rc.1",
+          "release": {
+            "commit": "4864a7be164523ce50a2642af9db5c10a13f1761",
+            "cut": "v1.0.0-rc.1",
+            "standards_tree": "a29985c48ca56ce6fc1856f5bbff934285a3c1ed",
+            "tag_object": "0885b9d44bb3627e1eaa4f6b014bf40c5ef95c97",
+            "tree": "e8b7c0225f7e11c1e0b1d74cfea6c083746fd81a"
+          },
+          "schema": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/store/releases/v1.0.0-rc.1/standards/schemas/product-definition.schema.json",
+          "selected": true,
+          "selector": "stdo://channels/1.0.0",
+          "standards": {
+            "installed_root": "standards",
+            "member_count": 3,
+            "member_set_sha256": "23287aa186a6586c16444f1ef90436bd481da2fb381c0f6dc177b289313d8928",
+            "members": [
+              {
+                "path": "README.md",
+                "sha256": "a2f74a56d550741351a0ef940f9a1991c00f74f813f02fd55f3d03f146c2dae9"
+              },
+              {
+                "path": "SPEC_METHOD.md",
+                "sha256": "afa69c67f3e6db629654c3aad748d960f646edd7e71ccd70c3955d7a6565232b"
+              },
+              {
+                "path": "schemas/product-definition.schema.json",
+                "sha256": "b79327eb47bccf8d38ae87f80666c8d5e974a47a29b7863bc1c2c943c4accac8"
+              }
+            ],
+            "source_root": "specification/standards"
+          },
+          "valid": true
+        },
+        {
+          "basis": "stdo://releases/v1.0.0-rc.1/",
+          "composition": [],
+          "cut": "v1.0.0-rc.1",
+          "definition": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace/b/stdo_b.json",
+          "definition_id": "urn:test:composition:b",
+          "document_sha256": "b3fc340f2f4713bdfae457d5d781bc31490916bd30601fa3cfdf26bc6097cb47",
+          "failures": [],
+          "installed": true,
+          "manifest_sha256": "c76b6711681e814086b15bf3839ba5e43809ad5b4e22fb894658276669d88e41",
+          "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/store/releases/v1.0.0-rc.1",
+          "release": {
+            "commit": "4864a7be164523ce50a2642af9db5c10a13f1761",
+            "cut": "v1.0.0-rc.1",
+            "standards_tree": "a29985c48ca56ce6fc1856f5bbff934285a3c1ed",
+            "tag_object": "0885b9d44bb3627e1eaa4f6b014bf40c5ef95c97",
+            "tree": "e8b7c0225f7e11c1e0b1d74cfea6c083746fd81a"
+          },
+          "schema": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/store/releases/v1.0.0-rc.1/standards/schemas/product-definition.schema.json",
+          "selected": true,
+          "selector": "stdo://channels/1.0.0",
+          "standards": {
+            "installed_root": "standards",
+            "member_count": 3,
+            "member_set_sha256": "23287aa186a6586c16444f1ef90436bd481da2fb381c0f6dc177b289313d8928",
+            "members": [
+              {
+                "path": "README.md",
+                "sha256": "a2f74a56d550741351a0ef940f9a1991c00f74f813f02fd55f3d03f146c2dae9"
+              },
+              {
+                "path": "SPEC_METHOD.md",
+                "sha256": "afa69c67f3e6db629654c3aad748d960f646edd7e71ccd70c3955d7a6565232b"
+              },
+              {
+                "path": "schemas/product-definition.schema.json",
+                "sha256": "b79327eb47bccf8d38ae87f80666c8d5e974a47a29b7863bc1c2c943c4accac8"
+              }
+            ],
+            "source_root": "specification/standards"
+          },
+          "valid": true
+        }
+      ],
+      "failures": [],
+      "installed_resources": "verified immutable stdo://releases/ resources from the selected local Store",
+      "kind": "stdo.composition-verification",
+      "limits": {
+        "definitions": 1000,
+        "edges": 10000,
+        "file_bytes": 8388608
+      },
+      "resolver_root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace",
+      "root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace",
+      "schema_version": 1,
+      "valid": true
+    }
+  },
+  {
+    "case": "unfinished-comment",
+    "body": "<!-- unfinished\n# Support\n<a id=\"support\"></a>\n",
+    "definition": {
+      "$schema": "stdo://releases/v1.0.0-rc.1/standards/schemas/product-definition.schema.json",
+      "kind": "stdo.product-definition",
+      "product": {
+        "definition_id": "urn:test:composition:a",
+        "name": "Test Product",
+        "source_project": "./",
+        "bounded_context": null
+      },
+      "constitution": {
+        "stdo": {
+          "source": {
+            "repository": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/repository"
+          },
+          "selector": "stdo://channels/1.0.0",
+          "basis": {
+            "uri": "stdo://releases/v1.0.0-rc.1/",
+            "manifest_sha256": "c76b6711681e814086b15bf3839ba5e43809ad5b4e22fb894658276669d88e41"
+          }
+        },
+        "additional_authorities": [],
+        "entrypoints": [
+          {
+            "basis": "#/constitution/stdo/basis",
+            "uri": "standards/SPEC_METHOD.md"
+          }
+        ],
+        "agent_bootstrap": {
+          "entrypoint": "#/constitution/entrypoints/0",
+          "targets": [
+            "./AGENTS.md",
+            "./CLAUDE.md"
+          ]
+        }
+      },
+      "local_constitution": {
+        "axioms": [],
+        "overrides": [],
+        "disambiguations": []
+      },
+      "reference_frame_bases": [
+        {
+          "uri": "./specification/PRODUCT.md#frames",
+          "authority": [
+            "./specification/PRODUCT.md"
+          ],
+          "applies_to": [
+            "urn:test:product-definition:one"
+          ]
+        }
+      ],
+      "what": {
+        "intent": "./specification/INTENT.md",
+        "product": "./specification/PRODUCT.md",
+        "specification": [
+          "./specification/requirements/"
+        ]
+      },
+      "how": {
+        "common": [],
+        "build_tenants": [
+          {
+            "id": "urn:test:build-tenant:default",
+            "root": "./",
+            "design": [
+              "./design/"
+            ],
+            "implementation": [
+              "./src/"
+            ]
+          }
+        ]
+      },
+      "ticketing": {
+        "goals": "./specification/PRODUCT.md",
+        "tickets": {
+          "root": "./.ai-workspace/tickets/",
+          "lanes": {
+            "backlog": "./.ai-workspace/tickets/backlog/",
+            "active": "./.ai-workspace/tickets/active/",
+            "completed": "./.ai-workspace/tickets/completed/"
+          }
+        },
+        "comments": {
+          "root": "./.ai-workspace/comments/"
+        }
+      },
+      "composition": [
+        {
+          "product_definition": "../b/stdo_b.json",
+          "target_definition_id": "urn:test:composition:b",
+          "relation": "contract.md#support",
+          "contracts": [
+            "../b/contract.md#contract"
+          ]
+        }
+      ],
+      "unrelated": {
+        "preserved": true
+      }
+    },
+    "exit": 0,
+    "report": {
+      "authority_and_semantic_adequacy": "not evaluated",
+      "definitions": [
+        {
+          "basis": "stdo://releases/v1.0.0-rc.1/",
+          "composition": [
+            {
+              "failures": [],
+              "index": 0,
+              "references": {
+                "contracts": [
+                  {
+                    "bytes": 29,
+                    "fragment": "contract",
+                    "fragment_kind": "markdown",
+                    "kind": "file",
+                    "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace/b/contract.md",
+                    "reference": "../b/contract.md#contract",
+                    "sha256": "26cf40e1b3235ddab3ef61cbaf6f5d106ade65034a43d0136f7b85402b1a07f3",
+                    "status": "resolved"
+                  }
+                ],
+                "product_definition": {
+                  "bytes": 2224,
+                  "kind": "file",
+                  "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace/b/stdo_b.json",
+                  "reference": "../b/stdo_b.json",
+                  "sha256": "b3fc340f2f4713bdfae457d5d781bc31490916bd30601fa3cfdf26bc6097cb47",
+                  "status": "resolved"
+                },
+                "relation": {
+                  "bytes": 47,
+                  "fragment": "support",
+                  "fragment_kind": "markdown",
+                  "kind": "file",
+                  "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace/a/contract.md",
+                  "reference": "contract.md#support",
+                  "sha256": "605fafd70b5d9e7c20bd61db198bd1d80f5bbe81049796389da9cff8c9e4dd01",
+                  "status": "resolved"
+                }
+              },
+              "source_definition": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace/a/stdo_a.json",
+              "source_definition_id": "urn:test:composition:a",
+              "target_definition": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace/b/stdo_b.json",
+              "target_definition_id": "urn:test:composition:b",
+              "valid": true
+            }
+          ],
+          "cut": "v1.0.0-rc.1",
+          "definition": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace/a/stdo_a.json",
+          "definition_id": "urn:test:composition:a",
+          "document_sha256": "ab0cbe54a863e1f6b957c1db98726167ca3909a46a76ee1a718545d023593d2d",
+          "failures": [],
+          "installed": true,
+          "manifest_sha256": "c76b6711681e814086b15bf3839ba5e43809ad5b4e22fb894658276669d88e41",
+          "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/store/releases/v1.0.0-rc.1",
+          "release": {
+            "commit": "4864a7be164523ce50a2642af9db5c10a13f1761",
+            "cut": "v1.0.0-rc.1",
+            "standards_tree": "a29985c48ca56ce6fc1856f5bbff934285a3c1ed",
+            "tag_object": "0885b9d44bb3627e1eaa4f6b014bf40c5ef95c97",
+            "tree": "e8b7c0225f7e11c1e0b1d74cfea6c083746fd81a"
+          },
+          "schema": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/store/releases/v1.0.0-rc.1/standards/schemas/product-definition.schema.json",
+          "selected": true,
+          "selector": "stdo://channels/1.0.0",
+          "standards": {
+            "installed_root": "standards",
+            "member_count": 3,
+            "member_set_sha256": "23287aa186a6586c16444f1ef90436bd481da2fb381c0f6dc177b289313d8928",
+            "members": [
+              {
+                "path": "README.md",
+                "sha256": "a2f74a56d550741351a0ef940f9a1991c00f74f813f02fd55f3d03f146c2dae9"
+              },
+              {
+                "path": "SPEC_METHOD.md",
+                "sha256": "afa69c67f3e6db629654c3aad748d960f646edd7e71ccd70c3955d7a6565232b"
+              },
+              {
+                "path": "schemas/product-definition.schema.json",
+                "sha256": "b79327eb47bccf8d38ae87f80666c8d5e974a47a29b7863bc1c2c943c4accac8"
+              }
+            ],
+            "source_root": "specification/standards"
+          },
+          "valid": true
+        },
+        {
+          "basis": "stdo://releases/v1.0.0-rc.1/",
+          "composition": [],
+          "cut": "v1.0.0-rc.1",
+          "definition": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace/b/stdo_b.json",
+          "definition_id": "urn:test:composition:b",
+          "document_sha256": "b3fc340f2f4713bdfae457d5d781bc31490916bd30601fa3cfdf26bc6097cb47",
+          "failures": [],
+          "installed": true,
+          "manifest_sha256": "c76b6711681e814086b15bf3839ba5e43809ad5b4e22fb894658276669d88e41",
+          "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/store/releases/v1.0.0-rc.1",
+          "release": {
+            "commit": "4864a7be164523ce50a2642af9db5c10a13f1761",
+            "cut": "v1.0.0-rc.1",
+            "standards_tree": "a29985c48ca56ce6fc1856f5bbff934285a3c1ed",
+            "tag_object": "0885b9d44bb3627e1eaa4f6b014bf40c5ef95c97",
+            "tree": "e8b7c0225f7e11c1e0b1d74cfea6c083746fd81a"
+          },
+          "schema": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/store/releases/v1.0.0-rc.1/standards/schemas/product-definition.schema.json",
+          "selected": true,
+          "selector": "stdo://channels/1.0.0",
+          "standards": {
+            "installed_root": "standards",
+            "member_count": 3,
+            "member_set_sha256": "23287aa186a6586c16444f1ef90436bd481da2fb381c0f6dc177b289313d8928",
+            "members": [
+              {
+                "path": "README.md",
+                "sha256": "a2f74a56d550741351a0ef940f9a1991c00f74f813f02fd55f3d03f146c2dae9"
+              },
+              {
+                "path": "SPEC_METHOD.md",
+                "sha256": "afa69c67f3e6db629654c3aad748d960f646edd7e71ccd70c3955d7a6565232b"
+              },
+              {
+                "path": "schemas/product-definition.schema.json",
+                "sha256": "b79327eb47bccf8d38ae87f80666c8d5e974a47a29b7863bc1c2c943c4accac8"
+              }
+            ],
+            "source_root": "specification/standards"
+          },
+          "valid": true
+        }
+      ],
+      "failures": [],
+      "installed_resources": "verified immutable stdo://releases/ resources from the selected local Store",
+      "kind": "stdo.composition-verification",
+      "limits": {
+        "definitions": 1000,
+        "edges": 10000,
+        "file_bytes": 8388608
+      },
+      "resolver_root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace",
+      "root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace",
+      "schema_version": 1,
+      "valid": true
+    }
+  },
+  {
+    "case": "missing-control",
+    "body": "# Different\n",
+    "definition": {
+      "$schema": "stdo://releases/v1.0.0-rc.1/standards/schemas/product-definition.schema.json",
+      "kind": "stdo.product-definition",
+      "product": {
+        "definition_id": "urn:test:composition:a",
+        "name": "Test Product",
+        "source_project": "./",
+        "bounded_context": null
+      },
+      "constitution": {
+        "stdo": {
+          "source": {
+            "repository": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/repository"
+          },
+          "selector": "stdo://channels/1.0.0",
+          "basis": {
+            "uri": "stdo://releases/v1.0.0-rc.1/",
+            "manifest_sha256": "c76b6711681e814086b15bf3839ba5e43809ad5b4e22fb894658276669d88e41"
+          }
+        },
+        "additional_authorities": [],
+        "entrypoints": [
+          {
+            "basis": "#/constitution/stdo/basis",
+            "uri": "standards/SPEC_METHOD.md"
+          }
+        ],
+        "agent_bootstrap": {
+          "entrypoint": "#/constitution/entrypoints/0",
+          "targets": [
+            "./AGENTS.md",
+            "./CLAUDE.md"
+          ]
+        }
+      },
+      "local_constitution": {
+        "axioms": [],
+        "overrides": [],
+        "disambiguations": []
+      },
+      "reference_frame_bases": [
+        {
+          "uri": "./specification/PRODUCT.md#frames",
+          "authority": [
+            "./specification/PRODUCT.md"
+          ],
+          "applies_to": [
+            "urn:test:product-definition:one"
+          ]
+        }
+      ],
+      "what": {
+        "intent": "./specification/INTENT.md",
+        "product": "./specification/PRODUCT.md",
+        "specification": [
+          "./specification/requirements/"
+        ]
+      },
+      "how": {
+        "common": [],
+        "build_tenants": [
+          {
+            "id": "urn:test:build-tenant:default",
+            "root": "./",
+            "design": [
+              "./design/"
+            ],
+            "implementation": [
+              "./src/"
+            ]
+          }
+        ]
+      },
+      "ticketing": {
+        "goals": "./specification/PRODUCT.md",
+        "tickets": {
+          "root": "./.ai-workspace/tickets/",
+          "lanes": {
+            "backlog": "./.ai-workspace/tickets/backlog/",
+            "active": "./.ai-workspace/tickets/active/",
+            "completed": "./.ai-workspace/tickets/completed/"
+          }
+        },
+        "comments": {
+          "root": "./.ai-workspace/comments/"
+        }
+      },
+      "composition": [
+        {
+          "product_definition": "../b/stdo_b.json",
+          "target_definition_id": "urn:test:composition:b",
+          "relation": "contract.md#support",
+          "contracts": [
+            "../b/contract.md#contract"
+          ]
+        }
+      ],
+      "unrelated": {
+        "preserved": true
+      }
+    },
+    "exit": 1,
+    "report": {
+      "authority_and_semantic_adequacy": "not evaluated",
+      "definitions": [
+        {
+          "basis": "stdo://releases/v1.0.0-rc.1/",
+          "composition": [
+            {
+              "failures": [
+                {
+                  "code": "missing_fragment",
+                  "field": "relation",
+                  "message": "Fragment does not resolve: /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace/a/contract.md#support",
+                  "reference": "contract.md#support",
+                  "status": "failed"
+                }
+              ],
+              "index": 0,
+              "references": {
+                "contracts": [
+                  {
+                    "bytes": 29,
+                    "fragment": "contract",
+                    "fragment_kind": "markdown",
+                    "kind": "file",
+                    "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace/b/contract.md",
+                    "reference": "../b/contract.md#contract",
+                    "sha256": "26cf40e1b3235ddab3ef61cbaf6f5d106ade65034a43d0136f7b85402b1a07f3",
+                    "status": "resolved"
+                  }
+                ],
+                "product_definition": {
+                  "bytes": 2224,
+                  "kind": "file",
+                  "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace/b/stdo_b.json",
+                  "reference": "../b/stdo_b.json",
+                  "sha256": "b3fc340f2f4713bdfae457d5d781bc31490916bd30601fa3cfdf26bc6097cb47",
+                  "status": "resolved"
+                },
+                "relation": {
+                  "code": "missing_fragment",
+                  "message": "Fragment does not resolve: /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace/a/contract.md#support",
+                  "reference": "contract.md#support",
+                  "status": "failed"
+                }
+              },
+              "source_definition": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace/a/stdo_a.json",
+              "source_definition_id": "urn:test:composition:a",
+              "target_definition": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace/b/stdo_b.json",
+              "target_definition_id": "urn:test:composition:b",
+              "valid": false
+            }
+          ],
+          "cut": "v1.0.0-rc.1",
+          "definition": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace/a/stdo_a.json",
+          "definition_id": "urn:test:composition:a",
+          "document_sha256": "ab0cbe54a863e1f6b957c1db98726167ca3909a46a76ee1a718545d023593d2d",
+          "failures": [
+            "composition/0: Fragment does not resolve: /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace/a/contract.md#support"
+          ],
+          "installed": true,
+          "manifest_sha256": "c76b6711681e814086b15bf3839ba5e43809ad5b4e22fb894658276669d88e41",
+          "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/store/releases/v1.0.0-rc.1",
+          "release": {
+            "commit": "4864a7be164523ce50a2642af9db5c10a13f1761",
+            "cut": "v1.0.0-rc.1",
+            "standards_tree": "a29985c48ca56ce6fc1856f5bbff934285a3c1ed",
+            "tag_object": "0885b9d44bb3627e1eaa4f6b014bf40c5ef95c97",
+            "tree": "e8b7c0225f7e11c1e0b1d74cfea6c083746fd81a"
+          },
+          "schema": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/store/releases/v1.0.0-rc.1/standards/schemas/product-definition.schema.json",
+          "selected": true,
+          "selector": "stdo://channels/1.0.0",
+          "standards": {
+            "installed_root": "standards",
+            "member_count": 3,
+            "member_set_sha256": "23287aa186a6586c16444f1ef90436bd481da2fb381c0f6dc177b289313d8928",
+            "members": [
+              {
+                "path": "README.md",
+                "sha256": "a2f74a56d550741351a0ef940f9a1991c00f74f813f02fd55f3d03f146c2dae9"
+              },
+              {
+                "path": "SPEC_METHOD.md",
+                "sha256": "afa69c67f3e6db629654c3aad748d960f646edd7e71ccd70c3955d7a6565232b"
+              },
+              {
+                "path": "schemas/product-definition.schema.json",
+                "sha256": "b79327eb47bccf8d38ae87f80666c8d5e974a47a29b7863bc1c2c943c4accac8"
+              }
+            ],
+            "source_root": "specification/standards"
+          },
+          "valid": false
+        },
+        {
+          "basis": "stdo://releases/v1.0.0-rc.1/",
+          "composition": [],
+          "cut": "v1.0.0-rc.1",
+          "definition": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace/b/stdo_b.json",
+          "definition_id": "urn:test:composition:b",
+          "document_sha256": "b3fc340f2f4713bdfae457d5d781bc31490916bd30601fa3cfdf26bc6097cb47",
+          "failures": [],
+          "installed": true,
+          "manifest_sha256": "c76b6711681e814086b15bf3839ba5e43809ad5b4e22fb894658276669d88e41",
+          "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/store/releases/v1.0.0-rc.1",
+          "release": {
+            "commit": "4864a7be164523ce50a2642af9db5c10a13f1761",
+            "cut": "v1.0.0-rc.1",
+            "standards_tree": "a29985c48ca56ce6fc1856f5bbff934285a3c1ed",
+            "tag_object": "0885b9d44bb3627e1eaa4f6b014bf40c5ef95c97",
+            "tree": "e8b7c0225f7e11c1e0b1d74cfea6c083746fd81a"
+          },
+          "schema": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/store/releases/v1.0.0-rc.1/standards/schemas/product-definition.schema.json",
+          "selected": true,
+          "selector": "stdo://channels/1.0.0",
+          "standards": {
+            "installed_root": "standards",
+            "member_count": 3,
+            "member_set_sha256": "23287aa186a6586c16444f1ef90436bd481da2fb381c0f6dc177b289313d8928",
+            "members": [
+              {
+                "path": "README.md",
+                "sha256": "a2f74a56d550741351a0ef940f9a1991c00f74f813f02fd55f3d03f146c2dae9"
+              },
+              {
+                "path": "SPEC_METHOD.md",
+                "sha256": "afa69c67f3e6db629654c3aad748d960f646edd7e71ccd70c3955d7a6565232b"
+              },
+              {
+                "path": "schemas/product-definition.schema.json",
+                "sha256": "b79327eb47bccf8d38ae87f80666c8d5e974a47a29b7863bc1c2c943c4accac8"
+              }
+            ],
+            "source_root": "specification/standards"
+          },
+          "valid": true
+        }
+      ],
+      "failures": [],
+      "installed_resources": "verified immutable stdo://releases/ resources from the selected local Store",
+      "kind": "stdo.composition-verification",
+      "limits": {
+        "definitions": 1000,
+        "edges": 10000,
+        "file_bytes": 8388608
+      },
+      "resolver_root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace",
+      "root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-p02_q7tx/workspace",
+      "schema_version": 1,
+      "valid": false
+    }
+  }
+]

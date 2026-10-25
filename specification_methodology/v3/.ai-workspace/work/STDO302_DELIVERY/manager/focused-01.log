@@ -1,0 +1,29 @@
+test_exact_manifest_install_uri_verify_and_pinned_definition (test_stable_releases.StableReleaseTests.test_exact_manifest_install_uri_verify_and_pinned_definition) ... ok
+test_historical_bare_alias_refuses_even_same_tag_object (test_stable_releases.StableReleaseTests.test_historical_bare_alias_refuses_even_same_tag_object) ... ok
+test_legacy_bare_selector_is_not_an_exact_stable_cut (test_stable_releases.StableReleaseTests.test_legacy_bare_selector_is_not_an_exact_stable_cut) ... ok
+test_lightweight_stable_ref_refuses (test_stable_releases.StableReleaseTests.test_lightweight_stable_ref_refuses) ... ok
+test_manifest_profile_is_required_only_for_stable_cuts (test_stable_releases.StableReleaseTests.test_manifest_profile_is_required_only_for_stable_cuts) ... ok
+test_marker_must_be_unique_exact_and_supported (test_stable_releases.StableReleaseTests.test_marker_must_be_unique_exact_and_supported) ... ok
+test_same_line_rc_presence_forbids_stable_identity (test_stable_releases.StableReleaseTests.test_same_line_rc_presence_forbids_stable_identity) ... ok
+test_stable_marker_cannot_be_reinterpreted_as_legacy_selector (test_stable_releases.StableReleaseTests.test_stable_marker_cannot_be_reinterpreted_as_legacy_selector) ... ok
+test_stable_syntax_and_same_line_downgrade (test_stable_releases.StableReleaseTests.test_stable_syntax_and_same_line_downgrade) ... ok
+test_tag_name_and_direct_commit_binding (test_stable_releases.StableReleaseTests.test_tag_name_and_direct_commit_binding) ... ok
+test_wrong_digest_and_changed_member_refuse (test_stable_releases.StableReleaseTests.test_wrong_digest_and_changed_member_refuse) ... FAIL
+
+======================================================================
+FAIL: test_wrong_digest_and_changed_member_refuse (test_stable_releases.StableReleaseTests.test_wrong_digest_and_changed_member_refuse)
+----------------------------------------------------------------------
+stdo_toolchain.errors.StdoError: Cut v3.0.2 manifest digest differs from the Product Definition (expected 0000000000000000000000000000000000000000000000000000000000000000, got e86a8157e49cb4bcfb4e4d8fcf907d27a562180157740b698a3e4f638e823c15)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/specification_methodology/v2/tests/test_stable_releases.py", line 93, in test_wrong_digest_and_changed_member_refuse
+    with self.assertRaisesRegex(StdoError, "manifest.*match|manifest.*mismatch"):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "manifest.*match|manifest.*mismatch" does not match "Cut v3.0.2 manifest digest differs from the Product Definition (expected 0000000000000000000000000000000000000000000000000000000000000000, got e86a8157e49cb4bcfb4e4d8fcf907d27a562180157740b698a3e4f638e823c15)"
+
+----------------------------------------------------------------------
+Ran 11 tests in 9.640s
+
+FAILED (failures=1)

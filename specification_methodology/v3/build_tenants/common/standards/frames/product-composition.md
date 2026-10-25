@@ -7,8 +7,8 @@ Purpose: PRODUCT_DEFINITION section9 owns the clauses. This projection covers th
 Binds:
 
 - Use the shared preservation and licensing contract for any replacement or refinement. ([../ACTIVATION.md#refinement](../ACTIVATION.md#refinement); member sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d; section sha256=5b33a40f42b5f4449224ffe67bd387dc329f62207e3bf2bea3dc5ceda0810e1d)
-- Retain the distinctions required by the actual decision/continuation under its fixed conditions; permission is not adequacy. ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5; section sha256=09932548f56a2af56c4fb0140aa7adf1859bcf42680d174b2bbb78e30531690b)
-- Reassess material changed reliance while retaining original evidence and established applicability. ([../FOUNDATIONS.md#change-impact-and-evidence-reuse](../FOUNDATIONS.md#change-impact-and-evidence-reuse); member sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5; section sha256=e989bf4b8c0dd996e5545f18db94f8ba275d14485697c0b046429746ed3bfbc6)
+- Retain the distinctions required by the actual decision/continuation under its fixed conditions; permission is not adequacy. ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e; section sha256=09932548f56a2af56c4fb0140aa7adf1859bcf42680d174b2bbb78e30531690b)
+- Reassess material changed reliance while retaining original evidence and established applicability. ([../FOUNDATIONS.md#change-impact-and-evidence-reuse](../FOUNDATIONS.md#change-impact-and-evidence-reuse); member sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e; section sha256=e989bf4b8c0dd996e5545f18db94f8ba275d14485697c0b046429746ed3bfbc6)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 a link to the owning section, the digest of its member and the digest of that
@@ -38,7 +38,7 @@ Routes, in order:
 
 Size of this frame: 15977 bytes.
 
-Source: PRODUCT_DEFINITION.md#9-recursive-discovery-and-explicit-composition sha256=7394f9d046e34f0ced33372dd0bd1d8983cfbab5453ebc8997d65d4e7a43a567
+Source: PRODUCT_DEFINITION.md#9-recursive-discovery-and-explicit-composition sha256=7ee46438de5e4cb33cd8920814ecc90cfef95fb5eaee269f6f1a4fa389f4e523
 
 ## 9. Recursive discovery and explicit composition
 

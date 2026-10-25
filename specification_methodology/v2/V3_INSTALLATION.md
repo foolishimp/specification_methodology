@@ -1,8 +1,33 @@
 # Installing standalone V3 packages
 
-Use `stdo-toolchain 0.1.5` or later. From the repository root, install the current
-toolchain implementation with `pipx install --force ./specification_methodology/v2`.
-Its source location does not limit the method version it can install.
+Use the released `stdo-toolchain 0.1.6` wheel for stable-v1 releases such as
+`v3.0.2`. Manager 0.1.5 supports standalone V3 RC packages but rejects stable
+cuts. Its source location does not limit the method version it can install.
+
+The native STDO tag contains only the standards/plugin package, so it cannot
+be used as a Git `pip install` source for the manager. Acquire the separate
+`stdo_toolchain-0.1.6-py3-none-any.whl` and checksum from the same public 3.0.2
+release, compare the checksum, then install the verified wheel into an isolated
+environment (Python 3.11 or newer):
+
+```sh
+python3 -m venv ./stdo-manager
+./stdo-manager/bin/python -m pip install ./stdo_toolchain-0.1.6-py3-none-any.whl
+./stdo-manager/bin/stdo --version
+```
+
+Use that environment's `stdo` executable in the commands below. For source
+development, `pipx install --force ./specification_methodology/v2` from the
+repository root deliberately replaces the operator's manager; it is not an
+effect of installing a method release.
+
+The stable profile requires the qualified annotated `specification_methodology/v3.0.2`
+tag, directly naming its commit, with exactly one `STDO-Release-Profile: stable-v1`
+line. A stable version has no same-version RC tags or historical bare alias.
+The channel resolves that exact stable tag; there is no second mutable selector.
+Old RC line selectors keep their meaning. The canonical manifest binds the
+profile, tag object, commit, trees and full member inventory. A release label
+does not itself establish source assessment, acceptance or consumer adoption.
 
 ## Release package
 

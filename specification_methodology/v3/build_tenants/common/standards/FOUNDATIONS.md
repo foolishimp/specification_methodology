@@ -244,7 +244,9 @@ and not sufficient as an exact basis ([RELEASE §1](RELEASE.md#1-context-and-pos
 states which).
 Equal version text does not collapse these objects. A selector or a
 mutable carrier may move; a release cut never moves. RELEASE §2 realises
-them, with the carriers that hold them, as refs of one release source.
+them, with the carriers that hold them, as refs of one release source. A
+release profile need not provide a mutable selector: discovery can resolve
+an immutable cut directly without changing that cut into a selector.
 
 ### Work boundary
 

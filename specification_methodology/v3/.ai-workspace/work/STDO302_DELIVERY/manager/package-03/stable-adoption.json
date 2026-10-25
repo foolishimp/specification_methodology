@@ -1,0 +1,149 @@
+{
+  "status": "passed explicit cross-version RC-to-stable adoption",
+  "imported_manager": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a/runtime-venv/lib/python3.13/site-packages/stdo_toolchain/__init__.py",
+  "manager_version": "0.1.6",
+  "before_sha256": "689f760b23c17f330ba82f71cda628cac73ad9fe0a7f57e4bbf3a46e0600d525",
+  "plan": {
+    "definition": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-stable-h77c61im/legacy-consumer/stdo_default.json",
+    "kind": "stdo.adoption-plan",
+    "schema_version": 1,
+    "definition_id": "urn:test:product-definition:one",
+    "definition_sha256": "689f760b23c17f330ba82f71cda628cac73ad9fe0a7f57e4bbf3a46e0600d525",
+    "selector": "stdo://channels/3.0.2",
+    "from": {
+      "basis": "stdo://releases/v3.0.0-rc.1/",
+      "manifest_sha256": "01475499db2cb50c8245373cdb1bca29ce08b442c7788529d2b30b18a5d60505"
+    },
+    "to": {
+      "basis": "stdo://releases/v3.0.2/",
+      "manifest_sha256": "835e6fe996ad7e0f9297195fc5d4cab3749212854efbe53297a328f9a0d5e4e5",
+      "cut": "v3.0.2",
+      "tag_object": "8c83a845f29b9c08ad2c2fce4bdd6d291f54fc61",
+      "commit": "e4233d53d10f1c8a990e8ab8eb0de095edd76a14",
+      "tree": "d025b130913c4379d0d562c6c2e87b0060d12de4"
+    },
+    "changed": true,
+    "plan_sha256": "004721bc77d41c6c7ac1e4a1089e5c78cb23d53b31c6b77b7270c4349f61398e",
+    "dry_run": true,
+    "install_status": "would_install",
+    "install_path": null
+  },
+  "unaccepted_refusal": "Mutating adoption requires --accept-plan-sha256 from a prior dry-run",
+  "applied": {
+    "definition": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-stable-h77c61im/legacy-consumer/stdo_default.json",
+    "kind": "stdo.adoption-plan",
+    "schema_version": 1,
+    "definition_id": "urn:test:product-definition:one",
+    "definition_sha256": "689f760b23c17f330ba82f71cda628cac73ad9fe0a7f57e4bbf3a46e0600d525",
+    "selector": "stdo://channels/3.0.2",
+    "from": {
+      "basis": "stdo://releases/v3.0.0-rc.1/",
+      "manifest_sha256": "01475499db2cb50c8245373cdb1bca29ce08b442c7788529d2b30b18a5d60505"
+    },
+    "to": {
+      "basis": "stdo://releases/v3.0.2/",
+      "manifest_sha256": "835e6fe996ad7e0f9297195fc5d4cab3749212854efbe53297a328f9a0d5e4e5",
+      "cut": "v3.0.2",
+      "tag_object": "8c83a845f29b9c08ad2c2fce4bdd6d291f54fc61",
+      "commit": "e4233d53d10f1c8a990e8ab8eb0de095edd76a14",
+      "tree": "d025b130913c4379d0d562c6c2e87b0060d12de4"
+    },
+    "changed": true,
+    "plan_sha256": "004721bc77d41c6c7ac1e4a1089e5c78cb23d53b31c6b77b7270c4349f61398e",
+    "dry_run": false,
+    "install_status": "installed",
+    "install_path": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-stable-h77c61im/store/releases/v3.0.2",
+    "accepted_plan_sha256": "004721bc77d41c6c7ac1e4a1089e5c78cb23d53b31c6b77b7270c4349f61398e"
+  },
+  "after": {
+    "$schema": "stdo://releases/v3.0.2/standards/schemas/product-definition.schema.json",
+    "kind": "stdo.product-definition",
+    "product": {
+      "definition_id": "urn:test:product-definition:one",
+      "name": "Test Product",
+      "source_project": "./",
+      "bounded_context": null
+    },
+    "constitution": {
+      "stdo": {
+        "source": {
+          "repository": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-stable-h77c61im/repository"
+        },
+        "selector": "stdo://channels/3.0.2",
+        "basis": {
+          "uri": "stdo://releases/v3.0.2/",
+          "manifest_sha256": "835e6fe996ad7e0f9297195fc5d4cab3749212854efbe53297a328f9a0d5e4e5"
+        }
+      },
+      "additional_authorities": [],
+      "entrypoints": [
+        {
+          "basis": "#/constitution/stdo/basis",
+          "uri": "standards/SPEC_METHOD.md"
+        }
+      ],
+      "agent_bootstrap": {
+        "entrypoint": "#/constitution/entrypoints/0",
+        "targets": [
+          "./AGENTS.md",
+          "./CLAUDE.md"
+        ]
+      }
+    },
+    "local_constitution": {
+      "axioms": [],
+      "overrides": [],
+      "disambiguations": []
+    },
+    "reference_frame_bases": [
+      {
+        "uri": "./specification/PRODUCT.md#frames",
+        "authority": [
+          "./specification/PRODUCT.md"
+        ],
+        "applies_to": [
+          "urn:test:product-definition:one"
+        ]
+      }
+    ],
+    "what": {
+      "intent": "./specification/INTENT.md",
+      "product": "./specification/PRODUCT.md",
+      "specification": [
+        "./specification/requirements/"
+      ]
+    },
+    "how": {
+      "common": [],
+      "build_tenants": [
+        {
+          "id": "urn:test:build-tenant:default",
+          "root": "./",
+          "design": [
+            "./design/"
+          ],
+          "implementation": [
+            "./src/"
+          ]
+        }
+      ]
+    },
+    "ticketing": {
+      "goals": "./specification/PRODUCT.md",
+      "tickets": {
+        "root": "./.ai-workspace/tickets/",
+        "lanes": {
+          "backlog": "./.ai-workspace/tickets/backlog/",
+          "active": "./.ai-workspace/tickets/active/",
+          "completed": "./.ai-workspace/tickets/completed/"
+        }
+      },
+      "comments": {
+        "root": "./.ai-workspace/comments/"
+      }
+    },
+    "composition": []
+  },
+  "legacy_install_unchanged": true,
+  "limits": "Isolated consumer fixture and actual installed manager; no consumer adoption outside the fixture."
+}

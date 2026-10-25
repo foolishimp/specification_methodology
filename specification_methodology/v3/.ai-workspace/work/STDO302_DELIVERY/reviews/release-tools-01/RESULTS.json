@@ -1,0 +1,111 @@
+{
+  "scope": "Bounded independent source/packager probes; synthetic native identities; no Git effects, actual release or manager proof",
+  "candidate": {
+    "native_tools_sha256": "3f9dee1ba83d882d3aa97bd9d86032f2688cba000c8b804f0f7660583ac1adc3",
+    "representation_sha256": "827ad7ec3b76b6416381f6415065817e85d425fb6819172110f58f66093e0b41"
+  },
+  "cases": [
+    {
+      "case": "archive output inside bundle",
+      "result": "refused",
+      "reason": "overlapping archive/bundle output paths"
+    },
+    {
+      "case": "portable extracted bundle with poisoned PYTHONPATH",
+      "result": "passed",
+      "exit": 0,
+      "verification": {
+        "commands": [
+          {
+            "argv": [
+              "/usr/local/bin/python3",
+              "-I",
+              "-B",
+              "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/reviews/release-tools-01/synthetic-tt6nnb9n/extracted/stdo-v3.0.2-supplement/tools/ac_graph.py",
+              "decode",
+              "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/reviews/release-tools-01/synthetic-tt6nnb9n/extracted/stdo-v3.0.2-supplement/CARRIER.json",
+              "--out",
+              "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-supplement-verify-jaxr9obm/CARRIER.json.recovered.json"
+            ],
+            "exit": 0,
+            "stderr": "",
+            "stdout": "{\n  \"model\": {\n    \"id\": \"urn:stdo:3.0.2:composition-release:interpretation:1\",\n    \"profile\": \"a_c.graphify.model/1\",\n    \"sha256\": \"b3f97a2667c277c21417230421aca02c26b3a7b19baa598197e94f67c5439151\"\n  },\n  \"status\": \"decoded\"\n}\n"
+          },
+          {
+            "argv": [
+              "/usr/local/bin/python3",
+              "-I",
+              "-B",
+              "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/reviews/release-tools-01/synthetic-tt6nnb9n/extracted/stdo-v3.0.2-supplement/tools/ac_graph.py",
+              "decode",
+              "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/reviews/release-tools-01/synthetic-tt6nnb9n/extracted/stdo-v3.0.2-supplement/GRAPHIFY_EXTRACTION.json",
+              "--out",
+              "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-supplement-verify-jaxr9obm/GRAPHIFY_EXTRACTION.json.recovered.json"
+            ],
+            "exit": 0,
+            "stderr": "",
+            "stdout": "{\n  \"model\": {\n    \"id\": \"urn:stdo:3.0.2:composition-release:interpretation:1\",\n    \"profile\": \"a_c.graphify.model/1\",\n    \"sha256\": \"b3f97a2667c277c21417230421aca02c26b3a7b19baa598197e94f67c5439151\"\n  },\n  \"status\": \"decoded\"\n}\n"
+          }
+        ],
+        "files": 23,
+        "kind": "stdo302.supplement-verification/1",
+        "limits": "Source custody and carrier recovery; no independent semantic acceptance or whole-method coverage",
+        "recovery": "equal JSON values; raw serialization equality not claimed",
+        "selection_sha256": "71353e99ed4fa02eecde4cc24a8be0919dea2849daf344a0e5040bb27aaf46f9"
+      }
+    },
+    {
+      "case": "existing bundle preserved",
+      "result": "refused",
+      "reason": "preserve existing output"
+    },
+    {
+      "case": "native source mismatch",
+      "result": "refused",
+      "reason": "representation/native source mismatch: standards/RELEASE.md"
+    },
+    {
+      "case": "ref contradiction despite refreshed manifest hash",
+      "result": "refused",
+      "reason": "native identity mismatch: qualified_ref"
+    },
+    {
+      "case": "publication planner exact destination and lease scope",
+      "result": "passed",
+      "sources": {
+        "refs/heads/main": "9999999999999999999999999999999999999999",
+        "refs/heads/release/specification_methodology/3.0.2": "1111111111111111111111111111111111111111",
+        "refs/tags/specification_methodology/v3.0.2": "2222222222222222222222222222222222222222"
+      },
+      "argv": [
+        "git",
+        "-C",
+        "/Users/jim/src/apps/specification_methodology",
+        "push",
+        "--atomic",
+        "--force-with-lease=refs/heads/main:7777777777777777777777777777777777777777",
+        "--force-with-lease=refs/heads/release/specification_methodology/3.0.2:",
+        "--force-with-lease=refs/tags/specification_methodology/v3.0.2:",
+        "https://github.com/foolishimp/specification_methodology.git",
+        "9999999999999999999999999999999999999999:refs/heads/main",
+        "1111111111111111111111111111111111111111:refs/heads/release/specification_methodology/3.0.2",
+        "2222222222222222222222222222222222222222:refs/tags/specification_methodology/v3.0.2"
+      ]
+    },
+    {
+      "case": "legacy collision refs/tags/v3.0.2",
+      "result": "refused",
+      "reason": "stable line collides with historical bare tag or RC history"
+    },
+    {
+      "case": "legacy collision refs/tags/specification_methodology/v3.0.2-rc.1",
+      "result": "refused",
+      "reason": "stable line collides with historical bare tag or RC history"
+    },
+    {
+      "case": "public readback preserves unrelated-ref claim",
+      "result": "refused",
+      "reason": "unrelated remote refs changed; reconcile and do not assert full preservation"
+    }
+  ]
+}

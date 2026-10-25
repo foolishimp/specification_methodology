@@ -48,9 +48,9 @@ Routes, in order:
 14. [REFERENCE_FRAME.md#foundation-to-law](../REFERENCE_FRAME.md#foundation-to-law)
 15. [SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding](../SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding)
 
-Size of this frame: 94374 bytes.
+Size of this frame: 94520 bytes.
 
-Source: SPEC_METHOD.md#canonical-statement sha256=b2773dc0c9feb429b6b357bcfd60e7df46e54db8adcb04dc8d6dbfa023b73677
+Source: SPEC_METHOD.md#canonical-statement sha256=06d5e8cbbda67952cd5671a4b01752a1eaaf30be84a790ee7e31b1551a5a787e
 
 ### Canonical statement
 
@@ -95,7 +95,7 @@ cost and forcing close review; they are not authority layers and cannot hide
 drift (§4).
 
 
-Source: FOUNDATIONS.md#product-lineage-objects sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5
+Source: FOUNDATIONS.md#product-lineage-objects sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e
 
 ### Product lineage objects
 
@@ -146,10 +146,12 @@ and not sufficient as an exact basis ([RELEASE §1](../RELEASE.md#1-context-and-
 states which).
 Equal version text does not collapse these objects. A selector or a
 mutable carrier may move; a release cut never moves. RELEASE §2 realises
-them, with the carriers that hold them, as refs of one release source.
+them, with the carriers that hold them, as refs of one release source. A
+release profile need not provide a mutable selector: discovery can resolve
+an immutable cut directly without changing that cut into a selector.
 
 
-Source: PRODUCT_DEFINITION.md#2-required-definition-relations sha256=7394f9d046e34f0ced33372dd0bd1d8983cfbab5453ebc8997d65d4e7a43a567
+Source: PRODUCT_DEFINITION.md#2-required-definition-relations sha256=7ee46438de5e4cb33cd8920814ecc90cfef95fb5eaee269f6f1a4fa389f4e523
 
 ## 2. Required definition relations
 
@@ -194,7 +196,7 @@ every local disambiguation names the exact context in which its resolution
 applies (P1, P3).
 
 
-Source: PRODUCT_DEFINITION.md#9-recursive-discovery-and-explicit-composition sha256=7394f9d046e34f0ced33372dd0bd1d8983cfbab5453ebc8997d65d4e7a43a567
+Source: PRODUCT_DEFINITION.md#9-recursive-discovery-and-explicit-composition sha256=7ee46438de5e4cb33cd8920814ecc90cfef95fb5eaee269f6f1a4fa389f4e523
 
 ## 9. Recursive discovery and explicit composition
 
@@ -416,7 +418,7 @@ continued validity. Unknown impact holds the dependent assurance or widens
 assessment; it does not require unrelated work to restart.
 
 
-Source: PRODUCT_DEFINITION.md#11-one-constitutional-surface-and-version-boundary sha256=7394f9d046e34f0ced33372dd0bd1d8983cfbab5453ebc8997d65d4e7a43a567
+Source: PRODUCT_DEFINITION.md#11-one-constitutional-surface-and-version-boundary sha256=7ee46438de5e4cb33cd8920814ecc90cfef95fb5eaee269f6f1a4fa389f4e523
 
 ## 11. One constitutional surface and version boundary
 
@@ -477,7 +479,7 @@ source may author a future cut; it must not silently govern a consumer
 (P6, P3).
 
 
-Source: FOUNDATIONS.md#authority-kinds sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5
+Source: FOUNDATIONS.md#authority-kinds sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e
 
 ### Authority kinds
 
@@ -544,7 +546,7 @@ so one list keeps the answer the same in every member, and a capability,
 a label or a passing check can never be read as a permission (P6).
 
 
-Source: FOUNDATIONS.md#the-frame-tuple sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5
+Source: FOUNDATIONS.md#the-frame-tuple sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e
 
 ### The frame tuple
 
@@ -980,7 +982,7 @@ relation is whether a decision rests on a surface whose sources are not
 those of the selected basis. This rule applies to derived surfaces under every selected carrier.
 
 
-Source: FOUNDATIONS.md#results sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5 rows=0/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
+Source: FOUNDATIONS.md#results sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e rows=0/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -1147,7 +1149,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: PRODUCT_DEFINITION.md#foundation-to-law-binding-a-project-to-the-method sha256=7394f9d046e34f0ced33372dd0bd1d8983cfbab5453ebc8997d65d4e7a43a567 rows=3/10 selected by the anchors this frame carries; the consumers paragraph of 10 items is omitted
+Source: PRODUCT_DEFINITION.md#foundation-to-law-binding-a-project-to-the-method sha256=7ee46438de5e4cb33cd8920814ecc90cfef95fb5eaee269f6f1a4fa389f4e523 rows=3/10 selected by the anchors this frame carries; the consumers paragraph of 10 items is omitted
 
 ### Foundation to law: binding a project to the method
 
@@ -1243,7 +1245,7 @@ global context, universal completeness or domain authority inferred from
 adopting the member.
 
 
-Source: SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding sha256=b2773dc0c9feb429b6b357bcfd60e7df46e54db8adcb04dc8d6dbfa023b73677 rows=1/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
+Source: SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding sha256=06d5e8cbbda67952cd5671a4b01752a1eaaf30be84a790ee7e31b1551a5a787e rows=1/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
 
 ### Foundation to law: chain, outcome and build-tenant binding
 

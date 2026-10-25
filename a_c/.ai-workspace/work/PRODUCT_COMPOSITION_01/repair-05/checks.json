@@ -1,0 +1,107 @@
+[
+  {
+    "name": "predecessor",
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/PRODUCT_COMPOSITION_01/repair-05/replay_predecessor.py"
+    ],
+    "exit": 0,
+    "started_ns": 1792944596815385000,
+    "ended_ns": 1792944597969238000,
+    "source_freeze": "../source-freeze-05.json",
+    "source_freeze_sha256": "25c6f674d003f4632a647cf7e385b936dae7e817e96a3e637d50af0cf252aef9",
+    "log": "predecessor.log",
+    "sha256": "41172c44873fa062dc932cfbc9db7b5c0ee969837ce7e91f74b97c87583af093"
+  },
+  {
+    "name": "targeted",
+    "argv": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "a_c/build_tenants/graphify/test_env",
+      "-p",
+      "test_ac_support_composition.py",
+      "-v"
+    ],
+    "exit": 0,
+    "started_ns": 1792944597970542000,
+    "ended_ns": 1792944622616401000,
+    "source_freeze": "../source-freeze-05.json",
+    "source_freeze_sha256": "25c6f674d003f4632a647cf7e385b936dae7e817e96a3e637d50af0cf252aef9",
+    "log": "targeted.log",
+    "sha256": "3a073152ee2475a247f499b0a8e58717058f12f29e196f7bb9ef74e779d5a276"
+  },
+  {
+    "name": "support-suite",
+    "argv": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "a_c/build_tenants/graphify/test_env",
+      "-p",
+      "test_ac_support*.py",
+      "-v"
+    ],
+    "exit": 0,
+    "started_ns": 1792944622617759000,
+    "ended_ns": 1792944711456385000,
+    "source_freeze": "../source-freeze-05.json",
+    "source_freeze_sha256": "25c6f674d003f4632a647cf7e385b936dae7e817e96a3e637d50af0cf252aef9",
+    "log": "support-suite.log",
+    "sha256": "6204a169d49344680fcfdc195050f60e74eb3972cd2cdf596e0513f6a6bed1a2"
+  },
+  {
+    "name": "typing",
+    "argv": [
+      "a_c/.venv/bin/python",
+      "-m",
+      "mypy",
+      "--strict",
+      "a_c/build_tenants/graphify/code/ac_support.py",
+      "a_c/build_tenants/graphify/code/ac_support_core.py",
+      "a_c/build_tenants/graphify/code/ac_support_effects.py",
+      "a_c/build_tenants/graphify/code/ac_support_composition.py"
+    ],
+    "exit": 0,
+    "started_ns": 1792944711457700000,
+    "ended_ns": 1792944712836541000,
+    "source_freeze": "../source-freeze-05.json",
+    "source_freeze_sha256": "25c6f674d003f4632a647cf7e385b936dae7e817e96a3e637d50af0cf252aef9",
+    "log": "typing.log",
+    "sha256": "71144743c83babea384888a735db0c4daba3d4d7b7942b6839984bd5c21b52bb"
+  },
+  {
+    "name": "whitespace",
+    "argv": [
+      "git",
+      "diff",
+      "--check",
+      "--",
+      "a_c/build_tenants/graphify/code/ac_support.py",
+      "a_c/build_tenants/graphify/code/ac_support_composition.py",
+      "a_c/build_tenants/graphify/code/ac_support_core.py",
+      "a_c/build_tenants/graphify/code/ac_support_effects.py",
+      "a_c/build_tenants/graphify/design/fd-composition.md",
+      "a_c/build_tenants/graphify/examples/fd-composition.md",
+      "a_c/build_tenants/graphify/test_env/test_ac_support_composition.py",
+      "a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py",
+      "a_c/specification/GOALS.md",
+      "a_c/specification/requirements/fd-composition.md"
+    ],
+    "exit": 0,
+    "started_ns": 1792944712837821000,
+    "ended_ns": 1792944712876513000,
+    "source_freeze": "../source-freeze-05.json",
+    "source_freeze_sha256": "25c6f674d003f4632a647cf7e385b936dae7e817e96a3e637d50af0cf252aef9",
+    "log": "whitespace.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

@@ -51,19 +51,67 @@ class _Anchors(HTMLParser):
                 self.values.add(value)
 
 
+def _container_line(line: str, containers: list[tuple[str, int]]) -> tuple[str, list[tuple[str, int]]]:
+    """Consume the continued list/quote containers of one physical line."""
+    matched: list[tuple[str, int]] = []
+    for kind, width in containers:
+        prefix = re.match(r"^[ \t]*", line)
+        assert prefix is not None
+        line = prefix[0].expandtabs(4) + line[len(prefix[0]):]
+        if kind == "quote":
+            marker = re.match(r"^ {0,3}>[ \t]?", line)
+            if marker is None:
+                break
+            line = line[marker.end():]
+        elif not line.strip():
+            line = ""  # Blank lines retain list membership.
+        elif line.startswith(" " * width):
+            line = line[width:]
+        else:
+            break
+        matched.append((kind, width))
+    return line, matched
+
+
 def _markdown_text(text: str) -> str:
-    """Remove comments and fenced/indented examples before identifying anchors."""
+    """Exclude literal blocks while retaining list/quote content coordinates."""
     lines: list[str] = []
+    containers: list[tuple[str, int]] = []
     fence: str | None = None
     paragraph = False
-    for line in re.sub(r"<!--.*?-->", "", text, flags=re.S).splitlines():
-        match = re.match(r"^ {0,3}(`{3,}|~{3,})(.*)$", line)
+    for physical in re.sub(r"<!--.*?-->", "", text, flags=re.S).splitlines():
+        line, matched = _container_line(physical, containers)
         if fence is not None:
-            if match and match[1][0] == fence[0] and len(match[1]) >= len(fence) and not match[2].strip():
-                fence = None
-                lines.append("")
-            continue
-        if match:
+            if matched == containers:
+                closing = re.match(r"^ {0,3}(`{3,}|~{3,})[ \t]*$", line)
+                if closing and closing[1][0] == fence[0] and len(closing[1]) >= len(fence):
+                    fence = None
+                    lines.append("")
+                continue
+            # A nested fence ends when its containing list/quote ends. The new
+            # outside line must still be considered for genuine anchors.
+            fence = None
+            paragraph = False
+        containers = matched
+        while True:
+            quote = re.match(r"^ {0,3}>[ \t]?", line)
+            if quote:
+                containers.append(("quote", 0))
+                line = line[quote.end():]
+                paragraph = False
+                continue
+            item = re.match(r"^( {0,3}(?:[-+*]|[0-9]{1,9}[.)]))([ \t]+)", line)
+            if item:
+                prefix = item[0].expandtabs(4)
+                padding = len(prefix) - len(item[1])
+                width = len(prefix) if padding <= 4 else len(item[1]) + 1
+                line = prefix[width:] + line[item.end():]
+                containers.append(("list", width))
+                paragraph = False
+                continue
+            break
+        match = re.match(r"^ {0,3}(`{3,}|~{3,})(.*)$", line)
+        if match and not (match[1][0] == "`" and "`" in match[2]):
             fence = match[1]
             lines.append("")
             paragraph = False
@@ -73,12 +121,19 @@ def _markdown_text(text: str) -> str:
         elif line.startswith(("    ", "\t")) and not paragraph:
             lines.append("")
         else:
-            # Indentation cannot start a code block inside an open paragraph;
-            # it may contain the continuation or delimiter of an inline span.
-            line = re.sub(r"^ {1,3}(?=#)", "", line)
-            lines.append(line)
+            # Indentation cannot start a code block inside an open paragraph.
+            # Container normalization only decides literal-block boundaries.
+            # Keep the prior heading surface: list/quote contents do not gain
+            # new heading anchors merely because their prefixes were consumed.
+            lines.append(re.sub(r"^ {1,3}(?=#)", "", physical))
             paragraph = not bool(re.match(r"^#{1,6}(?:[ \t]+|$)", line))
-    return "\n".join(lines)
+    visible = "\n".join(lines)
+    for value, position in _markdown_inline_tokens(visible):
+        if value == "<!--":
+            # Closed comments were removed above. A remaining actual opener
+            # therefore hides through EOF; escaped and code-span openers do not.
+            return visible[:position]
+    return visible
 
 
 _MARKDOWN_HTML_TAG = (
@@ -88,20 +143,13 @@ _MARKDOWN_HTML_TAG = (
     r'\s*/?>'
 )
 _MARKDOWN_INLINE_TOKEN = re.compile(
-    r"\\[!\"#$%&'()*+,\-./:;<=>?@\[\]\\^_`{|}~]|`+|" + _MARKDOWN_HTML_TAG
+    r"\\[!\"#$%&'()*+,\-./:;<=>?@\[\]\\^_`{|}~]|`+|<!--|" + _MARKDOWN_HTML_TAG
 )
 
 
-def _markdown_html(text: str) -> str:
-    """Select raw HTML tags outside Markdown escapes and inline code.
-
-    A code span closes only at a maximal backtick run of the same width,
-    including across line endings. Escapes apply outside spans; raw HTML tags
-    are consumed atomically, so backticks in their attributes are not Markdown
-    delimiters. This is the supported fragment scanner, not a Markdown renderer.
-    """
-    tags: list[str] = []
-    # Inline code cannot cross a paragraph boundary or an ATX block boundary.
+def _markdown_inline_tokens(text: str) -> Iterable[tuple[str, int]]:
+    """Yield raw tags/comment openers outside escapes and matched code spans."""
+    offset = 0
     for block in re.split(r"(\n[ \t]*\n|(?m:^[ ]{0,3}#{1,6}[^\S\n]+.*$))", text):
         runs: dict[int, list[int]] = {}
         for run in re.finditer(r"`+", block):
@@ -119,8 +167,18 @@ def _markdown_html(text: str) -> str:
                 if next_run < len(starts):
                     cursor = starts[next_run] + width
                 continue
-            tags.append(value)
-    return "\n".join(tags)
+            yield value, offset + token.start()
+        offset += len(block)
+
+
+def _markdown_html(text: str) -> str:
+    """Select raw HTML tags outside escapes, inline code and comment bodies.
+
+    Matched backtick runs may cross line endings within a paragraph; raw HTML
+    tags are atomic, including their quoted attributes. Block containers and
+    literal regions were excluded before this bounded fragment observation.
+    """
+    return "\n".join(value for value, _ in _markdown_inline_tokens(text) if value != "<!--")
 
 
 def _check_fragment(path: Path, raw: bytes, fragment: str) -> str:

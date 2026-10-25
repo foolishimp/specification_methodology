@@ -1,0 +1,46 @@
+{
+  "status": "passed affected current package/source checks",
+  "instruction_files_unchanged": 27,
+  "instruction_review": "Existing27-file review reused on byte-identical instruction bodies; no changed semantic text",
+  "package_commands": [
+    {
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/codex/tests/verify_package.py",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/codex"
+      ],
+      "exit": 0,
+      "stdout": "{\"destination_checked\": false, \"files\": 12, \"installed_checked\": false, \"inventory_sha256\": \"5d5f4049babdb5a999e04e8205de955ed666f68b6cc1a83cd3674be6022e5e85\", \"limits\": \"finite bytes/metadata/resources/custody only; no semantic or actual-host qualification\", \"local_links\": 18, \"status\": \"passed\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-I",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude/tests/check_package.py"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"status\": \"ok\",\n  \"errors\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check",
+        "--",
+        "stdo_skills"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "codex_source_routes_checked": 17,
+  "operative_runtime_contract_files_checked": 30,
+  "mutable_successor_method_dependency": false,
+  "new_actual_host_qualification": false,
+  "history": "HISTORY-freeze04 preserves exact04source/proof before current binding and tool-owned history append"
+}

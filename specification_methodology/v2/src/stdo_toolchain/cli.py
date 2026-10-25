@@ -46,7 +46,7 @@ def _parser() -> argparse.ArgumentParser:
     )
     subparsers = parser.add_subparsers(dest="command", required=True)
 
-    install = subparsers.add_parser("install", help="Install one immutable STDO RC cut")
+    install = subparsers.add_parser("install", help="Install one immutable STDO release cut")
     install.add_argument("cut")
     install.add_argument("--repository", default=OFFICIAL_REPOSITORY)
     install.add_argument("--manifest-sha256")

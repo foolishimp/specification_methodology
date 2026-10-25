@@ -13,7 +13,7 @@ from pathlib import Path
 import re
 import time
 from urllib.parse import unquote, urlsplit
-from typing import cast
+from typing import Iterable, cast
 
 import ac_support_core as c
 
@@ -153,7 +153,7 @@ def _local(runtime: c.Runtime, source: c.Object) -> Path:
 
 
 # Finite local scanner adapted from the independently delivered manager;
-# source custody is recorded in PRODUCT_COMPOSITION_01/fragment-scanner-loan.json.
+# source custody is recorded in PRODUCT_COMPOSITION_01/repair-05/fragment-scanner-loan.json.
 # This copy has no sibling runtime import.
 class _Anchors(HTMLParser):
     def __init__(self) -> None:
@@ -166,19 +166,67 @@ class _Anchors(HTMLParser):
                 self.values.add(value)
 
 
+def _container_line(line: str, containers: list[tuple[str, int]]) -> tuple[str, list[tuple[str, int]]]:
+    """Consume the continued list/quote containers of one physical line."""
+    matched: list[tuple[str, int]] = []
+    for kind, width in containers:
+        prefix = re.match(r"^[ \t]*", line)
+        assert prefix is not None
+        line = prefix[0].expandtabs(4) + line[len(prefix[0]):]
+        if kind == "quote":
+            marker = re.match(r"^ {0,3}>[ \t]?", line)
+            if marker is None:
+                break
+            line = line[marker.end():]
+        elif not line.strip():
+            line = ""  # Blank lines retain list membership.
+        elif line.startswith(" " * width):
+            line = line[width:]
+        else:
+            break
+        matched.append((kind, width))
+    return line, matched
+
+
 def _markdown_text(text: str) -> str:
-    """Remove comments and fenced/indented examples before identifying anchors."""
+    """Exclude literal blocks while retaining list/quote content coordinates."""
     lines: list[str] = []
+    containers: list[tuple[str, int]] = []
     fence: str | None = None
     paragraph = False
-    for line in re.sub(r"<!--.*?-->", "", text, flags=re.S).splitlines():
-        match = re.match(r"^ {0,3}(`{3,}|~{3,})(.*)$", line)
+    for physical in re.sub(r"<!--.*?-->", "", text, flags=re.S).splitlines():
+        line, matched = _container_line(physical, containers)
         if fence is not None:
-            if match and match[1][0] == fence[0] and len(match[1]) >= len(fence) and not match[2].strip():
-                fence = None
-                lines.append("")
-            continue
-        if match:
+            if matched == containers:
+                closing = re.match(r"^ {0,3}(`{3,}|~{3,})[ \t]*$", line)
+                if closing and closing[1][0] == fence[0] and len(closing[1]) >= len(fence):
+                    fence = None
+                    lines.append("")
+                continue
+            # A nested fence ends when its containing list/quote ends. The new
+            # outside line must still be considered for genuine anchors.
+            fence = None
+            paragraph = False
+        containers = matched
+        while True:
+            quote = re.match(r"^ {0,3}>[ \t]?", line)
+            if quote:
+                containers.append(("quote", 0))
+                line = line[quote.end():]
+                paragraph = False
+                continue
+            item = re.match(r"^( {0,3}(?:[-+*]|[0-9]{1,9}[.)]))([ \t]+)", line)
+            if item:
+                prefix = item[0].expandtabs(4)
+                padding = len(prefix) - len(item[1])
+                width = len(prefix) if padding <= 4 else len(item[1]) + 1
+                line = prefix[width:] + line[item.end():]
+                containers.append(("list", width))
+                paragraph = False
+                continue
+            break
+        match = re.match(r"^ {0,3}(`{3,}|~{3,})(.*)$", line)
+        if match and not (match[1][0] == "`" and "`" in match[2]):
             fence = match[1]
             lines.append("")
             paragraph = False
@@ -188,12 +236,19 @@ def _markdown_text(text: str) -> str:
         elif line.startswith(("    ", "\t")) and not paragraph:
             lines.append("")
         else:
-            # Indentation cannot start a code block inside an open paragraph;
-            # it may contain the continuation or delimiter of an inline span.
-            line = re.sub(r"^ {1,3}(?=#)", "", line)
-            lines.append(line)
+            # Indentation cannot start a code block inside an open paragraph.
+            # Container normalization only decides literal-block boundaries.
+            # Keep the prior heading surface: list/quote contents do not gain
+            # new heading anchors merely because their prefixes were consumed.
+            lines.append(re.sub(r"^ {1,3}(?=#)", "", physical))
             paragraph = not bool(re.match(r"^#{1,6}(?:[ \t]+|$)", line))
-    return "\n".join(lines)
+    visible = "\n".join(lines)
+    for value, position in _markdown_inline_tokens(visible):
+        if value == "<!--":
+            # Closed comments were removed above. A remaining actual opener
+            # therefore hides through EOF; escaped and code-span openers do not.
+            return visible[:position]
+    return visible
 
 
 _MARKDOWN_HTML_TAG = (
@@ -203,20 +258,13 @@ _MARKDOWN_HTML_TAG = (
     r'\s*/?>'
 )
 _MARKDOWN_INLINE_TOKEN = re.compile(
-    r"\\[!\"#$%&'()*+,\-./:;<=>?@\[\]\\^_`{|}~]|`+|" + _MARKDOWN_HTML_TAG
+    r"\\[!\"#$%&'()*+,\-./:;<=>?@\[\]\\^_`{|}~]|`+|<!--|" + _MARKDOWN_HTML_TAG
 )
 
 
-def _markdown_html(text: str) -> str:
-    """Select raw HTML tags outside Markdown escapes and inline code.
-
-    A code span closes only at a maximal backtick run of the same width,
-    including across line endings. Escapes apply outside spans; raw HTML tags
-    are consumed atomically, so backticks in their attributes are not Markdown
-    delimiters. This is the supported fragment scanner, not a Markdown renderer.
-    """
-    tags: list[str] = []
-    # Inline code cannot cross a paragraph boundary or an ATX block boundary.
+def _markdown_inline_tokens(text: str) -> Iterable[tuple[str, int]]:
+    """Yield raw tags/comment openers outside escapes and matched code spans."""
+    offset = 0
     for block in re.split(r"(\n[ \t]*\n|(?m:^[ ]{0,3}#{1,6}[^\S\n]+.*$))", text):
         runs: dict[int, list[int]] = {}
         for run in re.finditer(r"`+", block):
@@ -234,9 +282,18 @@ def _markdown_html(text: str) -> str:
                 if next_run < len(starts):
                     cursor = starts[next_run] + width
                 continue
-            tags.append(value)
-    return "\n".join(tags)
+            yield value, offset + token.start()
+        offset += len(block)
 
+
+def _markdown_html(text: str) -> str:
+    """Select raw HTML tags outside escapes, inline code and comment bodies.
+
+    Matched backtick runs may cross line endings within a paragraph; raw HTML
+    tags are atomic, including their quoted attributes. Block containers and
+    literal regions were excluded before this bounded fragment observation.
+    """
+    return "\n".join(value for value, _ in _markdown_inline_tokens(text) if value != "<!--")
 
 
 def _uri_source(runtime: c.Runtime, base: c.Object, uri: str, selected: c.Object) -> None:
@@ -427,6 +484,20 @@ def authorize_source(runtime: c.Runtime, source: c.Object, principal: str | None
             "route": binding["route"], "resources": [snapshot]}
 
 
+def _authorize_retained(runtime: c.Runtime, principal: str, snapshots: list[c.Object]) -> None:
+    """Check original provenance and the recipient's current source authority.
+
+    Eligibility alone does not grant a route to the source owner. Conversely,
+    current authorization cannot replace historical ancestry with a newly clean
+    declaration. Unknown influence remains unknown and grants no source access.
+    """
+    _, binding = _binding(runtime, principal)
+    for snapshot in snapshots:
+        _eligible(runtime, binding, snapshot, require_allow=True)
+        if snapshot.get("unknown") is not True:
+            authorize_source(runtime, c.as_object(snapshot["source"]), principal)
+
+
 def _exposures(runtime: c.Runtime, actor_id: str) -> list[c.Object]:
     """Use observed delivery and stable actor identity, independent of policy id."""
     records, query = c._history(runtime, "acquisition", {"payload.schema": "a_c.fd-support.acquisition/1", "payload.recipient": actor_id})
@@ -528,6 +599,8 @@ def context(runtime: c.Runtime, payload: c.Object, principal: str) -> None:
     saved = payload.get("composition")
     if not isinstance(saved, dict) or saved.get("declaration") != runtime.policy["composition"]:
         raise c.SupportError("basis_stale", "Context composition binding differs; assemble a current context")
+    _authorize_retained(runtime, principal, [c.as_object(item) for field in ("input_sources", "output_sources")
+                                            for item in c.as_list(saved[field])])
 
 
 def output_sources(runtime: c.Runtime, attempt_ref: c.Object) -> list[c.Object]:
@@ -547,10 +620,8 @@ def output_sources(runtime: c.Runtime, attempt_ref: c.Object) -> list[c.Object]:
 def authorize_output(runtime: c.Runtime, attempt_ref: c.Object) -> list[c.Object]:
     if runtime.composition is None:
         return []
-    _, binding = _binding(runtime, runtime.principal_id)
     snapshots = output_sources(runtime, attempt_ref)
-    for snapshot in snapshots:
-        _eligible(runtime, binding, snapshot, require_allow=True)
+    _authorize_retained(runtime, runtime.principal_id, snapshots)
     return snapshots
 
 
@@ -562,8 +633,7 @@ def context_binding(runtime: c.Runtime, packet: c.Object, principal: str) -> c.O
     snapshots = [_snapshot(runtime, resources, name) for name in c._strings(output["sources"])]
     if output["complete"] is not True:
         snapshots.append(_unknown(runtime.policy["composition"]))
-    for snapshot in snapshots:
-        _eligible(runtime, binding, snapshot, require_allow=True)
+    _authorize_retained(runtime, principal, snapshots)
     inputs = authored_context(runtime, principal)
     for ref in c._all_source_refs(packet):
         scope = authorize_source(runtime, ref, principal)
@@ -580,15 +650,13 @@ def context_binding(runtime: c.Runtime, packet: c.Object, principal: str) -> c.O
 def authored_context(runtime: c.Runtime, target: str) -> list[c.Object]:
     """Inline packet text is requester-produced content, not exempt source data."""
     doc, producer = _binding(runtime, runtime.principal_id)
-    _, receiver = _binding(runtime, target)
     output = c.as_object(producer["output"])
     resources = c.as_object(doc["resources"])
     snapshots = [_snapshot(runtime, resources, name) for name in c._strings(output["sources"])]
     if output["complete"] is not True:
         snapshots.append(_unknown(runtime.policy["composition"]))
     snapshots.extend(_exposures(runtime, c.text(runtime.principal["actor_id"])))
-    for snapshot in snapshots:
-        _eligible(runtime, receiver, snapshot, require_allow=True)
+    _authorize_retained(runtime, target, snapshots)
     return snapshots
 
 

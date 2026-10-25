@@ -1,0 +1,2256 @@
+{
+  "source_freeze_sha256": "25c6f674d003f4632a647cf7e385b936dae7e817e96a3e637d50af0cf252aef9",
+  "scope": "Independent public CLI counterexamples and finite controls; cooperative host and controlled Python actors only",
+  "cases": [
+    {
+      "name": "actual recipient route, archived04 admission, actual permitted delivery, revoked output route",
+      "result": "pass",
+      "direct": {
+        "evidence": {
+          "id": "sha256:d8e97ff24e1e10485dd5a963ddeec6d242e4128cafd33e06040b904994cbc0ba",
+          "sha256": "d8e97ff24e1e10485dd5a963ddeec6d242e4128cafd33e06040b904994cbc0ba"
+        },
+        "id": "composition-3",
+        "operation": "source.read",
+        "operation_outcome": {
+          "cause": "authority_missing",
+          "core_value": "out_of_frame",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(source.read): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "refused(authority)"
+        },
+        "refusal": {
+          "code": "authority_missing",
+          "gaps": [
+            {
+              "detail_count": 0,
+              "diagnostics": "withheld by selected composition binding",
+              "effect_state": "completion_unknown",
+              "end_established": false,
+              "history_state": "not_established_by_refusal",
+              "private_retention": "included in operation publication"
+            }
+          ],
+          "reason": "Operation unavailable under the selected composition binding",
+          "source_refs": []
+        },
+        "result": null,
+        "schema": "a_c.fd-support.response/1",
+        "status": "refused"
+      },
+      "inline": {
+        "evidence": {
+          "id": "sha256:f35cfe2b2d432a1f53f7fa7d2d77d035bc0d3d9f4eb0916dc5ed2689a244837a",
+          "sha256": "f35cfe2b2d432a1f53f7fa7d2d77d035bc0d3d9f4eb0916dc5ed2689a244837a"
+        },
+        "id": "composition-4",
+        "operation": "context.assemble",
+        "operation_outcome": {
+          "cause": "authority_missing",
+          "core_value": "out_of_frame",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(context.assemble): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "refused(authority)"
+        },
+        "refusal": {
+          "code": "authority_missing",
+          "gaps": [
+            {
+              "detail_count": 0,
+              "diagnostics": "withheld by selected composition binding",
+              "effect_state": "completion_unknown",
+              "end_established": false,
+              "history_state": "not_established_by_refusal",
+              "private_retention": "included in operation publication"
+            }
+          ],
+          "reason": "Operation unavailable under the selected composition binding",
+          "source_refs": []
+        },
+        "result": null,
+        "schema": "a_c.fd-support.response/1",
+        "status": "refused"
+      },
+      "predecessor_pins": {
+        "a_c/build_tenants/graphify/code/ac_support.py": "f65efad15fd770075650ce0484df5b1cea14612047a82918d35fdc4f870deafa",
+        "a_c/build_tenants/graphify/code/ac_support_composition.py": "3ed9fcf55a86b7d24e5b376b4b6ad892dd26c3606c73bff176342352bb97bf84",
+        "a_c/build_tenants/graphify/code/ac_support_core.py": "555f387bf8e53e85904383e6c5521eebd39537dc668f87936544a588efe4cb9f",
+        "a_c/build_tenants/graphify/code/ac_support_effects.py": "f1b5a92a31a05abade25810539bc78dc69c96768391f323625877da60df155c9"
+      },
+      "unchanged_policy_sha256": "f4d78143a665d5402d2cfbf34e48743d0ad36ccc99b4fadb96d3f678c6d7f66f",
+      "old_context": {
+        "id": "sha256:3eedf24094387daf2b0d71f245a3e60473aa73b799ffb7d73336831d3b712a48",
+        "sha256": "3eedf24094387daf2b0d71f245a3e60473aa73b799ffb7d73336831d3b712a48"
+      },
+      "old_preflight": {
+        "id": "sha256:1898945a156287333ff8f8e815d4ec7d53f2ae0f52b2b3ce18faedba65a1a2c4",
+        "sha256": "1898945a156287333ff8f8e815d4ec7d53f2ae0f52b2b3ce18faedba65a1a2c4"
+      },
+      "new_preflight": {
+        "evidence": {
+          "id": "sha256:9e5b1e1c4db68b5aeedd0759b34c46a2512644c11792efdcb211594d25bde0fb",
+          "sha256": "9e5b1e1c4db68b5aeedd0759b34c46a2512644c11792efdcb211594d25bde0fb"
+        },
+        "id": "composition-7",
+        "operation": "contract.preflight",
+        "operation_outcome": {
+          "cause": "authority_missing",
+          "core_value": "out_of_frame",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(contract.preflight): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "refused(authority)"
+        },
+        "refusal": {
+          "code": "authority_missing",
+          "gaps": [
+            {
+              "detail_count": 0,
+              "diagnostics": "withheld by selected composition binding",
+              "effect_state": "completion_unknown",
+              "end_established": false,
+              "history_state": "not_established_by_refusal",
+              "private_retention": "included in operation publication"
+            }
+          ],
+          "reason": "Operation unavailable under the selected composition binding",
+          "source_refs": []
+        },
+        "result": null,
+        "schema": "a_c.fd-support.response/1",
+        "status": "refused"
+      },
+      "new_dispatch": {
+        "evidence": {
+          "id": "sha256:2057d5b5ed7f00b2761d022f28305ac187f784f2f073c4d52c72a16719f54931",
+          "sha256": "2057d5b5ed7f00b2761d022f28305ac187f784f2f073c4d52c72a16719f54931"
+        },
+        "id": "composition-8",
+        "operation": "dispatch.start",
+        "operation_outcome": {
+          "cause": "authority_missing",
+          "core_value": "out_of_frame",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(dispatch.start): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "refused(authority)"
+        },
+        "refusal": {
+          "code": "authority_missing",
+          "gaps": [
+            {
+              "detail_count": 0,
+              "diagnostics": "withheld by selected composition binding",
+              "effect_state": "completion_unknown",
+              "end_established": false,
+              "history_state": "not_established_by_refusal",
+              "private_retention": "included in operation publication"
+            }
+          ],
+          "reason": "Operation unavailable under the selected composition binding",
+          "source_refs": []
+        },
+        "result": null,
+        "schema": "a_c.fd-support.response/1",
+        "status": "refused"
+      },
+      "permitted_attempt": {
+        "id": "sha256:02f5fc421eac7fe554843e5ca0a79604ced8b1d6a837c289ba650781f7584dd9",
+        "sha256": "02f5fc421eac7fe554843e5ca0a79604ced8b1d6a837c289ba650781f7584dd9"
+      },
+      "actual_stdin_sha256": "82b1ff07103c8713ec1c96a666903ff012e64c6b9c24b8f3c51104fe4ad2c945",
+      "expected_context_sha256": "82b1ff07103c8713ec1c96a666903ff012e64c6b9c24b8f3c51104fe4ad2c945",
+      "allowed_output": {
+        "evidence": {
+          "id": "sha256:c2e6d16098ba38ef79cf5ed9aeee77c73e1b00ff9d38ff22e8a5971a4fa46cde",
+          "sha256": "c2e6d16098ba38ef79cf5ed9aeee77c73e1b00ff9d38ff22e8a5971a4fa46cde"
+        },
+        "id": "composition-14",
+        "operation": "evidence.read",
+        "operation_outcome": {
+          "cause": "declared output available",
+          "core_value": "satisfied",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(evidence.read)[request_sha256=6e447e80e17f986a2f185b5e727b3b2ad5339059b5603b76a5f1df8c97bc7a4f]: declared output availability",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "returned"
+        },
+        "refusal": null,
+        "result": {
+          "artifact": null,
+          "value": {
+            "artifact": {
+              "id": "sha256:6fff3bc34b1c4e0f650939281130f348d0d3ba0b835adfa9d195f7220529febd",
+              "sha256": "6fff3bc34b1c4e0f650939281130f348d0d3ba0b835adfa9d195f7220529febd"
+            },
+            "envelope": {
+              "kind": "raw",
+              "payload": {
+                "attempt": {
+                  "id": "sha256:02f5fc421eac7fe554843e5ca0a79604ced8b1d6a837c289ba650781f7584dd9",
+                  "sha256": "02f5fc421eac7fe554843e5ca0a79604ced8b1d6a837c289ba650781f7584dd9"
+                },
+                "bytes_base64": "ODJiMWZmMDcxMDNjODcxM2VjMWM5NmE2NjY5MDNmZjAxMmU2NGM2YjljMjRiOGYzYzUxMTA0ZmU0YWQyYzk0NQo=",
+                "complete": true,
+                "decoder": {
+                  "decode_json_string": false,
+                  "format": "json",
+                  "pointer": null
+                },
+                "interval": {
+                  "clock": "unix_ns",
+                  "ended_ns": 1792944890193709000,
+                  "started_ns": 1792944890019232000
+                },
+                "producer": {
+                  "actor": {
+                    "actor_id": "worker",
+                    "authorship": "worker",
+                    "family": "A",
+                    "operations": [
+                      "checks.evaluate",
+                      "composition.inspect",
+                      "context.assemble",
+                      "contract.preflight",
+                      "dispatch.cancel",
+                      "dispatch.observe",
+                      "dispatch.start",
+                      "events.wait",
+                      "evidence.read",
+                      "graph.project",
+                      "records.find",
+                      "records.read",
+                      "refresh.prepare",
+                      "relations.query",
+                      "resources.aggregate",
+                      "results.conjoin",
+                      "return.capture",
+                      "return.check",
+                      "review.prepare",
+                      "source.read",
+                      "tools.describe",
+                      "work.project",
+                      "work.write",
+                      "workspace.observe"
+                    ],
+                    "role": "Worker",
+                    "role_binding": {
+                      "engine": "workspace-regular-file",
+                      "object": null,
+                      "path": "inputs/law.txt",
+                      "root": "workspace",
+                      "selector": null,
+                      "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+                    },
+                    "role_transition": null
+                  },
+                  "executable": {
+                    "path": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+                    "sha256": "a7f5b535d61d1c7326824204ac80f045a97a652abb154421e2c74fcc365a3539"
+                  },
+                  "executor_id": "registered",
+                  "principal_id": "worker"
+                },
+                "schema": "a_c.fd-support.process-output/1",
+                "slot": "final_stdout_object",
+                "stream": "stdout"
+              },
+              "provenance": {
+                "actor": {
+                  "actor_id": "executive",
+                  "authorship": "executive",
+                  "family": "A",
+                  "operations": [
+                    "checks.evaluate",
+                    "composition.inspect",
+                    "context.assemble",
+                    "contract.preflight",
+                    "dispatch.cancel",
+                    "dispatch.observe",
+                    "dispatch.start",
+                    "events.wait",
+                    "evidence.read",
+                    "graph.project",
+                    "records.find",
+                    "records.read",
+                    "refresh.prepare",
+                    "relations.query",
+                    "resources.aggregate",
+                    "results.conjoin",
+                    "return.capture",
+                    "return.check",
+                    "review.prepare",
+                    "source.read",
+                    "tools.describe",
+                    "work.project",
+                    "work.write",
+                    "workspace.observe"
+                  ],
+                  "role": "Executive",
+                  "role_binding": {
+                    "engine": "workspace-regular-file",
+                    "object": null,
+                    "path": "inputs/law.txt",
+                    "root": "workspace",
+                    "selector": null,
+                    "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+                  },
+                  "role_transition": null
+                },
+                "attempt": {
+                  "id": "sha256:02f5fc421eac7fe554843e5ca0a79604ced8b1d6a837c289ba650781f7584dd9",
+                  "sha256": "02f5fc421eac7fe554843e5ca0a79604ced8b1d6a837c289ba650781f7584dd9"
+                },
+                "definition_sha256": "5f83533102e9c8073e49aaf7a720b60476623f7d3122c21b0561f0f15ae81095",
+                "method_profile_sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7",
+                "observed_interval": {
+                  "clock": "unix_ns",
+                  "ended_ns": 1792944890193792000,
+                  "started_ns": 1792944890019232000
+                },
+                "policy_sha256": "9b981cc09739ca23fe8ec31651174777e249ac235f3145bb85bd44157cdebe5f",
+                "product_id": "urn:test:product",
+                "request_id": "composition-11",
+                "request_sha256": "fd5151c725dabe105c7f0697b7648575a89534c971e4afdea50aca459ac18fa5",
+                "requester_principal": "executive",
+                "target_principal": "worker"
+              },
+              "schema": "a_c.fd-support.artifact/1"
+            },
+            "parent_sha256": "6fff3bc34b1c4e0f650939281130f348d0d3ba0b835adfa9d195f7220529febd",
+            "size_bytes": 3067
+          }
+        },
+        "schema": "a_c.fd-support.response/1",
+        "status": "ok"
+      },
+      "revoked_output": {
+        "evidence": {
+          "id": "sha256:c5daf3ecdea63059d52e54626e2e9ad3a7833567461430122b6af19fb3f119c1",
+          "sha256": "c5daf3ecdea63059d52e54626e2e9ad3a7833567461430122b6af19fb3f119c1"
+        },
+        "id": "composition-15",
+        "operation": "evidence.read",
+        "operation_outcome": {
+          "cause": "authority_missing",
+          "core_value": "out_of_frame",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(evidence.read): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "refused(authority)"
+        },
+        "refusal": {
+          "code": "authority_missing",
+          "gaps": [
+            {
+              "detail_count": 0,
+              "diagnostics": "withheld by selected composition binding",
+              "effect_state": "completion_unknown",
+              "end_established": false,
+              "history_state": "not_established_by_refusal",
+              "private_retention": "included in operation publication"
+            }
+          ],
+          "reason": "Operation unavailable under the selected composition binding",
+          "source_refs": []
+        },
+        "result": null,
+        "schema": "a_c.fd-support.response/1",
+        "status": "refused"
+      }
+    },
+    {
+      "name": "eligible authorized export preserves positive inline path without granting donor read",
+      "result": "pass",
+      "initial": {
+        "evidence": {
+          "id": "sha256:62095b7735a5827f02a1ace8c2e4cf9814ebbd3fbcecd9280afe1931cd089f57",
+          "sha256": "62095b7735a5827f02a1ace8c2e4cf9814ebbd3fbcecd9280afe1931cd089f57"
+        },
+        "id": "composition-1",
+        "operation": "source.read",
+        "operation_outcome": {
+          "cause": "acquisition_denied",
+          "core_value": "out_of_frame",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(source.read): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "refused(authority)"
+        },
+        "refusal": {
+          "code": "acquisition_denied",
+          "gaps": [
+            {
+              "detail_count": 0,
+              "diagnostics": "withheld by selected composition binding",
+              "effect_state": "completion_unknown",
+              "end_established": false,
+              "history_state": "not_established_by_refusal",
+              "private_retention": "included in operation publication"
+            }
+          ],
+          "reason": "Selected receiving information policy does not permit this disclosure",
+          "source_refs": []
+        },
+        "result": null,
+        "schema": "a_c.fd-support.response/1",
+        "status": "refused"
+      },
+      "ineligible": {
+        "evidence": {
+          "id": "sha256:9023356c78d76c5ac2b0409443f2d8d6dad587a46d2271a6a4cd878ed49a1477",
+          "sha256": "9023356c78d76c5ac2b0409443f2d8d6dad587a46d2271a6a4cd878ed49a1477"
+        },
+        "id": "composition-2",
+        "operation": "source.read",
+        "operation_outcome": {
+          "cause": "acquisition_denied",
+          "core_value": "out_of_frame",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(source.read): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "refused(authority)"
+        },
+        "refusal": {
+          "code": "acquisition_denied",
+          "gaps": [
+            {
+              "detail_count": 0,
+              "diagnostics": "withheld by selected composition binding",
+              "effect_state": "completion_unknown",
+              "end_established": false,
+              "history_state": "not_established_by_refusal",
+              "private_retention": "included in operation publication"
+            }
+          ],
+          "reason": "Selected receiving information policy does not permit this disclosure",
+          "source_refs": []
+        },
+        "result": null,
+        "schema": "a_c.fd-support.response/1",
+        "status": "refused"
+      },
+      "allowed": {
+        "evidence": {
+          "id": "sha256:4f829c2a1c2c664d8849f3d9ac15a60407db4782178df0dcbd25ada765cb36cb",
+          "sha256": "4f829c2a1c2c664d8849f3d9ac15a60407db4782178df0dcbd25ada765cb36cb"
+        },
+        "id": "composition-3",
+        "operation": "source.read",
+        "operation_outcome": {
+          "cause": "declared output available",
+          "core_value": "satisfied",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(source.read)[request_sha256=08b05ec2dc06404d024ec11f832ac252ab4b5e3b52c6b3ebd8a03c0cde3fae8a]: declared output availability",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "returned"
+        },
+        "refusal": null,
+        "result": {
+          "artifact": null,
+          "value": {
+            "acquisition": {},
+            "content": "A restatement of the donor algorithm",
+            "coordinates": null,
+            "encoding": "utf8",
+            "parent_sha256": "c9ccf11bfc5166d868e3f98c184a6ef27fbd04d6ea107c3f91fdec34c587496b",
+            "selected_sha256": "c9ccf11bfc5166d868e3f98c184a6ef27fbd04d6ea107c3f91fdec34c587496b",
+            "size_bytes": 36,
+            "source": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/summary.txt",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "c9ccf11bfc5166d868e3f98c184a6ef27fbd04d6ea107c3f91fdec34c587496b"
+            }
+          }
+        },
+        "schema": "a_c.fd-support.response/1",
+        "status": "ok"
+      },
+      "context": {
+        "id": "sha256:21277ef3e17a1b555efa741b95830cfd0476bae23e40e124f220ab4e96f7405f",
+        "sha256": "21277ef3e17a1b555efa741b95830cfd0476bae23e40e124f220ab4e96f7405f"
+      },
+      "donor_denial": {
+        "evidence": {
+          "id": "sha256:f91a494e2fe112e43ba43ec53ed4e0550d3cd926556a974358a1cd9ed5195567",
+          "sha256": "f91a494e2fe112e43ba43ec53ed4e0550d3cd926556a974358a1cd9ed5195567"
+        },
+        "id": "composition-6",
+        "operation": "source.read",
+        "operation_outcome": {
+          "cause": "acquisition_denied",
+          "core_value": "out_of_frame",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(source.read): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "refused(authority)"
+        },
+        "refusal": {
+          "code": "acquisition_denied",
+          "gaps": [
+            {
+              "detail_count": 0,
+              "diagnostics": "withheld by selected composition binding",
+              "effect_state": "completion_unknown",
+              "end_established": false,
+              "history_state": "not_established_by_refusal",
+              "private_retention": "included in operation publication"
+            }
+          ],
+          "reason": "Selected receiving information policy does not permit this disclosure",
+          "source_refs": []
+        },
+        "result": null,
+        "schema": "a_c.fd-support.response/1",
+        "status": "refused"
+      }
+    },
+    {
+      "name": "actual capture/check then revoked parent route on return ingress and egress",
+      "result": "pass",
+      "attempt": {
+        "id": "sha256:27f155a18ede839253a88873de70be8e7fac512f54f647b78e46cccc00f5693d",
+        "sha256": "27f155a18ede839253a88873de70be8e7fac512f54f647b78e46cccc00f5693d"
+      },
+      "captured": {
+        "evidence": {
+          "id": "sha256:3aca0cd688a32b5d5facb31a4a64f4e770eef8faf92fbc9947ca83cf72304906",
+          "sha256": "3aca0cd688a32b5d5facb31a4a64f4e770eef8faf92fbc9947ca83cf72304906"
+        },
+        "id": "composition-8",
+        "operation": "return.capture",
+        "operation_outcome": {
+          "cause": "declared output available",
+          "core_value": "satisfied",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(return.capture): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "returned"
+        },
+        "refusal": null,
+        "result": {
+          "artifact": {
+            "id": "sha256:9008398af64b23188b358207f06e176a86d9bf372b755da2de1f94ddab39721f",
+            "sha256": "9008398af64b23188b358207f06e176a86d9bf372b755da2de1f94ddab39721f"
+          },
+          "value": {
+            "attempt": {
+              "id": "sha256:27f155a18ede839253a88873de70be8e7fac512f54f647b78e46cccc00f5693d",
+              "sha256": "27f155a18ede839253a88873de70be8e7fac512f54f647b78e46cccc00f5693d"
+            },
+            "binding_checks": {
+              "format_valid": true,
+              "gaps": []
+            },
+            "original": {
+              "activation": {
+                "id": "activation",
+                "sha256": "d07c53341bd8511db58bacc2ec00c6a589dcf42f0fc00c5dcba9732497804c49"
+              },
+              "actor": {
+                "authorship": "worker",
+                "family": "A",
+                "id": "worker"
+              },
+              "basis": {
+                "method_profile": {
+                  "id": "urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1",
+                  "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+                },
+                "observations": []
+              },
+              "consumer": "executive",
+              "evaluations": [],
+              "frame": {
+                "id": "frame",
+                "revision": "1"
+              },
+              "id": "reviewer-controlled-return",
+              "invalidators": [],
+              "not_performed": [],
+              "residuals": [
+                "not actor qualification"
+              ],
+              "schema": "a_c.fd-support.closed-return/1",
+              "subject": {
+                "id": "urn:test:subject",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+              },
+              "work_result": {
+                "candidate": null,
+                "cause": "controlled fixture",
+                "evidence": [],
+                "residuals": [
+                  "semantic work unperformed"
+                ],
+                "value": "incomplete"
+              }
+            },
+            "producer": {
+              "actor": {
+                "actor_id": "worker",
+                "authorship": "worker",
+                "family": "A",
+                "operations": [
+                  "checks.evaluate",
+                  "composition.inspect",
+                  "context.assemble",
+                  "contract.preflight",
+                  "dispatch.cancel",
+                  "dispatch.observe",
+                  "dispatch.start",
+                  "events.wait",
+                  "evidence.read",
+                  "graph.project",
+                  "records.find",
+                  "records.read",
+                  "refresh.prepare",
+                  "relations.query",
+                  "resources.aggregate",
+                  "results.conjoin",
+                  "return.capture",
+                  "return.check",
+                  "review.prepare",
+                  "source.read",
+                  "tools.describe",
+                  "work.project",
+                  "work.write",
+                  "workspace.observe"
+                ],
+                "role": "Worker",
+                "role_binding": {
+                  "engine": "workspace-regular-file",
+                  "object": null,
+                  "path": "inputs/law.txt",
+                  "root": "workspace",
+                  "selector": null,
+                  "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+                },
+                "role_transition": null
+              },
+              "attempt": {
+                "id": "sha256:27f155a18ede839253a88873de70be8e7fac512f54f647b78e46cccc00f5693d",
+                "sha256": "27f155a18ede839253a88873de70be8e7fac512f54f647b78e46cccc00f5693d"
+              },
+              "authenticated": true,
+              "principal_id": "worker"
+            },
+            "raw_payload": {
+              "id": "sha256:6f3696fd45b3993cfb08e126557577228cdece605075648bf07e8259ef3f14f1",
+              "sha256": "6f3696fd45b3993cfb08e126557577228cdece605075648bf07e8259ef3f14f1"
+            },
+            "return_contract": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/return.json",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "0dfc053e9847bddcd4bd1a58137fd803ff84112281caa2c11315e11afba56656"
+            },
+            "schema": "a_c.fd-support.return/1",
+            "transport": {
+              "complete": true,
+              "raw_sha256": "a040ea102862c2c11ebed01fab4a87067be484769d51bf25df833cc013880878",
+              "slot": "final_stdout_object"
+            }
+          }
+        },
+        "schema": "a_c.fd-support.response/1",
+        "status": "ok"
+      },
+      "checked": {
+        "evidence": {
+          "id": "sha256:c6b1ddd4b5e5a5e696e86c5421f9471cd54a8d043ae0a492bc7e474c0a98a83b",
+          "sha256": "c6b1ddd4b5e5a5e696e86c5421f9471cd54a8d043ae0a492bc7e474c0a98a83b"
+        },
+        "id": "composition-9",
+        "operation": "return.check",
+        "operation_outcome": {
+          "cause": "declared output available",
+          "core_value": "satisfied",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(return.check)[request_sha256=9e09ae8719f0c63bf4592d716a40ebb991f524c6867da5cd913fdb5644b64946]: declared output availability",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "returned"
+        },
+        "refusal": null,
+        "result": {
+          "artifact": null,
+          "value": {
+            "checks": [
+              {
+                "core_value": "satisfied",
+                "domain_outcome": true,
+                "expected": {
+                  "id": "frame",
+                  "revision": "1"
+                },
+                "historical": {
+                  "id": "frame",
+                  "revision": "1"
+                },
+                "predicate": "exact return frame"
+              },
+              {
+                "core_value": "satisfied",
+                "domain_outcome": true,
+                "expected": {
+                  "id": "activation",
+                  "sha256": "d07c53341bd8511db58bacc2ec00c6a589dcf42f0fc00c5dcba9732497804c49"
+                },
+                "historical": {
+                  "id": "activation",
+                  "sha256": "d07c53341bd8511db58bacc2ec00c6a589dcf42f0fc00c5dcba9732497804c49"
+                },
+                "predicate": "exact return activation"
+              },
+              {
+                "core_value": "satisfied",
+                "domain_outcome": true,
+                "expected": {
+                  "id": "urn:test:subject",
+                  "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "historical": {
+                  "id": "urn:test:subject",
+                  "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "predicate": "exact return subject"
+              },
+              {
+                "core_value": "satisfied",
+                "domain_outcome": true,
+                "expected": {
+                  "method_profile": {
+                    "id": "urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1",
+                    "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+                  },
+                  "observations": []
+                },
+                "historical": {
+                  "method_profile": {
+                    "id": "urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1",
+                    "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+                  },
+                  "observations": []
+                },
+                "predicate": "exact return basis"
+              },
+              {
+                "core_value": "satisfied",
+                "domain_outcome": true,
+                "expected": "executive",
+                "historical": "executive",
+                "predicate": "exact return consumer"
+              },
+              {
+                "core_value": "satisfied",
+                "domain_outcome": true,
+                "expected": {
+                  "authorship": "worker",
+                  "family": "A",
+                  "id": "worker"
+                },
+                "historical": {
+                  "authorship": "worker",
+                  "family": "A",
+                  "id": "worker"
+                },
+                "predicate": "exact return actor"
+              }
+            ],
+            "conflicts": [],
+            "consumable": true,
+            "duplicates": [
+              {
+                "id": "sha256:9008398af64b23188b358207f06e176a86d9bf372b755da2de1f94ddab39721f",
+                "sha256": "9008398af64b23188b358207f06e176a86d9bf372b755da2de1f94ddab39721f"
+              }
+            ],
+            "gaps": [],
+            "not_performed": [],
+            "original": {
+              "activation": {
+                "id": "activation",
+                "sha256": "d07c53341bd8511db58bacc2ec00c6a589dcf42f0fc00c5dcba9732497804c49"
+              },
+              "actor": {
+                "authorship": "worker",
+                "family": "A",
+                "id": "worker"
+              },
+              "basis": {
+                "method_profile": {
+                  "id": "urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1",
+                  "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+                },
+                "observations": []
+              },
+              "consumer": "executive",
+              "evaluations": [],
+              "frame": {
+                "id": "frame",
+                "revision": "1"
+              },
+              "id": "reviewer-controlled-return",
+              "invalidators": [],
+              "not_performed": [],
+              "residuals": [
+                "not actor qualification"
+              ],
+              "schema": "a_c.fd-support.closed-return/1",
+              "subject": {
+                "id": "urn:test:subject",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+              },
+              "work_result": {
+                "candidate": null,
+                "cause": "controlled fixture",
+                "evidence": [],
+                "residuals": [
+                  "semantic work unperformed"
+                ],
+                "value": "incomplete"
+              }
+            }
+          }
+        },
+        "schema": "a_c.fd-support.response/1",
+        "status": "ok"
+      },
+      "denials": {
+        "evidence.read": {
+          "evidence": {
+            "id": "sha256:9bb7fb41e8bb5fe1f9b598c124b99f246bdcb4e3b82ce0549a33976e193499b4",
+            "sha256": "9bb7fb41e8bb5fe1f9b598c124b99f246bdcb4e3b82ce0549a33976e193499b4"
+          },
+          "id": "composition-10",
+          "operation": "evidence.read",
+          "operation_outcome": {
+            "cause": "authority_missing",
+            "core_value": "out_of_frame",
+            "evidence": [],
+            "limits": [
+              "output availability only; no semantic acceptance"
+            ],
+            "predicate": "B(evidence.read): declared exact output/effect-evidence payload availability on the requested basis",
+            "source_parent": {
+              "clause": "results",
+              "member": "FOUNDATIONS.md",
+              "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+            },
+            "value": "refused(authority)"
+          },
+          "refusal": {
+            "code": "authority_missing",
+            "gaps": [
+              {
+                "detail_count": 0,
+                "diagnostics": "withheld by selected composition binding",
+                "effect_state": "completion_unknown",
+                "end_established": false,
+                "history_state": "not_established_by_refusal",
+                "private_retention": "included in operation publication"
+              }
+            ],
+            "reason": "Operation unavailable under the selected composition binding",
+            "source_refs": []
+          },
+          "result": null,
+          "schema": "a_c.fd-support.response/1",
+          "status": "refused"
+        },
+        "return.capture": {
+          "evidence": {
+            "id": "sha256:9dcbc4398cf147faf032b1748068d68f2495aecc480f73d9d888b6bb6e5ab4ba",
+            "sha256": "9dcbc4398cf147faf032b1748068d68f2495aecc480f73d9d888b6bb6e5ab4ba"
+          },
+          "id": "composition-11",
+          "operation": "return.capture",
+          "operation_outcome": {
+            "cause": "authority_missing",
+            "core_value": "out_of_frame",
+            "evidence": [],
+            "limits": [
+              "output availability only; no semantic acceptance"
+            ],
+            "predicate": "B(return.capture): declared exact output/effect-evidence payload availability on the requested basis",
+            "source_parent": {
+              "clause": "results",
+              "member": "FOUNDATIONS.md",
+              "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+            },
+            "value": "refused(authority)"
+          },
+          "refusal": {
+            "code": "authority_missing",
+            "gaps": [
+              {
+                "detail_count": 0,
+                "diagnostics": "withheld by selected composition binding",
+                "effect_state": "completion_unknown",
+                "end_established": false,
+                "history_state": "not_established_by_refusal",
+                "private_retention": "included in operation publication"
+              }
+            ],
+            "reason": "Operation unavailable under the selected composition binding",
+            "source_refs": []
+          },
+          "result": null,
+          "schema": "a_c.fd-support.response/1",
+          "status": "refused"
+        },
+        "return.check": {
+          "evidence": {
+            "id": "sha256:c4154df14c168430762b13afa33cb28d349732df05be0fc230b6c2f9b6bc91e5",
+            "sha256": "c4154df14c168430762b13afa33cb28d349732df05be0fc230b6c2f9b6bc91e5"
+          },
+          "id": "composition-12",
+          "operation": "return.check",
+          "operation_outcome": {
+            "cause": "authority_missing",
+            "core_value": "out_of_frame",
+            "evidence": [],
+            "limits": [
+              "output availability only; no semantic acceptance"
+            ],
+            "predicate": "B(return.check): declared exact output/effect-evidence payload availability on the requested basis",
+            "source_parent": {
+              "clause": "results",
+              "member": "FOUNDATIONS.md",
+              "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+            },
+            "value": "refused(authority)"
+          },
+          "refusal": {
+            "code": "authority_missing",
+            "gaps": [
+              {
+                "detail_count": 0,
+                "diagnostics": "withheld by selected composition binding",
+                "effect_state": "completion_unknown",
+                "end_established": false,
+                "history_state": "not_established_by_refusal",
+                "private_retention": "included in operation publication"
+              }
+            ],
+            "reason": "Operation unavailable under the selected composition binding",
+            "source_refs": []
+          },
+          "result": null,
+          "schema": "a_c.fd-support.response/1",
+          "status": "refused"
+        }
+      }
+    },
+    {
+      "name": "ordinary unknown survives actual dispatch/return and prevents later strict continuation",
+      "result": "pass",
+      "context": {
+        "id": "sha256:362cd4ac62eddb7968f5dc7ab1c7da3c1abc8e689faacceaf9bf7c9a5f14b3d9",
+        "sha256": "362cd4ac62eddb7968f5dc7ab1c7da3c1abc8e689faacceaf9bf7c9a5f14b3d9"
+      },
+      "attempt": {
+        "id": "sha256:643f0bf4d05a3270147cd051055210b8c093091a0bc185db85ccf365af01ece5",
+        "sha256": "643f0bf4d05a3270147cd051055210b8c093091a0bc185db85ccf365af01ece5"
+      },
+      "capture": {
+        "evidence": {
+          "id": "sha256:da2892c709e278cd8a50fa9616de569d6085123dc866fce1245f5ac8d7679cc4",
+          "sha256": "da2892c709e278cd8a50fa9616de569d6085123dc866fce1245f5ac8d7679cc4"
+        },
+        "id": "composition-6",
+        "operation": "return.capture",
+        "operation_outcome": {
+          "cause": "declared output available",
+          "core_value": "satisfied",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(return.capture): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "returned"
+        },
+        "refusal": null,
+        "result": {
+          "artifact": {
+            "id": "sha256:53e379faf69aa94fa2fc9d6edbc1a31476752923de0a308914fb8b829ee20dba",
+            "sha256": "53e379faf69aa94fa2fc9d6edbc1a31476752923de0a308914fb8b829ee20dba"
+          },
+          "value": {
+            "attempt": {
+              "id": "sha256:643f0bf4d05a3270147cd051055210b8c093091a0bc185db85ccf365af01ece5",
+              "sha256": "643f0bf4d05a3270147cd051055210b8c093091a0bc185db85ccf365af01ece5"
+            },
+            "binding_checks": {
+              "format_valid": true,
+              "gaps": []
+            },
+            "original": {
+              "activation": {
+                "id": "activation",
+                "sha256": "3d13f18ac3e02519edd2b8d58afc80d73ee28f209f4da9c83d7d6ff3c63cc60f"
+              },
+              "actor": {
+                "authorship": "worker",
+                "family": "A",
+                "id": "worker"
+              },
+              "basis": {
+                "method_profile": {
+                  "id": "urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1",
+                  "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+                },
+                "observations": []
+              },
+              "consumer": "executive",
+              "evaluations": [],
+              "frame": {
+                "id": "frame",
+                "revision": "1"
+              },
+              "id": "reviewer-controlled-return",
+              "invalidators": [],
+              "not_performed": [],
+              "residuals": [
+                "not actor qualification"
+              ],
+              "schema": "a_c.fd-support.closed-return/1",
+              "subject": {
+                "id": "urn:test:subject",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+              },
+              "work_result": {
+                "candidate": null,
+                "cause": "controlled fixture",
+                "evidence": [],
+                "residuals": [
+                  "semantic work unperformed"
+                ],
+                "value": "incomplete"
+              }
+            },
+            "producer": {
+              "actor": {
+                "actor_id": "worker",
+                "authorship": "worker",
+                "family": "A",
+                "operations": [
+                  "checks.evaluate",
+                  "composition.inspect",
+                  "context.assemble",
+                  "contract.preflight",
+                  "dispatch.cancel",
+                  "dispatch.observe",
+                  "dispatch.start",
+                  "events.wait",
+                  "evidence.read",
+                  "graph.project",
+                  "records.find",
+                  "records.read",
+                  "refresh.prepare",
+                  "relations.query",
+                  "resources.aggregate",
+                  "results.conjoin",
+                  "return.capture",
+                  "return.check",
+                  "review.prepare",
+                  "source.read",
+                  "tools.describe",
+                  "work.project",
+                  "work.write",
+                  "workspace.observe"
+                ],
+                "role": "Worker",
+                "role_binding": {
+                  "engine": "workspace-regular-file",
+                  "object": null,
+                  "path": "inputs/law.txt",
+                  "root": "workspace",
+                  "selector": null,
+                  "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+                },
+                "role_transition": null
+              },
+              "attempt": {
+                "id": "sha256:643f0bf4d05a3270147cd051055210b8c093091a0bc185db85ccf365af01ece5",
+                "sha256": "643f0bf4d05a3270147cd051055210b8c093091a0bc185db85ccf365af01ece5"
+              },
+              "authenticated": true,
+              "principal_id": "worker"
+            },
+            "raw_payload": {
+              "id": "sha256:1b3e6a4c0b16dff07f95fb177e3f5b49403b201ebe873102251d7612098ae039",
+              "sha256": "1b3e6a4c0b16dff07f95fb177e3f5b49403b201ebe873102251d7612098ae039"
+            },
+            "return_contract": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/return.json",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "0dfc053e9847bddcd4bd1a58137fd803ff84112281caa2c11315e11afba56656"
+            },
+            "schema": "a_c.fd-support.return/1",
+            "transport": {
+              "complete": true,
+              "raw_sha256": "1f1e13f475af5923205604e0af5dba4812e2483f37197fdb55e073e6096a2069",
+              "slot": "final_stdout_object"
+            }
+          }
+        },
+        "schema": "a_c.fd-support.response/1",
+        "status": "ok"
+      },
+      "checked": {
+        "evidence": {
+          "id": "sha256:ba452704933408bd56e261c3f2b66764d2ee3fffb2e6a36c71a29be492460019",
+          "sha256": "ba452704933408bd56e261c3f2b66764d2ee3fffb2e6a36c71a29be492460019"
+        },
+        "id": "composition-7",
+        "operation": "return.check",
+        "operation_outcome": {
+          "cause": "declared output available",
+          "core_value": "satisfied",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(return.check)[request_sha256=ccffd02cb8c73c18fad1d1f1a2550760da4f7ea582313feb4fd1ea3a165e1f9e]: declared output availability",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "returned"
+        },
+        "refusal": null,
+        "result": {
+          "artifact": null,
+          "value": {
+            "checks": [
+              {
+                "core_value": "satisfied",
+                "domain_outcome": true,
+                "expected": {
+                  "id": "frame",
+                  "revision": "1"
+                },
+                "historical": {
+                  "id": "frame",
+                  "revision": "1"
+                },
+                "predicate": "exact return frame"
+              },
+              {
+                "core_value": "satisfied",
+                "domain_outcome": true,
+                "expected": {
+                  "id": "activation",
+                  "sha256": "3d13f18ac3e02519edd2b8d58afc80d73ee28f209f4da9c83d7d6ff3c63cc60f"
+                },
+                "historical": {
+                  "id": "activation",
+                  "sha256": "3d13f18ac3e02519edd2b8d58afc80d73ee28f209f4da9c83d7d6ff3c63cc60f"
+                },
+                "predicate": "exact return activation"
+              },
+              {
+                "core_value": "satisfied",
+                "domain_outcome": true,
+                "expected": {
+                  "id": "urn:test:subject",
+                  "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "historical": {
+                  "id": "urn:test:subject",
+                  "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "predicate": "exact return subject"
+              },
+              {
+                "core_value": "satisfied",
+                "domain_outcome": true,
+                "expected": {
+                  "method_profile": {
+                    "id": "urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1",
+                    "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+                  },
+                  "observations": []
+                },
+                "historical": {
+                  "method_profile": {
+                    "id": "urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1",
+                    "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+                  },
+                  "observations": []
+                },
+                "predicate": "exact return basis"
+              },
+              {
+                "core_value": "satisfied",
+                "domain_outcome": true,
+                "expected": "executive",
+                "historical": "executive",
+                "predicate": "exact return consumer"
+              },
+              {
+                "core_value": "satisfied",
+                "domain_outcome": true,
+                "expected": {
+                  "authorship": "worker",
+                  "family": "A",
+                  "id": "worker"
+                },
+                "historical": {
+                  "authorship": "worker",
+                  "family": "A",
+                  "id": "worker"
+                },
+                "predicate": "exact return actor"
+              }
+            ],
+            "conflicts": [],
+            "consumable": true,
+            "duplicates": [
+              {
+                "id": "sha256:53e379faf69aa94fa2fc9d6edbc1a31476752923de0a308914fb8b829ee20dba",
+                "sha256": "53e379faf69aa94fa2fc9d6edbc1a31476752923de0a308914fb8b829ee20dba"
+              }
+            ],
+            "gaps": [],
+            "not_performed": [],
+            "original": {
+              "activation": {
+                "id": "activation",
+                "sha256": "3d13f18ac3e02519edd2b8d58afc80d73ee28f209f4da9c83d7d6ff3c63cc60f"
+              },
+              "actor": {
+                "authorship": "worker",
+                "family": "A",
+                "id": "worker"
+              },
+              "basis": {
+                "method_profile": {
+                  "id": "urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1",
+                  "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+                },
+                "observations": []
+              },
+              "consumer": "executive",
+              "evaluations": [],
+              "frame": {
+                "id": "frame",
+                "revision": "1"
+              },
+              "id": "reviewer-controlled-return",
+              "invalidators": [],
+              "not_performed": [],
+              "residuals": [
+                "not actor qualification"
+              ],
+              "schema": "a_c.fd-support.closed-return/1",
+              "subject": {
+                "id": "urn:test:subject",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+              },
+              "work_result": {
+                "candidate": null,
+                "cause": "controlled fixture",
+                "evidence": [],
+                "residuals": [
+                  "semantic work unperformed"
+                ],
+                "value": "incomplete"
+              }
+            }
+          }
+        },
+        "schema": "a_c.fd-support.response/1",
+        "status": "ok"
+      },
+      "strict_actor": {
+        "evidence": {
+          "id": "sha256:d80e1f099c02f1b3560329c7e4edb3b907c7e93f80e36599e05a5ed9267658fb",
+          "sha256": "d80e1f099c02f1b3560329c7e4edb3b907c7e93f80e36599e05a5ed9267658fb"
+        },
+        "id": "composition-8",
+        "operation": "source.read",
+        "operation_outcome": {
+          "cause": "basis_stale",
+          "core_value": "invalid_basis",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(source.read): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "refused(basis)"
+        },
+        "refusal": {
+          "code": "basis_stale",
+          "gaps": [
+            {
+              "detail_count": 0,
+              "diagnostics": "withheld by selected composition binding",
+              "effect_state": "completion_unknown",
+              "end_established": false,
+              "history_state": "not_established_by_refusal",
+              "private_retention": "included in operation publication"
+            }
+          ],
+          "reason": "Selected source, authority or exposure basis is no longer eligible",
+          "source_refs": []
+        },
+        "result": null,
+        "schema": "a_c.fd-support.response/1",
+        "status": "refused"
+      },
+      "strict_parent": {
+        "evidence": {
+          "id": "sha256:fcd9222045e0f7e31eb91b7c79e5a35f9277c44fef73cce24ad7096faab4df4e",
+          "sha256": "fcd9222045e0f7e31eb91b7c79e5a35f9277c44fef73cce24ad7096faab4df4e"
+        },
+        "id": "composition-9",
+        "operation": "source.read",
+        "operation_outcome": {
+          "cause": "basis_stale",
+          "core_value": "invalid_basis",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(source.read): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "refused(basis)"
+        },
+        "refusal": {
+          "code": "basis_stale",
+          "gaps": [
+            {
+              "detail_count": 0,
+              "diagnostics": "withheld by selected composition binding",
+              "effect_state": "completion_unknown",
+              "end_established": false,
+              "history_state": "not_established_by_refusal",
+              "private_retention": "included in operation publication"
+            }
+          ],
+          "reason": "Selected source, authority or exposure basis is no longer eligible",
+          "source_refs": []
+        },
+        "result": null,
+        "schema": "a_c.fd-support.response/1",
+        "status": "refused"
+      }
+    },
+    {
+      "name": "public fragment scanner negatives and genuine anchors",
+      "result": "pass",
+      "cases": [
+        {
+          "case": "list-marker fence",
+          "text": "- ```markdown\n  # Support\n  <a id=\"support\"></a>\n  ```\n",
+          "response": {
+            "evidence": {
+              "id": "sha256:a19f20c4ea1512697e0532d2d486e46b91446999620bc0c58086ee56e346907b",
+              "sha256": "a19f20c4ea1512697e0532d2d486e46b91446999620bc0c58086ee56e346907b"
+            },
+            "id": "composition-1",
+            "operation": "source.read",
+            "operation_outcome": {
+              "cause": "basis_missing",
+              "core_value": "invalid_basis",
+              "evidence": [],
+              "limits": [
+                "output availability only; no semantic acceptance"
+              ],
+              "predicate": "B(source.read): declared exact output/effect-evidence payload availability on the requested basis",
+              "source_parent": {
+                "clause": "results",
+                "member": "FOUNDATIONS.md",
+                "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+              },
+              "value": "refused(basis)"
+            },
+            "refusal": {
+              "code": "basis_missing",
+              "gaps": [
+                {
+                  "detail_count": 0,
+                  "diagnostics": "withheld by selected composition binding",
+                  "effect_state": "completion_unknown",
+                  "end_established": false,
+                  "history_state": "not_established_by_refusal",
+                  "private_retention": "included in operation publication"
+                }
+              ],
+              "reason": "Operation unavailable under the selected composition binding",
+              "source_refs": []
+            },
+            "result": null,
+            "schema": "a_c.fd-support.response/1",
+            "status": "refused"
+          }
+        },
+        {
+          "case": "unfinished comment",
+          "text": "<!-- unfinished\n# Support\n<a id=\"support\"></a>\n",
+          "response": {
+            "evidence": {
+              "id": "sha256:26a98f310bd1f245ebc5999b31635eeba9c5dec4bf4bb98193fd4e83a23f783b",
+              "sha256": "26a98f310bd1f245ebc5999b31635eeba9c5dec4bf4bb98193fd4e83a23f783b"
+            },
+            "id": "composition-2",
+            "operation": "source.read",
+            "operation_outcome": {
+              "cause": "basis_missing",
+              "core_value": "invalid_basis",
+              "evidence": [],
+              "limits": [
+                "output availability only; no semantic acceptance"
+              ],
+              "predicate": "B(source.read): declared exact output/effect-evidence payload availability on the requested basis",
+              "source_parent": {
+                "clause": "results",
+                "member": "FOUNDATIONS.md",
+                "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+              },
+              "value": "refused(basis)"
+            },
+            "refusal": {
+              "code": "basis_missing",
+              "gaps": [
+                {
+                  "detail_count": 0,
+                  "diagnostics": "withheld by selected composition binding",
+                  "effect_state": "completion_unknown",
+                  "end_established": false,
+                  "history_state": "not_established_by_refusal",
+                  "private_retention": "included in operation publication"
+                }
+              ],
+              "reason": "Operation unavailable under the selected composition binding",
+              "source_refs": []
+            },
+            "result": null,
+            "schema": "a_c.fd-support.response/1",
+            "status": "refused"
+          }
+        },
+        {
+          "case": "quote list fence",
+          "text": "> - ```markdown\n>   <a id=\"support\"></a>\n>   ```\n",
+          "response": {
+            "evidence": {
+              "id": "sha256:d4c66fd1f6427a0f39659d8da77da2a2b2027fc5aa154aeddae907cae15721f9",
+              "sha256": "d4c66fd1f6427a0f39659d8da77da2a2b2027fc5aa154aeddae907cae15721f9"
+            },
+            "id": "composition-3",
+            "operation": "source.read",
+            "operation_outcome": {
+              "cause": "basis_missing",
+              "core_value": "invalid_basis",
+              "evidence": [],
+              "limits": [
+                "output availability only; no semantic acceptance"
+              ],
+              "predicate": "B(source.read): declared exact output/effect-evidence payload availability on the requested basis",
+              "source_parent": {
+                "clause": "results",
+                "member": "FOUNDATIONS.md",
+                "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+              },
+              "value": "refused(basis)"
+            },
+            "refusal": {
+              "code": "basis_missing",
+              "gaps": [
+                {
+                  "detail_count": 0,
+                  "diagnostics": "withheld by selected composition binding",
+                  "effect_state": "completion_unknown",
+                  "end_established": false,
+                  "history_state": "not_established_by_refusal",
+                  "private_retention": "included in operation publication"
+                }
+              ],
+              "reason": "Operation unavailable under the selected composition binding",
+              "source_refs": []
+            },
+            "result": null,
+            "schema": "a_c.fd-support.response/1",
+            "status": "refused"
+          }
+        },
+        {
+          "case": "old escaped markup",
+          "text": "\\<a id=\"support\"></a>\n",
+          "response": {
+            "evidence": {
+              "id": "sha256:2147fe0d16c833059d47385fbecae7a772ff9dd63dcb1fc3d37e0510dfd6d478",
+              "sha256": "2147fe0d16c833059d47385fbecae7a772ff9dd63dcb1fc3d37e0510dfd6d478"
+            },
+            "id": "composition-4",
+            "operation": "source.read",
+            "operation_outcome": {
+              "cause": "basis_missing",
+              "core_value": "invalid_basis",
+              "evidence": [],
+              "limits": [
+                "output availability only; no semantic acceptance"
+              ],
+              "predicate": "B(source.read): declared exact output/effect-evidence payload availability on the requested basis",
+              "source_parent": {
+                "clause": "results",
+                "member": "FOUNDATIONS.md",
+                "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+              },
+              "value": "refused(basis)"
+            },
+            "refusal": {
+              "code": "basis_missing",
+              "gaps": [
+                {
+                  "detail_count": 0,
+                  "diagnostics": "withheld by selected composition binding",
+                  "effect_state": "completion_unknown",
+                  "end_established": false,
+                  "history_state": "not_established_by_refusal",
+                  "private_retention": "included in operation publication"
+                }
+              ],
+              "reason": "Operation unavailable under the selected composition binding",
+              "source_refs": []
+            },
+            "result": null,
+            "schema": "a_c.fd-support.response/1",
+            "status": "refused"
+          }
+        },
+        {
+          "case": "old multiline code span",
+          "text": "`example\n<a id=\"support\"></a>\nexample`\n",
+          "response": {
+            "evidence": {
+              "id": "sha256:1db07b3823ec2543d1485db53160da81fd9da977bd24b1854a0745f8a52707bd",
+              "sha256": "1db07b3823ec2543d1485db53160da81fd9da977bd24b1854a0745f8a52707bd"
+            },
+            "id": "composition-5",
+            "operation": "source.read",
+            "operation_outcome": {
+              "cause": "basis_missing",
+              "core_value": "invalid_basis",
+              "evidence": [],
+              "limits": [
+                "output availability only; no semantic acceptance"
+              ],
+              "predicate": "B(source.read): declared exact output/effect-evidence payload availability on the requested basis",
+              "source_parent": {
+                "clause": "results",
+                "member": "FOUNDATIONS.md",
+                "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+              },
+              "value": "refused(basis)"
+            },
+            "refusal": {
+              "code": "basis_missing",
+              "gaps": [
+                {
+                  "detail_count": 0,
+                  "diagnostics": "withheld by selected composition binding",
+                  "effect_state": "completion_unknown",
+                  "end_established": false,
+                  "history_state": "not_established_by_refusal",
+                  "private_retention": "included in operation publication"
+                }
+              ],
+              "reason": "Operation unavailable under the selected composition binding",
+              "source_refs": []
+            },
+            "result": null,
+            "schema": "a_c.fd-support.response/1",
+            "status": "refused"
+          }
+        },
+        {
+          "case": "genuine after nested fence",
+          "text": "- ```markdown\n  # Example\n  ```\n\n# Support\n",
+          "response": {
+            "evidence": {
+              "id": "sha256:c282a86b993323b03989a012de0e35c413e94f3b8b1fc3c37fcee85aa2eda433",
+              "sha256": "c282a86b993323b03989a012de0e35c413e94f3b8b1fc3c37fcee85aa2eda433"
+            },
+            "id": "composition-6",
+            "operation": "source.read",
+            "operation_outcome": {
+              "cause": "declared output available",
+              "core_value": "satisfied",
+              "evidence": [],
+              "limits": [
+                "output availability only; no semantic acceptance"
+              ],
+              "predicate": "B(source.read)[request_sha256=c3190682a05148416ff8ed338741259e5a072f661fe6a3c5422cd2f3e457e987]: declared output availability",
+              "source_parent": {
+                "clause": "results",
+                "member": "FOUNDATIONS.md",
+                "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+              },
+              "value": "returned"
+            },
+            "refusal": null,
+            "result": {
+              "artifact": null,
+              "value": {
+                "acquisition": {},
+                "content": "{\"nested\":{\"a/b\":null},\"set\":[1,2],\"x\":true}",
+                "coordinates": null,
+                "encoding": "utf8",
+                "parent_sha256": "2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927",
+                "selected_sha256": "2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927",
+                "size_bytes": 44,
+                "source": {
+                  "engine": "workspace-regular-file",
+                  "object": null,
+                  "path": "inputs/data.json",
+                  "root": "workspace",
+                  "selector": null,
+                  "sha256": "2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927"
+                }
+              }
+            },
+            "schema": "a_c.fd-support.response/1",
+            "status": "ok"
+          }
+        },
+        {
+          "case": "genuine after closed comment",
+          "text": "<!-- hidden\n# Example\n-->\n<a id=\"support\"></a>\n",
+          "response": {
+            "evidence": {
+              "id": "sha256:4005107c97c3f9579dd32bab21bb5ca6b0ff4fc3117d548effba9e93f6b82660",
+              "sha256": "4005107c97c3f9579dd32bab21bb5ca6b0ff4fc3117d548effba9e93f6b82660"
+            },
+            "id": "composition-7",
+            "operation": "source.read",
+            "operation_outcome": {
+              "cause": "declared output available",
+              "core_value": "satisfied",
+              "evidence": [],
+              "limits": [
+                "output availability only; no semantic acceptance"
+              ],
+              "predicate": "B(source.read)[request_sha256=84dfb85234e98b378cd314a1501a77cdf34da9fc90c6f9047ebe379cc0c45de0]: declared output availability",
+              "source_parent": {
+                "clause": "results",
+                "member": "FOUNDATIONS.md",
+                "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+              },
+              "value": "returned"
+            },
+            "refusal": null,
+            "result": {
+              "artifact": null,
+              "value": {
+                "acquisition": {},
+                "content": "{\"nested\":{\"a/b\":null},\"set\":[1,2],\"x\":true}",
+                "coordinates": null,
+                "encoding": "utf8",
+                "parent_sha256": "2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927",
+                "selected_sha256": "2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927",
+                "size_bytes": 44,
+                "source": {
+                  "engine": "workspace-regular-file",
+                  "object": null,
+                  "path": "inputs/data.json",
+                  "root": "workspace",
+                  "selector": null,
+                  "sha256": "2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927"
+                }
+              }
+            },
+            "schema": "a_c.fd-support.response/1",
+            "status": "ok"
+          }
+        },
+        {
+          "case": "escaped opener preserves heading",
+          "text": "\\<!-- literal\n\n# Support\n",
+          "response": {
+            "evidence": {
+              "id": "sha256:efdfdd5285fda8c8a2f9b2649daa2b886c86f93bc4c506d69894c2f5128dd76f",
+              "sha256": "efdfdd5285fda8c8a2f9b2649daa2b886c86f93bc4c506d69894c2f5128dd76f"
+            },
+            "id": "composition-8",
+            "operation": "source.read",
+            "operation_outcome": {
+              "cause": "declared output available",
+              "core_value": "satisfied",
+              "evidence": [],
+              "limits": [
+                "output availability only; no semantic acceptance"
+              ],
+              "predicate": "B(source.read)[request_sha256=c3463ad740cf5040fb262491b5a099ff26f275ec4573fdc9862072ba1bd82237]: declared output availability",
+              "source_parent": {
+                "clause": "results",
+                "member": "FOUNDATIONS.md",
+                "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+              },
+              "value": "returned"
+            },
+            "refusal": null,
+            "result": {
+              "artifact": null,
+              "value": {
+                "acquisition": {},
+                "content": "{\"nested\":{\"a/b\":null},\"set\":[1,2],\"x\":true}",
+                "coordinates": null,
+                "encoding": "utf8",
+                "parent_sha256": "2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927",
+                "selected_sha256": "2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927",
+                "size_bytes": 44,
+                "source": {
+                  "engine": "workspace-regular-file",
+                  "object": null,
+                  "path": "inputs/data.json",
+                  "root": "workspace",
+                  "selector": null,
+                  "sha256": "2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927"
+                }
+              }
+            },
+            "schema": "a_c.fd-support.response/1",
+            "status": "ok"
+          }
+        },
+        {
+          "case": "literal opener in code preserves heading",
+          "text": "`<!-- literal`\n\n# Support\n",
+          "response": {
+            "evidence": {
+              "id": "sha256:28732f14f3c794829653e8cbaad735ec53095065a4d26fef8775e7744ee9e9d0",
+              "sha256": "28732f14f3c794829653e8cbaad735ec53095065a4d26fef8775e7744ee9e9d0"
+            },
+            "id": "composition-9",
+            "operation": "source.read",
+            "operation_outcome": {
+              "cause": "declared output available",
+              "core_value": "satisfied",
+              "evidence": [],
+              "limits": [
+                "output availability only; no semantic acceptance"
+              ],
+              "predicate": "B(source.read)[request_sha256=6ac95935691f29e194bef817639c4dcf378f4ad7e7745967fdef502a7c5f55e5]: declared output availability",
+              "source_parent": {
+                "clause": "results",
+                "member": "FOUNDATIONS.md",
+                "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+              },
+              "value": "returned"
+            },
+            "refusal": null,
+            "result": {
+              "artifact": null,
+              "value": {
+                "acquisition": {},
+                "content": "{\"nested\":{\"a/b\":null},\"set\":[1,2],\"x\":true}",
+                "coordinates": null,
+                "encoding": "utf8",
+                "parent_sha256": "2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927",
+                "selected_sha256": "2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927",
+                "size_bytes": 44,
+                "source": {
+                  "engine": "workspace-regular-file",
+                  "object": null,
+                  "path": "inputs/data.json",
+                  "root": "workspace",
+                  "selector": null,
+                  "sha256": "2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927"
+                }
+              }
+            },
+            "schema": "a_c.fd-support.response/1",
+            "status": "ok"
+          }
+        },
+        {
+          "case": "quoted real HTML",
+          "text": "> - <a id=\"support\"></a>\n",
+          "response": {
+            "evidence": {
+              "id": "sha256:187858daff569de27eb0904d484c23bd353a35894a5413a899ca431241ae8b7a",
+              "sha256": "187858daff569de27eb0904d484c23bd353a35894a5413a899ca431241ae8b7a"
+            },
+            "id": "composition-10",
+            "operation": "source.read",
+            "operation_outcome": {
+              "cause": "declared output available",
+              "core_value": "satisfied",
+              "evidence": [],
+              "limits": [
+                "output availability only; no semantic acceptance"
+              ],
+              "predicate": "B(source.read)[request_sha256=827dd92a563511009e7d279a911a58a8ab640990d0c9af183303ac940b6918de]: declared output availability",
+              "source_parent": {
+                "clause": "results",
+                "member": "FOUNDATIONS.md",
+                "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+              },
+              "value": "returned"
+            },
+            "refusal": null,
+            "result": {
+              "artifact": null,
+              "value": {
+                "acquisition": {},
+                "content": "{\"nested\":{\"a/b\":null},\"set\":[1,2],\"x\":true}",
+                "coordinates": null,
+                "encoding": "utf8",
+                "parent_sha256": "2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927",
+                "selected_sha256": "2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927",
+                "size_bytes": 44,
+                "source": {
+                  "engine": "workspace-regular-file",
+                  "object": null,
+                  "path": "inputs/data.json",
+                  "root": "workspace",
+                  "selector": null,
+                  "sha256": "2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927"
+                }
+              }
+            },
+            "schema": "a_c.fd-support.response/1",
+            "status": "ok"
+          }
+        }
+      ]
+    },
+    {
+      "name": "previous AC1 denial, permitted disclosure and persistent exposure",
+      "result": "pass",
+      "denied": {
+        "evidence": {
+          "id": "sha256:a095cf449e6b130debcfd434b0d4bb72d5b3cabd2cf53fe7e55a199d69e8d4bf",
+          "sha256": "a095cf449e6b130debcfd434b0d4bb72d5b3cabd2cf53fe7e55a199d69e8d4bf"
+        },
+        "id": "composition-1",
+        "operation": "review.prepare",
+        "operation_outcome": {
+          "cause": "acquisition_denied",
+          "core_value": "out_of_frame",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(review.prepare): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "refused(authority)"
+        },
+        "refusal": {
+          "code": "acquisition_denied",
+          "gaps": [
+            {
+              "detail_count": 0,
+              "diagnostics": "withheld by selected composition binding",
+              "effect_state": "completion_unknown",
+              "end_established": false,
+              "history_state": "not_established_by_refusal",
+              "private_retention": "included in operation publication"
+            }
+          ],
+          "reason": "Selected receiving information policy does not permit this disclosure",
+          "source_refs": []
+        },
+        "result": null,
+        "schema": "a_c.fd-support.response/1",
+        "status": "refused"
+      },
+      "allowed": {
+        "evidence": {
+          "id": "sha256:a38798165b00494abd18c6db41281b6a958758ca46a2305c91c6fb4e3401ab10",
+          "sha256": "a38798165b00494abd18c6db41281b6a958758ca46a2305c91c6fb4e3401ab10"
+        },
+        "id": "composition-2",
+        "operation": "review.prepare",
+        "operation_outcome": {
+          "cause": "declared output available",
+          "core_value": "satisfied",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(review.prepare): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "returned"
+        },
+        "refusal": null,
+        "result": {
+          "artifact": null,
+          "value": {
+            "acquired": [
+              {
+                "acquisition": {},
+                "content_base64": "b25lCnR3bwp0aHJlZQo=",
+                "coordinates": null,
+                "parent_sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2",
+                "selected_sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2",
+                "size_bytes": 14,
+                "source": {
+                  "engine": "workspace-regular-file",
+                  "object": null,
+                  "path": "inputs/law.txt",
+                  "root": "workspace",
+                  "selector": null,
+                  "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+                }
+              }
+            ],
+            "candidate_population": [],
+            "claim": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/law.txt",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+            },
+            "comparison": null,
+            "expectations": null,
+            "exposure": [],
+            "gaps": [
+              {
+                "count": 1,
+                "details": "retained privately",
+                "standing": "unresolved_review_diagnostics"
+              }
+            ],
+            "independence": {
+              "external_exposure": "unknown",
+              "governing_conditions": {
+                "allowed_family_pairs": [
+                  [
+                    "A",
+                    "B"
+                  ]
+                ],
+                "authority_source": {
+                  "engine": "workspace-regular-file",
+                  "object": null,
+                  "path": "inputs/owner.json",
+                  "root": "workspace",
+                  "selector": null,
+                  "sha256": "745372ec2177a92f9ef826e62ea059ffc21e94f5d3b5ca0f468a803d22306968"
+                },
+                "claim_scope": "REVIEW-DENIED-POLICY-CONTENT-7e37",
+                "id": "private-independence",
+                "mechanical_sharing": [],
+                "predicates": [],
+                "require_non_author": true,
+                "source_first": true
+              },
+              "selected_policy": {
+                "engine": "workspace-regular-file",
+                "object": null,
+                "path": "inputs/private-independence.json",
+                "root": "workspace",
+                "selector": null,
+                "sha256": "3273163ce6e4a140a90a34df3adf8fdd0510faab002f7b53d6930fccc7cd6643"
+              },
+              "semantic_independence": "not certified"
+            },
+            "limits": [
+              "acquisition/diff/exposure facts only; no severity, disposition or mental-independence certificate"
+            ],
+            "phase": "expectation",
+            "population_complete": false
+          }
+        },
+        "schema": "a_c.fd-support.response/1",
+        "status": "ok"
+      },
+      "later_strict": {
+        "evidence": {
+          "id": "sha256:9ded2c9808b60081cc3148fbf1e569bd32e50d70f115f78b94a9131b1f315d39",
+          "sha256": "9ded2c9808b60081cc3148fbf1e569bd32e50d70f115f78b94a9131b1f315d39"
+        },
+        "id": "composition-3",
+        "operation": "source.read",
+        "operation_outcome": {
+          "cause": "basis_stale",
+          "core_value": "invalid_basis",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(source.read): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "refused(basis)"
+        },
+        "refusal": {
+          "code": "basis_stale",
+          "gaps": [
+            {
+              "detail_count": 0,
+              "diagnostics": "withheld by selected composition binding",
+              "effect_state": "completion_unknown",
+              "end_established": false,
+              "history_state": "not_established_by_refusal",
+              "private_retention": "included in operation publication"
+            }
+          ],
+          "reason": "Selected source, authority or exposure basis is no longer eligible",
+          "source_refs": []
+        },
+        "result": null,
+        "schema": "a_c.fd-support.response/1",
+        "status": "refused"
+      }
+    },
+    {
+      "name": "previous AC2 denied event content kept private with honest incomplete-history refusal",
+      "result": "pass",
+      "attempt": {
+        "id": "sha256:b7d5689d1578e13167f93599280036b099e7e40a2ee4a0031b54929f45bcaeef",
+        "sha256": "b7d5689d1578e13167f93599280036b099e7e40a2ee4a0031b54929f45bcaeef"
+      },
+      "denied": {
+        "evidence": {
+          "id": "sha256:91f0a36ad07be131e7d7aec93eff09a481450b712467e1cbf24d6256113a57aa",
+          "sha256": "91f0a36ad07be131e7d7aec93eff09a481450b712467e1cbf24d6256113a57aa"
+        },
+        "id": "composition-6",
+        "operation": "evidence.read",
+        "operation_outcome": {
+          "cause": "acquisition_denied",
+          "core_value": "out_of_frame",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(evidence.read): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "refused(authority)"
+        },
+        "refusal": {
+          "code": "acquisition_denied",
+          "gaps": [
+            {
+              "detail_count": 0,
+              "diagnostics": "withheld by selected composition binding",
+              "effect_state": "completion_unknown",
+              "end_established": false,
+              "history_state": "not_established_by_refusal",
+              "private_retention": "included in operation publication"
+            }
+          ],
+          "reason": "Selected receiving information policy does not permit this disclosure",
+          "source_refs": []
+        },
+        "result": null,
+        "schema": "a_c.fd-support.response/1",
+        "status": "refused"
+      },
+      "cancelled": {
+        "evidence": {
+          "id": "sha256:1d510610d9f074abe01a6287f4bfbe59c29830bfd0c49752ea9ae59d80c58b71",
+          "sha256": "1d510610d9f074abe01a6287f4bfbe59c29830bfd0c49752ea9ae59d80c58b71"
+        },
+        "id": "composition-7",
+        "operation": "dispatch.cancel",
+        "operation_outcome": {
+          "cause": "history_incomplete",
+          "core_value": "invalid_basis",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(dispatch.cancel): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "refused(basis)"
+        },
+        "refusal": {
+          "code": "history_incomplete",
+          "gaps": [
+            {
+              "detail_count": 7,
+              "diagnostics": "withheld by selected composition binding",
+              "effect_state": "completion_unknown",
+              "end_established": false,
+              "history_state": "incomplete",
+              "private_retention": "included in operation publication"
+            }
+          ],
+          "reason": "Required protected history is incomplete; no clean or completed state is inferred",
+          "source_refs": []
+        },
+        "result": null,
+        "schema": "a_c.fd-support.response/1",
+        "status": "refused"
+      },
+      "private_read": {
+        "evidence": {
+          "id": "sha256:f47195ed52e3a95c8a4718bb5d6aac6551334e33f8514d3b893e47489745d5fd",
+          "sha256": "f47195ed52e3a95c8a4718bb5d6aac6551334e33f8514d3b893e47489745d5fd"
+        },
+        "id": "composition-8",
+        "operation": "evidence.read",
+        "operation_outcome": {
+          "cause": "unsupported_contract",
+          "core_value": "out_of_frame",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(evidence.read): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "refused(capability)"
+        },
+        "refusal": {
+          "code": "unsupported_contract",
+          "gaps": [
+            {
+              "detail_count": 0,
+              "diagnostics": "withheld by selected composition binding",
+              "effect_state": "completion_unknown",
+              "end_established": false,
+              "history_state": "not_established_by_refusal",
+              "private_retention": "included in operation publication"
+            }
+          ],
+          "reason": "Operation or carrier is outside the selected composition contract",
+          "source_refs": []
+        },
+        "result": null,
+        "schema": "a_c.fd-support.response/1",
+        "status": "refused"
+      }
+    }
+  ]
+}

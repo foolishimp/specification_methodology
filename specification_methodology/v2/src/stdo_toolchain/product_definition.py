@@ -468,7 +468,7 @@ def adopt_definition(
         )
     if release["tag_object"] != resolution.cut_tag_object:
         raise StdoError(
-            "Resolved immutable RC tag object differs from the installed cut tag object"
+            "Resolved immutable release tag object differs from the installed cut tag object"
         )
 
     new_uri = Store.release_uri(resolution.cut)

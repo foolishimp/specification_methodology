@@ -1,0 +1,81 @@
+{
+  "status": "passed selected-edge and explicit-boundary discriminator",
+  "wheel": {
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/manager/package-03/stdo_toolchain-0.1.6-py3-none-any.whl",
+    "sha256": "ef726f780220a4be93c8ce014e2838d140851ec0e3d47902ea2ddd36a26c3242"
+  },
+  "actual_import": {
+    "version": "0.1.6",
+    "module": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a/runtime-venv/lib/python3.13/site-packages/stdo_toolchain/__init__.py",
+    "sha256": "cd7002239875e9cd822ddaacc0fd55631c6ac848594a9ad2cf7d7c88ab86cf42",
+    "python": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.0.13.3)]"
+  },
+  "commands": [
+    {
+      "argv": [
+        "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a/runtime-venv/bin/python",
+        "-I",
+        "-B",
+        "-c",
+        "import importlib.metadata,stdo_toolchain,pathlib,hashlib,json,sys; p=pathlib.Path(stdo_toolchain.__file__); print(json.dumps({\"version\":importlib.metadata.version(\"stdo-toolchain\"),\"module\":str(p),\"sha256\":hashlib.sha256(p.read_bytes()).hexdigest(),\"python\":sys.version}))"
+      ],
+      "cwd": "/tmp",
+      "removed_environment": [
+        "PYTHONPATH",
+        "PYTHONHOME"
+      ],
+      "exit": 0,
+      "stdout": "{\"version\": \"0.1.6\", \"module\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a/runtime-venv/lib/python3.13/site-packages/stdo_toolchain/__init__.py\", \"sha256\": \"cd7002239875e9cd822ddaacc0fd55631c6ac848594a9ad2cf7d7c88ab86cf42\", \"python\": \"3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.0.13.3)]\"}\n",
+      "stderr": ""
+    },
+    {
+      "name": "selected-repository-boundary",
+      "argv": [
+        "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a/runtime-venv/bin/python",
+        "-I",
+        "-B",
+        "-m",
+        "stdo_toolchain.cli",
+        "fleet",
+        "verify",
+        "--root",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/stdo_skills.json",
+        "--resolver-root",
+        "/Users/jim/src/apps/specification_methodology"
+      ],
+      "cwd": "/tmp",
+      "removed_environment": [
+        "PYTHONPATH",
+        "PYTHONHOME"
+      ],
+      "exit": 0,
+      "valid": true,
+      "kind": "stdo.composition-verification",
+      "report": "manager-checks-05/selected-repository-boundary.stdout.json"
+    },
+    {
+      "name": "too-narrow-boundary",
+      "argv": [
+        "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a/runtime-venv/bin/python",
+        "-I",
+        "-B",
+        "-m",
+        "stdo_toolchain.cli",
+        "fleet",
+        "verify",
+        "--root",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/stdo_skills.json"
+      ],
+      "cwd": "/tmp",
+      "removed_environment": [
+        "PYTHONPATH",
+        "PYTHONHOME"
+      ],
+      "exit": 1,
+      "valid": false,
+      "kind": "stdo.composition-verification",
+      "report": "manager-checks-05/too-narrow-boundary.stdout.json"
+    }
+  ],
+  "limits": "Mechanical target/contract resolution only; no authority or semantic adequacy determination. Global manager unchanged."
+}

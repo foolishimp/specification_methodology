@@ -1,0 +1,252 @@
+{
+  "schema": "a_c.fd-support.policy/1",
+  "id": "urn:stdo-skills:T002:native-read-context:strict",
+  "product": {
+    "definition_id": "urn:stdo:product-definition:stdo-skills",
+    "definition": {
+      "engine": "workspace-regular-file",
+      "root": "product",
+      "path": "stdo_skills.json",
+      "object": null,
+      "sha256": "16e1ac70c593e243aae3cc9bd071e742bd842309167ff9213608f49a35448398",
+      "selector": null
+    },
+    "authority_binding": {
+      "definition_locator": "/reference_frame_bases/0/authority/1",
+      "owner_record": {
+        "engine": "workspace-regular-file",
+        "root": "product",
+        "path": ".ai-workspace/work/COMPOSITION_01/operator-successor-05/OWNER.json",
+        "object": null,
+        "sha256": "7254b510508976404c1a4ad34681c1c2dfb9506a3b3cde938c7fc4939abeea9e",
+        "selector": null
+      },
+      "mechanism": {
+        "id": "product-policy-preflight/1",
+        "source": {
+          "engine": "workspace-regular-file",
+          "root": "tool",
+          "path": "build_tenants/graphify/code/ac_support_core.py",
+          "object": null,
+          "sha256": "555f387bf8e53e85904383e6c5521eebd39537dc668f87936544a588efe4cb9f",
+          "selector": null
+        },
+        "implementation_sha256": "555f387bf8e53e85904383e6c5521eebd39537dc668f87936544a588efe4cb9f"
+      },
+      "result_surface": {
+        "root": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/COMPOSITION_01/operator/evidence",
+        "namespace": "composition-T002",
+        "consumer": "/root"
+      },
+      "scope": {
+        "kind": "actual-construction-read-context",
+        "product": "urn:stdo:product-definition:stdo-skills",
+        "selection": "T-002 repaired provider05 and stable manager source successor; consumer remains301",
+        "actor": "/root/composition_proposal_writer",
+        "consumer": "/root",
+        "operations": [
+          "tools.describe",
+          "composition.inspect",
+          "source.read",
+          "context.assemble"
+        ],
+        "effect_grants": [],
+        "output_provenance": "incomplete prior actor context",
+        "clean_room_claim": false,
+        "method": "stdo://releases/v3.0.1-rc.1/",
+        "manifest_sha256": "60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8"
+      }
+    }
+  },
+  "method_profile": {
+    "id": "urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1",
+    "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7",
+    "source": {
+      "engine": "workspace-regular-file",
+      "root": "tool",
+      "path": "build_tenants/graphify/design/fd-method-stdo-3.0.1.json",
+      "object": null,
+      "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7",
+      "selector": null
+    }
+  },
+  "sources": {
+    "product": {
+      "path": "/Users/jim/src/apps/specification_methodology/stdo_skills",
+      "kind": "workspace",
+      "writable": false,
+      "read_scope": [
+        {
+          "path": ".ai-workspace/tickets/active/T-002-composition-support.md",
+          "kind": "file"
+        },
+        {
+          "path": ".ai-workspace/work/COMPOSITION_01/operator-successor-04/OPERATOR_SELECTION.md",
+          "kind": "file"
+        },
+        {
+          "path": ".ai-workspace/work/COMPOSITION_01/operator-successor-04/OWNER.json",
+          "kind": "file"
+        },
+        {
+          "path": ".ai-workspace/work/COMPOSITION_01/operator-successor-04/RETURN_CONTRACT.json",
+          "kind": "file"
+        },
+        {
+          "path": ".ai-workspace/work/COMPOSITION_01/operator-successor-05/COMPOSITION-strict.json",
+          "kind": "file"
+        },
+        {
+          "path": ".ai-workspace/work/COMPOSITION_01/operator-successor-05/COMPOSITION.json",
+          "kind": "file"
+        },
+        {
+          "path": ".ai-workspace/work/COMPOSITION_01/operator-successor-05/OPERATOR_SELECTION.md",
+          "kind": "file"
+        },
+        {
+          "path": ".ai-workspace/work/COMPOSITION_01/operator-successor-05/OWNER.json",
+          "kind": "file"
+        },
+        {
+          "path": ".ai-workspace/work/COMPOSITION_01/operator-successor-05/RETURN_CONTRACT.json",
+          "kind": "file"
+        },
+        {
+          "path": ".ai-workspace/work/COMPOSITION_01/operator/OPERATOR_SELECTION.md",
+          "kind": "file"
+        },
+        {
+          "path": ".ai-workspace/work/COMPOSITION_01/operator/OWNER.json",
+          "kind": "file"
+        },
+        {
+          "path": ".ai-workspace/work/COMPOSITION_01/operator/RETURN_CONTRACT.json",
+          "kind": "file"
+        },
+        {
+          "path": "specification/REFERENCE_FRAME_BASIS.md",
+          "kind": "file"
+        },
+        {
+          "path": "specification/composition/A_C_SUPPORT.md",
+          "kind": "file"
+        },
+        {
+          "path": "specification/composition/SOURCE_MANIFEST.json",
+          "kind": "file"
+        },
+        {
+          "path": "specification/requirements/README.md",
+          "kind": "file"
+        },
+        {
+          "path": "stdo_skills.json",
+          "kind": "file"
+        }
+      ]
+    },
+    "tool": {
+      "path": "/Users/jim/src/apps/specification_methodology/a_c",
+      "kind": "workspace",
+      "writable": false,
+      "read_scope": [
+        {
+          "path": "build_tenants/graphify/code/ac_support_core.py",
+          "kind": "file"
+        },
+        {
+          "path": "build_tenants/graphify/design/fd-composition.md",
+          "kind": "file"
+        },
+        {
+          "path": "build_tenants/graphify/design/fd-method-stdo-3.0.1.json",
+          "kind": "file"
+        },
+        {
+          "path": "build_tenants/graphify/design/fd-support-stdo-3.0.1.md",
+          "kind": "file"
+        },
+        {
+          "path": "build_tenants/graphify/design/fd-support.md",
+          "kind": "file"
+        },
+        {
+          "path": "specification/GOALS.md",
+          "kind": "file"
+        },
+        {
+          "path": "specification/requirements/fd-stdo-3.0.1-binding.md",
+          "kind": "file"
+        },
+        {
+          "path": "stdo_a_c.json",
+          "kind": "file"
+        }
+      ]
+    }
+  },
+  "principals": {
+    "writer": {
+      "actor_id": "/root/composition_proposal_writer",
+      "role": "Worker",
+      "family": "Codex",
+      "authorship": "Actual current separately delegated Writer; no nested actor",
+      "operations": [
+        "tools.describe",
+        "composition.inspect",
+        "source.read",
+        "context.assemble"
+      ],
+      "role_binding": {
+        "engine": "workspace-regular-file",
+        "root": "product",
+        "path": ".ai-workspace/work/COMPOSITION_01/operator-successor-05/OPERATOR_SELECTION.md",
+        "object": null,
+        "sha256": "f3bb1e3a8ec895876feffacde61b1b59c06f8f96983c13073dfc18e4cdf6d5c3",
+        "selector": null
+      },
+      "role_transition": null
+    }
+  },
+  "grants": {},
+  "predicates": {},
+  "operators": {},
+  "executors": {},
+  "event_sinks": {},
+  "independence_policy": null,
+  "evidence_root": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/COMPOSITION_01/operator/evidence",
+  "limits": {
+    "max_message_bytes": 8000000,
+    "max_files": 1000,
+    "max_bytes": 16000000,
+    "max_history_records": 10000,
+    "max_wait_ms": 1000
+  },
+  "authority_sources": [
+    {
+      "engine": "workspace-regular-file",
+      "root": "product",
+      "path": ".ai-workspace/work/COMPOSITION_01/operator-successor-05/OWNER.json",
+      "object": null,
+      "sha256": "7254b510508976404c1a4ad34681c1c2dfb9506a3b3cde938c7fc4939abeea9e",
+      "selector": null
+    },
+    {
+      "engine": "workspace-regular-file",
+      "root": "product",
+      "path": ".ai-workspace/work/COMPOSITION_01/operator-successor-05/OPERATOR_SELECTION.md",
+      "object": null,
+      "sha256": "f3bb1e3a8ec895876feffacde61b1b59c06f8f96983c13073dfc18e4cdf6d5c3",
+      "selector": null
+    }
+  ],
+  "composition": {
+    "engine": "workspace-regular-file",
+    "root": "product",
+    "path": ".ai-workspace/work/COMPOSITION_01/operator-successor-05/COMPOSITION-strict.json",
+    "object": null,
+    "sha256": "f149e9f753f972d5a947d69f3c127bacea19083a66b10ab1625af79d11904ffe",
+    "selector": null
+  }
+}

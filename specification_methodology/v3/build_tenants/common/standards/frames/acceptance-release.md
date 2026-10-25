@@ -7,7 +7,7 @@ Purpose: The owning sections for review results and triage, acceptance and when 
 Binds:
 
 - This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5; section sha256=4598dccee4a65f206b604ea9a4c19db8aaff855a6b2fdc8e151dcc37f1439cb1 spanning to #formal-representation)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e; section sha256=4598dccee4a65f206b604ea9a4c19db8aaff855a6b2fdc8e151dcc37f1439cb1 spanning to #formal-representation)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 a link to the owning section, the digest of its member and the digest of that
@@ -46,7 +46,7 @@ Routes, in order:
 11. [RELEASE.md#foundation-to-law-release-and-successor-conservation](../RELEASE.md#foundation-to-law-release-and-successor-conservation)
 12. [TICKETS.md#foundation-to-law-work-carriers](../TICKETS.md#foundation-to-law-work-carriers)
 
-Size of this frame: 63934 bytes.
+Size of this frame: 63967 bytes.
 
 Source: EVALUATION.md#4-review-results sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff
 
@@ -226,7 +226,7 @@ unchanged failed construction relation as if iteration alone could close
 it (P2).
 
 
-Source: FOUNDATIONS.md#results sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5 rows=7/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
+Source: FOUNDATIONS.md#results sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e rows=7/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -400,7 +400,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5
+Source: FOUNDATIONS.md#conjunction-of-results sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e
 
 ### Conjunction of results
 
@@ -561,15 +561,15 @@ Closure recording preserves the exact evaluated scope, the satisfied
 conditions, the evidence and the remaining residuals (P4b, P2).
 
 
-Source: RELEASE.md#8-acceptance sha256=1ec805a4acb60f7ce0d061cf4ba6656690500e27ae6756866eaafa34aad071e0
+Source: RELEASE.md#8-acceptance sha256=b5aedcbfc68c6a168bc4c220828146f94b181a3c0fc3925405259890f6fe6886
 
 ## 8. Acceptance
 
 ### Acceptance criteria
 
-An RC may be accepted when (P6, P3):
+A release cut may be accepted when (P6, P3):
 
-- pre-RC qualification passed for the declared subject;
+- proportionate prepublication qualification passed for the declared subject;
 - independent exact-cut review passed where required;
 - required operator review is complete;
 - the intended release scope and successor relation are stable;
@@ -577,7 +577,7 @@ An RC may be accepted when (P6, P3):
 - all release-blocking gaps, including the findings that block promotion
   under [EVALUATION §5 When a finding blocks promotion](../EVALUATION.md#when-a-finding-blocks-promotion),
   are closed or the claimed scope is explicitly narrowed; and
-- the human Product authority accepted the exact immutable RC identity.
+- the human Product authority accepted the exact immutable cut identity.
 
 Each criterion is a mandatory gate in the sense of
 [FOUNDATIONS §4 Change impact and evidence reuse](../FOUNDATIONS.md#change-impact-and-evidence-reuse):
@@ -585,7 +585,7 @@ it applies irrespective of any selection of checks after a change, and
 retained evidence satisfies it only under the validity conditions stated
 there (P6).
 
-Acceptance attaches to that immutable RC identity. It neither advances
+Acceptance attaches to that immutable cut identity. It neither advances
 nor rolls back the version-line selector. Consumer adoption separately
 evaluates the exact latest target presented by the channel and mutates
 only after its digest-bound plan is accepted (P6, P3; EVALUATION §5 is
@@ -606,11 +606,11 @@ dependent capability passed. The claim is either qualified against a
 healthy dependency or narrowed before acceptance (P6, P5).
 
 
-Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=1ec805a4acb60f7ce0d061cf4ba6656690500e27ae6756866eaafa34aad071e0
+Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=b5aedcbfc68c6a168bc4c220828146f94b181a3c0fc3925405259890f6fe6886
 
 ## 9. Successor baseline conservation (STDO-UP-015)
 
-A successor identifies the exact predecessor immutable RC whose semantic
+A successor identifies the exact predecessor immutable cut whose semantic
 claims it evolves. That origin remains immutable for the candidate. Every
 predecessor claim capable of affecting the successor receives one semantic
 disposition (P4b, P3, P6):
@@ -788,7 +788,7 @@ last two rows; its §5 maps the method discriminators to cases and
 logical-review checks.
 
 
-Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=1ec805a4acb60f7ce0d061cf4ba6656690500e27ae6756866eaafa34aad071e0 rows=3/12 selected by the anchors this frame carries; the consumers paragraph of 12 items is omitted
+Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=b5aedcbfc68c6a168bc4c220828146f94b181a3c0fc3925405259890f6fe6886 rows=3/12 selected by the anchors this frame carries; the consumers paragraph of 12 items is omitted
 
 ### Foundation to law: release and successor conservation
 

@@ -38,10 +38,14 @@ All edge SourceRefs pin whole documents; URI fragments are checked inside those
 exact bytes. The first source is the selected runtime Product definition, and
 each subsequent source is the preceding exact target. Same identity with
 different bytes cannot substitute at a route join.
-Markdown fragment scanning excludes fenced/indented examples, comments,
+Markdown fragment scanning excludes fenced/indented examples (including nested
+list/quote fences), comments through their closing delimiter or end of file,
 escaped HTML and inline code before recognizing actual anchors. Its finite
 local scanner is source-level algorithm reuse with recorded custody, not a
 runtime import from the manager or a claim to render arbitrary Markdown.
+Container normalization only identifies literal blocks; anchor extraction
+retains original text and the existing plain/zero-to-three-space ATX heading
+convention. This repair does not add list-prefixed heading-slug support.
 
 Each resource has `source`, `owner`, `complete` and `parents`. Parents name
 information provenance, not an access grant. Cyclic provenance is refused;
@@ -82,6 +86,14 @@ recipient. Context assembly checks the activated target, including declared
 late sources, before constructing the retained context. A requester with wider
 reads cannot thereby deliver those reads to a narrower Worker. The same checks
 run again at preflight and dispatch, bound to the current exact declaration.
+Retained inline/derived provenance uses the same exact-source, owning-Product
+and selected-route authorization as a direct read, in addition to checking its
+original ancestry against receiver eligibility. This applies to the author's
+declared and observed influences, saved Context inputs/output dependencies at
+admission and dispatch, and actor output/return readback. A new resource
+declaration never replaces retained ancestry or retroactively establishes
+completeness. The ordinary unknown-provenance mode remains explicit; unknown
+influence supplies no route or permission for a known source.
 
 Only explicitly supported retained-content shapes are traversed. The guard
 checks the original inline sources, generated-context input and producing

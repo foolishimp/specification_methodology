@@ -1,0 +1,641 @@
+[
+  {
+    "case": "direct-list",
+    "body": "- ```markdown\n  # Support\n  <a id=\"support\"></a>\n  ```\n",
+    "definition": {
+      "$schema": "stdo://releases/v1.0.0-rc.1/standards/schemas/product-definition.schema.json",
+      "kind": "stdo.product-definition",
+      "product": {
+        "definition_id": "urn:test:composition:a",
+        "name": "Test Product",
+        "source_project": "./",
+        "bounded_context": null
+      },
+      "constitution": {
+        "stdo": {
+          "source": {
+            "repository": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-ebtmd7ol/repository"
+          },
+          "selector": "stdo://channels/1.0.0",
+          "basis": {
+            "uri": "stdo://releases/v1.0.0-rc.1/",
+            "manifest_sha256": "bdfc6d3fb8d7034bbaaa15d06747939bcd4e08715b48403ad5df99bb296d6fae"
+          }
+        },
+        "additional_authorities": [],
+        "entrypoints": [
+          {
+            "basis": "#/constitution/stdo/basis",
+            "uri": "standards/SPEC_METHOD.md"
+          }
+        ],
+        "agent_bootstrap": {
+          "entrypoint": "#/constitution/entrypoints/0",
+          "targets": [
+            "./AGENTS.md",
+            "./CLAUDE.md"
+          ]
+        }
+      },
+      "local_constitution": {
+        "axioms": [],
+        "overrides": [],
+        "disambiguations": []
+      },
+      "reference_frame_bases": [
+        {
+          "uri": "./specification/PRODUCT.md#frames",
+          "authority": [
+            "./specification/PRODUCT.md"
+          ],
+          "applies_to": [
+            "urn:test:product-definition:one"
+          ]
+        }
+      ],
+      "what": {
+        "intent": "./specification/INTENT.md",
+        "product": "./specification/PRODUCT.md",
+        "specification": [
+          "./specification/requirements/"
+        ]
+      },
+      "how": {
+        "common": [],
+        "build_tenants": [
+          {
+            "id": "urn:test:build-tenant:default",
+            "root": "./",
+            "design": [
+              "./design/"
+            ],
+            "implementation": [
+              "./src/"
+            ]
+          }
+        ]
+      },
+      "ticketing": {
+        "goals": "./specification/PRODUCT.md",
+        "tickets": {
+          "root": "./.ai-workspace/tickets/",
+          "lanes": {
+            "backlog": "./.ai-workspace/tickets/backlog/",
+            "active": "./.ai-workspace/tickets/active/",
+            "completed": "./.ai-workspace/tickets/completed/"
+          }
+        },
+        "comments": {
+          "root": "./.ai-workspace/comments/"
+        }
+      },
+      "composition": [
+        {
+          "product_definition": "../b/stdo_b.json",
+          "target_definition_id": "urn:test:composition:b",
+          "relation": "contract.md#support",
+          "contracts": [
+            "../b/contract.md#contract"
+          ]
+        }
+      ],
+      "unrelated": {
+        "preserved": true
+      }
+    },
+    "exit": 1,
+    "report": {
+      "authority_and_semantic_adequacy": "not evaluated",
+      "definitions": [
+        {
+          "basis": "stdo://releases/v1.0.0-rc.1/",
+          "composition": [],
+          "cut": "v1.0.0-rc.1",
+          "definition": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-ebtmd7ol/workspace/a/stdo_a.json",
+          "definition_id": "urn:test:composition:a",
+          "document_sha256": "9824f61937d74ed162839e12ca6a90bd9edae1c3f2466170b28efa570efc4264",
+          "failures": [
+            "Product Definition validation requires the installed stdo-toolchain dependencies"
+          ],
+          "installed": true,
+          "manifest_sha256": "bdfc6d3fb8d7034bbaaa15d06747939bcd4e08715b48403ad5df99bb296d6fae",
+          "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-ebtmd7ol/store/releases/v1.0.0-rc.1",
+          "release": {
+            "commit": "95676b8420a06b2b32ea63240809c131c4c8df76",
+            "cut": "v1.0.0-rc.1",
+            "standards_tree": "a29985c48ca56ce6fc1856f5bbff934285a3c1ed",
+            "tag_object": "fe970bdd689512694f7e9d825dbd387042d92850",
+            "tree": "e8b7c0225f7e11c1e0b1d74cfea6c083746fd81a"
+          },
+          "schema": null,
+          "selected": true,
+          "selector": "stdo://channels/1.0.0",
+          "standards": {
+            "installed_root": "standards",
+            "member_count": 3,
+            "member_set_sha256": "23287aa186a6586c16444f1ef90436bd481da2fb381c0f6dc177b289313d8928",
+            "members": [
+              {
+                "path": "README.md",
+                "sha256": "a2f74a56d550741351a0ef940f9a1991c00f74f813f02fd55f3d03f146c2dae9"
+              },
+              {
+                "path": "SPEC_METHOD.md",
+                "sha256": "afa69c67f3e6db629654c3aad748d960f646edd7e71ccd70c3955d7a6565232b"
+              },
+              {
+                "path": "schemas/product-definition.schema.json",
+                "sha256": "b79327eb47bccf8d38ae87f80666c8d5e974a47a29b7863bc1c2c943c4accac8"
+              }
+            ],
+            "source_root": "specification/standards"
+          },
+          "valid": false
+        },
+        {
+          "basis": "stdo://releases/v1.0.0-rc.1/",
+          "composition": [],
+          "cut": "v1.0.0-rc.1",
+          "definition": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-ebtmd7ol/workspace/b/stdo_b.json",
+          "definition_id": "urn:test:composition:b",
+          "document_sha256": "507bac773315225fbf593f9295018a8938a6b9bf9b3e4f5cb5b134adc5d5b1d5",
+          "failures": [
+            "Product Definition validation requires the installed stdo-toolchain dependencies"
+          ],
+          "installed": true,
+          "manifest_sha256": "bdfc6d3fb8d7034bbaaa15d06747939bcd4e08715b48403ad5df99bb296d6fae",
+          "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-ebtmd7ol/store/releases/v1.0.0-rc.1",
+          "release": {
+            "commit": "95676b8420a06b2b32ea63240809c131c4c8df76",
+            "cut": "v1.0.0-rc.1",
+            "standards_tree": "a29985c48ca56ce6fc1856f5bbff934285a3c1ed",
+            "tag_object": "fe970bdd689512694f7e9d825dbd387042d92850",
+            "tree": "e8b7c0225f7e11c1e0b1d74cfea6c083746fd81a"
+          },
+          "schema": null,
+          "selected": true,
+          "selector": "stdo://channels/1.0.0",
+          "standards": {
+            "installed_root": "standards",
+            "member_count": 3,
+            "member_set_sha256": "23287aa186a6586c16444f1ef90436bd481da2fb381c0f6dc177b289313d8928",
+            "members": [
+              {
+                "path": "README.md",
+                "sha256": "a2f74a56d550741351a0ef940f9a1991c00f74f813f02fd55f3d03f146c2dae9"
+              },
+              {
+                "path": "SPEC_METHOD.md",
+                "sha256": "afa69c67f3e6db629654c3aad748d960f646edd7e71ccd70c3955d7a6565232b"
+              },
+              {
+                "path": "schemas/product-definition.schema.json",
+                "sha256": "b79327eb47bccf8d38ae87f80666c8d5e974a47a29b7863bc1c2c943c4accac8"
+              }
+            ],
+            "source_root": "specification/standards"
+          },
+          "valid": false
+        }
+      ],
+      "failures": [],
+      "installed_resources": "verified immutable stdo://releases/ resources from the selected local Store",
+      "kind": "stdo.composition-verification",
+      "limits": {
+        "definitions": 1000,
+        "edges": 10000,
+        "file_bytes": 8388608
+      },
+      "resolver_root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-ebtmd7ol/workspace",
+      "root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-ebtmd7ol/workspace",
+      "schema_version": 1,
+      "valid": false
+    }
+  },
+  {
+    "case": "unfinished-comment",
+    "body": "<!-- unfinished\n# Support\n<a id=\"support\"></a>\n",
+    "definition": {
+      "$schema": "stdo://releases/v1.0.0-rc.1/standards/schemas/product-definition.schema.json",
+      "kind": "stdo.product-definition",
+      "product": {
+        "definition_id": "urn:test:composition:a",
+        "name": "Test Product",
+        "source_project": "./",
+        "bounded_context": null
+      },
+      "constitution": {
+        "stdo": {
+          "source": {
+            "repository": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-ebtmd7ol/repository"
+          },
+          "selector": "stdo://channels/1.0.0",
+          "basis": {
+            "uri": "stdo://releases/v1.0.0-rc.1/",
+            "manifest_sha256": "bdfc6d3fb8d7034bbaaa15d06747939bcd4e08715b48403ad5df99bb296d6fae"
+          }
+        },
+        "additional_authorities": [],
+        "entrypoints": [
+          {
+            "basis": "#/constitution/stdo/basis",
+            "uri": "standards/SPEC_METHOD.md"
+          }
+        ],
+        "agent_bootstrap": {
+          "entrypoint": "#/constitution/entrypoints/0",
+          "targets": [
+            "./AGENTS.md",
+            "./CLAUDE.md"
+          ]
+        }
+      },
+      "local_constitution": {
+        "axioms": [],
+        "overrides": [],
+        "disambiguations": []
+      },
+      "reference_frame_bases": [
+        {
+          "uri": "./specification/PRODUCT.md#frames",
+          "authority": [
+            "./specification/PRODUCT.md"
+          ],
+          "applies_to": [
+            "urn:test:product-definition:one"
+          ]
+        }
+      ],
+      "what": {
+        "intent": "./specification/INTENT.md",
+        "product": "./specification/PRODUCT.md",
+        "specification": [
+          "./specification/requirements/"
+        ]
+      },
+      "how": {
+        "common": [],
+        "build_tenants": [
+          {
+            "id": "urn:test:build-tenant:default",
+            "root": "./",
+            "design": [
+              "./design/"
+            ],
+            "implementation": [
+              "./src/"
+            ]
+          }
+        ]
+      },
+      "ticketing": {
+        "goals": "./specification/PRODUCT.md",
+        "tickets": {
+          "root": "./.ai-workspace/tickets/",
+          "lanes": {
+            "backlog": "./.ai-workspace/tickets/backlog/",
+            "active": "./.ai-workspace/tickets/active/",
+            "completed": "./.ai-workspace/tickets/completed/"
+          }
+        },
+        "comments": {
+          "root": "./.ai-workspace/comments/"
+        }
+      },
+      "composition": [
+        {
+          "product_definition": "../b/stdo_b.json",
+          "target_definition_id": "urn:test:composition:b",
+          "relation": "contract.md#support",
+          "contracts": [
+            "../b/contract.md#contract"
+          ]
+        }
+      ],
+      "unrelated": {
+        "preserved": true
+      }
+    },
+    "exit": 1,
+    "report": {
+      "authority_and_semantic_adequacy": "not evaluated",
+      "definitions": [
+        {
+          "basis": "stdo://releases/v1.0.0-rc.1/",
+          "composition": [],
+          "cut": "v1.0.0-rc.1",
+          "definition": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-ebtmd7ol/workspace/a/stdo_a.json",
+          "definition_id": "urn:test:composition:a",
+          "document_sha256": "9824f61937d74ed162839e12ca6a90bd9edae1c3f2466170b28efa570efc4264",
+          "failures": [
+            "Product Definition validation requires the installed stdo-toolchain dependencies"
+          ],
+          "installed": true,
+          "manifest_sha256": "bdfc6d3fb8d7034bbaaa15d06747939bcd4e08715b48403ad5df99bb296d6fae",
+          "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-ebtmd7ol/store/releases/v1.0.0-rc.1",
+          "release": {
+            "commit": "95676b8420a06b2b32ea63240809c131c4c8df76",
+            "cut": "v1.0.0-rc.1",
+            "standards_tree": "a29985c48ca56ce6fc1856f5bbff934285a3c1ed",
+            "tag_object": "fe970bdd689512694f7e9d825dbd387042d92850",
+            "tree": "e8b7c0225f7e11c1e0b1d74cfea6c083746fd81a"
+          },
+          "schema": null,
+          "selected": true,
+          "selector": "stdo://channels/1.0.0",
+          "standards": {
+            "installed_root": "standards",
+            "member_count": 3,
+            "member_set_sha256": "23287aa186a6586c16444f1ef90436bd481da2fb381c0f6dc177b289313d8928",
+            "members": [
+              {
+                "path": "README.md",
+                "sha256": "a2f74a56d550741351a0ef940f9a1991c00f74f813f02fd55f3d03f146c2dae9"
+              },
+              {
+                "path": "SPEC_METHOD.md",
+                "sha256": "afa69c67f3e6db629654c3aad748d960f646edd7e71ccd70c3955d7a6565232b"
+              },
+              {
+                "path": "schemas/product-definition.schema.json",
+                "sha256": "b79327eb47bccf8d38ae87f80666c8d5e974a47a29b7863bc1c2c943c4accac8"
+              }
+            ],
+            "source_root": "specification/standards"
+          },
+          "valid": false
+        },
+        {
+          "basis": "stdo://releases/v1.0.0-rc.1/",
+          "composition": [],
+          "cut": "v1.0.0-rc.1",
+          "definition": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-ebtmd7ol/workspace/b/stdo_b.json",
+          "definition_id": "urn:test:composition:b",
+          "document_sha256": "507bac773315225fbf593f9295018a8938a6b9bf9b3e4f5cb5b134adc5d5b1d5",
+          "failures": [
+            "Product Definition validation requires the installed stdo-toolchain dependencies"
+          ],
+          "installed": true,
+          "manifest_sha256": "bdfc6d3fb8d7034bbaaa15d06747939bcd4e08715b48403ad5df99bb296d6fae",
+          "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-ebtmd7ol/store/releases/v1.0.0-rc.1",
+          "release": {
+            "commit": "95676b8420a06b2b32ea63240809c131c4c8df76",
+            "cut": "v1.0.0-rc.1",
+            "standards_tree": "a29985c48ca56ce6fc1856f5bbff934285a3c1ed",
+            "tag_object": "fe970bdd689512694f7e9d825dbd387042d92850",
+            "tree": "e8b7c0225f7e11c1e0b1d74cfea6c083746fd81a"
+          },
+          "schema": null,
+          "selected": true,
+          "selector": "stdo://channels/1.0.0",
+          "standards": {
+            "installed_root": "standards",
+            "member_count": 3,
+            "member_set_sha256": "23287aa186a6586c16444f1ef90436bd481da2fb381c0f6dc177b289313d8928",
+            "members": [
+              {
+                "path": "README.md",
+                "sha256": "a2f74a56d550741351a0ef940f9a1991c00f74f813f02fd55f3d03f146c2dae9"
+              },
+              {
+                "path": "SPEC_METHOD.md",
+                "sha256": "afa69c67f3e6db629654c3aad748d960f646edd7e71ccd70c3955d7a6565232b"
+              },
+              {
+                "path": "schemas/product-definition.schema.json",
+                "sha256": "b79327eb47bccf8d38ae87f80666c8d5e974a47a29b7863bc1c2c943c4accac8"
+              }
+            ],
+            "source_root": "specification/standards"
+          },
+          "valid": false
+        }
+      ],
+      "failures": [],
+      "installed_resources": "verified immutable stdo://releases/ resources from the selected local Store",
+      "kind": "stdo.composition-verification",
+      "limits": {
+        "definitions": 1000,
+        "edges": 10000,
+        "file_bytes": 8388608
+      },
+      "resolver_root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-ebtmd7ol/workspace",
+      "root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-ebtmd7ol/workspace",
+      "schema_version": 1,
+      "valid": false
+    }
+  },
+  {
+    "case": "missing-control",
+    "body": "# Different\n",
+    "definition": {
+      "$schema": "stdo://releases/v1.0.0-rc.1/standards/schemas/product-definition.schema.json",
+      "kind": "stdo.product-definition",
+      "product": {
+        "definition_id": "urn:test:composition:a",
+        "name": "Test Product",
+        "source_project": "./",
+        "bounded_context": null
+      },
+      "constitution": {
+        "stdo": {
+          "source": {
+            "repository": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-ebtmd7ol/repository"
+          },
+          "selector": "stdo://channels/1.0.0",
+          "basis": {
+            "uri": "stdo://releases/v1.0.0-rc.1/",
+            "manifest_sha256": "bdfc6d3fb8d7034bbaaa15d06747939bcd4e08715b48403ad5df99bb296d6fae"
+          }
+        },
+        "additional_authorities": [],
+        "entrypoints": [
+          {
+            "basis": "#/constitution/stdo/basis",
+            "uri": "standards/SPEC_METHOD.md"
+          }
+        ],
+        "agent_bootstrap": {
+          "entrypoint": "#/constitution/entrypoints/0",
+          "targets": [
+            "./AGENTS.md",
+            "./CLAUDE.md"
+          ]
+        }
+      },
+      "local_constitution": {
+        "axioms": [],
+        "overrides": [],
+        "disambiguations": []
+      },
+      "reference_frame_bases": [
+        {
+          "uri": "./specification/PRODUCT.md#frames",
+          "authority": [
+            "./specification/PRODUCT.md"
+          ],
+          "applies_to": [
+            "urn:test:product-definition:one"
+          ]
+        }
+      ],
+      "what": {
+        "intent": "./specification/INTENT.md",
+        "product": "./specification/PRODUCT.md",
+        "specification": [
+          "./specification/requirements/"
+        ]
+      },
+      "how": {
+        "common": [],
+        "build_tenants": [
+          {
+            "id": "urn:test:build-tenant:default",
+            "root": "./",
+            "design": [
+              "./design/"
+            ],
+            "implementation": [
+              "./src/"
+            ]
+          }
+        ]
+      },
+      "ticketing": {
+        "goals": "./specification/PRODUCT.md",
+        "tickets": {
+          "root": "./.ai-workspace/tickets/",
+          "lanes": {
+            "backlog": "./.ai-workspace/tickets/backlog/",
+            "active": "./.ai-workspace/tickets/active/",
+            "completed": "./.ai-workspace/tickets/completed/"
+          }
+        },
+        "comments": {
+          "root": "./.ai-workspace/comments/"
+        }
+      },
+      "composition": [
+        {
+          "product_definition": "../b/stdo_b.json",
+          "target_definition_id": "urn:test:composition:b",
+          "relation": "contract.md#support",
+          "contracts": [
+            "../b/contract.md#contract"
+          ]
+        }
+      ],
+      "unrelated": {
+        "preserved": true
+      }
+    },
+    "exit": 1,
+    "report": {
+      "authority_and_semantic_adequacy": "not evaluated",
+      "definitions": [
+        {
+          "basis": "stdo://releases/v1.0.0-rc.1/",
+          "composition": [],
+          "cut": "v1.0.0-rc.1",
+          "definition": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-ebtmd7ol/workspace/a/stdo_a.json",
+          "definition_id": "urn:test:composition:a",
+          "document_sha256": "9824f61937d74ed162839e12ca6a90bd9edae1c3f2466170b28efa570efc4264",
+          "failures": [
+            "Product Definition validation requires the installed stdo-toolchain dependencies"
+          ],
+          "installed": true,
+          "manifest_sha256": "bdfc6d3fb8d7034bbaaa15d06747939bcd4e08715b48403ad5df99bb296d6fae",
+          "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-ebtmd7ol/store/releases/v1.0.0-rc.1",
+          "release": {
+            "commit": "95676b8420a06b2b32ea63240809c131c4c8df76",
+            "cut": "v1.0.0-rc.1",
+            "standards_tree": "a29985c48ca56ce6fc1856f5bbff934285a3c1ed",
+            "tag_object": "fe970bdd689512694f7e9d825dbd387042d92850",
+            "tree": "e8b7c0225f7e11c1e0b1d74cfea6c083746fd81a"
+          },
+          "schema": null,
+          "selected": true,
+          "selector": "stdo://channels/1.0.0",
+          "standards": {
+            "installed_root": "standards",
+            "member_count": 3,
+            "member_set_sha256": "23287aa186a6586c16444f1ef90436bd481da2fb381c0f6dc177b289313d8928",
+            "members": [
+              {
+                "path": "README.md",
+                "sha256": "a2f74a56d550741351a0ef940f9a1991c00f74f813f02fd55f3d03f146c2dae9"
+              },
+              {
+                "path": "SPEC_METHOD.md",
+                "sha256": "afa69c67f3e6db629654c3aad748d960f646edd7e71ccd70c3955d7a6565232b"
+              },
+              {
+                "path": "schemas/product-definition.schema.json",
+                "sha256": "b79327eb47bccf8d38ae87f80666c8d5e974a47a29b7863bc1c2c943c4accac8"
+              }
+            ],
+            "source_root": "specification/standards"
+          },
+          "valid": false
+        },
+        {
+          "basis": "stdo://releases/v1.0.0-rc.1/",
+          "composition": [],
+          "cut": "v1.0.0-rc.1",
+          "definition": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-ebtmd7ol/workspace/b/stdo_b.json",
+          "definition_id": "urn:test:composition:b",
+          "document_sha256": "507bac773315225fbf593f9295018a8938a6b9bf9b3e4f5cb5b134adc5d5b1d5",
+          "failures": [
+            "Product Definition validation requires the installed stdo-toolchain dependencies"
+          ],
+          "installed": true,
+          "manifest_sha256": "bdfc6d3fb8d7034bbaaa15d06747939bcd4e08715b48403ad5df99bb296d6fae",
+          "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-ebtmd7ol/store/releases/v1.0.0-rc.1",
+          "release": {
+            "commit": "95676b8420a06b2b32ea63240809c131c4c8df76",
+            "cut": "v1.0.0-rc.1",
+            "standards_tree": "a29985c48ca56ce6fc1856f5bbff934285a3c1ed",
+            "tag_object": "fe970bdd689512694f7e9d825dbd387042d92850",
+            "tree": "e8b7c0225f7e11c1e0b1d74cfea6c083746fd81a"
+          },
+          "schema": null,
+          "selected": true,
+          "selector": "stdo://channels/1.0.0",
+          "standards": {
+            "installed_root": "standards",
+            "member_count": 3,
+            "member_set_sha256": "23287aa186a6586c16444f1ef90436bd481da2fb381c0f6dc177b289313d8928",
+            "members": [
+              {
+                "path": "README.md",
+                "sha256": "a2f74a56d550741351a0ef940f9a1991c00f74f813f02fd55f3d03f146c2dae9"
+              },
+              {
+                "path": "SPEC_METHOD.md",
+                "sha256": "afa69c67f3e6db629654c3aad748d960f646edd7e71ccd70c3955d7a6565232b"
+              },
+              {
+                "path": "schemas/product-definition.schema.json",
+                "sha256": "b79327eb47bccf8d38ae87f80666c8d5e974a47a29b7863bc1c2c943c4accac8"
+              }
+            ],
+            "source_root": "specification/standards"
+          },
+          "valid": false
+        }
+      ],
+      "failures": [],
+      "installed_resources": "verified immutable stdo://releases/ resources from the selected local Store",
+      "kind": "stdo.composition-verification",
+      "limits": {
+        "definitions": 1000,
+        "edges": 10000,
+        "file_bytes": 8388608
+      },
+      "resolver_root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-ebtmd7ol/workspace",
+      "root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-test-ebtmd7ol/workspace",
+      "schema_version": 1,
+      "valid": false
+    }
+  }
+]

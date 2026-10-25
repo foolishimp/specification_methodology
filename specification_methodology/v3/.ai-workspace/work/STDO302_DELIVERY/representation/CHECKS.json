@@ -1,0 +1,88 @@
+{
+  "scope": "Ten selected sections; five active statement families; no operation execution or semantic acceptance",
+  "source_sections": 10,
+  "family_counts": {
+    "objects": 10,
+    "relations": 3,
+    "constraints": 10,
+    "latitude": 6,
+    "residuals": 3,
+    "traversals": 0,
+    "transformations": 0,
+    "judgments": 0
+  },
+  "grounding": "actual author_check and complete exact line-span comparison against pinned source files passed",
+  "recovery_relation": "equal JSON values and canonical model digest; raw serialization-byte equality not claimed",
+  "canonical_model_sha256": "b3f97a2667c277c21417230421aca02c26b3a7b19baa598197e94f67c5439151",
+  "commands": [
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_graph.py",
+        "validate",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/representation/MODEL.json"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"claim\": \"declared fragment only; no semantic acceptance or full calculus validity\",\n  \"model\": {\n    \"id\": \"urn:stdo:3.0.2:composition-release:interpretation:1\",\n    \"profile\": \"a_c.graphify.model/1\",\n    \"sha256\": \"b3f97a2667c277c21417230421aca02c26b3a7b19baa598197e94f67c5439151\"\n  },\n  \"records\": 32,\n  \"references\": 246,\n  \"status\": \"structurally-checked\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_graph.py",
+        "materialize",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/representation/MODEL.json",
+        "--out",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/representation/CARRIER.json"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"claim\": \"no issuer-authority proof or carrier admission\",\n  \"model\": {\n    \"id\": \"urn:stdo:3.0.2:composition-release:interpretation:1\",\n    \"profile\": \"a_c.graphify.model/1\",\n    \"sha256\": \"b3f97a2667c277c21417230421aca02c26b3a7b19baa598197e94f67c5439151\"\n  },\n  \"status\": \"proposal-view\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_graph.py",
+        "materialize",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/representation/MODEL.json",
+        "--out",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/representation/GRAPHIFY_EXTRACTION.json",
+        "--extraction"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"claim\": \"no issuer-authority proof or carrier admission\",\n  \"model\": {\n    \"id\": \"urn:stdo:3.0.2:composition-release:interpretation:1\",\n    \"profile\": \"a_c.graphify.model/1\",\n    \"sha256\": \"b3f97a2667c277c21417230421aca02c26b3a7b19baa598197e94f67c5439151\"\n  },\n  \"status\": \"proposal-view\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_graph.py",
+        "decode",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/representation/CARRIER.json",
+        "--out",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/representation/RECOVERED.json"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"model\": {\n    \"id\": \"urn:stdo:3.0.2:composition-release:interpretation:1\",\n    \"profile\": \"a_c.graphify.model/1\",\n    \"sha256\": \"b3f97a2667c277c21417230421aca02c26b3a7b19baa598197e94f67c5439151\"\n  },\n  \"status\": \"decoded\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_graph.py",
+        "decode",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/representation/GRAPHIFY_EXTRACTION.json",
+        "--out",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/representation/RECOVERED_EXTRACTION.json"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"model\": {\n    \"id\": \"urn:stdo:3.0.2:composition-release:interpretation:1\",\n    \"profile\": \"a_c.graphify.model/1\",\n    \"sha256\": \"b3f97a2667c277c21417230421aca02c26b3a7b19baa598197e94f67c5439151\"\n  },\n  \"status\": \"decoded\"\n}\n",
+      "stderr": ""
+    }
+  ]
+}

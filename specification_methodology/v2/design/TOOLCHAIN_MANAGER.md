@@ -13,6 +13,43 @@
 
 ## Boundary
 
+### Stable-v1 release acquisition
+
+The owner's selected STDO 3.0.2 release adds an immutable stable profile to the
+manager in version 0.1.6. It implements the prospective common RELEASE contract;
+the v2 source builder remains its pinned 2.5.0 RC4. Installed releases and legacy
+RC semantics are conserved.
+
+Stable syntax is `vMAJOR.MINOR.PATCH` with canonical decimal components. Syntax
+normalization is not release classification. Actual acquisition requires the
+qualified annotated ref, its matching embedded tag name, direct commit target,
+and exactly one unindented `STDO-Release-Profile: stable-v1` annotation line.
+The fresh version line must contain neither RC refs in either namespace nor a
+historical bare alias. RC absence alone is insufficient. An explicit profile
+tag also cannot become a legacy selector if RC refs are subsequently added.
+
+Only stable manifests add `release.profile = stable-v1`. The legacy canonical
+manifest algorithm and installed identities remain unchanged. The successor
+manifest schema couples stable syntax to its profile/qualified coordinates;
+the successor Product Definition schema permits the new exact basis URI.
+Installed byte verification enforces that profile relation in addition to
+existing member checks. Wrong digests, payload tampering and identity drift
+continue to refuse before replacement.
+
+Stable channel discovery returns the same exact tag, with `cut_ordinal = null`.
+There is no second selector and no implicit next-patch adoption. Legacy channels
+retain their prior highest-RC and historical/qualified-transition algorithm;
+their selected annotations must not assert an explicit final-release profile.
+The existing same-line downgrade guard also refuses stable-to-RC regression.
+Different version-line selection remains explicit; no global version-policy
+algorithm is introduced. Complete V2 cohort updating retains its existing
+contract and is not widened into a synthetic stable cohort.
+
+The native standalone package does not carry this Python project. Distribution
+therefore includes a separately checksummed manager wheel. Qualification binds
+the actual wheel import/entrypoint to the changed source and exercises stable
+install/verify/URI and pinned-definition paths from an isolated environment.
+
 ### Selected composition-verification increment
 
 The owner's 26 October 2026 instruction selects the implementation of the
@@ -46,6 +83,14 @@ fragment scanner is not a general Markdown renderer. JSON fragments use JSON Poi
 HTML fragments use explicit IDs/anchor names. A directory contract establishes
 directory existence, not an enumeration or assessment of all its descendants.
 
+The 3.0.2 repair recognizes list/blockquote containers when excluding fenced
+examples, including a list marker on the fence opener. Container normalization
+does not expand heading recognition: original physical lines retain the existing
+heading convention. Leaving a containing list or quote ends its nested fence,
+so genuine following anchors remain visible. An unfinished HTML comment hides
+through end of input; a comment marker inside a matched code span, escaped text
+or an atomic raw HTML tag does not start that exclusion.
+
 `composition.verify_composition` is the reusable read-only API. Its report
 retains the resolver boundary, limits, definition and acquired-file digests,
 per-edge reference results and exact failures. Graph limits and per-file size
@@ -62,7 +107,8 @@ consumer workflow, infer product composition, or own a consumer's selection.
 The Product Definition is the sole authored selection surface. Its exact basis
 is an immutable logical release URI plus the SHA-256 of a deterministic
 installed-release manifest. Its version-line selector is discovery input for
-the highest-ordinal published immutable RC only.
+the highest-ordinal published immutable RC, or the exact stable-v1 tag on a
+fresh stable version line.
 
 ## Legacy Installer Disposition
 

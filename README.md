@@ -4,15 +4,32 @@ The Git repository is `foolishimp/specification_methodology`. In this workspace,
 the checkout directory is `specification_methodology`. The STDO Specification
 Methodology product has two source projects side by side under its
 `specification_methodology/` child: `v2/` owns the current STDO 2.* source and
-the toolchain manager; `v3/` constructs v3.0.0 of the same product. Select a
-child Product before working on its source.
+the toolchain manager; `v3/` owns STDO 3 source and standalone native releases
+of the same product. Select a child Product before working on its source.
+
+## STDO 3.0.2 release
+
+The owner has selected **STDO 3.0.2 as a normal standalone release**, without an
+RC suffix. Publication is pending the actual release receipt. Its selected public
+target is [STDO 3.0.2](https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology%2Fv3.0.2),
+immutable tag `specification_methodology/v3.0.2`. The
+[installation instructions](specification_methodology/v3/build_tenants/common/plugins/spec/references/GETTING_STARTED.md#new-project)
+acquire the exact distributed manager wheel and native manifest; their download
+commands become usable when the selected assets are published. The
+[publication selection](specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/PUBLICATION_SELECTION.md)
+also selects this release as GitHub Latest.
+
+This standalone payload is the methodology and its `spec` plugin, with a separate
+bounded representation supplement. It does not select the older v2 matched cohort
+or migrate Skills from its installed 3.0.1 basis. Installing a release and adopting
+it for a Product remain separate operations.
 
 This repository co-locates six peer source projects:
 
 | Project | Purpose |
 |---|---|
 | [`specification_methodology/v2/`](specification_methodology/v2/) | Specification Methodology 2.* source and the STDO toolchain manager |
-| [`specification_methodology/v3/`](specification_methodology/v3/) | Specification Methodology v3.0.0 construction: common principles and construction contract, with independent Codex and Claude document build tenants |
+| [`specification_methodology/v3/`](specification_methodology/v3/) | STDO 3 methodology source and standalone native releases; the common payload retains independent tenant construction history |
 | [`axiom_indexer/`](axiom_indexer/) | LLM-first `a_c` authoring, mechanical validation, logical-map projection, and ordered joining |
 | [`stdo_representation/`](stdo_representation/) | Release-matched `a_c.STDO` compression, constraint index, and native Codex and Claude instructions |
 | [`a_c/`](a_c/) | Independent axiomatic-calculus implementations, with Graphify as the first build tenant |
@@ -76,6 +93,7 @@ Product Definition selects its exact governing cut.
 
 ## Coordinated Release-Matched Cohort
 
+This older cohort relation is not selected for the standalone 3.0.2 release above.
 For the default scope of an owner instruction to release STDO, follow
 [`Meaning Of A Release Request`](STACK_RELEASE.md#meaning-of-a-release-request).
 

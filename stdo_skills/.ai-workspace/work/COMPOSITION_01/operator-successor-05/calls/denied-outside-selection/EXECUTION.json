@@ -1,0 +1,40 @@
+{
+  "name": "denied-outside-selection",
+  "operation": "source.read",
+  "argv": [
+    "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+    "-B",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py",
+    "--policy",
+    "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/COMPOSITION_01/operator-successor-05/POLICY.json",
+    "--policy-sha256",
+    "92c0c2ef43c770114ad7dabda7785cfd938e0ae9162eab64e78c2c25a4bd3122",
+    "--principal",
+    "writer",
+    "call",
+    "--request",
+    "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/COMPOSITION_01/operator-successor-05/calls/denied-outside-selection/request.json"
+  ],
+  "exit": 2,
+  "status": "refused",
+  "evidence": {
+    "id": "sha256:f85276ec8f53bcfaf33bd355e862dd0bb3d1693c3123a95c5be602fd297835b3",
+    "sha256": "f85276ec8f53bcfaf33bd355e862dd0bb3d1693c3123a95c5be602fd297835b3"
+  },
+  "expected": "refused",
+  "refusal": {
+    "code": "acquisition_denied",
+    "gaps": [
+      {
+        "detail_count": 0,
+        "diagnostics": "withheld by selected composition binding",
+        "effect_state": "completion_unknown",
+        "end_established": false,
+        "history_state": "not_established_by_refusal",
+        "private_retention": "included in operation publication"
+      }
+    ],
+    "reason": "Selected receiving information policy does not permit this disclosure",
+    "source_refs": []
+  }
+}

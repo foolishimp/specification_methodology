@@ -289,7 +289,7 @@
           "$ref": "#/$defs/identityUri"
         },
         {
-          "pattern": "^stdo://releases/v[0-9A-Za-z][0-9A-Za-z._+-]*-rc\\.[1-9][0-9]*/?$"
+          "pattern": "^stdo://releases/(?:v[0-9A-Za-z][0-9A-Za-z._+-]*-rc\\.[1-9][0-9]*|v(?:0|[1-9][0-9]*)\\.(?:0|[1-9][0-9]*)\\.(?:0|[1-9][0-9]*))/?$"
         }
       ]
     },
@@ -309,14 +309,14 @@
           "properties": {
             "repository": {
               "$ref": "#/$defs/referenceUri",
-              "description": "Git repository carrying the selected STDO release line and immutable RC cuts."
+              "description": "Git repository carrying selected legacy RC lines or explicit stable-v1 immutable releases."
             }
           },
           "additionalProperties": false
         },
         "selector": {
           "$ref": "#/$defs/stdoChannelUri",
-          "description": "Mutable version-line discovery selector carried by an annotated Git tag. It is never operative constitutional authority without digest-bound explicit resolution and adoption."
+          "description": "Version discovery route: legacy annotated highest-RC selector, or the exact annotated stable-v1 cut on its fresh version line. Never operative authority without digest-bound resolution and explicit adoption."
         },
         "basis": {
           "type": "object",

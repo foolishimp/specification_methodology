@@ -222,6 +222,76 @@ class CompositionPublicTests(unittest.TestCase):
         self.declaration["bindings"]["worker"]["allow"].remove("data")
         self.select(); self.assertRefused(self.read(self.f.data), "acquisition_denied")
 
+    def _inline_provider_packet(self):
+        self._route()
+        self.declaration["bindings"]["executive"]["route"] = ["A-D"]
+        actor = self.f.write("inputs/hash_actor.py", b'import sys,hashlib\nfrom pathlib import Path\nraw=sys.stdin.buffer.read()\nvalue=hashlib.sha256(raw).hexdigest()\nPath(sys.argv[1]).write_text(value)\nprint(value)\n')
+        executor = self.f.policy["executors"]["registered"]
+        executor["argv"] = [str(self.python), "-B", str(self.f.workspace / "inputs/hash_actor.py"), str(self.target)]
+        executor["dependencies"] = [actor]
+        self.select()
+        self.assertRefused(self.read(self.f.data), "authority_missing")
+        acquired = self._ok(self.read(self.f.data, "executive"))
+        packet = self.f.packet()
+        packet["attention"]["prohibited_assumptions"] = [acquired["content"]]
+        return packet
+
+    def _assembly_arguments(self, packet):
+        return {"packet": packet, "models": [], "sources": [self.f.law], "late_acquisition": [],
+                "envelope": {"capacity_bytes": None, "boundary": "executor-stdin-utf8",
+                             "host_context": {"state": "unknown", "bytes": None, "evidence": None}}}
+
+    def test_inline_provenance_needs_recipient_route_before_actual_delivery(self):
+        packet = self._inline_provider_packet()
+        response = self._public("context.assemble", self._assembly_arguments(packet))
+        self.assertRefused(response, "authority_missing")
+        self.assertFalse(self.target.exists())
+        self.assertIsNone(response["result"])
+        # The same actor/history/content is legitimate once its actual route is
+        # selected. No fresh actor identity or synthetic delivery is substituted.
+        self.declaration["bindings"]["worker"]["route"] = ["A-D"]
+        self.select()
+        context = self._assemble(packet)
+        attempt = self._ok(self._public("dispatch.start", {"preflight": self._admit(context)}))["attempt"]
+        ended = self._ok(self._finished(attempt))
+        self.assertEqual(ended["process_end"]["returncode"], 0)
+        retained = json.loads((self.f.evidence / "objects" / (context["sha256"] + ".json")).read_text())["payload"]
+        self.assertEqual(self.target.read_text(), retained["rendered_sha256"])
+        self._ok(self._public("evidence.read", {"artifact": ended["output"]["stdout"]}))
+        # Output includes retained inline influence even when no packet
+        # SourceRef names it. The parent's former route cannot authorize a new
+        # readback after that route has been removed.
+        self.declaration["bindings"]["executive"]["route"] = []
+        self.select()
+        self.assertRefused(self.read(self.f.data, "executive"), "authority_missing")
+        self.assertRefused(self._public("evidence.read", {"artifact": ended["output"]["stdout"]}), "authority_missing")
+
+    def test_declared_inline_and_output_dependencies_require_recipient_route(self):
+        self._route()
+        self.declaration["bindings"]["executive"]["route"] = ["A-D"]
+        for producer in ("executive", "worker"):
+            with self.subTest(producer=producer):
+                for binding in self.declaration["bindings"].values():
+                    binding["output"]["sources"] = []
+                self.declaration["bindings"][producer]["output"]["sources"] = ["data"]
+                self.select()
+                self.assertRefused(self._public("context.assemble", self._assembly_arguments(self.f.packet())), "authority_missing")
+        self.assertFalse(self.target.exists())
+
+    def test_removed_inline_permission_prevents_admission_and_dispatch(self):
+        packet = self._inline_provider_packet()
+        self.declaration["bindings"]["worker"]["route"] = ["A-D"]
+        self.select()
+        context = self._assemble(packet)
+        receipt = self._admit(context)
+        self.declaration["bindings"]["worker"]["route"] = []
+        self.select()
+        refused = self._public("contract.preflight", {"context": context, "grant_id": "work",
+            "executor_id": "registered", "result_key": "public-counter", "observations": []})
+        self.assertRefused(refused, "basis_stale")
+        self.assertRefused(self._public("dispatch.start", {"preflight": receipt}), "authority_missing")
+        self.assertFalse(self.target.exists())
+
     def test_route_target_identity_and_fragment_are_rechecked(self):
         self._route(); self.declaration["bindings"]["worker"]["route"] = ["A-D"]
         self.select(); self._ok(self.read(self.f.data))
@@ -263,6 +333,27 @@ class CompositionPublicTests(unittest.TestCase):
                 self.select(); self.assertRefused(self.read(self.f.data), "basis_missing")
         self.declaration["edges"]["A-D"]["relation"] = self.f.write("inputs/relation.md", b'<a id="support"></a>\n')
         self.select(); self._ok(self.read(self.f.data))
+
+    def test_container_fences_and_unfinished_comments_do_not_supply_edge_anchors(self):
+        self._route(); self.declaration["bindings"]["worker"]["route"] = ["A-D"]
+        for text in ('- ```markdown\n  # Support\n  <a id="support"></a>\n  ```\n',
+                     '1. ~~~markdown\n   # Support\n   <a id="support"></a>\n   ~~~\n',
+                     '> - ```markdown\n>   # Support\n>   <a id="support"></a>\n>   ```\n',
+                     '- list\n  - ```markdown\n    # Support\n    <a id="support"></a>\n    ```\n',
+                     'paragraph\n2. # Support\n',
+                     '<!-- unfinished\n# Support\n<a id="support"></a>\n'):
+            with self.subTest(text=text):
+                self.declaration["edges"]["A-D"]["relation"] = self.f.write("inputs/relation.md", text.encode())
+                self.select(); self.assertRefused(self.read(self.f.data), "basis_missing")
+        for text in ('- ```markdown\n  # Example\n  ```\n\n# Support\n',
+                     '<!-- hidden\n# Example\n-->\n<a id="support"></a>\n',
+                     '`<!-- is literal code`\n\n# Support\n',
+                     '\\<!-- is escaped\n\n# Support\n',
+                     '<span data-example="<!--">literal attribute</span>\n\n# Support\n',
+                     '> - <a id="support"></a>\n'):
+            with self.subTest(actual_anchor=text):
+                self.declaration["edges"]["A-D"]["relation"] = self.f.write("inputs/relation.md", text.encode())
+                self.select(); self._ok(self.read(self.f.data))
 
     def test_derived_model_cannot_bypass_source_guard(self):
         self.declaration["resources"]["model"]["parents"] = ["hidden"]

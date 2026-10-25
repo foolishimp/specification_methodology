@@ -10,7 +10,7 @@ from typing import Any
 
 from .constants import MANIFEST_KIND, MANIFEST_VERSION
 from .errors import StdoError
-from .git_source import GitSnapshot
+from .git_source import GitSnapshot, STABLE_PROFILE, is_stable_cut, normalize_cut
 from .util import (
     canonical_json_bytes,
     ensure_relative_member,
@@ -86,6 +86,8 @@ def build_manifest(snapshot: GitSnapshot) -> dict[str, Any]:
         "tree": snapshot.tree,
         "standards_tree": snapshot.standards_tree,
     }
+    if snapshot.release_profile is not None:
+        release["profile"] = snapshot.release_profile
     if snapshot.project_release_namespace:
         release.update(
             {
@@ -296,6 +298,19 @@ def verify_materialization(release_root: Path, manifest: dict[str, Any]) -> list
         )
 
     release = manifest.get("release", {})
+    cut = release.get("cut")
+    try:
+        if not isinstance(cut, str) or normalize_cut(cut) != cut:
+            raise StdoError("non-canonical cut")
+    except StdoError:
+        failures.append("invalid immutable release cut")
+    if isinstance(cut, str) and is_stable_cut(cut):
+        if release.get("profile") != STABLE_PROFILE:
+            failures.append("stable release requires stable-v1 manifest profile")
+        if release.get("project_release_namespace") != "specification_methodology":
+            failures.append("stable release requires the qualified STDO namespace")
+    elif "profile" in release:
+        failures.append("legacy RC release cannot claim a stable release profile")
     shared_source_keys = {
         "project_release_namespace",
         "qualified_ref",

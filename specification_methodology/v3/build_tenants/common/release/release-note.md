@@ -1,68 +1,63 @@
-# Unreleased Product composition source increment
+# STDO 3.0.2
 
-This mutable common source extends the published immutable STDO 3.0.1 RC1 with
-PRODUCT_DEFINITION PC-01–PC-07 and their targeted consumers. The successor version
-and release are unselected. This directory is not the unchanged published 3.0.1
-payload; use that release's immutable install/manifest for existing consumers.
-The builder remains 2.5.1 RC2. Source construction, bounded checks, independent
-assessment and owner acceptance retain separate standing.
+STDO 3.0.2 is the standalone native methodology release using the `stable-v1`
+profile. Its immutable annotated tag is `specification_methodology/v3.0.2`,
+its logical cut is `stdo://releases/v3.0.2/`, and its native predecessor is
+published 3.0.1 RC1, commit `fe4941f56a52ed3697a2b516d8d68948b0ea65d9`.
+The public installed manifest binds the exact tag, commit, trees and payload
+members. No RC suffix or second mutable selector belongs to this cut.
+Earlier RC-labelled cuts remain proper immutable releases with their existing
+selector semantics; this release does not reclassify or move them.
 
-Native frames are regenerated from the changed owners. The accompanying bounded
-composition interpretation is separate from the incomplete earlier whole-method
-representation; its coverage and evidence live in the implementation delivery.
-No package publication, installed adoption or overall readiness is asserted.
-
-## Retained preceding release-note record
-
-The following record describes the preceding source selection and its limits;
-it does not label this changed source as the published artifact.
-
-# STDO 3.0.1 candidate
-
-The first target cut is `3.0.1-rc.1`. This candidate evolves published native
-`3.0.0-rc.1`, commit `0a04feb788c080183b58cf4a162e88372be1d87e`, manifest
-`069285ad5a79d59ca2dd835e34a54b3e537b0eeef99c29994b18c339dbe62232`.
-That predecessor is a prerelease; no accepted final 3.0.0 identity is implied.
-These are release-scoped candidate statements, not an acceptance receipt.
-
-The candidate covers the standalone method documents and distributed `spec` plugin
-payload. Start with the [method entry](../standards/README.md),
+The package contains the method standards and distributed `spec` plugin. Start
+with the [method entry](../standards/README.md),
 [templates](../standards/templates/README.md) and
-[plugin guidance](../plugins/spec/references/GETTING_STARTED.md).
-The [licence](../LICENSE) applies to the package.
+[installation guidance](../plugins/spec/references/GETTING_STARTED.md#new-project).
+The [licence](../LICENSE) applies. Install using the separately distributed
+`stdo-toolchain 0.1.6` wheel and its checksum; the native tag does not contain
+the manager's Python source package. The manifest and checksum are public
+release assets. Installation preserves other installed versions and changes
+no Product Definition or host plugin selection automatically.
 
-The substantive amendment makes [F_D](../standards/AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds)
-total deterministic processing, with separate operation permissions and
-unchanged-subject evaluation profiles. ODD imports that common kind by exact
-edition while preserving its operation and runtime authority contracts.
-The former ODD kind-level F_D authority shorthand is proposed to be
-superseded by explicit Product/ABG admission and closure owners; evaluator
-proposals remain ineffective until admitted, and deterministic admission
-obligations remain in force.
-Supporting clarification concerns continuation-sensitive sufficiency,
-qualified references, structural laws versus consumer adequacy and optional
-information-equivalent comparison. Native [finite examples](../standards/examples/DETERMINISTIC_CONTRACTS.md)
-state the positive and negative oracles, including predicate-specific exhaustion.
+## Changes
 
-Version assessment: the requested patch-shaped target broadens purposes and
-strengthens totality, dependency and evidence requirements. It is not
-automatically patch-compatible. Each existing operation follows the
-[three-way migration relation](../standards/RELEASE.md#deterministic-kind-migration);
-unknown eligibility stays pending. Immutable consumers keep their selected
-meanings and permissions, and no automatic adoption follows.
+[Product composition](../standards/PRODUCT_DEFINITION.md#9-recursive-discovery-and-explicit-composition)
+adds PC-01–PC-07: recursive independently enterable Products, leaf and composite
+scope, explicit dependency contracts, integrated outcome responsibility,
+route-specific authority, context eligibility and adequacy, and material
+invalidation with retained history. Tenants remain realizations. Reachability
+never grants transitive authority; an authorized detailed dependency inventory
+is permitted without requiring every encapsulated dependency to be flattened.
+The [contract template](../standards/templates/PRODUCT_COMPOSITION_CONTRACT_TEMPLATE.md)
+and [worked example](../standards/examples/PRODUCT_COMPOSITION.md) make these
+conditions concrete, including shared leaves, incompatible replacement,
+source leakage and continuation limits.
 
-Inherited whole-method standing remains `not_ready`; owner acceptance is
-`not_given`, covering acceptance review is `unassigned`, and actual-use
-qualification on the amended source is unperformed. Working amendment review
-and construction checks do not discharge those obligations. The deterministic
-kind's purpose/qualification amendment and ODD import/authority supersessions
-remain pending exact-subject meaning acceptance. Whole-method semantic
-qualification and exact-cut human acceptance retain their separate gates.
-Publication or test-release qualification cannot silently
-raise those claims, change the v2 matched cohort or activate a plugin globally.
+[Release profiles](../standards/RELEASE.md#stable-cuts) now support a directly
+published stable semantic-version cut alongside the conserved RC profile.
+The stable line requires its explicit annotation and manifest profile, refuses
+legacy selector collisions and keeps its tag immutable. Changed qualifying
+bytes after stable publication require a new version. Discovery and explicit
+digest-bound consumer adoption remain separate.
 
-A source-matched supplemental a_c/Graphify representation remains to be
-prepared and assessed separately from this native payload. Historical representations keep
-their own source identities. Its source binding and publication evidence
-must name this candidate's exact frozen cut before a matching claim is made;
-it is not selected as an installed dependency by this payload.
+## Evidence and retained limits
+
+The composition source, tooling and Skills construction received independent
+review, including supported repairs, before the release increment. Native frames
+are generated from their current owners. Release preparation adds targeted
+stable/legacy identity checks and exact package/install verification. Public
+release records bind those observations to the actual published subject.
+
+The separate a_c/Graphify supplement covers composition clauses and the changed
+release-profile contract, with exact source grounding and carrier recovery.
+It is not an installed dependency and does not complete the earlier incomplete
+whole-method interpretation. Mechanical recovery does not establish semantic
+acceptance, optimal compression or practical delivery/cost improvement.
+Whole-method qualification remains bounded by the inherited recorded evidence;
+publishing this release does not assert new general qualification.
+
+Skills' installed 3.0.1 basis, a_c's 2.5.1 construction basis and the older v2
+matched cohort remain unchanged. The source repository also carries separate
+manager, a_c and Skills increments; co-location does not add them to this native
+payload or migrate their consumers. Adoption requires each consumer's explicit
+selection and applicable compatibility assessment.

@@ -1,0 +1,51 @@
+{
+  "inline": {
+    "direct_refusal": "authority_missing",
+    "context": {
+      "id": "sha256:ec7589b91c81072a71f507e8d1f27e6cb236ac8471aa35d1ab89b48a3cbaaafd",
+      "sha256": "ec7589b91c81072a71f507e8d1f27e6cb236ac8471aa35d1ab89b48a3cbaaafd"
+    },
+    "preflight": {
+      "id": "sha256:8f94ea78eb62fa38beb0ad43a2e137934b51f7b4c08f417ad7498d2fd7f049bc",
+      "sha256": "8f94ea78eb62fa38beb0ad43a2e137934b51f7b4c08f417ad7498d2fd7f049bc"
+    },
+    "attempt": {
+      "id": "sha256:4ee977261e045c6a2f09e3a5c49874d2464ddfc5e078f8a3945c6dd8f93a61c4",
+      "sha256": "4ee977261e045c6a2f09e3a5c49874d2464ddfc5e078f8a3945c6dd8f93a61c4"
+    },
+    "process_returncode": 0,
+    "actual_worker_stdin_sha256": "4a282b77d209ad7fd8c644a81dd70e5383824cc66a0f5bd4017dd6681180c854",
+    "invalid_inline_delivered": true
+  },
+  "fragments": {
+    "list_nested_fence": {
+      "text": "- Example:\n\n  ```markdown\n  # Support\n  <a id=\"support\"></a>\n  ```\n",
+      "status": "refused",
+      "refusal": {
+        "code": "basis_missing",
+        "gaps": [
+          {
+            "detail_count": 0,
+            "diagnostics": "withheld by selected composition binding",
+            "effect_state": "completion_unknown",
+            "end_established": false,
+            "history_state": "not_established_by_refusal",
+            "private_retention": "included in operation publication"
+          }
+        ],
+        "reason": "Operation unavailable under the selected composition binding",
+        "source_refs": []
+      }
+    },
+    "list_marker_fence": {
+      "text": "- ```markdown\n  # Support\n  <a id=\"support\"></a>\n  ```\n",
+      "status": "ok",
+      "refusal": null
+    },
+    "unfinished_comment": {
+      "text": "<!-- unfinished\n# Support\n<a id=\"support\"></a>\n",
+      "status": "ok",
+      "refusal": null
+    }
+  }
+}

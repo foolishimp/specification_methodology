@@ -1,0 +1,294 @@
+[
+  {
+    "name": "build-environment",
+    "argv": [
+      "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+      "-I",
+      "-m",
+      "venv",
+      "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a/build-venv"
+    ],
+    "cwd": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a",
+    "exit": 0,
+    "start": "2026-10-25T16:10:46.819594+00:00",
+    "end": "2026-10-25T16:10:48.155131+00:00",
+    "log": "build-environment.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "environment": {
+      "PYTHONPATH": "unset",
+      "PYTHONHOME": "unset",
+      "SOURCE_DATE_EPOCH": "1792942699",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "STDO_TEST_INSTALLED_MANAGER": "1"
+    }
+  },
+  {
+    "name": "build-dependencies",
+    "argv": [
+      "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a/build-venv/bin/python",
+      "-I",
+      "-m",
+      "pip",
+      "install",
+      "--index-url",
+      "https://pypi.org/simple",
+      "setuptools==80.9.0",
+      "wheel==0.45.1"
+    ],
+    "cwd": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a",
+    "exit": 0,
+    "start": "2026-10-25T16:10:48.155335+00:00",
+    "end": "2026-10-25T16:10:48.909123+00:00",
+    "log": "build-dependencies.log",
+    "sha256": "2cbcfd8dab73e7d42f2d7c82bd76f2cdda413b2f64a87ab3b8e6dc92fb6d0a5b",
+    "environment": {
+      "PYTHONPATH": "unset",
+      "PYTHONHOME": "unset",
+      "SOURCE_DATE_EPOCH": "1792942699",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "STDO_TEST_INSTALLED_MANAGER": "1"
+    }
+  },
+  {
+    "name": "build-environment-versions",
+    "argv": [
+      "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a/build-venv/bin/python",
+      "-I",
+      "-m",
+      "pip",
+      "freeze",
+      "--all"
+    ],
+    "cwd": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a",
+    "exit": 0,
+    "start": "2026-10-25T16:10:48.909347+00:00",
+    "end": "2026-10-25T16:10:49.041264+00:00",
+    "log": "build-environment-versions.log",
+    "sha256": "471434ca812679a43c9d60e10ca185015e73bebc3bdf8f755053fb7b5a0765af",
+    "environment": {
+      "PYTHONPATH": "unset",
+      "PYTHONHOME": "unset",
+      "SOURCE_DATE_EPOCH": "1792942699",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "STDO_TEST_INSTALLED_MANAGER": "1"
+    }
+  },
+  {
+    "name": "wheel-build-1",
+    "argv": [
+      "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a/build-venv/bin/python",
+      "-I",
+      "-m",
+      "pip",
+      "wheel",
+      "--no-deps",
+      "--no-build-isolation",
+      "--wheel-dir",
+      "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a/dist-1",
+      "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a/source-1"
+    ],
+    "cwd": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a",
+    "exit": 0,
+    "start": "2026-10-25T16:10:49.044195+00:00",
+    "end": "2026-10-25T16:10:49.509589+00:00",
+    "log": "wheel-build-1.log",
+    "sha256": "242d40c2e3613e9aa4ec0ea2b547e4a9cd0bff2a9869382134a4587115a14539",
+    "environment": {
+      "PYTHONPATH": "unset",
+      "PYTHONHOME": "unset",
+      "SOURCE_DATE_EPOCH": "1792942699",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "STDO_TEST_INSTALLED_MANAGER": "1"
+    }
+  },
+  {
+    "name": "wheel-build-2",
+    "argv": [
+      "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a/build-venv/bin/python",
+      "-I",
+      "-m",
+      "pip",
+      "wheel",
+      "--no-deps",
+      "--no-build-isolation",
+      "--wheel-dir",
+      "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a/dist-2",
+      "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a/source-2"
+    ],
+    "cwd": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a",
+    "exit": 0,
+    "start": "2026-10-25T16:10:49.512119+00:00",
+    "end": "2026-10-25T16:10:49.983685+00:00",
+    "log": "wheel-build-2.log",
+    "sha256": "f86e6535e77c90411b70e16694ac8782b4d891006d89be723b668e3de1284929",
+    "environment": {
+      "PYTHONPATH": "unset",
+      "PYTHONHOME": "unset",
+      "SOURCE_DATE_EPOCH": "1792942699",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "STDO_TEST_INSTALLED_MANAGER": "1"
+    }
+  },
+  {
+    "name": "runtime-environment",
+    "argv": [
+      "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+      "-I",
+      "-m",
+      "venv",
+      "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a/runtime-venv"
+    ],
+    "cwd": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a",
+    "exit": 0,
+    "start": "2026-10-25T16:10:49.984337+00:00",
+    "end": "2026-10-25T16:10:51.147254+00:00",
+    "log": "runtime-environment.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "environment": {
+      "PYTHONPATH": "unset",
+      "PYTHONHOME": "unset",
+      "SOURCE_DATE_EPOCH": "1792942699",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "STDO_TEST_INSTALLED_MANAGER": "1"
+    }
+  },
+  {
+    "name": "wheel-install",
+    "argv": [
+      "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a/runtime-venv/bin/python",
+      "-I",
+      "-m",
+      "pip",
+      "install",
+      "--index-url",
+      "https://pypi.org/simple",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/manager/package-03/stdo_toolchain-0.1.6-py3-none-any.whl"
+    ],
+    "cwd": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a",
+    "exit": 0,
+    "start": "2026-10-25T16:10:51.147541+00:00",
+    "end": "2026-10-25T16:10:52.262769+00:00",
+    "log": "wheel-install.log",
+    "sha256": "c497eea30bf0f9e31e418bc79a456c5873dca83fa6eae135e4bfd7a153e5a566",
+    "environment": {
+      "PYTHONPATH": "unset",
+      "PYTHONHOME": "unset",
+      "SOURCE_DATE_EPOCH": "1792942699",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "STDO_TEST_INSTALLED_MANAGER": "1"
+    }
+  },
+  {
+    "name": "runtime-environment-versions",
+    "argv": [
+      "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a/runtime-venv/bin/python",
+      "-I",
+      "-m",
+      "pip",
+      "freeze",
+      "--all"
+    ],
+    "cwd": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a",
+    "exit": 0,
+    "start": "2026-10-25T16:10:52.263008+00:00",
+    "end": "2026-10-25T16:10:52.406256+00:00",
+    "log": "runtime-environment-versions.log",
+    "sha256": "3d5958d8b8ba1eb97c5bcee805285f212671023c786584e0a69f3fa627b8e2f9",
+    "environment": {
+      "PYTHONPATH": "unset",
+      "PYTHONHOME": "unset",
+      "SOURCE_DATE_EPOCH": "1792942699",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "STDO_TEST_INSTALLED_MANAGER": "1"
+    }
+  },
+  {
+    "name": "wheel-import",
+    "argv": [
+      "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a/runtime-venv/bin/python",
+      "-I",
+      "-B",
+      "-c",
+      "import importlib.metadata,json,pathlib,hashlib,stdo_toolchain\np=pathlib.Path(stdo_toolchain.__file__).resolve()\nassert 'site-packages' in p.parts and p.is_relative_to(pathlib.Path('/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a/runtime-venv/bin/python').parent.parent.resolve())\nassert stdo_toolchain.__version__ == '0.1.6'\nprint(json.dumps({'path':str(p),'version':stdo_toolchain.__version__,'distribution_version':importlib.metadata.version('stdo-toolchain'),'module_sha256':hashlib.sha256(p.read_bytes()).hexdigest()}))\n"
+    ],
+    "cwd": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a",
+    "exit": 0,
+    "start": "2026-10-25T16:10:52.406509+00:00",
+    "end": "2026-10-25T16:10:52.450048+00:00",
+    "log": "wheel-import.log",
+    "sha256": "5b42ed94c6ce94b6e70bf551075d9227219a42af78b17cbca726eb871ba9d089",
+    "environment": {
+      "PYTHONPATH": "unset",
+      "PYTHONHOME": "unset",
+      "SOURCE_DATE_EPOCH": "1792942699",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "STDO_TEST_INSTALLED_MANAGER": "1"
+    }
+  },
+  {
+    "name": "wheel-cli",
+    "argv": [
+      "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a/runtime-venv/bin/stdo",
+      "--version"
+    ],
+    "cwd": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a",
+    "exit": 0,
+    "start": "2026-10-25T16:10:52.450312+00:00",
+    "end": "2026-10-25T16:10:52.861896+00:00",
+    "log": "wheel-cli.log",
+    "sha256": "d4ac408b241ee615cfb40ffe54abb70b1b062c34ede87b5f51648375dd65756c",
+    "environment": {
+      "PYTHONPATH": "unset",
+      "PYTHONHOME": "unset",
+      "SOURCE_DATE_EPOCH": "1792942699",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "STDO_TEST_INSTALLED_MANAGER": "1"
+    }
+  },
+  {
+    "name": "legacy-301-manifest",
+    "argv": [
+      "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a/runtime-venv/bin/python",
+      "-I",
+      "-B",
+      "-c",
+      "import json\nfrom stdo_toolchain.git_source import GitSnapshot\nfrom stdo_toolchain.manifest import build_manifest,manifest_sha256\nwith GitSnapshot('/Users/jim/src/apps/specification_methodology','v3.0.1-rc.1') as snapshot: m=build_manifest(snapshot)\nd=manifest_sha256(m)\nassert d=='60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8',d\nassert 'profile' not in m['release']\nprint(json.dumps({'cut':m['release']['cut'],'tag_object':m['release']['tag_object'],'commit':m['release']['commit'],'manifest_sha256':d}))\n"
+    ],
+    "cwd": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a",
+    "exit": 0,
+    "start": "2026-10-25T16:10:52.862151+00:00",
+    "end": "2026-10-25T16:10:54.230889+00:00",
+    "log": "legacy-301-manifest.log",
+    "sha256": "a0d900e5e0812e7ce7ecb6510b22b87099c43f0fc3878195519021ed8e20c72e",
+    "environment": {
+      "PYTHONPATH": "unset",
+      "PYTHONHOME": "unset",
+      "SOURCE_DATE_EPOCH": "1792942699",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "STDO_TEST_INSTALLED_MANAGER": "1"
+    }
+  },
+  {
+    "name": "affected-suite",
+    "argv": [
+      "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a/runtime-venv/bin/python",
+      "-I",
+      "-B",
+      "-c",
+      "import sys,unittest;sys.path[:0]=['/Users/jim/src/apps/specification_methodology/specification_methodology/v2/tests', '/Users/jim/src/apps/specification_methodology/specification_methodology/v2'];unittest.main(module=None,argv=['wheel-tests','-v',*['test_toolchain', 'test_git_source_layout', 'test_v3_package', 'test_cohort_update', 'test_composition', 'test_repository_dogfood', 'test_stable_releases']])"
+    ],
+    "cwd": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo302-manager-2ystgd7a",
+    "exit": 0,
+    "start": "2026-10-25T16:10:54.231152+00:00",
+    "end": "2026-10-25T16:14:37.477706+00:00",
+    "log": "affected-suite.log",
+    "sha256": "50eb6af6bec86855ced0bf9c145d042ab40081715f6d9843aa2a15df2ca82465",
+    "environment": {
+      "PYTHONPATH": "unset",
+      "PYTHONHOME": "unset",
+      "SOURCE_DATE_EPOCH": "1792942699",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "STDO_TEST_INSTALLED_MANAGER": "1"
+    }
+  }
+]

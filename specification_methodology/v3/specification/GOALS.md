@@ -4,13 +4,15 @@ This file states the current work wave of this source project: what is being wor
 
 ## Current Selection
 
-The owner selects the reviewed recursive Product composition implementation under
-[T-005](../.ai-workspace/tickets/active/T-005-product-composition-implementation.md)
-and [PRODUCT_COMPOSITION](requirements/PRODUCT_COMPOSITION.md). The mutable common
-source is an unreleased increment over published 3.0.1 RC1; no successor version,
-installed adoption or release publication is selected. Manager and a_c increments
-remain separately owned; source-matched frames and a bounded changed-clause
-representation are required. Independent review and acceptance remain open.
+The owner selects **STDO 3.0.2**, without an RC suffix, as the next proper
+immutable standalone native release. The reviewed recursive composition
+increment at checkpoint `88305bef5dbd9d56db4668ef85611941f5e67705` is retained.
+The [3.0.2 delivery selection](../.ai-workspace/work/STDO302_DELIVERY/SELECTION.md)
+binds the stable release profile, exact native predecessor, manager distribution,
+package and bounded representation work. The old v2 matched cohort is unchanged.
+Skills remains on installed 3.0.1 and a_c construction on 2.5.1; publication
+alone does not adopt the successor for either Product. Independent source review,
+exact packaging and public acquisition checks precede the corresponding claims.
 
 ### Earlier 3.0.1 delivery and retained obligations
 

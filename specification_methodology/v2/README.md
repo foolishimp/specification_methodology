@@ -14,13 +14,12 @@ The [RC7 release work](.ai-workspace/comments/codex/20260915T093130Z_rc7_release
 and [2.5.0 declaration](releases/v2.5.0.md) preserve the published predecessor.
 The source project's separately selected operative RC4 basis remains unchanged.
 
-Mutable future-method source lives under `specification/standards/`. Publication
-authority is one immutable released STDO RC cut identified by its annotated tag,
-commit, tree, and exact member inventory. A consumer is governed by the complete
-cut pinned in its Product Definition. The shared-source
-`specification_methodology/v<version>` tag is only the mutable alias to the
-highest-ordinal published RC on that line. Historical unqualified selectors
-remain frozen history.
+Mutable future-method source lives under `specification/standards/`. A consumer
+is governed by the complete immutable cut pinned in its Product Definition.
+On existing RC lines, `specification_methodology/v<version>` remains a mutable
+alias to the highest-ordinal published RC. Historical refs keep that meaning.
+The selected V3 `stable-v1` profile below gives a new version line an explicit
+immutable bare-version cut; spelling alone never reclassifies an existing tag.
 
 The standards library includes the domain-specific
 [`a_c` STDO Axiomatic Calculus for Governed Symbolic Systems](specification/standards/AXIOMATIC_CALCULUS.md).
@@ -38,6 +37,33 @@ The `stdo` toolchain manager installs immutable cuts once in a shared versioned
 store, resolves logical `stdo:` URIs, verifies installed bytes, synchronizes
 already pinned Product Definitions, and performs explicit adoption and fleet
 updates. Projects do not need a copied standards tree or prescribed layout.
+
+### Stable releases with manager 0.1.6
+
+Stable `vMAJOR.MINOR.PATCH` releases use the qualified annotated tag
+`specification_methodology/vMAJOR.MINOR.PATCH`, directly naming a commit. Its
+annotation must contain exactly one unindented line:
+`STDO-Release-Profile: stable-v1`. The embedded tag name must match the ref.
+Decimal components have no leading zeroes. The version must have no RC refs
+in either namespace and no historical bare-version alias. This fresh-line rule
+preserves existing RC selectors, including 3.0.0 and 3.0.1. Profile collisions,
+missing/duplicate markers, lightweight tags and mismatched names refuse.
+
+The installed manifest adds `release.profile: stable-v1` only for this profile.
+Legacy RC manifest bytes retain their existing shape and digest. An exact
+`stdo://releases/v3.0.2/` basis is operative only with its manifest digest.
+`stdo://channels/3.0.2` resolves that same immutable stable tag, with no separate
+moving selector and a null RC ordinal. It does not follow later patch versions.
+Existing RC channels retain their highest-ordinal, stale-selector and downgrade
+checks. Publication must preserve create-only stable tags; a changed installed
+identity is never silently replaced.
+
+The standalone native STDO tag contains no Python project. The 3.0.2 release
+therefore distributes `stdo_toolchain-0.1.6-py3-none-any.whl` and its checksum as
+separate assets. Download and verify the exact release asset before installing
+it into the selected Python environment. See [standalone installation](V3_INSTALLATION.md).
+The manager's source builder remains its pinned 2.5.0 RC4; this implementation
+of the separately selected V3 profile does not migrate that basis or consumers.
 
 During development from a Specification Stack checkout, install the manager
 itself with an isolated Python application installer:

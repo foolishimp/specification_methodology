@@ -209,7 +209,7 @@ several owning documents (P2).
 `constitution.stdo.basis` locates the complete selected STDO constitutional
 set; `constitution.additional_authorities` locates every additional
 constitutional set or source. The STDO basis identifies one complete
-immutable RC cut and its exact installed-release manifest, never a
+immutable release cut and its exact installed-release manifest, never a
 hand-selected subset. Each `constitution.entrypoints[]` member names the
 basis against which its URI resolves. Entry points are derived navigation
 and can neither narrow nor replace a complete selected constitution (P3,
@@ -231,7 +231,7 @@ is the pair (P3):
 (immutable stdo://releases/<cut>/ URI, installed-manifest SHA-256)
 ```
 
-The URI identifies one immutable annotated RC cut. The digest identifies
+The URI identifies one immutable annotated release cut. The digest identifies
 the deterministic installed-release manifest, which binds the cut's tag
 object, commit, repository tree, standards subtree, exact standards
 inventory, member bytes and admitted auxiliary payloads. The manifest shape
@@ -262,8 +262,8 @@ P3):
 - resolves logical `stdo://releases/...` URIs to verified installed bytes;
 - inventories and verifies complete installed distributions;
 - synchronises the exact basis already selected by a Product Definition;
-- emits an exact digest-bound adoption plan from a mutable version-line
-  selector and performs adoption only when that plan is explicitly
+- emits an exact digest-bound adoption plan from a release-profile discovery
+  route and performs adoption only when that plan is explicitly
   accepted;
 - manages the stable marker-bounded bootstrap in declared agent files; and
 - applies those operations to an explicitly discovered fleet of Product
@@ -283,19 +283,21 @@ derived from the manifest's exact file paths, and never follows an
 unmanifested alias (P5, P3).
 
 `constitution.stdo.source.repository` identifies the transport source.
-`constitution.stdo.selector` is a mutable `stdo://channels/<version>`
-discovery selector whose alias semantics are owned by the release law (the
-[RELEASE](RELEASE.md) member). Neither is operative authority.
+`constitution.stdo.selector` is a `stdo://channels/<version>` discovery
+route whose profile semantics are owned by [RELEASE §4](RELEASE.md#4-selector-and-consumer-adoption).
+An RC line resolves its mutable selector; a stable line resolves its exact
+immutable cut without a second selector. Neither discovery nor the transport
+source is operative authority.
 `constitution.stdo.basis.uri` and `constitution.stdo.basis.manifest_sha256`
 are the sole authored STDO selection for that Product Definition (P6, P3).
 
 The manager observes these command boundaries (P6, P5):
 
-- `install` admits one explicitly named immutable RC cut without changing
+- `install` admits one explicitly named immutable release cut without changing
   any Product Definition;
 - `sync` installs and verifies only the exact basis already selected by
   the Product Definition and never consults its mutable selector;
-- `adopt --dry-run` resolves the annotated selector and immutable RC, and
+- `adopt --dry-run` resolves the selected release profile and immutable cut, and
   presents the target cut, tag object, commit, tree, manifest digest,
   current Product-Definition byte digest and a deterministic
   adoption-plan digest, without mutation;
@@ -1173,8 +1175,8 @@ definition; that is the usual starting point, not the only lawful source
 
 The bootstrap sequence is (P3, P6, P2):
 
-1. Install the STDO toolchain manager once, resolve one version-line
-   selector, and explicitly select one immutable RC cut.
+1. Install the STDO toolchain manager once, resolve the applicable release-profile
+   discovery route (§4), and explicitly select one immutable release cut.
 2. Install that complete cut in the shared release store and retain its
    deterministic installed-manifest digest.
 3. Copy `PRODUCT_DEFINITION_TEMPLATE.json` from that exact cut to the

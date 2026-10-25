@@ -128,53 +128,45 @@ selected method basis.
 
 ### New Project
 
-Select one immutable product-local cut and its qualified repository ref. For
-the coordinated STDO distribution after publication, with every value below
-bound at its RC cut under `RELEASE.md` sections 6 and 7:
+For the standalone STDO 3.0.2 release, acquire the separately distributed
+manager wheel and installed-manifest assets from that exact release. The native
+method tag contains the payload, not the manager's Python package. Python 3.11+
+and Git are prerequisites. The following installs the manager into an explicit
+user-selected virtual environment; it does not replace a global manager:
 
 ```sh
-STDO_CUT='v<version>-rc.<n>'
-STDO_REF='specification_methodology/v<version>-rc.<n>'
-STDO_TOOLCHAIN_MIN='<toolchain-minimum>'
-STDO_TOOLCHAIN_SPEC='git+https://github.com/foolishimp/specification_methodology.git@specification_methodology/v<version>-rc.<n>#subdirectory=specification_methodology'
-
-stdo_version_at_least() {
-  python3 - "$1" "$2" <<'PY'
-import re
-import sys
-
-def version(value):
-    match = re.fullmatch(r"(\d+)\.(\d+)\.(\d+)(?:[.+-].*)?", value)
-    if match is None:
-        raise SystemExit(f"invalid stdo-toolchain version: {value}")
-    return tuple(map(int, match.groups()))
-
-raise SystemExit(0 if version(sys.argv[1]) >= version(sys.argv[2]) else 1)
-PY
-}
-
-if ! command -v stdo >/dev/null 2>&1; then
-  pipx install "$STDO_TOOLCHAIN_SPEC"
-elif ! stdo_version_at_least \
-  "$(stdo --version | awk '{print $NF}')" "$STDO_TOOLCHAIN_MIN"; then
-  pipx install --force "$STDO_TOOLCHAIN_SPEC"
-fi
-
+set -eu
+STDO_CUT='v3.0.2'
+STDO_ASSETS='https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.2'
+STDO_MANAGER_ENV="$HOME/.local/share/stdo-toolchain-0.1.6"
+STDO_DOWNLOAD_DIR="$(mktemp -d)"
+for asset in stdo_toolchain-0.1.6-py3-none-any.whl stdo-v3.0.2-manifest.json; do
+  curl --fail --location --output "$STDO_DOWNLOAD_DIR/$asset" "$STDO_ASSETS/$asset"
+  curl --fail --location --output "$STDO_DOWNLOAD_DIR/$asset.sha256" "$STDO_ASSETS/$asset.sha256"
+done
+python3 - "$STDO_DOWNLOAD_DIR" <<'PYVERIFY'
+from pathlib import Path
+import hashlib, sys
+root = Path(sys.argv[1])
+for name in ('stdo_toolchain-0.1.6-py3-none-any.whl', 'stdo-v3.0.2-manifest.json'):
+    fields = (root / (name + '.sha256')).read_text().split()
+    if len(fields) != 2 or fields[1] != name or fields[0] != hashlib.sha256((root/name).read_bytes()).hexdigest():
+        raise SystemExit('release asset checksum mismatch: ' + name)
+PYVERIFY
+python3 -m venv "$STDO_MANAGER_ENV"
+"$STDO_MANAGER_ENV/bin/python" -m pip install --force-reinstall "$STDO_DOWNLOAD_DIR/stdo_toolchain-0.1.6-py3-none-any.whl"
+stdo() { "$STDO_MANAGER_ENV/bin/stdo" "$@"; }
 stdo --version
-stdo_version_at_least \
-  "$(stdo --version | awk '{print $NF}')" "$STDO_TOOLCHAIN_MIN" || {
-    echo "stdo-toolchain ${STDO_TOOLCHAIN_MIN} or newer is required" >&2
-    exit 1
-  }
-
-stdo install "$STDO_CUT"
-stdo verify "$STDO_CUT"
+STDO_MANIFEST="$(python3 -c 'import hashlib,sys; print(hashlib.sha256(open(sys.argv[1],"rb").read()).hexdigest())' "$STDO_DOWNLOAD_DIR/stdo-v3.0.2-manifest.json")"
+stdo install "$STDO_CUT" --manifest-sha256 "$STDO_MANIFEST"
+stdo verify "$STDO_CUT" --manifest-sha256 "$STDO_MANIFEST"
 ```
 
-The exact qualified cut install is the missing-tool path. The explicit
-`pipx install --force` branch upgrades an older installation. Do not continue
-to `stdo install` unless the final version check accepts `stdo-toolchain
-<toolchain-minimum>` or newer.
+A failed download, checksum, manager installation or exact-cut verification stops
+this sequence. Published assets and their checksums establish transport integrity;
+use the exact release record as the selected source identity. Existing RC cuts
+remain available through their own released manager/acquisition records. This
+standalone route does not select the coordinated cohort of RELEASE §7.
 
 Resolve and copy the Product Definition and Project Reference-Frame Basis
 templates from that same installed cut:
