@@ -1,0 +1,23 @@
+{
+  "after": {
+    "bytes": 290166,
+    "path": "a_c/.ai-workspace/qualification/t008/design-review-repair-001/conjunction-001/CANDIDATE.md",
+    "sha256": "d08fe97e4920b10030eb0406325503772e678d9ed0391394558cfc358b59ff7b"
+  },
+  "before": {
+    "bytes": 289738,
+    "path": "a_c/.ai-workspace/qualification/t008/design-review-repair-001/selection-001/CANDIDATE.md",
+    "sha256": "a8817031fa078188f764e80bdda0d0625aefb0885de04390e177efc74dd539ba"
+  },
+  "inverse_exact": true,
+  "presentation_edit": {
+    "effect": "one blank line before ordered list only",
+    "new": "Root's current priority/risk ordering is:\n\n1.",
+    "old": "Root's current priority/risk ordering is:\n1."
+  },
+  "schema": "a_c.conjunction-design-repair-patch/1",
+  "semantic_edit": {
+    "new": "coverage. RequiredConstraint.predicate is the exact plan-declared\nmandatory-constraint predicate/source. A retained falsified result counts as\nthat constraint's counterexample only when authenticated and applicable, with\nthe exact required predicate/source, subject/basis and assessment-cardinality\nconditions preserved. The contributor's own admitted coverage is not required\nfor this exact required-constraint exception; an optional contributor may have\nempty coverage. Unrelated optional falsified results remain record-only.\nRaw prose cannot become a constraint verdict. The declared mandatory-result,\nbasis and gap precedence and missing/uncovered coverage rules remain unchanged.\n",
+    "old": "coverage. RequiredConstraint.predicate is the exact mandatory-constraint\npredicate; a retained falsified result counts as that constraint's\ncounterexample only if its predicate/source and admitted coverage match. Raw\nprose cannot become a constraint verdict.\n"
+  }
+}

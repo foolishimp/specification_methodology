@@ -46,7 +46,7 @@ Routes, in order:
 10. [EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification](../EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification)
 11. [RELEASE.md#foundation-to-law-release-and-successor-conservation](../RELEASE.md#foundation-to-law-release-and-successor-conservation)
 
-Size of this frame: 103133 bytes.
+Size of this frame: 105865 bytes.
 
 Source: FOUNDATIONS.md#authority-kinds sha256=92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5
 
@@ -745,7 +745,7 @@ and remaining obligations. This relation settles no general version-line
 policy and waives no acceptance gate.
 
 
-Source: CONFORMANCE.md#5-discriminator-coverage sha256=907be152c8bed1c968a6a0faadd6a87812df2e25db080fb46f5c14c12adef035
+Source: CONFORMANCE.md#5-discriminator-coverage sha256=d49e75f64dbdc4ca787062a9044da9d74e16fa0ae7b9321c29d3c1dd4a41ee03
 
 ## 5. Discriminator coverage
 
@@ -901,6 +901,26 @@ The listed cases are an assessment design. Their execution records bind
 current subjects and evidence independently. A mapped case never becomes
 a pass by its presence, and a mapping does not exempt a material owner or
 consumer from review (P6, P2).
+
+
+### Product composition discriminators
+
+These cases apply [PRODUCT_DEFINITION §9](../PRODUCT_DEFINITION.md#product-composition-contract)
+and the [worked recursive example](../examples/PRODUCT_COMPOSITION.md). Their
+presence establishes no execution or whole-method qualification (P6).
+
+| Case | Subject and mechanism | Required distinction |
+|---|---|---|
+| PC-C01 Resolution | A valid edge and isolated missing-target, wrong-identity, missing-anchor and missing-contract variants | Valid references resolve; each broken required reference or identity fails its mechanical check. This is not grant or semantic validation. |
+| PC-C02 Standalone recursion | Enter B with its declared C/D closure, without enclosing A; D is also shared by A | B's scoped local outcome remains enterable; shared identity preserves separate use/authority coordinates. |
+| PC-C03 Integrated outcome | B uses D1's AUD exponent 2 while A uses D2's exponent 3 | Local availability cannot satisfy the incompatible monetary join; the outer claim is withheld. |
+| PC-C04 Replacement | Cbad keeps the interface but rounds prices; Dplus preserves AUD and adds JPY | Reject Cbad; retain only justified AUD applicability for Dplus; new JPY obligations and grants are separately selected. |
+| PC-C05 Authority across depth | A→B and B→C, with no A access to C internals; two differently scoped paths to D | No transitive grant or union at D. Adequate encapsulated internals need no flattened direct edge. |
+| PC-C06 Derived exposure | Allowed notes/tool output contain a forbidden donor algorithm; an approved behavioral export has separately established policy eligibility | The summary remains prohibited; allow the export only under both lawful authority and the receiver's information policy. |
+| PC-C07 Exposure and host | Revocation follows delivery; mediated receipts coexist with an unrestricted shell route | Preserve prior exposure and hold the affected claim; deleting a file does not unexpose an actor, and partial logs do not prove isolation. |
+| PC-C08 Adequacy and change | Same candidate bytes, current join evidence versus unresolved changed basis; an unrelated leaf stays valid | Distinct continuations survive the context; reassess affected reliance while retaining justified evidence and original historical subjects. |
+| PC-C09 Cycles | B consumes immutable A0 fixtures versus B1/A1 waiting for each other's current acceptance | Explicit seeded work can proceed; a lead name alone cannot close an unexecutable prerequisite cycle. |
+| PC-C10 Inspection | Reviewer has a separately authorized broader causal-cone read | The review may inspect it without granting Worker exposure, cross-boundary mutation or automatic dependency adoption. |
 
 Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff rows=7/17 selected by the anchors this frame carries; the consumers paragraph of 17 items is omitted
 

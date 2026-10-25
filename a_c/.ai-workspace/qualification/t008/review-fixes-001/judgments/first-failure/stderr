@@ -1,0 +1,104 @@
+test_original_judgment_rejects_material_capture_binding_gaps (test_ac_support_core.CoreTests.test_original_judgment_rejects_material_capture_binding_gaps) ... 
+  test_original_judgment_rejects_material_capture_binding_gaps (test_ac_support_core.CoreTests.test_original_judgment_rejects_material_capture_binding_gaps) (coordinate='frame') ... FAIL
+  test_original_judgment_rejects_material_capture_binding_gaps (test_ac_support_core.CoreTests.test_original_judgment_rejects_material_capture_binding_gaps) (coordinate='activation') ... FAIL
+  test_original_judgment_rejects_material_capture_binding_gaps (test_ac_support_core.CoreTests.test_original_judgment_rejects_material_capture_binding_gaps) (coordinate='subject') ... FAIL
+  test_original_judgment_rejects_material_capture_binding_gaps (test_ac_support_core.CoreTests.test_original_judgment_rejects_material_capture_binding_gaps) (coordinate='basis') ... FAIL
+  test_original_judgment_rejects_material_capture_binding_gaps (test_ac_support_core.CoreTests.test_original_judgment_rejects_material_capture_binding_gaps) (coordinate='actor') ... FAIL
+  test_original_judgment_rejects_material_capture_binding_gaps (test_ac_support_core.CoreTests.test_original_judgment_rejects_material_capture_binding_gaps) (coordinate='consumer') ... FAIL
+test_original_judgment_requires_exact_performed_evaluation_membership (test_ac_support_core.CoreTests.test_original_judgment_requires_exact_performed_evaluation_membership) ... 
+  test_original_judgment_requires_exact_performed_evaluation_membership (test_ac_support_core.CoreTests.test_original_judgment_requires_exact_performed_evaluation_membership) (suffix='0/domain_outcome/nested') ... FAIL
+test_original_judgment_retains_known_provenance_with_unrelated_history_gap (test_ac_support_core.CoreTests.test_original_judgment_retains_known_provenance_with_unrelated_history_gap) ... ok
+test_direct_performed_satisfied_and_falsified_conditions_remain_usable (test_ac_support_interfaces.PublicJudgmentIngressTests.test_direct_performed_satisfied_and_falsified_conditions_remain_usable) ... ok
+test_missing_judgment_preserves_unknown_required_dependency (test_ac_support_interfaces.PublicJudgmentIngressTests.test_missing_judgment_preserves_unknown_required_dependency) ... ok
+test_nested_not_performed_domain_data_cannot_exclude_required_dependency (test_ac_support_interfaces.PublicJudgmentIngressTests.test_nested_not_performed_domain_data_cannot_exclude_required_dependency) ... FAIL
+test_wrong_activation_return_cannot_exclude_required_dependency (test_ac_support_interfaces.PublicJudgmentIngressTests.test_wrong_activation_return_cannot_exclude_required_dependency) ... FAIL
+
+======================================================================
+FAIL: test_original_judgment_rejects_material_capture_binding_gaps (test_ac_support_core.CoreTests.test_original_judgment_rejects_material_capture_binding_gaps) (coordinate='frame')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_core.py", line 720, in test_original_judgment_rejects_material_capture_binding_gaps
+    with self.assertRaises(c.SupportError) as caught:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: SupportError not raised
+
+======================================================================
+FAIL: test_original_judgment_rejects_material_capture_binding_gaps (test_ac_support_core.CoreTests.test_original_judgment_rejects_material_capture_binding_gaps) (coordinate='activation')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_core.py", line 720, in test_original_judgment_rejects_material_capture_binding_gaps
+    with self.assertRaises(c.SupportError) as caught:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: SupportError not raised
+
+======================================================================
+FAIL: test_original_judgment_rejects_material_capture_binding_gaps (test_ac_support_core.CoreTests.test_original_judgment_rejects_material_capture_binding_gaps) (coordinate='subject')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_core.py", line 720, in test_original_judgment_rejects_material_capture_binding_gaps
+    with self.assertRaises(c.SupportError) as caught:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: SupportError not raised
+
+======================================================================
+FAIL: test_original_judgment_rejects_material_capture_binding_gaps (test_ac_support_core.CoreTests.test_original_judgment_rejects_material_capture_binding_gaps) (coordinate='basis')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_core.py", line 720, in test_original_judgment_rejects_material_capture_binding_gaps
+    with self.assertRaises(c.SupportError) as caught:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: SupportError not raised
+
+======================================================================
+FAIL: test_original_judgment_rejects_material_capture_binding_gaps (test_ac_support_core.CoreTests.test_original_judgment_rejects_material_capture_binding_gaps) (coordinate='actor')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_core.py", line 720, in test_original_judgment_rejects_material_capture_binding_gaps
+    with self.assertRaises(c.SupportError) as caught:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: SupportError not raised
+
+======================================================================
+FAIL: test_original_judgment_rejects_material_capture_binding_gaps (test_ac_support_core.CoreTests.test_original_judgment_rejects_material_capture_binding_gaps) (coordinate='consumer')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_core.py", line 720, in test_original_judgment_rejects_material_capture_binding_gaps
+    with self.assertRaises(c.SupportError) as caught:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: SupportError not raised
+
+======================================================================
+FAIL: test_original_judgment_requires_exact_performed_evaluation_membership (test_ac_support_core.CoreTests.test_original_judgment_requires_exact_performed_evaluation_membership) (suffix='0/domain_outcome/nested')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_core.py", line 752, in test_original_judgment_requires_exact_performed_evaluation_membership
+    with self.assertRaises(c.SupportError) as caught:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: SupportError not raised
+
+======================================================================
+FAIL: test_nested_not_performed_domain_data_cannot_exclude_required_dependency (test_ac_support_interfaces.PublicJudgmentIngressTests.test_nested_not_performed_domain_data_cannot_exclude_required_dependency)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py", line 960, in test_nested_not_performed_domain_data_cannot_exclude_required_dependency
+    fact = self.assert_unresolved_dependency(nested)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py", line 933, in assert_unresolved_dependency
+    self.assertIsNone(fact["core_value"])
+AssertionError: 'falsified' is not None
+
+======================================================================
+FAIL: test_wrong_activation_return_cannot_exclude_required_dependency (test_ac_support_interfaces.PublicJudgmentIngressTests.test_wrong_activation_return_cannot_exclude_required_dependency)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py", line 951, in test_wrong_activation_return_cannot_exclude_required_dependency
+    fact = self.assert_unresolved_dependency(result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py", line 933, in assert_unresolved_dependency
+    self.assertIsNone(fact["core_value"])
+AssertionError: 'falsified' is not None
+
+----------------------------------------------------------------------
+Ran 7 tests in 9.889s
+
+FAILED (failures=9)

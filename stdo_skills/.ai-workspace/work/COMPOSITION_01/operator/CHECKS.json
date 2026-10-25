@@ -1,0 +1,188 @@
+{
+  "status": "passed bounded actual public operations",
+  "source_manifest_sha256": "39df477eac760278a6c22a64d62865be4c5c6163230a9ae4abc13fe92461ea9b",
+  "checks": [
+    {
+      "name": "describe",
+      "operation": "tools.describe",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py",
+        "--policy",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/COMPOSITION_01/operator/POLICY.json",
+        "--policy-sha256",
+        "bf93cfcfb1f00c22c2c71775bd04e234ef05000cd8069f36bad9135162f5975b",
+        "--principal",
+        "writer",
+        "call",
+        "--request",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/COMPOSITION_01/operator/calls/describe/request.json"
+      ],
+      "exit": 0,
+      "status": "ok",
+      "evidence": {
+        "id": "sha256:8d76636baf7747e0c64ba050e54f11af3f15d0f690671a5190ed04d48d06b4f7",
+        "sha256": "8d76636baf7747e0c64ba050e54f11af3f15d0f690671a5190ed04d48d06b4f7"
+      },
+      "expected": "ok",
+      "refusal": null
+    },
+    {
+      "name": "inspect",
+      "operation": "composition.inspect",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py",
+        "--policy",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/COMPOSITION_01/operator/POLICY.json",
+        "--policy-sha256",
+        "bf93cfcfb1f00c22c2c71775bd04e234ef05000cd8069f36bad9135162f5975b",
+        "--principal",
+        "writer",
+        "call",
+        "--request",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/COMPOSITION_01/operator/calls/inspect/request.json"
+      ],
+      "exit": 0,
+      "status": "ok",
+      "evidence": {
+        "id": "sha256:9fd929dadafb7226c2027b06fe35cdf57b46b4198a1b05738e37e664c1544bf3",
+        "sha256": "9fd929dadafb7226c2027b06fe35cdf57b46b4198a1b05738e37e664c1544bf3"
+      },
+      "expected": "ok",
+      "refusal": null
+    },
+    {
+      "name": "read-contract",
+      "operation": "source.read",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py",
+        "--policy",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/COMPOSITION_01/operator/POLICY.json",
+        "--policy-sha256",
+        "bf93cfcfb1f00c22c2c71775bd04e234ef05000cd8069f36bad9135162f5975b",
+        "--principal",
+        "writer",
+        "call",
+        "--request",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/COMPOSITION_01/operator/calls/read-contract/request.json"
+      ],
+      "exit": 0,
+      "status": "ok",
+      "evidence": {
+        "id": "sha256:5b8074cfdbb140355c9508bc1c0d845f0abdea57deae77ab5b09b9c23c10b51b",
+        "sha256": "5b8074cfdbb140355c9508bc1c0d845f0abdea57deae77ab5b09b9c23c10b51b"
+      },
+      "expected": "ok",
+      "refusal": null
+    },
+    {
+      "name": "denied-outside-selection",
+      "operation": "source.read",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py",
+        "--policy",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/COMPOSITION_01/operator/POLICY.json",
+        "--policy-sha256",
+        "bf93cfcfb1f00c22c2c71775bd04e234ef05000cd8069f36bad9135162f5975b",
+        "--principal",
+        "writer",
+        "call",
+        "--request",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/COMPOSITION_01/operator/calls/denied-outside-selection/request.json"
+      ],
+      "exit": 2,
+      "status": "refused",
+      "evidence": {
+        "id": "sha256:17378cdb69a9b6b327307bb20a94fb5ea157177733100187a215b3183f1291ba",
+        "sha256": "17378cdb69a9b6b327307bb20a94fb5ea157177733100187a215b3183f1291ba"
+      },
+      "expected": "refused",
+      "refusal": {
+        "code": "acquisition_denied",
+        "gaps": [],
+        "reason": "Selected route does not permit this exact source selection",
+        "source_refs": []
+      }
+    },
+    {
+      "name": "ordinary-context",
+      "operation": "context.assemble",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py",
+        "--policy",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/COMPOSITION_01/operator/POLICY.json",
+        "--policy-sha256",
+        "bf93cfcfb1f00c22c2c71775bd04e234ef05000cd8069f36bad9135162f5975b",
+        "--principal",
+        "writer",
+        "call",
+        "--request",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/COMPOSITION_01/operator/calls/ordinary-context/request.json"
+      ],
+      "exit": 0,
+      "status": "ok",
+      "evidence": {
+        "id": "sha256:e3423ca23e22afa145527a306db6b5a802ea3dbdec5a67ef951731dc5f659778",
+        "sha256": "e3423ca23e22afa145527a306db6b5a802ea3dbdec5a67ef951731dc5f659778"
+      },
+      "expected": "ok",
+      "refusal": null
+    },
+    {
+      "name": "strict-context",
+      "operation": "context.assemble",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py",
+        "--policy",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/COMPOSITION_01/operator/POLICY-strict.json",
+        "--policy-sha256",
+        "f30ba73ad970cace55c71be3af41bf0dbc55afbdaa335a02cbad91304d09b537",
+        "--principal",
+        "writer",
+        "call",
+        "--request",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/COMPOSITION_01/operator/calls/strict-context/request.json"
+      ],
+      "exit": 2,
+      "status": "refused",
+      "evidence": {
+        "id": "sha256:92ba67d2fbc56751ce39580a89c21a5aa2520776e481655bb4c8e2462a9e3e7f",
+        "sha256": "92ba67d2fbc56751ce39580a89c21a5aa2520776e481655bb4c8e2462a9e3e7f"
+      },
+      "expected": "refused",
+      "refusal": {
+        "code": "basis_missing",
+        "gaps": [],
+        "reason": "Unresolved provenance cannot establish this receiving information policy",
+        "source_refs": []
+      }
+    }
+  ],
+  "ordinary_context_boundaries": {
+    "acquired_sources": 9,
+    "activation_identity": {
+      "id": "urn:stdo-skills:T002:read-context:1",
+      "sha256": "019c044a3585882c78aecb8b0dc02855f93bfa673225d91f152ae04c07a096a2"
+    },
+    "declared_input_provenance_complete": false,
+    "late_acquisition": [],
+    "projection_limits": "declared selected governing closure only",
+    "semantic_sufficiency": "not assessed"
+  },
+  "actor": "/root/composition_proposal_writer",
+  "dispatches": 0,
+  "executors": 0,
+  "effect_grants": 0,
+  "claims": "Actual local native inspect/read/context and refusal paths only; no semantic adequacy, independent review, clean-room or host qualification."
+}

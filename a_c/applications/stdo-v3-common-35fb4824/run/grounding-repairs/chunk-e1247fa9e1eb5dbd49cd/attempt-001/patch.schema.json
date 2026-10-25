@@ -1,0 +1,148 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "decision": {
+      "enum": [
+        "patch",
+        "refuse"
+      ],
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "patches": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "family": {
+            "enum": [
+              "concepts",
+              "relations",
+              "constraints",
+              "latitude",
+              "residuals"
+            ],
+            "type": "string"
+          },
+          "grounding_index": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "reason": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "record_key": {
+            "enum": [
+              "bounded_execution_external_semantics",
+              "execution_result_and_configuration"
+            ],
+            "minLength": 1,
+            "type": "string"
+          },
+          "replacement": {
+            "additionalProperties": false,
+            "properties": {
+              "end_line": {
+                "minimum": 1,
+                "type": "integer"
+              },
+              "quote": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "section_id": {
+                "enum": [
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FManifesto",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FSpec-drivenness%20litmus",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FReconstruction%20litmus",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRenewal%20path",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FSpecification%20surface%20rule",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FDesign%20rule",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRealisation%20shape",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRequirement%20categories%20and%20classification",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FTrace%20closure%20and%20anti-drift",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FLive%20surface%20immutability",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FOperational%20lifecycle%20sufficiency",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F3.%20Outcome%20conservation",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F4.%20Change%20management",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F4.%20Change%20management%2FFoundation%20to%20law%3A%20change%20management%20and%20ambiguity",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F4.%20Change%20management%2FUniversal%20intake%20triage",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F4.%20Change%20management%2FChange%20classes",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F4.%20Change%20management%2FComputed%20classification%20and%20treatment",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F4.%20Change%20management%2FConsistency%20gate",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F4.%20Change%20management%2FSprint%20execution%20boundary",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F4.%20Change%20management%2FCarriers",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F4.%20Change%20management%2FProcedures",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F5.%20Ambiguity%20governance%20and%20lifecycle",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F6.%20Lineage%20and%20release",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F6.%20Lineage%20and%20release%2FShared%20method%20adoption%20and%20propagation%20%28STDO-UP-012%29",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F7.%20Migration",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F7.%20Migration%2FCore%20interface%20migration",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F7.%20Migration%2FConstitutional%20migration%20options",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F7.%20Migration%2FWhat%20counts%20as%20a%20core%20interface",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F7.%20Migration%2FRequired%20migration%20protocol",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F7.%20Migration%2FBridge%20prohibition",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F7.%20Migration%2FProjection%20discipline",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F7.%20Migration%2FInside-out%20first%20sequencing",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F7.%20Migration%2FHard-break%20discipline",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F7.%20Migration%2FProof-last%20rule",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F7.%20Migration%2FClosure%20criterion",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F7.%20Migration%2FFundamental%20migration",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F7.%20Migration%2FTransformation%20wave",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F8.%20Bounded%20execution%20in%20this%20method",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F9.%20Evidence",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F10.%20Design%20records",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F11.%20Build-tenant%20binding",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F1.%20Work%20carriers",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F1.%20Work%20carriers%2FGoals",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F1.%20Work%20carriers%2FTicket%20records",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F1.%20Work%20carriers%2FSprints",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F1.%20Work%20carriers%2FComments"
+                ],
+                "minLength": 1,
+                "type": "string"
+              },
+              "start_line": {
+                "minimum": 1,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "section_id",
+              "quote",
+              "start_line",
+              "end_line"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "family",
+          "record_key",
+          "grounding_index",
+          "replacement",
+          "reason"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "refusal_reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "decision",
+    "patches",
+    "refusal_reason",
+    "limitations"
+  ],
+  "type": "object"
+}

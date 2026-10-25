@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/code-review-repair-002/reproduction-001/reproduce.py", line 224, in <module>
+    results = {"R1": conjunction(), "R2": []}
+                     ^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/code-review-repair-002/reproduction-001/reproduce.py", line 153, in conjunction
+    inner = case.fold("inner-no-P", [passed, failed], "r2", None, [], optional=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/code-review-repair-002/reproduction-001/reproduce.py", line 143, in fold
+    self.ok(response)
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/code-review-repair-002/reproduction-001/reproduce.py", line 97, in ok
+    assert response["status"] == "ok", response
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'schema': 'a_c.fd-support.response/1', 'id': 'control-27', 'operation': 'results.conjoin', 'status': 'refused', 'result': None, 'refusal': {'code': 'basis_missing', 'reason': 'Protected artifact resolver is not configured', 'gaps': [], 'source_refs': []}, 'operation_outcome': {'predicate': 'B(results.conjoin): declared exact output/effect-evidence payload availability on the requested basis', 'value': 'refused(basis)', 'cause': 'basis_missing', 'core_value': 'invalid_basis', 'source_parent': {'member': 'FOUNDATIONS.md', 'sha256': 'fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f', 'clause': 'results'}, 'evidence': [], 'limits': ['output availability only; no semantic acceptance']}, 'evidence': {'id': 'sha256:a17ef634c96539615679838adf75ffe84ab1d19c01cc8e6db2b1d10641357d80', 'sha256': 'a17ef634c96539615679838adf75ffe84ab1d19c01cc8e6db2b1d10641357d80'}}

@@ -2,6 +2,14 @@
 
 ## Current selection
 
+[T-002](../.ai-workspace/tickets/active/T-002-composition-support.md) selects the
+recursive-composition consumer increment: actual a_c dependency, capable manager
+resolution and the supported composition guard in both tenant workflows. The
+method remains installed 3.0.1 RC1. This increment is under construction and has
+no new host qualification, Product acceptance, release or installation claim.
+
+### Retained initial delivery standing
+
 [T-001](../.ai-workspace/tickets/active/T-001-skills-dogfood.md) constructs the
 independent STDO Skills Product with shared requirements and separately tuned
 Codex/Claude tenants. Its static governing methodology is the published immutable

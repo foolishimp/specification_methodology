@@ -1,0 +1,371 @@
+--- build_tenants/graphify/code/ac_support_core.py (assigned preimage)
++++ build_tenants/graphify/code/ac_support_core.py (repaired candidate)
+@@ -1166,6 +1166,19 @@
+             "limits": definition["limits"]})
+ 
+ 
++def _bound_original_return(payload: Object) -> Object:
++    """Select original judgments without conflating authentication and binding."""
++    if payload["original"] is None or as_object(payload["producer"]).get("authenticated") is not True:
++        raise SupportError("basis_missing", "Judgment is not an authenticated original performed evaluation")
++    binding_gaps: list[JSON] = [gap for gap in as_list(as_object(payload["binding_checks"])["gaps"])
++                                if isinstance(gap, dict) and "binding" in gap]
++    if binding_gaps:
++        raise SupportError("basis_missing", "Original return has material binding gaps", binding_gaps)
++    original = as_object(payload["original"])
++    _closed_format(original)
++    return original
++
++
+ def _judgment(runtime: Runtime, ref: Object) -> Object:
+     validate_content(ref, "JudgmentRef")
+     envelope = load_artifact(runtime, as_object(ref["record"]))
+@@ -1173,13 +1186,10 @@
+     payload = as_object(envelope["payload"])
+     path = cast(str, ref["pointer"])
+     if kind == "return":
+-        producer = as_object(payload["producer"])
+-        if producer.get("authenticated") is not True or not path.startswith("/payload/original/evaluations/"):
+-            raise SupportError("basis_missing", "Judgment is not an authenticated original performed evaluation")
+-        original = as_object(payload["original"])
++        original = _bound_original_return(payload)
++        if re.fullmatch(r"/payload/original/evaluations/(?:0|[1-9][0-9]*)", path) is None:
++            raise SupportError("basis_missing", "Judgment pointer must identify one performed evaluation")
+         result = copy.deepcopy(as_object(pointer(envelope, path)))
+-        if set(result) != {"id", "predicate", "domain_outcome", "core_value", "evidence", "residuals", "invalidators"}:
+-            raise SupportError("basis_missing", "Judgment pointer must identify one performed evaluation")
+         result["subject"] = original["subject"]; result["basis"] = original["basis"]
+     elif kind == "operation":
+         request = as_object(payload["request"])
+@@ -1412,9 +1422,10 @@
+         seen.add(text(ref["id"]))
+         payload = as_object(load_artifact(runtime, ref, "return")["payload"])
+         originals.append({"record": ref, "original": payload["original"], "producer": payload["producer"]})
+-        if payload["original"] is None or as_object(payload["producer"]).get("authenticated") is not True or any(isinstance(gap, dict) and "binding" in gap for gap in as_list(as_object(payload["binding_checks"])["gaps"])):
++        try:
++            original = _bound_original_return(payload)
++        except SupportError:
+             continue
+-        original = as_object(payload["original"])
+         for raw_evaluation in as_list(original["evaluations"]):
+             evaluation = as_object(raw_evaluation)
+             key = _evaluation_key(original, payload["attempt"], evaluation)
+--- build_tenants/graphify/test_env/test_ac_support_core.py (assigned preimage)
++++ build_tenants/graphify/test_env/test_ac_support_core.py (repaired candidate)
+@@ -697,6 +697,82 @@
+         self.assertEqual(historical["subject"], original["subject"])
+         self.assertTrue(value["gaps"])
+ 
++    def test_original_judgment_rejects_material_capture_binding_gaps(self) -> None:
++        runtime = self.f.runtime()
++        _, original, _ = self.protected_return(runtime, "falsified")
++        wrong_coordinates = obj({
++            "frame": {"id": "other-frame", "revision": "1"},
++            "activation": {"id": "other-activation", "sha256": "0" * 64},
++            "subject": {"id": "other-subject", "sha256": "0" * 64},
++            "basis": {"method_profile": self.f.basis["method_profile"],
++                      "observations": [{"id": "sha256:" + "0" * 64, "sha256": "0" * 64}]},
++            "actor": {"id": "other-worker", "family": "A", "authorship": "other-worker"},
++            "consumer": "other-consumer",
++        })
++        for coordinate, replacement in wrong_coordinates.items():
++            with self.subTest(coordinate=coordinate):
++                historical = copy.deepcopy(original); historical[coordinate] = replacement
++                returned, _, _ = self.protected_return(runtime, "falsified", raw_override=c.canonical(historical))
++                payload = c.as_object(c.load_artifact(runtime, returned, "return")["payload"])
++                binding_gaps = c.as_list(c.as_object(payload["binding_checks"])["gaps"])
++                self.assertTrue(any(isinstance(gap, dict) and gap.get("binding") == coordinate for gap in binding_gaps))
++                reference = obj({"record": returned, "pointer": "/payload/original/evaluations/0"})
++                with self.assertRaises(c.SupportError) as caught:
++                    c.judgment(runtime, reference)
++                self.assertEqual(caught.exception.code, "basis_missing")
++                self.assertEqual(caught.exception.gaps, binding_gaps)
++                value, gaps = c._condition(runtime, {"predicate": self.f.law, "evaluation": reference}, self.f.subject, self.f.basis)
++                self.assertIsNone(value); self.assertTrue(gaps)
++                candidates, originals, failures = c._conjunction_returns(runtime, [returned])
++                self.assertEqual(candidates, {}); self.assertEqual(failures, [])
++                self.assertEqual(c.as_object(originals[0])["original"], historical)
++                self.assertEqual(payload["original"], historical)
++
++    def test_original_judgment_requires_exact_performed_evaluation_membership(self) -> None:
++        runtime = self.f.runtime()
++        _, original, _ = self.protected_return(runtime, "satisfied", "actual-satisfied")
++        first = c.as_object(c.as_list(original["evaluations"])[0])
++        nested = copy.deepcopy(first)
++        nested.update({"id": "nested-not-performed", "domain_outcome": False, "core_value": "falsified"})
++        domain = obj({"nested": nested, "arbitrary": [None, True, 4, {"a/b~": "unchanged"}]})
++        first["domain_outcome"] = domain
++        second = copy.deepcopy(first)
++        second.update({"id": "actual-falsified", "domain_outcome": [False, {"original": "domain value"}], "core_value": "falsified"})
++        c.as_list(original["evaluations"]).append(second)
++        original["not_performed"] = ["nested-not-performed"]
++        returned, _, _ = self.protected_return(runtime, "satisfied", raw_override=c.canonical(original))
++        for index, expected in enumerate((first, second)):
++            reference = obj({"record": returned, "pointer": "/payload/original/evaluations/" + str(index)})
++            actual = c.judgment(runtime, reference)
++            self.assertEqual(actual["core_value"], expected["core_value"])
++            self.assertEqual(actual["domain_outcome"], expected["domain_outcome"])
++        for suffix in ("0/domain_outcome/nested", "0/domain_outcome", "00", "-1", "2", "0/"):
++            with self.subTest(suffix=suffix):
++                reference = obj({"record": returned, "pointer": "/payload/original/evaluations/" + suffix})
++                with self.assertRaises(c.SupportError) as caught:
++                    c.judgment(runtime, reference)
++                self.assertEqual(caught.exception.code, "basis_missing")
++                value, gaps = c._condition(runtime, {"predicate": self.f.law, "evaluation": reference}, self.f.subject, self.f.basis)
++                self.assertIsNone(value); self.assertTrue(gaps)
++        retained = c.as_object(c.load_artifact(runtime, returned, "return")["payload"])
++        self.assertEqual(retained["original"], original)
++
++    def test_original_judgment_retains_known_provenance_with_unrelated_history_gap(self) -> None:
++        runtime = self.f.runtime(); self.f.store.complete = False
++        returned, original, _ = self.protected_return(runtime, "falsified")
++        payload = c.as_object(c.load_artifact(runtime, returned, "return")["payload"])
++        self.assertTrue(c.as_list(c.as_object(payload["binding_checks"])["gaps"]))
++        reference = obj({"record": returned, "pointer": "/payload/original/evaluations/0"})
++        actual = c.judgment(runtime, reference)
++        self.assertEqual(actual["core_value"], "falsified")
++        self.assertEqual(actual["domain_outcome"], c.as_object(c.as_list(original["evaluations"])[0])["domain_outcome"])
++        value, gaps = c._condition(runtime, {"predicate": self.f.law, "evaluation": reference}, self.f.subject, self.f.basis)
++        self.assertEqual(value, "falsified"); self.assertEqual(gaps, [])
++        candidates, _, failures = c._conjunction_returns(runtime, [returned])
++        self.assertEqual(len(candidates), 1); self.assertEqual(len(failures), 1)
++        missing, missing_gaps = c._condition(runtime, {"predicate": self.f.law, "evaluation": None}, self.f.subject, self.f.basis)
++        self.assertIsNone(missing); self.assertEqual(missing_gaps, ["Missing actual condition judgment"])
++
+     def test_pasted_raw_payload_cannot_borrow_attempt_authentication(self) -> None:
+         runtime = self.f.runtime(); returned, original, _ = self.protected_return(runtime, "satisfied")
+         attempt = c.as_object(c.as_object(c.load_artifact(runtime, returned, "return")["payload"])["attempt"])
+--- build_tenants/graphify/test_env/test_ac_support_interfaces.py (assigned preimage)
++++ build_tenants/graphify/test_env/test_ac_support_interfaces.py (repaired candidate)
+@@ -5,6 +5,7 @@
+ """
+ from __future__ import annotations
+ 
++import base64
+ from collections.abc import Iterator, Sequence
+ from decimal import Decimal
+ import fcntl
+@@ -760,6 +761,223 @@
+                 self.assertEqual(self.target(request).read_bytes(), b"before\nafter\n")
+ 
+ 
++class PublicJudgmentIngressTests(unittest.TestCase):
++    """Registered local stdout -> public capture/check -> relation conditions.
++
++    Fixture verdicts are supplied assertions. Process/capture/consumer evidence
++    is observed through fresh public CLI calls, without protected-record writes.
++    """
++
++    def setUp(self) -> None:
++        self.temporary = tempfile.TemporaryDirectory(prefix="ac-fix-judgments-public-")
++        self.addCleanup(self.temporary.cleanup)
++        self.root = Path(self.temporary.name).resolve()
++        self.addCleanup(self.retain_fixture_evidence)
++        self.f = Fixture(self.root)
++        self.sequence = 0
++        self.environment = dict(os.environ)
++        self.environment.update({"PYTHONDONTWRITEBYTECODE": "1", "TMPDIR": str(self.root)})
++        self.policy = self.root / "policy.json"
++        self.write_policy()
++        self.declarations = self.f.relations()
++        for raw in core.as_list(self.declarations["applicability"]):
++            row = core.as_object(raw)
++            if row["target"] == {"kind": "relation", "id": "e1"}:
++                row["condition"] = {"predicate": self.f.law, "evaluation": None}
++        self.missing = self.query("missing", None)
++        self.f.subject = core.as_object(self.edge(self.missing)["expected_subject"])
++        self.script = self.f.write("inputs/local-return-producer.py", (
++            b"import sys\nfrom pathlib import Path\n"
++            b"Path(sys.argv[2]).write_bytes(sys.stdin.buffer.read())\n"
++            b"sys.stdout.buffer.write(Path(sys.argv[1]).read_bytes())\n"
++            b"sys.stdout.buffer.flush()\n"
++        ))
++
++    def retain_fixture_evidence(self) -> None:
++        destination = os.environ.get("AC_JUDGMENT_INGRESS_TEST_EVIDENCE")
++        if destination is not None:
++            import shutil
++            target = Path(destination) / self.id().rsplit(".", 1)[-1]
++            shutil.copytree(self.root, target)
++
++    def write_policy(self) -> None:
++        raw = canonical(self.f.policy)
++        self.policy.write_bytes(raw)
++        self.policy_sha256 = hashlib.sha256(raw).hexdigest()
++
++    def public(self, operation: str, arguments: object) -> dict[str, Any]:
++        self.sequence += 1
++        request = {"schema": core.REQUEST, "id": "judgment-ingress-" + str(self.sequence),
++                   "operation": operation, "arguments": arguments}
++        command = [sys.executable, "-B", str(ADAPTER), "--policy", str(self.policy),
++                   "--policy-sha256", self.policy_sha256, "--principal", "executive",
++                   "call", "--request", "-"]
++        raw = canonical(request)
++        started = time.time_ns()
++        result = subprocess.run(command, input=raw, capture_output=True, cwd=self.root,
++                                timeout=15, env=self.environment, check=False)
++        directory = self.root / "calls" / str(self.sequence)
++        directory.mkdir(parents=True)
++        (directory / "request.json").write_bytes(raw)
++        (directory / "stdout").write_bytes(result.stdout)
++        (directory / "stderr").write_bytes(result.stderr)
++        (directory / "execution.json").write_bytes(canonical({
++            "argv": command, "cwd": str(self.root), "exit": result.returncode,
++            "started_ns": started, "ended_ns": time.time_ns(),
++            "scope": "actual public CLI observation; controlled local producer only",
++        }))
++        self.assertEqual(result.returncode, 0, (operation, result.stdout, result.stderr))
++        response = cast(dict[str, Any], json.loads(result.stdout))
++        self.assertEqual(response["status"], "ok", response)
++        self.assertIsNotNone(response["evidence"], response)
++        return response
++
++    @staticmethod
++    def edge(result: dict[str, Any]) -> dict[str, Any]:
++        return next(cast(dict[str, Any], row) for row in result["applicability"]
++                    if row["target"] == {"kind": "relation", "id": "e1"})
++
++    def query(self, label: str, evaluation: object) -> dict[str, Any]:
++        declarations = core.document(self.declarations)
++        for raw in core.as_list(declarations["applicability"]):
++            row = core.as_object(raw)
++            if row["target"] == {"kind": "relation", "id": "e1"}:
++                row["condition"] = core.document({"predicate": self.f.law, "evaluation": evaluation})
++        source = self.f.write("inputs/relations-" + label + ".json", declarations)
++        response = self.public("relations.query", {"model": self.f.model, "declarations": source,
++                                                 "query": "dependencies", "seeds": ["urn:a-c:toy:object:a"]})
++        return cast(dict[str, Any], response["result"]["value"])
++
++    def roundtrip(self, label: str, value: str, *, wrong_activation: bool = False,
++                  nested: bool = False) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
++        packet = self.f.packet()
++        core.as_object(packet["activation"])["id"] = "activation-" + label
++        domain: object = {"original_domain": value, "arbitrary": [None, True, 4, {"a/b~": "unchanged"}]}
++        if nested:
++            domain = {"nested": {"id": "nested-not-performed", "predicate": self.f.law,
++                                 "domain_outcome": False, "core_value": "falsified",
++                                 "evidence": [self.f.data], "residuals": [], "invalidators": []},
++                      "arbitrary": domain}
++        original = core.document({
++            "schema": "a_c.fd-support.closed-return/1", "id": "return-" + label,
++            "frame": {"id": "frame", "revision": "1"}, "activation": core.activation_identity(packet),
++            "subject": self.f.subject, "basis": self.f.basis,
++            "actor": {"id": "worker", "family": "A", "authorship": "worker"}, "consumer": "executive",
++            "evaluations": [{"id": "actual-evaluation", "predicate": self.f.law,
++                             "domain_outcome": domain, "core_value": value,
++                             "evidence": [self.f.data], "residuals": [], "invalidators": []}],
++            "not_performed": ["nested-not-performed"] if nested else [],
++            "work_result": None, "residuals": [], "invalidators": [],
++        })
++        if wrong_activation:
++            core.as_object(original["activation"])["sha256"] = "0" * 64
++        payload = self.f.write("inputs/stdout-" + label + ".json", original)
++        stdin_path = self.f.workspace / "outputs" / (label + ".stdin")
++        executor_id = "local-" + label
++        executor = core.document(core.as_object(self.f.policy["executors"])["registered"])
++        executor.update({
++            "id": executor_id,
++            "argv": [str(Path(sys.executable).resolve()), "-B", str(self.f.workspace / "inputs/local-return-producer.py"),
++                     str(self.f.workspace / core.text(payload["path"])), str(stdin_path)],
++            "dependencies": [self.script, payload],
++            "environment": {"PYTHONDONTWRITEBYTECODE": "1", "TMPDIR": str(self.root)},
++            "settings": {"timeout_ms": 2000, "termination_grace_ms": 100},
++        })
++        core.as_object(self.f.policy["executors"])[executor_id] = executor
++        core.as_list(core.as_object(core.as_object(self.f.policy["grants"])["work"])["executors"]).append(executor_id)
++        self.write_policy()
++        (self.root / (label + "-assertions.json")).write_bytes(canonical({
++            "kind": "fixture assertions, not execution observations", "original": original,
++            "expected_binding_gap": "activation" if wrong_activation else None,
++            "expected_nested_pointer_eligible": False if nested else None,
++        }))
++        assembled = self.public("context.assemble", {
++            "packet": packet, "models": [], "sources": [self.f.law], "late_acquisition": [],
++            "envelope": {"capacity_bytes": None, "boundary": "executor-stdin-utf8",
++                         "host_context": {"state": "unknown", "bytes": None, "evidence": None}},
++        })
++        self.assertEqual(assembled["result"]["value"]["activation_identity"], core.activation_identity(packet))
++        context = assembled["result"]["artifact"]
++        preflight = self.public("contract.preflight", {"context": context, "grant_id": "work",
++                                                      "executor_id": executor_id, "result_key": label, "observations": []})
++        self.assertEqual(preflight["result"]["value"]["decision"], "admitted")
++        dispatched = self.public("dispatch.start", {"preflight": preflight["result"]["artifact"]})
++        attempt = dispatched["result"]["artifact"]
++        deadline = time.monotonic() + 6
++        while True:
++            observed = self.public("dispatch.observe", {"attempt": attempt, "after_event": 0})["result"]["value"]
++            if observed["process_end"] is not None and observed["output"] is not None:
++                break
++            self.assertLess(time.monotonic(), deadline, observed)
++            time.sleep(0.03)
++        self.assertEqual(observed["process_end"]["returncode"], 0)
++        self.assertTrue(stdin_path.read_bytes())
++        raw_ref = observed["output"]["stdout"]
++        raw = self.public("evidence.read", {"artifact": raw_ref})["result"]["value"]["envelope"]["payload"]
++        self.assertEqual(base64.b64decode(raw["bytes_base64"], validate=True), canonical(original))
++        self.assertIs(raw["complete"], True)
++        self.assertEqual(raw["slot"], "final_stdout_object")
++        captured = self.public("return.capture", {"attempt": attempt, "payload": raw_ref,
++                                                  "return_contract": self.f.return_contract})
++        capture = cast(dict[str, Any], captured["result"]["value"])
++        self.assertIs(capture["producer"]["authenticated"], True)
++        self.assertIs(capture["binding_checks"]["format_valid"], True)
++        self.assertEqual(capture["original"], original)
++        reference = cast(dict[str, Any], captured["result"]["artifact"])
++        checked = self.public("return.check", {"return": reference, "context": context,
++                                               "consumer": "executive", "observations": [], "predicates": []})
++        return reference, capture, cast(dict[str, Any], checked["result"]["value"])
++
++    def assert_unresolved_dependency(self, result: dict[str, Any]) -> dict[str, Any]:
++        fact = self.edge(result)
++        self.assertIsNone(fact["core_value"])
++        self.assertIs(fact["excluded"], False); self.assertIs(fact["unresolved"], True)
++        self.assertEqual(result["records"], ["urn:a-c:toy:object:a", "urn:a-c:toy:object:b"])
++        self.assertIn("e1", result["traversed_relations"])
++        self.assertIn("e1", result["boundary"]["unresolved_traversal_relations"])
++        self.assertTrue(fact["gaps"])
++        return fact
++
++    def test_missing_judgment_preserves_unknown_required_dependency(self) -> None:
++        fact = self.assert_unresolved_dependency(self.missing)
++        self.assertEqual(fact["gaps"], ["Missing actual condition judgment"])
++
++    def test_wrong_activation_return_cannot_exclude_required_dependency(self) -> None:
++        reference, capture, checked = self.roundtrip("wrong-activation", "falsified", wrong_activation=True)
++        self.assertFalse(checked["consumable"])
++        binding_gaps = capture["binding_checks"]["gaps"]
++        self.assertEqual([gap["binding"] for gap in binding_gaps if isinstance(gap, dict) and "binding" in gap], ["activation"])
++        result = self.query("wrong-activation", {"record": reference, "pointer": "/payload/original/evaluations/0"})
++        fact = self.assert_unresolved_dependency(result)
++        self.assertTrue(any(isinstance(gap, dict) and gap.get("code") == "basis_missing"
++                            and gap.get("gaps") == binding_gaps for gap in fact["gaps"]))
++
++    def test_nested_not_performed_domain_data_cannot_exclude_required_dependency(self) -> None:
++        reference, capture, checked = self.roundtrip("nested", "satisfied", nested=True)
++        self.assertTrue(checked["consumable"])
++        self.assertEqual(capture["original"]["not_performed"], ["nested-not-performed"])
++        nested = self.query("nested-data", {"record": reference, "pointer": "/payload/original/evaluations/0/domain_outcome/nested"})
++        fact = self.assert_unresolved_dependency(nested)
++        self.assertTrue(any(isinstance(gap, dict) and gap.get("code") == "basis_missing" for gap in fact["gaps"]))
++        direct = self.query("nested-direct", {"record": reference, "pointer": "/payload/original/evaluations/0"})
++        self.assertEqual(self.edge(direct)["core_value"], "satisfied")
++        self.assertFalse(self.edge(direct)["unresolved"])
++        self.assertEqual(direct["records"], ["urn:a-c:toy:object:a", "urn:a-c:toy:object:b"])
++
++    def test_direct_performed_satisfied_and_falsified_conditions_remain_usable(self) -> None:
++        for value in ("satisfied", "falsified"):
++            with self.subTest(value=value):
++                reference, _, checked = self.roundtrip(value, value)
++                self.assertTrue(checked["consumable"])
++                result = self.query(value, {"record": reference, "pointer": "/payload/original/evaluations/0"})
++                fact = self.edge(result)
++                self.assertEqual(fact["core_value"], value)
++                self.assertEqual(fact["excluded"], value == "falsified")
++                self.assertFalse(fact["unresolved"]); self.assertEqual(fact["gaps"], [])
++                expected = ["urn:a-c:toy:object:a"] if value == "falsified" else ["urn:a-c:toy:object:a", "urn:a-c:toy:object:b"]
++                self.assertEqual(result["records"], expected)
++
++
+ class ActorCliTransportTests(unittest.TestCase):
+     """Controlled process transports only; no provider or F_P actor is run."""
+ 

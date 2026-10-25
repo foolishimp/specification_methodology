@@ -54,6 +54,15 @@ file. A separately granted scratch location remains usable after checking its
 current ownership/preimage and the scope of creation, use and cleanup. Deleting
 a file does not undo an overwrite or authorize the earlier effect.
 
+## Product crossings (SK-13)
+
+For a cross-Product task or a required composition-controlled view, read
+[composition](references/composition.md). Use its actual capable-manager command
+and public `composition.inspect` envelope, then retain that binding through
+source/context/preflight and actor delivery. An absent optional binding cannot
+support a claim that controls are active; its declaration comes from the trusted
+operator policy, not a caller-supplied substitute.
+
 ## Acquire only the deciding context (SK-05)
 
 Acquire the deciding Product, requirements, scenarios, frame, and owner material

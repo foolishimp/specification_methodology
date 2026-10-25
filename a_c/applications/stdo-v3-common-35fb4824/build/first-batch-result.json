@@ -1,0 +1,210 @@
+{
+  "after": {
+    "created_at": "2026-10-20T08:21:43.513377+00:00",
+    "implementation_manifest_sha256": "594fafcf083eadbbaf1472d68fe9f375fc21ccb426c6825194793304eac2503e",
+    "package_members": 81,
+    "semantic_members": 58,
+    "source_manifest_sha256": "dbf32e7f99eb7228ca361ec02f44227c05e02bb6bc447d1dd38255cd3ca4a4d4",
+    "status": "exact"
+  },
+  "aggregate_reported_usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 0,
+    "input_tokens": 146227,
+    "output_tokens": 85560,
+    "reasoning_output_tokens": 2116
+  },
+  "attempts": [
+    {
+      "attempt": "actors/author/chunk-92a5f4b8dd74eaccb968/attempt-001",
+      "chunk": "chunk-92a5f4b8dd74eaccb968",
+      "custody": "strict_original",
+      "custody_error": null,
+      "draft_dispositions": 66,
+      "draft_family_counts": {
+        "concepts": 31,
+        "constraints": 53,
+        "latitude": 3,
+        "relations": 13,
+        "residuals": 7
+      },
+      "files": {
+        "answer.json": {
+          "bytes": 204161,
+          "sha256": "595b5182709541fc1cc8c762cee04f47f97e4378f96c0fb80cbf7d0698eb8a57"
+        },
+        "events.jsonl": {
+          "bytes": 212487,
+          "sha256": "1a634ba83f015cc96984fa5a738b34596d488671f23fa0f83b54d6a65de894d9"
+        },
+        "invocation.json": {
+          "bytes": 3301,
+          "sha256": "121682ab35411ef87c67ecc9baed43d5d7f34bdb25d0b2aef801fe73ef91f51c"
+        },
+        "prompt.txt": {
+          "bytes": 247622,
+          "sha256": "40378bae38702d0f8953f832eb7440e99e6f3829b993bbae166b10bb8fd438bd"
+        },
+        "result.json": {
+          "bytes": 881,
+          "sha256": "211c0d3a2329693742ab98d5c2d503993776cccff4006bad3ab63f274a0be8a0"
+        },
+        "stderr.txt": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "usage.json": {
+          "bytes": 280,
+          "sha256": "2d58fc755cdd10e902371530b73039d5ff13f61a247c2a6ba051658242b67e1d"
+        },
+        "validation.json": {
+          "bytes": 309,
+          "sha256": "f9f4b198a05c01a41e674a8b9c789d7948544aef4af6a82fd7ee5550dd59ea6c"
+        }
+      },
+      "result": {
+        "answer_sha256": "595b5182709541fc1cc8c762cee04f47f97e4378f96c0fb80cbf7d0698eb8a57",
+        "cli_exit_code": 0,
+        "cli_version": "codex-cli 0.162.1",
+        "elapsed_seconds": 1118.517579749925,
+        "events_sha256": "1a634ba83f015cc96984fa5a738b34596d488671f23fa0f83b54d6a65de894d9",
+        "failures": [],
+        "profile": "ac.generation.actor-result/1",
+        "schema_errors": [],
+        "settings": {
+          "model": "gpt-6-astra",
+          "model_reasoning_effort": "high",
+          "service_tier": "default"
+        },
+        "status": "completed",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "timed_out": false,
+        "unexpected_item_types": [],
+        "usage_events": [
+          {
+            "cache_write_input_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 78410,
+            "output_tokens": 49702,
+            "reasoning_output_tokens": 1034
+          }
+        ],
+        "user_config_unchanged": true
+      }
+    },
+    {
+      "attempt": "actors/author/chunk-cf22b253a1db7d64a8f8/attempt-001",
+      "chunk": "chunk-cf22b253a1db7d64a8f8",
+      "custody": "source_only_failure_custody_verified",
+      "custody_error": null,
+      "draft_dispositions": 25,
+      "draft_family_counts": {
+        "concepts": 31,
+        "constraints": 32,
+        "latitude": 8,
+        "relations": 7,
+        "residuals": 10
+      },
+      "files": {
+        "answer.json": {
+          "bytes": 149532,
+          "sha256": "50926f48dfa8425f7738415138945be9b4718685be6ae466e12e8565971313d2"
+        },
+        "events.jsonl": {
+          "bytes": 155889,
+          "sha256": "9612c7e74fcb8f07e5aaf6d3d5516ffb340db5682adf9c13d86350a7de7175ce"
+        },
+        "invocation.json": {
+          "bytes": 3301,
+          "sha256": "279e19efc084aa70f583ad68e29a0d48fc004c6f529d3156f6c05b86b2bf5918"
+        },
+        "prompt.txt": {
+          "bytes": 214077,
+          "sha256": "ac0547c4ca1a20013615c8f12cf1f6ac12479b4ab111490ca9672567f00e71aa"
+        },
+        "result.json": {
+          "bytes": 1035,
+          "sha256": "eafdc71f50e45e464188eb93fdd40e2b1310a0815a4b7343e4342ebca069fa23"
+        },
+        "stderr.txt": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "usage.json": {
+          "bytes": 280,
+          "sha256": "6a23371e5159f1c582a603fbc4b5034adb3df19466bad20787ea8aac514a8f23"
+        }
+      },
+      "result": {
+        "answer_sha256": "50926f48dfa8425f7738415138945be9b4718685be6ae466e12e8565971313d2",
+        "cli_exit_code": 0,
+        "cli_version": "codex-cli 0.162.1",
+        "elapsed_seconds": 560.6680370420218,
+        "events_sha256": "9612c7e74fcb8f07e5aaf6d3d5516ffb340db5682adf9c13d86350a7de7175ce",
+        "failures": [
+          "source_or_semantic_fragment_validation"
+        ],
+        "profile": "ac.generation.actor-result/1",
+        "schema_errors": [],
+        "settings": {
+          "model": "gpt-6-astra",
+          "model_reasoning_effort": "high",
+          "service_tier": "default"
+        },
+        "status": "failed",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "timed_out": false,
+        "unexpected_item_types": [],
+        "usage_events": [
+          {
+            "cache_write_input_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 67817,
+            "output_tokens": 35858,
+            "reasoning_output_tokens": 1082
+          }
+        ],
+        "user_config_unchanged": true,
+        "validation_error": "record[portable_required_closure]/grounding/0: grounding names source outside chunk"
+      }
+    }
+  ],
+  "before": {
+    "created_at": "2026-10-20T08:21:43.367237+00:00",
+    "implementation_manifest_sha256": "594fafcf083eadbbaf1472d68fe9f375fc21ccb426c6825194793304eac2503e",
+    "package_members": 81,
+    "semantic_members": 58,
+    "source_manifest_sha256": "dbf32e7f99eb7228ca361ec02f44227c05e02bb6bc447d1dd38255cd3ca4a4d4",
+    "status": "exact"
+  },
+  "calls": 2,
+  "calls_with_reported_usage": 2,
+  "calls_with_unknown_usage": 0,
+  "claims": "Two initial calls closed. Original failures are unchanged. No retry, F_D normalization, F_P repair, assembly, semantic acceptance or release performed. Usage fields are summed separately without adding reasoning_output_tokens to output_tokens.",
+  "closed_calls": 2,
+  "created_at": "2026-10-20T08:21:43.502556+00:00",
+  "phase_command_exit_code": 1,
+  "phase_elapsed_wall_seconds": 1119.0254465830512,
+  "profile": "ac.common.first-batch-closure/1",
+  "remaining_unattempted_chunks": 16,
+  "reporting_helper_sha256": "7ddb5b430b83a2017168b5205aaa3597c79fe82cf670cc752c6ce9f90c08d79e",
+  "summed_actor_elapsed_seconds": 1679.1856167919468,
+  "unattempted_chunk_ids": [
+    "chunk-48d20c632dceaba4c74c",
+    "chunk-6a6fe643ed4a56a2207f",
+    "chunk-9ad55c758435da840238",
+    "chunk-5de9b50d9be9a9a975ec",
+    "chunk-681e3bcdbe30d3f19555",
+    "chunk-840f31f0a41659bed31f",
+    "chunk-a9bfe9fddc1bbf8bf726",
+    "chunk-fb45aab9fdaa869d1b60",
+    "chunk-dd5da8dbb2163820ad7c",
+    "chunk-2f24e576ad073131be2b",
+    "chunk-e6c17b5f309623af04f5",
+    "chunk-e1247fa9e1eb5dbd49cd",
+    "chunk-f4383ca77391f9eb91c7",
+    "chunk-aee29b86d3101ee98ba1",
+    "chunk-dac75ca2eb8f2a17b8e5",
+    "chunk-1e8571ebafdc9e3b6403"
+  ]
+}

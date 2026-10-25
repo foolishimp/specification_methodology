@@ -26,3 +26,11 @@ Tenant designs add exact host/tool source references and their verified versions
 Host documentation supplies mechanics and cannot alter these methodological
 contracts. Existing STDO plugin skills and a_c examples are realization donors,
 with their own declared support limits.
+
+## Local composition extension
+
+[SK-13](requirements/README.md#sk-13-recursive-composition-and-eligible-context)
+and [A_C_SUPPORT](composition/A_C_SUPPORT.md) own Skills' selected composition
+requirements and dependency. Their [source manifest](composition/SOURCE_MANIFEST.json)
+binds current support mechanics. These are Product-local sources under installed
+3.0.1 authority, not an implicit adoption of mutable successor STDO clauses.

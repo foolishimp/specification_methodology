@@ -1,0 +1,94 @@
+{
+  "schema": "a_c.fd-support.method-binding/1",
+  "id": "urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1",
+  "status": "bounded-native-binding-candidate",
+  "method": {
+    "name": "STDO3.0.1 RC1",
+    "uri": "stdo://releases/v3.0.1-rc.1/",
+    "manifest_sha256": "60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8",
+    "source_commit": "fe4941f56a52ed3697a2b516d8d68948b0ea65d9",
+    "package": "specification_methodology/v3/",
+    "selected_profiles": [
+      "EXECUTIVE_BASELINE.md"
+    ]
+  },
+  "builder": {
+    "uri": "stdo://releases/v2.5.1-rc.2/",
+    "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782"
+  },
+  "members": [
+    {
+      "member": "REFERENCE_FRAME.md",
+      "sha256": "8152838639950b09389f99181172792100e4470b4807b4e112870cd4e6f6ba21",
+      "clauses": [
+        "11-the-activation-packet",
+        "13-minimal-declarations",
+        "rf-016-implementation-neutrality"
+      ]
+    },
+    {
+      "member": "ACTIVATION.md",
+      "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d",
+      "clauses": [
+        "intake",
+        "admission",
+        "3-step-results-and-disposition",
+        "7-closed-result-and-reuse"
+      ]
+    },
+    {
+      "member": "FOUNDATIONS.md",
+      "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5",
+      "clauses": [
+        "results",
+        "assertions-and-observation",
+        "change-impact-and-evidence-reuse"
+      ]
+    },
+    {
+      "member": "EXECUTIVE_BASELINE.md",
+      "sha256": "fcef434630e270d216f494de97ee727ad46690db89a4b73edac4b88ff921c62e",
+      "clauses": [
+        "19-baseline-specific-basis-and-activation-additions",
+        "no-mutation-while-executive"
+      ]
+    },
+    {
+      "member": "AXIOMATIC_CALCULUS.md",
+      "sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5",
+      "clauses": [
+        "5-traversals-and-functor-kinds"
+      ]
+    },
+    {
+      "member": "EVALUATION.md",
+      "sha256": "478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff",
+      "clauses": [
+        "3-independent-assessment"
+      ]
+    },
+    {
+      "member": "SPEC_METHOD.md",
+      "sha256": "b2773dc0c9feb429b6b357bcfd60e7df46e54db8adcb04dc8d6dbfa023b73677",
+      "clauses": [
+        "11-build-tenant-binding"
+      ]
+    }
+  ],
+  "carrier": "Existing a_c.fd-support /1 carriers; this profile supplies the native semantic binding, not new method law.",
+  "mapping": {
+    "packet": "REFERENCE_FRAME section11; existing groups preserve required native coordinates. Native intake outcome/admission/shared machinery are supplied as exact sources in packet relations and grant.",
+    "admission": "ACTIVATION Admission; existing Product-located mechanism and exact contract evidence remain necessary; profile selection supplies no grant.",
+    "work_result": "ACTIVATION Construction availability: candidate_ready/satisfied, incomplete/falsified, refused/falsified, re_entry_requested cause determines out_of_frame or invalid_basis; no assessment manufactured.",
+    "return": "ACTIVATION section7; original evaluations/not_performed/residuals/invalidators remain distinct, and currentness is consumer-relative.",
+    "operation_outcome": "B(op) is output/effect-evidence payload availability, not physical completion, semantic success or admission. Existing cause-tagged mapping is retained under native FOUNDATIONS Results.",
+    "classification": "Named read, render, launch and write operations are not universally classified F_D; pure finite declared predicate checks retain their narrow evidence claim. External execution and F_P meaning remain separate."
+  },
+  "unsupported": [
+    "results.conjoin: no native operator qualification",
+    "arbitrary method profiles or translations",
+    "semantic context sufficiency certification",
+    "universal F_D classification or full calculus conformance",
+    "OS sandboxing or actor/provider qualification"
+  ]
+}

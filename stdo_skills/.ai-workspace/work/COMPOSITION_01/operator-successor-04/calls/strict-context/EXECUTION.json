@@ -1,0 +1,40 @@
+{
+  "name": "strict-context",
+  "operation": "context.assemble",
+  "argv": [
+    "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+    "-B",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py",
+    "--policy",
+    "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/COMPOSITION_01/operator-successor-04/POLICY-strict.json",
+    "--policy-sha256",
+    "9ab971b25b40f756fff92813a18e5b86f023d04cc1177110a504d403f8206acb",
+    "--principal",
+    "writer",
+    "call",
+    "--request",
+    "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/COMPOSITION_01/operator-successor-04/calls/strict-context/request.json"
+  ],
+  "exit": 2,
+  "status": "refused",
+  "evidence": {
+    "id": "sha256:af837c4598d98d51e4b03b0fd5a6aa71c03753bbd32e1942b32a406b7f199136",
+    "sha256": "af837c4598d98d51e4b03b0fd5a6aa71c03753bbd32e1942b32a406b7f199136"
+  },
+  "expected": "refused",
+  "refusal": {
+    "code": "basis_missing",
+    "gaps": [
+      {
+        "detail_count": 0,
+        "diagnostics": "withheld by selected composition binding",
+        "effect_state": "completion_unknown",
+        "end_established": false,
+        "history_state": "not_established_by_refusal",
+        "private_retention": "included in operation publication"
+      }
+    ],
+    "reason": "Operation unavailable under the selected composition binding",
+    "source_refs": []
+  }
+}

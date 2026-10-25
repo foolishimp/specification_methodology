@@ -1,0 +1,23 @@
+{
+  "actor_calls_in_preparation": 0,
+  "actual_operations_in_preparation": 0,
+  "first_ready_request": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/live-review-runtime-001/context.request.json",
+  "held_values": [
+    "actual Context/Preflight/Attempt/return/expectation ArtifactRefs are absent until operations occur; no placeholder future reference is used in a runnable request"
+  ],
+  "one_step_at_a_time": [
+    "Root acquires source/policy/config, verifies scratch/actual sources, invokes context.assemble request through public CLI",
+    "Root consumes ACTUAL Context artifact; contract.preflight uses it, grant urn:a-c:grant:T008:review:001, executor claude-reviewer-expectation-001, result_key t008-review-expectation-001,observations[]",
+    "Root consumes actual Preflight, records separate exact call approval, then dispatch.start using actual Preflight only",
+    "Root observes actual Attempt, no automatic retry; captures actual raw final payload and return.check under exact contract",
+    "Freeze real earlier expectation if any; assessment ReturnContract/packet/config then Root approval, separately"
+  ],
+  "schema": "a_c.T008.review-public-sequence/1",
+  "startup": {
+    "adapter": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py",
+    "policy": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/live-review-runtime-001/executive-policy.json",
+    "policy_sha256": "36d9c95626a5473a42e9e74161b31c8fbdf99e543cb0160b321c765301178184",
+    "principal": "/root",
+    "python": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12"
+  }
+}

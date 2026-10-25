@@ -1,0 +1,62 @@
+{
+  "scope": "M1 repair affected composition and cohort regression",
+  "command": [
+    "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "tests.test_composition",
+    "tests.test_cohort_update",
+    "-v"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology/specification_methodology/v2",
+  "PYTHONPATH": "/Users/jim/src/apps/specification_methodology/specification_methodology/v2/src:/Users/jim/src/apps/specification_methodology/specification_methodology/v2/tests",
+  "source_at_start": [
+    {
+      "path": "specification_methodology/v2/src/stdo_toolchain/composition.py",
+      "sha256": "08668074e6c6bf6d8df3a598b817504b22537f41c3be15eac469956784dd31c9",
+      "bytes": 23259
+    },
+    {
+      "path": "specification_methodology/v2/src/stdo_toolchain/references.py",
+      "sha256": "b230307a0c81d9896e3d98e83c17e0aa3f6a6fcf085a33c480027446a1e01a40",
+      "bytes": 761
+    },
+    {
+      "path": "specification_methodology/v2/src/stdo_toolchain/cli.py",
+      "sha256": "1567c725e2316b17767b1f2723bae0c82692160cd168202633170ffa0db036e5",
+      "bytes": 13232
+    },
+    {
+      "path": "specification_methodology/v2/src/stdo_toolchain/cohort_update.py",
+      "sha256": "e00eff22e8938a672c48e3554ee6b194c397cc88d54046c652412283109a13af",
+      "bytes": 38674
+    },
+    {
+      "path": "specification_methodology/v2/src/stdo_toolchain/product_definition.py",
+      "sha256": "062fe9e7e81ff9422341968777234a0cf6945a4e1f7f44881b9b7c76bf7dc87f",
+      "bytes": 25844
+    },
+    {
+      "path": "specification_methodology/v2/tests/test_composition.py",
+      "sha256": "ddda261a1307b7fc3a7d4419a1c10099d4521c055920765ae8e1bfa4f40c0907",
+      "bytes": 17220
+    },
+    {
+      "path": "specification_methodology/v2/README.md",
+      "sha256": "314d411cf961dd14bd1417d01f51a741c89e592f6b32a804ad517a84b119eeb2",
+      "bytes": 9706
+    },
+    {
+      "path": "specification_methodology/v2/design/TOOLCHAIN_MANAGER.md",
+      "sha256": "35d10210c3a99db5b6c1aca5ae3bc9e42e6f469b9f433fdeeb6835da0e2e88a8",
+      "bytes": 18497
+    }
+  ],
+  "started_at": "2026-10-25T14:15:30.875122+00:00",
+  "completed_at": "2026-10-25T14:17:38.344751+00:00",
+  "seconds": 127.47325312509201,
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_actual_bytes_change_without_any_source_commit_change (tests.test_composition.CompositionTests.test_actual_bytes_change_without_any_source_commit_change) ... ok\ntest_duplicate_identity_and_malformed_target_fail_closed (tests.test_composition.CompositionTests.test_duplicate_identity_and_malformed_target_fail_closed) ... ok\ntest_exact_installed_contract_and_uninstalled_cut (tests.test_composition.CompositionTests.test_exact_installed_contract_and_uninstalled_cut) ... ok\ntest_external_schema_ref_does_not_trigger_retrieval (tests.test_composition.CompositionTests.test_external_schema_ref_does_not_trigger_retrieval) ... ok\ntest_file_selection_needs_explicit_sibling_boundary (tests.test_composition.CompositionTests.test_file_selection_needs_explicit_sibling_boundary) ... ok\ntest_fragment_inside_example_or_comment_is_not_a_document_anchor (tests.test_composition.CompositionTests.test_fragment_inside_example_or_comment_is_not_a_document_anchor) ... ok\ntest_graph_and_byte_limits_refuse (tests.test_composition.CompositionTests.test_graph_and_byte_limits_refuse) ... ok\ntest_json_pointer_and_html_fragment (tests.test_composition.CompositionTests.test_json_pointer_and_html_fragment) ... ok\ntest_local_file_uri_directory_and_markdown_anchors (tests.test_composition.CompositionTests.test_local_file_uri_directory_and_markdown_anchors) ... ok\ntest_markdown_literal_markup_cannot_satisfy_relation_fragment (tests.test_composition.CompositionTests.test_markdown_literal_markup_cannot_satisfy_relation_fragment) ... ok\ntest_missing_local_schema_anchor_is_a_reported_failure (tests.test_composition.CompositionTests.test_missing_local_schema_anchor_is_a_reported_failure) ... ok\ntest_public_cli_control_and_four_original_defects (tests.test_composition.CompositionTests.test_public_cli_control_and_four_original_defects) ... ok\ntest_real_markdown_anchors_survive_inline_literal_filter (tests.test_composition.CompositionTests.test_real_markdown_anchors_survive_inline_literal_filter) ... ok\ntest_selection_outside_explicit_boundary_refuses_before_discovery (tests.test_composition.CompositionTests.test_selection_outside_explicit_boundary_refuses_before_discovery) ... ok\ntest_shared_nested_target_and_cycle_preserve_each_edge (tests.test_composition.CompositionTests.test_shared_nested_target_and_cycle_preserve_each_edge) ... ok\ntest_special_file_is_refused_without_open (tests.test_composition.CompositionTests.test_special_file_is_refused_without_open) ... ok\ntest_symlinked_selected_file_and_root_refuse (tests.test_composition.CompositionTests.test_symlinked_selected_file_and_root_refuse) ... ok\ntest_symlinked_target_and_symlink_ancestor_refuse (tests.test_composition.CompositionTests.test_symlinked_target_and_symlink_ancestor_refuse) ... ok\ntest_target_own_schema_and_basis_are_required (tests.test_composition.CompositionTests.test_target_own_schema_and_basis_are_required) ... ok\ntest_unsupported_fragment_and_remote_uri_are_distinct (tests.test_composition.CompositionTests.test_unsupported_fragment_and_remote_uri_are_distinct) ... ok\ntest_absent_fragment_is_not_satisfied_by_document_digest (tests.test_cohort_update.CohortUpdateTests.test_absent_fragment_is_not_satisfied_by_document_digest) ... ok\ntest_absolute_upstream_symlink_refuses_even_under_virtual_prefix (tests.test_cohort_update.CohortUpdateTests.test_absolute_upstream_symlink_refuses_even_under_virtual_prefix) ... ok\ntest_acceptance_is_required_and_cannot_survive_definition_drift (tests.test_cohort_update.CohortUpdateTests.test_acceptance_is_required_and_cannot_survive_definition_drift) ... ok\ntest_admitted_escaping_and_missing_target_links_refuse (tests.test_cohort_update.CohortUpdateTests.test_admitted_escaping_and_missing_target_links_refuse) ... ok\ntest_admitted_file_directory_and_indirect_links_remain_usable (tests.test_cohort_update.CohortUpdateTests.test_admitted_file_directory_and_indirect_links_remain_usable) ... ok\ntest_basis_status_is_not_complete_cohort_readiness (tests.test_cohort_update.CohortUpdateTests.test_basis_status_is_not_complete_cohort_readiness) ... ok\ntest_changed_selection_or_tag_refuses (tests.test_cohort_update.CohortUpdateTests.test_changed_selection_or_tag_refuses) ... ok\ntest_changed_store_destination_requires_new_acceptance (tests.test_cohort_update.CohortUpdateTests.test_changed_store_destination_requires_new_acceptance) ... ok\ntest_declared_member_missing_from_exact_commit_refuses (tests.test_cohort_update.CohortUpdateTests.test_declared_member_missing_from_exact_commit_refuses) ... ok\ntest_declared_metadata_and_assets_complete_a_smaller_qualified_inventory (tests.test_cohort_update.CohortUpdateTests.test_declared_metadata_and_assets_complete_a_smaller_qualified_inventory) ... ok\ntest_document_digest_covers_distinct_reentry_fragment (tests.test_cohort_update.CohortUpdateTests.test_document_digest_covers_distinct_reentry_fragment) ... ok\ntest_exact_accepted_plan_updates_complete_selected_relation (tests.test_cohort_update.CohortUpdateTests.test_exact_accepted_plan_updates_complete_selected_relation) ... ok\ntest_existing_companion_damage_and_extra_directory_refuse (tests.test_cohort_update.CohortUpdateTests.test_existing_companion_damage_and_extra_directory_refuse) ... ok\ntest_frame_index_sources_cannot_disappear_from_rehashed_evidence (tests.test_cohort_update.CohortUpdateTests.test_frame_index_sources_cannot_disappear_from_rehashed_evidence) ... ok\ntest_install_presence_is_not_an_acceptance_change (tests.test_cohort_update.CohortUpdateTests.test_install_presence_is_not_an_acceptance_change) ... ok\ntest_missing_cohort_assets_refuses (tests.test_cohort_update.CohortUpdateTests.test_missing_cohort_assets_refuses) ... ok\ntest_missing_definition_outside_qualified_inventory_refuses (tests.test_cohort_update.CohortUpdateTests.test_missing_definition_outside_qualified_inventory_refuses) ... ok\ntest_missing_map_changed_program_and_broken_map_digest_hold (tests.test_cohort_update.CohortUpdateTests.test_missing_map_changed_program_and_broken_map_digest_hold) ... ok\ntest_missing_released_source_corpus_refuses (tests.test_cohort_update.CohortUpdateTests.test_missing_released_source_corpus_refuses) ... ok\ntest_native_route_cannot_import_an_unadmitted_subtree (tests.test_cohort_update.CohortUpdateTests.test_native_route_cannot_import_an_unadmitted_subtree) ... ok\ntest_omitted_companion_and_unrelated_locator_host_refuse (tests.test_cohort_update.CohortUpdateTests.test_omitted_companion_and_unrelated_locator_host_refuse) ... ok\ntest_partial_link_failure_rolls_back_prior_usable_consumer (tests.test_cohort_update.CohortUpdateTests.test_partial_link_failure_rolls_back_prior_usable_consumer) ... ok\ntest_real_cli_plans_applies_and_reports_held_context (tests.test_cohort_update.CohortUpdateTests.test_real_cli_plans_applies_and_reports_held_context) ... ok\ntest_regular_file_and_redirected_ancestor_refuse (tests.test_cohort_update.CohortUpdateTests.test_regular_file_and_redirected_ancestor_refuse) ... ok\ntest_removed_stale_source_observation_cannot_be_rehashed_as_ready (tests.test_cohort_update.CohortUpdateTests.test_removed_stale_source_observation_cannot_be_rehashed_as_ready) ... ok\ntest_source_drift_during_staging_preserves_bindings (tests.test_cohort_update.CohortUpdateTests.test_source_drift_during_staging_preserves_bindings) ... ok\ntest_stale_released_source_corpus_refuses (tests.test_cohort_update.CohortUpdateTests.test_stale_released_source_corpus_refuses) ... ok\ntest_stale_source_holds_before_install_or_consumer_effects (tests.test_cohort_update.CohortUpdateTests.test_stale_source_holds_before_install_or_consumer_effects) ... ok\ntest_symlink_regular_file_prefix_and_terminal_directory_syntax_refuse (tests.test_cohort_update.CohortUpdateTests.test_symlink_regular_file_prefix_and_terminal_directory_syntax_refuse) ... ok\ntest_unselected_historical_fixture_is_not_acquired_or_installed (tests.test_cohort_update.CohortUpdateTests.test_unselected_historical_fixture_is_not_acquired_or_installed) ... ok\ntest_upstream_inventory_mismatch_refuses_before_effects (tests.test_cohort_update.CohortUpdateTests.test_upstream_inventory_mismatch_refuses_before_effects) ... ok\n\n----------------------------------------------------------------------\nRan 51 tests in 127.184s\n\nOK\n"
+}

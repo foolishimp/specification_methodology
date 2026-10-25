@@ -1,0 +1,17 @@
+{
+  "activation": "T008-transport-parent-prereq-repair-001",
+  "authorized_effect": "Create only missing actor-transports parent directory and own new prerequisite evidence",
+  "exact_subject": {
+    "closed_return_sha256": "4f741d497054d4abe620d7841624f8cfecf2256f53837e04b0490837dab87fbb",
+    "manifest_sha256": "696676f32762903ce1b0f5194a3000fc44964df657eef154d14ac8a2431f43b6",
+    "plan_sha256": "583aea0fc2aa8288a7bdb9161f503f7a4bc67463b27763a4ad14630019a637a6",
+    "policy_sha256": "36d9c95626a5473a42e9e74161b31c8fbdf99e543cb0160b321c765301178184"
+  },
+  "not_authorized": [
+    "native/actor/support operations",
+    "retry/reentry",
+    "policy/claim/helper/source changes",
+    "Git/global writes"
+  ],
+  "reported_by": "/root"
+}

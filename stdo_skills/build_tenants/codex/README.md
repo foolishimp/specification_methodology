@@ -2,7 +2,11 @@
 
 This tenant packages one progressive skill, stdo-work. It targets the host mechanics documented for codex-cli 0.164.0 and the exact STDO v3.0.1-rc.1 basis. It is a construction candidate, not an accepted release or qualified host installation.
 
-Start at [SKILL.md](skills/stdo-work/SKILL.md). The [design](design/DESIGN.md) maps SK-01 through SK-12 to the algorithm, host and required proof. [Qualification](skills/stdo-work/references/qualification.md) retains every Q01–Q12 obligation. Explicit invocation is `$stdo-work`; ordinary relevant tasks use host automatic discovery. Success in one lane does not establish the other.
+Start at [SKILL.md](skills/stdo-work/SKILL.md). The [design](design/DESIGN.md) maps SK-01 through SK-13 to the algorithm, host and required proof. [Qualification](skills/stdo-work/references/qualification.md) retains every Q01–Q12 obligation. Explicit invocation is `$stdo-work`; ordinary relevant tasks use host automatic discovery. Success in one lane does not establish the other.
+
+The T-002 composition increment adds conditional dependency verification and
+trusted a_c context routing. It retains the installed 3.0.1 basis and earlier
+qualification limits; the current package inventory selects the new source cut.
 
 ## Read-only package check
 

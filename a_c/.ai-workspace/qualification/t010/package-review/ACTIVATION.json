@@ -1,0 +1,39 @@
+{
+  "actor": "/root/common_rep_package_review",
+  "at": "2026-10-20T08:17:13.868660+00:00",
+  "basis": {
+    "calculus_sha256": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+    "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "release": "stdo://releases/v2.5.1-rc.2/"
+  },
+  "forbidden": [
+    "candidate source writes",
+    "product/spec/method/profile/Git edits",
+    "native/model/provider/network/install/global config effects",
+    "private author event/reasoning/config inspection",
+    "browser policy circumvention",
+    "publication/adoption/acceptance claims"
+  ],
+  "independence": "Did not author source freeze, model, packager or oracle inputs; same provider family as some project actors, no certified provider independence; candidate packager not read before oracle recorded. Source readiness/custody are acquired as named contracts, not accepted semantic truth.",
+  "inputs": {
+    "applications/stdo-v3-common-35fb4824/SOURCE-READINESS.md": "114a4580a344daa1cf32bcbc19246ab189c26b3f50b58d47c105ae7a2b54bd1d",
+    "applications/stdo-v3-common-35fb4824/package-custody.json": "6d35a6ad6472902294b1dfdd67c4e1e752ccc1b55ea4114acf10fb7389169af7",
+    "applications/stdo-v3-common-35fb4824/source-classification.json": "20a17b4028e4c6c1dd595b23f6c5e1efa96f609a4d1e1fb6176a85c0e67f6e3e",
+    "applications/stdo-v3-common-35fb4824/source-manifest.json": "dbf32e7f99eb7228ca361ec02f44227c05e02bb6bc447d1dd38255cd3ca4a4d4",
+    "build_tenants/graphify/design/README.md": "7658c7af62b188acab50f55dcfaea10385942ea6152d2cc856080a61564b6dca",
+    "build_tenants/graphify/design/generation.md": "c7e596146596ef0929832fff73c04b5cc79bd2c4a5dcdc6f671b8782e7ed16d2",
+    "specification/requirements/README.md": "f448aef9d723814e640fd6054eacb709fea01e64c66f6ae3a93c52d1bf86c0f2",
+    "stdo_a_c.json": "b0e013e6f9dabb9d3f31dd02c1a6909e9fc6418925a8d829f3bb1c2adf3dac1d"
+  },
+  "operation": "source-first expectations; after CLOSED packager freeze, bounded read-only code inspection and meaningful scratch fixture checks; actual final bundle requires separate exact-model/review closure",
+  "role": "independent release-package/code Reviewer",
+  "subject": {
+    "package_tree": "7f2070b61c848b42b4dfb3af1e0ce53869de1aa1",
+    "scope": "a_c-stdo-v3-common-35fb4824 representation proposal",
+    "source_commit": "35fb4824a064a84df5af214a0d0e2da597c18ac6"
+  },
+  "write_grant": [
+    ".ai-workspace/qualification/t010/package-review/**",
+    "new OS temp ac-common-package-review-* only"
+  ]
+}

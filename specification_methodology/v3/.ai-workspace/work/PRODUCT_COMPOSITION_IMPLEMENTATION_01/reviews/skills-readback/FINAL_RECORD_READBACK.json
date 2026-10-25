@@ -1,0 +1,110 @@
+{
+  "candidate_sha256": "ce66285451d8cd5eba0639bb234167c29e8e74d01944cc09194499c9736e6ac2",
+  "scope": "read-only exact source/package/history and actual retained operator proof readback; no native operation rerun",
+  "operative_manifest_files": 27,
+  "provider_subset_files": 10,
+  "source_routes": 17,
+  "packages": {
+    "codex": {
+      "files": 12,
+      "inventory_sha256": "4bac63f3033d8b4c1b43fdff48dedd6d38cfe36f875d7388b0bc9be53ee4d726"
+    },
+    "claude": {
+      "files": 13,
+      "inventory_sha256": "80b04f40fb9d4e8f3531aa50f8dc78ff07d01af6ae2f38086485186282825d66"
+    }
+  },
+  "actual_owner_locator": "/reference_frame_bases/0/authority/1",
+  "same_actor_and_store": true,
+  "calls": [
+    {
+      "name": "describe",
+      "status": "ok",
+      "code": null,
+      "operation_evidence": {
+        "id": "sha256:a04f7799c0b6848b28155f9fd3d1b115b5f23927345a4fe1f5df0baa39ab3217",
+        "sha256": "a04f7799c0b6848b28155f9fd3d1b115b5f23927345a4fe1f5df0baa39ab3217"
+      },
+      "public_transport_observations": 1
+    },
+    {
+      "name": "inspect",
+      "status": "ok",
+      "code": null,
+      "operation_evidence": {
+        "id": "sha256:708ad9fa7559512ae616a4faefa13c115f961fa76836b33ac2e9fdfbcd78dd6c",
+        "sha256": "708ad9fa7559512ae616a4faefa13c115f961fa76836b33ac2e9fdfbcd78dd6c"
+      },
+      "public_transport_observations": 1
+    },
+    {
+      "name": "read-contract",
+      "status": "ok",
+      "code": null,
+      "operation_evidence": {
+        "id": "sha256:9637132a28a95738f649bb70b672be771edead941a13617352d861341e5c3704",
+        "sha256": "9637132a28a95738f649bb70b672be771edead941a13617352d861341e5c3704"
+      },
+      "public_transport_observations": 1
+    },
+    {
+      "name": "denied-outside-selection",
+      "status": "refused",
+      "code": "acquisition_denied",
+      "operation_evidence": {
+        "id": "sha256:476878c68091d51db53f1944910f5f60b91ef4e797f88f3c80197626cbe700ac",
+        "sha256": "476878c68091d51db53f1944910f5f60b91ef4e797f88f3c80197626cbe700ac"
+      },
+      "public_transport_observations": 1
+    },
+    {
+      "name": "ordinary-context",
+      "status": "ok",
+      "code": null,
+      "operation_evidence": {
+        "id": "sha256:6da19ba53d26a95116de2e4d15762b9021fa49613a57af2262e50a738d57d57e",
+        "sha256": "6da19ba53d26a95116de2e4d15762b9021fa49613a57af2262e50a738d57d57e"
+      },
+      "public_transport_observations": 1
+    },
+    {
+      "name": "strict-context",
+      "status": "refused",
+      "code": "basis_missing",
+      "operation_evidence": {
+        "id": "sha256:af837c4598d98d51e4b03b0fd5a6aa71c03753bbd32e1942b32a406b7f199136",
+        "sha256": "af837c4598d98d51e4b03b0fd5a6aa71c03753bbd32e1942b32a406b7f199136"
+      },
+      "public_transport_observations": 1
+    }
+  ],
+  "context_boundaries": {
+    "acquired_sources": 9,
+    "activation_identity": {
+      "id": "urn:stdo-skills:T002:read-context:2",
+      "sha256": "b1138bd1e10aa936e3a396c2f504cf718e379168ab58252cf3d9339b5f0c03bf"
+    },
+    "declared_input_provenance_complete": false,
+    "late_acquisition": [],
+    "projection_limits": "declared selected governing closure only",
+    "semantic_sufficiency": "not assessed"
+  },
+  "protected_original_history_members_unchanged": 36,
+  "historical_archive_members": 88,
+  "manager": [
+    {
+      "case": "selected-repository-boundary",
+      "valid": true,
+      "edge_valid": true,
+      "authority_and_semantic_adequacy": "not evaluated"
+    },
+    {
+      "case": "too-narrow-boundary",
+      "valid": false,
+      "edge_valid": false,
+      "authority_and_semantic_adequacy": "not evaluated"
+    }
+  ],
+  "manager_environment_limit": "PYTHONPATH source selection reported by Writer through Executive; argv/results retained, environment not frozen; no retrospective environment record created",
+  "errors": []
+}

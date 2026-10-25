@@ -1,0 +1,215 @@
+{
+  "scope": "Independent isolated public CLI probe of automatically loaded review independence policy; no actor dispatched",
+  "candidate_index_sha256": "97dbbcc2685aeb43cf89e9b10252a071e3ce89ad4dc85dd093cd8387158d2bc2",
+  "marker": "REVIEW-DENIED-POLICY-CONTENT-7e37",
+  "excluded_source": {
+    "engine": "workspace-regular-file",
+    "root": "workspace",
+    "path": "inputs/private-independence.json",
+    "object": null,
+    "sha256": "cbb2c01e02ef79e22a5e5107bc0e902417d437d5aa6ea137d55eed49b92f361a",
+    "selector": null
+  },
+  "selected_binding": {
+    "engagement": "composition-case",
+    "purpose": "reviewer-task",
+    "route": [],
+    "operations": [
+      "composition.inspect",
+      "context.assemble",
+      "contract.preflight",
+      "dispatch.cancel",
+      "dispatch.observe",
+      "dispatch.start",
+      "events.wait",
+      "evidence.read",
+      "graph.project",
+      "records.find",
+      "records.read",
+      "return.capture",
+      "return.check",
+      "review.prepare",
+      "source.read",
+      "tools.describe",
+      "work.project",
+      "workspace.observe"
+    ],
+    "allow": [
+      "law",
+      "definition",
+      "owner",
+      "return",
+      "profile",
+      "mechanism",
+      "data",
+      "model",
+      "hidden",
+      "summary",
+      "private-policy"
+    ],
+    "exclude": [
+      "private-policy"
+    ],
+    "exports": [],
+    "require_complete": true,
+    "clean_room": false,
+    "host_isolation": false,
+    "output": {
+      "complete": true,
+      "sources": []
+    }
+  },
+  "direct_source_response": {
+    "evidence": {
+      "id": "sha256:7031feae25d67c6770d481362bca4533b99c0653cc8c5781d1783888065940e0",
+      "sha256": "7031feae25d67c6770d481362bca4533b99c0653cc8c5781d1783888065940e0"
+    },
+    "id": "composition-1",
+    "operation": "source.read",
+    "operation_outcome": {
+      "cause": "acquisition_denied",
+      "core_value": "out_of_frame",
+      "evidence": [],
+      "limits": [
+        "output availability only; no semantic acceptance"
+      ],
+      "predicate": "B(source.read): declared exact output/effect-evidence payload availability on the requested basis",
+      "source_parent": {
+        "clause": "results",
+        "member": "FOUNDATIONS.md",
+        "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+      },
+      "value": "refused(authority)"
+    },
+    "refusal": {
+      "code": "acquisition_denied",
+      "gaps": [],
+      "reason": "Receiving information policy excludes this provenance",
+      "source_refs": []
+    },
+    "result": null,
+    "schema": "a_c.fd-support.response/1",
+    "status": "refused"
+  },
+  "review_request_arguments": {
+    "phase": "expectation",
+    "claim": {
+      "engine": "workspace-regular-file",
+      "root": "workspace",
+      "path": "inputs/law.txt",
+      "object": null,
+      "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2",
+      "selector": null
+    },
+    "sources": [],
+    "candidate": null,
+    "proof": [],
+    "comparison": null,
+    "expectations": null,
+    "expectation_body": null
+  },
+  "review_response": {
+    "evidence": {
+      "id": "sha256:797271dac426eca6391dcb835006859fffd9530ba60ff87ca9c07388310f5a97",
+      "sha256": "797271dac426eca6391dcb835006859fffd9530ba60ff87ca9c07388310f5a97"
+    },
+    "id": "composition-2",
+    "operation": "review.prepare",
+    "operation_outcome": {
+      "cause": "declared output available",
+      "core_value": "satisfied",
+      "evidence": [],
+      "limits": [
+        "output availability only; no semantic acceptance"
+      ],
+      "predicate": "B(review.prepare): declared exact output/effect-evidence payload availability on the requested basis",
+      "source_parent": {
+        "clause": "results",
+        "member": "FOUNDATIONS.md",
+        "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+      },
+      "value": "returned"
+    },
+    "refusal": null,
+    "result": {
+      "artifact": null,
+      "value": {
+        "acquired": [
+          {
+            "acquisition": {},
+            "content_base64": "b25lCnR3bwp0aHJlZQo=",
+            "coordinates": null,
+            "parent_sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2",
+            "selected_sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2",
+            "size_bytes": 14,
+            "source": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/law.txt",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+            }
+          }
+        ],
+        "candidate_population": [],
+        "claim": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "inputs/law.txt",
+          "root": "workspace",
+          "selector": null,
+          "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+        },
+        "comparison": null,
+        "expectations": null,
+        "exposure": [],
+        "gaps": [
+          "Opaque/missing ReviewClaim candidate population remains unknown; no inferred prose mapping"
+        ],
+        "independence": {
+          "external_exposure": "unknown",
+          "governing_conditions": {
+            "allowed_family_pairs": [
+              [
+                "A",
+                "B"
+              ]
+            ],
+            "authority_source": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/owner.json",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "a7f231ada2866eac316a5731b913682da52b2dbe30df5171784fe4e62be5ca9c"
+            },
+            "claim_scope": "REVIEW-DENIED-POLICY-CONTENT-7e37",
+            "id": "private-independence",
+            "mechanical_sharing": [],
+            "predicates": [],
+            "require_non_author": true,
+            "source_first": true
+          },
+          "selected_policy": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "inputs/private-independence.json",
+            "root": "workspace",
+            "selector": null,
+            "sha256": "cbb2c01e02ef79e22a5e5107bc0e902417d437d5aa6ea137d55eed49b92f361a"
+          },
+          "semantic_independence": "not certified"
+        },
+        "limits": [
+          "acquisition/diff/exposure facts only; no severity, disposition or mental-independence certificate"
+        ],
+        "phase": "expectation",
+        "population_complete": false
+      }
+    },
+    "schema": "a_c.fd-support.response/1",
+    "status": "ok"
+  },
+  "review_response_contains_excluded_content": true
+}

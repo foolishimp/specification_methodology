@@ -14,7 +14,10 @@ Under the [standalone successor requirement](requirements/README.md#standalone-s
 
 Each rule has one owning section, under [Method Structure](#method-structure) and the [single ownership requirement](requirements/README.md#single-ownership-requirement).
 
-The current bounded common successor work is the
+The currently selected source increment is
+[recursive Product composition](requirements/PRODUCT_COMPOSITION.md), constructed
+over the published 3.0.1 baseline. It changes no installed basis and selects no
+successor version or release. The preceding bounded common successor work is the
 [selected 3.0.1 amendment](requirements/STDO_3_0_1.md) under T-004, targeting
 `3.0.1-rc.1` from the exact native `3.0.0-rc.1` predecessor it names. That
 amendment owns the changed deterministic-kind obligation and compatibility

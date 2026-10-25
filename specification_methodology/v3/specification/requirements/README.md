@@ -7,6 +7,7 @@ The common requirements bind both build tenants' candidates. This file holds the
 - [ASSURANCE](ASSURANCE.md): preservation, assertion and observation obligations, mutual assurance, provenance, risk and targeted reassessment through construction and change.
 - [A_C_DEPENDENCY](A_C_DEPENDENCY.md): the exact a_c theory and checker used for construction and checking, and the limits of what the checker proves. The released encoding basis follows its separate owner decision.
 - [PREDECESSOR_CLAIMS](PREDECESSOR_CLAIMS.md): the common claim inventory under STDO-UP-015. Each tenant's frontier names its proposed dispositions and required carrying loci; its ticket supplies acceptance standing.
+- [PRODUCT_COMPOSITION](PRODUCT_COMPOSITION.md): selected recursive composition source increment, its authority/context rules, concrete consumers and bounded representation.
 - [STDO_3_0_1](STDO_3_0_1.md): the selected bounded amendment for the common successor, its exact native predecessor, operation-profile migration and preserved acceptance obligations.
 
 The working foundation statements in PRINCIPLES are content under evaluation, not installed law. The installed 2.5.1-rc.2 release is the law the builders work under, and it is the predecessor the new release evolves from.

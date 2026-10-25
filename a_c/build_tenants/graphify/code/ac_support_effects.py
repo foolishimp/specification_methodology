@@ -25,6 +25,7 @@ from typing import Iterator, cast
 import uuid
 
 import ac_support_core as c
+import ac_support_composition as composition
 
 __all__ = ["EvidenceStore", "execute_effect", "persist_outcome", "supervise"]
 
@@ -939,7 +940,7 @@ def _verify_pin(pin: c.Object) -> Path:
 def _supervisor_binding(runtime: c.Runtime, ref: c.Object) -> c.Object:
     directory = Path(__file__).resolve().parent
     python = _pin(Path(sys.executable))
-    modules: list[c.JSON] = [_pin(directory / name) for name in ("ac_support.py", "ac_support_core.py", "ac_support_effects.py")]
+    modules: list[c.JSON] = [_pin(directory / name) for name in ("ac_support.py", "ac_support_core.py", "ac_support_effects.py", "ac_support_composition.py")]
     entry = directory / "ac_support.py"
     argv: list[c.JSON] = [python["path"], str(entry), "_supervise", "--policy", str(runtime.policy_path), "--policy-sha256", runtime.policy_sha256, "--principal", runtime.principal_id, "--attempt-id", ref["id"], "--attempt-sha256", ref["sha256"]]
     return {"python": python, "modules": modules, "argv_template": "fixed-private-entry-with-anchor", "startup": {"python": str(Path(sys.executable)), "policy": str(runtime.policy_path), "policy_sha256": runtime.policy_sha256, "principal": runtime.principal_id}, "argv": argv}
@@ -949,8 +950,8 @@ def _verify_supervisor(binding: c.Object, runtime: c.Runtime, ref: c.Object) -> 
     python = _verify_pin(c.as_object(binding["python"]))
     directory = Path(__file__).resolve().parent
     pins = [c.as_object(item) for item in c.as_list(binding["modules"])]
-    expected = {str((directory / name).resolve()) for name in ("ac_support.py", "ac_support_core.py", "ac_support_effects.py")}
-    if {c.text(item["path"]) for item in pins} != expected or len(pins) != 3:
+    expected = {str((directory / name).resolve()) for name in ("ac_support.py", "ac_support_core.py", "ac_support_effects.py", "ac_support_composition.py")}
+    if {c.text(item["path"]) for item in pins} != expected or len(pins) != 4:
         raise c.SupportError("dependency_changed", "Supervisor module population differs from the sealed shipped entry", [], [])
     for item in pins:
         _verify_pin(item)
@@ -1061,6 +1062,7 @@ def _dispatch(runtime: c.Runtime, store: EvidenceStore, request: c.Object, key: 
     context_ref = _ref(receipt["context"])
     context = c.as_object(c.load_artifact(runtime, context_ref, "context")["payload"])
     packet = c.as_object(context["packet"])
+    composition.context(runtime, context, target)
     executor_id = c.text(receipt["executor_id"])
     executor = _executor(runtime, executor_id)
     sink_id = grant["notification_sink"]
@@ -1085,6 +1087,7 @@ def _dispatch(runtime: c.Runtime, store: EvidenceStore, request: c.Object, key: 
                 raise c.SupportError("effect_unreconciled", "Retry does not bind an existing predecessor/reconciliation", [], [])
             _reconcile(runtime, predecessor, _ref(reconciliation), grant, context)
         with store._lock("scope:" + _product(runtime)):
+            composition.context(runtime, context, target)
             _fresh(runtime, store, request, c.as_object(receipt["recheck"]))
             # Seal own-code/startup pins before the immutable anchor exists.
             # Anchor arguments are a fixed template, instantiated after hashing.
@@ -1122,6 +1125,7 @@ def execute_effect(runtime: c.Runtime, request: c.Object, plan: c.EffectPlan | N
     request = c.validate_request(request)
     operation = c.text(request["operation"])
     c.require_operation(runtime, operation)
+    composition.before(runtime, request)
     _policy_current(runtime)
     if operation not in ("contract.preflight", "dispatch.start", "dispatch.observe", "dispatch.cancel", "events.wait", "work.write"):
         raise c.SupportError("unsupported_contract", "Operation is not a named effect entry", [operation], [])

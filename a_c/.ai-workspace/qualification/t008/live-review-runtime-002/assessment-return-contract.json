@@ -1,0 +1,122 @@
+{
+  "authority_source": {
+    "engine": "workspace-regular-file",
+    "object": null,
+    "path": ".ai-workspace/qualification/t008/live-binding-001/TASK.md",
+    "root": "product",
+    "selector": null,
+    "sha256": "6d777ece58832ec57185f47cbe69f714222329e600b3a190acac63d7d744fff2"
+  },
+  "carrier": "a_c.fd-support.closed-return/1",
+  "id": "urn:a-c:T008:review-assessment-return:001",
+  "output_slot": "final_stdout_object",
+  "proof": {
+    "claim": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "review-claim.json",
+      "root": "runtime",
+      "selector": null,
+      "sha256": "5c894a92550f981cb564a8d36882255e7fcb0a295ec1f0eafeac54fc209774db"
+    },
+    "comparison": null,
+    "expectations": {
+      "id": "sha256:4387cefa103592b5a76c96d288da403f9211bc3107843bc8dbfa63c501653f61",
+      "sha256": "4387cefa103592b5a76c96d288da403f9211bc3107843bc8dbfa63c501653f61"
+    },
+    "independence_policy": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "independence-policy.json",
+      "root": "runtime",
+      "selector": null,
+      "sha256": "43e6746314e078ce7627bbd4ff7ad2c1614ce0cc286bf0dff9847712f155e9e8"
+    },
+    "predicate_ids": [],
+    "proof_sources": [
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": ".ai-workspace/qualification/t008/interfaces/integration-002/RESULTS.json",
+        "root": "product",
+        "selector": null,
+        "sha256": "d7d9eb82950010e9cab09e5df68587b4ff21223618f6b1f86e0f8da1dbb3095b"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": ".ai-workspace/qualification/t008/interfaces/integration-002/OPERATION_SCENARIO_MAP.json",
+        "root": "product",
+        "selector": null,
+        "sha256": "8782c5528c757325ee95c3ffe12ef7663f7654d6e4a455daff6435f6320df4a2"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": ".ai-workspace/qualification/t008/interfaces/integration-002/PUBLIC_RETRY_PROOF_INDEX.json",
+        "root": "product",
+        "selector": null,
+        "sha256": "dd67978f25be6ae276cb9533f61e8fecaa4608a95e5527ead5a5a4075f77b474"
+      }
+    ]
+  },
+  "required_evaluations": [
+    {
+      "id": "source-derived-expectations",
+      "predicate": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "review-evaluation.md",
+        "root": "runtime",
+        "selector": null,
+        "sha256": "a53828d226ae4c74eed8d0c38b84f1902457ea80b82dfc6c9a4f3472fdaa2b8b"
+      }
+    },
+    {
+      "id": "design-conservation",
+      "predicate": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "review-evaluation.md",
+        "root": "runtime",
+        "selector": null,
+        "sha256": "a53828d226ae4c74eed8d0c38b84f1902457ea80b82dfc6c9a4f3472fdaa2b8b"
+      }
+    },
+    {
+      "id": "implementation-conservation",
+      "predicate": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "review-evaluation.md",
+        "root": "runtime",
+        "selector": null,
+        "sha256": "a53828d226ae4c74eed8d0c38b84f1902457ea80b82dfc6c9a4f3472fdaa2b8b"
+      }
+    },
+    {
+      "id": "guide-task-criteria",
+      "predicate": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "review-evaluation.md",
+        "root": "runtime",
+        "selector": null,
+        "sha256": "a53828d226ae4c74eed8d0c38b84f1902457ea80b82dfc6c9a4f3472fdaa2b8b"
+      }
+    },
+    {
+      "id": "public-use-qualification",
+      "predicate": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "review-evaluation.md",
+        "root": "runtime",
+        "selector": null,
+        "sha256": "a53828d226ae4c74eed8d0c38b84f1902457ea80b82dfc6c9a4f3472fdaa2b8b"
+      }
+    }
+  ],
+  "role": "Reviewer",
+  "schema": "a_c.fd-support.return-contract/1"
+}

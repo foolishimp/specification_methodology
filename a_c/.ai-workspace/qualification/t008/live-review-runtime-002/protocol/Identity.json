@@ -1,0 +1,16 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "$ref": "#/$defs/Id"
+    },
+    "sha256": {
+      "$ref": "#/$defs/Sha256"
+    }
+  },
+  "required": [
+    "id",
+    "sha256"
+  ],
+  "type": "object"
+}

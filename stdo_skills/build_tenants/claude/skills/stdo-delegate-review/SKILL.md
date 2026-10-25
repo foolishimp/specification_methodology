@@ -25,6 +25,15 @@ A worker returns the exact candidate, the performed and the not-performed
 evaluations, the effects, the residuals, and the invalidators — not a fluent
 summary.
 
+## Composition at handoff or re-entry (SK-13)
+
+Apply the [composition route](../stdo-tool-operations/references/composition.md)
+when the task crosses Products or requires a controlled view. Bind the child's
+actual actor/purpose/route rather than forwarding the parent's accumulated view.
+Inspect changed grants/declarations and preserve previous exposure, currentness
+and unresolved obligations. A wider Reviewer inspection does not authorize Worker
+disclosure; neither deletion nor narrower permissions unexpose an actor.
+
 ## Independent review (SK-07, Q05, Q09)
 
 When a change requires independent review:

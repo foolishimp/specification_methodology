@@ -1,0 +1,5 @@
+# Successor002 mechanical integration preparation
+
+CLOSED_SUBJECT.json intentionally does not exist: the runners refuse execution until Root supplies the exact closed successor Core/HOW/T008 source map and execution go. Prepared commands reuse the original interface/helper suite, strict joined nine-file mypy with ordinary imported code, full tenant suite with the actual pinned upstream checkout, separate upstream nine-check trial and documented ordinary CLI/MCP demo. No package installation or host configuration.
+
+All execution uses new evidence directories and isolated outside-repository cache/temp paths. Preserve raw failures and source before/after hashes. The operation/scenario map must retain original-cut qualification as historical, identify the repaired actual public retry/discriminator proof and report only executed successor coverage. No old fixture manufacture or pass count becomes new source acceptance; no implicit semantic review of all4644 generated proof members. No provider or production support operation is part of these fixture checks.

@@ -1,0 +1,82 @@
+{
+  "claim": "typed structural references only",
+  "family": "objects",
+  "parent": {
+    "id": "urn:a-c:generation:0657852b6fd1fa48457c3f7d:model:2e6f0d59737b5bca00691b60",
+    "profile": "a_c.graphify.model/1",
+    "sha256": "691c4ab0d0993312a31e7e2371070ea4758fdf74b32862ff4d5a32d05af79fbf"
+  },
+  "record": {
+    "basis": "urn:a-c:generation:0657852b6fd1fa48457c3f7d:basis",
+    "context": "urn:a-c:generation:0657852b6fd1fa48457c3f7d:context:source-first-proposal",
+    "id": "urn:a-c:generation:0657852b6fd1fa48457c3f7d:record:5fec0f21265016ca449d4389511dce49",
+    "owner": "urn:a-c:generation:0657852b6fd1fa48457c3f7d:actor:f-p-author",
+    "scope": [
+      "urn:a-c:generation:0657852b6fd1fa48457c3f7d:scope:source-corpus"
+    ],
+    "sort": "urn:a-c:generation:0657852b6fd1fa48457c3f7d:sort:authored-concept",
+    "value": {
+      "conditions": [],
+      "definition": "ACTIVATION declares itself Tier 1 owner of bounded work: steps and their transitions, intake, execution unit, admission, applicability/exclusion, output, configuration and delegation; context construction, size/fit/acquisition/activation/evaluation/staleness; refined results and disposition; totality, refinement, hard stops, licensing and approximation; work state/restart/accounts; cost, proportionality and resource limits; and closed results, invalidation and reuse. It uses, without redefining, FOUNDATIONS objects and core results and REFERENCE_FRAME frame objects and activate outcomes.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 25,
+          "path": "standards/ACTIVATION.md",
+          "quote": "It uses\nthe objects of [FOUNDATIONS §2](FOUNDATIONS.md#2-ontology), the core result\nalgebra of [FOUNDATIONS §4 Results](FOUNDATIONS.md#results), and the frame\nobject and the outcomes of `activate` of\n[REFERENCE_FRAME](REFERENCE_FRAME.md) (§5). It defines the step-level\nconcepts it introduces, among them the current state, the destination,\nthe transition, the configuration, the execution unit, acquisition, the\nrewrite step, the licensing law, the adequacy relation, the work state,\nthe actor's account, progress and churn, proportionality and the closed\nresult, and refines the\ncore for admission, activation and steps (§3); it redefines nothing those\nmembers own.",
+          "section": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION",
+          "start_line": 14
+        }
+      ],
+      "label": "ACTIVATION standard"
+    }
+  },
+  "references": [
+    {
+      "domain": "urn:a-c:generation:0657852b6fd1fa48457c3f7d:reference-domain:declared",
+      "path": [
+        "basis"
+      ],
+      "target": "urn:a-c:generation:0657852b6fd1fa48457c3f7d:basis"
+    },
+    {
+      "domain": "urn:a-c:generation:0657852b6fd1fa48457c3f7d:reference-domain:declared",
+      "path": [
+        "context"
+      ],
+      "target": "urn:a-c:generation:0657852b6fd1fa48457c3f7d:context:source-first-proposal"
+    },
+    {
+      "domain": "urn:a-c:generation:0657852b6fd1fa48457c3f7d:reference-domain:declared",
+      "path": [
+        "owner"
+      ],
+      "target": "urn:a-c:generation:0657852b6fd1fa48457c3f7d:actor:f-p-author"
+    },
+    {
+      "domain": "urn:a-c:generation:0657852b6fd1fa48457c3f7d:reference-domain:declared",
+      "path": [
+        "scope",
+        "0"
+      ],
+      "target": "urn:a-c:generation:0657852b6fd1fa48457c3f7d:scope:source-corpus"
+    },
+    {
+      "domain": "urn:a-c:generation:0657852b6fd1fa48457c3f7d:reference-domain:declared",
+      "path": [
+        "sort"
+      ],
+      "target": "urn:a-c:generation:0657852b6fd1fa48457c3f7d:sort:authored-concept"
+    },
+    {
+      "domain": "urn:a-c:generation:0657852b6fd1fa48457c3f7d:reference-domain:declared",
+      "path": [
+        "value",
+        "grounding",
+        "0",
+        "section"
+      ],
+      "target": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION"
+    }
+  ]
+}

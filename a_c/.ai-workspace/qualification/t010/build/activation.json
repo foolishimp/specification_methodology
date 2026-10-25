@@ -1,0 +1,84 @@
+{
+  "actor": "/root/common_rep_build_plan",
+  "basis": {
+    "bootstrap": "f7bec3f86d9f24d1fb22acc553ade2eb0861105ec4cd2f1afa7290cc85c5b61a",
+    "calculus": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+    "manifest": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "product_definition": "b0e013e6f9dabb9d3f31dd02c1a6909e9fc6418925a8d829f3bb1c2adf3dac1d"
+  },
+  "claims": "Application preparation/creation only. No semantic acceptance, release, installation, adoption, partial final model or HTML packaging claim.",
+  "created_at": "2026-10-20T07:58:29.687606+00:00",
+  "head": "bfe228511415d346459523cec44e7e8157e2991a",
+  "initial_fp_limit": {
+    "calls": 2,
+    "effort": "high",
+    "jobs": 2,
+    "model": "gpt-6-astra",
+    "retry_or_repair_authority": false,
+    "selection": "first two frozen planned chunks",
+    "timeout_seconds": 1200
+  },
+  "installed_builder": "stdo://releases/v2.5.1-rc.2/",
+  "outcome": "Freeze exact reviewed generation implementation and, after Root source-closed signal, prepare/discover common source representation and execute first two initial F_P author chunks only.",
+  "owner_instruction": "we have a final spec method build tenant i think under common, i want you to build the representation for that and pepare it for release",
+  "parent_grant": "Root Worker activation received 2026-10-20; first batch two calls only after source-closed signal.",
+  "profile": "ac.common.application.worker-activation/1",
+  "represented_package_tree": "7f2070b61c848b42b4dfb3af1e0ce53869de1aa1",
+  "represented_subject_revision": "35fb4824a064a84df5af214a0d0e2da597c18ac6",
+  "required_source_preimages": {
+    "build_tenants/graphify/code/ac_generate.py": {
+      "bytes": 79851,
+      "sha256": "fcb946e180ba8a30ecdfdb9e53044cd142d9bd450464c186dfbbe90e9da5ec93"
+    },
+    "build_tenants/graphify/code/ac_graph.py": {
+      "bytes": 49166,
+      "sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667"
+    },
+    "build_tenants/graphify/code/ac_grounding.py": {
+      "bytes": 22857,
+      "sha256": "f850e7ceecd945455891e6cc941fc3a86c943ed27bbe74d86b0248169d9cf682"
+    },
+    "build_tenants/graphify/code/ac_repair.py": {
+      "bytes": 36708,
+      "sha256": "5be5e738f12006dcb17066ccfb60d22e65e5929a8a9a96d52ee5c0a19efda928"
+    },
+    "build_tenants/graphify/code/generation/author.schema.json": {
+      "bytes": 11148,
+      "sha256": "6a9ecd905c5fe6d9cfa6cf35bf7945fb57833e43d87cc95e5ceb25efeb3dca87"
+    },
+    "build_tenants/graphify/code/generation/author.txt": {
+      "bytes": 4240,
+      "sha256": "11f1fcf1e9a4da5531737639fcfe64dfbfcb4c57026ad9d20b2f8a0a0e8bacdc"
+    },
+    "build_tenants/graphify/code/generation/extraction.schema.json": {
+      "bytes": 4818,
+      "sha256": "30f3dace4caad72b9b53edf5f208a8688da271e249b30eb1080ac3e5e37382cd"
+    },
+    "build_tenants/graphify/code/generation/isolation.txt": {
+      "bytes": 696,
+      "sha256": "3bf712063d1cb959d5c7c1eab258368eac8cbe6f4351c2dc745b0552f77f73e1"
+    },
+    "build_tenants/graphify/code/generation/requirements.txt": {
+      "bytes": 214,
+      "sha256": "233c1d0d4946525f9539289ad957c49c73491391cb0e3f52e574925e99bb93c2"
+    }
+  },
+  "reserved_outside_grant": [
+    "source/ and intake manifests/custody/T010 owned by source Writer",
+    "existing code/spec/design/profile/studies/common candidate/Git/global config"
+  ],
+  "role": "Worker",
+  "semantic_selection": "58 files:49 standards owner/schema/template and nine plugin Markdown;81 package members retained in source custody",
+  "source_signal_received": false,
+  "status_before_records": 53500,
+  "status_before_sha256": "5019950de0f6d2273492b17e7b0a0d8d965dfebeb1afdf7a8d220e8d276b8784",
+  "triage": "new application using existing HOW; no WHAT, method, profile, Product composition or builder change",
+  "write_territory": [
+    "applications/stdo-v3-common-35fb4824/build/**",
+    "applications/stdo-v3-common-35fb4824/run/**",
+    "applications/stdo-v3-common-35fb4824/build_common.py",
+    "applications/stdo-v3-common-35fb4824/BUILD.md",
+    ".ai-workspace/qualification/t010/build/**",
+    "own new OS temp prefix ac-common-build-**"
+  ]
+}

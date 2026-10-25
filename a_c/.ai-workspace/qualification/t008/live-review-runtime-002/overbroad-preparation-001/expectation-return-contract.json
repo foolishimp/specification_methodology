@@ -1,0 +1,94 @@
+{
+  "authority_source": {
+    "engine": "workspace-regular-file",
+    "object": null,
+    "path": ".ai-workspace/qualification/t008/live-binding-001/TASK.md",
+    "root": "product",
+    "selector": null,
+    "sha256": "6d777ece58832ec57185f47cbe69f714222329e600b3a190acac63d7d744fff2"
+  },
+  "carrier": "a_c.fd-support.closed-return/1",
+  "id": "urn:a-c:T008:review-expectation-return:002",
+  "output_slot": "final_stdout_object",
+  "proof": {
+    "claim": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "review-claim.json",
+      "root": "runtime",
+      "selector": null,
+      "sha256": "add30fdcb998528fbca4cbd5406163a214b58ad788619220cf4ae6ad547176de"
+    },
+    "comparison": null,
+    "expectations": null,
+    "independence_policy": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "independence-policy.json",
+      "root": "runtime",
+      "selector": null,
+      "sha256": "dea9d02c8885f30f7367b7802b28cfadaa89ec04bdaa54417e56ed3d6beca0f7"
+    },
+    "predicate_ids": [],
+    "proof_sources": []
+  },
+  "required_evaluations": [
+    {
+      "id": "source-derived-expectations",
+      "predicate": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "review-evaluation.md",
+        "root": "runtime",
+        "selector": null,
+        "sha256": "a53828d226ae4c74eed8d0c38b84f1902457ea80b82dfc6c9a4f3472fdaa2b8b"
+      }
+    },
+    {
+      "id": "design-conservation",
+      "predicate": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "review-evaluation.md",
+        "root": "runtime",
+        "selector": null,
+        "sha256": "a53828d226ae4c74eed8d0c38b84f1902457ea80b82dfc6c9a4f3472fdaa2b8b"
+      }
+    },
+    {
+      "id": "implementation-conservation",
+      "predicate": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "review-evaluation.md",
+        "root": "runtime",
+        "selector": null,
+        "sha256": "a53828d226ae4c74eed8d0c38b84f1902457ea80b82dfc6c9a4f3472fdaa2b8b"
+      }
+    },
+    {
+      "id": "guide-task-criteria",
+      "predicate": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "review-evaluation.md",
+        "root": "runtime",
+        "selector": null,
+        "sha256": "a53828d226ae4c74eed8d0c38b84f1902457ea80b82dfc6c9a4f3472fdaa2b8b"
+      }
+    },
+    {
+      "id": "public-use-qualification",
+      "predicate": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "review-evaluation.md",
+        "root": "runtime",
+        "selector": null,
+        "sha256": "a53828d226ae4c74eed8d0c38b84f1902457ea80b82dfc6c9a4f3472fdaa2b8b"
+      }
+    }
+  ],
+  "role": "Reviewer",
+  "schema": "a_c.fd-support.return-contract/1"
+}

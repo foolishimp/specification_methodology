@@ -1,0 +1,567 @@
+{
+  "F1": {
+    "cases": [
+      {
+        "actual": {
+          "basis": {
+            "method_profile": {
+              "id": "urn:a-c:fd-support:method:claude-rc9:executive:1",
+              "sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+            },
+            "observations": []
+          },
+          "core_value": "satisfied",
+          "domain_outcome": "decision(holds)",
+          "evidence": [
+            {
+              "id": "sha256:7e55c1e7e8cf14d22f0f565ef32f099b591bbbb67ec0306862b13bb73b81d564",
+              "sha256": "7e55c1e7e8cf14d22f0f565ef32f099b591bbbb67ec0306862b13bb73b81d564"
+            },
+            {
+              "id": "sha256:6e93fa9cb0b9cc783a3349ecaa455b6664e0be5d64f279792e8519994f973b8f",
+              "sha256": "6e93fa9cb0b9cc783a3349ecaa455b6664e0be5d64f279792e8519994f973b8f"
+            }
+          ],
+          "limits": [
+            "exact externally qualified declared conjunction only; no authority transfer"
+          ],
+          "predicate": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "inputs/law.txt",
+            "root": "workspace",
+            "selector": null,
+            "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+          },
+          "subject": {
+            "id": "urn:test:subject",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        },
+        "applicable": 2,
+        "constraint_failures": 0,
+        "expected_source_value": "falsified",
+        "known_failures": 1,
+        "planned_gaps": [],
+        "uncovered": [],
+        "variant": "required-counterexample-coverage-empty"
+      },
+      {
+        "actual": {
+          "basis": {
+            "method_profile": {
+              "id": "urn:a-c:fd-support:method:claude-rc9:executive:1",
+              "sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+            },
+            "observations": []
+          },
+          "core_value": "falsified",
+          "domain_outcome": "decision(fails)",
+          "evidence": [
+            {
+              "id": "sha256:7e55c1e7e8cf14d22f0f565ef32f099b591bbbb67ec0306862b13bb73b81d564",
+              "sha256": "7e55c1e7e8cf14d22f0f565ef32f099b591bbbb67ec0306862b13bb73b81d564"
+            },
+            {
+              "id": "sha256:6e93fa9cb0b9cc783a3349ecaa455b6664e0be5d64f279792e8519994f973b8f",
+              "sha256": "6e93fa9cb0b9cc783a3349ecaa455b6664e0be5d64f279792e8519994f973b8f"
+            }
+          ],
+          "limits": [
+            "exact externally qualified declared conjunction only; no authority transfer"
+          ],
+          "predicate": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "inputs/law.txt",
+            "root": "workspace",
+            "selector": null,
+            "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+          },
+          "subject": {
+            "id": "urn:test:subject",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        },
+        "applicable": 2,
+        "constraint_failures": 1,
+        "expected_source_value": "falsified",
+        "known_failures": 1,
+        "planned_gaps": [],
+        "uncovered": [],
+        "variant": "required-counterexample-covered-control"
+      },
+      {
+        "actual": {
+          "basis": {
+            "method_profile": {
+              "id": "urn:a-c:fd-support:method:claude-rc9:executive:1",
+              "sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+            },
+            "observations": []
+          },
+          "core_value": "satisfied",
+          "domain_outcome": "decision(holds)",
+          "evidence": [
+            {
+              "id": "sha256:7e55c1e7e8cf14d22f0f565ef32f099b591bbbb67ec0306862b13bb73b81d564",
+              "sha256": "7e55c1e7e8cf14d22f0f565ef32f099b591bbbb67ec0306862b13bb73b81d564"
+            },
+            {
+              "id": "sha256:18785e4f2c768f82dd728d83cfb1142516cd5309e3093d7e816d877b1f5d844c",
+              "sha256": "18785e4f2c768f82dd728d83cfb1142516cd5309e3093d7e816d877b1f5d844c"
+            }
+          ],
+          "limits": [
+            "exact externally qualified declared conjunction only; no authority transfer"
+          ],
+          "predicate": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "inputs/law.txt",
+            "root": "workspace",
+            "selector": null,
+            "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+          },
+          "subject": {
+            "id": "urn:test:subject",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        },
+        "applicable": 2,
+        "constraint_failures": 0,
+        "expected_source_value": "satisfied",
+        "known_failures": 1,
+        "planned_gaps": [],
+        "uncovered": [],
+        "variant": "unrelated-optional-failure-control"
+      }
+    ],
+    "fixture": "fixtures/F1-conjunction",
+    "qualification_certificate_authored": false,
+    "scope": "Actual public Context/preflight/fixture dispatch/return.capture authenticates controlled contributor transport. The final conjoin fold is an explicit internal seam with only _qualified_operator stubbed; no real semantic/operator qualification or public results.conjoin claim.",
+    "scripted_returns_are_F_P_semantic_assessments": false
+  },
+  "F2": [
+    {
+      "admission_status": "ok",
+      "current_sha256": "4b02df76f121d58e5b3b38f2aafe4bb8a03dbecbeb946a033fe0f0b7a3e67da1",
+      "direct_original_source_read": "ok",
+      "direct_refusal": null,
+      "dispatch_status": "ok",
+      "effect_count": "1",
+      "fixture": "fixtures/F2-argument-source-unchanged",
+      "included_in_preflight_recheck": false,
+      "kind": "argument-source",
+      "last_observation_evidence": {
+        "id": "sha256:b6876570b45437ab482a1e866f4a0232799df9109ec34df47e148278d1246222",
+        "sha256": "b6876570b45437ab482a1e866f4a0232799df9109ec34df47e148278d1246222"
+      },
+      "material_source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "inputs/material.txt",
+        "root": "workspace",
+        "selector": null,
+        "sha256": "4b02df76f121d58e5b3b38f2aafe4bb8a03dbecbeb946a033fe0f0b7a3e67da1"
+      },
+      "registered_fixture_launched_and_completed": true,
+      "stage": "unchanged",
+      "supervisor_scope": "Actual registered fixture launch passed the unchanged stored recheck; mutation, where selected, predates admission/dispatch and therefore supervisor launch."
+    },
+    {
+      "admission_status": "ok",
+      "current_sha256": "4dec0d091f3fed66e60493fced3815a0bfdc6a39b722fcd551a38ede009d7839",
+      "direct_original_source_read": "refused",
+      "direct_refusal": {
+        "code": "digest_mismatch",
+        "gaps": [],
+        "reason": "Acquired whole source differs from pinned bytes",
+        "source_refs": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "inputs/material.txt",
+            "root": "workspace",
+            "selector": null,
+            "sha256": "4b02df76f121d58e5b3b38f2aafe4bb8a03dbecbeb946a033fe0f0b7a3e67da1"
+          }
+        ]
+      },
+      "dispatch_status": "ok",
+      "effect_count": "1",
+      "fixture": "fixtures/F2-argument-source-before-admission",
+      "included_in_preflight_recheck": false,
+      "kind": "argument-source",
+      "last_observation_evidence": {
+        "id": "sha256:c7c5fddf42125e0c566c5ebcdb2e3d9ba15caec3d911568e58d686d8bb8483be",
+        "sha256": "c7c5fddf42125e0c566c5ebcdb2e3d9ba15caec3d911568e58d686d8bb8483be"
+      },
+      "material_source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "inputs/material.txt",
+        "root": "workspace",
+        "selector": null,
+        "sha256": "4b02df76f121d58e5b3b38f2aafe4bb8a03dbecbeb946a033fe0f0b7a3e67da1"
+      },
+      "registered_fixture_launched_and_completed": true,
+      "stage": "before-admission",
+      "supervisor_scope": "Actual registered fixture launch passed the unchanged stored recheck; mutation, where selected, predates admission/dispatch and therefore supervisor launch."
+    },
+    {
+      "admission_status": "ok",
+      "current_sha256": "4dec0d091f3fed66e60493fced3815a0bfdc6a39b722fcd551a38ede009d7839",
+      "direct_original_source_read": "refused",
+      "direct_refusal": {
+        "code": "digest_mismatch",
+        "gaps": [],
+        "reason": "Acquired whole source differs from pinned bytes",
+        "source_refs": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "inputs/material.txt",
+            "root": "workspace",
+            "selector": null,
+            "sha256": "4b02df76f121d58e5b3b38f2aafe4bb8a03dbecbeb946a033fe0f0b7a3e67da1"
+          }
+        ]
+      },
+      "dispatch_status": "ok",
+      "effect_count": "1",
+      "fixture": "fixtures/F2-argument-source-before-dispatch",
+      "included_in_preflight_recheck": false,
+      "kind": "argument-source",
+      "last_observation_evidence": {
+        "id": "sha256:95ad5c4350acacea65c36de006d792e3b3e41c5d65c89575fc93297d0f3706be",
+        "sha256": "95ad5c4350acacea65c36de006d792e3b3e41c5d65c89575fc93297d0f3706be"
+      },
+      "material_source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "inputs/material.txt",
+        "root": "workspace",
+        "selector": null,
+        "sha256": "4b02df76f121d58e5b3b38f2aafe4bb8a03dbecbeb946a033fe0f0b7a3e67da1"
+      },
+      "registered_fixture_launched_and_completed": true,
+      "stage": "before-dispatch",
+      "supervisor_scope": "Actual registered fixture launch passed the unchanged stored recheck; mutation, where selected, predates admission/dispatch and therefore supervisor launch."
+    },
+    {
+      "admission_status": "ok",
+      "current_sha256": "a72d423a222ecd84a429e28796c93ba07ac8b79d40caf3b74af02c36029f3b0b",
+      "direct_original_source_read": "ok",
+      "direct_refusal": null,
+      "dispatch_status": "ok",
+      "effect_count": "1",
+      "fixture": "fixtures/F2-model-projection-unchanged",
+      "included_in_preflight_recheck": false,
+      "kind": "model-projection",
+      "last_observation_evidence": {
+        "id": "sha256:604fbf48f5ad3e49e926f41d4f3a77073563e21f883ee6c7b8bbcf68afa5400e",
+        "sha256": "604fbf48f5ad3e49e926f41d4f3a77073563e21f883ee6c7b8bbcf68afa5400e"
+      },
+      "material_source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "inputs/model.json",
+        "root": "workspace",
+        "selector": null,
+        "sha256": "a72d423a222ecd84a429e28796c93ba07ac8b79d40caf3b74af02c36029f3b0b"
+      },
+      "registered_fixture_launched_and_completed": true,
+      "stage": "unchanged",
+      "supervisor_scope": "Actual registered fixture launch passed the unchanged stored recheck; mutation, where selected, predates admission/dispatch and therefore supervisor launch."
+    },
+    {
+      "admission_status": "ok",
+      "current_sha256": "4c256f6f99e013c4403c1e2eec138dece0bb1defa6929fccfd251899a9f2107c",
+      "direct_original_source_read": "refused",
+      "direct_refusal": {
+        "code": "digest_mismatch",
+        "gaps": [],
+        "reason": "Acquired whole source differs from pinned bytes",
+        "source_refs": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "inputs/model.json",
+            "root": "workspace",
+            "selector": null,
+            "sha256": "a72d423a222ecd84a429e28796c93ba07ac8b79d40caf3b74af02c36029f3b0b"
+          }
+        ]
+      },
+      "dispatch_status": "ok",
+      "effect_count": "1",
+      "fixture": "fixtures/F2-model-projection-before-admission",
+      "included_in_preflight_recheck": false,
+      "kind": "model-projection",
+      "last_observation_evidence": {
+        "id": "sha256:1601b9b4f78280cef594dfe170ecfaa5a267d6f0250f2a9417d627bff7422601",
+        "sha256": "1601b9b4f78280cef594dfe170ecfaa5a267d6f0250f2a9417d627bff7422601"
+      },
+      "material_source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "inputs/model.json",
+        "root": "workspace",
+        "selector": null,
+        "sha256": "a72d423a222ecd84a429e28796c93ba07ac8b79d40caf3b74af02c36029f3b0b"
+      },
+      "registered_fixture_launched_and_completed": true,
+      "stage": "before-admission",
+      "supervisor_scope": "Actual registered fixture launch passed the unchanged stored recheck; mutation, where selected, predates admission/dispatch and therefore supervisor launch."
+    },
+    {
+      "admission_status": "ok",
+      "current_sha256": "4c256f6f99e013c4403c1e2eec138dece0bb1defa6929fccfd251899a9f2107c",
+      "direct_original_source_read": "refused",
+      "direct_refusal": {
+        "code": "digest_mismatch",
+        "gaps": [],
+        "reason": "Acquired whole source differs from pinned bytes",
+        "source_refs": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "inputs/model.json",
+            "root": "workspace",
+            "selector": null,
+            "sha256": "a72d423a222ecd84a429e28796c93ba07ac8b79d40caf3b74af02c36029f3b0b"
+          }
+        ]
+      },
+      "dispatch_status": "ok",
+      "effect_count": "1",
+      "fixture": "fixtures/F2-model-projection-before-dispatch",
+      "included_in_preflight_recheck": false,
+      "kind": "model-projection",
+      "last_observation_evidence": {
+        "id": "sha256:8124224d5b8ec1ae504e14ffd221891ca056deca29d161792ab1d5230354bd7b",
+        "sha256": "8124224d5b8ec1ae504e14ffd221891ca056deca29d161792ab1d5230354bd7b"
+      },
+      "material_source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "inputs/model.json",
+        "root": "workspace",
+        "selector": null,
+        "sha256": "a72d423a222ecd84a429e28796c93ba07ac8b79d40caf3b74af02c36029f3b0b"
+      },
+      "registered_fixture_launched_and_completed": true,
+      "stage": "before-dispatch",
+      "supervisor_scope": "Actual registered fixture launch passed the unchanged stored recheck; mutation, where selected, predates admission/dispatch and therefore supervisor launch."
+    },
+    {
+      "admission_status": "ok",
+      "current_sha256": "5df2e8c791b6e0bcfda3136ffd639b32618cbaa3912aae26b2729b56a4259365",
+      "direct_original_source_read": "ok",
+      "direct_refusal": null,
+      "dispatch_status": "ok",
+      "effect_count": "1",
+      "fixture": "fixtures/F2-selected-host-fit-unchanged",
+      "included_in_preflight_recheck": false,
+      "kind": "selected-host-fit",
+      "last_observation_evidence": {
+        "id": "sha256:7a4ee8e23f28e74aa4708c72ed6ddc0658f1d0ffa155d4ad2d2e68ce793d211c",
+        "sha256": "7a4ee8e23f28e74aa4708c72ed6ddc0658f1d0ffa155d4ad2d2e68ce793d211c"
+      },
+      "material_source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "inputs/host-bound.json",
+        "root": "workspace",
+        "selector": null,
+        "sha256": "5df2e8c791b6e0bcfda3136ffd639b32618cbaa3912aae26b2729b56a4259365"
+      },
+      "registered_fixture_launched_and_completed": true,
+      "stage": "unchanged",
+      "supervisor_scope": "Actual registered fixture launch passed the unchanged stored recheck; mutation, where selected, predates admission/dispatch and therefore supervisor launch."
+    },
+    {
+      "admission_status": "ok",
+      "current_sha256": "46c0f97d464959025c2daeb55eb5ba30ac6238e59fde59ea193ab72b8f809b82",
+      "direct_original_source_read": "refused",
+      "direct_refusal": {
+        "code": "digest_mismatch",
+        "gaps": [],
+        "reason": "Acquired whole source differs from pinned bytes",
+        "source_refs": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "inputs/host-bound.json",
+            "root": "workspace",
+            "selector": null,
+            "sha256": "5df2e8c791b6e0bcfda3136ffd639b32618cbaa3912aae26b2729b56a4259365"
+          }
+        ]
+      },
+      "dispatch_status": "ok",
+      "effect_count": "1",
+      "fixture": "fixtures/F2-selected-host-fit-before-admission",
+      "included_in_preflight_recheck": false,
+      "kind": "selected-host-fit",
+      "last_observation_evidence": {
+        "id": "sha256:464e90dd3d8606e5e678238d738db7b5cd8df4c6bcfef4a6fd6bb92804ac7607",
+        "sha256": "464e90dd3d8606e5e678238d738db7b5cd8df4c6bcfef4a6fd6bb92804ac7607"
+      },
+      "material_source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "inputs/host-bound.json",
+        "root": "workspace",
+        "selector": null,
+        "sha256": "5df2e8c791b6e0bcfda3136ffd639b32618cbaa3912aae26b2729b56a4259365"
+      },
+      "registered_fixture_launched_and_completed": true,
+      "stage": "before-admission",
+      "supervisor_scope": "Actual registered fixture launch passed the unchanged stored recheck; mutation, where selected, predates admission/dispatch and therefore supervisor launch."
+    },
+    {
+      "admission_status": "ok",
+      "current_sha256": "46c0f97d464959025c2daeb55eb5ba30ac6238e59fde59ea193ab72b8f809b82",
+      "direct_original_source_read": "refused",
+      "direct_refusal": {
+        "code": "digest_mismatch",
+        "gaps": [],
+        "reason": "Acquired whole source differs from pinned bytes",
+        "source_refs": [
+          {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "inputs/host-bound.json",
+            "root": "workspace",
+            "selector": null,
+            "sha256": "5df2e8c791b6e0bcfda3136ffd639b32618cbaa3912aae26b2729b56a4259365"
+          }
+        ]
+      },
+      "dispatch_status": "ok",
+      "effect_count": "1",
+      "fixture": "fixtures/F2-selected-host-fit-before-dispatch",
+      "included_in_preflight_recheck": false,
+      "kind": "selected-host-fit",
+      "last_observation_evidence": {
+        "id": "sha256:233704721e99d2930ffd4f74da29ae9f2c8c53c9d7c7edf35f4e97cb0c78ba95",
+        "sha256": "233704721e99d2930ffd4f74da29ae9f2c8c53c9d7c7edf35f4e97cb0c78ba95"
+      },
+      "material_source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "inputs/host-bound.json",
+        "root": "workspace",
+        "selector": null,
+        "sha256": "5df2e8c791b6e0bcfda3136ffd639b32618cbaa3912aae26b2729b56a4259365"
+      },
+      "registered_fixture_launched_and_completed": true,
+      "stage": "before-dispatch",
+      "supervisor_scope": "Actual registered fixture launch passed the unchanged stored recheck; mutation, where selected, predates admission/dispatch and therefore supervisor launch."
+    }
+  ],
+  "F3": [
+    {
+      "conflict": {
+        "code": "request_identity_conflict",
+        "gaps": [
+          "stable-writer-id"
+        ],
+        "reason": "Same caller request identity has different effective inputs",
+        "source_refs": []
+      },
+      "first": "ok",
+      "first_response_consumption": "Deferred until after exact replay; original bytes retained, not a claim of network packet loss.",
+      "fixture": "fixtures/F3-cli-append",
+      "fresh_id_positive": "ok",
+      "mode": "append",
+      "replay": {
+        "code": "target_conflict",
+        "gaps": [],
+        "reason": "Writer target preimage differs",
+        "source_refs": []
+      },
+      "same_exact_request": true,
+      "same_principal_and_policy": true,
+      "target_unchanged_by_replay_or_conflict": true,
+      "transport": "cli"
+    },
+    {
+      "conflict": {
+        "code": "request_identity_conflict",
+        "gaps": [
+          "stable-writer-id"
+        ],
+        "reason": "Same caller request identity has different effective inputs",
+        "source_refs": []
+      },
+      "first": "ok",
+      "first_response_consumption": "Deferred until after exact replay; original bytes retained, not a claim of network packet loss.",
+      "fixture": "fixtures/F3-cli-replace",
+      "fresh_id_positive": "ok",
+      "mode": "replace",
+      "replay": {
+        "code": "target_conflict",
+        "gaps": [],
+        "reason": "Writer target preimage differs",
+        "source_refs": []
+      },
+      "same_exact_request": true,
+      "same_principal_and_policy": true,
+      "target_unchanged_by_replay_or_conflict": true,
+      "transport": "cli"
+    },
+    {
+      "conflict": {
+        "code": "request_identity_conflict",
+        "gaps": [
+          "stable-writer-id"
+        ],
+        "reason": "Same caller request identity has different effective inputs",
+        "source_refs": []
+      },
+      "first": "ok",
+      "first_response_consumption": "Deferred until after exact replay; original bytes retained, not a claim of network packet loss.",
+      "fixture": "fixtures/F3-mcp-append",
+      "fresh_id_positive": "ok",
+      "mode": "append",
+      "replay": {
+        "code": "target_conflict",
+        "gaps": [],
+        "reason": "Writer target preimage differs",
+        "source_refs": []
+      },
+      "same_exact_request": true,
+      "same_principal_and_policy": true,
+      "target_unchanged_by_replay_or_conflict": true,
+      "transport": "mcp"
+    },
+    {
+      "conflict": {
+        "code": "request_identity_conflict",
+        "gaps": [
+          "stable-writer-id"
+        ],
+        "reason": "Same caller request identity has different effective inputs",
+        "source_refs": []
+      },
+      "first": "ok",
+      "first_response_consumption": "Deferred until after exact replay; original bytes retained, not a claim of network packet loss.",
+      "fixture": "fixtures/F3-mcp-replace",
+      "fresh_id_positive": "ok",
+      "mode": "replace",
+      "replay": {
+        "code": "target_conflict",
+        "gaps": [],
+        "reason": "Writer target preimage differs",
+        "source_refs": []
+      },
+      "same_exact_request": true,
+      "same_principal_and_policy": true,
+      "target_unchanged_by_replay_or_conflict": true,
+      "transport": "mcp"
+    }
+  ]
+}

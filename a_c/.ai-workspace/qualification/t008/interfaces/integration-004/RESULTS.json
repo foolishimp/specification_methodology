@@ -1,0 +1,100 @@
+{
+  "actual_provider_or_native_F_P_calls": 0,
+  "current_unique_full_suite_tests": 281,
+  "historical_tests": {
+    "integration002": 254,
+    "integration003": 273,
+    "original": 242
+  },
+  "qualification": "Finite deterministic/local-process/upstream checks only. No all23-operation, F_P/FDV, semantic, operator, benefit, install or RC acceptance.",
+  "schema": "a_c.T008.mechanical-integration-results/4",
+  "selected_author_tests_not_added_to_total": 35,
+  "stages": {
+    "ordinary_demo": {
+      "all_passed": true,
+      "checks": 10,
+      "proof": {
+        "bytes": 595,
+        "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-004/ordinary-demo-001/checks.json",
+        "sha256": "29a56e4578cb1d47a9f6845f7743c7a72f9d6da0adeffac83cd5b16330c8e18d"
+      },
+      "sources_unchanged": true
+    },
+    "suite": {
+      "command": {
+        "bytes": 1823,
+        "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-004/suite-001/command.json",
+        "sha256": "503e32bffbd2bb1051615182f7c59dace6ff2ca83eaba82206fb1bfd9b2ccc2f"
+      },
+      "full_runs": 1,
+      "modules": {
+        "test_ac_generate": 25,
+        "test_ac_graph": 47,
+        "test_ac_grounding": 19,
+        "test_ac_repair": 16,
+        "test_ac_support_core": 68,
+        "test_ac_support_effects": 58,
+        "test_ac_support_interfaces": 48
+      },
+      "returncode": 0,
+      "seconds": "58.068",
+      "skipped": 0,
+      "sources_unchanged": true,
+      "stderr": {
+        "bytes": 48441,
+        "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-004/suite-001/stderr",
+        "sha256": "a7ca614149210d6f87974a6b67d0cfa4052925ef6b9347507dec57ab345f90e3"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-004/suite-001/stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "tests": 281
+    },
+    "typing": {
+      "command": {
+        "bytes": 2836,
+        "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-004/typing-001/command.json",
+        "sha256": "dda6f863bb014e7f6b95705e128710e62f4dd4dda3db0dbd0167e379dcdbeb5a"
+      },
+      "returncode": 0,
+      "sources_unchanged": true,
+      "stderr": {
+        "bytes": 0,
+        "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-004/typing-001/stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 43,
+        "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-004/typing-001/stdout",
+        "sha256": "46984ca20bf69f7b14ec1fd9bd82101d56a4e109e68f016fd2a04f22481b09b3"
+      },
+      "strict_normal_import_files": 9
+    },
+    "upstream_carried": {
+      "actual_prior_report": {
+        "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-003/upstream-001/upstream-report.json",
+        "sha256": "8a408a5890aa583f0e832c543f1580f7d86ca927d62d10ba6325881e17a6ff3b"
+      },
+      "applicability_after": {
+        "bytes": 280923,
+        "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-004/UPSTREAM_APPLICABILITY.after.json",
+        "sha256": "571804732e4e1cd562e710f29b9637c0c8d2321a2be4a3f80d02ae116384c581"
+      },
+      "applicability_before": {
+        "bytes": 280924,
+        "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-004/UPSTREAM_APPLICABILITY.before.json",
+        "sha256": "bc278ad9963bc3df5592f503fa3db3cbbab0bf341764cdd2fd554c8a351f433f"
+      },
+      "checks": 9,
+      "fresh_standalone_checks": 0,
+      "limits": "Retained integration003 actual upstream result; fresh suite includes its named legacy upstream controls, but standalone9 was not rerun"
+    }
+  },
+  "subject": {
+    "bytes": 2896,
+    "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-004/CLOSED_SUBJECT.json",
+    "sha256": "83671a95f28e0786e11292faa45861b1ecd3914d1356ff400a63eb103ae08836"
+  }
+}

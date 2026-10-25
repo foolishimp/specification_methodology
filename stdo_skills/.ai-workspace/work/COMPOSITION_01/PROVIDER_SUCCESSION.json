@@ -1,0 +1,43 @@
+{
+  "scope": "Applicability of actual Skills native operations on provider freeze02 to the production code of freeze03",
+  "source_manifest_unchanged": {
+    "path": "stdo_skills/specification/composition/SOURCE_MANIFEST.json",
+    "sha256": "39df477eac760278a6c22a64d62865be4c5c6163230a9ae4abc13fe92461ea9b"
+  },
+  "previous_freeze": {
+    "path": "a_c/.ai-workspace/work/PRODUCT_COMPOSITION_01/source-freeze-02.json",
+    "sha256": "97dbbcc2685aeb43cf89e9b10252a071e3ce89ad4dc85dd093cd8387158d2bc2"
+  },
+  "qualification_successor": {
+    "path": "a_c/.ai-workspace/work/PRODUCT_COMPOSITION_01/source-freeze-03.json",
+    "sha256": "b83c12098cbccb77d1019bdbb10c8c8069c6c3ba0d02f1f0433b7e67db2f4cc7"
+  },
+  "production_pins": {
+    "path": "a_c/.ai-workspace/work/PRODUCT_COMPOSITION_01/provider-files.json",
+    "sha256": "fd0a1a36c24dd6b1407f564f716feabd0ac4f2cb5aca84abcf03b8d99bcf2512",
+    "files": {
+      "a_c/build_tenants/graphify/code/ac_graph.py": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+      "a_c/build_tenants/graphify/code/ac_support.py": "91665d563dbb8c8811ab0def47dc12da39f3bccc523f99e42659a1b1ad4735ef",
+      "a_c/build_tenants/graphify/code/ac_support_composition.py": "9cbf7e3dd19305bb48e841337bba1bf7cf38e0bbc475e835e6bf0f4091a2b25b",
+      "a_c/build_tenants/graphify/code/ac_support_core.py": "afbe3ca69791bb566f07ffbf072692967b8e5a71eb8f12805d11a5d7029d9391",
+      "a_c/build_tenants/graphify/code/ac_support_effects.py": "f1b5a92a31a05abade25810539bc78dc69c96768391f323625877da60df155c9",
+      "a_c/build_tenants/graphify/design/fd-composition.md": "5134567c980e67523e0d8c40e41fbd0780bad43cdcd6213bcc2da7f993fed175",
+      "a_c/build_tenants/graphify/design/fd-method-stdo-3.0.1.json": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7",
+      "a_c/build_tenants/graphify/design/fd-support-stdo-3.0.1.md": "cb9723533e781eaf28de9f26f411b6a0db65baac349e6df5847c7b4a897eef9d",
+      "a_c/build_tenants/graphify/design/fd-support.md": "36f41798dcd9259c44efe175c7f01b8df398d8b5d8d763e4442da206114482e0",
+      "a_c/specification/requirements/fd-composition.md": "baf3c0f31d14886391f747c7f82c7280691c7ee0063d1d7ad006309b67cdcdbb"
+    },
+    "matched_current_and_operation_selection": true
+  },
+  "only_changed_file": {
+    "path": "a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py",
+    "previous_sha256": "c9e6abcda666c12a37c32fac1afd6b636221f9492e716059c365702f2540c388",
+    "current_sha256": "fdec474dd7df5a3f3c3f65ad47c0ae3274048efdc6015db5c1d23789a7603bb5"
+  },
+  "disposition": "All ten production dependencies are identical; no native public operation is rerun or relabeled. Freeze03 changes a test expectation for inspect opt-in. The original manifest and operation records remain bound to02. This preserves the observed production path only, not a claim about changed test execution.",
+  "qualified_limits": [
+    "Final provider regression evidence is separately owned by the a_c return.",
+    "Historical test hash drift is explicit; all operative runtime/contract pins must still match.",
+    "Independent integration review and Executive consumption remain separate."
+  ]
+}

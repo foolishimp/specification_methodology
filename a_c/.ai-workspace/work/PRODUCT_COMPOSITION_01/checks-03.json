@@ -1,0 +1,42 @@
+[
+  {
+    "name": "support-suite-03",
+    "argv": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "a_c/build_tenants/graphify/test_env",
+      "-p",
+      "test_ac_support*.py",
+      "-v"
+    ],
+    "exit": 0,
+    "started_ns": 1792938681565497000,
+    "ended_ns": 1792938752482944000,
+    "source_freeze": "source-freeze-03.json",
+    "log": "support-suite-03.log",
+    "sha256": "a9b64993280accf989dbcb6d256ab860da2f0599f71d7cd213320802057f5967"
+  },
+  {
+    "name": "typing-03",
+    "argv": [
+      "a_c/.venv/bin/python",
+      "-m",
+      "mypy",
+      "--strict",
+      "a_c/build_tenants/graphify/code/ac_support.py",
+      "a_c/build_tenants/graphify/code/ac_support_core.py",
+      "a_c/build_tenants/graphify/code/ac_support_effects.py",
+      "a_c/build_tenants/graphify/code/ac_support_composition.py"
+    ],
+    "exit": 0,
+    "started_ns": 1792938752483257000,
+    "ended_ns": 1792938752623775000,
+    "source_freeze": "source-freeze-03.json",
+    "log": "typing-03.log",
+    "sha256": "71144743c83babea384888a735db0c4daba3d4d7b7942b6839984bd5c21b52bb"
+  }
+]

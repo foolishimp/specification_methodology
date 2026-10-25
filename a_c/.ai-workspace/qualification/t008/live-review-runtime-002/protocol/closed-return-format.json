@@ -1,0 +1,83 @@
+{
+  "activation": "Context.boundaries.activation_identity, exact {id,sha256} canonical full packet coordinate",
+  "actor": {
+    "exact_keys": [
+      "id",
+      "family",
+      "authorship"
+    ],
+    "values": {
+      "authorship": "t008-independent-reviewer-001",
+      "family": "anthropic-claude",
+      "id": "urn:a-c:T008:claude-reviewer:001"
+    }
+  },
+  "basis": {
+    "exact_keys": [
+      "method_profile",
+      "observations"
+    ],
+    "source": "packet.subject_basis fields"
+  },
+  "classification": "Shared mechanical wire field reference only. No semantic answer, candidate algorithm or acceptance authority.",
+  "consumer": "/root",
+  "evaluation": {
+    "core_value_allowed": [
+      "falsified",
+      "indeterminate",
+      "invalid_basis",
+      "out_of_frame",
+      "satisfied"
+    ],
+    "domain_outcome": "actual Reviewer authored JSON; no supplied finding or verdict",
+    "evidence_residuals_invalidators": "arrays, actual evidence/limits only",
+    "exact_keys": [
+      "id",
+      "predicate",
+      "domain_outcome",
+      "core_value",
+      "evidence",
+      "residuals",
+      "invalidators"
+    ],
+    "predicate": "exact acquired ReturnContract.required_evaluations member SourceRef"
+  },
+  "exact_top_level_keys": [
+    "schema",
+    "id",
+    "frame",
+    "activation",
+    "subject",
+    "basis",
+    "actor",
+    "consumer",
+    "evaluations",
+    "not_performed",
+    "work_result",
+    "residuals",
+    "invalidators"
+  ],
+  "frame": {
+    "exact_keys": [
+      "id",
+      "revision"
+    ],
+    "types": "strings from packet frame"
+  },
+  "grammar": "integer-only strict UTF8 JSON, exactly one unfenced object; no decimal/exponent/nonfinite/duplicate keys",
+  "not_performed": "array of actual unperformed evaluation ID strings, disjoint from performed IDs",
+  "origin": {
+    "Core_lines": [
+      1800,
+      1837
+    ],
+    "Core_parent_sha256": "78f70fa8da1a29ce4fadc8cb78743c2293bf7f35947b353218dc2a6b1e03ae94",
+    "HOW_parent_sha256": "b38eedbe85ee32ef11d945d6a60ed3f9bb2312ac10e873d8ddc9b7986744a005",
+    "selection": "Field names/closed enum values only, mechanically transcribed from public closed carrier validation. No handler implementation supplied."
+  },
+  "phase1": "Only source-derived-expectations performed to actual supported scope; design-conservation, implementation-conservation, guide-task-criteria, public-use-qualification in not_performed. Null proof.expectations stays an explicit return-check gap.",
+  "residuals_invalidators": "arrays; preserve actual gaps/unknowns",
+  "schema_value": "a_c.fd-support.closed-return/1",
+  "subject": "exact packet.subject_basis.subject {id,sha256}",
+  "work_result": null
+}

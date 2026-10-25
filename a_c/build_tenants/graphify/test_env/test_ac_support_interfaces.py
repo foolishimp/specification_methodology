@@ -28,7 +28,7 @@ PRODUCT = TENANT.parents[1]
 ADAPTER = TENANT / "code" / "ac_support.py"
 PREPARE = TENANT / "examples" / "fd-support" / "prepare_readonly.py"
 OPERATIONS = {
-    "tools.describe", "workspace.observe", "source.read", "records.find", "records.read",
+    "tools.describe", "composition.inspect", "workspace.observe", "source.read", "records.find", "records.read",
     "graph.project", "relations.query", "context.assemble", "contract.preflight", "dispatch.start",
     "dispatch.observe", "dispatch.cancel", "events.wait", "return.capture", "return.check",
     "review.prepare", "checks.evaluate", "results.conjoin", "work.project", "work.write",
@@ -151,6 +151,22 @@ class PublicInterfaceTests(unittest.TestCase):
                 self.assertIn("RelationQueryResult", value["content_schemas"]["$defs"])
                 self.assertEqual(response["operation_outcome"]["value"], "returned")
                 self.assertTrue(response["evidence"]["id"].startswith("sha256:"))
+
+    def test_unbound_composition_inspection_requires_explicit_operation_capability(self) -> None:
+        for principal in ("executive", "worker", "reviewer"):
+            result, refused = self.invoke({"schema": core.REQUEST, "id": "unbound-denied-" + principal,
+                "operation": "composition.inspect", "arguments": {}}, principal=principal)
+            self.assertEqual(result.returncode, 2, refused)
+            self.assertEqual(refused["refusal"]["code"], "authority_missing")
+        policy = json.loads(self.policy.read_bytes())
+        for principal in policy["principals"].values():
+            principal["operations"].append("composition.inspect")
+        self.rewrite_policy(policy)
+        for principal in ("executive", "worker", "reviewer"):
+            result, inspected = self.invoke({"schema": core.REQUEST, "id": "unbound-inspect-" + principal,
+                "operation": "composition.inspect", "arguments": {}}, principal=principal)
+            self.assertEqual(result.returncode, 0, inspected)
+            self.assertFalse(inspected["result"]["value"]["selected"])
 
     def test_setup_selects_canonical_operator_paths_before_runtime_binding(self) -> None:
         actual_parent = self.parent / "actual-operator-directory"

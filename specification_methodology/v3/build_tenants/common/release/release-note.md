@@ -1,3 +1,22 @@
+# Unreleased Product composition source increment
+
+This mutable common source extends the published immutable STDO 3.0.1 RC1 with
+PRODUCT_DEFINITION PC-01–PC-07 and their targeted consumers. The successor version
+and release are unselected. This directory is not the unchanged published 3.0.1
+payload; use that release's immutable install/manifest for existing consumers.
+The builder remains 2.5.1 RC2. Source construction, bounded checks, independent
+assessment and owner acceptance retain separate standing.
+
+Native frames are regenerated from the changed owners. The accompanying bounded
+composition interpretation is separate from the incomplete earlier whole-method
+representation; its coverage and evidence live in the implementation delivery.
+No package publication, installed adoption or overall readiness is asserted.
+
+## Retained preceding release-note record
+
+The following record describes the preceding source selection and its limits;
+it does not label this changed source as the published artifact.
+
 # STDO 3.0.1 candidate
 
 The first target cut is `3.0.1-rc.1`. This candidate evolves published native

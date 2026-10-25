@@ -1,0 +1,143 @@
+{
+  "$defs": {
+    "Id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "JsonPointer": {
+      "pattern": "^(?:/(?:[^~]|~[01])*)*$",
+      "type": "string"
+    },
+    "Sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "SourceRef": {
+      "additionalProperties": false,
+      "properties": {
+        "engine": {
+          "enum": [
+            "workspace-regular-file",
+            "immutable-git-blob",
+            "retained-evidence"
+          ]
+        },
+        "object": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "pattern": "^(?:[0-9a-f]{40}|[0-9a-f]{64})$",
+              "type": "string"
+            }
+          ]
+        },
+        "path": {
+          "$ref": "#/$defs/Id"
+        },
+        "root": {
+          "$ref": "#/$defs/Id"
+        },
+        "selector": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "lines": {
+                  "items": false,
+                  "maxItems": 2,
+                  "minItems": 2,
+                  "prefixItems": [
+                    {
+                      "minimum": 1,
+                      "type": "integer"
+                    },
+                    {
+                      "minimum": 1,
+                      "type": "integer"
+                    }
+                  ],
+                  "type": "array"
+                }
+              },
+              "required": [
+                "lines"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "json_pointer": {
+                  "$ref": "#/$defs/JsonPointer"
+                }
+              },
+              "required": [
+                "json_pointer"
+              ],
+              "type": "object"
+            }
+          ]
+        },
+        "sha256": {
+          "$ref": "#/$defs/Sha256"
+        }
+      },
+      "required": [
+        "engine",
+        "root",
+        "path",
+        "object",
+        "sha256",
+        "selector"
+      ],
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "arguments": {
+      "additionalProperties": false,
+      "properties": {
+        "encoding": {
+          "enum": [
+            "utf8",
+            "base64"
+          ]
+        },
+        "max_content_bytes": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceRef"
+        }
+      },
+      "required": [
+        "source",
+        "encoding"
+      ],
+      "type": "object"
+    },
+    "id": {
+      "$ref": "#/$defs/Id"
+    },
+    "operation": {
+      "const": "source.read"
+    },
+    "schema": {
+      "const": "a_c.fd-support.request/1"
+    }
+  },
+  "required": [
+    "schema",
+    "id",
+    "operation",
+    "arguments"
+  ],
+  "type": "object"
+}

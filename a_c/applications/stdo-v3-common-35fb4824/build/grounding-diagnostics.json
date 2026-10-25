@@ -1,0 +1,937 @@
+{
+  "all_initial_calls_closed": 18,
+  "assembly_performed": false,
+  "chunks": [
+    {
+      "chunk": "chunk-92a5f4b8dd74eaccb968",
+      "chunk_sha256": "5c633f7fd3919c2c0efdcef8183f3233c7e4da93d753034dd4b9dd2844927bd9",
+      "existing_call_or_reservation_count": 1,
+      "f_p_grounding_repair_needed_for_selection": false,
+      "fd_invariants": {
+        "all_other_fields_unchanged": true,
+        "claim": "Declared field equality only; no proof of semantic correctness or sufficient evidence.",
+        "derived_non_grounding_payload_sha256": "106d9560cb525e6052e2e2705a8192014cb073cb138670fba4a8a611a7356430",
+        "non_grounding_meaning_fields_unchanged": true,
+        "non_grounding_payload_sha256": "106d9560cb525e6052e2e2705a8192014cb073cb138670fba4a8a611a7356430",
+        "section_id_and_anchor_order_unchanged": true
+      },
+      "journal_sha256": "26de965a7802644a5ebc5e5a5ef299d5032b3f67808b6207c70423ffd359dc9e",
+      "normalization_changes": 0,
+      "normalization_refusal": null,
+      "normalization_status": "validated_original",
+      "original_answer_sha256": "595b5182709541fc1cc8c762cee04f47f97e4378f96c0fb80cbf7d0698eb8a57",
+      "original_attempt": "actors/author/chunk-92a5f4b8dd74eaccb968/attempt-001",
+      "original_invalid_anchor_count": 0,
+      "original_invalid_anchors": [],
+      "original_result_sha256": "211c0d3a2329693742ab98d5c2d503993776cccff4006bad3ab63f274a0be8a0",
+      "original_status": "completed",
+      "remaining_invalid_anchor_count": 0,
+      "remaining_invalid_anchors": [],
+      "repair_preflight": "not_needed_strict_original",
+      "repair_preflight_error": null,
+      "selected_answer": "actors/author/chunk-92a5f4b8dd74eaccb968/attempt-001/answer.json",
+      "selected_answer_sha256": "595b5182709541fc1cc8c762cee04f47f97e4378f96c0fb80cbf7d0698eb8a57",
+      "selection": "strict_original"
+    },
+    {
+      "chunk": "chunk-cf22b253a1db7d64a8f8",
+      "chunk_sha256": "a0f3b61ab580eee4686c195c83076f5d5730d2dedda84e105893450f96d592de",
+      "existing_call_or_reservation_count": 1,
+      "f_p_grounding_repair_needed_for_selection": true,
+      "fd_invariants": null,
+      "journal_sha256": "752d3727ebc910ff9a5bcf04591fe6e6f3e89c6a58106b8ec2255e3c5007e3b7",
+      "normalization_changes": 0,
+      "normalization_refusal": "/constraints/30/grounding/0: grounding names a section outside this exact source chunk",
+      "normalization_status": "refused",
+      "original_answer_sha256": "50926f48dfa8425f7738415138945be9b4718685be6ae466e12e8565971313d2",
+      "original_attempt": "actors/author/chunk-cf22b253a1db7d64a8f8/attempt-001",
+      "original_invalid_anchor_count": 1,
+      "original_invalid_anchors": [
+        {
+          "diagnostic": "section_id is outside the exact dispatched chunk",
+          "f_p_ground_fields": [
+            "section_id",
+            "quote",
+            "start_line",
+            "end_line"
+          ],
+          "family": "constraints",
+          "fd_individual_anchor_recoverable": false,
+          "fd_individual_refusal": "SectionId is outside exact chunk; F_D policy cannot change SectionId.",
+          "grounding": {
+            "end_line": 221,
+            "quote": "A unit, semantic or\nmodule-design conformance lane does not depend on an undeclared local path,\na sibling workspace, an operator home directory or a mutable external\nfixture.",
+            "section_id": "repo://stdo-v3-common/35fb4824a064a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy%2FFixture%20and%20proof%20portability",
+            "start_line": 218
+          },
+          "grounding_index": 0,
+          "record_key": "portable_required_closure",
+          "record_ordinal": 30,
+          "semantic_sufficiency_of_replacement": "unassessed; requires F_P evidence selection within this exact original chunk, and the actor may refuse",
+          "unchanged_f_p_profile_supports_coordinate_replacement": true
+        }
+      ],
+      "original_result_sha256": "eafdc71f50e45e464188eb93fdd40e2b1310a0815a4b7343e4342ebca069fa23",
+      "original_status": "failed",
+      "remaining_invalid_anchor_count": 1,
+      "remaining_invalid_anchors": [
+        {
+          "diagnostic": "section_id is outside the exact dispatched chunk",
+          "f_p_ground_fields": [
+            "section_id",
+            "quote",
+            "start_line",
+            "end_line"
+          ],
+          "family": "constraints",
+          "fd_individual_anchor_recoverable": false,
+          "fd_individual_refusal": "SectionId is outside exact chunk; F_D policy cannot change SectionId.",
+          "grounding": {
+            "end_line": 221,
+            "quote": "A unit, semantic or\nmodule-design conformance lane does not depend on an undeclared local path,\na sibling workspace, an operator home directory or a mutable external\nfixture.",
+            "section_id": "repo://stdo-v3-common/35fb4824a064a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy%2FFixture%20and%20proof%20portability",
+            "start_line": 218
+          },
+          "grounding_index": 0,
+          "record_key": "portable_required_closure",
+          "record_ordinal": 30,
+          "semantic_sufficiency_of_replacement": "unassessed; requires F_P evidence selection within this exact original chunk, and the actor may refuse",
+          "unchanged_f_p_profile_supports_coordinate_replacement": true
+        }
+      ],
+      "repair_preflight": "non_grounding_structural_preflight_passed",
+      "repair_preflight_error": null,
+      "selected_answer": null,
+      "selected_answer_sha256": null,
+      "selection": "refused"
+    },
+    {
+      "chunk": "chunk-48d20c632dceaba4c74c",
+      "chunk_sha256": "af7ff548f2c9d8bb9289d31cf26c6942526fd4d866b6fe8b2fb4a6286f04b437",
+      "existing_call_or_reservation_count": 1,
+      "f_p_grounding_repair_needed_for_selection": false,
+      "fd_invariants": {
+        "all_other_fields_unchanged": true,
+        "claim": "Declared field equality only; no proof of semantic correctness or sufficient evidence.",
+        "derived_non_grounding_payload_sha256": "df3e08984d583ca7a0aca7a612efd06124f9d8e87c24f431c5cd5056ef9d23dc",
+        "non_grounding_meaning_fields_unchanged": true,
+        "non_grounding_payload_sha256": "df3e08984d583ca7a0aca7a612efd06124f9d8e87c24f431c5cd5056ef9d23dc",
+        "section_id_and_anchor_order_unchanged": true
+      },
+      "journal_sha256": "860859272d8b5b41aa3b120745e5a4b9b0c4d957d1bab264606d2b451d2fc22b",
+      "normalization_changes": 0,
+      "normalization_refusal": null,
+      "normalization_status": "validated_original",
+      "original_answer_sha256": "5153344020c54a8d98396c8dc6c8502827b1b2ed8c234a231b73df72d9b92171",
+      "original_attempt": "actors/author/chunk-48d20c632dceaba4c74c/attempt-001",
+      "original_invalid_anchor_count": 0,
+      "original_invalid_anchors": [],
+      "original_result_sha256": "35be04d21276adacd81ca2d97e48ac5f0d03e02771a05ca1d869005aa59d5153",
+      "original_status": "completed",
+      "remaining_invalid_anchor_count": 0,
+      "remaining_invalid_anchors": [],
+      "repair_preflight": "not_needed_strict_original",
+      "repair_preflight_error": null,
+      "selected_answer": "actors/author/chunk-48d20c632dceaba4c74c/attempt-001/answer.json",
+      "selected_answer_sha256": "5153344020c54a8d98396c8dc6c8502827b1b2ed8c234a231b73df72d9b92171",
+      "selection": "strict_original"
+    },
+    {
+      "chunk": "chunk-6a6fe643ed4a56a2207f",
+      "chunk_sha256": "92e6da72b59e8a0e70b0520f8ff4b6aeac903577fb9c598f2b71c0bf43308067",
+      "existing_call_or_reservation_count": 1,
+      "f_p_grounding_repair_needed_for_selection": false,
+      "fd_invariants": {
+        "all_other_fields_unchanged": true,
+        "claim": "Declared field equality only; no proof of semantic correctness or sufficient evidence.",
+        "derived_non_grounding_payload_sha256": "2d3a8c9ba4cf6d89a6fc612142e3f845a74e065c2cc50b33e2fe479b35b884c7",
+        "non_grounding_meaning_fields_unchanged": true,
+        "non_grounding_payload_sha256": "2d3a8c9ba4cf6d89a6fc612142e3f845a74e065c2cc50b33e2fe479b35b884c7",
+        "section_id_and_anchor_order_unchanged": true
+      },
+      "journal_sha256": "aeb227bcb76de20fab930c2af3431f4e51b096535695558449a26b2063e82fbf",
+      "normalization_changes": 0,
+      "normalization_refusal": null,
+      "normalization_status": "validated_original",
+      "original_answer_sha256": "cd5adae7defb3d80647186e7ad08510bb6ccefcaaa039d5e3978ef0f13e3adfc",
+      "original_attempt": "actors/author/chunk-6a6fe643ed4a56a2207f/attempt-001",
+      "original_invalid_anchor_count": 0,
+      "original_invalid_anchors": [],
+      "original_result_sha256": "72845c35662eaf6e1052d9a01c7bf19312794b9dbb0225918189638f053e4fa4",
+      "original_status": "completed",
+      "remaining_invalid_anchor_count": 0,
+      "remaining_invalid_anchors": [],
+      "repair_preflight": "not_needed_strict_original",
+      "repair_preflight_error": null,
+      "selected_answer": "actors/author/chunk-6a6fe643ed4a56a2207f/attempt-001/answer.json",
+      "selected_answer_sha256": "cd5adae7defb3d80647186e7ad08510bb6ccefcaaa039d5e3978ef0f13e3adfc",
+      "selection": "strict_original"
+    },
+    {
+      "chunk": "chunk-9ad55c758435da840238",
+      "chunk_sha256": "79f92a4053e6ee12188f3187bf77b29cb370c13647a5c80eaa8eb1abb5043862",
+      "existing_call_or_reservation_count": 1,
+      "f_p_grounding_repair_needed_for_selection": false,
+      "fd_invariants": {
+        "all_other_fields_unchanged": true,
+        "claim": "Declared field equality only; no proof of semantic correctness or sufficient evidence.",
+        "derived_non_grounding_payload_sha256": "df360fd49a155e29056fa1e18c4190f2061abdd80eabf4af1f5208a2a0b40d6e",
+        "non_grounding_meaning_fields_unchanged": true,
+        "non_grounding_payload_sha256": "df360fd49a155e29056fa1e18c4190f2061abdd80eabf4af1f5208a2a0b40d6e",
+        "section_id_and_anchor_order_unchanged": true
+      },
+      "journal_sha256": "d8d0a1489d0f179cd437d6e88ed498e4a63914683bf97dc60bb19bd2502b52bc",
+      "normalization_changes": 0,
+      "normalization_refusal": null,
+      "normalization_status": "validated_original",
+      "original_answer_sha256": "2fd6d96b778578388bd78a141fb19757190fd035557b8620200fe9ddf9bfc4b0",
+      "original_attempt": "actors/author/chunk-9ad55c758435da840238/attempt-001",
+      "original_invalid_anchor_count": 0,
+      "original_invalid_anchors": [],
+      "original_result_sha256": "4eeca2e23841bcbad8e2ce65760511f309b4d1129906db0d7c0f74bba33de053",
+      "original_status": "completed",
+      "remaining_invalid_anchor_count": 0,
+      "remaining_invalid_anchors": [],
+      "repair_preflight": "not_needed_strict_original",
+      "repair_preflight_error": null,
+      "selected_answer": "actors/author/chunk-9ad55c758435da840238/attempt-001/answer.json",
+      "selected_answer_sha256": "2fd6d96b778578388bd78a141fb19757190fd035557b8620200fe9ddf9bfc4b0",
+      "selection": "strict_original"
+    },
+    {
+      "chunk": "chunk-5de9b50d9be9a9a975ec",
+      "chunk_sha256": "565d465687af6defbd95e25451d5f455f08f49f272b0fe3dd2fcf0d243759331",
+      "existing_call_or_reservation_count": 1,
+      "f_p_grounding_repair_needed_for_selection": false,
+      "fd_invariants": {
+        "all_other_fields_unchanged": true,
+        "claim": "Declared field equality only; no proof of semantic correctness or sufficient evidence.",
+        "derived_non_grounding_payload_sha256": "8bb4832804b82ef5dd1e5bb18cf722069fd1960ce130dd2924fb1ac3b456314d",
+        "non_grounding_meaning_fields_unchanged": true,
+        "non_grounding_payload_sha256": "8bb4832804b82ef5dd1e5bb18cf722069fd1960ce130dd2924fb1ac3b456314d",
+        "section_id_and_anchor_order_unchanged": true
+      },
+      "journal_sha256": "7cce8d9a22061ed2212860ae5e66d1537794f187c054f16c2f94d3d325758aa8",
+      "normalization_changes": 0,
+      "normalization_refusal": null,
+      "normalization_status": "validated_original",
+      "original_answer_sha256": "9cb4524e8698c11f9a982e8fbd7c70b58223f10b10eb2355ffadcf8b031bf6a0",
+      "original_attempt": "actors/author/chunk-5de9b50d9be9a9a975ec/attempt-001",
+      "original_invalid_anchor_count": 0,
+      "original_invalid_anchors": [],
+      "original_result_sha256": "f5d4e7fd2b84732f067c2c021ad105113a5b1f2b9b795fb3ec7da36857155b46",
+      "original_status": "completed",
+      "remaining_invalid_anchor_count": 0,
+      "remaining_invalid_anchors": [],
+      "repair_preflight": "not_needed_strict_original",
+      "repair_preflight_error": null,
+      "selected_answer": "actors/author/chunk-5de9b50d9be9a9a975ec/attempt-001/answer.json",
+      "selected_answer_sha256": "9cb4524e8698c11f9a982e8fbd7c70b58223f10b10eb2355ffadcf8b031bf6a0",
+      "selection": "strict_original"
+    },
+    {
+      "chunk": "chunk-681e3bcdbe30d3f19555",
+      "chunk_sha256": "5f767d3d4b42def11b570f43056ef346a5d914413004799630725461fd7f9dfd",
+      "existing_call_or_reservation_count": 1,
+      "f_p_grounding_repair_needed_for_selection": false,
+      "fd_invariants": {
+        "all_other_fields_unchanged": true,
+        "claim": "Declared field equality only; no proof of semantic correctness or sufficient evidence.",
+        "derived_non_grounding_payload_sha256": "b1d625c63e50fa266118631510b14e093c5589e92d6150df5a1840c18f2c49eb",
+        "non_grounding_meaning_fields_unchanged": true,
+        "non_grounding_payload_sha256": "b1d625c63e50fa266118631510b14e093c5589e92d6150df5a1840c18f2c49eb",
+        "section_id_and_anchor_order_unchanged": true
+      },
+      "journal_sha256": "9247464eac2454adbcc45f75e04573fb64f100468b8259ef867d999100bff6d2",
+      "normalization_changes": 0,
+      "normalization_refusal": null,
+      "normalization_status": "validated_original",
+      "original_answer_sha256": "6703921460983259440b5475498d2dbf0bfd09093d387cf99debf4a0d91d7948",
+      "original_attempt": "actors/author/chunk-681e3bcdbe30d3f19555/attempt-001",
+      "original_invalid_anchor_count": 0,
+      "original_invalid_anchors": [],
+      "original_result_sha256": "d1f7b5071a861ad5efaca637ad5eeba19178378c2f18eee6f752ead601dd864c",
+      "original_status": "completed",
+      "remaining_invalid_anchor_count": 0,
+      "remaining_invalid_anchors": [],
+      "repair_preflight": "not_needed_strict_original",
+      "repair_preflight_error": null,
+      "selected_answer": "actors/author/chunk-681e3bcdbe30d3f19555/attempt-001/answer.json",
+      "selected_answer_sha256": "6703921460983259440b5475498d2dbf0bfd09093d387cf99debf4a0d91d7948",
+      "selection": "strict_original"
+    },
+    {
+      "chunk": "chunk-840f31f0a41659bed31f",
+      "chunk_sha256": "be7dc8c699a67c29bfb37e866412718a787870988d44a2acb93faa3c4a680dec",
+      "existing_call_or_reservation_count": 1,
+      "f_p_grounding_repair_needed_for_selection": false,
+      "fd_invariants": {
+        "all_other_fields_unchanged": true,
+        "claim": "Declared field equality only; no proof of semantic correctness or sufficient evidence.",
+        "derived_non_grounding_payload_sha256": "4ec3b37c71ee40385b7aec48f7beb953601cd9da934dde914abfb782521f03b4",
+        "non_grounding_meaning_fields_unchanged": true,
+        "non_grounding_payload_sha256": "4ec3b37c71ee40385b7aec48f7beb953601cd9da934dde914abfb782521f03b4",
+        "section_id_and_anchor_order_unchanged": true
+      },
+      "journal_sha256": "e3aebb0ec6815f7d78751b16825ef5372dc68105246a93544bc78ede0c5638fb",
+      "normalization_changes": 0,
+      "normalization_refusal": null,
+      "normalization_status": "validated_original",
+      "original_answer_sha256": "7546ac0820358c6f4d4f143e8ab646fb3bd9db1dfdc331cf4af0c1d68cc92ce0",
+      "original_attempt": "actors/author/chunk-840f31f0a41659bed31f/attempt-001",
+      "original_invalid_anchor_count": 0,
+      "original_invalid_anchors": [],
+      "original_result_sha256": "2204ce0655dce763aa9650030509ac717d0f6279a0294050c0e992b5d8111c4d",
+      "original_status": "completed",
+      "remaining_invalid_anchor_count": 0,
+      "remaining_invalid_anchors": [],
+      "repair_preflight": "not_needed_strict_original",
+      "repair_preflight_error": null,
+      "selected_answer": "actors/author/chunk-840f31f0a41659bed31f/attempt-001/answer.json",
+      "selected_answer_sha256": "7546ac0820358c6f4d4f143e8ab646fb3bd9db1dfdc331cf4af0c1d68cc92ce0",
+      "selection": "strict_original"
+    },
+    {
+      "chunk": "chunk-a9bfe9fddc1bbf8bf726",
+      "chunk_sha256": "17a416cd0de753440c40a4eeeb9bc5d67ab7b58d9f21f511e4f059140e6c38b5",
+      "existing_call_or_reservation_count": 1,
+      "f_p_grounding_repair_needed_for_selection": false,
+      "fd_invariants": {
+        "all_other_fields_unchanged": true,
+        "claim": "Declared field equality only; no proof of semantic correctness or sufficient evidence.",
+        "derived_non_grounding_payload_sha256": "2b9b2df4fbf03eed50d1d7cec338a32ac2cac5ed016a6b55ac692e67cdf9533f",
+        "non_grounding_meaning_fields_unchanged": true,
+        "non_grounding_payload_sha256": "2b9b2df4fbf03eed50d1d7cec338a32ac2cac5ed016a6b55ac692e67cdf9533f",
+        "section_id_and_anchor_order_unchanged": true
+      },
+      "journal_sha256": "0034f77b5229cc957cc31228e6f6cee3f3add5b8d73688b83daf7957059bee02",
+      "normalization_changes": 3,
+      "normalization_refusal": null,
+      "normalization_status": "derived_validated",
+      "original_answer_sha256": "f617fb572a3784ce018f94d754f780caabb6d05d52b1e10ab49524939dd35baa",
+      "original_attempt": "actors/author/chunk-a9bfe9fddc1bbf8bf726/attempt-001",
+      "original_invalid_anchor_count": 3,
+      "original_invalid_anchors": [
+        {
+          "diagnostic": "quote is not exact at the supplied range or line range is invalid",
+          "f_p_ground_fields": [
+            "section_id",
+            "quote",
+            "start_line",
+            "end_line"
+          ],
+          "family": "constraints",
+          "fd_individual_anchor_recoverable": true,
+          "fd_individual_refusal": null,
+          "grounding": {
+            "end_line": 832,
+            "quote": "Where the\nclaim also depends on an undeclared relation or capability,\n`out_of_frame` and `indeterminate` each have a lawful ground; the result\nnames the value it returns and that ground, and this boundary excludes\nneither (P5).",
+            "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FResults",
+            "start_line": 828
+          },
+          "grounding_index": 0,
+          "record_key": "frame_evidence_nonperformance_boundary",
+          "record_ordinal": 2,
+          "semantic_sufficiency_of_replacement": "unassessed; requires F_P evidence selection within this exact original chunk, and the actor may refuse",
+          "unchanged_f_p_profile_supports_coordinate_replacement": true
+        },
+        {
+          "diagnostic": "quote is not exact at the supplied range or line range is invalid",
+          "f_p_ground_fields": [
+            "section_id",
+            "quote",
+            "start_line",
+            "end_line"
+          ],
+          "family": "constraints",
+          "fd_individual_anchor_recoverable": true,
+          "fd_individual_refusal": null,
+          "grounding": {
+            "end_line": 849,
+            "quote": "In either case\nthe unexercised part, B above, has no result: in every conjunction over\nit, it is a planned assessment without a closed result, and the known\nfailure A survives with it",
+            "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FResults",
+            "start_line": 846
+          },
+          "grounding_index": 1,
+          "record_key": "frame_evidence_nonperformance_boundary",
+          "record_ordinal": 2,
+          "semantic_sufficiency_of_replacement": "unassessed; requires F_P evidence selection within this exact original chunk, and the actor may refuse",
+          "unchanged_f_p_profile_supports_coordinate_replacement": true
+        },
+        {
+          "diagnostic": "quote is not exact at the supplied range or line range is invalid",
+          "f_p_ground_fields": [
+            "section_id",
+            "quote",
+            "start_line",
+            "end_line"
+          ],
+          "family": "constraints",
+          "fd_individual_anchor_recoverable": true,
+          "fd_individual_refusal": null,
+          "grounding": {
+            "end_line": 1022,
+            "quote": "Where\n every mandatory result",
+            "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/FOUNDATIONS.md#FOUNDATIONS%2F4.%20Algebra%2FConjunction%20of%20results",
+            "start_line": 1017
+          },
+          "grounding_index": 0,
+          "record_key": "conjunction_reported_value_cases",
+          "record_ordinal": 6,
+          "semantic_sufficiency_of_replacement": "unassessed; requires F_P evidence selection within this exact original chunk, and the actor may refuse",
+          "unchanged_f_p_profile_supports_coordinate_replacement": true
+        }
+      ],
+      "original_result_sha256": "1023ea68cab335a84e58be328d3a2bb24f30659cbe4d0d7e6aa9e66d0a8ae0df",
+      "original_status": "failed",
+      "remaining_invalid_anchor_count": 0,
+      "remaining_invalid_anchors": [],
+      "repair_preflight": "non_grounding_structural_preflight_passed",
+      "repair_preflight_error": null,
+      "selected_answer": "normalization/chunk-a9bfe9fddc1bbf8bf726/derived-answer.json",
+      "selected_answer_sha256": "e872a846eb14e07258fdfc196248a0203ab951fd770e25c17f8d11465c376acc",
+      "selection": "F_D_valid"
+    },
+    {
+      "chunk": "chunk-fb45aab9fdaa869d1b60",
+      "chunk_sha256": "9d28f78537aff274ae00d53ea6d27b069287aae0862c431b754d2df45510b2d8",
+      "existing_call_or_reservation_count": 1,
+      "f_p_grounding_repair_needed_for_selection": false,
+      "fd_invariants": {
+        "all_other_fields_unchanged": true,
+        "claim": "Declared field equality only; no proof of semantic correctness or sufficient evidence.",
+        "derived_non_grounding_payload_sha256": "a39c50ebe3570cca16c2a405cf12c6e90e386c30d3714613dadf9faebd5e8483",
+        "non_grounding_meaning_fields_unchanged": true,
+        "non_grounding_payload_sha256": "a39c50ebe3570cca16c2a405cf12c6e90e386c30d3714613dadf9faebd5e8483",
+        "section_id_and_anchor_order_unchanged": true
+      },
+      "journal_sha256": "5e74afdcf08f4a8aadd46e7fbbe2cae1f6df5a57e0bdae4b279b5cd8307420dd",
+      "normalization_changes": 0,
+      "normalization_refusal": null,
+      "normalization_status": "validated_original",
+      "original_answer_sha256": "c067135dbcf9306371cc912e1be926b1c4f96e0455739fb1621a5b976b729d4f",
+      "original_attempt": "actors/author/chunk-fb45aab9fdaa869d1b60/attempt-001",
+      "original_invalid_anchor_count": 0,
+      "original_invalid_anchors": [],
+      "original_result_sha256": "f08ae04a0d1163382f15157e5bfe7892e1c9d22e9480a094ada8a13e50e00e88",
+      "original_status": "completed",
+      "remaining_invalid_anchor_count": 0,
+      "remaining_invalid_anchors": [],
+      "repair_preflight": "not_needed_strict_original",
+      "repair_preflight_error": null,
+      "selected_answer": "actors/author/chunk-fb45aab9fdaa869d1b60/attempt-001/answer.json",
+      "selected_answer_sha256": "c067135dbcf9306371cc912e1be926b1c4f96e0455739fb1621a5b976b729d4f",
+      "selection": "strict_original"
+    },
+    {
+      "chunk": "chunk-dd5da8dbb2163820ad7c",
+      "chunk_sha256": "1c9da41229b6aa35a5b42a505c10e8ddc0c9a253388866a7cb336c4472ef6e4c",
+      "existing_call_or_reservation_count": 1,
+      "f_p_grounding_repair_needed_for_selection": false,
+      "fd_invariants": {
+        "all_other_fields_unchanged": true,
+        "claim": "Declared field equality only; no proof of semantic correctness or sufficient evidence.",
+        "derived_non_grounding_payload_sha256": "9d91a4419abbda5cf90c66aa0b0c6911e53a081229ab293a3557e9919a7b2780",
+        "non_grounding_meaning_fields_unchanged": true,
+        "non_grounding_payload_sha256": "9d91a4419abbda5cf90c66aa0b0c6911e53a081229ab293a3557e9919a7b2780",
+        "section_id_and_anchor_order_unchanged": true
+      },
+      "journal_sha256": "dca882410999d7b9cfca92bd0690a83423753249c318b4f61bba428f749861c1",
+      "normalization_changes": 1,
+      "normalization_refusal": null,
+      "normalization_status": "derived_validated",
+      "original_answer_sha256": "edfec6dcc865e81158245efb1eafe1450733d07283ba208bee86f4d6cbe2798e",
+      "original_attempt": "actors/author/chunk-dd5da8dbb2163820ad7c/attempt-001",
+      "original_invalid_anchor_count": 1,
+      "original_invalid_anchors": [
+        {
+          "diagnostic": "quote is not exact at the supplied range or line range is invalid",
+          "f_p_ground_fields": [
+            "section_id",
+            "quote",
+            "start_line",
+            "end_line"
+          ],
+          "family": "constraints",
+          "fd_individual_anchor_recoverable": true,
+          "fd_individual_refusal": null,
+          "grounding": {
+            "end_line": 1154,
+            "quote": "A decision with both causes records both and takes the\n`basis` value, as\n[ACTIVATION \u00a73 Construction availability](ACTIVATION.md#construction-availability)\ndecides for `re_entry_requested`.",
+            "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5D%20Constructive%20evaluation%20and%20yield%20loop",
+            "start_line": 1151
+          },
+          "grounding_index": 0,
+          "record_key": "closure_result_mapping",
+          "record_ordinal": 7,
+          "semantic_sufficiency_of_replacement": "unassessed; requires F_P evidence selection within this exact original chunk, and the actor may refuse",
+          "unchanged_f_p_profile_supports_coordinate_replacement": true
+        }
+      ],
+      "original_result_sha256": "f1c2aae3978162212a2bfe657e68d6e72ca2a63459812e596dd5519b2f2d54ed",
+      "original_status": "failed",
+      "remaining_invalid_anchor_count": 0,
+      "remaining_invalid_anchors": [],
+      "repair_preflight": "non_grounding_structural_preflight_passed",
+      "repair_preflight_error": null,
+      "selected_answer": "normalization/chunk-dd5da8dbb2163820ad7c/derived-answer.json",
+      "selected_answer_sha256": "eef4f4ca852faa91a9c3052d63d696a7cd398512089d3c9af4ad6d7f1d0b6fe7",
+      "selection": "F_D_valid"
+    },
+    {
+      "chunk": "chunk-2f24e576ad073131be2b",
+      "chunk_sha256": "0e0a9be27c24a45859d14b3e12e22af07e4c02a9e8f63c8bb03d3c94b7adcb97",
+      "existing_call_or_reservation_count": 1,
+      "f_p_grounding_repair_needed_for_selection": false,
+      "fd_invariants": {
+        "all_other_fields_unchanged": true,
+        "claim": "Declared field equality only; no proof of semantic correctness or sufficient evidence.",
+        "derived_non_grounding_payload_sha256": "f1874cab240a95b311b62dcd9be4f4994d7711722fc83d3b898d29424c41d2aa",
+        "non_grounding_meaning_fields_unchanged": true,
+        "non_grounding_payload_sha256": "f1874cab240a95b311b62dcd9be4f4994d7711722fc83d3b898d29424c41d2aa",
+        "section_id_and_anchor_order_unchanged": true
+      },
+      "journal_sha256": "2eaf21159724862f0a4ec658c1fb4f01c17c7230f4b4a6e2b31604f5a359f220",
+      "normalization_changes": 0,
+      "normalization_refusal": null,
+      "normalization_status": "validated_original",
+      "original_answer_sha256": "63cb4a3266ec08c764cee1f48e15b29f1466d187e861ba8a3cdf6cde39e605ca",
+      "original_attempt": "actors/author/chunk-2f24e576ad073131be2b/attempt-001",
+      "original_invalid_anchor_count": 0,
+      "original_invalid_anchors": [],
+      "original_result_sha256": "2ba34851f1e5331bfc86a6d44df4bda1fbca1c6e5e94658c7a4fb2e501fd10d8",
+      "original_status": "completed",
+      "remaining_invalid_anchor_count": 0,
+      "remaining_invalid_anchors": [],
+      "repair_preflight": "not_needed_strict_original",
+      "repair_preflight_error": null,
+      "selected_answer": "actors/author/chunk-2f24e576ad073131be2b/attempt-001/answer.json",
+      "selected_answer_sha256": "63cb4a3266ec08c764cee1f48e15b29f1466d187e861ba8a3cdf6cde39e605ca",
+      "selection": "strict_original"
+    },
+    {
+      "chunk": "chunk-e6c17b5f309623af04f5",
+      "chunk_sha256": "2c390efb9380df03b6ea5f1b0705edf6bec24a64ed5e16cd992c56e67a1cb427",
+      "existing_call_or_reservation_count": 1,
+      "f_p_grounding_repair_needed_for_selection": false,
+      "fd_invariants": {
+        "all_other_fields_unchanged": true,
+        "claim": "Declared field equality only; no proof of semantic correctness or sufficient evidence.",
+        "derived_non_grounding_payload_sha256": "1e1cdb84436b14690999cfeb742ed69789b9ea7b1fc62cba75bc7c1887b1907b",
+        "non_grounding_meaning_fields_unchanged": true,
+        "non_grounding_payload_sha256": "1e1cdb84436b14690999cfeb742ed69789b9ea7b1fc62cba75bc7c1887b1907b",
+        "section_id_and_anchor_order_unchanged": true
+      },
+      "journal_sha256": "2d326123c4678bdb073f6b92a7eb24dd61c4ec5dd4d395077bf1179bface80d6",
+      "normalization_changes": 0,
+      "normalization_refusal": null,
+      "normalization_status": "validated_original",
+      "original_answer_sha256": "fd31431f2dbf5768643215a862766e858c7b128537106f721394f53a5db03756",
+      "original_attempt": "actors/author/chunk-e6c17b5f309623af04f5/attempt-001",
+      "original_invalid_anchor_count": 0,
+      "original_invalid_anchors": [],
+      "original_result_sha256": "97982d8009432a7d973a94656565eca2ea41bf5110d1bc76877baaca3da845af",
+      "original_status": "completed",
+      "remaining_invalid_anchor_count": 0,
+      "remaining_invalid_anchors": [],
+      "repair_preflight": "not_needed_strict_original",
+      "repair_preflight_error": null,
+      "selected_answer": "actors/author/chunk-e6c17b5f309623af04f5/attempt-001/answer.json",
+      "selected_answer_sha256": "fd31431f2dbf5768643215a862766e858c7b128537106f721394f53a5db03756",
+      "selection": "strict_original"
+    },
+    {
+      "chunk": "chunk-e1247fa9e1eb5dbd49cd",
+      "chunk_sha256": "af098e31da880e83c41af76bae9293d50b378f6c3b3209cbde04f2c930a85f6f",
+      "existing_call_or_reservation_count": 1,
+      "f_p_grounding_repair_needed_for_selection": true,
+      "fd_invariants": null,
+      "journal_sha256": "d65704612ca9d659a13b92cc3bdd45a597e1530d199dfef6031120cb2fb8507e",
+      "normalization_changes": 0,
+      "normalization_refusal": "record[bounded_execution_external_semantics]/residuals/7/grounding/0: no whitespace-run-equivalent lexical occurrence in the same supplied section",
+      "normalization_status": "refused",
+      "original_answer_sha256": "6ea500ee1e763b5bf6a59915f16bca6d864fd78766b134139e2cbd691ad0d5c1",
+      "original_attempt": "actors/author/chunk-e1247fa9e1eb5dbd49cd/attempt-001",
+      "original_invalid_anchor_count": 2,
+      "original_invalid_anchors": [
+        {
+          "diagnostic": "quote is not exact at the supplied range or line range is invalid",
+          "f_p_ground_fields": [
+            "section_id",
+            "quote",
+            "start_line",
+            "end_line"
+          ],
+          "family": "constraints",
+          "fd_individual_anchor_recoverable": true,
+          "fd_individual_refusal": null,
+          "grounding": {
+            "end_line": 1654,
+            "quote": "a candidate is available, how each assessment of it came out, and the\ndecision owner's disposition (`accept`, `local_repair`, `re_enter` or\n`reject`) are separate results, so a candidate that is available or\nassessed is not thereby accepted (P6). The selected computational relations\nare drawn from the computational calculus of the tenant doing the work;\nthe actors, tools and processes that carry out the step belong to that\ntenant's execution environment, and the step's time, spend and other\nresource limits are those of its execution binding (\u00a711). The\ndeclared work boundary of a probabilistic unit is FOUNDATIONS \u00a72 (work\nboundary) and \u00a73 (P0); the complete enclosing-relation admission of a\nmaterial transition and its standing structural qualification are\nACTIVATION \u00a74; proportionality is ACTIVATION \u00a76. This member binds the\ngeneric terms to its own: the selected outcome of a step is the product\noutcome, prerequisite or experiment of \u00a73; the owning relations are the\nchain's layers; the re-entry conditions are the change classes of \u00a74.",
+            "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F8.%20Bounded%20execution%20in%20this%20method",
+            "start_line": 1640
+          },
+          "grounding_index": 0,
+          "record_key": "execution_result_and_configuration",
+          "record_ordinal": 44,
+          "semantic_sufficiency_of_replacement": "unassessed; requires F_P evidence selection within this exact original chunk, and the actor may refuse",
+          "unchanged_f_p_profile_supports_coordinate_replacement": true
+        },
+        {
+          "diagnostic": "quote is not exact at the supplied range or line range is invalid",
+          "f_p_ground_fields": [
+            "section_id",
+            "quote",
+            "start_line",
+            "end_line"
+          ],
+          "family": "residuals",
+          "fd_individual_anchor_recoverable": false,
+          "fd_individual_refusal": "no whitespace-run-equivalent lexical occurrence in the same supplied section",
+          "grounding": {
+            "end_line": 1636,
+            "quote": "the\nconstruction relation that the step serves, from the bound current state\nto the destination through a selected strategy, feedback and the distinct\nclaims of preservation, progress and completion, is\n[ACTIVATION \u00a71 Construction relation](ACTIVATION.md#construction-relation);\nthis member applies it to delivery and correction (\u00a74) and states no\nsecond relation (P6).",
+            "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F8.%20Bounded%20execution%20in%20this%20method",
+            "start_line": 1630
+          },
+          "grounding_index": 0,
+          "record_key": "bounded_execution_external_semantics",
+          "record_ordinal": 7,
+          "semantic_sufficiency_of_replacement": "unassessed; requires F_P evidence selection within this exact original chunk, and the actor may refuse",
+          "unchanged_f_p_profile_supports_coordinate_replacement": true
+        }
+      ],
+      "original_result_sha256": "a1bad81b7b431e84b0bc79922b66f34d306aeb72f640d66a1292627041ef94dd",
+      "original_status": "failed",
+      "remaining_invalid_anchor_count": 2,
+      "remaining_invalid_anchors": [
+        {
+          "diagnostic": "quote is not exact at the supplied range or line range is invalid",
+          "f_p_ground_fields": [
+            "section_id",
+            "quote",
+            "start_line",
+            "end_line"
+          ],
+          "family": "constraints",
+          "fd_individual_anchor_recoverable": true,
+          "fd_individual_refusal": null,
+          "grounding": {
+            "end_line": 1654,
+            "quote": "a candidate is available, how each assessment of it came out, and the\ndecision owner's disposition (`accept`, `local_repair`, `re_enter` or\n`reject`) are separate results, so a candidate that is available or\nassessed is not thereby accepted (P6). The selected computational relations\nare drawn from the computational calculus of the tenant doing the work;\nthe actors, tools and processes that carry out the step belong to that\ntenant's execution environment, and the step's time, spend and other\nresource limits are those of its execution binding (\u00a711). The\ndeclared work boundary of a probabilistic unit is FOUNDATIONS \u00a72 (work\nboundary) and \u00a73 (P0); the complete enclosing-relation admission of a\nmaterial transition and its standing structural qualification are\nACTIVATION \u00a74; proportionality is ACTIVATION \u00a76. This member binds the\ngeneric terms to its own: the selected outcome of a step is the product\noutcome, prerequisite or experiment of \u00a73; the owning relations are the\nchain's layers; the re-entry conditions are the change classes of \u00a74.",
+            "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F8.%20Bounded%20execution%20in%20this%20method",
+            "start_line": 1640
+          },
+          "grounding_index": 0,
+          "record_key": "execution_result_and_configuration",
+          "record_ordinal": 44,
+          "semantic_sufficiency_of_replacement": "unassessed; requires F_P evidence selection within this exact original chunk, and the actor may refuse",
+          "unchanged_f_p_profile_supports_coordinate_replacement": true
+        },
+        {
+          "diagnostic": "quote is not exact at the supplied range or line range is invalid",
+          "f_p_ground_fields": [
+            "section_id",
+            "quote",
+            "start_line",
+            "end_line"
+          ],
+          "family": "residuals",
+          "fd_individual_anchor_recoverable": false,
+          "fd_individual_refusal": "no whitespace-run-equivalent lexical occurrence in the same supplied section",
+          "grounding": {
+            "end_line": 1636,
+            "quote": "the\nconstruction relation that the step serves, from the bound current state\nto the destination through a selected strategy, feedback and the distinct\nclaims of preservation, progress and completion, is\n[ACTIVATION \u00a71 Construction relation](ACTIVATION.md#construction-relation);\nthis member applies it to delivery and correction (\u00a74) and states no\nsecond relation (P6).",
+            "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F8.%20Bounded%20execution%20in%20this%20method",
+            "start_line": 1630
+          },
+          "grounding_index": 0,
+          "record_key": "bounded_execution_external_semantics",
+          "record_ordinal": 7,
+          "semantic_sufficiency_of_replacement": "unassessed; requires F_P evidence selection within this exact original chunk, and the actor may refuse",
+          "unchanged_f_p_profile_supports_coordinate_replacement": true
+        }
+      ],
+      "repair_preflight": "non_grounding_structural_preflight_passed",
+      "repair_preflight_error": null,
+      "selected_answer": null,
+      "selected_answer_sha256": null,
+      "selection": "refused"
+    },
+    {
+      "chunk": "chunk-f4383ca77391f9eb91c7",
+      "chunk_sha256": "5441f62d1a36068b837fe42b83403f5a720f40692bebbffd54c2a7fbecdd561a",
+      "existing_call_or_reservation_count": 1,
+      "f_p_grounding_repair_needed_for_selection": false,
+      "fd_invariants": {
+        "all_other_fields_unchanged": true,
+        "claim": "Declared field equality only; no proof of semantic correctness or sufficient evidence.",
+        "derived_non_grounding_payload_sha256": "8dd243a38a91d2ac9c6ee4807baf873567e461328eeb1f5bda31c869549d6742",
+        "non_grounding_meaning_fields_unchanged": true,
+        "non_grounding_payload_sha256": "8dd243a38a91d2ac9c6ee4807baf873567e461328eeb1f5bda31c869549d6742",
+        "section_id_and_anchor_order_unchanged": true
+      },
+      "journal_sha256": "ebe4bfe88078aa520956109a6d39831758317eb851451c6d8a7fd81dcae8408f",
+      "normalization_changes": 1,
+      "normalization_refusal": null,
+      "normalization_status": "derived_validated",
+      "original_answer_sha256": "a00f684680ad7eabe001a23a025053f205f4504d4972089d44035113c4815d41",
+      "original_attempt": "actors/author/chunk-f4383ca77391f9eb91c7/attempt-001",
+      "original_invalid_anchor_count": 1,
+      "original_invalid_anchors": [
+        {
+          "diagnostic": "quote is not exact at the supplied range or line range is invalid",
+          "f_p_ground_fields": [
+            "section_id",
+            "quote",
+            "start_line",
+            "end_line"
+          ],
+          "family": "concepts",
+          "fd_individual_anchor_recoverable": true,
+          "fd_individual_refusal": null,
+          "grounding": {
+            "end_line": 985,
+            "quote": "a `Break-To-Closure Map` stating which break closes which closure-law clause;",
+            "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FBreak%20order%20and%20break-to-closure%20map",
+            "start_line": 984
+          },
+          "grounding_index": 0,
+          "record_key": "migration_break_order",
+          "record_ordinal": 18,
+          "semantic_sufficiency_of_replacement": "unassessed; requires F_P evidence selection within this exact original chunk, and the actor may refuse",
+          "unchanged_f_p_profile_supports_coordinate_replacement": true
+        }
+      ],
+      "original_result_sha256": "575c6c04c5d8c08bab211282394fc59b00e6d9fc9399226e4a42cb2d1f2ff03b",
+      "original_status": "failed",
+      "remaining_invalid_anchor_count": 0,
+      "remaining_invalid_anchors": [],
+      "repair_preflight": "non_grounding_structural_preflight_passed",
+      "repair_preflight_error": null,
+      "selected_answer": "normalization/chunk-f4383ca77391f9eb91c7/derived-answer.json",
+      "selected_answer_sha256": "e5eeef8eac38251a4cd617b6b316cc012cefabe022c58ad5a7a2b3316936548e",
+      "selection": "F_D_valid"
+    },
+    {
+      "chunk": "chunk-aee29b86d3101ee98ba1",
+      "chunk_sha256": "a47bb7c79992a69f6152462dada330bdb5842dbd893488b716f72a1a93c8f4c0",
+      "existing_call_or_reservation_count": 1,
+      "f_p_grounding_repair_needed_for_selection": false,
+      "fd_invariants": {
+        "all_other_fields_unchanged": true,
+        "claim": "Declared field equality only; no proof of semantic correctness or sufficient evidence.",
+        "derived_non_grounding_payload_sha256": "2bc4042045d6a93cc296619ab2995c65544b695cefc9a5dbfbf16e8c6b5e5940",
+        "non_grounding_meaning_fields_unchanged": true,
+        "non_grounding_payload_sha256": "2bc4042045d6a93cc296619ab2995c65544b695cefc9a5dbfbf16e8c6b5e5940",
+        "section_id_and_anchor_order_unchanged": true
+      },
+      "journal_sha256": "aa62e6c4ecb4fab6c850e0d7796ab31823b85cb5917a296e8ec14b08c8a30774",
+      "normalization_changes": 2,
+      "normalization_refusal": null,
+      "normalization_status": "derived_validated",
+      "original_answer_sha256": "57ea3c4465bce22c6f2bce9d8a6660e697f9768bfe433e25ac9fd80a0c4e8ab2",
+      "original_attempt": "actors/author/chunk-aee29b86d3101ee98ba1/attempt-001",
+      "original_invalid_anchor_count": 2,
+      "original_invalid_anchors": [
+        {
+          "diagnostic": "quote is not exact at the supplied range or line range is invalid",
+          "f_p_ground_fields": [
+            "section_id",
+            "quote",
+            "start_line",
+            "end_line"
+          ],
+          "family": "constraints",
+          "fd_individual_anchor_recoverable": true,
+          "fd_individual_refusal": null,
+          "grounding": {
+            "end_line": 951,
+            "quote": "Where the refusal also names a demonstrated violation by what is\nunder judgment, it has cause `constraint` below, as AC-007 rules",
+            "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20constraint%2C%20judgment%2C%20residual%20and%20stop%20kinds",
+            "start_line": 891
+          },
+          "grounding_index": 0,
+          "record_key": "refusal_cause_classification",
+          "record_ordinal": 10,
+          "semantic_sufficiency_of_replacement": "unassessed; requires F_P evidence selection within this exact original chunk, and the actor may refuse",
+          "unchanged_f_p_profile_supports_coordinate_replacement": true
+        },
+        {
+          "diagnostic": "quote is not exact at the supplied range or line range is invalid",
+          "f_p_ground_fields": [
+            "section_id",
+            "quote",
+            "start_line",
+            "end_line"
+          ],
+          "family": "residuals",
+          "fd_individual_anchor_recoverable": true,
+          "fd_individual_refusal": null,
+          "grounding": {
+            "end_line": 975,
+            "quote": "the bounded post-observation that the\n[effect law](#mutable-subject-effect-relation) requires is not yet\nacquired",
+            "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20constraint%2C%20judgment%2C%20residual%20and%20stop%20kinds",
+            "start_line": 970
+          },
+          "grounding_index": 1,
+          "record_key": "partial_observation_stage_gap",
+          "record_ordinal": 2,
+          "semantic_sufficiency_of_replacement": "unassessed; requires F_P evidence selection within this exact original chunk, and the actor may refuse",
+          "unchanged_f_p_profile_supports_coordinate_replacement": true
+        }
+      ],
+      "original_result_sha256": "730dc5f7eb3ee7bde578c4e5aeebf157a59ce3a70d6c8a04aef9941d4c3c410e",
+      "original_status": "failed",
+      "remaining_invalid_anchor_count": 0,
+      "remaining_invalid_anchors": [],
+      "repair_preflight": "non_grounding_structural_preflight_passed",
+      "repair_preflight_error": null,
+      "selected_answer": "normalization/chunk-aee29b86d3101ee98ba1/derived-answer.json",
+      "selected_answer_sha256": "0a0799f1784ccb3c761eab51ffa1c73986f8399edc4e5bf662633dc8dc33ee36",
+      "selection": "F_D_valid"
+    },
+    {
+      "chunk": "chunk-dac75ca2eb8f2a17b8e5",
+      "chunk_sha256": "c0a105250d45d1fc021c3dc764b39bbe6a0aa1a467e7f8f08b637c489f352758",
+      "existing_call_or_reservation_count": 1,
+      "f_p_grounding_repair_needed_for_selection": false,
+      "fd_invariants": {
+        "all_other_fields_unchanged": true,
+        "claim": "Declared field equality only; no proof of semantic correctness or sufficient evidence.",
+        "derived_non_grounding_payload_sha256": "3e600abb8d35df190cc19e8b61a3ee41d39c5aac9c8826ba39a8069551cb70aa",
+        "non_grounding_meaning_fields_unchanged": true,
+        "non_grounding_payload_sha256": "3e600abb8d35df190cc19e8b61a3ee41d39c5aac9c8826ba39a8069551cb70aa",
+        "section_id_and_anchor_order_unchanged": true
+      },
+      "journal_sha256": "93ad08b94ffc288d1c571316169e0d03646827427a351da993525a7983b47198",
+      "normalization_changes": 1,
+      "normalization_refusal": null,
+      "normalization_status": "derived_validated",
+      "original_answer_sha256": "6378e4a68729df67ac255b4fc80d4189f7d5d4caefae9d800ad7355b05be2301",
+      "original_attempt": "actors/author/chunk-dac75ca2eb8f2a17b8e5/attempt-001",
+      "original_invalid_anchor_count": 1,
+      "original_invalid_anchors": [
+        {
+          "diagnostic": "quote is not exact at the supplied range or line range is invalid",
+          "f_p_ground_fields": [
+            "section_id",
+            "quote",
+            "start_line",
+            "end_line"
+          ],
+          "family": "relations",
+          "fd_individual_anchor_recoverable": true,
+          "fd_individual_refusal": null,
+          "grounding": {
+            "end_line": 245,
+            "quote": "The meanings are adopted unchanged for this profile's scope under the\nselected complete method basis. Their owner in FOUNDATIONS \u00a72 is\nretained, and a change to either context, any cited concept or taxonomy\nclause, or the selected method basis invalidates the import until it is\nreevaluated.",
+            "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/WORLD_MODEL.md#WORLD_MODEL%2F2.%20Role%20and%20imports",
+            "start_line": 242
+          },
+          "grounding_index": 0,
+          "record_key": "product_inventory_context_import",
+          "record_ordinal": 3,
+          "semantic_sufficiency_of_replacement": "unassessed; requires F_P evidence selection within this exact original chunk, and the actor may refuse",
+          "unchanged_f_p_profile_supports_coordinate_replacement": true
+        }
+      ],
+      "original_result_sha256": "6fd750c07d4a0c0d7171eb2afa2798fe61d91f21f970c7bfc4dd87ed2644d5ad",
+      "original_status": "failed",
+      "remaining_invalid_anchor_count": 0,
+      "remaining_invalid_anchors": [],
+      "repair_preflight": "non_grounding_structural_preflight_passed",
+      "repair_preflight_error": null,
+      "selected_answer": "normalization/chunk-dac75ca2eb8f2a17b8e5/derived-answer.json",
+      "selected_answer_sha256": "eda5c94586a007ea39768b5bd5e893daf0db3970b21a6e3777e6a65170e40c8d",
+      "selection": "F_D_valid"
+    },
+    {
+      "chunk": "chunk-1e8571ebafdc9e3b6403",
+      "chunk_sha256": "cecc824653762d601a2540f3488078a292f21d19f624c61816ce5c4f6145960c",
+      "existing_call_or_reservation_count": 1,
+      "f_p_grounding_repair_needed_for_selection": false,
+      "fd_invariants": {
+        "all_other_fields_unchanged": true,
+        "claim": "Declared field equality only; no proof of semantic correctness or sufficient evidence.",
+        "derived_non_grounding_payload_sha256": "d4756cfb64ac60a653205dddf85e0d09ff4b1def5d81ca72b54883135e79d248",
+        "non_grounding_meaning_fields_unchanged": true,
+        "non_grounding_payload_sha256": "d4756cfb64ac60a653205dddf85e0d09ff4b1def5d81ca72b54883135e79d248",
+        "section_id_and_anchor_order_unchanged": true
+      },
+      "journal_sha256": "da3b3d754e1adec4499aea518d927ec58dd2a75995ec6f2a603eed354255558a",
+      "normalization_changes": 0,
+      "normalization_refusal": null,
+      "normalization_status": "validated_original",
+      "original_answer_sha256": "44da72848ab02a8f82df348bfc3e1fb2560e4c44293efe6743affee622691f83",
+      "original_attempt": "actors/author/chunk-1e8571ebafdc9e3b6403/attempt-001",
+      "original_invalid_anchor_count": 0,
+      "original_invalid_anchors": [],
+      "original_result_sha256": "1785b5517014fb3cbcf0bfef3bc745501b10689869c3a0b84f60abf6f2c914a7",
+      "original_status": "completed",
+      "remaining_invalid_anchor_count": 0,
+      "remaining_invalid_anchors": [],
+      "repair_preflight": "not_needed_strict_original",
+      "repair_preflight_error": null,
+      "selected_answer": "actors/author/chunk-1e8571ebafdc9e3b6403/attempt-001/answer.json",
+      "selected_answer_sha256": "44da72848ab02a8f82df348bfc3e1fb2560e4c44293efe6743affee622691f83",
+      "selection": "strict_original"
+    }
+  ],
+  "claims": "Mechanical source-grounding normalization and repair eligibility only. Original outcomes remain unchanged. Grounding profile eligibility does not prove adequate replacement evidence, semantic correctness, complete calculus conformance, acceptance or release.",
+  "closed_at": "2026-10-20T09:58:00.169429+00:00",
+  "elapsed_wall_seconds": 5.2759063330013305,
+  "existing_calls_and_reservations": 18,
+  "final_public_receipt_emitted": false,
+  "guarded_existing_files_unchanged": 3913,
+  "later_repair_asset_dependency": {
+    "disposition": "No asset copied or snapshot changed. Any later F_P repair requires a separate grant binding exact repair assets and calls; this receipt reserves nothing.",
+    "original_assets_observed_only": {
+      "patch.schema.json": {
+        "bytes": 2037,
+        "sha256": "65c58364a33a31d25fb2de16e50fc1f92bf2eb30307ebb42eb0f7a60ecb58b76"
+      },
+      "repair.txt": {
+        "bytes": 2231,
+        "sha256": "304752f5d5359364f6b34a2cf1f16b1a9da3c786bcb3baba12364fa7ba4b0d7e"
+      }
+    },
+    "snapshot_assets_present": false
+  },
+  "mechanically_eligible_grounding_repair_chunks": [
+    "chunk-cf22b253a1db7d64a8f8",
+    "chunk-e1247fa9e1eb5dbd49cd"
+  ],
+  "new_native_or_model_calls": 0,
+  "non_grounding_structural_refusal_chunks": [],
+  "normalization_policy_sha256": "6242bffb75d652b8826fb859651f0967631f727da30d7a3980d0604dc0ad67c4",
+  "normalization_result_sha256": "f4e37216a384a701fd5591918bf9b4a9517bda0c043a55252773555489ef6133",
+  "profile": "ac.common.grounding-diagnostics/1",
+  "remaining_invalid_anchor_count": 3,
+  "repair_calls_or_reservations": 0,
+  "repair_profile": "a_c.grounding.f-p-repair/1",
+  "retry_calls": 0,
+  "script_sha256": "e90fd90c4447dc367dd4b5dfdd7ad07b1031b85ae3dac25ad0e77c852a69e353",
+  "source_guard_after": {
+    "created_at": "2026-10-20T09:57:59.691135+00:00",
+    "implementation_manifest_sha256": "594fafcf083eadbbaf1472d68fe9f375fc21ccb426c6825194793304eac2503e",
+    "package_members": 81,
+    "semantic_members": 58,
+    "source_manifest_sha256": "dbf32e7f99eb7228ca361ec02f44227c05e02bb6bc447d1dd38255cd3ca4a4d4",
+    "status": "exact"
+  },
+  "source_guard_before": {
+    "created_at": "2026-10-20T09:57:54.905649+00:00",
+    "implementation_manifest_sha256": "594fafcf083eadbbaf1472d68fe9f375fc21ccb426c6825194793304eac2503e",
+    "package_members": 81,
+    "semantic_members": 58,
+    "source_manifest_sha256": "dbf32e7f99eb7228ca361ec02f44227c05e02bb6bc447d1dd38255cd3ca4a4d4",
+    "status": "exact"
+  },
+  "summary": {
+    "F_D_valid": 5,
+    "refused": 2,
+    "strict_original": 11
+  },
+  "total_fd_changed_anchors": 8
+}

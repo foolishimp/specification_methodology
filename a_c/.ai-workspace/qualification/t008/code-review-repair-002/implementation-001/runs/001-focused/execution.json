@@ -1,0 +1,50 @@
+{
+  "argv": [
+    "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "-B",
+    "-m",
+    "unittest",
+    "-v",
+    "test_ac_support_core.CoreTests.test_new_outer_required_constraint_revalidates_nested_counterexample",
+    "test_ac_support_core.CoreTests.test_inherited_counterexample_cannot_grant_excluded_or_invalid_results",
+    "test_ac_support_core.CoreTests.test_inherited_counterexample_preserves_gaps_and_current_mandatory_order",
+    "test_ac_support_core.CoreTests.test_required_counterexample_does_not_require_contributor_coverage",
+    "test_ac_support_core.CoreTests.test_required_counterexample_exclusions_and_mandatory_precedence",
+    "test_ac_support_core.CoreTests.test_nested_conjunction_cannot_hide_inherited_counterexample",
+    "test_ac_support_core.CoreTests.test_conjunction_declared_two_orders_preserve_failures_and_rf_output",
+    "test_ac_support_core.CoreTests.test_conjunction_stale_is_planned_gap_and_uncovered_is_separate",
+    "test_ac_support_core.CoreTests.test_conjunction_cardinality_conflict_is_gap_not_input_order_winner",
+    "test_ac_support_core.CoreTests.test_conjunction_unqualified_operator_refuses_actual_join",
+    "test_ac_support_effects.WriterTests",
+    "test_ac_support_interfaces.PublicWriterReplayTests",
+    "test_ac_support_effects.ProcessTests.test_actor_side_public_mcp_writer_completes_before_actor_exit",
+    "test_ac_support_effects.PublicRetryTests.test_public_retry_requires_actual_check"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env",
+  "environment": {
+    "PATH": "/bin:/usr/bin",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "TMPDIR": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/code-review-repair-002/implementation-001/tmp",
+    "AC_SUPPORT_EFFECTS_PROOF_ROOT": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/code-review-repair-002/implementation-001/runs/001-focused/effects-custody",
+    "AC_PUBLIC_INTERFACE_TEST_EVIDENCE": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/code-review-repair-002/implementation-001/runs/001-focused/public-custody"
+  },
+  "started_ns": 1792393105916506000,
+  "ended_ns": 1792393115383228000,
+  "returncode": 1,
+  "source_before": {
+    "a_c/build_tenants/graphify/code/ac_support_core.py": "842f3f136478b6948196fdd431f207f236c8c3e6ebb5573503726061c5d7bcc5",
+    "a_c/build_tenants/graphify/code/ac_support_effects.py": "23dfafb2d7177d64287fc22002ec039ecc451d03c864a647f3c2deade7b2145c",
+    "a_c/build_tenants/graphify/test_env/test_ac_support_core.py": "de18ca7ad08823817646793745f0feabc442a7a8d42be97351472dbda0c62042",
+    "a_c/build_tenants/graphify/test_env/test_ac_support_effects.py": "d944ba73369d3c672ba1b830419260f239d8d1bbfdc6558461412ae1f8978dda",
+    "a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py": "597f33aae147fdc0ecc7c85638bf77615a59b856f6ee4ffe65041d1e9b82ef9e"
+  },
+  "source_after": {
+    "a_c/build_tenants/graphify/code/ac_support_core.py": "842f3f136478b6948196fdd431f207f236c8c3e6ebb5573503726061c5d7bcc5",
+    "a_c/build_tenants/graphify/code/ac_support_effects.py": "23dfafb2d7177d64287fc22002ec039ecc451d03c864a647f3c2deade7b2145c",
+    "a_c/build_tenants/graphify/test_env/test_ac_support_core.py": "de18ca7ad08823817646793745f0feabc442a7a8d42be97351472dbda0c62042",
+    "a_c/build_tenants/graphify/test_env/test_ac_support_effects.py": "d944ba73369d3c672ba1b830419260f239d8d1bbfdc6558461412ae1f8978dda",
+    "a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py": "597f33aae147fdc0ecc7c85638bf77615a59b856f6ee4ffe65041d1e9b82ef9e"
+  },
+  "source_fixed": true,
+  "normal_import_checking": false
+}

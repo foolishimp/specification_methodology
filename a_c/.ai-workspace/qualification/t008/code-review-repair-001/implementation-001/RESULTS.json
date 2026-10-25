@@ -1,0 +1,44 @@
+{
+  "actual_provider_or_native_F_P_calls": 0,
+  "final_selected_tests": {
+    "methods": 38,
+    "passed": 38,
+    "path": "runs/004-final-selected",
+    "reported_seconds": "10.745",
+    "returncode": 0,
+    "skipped": 0,
+    "sources_fixed_during_run": true
+  },
+  "final_strict_typing": {
+    "explicit_files": 6,
+    "mode": "--strict with normal imports; fresh external cache",
+    "path": "runs/005-final-strict",
+    "returncode": 0,
+    "sources_fixed_during_run": true
+  },
+  "original_full_tenant_upstream_demo_rerun": false,
+  "prior_runs": [
+    {
+      "path": "runs/001-initial-writer",
+      "result": "10 selected tests passed"
+    },
+    {
+      "path": "runs/002-review-controls",
+      "result": "26 selected tests passed"
+    },
+    {
+      "path": "runs/003-strict-typing",
+      "result": "4 annotation/narrowing errors retained; all corrected in final strict run"
+    }
+  ],
+  "schema": "a_c.bounded-repair-results/1",
+  "scope": "Selected deterministic local controls only; independent code/integrated qualification and acceptance pending",
+  "subject": {
+    "a_c/build_tenants/graphify/code/ac_support.py": "4d41a2373def237136cefe8b186c196c2e4376137c221ae4675c274abed5ad31",
+    "a_c/build_tenants/graphify/code/ac_support_core.py": "5395fd2947157541255168c6a1235136df64e9197d5032b25b31a0f071a4fe74",
+    "a_c/build_tenants/graphify/code/ac_support_effects.py": "36f75671b9dbce14e5f06811e180b662deb635b37921695668337466ace9bf25",
+    "a_c/build_tenants/graphify/test_env/test_ac_support_core.py": "6b1ce2819e0e96aad32fb87feccb3aeaee1cd37a85c91aa4e1b693b9a15dd709",
+    "a_c/build_tenants/graphify/test_env/test_ac_support_effects.py": "4c96735d16f6dd67d24b89fb5a6b5b7bdc376de13d8c98c14b833ce346c0662e",
+    "a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py": "7722ddcbc48ab7dd48e824ccdbec320f30e80dc3b63c0881564ff7ed97ee3450"
+  }
+}

@@ -1,0 +1,51 @@
+1068: Survival. Every known failure (a `falsified` result with its
+1069: counterexample), every planned assessment without a closed result and
+1070: every uncovered obligation is carried with the composite and survives every
+1071: join: combining conjunctions takes the union of known failures and of
+1072: planned assessments without a closed result, and recomputes uncovered
+1073: coverage over the combined obligations. A known failure and a gap of
+1074: either kind survive every join. Common agreement among contributors
+1075: cannot discard a constraint or a material counterexample that only one
+1076: contributor found. A missing, wrong-subject, conflicted or indeterminate
+1077: mandatory result stays unresolved under the declared rule, and aggregate
+1078: satisfied status cannot replace it (P4b, P5).
+1079: 
+1080: Predicates travel. Each component keeps its predicate and domain outcome
+1081: through every join, so an uncertain effect stays distinct from a failure
+1082: and from an undecided claim, and a `satisfied` for one predicate never
+1083: counts toward another: a step's `satisfied` for "a candidate is available"
+1084: never counts toward the candidate's fitness or acceptance.
+1085: 
+1086: Reported value. The conjunction is `satisfied` only when every mandatory
+1087: result is `satisfied` with valid applicable evidence, the declared basis
+1088: relations agree, and the second and third inputs are empty. A composite
+1089: with a material counterexample to a mandatory constraint or an uncovered
+1090: required obligation cannot project success. Where a mandatory result is
+1091: not `satisfied`, the conjunction
+1092: reports a non-satisfied value chosen by its declared rule from those
+1093: returned; no universal order among the non-satisfied values exists, and
+1094: the member or profile that applies the conjunction declares its own in
+1095: its declared rule. Where every mandatory returned result is `satisfied`
+1096: and the declared basis relations disagree, the conjunction reports
+1097: `invalid_basis`, because no coherent composite basis supports the
+1098: composite predicate (§2, Basis); any gaps stay recorded by kind. Where
+1099: every mandatory returned result is `satisfied`, the declared basis
+1100: relations agree and a gap remains, the conjunction reports
+1101: `indeterminate`, because the results it holds cannot decide the composite
+1102: predicate; that value is the conjunction's own, and the gaps stay
+1103: recorded by kind. A `falsified` result that is not mandatory stays in the
+1104: conjunction's record with its predicate and is never discarded. Where
+1105: every mandatory result is `satisfied`, the declared basis relations agree
+1106: and no gap remains, a material counterexample to a mandatory constraint
+1107: falsifies the conjunction whichever contributor found it, and without one
+1108: the conjunction's value is the one its declared rule gives over the
+1109: mandatory results.
+1110: 
+1111: The declared rule. A conjunction declares which results are mandatory; how
+1112: conflict and indeterminacy are handled; which basis relations must agree,
+1113: results on different bases combining only under a declared coherent
+1114: composite basis (§2, Basis); which decision authority owns the
+1115: conjunction; how results that are not mandatory count; and whether any
+1116: result may veto or defer the decision.
+1117: Conjunction does not transfer the semantic authority of a contributing
+1118: evaluation (P6, P4a).

@@ -90,3 +90,9 @@ index is `specification/SOURCE_OWNERS.md`.
 This skill does not itself qualify host behavior or claim acceptance. Discovery
 is tested separately from whether a loaded skill completes the task; report host
 limits and observed failures instead of claiming guaranteed model compliance.
+
+For cross-Product tasks or a required composition-controlled view, route to
+[stdo-tool-operations](../stdo-tool-operations/SKILL.md) and its composition
+reference before relying on edge resolution or an active guard. Keep the exact
+installed method selection; this capability consumes Product-local constraints
+and supported tools, not mutable successor methodology.

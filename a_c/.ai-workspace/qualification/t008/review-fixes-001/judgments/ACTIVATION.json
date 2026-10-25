@@ -1,0 +1,132 @@
+{
+  "activation_id": "review-fixes-001-judgments-worker",
+  "role": "Worker",
+  "delegator": "Root Executive",
+  "timestamp_utc": "2026-10-20T04:29:16.422780+00:00",
+  "owner_instruction": "ok mke the fixes",
+  "grant_source": "Root explicit Worker activation /root/fix_ac_judgments",
+  "outcome": "Repair the two original-return JudgmentRef ingress defects and retain source-bound unit plus ordinary local producer/capture/consumer regression controls.",
+  "checkout": "/Users/jim/src/apps/specification_methodology/a_c",
+  "head": "bfe228511415d346459523cec44e7e8157e2991a",
+  "branch": "main",
+  "basis": {
+    "builder": {
+      "uri": "stdo://releases/v2.5.1-rc.2/",
+      "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782"
+    },
+    "method": {
+      "name": "STDO3.0 Claude RC9",
+      "source_commit": "c2cfa9b908d1722ae3f26c32fa4ece691083bdc3",
+      "custody_commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+      "package": "specification_methodology/v3/build_tenants/claude/",
+      "standards_tree": "98de394b352179c25dfa63b0b59a9b6bdd43632d",
+      "selected_profiles": [
+        "EXECUTIVE_BASELINE.md",
+        "DESIGN_MODULE.md"
+      ],
+      "use": "explicit work-scoped candidate dogfood; not an installed or released basis"
+    },
+    "profile_sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1",
+    "raw_owners": {
+      "README.md": {
+        "sha256": "8047171e730dc4bce556ce28989baf54f8232ff2552a3763447bfe0228258ede",
+        "matches_profile": true
+      },
+      "FOUNDATIONS.md": {
+        "sha256": "fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f",
+        "matches_profile": true
+      },
+      "REFERENCE_FRAME.md": {
+        "sha256": "d64ee5c05aaefac346116c2e43eabf193dd84123f1d461070ecd378ce5e9b551",
+        "matches_profile": true
+      },
+      "ACTIVATION.md": {
+        "sha256": "3bb7594a194950819d6aad65e3938358e8685bbbc2ebf67c0ad720c37bb04487",
+        "matches_profile": true
+      },
+      "EVALUATION.md": {
+        "sha256": "14f8816b1eb9cd146dd58a29bac35ea47a62e4e4b093b20f9892330e44922991",
+        "matches_profile": true
+      },
+      "SPEC_METHOD.md": {
+        "sha256": "b4b8cafae7da0885f4177e9114d5effc21637ed5a44deb31c3791be658a77a24",
+        "matches_profile": true
+      },
+      "PRODUCT_DEFINITION.md": {
+        "sha256": "96e1f26a4f6b60571851a7bd78f5d8c84d09d393de3ebd3b75b4f43ba9158d8d",
+        "matches_profile": true
+      },
+      "TICKETS.md": {
+        "sha256": "8d244a16b11f17a9e1a85ecf8d7e1dfb3686ea79a09b885321727d620659c43e",
+        "matches_profile": true
+      },
+      "ASSURANCE.md": {
+        "sha256": "e33a6e39e1e93d38dbd3ea212d8d9f0d2f44a366a9345fda762d2481c254d0bf",
+        "matches_profile": true
+      },
+      "EXECUTIVE_BASELINE.md": {
+        "sha256": "e50b4ad70451fe84882053bc0dffef6f6c0c806a5dba68ac9933aa79029fb935",
+        "matches_profile": true
+      },
+      "DESIGN_MODULE.md": {
+        "sha256": "9e2642d51d0b024a448fe7910dcb323fb3f3bb2a003ad33c27c39a5dda625220",
+        "matches_profile": true
+      },
+      "AXIOMATIC_CALCULUS.md": {
+        "sha256": "56d0c1ad9889ad8d09b1d1249ad4bae1fb1717af22d01bdf4190b2d0bf71500a",
+        "matches_profile": true
+      }
+    },
+    "operative_how_sha256": "5bbb2dd20b78f016f432f48ed92e9040f500e7b99aaff36c7ed5f0a6b5c4462f",
+    "requirements": [
+      "REQ-AC-FD-004",
+      "REQ-AC-FD-008",
+      "REQ-AC-FD-010",
+      "REQ-AC-FD-012"
+    ]
+  },
+  "triage": {
+    "class": "realization_refactor",
+    "requirements_change": false,
+    "product_change": false,
+    "intent_change": false,
+    "goal_change": false,
+    "design_change": false,
+    "reason": "Restore existing capture bindings and actual performed-evaluation membership in downstream judgment ingress. No new method rule, schema, profile or result algebra."
+  },
+  "write_territory": [
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_core.py",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_core.py",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/review-fixes-001/judgments/**",
+    "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-judgments-8bcbuu85/**"
+  ],
+  "allowed_effects": [
+    "Assigned local code/test edits",
+    "New proof and preimage records",
+    "Registered deterministic local fixture processes entirely within owned temporary root",
+    "Focused tests and normal-import strict typing with bytecode disabled and temporary/cache redirects"
+  ],
+  "excluded_effects": [
+    "Any other source, shared helper, effects test, document, Product Definition, profile or frozen artifact write",
+    "Git mutations",
+    "Native/model/vendor/F_P/network calls",
+    "Package or global configuration changes",
+    "Full test suite"
+  ],
+  "source_preimages": {
+    "build_tenants/graphify/code/ac_support_core.py": "842f3f136478b6948196fdd431f207f236c8c3e6ebb5573503726061c5d7bcc5",
+    "build_tenants/graphify/test_env/test_ac_support_core.py": "c2ff9be121ee7ccdf6974e257c0d3f0e86b6f92c84a7020d5f2b1f632cd0530f",
+    "build_tenants/graphify/test_env/test_ac_support_interfaces.py": "597f33aae147fdc0ecc7c85638bf77615a59b856f6ee4ffe65041d1e9b82ef9e"
+  },
+  "temporary_root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-judgments-8bcbuu85",
+  "expected_controls": {
+    "wrong_activation": "Authenticated original with material activation binding gap supplies no condition value; e1 remains unresolved and dependency B retained.",
+    "nested_not_performed": "Nested seven-key evaluation-shaped domain JSON stays data; only exact actual top-level evaluations[i] pointers supply judgment.",
+    "valid_satisfied": "Direct top-level authenticated bound satisfied evaluation preserves edge and resolved condition.",
+    "valid_falsified": "Direct top-level authenticated bound falsified evaluation excludes declared edge.",
+    "missing_judgment": "No fabricated verdict; edge and dependency retained with named missing judgment gap.",
+    "unrelated_history_gap": "Known positive producer provenance remains eligible when only unrelated/incomplete-history gap exists."
+  },
+  "verification_boundary": "Controlled deterministic test judgments are assertions; actual CLI invocations, output preservation and capture/consumer results are observations. No semantic acceptance, actor usability, Product release or whole-calculus qualification."
+}

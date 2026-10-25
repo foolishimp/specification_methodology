@@ -1,0 +1,217 @@
+{
+  "timestamp": "2026-10-25T13:54:07.616247+00:00",
+  "source_archive_sha256": "bef71872f9c35520cdf37f032ba9072a4f7c26baefa292b72125948b0e4f27ec",
+  "fixture_changes": "none; only extracted physical root and candidate CLI invocation changed",
+  "records": [
+    {
+      "case": "control",
+      "command": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "-m",
+        "stdo_toolchain.cli",
+        "--store",
+        "/Users/jim/Library/Application Support/STDO",
+        "fleet",
+        "verify",
+        "--root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-replay-rcfnm8h3/fixtures/control"
+      ],
+      "exit_code": 0,
+      "valid": true,
+      "stderr": "",
+      "definitions": [
+        {
+          "definition_id": "urn:stdo:product-definition:composition-probe-consumer",
+          "valid": true,
+          "failures": [],
+          "edge_failures": [
+            []
+          ]
+        },
+        {
+          "definition_id": "urn:stdo:product-definition:composition-probe-provider",
+          "valid": true,
+          "failures": [],
+          "edge_failures": []
+        }
+      ]
+    },
+    {
+      "case": "wrong_target_id",
+      "command": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "-m",
+        "stdo_toolchain.cli",
+        "--store",
+        "/Users/jim/Library/Application Support/STDO",
+        "fleet",
+        "verify",
+        "--root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-replay-rcfnm8h3/fixtures/wrong_target_id"
+      ],
+      "exit_code": 1,
+      "valid": false,
+      "stderr": "",
+      "definitions": [
+        {
+          "definition_id": "urn:stdo:product-definition:composition-probe-consumer",
+          "valid": false,
+          "failures": [
+            "composition/0: Expected 'urn:stdo:product-definition:composition-probe-absent', found 'urn:stdo:product-definition:composition-probe-provider' at /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-replay-rcfnm8h3/fixtures/wrong_target_id/provider/stdo_provider.json"
+          ],
+          "edge_failures": [
+            [
+              {
+                "code": "target_identity_mismatch",
+                "field": "product_definition",
+                "message": "Expected 'urn:stdo:product-definition:composition-probe-absent', found 'urn:stdo:product-definition:composition-probe-provider' at /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-replay-rcfnm8h3/fixtures/wrong_target_id/provider/stdo_provider.json"
+              }
+            ]
+          ]
+        },
+        {
+          "definition_id": "urn:stdo:product-definition:composition-probe-provider",
+          "valid": true,
+          "failures": [],
+          "edge_failures": []
+        }
+      ]
+    },
+    {
+      "case": "missing_definition",
+      "command": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "-m",
+        "stdo_toolchain.cli",
+        "--store",
+        "/Users/jim/Library/Application Support/STDO",
+        "fleet",
+        "verify",
+        "--root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-replay-rcfnm8h3/fixtures/missing_definition"
+      ],
+      "exit_code": 1,
+      "valid": false,
+      "stderr": "",
+      "definitions": [
+        {
+          "definition_id": "urn:stdo:product-definition:composition-probe-consumer",
+          "valid": false,
+          "failures": [
+            "composition/0: Reference does not resolve: /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-replay-rcfnm8h3/fixtures/missing_definition/consumer/../absent/stdo_absent.json: [Errno 2] No such file or directory: '/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-replay-rcfnm8h3/fixtures/missing_definition/absent'"
+          ],
+          "edge_failures": [
+            [
+              {
+                "code": "unresolved_reference",
+                "field": "product_definition",
+                "message": "Reference does not resolve: /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-replay-rcfnm8h3/fixtures/missing_definition/consumer/../absent/stdo_absent.json: [Errno 2] No such file or directory: '/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-replay-rcfnm8h3/fixtures/missing_definition/absent'",
+                "reference": "../absent/stdo_absent.json",
+                "status": "failed"
+              }
+            ]
+          ]
+        },
+        {
+          "definition_id": "urn:stdo:product-definition:composition-probe-provider",
+          "valid": true,
+          "failures": [],
+          "edge_failures": []
+        }
+      ]
+    },
+    {
+      "case": "missing_anchor",
+      "command": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "-m",
+        "stdo_toolchain.cli",
+        "--store",
+        "/Users/jim/Library/Application Support/STDO",
+        "fleet",
+        "verify",
+        "--root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-replay-rcfnm8h3/fixtures/missing_anchor"
+      ],
+      "exit_code": 1,
+      "valid": false,
+      "stderr": "",
+      "definitions": [
+        {
+          "definition_id": "urn:stdo:product-definition:composition-probe-consumer",
+          "valid": false,
+          "failures": [
+            "composition/0: Fragment does not resolve: /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-replay-rcfnm8h3/fixtures/missing_anchor/consumer/RELATION.md#no-such-anchor"
+          ],
+          "edge_failures": [
+            [
+              {
+                "code": "missing_fragment",
+                "field": "relation",
+                "message": "Fragment does not resolve: /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-replay-rcfnm8h3/fixtures/missing_anchor/consumer/RELATION.md#no-such-anchor",
+                "reference": "./RELATION.md#no-such-anchor",
+                "status": "failed"
+              }
+            ]
+          ]
+        },
+        {
+          "definition_id": "urn:stdo:product-definition:composition-probe-provider",
+          "valid": true,
+          "failures": [],
+          "edge_failures": []
+        }
+      ]
+    },
+    {
+      "case": "missing_contract",
+      "command": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "-m",
+        "stdo_toolchain.cli",
+        "--store",
+        "/Users/jim/Library/Application Support/STDO",
+        "fleet",
+        "verify",
+        "--root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-replay-rcfnm8h3/fixtures/missing_contract"
+      ],
+      "exit_code": 1,
+      "valid": false,
+      "stderr": "",
+      "definitions": [
+        {
+          "definition_id": "urn:stdo:product-definition:composition-probe-consumer",
+          "valid": false,
+          "failures": [
+            "composition/0: Reference does not resolve: /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-replay-rcfnm8h3/fixtures/missing_contract/consumer/../provider/ABSENT_CONTRACT.md: [Errno 2] No such file or directory: '/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-replay-rcfnm8h3/fixtures/missing_contract/provider/ABSENT_CONTRACT.md'"
+          ],
+          "edge_failures": [
+            [
+              {
+                "code": "unresolved_reference",
+                "field": "contracts/0",
+                "message": "Reference does not resolve: /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-replay-rcfnm8h3/fixtures/missing_contract/consumer/../provider/ABSENT_CONTRACT.md: [Errno 2] No such file or directory: '/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-composition-replay-rcfnm8h3/fixtures/missing_contract/provider/ABSENT_CONTRACT.md'",
+                "reference": "../provider/ABSENT_CONTRACT.md",
+                "status": "failed"
+              }
+            ]
+          ]
+        },
+        {
+          "definition_id": "urn:stdo:product-definition:composition-probe-provider",
+          "valid": true,
+          "failures": [],
+          "edge_failures": []
+        }
+      ]
+    }
+  ],
+  "pass": true,
+  "scope": "Actual candidate CLI mechanical resolution only; no authority or semantic acceptance"
+}

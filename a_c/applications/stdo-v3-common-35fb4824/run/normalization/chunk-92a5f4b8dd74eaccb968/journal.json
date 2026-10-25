@@ -1,0 +1,523 @@
+{
+  "changes": [],
+  "chunk": "chunk-92a5f4b8dd74eaccb968",
+  "derived_answer_sha256": "e12bfe81e7cf9c6b65ce2ce49dfbfc964d718373b29376786d922ed33366d418",
+  "derived_non_grounding_sha256": "106d9560cb525e6052e2e2705a8192014cb073cb138670fba4a8a611a7356430",
+  "fd_elapsed_seconds": 0.07702587498351932,
+  "non_grounding_sha256": "106d9560cb525e6052e2e2705a8192014cb073cb138670fba4a8a611a7356430",
+  "normalizer_sha256": "f850e7ceecd945455891e6cc941fc3a86c943ed27bbe74d86b0248169d9cf682",
+  "original_evidence": {
+    "chunk_sha256": "5c633f7fd3919c2c0efdcef8183f3233c7e4da93d753034dd4b9dd2844927bd9",
+    "original_attempt": "actors/author/chunk-92a5f4b8dd74eaccb968/attempt-001",
+    "original_recorded_failure": null,
+    "original_status": "completed",
+    "original_strict_validation_error": null,
+    "original_usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 78410,
+        "output_tokens": 49702,
+        "reasoning_output_tokens": 1034
+      }
+    ],
+    "pins": {
+      "actor-settings.json": "f3b748facc38547ccdceeb05350b9e75b9afb8e30b009a63f916ea374f7e40ed",
+      "actors/author/chunk-92a5f4b8dd74eaccb968/attempt-001/answer.json": "595b5182709541fc1cc8c762cee04f47f97e4378f96c0fb80cbf7d0698eb8a57",
+      "actors/author/chunk-92a5f4b8dd74eaccb968/attempt-001/events.jsonl": "1a634ba83f015cc96984fa5a738b34596d488671f23fa0f83b54d6a65de894d9",
+      "actors/author/chunk-92a5f4b8dd74eaccb968/attempt-001/invocation.json": "121682ab35411ef87c67ecc9baed43d5d7f34bdb25d0b2aef801fe73ef91f51c",
+      "actors/author/chunk-92a5f4b8dd74eaccb968/attempt-001/prompt.txt": "40378bae38702d0f8953f832eb7440e99e6f3829b993bbae166b10bb8fd438bd",
+      "actors/author/chunk-92a5f4b8dd74eaccb968/attempt-001/result.json": "211c0d3a2329693742ab98d5c2d503993776cccff4006bad3ab63f274a0be8a0",
+      "actors/author/chunk-92a5f4b8dd74eaccb968/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actors/author/chunk-92a5f4b8dd74eaccb968/attempt-001/usage.json": "2d58fc755cdd10e902371530b73039d5ff13f61a247c2a6ba051658242b67e1d",
+      "actors/author/chunk-92a5f4b8dd74eaccb968/attempt-001/validation.json": "f9f4b198a05c01a41e674a8b9c789d7948544aef4af6a82fd7ee5550dd59ea6c",
+      "chunks.json": "2ce228fa4f647bcb275ff6653aff1a20eca792c93037f9d7959080668129d073",
+      "plan.json": "31a88bb55aa025cb95ba4f7710bd8559b5e0e5f4976b55388cdac1e1cf8337cf",
+      "source-manifest.json": "dbf32e7f99eb7228ca361ec02f44227c05e02bb6bc447d1dd38255cd3ca4a4d4"
+    },
+    "source_sections": [
+      {
+        "end_line": 7,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/claude-skills/refresh/SKILL.md#preamble",
+        "path": "plugins/spec/claude-skills/refresh/SKILL.md",
+        "sha256": "9865d3589f2240c6879adea53dba626bff041961aeff552d93e463afd4df8a51",
+        "start_line": 1
+      },
+      {
+        "end_line": 15,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/claude-skills/refresh/SKILL.md#STDO%20Refresh%20For%20Claude",
+        "path": "plugins/spec/claude-skills/refresh/SKILL.md",
+        "sha256": "133e3313031df3e966bddae95a5cd42bf9731ab9455d55cce509f12a8b90fae4",
+        "start_line": 8
+      },
+      {
+        "end_line": 14,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/references/GETTING_STARTED.md#Using%20STDO",
+        "path": "plugins/spec/references/GETTING_STARTED.md",
+        "sha256": "9f9ef30c0c57e328210503b052528b7b3db41adb63c6ba91a1483b66a9ef4916",
+        "start_line": 1
+      },
+      {
+        "end_line": 23,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/references/GETTING_STARTED.md#Using%20STDO%2FContents",
+        "path": "plugins/spec/references/GETTING_STARTED.md",
+        "sha256": "840b698102b26590c3d76d1e854ae380fee13cfe816e05055efaa4fff29dcc4d",
+        "start_line": 15
+      },
+      {
+        "end_line": 53,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/references/GETTING_STARTED.md#Using%20STDO%2FThe%20Operating%20Loop",
+        "path": "plugins/spec/references/GETTING_STARTED.md",
+        "sha256": "57e150246660eb2020f61aa60bcdc96dca7b6cfdfaca195b0634c18d6dad01ac",
+        "start_line": 24
+      },
+      {
+        "end_line": 55,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/references/GETTING_STARTED.md#Using%20STDO%2F1.%20Get%20Ready%20To%20Work",
+        "path": "plugins/spec/references/GETTING_STARTED.md",
+        "sha256": "cd5b743fbd26a38b131403b08fd33cd752e9fb94c535e59ba372964c690d6fdd",
+        "start_line": 54
+      },
+      {
+        "end_line": 109,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/references/GETTING_STARTED.md#Using%20STDO%2F1.%20Get%20Ready%20To%20Work%2FExisting%20STDO-Governed%20Project",
+        "path": "plugins/spec/references/GETTING_STARTED.md",
+        "sha256": "48e5b111337943c79a6f2ddbc67c01ad80eb9a58e2153edd2161c16b83db9a13",
+        "start_line": 56
+      },
+      {
+        "end_line": 128,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/references/GETTING_STARTED.md#Using%20STDO%2F1.%20Get%20Ready%20To%20Work%2FVerify%20The%20Host%27s%20Plugin%20Copy",
+        "path": "plugins/spec/references/GETTING_STARTED.md",
+        "sha256": "4ca0fe8b65207f798b94ab4046aca583e2a260d3551086f72d261e024ba47521",
+        "start_line": 110
+      },
+      {
+        "end_line": 337,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/references/GETTING_STARTED.md#Using%20STDO%2F1.%20Get%20Ready%20To%20Work%2FNew%20Project",
+        "path": "plugins/spec/references/GETTING_STARTED.md",
+        "sha256": "04339861bbe67c043b45a5fa0c456ebb7da531da75a372b587ae4937232aa4e0",
+        "start_line": 129
+      },
+      {
+        "end_line": 377,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/references/GETTING_STARTED.md#Using%20STDO%2F1.%20Get%20Ready%20To%20Work%2FInstall%20The%20Shared%20Skills",
+        "path": "plugins/spec/references/GETTING_STARTED.md",
+        "sha256": "d9e34c0f36b609af0332213ae1202a1c0859e3bbb9d5f508227a694085c16b50",
+        "start_line": 338
+      },
+      {
+        "end_line": 400,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/references/GETTING_STARTED.md#Using%20STDO%2F2.%20Iterate%20Requirements",
+        "path": "plugins/spec/references/GETTING_STARTED.md",
+        "sha256": "a90f9e0494573530a4c5471579a4b1066cbba36985f6fdce90dfa3ec0a1fc31b",
+        "start_line": 378
+      },
+      {
+        "end_line": 455,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/references/GETTING_STARTED.md#Using%20STDO%2F2.%20Iterate%20Requirements%2FFind%20The%20First%20Changed%20Layer",
+        "path": "plugins/spec/references/GETTING_STARTED.md",
+        "sha256": "8c6664cb81982f1d99eabd6b0fe0d069136157f71c2ed34965f1b32c7ab16ca2",
+        "start_line": 401
+      },
+      {
+        "end_line": 474,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/references/GETTING_STARTED.md#Using%20STDO%2F2.%20Iterate%20Requirements%2FChange%20Requirement%20Truth",
+        "path": "plugins/spec/references/GETTING_STARTED.md",
+        "sha256": "115291a5f686e2aeff962b139f45ebb724c310030a08a3bd61a60866e1cef3e2",
+        "start_line": 456
+      },
+      {
+        "end_line": 514,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/references/GETTING_STARTED.md#Using%20STDO%2F3.%20Start%20Code%20Development%20And%20Testing",
+        "path": "plugins/spec/references/GETTING_STARTED.md",
+        "sha256": "3bdf5cec0a7fc533356c4f7b2fa0af8ce71612175ba705cd29256204378a7adf",
+        "start_line": 475
+      },
+      {
+        "end_line": 550,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/references/GETTING_STARTED.md#Using%20STDO%2F3.%20Start%20Code%20Development%20And%20Testing%2FDerive%20Tests%20From%20Authority",
+        "path": "plugins/spec/references/GETTING_STARTED.md",
+        "sha256": "1a65602c14162fa0505fead50a397dc2ed6033ba08b842bf19b6bfd5415f1d35",
+        "start_line": 515
+      },
+      {
+        "end_line": 613,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/references/GETTING_STARTED.md#Using%20STDO%2F4.%20Monitor%20And%20Help%20Triage",
+        "path": "plugins/spec/references/GETTING_STARTED.md",
+        "sha256": "6effe9c0fe0766277fa96c97673a4a4a17995ea7d4b484f1c84daa145f285969",
+        "start_line": 551
+      },
+      {
+        "end_line": 628,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/references/GETTING_STARTED.md#Using%20STDO%2FCommon%20Stops",
+        "path": "plugins/spec/references/GETTING_STARTED.md",
+        "sha256": "10d4665a2562d0b937368408b81a425292003203835d4e31ee7b87bd02f38602",
+        "start_line": 614
+      },
+      {
+        "end_line": 655,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/references/GETTING_STARTED.md#Using%20STDO%2FOwning%20References",
+        "path": "plugins/spec/references/GETTING_STARTED.md",
+        "sha256": "cfa4e37fd2243d7a25dc624ba2fe062453bbb4045f4c1e66773c89c9921d56d5",
+        "start_line": 629
+      },
+      {
+        "end_line": 6,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/references/PRODUCT_BASIS.md#Product%20Basis%20Selection",
+        "path": "plugins/spec/references/PRODUCT_BASIS.md",
+        "sha256": "4c3ec2fb053a2672180c68d712ea6368ae9a30935214f7a4d1c29b6a845c01bd",
+        "start_line": 1
+      },
+      {
+        "end_line": 42,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/references/PRODUCT_BASIS.md#Product%20Basis%20Selection%2FProcedure",
+        "path": "plugins/spec/references/PRODUCT_BASIS.md",
+        "sha256": "cf47175239ce3b90a105b10324b9de5803a60e1288f4f70c951602e73924d0d4",
+        "start_line": 7
+      },
+      {
+        "end_line": 74,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/references/PRODUCT_BASIS.md#Product%20Basis%20Selection%2FRead%20A%20Member%20From%20That%20Basis",
+        "path": "plugins/spec/references/PRODUCT_BASIS.md",
+        "sha256": "99b097b4377d82253cbfae7cd4ab9ec44f7c83ae4e8ae199b23735a4a725f8ab",
+        "start_line": 43
+      },
+      {
+        "end_line": 6,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/references/REFRESH.md#STDO%20Refresh%20Procedure",
+        "path": "plugins/spec/references/REFRESH.md",
+        "sha256": "0d705273e69240eff00fb00b03b575de85717c8cc1e60752b1df7fd6a7e8f545",
+        "start_line": 1
+      },
+      {
+        "end_line": 19,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/references/REFRESH.md#STDO%20Refresh%20Procedure%2FInputs",
+        "path": "plugins/spec/references/REFRESH.md",
+        "sha256": "c299c0456649d45e07b0a40cfe6d105ae6b16d7a379575e4b65caa1e193f48ef",
+        "start_line": 7
+      },
+      {
+        "end_line": 45,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/references/REFRESH.md#STDO%20Refresh%20Procedure%2FRegistry",
+        "path": "plugins/spec/references/REFRESH.md",
+        "sha256": "5d38d8b0cd5d43824000108960fd12634f25152c487ba13b4ece01344292c91b",
+        "start_line": 20
+      },
+      {
+        "end_line": 73,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/references/REFRESH.md#STDO%20Refresh%20Procedure%2FOwner%20And%20Task%20Entries",
+        "path": "plugins/spec/references/REFRESH.md",
+        "sha256": "77dc314d206c4ebe87c48af9c8222b82b73057e7a8f4c82df8b84acea48c3fed",
+        "start_line": 46
+      },
+      {
+        "end_line": 102,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/references/REFRESH.md#STDO%20Refresh%20Procedure%2FProcedure",
+        "path": "plugins/spec/references/REFRESH.md",
+        "sha256": "88937ff0c5721d5ec19379941f53a0a5ee58d1984670f404953189134ebd2fe1",
+        "start_line": 74
+      },
+      {
+        "end_line": 5,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-help/SKILL.md#preamble",
+        "path": "plugins/spec/skills/stdo-help/SKILL.md",
+        "sha256": "0e85d2ed131f84eeceef7dd2c121b997b90334e4ba9d6a985ec9fb2fe790a065",
+        "start_line": 1
+      },
+      {
+        "end_line": 10,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-help/SKILL.md#STDO%20Help",
+        "path": "plugins/spec/skills/stdo-help/SKILL.md",
+        "sha256": "87d7a28ec82f38de1b1bb8d2b9cf822b2b6b88a2cf7cb85cd2d2664597418372",
+        "start_line": 6
+      },
+      {
+        "end_line": 18,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-help/SKILL.md#STDO%20Help%2FSelect%20The%20Product%20Basis",
+        "path": "plugins/spec/skills/stdo-help/SKILL.md",
+        "sha256": "f1f125b01b2f5400ce8160551aaccae22ea0ffc15c344d0bd622c93c3b1944aa",
+        "start_line": 11
+      },
+      {
+        "end_line": 28,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-help/SKILL.md#STDO%20Help%2FRoute",
+        "path": "plugins/spec/skills/stdo-help/SKILL.md",
+        "sha256": "b5ff2d903690d63d71dd82603bc3d7a3e7852a321361fb384843ebd42a234e7c",
+        "start_line": 19
+      },
+      {
+        "end_line": 57,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-help/SKILL.md#STDO%20Help%2FEstablish%20The%20Basis",
+        "path": "plugins/spec/skills/stdo-help/SKILL.md",
+        "sha256": "08f9871b1f7e74c9be1fa95ec6231138495771f3c15ffa0dd752b0e911f02f7b",
+        "start_line": 29
+      },
+      {
+        "end_line": 65,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-help/SKILL.md#STDO%20Help%2FReturn",
+        "path": "plugins/spec/skills/stdo-help/SKILL.md",
+        "sha256": "0f66ecff1c47213f372ec176003d28e15b8ea185add25102bcd05f9f65ee0065",
+        "start_line": 58
+      },
+      {
+        "end_line": 5,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-review/SKILL.md#preamble",
+        "path": "plugins/spec/skills/stdo-review/SKILL.md",
+        "sha256": "6fa37be9812b7335a012de57810ac9105ec6f3596c745ac5b1ff7620a49fb408",
+        "start_line": 1
+      },
+      {
+        "end_line": 10,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-review/SKILL.md#STDO%20Review",
+        "path": "plugins/spec/skills/stdo-review/SKILL.md",
+        "sha256": "934afc911baca4b1a5398c3e1fa66916534b72cdec30a55b46061c4cf8217d04",
+        "start_line": 6
+      },
+      {
+        "end_line": 17,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-review/SKILL.md#STDO%20Review%2FSelect%20The%20Product%20Basis",
+        "path": "plugins/spec/skills/stdo-review/SKILL.md",
+        "sha256": "c7bc90027e1a5f94dae6516a49edb2aacab3f251055e0b1770baf062b4afdeb6",
+        "start_line": 11
+      },
+      {
+        "end_line": 41,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-review/SKILL.md#STDO%20Review%2FActivate%20The%20Review",
+        "path": "plugins/spec/skills/stdo-review/SKILL.md",
+        "sha256": "31ba4569c7d2fb9eaee4bd460f337c28e8c956c7b2bfe3077618b126e69eb245",
+        "start_line": 18
+      },
+      {
+        "end_line": 80,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-review/SKILL.md#STDO%20Review%2FEvaluate",
+        "path": "plugins/spec/skills/stdo-review/SKILL.md",
+        "sha256": "8fb2eaad14c21909d43f82bc9478165993b0b50338fc0b6c563534e1bcdf2e3f",
+        "start_line": 42
+      },
+      {
+        "end_line": 91,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-review/SKILL.md#STDO%20Review%2FReturn",
+        "path": "plugins/spec/skills/stdo-review/SKILL.md",
+        "sha256": "0ba784369980f8a9281a96f89620fce30b7f28b416a9b60a60999c4a24677fe8",
+        "start_line": 81
+      },
+      {
+        "end_line": 5,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-status/SKILL.md#preamble",
+        "path": "plugins/spec/skills/stdo-status/SKILL.md",
+        "sha256": "9ec2ce69b75fb651e4fd345e03026933dfacc1d923ee9d1c21a5a694f800331c",
+        "start_line": 1
+      },
+      {
+        "end_line": 11,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-status/SKILL.md#STDO%20Status",
+        "path": "plugins/spec/skills/stdo-status/SKILL.md",
+        "sha256": "c79009f89d77c22246b03260443b6f2b1527ae742da4fb120336e46c39242a56",
+        "start_line": 6
+      },
+      {
+        "end_line": 18,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-status/SKILL.md#STDO%20Status%2FSelect%20The%20Product%20Basis",
+        "path": "plugins/spec/skills/stdo-status/SKILL.md",
+        "sha256": "0f0564bc08814ed3e5c9c1e916ea2b6ad9ce6de2aba4a07e894501956083ae01",
+        "start_line": 12
+      },
+      {
+        "end_line": 63,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-status/SKILL.md#STDO%20Status%2FProcedure",
+        "path": "plugins/spec/skills/stdo-status/SKILL.md",
+        "sha256": "fcbfc34c26f91e445238bbd79a04e1ca0b1a7f2ba8feca4818f629273939107a",
+        "start_line": 19
+      },
+      {
+        "end_line": 71,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-status/SKILL.md#STDO%20Status%2FReturn",
+        "path": "plugins/spec/skills/stdo-status/SKILL.md",
+        "sha256": "1df8858963d555236b57b934b1d81f6622e2ceed50a3678bc1966b38f4e1d013",
+        "start_line": 64
+      },
+      {
+        "end_line": 5,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-ticket/SKILL.md#preamble",
+        "path": "plugins/spec/skills/stdo-ticket/SKILL.md",
+        "sha256": "64f4cab395634710298bb1d7a2ec3d10cbcd853da04ea22f8693727b02237c36",
+        "start_line": 1
+      },
+      {
+        "end_line": 9,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-ticket/SKILL.md#STDO%20Ticket",
+        "path": "plugins/spec/skills/stdo-ticket/SKILL.md",
+        "sha256": "35859a30534654a61788004813c32678d080fe1a7b047228a178db42097b372f",
+        "start_line": 6
+      },
+      {
+        "end_line": 16,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-ticket/SKILL.md#STDO%20Ticket%2FSelect%20The%20Product%20Basis",
+        "path": "plugins/spec/skills/stdo-ticket/SKILL.md",
+        "sha256": "8f3ff192617888c1713236a8d18b524bf9ae28be89fe4d5dd37d9e3c28123b46",
+        "start_line": 10
+      },
+      {
+        "end_line": 82,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-ticket/SKILL.md#STDO%20Ticket%2FProcedure",
+        "path": "plugins/spec/skills/stdo-ticket/SKILL.md",
+        "sha256": "b06866b7102cadbc2790a1712be1fe8f78b48a3f80a89e811f46c8d27e041b99",
+        "start_line": 17
+      },
+      {
+        "end_line": 89,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-ticket/SKILL.md#STDO%20Ticket%2FReturn",
+        "path": "plugins/spec/skills/stdo-ticket/SKILL.md",
+        "sha256": "7e45e8d928dd0aae79aeff13f22b4a0080e47c0009c799ca343e18b8383ee581",
+        "start_line": 83
+      },
+      {
+        "end_line": 5,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-work/SKILL.md#preamble",
+        "path": "plugins/spec/skills/stdo-work/SKILL.md",
+        "sha256": "8aa907df2da1a7f1558fdbfc0fe235a16df343da3a12dfe20dd38170fb97f13e",
+        "start_line": 1
+      },
+      {
+        "end_line": 10,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-work/SKILL.md#STDO%20Work",
+        "path": "plugins/spec/skills/stdo-work/SKILL.md",
+        "sha256": "63bd73cdb1f083f34d7b132a10e451eb5250781367e548342861d93cd4dbc390",
+        "start_line": 6
+      },
+      {
+        "end_line": 17,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-work/SKILL.md#STDO%20Work%2FSelect%20The%20Product%20Basis",
+        "path": "plugins/spec/skills/stdo-work/SKILL.md",
+        "sha256": "784f948d9a3f83970be88673f6ac9db6ea4da94c86f265fd54ecc47cae5a30e0",
+        "start_line": 11
+      },
+      {
+        "end_line": 31,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-work/SKILL.md#STDO%20Work%2FAcquire%20The%20Deciding%20Owners",
+        "path": "plugins/spec/skills/stdo-work/SKILL.md",
+        "sha256": "72db2a7bb0e52d5a8920cc977d8fc99925f0c6970496fbfaffd629441a1e5061",
+        "start_line": 18
+      },
+      {
+        "end_line": 55,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-work/SKILL.md#STDO%20Work%2FClassify%20From%20The%20Available%20Evidence",
+        "path": "plugins/spec/skills/stdo-work/SKILL.md",
+        "sha256": "94022fe45a11f6b82ca88304da32dc29f280f64b1c39b8385a20d437dccb387c",
+        "start_line": 32
+      },
+      {
+        "end_line": 108,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-work/SKILL.md#STDO%20Work%2FEstablish%20The%20Work%20Basis",
+        "path": "plugins/spec/skills/stdo-work/SKILL.md",
+        "sha256": "a76c88ee8b53a909a82829e31f8087d7894b118d58dd40586be7fe076a059900",
+        "start_line": 56
+      },
+      {
+        "end_line": 186,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-work/SKILL.md#STDO%20Work%2FConstruct%20And%20Prove",
+        "path": "plugins/spec/skills/stdo-work/SKILL.md",
+        "sha256": "4e93c65a7ab6e807891bbea357ab9387d5476df98c74dbaa103e3e52327b5220",
+        "start_line": 109
+      },
+      {
+        "end_line": 193,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/plugins/spec/skills/stdo-work/SKILL.md#STDO%20Work%2FReturn",
+        "path": "plugins/spec/skills/stdo-work/SKILL.md",
+        "sha256": "dac03022d9cc6d6eae534332d51cc5f5a88d2bb3c0fe0860324bf2a1abcf07ac",
+        "start_line": 187
+      },
+      {
+        "end_line": 26,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION",
+        "path": "standards/ACTIVATION.md",
+        "sha256": "f79aec494deccc95ecb80028575e3159ebbcac1a3434a7ee59189f4844b5681b",
+        "start_line": 1
+      },
+      {
+        "end_line": 115,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step",
+        "path": "standards/ACTIVATION.md",
+        "sha256": "0583a3fba1a86d47d7d17a541849dab407170413d47f91a4be6d5ddabbaf1c3c",
+        "start_line": 27
+      },
+      {
+        "end_line": 198,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FTransitions",
+        "path": "standards/ACTIVATION.md",
+        "sha256": "684810215ecf96d2e471f20b9cbae7e44bb33be33937bd0a515560335418eef3",
+        "start_line": 116
+      },
+      {
+        "end_line": 352,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FConstruction%20relation",
+        "path": "standards/ACTIVATION.md",
+        "sha256": "6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da",
+        "start_line": 199
+      },
+      {
+        "end_line": 390,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FIntake",
+        "path": "standards/ACTIVATION.md",
+        "sha256": "7f6e6e2ca37cd177cdd23d13dbf025cb6db5f411e256e9463a9a9912db809354",
+        "start_line": 353
+      },
+      {
+        "end_line": 401,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FExecution%20unit",
+        "path": "standards/ACTIVATION.md",
+        "sha256": "a5d9d74edbb898eda4ce8b6feef639486c96f1a7b834a1f527558dff623a568b",
+        "start_line": 391
+      },
+      {
+        "end_line": 438,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FAdmission",
+        "path": "standards/ACTIVATION.md",
+        "sha256": "e85c6fdddd14033688ae2b8285bf4736c055b62ed6d8e5010d69badfec72948b",
+        "start_line": 402
+      },
+      {
+        "end_line": 488,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FApplicability",
+        "path": "standards/ACTIVATION.md",
+        "sha256": "caf4dabcdb61ebf51e883db72e68472a52a88324eb4c57f4d140b8a35d272614",
+        "start_line": 439
+      },
+      {
+        "end_line": 496,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FOutput",
+        "path": "standards/ACTIVATION.md",
+        "sha256": "86500aae9bd210063a4f884bc042c103f65155591b4458cc679f25f7d2935313",
+        "start_line": 489
+      },
+      {
+        "end_line": 618,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FConfiguration",
+        "path": "standards/ACTIVATION.md",
+        "sha256": "ec403de34eac27e779d3208d4365357c011c307d2e878ae79597c77549a13bd8",
+        "start_line": 497
+      }
+    ]
+  },
+  "policy": {
+    "claim": "F_D source re-entry normalization only; no semantic rewriting, completeness judgment, new F_P usage or semantic acceptance.",
+    "equivalence": "Collapse each maximal Unicode whitespace run to one ASCII space; strip outer whitespace only. Preserve every non-whitespace character, case, punctuation and inter-character whitespace boundary.",
+    "id": "a_c.grounding.unique-whitespace-runs/1",
+    "scope": "Only quote/start_line/end_line inside the five known grounding arrays; section_id and all other fields remain unchanged.",
+    "uniqueness": "Exactly one normalized occurrence in the same supplied source section, including coordinate-only repairs. Already strict-valid anchors are unchanged without a recovery claim."
+  },
+  "policy_sha256": "6242bffb75d652b8826fb859651f0967631f727da30d7a3980d0604dc0ad67c4",
+  "profile": "ac.generation.grounding-normalization/1",
+  "selected_original_attempt": "actors/author/chunk-92a5f4b8dd74eaccb968/attempt-001",
+  "status": "validated_original",
+  "unverified_original_pins": {
+    "actors/author/chunk-92a5f4b8dd74eaccb968/attempt-001/answer.json": "595b5182709541fc1cc8c762cee04f47f97e4378f96c0fb80cbf7d0698eb8a57",
+    "actors/author/chunk-92a5f4b8dd74eaccb968/attempt-001/events.jsonl": "1a634ba83f015cc96984fa5a738b34596d488671f23fa0f83b54d6a65de894d9",
+    "actors/author/chunk-92a5f4b8dd74eaccb968/attempt-001/invocation.json": "121682ab35411ef87c67ecc9baed43d5d7f34bdb25d0b2aef801fe73ef91f51c",
+    "actors/author/chunk-92a5f4b8dd74eaccb968/attempt-001/prompt.txt": "40378bae38702d0f8953f832eb7440e99e6f3829b993bbae166b10bb8fd438bd",
+    "actors/author/chunk-92a5f4b8dd74eaccb968/attempt-001/result.json": "211c0d3a2329693742ab98d5c2d503993776cccff4006bad3ab63f274a0be8a0",
+    "actors/author/chunk-92a5f4b8dd74eaccb968/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "actors/author/chunk-92a5f4b8dd74eaccb968/attempt-001/usage.json": "2d58fc755cdd10e902371530b73039d5ff13f61a247c2a6ba051658242b67e1d"
+  }
+}

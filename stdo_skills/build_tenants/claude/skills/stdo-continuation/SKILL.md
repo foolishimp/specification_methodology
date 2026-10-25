@@ -53,6 +53,15 @@ the exact case, host, and settings observed; it is not a success rate or a
 general benefit claim. A keyword or formatting check may establish structure but
 not successful method application.
 
+## Composition at handoff or re-entry (SK-13)
+
+Apply the [composition route](../stdo-tool-operations/references/composition.md)
+when the task crosses Products or requires a controlled view. Bind the child's
+actual actor/purpose/route rather than forwarding the parent's accumulated view.
+Inspect changed grants/declarations and preserve previous exposure, currentness
+and unresolved obligations. A wider Reviewer inspection does not authorize Worker
+disclosure; neither deletion nor narrower permissions unexpose an actor.
+
 ## Method sources (cited, not reproduced)
 
 Within `stdo://releases/v3.0.1-rc.1/standards/`: `ACTIVATION.md` sections 5 and 7

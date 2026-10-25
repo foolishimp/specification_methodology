@@ -1,0 +1,102 @@
+{
+  "attempt": "grounding-repairs/chunk-cf22b253a1db7d64a8f8/attempt-001",
+  "chunk": "chunk-cf22b253a1db7d64a8f8",
+  "derived_answer_sha256": "6f3c2b10cc60d3c4ab5e9a04823c69bb1f123798b03878945b17455780218865",
+  "files": {
+    "actor/answer.json": {
+      "bytes": 951,
+      "sha256": "52bb1aec91bbb18280f49a6dc8bd0d7de6580bfe0b914b1af42e7628c7bed657"
+    },
+    "actor/events.jsonl": {
+      "bytes": 1341,
+      "sha256": "ef9d39bba833fd859b035af17437fabac812ad94f80d997a6db55cd165b981af"
+    },
+    "actor/invocation.json": {
+      "bytes": 3354,
+      "sha256": "758d0a0484f590cd7d00c38b5100b4fdadef623be9fd54663e9147b613acab15"
+    },
+    "actor/prompt.txt": {
+      "bytes": 346456,
+      "sha256": "f743899fdb8ad77bd6d74322d65dc02021056e9e0ed27f2670993f6de94d8fce"
+    },
+    "actor/result.json": {
+      "bytes": 879,
+      "sha256": "a2619fe4c4b45157c18828d20e64db3b65014d21df1f033e4aa107dedab2fe5c"
+    },
+    "actor/stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "actor/usage.json": {
+      "bytes": 277,
+      "sha256": "599acab59e063c42e17f58783bb7833a2dccf2b072ab9ce46bda83baa311555f"
+    },
+    "derived-answer.json": {
+      "bytes": 153012,
+      "sha256": "6f3c2b10cc60d3c4ab5e9a04823c69bb1f123798b03878945b17455780218865"
+    },
+    "journal.json": {
+      "bytes": 2862,
+      "sha256": "6eb7e7bf955e108ed3031b736be135cbf5d1421c6cc511f42be633c49080d603"
+    },
+    "parent-answer.json": {
+      "bytes": 152914,
+      "sha256": "c271c54a7ae0fc84574930bc274495f719fd77951c94424229005b82bef95703"
+    },
+    "patch.schema.json": {
+      "bytes": 6647,
+      "sha256": "2463073a02ffb8195108fb9afeb187d3858a304e1eff6d0168f71d16101b6da0"
+    },
+    "prompt.txt": {
+      "bytes": 346456,
+      "sha256": "f743899fdb8ad77bd6d74322d65dc02021056e9e0ed27f2670993f6de94d8fce"
+    },
+    "request.json": {
+      "bytes": 14456,
+      "sha256": "68fa5b1572b36254b870a378b66379a909832f8e1950784998962ea6b25c8df6"
+    }
+  },
+  "journal_sha256": "6eb7e7bf955e108ed3031b736be135cbf5d1421c6cc511f42be633c49080d603",
+  "raw_actor_result": {
+    "answer_sha256": "52bb1aec91bbb18280f49a6dc8bd0d7de6580bfe0b914b1af42e7628c7bed657",
+    "cli_exit_code": 0,
+    "cli_version": "codex-cli 0.162.1",
+    "elapsed_seconds": 26.228517499985173,
+    "events_sha256": "ef9d39bba833fd859b035af17437fabac812ad94f80d997a6db55cd165b981af",
+    "failures": [],
+    "profile": "ac.generation.actor-result/1",
+    "schema_errors": [],
+    "settings": {
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "service_tier": "default"
+    },
+    "status": "completed",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "timed_out": false,
+    "unexpected_item_types": [],
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 99849,
+        "output_tokens": 369,
+        "reasoning_output_tokens": 133
+      }
+    ],
+    "user_config_unchanged": true
+  },
+  "remaining_invalid_anchor_count": 0,
+  "request_sha256": "68fa5b1572b36254b870a378b66379a909832f8e1950784998962ea6b25c8df6",
+  "status": "complete_patch",
+  "usage_events": [
+    {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 0,
+      "input_tokens": 99849,
+      "output_tokens": 369,
+      "reasoning_output_tokens": 133
+    }
+  ],
+  "verification": "reverified_complete"
+}

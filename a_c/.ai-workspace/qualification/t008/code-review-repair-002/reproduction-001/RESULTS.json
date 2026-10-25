@@ -1,0 +1,399 @@
+{
+  "R1": {
+    "actual_depth_two_value": {
+      "basis": {
+        "method_profile": {
+          "id": "urn:a-c:fd-support:method:claude-rc9:executive:1",
+          "sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+        },
+        "observations": []
+      },
+      "core_value": "satisfied",
+      "domain_outcome": "decision(holds)",
+      "evidence": [
+        {
+          "id": "sha256:1b509edcc4a0c75835adc113f1944712249b7afd72852c9b6f8d61ff914eb3b1",
+          "sha256": "1b509edcc4a0c75835adc113f1944712249b7afd72852c9b6f8d61ff914eb3b1"
+        }
+      ],
+      "limits": [
+        "exact externally qualified declared conjunction only; no authority transfer"
+      ],
+      "predicate": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "inputs/law.txt",
+        "root": "workspace",
+        "selector": null,
+        "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+      },
+      "subject": {
+        "id": "urn:test:subject",
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    "actual_outer_value": {
+      "basis": {
+        "method_profile": {
+          "id": "urn:a-c:fd-support:method:claude-rc9:executive:1",
+          "sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+        },
+        "observations": []
+      },
+      "core_value": "satisfied",
+      "domain_outcome": "decision(holds)",
+      "evidence": [
+        {
+          "id": "sha256:1b509edcc4a0c75835adc113f1944712249b7afd72852c9b6f8d61ff914eb3b1",
+          "sha256": "1b509edcc4a0c75835adc113f1944712249b7afd72852c9b6f8d61ff914eb3b1"
+        }
+      ],
+      "limits": [
+        "exact externally qualified declared conjunction only; no authority transfer"
+      ],
+      "predicate": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "inputs/law.txt",
+        "root": "workspace",
+        "selector": null,
+        "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+      },
+      "subject": {
+        "id": "urn:test:subject",
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    "constraint_failures": [],
+    "controls": {
+      "already_inner_required_P": "falsified",
+      "direct_current_P": "falsified",
+      "unrelated_Q": "satisfied"
+    },
+    "expected_source_value": "falsified",
+    "failure_retained": true,
+    "fixture": "fixtures/R1-inherited-new-constraint",
+    "inner_applicable": 2,
+    "inner_value": {
+      "basis": {
+        "method_profile": {
+          "id": "urn:a-c:fd-support:method:claude-rc9:executive:1",
+          "sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+        },
+        "observations": []
+      },
+      "core_value": "satisfied",
+      "domain_outcome": "decision(holds)",
+      "evidence": [
+        {
+          "id": "sha256:1b509edcc4a0c75835adc113f1944712249b7afd72852c9b6f8d61ff914eb3b1",
+          "sha256": "1b509edcc4a0c75835adc113f1944712249b7afd72852c9b6f8d61ff914eb3b1"
+        },
+        {
+          "id": "sha256:4c54424a0fb3f19923b5706b50c24d163d23001bdeccbedd19532296f2332a93",
+          "sha256": "4c54424a0fb3f19923b5706b50c24d163d23001bdeccbedd19532296f2332a93"
+        }
+      ],
+      "limits": [
+        "exact externally qualified declared conjunction only; no authority transfer"
+      ],
+      "predicate": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "inputs/law.txt",
+        "root": "workspace",
+        "selector": null,
+        "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+      },
+      "subject": {
+        "id": "urn:test:subject",
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    "outer_current_applicable": 1,
+    "planned_gaps": [],
+    "scope": "Two actual public authenticated scripted returns; only qualification gate isolated during dispatcher folds. No public operator/semantic qualification.",
+    "uncovered": []
+  },
+  "R2": [
+    {
+      "after_replay_target_sha256": "c445f306e43e230e1a45789c2432ec51bdd432fe4e74a2ed6e3400f462b8546e",
+      "before_replay_target_sha256": "c445f306e43e230e1a45789c2432ec51bdd432fe4e74a2ed6e3400f462b8546e",
+      "claim_removed": true,
+      "durable_operation": {
+        "id": "sha256:fb27450a39a78281ec757e99dfca2f57b6b17e97331ced5e9c15cb293bca8826",
+        "sha256": "fb27450a39a78281ec757e99dfca2f57b6b17e97331ced5e9c15cb293bca8826"
+      },
+      "first_success": true,
+      "fixture": "fixtures/R2-cli-exact",
+      "new_effect_after_same_id_unknown_envelope": false,
+      "no_repeated_prior_effect_observed": true,
+      "policy_changed": false,
+      "refusal": null,
+      "replay_status": "ok",
+      "reported_text": "original\n",
+      "requested_text": "original\n",
+      "returned_original_primary": true,
+      "transport": "cli",
+      "variant": "exact"
+    },
+    {
+      "after_replay_target_sha256": "c445f306e43e230e1a45789c2432ec51bdd432fe4e74a2ed6e3400f462b8546e",
+      "before_replay_target_sha256": "c445f306e43e230e1a45789c2432ec51bdd432fe4e74a2ed6e3400f462b8546e",
+      "claim_removed": true,
+      "durable_operation": {
+        "id": "sha256:783241bff0f38dce19d8a984cf51568b3e76ac2df8f0b468eb35398ead68d135",
+        "sha256": "783241bff0f38dce19d8a984cf51568b3e76ac2df8f0b468eb35398ead68d135"
+      },
+      "first_success": true,
+      "fixture": "fixtures/R2-cli-changed-record",
+      "new_effect_after_same_id_unknown_envelope": false,
+      "no_repeated_prior_effect_observed": true,
+      "policy_changed": false,
+      "refusal": null,
+      "replay_status": "ok",
+      "reported_text": "original\n",
+      "requested_text": "different requested record\n",
+      "returned_original_primary": true,
+      "transport": "cli",
+      "variant": "changed-record"
+    },
+    {
+      "after_replay_target_sha256": "c445f306e43e230e1a45789c2432ec51bdd432fe4e74a2ed6e3400f462b8546e",
+      "before_replay_target_sha256": "c445f306e43e230e1a45789c2432ec51bdd432fe4e74a2ed6e3400f462b8546e",
+      "claim_removed": true,
+      "durable_operation": {
+        "id": "sha256:d6a51639661414fafe851f4b110775f6b7fa5f3057744f08aac08da0205d7d52",
+        "sha256": "d6a51639661414fafe851f4b110775f6b7fa5f3057744f08aac08da0205d7d52"
+      },
+      "first_success": true,
+      "fixture": "fixtures/R2-mcp-exact",
+      "new_effect_after_same_id_unknown_envelope": false,
+      "no_repeated_prior_effect_observed": true,
+      "policy_changed": false,
+      "refusal": null,
+      "replay_status": "ok",
+      "reported_text": "original\n",
+      "requested_text": "original\n",
+      "returned_original_primary": true,
+      "transport": "mcp",
+      "variant": "exact"
+    },
+    {
+      "after_replay_target_sha256": "c445f306e43e230e1a45789c2432ec51bdd432fe4e74a2ed6e3400f462b8546e",
+      "before_replay_target_sha256": "c445f306e43e230e1a45789c2432ec51bdd432fe4e74a2ed6e3400f462b8546e",
+      "claim_removed": true,
+      "durable_operation": {
+        "id": "sha256:a857608260baaa253faa46227196c6b0e24c7495efa939cd3ac009f40b1131ff",
+        "sha256": "a857608260baaa253faa46227196c6b0e24c7495efa939cd3ac009f40b1131ff"
+      },
+      "first_success": true,
+      "fixture": "fixtures/R2-mcp-changed-record",
+      "new_effect_after_same_id_unknown_envelope": false,
+      "no_repeated_prior_effect_observed": true,
+      "policy_changed": false,
+      "refusal": null,
+      "replay_status": "ok",
+      "reported_text": "original\n",
+      "requested_text": "different requested record\n",
+      "returned_original_primary": true,
+      "transport": "mcp",
+      "variant": "changed-record"
+    },
+    {
+      "after_replay_target_sha256": "c445f306e43e230e1a45789c2432ec51bdd432fe4e74a2ed6e3400f462b8546e",
+      "before_replay_target_sha256": "c445f306e43e230e1a45789c2432ec51bdd432fe4e74a2ed6e3400f462b8546e",
+      "claim_removed": false,
+      "durable_operation": {
+        "id": "sha256:92792b1a01286e98ffd537054604514d1bb6d100f54be9564059bec818073da6",
+        "sha256": "92792b1a01286e98ffd537054604514d1bb6d100f54be9564059bec818073da6"
+      },
+      "first_success": true,
+      "fixture": "fixtures/R2-cli-intact-conflict",
+      "new_effect_after_same_id_unknown_envelope": false,
+      "no_repeated_prior_effect_observed": true,
+      "policy_changed": false,
+      "refusal": {
+        "code": "request_identity_conflict",
+        "gaps": [
+          "stable-id"
+        ],
+        "reason": "Same caller request identity has different effective inputs",
+        "source_refs": []
+      },
+      "replay_status": "refused",
+      "reported_text": null,
+      "requested_text": "different requested record\n",
+      "returned_original_primary": null,
+      "transport": "cli",
+      "variant": "intact-conflict"
+    },
+    {
+      "after_replay_target_sha256": "c445f306e43e230e1a45789c2432ec51bdd432fe4e74a2ed6e3400f462b8546e",
+      "before_replay_target_sha256": "c445f306e43e230e1a45789c2432ec51bdd432fe4e74a2ed6e3400f462b8546e",
+      "claim_removed": true,
+      "durable_operation": {
+        "id": "sha256:a518ecae1c76b0210fe56e4df8787b4d638cb21ff4483385aad0c73302233ae4",
+        "sha256": "a518ecae1c76b0210fe56e4df8787b4d638cb21ff4483385aad0c73302233ae4"
+      },
+      "first_success": true,
+      "fixture": "fixtures/R2-cli-changed-policy",
+      "new_effect_after_same_id_unknown_envelope": false,
+      "no_repeated_prior_effect_observed": true,
+      "policy_changed": true,
+      "refusal": null,
+      "replay_status": "ok",
+      "reported_text": "original\n",
+      "requested_text": "original\n",
+      "returned_original_primary": true,
+      "transport": "cli",
+      "variant": "changed-policy"
+    },
+    {
+      "after_replay_target_sha256": "c445f306e43e230e1a45789c2432ec51bdd432fe4e74a2ed6e3400f462b8546e",
+      "before_replay_target_sha256": "c445f306e43e230e1a45789c2432ec51bdd432fe4e74a2ed6e3400f462b8546e",
+      "claim_removed": true,
+      "durable_operation": {
+        "id": "sha256:266afe9e3ce9850d16788ab34d579e1a1b0b28fe8de16898b5d5fd229d0e8607",
+        "sha256": "266afe9e3ce9850d16788ab34d579e1a1b0b28fe8de16898b5d5fd229d0e8607"
+      },
+      "first_success": false,
+      "fixture": "fixtures/R2-cli-uncertain-exact",
+      "new_effect_after_same_id_unknown_envelope": false,
+      "no_repeated_prior_effect_observed": true,
+      "policy_changed": false,
+      "refusal": {
+        "code": "effect_unreconciled",
+        "gaps": [
+          {
+            "current": {
+              "bytes": 16,
+              "exists": true,
+              "mode": 420,
+              "sha256": "c445f306e43e230e1a45789c2432ec51bdd432fe4e74a2ed6e3400f462b8546e",
+              "type": "regular"
+            },
+            "effect": {
+              "end_established": false,
+              "residual": "Original publication/result acknowledgment is not established; observed present bytes do not replay the operation.",
+              "value": "completion_unknown"
+            },
+            "intent": {
+              "id": "sha256:f0a5ad0478b329106dace6c1b40a93152927d81ed3ddf65fa8fbe552e9577457",
+              "sha256": "f0a5ad0478b329106dace6c1b40a93152927d81ed3ddf65fa8fbe552e9577457"
+            },
+            "matches_intended_postimage": true,
+            "repeated": false,
+            "schema": "a_c.fd-support.writer-recovery/1",
+            "target": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "outputs/record.txt",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "9160d4be34c8695bd172a76c7c7966587ea5a4d991ad22c87b2b91af54aa9ebb"
+            }
+          }
+        ],
+        "reason": "Earlier Writer intent requires reconciliation before any repeated effect",
+        "source_refs": []
+      },
+      "replay_status": "error",
+      "reported_text": null,
+      "requested_text": "original\n",
+      "returned_original_primary": null,
+      "transport": "cli",
+      "variant": "uncertain-exact"
+    },
+    {
+      "after_replay_target_sha256": "c445f306e43e230e1a45789c2432ec51bdd432fe4e74a2ed6e3400f462b8546e",
+      "before_replay_target_sha256": "c445f306e43e230e1a45789c2432ec51bdd432fe4e74a2ed6e3400f462b8546e",
+      "claim_removed": true,
+      "durable_operation": {
+        "id": "sha256:c3ac1b6dab94daf807a59b029c6f7265e54827013e8dd9384aacdeb5453825f6",
+        "sha256": "c3ac1b6dab94daf807a59b029c6f7265e54827013e8dd9384aacdeb5453825f6"
+      },
+      "first_success": false,
+      "fixture": "fixtures/R2-cli-uncertain-changed",
+      "new_effect_after_same_id_unknown_envelope": false,
+      "no_repeated_prior_effect_observed": true,
+      "policy_changed": false,
+      "refusal": {
+        "code": "request_identity_conflict",
+        "gaps": [],
+        "reason": "Writer intent does not bind the exact request/principal",
+        "source_refs": []
+      },
+      "replay_status": "refused",
+      "reported_text": null,
+      "requested_text": "different requested record\n",
+      "returned_original_primary": null,
+      "transport": "cli",
+      "variant": "uncertain-changed"
+    },
+    {
+      "after_replay_target_sha256": "c445f306e43e230e1a45789c2432ec51bdd432fe4e74a2ed6e3400f462b8546e",
+      "before_replay_target_sha256": "c445f306e43e230e1a45789c2432ec51bdd432fe4e74a2ed6e3400f462b8546e",
+      "claim_removed": true,
+      "durable_operation": {
+        "id": "sha256:f825c0714ccffe90071ca07cc14b4eaacdd96fe22567304d004d3b3f86d11027",
+        "sha256": "f825c0714ccffe90071ca07cc14b4eaacdd96fe22567304d004d3b3f86d11027"
+      },
+      "first_success": false,
+      "fixture": "fixtures/R2-cli-uncertain-owner-loss",
+      "new_effect_after_same_id_unknown_envelope": false,
+      "no_repeated_prior_effect_observed": true,
+      "policy_changed": false,
+      "refusal": {
+        "code": "history_incomplete",
+        "gaps": [
+          {
+            "complete": true,
+            "gaps": [],
+            "observed_at_ns": 1792392189347059000,
+            "refs": [
+              {
+                "id": "sha256:39eef19b93d319baf00266909cf425d65ff560f43226cd9fac0ed53e203b7497",
+                "sha256": "39eef19b93d319baf00266909cf425d65ff560f43226cd9fac0ed53e203b7497"
+              }
+            ],
+            "scope": {
+              "evidence_root": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/code-review-repair-002/reproduction-001/fixtures/R2-cli-uncertain-owner-loss/evidence",
+              "kind": "raw",
+              "product_id": "urn:test:product"
+            }
+          }
+        ],
+        "reason": "Cannot establish absence of an earlier Writer intent/owner",
+        "source_refs": []
+      },
+      "replay_status": "refused",
+      "reported_text": null,
+      "requested_text": "original\n",
+      "returned_original_primary": null,
+      "transport": "cli",
+      "variant": "uncertain-owner-loss"
+    },
+    {
+      "after_replay_target_sha256": "a6f4df7bc03e958d4849e95998a119de7adabe2e99f9ff39f85700f7fc2f54bc",
+      "before_replay_target_sha256": "9160d4be34c8695bd172a76c7c7966587ea5a4d991ad22c87b2b91af54aa9ebb",
+      "claim_removed": true,
+      "durable_operation": {
+        "id": "sha256:bef5dcfdab15924509d5255d9122f50916ad96304e2a51e3feee45853085e923",
+        "sha256": "bef5dcfdab15924509d5255d9122f50916ad96304e2a51e3feee45853085e923"
+      },
+      "first_success": false,
+      "fixture": "fixtures/R2-cli-uncertain-before-owner-changed",
+      "new_effect_after_same_id_unknown_envelope": true,
+      "no_repeated_prior_effect_observed": true,
+      "policy_changed": false,
+      "refusal": null,
+      "replay_status": "ok",
+      "reported_text": "different requested record\n",
+      "requested_text": "different requested record\n",
+      "returned_original_primary": null,
+      "transport": "cli",
+      "variant": "uncertain-before-owner-changed"
+    }
+  ]
+}

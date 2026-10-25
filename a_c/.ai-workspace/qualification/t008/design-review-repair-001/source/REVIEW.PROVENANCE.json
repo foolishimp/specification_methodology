@@ -1,0 +1,170 @@
+{
+  "schema": "codex.platform-review-publication.provenance/1",
+  "producer_task": "/root/ac_fd_final_design_review",
+  "parent_task": "/root",
+  "product": "urn:stdo:product-definition:a-c-implementations",
+  "publication_utc": "2026-10-19T05:20:48.749263+00:00",
+  "publication_role": "Writer",
+  "role_transition": {
+    "from": "read-only Reviewer",
+    "to": "Writer solely to publish already closed actual platform results",
+    "issuer": "/root",
+    "write_territory": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/comments/codex/t008-platform-design-review-001",
+    "operation_grant": "Create STAGE1.md, STAGE2.md, PROVENANCE.json, manifest.json and CLOSED_RETURN.json preserving the already closed reports and provenance; then stop.",
+    "semantic_reassessment_authorized": false,
+    "candidate_or_source_repair_authorized": false,
+    "excluded_effects": [
+      "candidate edits",
+      "source edits",
+      "status edits",
+      "policy edits",
+      "Git effects",
+      "Product runtime calls",
+      "native runtime calls",
+      "model calls",
+      "owner disposition",
+      "acceptance",
+      "promotion"
+    ]
+  },
+  "report_preservation": {
+    "STAGE1.md": "Wording of this task’s already closed Stage1 platform final response, reproduced with a terminal LF; no semantic rewrite.",
+    "STAGE2.md": "Wording of this task’s already closed Stage2 platform final response, reproduced with a terminal LF; no semantic rewrite.",
+    "raw_platform_transport_byte_identity_claim": false,
+    "hidden_reasoning_read_or_copied": false
+  },
+  "platform_ordering": [
+    {
+      "ordinal": 1,
+      "role": "Reviewer",
+      "event": "Parent activated fresh source-first Stage1 only. Candidate locators and hashes were metadata; candidate bodies were forbidden."
+    },
+    {
+      "ordinal": 2,
+      "role": "Reviewer",
+      "event": "This task returned closed Stage1 D01-D12 expectations, exact source hashes/ranges, exposure and unread limits, then stopped."
+    },
+    {
+      "ordinal": 3,
+      "role": "Reviewer",
+      "event": "Parent follow-up stated Root consumed the closed Stage1 and instructed GO Stage2, preserving Stage1 as the frozen prior expectation."
+    },
+    {
+      "ordinal": 4,
+      "role": "Reviewer",
+      "event": "This task acquired the frozen candidate, assessed it, verified hashes before/after and returned the closed Stage2 findings and predicate values."
+    },
+    {
+      "ordinal": 5,
+      "role": "Writer",
+      "event": "Parent follow-up stated Root consumed Stage2 F for Prime/projection and foundation evidence, S for declared FD contracts and I for Prime irreducibility/decision completeness/co-evolution; parent granted publication only after an explicit role transition."
+    }
+  ],
+  "ordering_evidence_boundary": "Actual platform task/follow-up order retained by its participant; no fabricated semantic-stage timestamps or independent transport authentication.",
+  "author_and_independence": {
+    "report_author_task": "/root/ac_fd_final_design_review",
+    "implementation_authorship": "This task reported no authorship of the implementation subject.",
+    "provider": {
+      "value": null,
+      "qualification": "unqualified"
+    },
+    "model_family": {
+      "value": null,
+      "qualification": "unqualified"
+    },
+    "host_context_exposure": {
+      "value": null,
+      "qualification": "unknown and unqualified"
+    },
+    "prior_exposure_outside_task": {
+      "value": null,
+      "qualification": "unknown and unqualified"
+    },
+    "cross_family_independence": "not claimed; unqualified",
+    "new_context_independence_claim": false,
+    "actual_platform_result": true,
+    "Product_publicRuntime_producer": false,
+    "toolset_authenticated_return_claim": false
+  },
+  "exposure_record": {
+    "stage1_before_candidate_body_exposure": true,
+    "stage1_required_entry_surfaces": "Product README and GOALS were read and contained historical summaries. No referenced historical reports were opened or used.",
+    "stage1_neutral_metadata": "METHOD_INDEX and source heading inventories routed attention; candidate filenames/hashes were metadata only. Current T-008 authority selection was lines 785-860 only. TASK.md was hashed without reading its guide-oriented body.",
+    "stage2_candidate_exposure": "All 3286 fd-support.md lines, 1245 method-binding lines and 150 design-README lines were read, including schemas/examples and candidate-embedded historical statements.",
+    "stage2_construction_claim": {
+      "path": ".ai-workspace/qualification/t008/design/co-evolution-001.assessment.json",
+      "sha256": "9dcc63c57b010d6ec9741f4637f957f512f5f243c2fd5130bbc0ab0600a883aa",
+      "lines": [
+        1,
+        84
+      ],
+      "standing": "Candidate construction claim only; it binds the older design 32095ebef2f2bb1d5a5328faecc576f87fdaae788cdd23570374b0eea4fb9a70. Underlying historical independent reviews were not opened."
+    },
+    "stage2_additional_governing_reads": {
+      "SPEC_METHOD.md": [
+        [
+          1848,
+          1976
+        ]
+      ],
+      "REFERENCE_FRAME.md": [
+        [
+          521,
+          610
+        ],
+        [
+          965,
+          1035
+        ]
+      ],
+      "FOUNDATIONS.md": [
+        [
+          1409,
+          1493
+        ]
+      ]
+    },
+    "unread": "Code, tests, fixtures, guide, other reviews and separate construction proof remained unread; Stage1 method selections and limits remain as recorded in STAGE1.md.",
+    "not_performed": [
+      "runtime qualification",
+      "actual native actor usability",
+      "owner acceptance",
+      "benefit evaluation",
+      "installation",
+      "release"
+    ]
+  },
+  "source_basis": {
+    "builder_manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "RC9_source_commit": "c2cfa9b908d1722ae3f26c32fa4ece691083bdc3",
+    "RC9_custody_commit": "3a2097137c3588ba44b98e3ea801ac7f2be1daf0",
+    "declared_standards_tree": "98de394b352179c25dfa63b0b59a9b6bdd43632d",
+    "method_custody_scope": "12 selected method-owner files, a subset of the complete declared standards tree. Raw hashes verified; full upstream tree not independently verified by this task.",
+    "exact_source_hashes_and_selected_ranges": "STAGE1.md; Stage2 extensions in STAGE2.md"
+  },
+  "hash_guards": {
+    "root": "/Users/jim/src/apps/specification_methodology/a_c",
+    "expected_sha256": {
+      "build_tenants/graphify/design/fd-support.md": "b38eedbe85ee32ef11d945d6a60ed3f9bb2312ac10e873d8ddc9b7986744a005",
+      "build_tenants/graphify/design/fd-method-claude-rc9.json": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1",
+      "build_tenants/graphify/design/README.md": "f757ab636858c851cc500f5473ef0bc99a8d20ef2dfc209857917657895cf961",
+      "stdo_a_c.json": "b0e013e6f9dabb9d3f31dd02c1a6909e9fc6418925a8d829f3bb1c2adf3dac1d",
+      "specification/PRODUCT.md": "9ebc8342affe8c5e0afb08ebe22f3f98f73f7bdc64db00eee17674c47274bef7",
+      "specification/INTENT.md": "09d9740d9f05d67ab2dbf2bac62e717f320fe665bdbc410594852c29fc2630cd",
+      "specification/REFERENCE_FRAME_BASIS.md": "5cda45d1f267a3f221703c7fcc42b100c7997d3a98c015b7faf4f46b21222b8a",
+      "specification/requirements/fd-support-tools.md": "e3fcebd7e9fbc60dc36ed4c02ee834a96f14226af134809c938169d4712dfc23",
+      "specification/requirements/fd-support-verification.md": "3746e614a5ddc3f0a551e926998f16d6101cc037c5c43b879b4447b017a8dbdf",
+      "specification/GOALS.md": "7f78e1a9834d1fc19fa421655e690c3b500138c66f94ff762337f57629351a03",
+      ".ai-workspace/tickets/active/T-008-fd-tenant-implementation.md": "51082af52a4126aa85a9f2b7c361ce00e2ddc845af6d0654dd2016aa97633013"
+    },
+    "before_publication_all_match": true,
+    "after_report_files_all_match": true,
+    "candidate_WHAT_status_policy_write_effects": false
+  },
+  "owner_disposition": null,
+  "ontology_disposition": null,
+  "design_disposition": null,
+  "Product_acceptance": null,
+  "promotion": null,
+  "release": null
+}

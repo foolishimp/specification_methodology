@@ -1,0 +1,449 @@
+{
+  "actual_provider_or_native_F_P_calls": 0,
+  "changes_from_integration002": [
+    {
+      "current_sha256": "2f59468cbecac464589ee99d79f32e4a12f551cd308c8a3d3e9ac52df8d7278f",
+      "old_sha256": "51082af52a4126aa85a9f2b7c361ce00e2ddc845af6d0654dd2016aa97633013",
+      "path": "a_c/.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md"
+    },
+    {
+      "current_sha256": "4d41a2373def237136cefe8b186c196c2e4376137c221ae4675c274abed5ad31",
+      "old_sha256": "4d1ea7fe98ec1b53f2a19d9a2fef2b3fbb070624c955fbb1e9e48f5cc88011b1",
+      "path": "a_c/build_tenants/graphify/code/ac_support.py"
+    },
+    {
+      "current_sha256": "5395fd2947157541255168c6a1235136df64e9197d5032b25b31a0f071a4fe74",
+      "old_sha256": "78f70fa8da1a29ce4fadc8cb78743c2293bf7f35947b353218dc2a6b1e03ae94",
+      "path": "a_c/build_tenants/graphify/code/ac_support_core.py"
+    },
+    {
+      "current_sha256": "36f75671b9dbce14e5f06811e180b662deb635b37921695668337466ace9bf25",
+      "old_sha256": "9108d6ad10e412f5a0e981c88c06c7b37cb913a24286282da9aae752f239a586",
+      "path": "a_c/build_tenants/graphify/code/ac_support_effects.py"
+    },
+    {
+      "current_sha256": "e3c5e6e83d9be525a0ca44fc4e64c9077e33958337bc29807014715a50592939",
+      "old_sha256": "b38eedbe85ee32ef11d945d6a60ed3f9bb2312ac10e873d8ddc9b7986744a005",
+      "path": "a_c/build_tenants/graphify/design/fd-support.md"
+    },
+    {
+      "current_sha256": "6b1ce2819e0e96aad32fb87feccb3aeaee1cd37a85c91aa4e1b693b9a15dd709",
+      "old_sha256": "7cf93cf0bc83713a74f47284e9c3acc785c08cdc3b4807b573f463465541ec07",
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_core.py"
+    },
+    {
+      "current_sha256": "4c96735d16f6dd67d24b89fb5a6b5b7bdc376de13d8c98c14b833ce346c0662e",
+      "old_sha256": "62aa2967c9bba8b151555b3d23d6d794ca746e6ba329994bac32316f28a1bd20",
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_effects.py"
+    },
+    {
+      "current_sha256": "7722ddcbc48ab7dd48e824ccdbec320f30e80dc3b63c0881564ff7ed97ee3450",
+      "old_sha256": "3ea958e61ec240b74d33f21185bf0045246f4e756313a2327f8f8bbe3cf4affc",
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py"
+    }
+  ],
+  "current_guard_proof": {
+    "bytes": 776,
+    "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-003/GUARD_CHECK.json",
+    "sha256": "075696b52cb11176ebc7d9a0122c5de5a239aaf8b116940947b65fac037d3554"
+  },
+  "current_unique_tests": 273,
+  "implementation_closed_return": {
+    "bytes": 7738,
+    "path": "a_c/.ai-workspace/qualification/t008/code-review-repair-001/implementation-001/CLOSED_RETURN.json",
+    "sha256": "8a09b5a3397a5dc33ba5729ee60be6dcfb53b279ddd5cc52244c2f7018d33c31"
+  },
+  "method_members": 12,
+  "schema": "a_c.T008.closed-successor-source-manifest/3",
+  "sources": [
+    {
+      "bytes": 2904,
+      "path": "AGENTS.md",
+      "sha256": "6885dff07f5fdad3b9f6ef644e57c5e0b260c94b29d9cbec5eb1a45f81950cec",
+      "snapshot": "source-snapshots/AGENTS.md"
+    },
+    {
+      "bytes": 156518,
+      "path": "a_c/.ai-workspace/qualification/t008/live-review-runtime-002/authority/method/ACTIVATION.md",
+      "sha256": "3bb7594a194950819d6aad65e3938358e8685bbbc2ebf67c0ad720c37bb04487",
+      "snapshot": "source-snapshots/a_c/.ai-workspace/qualification/t008/live-review-runtime-002/authority/method/ACTIVATION.md"
+    },
+    {
+      "bytes": 98521,
+      "path": "a_c/.ai-workspace/qualification/t008/live-review-runtime-002/authority/method/ASSURANCE.md",
+      "sha256": "e33a6e39e1e93d38dbd3ea212d8d9f0d2f44a366a9345fda762d2481c254d0bf",
+      "snapshot": "source-snapshots/a_c/.ai-workspace/qualification/t008/live-review-runtime-002/authority/method/ASSURANCE.md"
+    },
+    {
+      "bytes": 94172,
+      "path": "a_c/.ai-workspace/qualification/t008/live-review-runtime-002/authority/method/AXIOMATIC_CALCULUS.md",
+      "sha256": "56d0c1ad9889ad8d09b1d1249ad4bae1fb1717af22d01bdf4190b2d0bf71500a",
+      "snapshot": "source-snapshots/a_c/.ai-workspace/qualification/t008/live-review-runtime-002/authority/method/AXIOMATIC_CALCULUS.md"
+    },
+    {
+      "bytes": 200271,
+      "path": "a_c/.ai-workspace/qualification/t008/live-review-runtime-002/authority/method/DESIGN_MODULE.md",
+      "sha256": "9e2642d51d0b024a448fe7910dcb323fb3f3bb2a003ad33c27c39a5dda625220",
+      "snapshot": "source-snapshots/a_c/.ai-workspace/qualification/t008/live-review-runtime-002/authority/method/DESIGN_MODULE.md"
+    },
+    {
+      "bytes": 93992,
+      "path": "a_c/.ai-workspace/qualification/t008/live-review-runtime-002/authority/method/EVALUATION.md",
+      "sha256": "14f8816b1eb9cd146dd58a29bac35ea47a62e4e4b093b20f9892330e44922991",
+      "snapshot": "source-snapshots/a_c/.ai-workspace/qualification/t008/live-review-runtime-002/authority/method/EVALUATION.md"
+    },
+    {
+      "bytes": 178680,
+      "path": "a_c/.ai-workspace/qualification/t008/live-review-runtime-002/authority/method/EXECUTIVE_BASELINE.md",
+      "sha256": "e50b4ad70451fe84882053bc0dffef6f6c0c806a5dba68ac9933aa79029fb935",
+      "snapshot": "source-snapshots/a_c/.ai-workspace/qualification/t008/live-review-runtime-002/authority/method/EXECUTIVE_BASELINE.md"
+    },
+    {
+      "bytes": 146255,
+      "path": "a_c/.ai-workspace/qualification/t008/live-review-runtime-002/authority/method/FOUNDATIONS.md",
+      "sha256": "fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f",
+      "snapshot": "source-snapshots/a_c/.ai-workspace/qualification/t008/live-review-runtime-002/authority/method/FOUNDATIONS.md"
+    },
+    {
+      "bytes": 83015,
+      "path": "a_c/.ai-workspace/qualification/t008/live-review-runtime-002/authority/method/PRODUCT_DEFINITION.md",
+      "sha256": "96e1f26a4f6b60571851a7bd78f5d8c84d09d393de3ebd3b75b4f43ba9158d8d",
+      "snapshot": "source-snapshots/a_c/.ai-workspace/qualification/t008/live-review-runtime-002/authority/method/PRODUCT_DEFINITION.md"
+    },
+    {
+      "bytes": 28087,
+      "path": "a_c/.ai-workspace/qualification/t008/live-review-runtime-002/authority/method/README.md",
+      "sha256": "8047171e730dc4bce556ce28989baf54f8232ff2552a3763447bfe0228258ede",
+      "snapshot": "source-snapshots/a_c/.ai-workspace/qualification/t008/live-review-runtime-002/authority/method/README.md"
+    },
+    {
+      "bytes": 111611,
+      "path": "a_c/.ai-workspace/qualification/t008/live-review-runtime-002/authority/method/REFERENCE_FRAME.md",
+      "sha256": "d64ee5c05aaefac346116c2e43eabf193dd84123f1d461070ecd378ce5e9b551",
+      "snapshot": "source-snapshots/a_c/.ai-workspace/qualification/t008/live-review-runtime-002/authority/method/REFERENCE_FRAME.md"
+    },
+    {
+      "bytes": 167323,
+      "path": "a_c/.ai-workspace/qualification/t008/live-review-runtime-002/authority/method/SPEC_METHOD.md",
+      "sha256": "b4b8cafae7da0885f4177e9114d5effc21637ed5a44deb31c3791be658a77a24",
+      "snapshot": "source-snapshots/a_c/.ai-workspace/qualification/t008/live-review-runtime-002/authority/method/SPEC_METHOD.md"
+    },
+    {
+      "bytes": 104228,
+      "path": "a_c/.ai-workspace/qualification/t008/live-review-runtime-002/authority/method/TICKETS.md",
+      "sha256": "8d244a16b11f17a9e1a85ecf8d7e1dfb3686ea79a09b885321727d620659c43e",
+      "snapshot": "source-snapshots/a_c/.ai-workspace/qualification/t008/live-review-runtime-002/authority/method/TICKETS.md"
+    },
+    {
+      "bytes": 56027,
+      "path": "a_c/.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md",
+      "sha256": "2f59468cbecac464589ee99d79f32e4a12f551cd308c8a3d3e9ac52df8d7278f",
+      "snapshot": "source-snapshots/a_c/.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md"
+    },
+    {
+      "bytes": 1267,
+      "path": "a_c/AGENTS.md",
+      "sha256": "41d4a657c76c82be21818a0c7eec131ca6970b9a0ce086733a3ba92af5aab42f",
+      "snapshot": "source-snapshots/a_c/AGENTS.md"
+    },
+    {
+      "bytes": 5044,
+      "path": "a_c/README.md",
+      "sha256": "569fd9048cad80477b9e3bb5479ce1db164243a75c0302b72cf810f91c290fdb",
+      "snapshot": "source-snapshots/a_c/README.md"
+    },
+    {
+      "bytes": 18756,
+      "path": "a_c/build_tenants/graphify/README.md",
+      "sha256": "259f22b0d60d7ff7cf0e67583cd71d2701ebf40304692f3d5b3f00b8005cb3ef",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/README.md"
+    },
+    {
+      "bytes": 69523,
+      "path": "a_c/build_tenants/graphify/code/ac_generate.py",
+      "sha256": "7002a7942f612f5a11e2a69dc865849ffef51c29c7b0cab9feb5170fb32d0479",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/code/ac_generate.py"
+    },
+    {
+      "bytes": 49166,
+      "path": "a_c/build_tenants/graphify/code/ac_graph.py",
+      "sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/code/ac_graph.py"
+    },
+    {
+      "bytes": 31297,
+      "path": "a_c/build_tenants/graphify/code/ac_grounding.py",
+      "sha256": "bd60bb9e1de4aa550ca97bcfa8c4cf197c8c30c7299c3b86d30bd8c15ef224bd",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/code/ac_grounding.py"
+    },
+    {
+      "bytes": 36708,
+      "path": "a_c/build_tenants/graphify/code/ac_repair.py",
+      "sha256": "5be5e738f12006dcb17066ccfb60d22e65e5929a8a9a96d52ee5c0a19efda928",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/code/ac_repair.py"
+    },
+    {
+      "bytes": 20703,
+      "path": "a_c/build_tenants/graphify/code/ac_support.py",
+      "sha256": "4d41a2373def237136cefe8b186c196c2e4376137c221ae4675c274abed5ad31",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/code/ac_support.py"
+    },
+    {
+      "bytes": 212740,
+      "path": "a_c/build_tenants/graphify/code/ac_support_core.py",
+      "sha256": "5395fd2947157541255168c6a1235136df64e9197d5032b25b31a0f071a4fe74",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/code/ac_support_core.py"
+    },
+    {
+      "bytes": 84271,
+      "path": "a_c/build_tenants/graphify/code/ac_support_effects.py",
+      "sha256": "36f75671b9dbce14e5f06811e180b662deb635b37921695668337466ace9bf25",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/code/ac_support_effects.py"
+    },
+    {
+      "bytes": 11148,
+      "path": "a_c/build_tenants/graphify/code/generation/author.schema.json",
+      "sha256": "6a9ecd905c5fe6d9cfa6cf35bf7945fb57833e43d87cc95e5ceb25efeb3dca87",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/code/generation/author.schema.json"
+    },
+    {
+      "bytes": 4240,
+      "path": "a_c/build_tenants/graphify/code/generation/author.txt",
+      "sha256": "11f1fcf1e9a4da5531737639fcfe64dfbfcb4c57026ad9d20b2f8a0a0e8bacdc",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/code/generation/author.txt"
+    },
+    {
+      "bytes": 4818,
+      "path": "a_c/build_tenants/graphify/code/generation/extraction.schema.json",
+      "sha256": "30f3dace4caad72b9b53edf5f208a8688da271e249b30eb1080ac3e5e37382cd",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/code/generation/extraction.schema.json"
+    },
+    {
+      "bytes": 696,
+      "path": "a_c/build_tenants/graphify/code/generation/isolation.txt",
+      "sha256": "3bf712063d1cb959d5c7c1eab258368eac8cbe6f4351c2dc745b0552f77f73e1",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/code/generation/isolation.txt"
+    },
+    {
+      "bytes": 214,
+      "path": "a_c/build_tenants/graphify/code/generation/requirements.txt",
+      "sha256": "233c1d0d4946525f9539289ad957c49c73491391cb0e3f52e574925e99bb93c2",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/code/generation/requirements.txt"
+    },
+    {
+      "bytes": 2037,
+      "path": "a_c/build_tenants/graphify/code/grounding_repair/patch.schema.json",
+      "sha256": "65c58364a33a31d25fb2de16e50fc1f92bf2eb30307ebb42eb0f7a60ecb58b76",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/code/grounding_repair/patch.schema.json"
+    },
+    {
+      "bytes": 2231,
+      "path": "a_c/build_tenants/graphify/code/grounding_repair/repair.txt",
+      "sha256": "304752f5d5359364f6b34a2cf1f16b1a9da3c786bcb3baba12364fa7ba4b0d7e",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/code/grounding_repair/repair.txt"
+    },
+    {
+      "bytes": 9475,
+      "path": "a_c/build_tenants/graphify/design/README.md",
+      "sha256": "f757ab636858c851cc500f5473ef0bc99a8d20ef2dfc209857917657895cf961",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/design/README.md"
+    },
+    {
+      "bytes": 43077,
+      "path": "a_c/build_tenants/graphify/design/fd-method-claude-rc9.json",
+      "sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/design/fd-method-claude-rc9.json"
+    },
+    {
+      "bytes": 291263,
+      "path": "a_c/build_tenants/graphify/design/fd-support.md",
+      "sha256": "e3c5e6e83d9be525a0ca44fc4e64c9077e33958337bc29807014715a50592939",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/design/fd-support.md"
+    },
+    {
+      "bytes": 12769,
+      "path": "a_c/build_tenants/graphify/design/generation.md",
+      "sha256": "a8bb1d49554ae440ef4b1864420dd036f0045b9624dbb850c42154200748c119",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/design/generation.md"
+    },
+    {
+      "bytes": 7755,
+      "path": "a_c/build_tenants/graphify/design/grounding.md",
+      "sha256": "929462b9a3e3af228349973cdf30d2967c307f659ac342e5f6c4ed56833269a6",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/design/grounding.md"
+    },
+    {
+      "bytes": 8660,
+      "path": "a_c/build_tenants/graphify/design/grounding_repair.md",
+      "sha256": "6d91d36d908a30d18d8b092a0728c0dbe0d2156575d30738f4b623144a675a3a",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/design/grounding_repair.md"
+    },
+    {
+      "bytes": 10627,
+      "path": "a_c/build_tenants/graphify/examples/fd-support/LIFECYCLE_QUICKSTART.md",
+      "sha256": "4d03920c625ac77bc7f38794bccf73003b08fd883ca2ad06022cfc4164dd6b84",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/examples/fd-support/LIFECYCLE_QUICKSTART.md"
+    },
+    {
+      "bytes": 10729,
+      "path": "a_c/build_tenants/graphify/examples/fd-support/README.md",
+      "sha256": "eca9c4cbfbd7ad4b712a7d1e8fc73f8cec42b0fb196967b77890833997018f94",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/examples/fd-support/README.md"
+    },
+    {
+      "bytes": 21280,
+      "path": "a_c/build_tenants/graphify/examples/fd-support/actor_cli.py",
+      "sha256": "06cd55463fd23e45fbf56fa46de92b9ba49f6650e3dc5686e219544d5457b42c",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/examples/fd-support/actor_cli.py"
+    },
+    {
+      "bytes": 9687,
+      "path": "a_c/build_tenants/graphify/examples/fd-support/prepare_readonly.py",
+      "sha256": "8bb5f22182af4b08816bbeff208fe43c650803f7f094cae6bb1465b325f2d8f3",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/examples/fd-support/prepare_readonly.py"
+    },
+    {
+      "bytes": 869,
+      "path": "a_c/build_tenants/graphify/examples/subject.md",
+      "sha256": "2adc1caa28b8da863cc23314a4138564fe0cce847d9f0eb8afcf5b938f6282b6",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/examples/subject.md"
+    },
+    {
+      "bytes": 149,
+      "path": "a_c/build_tenants/graphify/mypy.ini",
+      "sha256": "2ebf1ac43e89df83b0cd42a01ea0a3f00ee5f1a82045281357369847fd91b461",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/mypy.ini"
+    },
+    {
+      "bytes": 22990,
+      "path": "a_c/build_tenants/graphify/test_env/check_upstream.py",
+      "sha256": "e7c796e71b6143cd6314114fa3b5db6dae35f0a13fd6bcfed010402747182561",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/test_env/check_upstream.py"
+    },
+    {
+      "bytes": 14839,
+      "path": "a_c/build_tenants/graphify/test_env/fixture_support.py",
+      "sha256": "39201a5147db14d2acf929e9065b3eb5fd7cca6eeda0218095a6e1f94499c3b6",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/test_env/fixture_support.py"
+    },
+    {
+      "bytes": 70776,
+      "path": "a_c/build_tenants/graphify/test_env/fixtures/toy_model.json",
+      "sha256": "a72d423a222ecd84a429e28796c93ba07ac8b79d40caf3b74af02c36029f3b0b",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/test_env/fixtures/toy_model.json"
+    },
+    {
+      "bytes": 278,
+      "path": "a_c/build_tenants/graphify/test_env/requirements-qualification.txt",
+      "sha256": "9be107b68f56e3b7d7c1d6e3ac297daeda8484a8af8ceae783aead8355a7b3b5",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/test_env/requirements-qualification.txt"
+    },
+    {
+      "bytes": 4388,
+      "path": "a_c/build_tenants/graphify/test_env/support_fixtures/local_actor.py",
+      "sha256": "9c3c0fd8fe563f96db6cb00d95989fd319a6518b006f0efffcfd3d48caf6838a",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/test_env/support_fixtures/local_actor.py"
+    },
+    {
+      "bytes": 27925,
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_generate.py",
+      "sha256": "245a7e1748ebbe59042ba9c2151017227f380e37913b39ed8ee78146329c362f",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/test_env/test_ac_generate.py"
+    },
+    {
+      "bytes": 32150,
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_graph.py",
+      "sha256": "406f07ad5c3944abe209a9aada1d18bcb94e283bef54a0a3167fdba9894e8ec7",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/test_env/test_ac_graph.py"
+    },
+    {
+      "bytes": 19256,
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_grounding.py",
+      "sha256": "de695850c371bacb079305e55314a097a62c80b70624fcdabcc1506fad4dfacb",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/test_env/test_ac_grounding.py"
+    },
+    {
+      "bytes": 16130,
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_repair.py",
+      "sha256": "a0097ae36ce732fd84fdeaef21707acb4566bdbcc78faa5231fda4fdabacae18",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/test_env/test_ac_repair.py"
+    },
+    {
+      "bytes": 100818,
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_core.py",
+      "sha256": "6b1ce2819e0e96aad32fb87feccb3aeaee1cd37a85c91aa4e1b693b9a15dd709",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/test_env/test_ac_support_core.py"
+    },
+    {
+      "bytes": 82247,
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_effects.py",
+      "sha256": "4c96735d16f6dd67d24b89fb5a6b5b7bdc376de13d8c98c14b833ce346c0662e",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py"
+    },
+    {
+      "bytes": 61347,
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py",
+      "sha256": "7722ddcbc48ab7dd48e824ccdbec320f30e80dc3b63c0881564ff7ed97ee3450",
+      "snapshot": "source-snapshots/a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py"
+    },
+    {
+      "bytes": 6370,
+      "path": "a_c/specification/GOALS.md",
+      "sha256": "7f78e1a9834d1fc19fa421655e690c3b500138c66f94ff762337f57629351a03",
+      "snapshot": "source-snapshots/a_c/specification/GOALS.md"
+    },
+    {
+      "bytes": 1002,
+      "path": "a_c/specification/INTENT.md",
+      "sha256": "09d9740d9f05d67ab2dbf2bac62e717f320fe665bdbc410594852c29fc2630cd",
+      "snapshot": "source-snapshots/a_c/specification/INTENT.md"
+    },
+    {
+      "bytes": 9505,
+      "path": "a_c/specification/PRODUCT.md",
+      "sha256": "9ebc8342affe8c5e0afb08ebe22f3f98f73f7bdc64db00eee17674c47274bef7",
+      "snapshot": "source-snapshots/a_c/specification/PRODUCT.md"
+    },
+    {
+      "bytes": 6446,
+      "path": "a_c/specification/REFERENCE_FRAME_BASIS.md",
+      "sha256": "5cda45d1f267a3f221703c7fcc42b100c7997d3a98c015b7faf4f46b21222b8a",
+      "snapshot": "source-snapshots/a_c/specification/REFERENCE_FRAME_BASIS.md"
+    },
+    {
+      "bytes": 5868,
+      "path": "a_c/specification/requirements/README.md",
+      "sha256": "614b67911294cddff4147cbefec1ddbcb26bdb3917845db29768fa9389dacda5",
+      "snapshot": "source-snapshots/a_c/specification/requirements/README.md"
+    },
+    {
+      "bytes": 9808,
+      "path": "a_c/specification/requirements/fd-source-owner-map.md",
+      "sha256": "0e9210865f0e1ffac67a6e12eb74d79467b561b739019bde4759254d470155e7",
+      "snapshot": "source-snapshots/a_c/specification/requirements/fd-source-owner-map.md"
+    },
+    {
+      "bytes": 14787,
+      "path": "a_c/specification/requirements/fd-support-tools.md",
+      "sha256": "e3fcebd7e9fbc60dc36ed4c02ee834a96f14226af134809c938169d4712dfc23",
+      "snapshot": "source-snapshots/a_c/specification/requirements/fd-support-tools.md"
+    },
+    {
+      "bytes": 9558,
+      "path": "a_c/specification/requirements/fd-support-verification.md",
+      "sha256": "3746e614a5ddc3f0a551e926998f16d6101cc037c5c43b879b4447b017a8dbdf",
+      "snapshot": "source-snapshots/a_c/specification/requirements/fd-support-verification.md"
+    },
+    {
+      "bytes": 3428,
+      "path": "a_c/stdo_a_c.json",
+      "sha256": "b0e013e6f9dabb9d3f31dd02c1a6909e9fc6418925a8d829f3bb1c2adf3dac1d",
+      "snapshot": "source-snapshots/a_c/stdo_a_c.json"
+    }
+  ],
+  "subject": {
+    "bytes": 2896,
+    "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-003/CLOSED_SUBJECT.json",
+    "sha256": "22b8b36f384803c26a910493bc4c384519e6ac60e6baa61180c3e0582864d6bc"
+  }
+}

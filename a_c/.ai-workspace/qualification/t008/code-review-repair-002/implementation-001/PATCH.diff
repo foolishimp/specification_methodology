@@ -1,0 +1,475 @@
+--- before/a_c/build_tenants/graphify/code/ac_support_core.py
++++ after/a_c/build_tenants/graphify/code/ac_support_core.py
+@@ -1402,6 +1402,96 @@
+             "attempt": attempt, "evaluation_id": evaluation["id"]})
+ 
+ 
++def _conjunction_returns(runtime: Runtime, references: list[JSON]) -> tuple[dict[str, list[Object]], list[JSON], list[JSON]]:
++    candidates: dict[str, list[Object]] = {}; originals: list[JSON] = []; failures: list[JSON] = []
++    seen: set[str] = set()
++    for raw in references:
++        ref = as_object(raw)
++        if text(ref["id"]) in seen:
++            continue
++        seen.add(text(ref["id"]))
++        payload = as_object(load_artifact(runtime, ref, "return")["payload"])
++        originals.append({"record": ref, "original": payload["original"], "producer": payload["producer"]})
++        if payload["original"] is None or as_object(payload["producer"]).get("authenticated") is not True or any(isinstance(gap, dict) and "binding" in gap for gap in as_list(as_object(payload["binding_checks"])["gaps"])):
++            continue
++        original = as_object(payload["original"])
++        for raw_evaluation in as_list(original["evaluations"]):
++            evaluation = as_object(raw_evaluation)
++            key = _evaluation_key(original, payload["attempt"], evaluation)
++            entry = document({"key": key, "evaluation": evaluation, "subject": original["subject"], "basis": original["basis"], "return": ref})
++            candidates.setdefault(digest(key), []).append(entry)
++            if evaluation["core_value"] == "falsified":
++                failures.append(entry)
++    return candidates, originals, failures
++
++
++def _evaluation_identity(entry: Object) -> str:
++    return digest({name: entry[name] for name in ("key", "evaluation", "subject", "basis")})
++
++
++def _inherited_counterexamples(runtime: Runtime, references: list[JSON], current_returns: list[JSON],
++                              subject: Object, basis: Object) -> tuple[set[str], list[JSON]]:
++    """Revalidate typed original evidence; never import old mandatory order."""
++    pending = list(references); visited: set[str] = set()
++    plans: list[tuple[Object, Object, Object]] = []; returns = list(current_returns)
++    eligible: set[str] = set(); gaps: list[JSON] = []
++    maximum = integer(as_object(runtime.policy["limits"])["max_history_records"], minimum=1)
++    while pending:
++        ref = as_object(pending.pop())
++        if text(ref["id"]) in visited:
++            continue
++        if len(visited) >= maximum:
++            gaps.append({"cause": "inherited_history_exceeds_selected_limit", "limit": maximum}); break
++        visited.add(text(ref["id"]))
++        try:
++            old = as_object(load_artifact(runtime, ref, "operation")["payload"])
++            request = validate_request(old["request"])
++            if request["operation"] != "results.conjoin":
++                raise SupportError("basis_missing", "Inherited record is not a conjunction operation")
++            args = as_object(request["arguments"])
++            prior = as_object(as_object(as_object(old["response_without_evidence"])["result"])["value"])
++            if not _equal(prior["plan"], args["plan"]):
++                raise SupportError("basis_stale", "Inherited plan differs from its owning request")
++            plan = _source_json(runtime, as_object(args["plan"]), "ConjunctionPlan")
++            composite = as_object(plan["composite"]); judgment = as_object(prior["judgment"])
++            if any(not _equal(item["subject"], subject) or not _equal(item["basis"], basis) for item in (composite, judgment)) or not _equal(args["current_observations"], basis["observations"]):
++                raise SupportError("basis_stale", "Inherited counterexample is not on this exact subject/basis")
++            read_source(runtime, as_object(plan["authority_source"]))
++            read_source(runtime, as_object(composite["predicate"]))
++            plans.append((ref, plan, args))
++            returns.extend(as_list(args["returns"]))
++            pending.extend(as_list(plan["inherited"]))
++        except SupportError as error:
++            gaps.append({"inherited": ref, "cause": error.document()})
++    try:
++        population, _, _ = _conjunction_returns(runtime, returns)
++        for ref, plan, args in plans:
++            candidates, _, _ = _conjunction_returns(runtime, as_list(args["returns"]))
++            for raw in as_list(plan["assessments"]):
++                assessment = as_object(raw)
++                read_source(runtime, as_object(assessment["predicate"]))
++                if not _equal(assessment["subject"], subject) or not _equal(assessment["basis"], basis):
++                    raise SupportError("basis_stale", "Inherited assessment has another exact subject/basis")
++                condition, condition_gaps = _condition(runtime, assessment["applicability"], subject, basis)
++                if condition == "falsified":
++                    continue
++                if assessment["applicability"] is not None and condition != "satisfied":
++                    gaps.append({"inherited": ref, "assessment": assessment["id"], "cause": "unresolved_applicability", "gaps": condition_gaps}); continue
++                key = digest(assessment["key"])
++                local = {_evaluation_identity(row): row for row in candidates.get(key, [])}
++                complete = {_evaluation_identity(row): row for row in population.get(key, [])}
++                if len(local) != 1 or len(complete) != 1:
++                    gaps.append({"inherited": ref, "assessment": assessment["id"], "cause": "cardinality_conflict" if local else "not_performed_or_missing"}); continue
++                entry = next(iter(local.values())); evaluation = as_object(entry["evaluation"])
++                if not _equal(entry["subject"], subject) or not _equal(entry["basis"], basis) or not _equal(evaluation["predicate"], assessment["predicate"]):
++                    gaps.append({"inherited": ref, "assessment": assessment["id"], "cause": "stale_wrong_subject_basis_or_predicate"}); continue
++                if evaluation["core_value"] == "falsified":
++                    eligible.add(_evaluation_identity(entry))
++    except SupportError as error:
++        gaps.append({"cause": error.document()})
++    return eligible, gaps
++
++
+ def conjoin(runtime: Runtime, args: Object) -> Object:
+     plan_ref = as_object(args["plan"])
+     operator = _qualified_operator(runtime, text(args["operator_id"]), plan_ref)
+@@ -1432,25 +1522,8 @@
+         read_source(runtime, as_object(constraint["predicate"]))
+     if any(row["obligation_id"] not in obligation_ids for row in constraints):
+         raise SupportError("contract_violation", "Required constraint names undeclared obligation")
+-    candidates: dict[str, list[Object]] = {}; originals: list[JSON] = []; failures: list[JSON] = []; inherited_gaps: list[JSON] = []
+-    seen_refs: set[str] = set()
+-    for raw in as_list(args["returns"]):
+-        ref = as_object(raw)
+-        if text(ref["id"]) in seen_refs:
+-            continue
+-        seen_refs.add(text(ref["id"]))
+-        envelope = load_artifact(runtime, ref, "return"); payload = as_object(envelope["payload"])
+-        originals.append({"record": ref, "original": payload["original"], "producer": payload["producer"]})
+-        if payload["original"] is None or as_object(payload["producer"]).get("authenticated") is not True or any(isinstance(gap, dict) and "binding" in gap for gap in as_list(as_object(payload["binding_checks"])["gaps"])):
+-            continue
+-        original = as_object(payload["original"])
+-        for raw_evaluation in as_list(original["evaluations"]):
+-            evaluation = as_object(raw_evaluation)
+-            key = _evaluation_key(original, payload["attempt"], evaluation)
+-            entry: Object = document({"key": key, "evaluation": evaluation, "subject": original["subject"], "basis": original["basis"], "return": ref})
+-            candidates.setdefault(digest(key), []).append(entry)
+-            if evaluation["core_value"] == "falsified":
+-                failures.append(entry)
++    candidates, originals, failures = _conjunction_returns(runtime, as_list(args["returns"]))
++    inherited_gaps: list[JSON] = []
+     planned_gaps: list[JSON] = []; coverage: set[str] = set(); applicable: list[Object] = []; conflicts: list[JSON] = []
+     excluded: list[JSON] = []
+     basis_disagreement = False
+@@ -1510,6 +1583,8 @@
+                     obligation_records[old_id] = old_obligation
+         except SupportError as exc:
+             inherited_gaps.append({"inherited": ref, "cause": exc.document()})
++    inherited_eligible, fresh_inherited_gaps = _inherited_counterexamples(runtime, as_list(plan["inherited"]), as_list(args["returns"]), subject, basis)
++    inherited_gaps.extend(fresh_inherited_gaps)
+     required.update(inherited_required); coverage.update(inherited_coverage)
+     uncovered = sorted(required - coverage); planned_gaps.extend(inherited_gaps)
+     planned_gaps.extend(applicability_gaps)
+@@ -1523,8 +1598,8 @@
+         f = as_object(failure); evaluation = as_object(f["evaluation"])
+         for constraint in constraints:
+             if constraint["obligation_id"] in required and _equal(evaluation["predicate"], constraint["predicate"]):
+-                admitted = [entry for entry in applicable if _equal(as_object(entry["result"])["key"], f["key"])]
+-                if admitted:
++                admitted = [entry for entry in applicable if _evaluation_identity(as_object(entry["result"])) == _evaluation_identity(f)]
++                if admitted or _evaluation_identity(f) in inherited_eligible:
+                     constraint_failures.append({"failure": f, "required_constraint": constraint, "obligation": obligation_records[text(constraint["obligation_id"])]})
+     if core_value == "satisfied":
+         if basis_disagreement:
+--- before/a_c/build_tenants/graphify/code/ac_support_effects.py
++++ after/a_c/build_tenants/graphify/code/ac_support_effects.py
+@@ -577,15 +577,56 @@
+         raise c.SupportError("contract_violation", "Prepared effect does not bind this exact request/policy/principal", [], [])
+ 
+ 
++def _owner_binding(runtime: c.Runtime, request: c.Object, envelope: c.Object,
++                   schema: str) -> None:
++    payload = c.as_object(envelope["payload"])
++    provenance = c.as_object(envelope["provenance"])
++    c.make_artifact(c.text(envelope["kind"]), payload, provenance)
++    if payload.get("schema") != schema:
++        raise c.SupportError("history_incomplete", "Committed owner has an unexpected carrier", [], [])
++    saved = c.validate_request(payload["request"])
++    if provenance["request_id"] != saved["id"] or provenance["request_sha256"] != c.digest(saved):
++        raise c.SupportError("history_incomplete", "Committed owner request/provenance is incoherent", [], [])
++    if schema == "a_c.fd-support.request-claim/1" and payload["policy_sha256"] != provenance["policy_sha256"]:
++        raise c.SupportError("history_incomplete", "Committed claim policy/provenance is incoherent", [], [])
++    product = c.as_object(runtime.policy["product"])
++    expected: c.Object = {"product_id": product["definition_id"], "definition_sha256": c.as_object(product["definition"])["sha256"], "requester_principal": runtime.principal_id, "policy_sha256": runtime.policy_sha256, "method_profile_sha256": c.PROFILE_SHA256, "actor": runtime.principal}
++    if saved != request or any(provenance[name] != value for name, value in expected.items()):
++        raise c.SupportError("request_identity_conflict", "Committed owner binds different effective request/Product/principal/policy", [request["id"]], [])
++
++
++def _identity_history(runtime: c.Runtime, store: EvidenceStore, request: c.Object,
++                      schemas: tuple[str, ...]) -> c.Object:
++    refs: list[c.JSON] = []; gaps: list[c.JSON] = []
++    for schema in schemas:
++        kind = "attempt" if schema == "a_c.fd-support.attempt/1" else "raw"
++        query = store.query_artifacts(kind, {"provenance.product_id": _product(runtime),
++            "provenance.requester_principal": runtime.principal_id,
++            "payload.request.id": request["id"], "payload.schema": schema})
++        refs.extend(c.as_list(query["refs"]))
++        if query["complete"] is not True:
++            gaps.append(query)
++    return {"refs": refs, "complete": not gaps, "gaps": gaps,
++            "scope": {"product_id": _product(runtime), "principal": runtime.principal_id, "request_id": request["id"]}}
++
++
+ def _claim(runtime: c.Runtime, store: EvidenceStore, request: c.Object) -> str:
+     key = _key(runtime, request)
+     path = store.root / "requests" / (key + ".claim.json")
+-    old = _marker(store, path)
+-    if old is not None:
+-        payload = c.as_object(old["payload"])
+-        if payload.get("request") != request or payload.get("policy_sha256") != runtime.policy_sha256:
+-            raise c.SupportError("request_identity_conflict", "Same caller request identity has different effective inputs", [request["id"]], [])
++    owners: dict[str, c.Object] = {}
++    schemas = {"claim": "a_c.fd-support.request-claim/1", "outcome": "a_c.fd-support.effect-outcome/1", "intent": "a_c.fd-support.writer-intent/1", "attempt": "a_c.fd-support.attempt/1"}
++    for suffix, schema in schemas.items():
++        old = _marker(store, store.root / "requests" / (key + "." + suffix + ".json"))
++        if old is not None:
++            _owner_binding(runtime, request, old, schema)
++            owners[suffix] = old
++    if "claim" in owners:
+         return key
++    if owners:
++        raise c.SupportError("history_incomplete", "Required request claim owner is absent; no reconstruction or new reservation", [request["id"]], [])
++    history = _identity_history(runtime, store, request, tuple(schemas.values()))
++    if history["complete"] is not True or c.as_list(history["refs"]):
++        raise c.SupportError("history_incomplete", "Stable request identity has unresolved owner/history absence", [history], [])
+     selected_policy, selected_policy_ref = _selected_policy(runtime, request)
+     store.retain(selected_policy)
+     envelope, _ = _artifact(runtime, request, "raw", {"schema": "a_c.fd-support.request-claim/1", "request": request, "policy_sha256": runtime.policy_sha256, "selected_policy": selected_policy_ref})
+@@ -593,9 +634,12 @@
+     return key
+ 
+ 
+-def _completed(store: EvidenceStore, key: str) -> c.CoreOutcome | None:
++def _completed(runtime: c.Runtime, store: EvidenceStore, request: c.Object, key: str) -> c.CoreOutcome | None:
+     old = _marker(store, store.root / "requests" / (key + ".outcome.json"))
+-    return None if old is None else c.as_object(c.as_object(old["payload"])["outcome"], "retained CoreOutcome")
++    if old is None:
++        return None
++    _owner_binding(runtime, request, old, "a_c.fd-support.effect-outcome/1")
++    return c.as_object(c.as_object(old["payload"])["outcome"], "retained CoreOutcome")
+ 
+ 
+ def _verify_support_graph(store: EvidenceStore, references: list[c.Object]) -> None:
+@@ -679,11 +723,11 @@
+                    key: str) -> c.CoreOutcome | None:
+     old = _marker(store, store.root / "requests" / (key + ".intent.json"))
+     if old is None:
+-        history = store.query_artifacts("raw", {"provenance.requester_principal": runtime.principal_id,
+-            "provenance.request_sha256": c.digest(request), "payload.schema": "a_c.fd-support.writer-intent/1"})
++        history = _identity_history(runtime, store, request, ("a_c.fd-support.writer-intent/1", "a_c.fd-support.effect-outcome/1"))
+         if history["complete"] is not True or c.as_list(history["refs"]):
+             raise c.SupportError("history_incomplete", "Cannot establish absence of an earlier Writer intent/owner", [history], [])
+         return None
++    _owner_binding(runtime, request, old, "a_c.fd-support.writer-intent/1")
+     _verify_support_graph(store, _references(old))
+     saved = c.as_object(c.as_object(old["payload"])["plan"])
+     target = c.as_object(c.as_object(request["arguments"])["target"])
+@@ -1071,7 +1115,7 @@
+             if claim is None:
+                 raise c.SupportError("history_incomplete", "Writer claim is unavailable after reservation", [], [])
+             _verify_support_graph(store, _references(claim))
+-        previous = _completed(store, key)
++        previous = _completed(runtime, store, request, key)
+         if previous is not None:
+             if operation == "work.write":
+                 _verify_support_graph(store, _outcome_support(operation, previous))
+--- before/a_c/build_tenants/graphify/test_env/test_ac_support_core.py
++++ after/a_c/build_tenants/graphify/test_env/test_ac_support_core.py
+@@ -581,6 +581,94 @@
+                 if variant != "mandatory-precedence":
+                     self.assertEqual(value["constraint_failures"], [])
+ 
++    def nested_counterexample(self, variant: str, depth: int = 1) -> Object:
++        """Controlled protected producer and isolated operator gate, not qualification."""
++        runtime = self.f.runtime()
++        passed, first, _ = self.protected_return(runtime, "satisfied", "nested-S")
++        predicate = self.f.data if variant == "unrelated" else self.f.law
++        failed, second, _ = self.protected_return(runtime, "falsified", "nested-F", variant == "wrong-subject", predicate=predicate)
++        rows = [(passed, first), (failed, second)]
++        extra_returns: list[JSON] = []
++        if variant in ("wrong-basis", "cardinality"):
++            payload = copy.deepcopy(c.as_object(c.load_artifact(runtime, failed, "return")["payload"]))
++            original = c.as_object(payload["original"])
++            if variant == "wrong-basis":
++                c.as_object(original["basis"])["observations"] = [{"id": "sha256:" + "0" * 64, "sha256": "0" * 64}]
++                changed = self.f.artifact(runtime, "return", payload)
++                rows[1] = (changed, original)
++            else:
++                c.as_object(c.as_list(original["evaluations"])[0])["core_value"] = "satisfied"
++                extra_returns.append(self.f.artifact(runtime, "return", payload))
++        condition: JSON = None
++        if variant == "excluded":
++            self.f.predicate("exclude-nested", {"literal": False})
++            runtime = self.f.runtime()
++            response, _ = self.f.run(runtime, "checks.evaluate", {"predicate_id": "exclude-nested", "inputs": {}, "subject": self.f.subject, "basis": self.f.basis})
++            condition = obj({"predicate": self.f.law, "evaluation": {"record": response["evidence"], "pointer": "/payload/response_without_evidence/result/value/judgment"}})
++
++        def join(identity: str, entries: list[tuple[Object, Object]], inherited: list[JSON], required: bool, inner: bool = False) -> tuple[Object, Object]:
++            assessments: list[JSON] = []
++            for index, (reference, original) in enumerate(entries):
++                payload = c.as_object(c.load_artifact(runtime, reference, "return")["payload"])
++                evaluation = c.as_object(c.as_list(original["evaluations"])[0])
++                assessments.append(obj({"id": "assessment-" + str(index), "key": {"producer": "worker", "activation": original["activation"], "attempt": payload["attempt"], "evaluation_id": evaluation["id"]}, "predicate": self.f.data if inner and index and variant == "wrong-predicate" else evaluation["predicate"], "subject": self.f.subject, "basis": self.f.basis, "mandatory": index == 0, "coverage": [identity] if index == 0 else [], "applicability": condition if inner and index else None}))
++            if not inner and required and variant == "gap":
++                missing = copy.deepcopy(c.as_object(assessments[0])); missing["id"] = "not-performed"
++                c.as_object(missing["key"])["evaluation_id"] = "not-performed"
++                assessments.append(missing)
++            plan = obj({"schema": "a_c.fd-support.conjunction-plan/1", "id": identity, "authority_source": self.f.owner, "operator_id": "claude-rc9.conjunction/1", "composite": {"predicate": self.f.law, "subject": self.f.subject, "basis": self.f.basis}, "decision_authority": self.f.owner, "rule": "first_non_satisfied_in_plan_order", "basis_relation": "exact_equal_to_composite", "required_obligations": [{"id": identity, "source": self.f.law, "applicability": None}], "required_constraints": [{"obligation_id": identity, "predicate": self.f.law}] if required else [], "assessments": assessments, "inherited": inherited})
++            self.f.counter += 1
++            source = self.f.write("inputs/nested-plan-" + str(self.f.counter) + ".json", plan)
++            operator = obj({"id": "claude-rc9.conjunction/1", "source": self.f.law, "decision_authority": self.f.owner, "rule": "first_non_satisfied_in_plan_order", "plan_source": source})
++            returns: list[JSON] = [reference for reference, _ in entries]
++            if inner:
++                returns.extend(extra_returns)
++            with patch.object(c, "_qualified_operator", return_value=operator):
++                response, _ = self.f.run(runtime, "results.conjoin", {"operator_id": "claude-rc9.conjunction/1", "plan": source, "returns": returns, "current_observations": []})
++            return self.value(response), c.as_object(response["evidence"])
++
++        inner_value, inherited = join("r2", rows, [], variant == "already-required", True)
++        if variant in ("new-P", "excluded", "unrelated"):
++            self.assertEqual(c.as_object(inner_value["judgment"])["core_value"], "satisfied")
++        for level in range(depth - 1):
++            _, inherited = join("middle-" + str(level), [(passed, first)], [inherited], False)
++        outer = [(passed, first)]
++        if variant == "mandatory-precedence":
++            held, held_original, _ = self.protected_return(runtime, "indeterminate", "outer-held")
++            outer = [(held, held_original)]
++        value, _ = join("r", outer, [inherited], True)
++        self.assertEqual(len(c.as_list(value["applicable"])), 1)
++        if variant == "wrong-subject":
++            # Binding rejects this carrier for the current subject. Its raw
++            # original survives; it is not an authenticated applicable F.
++            retained = c.as_object(c.load_artifact(runtime, failed, "return")["payload"])
++            self.assertEqual(retained["original"], second)
++        else:
++            self.assertTrue(value["failures"])
++        return value
++
++    def test_new_outer_required_constraint_revalidates_nested_counterexample(self) -> None:
++        for depth in (1, 2):
++            with self.subTest(depth=depth):
++                value = self.nested_counterexample("new-P", depth)
++                self.assertEqual(c.as_object(value["judgment"])["core_value"], "falsified")
++                self.assertTrue(value["constraint_failures"])
++                self.assertEqual(value["planned_gaps"], []); self.assertEqual(value["uncovered"], [])
++
++    def test_inherited_counterexample_cannot_grant_excluded_or_invalid_results(self) -> None:
++        for variant, expected in (("unrelated", "satisfied"), ("excluded", "satisfied"), ("wrong-subject", "indeterminate"), ("wrong-basis", "indeterminate"), ("wrong-predicate", "indeterminate"), ("cardinality", "indeterminate")):
++            with self.subTest(variant=variant):
++                value = self.nested_counterexample(variant, 2)
++                self.assertEqual(c.as_object(value["judgment"])["core_value"], expected)
++                self.assertEqual(value["constraint_failures"], [])
++
++    def test_inherited_counterexample_preserves_gaps_and_current_mandatory_order(self) -> None:
++        for variant, expected in (("gap", "indeterminate"), ("mandatory-precedence", "indeterminate"), ("already-required", "falsified")):
++            with self.subTest(variant=variant):
++                value = self.nested_counterexample(variant, 2)
++                self.assertEqual(c.as_object(value["judgment"])["core_value"], expected)
++                self.assertTrue(value["constraint_failures"])
++
+     def qualified_plan(self, runtime: c.Runtime, returned: list[tuple[Object, Object]], missing: bool = False) -> tuple[Object, c.Runtime]:
+         assessments = []
+         for index, (ref, original) in enumerate(returned):
+--- before/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py
++++ after/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py
+@@ -493,6 +493,27 @@
+     def setUp(self) -> None:
+         super().setUp()
+         self.configure_writer_authority()
++
++    def test_completed_owner_binding_cannot_discard_another_request(self) -> None:
++        path = self.source / "work/record.txt"; path.write_bytes(b"before")
++        request = self.write_request("completed-owner-binding", "+after")
++        e.execute_effect(self.runtime, request, None)
++        key = e._key(self.runtime, request)
++        marker = self.store.root / "requests" / (key + ".outcome.json")
++        owner = c.as_object(c.parse_json(marker.read_bytes()))
++        other = copy.deepcopy(request)
++        c.as_object(c.as_object(other["arguments"])["record"])["text"] = "a different request"
++        c.as_object(owner["payload"])["request"] = other
++        owner["provenance"] = c.provenance(self.runtime, other, 1, 2)
++        self.store.retain(owner)
++        marker.write_bytes(c.canonical(owner))  # Explicit adversarial fixture.
++        with self.assertRaises(c.SupportError) as caught:
++            e._completed(self.runtime, self.store, request, key)
++        self.assertEqual(caught.exception.code, "request_identity_conflict")
++        with patch.object(c, "prepare_write", side_effect=AssertionError("Conflict must not plan")), self.assertRaises(c.SupportError) as caught:
++            e.execute_effect(self.runtime, request, None)
++        self.assertEqual(caught.exception.code, "request_identity_conflict")
++        self.assertEqual(path.read_bytes(), b"before+after")
+ 
+     def test_public_effect_entry_refuses_a_precomputed_writer_plan(self) -> None:
+         path = self.source / "work/record.txt"; path.write_bytes(b"before")
+--- before/a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py
++++ after/a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py
+@@ -535,6 +535,96 @@
+     def target(self, request: dict[str, Any]) -> Path:
+         return self.f.workspace / cast(str, request["arguments"]["target"]["path"])
+ 
++    def isolated(self, name: str) -> None:
++        root = self.root / name; root.mkdir()
++        self.f = Fixture(root)
++        self.select_policy()
++
++    def remove_owner(self, request: dict[str, Any], suffix: str) -> None:
++        key = core.digest({"product": "urn:test:product", "principal": "worker", "id": request["id"]})
++        marker = self.f.evidence / "requests" / (key + "." + suffix + ".json")
++        before = {str(path.relative_to(self.f.evidence)): hashlib.sha256(path.read_bytes()).hexdigest() for path in self.f.evidence.rglob("*") if path.is_file()}
++        saved = self.root / "removed-owners" / (str(self.sequence) + "-" + suffix)
++        saved.mkdir(parents=True)
++        (saved / "marker.bin").write_bytes(marker.read_bytes())
++        marker.unlink()
++        after = {str(path.relative_to(self.f.evidence)): hashlib.sha256(path.read_bytes()).hexdigest() for path in self.f.evidence.rglob("*") if path.is_file()}
++        self.assertEqual(set(before) - set(after), {str(marker.relative_to(self.f.evidence))})
++        self.assertTrue(all(before[name] == value for name, value in after.items()))
++        (saved / "removal.json").write_bytes(canonical({"removed_only": str(marker), "sha256": hashlib.sha256((saved / "marker.bin").read_bytes()).hexdigest(), "other_files_unchanged": len(after)}))
++
++    def claim_path(self, request: dict[str, Any]) -> Path:
++        key = core.digest({"product": "urn:test:product", "principal": "worker", "id": request["id"]})
++        return self.f.evidence / "requests" / (key + ".claim.json")
++
++    def test_lost_claim_cli_mcp_distinguish_known_conflict_from_exact_history_gap(self) -> None:
++        for transport in ("cli", "mcp"):
++            for changed in (False, True):
++                with self.subTest(transport=transport, changed=changed):
++                    self.isolated(transport + "-" + str(changed))
++                    request = self.request("lost-claim")
++                    first = self.response(self.call(request, transport=transport), transport)
++                    self.assertEqual(first["status"], "ok", first)
++                    self.remove_owner(request, "claim")
++                    replay = json.loads(json.dumps(request))
++                    if changed:
++                        replay["arguments"]["record"]["text"] = "different requested record\n"
++                    response = self.response(self.call(replay, transport=transport), transport)
++                    self.assertEqual(response["refusal"]["code"], "request_identity_conflict" if changed else "history_incomplete")
++                    self.assertIsNone(response["result"])
++                    self.assertFalse(self.claim_path(request).exists())
++                    self.assertEqual(self.target(request).read_bytes(), b"before\nafter\n")
++                    if changed and transport == "cli":
++                        fresh = json.loads(json.dumps(replay)); fresh["id"] = "genuine-fresh-id"
++                        fresh["arguments"]["target"]["sha256"] = hashlib.sha256(self.target(request).read_bytes()).hexdigest()
++                        response = self.response(self.call(fresh))
++                        self.assertEqual(response["status"], "ok", response)
++                        self.assertEqual(self.target(request).read_bytes(), b"before\nafter\ndifferent requested record\n")
++
++    def test_lost_claim_changed_valid_policy_cannot_attribute_old_completion(self) -> None:
++        request = self.request("lost-policy")
++        first = self.response(self.call(request)); self.assertEqual(first["status"], "ok", first)
++        self.remove_owner(request, "claim")
++        self.f.policy["id"] = "distinct-valid-policy"
++        self.select_policy()
++        replay = self.response(self.call(request))
++        self.assertEqual(replay["refusal"]["code"], "request_identity_conflict")
++        self.assertIsNone(replay["result"])
++        self.assertFalse(self.claim_path(request).exists())
++        self.assertEqual(self.target(request).read_bytes(), b"before\nafter\n")
++
++    def test_lost_claim_uncertain_intent_and_further_owner_loss_never_repeat(self) -> None:
++        for variant in ("exact", "changed", "all-owners"):
++            with self.subTest(variant=variant):
++                self.isolated(variant)
++                request = self.request("uncertain-lost-claim")
++                failed = self.call(request, hook="fatal-target")
++                self.assertEqual(json.loads((failed / "ended.json").read_text())["returncode"], 77)
++                self.remove_owner(request, "claim")
++                if variant == "all-owners":
++                    self.remove_owner(request, "intent")
++                replay = json.loads(json.dumps(request))
++                if variant == "changed":
++                    replay["arguments"]["record"]["text"] = "changed uncertain request"
++                response = self.response(self.call(replay))
++                self.assertEqual(response["refusal"]["code"], "request_identity_conflict" if variant == "changed" else "history_incomplete")
++                self.assertFalse(self.claim_path(request).exists())
++                self.assertEqual(self.target(request).read_bytes(), b"before\nafter\n")
++
++    def test_ownerless_same_id_history_blocks_a_changed_request_digest(self) -> None:
++        request = self.request("pre-owner-changed")
++        failed = self.call(request, hook="uncommitted-intent")
++        self.assertEqual(json.loads((failed / "ended.json").read_text())["returncode"], 77)
++        self.remove_owner(request, "claim")
++        replay = json.loads(json.dumps(request))
++        replay["arguments"]["record"]["text"] = "a different digest at the same identity\n"
++        response = self.response(self.call(replay))
++        self.assertEqual(response["refusal"]["code"], "history_incomplete")
++        self.assertIsNone(response["result"])
++        self.assertFalse(self.claim_path(request).exists())
++        self.assertEqual(list((self.f.evidence / "requests").glob("*.intent.json")), [])
++        self.assertEqual(self.target(request).read_bytes(), b"before\n")
++
+     def test_cli_mcp_append_replace_recover_original_unconsumed_result(self) -> None:
+         for transport in ("cli", "mcp"):
+             for mode in ("append", "replace"):

@@ -1,0 +1,184 @@
+{
+  "cases": [
+    {
+      "custody": "final-suite/custody/test_ac_support_effects_PublicRetryTests_test_public_retry_absent_selection_stays_held",
+      "final_counter": "1",
+      "intentionally_wrong_predecessor": false,
+      "public_calls": 8,
+      "public_preflights": 2,
+      "refusal": {
+        "code": "effect_unreconciled",
+        "gaps": [],
+        "reason": "Grant has no selected predecessor-bound reconciliation contract",
+        "source_refs": []
+      },
+      "retry_status": "error",
+      "same_actual_Context": true,
+      "test": "test_ac_support_effects_PublicRetryTests_test_public_retry_absent_selection_stays_held"
+    },
+    {
+      "custody": "final-suite/custody/test_ac_support_effects_PublicRetryTests_test_public_retry_checks_every_selected_basis",
+      "final_counter": "1",
+      "intentionally_wrong_predecessor": false,
+      "public_calls": 8,
+      "public_preflights": 2,
+      "refusal": {
+        "code": "effect_unreconciled",
+        "gaps": [
+          {
+            "predicate_id": "wrong-selected"
+          }
+        ],
+        "reason": "Selected reconciliation predicate does not bind this predecessor/current basis",
+        "source_refs": []
+      },
+      "retry_status": "error",
+      "same_actual_Context": true,
+      "test": "test_ac_support_effects_PublicRetryTests_test_public_retry_checks_every_selected_basis"
+    },
+    {
+      "custody": "final-suite/custody/test_ac_support_effects_PublicRetryTests_test_public_retry_checks_every_selected_registered_id",
+      "final_counter": "1",
+      "intentionally_wrong_predecessor": false,
+      "public_calls": 8,
+      "public_preflights": 2,
+      "refusal": {
+        "code": "effect_unreconciled",
+        "gaps": [
+          {
+            "predicate_id": "wrong-selected"
+          }
+        ],
+        "reason": "Selected reconciliation predicate is not registered",
+        "source_refs": []
+      },
+      "retry_status": "error",
+      "same_actual_Context": true,
+      "test": "test_ac_support_effects_PublicRetryTests_test_public_retry_checks_every_selected_registered_id"
+    },
+    {
+      "custody": "final-suite/custody/test_ac_support_effects_PublicRetryTests_test_public_retry_checks_every_selected_subject",
+      "final_counter": "1",
+      "intentionally_wrong_predecessor": false,
+      "public_calls": 8,
+      "public_preflights": 2,
+      "refusal": {
+        "code": "effect_unreconciled",
+        "gaps": [
+          {
+            "predicate_id": "wrong-selected"
+          }
+        ],
+        "reason": "Selected reconciliation predicate does not bind this predecessor/current basis",
+        "source_refs": []
+      },
+      "retry_status": "error",
+      "same_actual_Context": true,
+      "test": "test_ac_support_effects_PublicRetryTests_test_public_retry_checks_every_selected_subject"
+    },
+    {
+      "custody": "final-suite/custody/test_ac_support_effects_PublicRetryTests_test_public_retry_empty_selection_stays_held",
+      "final_counter": "1",
+      "intentionally_wrong_predecessor": false,
+      "public_calls": 8,
+      "public_preflights": 2,
+      "refusal": {
+        "code": "effect_unreconciled",
+        "gaps": [],
+        "reason": "Grant has no selected predecessor-bound reconciliation contract",
+        "source_refs": []
+      },
+      "retry_status": "error",
+      "same_actual_Context": true,
+      "test": "test_ac_support_effects_PublicRetryTests_test_public_retry_empty_selection_stays_held"
+    },
+    {
+      "custody": "final-suite/custody/test_ac_support_effects_PublicRetryTests_test_public_retry_refuses_false_check",
+      "final_counter": "1",
+      "intentionally_wrong_predecessor": false,
+      "public_calls": 8,
+      "public_preflights": 2,
+      "refusal": {
+        "code": "effect_unreconciled",
+        "gaps": [
+          {
+            "predicate_id": "predecessor-observed"
+          }
+        ],
+        "reason": "A selected actual reconciliation predicate is missing/not satisfied",
+        "source_refs": []
+      },
+      "retry_status": "error",
+      "same_actual_Context": true,
+      "test": "test_ac_support_effects_PublicRetryTests_test_public_retry_refuses_false_check"
+    },
+    {
+      "custody": "final-suite/custody/test_ac_support_effects_PublicRetryTests_test_public_retry_refuses_invalid_check_basis",
+      "final_counter": "1",
+      "intentionally_wrong_predecessor": false,
+      "public_calls": 9,
+      "public_preflights": 2,
+      "refusal": {
+        "code": "effect_unreconciled",
+        "gaps": [
+          {
+            "predicate_id": "predecessor-observed"
+          }
+        ],
+        "reason": "A selected actual reconciliation predicate is missing/not satisfied",
+        "source_refs": []
+      },
+      "retry_status": "error",
+      "same_actual_Context": true,
+      "test": "test_ac_support_effects_PublicRetryTests_test_public_retry_refuses_invalid_check_basis"
+    },
+    {
+      "custody": "final-suite/custody/test_ac_support_effects_PublicRetryTests_test_public_retry_refuses_wrong_predecessor",
+      "final_counter": "1",
+      "intentionally_wrong_predecessor": true,
+      "public_calls": 8,
+      "public_preflights": 2,
+      "refusal": {
+        "code": "effect_unreconciled",
+        "gaps": [],
+        "reason": "Retry does not bind an existing predecessor/reconciliation",
+        "source_refs": []
+      },
+      "retry_status": "error",
+      "same_actual_Context": true,
+      "test": "test_ac_support_effects_PublicRetryTests_test_public_retry_refuses_wrong_predecessor"
+    },
+    {
+      "custody": "final-suite/custody/test_ac_support_effects_PublicRetryTests_test_public_retry_requires_actual_check",
+      "final_counter": "1",
+      "intentionally_wrong_predecessor": false,
+      "public_calls": 7,
+      "public_preflights": 2,
+      "refusal": {
+        "code": "effect_unreconciled",
+        "gaps": [
+          {
+            "predicate_id": "predecessor-observed"
+          }
+        ],
+        "reason": "A selected actual reconciliation predicate is missing/not satisfied",
+        "source_refs": []
+      },
+      "retry_status": "error",
+      "same_actual_Context": true,
+      "test": "test_ac_support_effects_PublicRetryTests_test_public_retry_requires_actual_check"
+    },
+    {
+      "custody": "final-suite/custody/test_ac_support_effects_PublicRetryTests_test_public_selected_retry",
+      "final_counter": "2",
+      "intentionally_wrong_predecessor": false,
+      "public_calls": 11,
+      "public_preflights": 2,
+      "refusal": null,
+      "retry_status": "ok",
+      "same_actual_Context": true,
+      "test": "test_ac_support_effects_PublicRetryTests_test_public_selected_retry"
+    }
+  ],
+  "standing": "Actual public CLI + registered local fixture, no F_P/provider or production retry. Both receipts are public preflight outputs; no handmade receipt/private-entry shortcut."
+}

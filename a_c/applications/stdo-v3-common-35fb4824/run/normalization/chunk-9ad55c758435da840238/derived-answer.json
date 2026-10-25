@@ -1,0 +1,2422 @@
+{
+  "concepts": [
+    {
+      "conditions": [
+        "A project adopts the profile for a named realisation boundary."
+      ],
+      "definition": "DESIGN_MODULE is optional material family F17, software design. Actors enter it when designing, implementing or reviewing a governed boundary. It governs realisation of decided Product outcomes, not the constitutional decision about those outcomes. Its foundation-to-law table distinguishes derived consequences from domain and policy choices and their owners.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 174,
+          "quote": "Its instance premises hold where a project\nadopts this profile for a boundary; they are adopted with it and do not\nfollow from the foundations (P1, P6):",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FFoundation%20to%20law",
+          "start_line": 172
+        }
+      ],
+      "key": "design_profile",
+      "label": "Software design profile, F17"
+    },
+    {
+      "conditions": [],
+      "definition": "The table's cited commitments have distinct standing: P0 recovered; P1, P2, P3, P4a and P6 independent; P4b derived from P0 and P2 with P0's non-reacquirable step-fact premise; P5 derived from P0 and P6 with P0's open-world premise. Imported families are F1 frames/context, F2 transitions/steps/configuration, F3 results/combination, F4 work state/resumption/reuse, F6 claims/evidence/assessment/acceptance, F8 identity, F10 constitutional chain/outcome/build-tenant binding, F12 project adoption, F13 work carriers, and F18 graph-native construction. Adopted instance premises are I1 decided outcomes/capabilities and named-boundary adoption; I2 alternative and possibly multiple code locations for one meaning; I3 bounded actors whose later actions generally lack original design reasoning; I4 local or existing-foundation mechanisms and recurrence across boundaries and time.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 187,
+          "quote": "- I4: a mechanism the boundary needs can be built locally or taken from\n  existing foundations, and similar computation recurs across boundaries\n  and over time.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FFoundation%20to%20law",
+          "start_line": 185
+        }
+      ],
+      "key": "foundation_premises",
+      "label": "Commitments, imports and instance premises"
+    },
+    {
+      "conditions": [],
+      "definition": "Named rule and consumer loci in FOUNDATIONS, PROFILES, ACTIVATION, EVALUATION, IDENTITY, SPEC_METHOD, PRODUCT_DEFINITION, TICKETS, ODD, ASSURANCE, UX, WORLD_MODEL, CONFORMANCE and EXECUTIVE_BASELINE, together with later DESIGN_MODULE clauses. These are references with the roles explicitly stated in the supplied text; their absent bodies are not reconstructed.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 231,
+          "quote": "Consumers of these rows, where an actor enters them (FOUNDATIONS §3\nFoundation to law, Consumers), one list per row, each consumer linked to\nits own locus:",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FFoundation%20to%20law",
+          "start_line": 229
+        }
+      ],
+      "key": "referenced_rule_loci",
+      "label": "Referenced owning and consuming rule loci"
+    },
+    {
+      "conditions": [
+        "The Product is governed by the graph-execution profile."
+      ],
+      "definition": "For Product movement between typed asset states, the governing structure is outcome traversal, then declarative graph carriers (GTL and ABG), then deterministic module realisation. A module is a realisation cut inside this graph program, not the program itself.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 280,
+          "quote": "1. outcome traversal under the graph-execution profile;\n2. the declarative graph carrier structure (GTL and ABG in that profile's\n   terms); and\n3. deterministic module realisation under this profile.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F2.%20Graph-execution%20alignment%20and%20escalation",
+          "start_line": 277
+        }
+      ],
+      "key": "graph_realisation_alignment",
+      "label": "Graph-execution and module alignment"
+    },
+    {
+      "conditions": [
+        "The profile governs the boundary."
+      ],
+      "definition": "Three overriding boundary-closure evaluators are authority seam closure, essential carrier consolidation and enforcement after proof. Ingress collapse specifies the accompanying foreign-input boundary discipline.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 304,
+          "quote": "When this profile governs a boundary, each design or implementation change\nshould be judged against three overriding evaluators (P6, P2). They are not optional heuristics. A\nchange that improves local ergonomics, test output or static-checker\noutput but fails one of them is not real progress under this profile.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators",
+          "start_line": 301
+        }
+      ],
+      "key": "boundary_closure",
+      "label": "Boundary closure evaluators"
+    },
+    {
+      "conditions": [],
+      "definition": "The functional-bias and typing rule family combines language-independent carrier, composition and effect preferences with a Python-specific full-typing and strict-checking requirement.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 366,
+          "quote": "## 4. Functional bias and typing",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F4.%20Functional%20bias%20and%20typing",
+          "start_line": 366
+        }
+      ],
+      "key": "functional_typing",
+      "label": "Functional bias and typing"
+    },
+    {
+      "conditions": [
+        "The boundary is governed by this profile."
+      ],
+      "definition": "An Ontology is the boundary's prior semantic-design authority: entities, identities, relationships, invariants, lifecycle, authority, atomic functions, higher-order composition, effects and projections. It derives from constitutional intent, Product, requirements and applicable graph/domain profile. Accepted design supplies structural HOW: topology, interfaces, carrier placement, module boundaries, algorithms and local realisation. Implementation and tests derive through requirements and accepted design while preserving the Ontology.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 447,
+          "quote": "The Ontology is the prior semantic-design authority for the boundary.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design",
+          "start_line": 437
+        },
+        {
+          "end_line": 480,
+          "quote": "Ontology =\n  entities + identities + relationships + invariants + lifecycle\n  + authority + atomic functions + higher-order composition\n  + effects + projections",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design",
+          "start_line": 477
+        }
+      ],
+      "key": "ontology",
+      "label": "Accepted Ontology and design layers"
+    },
+    {
+      "conditions": [],
+      "definition": "A material semantic boundary is one whose change affects identity, authority, lifecycle, public contract, externally observable Product meaning, cross-module topology, or accepted effect or closure law.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 466,
+          "quote": "A material semantic boundary is\none whose change affects identity, authority, lifecycle, public contract,\nexternally observable Product meaning, cross-module topology, or accepted\neffect or closure law.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design",
+          "start_line": 463
+        }
+      ],
+      "key": "material_boundary",
+      "label": "Material semantic boundary"
+    },
+    {
+      "conditions": [
+        "B is one governed boundary."
+      ],
+      "definition": "M(B) is the complete material-relation network: entities; identities; relationships; cardinalities; invariants; authorities; authority transitions; functions; higher-order composition laws; topology; lifecycle states and transitions; public contracts; externally observable Product meaning; declared domains and admission conditions; failure and refusal routes; effect and closure laws; projections; module mappings; material algorithmic obligations. U(B) is its unresolved subset. Decision completeness requires empty U(B), joint satisfiability, and semantic equivalence of every admitted network under governing Product, requirements and accepted design relations. Co-evolution admissibility is exactly decision completeness. The design gate is the smallest causally closed affected set needed to establish it.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 502,
+          "quote": "U(B) = unresolved(M(B))\ndecision_complete(B) iff\n  U(B) = empty\n  and M(B) is jointly satisfiable\n  and every network admitted by M(B) is semantically equivalent under the\n      governing Product, requirements and accepted design relations\nco_evolution_admissible(B) iff decision_complete(B)\ndesign_gate(B) =\n  the smallest causally closed affected set needed to establish\n  decision_complete(B)",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FProportional%20design%20sequencing",
+          "start_line": 493
+        },
+        {
+          "end_line": 571,
+          "quote": "M(B) =\n  entities + identities + relationships + cardinalities + invariants\n  + authorities + authority transitions + functions\n  + higher-order composition laws + topology\n  + lifecycle states and transitions + public contracts\n  + externally observable Product meaning\n  + declared domains and admission conditions\n  + failure and refusal routes + effect and closure laws\n  + projections + module mappings + material algorithmic obligations",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FDecision-complete%20symbolic%20design",
+          "start_line": 563
+        }
+      ],
+      "key": "material_relation_network",
+      "label": "Decision-complete material-relation network"
+    },
+    {
+      "conditions": [],
+      "definition": "A material design frame records governing frames and accepted relations, bounded affected relations, inherited invariants, crossing authority/composition seams and subordinate frames opened by unresolved material distinctions. Global and local are relative to the selected frame. Governing frames form a constraint network and may be multiple rather than a mandatory hierarchy.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 613,
+          "quote": "- the governing frames and accepted relations from which it derives;\n- the bounded affected relation set of the proposed action;\n- the applicable inherited invariants;\n- the authority and composition seams crossing that set; and\n- the subordinate frames opened by unresolved material distinctions.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FBounded%20frame%20conservation%20%28UP-017%29",
+          "start_line": 609
+        }
+      ],
+      "key": "design_frame",
+      "label": "Bounded design frame"
+    },
+    {
+      "conditions": [],
+      "definition": "Native constructability concerns whether the chosen substrate can construct required identities, relationships, transitions, authority boundaries, effects, lifecycle, composition, publication and retirement. Foundation selection separately compares bounded candidate compositions for material generic capabilities, common mechanics, algorithms and dependencies.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 669,
+          "quote": "This is a constructability obligation,\nnot a prescribed implementation; the consumer chooses the substrate and the\nevidence mechanism (P0).",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FNative%20constructability%20%28UP-002%29",
+          "start_line": 667
+        },
+        {
+          "end_line": 680,
+          "quote": "Native constructability proves that the selected substrate can realise the\ndesign; it does not prove that locally constructing another generic\nmechanism is the best realisation.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FCapability%20and%20foundation%20selection%20%28UP-023%29",
+          "start_line": 673
+        }
+      ],
+      "key": "foundation_selection",
+      "label": "Constructability and foundation selection"
+    },
+    {
+      "conditions": [],
+      "definition": "Entity-lifecycle evidence enumerates active entities, identities, relationships, cardinalities, invariants, lifecycle states and authority owners. Its matrix has Entity, Identity, Authority owner, Declare/create, Read/project, Update/transition and Delete/retire columns. These are completeness questions, not a mutable-CRUD mandate. Domain-entity lifecycle is distinct from ASSURANCE §16's operational build, release, deployment, observation and retirement lifecycle.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 799,
+          "quote": "| Entity | Identity | Authority owner | Declare/create | Read/project | Update/transition | Delete/retire |",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FEntity%20and%20lifecycle%20completeness",
+          "start_line": 799
+        }
+      ],
+      "key": "entity_lifecycle",
+      "label": "Entity and lifecycle completeness evidence"
+    },
+    {
+      "conditions": [],
+      "definition": "Authority is part of the Ontology. The authority matrix distinguishes proposer, evaluator, verifier, admitter, executor, projector and retirement owner for each relevant function/transition. Actor identity, capability on a basis, attribution, permission, domain-meaning ownership and runtime-effect ownership are distinct.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 832,
+          "quote": "| Function or transition | Proposer | Evaluator | Verifier | Admitter | Executor | Projector | Retirement owner |",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FAuthority%20model",
+          "start_line": 832
+        }
+      ],
+      "key": "authority_model",
+      "label": "Ontology authority model"
+    },
+    {
+      "conditions": [
+        "A consequential entity-transition domain is present."
+      ],
+      "definition": "The singular transformation-admission relation decides which candidate becomes durable entity truth. It spans entity identity, predecessor basis, authority scope, candidate family, decision cardinality, admission predicate, durable result and supersession law. Singularity belongs to the complete decision relation, not a single actor, callable or component. The evidence table records Entity transition domain, Predecessor basis, Candidate family, Admission relation, Durable result and Competing-path disposition.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 875,
+          "quote": "| Entity transition domain | Predecessor basis | Candidate family | Admission relation | Durable result | Competing-path disposition |",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FTransformation%20admission%20completeness%20%28UP-016%29",
+          "start_line": 875
+        }
+      ],
+      "key": "admission_relation",
+      "label": "Complete transformation-admission relation"
+    },
+    {
+      "conditions": [],
+      "definition": "Atomic function families are the smallest parameterised families completing entity lifecycles. Function derivation records Discovered functionality, Entity, Atomic function or template, Higher-order composition, Effect class, Required authority and Disposition. Higher-order behaviour uses an explicit composition/effect algebra; illustrative categories are unit/lift, sequential, parallel/applicative, fold/evaluation, retry/recovery, recursion/fixed point and projection.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 948,
+          "quote": "| Discovered functionality | Entity | Atomic function or template | Higher-order composition | Effect class | Required authority | Disposition |",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FAtomic%20functions%20and%20higher-order%20composition",
+          "start_line": 948
+        }
+      ],
+      "key": "function_composition",
+      "label": "Atomic functions and higher-order composition"
+    },
+    {
+      "conditions": [],
+      "definition": "A Prime semantic atom is an irreducible design relation—atomic function family, identity, authority transition, lifecycle relation, topology, effect, closure or composition law—that cannot honestly be expressed by composing accepted atoms while preserving meaning. Prime is decided at semantic-design altitude. Smallness, typing, naming, separate testing or a file/class/module boundary do not establish it. Whole-family contraction examines every candidate atom kind and every proposed realisation projection.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 982,
+          "quote": "A Prime semantic atom is one irreducible design relation: an atomic\nfunction family, identity, authority transition, lifecycle relation,\ntopology, effect, closure law or composition law that cannot be expressed\nhonestly by composing other accepted atoms while preserving the same\nmeaning (P3, P1).",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FPrime%20semantic%20atoms%20and%20admitted%20domain",
+          "start_line": 978
+        }
+      ],
+      "key": "prime_atom",
+      "label": "Prime semantic atom and family"
+    },
+    {
+      "conditions": [],
+      "definition": "Ontology projections include domain/class, sequence, state/lifecycle diagrams; authority/effect matrices; IACS; APIs, operation registers, SDK/CLI surfaces; schemas, codecs, manifests, catalogues; target architecture/module design; implementation through accepted target design; and tests/proofs through requirements and accepted design. They preserve one semantic truth and are not independent semantic authorities.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1062,
+          "quote": "The Ontology is one semantic truth (P1, P6).\nThese preserve it and do not become independent semantic authorities:",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FOntology%20projection",
+          "start_line": 1055
+        }
+      ],
+      "key": "design_projection",
+      "label": "Ontology and realisation projections"
+    },
+    {
+      "conditions": [],
+      "definition": "IACS is the smallest lawful top-level carrier family needed for a boundary's functionality and authority flow. Subordinate Payload is internal payload detail, not top-level by default. Promotion Test is the explicit prerequisite for elevating it to a top-level type. Boundary Inflation is promotion into peer types without irreducible need. Example carrier roles are source truth, admission, execution, yielded/recovery, effect plan and public projection.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1100,
+          "quote": "- Irreducible Architectural Carrier Set (IACS): the smallest lawful\n  top-level carrier family required for one boundary;\n- Subordinate Payload: payload detail that exists inside that boundary but\n  is not top-level by default;\n- Promotion Test: the explicit test a Subordinate Payload passes before it\n  becomes a top-level type; and\n- Boundary Inflation: the defect where subordinate payload detail is\n  promoted into extra peer types without irreducible need.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F6.%20Prime%20law",
+          "start_line": 1093
+        }
+      ],
+      "key": "carrier_architecture",
+      "label": "IACS, subordinate payloads, promotion and inflation"
+    },
+    {
+      "conditions": [
+        "Realisation derives from an existing design line, released tenant or reference implementation."
+      ],
+      "definition": "Reference-derived module design carries the derivation chain constitutional WHAT → reference design → target Ontology and reference-to-Ontology mapping → target design mapping → target module boundary assets → implementation. Code comparison alone does not establish design-method completion.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1265,
+          "quote": "The required derivation\nevidence is: (1) constitutional WHAT; (2) reference design; (3) target\nOntology and reference-to-Ontology mapping; (4) target design mapping; (5)\ntarget module boundary assets; (6) implementation.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F6.%20Prime%20law%2FReference-derived%20module%20design",
+          "start_line": 1262
+        }
+      ],
+      "key": "reference_derivation",
+      "label": "Reference-to-target derivation"
+    },
+    {
+      "conditions": [],
+      "definition": "The design-gate asset combines one accepted Ontology with three distinct fidelity-checked views: classDiagram domain, sequenceDiagram execution and stateDiagram-v2 lifecycle. Together they provide the sign-off surface for identity, authority, behaviour, lifecycle and axiom conformance.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1302,
+          "quote": "The asset contains all three views: a Mermaid `classDiagram` domain model;\na Mermaid `sequenceDiagram` execution model; and a Mermaid\n`stateDiagram-v2` lifecycle model.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate",
+          "start_line": 1298
+        }
+      ],
+      "key": "three_view_asset",
+      "label": "Ontology and three-view design asset"
+    },
+    {
+      "conditions": [
+        "An accepted material-frame basis and a proposed bounded action are declared."
+      ],
+      "definition": "Invariant reconstruction is the sufficiency of selected method basis plus accepted design to recover every governing relation in the action's causally closed affected set and classify the action against each as preserves, changes, duplicates or violates. Method supplies required relations and reasoning law; accepted design supplies concrete invariant values. These inputs do not substitute for one another.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1346,
+          "quote": "The two inputs are distinct and neither\nsubstitutes for the other: the selected method describes which relations\nare required and how to reason about them; the accepted design supplies\nthe concrete invariant values.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FInvariant%20reconstruction%20sufficiency%20%28UP-018%29",
+          "start_line": 1343
+        }
+      ],
+      "key": "invariant_reconstruction",
+      "label": "Invariant reconstruction sufficiency"
+    },
+    {
+      "conditions": [],
+      "definition": "The domain model is the structural Ontology projection. It uses stereotypes <<prime-conformant>>, <<subordinate>>, <<effect-edge>>, <<deferred>>, <<authoritative>>, <<downstream>>; '+' means public/exported and '-' module-local/private. Standard relationships use composition for owned subordinate payloads, association for downstream consumption and inheritance only for actual variant/outcome families.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1420,
+          "quote": "The standard stereotype vocabulary is `<<prime-conformant>>`,\n`<<subordinate>>`, `<<effect-edge>>`, `<<deferred>>`, `<<authoritative>>`\nand `<<downstream>>`.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FDomain%20model",
+          "start_line": 1414
+        }
+      ],
+      "key": "domain_view",
+      "label": "Domain model"
+    },
+    {
+      "conditions": [],
+      "definition": "The sequence model projects Ontology functions and authority onto supported execution from admitted input to a result or truthful stop.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1427,
+          "quote": "The `sequenceDiagram` is the behavioural projection of Ontology functions\nand authority (P1, P6). It shows the supported\nexecution path from admitted input to result or truthful stop,",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FSequence%20model",
+          "start_line": 1424
+        }
+      ],
+      "key": "sequence_view",
+      "label": "Sequence model"
+    },
+    {
+      "conditions": [],
+      "definition": "The state model projects Ontology entity lifecycle, including every admitted refusal, blocked, continuation, retry, escalation and terminal state the active boundary can produce.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1444,
+          "quote": "The `stateDiagram-v2` is the lifecycle projection of Ontology entities\n(P3, P5). It shows the complete admitted lifecycle for\nthe active boundary, including refusal, blocked, continuation, retry,\nescalation and terminal states that the boundary can produce.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FState%20model",
+          "start_line": 1441
+        }
+      ],
+      "key": "state_view",
+      "label": "State model"
+    },
+    {
+      "conditions": [],
+      "definition": "Cross-view axiom evaluation records Axiom, Ontology evidence, Authority, Domain evidence, Sequence evidence, State evidence, Native enforcement, Admission/compiler enforcement, Verdict and Gap owner. The refined verdicts pass, fail and not_applicable map to core values for the exact-basis disjunction 'the design meets the axiom, or the axiom does not apply'; unresolved evaluation and absence of evaluation remain separate.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1457,
+          "quote": "| Axiom | Ontology evidence | Authority | Domain evidence | Sequence evidence | State evidence | Native enforcement | Admission/compiler enforcement | Verdict | Gap owner |",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FCross-view%20axiom%20evaluation",
+          "start_line": 1457
+        }
+      ],
+      "key": "axiom_evaluation",
+      "label": "Cross-view assessment and axiom result domain"
+    },
+    {
+      "conditions": [],
+      "definition": "Ontology and design verdicts are separate owner acceptance decisions consuming availability and assessment results at the design gate. The decision owner is the design authority accepting the Ontology. 'accepted' is the ACTIVATION disposition 'accept', mapped to satisfied for 'the candidate is accepted at its declared boundary'. Other dispositions or no disposition are not acceptance; no disposition means no acceptance result.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1538,
+          "quote": "The Ontology verdict and the design verdict are each an acceptance\nresult: a decision that consumes the results of assessment, distinct from\nthem.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FGate%20and%20retrospective%20work",
+          "start_line": 1527
+        }
+      ],
+      "key": "design_acceptance",
+      "label": "Design-gate acceptance and retrospective work"
+    }
+  ],
+  "constraints": [
+    {
+      "applies_to_keys": [
+        "design_profile",
+        "foundation_premises"
+      ],
+      "conditions": [
+        "The profile has been adopted for the boundary."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 268,
+          "quote": "no profile choice is presented as following from the foundations (P6, P2).",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FFoundation%20to%20law",
+          "start_line": 268
+        }
+      ],
+      "key": "foundation_choice_standing",
+      "statement": "Keep consequence, premise standing and added choice distinct. F17 owns its scope, functional preferences at should force, no-world-model-theory stance, two result refinements and record vocabulary, closure evaluators/fail-closed/ingress shape, Python rules and strict-pass requirement, ten Ontology terms/materiality/evidence, nineteen M(B) terms and sequencing predicates, frame items and reconstruction decisions, selection sources/dimensions, lifecycle matrices and should-normally readings, authority/admission design fields, Prime/IACS/promotion vocabulary, three views/stereotypes/evaluation columns, design gate, computational dispositions, six recommended module roles and binding, carrier/mutation/effect/dependency preferences, governance publication/drift categories, optimisation/review triggers, recurrence design-conformance refinement, review questions/checks, optional adoption-recording means and role-limited runtime identity defaults. These choices are not foundational deductions. Projects choose strict checker/configuration and composition/effect algebra; consumers choose substrate/evidence mechanism; exact-Product priorities/risk tolerances belong to the existing trade-off owner; Product owns workloads, acceptance limits and semantic-function domain outcomes; design authority accepts the Ontology; Product authority adopts boundary/rule family. Referenced owners retain core/non-goal, proportionality, invalidation/reuse, admission, authority-identity, bridge/migration, disposition, assurance, work-carrier and constitutional laws.",
+      "uncertainty": "The cited owning bodies and several enumerated rule details are outside the supplied sections."
+    },
+    {
+      "applies_to_keys": [
+        "design_profile"
+      ],
+      "conditions": [
+        "An actor applies a foundation-to-law row to a governed boundary."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 192,
+          "quote": "an entry of the design record, a `not_applicable` exclusion included, is not a result",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FFoundation%20to%20law",
+          "start_line": 192
+        },
+        {
+          "end_line": 216,
+          "quote": "identity generators, validators and normalisers that a runtime realisation publishes are defaults, which the owner of the identity can override",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FFoundation%20to%20law",
+          "start_line": 216
+        }
+      ],
+      "key": "foundation_additional_consequences",
+      "statement": "Required functionality does not determine counts of entities, functions, operations, carriers or modules. Every performed evaluation returns an F3 core value directly or through its defined refinement; records, including exclusions, are not results. Modules bound traversal reasoning and are classified by recommended roles; the head's binding applies tier-2 assurance law unchanged. Semantic functions should be total or as close as language/problem allow; immutable typed values are preferred. Effects should be explicit at the edge, controllers should not hide semantic authority and coupling should be reduced through dependency shape. A boundary governing, observing or evaluating another actor publishes state, boundary and admissible routes, not strategy unless ratified responsibility includes strategy. Cleanup is lawful only when boundary-local and neutral in behaviour, authority, visibility and effect; leaving an opened boundary better is a should, and cross-boundary opportunities are owner repricing input. Credible recurrence triggers commonisation review, never automatic merge. Before closure, reconstruct the exact claim's function, reuse accepted evidence only under reuse law, and block closure for falsifying issues or applicable hard stops; outside-claim discoveries do not enlarge scope. Each interface family has one source truth consumed downstream; retaining an old authority path behind a new interface is bridge debt, while compatibility needs its own authority and proof. Review checks governing rules; unanswered required relations withhold conformance, and evidence-based diagnosis goes to the actual owner. Missing authority/observation alone proves neither excessive coupling nor imperative design. Prompt clauses enforcing design law need provenance and evidence of continued causal effect. Adoption applies consistently across the named boundary; partial adoption identifies boundary/rule family and cannot claim completion whose evidence was skipped. Consumer-bound ABG-role runtime identity generators, validators and normalisers may publish defaults only within that role; defaults confer no authority and the identity owner may override them.",
+      "uncertainty": "Detailed later clauses, prompt checks, module roles, mutation justifications and runtime default surface kinds are referenced but not supplied."
+    },
+    {
+      "applies_to_keys": [
+        "graph_realisation_alignment"
+      ],
+      "conditions": [
+        "This profile is used in a graph-execution-governed Product."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 275,
+          "quote": "reviewers first ask whether the boundary is an\noperative graph traversal (P6, P0).",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F2.%20Graph-execution%20alignment%20and%20escalation",
+          "start_line": 273
+        },
+        {
+          "end_line": 295,
+          "quote": "the boundary should be repriced against the graph-execution\nprofile before claiming design-method closure.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F2.%20Graph-execution%20alignment%20and%20escalation",
+          "start_line": 294
+        }
+      ],
+      "key": "graph_boundary_escalation",
+      "statement": "Review first determines whether the boundary is an operative graph traversal. Product movement between typed asset states follows the outcome-traversal → graph-carrier → deterministic-realisation structure. If a deterministic module appears to own next work, target movement, traversal closure or the graph function being performed, the boundary should be repriced against graph execution before design-method closure.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "boundary_closure"
+      ],
+      "conditions": [
+        "The profile governs the boundary.",
+        "A design or implementation change is proposed."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 304,
+          "quote": "They are not optional heuristics. A\nchange that improves local ergonomics, test output or static-checker\noutput but fails one of them is not real progress under this profile.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators",
+          "start_line": 302
+        }
+      ],
+      "key": "closure_evaluator_priority",
+      "statement": "Each change should be judged against the three overriding evaluators; they are not optional heuristics. Local ergonomics, tests or static-checker improvements do not count as real progress when any evaluator fails.",
+      "uncertainty": "The text combines should force with non-optional evaluator standing; both are retained without upgrading should to must."
+    },
+    {
+      "applies_to_keys": [
+        "boundary_closure"
+      ],
+      "conditions": [
+        "A change affects a governed semantic boundary."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 317,
+          "quote": "If meaning survives by reconstruction, the\nseam is not closed.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators%2FAuthority%20seam%20closure",
+          "start_line": 316
+        }
+      ],
+      "key": "authority_seam_rule",
+      "statement": "Each change does not increase truth-surface count; existing duplicates/rivals should be reduced by seam-closure work. Each semantic boundary has one authoritative carrier or contract. Controllers must not reconstruct already-admitted truth; downstream surfaces must not silently rebuild source truth from raw artifacts; raw/open payloads are not trusted beyond ingress. Removing the authoritative carrier must fail closed: silent reconstruction of the same meaning demonstrates an unclosed seam.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "boundary_closure",
+        "design_projection"
+      ],
+      "conditions": [
+        "The module performs projection or query."
+      ],
+      "exceptions": [
+        "A same-name, different-shape carrier divergence is lawful when an explicit migration design makes it lawful."
+      ],
+      "grounding": [
+        {
+          "end_line": 326,
+          "quote": "same-name but different-shape\ncarriers fail closed unless an explicit migration design makes the\ndivergence lawful; and negative tests cover structural drift, not only\nmissing source truth.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators%2FAuthority%20seam%20closure",
+          "start_line": 323
+        }
+      ],
+      "key": "projection_source_coherence",
+      "statement": "Projection/query seam closure names the admitted carrier, runtime, event or source truth. Reconstructed catalogue, ownership, route, status or closure truth is structurally compared with the admitted source carrier before publication. Same-name/different-shape carriers otherwise fail closed. Negative tests cover structural drift as well as missing truth.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "boundary_closure",
+        "carrier_architecture"
+      ],
+      "conditions": [
+        "A governed change affects the slice."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 338,
+          "quote": "Each change should collapse the slice to the few real identity-bearing\ncarrier families (P3, P2).",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators%2FEssential%20carrier%20consolidation",
+          "start_line": 330
+        }
+      ],
+      "key": "essential_carrier_consolidation",
+      "statement": "Each change should consolidate the slice into its few real identity-bearing carrier families: declare IACS first, keep subordinate payloads subordinate by default and avoid fragment classes/interfaces/result records created only for typing, serialisation or convenience extraction. Progress means sharper/fewer carrier families, less duplicate authority and less boundary inflation; extra wrappers, branch-local peer types and public records merely mirroring payload detail do not establish progress.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "boundary_closure",
+        "functional_typing"
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 352,
+          "quote": "The rule is the same: proof\nfirst, enforcement second.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators%2FEnforcement%20after%20proof",
+          "start_line": 351
+        }
+      ],
+      "key": "proof_before_enforcement",
+      "statement": "Typing, schemas, validators, contracts and codecs lock in an already-real seam. Parse, validate or construct first; explicitly admit and narrow; then enforce the proved shape with types/schemas. Relabelling an open payload, enveloping loose data without changing the authority path, casts, unchecked assertions and dynamic mutation do not supply closure. The evaluator is language-agnostic; strict Python checking, sealed algebraic types with schema parsing and compiler-enforced sums with decoding are examples, not a language mandate.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "boundary_closure",
+        "functional_typing"
+      ],
+      "conditions": [
+        "Input is foreign, dynamic or weakly typed."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 364,
+          "quote": "The required\nshape: receive foreign input; parse, validate or normalise it once;\nconstruct local admitted carrier truth; consume only that local truth in\nsemantic kernels.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators%2FIngress%20collapse",
+          "start_line": 357
+        }
+      ],
+      "key": "ingress_collapse_rule",
+      "statement": "Such input is lawful only at ingress and, once admitted, immediately becomes local carrier truth before semantic transforms. Required order: receive; parse/validate/normalise once; construct admitted local truth; consume only that truth in semantic kernels. Repeated parsing across modules, from_dict(...).to_dict() ceremony retaining open authority, loaders merely relabelling unvalidated JSON/maps and kernels inspecting open fragments are not lawful seam closure.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "functional_typing"
+      ],
+      "conditions": [
+        "A project adopts this profile."
+      ],
+      "exceptions": [
+        "Materially necessary mutable carrier state is allowed under the owning Immutable carriers rule and its required recorded justification.",
+        "The explicit failure-carrier preference applies only where practical."
+      ],
+      "grounding": [
+        {
+          "end_line": 394,
+          "quote": "Both lists bind. A project that adopts this profile prefers the first\nand avoids the second as an obligation of the profile, not as a\ndescription of practice:",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F4.%20Functional%20bias%20and%20typing%2FFunctional%20bias%20without%20language%20mandate",
+          "start_line": 385
+        }
+      ],
+      "key": "functional_preferences_and_departures",
+      "statement": "Binding preferences are immutable carriers over shared mutable objects; closed typed carriers over dictionaries/string protocols; one ingress parse/admission; explicit returns over hidden mutation; explicit failure carriers over ambient exception control where practical; small-transform composition over long controllers. Binding avoidances are a giant mutable workspace, orchestration owning semantic law, hidden coupling through globals/registries/service state, typed envelopes over open truth, dynamic semantic-centre mutation, helpers both deciding meaning and writing, and proxy interfaces retaining old authority. An avoided shape or forgone preference is nonconformant unless a profile rule permits departure and its required justification is recorded. Convenience permits none; preserve preference/avoidance modality rather than recasting every preference as an unconditional ban.",
+      "uncertainty": "Full mutation-justification requirements are in an unsupplied owning clause."
+    },
+    {
+      "applies_to_keys": [
+        "functional_typing"
+      ],
+      "conditions": [
+        "The profile governs a Python boundary."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 402,
+          "quote": "every function, method and\ncallable surface has explicit parameter and return annotations; semantic\ncarriers are closed and typed; and repo-authored tests, scripts and\nsupport code are typed too, with no lower bar than production code.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F4.%20Functional%20bias%20and%20typing%2FPython%20typing",
+          "start_line": 399
+        }
+      ],
+      "key": "python_full_typing",
+      "statement": "All repo-authored Python, including every callable, test, script and support surface, has explicit parameter/return annotations and closed typed semantic carriers. Untyped def, implicit Any, semantic dict[str, Any]/Mapping[str, Any]/object carrier truth and unchecked JSON passed through layers with .get chains are not typed semantic design; semantic-centre dict[str, Any] is design debt. Use dataclass, TypedDict, Protocol, Literal, Enum or other closed forms; validate dynamic input and narrow it before transforms. A strict pass such as mypy --strict or an equivalent configuration is required. If the adopted boundary cannot check cleanly, it is not yet implementation-conformant.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "ontology",
+        "material_boundary"
+      ],
+      "conditions": [
+        "A new or materially changed active semantic boundary is involved."
+      ],
+      "exceptions": [
+        "A realization_refactor wholly inside an accepted boundary may cite the existing Ontology/design basis and prove no Ontology delta; unchanged evidence need not be re-authored or re-accepted."
+      ],
+      "grounding": [
+        {
+          "end_line": 435,
+          "quote": "Every new or materially changed active semantic boundary derives its\nsemantic model from one accepted Ontology (P1, P6).",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design",
+          "start_line": 430
+        },
+        {
+          "end_line": 472,
+          "quote": "Unaffected\nmaintenance and unrelated boundaries do not freeze merely because one\nsource digest changed (P2, P0).",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design",
+          "start_line": 470
+        }
+      ],
+      "key": "ontology_acceptance_and_change_scope",
+      "statement": "Derive the semantic model from one accepted Ontology. Before promoting a changed entity, function, authority, effect, Prime-conformant carrier, module boundary, public operation or schema, produce a candidate slice and carry it through acceptance. Identify constitutional sources and accepting design authority, stable element/relation identities and a version/basis making source change, staleness and affected projections decidable. A governing-source reprice invalidates only affected relations/projections until impact reevaluation. Publish only affected semantic/structural deltas and projection impacts; unrelated maintenance does not freeze on a digest change. Code, tests, generated schemas and an implementing agent cannot self-ratify missing authority. Inventories of classes, schemas, endpoints, commands or carriers alone are not Ontologies.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "material_relation_network",
+        "design_acceptance"
+      ],
+      "conditions": [
+        "Design sequencing is selected for a governed boundary."
+      ],
+      "exceptions": [
+        "A disposable spike may provide evidence before acceptance without becoming the selected design."
+      ],
+      "grounding": [
+        {
+          "end_line": 514,
+          "quote": "Co-evolution is lawful only when `decision_complete(B)` holds:",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FProportional%20design%20sequencing",
+          "start_line": 506
+        }
+      ],
+      "key": "proportional_sequencing_rule",
+      "statement": "Neither co-evolution nor design-gated sequencing is a global default. Proportionality selects material relations and the smallest affected gate; decision completeness tests admissibility. Design, implementation and tests may co-evolve only when decision-complete, with design owning HOW and reconciliation before promotion/closure. Prior acceptance is required before retained implementation would establish unresolved/contradictory relations or choose materially non-equivalent networks with durable consequences. A symbolic contraction's removed code/runtime/test/review/reconciliation space is counterfactual evidence, not an independent gate justification. A prior gate is warranted when semantic ambiguity concerning materially different durable architectures is removed and that contraction justifies reasoning load; it is disproportionate when no materially divergent alternative remains. Record the selected relation and basis in the existing work/design carrier, with no separate artifact required. Design still records and owns HOW before promotion/closure.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "material_relation_network"
+      ],
+      "conditions": [
+        "Implementation supplies design feedback."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 547,
+          "quote": "Repeated or\ncross-cutting material surprises are evidence for diagnosis under\n[ACTIVATION §1 Feedback and diagnosis](ACTIVATION.md#construction-relation),\nnot a diagnosis.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FProportional%20design%20sequencing",
+          "start_line": 538
+        }
+      ],
+      "key": "implementation_feedback_and_diagnosis",
+      "statement": "Implementation can counterexample, falsify constraints or expose ambiguity, but cannot select missing semantic answers, rewrite upstream truth to legalise itself or ratify decisions after establishing them. Newly exposed architectural ambiguity switches the smallest causally closed affected decision set to design-gated sequencing without retroactively invalidating unrelated work. Serial repairs are not acceptance. Repeated/cross-cutting surprises warrant diagnosis, not automatic reframing: a diagnosed underconstrained cut triggers one bounded design_reframe, with retained code provisional until acceptance; where accepted design is decision-complete and only realisation deviates, repair is realization_refactor regardless of recurrence.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "material_relation_network",
+        "design_acceptance"
+      ],
+      "conditions": [
+        "Decision completeness or design-gate readiness is assessed."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 600,
+          "quote": "Contradictory projections make the\ndesign unsatisfiable and block promotion (P1, P5):",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FDecision-complete%20symbolic%20design",
+          "start_line": 593
+        }
+      ],
+      "key": "decision_completeness_gate_criterion",
+      "statement": "Readiness for retained implementation without a prior gate holds exactly when decision-complete; a gate unable to reach it has not closed. Ontology, Prime contraction, IACS, target design, three views, public contracts, module boundaries, implementation and tests project one network at different reasoning altitudes. Their presence, names, plausibility or mechanical validity do not prove completeness. False decision_complete means underconstrained, including new semantic decisions forced into implementation, projection contradictions or multiple materially non-equivalent networks. Contradictions make design unsatisfiable and block promotion as a gate precondition, not a review-finding disposition. Existing Ontology/algebra/mappings/views may jointly carry the complete network without another document.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "design_frame"
+      ],
+      "conditions": [
+        "A bounded local action affects a material design frame."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 638,
+          "quote": "A result that changes a governing relation re-enters at that\nrelation before acceptance",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FBounded%20frame%20conservation%20%28UP-017%29",
+          "start_line": 632
+        }
+      ],
+      "key": "bounded_frame_conservation",
+      "statement": "Declare all five frame items. Evaluate the result against every affected governing frame, preserve every applicable accepted relation and update only affected subordinate projections. Local action conserves governing truth; changed governing relations re-enter their own locus before acceptance. Open a subordinate frame only for a material distinction unresolved at governing altitude. Declared seams make the bounded set testable under ACTIVATION's seam law without a closure algorithm or recursive expansion through irrelevant relations. Local validity does not satisfy the law if any affected governing invariant is violated, duplicated or silently reinterpreted.",
+      "uncertainty": "The supplied reconstruction clause distinguishes explicitly disposed duplication from unlawful undisposed duplication."
+    },
+    {
+      "applies_to_keys": [
+        "design_frame",
+        "ontology",
+        "carrier_architecture"
+      ],
+      "conditions": [
+        "Functionality is discovered."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 655,
+          "quote": "constitutional functionality\n  -> candidate Ontology\n  -> logical completeness\n  -> whole-family Prime contraction\n  -> accepted Ontology basis\n  -> Irreducible Architectural Carrier Set\n  -> target design and domain, sequence and state projections\n  -> public contract and adapter projections\n  -> implementation and test projections",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FBounded%20frame%20conservation%20%28UP-017%29",
+          "start_line": 647
+        }
+      ],
+      "key": "functionality_derivation_order",
+      "statement": "A discovered verb, screen action, endpoint, command, ticket phrase or use case is behavioural evidence, not an architectural operation. It must not directly become public operation identity, peer carrier, module or implementation function. Preserve the declared order: constitutional functionality → candidate Ontology → logical completeness → whole-family Prime contraction → accepted Ontology basis → IACS → target design and domain/sequence/state projections → public-contract/adapter projections → implementation/test projections.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "foundation_selection"
+      ],
+      "conditions": [
+        "The chosen substrate lacks a required native capability."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 669,
+          "quote": "A missing\nsubstrate capability remains an explicit design gap or triggers lawful\nre-entry",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FNative%20constructability%20%28UP-002%29",
+          "start_line": 663
+        }
+      ],
+      "key": "native_constructability_obligation",
+      "statement": "Semantic coherence does not make the design acceptable if the substrate cannot natively construct any required identity, relation, transition, authority boundary, effect, lifecycle, composition, publication or retirement behaviour. Keep the missing capability as an explicit design gap or lawful re-entry; reference bridges, adapters, filesystem runners, test doubles and promised features cannot hide it. The consumer chooses substrate and evidence mechanism.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "foundation_selection"
+      ],
+      "conditions": [
+        "Before constructing a material generic capability, common mechanic or algorithm, selecting a material dependency, or retaining implementation of a newly exposed material generic subproblem."
+      ],
+      "exceptions": [
+        "No package survey or ledger is required for a trivial helper whose choice cannot materially affect authority, Product behaviour, lifecycle cost or accepted design network."
+      ],
+      "grounding": [
+        {
+          "end_line": 789,
+          "quote": "It\nis mandatory for material algorithms, common mechanics, new dependencies\nand locally rebuilt foundation capabilities.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FCapability%20and%20foundation%20selection%20%28UP-023%29",
+          "start_line": 784
+        }
+      ],
+      "key": "foundation_selection_scope_and_factoring",
+      "statement": "Perform a proportional selection pass under Shared machinery law. First describe capability without Product/domain/module/vendor/file/incumbent labels. Separate irreducible semantic or authority relations, retaining owner, role kind, subject, scope, basis and material lifecycle/refusal invariants, from supporting mechanics/foundations or explicitly assigned roles; factoring concerns relations and roles, not authorship. Evaluate applicable compositions from admitted project foundations; language/runtime/platform/standard library; accepted predecessor or immutable-lineage evidence; maintained external foundations where dependencies are permitted; and bounded local implementation. Re-enter recursively for newly exposed material generic subproblems before retaining them. This prior pass is distinct from post-pattern recurrence review.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "foundation_selection"
+      ],
+      "conditions": [
+        "A bounded candidate population is discovered."
+      ],
+      "exceptions": [
+        "An immaterial residual may remain when the record explains why it cannot change the decision."
+      ],
+      "grounding": [
+        {
+          "end_line": 712,
+          "quote": "Candidate discovery is bounded, reproducible and explicitly\nnon-exhaustive.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FCapability%20and%20foundation%20selection%20%28UP-023%29",
+          "start_line": 698
+        }
+      ],
+      "key": "foundation_discovery_basis",
+      "statement": "For every candidate category record searched sources/collections, cutoff time, relevant version basis, applicability/inclusion criteria, material exclusions, predecessor/incumbent status, discovered candidates and residual unknowns. An unsearched category records reasoned not_applicable or a named gap. Discovery closes only on its declared basis/cutoff. A gap capable of materially altering the frontier prevents selection. A later applicable candidate that could materially alter the lawful frontier invalidates affected selection evidence and re-enters selection as newly acquired material evidence.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "foundation_selection"
+      ],
+      "conditions": [
+        "Material admitted candidates are compared within the Product boundary and any owner-admitted migration strategy."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 743,
+          "quote": "Unknown evidence\nremains unknown and cannot be converted into a favourable score. A\nuniversal scalar is not required.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FCapability%20and%20foundation%20selection%20%28UP-023%29",
+          "start_line": 740
+        }
+      ],
+      "key": "foundation_comparison_and_elimination",
+      "statement": "Selection does not decide bounded evolution versus fundamental re-adoption or override SPEC_METHOD's rebuttable migration presumption; a working predecessor may constrain the migration candidate set. Discovery may start with incumbents, but selection has no source-order, familiarity, sunk-cost, local-code or dependency-count preference. Compare candidate compositions, not only packages, in one ledger/equivalent record over all decision-changing dimensions: fit/constructability; semantic or operation-authority leakage; adapter/integration/migration/deletion/future-code cost; licence/maintenance/security/upgrade/supply chain; package/runtime/startup/storage/operations cost; determinism/concurrency/failure/recovery/reconstruction/replay; proof/assurance burden; exit/replacement/reversibility. Hard authority, Product-contract, safety, security, licensing or native-constructability failure eliminates the candidate. Unknown remains unknown; no universal scalar is required. Materially incomparable lawful candidates form an explicit undominated frontier.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "foundation_selection"
+      ],
+      "conditions": [
+        "Candidate dominance or final selection is considered on the current basis."
+      ],
+      "exceptions": [
+        "A previously dominated candidate may become selectable when new evidence or a material dimension invalidates that dominance relation."
+      ],
+      "grounding": [
+        {
+          "end_line": 763,
+          "quote": "A material unknown\nthat could reverse the relation prevents dominance and remains a gap.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FCapability%20and%20foundation%20selection%20%28UP-023%29",
+          "start_line": 748
+        }
+      ],
+      "key": "foundation_dominance_and_owner_choice",
+      "statement": "A lawful composition dominates another only if every material dimension is comparable or evidenced non-discriminating, it is no worse on all comparable dimensions and strictly better on at least one. A potentially reversing material unknown prevents dominance and remains a gap. Dominated candidates cannot be selected; thus a local rebuild dominated by an existing lawful composition is inadmissible. Unused feature breadth alone proves no dominance and may add lifecycle cost. The existing trade-off owner may choose an undominated lawful composition only using declared exact-Product/basis priorities and risk tolerances, recording their resolution of the frontier. Unresolved priorities leave a design gap. Fewest dependencies, smallest edit/line count or richest features are not necessary selection criteria. Each rejected material candidate records decisive evidence or falsifier; unsupported preference is not closure.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "foundation_selection",
+        "authority_model"
+      ],
+      "conditions": [
+        "A foundation or local implementation realises a declared relation."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 777,
+          "quote": "Ownership belongs to the declared relation, not necessarily to locally\nwritten code;",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FCapability%20and%20foundation%20selection%20%28UP-023%29",
+          "start_line": 773
+        }
+      ],
+      "key": "foundation_authority_conservation",
+      "statement": "Reuse does not automatically confer or transfer semantic, admission or other operation authority. A foundation may realise an explicitly assigned authority-bearing role only with accepted design preserving the relation's owner, role kind, subject, scope, basis and material lifecycle/refusal invariants. Capability, provenance and authorship cannot widen or remint the role. Irreducible Product/domain relations retain their owners across local, reused or composed realisation. Generic local code is lawful only when it wins the same comparison; it is not the default.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "entity_lifecycle",
+        "carrier_architecture"
+      ],
+      "conditions": [
+        "An identity-bearing entity or independently governed value family lies in the active boundary."
+      ],
+      "exceptions": [
+        "Subordinate payloads/value objects inherit owner lifecycle and authority and need no peer row unless they pass the Promotion Test."
+      ],
+      "grounding": [
+        {
+          "end_line": 816,
+          "quote": "Every cell identifies a lawful function,\ndeclares `not_applicable` with a reason, or names a `Gap:` or\n`Unanswered:` item and owner. Silence is not logical-completeness evidence",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FEntity%20and%20lifecycle%20completeness",
+          "start_line": 813
+        }
+      ],
+      "key": "entity_lifecycle_coverage",
+      "statement": "Provide the matrix or an equivalent closed representation for every applicable entity/family. Every cell names a lawful function, reasoned not_applicable, or an owned Gap:/Unanswered: item; silence is insufficient. Create may mean declaration, construction, admission or materialisation. Read should normally be typed projection of authoritative truth; update should normally be admitted transition/new version rather than in-place semantic mutation; delete should normally be retirement, revocation, decommission or supersession where identity/history must remain true.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "authority_model"
+      ],
+      "conditions": [
+        "An Ontology function or lifecycle transition crosses a semantic, authority, admission, effect, persistence or public boundary."
+      ],
+      "exceptions": [
+        "Pure subordinate helpers inherit their owning function's authority envelope and need no peer authority row unless they cross a listed boundary."
+      ],
+      "grounding": [
+        {
+          "end_line": 844,
+          "quote": "One\nowner may lawfully occupy more than one role only when the governing\nauthority explicitly says so; role coincidence is not inferred from\nimplementation convenience.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FAuthority%20model",
+          "start_line": 839
+        }
+      ],
+      "key": "authority_roles_and_conservation",
+      "statement": "Supply an authority matrix or equivalent closed representation for every such crossing. Distinguish actor/capability from admitted authority, proposal from evaluation/verification/admission/execution/projection/retirement, attribution from permission, and domain meaning from runtime effects. Multiple roles may share an owner only when governing authority explicitly permits it. Composition cannot implicitly widen admitted input/constituent/current-basis authority. Delegation, elevation, transfer and retirement authority require a named typed transition and owning admission boundary carrying, not replacing, the explicit authority decision. Projections create no authority; downstream actor labels, capability strings or payload shape cannot reconstruct an authority witness.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "admission_relation",
+        "authority_model"
+      ],
+      "conditions": [
+        "Every consequential entity-transition domain; every material admission relation."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 894,
+          "quote": "- the complete semantic commit unit and its decomposability: every\n  materially distinct post-validation commit or publication boundary\n  capable of exposing a subset, or a design-declared dominance or\n  equivalence proof that named representative observations cover the\n  complete partial-failure surface;",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FTransformation%20admission%20completeness%20%28UP-016%29",
+          "start_line": 888
+        }
+      ],
+      "key": "admission_complete_declaration",
+      "statement": "The who-admits matrix alone is insufficient. Design evidence contains the complete relation and accepted design declares each admission owner/supported boundary; exact admission-valid basis identity, predecessor and currentness continuity through admission, including equal/coherent composite multi-owner basis; complete enclosing relation, participant identities and equality joins; refusal/effect boundaries; complete commit unit and decomposability, covering every distinct post-validation commit/publication boundary exposing a subset or a declared dominance/equivalence proof of representative coverage of the entire partial-failure surface; reconstruction with supported direct/composite/nested forms; and competing-path disposition. Bind ACTIVATION §4 admission and standing-test semantics, which remain owned there; qualification is per owner and supported boundary. Missing or downstream-invented fields/owners/boundaries, inferred basis continuity/partial-failure coverage/proof/reconstruction, or parser/helper/manufactured-refusal non-applicability falsify the obligation.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "admission_relation"
+      ],
+      "conditions": [
+        "Several paths or projections can affect admission."
+      ],
+      "exceptions": [
+        "Disjoint authority scopes or entity identities are not a counterexample to singularity."
+      ],
+      "grounding": [
+        {
+          "end_line": 937,
+          "quote": "disjoint scopes or identities are not a\ncounterexample",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FTransformation%20admission%20completeness%20%28UP-016%29",
+          "start_line": 932
+        }
+      ],
+      "key": "admission_path_disposition",
+      "statement": "Every competing path is explicitly related to the singular admission law. Equivalent paths may be constituents, replicas, replacements or deliberately independent realisations; disposition does not itself require deletion. Retaining a superseded responsibility requires a distinct supported purpose, not a label or existing test. A projection may produce a candidate, but every consequential result re-enters admission against its explicit predecessor basis; projection state is not self-authenticating evidence. The law is false when materially non-equivalent admission relations remain reachable for the same transition domain, entity identity, authority scope and predecessor basis; an equivalent competing implementation remains undisposed; or projection-triggered reaction authenticates admission from its own reconstruction.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "function_composition"
+      ],
+      "conditions": [
+        "Function derivation is performed; composition-law requirements apply where higher-order behaviour exists."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 974,
+          "quote": "Every\nretained result is reconciled into accepted design before promotion or\ndesign-method closure. No private helper, loop, adapter or endpoint may\nbecome an undeclared constructor",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FAtomic%20functions%20and%20higher-order%20composition",
+          "start_line": 971
+        }
+      ],
+      "key": "function_derivation_and_composition_law",
+      "statement": "Derive the smallest parameterised atomic families completing lifecycles. Variation only in entity/projection/transition kind, policy or subordinate payload should normally be a typed parameter or closed variant rather than a peer function. Every functionality row is derived by an admitted atom, derived by declared higher-order composition, deferred with owner/re-entry condition, excluded by current Product authority, or an explicit named unresolved gap. Name the governing composition/effect algebra and applicable identity, closure, associativity, cardinality, effect and authority-conservation laws; do not hide them in controller flow. Iterative discovery of composition/effects/implementation is allowed only under co_evolution_admissible; otherwise only a disposable spike crosses unresolved/contradictory/non-equivalent relations before acceptance. Reconcile every retained result into accepted design before promotion/closure. No private helper, loop, adapter or endpoint becomes an undeclared constructor.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "prime_atom",
+        "design_projection"
+      ],
+      "conditions": [
+        "A Prime atom or its realisation is proposed or used."
+      ],
+      "exceptions": [
+        "An out-of-domain case may justify proposing another candidate atom for design admission."
+      ],
+      "grounding": [
+        {
+          "end_line": 1002,
+          "quote": "An atom without a declared admitted domain remains a candidate\natom; it cannot supply Prime acceptance or Prime-conformance to a\nrealisation projection.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FPrime%20semantic%20atoms%20and%20admitted%20domain",
+          "start_line": 1000
+        }
+      ],
+      "key": "prime_domain_and_mapping",
+      "statement": "Every accepted atom declares its admitted domain and governs every admitted instance within it. Later use composes/parameterises it, never locally forks, shadows, specialises or reinterprets it. An in-domain counterexample falsifies the shared atom and re-enters its design boundary, not feature-local replacement. An undeclared domain leaves the atom a candidate unable to supply Prime acceptance/conformance. One atom may project into several units and a unit may implement several atoms only with explicit mapping and no rival meaning/authority. Atomic-function Prime is not established until the complete candidate family is contracted.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "prime_atom",
+        "design_projection"
+      ],
+      "conditions": [
+        "Before promotion and whenever whole-family Prime is claimed."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1030,
+          "quote": "A function-and-carrier-only pass does not\nestablish whole-family Prime",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FWhole-family%20Prime%20contraction",
+          "start_line": 1010
+        }
+      ],
+      "key": "whole_family_prime_review",
+      "statement": "Review every proposed identity, authority transition, lifecycle relation, topology, function, composition law, effect and closure law plus every realisation projection, not isolated atoms or only functions/carriers. Ask whether operations are typed parameters of one function, commands transitions of one entity, reads projections of one truth, implementations applications of one higher-order function; whether independent identity, authority, effect, lifecycle, reuse or public pattern-match semantics are introduced; whether all atom kinds entered contraction; whether every unit maps to accepted atoms; and whether any projection introduces/duplicates/reinterprets meaning or authority. Individually plausible functions are not Prime if one parameterised template plus closed variants carries identical meaning/authority. Contract visible recurrence during design; later recurrence review is no substitute.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "prime_atom",
+        "design_projection"
+      ],
+      "conditions": [
+        "Prime contraction occurs at a material semantic boundary."
+      ],
+      "exceptions": [
+        "Work inside an accepted boundary cites the existing Prime basis rather than recreating it."
+      ],
+      "grounding": [
+        {
+          "end_line": 1051,
+          "quote": "Contraction preserves root authority and every retained semantic relation.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FRecursive%20Prime%20and%20root%20conservation%20%28UP-003%29",
+          "start_line": 1041
+        }
+      ],
+      "key": "recursive_prime_conservation",
+      "statement": "Contract each candidate atom, then the whole resulting family. Local irreducibility or unit conformance does not prove global Prime if the family duplicates identity, authority, function, lifecycle, topology, effect or projection meaning. Preserve root authority and every retained semantic relation; fewer files/functions/operations/authoring surfaces cannot compensate for a new authority source/truth path. Evidence names the complete family; each stable identity, irreducible relation, admitted domain and falsification condition; whole-family contraction relation; before/after retained meaning and authority; accepted loss; and an explicit total map from every proposed projection to accepted atoms.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "design_projection",
+        "ontology"
+      ],
+      "conditions": [
+        "A design or implementation projection is produced."
+      ],
+      "exceptions": [
+        "Implementation branches and test expectations need not each be enumerated by the Ontology, but must preserve it and trace through requirements plus accepted design."
+      ],
+      "grounding": [
+        {
+          "end_line": 1077,
+          "quote": "Any intentional omission or flattening declares accepted loss and a\nfailure condition",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FOntology%20projection",
+          "start_line": 1066
+        }
+      ],
+      "key": "ontology_projection_fidelity",
+      "statement": "Each design projection identifies its Ontology source and preserved identity, relationship, lifecycle, authority, function or effect law. Intentional omissions/flattening declare accepted loss and a failure condition. Target design may add structural HOW but no rival semantics; implementation/tests trace through accepted design, never bypassing it. A public operation, sequence message, state transition, carrier or effect without trace through accepted design to accepted Ontology is ungrounded and cannot enter the active Product line.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "prime_atom",
+        "carrier_architecture",
+        "design_projection"
+      ],
+      "conditions": [
+        "Top-level realisation units are proposed."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1129,
+          "quote": "Typed\nclosure by itself is not sufficient reason to create a new top-level type.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F6.%20Prime%20law",
+          "start_line": 1089
+        }
+      ],
+      "key": "prime_realisation_conformance",
+      "statement": "Derive Prime atoms from logically complete candidate Ontology before proposing top-level units; whole-family evidence supports Ontology acceptance, and target design/IACS/modules/functions/schemas/tests project rather than originate accepted Prime meaning. Prime conformance applies to functions, classes, carriers, top-level schema records and modules. A unit is conformant only when projecting accepted atoms without adding, duplicating or reinterpreting semantic authority; topological/effect boundaries first need accepted atoms. Size and one-to-one atom correspondence are immaterial. Typical lawful grounds include new admitted-graph topology/branch, typed transformation, effect, validation/admission or projection boundary. Units solely shortening call sites without new semantics, aggregating unrelated behaviour, renaming old interfaces, wrapping data, hiding mutation/fallback/orchestration, naming non-authoritative payload variation, exposing internal detail, cosmetically mirroring carriers or multiplying types for typing discomfort are nonconformant. Prefer composition, existing lawful functions and fewer sharper boundaries/carrier families; line-count minimisation is not the aim.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "prime_atom",
+        "design_projection"
+      ],
+      "conditions": [
+        "Prime contraction and its governance cost are assessed."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1143,
+          "quote": "contraction is not\nsuccessful when it increases authority centres, maintained truth surfaces,\nacceptance boundaries, dependency cycles, manually reconciled projections\nor review burden.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F6.%20Prime%20law%2FBoundary%20and%20governance%20cost%20%28UP-005%29",
+          "start_line": 1139
+        }
+      ],
+      "key": "prime_governance_cost",
+      "statement": "Apply ACTIVATION proportionality to ambiguity removed versus reasoning complexity. Review cuts, realisation units, runtime modules and work items are distinct and may map many-to-one/one-to-many; administrative convenience does not force one-to-one decomposition. Contraction is not successful if authority centres, maintained truth surfaces, acceptance boundaries, dependency cycles, manual projection reconciliation or review burden increase. Evidence stays proportional to semantic change/risk; no artifact or review per concern is required.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "carrier_architecture",
+        "ontology"
+      ],
+      "conditions": [
+        "A schema, carrier family or typed public boundary is defined."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1190,
+          "quote": "If the accepted Ontology\nor IACS has not been declared, the schema is not yet design-method\ncomplete under this profile.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F6.%20Prime%20law%2FIrreducible%20architectural%20carrier%20set",
+          "start_line": 1179
+        }
+      ],
+      "key": "iacs_derivation_and_evidence",
+      "statement": "Derive IACS from accepted Ontology before naming subordinate payloads or implementation modules; it should precede helper result shapes/internal branch details. Cite accepted Ontology and function-derivation evidence; declare IACS; map every carrier to identity/lifecycle/function/authority/effect/projection law; distinguish authoritative from downstream; default all other shapes to subordinate/private unless promoted; reconcile typed implementation before closure. Carrier role examples do not justify branch-specific payload, persistence detail, read-model row or typing-only grouping as top-level. IACS is an Ontology projection, never its replacement or the first origin of semantic meaning. Absence of declared accepted Ontology or IACS prevents schema design-method completeness. Under co-evolution, evidence/code/tests may develop together but implementation cannot self-ratify discoveries; Ontology/IACS acceptance and reconciliation precede promotion/closure. Otherwise accept the affected unresolved/contradictory/non-equivalent relation before retained implementation establishes it.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "carrier_architecture"
+      ],
+      "conditions": [
+        "A carrier is added, removed, merged or split."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1213,
+          "quote": "The IACS is not numerically frozen.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F6.%20Prime%20law%2FIACS%20revision",
+          "start_line": 1194
+        }
+      ],
+      "key": "iacs_revision_requirements",
+      "statement": "Revision is lawful through accepted Ontology/design re-entry. Re-derive the whole IACS and classify every addition/removal/merge/split; rerun Promotion Test and Boundary Inflation checks over the full set; update every conformance/checker subject to the declared composite relation under EVALUATION's assurance-boundary congruence and freeze/revision law; reconcile implementation before promotion/closure. A prohibition without a lawful revision path is false. Revision is false if gates cover only new carriers, assurance retains weaker/obsolete subjects or reconciliation is absent before closure.",
+      "uncertainty": "The external assurance-boundary congruence and freeze/revision law is referenced, not reproduced."
+    },
+    {
+      "applies_to_keys": [
+        "carrier_architecture"
+      ],
+      "conditions": [
+        "A subordinate payload is proposed as a top-level class, dataclass, TypedDict, enum or named schema record."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1236,
+          "quote": "The burden of proof is on\npromotion; designers and reviewers should assume a candidate type stays\nsubordinate until an irreducible boundary is shown",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F6.%20Prime%20law%2FPromotion%20test",
+          "start_line": 1234
+        }
+      ],
+      "key": "promotion_test_requirements",
+      "statement": "Justify an architectural boundary, not payload detail. Promotion is allowed only if at least one holds: authoritative source carrier; public/persisted contract; explicit public-outcome variant directly pattern-matched by consumers; reuse across several modules without semantic bleed; independent versioning/publication/admission. Promotion is unlawful for mere larger-carrier detail, one-use local field grouping, open-dictionary typing shim, private variation crossing no true interface, or cosmetic/local mirror. Without independent authority, independent reuse or direct pattern-match semantics, remain nested/private/local. Proof burden rests on promotion; designers/reviewers should presume subordination until irreducible need is shown. These grounds do not waive other Prime/IACS requirements.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "carrier_architecture"
+      ],
+      "conditions": [
+        "Schema work or a schema/ticket's wide type family is considered."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1256,
+          "quote": "Typed closure does not excuse Boundary\nInflation.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F6.%20Prime%20law%2FBoundary%20inflation%20prohibition",
+          "start_line": 1247
+        }
+      ],
+      "key": "boundary_inflation_rule",
+      "statement": "Declare IACS, authoritative types, downstream projections, subordinate shapes and intentionally deferred promotions; a wide type inventory must distinguish IACS from subordinate payloads or it is design drift. Inflation is design debt, not progress: typing difficulty promotes payload peers, internal records become public without a new authoritative boundary, near-identical peers replace a sufficient single family, or one migration silently becomes parallel schema migrations. Typed closure supplies no excuse.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "reference_derivation",
+        "ontology",
+        "carrier_architecture",
+        "three_view_asset"
+      ],
+      "conditions": [
+        "A module boundary is reference-derived."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1284,
+          "quote": "If a target realisation cannot show that derivation chain, it is not yet\ndesign-method complete under this profile",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F6.%20Prime%20law%2FReference-derived%20module%20design",
+          "start_line": 1283
+        }
+      ],
+      "key": "reference_derivation_assets",
+      "statement": "Name reference design surfaces; provide accepted target Ontology with disposition of reference entities/functions/lifecycle/authority/effects/projections; target design surfaces replacing/binding them; explicit preserved/reshaped/deferred/delivery-binding-demoted mapping; and target module assets including Ontology-derived IACS and three views. Demonstrate how the target boundary derives from reference design without importing incidental drift, delivery quirks, helper sprawl or accidental authority. Code comparison alone or an absent chain prevents design-method completeness.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "three_view_asset",
+        "design_acceptance"
+      ],
+      "conditions": [
+        "A new or materially changed semantic or typed module boundary is promoted or claims design-method closure."
+      ],
+      "exceptions": [
+        "Unchanged boundaries cite their accepted basis; local work with no material semantic-boundary delta does not recreate the gate."
+      ],
+      "grounding": [
+        {
+          "end_line": 1309,
+          "quote": "Every new or materially changed semantic or typed module boundary carries\none accepted Ontology and one complete three-view Mermaid design asset\nbefore the boundary is promoted or claims design-method closure",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate",
+          "start_line": 1288
+        }
+      ],
+      "key": "three_view_gate_requirement",
+      "statement": "Carry one accepted Ontology and the complete three-view asset before promotion/closure. Co-evolution may precede the gate only while its predicate holds; otherwise accept affected unresolved/contradictory/non-equivalent relations before retained implementation establishes them. All three views are required; a broad flowchart is no substitute. They are fidelity-checked projections, not decorative peers or independent truth surfaces.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "ontology",
+        "three_view_asset"
+      ],
+      "conditions": [
+        "A design asset covers an active boundary."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1326,
+          "quote": "The design asset cites one accepted Ontology for the active boundary and\nincludes or references its",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FOntology%20evidence",
+          "start_line": 1313
+        }
+      ],
+      "key": "ontology_evidence_inventory",
+      "statement": "Include or reference entity/relationship inventory, invariant/cardinality law, lifecycle-completeness matrix, authority matrix, atomic/higher-order derivation matrix, applicable composition/effect algebra, whole-family Prime contraction with every accepted atom's domain and projection mapping, and explicit deferred/excluded/unresolved functionality. A boundary-bounded slice may derive from a wider accepted Product Ontology only with a parent citation and preservation of parent identity/relationship/lifecycle/authority/function law. Copying selected rows into an ungrounded local model creates a rival truth surface.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "invariant_reconstruction",
+        "design_frame"
+      ],
+      "conditions": [
+        "A declared bounded action and accepted material-frame basis are considered."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1398,
+          "quote": "Sufficiency is bound to a declared action and its affected set; it is\nnot a claim over an unbounded space of possible future changes, and the\nperformance of any particular reviewer is not evidence either way",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FInvariant%20reconstruction%20sufficiency%20%28UP-018%29",
+          "start_line": 1362
+        }
+      ],
+      "key": "reconstruction_sufficiency_obligation",
+      "statement": "Selected method basis plus accepted design must expose every governing relation in the causally closed affected set and support preserve/change/duplicate/violate decisions without dialogue, commentary, prior-worker memory or implementation folklore. Restating method decision law in design duplicates local method rather than satisfying the requirement. Sufficiency concerns the declared action/set, not all future changes or reviewer performance. Existing Ontology evidence, authority/admission/frame declarations, views and module mappings carry this durable reasoning state; no new package/artifact is required. Missing governing relations or inability to decide from the two inputs alone falsify sufficiency. If tested, use named cases with known governing relations/expected decisions and withhold conversational/folk-memory aids.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "invariant_reconstruction"
+      ],
+      "conditions": [
+        "An action is evaluated against one governing relation for admissibility in the acting frame on the current governing basis."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1355,
+          "quote": "| preserves | leaves the relation intact and operates inside it | `satisfied` |\n| changes | alters the relation itself, and therefore re-enters at that relation before acceptance | `invalid_basis` |\n| duplicates | establishes an equivalent path that is explicitly disposed as a constituent, replica, replacement or deliberately independent realisation | `satisfied` |\n| violates | contradicts the relation, or establishes an equivalent path that is left undisposed | `falsified` |",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FInvariant%20reconstruction%20sufficiency%20%28UP-018%29",
+          "start_line": 1352
+        }
+      ],
+      "key": "reconstruction_result_mapping",
+      "statement": "Preserves leaves accepted relation intact and maps to satisfied. Changes alters the relation and requires re-entry at its locus before acceptance, mapping to invalid_basis. Duplicates is an equivalent path explicitly disposed as constituent/replica/replacement/deliberately independent realisation, mapping to satisfied. Violates contradicts or leaves an equivalent path undisposed, mapping to falsified. A change accepted in the acting frame instead of its owning locus is a violation regardless of delta size; disposition, not equivalence alone, separates lawful duplication from violation. Preserve the predicate, decision and core value together. If none of the four is reached, return the cause-selected core value, including indeterminate for insufficient admissible evidence and what would decide it. If the method/design pair itself is insufficient, that case falsifies the sufficiency law. A lawful re-entry change is neither an acting-frame acceptance nor a violation; a violation is not re-entry.",
+      "uncertainty": "Other cause-to-core mappings are owned by the referenced result algebra."
+    },
+    {
+      "applies_to_keys": [
+        "domain_view"
+      ],
+      "conditions": [
+        "The domain view describes the active boundary."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1412,
+          "quote": "IACS carriers and their Prime-atom projection\nmappings; subordinate payloads; effect-edge-only payloads; downstream-only\nprojections; deferred families outside the active slice; authoritative\nversus downstream role; public versus module-local visibility; and\ncomposition, containment, association and real variant-family structure.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FDomain%20model",
+          "start_line": 1408
+        }
+      ],
+      "key": "domain_view_content",
+      "statement": "Show domain identities/cardinalities rather than helper decomposition; ownership, invariants and lawful lifecycle relations; atomic families with crossing entity inputs/outputs; higher-order relations where they determine boundary shape; IACS/Prime mappings, subordinate and edge-only payloads, downstream-only projections and deferred out-of-slice families; authority/downstream roles, visibility, composition, containment, association and actual variants. Use the declared stereotype, visibility and relationship meanings.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "sequence_view",
+        "domain_view",
+        "authority_model"
+      ],
+      "conditions": [
+        "The sequence view describes supported execution."
+      ],
+      "exceptions": [
+        "A participant absent from the domain model is permitted only as an explicitly external actor."
+      ],
+      "grounding": [
+        {
+          "end_line": 1437,
+          "quote": "Every\nmessage also binds to an Ontology function and its admitted authority\nrole; actor identity or call reachability alone does not authorise a\nmessage",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FSequence%20model",
+          "start_line": 1434
+        }
+      ],
+      "key": "sequence_view_bindings",
+      "statement": "Show admitted input to result/truthful stop and owner/required authority for every decision, admission, execution, projection and effect boundary. Where applicable show malformed input/output, retry, recursion, fan-out/fan-in, nested workflow and human escalation. Every participant is in the domain model or explicitly external. Every message binds to a declared carrier transform, graph/computation constructor, interpreter action or effect handler and also to an Ontology function/admitted authority role. No private loop, service method, plugin, shell or script silently substitutes for a workflow transition. Identity and reachability alone authorise nothing.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "state_view"
+      ],
+      "conditions": [
+        "The state view describes an active boundary."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1448,
+          "quote": "Controller-local memory is not a lawful source of lifecycle truth when the\nproduct declares replay, event, graph or carrier ownership",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FState%20model",
+          "start_line": 1447
+        }
+      ],
+      "key": "state_view_bindings",
+      "statement": "Show the complete admitted lifecycle and all producible refusal/blocked/continuation/retry/escalation/terminal states. Every transition binds to an Ontology function and names its owning authority, admission, compiler, interpreter, event, projection or external act. Where Product declares replay/event/graph/carrier ownership, controller-local memory cannot be lifecycle truth.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "axiom_evaluation",
+        "three_view_asset"
+      ],
+      "conditions": [
+        "Cross-view evaluation is performed for the active boundary."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1479,
+          "quote": "A\nrelied-on `semantic_not_realized` constructor is a blocking gap; it may\nnot be replaced by imperative glue in a plugin, shell, service, script or\ntest harness",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FCross-view%20axiom%20evaluation",
+          "start_line": 1476
+        }
+      ],
+      "key": "cross_view_proof_obligations",
+      "statement": "Evaluate every applicable Product, graph, language, runtime, handler and module axiom. Establish every view element's accepted-Ontology derivation; every functionality row's derived/deferred/excluded/gap disposition; domain existence of sequence participants and lifecycle carriers; declared semantic/effect boundaries for messages; admitted-truth derivation of transitions; explicit function/transition authority with no compositional widening; public operations as Ontology-function projections; no direct transition of raw probabilistic output to accepted/closed; handlers/plugins owning interiors only while runtime owns admission/events/continuation/closure; native types enforcing locally decidable relations; admission/semantic compilation owning global references/completeness/realisation gaps. For graph-native work, all batch/retry/recursion/nesting is visible in declared graph/compute algebra. A relied-on semantic_not_realized constructor blocks and cannot be replaced with imperative plugin/shell/service/script/test-harness glue.",
+      "uncertainty": "The cross-view requirement that every participant be in the domain model is read together with the sequence clause's explicit external-actor exception."
+    },
+    {
+      "applies_to_keys": [
+        "axiom_evaluation"
+      ],
+      "conditions": [
+        "One axiom is assessed on the exact Ontology/design basis."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1501,
+          "quote": "| `pass` | the cited Ontology, view and enforcement evidence establishes that the design meets the axiom | `satisfied` |",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FCross-view%20axiom%20evaluation",
+          "start_line": 1499
+        },
+        {
+          "end_line": 1516,
+          "quote": "an undecided or unevaluated\naxiom is never read as a pass or a fail",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FCross-view%20axiom%20evaluation",
+          "start_line": 1515
+        }
+      ],
+      "key": "axiom_verdict_mapping",
+      "statement": "For the exact-basis disjunction 'meets axiom OR axiom does not apply', pass maps to satisfied when cited Ontology/view/enforcement evidence establishes compliance. not_applicable maps to satisfied only when applicability is false on basis-bound facts, with a reason naming those facts and the excluding scope authority; it satisfies only the disjunction, never 'meets axiom'. An unresolved premise supports no not_applicable. fail maps to falsified only for an applicable axiom with a cited violating element/message/transition/authority path/enforcement counterexample. Record verdict and value together. If no refined verdict is reached, record cause-selected core value and what would decide: indeterminate for insufficient admissible evidence, including unresolved applicability with unmet axiom; out_of_frame for undeclared relation/evaluator capability; invalid_basis for unsupported Ontology/design basis. Unevaluated applicable axioms have no result. None of these is pass; exclusion is neither conformance nor failure, and undecided/unevaluated is neither pass nor fail.",
+      "uncertainty": ""
+    },
+    {
+      "applies_to_keys": [
+        "design_acceptance",
+        "axiom_evaluation",
+        "material_relation_network"
+      ],
+      "conditions": [
+        "A new or semantically changed boundary seeks promotion, publication or design-method closure."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 1554,
+          "quote": "a matrix in which every applicable axiom is\n`pass` is evidence for the design authority, never the verdict, and a\nstep that produced the pack establishes neither.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FGate%20and%20retrospective%20work",
+          "start_line": 1543
+        }
+      ],
+      "key": "design_gate_acceptance_conditions",
+      "statement": "Both Ontology and design verdicts must be accepted before affected implementation/public contract/semantic carrier promotion or closure. A failed applicable axiom, missing functionality disposition, unresolved authority or blocking realisation gap keeps non-accepted. Acceptance consumes availability, decision-completeness assessment, axiom verdicts and cross-view proofs, and remains distinct from all of them. Passing matrices are evidence, never acceptance; pack production establishes neither assessment nor acceptance. Any non-satisfied axiom result, applicable axiom without result, or resultless axiom whose applicability is not established false keeps non-accepted: mandatory non-satisfied results/gaps cannot combine to satisfied. An absent Ontology, view, cross-view evaluation or either accepted verdict means not design-method complete and prevents promotion/publication/closure.",
+      "uncertainty": "The other three acceptance dispositions and their mappings are referenced but not supplied."
+    },
+    {
+      "applies_to_keys": [
+        "design_acceptance",
+        "material_relation_network",
+        "three_view_asset"
+      ],
+      "conditions": [
+        "Co-evolving, unchanged-refactor or retrospective work is considered."
+      ],
+      "exceptions": [
+        "An unchanged realization_refactor reuses the existing verdict on a no-delta proof."
+      ],
+      "grounding": [
+        {
+          "end_line": 1588,
+          "quote": "Until the design gate is accepted it is provisional evidence: it does not\nauthor semantic truth, earn publication authority, or satisfy promotion or\nclosure.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FGate%20and%20retrospective%20work",
+          "start_line": 1565
+        }
+      ],
+      "key": "retrospective_and_refactor_gate",
+      "statement": "For an unchanged realization_refactor, cite accepted Ontology/design basis, identify touched projections and prove no entity/relationship/lifecycle/authority/function/effect/public-semantics delta; reuse the verdict without new Ontology or acceptance ceremony. Under co_evolution_admissible, implementation may precede/develop with evidence and be retained after reconciliation, but remains provisional until acceptance and grants no semantics/publication/promotion/closure authority. Otherwise only disposable spikes cross unresolved/contradictory/non-equivalent relations before acceptance. Retrospective code may inform design; newly discovered material ambiguity/contradiction/non-equivalence falsifies decision completeness and activates the affected decision's gate. Promotion/closure wait for accepted Ontology, three views and evaluation. Evaluate code against prior authority, never rewrite design merely to rationalise unlawful shape. Keep assets boundary-bounded; unrelated bootstrap, test-harness, projection or delivery shapes added merely for apparent completeness are defects. Provisional work may continue only while co-evolution remains admissible.",
+      "uncertainty": ""
+    }
+  ],
+  "dispositions": [
+    {
+      "decision": "residual",
+      "keys": [
+        "design_profile",
+        "foundation_premises",
+        "referenced_rule_loci",
+        "foundation_choice_standing",
+        "foundation_additional_consequences",
+        "foundation_dependencies",
+        "rule_consumer_mapping",
+        "consumer_owner_limit",
+        "external_rule_dependencies"
+      ],
+      "reason": "Retains the table's premise standing, conditional scope, ownership, consequences and consumer relationships; absent referenced bodies remain unresolved.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FFoundation%20to%20law"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "graph_realisation_alignment",
+        "graph_boundary_escalation",
+        "graph_module_scope"
+      ],
+      "reason": "Retains graph applicability, ordering, permitted module roles, hiding prohibitions and should-level escalation.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F2.%20Graph-execution%20alignment%20and%20escalation"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "boundary_closure",
+        "closure_evaluator_priority"
+      ],
+      "reason": "Retains overriding evaluator standing and its stated modality.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "authority_seam_rule",
+        "projection_source_coherence"
+      ],
+      "reason": "Retains single-truth, fail-closed and projection-coherence requirements with migration exception.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators%2FAuthority%20seam%20closure"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "essential_carrier_consolidation"
+      ],
+      "reason": "Retains should-level consolidation and what does not establish progress.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators%2FEssential%20carrier%20consolidation"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "proof_before_enforcement"
+      ],
+      "reason": "Retains proof/admission/enforcement order and fake-closure exclusions.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators%2FEnforcement%20after%20proof"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "ingress_collapse_rule"
+      ],
+      "reason": "Retains required ingress sequence and prohibited open-truth continuations.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F3.%20Boundary%20closure%20evaluators%2FIngress%20collapse"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "functional_typing"
+      ],
+      "reason": "Retains the heading as the identity of the rule family, without deriving obligations from the heading alone.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F4.%20Functional%20bias%20and%20typing"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "functional_preferences_and_departures",
+        "mutation_departure_dependency"
+      ],
+      "reason": "Retains both binding lists and departures; the complete mutation justification rule is outside the supplied source.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F4.%20Functional%20bias%20and%20typing%2FFunctional%20bias%20without%20language%20mandate"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "python_full_typing",
+        "python_foreign_escape_hatches"
+      ],
+      "reason": "Retains universal repo-code typing, semantic exclusions, strict-pass condition and conjunctive escape-hatch limits.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F4.%20Functional%20bias%20and%20typing%2FPython%20typing"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "ontology",
+        "material_boundary",
+        "ontology_acceptance_and_change_scope",
+        "ontology_design_document_latitude"
+      ],
+      "reason": "Retains semantic/structural layering, materiality, acceptance provenance and bounded invalidation/refactor exceptions.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "material_relation_network",
+        "proportional_sequencing_rule",
+        "implementation_feedback_and_diagnosis",
+        "decision_network_governs_acceptance"
+      ],
+      "reason": "Retains exact decision predicate, proportional mode selection and diagnosis-dependent change classification.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FProportional%20design%20sequencing"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "material_relation_network",
+        "decision_completeness_gate_criterion",
+        "equivalent_local_choice"
+      ],
+      "reason": "Retains all material-relation categories, satisfiability/equivalence criterion and gate-precondition distinction.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FDecision-complete%20symbolic%20design"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "design_frame",
+        "bounded_frame_conservation",
+        "functionality_derivation_order",
+        "governing_frame_derivation",
+        "duplication_wording_boundary"
+      ],
+      "reason": "Retains bounded multi-frame conservation and derivation order; explicitly reconciles broad duplication wording with the later disposition-sensitive rule without erasing the wording difference.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FBounded%20frame%20conservation%20%28UP-017%29"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "foundation_selection",
+        "native_constructability_obligation"
+      ],
+      "reason": "Retains native-capability refusal and explicit-gap/re-entry outcomes with consumer implementation latitude.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FNative%20constructability%20%28UP-002%29"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "foundation_selection",
+        "foundation_selection_scope_and_factoring",
+        "foundation_discovery_basis",
+        "foundation_comparison_and_elimination",
+        "foundation_dominance_and_owner_choice",
+        "foundation_authority_conservation"
+      ],
+      "reason": "Retains discovery basis, complete comparison dimensions, unknowns, dominance, owner choice, role conservation and proportional recursion.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FCapability%20and%20foundation%20selection%20%28UP-023%29"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "entity_lifecycle",
+        "entity_lifecycle_coverage"
+      ],
+      "reason": "Retains matrix applicability, all cell outcomes, normal lifecycle preferences and operational-lifecycle distinction.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FEntity%20and%20lifecycle%20completeness"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "authority_model",
+        "authority_roles_and_conservation"
+      ],
+      "reason": "Retains all authority roles, crossing triggers, helper exception and explicit authority-transition requirements.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FAuthority%20model"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "admission_relation",
+        "admission_complete_declaration",
+        "admission_path_disposition",
+        "admission_structural_latitude",
+        "admission_refines_authority_matrix",
+        "admission_qualification_dependency"
+      ],
+      "reason": "Retains the full declaration and falsifiers, competing-path latitude and non-applicability conditions; externally owned qualification semantics remain unresolved.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FTransformation%20admission%20completeness%20%28UP-016%29"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "function_composition",
+        "function_derivation_and_composition_law",
+        "composition_algebra_latitude"
+      ],
+      "reason": "Retains function derivation outcomes, composition laws, conditional iterative discovery and undeclared-constructor prohibition.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FAtomic%20functions%20and%20higher-order%20composition"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "prime_atom",
+        "prime_domain_and_mapping",
+        "prime_projection_mapping"
+      ],
+      "reason": "Retains semantic irreducibility, admitted-domain universality and many-to-many projection conditions.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FPrime%20semantic%20atoms%20and%20admitted%20domain"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "whole_family_prime_review"
+      ],
+      "reason": "Retains every review question and whole-family/prior-pass requirements.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FWhole-family%20Prime%20contraction"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "recursive_prime_conservation"
+      ],
+      "reason": "Retains recursive and family-level contraction, root conservation and all evidence fields.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FRecursive%20Prime%20and%20root%20conservation%20%28UP-003%29"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "design_projection",
+        "ontology_projection_fidelity",
+        "projection_derives_from_ontology"
+      ],
+      "reason": "Retains projection classes, source-law trace, accepted-loss requirements and ungrounded-entry prohibition.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FOntology%20projection"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "carrier_architecture",
+        "prime_realisation_conformance"
+      ],
+      "reason": "Retains Prime vocabulary, conditional top-level conformance and all convenience-only counterexamples.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F6.%20Prime%20law"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "prime_governance_cost"
+      ],
+      "reason": "Retains distinct boundary kinds, mapping latitude and all governance-cost failure criteria.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F6.%20Prime%20law%2FBoundary%20and%20governance%20cost%20%28UP-005%29"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "iacs_derivation_and_evidence",
+        "iacs_projects_ontology"
+      ],
+      "reason": "Retains carrier roles, seven evidence duties, non-originating status and sequencing conditions.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F6.%20Prime%20law%2FIrreducible%20architectural%20carrier%20set"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "iacs_revision_requirements"
+      ],
+      "reason": "Retains lawful revision and whole-set gates, assurance-subject update and reconciliation requirements.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F6.%20Prime%20law%2FIACS%20revision"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "promotion_test_requirements"
+      ],
+      "reason": "Retains disjunctive promotion grounds, prohibitions and proof burden without treating one ground as sufficient for all conformance.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F6.%20Prime%20law%2FPromotion%20test"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "boundary_inflation_rule"
+      ],
+      "reason": "Retains required classifications and every stated inflation case.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F6.%20Prime%20law%2FBoundary%20inflation%20prohibition"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "reference_derivation",
+        "reference_derivation_assets"
+      ],
+      "reason": "Retains ordered derivation, all minimum assets and missing-chain refusal of completion.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F6.%20Prime%20law%2FReference-derived%20module%20design"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "three_view_asset",
+        "three_view_gate_requirement",
+        "three_view_format_latitude",
+        "three_view_ontology_projection"
+      ],
+      "reason": "Retains gate applicability, all views, alternative-format ratification conditions and packaging latitude.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "ontology_evidence_inventory"
+      ],
+      "reason": "Retains complete evidence inventory and bounded-parent-slice conservation conditions.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FOntology%20evidence"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "invariant_reconstruction",
+        "reconstruction_sufficiency_obligation",
+        "reconstruction_result_mapping",
+        "duplication_wording_boundary",
+        "represented_operations_only"
+      ],
+      "reason": "Retains exact predicate-sensitive mappings, sufficiency falsifiers and test conditions as data; no evaluation is performed.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FInvariant%20reconstruction%20sufficiency%20%28UP-018%29"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "domain_view",
+        "domain_view_content"
+      ],
+      "reason": "Retains structural content, stereotypes, visibility and relationship meanings.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FDomain%20model"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "sequence_view",
+        "sequence_view_bindings",
+        "sequence_participant_binding"
+      ],
+      "reason": "Retains execution-path coverage, participant exception, message bindings and authority limits.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FSequence%20model"
+    },
+    {
+      "decision": "retained",
+      "keys": [
+        "state_view",
+        "state_view_bindings"
+      ],
+      "reason": "Retains complete producible-state coverage and transition/lifecycle-truth ownership.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FState%20model"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "axiom_evaluation",
+        "cross_view_proof_obligations",
+        "axiom_verdict_mapping",
+        "external_participant_reading"
+      ],
+      "reason": "Retains cross-view proofs and all result/non-result distinctions; records the participant-coverage wording difference.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FCross-view%20axiom%20evaluation"
+    },
+    {
+      "decision": "residual",
+      "keys": [
+        "design_acceptance",
+        "design_gate_acceptance_conditions",
+        "retrospective_and_refactor_gate",
+        "assessment_informs_acceptance",
+        "acceptance_disposition_dependency"
+      ],
+      "reason": "Retains assessment/acceptance separation, blockers, no-delta reuse and provisional-work conditions; absent disposition definitions remain unresolved.",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FGate%20and%20retrospective%20work"
+    }
+  ],
+  "latitude": [
+    {
+      "allowed": [
+        "The profile may govern F_D evaluators/proofs, carrier constructors/admissions, deterministic transforms inside edge traversals, effect shells publishing traversal results and projections over already-admitted carrier truth."
+      ],
+      "applies_to_keys": [
+        "graph_realisation_alignment"
+      ],
+      "forbidden": [
+        "Hiding graph functions in service methods, traversal semantics in module orchestration, continuation/re-entry in deterministic controllers, semantic target movement in constructors/materialisers/projections, or probabilistic-worker boundaries in imperative prompt/dispatch code."
+      ],
+      "grounding": [
+        {
+          "end_line": 290,
+          "quote": "This profile may govern `F_D` evaluators and proofs, carrier constructors\nand admissions, deterministic transforms inside an edge traversal, effect\nshells that publish the traversal result, and projections over\nalready-admitted carrier truth.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F2.%20Graph-execution%20alignment%20and%20escalation",
+          "start_line": 282
+        }
+      ],
+      "key": "graph_module_scope"
+    },
+    {
+      "allowed": [
+        "Any, cast(...) and # type: ignore only when all hold: genuinely foreign/dynamically typed boundary; no more precise local expression is possible; narrow, explicit, in-place justification; no imprecision entering the semantic kernel as governing truth. Any remains at the foreign boundary and collapses immediately.",
+        "Equivalent strict checker configurations and closed typed carrier forms are permitted."
+      ],
+      "applies_to_keys": [
+        "functional_typing"
+      ],
+      "forbidden": [
+        "Using these escape hatches when any conjunct is absent or allowing their imprecision to become semantic truth."
+      ],
+      "grounding": [
+        {
+          "end_line": 420,
+          "quote": "`Any`, `cast(...)` and\n`# type: ignore` are allowed only when all of these hold: the boundary is\ngenuinely foreign or dynamically typed; the local code cannot express the\nshape more precisely; the use is narrow, explicit and justified in place;\nand the imprecision does not cross into the semantic kernel as governing\ntruth.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F4.%20Functional%20bias%20and%20typing%2FPython%20typing",
+          "start_line": 415
+        }
+      ],
+      "key": "python_foreign_escape_hatches"
+    },
+    {
+      "allowed": [
+        "Ontology and three-view verdicts may share the same design pack and acceptance record; no second document, ticket or ceremony is required."
+      ],
+      "applies_to_keys": [
+        "ontology",
+        "design_acceptance"
+      ],
+      "forbidden": [
+        "Treating shared packaging as implementation self-ratification or replacement of either authority layer."
+      ],
+      "grounding": [
+        {
+          "end_line": 461,
+          "quote": "The Ontology\nverdict may live in the same design pack and acceptance record as the\nthree-view verdict (§7); this rule does not require a second document,\nticket or approval ceremony.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design",
+          "start_line": 458
+        }
+      ],
+      "key": "ontology_design_document_latitude"
+    },
+    {
+      "allowed": [
+        "Local algorithm/layout choices may remain open only when every admitted choice is semantically equivalent under the accepted network."
+      ],
+      "applies_to_keys": [
+        "material_relation_network"
+      ],
+      "forbidden": [
+        "Leaving materially non-equivalent alternatives open while claiming decision completeness."
+      ],
+      "grounding": [
+        {
+          "end_line": 593,
+          "quote": "Local algorithm and layout\nchoices may remain open only when every admitted choice is semantically\nequivalent under the accepted network.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FDecision-complete%20symbolic%20design",
+          "start_line": 591
+        }
+      ],
+      "key": "equivalent_local_choice"
+    },
+    {
+      "allowed": [
+        "Multiple actors, stages or implementations may constitute or instantiate disjoint parts of one declared relation.",
+        "One actor, multiple signatures, quorum, human step-up, delegated proxy authority or jurisdictional partitioning are lawful when cardinality and adjudication law are declared.",
+        "Unsupported composite/nested forms may be not_applicable only when accepted domain/design excludes them and no weaker or competing admission path exists."
+      ],
+      "applies_to_keys": [
+        "admission_relation"
+      ],
+      "forbidden": [
+        "Inferring singularity from a single component or inferring non-applicability from parser/helper/manufactured refusal."
+      ],
+      "grounding": [
+        {
+          "end_line": 913,
+          "quote": "A relation\nmay lawfully require one actor, several signatures, a quorum, a human\nstep-up, delegated proxy authority or jurisdictional partitioning, provided\nits cardinality and adjudication law are declared",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FTransformation%20admission%20completeness%20%28UP-016%29",
+          "start_line": 910
+        },
+        {
+          "end_line": 901,
+          "quote": "Unsupported composite or nested forms use\n`not_applicable` only when accepted domain or design excludes the form and\nthe boundary has no weaker or competing admission path",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FTransformation%20admission%20completeness%20%28UP-016%29",
+          "start_line": 899
+        }
+      ],
+      "key": "admission_structural_latitude"
+    },
+    {
+      "allowed": [
+        "A graph-execution Product may bind composition to GTL and ABG interpretation; another Product may choose another explicit algebra.",
+        "Monadic or category-theory terminology is not required."
+      ],
+      "applies_to_keys": [
+        "function_composition"
+      ],
+      "forbidden": [
+        "Hiding applicable composition/effect/authority-conservation laws in controller flow."
+      ],
+      "grounding": [
+        {
+          "end_line": 966,
+          "quote": "This does not require monadic or category-theory vocabulary\n(SPEC_METHOD §2 Realisation shape). A product under the graph-execution\nprofile may bind the requirement to GTL composition and ABG\ninterpretation; another product may use another explicit algebra.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FAtomic%20functions%20and%20higher-order%20composition",
+          "start_line": 963
+        }
+      ],
+      "key": "composition_algebra_latitude"
+    },
+    {
+      "allowed": [
+        "A project may ratify another text-native format only if it preserves the three distinct views and the same cross-view checks.",
+        "Views may occupy one existing design surface and share one acceptance decision; three files, tickets, reviews or ceremonies are unnecessary."
+      ],
+      "applies_to_keys": [
+        "three_view_asset"
+      ],
+      "forbidden": [
+        "Substituting one broad flowchart for the three models."
+      ],
+      "grounding": [
+        {
+          "end_line": 1306,
+          "quote": "A project may ratify another text-native\ndiagram format only when it preserves the same three distinct views and the\nsame cross-view checks.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate",
+          "start_line": 1300
+        }
+      ],
+      "key": "three_view_format_latitude"
+    }
+  ],
+  "limitations": [
+    "This is a source-linked F_P interpretation of the supplied DESIGN_MODULE sections only. It does not execute their workflow, accept semantics, qualify an installed system or judge completeness/conformance.",
+    "External documents, the member head and unsupplied later sections remain references. Their enumerated roles are retained where stated, but missing definitions, review checks, mutation conditions, assurance bindings and disposition mappings are not invented.",
+    "Graphify nodes and edges outside the supplied source were not promoted into normative assertions or inferred endpoints. Its confidence scores establish no authority.",
+    "Ordered processes, evaluations, result mappings and acceptance operations are represented as descriptive concepts, constraints and relations. The schema supplies no operational proof, traversal, transformation or judgment population.",
+    "The foundation table's row dependencies and consumer map are grouped into typed relations to avoid repeating local entities for every cross-reference. Those groups preserve stated direction and ownership but do not resolve the referenced bodies.",
+    "Broad duplication language and sequence-participant coverage have narrower qualifications elsewhere in the supplied text; the relevant readings are explicit residuals rather than silent identity or applicability resolution."
+  ],
+  "relations": [
+    {
+      "conditions": [
+        "The profile is adopted for the boundary; each row retains its cited instance premises."
+      ],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 189,
+          "quote": "| Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FFoundation%20to%20law",
+          "start_line": 189
+        }
+      ],
+      "key": "foundation_dependencies",
+      "kind": "authored_premise_dependency",
+      "meaning": "The table explicitly derives these consequence families from these premises, without deriving the separate choice column: scope/core [P6,P1,F10,I1,F18]; results/records [P5,P6,F3]; closure [P3,P1,P6,I2]; typing [P4a,P1,P6,I2]; Ontology/projections [P1,P3,P6,F10,I1]; sequencing [P2,P0(candidate-output premise),P6,F2,I3]; frame/reconstruction [P4b,P0,F2,I3]; constructability/selection [P2,P5,P6,I4]; lifecycle/functions [P3,P5,P4a]; authority/admission [P6,P4b,P3,F1,F2]; Prime [P3,P6,P2]; IACS [P3,P2,F6]; three-view evaluation [P1,P5,P6,F3,I3]; gate [P6,P0(candidate-output premise),F3,F4,F6]; computational projection [P1,P3,P6,P2,I2 plus the instance premise that domain views omit realising machinery]; module taxonomy [P0,P1,I3]; immutable carriers/totality [P3,P5,I2]; effects/coupling [P6,P1,I2]; governance/strategy [P0(boundary commitment),P6]; optimisation [P2,P6]; recurrence [P2,P3,F13,I4]; post-ticket review [P6,P2,F3,F4,F6]; interface/proxy [P6,P1,P3]; review [P6,P1,P2]; adoption [P6,P2,F12,I1]; identity defaults [P3,P6,F8]. Governing denotes the source's stated premise dependency, not an interpreter proof of derivation.",
+      "source_key": "foundation_premises",
+      "target_key": "design_profile"
+    },
+    {
+      "conditions": [
+        "Each cited consumer applies only at its stated locus and applicability."
+      ],
+      "exceptions": [
+        "The source expressly says no section of another member applies governance/strategy separation, opportunistic optimisation, post-ticket review or interface/proxy rules; their external governing laws do not thereby become consumers of these refinements."
+      ],
+      "governing": false,
+      "grounding": [
+        {
+          "end_line": 261,
+          "quote": "Each consumer applies the rule and decides nothing the owning section does\nnot (P2, P6).",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FFoundation%20to%20law",
+          "start_line": 260
+        }
+      ],
+      "key": "rule_consumer_mapping",
+      "kind": "applied_by_at_named_locus",
+      "meaning": "Stated row consumers: scope/core → SPEC_METHOD §2 Realisation shape, UX §2/relationships, WORLD_MODEL §4, ODD §11.5D A15; results → reconstruction, cross-view evaluation, gate; closure → Adoption's explicit migration ADR/ticket evaluators, review questions 4,5,7,9,17–19 and ingress/truth checks; typing → UX §10's six obligatory ingress seams, CONFORMANCE §5 discriminator 11, questions 12,18; Ontology → PRODUCT_DEFINITION §3 subordination, ASSURANCE §§14–15 Ontology/reference mapping evidence, Adoption completion assets, questions 21,41–48; sequencing → SPEC_METHOD §4 Procedures, ASSURANCE §14, gate precondition, question 40; frames → ACTIVATION §1 Intake, EXECUTIVE_BASELINE §§8,14, post-ticket material-input change; selection → EXECUTIVE_BASELINE §§11,14, ASSURANCE §14's no-hidden-controller compensation, checklist, questions 49–56; lifecycle/functions → ASSURANCE §15 unit trace, Ontology evidence, questions 42,44,46; admission → ACTIVATION Intake, ODD §11.5B ABG specialisation, authority matrix, question 43; Prime → SPEC_METHOD §3 no prerequisite/experiment waiver, carrier consolidation's IACS-first, evidence/Adoption whole-family/domain prerequisites, questions 10,45; IACS → ASSURANCE §§2,7,14,15 inventory binding, UX §12 step 3/§14 question 13, WORLD_MODEL §4 candidate Markov cut, questions 13–16,22; three views → ASSURANCE §§7,14,15 three-view binding, UX same adoption/review loci, questions 35–39; gate → SPEC_METHOD reconstruction litmus (no waiver/no unchanged-view recreation), ASSURANCE §14 acceptance before retained implementation, ontology/decision-completeness clauses, post-ticket reuse and checklist; computational projection → ACTIVATION Intake, ASSURANCE §13 complete producer-consumer path; taxonomy → ASSURANCE §§2,7,14–16 module ownership/unit proof, Adoption classification, question 23; immutability/totality → UX §2, question 6, carrier/purity checklist; effects/coupling → UX §§6,2, questions 1–3, checklist; governance → question 20 and observability checklist only; optimisation → questions 24–25 and cleanup checklist only, with SPEC_METHOD §4 owning cross-boundary re-entry; recurrence → ASSURANCE §13, selection, Prime contraction, taxonomy, questions 26–27; post-ticket → question 28 and closure checklist only, consuming ACTIVATION §4/EVALUATION §5; interface/proxy → questions 8,11 and one-owner checklist only, citing SPEC_METHOD §7; review → ACTIVATION §2 prompt specialisation and Adoption migration criteria; adoption → SPEC_METHOD §2, ASSURANCE §14, UX §2's combined UX-module versus design-only non-UX scope; identity defaults → IDENTITY §7 Derived domain overrides. ASSURANCE §§14–16 consume through the head binding; UX refines typing/realisation for UX surfaces; recurrence refines TICKETS §6; selection refines FOUNDATIONS Shared machinery; Intake consumes frame evidence where the profile governs.",
+      "source_key": "design_profile",
+      "target_key": "referenced_rule_loci"
+    },
+    {
+      "conditions": [
+        "A named consumer applies a row."
+      ],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 261,
+          "quote": "Each consumer applies the rule and decides nothing the owning section does\nnot (P2, P6).",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FFoundation%20to%20law",
+          "start_line": 260
+        }
+      ],
+      "key": "consumer_owner_limit",
+      "kind": "limits_consumer_authority",
+      "meaning": "Application preserves the owning section's decision scope; consumption does not grant additional decisions or transfer ownership.",
+      "source_key": "design_profile",
+      "target_key": "referenced_rule_loci"
+    },
+    {
+      "conditions": [
+        "One governed boundary's sequencing or gate readiness is considered."
+      ],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 508,
+          "quote": "Design sequencing follows `decision_complete(B)`, not one global authoring\norder (P2, P6).",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FProportional%20design%20sequencing",
+          "start_line": 505
+        }
+      ],
+      "key": "decision_network_governs_acceptance",
+      "kind": "acceptance_precondition",
+      "meaning": "Decision completeness controls lawful co-evolution and is the design gate's acceptance criterion; it does not itself issue an owner acceptance verdict.",
+      "source_key": "material_relation_network",
+      "target_key": "design_acceptance"
+    },
+    {
+      "conditions": [
+        "A material design frame derives from accepted governing frames."
+      ],
+      "exceptions": [
+        "One governing frame is lawful for genuinely hierarchical structure but is not required."
+      ],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 622,
+          "quote": "A frame may derive from more than one governing frame.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FBounded%20frame%20conservation%20%28UP-017%29",
+          "start_line": 615
+        }
+      ],
+      "key": "governing_frame_derivation",
+      "kind": "frame_type_derives_from_same_type",
+      "meaning": "Instances of design frames can derive from multiple instances of this frame category. Persistence may belong to lifecycle and operational-consistency frames; admission to domain-transition and runtime-authority frames; shared callables may serve sibling domains without subordination to one. This type-level relation does not assert that a particular frame governs itself.",
+      "source_key": "design_frame",
+      "target_key": "design_frame"
+    },
+    {
+      "conditions": [
+        "A consequential entity-transition domain is covered."
+      ],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [
+        {
+          "end_line": 866,
+          "quote": "The authority matrix names who admits; it does not by itself establish the\nrelation that decides which candidate transformation becomes durable\nentity truth.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FTransformation%20admission%20completeness%20%28UP-016%29",
+          "start_line": 863
+        }
+      ],
+      "key": "admission_refines_authority_matrix",
+      "kind": "supplies_missing_decision_relation",
+      "meaning": "The complete admission relation supplements the matrix's who-admits information; plausible role completion alone cannot establish admission uniqueness or completeness.",
+      "source_key": "admission_relation",
+      "target_key": "authority_model"
+    },
+    {
+      "conditions": [
+        "Realisation units implement accepted atoms."
+      ],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 989,
+          "quote": "One atom may project into several realisation\nunits, and one realisation unit may implement several atoms, provided the\nmapping is explicit and introduces no rival meaning or authority.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FPrime%20semantic%20atoms%20and%20admitted%20domain",
+          "start_line": 987
+        }
+      ],
+      "key": "prime_projection_mapping",
+      "kind": "governs_realisation_projection",
+      "meaning": "Accepted atoms govern explicit many-to-many realisation mappings within their admitted domains; the projection adds no rival meaning or authority.",
+      "source_key": "prime_atom",
+      "target_key": "design_projection"
+    },
+    {
+      "conditions": [
+        "A design projection is authored."
+      ],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 1070,
+          "quote": "Each design projection identifies its Ontology source and the identity,\nrelationship, lifecycle, authority, function or effect law it preserves.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FOntology%20projection",
+          "start_line": 1064
+        }
+      ],
+      "key": "projection_derives_from_ontology",
+      "kind": "derives_from",
+      "meaning": "The projection derives from and preserves the Ontology's declared law, with accepted design mediating implementation/tests and declared loss/failure conditions for omissions.",
+      "source_key": "design_projection",
+      "target_key": "ontology"
+    },
+    {
+      "conditions": [
+        "A schema, carrier family or typed public boundary is defined."
+      ],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 1181,
+          "quote": "The IACS is a realisation projection of the Ontology. It does not replace\nthe Ontology",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F6.%20Prime%20law%2FIrreducible%20architectural%20carrier%20set",
+          "start_line": 1177
+        }
+      ],
+      "key": "iacs_projects_ontology",
+      "kind": "derives_carrier_set_from",
+      "meaning": "IACS derives from accepted Ontology and function evidence; it cannot originate entity, function, lifecycle or authority meaning.",
+      "source_key": "carrier_architecture",
+      "target_key": "ontology"
+    },
+    {
+      "conditions": [
+        "The three-view design asset represents the active boundary."
+      ],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 1309,
+          "quote": "they\nare fidelity-checked projections of the accepted Ontology",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate",
+          "start_line": 1306
+        }
+      ],
+      "key": "three_view_ontology_projection",
+      "kind": "fidelity_checked_projection_of",
+      "meaning": "The complete domain/execution/lifecycle asset projects accepted Ontology as a sign-off surface rather than a peer source of semantic truth.",
+      "source_key": "three_view_asset",
+      "target_key": "ontology"
+    },
+    {
+      "conditions": [
+        "A sequence participant is modelled."
+      ],
+      "exceptions": [
+        "An explicitly external actor need not exist in the domain model."
+      ],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 1431,
+          "quote": "Every participant exists in the domain model or is an\nexplicitly external actor.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FSequence%20model",
+          "start_line": 1430
+        }
+      ],
+      "key": "sequence_participant_binding",
+      "kind": "requires_participant_correspondence",
+      "meaning": "Sequence participants correspond to domain-model identities subject to the explicit external-actor exception.",
+      "source_key": "sequence_view",
+      "target_key": "domain_view"
+    },
+    {
+      "conditions": [
+        "The design authority considers a gate verdict."
+      ],
+      "exceptions": [],
+      "governing": false,
+      "grounding": [
+        {
+          "end_line": 1545,
+          "quote": "a matrix in which every applicable axiom is\n`pass` is evidence for the design authority, never the verdict",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FGate%20and%20retrospective%20work",
+          "start_line": 1543
+        }
+      ],
+      "key": "assessment_informs_acceptance",
+      "kind": "assessment_evidence_for",
+      "meaning": "Axiom evaluation and cross-view proofs are consumed by owner acceptance but neither constitute nor grant it. Mandatory unsatisfied results/gaps block acceptance under the separate gate constraint.",
+      "source_key": "axiom_evaluation",
+      "target_key": "design_acceptance"
+    }
+  ],
+  "residuals": [
+    {
+      "consequence": "Use only the imported roles, premise standing, explicit consequences and consumer links stated here. Do not supply missing foundational definitions, head bindings, review inventories, runtime identity surfaces, computational disposition values or external governance mechanics from discovery labels.",
+      "grounding": [
+        {
+          "end_line": 150,
+          "quote": "[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law),\nwhich also states the standing of the consequences.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FFoundation%20to%20law",
+          "start_line": 149
+        }
+      ],
+      "key": "external_rule_dependencies",
+      "subject_key": "referenced_rule_loci",
+      "uncertainty": "The source imports substantial semantics from unsupplied documents, the member head and later clauses. The table states counts and ownership of several vocabularies but not their full contents."
+    },
+    {
+      "consequence": "Preserve materially necessary mutation as a conditional departure, without inventing the owning rule's justification test or treating convenience as permission.",
+      "grounding": [
+        {
+          "end_line": 394,
+          "quote": "The permitted departures are those the owning rules state:\nmutable carrier state where it is materially necessary, under §10\n[Immutable carriers](#immutable-carriers)",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F4.%20Functional%20bias%20and%20typing%2FFunctional%20bias%20without%20language%20mandate",
+          "start_line": 390
+        }
+      ],
+      "key": "mutation_departure_dependency",
+      "subject_key": "functional_preferences_and_departures",
+      "uncertainty": "The owning Immutable carriers clause is not supplied; the exact required mutation justification cannot be recovered here."
+    },
+    {
+      "consequence": "Keep broad frame-conservation wording and the later explicit disposed-duplication rule visible. Lawful disposed paths must not be silently classified as violations merely from equivalence; the interpretation does not claim a general resolution beyond the stated conditions.",
+      "grounding": [
+        {
+          "end_line": 638,
+          "quote": "The law is false if a change is\nlocally valid inside the selected frame but violates, duplicates or\nsilently reinterprets an invariant in any affected governing frame.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FBounded%20frame%20conservation%20%28UP-017%29",
+          "start_line": 636
+        },
+        {
+          "end_line": 1362,
+          "quote": "The\nboundary between duplicates and violates is disposition, not equivalence:\nan equivalent path is lawful when disposed and a defect when not",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FInvariant%20reconstruction%20sufficiency%20%28UP-018%29",
+          "start_line": 1359
+        }
+      ],
+      "key": "duplication_wording_boundary",
+      "subject_key": "bounded_frame_conservation",
+      "uncertainty": "The frame clause broadly names duplicated invariants as falsifiers, while reconstruction explicitly accepts disposed equivalent paths. The text does not formally distinguish invariant duplication from path duplication."
+    },
+    {
+      "consequence": "Retain design declaration fields and per-owner/per-boundary qualification applicability; do not instantiate qualification, manufacture an admission evaluator or infer missing operational checks.",
+      "grounding": [
+        {
+          "end_line": 901,
+          "quote": "The declaration binds the admission and standing-test semantics of\nACTIVATION §4 (Complete enclosing-relation admission; Standing structural\nqualification), which solely owns them.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F5.%20Ontology-first%20design%2FTransformation%20admission%20completeness%20%28UP-016%29",
+          "start_line": 896
+        }
+      ],
+      "key": "admission_qualification_dependency",
+      "subject_key": "admission_relation",
+      "uncertainty": "Complete enclosing-relation admission and standing structural qualification are solely owned by absent ACTIVATION §4."
+    },
+    {
+      "consequence": "Result mappings, causally closed affected sets, gate sequencing, recursive selection and contraction remain descriptions of source-defined operations. This finite interpretation produces no execution, proof, accepted design, qualified boundary or reviewer result.",
+      "grounding": [
+        {
+          "end_line": 1384,
+          "quote": "The four decisions are a refinement of the core result algebra\n([FOUNDATIONS §4 Results](FOUNDATIONS.md#results)).",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FInvariant%20reconstruction%20sufficiency%20%28UP-018%29",
+          "start_line": 1366
+        }
+      ],
+      "key": "represented_operations_only",
+      "subject_key": "invariant_reconstruction",
+      "uncertainty": "The five active record families represent operational rules and result meanings declaratively; they do not supply the source's actual evaluators, proof procedures or runtime state."
+    },
+    {
+      "consequence": "The sequence-specific external-actor exception is retained. No claim is made that every externally declared participant must also be authored as an internal domain identity.",
+      "grounding": [
+        {
+          "end_line": 1463,
+          "quote": "every sequence participant\nand lifecycle carrier exists in the domain model;",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FCross-view%20axiom%20evaluation",
+          "start_line": 1462
+        },
+        {
+          "end_line": 1431,
+          "quote": "Every participant exists in the domain model or is an\nexplicitly external actor.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FSequence%20model",
+          "start_line": 1430
+        }
+      ],
+      "key": "external_participant_reading",
+      "subject_key": "cross_view_proof_obligations",
+      "uncertainty": "The cross-view summary states universal participant presence in the domain model without restating the sequence model's explicit external-actor exception."
+    },
+    {
+      "consequence": "Retain accepted/accept → satisfied and distinguish non-accepted dispositions from no disposition/no result. Do not invent names or core mappings for the other dispositions.",
+      "grounding": [
+        {
+          "end_line": 1538,
+          "quote": "A verdict that is not `accepted` is one\nof the other three dispositions, mapped there, or no disposition yet,\nwhich is no acceptance result.",
+          "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F7.%20Ontology%20and%20three-view%20design%20gate%2FGate%20and%20retrospective%20work",
+          "start_line": 1536
+        }
+      ],
+      "key": "acceptance_disposition_dependency",
+      "subject_key": "design_acceptance",
+      "uncertainty": "ACTIVATION §3 owns the other three dispositions and their mappings, whose definitions are absent from the supplied source."
+    }
+  ]
+}

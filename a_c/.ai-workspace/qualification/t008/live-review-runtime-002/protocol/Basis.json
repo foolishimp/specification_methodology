@@ -1,0 +1,19 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "method_profile": {
+      "$ref": "#/$defs/Identity"
+    },
+    "observations": {
+      "items": {
+        "$ref": "#/$defs/ArtifactRef"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "method_profile",
+    "observations"
+  ],
+  "type": "object"
+}

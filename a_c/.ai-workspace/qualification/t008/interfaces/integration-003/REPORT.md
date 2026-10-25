@@ -1,0 +1,11 @@
+Integration-003 closed on the Root-selected repaired cut.
+
+The single full tenant run passed 273 tests with no skips in 50.737s. Strict normal-import typing passed all9 selected files. The exact pinned Graphify upstream passed9 checks and the ordinary read-only CLI/MCP example passed10. The author's38 selected tests are a subset of this full run, not38 additional unique tests.
+
+All19 source-selected repair discriminators are indexed with their current executed methods, exact source cut, author evidence, raw public calls or lower-layer scope. Required-P counterexample controls use an isolated qualification seam and do not qualify a public conjunction operator. The Context extra-source/model/required-fit controls use actual public calls and local launch/barrier variants. Writer replay covers real CLI/MCP append/replace, request-lock contention, authority/policy changes and fatal/uncertain history; direct lock-callback controls remain direct controls. Current work.write enters with null plan; this integration required no Product or precomputed-plan harness patch.
+
+Canonical owning operation witnesses and raw public process calls remain separate from unit assertions. The operation map leaves 10 declared operations without current owning OperationEvidence. Passed tests do not establish all23-operation public qualification, F_P usability, full calculus conformance, semantic acceptance, efficiency, installed qualification or RC readiness.
+
+All20400 guarded existing members are unchanged. Earlier254/242-test proof, negative reproductions, the unconsumable Worker return and public Reviewer timeout/partial histories remain historical evidence. No provider/native F_P calls, Product source edits, installs, Git, global or network actions were performed. Root owns any runtime owner/policy renewal and subsequent decisions.
+
+After this run, Root reported external independent static-review residuals E10 (inherited newly-required-P counterexample) and E11 (missing claim-marker conflicting replay). This integration did not reproduce or test those residuals and performs no further checks or repairs. The green mechanical result is not an acceptance verdict. Root's exact notice is retained separately.

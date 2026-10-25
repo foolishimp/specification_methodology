@@ -1,0 +1,50 @@
+{
+  "status": "passed current package and operative-source checks",
+  "package_commands": [
+    {
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/codex/tests/verify_package.py",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/codex"
+      ],
+      "exit": 0,
+      "stdout": "{\"destination_checked\": false, \"files\": 12, \"installed_checked\": false, \"inventory_sha256\": \"4bac63f3033d8b4c1b43fdff48dedd6d38cfe36f875d7388b0bc9be53ee4d726\", \"limits\": \"finite bytes/metadata/resources/custody only; no semantic or actual-host qualification\", \"local_links\": 18, \"status\": \"passed\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-I",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude/tests/check_package.py"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"status\": \"ok\",\n  \"errors\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check",
+        "--",
+        "stdo_skills"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "instruction_files_unchanged": 27,
+  "local_links": 74,
+  "markdown_files": 31,
+  "local_link_failures": [],
+  "self_report_target": "This report is materialized before its final existence assertion.",
+  "codex_source_routes_checked": 17,
+  "operative_provider_pins_checked": 10,
+  "operative_runtime_contract_files_checked": 27,
+  "operative_pin_drift": [],
+  "historical_source_disposition": "HISTORY-freeze02.json and SUCCESSOR04.json; prior exact subjects preserved, not rebound",
+  "limitations": "Mechanical source/package checks only; no installed-host behavior or semantic qualification."
+}

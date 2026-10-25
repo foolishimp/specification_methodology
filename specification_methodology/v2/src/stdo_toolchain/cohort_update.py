@@ -19,6 +19,7 @@ from .git_source import _git, GitSnapshot, normalize_cut
 from .manifest import build_manifest, manifest_sha256
 from .product_definition import load_binding, validate_definition_document, _source_project_root
 from .store import Store
+from .references import heading_slugs as _heading_slugs
 from .util import atomic_write, canonical_json_bytes, ensure_relative_member, load_json, sha256_bytes
 
 def _shape(value: Any, keys: set[str], label: str) -> dict[str, Any]:
@@ -328,23 +329,6 @@ def _axiom_digest(value: Any) -> str:
     """The existing Axiom Indexer canonical JSON carrier, not semantic validation."""
     return "sha256:" + sha256_bytes(json.dumps(value, ensure_ascii=False, allow_nan=False,
                                              separators=(",", ":"), sort_keys=True).encode())
-
-
-def _heading_slugs(text: str) -> set[str]:
-    """The existing Axiom Indexer Markdown fragment convention."""
-    slugs: set[str] = set()
-    occurrences: dict[str, int] = {}
-    for line in text.splitlines():
-        match = re.match(r"^#{1,6}\s+(.+?)\s*#*\s*$", line)
-        if not match:
-            continue
-        base = match.group(1).strip().lower()
-        base = re.sub(r"[^\w\- ]", "", base, flags=re.UNICODE)
-        base = re.sub(r"[\s\-]+", "-", base).strip("-")
-        count = occurrences.get(base, 0)
-        occurrences[base] = count + 1
-        slugs.add(base if count == 0 else f"{base}-{count}")
-    return slugs
 
 
 def _source_coverage(program: dict[str, Any], mapping: dict[str, Any], evidence: list[Any]) -> set[str]:

@@ -1,0 +1,45 @@
+{
+  "checks": [
+    {
+      "case": "selected-repository-boundary",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "-m",
+        "stdo_toolchain.cli",
+        "fleet",
+        "verify",
+        "--root",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/stdo_skills.json",
+        "--resolver-root",
+        "/Users/jim/src/apps/specification_methodology"
+      ],
+      "exit": 0,
+      "kind": "stdo.composition-verification",
+      "valid": true,
+      "report": "manager-checks-04/selected-repository-boundary.stdout.json"
+    },
+    {
+      "case": "too-narrow-boundary",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "-m",
+        "stdo_toolchain.cli",
+        "fleet",
+        "verify",
+        "--root",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/stdo_skills.json",
+        "--resolver-root",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills"
+      ],
+      "exit": 1,
+      "kind": "stdo.composition-verification",
+      "valid": false,
+      "report": "manager-checks-04/too-narrow-boundary.stdout.json"
+    }
+  ],
+  "source_manifest_sha256": "84888009e7d653a77ab43f2e4c28824f5c2c129e4b2fb40bc1e5584ba56d9fbd",
+  "definition_sha256": "753474f0e152ab6a3e0df31926b26b3e85a1b35a3ed996d4379df294cbc40e71",
+  "limits": "Actual local edge identity/reference resolution only; authority and semantic adequacy remain separately assessed."
+}

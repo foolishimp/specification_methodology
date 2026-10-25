@@ -18,6 +18,7 @@ import time
 from typing import BinaryIO, NoReturn, TypeAlias, cast
 
 import ac_support_core as core
+import ac_support_composition as composition
 import ac_support_effects as effects
 from ac_support_core import JSON, Object
 
@@ -123,9 +124,11 @@ def execute(runtime: core.Runtime, request: JSON) -> Object:
     try:
         bound = core.validate_request(request)
     except core.SupportError as exc:
-        return _unretained_response(exc)
+        return composition.protect_unretained(runtime, _unretained_response(exc))
     try:
         operation = cast(str, bound["operation"])
+        core.require_operation(runtime, operation)
+        composition.before(runtime, bound)
         if operation == "contract.preflight":
             outcome = effects.execute_effect(runtime, bound, core.build_preflight(runtime, bound))
         elif operation == "work.write":
@@ -134,6 +137,7 @@ def execute(runtime: core.Runtime, request: JSON) -> Object:
             outcome = effects.execute_effect(runtime, bound, None)
         else:
             outcome = core.execute_read(runtime, bound)
+        outcome = composition.finish(runtime, bound, outcome)
     except core.SupportError as exc:
         outcome = core.refusal_outcome(runtime, bound, exc)
     except Exception as exc:
@@ -142,18 +146,19 @@ def execute(runtime: core.Runtime, request: JSON) -> Object:
             gaps=[{"exception": type(exc).__name__, "reason": str(exc)}],
         ))
     try:
-        return effects.persist_outcome(runtime, bound, outcome)
+        outcome = composition.protect_outcome(runtime, bound, outcome)
+        return composition.protect_unretained(runtime, effects.persist_outcome(runtime, bound, outcome))
     except core.SupportError as exc:
         # Persistence owns the normal failed-publication projection. This is a
         # last-resort diagnostic only: never retry an effect or advertise an
         # unpublished content hash as durable evidence.
-        return _unretained_response(exc, request=bound)
+        return composition.protect_unretained(runtime, _unretained_response(exc, request=bound))
     except Exception as exc:
-        return _unretained_response(core.SupportError(
+        return composition.protect_unretained(runtime, _unretained_response(core.SupportError(
             "evidence_publication_failed", "Response evidence could not be retained",
             gaps=[{"exception": type(exc).__name__, "reason": str(exc),
                    "effect_state": "unknown; acquire existing intent and observations before retry"}],
-        ), request=bound)
+        ), request=bound))
 
 
 def _load_runtime(policy: str, expected_sha256: str, principal: str) -> core.Runtime:
@@ -199,7 +204,10 @@ def _deliver(runtime: core.Runtime, request: Object, response: Object,
         # The response was already written. Missing publication keeps delivery
         # potential/unknown in protected history; never patch a prior envelope,
         # emit another public result or silently retry persistence.
-        print(f"Transport observation unavailable; delivery evidence remains unknown: {type(exc).__name__}: {exc}", file=sys.stderr)
+        if runtime.composition is not None:
+            print("Transport observation unavailable; delivery evidence remains unknown; diagnostic details withheld", file=sys.stderr)
+        else:
+            print(f"Transport observation unavailable; delivery evidence remains unknown: {type(exc).__name__}: {exc}", file=sys.stderr)
 
 
 def _rpc_error(request_id: Wire, code: int, message: str) -> WireObject:
@@ -419,7 +427,10 @@ def main(argv: Sequence[str] | None = None) -> int:
         try:
             return effects.supervise(runtime, {"id": cast(str, args.attempt_id), "sha256": cast(str, args.attempt_sha256)})
         except Exception as exc:
-            print(f"Supervisor reentry failed: {type(exc).__name__}: {exc}", file=sys.stderr)
+            if runtime.composition is not None:
+                print("Supervisor reentry failed; effect state remains unresolved; diagnostic details withheld", file=sys.stderr)
+            else:
+                print(f"Supervisor reentry failed: {type(exc).__name__}: {exc}", file=sys.stderr)
             return 1
     if args.command == "mcp":
         try:
@@ -444,6 +455,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             "observation_unavailable", "Request input could not be acquired",
             gaps=[{"exception": type(exc).__name__, "reason": str(exc)}],
         ))
+    response = composition.protect_unretained(runtime, response)
     try:
         if request is None:
             _write(sys.stdout.buffer, response)

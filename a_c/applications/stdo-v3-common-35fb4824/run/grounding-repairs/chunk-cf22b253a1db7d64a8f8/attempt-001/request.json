@@ -1,0 +1,264 @@
+{
+  "actor_settings": {
+    "cli_version": "codex-cli 0.162.1",
+    "settings": {
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "service_tier": "default"
+    }
+  },
+  "budget_before_reservation": [
+    {
+      "attempt": "actors/author/chunk-cf22b253a1db7d64a8f8/attempt-001",
+      "family": "author",
+      "invocation_recorded": true
+    }
+  ],
+  "budget_limit": 3,
+  "chunk": "chunk-cf22b253a1db7d64a8f8",
+  "claim": "New F_P evidence-selection proposal with invariant non-grounding statement bytes; semantic equivalence and acceptance unassessed.",
+  "code_pins": {
+    "asset:patch.schema.json": "65c58364a33a31d25fb2de16e50fc1f92bf2eb30307ebb42eb0f7a60ecb58b76",
+    "asset:repair.txt": "304752f5d5359364f6b34a2cf1f16b1a9da3c786bcb3baba12364fa7ba4b0d7e",
+    "codec": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+    "generator": "fcb946e180ba8a30ecdfdb9e53044cd142d9bd450464c186dfbbe90e9da5ec93",
+    "grounding": "f850e7ceecd945455891e6cc941fc3a86c943ed27bbe74d86b0248169d9cf682",
+    "repair": "5be5e738f12006dcb17066ccfb60d22e65e5929a8a9a96d52ee5c0a19efda928"
+  },
+  "invalid_grounding_entries": [
+    {
+      "diagnostic": "section_id is outside the exact dispatched chunk",
+      "family": "constraints",
+      "grounding": {
+        "end_line": 221,
+        "quote": "A unit, semantic or\nmodule-design conformance lane does not depend on an undeclared local path,\na sibling workspace, an operator home directory or a mutable external\nfixture.",
+        "section_id": "repo://stdo-v3-common/35fb4824a064a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy%2FFixture%20and%20proof%20portability",
+        "start_line": 218
+      },
+      "grounding_index": 0,
+      "record_key": "portable_required_closure",
+      "record_ordinal": 30
+    }
+  ],
+  "mode": "graphify-ac",
+  "parent": {
+    "kind": "author",
+    "path": "actors/author/chunk-cf22b253a1db7d64a8f8/attempt-001"
+  },
+  "parent_answer_sha256": "c271c54a7ae0fc84574930bc274495f719fd77951c94424229005b82bef95703",
+  "parent_proof": {
+    "evidence": {
+      "chunk_sha256": "a0f3b61ab580eee4686c195c83076f5d5730d2dedda84e105893450f96d592de",
+      "original_attempt": "actors/author/chunk-cf22b253a1db7d64a8f8/attempt-001",
+      "original_recorded_failure": "record[portable_required_closure]/grounding/0: grounding names source outside chunk",
+      "original_status": "failed",
+      "original_strict_validation_error": "record[portable_required_closure]/grounding/0: grounding names source outside chunk",
+      "original_usage_events": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 0,
+          "input_tokens": 67817,
+          "output_tokens": 35858,
+          "reasoning_output_tokens": 1082
+        }
+      ],
+      "pins": {
+        "actor-settings.json": "f3b748facc38547ccdceeb05350b9e75b9afb8e30b009a63f916ea374f7e40ed",
+        "actors/author/chunk-cf22b253a1db7d64a8f8/attempt-001/answer.json": "50926f48dfa8425f7738415138945be9b4718685be6ae466e12e8565971313d2",
+        "actors/author/chunk-cf22b253a1db7d64a8f8/attempt-001/events.jsonl": "9612c7e74fcb8f07e5aaf6d3d5516ffb340db5682adf9c13d86350a7de7175ce",
+        "actors/author/chunk-cf22b253a1db7d64a8f8/attempt-001/invocation.json": "279e19efc084aa70f583ad68e29a0d48fc004c6f529d3156f6c05b86b2bf5918",
+        "actors/author/chunk-cf22b253a1db7d64a8f8/attempt-001/prompt.txt": "ac0547c4ca1a20013615c8f12cf1f6ac12479b4ab111490ca9672567f00e71aa",
+        "actors/author/chunk-cf22b253a1db7d64a8f8/attempt-001/result.json": "eafdc71f50e45e464188eb93fdd40e2b1310a0815a4b7343e4342ebca069fa23",
+        "actors/author/chunk-cf22b253a1db7d64a8f8/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actors/author/chunk-cf22b253a1db7d64a8f8/attempt-001/usage.json": "6a23371e5159f1c582a603fbc4b5034adb3df19466bad20787ea8aac514a8f23",
+        "chunks.json": "2ce228fa4f647bcb275ff6653aff1a20eca792c93037f9d7959080668129d073",
+        "plan.json": "31a88bb55aa025cb95ba4f7710bd8559b5e0e5f4976b55388cdac1e1cf8337cf",
+        "source-manifest.json": "dbf32e7f99eb7228ca361ec02f44227c05e02bb6bc447d1dd38255cd3ca4a4d4"
+      },
+      "source_sections": [
+        {
+          "end_line": 692,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FRoles%20and%20delegation",
+          "path": "standards/ACTIVATION.md",
+          "sha256": "875211dabbdc5d788db40f2e2cb5e86a3395642e460cd09fbefea4cabfd0a2ed",
+          "start_line": 619
+        },
+        {
+          "end_line": 880,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope",
+          "path": "standards/ACTIVATION.md",
+          "sha256": "212f3545f0727224c31775d7f287ac3934012ba9abeef644b8c94686ff3fbe18",
+          "start_line": 693
+        },
+        {
+          "end_line": 916,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope%2FStaleness%20of%20derived%20surfaces",
+          "path": "standards/ACTIVATION.md",
+          "sha256": "e03ba44ae809603f12c8ddfc59dc254cdd6b4cf45ac98828cea837d82cb2a705",
+          "start_line": 881
+        },
+        {
+          "end_line": 946,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition",
+          "path": "standards/ACTIVATION.md",
+          "sha256": "32edac7552c461d5b248d9a395a60e945bf265113beb816bd0005f6ac4adb26d",
+          "start_line": 917
+        },
+        {
+          "end_line": 980,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FAdmission%20and%20activation",
+          "path": "standards/ACTIVATION.md",
+          "sha256": "6355ed6c58473d04c13251a2ea6936388f89b4f943c3a15558d995409c720263",
+          "start_line": 947
+        },
+        {
+          "end_line": 1027,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FConstruction%20availability",
+          "path": "standards/ACTIVATION.md",
+          "sha256": "f1716d7080e823fa4d3b92070a88c2a2e61dfc9bc96a597b36707c3d5d759e48",
+          "start_line": 981
+        },
+        {
+          "end_line": 1065,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FDisposition",
+          "path": "standards/ACTIVATION.md",
+          "sha256": "a5d3394673bb27695f4d42cbae693b65edad57928cf235a2cbc6740cfe198b63",
+          "start_line": 1028
+        },
+        {
+          "end_line": 1092,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FAmbiguity%20outcome",
+          "path": "standards/ACTIVATION.md",
+          "sha256": "c70b35a5e59dee1def59b0f50393cc0f400c36fec01c167b09b6fe88f8e0354d",
+          "start_line": 1066
+        },
+        {
+          "end_line": 1142,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FEffects",
+          "path": "standards/ACTIVATION.md",
+          "sha256": "5256dd7b7399fdeb0176decb43623660821eb5ff038867b2193f8b7922e73e29",
+          "start_line": 1093
+        },
+        {
+          "end_line": 1180,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement",
+          "path": "standards/ACTIVATION.md",
+          "sha256": "3f238371be877d879584929208f8cbccee9aa6d4cd4bab01a04266fbef7bc564",
+          "start_line": 1143
+        },
+        {
+          "end_line": 1256,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement%2FRefinement",
+          "path": "standards/ACTIVATION.md",
+          "sha256": "5b33a40f42b5f4449224ffe67bd387dc329f62207e3bf2bea3dc5ceda0810e1d",
+          "start_line": 1181
+        },
+        {
+          "end_line": 1308,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement%2FComplete%20enclosing-relation%20admission",
+          "path": "standards/ACTIVATION.md",
+          "sha256": "b411163d4b135911d4e764396b90650184016761e885629ad47b3d9a636735e0",
+          "start_line": 1257
+        },
+        {
+          "end_line": 1340,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement%2FStanding%20structural%20qualification",
+          "path": "standards/ACTIVATION.md",
+          "sha256": "aa16059145efc645f41f62c56407a92de27ebd1a7a4c520055344bf763a1dd20",
+          "start_line": 1309
+        },
+        {
+          "end_line": 1428,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F5.%20Work%20state%20and%20restart",
+          "path": "standards/ACTIVATION.md",
+          "sha256": "e0d5cf78c76d7da93a8aeceaacb5c1621260326d216b23ed733d407533ac55a8",
+          "start_line": 1341
+        },
+        {
+          "end_line": 1489,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F5.%20Work%20state%20and%20restart%2FThe%20workspace%20and%20an%20actor%27s%20account",
+          "path": "standards/ACTIVATION.md",
+          "sha256": "124e711463d9a34c1a1d896b1f80c32934bd2dc444b5a3f0e256e97611030f7c",
+          "start_line": 1429
+        },
+        {
+          "end_line": 1597,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F6.%20Cost%20and%20proportionality",
+          "path": "standards/ACTIVATION.md",
+          "sha256": "05edae9beedbd3efdb614464841896c7300a5580b45d8347850ed7b38bc76218",
+          "start_line": 1490
+        },
+        {
+          "end_line": 1651,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F6.%20Cost%20and%20proportionality%2FResource%20limits",
+          "path": "standards/ACTIVATION.md",
+          "sha256": "92ab379aae0fb61566894e2278729d41919f8363f6e4cf174388865fe6165bfe",
+          "start_line": 1598
+        },
+        {
+          "end_line": 1714,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F7.%20Closed%20result%20and%20reuse",
+          "path": "standards/ACTIVATION.md",
+          "sha256": "ec4b5a88d9ee894e40c037125150c543c405debf844b78f2656f585c43a497d2",
+          "start_line": 1652
+        },
+        {
+          "end_line": 1734,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F7.%20Closed%20result%20and%20reuse%2FTransition%20evidence",
+          "path": "standards/ACTIVATION.md",
+          "sha256": "ad70853fcee20640a133dabe87587319c3b31ddaa64534d79eac66c913062ed5",
+          "start_line": 1715
+        },
+        {
+          "end_line": 30,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE",
+          "path": "standards/ASSURANCE.md",
+          "sha256": "c080a8ab6616ee2cbfa1cc9a4b82006e1708b1676bc99c6d7cbd4eeefe927862",
+          "start_line": 1
+        },
+        {
+          "end_line": 71,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers",
+          "path": "standards/ASSURANCE.md",
+          "sha256": "884067edc6d354b17db4e9e0f434da0bf3390cb7d367ee571cb9e12a228f6d78",
+          "start_line": 31
+        },
+        {
+          "end_line": 132,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers%2FFoundation%20to%20law%3A%20assurance%20and%20testing",
+          "path": "standards/ASSURANCE.md",
+          "sha256": "e5318a340dcfcb11b52f046fabca9a3c382759e430a14490980017b2e1802489",
+          "start_line": 72
+        },
+        {
+          "end_line": 214,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy",
+          "path": "standards/ASSURANCE.md",
+          "sha256": "6c952b40493adf6c132048ece32110a3e2341d939a4f93760ee5be2b6e283762",
+          "start_line": 133
+        },
+        {
+          "end_line": 235,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy%2FFixture%20and%20proof%20portability",
+          "path": "standards/ASSURANCE.md",
+          "sha256": "840d4d0d22215aeb1215105b67825503c3a78a50074f59aeaa8282f5828d4e21",
+          "start_line": 215
+        },
+        {
+          "end_line": 253,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F3.%20Test%20authority",
+          "path": "standards/ASSURANCE.md",
+          "sha256": "e3bfb8cf7bd87297081d1d952c2400239c92e767e8daf3916b8a7064fb58e0ff",
+          "start_line": 236
+        }
+      ]
+    },
+    "kind": "author",
+    "path": "actors/author/chunk-cf22b253a1db7d64a8f8/attempt-001"
+  },
+  "profile": "a_c.grounding.f-p-repair/1",
+  "prompt_sha256": "f743899fdb8ad77bd6d74322d65dc02021056e9e0ed27f2670993f6de94d8fce",
+  "schema_sha256": "2463073a02ffb8195108fb9afeb187d3858a304e1eff6d0168f71d16101b6da0",
+  "source_chunk_sha256": "a0f3b61ab580eee4686c195c83076f5d5730d2dedda84e105893450f96d592de",
+  "source_plan_sha256": "31a88bb55aa025cb95ba4f7710bd8559b5e0e5f4976b55388cdac1e1cf8337cf"
+}

@@ -1,0 +1,317 @@
+--- worker-preimage/build_tenants/graphify/code/ac_support_effects.py
++++ worker-candidate/build_tenants/graphify/code/ac_support_effects.py
+@@ -1014,6 +1014,30 @@
+     return c.verify_reconciliation(runtime, evidence, predecessor, grant, basis)
+ 
+ 
++def _activation_attempts(runtime: c.Runtime, store: EvidenceStore, packet: c.Object) -> list[c.JSON]:
++    # Context envelopes include acquisition/provenance observations. Reassembly
++    # can change their artifact identity without changing the activated Packet.
++    # Derive the source-owned identity through retained Contexts, including old
++    # anchors; an absent optional index must never look like absent history.
++    history = store.query_artifacts("attempt", {})
++    if history["complete"] is not True:
++        raise c.SupportError("history_incomplete", "Cannot establish activation attempt population", c.as_list(history["gaps"]), [])
++    identity = c.activation_identity(packet)
++    previous: list[c.JSON] = []
++    for value in c.as_list(history["refs"]):
++        ref = _ref(value)
++        try:
++            _, anchor = _attempt(runtime, ref)
++            context = c.as_object(c.load_artifact(runtime, _ref(anchor.get("context")), "context")["payload"])
++            retained = c.as_object(context.get("packet"), "retained Attempt Packet")
++            c.text(c.as_object(retained.get("activation"), "retained activation").get("id"), "retained activation id")
++            if c.activation_identity(retained) == identity:
++                previous.append(ref)
++        except c.SupportError as error:
++            raise c.SupportError("history_incomplete", "Retained Attempt activation identity is unavailable", [ref, error.document()], []) from error
++    return previous
++
++
+ def _dispatch(runtime: c.Runtime, store: EvidenceStore, request: c.Object, key: str) -> c.CoreOutcome:
+     args = c.as_object(request["arguments"])
+     receipt_ref = _ref(args["preflight"])
+@@ -1049,12 +1073,9 @@
+         raise c.SupportError("digest_mismatch", "Retained Context rendering changed", [], [])
+     activation = c.as_object(packet["activation"])
+     with store._lock("activation:" + c.text(activation["id"])):
+-        prior = store.query_artifacts("attempt", {"payload.context.id": context_ref["id"]})
+-        previous = c.as_list(prior["refs"])
++        previous = _activation_attempts(runtime, store, packet)
+         retry = args.get("retry_of")
+         reconciliation = args.get("reconciliation")
+-        if prior["complete"] is not True:
+-            raise c.SupportError("history_incomplete", "Cannot establish activation attempt population", c.as_list(prior["gaps"]), [])
+         if previous and retry is None:
+             raise c.SupportError("effect_unreconciled", "A new attempt of this activation requires its predecessor and reconciliation", previous, [])
+         if retry is not None:
+@@ -1251,7 +1272,7 @@
+             if (timed_out or cancelled) and not signaled and process.poll() is None:
+                 _event(runtime, store, request, ref, "deadline" if timed_out else "cancel_observed", {"signal": "SIGTERM-request", "end_established": False, "partial_output": True})
+                 process.terminate()
+-                sent_at = now
++                sent_at = time.time_ns()
+                 signaled = True
+                 _event(runtime, store, request, ref, "signal_delivery", {"signal": "SIGTERM", "scope": "Popen local process", "end_established": False})
+             if sent_at is not None and grace is not None and now - sent_at >= grace * 1_000_000 and process.poll() is None:
+@@ -1288,10 +1309,12 @@
+                     if remaining < len(chunk):
+                         truncated[name] = True
+                     _event(runtime, store, request, ref, "output_chunk", {"stream": name, "bytes_base64": base64.b64encode(chunk[:remaining]).decode("ascii"), "observed_bytes": len(chunk), "retained_bytes": min(remaining, len(chunk)), "complete_slot": False})
+-            if process.poll() is not None and selector.get_map() and sent_at is None:
++            if process.poll() is not None and selector.get_map():
+                 # Descendants may hold pipes open. Never wait indefinitely for
+                 # their EOF or infer their end from the observed parent's exit.
+-                if not selector.select(0):
++                # A prior signal cannot disable this path; selected timeout or
++                # cancellation also bounds an always-readable descendant tail.
++                if timed_out or cancelled or not selector.select(0):
+                     for selected in list(selector.get_map().values()):
+                         selector.unregister(selected.fileobj)
+                     _event(runtime, store, request, ref, "pipe_tail_unknown", {"descendant_end": "unknown", "output_tail": "unobserved after parent process end"})
+--- worker-preimage/build_tenants/graphify/test_env/test_ac_support_effects.py
++++ worker-candidate/build_tenants/graphify/test_env/test_ac_support_effects.py
+@@ -739,6 +739,19 @@
+         self.assertEqual(c.as_object(refused["refusal"])["code"], "effect_unreconciled")
+         self.assertEqual(target.read_text(), "1")
+ 
++    def test_legacy_attempt_without_activation_support_holds_dispatch(self) -> None:
++        runtime, request, target = self.actor_setup("count")
++        legacy_context, context_ref = self.artifact("context", {"schema": "a_c.fd-support.context/1"})
++        self.store.retain(legacy_context)
++        legacy_attempt, _ = self.artifact("attempt", {"schema": "a_c.fd-support.attempt/1", "context": context_ref})
++        self.store.retain(legacy_attempt)
++        result = e.execute_effect(runtime, request, None)
++        if result["refusal"] is None:
++            self.finished(runtime, c.as_object(c.as_object(result["result"])["artifact"]))
++        self.assertIsNotNone(result["refusal"])
++        self.assertEqual(c.as_object(result["refusal"])["code"], "history_incomplete")
++        self.assertFalse(target.exists())
++
+     def test_cancel_records_request_and_signal_with_partial_effect(self) -> None:
+         runtime, request, target = self.actor_setup("partial", timeout=1800)
+         first = e.execute_effect(runtime, request, None)
+@@ -930,11 +943,12 @@
+         self.policy_sha = hashlib.sha256(raw).hexdigest()
+ 
+     def _public(self, operation: str, arguments: c.Object,
+-                before_supervisor: tuple[Path, bytes] | None = None) -> c.Object:
++                before_supervisor: tuple[Path, bytes] | None = None,
++                *, identity: str | None = None) -> c.Object:
+         self.sequence += 1
+         folder = self.root / "calls" / (str(self.sequence).zfill(3) + "-" + operation)
+         folder.mkdir(parents=True)
+-        request: c.Object = {"schema": c.REQUEST, "id": "public-" + str(self.sequence),
++        request: c.Object = {"schema": c.REQUEST, "id": "public-" + str(self.sequence) if identity is None else identity,
+                              "operation": operation, "arguments": arguments}
+         request_path = folder / "request.json"
+         request_path.write_bytes(c.canonical(request))
+@@ -1075,8 +1089,18 @@
+         ref = c.as_object(c.as_object(response["result"])["artifact"])
+         return ref
+ 
+-    def _finished(self, attempt: c.Object) -> c.Object:
+-        deadline = time.monotonic() + 5
++    def _assemble(self, packet: c.Object | None = None) -> c.Object:
++        response = self._public("context.assemble", {
++            "packet": self.f.packet() if packet is None else packet,
++            "models": [], "sources": [self.f.law], "late_acquisition": [],
++            "envelope": {"capacity_bytes": None, "boundary": "executor-stdin-utf8",
++                "host_context": {"state": "unknown", "bytes": None, "evidence": None}},
++        })
++        self._ok(response)
++        return c.as_object(c.as_object(response["result"])["artifact"])
++
++    def _finished(self, attempt: c.Object, *, timeout: float = 5) -> c.Object:
++        deadline = time.monotonic() + timeout
+         while time.monotonic() < deadline:
+             response = self._public("dispatch.observe", {"attempt": attempt, "after_event": 0})
+             value = self._ok(response)
+@@ -1084,6 +1108,160 @@
+                 return response
+             time.sleep(0.05)
+         self.fail("Public registered fixture did not finish within its bounded deadline")
++
++    def test_public_reassembled_context_cannot_reset_activation_history(self) -> None:
++        context = self._assemble()
++        receipt = self._admit(context)
++        first = self._public("dispatch.start", {"preflight": receipt}, identity="first-dispatch")
++        self._ok(first)
++        attempt = c.as_object(c.as_object(first["result"])["artifact"])
++        observed = self._ok(self._finished(attempt))
++        for stream in ("stdout", "stderr"):
++            retained = self._ok(self._public("evidence.read", {"artifact": c.as_object(observed["output"])[stream]}))
++            self.assertTrue(c.as_object(c.as_object(retained["envelope"])["payload"])["complete"])
++        replay = self._public("dispatch.start", {"preflight": receipt}, identity="first-dispatch")
++        self.assertEqual(c.as_object(replay["result"])["artifact"], attempt)
++        reassembled = self._assemble()
++        self.assertNotEqual(context, reassembled)
++        original = self._ok(self._public("evidence.read", {"artifact": context}))
++        repeated = self._ok(self._public("evidence.read", {"artifact": reassembled}))
++        original_payload = c.as_object(c.as_object(original["envelope"])["payload"])
++        repeated_payload = c.as_object(c.as_object(repeated["envelope"])["payload"])
++        self.assertEqual(original_payload["packet"], repeated_payload["packet"])
++        self.assertEqual(original_payload["rendered_sha256"], repeated_payload["rendered_sha256"])
++        refused = self._public("dispatch.start", {"preflight": self._admit(reassembled)})
++        if refused["status"] == "ok":
++            self._finished(c.as_object(c.as_object(refused["result"])["artifact"]))
++        self.assertEqual(refused["status"], "error", refused)
++        self.assertEqual(c.as_object(refused["refusal"])["code"], "effect_unreconciled")
++        self.assertEqual(self.target.read_text(), "1")
++
++    def test_public_distinct_activation_keeps_its_own_attempt_population(self) -> None:
++        first = self._public("dispatch.start", {"preflight": self._admit(self._assemble())})
++        self._ok(first)
++        self._finished(c.as_object(c.as_object(first["result"])["artifact"]))
++        packet = self.f.packet()
++        c.as_object(packet["activation"])["id"] = "explicitly-distinct-activation"
++        second = self._public("dispatch.start", {"preflight": self._admit(self._assemble(packet))})
++        self._ok(second)
++        self._finished(c.as_object(c.as_object(second["result"])["artifact"]))
++        self.assertEqual(self.target.read_text(), "2")
++
++    def _held_pipe_case(self, *, cancel: bool, continuous: bool = False, ignore_term: bool = False) -> None:
++        # The descendant has a fixture-owned stop file and a fail-safe lifetime.
++        # It retains both inherited output pipes after the actor is terminated.
++        fixture = self.f.write("inputs/held_pipe_actor.py", b'''import json,os,signal,subprocess,sys,time
++from pathlib import Path
++control=Path(sys.argv[2])
++stop=control/'stop-child'
++if sys.argv[1]=='child':
++ (control/'child-ready').write_text(str(os.getpid()))
++ deadline=time.monotonic()+20
++ continuous=sys.argv[3]=='continuous'
++ while not stop.exists() and time.monotonic()<deadline:
++  if continuous and (control/'actor-ready').exists():
++   try: os.write(1,b'descendant tail '*4096)
++   except BrokenPipeError: continuous=False
++  else: time.sleep(0.01)
++ (control/'child-ended').write_text('fixture stop observed')
++ raise SystemExit(0)
++sys.stdin.buffer.read()
++if sys.argv[3]=='ignore-term': signal.signal(signal.SIGTERM,signal.SIG_IGN)
++child=subprocess.Popen([sys.executable,'-B',__file__,'child',str(control),sys.argv[3]],stdin=subprocess.DEVNULL)
++deadline=time.monotonic()+2
++while not (control/'child-ready').exists() and time.monotonic()<deadline: time.sleep(0.005)
++print('retained stdout before termination',flush=True)
++print('retained stderr before termination',file=sys.stderr,flush=True)
++(control/'actor-ready').write_text(json.dumps({'parent':os.getpid(),'child':child.pid}))
++time.sleep(20)
++''')
++        control = self.f.workspace / "outputs" / "pipe-control"
++        control.mkdir()
++        executor = c.as_object(c.as_object(self.f.policy["executors"])["registered"])
++        mode = "continuous" if continuous else "ignore-term" if ignore_term else "hold"
++        executor["argv"] = [str(self.python), "-B", str(self.f.workspace / "inputs" / "held_pipe_actor.py"), "actor", str(control), mode]
++        executor["dependencies"] = [fixture]
++        executor["settings"] = {"timeout_ms": 1800 if cancel else 150, "termination_grace_ms": 100}
++        c.as_object(self.f.policy["limits"])["min_poll_ms"] = 20
++        c.as_object(self.f.policy["limits"])["max_output_bytes"] = 100000
++        if cancel:
++            c.as_list(c.as_object(c.as_object(self.f.policy["grants"])["work"])["operations"]).append("dispatch.cancel")
++        self._select_policy()
++        attempt: c.Object | None = None
++        finished = False
++        try:
++            dispatched = self._public("dispatch.start", {"preflight": self._admit(self._assemble())})
++            self._ok(dispatched)
++            attempt = c.as_object(c.as_object(dispatched["result"])["artifact"])
++            ready_deadline = time.monotonic() + 2
++            while not (control / "actor-ready").exists() and time.monotonic() < ready_deadline:
++                time.sleep(0.01)
++            self.assertTrue((control / "actor-ready").exists())
++            if cancel:
++                self._ok(self._public("dispatch.cancel", {"attempt": attempt, "reason": "stop the owned held-pipe fixture"}))
++            started = time.monotonic()
++            observed = self._finished(attempt, timeout=4)
++            finished = True
++            value = self._ok(observed)
++            events = [c.as_object(event) for event in c.as_list(value["events"])]
++            actor_started = next(event for event in events if event["kind"] == "actor_started")
++            finalized = next(event for event in events if event["kind"] == "output_finalized")
++            witness = {
++                "observer_elapsed_ms": int((time.monotonic() - started) * 1000),
++                "observer_returned_at_ns": time.time_ns(), "operation_evidence": observed["evidence"],
++                "actor_started_ns": actor_started["observed_at_ns"],
++                "process_end": value["process_end"], "output_finalized_ns": finalized["observed_at_ns"],
++                "child_ended_before_observation": (control / "child-ended").exists(),
++                "fixture_stop_already_requested": (control / "stop-child").exists(),
++                "fixture_lifetime_ms": 20000, "supervised_interval_bound_ms": 4000,
++            }
++            (control / "finalization-witness.json").write_bytes(c.canonical(c.document(witness)))
++            self.assertFalse(witness["child_ended_before_observation"], "Finalization waited for descendant EOF")
++            self.assertFalse(witness["fixture_stop_already_requested"])
++            self.assertLess(c.integer(finalized["observed_at_ns"]) - c.integer(actor_started["observed_at_ns"]), 4_000_000_000)
++            kinds = [c.as_object(event)["kind"] for event in c.as_list(value["events"])]
++            self.assertIn("cancel_observed" if cancel else "deadline", kinds)
++            self.assertIn("pipe_tail_unknown", kinds)
++            self.assertEqual(c.as_object(value["process_end"])["returncode"], -9 if ignore_term else -15)
++            deliveries = [c.as_object(event) for event in c.as_list(value["events"]) if c.as_object(event)["kind"] == "signal_delivery"]
++            self.assertEqual([c.as_object(event["data"])["signal"] for event in deliveries], ["SIGTERM", "SIGKILL"] if ignore_term else ["SIGTERM"])
++            if ignore_term:
++                # Retained delivery timestamps follow their filesystem writes;
++                # allow that observation cost around the selected 100 ms grace.
++                self.assertGreaterEqual(c.integer(deliveries[1]["observed_at_ns"]) - c.integer(deliveries[0]["observed_at_ns"]), 75_000_000)
++            self.assertEqual(c.as_object(value["process_end"])["descendants"], "unknown")
++            effect = c.as_object(value["effect"])
++            self.assertEqual(effect["value"], "completion_unknown")
++            self.assertFalse(effect["end_established"])
++            for stream in ("stdout", "stderr"):
++                raw = self._ok(self._public("evidence.read", {"artifact": c.as_object(value["output"])[stream]}))
++                payload = c.as_object(c.as_object(raw["envelope"])["payload"])
++                self.assertFalse(payload["complete"])
++                interval = c.as_object(payload["interval"])
++                self.assertLess(c.integer(interval["ended_ns"]) - c.integer(interval["started_ns"]), 4_000_000_000)
++                self.assertIn(("retained " + stream + " before termination").encode(), base64.b64decode(c.text(payload["bytes_base64"])))
++        finally:
++            (control / "cleanup-request.json").write_bytes(c.canonical({"requested_at_ns": time.time_ns(), "scope": "own fixture descendant only"}))
++            (control / "stop-child").write_text("Own fixture cleanup; no descendant-end claim is added to the Attempt")
++            cleanup_deadline = time.monotonic() + 3
++            while (control / "child-ready").exists() and not (control / "child-ended").exists() and time.monotonic() < cleanup_deadline:
++                time.sleep(0.01)
++            if (control / "child-ready").exists():
++                self.assertTrue((control / "child-ended").exists(), "Owned descendant did not observe fixture cleanup")
++            if attempt is not None and not finished:
++                self._finished(attempt)
++
++    def test_public_timeout_finalizes_while_descendant_still_holds_pipes(self) -> None:
++        self._held_pipe_case(cancel=False)
++
++    def test_public_cancel_finalizes_while_descendant_still_holds_pipes(self) -> None:
++        self._held_pipe_case(cancel=True)
++
++    def test_public_timeout_bounds_continuously_readable_descendant_tail(self) -> None:
++        self._held_pipe_case(cancel=False, continuous=True)
++
++    def test_public_timeout_honors_selected_grace_before_local_kill(self) -> None:
++        self._held_pipe_case(cancel=False, ignore_term=True)
+ 
+     def _retry_case(self, variant: str) -> None:
+         core_sha = hashlib.sha256((self.code / "ac_support_core.py").read_bytes()).hexdigest()
+@@ -1154,11 +1332,15 @@
+             judgment = c.as_object(self._ok(proof)["judgment"])
+             expected = "falsified" if variant == "false" else "invalid_basis" if variant == "invalid-basis" else "satisfied"
+             self.assertEqual(judgment["core_value"], expected)
++        if variant == "reassembled":
++            reassembled = self._assemble()
++            self.assertNotEqual(context, reassembled)
++            context = reassembled
+         receipt = self._admit(context)
+         retried = self._public("dispatch.start", {"preflight": receipt,
+             "retry_of": context if variant == "wrong-predecessor" else predecessor,
+             "reconciliation": proof["evidence"]})
+-        if variant == "positive":
++        if variant in ("positive", "reassembled"):
+             self._ok(retried)
+             self._finished(c.as_object(c.as_object(retried["result"])["artifact"]))
+             self.assertEqual(self.target.read_text(), "2")
+@@ -1170,6 +1352,9 @@
+     def test_public_selected_retry(self) -> None:
+         self._retry_case("positive")
+ 
++    def test_public_selected_retry_survives_context_reassembly(self) -> None:
++        self._retry_case("reassembled")
++
+     def test_public_retry_requires_actual_check(self) -> None:
+         self._retry_case("missing")
+ 

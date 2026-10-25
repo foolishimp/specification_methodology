@@ -1,0 +1,19 @@
+{
+  "scope": "M1 repair new actual-CLI cases",
+  "command": [
+    "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "tests.test_composition.CompositionTests.test_markdown_literal_markup_cannot_satisfy_relation_fragment",
+    "tests.test_composition.CompositionTests.test_real_markdown_anchors_survive_inline_literal_filter",
+    "-v"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology/specification_methodology/v2",
+  "PYTHONPATH": "/Users/jim/src/apps/specification_methodology/specification_methodology/v2/src:/Users/jim/src/apps/specification_methodology/specification_methodology/v2/tests",
+  "completed_at": "2026-10-25T14:14:08.831965+00:00",
+  "seconds": 6.656759916106239,
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_markdown_literal_markup_cannot_satisfy_relation_fragment (tests.test_composition.CompositionTests.test_markdown_literal_markup_cannot_satisfy_relation_fragment) ... ok\ntest_real_markdown_anchors_survive_inline_literal_filter (tests.test_composition.CompositionTests.test_real_markdown_anchors_survive_inline_literal_filter) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 6.255s\n\nOK\n"
+}

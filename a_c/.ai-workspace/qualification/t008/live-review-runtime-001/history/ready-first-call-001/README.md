@@ -1,0 +1,9 @@
+# Frozen Reviewer expectation call preparation
+
+Run no actor automatically. PUBLIC_SEQUENCE.json gives public CLI startup and one explicit step at a time. context.request.json is a complete validated first request; later request objects require actual returned ArtifactRefs and Root per-call approval. Tool policy → MCP config → helper plan → outer Executive policy is acyclic. The same immutable Reviewer policy/history is selected for the held assessment. Its real expectation and exact second contract/packet do not yet exist.
+
+Reviewer tools are source.read/evidence.read/review.prepare/tools.describe only. The claim is a complete finite selected population including the corrected primary guide. It is locator data initially; every member is late. T008 authority is lines668–728 only. Neutral protocol excerpts share wire grammar, no candidate algorithms/findings. Use readable small UTF8 chunks and actual prior acquisition refs; previews/saved paths/base64 do not establish semantic reading. All source assertions are byte pins, not proof of actual actor acquisition or review.
+
+Expectation helper timeout900000ms/outer960000ms/attempt1320000ms: Root explicitly permitted an increase after the observed earlier Worker600s timeout, to allow bounded material governing acquisition and an actual closed return. This is not a host capacity/fit or efficiency claim. Assessment remains held with xhigh1200000/1260000ms proposal. Restricted deliberately ignores user/project/local settings; selected native model and host additions remain unknown until actual trace. Existing authentication is untouched.
+
+Preparation performs only file construction, hashing and pure input/schema checks. No Runtime, support operations, provider calls, admission, acceptance, promotion or release. Preserve exact source invalidators and raw negative/unknown evidence on actual use.

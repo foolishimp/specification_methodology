@@ -1,0 +1,64 @@
+{
+  "role": "Worker",
+  "actor": "/root/common_rep_release_bundle",
+  "time_utc": "2026-10-20T10:20:28.737400+00:00",
+  "triage": "realization_refactor: F002P3 captured-workspace documentation portability; no source meaning, binding/checker or Product change",
+  "write_grant": [
+    "app package_release.py document rendering/guide only",
+    "app RELEASE-PREPARATION.md factual update",
+    "NEW .ai-workspace/qualification/t010/packaging/documentation-repair-001/**",
+    "own ac-common-release-* scratch"
+  ],
+  "preimages": [
+    {
+      "path": "package_release.py",
+      "bytes": 31081,
+      "sha256": "8439938a7937bb44eecc50571c90d71fad9405ba5bc2f4eb28abbdd5379593c6"
+    },
+    {
+      "path": "RELEASE-PREPARATION.md",
+      "bytes": 8002,
+      "sha256": "cde0bc2c0269361655150797c6fb31d3e2934850c2fb205295d490625242c568"
+    }
+  ],
+  "guarded": [
+    {
+      "path": "SOURCE-READINESS.md",
+      "sha256": "114a4580a344daa1cf32bcbc19246ab189c26b3f50b58d47c105ae7a2b54bd1d"
+    },
+    {
+      "path": "source-manifest.json",
+      "sha256": "dbf32e7f99eb7228ca361ec02f44227c05e02bb6bc447d1dd38255cd3ca4a4d4"
+    },
+    {
+      "path": "source-classification.json",
+      "sha256": "20a17b4028e4c6c1dd595b23f6c5e1efa96f609a4d1e1fb6176a85c0e67f6e3e"
+    },
+    {
+      "path": "package-custody.json",
+      "sha256": "6d35a6ad6472902294b1dfdd67c4e1e752ccc1b55ea4114acf10fb7389169af7"
+    },
+    {
+      "path": "release_tools/bundle_check.py",
+      "sha256": "74beb6365104bc4352b691725c9e18fe3521d01fe50a080c0c9cc735a4a141f5"
+    },
+    {
+      "path": "release_tools/public_receipts.py",
+      "sha256": "c400d1eb1ffac70d62bd257e1451d6b45542b5065c7c4f693d7a9e09fe70c0e5"
+    },
+    {
+      "path": "release_tools/PUBLIC-RECEIPTS.md",
+      "sha256": "8dddf06b1b193cb3968556ef22bdfd77c65e087041026e8150d1106d2effab93"
+    }
+  ],
+  "independent_review": {
+    "path": ".ai-workspace/qualification/t010/package-review/documentation-001/CLOSED.json",
+    "sha256": "ca2edfb1abd2cc116fd9fe6a5d8799c66263cc81391965d4d9b0aa1055282687"
+  },
+  "reserved": [
+    "No final actual common bundle/dist before Root MODEL-CLOSED",
+    "No checker/public_receipts/contracts/assets/source/build/run/model/WHAT/Git writes",
+    "No new source proof/ticket copy, freeze helper or facts",
+    "No native/network/browser/server"
+  ]
+}

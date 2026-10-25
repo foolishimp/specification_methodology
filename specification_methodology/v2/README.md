@@ -94,6 +94,7 @@ whole-selection authorization:
 
 ```sh
 stdo fleet status --root /path/to/workspace
+stdo fleet verify --root /path/to/workspace
 stdo fleet sync --root /path/to/workspace --all
 stdo fleet adopt --root /path/to/workspace --all --dry-run
 stdo fleet adopt --root /path/to/workspace --all \
@@ -104,6 +105,59 @@ stdo fleet bootstrap --root /path/to/workspace --all
 Bootstrap targets are portable paths relative to each definition's resolved
 `product.source_project`. Fleet bootstrap first confirms that every source
 project and target remains inside the authorized fleet root.
+
+### Composition verification in the current source candidate
+
+The composition-verification increment is available in this source checkout.
+An already installed `stdo` may still be the earlier 0.1.5 implementation. Until
+that manager is explicitly updated, run the candidate from the repository root
+with a Python interpreter containing the manager's declared dependencies:
+
+```sh
+PYTHONPATH=specification_methodology/v2/src python3 -B -m stdo_toolchain.cli \
+  fleet verify --root stdo_skills/stdo_skills.json --resolver-root .
+```
+
+The new result identifies `kind: stdo.composition-verification`,
+`schema_version: 1`. Require this capability marker and `valid: true` when the
+task needs composition resolution; an old manager's successful per-definition
+report does not establish that result. This source instruction does not replace
+or install the user's global manager.
+
+`--root` selects either a definition or recursively discovered definitions.
+Their declared composition closure is then checked, including each target's
+own schema and installed method basis, exact target identity, relation fragment
+and every contract reference. `--resolver-root` explicitly sets the local
+filesystem acquisition boundary. Its default is the selected directory or the
+selected definition's parent. For a single Product with sibling dependencies,
+choose the containing boundary deliberately; this does not select unrelated
+Products or grant operation authority. Boundaries and referenced paths must be
+physical, with no symlink components; canonicalize an intentional system path
+alias before selecting it.
+
+Local relative/absolute and local `file:` paths must remain inside that
+boundary. Exact `stdo://releases/` resources are a separate resolver capability
+through the selected installed Store, whose release bytes are verified. No
+missing release is installed and no network/custom-scheme URI is fetched.
+Queries and unsupported fragment forms return explicit unsupported results.
+Supported fragments are Markdown ATX headings using the shared Axiom Indexer
+slug convention and explicit HTML anchors, JSON Pointers, and HTML IDs/anchor
+names. Fenced examples are not headings or anchors. Directory contracts check
+directory existence only. Markdown escaped markup and matching inline-code
+spans, including multiline spans, do not supply explicit HTML anchors. Actual
+HTML tags keep their attributes intact; the shared heading slug convention is
+unchanged. This bounded fragment scanner is not a general Markdown renderer.
+Each file observation includes its actual byte hash;
+a commit label cannot substitute for changed working bytes.
+
+Each edge retains its source/index, expected target identity, reference
+observations and diagnostics. Shared targets are checked once; cycles terminate
+without implying an executable work schedule. The bounded API permits at most
+1,000 definitions, 10,000 edges and 8 MiB per acquired reference by default;
+exceeding a limit fails verification. The result covers mechanical resolution.
+Authority congruence, context sufficiency, compatibility and work admission
+still require their owning contracts and evidence. `status --verify` and
+`fleet status` retain their basis-status scope.
 
 Initial provenance:
 

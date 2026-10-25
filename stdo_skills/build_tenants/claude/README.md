@@ -4,16 +4,16 @@ Repository-local Claude Code skills that help an agent apply the selected STDO
 methodology to governed development work in this repository. This is the Claude
 realization of the common requirements in `specification/requirements/README.md`.
 
-Status: **candidate construction only** under ticket T-001. Not Product
-acceptance, not a release, not host-qualified. Actual-host Q01-Q12 trials and
-independent review remain open.
+Status: **candidate construction only** under T-001 with the selected T-002 composition increment. Not Product
+acceptance, not a release, not host-qualified. Actual-host qualification of this increment is unperformed; earlier Q01-Q12
+evidence and limits retain their original subjects.
 
 ## Skills
 
 | Skill | Covers | Use for |
 |---|---|---|
 | `stdo-workspace-change` | SK-01, SK-02, SK-03 | Discoverable entry, basis verification, intake, proportional work |
-| `stdo-tool-operations` | SK-04, SK-05 | Supported tool operations and bounded context |
+| `stdo-tool-operations` | SK-04, SK-05, SK-13 | Supported tool operations and bounded context |
 | `stdo-delegate-review` | SK-06, SK-07 | Bounded worker handoff and independent review |
 | `stdo-continuation` | SK-08, SK-09, SK-12 | Resume/reconcile, truthful status, evidence |
 | `stdo-release-install` | SK-10, SK-11 | Release prep, install/update/remove, maintenance |
@@ -26,7 +26,7 @@ Claude Code 2.1.306. Tool transport: the a_c public CLI.
 
 ## Layout
 
-- `design/DESIGN.md` — decomposition, trace to SK-01..SK-12 and Q01..Q12, bindings.
+- `design/DESIGN.md` — decomposition, trace to SK-01..SK-13 and Q01..Q12, bindings.
 - `skills/<name>/SKILL.md` — the five skills installed together as one bundle.
 - The release skill carries `references/maintenance.md` and `scripts/manage_install.py`.
 - `INSTALL.md` — owned install/update/remove commands, receipt selection and refusal behavior.

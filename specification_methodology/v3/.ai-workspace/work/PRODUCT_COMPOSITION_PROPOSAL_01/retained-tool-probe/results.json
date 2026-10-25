@@ -1,0 +1,112 @@
+[
+  {
+    "case": "control",
+    "definitions": [
+      {
+        "basis": "stdo://releases/v3.0.1-rc.1/",
+        "definition_id": "urn:stdo:product-definition:composition-probe-consumer",
+        "failures": [],
+        "manifest_sha256": "60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8",
+        "valid": true
+      },
+      {
+        "basis": "stdo://releases/v3.0.1-rc.1/",
+        "definition_id": "urn:stdo:product-definition:composition-probe-provider",
+        "failures": [],
+        "manifest_sha256": "60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8",
+        "valid": true
+      }
+    ],
+    "exit_code": 0,
+    "independent_reference_failure_count": 0,
+    "independent_target_identity_matches": true
+  },
+  {
+    "case": "wrong_target_id",
+    "definitions": [
+      {
+        "basis": "stdo://releases/v3.0.1-rc.1/",
+        "definition_id": "urn:stdo:product-definition:composition-probe-consumer",
+        "failures": [],
+        "manifest_sha256": "60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8",
+        "valid": true
+      },
+      {
+        "basis": "stdo://releases/v3.0.1-rc.1/",
+        "definition_id": "urn:stdo:product-definition:composition-probe-provider",
+        "failures": [],
+        "manifest_sha256": "60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8",
+        "valid": true
+      }
+    ],
+    "exit_code": 0,
+    "independent_reference_failure_count": 0,
+    "independent_target_identity_matches": false
+  },
+  {
+    "case": "missing_definition",
+    "definitions": [
+      {
+        "basis": "stdo://releases/v3.0.1-rc.1/",
+        "definition_id": "urn:stdo:product-definition:composition-probe-consumer",
+        "failures": [],
+        "manifest_sha256": "60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8",
+        "valid": true
+      },
+      {
+        "basis": "stdo://releases/v3.0.1-rc.1/",
+        "definition_id": "urn:stdo:product-definition:composition-probe-provider",
+        "failures": [],
+        "manifest_sha256": "60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8",
+        "valid": true
+      }
+    ],
+    "exit_code": 0,
+    "independent_reference_failure_count": 1,
+    "independent_target_identity_matches": false
+  },
+  {
+    "case": "missing_anchor",
+    "definitions": [
+      {
+        "basis": "stdo://releases/v3.0.1-rc.1/",
+        "definition_id": "urn:stdo:product-definition:composition-probe-consumer",
+        "failures": [],
+        "manifest_sha256": "60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8",
+        "valid": true
+      },
+      {
+        "basis": "stdo://releases/v3.0.1-rc.1/",
+        "definition_id": "urn:stdo:product-definition:composition-probe-provider",
+        "failures": [],
+        "manifest_sha256": "60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8",
+        "valid": true
+      }
+    ],
+    "exit_code": 0,
+    "independent_reference_failure_count": 1,
+    "independent_target_identity_matches": true
+  },
+  {
+    "case": "missing_contract",
+    "definitions": [
+      {
+        "basis": "stdo://releases/v3.0.1-rc.1/",
+        "definition_id": "urn:stdo:product-definition:composition-probe-consumer",
+        "failures": [],
+        "manifest_sha256": "60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8",
+        "valid": true
+      },
+      {
+        "basis": "stdo://releases/v3.0.1-rc.1/",
+        "definition_id": "urn:stdo:product-definition:composition-probe-provider",
+        "failures": [],
+        "manifest_sha256": "60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8",
+        "valid": true
+      }
+    ],
+    "exit_code": 0,
+    "independent_reference_failure_count": 1,
+    "independent_target_identity_matches": true
+  }
+]

@@ -1,0 +1,258 @@
+{
+  "actor": "/root/common_rep_build_plan",
+  "all18_original_attempts_unchanged": true,
+  "all_closed_native_invocations": 20,
+  "all_native_invocations": 20,
+  "all_reported_usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 564608,
+    "input_tokens": 1505055,
+    "output_tokens": 777808,
+    "reasoning_output_tokens": 15339
+  },
+  "author_retry_calls": 0,
+  "available_draft_origin_summary": {
+    "F_D_valid": 5,
+    "F_P_complete_patch": 2,
+    "strict_original": 11
+  },
+  "available_valid_drafts": 18,
+  "claims": "Only two exact reviewed assets added under a separate supplemental manifest; original nine-file manifest not refreshed. Only one unchanged F_P grounding repair each for cf22/e124. Raw original failures and repair native results retained. No second patch, author retry, normalization overwrite, model or partial assembly, final public construction receipt, semantic acceptance, installed qualification or release. Phase CLOSED and stopped pending separate Root decision.",
+  "closed_at": "2026-10-20T10:08:55.568577+00:00",
+  "configuration_unchanged": true,
+  "fd_recovered_anchors": 8,
+  "files": {
+    ".ai-workspace/qualification/t010/build/grounding-diagnostic-closure.json": {
+      "bytes": 13082,
+      "sha256": "4262726dc5ecc3e815d399f2010b66d2526f34c827ebf1f77cc40ded395ac9c1"
+    },
+    ".ai-workspace/qualification/t010/build/grounding-repair-activation.json": {
+      "bytes": 3459,
+      "sha256": "a856cf0b7e5a0fc706a257a2d9fb1d5bb87579f03825523c0f253f28f0bf53cb"
+    },
+    ".ai-workspace/qualification/t010/build/grounding-repair-closed/chunk-cf22b253a1db7d64a8f8.json": {
+      "bytes": 3458,
+      "sha256": "f9370de86d9bcea37d8cf31bd089a0713b2fe9661cba150c6a5b9f3f8f4d97ab"
+    },
+    ".ai-workspace/qualification/t010/build/grounding-repair-closed/chunk-e1247fa9e1eb5dbd49cd.json": {
+      "bytes": 3463,
+      "sha256": "9d1679de7478d949b202ec3f5b48f496d59655f4609e6f428c7e19ae0a21fbf7"
+    },
+    ".ai-workspace/qualification/t010/build/grounding-repair-execution.json": {
+      "bytes": 714,
+      "sha256": "9b69723356a7d2a8a97818ea8d5f6ea97785c2e4d959d4652c05afc31911de53"
+    },
+    ".ai-workspace/qualification/t010/build/grounding-repair-launches/chunk-cf22b253a1db7d64a8f8.json": {
+      "bytes": 471,
+      "sha256": "0a632e6128760419301cbf86236e42291e87439b843baf11b1c152614a003501"
+    },
+    ".ai-workspace/qualification/t010/build/grounding-repair-launches/chunk-e1247fa9e1eb5dbd49cd.json": {
+      "bytes": 471,
+      "sha256": "e980281ccbed54dbfcac45b1c883a05b9dd25f6842c2ceeb15d257733314d2ee"
+    },
+    "applications/stdo-v3-common-35fb4824/BUILD.md": {
+      "bytes": 14428,
+      "sha256": "0e1abf169cf7773345697835b6650e3f47980e412ba1d0b3daaa47053698b4da"
+    },
+    "applications/stdo-v3-common-35fb4824/build/author-and-repair-results.json": {
+      "bytes": 20348,
+      "sha256": "e2e1e51cbd95c10cedb1ab5312d37f8a2777877a9ee6ea9523824619c617f07a"
+    },
+    "applications/stdo-v3-common-35fb4824/build/grounding-repair-plan.json": {
+      "bytes": 4247,
+      "sha256": "dbf91a1edeac3b735731a9307e32d761a7afd6e45057c8ae09d31be68529f295"
+    },
+    "applications/stdo-v3-common-35fb4824/build/grounding-repair-result.json": {
+      "bytes": 9279,
+      "sha256": "a888079892fae76d4720463c4bfe5a2885cd213ccf35f0c010fae8f6a2214671"
+    },
+    "applications/stdo-v3-common-35fb4824/build/history/BUILD.grounding-diagnostics-closed.md": {
+      "bytes": 11820,
+      "sha256": "cb6e8889c228bdb8b19411bbe2bc174b17ec1dff3e63715fb48e4ca31acd888f"
+    },
+    "applications/stdo-v3-common-35fb4824/build/history/documentation-history.grounding-repairs.json": {
+      "bytes": 588,
+      "sha256": "7ecaec85b0d9295220c52057977e1404724e076fb0cbdd8b3f3628ae0cdab9cc"
+    },
+    "applications/stdo-v3-common-35fb4824/build/implementation-manifest.json": {
+      "bytes": 2631,
+      "sha256": "594fafcf083eadbbaf1472d68fe9f375fc21ccb426c6825194793304eac2503e"
+    },
+    "applications/stdo-v3-common-35fb4824/build/implementation/code/grounding_repair/patch.schema.json": {
+      "bytes": 2037,
+      "sha256": "65c58364a33a31d25fb2de16e50fc1f92bf2eb30307ebb42eb0f7a60ecb58b76"
+    },
+    "applications/stdo-v3-common-35fb4824/build/implementation/code/grounding_repair/repair.txt": {
+      "bytes": 2231,
+      "sha256": "304752f5d5359364f6b34a2cf1f16b1a9da3c786bcb3baba12364fa7ba4b0d7e"
+    },
+    "applications/stdo-v3-common-35fb4824/build/join_repaired_authors.py": {
+      "bytes": 7286,
+      "sha256": "f2cdf4da088eaae251a0c5a5f94826a7f6c73728d0cf4d2354d5278470e22cc7"
+    },
+    "applications/stdo-v3-common-35fb4824/build/repair-dependencies.json": {
+      "bytes": 1105,
+      "sha256": "ea19c7c4e1bcc2fa95259fa2ba4f8dfe39ef5f3dc70268a60986392be2aab40d"
+    },
+    "applications/stdo-v3-common-35fb4824/build/repair_selected.py": {
+      "bytes": 15422,
+      "sha256": "9c4d5d7501b2c197f2b7a76a29def9aee5d08ab8ee024f67bd15273f4ff6e7dc"
+    },
+    "applications/stdo-v3-common-35fb4824/run/actor-settings.json": {
+      "bytes": 158,
+      "sha256": "f3b748facc38547ccdceeb05350b9e75b9afb8e30b009a63f916ea374f7e40ed"
+    },
+    "applications/stdo-v3-common-35fb4824/run/chunks.json": {
+      "bytes": 2426974,
+      "sha256": "2ce228fa4f647bcb275ff6653aff1a20eca792c93037f9d7959080668129d073"
+    },
+    "applications/stdo-v3-common-35fb4824/run/grounding-repairs/chunk-cf22b253a1db7d64a8f8/attempt-001/actor/answer.json": {
+      "bytes": 951,
+      "sha256": "52bb1aec91bbb18280f49a6dc8bd0d7de6580bfe0b914b1af42e7628c7bed657"
+    },
+    "applications/stdo-v3-common-35fb4824/run/grounding-repairs/chunk-cf22b253a1db7d64a8f8/attempt-001/actor/events.jsonl": {
+      "bytes": 1341,
+      "sha256": "ef9d39bba833fd859b035af17437fabac812ad94f80d997a6db55cd165b981af"
+    },
+    "applications/stdo-v3-common-35fb4824/run/grounding-repairs/chunk-cf22b253a1db7d64a8f8/attempt-001/actor/invocation.json": {
+      "bytes": 3354,
+      "sha256": "758d0a0484f590cd7d00c38b5100b4fdadef623be9fd54663e9147b613acab15"
+    },
+    "applications/stdo-v3-common-35fb4824/run/grounding-repairs/chunk-cf22b253a1db7d64a8f8/attempt-001/actor/prompt.txt": {
+      "bytes": 346456,
+      "sha256": "f743899fdb8ad77bd6d74322d65dc02021056e9e0ed27f2670993f6de94d8fce"
+    },
+    "applications/stdo-v3-common-35fb4824/run/grounding-repairs/chunk-cf22b253a1db7d64a8f8/attempt-001/actor/result.json": {
+      "bytes": 879,
+      "sha256": "a2619fe4c4b45157c18828d20e64db3b65014d21df1f033e4aa107dedab2fe5c"
+    },
+    "applications/stdo-v3-common-35fb4824/run/grounding-repairs/chunk-cf22b253a1db7d64a8f8/attempt-001/actor/stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "applications/stdo-v3-common-35fb4824/run/grounding-repairs/chunk-cf22b253a1db7d64a8f8/attempt-001/actor/usage.json": {
+      "bytes": 277,
+      "sha256": "599acab59e063c42e17f58783bb7833a2dccf2b072ab9ce46bda83baa311555f"
+    },
+    "applications/stdo-v3-common-35fb4824/run/grounding-repairs/chunk-cf22b253a1db7d64a8f8/attempt-001/derived-answer.json": {
+      "bytes": 153012,
+      "sha256": "6f3c2b10cc60d3c4ab5e9a04823c69bb1f123798b03878945b17455780218865"
+    },
+    "applications/stdo-v3-common-35fb4824/run/grounding-repairs/chunk-cf22b253a1db7d64a8f8/attempt-001/journal.json": {
+      "bytes": 2862,
+      "sha256": "6eb7e7bf955e108ed3031b736be135cbf5d1421c6cc511f42be633c49080d603"
+    },
+    "applications/stdo-v3-common-35fb4824/run/grounding-repairs/chunk-cf22b253a1db7d64a8f8/attempt-001/parent-answer.json": {
+      "bytes": 152914,
+      "sha256": "c271c54a7ae0fc84574930bc274495f719fd77951c94424229005b82bef95703"
+    },
+    "applications/stdo-v3-common-35fb4824/run/grounding-repairs/chunk-cf22b253a1db7d64a8f8/attempt-001/patch.schema.json": {
+      "bytes": 6647,
+      "sha256": "2463073a02ffb8195108fb9afeb187d3858a304e1eff6d0168f71d16101b6da0"
+    },
+    "applications/stdo-v3-common-35fb4824/run/grounding-repairs/chunk-cf22b253a1db7d64a8f8/attempt-001/prompt.txt": {
+      "bytes": 346456,
+      "sha256": "f743899fdb8ad77bd6d74322d65dc02021056e9e0ed27f2670993f6de94d8fce"
+    },
+    "applications/stdo-v3-common-35fb4824/run/grounding-repairs/chunk-cf22b253a1db7d64a8f8/attempt-001/request.json": {
+      "bytes": 14456,
+      "sha256": "68fa5b1572b36254b870a378b66379a909832f8e1950784998962ea6b25c8df6"
+    },
+    "applications/stdo-v3-common-35fb4824/run/grounding-repairs/chunk-e1247fa9e1eb5dbd49cd/attempt-001/actor/answer.json": {
+      "bytes": 5319,
+      "sha256": "5e5138e3d4bb6fe3f3d9cf6ebff176d46935bedfe6eb3ff09c60df4588d0e76b"
+    },
+    "applications/stdo-v3-common-35fb4824/run/grounding-repairs/chunk-e1247fa9e1eb5dbd49cd/attempt-001/actor/events.jsonl": {
+      "bytes": 5826,
+      "sha256": "32f8aa4628d00a5b2e2f66e71071395e40b5b3b28cd9eda547cffcad38003bea"
+    },
+    "applications/stdo-v3-common-35fb4824/run/grounding-repairs/chunk-e1247fa9e1eb5dbd49cd/attempt-001/actor/invocation.json": {
+      "bytes": 3354,
+      "sha256": "3fd9748b64c6930ff42ef4197468564e906161cd570f90d48c0917d8f898e8f0"
+    },
+    "applications/stdo-v3-common-35fb4824/run/grounding-repairs/chunk-e1247fa9e1eb5dbd49cd/attempt-001/actor/prompt.txt": {
+      "bytes": 463648,
+      "sha256": "c059a3f1f54f9eb8b82798c26e3c8af654d3614d5a54e6c0d0b0822c41c3d9c6"
+    },
+    "applications/stdo-v3-common-35fb4824/run/grounding-repairs/chunk-e1247fa9e1eb5dbd49cd/attempt-001/actor/result.json": {
+      "bytes": 880,
+      "sha256": "2f08782e003a523652b0b384556f633651d88c5d8d83cf106ffd18567bbe97cc"
+    },
+    "applications/stdo-v3-common-35fb4824/run/grounding-repairs/chunk-e1247fa9e1eb5dbd49cd/attempt-001/actor/stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "applications/stdo-v3-common-35fb4824/run/grounding-repairs/chunk-e1247fa9e1eb5dbd49cd/attempt-001/actor/usage.json": {
+      "bytes": 279,
+      "sha256": "d742061c48319deb2dd85895bc2a079cdaeb4f2f7d0ae7789ea8728eab831a53"
+    },
+    "applications/stdo-v3-common-35fb4824/run/grounding-repairs/chunk-e1247fa9e1eb5dbd49cd/attempt-001/derived-answer.json": {
+      "bytes": 258621,
+      "sha256": "776875a26da6a8288b32014e172d35183adb3b11a7e2d5a4f6054e28ebc1b0cb"
+    },
+    "applications/stdo-v3-common-35fb4824/run/grounding-repairs/chunk-e1247fa9e1eb5dbd49cd/attempt-001/journal.json": {
+      "bytes": 2864,
+      "sha256": "e9e9688de3c56ffaad906491da06ffe2d42ae821e2b6f21dbeef05463786ffef"
+    },
+    "applications/stdo-v3-common-35fb4824/run/grounding-repairs/chunk-e1247fa9e1eb5dbd49cd/attempt-001/parent-answer.json": {
+      "bytes": 256238,
+      "sha256": "3cec78fd546738e8d3260297267ba13d197795ba2474d1d19d4db50cb3db5403"
+    },
+    "applications/stdo-v3-common-35fb4824/run/grounding-repairs/chunk-e1247fa9e1eb5dbd49cd/attempt-001/patch.schema.json": {
+      "bytes": 10256,
+      "sha256": "996d15cf0fea8a94b6ce72f5e2183f797f1d471cb32cc7cc93d8b02e7b2356ef"
+    },
+    "applications/stdo-v3-common-35fb4824/run/grounding-repairs/chunk-e1247fa9e1eb5dbd49cd/attempt-001/prompt.txt": {
+      "bytes": 463648,
+      "sha256": "c059a3f1f54f9eb8b82798c26e3c8af654d3614d5a54e6c0d0b0822c41c3d9c6"
+    },
+    "applications/stdo-v3-common-35fb4824/run/grounding-repairs/chunk-e1247fa9e1eb5dbd49cd/attempt-001/request.json": {
+      "bytes": 24470,
+      "sha256": "86e5ceed3d08486a9eff7bc864d2e92c1d9ff471c3d5d0c7c0307ac17067366a"
+    },
+    "applications/stdo-v3-common-35fb4824/run/plan.json": {
+      "bytes": 13949,
+      "sha256": "31a88bb55aa025cb95ba4f7710bd8559b5e0e5f4976b55388cdac1e1cf8337cf"
+    }
+  },
+  "final_public_receipt_emitted": false,
+  "fp_patched_anchor_entries": 3,
+  "further_frontier": "All18 exact source chunks have strictly valid proposed drafts under original, F_D or F_P custody. Dependency-ready for separately granted unchanged complete assembly and independent review; no additional actor call selected or required by this closure. Semantic adequacy and acceptance remain open.",
+  "guarded_existing_files_unchanged": 3913,
+  "head_unchanged": true,
+  "initial_original_source_only_failures_preserved": 7,
+  "initial_original_strict_results": 11,
+  "local_document_links": "valid",
+  "model_assembled": false,
+  "non_grounding_statement_invariants_verified": true,
+  "original_nine_file_manifest_unchanged": true,
+  "original_required_code_unchanged": true,
+  "phase_closed_complete_patches": 2,
+  "phase_elapsed_wall_seconds": 62.2135647078976,
+  "phase_errors": [],
+  "phase_native_calls": 2,
+  "phase_reported_usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 0,
+    "input_tokens": 227685,
+    "output_tokens": 2069,
+    "reasoning_output_tokens": 614
+  },
+  "phase_reservations": 2,
+  "phase_summed_actor_elapsed_seconds": 84.92861766694114,
+  "prior18_normalization_artifacts_unchanged": true,
+  "profile": "ac.common.grounding-repairs-closed/1",
+  "remaining_invalid_anchors": 0,
+  "role": "Worker",
+  "second_patch_calls": 0,
+  "source_guard": {
+    "created_at": "2026-10-20T10:08:54.534078+00:00",
+    "implementation_manifest_sha256": "594fafcf083eadbbaf1472d68fe9f375fc21ccb426c6825194793304eac2503e",
+    "package_members": 81,
+    "semantic_members": 58,
+    "source_manifest_sha256": "dbf32e7f99eb7228ca361ec02f44227c05e02bb6bc447d1dd38255cd3ca4a4d4",
+    "status": "exact"
+  },
+  "source_plan_chunks_unchanged": true,
+  "unfinished_reservations": 0
+}

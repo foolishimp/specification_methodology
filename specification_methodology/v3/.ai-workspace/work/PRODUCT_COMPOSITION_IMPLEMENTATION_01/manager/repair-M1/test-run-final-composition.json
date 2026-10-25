@@ -1,0 +1,61 @@
+{
+  "scope": "Final M1 repair composition regression after in-paragraph indentation correction; shared slug and cohort implementation unchanged from the passed 51-test run",
+  "command": [
+    "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "tests.test_composition",
+    "-v"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology/specification_methodology/v2",
+  "PYTHONPATH": "/Users/jim/src/apps/specification_methodology/specification_methodology/v2/src:/Users/jim/src/apps/specification_methodology/specification_methodology/v2/tests",
+  "source_at_start": [
+    {
+      "path": "specification_methodology/v2/src/stdo_toolchain/composition.py",
+      "sha256": "af60451743604db9f24e2182b6eaf088ec79c5a70885811e3d674b2f38536d74",
+      "bytes": 23668
+    },
+    {
+      "path": "specification_methodology/v2/src/stdo_toolchain/references.py",
+      "sha256": "b230307a0c81d9896e3d98e83c17e0aa3f6a6fcf085a33c480027446a1e01a40",
+      "bytes": 761
+    },
+    {
+      "path": "specification_methodology/v2/src/stdo_toolchain/cli.py",
+      "sha256": "1567c725e2316b17767b1f2723bae0c82692160cd168202633170ffa0db036e5",
+      "bytes": 13232
+    },
+    {
+      "path": "specification_methodology/v2/src/stdo_toolchain/cohort_update.py",
+      "sha256": "e00eff22e8938a672c48e3554ee6b194c397cc88d54046c652412283109a13af",
+      "bytes": 38674
+    },
+    {
+      "path": "specification_methodology/v2/src/stdo_toolchain/product_definition.py",
+      "sha256": "062fe9e7e81ff9422341968777234a0cf6945a4e1f7f44881b9b7c76bf7dc87f",
+      "bytes": 25844
+    },
+    {
+      "path": "specification_methodology/v2/tests/test_composition.py",
+      "sha256": "7c817048252817e8dfd60f84b655be6e5e3fb626908681d68e4d0b22b97c3835",
+      "bytes": 17540
+    },
+    {
+      "path": "specification_methodology/v2/README.md",
+      "sha256": "314d411cf961dd14bd1417d01f51a741c89e592f6b32a804ad517a84b119eeb2",
+      "bytes": 9706
+    },
+    {
+      "path": "specification_methodology/v2/design/TOOLCHAIN_MANAGER.md",
+      "sha256": "35d10210c3a99db5b6c1aca5ae3bc9e42e6f469b9f433fdeeb6835da0e2e88a8",
+      "bytes": 18497
+    }
+  ],
+  "started_at": "2026-10-25T14:19:03.333347+00:00",
+  "completed_at": "2026-10-25T14:19:38.556446+00:00",
+  "seconds": 35.22412299993448,
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_actual_bytes_change_without_any_source_commit_change (tests.test_composition.CompositionTests.test_actual_bytes_change_without_any_source_commit_change) ... ok\ntest_duplicate_identity_and_malformed_target_fail_closed (tests.test_composition.CompositionTests.test_duplicate_identity_and_malformed_target_fail_closed) ... ok\ntest_exact_installed_contract_and_uninstalled_cut (tests.test_composition.CompositionTests.test_exact_installed_contract_and_uninstalled_cut) ... ok\ntest_external_schema_ref_does_not_trigger_retrieval (tests.test_composition.CompositionTests.test_external_schema_ref_does_not_trigger_retrieval) ... ok\ntest_file_selection_needs_explicit_sibling_boundary (tests.test_composition.CompositionTests.test_file_selection_needs_explicit_sibling_boundary) ... ok\ntest_fragment_inside_example_or_comment_is_not_a_document_anchor (tests.test_composition.CompositionTests.test_fragment_inside_example_or_comment_is_not_a_document_anchor) ... ok\ntest_graph_and_byte_limits_refuse (tests.test_composition.CompositionTests.test_graph_and_byte_limits_refuse) ... ok\ntest_json_pointer_and_html_fragment (tests.test_composition.CompositionTests.test_json_pointer_and_html_fragment) ... ok\ntest_local_file_uri_directory_and_markdown_anchors (tests.test_composition.CompositionTests.test_local_file_uri_directory_and_markdown_anchors) ... ok\ntest_markdown_literal_markup_cannot_satisfy_relation_fragment (tests.test_composition.CompositionTests.test_markdown_literal_markup_cannot_satisfy_relation_fragment) ... ok\ntest_missing_local_schema_anchor_is_a_reported_failure (tests.test_composition.CompositionTests.test_missing_local_schema_anchor_is_a_reported_failure) ... ok\ntest_public_cli_control_and_four_original_defects (tests.test_composition.CompositionTests.test_public_cli_control_and_four_original_defects) ... ok\ntest_real_markdown_anchors_survive_inline_literal_filter (tests.test_composition.CompositionTests.test_real_markdown_anchors_survive_inline_literal_filter) ... ok\ntest_selection_outside_explicit_boundary_refuses_before_discovery (tests.test_composition.CompositionTests.test_selection_outside_explicit_boundary_refuses_before_discovery) ... ok\ntest_shared_nested_target_and_cycle_preserve_each_edge (tests.test_composition.CompositionTests.test_shared_nested_target_and_cycle_preserve_each_edge) ... ok\ntest_special_file_is_refused_without_open (tests.test_composition.CompositionTests.test_special_file_is_refused_without_open) ... ok\ntest_symlinked_selected_file_and_root_refuse (tests.test_composition.CompositionTests.test_symlinked_selected_file_and_root_refuse) ... ok\ntest_symlinked_target_and_symlink_ancestor_refuse (tests.test_composition.CompositionTests.test_symlinked_target_and_symlink_ancestor_refuse) ... ok\ntest_target_own_schema_and_basis_are_required (tests.test_composition.CompositionTests.test_target_own_schema_and_basis_are_required) ... ok\ntest_unsupported_fragment_and_remote_uri_are_distinct (tests.test_composition.CompositionTests.test_unsupported_fragment_and_remote_uri_are_distinct) ... ok\n\n----------------------------------------------------------------------\nRan 20 tests in 35.124s\n\nOK\n"
+}

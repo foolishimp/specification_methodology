@@ -1,0 +1,29 @@
+{
+  "absent_future_refs": [
+    "Context",
+    "Preflight",
+    "Attempt",
+    "return",
+    "expectation"
+  ],
+  "executor_id": "claude-reviewer-expectation-002",
+  "first_ready_request": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/live-review-runtime-002/context.request.json",
+  "grant_id": "urn:a-c:grant:T008:review:002",
+  "no_production_support_or_actor_calls_in_preparation": true,
+  "one_step_at_a_time": [
+    "Root verifies/acquires current frozen sources/policy/config and startup prerequisites; public Context from context.request.json",
+    "Root uses ACTUAL returned Context in contract.preflight, grant/executor/result_key above, observations[]",
+    "Root consumes actual Preflight then separately explicitly approves this exact native call; only then dispatch.start",
+    "Root acquires actual Attempt/return/check, never auto retries; original failed predecessor remains causal history",
+    "Root freezes actual earlier expectation into separate assessment contract/packet on SAME fixed Reviewer tool policy/history; actual later call separately approved"
+  ],
+  "result_key": "t008-review-expectation-002",
+  "schema": "a_c.T008.review-public-sequence/2",
+  "startup": {
+    "adapter": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py",
+    "policy": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/live-review-runtime-002/executive-policy.json",
+    "policy_sha256": "45d8d390aa96392b2ba01e3f9e1f18a9a8003bd86e744c04dd00c8ab55785855",
+    "principal": "/root",
+    "python": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12"
+  }
+}

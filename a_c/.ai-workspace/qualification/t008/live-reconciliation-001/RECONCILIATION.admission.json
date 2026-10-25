@@ -1,0 +1,43 @@
+{
+  "Root_selections": {
+    "Worker_task": "Not accepted; closed-return gap remains unfilled",
+    "guide": "Retain exact late-written guide as candidate for independent review",
+    "retry": false
+  },
+  "activation": "T008-live-reconciliation-001",
+  "actor": "/root/ac_fd_effects_worker",
+  "admitter": "/root",
+  "checkpoint": "Root reports new main bfe22851 appeared externally; not independently queried and no Git operation admitted",
+  "consumer": "/root",
+  "contract": {
+    "path": "RECONCILIATION.contract.txt",
+    "retention": "Verbatim received instruction without added final newline",
+    "sha256": "0740d1bfe29ce3a6c871dbe0819310159353d78aebbd83461caddfe332a8567b"
+  },
+  "current_preimages": {
+    "a_c/.ai-workspace/qualification/t008/live-runtime-prep-002/CLOSED_RETURN.json": "4e32265588e8deedc023a5d3b05c187324c25901a53280208b9cbf4da906549c",
+    "a_c/.ai-workspace/qualification/t008/live-runtime-prep-002/PROPOSAL.json": "6cc868892f14923d23e50cd31f947b156758341f80628349328c70da21c90f7c",
+    "a_c/.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md": "ab06521088409bc6efa21caf95ff4dec5b8eadb7686c32e3c8866dfd72dc7abc",
+    "a_c/build_tenants/graphify/code/ac_support.py": "4d1ea7fe98ec1b53f2a19d9a2fef2b3fbb070624c955fbb1e9e48f5cc88011b1",
+    "a_c/build_tenants/graphify/code/ac_support_core.py": "97b099812fc1f6964c83cd7df678e4a1fd0575e941c74549689fe4944f008820",
+    "a_c/build_tenants/graphify/code/ac_support_effects.py": "9108d6ad10e412f5a0e981c88c06c7b37cb913a24286282da9aae752f239a586",
+    "a_c/build_tenants/graphify/design/fd-support.md": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f",
+    "a_c/build_tenants/graphify/examples/fd-support/LIFECYCLE_QUICKSTART.md": "48d55c289a5b1d2fd6d1dae9b2be0f02a33d26d53535978c8bade405583ef747"
+  },
+  "decision": "admitted-bounded-evidence-reconciliation-only",
+  "permissions": [
+    "Read exact existing trial/tool/Writer/process/capture/check/source artifacts",
+    "Create reconciliation report and bounded evidence manifest only within named new directory"
+  ],
+  "prohibited": [
+    "new actor/provider/model calls",
+    "support operation or effect calls",
+    "dispatch/retry",
+    "existing source/T008/guide/policy/Git/global mutations",
+    "copying hidden thinking/reasoning or secrets"
+  ],
+  "retained_at_ns": 1792380371093966000,
+  "role": "Writer/Worker",
+  "schema": "a_c.external-bootstrap-admission/1",
+  "territory": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/live-reconciliation-001"
+}

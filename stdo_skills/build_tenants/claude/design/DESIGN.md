@@ -1,6 +1,10 @@
-# Claude tenant design — STDO Skills (successor-1 candidate)
+# Claude tenant design — STDO Skills
 
-Identity: `urn:stdo-skills:T001:claude:candidate`.
+Sections 1–9 retain the original T-001 design and construction evidence boundary;
+the selected T-002 increment follows them. Historical qualification claims are not
+rebound to this changed package.
+
+Original identity: `urn:stdo-skills:T001:claude:candidate`.
 Frame: Worker `skills.worker/1` (revision 3). Consumer: root-executive.
 Status: **candidate construction only**. This is not Product acceptance, not a
 release, and not host qualification. Actual-host Q01-Q12 trials and independent
@@ -39,7 +43,7 @@ Product's deciding sources are separate, explicit dependencies (SK-11).
 | Skill | SK coverage | Purpose |
 |---|---|---|
 | `stdo-workspace-change` | SK-01, SK-02, SK-03 | Discoverable entry; verify the pinned basis; lawful intake and proportional work |
-| `stdo-tool-operations` | SK-04, SK-05 | Supported tool binding and bounded context acquisition |
+| `stdo-tool-operations` | SK-04, SK-05, SK-13 | Supported tool binding and bounded context acquisition |
 | `stdo-delegate-review` | SK-06, SK-07 | Bounded worker handoff and independent review |
 | `stdo-continuation` | SK-08, SK-09, SK-12 | Continuation/recovery, truthful status, evidence capture |
 | `stdo-release-install` | SK-10, SK-11 | Release preparation, scoped install/update/removal, maintenance |
@@ -67,6 +71,7 @@ skill carries its maintenance reference and scoped installation helper.
 | SK-10 Release and installation | `stdo-release-install`: Prepare a release, Install / update / remove |
 | SK-11 Independent realization and maintenance | `stdo-release-install`: Maintenance and bindings |
 | SK-12 Evidence and benefit | `stdo-continuation`: Capture evidence |
+| SK-13 Composition context | `stdo-tool-operations/references/composition.md`, routed from entry, delegation and continuation |
 
 ## 4. Scenario coverage (every case OPEN on the actual host)
 
@@ -163,3 +168,19 @@ The original 10-file population and initial-host trials remain in original
 custody. F-C01 and the author's timeout are not erased. Focused tests exercise
 missing/escaping references and clean/collision/modified/extra-file lifecycle
 cases; repaired-package host qualification and independent review stay separate.
+
+
+## Composition increment — T-002
+
+SK-13 extends the existing five-skill arrangement. Workspace-change routes the
+case; tool-operations owns the CLI manager/inspection/acquisition instructions;
+delegate-review and continuation carry bounded permissions and exposure/currentness
+across their actual boundaries. The composition reference uses existing manager
+and a_c contracts rather than implementing either mechanism inside a skill.
+
+The installed methodology remains static 3.0.1. The activation supplies exact
+provider/manager source and host bindings; an older global manager or absent
+optional guard cannot stand in for the selected capability. Native guard evidence
+is mediated-local; no OS confinement, resolved nested authentication or completed
+Claude Q05 follows. T-001 qualification records stay frozen on their old subjects;
+this increment's source/package and host-neutral scenarios have separate evidence.

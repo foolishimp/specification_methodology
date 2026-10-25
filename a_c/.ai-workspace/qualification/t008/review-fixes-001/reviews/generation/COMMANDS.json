@@ -1,0 +1,37 @@
+{
+  "cwd": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-review-generation-fixes-c9lzlcwr",
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPYCACHEPREFIX": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-review-generation-fixes-c9lzlcwr/cache/pycache",
+    "TMPDIR": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-review-generation-fixes-c9lzlcwr/cache",
+    "XDG_CACHE_HOME": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-review-generation-fixes-c9lzlcwr/cache"
+  },
+  "flags": [
+    "-B"
+  ],
+  "interpreter": "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+  "invocations": [
+    {
+      "exit": 1,
+      "outcome": "Parse-only reviewer SyntaxError, corrected before candidate imports. See HARNESS-INTAKE.json.",
+      "script": "review_controls.py"
+    },
+    {
+      "exit": 1,
+      "outcome": "42 targeted cases: 41 passed, one reviewer assertion required an exception where no usable selection was correctly returned. Preserved in CONTROLS.json.",
+      "script": "review_controls.py"
+    },
+    {
+      "exit": 0,
+      "outcome": "Correct public-path predicate confirms missing-result attempt is not selected, stage is incomplete and normal assembly refuses. See CONTROLS-RESOLUTION.json.",
+      "script": "resolve_control.py"
+    }
+  ],
+  "prohibited_calls": {
+    "actual_actor_provider_model": 0,
+    "actual_upstream_execution": 0,
+    "full_suite": 0,
+    "install": 0,
+    "network": 0
+  }
+}

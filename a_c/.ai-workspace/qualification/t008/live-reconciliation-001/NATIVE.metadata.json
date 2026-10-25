@@ -1,0 +1,165 @@
+{
+  "Root_reported_PID_observation": {
+    "pids": [
+      81075,
+      81076,
+      81079
+    ],
+    "scope": "Named PIDs only; no process-tree or descendant end proof",
+    "source": "ROOT.followup.txt",
+    "state": "absent at Root later ps observation"
+  },
+  "helper_semantic_result": {
+    "actor_launched": true,
+    "failure": "timeout; output/effect completion remains unknown",
+    "output_available": false,
+    "semantic_result": null
+  },
+  "init": {
+    "cwd": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/t008-claude-worker-001-n4hj0go7",
+    "mcp_servers": [
+      {
+        "name": "ac",
+        "source": "dynamic",
+        "status": "connected"
+      }
+    ],
+    "model": "claude-opus-5-5",
+    "permissionMode": "dontAsk",
+    "session_id": "535f6348-4431-46d7-8be9-cc4226928f8b",
+    "subtype": "init",
+    "tools": [
+      "mcp__ac__checks_evaluate",
+      "mcp__ac__context_assemble",
+      "mcp__ac__contract_preflight",
+      "mcp__ac__dispatch_cancel",
+      "mcp__ac__dispatch_observe",
+      "mcp__ac__dispatch_start",
+      "mcp__ac__events_wait",
+      "mcp__ac__evidence_read",
+      "mcp__ac__graph_project",
+      "mcp__ac__records_find",
+      "mcp__ac__records_read",
+      "mcp__ac__refresh_prepare",
+      "mcp__ac__relations_query",
+      "mcp__ac__resources_aggregate",
+      "mcp__ac__results_conjoin",
+      "mcp__ac__return_capture",
+      "mcp__ac__return_check",
+      "mcp__ac__review_prepare",
+      "mcp__ac__source_read",
+      "mcp__ac__tools_describe",
+      "mcp__ac__work_project",
+      "mcp__ac__work_write",
+      "mcp__ac__workspace_observe"
+    ],
+    "type": "system"
+  },
+  "native_process": {
+    "ended_ns": 1792359792198472000,
+    "failure": "timeout; output/effect completion remains unknown",
+    "input_bytes": 158898,
+    "input_forwarded_bytes": 158898,
+    "output_available": false,
+    "pid": 81079,
+    "returncode": 143,
+    "schema": "a_c.fd-support.actor-cli-observation/1",
+    "started_ns": 1792359191485090000,
+    "stderr_bytes": 0,
+    "stderr_eof": false,
+    "stdout_bytes": 1566183,
+    "stdout_eof": false,
+    "termination_requests": [
+      {
+        "at_ns": 1792359791594519000,
+        "delivery": "requested",
+        "scope": "registered parent process only",
+        "signal": "terminate"
+      }
+    ],
+    "unknowns": [
+      "descendant/process-tree end and external side effects",
+      "host/model active-context size",
+      "backend retries or unreported usage",
+      "semantic outcome and owner disposition"
+    ]
+  },
+  "observed_assistant_usage_records": 48,
+  "observed_client_scope": {
+    "emitted_calls": 22,
+    "matching_results": 22,
+    "pending_observed": 0
+  },
+  "observed_native_interval": {
+    "claim": "Elapsed observed native process wall interval, not provider billed/compute time.",
+    "clock": "unix_ns",
+    "elapsed_ns": 600713382000,
+    "ended_ns": 1792359792198472000,
+    "started_ns": 1792359191485090000
+  },
+  "raw_transport_references": {
+    "context.bin": {
+      "bytes": 158898,
+      "path": "a_c/.ai-workspace/qualification/t008/live-runtime-prep-002/actor-transports/worker-001/context.bin",
+      "sha256": "619268a880756d05b12c7c67260b9207c3f333e1ab9b62ae77557055685b5fa3"
+    },
+    "invocation.json": {
+      "bytes": 7001,
+      "path": "a_c/.ai-workspace/qualification/t008/live-runtime-prep-002/actor-transports/worker-001/invocation.json",
+      "sha256": "5a610712a8dd8ba880cb814e5379a17f131445daa1d080e3dd0f80f34707aaba"
+    },
+    "plan.json": {
+      "bytes": 7104,
+      "path": "a_c/.ai-workspace/qualification/t008/live-runtime-prep-002/actor-transports/worker-001/plan.json",
+      "sha256": "f91beb44253e730a9bbbcea321080512b5f0d921e8002fcb5180037636304099"
+    },
+    "process.json": {
+      "bytes": 683,
+      "path": "a_c/.ai-workspace/qualification/t008/live-runtime-prep-002/actor-transports/worker-001/process.json",
+      "sha256": "da8020b7b1a878bec4a02317028ce24e4237a55a29e1e16231c08052caa11258"
+    },
+    "result.json": {
+      "bytes": 134,
+      "path": "a_c/.ai-workspace/qualification/t008/live-runtime-prep-002/actor-transports/worker-001/result.json",
+      "sha256": "7437f51bbb18ccc7291021cbfbd3b8ebbdc03e5cead7efa73efde35d8002468b"
+    },
+    "vendor.stderr": {
+      "bytes": 0,
+      "path": "a_c/.ai-workspace/qualification/t008/live-runtime-prep-002/actor-transports/worker-001/vendor.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vendor.stdout": {
+      "bytes": 1566183,
+      "path": "a_c/.ai-workspace/qualification/t008/live-runtime-prep-002/actor-transports/worker-001/vendor.stdout",
+      "sha256": "218f243a0abeb920a0a436897877f549e439d3e3896284cc31a0a483a4933f36"
+    }
+  },
+  "registered_effect": {
+    "core_value": "indeterminate",
+    "end_established": false,
+    "process_end_established": true,
+    "residuals": [
+      "Generic process/return does not establish intended semantic outcome or all external/descendant effect end."
+    ],
+    "value": "completion_unknown"
+  },
+  "registered_process_end": {
+    "descendants": "unknown",
+    "ended_ns": 1792359792564197000,
+    "observed": true,
+    "returncode": 1
+  },
+  "schema": "a_c.T008.native-metadata/1",
+  "source": {
+    "bytes": 1566183,
+    "path": "a_c/.ai-workspace/qualification/t008/live-runtime-prep-002/actor-transports/worker-001/vendor.stdout",
+    "sha256": "218f243a0abeb920a0a436897877f549e439d3e3896284cc31a0a483a4933f36"
+  },
+  "unknowns": [
+    "Descendant/process-tree end and external effects",
+    "Unobserved backend/provider retries and complete bill/token totals",
+    "Mental attention, semantic completion and owner disposition"
+  ],
+  "usage_accounting": "Per-message vendor metadata remains in exact raw transport. No terminal billed cost/usage total is available; no sum or accepted-result cost is inferred.",
+  "vendor_final_result_count": 0
+}

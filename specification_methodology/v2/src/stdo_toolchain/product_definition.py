@@ -244,6 +244,7 @@ def validate_definition_document(
     try:
         from jsonschema import Draft202012Validator, FormatChecker
         from jsonschema.exceptions import SchemaError
+        from referencing.exceptions import Unresolvable
     except ImportError as exc:
         raise StdoError(
             "Product Definition validation requires the installed stdo-toolchain dependencies"
@@ -258,10 +259,13 @@ def validate_definition_document(
             f"Invalid Product Definition schema at {schema_path}: {exc.message}"
         ) from exc
     validator = Draft202012Validator(schema, format_checker=FormatChecker())
-    errors = sorted(
-        validator.iter_errors(document),
-        key=lambda item: tuple(str(part) for part in item.absolute_path),
-    )
+    try:
+        errors = sorted(
+            validator.iter_errors(document),
+            key=lambda item: tuple(str(part) for part in item.absolute_path),
+        )
+    except (Unresolvable, RecursionError) as exc:
+        raise StdoError(f"Product Definition schema cannot be evaluated at {schema_path}: {exc}") from exc
     if errors:
         details: list[str] = []
         for error in errors[:10]:

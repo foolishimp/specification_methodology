@@ -1,0 +1,1700 @@
+{
+  "source_freeze_sha256": "53db95d31d32dd00fc8f0c8b13bc184dc45c422bc52dbb7239fd1370212160b8",
+  "scope": "Independent exact original CLI negatives plus bounded allowed and error-projection controls; no paid actor",
+  "cases": [
+    {
+      "name": "AC1 exact denied policy; allowed disclosure and retained exposure",
+      "result": "pass",
+      "source": {
+        "engine": "workspace-regular-file",
+        "root": "workspace",
+        "path": "inputs/private-independence.json",
+        "object": null,
+        "sha256": "7a495fa9f0bee48c9712b43a17efa2eed9ba1aaf46e1370e3d1e11f5305dd790",
+        "selector": null
+      },
+      "direct_denial": {
+        "evidence": {
+          "id": "sha256:72f666a568781389ddfd0780aab0998643500b6ffdf2aab2353463602c29a57a",
+          "sha256": "72f666a568781389ddfd0780aab0998643500b6ffdf2aab2353463602c29a57a"
+        },
+        "id": "composition-1",
+        "operation": "source.read",
+        "operation_outcome": {
+          "cause": "acquisition_denied",
+          "core_value": "out_of_frame",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(source.read): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "refused(authority)"
+        },
+        "refusal": {
+          "code": "acquisition_denied",
+          "gaps": [
+            {
+              "detail_count": 0,
+              "diagnostics": "withheld by selected composition binding",
+              "effect_state": "completion_unknown",
+              "end_established": false,
+              "history_state": "not_established_by_refusal",
+              "private_retention": "included in operation publication"
+            }
+          ],
+          "reason": "Selected receiving information policy does not permit this disclosure",
+          "source_refs": []
+        },
+        "result": null,
+        "schema": "a_c.fd-support.response/1",
+        "status": "refused"
+      },
+      "automatic_denial": {
+        "evidence": {
+          "id": "sha256:f0ec629b9cc4a4642b3419d29aad00537bd456101e4243025e16a9d6b95d7106",
+          "sha256": "f0ec629b9cc4a4642b3419d29aad00537bd456101e4243025e16a9d6b95d7106"
+        },
+        "id": "composition-2",
+        "operation": "review.prepare",
+        "operation_outcome": {
+          "cause": "acquisition_denied",
+          "core_value": "out_of_frame",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(review.prepare): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "refused(authority)"
+        },
+        "refusal": {
+          "code": "acquisition_denied",
+          "gaps": [
+            {
+              "detail_count": 0,
+              "diagnostics": "withheld by selected composition binding",
+              "effect_state": "completion_unknown",
+              "end_established": false,
+              "history_state": "not_established_by_refusal",
+              "private_retention": "included in operation publication"
+            }
+          ],
+          "reason": "Selected receiving information policy does not permit this disclosure",
+          "source_refs": []
+        },
+        "result": null,
+        "schema": "a_c.fd-support.response/1",
+        "status": "refused"
+      },
+      "allowed": {
+        "evidence": {
+          "id": "sha256:46590c23b0cc51c80cb95720cc4c78e7b2edf0d011192ab1465c594ad2e2bb50",
+          "sha256": "46590c23b0cc51c80cb95720cc4c78e7b2edf0d011192ab1465c594ad2e2bb50"
+        },
+        "id": "composition-3",
+        "operation": "review.prepare",
+        "operation_outcome": {
+          "cause": "declared output available",
+          "core_value": "satisfied",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(review.prepare): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "returned"
+        },
+        "refusal": null,
+        "result": {
+          "artifact": null,
+          "value": {
+            "acquired": [
+              {
+                "acquisition": {},
+                "content_base64": "b25lCnR3bwp0aHJlZQo=",
+                "coordinates": null,
+                "parent_sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2",
+                "selected_sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2",
+                "size_bytes": 14,
+                "source": {
+                  "engine": "workspace-regular-file",
+                  "object": null,
+                  "path": "inputs/law.txt",
+                  "root": "workspace",
+                  "selector": null,
+                  "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+                }
+              }
+            ],
+            "candidate_population": [],
+            "claim": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/law.txt",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+            },
+            "comparison": null,
+            "expectations": null,
+            "exposure": [],
+            "gaps": [
+              {
+                "count": 1,
+                "details": "retained privately",
+                "standing": "unresolved_review_diagnostics"
+              }
+            ],
+            "independence": {
+              "external_exposure": "unknown",
+              "governing_conditions": {
+                "allowed_family_pairs": [
+                  [
+                    "A",
+                    "B"
+                  ]
+                ],
+                "authority_source": {
+                  "engine": "workspace-regular-file",
+                  "object": null,
+                  "path": "inputs/owner.json",
+                  "root": "workspace",
+                  "selector": null,
+                  "sha256": "e046e19d8d00370d5278c330ce42f6bfaf8c849f7e80c71c98920cdf124cfb91"
+                },
+                "claim_scope": "REVIEW-DENIED-POLICY-CONTENT-7e37",
+                "id": "private-independence",
+                "mechanical_sharing": [],
+                "predicates": [],
+                "require_non_author": true,
+                "source_first": true
+              },
+              "selected_policy": {
+                "engine": "workspace-regular-file",
+                "object": null,
+                "path": "inputs/private-independence.json",
+                "root": "workspace",
+                "selector": null,
+                "sha256": "7a495fa9f0bee48c9712b43a17efa2eed9ba1aaf46e1370e3d1e11f5305dd790"
+              },
+              "semantic_independence": "not certified"
+            },
+            "limits": [
+              "acquisition/diff/exposure facts only; no severity, disposition or mental-independence certificate"
+            ],
+            "phase": "expectation",
+            "population_complete": false
+          }
+        },
+        "schema": "a_c.fd-support.response/1",
+        "status": "ok"
+      },
+      "policy_acquisition": {
+        "kind": "acquisition",
+        "payload": {
+          "channel": "public-response",
+          "composition": {
+            "actor_id": "reviewer",
+            "declaration": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/composition.json",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "db02ec00a880c739411cec7f894f009dcd42563118d39afb80c23375c4f029a4"
+            },
+            "engagement": "composition-case",
+            "purpose": "reviewer-task",
+            "resources": [
+              {
+                "complete": true,
+                "id": "private-policy",
+                "origins": [
+                  {
+                    "complete": true,
+                    "id": "private-policy",
+                    "locator": "workspace-regular-file:/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-public-retry-s95t_lgl/workspace/inputs/private-independence.json",
+                    "source": {
+                      "engine": "workspace-regular-file",
+                      "object": null,
+                      "path": "inputs/private-independence.json",
+                      "root": "workspace",
+                      "selector": null,
+                      "sha256": "7a495fa9f0bee48c9712b43a17efa2eed9ba1aaf46e1370e3d1e11f5305dd790"
+                    }
+                  }
+                ],
+                "source": {
+                  "engine": "workspace-regular-file",
+                  "object": null,
+                  "path": "inputs/private-independence.json",
+                  "root": "workspace",
+                  "selector": null,
+                  "sha256": "7a495fa9f0bee48c9712b43a17efa2eed9ba1aaf46e1370e3d1e11f5305dd790"
+                }
+              }
+            ],
+            "route": []
+          },
+          "content_sha256": "7a495fa9f0bee48c9712b43a17efa2eed9ba1aaf46e1370e3d1e11f5305dd790",
+          "delivery": {
+            "interval": {
+              "clock": "unix_ns",
+              "ended_ns": 1792940338541851000,
+              "started_ns": 1792940338532963000
+            },
+            "state": "prepared"
+          },
+          "model": null,
+          "operation": "review.prepare",
+          "recipient": "reviewer",
+          "schema": "a_c.fd-support.acquisition/1",
+          "selection": null,
+          "source": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "inputs/private-independence.json",
+            "root": "workspace",
+            "selector": null,
+            "sha256": "7a495fa9f0bee48c9712b43a17efa2eed9ba1aaf46e1370e3d1e11f5305dd790"
+          }
+        },
+        "provenance": {
+          "actor": {
+            "actor_id": "reviewer",
+            "authorship": "reviewer",
+            "family": "B",
+            "operations": [
+              "checks.evaluate",
+              "composition.inspect",
+              "context.assemble",
+              "contract.preflight",
+              "dispatch.cancel",
+              "dispatch.observe",
+              "dispatch.start",
+              "events.wait",
+              "evidence.read",
+              "graph.project",
+              "records.find",
+              "records.read",
+              "refresh.prepare",
+              "relations.query",
+              "resources.aggregate",
+              "results.conjoin",
+              "return.capture",
+              "return.check",
+              "review.prepare",
+              "source.read",
+              "tools.describe",
+              "work.project",
+              "work.write",
+              "workspace.observe"
+            ],
+            "role": "Reviewer",
+            "role_binding": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/law.txt",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+            },
+            "role_transition": null
+          },
+          "attempt": null,
+          "definition_sha256": "2651bb743b0b1b977ca58f0325f8177f69f6c00d23da8b22b0036ac4154ebeb9",
+          "method_profile_sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7",
+          "observed_interval": {
+            "clock": "unix_ns",
+            "ended_ns": 1792940338541851000,
+            "started_ns": 1792940338532963000
+          },
+          "policy_sha256": "9fe97311b833517ecfd5e2f5c1ffe99a9ae2be999d7ecfe7bf23237d3b55da75",
+          "product_id": "urn:test:product",
+          "request_id": "composition-3",
+          "request_sha256": "fdf18fac4967afd7c788cc7bff7a315f6808f95301fa9ccfdea688ebd3b2cb42",
+          "requester_principal": "reviewer",
+          "target_principal": null
+        },
+        "schema": "a_c.fd-support.artifact/1"
+      },
+      "strict_reentry": {
+        "evidence": {
+          "id": "sha256:d978f68c10bfcad68c89047db1503543b23bf42f209f1f00d784dc0f93a853a8",
+          "sha256": "d978f68c10bfcad68c89047db1503543b23bf42f209f1f00d784dc0f93a853a8"
+        },
+        "id": "composition-4",
+        "operation": "source.read",
+        "operation_outcome": {
+          "cause": "basis_stale",
+          "core_value": "invalid_basis",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(source.read): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "refused(basis)"
+        },
+        "refusal": {
+          "code": "basis_stale",
+          "gaps": [
+            {
+              "detail_count": 0,
+              "diagnostics": "withheld by selected composition binding",
+              "effect_state": "completion_unknown",
+              "end_established": false,
+              "history_state": "not_established_by_refusal",
+              "private_retention": "included in operation publication"
+            }
+          ],
+          "reason": "Selected source, authority or exposure basis is no longer eligible",
+          "source_refs": []
+        },
+        "result": null,
+        "schema": "a_c.fd-support.response/1",
+        "status": "refused"
+      }
+    },
+    {
+      "name": "AC1 automatically read authority independently denied",
+      "result": "pass",
+      "response": {
+        "evidence": {
+          "id": "sha256:3d9e77a2994bce5e172aaaaaf363787b0e283a530e990bc7e61dc5ebb7989e7a",
+          "sha256": "3d9e77a2994bce5e172aaaaaf363787b0e283a530e990bc7e61dc5ebb7989e7a"
+        },
+        "id": "composition-1",
+        "operation": "review.prepare",
+        "operation_outcome": {
+          "cause": "acquisition_denied",
+          "core_value": "out_of_frame",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(review.prepare): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "refused(authority)"
+        },
+        "refusal": {
+          "code": "acquisition_denied",
+          "gaps": [
+            {
+              "detail_count": 0,
+              "diagnostics": "withheld by selected composition binding",
+              "effect_state": "completion_unknown",
+              "end_established": false,
+              "history_state": "not_established_by_refusal",
+              "private_retention": "included in operation publication"
+            }
+          ],
+          "reason": "Selected receiving information policy does not permit this disclosure",
+          "source_refs": []
+        },
+        "result": null,
+        "schema": "a_c.fd-support.response/1",
+        "status": "refused"
+      }
+    },
+    {
+      "name": "AC2 exact interrupted history and denied output; private original retained",
+      "result": "pass",
+      "attempt": {
+        "id": "sha256:07ae6f085ad1017397890fa8366d2d2c624fd35d111fa80424ded49ed97b61ee",
+        "sha256": "07ae6f085ad1017397890fa8366d2d2c624fd35d111fa80424ded49ed97b61ee"
+      },
+      "normal_observation": {
+        "evidence": {
+          "id": "sha256:13fc4e0ed1e78ca4744ab34172bd82c0df4836579fed07e464592e5ea4618435",
+          "sha256": "13fc4e0ed1e78ca4744ab34172bd82c0df4836579fed07e464592e5ea4618435"
+        },
+        "id": "composition-5",
+        "operation": "dispatch.observe",
+        "operation_outcome": {
+          "cause": "declared output available",
+          "core_value": "satisfied",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(dispatch.observe): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "returned"
+        },
+        "refusal": null,
+        "result": {
+          "artifact": null,
+          "value": {
+            "attempt": {
+              "id": "sha256:07ae6f085ad1017397890fa8366d2d2c624fd35d111fa80424ded49ed97b61ee",
+              "sha256": "07ae6f085ad1017397890fa8366d2d2c624fd35d111fa80424ded49ed97b61ee"
+            },
+            "consumer_receipt": "unknown",
+            "cursor": 8,
+            "effect": {
+              "end_established": false,
+              "value": "completion_unknown"
+            },
+            "history_complete": true,
+            "limits": [
+              "Redacted control view; content readback requires its own composition permission."
+            ],
+            "output": {
+              "process_end": {
+                "descendants": "unknown",
+                "ended_ns": 1792940339468768000,
+                "observed": true,
+                "returncode": 0
+              },
+              "stderr": {
+                "id": "sha256:f0ab23511e44e84aa8f30e8821717b39feff0fe004a483a5705b3e549fd6b3e9",
+                "sha256": "f0ab23511e44e84aa8f30e8821717b39feff0fe004a483a5705b3e549fd6b3e9"
+              },
+              "stdout": {
+                "id": "sha256:380758d57b41842a02308ba77c480651a41abc0099f46c0ed516712d3429bb4c",
+                "sha256": "380758d57b41842a02308ba77c480651a41abc0099f46c0ed516712d3429bb4c"
+              }
+            },
+            "process_end": {
+              "descendants": "unknown",
+              "ended_ns": 1792940339468768000,
+              "observed": true,
+              "returncode": 0
+            }
+          }
+        },
+        "schema": "a_c.fd-support.response/1",
+        "status": "ok"
+      },
+      "allowed_other_recipient_read": {
+        "evidence": {
+          "id": "sha256:435acc6a46c8e6fe2dae9e0eb60798404875c0416198748432f35f90556f57c7",
+          "sha256": "435acc6a46c8e6fe2dae9e0eb60798404875c0416198748432f35f90556f57c7"
+        },
+        "id": "composition-6",
+        "operation": "evidence.read",
+        "operation_outcome": {
+          "cause": "declared output available",
+          "core_value": "satisfied",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(evidence.read)[request_sha256=ff4af757b08b7b09748391f9a5623ce7520db1b015e051d8caa5a5b4605dc83e]: declared output availability",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "returned"
+        },
+        "refusal": null,
+        "result": {
+          "artifact": null,
+          "value": {
+            "artifact": {
+              "id": "sha256:380758d57b41842a02308ba77c480651a41abc0099f46c0ed516712d3429bb4c",
+              "sha256": "380758d57b41842a02308ba77c480651a41abc0099f46c0ed516712d3429bb4c"
+            },
+            "envelope": {
+              "kind": "raw",
+              "payload": {
+                "attempt": {
+                  "id": "sha256:07ae6f085ad1017397890fa8366d2d2c624fd35d111fa80424ded49ed97b61ee",
+                  "sha256": "07ae6f085ad1017397890fa8366d2d2c624fd35d111fa80424ded49ed97b61ee"
+                },
+                "bytes_base64": "Q09OVFJPTC1ERU5JRUQtT1VUUFVULTk0OTIK",
+                "complete": true,
+                "decoder": {
+                  "decode_json_string": false,
+                  "format": "json",
+                  "pointer": null
+                },
+                "interval": {
+                  "clock": "unix_ns",
+                  "ended_ns": 1792940339468768000,
+                  "started_ns": 1792940339367458000
+                },
+                "producer": {
+                  "actor": {
+                    "actor_id": "worker",
+                    "authorship": "worker",
+                    "family": "A",
+                    "operations": [
+                      "checks.evaluate",
+                      "composition.inspect",
+                      "context.assemble",
+                      "contract.preflight",
+                      "dispatch.cancel",
+                      "dispatch.observe",
+                      "dispatch.start",
+                      "events.wait",
+                      "evidence.read",
+                      "graph.project",
+                      "records.find",
+                      "records.read",
+                      "refresh.prepare",
+                      "relations.query",
+                      "resources.aggregate",
+                      "results.conjoin",
+                      "return.capture",
+                      "return.check",
+                      "review.prepare",
+                      "source.read",
+                      "tools.describe",
+                      "work.project",
+                      "work.write",
+                      "workspace.observe"
+                    ],
+                    "role": "Worker",
+                    "role_binding": {
+                      "engine": "workspace-regular-file",
+                      "object": null,
+                      "path": "inputs/law.txt",
+                      "root": "workspace",
+                      "selector": null,
+                      "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+                    },
+                    "role_transition": null
+                  },
+                  "executable": {
+                    "path": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+                    "sha256": "a7f5b535d61d1c7326824204ac80f045a97a652abb154421e2c74fcc365a3539"
+                  },
+                  "executor_id": "registered",
+                  "principal_id": "worker"
+                },
+                "schema": "a_c.fd-support.process-output/1",
+                "slot": "final_stdout_object",
+                "stream": "stdout"
+              },
+              "provenance": {
+                "actor": {
+                  "actor_id": "executive",
+                  "authorship": "executive",
+                  "family": "A",
+                  "operations": [
+                    "checks.evaluate",
+                    "composition.inspect",
+                    "context.assemble",
+                    "contract.preflight",
+                    "dispatch.cancel",
+                    "dispatch.observe",
+                    "dispatch.start",
+                    "events.wait",
+                    "evidence.read",
+                    "graph.project",
+                    "records.find",
+                    "records.read",
+                    "refresh.prepare",
+                    "relations.query",
+                    "resources.aggregate",
+                    "results.conjoin",
+                    "return.capture",
+                    "return.check",
+                    "review.prepare",
+                    "source.read",
+                    "tools.describe",
+                    "work.project",
+                    "work.write",
+                    "workspace.observe"
+                  ],
+                  "role": "Executive",
+                  "role_binding": {
+                    "engine": "workspace-regular-file",
+                    "object": null,
+                    "path": "inputs/law.txt",
+                    "root": "workspace",
+                    "selector": null,
+                    "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+                  },
+                  "role_transition": null
+                },
+                "attempt": {
+                  "id": "sha256:07ae6f085ad1017397890fa8366d2d2c624fd35d111fa80424ded49ed97b61ee",
+                  "sha256": "07ae6f085ad1017397890fa8366d2d2c624fd35d111fa80424ded49ed97b61ee"
+                },
+                "definition_sha256": "2651bb743b0b1b977ca58f0325f8177f69f6c00d23da8b22b0036ac4154ebeb9",
+                "method_profile_sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7",
+                "observed_interval": {
+                  "clock": "unix_ns",
+                  "ended_ns": 1792940339468847000,
+                  "started_ns": 1792940339367458000
+                },
+                "policy_sha256": "d7396ea209456363c9c5b8bfc2b0c3ff03f039ac5fd6aeda419f76972d423fc0",
+                "product_id": "urn:test:product",
+                "request_id": "composition-3",
+                "request_sha256": "e0f44e75a3d40ff02b946044c067c781c893c64d80e757fdc5bce05ad7e5506a",
+                "requester_principal": "executive",
+                "target_principal": "worker"
+              },
+              "schema": "a_c.fd-support.artifact/1"
+            },
+            "parent_sha256": "380758d57b41842a02308ba77c480651a41abc0099f46c0ed516712d3429bb4c",
+            "size_bytes": 3014
+          }
+        },
+        "schema": "a_c.fd-support.response/1",
+        "status": "ok"
+      },
+      "denied_executive_read": {
+        "evidence": {
+          "id": "sha256:69e94fa5d64687f820583b4fae67271cd34e9fe10566c648f124a829dd57c022",
+          "sha256": "69e94fa5d64687f820583b4fae67271cd34e9fe10566c648f124a829dd57c022"
+        },
+        "id": "composition-7",
+        "operation": "evidence.read",
+        "operation_outcome": {
+          "cause": "acquisition_denied",
+          "core_value": "out_of_frame",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(evidence.read): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "refused(authority)"
+        },
+        "refusal": {
+          "code": "acquisition_denied",
+          "gaps": [
+            {
+              "detail_count": 0,
+              "diagnostics": "withheld by selected composition binding",
+              "effect_state": "completion_unknown",
+              "end_established": false,
+              "history_state": "not_established_by_refusal",
+              "private_retention": "included in operation publication"
+            }
+          ],
+          "reason": "Selected receiving information policy does not permit this disclosure",
+          "source_refs": []
+        },
+        "result": null,
+        "schema": "a_c.fd-support.response/1",
+        "status": "refused"
+      },
+      "removed_first_event": {
+        "kind": "raw",
+        "payload": {
+          "attempt": {
+            "id": "sha256:07ae6f085ad1017397890fa8366d2d2c624fd35d111fa80424ded49ed97b61ee",
+            "sha256": "07ae6f085ad1017397890fa8366d2d2c624fd35d111fa80424ded49ed97b61ee"
+          },
+          "cursor": 1,
+          "data": {
+            "invocation": {
+              "argv": [
+                "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+                "-B",
+                "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-public-retry-en_eaof6/workspace/inputs/control_actor.py"
+              ],
+              "cwd": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-public-retry-en_eaof6/workspace",
+              "environment": {},
+              "executable": {
+                "path": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+                "sha256": "a7f5b535d61d1c7326824204ac80f045a97a652abb154421e2c74fcc365a3539"
+              },
+              "settings": {
+                "termination_grace_ms": 100,
+                "timeout_ms": 1500
+              },
+              "stdin_bytes": 8529,
+              "stdin_sha256": "c7d4b896053be17de027939f37331d525703d402311b38ded0db306cf2047c6c",
+              "supervisor": {
+                "argv": [
+                  "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+                  "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py",
+                  "_supervise",
+                  "--policy",
+                  "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-public-retry-en_eaof6/policy-4.json",
+                  "--policy-sha256",
+                  "d7396ea209456363c9c5b8bfc2b0c3ff03f039ac5fd6aeda419f76972d423fc0",
+                  "--principal",
+                  "executive",
+                  "--attempt-id",
+                  "<immutable-anchor-id>",
+                  "--attempt-sha256",
+                  "<immutable-anchor-sha256>"
+                ],
+                "argv_template": "fixed-private-entry-with-anchor",
+                "modules": [
+                  {
+                    "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py",
+                    "sha256": "f65efad15fd770075650ce0484df5b1cea14612047a82918d35fdc4f870deafa"
+                  },
+                  {
+                    "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_core.py",
+                    "sha256": "555f387bf8e53e85904383e6c5521eebd39537dc668f87936544a588efe4cb9f"
+                  },
+                  {
+                    "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_effects.py",
+                    "sha256": "f1b5a92a31a05abade25810539bc78dc69c96768391f323625877da60df155c9"
+                  },
+                  {
+                    "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_composition.py",
+                    "sha256": "3ed9fcf55a86b7d24e5b376b4b6ad892dd26c3606c73bff176342352bb97bf84"
+                  }
+                ],
+                "python": {
+                  "path": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+                  "sha256": "a7f5b535d61d1c7326824204ac80f045a97a652abb154421e2c74fcc365a3539"
+                },
+                "startup": {
+                  "policy": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-public-retry-en_eaof6/policy-4.json",
+                  "policy_sha256": "d7396ea209456363c9c5b8bfc2b0c3ff03f039ac5fd6aeda419f76972d423fc0",
+                  "principal": "executive",
+                  "python": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12"
+                }
+              }
+            },
+            "launch": "not-yet-established"
+          },
+          "kind": "reserved",
+          "observed_at_ns": 1792940339249841000,
+          "previous": null,
+          "schema": "a_c.fd-support.attempt-event/1"
+        },
+        "provenance": {
+          "actor": {
+            "actor_id": "executive",
+            "authorship": "executive",
+            "family": "A",
+            "operations": [
+              "checks.evaluate",
+              "composition.inspect",
+              "context.assemble",
+              "contract.preflight",
+              "dispatch.cancel",
+              "dispatch.observe",
+              "dispatch.start",
+              "events.wait",
+              "evidence.read",
+              "graph.project",
+              "records.find",
+              "records.read",
+              "refresh.prepare",
+              "relations.query",
+              "resources.aggregate",
+              "results.conjoin",
+              "return.capture",
+              "return.check",
+              "review.prepare",
+              "source.read",
+              "tools.describe",
+              "work.project",
+              "work.write",
+              "workspace.observe"
+            ],
+            "role": "Executive",
+            "role_binding": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/law.txt",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+            },
+            "role_transition": null
+          },
+          "attempt": {
+            "id": "sha256:07ae6f085ad1017397890fa8366d2d2c624fd35d111fa80424ded49ed97b61ee",
+            "sha256": "07ae6f085ad1017397890fa8366d2d2c624fd35d111fa80424ded49ed97b61ee"
+          },
+          "definition_sha256": "2651bb743b0b1b977ca58f0325f8177f69f6c00d23da8b22b0036ac4154ebeb9",
+          "method_profile_sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7",
+          "observed_interval": {
+            "clock": "unix_ns",
+            "ended_ns": 1792940339249842000,
+            "started_ns": 1792940339249842000
+          },
+          "policy_sha256": "d7396ea209456363c9c5b8bfc2b0c3ff03f039ac5fd6aeda419f76972d423fc0",
+          "product_id": "urn:test:product",
+          "request_id": "composition-3",
+          "request_sha256": "e0f44e75a3d40ff02b946044c067c781c893c64d80e757fdc5bce05ad7e5506a",
+          "requester_principal": "executive",
+          "target_principal": "worker"
+        },
+        "schema": "a_c.fd-support.artifact/1"
+      },
+      "cancel_response": {
+        "evidence": {
+          "id": "sha256:99aa83b003f50dcd5798bfeab42b92e8da93966a81eab36089afeadf0315eb04",
+          "sha256": "99aa83b003f50dcd5798bfeab42b92e8da93966a81eab36089afeadf0315eb04"
+        },
+        "id": "composition-8",
+        "operation": "dispatch.cancel",
+        "operation_outcome": {
+          "cause": "history_incomplete",
+          "core_value": "invalid_basis",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(dispatch.cancel): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "refused(basis)"
+        },
+        "refusal": {
+          "code": "history_incomplete",
+          "gaps": [
+            {
+              "detail_count": 7,
+              "diagnostics": "withheld by selected composition binding",
+              "effect_state": "completion_unknown",
+              "end_established": false,
+              "history_state": "incomplete",
+              "private_retention": "included in operation publication"
+            }
+          ],
+          "reason": "Required protected history is incomplete; no clean or completed state is inferred",
+          "source_refs": []
+        },
+        "result": null,
+        "schema": "a_c.fd-support.response/1",
+        "status": "refused"
+      },
+      "private_diagnostic": {
+        "kind": "raw",
+        "payload": {
+          "detail": {
+            "operation_outcome": {
+              "cause": "history_incomplete",
+              "core_value": "invalid_basis",
+              "evidence": [],
+              "limits": [
+                "output availability only; no semantic acceptance"
+              ],
+              "predicate": "B(dispatch.cancel): declared exact output/effect-evidence payload availability on the requested basis",
+              "source_parent": {
+                "clause": "results",
+                "member": "FOUNDATIONS.md",
+                "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+              },
+              "value": "refused(basis)"
+            },
+            "refusal": {
+              "code": "history_incomplete",
+              "gaps": [
+                {
+                  "event_chain_gap_or_conflict": {
+                    "attempt": {
+                      "id": "sha256:07ae6f085ad1017397890fa8366d2d2c624fd35d111fa80424ded49ed97b61ee",
+                      "sha256": "07ae6f085ad1017397890fa8366d2d2c624fd35d111fa80424ded49ed97b61ee"
+                    },
+                    "cursor": 2,
+                    "data": {
+                      "actor_launch": "not-established-by-supervisor-receipt",
+                      "argv": [
+                        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+                        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py",
+                        "_supervise",
+                        "--policy",
+                        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-public-retry-en_eaof6/policy-4.json",
+                        "--policy-sha256",
+                        "d7396ea209456363c9c5b8bfc2b0c3ff03f039ac5fd6aeda419f76972d423fc0",
+                        "--principal",
+                        "executive",
+                        "--attempt-id",
+                        "sha256:07ae6f085ad1017397890fa8366d2d2c624fd35d111fa80424ded49ed97b61ee",
+                        "--attempt-sha256",
+                        "07ae6f085ad1017397890fa8366d2d2c624fd35d111fa80424ded49ed97b61ee"
+                      ],
+                      "pid": 34846
+                    },
+                    "kind": "supervisor_spawned",
+                    "observed_at_ns": 1792940339263458000,
+                    "previous": {
+                      "id": "sha256:ae3b06de1157d55027fd5b08fa95a02e7248c0f5454a7d42f18076ea2ab13ec9",
+                      "sha256": "ae3b06de1157d55027fd5b08fa95a02e7248c0f5454a7d42f18076ea2ab13ec9"
+                    },
+                    "schema": "a_c.fd-support.attempt-event/1"
+                  }
+                },
+                {
+                  "event_chain_gap_or_conflict": {
+                    "attempt": {
+                      "id": "sha256:07ae6f085ad1017397890fa8366d2d2c624fd35d111fa80424ded49ed97b61ee",
+                      "sha256": "07ae6f085ad1017397890fa8366d2d2c624fd35d111fa80424ded49ed97b61ee"
+                    },
+                    "cursor": 3,
+                    "data": {
+                      "external_effect": "not-transactionally-coupled-to-evidence",
+                      "invocation": {
+                        "argv": [
+                          "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+                          "-B",
+                          "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-public-retry-en_eaof6/workspace/inputs/control_actor.py"
+                        ],
+                        "cwd": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-public-retry-en_eaof6/workspace",
+                        "environment": {},
+                        "executable": {
+                          "path": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+                          "sha256": "a7f5b535d61d1c7326824204ac80f045a97a652abb154421e2c74fcc365a3539"
+                        },
+                        "settings": {
+                          "termination_grace_ms": 100,
+                          "timeout_ms": 1500
+                        },
+                        "stdin_bytes": 8529,
+                        "stdin_sha256": "c7d4b896053be17de027939f37331d525703d402311b38ded0db306cf2047c6c",
+                        "supervisor": {
+                          "argv": [
+                            "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+                            "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py",
+                            "_supervise",
+                            "--policy",
+                            "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-public-retry-en_eaof6/policy-4.json",
+                            "--policy-sha256",
+                            "d7396ea209456363c9c5b8bfc2b0c3ff03f039ac5fd6aeda419f76972d423fc0",
+                            "--principal",
+                            "executive",
+                            "--attempt-id",
+                            "<immutable-anchor-id>",
+                            "--attempt-sha256",
+                            "<immutable-anchor-sha256>"
+                          ],
+                          "argv_template": "fixed-private-entry-with-anchor",
+                          "modules": [
+                            {
+                              "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py",
+                              "sha256": "f65efad15fd770075650ce0484df5b1cea14612047a82918d35fdc4f870deafa"
+                            },
+                            {
+                              "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_core.py",
+                              "sha256": "555f387bf8e53e85904383e6c5521eebd39537dc668f87936544a588efe4cb9f"
+                            },
+                            {
+                              "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_effects.py",
+                              "sha256": "f1b5a92a31a05abade25810539bc78dc69c96768391f323625877da60df155c9"
+                            },
+                            {
+                              "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_composition.py",
+                              "sha256": "3ed9fcf55a86b7d24e5b376b4b6ad892dd26c3606c73bff176342352bb97bf84"
+                            }
+                          ],
+                          "python": {
+                            "path": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+                            "sha256": "a7f5b535d61d1c7326824204ac80f045a97a652abb154421e2c74fcc365a3539"
+                          },
+                          "startup": {
+                            "policy": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-public-retry-en_eaof6/policy-4.json",
+                            "policy_sha256": "d7396ea209456363c9c5b8bfc2b0c3ff03f039ac5fd6aeda419f76972d423fc0",
+                            "principal": "executive",
+                            "python": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12"
+                          }
+                        }
+                      }
+                    },
+                    "kind": "actor_launch_intent",
+                    "observed_at_ns": 1792940339329616000,
+                    "previous": {
+                      "id": "sha256:ed45ccefa643cca698828f63c4f2291807b98051bf4e95de60874201a0322ad6",
+                      "sha256": "ed45ccefa643cca698828f63c4f2291807b98051bf4e95de60874201a0322ad6"
+                    },
+                    "schema": "a_c.fd-support.attempt-event/1"
+                  }
+                },
+                {
+                  "event_chain_gap_or_conflict": {
+                    "attempt": {
+                      "id": "sha256:07ae6f085ad1017397890fa8366d2d2c624fd35d111fa80424ded49ed97b61ee",
+                      "sha256": "07ae6f085ad1017397890fa8366d2d2c624fd35d111fa80424ded49ed97b61ee"
+                    },
+                    "cursor": 4,
+                    "data": {
+                      "executable": {
+                        "path": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+                        "sha256": "a7f5b535d61d1c7326824204ac80f045a97a652abb154421e2c74fcc365a3539"
+                      },
+                      "pid": 34848,
+                      "receipt_scope": "local-process-start-only",
+                      "settings": {
+                        "termination_grace_ms": 100,
+                        "timeout_ms": 1500
+                      }
+                    },
+                    "kind": "actor_started",
+                    "observed_at_ns": 1792940339346068000,
+                    "previous": {
+                      "id": "sha256:541ca4a74432f5eaeccfa5249e0fbc5f3542c06e01b0abd9b750dc7a89f9c7c7",
+                      "sha256": "541ca4a74432f5eaeccfa5249e0fbc5f3542c06e01b0abd9b750dc7a89f9c7c7"
+                    },
+                    "schema": "a_c.fd-support.attempt-event/1"
+                  }
+                },
+                {
+                  "event_chain_gap_or_conflict": {
+                    "attempt": {
+                      "id": "sha256:07ae6f085ad1017397890fa8366d2d2c624fd35d111fa80424ded49ed97b61ee",
+                      "sha256": "07ae6f085ad1017397890fa8366d2d2c624fd35d111fa80424ded49ed97b61ee"
+                    },
+                    "cursor": 5,
+                    "data": {
+                      "bytes": 8529,
+                      "complete": true,
+                      "context": {
+                        "id": "sha256:a52c2aecc5ebd9a36f4b44fe5a069aaf827de0f51e50ba56b8d0905fcd4ec4d0",
+                        "sha256": "a52c2aecc5ebd9a36f4b44fe5a069aaf827de0f51e50ba56b8d0905fcd4ec4d0"
+                      },
+                      "interval": {
+                        "clock": "unix_ns",
+                        "ended_ns": 1792940339387557000,
+                        "started_ns": 1792940339387542000
+                      },
+                      "recipient": "worker",
+                      "rendered_sha256": "c7d4b896053be17de027939f37331d525703d402311b38ded0db306cf2047c6c",
+                      "scope": "local child stdin write; mental attention/remote consumer receipt unknown"
+                    },
+                    "kind": "context_delivery",
+                    "observed_at_ns": 1792940339406764000,
+                    "previous": {
+                      "id": "sha256:1c1d23fb23eebbd7851954fae2fba936a475ee5b7ac4f096a7efe1cce5f919dc",
+                      "sha256": "1c1d23fb23eebbd7851954fae2fba936a475ee5b7ac4f096a7efe1cce5f919dc"
+                    },
+                    "schema": "a_c.fd-support.attempt-event/1"
+                  }
+                },
+                {
+                  "event_chain_gap_or_conflict": {
+                    "attempt": {
+                      "id": "sha256:07ae6f085ad1017397890fa8366d2d2c624fd35d111fa80424ded49ed97b61ee",
+                      "sha256": "07ae6f085ad1017397890fa8366d2d2c624fd35d111fa80424ded49ed97b61ee"
+                    },
+                    "cursor": 6,
+                    "data": {
+                      "bytes_base64": "Q09OVFJPTC1ERU5JRUQtT1VUUFVULTk0OTIK",
+                      "complete_slot": false,
+                      "observed_bytes": 27,
+                      "retained_bytes": 27,
+                      "stream": "stdout"
+                    },
+                    "kind": "output_chunk",
+                    "observed_at_ns": 1792940339449857000,
+                    "previous": {
+                      "id": "sha256:703784a8d401a75c2681a9806bc39a2f2928fd3e2c13e4c882b7e708565b6535",
+                      "sha256": "703784a8d401a75c2681a9806bc39a2f2928fd3e2c13e4c882b7e708565b6535"
+                    },
+                    "schema": "a_c.fd-support.attempt-event/1"
+                  }
+                },
+                {
+                  "event_chain_gap_or_conflict": {
+                    "attempt": {
+                      "id": "sha256:07ae6f085ad1017397890fa8366d2d2c624fd35d111fa80424ded49ed97b61ee",
+                      "sha256": "07ae6f085ad1017397890fa8366d2d2c624fd35d111fa80424ded49ed97b61ee"
+                    },
+                    "cursor": 7,
+                    "data": {
+                      "observed_bytes": {
+                        "stderr": 0,
+                        "stdout": 27
+                      },
+                      "process_end": {
+                        "descendants": "unknown",
+                        "ended_ns": 1792940339468768000,
+                        "observed": true,
+                        "returncode": 0
+                      },
+                      "stderr": {
+                        "id": "sha256:f0ab23511e44e84aa8f30e8821717b39feff0fe004a483a5705b3e549fd6b3e9",
+                        "sha256": "f0ab23511e44e84aa8f30e8821717b39feff0fe004a483a5705b3e549fd6b3e9"
+                      },
+                      "stdout": {
+                        "id": "sha256:380758d57b41842a02308ba77c480651a41abc0099f46c0ed516712d3429bb4c",
+                        "sha256": "380758d57b41842a02308ba77c480651a41abc0099f46c0ed516712d3429bb4c"
+                      }
+                    },
+                    "kind": "output_finalized",
+                    "observed_at_ns": 1792940339486220000,
+                    "previous": {
+                      "id": "sha256:4d44b05d2beb4df378f93e25afb181675221bc5e4efcd86af19bee6eadb5f388",
+                      "sha256": "4d44b05d2beb4df378f93e25afb181675221bc5e4efcd86af19bee6eadb5f388"
+                    },
+                    "schema": "a_c.fd-support.attempt-event/1"
+                  }
+                },
+                {
+                  "event_chain_gap_or_conflict": {
+                    "attempt": {
+                      "id": "sha256:07ae6f085ad1017397890fa8366d2d2c624fd35d111fa80424ded49ed97b61ee",
+                      "sha256": "07ae6f085ad1017397890fa8366d2d2c624fd35d111fa80424ded49ed97b61ee"
+                    },
+                    "cursor": 8,
+                    "data": {
+                      "effect": {
+                        "core_value": "indeterminate",
+                        "end_established": false,
+                        "process_end_established": true,
+                        "residuals": [
+                          "Generic process/return does not establish intended semantic outcome or all external/descendant effect end."
+                        ],
+                        "value": "completion_unknown"
+                      },
+                      "observations": {
+                        "changes": [],
+                        "gaps": [],
+                        "observations": []
+                      }
+                    },
+                    "kind": "effect_observation",
+                    "observed_at_ns": 1792940339511916000,
+                    "previous": {
+                      "id": "sha256:a84461ed59b47de3995eee23d7fee986b662694b9539069dcf0c1443317a6136",
+                      "sha256": "a84461ed59b47de3995eee23d7fee986b662694b9539069dcf0c1443317a6136"
+                    },
+                    "schema": "a_c.fd-support.attempt-event/1"
+                  }
+                }
+              ],
+              "reason": "Cannot append to incomplete Attempt event chain",
+              "source_refs": []
+            }
+          },
+          "operation": "dispatch.cancel",
+          "schema": "a_c.fd-support.composition-diagnostic/1",
+          "standing": "private diagnostic observation; no effect completion or disclosure grant"
+        },
+        "provenance": {
+          "actor": {
+            "actor_id": "executive",
+            "authorship": "executive",
+            "family": "A",
+            "operations": [
+              "checks.evaluate",
+              "composition.inspect",
+              "context.assemble",
+              "contract.preflight",
+              "dispatch.cancel",
+              "dispatch.observe",
+              "dispatch.start",
+              "events.wait",
+              "evidence.read",
+              "graph.project",
+              "records.find",
+              "records.read",
+              "refresh.prepare",
+              "relations.query",
+              "resources.aggregate",
+              "results.conjoin",
+              "return.capture",
+              "return.check",
+              "review.prepare",
+              "source.read",
+              "tools.describe",
+              "work.project",
+              "work.write",
+              "workspace.observe"
+            ],
+            "role": "Executive",
+            "role_binding": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/law.txt",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+            },
+            "role_transition": null
+          },
+          "attempt": null,
+          "definition_sha256": "2651bb743b0b1b977ca58f0325f8177f69f6c00d23da8b22b0036ac4154ebeb9",
+          "method_profile_sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7",
+          "observed_interval": {
+            "clock": "unix_ns",
+            "ended_ns": 1792940340386804000,
+            "started_ns": 1792940340386804000
+          },
+          "policy_sha256": "0d3774497d6fb05ebb189891cf01e40570bc85ce3ee2be91285bc0bcb06d8c96",
+          "product_id": "urn:test:product",
+          "request_id": "composition-8",
+          "request_sha256": "5b1bcaffc80c163db68c2b1adca12ec37fd8c4e0984ee014108276f3fdb048a3",
+          "requester_principal": "executive",
+          "target_principal": null
+        },
+        "schema": "a_c.fd-support.artifact/1"
+      },
+      "private_read_response": {
+        "evidence": {
+          "id": "sha256:9b744d62005f7bcbb787d7258695987d4ba865c9def89beeb0e8a41df517fea0",
+          "sha256": "9b744d62005f7bcbb787d7258695987d4ba865c9def89beeb0e8a41df517fea0"
+        },
+        "id": "composition-9",
+        "operation": "evidence.read",
+        "operation_outcome": {
+          "cause": "unsupported_contract",
+          "core_value": "out_of_frame",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(evidence.read): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "refused(capability)"
+        },
+        "refusal": {
+          "code": "unsupported_contract",
+          "gaps": [
+            {
+              "detail_count": 0,
+              "diagnostics": "withheld by selected composition binding",
+              "effect_state": "completion_unknown",
+              "end_established": false,
+              "history_state": "not_established_by_refusal",
+              "private_retention": "included in operation publication"
+            }
+          ],
+          "reason": "Operation or carrier is outside the selected composition contract",
+          "source_refs": []
+        },
+        "result": null,
+        "schema": "a_c.fd-support.response/1",
+        "status": "refused"
+      },
+      "subsequent_observation": {
+        "evidence": {
+          "id": "sha256:877aebefae707effa4e0aa05f60c0c53e0735f6d73bde7fff45de954489f208f",
+          "sha256": "877aebefae707effa4e0aa05f60c0c53e0735f6d73bde7fff45de954489f208f"
+        },
+        "id": "composition-10",
+        "operation": "dispatch.observe",
+        "operation_outcome": {
+          "cause": "source_missing",
+          "core_value": "invalid_basis",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(dispatch.observe): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "refused(basis)"
+        },
+        "refusal": {
+          "code": "source_missing",
+          "gaps": [
+            {
+              "detail_count": 1,
+              "diagnostics": "withheld by selected composition binding",
+              "effect_state": "completion_unknown",
+              "end_established": false,
+              "history_state": "not_established_by_refusal",
+              "private_retention": "included in operation publication"
+            }
+          ],
+          "reason": "Operation unavailable under the selected composition binding",
+          "source_refs": []
+        },
+        "result": null,
+        "schema": "a_c.fd-support.response/1",
+        "status": "refused"
+      }
+    },
+    {
+      "name": "AC2 authorized live control remains usable after composition revocation",
+      "result": "pass",
+      "observation": {
+        "evidence": {
+          "id": "sha256:46d0dcf3e38a2fe60774f84261184e92bba692762a6c6945c6273e0fc30ba60c",
+          "sha256": "46d0dcf3e38a2fe60774f84261184e92bba692762a6c6945c6273e0fc30ba60c"
+        },
+        "id": "composition-4",
+        "operation": "dispatch.observe",
+        "operation_outcome": {
+          "cause": "declared output available",
+          "core_value": "satisfied",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(dispatch.observe): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "returned"
+        },
+        "refusal": null,
+        "result": {
+          "artifact": null,
+          "value": {
+            "attempt": {
+              "id": "sha256:30a8f6fab4cd8c99fbddce158748463b456816768063316cfd7b625beec768da",
+              "sha256": "30a8f6fab4cd8c99fbddce158748463b456816768063316cfd7b625beec768da"
+            },
+            "consumer_receipt": "unknown",
+            "cursor": 6,
+            "effect": {
+              "end_established": false,
+              "value": "completion_unknown"
+            },
+            "history_complete": true,
+            "limits": [
+              "Redacted control view; content readback requires its own composition permission."
+            ],
+            "process_end": null
+          }
+        },
+        "schema": "a_c.fd-support.response/1",
+        "status": "ok"
+      },
+      "cancel_response": {
+        "evidence": {
+          "id": "sha256:274284e41ec9293afb3933f40a7029baa3ad88b206d819263dd6c8f8d5b5df46",
+          "sha256": "274284e41ec9293afb3933f40a7029baa3ad88b206d819263dd6c8f8d5b5df46"
+        },
+        "id": "composition-5",
+        "operation": "dispatch.cancel",
+        "operation_outcome": {
+          "cause": "declared output available",
+          "core_value": "satisfied",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(dispatch.cancel): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "returned"
+        },
+        "refusal": null,
+        "result": {
+          "artifact": null,
+          "value": {
+            "attempt": {
+              "id": "sha256:30a8f6fab4cd8c99fbddce158748463b456816768063316cfd7b625beec768da",
+              "sha256": "30a8f6fab4cd8c99fbddce158748463b456816768063316cfd7b625beec768da"
+            },
+            "effect": "completion_unknown",
+            "end_established": false,
+            "limits": [
+              "The live supervisor may deliver the request; cancellation is not completion or rollback."
+            ],
+            "request_event": {
+              "id": "sha256:a70703efc42afa7f9a585bef72bb1d717148e832bcc814283de55c500ef62423",
+              "sha256": "a70703efc42afa7f9a585bef72bb1d717148e832bcc814283de55c500ef62423"
+            }
+          }
+        },
+        "schema": "a_c.fd-support.response/1",
+        "status": "ok"
+      },
+      "ended": {
+        "evidence": {
+          "id": "sha256:27afcf0b063d7966851a8f479b5be00ae61feab1e59f2dbf2aeb805060f4cabf",
+          "sha256": "27afcf0b063d7966851a8f479b5be00ae61feab1e59f2dbf2aeb805060f4cabf"
+        },
+        "id": "composition-7",
+        "operation": "dispatch.observe",
+        "operation_outcome": {
+          "cause": "declared output available",
+          "core_value": "satisfied",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(dispatch.observe): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "returned"
+        },
+        "refusal": null,
+        "result": {
+          "artifact": null,
+          "value": {
+            "attempt": {
+              "id": "sha256:30a8f6fab4cd8c99fbddce158748463b456816768063316cfd7b625beec768da",
+              "sha256": "30a8f6fab4cd8c99fbddce158748463b456816768063316cfd7b625beec768da"
+            },
+            "consumer_receipt": "unknown",
+            "cursor": 12,
+            "effect": {
+              "end_established": false,
+              "value": "completion_unknown"
+            },
+            "history_complete": true,
+            "limits": [
+              "Redacted control view; content readback requires its own composition permission."
+            ],
+            "output": {
+              "process_end": {
+                "descendants": "unknown",
+                "ended_ns": 1792940341626679000,
+                "observed": true,
+                "returncode": -15
+              },
+              "stderr": {
+                "id": "sha256:187129985788035844ad89347640d0db606d4cc002d891b26c7ab1c6b384a559",
+                "sha256": "187129985788035844ad89347640d0db606d4cc002d891b26c7ab1c6b384a559"
+              },
+              "stdout": {
+                "id": "sha256:854cf7bcfeaadb86890f3690433d60abfab6293a290577a028de326c01290bae",
+                "sha256": "854cf7bcfeaadb86890f3690433d60abfab6293a290577a028de326c01290bae"
+              }
+            },
+            "process_end": {
+              "descendants": "unknown",
+              "ended_ns": 1792940341626679000,
+              "observed": true,
+              "returncode": -15
+            }
+          }
+        },
+        "schema": "a_c.fd-support.response/1",
+        "status": "ok"
+      }
+    },
+    {
+      "name": "Successful review retains private incomplete-history detail without disclosure",
+      "result": "pass",
+      "response": {
+        "evidence": {
+          "id": "sha256:881d48499d66e842197c919d8d5697324c6700153dad9650a0cf155a53213cd7",
+          "sha256": "881d48499d66e842197c919d8d5697324c6700153dad9650a0cf155a53213cd7"
+        },
+        "id": "composition-1",
+        "operation": "review.prepare",
+        "operation_outcome": {
+          "cause": "declared output available",
+          "core_value": "satisfied",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(review.prepare): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+          },
+          "value": "returned"
+        },
+        "refusal": null,
+        "result": {
+          "artifact": null,
+          "value": {
+            "acquired": [
+              {
+                "acquisition": {},
+                "content_base64": "b25lCnR3bwp0aHJlZQo=",
+                "coordinates": null,
+                "parent_sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2",
+                "selected_sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2",
+                "size_bytes": 14,
+                "source": {
+                  "engine": "workspace-regular-file",
+                  "object": null,
+                  "path": "inputs/law.txt",
+                  "root": "workspace",
+                  "selector": null,
+                  "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+                }
+              }
+            ],
+            "candidate_population": [],
+            "claim": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/law.txt",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+            },
+            "comparison": null,
+            "expectations": null,
+            "exposure": [],
+            "gaps": [
+              {
+                "count": 2,
+                "details": "retained privately",
+                "standing": "unresolved_review_diagnostics"
+              }
+            ],
+            "independence": {
+              "external_exposure": "unknown",
+              "selected_policy": null,
+              "semantic_independence": "not certified"
+            },
+            "limits": [
+              "acquisition/diff/exposure facts only; no severity, disposition or mental-independence certificate"
+            ],
+            "phase": "expectation",
+            "population_complete": false
+          }
+        },
+        "schema": "a_c.fd-support.response/1",
+        "status": "ok"
+      },
+      "private_diagnostics": [
+        {
+          "kind": "raw",
+          "payload": {
+            "detail": {
+              "exposure": [],
+              "gaps": [
+                "Opaque/missing ReviewClaim candidate population remains unknown; no inferred prose mapping",
+                {
+                  "history": {
+                    "complete": false,
+                    "gaps": [
+                      {
+                        "in_flight_or_orphan_stage": ".stage-PRIVATE-REVIEW-HISTORY-DETAIL-READBACK"
+                      }
+                    ],
+                    "observed_at_ns": 1792940342035352000,
+                    "refs": [],
+                    "scope": {
+                      "evidence_root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-public-retry-6wgu3qcy/evidence",
+                      "kind": "acquisition",
+                      "product_id": "urn:test:product"
+                    }
+                  }
+                }
+              ]
+            },
+            "operation": "review.prepare",
+            "schema": "a_c.fd-support.composition-diagnostic/1",
+            "standing": "private diagnostic observation; no effect completion or disclosure grant"
+          },
+          "provenance": {
+            "actor": {
+              "actor_id": "reviewer",
+              "authorship": "reviewer",
+              "family": "B",
+              "operations": [
+                "checks.evaluate",
+                "composition.inspect",
+                "context.assemble",
+                "contract.preflight",
+                "dispatch.cancel",
+                "dispatch.observe",
+                "dispatch.start",
+                "events.wait",
+                "evidence.read",
+                "graph.project",
+                "records.find",
+                "records.read",
+                "refresh.prepare",
+                "relations.query",
+                "resources.aggregate",
+                "results.conjoin",
+                "return.capture",
+                "return.check",
+                "review.prepare",
+                "source.read",
+                "tools.describe",
+                "work.project",
+                "work.write",
+                "workspace.observe"
+              ],
+              "role": "Reviewer",
+              "role_binding": {
+                "engine": "workspace-regular-file",
+                "object": null,
+                "path": "inputs/law.txt",
+                "root": "workspace",
+                "selector": null,
+                "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+              },
+              "role_transition": null
+            },
+            "attempt": null,
+            "definition_sha256": "2651bb743b0b1b977ca58f0325f8177f69f6c00d23da8b22b0036ac4154ebeb9",
+            "method_profile_sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7",
+            "observed_interval": {
+              "clock": "unix_ns",
+              "ended_ns": 1792940342035531000,
+              "started_ns": 1792940342035531000
+            },
+            "policy_sha256": "551ce6939e8618b2e3f4eb424e348f168ccaac92470d1f18649e2c16671fd3bd",
+            "product_id": "urn:test:product",
+            "request_id": "composition-1",
+            "request_sha256": "4097bf3fb413203d355831f8c0a69cbcf0a8617cbcef73737b7392ee154c611d",
+            "requester_principal": "reviewer",
+            "target_principal": null
+          },
+          "schema": "a_c.fd-support.artifact/1"
+        }
+      ]
+    },
+    {
+      "name": "Selected-mode publication and transport failure projections",
+      "result": "pass",
+      "method": "in-process boundary fault injection, not CLI environmental reproduction",
+      "publication_response": {
+        "schema": "a_c.fd-support.response/1",
+        "id": "independent-projection-probe",
+        "operation": "source.read",
+        "status": "error",
+        "result": null,
+        "refusal": {
+          "code": "evidence_publication_failed",
+          "reason": "Durable publication is not established; effect and delivery remain unresolved",
+          "gaps": [
+            {
+              "diagnostics": "withheld by selected composition binding",
+              "detail_count": 2,
+              "history_state": "not_established_by_refusal",
+              "effect_state": "completion_unknown",
+              "end_established": false,
+              "private_retention": "not established"
+            }
+          ],
+          "source_refs": []
+        },
+        "operation_outcome": null,
+        "evidence": null
+      },
+      "transport_stderr": "Transport observation unavailable; delivery evidence remains unknown; diagnostic details withheld\n"
+    }
+  ],
+  "result": "all six bounded readbacks passed"
+}

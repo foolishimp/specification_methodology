@@ -1,0 +1,42 @@
+{
+  "status": "passed declared current package and operative-source checks",
+  "package_commands": [
+    {
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/codex/tests/verify_package.py",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/codex"
+      ],
+      "exit": 0,
+      "stdout": "{\"destination_checked\": false, \"files\": 12, \"installed_checked\": false, \"inventory_sha256\": \"d8b111ffcb4cb53536fb8c0c6ed87abf055d9b90b491540bdf3624202dfdc048\", \"limits\": \"finite bytes/metadata/resources/custody only; no semantic or actual-host qualification\", \"local_links\": 18, \"status\": \"passed\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-I",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude/tests/check_package.py"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"status\": \"ok\",\n  \"errors\": []\n}\n",
+      "stderr": ""
+    }
+  ],
+  "local_links": 65,
+  "markdown_files": 24,
+  "local_link_failures": [],
+  "self_report_target": "This report is materialized before the final existence assertion.",
+  "codex_source_routes_checked": 17,
+  "operative_provider_pins_checked": 10,
+  "recorded_test_only_source_drift": [
+    {
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py",
+      "selected_sha256": "c9e6abcda666c12a37c32fac1afd6b636221f9492e716059c365702f2540c388",
+      "current_sha256": "fdec474dd7df5a3f3c3f65ad47c0ae3274048efdc6015db5c1d23789a7603bb5"
+    }
+  ],
+  "test_drift_disposition": "PROVIDER_SUCCESSION.json; original native operation selection unchanged",
+  "limitations": "Mechanical source/package checks only; no installed-host behavior or semantic qualification."
+}

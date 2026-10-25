@@ -13,6 +13,47 @@
 
 ## Boundary
 
+### Selected composition-verification increment
+
+The owner's 26 October 2026 instruction selects the implementation of the
+reviewed recursive Product-composition proposal. The manager increment restores
+the existing Product Definition target, identity, relation and contract
+resolution obligations. The source builder remains the exact `v2.5.0-rc.4`
+basis in `stdo_default.json`; this does not adopt the methodology amendment.
+
+`fleet verify` checks each selected definition and its explicitly declared
+composition closure. `--root` selects definitions; `--resolver-root` optionally
+declares a larger local acquisition boundary, without selecting unrelated
+Products or granting operation authority. The default boundary is the selected
+directory, or a selected file's parent. Each target is checked against its own
+schema and installed basis. Shared targets are acquired once while every edge
+retains its own index, relation and contract observations. Cycles terminate by
+visited physical definition identity; a mechanical cycle establishes neither
+work readiness nor semantic compatibility. Duplicate Product identities refuse.
+
+The resolver supports local relative/absolute and local `file:` references
+inside that boundary, and exact immutable `stdo:` references through the
+explicitly selected installed Store. It does not fetch network resources,
+install missing cuts or resolve mutable selectors. Unsupported schemes or
+fragment formats are reported as unsupported rather than resolved or silently
+ignored. Local symlink components and path escapes refuse before acquisition.
+Markdown fragments use the shared Axiom Indexer heading convention, outside
+fenced examples, plus explicit HTML anchors. Markdown escapes and matching
+backtick spans (including multiline spans) cannot supply those HTML anchors;
+raw tags are consumed as units so their attributes are not interpreted as code
+delimiters. The existing heading-slug function is unchanged. This bounded
+fragment scanner is not a general Markdown renderer. JSON fragments use JSON Pointer;
+HTML fragments use explicit IDs/anchor names. A directory contract establishes
+directory existence, not an enumeration or assessment of all its descendants.
+
+`composition.verify_composition` is the reusable read-only API. Its report
+retains the resolver boundary, limits, definition and acquired-file digests,
+per-edge reference results and exact failures. Graph limits and per-file size
+limits fail closed; unavailable or changed inputs are not successful resolution.
+There is no authority-prose interpreter, proof of semantic sufficiency,
+filesystem sandbox or hostile concurrent mutation guarantee. This increment
+does not add a runtime dependency on any sibling Product.
+
 The manager is a dependency-light Python command-line application installed
 once per user or build image. It manages exact STDO distribution bytes and
 Product Definition routing. It does not evaluate semantic conformance, govern a

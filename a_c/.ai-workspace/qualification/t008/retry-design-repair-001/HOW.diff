@@ -1,0 +1,142 @@
+--- a_c/build_tenants/graphify/design/fd-support.md@faefdf24
++++ a_c/build_tenants/graphify/design/fd-support.md@retry-design001
+@@ -1,6 +1,6 @@
+ # Deterministic support for F_P development actors
+ 
+-Status: **provisional HOW, reconciliation-008 for T-008**. This is tenant HOW for
++Status: **provisional HOW, retry-design-repair-001 for T-008**. This is tenant HOW for
+ [REQ-AC-FD-001..013](../../../specification/requirements/fd-support-tools.md)
+ and the [qualification obligations](../../../specification/requirements/fd-support-verification.md).
+ This document specifies the selected contract; separate closed module returns
+@@ -473,6 +473,10 @@
+ selected current observations, validates the exact packet and registered
+ predicate premises, checks role/effects/tools/territory/result surface and
+ executor dependencies, and binds the draft to the exact context digest.
++Only `grant.admission.required_predicates` are evaluated for admission, on the
++activation subject `packet.subject_basis.subject` and selected execution Basis.
++The optional reconciliation selection below is not evaluated on that subject
++or folded into admission; preflight still validates its closed carrier.
+ If the protected mechanism's conditions hold it records its actual admission
+ receipt: mechanism id/digest, authority source, exact contract digest, decision,
+ evidence and predicates actually evaluated. An optional existing admission or
+@@ -498,7 +502,7 @@
+ |---|---|
+ | Principal | `actor_id`, `role`, `family`, `authorship`, `operations`, `role_binding`, `role_transition` |
+ | Grant | `id`, `authority_sources`, `outcome`, `principals`, `targets`, `operations`, `tools`, `executors`, `territory`, `preconditions`, `admission`, `notification_sink` |
+-| Admission selection | `mechanism_id`, `mechanism_source`, `authority_source`, `required_predicates`, `allowed_override_sources` |
++| Admission selection | Required: `mechanism_id`, `mechanism_source`, `authority_source`, `required_predicates`, `allowed_override_sources`; optional: `required_reconciliation_predicates` |
+ | Executor | `id`, `executable`, `argv`, `dependencies`, `cwd`, `environment`, `actor_id`, `settings`, `tools`, `effect_scope`, `stdin_mode`, `stdout_decoder`, `observers` |
+ | Predicate | `id`, `source`, `subject`, `basis`, `input_names`, `expression`, `limits` |
+ | Conjunction operator | `id`, `source`, `decision_authority`, `rule`, `plan_source`, `qualification` |
+@@ -513,6 +517,19 @@
+ remain distinct provenance. An override source must be separately registered
+ by the operator and explicitly bind the exact contract; the request cannot add
+ one to that registry. No authority is inferred from the words in `outcome`.
++
++This provisional policy/1 refinement permits exactly one additional optional
++Admission-selection key, `required_reconciliation_predicates`. It has the same
++finite nonempty-string id-list grammar as `required_predicates`, naming only
++registered predicates. Other unknown keys, null/non-array values and malformed
++ids refuse under the existing closed policy boundary. Absence means an empty
++reconciliation selection, not a default predicate or retry permission. Old
++grants without an explicit nonempty selection cannot retry. The two lists have
++distinct domains: required_predicates is activation-subject admission only;
++required_reconciliation_predicates is predecessor-Attempt/current-Basis
++reconciliation only. Neither is a source from which the other is inferred or
++classified by predicate name, role or matching subject. This adds no public
++operation, request argument, method law or shared-content schema definition.
+ 
+ Executor `executable` is an exact absolute regular-file path/digest chosen by
+ the operator; `argv` is its complete fixed string array including argv[0].
+@@ -557,16 +574,23 @@
+ reconcile observed effects/end, and supply an explicit already-authorized retry
+ with predecessor/reconciliation evidence. `retry_of` is required for another
+ attempt of the same activation. The same applicable protected Grant must
+-explicitly require at least one existing registered reconciliation predicate
+-whose exact declared subject is the complete predecessor Attempt id/digest,
+-whose basis is the selected current execution Basis, and whose source contract
+-is the operator-verified owner-selected reconciliation for this retry scope.
+-All such required predicates and ordinary Grant conditions require actual
+-authenticated checks.evaluate evidence and current input observations; an
+-arbitrary satisfied check or caller-selected predicate cannot substitute.
+-Core checks that pure binding and effects freshly rechecks it at reservation
+-and launch. No selected predicate means the supported retry refuses/holds its
+-missing contract. Original predecessor/source/reconciliation refs, results and
++explicitly select at least one registered predicate in
++`admission.required_reconciliation_predicates`; `required_predicates` is never
++the retry selector. Every selected reconciliation predicate must declare the
++complete predecessor Attempt id/digest as its exact subject and the selected
++current execution Basis, with the operator-verified owner-selected source
++contract for this retry scope. A wrong subject/basis/unknown id is a failed
++premise, not a predicate silently filtered out or reclassified as admission.
++Only actual protected checks.evaluate OperationEvidence on those exact
++coordinates can supply its satisfied judgment. An F_P Return evaluation,
++caller-authored record, arbitrary satisfied check or supplied predicate cannot
++substitute. All selected predicates require current input acquisition and
++ordinary Grant conditions; historical satisfaction alone is insufficient.
++Core checks the pure binding and effects freshly rechecks it at reservation
++and launch. Absent/empty reconciliation selection holds retry as
++`effect_unreconciled`; malformed selection refuses the closed contract.
++Missing/unsatisfied/stale/wrong-route evidence retains its exact existing
++gap/refusal, never grants retry. Original predecessor/source/reconciliation refs, results and
+ unknown effects survive; success neither relabels the predecessor nor grants
+ retry authority or establishes descendant/effect completion. No success or retry
+ grant follows from silence, and no automatic retry is introduced.
+@@ -2189,6 +2213,8 @@
+     +sha256
+     +productBinding
+     +existingGrants
++    +activationAdmissionPredicates
++    +predecessorReconciliationPredicates
+   }
+   class MethodBinding {
+     <<authoritative>>
+@@ -2320,7 +2346,7 @@
+   R->>C: render exact packet; measure fit only for selected declared capacity
+   R->>E: query verified prior return and source exposure history
+   R->>O: check caller coordination grant and activated target separately
+-  R->>O: resolve existing grant, its sole sink/consumer and selected predicates
++  R->>O: resolve grant, sole sink/consumer and activation admission predicates
+   alt missing authority, basis, closure or required fit
+     R->>E: retain exact refusal and deciding gap
+     R-->>P: return source-owned refusal, no Worker result
+@@ -2328,6 +2354,10 @@
+     R->>F: bind contract digest, mechanism, authority and checked premises
+     P->>R: dispatch selected exact Preflight
+     R->>O: recheck policy, sources, dependencies and preimages
++    opt explicit retry_of
++      R->>O: require selected predecessor reconciliation predicates/current Basis
++      R->>E: verify actual protected checks.evaluate evidence and current inputs
++    end
+     R->>A: reserve attempt with complete Grant-selected sink binding before launch
+     A->>X: fixed invocation and exact retained context
+     X-->>A: acknowledgment, output and observed process end
+@@ -2360,8 +2390,8 @@
+   EffectChecked --> NotEffected: subject counterexample establishes outcome absent
+   EffectChecked --> CompletionUnknown: admitted evidence cannot decide
+   NotEffected --> EndUnestablished: counterexample retained but end still unknown
+-  EndUnestablished --> EffectChecked: authorized reconciliation observes subject and end
+-  CompletionUnknown --> EffectChecked: fresh authorized reconciliation acquires evidence
++  EndUnestablished --> EffectChecked: Grant-selected reconciliation observes subject and end
++  CompletionUnknown --> EffectChecked: Grant-selected reconciliation reacquires current evidence
+   Completed --> [*]: retain closed effect observation
+   NotEffected --> [*]: retain counterexample and end evidence or explicit residual
+   RefusedBeforeLaunch --> [*]: retain no-launch evidence
+@@ -2412,7 +2442,7 @@
+ | FD-004 | relations.query/project/checks; core | Authored closure cycles and conditional true/false/missing premises; inferred edge cannot govern, incomplete absence cannot prove unaffectedness. |
+ | FD-005 | context.assemble; core | Real records/source acquired and exact stdin count; locator-only, denied late read, excess and unknown host remain distinct; no trimming. |
+ | FD-006 | preflight; core + effects receipt | Product-bound trusted grant actually admits supported contract; fabricated receipt, wrong Product/outcome/basis and missing durable surface refuse. |
+-| FD-007 | dispatch/observe/cancel/events; effects | Real registered process and actual F_P actor; invocation drift, changed helper/preimage, timeout, lost response, partial write, unknown descendant and bounded fallback retain actual distinctions. |
++| FD-007 | dispatch/observe/cancel/events; effects | Real registered process and actual F_P actor; positive retry must pass actual public contract.preflight with activation admission predicates, then dispatch.start with separately selected predecessor reconciliation evidence. Admission-list-only/absent/empty retry selection, wrong subject/basis, stale inputs, F_P/wrong-route evidence and unselected check cannot permit retry. Invocation drift, changed helper/preimage, timeout, lost response, partial write, unknown descendant and bounded fallback retain actual distinctions; a fixture bypassing preflight qualifies no public retry. |
+ | FD-008 | return capture/check; core + retention edge | Original valid/stale/wrong-subject/wrong-basis/malformed/duplicate/conflicting returns; no unperformed review result and no duplicate independence. |
+ | FD-009 | review.prepare, raw proof access/diff; core | Nonauthor source-first expectations then exact candidate/tests/fixtures acquired through public tools; early exposure and same-family-without-policy cannot certify independence. |
+ | FD-010 | checks/conjoin; core | Decidable truth/false/unknown, method gap-versus-invalid_basis, original domain outcomes, stale component and nested failure/gap survival; necessary-condition cannot satisfy stronger predicate. |
+@@ -2667,7 +2697,7 @@
+ | Owner / transition | Enclosing relation and basis continuity | Complete commit unit and reconstruction | Competing path |
+ |---|---|---|---|
+ | Product mechanism / Preflight admission | Exact Product/authorized owner binding, outcome/grant, packet/context, caller/target, method/profile, all material observation/dependency refs, executor/surface, applicable predicates and preimages. Reacquire/lock and validate every join before commitment. | One immutable complete Preflight receipt envelope after all referenced payloads are present/verified. Draft/staging artifacts confer no admitted truth. Reconstruct exact receipt and its complete references; absent marker means no receipt. | Only selected authorized mechanism; bootstrap historical scope as above, no request-supplied bypass. |
+-| Effect membrane / Attempt reservation | Admitted receipt plus exact request key/hash, context, target/executor/settings, result surface, the complete exact Grant-selected notification sink binding/consumer, retry/reconciliation and fresh required basis. | One complete immutable Attempt reservation anchor, atomically published before launch. No durable reservation means no launch. Exact replay returns the same reservation; conflicting key refuses. | Only registered supervisor path; no direct shell or user entry point establishes reservation/admission. |
++| Effect membrane / Attempt reservation | Admitted receipt plus exact request key/hash, context, target/executor/settings, result surface, the complete exact Grant-selected notification sink binding/consumer, retry_of plus separately selected admission.required_reconciliation_predicates evidence on exact predecessor/current Basis, and fresh required basis. | One complete immutable Attempt reservation anchor, atomically published before launch. No durable reservation means no launch. Exact replay returns the same reservation; conflicting key refuses. | Only registered supervisor path; no direct shell or user entry point establishes reservation/admission. |
+ | Registered executor edge / Invocation | Existing reservation, exact executable/helper/config preimages, caller/target authority and fresh inputs locked only across precheck/intent/spawn/start observation; per-Attempt supervision remains locked across actor IO. | Admission is already complete. Release Product scope before waiting/streaming actor IO; later observers reacquire their bounded scope. Actual process start is an external effect, not transactionally coupled to evidence. Intent exists first; lost spawn/ack leaves completion_unknown, never automatic repeat. Fresh observation uses the anchor and actual process/subject evidence. | Registered executor only; arbitrary argv/projection-triggered execution unsupported. |
+ | Writer membrane / one target record | Exact caller Worker/Writer grant, target preimage, intended whole postimage, authority/method/current dependencies, target lock and durable intent. | One whole target-file publication: complete new bytes or original/absent target. Existing replacement uses same-directory atomic replace; absent creation links a fully written/fsynced temp file exclusively into an absent target, never exposes a partially written new file. Reconstruct from durable intent and actual pre/post/other bytes; unknown other state cannot be reset or blindly retried. | Only named granted Writer interface for this tool domain; no Executive/Reviewer target impersonation or non-atomic fallback. |
+ | Evidence store / immutable artifact or event | Exact complete envelope, all dependencies, provenance and content digest; protected namespace and existing evidence grant. | Complete same-directory atomic publication of one verified envelope. Raw/staged payloads are not admission markers. History only treats complete verified marker records as admitted evidence; orphan staging is not success. | One envelope grammar/verification path; optional indexes are nonauthoritative and rebuildable. |

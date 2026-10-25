@@ -1,0 +1,30 @@
+{
+  "failed_assertion": "nested_counterexample unconditionally asserted value.failures is nonempty",
+  "failed_subtest": "CoreTests.test_inherited_counterexample_cannot_grant_excluded_or_invalid_results variant wrong-subject",
+  "final_method": {
+    "end_line": 663,
+    "line": 658,
+    "path": "a_c/build_tenants/graphify/test_env/test_ac_support_core.py"
+  },
+  "final_run": "runs/003-final-focused",
+  "final_source": {
+    "a_c/build_tenants/graphify/code/ac_support_core.py": "842f3f136478b6948196fdd431f207f236c8c3e6ebb5573503726061c5d7bcc5",
+    "a_c/build_tenants/graphify/code/ac_support_effects.py": "23dfafb2d7177d64287fc22002ec039ecc451d03c864a647f3c2deade7b2145c",
+    "a_c/build_tenants/graphify/test_env/test_ac_support_core.py": "c2ff9be121ee7ccdf6974e257c0d3f0e86b6f92c84a7020d5f2b1f632cd0530f",
+    "a_c/build_tenants/graphify/test_env/test_ac_support_effects.py": "d944ba73369d3c672ba1b830419260f239d8d1bbfdc6558461412ae1f8978dda",
+    "a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py": "597f33aae147fdc0ecc7c85638bf77615a59b856f6ee4ffe65041d1e9b82ef9e"
+  },
+  "initial_method_count": 35,
+  "initial_returncode": 1,
+  "initial_run": "runs/001-focused",
+  "initial_source": {
+    "a_c/build_tenants/graphify/code/ac_support_core.py": "842f3f136478b6948196fdd431f207f236c8c3e6ebb5573503726061c5d7bcc5",
+    "a_c/build_tenants/graphify/code/ac_support_effects.py": "23dfafb2d7177d64287fc22002ec039ecc451d03c864a647f3c2deade7b2145c",
+    "a_c/build_tenants/graphify/test_env/test_ac_support_core.py": "de18ca7ad08823817646793745f0feabc442a7a8d42be97351472dbda0c62042",
+    "a_c/build_tenants/graphify/test_env/test_ac_support_effects.py": "d944ba73369d3c672ba1b830419260f239d8d1bbfdc6558461412ae1f8978dda",
+    "a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py": "597f33aae147fdc0ecc7c85638bf77615a59b856f6ee4ffe65041d1e9b82ef9e"
+  },
+  "only_change_after_initial_runs": "Test helper checks exact retained original for wrong-subject; other authenticated negative variants still require their failure evidence. No Product code changed.",
+  "reason": "The wrong-subject carrier is rejected by Return binding checks for this selected subject. Its original evidence remains retained and the conjunction records the missing/binding gap; it is not an authenticated applicable falsified evaluation. Requiring it in value.failures would incorrectly grant that status.",
+  "schema": "a_c.fixture-assertion-correction/1"
+}

@@ -1,0 +1,61 @@
+{
+  "claims": "Non-model preflight only; effective MCP disablement will be checked by each isolated real invocation.",
+  "config_unchanged": true,
+  "created_at": "2026-10-20T07:59:17.052396+00:00",
+  "dependencies": {
+    "mypy": "1.15.0",
+    "networkx": "3.4.2",
+    "numpy": "2.2.6",
+    "rapidfuzz": "3.13.0",
+    "tree-sitter": "0.25.2",
+    "tree-sitter-json": "0.24.8"
+  },
+  "environment": {
+    "GIT_OPTIONAL_LOCKS": "0",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "TMPDIR": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-common-build-0x9m_7z4/tmp",
+    "XDG_CACHE_HOME": "/Users/jim/src/apps/specification_methodology/a_c/applications/stdo-v3-common-35fb4824/build/cache"
+  },
+  "model_calls": 0,
+  "native_actor": {
+    "cli_version": "codex-cli 0.162.1",
+    "config_path": "/Users/jim/.codex/config.toml",
+    "config_sha256": "6b412812de72895a10a1cd2ec2c51e0bf697c0f4814fbea172ef9a4ebedd8909",
+    "executable": "/Users/jim/bin/codex",
+    "inline_overrides": {
+      "features.apps": false,
+      "features.js_repl": false,
+      "features.memories": false,
+      "features.multi_agent": false,
+      "features.shell_tool": false,
+      "mcp_servers.codex_app.command": "/usr/bin/false",
+      "mcp_servers.codex_app.enabled": false,
+      "mcp_servers.computer-use.enabled": false,
+      "mcp_servers.cua_repl.command": "/usr/bin/false",
+      "mcp_servers.cua_repl.enabled": false,
+      "mcp_servers.node_repl.enabled": false,
+      "mcp_servers.playwright.enabled": false,
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "project_doc_max_bytes": 0,
+      "service_tier": "default",
+      "web_search": "disabled"
+    },
+    "settings": {
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "service_tier": "default"
+    }
+  },
+  "profile": "ac.common.environment-preflight/1",
+  "python": {
+    "executable": "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+    "version": "3.12.8"
+  },
+  "upstream": {
+    "commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+    "prompt_path": "graphify/skills/codex/references/extraction-spec.md",
+    "prompt_sha256": "32d7decad42d58129c6694ea4e4ce1f72a531bc5161827d2095787e9448735e9",
+    "root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout"
+  }
+}

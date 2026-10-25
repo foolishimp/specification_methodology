@@ -1,0 +1,64 @@
+{
+  "automatic_external_host_managed_memory_exposure": "unknown",
+  "fixed_tool_policy_sha256": "d3dbebed35e3532d9d8a8e44df25f25a1b5bef115bffc6a7ede09f4a9b27f083",
+  "observed_final_result_metadata": [],
+  "observed_typed_initialization": [
+    {
+      "fields": {
+        "claude_code_version": "2.1.302",
+        "cwd": "/private/tmp/a-c-review-native-z3sp1bs8/assessment-001",
+        "mcp_servers": [
+          {
+            "name": "ac_review",
+            "source": "dynamic",
+            "status": "connected"
+          }
+        ],
+        "model": "claude-opus-5-5",
+        "output_style": "default",
+        "permissionMode": "dontAsk",
+        "session_id": "3d70f2d0-ea95-44de-98cd-d06e9ca7170b",
+        "subtype": "init",
+        "tools": [
+          "mcp__ac_review__checks_evaluate",
+          "mcp__ac_review__context_assemble",
+          "mcp__ac_review__contract_preflight",
+          "mcp__ac_review__dispatch_cancel",
+          "mcp__ac_review__dispatch_observe",
+          "mcp__ac_review__dispatch_start",
+          "mcp__ac_review__events_wait",
+          "mcp__ac_review__evidence_read",
+          "mcp__ac_review__graph_project",
+          "mcp__ac_review__records_find",
+          "mcp__ac_review__records_read",
+          "mcp__ac_review__refresh_prepare",
+          "mcp__ac_review__relations_query",
+          "mcp__ac_review__resources_aggregate",
+          "mcp__ac_review__results_conjoin",
+          "mcp__ac_review__return_capture",
+          "mcp__ac_review__return_check",
+          "mcp__ac_review__review_prepare",
+          "mcp__ac_review__source_read",
+          "mcp__ac_review__tools_describe",
+          "mcp__ac_review__work_project",
+          "mcp__ac_review__work_write",
+          "mcp__ac_review__workspace_observe"
+        ],
+        "type": "system"
+      },
+      "kind": "typed_init",
+      "source_line": 1,
+      "source_line_sha256": "1dcf4624769a1dd535d3261dab1676f3cb44b1e41203534b44b0479cfa3ce18c"
+    }
+  ],
+  "requested_effort": "xhigh",
+  "requested_flags": {
+    "dontAsk": true,
+    "no_builtins": true,
+    "no_session_persistence": true,
+    "permission_prompts_none": true,
+    "restricted": true,
+    "strict_explicit_MCP": true
+  },
+  "usage_billing": "Unknown; no final-result usage/cost record. No assistant usage fields read/summed and no guessed billing."
+}

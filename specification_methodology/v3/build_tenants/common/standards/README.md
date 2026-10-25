@@ -147,3 +147,8 @@ definition's basis URI, the manifest digest and the member inventory
 mutable authoring head nor the moving version-line selector silently
 replaces that consumer basis
 ([RELEASE §4](RELEASE.md#4-selector-and-consumer-adoption)) (P6, P3).
+
+The [Product composition frame](frames/product-composition.md) projects
+PRODUCT_DEFINITION §9 for recursive/standalone boundaries, edge authority and
+context. Its bound shared owners remain required when material; the frame is
+a derived view, not automatic permission or semantic sufficiency.

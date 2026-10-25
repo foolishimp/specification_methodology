@@ -1,0 +1,64 @@
+{
+  "$defs": {
+    "ArtifactRef": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "sha256": {
+          "$ref": "#/$defs/Sha256"
+        }
+      },
+      "required": [
+        "id",
+        "sha256"
+      ],
+      "type": "object"
+    },
+    "Id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "Sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "arguments": {
+      "additionalProperties": false,
+      "properties": {
+        "artifact": {
+          "$ref": "#/$defs/ArtifactRef"
+        },
+        "max_content_bytes": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "artifact"
+      ],
+      "type": "object"
+    },
+    "id": {
+      "$ref": "#/$defs/Id"
+    },
+    "operation": {
+      "const": "evidence.read"
+    },
+    "schema": {
+      "const": "a_c.fd-support.request/1"
+    }
+  },
+  "required": [
+    "schema",
+    "id",
+    "operation",
+    "arguments"
+  ],
+  "type": "object"
+}

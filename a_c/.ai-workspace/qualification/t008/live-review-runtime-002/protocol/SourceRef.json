@@ -1,0 +1,85 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "engine": {
+      "enum": [
+        "workspace-regular-file",
+        "immutable-git-blob",
+        "retained-evidence"
+      ]
+    },
+    "object": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "pattern": "^(?:[0-9a-f]{40}|[0-9a-f]{64})$",
+          "type": "string"
+        }
+      ]
+    },
+    "path": {
+      "$ref": "#/$defs/Id"
+    },
+    "root": {
+      "$ref": "#/$defs/Id"
+    },
+    "selector": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "lines": {
+              "items": false,
+              "maxItems": 2,
+              "minItems": 2,
+              "prefixItems": [
+                {
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                {
+                  "minimum": 1,
+                  "type": "integer"
+                }
+              ],
+              "type": "array"
+            }
+          },
+          "required": [
+            "lines"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "json_pointer": {
+              "$ref": "#/$defs/JsonPointer"
+            }
+          },
+          "required": [
+            "json_pointer"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "sha256": {
+      "$ref": "#/$defs/Sha256"
+    }
+  },
+  "required": [
+    "engine",
+    "root",
+    "path",
+    "object",
+    "sha256",
+    "selector"
+  ],
+  "type": "object"
+}

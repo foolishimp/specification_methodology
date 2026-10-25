@@ -1,0 +1,7 @@
+{
+  "checks": "Writer original request equals retained OperationEvidence.request; response with explicit evidence:null equals retained response_without_evidence.",
+  "correction": "Compare actual public response after replacing evidence with null; preserve complete exact envelopes and original raw request/response.",
+  "effect": "Only partial new reconciliation evidence files existed; no product/runtime/tool/guide mutation or call.",
+  "first_pass": "Stopped at pure local assertion comparing response_without_evidence by deleting evidence key. Existing retained OperationEvidence correctly contains explicit evidence:null.",
+  "schema": "a_c.T008.evidence-extraction-audit/1"
+}

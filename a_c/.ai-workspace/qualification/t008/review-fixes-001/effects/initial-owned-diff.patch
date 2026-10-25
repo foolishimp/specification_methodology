@@ -1,0 +1,818 @@
+diff --git a/a_c/build_tenants/graphify/code/ac_support_effects.py b/a_c/build_tenants/graphify/code/ac_support_effects.py
+index eb492fb0..cc264c0d 100644
+--- a/a_c/build_tenants/graphify/code/ac_support_effects.py
++++ b/a_c/build_tenants/graphify/code/ac_support_effects.py
+@@ -577,15 +577,56 @@ def _check_plan(runtime: c.Runtime, request: c.Object, plan: c.EffectPlan) -> No
+         raise c.SupportError("contract_violation", "Prepared effect does not bind this exact request/policy/principal", [], [])
+ 
+ 
++def _owner_binding(runtime: c.Runtime, request: c.Object, envelope: c.Object,
++                   schema: str) -> None:
++    payload = c.as_object(envelope["payload"])
++    provenance = c.as_object(envelope["provenance"])
++    c.make_artifact(c.text(envelope["kind"]), payload, provenance)
++    if payload.get("schema") != schema:
++        raise c.SupportError("history_incomplete", "Committed owner has an unexpected carrier", [], [])
++    saved = c.validate_request(payload["request"])
++    if provenance["request_id"] != saved["id"] or provenance["request_sha256"] != c.digest(saved):
++        raise c.SupportError("history_incomplete", "Committed owner request/provenance is incoherent", [], [])
++    if schema == "a_c.fd-support.request-claim/1" and payload["policy_sha256"] != provenance["policy_sha256"]:
++        raise c.SupportError("history_incomplete", "Committed claim policy/provenance is incoherent", [], [])
++    product = c.as_object(runtime.policy["product"])
++    expected: c.Object = {"product_id": product["definition_id"], "definition_sha256": c.as_object(product["definition"])["sha256"], "requester_principal": runtime.principal_id, "policy_sha256": runtime.policy_sha256, "method_profile_sha256": c.PROFILE_SHA256, "actor": runtime.principal}
++    if saved != request or any(provenance[name] != value for name, value in expected.items()):
++        raise c.SupportError("request_identity_conflict", "Committed owner binds different effective request/Product/principal/policy", [request["id"]], [])
++
++
++def _identity_history(runtime: c.Runtime, store: EvidenceStore, request: c.Object,
++                      schemas: tuple[str, ...]) -> c.Object:
++    refs: list[c.JSON] = []; gaps: list[c.JSON] = []
++    for schema in schemas:
++        kind = "attempt" if schema == "a_c.fd-support.attempt/1" else "raw"
++        query = store.query_artifacts(kind, {"provenance.product_id": _product(runtime),
++            "provenance.requester_principal": runtime.principal_id,
++            "payload.request.id": request["id"], "payload.schema": schema})
++        refs.extend(c.as_list(query["refs"]))
++        if query["complete"] is not True:
++            gaps.append(query)
++    return {"refs": refs, "complete": not gaps, "gaps": gaps,
++            "scope": {"product_id": _product(runtime), "principal": runtime.principal_id, "request_id": request["id"]}}
++
++
+ def _claim(runtime: c.Runtime, store: EvidenceStore, request: c.Object) -> str:
+     key = _key(runtime, request)
+     path = store.root / "requests" / (key + ".claim.json")
+-    old = _marker(store, path)
+-    if old is not None:
+-        payload = c.as_object(old["payload"])
+-        if payload.get("request") != request or payload.get("policy_sha256") != runtime.policy_sha256:
+-            raise c.SupportError("request_identity_conflict", "Same caller request identity has different effective inputs", [request["id"]], [])
++    owners: dict[str, c.Object] = {}
++    schemas = {"claim": "a_c.fd-support.request-claim/1", "outcome": "a_c.fd-support.effect-outcome/1", "intent": "a_c.fd-support.writer-intent/1", "attempt": "a_c.fd-support.attempt/1"}
++    for suffix, schema in schemas.items():
++        old = _marker(store, store.root / "requests" / (key + "." + suffix + ".json"))
++        if old is not None:
++            _owner_binding(runtime, request, old, schema)
++            owners[suffix] = old
++    if "claim" in owners:
+         return key
++    if owners:
++        raise c.SupportError("history_incomplete", "Required request claim owner is absent; no reconstruction or new reservation", [request["id"]], [])
++    history = _identity_history(runtime, store, request, tuple(schemas.values()))
++    if history["complete"] is not True or c.as_list(history["refs"]):
++        raise c.SupportError("history_incomplete", "Stable request identity has unresolved owner/history absence", [history], [])
+     selected_policy, selected_policy_ref = _selected_policy(runtime, request)
+     store.retain(selected_policy)
+     envelope, _ = _artifact(runtime, request, "raw", {"schema": "a_c.fd-support.request-claim/1", "request": request, "policy_sha256": runtime.policy_sha256, "selected_policy": selected_policy_ref})
+@@ -593,9 +634,26 @@ def _claim(runtime: c.Runtime, store: EvidenceStore, request: c.Object) -> str:
+     return key
+ 
+ 
+-def _completed(store: EvidenceStore, key: str) -> c.CoreOutcome | None:
++def _completed(runtime: c.Runtime, store: EvidenceStore, request: c.Object, key: str) -> c.CoreOutcome | None:
+     old = _marker(store, store.root / "requests" / (key + ".outcome.json"))
+-    return None if old is None else c.as_object(c.as_object(old["payload"])["outcome"], "retained CoreOutcome")
++    if old is None:
++        return None
++    _owner_binding(runtime, request, old, "a_c.fd-support.effect-outcome/1")
++    return c.as_object(c.as_object(old["payload"])["outcome"], "retained CoreOutcome")
++
++
++def _verify_support_graph(store: EvidenceStore, references: list[c.Object]) -> None:
++    """Verify historical typed support without treating quoted data as edges."""
++    pending = list(references)
++    verified: set[str] = set()
++    while pending:
++        reference = pending.pop()
++        identity = c.text(reference["id"])
++        if identity in verified:
++            continue
++        envelope = c.as_object(c.parse_json(store.resolve(reference)))
++        verified.add(identity)
++        pending.extend(_references(envelope))
+ 
+ 
+ def _complete(runtime: c.Runtime, store: EvidenceStore, request: c.Object, key: str, outcome: c.CoreOutcome) -> c.CoreOutcome:
+@@ -643,6 +701,43 @@ def _target_state(path: Path) -> c.Object:
+         raise
+ 
+ 
++def _write_recovery(runtime: c.Runtime, store: EvidenceStore, request: c.Object,
++                    old: c.Object, path: Path, target: c.Object) -> c.CoreOutcome:
++    """Observe an earlier intent under the request/Product/target locks."""
++    old_payload = c.as_object(old["payload"])
++    saved = c.as_object(old_payload["plan"])
++    if old_payload["request"] != request or saved["target"] != target or saved["requester"] != runtime.principal_id:
++        raise c.SupportError("request_identity_conflict", "Writer intent does not bind the exact request/principal", [], [])
++    state = _target_state(path)
++    intended = saved["intended_sha256"]
++    observation: c.Object = {"schema": "a_c.fd-support.writer-recovery/1", "intent": {"id": "sha256:" + c.digest(old), "sha256": c.digest(old)}, "target": target, "current": state, "matches_intended_postimage": state["sha256"] == intended, "effect": {"value": "completion_unknown", "end_established": False, "residual": "Original publication/result acknowledgment is not established; observed present bytes do not replay the operation."}, "repeated": False}
++    envelope, ref = _artifact(runtime, request, "raw", observation)
++    store.retain(envelope)
++    outcome = c.refusal_outcome(runtime, request, c.SupportError("effect_unreconciled", "Earlier Writer intent requires reconciliation before any repeated effect", [observation], []))
++    outcome["result"] = {"artifact": ref, "value": observation}
++    outcome["artifacts"] = [envelope]
++    return outcome
++
++
++def _recover_write(runtime: c.Runtime, store: EvidenceStore, request: c.Object,
++                   key: str) -> c.CoreOutcome | None:
++    old = _marker(store, store.root / "requests" / (key + ".intent.json"))
++    if old is None:
++        history = _identity_history(runtime, store, request, ("a_c.fd-support.writer-intent/1", "a_c.fd-support.effect-outcome/1"))
++        if history["complete"] is not True or c.as_list(history["refs"]):
++            raise c.SupportError("history_incomplete", "Cannot establish absence of an earlier Writer intent/owner", [history], [])
++        return None
++    _owner_binding(runtime, request, old, "a_c.fd-support.writer-intent/1")
++    _verify_support_graph(store, _references(old))
++    saved = c.as_object(c.as_object(old["payload"])["plan"])
++    target = c.as_object(c.as_object(request["arguments"])["target"])
++    path = c.source_path(runtime, target, write=True, allow_absent=True)
++    if saved["path"] != str(path):
++        raise c.SupportError("path_refused", "Retained Writer intent path differs from its target", [], [])
++    with store._lock("scope:" + _product(runtime)), store._lock("target:" + str(path), nonblocking=True):
++        return _write_recovery(runtime, store, request, old, path, target)
++
++
+ def _write(runtime: c.Runtime, store: EvidenceStore, request: c.Object, plan: c.EffectPlan, key: str) -> c.CoreOutcome:
+     payload = c.as_object(plan["payload"], "Writer plan")
+     path = Path(c.text(payload["path"], "Writer target path"))
+@@ -655,18 +750,7 @@ def _write(runtime: c.Runtime, store: EvidenceStore, request: c.Object, plan: c.
+     with store._lock("scope:" + _product(runtime)), store._lock("target:" + str(path), nonblocking=True):
+         old = _marker(store, intent_path)
+         if old is not None:
+-            # This may follow a lost post-replace acknowledgment. Never append
+-            # again or claim the original effect absent from missing evidence.
+-            state = _target_state(path)
+-            old_payload = c.as_object(old["payload"])
+-            intended = c.as_object(old_payload["plan"])["intended_sha256"]
+-            observation: c.Object = {"schema": "a_c.fd-support.writer-recovery/1", "intent": {"id": "sha256:" + c.digest(old), "sha256": c.digest(old)}, "target": target, "current": state, "matches_intended_postimage": state["sha256"] == intended, "effect": {"value": "completion_unknown", "end_established": False, "residual": "Original publication/result acknowledgment is not established; observed present bytes do not replay the operation."}, "repeated": False}
+-            envelope, ref = _artifact(runtime, request, "raw", observation)
+-            store.retain(envelope)
+-            outcome = c.refusal_outcome(runtime, request, c.SupportError("effect_unreconciled", "Earlier Writer intent requires reconciliation before any repeated effect", [observation], []))
+-            outcome["result"] = {"artifact": ref, "value": observation}
+-            outcome["artifacts"] = [envelope]
+-            return outcome
++            return _write_recovery(runtime, store, request, old, path, target)
+         _fresh(runtime, store, request, c.as_object(plan["recheck"]))
+         before = _target_state(path)
+         expected = target["sha256"]
+@@ -1008,14 +1092,14 @@ def _dispatch(runtime: c.Runtime, store: EvidenceStore, request: c.Object, key:
+ 
+ 
+ def execute_effect(runtime: c.Runtime, request: c.Object, plan: c.EffectPlan | None) -> c.CoreOutcome:
+-    """The only public-request effect entry, consuming a core-created plan."""
++    """Public effect boundary; Writer plans follow locked authority/history."""
+     request = c.validate_request(request)
+     operation = c.text(request["operation"])
+     c.require_operation(runtime, operation)
+     _policy_current(runtime)
+     if operation not in ("contract.preflight", "dispatch.start", "dispatch.observe", "dispatch.cancel", "events.wait", "work.write"):
+         raise c.SupportError("unsupported_contract", "Operation is not a named effect entry", [operation], [])
+-    if operation in ("contract.preflight", "work.write"):
++    if operation == "contract.preflight":
+         if plan is None:
+             raise c.SupportError("basis_missing", "Named effect requires its core-prepared plan", [], [])
+         _check_plan(runtime, request, plan)
+@@ -1023,15 +1107,32 @@ def execute_effect(runtime: c.Runtime, request: c.Object, plan: c.EffectPlan | N
+         raise c.SupportError("contract_violation", "This named effect accepts no plan", [], [])
+     runtime, store = _bound(runtime)
+     with store._lock("request:" + _key(runtime, request)):
++        if operation == "work.write":
++            c.check_writer_authority(runtime, request)
+         key = _claim(runtime, store, request)
+-        previous = _completed(store, key)
++        if operation == "work.write":
++            claim = _marker(store, store.root / "requests" / (key + ".claim.json"))
++            if claim is None:
++                raise c.SupportError("history_incomplete", "Writer claim is unavailable after reservation", [], [])
++            _verify_support_graph(store, _references(claim))
++        previous = _completed(runtime, store, request, key)
+         if previous is not None:
++            if operation == "work.write":
++                _verify_support_graph(store, _outcome_support(operation, previous))
+             return previous
+         try:
+             if operation == "contract.preflight":
+                 outcome = _preflight(runtime, store, request, cast(c.EffectPlan, plan))
+             elif operation == "work.write":
+-                outcome = _write(runtime, store, request, cast(c.EffectPlan, plan), key)
++                recovered = _recover_write(runtime, store, request, key)
++                if recovered is None:
++                    # Planning can acquire sources/history. It runs inside the
++                    # identity lock, before any Product/target/publication lock.
++                    prepared = c.prepare_write(runtime, request)
++                    _check_plan(runtime, request, prepared)
++                    outcome = _write(runtime, store, request, prepared, key)
++                else:
++                    outcome = recovered
+             elif operation == "dispatch.start":
+                 outcome = _dispatch(runtime, store, request, key)
+             elif operation == "dispatch.observe":
+diff --git a/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py b/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py
+index d491e1a3..24373214 100644
+--- a/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py
++++ b/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py
+@@ -3,6 +3,8 @@
+ These tests inspect actual filesystem/process effects. Synthetic lower-layer
+ Context/receipt carriers make no claim to Product/method admission qualification;
+ that full ordinary path is separately exercised by integration/actor assurance.
++PublicRetryTests below uses the actual CLI and public Context/preflight receipts
++for a bounded local-process retry regression; it is not actual F_P usability.
+ """
+ from __future__ import annotations
+ 
+@@ -26,6 +28,7 @@ from typing import cast
+ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "code"))
+ import ac_support_core as c
+ import ac_support_effects as e
++from test_ac_support_core import Fixture
+ 
+ 
+ class MembraneCase(unittest.TestCase):
+@@ -97,11 +100,30 @@ class MembraneCase(unittest.TestCase):
+     def write_request(self, identity: str, text: str, *, absent: bool = False) -> c.Object:
+         return self.req(identity, "work.write", {"grant_id": "fixture-grant", "target": self.source_ref("work/record.txt", absent=absent), "mode": "append", "record": {"text": text, "provenance": self.source_ref("authority.txt")}, "interpretation": None, "observations": []})
+ 
++    def configure_writer_authority(self) -> None:
++        """A real source-located fixture owner, not a fabricated receipt."""
++        core_path = Path(__file__).resolve().parents[1] / "code" / "ac_support_core.py"
++        (self.source / "method" / "core.py").write_bytes(core_path.read_bytes())
++        mechanism: c.Object = {"id": "product-policy-preflight/1", "source": self.source_ref("method/core.py"), "implementation_sha256": hashlib.sha256(core_path.read_bytes()).hexdigest()}
++        binding = c.as_object(c.as_object(self.policy["product"])["authority_binding"])
++        owner: c.Object = {"mechanism": mechanism, "result_surface": binding["result_surface"], "scope": binding["scope"]}
++        (self.source / "owner.json").write_bytes(c.canonical(owner))
++        (self.source / "definition.json").write_bytes(c.canonical({"id": "fixture-product", "authority": "owner.json"}))
++        c.as_object(self.policy["product"])["definition"] = self.source_ref("definition.json")
++        binding["owner_record"] = self.source_ref("owner.json")
++        binding["mechanism"] = mechanism
++        grant = c.as_object(c.as_object(self.policy["grants"])["fixture-grant"])
++        c.as_object(grant["admission"])["mechanism_source"] = mechanism["source"]
++        c.as_object(grant["admission"])["authority_source"] = binding["owner_record"]
++        c.as_list(c.as_object(c.as_object(self.policy["sources"])["fixture"])["read_scope"]).append({"path": "owner.json", "kind": "file"})
++        self.runtime = self.runtime_for("worker").with_callbacks(self.store.resolve, self.store.query_artifacts)
++
+     def actor_setup(self, mode: str, *, timeout: int = 1500, file_observer: bool = False) -> tuple[c.Runtime, c.Object, Path]:
+         target = self.source / "work" / "actor-effect.txt"
+         executable: c.Object = {"path": str(self.python), "sha256": hashlib.sha256(self.python.read_bytes()).hexdigest()}
+         executor: c.Object = {"id": "fixture-actor", "executable": executable, "argv": [str(self.python), str(self.fixture), mode, str(target)], "dependencies": [], "cwd": str(self.source), "environment": {"PATH": os.defpath}, "actor_id": "fixture-worker", "settings": {"timeout_ms": timeout, "termination_grace_ms": 100}, "tools": [], "effect_scope": {"kind": "cooperative-local-fixture", "external_descendants": "unknown"}, "stdin_mode": "context-utf8", "stdout_decoder": {"format": "json", "pointer": None, "decode_json_string": False}, "observers": [{"kind": "process-end"}]}
+         if mode == "public-writer":
++            self.configure_writer_authority()
+             c.as_list(executor["argv"]).extend([str(self.policy_path), str(Path(__file__).resolve().parents[1] / "code" / "ac_support.py")])
+             executor["tools"] = ["work.write"]
+             c.as_object(c.as_object(self.policy["grants"])["fixture-grant"])["tools"] = ["work.write"]
+@@ -468,65 +490,126 @@ class ReceiptTests(MembraneCase):
+ 
+ 
+ class WriterTests(MembraneCase):
++    def setUp(self) -> None:
++        super().setUp()
++        self.configure_writer_authority()
++
++    def test_completed_owner_binding_cannot_discard_another_request(self) -> None:
++        path = self.source / "work/record.txt"; path.write_bytes(b"before")
++        request = self.write_request("completed-owner-binding", "+after")
++        e.execute_effect(self.runtime, request, None)
++        key = e._key(self.runtime, request)
++        marker = self.store.root / "requests" / (key + ".outcome.json")
++        owner = c.as_object(c.parse_json(marker.read_bytes()))
++        other = copy.deepcopy(request)
++        c.as_object(c.as_object(other["arguments"])["record"])["text"] = "a different request"
++        c.as_object(owner["payload"])["request"] = other
++        owner["provenance"] = c.provenance(self.runtime, other, 1, 2)
++        self.store.retain(owner)
++        marker.write_bytes(c.canonical(owner))  # Explicit adversarial fixture.
++        with self.assertRaises(c.SupportError) as caught:
++            e._completed(self.runtime, self.store, request, key)
++        self.assertEqual(caught.exception.code, "request_identity_conflict")
++        with patch.object(c, "prepare_write", side_effect=AssertionError("Conflict must not plan")), self.assertRaises(c.SupportError) as caught:
++            e.execute_effect(self.runtime, request, None)
++        self.assertEqual(caught.exception.code, "request_identity_conflict")
++        self.assertEqual(path.read_bytes(), b"before+after")
++
++    def test_public_effect_entry_refuses_a_precomputed_writer_plan(self) -> None:
++        path = self.source / "work/record.txt"; path.write_bytes(b"before")
++        request = self.write_request("supplied-plan", "after")
++        with self.assertRaises(c.SupportError) as caught:
++            e.execute_effect(self.runtime, request, c.prepare_write(self.runtime, request))
++        self.assertEqual(caught.exception.code, "contract_violation")
++        self.assertEqual(path.read_bytes(), b"before")
++        self.assertEqual(list((self.store.root / "requests").glob("*.intent.json")), [])
++
++    def test_completed_replay_is_history_without_fresh_planning_or_target_claim(self) -> None:
++        path = self.source / "work/record.txt"; path.write_bytes(b"before")
++        request = self.write_request("historical", "+after")
++        first = e.execute_effect(self.runtime, request, None)
++        path.write_bytes(b"subsequent external bytes")
++        with patch.object(c, "prepare_write", side_effect=AssertionError("Replay must not plan")):
++            replay = e.execute_effect(self.runtime, request, None)
++        self.assertEqual(first, replay)
++        self.assertEqual(path.read_bytes(), b"subsequent external bytes")
++        (self.source / "authority.txt").write_bytes(b"current authority drift")
++        with patch.object(e, "_completed", side_effect=AssertionError("Authority must precede cached result")), self.assertRaises(c.SupportError) as caught:
++            e.execute_effect(self.runtime, request, None)
++        self.assertEqual(caught.exception.code, "digest_mismatch")
++
++    def test_fresh_planning_callbacks_have_no_product_target_or_store_lock(self) -> None:
++        path = self.source / "work/record.txt"; path.write_bytes(b"before")
++        request = self.write_request("planning-lock-scope", "+after")
++        original = c.prepare_write
++        def checked(runtime: c.Runtime, bound: c.Object) -> c.EffectPlan:
++            for identity in ("scope:urn:fixture:product", "target:" + str(path), "store:objects"):
++                with self.store._lock(identity, nonblocking=True):
++                    pass
++            # Release these test probes before ordinary source/history callbacks.
++            return original(runtime, bound)
++        with patch.object(c, "prepare_write", checked):
++            outcome = e.execute_effect(self.runtime, request, None)
++        self.assertEqual(c.as_object(outcome["operation_outcome"])["value"], "returned")
++        self.assertEqual(path.read_bytes(), b"before+after")
++
+     def test_append_exact_replay_and_conflicting_identity(self) -> None:
+         path = self.source / "work" / "record.txt"
+         path.write_bytes(b"original")
+         path.chmod(0o640)
+         request = self.write_request("write-1", "\nrecord")
+-        plan = self.writer_plan(request, b"original\nrecord")
+-        first = e.execute_effect(self.runtime, request, plan)
++        first = e.execute_effect(self.runtime, request, None)
+         self.assertEqual(path.read_bytes(), b"original\nrecord")
+         self.assertEqual(stat.S_IMODE(path.stat().st_mode), 0o640)
+-        self.assertEqual(e.execute_effect(self.runtime, request, plan), first)
++        self.assertEqual(e.execute_effect(self.runtime, request, None), first)
+         self.assertEqual(path.read_bytes(), b"original\nrecord")
+         conflict = copy.deepcopy(request)
+         c.as_object(c.as_object(conflict["arguments"])["record"])["text"] = "different"
+         with self.assertRaises(c.SupportError) as caught:
+-            e.execute_effect(self.runtime, conflict, self.writer_plan(conflict, b"different"))
++            e.execute_effect(self.runtime, conflict, None)
+         self.assertEqual(caught.exception.code, "request_identity_conflict")
+ 
+     def test_exclusive_creation_and_wrong_direct_role(self) -> None:
+         request = self.write_request("new", "exact", absent=True)
+-        result = e.execute_effect(self.runtime, request, self.writer_plan(request, b"exact", absent=True))
++        result = e.execute_effect(self.runtime, request, None)
+         self.assertEqual(c.as_object(result["operation_outcome"])["value"], "returned")
+         self.assertEqual((self.source / "work" / "record.txt").read_bytes(), b"exact")
+         for role in ("executive", "reviewer"):
+             self.runtime = self.runtime_for(role)
+             self.runtime = self.runtime.with_callbacks(self.store.resolve, self.store.query_artifacts)
+             denied = self.write_request("denied-" + role, "evil")
+-            outcome = e.execute_effect(self.runtime, denied, self.writer_plan(denied, b"evil"))
+-            self.assertEqual(c.as_object(outcome["refusal"])["code"], "role_effect_denied")
++            with self.assertRaises(c.SupportError) as caught:
++                e.execute_effect(self.runtime, denied, None)
++            self.assertEqual(caught.exception.code, "role_effect_denied")
+             self.assertEqual((self.source / "work" / "record.txt").read_bytes(), b"exact")
+ 
+     def test_stale_preimage_and_material_drift_are_distinct(self) -> None:
+         path = self.source / "work" / "record.txt"
+         path.write_bytes(b"old")
+         request = self.write_request("stale-target", "new")
+-        plan = self.writer_plan(request, b"oldnew")
+         path.write_bytes(b"changed")
+-        outcome = e.execute_effect(self.runtime, request, plan)
++        outcome = e.execute_effect(self.runtime, request, None)
+         self.assertEqual(c.as_object(outcome["refusal"])["code"], "target_conflict")
+         self.assertEqual(path.read_bytes(), b"changed")
+         request = self.write_request("stale-basis", "new")
+-        plan = self.writer_plan(request, b"changednew")
+         (self.source / "authority.txt").write_text("advanced")
+-        outcome = e.execute_effect(self.runtime, request, plan)
+-        self.assertEqual(c.as_object(outcome["refusal"])["code"], "basis_missing")
++        with self.assertRaises(c.SupportError) as caught:
++            e.execute_effect(self.runtime, request, None)
++        self.assertEqual(caught.exception.code, "digest_mismatch")
+         self.assertEqual(path.read_bytes(), b"changed")
+ 
+     def test_post_target_evidence_failure_never_repeats_or_rolls_back(self) -> None:
+         path = self.source / "work" / "record.txt"
+         path.write_bytes(b"old")
+         request = self.write_request("lost-result", "new")
+-        plan = self.writer_plan(request, b"oldnew")
+         def fail(point: str) -> None:
+             if point == "writer:after_target_publication":
+                 raise OSError("lost after replace")
+         with patch.object(e, "_fault", fail):
+-            outcome = e.execute_effect(self.runtime, request, plan)
++            outcome = e.execute_effect(self.runtime, request, None)
+         self.assertEqual(path.read_bytes(), b"oldnew")
+         self.assertEqual(c.as_object(outcome["operation_outcome"])["value"], "held(effect)")
+-        again = e.execute_effect(self.runtime, request, plan)
++        again = e.execute_effect(self.runtime, request, None)
+         self.assertEqual(path.read_bytes(), b"oldnew")
+         self.assertEqual(again, outcome)
+ 
+@@ -534,15 +617,15 @@ class WriterTests(MembraneCase):
+         path = self.source / "work" / "record.txt"
+         path.write_bytes(b"old")
+         request = self.write_request("fatal-post-target", "new")
+-        plan = self.writer_plan(request, b"oldnew")
+         def interrupt(point: str) -> None:
+             if point == "writer:after_target_publication":
+                 raise SystemExit(77)
+         with patch.object(e, "_fault", interrupt), self.assertRaises(SystemExit):
+-            e.execute_effect(self.runtime, request, plan)
++            e.execute_effect(self.runtime, request, None)
+         self.assertEqual(path.read_bytes(), b"oldnew")
+         self.runtime = self.runtime.with_callbacks(e.EvidenceStore(self.runtime).resolve, e.EvidenceStore(self.runtime).query_artifacts)
+-        reconstructed = e.execute_effect(self.runtime, request, plan)
++        with patch.object(c, "prepare_write", side_effect=AssertionError("Existing intent must not plan")):
++            reconstructed = e.execute_effect(self.runtime, request, None)
+         self.assertEqual(c.as_object(reconstructed["refusal"])["code"], "effect_unreconciled")
+         self.assertEqual(path.read_bytes(), b"oldnew")
+         value = c.as_object(c.as_object(reconstructed["result"])["value"])
+@@ -556,17 +639,16 @@ class WriterTests(MembraneCase):
+             with self.subTest(boundary=boundary):
+                 path.write_bytes(b"before")
+                 request = self.write_request("writer-boundary-" + str(index), "+after")
+-                plan = self.writer_plan(request, b"before+after")
+                 def fail(point: str) -> None:
+                     if point == "writer_target:" + boundary:
+                         raise OSError("post-validation " + point)
+                 with patch.object(e, "_fault", fail):
+-                    result = e.execute_effect(self.runtime, request, plan)
++                    result = e.execute_effect(self.runtime, request, None)
+                 self.assertEqual(c.as_object(result["operation_outcome"])["value"], "held(effect)")
+                 expected = b"before+after" if boundary in ("after_publish", "before_directory_fsync", "after_directory_fsync") else b"before"
+                 self.assertEqual(path.read_bytes(), expected)
+                 self.assertTrue(list((self.store.root / "requests").glob("*.intent.json")))
+-                self.assertEqual(e.execute_effect(self.runtime, request, plan), result)
++                self.assertEqual(e.execute_effect(self.runtime, request, None), result)
+                 self.assertEqual(path.read_bytes(), expected)
+ 
+     def test_exclusive_creation_failure_has_absent_or_complete_target(self) -> None:
+@@ -576,12 +658,11 @@ class WriterTests(MembraneCase):
+                 if path.exists():
+                     path.unlink()
+                 request = self.write_request("create-boundary-" + str(index), "whole", absent=True)
+-                plan = self.writer_plan(request, b"whole", absent=True)
+                 def fail(point: str) -> None:
+                     if point == "writer_target:" + boundary:
+                         raise OSError(point)
+                 with patch.object(e, "_fault", fail):
+-                    result = e.execute_effect(self.runtime, request, plan)
++                    result = e.execute_effect(self.runtime, request, None)
+                 self.assertEqual(c.as_object(result["operation_outcome"])["value"], "held(effect)")
+                 self.assertEqual(path.read_bytes() if path.exists() else None, b"whole" if boundary == "after_publish" else None)
+ 
+@@ -589,18 +670,16 @@ class WriterTests(MembraneCase):
+         path = self.source / "work" / "record.txt"
+         path.write_bytes(b"old")
+         request = self.write_request("locked-target", "new")
+-        plan = self.writer_plan(request, b"oldnew")
+         with self.store._lock("target:" + str(path)):
+-            result = e.execute_effect(self.runtime, request, plan)
++            result = e.execute_effect(self.runtime, request, None)
+         self.assertEqual(c.as_object(result["refusal"])["code"], "target_conflict")
+         self.assertEqual(path.read_bytes(), b"old")
+         path.unlink()
+         path.symlink_to(self.source / "authority.txt")
+         request["id"] = "symlink-target"
+-        plan["request_id"] = request["id"]
+-        plan["request_sha256"] = c.digest(request)
+-        result = e.execute_effect(self.runtime, request, plan)
+-        self.assertEqual(c.as_object(result["refusal"])["code"], "path_refused")
++        with self.assertRaises(c.SupportError) as caught:
++            e.execute_effect(self.runtime, request, None)
++        self.assertEqual(caught.exception.code, "path_refused")
+         self.assertEqual((self.source / "authority.txt").read_text(), "Fixture operator's bounded existing grant.")
+ 
+ 
+@@ -772,7 +851,9 @@ class ProcessTests(MembraneCase):
+         self.assertEqual(target.read_text(), "1")
+         self.assertEqual(c.as_object(value["effect"])["value"], "completion_unknown")
+ 
+-    def test_selected_actual_reconciliation_allows_one_explicit_retry(self) -> None:
++    def test_lower_layer_selected_reconciliation_allows_one_explicit_retry(self) -> None:
++        # Synthetic receipt control only. PublicRetryTests exercises the actual
++        # context/preflight/check/dispatch composition without this shortcut.
+         runtime, request, target = self.actor_setup("count")
+         first = e.execute_effect(runtime, request, None)
+         predecessor = c.as_object(c.as_object(first["result"])["artifact"])
+@@ -782,7 +863,7 @@ class ProcessTests(MembraneCase):
+         (self.source / "work" / "reconcile.json").write_text('{"safe":true}')
+         definition: c.Object = {"id": "fixture-reconciliation", "source": self.source_ref("authority.txt"), "subject": predecessor, "basis": basis, "input_names": ["state"], "expression": {"op": "equals", "args": [{"input": "state", "pointer": "/safe"}, {"literal": True}]}, "limits": ["Fixture's supplied safe-repetition predicate; original effect end is unchanged."]}
+         c.as_object(self.policy["predicates"])["fixture-reconciliation"] = definition
+-        c.as_object(c.as_object(c.as_object(self.policy["grants"])["fixture-grant"])["admission"])["required_predicates"] = ["fixture-reconciliation"]
++        c.as_object(c.as_object(c.as_object(self.policy["grants"])["fixture-grant"])["admission"])["required_reconciliation_predicates"] = ["fixture-reconciliation"]
+         self.runtime = self.runtime_for("executive")
+         self.store = e.EvidenceStore(self.runtime)
+         runtime = self.runtime.with_callbacks(self.store.resolve, self.store.query_artifacts)
+@@ -806,5 +887,316 @@ class ProcessTests(MembraneCase):
+         self.assertEqual(c.as_object(first_observation["effect"])["value"], "completion_unknown")
+ 
+ 
++class PublicRetryTests(unittest.TestCase):
++    """CLI composition controls, using real receipts and a local process only."""
++
++    def setUp(self) -> None:
++        self.temp = tempfile.TemporaryDirectory(prefix="ac-public-retry-")
++        self.root = Path(self.temp.name).resolve()
++        self.f = Fixture(self.root)
++        self.sequence = 0
++        self.policy_version = 0
++        self.policy_path = self.root / "not-selected.json"
++        self.policy_sha = ""
++        self.code = Path(__file__).resolve().parents[1] / "code"
++        self.python = Path(sys.executable).resolve()
++        fixture = Path(__file__).resolve().parent / "support_fixtures" / "local_actor.py"
++        dependency = self.f.write("inputs/actor.py", fixture.read_bytes())
++        self.target = self.f.workspace / "outputs" / "counter.txt"
++        executor = c.as_object(c.as_object(self.f.policy["executors"])["registered"])
++        executor["argv"] = [str(self.python), str(self.f.workspace / "inputs" / "actor.py"), "count", str(self.target)]
++        executor["dependencies"] = [dependency]
++        executor["settings"] = {"timeout_ms": 1500, "termination_grace_ms": 100}
++        self._select_policy()
++
++    def tearDown(self) -> None:
++        custody = os.environ.get("AC_SUPPORT_EFFECTS_PROOF_ROOT")
++        if custody is not None:
++            destination = Path(custody).resolve() / self.id().replace(".", "_")
++            destination.parent.mkdir(parents=True, exist_ok=True)
++            shutil.copytree(self.root, destination)
++            (destination / "CUSTODY.json").write_bytes(c.canonical({
++                "test": self.id(), "original_root": str(self.root),
++                "standing": "Actual public CLI/local process fixture evidence; no F_P usability or production retry.",
++                "source_sha256": hashlib.sha256((self.code / "ac_support_core.py").read_bytes()).hexdigest(),
++            }))
++        self.temp.cleanup()
++
++    def _select_policy(self) -> None:
++        self.policy_version += 1
++        self.policy_path = self.root / ("policy-" + str(self.policy_version) + ".json")
++        raw = c.canonical(self.f.policy)
++        self.policy_path.write_bytes(raw)
++        self.policy_sha = hashlib.sha256(raw).hexdigest()
++
++    def _public(self, operation: str, arguments: c.Object,
++                before_supervisor: tuple[Path, bytes] | None = None) -> c.Object:
++        self.sequence += 1
++        folder = self.root / "calls" / (str(self.sequence).zfill(3) + "-" + operation)
++        folder.mkdir(parents=True)
++        request: c.Object = {"schema": c.REQUEST, "id": "public-" + str(self.sequence),
++                             "operation": operation, "arguments": arguments}
++        request_path = folder / "request.json"
++        request_path.write_bytes(c.canonical(request))
++        argv = [str(self.python), "-B", str(self.code / "ac_support.py"),
++                "--policy", str(self.policy_path), "--policy-sha256", self.policy_sha,
++                "--principal", "executive", "call", "--request", str(request_path)]
++        if before_supervisor is not None:
++            material, replacement = before_supervisor
++            harness = folder / "pre-supervisor-barrier.py"
++            harness.write_text(
++                "import sys,time\nfrom pathlib import Path\n"
++                f"sys.path.insert(0,{str(self.code)!r})\n"
++                "import ac_support as a,ac_support_effects as e\n"
++                "original=e._fault\n"
++                "def barrier(point):\n"
++                " if point=='supervisor:before_spawn':\n"
++                f"  Path({str(material)!r}).write_bytes({replacement!r})\n"
++                f"  Path({str(folder / 'barrier-reached.txt')!r}).write_text(str(time.time_ns()))\n"
++                " original(point)\n"
++                "e._fault=barrier\nraise SystemExit(a.main())\n")
++            argv[2] = str(harness)
++        started = time.time_ns()
++        process = subprocess.run(argv, cwd=self.root, capture_output=True, timeout=10,
++                                 env={"PATH": os.defpath, "PYTHONDONTWRITEBYTECODE": "1"}, check=False)
++        (folder / "stdout.bin").write_bytes(process.stdout)
++        (folder / "stderr.bin").write_bytes(process.stderr)
++        (folder / "execution.json").write_bytes(c.canonical(c.document({
++            "argv": argv, "started_ns": started, "ended_ns": time.time_ns(),
++            "returncode": process.returncode, "policy_sha256": self.policy_sha,
++        })))
++        response = c.as_object(c.parse_json(process.stdout))
++        self.assertIsNotNone(response["evidence"], response)
++        return response
++
++    def _material_case(self, kind: str, stage: str, *, missing: bool = False) -> None:
++        case = self.root / (kind + "-" + stage + ("-missing" if missing else ""))
++        case.mkdir()
++        self.f = Fixture(case)
++        dependency = self.f.write("inputs/actor.py", (Path(__file__).resolve().parent / "support_fixtures/local_actor.py").read_bytes())
++        self.target = self.f.workspace / "outputs/counter.txt"
++        executor = c.as_object(c.as_object(self.f.policy["executors"])["registered"])
++        executor["argv"] = [str(self.python), str(self.f.workspace / "inputs/actor.py"), "count", str(self.target)]
++        executor["dependencies"] = [dependency]
++        executor["settings"] = {"timeout_ms": 1500, "termination_grace_ms": 100}
++        self._select_policy()
++        sources: list[c.JSON] = []; models: list[c.JSON] = []
++        host: c.Object = {"state": "unknown", "bytes": None, "evidence": None}
++        capacity: c.JSON = None
++        if kind == "extra-source":
++            material = self.f.write("inputs/material.txt", b"deciding input one")
++            sources = [material]; replacement = b"incompatible deciding input two"
++        elif kind == "model":
++            material = self.f.model_source
++            models = [{"model": self.f.model, "selections": [{"seeds": ["urn:a-c:toy:object:a"]}]}]
++            changed = c.as_object(c.parse_json((self.f.workspace / "inputs/model.json").read_bytes()))
++            changed["id"] = c.text(changed["id"]) + ":changed"
++            replacement = c.canonical(changed)
++        else:
++            material = self.f.write("inputs/host-bound.json", {"claimed_bytes": 0})
++            host = {"state": "known", "bytes": 0, "evidence": material}; capacity = 1000000
++            replacement = c.canonical({"claimed_bytes": 2000000})
++        material_path = self.f.workspace / c.text(material["path"])
++        assembled = self._public("context.assemble", {"packet": self.f.packet(), "models": models, "sources": sources, "late_acquisition": [], "envelope": {"capacity_bytes": capacity, "boundary": "executor-stdin-utf8", "host_context": host}})
++        value = self._ok(assembled)
++        if kind == "fit":
++            self.assertEqual(c.as_object(c.as_object(value["fit"])["judgment"])["core_value"], "satisfied")
++        context = c.as_object(c.as_object(assembled["result"])["artifact"])
++        if stage == "admission":
++            if missing:
++                material_path.unlink()
++            else:
++                material_path.write_bytes(replacement)
++        prepared = self._public("contract.preflight", {"context": context, "grant_id": "work", "executor_id": "registered", "result_key": "material-input", "observations": []})
++        if stage == "admission":
++            self.assertNotEqual(prepared["status"], "ok", prepared)
++        else:
++            self._ok(prepared)
++            receipt = c.as_object(c.as_object(prepared["result"])["artifact"])
++            envelope = c.as_object(c.parse_json((self.f.evidence / "objects" / (c.text(receipt["sha256"]) + ".json")).read_bytes()))
++            self.assertIn(material, c.as_list(c.as_object(c.as_object(envelope["payload"])["recheck"])["sources"]))
++            if stage == "dispatch":
++                material_path.write_bytes(replacement)
++            dispatched = self._public("dispatch.start", {"preflight": receipt}, (material_path, replacement) if stage == "supervisor" else None)
++            if stage == "dispatch":
++                self.assertNotEqual(dispatched["status"], "ok", dispatched)
++            else:
++                self._ok(dispatched)
++                attempt = c.as_object(c.as_object(dispatched["result"])["artifact"])
++                if stage == "unchanged":
++                    observed = self._finished(attempt)
++                    self.assertEqual(c.as_object(self._ok(observed)["process_end"])["returncode"], 0)
++                    self.assertEqual(self.target.read_text(), "1")
++                else:
++                    deadline = time.monotonic() + 5
++                    events: list[c.JSON] = []
++                    while time.monotonic() < deadline:
++                        observation = self._ok(self._public("dispatch.observe", {"attempt": attempt, "after_event": 0}))
++                        events = c.as_list(observation["events"])
++                        if any(c.as_object(event)["kind"] == "exception" for event in events):
++                            break
++                        time.sleep(0.03)
++                    self.assertTrue(any(c.as_object(event)["kind"] == "exception" for event in events), events)
++                    self.assertFalse(any(c.as_object(event)["kind"] in ("actor_launch_intent", "actor_started") for event in events), events)
++                    self.assertTrue(list((self.root / "calls").glob("*/barrier-reached.txt")))
++        if stage != "unchanged":
++            self.assertFalse(self.target.exists())
++            refused = self._public("source.read", {"source": material, "encoding": "utf8"})
++            self.assertEqual(c.as_object(refused["refusal"])["code"], "source_missing" if missing else "digest_mismatch")
++
++    def test_extra_source_currentness_at_admission_dispatch_and_supervisor(self) -> None:
++        for stage in ("unchanged", "admission", "dispatch", "supervisor"):
++            with self.subTest(stage=stage):
++                self._material_case("extra-source", stage)
++
++    def test_model_currentness_at_admission_dispatch_and_supervisor(self) -> None:
++        for stage in ("unchanged", "admission", "dispatch", "supervisor"):
++            with self.subTest(stage=stage):
++                self._material_case("model", stage)
++
++    def test_selected_fit_currentness_at_admission_dispatch_and_supervisor(self) -> None:
++        for stage in ("unchanged", "admission", "dispatch", "supervisor"):
++            with self.subTest(stage=stage):
++                self._material_case("fit", stage)
++
++    def test_selected_fit_missing_support_prevents_admission(self) -> None:
++        self._material_case("fit", "admission", missing=True)
++
++    def _ok(self, response: c.Object) -> c.Object:
++        self.assertEqual(response["status"], "ok", response.get("refusal"))
++        return c.as_object(c.as_object(response["result"])["value"])
++
++    def _admit(self, context: c.Object) -> c.Object:
++        response = self._public("contract.preflight", {
++            "context": context, "grant_id": "work", "executor_id": "registered",
++            "result_key": "public-counter", "observations": [],
++        })
++        self._ok(response)
++        ref = c.as_object(c.as_object(response["result"])["artifact"])
++        return ref
++
++    def _finished(self, attempt: c.Object) -> c.Object:
++        deadline = time.monotonic() + 5
++        while time.monotonic() < deadline:
++            response = self._public("dispatch.observe", {"attempt": attempt, "after_event": 0})
++            value = self._ok(response)
++            if value["process_end"] is not None and any(c.as_object(event)["kind"] == "effect_observation" for event in c.as_list(value["events"])):
++                return response
++            time.sleep(0.05)
++        self.fail("Public registered fixture did not finish within its bounded deadline")
++
++    def _retry_case(self, variant: str) -> None:
++        core_sha = hashlib.sha256((self.code / "ac_support_core.py").read_bytes()).hexdigest()
++        assembled = self._public("context.assemble", {
++            "packet": self.f.packet(), "models": [], "sources": [self.f.law],
++            "late_acquisition": [], "envelope": {"capacity_bytes": None,
++                "boundary": "executor-stdin-utf8", "host_context": {
++                    "state": "unknown", "bytes": None, "evidence": None}},
++        })
++        self._ok(assembled)
++        context = c.as_object(c.as_object(assembled["result"])["artifact"])
++        first = self._public("dispatch.start", {"preflight": self._admit(context)})
++        self._ok(first)
++        predecessor = c.as_object(c.as_object(first["result"])["artifact"])
++        observed = self._finished(predecessor)
++        self.assertEqual(self.target.read_text(), "1")
++        self.assertEqual(c.as_object(self._ok(observed)["effect"])["value"], "completion_unknown")
++        source = self.f.write("inputs/reconciliation-contract.json", {
++            "meaning": "The exact registered local counter fixture process has an observed successful end; owner-selected explicit repetition may increment it once. No all-effects/descendant end or semantic acceptance is claimed.",
++            "proof": "Actual protected dispatch.observe OperationEvidence on the predecessor; no asserted safe Boolean substitutes.",
++        })
++        prefix = "/payload/response_without_evidence/result/value/"
++        expression: c.Object = {"op": "all", "args": [
++            {"op": "equals", "args": [{"input": "observed", "pointer": prefix + "attempt"}, {"literal": predecessor}]},
++            {"op": "equals", "args": [{"input": "observed", "pointer": prefix + "process_end/observed"}, {"literal": True}]},
++            {"op": "equals", "args": [{"input": "observed", "pointer": prefix + "process_end/returncode"}, {"literal": 17 if variant == "false" else 0}]},
++        ]}
++        definition: c.Object = {"id": "predecessor-observed", "source": source,
++            "subject": predecessor, "basis": self.f.basis, "input_names": ["observed"],
++            "expression": expression, "limits": ["Actual fixture-process end only; prior generic effect remains unknown."]}
++        definitions = c.as_object(self.f.policy["predicates"])
++        definitions["predecessor-observed"] = definition
++        admission = c.as_object(c.as_object(c.as_object(self.f.policy["grants"])["work"])["admission"])
++        if variant == "admission-only":
++            admission_definition = copy.deepcopy(definition)
++            admission_definition["id"] = "task-admission"
++            admission_definition["subject"] = self.f.subject
++            admission_definition["input_names"] = ["context"]
++            admission_definition["expression"] = {"op": "equals", "args": [
++                {"input": "context", "pointer": "/packet/subject_basis/subject"}, {"literal": self.f.subject}]}
++            definitions["task-admission"] = admission_definition
++            admission["required_predicates"] = ["task-admission"]
++        else:
++            admission["required_reconciliation_predicates"] = [] if variant == "empty" else ["predecessor-observed"]
++        if variant.startswith("mixed-"):
++            wrong = copy.deepcopy(definition)
++            wrong["id"] = "wrong-selected"
++            if variant == "mixed-subject":
++                wrong["subject"] = self.f.subject
++            elif variant == "mixed-basis":
++                wrong["basis"] = {"method_profile": self.f.basis["method_profile"], "observations": [observed["evidence"]]}
++            if variant != "mixed-unknown":
++                definitions["wrong-selected"] = wrong
++            admission["required_reconciliation_predicates"] = ["predecessor-observed", "wrong-selected"]
++        self._select_policy()
++        check_basis = self.f.basis
++        if variant == "invalid-basis":
++            extra = self._public("workspace.observe", {"scope": [{"root": "workspace", "path": "Product.json", "kind": "file"}]})
++            self._ok(extra)
++            check_basis = {"method_profile": self.f.basis["method_profile"],
++                           "observations": [c.as_object(extra["result"])["artifact"]]}
++        proof = observed
++        if variant != "missing":
++            proof = self._public("checks.evaluate", {
++                "predicate_id": "predecessor-observed", "inputs": {"observed": observed["evidence"]},
++                "subject": predecessor, "basis": check_basis,
++            })
++            judgment = c.as_object(self._ok(proof)["judgment"])
++            expected = "falsified" if variant == "false" else "invalid_basis" if variant == "invalid-basis" else "satisfied"
++            self.assertEqual(judgment["core_value"], expected)
++        receipt = self._admit(context)
++        retried = self._public("dispatch.start", {"preflight": receipt,
++            "retry_of": context if variant == "wrong-predecessor" else predecessor,
++            "reconciliation": proof["evidence"]})
++        if variant == "positive":
++            self._ok(retried)
++            self._finished(c.as_object(c.as_object(retried["result"])["artifact"]))
++            self.assertEqual(self.target.read_text(), "2")
++        else:
++            self.assertEqual(c.as_object(retried["refusal"])["code"], "effect_unreconciled", retried)
++            self.assertEqual(self.target.read_text(), "1")
++        self.assertEqual(hashlib.sha256((self.code / "ac_support_core.py").read_bytes()).hexdigest(), core_sha)
++
++    def test_public_selected_retry(self) -> None:
++        self._retry_case("positive")
++
++    def test_public_retry_requires_actual_check(self) -> None:
++        self._retry_case("missing")
++
++    def test_public_retry_refuses_false_check(self) -> None:
++        self._retry_case("false")
++
++    def test_public_retry_refuses_invalid_check_basis(self) -> None:
++        self._retry_case("invalid-basis")
++
++    def test_public_retry_refuses_wrong_predecessor(self) -> None:
++        self._retry_case("wrong-predecessor")
++
++    def test_public_retry_absent_selection_stays_held(self) -> None:
++        self._retry_case("admission-only")
++
++    def test_public_retry_empty_selection_stays_held(self) -> None:
++        self._retry_case("empty")
++
++    def test_public_retry_checks_every_selected_subject(self) -> None:
++        self._retry_case("mixed-subject")
++
++    def test_public_retry_checks_every_selected_basis(self) -> None:
++        self._retry_case("mixed-basis")
++
++    def test_public_retry_checks_every_selected_registered_id(self) -> None:
++        self._retry_case("mixed-unknown")
++
++
+ if __name__ == "__main__":
+     unittest.main()

@@ -1,0 +1,49 @@
+{
+  "stage": "focused-after",
+  "command": [
+    "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "-v",
+    "test_ac_support_core.CoreTests",
+    "test_ac_support_interfaces.PublicJudgmentIngressTests"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify",
+  "environment_overrides": {
+    "TMPDIR": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-judgments-8bcbuu85",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code:/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env",
+    "MYPYPATH": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code:/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env",
+    "PYTHONPYCACHEPREFIX": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-judgments-8bcbuu85/bytecode",
+    "MYPY_CACHE_DIR": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-judgments-8bcbuu85/mypy",
+    "XDG_CACHE_HOME": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-judgments-8bcbuu85/cache",
+    "AC_JUDGMENT_INGRESS_TEST_EVIDENCE": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/review-fixes-001/judgments/focused-after/public",
+    "A_C_CORE_QUALIFICATION_CUSTODY": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/review-fixes-001/judgments/focused-after/core-fixtures"
+  },
+  "started_ns": 1792470892157061000,
+  "source_before": {
+    "build_tenants/graphify/code/ac_support_core.py": "e321ed11f66db88a9d965331bf4069d8a4532e6b31df38d6adf8539b4cf25d6b",
+    "build_tenants/graphify/test_env/test_ac_support_core.py": "482531eb8dfa43f44bc5ca4f3d34d5a72c93db4f64bfca6362d943d4dd56174a",
+    "build_tenants/graphify/test_env/test_ac_support_interfaces.py": "01fcb236694e800dab49e58a530749c3c68ec7d5d13392eee9bc47d7f0e5bcd4",
+    "build_tenants/graphify/code/ac_support.py": "4d41a2373def237136cefe8b186c196c2e4376137c221ae4675c274abed5ad31",
+    "build_tenants/graphify/code/ac_support_effects.py": "23dfafb2d7177d64287fc22002ec039ecc451d03c864a647f3c2deade7b2145c",
+    "build_tenants/graphify/code/ac_graph.py": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+    "build_tenants/graphify/design/fd-support.md": "5bbb2dd20b78f016f432f48ed92e9040f500e7b99aaff36c7ed5f0a6b5c4462f",
+    "build_tenants/graphify/design/fd-method-claude-rc9.json": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+  },
+  "scope": "Focused judgment ingress and affected core consumers; no provider, network, native actor, full suite, semantic acceptance or release claim.",
+  "ended_ns": 1792470906508152000,
+  "exit": 0,
+  "source_after": {
+    "build_tenants/graphify/code/ac_support_core.py": "e321ed11f66db88a9d965331bf4069d8a4532e6b31df38d6adf8539b4cf25d6b",
+    "build_tenants/graphify/test_env/test_ac_support_core.py": "482531eb8dfa43f44bc5ca4f3d34d5a72c93db4f64bfca6362d943d4dd56174a",
+    "build_tenants/graphify/test_env/test_ac_support_interfaces.py": "01fcb236694e800dab49e58a530749c3c68ec7d5d13392eee9bc47d7f0e5bcd4",
+    "build_tenants/graphify/code/ac_support.py": "4d41a2373def237136cefe8b186c196c2e4376137c221ae4675c274abed5ad31",
+    "build_tenants/graphify/code/ac_support_effects.py": "23dfafb2d7177d64287fc22002ec039ecc451d03c864a647f3c2deade7b2145c",
+    "build_tenants/graphify/code/ac_graph.py": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+    "build_tenants/graphify/design/fd-support.md": "5bbb2dd20b78f016f432f48ed92e9040f500e7b99aaff36c7ed5f0a6b5c4462f",
+    "build_tenants/graphify/design/fd-method-claude-rc9.json": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+  },
+  "owned_sources_unchanged": true
+}

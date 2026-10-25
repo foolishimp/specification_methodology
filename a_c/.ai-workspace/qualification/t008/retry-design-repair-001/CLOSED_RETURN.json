@@ -1,0 +1,102 @@
+{
+  "schema": "a_c.retry-design-writer-return/1",
+  "activation": "T008-retry-design-repair-001",
+  "actor": {
+    "id": "/root/ac_fd_tenant_design",
+    "role": "Writer/Worker",
+    "consumer": "/root"
+  },
+  "state": "closed",
+  "value": "candidate_ready",
+  "cause": "Root-selected disjoint admission/reconciliation predicate membrane is transcribed, closed grammar and projections agree, and static checks pass. No implementation or acceptance inferred.",
+  "basis": {
+    "Product": "urn:stdo:product-definition:a-c-implementations",
+    "WHAT": "c2f67fec8154028d45d7cd7a2832dd4fade4d94b",
+    "builder_manifest": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "RC9_source": "c2cfa9b908d1722ae3f26c32fa4ece691083bdc3",
+    "standards_tree": "98de394b352179c25dfa63b0b59a9b6bdd43632d",
+    "profile_sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+  },
+  "HOW_before": {
+    "path": "a_c/build_tenants/graphify/design/fd-support.md",
+    "sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f",
+    "preserved_copy": "a_c/.ai-workspace/qualification/t008/retry-design-repair-001/HOW.before.md"
+  },
+  "HOW_after": {
+    "path": "a_c/build_tenants/graphify/design/fd-support.md",
+    "sha256": "b38eedbe85ee32ef11d945d6a60ed3f9bb2312ac10e873d8ddc9b7986744a005"
+  },
+  "HOW_SourceRef": {
+    "engine": "workspace-regular-file",
+    "root": "product",
+    "path": "build_tenants/graphify/design/fd-support.md",
+    "object": null,
+    "sha256": "b38eedbe85ee32ef11d945d6a60ed3f9bb2312ac10e873d8ddc9b7986744a005",
+    "selector": null
+  },
+  "evidence_before_return": {
+    "a_c/.ai-workspace/qualification/t008/retry-design-repair-001/CHANGED_CLAUSES.json": "6bfad5215d3c9c74b7267d6b6f8e524f5e107e1976052613fb1359563b23009a",
+    "a_c/.ai-workspace/qualification/t008/retry-design-repair-001/CHECKS.json": "c33fad77447539ec33d544c9d865f14d576f1489105bda8703ab70a43ee1ca0e",
+    "a_c/.ai-workspace/qualification/t008/retry-design-repair-001/HOW.before.md": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f",
+    "a_c/.ai-workspace/qualification/t008/retry-design-repair-001/HOW.diff": "e2e5f03dd0411814dafc41be8f764ab3ff3d10839f33986aade177842cccec04",
+    "a_c/.ai-workspace/qualification/t008/retry-design-repair-001/PROJECTION_ASSESSMENT.json": "78e414c53c0abcbaf6b31df9fe1e48378e97b42efe1122e93469e78262fe140c",
+    "a_c/.ai-workspace/qualification/t008/retry-design-repair-001/REPAIR.admission.json": "4f46343dd58469be4675a78cfa764768295d24d3d0603d565cb7ab8f2008a1aa",
+    "a_c/.ai-workspace/qualification/t008/retry-design-repair-001/REPAIR.contract.txt": "3d500d337b87b7dd4f9e491cfe16485cfa7df6ccf30fb964f7fe3f04dafc6aa1"
+  },
+  "source_guards_unchanged": {
+    "a_c/build_tenants/graphify/code/ac_support_core.py": "97b099812fc1f6964c83cd7df678e4a1fd0575e941c74549689fe4944f008820",
+    "a_c/build_tenants/graphify/code/ac_support_effects.py": "9108d6ad10e412f5a0e981c88c06c7b37cb913a24286282da9aae752f239a586",
+    "a_c/build_tenants/graphify/code/ac_support.py": "4d1ea7fe98ec1b53f2a19d9a2fef2b3fbb070624c955fbb1e9e48f5cc88011b1",
+    "a_c/build_tenants/graphify/examples/fd-support/actor_cli.py": "06cd55463fd23e45fbf56fa46de92b9ba49f6650e3dc5686e219544d5457b42c",
+    "a_c/build_tenants/graphify/examples/fd-support/LIFECYCLE_QUICKSTART.md": "0305a4baeceb26be680b80ea1839e84acf7a83774eaa00237f68886411cb38cf",
+    "a_c/build_tenants/graphify/design/fd-method-claude-rc9.json": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1",
+    "a_c/.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md": "ab06521088409bc6efa21caf95ff4dec5b8eadb7686c32e3c8866dfd72dc7abc",
+    "a_c/stdo_a_c.json": "b0e013e6f9dabb9d3f31dd02c1a6909e9fc6418925a8d829f3bb1c2adf3dac1d",
+    "a_c/specification/PRODUCT.md": "9ebc8342affe8c5e0afb08ebe22f3f98f73f7bdc64db00eee17674c47274bef7",
+    "a_c/specification/requirements/fd-support-tools.md": "e3fcebd7e9fbc60dc36ed4c02ee834a96f14226af134809c938169d4712dfc23",
+    "a_c/specification/requirements/fd-support-verification.md": "3746e614a5ddc3f0a551e926998f16d6101cc037c5c43b879b4447b017a8dbdf",
+    "a_c/.ai-workspace/qualification/t008/live-runtime-prep-002/executive-policy.json": "bc82783219403f46dfcd9c928ea6a224dafefffea4f0973103a4c4a59e420ec5",
+    "a_c/.ai-workspace/qualification/t008/live-runtime-prep-002/worker-tool-policy.json": "88021ca650ec092e666d49a8565c7a7d77fe2eefec5d8a206efd137303b9f48c"
+  },
+  "checks": {
+    "schema": "a_c.retry-design-source-checks/1",
+    "state": "closed-static-checks-passed",
+    "before": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f",
+    "after": "b38eedbe85ee32ef11d945d6a60ed3f9bb2312ac10e873d8ddc9b7986744a005",
+    "exact_before_copy_and_diff": true,
+    "all_JSON_blocks_byte_unchanged": 7,
+    "shared_content_definitions_unchanged": 58,
+    "public_request_response_contract_unchanged": true,
+    "Mermaid_views_count_unchanged": 7,
+    "ontology_classes_unchanged": true,
+    "sequence_participants_unchanged": true,
+    "retry_guard_precedes_reservation": true,
+    "state_edges_unchanged": true,
+    "Prime_rows_unchanged": 8,
+    "all_local_links_resolve": true,
+    "source_guards_unchanged": 13,
+    "runtime_tests": 0,
+    "actual_actor_calls": 0,
+    "limits": "Static source/projection checks only; no repaired code/public retry/runtime qualification or independent semantic acceptance."
+  },
+  "selected_contract": "Policy/1 optional admission.required_reconciliation_predicates; absent/empty cannot retry. required_predicates remains activation-subject admission only. Exact predecessor/current Basis actual protected checks.evaluate support only, fresh at existing edges.",
+  "qualification": "Design-only source repair under Root preimplementation selection; new Core/public-route tests and integrated independent assessment remain pending.",
+  "re_entry_and_custody": "Material policy/HOW network change; Root reports prior helper failed before native Reviewer launch/source exposure. Future actual review must use declared new-subject re-entry, retaining old attempts/pins; no cosmetic label bypass.",
+  "old_runtime_provenance": "Existing policies/receipts keep original HOW/T008/Core parents at their historical cuts. Future effects require current owner selection after new Core return; this Writer does not edit T008 or re-pin them.",
+  "reserved": [
+    "Root subsequent bounded implementation admission and new Core/HOW owner binding",
+    "Integrated independent assessment and separate ontology/design dispositions",
+    "Jim Product acceptance/release"
+  ],
+  "actual_effects": {
+    "only_existing_source_write": "a_c/build_tenants/graphify/design/fd-support.md",
+    "new_evidence_only_under": "a_c/.ai-workspace/qualification/t008/retry-design-repair-001",
+    "code_T008_profile_common_WHAT_guide_tests_policies_Git_global_runtime_actor_effects": false
+  },
+  "invalidators": [
+    "Unrecorded material alternative in the small predicate membrane",
+    "Source/method/authority drift",
+    "Broader affected cut requires separate Root selection"
+  ],
+  "next": "Return frozen HOW/diff/projection evidence to Root and STOP; no implementation, T008 edit, actor or acceptance continuation."
+}

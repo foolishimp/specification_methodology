@@ -1,0 +1,13 @@
+# Independent F001 binding-repair delta review
+
+No actionable defect found in the frozen binding repair. F001 is closed for the reviewed constructor, public-receipt contract and portable checker. This is a bounded delta over synthetic packaging fixtures, not review of the actual common semantic model or its future release archive.
+
+The original13-obligation source-first oracle and prior Changes Requested counterexample are conserved. The receipt contract is application packaging HOW: an exact source/model/raw-artifact binding is a checkable coordinate relation, not a manufactured review finding, issuer authorization or semantic acceptance. I did not author the repair or its tests; provider-family independence is not certified.
+
+All67 targeted independent controls in [controls.json](controls.json) passed. The exact original untyped review of `urn:other:source` / `urn:other:model` is refused by both constructor and extracted verifier. Typed counterexamples independently change each source commitment, model identity/digest and every one of the five raw artifact sizes/digests; all refuse. Missing, duplicate, untyped and unfinished review receipts; stale/missing/duplicate report bindings; wrong construction coordinates; and changed readable Markdown refuse. Portable controls deliberately regenerate ordinary release receipt hashes, the full inventory and SHA256SUMS, so those outer checks do not mask the receipt gate.
+
+A correctly bound review explicitly reporting `changes_requested` packages successfully and retains that failed outcome, while release metadata remains `semantic_acceptance: not_issued`. This establishes exact coordinate/custody checking without selecting semantic truth or a positive release decision. Fresh extracted replay uses Python `-S` standard library without the repository, upstream checkout or package dependencies, and repeat archive bytes are identical. No browser, server, native/model/provider or network operation was used.
+
+All5 fresh code/contract pins and21 unaffected preparation pins match after review. Exact hashes are in [ACTIVATION.json](ACTIVATION.json); source custody and the original synthetic model bytes are conserved. Original review and evidence remain untouched.
+
+The actual common final model, bundle and archive did not exist for this activation and are not qualified by these controls. Interactive behavior remains unverified. Receipt truth, issuer legitimacy, independence claims, adequate semantic review, source-method release standing, owner distribution terms and any required acceptance/publication remain external. The represented method remains unaccepted/unpublished/not_ready; no candidate repair, Product adoption or release decision was performed here.

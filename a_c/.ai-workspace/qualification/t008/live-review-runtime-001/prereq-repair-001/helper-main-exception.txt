@@ -1,0 +1,14 @@
+def main(argv: Sequence[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--plan", required=True, type=Path)
+    parser.add_argument("--plan-sha256", required=True)
+    args = parser.parse_args(argv)
+    try:
+        plan = load_plan(cast(Path, args.plan), cast(str, args.plan_sha256))
+        code = run(plan, sys.stdin.buffer, sys.stdout.buffer)
+        if code:
+            print("Actor transport failed; acquire its raw/partial evidence before any separately authorized retry", file=sys.stderr)
+        return code
+    except (OSError, ValueError, core.SupportError, ArithmeticError) as exc:
+        print(f"Actor transport unavailable: {type(exc).__name__}: {exc}", file=sys.stderr)
+        return 2

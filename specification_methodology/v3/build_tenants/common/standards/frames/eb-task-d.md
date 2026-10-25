@@ -55,9 +55,9 @@ Routes, in order:
 19. [EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification](../EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification)
 20. [EXECUTIVE_BASELINE.md#foundation-to-law](../EXECUTIVE_BASELINE.md#foundation-to-law)
 
-Size of this frame: 116131 bytes.
+Size of this frame: 116673 bytes.
 
-Source: EXECUTIVE_BASELINE.md#executive sha256=fcef434630e270d216f494de97ee727ad46690db89a4b73edac4b88ff921c62e
+Source: EXECUTIVE_BASELINE.md#executive sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a
 
 ### Executive
 
@@ -75,7 +75,7 @@ universal semantic owner, controller, manager service or runtime executive
 observer (P6, RF-016).
 
 
-Source: EXECUTIVE_BASELINE.md#reviewer sha256=fcef434630e270d216f494de97ee727ad46690db89a4b73edac4b88ff921c62e
+Source: EXECUTIVE_BASELINE.md#reviewer sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a
 
 ### Reviewer
 
@@ -88,7 +88,7 @@ technical triage when a finding exists. It does not implement the repair,
 assign priority, apply disposition or activate the next frame (P6).
 
 
-Source: EXECUTIVE_BASELINE.md#technical-triage-severity-priority-and-boundary-effect sha256=fcef434630e270d216f494de97ee727ad46690db89a4b73edac4b88ff921c62e
+Source: EXECUTIVE_BASELINE.md#technical-triage-severity-priority-and-boundary-effect sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a
 
 ### Technical triage, severity, priority and boundary effect
 
@@ -151,7 +151,7 @@ constrains its consumption is EVALUATION §4 (Result and triage
 projection).
 
 
-Source: EXECUTIVE_BASELINE.md#work-result sha256=fcef434630e270d216f494de97ee727ad46690db89a4b73edac4b88ff921c62e
+Source: EXECUTIVE_BASELINE.md#work-result sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a
 
 ### Work result
 
@@ -211,7 +211,7 @@ revises only the affected results, preserving originals and supported
 surviving claims (ACTIVATION §7; P4b).
 
 
-Source: EXECUTIVE_BASELINE.md#6-executive-attention-evaluation-and-action sha256=fcef434630e270d216f494de97ee727ad46690db89a4b73edac4b88ff921c62e
+Source: EXECUTIVE_BASELINE.md#6-executive-attention-evaluation-and-action sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a
 
 ## 6. Executive attention, evaluation and action
 
@@ -386,6 +386,14 @@ P6).
 
 ### Product-chain basis
 
+Capability composition, including recursive and shared constituents, applies
+[PRODUCT_DEFINITION §9](../PRODUCT_DEFINITION.md#product-composition-contract).
+Select the outcome-owning frame and the actual dependency-ready work; retain
+path-specific authority and material far-side reliance. A cycle in Product
+relations is not itself a work deadlock, and naming a lead supplies no missing
+current prerequisite. An enclosing Product is not required for a constituent's
+scoped standalone entry when its declared dependencies suffice (P3, P6).
+
 A governed outcome may concern one Product or an explicit directed chain of
 Products. Its basis records the distinct role of every mutable Source
 Project, current Product Definition, exact candidate checkpoint, Release
@@ -413,7 +421,7 @@ Cut or exact Install stays immutable under its own lifecycle law and imposes
 no immutability on the Source Project constructing a successor (P3, P4b).
 
 
-Source: EXECUTIVE_BASELINE.md#the-executive-configuration sha256=fcef434630e270d216f494de97ee727ad46690db89a4b73edac4b88ff921c62e
+Source: EXECUTIVE_BASELINE.md#the-executive-configuration sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a
 
 ### The executive configuration
 
@@ -496,7 +504,7 @@ allocation only where it fits, and whether its prohibitions and its
 reporting of blockers hold wherever it is used.
 
 
-Source: EXECUTIVE_BASELINE.md#12-complete-engagement-transition sha256=fcef434630e270d216f494de97ee727ad46690db89a4b73edac4b88ff921c62e
+Source: EXECUTIVE_BASELINE.md#12-complete-engagement-transition sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a
 
 ## 12. Complete engagement transition
 
@@ -697,7 +705,7 @@ and of the Executive's exclusions (§8):
 | an unsupported or materially incomplete technical assessment | a capable evaluation is reactivated, or `indeterminate` is kept; Reviewer evidence is not rewritten |
 
 
-Source: EXECUTIVE_BASELINE.md#17-actor-binding-and-independence sha256=fcef434630e270d216f494de97ee727ad46690db89a4b73edac4b88ff921c62e
+Source: EXECUTIVE_BASELINE.md#17-actor-binding-and-independence sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a
 
 ## 17. Actor binding and independence
 
@@ -1479,7 +1487,7 @@ last two rows; its §5 maps the method discriminators to cases and
 logical-review checks.
 
 
-Source: EXECUTIVE_BASELINE.md#foundation-to-law sha256=fcef434630e270d216f494de97ee727ad46690db89a4b73edac4b88ff921c62e rows=10/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
+Source: EXECUTIVE_BASELINE.md#foundation-to-law sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a rows=10/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
 
 ### Foundation to law
 

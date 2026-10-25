@@ -1,0 +1,612 @@
+{
+  "README.md": {
+    "checks": [
+      {
+        "label": "Graphify",
+        "target": "build_tenants/graphify/README.md",
+        "exists": true
+      },
+      {
+        "label": "stdo_a_c.json",
+        "target": "stdo_a_c.json",
+        "exists": true
+      },
+      {
+        "label": "Goals",
+        "target": "specification/GOALS.md",
+        "exists": true
+      },
+      {
+        "label": "Intent",
+        "target": "specification/INTENT.md",
+        "exists": true
+      },
+      {
+        "label": "Product",
+        "target": "specification/PRODUCT.md",
+        "exists": true
+      },
+      {
+        "label": "requirements",
+        "target": "specification/requirements/README.md",
+        "exists": true
+      },
+      {
+        "label": "F_D support toolset",
+        "target": "specification/PRODUCT.md#f_d-support-for-f_p-development-actors",
+        "exists": true
+      },
+      {
+        "label": "T-008",
+        "target": ".ai-workspace/tickets/active/T-008-fd-tenant-implementation.md#current-provisional-implementation",
+        "exists": true
+      },
+      {
+        "label": "current handoff",
+        "target": ".ai-workspace/qualification/t008/handoff-001/README.md",
+        "exists": true
+      },
+      {
+        "label": "T-007",
+        "target": ".ai-workspace/tickets/active/T-007-executive-lifecycle-tooling.md",
+        "exists": true
+      },
+      {
+        "label": "T-006",
+        "target": ".ai-workspace/tickets/active/T-006-rc9-rebuild-comparison.md",
+        "exists": true
+      },
+      {
+        "label": "four fresh representations",
+        "target": "dogfood/stdo-v3-generation-rc9/README.md",
+        "exists": true
+      },
+      {
+        "label": "older/newer comparison index",
+        "target": "dogfood/stdo-v3-generation-rc9/COMPARISON.md",
+        "exists": true
+      },
+      {
+        "label": "T-005",
+        "target": ".ai-workspace/tickets/active/T-005-source-first-graphify-generation.md",
+        "exists": true
+      },
+      {
+        "label": "new Graphify representations and direct baselines",
+        "target": "dogfood/stdo-v3-generation/README.md",
+        "exists": true
+      },
+      {
+        "label": "review",
+        "target": "dogfood/stdo-v3-generation/REVIEW.md",
+        "exists": true
+      },
+      {
+        "label": "implementation record",
+        "target": ".ai-workspace/comments/codex/20261015_AC_GRAPHIFY_IMPLEMENTATION.md",
+        "exists": true
+      },
+      {
+        "label": "two I5 V3 Graphify versions",
+        "target": "dogfood/stdo-v3-i5/README.md",
+        "exists": true
+      },
+      {
+        "label": "direct-LLM versus Graphify evaluation",
+        "target": "dogfood/stdo-v3-i5-evaluation/README.md",
+        "exists": true
+      },
+      {
+        "label": "frozen v3 iteration-3 example",
+        "target": "dogfood/stdo-v3-i3-c29b2be/README.md",
+        "exists": true
+      }
+    ],
+    "unresolved": []
+  },
+  "build_tenants/graphify/README.md": {
+    "checks": [
+      {
+        "label": "design",
+        "target": "design/README.md",
+        "exists": true
+      },
+      {
+        "label": "`code/ac_support.py`",
+        "target": "code/ac_support.py",
+        "exists": true
+      },
+      {
+        "label": "F_D support requirements",
+        "target": "../../specification/requirements/fd-support-tools.md",
+        "exists": true
+      },
+      {
+        "label": "Claude RC9 profile",
+        "target": "design/fd-method-claude-rc9.json",
+        "exists": true
+      },
+      {
+        "label": "current code review",
+        "target": "../../.ai-workspace/comments/codex/t008-platform-code-review-003/REVIEW.md",
+        "exists": true
+      },
+      {
+        "label": "integration-004",
+        "target": "../../.ai-workspace/qualification/t008/interfaces/integration-004/REPORT.md",
+        "exists": true
+      },
+      {
+        "label": "handoff",
+        "target": "../../.ai-workspace/qualification/t008/handoff-001/README.md",
+        "exists": true
+      },
+      {
+        "label": "read-only public example",
+        "target": "examples/fd-support/README.md",
+        "exists": true
+      },
+      {
+        "label": "support design",
+        "target": "design/fd-support.md",
+        "exists": true
+      },
+      {
+        "label": "`code/ac_generate.py`",
+        "target": "code/ac_generate.py",
+        "exists": true
+      },
+      {
+        "label": "generation design",
+        "target": "design/generation.md",
+        "exists": true
+      },
+      {
+        "label": "source-locator recovery",
+        "target": "design/grounding.md",
+        "exists": true
+      },
+      {
+        "label": "F_P grounding-repair profile",
+        "target": "design/grounding_repair.md",
+        "exists": true
+      },
+      {
+        "label": "V3 source-creation trial",
+        "target": "../../dogfood/stdo-v3-generation/README.md",
+        "exists": true
+      },
+      {
+        "label": "review",
+        "target": "../../dogfood/stdo-v3-generation/REVIEW.md",
+        "exists": true
+      },
+      {
+        "label": "subject.md",
+        "target": "examples/subject.md",
+        "exists": true
+      },
+      {
+        "label": "mypy.ini",
+        "target": "mypy.ini",
+        "exists": true
+      },
+      {
+        "label": "requirements-qualification.txt",
+        "target": "test_env/requirements-qualification.txt",
+        "exists": true
+      }
+    ],
+    "unresolved": []
+  },
+  "build_tenants/graphify/design/fd-support.md": {
+    "checks": [
+      {
+        "label": "REQ-AC-FD-001..013",
+        "target": "../../../specification/requirements/fd-support-tools.md",
+        "exists": true
+      },
+      {
+        "label": "qualification obligations",
+        "target": "../../../specification/requirements/fd-support-verification.md",
+        "exists": true
+      },
+      {
+        "label": "independent narrow delta review003",
+        "target": "../../../.ai-workspace/comments/codex/t008-platform-design-review-003/REVIEW.md",
+        "exists": true
+      },
+      {
+        "label": "ontology/design/work dispositions",
+        "target": "../../../.ai-workspace/qualification/t008/design-review-repair-001/publication-001/ROOT-DISPOSITION.json",
+        "exists": true
+      },
+      {
+        "label": "platform design review001",
+        "target": "../../../.ai-workspace/comments/codex/t008-platform-design-review-001/STAGE2.md",
+        "exists": true
+      },
+      {
+        "label": "work disposition",
+        "target": "../../../.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md#current-provisional-implementation",
+        "exists": true
+      },
+      {
+        "label": "code review003",
+        "target": "../../../.ai-workspace/comments/codex/t008-platform-code-review-003/REVIEW.md",
+        "exists": true
+      },
+      {
+        "label": "integration-004 proof",
+        "target": "../../../.ai-workspace/qualification/t008/interfaces/integration-004/REPORT.md",
+        "exists": true
+      },
+      {
+        "label": "handoff",
+        "target": "../../../.ai-workspace/qualification/t008/handoff-001/README.md",
+        "exists": true
+      },
+      {
+        "label": "T-008",
+        "target": "../../../.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md",
+        "exists": true
+      },
+      {
+        "label": "RC9 binding",
+        "target": "fd-method-claude-rc9.json",
+        "exists": true
+      },
+      {
+        "label": "PRESERVATION.json",
+        "target": "../../../.ai-workspace/qualification/t008/design-review-repair-001/PRESERVATION.json",
+        "exists": true
+      },
+      {
+        "label": "FOUNDATION.sources.json",
+        "target": "../../../.ai-workspace/qualification/t008/design-review-repair-001/FOUNDATION.sources.json",
+        "exists": true
+      },
+      {
+        "label": "PRESERVATION.json",
+        "target": "../../../.ai-workspace/qualification/t008/design-review-repair-001/PRESERVATION.json",
+        "exists": true
+      },
+      {
+        "label": "selection-001",
+        "target": "../../../.ai-workspace/qualification/t008/design-review-repair-001/selection-001/ROOT-SELECTION.txt",
+        "exists": true
+      },
+      {
+        "label": "T-008 repair contract",
+        "target": "../../../.ai-workspace/qualification/t008/design/design-repair-001-contract.json",
+        "exists": true
+      },
+      {
+        "label": "its design",
+        "target": "README.md",
+        "exists": true
+      },
+      {
+        "label": "repair-002",
+        "target": "../../../.ai-workspace/qualification/t008/design/design-repair-002-contract.draft.json",
+        "exists": true
+      },
+      {
+        "label": "preservation inventory",
+        "target": "../../../.ai-workspace/qualification/t008/design/preservation-inventory-002.json",
+        "exists": true
+      }
+    ],
+    "unresolved": []
+  },
+  ".ai-workspace/tickets/active/T-008-fd-tenant-implementation.md": {
+    "checks": [
+      {
+        "label": "tenant design",
+        "target": "../../../build_tenants/graphify/design/fd-support.md",
+        "exists": true
+      },
+      {
+        "label": "RC9 support binding",
+        "target": "../../../build_tenants/graphify/design/fd-method-claude-rc9.json",
+        "exists": true
+      },
+      {
+        "label": "contract",
+        "target": "../../qualification/t008/design/design-repair-001-contract.json",
+        "exists": true
+      },
+      {
+        "label": "admission receipt",
+        "target": "../../qualification/t008/design/design-repair-001-admission.json",
+        "exists": true
+      },
+      {
+        "label": "report",
+        "target": "../../qualification/t008/assurance/design_review_v1_20261019/runs/claude_design_assessment_001/result.txt",
+        "exists": true
+      },
+      {
+        "label": "design-repair-001-return.json",
+        "target": "../../qualification/t008/design/design-repair-001-return.json",
+        "exists": true
+      },
+      {
+        "label": "draft carrier",
+        "target": "../../qualification/t008/design/design-repair-002-contract.draft.json",
+        "exists": true
+      },
+      {
+        "label": "external receipt",
+        "target": "../../qualification/t008/design/design-repair-002-admission.json",
+        "exists": true
+      },
+      {
+        "label": "preservation inventory",
+        "target": "../../qualification/t008/design/preservation-inventory-002.json",
+        "exists": true
+      },
+      {
+        "label": "closed v3 return",
+        "target": "../../qualification/t008/design/design-repair-002-return.json",
+        "exists": true
+      },
+      {
+        "label": "fd-support.md",
+        "target": "../../../build_tenants/graphify/design/fd-support.md",
+        "exists": true
+      },
+      {
+        "label": "reconciliation-008 closed return",
+        "target": "../../qualification/t008/design/design-reconciliation-008.return.json",
+        "exists": true
+      },
+      {
+        "label": "exact delegated contract",
+        "target": "../../qualification/t008/design/design-reconciliation-008.contract.txt",
+        "exists": true
+      },
+      {
+        "label": "separate Root-reported scoped receipt",
+        "target": "../../qualification/t008/design/design-reconciliation-008.admission.json",
+        "exists": true
+      },
+      {
+        "label": "activation identity",
+        "target": "../../qualification/t008/core/ACTIVATION_IDENTITY.clarification.txt",
+        "exists": true
+      },
+      {
+        "label": "ReviewClaim scope",
+        "target": "../../qualification/t008/core/REVIEW_CLAIM.clarification.txt",
+        "exists": true
+      },
+      {
+        "label": "startup supervisor binding",
+        "target": "../../qualification/t008/effects/SUPERVISOR_BINDING.clarification.txt",
+        "exists": true
+      },
+      {
+        "label": "retry reconciliation",
+        "target": "../../qualification/t008/effects/RETRY_RECONCILIATION.clarification.txt",
+        "exists": true
+      },
+      {
+        "label": "bounded Product/per-Attempt lock repair",
+        "target": "../../qualification/t008/effects/repair-001/CONTRACT.txt",
+        "exists": true
+      },
+      {
+        "label": "actual transport observation",
+        "target": "../../qualification/t008/interfaces/TRANSPORT.clarification.txt",
+        "exists": true
+      },
+      {
+        "label": "outer numeric/public lexical distinction",
+        "target": "../../qualification/t008/interfaces/TRANSPORT.numeric.clarifications.json",
+        "exists": true
+      },
+      {
+        "label": "source-bound co-evolution assessment",
+        "target": "../../qualification/t008/design/co-evolution-001.assessment.json",
+        "exists": true
+      },
+      {
+        "label": "Core",
+        "target": "../../qualification/t008/core/CLOSED_RETURN.json",
+        "exists": true
+      },
+      {
+        "label": "Effects repair-001",
+        "target": "../../qualification/t008/effects/repair-001/CLOSED_RETURN.json",
+        "exists": true
+      },
+      {
+        "label": "Interfaces",
+        "target": "../../qualification/t008/interfaces/CLOSED_RETURN.json",
+        "exists": true
+      },
+      {
+        "label": "actor transport",
+        "target": "../../qualification/t008/interfaces/actor_transport/CLOSED_RETURN.json",
+        "exists": true
+      },
+      {
+        "label": "Prime author draft",
+        "target": "../../qualification/t008/design/design-reconciliation-008.prime.draft.json",
+        "exists": true
+      },
+      {
+        "label": "repair-006 assessment",
+        "target": "../../qualification/t008/assurance/design_review_repair006_20261019/runs/claude_repair006_design_assessment_001/result.txt",
+        "exists": true
+      },
+      {
+        "label": "delegated repair-007 contract",
+        "target": "../../qualification/t008/design/design-repair-007-contract.txt",
+        "exists": true
+      },
+      {
+        "label": "Root-reported external receipt",
+        "target": "../../qualification/t008/design/design-repair-007-admission.json",
+        "exists": true
+      },
+      {
+        "label": "rebased eight-row Prime evidence draft",
+        "target": "../../qualification/t008/design/design-disposition-007.draft.json",
+        "exists": true
+      },
+      {
+        "label": "exact diff",
+        "target": "../../qualification/t008/design/design-repair-007.diff",
+        "exists": true
+      },
+      {
+        "label": "short source-selected checks",
+        "target": "../../qualification/t008/design/design-repair-007-checks.json",
+        "exists": true
+      },
+      {
+        "label": "closed return",
+        "target": "../../qualification/t008/design/design-repair-007-return.json",
+        "exists": true
+      },
+      {
+        "label": "final-design report",
+        "target": "../../qualification/t008/assurance/design_review_v3_final_20261019/runs/claude_final_design_assessment_001/result.txt",
+        "exists": true
+      },
+      {
+        "label": "closed return",
+        "target": "../../qualification/t008/design/design-repair-003-return.json",
+        "exists": true
+      },
+      {
+        "label": "draft carrier",
+        "target": "../../qualification/t008/design/design-repair-004-contract.draft.json",
+        "exists": true
+      },
+      {
+        "label": "external finite receipt",
+        "target": "../../qualification/t008/design/design-repair-004-admission.json",
+        "exists": true
+      },
+      {
+        "label": "repair-004\nchecks",
+        "target": "../../qualification/t008/design/design-repair-004-checks.json",
+        "exists": true
+      },
+      {
+        "label": "exact source diff",
+        "target": "../../qualification/t008/design/design-repair-004.diff",
+        "exists": true
+      },
+      {
+        "label": "exact Writer grant",
+        "target": "../../qualification/t008/live-binding-001/BINDING.contract.txt",
+        "exists": true
+      },
+      {
+        "label": "pre-effect receipt",
+        "target": "../../qualification/t008/live-binding-001/BINDING.admission.json",
+        "exists": true
+      },
+      {
+        "label": "successor task",
+        "target": "../../qualification/t008/live-binding-001/TASK.md",
+        "exists": true
+      },
+      {
+        "label": "closed return",
+        "target": "../../qualification/t008/live-binding-001/CLOSED_RETURN.json",
+        "exists": true
+      },
+      {
+        "label": "closed Core return",
+        "target": "../../qualification/t008/retry-repair-001/CLOSED_RETURN.json",
+        "exists": true
+      },
+      {
+        "label": "exact GO",
+        "target": "../../qualification/t008/live-binding-002/APPLY_GO.contract.txt",
+        "exists": true
+      },
+      {
+        "label": "pre-effect receipt",
+        "target": "../../qualification/t008/live-binding-002/APPLY_GO.admission.json",
+        "exists": true
+      },
+      {
+        "label": "native guide citation contribution",
+        "target": "../../qualification/t008/live-binding-002/GUIDE.contribution.json",
+        "exists": true
+      },
+      {
+        "label": "closed apply return",
+        "target": "../../qualification/t008/live-binding-002/CLOSED_RETURN.json",
+        "exists": true
+      },
+      {
+        "label": "fd-support.md",
+        "target": "../../../build_tenants/graphify/design/fd-support.md",
+        "exists": true
+      },
+      {
+        "label": "header-only preservation proof",
+        "target": "../../qualification/t008/design-review-repair-001/publication-001/HEADER-PRESERVATION.json",
+        "exists": true
+      },
+      {
+        "label": "review003",
+        "target": "../../comments/codex/t008-platform-design-review-003/REVIEW.md",
+        "exists": true
+      },
+      {
+        "label": "closed publication",
+        "target": "../../comments/codex/t008-platform-design-review-003/CLOSED_RETURN.json",
+        "exists": true
+      },
+      {
+        "label": "corrected proposal",
+        "target": "../../qualification/t008/design-review-repair-001/conjunction-001/CLOSED_RETURN.json",
+        "exists": true
+      },
+      {
+        "label": "exact Root dispositions",
+        "target": "../../qualification/t008/design-review-repair-001/publication-001/ROOT-DISPOSITION.json",
+        "exists": true
+      },
+      {
+        "label": "HOW",
+        "target": "../../../build_tenants/graphify/design/fd-support.md",
+        "exists": true
+      },
+      {
+        "label": "review003",
+        "target": "../../comments/codex/t008-platform-code-review-003/REVIEW.md",
+        "exists": true
+      },
+      {
+        "label": "integration-004",
+        "target": "../../qualification/t008/interfaces/integration-004/CLOSED_RETURN.json",
+        "exists": true
+      },
+      {
+        "label": "handoff index",
+        "target": "../../qualification/t008/handoff-001/README.md",
+        "exists": true
+      },
+      {
+        "label": "projection",
+        "target": "../../qualification/t008/handoff-001/PROJECTION.json",
+        "exists": true
+      },
+      {
+        "label": "before ticket",
+        "target": "../../qualification/t008/handoff-001/before/.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md",
+        "exists": true
+      }
+    ],
+    "unresolved": []
+  }
+}

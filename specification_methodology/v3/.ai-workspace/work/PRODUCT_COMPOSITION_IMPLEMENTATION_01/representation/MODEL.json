@@ -1,0 +1,3176 @@
+{
+  "profile": "a_c.graphify.model/1",
+  "id": "urn:stdo:composition:interpretation:pc01-pc07:proposal:1",
+  "basis": {
+    "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+    "calculus": {
+      "uri": "stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md",
+      "sha256": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d"
+    },
+    "subject": {
+      "id": "urn:stdo:source-increment:product-composition:pc01-pc07:1",
+      "sha256": "a9b76d1bb6df4de104ffdac918adb4192a4dbf1ced95ae8f32653d3b750608e6",
+      "inventory": [
+        {
+          "id": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-01--recursive-product-boundaries",
+          "sha256": "3ddd35947eed9311edbe4906563ed45418c354f1941411af15b0f47a86ea4e14"
+        },
+        {
+          "id": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-02--independent-entry-and-the-integrated-outcome",
+          "sha256": "525d68562c67b3037df86c494b877b9accf26286464a4624650e4063fc967e76"
+        },
+        {
+          "id": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-03--the-edges-contract-and-authority-record",
+          "sha256": "84bf7dc6de36e8805410b895d817a76f16f3e0820b01706d511e19587cbb3284"
+        },
+        {
+          "id": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-04--recursive-authority-and-information-eligibility",
+          "sha256": "a35aedd7a9c75e0c518352d55269b1eca90851d21df3b89303a8d0f01add438c"
+        },
+        {
+          "id": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-05--context-construction-and-clean-room-conditions",
+          "sha256": "cf9d32fdf288527422df78a12b6261e632d7a6fb3d962090ec0bb000af0939a6"
+        },
+        {
+          "id": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-06--readiness-cycles-and-replacement",
+          "sha256": "b063404dbfc93bc8465c1a380b61c525597f585e22be1a01c0415746faab51a6"
+        },
+        {
+          "id": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-07--change-evidence-and-reliance",
+          "sha256": "9946c3d87bf78c0f864c9599aaceae82217109aff830948c173328347f21d30f"
+        }
+      ]
+    }
+  },
+  "coordinates": {
+    "context": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:context:source-first-proposal",
+    "owner": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:actor:f-p-author",
+    "scope": [
+      "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:scope:source-corpus"
+    ]
+  },
+  "signature": {
+    "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:signature:compact-source-proposal-v1",
+    "definition": {
+      "fields": {
+        "objects": {
+          "id": {
+            "type": "identity"
+          },
+          "context": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:context"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "owner": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:actor"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "scope": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [],
+              "local_sorts": [],
+              "external_kinds": [
+                "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:scope"
+              ],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": false
+            },
+            "min_items": 1
+          },
+          "basis": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:basis"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "sort": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:sort"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "value": {
+            "type": "object",
+            "fields": {
+              "label": {
+                "type": "string",
+                "min_length": 1
+              },
+              "definition": {
+                "type": "string",
+                "min_length": 1
+              },
+              "conditions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "min_length": 1
+                },
+                "min_items": 0
+              },
+              "exceptions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "min_length": 1
+                },
+                "min_items": 0
+              },
+              "grounding": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "fields": {
+                    "section": {
+                      "type": "ref",
+                      "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+                      "local_families": [],
+                      "local_sorts": [],
+                      "external_kinds": [
+                        "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:source-section"
+                      ],
+                      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+                      "governing": false
+                    },
+                    "path": {
+                      "type": "string",
+                      "min_length": 1
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    },
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "quote": {
+                      "type": "string",
+                      "min_length": 1
+                    }
+                  }
+                },
+                "min_items": 1
+              }
+            }
+          }
+        },
+        "relations": {
+          "id": {
+            "type": "identity"
+          },
+          "context": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:context"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "owner": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:actor"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "scope": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [],
+              "local_sorts": [],
+              "external_kinds": [
+                "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:scope"
+              ],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": false
+            },
+            "min_items": 1
+          },
+          "basis": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:basis"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "kind": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:relation-kind"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "source": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "external_kinds": [],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": true
+          },
+          "target": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "external_kinds": [],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": true
+          },
+          "qualifiers": {
+            "type": "object",
+            "fields": {
+              "kind": {
+                "type": "string",
+                "min_length": 1
+              },
+              "meaning": {
+                "type": "string",
+                "min_length": 1
+              },
+              "conditions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "min_length": 1
+                },
+                "min_items": 0
+              },
+              "exceptions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "min_length": 1
+                },
+                "min_items": 0
+              },
+              "grounding": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "fields": {
+                    "section": {
+                      "type": "ref",
+                      "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+                      "local_families": [],
+                      "local_sorts": [],
+                      "external_kinds": [
+                        "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:source-section"
+                      ],
+                      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+                      "governing": false
+                    },
+                    "path": {
+                      "type": "string",
+                      "min_length": 1
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    },
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "quote": {
+                      "type": "string",
+                      "min_length": 1
+                    }
+                  }
+                },
+                "min_items": 1
+              }
+            }
+          }
+        },
+        "constraints": {
+          "id": {
+            "type": "identity"
+          },
+          "context": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:context"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "owner": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:actor"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "scope": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [],
+              "local_sorts": [],
+              "external_kinds": [
+                "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:scope"
+              ],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": false
+            },
+            "min_items": 1
+          },
+          "basis": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:basis"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "kind": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:constraint-kind"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "applies_to": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "external_kinds": [],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": true
+            },
+            "min_items": 1
+          },
+          "predicate": {
+            "type": "object",
+            "fields": {
+              "statement": {
+                "type": "string",
+                "min_length": 1
+              },
+              "conditions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "min_length": 1
+                },
+                "min_items": 0
+              },
+              "exceptions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "min_length": 1
+                },
+                "min_items": 0
+              },
+              "uncertainty": {
+                "type": "string"
+              },
+              "grounding": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "fields": {
+                    "section": {
+                      "type": "ref",
+                      "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+                      "local_families": [],
+                      "local_sorts": [],
+                      "external_kinds": [
+                        "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:source-section"
+                      ],
+                      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+                      "governing": false
+                    },
+                    "path": {
+                      "type": "string",
+                      "min_length": 1
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    },
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "quote": {
+                      "type": "string",
+                      "min_length": 1
+                    }
+                  }
+                },
+                "min_items": 1
+              }
+            }
+          },
+          "judgment_kind": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:judgment-kind"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "latitude_ref": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [
+                "latitude"
+              ],
+              "local_sorts": [],
+              "external_kinds": [],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": true
+            },
+            "min_items": 0
+          },
+          "refusal": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:stop"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          }
+        },
+        "latitude": {
+          "id": {
+            "type": "identity"
+          },
+          "context": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:context"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "owner": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:actor"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "scope": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [],
+              "local_sorts": [],
+              "external_kinds": [
+                "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:scope"
+              ],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": false
+            },
+            "min_items": 1
+          },
+          "basis": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:basis"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "applies_to": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "external_kinds": [],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": true
+            },
+            "min_items": 1
+          },
+          "allowed_variation": {
+            "type": "object",
+            "fields": {
+              "statements": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "min_length": 1
+                },
+                "min_items": 0
+              },
+              "grounding": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "fields": {
+                    "section": {
+                      "type": "ref",
+                      "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+                      "local_families": [],
+                      "local_sorts": [],
+                      "external_kinds": [
+                        "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:source-section"
+                      ],
+                      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+                      "governing": false
+                    },
+                    "path": {
+                      "type": "string",
+                      "min_length": 1
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    },
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "quote": {
+                      "type": "string",
+                      "min_length": 1
+                    }
+                  }
+                },
+                "min_items": 1
+              }
+            }
+          },
+          "forbidden_variation": {
+            "type": "object",
+            "fields": {
+              "statements": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "min_length": 1
+                },
+                "min_items": 0
+              },
+              "grounding": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "fields": {
+                    "section": {
+                      "type": "ref",
+                      "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+                      "local_families": [],
+                      "local_sorts": [],
+                      "external_kinds": [
+                        "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:source-section"
+                      ],
+                      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+                      "governing": false
+                    },
+                    "path": {
+                      "type": "string",
+                      "min_length": 1
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    },
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "quote": {
+                      "type": "string",
+                      "min_length": 1
+                    }
+                  }
+                },
+                "min_items": 1
+              }
+            }
+          },
+          "invalidation": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:invalidation"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          }
+        },
+        "residuals": {
+          "id": {
+            "type": "identity"
+          },
+          "context": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:context"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "owner": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:actor"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "scope": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [],
+              "local_sorts": [],
+              "external_kinds": [
+                "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:scope"
+              ],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": false
+            },
+            "min_items": 1
+          },
+          "basis": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:basis"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "subject": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [
+              "objects",
+              "relations",
+              "constraints",
+              "latitude"
+            ],
+            "local_sorts": [],
+            "external_kinds": [],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": true
+          },
+          "kind": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:residual-kind"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "uncertainty": {
+            "type": "object",
+            "fields": {
+              "statement": {
+                "type": "string",
+                "min_length": 1
+              },
+              "grounding": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "fields": {
+                    "section": {
+                      "type": "ref",
+                      "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+                      "local_families": [],
+                      "local_sorts": [],
+                      "external_kinds": [
+                        "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:source-section"
+                      ],
+                      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+                      "governing": false
+                    },
+                    "path": {
+                      "type": "string",
+                      "min_length": 1
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    },
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "quote": {
+                      "type": "string",
+                      "min_length": 1
+                    }
+                  }
+                },
+                "min_items": 1
+              }
+            }
+          },
+          "consequence": {
+            "type": "string",
+            "min_length": 1
+          },
+          "re_entry": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [
+                "traversals"
+              ],
+              "local_sorts": [],
+              "external_kinds": [],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": false
+            },
+            "min_items": 0
+          },
+          "invalidation": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:invalidation"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          }
+        },
+        "traversals": {
+          "id": {
+            "type": "identity"
+          },
+          "context": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:context"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "owner": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:actor"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "scope": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [],
+              "local_sorts": [],
+              "external_kinds": [
+                "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:scope"
+              ],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": false
+            },
+            "min_items": 1
+          },
+          "basis": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:basis"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "domain": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:domain"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "codomain": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:domain"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "preconditions": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [
+                "constraints"
+              ],
+              "local_sorts": [],
+              "external_kinds": [],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": true
+            },
+            "min_items": 0
+          },
+          "postconditions": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [
+                "constraints"
+              ],
+              "local_sorts": [],
+              "external_kinds": [],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": true
+            },
+            "min_items": 0
+          },
+          "authority": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:authority"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "external_kinds": [
+                "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:evidence"
+              ],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": false
+            },
+            "min_items": 0
+          },
+          "provenance": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "external_kinds": [
+                "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:evidence"
+              ],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": false
+            },
+            "min_items": 0
+          },
+          "stop_states": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [],
+              "local_sorts": [],
+              "external_kinds": [
+                "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:stop"
+              ],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": false
+            },
+            "min_items": 1
+          }
+        },
+        "transformations": {
+          "id": {
+            "type": "identity"
+          },
+          "context": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:context"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "owner": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:actor"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "scope": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [],
+              "local_sorts": [],
+              "external_kinds": [
+                "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:scope"
+              ],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": false
+            },
+            "min_items": 1
+          },
+          "basis": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:basis"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "traversal": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [
+              "traversals"
+            ],
+            "local_sorts": [],
+            "external_kinds": [],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": true
+          },
+          "domain_model": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:model"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "codomain_model": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:model"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "operation_authority": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:authority"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "preconditions": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [
+                "constraints"
+              ],
+              "local_sorts": [],
+              "external_kinds": [],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": true
+            },
+            "min_items": 0
+          },
+          "preservation_relation": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:preservation-law"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "preserved": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "external_kinds": [],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": true
+            },
+            "min_items": 0
+          },
+          "introduced": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [],
+              "local_sorts": [],
+              "external_kinds": [
+                "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:future-record"
+              ],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": false
+            },
+            "min_items": 0
+          },
+          "removed": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "external_kinds": [],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": true
+            },
+            "min_items": 0
+          },
+          "external_preserved": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [],
+              "local_sorts": [],
+              "external_kinds": [
+                "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:external-resolution"
+              ],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": false
+            },
+            "min_items": 0
+          },
+          "external_introduced": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [],
+              "local_sorts": [],
+              "external_kinds": [
+                "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:external-resolution"
+              ],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": false
+            },
+            "min_items": 0
+          },
+          "external_removed": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [],
+              "local_sorts": [],
+              "external_kinds": [
+                "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:external-resolution"
+              ],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": false
+            },
+            "min_items": 0
+          },
+          "external_resolution_witnesses": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [],
+              "local_sorts": [],
+              "external_kinds": [
+                "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:witness"
+              ],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": false
+            },
+            "min_items": 0
+          },
+          "residuals": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [
+                "residuals"
+              ],
+              "local_sorts": [],
+              "external_kinds": [],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": true
+            },
+            "min_items": 0
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "external_kinds": [
+                "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:evidence"
+              ],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": false
+            },
+            "min_items": 0
+          },
+          "provenance": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "external_kinds": [
+                "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:evidence"
+              ],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": false
+            },
+            "min_items": 0
+          },
+          "stop_states": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [],
+              "local_sorts": [],
+              "external_kinds": [
+                "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:stop"
+              ],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": false
+            },
+            "min_items": 1
+          },
+          "invalidation": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:invalidation"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "re_entry": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [
+                "traversals"
+              ],
+              "local_sorts": [],
+              "external_kinds": [],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": false
+            },
+            "min_items": 0
+          }
+        },
+        "judgments": {
+          "id": {
+            "type": "identity"
+          },
+          "context": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:context"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "owner": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:actor"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "scope": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [],
+              "local_sorts": [],
+              "external_kinds": [
+                "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:scope"
+              ],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": false
+            },
+            "min_items": 1
+          },
+          "basis": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:basis"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "kind": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:judgment-kind"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "subject": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "external_kinds": [],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": true
+          },
+          "subject_digest": {
+            "type": "string",
+            "min_length": 1
+          },
+          "evaluator": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:actor"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "authority": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:authority"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          },
+          "decision": {
+            "type": "enum",
+            "values": [
+              "indeterminate",
+              "refused",
+              "accepted"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "external_kinds": [
+                "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:evidence"
+              ],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": false
+            },
+            "min_items": 1
+          },
+          "provenance": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "external_kinds": [
+                "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:evidence"
+              ],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": false
+            },
+            "min_items": 1
+          },
+          "decided_at": {
+            "type": "string",
+            "min_length": 1
+          }
+        }
+      },
+      "sorts": {
+        "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:sort:authored-concept": {
+          "value": {
+            "type": "object",
+            "fields": {
+              "label": {
+                "type": "string",
+                "min_length": 1
+              },
+              "definition": {
+                "type": "string",
+                "min_length": 1
+              },
+              "conditions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "min_length": 1
+                },
+                "min_items": 0
+              },
+              "exceptions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "min_length": 1
+                },
+                "min_items": 0
+              },
+              "grounding": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "fields": {
+                    "section": {
+                      "type": "ref",
+                      "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+                      "local_families": [],
+                      "local_sorts": [],
+                      "external_kinds": [
+                        "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:source-section"
+                      ],
+                      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+                      "governing": false
+                    },
+                    "path": {
+                      "type": "string",
+                      "min_length": 1
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    },
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "quote": {
+                      "type": "string",
+                      "min_length": 1
+                    }
+                  }
+                },
+                "min_items": 1
+              }
+            }
+          }
+        }
+      },
+      "relation_kinds": {
+        "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:relation-kind:governing:authority_boundary": {
+          "source": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "external_kinds": [],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": true
+          },
+          "target": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "external_kinds": [],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": true
+          },
+          "qualifiers": {
+            "type": "object",
+            "fields": {
+              "kind": {
+                "type": "string",
+                "min_length": 1
+              },
+              "meaning": {
+                "type": "string",
+                "min_length": 1
+              },
+              "conditions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "min_length": 1
+                },
+                "min_items": 0
+              },
+              "exceptions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "min_length": 1
+                },
+                "min_items": 0
+              },
+              "grounding": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "fields": {
+                    "section": {
+                      "type": "ref",
+                      "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+                      "local_families": [],
+                      "local_sorts": [],
+                      "external_kinds": [
+                        "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:source-section"
+                      ],
+                      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+                      "governing": false
+                    },
+                    "path": {
+                      "type": "string",
+                      "min_length": 1
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    },
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "quote": {
+                      "type": "string",
+                      "min_length": 1
+                    }
+                  }
+                },
+                "min_items": 1
+              }
+            }
+          }
+        },
+        "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:relation-kind:governing:permission_condition": {
+          "source": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "external_kinds": [],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": true
+          },
+          "target": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "external_kinds": [],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": true
+          },
+          "qualifiers": {
+            "type": "object",
+            "fields": {
+              "kind": {
+                "type": "string",
+                "min_length": 1
+              },
+              "meaning": {
+                "type": "string",
+                "min_length": 1
+              },
+              "conditions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "min_length": 1
+                },
+                "min_items": 0
+              },
+              "exceptions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "min_length": 1
+                },
+                "min_items": 0
+              },
+              "grounding": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "fields": {
+                    "section": {
+                      "type": "ref",
+                      "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+                      "local_families": [],
+                      "local_sorts": [],
+                      "external_kinds": [
+                        "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:source-section"
+                      ],
+                      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+                      "governing": false
+                    },
+                    "path": {
+                      "type": "string",
+                      "min_length": 1
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    },
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "quote": {
+                      "type": "string",
+                      "min_length": 1
+                    }
+                  }
+                },
+                "min_items": 1
+              }
+            }
+          }
+        },
+        "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:relation-kind:governing:continuation_currentness": {
+          "source": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "external_kinds": [],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": true
+          },
+          "target": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "external_kinds": [],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": true
+          },
+          "qualifiers": {
+            "type": "object",
+            "fields": {
+              "kind": {
+                "type": "string",
+                "min_length": 1
+              },
+              "meaning": {
+                "type": "string",
+                "min_length": 1
+              },
+              "conditions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "min_length": 1
+                },
+                "min_items": 0
+              },
+              "exceptions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "min_length": 1
+                },
+                "min_items": 0
+              },
+              "grounding": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "fields": {
+                    "section": {
+                      "type": "ref",
+                      "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+                      "local_families": [],
+                      "local_sorts": [],
+                      "external_kinds": [
+                        "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:source-section"
+                      ],
+                      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+                      "governing": false
+                    },
+                    "path": {
+                      "type": "string",
+                      "min_length": 1
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    },
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "quote": {
+                      "type": "string",
+                      "min_length": 1
+                    }
+                  }
+                },
+                "min_items": 1
+              }
+            }
+          }
+        }
+      },
+      "constraint_kinds": {
+        "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:constraint-kind:authored-source-statement": {
+          "applies_to": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "external_kinds": [],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": true
+            },
+            "min_items": 1
+          },
+          "predicate": {
+            "type": "object",
+            "fields": {
+              "statement": {
+                "type": "string",
+                "min_length": 1
+              },
+              "conditions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "min_length": 1
+                },
+                "min_items": 0
+              },
+              "exceptions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "min_length": 1
+                },
+                "min_items": 0
+              },
+              "uncertainty": {
+                "type": "string"
+              },
+              "grounding": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "fields": {
+                    "section": {
+                      "type": "ref",
+                      "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+                      "local_families": [],
+                      "local_sorts": [],
+                      "external_kinds": [
+                        "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:source-section"
+                      ],
+                      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+                      "governing": false
+                    },
+                    "path": {
+                      "type": "string",
+                      "min_length": 1
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    },
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "quote": {
+                      "type": "string",
+                      "min_length": 1
+                    }
+                  }
+                },
+                "min_items": 1
+              }
+            }
+          }
+        }
+      },
+      "residual_kinds": {
+        "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:residual-kind:authored-uncertainty": {
+          "subject": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [
+              "objects",
+              "relations",
+              "constraints",
+              "latitude"
+            ],
+            "local_sorts": [],
+            "external_kinds": [],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": true
+          },
+          "uncertainty": {
+            "type": "object",
+            "fields": {
+              "statement": {
+                "type": "string",
+                "min_length": 1
+              },
+              "grounding": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "fields": {
+                    "section": {
+                      "type": "ref",
+                      "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+                      "local_families": [],
+                      "local_sorts": [],
+                      "external_kinds": [
+                        "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:source-section"
+                      ],
+                      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+                      "governing": false
+                    },
+                    "path": {
+                      "type": "string",
+                      "min_length": 1
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    },
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "quote": {
+                      "type": "string",
+                      "min_length": 1
+                    }
+                  }
+                },
+                "min_items": 1
+              }
+            }
+          },
+          "consequence": {
+            "type": "string",
+            "min_length": 1
+          },
+          "re_entry": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [
+                "traversals"
+              ],
+              "local_sorts": [],
+              "external_kinds": [],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": false
+            },
+            "min_items": 0
+          },
+          "invalidation": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [],
+            "local_sorts": [],
+            "external_kinds": [
+              "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:invalidation"
+            ],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": false
+          }
+        }
+      },
+      "judgment_kinds": {
+        "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:judgment-kind:external-semantic-review": {
+          "subject": {
+            "type": "ref",
+            "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "external_kinds": [],
+            "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+            "governing": true
+          },
+          "decision": {
+            "type": "enum",
+            "values": [
+              "indeterminate",
+              "refused",
+              "accepted"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "external_kinds": [
+                "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:evidence"
+              ],
+              "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+              "governing": false
+            },
+            "min_items": 1
+          }
+        }
+      },
+      "functor_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:f-d",
+        "urn:stdo:concept:axiomatic-calculus:f-p",
+        "urn:stdo:concept:axiomatic-calculus:f-h"
+      ],
+      "stop_kinds": [
+        "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:stop:no-execution-or-acceptance"
+      ],
+      "required_families": []
+    },
+    "sha256": "fd563e393110e50909bdcd478252cff9024d8e603fb14850119f6453dfff64b6"
+  },
+  "interpretation": {
+    "contract": {
+      "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:interpretation-contract",
+      "sha256": "695dcecf3c379efabfeb121f05a92b7e64958110fdddd321362b4ed00732176a"
+    },
+    "selection_ledger": {
+      "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:selection-ledger",
+      "sha256": "06432916b9e15bdbb9261a2d3996ac2f06c700d3c0fdd8babaea087b436dd037"
+    },
+    "interpreter": {
+      "id": "urn:stdo:composition:interpreter:current-writer",
+      "sha256": "385b6288225ae546a3687ac7d279fe0a81f14c0eaeecb3637e3eac9657580b77"
+    },
+    "authority": {
+      "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:authority:proposal-authoring-only",
+      "sha256": "52097a73a8e2925f62924d229df26b8c7fec9a3c3fed8a8101694e1eea6606ad"
+    },
+    "source_reentry": {
+      "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:source-reentry",
+      "sha256": "2149eddca2807bc82d61d4ef33be3828b907b44269cb05347c89682a4daf7c2c"
+    },
+    "invalidation": {
+      "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:invalidation:source-or-interpretation-change",
+      "sha256": "aab2fe708f69c4b748681e498ff0b4b34ead65fa66558b80d5098b28c0db4b64"
+    },
+    "provenance": [
+      {
+        "id": "urn:stdo:composition:authoring-record",
+        "sha256": "385b6288225ae546a3687ac7d279fe0a81f14c0eaeecb3637e3eac9657580b77"
+      },
+      {
+        "id": "urn:stdo:composition:plan",
+        "sha256": "ca24ee6500a06b5f47f4ea1be3fc241f684d0381e2b568151276013911d8c9ed"
+      }
+    ],
+    "dispositions": [
+      {
+        "source": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-01--recursive-product-boundaries",
+        "decision": "retained",
+        "records": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:7e7c62fb24141ae68ad9dcbca7c0d5c0",
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:cdd5cb77faa386ec8dcce713148a95dc",
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:243ff58ffddcc192d69ad44e45753fc1"
+        ],
+        "authority": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:authority:proposal-authoring-only",
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "reason": "Retain the entire clause in the grounded obligation and supply a concise routing concept; qualifications are retained verbatim."
+      },
+      {
+        "source": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-02--independent-entry-and-the-integrated-outcome",
+        "decision": "retained",
+        "records": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:4e50832554bf6cc485c65ba2dbe56ddc",
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:a99da10143e42464128337b3e5a21fc9",
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:55ad59be4948e8c79016c0bde6cb564b"
+        ],
+        "authority": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:authority:proposal-authoring-only",
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "reason": "Retain the entire clause in the grounded obligation and supply a concise routing concept; qualifications are retained verbatim."
+      },
+      {
+        "source": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-03--the-edges-contract-and-authority-record",
+        "decision": "retained",
+        "records": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:829627b7164e287a840ded4a50f10c61",
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:9198c8e833bae18e98ec1998fc9ca014"
+        ],
+        "authority": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:authority:proposal-authoring-only",
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "reason": "Retain the entire clause in the grounded obligation and supply a concise routing concept; qualifications are retained verbatim."
+      },
+      {
+        "source": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-04--recursive-authority-and-information-eligibility",
+        "decision": "retained",
+        "records": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:bd1ab6deb02e817166acf0259acecd34",
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:d929a6997c2fe9c69776f845716ed2cd",
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:aeabb50804e704a01591e7cf2c13478d",
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:90d0389ca49b3b32ab02be7fae54c163"
+        ],
+        "authority": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:authority:proposal-authoring-only",
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "reason": "Retain the entire clause in the grounded obligation and supply a concise routing concept; qualifications are retained verbatim."
+      },
+      {
+        "source": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-05--context-construction-and-clean-room-conditions",
+        "decision": "retained",
+        "records": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:dca271f79fff5eb391a6981ab348dd60",
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:d8555d3df0ae8fd32ca70fff867c2cae",
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:9203916c7e6c24e01b8201c597f2b228",
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:c3d2fc2a2773bc530287e917fa3d3eab"
+        ],
+        "authority": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:authority:proposal-authoring-only",
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "reason": "Retain the entire clause in the grounded obligation and supply a concise routing concept; qualifications are retained verbatim."
+      },
+      {
+        "source": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-06--readiness-cycles-and-replacement",
+        "decision": "retained",
+        "records": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:19519ec64871bc9463973bc3656e1cda",
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:46a8261fdd0bd4372ab54597538c8a4b",
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:9579010404d78d8400c4e095c4de49f2"
+        ],
+        "authority": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:authority:proposal-authoring-only",
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "reason": "Retain the entire clause in the grounded obligation and supply a concise routing concept; qualifications are retained verbatim."
+      },
+      {
+        "source": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-07--change-evidence-and-reliance",
+        "decision": "retained",
+        "records": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:06bdfa4653abe15d43f3d8151b23d67a",
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:9845c5d8611d53bddca029fcbfae8226",
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:4d2639110538426203aceae880f264ab",
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:c925ee1e966b495bd6e8289e440eb9a6",
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:587954418a4a9e653112556f3f93762e"
+        ],
+        "authority": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:authority:proposal-authoring-only",
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "reason": "Retain the entire clause in the grounded obligation and supply a concise routing concept; qualifications are retained verbatim."
+      }
+    ]
+  },
+  "identity_universe": [
+    "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-01--recursive-product-boundaries",
+    "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-02--independent-entry-and-the-integrated-outcome",
+    "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-03--the-edges-contract-and-authority-record",
+    "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-04--recursive-authority-and-information-eligibility",
+    "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-05--context-construction-and-clean-room-conditions",
+    "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-06--readiness-cycles-and-replacement",
+    "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-07--change-evidence-and-reliance",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:actor:f-p-author",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:authority:proposal-authoring-only",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:constraint-kind:authored-source-statement",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:context:source-first-proposal",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:invalidation:source-or-interpretation-change",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:judgment-kind:external-semantic-review",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:06bdfa4653abe15d43f3d8151b23d67a",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:19519ec64871bc9463973bc3656e1cda",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:243ff58ffddcc192d69ad44e45753fc1",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:46a8261fdd0bd4372ab54597538c8a4b",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:4d2639110538426203aceae880f264ab",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:4e50832554bf6cc485c65ba2dbe56ddc",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:55ad59be4948e8c79016c0bde6cb564b",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:587954418a4a9e653112556f3f93762e",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:7e7c62fb24141ae68ad9dcbca7c0d5c0",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:829627b7164e287a840ded4a50f10c61",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:90d0389ca49b3b32ab02be7fae54c163",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:9198c8e833bae18e98ec1998fc9ca014",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:9203916c7e6c24e01b8201c597f2b228",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:9579010404d78d8400c4e095c4de49f2",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:9845c5d8611d53bddca029fcbfae8226",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:a99da10143e42464128337b3e5a21fc9",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:aeabb50804e704a01591e7cf2c13478d",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:bd1ab6deb02e817166acf0259acecd34",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:c3d2fc2a2773bc530287e917fa3d3eab",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:c925ee1e966b495bd6e8289e440eb9a6",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:cdd5cb77faa386ec8dcce713148a95dc",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:d8555d3df0ae8fd32ca70fff867c2cae",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:d929a6997c2fe9c69776f845716ed2cd",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:dca271f79fff5eb391a6981ab348dd60",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:relation-kind:governing:authority_boundary",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:relation-kind:governing:continuation_currentness",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:relation-kind:governing:permission_condition",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:residual-kind:authored-uncertainty",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:scope:source-corpus",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:sort:authored-concept",
+    "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:stop:no-execution-or-acceptance"
+  ],
+  "external_resolutions": [
+    {
+      "external_identity": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-01--recursive-product-boundaries",
+      "reference_domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+      "external_target_kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:source-section",
+      "resolved_target_identity": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-01--recursive-product-boundaries",
+      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+      "resolution_basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+      "evidence_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:evidence:explicit-generation-signature"
+    },
+    {
+      "external_identity": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-02--independent-entry-and-the-integrated-outcome",
+      "reference_domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+      "external_target_kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:source-section",
+      "resolved_target_identity": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-02--independent-entry-and-the-integrated-outcome",
+      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+      "resolution_basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+      "evidence_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:evidence:explicit-generation-signature"
+    },
+    {
+      "external_identity": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-03--the-edges-contract-and-authority-record",
+      "reference_domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+      "external_target_kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:source-section",
+      "resolved_target_identity": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-03--the-edges-contract-and-authority-record",
+      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+      "resolution_basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+      "evidence_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:evidence:explicit-generation-signature"
+    },
+    {
+      "external_identity": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-04--recursive-authority-and-information-eligibility",
+      "reference_domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+      "external_target_kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:source-section",
+      "resolved_target_identity": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-04--recursive-authority-and-information-eligibility",
+      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+      "resolution_basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+      "evidence_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:evidence:explicit-generation-signature"
+    },
+    {
+      "external_identity": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-05--context-construction-and-clean-room-conditions",
+      "reference_domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+      "external_target_kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:source-section",
+      "resolved_target_identity": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-05--context-construction-and-clean-room-conditions",
+      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+      "resolution_basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+      "evidence_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:evidence:explicit-generation-signature"
+    },
+    {
+      "external_identity": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-06--readiness-cycles-and-replacement",
+      "reference_domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+      "external_target_kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:source-section",
+      "resolved_target_identity": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-06--readiness-cycles-and-replacement",
+      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+      "resolution_basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+      "evidence_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:evidence:explicit-generation-signature"
+    },
+    {
+      "external_identity": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-07--change-evidence-and-reliance",
+      "reference_domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+      "external_target_kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:source-section",
+      "resolved_target_identity": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-07--change-evidence-and-reliance",
+      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+      "resolution_basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+      "evidence_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:evidence:explicit-generation-signature"
+    },
+    {
+      "external_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:actor:f-p-author",
+      "reference_domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+      "external_target_kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:actor",
+      "resolved_target_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:actor:f-p-author",
+      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+      "resolution_basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+      "evidence_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:evidence:explicit-generation-signature"
+    },
+    {
+      "external_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:authority:proposal-authoring-only",
+      "reference_domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+      "external_target_kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:authority",
+      "resolved_target_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:authority:proposal-authoring-only",
+      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+      "resolution_basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+      "evidence_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:evidence:explicit-generation-signature"
+    },
+    {
+      "external_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+      "reference_domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+      "external_target_kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:basis",
+      "resolved_target_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+      "resolution_basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+      "evidence_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:evidence:explicit-generation-signature"
+    },
+    {
+      "external_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:constraint-kind:authored-source-statement",
+      "reference_domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+      "external_target_kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:constraint-kind",
+      "resolved_target_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:constraint-kind:authored-source-statement",
+      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+      "resolution_basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+      "evidence_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:evidence:explicit-generation-signature"
+    },
+    {
+      "external_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:context:source-first-proposal",
+      "reference_domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+      "external_target_kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:context",
+      "resolved_target_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:context:source-first-proposal",
+      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+      "resolution_basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+      "evidence_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:evidence:explicit-generation-signature"
+    },
+    {
+      "external_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:invalidation:source-or-interpretation-change",
+      "reference_domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+      "external_target_kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:invalidation",
+      "resolved_target_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:invalidation:source-or-interpretation-change",
+      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+      "resolution_basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+      "evidence_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:evidence:explicit-generation-signature"
+    },
+    {
+      "external_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:judgment-kind:external-semantic-review",
+      "reference_domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+      "external_target_kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:judgment-kind",
+      "resolved_target_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:judgment-kind:external-semantic-review",
+      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+      "resolution_basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+      "evidence_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:evidence:explicit-generation-signature"
+    },
+    {
+      "external_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:relation-kind:governing:authority_boundary",
+      "reference_domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+      "external_target_kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:relation-kind",
+      "resolved_target_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:relation-kind:governing:authority_boundary",
+      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+      "resolution_basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+      "evidence_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:evidence:explicit-generation-signature"
+    },
+    {
+      "external_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:relation-kind:governing:continuation_currentness",
+      "reference_domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+      "external_target_kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:relation-kind",
+      "resolved_target_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:relation-kind:governing:continuation_currentness",
+      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+      "resolution_basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+      "evidence_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:evidence:explicit-generation-signature"
+    },
+    {
+      "external_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:relation-kind:governing:permission_condition",
+      "reference_domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+      "external_target_kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:relation-kind",
+      "resolved_target_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:relation-kind:governing:permission_condition",
+      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+      "resolution_basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+      "evidence_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:evidence:explicit-generation-signature"
+    },
+    {
+      "external_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:residual-kind:authored-uncertainty",
+      "reference_domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+      "external_target_kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:residual-kind",
+      "resolved_target_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:residual-kind:authored-uncertainty",
+      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+      "resolution_basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+      "evidence_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:evidence:explicit-generation-signature"
+    },
+    {
+      "external_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:scope:source-corpus",
+      "reference_domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+      "external_target_kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:scope",
+      "resolved_target_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:scope:source-corpus",
+      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+      "resolution_basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+      "evidence_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:evidence:explicit-generation-signature"
+    },
+    {
+      "external_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:sort:authored-concept",
+      "reference_domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+      "external_target_kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:sort",
+      "resolved_target_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:sort:authored-concept",
+      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+      "resolution_basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+      "evidence_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:evidence:explicit-generation-signature"
+    },
+    {
+      "external_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:stop:no-execution-or-acceptance",
+      "reference_domain": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:reference-domain:declared",
+      "external_target_kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:external-kind:stop",
+      "resolved_target_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:stop:no-execution-or-acceptance",
+      "basis_relation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis-relation:exact",
+      "resolution_basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+      "evidence_identity": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:evidence:explicit-generation-signature"
+    }
+  ],
+  "populations": {
+    "objects": [
+      {
+        "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:7e7c62fb24141ae68ad9dcbca7c0d5c0",
+        "context": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:context:source-first-proposal",
+        "owner": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:scope:source-corpus"
+        ],
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "sort": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:sort:authored-concept",
+        "value": {
+          "label": "Recursive Product boundary",
+          "definition": "A Product owns one coherent WHAT; leaves and composites are relative to a declared decomposition, with shared identity and separate relation kinds.",
+          "conditions": [
+            "The selected engagement has the Product-composition scope described by this clause."
+          ],
+          "exceptions": [],
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-01--recursive-product-boundaries",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 855,
+              "end_line": 875,
+              "quote": "### PC-01 — Recursive Product boundaries\n\nA Product identifies one coherent WHAT and its owning authority. Alternative\nrealizations of that WHAT are build tenants. A decomposition into Products names\nwhich distinct outcomes and authorities each constituent owns, and which outer\noutcome the composition owns.\n\nUnder the identity and ownership laws (P3, P6), within a declared decomposition scope, a leaf has no further constituent Product\nboundary exposed by that decomposition. It may contain modules and declared\nexternal dependencies. A composite relates two or more constituent capabilities\nor an outer capability to its constituent capability; its own capability may in\nturn be consumed as a constituent. The same definition, contract and authority\nlaws apply at every depth. Shared constituents keep one identity and their\nseparately bound uses; a hierarchy view may show several references to one leaf.\n\nDecomposition, capability/data dependency, inspection permission, authority and\nwork prerequisites are distinct relations. A directory tree establishes none of\nthem. A named composition view states its root, participating identities,\nselected boundaries and relation kinds rather than treating all reachable edges\nas one hierarchy."
+            }
+          ]
+        }
+      },
+      {
+        "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:4e50832554bf6cc485c65ba2dbe56ddc",
+        "context": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:context:source-first-proposal",
+        "owner": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:scope:source-corpus"
+        ],
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "sort": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:sort:authored-concept",
+        "value": {
+          "label": "Independent entry and integrated outcome",
+          "definition": "Standalone entry is scoped to the Product-owned outcome and declared dependencies; the composite must separately establish its integrated outcome.",
+          "conditions": [
+            "The selected engagement has the Product-composition scope described by this clause."
+          ],
+          "exceptions": [],
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-02--independent-entry-and-the-integrated-outcome",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 876,
+              "end_line": 892,
+              "quote": "### PC-02 — Independent entry and the integrated outcome\n\nA Product offered as a standalone constituent must be enterable through its own\nProduct Definition and a Product-authorized applicable frame basis, with the\ndependency closure and capabilities its contract declares. Entry must not require\nan enclosing composition's activation unless that enclosing capability is itself\nan explicit prerequisite. Such a prerequisite is disclosed as a limit on the\nstandalone claim. Shared or externally located frame documents are permitted\nwhere adoption, scope and availability are established; file ownership alone is\nnot the deciding test.\n\nStandalone does not imply dependency-free, separately deployable or able to\nsupply every host itself. The claim names which construction, evaluation or use\ncan be performed independently and its required inputs. The composition owner\nseparately establishes interface compatibility, material joins and its complete\noutcome. Successful constituent checks do not establish that outer predicate."
+            }
+          ]
+        }
+      },
+      {
+        "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:829627b7164e287a840ded4a50f10c61",
+        "context": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:context:source-first-proposal",
+        "owner": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:scope:source-corpus"
+        ],
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "sort": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:sort:authored-concept",
+        "value": {
+          "label": "Edge authority and capability contract",
+          "definition": "An edge records source/target capability, exact basis, existing authorities, eligible information, actual operations, lifecycle and return conditions without manufacturing a grant.",
+          "conditions": [
+            "The selected engagement has the Product-composition scope described by this clause."
+          ],
+          "exceptions": [],
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-03--the-edges-contract-and-authority-record",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 893,
+              "end_line": 914,
+              "quote": "### PC-03 — The edge's contract and authority record\n\nFor each directed relation, the `relation` authority and referenced `contracts`\nstate, directly or by exact reference:\n\n1. Source and target Product identities and roles; the consumed capability,\n   outcome, purpose, selected basis and currentness policy.\n2. The existing owners and grants for each material operation: acquisition,\n   disclosure, use, execution, mutation, assessment and disposition. A kind or\n   role label records no grant by itself.\n3. Admissible inputs and exports; material assumptions, effects, failures,\n   obligations and evidence; restrictions on implementation material and derived\n   information where applicable.\n4. The acting principals or binding rule, task/phase scope, permitted delegation,\n   return consumer, stop/refusal conditions and revocation/invalidation route.\n\nThese coordinates may be supplied by source-linked prose. The relation locates\nand constrains lawfully granted authority; it cannot manufacture the target's\npermission or the source's admission. Missing material authority or an unresolved\nconflict withholds the dependent action. The execution-scoped activation remains\nthe place where a particular actor, input, effect and return are bound."
+            }
+          ]
+        }
+      },
+      {
+        "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:bd1ab6deb02e817166acf0259acecd34",
+        "context": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:context:source-first-proposal",
+        "owner": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:scope:source-corpus"
+        ],
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "sort": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:sort:authored-concept",
+        "value": {
+          "label": "Recursive acquisition and information eligibility",
+          "definition": "Recursive reachability and shared targets do not merge permissions; providers may encapsulate adequate internals and separately authorized inspection remains distinct from durable consumption.",
+          "conditions": [
+            "The selected engagement has the Product-composition scope described by this clause."
+          ],
+          "exceptions": [],
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-04--recursive-authority-and-information-eligibility",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 915,
+              "end_line": 936,
+              "quote": "### PC-04 — Recursive authority and information eligibility\n\nA permitted A → B use does not entail A's access to B's dependencies. Neither\nA → B plus B → C nor two routes to a shared leaf imply a union of their grants.\nEach onward acquisition, disclosure or delegated effect needs authority for that\nactor, purpose and path, including any permitted onward use of returned material.\nExisting delegation may authorize a chain explicitly; its scope cannot expand\nsilently at a recursive step.\n\nA provider may encapsulate internal dependencies behind an adequate contract.\nConsumers need not flatten every implementation dependency into a direct edge.\nWhere an outer claim materially relies on a far-side contract, assumption,\nevidence item or acquisition, that reliance and its applicable authority must be\npreserved through the boundary. Unknown impact is not evidence of encapsulation.\n\nDurable Product consumption and bounded authorized inspection are different\nrelations. A Reviewer or diagnostic Worker may inspect a larger causal cone under\nan explicit access grant without thereby adopting those internals as a runtime\ndependency or gaining a write grant. If findings become a continuing construction\nconstraint or dependency, their producer, applicability and governing relation\nmust be retained."
+            }
+          ]
+        }
+      },
+      {
+        "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:dca271f79fff5eb391a6981ab348dd60",
+        "context": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:context:source-first-proposal",
+        "owner": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:scope:source-corpus"
+        ],
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "sort": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:sort:authored-concept",
+        "value": {
+          "label": "Permitted and adequate context",
+          "definition": "Context must be both permitted and sufficient for the selected decisions and continuations; derived information and prior exposure retain their eligibility and standing.",
+          "conditions": [
+            "The selected engagement has the Product-composition scope described by this clause."
+          ],
+          "exceptions": [],
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-05--context-construction-and-clean-room-conditions",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 937,
+              "end_line": 961,
+              "quote": "### PC-05 — Context construction and clean-room conditions\n\nAn actor's selected context must satisfy both permission and adequacy for its\nengagement. Permission covers the source information and permitted derivations,\nnot only paths or filenames. The boundary identifies eligible source classes,\nexports and tool outputs, material provenance, intended use, later acquisitions\nand the effect of prior exposure. An allowed file location or a fresh summary\ndoes not sanitize prohibited information.\n\nA target owner may authorize an export, but clean-room eligibility additionally\nrequires that the engagement's information policy admits that export and its\nprovenance. The actual delivered/acquired material must be recorded to the extent\nrequired by the claim. An uncertain or prohibited exposure follows the declared\nhold/re-entry rule; it cannot be repaired by deleting its receipt or relabeling\nthe same actor fresh. Prior actor knowledge and external acquisition channels are\npart of the declared limits.\n\nAdequacy retains the distinctions required for the task's decisions and\ncontinuations, including unresolved obligations, result standing, currentness and\nauthority. If the permitted material is insufficient, acquire an authorized\nextension, narrow the task with the owner, use a suitable actor or return the\nunresolved outcome. Permission is not evidence of sufficiency, and a budget is\nnot permission to omit a deciding condition. This applies [FOUNDATIONS Observation sufficiency](FOUNDATIONS.md#assurance-relations)\nand its scoped preservation law; it supplies no general optimal context selector (P1, P2, P6)."
+            }
+          ]
+        }
+      },
+      {
+        "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:19519ec64871bc9463973bc3656e1cda",
+        "context": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:context:source-first-proposal",
+        "owner": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:scope:source-corpus"
+        ],
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "sort": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:sort:authored-concept",
+        "value": {
+          "label": "Readiness cycles and lawful replacement",
+          "definition": "Dependency-ready work needs executable prerequisites; provider replacement preserves material contracts or enters an authorized successor relation.",
+          "conditions": [
+            "The selected engagement has the Product-composition scope described by this clause."
+          ],
+          "exceptions": [],
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-06--readiness-cycles-and-replacement",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 962,
+              "end_line": 977,
+              "quote": "### PC-06 — Readiness, cycles and replacement\n\nWork selects a dependency-ready frontier at the required subjects and revisions.\nA cycle in declared Product relationships need not be a cycle in the selected\nwork. A cycle of current prerequisite claims requires an executable resolution:\nfor example an admitted prior revision, explicit seed, staged contract or bounded\niteration with its continuation/stop conditions. Naming a lead alone does not\nsupply a missing prerequisite or establish convergence.\n\nReplacing a constituent or refining it into further Products preserves the\nconsumer's material contract: meaning, preconditions, effects, failures,\nauthority, lifecycle, evidence and subsequent obligations. A semantic change\nrequires an authorized successor relation and affected reassessment. The [ACTIVATION refinement contract](ACTIVATION.md#refinement) governs this\npreservation. Matching signatures, labels or a sample output is insufficient (P4a, P6). New capabilities may be\nadded without silently widening existing consumers' duties or grants."
+            }
+          ]
+        }
+      },
+      {
+        "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:06bdfa4653abe15d43f3d8151b23d67a",
+        "context": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:context:source-first-proposal",
+        "owner": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:scope:source-corpus"
+        ],
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "sort": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:sort:authored-concept",
+        "value": {
+          "label": "Material change and historical evidence",
+          "definition": "Cross-boundary uses bind actual selected sources; material change selects affected reliance while original evidence and justified reuse keep their subjects.",
+          "conditions": [
+            "The selected engagement has the Product-composition scope described by this clause."
+          ],
+          "exceptions": [],
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-07--change-evidence-and-reliance",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 978,
+              "end_line": 993,
+              "quote": "### PC-07 — Change, evidence and reliance\n\nEach cross-boundary use binds the actual selected sources and material execution\nbasis, including uncommitted bytes where relevant. A moving selection identifies\nhow advancement is detected and which reliance must be reassessed. Git is one\npossible carrier, not a mandatory identity system.\n\nChanges and new counterexamples propagate through material assertion, execution\nand evidence-use dependencies under [FOUNDATIONS Change impact and evidence reuse](FOUNDATIONS.md#change-impact-and-evidence-reuse). Historical\nevidence remains about its original subject. Reuse on a changed subject needs an\nestablished applicability or preservation relation; rereading alone does not\nestablish it. A new release does not invalidate a still-selected older release,\nand a changed hash alone establishes neither semantic incompatibility nor\ncontinued validity. Unknown impact holds the dependent assurance or widens\nassessment; it does not require unrelated work to restart."
+            }
+          ]
+        }
+      }
+    ],
+    "relations": [
+      {
+        "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:aeabb50804e704a01591e7cf2c13478d",
+        "context": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:context:source-first-proposal",
+        "owner": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:scope:source-corpus"
+        ],
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:relation-kind:governing:authority_boundary",
+        "source": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:bd1ab6deb02e817166acf0259acecd34",
+        "target": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:829627b7164e287a840ded4a50f10c61",
+        "qualifiers": {
+          "kind": "authority_boundary",
+          "meaning": "Recursive use applies the existing edge authorities without transitive widening.",
+          "conditions": [
+            "When the referenced condition is material to the selected engagement."
+          ],
+          "exceptions": [],
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-04--recursive-authority-and-information-eligibility",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 915,
+              "end_line": 936,
+              "quote": "### PC-04 — Recursive authority and information eligibility\n\nA permitted A → B use does not entail A's access to B's dependencies. Neither\nA → B plus B → C nor two routes to a shared leaf imply a union of their grants.\nEach onward acquisition, disclosure or delegated effect needs authority for that\nactor, purpose and path, including any permitted onward use of returned material.\nExisting delegation may authorize a chain explicitly; its scope cannot expand\nsilently at a recursive step.\n\nA provider may encapsulate internal dependencies behind an adequate contract.\nConsumers need not flatten every implementation dependency into a direct edge.\nWhere an outer claim materially relies on a far-side contract, assumption,\nevidence item or acquisition, that reliance and its applicable authority must be\npreserved through the boundary. Unknown impact is not evidence of encapsulation.\n\nDurable Product consumption and bounded authorized inspection are different\nrelations. A Reviewer or diagnostic Worker may inspect a larger causal cone under\nan explicit access grant without thereby adopting those internals as a runtime\ndependency or gaining a write grant. If findings become a continuing construction\nconstraint or dependency, their producer, applicability and governing relation\nmust be retained."
+            }
+          ]
+        }
+      },
+      {
+        "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:9203916c7e6c24e01b8201c597f2b228",
+        "context": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:context:source-first-proposal",
+        "owner": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:scope:source-corpus"
+        ],
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:relation-kind:governing:permission_condition",
+        "source": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:dca271f79fff5eb391a6981ab348dd60",
+        "target": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:829627b7164e287a840ded4a50f10c61",
+        "qualifiers": {
+          "kind": "permission_condition",
+          "meaning": "Context eligibility includes the relevant lawful acquisition/disclosure/operation grants.",
+          "conditions": [
+            "When the referenced condition is material to the selected engagement."
+          ],
+          "exceptions": [],
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-05--context-construction-and-clean-room-conditions",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 937,
+              "end_line": 961,
+              "quote": "### PC-05 — Context construction and clean-room conditions\n\nAn actor's selected context must satisfy both permission and adequacy for its\nengagement. Permission covers the source information and permitted derivations,\nnot only paths or filenames. The boundary identifies eligible source classes,\nexports and tool outputs, material provenance, intended use, later acquisitions\nand the effect of prior exposure. An allowed file location or a fresh summary\ndoes not sanitize prohibited information.\n\nA target owner may authorize an export, but clean-room eligibility additionally\nrequires that the engagement's information policy admits that export and its\nprovenance. The actual delivered/acquired material must be recorded to the extent\nrequired by the claim. An uncertain or prohibited exposure follows the declared\nhold/re-entry rule; it cannot be repaired by deleting its receipt or relabeling\nthe same actor fresh. Prior actor knowledge and external acquisition channels are\npart of the declared limits.\n\nAdequacy retains the distinctions required for the task's decisions and\ncontinuations, including unresolved obligations, result standing, currentness and\nauthority. If the permitted material is insufficient, acquire an authorized\nextension, narrow the task with the owner, use a suitable actor or return the\nunresolved outcome. Permission is not evidence of sufficiency, and a budget is\nnot permission to omit a deciding condition. This applies [FOUNDATIONS Observation sufficiency](FOUNDATIONS.md#assurance-relations)\nand its scoped preservation law; it supplies no general optimal context selector (P1, P2, P6)."
+            }
+          ]
+        }
+      },
+      {
+        "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:4d2639110538426203aceae880f264ab",
+        "context": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:context:source-first-proposal",
+        "owner": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:scope:source-corpus"
+        ],
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:relation-kind:governing:continuation_currentness",
+        "source": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:06bdfa4653abe15d43f3d8151b23d67a",
+        "target": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:dca271f79fff5eb391a6981ab348dd60",
+        "qualifiers": {
+          "kind": "continuation_currentness",
+          "meaning": "A consumer context preserves the currentness and obligations material to evidence reuse.",
+          "conditions": [
+            "When the referenced condition is material to the selected engagement."
+          ],
+          "exceptions": [],
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-07--change-evidence-and-reliance",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 978,
+              "end_line": 993,
+              "quote": "### PC-07 — Change, evidence and reliance\n\nEach cross-boundary use binds the actual selected sources and material execution\nbasis, including uncommitted bytes where relevant. A moving selection identifies\nhow advancement is detected and which reliance must be reassessed. Git is one\npossible carrier, not a mandatory identity system.\n\nChanges and new counterexamples propagate through material assertion, execution\nand evidence-use dependencies under [FOUNDATIONS Change impact and evidence reuse](FOUNDATIONS.md#change-impact-and-evidence-reuse). Historical\nevidence remains about its original subject. Reuse on a changed subject needs an\nestablished applicability or preservation relation; rereading alone does not\nestablish it. A new release does not invalidate a still-selected older release,\nand a changed hash alone establishes neither semantic incompatibility nor\ncontinued validity. Unknown impact holds the dependent assurance or widens\nassessment; it does not require unrelated work to restart."
+            }
+          ]
+        }
+      }
+    ],
+    "constraints": [
+      {
+        "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:cdd5cb77faa386ec8dcce713148a95dc",
+        "context": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:context:source-first-proposal",
+        "owner": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:scope:source-corpus"
+        ],
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:constraint-kind:authored-source-statement",
+        "applies_to": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:7e7c62fb24141ae68ad9dcbca7c0d5c0"
+        ],
+        "predicate": {
+          "statement": "A Product identifies one coherent WHAT and its owning authority. Alternative\nrealizations of that WHAT are build tenants. A decomposition into Products names\nwhich distinct outcomes and authorities each constituent owns, and which outer\noutcome the composition owns.\n\nUnder the identity and ownership laws (P3, P6), within a declared decomposition scope, a leaf has no further constituent Product\nboundary exposed by that decomposition. It may contain modules and declared\nexternal dependencies. A composite relates two or more constituent capabilities\nor an outer capability to its constituent capability; its own capability may in\nturn be consumed as a constituent. The same definition, contract and authority\nlaws apply at every depth. Shared constituents keep one identity and their\nseparately bound uses; a hierarchy view may show several references to one leaf.\n\nDecomposition, capability/data dependency, inspection permission, authority and\nwork prerequisites are distinct relations. A directory tree establishes none of\nthem. A named composition view states its root, participating identities,\nselected boundaries and relation kinds rather than treating all reachable edges\nas one hierarchy.",
+          "conditions": [
+            "Apply the clause within its explicitly stated scope and qualifications."
+          ],
+          "exceptions": [],
+          "uncertainty": "",
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-01--recursive-product-boundaries",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 855,
+              "end_line": 875,
+              "quote": "### PC-01 — Recursive Product boundaries\n\nA Product identifies one coherent WHAT and its owning authority. Alternative\nrealizations of that WHAT are build tenants. A decomposition into Products names\nwhich distinct outcomes and authorities each constituent owns, and which outer\noutcome the composition owns.\n\nUnder the identity and ownership laws (P3, P6), within a declared decomposition scope, a leaf has no further constituent Product\nboundary exposed by that decomposition. It may contain modules and declared\nexternal dependencies. A composite relates two or more constituent capabilities\nor an outer capability to its constituent capability; its own capability may in\nturn be consumed as a constituent. The same definition, contract and authority\nlaws apply at every depth. Shared constituents keep one identity and their\nseparately bound uses; a hierarchy view may show several references to one leaf.\n\nDecomposition, capability/data dependency, inspection permission, authority and\nwork prerequisites are distinct relations. A directory tree establishes none of\nthem. A named composition view states its root, participating identities,\nselected boundaries and relation kinds rather than treating all reachable edges\nas one hierarchy."
+            }
+          ]
+        },
+        "judgment_kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:judgment-kind:external-semantic-review",
+        "latitude_ref": [],
+        "refusal": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:stop:no-execution-or-acceptance"
+      },
+      {
+        "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:a99da10143e42464128337b3e5a21fc9",
+        "context": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:context:source-first-proposal",
+        "owner": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:scope:source-corpus"
+        ],
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:constraint-kind:authored-source-statement",
+        "applies_to": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:4e50832554bf6cc485c65ba2dbe56ddc"
+        ],
+        "predicate": {
+          "statement": "A Product offered as a standalone constituent must be enterable through its own\nProduct Definition and a Product-authorized applicable frame basis, with the\ndependency closure and capabilities its contract declares. Entry must not require\nan enclosing composition's activation unless that enclosing capability is itself\nan explicit prerequisite. Such a prerequisite is disclosed as a limit on the\nstandalone claim. Shared or externally located frame documents are permitted\nwhere adoption, scope and availability are established; file ownership alone is\nnot the deciding test.\n\nStandalone does not imply dependency-free, separately deployable or able to\nsupply every host itself. The claim names which construction, evaluation or use\ncan be performed independently and its required inputs. The composition owner\nseparately establishes interface compatibility, material joins and its complete\noutcome. Successful constituent checks do not establish that outer predicate.",
+          "conditions": [
+            "Apply the clause within its explicitly stated scope and qualifications."
+          ],
+          "exceptions": [],
+          "uncertainty": "",
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-02--independent-entry-and-the-integrated-outcome",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 876,
+              "end_line": 892,
+              "quote": "### PC-02 — Independent entry and the integrated outcome\n\nA Product offered as a standalone constituent must be enterable through its own\nProduct Definition and a Product-authorized applicable frame basis, with the\ndependency closure and capabilities its contract declares. Entry must not require\nan enclosing composition's activation unless that enclosing capability is itself\nan explicit prerequisite. Such a prerequisite is disclosed as a limit on the\nstandalone claim. Shared or externally located frame documents are permitted\nwhere adoption, scope and availability are established; file ownership alone is\nnot the deciding test.\n\nStandalone does not imply dependency-free, separately deployable or able to\nsupply every host itself. The claim names which construction, evaluation or use\ncan be performed independently and its required inputs. The composition owner\nseparately establishes interface compatibility, material joins and its complete\noutcome. Successful constituent checks do not establish that outer predicate."
+            }
+          ]
+        },
+        "judgment_kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:judgment-kind:external-semantic-review",
+        "latitude_ref": [],
+        "refusal": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:stop:no-execution-or-acceptance"
+      },
+      {
+        "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:9198c8e833bae18e98ec1998fc9ca014",
+        "context": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:context:source-first-proposal",
+        "owner": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:scope:source-corpus"
+        ],
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:constraint-kind:authored-source-statement",
+        "applies_to": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:829627b7164e287a840ded4a50f10c61"
+        ],
+        "predicate": {
+          "statement": "For each directed relation, the `relation` authority and referenced `contracts`\nstate, directly or by exact reference:\n\n1. Source and target Product identities and roles; the consumed capability,\n   outcome, purpose, selected basis and currentness policy.\n2. The existing owners and grants for each material operation: acquisition,\n   disclosure, use, execution, mutation, assessment and disposition. A kind or\n   role label records no grant by itself.\n3. Admissible inputs and exports; material assumptions, effects, failures,\n   obligations and evidence; restrictions on implementation material and derived\n   information where applicable.\n4. The acting principals or binding rule, task/phase scope, permitted delegation,\n   return consumer, stop/refusal conditions and revocation/invalidation route.\n\nThese coordinates may be supplied by source-linked prose. The relation locates\nand constrains lawfully granted authority; it cannot manufacture the target's\npermission or the source's admission. Missing material authority or an unresolved\nconflict withholds the dependent action. The execution-scoped activation remains\nthe place where a particular actor, input, effect and return are bound.",
+          "conditions": [
+            "Apply the clause within its explicitly stated scope and qualifications."
+          ],
+          "exceptions": [],
+          "uncertainty": "",
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-03--the-edges-contract-and-authority-record",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 893,
+              "end_line": 914,
+              "quote": "### PC-03 — The edge's contract and authority record\n\nFor each directed relation, the `relation` authority and referenced `contracts`\nstate, directly or by exact reference:\n\n1. Source and target Product identities and roles; the consumed capability,\n   outcome, purpose, selected basis and currentness policy.\n2. The existing owners and grants for each material operation: acquisition,\n   disclosure, use, execution, mutation, assessment and disposition. A kind or\n   role label records no grant by itself.\n3. Admissible inputs and exports; material assumptions, effects, failures,\n   obligations and evidence; restrictions on implementation material and derived\n   information where applicable.\n4. The acting principals or binding rule, task/phase scope, permitted delegation,\n   return consumer, stop/refusal conditions and revocation/invalidation route.\n\nThese coordinates may be supplied by source-linked prose. The relation locates\nand constrains lawfully granted authority; it cannot manufacture the target's\npermission or the source's admission. Missing material authority or an unresolved\nconflict withholds the dependent action. The execution-scoped activation remains\nthe place where a particular actor, input, effect and return are bound."
+            }
+          ]
+        },
+        "judgment_kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:judgment-kind:external-semantic-review",
+        "latitude_ref": [],
+        "refusal": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:stop:no-execution-or-acceptance"
+      },
+      {
+        "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:d929a6997c2fe9c69776f845716ed2cd",
+        "context": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:context:source-first-proposal",
+        "owner": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:scope:source-corpus"
+        ],
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:constraint-kind:authored-source-statement",
+        "applies_to": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:bd1ab6deb02e817166acf0259acecd34"
+        ],
+        "predicate": {
+          "statement": "A permitted A → B use does not entail A's access to B's dependencies. Neither\nA → B plus B → C nor two routes to a shared leaf imply a union of their grants.\nEach onward acquisition, disclosure or delegated effect needs authority for that\nactor, purpose and path, including any permitted onward use of returned material.\nExisting delegation may authorize a chain explicitly; its scope cannot expand\nsilently at a recursive step.\n\nA provider may encapsulate internal dependencies behind an adequate contract.\nConsumers need not flatten every implementation dependency into a direct edge.\nWhere an outer claim materially relies on a far-side contract, assumption,\nevidence item or acquisition, that reliance and its applicable authority must be\npreserved through the boundary. Unknown impact is not evidence of encapsulation.\n\nDurable Product consumption and bounded authorized inspection are different\nrelations. A Reviewer or diagnostic Worker may inspect a larger causal cone under\nan explicit access grant without thereby adopting those internals as a runtime\ndependency or gaining a write grant. If findings become a continuing construction\nconstraint or dependency, their producer, applicability and governing relation\nmust be retained.",
+          "conditions": [
+            "Apply the clause within its explicitly stated scope and qualifications."
+          ],
+          "exceptions": [],
+          "uncertainty": "",
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-04--recursive-authority-and-information-eligibility",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 915,
+              "end_line": 936,
+              "quote": "### PC-04 — Recursive authority and information eligibility\n\nA permitted A → B use does not entail A's access to B's dependencies. Neither\nA → B plus B → C nor two routes to a shared leaf imply a union of their grants.\nEach onward acquisition, disclosure or delegated effect needs authority for that\nactor, purpose and path, including any permitted onward use of returned material.\nExisting delegation may authorize a chain explicitly; its scope cannot expand\nsilently at a recursive step.\n\nA provider may encapsulate internal dependencies behind an adequate contract.\nConsumers need not flatten every implementation dependency into a direct edge.\nWhere an outer claim materially relies on a far-side contract, assumption,\nevidence item or acquisition, that reliance and its applicable authority must be\npreserved through the boundary. Unknown impact is not evidence of encapsulation.\n\nDurable Product consumption and bounded authorized inspection are different\nrelations. A Reviewer or diagnostic Worker may inspect a larger causal cone under\nan explicit access grant without thereby adopting those internals as a runtime\ndependency or gaining a write grant. If findings become a continuing construction\nconstraint or dependency, their producer, applicability and governing relation\nmust be retained."
+            }
+          ]
+        },
+        "judgment_kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:judgment-kind:external-semantic-review",
+        "latitude_ref": [],
+        "refusal": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:stop:no-execution-or-acceptance"
+      },
+      {
+        "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:d8555d3df0ae8fd32ca70fff867c2cae",
+        "context": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:context:source-first-proposal",
+        "owner": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:scope:source-corpus"
+        ],
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:constraint-kind:authored-source-statement",
+        "applies_to": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:dca271f79fff5eb391a6981ab348dd60"
+        ],
+        "predicate": {
+          "statement": "An actor's selected context must satisfy both permission and adequacy for its\nengagement. Permission covers the source information and permitted derivations,\nnot only paths or filenames. The boundary identifies eligible source classes,\nexports and tool outputs, material provenance, intended use, later acquisitions\nand the effect of prior exposure. An allowed file location or a fresh summary\ndoes not sanitize prohibited information.\n\nA target owner may authorize an export, but clean-room eligibility additionally\nrequires that the engagement's information policy admits that export and its\nprovenance. The actual delivered/acquired material must be recorded to the extent\nrequired by the claim. An uncertain or prohibited exposure follows the declared\nhold/re-entry rule; it cannot be repaired by deleting its receipt or relabeling\nthe same actor fresh. Prior actor knowledge and external acquisition channels are\npart of the declared limits.\n\nAdequacy retains the distinctions required for the task's decisions and\ncontinuations, including unresolved obligations, result standing, currentness and\nauthority. If the permitted material is insufficient, acquire an authorized\nextension, narrow the task with the owner, use a suitable actor or return the\nunresolved outcome. Permission is not evidence of sufficiency, and a budget is\nnot permission to omit a deciding condition. This applies [FOUNDATIONS Observation sufficiency](FOUNDATIONS.md#assurance-relations)\nand its scoped preservation law; it supplies no general optimal context selector (P1, P2, P6).",
+          "conditions": [
+            "Apply the clause within its explicitly stated scope and qualifications."
+          ],
+          "exceptions": [],
+          "uncertainty": "",
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-05--context-construction-and-clean-room-conditions",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 937,
+              "end_line": 961,
+              "quote": "### PC-05 — Context construction and clean-room conditions\n\nAn actor's selected context must satisfy both permission and adequacy for its\nengagement. Permission covers the source information and permitted derivations,\nnot only paths or filenames. The boundary identifies eligible source classes,\nexports and tool outputs, material provenance, intended use, later acquisitions\nand the effect of prior exposure. An allowed file location or a fresh summary\ndoes not sanitize prohibited information.\n\nA target owner may authorize an export, but clean-room eligibility additionally\nrequires that the engagement's information policy admits that export and its\nprovenance. The actual delivered/acquired material must be recorded to the extent\nrequired by the claim. An uncertain or prohibited exposure follows the declared\nhold/re-entry rule; it cannot be repaired by deleting its receipt or relabeling\nthe same actor fresh. Prior actor knowledge and external acquisition channels are\npart of the declared limits.\n\nAdequacy retains the distinctions required for the task's decisions and\ncontinuations, including unresolved obligations, result standing, currentness and\nauthority. If the permitted material is insufficient, acquire an authorized\nextension, narrow the task with the owner, use a suitable actor or return the\nunresolved outcome. Permission is not evidence of sufficiency, and a budget is\nnot permission to omit a deciding condition. This applies [FOUNDATIONS Observation sufficiency](FOUNDATIONS.md#assurance-relations)\nand its scoped preservation law; it supplies no general optimal context selector (P1, P2, P6)."
+            }
+          ]
+        },
+        "judgment_kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:judgment-kind:external-semantic-review",
+        "latitude_ref": [],
+        "refusal": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:stop:no-execution-or-acceptance"
+      },
+      {
+        "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:46a8261fdd0bd4372ab54597538c8a4b",
+        "context": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:context:source-first-proposal",
+        "owner": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:scope:source-corpus"
+        ],
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:constraint-kind:authored-source-statement",
+        "applies_to": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:19519ec64871bc9463973bc3656e1cda"
+        ],
+        "predicate": {
+          "statement": "Work selects a dependency-ready frontier at the required subjects and revisions.\nA cycle in declared Product relationships need not be a cycle in the selected\nwork. A cycle of current prerequisite claims requires an executable resolution:\nfor example an admitted prior revision, explicit seed, staged contract or bounded\niteration with its continuation/stop conditions. Naming a lead alone does not\nsupply a missing prerequisite or establish convergence.\n\nReplacing a constituent or refining it into further Products preserves the\nconsumer's material contract: meaning, preconditions, effects, failures,\nauthority, lifecycle, evidence and subsequent obligations. A semantic change\nrequires an authorized successor relation and affected reassessment. The [ACTIVATION refinement contract](ACTIVATION.md#refinement) governs this\npreservation. Matching signatures, labels or a sample output is insufficient (P4a, P6). New capabilities may be\nadded without silently widening existing consumers' duties or grants.",
+          "conditions": [
+            "Apply the clause within its explicitly stated scope and qualifications."
+          ],
+          "exceptions": [],
+          "uncertainty": "",
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-06--readiness-cycles-and-replacement",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 962,
+              "end_line": 977,
+              "quote": "### PC-06 — Readiness, cycles and replacement\n\nWork selects a dependency-ready frontier at the required subjects and revisions.\nA cycle in declared Product relationships need not be a cycle in the selected\nwork. A cycle of current prerequisite claims requires an executable resolution:\nfor example an admitted prior revision, explicit seed, staged contract or bounded\niteration with its continuation/stop conditions. Naming a lead alone does not\nsupply a missing prerequisite or establish convergence.\n\nReplacing a constituent or refining it into further Products preserves the\nconsumer's material contract: meaning, preconditions, effects, failures,\nauthority, lifecycle, evidence and subsequent obligations. A semantic change\nrequires an authorized successor relation and affected reassessment. The [ACTIVATION refinement contract](ACTIVATION.md#refinement) governs this\npreservation. Matching signatures, labels or a sample output is insufficient (P4a, P6). New capabilities may be\nadded without silently widening existing consumers' duties or grants."
+            }
+          ]
+        },
+        "judgment_kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:judgment-kind:external-semantic-review",
+        "latitude_ref": [],
+        "refusal": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:stop:no-execution-or-acceptance"
+      },
+      {
+        "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:9845c5d8611d53bddca029fcbfae8226",
+        "context": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:context:source-first-proposal",
+        "owner": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:scope:source-corpus"
+        ],
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:constraint-kind:authored-source-statement",
+        "applies_to": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:06bdfa4653abe15d43f3d8151b23d67a"
+        ],
+        "predicate": {
+          "statement": "Each cross-boundary use binds the actual selected sources and material execution\nbasis, including uncommitted bytes where relevant. A moving selection identifies\nhow advancement is detected and which reliance must be reassessed. Git is one\npossible carrier, not a mandatory identity system.\n\nChanges and new counterexamples propagate through material assertion, execution\nand evidence-use dependencies under [FOUNDATIONS Change impact and evidence reuse](FOUNDATIONS.md#change-impact-and-evidence-reuse). Historical\nevidence remains about its original subject. Reuse on a changed subject needs an\nestablished applicability or preservation relation; rereading alone does not\nestablish it. A new release does not invalidate a still-selected older release,\nand a changed hash alone establishes neither semantic incompatibility nor\ncontinued validity. Unknown impact holds the dependent assurance or widens\nassessment; it does not require unrelated work to restart.",
+          "conditions": [
+            "Apply the clause within its explicitly stated scope and qualifications."
+          ],
+          "exceptions": [],
+          "uncertainty": "",
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-07--change-evidence-and-reliance",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 978,
+              "end_line": 993,
+              "quote": "### PC-07 — Change, evidence and reliance\n\nEach cross-boundary use binds the actual selected sources and material execution\nbasis, including uncommitted bytes where relevant. A moving selection identifies\nhow advancement is detected and which reliance must be reassessed. Git is one\npossible carrier, not a mandatory identity system.\n\nChanges and new counterexamples propagate through material assertion, execution\nand evidence-use dependencies under [FOUNDATIONS Change impact and evidence reuse](FOUNDATIONS.md#change-impact-and-evidence-reuse). Historical\nevidence remains about its original subject. Reuse on a changed subject needs an\nestablished applicability or preservation relation; rereading alone does not\nestablish it. A new release does not invalidate a still-selected older release,\nand a changed hash alone establishes neither semantic incompatibility nor\ncontinued validity. Unknown impact holds the dependent assurance or widens\nassessment; it does not require unrelated work to restart."
+            }
+          ]
+        },
+        "judgment_kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:judgment-kind:external-semantic-review",
+        "latitude_ref": [],
+        "refusal": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:stop:no-execution-or-acceptance"
+      }
+    ],
+    "latitude": [
+      {
+        "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:243ff58ffddcc192d69ad44e45753fc1",
+        "context": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:context:source-first-proposal",
+        "owner": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:scope:source-corpus"
+        ],
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "applies_to": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:7e7c62fb24141ae68ad9dcbca7c0d5c0"
+        ],
+        "allowed_variation": {
+          "statements": [
+            "A hierarchy view can show several references to one shared Product; physical layout is not the relation."
+          ],
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-01--recursive-product-boundaries",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 855,
+              "end_line": 875,
+              "quote": "### PC-01 — Recursive Product boundaries\n\nA Product identifies one coherent WHAT and its owning authority. Alternative\nrealizations of that WHAT are build tenants. A decomposition into Products names\nwhich distinct outcomes and authorities each constituent owns, and which outer\noutcome the composition owns.\n\nUnder the identity and ownership laws (P3, P6), within a declared decomposition scope, a leaf has no further constituent Product\nboundary exposed by that decomposition. It may contain modules and declared\nexternal dependencies. A composite relates two or more constituent capabilities\nor an outer capability to its constituent capability; its own capability may in\nturn be consumed as a constituent. The same definition, contract and authority\nlaws apply at every depth. Shared constituents keep one identity and their\nseparately bound uses; a hierarchy view may show several references to one leaf.\n\nDecomposition, capability/data dependency, inspection permission, authority and\nwork prerequisites are distinct relations. A directory tree establishes none of\nthem. A named composition view states its root, participating identities,\nselected boundaries and relation kinds rather than treating all reachable edges\nas one hierarchy."
+            }
+          ]
+        },
+        "forbidden_variation": {
+          "statements": [
+            "Treat common directory placement or a duplicated leaf view as ownership or identity."
+          ],
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-01--recursive-product-boundaries",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 855,
+              "end_line": 875,
+              "quote": "### PC-01 — Recursive Product boundaries\n\nA Product identifies one coherent WHAT and its owning authority. Alternative\nrealizations of that WHAT are build tenants. A decomposition into Products names\nwhich distinct outcomes and authorities each constituent owns, and which outer\noutcome the composition owns.\n\nUnder the identity and ownership laws (P3, P6), within a declared decomposition scope, a leaf has no further constituent Product\nboundary exposed by that decomposition. It may contain modules and declared\nexternal dependencies. A composite relates two or more constituent capabilities\nor an outer capability to its constituent capability; its own capability may in\nturn be consumed as a constituent. The same definition, contract and authority\nlaws apply at every depth. Shared constituents keep one identity and their\nseparately bound uses; a hierarchy view may show several references to one leaf.\n\nDecomposition, capability/data dependency, inspection permission, authority and\nwork prerequisites are distinct relations. A directory tree establishes none of\nthem. A named composition view states its root, participating identities,\nselected boundaries and relation kinds rather than treating all reachable edges\nas one hierarchy."
+            }
+          ]
+        },
+        "invalidation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:invalidation:source-or-interpretation-change"
+      },
+      {
+        "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:55ad59be4948e8c79016c0bde6cb564b",
+        "context": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:context:source-first-proposal",
+        "owner": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:scope:source-corpus"
+        ],
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "applies_to": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:4e50832554bf6cc485c65ba2dbe56ddc"
+        ],
+        "allowed_variation": {
+          "statements": [
+            "Use a shared or external frame document with established adoption, scope and availability."
+          ],
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-02--independent-entry-and-the-integrated-outcome",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 876,
+              "end_line": 892,
+              "quote": "### PC-02 — Independent entry and the integrated outcome\n\nA Product offered as a standalone constituent must be enterable through its own\nProduct Definition and a Product-authorized applicable frame basis, with the\ndependency closure and capabilities its contract declares. Entry must not require\nan enclosing composition's activation unless that enclosing capability is itself\nan explicit prerequisite. Such a prerequisite is disclosed as a limit on the\nstandalone claim. Shared or externally located frame documents are permitted\nwhere adoption, scope and availability are established; file ownership alone is\nnot the deciding test.\n\nStandalone does not imply dependency-free, separately deployable or able to\nsupply every host itself. The claim names which construction, evaluation or use\ncan be performed independently and its required inputs. The composition owner\nseparately establishes interface compatibility, material joins and its complete\noutcome. Successful constituent checks do not establish that outer predicate."
+            }
+          ]
+        },
+        "forbidden_variation": {
+          "statements": [
+            "Infer dependency-free or independent deployment from a scoped standalone claim."
+          ],
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-02--independent-entry-and-the-integrated-outcome",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 876,
+              "end_line": 892,
+              "quote": "### PC-02 — Independent entry and the integrated outcome\n\nA Product offered as a standalone constituent must be enterable through its own\nProduct Definition and a Product-authorized applicable frame basis, with the\ndependency closure and capabilities its contract declares. Entry must not require\nan enclosing composition's activation unless that enclosing capability is itself\nan explicit prerequisite. Such a prerequisite is disclosed as a limit on the\nstandalone claim. Shared or externally located frame documents are permitted\nwhere adoption, scope and availability are established; file ownership alone is\nnot the deciding test.\n\nStandalone does not imply dependency-free, separately deployable or able to\nsupply every host itself. The claim names which construction, evaluation or use\ncan be performed independently and its required inputs. The composition owner\nseparately establishes interface compatibility, material joins and its complete\noutcome. Successful constituent checks do not establish that outer predicate."
+            }
+          ]
+        },
+        "invalidation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:invalidation:source-or-interpretation-change"
+      },
+      {
+        "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:90d0389ca49b3b32ab02be7fae54c163",
+        "context": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:context:source-first-proposal",
+        "owner": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:scope:source-corpus"
+        ],
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "applies_to": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:bd1ab6deb02e817166acf0259acecd34"
+        ],
+        "allowed_variation": {
+          "statements": [
+            "Encapsulate internal dependencies behind an adequate provider contract; authorize broader causal-cone inspection separately.",
+            "Choose an explicit direct-edge inventory for public constituent contracts even where an adequate provider contract could encapsulate them, with each target, purpose and grant separately established."
+          ],
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-04--recursive-authority-and-information-eligibility",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 915,
+              "end_line": 936,
+              "quote": "### PC-04 — Recursive authority and information eligibility\n\nA permitted A → B use does not entail A's access to B's dependencies. Neither\nA → B plus B → C nor two routes to a shared leaf imply a union of their grants.\nEach onward acquisition, disclosure or delegated effect needs authority for that\nactor, purpose and path, including any permitted onward use of returned material.\nExisting delegation may authorize a chain explicitly; its scope cannot expand\nsilently at a recursive step.\n\nA provider may encapsulate internal dependencies behind an adequate contract.\nConsumers need not flatten every implementation dependency into a direct edge.\nWhere an outer claim materially relies on a far-side contract, assumption,\nevidence item or acquisition, that reliance and its applicable authority must be\npreserved through the boundary. Unknown impact is not evidence of encapsulation.\n\nDurable Product consumption and bounded authorized inspection are different\nrelations. A Reviewer or diagnostic Worker may inspect a larger causal cone under\nan explicit access grant without thereby adopting those internals as a runtime\ndependency or gaining a write grant. If findings become a continuing construction\nconstraint or dependency, their producer, applicability and governing relation\nmust be retained."
+            }
+          ]
+        },
+        "forbidden_variation": {
+          "statements": [
+            "Infer or union grants through recursive reachability, or omit material far-side reliance and its applicable authority."
+          ],
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-04--recursive-authority-and-information-eligibility",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 915,
+              "end_line": 936,
+              "quote": "### PC-04 — Recursive authority and information eligibility\n\nA permitted A → B use does not entail A's access to B's dependencies. Neither\nA → B plus B → C nor two routes to a shared leaf imply a union of their grants.\nEach onward acquisition, disclosure or delegated effect needs authority for that\nactor, purpose and path, including any permitted onward use of returned material.\nExisting delegation may authorize a chain explicitly; its scope cannot expand\nsilently at a recursive step.\n\nA provider may encapsulate internal dependencies behind an adequate contract.\nConsumers need not flatten every implementation dependency into a direct edge.\nWhere an outer claim materially relies on a far-side contract, assumption,\nevidence item or acquisition, that reliance and its applicable authority must be\npreserved through the boundary. Unknown impact is not evidence of encapsulation.\n\nDurable Product consumption and bounded authorized inspection are different\nrelations. A Reviewer or diagnostic Worker may inspect a larger causal cone under\nan explicit access grant without thereby adopting those internals as a runtime\ndependency or gaining a write grant. If findings become a continuing construction\nconstraint or dependency, their producer, applicability and governing relation\nmust be retained."
+            }
+          ]
+        },
+        "invalidation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:invalidation:source-or-interpretation-change"
+      },
+      {
+        "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:9579010404d78d8400c4e095c4de49f2",
+        "context": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:context:source-first-proposal",
+        "owner": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:scope:source-corpus"
+        ],
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "applies_to": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:19519ec64871bc9463973bc3656e1cda"
+        ],
+        "allowed_variation": {
+          "statements": [
+            "Resolve current prerequisites with a lawful prior revision, explicit seed, staged contract or bounded iteration."
+          ],
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-06--readiness-cycles-and-replacement",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 962,
+              "end_line": 977,
+              "quote": "### PC-06 — Readiness, cycles and replacement\n\nWork selects a dependency-ready frontier at the required subjects and revisions.\nA cycle in declared Product relationships need not be a cycle in the selected\nwork. A cycle of current prerequisite claims requires an executable resolution:\nfor example an admitted prior revision, explicit seed, staged contract or bounded\niteration with its continuation/stop conditions. Naming a lead alone does not\nsupply a missing prerequisite or establish convergence.\n\nReplacing a constituent or refining it into further Products preserves the\nconsumer's material contract: meaning, preconditions, effects, failures,\nauthority, lifecycle, evidence and subsequent obligations. A semantic change\nrequires an authorized successor relation and affected reassessment. The [ACTIVATION refinement contract](ACTIVATION.md#refinement) governs this\npreservation. Matching signatures, labels or a sample output is insufficient (P4a, P6). New capabilities may be\nadded without silently widening existing consumers' duties or grants."
+            }
+          ]
+        },
+        "forbidden_variation": {
+          "statements": [
+            "Treat a named lead as missing evidence or silently change consumer obligations on replacement."
+          ],
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-06--readiness-cycles-and-replacement",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 962,
+              "end_line": 977,
+              "quote": "### PC-06 — Readiness, cycles and replacement\n\nWork selects a dependency-ready frontier at the required subjects and revisions.\nA cycle in declared Product relationships need not be a cycle in the selected\nwork. A cycle of current prerequisite claims requires an executable resolution:\nfor example an admitted prior revision, explicit seed, staged contract or bounded\niteration with its continuation/stop conditions. Naming a lead alone does not\nsupply a missing prerequisite or establish convergence.\n\nReplacing a constituent or refining it into further Products preserves the\nconsumer's material contract: meaning, preconditions, effects, failures,\nauthority, lifecycle, evidence and subsequent obligations. A semantic change\nrequires an authorized successor relation and affected reassessment. The [ACTIVATION refinement contract](ACTIVATION.md#refinement) governs this\npreservation. Matching signatures, labels or a sample output is insufficient (P4a, P6). New capabilities may be\nadded without silently widening existing consumers' duties or grants."
+            }
+          ]
+        },
+        "invalidation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:invalidation:source-or-interpretation-change"
+      },
+      {
+        "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:c925ee1e966b495bd6e8289e440eb9a6",
+        "context": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:context:source-first-proposal",
+        "owner": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:scope:source-corpus"
+        ],
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "applies_to": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:06bdfa4653abe15d43f3d8151b23d67a"
+        ],
+        "allowed_variation": {
+          "statements": [
+            "Retain old-subject evidence and justified applicability across material change."
+          ],
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-07--change-evidence-and-reliance",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 978,
+              "end_line": 993,
+              "quote": "### PC-07 — Change, evidence and reliance\n\nEach cross-boundary use binds the actual selected sources and material execution\nbasis, including uncommitted bytes where relevant. A moving selection identifies\nhow advancement is detected and which reliance must be reassessed. Git is one\npossible carrier, not a mandatory identity system.\n\nChanges and new counterexamples propagate through material assertion, execution\nand evidence-use dependencies under [FOUNDATIONS Change impact and evidence reuse](FOUNDATIONS.md#change-impact-and-evidence-reuse). Historical\nevidence remains about its original subject. Reuse on a changed subject needs an\nestablished applicability or preservation relation; rereading alone does not\nestablish it. A new release does not invalidate a still-selected older release,\nand a changed hash alone establishes neither semantic incompatibility nor\ncontinued validity. Unknown impact holds the dependent assurance or widens\nassessment; it does not require unrelated work to restart."
+            }
+          ]
+        },
+        "forbidden_variation": {
+          "statements": [
+            "Use a changed hash or rereading alone to prove invalidity or equivalence."
+          ],
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-07--change-evidence-and-reliance",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 978,
+              "end_line": 993,
+              "quote": "### PC-07 — Change, evidence and reliance\n\nEach cross-boundary use binds the actual selected sources and material execution\nbasis, including uncommitted bytes where relevant. A moving selection identifies\nhow advancement is detected and which reliance must be reassessed. Git is one\npossible carrier, not a mandatory identity system.\n\nChanges and new counterexamples propagate through material assertion, execution\nand evidence-use dependencies under [FOUNDATIONS Change impact and evidence reuse](FOUNDATIONS.md#change-impact-and-evidence-reuse). Historical\nevidence remains about its original subject. Reuse on a changed subject needs an\nestablished applicability or preservation relation; rereading alone does not\nestablish it. A new release does not invalidate a still-selected older release,\nand a changed hash alone establishes neither semantic incompatibility nor\ncontinued validity. Unknown impact holds the dependent assurance or widens\nassessment; it does not require unrelated work to restart."
+            }
+          ]
+        },
+        "invalidation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:invalidation:source-or-interpretation-change"
+      }
+    ],
+    "residuals": [
+      {
+        "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:c3d2fc2a2773bc530287e917fa3d3eab",
+        "context": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:context:source-first-proposal",
+        "owner": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:scope:source-corpus"
+        ],
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "subject": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:dca271f79fff5eb391a6981ab348dd60",
+        "kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:residual-kind:authored-uncertainty",
+        "uncertainty": {
+          "statement": "Permission alone cannot establish semantic sufficiency or exclude unknown prior/external exposure.",
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-05--context-construction-and-clean-room-conditions",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 937,
+              "end_line": 961,
+              "quote": "### PC-05 — Context construction and clean-room conditions\n\nAn actor's selected context must satisfy both permission and adequacy for its\nengagement. Permission covers the source information and permitted derivations,\nnot only paths or filenames. The boundary identifies eligible source classes,\nexports and tool outputs, material provenance, intended use, later acquisitions\nand the effect of prior exposure. An allowed file location or a fresh summary\ndoes not sanitize prohibited information.\n\nA target owner may authorize an export, but clean-room eligibility additionally\nrequires that the engagement's information policy admits that export and its\nprovenance. The actual delivered/acquired material must be recorded to the extent\nrequired by the claim. An uncertain or prohibited exposure follows the declared\nhold/re-entry rule; it cannot be repaired by deleting its receipt or relabeling\nthe same actor fresh. Prior actor knowledge and external acquisition channels are\npart of the declared limits.\n\nAdequacy retains the distinctions required for the task's decisions and\ncontinuations, including unresolved obligations, result standing, currentness and\nauthority. If the permitted material is insufficient, acquire an authorized\nextension, narrow the task with the owner, use a suitable actor or return the\nunresolved outcome. Permission is not evidence of sufficiency, and a budget is\nnot permission to omit a deciding condition. This applies [FOUNDATIONS Observation sufficiency](FOUNDATIONS.md#assurance-relations)\nand its scoped preservation law; it supplies no general optimal context selector (P1, P2, P6)."
+            }
+          ]
+        },
+        "consequence": "Keep unsupported adequacy/clean-room claims unresolved and use the declared re-entry.",
+        "re_entry": [],
+        "invalidation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:invalidation:source-or-interpretation-change"
+      },
+      {
+        "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:587954418a4a9e653112556f3f93762e",
+        "context": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:context:source-first-proposal",
+        "owner": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:scope:source-corpus"
+        ],
+        "basis": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:basis",
+        "subject": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:record:06bdfa4653abe15d43f3d8151b23d67a",
+        "kind": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:residual-kind:authored-uncertainty",
+        "uncertainty": {
+          "statement": "Material impact may remain unknown after a change.",
+          "grounding": [
+            {
+              "section": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-07--change-evidence-and-reliance",
+              "path": "standards/PRODUCT_DEFINITION.md",
+              "start_line": 978,
+              "end_line": 993,
+              "quote": "### PC-07 — Change, evidence and reliance\n\nEach cross-boundary use binds the actual selected sources and material execution\nbasis, including uncommitted bytes where relevant. A moving selection identifies\nhow advancement is detected and which reliance must be reassessed. Git is one\npossible carrier, not a mandatory identity system.\n\nChanges and new counterexamples propagate through material assertion, execution\nand evidence-use dependencies under [FOUNDATIONS Change impact and evidence reuse](FOUNDATIONS.md#change-impact-and-evidence-reuse). Historical\nevidence remains about its original subject. Reuse on a changed subject needs an\nestablished applicability or preservation relation; rereading alone does not\nestablish it. A new release does not invalidate a still-selected older release,\nand a changed hash alone establishes neither semantic incompatibility nor\ncontinued validity. Unknown impact holds the dependent assurance or widens\nassessment; it does not require unrelated work to restart."
+            }
+          ]
+        },
+        "consequence": "Hold dependent assurance or widen assessment without erasing original evidence.",
+        "re_entry": [],
+        "invalidation": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:invalidation:source-or-interpretation-change"
+      }
+    ],
+    "traversals": [],
+    "transformations": [],
+    "judgments": []
+  },
+  "dependency_contract": {
+    "id": "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:dependency-contract:authored-governing-relations",
+    "required_relation_kinds": [
+      "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:relation-kind:governing:authority_boundary",
+      "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:relation-kind:governing:continuation_currentness",
+      "urn:a-c:generation:e6e9ef3f232c1752bc355bc0:relation-kind:governing:permission_condition"
+    ],
+    "attachment_families": [
+      "constraints",
+      "latitude",
+      "residuals"
+    ]
+  },
+  "functor_bindings": {}
+}

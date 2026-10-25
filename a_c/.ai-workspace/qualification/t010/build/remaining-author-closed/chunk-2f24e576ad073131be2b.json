@@ -1,0 +1,78 @@
+{
+  "after": {
+    "created_at": "2026-10-20T09:15:58.306673+00:00",
+    "implementation_manifest_sha256": "594fafcf083eadbbaf1472d68fe9f375fc21ccb426c6825194793304eac2503e",
+    "package_members": 81,
+    "semantic_members": 58,
+    "source_manifest_sha256": "dbf32e7f99eb7228ca361ec02f44227c05e02bb6bc447d1dd38255cd3ca4a4d4",
+    "status": "exact"
+  },
+  "attempt": "actors/author/chunk-2f24e576ad073131be2b/attempt-001",
+  "chunk": "chunk-2f24e576ad073131be2b",
+  "closed_at": "2026-10-20T09:15:58.418078+00:00",
+  "custody": "strict_original",
+  "custody_error": null,
+  "files": {
+    "answer.json": {
+      "bytes": 164750,
+      "sha256": "63cb4a3266ec08c764cee1f48e15b29f1466d187e861ba8a3cdf6cde39e605ca"
+    },
+    "events.jsonl": {
+      "bytes": 171640,
+      "sha256": "c7b1b161c46ab21ebdba9af301ba95d0ed5b1d3d44597217952de0e3044df6bb"
+    },
+    "invocation.json": {
+      "bytes": 3301,
+      "sha256": "a5a038513072e3dd6b49f53cb7d8260866e12f2ba56b1b372f8057f4c2acccc4"
+    },
+    "prompt.txt": {
+      "bytes": 213752,
+      "sha256": "253d7baea3494ae8376a0d7a3b79e340f228bad74ff716eba8ae016cf0a5267a"
+    },
+    "result.json": {
+      "bytes": 880,
+      "sha256": "2ba34851f1e5331bfc86a6d44df4bda1fbca1c6e5e94658c7a4fb2e501fd10d8"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "usage.json": {
+      "bytes": 279,
+      "sha256": "24b0f8b763e89dbc4eb50d2ced39ace5cfd10d8c487793300c5ed019a7190d5c"
+    },
+    "validation.json": {
+      "bytes": 309,
+      "sha256": "d112d2a96e1852f1c46a2b6ae32afed1860ae58aa7a7a15c2d096474591f6e66"
+    }
+  },
+  "result": {
+    "answer_sha256": "63cb4a3266ec08c764cee1f48e15b29f1466d187e861ba8a3cdf6cde39e605ca",
+    "cli_exit_code": 0,
+    "cli_version": "codex-cli 0.162.1",
+    "elapsed_seconds": 903.9249641250353,
+    "events_sha256": "c7b1b161c46ab21ebdba9af301ba95d0ed5b1d3d44597217952de0e3044df6bb",
+    "failures": [],
+    "profile": "ac.generation.actor-result/1",
+    "schema_errors": [],
+    "settings": {
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "service_tier": "default"
+    },
+    "status": "completed",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "timed_out": false,
+    "unexpected_item_types": [],
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 68193,
+        "output_tokens": 39403,
+        "reasoning_output_tokens": 685
+      }
+    ],
+    "user_config_unchanged": true
+  }
+}

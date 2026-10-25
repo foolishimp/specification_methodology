@@ -1,0 +1,247 @@
+{
+  "actual_scripted_return_captures": [
+    {
+      "artifact": {
+        "id": "sha256:7e55c1e7e8cf14d22f0f565ef32f099b591bbbb67ec0306862b13bb73b81d564",
+        "sha256": "7e55c1e7e8cf14d22f0f565ef32f099b591bbbb67ec0306862b13bb73b81d564"
+      },
+      "format_valid": true,
+      "producer_authenticated": true,
+      "request": "fixtures/F1-conjunction/calls/012-return.capture/request.json"
+    },
+    {
+      "artifact": {
+        "id": "sha256:6e93fa9cb0b9cc783a3349ecaa455b6664e0be5d64f279792e8519994f973b8f",
+        "sha256": "6e93fa9cb0b9cc783a3349ecaa455b6664e0be5d64f279792e8519994f973b8f"
+      },
+      "format_valid": true,
+      "producer_authenticated": true,
+      "request": "fixtures/F1-conjunction/calls/026-return.capture/request.json"
+    },
+    {
+      "artifact": {
+        "id": "sha256:18785e4f2c768f82dd728d83cfb1142516cd5309e3093d7e816d877b1f5d844c",
+        "sha256": "18785e4f2c768f82dd728d83cfb1142516cd5309e3093d7e816d877b1f5d844c"
+      },
+      "format_valid": true,
+      "producer_authenticated": true,
+      "request": "fixtures/F1-conjunction/calls/040-return.capture/request.json"
+    }
+  ],
+  "assertion_result": "All source-selected current-code failure and exclusion assertions held",
+  "not_claimed": [
+    "No F_P semantic/operator qualification",
+    "No repair implementation or acceptance",
+    "No concurrent Writer run",
+    "No separate mutation barrier after dispatch before supervisor",
+    "No generic descendant/end or efficiency qualification"
+  ],
+  "observed_registered_process_end_records": [
+    {
+      "process_end": {
+        "descendants": "unknown",
+        "ended_ns": 1792387729514026000,
+        "observed": true,
+        "returncode": 0
+      },
+      "response": "fixtures/F1-conjunction/calls/010-dispatch.observe/stdout.bin"
+    },
+    {
+      "process_end": {
+        "descendants": "unknown",
+        "ended_ns": 1792387730376646000,
+        "observed": true,
+        "returncode": 0
+      },
+      "response": "fixtures/F1-conjunction/calls/024-dispatch.observe/stdout.bin"
+    },
+    {
+      "process_end": {
+        "descendants": "unknown",
+        "ended_ns": 1792387731729458000,
+        "observed": true,
+        "returncode": 0
+      },
+      "response": "fixtures/F1-conjunction/calls/036-dispatch.observe/stdout.bin"
+    },
+    {
+      "process_end": {
+        "descendants": "unknown",
+        "ended_ns": 1792387731729458000,
+        "observed": true,
+        "returncode": 0
+      },
+      "response": "fixtures/F1-conjunction/calls/038-dispatch.observe/stdout.bin"
+    },
+    {
+      "process_end": {
+        "descendants": "unknown",
+        "ended_ns": 1792387724400673000,
+        "observed": true,
+        "returncode": 0
+      },
+      "response": "fixtures/F2-argument-source-before-admission/calls/010-dispatch.observe/stdout.bin"
+    },
+    {
+      "process_end": {
+        "descendants": "unknown",
+        "ended_ns": 1792387725042787000,
+        "observed": true,
+        "returncode": 0
+      },
+      "response": "fixtures/F2-argument-source-before-dispatch/calls/010-dispatch.observe/stdout.bin"
+    },
+    {
+      "process_end": {
+        "descendants": "unknown",
+        "ended_ns": 1792387723785383000,
+        "observed": true,
+        "returncode": 0
+      },
+      "response": "fixtures/F2-argument-source-unchanged/calls/010-dispatch.observe/stdout.bin"
+    },
+    {
+      "process_end": {
+        "descendants": "unknown",
+        "ended_ns": 1792387726350228000,
+        "observed": true,
+        "returncode": 0
+      },
+      "response": "fixtures/F2-model-projection-before-admission/calls/010-dispatch.observe/stdout.bin"
+    },
+    {
+      "process_end": {
+        "descendants": "unknown",
+        "ended_ns": 1792387727016353000,
+        "observed": true,
+        "returncode": 0
+      },
+      "response": "fixtures/F2-model-projection-before-dispatch/calls/010-dispatch.observe/stdout.bin"
+    },
+    {
+      "process_end": {
+        "descendants": "unknown",
+        "ended_ns": 1792387725692617000,
+        "observed": true,
+        "returncode": 0
+      },
+      "response": "fixtures/F2-model-projection-unchanged/calls/010-dispatch.observe/stdout.bin"
+    },
+    {
+      "process_end": {
+        "descendants": "unknown",
+        "ended_ns": 1792387728267832000,
+        "observed": true,
+        "returncode": 0
+      },
+      "response": "fixtures/F2-selected-host-fit-before-admission/calls/010-dispatch.observe/stdout.bin"
+    },
+    {
+      "process_end": {
+        "descendants": "unknown",
+        "ended_ns": 1792387728887032000,
+        "observed": true,
+        "returncode": 0
+      },
+      "response": "fixtures/F2-selected-host-fit-before-dispatch/calls/010-dispatch.observe/stdout.bin"
+    },
+    {
+      "process_end": {
+        "descendants": "unknown",
+        "ended_ns": 1792387727630471000,
+        "observed": true,
+        "returncode": 0
+      },
+      "response": "fixtures/F2-selected-host-fit-unchanged/calls/010-dispatch.observe/stdout.bin"
+    }
+  ],
+  "public_calls_by_operation": {
+    "context.assemble": 12,
+    "contract.preflight": 12,
+    "dispatch.observe": 26,
+    "dispatch.start": 12,
+    "return.capture": 3,
+    "source.read": 9,
+    "work.write": 16
+  },
+  "reproduction_script": {
+    "elapsed_ns": 10254908000,
+    "path": "reproduce.py",
+    "returncode": 0,
+    "sha256": "30c9610d827116a1942d95096335c094e3ba1b1dfc9b8bdfbd30ab06d9ba187f"
+  },
+  "schema": "a_c.reproduction-checks/1",
+  "scope_checks": {
+    "no_bytecode_directories": true,
+    "no_orphan_stage_files": true,
+    "owned_paths_no_symlinks": true
+  },
+  "source_invariance": [
+    {
+      "actual_sha256": "51082af52a4126aa85a9f2b7c361ce00e2ddc845af6d0654dd2016aa97633013",
+      "expected_sha256": "51082af52a4126aa85a9f2b7c361ce00e2ddc845af6d0654dd2016aa97633013",
+      "path": "a_c/.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md",
+      "unchanged": true
+    },
+    {
+      "actual_sha256": "4d1ea7fe98ec1b53f2a19d9a2fef2b3fbb070624c955fbb1e9e48f5cc88011b1",
+      "expected_sha256": "4d1ea7fe98ec1b53f2a19d9a2fef2b3fbb070624c955fbb1e9e48f5cc88011b1",
+      "path": "a_c/build_tenants/graphify/code/ac_support.py",
+      "unchanged": true
+    },
+    {
+      "actual_sha256": "78f70fa8da1a29ce4fadc8cb78743c2293bf7f35947b353218dc2a6b1e03ae94",
+      "expected_sha256": "78f70fa8da1a29ce4fadc8cb78743c2293bf7f35947b353218dc2a6b1e03ae94",
+      "path": "a_c/build_tenants/graphify/code/ac_support_core.py",
+      "unchanged": true
+    },
+    {
+      "actual_sha256": "9108d6ad10e412f5a0e981c88c06c7b37cb913a24286282da9aae752f239a586",
+      "expected_sha256": "9108d6ad10e412f5a0e981c88c06c7b37cb913a24286282da9aae752f239a586",
+      "path": "a_c/build_tenants/graphify/code/ac_support_effects.py",
+      "unchanged": true
+    },
+    {
+      "actual_sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1",
+      "expected_sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1",
+      "path": "a_c/build_tenants/graphify/design/fd-method-claude-rc9.json",
+      "unchanged": true
+    },
+    {
+      "actual_sha256": "b38eedbe85ee32ef11d945d6a60ed3f9bb2312ac10e873d8ddc9b7986744a005",
+      "expected_sha256": "b38eedbe85ee32ef11d945d6a60ed3f9bb2312ac10e873d8ddc9b7986744a005",
+      "path": "a_c/build_tenants/graphify/design/fd-support.md",
+      "unchanged": true
+    },
+    {
+      "actual_sha256": "4d03920c625ac77bc7f38794bccf73003b08fd883ca2ad06022cfc4164dd6b84",
+      "expected_sha256": "4d03920c625ac77bc7f38794bccf73003b08fd883ca2ad06022cfc4164dd6b84",
+      "path": "a_c/build_tenants/graphify/examples/fd-support/LIFECYCLE_QUICKSTART.md",
+      "unchanged": true
+    },
+    {
+      "actual_sha256": "7cf93cf0bc83713a74f47284e9c3acc785c08cdc3b4807b573f463465541ec07",
+      "expected_sha256": "7cf93cf0bc83713a74f47284e9c3acc785c08cdc3b4807b573f463465541ec07",
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_core.py",
+      "unchanged": true
+    },
+    {
+      "actual_sha256": "62aa2967c9bba8b151555b3d23d6d794ca746e6ba329994bac32316f28a1bd20",
+      "expected_sha256": "62aa2967c9bba8b151555b3d23d6d794ca746e6ba329994bac32316f28a1bd20",
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_effects.py",
+      "unchanged": true
+    },
+    {
+      "actual_sha256": "b0e013e6f9dabb9d3f31dd02c1a6909e9fc6418925a8d829f3bb1c2adf3dac1d",
+      "expected_sha256": "b0e013e6f9dabb9d3f31dd02c1a6909e9fc6418925a8d829f3bb1c2adf3dac1d",
+      "path": "a_c/stdo_a_c.json",
+      "unchanged": true
+    }
+  ],
+  "variants": {
+    "F1": 3,
+    "F2": 9,
+    "F3": 4
+  },
+  "verified_at_ns": 1792388016574445000
+}

@@ -1,5 +1,15 @@
 # Goals
 
+The selected composition increment implements
+[FC-01–FC-07](requirements/fd-composition.md) in the existing Graphify support
+tenant. It adds optional source-bound actor/edge information declarations to
+ordinary mediated acquisition, Context, dispatch and return paths. The
+[design](../build_tenants/graphify/design/fd-composition.md) and
+[execution record](../.ai-workspace/work/PRODUCT_COMPOSITION_01/README.md)
+bound its supported fragment and evidence. Construction does not reopen the
+published methodology or establish semantic acceptance, host isolation or
+complete Product qualification.
+
 The current implementation increment is
 [T-008](../.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md#current-provisional-implementation):
 the existing Graphify tenant now contains the provisional public F_D support

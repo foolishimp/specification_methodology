@@ -1,0 +1,758 @@
+--- preimage/build_tenants/graphify/code/ac_generate.py
++++ after/build_tenants/graphify/code/ac_generate.py
+@@ -102,17 +102,21 @@
+     starts: list[tuple[int, str]] = [(0, "preamble")]
+     ancestry: list[str] = []
+     counts: dict[str, int] = {}
+-    fenced = False
+-    fence_char = ""
++    fence_char, fence_width = "", 0
+     for index, line in enumerate(lines):
+-        fence = re.match(r"^\s*(`{3,}|~{3,})", line)
+-        if fence:
+-            if not fenced:
+-                fenced, fence_char = True, fence.group(1)[0]
+-            elif fence.group(1)[0] == fence_char:
+-                fenced = False
++        # Bounded fenced-block recognition (CommonMark 0.31.2): up to three
++        # spaces of indentation; a closer has the same marker, enough width,
++        # and only horizontal whitespace after it. Shorter examples stay data.
++        content = line.rstrip("\r\n\v\f\x1c\x1d\x1e\x85\u2028\u2029")
++        if fence_char:
++            if re.fullmatch(r" {0,3}" + re.escape(fence_char) + "{" + str(fence_width) + r",}[ \t]*", content):
++                fence_char, fence_width = "", 0
+             continue
+-        heading = re.match(r"^(#{1,6})\s+(.+?)\s*#*\s*$", line) if not fenced and Path(path).suffix.lower() in (".md", ".markdown", ".mdown") else None
++        fence = re.match(r"^ {0,3}(`{3,}|~{3,})(.*)$", content)
++        if fence and (fence.group(1)[0] == "~" or "`" not in fence.group(2)):
++            fence_char, fence_width = fence.group(1)[0], len(fence.group(1))
++            continue
++        heading = re.match(r"^(#{1,6})\s+(.+?)\s*#*\s*$", line) if Path(path).suffix.lower() in (".md", ".markdown", ".mdown") else None
+         if not heading:
+             continue
+         level, title = len(heading.group(1)), heading.group(2)
+@@ -552,21 +556,133 @@
+     return result
+ 
+ 
++def actor_evidence(output: Path, plan: dict[str, Any], chunk: dict[str, Any], attempt: Path, *,
++                   stage: str = "author", allow_source_failure: bool = False) -> tuple[dict[str, Any], dict[str, Any]]:
++    """Authenticate retained coordinates/audit consistency, not issuer legitimacy."""
++    require(stage in ("author", "extract"), "unknown actor evidence stage")
++    require(not allow_source_failure or stage == "author", "source-failure recovery is author-only")
++    frozen_plan, frozen_chunks = checkpoint(output)
++    require(canonical(plan) == canonical(frozen_plan), "supplied plan differs from exact frozen plan")
++    matches = [value for value in frozen_chunks if value["id"] == chunk["id"]]
++    require(len(matches) == 1 and canonical(matches[0]) == canonical(chunk), "supplied chunk differs from exact frozen chunk")
++    plan, chunk = frozen_plan, matches[0]
++    require(stage != "extract" or plan["mode"] == "graphify", "selected mode has no graph extraction actor")
++    if stage == "author" and plan["mode"] in GRAPH_MODES:
++        verify_discovery(output)
++    require(attempt.resolve().is_relative_to(output.resolve()), "actor attempt escapes the selected run")
++    require(attempt.resolve().is_relative_to((output / "actors" / stage / chunk["id"]).resolve()), "actor attempt escapes expected source chunk")
++    paths = ("answer.json", "result.json", "invocation.json", "prompt.txt", "events.jsonl", "stderr.txt", "usage.json")
++    require(all((attempt / name).is_file() for name in paths), "incomplete actor evidence")
++    require(all((attempt / name).resolve().is_relative_to(output.resolve()) for name in paths), "actor evidence symlink escapes selected run")
++    result = load(attempt / "result.json")
++    invocation = load(attempt / "invocation.json")
++    settings = load(output / "actor-settings.json")
++    require(result.get("profile") == "ac.generation.actor-result/1" and invocation.get("profile") == "ac.generation.actor-invocation/1", "unknown actor evidence profile")
++    allowed = result.get("status") == "completed" and result.get("failures") == [] or (
++        allow_source_failure and result.get("status") == "failed" and result.get("failures") == ["source_or_semantic_fragment_validation"] and isinstance(result.get("validation_error"), str))
++    require(allowed, "actor failure is not solely source-fragment validation")
++    require(type(result.get("cli_exit_code")) is int and result.get("cli_exit_code") == 0 and result.get("timed_out") is False and result.get("user_config_unchanged") is True,
++            "CLI exit/timeout/config custody failed")
++    require(result.get("schema_errors") == [] and result.get("unexpected_item_types") == [], "schema or isolation failure in actor evidence")
++    for name, field in (("answer.json", "answer_sha256"), ("events.jsonl", "events_sha256"), ("stderr.txt", "stderr_sha256")):
++        require(sha((attempt / name).read_bytes()) == result.get(field), "stale original " + name)
++    require(invocation.get("settings") == settings["settings"] == result.get("settings"), "frozen actor settings differ")
++    require(invocation.get("cli_version") == settings["cli_version"] == result.get("cli_version"), "frozen actor CLI version differs")
++    require(isinstance(invocation.get("config_path"), str) and re.fullmatch(r"[0-9a-f]{64}", invocation.get("config_sha256", "")) is not None, "original configuration coordinates are malformed")
++    schema = ASSETS / ("extraction.schema.json" if stage == "extract" else "author.schema.json")
++    require(invocation.get("schema_sha256") == plan["assets"][schema.name] == sha(schema.read_bytes()), "actor schema identity differs")
++    prompt = extraction_prompt(plan, chunk, output) if stage == "extract" else author_prompt(plan, chunk, output)
++    require(invocation.get("prompt_sha256") == sha((attempt / "prompt.txt").read_bytes()) == sha(prompt.encode()),
++            "actor prompt does not belong to this exact source chunk and discovery context")
++    overrides = invocation.get("inline_overrides", {})
++    required_overrides = {"features.shell_tool": False, "features.apps": False, "features.multi_agent": False,
++                          "features.memories": False, "features.js_repl": False, "web_search": "disabled", "project_doc_max_bytes": 0}
++    require(all(overrides.get(key) == value and type(overrides.get(key)) is type(value) for key, value in required_overrides.items()), "actor tool/document isolation overrides differ")
++    require(all(overrides.get(key) == value for key, value in settings["settings"].items()), "command model/settings overrides differ")
++    inventory = invocation.get("effective_mcp_inventory")
++    require(isinstance(inventory, list) and all(isinstance(row, dict) and isinstance(row.get("name"), str) and row.get("enabled") is False for row in inventory), "actor MCP isolation failed")
++    for row in inventory:
++        require(overrides.get("mcp_servers." + row["name"] + ".enabled") is False, "effective MCP disablement is missing")
++    for key, value in overrides.items():
++        if key in settings["settings"] or key in required_overrides:
++            continue
++        require(re.fullmatch(r"mcp_servers\.[A-Za-z0-9_-]+\.(enabled|command)", key) is not None, "unexpected actor override")
++        require(value is False if key.endswith(".enabled") else value == "/usr/bin/false", "unsafe MCP override")
++    command = invocation.get("command")
++    require(isinstance(command, list) and len(command) > 1 and all(isinstance(item, str) for item in command), "invalid actor argv")
++    base, arguments, index = [], {}, 0
++    while index < len(command):
++        if command[index] != "-c":
++            base.append(command[index])
++            index += 1
++            continue
++        require(index + 1 < len(command) and "=" in command[index + 1], "invalid inline configuration argv")
++        key, value = command[index + 1].split("=", 1)
++        require(key not in arguments, "duplicate command override")
++        arguments[key] = json.loads(value)
++        index += 2
++    require(arguments == overrides, "recorded command and inline overrides differ")
++    expected = [command[0], "exec", "--json", "--ephemeral", "--sandbox", "read-only", "--skip-git-repo-check", "--color", "never",
++                "--output-schema", str(schema.resolve()), "--output-last-message", str((attempt / "answer.json").resolve()),
++                "--cd", str((attempt / "empty-workspace").resolve()), "-"]
++    require(base == expected, "actor argv is not the isolated ephemeral source-authoring invocation")
++    declared_cwd = Path(invocation.get("cwd", ""))
++    expected_cwd = (attempt / "empty-workspace").resolve()
++    require(str(declared_cwd) not in ("", ".") and ".." not in declared_cwd.parts, "invalid recorded actor cwd")
++    require(declared_cwd.resolve() == expected_cwd if declared_cwd.is_absolute() else expected_cwd.parts[-len(declared_cwd.parts):] == declared_cwd.parts, "recorded actor cwd differs")
++    require(expected_cwd.is_dir() and expected_cwd.is_relative_to(attempt.resolve()) and not any(expected_cwd.iterdir()), "actor workspace is not retained empty and isolated")
++    events = [json.loads(line) for line in (attempt / "events.jsonl").read_text().splitlines()]
++    require(all(isinstance(event, dict) for event in events), "invalid actor event object")
++    require(not any(event.get("type") in ("error", "turn.failed") for event in events), "actor event stream contains a failed turn")
++    usage = [event["usage"] for event in events if event.get("type") == "turn.completed" and "usage" in event]
++    require(bool(usage) and usage == result.get("usage_events") == load(attempt / "usage.json").get("usage_events"), "retained CLI usage is absent or contradictory")
++    item_types = [event["item"].get("type") for event in events if event.get("type") in ("item.started", "item.completed") and isinstance(event.get("item"), dict)]
++    require(all(kind in ("agent_message", "reasoning") for kind in item_types), "actual actor tool/isolation violation")
++    answer = load(attempt / "answer.json")
++    require(not schema_errors(answer, load(schema)), "raw actor answer is not schema-valid")
++    original_error = None
++    try:
++        if stage == "extract":
++            semantic_check(answer, chunk, output, upstream_modules(Path(plan["upstream"]["root"])))
++        else:
++            author_check(answer, chunk)
++    except GenerationError as exc:
++        original_error = str(exc)
++    if not allow_source_failure:
++        require(original_error is None, "completed actor fails exact source validation: " + str(original_error))
++        require((attempt / "validation.json").is_file(), "completed actor lacks strict source validation")
++    if result["status"] == "failed":
++        require(original_error is not None and result.get("validation_error") == original_error, "recorded original source-validation failure contradicts exact recomputation")
++    pins = {str((attempt / name).relative_to(output)): sha((attempt / name).read_bytes()) for name in paths}
++    pins["actor-settings.json"] = sha((output / "actor-settings.json").read_bytes())
++    for name in ("plan.json", "source-manifest.json", "chunks.json"):
++        pins[name] = sha((output / name).read_bytes())
++    if (attempt / "validation.json").exists():
++        validation = load(attempt / "validation.json")
++        require(validation.get("answer_sha256") == result["answer_sha256"] and validation.get("chunk_sha256") == digest(chunk), "strict original validation belongs to a different answer/chunk")
++        pins[str((attempt / "validation.json").relative_to(output))] = sha((attempt / "validation.json").read_bytes())
++    proof = {"original_attempt": str(attempt.relative_to(output)), "original_status": result["status"],
++             "original_recorded_failure": result.get("validation_error"), "original_strict_validation_error": original_error,
++             "original_usage_events": usage, "pins": pins, "chunk_sha256": digest(chunk),
++             "source_sections": [{key: section[key] for key in ("id", "path", "start_line", "end_line", "sha256")} for section in chunk["segments"]]}
++    return answer, proof
++
+ def successful_attempt(output: Path, stage: str, chunk: dict[str, Any]) -> Path | None:
++    """Reuse only the latest strictly validated attempt with complete frozen custody."""
++    require(stage in ("extract", "author"), "unknown actor stage")
+     root = output / "actors" / stage / chunk["id"]
+-    if not root.exists():
++    attempts = sorted(path for path in root.iterdir() if path.is_dir()) if root.exists() else []
++    if not attempts:
+         return None
+-    for attempt in sorted(root.iterdir(), reverse=True):
+-        if (attempt / "result.json").exists() and load(attempt / "result.json").get("status") == "completed" and (attempt / "validation.json").exists():
+-            validation = load(attempt / "validation.json")
+-            require(sha((attempt / "answer.json").read_bytes()) == validation["answer_sha256"], "authored output changed after validation")
+-            require(validation.get("chunk_sha256") == digest(chunk), "validated answer belongs to a different source chunk")
+-            invocation = load(attempt / "invocation.json")
+-            require(sha((attempt / "prompt.txt").read_bytes()) == invocation["prompt_sha256"], "actor prompt changed")
+-            schema = ASSETS / ("extraction.schema.json" if stage == "extract" else "author.schema.json")
+-            require(invocation.get("schema_sha256") == sha(schema.read_bytes()), "actor output schema differs from current frozen schema")
+-            return attempt
+-    return None
++    attempt = attempts[-1]
++    # A newer failed/unfinished retry remains visible; never fall back to an
++    # older success. Stage execution still requires explicit --retry-failed.
++    if not (attempt / "result.json").is_file() or load(attempt / "result.json").get("status") != "completed":
++        return None
++    if not (attempt / "validation.json").is_file():
++        return None
++    actor_evidence(output, load(output / "plan.json"), chunk, attempt, stage=stage)
++    return attempt
+ 
+ 
+ def stage(output: Path, name: str, *, execute: bool, codex: str = "codex", timeout: int = 1200,
+--- preimage/build_tenants/graphify/code/ac_grounding.py
++++ after/build_tenants/graphify/code/ac_grounding.py
+@@ -8,6 +8,7 @@
+ from __future__ import annotations
+ 
+ import argparse
++from bisect import bisect_right
+ import copy
+ import json
+ from pathlib import Path
+@@ -104,8 +105,14 @@
+     raw_first, raw_end = positions[found][0], positions[end - 1][1]
+     literal = section["text"][raw_first:raw_end]
+     require(spans(literal)[0] == query, "normalization failed to preserve lexical characters and whitespace boundaries")
+-    first_line = section["start_line"] + section["text"][:raw_first].count("\n")
+-    last_line = section["start_line"] + section["text"][:raw_end - 1].count("\n")
++    # Use the same splitlines convention as preparation and strict_anchor,
++    # including accepted Unicode line separators, rather than counting LF.
++    line_ends, offset = [], 0
++    for line in section["text"].splitlines(keepends=True):
++        offset += len(line)
++        line_ends.append(offset)
++    first_line = section["start_line"] + bisect_right(line_ends, raw_first)
++    last_line = section["start_line"] + bisect_right(line_ends, raw_end - 1)
+     recovered = {**ground, "quote": literal, "start_line": first_line, "end_line": last_line}
+     require(strict_anchor(recovered, section), "recovered anchor failed exact original-source range check")
+     witness = {"normalized_quote_sha256": generation.sha(query.encode()), "normalized_occurrence_count": 1,
+@@ -151,103 +158,11 @@
+ 
+ 
+ def evidence(output: Path, plan: dict[str, Any], chunk: dict[str, Any], attempt: Path) -> tuple[dict[str, Any], dict[str, Any]]:
+-    """Authenticate retained coordinates/audit consistency, not issuer legitimacy."""
+-    frozen_plan, frozen_chunks = generation.checkpoint(output)
+-    require(generation.canonical(plan) == generation.canonical(frozen_plan), "supplied plan differs from exact frozen plan")
+-    matches = [value for value in frozen_chunks if value["id"] == chunk["id"]]
+-    require(len(matches) == 1 and generation.canonical(matches[0]) == generation.canonical(chunk), "supplied chunk differs from exact frozen chunk")
+-    plan, chunk = frozen_plan, matches[0]
+-    if plan["mode"] in generation.GRAPH_MODES:
+-        generation.verify_discovery(output)
+-    require(attempt.resolve().is_relative_to(output.resolve()), "actor attempt escapes the selected run")
+-    require(attempt.resolve().is_relative_to((output / "actors/author" / chunk["id"]).resolve()), "actor attempt escapes expected source chunk")
+-    paths = ("answer.json", "result.json", "invocation.json", "prompt.txt", "events.jsonl", "stderr.txt", "usage.json")
+-    require(all((attempt / name).is_file() for name in paths), "incomplete actor evidence")
+-    require(all((attempt / name).resolve().is_relative_to(output.resolve()) for name in paths), "actor evidence symlink escapes selected run")
+-    result = generation.load(attempt / "result.json")
+-    invocation = generation.load(attempt / "invocation.json")
+-    settings = generation.load(output / "actor-settings.json")
+-    require(result.get("profile") == "ac.generation.actor-result/1" and invocation.get("profile") == "ac.generation.actor-invocation/1", "unknown actor evidence profile")
+-    allowed = result.get("status") == "completed" and result.get("failures") == [] or (
+-        result.get("status") == "failed" and result.get("failures") == ["source_or_semantic_fragment_validation"] and isinstance(result.get("validation_error"), str))
+-    require(allowed, "actor failure is not solely source-fragment validation")
+-    require(type(result.get("cli_exit_code")) is int and result.get("cli_exit_code") == 0 and result.get("timed_out") is False and result.get("user_config_unchanged") is True,
+-            "CLI exit/timeout/config custody failed")
+-    require(result.get("schema_errors") == [] and result.get("unexpected_item_types") == [], "schema or isolation failure cannot be normalized")
+-    for name, field in (("answer.json", "answer_sha256"), ("events.jsonl", "events_sha256"), ("stderr.txt", "stderr_sha256")):
+-        require(generation.sha((attempt / name).read_bytes()) == result.get(field), "stale original " + name)
+-    require(invocation.get("settings") == settings["settings"] == result.get("settings"), "frozen actor settings differ")
+-    require(invocation.get("cli_version") == settings["cli_version"] == result.get("cli_version"), "frozen actor CLI version differs")
+-    require(isinstance(invocation.get("config_path"), str) and re.fullmatch(r"[0-9a-f]{64}", invocation.get("config_sha256", "")) is not None, "original configuration coordinates are malformed")
+-    schema = generation.ASSETS / "author.schema.json"
+-    require(invocation.get("schema_sha256") == plan["assets"][schema.name] == generation.sha(schema.read_bytes()), "actor author schema identity differs")
+-    prompt = generation.author_prompt(plan, chunk, output)
+-    require(invocation.get("prompt_sha256") == generation.sha((attempt / "prompt.txt").read_bytes()) == generation.sha(prompt.encode()),
+-            "actor prompt does not belong to this exact source chunk and discovery context")
+-    overrides = invocation.get("inline_overrides", {})
+-    required_overrides = {"features.shell_tool": False, "features.apps": False, "features.multi_agent": False,
+-                          "features.memories": False, "features.js_repl": False, "web_search": "disabled", "project_doc_max_bytes": 0}
+-    require(all(overrides.get(key) == value and type(overrides.get(key)) is type(value) for key, value in required_overrides.items()), "actor tool/document isolation overrides differ")
+-    require(all(overrides.get(key) == value for key, value in settings["settings"].items()), "command model/settings overrides differ")
+-    inventory = invocation.get("effective_mcp_inventory")
+-    require(isinstance(inventory, list) and all(row.get("enabled") is False for row in inventory), "actor MCP isolation failed")
+-    for row in inventory:
+-        require(overrides.get("mcp_servers." + row["name"] + ".enabled") is False, "effective MCP disablement is missing")
+-    for key, value in overrides.items():
+-        if key in settings["settings"] or key in required_overrides:
+-            continue
+-        require(re.fullmatch(r"mcp_servers\.[A-Za-z0-9_-]+\.(enabled|command)", key) is not None, "unexpected actor override")
+-        require(value is False if key.endswith(".enabled") else value == "/usr/bin/false", "unsafe MCP override")
+-    command = invocation.get("command")
+-    require(isinstance(command, list) and len(command) > 1 and all(isinstance(item, str) for item in command), "invalid actor argv")
+-    base, arguments, index = [], {}, 0
+-    while index < len(command):
+-        if command[index] != "-c":
+-            base.append(command[index])
+-            index += 1
+-            continue
+-        require(index + 1 < len(command) and "=" in command[index + 1], "invalid inline configuration argv")
+-        key, value = command[index + 1].split("=", 1)
+-        require(key not in arguments, "duplicate command override")
+-        arguments[key] = json.loads(value)
+-        index += 2
+-    require(arguments == overrides, "recorded command and inline overrides differ")
+-    expected = [command[0], "exec", "--json", "--ephemeral", "--sandbox", "read-only", "--skip-git-repo-check", "--color", "never",
+-                "--output-schema", str(schema.resolve()), "--output-last-message", str((attempt / "answer.json").resolve()),
+-                "--cd", str((attempt / "empty-workspace").resolve()), "-"]
+-    require(base == expected, "actor argv is not the isolated ephemeral source-authoring invocation")
+-    declared_cwd = Path(invocation.get("cwd", ""))
+-    expected_cwd = (attempt / "empty-workspace").resolve()
+-    require(str(declared_cwd) not in ("", ".") and ".." not in declared_cwd.parts, "invalid recorded actor cwd")
+-    require(declared_cwd.resolve() == expected_cwd if declared_cwd.is_absolute() else expected_cwd.parts[-len(declared_cwd.parts):] == declared_cwd.parts, "recorded actor cwd differs")
+-    events = [json.loads(line) for line in (attempt / "events.jsonl").read_text().splitlines()]
+-    require(not any(event.get("type") in ("error", "turn.failed") for event in events), "actor event stream contains a failed turn")
+-    usage = [event["usage"] for event in events if event.get("type") == "turn.completed" and "usage" in event]
+-    require(bool(usage) and usage == result.get("usage_events") == generation.load(attempt / "usage.json").get("usage_events"), "retained CLI usage is absent or contradictory")
+-    item_types = [event["item"].get("type") for event in events if event.get("type") in ("item.started", "item.completed") and isinstance(event.get("item"), dict)]
+-    require(all(kind in ("agent_message", "reasoning") for kind in item_types), "actual actor tool/isolation violation")
+-    answer = generation.load(attempt / "answer.json")
+-    require(not generation.schema_errors(answer, generation.load(schema)), "raw actor answer is not schema-valid")
+-    original_error = None
++    """Share original-actor custody; only this F_D path admits source-failed drafts."""
+     try:
+-        generation.author_check(answer, chunk)
++        return generation.actor_evidence(output, plan, chunk, attempt, allow_source_failure=True)
+     except generation.GenerationError as exc:
+-        original_error = str(exc)
+-    if result["status"] == "failed":
+-        require(original_error is not None and result.get("validation_error") == original_error, "recorded original source-validation failure contradicts exact recomputation")
+-    pins = {str((attempt / name).relative_to(output)): generation.sha((attempt / name).read_bytes()) for name in paths}
+-    pins["actor-settings.json"] = generation.sha((output / "actor-settings.json").read_bytes())
+-    for name in ("plan.json", "source-manifest.json", "chunks.json"):
+-        pins[name] = generation.sha((output / name).read_bytes())
+-    if (attempt / "validation.json").exists():
+-        validation = generation.load(attempt / "validation.json")
+-        require(validation.get("answer_sha256") == result["answer_sha256"] and validation.get("chunk_sha256") == generation.digest(chunk), "strict original validation belongs to a different answer/chunk")
+-        pins[str((attempt / "validation.json").relative_to(output))] = generation.sha((attempt / "validation.json").read_bytes())
+-    proof = {"original_attempt": str(attempt.relative_to(output)), "original_status": result["status"],
+-             "original_recorded_failure": result.get("validation_error"), "original_strict_validation_error": original_error,
+-             "original_usage_events": usage, "pins": pins, "chunk_sha256": generation.digest(chunk),
+-             "source_sections": [{key: section[key] for key in ("id", "path", "start_line", "end_line", "sha256")} for section in chunk["segments"]]}
+-    return answer, proof
++        raise GroundingError(str(exc)) from exc
+ 
+ 
+ def normalization_root(output: Path, name: str) -> Path:
+--- preimage/build_tenants/graphify/test_env/test_ac_generate.py
++++ after/build_tenants/graphify/test_env/test_ac_generate.py
+@@ -6,7 +6,7 @@
+ from __future__ import annotations
+ 
+ import copy
+-from contextlib import redirect_stdout
++from contextlib import redirect_stderr, redirect_stdout
+ import io
+ import json
+ import os
+@@ -69,17 +69,50 @@
+     def tearDown(self) -> None:
+         self.temp.cleanup()
+ 
+-    def fake_attempt(self, stage: str, answer: dict, output: Path | None = None) -> Path:
++    def fake_attempt(self, stage: str, answer: dict, output: Path | None = None, *,
++                     ordinal: int = 1, validated: bool = True) -> Path:
++        """Complete synthetic CLI capture with the exact frozen stage contract."""
+         output = output or self.output
+-        chunk = gen.load(output / "chunks.json")[0]
+-        path = output / "actors" / stage / chunk["id"] / "attempt-001"
++        plan, chunks = gen.checkpoint(output)
++        chunk = chunks[0]
++        path = output / "actors" / stage / chunk["id"] / f"attempt-{ordinal:03d}"
+         path.mkdir(parents=True)
++        (path / "empty-workspace").mkdir()
+         gen.save(path / "answer.json", answer)
+-        (path / "prompt.txt").write_text("Test-only fixture, no actor invoked.")
++        prompt = gen.extraction_prompt(plan, chunk, output) if stage == "extract" else gen.author_prompt(plan, chunk, output)
++        (path / "prompt.txt").write_text(prompt)
+         schema = gen.ASSETS / ("extraction.schema.json" if stage == "extract" else "author.schema.json")
+-        gen.save(path / "invocation.json", {"prompt_sha256": gen.sha((path / "prompt.txt").read_bytes()), "schema_sha256": gen.sha(schema.read_bytes())})
+-        gen.save(path / "validation.json", {"answer_sha256": gen.sha((path / "answer.json").read_bytes()), "chunk_sha256": gen.digest(chunk)})
+-        gen.save(path / "result.json", {"status": "completed"})
++        self.assertEqual(gen.schema_errors(answer, gen.load(schema)), [])
++        if stage == "extract":
++            gen.semantic_check(answer, chunk, output, gen.upstream_modules(Path(plan["upstream"]["root"])))
++        else:
++            gen.author_check(answer, chunk)
++        settings = {"model": "test-model", "model_reasoning_effort": "high"}
++        version = "codex-cli synthetic-test-only"
++        gen.save(output / "actor-settings.json", {"settings": settings, "cli_version": version})
++        overrides = {**settings, "features.shell_tool": False, "features.apps": False, "features.multi_agent": False,
++                     "features.memories": False, "features.js_repl": False, "web_search": "disabled", "project_doc_max_bytes": 0}
++        command = ["/test-only/codex", "exec", "--json", "--ephemeral", "--sandbox", "read-only", "--skip-git-repo-check", "--color", "never",
++                   "--output-schema", str(schema.resolve()), "--output-last-message", str((path / "answer.json").resolve()),
++                   "--cd", str((path / "empty-workspace").resolve())]
++        for key, value in overrides.items():
++            command.extend(["-c", key + "=" + json.dumps(value)])
++        command.append("-")
++        gen.save(path / "invocation.json", {"profile": "ac.generation.actor-invocation/1", "settings": settings, "cli_version": version,
++                 "prompt_sha256": gen.sha(prompt.encode()), "schema_sha256": gen.sha(schema.read_bytes()), "inline_overrides": overrides,
++                 "effective_mcp_inventory": [], "command": command, "cwd": str(path / "empty-workspace"),
++                 "config_path": "/test-only/config.toml", "config_sha256": "f" * 64})
++        usage = [{"input_tokens": 123, "output_tokens": 456}]
++        events = [{"type": "item.completed", "item": {"type": "agent_message"}}, {"type": "turn.completed", "usage": usage[0]}]
++        (path / "events.jsonl").write_text("".join(json.dumps(event) + "\n" for event in events))
++        (path / "stderr.txt").write_text("")
++        gen.save(path / "usage.json", {"usage_events": usage})
++        gen.save(path / "result.json", {"profile": "ac.generation.actor-result/1", "status": "completed", "failures": [],
++                 "cli_exit_code": 0, "timed_out": False, "user_config_unchanged": True, "schema_errors": [], "unexpected_item_types": [],
++                 "answer_sha256": gen.sha((path / "answer.json").read_bytes()), "events_sha256": gen.sha((path / "events.jsonl").read_bytes()),
++                 "stderr_sha256": gen.sha((path / "stderr.txt").read_bytes()), "settings": settings, "cli_version": version, "usage_events": usage})
++        if validated:
++            gen.save(path / "validation.json", {"status": "structurally_valid_proposal", "answer_sha256": gen.sha((path / "answer.json").read_bytes()), "chunk_sha256": gen.digest(chunk)})
+         return path
+ 
+     def test_snapshot_and_chunks_cover_exact_original_source(self) -> None:
+@@ -93,6 +126,36 @@
+         self.assertEqual(moved[-1]["id"], first)
+         fenced = gen.sections("doc.md", "# A\n```md\n# Not a section\n```\n# B\n", "repo://test/")
+         self.assertEqual(len(fenced), 2)
++
++    def test_fence_width_marker_indentation_and_closing_content_preserve_partitions(self) -> None:
++        cases = {
++            "backtick-control": "```md\n# Hidden\n```",
++            "wide-backtick-inner-shorter": "````md\n```\n# Hidden\n````",
++            "wide-tilde-inner-shorter": "~~~~md\n~~~\n# Hidden\n~~~~",
++            "longer-closer": "````md\n# Hidden\n`````",
++            "different-marker": "````md\n~~~~\n# Hidden\n````",
++            "closing-content-is-data": "````md\n```` trailing\n# Hidden\n````",
++            "closing-info-is-data": "~~~md\n~~~md\n# Hidden\n~~~",
++            "three-space-indent": "   ````md\n  ```\n# Hidden\n   ````\t ",
++            "overindented-close-is-data": "```md\n    ```\n# Hidden\n```",
++            "tilde-info-can-contain-backticks": "~~~md`info\n# Hidden\n~~~",
++        }
++        expected_ids = [s["id"] for s in gen.sections("doc.md", "# Before\n# Real\n", "repo://test/")]
++        for name, block in cases.items():
++            with self.subTest(name=name):
++                source = "# Before\n" + block + "\n# Real\nBody.\n"
++                sections = gen.sections("doc.md", source, "repo://test/")
++                self.assertEqual([s["heading"] for s in sections], ["Before", "Real"])
++                self.assertEqual([s["id"] for s in sections], expected_ids)
++                self.assertEqual("".join(s["text"] for s in sections), source)
++                chunks = gen.make_chunks(sections, 1000)
++                self.assertEqual("".join(s["text"] for c in chunks for s in c["segments"]), source)
++                self.assertEqual(sections[-1]["start_line"], len(source.splitlines()) - 1)
++        for invalid_opening in ("    ```md", "\t```md", "```md`info"):
++            source = "# Before\n" + invalid_opening + "\n# Real\n"
++            self.assertEqual([s["heading"] for s in gen.sections("doc.md", source, "repo://test/")], ["Before", "Real"])
++        self.assertEqual(len(gen.sections("doc.md", "# Before\n````\n# Hidden\n", "repo://test/")), 1)
++        self.assertEqual(len(gen.sections("doc.txt", "# Before\n# Real\n", "repo://test/")), 1)
+ 
+     def test_chunks_pack_files_and_split_sections_without_loss(self) -> None:
+         text = "# Large\n" + "word " * 10 + "\n" + ("next line\n" * 200)
+@@ -206,8 +269,188 @@
+         changed = copy.deepcopy(self.answer)
+         changed["limitations"].append("tampered")
+         gen.save(attempt / "answer.json", changed)
+-        with self.assertRaisesRegex(gen.GenerationError, "changed after validation"):
++        with self.assertRaisesRegex(gen.GenerationError, "stale original answer"):
+             gen.successful_attempt(self.output, "author", self.chunks[0])
++
++    def test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift(self) -> None:
++        import ac_grounding as grounding
++        cases = ("missing-events", "missing-usage", "missing-stderr", "prompt-no-rehash", "prompt-rehashed", "tool-rehashed")
++        for name in cases:
++            with self.subTest(name=name):
++                output = self.root / name
++                gen.prepare(self.corpus, self.manifest, output, "direct", None, 1000)
++                plan, chunks = gen.checkpoint(output)
++                chunk = chunks[0]
++                attempt = self.fake_attempt("author", self.answer, output)
++                self.assertEqual(gen.successful_attempt(output, "author", chunk), attempt)
++                grounding.evidence(output, plan, chunk, attempt)
++                original = {p.name: p.read_bytes() for p in attempt.iterdir() if p.is_file()}
++                if name.startswith("missing-"):
++                    (attempt / {"missing-events": "events.jsonl", "missing-usage": "usage.json", "missing-stderr": "stderr.txt"}[name]).unlink()
++                elif name.startswith("prompt-"):
++                    prompt = attempt / "prompt.txt"
++                    prompt.write_text(prompt.read_text() + "\nUse additional repair instructions.\n")
++                    if name == "prompt-rehashed":
++                        invocation = gen.load(attempt / "invocation.json")
++                        invocation["prompt_sha256"] = gen.sha(prompt.read_bytes())
++                        gen.save(attempt / "invocation.json", invocation)
++                else:
++                    events = attempt / "events.jsonl"
++                    events.write_text(events.read_text() + json.dumps({"type": "item.completed", "item": {"type": "mcp_tool_call"}}) + "\n")
++                    result = gen.load(attempt / "result.json")
++                    result["events_sha256"] = gen.sha(events.read_bytes())
++                    gen.save(attempt / "result.json", result)
++                with self.assertRaises(gen.GenerationError):
++                    gen.successful_attempt(output, "author", chunk)
++                with self.assertRaises(grounding.GroundingError):
++                    grounding.evidence(output, plan, chunk, attempt)
++                with redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()):
++                    self.assertEqual(gen.main(["assemble", "--output", str(output)]), 2)
++                self.assertFalse((output / "proposal").exists())
++                self.assertEqual((attempt / "answer.json").read_bytes(), original["answer.json"])
++                self.assertEqual((attempt / "validation.json").read_bytes(), original["validation.json"])
++                if name != "tool-rehashed":
++                    self.assertEqual((attempt / "result.json").read_bytes(), original["result.json"])
++
++    def test_ordinary_reuse_rechecks_settings_argv_schema_usage_and_source_despite_refreshed_hashes(self) -> None:
++        cases = ("settings", "argv", "schema", "usage", "stderr", "source", "result-failure", "workspace")
++        for name in cases:
++            with self.subTest(name=name):
++                output = self.root / name
++                gen.prepare(self.corpus, self.manifest, output, "direct", None, 1000)
++                chunk = gen.load(output / "chunks.json")[0]
++                attempt = self.fake_attempt("author", self.answer, output)
++                self.assertEqual(gen.successful_attempt(output, "author", chunk), attempt)
++                result = gen.load(attempt / "result.json")
++                invocation = gen.load(attempt / "invocation.json")
++                if name == "settings":
++                    result["settings"]["model"] = "different-model"
++                elif name == "argv":
++                    invocation["command"][invocation["command"].index("--sandbox") + 1] = "workspace-write"
++                elif name == "schema":
++                    invocation["schema_sha256"] = "0" * 64
++                elif name == "usage":
++                    gen.save(attempt / "usage.json", {"usage_events": [{"input_tokens": 1, "output_tokens": 2}]})
++                elif name == "stderr":
++                    (attempt / "stderr.txt").write_text("Changed raw stderr\n")
++                elif name == "source":
++                    answer = copy.deepcopy(self.answer)
++                    answer["concepts"][0]["grounding"][0]["quote"] = "Not present in the source."
++                    gen.save(attempt / "answer.json", answer)
++                    result["answer_sha256"] = gen.sha((attempt / "answer.json").read_bytes())
++                    gen.save(attempt / "validation.json", {"answer_sha256": result["answer_sha256"], "chunk_sha256": gen.digest(chunk)})
++                elif name == "result-failure":
++                    result["failures"] = ["isolation_violation"]
++                else:
++                    (attempt / "empty-workspace/extra.txt").write_text("No longer empty.")
++                gen.save(attempt / "invocation.json", invocation)
++                gen.save(attempt / "result.json", result)
++                with self.assertRaises(gen.GenerationError):
++                    gen.successful_attempt(output, "author", chunk)
++
++    def test_latest_failed_or_unfinished_attempt_blocks_older_success_and_requires_explicit_retry(self) -> None:
++        first = self.fake_attempt("author", self.answer)
++        original = {p.name: p.read_bytes() for p in first.iterdir() if p.is_file()}
++        newer = first.parent / "attempt-002"
++        newer.mkdir()
++        self.assertIsNone(gen.successful_attempt(self.output, "author", self.chunks[0]))
++        with self.assertRaisesRegex(gen.GenerationError, "missing validated F_P"):
++            gen.assemble(self.output)
++        newer.rmdir()
++        newer = self.fake_attempt("author", self.answer, ordinal=2, validated=False)
++        failure = gen.load(newer / "result.json")
++        failure.update(status="failed", failures=["cli_nonzero_exit"], cli_exit_code=1)
++        gen.save(newer / "result.json", failure)
++        self.assertIsNone(gen.successful_attempt(self.output, "author", self.chunks[0]))
++        partial = gen.assemble(self.output, allow_partial=True)
++        self.assertFalse(partial["processing_complete"])
++        self.assertEqual(partial["family_counts"]["objects"], 0)
++        settings = gen.load(self.output / "actor-settings.json")
++        def capture(prompt, schema, path, *args):
++            captured = self.fake_attempt("author", self.answer, ordinal=3, validated=False)
++            self.assertEqual(captured, path)
++            self.assertEqual(prompt, (captured / "prompt.txt").read_text())
++            return gen.load(captured / "result.json")
++        with patch.object(gen, "actor_settings", return_value=(None, None, settings)), patch.object(gen, "run_actor", side_effect=capture) as runner:
++            with self.assertRaisesRegex(gen.GenerationError, "explicit --retry-failed"):
++                gen.stage(self.output, "author", execute=True)
++            runner.assert_not_called()
++            result = gen.stage(self.output, "author", execute=True, retry_failed=True)
++            self.assertEqual(result["status"], "completed")
++            self.assertEqual(runner.call_count, 1)
++        self.assertEqual(gen.successful_attempt(self.output, "author", self.chunks[0]).name, "attempt-003")
++        self.assertEqual(gen.assemble(self.output)["status"], "proposed")
++        for name, raw in original.items():
++            self.assertEqual((first / name).read_bytes(), raw)
++        self.assertEqual(gen.load(newer / "result.json")["status"], "failed")
++
++    def test_graph_treatments_use_stage_specific_frozen_contracts_and_revalidate_source(self) -> None:
++        # Synthetic upstream/discovery receipts isolate the stage contract here;
++        # separate enabled boundary tests exercise unchanged actual upstream.
++        modules = {"semantic_cleanup": SimpleNamespace(validate_semantic_fragment=lambda answer: [])}
++        for mode, stage in (("graphify-ac", "author"), ("graphify", "extract"), ("graphify", "author")):
++            for drift in ("prompt", "tool", "source"):
++                with self.subTest(mode=mode, stage=stage, drift=drift):
++                    output = self.root / f"{mode}-{stage}-{drift}"
++                    upstream = self.root / f"upstream-{mode}-{stage}-{drift}"
++                    reference = upstream / gen.UPSTREAM_PROMPT
++                    reference.parent.mkdir(parents=True)
++                    reference.write_text("```\nSynthetic extraction contract FILE_LIST CHUNK_NUM TOTAL_CHUNKS DEEP_MODE\n```\n")
++                    record = {"root": str(upstream), "commit": gen.UPSTREAM_COMMIT, "prompt_path": gen.UPSTREAM_PROMPT,
++                              "prompt_sha256": gen.sha(reference.read_bytes())}
++                    with patch.object(gen, "verify_upstream", return_value=record):
++                        gen.prepare(self.corpus, self.manifest, output, mode, upstream, 1000)
++                    plan, chunks = gen.checkpoint(output)
++                    chunk = chunks[0]
++                    semantic = {"nodes": [{"id": "rules", "label": "Rules", "file_type": "document",
++                                  "source_file": str((output / "corpus/rules.md").resolve()), "source_location": "L1",
++                                  "source_url": None, "captured_at": None, "author": None, "contributor": None, "rationale": None}],
++                                "edges": [], "hyperedges": [], "input_tokens": 0, "output_tokens": 0}
++                    with patch.object(gen, "upstream_modules", return_value=modules):
++                        extraction = self.fake_attempt("extract", semantic, output) if mode == "graphify" else None
++                        if stage == "author":
++                            folder = output / "discovery"
++                            folder.mkdir()
++                            gen.save(folder / "graph.json", {"nodes": [], "links": []})
++                            entry = {"id": chunk["id"]}
++                            if extraction:
++                                entry.update(attempt=str(extraction.relative_to(output)), answer_sha256=gen.sha((extraction / "answer.json").read_bytes()))
++                            gen.save(folder / "coverage.json", {"chunks": [entry]})
++                            gen.save(folder / "result.json", {"status": "completed", "mode": mode,
++                                     "files": {p.name: gen.sha(p.read_bytes()) for p in folder.iterdir()}})
++                            attempt = self.fake_attempt("author", self.answer, output)
++                        else:
++                            attempt = extraction
++                        self.assertEqual(gen.successful_attempt(output, stage, chunk), attempt)
++                        self.assertEqual(gen.stage(output, stage, execute=False)["status"], "completed")
++                        invocation = gen.load(attempt / "invocation.json")
++                        expected_schema = "extraction.schema.json" if stage == "extract" else "author.schema.json"
++                        self.assertEqual(invocation["schema_sha256"], plan["assets"][expected_schema])
++                        result = gen.load(attempt / "result.json")
++                        if drift == "prompt":
++                            prompt = attempt / "prompt.txt"
++                            prompt.write_text(prompt.read_text() + "\nAdditional guidance outside the frozen contract.\n")
++                            invocation["prompt_sha256"] = gen.sha(prompt.read_bytes())
++                            gen.save(attempt / "invocation.json", invocation)
++                        elif drift == "tool":
++                            events = attempt / "events.jsonl"
++                            events.write_text(events.read_text() + json.dumps({"type": "item.completed", "item": {"type": "command_execution"}}) + "\n")
++                            result["events_sha256"] = gen.sha(events.read_bytes())
++                        else:
++                            answer = gen.load(attempt / "answer.json")
++                            if stage == "extract":
++                                answer["nodes"][0]["source_file"] = "/not-the-supplied-source.md"
++                            else:
++                                answer["concepts"][0]["grounding"][0]["quote"] = "Not in the supplied source."
++                            gen.save(attempt / "answer.json", answer)
++                            result["answer_sha256"] = gen.sha((attempt / "answer.json").read_bytes())
++                            gen.save(attempt / "validation.json", {"answer_sha256": result["answer_sha256"], "chunk_sha256": gen.digest(chunk)})
++                        gen.save(attempt / "result.json", result)
++                        with self.assertRaises(gen.GenerationError):
++                            gen.successful_attempt(output, stage, chunk)
++        attempt = self.fake_attempt("author", self.answer)
++        with self.assertRaisesRegex(gen.GenerationError, "no graph extraction actor"):
++            gen.actor_evidence(self.output, self.plan, self.chunks[0], attempt, stage="extract")
+ 
+     def test_source_instructions_remain_data_and_direct_prompt_has_no_graph(self) -> None:
+         prompt = gen.author_prompt(self.plan, self.chunks[0], self.output)
+@@ -254,8 +497,8 @@
+         self.assertTrue(gen.graph_context(self.output, self.chunks[0], 4000)["edges"])
+ 
+     def test_structural_failure_is_retained_and_blocks_discovery_success(self) -> None:
+-        self.fake_attempt("extract", {"test": "only structural failure path used"})
+-        plan = {**self.plan, "mode": "graphify", "upstream": {"root": "unused"}}
++        # Structural failure is independent of the optional extraction actor.
++        plan = {**self.plan, "mode": "graphify-ac", "upstream": {"root": "unused"}}
+         failed = {"nodes": [], "edges": [], "failed_sources": ["rules.md"], "extracted_sources": []}
+         modules = {"extract": SimpleNamespace(extract=lambda *args, **kwargs: failed)}
+         with patch.object(gen, "checkpoint", return_value=(plan, self.chunks)), patch.object(gen, "upstream_modules", return_value=modules):
+@@ -267,7 +510,7 @@
+     def test_wrong_chunk_custody_and_nonfinite_json_refuse(self) -> None:
+         attempt = self.fake_attempt("author", self.answer)
+         gen.save(attempt / "validation.json", {"answer_sha256": gen.sha((attempt / "answer.json").read_bytes()), "chunk_sha256": "0" * 64})
+-        with self.assertRaisesRegex(gen.GenerationError, "different source chunk"):
++        with self.assertRaisesRegex(gen.GenerationError, "different answer/chunk"):
+             gen.successful_attempt(self.output, "author", self.chunks[0])
+         bad = self.root / "nan.json"
+         bad.write_text('{"value":NaN}')
+--- preimage/build_tenants/graphify/test_env/test_ac_grounding.py
++++ after/build_tenants/graphify/test_env/test_ac_grounding.py
+@@ -99,6 +99,9 @@
+                   "answer_sha256": generation.sha((attempt / "answer.json").read_bytes()), "events_sha256": generation.sha((attempt / "events.jsonl").read_bytes()),
+                   "stderr_sha256": generation.sha((attempt / "stderr.txt").read_bytes()), "settings": settings, "cli_version": version, "usage_events": usage}
+         generation.save(attempt / "result.json", result)
++        if not failed and validation_error is None:
++            generation.save(attempt / "validation.json", {"status": "structurally_valid_proposal",
++                            "answer_sha256": result["answer_sha256"], "chunk_sha256": generation.digest(chunk)})
+         return attempt
+ 
+     def test_wrapped_indent_recovery_preserves_exact_words_and_boundaries(self) -> None:
+@@ -113,6 +116,42 @@
+         self.assertEqual(recovered["quote"], "Complete evidence.")
+         self.assertEqual(recovered["start_line"], 11)
+         self.assertEqual(witness["normalized_occurrence_count"], 1)
++
++    def test_offset_mapping_matches_splitlines_for_all_accepted_line_breaks(self) -> None:
++        for separator in ("\n", "\v", "\f", "\x1c", "\x1d", "\x1e", "\x85", "\u2028", "\u2029"):
++            with self.subTest(separator=repr(separator)):
++                source = "Heading" + separator + "Complete evidence.\n"
++                supplied = section(source)
++                recovered, witness = grounding.recover_anchor(misplaced("Complete evidence."), supplied)
++                self.assertEqual((recovered["start_line"], recovered["end_line"]), (11, 11))
++                self.assertEqual(recovered["section_id"], supplied["id"])
++                self.assertEqual(recovered["quote"], "Complete evidence.")
++                self.assertTrue(grounding.strict_anchor(recovered, supplied))
++                self.assertEqual(witness["normalized_occurrence_count"], 1)
++
++    def test_public_utf8_unicode_line_coordinates_preserve_nongrounding_payload(self) -> None:
++        for ordinal, separator in enumerate(("\n", "\u2028", "\u2029")):
++            with self.subTest(separator=repr(separator)):
++                source = "Heading" + separator + "Complete" + separator + "  evidence.\n"
++                (self.corpus / "unicode.md").write_text(source)
++                manifest = self.root / f"unicode-{ordinal}.json"
++                generation.save(manifest, {"subject_id": "repo://test/unicode/", "files": [{"path": "unicode.md", "sha256": generation.sha(source.encode())}]})
++                output = self.root / f"unicode-{ordinal}"
++                generation.prepare(self.corpus, manifest, output, "direct", None, 1000)
++                chunk = generation.load(output / "chunks.json")[0]
++                self.assertEqual("".join(s["text"] for s in chunk["segments"]), source)
++                raw = answer_for(chunk)
++                for _, _, ground in grounding.anchors(raw):
++                    ground.update(quote="Complete evidence.", start_line=500, end_line=500)
++                preserved = generation.canonical(grounding.nongrounding(raw))
++                derived, changes = grounding.normalize_answer(raw, chunk)
++                generation.author_check(derived, chunk)
++                self.assertEqual(generation.canonical(grounding.nongrounding(derived)), preserved)
++                self.assertEqual(len(changes), 2)
++                for _, _, ground in grounding.anchors(derived):
++                    self.assertEqual((ground["start_line"], ground["end_line"]), (2, 3))
++                    self.assertEqual(ground["section_id"], chunk["segments"][0]["id"])
++                    self.assertEqual(ground["quote"], "Complete" + separator + "  evidence.")
+ 
+     def test_lexical_word_boundary_case_and_punctuation_changes_refuse(self) -> None:
+         for quote, source in (("in valid", "invalid"), ("ab", "a b"), ("a b", "ab"), ("Evidence", "evidence"), ("Evidence!", "Evidence.")):
+@@ -160,6 +199,9 @@
+         raw["concepts"][0]["grounding"][0]["quote"] = raw["concepts"][0]["grounding"][0]["quote"].replace("\n  ", "\n")
+         attempt = self.actor(raw, failed=True)
+         original = {path.name: path.read_bytes() for path in attempt.iterdir() if path.is_file()}
++        self.assertIsNone(generation.successful_attempt(self.output, "author", self.chunk))
++        with self.assertRaisesRegex(generation.GenerationError, "missing validated F_P"):
++            generation.assemble(self.output)
+         result = grounding.normalize(self.output)
+         self.assertEqual(result["chunks"][0]["status"], "derived_validated")
+         self.assertEqual(result["new_fp_calls"], 0)
+@@ -175,6 +217,8 @@
+         self.assertEqual(assembled["status"], "proposed")
+         self.assertEqual(assembled["new_fp_calls"], 0)
+         self.assertFalse((self.output / "proposal").exists())
++        self.assertIsNone(generation.successful_attempt(self.output, "author", self.chunk))
++        self.assertEqual(generation.load(attempt / "result.json")["status"], "failed")
+ 
+     def test_clean_original_noop_and_stale_original_sha_refusal(self) -> None:
+         attempt = self.actor(self.answer)
+--- preimage/build_tenants/graphify/design/generation.md
++++ after/build_tenants/graphify/design/generation.md
+@@ -26,6 +26,12 @@
+ once in the chunk plan. Small sections and files pack together into bounded
+ chunks, default 120,000 Unicode characters. Prompt metadata and output consume
+ additional context; this is not a token-budget guarantee.
++
++The bounded fence recognizer retains its opening backtick or tilde marker and
++width. A closing fence uses the same marker at least that width, at most three
++leading spaces, and only spaces or tabs afterward. Shorter markers and apparent
++closers with content remain inside the example. Backtick opening info cannot
++contain a backtick. This section partitioner is not a full Markdown parser.
+ 
+ The generic workflow trusts the owner's explicit source selection. It cannot
+ recognize every possible historical model or generated answer disguised as prose;
+@@ -147,7 +153,16 @@
+ shape/source validation and configuration digest are retained per attempt. No
+ pricing or cached-token discount is inferred.
+ 
+-Stages are resumable. A validated unchanged successful chunk is reused. Failed
++Stages are resumable. A validated unchanged successful chunk is reused only after
++the shared actor-evidence gate rechecks the exact frozen source/chunk/code/assets,
++recomputed stage prompt, retained answer/result/invocation/events/stderr/usage,
++schema, settings, actual isolation argv and event item types. It reruns the
++stage's source validation: upstream semantic-fragment checks for extraction and
++`author_check` for authoring. A prompt's matching self-hash alone is insufficient.
++Only the latest attempt may be reused; a newer failed or unfinished attempt blocks
++an older success. Ordinary reuse requires completed status and strict validation;
++the optional grounding layer's narrow failed-draft eligibility does not make an
++original actor successful. Failed
+ or interrupted attempts remain in separate directories; another attempt requires
+ `--retry-failed`. In the two-pass alternative, a supplied source chunk missing
+ validated extraction blocks the discovery build. Both Graphify modes require
+--- preimage/build_tenants/graphify/design/grounding.md
++++ after/build_tenants/graphify/design/grounding.md
+@@ -27,6 +27,8 @@
+ 3. Map that unique occurrence back to its exact literal source substring and
+    original absolute line range. Record old/new fields, section digest, normalized
+    quote digest, normalized offsets, literal source offsets and uniqueness witness.
++   Offset mapping uses the same `splitlines(keepends=True)` convention as source
++   preparation and strict validation, including accepted Unicode line separators.
+ 4. Run the unchanged complete `author_check` against the derived draft. Any other
+    defect, including a misspelled or unknown section identity, refuses. An earlier
+    quote failure may have hidden later non-anchor defects; fixing the first error
+@@ -44,7 +46,9 @@
+ source manifest, chunk plan, generator, unchanged codec and generation assets.
+ Graphify treatments also recheck discovery graph and extraction custody.
+ 
+-Original actor eligibility requires retained answer, result, invocation, prompt,
++Original actor eligibility uses the same custody gate as ordinary generation
++reuse, with only the failed-draft eligibility below enabled for this layer.
++It requires retained answer, result, invocation, prompt,
+ event stream, stderr and usage. Their hashes must agree. The invocation must use
+ the pinned author schema, exactly the frozen chunk's recomputed `author_prompt`,
+ the frozen CLI version and settings, an ephemeral read-only empty workspace, all

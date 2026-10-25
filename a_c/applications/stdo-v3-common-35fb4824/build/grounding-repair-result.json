@@ -1,0 +1,239 @@
+{
+  "actual_invocations_including_initials": 20,
+  "actual_native_invocations": 2,
+  "aggregate_reported_usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 0,
+    "input_tokens": 227685,
+    "output_tokens": 2069,
+    "reasoning_output_tokens": 614
+  },
+  "calls_with_reported_usage": 2,
+  "calls_with_unknown_usage": 0,
+  "claims": "Only the two granted first grounding repair calls. All original failures and raw repair results retained. No second patch, author retry, normalization overwrite, assembly, final public receipt, semantic acceptance or release. Usage counters kept separately without a billing formula.",
+  "closed_at": "2026-10-20T10:05:48.888836+00:00",
+  "closed_records": 2,
+  "errors": [],
+  "guarded_existing_files_unchanged": 3913,
+  "phase_calls_authorized": 2,
+  "phase_elapsed_wall_seconds": 62.2135647078976,
+  "plan_sha256": "dbf91a1edeac3b735731a9307e32d761a7afd6e45057c8ae09d31be68529f295",
+  "profile": "ac.common.grounding-repair-result/1",
+  "records": [
+    {
+      "attempt": "grounding-repairs/chunk-cf22b253a1db7d64a8f8/attempt-001",
+      "chunk": "chunk-cf22b253a1db7d64a8f8",
+      "derived_answer_sha256": "6f3c2b10cc60d3c4ab5e9a04823c69bb1f123798b03878945b17455780218865",
+      "files": {
+        "actor/answer.json": {
+          "bytes": 951,
+          "sha256": "52bb1aec91bbb18280f49a6dc8bd0d7de6580bfe0b914b1af42e7628c7bed657"
+        },
+        "actor/events.jsonl": {
+          "bytes": 1341,
+          "sha256": "ef9d39bba833fd859b035af17437fabac812ad94f80d997a6db55cd165b981af"
+        },
+        "actor/invocation.json": {
+          "bytes": 3354,
+          "sha256": "758d0a0484f590cd7d00c38b5100b4fdadef623be9fd54663e9147b613acab15"
+        },
+        "actor/prompt.txt": {
+          "bytes": 346456,
+          "sha256": "f743899fdb8ad77bd6d74322d65dc02021056e9e0ed27f2670993f6de94d8fce"
+        },
+        "actor/result.json": {
+          "bytes": 879,
+          "sha256": "a2619fe4c4b45157c18828d20e64db3b65014d21df1f033e4aa107dedab2fe5c"
+        },
+        "actor/stderr.txt": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "actor/usage.json": {
+          "bytes": 277,
+          "sha256": "599acab59e063c42e17f58783bb7833a2dccf2b072ab9ce46bda83baa311555f"
+        },
+        "derived-answer.json": {
+          "bytes": 153012,
+          "sha256": "6f3c2b10cc60d3c4ab5e9a04823c69bb1f123798b03878945b17455780218865"
+        },
+        "journal.json": {
+          "bytes": 2862,
+          "sha256": "6eb7e7bf955e108ed3031b736be135cbf5d1421c6cc511f42be633c49080d603"
+        },
+        "parent-answer.json": {
+          "bytes": 152914,
+          "sha256": "c271c54a7ae0fc84574930bc274495f719fd77951c94424229005b82bef95703"
+        },
+        "patch.schema.json": {
+          "bytes": 6647,
+          "sha256": "2463073a02ffb8195108fb9afeb187d3858a304e1eff6d0168f71d16101b6da0"
+        },
+        "prompt.txt": {
+          "bytes": 346456,
+          "sha256": "f743899fdb8ad77bd6d74322d65dc02021056e9e0ed27f2670993f6de94d8fce"
+        },
+        "request.json": {
+          "bytes": 14456,
+          "sha256": "68fa5b1572b36254b870a378b66379a909832f8e1950784998962ea6b25c8df6"
+        }
+      },
+      "journal_sha256": "6eb7e7bf955e108ed3031b736be135cbf5d1421c6cc511f42be633c49080d603",
+      "raw_actor_result": {
+        "answer_sha256": "52bb1aec91bbb18280f49a6dc8bd0d7de6580bfe0b914b1af42e7628c7bed657",
+        "cli_exit_code": 0,
+        "cli_version": "codex-cli 0.162.1",
+        "elapsed_seconds": 26.228517499985173,
+        "events_sha256": "ef9d39bba833fd859b035af17437fabac812ad94f80d997a6db55cd165b981af",
+        "failures": [],
+        "profile": "ac.generation.actor-result/1",
+        "schema_errors": [],
+        "settings": {
+          "model": "gpt-6-astra",
+          "model_reasoning_effort": "high",
+          "service_tier": "default"
+        },
+        "status": "completed",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "timed_out": false,
+        "unexpected_item_types": [],
+        "usage_events": [
+          {
+            "cache_write_input_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 99849,
+            "output_tokens": 369,
+            "reasoning_output_tokens": 133
+          }
+        ],
+        "user_config_unchanged": true
+      },
+      "remaining_invalid_anchor_count": 0,
+      "request_sha256": "68fa5b1572b36254b870a378b66379a909832f8e1950784998962ea6b25c8df6",
+      "status": "complete_patch",
+      "usage_events": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 0,
+          "input_tokens": 99849,
+          "output_tokens": 369,
+          "reasoning_output_tokens": 133
+        }
+      ],
+      "verification": "reverified_complete"
+    },
+    {
+      "attempt": "grounding-repairs/chunk-e1247fa9e1eb5dbd49cd/attempt-001",
+      "chunk": "chunk-e1247fa9e1eb5dbd49cd",
+      "derived_answer_sha256": "776875a26da6a8288b32014e172d35183adb3b11a7e2d5a4f6054e28ebc1b0cb",
+      "files": {
+        "actor/answer.json": {
+          "bytes": 5319,
+          "sha256": "5e5138e3d4bb6fe3f3d9cf6ebff176d46935bedfe6eb3ff09c60df4588d0e76b"
+        },
+        "actor/events.jsonl": {
+          "bytes": 5826,
+          "sha256": "32f8aa4628d00a5b2e2f66e71071395e40b5b3b28cd9eda547cffcad38003bea"
+        },
+        "actor/invocation.json": {
+          "bytes": 3354,
+          "sha256": "3fd9748b64c6930ff42ef4197468564e906161cd570f90d48c0917d8f898e8f0"
+        },
+        "actor/prompt.txt": {
+          "bytes": 463648,
+          "sha256": "c059a3f1f54f9eb8b82798c26e3c8af654d3614d5a54e6c0d0b0822c41c3d9c6"
+        },
+        "actor/result.json": {
+          "bytes": 880,
+          "sha256": "2f08782e003a523652b0b384556f633651d88c5d8d83cf106ffd18567bbe97cc"
+        },
+        "actor/stderr.txt": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "actor/usage.json": {
+          "bytes": 279,
+          "sha256": "d742061c48319deb2dd85895bc2a079cdaeb4f2f7d0ae7789ea8728eab831a53"
+        },
+        "derived-answer.json": {
+          "bytes": 258621,
+          "sha256": "776875a26da6a8288b32014e172d35183adb3b11a7e2d5a4f6054e28ebc1b0cb"
+        },
+        "journal.json": {
+          "bytes": 2864,
+          "sha256": "e9e9688de3c56ffaad906491da06ffe2d42ae821e2b6f21dbeef05463786ffef"
+        },
+        "parent-answer.json": {
+          "bytes": 256238,
+          "sha256": "3cec78fd546738e8d3260297267ba13d197795ba2474d1d19d4db50cb3db5403"
+        },
+        "patch.schema.json": {
+          "bytes": 10256,
+          "sha256": "996d15cf0fea8a94b6ce72f5e2183f797f1d471cb32cc7cc93d8b02e7b2356ef"
+        },
+        "prompt.txt": {
+          "bytes": 463648,
+          "sha256": "c059a3f1f54f9eb8b82798c26e3c8af654d3614d5a54e6c0d0b0822c41c3d9c6"
+        },
+        "request.json": {
+          "bytes": 24470,
+          "sha256": "86e5ceed3d08486a9eff7bc864d2e92c1d9ff471c3d5d0c7c0307ac17067366a"
+        }
+      },
+      "journal_sha256": "e9e9688de3c56ffaad906491da06ffe2d42ae821e2b6f21dbeef05463786ffef",
+      "raw_actor_result": {
+        "answer_sha256": "5e5138e3d4bb6fe3f3d9cf6ebff176d46935bedfe6eb3ff09c60df4588d0e76b",
+        "cli_exit_code": 0,
+        "cli_version": "codex-cli 0.162.1",
+        "elapsed_seconds": 58.70010016695596,
+        "events_sha256": "32f8aa4628d00a5b2e2f66e71071395e40b5b3b28cd9eda547cffcad38003bea",
+        "failures": [],
+        "profile": "ac.generation.actor-result/1",
+        "schema_errors": [],
+        "settings": {
+          "model": "gpt-6-astra",
+          "model_reasoning_effort": "high",
+          "service_tier": "default"
+        },
+        "status": "completed",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "timed_out": false,
+        "unexpected_item_types": [],
+        "usage_events": [
+          {
+            "cache_write_input_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 127836,
+            "output_tokens": 1700,
+            "reasoning_output_tokens": 481
+          }
+        ],
+        "user_config_unchanged": true
+      },
+      "remaining_invalid_anchor_count": 0,
+      "request_sha256": "86e5ceed3d08486a9eff7bc864d2e92c1d9ff471c3d5d0c7c0307ac17067366a",
+      "status": "complete_patch",
+      "usage_events": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 0,
+          "input_tokens": 127836,
+          "output_tokens": 1700,
+          "reasoning_output_tokens": 481
+        }
+      ],
+      "verification": "reverified_complete"
+    }
+  ],
+  "reservations": 2,
+  "script_sha256": "9c4d5d7501b2c197f2b7a76a29def9aee5d08ab8ee024f67bd15273f4ff6e7dc",
+  "source_guard_after": {
+    "created_at": "2026-10-20T10:05:48.139963+00:00",
+    "implementation_manifest_sha256": "594fafcf083eadbbaf1472d68fe9f375fc21ccb426c6825194793304eac2503e",
+    "package_members": 81,
+    "semantic_members": 58,
+    "source_manifest_sha256": "dbf32e7f99eb7228ca361ec02f44227c05e02bb6bc447d1dd38255cd3ca4a4d4",
+    "status": "exact"
+  },
+  "summed_actor_elapsed_seconds": 84.92861766694114
+}

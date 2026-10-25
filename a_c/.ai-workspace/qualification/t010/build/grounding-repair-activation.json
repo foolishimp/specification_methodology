@@ -1,0 +1,85 @@
+{
+  "actor": "/root/common_rep_build_plan",
+  "created_at": "2026-10-20T10:02:34.256720+00:00",
+  "diagnostic_closure_sha256": "4262726dc5ecc3e815d399f2010b66d2526f34c827ebf1f77cc40ded395ac9c1",
+  "diagnostics_sha256": "b98566e5b3b5274415cfe651186d4ed98eb869b1775dd5f1c1f12f8ce71f67c9",
+  "exact_original_parents": {
+    "chunk-cf22b253a1db7d64a8f8": {
+      "bytes": 149532,
+      "sha256": "50926f48dfa8425f7738415138945be9b4718685be6ae466e12e8565971313d2"
+    },
+    "chunk-e1247fa9e1eb5dbd49cd": {
+      "bytes": 250418,
+      "sha256": "6ea500ee1e763b5bf6a59915f16bca6d864fd78766b134139e2cbd691ad0d5c1"
+    }
+  },
+  "excluded_effects": [
+    "implicit second patch",
+    "author retry",
+    "normalization overwrite",
+    "assembly",
+    "model",
+    "final public receipt",
+    "source or metadata edits",
+    "WHAT or original code edits",
+    "Git mutation",
+    "global configuration edits"
+  ],
+  "executive": "/root",
+  "guarded_existing_files_unchanged": 3913,
+  "inputs": "Exact original parent, exact original source chunk, actual Graphify cues and mechanical invalid-anchor diagnostics only; no private oracle or review answers.",
+  "native_grant": {
+    "actual_invocations_after_both_execute": 20,
+    "author_retry_selection": "none selected or needed before these reservations",
+    "cli_version": "codex-cli 0.162.1",
+    "codex": "/Users/jim/bin/codex",
+    "exact_chunk_ids": [
+      "chunk-cf22b253a1db7d64a8f8",
+      "chunk-e1247fa9e1eb5dbd49cd"
+    ],
+    "initial_authors_closed": 18,
+    "jobs": 2,
+    "overall_limit": 54,
+    "prepare_reservations": 2,
+    "repair_calls": 2,
+    "settings": {
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "service_tier": "default"
+    },
+    "shared_limit_per_chunk": 3,
+    "timeout_seconds": 1800
+  },
+  "original_implementation_manifest_sha256": "594fafcf083eadbbaf1472d68fe9f375fc21ccb426c6825194793304eac2503e",
+  "outcome": "Freeze two byte-exact reviewed repair assets separately, then one unchanged grounding F_P repair per exact remaining chunk; retain all outcomes and usage without assembly.",
+  "profile": "ac.common.grounding-repair-activation/1",
+  "role": "Worker",
+  "source_guard": {
+    "created_at": "2026-10-20T10:02:32.989566+00:00",
+    "implementation_manifest_sha256": "594fafcf083eadbbaf1472d68fe9f375fc21ccb426c6825194793304eac2503e",
+    "package_members": 81,
+    "semantic_members": 58,
+    "source_manifest_sha256": "dbf32e7f99eb7228ca361ec02f44227c05e02bb6bc447d1dd38255cd3ca4a4d4",
+    "status": "exact"
+  },
+  "source_manifest_sha256": "dbf32e7f99eb7228ca361ec02f44227c05e02bb6bc447d1dd38255cd3ca4a4d4",
+  "supplemental_assets": {
+    "patch.schema.json": {
+      "bytes": 2037,
+      "sha256": "65c58364a33a31d25fb2de16e50fc1f92bf2eb30307ebb42eb0f7a60ecb58b76"
+    },
+    "repair.txt": {
+      "bytes": 2231,
+      "sha256": "304752f5d5359364f6b34a2cf1f16b1a9da3c786bcb3baba12364fa7ba4b0d7e"
+    }
+  },
+  "triage": "Existing HOW applied to this exact frozen application; no Product, method, schema or meaning-field implementation change. Added dependency only, preserving original9snapshotmanifest.",
+  "writes": [
+    "applications/stdo-v3-common-35fb4824/build/**",
+    "applications/stdo-v3-common-35fb4824/run/**",
+    "applications/stdo-v3-common-35fb4824/build_common.py",
+    "applications/stdo-v3-common-35fb4824/BUILD.md",
+    ".ai-workspace/qualification/t010/build/**",
+    "own ac-common-build-* temp territory"
+  ]
+}

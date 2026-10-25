@@ -1,0 +1,431 @@
+{
+  "actor_settings": {
+    "cli_version": "codex-cli 0.162.1",
+    "settings": {
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "service_tier": "default"
+    }
+  },
+  "budget_before_reservation": [
+    {
+      "attempt": "actors/author/chunk-e1247fa9e1eb5dbd49cd/attempt-001",
+      "family": "author",
+      "invocation_recorded": true
+    }
+  ],
+  "budget_limit": 3,
+  "chunk": "chunk-e1247fa9e1eb5dbd49cd",
+  "claim": "New F_P evidence-selection proposal with invariant non-grounding statement bytes; semantic equivalence and acceptance unassessed.",
+  "code_pins": {
+    "asset:patch.schema.json": "65c58364a33a31d25fb2de16e50fc1f92bf2eb30307ebb42eb0f7a60ecb58b76",
+    "asset:repair.txt": "304752f5d5359364f6b34a2cf1f16b1a9da3c786bcb3baba12364fa7ba4b0d7e",
+    "codec": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+    "generator": "fcb946e180ba8a30ecdfdb9e53044cd142d9bd450464c186dfbbe90e9da5ec93",
+    "grounding": "f850e7ceecd945455891e6cc941fc3a86c943ed27bbe74d86b0248169d9cf682",
+    "repair": "5be5e738f12006dcb17066ccfb60d22e65e5929a8a9a96d52ee5c0a19efda928"
+  },
+  "invalid_grounding_entries": [
+    {
+      "diagnostic": "quote is not exact at the supplied range or line range is invalid",
+      "family": "constraints",
+      "grounding": {
+        "end_line": 1654,
+        "quote": "a candidate is available, how each assessment of it came out, and the\ndecision owner's disposition (`accept`, `local_repair`, `re_enter` or\n`reject`) are separate results, so a candidate that is available or\nassessed is not thereby accepted (P6). The selected computational relations\nare drawn from the computational calculus of the tenant doing the work;\nthe actors, tools and processes that carry out the step belong to that\ntenant's execution environment, and the step's time, spend and other\nresource limits are those of its execution binding (§11). The\ndeclared work boundary of a probabilistic unit is FOUNDATIONS §2 (work\nboundary) and §3 (P0); the complete enclosing-relation admission of a\nmaterial transition and its standing structural qualification are\nACTIVATION §4; proportionality is ACTIVATION §6. This member binds the\ngeneric terms to its own: the selected outcome of a step is the product\noutcome, prerequisite or experiment of §3; the owning relations are the\nchain's layers; the re-entry conditions are the change classes of §4.",
+        "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F8.%20Bounded%20execution%20in%20this%20method",
+        "start_line": 1640
+      },
+      "grounding_index": 0,
+      "record_key": "execution_result_and_configuration",
+      "record_ordinal": 44
+    },
+    {
+      "diagnostic": "quote is not exact at the supplied range or line range is invalid",
+      "family": "residuals",
+      "grounding": {
+        "end_line": 1636,
+        "quote": "the\nconstruction relation that the step serves, from the bound current state\nto the destination through a selected strategy, feedback and the distinct\nclaims of preservation, progress and completion, is\n[ACTIVATION §1 Construction relation](ACTIVATION.md#construction-relation);\nthis member applies it to delivery and correction (§4) and states no\nsecond relation (P6).",
+        "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F8.%20Bounded%20execution%20in%20this%20method",
+        "start_line": 1630
+      },
+      "grounding_index": 0,
+      "record_key": "bounded_execution_external_semantics",
+      "record_ordinal": 7
+    }
+  ],
+  "mode": "graphify-ac",
+  "parent": {
+    "kind": "author",
+    "path": "actors/author/chunk-e1247fa9e1eb5dbd49cd/attempt-001"
+  },
+  "parent_answer_sha256": "3cec78fd546738e8d3260297267ba13d197795ba2474d1d19d4db50cb3db5403",
+  "parent_proof": {
+    "evidence": {
+      "chunk_sha256": "af098e31da880e83c41af76bae9293d50b378f6c3b3209cbde04f2c930a85f6f",
+      "original_attempt": "actors/author/chunk-e1247fa9e1eb5dbd49cd/attempt-001",
+      "original_recorded_failure": "record[execution_result_and_configuration]/grounding/0: grounding quote is not exact source at declared range",
+      "original_status": "failed",
+      "original_strict_validation_error": "record[execution_result_and_configuration]/grounding/0: grounding quote is not exact source at declared range",
+      "original_usage_events": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 73088,
+          "input_tokens": 73309,
+          "output_tokens": 57761,
+          "reasoning_output_tokens": 849
+        }
+      ],
+      "pins": {
+        "actor-settings.json": "f3b748facc38547ccdceeb05350b9e75b9afb8e30b009a63f916ea374f7e40ed",
+        "actors/author/chunk-e1247fa9e1eb5dbd49cd/attempt-001/answer.json": "6ea500ee1e763b5bf6a59915f16bca6d864fd78766b134139e2cbd691ad0d5c1",
+        "actors/author/chunk-e1247fa9e1eb5dbd49cd/attempt-001/events.jsonl": "d0019bc683aaa1a385cd820d42bb54dba1da058c46caeede8d73c40e097433dc",
+        "actors/author/chunk-e1247fa9e1eb5dbd49cd/attempt-001/invocation.json": "0428a828aaf401fc09f3b1f6c8e112101360cf267742312a7e6895e00793dbe2",
+        "actors/author/chunk-e1247fa9e1eb5dbd49cd/attempt-001/prompt.txt": "932ba269ef6a260ab496925c5f894a6473baafeca380793ce7d9f3021e6c2f67",
+        "actors/author/chunk-e1247fa9e1eb5dbd49cd/attempt-001/result.json": "a1bad81b7b431e84b0bc79922b66f34d306aeb72f640d66a1292627041ef94dd",
+        "actors/author/chunk-e1247fa9e1eb5dbd49cd/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actors/author/chunk-e1247fa9e1eb5dbd49cd/attempt-001/usage.json": "19b311c1c1f9665ee63dbf43dfdb0a9122d8ad6123ba29d4f8e96e1d64085f25",
+        "chunks.json": "2ce228fa4f647bcb275ff6653aff1a20eca792c93037f9d7959080668129d073",
+        "plan.json": "31a88bb55aa025cb95ba4f7710bd8559b5e0e5f4976b55388cdac1e1cf8337cf",
+        "source-manifest.json": "dbf32e7f99eb7228ca361ec02f44227c05e02bb6bc447d1dd38255cd3ca4a4d4"
+      },
+      "source_sections": [
+        {
+          "end_line": 300,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FManifesto",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "ccc62bd0e9c758aeddcfaa97c1f822700ff507bb6b91975bfd961514f657b4b5",
+          "start_line": 274
+        },
+        {
+          "end_line": 330,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FSpec-drivenness%20litmus",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "383ae41c8d382c36894f0b67d1f404fb71de15a997c24e3e0dc4efa4a117f66e",
+          "start_line": 301
+        },
+        {
+          "end_line": 372,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FReconstruction%20litmus",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "3f0f348cbda89c5455a918ab7d17c96ed68f563dde48439d26ddf215cc23c90f",
+          "start_line": 331
+        },
+        {
+          "end_line": 403,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRenewal%20path",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "a847c8a57484bab91b0f8735bdf4fa3779056b0971571bc4dfb80e17c633e0d5",
+          "start_line": 373
+        },
+        {
+          "end_line": 442,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FSpecification%20surface%20rule",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "b3d07d9d084d25ef1750b67c280d9d8e3622bf036953cc4f293243f0e0cb7b1a",
+          "start_line": 404
+        },
+        {
+          "end_line": 460,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FDesign%20rule",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "321b155dbfe652814989c522a46b9a6c1528b1c8720e3669eaa2de65861ce3c9",
+          "start_line": 443
+        },
+        {
+          "end_line": 480,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRealisation%20shape",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "9a602118a8eb970fb44b777d7b1abd84b21f33062d36f46a6bf10360c7ad98c6",
+          "start_line": 461
+        },
+        {
+          "end_line": 561,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRequirement%20categories%20and%20classification",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "822d078f249debcebeb2978a6dccc8730fa900a885ecfe48d84f9b4e9d6dc492",
+          "start_line": 481
+        },
+        {
+          "end_line": 602,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FTrace%20closure%20and%20anti-drift",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "73f9d087688cad52803bf8933e4d274e545b1e1070f13831f86be3a3ab368b1b",
+          "start_line": 562
+        },
+        {
+          "end_line": 619,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FLive%20surface%20immutability",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "dfcabe06ab3ba2c33c2d8bc3acc05ba2cdd81561fe4fb4c9193d2e1d724fdd86",
+          "start_line": 603
+        },
+        {
+          "end_line": 664,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FOperational%20lifecycle%20sufficiency",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "41623a868cddedba916174ad6df1395940dca75a55cb0f1093726f3a2b5dd40c",
+          "start_line": 620
+        },
+        {
+          "end_line": 753,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F3.%20Outcome%20conservation",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "25d09cefb3754e106d993c903b27ad6f8cfc333e00f0a06e52717d116cd5b800",
+          "start_line": 665
+        },
+        {
+          "end_line": 766,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F4.%20Change%20management",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "f8d36022a12602366a16d96c78a76e0055065480a4c9b88c77d02fd352df7a06",
+          "start_line": 754
+        },
+        {
+          "end_line": 818,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F4.%20Change%20management%2FFoundation%20to%20law%3A%20change%20management%20and%20ambiguity",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "24337771c49a559cf68a9fd66e815526d6a6661096fde8de0ef24b4b30b4dcbf",
+          "start_line": 767
+        },
+        {
+          "end_line": 868,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F4.%20Change%20management%2FUniversal%20intake%20triage",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "5480c03634199e3b927b318ed7bd37363623e8b4132145e53e504bb85a716714",
+          "start_line": 819
+        },
+        {
+          "end_line": 902,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F4.%20Change%20management%2FChange%20classes",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "73ada264eedd52f976c5150c442b98aeb507843c496b4134696a0a49650007bb",
+          "start_line": 869
+        },
+        {
+          "end_line": 1009,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F4.%20Change%20management%2FComputed%20classification%20and%20treatment",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "1f58255b88c6279030839a4c8ecdb0f6fd3bb39eb493c0d119fec08ca2e8f09e",
+          "start_line": 903
+        },
+        {
+          "end_line": 1040,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F4.%20Change%20management%2FConsistency%20gate",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "32e37858bd414b65f4db82db8280b20db1fe01d34886beb8292ca9747028bc08",
+          "start_line": 1010
+        },
+        {
+          "end_line": 1085,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F4.%20Change%20management%2FSprint%20execution%20boundary",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "2e28773cb115d7039c1259ffdeb03d064cd4e6d623c1dddefa17de1f2c8fe9cd",
+          "start_line": 1041
+        },
+        {
+          "end_line": 1097,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F4.%20Change%20management%2FCarriers",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "06e6d109f9964e8438e961bdaf8e0582aa223d6067c81184886958baf0f40b56",
+          "start_line": 1086
+        },
+        {
+          "end_line": 1171,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F4.%20Change%20management%2FProcedures",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "30ada55cfb59e61472d2a5380ef9d6c1f07976adddd8075112ec9745a4a011ab",
+          "start_line": 1098
+        },
+        {
+          "end_line": 1239,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F5.%20Ambiguity%20governance%20and%20lifecycle",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "a57045ddc644798bf7eeb532737e335e6324bc143da5bd62155fcce3f1e2b763",
+          "start_line": 1172
+        },
+        {
+          "end_line": 1280,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F6.%20Lineage%20and%20release",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "b0cabd52f9b9df3fb57ec82514fd5b5145e82b58c68f9846538092ab6fd9bbcd",
+          "start_line": 1240
+        },
+        {
+          "end_line": 1305,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F6.%20Lineage%20and%20release%2FShared%20method%20adoption%20and%20propagation%20%28STDO-UP-012%29",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "73c04a92925bf1f678a071ccf01567f361add2462a362eb27307162c24cd14f1",
+          "start_line": 1281
+        },
+        {
+          "end_line": 1307,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F7.%20Migration",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "cc5dae01b654a99ec1dd1076282b692a300c2f37209ef326fda79c5b76344a67",
+          "start_line": 1306
+        },
+        {
+          "end_line": 1329,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F7.%20Migration%2FCore%20interface%20migration",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "43a6d92837d528be3dfe475aed9b7653b5b291fac00f57618d03ebe2d542050a",
+          "start_line": 1308
+        },
+        {
+          "end_line": 1400,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F7.%20Migration%2FConstitutional%20migration%20options",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "462c07db9c6855f6e08e2bd597a4b892e388792df6d169e7d48afa2a6315c3ec",
+          "start_line": 1330
+        },
+        {
+          "end_line": 1409,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F7.%20Migration%2FWhat%20counts%20as%20a%20core%20interface",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "d02f23cc14ad73379988b3eea2c23066ddd8ec38dfe89e94a608642df4d1e539",
+          "start_line": 1401
+        },
+        {
+          "end_line": 1423,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F7.%20Migration%2FRequired%20migration%20protocol",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "5b5709d670c8464ef0259897337d86da53295748eac720351ed1876e479a514c",
+          "start_line": 1410
+        },
+        {
+          "end_line": 1436,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F7.%20Migration%2FBridge%20prohibition",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "03e255a9bf3fab0c67bc42183fdf76048826ff37c19a371322f81cbd69be2762",
+          "start_line": 1424
+        },
+        {
+          "end_line": 1447,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F7.%20Migration%2FProjection%20discipline",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "a9de0d6f4d16bc87ac2ae590bfd7f51d611d00277451825db9757750032882ba",
+          "start_line": 1437
+        },
+        {
+          "end_line": 1464,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F7.%20Migration%2FInside-out%20first%20sequencing",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "b607c894cfcb64cd238359fed5805d5c33ec9c34665cd978529967b046791b62",
+          "start_line": 1448
+        },
+        {
+          "end_line": 1484,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F7.%20Migration%2FHard-break%20discipline",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "befd78c873f4b3baa03b2cf31daeb607ac587a11b64837386ca88dd009d223bf",
+          "start_line": 1465
+        },
+        {
+          "end_line": 1496,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F7.%20Migration%2FProof-last%20rule",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "eb78e2ed06aa7f552a6991972e58488d9d48d85339d12ade23534ee8078bc1b7",
+          "start_line": 1485
+        },
+        {
+          "end_line": 1523,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F7.%20Migration%2FClosure%20criterion",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "b79f1e5a4f7026f9791bc7c9e24056b8791250c57e97dd497c5ec57637f4065b",
+          "start_line": 1497
+        },
+        {
+          "end_line": 1595,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F7.%20Migration%2FFundamental%20migration",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "34fcc7320b1a1e90f6056b5e309b1f25b8087694fd76b8c4442924a35078c8c8",
+          "start_line": 1524
+        },
+        {
+          "end_line": 1620,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F7.%20Migration%2FTransformation%20wave",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "7d6691abf3c14b34ba8fc21d5c6ddc32eb9cd18295d52d4c143c519f8d4d41f6",
+          "start_line": 1596
+        },
+        {
+          "end_line": 1689,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F8.%20Bounded%20execution%20in%20this%20method",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "e85805240b6ccb39748e84780def9db8f081e100e4fe25cca59fe554d6f55857",
+          "start_line": 1621
+        },
+        {
+          "end_line": 1706,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F9.%20Evidence",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "77116f51e4323d35393442413868f8c17bf83a9ccfe0af1f22bcfe04d31f77f5",
+          "start_line": 1690
+        },
+        {
+          "end_line": 1754,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F10.%20Design%20records",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "ff8c0d24ed41fab3388b55debf7259be8c4ec0c500aeda570692bb6856534dfe",
+          "start_line": 1707
+        },
+        {
+          "end_line": 1947,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F11.%20Build-tenant%20binding",
+          "path": "standards/SPEC_METHOD.md",
+          "sha256": "7169c31230591913552c9c71d65da3e2a15be1cf976379c04788efe1e08f3436",
+          "start_line": 1755
+        },
+        {
+          "end_line": 26,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS",
+          "path": "standards/TICKETS.md",
+          "sha256": "851f0cb40cd11e8d95a16faac69587d1586d2df68fce7118ada560b168189473",
+          "start_line": 1
+        },
+        {
+          "end_line": 28,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F1.%20Work%20carriers",
+          "path": "standards/TICKETS.md",
+          "sha256": "a0451b5b44e91cdea9e1234b8f9e82d52867e1210ab12ed045835d2b9572c0a3",
+          "start_line": 27
+        },
+        {
+          "end_line": 36,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F1.%20Work%20carriers%2FGoals",
+          "path": "standards/TICKETS.md",
+          "sha256": "c8ae39729971c06153cecf2da2066e65de2ef74c9c6402c2f5c0531ad7faf68a",
+          "start_line": 29
+        },
+        {
+          "end_line": 44,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F1.%20Work%20carriers%2FTicket%20records",
+          "path": "standards/TICKETS.md",
+          "sha256": "3aa3e0f935cd4290f1d96d90578065a1333d5540a510822113381fc372e465b4",
+          "start_line": 37
+        },
+        {
+          "end_line": 63,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F1.%20Work%20carriers%2FSprints",
+          "path": "standards/TICKETS.md",
+          "sha256": "a36054307ba0e05eece8b05e96e3af199b8eb23fd755f9b0b5110277bf8e2f78",
+          "start_line": 45
+        },
+        {
+          "end_line": 75,
+          "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F1.%20Work%20carriers%2FComments",
+          "path": "standards/TICKETS.md",
+          "sha256": "357389984abe6ab4f29a6ff95804f9bb71fe047b1ec7269f0894d95ca6ed4cd3",
+          "start_line": 64
+        }
+      ]
+    },
+    "kind": "author",
+    "path": "actors/author/chunk-e1247fa9e1eb5dbd49cd/attempt-001"
+  },
+  "profile": "a_c.grounding.f-p-repair/1",
+  "prompt_sha256": "c059a3f1f54f9eb8b82798c26e3c8af654d3614d5a54e6c0d0b0822c41c3d9c6",
+  "schema_sha256": "996d15cf0fea8a94b6ce72f5e2183f797f1d471cb32cc7cc93d8b02e7b2356ef",
+  "source_chunk_sha256": "af098e31da880e83c41af76bae9293d50b378f6c3b3209cbde04f2c930a85f6f",
+  "source_plan_sha256": "31a88bb55aa025cb95ba4f7710bd8559b5e0e5f4976b55388cdac1e1cf8337cf"
+}

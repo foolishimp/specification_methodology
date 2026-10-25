@@ -1,0 +1,125 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "decision": {
+      "enum": [
+        "patch",
+        "refuse"
+      ],
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "patches": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "family": {
+            "enum": [
+              "concepts",
+              "relations",
+              "constraints",
+              "latitude",
+              "residuals"
+            ],
+            "type": "string"
+          },
+          "grounding_index": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "reason": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "record_key": {
+            "enum": [
+              "portable_required_closure"
+            ],
+            "minLength": 1,
+            "type": "string"
+          },
+          "replacement": {
+            "additionalProperties": false,
+            "properties": {
+              "end_line": {
+                "minimum": 1,
+                "type": "integer"
+              },
+              "quote": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "section_id": {
+                "enum": [
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FRoles%20and%20delegation",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope%2FStaleness%20of%20derived%20surfaces",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FAdmission%20and%20activation",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FConstruction%20availability",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FDisposition",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FAmbiguity%20outcome",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FEffects",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement%2FRefinement",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement%2FComplete%20enclosing-relation%20admission",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement%2FStanding%20structural%20qualification",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F5.%20Work%20state%20and%20restart",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F5.%20Work%20state%20and%20restart%2FThe%20workspace%20and%20an%20actor%27s%20account",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F6.%20Cost%20and%20proportionality",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F6.%20Cost%20and%20proportionality%2FResource%20limits",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F7.%20Closed%20result%20and%20reuse",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F7.%20Closed%20result%20and%20reuse%2FTransition%20evidence",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers%2FFoundation%20to%20law%3A%20assurance%20and%20testing",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy%2FFixture%20and%20proof%20portability",
+                  "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F3.%20Test%20authority"
+                ],
+                "minLength": 1,
+                "type": "string"
+              },
+              "start_line": {
+                "minimum": 1,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "section_id",
+              "quote",
+              "start_line",
+              "end_line"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "family",
+          "record_key",
+          "grounding_index",
+          "replacement",
+          "reason"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "refusal_reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "decision",
+    "patches",
+    "refusal_reason",
+    "limitations"
+  ],
+  "type": "object"
+}

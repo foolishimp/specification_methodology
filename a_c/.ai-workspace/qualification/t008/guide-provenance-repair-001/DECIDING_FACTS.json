@@ -1,0 +1,487 @@
+{
+  "schema": "a_c.guide-provenance-facts/1",
+  "authority": "Root selected deciding facts plus restricted protected public-operation/process/capture/check reads",
+  "Root_reported_actual_client_calls": {
+    "total": 22,
+    "source.read": 17,
+    "tools.describe": 3,
+    "workspace.observe": 1,
+    "work.write": 1
+  },
+  "retained_OperationEvidence_rows": 21,
+  "retained_rows_do_not_replace_actual_client_call_population": true,
+  "public_operation_metadata": [
+    {
+      "id": "w001-describe-all",
+      "operation": "tools.describe",
+      "source": null,
+      "encoding": null,
+      "status": "ok",
+      "evidence": {
+        "path": "a_c/.ai-workspace/qualification/t008/live/evidence/objects/6ac36f854b68e2011164012467d6cefdc1f6429483ca1b1092f2822d1b9a0e2a.json",
+        "raw_sha256": "6ac36f854b68e2011164012467d6cefdc1f6429483ca1b1092f2822d1b9a0e2a",
+        "canonical_envelope_sha256": "6ac36f854b68e2011164012467d6cefdc1f6429483ca1b1092f2822d1b9a0e2a"
+      }
+    },
+    {
+      "id": "w002-read-task",
+      "operation": "source.read",
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": ".ai-workspace/qualification/t008/live-binding-001/TASK.md",
+        "root": "product",
+        "selector": null,
+        "sha256": "6d777ece58832ec57185f47cbe69f714222329e600b3a190acac63d7d744fff2"
+      },
+      "encoding": "utf8",
+      "status": "ok",
+      "evidence": {
+        "path": "a_c/.ai-workspace/qualification/t008/live/evidence/objects/9f883759de6c4500b9c93f58d73d2c0d69976c026eb71dc1a6c15d35a8dfebae.json",
+        "raw_sha256": "9f883759de6c4500b9c93f58d73d2c0d69976c026eb71dc1a6c15d35a8dfebae",
+        "canonical_envelope_sha256": "9f883759de6c4500b9c93f58d73d2c0d69976c026eb71dc1a6c15d35a8dfebae"
+      }
+    },
+    {
+      "id": "w003-read-instructions",
+      "operation": "source.read",
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "worker-instructions.md",
+        "root": "runtime",
+        "selector": null,
+        "sha256": "66bb45f919bc4f9ead81076a4acafbc2d2a46566df73c89f43147967eb5cc4b4"
+      },
+      "encoding": "utf8",
+      "status": "ok",
+      "evidence": {
+        "path": "a_c/.ai-workspace/qualification/t008/live/evidence/objects/03b444eeb6e586727262a7b4dd636467f4b3109b5d901bd40c179a8b54a996f4.json",
+        "raw_sha256": "03b444eeb6e586727262a7b4dd636467f4b3109b5d901bd40c179a8b54a996f4",
+        "canonical_envelope_sha256": "03b444eeb6e586727262a7b4dd636467f4b3109b5d901bd40c179a8b54a996f4"
+      }
+    },
+    {
+      "id": "w004-read-grant",
+      "operation": "source.read",
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "GRANT.md",
+        "root": "runtime",
+        "selector": null,
+        "sha256": "bc26d713a2f162e61aaf96011f0931fa6d9b1656e21c611e6c4f23265f5b3ac8"
+      },
+      "encoding": "utf8",
+      "status": "ok",
+      "evidence": {
+        "path": "a_c/.ai-workspace/qualification/t008/live/evidence/objects/6d499952ed0975cdb64967789ba4fd7f8de6c08860d42588613701aaa0a9603e.json",
+        "raw_sha256": "6d499952ed0975cdb64967789ba4fd7f8de6c08860d42588613701aaa0a9603e",
+        "canonical_envelope_sha256": "6d499952ed0975cdb64967789ba4fd7f8de6c08860d42588613701aaa0a9603e"
+      }
+    },
+    {
+      "id": "w005-read-return-contract",
+      "operation": "source.read",
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "worker-return-contract.json",
+        "root": "runtime",
+        "selector": null,
+        "sha256": "b548d16766a3486cc98a6cb7e8990c2824153d72bfc58cbb7e8003c626c3dcd7"
+      },
+      "encoding": "utf8",
+      "status": "ok",
+      "evidence": {
+        "path": "a_c/.ai-workspace/qualification/t008/live/evidence/objects/42e9f52846d4b316558bfeafdbedb059a9af573ee05fa52f56e0b5df9efe4131.json",
+        "raw_sha256": "42e9f52846d4b316558bfeafdbedb059a9af573ee05fa52f56e0b5df9efe4131",
+        "canonical_envelope_sha256": "42e9f52846d4b316558bfeafdbedb059a9af573ee05fa52f56e0b5df9efe4131"
+      }
+    },
+    {
+      "id": "w006-describe-work-write",
+      "operation": "tools.describe",
+      "source": null,
+      "encoding": null,
+      "status": "ok",
+      "evidence": {
+        "path": "a_c/.ai-workspace/qualification/t008/live/evidence/objects/bac9562e6716fc1472f439de0c15c1b3e7b348e90dc30f33817a6b3b8177794d.json",
+        "raw_sha256": "bac9562e6716fc1472f439de0c15c1b3e7b348e90dc30f33817a6b3b8177794d",
+        "canonical_envelope_sha256": "bac9562e6716fc1472f439de0c15c1b3e7b348e90dc30f33817a6b3b8177794d"
+      }
+    },
+    {
+      "id": "w007-describe-workspace-observe",
+      "operation": "tools.describe",
+      "source": null,
+      "encoding": null,
+      "status": "ok",
+      "evidence": {
+        "path": "a_c/.ai-workspace/qualification/t008/live/evidence/objects/c4199a9347b3e205d8c36ea5e6e2a717604c32af2a37e9e2e61c73ecf8cba1e4.json",
+        "raw_sha256": "c4199a9347b3e205d8c36ea5e6e2a717604c32af2a37e9e2e61c73ecf8cba1e4",
+        "canonical_envelope_sha256": "c4199a9347b3e205d8c36ea5e6e2a717604c32af2a37e9e2e61c73ecf8cba1e4"
+      }
+    },
+    {
+      "id": "w008-read-how",
+      "operation": "source.read",
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/graphify/design/fd-support.md",
+        "root": "product",
+        "selector": null,
+        "sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f"
+      },
+      "encoding": "utf8",
+      "status": "ok",
+      "evidence": {
+        "path": "a_c/.ai-workspace/qualification/t008/live/evidence/objects/2437cbceb25639e1ec51dcc20d9169fd08a6756a6185db621c969c98ec19405e.json",
+        "raw_sha256": "2437cbceb25639e1ec51dcc20d9169fd08a6756a6185db621c969c98ec19405e",
+        "canonical_envelope_sha256": "2437cbceb25639e1ec51dcc20d9169fd08a6756a6185db621c969c98ec19405e"
+      }
+    },
+    {
+      "id": "w010-read-source-index",
+      "operation": "source.read",
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "source-index.json",
+        "root": "runtime",
+        "selector": null,
+        "sha256": "01b77ad3a61f3e1149a2f228f38f353ac8da42836a80b2a3aae8ff4b00d80518"
+      },
+      "encoding": "utf8",
+      "status": "ok",
+      "evidence": {
+        "path": "a_c/.ai-workspace/qualification/t008/live/evidence/objects/65bb80ad25b1ac581ac1145c0733ae543c2b6ba2612ef38382638f73d11d7f6c.json",
+        "raw_sha256": "65bb80ad25b1ac581ac1145c0733ae543c2b6ba2612ef38382638f73d11d7f6c",
+        "canonical_envelope_sha256": "65bb80ad25b1ac581ac1145c0733ae543c2b6ba2612ef38382638f73d11d7f6c"
+      }
+    },
+    {
+      "id": "w011-read-ticket-selection",
+      "operation": "source.read",
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": ".ai-workspace/tickets/active/T-008-fd-tenant-implementation.md",
+        "root": "product",
+        "selector": {
+          "lines": [
+            668,
+            728
+          ]
+        },
+        "sha256": "ab06521088409bc6efa21caf95ff4dec5b8eadb7686c32e3c8866dfd72dc7abc"
+      },
+      "encoding": "utf8",
+      "status": "ok",
+      "evidence": {
+        "path": "a_c/.ai-workspace/qualification/t008/live/evidence/objects/790501da95a2fefb6ba5bfac0dc5e9f79b256bfece2b00b35abe1e32494dec69.json",
+        "raw_sha256": "790501da95a2fefb6ba5bfac0dc5e9f79b256bfece2b00b35abe1e32494dec69",
+        "canonical_envelope_sha256": "790501da95a2fefb6ba5bfac0dc5e9f79b256bfece2b00b35abe1e32494dec69"
+      }
+    },
+    {
+      "id": "w012-read-setup",
+      "operation": "source.read",
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/graphify/examples/fd-support/README.md",
+        "root": "product",
+        "selector": null,
+        "sha256": "eca9c4cbfbd7ad4b712a7d1e8fc73f8cec42b0fb196967b77890833997018f94"
+      },
+      "encoding": "utf8",
+      "status": "ok",
+      "evidence": {
+        "path": "a_c/.ai-workspace/qualification/t008/live/evidence/objects/faa86f21b899126c109ea18a5cd781fe1b5e74915c2300c05ae5ff91beb24587.json",
+        "raw_sha256": "faa86f21b899126c109ea18a5cd781fe1b5e74915c2300c05ae5ff91beb24587",
+        "canonical_envelope_sha256": "faa86f21b899126c109ea18a5cd781fe1b5e74915c2300c05ae5ff91beb24587"
+      }
+    },
+    {
+      "id": "w013-read-how-1-120",
+      "operation": "source.read",
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/graphify/design/fd-support.md",
+        "root": "product",
+        "selector": {
+          "lines": [
+            1,
+            120
+          ]
+        },
+        "sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f"
+      },
+      "encoding": "utf8",
+      "status": "ok",
+      "evidence": {
+        "path": "a_c/.ai-workspace/qualification/t008/live/evidence/objects/29512bc2d6995e00f037b4d92012767e4f1ab42ece9bfb420e7317961f5258f5.json",
+        "raw_sha256": "29512bc2d6995e00f037b4d92012767e4f1ab42ece9bfb420e7317961f5258f5",
+        "canonical_envelope_sha256": "29512bc2d6995e00f037b4d92012767e4f1ab42ece9bfb420e7317961f5258f5"
+      }
+    },
+    {
+      "id": "w014-read-how-121-500",
+      "operation": "source.read",
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/graphify/design/fd-support.md",
+        "root": "product",
+        "selector": {
+          "lines": [
+            121,
+            500
+          ]
+        },
+        "sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f"
+      },
+      "encoding": "utf8",
+      "status": "ok",
+      "evidence": {
+        "path": "a_c/.ai-workspace/qualification/t008/live/evidence/objects/3e1a493094e7bc0936cbf7626dc9826e1ccaac503fcfeef70caebea95055c184.json",
+        "raw_sha256": "3e1a493094e7bc0936cbf7626dc9826e1ccaac503fcfeef70caebea95055c184",
+        "canonical_envelope_sha256": "3e1a493094e7bc0936cbf7626dc9826e1ccaac503fcfeef70caebea95055c184"
+      }
+    },
+    {
+      "id": "w015-read-how-501-880",
+      "operation": "source.read",
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/graphify/design/fd-support.md",
+        "root": "product",
+        "selector": {
+          "lines": [
+            501,
+            880
+          ]
+        },
+        "sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f"
+      },
+      "encoding": "utf8",
+      "status": "ok",
+      "evidence": {
+        "path": "a_c/.ai-workspace/qualification/t008/live/evidence/objects/bf6be55231ae54063caf3563d0b2144917762508a52f93e1848c8eb5253c5349.json",
+        "raw_sha256": "bf6be55231ae54063caf3563d0b2144917762508a52f93e1848c8eb5253c5349",
+        "canonical_envelope_sha256": "bf6be55231ae54063caf3563d0b2144917762508a52f93e1848c8eb5253c5349"
+      }
+    },
+    {
+      "id": "w016-read-how-881-1260",
+      "operation": "source.read",
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/graphify/design/fd-support.md",
+        "root": "product",
+        "selector": {
+          "lines": [
+            881,
+            1260
+          ]
+        },
+        "sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f"
+      },
+      "encoding": "utf8",
+      "status": "ok",
+      "evidence": {
+        "path": "a_c/.ai-workspace/qualification/t008/live/evidence/objects/3ab814447776bc41f96c612262d9e959bab16bbec3b98bbcebccef711745f966.json",
+        "raw_sha256": "3ab814447776bc41f96c612262d9e959bab16bbec3b98bbcebccef711745f966",
+        "canonical_envelope_sha256": "3ab814447776bc41f96c612262d9e959bab16bbec3b98bbcebccef711745f966"
+      }
+    },
+    {
+      "id": "w017-read-how-881-1060",
+      "operation": "source.read",
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/graphify/design/fd-support.md",
+        "root": "product",
+        "selector": {
+          "lines": [
+            881,
+            1060
+          ]
+        },
+        "sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f"
+      },
+      "encoding": "utf8",
+      "status": "ok",
+      "evidence": {
+        "path": "a_c/.ai-workspace/qualification/t008/live/evidence/objects/5869078d5cf09ae912d487a2a782d5f123fb4da710551af088eebc1ec3e7e227.json",
+        "raw_sha256": "5869078d5cf09ae912d487a2a782d5f123fb4da710551af088eebc1ec3e7e227",
+        "canonical_envelope_sha256": "5869078d5cf09ae912d487a2a782d5f123fb4da710551af088eebc1ec3e7e227"
+      }
+    },
+    {
+      "id": "w018-read-how-1061-1160",
+      "operation": "source.read",
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/graphify/design/fd-support.md",
+        "root": "product",
+        "selector": {
+          "lines": [
+            1061,
+            1160
+          ]
+        },
+        "sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f"
+      },
+      "encoding": "utf8",
+      "status": "ok",
+      "evidence": {
+        "path": "a_c/.ai-workspace/qualification/t008/live/evidence/objects/be9d2e93c9b1c7b91dafa8cfaf1e27d3ed9c34d92c19d6cec93056e3ec06e906.json",
+        "raw_sha256": "be9d2e93c9b1c7b91dafa8cfaf1e27d3ed9c34d92c19d6cec93056e3ec06e906",
+        "canonical_envelope_sha256": "be9d2e93c9b1c7b91dafa8cfaf1e27d3ed9c34d92c19d6cec93056e3ec06e906"
+      }
+    },
+    {
+      "id": "w019-read-how-1261-1360",
+      "operation": "source.read",
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/graphify/design/fd-support.md",
+        "root": "product",
+        "selector": {
+          "lines": [
+            1261,
+            1360
+          ]
+        },
+        "sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f"
+      },
+      "encoding": "utf8",
+      "status": "ok",
+      "evidence": {
+        "path": "a_c/.ai-workspace/qualification/t008/live/evidence/objects/6c7553151a29f8c50c7d9f6f6c865ef1969f963cf23573ffd7e65c79e8a14130.json",
+        "raw_sha256": "6c7553151a29f8c50c7d9f6f6c865ef1969f963cf23573ffd7e65c79e8a14130",
+        "canonical_envelope_sha256": "6c7553151a29f8c50c7d9f6f6c865ef1969f963cf23573ffd7e65c79e8a14130"
+      }
+    },
+    {
+      "id": "w020-read-how-2000-2100",
+      "operation": "source.read",
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/graphify/design/fd-support.md",
+        "root": "product",
+        "selector": {
+          "lines": [
+            2000,
+            2100
+          ]
+        },
+        "sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f"
+      },
+      "encoding": "utf8",
+      "status": "ok",
+      "evidence": {
+        "path": "a_c/.ai-workspace/qualification/t008/live/evidence/objects/606bc0784dfd60357f99d0ccecaad2826029a5ba229ac364c846e75387008633.json",
+        "raw_sha256": "606bc0784dfd60357f99d0ccecaad2826029a5ba229ac364c846e75387008633",
+        "canonical_envelope_sha256": "606bc0784dfd60357f99d0ccecaad2826029a5ba229ac364c846e75387008633"
+      }
+    },
+    {
+      "id": "w021-observe-target-and-sources",
+      "operation": "workspace.observe",
+      "source": null,
+      "encoding": null,
+      "status": "ok",
+      "evidence": {
+        "path": "a_c/.ai-workspace/qualification/t008/live/evidence/objects/2f3a4eae574c9007b37af0b861cc10f45c682c0c00d93cb93ae2d37653aa09f8.json",
+        "raw_sha256": "2f3a4eae574c9007b37af0b861cc10f45c682c0c00d93cb93ae2d37653aa09f8",
+        "canonical_envelope_sha256": "2f3a4eae574c9007b37af0b861cc10f45c682c0c00d93cb93ae2d37653aa09f8"
+      }
+    },
+    {
+      "id": "w022-write-guide",
+      "operation": "work.write",
+      "source": null,
+      "encoding": null,
+      "status": "ok",
+      "evidence": {
+        "path": "a_c/.ai-workspace/qualification/t008/live/evidence/objects/d3ffdebf35f0fdf6fdd611f5e641e8b85b01a9d1a4d7e7a4cd497ff7aff4e808.json",
+        "raw_sha256": "d3ffdebf35f0fdf6fdd611f5e641e8b85b01a9d1a4d7e7a4cd497ff7aff4e808",
+        "canonical_envelope_sha256": "d3ffdebf35f0fdf6fdd611f5e641e8b85b01a9d1a4d7e7a4cd497ff7aff4e808"
+      }
+    }
+  ],
+  "Root_verified_readable_HOW_scope": {
+    "parent_sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f",
+    "named_narrative_lines": [
+      [
+        145,
+        389
+      ],
+      [
+        606,
+        737
+      ],
+      [
+        1125,
+        1159
+      ]
+    ],
+    "full_HOW_acquisition": "not proved"
+  },
+  "Product_FD_FDV": "Context base64 only; no readable actual Worker source.read. New Writer reads do not retroactively repair that actor acquisition.",
+  "actual_process": {
+    "path": "a_c/.ai-workspace/qualification/t008/live-runtime-prep-002/actor-transports/worker-001/process.json",
+    "sha256": "da8020b7b1a878bec4a02317028ce24e4237a55a29e1e16231c08052caa11258",
+    "returncode": 143,
+    "failure": "timeout; output/effect completion remains unknown"
+  },
+  "actual_capture": {
+    "path": "a_c/.ai-workspace/qualification/t008/live-runtime-prep-002/root-operations/t008-worker-capture-001/response.json",
+    "sha256": "c065acb103d6dbb04b0e7785743c3376b632361deb33b921e5b964b71f8aaa78",
+    "original": null,
+    "binding_checks": {
+      "format_valid": false,
+      "gaps": [
+        {
+          "code": "malformed_request",
+          "gaps": [],
+          "reason": "Invalid UTF-8 JSON: Expecting value: line 1 column 1 (char 0)",
+          "source_refs": []
+        }
+      ]
+    }
+  },
+  "actual_return_check": {
+    "path": "a_c/.ai-workspace/qualification/t008/live-runtime-prep-002/root-operations/t008-worker-check-001/response.json",
+    "sha256": "9a297491f5d481b216f94e2cf3207b07dd501849c2a510f59cebde876447b7df",
+    "consumable": false,
+    "gaps": [
+      {
+        "code": "malformed_request",
+        "gaps": [],
+        "reason": "Invalid UTF-8 JSON: Expecting value: line 1 column 1 (char 0)",
+        "source_refs": []
+      }
+    ]
+  },
+  "own_deciding_source_refs": {
+    "a_c/.ai-workspace/qualification/t008/live-binding-001/TASK.md": "6d777ece58832ec57185f47cbe69f714222329e600b3a190acac63d7d744fff2",
+    "a_c/specification/PRODUCT.md": "9ebc8342affe8c5e0afb08ebe22f3f98f73f7bdc64db00eee17674c47274bef7",
+    "a_c/specification/requirements/fd-support-tools.md": "e3fcebd7e9fbc60dc36ed4c02ee834a96f14226af134809c938169d4712dfc23",
+    "a_c/specification/requirements/fd-support-verification.md": "3746e614a5ddc3f0a551e926998f16d6101cc037c5c43b879b4447b017a8dbdf",
+    "a_c/.ai-workspace/qualification/t008/live-reconciliation-001/RECONCILIATION.contract.txt": "0740d1bfe29ce3a6c871dbe0819310159353d78aebbd83461caddfe332a8567b"
+  },
+  "thinking_secrets": "No vendor assistant/thinking streams or credential sources acquired/copied into this repair evidence.",
+  "native_Writer": "/root/ac_fd_tenant_design, actual model/provider unobserved; direct delegated file mutation, no public write impersonation or authenticated native actor return."
+}

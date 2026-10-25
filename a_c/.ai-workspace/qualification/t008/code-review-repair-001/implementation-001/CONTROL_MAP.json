@@ -1,0 +1,182 @@
+{
+  "controls": [
+    {
+      "actual_execution": "runs/004-final-selected/stderr",
+      "class": "CoreTests",
+      "control": "F1.required-counterexample",
+      "method": "test_required_counterexample_does_not_require_contributor_coverage",
+      "passed": true,
+      "source_selected_assertion": "Two variants: empty and explicit contributor coverage both F; no uncovered obligation.",
+      "test": "test_ac_support_core.py:568"
+    },
+    {
+      "actual_execution": "runs/004-final-selected/stderr",
+      "class": "CoreTests",
+      "control": "F1.exclusions/precedence",
+      "method": "test_required_counterexample_exclusions_and_mandatory_precedence",
+      "passed": true,
+      "source_selected_assertion": "Unrelated optional F -> S; stale/wrong basis/wrong predicate/cardinality -> gap/indeterminate; mandatory non-S remains selected.",
+      "test": "test_ac_support_core.py:576"
+    },
+    {
+      "actual_execution": "runs/004-final-selected/stderr",
+      "class": "CoreTests",
+      "control": "F2.typed-only",
+      "method": "test_context_typed_recheck_does_not_mine_opaque_source_content",
+      "passed": true,
+      "source_selected_assertion": "Actual acquired JSON may quote unavailable SourceRef; its bytes stay opaque and do not become recheck premises.",
+      "test": "test_ac_support_core.py:432"
+    },
+    {
+      "actual_execution": "runs/004-final-selected/stderr",
+      "class": "CoreTests",
+      "control": "F2.boundaries",
+      "method": "test_unselected_fit_and_late_source_keep_their_declared_boundary",
+      "passed": true,
+      "source_selected_assertion": "No-capacity fit remains unselected; late route remains separate from acquired inputs.",
+      "test": "test_ac_support_core.py:443"
+    },
+    {
+      "actual_execution": "runs/004-final-selected/stderr",
+      "class": "PublicRetryTests",
+      "control": "F2.extra-source",
+      "method": "test_extra_source_currentness_at_admission_dispatch_and_supervisor",
+      "passed": true,
+      "source_selected_assertion": "Unchanged real registered subprocess positive; changed before admission, dispatch and actual supervisor spawn blocked.",
+      "test": "test_ac_support_effects.py:1026"
+    },
+    {
+      "actual_execution": "runs/004-final-selected/stderr",
+      "class": "PublicRetryTests",
+      "control": "F2.model",
+      "method": "test_model_currentness_at_admission_dispatch_and_supervisor",
+      "passed": true,
+      "source_selected_assertion": "Same 4 causal stages for selected model source/id bytes; bound old model not replaced.",
+      "test": "test_ac_support_effects.py:1031"
+    },
+    {
+      "actual_execution": "runs/004-final-selected/stderr",
+      "class": "PublicRetryTests",
+      "control": "F2.fit",
+      "method": "test_selected_fit_currentness_at_admission_dispatch_and_supervisor",
+      "passed": true,
+      "source_selected_assertion": "Same 4 causal stages for required positive host evidence; old selected fit cannot authorize launch.",
+      "test": "test_ac_support_effects.py:1036"
+    },
+    {
+      "actual_execution": "runs/004-final-selected/stderr",
+      "class": "PublicRetryTests",
+      "control": "F2.fit-missing",
+      "method": "test_selected_fit_missing_support_prevents_admission",
+      "passed": true,
+      "source_selected_assertion": "Missing typed host evidence prevents admission, original source.read source_missing retained.",
+      "test": "test_ac_support_effects.py:1041"
+    },
+    {
+      "actual_execution": "runs/004-final-selected/stderr",
+      "class": "CoreTests",
+      "control": "F3.authority/pure-plan",
+      "method": "test_writer_authority_is_current_without_obsolete_target_preimage",
+      "passed": true,
+      "source_selected_assertion": "Pure authority succeeds after target advances while prepare_write target_conflict; source authority drift refuses.",
+      "test": "test_ac_support_core.py:417"
+    },
+    {
+      "actual_execution": "runs/004-final-selected/stderr",
+      "class": "PublicWriterReplayTests",
+      "control": "F3.public-replay",
+      "method": "test_cli_mcp_append_replace_recover_original_unconsumed_result",
+      "passed": true,
+      "source_selected_assertion": "4 real CLI/MCP append/replace variants recover original result/primary ref; one intent, no repeat; conflict body refuses.",
+      "test": "test_ac_support_interfaces.py:538"
+    },
+    {
+      "actual_execution": "runs/004-final-selected/stderr",
+      "class": "PublicWriterReplayTests",
+      "control": "F3.concurrent",
+      "method": "test_simultaneous_identical_cli_calls_serialize_before_fresh_planning",
+      "passed": true,
+      "source_selected_assertion": "Two actual CLI processes; first paused inside planning, second signals request-lock contention; OS nonblocking probe confirms lock. On release both obtain original result, second never plans.",
+      "test": "test_ac_support_interfaces.py:565"
+    },
+    {
+      "actual_execution": "runs/004-final-selected/stderr",
+      "class": "PublicWriterReplayTests",
+      "control": "F3.authority",
+      "method": "test_replay_checks_current_roles_principals_grants_and_authority",
+      "passed": true,
+      "source_selected_assertion": "Executive/Reviewer/unregistered caller, excluded grant requester and current authority drift refuse before replay.",
+      "test": "test_ac_support_interfaces.py:596"
+    },
+    {
+      "actual_execution": "runs/004-final-selected/stderr",
+      "class": "PublicWriterReplayTests",
+      "control": "F3.policy-conflict",
+      "method": "test_same_request_under_different_valid_policy_is_a_conflict",
+      "passed": true,
+      "source_selected_assertion": "Same original request under distinct valid policy is request_identity_conflict, unchanged target.",
+      "test": "test_ac_support_interfaces.py:629"
+    },
+    {
+      "actual_execution": "runs/004-final-selected/stderr",
+      "class": "PublicWriterReplayTests",
+      "control": "F3.uncertain-intent",
+      "method": "test_fatal_post_target_publication_recovers_held_intent_without_repeat",
+      "passed": true,
+      "source_selected_assertion": "Actual process exits77 after target publication; exact replay returns held(effect)/effect_unreconciled, observed match not completion.",
+      "test": "test_ac_support_interfaces.py:616"
+    },
+    {
+      "actual_execution": "runs/004-final-selected/stderr",
+      "class": "PublicWriterReplayTests",
+      "control": "F3.history-unknown",
+      "method": "test_uncommitted_intent_envelope_is_unknown_history_not_effect_proof",
+      "passed": true,
+      "source_selected_assertion": "Exit77 before intent owner publication leaves no effect; canonical envelope without owner makes absence unestablished/history_incomplete, not admitted intent or completion.",
+      "test": "test_ac_support_interfaces.py:638"
+    },
+    {
+      "actual_execution": "runs/004-final-selected/stderr",
+      "class": "PublicWriterReplayTests",
+      "control": "F3.history-missing/tampered",
+      "method": "test_missing_tampered_support_and_missing_owner_never_repeat",
+      "passed": true,
+      "source_selected_assertion": "Isolated public fixtures: missing/tampered primary support and deleted intent/outcome markers refuse/hold; target never repeated.",
+      "test": "test_ac_support_interfaces.py:649"
+    },
+    {
+      "actual_execution": "runs/004-final-selected/stderr",
+      "class": "WriterTests",
+      "control": "F3.planning-lock-scope",
+      "method": "test_fresh_planning_callbacks_have_no_product_target_or_store_lock",
+      "passed": true,
+      "source_selected_assertion": "Nonblocking probes from actual planning callback find Product/target/store locks available.",
+      "test": "test_ac_support_effects.py:520"
+    },
+    {
+      "actual_execution": "runs/004-final-selected/stderr",
+      "class": "WriterTests",
+      "control": "F3.no-injected-plan",
+      "method": "test_public_effect_entry_refuses_a_precomputed_writer_plan",
+      "passed": true,
+      "source_selected_assertion": "Even a valid Core plan cannot enter work.write as caller authority; no intent/effect.",
+      "test": "test_ac_support_effects.py:497"
+    },
+    {
+      "actual_execution": "runs/004-final-selected/stderr",
+      "class": "WriterTests",
+      "control": "F3.historical/current",
+      "method": "test_completed_replay_is_history_without_fresh_planning_or_target_claim",
+      "passed": true,
+      "source_selected_assertion": "External later target bytes preserved and original result returned without fresh planning; current authority drift still refuses.",
+      "test": "test_ac_support_effects.py:506"
+    }
+  ],
+  "schema": "a_c.source-selected-repair-controls/1",
+  "source_basis": {
+    "HOW_sha256": "e3c5e6e83d9be525a0ca44fc4e64c9077e33958337bc29807014715a50592939",
+    "negative_reproduction_return": "../CLOSED_RETURN.json",
+    "proposal_sha256": "653ec05538d92f71d92d4ad9bb32162fa07d1b874fa9fe17edc2561edaab8bbb"
+  },
+  "standing": "Source-selected assertions, not implementation-output snapshots. Fold tests have explicit controlled producer/qualification seam; local process fixtures are not F_P assessors."
+}

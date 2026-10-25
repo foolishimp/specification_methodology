@@ -115,3 +115,31 @@ measures remain unknown. Compare equivalent substantive information and count
 retries, repair and review in total cost. One passing trial is bounded evidence,
 not statistical reliability or general benefit. Keyword and formatting checks
 may establish structure but not successful method application.
+
+
+## SK-13: Recursive composition and eligible context
+
+When a task consumes another Product, resolve the declared edge and selected
+contract/basis using the capable manager implementation named by the activation.
+Retain separate standalone/composed outcomes, material reliance and per-route
+permissions; a dependency graph does not supply a work order or transitive grant.
+Inspect any required trusted a_c composition binding through its public operation
+before relying on that guard, and use it at source/context/delegation/recovery
+boundaries. Unknown or absent binding withholds the dependent controlled-exposure
+claim. Do not substitute older manager success or a narrative inspection result.
+
+Acquire only eligible information under the actual grant, including summaries,
+tool outputs and permitted derivations. An approved export needs receiving-policy
+eligibility too. Authorized Reviewer inspection can be broader without granting
+Worker disclosure. Preserve actual exposure, currentness, outstanding obligations
+and required continuations; permission and context adequacy are separate.
+Changed authority or already-delivered excluded material triggers supported
+re-entry rather than claiming the actor has forgotten it.
+
+The [a_c relation](../composition/A_C_SUPPORT.md) and exact source manifest own
+this construction binding. It applies existing installed 3.0.1 laws locally and
+requires no mutable v3 methodology source. It creates no general clean-room host
+isolation, optimized context selector, accepted provider release or new outcome
+algebra. [T-002](../../.ai-workspace/tickets/active/T-002-composition-support.md)
+records the affected implementation/evidence; prior Q01–Q12 evidence stays on its
+original subjects and does not automatically cover this increment.

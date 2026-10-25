@@ -21,6 +21,7 @@ import time
 from typing import Callable, TypeAlias, cast
 
 import ac_graph
+import ac_support_composition as composition
 
 JSON: TypeAlias = ac_graph.JSON
 Object: TypeAlias = dict[str, JSON]
@@ -291,6 +292,7 @@ def _nullable(schema: Object) -> Object:
 _SCOPE = _object({"root": _ref("Id"), "path": _ref("Id"), "kind": {"enum": ["file", "directory"]}})
 _SELECTION = _object({"seeds": _array(_ref("Id")), "budget_records": _nullable({"type": "integer", "minimum": 0})}, ("budget_records",))
 _ARGUMENTS: dict[str, Object] = {
+    "composition.inspect": _object({}),
     "tools.describe": _object({"operation": _ref("Id"), "method_profile": _ref("Identity")}, ("operation", "method_profile")),
     "workspace.observe": _object({"scope": _array(_SCOPE), "previous": _ref("ArtifactRef")}, ("previous",)),
     "source.read": _object({"source": _ref("SourceRef"), "encoding": {"enum": ["utf8", "base64"]}, "max_content_bytes": {"type": "integer", "minimum": 0}}, ("max_content_bytes",)),
@@ -348,7 +350,7 @@ def environment_passthrough(settings: JSON, environment: JSON) -> list[str]:
 
 
 def method_identity(profile: Object | None = None) -> Object:
-    identity = {"id": PROFILE_ID, "sha256": PROFILE_SHA256} if profile is None else {"id": profile.get("id"), "sha256": profile.get("sha256")}
+    identity: Object = {"id": PROFILE_ID, "sha256": PROFILE_SHA256} if profile is None else {"id": profile.get("id"), "sha256": profile.get("sha256")}
     if identity not in ({"id": PROFILE_ID, "sha256": PROFILE_SHA256},
                         {"id": NATIVE_PROFILE_ID, "sha256": NATIVE_PROFILE_SHA256}):
         raise SupportError("unsupported_contract", "Method profile is not an exact supported binding")
@@ -428,6 +430,11 @@ class Runtime:
     evidence_root: Path
     resolve_artifact: Resolver | None = None
     query_artifacts: History | None = None
+    _composition: Object | None = None
+
+    @property
+    def composition(self) -> Object | None:
+        return copy.deepcopy(self._composition)
 
     @property
     def policy(self) -> Object:
@@ -450,7 +457,7 @@ class Runtime:
         if _sha(raw) != expected_sha256:
             raise SupportError("digest_mismatch", "Policy bytes do not match trusted startup digest")
         policy = as_object(parse_json(raw), "policy")
-        exact_keys(policy, ("schema", "id", "product", "method_profile", "sources", "principals", "grants", "predicates", "operators", "executors", "event_sinks", "independence_policy", "evidence_root", "limits", "authority_sources"), label="policy")
+        exact_keys(policy, ("schema", "id", "product", "method_profile", "sources", "principals", "grants", "predicates", "operators", "executors", "event_sinks", "independence_policy", "evidence_root", "limits", "authority_sources"), ("composition",), label="policy")
         if policy["schema"] != "a_c.fd-support.policy/1":
             raise SupportError("unsupported_contract", "Unsupported policy schema")
         text(policy["id"])
@@ -545,6 +552,8 @@ class Runtime:
             if selected_basis != {"uri": "stdo://releases/v3.0.1-rc.1/", "manifest_sha256": NATIVE_MANIFEST_SHA256}:
                 raise SupportError("basis_stale", "Native profile requires the exact released 3.0.1 Product basis")
         read_source(runtime, as_object(runtime.principal["role_binding"]))
+        if "composition" in policy:
+            runtime = replace(runtime, _composition=composition.load(runtime, as_object(policy["composition"])))
         return runtime
 
     def with_callbacks(self, resolve_artifact: Resolver, query_artifacts: History) -> Runtime:
@@ -1022,7 +1031,8 @@ def _validate_packet(runtime: Runtime, packet: Object) -> tuple[str, Object]:
 def _acquisition(runtime: Runtime, request: Object, source: JSON, content: JSON,
                  started: int, ended: int, model: JSON = None,
                  selection: JSON = None, recipient: str | None = None,
-                 derived_sources: list[JSON] | None = None) -> tuple[Object, Object]:
+                 derived_sources: list[JSON] | None = None,
+                 target_principal: str | None = None) -> tuple[Object, Object]:
     payload: Object = document({"schema": "a_c.fd-support.acquisition/1",
                        "recipient": recipient if recipient is not None else runtime.principal["actor_id"],
                        "source": source, "model": model, "selection": selection,
@@ -1031,6 +1041,18 @@ def _acquisition(runtime: Runtime, request: Object, source: JSON, content: JSON,
                        "delivery": document({"state": "prepared", "interval": document({"clock": "unix_ns", "started_ns": started, "ended_ns": ended})})})
     if derived_sources is not None:
         payload["derived_sources"] = derived_sources
+    if runtime.composition is not None:
+        if as_object(source).get("engine") != "retained-evidence":
+            payload["composition"] = composition.authorize_source(runtime, as_object(source), target_principal)
+        else:
+            original = load_artifact(runtime, {"id": as_object(source)["path"], "sha256": as_object(source)["sha256"]})
+            snapshots = composition.evidence(runtime, original)
+            binding = composition.inspect(runtime)
+            for raw_source in derived_sources or []:
+                scope = composition.authorize_source(runtime, as_object(raw_source))
+                if scope is not None:
+                    snapshots.extend(as_object(item) for item in as_list(scope["resources"]))
+            payload["composition"] = {"declaration": runtime.policy["composition"], "actor_id": runtime.principal["actor_id"], "engagement": binding["engagement"], "purpose": binding["purpose"], "route": binding["route"], "resources": cast(list[JSON], snapshots)}
     return make_artifact("acquisition", payload, provenance(runtime, request, started, ended))
 
 
@@ -1051,17 +1073,20 @@ def _assemble(runtime: Runtime, request: Object, args: Object, started: int) -> 
             continue
         acquired = read_source(runtime, ref)
         sources.append(acquired)
-        item, item_ref = _acquisition(runtime, request, ref, acquired, started, time.time_ns(), recipient=text(target["actor_id"]))
+        item, item_ref = _acquisition(runtime, request, ref, acquired, started, time.time_ns(), recipient=text(target["actor_id"]), target_principal=target_id)
         artifacts.append(item); acquisitions.append(item_ref)
     projections: list[JSON] = []
     for raw in as_list(args["models"]):
         selected = as_object(raw); model_ref = as_object(selected["model"])
         projection = document({"model": model_ref, "views": _project(_model(runtime, model_ref), selected["selections"])})
         projections.append(projection)
-        acquired_projection, projection_ref = _acquisition(runtime, request, model_ref["source"], projection, started, time.time_ns(), model_ref, selected["selections"], text(target["actor_id"]))
+        acquired_projection, projection_ref = _acquisition(runtime, request, model_ref["source"], projection, started, time.time_ns(), model_ref, selected["selections"], text(target["actor_id"]), target_principal=target_id)
         artifacts.append(acquired_projection); acquisitions.append(projection_ref)
     boundaries: Object = document({"late_acquisition": cast(list[JSON], late), "semantic_sufficiency": "not assessed",
                           "projection_limits": "declared selected governing closure only", "acquired_sources": len(sources), "activation_identity": activation_identity(packet)})
+    selected_composition = composition.context_binding(runtime, packet, target_id)
+    if selected_composition is not None:
+        boundaries["declared_input_provenance_complete"] = selected_composition["declared_input_provenance_complete"]
     body: Object = document({"schema": "a_c.fd-support.actor-context/1", "packet": packet,
                     "projections": projections, "sources": sources,
                     "late_acquisition": cast(list[JSON], late), "boundaries": boundaries})
@@ -1109,6 +1134,10 @@ def _assemble(runtime: Runtime, request: Object, args: Object, started: int) -> 
                        "sources": sources, "late_acquisition": cast(list[JSON], late), "boundaries": boundaries,
                        "rendered_utf8": rendered, "rendered_sha256": _sha(rendered.encode()),
                        "fit": fit, "observations": as_object(packet["subject_basis"])["observations"]})
+    if selected_composition is not None:
+        # Retained outside rendered_utf8: this contains protected provenance,
+        # not additional material delivered to the activated actor.
+        payload["composition"] = selected_composition
     artifact, ref = make_artifact("context", payload, provenance(runtime, request, started, time.time_ns(), target_id))
     artifacts.append(artifact)
     return document({"result": {"artifact": ref, "value": {"fit": fit, "activation_identity": activation_identity(packet), "manifest": {"acquired": [{k: v for k, v in as_object(s).items() if k != "content_base64"} for s in sources], "late_acquisition": cast(list[JSON], late)}, "rendered_sha256": payload["rendered_sha256"], "boundaries": boundaries}},
@@ -1748,6 +1777,7 @@ def _role_transition(runtime: Runtime, operation: str, grant_id: str, subject: J
 def _recheck(runtime: Runtime, sources: list[JSON], observations: list[JSON],
              executor_dependencies: list[JSON] | None = None) -> Object:
     product = as_object(runtime.policy["product"])
+    sources = [*sources, *composition.material_refs(runtime, runtime.principal_id)]
     return document({"schema": "a_c.fd-support.recheck/1", "policy_sha256": runtime.policy_sha256,
             "product_definition": product["definition"],
             "method_profile": as_object(runtime.policy["method_profile"])["source"],
@@ -1798,6 +1828,7 @@ def build_preflight(runtime: Runtime, request: Object) -> EffectPlan:
     context_ref = as_object(args["context"])
     context = as_object(load_artifact(runtime, context_ref, "context")["payload"])
     packet = as_object(context["packet"]); target_id, target = _validate_packet(runtime, packet)
+    composition.context(runtime, context, target_id)
     grant_id = text(args["grant_id"])
     grant = _grant(runtime, grant_id, "contract.preflight")
     executor_id = text(args["executor_id"])
@@ -1870,6 +1901,7 @@ def build_preflight(runtime: Runtime, request: Object) -> EffectPlan:
     if fit.get("selected") is True:
         guard("selected required full-active-input fit", isinstance(fit_judgment, dict) and fit_judgment.get("core_value") == "satisfied", "basis_missing")
     sources: list[JSON] = list(_all_source_refs(packet)) + _context_material_sources(context) + as_list(grant["authority_sources"]) + [as_object(grant["outcome"])["source"], admission["mechanism_source"], admission["authority_source"], as_object(as_object(runtime.policy["product"])["authority_binding"])["owner_record"]]
+    sources.extend(composition.material_refs(runtime, target_id))
     if sink is not None:
         sources.append(sink["authority_source"])
     source_preconditions: list[JSON] = []
@@ -2383,12 +2415,19 @@ def _review(runtime: Runtime, request: Object, args: Object, started: int) -> Co
     policy = runtime.policy["independence_policy"]
     independence: Object = document({"selected_policy": policy, "semantic_independence": "not certified", "external_exposure": "unknown"})
     if policy is not None:
+        composition.authorize_source(runtime, as_object(policy))
         selected = _source_json(runtime, as_object(policy))
         exact_keys(selected, ("id", "authority_source", "claim_scope", "require_non_author", "allowed_family_pairs", "source_first", "mechanical_sharing", "predicates"))
         if selected["require_non_author"] is not True or selected["source_first"] is not True:
             raise SupportError("contract_violation", "Independence binding cannot weaken source nonauthorship/source-first conditions")
+        composition.authorize_source(runtime, as_object(selected["authority_source"]))
         read_source(runtime, as_object(selected["authority_source"]))
         independence["governing_conditions"] = selected
+        # These automatically selected bytes are disclosed just as surely as
+        # an explicit source.read. Record their actual recipient and transport.
+        if runtime.composition is not None:
+            acquired_policy, acquired_policy_ref = _acquisition(runtime, request, policy, selected, started, time.time_ns())
+            artifacts.append(acquired_policy); acquisition_refs.append(acquired_policy_ref)
     value: Object = document({"phase": phase, "claim": claim_ref, "candidate_population": candidate_population, "population_complete": population_complete, "acquired": sources, "expectations": expectation_ref,
                      "exposure": exposure, "comparison": comparison, "independence": independence,
                      "gaps": gaps, "limits": ["acquisition/diff/exposure facts only; no severity, disposition or mental-independence certificate"]})
@@ -2774,6 +2813,7 @@ def execute_read(runtime: Runtime, request: Object) -> CoreOutcome:
     started = time.time_ns()
     try:
         require_operation(runtime, operation)
+        composition.before(runtime, request)
         args = as_object(request["arguments"])
         if operation in EFFECT_OPERATIONS:
             raise SupportError("unsupported_contract", "Named effect must pass the effect membrane")
@@ -2785,7 +2825,9 @@ def execute_read(runtime: Runtime, request: Object) -> CoreOutcome:
             return _review(runtime, request, args, started)
         artifacts: list[JSON] = []; acquisitions: list[JSON] = []; primary: JSON = None
         value: JSON
-        if operation == "tools.describe":
+        if operation == "composition.inspect":
+            value = composition.inspect(runtime)
+        elif operation == "tools.describe":
             if "method_profile" in args and not _equal(args["method_profile"], runtime.method_profile):
                 raise SupportError("unsupported_contract", "Requested exact method/profile is unsupported")
             value = inventory(cast(str | None, args.get("operation")), profile=runtime.method_profile)

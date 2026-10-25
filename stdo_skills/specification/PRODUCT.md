@@ -20,6 +20,11 @@ contracts and computational implementations. A skill preserves and applies those
 contracts; it does not create another lifecycle, state store or source of
 assessment, admission, acceptance or publication authority.
 
+The [selected a_c composition relation](composition/A_C_SUPPORT.md) binds the
+construction dependency and exact provider source. SK-13 applies scoped edge
+resolution and eligible context at the existing lifecycle points; it adds no
+mutable methodology dependency or alternate authority owner.
+
 ## Selected methodology
 
 The complete static builder and initial supported methodology is

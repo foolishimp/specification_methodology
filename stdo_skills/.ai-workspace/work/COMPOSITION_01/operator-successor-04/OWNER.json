@@ -1,0 +1,56 @@
+{
+  "id": "urn:stdo-skills:T002:composition-read-context:2",
+  "mechanism": {
+    "id": "product-policy-preflight/1",
+    "source": {
+      "engine": "workspace-regular-file",
+      "root": "tool",
+      "path": "build_tenants/graphify/code/ac_support_core.py",
+      "object": null,
+      "sha256": "555f387bf8e53e85904383e6c5521eebd39537dc668f87936544a588efe4cb9f",
+      "selector": null
+    },
+    "implementation_sha256": "555f387bf8e53e85904383e6c5521eebd39537dc668f87936544a588efe4cb9f"
+  },
+  "result_surface": {
+    "root": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/COMPOSITION_01/operator/evidence",
+    "namespace": "composition-T002",
+    "consumer": "/root"
+  },
+  "scope": {
+    "kind": "actual-construction-read-context",
+    "product": "urn:stdo:product-definition:stdo-skills",
+    "selection": "T-002 repaired-provider successor 04",
+    "actor": "/root/composition_proposal_writer",
+    "consumer": "/root",
+    "operations": [
+      "tools.describe",
+      "composition.inspect",
+      "source.read",
+      "context.assemble"
+    ],
+    "effect_grants": [],
+    "output_provenance": "incomplete prior actor context",
+    "clean_room_claim": false,
+    "method": "stdo://releases/v3.0.1-rc.1/",
+    "manifest_sha256": "60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8"
+  },
+  "authority_sources": [
+    {
+      "engine": "workspace-regular-file",
+      "root": "product",
+      "path": ".ai-workspace/tickets/active/T-002-composition-support.md",
+      "object": null,
+      "sha256": "e56c25a521aaa47aceeaa95979b106188ed5ce14e5f042dac065c885e55c4271",
+      "selector": null
+    },
+    {
+      "engine": "workspace-regular-file",
+      "root": "product",
+      "path": ".ai-workspace/work/COMPOSITION_01/operator-successor-04/OPERATOR_SELECTION.md",
+      "object": null,
+      "sha256": "1274270ad565537b1aa7a51c45987b4c639f3e4b53221ae97cc928673ada3724",
+      "selector": null
+    }
+  ]
+}

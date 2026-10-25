@@ -1,0 +1,87 @@
+{
+  "activation_sha256": "a856cf0b7e5a0fc706a257a2d9fb1d5bb87579f03825523c0f253f28f0bf53cb",
+  "chunks_sha256": "2ce228fa4f647bcb275ff6653aff1a20eca792c93037f9d7959080668129d073",
+  "claims": "Exactly two separately granted initial grounding repairs reserved, with original parents. No retry, fallback, second patch, assembly or final public receipt.",
+  "cli_version": "codex-cli 0.162.1",
+  "created_at": "2026-10-20T10:04:31.600969+00:00",
+  "jobs": 2,
+  "new_native_calls": 0,
+  "profile": "ac.common.grounding-repair-plan/1",
+  "repair_calls": 2,
+  "repair_code_pins": {
+    "asset:patch.schema.json": "65c58364a33a31d25fb2de16e50fc1f92bf2eb30307ebb42eb0f7a60ecb58b76",
+    "asset:repair.txt": "304752f5d5359364f6b34a2cf1f16b1a9da3c786bcb3baba12364fa7ba4b0d7e",
+    "codec": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+    "generator": "fcb946e180ba8a30ecdfdb9e53044cd142d9bd450464c186dfbbe90e9da5ec93",
+    "grounding": "f850e7ceecd945455891e6cc941fc3a86c943ed27bbe74d86b0248169d9cf682",
+    "repair": "5be5e738f12006dcb17066ccfb60d22e65e5929a8a9a96d52ee5c0a19efda928"
+  },
+  "reservations": 2,
+  "script_sha256": "9c4d5d7501b2c197f2b7a76a29def9aee5d08ab8ee024f67bd15273f4ff6e7dc",
+  "selected": [
+    {
+      "attempt": "grounding-repairs/chunk-cf22b253a1db7d64a8f8/attempt-001",
+      "budget_after_reservation": [
+        {
+          "attempt": "actors/author/chunk-cf22b253a1db7d64a8f8/attempt-001",
+          "family": "author",
+          "invocation_recorded": true
+        },
+        {
+          "attempt": "grounding-repairs/chunk-cf22b253a1db7d64a8f8/attempt-001",
+          "family": "repair",
+          "invocation_recorded": false
+        }
+      ],
+      "chunk": "chunk-cf22b253a1db7d64a8f8",
+      "chunk_sha256": "a0f3b61ab580eee4686c195c83076f5d5730d2dedda84e105893450f96d592de",
+      "invalid_anchor_count": 1,
+      "parent_original_answer_sha256": "50926f48dfa8425f7738415138945be9b4718685be6ae466e12e8565971313d2",
+      "prepared_parent_answer_sha256": "c271c54a7ae0fc84574930bc274495f719fd77951c94424229005b82bef95703",
+      "prompt_chars": 345951,
+      "prompt_sha256": "f743899fdb8ad77bd6d74322d65dc02021056e9e0ed27f2670993f6de94d8fce",
+      "request_sha256": "68fa5b1572b36254b870a378b66379a909832f8e1950784998962ea6b25c8df6",
+      "schema_sha256": "2463073a02ffb8195108fb9afeb187d3858a304e1eff6d0168f71d16101b6da0"
+    },
+    {
+      "attempt": "grounding-repairs/chunk-e1247fa9e1eb5dbd49cd/attempt-001",
+      "budget_after_reservation": [
+        {
+          "attempt": "actors/author/chunk-e1247fa9e1eb5dbd49cd/attempt-001",
+          "family": "author",
+          "invocation_recorded": true
+        },
+        {
+          "attempt": "grounding-repairs/chunk-e1247fa9e1eb5dbd49cd/attempt-001",
+          "family": "repair",
+          "invocation_recorded": false
+        }
+      ],
+      "chunk": "chunk-e1247fa9e1eb5dbd49cd",
+      "chunk_sha256": "af098e31da880e83c41af76bae9293d50b378f6c3b3209cbde04f2c930a85f6f",
+      "invalid_anchor_count": 2,
+      "parent_original_answer_sha256": "6ea500ee1e763b5bf6a59915f16bca6d864fd78766b134139e2cbd691ad0d5c1",
+      "prepared_parent_answer_sha256": "3cec78fd546738e8d3260297267ba13d197795ba2474d1d19d4db50cb3db5403",
+      "prompt_chars": 463222,
+      "prompt_sha256": "c059a3f1f54f9eb8b82798c26e3c8af654d3614d5a54e6c0d0b0822c41c3d9c6",
+      "request_sha256": "86e5ceed3d08486a9eff7bc864d2e92c1d9ff471c3d5d0c7c0307ac17067366a",
+      "schema_sha256": "996d15cf0fea8a94b6ce72f5e2183f797f1d471cb32cc7cc93d8b02e7b2356ef"
+    }
+  ],
+  "settings": {
+    "model": "gpt-6-astra",
+    "model_reasoning_effort": "high",
+    "service_tier": "default"
+  },
+  "source_guard": {
+    "created_at": "2026-10-20T10:04:29.369975+00:00",
+    "implementation_manifest_sha256": "594fafcf083eadbbaf1472d68fe9f375fc21ccb426c6825194793304eac2503e",
+    "package_members": 81,
+    "semantic_members": 58,
+    "source_manifest_sha256": "dbf32e7f99eb7228ca361ec02f44227c05e02bb6bc447d1dd38255cd3ca4a4d4",
+    "status": "exact"
+  },
+  "source_plan_sha256": "31a88bb55aa025cb95ba4f7710bd8559b5e0e5f4976b55388cdac1e1cf8337cf",
+  "supplemental_dependencies_sha256": "ea19c7c4e1bcc2fa95259fa2ba4f8dfe39ef5f3dc70268a60986392be2aab40d",
+  "timeout_seconds": 1800
+}

@@ -1,0 +1,30 @@
+{
+  "stage": "first-failure",
+  "command": [
+    "/usr/local/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "-v",
+    "test_ac_support_core.CoreTests.test_original_judgment_rejects_material_capture_binding_gaps",
+    "test_ac_support_core.CoreTests.test_original_judgment_requires_exact_performed_evaluation_membership",
+    "test_ac_support_core.CoreTests.test_original_judgment_retains_known_provenance_with_unrelated_history_gap",
+    "test_ac_support_interfaces.PublicJudgmentIngressTests"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify",
+  "environment_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code:/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env",
+    "TMPDIR": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-judgments-8bcbuu85",
+    "PYTHONPYCACHEPREFIX": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-judgments-8bcbuu85/bytecode",
+    "MYPY_CACHE_DIR": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-judgments-8bcbuu85/mypy",
+    "XDG_CACHE_HOME": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-judgments-8bcbuu85/cache",
+    "AC_JUDGMENT_INGRESS_TEST_EVIDENCE": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/review-fixes-001/judgments/first-failure/public"
+  },
+  "started_ns": 1792470758790917000,
+  "source_sha256": {
+    "build_tenants/graphify/code/ac_support_core.py": "842f3f136478b6948196fdd431f207f236c8c3e6ebb5573503726061c5d7bcc5",
+    "build_tenants/graphify/test_env/test_ac_support_core.py": "482531eb8dfa43f44bc5ca4f3d34d5a72c93db4f64bfca6362d943d4dd56174a",
+    "build_tenants/graphify/test_env/test_ac_support_interfaces.py": "3cd9c9b57769c9588efcdb79038df2762e28754b21657e88e3748264c5762068"
+  }
+}

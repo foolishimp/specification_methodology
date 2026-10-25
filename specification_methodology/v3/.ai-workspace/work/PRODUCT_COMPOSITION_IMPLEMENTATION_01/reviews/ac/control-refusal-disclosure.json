@@ -1,0 +1,527 @@
+{
+  "scope": "Independent actual CLI control-refusal probe after completed controlled process, denied output and isolated missing first event; only temporary fixture history faulted",
+  "candidate_index_sha256": "97dbbcc2685aeb43cf89e9b10252a071e3ce89ad4dc85dd093cd8387158d2bc2",
+  "marker": "CONTROL-DENIED-OUTPUT-9492",
+  "encoded_output": "Q09OVFJPTC1ERU5JRUQtT1VUUFVULTk0OTIK",
+  "attempt": {
+    "id": "sha256:a6b6828130032995f5154b9103017cda26d842dce79d8022889d7ccf6df6e605",
+    "sha256": "a6b6828130032995f5154b9103017cda26d842dce79d8022889d7ccf6df6e605"
+  },
+  "normal_ended_observation": {
+    "attempt": {
+      "id": "sha256:a6b6828130032995f5154b9103017cda26d842dce79d8022889d7ccf6df6e605",
+      "sha256": "a6b6828130032995f5154b9103017cda26d842dce79d8022889d7ccf6df6e605"
+    },
+    "consumer_receipt": "unknown",
+    "cursor": 8,
+    "effect": {
+      "end_established": false,
+      "value": "completion_unknown"
+    },
+    "history_complete": true,
+    "limits": [
+      "Redacted control view; content readback requires its own composition permission."
+    ],
+    "output": {
+      "process_end": {
+        "descendants": "unknown",
+        "ended_ns": 1792939008647741000,
+        "observed": true,
+        "returncode": 0
+      },
+      "stderr": {
+        "id": "sha256:f65758b65c9c1737f308621fd7104948ce18721c074b32c247c6151e91a6bae8",
+        "sha256": "f65758b65c9c1737f308621fd7104948ce18721c074b32c247c6151e91a6bae8"
+      },
+      "stdout": {
+        "id": "sha256:b4003e446276cf12e9e4a9ed406c9a3e10fb50fa695d871f701dca6c77cdae4b",
+        "sha256": "b4003e446276cf12e9e4a9ed406c9a3e10fb50fa695d871f701dca6c77cdae4b"
+      }
+    },
+    "process_end": {
+      "descendants": "unknown",
+      "ended_ns": 1792939008647741000,
+      "observed": true,
+      "returncode": 0
+    }
+  },
+  "denied_output_response": {
+    "evidence": {
+      "id": "sha256:b97ad47f6cec4d05e7611d60cd14956e40637a60f9f243918e35e2900877a89b",
+      "sha256": "b97ad47f6cec4d05e7611d60cd14956e40637a60f9f243918e35e2900877a89b"
+    },
+    "id": "composition-6",
+    "operation": "evidence.read",
+    "operation_outcome": {
+      "cause": "acquisition_denied",
+      "core_value": "out_of_frame",
+      "evidence": [],
+      "limits": [
+        "output availability only; no semantic acceptance"
+      ],
+      "predicate": "B(evidence.read): declared exact output/effect-evidence payload availability on the requested basis",
+      "source_parent": {
+        "clause": "results",
+        "member": "FOUNDATIONS.md",
+        "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+      },
+      "value": "refused(authority)"
+    },
+    "refusal": {
+      "code": "acquisition_denied",
+      "gaps": [],
+      "reason": "Receiving information policy excludes this provenance",
+      "source_refs": []
+    },
+    "result": null,
+    "schema": "a_c.fd-support.response/1",
+    "status": "refused"
+  },
+  "removed_event": {
+    "kind": "raw",
+    "payload": {
+      "attempt": {
+        "id": "sha256:a6b6828130032995f5154b9103017cda26d842dce79d8022889d7ccf6df6e605",
+        "sha256": "a6b6828130032995f5154b9103017cda26d842dce79d8022889d7ccf6df6e605"
+      },
+      "cursor": 1,
+      "data": {
+        "invocation": {
+          "argv": [
+            "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+            "-B",
+            "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-public-retry-dy4m65v5/workspace/inputs/control_actor.py"
+          ],
+          "cwd": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-public-retry-dy4m65v5/workspace",
+          "environment": {},
+          "executable": {
+            "path": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+            "sha256": "a7f5b535d61d1c7326824204ac80f045a97a652abb154421e2c74fcc365a3539"
+          },
+          "settings": {
+            "termination_grace_ms": 100,
+            "timeout_ms": 1500
+          },
+          "stdin_bytes": 8529,
+          "stdin_sha256": "7abb2ca730b202ccdda99109d1d56159d3cc18e6e40e085f33f0064a6c12210d",
+          "supervisor": {
+            "argv": [
+              "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+              "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py",
+              "_supervise",
+              "--policy",
+              "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-public-retry-dy4m65v5/policy-4.json",
+              "--policy-sha256",
+              "39064bc2f3c991bf4a6db489458e60b009e280119770ee11b33548aeb9743923",
+              "--principal",
+              "executive",
+              "--attempt-id",
+              "<immutable-anchor-id>",
+              "--attempt-sha256",
+              "<immutable-anchor-sha256>"
+            ],
+            "argv_template": "fixed-private-entry-with-anchor",
+            "modules": [
+              {
+                "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py",
+                "sha256": "91665d563dbb8c8811ab0def47dc12da39f3bccc523f99e42659a1b1ad4735ef"
+              },
+              {
+                "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_core.py",
+                "sha256": "afbe3ca69791bb566f07ffbf072692967b8e5a71eb8f12805d11a5d7029d9391"
+              },
+              {
+                "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_effects.py",
+                "sha256": "f1b5a92a31a05abade25810539bc78dc69c96768391f323625877da60df155c9"
+              },
+              {
+                "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_composition.py",
+                "sha256": "9cbf7e3dd19305bb48e841337bba1bf7cf38e0bbc475e835e6bf0f4091a2b25b"
+              }
+            ],
+            "python": {
+              "path": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+              "sha256": "a7f5b535d61d1c7326824204ac80f045a97a652abb154421e2c74fcc365a3539"
+            },
+            "startup": {
+              "policy": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-public-retry-dy4m65v5/policy-4.json",
+              "policy_sha256": "39064bc2f3c991bf4a6db489458e60b009e280119770ee11b33548aeb9743923",
+              "principal": "executive",
+              "python": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12"
+            }
+          }
+        },
+        "launch": "not-yet-established"
+      },
+      "kind": "reserved",
+      "observed_at_ns": 1792939008416172000,
+      "previous": null,
+      "schema": "a_c.fd-support.attempt-event/1"
+    },
+    "provenance": {
+      "actor": {
+        "actor_id": "executive",
+        "authorship": "executive",
+        "family": "A",
+        "operations": [
+          "checks.evaluate",
+          "composition.inspect",
+          "context.assemble",
+          "contract.preflight",
+          "dispatch.cancel",
+          "dispatch.observe",
+          "dispatch.start",
+          "events.wait",
+          "evidence.read",
+          "graph.project",
+          "records.find",
+          "records.read",
+          "refresh.prepare",
+          "relations.query",
+          "resources.aggregate",
+          "results.conjoin",
+          "return.capture",
+          "return.check",
+          "review.prepare",
+          "source.read",
+          "tools.describe",
+          "work.project",
+          "work.write",
+          "workspace.observe"
+        ],
+        "role": "Executive",
+        "role_binding": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "inputs/law.txt",
+          "root": "workspace",
+          "selector": null,
+          "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+        },
+        "role_transition": null
+      },
+      "attempt": {
+        "id": "sha256:a6b6828130032995f5154b9103017cda26d842dce79d8022889d7ccf6df6e605",
+        "sha256": "a6b6828130032995f5154b9103017cda26d842dce79d8022889d7ccf6df6e605"
+      },
+      "definition_sha256": "2651bb743b0b1b977ca58f0325f8177f69f6c00d23da8b22b0036ac4154ebeb9",
+      "method_profile_sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7",
+      "observed_interval": {
+        "clock": "unix_ns",
+        "ended_ns": 1792939008416173000,
+        "started_ns": 1792939008416173000
+      },
+      "policy_sha256": "39064bc2f3c991bf4a6db489458e60b009e280119770ee11b33548aeb9743923",
+      "product_id": "urn:test:product",
+      "request_id": "composition-3",
+      "request_sha256": "9828aaabcdaf2e618ee751e81ae91b2c89a57c960935a5b54d50892f6eeba79b",
+      "requester_principal": "executive",
+      "target_principal": "worker"
+    },
+    "schema": "a_c.fd-support.artifact/1"
+  },
+  "cancel_response": {
+    "evidence": {
+      "id": "sha256:483e11a81aec7d30f291a4b41affc0cd5989c7434c7ca0ae7cd9feb007ea5bdf",
+      "sha256": "483e11a81aec7d30f291a4b41affc0cd5989c7434c7ca0ae7cd9feb007ea5bdf"
+    },
+    "id": "composition-7",
+    "operation": "dispatch.cancel",
+    "operation_outcome": {
+      "cause": "history_incomplete",
+      "core_value": "invalid_basis",
+      "evidence": [],
+      "limits": [
+        "output availability only; no semantic acceptance"
+      ],
+      "predicate": "B(dispatch.cancel): declared exact output/effect-evidence payload availability on the requested basis",
+      "source_parent": {
+        "clause": "results",
+        "member": "FOUNDATIONS.md",
+        "sha256": "92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5"
+      },
+      "value": "refused(basis)"
+    },
+    "refusal": {
+      "code": "history_incomplete",
+      "gaps": [
+        {
+          "event_chain_gap_or_conflict": {
+            "attempt": {
+              "id": "sha256:a6b6828130032995f5154b9103017cda26d842dce79d8022889d7ccf6df6e605",
+              "sha256": "a6b6828130032995f5154b9103017cda26d842dce79d8022889d7ccf6df6e605"
+            },
+            "cursor": 2,
+            "data": {
+              "actor_launch": "not-established-by-supervisor-receipt",
+              "argv": [
+                "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+                "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py",
+                "_supervise",
+                "--policy",
+                "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-public-retry-dy4m65v5/policy-4.json",
+                "--policy-sha256",
+                "39064bc2f3c991bf4a6db489458e60b009e280119770ee11b33548aeb9743923",
+                "--principal",
+                "executive",
+                "--attempt-id",
+                "sha256:a6b6828130032995f5154b9103017cda26d842dce79d8022889d7ccf6df6e605",
+                "--attempt-sha256",
+                "a6b6828130032995f5154b9103017cda26d842dce79d8022889d7ccf6df6e605"
+              ],
+              "pid": 12989
+            },
+            "kind": "supervisor_spawned",
+            "observed_at_ns": 1792939008430455000,
+            "previous": {
+              "id": "sha256:f67523aa85a2f1c43fae2e8c571b147e778b61f5159907456ae1b27ff0b7637a",
+              "sha256": "f67523aa85a2f1c43fae2e8c571b147e778b61f5159907456ae1b27ff0b7637a"
+            },
+            "schema": "a_c.fd-support.attempt-event/1"
+          }
+        },
+        {
+          "event_chain_gap_or_conflict": {
+            "attempt": {
+              "id": "sha256:a6b6828130032995f5154b9103017cda26d842dce79d8022889d7ccf6df6e605",
+              "sha256": "a6b6828130032995f5154b9103017cda26d842dce79d8022889d7ccf6df6e605"
+            },
+            "cursor": 3,
+            "data": {
+              "external_effect": "not-transactionally-coupled-to-evidence",
+              "invocation": {
+                "argv": [
+                  "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+                  "-B",
+                  "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-public-retry-dy4m65v5/workspace/inputs/control_actor.py"
+                ],
+                "cwd": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-public-retry-dy4m65v5/workspace",
+                "environment": {},
+                "executable": {
+                  "path": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+                  "sha256": "a7f5b535d61d1c7326824204ac80f045a97a652abb154421e2c74fcc365a3539"
+                },
+                "settings": {
+                  "termination_grace_ms": 100,
+                  "timeout_ms": 1500
+                },
+                "stdin_bytes": 8529,
+                "stdin_sha256": "7abb2ca730b202ccdda99109d1d56159d3cc18e6e40e085f33f0064a6c12210d",
+                "supervisor": {
+                  "argv": [
+                    "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+                    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py",
+                    "_supervise",
+                    "--policy",
+                    "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-public-retry-dy4m65v5/policy-4.json",
+                    "--policy-sha256",
+                    "39064bc2f3c991bf4a6db489458e60b009e280119770ee11b33548aeb9743923",
+                    "--principal",
+                    "executive",
+                    "--attempt-id",
+                    "<immutable-anchor-id>",
+                    "--attempt-sha256",
+                    "<immutable-anchor-sha256>"
+                  ],
+                  "argv_template": "fixed-private-entry-with-anchor",
+                  "modules": [
+                    {
+                      "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py",
+                      "sha256": "91665d563dbb8c8811ab0def47dc12da39f3bccc523f99e42659a1b1ad4735ef"
+                    },
+                    {
+                      "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_core.py",
+                      "sha256": "afbe3ca69791bb566f07ffbf072692967b8e5a71eb8f12805d11a5d7029d9391"
+                    },
+                    {
+                      "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_effects.py",
+                      "sha256": "f1b5a92a31a05abade25810539bc78dc69c96768391f323625877da60df155c9"
+                    },
+                    {
+                      "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_composition.py",
+                      "sha256": "9cbf7e3dd19305bb48e841337bba1bf7cf38e0bbc475e835e6bf0f4091a2b25b"
+                    }
+                  ],
+                  "python": {
+                    "path": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+                    "sha256": "a7f5b535d61d1c7326824204ac80f045a97a652abb154421e2c74fcc365a3539"
+                  },
+                  "startup": {
+                    "policy": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-public-retry-dy4m65v5/policy-4.json",
+                    "policy_sha256": "39064bc2f3c991bf4a6db489458e60b009e280119770ee11b33548aeb9743923",
+                    "principal": "executive",
+                    "python": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12"
+                  }
+                }
+              }
+            },
+            "kind": "actor_launch_intent",
+            "observed_at_ns": 1792939008499945000,
+            "previous": {
+              "id": "sha256:9aa777d90eefaa497c293df45fecc93f10a209f42cbc075f476d49f3f1231408",
+              "sha256": "9aa777d90eefaa497c293df45fecc93f10a209f42cbc075f476d49f3f1231408"
+            },
+            "schema": "a_c.fd-support.attempt-event/1"
+          }
+        },
+        {
+          "event_chain_gap_or_conflict": {
+            "attempt": {
+              "id": "sha256:a6b6828130032995f5154b9103017cda26d842dce79d8022889d7ccf6df6e605",
+              "sha256": "a6b6828130032995f5154b9103017cda26d842dce79d8022889d7ccf6df6e605"
+            },
+            "cursor": 4,
+            "data": {
+              "executable": {
+                "path": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+                "sha256": "a7f5b535d61d1c7326824204ac80f045a97a652abb154421e2c74fcc365a3539"
+              },
+              "pid": 12991,
+              "receipt_scope": "local-process-start-only",
+              "settings": {
+                "termination_grace_ms": 100,
+                "timeout_ms": 1500
+              }
+            },
+            "kind": "actor_started",
+            "observed_at_ns": 1792939008525381000,
+            "previous": {
+              "id": "sha256:f7dd26c24058a36dbba2a5a90611319e8622a5ffb38a2b9ebda815cad6dd1fdb",
+              "sha256": "f7dd26c24058a36dbba2a5a90611319e8622a5ffb38a2b9ebda815cad6dd1fdb"
+            },
+            "schema": "a_c.fd-support.attempt-event/1"
+          }
+        },
+        {
+          "event_chain_gap_or_conflict": {
+            "attempt": {
+              "id": "sha256:a6b6828130032995f5154b9103017cda26d842dce79d8022889d7ccf6df6e605",
+              "sha256": "a6b6828130032995f5154b9103017cda26d842dce79d8022889d7ccf6df6e605"
+            },
+            "cursor": 5,
+            "data": {
+              "bytes": 8529,
+              "complete": true,
+              "context": {
+                "id": "sha256:cfb234fe486a29946d6f0ffc42612061af92b775a523869cbc3ce1482f3bcec0",
+                "sha256": "cfb234fe486a29946d6f0ffc42612061af92b775a523869cbc3ce1482f3bcec0"
+              },
+              "interval": {
+                "clock": "unix_ns",
+                "ended_ns": 1792939008569655000,
+                "started_ns": 1792939008569627000
+              },
+              "recipient": "worker",
+              "rendered_sha256": "7abb2ca730b202ccdda99109d1d56159d3cc18e6e40e085f33f0064a6c12210d",
+              "scope": "local child stdin write; mental attention/remote consumer receipt unknown"
+            },
+            "kind": "context_delivery",
+            "observed_at_ns": 1792939008582094000,
+            "previous": {
+              "id": "sha256:1fb652b8370dc58663e4a9b0f8eaa3f62c02f36460f85d14b8218e1b324e59df",
+              "sha256": "1fb652b8370dc58663e4a9b0f8eaa3f62c02f36460f85d14b8218e1b324e59df"
+            },
+            "schema": "a_c.fd-support.attempt-event/1"
+          }
+        },
+        {
+          "event_chain_gap_or_conflict": {
+            "attempt": {
+              "id": "sha256:a6b6828130032995f5154b9103017cda26d842dce79d8022889d7ccf6df6e605",
+              "sha256": "a6b6828130032995f5154b9103017cda26d842dce79d8022889d7ccf6df6e605"
+            },
+            "cursor": 6,
+            "data": {
+              "bytes_base64": "Q09OVFJPTC1ERU5JRUQtT1VUUFVULTk0OTIK",
+              "complete_slot": false,
+              "observed_bytes": 27,
+              "retained_bytes": 27,
+              "stream": "stdout"
+            },
+            "kind": "output_chunk",
+            "observed_at_ns": 1792939008628561000,
+            "previous": {
+              "id": "sha256:041924e562908d42f2279d7ef45fbc61329a74dcffe8a95af19596200f32b497",
+              "sha256": "041924e562908d42f2279d7ef45fbc61329a74dcffe8a95af19596200f32b497"
+            },
+            "schema": "a_c.fd-support.attempt-event/1"
+          }
+        },
+        {
+          "event_chain_gap_or_conflict": {
+            "attempt": {
+              "id": "sha256:a6b6828130032995f5154b9103017cda26d842dce79d8022889d7ccf6df6e605",
+              "sha256": "a6b6828130032995f5154b9103017cda26d842dce79d8022889d7ccf6df6e605"
+            },
+            "cursor": 7,
+            "data": {
+              "observed_bytes": {
+                "stderr": 0,
+                "stdout": 27
+              },
+              "process_end": {
+                "descendants": "unknown",
+                "ended_ns": 1792939008647741000,
+                "observed": true,
+                "returncode": 0
+              },
+              "stderr": {
+                "id": "sha256:f65758b65c9c1737f308621fd7104948ce18721c074b32c247c6151e91a6bae8",
+                "sha256": "f65758b65c9c1737f308621fd7104948ce18721c074b32c247c6151e91a6bae8"
+              },
+              "stdout": {
+                "id": "sha256:b4003e446276cf12e9e4a9ed406c9a3e10fb50fa695d871f701dca6c77cdae4b",
+                "sha256": "b4003e446276cf12e9e4a9ed406c9a3e10fb50fa695d871f701dca6c77cdae4b"
+              }
+            },
+            "kind": "output_finalized",
+            "observed_at_ns": 1792939008666243000,
+            "previous": {
+              "id": "sha256:922dbbaf0e7641491687991af4dddf0d9b630934496d61270c6397b06e1638c4",
+              "sha256": "922dbbaf0e7641491687991af4dddf0d9b630934496d61270c6397b06e1638c4"
+            },
+            "schema": "a_c.fd-support.attempt-event/1"
+          }
+        },
+        {
+          "event_chain_gap_or_conflict": {
+            "attempt": {
+              "id": "sha256:a6b6828130032995f5154b9103017cda26d842dce79d8022889d7ccf6df6e605",
+              "sha256": "a6b6828130032995f5154b9103017cda26d842dce79d8022889d7ccf6df6e605"
+            },
+            "cursor": 8,
+            "data": {
+              "effect": {
+                "core_value": "indeterminate",
+                "end_established": false,
+                "process_end_established": true,
+                "residuals": [
+                  "Generic process/return does not establish intended semantic outcome or all external/descendant effect end."
+                ],
+                "value": "completion_unknown"
+              },
+              "observations": {
+                "changes": [],
+                "gaps": [],
+                "observations": []
+              }
+            },
+            "kind": "effect_observation",
+            "observed_at_ns": 1792939008693486000,
+            "previous": {
+              "id": "sha256:b203705251acbde2ddc27be8229619af3d93883cf80a5dd46d7526c8c16a2a6c",
+              "sha256": "b203705251acbde2ddc27be8229619af3d93883cf80a5dd46d7526c8c16a2a6c"
+            },
+            "schema": "a_c.fd-support.attempt-event/1"
+          }
+        }
+      ],
+      "reason": "Cannot append to incomplete Attempt event chain",
+      "source_refs": []
+    },
+    "result": null,
+    "schema": "a_c.fd-support.response/1",
+    "status": "refused"
+  },
+  "cancel_refusal_contains_denied_output": true
+}

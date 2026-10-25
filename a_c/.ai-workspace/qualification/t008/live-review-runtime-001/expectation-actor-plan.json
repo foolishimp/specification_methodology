@@ -1,0 +1,107 @@
+{
+  "argv": [
+    "/Users/jim/.local/share/claude/versions/2.1.302",
+    "--print",
+    "--input-format",
+    "text",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--restricted",
+    "--strict-mcp-config",
+    "--mcp-config",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/live-review-runtime-001/reviewer.mcp.json",
+    "--tools=",
+    "--allowedTools",
+    "mcp__ac_review__*",
+    "--permission-mode",
+    "dontAsk",
+    "--permission-prompts",
+    "none",
+    "--disable-slash-commands",
+    "--no-chrome",
+    "--no-session-persistence",
+    "--effort",
+    "high",
+    "--system-prompt",
+    "You are the registered nonauthor T008 Reviewer in EXPECTATION-ONLY activation1. Use only the explicit ac_review MCP tools. Governing sources precede every candidate/HOW/code/test/proof/guide byte. Start with exact ReturnContract, reviewer instructions, governing-index and method-index SourceRefs in the packet, using source.read UTF8 small chunks. T008 authority is ONLY lines668–728. Never treat base64, a preview or a saved output path as a full read. Derive your own expectations from material Product/FD/FDV/TASK/RC9/independence sources; record actual earlier acquisition refs via OperationEvidence payload.acquisitions, then review.prepare phase expectation. Do not acquire candidate members or assess them in this call. Packet provides locator-only claim and shared wire apparatus, no answers. Return one unfenced strict integer-only a_c.fd-support.closed-return/1 JSON object. Use actual Context boundaries.activation_identity and exact packet frame/subject/basis/producer/consumer; Reviewer work_result null. source-derived-expectations covers actual performed scope; integrated-review is not_performed. This initial contract has proof.expectations null and cannot close assessment. Preserve all actual missing evidence/refusals/unknown exposure. No retry/fallback, source edit, native builtin, acceptance or owner disposition.\n"
+  ],
+  "backend": "claude",
+  "cwd": "/private/tmp/a-c-review-native-z3sp1bs8",
+  "decoder": "claude-result-jsonl/1",
+  "dependencies": [
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/examples/fd-support/actor_cli.py",
+      "sha256": "06cd55463fd23e45fbf56fa46de92b9ba49f6650e3dc5686e219544d5457b42c"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_core.py",
+      "sha256": "97b099812fc1f6964c83cd7df678e4a1fd0575e941c74549689fe4944f008820"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_graph.py",
+      "sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_effects.py",
+      "sha256": "9108d6ad10e412f5a0e981c88c06c7b37cb913a24286282da9aae752f239a586"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py",
+      "sha256": "4d1ea7fe98ec1b53f2a19d9a2fef2b3fbb070624c955fbb1e9e48f5cc88011b1"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/live-review-runtime-001/reviewer-tool-policy.json",
+      "sha256": "abfb32faea55bb0ab4ba3ccff31ee1418640e0987f0cb50f04d986aa4fe2ecae"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/live-review-runtime-001/reviewer.mcp.json",
+      "sha256": "bc5938d5c0d136279886f861e2c13375a4318dc5a3214b33c05fac5c6fb4da70"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/live-review-runtime-001/system-expectation.txt",
+      "sha256": "09fe6946727be486ecf3f5926b8f9f8f8fe6c19d8c2204ed5e22fbbb1d6ef17d"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/live-review-runtime-001/protocol/closed-return-format.json",
+      "sha256": "d0a27d9d7a92f61c1c412cdd34c24a9ebfa46e1b4d28f82ccb574472bc7fb293"
+    }
+  ],
+  "environment": {
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "LC_CTYPE": "C.UTF-8",
+    "LOGNAME": "jim",
+    "PATH": "/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/Library/Apple/usr/bin:/Library/TeX/texbin:/Users/jim/.codex/packages/app-server-daemon/releases/0.163.0-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0-macos/codex-arg0JtPKke:/Users/jim/.codex/tmp/arg0/codex-arg0CDnCoA:/Users/jim/.codex/packages/app-server-daemon/releases/0.162.1-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg0Bb4u1U:/Users/jim/.codex/packages/app-server-daemon/releases/0.162.0-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg0LxzuXl:/Users/jim/.codex/packages/app-server-daemon/releases/0.161.0-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg03BXQTA:/Users/jim/.codex/packages/app-server-daemon/releases/0.160.1-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg00N7H4l:/Users/jim/.codex/packages/app-server-daemon/releases/0.160.0-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg0KdMMgl:/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/codex-path:/Users/jim/.grok/bin:/Users/jim/.bun/bin:/Users/jim/google-cloud-sdk/bin:/opt/homebrew/opt/openjdk/bin:/Users/jim/bin:/usr/local/opt/openjdk@17/bin:/Users/jim/.pyenv/shims:/Users/jim/.pyenv/bin:/opt/homebrew/opt/curl/bin:/opt/homebrew/opt/openssl/bin:/Users/jim/.local/bin:/opt/homebrew/bin:/Users/jim/.cargo/bin:/Applications/iTerm.app/Contents/Resources/utilities:/opt/homebrew/bin/flutter",
+    "SHELL": "/bin/zsh",
+    "TERM": "dumb",
+    "TMPDIR": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/",
+    "USER": "jim"
+  },
+  "evidence_directory": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/live-review-runtime-001/actor-transports/expectation-001",
+  "executable": {
+    "path": "/Users/jim/.local/share/claude/versions/2.1.302",
+    "sha256": "5262ce9de86243fed0d21edc39b271555d56780d0112e2b194439fe1c6662d37"
+  },
+  "id": "urn:a-c:T008:review-expectation-cli-plan:001",
+  "limits": {
+    "max_input_bytes": 2097152,
+    "max_output_bytes": 16777216,
+    "termination_grace_ms": 5000,
+    "timeout_ms": 900000
+  },
+  "schema": "a_c.fd-support.actor-cli-plan/1",
+  "settings": {
+    "MCP": "only explicit ac_review config; actual init/toolscope must be observed",
+    "authentication": "existing native authentication; no credential inspection",
+    "automatic_host_managed_memory_exposure": "unknown",
+    "builtins": [],
+    "configuration": "restricted: user/project/local settings intentionally ignored; no preservation claim",
+    "context_capacity": null,
+    "permission_mode": "dontAsk",
+    "permission_prompts": "none",
+    "requested_effort": "high",
+    "requested_model": "native selected default; actual init not yet observed",
+    "timeout_selection": "900000ms helper /960000ms executor after observed prior600s Worker timeout; finite material-governing expectation scope only, no fit/benefit claim"
+  }
+}

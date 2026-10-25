@@ -1,0 +1,15 @@
+# Closed bounded residual repairs
+
+R1 now revalidates inherited typed plans, original authenticated Return carriers and their actual applicability through a finite visited traversal. A newly required exact predicate P sees an eligible inherited counterexample through one or two wrapping levels. It preserves current mandatory-result precedence, gaps, subject/basis/predicate/cardinality checks and the public result carrier; it does not promote inherited mandatory order.
+
+R2 now validates every surviving committed request owner against the whole request and exact Product/principal/policy before claim, completion or recovery. A missing required claim is held as `history_incomplete`; known identity mismatch is `request_identity_conflict`. The no-owner absence query selects stable Product/principal/request ID and typed carrier schemas rather than the current request digest. Canonical envelopes without required owners remain unknown and cause no new effect; they do not prove committed intent, effect or end. No claim is reconstructed automatically.
+
+All 35 selected methods pass (7.922s, no skips). Strict normal-import mypy passes the five owned files. Both final runs retain identical before/after source hashes. The initial 35-method run failed one overly broad wrong-subject fixture assertion; raw failure and exact initial sources remain frozen. The final assertion checks the retained original and gap distinction rather than treating the rejected carrier as authenticated applicable F. Product code did not change after the first runs.
+
+Actual public CLI/MCP proof covers append/replace exact replay with an unconsumed response, lost claim exact hold versus changed-body/policy conflict, further owner loss, canonical pre-owner changed-digest history hold, fresh IDs, authority denials, causal simultaneous callers and registered actor-side MCP Writer progress. Commands, requests, protocol bytes, target/evidence custody and exit statuses are indexed by `PUBLIC_EVIDENCE.json`. Test-only owner deletion and fatal barriers are identified by the tests and custody; no live protected store was altered.
+
+R1 uses controlled authenticated Return fixtures with only the `_qualified_operator` gate isolated. These checks establish neither a qualified public operator nor an F_P semantic judgment. No actual native/vendor/provider/F_P/model call, no full tenant/upstream/demo run, and no independent acceptance, RC, installation or efficiency claim is made.
+
+Exactly five granted Product files changed. Adapter, HOW, ticket, profile, common WHAT/PD, guide, original helpers and all 35 selected readonly guards are unchanged. All 7,498 regular members and three symbolic-link texts in the three prior closed manifests remain exact; symlinks were not followed. `INVARIANCE.json` scopes this proof and makes no whole-worktree cleanliness claim.
+
+The candidate is closed for Root consumption, independent code review and separate integrated qualification. Existing production bindings need Root-controlled renewal before any future actor activation. Source edits have stopped.

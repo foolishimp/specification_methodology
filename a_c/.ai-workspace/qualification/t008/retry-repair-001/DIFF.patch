@@ -1,0 +1,355 @@
+--- before/a_c/build_tenants/graphify/code/ac_support_core.py
++++ after/a_c/build_tenants/graphify/code/ac_support_core.py
+@@ -478,6 +478,7 @@
+             exact_keys(grant, ("id", "authority_sources", "outcome", "principals", "targets", "operations", "tools", "executors", "territory", "preconditions", "admission", "notification_sink"), label="grant")
+             if grant["id"] != grant_id:
+                 raise SupportError("contract_violation", "Grant key/id mismatch")
++            _admission_selection(grant["admission"])
+             for t in as_list(grant["territory"]):
+                 territory = as_object(t)
+                 validate_schema(territory, _SCOPE)
+@@ -511,6 +512,17 @@
+ 
+ def _strings(value: JSON) -> list[str]:
+     return [text(x) for x in as_list(value)]
++
++
++def _admission_selection(value: JSON) -> Object:
++    admission = as_object(value)
++    exact_keys(admission, ("mechanism_id", "mechanism_source", "authority_source",
++                          "required_predicates", "allowed_override_sources"),
++               ("required_reconciliation_predicates",), label="admission selection")
++    _strings(admission["required_predicates"])
++    if "required_reconciliation_predicates" in admission:
++        _strings(admission["required_reconciliation_predicates"])
++    return admission
+ 
+ 
+ def _unique(values: list[str], label: str) -> None:
+@@ -1686,8 +1698,7 @@
+         raise SupportError("unsupported_executor", "Fixed executor argv/cwd not bound to executable")
+     if any(not isinstance(value, str) for value in as_object(executor["environment"]).values()):
+         raise SupportError("unsupported_executor", "Executor environment must be an explicit string map")
+-    admission = as_object(grant["admission"])
+-    exact_keys(admission, ("mechanism_id", "mechanism_source", "authority_source", "required_predicates", "allowed_override_sources"))
++    admission = _admission_selection(grant["admission"])
+     if admission["mechanism_id"] != "product-policy-preflight/1":
+         raise SupportError("unsupported_contract", "Unsupported selected admission mechanism")
+     read_source(runtime, as_object(admission["mechanism_source"])); read_source(runtime, as_object(admission["authority_source"]))
+@@ -2542,19 +2553,25 @@
+                           grant: Object, basis: Object) -> Object:
+     predecessor = load_artifact(runtime, predecessor_ref, "attempt")
+     _profile_basis(runtime, basis)
+-    selected = _strings(as_object(grant["admission"])["required_predicates"])
++    admission = _admission_selection(grant["admission"])
++    selected = _strings(admission.get("required_reconciliation_predicates", []))
+     subject: Object = document({"id": predecessor_ref["id"], "sha256": predecessor_ref["sha256"]})
+     definitions = as_object(runtime.policy["predicates"])
+-    required = [identity for identity in selected if identity in definitions and _equal(as_object(definitions[identity])["subject"], subject) and _equal(as_object(definitions[identity])["basis"], basis)]
+-    if not required:
++    if not selected:
+         raise SupportError("effect_unreconciled", "Grant has no selected predecessor-bound reconciliation contract")
++    for identity in selected:
++        if identity not in definitions:
++            raise SupportError("effect_unreconciled", "Selected reconciliation predicate is not registered", [{"predicate_id": identity}])
++        definition = as_object(definitions[identity])
++        if not _equal(definition["subject"], subject) or not _equal(definition["basis"], basis):
++            raise SupportError("effect_unreconciled", "Selected reconciliation predicate does not bind this predecessor/current basis", [{"predicate_id": identity}])
+     supplied = load_artifact(runtime, evidence_ref, "operation")
+     records, query = _history(runtime, "operation", {"payload.request.operation": "checks.evaluate"})
+     records.append(supplied)
+     if query["complete"] is not True:
+         raise SupportError("history_incomplete", "Reconciliation evidence history is incomplete", [query])
+     actual: list[JSON] = []
+-    for identity in required:
++    for identity in selected:
+         matches: list[Object] = []
+         for record in records:
+             payload = as_object(record["payload"]); request = as_object(payload["request"])
+--- before/a_c/build_tenants/graphify/test_env/test_ac_support_core.py
++++ after/a_c/build_tenants/graphify/test_env/test_ac_support_core.py
+@@ -180,6 +180,37 @@
+     def value(self, response: Object) -> Object:
+         self.assertEqual(response["status"], "ok", response.get("refusal"))
+         return c.as_object(c.as_object(response["result"])["value"])
++
++    def test_reconciliation_selection_is_optional_and_closed(self) -> None:
++        admission = c.as_object(c.as_object(c.as_object(self.f.policy["grants"])["work"])["admission"])
++        self.f.runtime()  # Existing policy/1 without the new optional field.
++        for selected in ([], ["predecessor-settled"]):
++            admission["required_reconciliation_predicates"] = c._json(selected)
++            self.f.runtime()
++        for invalid_selected in (None, "predecessor-settled", [1], [""], [True]):
++            with self.subTest(selected=invalid_selected):
++                admission["required_reconciliation_predicates"] = c._json(invalid_selected)
++                with self.assertRaises(c.SupportError):
++                    self.f.runtime()
++        admission["required_reconciliation_predicates"] = []
++        admission["reconciliation_predicate_ids"] = []
++        with self.assertRaises(c.SupportError):
++            self.f.runtime()
++
++    def test_preflight_does_not_apply_predecessor_predicate_to_task_subject(self) -> None:
++        predecessor = obj({"id": "sha256:" + "b" * 64, "sha256": "b" * 64})
++        self.f.predicate("predecessor-settled", {"literal": False}, subject=predecessor)
++        admission = c.as_object(c.as_object(c.as_object(self.f.policy["grants"])["work"])["admission"])
++        admission["required_reconciliation_predicates"] = ["predecessor-settled"]
++        runtime = self.f.runtime()
++        response, _ = self.f.context(runtime)
++        context = c.as_object(c.as_object(response["result"])["artifact"])
++        plan = c.build_preflight(runtime, self.f.request("contract.preflight", {
++            "context": context, "grant_id": "work", "executor_id": "registered",
++            "result_key": "task-result", "observations": [],
++        }))
++        self.assertEqual(c.as_object(plan["payload"])["gaps"], [])
++        self.assertNotEqual(self.f.subject, predecessor)
+ 
+     def test_strict_json_lexical_and_duplicate_controls(self) -> None:
+         for raw in (b'{"x":1,"x":2}', b'{"x":1.0}', b'{"x":1e0}', b'{"x":NaN}', b'\xff'):
+--- before/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py
++++ after/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py
+@@ -3,6 +3,8 @@
+ These tests inspect actual filesystem/process effects. Synthetic lower-layer
+ Context/receipt carriers make no claim to Product/method admission qualification;
+ that full ordinary path is separately exercised by integration/actor assurance.
++PublicRetryTests below uses the actual CLI and public Context/preflight receipts
++for a bounded local-process retry regression; it is not actual F_P usability.
+ """
+ from __future__ import annotations
+ 
+@@ -26,6 +28,7 @@
+ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "code"))
+ import ac_support_core as c
+ import ac_support_effects as e
++from test_ac_support_core import Fixture
+ 
+ 
+ class MembraneCase(unittest.TestCase):
+@@ -772,7 +775,9 @@
+         self.assertEqual(target.read_text(), "1")
+         self.assertEqual(c.as_object(value["effect"])["value"], "completion_unknown")
+ 
+-    def test_selected_actual_reconciliation_allows_one_explicit_retry(self) -> None:
++    def test_lower_layer_selected_reconciliation_allows_one_explicit_retry(self) -> None:
++        # Synthetic receipt control only. PublicRetryTests exercises the actual
++        # context/preflight/check/dispatch composition without this shortcut.
+         runtime, request, target = self.actor_setup("count")
+         first = e.execute_effect(runtime, request, None)
+         predecessor = c.as_object(c.as_object(first["result"])["artifact"])
+@@ -782,7 +787,7 @@
+         (self.source / "work" / "reconcile.json").write_text('{"safe":true}')
+         definition: c.Object = {"id": "fixture-reconciliation", "source": self.source_ref("authority.txt"), "subject": predecessor, "basis": basis, "input_names": ["state"], "expression": {"op": "equals", "args": [{"input": "state", "pointer": "/safe"}, {"literal": True}]}, "limits": ["Fixture's supplied safe-repetition predicate; original effect end is unchanged."]}
+         c.as_object(self.policy["predicates"])["fixture-reconciliation"] = definition
+-        c.as_object(c.as_object(c.as_object(self.policy["grants"])["fixture-grant"])["admission"])["required_predicates"] = ["fixture-reconciliation"]
++        c.as_object(c.as_object(c.as_object(self.policy["grants"])["fixture-grant"])["admission"])["required_reconciliation_predicates"] = ["fixture-reconciliation"]
+         self.runtime = self.runtime_for("executive")
+         self.store = e.EvidenceStore(self.runtime)
+         runtime = self.runtime.with_callbacks(self.store.resolve, self.store.query_artifacts)
+@@ -806,5 +811,207 @@
+         self.assertEqual(c.as_object(first_observation["effect"])["value"], "completion_unknown")
+ 
+ 
++class PublicRetryTests(unittest.TestCase):
++    """CLI composition controls, using real receipts and a local process only."""
++
++    def setUp(self) -> None:
++        self.temp = tempfile.TemporaryDirectory(prefix="ac-public-retry-")
++        self.root = Path(self.temp.name).resolve()
++        self.f = Fixture(self.root)
++        self.sequence = 0
++        self.policy_version = 0
++        self.policy_path = self.root / "not-selected.json"
++        self.policy_sha = ""
++        self.code = Path(__file__).resolve().parents[1] / "code"
++        self.python = Path(sys.executable).resolve()
++        fixture = Path(__file__).resolve().parent / "support_fixtures" / "local_actor.py"
++        dependency = self.f.write("inputs/actor.py", fixture.read_bytes())
++        self.target = self.f.workspace / "outputs" / "counter.txt"
++        executor = c.as_object(c.as_object(self.f.policy["executors"])["registered"])
++        executor["argv"] = [str(self.python), str(self.f.workspace / "inputs" / "actor.py"), "count", str(self.target)]
++        executor["dependencies"] = [dependency]
++        executor["settings"] = {"timeout_ms": 1500, "termination_grace_ms": 100}
++        self._select_policy()
++
++    def tearDown(self) -> None:
++        custody = os.environ.get("AC_SUPPORT_EFFECTS_PROOF_ROOT")
++        if custody is not None:
++            destination = Path(custody).resolve() / self.id().replace(".", "_")
++            destination.parent.mkdir(parents=True, exist_ok=True)
++            shutil.copytree(self.root, destination)
++            (destination / "CUSTODY.json").write_bytes(c.canonical({
++                "test": self.id(), "original_root": str(self.root),
++                "standing": "Actual public CLI/local process fixture evidence; no F_P usability or production retry.",
++                "source_sha256": hashlib.sha256((self.code / "ac_support_core.py").read_bytes()).hexdigest(),
++            }))
++        self.temp.cleanup()
++
++    def _select_policy(self) -> None:
++        self.policy_version += 1
++        self.policy_path = self.root / ("policy-" + str(self.policy_version) + ".json")
++        raw = c.canonical(self.f.policy)
++        self.policy_path.write_bytes(raw)
++        self.policy_sha = hashlib.sha256(raw).hexdigest()
++
++    def _public(self, operation: str, arguments: c.Object) -> c.Object:
++        self.sequence += 1
++        folder = self.root / "calls" / (str(self.sequence).zfill(3) + "-" + operation)
++        folder.mkdir(parents=True)
++        request: c.Object = {"schema": c.REQUEST, "id": "public-" + str(self.sequence),
++                             "operation": operation, "arguments": arguments}
++        request_path = folder / "request.json"
++        request_path.write_bytes(c.canonical(request))
++        argv = [str(self.python), "-B", str(self.code / "ac_support.py"),
++                "--policy", str(self.policy_path), "--policy-sha256", self.policy_sha,
++                "--principal", "executive", "call", "--request", str(request_path)]
++        started = time.time_ns()
++        process = subprocess.run(argv, cwd=self.root, capture_output=True, timeout=10,
++                                 env={"PATH": os.defpath, "PYTHONDONTWRITEBYTECODE": "1"}, check=False)
++        (folder / "stdout.bin").write_bytes(process.stdout)
++        (folder / "stderr.bin").write_bytes(process.stderr)
++        (folder / "execution.json").write_bytes(c.canonical(c.document({
++            "argv": argv, "started_ns": started, "ended_ns": time.time_ns(),
++            "returncode": process.returncode, "policy_sha256": self.policy_sha,
++        })))
++        response = c.as_object(c.parse_json(process.stdout))
++        self.assertIsNotNone(response["evidence"], response)
++        return response
++
++    def _ok(self, response: c.Object) -> c.Object:
++        self.assertEqual(response["status"], "ok", response.get("refusal"))
++        return c.as_object(c.as_object(response["result"])["value"])
++
++    def _admit(self, context: c.Object) -> c.Object:
++        response = self._public("contract.preflight", {
++            "context": context, "grant_id": "work", "executor_id": "registered",
++            "result_key": "public-counter", "observations": [],
++        })
++        self._ok(response)
++        ref = c.as_object(c.as_object(response["result"])["artifact"])
++        return ref
++
++    def _finished(self, attempt: c.Object) -> c.Object:
++        deadline = time.monotonic() + 5
++        while time.monotonic() < deadline:
++            response = self._public("dispatch.observe", {"attempt": attempt, "after_event": 0})
++            value = self._ok(response)
++            if value["process_end"] is not None and any(c.as_object(event)["kind"] == "effect_observation" for event in c.as_list(value["events"])):
++                return response
++            time.sleep(0.05)
++        self.fail("Public registered fixture did not finish within its bounded deadline")
++
++    def _retry_case(self, variant: str) -> None:
++        core_sha = hashlib.sha256((self.code / "ac_support_core.py").read_bytes()).hexdigest()
++        assembled = self._public("context.assemble", {
++            "packet": self.f.packet(), "models": [], "sources": [self.f.law],
++            "late_acquisition": [], "envelope": {"capacity_bytes": None,
++                "boundary": "executor-stdin-utf8", "host_context": {
++                    "state": "unknown", "bytes": None, "evidence": None}},
++        })
++        self._ok(assembled)
++        context = c.as_object(c.as_object(assembled["result"])["artifact"])
++        first = self._public("dispatch.start", {"preflight": self._admit(context)})
++        self._ok(first)
++        predecessor = c.as_object(c.as_object(first["result"])["artifact"])
++        observed = self._finished(predecessor)
++        self.assertEqual(self.target.read_text(), "1")
++        self.assertEqual(c.as_object(self._ok(observed)["effect"])["value"], "completion_unknown")
++        source = self.f.write("inputs/reconciliation-contract.json", {
++            "meaning": "The exact registered local counter fixture process has an observed successful end; owner-selected explicit repetition may increment it once. No all-effects/descendant end or semantic acceptance is claimed.",
++            "proof": "Actual protected dispatch.observe OperationEvidence on the predecessor; no asserted safe Boolean substitutes.",
++        })
++        prefix = "/payload/response_without_evidence/result/value/"
++        expression: c.Object = {"op": "all", "args": [
++            {"op": "equals", "args": [{"input": "observed", "pointer": prefix + "attempt"}, {"literal": predecessor}]},
++            {"op": "equals", "args": [{"input": "observed", "pointer": prefix + "process_end/observed"}, {"literal": True}]},
++            {"op": "equals", "args": [{"input": "observed", "pointer": prefix + "process_end/returncode"}, {"literal": 17 if variant == "false" else 0}]},
++        ]}
++        definition: c.Object = {"id": "predecessor-observed", "source": source,
++            "subject": predecessor, "basis": self.f.basis, "input_names": ["observed"],
++            "expression": expression, "limits": ["Actual fixture-process end only; prior generic effect remains unknown."]}
++        definitions = c.as_object(self.f.policy["predicates"])
++        definitions["predecessor-observed"] = definition
++        admission = c.as_object(c.as_object(c.as_object(self.f.policy["grants"])["work"])["admission"])
++        if variant == "admission-only":
++            admission_definition = copy.deepcopy(definition)
++            admission_definition["id"] = "task-admission"
++            admission_definition["subject"] = self.f.subject
++            admission_definition["input_names"] = ["context"]
++            admission_definition["expression"] = {"op": "equals", "args": [
++                {"input": "context", "pointer": "/packet/subject_basis/subject"}, {"literal": self.f.subject}]}
++            definitions["task-admission"] = admission_definition
++            admission["required_predicates"] = ["task-admission"]
++        else:
++            admission["required_reconciliation_predicates"] = [] if variant == "empty" else ["predecessor-observed"]
++        if variant.startswith("mixed-"):
++            wrong = copy.deepcopy(definition)
++            wrong["id"] = "wrong-selected"
++            if variant == "mixed-subject":
++                wrong["subject"] = self.f.subject
++            elif variant == "mixed-basis":
++                wrong["basis"] = {"method_profile": self.f.basis["method_profile"], "observations": [observed["evidence"]]}
++            if variant != "mixed-unknown":
++                definitions["wrong-selected"] = wrong
++            admission["required_reconciliation_predicates"] = ["predecessor-observed", "wrong-selected"]
++        self._select_policy()
++        check_basis = self.f.basis
++        if variant == "invalid-basis":
++            extra = self._public("workspace.observe", {"scope": [{"root": "workspace", "path": "Product.json", "kind": "file"}]})
++            self._ok(extra)
++            check_basis = {"method_profile": self.f.basis["method_profile"],
++                           "observations": [c.as_object(extra["result"])["artifact"]]}
++        proof = observed
++        if variant != "missing":
++            proof = self._public("checks.evaluate", {
++                "predicate_id": "predecessor-observed", "inputs": {"observed": observed["evidence"]},
++                "subject": predecessor, "basis": check_basis,
++            })
++            judgment = c.as_object(self._ok(proof)["judgment"])
++            expected = "falsified" if variant == "false" else "invalid_basis" if variant == "invalid-basis" else "satisfied"
++            self.assertEqual(judgment["core_value"], expected)
++        receipt = self._admit(context)
++        retried = self._public("dispatch.start", {"preflight": receipt,
++            "retry_of": context if variant == "wrong-predecessor" else predecessor,
++            "reconciliation": proof["evidence"]})
++        if variant == "positive":
++            self._ok(retried)
++            self._finished(c.as_object(c.as_object(retried["result"])["artifact"]))
++            self.assertEqual(self.target.read_text(), "2")
++        else:
++            self.assertEqual(c.as_object(retried["refusal"])["code"], "effect_unreconciled", retried)
++            self.assertEqual(self.target.read_text(), "1")
++        self.assertEqual(hashlib.sha256((self.code / "ac_support_core.py").read_bytes()).hexdigest(), core_sha)
++
++    def test_public_selected_retry(self) -> None:
++        self._retry_case("positive")
++
++    def test_public_retry_requires_actual_check(self) -> None:
++        self._retry_case("missing")
++
++    def test_public_retry_refuses_false_check(self) -> None:
++        self._retry_case("false")
++
++    def test_public_retry_refuses_invalid_check_basis(self) -> None:
++        self._retry_case("invalid-basis")
++
++    def test_public_retry_refuses_wrong_predecessor(self) -> None:
++        self._retry_case("wrong-predecessor")
++
++    def test_public_retry_absent_selection_stays_held(self) -> None:
++        self._retry_case("admission-only")
++
++    def test_public_retry_empty_selection_stays_held(self) -> None:
++        self._retry_case("empty")
++
++    def test_public_retry_checks_every_selected_subject(self) -> None:
++        self._retry_case("mixed-subject")
++
++    def test_public_retry_checks_every_selected_basis(self) -> None:
++        self._retry_case("mixed-basis")
++
++    def test_public_retry_checks_every_selected_registered_id(self) -> None:
++        self._retry_case("mixed-unknown")
++
++
+ if __name__ == "__main__":
+     unittest.main()

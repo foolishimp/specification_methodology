@@ -1,0 +1,28 @@
+def _capture(plan: Plan, payload: bytes, output: Path, inherited: dict[str, str]) -> Object:
+    value = plan.document
+    limits = _object(value["limits"])
+    maximum = _integer(limits["max_output_bytes"])
+    timeout = _integer(limits["timeout_ms"]) / 1000
+    grace = _integer(limits["termination_grace_ms"]) / 1000
+    started = time.time_ns()
+    process: subprocess.Popen[bytes] | None = None
+    failure: str | None = None
+    signals: list[JSON] = []
+    counts = {"stdout": 0, "stderr": 0}
+    eof = {"stdout": False, "stderr": False}
+    forwarded = 0
+    with (output / "vendor.stdout").open("xb", buffering=0) as stdout, (output / "vendor.stderr").open("xb", buffering=0) as stderr:
+        selector = selectors.DefaultSelector()
+        try:
+            # Recheck the same frozen plan and all dependencies at the actual
+            # launch edge. Neither a new prompt nor settings are appended.
+            load_plan(plan.path, plan.sha256)
+            process = subprocess.Popen(
+                [_text(item) for item in cast(list[JSON], value["argv"])],
+                executable=_text(_object(value["executable"])["path"]),
+                cwd=_text(value["cwd"]),
+                env={**{key: cast(str, item) for key, item in _object(value["environment"]).items()}, **inherited},
+                stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                shell=False,
+            )
+            assert process.stdin is not None and process.stdout is not None and process.stderr is not None

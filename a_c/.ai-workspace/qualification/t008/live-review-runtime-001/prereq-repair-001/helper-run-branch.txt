@@ -1,0 +1,34 @@
+def run(plan: Plan, source: BinaryIO, target: BinaryIO) -> int:
+    output = _path(plan.document["evidence_directory"])
+    if output.exists():
+        raise TransportError("Evidence directory must be fresh; previous attempts are never overwritten")
+    if not output.parent.is_dir():
+        raise TransportError("Evidence parent must already exist")
+    output.mkdir(mode=0o700)
+    _save(output / "plan.json", plan.raw)
+    limits = _object(plan.document["limits"])
+    payload = source.read(_integer(limits["max_input_bytes"]) + 1)
+    _save(output / "context.bin", payload)
+    # These paths come unchanged from the actual registered helper process,
+    # never from the plan/request. No credential files or values are acquired.
+    inherited = {name: os.environ[name] for name in ("HOME", "home", "CODEX_HOME") if name in os.environ}
+    invocation: Object = {
+        "schema": "a_c.fd-support.actor-cli-invocation/1", "plan_sha256": plan.sha256,
+        "backend": plan.document["backend"], "executable": plan.document["executable"],
+        "argv": plan.document["argv"], "dependencies": plan.document["dependencies"],
+        "cwd": plan.document["cwd"], "environment": plan.document["environment"],
+        "protected_environment_pass_through": {key: value for key, value in inherited.items()},
+        "protected_environment_provenance": "unchanged values already present in the registered helper process; absent stays absent",
+        "settings_declared": plan.document["settings"], "decoder": plan.document["decoder"],
+        "input_sha256": hashlib.sha256(payload).hexdigest(), "input_bytes": len(payload),
+        "input_complete": len(payload) <= _integer(limits["max_input_bytes"]),
+        "authority": "none conferred by helper; actual registered Attempt/Preflight owns authentication and Context binding",
+        "limitations": ["No shell, prompt append, helper retry, model migration, global configuration or HOME/CODEX_HOME override",
+                        "Selected settings/default preservation and complete helper/loader dependencies require exact operator proof; labels are declarations"],
+    }
+    _save_json(output / "invocation.json", invocation)
+    if not invocation["input_complete"]:
+        _save_json(output / "result.json", {"output_available": False, "actor_launched": False, "failure": "input byte bound exceeded; retained Context prefix only"})
+        return 2
+    observed = _capture(plan, payload, output, inherited)
+    _save_json(output / "process.json", observed)

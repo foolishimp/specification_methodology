@@ -1,0 +1,196 @@
+{
+  "actual_common_final_bundle": "not yet available; synthetic fixture only",
+  "controls": [
+    {
+      "detail": {
+        "members": 207
+      },
+      "name": "archive-safe-relative-regular-sorted-members",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "archive-fixed-metadata",
+      "passed": true
+    },
+    {
+      "detail": {
+        "result": {
+          "claim": "Exact bundle custody, bounded structural checks and carrier recovery; no semantic acceptance, source-method release, or public-distribution authorization.",
+          "displayed_records": 7,
+          "inventory_files": 205,
+          "model": {
+            "id": "urn:a-c:toy:model:proposal",
+            "sha256": "bb2ce4d3833f069cc057e607ecba55a06d5e39256d556ce14ea89561b965cc5a"
+          },
+          "omitted_records": 7,
+          "physical_grounding_occurrences": 0,
+          "records": 14,
+          "source": {
+            "bytes": 3298515,
+            "files": 81,
+            "semantic_files": 58
+          },
+          "status": "passed",
+          "subject": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6"
+        },
+        "returncode": 0,
+        "stderr": ""
+      },
+      "name": "clean-extraction-stdlib-replay",
+      "passed": true
+    },
+    {
+      "detail": {
+        "bytes": 2832836,
+        "file": "repack.tar.gz",
+        "format": "deterministic tar.gz; sorted files, fixed0644 uid/gid/mtime0, blank owner names, gzip mtime0",
+        "sha256": "3039c12f2ade06ebc30fd148acaa2812411189977b0abcc90d09336a549d3452"
+      },
+      "name": "archive-byte-reproducible",
+      "passed": true
+    },
+    {
+      "detail": {
+        "returncode": 2,
+        "stderr": "{\"status\": \"refusal\", \"reason\": \"bundle has missing or extra unlisted files\"}"
+      },
+      "name": "missing-model-refused",
+      "passed": true
+    },
+    {
+      "detail": {
+        "returncode": 2,
+        "stderr": "{\"status\": \"refusal\", \"reason\": \"bundle bytes changed: model.json\"}"
+      },
+      "name": "tampered-model-refused",
+      "passed": true
+    },
+    {
+      "detail": {
+        "returncode": 2,
+        "stderr": "{\"status\": \"refusal\", \"reason\": \"bundle bytes changed: carrier.json\"}"
+      },
+      "name": "tampered-carrier-refused",
+      "passed": true
+    },
+    {
+      "detail": {
+        "returncode": 2,
+        "stderr": "{\"status\": \"refusal\", \"reason\": \"bundle bytes changed: source/standards/ACTIVATION.md\"}"
+      },
+      "name": "tampered-source-refused",
+      "passed": true
+    },
+    {
+      "detail": {
+        "returncode": 2,
+        "stderr": "{\"status\": \"refusal\", \"reason\": \"bundle bytes changed: release_tools/vendor/vis-network-9.1.6.min.js\"}"
+      },
+      "name": "tampered-runtime-refused",
+      "passed": true
+    },
+    {
+      "detail": {
+        "returncode": 2,
+        "stderr": "{\"status\": \"refusal\", \"reason\": \"bundle has missing or extra unlisted files\"}"
+      },
+      "name": "missing-review-refused",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "unsafe-member-refused:'../escape'",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "unsafe-member-refused:'/absolute'",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "unsafe-member-refused:'a//b'",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "unsafe-member-refused:'a/./b'",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "unsafe-member-refused:'a/../b'",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "unsafe-member-refused:'a\\\\b'",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "unsafe-member-refused:''",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "symlink-archive-input-refused",
+      "passed": true
+    },
+    {
+      "detail": [
+        [
+          "script",
+          "src",
+          "release_tools/vendor/vis-network-9.1.6.min.js"
+        ],
+        [
+          "a",
+          "href",
+          "records.html"
+        ],
+        [
+          "a",
+          "href",
+          "index.html"
+        ]
+      ],
+      "name": "graph-no-external-runtime-source",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "runtime-sri-retained",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "no-private-run-files",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "standing-honest",
+      "passed": true
+    },
+    {
+      "detail": {
+        "lines": 1734
+      },
+      "name": "source-line-addresses-present",
+      "passed": true
+    },
+    {
+      "detail": {
+        "stderr": ""
+      },
+      "name": "record-browser-js-syntax",
+      "passed": true
+    }
+  ],
+  "interactive_behavior": "unverified; no browser or server launched",
+  "scratch": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-common-package-review-xfvu8s7v",
+  "status": "bounded_controls_passed",
+  "wrong_review_binding_finding_retained": true
+}

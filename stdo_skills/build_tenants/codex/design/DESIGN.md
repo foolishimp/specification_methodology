@@ -1,6 +1,11 @@
-# Codex tenant design — T001 successor 1
+# Codex tenant design
 
-Recorded before implementation. Scope: build_tenants/codex and .ai-workspace/work/T001/codex/actor/successor-1 only; construction authority is successor codex/TASK.md SHA256 4c33deea408deef15ac9900f66d5986b06efefb94de40697cf249d536770845b, grant urn:stdo-skills:T001:codex:construction:2. No Product acceptance, publication or installation is claimed.
+The sections through “Successor construction decisions” retain the original
+T-001 successor-1 design and evidence coordinates. They describe that historical
+construction. The selected T-002 increment is specified below; its current source
+routes and new evidence replace no historical receipt.
+
+Recorded before the T-001 implementation. Scope: build_tenants/codex and .ai-workspace/work/T001/codex/actor/successor-1 only; construction authority is successor codex/TASK.md SHA256 4c33deea408deef15ac9900f66d5986b06efefb94de40697cf249d536770845b, grant urn:stdo-skills:T001:codex:construction:2. No Product acceptance, publication or installation is claimed.
 
 ## Basis and source ownership
 
@@ -33,7 +38,7 @@ Codex mechanics are independently sourced in operator codex/HOST.md SHA256 6f940
 
 Native method profile urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1 SHA256 a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7 is selected. tools.describe reports provisional construction support, not qualification. Its builder identity v2.5.1-rc.2 is distinct from this selected operation binding. There is no supported native results.conjoin. Executive consumption is F_P under its granted relation; any decision must preserve required predicates, applicability, incompatible bases and unresolved contradictions.
 
-Host reads, SHA256 computation and static package checks are declared auxiliary mechanics. They establish byte/structure facts only and never replace required source.read, workspace.observe, work.write, admission or assessment results. All current construction deliverables are written with work.write, own observation and exact preimage; postimage and OperationEvidence are then read. Unknown completion stops dependent writing pending reconciliation.
+Host reads, SHA256 computation and static package checks are declared auxiliary mechanics. They establish byte/structure facts only and never replace required source.read, workspace.observe, work.write, admission or assessment results. The original T-001 construction deliverables were written with work.write, own observation and exact preimage; postimage and OperationEvidence are then read. Unknown completion stops dependent writing pending reconciliation.
 
 A failed required operation withholds its dependent claim. Independent work can continue under its existing grant. No automatic retries, authorization renewal or publication follow from successful transport. A missing installation or ambiguous Product is a basis problem, not a request to adopt latest. An unperformed assessment has no core result; performed inconclusive assessment is indeterminate; construction without an output is incomplete for candidate availability.
 
@@ -45,8 +50,26 @@ Q01-Q12 actual host trials, source-first independent assessment, release and own
 
 ## Successor construction decisions
 
-The earlier text was a refused proposal, not an adopted design. HISTORY.json retains that failure and does not prove universal external-effect absence. This new activation authorizes scoped ordinary mkdir and the repaired public CLI. This design is written before implementation under that new grant. The current Worker reran the manager verification successfully and acquired all common deciding sources through public source.read.
+The earlier text was a refused proposal, not an adopted design. HISTORY.json retains that failure and does not prove universal external-effect absence. That T-001 successor activation authorized scoped ordinary mkdir and the repaired public CLI. That design was written before its implementation under that grant. The T-001 Worker reran the manager verification successfully and acquired all common deciding sources through public source.read.
 
-Deliver one stdo-work/SKILL.md with references/basis.md, tools.md, delegation.md, recovery.md, release-install.md and qualification.md. A package-local source-routes.json preserves exact source locators without copying the method. The tenant README carries installation commands; tests/verify_package.py performs only read-only finite metadata, contained-path, resource and inventory checks. inventory.json freezes all tenant regular files except itself; its own digest is returned separately. Assessment/transition records stay in the actor territory so the assessed package remains frozen. Every artifact content uses work.write after current containing-directory observation; allowed host mkdir checks every ancestor for symlinks. No peer or global effects, nested model calls or installation happen in this construction.
+Deliver one stdo-work/SKILL.md with references/basis.md, tools.md, delegation.md, recovery.md, release-install.md and qualification.md. A package-local source-routes.json preserves exact source locators without copying the method. The tenant README carries installation commands; tests/verify_package.py performs only read-only finite metadata, contained-path, resource and inventory checks. inventory.json freezes all tenant regular files except itself; its own digest is returned separately. Assessment/transition records stay in the actor territory so the assessed package remains frozen. Every original T-001 artifact content used work.write after current containing-directory observation; allowed host mkdir checks every ancestor for symlinks. No peer or global effects, nested model calls or installation happen in this construction.
 
 The skill uses the host mechanics acquired from HOST.md and local skill-authoring guidance. These establish documented instruction paths only. The declared 0.164.0 host remains the qualification target; automatic discovery, explicit invocation, model resolution and installation behavior require actual later trials. Existing tool responses establish supported schemas and narrow operation output, not automatic semantic acceptance. The public tools.describe response and all writes retain OperationEvidence. Required operation failure stops its dependent branch with the actual cause.
+
+
+## Composition consumer increment — T-002
+
+SK-13 is realized by a conditional `references/composition.md` route from the
+progressive entry and the existing tools/delegation/recovery references. The
+algorithm resolves the selected Product closure through the capable manager,
+inspects the optional trusted a_c binding, acquires only eligible material on the
+actual guarded path and retains currentness/exposure/obligations across handoffs.
+The manager's mechanical result is separate from authority and adequacy. Source
+selection stays in the target activation; installed 3.0.1 remains the method.
+
+The reusable skill carries actual command/envelope shapes, not duplicate resolver
+or guard code. Historical T-001 native write receipts cover their original cut.
+This increment uses the explicitly delegated filesystem Writer mechanism while
+the provider is constructed and later exercises the frozen public read/inspect
+path. New package/scenario evidence is kept outside the tenant; actual host
+qualification and the earlier limits are not promoted by these checks.

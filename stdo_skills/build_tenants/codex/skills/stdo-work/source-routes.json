@@ -1,6 +1,6 @@
 {
   "schema": "stdo-skills.codex.source-routes/1",
-  "standing": "construction provenance; target workspace supplies its own definition and grants",
+  "standing": "T-002 construction provenance; installed method remains 3.0.1; target workspace supplies its own definition, eligible context and grants",
   "method": {
     "uri": "stdo://releases/v3.0.1-rc.1/",
     "manifest_sha256": "60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8"
@@ -12,7 +12,7 @@
       "path": "specification/PRODUCT.md",
       "root": "product",
       "selector": null,
-      "sha256": "7e667a594717645aa51fa23b757a95283ad60e5eca4e59d24246a62ce2716803"
+      "sha256": "3d82158ec65928a119a7739df70250bf4abc0d046c0bcf2e37f0b3b0f46a3f8a"
     },
     {
       "engine": "workspace-regular-file",
@@ -28,7 +28,7 @@
       "path": "specification/requirements/README.md",
       "root": "product",
       "selector": null,
-      "sha256": "dcc2564e597d3d3c8fcff025a515f4a92a62e7f3aa2f7ba80af97f7db75f6acc"
+      "sha256": "5e88f0c2d751d089047b5b3181f8c8d25e14a607b487a3fc0322164e71a77dac"
     },
     {
       "engine": "workspace-regular-file",
@@ -44,7 +44,7 @@
       "path": "specification/REFERENCE_FRAME_BASIS.md",
       "root": "product",
       "selector": null,
-      "sha256": "00a91bb5a16ba8802cb2d3132c08677c978f3ef50d4e6c61d864c5afdb960baa"
+      "sha256": "19a738781f5eaf25dcbf5a69f19b7e8d4786078f709228748c175f4da01e5d33"
     },
     {
       "engine": "workspace-regular-file",
@@ -52,7 +52,7 @@
       "path": "specification/SOURCE_OWNERS.md",
       "root": "product",
       "selector": null,
-      "sha256": "15300e9871b842cb6ab81b360fe9717766638e82abc2d1cf06c5cebc2febfca3"
+      "sha256": "e7238336c93ccfe54e3717d5f832dd48c875255bc8ea86e6ca07585b9acc69ef"
     },
     {
       "engine": "workspace-regular-file",
@@ -60,13 +60,13 @@
       "path": "stdo_skills.json",
       "root": "product",
       "selector": null,
-      "sha256": "4339a7dbc735052c08962154966fc13a4e30206d42ba2e80b53c6009a5008c22"
+      "sha256": "753474f0e152ab6a3e0df31926b26b3e85a1b35a3ed996d4379df294cbc40e71"
     },
     {
       "engine": "workspace-regular-file",
       "object": null,
-      "path": "codex/HOST.md",
-      "root": "successor",
+      "path": ".ai-workspace/work/T001/operator/successor-1/codex/HOST.md",
+      "root": "product",
       "selector": null,
       "sha256": "6f940ea5514cf8ea3e0b359adbb0337d3ff020c414aca54c502befab9665213e"
     },
@@ -103,7 +103,55 @@
       "root": "tool",
       "selector": null,
       "sha256": "a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "specification/composition/A_C_SUPPORT.md",
+      "root": "product",
+      "selector": null,
+      "sha256": "a024e684e324738b54af3e8cad9a062f86148f03ce1e29aa50166e71aa7dd822"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "specification/composition/SOURCE_MANIFEST.json",
+      "root": "product",
+      "selector": null,
+      "sha256": "84888009e7d653a77ab43f2e4c28824f5c2c129e4b2fb40bc1e5584ba56d9fbd"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": ".ai-workspace/tickets/active/T-002-composition-support.md",
+      "root": "product",
+      "selector": null,
+      "sha256": "e56c25a521aaa47aceeaa95979b106188ed5ce14e5f042dac065c885e55c4271"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": ".ai-workspace/work/COMPOSITION_01/operator-successor-04/OPERATOR_SELECTION.md",
+      "root": "product",
+      "selector": null,
+      "sha256": "1274270ad565537b1aa7a51c45987b4c639f3e4b53221ae97cc928673ada3724"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": ".ai-workspace/work/COMPOSITION_01/operator-successor-04/OWNER.json",
+      "root": "product",
+      "selector": null,
+      "sha256": "6f5227782622d7cb7e46ef346f02c0921cca2e9743050c279806100a77bba336"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "build_tenants/graphify/design/fd-composition.md",
+      "root": "tool",
+      "selector": null,
+      "sha256": "3db27e7bff31aaea9a96339d3393f69f17c9d2418f51781551fa8a9fa1d904ca"
     }
   ],
-  "resolution": "Root aliases require the active exact policy. Resolve method under the verified installation, common construction sources under the STDO Skills source project. Missing provenance routes do not authorize substitution."
+  "resolution": "Root aliases require the active exact policy. Product is the STDO Skills source project; tool is the selected a_c provider; method is the verified installed release. Historical T001 HOST bytes retain their original provenance. SOURCE_MANIFEST selects the actual development code. These construction references grant no access or authority to a future activation."
 }

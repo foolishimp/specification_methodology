@@ -1,0 +1,1621 @@
+{
+  "concepts": [
+    {
+      "conditions": [],
+      "definition": "A durable authoritative work record that survives sessions and work waves. Its carrier defaults to one Markdown file; its identity and authority are distinct from a run-scoped execution contract.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":85,
+          "quote":"ticket survives sessions and work waves;",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F1.%20Work%20carriers%2FExecution%20contracts",
+          "start_line":82
+        },
+        {
+          "end_line":330,
+          "quote":"Each ticket has one durable authoritative record; the default carrier is\none markdown file.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FOne%20durable%20record%20per%20ticket",
+          "start_line":329
+        }
+      ],
+      "key":"ticket",
+      "label":"Ticket"
+    },
+    {
+      "conditions": [],
+      "definition": "The current admitted execution function for one run, derived from a ticket, a sprint manifest with an included ticket or iteration entry, or drafted during intake when no durable or sprint-local work identity is required. Drafting, admission, rejection and supersession remain distinct states.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":85,
+          "quote":"An execution contract is the run-scoped\nadmitted work surface",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F1.%20Work%20carriers%2FExecution%20contracts",
+          "start_line":78
+        },
+        {
+          "end_line":683,
+          "quote":"(drafted, admitted, rejected, superseded).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FExecution%20contract%20admission",
+          "start_line":683
+        }
+      ],
+      "key":"execution_contract",
+      "label":"Execution contract"
+    },
+    {
+      "conditions": [],
+      "definition": "A subordinate closure-bearing work claim with stable identity, bounded claim, relevant dependencies, current state, required evidence and an explicit relation to ticket closure. Several milestones may belong to one ticket.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":106,
+          "quote":"Each milestone has stable identity, a bounded claim,\nrelevant dependencies, current state, required evidence, and an explicit\nrelation to ticket closure (P3).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F1.%20Work%20carriers%2FMilestones%20and%20phase-scoped%20truth%20%28UP-006%29",
+          "start_line":104
+        }
+      ],
+      "key":"milestone",
+      "label":"Milestone"
+    },
+    {
+      "conditions": [],
+      "definition": "Product-definition locations for work carriers: ticketing.goals locates the epic layer; optional ticketing.sprints.root locates bounded execution batches and sprint-close review; ticketing.tickets.lanes.backlog, .active and .completed locate ticket authority; ticketing.comments.root locates discussion and publication. The definition locates carriers without owning their ticket or comment content.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":157,
+          "quote":"The definition locates these carriers and\ndoes not own their ticket or comment content.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F2.%20Layout%20and%20authority%2FBindings%20and%20projections",
+          "start_line":156
+        }
+      ],
+      "key":"carrier_binding",
+      "label":"Work-carrier binding"
+    },
+    {
+      "conditions": [],
+      "definition": "A generated board or other derived presentation of work authority. Comments, dashboards, registers, indexes and summaries are projections; visibility, repetition and recency do not confer authority.",
+      "exceptions": [
+        "A board becomes the ticket authority only through explicit product-definition rebinding with no rival remaining."
+      ],
+      "grounding": [
+        {
+          "end_line":163,
+          "quote":"that board is a projection only and does not become the source of truth\nunless the product definition explicitly rebinds the ticket authority to\nthat carrier and no rival remains (§7).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F2.%20Layout%20and%20authority%2FBindings%20and%20projections",
+          "start_line":161
+        },
+        {
+          "end_line":1269,
+          "quote":"Comments,\ndashboards, registers, indexes and generated summaries are projections",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FOne-truth%20state%20projection%20and%20drift%20refusal%20%28UP-009%29",
+          "start_line":1267
+        }
+      ],
+      "key":"work_projection",
+      "label":"Work-state projection"
+    },
+    {
+      "conditions": [],
+      "definition": "The one durable record of a sprint, whose lifetime covers one bounded execution batch and its close review. A local Markdown file is the default carrier.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":84,
+          "quote":"a sprint survives one bounded\nexecution batch and its close review;",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F1.%20Work%20carriers%2FExecution%20contracts",
+          "start_line":82
+        },
+        {
+          "end_line":185,
+          "quote":"Each sprint has one durable manifest record; the default carrier is one\nmarkdown file.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F3.%20Sprint%20rules%2FOne%20durable%20record%20per%20sprint",
+          "start_line":183
+        }
+      ],
+      "key":"sprint_manifest",
+      "label":"Sprint manifest"
+    },
+    {
+      "conditions": [],
+      "definition": "Declared sprint states minimally comprise active, closing, closed and superseded. Active admits iteration within the boundary; closing freezes new iteration during review and paydown classification; closed denotes finished review with all remaining debt accepted, ticketed, repriced or removed; superseded denotes replacement of an incorrect boundary by a new authority surface, sprint or ticket set.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":217,
+          "quote":"The minimum sprint status model is `active`, `closing`, `closed` and\n`superseded`",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F3.%20Sprint%20rules%2FSprint%20status",
+          "start_line":211
+        }
+      ],
+      "key":"sprint_status",
+      "label":"Sprint status"
+    },
+    {
+      "conditions": [],
+      "definition": "A result for one reviewed item, separate from the core assessment it consumes. For the predicate that the item is accepted as compliant under sprint authority: accepted maps to accept/satisfied; local_paydown maps to local_repair/falsified; design_reframe, requirement_reprice and product_reprice map to re_enter/invalid_basis; remove maps to falsified with no matching disposition. Debt outcomes map correspondingly: accepted to accept/satisfied, ticketed to local_repair/falsified, repriced to re_enter/invalid_basis, removed to falsified with no matching disposition.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":294,
+          "quote":"Each classification\ntakes exactly one core value, for the predicate \"the reviewed item is\naccepted as compliant under the sprint authority\"",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F3.%20Sprint%20rules%2FClose%20review",
+          "start_line":291
+        },
+        {
+          "end_line":316,
+          "quote":"accepted matches `accept` (`satisfied`), ticketed\nmatches `local_repair` (`falsified`), removed takes `falsified` with no\nmatching disposition, and repriced matches `re_enter`\n(`invalid_basis`)",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F3.%20Sprint%20rules%2FClose%20review",
+          "start_line":313
+        }
+      ],
+      "key":"sprint_close_result",
+      "label":"Sprint-close classification and debt outcome"
+    },
+    {
+      "conditions": [],
+      "definition": "The kind of work record. The minimum common types are feature, bug, spike and chore; the source expects this default set to suffice for most cases.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":412,
+          "quote":"The minimum common set of ticket types is `feature`, `bug`, `spike` and\n`chore`.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FTypes",
+          "start_line":410
+        }
+      ],
+      "key":"ticket_type",
+      "label":"Ticket type"
+    },
+    {
+      "conditions": [],
+      "definition": "The execution or migration discipline governing a ticket, orthogonal to its type and change class. The minimum categories are ordinary and implementation_migration; feature, bug, spike and chore may each carry either.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":421,
+          "quote":"category answers what execution or migration\ndiscipline governs the ticket",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FCategory",
+          "start_line":418
+        }
+      ],
+      "key":"ticket_category",
+      "label":"Ticket category"
+    },
+    {
+      "conditions": [],
+      "definition": "The intake-triage declaration of lawful constitutional re-entry, distinct from ticket type and execution discipline. Named classes include goal_reprice, intent_reprice, product_reprice, requirement_reprice, design_reframe and realization_refactor. Common pairings are illustrative: feature with the first five, bug with requirement_reprice/design_reframe/realization_refactor, chore with design_reframe/realization_refactor; a spike still carries its current triage class.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":452,
+          "quote":"change class answers where the change lawfully\nre-enters the constitutional chain.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FChange%20class",
+          "start_line":449
+        }
+      ],
+      "key":"change_class",
+      "label":"Change class"
+    },
+    {
+      "conditions": [],
+      "definition": "Intake classification consuming the computed result for the declared owner/layer traversal, complete relevant public membership and value delta, accepted-design scope and trace coverage, and rule-determined treatment. The owning carrier references that exact result and its residuals.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":476,
+          "quote":"The owning work carrier references that\nexact result and its residuals; a new role does not repeat an unchanged\nwalk",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FUpward%20propagation%20check",
+          "start_line":474
+        }
+      ],
+      "key":"intake_triage",
+      "label":"Intake triage and upward propagation"
+    },
+    {
+      "conditions": [],
+      "definition": "Declared ticket states minimally comprise backlog, active and completed. Their corresponding lanes mean accepted durable work outside current execution focus, the current bounded execution set, and closed work retained as history. State labels are not evaluation results.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":521,
+          "quote":"The minimum ticket status model is `backlog`, `active` and `completed`.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FStatus",
+          "start_line":519
+        },
+        {
+          "end_line":546,
+          "quote":"`backlog`\nis accepted durable work that should remain visible but is not part of the\ncurrent execution focus; `active` is the current bounded execution set;\n`completed` is closed work retained as history.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FLanes",
+          "start_line":543
+        }
+      ],
+      "key":"ticket_state",
+      "label":"Ticket status and lane"
+    },
+    {
+      "conditions": [],
+      "definition": "One admitted upstream work item with multiple build-tenant execution lines. Upstream authority and tenant-local tickets have distinct identities and lifecycles. The three lawful cases are upstream-only with no tenant duplicate yet, single-tenant with no sibling required, and multi-tenant with one upstream authority ticket plus one suffixed ticket per tenant execution line. The referenced build-tenancy context is urn:stdo:bounded-context:build-tenancy; this member owns its work-item/lifecycle relation, not tenant identity or realisation meaning.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":350,
+          "quote":"A multi-build-tenant work item is one admitted upstream work item with more\nthan one build-tenant execution line.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FMulti-build-tenant%20independence",
+          "start_line":348
+        }
+      ],
+      "key":"multi_build_tenant_work",
+      "label":"Multi-build-tenant work item"
+    },
+    {
+      "conditions": [],
+      "definition": "A ticket for governed replacement of one implementation truth path by another across producers, consumers, projections and proof surfaces. Examples include replacing a tracker/read-model authority, introducing a public interface requiring producer and consumer migration, or removing an authoritative bridge or compatibility facade.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":428,
+          "quote":"a governed\nreplacement of one implementation truth path with another across producers,\nconsumers, projections and proof surfaces",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FCategory",
+          "start_line":422
+        }
+      ],
+      "key":"migration_ticket",
+      "label":"Implementation migration ticket"
+    },
+    {
+      "conditions": [],
+      "definition": "A declared migration-strategy field with values inside_out_hard_break and fundamental_re_adoption; the value is a carrier state, not a core result.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":792,
+          "quote":"The required fields are `migration_strategy`, with the values\n`inside_out_hard_break` and `fundamental_re_adoption`",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FDeclaration%20and%20checklist",
+          "start_line":790
+        }
+      ],
+      "key":"migration_strategy",
+      "label":"Migration strategy"
+    },
+    {
+      "conditions": [],
+      "definition": "A declared library_usage field, with none, consume and extend values, recording whether an active migration boundary rebuilds locally, consumes an existing reusable library/commonisation surface, or extends that surface before local implementation lands.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":855,
+          "quote":"An implementation migration ticket declares whether the active boundary is\nrebuilding a pattern locally, consuming an existing reusable library or\ncommonisation surface, or extending that surface before the local\nimplementation lands; `library_usage` records which",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FRecurring%20realisation%20and%20library%20declaration",
+          "start_line":852
+        }
+      ],
+      "key":"library_usage",
+      "label":"Library usage declaration"
+    },
+    {
+      "conditions": [
+        "Core-interface, carrier or authoritative-contract migration."
+      ],
+      "definition": "A named walk of every live interface capable of bypassing, reinterpreting, replaying or projecting the migrating truth path, with interface-specific closure assertions.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":938,
+          "quote":"The checklist is a named walk of every live\ninterface that can still bypass, reinterpret, replay or project the\nmigrating truth path",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FImpacted%20interface%20review%20checklist",
+          "start_line":936
+        }
+      ],
+      "key":"interface_review_checklist",
+      "label":"Impacted Interface Review Checklist"
+    },
+    {
+      "conditions": [
+        "Implementation migration touches a core interface."
+      ],
+      "definition": "Required Break Order, or an equivalent ordered execution section, running outward from authoritative source truth: discover the full best-guess interface family; publish/admit the new carrier; deliberately sever and keep broken one old authoritative seam; rebind the deepest semantic kernel; remove/demote old producers; rebind old consumers; reprice projections, reports, prompts, delivery bindings and tests. With several old interfaces, a Break-To-Closure Map identifies the closure-law clause discharged by each break.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":985,
+          "quote":"a `Break-To-Closure Map` stating which break closes which closure-law clause;",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FBreak%20order%20and%20break-to-closure%20map",
+          "start_line":984
+        }
+      ],
+      "key":"migration_break_order",
+      "label":"Migration break order and closure map"
+    },
+    {
+      "conditions": [],
+      "definition": "Assessment independent of the author of the exact reviewed subject, with subject, basis, scope, exclusions, evidence, verdict and unresolved findings identified. Authoring authority and independent verification authority differ.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1044,
+          "quote":"Authority to author or implement a change is not independent authority to\nverify it.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FExecution%20and%20verification%20authority%20separation%20%28UP-007%29",
+          "start_line":1037
+        }
+      ],
+      "key":"independent_review",
+      "label":"Independent assessment"
+    },
+    {
+      "conditions": [
+        "A residual judgment is needed by another activation."
+      ],
+      "definition": "A once-recorded judgment attached to its owning work in the existing selected carrier, identifying the question, exact subject and basis, supporting computed facts/evidence, responsible actor and authority, scoped conclusion, uncertainty and concrete revising observation. Rule-settled questions require no invented J record.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1103,
+          "quote":"A residual judgment that another activation needs is recorded once, with\nits owning work, in the existing carrier selected under §5.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FRecorded%20judgment%20and%20owner-ruling%20continuity",
+          "start_line":1095
+        }
+      ],
+      "key":"recorded_judgment",
+      "label":"Recorded residual judgment"
+    },
+    {
+      "conditions": [],
+      "definition": "A direct or lawfully proxied owner ruling retained in original wording with owner, exact subject and basis, permitted scope/effects, conditions and source, separately from agent interpretation. It is distinct from residual judgment.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1129,
+          "quote":"A direct or lawfully proxied owner ruling is recorded in its original\nwording, with its owner, exact subject and basis, permitted scope and\neffects, conditions and source, separately from agent interpretation.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FRecorded%20judgment%20and%20owner-ruling%20continuity",
+          "start_line":1122
+        }
+      ],
+      "key":"owner_ruling",
+      "label":"Owner ruling"
+    },
+    {
+      "conditions": [],
+      "definition": "The owner's separate authorized act establishing retained, superseded, deferred or withdrawn for an exact obligation, subject and basis. These four dispositions are lifecycle states without automatic core mappings. A material decision record identifies disposition, owner/grant, governing conditions, evidence, affected dependencies, remaining obligations and revisiting conditions.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1152,
+          "quote":"The four repricing dispositions are lifecycle states of an obligation,\nset by its owning authority. A state label is not an evaluation result and\nhas no automatic core mapping.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FRecorded%20judgment%20and%20owner-ruling%20continuity",
+          "start_line":1145
+        }
+      ],
+      "key":"repricing_decision",
+      "label":"Material repricing decision"
+    },
+    {
+      "conditions": [
+        "An evaluation of the owner decision is actually performed."
+      ],
+      "definition": "Evaluation of whether the named owner lawfully establishes the disposition for the exact obligation, subject and basis, satisfying all applicable conditions and preserving every surviving obligation. repricing_established maps to satisfied; repricing_falsified to falsified; repricing_indeterminate to indeterminate; repricing_out_of_frame to out_of_frame; repricing_invalid_basis to invalid_basis. These concern repricing legality, not candidate acceptance or delivery.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1170,
+          "quote":"| `repricing_indeterminate` | indeterminate | admissible evidence cannot decide whether the decision meets an applicable condition; the undecided condition and needed evidence remain explicit |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FRecorded%20judgment%20and%20owner-ruling%20continuity",
+          "start_line":1168
+        }
+      ],
+      "key":"repricing_result",
+      "label":"Repricing evaluation result"
+    },
+    {
+      "conditions": [],
+      "definition": "A bounded work claim with declared obligations, exact subject/basis/scope, required judgments and owner rulings, evidence and non-closure conditions. Its completion is condition-based; reviewer occurrence or a status label is not completion.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1189,
+          "quote":"A work claim is complete only when every applicable declared obligation is\nsatisfied by valid evidence for its exact subject, basis and scope;",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FCondition-based%20closure%20and%20reuse",
+          "start_line":1183
+        }
+      ],
+      "key":"work_claim",
+      "label":"Work claim"
+    },
+    {
+      "conditions": [],
+      "definition": "A proof projection from admitted work authority. A substantive test should derive through ticket, intake triage, lawful re-entry, and governing requirement/design/module/published function/carrier/closure surface to its expectation.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1224,
+          "quote":"Tests are proof projections from admitted work authority.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FTest%20case%20authority",
+          "start_line":1219
+        }
+      ],
+      "key":"test_case",
+      "label":"Ticket-local test case"
+    },
+    {
+      "conditions": [],
+      "definition": "F13 is the source's work-carrier derivation family, tracing carrier selection, claims and closure to commitments and instance premises: differing lifetimes, competing-looking surfaces, multiple tenants, migrations and variable carriers. Its table reports P0 as recovered; P1/P2/P3/P4a/P6 as independent; P4b as derived from P0/P2 under non-reacquirable step facts; P5 as derived from P0/P6 under an open-world premise. It distinguishes derived consequences from member choices and external owners; it does not itself decide the linked owners' questions.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":579,
+          "quote":"Its instance premises, which the commitments do\nnot supply, are named in the rows",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FFoundation%20to%20law%3A%20work%20carriers",
+          "start_line":570
+        }
+      ],
+      "key":"work_carrier_derivation",
+      "label":"F13 work-carrier derivation and consumer index"
+    },
+    {
+      "conditions": [],
+      "definition": "Three recommended document shapes carrying the earlier required fields/sections: a sprint manifest, ordinary ticket and implementation migration ticket. The sprint example SPRINT-2026-04-30-operational-projection concerns layout/readability/interaction/evidence iteration, excludes product truth/data contracts/runtime-governance changes/new constructive carriers, declares realization_refactor, records UXI-001 screenshot evidence and pending contrast debt, and closes by walkthrough with explicit escrow/paydown. Ordinary example T-001 is an active feature/product_reprice at product re-entry to make the Product layer explicit, requiring PRODUCT.md, intent -> product -> requirements bootstrap and reconciled examples/reconstruction. Migration example B-010 is an active bug/design_reframe at design_surface, inside_out_hard_break, library_usage none with boundary-specific rationale; it replaces synthetic fallback gap truth with declared-obligation projection plus separately classified fallback gaps on the operator-query acceptance path, explicitly declares no disjoint scope, lists old/new producers, consumers and derived surfaces, and repeats the migration checklist. These are examples, not instantiated work records or proof that their claims hold.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1283,
+          "quote":"These shapes are the recommended carriers of the fields and sections the\nrules above require;",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F8.%20Recommended%20shapes",
+          "start_line":1279
+        },
+        {
+          "end_line":1402,
+          "quote":"- closure_law: migration closes only when the old projection is no longer authoritative within the affected scope and mixed old/new proof does not count as acceptance",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F8.%20Recommended%20shapes",
+          "start_line":1402
+        }
+      ],
+      "key":"recommended_carrier_shapes",
+      "label":"Recommended carrier templates"
+    },
+    {
+      "conditions": [
+        "The default local-file carrier is selected."
+      ],
+      "definition": "Humans and agents directly read the active folder; backlog remains searchable durable work without competing for immediate attention. The model assumes rg suffices to find active work and requires neither database nor board. Supplied shell lines illustrate searches for headings/status/type/goal and ticket identifiers; they are documentary examples.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1430,
+          "quote":"that `rg`\nis sufficient for finding active work; and that no database or board is\nrequired",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F9.%20Operating%20mode%20and%20relationships%2FOperating%20mode",
+          "start_line":1428
+        }
+      ],
+      "key":"local_file_operating_mode",
+      "label":"Default local-file operating mode"
+    },
+    {
+      "conditions": [],
+      "definition": "Distinct surface roles: goals identify the current broad work wave; SPEC_METHOD identifies constitutional change class/re-entry; sprints price bounded-batch proof/evidence/paydown; tickets hold durable work units and state; comments record proposals, argument, decisions, review and handoff; POSTING_GUIDE specifies comment publication structure/naming. This separation prevents overloaded goal backlogs, diluted active focus, informal comment status and accidental board authority.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1446,
+          "quote":"Each surface answers one question (P3, P6).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F9.%20Operating%20mode%20and%20relationships%2FRelationship%20to%20other%20surfaces",
+          "start_line":1440
+        }
+      ],
+      "key":"work_surface_roles",
+      "label":"Work-surface role separation"
+    },
+    {
+      "conditions": [
+        "Adoption is optional and belongs to the adopting Product."
+      ],
+      "definition": "Tier-3, application-neutral model-family signature for immutable application histories over externally mutable subjects. Stable concept identity: urn:stdo:concept:traversal-occurrence-profile; owning bounded context: urn:stdo:bounded-context:traversal-occurrence-profile. It imports one exact a_c basis without amending a_c, becoming universal, or importing consumer identities. Occurrence, lineage, EventFrontier, SemanticAdmissionCut and Projection are profile-specific meanings, not core release cuts/product lineage or other members' frontiers; frontier_projection judges a Projection record and is not AC-011 projection.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":24,
+          "quote":"a `frontier_projection`\njudgment judges a `Projection` record and is not an",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE",
+          "start_line":22
+        },
+        {
+          "end_line":50,
+          "quote":"Availability is not adoption.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FPosition",
+          "start_line":47
+        }
+      ],
+      "key":"occurrence_profile",
+      "label":"Traversal occurrence profile"
+    },
+    {
+      "conditions": [
+        "The Product adopts the profile and its instance premises."
+      ],
+      "definition": "Material family F19 imports F3 results/combination and F9 a_c under PROFILES §1. Adopted premises are I1 externally changing subject reality with stable binding, I2 one exact a_c basis, and I3 separately identified effects under owner-issued grants; these premises do not follow from foundations. Reported commitment standing is P0 recovered; P1/P3/P6 independent; P4b derived from P0/P2; P5 derived from P0/P6. The table separates consequences, profile policy choices and adopting-Product choices, with an internal consumer index.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":72,
+          "quote":"Its instance premises hold where a Product adopts the profile; they are\nadopted with it and do not follow from the foundations",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FPosition%2FFoundation%20to%20law",
+          "start_line":61
+        }
+      ],
+      "key":"occurrence_foundation_family",
+      "label":"F19 premises, consequences and owners"
+    },
+    {
+      "conditions": [],
+      "definition": "The profile represents an immutable occurrence per exact traversal application; stable external subject binding; bounded pre/post observations; intended typed outcomes; separately authorized operations/evidence; immutable admitted framework-event facts; candidate claims, judgments and materialized typed relations; explicit frontiers and frontier-bound projections; distinct identity dependency, causal subgraphs and wider typed lineage.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":122,
+          "quote":"- distinct identity dependency, causal subgraphs and wider typed lineage.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FScope",
+          "start_line":122
+        }
+      ],
+      "key":"occurrence_representation_scope",
+      "label":"Occurrence-profile representation scope"
+    },
+    {
+      "conditions": [
+        "An exact AxiomaticCalculusBasis identity b_ac is selected."
+      ],
+      "definition": "Profile-owned notation Sigma_occurrence = instantiate_signature(b_ac, OccurrenceSignatureDefinition). The definition imports unchanged RecordKind_ac and closes sorts, relation/constraint/judgment/residual/stop kinds, auxiliary values, field references and inherited functor references. An occurrence model remains M_occ,b = (b, I, O, E, C, L, X, V, T, J), with semantic-object→O, typed-relation→E, constraint→C, latitude→L, residual→X, traversal→V, transformation→T, judgment→J. This is subject-defined notation, not an operation performed by this interpretation.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":146,
+          "quote":"`instantiate_signature` and `OccurrenceSignatureDefinition` are this\nprofile's own notation; the calculus defines neither.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FImported%20calculus%20boundary",
+          "start_line":137
+        }
+      ],
+      "key":"occurrence_signature",
+      "label":"Occurrence signature and model populations"
+    },
+    {
+      "conditions": [],
+      "definition": "Profile SemanticObject sort requiring value fields model_identity, model_sha256 and profile_basis_ref.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":192,
+          "quote":"| `OccurrenceModelSubject` | `model_identity`, `model_sha256`, `profile_basis_ref` |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line":192
+        }
+      ],
+      "key":"occurrence_model_subject",
+      "label":"OccurrenceModelSubject"
+    },
+    {
+      "conditions": [],
+      "definition": "Profile identity-record sort, not an executor; value requires traversal_ref, functor_kind_ref, input_refs and application_contract_ref.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":193,
+          "quote":"| `TraversalApplication` | `traversal_ref`, `functor_kind_ref`, `input_refs`, `application_contract_ref` |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line":193
+        }
+      ],
+      "key":"traversal_application",
+      "label":"TraversalApplication"
+    },
+    {
+      "conditions": [],
+      "definition": "Profile sort for an exact application occurrence; value requires application_ref, traversal_ref, functor_kind_ref, subject_binding_ref, intended_outcome_ref, lineage_refs and identity_dependency_refs.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":194,
+          "quote":"| `Occurrence` | `application_ref`, `traversal_ref`, `functor_kind_ref`, `subject_binding_ref`, `intended_outcome_ref`, `lineage_refs`, `identity_dependency_refs` |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line":194
+        }
+      ],
+      "key":"profile_occurrence",
+      "label":"Occurrence"
+    },
+    {
+      "conditions": [],
+      "definition": "Stable external-subject binding sort requiring subject_ref, authority_ref and invalidation_ref; its value contains no mutable content digest.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":195,
+          "quote":"| `SubjectBinding` | `subject_ref`, `authority_ref`, `invalidation_ref`; no mutable content digest |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line":195
+        }
+      ],
+      "key":"subject_binding",
+      "label":"SubjectBinding"
+    },
+    {
+      "conditions": [],
+      "definition": "Bounded-observation sort requiring subject_binding_ref, observation_kind, observer_ref, evidence_ref, evidence_sha256 and observation_coordinate_ref. Core observation_kind values are pre_effect, post_effect and external_observation.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":196,
+          "quote":"| `Observation` | `subject_binding_ref`, `observation_kind`, `observer_ref`, `evidence_ref`, `evidence_sha256`, `observation_coordinate_ref` |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line":196
+        }
+      ],
+      "key":"profile_observation",
+      "label":"Observation"
+    },
+    {
+      "conditions": [],
+      "definition": "Intended typed-outcome sort requiring outcome_ref, outcome_contract_ref and comparison_basis_ref.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":197,
+          "quote":"| `IntendedOutcome` | `outcome_ref`, `outcome_contract_ref`, `comparison_basis_ref` |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line":197
+        }
+      ],
+      "key":"intended_outcome",
+      "label":"IntendedOutcome"
+    },
+    {
+      "conditions": [],
+      "definition": "Identity-record sort, not an executor, requiring operation_contract_ref, target_sort_ref and invalidation_ref. Consumer instances belong to the adopting Product's finite population declared through its exact compatible signature and mapping; the core profile supplies no such instances.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":198,
+          "quote":"| `OperationKind` | `operation_contract_ref`, `target_sort_ref`, `invalidation_ref` |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line":198
+        }
+      ],
+      "key":"operation_kind",
+      "label":"OperationKind"
+    },
+    {
+      "conditions": [],
+      "definition": "Separately identified effect-operation sort, not an executor; value requires operation_kind_ref, subject_binding_ref, effect_territory_ref, operation_contract_ref and invalidation_ref.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":199,
+          "quote":"| `EffectOperation` | `operation_kind_ref`, `subject_binding_ref`, `effect_territory_ref`, `operation_contract_ref`, `invalidation_ref` |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line":199
+        }
+      ],
+      "key":"effect_operation",
+      "label":"EffectOperation"
+    },
+    {
+      "conditions": [],
+      "definition": "Owner-issued operation-grant sort requiring issuer_ref, subject_binding_ref, allowed_operation_kind_refs, allowed_effect_territory_ref and invalidation_ref.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":200,
+          "quote":"| `OperationGrant` | `issuer_ref`, `subject_binding_ref`, `allowed_operation_kind_refs`, `allowed_effect_territory_ref`, `invalidation_ref` |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line":200
+        }
+      ],
+      "key":"operation_grant",
+      "label":"OperationGrant"
+    },
+    {
+      "conditions": [],
+      "definition": "Invocation sort requiring occurrence_ref, operation_ref, executor_ref, actor_ref, operation_grant_ref, effect_territory_ref and input_refs; these identify distinct coordinates.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":201,
+          "quote":"| `EffectInvocation` | `occurrence_ref`, `operation_ref`, `executor_ref`, `actor_ref`, `operation_grant_ref`, `effect_territory_ref`, `input_refs` |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line":201
+        }
+      ],
+      "key":"effect_invocation",
+      "label":"EffectInvocation"
+    },
+    {
+      "conditions": [],
+      "definition": "Effect-disposition sort requiring invocation_ref_or_none, disposition, post_observation_ref_or_none, effect_evidence_refs and residual_ref_or_none. Core disposition values are no_effect, completed_effect, partial_effect and refused_effect; exact value-to-core mappings are not provided in the supplied sort section.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":202,
+          "quote":"| `EffectDisposition` | `invocation_ref_or_none`, `disposition`, `post_observation_ref_or_none`, `effect_evidence_refs`, `residual_ref_or_none` |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line":202
+        }
+      ],
+      "key":"effect_disposition",
+      "label":"EffectDisposition"
+    },
+    {
+      "conditions": [],
+      "definition": "Effect-evidence sort requiring invocation_ref, evidence_kind, evidence_refs, evidence_sha256_refs and observation_limit_ref.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":203,
+          "quote":"| `EffectEvidence` | `invocation_ref`, `evidence_kind`, `evidence_refs`, `evidence_sha256_refs`, `observation_limit_ref` |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line":203
+        }
+      ],
+      "key":"effect_evidence",
+      "label":"EffectEvidence"
+    },
+    {
+      "conditions": [],
+      "definition": "Candidate relation-claim sort requiring relation_kind_ref, source_ref, target_ref, relation_qualifiers, claimant_ref, claim_basis_ref and source_frontier_ref; a claim remains distinct from its judgment, admission event and materialized relation.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":204,
+          "quote":"| `RelationClaim` | `relation_kind_ref`, `source_ref`, `target_ref`, `relation_qualifiers`, `claimant_ref`, `claim_basis_ref`, `source_frontier_ref` |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line":204
+        }
+      ],
+      "key":"relation_claim",
+      "label":"RelationClaim"
+    },
+    {
+      "conditions": [],
+      "definition": "Framework-event sort requiring event_kind_ref, payload_ref, payload_sha256, scope_class, occurrence_ref_or_none, claim_ref_or_none, claim_judgment_ref_or_none and source_frontier_ref. Core scope classes are occurrence_scoped, subject_scoped and authority_scoped; an occurrence reference is optional.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":205,
+          "quote":"| `FrameworkEvent` | `event_kind_ref`, `payload_ref`, `payload_sha256`, `scope_class`, `occurrence_ref_or_none`, `claim_ref_or_none`, `claim_judgment_ref_or_none`, `source_frontier_ref` |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line":205
+        }
+      ],
+      "key":"framework_event",
+      "label":"FrameworkEvent"
+    },
+    {
+      "conditions": [],
+      "definition": "Profile event-frontier sort requiring event_set_identity, member_event_refs, projection_basis_ref and precedence_law_ref.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":206,
+          "quote":"| `EventFrontier` | `event_set_identity`, `member_event_refs`, `projection_basis_ref`, `precedence_law_ref` |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line":206
+        }
+      ],
+      "key":"event_frontier",
+      "label":"EventFrontier"
+    },
+    {
+      "conditions": [],
+      "definition": "Profile Projection sort requiring frontier_ref, projection_rule_ref, selected_relation_refs, boundary_refs and residual_refs. It binds one exact event frontier and does not denote a work-state board or AC-011 projection.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":207,
+          "quote":"| `Projection` | `frontier_ref`, `projection_rule_ref`, `selected_relation_refs`, `boundary_refs`, `residual_refs` |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line":207
+        }
+      ],
+      "key":"occurrence_projection",
+      "label":"Occurrence-profile Projection"
+    },
+    {
+      "conditions": [],
+      "definition": "Atomic semantic-admission cut sort requiring claim_ref, claim_judgment_ref, event_ref, event_judgment_ref, materialized_relation_ref, source_frontier_ref and successor_frontier_ref.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":208,
+          "quote":"| `SemanticAdmissionCut` | `claim_ref`, `claim_judgment_ref`, `event_ref`, `event_judgment_ref`, `materialized_relation_ref`, `source_frontier_ref`, `successor_frontier_ref` |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line":208
+        }
+      ],
+      "key":"semantic_admission_cut",
+      "label":"SemanticAdmissionCut"
+    },
+    {
+      "conditions": [],
+      "definition": "Effect-assessment subject sort requiring occurrence_ref, subject_binding_ref, pre_observation_ref, invocation_ref, operation_ref, operation_grant_ref, effect_territory_ref and currentness_invalidation_ref.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":209,
+          "quote":"| `EffectSubject` | `occurrence_ref`, `subject_binding_ref`, `pre_observation_ref`, `invocation_ref`, `operation_ref`, `operation_grant_ref`, `effect_territory_ref`, `currentness_invalidation_ref` |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line":209
+        }
+      ],
+      "key":"effect_subject",
+      "label":"EffectSubject"
+    },
+    {
+      "conditions": [],
+      "definition": "Transition-assessment subject sort requiring occurrence_ref, subject_binding_ref, pre_observation_ref, post_observation_ref_or_none, intended_outcome_ref, effect_disposition_ref and effect_evidence_refs.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":210,
+          "quote":"| `TransitionSubject` | `occurrence_ref`, `subject_binding_ref`, `pre_observation_ref`, `post_observation_ref_or_none`, `intended_outcome_ref`, `effect_disposition_ref`, `effect_evidence_refs` |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line":210
+        }
+      ],
+      "key":"transition_subject",
+      "label":"TransitionSubject"
+    }
+  ],
+  "constraints": [
+    {
+      "applies_to_keys":["execution_contract"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":99,"quote":"closure is checked against that same contract;","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F1.%20Work%20carriers%2FExecution%20contracts","start_line":97}],
+      "key":"execution_contract_lifecycle",
+      "statement":"Contracts are neither a rival backlog nor a second planning surface. The described loop selects the smallest lawful carrier for the required lifetime, drafts one run contract, deterministically validates/admit-or-rejects its classification, records admitted work basis on the selected durable carrier including an event log when required, assembles applicable prompts from admitted work law rather than raw phrasing, and checks closure against the same criteria. Execution may follow admission in the same invocation; resulting state still undergoes proof, gap analysis and repricing.",
+      "uncertainty":"The referenced ACTIVATION admission mechanism is not supplied in full."
+    },
+    {
+      "applies_to_keys":["milestone","ticket"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":116,"quote":"Milestone acceptance proves only its declared claim.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F1.%20Work%20carriers%2FMilestones%20and%20phase-scoped%20truth%20%28UP-006%29","start_line":108}],
+      "key":"milestone_claim_and_completion_boundary",
+      "statement":"Accepted design does not satisfy implementation, installed proof, qualification or release. Ticket completion requires acceptance of every closure-bearing milestone under the condition-based closure rule for that milestone's own declared claim. Optional or deferred work requires explicit disposition and owner. Commentary and generated summaries cannot mutate milestone or ticket truth.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["carrier_binding"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":146,"quote":"their\nabsence from the project tree is not absence from the governing method.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F2.%20Layout%20and%20authority%2FDefault%20layout","start_line":141}],
+      "key":"default_layout_and_installed_resolution",
+      "statement":"The starter layout is stdo_default.json, specification/GOALS.md, .ai-workspace/sprints/, .ai-workspace/tickets/{backlog,active,completed}/ and .ai-workspace/comments/<agent-id>/. The applicable product definition resolves POSTING_GUIDE and TICKETS from its exact shared installed basis; their absence from the project tree does not establish method absence.",
+      "uncertainty":"PRODUCT_DEFINITION §§1 and 4 and the installed basis are not supplied."
+    },
+    {
+      "applies_to_keys":["ticket","carrier_binding","work_projection"],
+      "conditions":["A replacement carrier or growth capability is used."],
+      "exceptions":[],
+      "grounding":[{"end_line":177,"quote":"neither growth\nchanges the authority or refusal laws","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F2.%20Layout%20and%20authority%2FCarrier%20substitution","start_line":176}],
+      "key":"carrier_substitution_conservation",
+      "statement":"The selected local-file model remains valid. Other carriers need not reproduce its folders but must preserve ticket authority and refusal laws, including one durable record. A generated board remains a projection; a tracker holding tickets is lawful only through explicit product-definition rebinding with no rival surface left.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["sprint_manifest"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":188,"quote":"Another bound carrier preserves the same identity, required\nfields, history, closure law and one-truth relation","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F3.%20Sprint%20rules%2FOne%20durable%20record%20per%20sprint","start_line":184}],
+      "key":"sprint_record_preservation",
+      "statement":"Each sprint has exactly one durable manifest. Alternative bound carriers preserve identity, required fields, history, closure law and one-truth relation. A local filename should contain a stable identifier and short slug; SPRINT-2026-04-30-process-navigator.md and SPRINT-2026-05-12-dashboard-density.md are recommendations, not mandated names.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["sprint_manifest"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":196,"quote":"Each sprint manifest records at least `id`, `title`, `status`, `goal`,","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F3.%20Sprint%20rules%2FManifest%20fields","start_line":192}],
+      "key":"sprint_manifest_required_fields",
+      "statement":"Every manifest records at least id, title, status, goal, opened_at, updated_at, authority_refs, scope, excluded_boundaries, expected_change_classes, included_tickets or iterations, closure_trigger, closure_law, proof_surface, deferred_compliance, non_closure_conditions and paydown_policy. authority_refs names upstream governing surfaces. excluded_boundaries names prohibited changes, typically product truth, data contracts, runtime semantics, governance/closure law, public carrier shape and release criteria. deferred_compliance names intentionally deferred local proof/review/accessibility/screenshots/walkthrough/tests/design wording/trace cleanup. paydown_policy explains acceptance, ticketing, repricing or removal of debt during close review.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["sprint_manifest","ticket","intake_triage"],
+      "conditions":["Work is proposed for sprint admission."],
+      "exceptions":[],
+      "grounding":[{"end_line":232,"quote":"It may not batch away intake triage:","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F3.%20Sprint%20rules%2FSprint%20admission","start_line":228}],
+      "key":"sprint_admission_boundary",
+      "statement":"Admission is permitted only with a reviewable manifest boundary: bounded scope, cited authority, expected change classes, explicit exclusions, closure law, non-closure conditions and deferred-compliance paydown policy. Repeated closure criteria may be batched; substantive included tickets still record lawful change_class and re_entry_point. Manifest-local iterations may rely on the sprint class only while inside scope and exclusions.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["sprint_manifest"],
+      "conditions":["Local compliance proof is deferred."],
+      "exceptions":[],
+      "grounding":[{"end_line":244,"quote":"escrow satisfies no method, release or product closure until paid down,\naccepted or repriced","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F3.%20Sprint%20rules%2FCompliance%20escrow","start_line":243}],
+      "key":"compliance_escrow_conditions",
+      "statement":"Deferral requires a named proof/cleanup class, debt local to admitted sprint surface, expected correction cost below per-change proof cost, a short enough sprint for reviewability, and close review that classifies and pays down debt. Escrow is explicit and satisfies no method/release/product closure until paid down, accepted or repriced. When governing method permits, eligible classes may include screenshots/walkthrough capture, visual review, accessibility cleanup, UI interaction replay proof, design wording, trace and local realisation cleanup. Escrow must not hide new product truth, changed/new data contracts, runtime/governance/closure/provenance/evidence semantics, missing constructive carriers, changed public published-function/carrier contracts, or law changes requiring goal_reprice, intent_reprice, product_reprice, requirement_reprice or design_reframe. Such findings are recorded and exit through a standalone ticket, repricing action or sprint supersession.",
+      "uncertainty":"The governing method's specific escrow permissions are not supplied."
+    },
+    {
+      "applies_to_keys":["sprint_manifest","sprint_status","sprint_close_result"],
+      "conditions":["Sprint close review begins or closed status is proposed."],
+      "exceptions":["Explicit local paydown debt may survive close only when governing method permits follow-up."],
+      "grounding":[{"end_line":280,"quote":"A sprint may move to\n`closed` only when every item and every debt entry is classified and the\nresulting paydown or repricing work is durable.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F3.%20Sprint%20rules%2FClose%20review","start_line":275}],
+      "key":"sprint_close_review_requirements",
+      "statement":"Close begins with status closing and freezes new iteration. Every included ticket/iteration is reviewed against the manifest; evidence durability is checked; changed surfaces are walked against cited authority; deferred compliance is classified; debt surviving review gets paydown tickets. Every item receives accepted, local_paydown, design_reframe, requirement_reprice, product_reprice or remove. Closure requires classification of every item and debt entry and durable resulting paydown/repricing work, not satisfied results for all. Hidden authority drift cannot be accepted.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["sprint_close_result"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":323,"quote":"cannot read remaining debt, needed repricing or\nremoval as compliance","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F3.%20Sprint%20rules%2FClose%20review","start_line":322}],
+      "key":"sprint_close_mapping_boundaries",
+      "statement":"Classification must be against cited sprint authority and consume, while remaining separate from, the item's core review results. Local debt is the counterexample for local_paydown; its governing relation stays coherent, otherwise repricing is required. Repricing invalidates the cited authority's ability to support acceptance; its named layer is a declared re-entry fact accompanying the core value, not another result. Removal's reason is its counterexample and requires neither violated governing relation nor competing truth path; it therefore has no matching ACTIVATION disposition. Item/debt mappings add no core value or disposition and never turn debt, repricing or removal into compliance.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["ticket"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":338,"quote":"without a co-equal\nlocal copy","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FOne%20durable%20record%20per%20ticket","start_line":332}],
+      "key":"ticket_record_preservation",
+      "statement":"Every ticket has one durable authoritative record. Repository/external-tracker carriers are lawful only if they preserve the required contract, history, state transition, stable identity, searchability and closure semantics without a co-equal local copy. Local filenames should carry stable id and short slug; T-001-add-product-layer.md, B-002-fix-reset-manifest-id.md, S-003-evaluate-integration-capability.md and C-004-clean-up-trace-tags.md are recommended examples.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["multi_build_tenant_work","ticket"],
+      "conditions":["The same admitted work genuinely has multiple tenant execution lines.","Applies to backlog and active tickets."],
+      "exceptions":["Completed tickets are not affected retroactively unless reopened or explicitly repriced.","Upstream-only and single-tenant cases require no sibling duplicate."],
+      "grounding":[{"end_line":385,"quote":"one ticket does not claim closure for more than one build-tenant\nlifecycle;","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FMulti-build-tenant%20independence","start_line":373}],
+      "key":"tenant_lifecycle_independence",
+      "statement":"Keep the upstream authority ticket separate and create one tenant-local ticket per build tenant, appending a tenant mnemonic to base id and filename. Each tenant independently owns status, proof, closure, repricing and reopening; another tenant's green status cannot hide blockers or false closure. Duplicates should record source_ticket and build_tenant. build_tenant identifies the product's how.build_tenants entry; path/display/tracker aliases substitute only when product definition binds them as identity. The unsuffixed base may remain upstream authority, while backlog/active multi-tenant execution and closure live on suffixed tickets. B-030 with B-030-T1 and B-030-T2 is illustrative.",
+      "uncertainty":"Tenant identity and realisation semantics are imported from PRODUCT_DEFINITION §8."
+    },
+    {
+      "applies_to_keys":["ticket","execution_contract","migration_ticket"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":406,"quote":"Each ticket records at least `id`, `title`, `type`, `ticket_category`,","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FRequired%20fields","start_line":389}],
+      "key":"ticket_and_contract_fields",
+      "statement":"Every ticket records at least id, title, type, ticket_category, status, goal, change_intent, change_class, re_entry_point, triaged_at, created_at and updated_at. Recommended additional fields: priority, dependencies, links, intake_source, affected_boundary, source_ticket for duplication/derivation and build_tenant for tenant-local work. Migration tickets additionally carry migration_strategy and library_usage; consume/extend requires governing_library, none requires library_rationale. Tenant-local migration requires build_tenant and source_ticket when derived/duplicated upstream. For admission a runtime-drafted contract should also carry at least target_truth, superseded_truth when relevant, closure_law, evaluation_criteria, non_closure_conditions and proof_surface.",
+      "uncertainty":"Recommended contract fields retain their 'should' modality."
+    },
+    {
+      "applies_to_keys":["migration_ticket"],
+      "conditions":["ticket_category is implementation_migration."],
+      "exceptions":["Downstream exploratory work may occur while the source ticket is active, but is non-closure evidence until the source carrier is admitted and authoritative."],
+      "grounding":[{"end_line":444,"quote":"the dependency chain runs `source carrier ->\ndownstream consumers`, never the reverse.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FInside-out%20sequencing","start_line":443}],
+      "key":"inside_out_ticket_dependency",
+      "statement":"Tickets publishing/admitting the authoritative source carrier are upstream. Tickets hardening prompts, projections, reports, dossiers, review surfaces and other consumers depend on them. A downstream ticket cannot close while its upstream source-carrier ticket remains open.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["change_class","ticket_type","ticket_category"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":466,"quote":"A ticket records the `change_class`\ndeclared by intake triage,","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FChange%20class","start_line":450}],
+      "key":"change_class_recording",
+      "statement":"Tickets record intake's declared class using SPEC_METHOD §4 classes. Type, category and class are independent dimensions: bug + implementation_migration + design_reframe is consistent. A spike should terminate in a more specific downstream ticket or an explicit decision that no further substantive change is required; exploratory status does not eliminate its current triage class.",
+      "uncertainty":"The external class definitions are only partially described by the supplied text."
+    },
+    {
+      "applies_to_keys":["intake_triage","change_class"],
+      "conditions":["A bug's lawful re-entry class is being determined."],
+      "exceptions":[],
+      "grounding":[{"end_line":506,"quote":"Missing or ambiguous evidence leaves the affected\ntreatment unknown; it is not proof that the governing layer itself is\nabsent","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FUpward%20propagation%20check","start_line":481}],
+      "key":"upward_propagation_decision_rule",
+      "statement":"Before realization_refactor, establish that current requirement and accepted realising design govern the affected behaviour and suffice for the authorized outcome; mere presence proves no coverage. Missing/ambiguous evidence leaves treatment unknown, not the layer absent. Candidate public violation does not select a new contract; governing-owner re-entry requires explicitly changed desired outcome or established insufficiency. Walk upward from realisation, checking each layer and stopping at the highest found missing/insufficient: requirement missing/insufficient → requirement_reprice and requirement owner; sufficient requirement but missing/insufficient design → design_reframe and Design; actual Goal/Intent/Product change → corresponding owner/class; sufficient requirement/design with implementation deviation → realization_refactor, repair or reject candidate. Unresolved meaning remains J and reserved choice remains O.",
+      "uncertainty":"Full computed-classification algorithm and C/J/O annotation definitions are external."
+    },
+    {
+      "applies_to_keys":["ticket","intake_triage"],
+      "conditions":["Ticket concerns substantive work."],
+      "exceptions":[],
+      "grounding":[{"end_line":515,"quote":"The recorded values are those intake triage declared","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FTriage%20metadata","start_line":514}],
+      "key":"triage_metadata_fidelity",
+      "statement":"The ticket carries declared change_intent, lawful change_class, lawful re_entry_point and triaged_at; these are the values intake triage declared, not a later role's replacement classification.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["ticket_state","sprint_status","change_class","migration_strategy","library_usage","sprint_close_result"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":534,"quote":"a ticket marked `completed`, or a sprint marked `closed`, cannot stand in\nfor a `satisfied` result","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FStatus","start_line":533}],
+      "key":"declared_state_result_separation",
+      "statement":"Ticket statuses including local additions, lanes, sprint statuses, migration_strategy, library_usage and recorded change_class are declared carrier states and map to no core value. Sprint-close classifications and debt outcomes are results mapped at close review. Evaluating a state produces a separate predicate-bearing core result; states must never be combined as evaluation results.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["ticket","ticket_state","carrier_binding"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":548,"quote":"completed tickets move to `ticketing.tickets.lanes.completed`, by default\n`.ai-workspace/tickets/completed/`","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FLanes","start_line":542}],
+      "key":"ticket_lane_locations",
+      "statement":"Backlog tickets use ticketing.tickets.lanes.backlog, default .ai-workspace/tickets/backlog/; active tickets use .active, default .ai-workspace/tickets/active/; completed tickets move to .completed, default .ai-workspace/tickets/completed/. Lanes keep the live set small and searchable without moving deferred work into comments or goals.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["work_carrier_derivation"],
+      "conditions":["A derived surface or projected frame is insufficient."],
+      "exceptions":[],
+      "grounding":[{"end_line":563,"quote":"The table traces these owners; it does not decide their questions.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution","start_line":563}],
+      "key":"bounded_member_reentry",
+      "statement":"The described actor reads this member only for the named unresolved lifecycle/proof question and cites used clauses. Deciding routes are Carrier selection for record/lifetime, Execution contract admission for execution, Recorded judgment and owner-ruling continuity for reusable judgments/repricing, and Condition-based closure and reuse for completion. The derivation table is traceability, not an alternative decision owner.",
+      "uncertainty":"This is source-described actor behaviour, not an instruction executed here."
+    },
+    {
+      "applies_to_keys":["work_carrier_derivation"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":617,"quote":"Each consumer applies the rule and decides nothing the owning section does\nnot","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FFoundation%20to%20law%3A%20work%20carriers","start_line":616}],
+      "key":"work_carrier_derivation_owner_boundaries",
+      "statement":"F13's eleven consequence groups concern lifetime-matched carriers, admitted execution basis, one authority chain, sprint escrow/close outcomes, recorded triage/upward re-entry, tenant-local lifecycles, migration proof/recurrence, independent verification and durable rulings, condition-based closure/test authority, semantic term resolution, and flexible carrier shape/bounded reading. Obligations surviving a run must be recorded before return; comment content is provisional until adopted into its owning surface and has its own discussion state. Member choices include carrier kinds/selection table, minimum fields/types/categories/statuses/lanes, offering sprints, escrow lists/result mappings, tenant suffixes, migration declarations/checklists/strategy/library values/thresholds/review questions/break order, four repricing states/predicate, five-step test reconciliation, recommended shapes/search defaults and bounded reading policy. Product definition owns carrier locations/rebinding and tenant registry; governing method owns whether debt may survive; POSTING_GUIDE owns post categories/structure/states. Admission step law, migration law, independent assessment/reuse, result conjunction/general test law and semantic resolution remain owned by the cited external sections. Consumers add no deciding authority. A credible recurrence requires review, not automatic commonisation or identity merging.",
+      "uncertainty":"The table states derivations and ownership; their external foundation standing and unsupplied owner clauses are not independently established."
+    },
+    {
+      "applies_to_keys":["execution_contract","ticket","sprint_manifest"],
+      "conditions":["An execution is governed by the described method."],
+      "exceptions":[],
+      "grounding":[{"end_line":634,"quote":"then select the first matching row below.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FCarrier%20selection","start_line":624}],
+      "key":"ordered_carrier_selection",
+      "statement":"Every execution uses one run contract. Establish upstream work authority, then choose the first matching row, with local boundary equal to an admitted sprint when inside it, otherwise current run: (1) no authority → no admitted contract, no substitute-authority ticket, stop/re-enter; (2) exact admitted ticket → derive and reuse, no duplicate; (3) authority but no exact ticket and independent state/open obligation beyond local boundary → durable ticket plus contract, create/update only under ticket-state authority; (4) authority, no exact ticket, entirely inside admitted sprint with no post-close state → manifest plus local iteration, no durable ticket; (5) authority, no exact ticket or sprint and current-run completion without surviving independent state → intake-drafted contract, no durable ticket. Ticket-shaped fields create neither durable ticket identity nor lane state.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["execution_contract","ticket","sprint_manifest"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":648,"quote":"Absence of a durable ticket neither requires nor authorises creating one.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FCarrier%20selection","start_line":641}],
+      "key":"carrier_authority_and_residual_persistence",
+      "statement":"An exact product-authorized instruction may supply one-run upstream authority; generic requests and model-widened scope cannot. Durable creation/update requires selected surviving state and ticket-state authority. An explicit durable-record instruction from that authority selects durability but neither admits execution nor widens upstream authority. Admission mechanism/result-evidence surface are product-bound; admitted result coordinates are recorded on ticket/manifest when selected. Presence, lane, active status and admission prose without coordinates are not admission evidence; the contract remains drafted or rejected. Absent/rejected admission returns missing authority without execution. Before return, surviving obligations become sprint-local entries if their lifetime fits; otherwise durable tickets only under ticket-state authority. Without that authority, retain them in the named durable result/evidence surface or already-authorized enclosing carrier, mark closure withheld on ticket-state authority and return re-entry. No available durable result/evidence surface invokes referenced admission refusal. Execution and closure share categorization, criteria, proof and non-closure conditions; proof/gap analysis/repricing continue.",
+      "uncertainty":"Exact admission coordinates and refusal procedure are defined by unsupplied ACTIVATION §1."
+    },
+    {
+      "applies_to_keys":["execution_contract"],
+      "conditions":[],
+      "exceptions":["A human or mixed binding may select another durable carrier; a binding requiring an event log still requires that log."],
+      "grounding":[{"end_line":700,"quote":"Admission validates a contract against its cited product outcome,\nprerequisite or experiment basis and does not admit that basis","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FExecution%20contract%20admission","start_line":693}],
+      "key":"contract_admission_and_growth_basis_separation",
+      "statement":"Runtime flow should treat ticket/sprint entry/draft as admission candidate, never automatic truth; contracts carry at least drafted/admitted/rejected/superseded states. An admitted contract should be durably recorded for applicable prompt assembly and later closure on the same basis, with required event logs. Self-certification refusal belongs to ACTIVATION §1. Contract admission validates against the cited product outcome, prerequisite or experiment; it does not admit/renew that basis. Basis admission/renewal belongs to the selected goals-work-wave owner or explicitly bounded proxy and stays durably legible in existing goals/ticket authority. Active status, lane and admitted/retained contract never admit a growth basis.",
+      "uncertainty":"External admission and basis-renewal laws are referenced rather than fully supplied."
+    },
+    {
+      "applies_to_keys":["execution_contract","migration_ticket"],
+      "conditions":[],
+      "exceptions":["Residual implementation debt outside the claimed acceptance path is not by itself a non-closure condition."],
+      "grounding":[{"end_line":722,"quote":"These conditions are not optional commentary;","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FEvaluation%20criteria%20and%20non-closure%20conditions","start_line":716}],
+      "key":"evaluation_and_non_closure_visibility",
+      "statement":"A contract should expose progress/completion criteria and failures despite local green proof, minimally visible evaluation_criteria and non_closure_conditions as its local gain function. Typical migration failures are old authoritative normal execution in affected scope, accepted mixed old/new proof, proxy/partial acceptance implementation, reachable competing/ambiguous executable authority on the claimed acceptance path, or unreconciled ticket/product/proof wording. These are material execution conditions. Outside-path debt may be deferred only under SPEC_METHOD §7 path-relative authority and explicit disposition rules.",
+      "uncertainty":"The exact external debt-deferral rule is not supplied; migration compatibility exceptions are retained separately."
+    },
+    {
+      "applies_to_keys":["ticket","execution_contract","work_claim"],
+      "conditions":[],
+      "exceptions":["An unqualified term is permitted when cited product, re-entry surface, execution basis and affected scope select exactly one bounded-context meaning."],
+      "grounding":[{"end_line":741,"quote":"An unresolved or multiply resolved material term blocks execution-contract\nadmission and closure for the affected claim.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FBounded-context%20term%20binding","start_line":738}],
+      "key":"bounded_context_meaning_resolution",
+      "statement":"Ticket/work-instruction terms follow PRODUCT_DEFINITION §5. Cross-context or materially competing meanings require citation of applicable product disambiguation or owner-authorized import/translation/equivalence/disambiguation carrier; referencing the relation may replace duplication. Prose, familiarity, matching glossary headings, tenant placement and comment context cannot select meaning or transfer authority. Unresolved/multiply resolved material terms block affected admission and closure. Opening/updating a ticket records pressure without curing it; resolution re-enters the owner of the missing context/relation.",
+      "uncertainty":"External semantic-resolution machinery is not supplied."
+    },
+    {
+      "applies_to_keys":["migration_ticket","migration_strategy","library_usage"],
+      "conditions":["ticket_category is implementation_migration."],
+      "exceptions":["No excluded/disjoint scope is satisfied by explicit declaration of absence, never silence."],
+      "grounding":[{"end_line":798,"quote":"Both\nare part of the ticket authority, not optional commentary.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FDeclaration%20and%20checklist","start_line":748}],
+      "key":"migration_declaration_and_checklist",
+      "statement":"Require explicit declaration and hard live-Markdown checklist as ticket authority. Declaration names strategy, exact affected scope, every excluded/disjoint product or compatibility scope with deterministic routing, old/superseded and new/authoritative contracts, old/new producer and consumer sets, every derived projection/report/status/proof surface and closure law. Minimum checklist covers named scope/exclusions/routing/old/new paths/new producers/new consumers/projections; old authority removal or explicit demotion in scope; rejection of mixed-state closure evidence; removal/repricing of mixed-behaviour tests; recurrence review against libraries/commonisation; library usage with governing surface/rationale; one tenant lifecycle per backlog/active ticket with suffixed sibling work; and reconciled ticket/product/proof wording before closure. migration_strategy is inside_out_hard_break or fundamental_re_adoption; library_usage is none/consume/extend. consume/extend names governing_library; none explains in library_rationale that no reusable surface applies, the pattern remains boundary-specific, or no lawful recurrence/commonisation candidate yet exists.",
+      "uncertainty":"SPEC_METHOD §7 owns the referenced migration law."
+    },
+    {
+      "applies_to_keys":["migration_ticket","milestone"],
+      "conditions":[],
+      "exceptions":["An old path explicitly declared and justified in the ticket as retained compatibility may remain in affected scope.","Deterministically routed non-overlapping scope outside affected scope retains its own current authority."],
+      "grounding":[{"end_line":828,"quote":"a false closure claim is a\nticket-method defect, not only a code defect","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FClosure%20of%20a%20migration%20ticket","start_line":815}],
+      "key":"migration_closure_and_slice_boundary",
+      "statement":"Old authoritative normal execution inside affected scope blocks closure unless the retained-compatibility exception applies. No silently authoritative old path, mixed green tests, proxy or partial implementation establishes completion; compatibility is named as such rather than native truth and cannot be inferred from surviving code. A completed ticket whose checked items are false on the current tree must reopen or have an explicitly linked successor. Intermediate product-slice acceptance may occur under SPEC_METHOD §7 path-relative promotion, whose identity/criteria ticket wording cannot narrow. The migration ticket stays active until its checklist and final closure law hold. Active status renews no exhausted slice growth authority; bounded removal/demotion/closure-proof work may continue, but further material producer/consumer growth requires another basis admitted under SPEC_METHOD §3.",
+      "uncertainty":"The exact promotion and continuing-work bounds are external."
+    },
+    {
+      "applies_to_keys":["migration_ticket","migration_strategy"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":848,"quote":"Unclassified inherited implementation blocks closure","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FStrategy%20requirements","start_line":848}],
+      "key":"strategy_specific_declarations",
+      "statement":"inside_out_hard_break requires a full best-guess interface inventory, deepest-source-outward break sequence, old seam intentionally severed by each break and expected negative proof per break. fundamental_re_adoption requires explicit human product-authority selection; comparison with bounded evolution across product value, feedback latency, authority risk, reversibility, total cost and retained predecessor semantics; bounded abort/re-entry; sideways reference/prior implementation boundary as source material; module/interface adjudication surface; and carry_across, redundant or rewrite classification of every inherited module/interface/carrier/projection/proof surface. Unclassified inherited implementation blocks closure.",
+      "uncertainty":"The exact meanings of carry_across, redundant and rewrite are deferred to unsupplied SPEC_METHOD §7."
+    },
+    {
+      "applies_to_keys":["migration_ticket","library_usage"],
+      "conditions":["Applies to every implementation migration ticket, irrespective of adopted profiles."],
+      "exceptions":["A third local rebuild may proceed with consume, extend, or a linked explicit do-not-commonise design decision in library_rationale.","Outside recurrence rules and current-claim hard stops, a discovered pattern is repricing input and blocks no bounded claim or requires no follow-up ticket unless its owning authority admits the follow-up."],
+      "grounding":[{"end_line":879,"quote":"the second\ncredible recurrence forces an explicit\nlibrary or commonisation review; the third local rebuild is not acceptable\nby default.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FRecurring%20realisation%20and%20library%20declaration","start_line":858}],
+      "key":"recurrence_review_thresholds",
+      "statement":"Second credible recurrence forces explicit library/commonisation review. If review establishes the same realisation pattern in two module boundaries or tickets, a third local rebuild blocks implementation absent a stated exception. Preferred order is boundary-local cleanup, then tenant-local reusable surface, then shared/common propagation only through separate design re-entry. DESIGN_MODULE adopters additionally apply §10's design-review/candidate refinement without a rival threshold. Patterns discovered during active work remain subject to these thresholds.",
+      "uncertainty":"The external commonisation-candidate refinement is not supplied."
+    },
+    {
+      "applies_to_keys":["multi_build_tenant_work","migration_ticket"],
+      "conditions":["The same work item is processed across several tenants; backlog and active tickets are reviewed."],
+      "exceptions":["Tenant-local reopening/repricing/successor work may require upstream change when the upstream source/product/design ticket itself must change."],
+      "grounding":[{"end_line":890,"quote":"each tenant ticket has its\nown proof surface and closure law;","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FMulti-build-tenant%20review","start_line":885}],
+      "key":"tenant_review_checks",
+      "statement":"Review checks a separate suffixed ticket and named build_tenant for every tenant, separate proof surface/closure law, no substitution of one tenant's green proof for another's closure, and tenant-local reopening, repricing and successor work subject to the upstream-change exception.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["migration_ticket"],
+      "conditions":["Core-interface or carrier migration for the recommended Functional Review Criteria section."],
+      "exceptions":[],
+      "grounding":[{"end_line":930,"quote":"Passing tests do not satisfy this section by themselves.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FReview%20disambiguation","start_line":926}],
+      "key":"functional_migration_review",
+      "statement":"Migration must be concrete enough that rename/adapter/wrapper/happy-path proof cannot claim source-truth replacement. A core-interface/carrier ticket should include ticket-specific Functional Review Criteria enabling review of: control-flow meaning replaced by admitted carrier/algebra/event truth; semantic centre actually reduced/removed rather than relocated; typed/closed carrier/contract/transition rather than open dict/string/config protocol; main step as pure admitted-truth transform rather than procedural law; effects at the edge; consumers directly reading admitted carrier rather than reconstructing from payloads/.get/defaults/text/legacy files; projections derived without independent closure authority; deterministic gates, if present, informing state without structurally blocking lawful constructive/probabilistic paths; and explicit reuse/extension where the pattern exists elsewhere. Tests alone do not suffice. Preserved semantic centres behind wrappers, adapter policy, old lists alongside algebra, fallback configuration or rehydrated dictionaries fail review despite green public behaviour.",
+      "uncertainty":"Review questions retain their recommended framing and do not establish answers for any implementation."
+    },
+    {
+      "applies_to_keys":["interface_review_checklist","migration_ticket"],
+      "conditions":["Core-interface, carrier or authoritative-contract migration."],
+      "exceptions":["A deferred interface names its successor ticket or stays unchecked.","Compatibility shims qualify only if explicitly justified as retained compatibility."],
+      "grounding":[{"end_line":965,"quote":"a checked box asserts truth on the current tree, not\nintended direction;","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FImpacted%20interface%20review%20checklist","start_line":956}],
+      "key":"interface_checklist_requirements",
+      "statement":"The checklist must exist before tests serve as closure evidence and name every relevant live interface. It should enumerate where present source-carrier builders; closure/register/projection builders; deepest semantic kernel/adapters; wrappers and bootstrap/replay/ingest/resume/query entrypoints; prompt/report/projection/read models; constructor/materialisation paths; proof lanes and negative fixtures. Each item states interface-specific closure, such as consuming admitted projection without helper authority, exposing read models without rebuilding missing publication, or avoiding independent closure from open payload aggregation. A false checked item makes the ticket not closure-ready. Hard-break checklists describe seam inventory before test closure evidence; re-adoption checklists explicitly cover inherited carried/dropped/rewritten modules/interfaces, never implicit carry-forward.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["migration_ticket","migration_break_order"],
+      "conditions":["Migration touches a core interface; a closure map additionally applies when several old interfaces exist."],
+      "exceptions":[],
+      "grounding":[{"end_line":994,"quote":"Reviewers treat these as explicit defects:","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FBreak%20order%20and%20break-to-closure%20map","start_line":987}],
+      "key":"break_order_and_defect_boundaries",
+      "statement":"The ticket includes the source-outward ordered execution section and, for several old interfaces, the break-to-closure map. Explicit defects include typed wrappers retaining old semantic authority; a new carrier beside an old authoritative read model; proxies/partial implementations retaining old interfaces under new names; constructor/replay/ingest/resume/bootstrap/public-wrapper admission bypass; projections/tests passing without the new carrier; fallback invention of policy/identity/target/closure truth; and downstream proof passing while upstream source-carrier work remains open.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["migration_ticket","interface_review_checklist"],
+      "conditions":[],
+      "exceptions":["Explicitly specified retained compatibility permits an old path.","Deterministically routed non-overlapping scope outside affected scope does not block migration merely because its path works."],
+      "grounding":[{"end_line":1023,"quote":"positive behaviour proof is not enough.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FMixed-state%20negative%20proof","start_line":998}],
+      "key":"migration_negative_proof",
+      "statement":"Positive behaviour proof alone is insufficient. The proof surface should include at least one negative/structural proof that the old path cannot satisfy closure. Examples include rejecting a severed seam before downstream repair counts as progress; fail-closed advancement/closure/prompts/projection without new carrier; rejecting legacy payloads instead of rehydrating truth; deliberate old/new disagreement resolved to new truth or fail-closed; rejecting same-name but structurally different carrier/function/route/policy/projection; and closure proof independent of undeclared fixtures or mutable sibling workspaces. Old normal execution in affected scope or reachability on claimed acceptance path keeps the ticket open absent the compatibility exception. With an interface checklist, negative proof exercises named public consumers material to closure; bypassing one shim is insufficient when live authority already bypasses it through helpers/loaders/rebuild paths.",
+      "uncertainty":"The 'should include' proof-count recommendation is not strengthened into a universal numerical obligation."
+    },
+    {
+      "applies_to_keys":["independent_review","work_claim"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":1033,"quote":"a constructor's self-review is construction\noutput","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state","start_line":1027}],
+      "key":"generic_assessment_acceptance_ownership",
+      "statement":"The source assigns generic independent assessment to tier-1 EVALUATION §3, acceptance as decision-owner disposition and condition-based rather than reviewer-approved closure to EVALUATION §5, and closed-result reuse to ACTIVATION §7. Constructor self-review is construction output; this member states work-carrier consequences without taking ownership of those generic laws.",
+      "uncertainty":"Full generic laws are absent from the supplied source."
+    },
+    {
+      "applies_to_keys":["independent_review","owner_ruling","execution_contract","ticket"],
+      "conditions":[],
+      "exceptions":["Independent assessment is not required for every local implementation step.","A governing basis may add independent-assessment boundaries."],
+      "grounding":[{"end_line":1091,"quote":"Self-review remains useful authoring evidence and cannot be relabelled as\nindependent.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FExecution%20and%20verification%20authority%20separation%20%28UP-007%29","start_line":1048}],
+      "key":"independent_review_and_ruling_boundaries",
+      "statement":"Independent review is required at product, qualification, release and explicitly risk-bearing boundaries claiming it. Required reviews identify exact subject/basis/scope/exclusions/evidence/verdict/unresolved findings, and findings cite current authority plus code/proof paths rather than historical commentary alone. Human acceptance/rejection cannot make self-review independent. Claimed review supports promotion/closure only with durable exact subject/verdict traceability in existing ticket/commentary/qualification/release evidence; occurrence statements, unbound summaries and unavailable drafts are not verdicts. Verdicts stay within exact claim/hard stops; external EVALUATION §5 owns blocking findings and no trigger is added here. Human rulings receive durable disposition before the next affected acceptance boundary, keep source wording separate, and cannot be widened or discharged merely by opening a ticket. Where agentic construction applies, active work identifies selected basis, bounded affected relations, delegated construction/assessment authority and re-entry; references to existing design/evidence may suffice. Ticket state/prose/admitted contract cannot widen basis or replace required live-surface assessment. Existing ticket/commentary/commit/qualification/release carriers may hold transition evidence; no extra receipt, state, document, round or ceremony is required.",
+      "uncertainty":"Independence protocol, finding hard stops and agentic execution semantics remain external."
+    },
+    {
+      "applies_to_keys":["recorded_judgment","owner_ruling"],
+      "conditions":[],
+      "exceptions":["Required independent assessment must acquire sufficient exact evidence and supply its own independent judgment; reusing author J does not meet independence."],
+      "grounding":[{"end_line":1134,"quote":"a new\nrole or conversation alone invalidates nothing.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FRecorded%20judgment%20and%20owner-ruling%20continuity","start_line":1111}],
+      "key":"judgment_and_ruling_continuity",
+      "statement":"Later roles/runs recover judgments and check applicability rather than reauthor unchanged conclusions. Changed material facts/evidence, declared revising observation or basis invalidate affected results; preserve originals and successor links, retaining only demonstrably independent results and reassessing affected scope. Current C may be referenced but unknown facts cannot become established premises by reuse. Owner rulings are reused without widening or asking unchanged authority again; new ambiguity or material decision change returns only the affected question to owner. J is not O; recording either creates no admission, acceptance, effects or continuation beyond grant. Results follow selected run/sprint/ticket and named evidence-surface lifetime, without a separate registry, ticket per judgment or extra approval ceremony.",
+      "uncertainty":"Full C/J/O annotation and generic reuse definitions are external."
+    },
+    {
+      "applies_to_keys":["repricing_decision","repricing_result","owner_ruling"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":1179,"quote":"An evaluation that was not performed has no result.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FRecorded%20judgment%20and%20owner-ruling%20continuity","start_line":1172}],
+      "key":"repricing_preservation_and_result_meaning",
+      "statement":"Repricing gives each affected obligation a retained/superseded/deferred/withdrawn disposition with owner and evidence in the same carrier; preserves surviving work, explains changed dependencies and does not copy unaffected history to parallel ledgers. Present owner decisions as short consequence deltas with original ruling separate; generic continuation does not accept undisclosed architecture/scope change. Performed repricing evaluation retains decision/state/evidence and all applicable failure grounds: established requires exact owner authority/evidence/conditions and surviving-obligation preservation; falsified requires a counterexample including exceeding grant or violating obligation; indeterminate retains undecided condition/needed evidence; out_of_frame retains undeclared material relation/capability; invalid_basis covers absent/stale/ambiguous/mismatched required basis. No performed evaluation means no result. Evaluation grants no decision authority; only authorized owner act changes state. Lawful deferral may satisfy repricing while delivery remains failed/outstanding. Unauthorized withdrawn cannot close; retention or satisfied repricing proves no delivery; supersession/deferral/withdrawal erase no unresolved obligation/evidence.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["work_claim","milestone","ticket"],
+      "conditions":[],
+      "exceptions":["Where applicable law requires neither independent review nor reserved acceptance, recording without review follows the referenced existing-carrier route; sprint-close and applicable design-profile law still apply."],
+      "grounding":[{"end_line":1215,"quote":"evidence presence alone is not satisfaction.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FCondition-based%20closure%20and%20reuse","start_line":1188}],
+      "key":"condition_based_closure",
+      "statement":"Completion requires every applicable declared obligation satisfied by valid exact-subject/basis/scope evidence, every required judgment/ruling present and applicable, and no active non-closure condition. Unknown applicability or insufficient evidence for a mandatory obligation withholds dependent claim; the existing owner decides reserved acceptance. This is the referenced conjunction with obligations as required coverage, and SPEC_METHOD applies it over change spans. Review evaluates conditions but is not the closing event. Unchanged obligations reuse valid evidence/J/O. Material counterexamples, changed evidence, declared J revising observations and changed basis invalidate affected claim/dependent results before further reliance. Unrelated observations remain bounded repricing input and neither automatically reopen satisfied claims nor expand work. Closure recording preserves exact evaluated scope, satisfied conditions, evidence and residuals.",
+      "uncertainty":"Full conjunction and recording-without-review protocols are external."
+    },
+    {
+      "applies_to_keys":["test_case","ticket","intake_triage"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":1261,"quote":"The code is never the arbiter of a\ntest's expected result when code and test disagree","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FTest%20case%20authority","start_line":1236}],
+      "key":"test_expectation_authority_and_reconciliation",
+      "statement":"Tests derive no authority from implementation. Acceptance predicates require an applicable supported entry/state and obligation under governing operating/threat model; existing tests authorize no excluded threat or superseded guard. Changed responsibility requires predicate audit and retirement of unsupported expectations under owner basis, without invented replacement guards. Live-authority conflict requires re-entry, not test waiver. For code/test mismatch after a ticket fix, reconcile in order: (1) ticket intent/class/re-entry/target/superseded truth/closure/evaluation/non-closure fields; (2) triage and lawful owner re-entry; (3) governing requirement/design/module/function/carrier/other authority; (4) test expectation; (5) implementation. Code may reveal stale/incomplete/narrow tests but cannot alone authorize expectation changes. Updating/removing a pre-repricing test requires named governing ticket and superseding authority change. Stale/ambiguous/under-authorized ticket re-enters triage before code or test is treated correct. A passing test is closure evidence only with expectation traced to admitted ticket and authority chain.",
+      "uncertainty":"ASSURANCE §3's general law is not supplied."
+    },
+    {
+      "applies_to_keys":["ticket","milestone","work_projection","work_surface_roles"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":1275,"quote":"Contradiction between the owning ticket, its required milestones, the\ncurrent goals or the cited acceptance evidence blocks closure.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FOne-truth%20state%20projection%20and%20drift%20refusal%20%28UP-009%29","start_line":1272}],
+      "key":"one_truth_projection_drift_refusal",
+      "statement":"One work-state authority chain assigns bounded wave to goals, ticket state to ticket, subordinate milestone state to milestone authority, and realisation decisions to accepted design. Projection recency/visibility/repetition confers no truth. Contradictions among owning ticket, required milestones, current goals or cited acceptance evidence block closure. Superseded evidence remains history and must not appear as current acceptance.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["occurrence_profile","occurrence_representation_scope"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":126,"quote":"It defines no process scheduler, event-log carrier, state store, workspace\nformat, rollback mechanism, actor topology or prospective reference-frame\nprofile","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FScope","start_line":124}],
+      "key":"occurrence_profile_non_authority",
+      "statement":"The profile supplies none of the listed scheduler/log/store/workspace/rollback/topology/prospective-frame implementations. It is no universal execution theory and grants no mutation, admission, evaluation or decision authority. Availability does not imply adoption. Adopting Product owns subject interpretation, vocabulary mappings, authorities, requirements, design, implementation and evidence; those identities are not imported by this member.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["occurrence_foundation_family","profile_occurrence","relation_claim","framework_event","event_frontier","occurrence_projection","semantic_admission_cut","effect_operation","operation_grant"],
+      "conditions":["The profile's adopted premises apply."],
+      "exceptions":["Territory containment in place of exact equality requires the adopting Product's compatible signature.","Acyclicity is asserted for identity and causal subgraphs, not every wider typed-lineage graph."],
+      "grounding":[{"end_line":84,"quote":"cause is admitted typed lineage and is never inferred from time, order, adjacency, containment or correlation","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FPosition%2FFoundation%20to%20law","start_line":81}],
+      "key":"occurrence_foundation_consequences",
+      "statement":"F19 states: exact-basis ordinary a_c models add sorts/value domains, never record kinds; closed unknown/missing/mistyped elements refuse. Each exact application is immutable; changed-input reapplication creates a new occurrence and corrections append without erasure. Observations/events/projections describe rather than replace external subject reality; snapshot/rollback requires separate Product authorization. Effects require matching admitted grants, with functor/traversal/operation/executor/actor/grant/invocation distinct. Candidate, judgment, admitting event and materialized relation remain separate; precedence orders admitted facts without deciding authority. Cause requires admitted typed lineage; identity/causal subgraphs are acyclic so lineage walks reach first cause. Projection binds complete frontier; new event produces new frontier, never advances an old projection. Cut members share exactly one source frontier; successor equals that frontier plus exactly admitted event; missing/inconsistent members refuse; projection cannot be read beyond its frontier. Every judgment decision/stop and effect disposition for an effect-intending occurrence maps to exactly one core value for a named predicate. Undecidable effect outcome remains indeterminate; established non-attainment is falsified whether or not its end is established; no refusal maps to success.",
+      "uncertainty":"Detailed owning clauses, complete domains and most exact result mappings are outside the supplied excerpt."
+    },
+    {
+      "applies_to_keys":["occurrence_foundation_family","occurrence_signature","profile_occurrence","effect_invocation"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[{"end_line":108,"quote":"Each consumer applies the rule and decides nothing the owning section does\nnot","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FPosition%2FFoundation%20to%20law","start_line":107}],
+      "key":"occurrence_policy_and_consumer_boundaries",
+      "statement":"Profile policy owns closed sort/reference/event/relation/qualifier domains, occurrence identity inputs, acyclicity of identity/causal subgraphs, decision/stop/residual vocabulary and mappings, and exclusion of out_of_frame from constraint values. Product owns precedence/evaluators/authorities, admitted causal claims, event scope/frontier laws, compatible territory containment and adoption. AC-007 owns hold/gap/two refusal values, core mappings and causes; traversal-specific refinements retain parent core values. Internal consumer summaries state: defects against five closed populations refuse as falsified structural constraints; basis mismatch in model validation/structural admission carries refuse_invalid_basis; application_of targets exact application seed, corrects_event does not erase, missing seed retains hold; invokes_effect requires exact operation grant and authorized_by checks kind/target/territory; unauthorized/stale effect_readiness never dispatches; identity_depends_on and causal occurrence/event graphs are acyclic admitted cause; event_for follows declared scope law, frontier_contains is complete under one exact basis, projects_frontier binds one unchanged frontier. Named residuals include unresolved_cause, unresolved_scope, competing_lineage and stale_frontier. Not every framework event belongs to an occurrence. Representative examples/checkers are neither engines nor semantic authority. No other member applies this profile's rules; an adopting Product does. Consumers add no decisions beyond owning rules.",
+      "uncertainty":"The referenced closed populations, judgment definitions, conformance items and refinements are not fully supplied."
+    },
+    {
+      "applies_to_keys":["occurrence_signature"],
+      "conditions":["Signature instantiation or model validation is considered."],
+      "exceptions":[],
+      "grounding":[{"end_line":184,"quote":"Missing populations, hidden records, refs\nambiguous between local and external, unknown record kinds and undeclared\nfield domains refuse model validation","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FImported%20calculus%20boundary","start_line":182}],
+      "key":"exact_calculus_population_and_reference_closure",
+      "statement":"Instantiation is invalid on conflict in calculus basis, inherited field meaning, record shape, population, value/reference/relation domain, authority coordinate or refusal law. Only semantic objects use SemanticObject.value; all other families retain inherited exact record shapes/coordinates. Population_M_occ is total over and exactly equals RecordKind_ac; every fundamental record belongs to exactly one finite population and local identities are unique across the disjoint union. Every other I identity resolves once through declared external domain/basis. No new fundamental kind is added. RefDomain_Sigma_occurrence closes every identity-bearing value and inherited field to one exact local record-kind/sort or declared external target kind; qualified_field includes source sort/kind and full nested path, so same labels do not merge domains. Missing populations, hidden records, local/external ambiguity, unknown kinds and undeclared domains refuse validation.",
+      "uncertainty":"Full inherited record definitions and the profile's finite reference-domain table are absent."
+    },
+    {
+      "applies_to_keys":["occurrence_signature","occurrence_model_subject","traversal_application","profile_occurrence","subject_binding","profile_observation","intended_outcome","operation_kind","effect_operation","operation_grant","effect_invocation","effect_disposition","effect_evidence","relation_claim","framework_event","event_frontier","occurrence_projection","semantic_admission_cut","effect_subject","transition_subject"],
+      "conditions":[],
+      "exceptions":["Other auxiliary-domain values require a separately identified compatible signature extension."],
+      "grounding":[{"end_line":243,"quote":"The value contract is closed: an\nunknown field or a missing required field refuses structural admission","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts","start_line":213}],
+      "key":"closed_sort_field_and_value_contracts",
+      "statement":"Sigma_occurrence.Sort contains exactly the nineteen supplied core sort identities. Every row is a SemanticObject with exact id, sort, context, owner, scope and basis in addition to its closed value fields. Unknown or missing required fields refuse structural admission. Refs are exact scoped identities and content digests SHA-256; every _ref resolves exactly once under AC-003. Ref lists follow the owning signature's declared order and reject duplicates. Closed core observation_kind values are pre_effect/post_effect/external_observation; effect dispositions no_effect/completed_effect/partial_effect/refused_effect; scope classes occurrence_scoped/subject_scoped/authority_scoped. TraversalApplication, OperationKind and EffectOperation are identities, not executors. EffectOperation without exact in-model OperationKind or explicit compatible import refuses.",
+      "uncertainty":"Reference-field target domains and compatible-extension rules beyond these statements remain external."
+    },
+    {
+      "applies_to_keys":["framework_event"],
+      "conditions":[],
+      "exceptions":["Non-claim-admission event kinds may carry claim fields only if a compatible extension explicitly declares them."],
+      "grounding":[{"end_line":224,"quote":"`claim_ref_or_none` and `claim_judgment_ref_or_none` are both absent or\nboth exact.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts","start_line":221}],
+      "key":"framework_event_optional_reference_rules",
+      "statement":"An event with scope independent of any occurrence gets no fictional occurrence merely to satisfy a total relation. Claim reference and claim-judgment reference are both absent or both exact. A claim-admission event requires both and a current source_frontier_ref. Other event kinds refuse the claim fields absent the explicit extension exception.",
+      "uncertainty":"The closed event-kind population and extension details are not supplied."
+    }
+  ],
+  "dispositions": [
+    {"decision":"retained","keys":["ticket","execution_contract","sprint_manifest","execution_contract_lifecycle","contract_derived_from_ticket"],"reason":"Retains carrier lifetimes, contract derivation and the described admission/execution/closure loop as data.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F1.%20Work%20carriers%2FExecution%20contracts"},
+    {"decision":"retained","keys":["milestone","milestone_claim_and_completion_boundary","ticket_requires_milestone_acceptance"],"reason":"Retains milestone identity, bounded acceptance and universal closure requirements.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F1.%20Work%20carriers%2FMilestones%20and%20phase-scoped%20truth%20%28UP-006%29"},
+    {"decision":"omitted","keys":[],"reason":"Only a grouping heading and blank line are supplied; substantive layout/authority content is retained in its supplied subsections.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F2.%20Layout%20and%20authority"},
+    {"decision":"retained","keys":["default_layout_and_installed_resolution","alternate_carrier_locations"],"reason":"Retains starter layout, installed-resolution distinction and permitted conforming bindings.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F2.%20Layout%20and%20authority%2FDefault%20layout"},
+    {"decision":"retained","keys":["carrier_binding","work_projection","board_projection_variation","board_projects_ticket_authority"],"reason":"Retains binding roles, content ownership and projection/rebinding limits.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F2.%20Layout%20and%20authority%2FBindings%20and%20projections"},
+    {"decision":"retained","keys":["carrier_substitution_conservation","carrier_growth_variation"],"reason":"Retains carrier substitution invariants and admitted growth options.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F2.%20Layout%20and%20authority%2FCarrier%20substitution"},
+    {"decision":"omitted","keys":[],"reason":"Only a grouping heading and blank line; sprint rules are interpreted in supplied subsections.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F3.%20Sprint%20rules"},
+    {"decision":"retained","keys":["sprint_manifest","sprint_record_preservation"],"reason":"Retains one-record invariant, alternative-carrier preservation and recommended naming modality.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F3.%20Sprint%20rules%2FOne%20durable%20record%20per%20sprint"},
+    {"decision":"retained","keys":["sprint_manifest_required_fields"],"reason":"Retains all minimum fields, alternatives and field meanings.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F3.%20Sprint%20rules%2FManifest%20fields"},
+    {"decision":"retained","keys":["sprint_status","sprint_status_extensions"],"reason":"Retains status meanings and optional additions without bypassing close review.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F3.%20Sprint%20rules%2FSprint%20status"},
+    {"decision":"retained","keys":["sprint_admission_boundary"],"reason":"Retains admission prerequisites, permitted batching and non-batchable triage.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F3.%20Sprint%20rules%2FSprint%20admission"},
+    {"decision":"retained","keys":["compliance_escrow_conditions"],"reason":"Retains every escrow prerequisite, conditional eligibility, prohibited class and exit route.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F3.%20Sprint%20rules%2FCompliance%20escrow"},
+    {"decision":"retained","keys":["sprint_close_result","sprint_close_review_requirements","sprint_close_mapping_boundaries","close_result_uses_manifest_authority"],"reason":"Retains review operations as descriptions, complete classifications/mappings and closure versus compliance distinction.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F3.%20Sprint%20rules%2FClose%20review"},
+    {"decision":"omitted","keys":[],"reason":"Only a grouping heading and blank line; substantive ticket rules are retained below.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules"},
+    {"decision":"retained","keys":["ticket","ticket_record_preservation"],"reason":"Retains authoritative uniqueness, preservation conditions and recommended filenames.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FOne%20durable%20record%20per%20ticket"},
+    {"decision":"retained","keys":["multi_build_tenant_work","tenant_lifecycle_independence"],"reason":"Retains three applicability cases, lifecycle separation, identity binding and completed-ticket exception.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FMulti-build-tenant%20independence"},
+    {"decision":"retained","keys":["ticket_and_contract_fields"],"reason":"Retains all required/recommended/conditional fields with distinct modalities.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FRequired%20fields"},
+    {"decision":"retained","keys":["ticket_type","ticket_type_extensions"],"reason":"Retains minimum type set and permission to extend.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FTypes"},
+    {"decision":"retained","keys":["ticket_category","migration_ticket","category_orthogonal_to_type"],"reason":"Retains category meaning, minimum choices, orthogonality and migration examples.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FCategory"},
+    {"decision":"retained","keys":["inside_out_ticket_dependency"],"reason":"Retains dependency direction and exploratory-work exception without granting early closure.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FInside-out%20sequencing"},
+    {"decision":"retained","keys":["change_class","change_class_recording","change_class_orthogonal_to_category"],"reason":"Retains class ownership, illustrative pairings, orthogonal dimensions and spike recommendation.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FChange%20class"},
+    {"decision":"retained","keys":["intake_triage","upward_propagation_decision_rule"],"reason":"Retains exact-result reuse, unknown-evidence distinction, re-entry triggers and every stop/class mapping.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FUpward%20propagation%20check"},
+    {"decision":"retained","keys":["triage_metadata_fidelity"],"reason":"Retains substantive-work metadata and fidelity to intake declarations.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FTriage%20metadata"},
+    {"decision":"retained","keys":["ticket_state","declared_state_result_separation","ticket_state_extensions"],"reason":"Retains minimum states, local extensions and no automatic core mapping.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FStatus"},
+    {"decision":"retained","keys":["ticket_state","ticket_lane_locations"],"reason":"Retains lane bindings, meanings and live-set purpose.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FLanes"},
+    {"decision":"retained","keys":["bounded_member_reentry"],"reason":"Retains bounded source re-entry and ownership routing as subject rules.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution"},
+    {"decision":"residual","keys":["work_carrier_derivation","work_carrier_derivation_owner_boundaries","work_carrier_external_owners"],"reason":"Retains authored derivations and choices; consumer links and external owners remain unresolved beyond supplied descriptions.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FFoundation%20to%20law%3A%20work%20carriers"},
+    {"decision":"residual","keys":["ordered_carrier_selection","carrier_authority_and_residual_persistence","admission_coordinates_unresolved"],"reason":"Retains ordered selection/refusal/persistence rules; external admission coordinates cannot be reconstructed.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FCarrier%20selection"},
+    {"decision":"retained","keys":["execution_contract","contract_admission_and_growth_basis_separation"],"reason":"Retains draft/admission distinction, recording modalities and growth-basis ownership.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FExecution%20contract%20admission"},
+    {"decision":"retained","keys":["evaluation_and_non_closure_visibility"],"reason":"Retains recommended criteria visibility, material failure conditions and outside-path debt qualification.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FEvaluation%20criteria%20and%20non-closure%20conditions"},
+    {"decision":"retained","keys":["bounded_context_meaning_resolution"],"reason":"Retains meaning-selection conditions, citation permissions and unresolved-term blocking boundaries.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FBounded-context%20term%20binding"},
+    {"decision":"omitted","keys":[],"reason":"Only a grouping heading and blank line; migration obligations are retained in supplied subsections.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration"},
+    {"decision":"retained","keys":["migration_strategy","migration_declaration_and_checklist"],"reason":"Retains complete declaration/checklist duties, explicit-absence alternative and conditional library fields.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FDeclaration%20and%20checklist"},
+    {"decision":"residual","keys":["migration_closure_and_slice_boundary","migration_external_promotion_bounds"],"reason":"Retains closure refusal, compatibility/disjoint-scope exceptions and slice distinction; external promotion/growth bounds remain unresolved.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FClosure%20of%20a%20migration%20ticket"},
+    {"decision":"retained","keys":["strategy_specific_declarations"],"reason":"Retains both strategy-conditioned requirement sets and unclassified-inheritance closure block.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FStrategy%20requirements"},
+    {"decision":"retained","keys":["library_usage","recurrence_review_thresholds"],"reason":"Retains universal migration applicability, second/third thresholds, exceptions, preferred order and optional-profile refinement.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FRecurring%20realisation%20and%20library%20declaration"},
+    {"decision":"retained","keys":["tenant_review_checks"],"reason":"Retains tenant-specific review obligations and upstream-change exception.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FMulti-build-tenant%20review"},
+    {"decision":"retained","keys":["functional_migration_review"],"reason":"Retains all nine recommended review questions and hard refusal of semantic-centre preservation despite green tests.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FReview%20disambiguation"},
+    {"decision":"retained","keys":["interface_review_checklist","interface_checklist_requirements"],"reason":"Retains coverage, test-evidence prerequisite, current-tree assertion and strategy/deferment exceptions.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FImpacted%20interface%20review%20checklist"},
+    {"decision":"retained","keys":["migration_break_order","break_order_and_defect_boundaries"],"reason":"Retains ordered steps, conditional closure map and explicit defect population as described process data.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FBreak%20order%20and%20break-to-closure%20map"},
+    {"decision":"retained","keys":["migration_negative_proof"],"reason":"Retains negative-proof recommendation/examples, old-path closure boundary and public-consumer coverage.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FMixed-state%20negative%20proof"},
+    {"decision":"retained","keys":["generic_assessment_acceptance_ownership"],"reason":"Retains tier and owner distinctions without importing absent protocols.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state"},
+    {"decision":"retained","keys":["independent_review","independent_review_and_ruling_boundaries"],"reason":"Retains review applicability/independence, durable traceability, human-ruling and bounded agentic authority conditions.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FExecution%20and%20verification%20authority%20separation%20%28UP-007%29"},
+    {"decision":"residual","keys":["recorded_judgment","owner_ruling","repricing_decision","repricing_result","judgment_and_ruling_continuity","repricing_preservation_and_result_meaning","repricing_result_evaluates_decision","described_judgment_operations"],"reason":"Retains record/reuse/owner continuity and complete repricing-result distinctions; operational judgment execution is outside the five active families.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FRecorded%20judgment%20and%20owner-ruling%20continuity"},
+    {"decision":"retained","keys":["work_claim","condition_based_closure"],"reason":"Retains quantified closure condition, unknown applicability, review-free conditional route and scoped invalidation/reuse.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FCondition-based%20closure%20and%20reuse"},
+    {"decision":"retained","keys":["test_case","test_expectation_authority_and_reconciliation"],"reason":"Retains derivation recommendation, supported-state/threat obligations, ordered reconciliation and stale-authority re-entry.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FTest%20case%20authority"},
+    {"decision":"retained","keys":["work_projection","one_truth_projection_drift_refusal"],"reason":"Retains ownership chain, contradiction closure block and superseded-evidence boundary.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FOne-truth%20state%20projection%20and%20drift%20refusal%20%28UP-009%29"},
+    {"decision":"residual","keys":["recommended_carrier_shapes","carrier_shape_variation","template_literal_detail"],"reason":"Retains template roles and material example semantics; literal artifact values remain source-reentry details, not instantiated records.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F8.%20Recommended%20shapes"},
+    {"decision":"omitted","keys":[],"reason":"Only a grouping heading and blank line; operating and relationship content is retained in supplied subsections.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F9.%20Operating%20mode%20and%20relationships"},
+    {"decision":"retained","keys":["local_file_operating_mode"],"reason":"Retains local-file assumptions and search-example purpose without executing or repairing commands.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F9.%20Operating%20mode%20and%20relationships%2FOperating%20mode"},
+    {"decision":"retained","keys":["work_surface_roles"],"reason":"Retains each named surface's question and separation rationale.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F9.%20Operating%20mode%20and%20relationships%2FRelationship%20to%20other%20surfaces"},
+    {"decision":"residual","keys":["occurrence_profile","occurrence_imports_unresolved"],"reason":"Retains tier/import boundaries and profile-local meanings; referenced calculus/result/effect definitions remain unresolved.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE"},
+    {"decision":"retained","keys":["occurrence_profile","occurrence_adoption_variation","profile_uses_exact_signature"],"reason":"Retains stable identities, optional adoption and Product-owned interpretation without universalization.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FPosition"},
+    {"decision":"residual","keys":["occurrence_foundation_family","occurrence_foundation_consequences","occurrence_policy_and_consumer_boundaries","projection_binds_frontier","effect_requires_matching_grant","occurrence_unprovided_owner_clauses"],"reason":"Retains all nine consequence groups, policy owners and consumer refinements; unsupplied detailed clauses cannot be reconstructed.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FPosition%2FFoundation%20to%20law"},
+    {"decision":"retained","keys":["occurrence_representation_scope","occurrence_profile_non_authority"],"reason":"Retains represented meanings and explicit implementation/execution exclusions.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FScope"},
+    {"decision":"residual","keys":["occurrence_signature","exact_calculus_population_and_reference_closure","profile_population_representation_limit"],"reason":"Retains exact-basis, population and reference closure rules as data; does not instantiate source-defined model populations.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FImported%20calculus%20boundary"},
+    {"decision":"residual","keys":["occurrence_model_subject","traversal_application","profile_occurrence","subject_binding","profile_observation","intended_outcome","operation_kind","effect_operation","operation_grant","effect_invocation","effect_disposition","effect_evidence","relation_claim","framework_event","event_frontier","occurrence_projection","semantic_admission_cut","effect_subject","transition_subject","closed_sort_field_and_value_contracts","framework_event_optional_reference_rules","compatible_value_extensions","effect_operation_kind_reference","closed_sort_domains_unresolved"],"reason":"Retains all nineteen sorts and field contracts, exact identities/value sets and optionality/refusal conditions; missing domain/mapping details remain explicit.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts"}
+  ],
+  "latitude": [
+    {
+      "allowed":["A conforming stdo_<label>.json may bind ticket, comment and sprint roles to existing directories, repository resources, tracker collections, API endpoints or product-scoped queries without restructuring the project."],
+      "applies_to_keys":["carrier_binding"],
+      "forbidden":["Treating missing project-local method files as absence of the installed governing method."],
+      "grounding":[{"end_line":146,"quote":"without restructuring\nthe project","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F2.%20Layout%20and%20authority%2FDefault%20layout","start_line":145}],
+      "key":"alternate_carrier_locations"
+    },
+    {
+      "allowed":["Generate a board from bound ticket authority; no separate mandatory ACTIVE_TASKS.md exists.","Make a board the authority only by explicit product-definition rebinding with no rival remaining."],
+      "applies_to_keys":["work_projection","carrier_binding"],
+      "forbidden":["Reading an unrebound generated board as the source of truth."],
+      "grounding":[{"end_line":163,"quote":"There is no separate mandatory `ACTIVE_TASKS.md` in this model.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F2.%20Layout%20and%20authority%2FBindings%20and%20projections","start_line":159}],
+      "key":"board_projection_variation"
+    },
+    {
+      "allowed":["Generated active boards, ticket dependency checks, links to scenario/requirement/ADR surfaces, external ticket-system synchronization and message-board integration through a standard tool-protocol capability.","Alternative carriers without reproducing default folders."],
+      "applies_to_keys":["carrier_binding","ticket","work_projection"],
+      "forbidden":["Changing authority/refusal laws through growth.","A tracker authority without explicit rebinding and elimination of rivals."],
+      "grounding":[{"end_line":177,"quote":"Growth the model admits includes a generated active board,","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F2.%20Layout%20and%20authority%2FCarrier%20substitution","start_line":170}],
+      "key":"carrier_growth_variation"
+    },
+    {
+      "allowed":["A project may add planned or cancelled sprint states."],
+      "applies_to_keys":["sprint_status"],
+      "forbidden":["Using those states to replace close review."],
+      "grounding":[{"end_line":218,"quote":"A project may add `planned` or\n`cancelled`; those states do not replace close review.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F3.%20Sprint%20rules%2FSprint%20status","start_line":217}],
+      "key":"sprint_status_extensions"
+    },
+    {
+      "allowed":["Projects may add ticket types beyond feature, bug, spike and chore."],
+      "applies_to_keys":["ticket_type"],
+      "forbidden":[],
+      "grounding":[{"end_line":412,"quote":"A project may add more;","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FTypes","start_line":411}],
+      "key":"ticket_type_extensions"
+    },
+    {
+      "allowed":["Projects may add blocked, cancelled or other explicit local ticket states."],
+      "applies_to_keys":["ticket_state"],
+      "forbidden":["Treating any added state as an automatic evaluation/core result."],
+      "grounding":[{"end_line":526,"quote":"A\nproject may add `blocked`, `cancelled` or other explicit local states;","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FStatus","start_line":519}],
+      "key":"ticket_state_extensions"
+    },
+    {
+      "allowed":["Bind another carrier shape under §2 that preserves the same required fields and sections."],
+      "applies_to_keys":["recommended_carrier_shapes","carrier_binding"],
+      "forbidden":["Using shape variation to drop required content."],
+      "grounding":[{"end_line":1281,"quote":"a project may bind another shape that carries the\nsame fields","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F8.%20Recommended%20shapes","start_line":1280}],
+      "key":"carrier_shape_variation"
+    },
+    {
+      "allowed":["A Product may adopt the occurrence profile and own its subject interpretation, vocabulary, authorities and implementation/evidence.","A Product may leave the optional profile unadopted."],
+      "applies_to_keys":["occurrence_profile"],
+      "forbidden":["Inferring adoption from availability.","Treating the profile as part of every a_c model or a universal execution theory."],
+      "grounding":[{"end_line":50,"quote":"Adoption is optional.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FPosition","start_line":42}],
+      "key":"occurrence_adoption_variation"
+    },
+    {
+      "allowed":["Other observation/disposition/scope values only through separately identified compatible signature extension.","Non-claim-admission event claim fields only where compatible extension explicitly declares them.","Product-specific finite OperationKind populations through exact compatible signature and mapping."],
+      "applies_to_keys":["occurrence_signature","framework_event","operation_kind","profile_observation","effect_disposition"],
+      "forbidden":["Silently extending closed values or unknown fields.","Treating identity records as executors.","EffectOperation lacking exact in-model OperationKind or explicit compatible import."],
+      "grounding":[{"end_line":243,"quote":"Any\nother value requires a separately identified compatible signature\nextension.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts","start_line":231}],
+      "key":"compatible_value_extensions"
+    }
+  ],
+  "limitations": [
+    "This is a source-linked F_P interpretation under the workflow-selected STDO 2.5.1-rc.2 basis, not semantic acceptance, model validation, execution, installed qualification, Product instantiation or a completeness judgment.",
+    "Only supplied source sections were interpreted. Discovery graph nodes and edges outside them supply no normative endpoints or missing definitions; no identity was inferred from matching labels.",
+    "Five heading-only sections were deliberately omitted as grouping text: Layout and authority, Sprint rules, Ticket rules, Implementation migration, and Operating mode and relationships. Their supplied substantive subsections have separate dispositions.",
+    "External and later-section dependencies remain unresolved, particularly FOUNDATIONS, SPEC_METHOD, PRODUCT_DEFINITION, ACTIVATION, EVALUATION, ASSURANCE, PROFILES, POSTING_GUIDE, DESIGN_MODULE, UX, CONFORMANCE, EXECUTIVE_BASELINE and the remainder of TRAVERSAL_OCCURRENCE.",
+    "Source-defined judgments, traversals, transformations, admission sequences and effect operations are described in concepts/constraints/residuals. No operational records or proofs were instantiated; the adapter's judgment, traversal and transformation populations remain empty.",
+    "The derivation tables' asserted standing, dependency and consumer claims are retained as subject data, not proved from the unsupplied foundations.",
+    "Template identities, dates, paths, sample functions and shell commands are illustrative document content. Compact interpretation retains their roles and material conditions; exact literal reconstruction requires source re-entry.",
+    "The occurrence sort inventory is retained, but its full reference-domain table, event/relation/constraint/judgment/residual/stop populations, compatible-extension law and detailed effect-disposition mappings are not supplied."
+  ],
+  "relations": [
+    {
+      "conditions":["The exact admitted ticket is the selected source carrier."],
+      "exceptions":["Other described sources are sprint manifest plus included work or qualifying intake draft."],
+      "governing":true,
+      "grounding":[{"end_line":85,"quote":"admitted work surface derived from a ticket,","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F1.%20Work%20carriers%2FExecution%20contracts","start_line":79}],
+      "key":"contract_derived_from_ticket",
+      "kind":"derived_work_authority",
+      "meaning":"The run contract derives its work basis from the selected durable ticket; derivation does not itself constitute admission.",
+      "source_key":"execution_contract",
+      "target_key":"ticket"
+    },
+    {
+      "conditions":["The milestone bears closure for the ticket."],
+      "exceptions":[],
+      "governing":true,
+      "grounding":[{"end_line":114,"quote":"Ticket completion requires every closure-bearing milestone to be accepted;","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F1.%20Work%20carriers%2FMilestones%20and%20phase-scoped%20truth%20%28UP-006%29","start_line":110}],
+      "key":"ticket_requires_milestone_acceptance",
+      "kind":"closure_requires",
+      "meaning":"Ticket completion depends on each closure-bearing milestone satisfying its own declared claim.",
+      "source_key":"ticket",
+      "target_key":"milestone"
+    },
+    {
+      "conditions":["Board is generated from the bound ticket authority."],
+      "exceptions":["Explicit product-definition rebinding with no rival changes the carrier's authority role."],
+      "governing":false,
+      "grounding":[{"end_line":163,"quote":"may generate one from the bound ticket authority;","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F2.%20Layout%20and%20authority%2FBindings%20and%20projections","start_line":160}],
+      "key":"board_projects_ticket_authority",
+      "kind":"projection_of",
+      "meaning":"The board derives presentation from ticket authority and does not govern that authority merely by projecting it.",
+      "source_key":"work_projection",
+      "target_key":"ticket"
+    },
+    {
+      "conditions":["A sprint item or debt entry is classified at close."],
+      "exceptions":[],
+      "governing":true,
+      "grounding":[{"end_line":294,"quote":"made against the sprint\nauthority the manifest cites;","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F3.%20Sprint%20rules%2FClose%20review","start_line":283}],
+      "key":"close_result_uses_manifest_authority",
+      "kind":"evaluated_under_cited_authority",
+      "meaning":"Close classification is governed by the sprint authority cited in its manifest, not by the classification label itself.",
+      "source_key":"sprint_close_result",
+      "target_key":"sprint_manifest"
+    },
+    {
+      "conditions":[],
+      "exceptions":[],
+      "governing":false,
+      "grounding":[{"end_line":421,"quote":"Ticket category is orthogonal to ticket type:","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FCategory","start_line":417}],
+      "key":"category_orthogonal_to_type",
+      "kind":"orthogonal_classification",
+      "meaning":"Execution discipline and kind of work record are independent classification dimensions; either minimum category may accompany any minimum type.",
+      "source_key":"ticket_category",
+      "target_key":"ticket_type"
+    },
+    {
+      "conditions":[],
+      "exceptions":[],
+      "governing":false,
+      "grounding":[{"end_line":466,"quote":"Ticket category and change class are also orthogonal:","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FChange%20class","start_line":462}],
+      "key":"change_class_orthogonal_to_category",
+      "kind":"orthogonal_classification",
+      "meaning":"Lawful constitutional re-entry and execution/closure discipline are independent dimensions.",
+      "source_key":"change_class",
+      "target_key":"ticket_category"
+    },
+    {
+      "conditions":["The evaluation is performed for the exact owner decision, obligation, subject and basis."],
+      "exceptions":[],
+      "governing":false,
+      "grounding":[{"end_line":1174,"quote":"The evaluation records\nall applicable failure grounds and supplies no decision authority;","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FRecorded%20judgment%20and%20owner-ruling%20continuity","start_line":1172}],
+      "key":"repricing_result_evaluates_decision",
+      "kind":"assessment_of",
+      "meaning":"Repricing result assesses decision legality and obligation preservation; it neither enacts the decision nor establishes delivery.",
+      "source_key":"repricing_result",
+      "target_key":"repricing_decision"
+    },
+    {
+      "conditions":["The Product adopts the profile."],
+      "exceptions":[],
+      "governing":true,
+      "grounding":[{"end_line":45,"quote":"The profile imports one exact `a_c` basis and\ninstantiates one closed model-family signature under that basis's record\nand model laws.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FPosition","start_line":42}],
+      "key":"profile_uses_exact_signature",
+      "kind":"exact_basis_signature_binding",
+      "meaning":"The adopted profile is constrained by one exact imported basis and its closed signature; this relation asserts no present adoption or instantiation.",
+      "source_key":"occurrence_profile",
+      "target_key":"occurrence_signature"
+    },
+    {
+      "conditions":["A profile projection is represented."],
+      "exceptions":[],
+      "governing":true,
+      "grounding":[{"end_line":82,"quote":"a projection binds one complete event frontier","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FPosition%2FFoundation%20to%20law","start_line":82}],
+      "key":"projection_binds_frontier",
+      "kind":"scope_and_basis_binding",
+      "meaning":"A projection binds one complete unchanged frontier; new events require a new frontier and cannot extend the old projection's scope.",
+      "source_key":"occurrence_projection",
+      "target_key":"event_frontier"
+    },
+    {
+      "conditions":["An effect operation is proposed under adopted premise I3."],
+      "exceptions":["Compatible Product-declared territory containment may replace exact equality."],
+      "governing":true,
+      "grounding":[{"end_line":79,"quote":"no operation is lawful without a matching grant","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FPosition%2FFoundation%20to%20law","start_line":79}],
+      "key":"effect_requires_matching_grant",
+      "kind":"authorization_requirement",
+      "meaning":"Operation lawfulness requires an admitted grant matching operation kind, target and territory; profile representation alone supplies none.",
+      "source_key":"effect_operation",
+      "target_key":"operation_grant"
+    },
+    {
+      "conditions":["An EffectOperation is present."],
+      "exceptions":["An explicit compatible import can provide the required OperationKind instead of an in-model object."],
+      "governing":true,
+      "grounding":[{"end_line":243,"quote":"A model that contains an\n`EffectOperation` without an exact in-model `OperationKind` object or an\nexplicit compatible import refuses","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts","start_line":241}],
+      "key":"effect_operation_kind_reference",
+      "kind":"required_exact_kind_reference",
+      "meaning":"Each EffectOperation requires a resolved exact OperationKind identity; missing kind refuses rather than creating an inferred operation type.",
+      "source_key":"effect_operation",
+      "target_key":"operation_kind"
+    }
+  ],
+  "residuals": [
+    {
+      "consequence":"Retain cited owners and consumer roles without reconstructing their laws or assigning graph-discovered authority. Exact application needs source re-entry at those owners.",
+      "grounding":[{"end_line":614,"quote":"Consumers of these rows, where an actor enters them","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FFoundation%20to%20law%3A%20work%20carriers","start_line":600}],
+      "key":"work_carrier_external_owners",
+      "subject_key":"work_carrier_derivation",
+      "uncertainty":"The table's linked consumers/owners are not supplied in full. Routes include SPEC_METHOD carrier selection/change classes/sprint boundary/computed classification/consistency/evidence/build tenancy; PRODUCT_DEFINITION binding, tenant registry, semantic resolution and bootstrap; ACTIVATION admission/reuse/acquisition; ODD manual-walkthrough admission; CONFORMANCE discriminators 41 and 48; UX escrow/results/family table; DESIGN_MODULE recurrence; EVALUATION independence/acceptance; EXECUTIVE_BASELINE reviewer/evaluation/independence/closure; ASSURANCE test authority; and POSTING_GUIDE boundary/discussion/ratification. Internal recommended-shape, judgment, status, triage, recurrence, milestone and closure consumers are described but not operationally traversed. Term binding and carrier-shape/bounded-reading rows expressly have no separate external consumer."
+    },
+    {
+      "consequence":"Carrier selection and persistence requirements are retained, but no admission result, execution authorization or evidence sufficiency is inferred.",
+      "grounding":[{"end_line":662,"quote":"the coordinates an admitted result carries,","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FCarrier%20selection","start_line":654}],
+      "key":"admission_coordinates_unresolved",
+      "subject_key":"carrier_authority_and_residual_persistence",
+      "uncertainty":"ACTIVATION §1 owns exact coordinates, admission-start conditions, self-certification refusal, result recording and no-durable-surface refusal; the supplied text refers to these without their full schema or procedure."
+    },
+    {
+      "consequence":"Intermediate acceptance, continuing cleanup and further growth remain distinct; no slice acceptance or growth permission is manufactured.",
+      "grounding":[{"end_line":828,"quote":"may continue within the bound SPEC_METHOD §7 states,","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FClosure%20of%20a%20migration%20ticket","start_line":826}],
+      "key":"migration_external_promotion_bounds",
+      "subject_key":"migration_closure_and_slice_boundary",
+      "uncertainty":"SPEC_METHOD §7's path-relative slice identity, acceptance criteria, cleanup bounds and compatibility law, and §3's renewed-growth admission, are not supplied. Strategy classification definitions and DESIGN_MODULE candidate refinements also remain reference dependencies."
+    },
+    {
+      "consequence":"The five-family representation describes judgment records, reuse/invalidation and result mappings but performs no evaluation, ownership decision, successor construction or authority effect.",
+      "grounding":[{"end_line":1174,"quote":"the\nstate changes only through the owner's authorised act.","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FRecorded%20judgment%20and%20owner-ruling%20continuity","start_line":1173}],
+      "key":"described_judgment_operations",
+      "subject_key":"repricing_result",
+      "uncertainty":"Source-defined judgments and acts have operational identity, applicability and evidence semantics that are not instantiated by this finite author schema. Full reuse, independence and C/J/O annotations require the referenced external sections."
+    },
+    {
+      "consequence":"The source examples remain re-entry material for exact artifact reconstruction. Their ids, timestamps, links and unchecked boxes confer no admission, truth, completed work or instantiated Product.",
+      "grounding":[{"end_line":1281,"quote":"These shapes are the recommended carriers","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F8.%20Recommended%20shapes","start_line":1279}],
+      "key":"template_literal_detail",
+      "subject_key":"recommended_carrier_shapes",
+      "uncertainty":"The compact records preserve template roles, example intent, scoped exclusions, closure policy and checklist meaning rather than reproducing every timestamp, placeholder link, function name and Markdown formatting token. The examples are not declared exhaustive serialization schemas."
+    },
+    {
+      "consequence":"Treat imports and profile-local names as references only; do not equate the subject's imported calculus with the workflow-selected published basis or infer operational authority.",
+      "grounding":[{"end_line":17,"quote":"imports [AXIOMATIC_CALCULUS](AXIOMATIC_CALCULUS.md) by reference","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE","start_line":5}],
+      "key":"occurrence_imports_unresolved",
+      "subject_key":"occurrence_profile",
+      "uncertainty":"PROFILES §1; AXIOMATIC_CALCULUS signature/RecordKind_ac/Population_M, typed records, AC-003, F_D/F_P/F_H, AC-016, basis identity and AC-011; FOUNDATIONS result algebra; and ACTIVATION effect refinement are referenced but not supplied. No concrete subject b_ac identity is established here."
+    },
+    {
+      "consequence":"Preserve the stated nine consequence groups and consumer-specific conditions without fabricating full domains, endpoints, engines or a conformance result.",
+      "grounding":[{"end_line":105,"quote":"The Scope, the Exclusions and the Conformance obligations apply these\nconsequences","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FPosition%2FFoundation%20to%20law","start_line":86}],
+      "key":"occurrence_unprovided_owner_clauses",
+      "subject_key":"occurrence_foundation_family",
+      "uncertainty":"Detailed occurrence identity, OP-001–OP-007, mutable effects, closed relations/events/constraints/judgments/residuals/stops, exact profile identity, authority/adoption, exclusions and conformance items 1–21 are only summarized or linked. The consumer index associates rows with constraints/judgments and conformance items but supplies neither their complete contracts nor evidence. The five closed populations, effect-currentness/grant checks, cross-basis refusal, correction selection and frontier residual handling cannot be fully reconstructed."
+    },
+    {
+      "consequence":"Represent the model notation and closure laws as concepts/constraints. Keep judgment/traversal/transformation populations uninstantiated and retain operational details as unresolved source dependencies.",
+      "grounding":[{"end_line":169,"quote":"Relations,\nconstraints, latitude, residuals, traversals, transformations and\njudgments keep their exact inherited `a_c` record families and coordinates","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FImported%20calculus%20boundary","start_line":166}],
+      "key":"profile_population_representation_limit",
+      "subject_key":"occurrence_signature",
+      "uncertainty":"The source models eight inherited fundamental record populations, identity universe and exact inherited coordinates. This response schema has five active semantic families and cannot itself instantiate or validate that complete model, execute signature instantiation, or prove reference closure."
+    },
+    {
+      "consequence":"Retain each supplied closed field contract and refusal condition. Do not invent missing field target sorts, enum members or effect-to-core outcomes from labels.",
+      "grounding":[{"end_line":243,"quote":"Every `_ref` resolves exactly once under AC-003,","section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts","start_line":233}],
+      "key":"closed_sort_domains_unresolved",
+      "subject_key":"closed_sort_field_and_value_contracts",
+      "uncertainty":"The finite reference-domain table and complete auxiliary domains are not supplied, including evidence_kind, relation qualifiers and exact inherited external target domains. EffectDisposition labels alone do not determine their full predicate-specific core mappings. Required _or_none fields express optional references, while exact encoding and compatible extension mechanics require the omitted defining clauses."
+    }
+  ]
+}

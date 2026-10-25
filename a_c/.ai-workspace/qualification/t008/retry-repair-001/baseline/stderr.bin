@@ -1,0 +1,24 @@
+test_public_selected_retry (test_ac_support_effects.PublicRetryTests.test_public_selected_retry) ... FAIL
+
+======================================================================
+FAIL: test_public_selected_retry (test_ac_support_effects.PublicRetryTests.test_public_selected_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py", line 982, in test_public_selected_retry
+    self._retry_case("positive")
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py", line 968, in _retry_case
+    receipt = self._admit(context)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py", line 885, in _admit
+    self._ok(response)
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py", line 877, in _ok
+    self.assertEqual(response["status"], "ok", response.get("refusal"))
+AssertionError: 'refused' != 'ok'
+- refused
++ ok
+ : {'code': 'contract_violation', 'gaps': [{'missing': [], 'unknown': ['required_reconciliation_predicates']}], 'reason': 'object has missing or unknown fields', 'source_refs': []}
+
+----------------------------------------------------------------------
+Ran 1 test in 0.666s
+
+FAILED (failures=1)

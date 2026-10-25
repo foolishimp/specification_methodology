@@ -2,7 +2,7 @@
 
 Use the operation implementation selected by the target Product/activation. The construction binding is `urn:a-c:fd-support:method:stdo-3.0.1-rc.1:executive:1`, SHA256 `a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e01893cc30bbf7`. Its legacy builder identity is separate. Native results.conjoin is unsupported; never relabel a legacy conjunction.
 
-The ordinary public CLI is sufficient. Supply an exact policy, its digest and the authorized principal; inherit the environment. For this construction the observed executable is Python 3.13.7 and the entrypoint is `/Users/jim/src/apps/specification_methodology-skills/a_c/build_tenants/graphify/code/ac_support.py`. Resolve that development-tool installation explicitly in another workspace. Do not assume a portable absolute path.
+The ordinary public CLI is sufficient. Supply an exact policy, its digest and the authorized principal; inherit the environment. Resolve the actual Python/runtime and `a_c/build_tenants/graphify/code/ac_support.py` from the selected provider manifest and activation. Historical construction used Python 3.13.7; that observation does not select an interpreter for another workspace. Do not reuse the old detached-worktree path as a portable installation.
 
 This executable transport pattern reads an envelope from stdin, creates no request file and preserves the CLI's response:
 
@@ -33,3 +33,7 @@ For `evidence.read`, arguments are `{"artifact":{"id":"sha256:…","sha256":"…
 For context, admission, review or dispatch use `tools.describe` for the named operation and current method_profile, then construct its exact input from the active contract. Discovery is not authority. If the required operation or binding is unsupported, preserve the real refusal and return the required capability/owner; do not invoke a substitute and claim the original path passed. An F_P assessment is authored evidence, not a deterministic tool predicate. Native Executive consumption must retain all required evaluations, applicability uncertainty, incompatible bases and contradictions; it cannot fabricate a qualified join.
 
 Auxiliary host reads/hashes/read-only validators establish finite byte facts only. Any host mutation requires its own declared operation grant and actual-path qualification; it never stands in for a required tool result.
+
+For cross-Product acquisition/context or a selected scoped view, [composition](composition.md)
+adds the capable manager check and actual `composition.inspect` call. The optional
+trusted declaration is not supplied or widened through the request envelope.

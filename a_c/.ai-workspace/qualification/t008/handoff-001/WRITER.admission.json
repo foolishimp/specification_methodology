@@ -1,0 +1,31 @@
+{
+  "schema": "a_c.external-executive.writer-receipt/1",
+  "activation": "T008-handoff-001",
+  "admitter": "/root",
+  "actor": "/root/ac_fd_interfaces_worker",
+  "role": "Writer",
+  "classification": "realization_refactor, factual status and handoff only",
+  "Root_reported_selection": "Exact current realization for further provisional dogfood; bounded implementation/review/technical integration complete",
+  "preimage_source_manifest": {
+    "path": "a_c/.ai-workspace/qualification/t008/interfaces/integration-004/SOURCE_MANIFEST.json",
+    "sha256": "d7153ef1d248f3d956605fd6c17eb7c99471d6dc34e5350a6c5a349deb336737"
+  },
+  "existing_paths": [
+    "README.md",
+    "specification/GOALS.md",
+    "specification/PRODUCT.md",
+    "specification/requirements/README.md",
+    "specification/requirements/fd-support-tools.md",
+    "specification/requirements/fd-support-verification.md",
+    "build_tenants/graphify/README.md",
+    "build_tenants/graphify/design/README.md",
+    "build_tenants/graphify/design/fd-support.md",
+    "build_tenants/graphify/examples/fd-support/LIFECYCLE_QUICKSTART.md",
+    ".ai-workspace/tickets/active/T-008-fd-tenant-implementation.md"
+  ],
+  "new_territory": ".ai-workspace/qualification/t008/handoff-001/ plus owned temp/cache only",
+  "new_territory_absent_before_creation": true,
+  "normative_WHAT_design_bodies_and_runtime_sources_immutable": true,
+  "checks": "Structural JSON/link/permitted-diff/source-guard checks only; no tests/runtime/Git/provider/network effects",
+  "acceptance_release_current_runtime_authority_or_native_calls_granted": false
+}

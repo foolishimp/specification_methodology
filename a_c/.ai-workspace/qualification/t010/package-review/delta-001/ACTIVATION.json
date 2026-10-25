@@ -1,0 +1,42 @@
+{
+  "conserved_oracle_sha256": "96613252763396c043f0bfbf34fe2e2aa62aec1f8a70e6730b9c373f07b8e74a",
+  "frozen_subjects": [
+    {
+      "expected": "8439938a7937bb44eecc50571c90d71fad9405ba5bc2f4eb28abbdd5379593c6",
+      "path": "package_release.py",
+      "sha256": "8439938a7937bb44eecc50571c90d71fad9405ba5bc2f4eb28abbdd5379593c6"
+    },
+    {
+      "expected": "74beb6365104bc4352b691725c9e18fe3521d01fe50a080c0c9cc735a4a141f5",
+      "path": "release_tools/bundle_check.py",
+      "sha256": "74beb6365104bc4352b691725c9e18fe3521d01fe50a080c0c9cc735a4a141f5"
+    },
+    {
+      "expected": "c400d1eb1ffac70d62bd257e1451d6b45542b5065c7c4f693d7a9e09fe70c0e5",
+      "path": "release_tools/public_receipts.py",
+      "sha256": "c400d1eb1ffac70d62bd257e1451d6b45542b5065c7c4f693d7a9e09fe70c0e5"
+    },
+    {
+      "expected": "8dddf06b1b193cb3968556ef22bdfd77c65e087041026e8150d1106d2effab93",
+      "path": "release_tools/PUBLIC-RECEIPTS.md",
+      "sha256": "8dddf06b1b193cb3968556ef22bdfd77c65e087041026e8150d1106d2effab93"
+    },
+    {
+      "expected": "cde0bc2c0269361655150797c6fb31d3e2934850c2fb205295d490625242c568",
+      "path": "RELEASE-PREPARATION.md",
+      "sha256": "cde0bc2c0269361655150797c6fb31d3e2934850c2fb205295d490625242c568"
+    }
+  ],
+  "grant": [
+    "proof package-review/delta-001 descendants",
+    "own new ac-common-package-review-* scratch"
+  ],
+  "prohibited": [
+    "app/source/candidate/model/Git writes",
+    "native/model/network/install effects",
+    "browser/server use",
+    "semantic acceptance or publication"
+  ],
+  "role": "nonauthor independent delta Reviewer",
+  "scope": "original F001 evidence-binding repair; constructor/portable verifier; no actual common final model or UI qualification"
+}

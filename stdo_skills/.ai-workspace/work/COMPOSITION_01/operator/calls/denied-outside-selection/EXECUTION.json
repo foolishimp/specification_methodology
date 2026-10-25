@@ -1,0 +1,31 @@
+{
+  "name": "denied-outside-selection",
+  "operation": "source.read",
+  "argv": [
+    "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+    "-B",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py",
+    "--policy",
+    "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/COMPOSITION_01/operator/POLICY.json",
+    "--policy-sha256",
+    "bf93cfcfb1f00c22c2c71775bd04e234ef05000cd8069f36bad9135162f5975b",
+    "--principal",
+    "writer",
+    "call",
+    "--request",
+    "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/COMPOSITION_01/operator/calls/denied-outside-selection/request.json"
+  ],
+  "exit": 2,
+  "status": "refused",
+  "evidence": {
+    "id": "sha256:17378cdb69a9b6b327307bb20a94fb5ea157177733100187a215b3183f1291ba",
+    "sha256": "17378cdb69a9b6b327307bb20a94fb5ea157177733100187a215b3183f1291ba"
+  },
+  "expected": "refused",
+  "refusal": {
+    "code": "acquisition_denied",
+    "gaps": [],
+    "reason": "Selected route does not permit this exact source selection",
+    "source_refs": []
+  }
+}

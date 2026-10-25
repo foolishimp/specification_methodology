@@ -1,0 +1,31 @@
+{
+  "name": "strict-context",
+  "operation": "context.assemble",
+  "argv": [
+    "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+    "-B",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py",
+    "--policy",
+    "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/COMPOSITION_01/operator/POLICY-strict.json",
+    "--policy-sha256",
+    "f30ba73ad970cace55c71be3af41bf0dbc55afbdaa335a02cbad91304d09b537",
+    "--principal",
+    "writer",
+    "call",
+    "--request",
+    "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/COMPOSITION_01/operator/calls/strict-context/request.json"
+  ],
+  "exit": 2,
+  "status": "refused",
+  "evidence": {
+    "id": "sha256:92ba67d2fbc56751ce39580a89c21a5aa2520776e481655bb4c8e2462a9e3e7f",
+    "sha256": "92ba67d2fbc56751ce39580a89c21a5aa2520776e481655bb4c8e2462a9e3e7f"
+  },
+  "expected": "refused",
+  "refusal": {
+    "code": "basis_missing",
+    "gaps": [],
+    "reason": "Unresolved provenance cannot establish this receiving information policy",
+    "source_refs": []
+  }
+}

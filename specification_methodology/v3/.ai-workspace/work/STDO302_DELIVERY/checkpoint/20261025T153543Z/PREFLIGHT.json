@@ -1,0 +1,76 @@
+{
+  "observed_at_utc": "2026-10-25T15:35:43.863319+00:00",
+  "actor": "/root/stdo302_checkpoint_writer",
+  "authority": "User instruction to checkpoint commit everything to main; subsequent user instruction selects3.0.2 without RC as the release. Root delegates this local checkpoint, reserving publication for a later bounded activation.",
+  "branch": "main",
+  "base_head": "0ec4b6c94f6255f6057416fec9d4c77feddf1b06",
+  "remote_main_observed": "a2e56d8bd2882068c84e45b2423cecc246c62525",
+  "ahead_behind": [
+    1,
+    0
+  ],
+  "scope": "All visible tracked and untracked repository content, including generated and retained historical evidence; no exclusions. Git-ignored files are outside the visible inventory.",
+  "inventory": {
+    "paths": 56216,
+    "status_counts": {
+      " M": 47,
+      "??": 56169
+    },
+    "lstat_total_bytes": 718304502,
+    "status_z_sha256": "7037c895c4e8849d2147410b768ed2439bbe0736f16ee5cde4a20c7b35c8de5a",
+    "largest": {
+      "path": "a_c/applications/stdo-v3-common-35fb4824/run/repaired-proposal/carrier.json",
+      "bytes": 42338082
+    },
+    "symlinks": 27,
+    "special_files": 0
+  },
+  "credential_scan": {
+    "scope": "56,189 regular visible changed/untracked files,718,301,435 bytes; symlinks not followed; compressed members not expanded",
+    "method": "Bounded known private-key and GitHub/OpenAI/Anthropic/AWS/Slack token syntax scan plus sensitive basename checks",
+    "genuine_findings": [],
+    "false_positives": [
+      {
+        "path": "stdo_skills/specification/SOURCE_OWNERS.md",
+        "line": 32,
+        "classification": "A local Markdown requirement heading fragment matched the sk- token syntax; not a credential.",
+        "match_sha256": "8861e30c50b34e8d55683adc81249fb84329f97998fdcf01600fe4f1f6b0ce76"
+      }
+    ],
+    "limit": "This is a bounded pre-publication screen, not an exhaustive secrets certification. No candidate or secret bytes are copied into this record."
+  },
+  "frozen_subjects": [
+    {
+      "path": "specification_methodology/v3/.ai-workspace/work/PRODUCT_COMPOSITION_IMPLEMENTATION_01/common/CANDIDATE-repair1.json",
+      "sha256": "49782c5a616cb4c12ad2ef95d28d6fd7f5a60546d329cd37a8380f998f9728bd",
+      "members": 113,
+      "mismatches": []
+    },
+    {
+      "path": "specification_methodology/v3/.ai-workspace/work/PRODUCT_COMPOSITION_IMPLEMENTATION_01/manager/CANDIDATE-repair1.json",
+      "sha256": "cc6c338c944069734d762a56b2bcea552c5158f81c79c0ff745fd0f8aacc7b90",
+      "members": 8,
+      "mismatches": []
+    },
+    {
+      "path": "a_c/.ai-workspace/work/PRODUCT_COMPOSITION_01/source-freeze-04.json",
+      "sha256": "53db95d31d32dd00fc8f0c8b13bc184dc45c422bc52dbb7239fd1370212160b8",
+      "members": 10,
+      "mismatches": []
+    },
+    {
+      "path": "stdo_skills/.ai-workspace/work/COMPOSITION_01/CANDIDATE-04.json",
+      "sha256": "ce66285451d8cd5eba0639bb234167c29e8e74d01944cc09194499c9736e6ac2",
+      "members": 203,
+      "mismatches": []
+    }
+  ],
+  "existing_validation": {
+    "tracked_diff_check": "passed",
+    "installed_v3_builder": "stdo status --definition specification_methodology/v3/stdo_3.json --verify passed; exact2.5.1-rc.2 manifest3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "closed_delivery": "specification_methodology/v3/.ai-workspace/work/PRODUCT_COMPOSITION_IMPLEMENTATION_01/delivery/CLOSURE.json",
+    "reuse": "Closed tests and reviews are consumed on their matching source hashes; no unnecessary full-suite repetition."
+  },
+  "selected_release_version": "3.0.2",
+  "checkpoint_limit": "This checkpoint alone creates no release tag, publication, installation or expanded qualification."
+}

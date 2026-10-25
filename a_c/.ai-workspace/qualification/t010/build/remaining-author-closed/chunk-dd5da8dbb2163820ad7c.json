@@ -1,0 +1,77 @@
+{
+  "after": {
+    "created_at": "2026-10-20T09:16:01.387858+00:00",
+    "implementation_manifest_sha256": "594fafcf083eadbbaf1472d68fe9f375fc21ccb426c6825194793304eac2503e",
+    "package_members": 81,
+    "semantic_members": 58,
+    "source_manifest_sha256": "dbf32e7f99eb7228ca361ec02f44227c05e02bb6bc447d1dd38255cd3ca4a4d4",
+    "status": "exact"
+  },
+  "attempt": "actors/author/chunk-dd5da8dbb2163820ad7c/attempt-001",
+  "chunk": "chunk-dd5da8dbb2163820ad7c",
+  "closed_at": "2026-10-20T09:16:01.499734+00:00",
+  "custody": "source_only_failure_custody_verified",
+  "custody_error": null,
+  "files": {
+    "answer.json": {
+      "bytes": 184481,
+      "sha256": "edfec6dcc865e81158245efb1eafe1450733d07283ba208bee86f4d6cbe2798e"
+    },
+    "events.jsonl": {
+      "bytes": 191710,
+      "sha256": "ea39e09bd3a91392daecc8f60b76270b6b1c7fc2093e02bdf13d1ec1b8212599"
+    },
+    "invocation.json": {
+      "bytes": 3301,
+      "sha256": "e69f64f37bd3374c50953cc4149626b398364704f9f869544a6b4d91fcb12634"
+    },
+    "prompt.txt": {
+      "bytes": 235694,
+      "sha256": "0b3237324865baca7ced63261118b7623638c3f35cdab5df93fe170877bae0b5"
+    },
+    "result.json": {
+      "bytes": 1054,
+      "sha256": "f1c2aae3978162212a2bfe657e68d6e72ca2a63459812e596dd5519b2f2d54ed"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "usage.json": {
+      "bytes": 284,
+      "sha256": "b36ffb234b005798b2e037a66f2727c298a612165255cba094d076d5be7de091"
+    }
+  },
+  "result": {
+    "answer_sha256": "edfec6dcc865e81158245efb1eafe1450733d07283ba208bee86f4d6cbe2798e",
+    "cli_exit_code": 0,
+    "cli_version": "codex-cli 0.162.1",
+    "elapsed_seconds": 1045.1195130420383,
+    "events_sha256": "ea39e09bd3a91392daecc8f60b76270b6b1c7fc2093e02bdf13d1ec1b8212599",
+    "failures": [
+      "source_or_semantic_fragment_validation"
+    ],
+    "profile": "ac.generation.actor-result/1",
+    "schema_errors": [],
+    "settings": {
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "service_tier": "default"
+    },
+    "status": "failed",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "timed_out": false,
+    "unexpected_item_types": [],
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 72960,
+        "input_tokens": 73168,
+        "output_tokens": 45101,
+        "reasoning_output_tokens": 1030
+      }
+    ],
+    "user_config_unchanged": true,
+    "validation_error": "record[closure_result_mapping]/grounding/0: grounding quote is not exact source at declared range"
+  }
+}

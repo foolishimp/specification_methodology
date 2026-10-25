@@ -1,0 +1,85 @@
+{
+  "actual_review_prepare_calls": [
+    {
+      "candidate_result": [],
+      "emitted_before_first_potential_candidate_request": true,
+      "emitted_expectations": [
+        {
+          "artifact": {
+            "id": "sha256:d50b1f68cac5580cb8846d2514c534d8f05b320480cce3fd0d5185539028843a",
+            "sha256": "d50b1f68cac5580cb8846d2514c534d8f05b320480cce3fd0d5185539028843a"
+          },
+          "exposure_gaps": [],
+          "native_ref_observed_in_complete_typed_response": false,
+          "operation_interval": {
+            "clock": "unix_ns",
+            "ended_ns": 1792385393263712000,
+            "started_ns": 1792385392032793000
+          },
+          "population_complete": true,
+          "producer_actor": "urn:a-c:T008:claude-reviewer:001",
+          "protected_schema": "a_c.fd-support.expectation/1",
+          "source_first_observed": true,
+          "source_inputs_count": 18,
+          "standing": "Supplemental expectation assertion only, never a returned judgment on the four later predicates; original phase1I not rewritten.",
+          "text_sha256": "fab911c639fad21861e43fd708981f47c3463dc89b021d723d02908c3655b635",
+          "text_utf8_bytes": 4041
+        }
+      ],
+      "host_saved_or_preview_marker": true,
+      "phase": "expectation",
+      "protected_operation_evidence": [
+        {
+          "id": "sha256:159bce5c30c774cadb29717ee0afd3669aab6d60014c679f5475902213847f01",
+          "sha256": "159bce5c30c774cadb29717ee0afd3669aab6d60014c679f5475902213847f01"
+        }
+      ],
+      "request_id": "p2-rp-supp-expect-1",
+      "source_line": 390,
+      "typed_public_response_complete": false
+    },
+    {
+      "candidate_result": [
+        {
+          "acquired_record_count": 164,
+          "bound_expectation": {
+            "id": "sha256:4387cefa103592b5a76c96d288da403f9211bc3107843bc8dbfa63c501653f61",
+            "sha256": "4387cefa103592b5a76c96d288da403f9211bc3107843bc8dbfa63c501653f61"
+          },
+          "full_native_semantic_read_from_bulk_response": false,
+          "gaps": [],
+          "population_complete": true,
+          "population_count": 163,
+          "protected_status": "ok"
+        }
+      ],
+      "emitted_expectations": [],
+      "host_saved_or_preview_marker": true,
+      "phase": "candidate",
+      "protected_operation_evidence": [
+        {
+          "id": "sha256:4b69405f5b2a028e5fdade6d5d994fe28c8d07c2745fdc3a3fd6c6a8fe69bb72",
+          "sha256": "4b69405f5b2a028e5fdade6d5d994fe28c8d07c2745fdc3a3fd6c6a8fe69bb72"
+        }
+      ],
+      "request_id": "p2-rp-candidate-1",
+      "source_line": 412,
+      "typed_public_response_complete": false
+    }
+  ],
+  "first_potential_candidate_request": {
+    "operation": "review.prepare",
+    "protected_acquisition_started_ns": 1792385402144051000,
+    "request_id": "p2-rp-candidate-1",
+    "scope": "First observed potential candidate acquisition request; native semantic reading still judged separately.",
+    "source_line": 412,
+    "tool_use_id": "toolu_0194WDJK47u2VFEqqZfCUzRm"
+  },
+  "later_four_returned_semantic_values": null,
+  "original_phase1_expectation": {
+    "id": "sha256:4387cefa103592b5a76c96d288da403f9211bc3107843bc8dbfa63c501653f61",
+    "sha256": "4387cefa103592b5a76c96d288da403f9211bc3107843bc8dbfa63c501653f61"
+  },
+  "original_phase1_semantic_value": "indeterminate / performed_partial; unchanged",
+  "scope": "Only actual typed public review.prepare/protected expectation/acquisition facts. No final phase2 evaluation exists; supplemental expectation is not an assessment."
+}

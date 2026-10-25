@@ -1,0 +1,242 @@
+test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift (test_ac_generate.GenerationTests.test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift) ... 
+  test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift (test_ac_generate.GenerationTests.test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift) (name='missing-events') ... FAIL
+  test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift (test_ac_generate.GenerationTests.test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift) (name='missing-usage') ... FAIL
+  test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift (test_ac_generate.GenerationTests.test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift) (name='missing-stderr') ... FAIL
+  test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift (test_ac_generate.GenerationTests.test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift) (name='prompt-rehashed') ... FAIL
+  test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift (test_ac_generate.GenerationTests.test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift) (name='tool-rehashed') ... FAIL
+test_fence_width_marker_indentation_and_closing_content_preserve_partitions (test_ac_generate.GenerationTests.test_fence_width_marker_indentation_and_closing_content_preserve_partitions) ... 
+  test_fence_width_marker_indentation_and_closing_content_preserve_partitions (test_ac_generate.GenerationTests.test_fence_width_marker_indentation_and_closing_content_preserve_partitions) (name='wide-backtick-inner-shorter') ... FAIL
+  test_fence_width_marker_indentation_and_closing_content_preserve_partitions (test_ac_generate.GenerationTests.test_fence_width_marker_indentation_and_closing_content_preserve_partitions) (name='wide-tilde-inner-shorter') ... FAIL
+  test_fence_width_marker_indentation_and_closing_content_preserve_partitions (test_ac_generate.GenerationTests.test_fence_width_marker_indentation_and_closing_content_preserve_partitions) (name='closing-content-is-data') ... FAIL
+  test_fence_width_marker_indentation_and_closing_content_preserve_partitions (test_ac_generate.GenerationTests.test_fence_width_marker_indentation_and_closing_content_preserve_partitions) (name='closing-info-is-data') ... FAIL
+  test_fence_width_marker_indentation_and_closing_content_preserve_partitions (test_ac_generate.GenerationTests.test_fence_width_marker_indentation_and_closing_content_preserve_partitions) (name='three-space-indent') ... FAIL
+  test_fence_width_marker_indentation_and_closing_content_preserve_partitions (test_ac_generate.GenerationTests.test_fence_width_marker_indentation_and_closing_content_preserve_partitions) (name='overindented-close-is-data') ... FAIL
+test_fence_width_marker_indentation_and_closing_content_preserve_partitions (test_ac_generate.GenerationTests.test_fence_width_marker_indentation_and_closing_content_preserve_partitions) ... FAIL
+test_public_utf8_unicode_line_coordinates_preserve_nongrounding_payload (test_ac_grounding.GroundingTests.test_public_utf8_unicode_line_coordinates_preserve_nongrounding_payload) ... 
+  test_public_utf8_unicode_line_coordinates_preserve_nongrounding_payload (test_ac_grounding.GroundingTests.test_public_utf8_unicode_line_coordinates_preserve_nongrounding_payload) (separator="'\\u2028'") ... ERROR
+  test_public_utf8_unicode_line_coordinates_preserve_nongrounding_payload (test_ac_grounding.GroundingTests.test_public_utf8_unicode_line_coordinates_preserve_nongrounding_payload) (separator="'\\u2029'") ... ERROR
+
+======================================================================
+ERROR: test_public_utf8_unicode_line_coordinates_preserve_nongrounding_payload (test_ac_grounding.GroundingTests.test_public_utf8_unicode_line_coordinates_preserve_nongrounding_payload) (separator="'\\u2028'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-generation-5ipacx94/preimage-regressions/code/ac_grounding.py", line 128, in normalize_answer
+    recovered, witness = recover_anchor(ground, sections[ground["section_id"]])
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-generation-5ipacx94/preimage-regressions/code/ac_grounding.py", line 110, in recover_anchor
+    require(strict_anchor(recovered, section), "recovered anchor failed exact original-source range check")
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-generation-5ipacx94/preimage-regressions/code/ac_grounding.py", line 40, in require
+    raise GroundingError(message)
+ac_grounding.GroundingError: recovered anchor failed exact original-source range check
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-generation-5ipacx94/preimage-regressions/test_env/test_ac_grounding.py", line 147, in test_public_utf8_unicode_line_coordinates_preserve_nongrounding_payload
+    derived, changes = grounding.normalize_answer(raw, chunk)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-generation-5ipacx94/preimage-regressions/code/ac_grounding.py", line 130, in normalize_answer
+    raise GroundingError(f"record[{key}]{path}: {exc}") from exc
+ac_grounding.GroundingError: record[proceed]/concepts/0/grounding/0: recovered anchor failed exact original-source range check
+
+======================================================================
+ERROR: test_public_utf8_unicode_line_coordinates_preserve_nongrounding_payload (test_ac_grounding.GroundingTests.test_public_utf8_unicode_line_coordinates_preserve_nongrounding_payload) (separator="'\\u2029'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-generation-5ipacx94/preimage-regressions/code/ac_grounding.py", line 128, in normalize_answer
+    recovered, witness = recover_anchor(ground, sections[ground["section_id"]])
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-generation-5ipacx94/preimage-regressions/code/ac_grounding.py", line 110, in recover_anchor
+    require(strict_anchor(recovered, section), "recovered anchor failed exact original-source range check")
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-generation-5ipacx94/preimage-regressions/code/ac_grounding.py", line 40, in require
+    raise GroundingError(message)
+ac_grounding.GroundingError: recovered anchor failed exact original-source range check
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-generation-5ipacx94/preimage-regressions/test_env/test_ac_grounding.py", line 147, in test_public_utf8_unicode_line_coordinates_preserve_nongrounding_payload
+    derived, changes = grounding.normalize_answer(raw, chunk)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-generation-5ipacx94/preimage-regressions/code/ac_grounding.py", line 130, in normalize_answer
+    raise GroundingError(f"record[{key}]{path}: {exc}") from exc
+ac_grounding.GroundingError: record[proceed]/concepts/0/grounding/0: recovered anchor failed exact original-source range check
+
+======================================================================
+FAIL: test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift (test_ac_generate.GenerationTests.test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift) (name='missing-events')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-generation-5ipacx94/preimage-regressions/test_env/test_ac_generate.py", line 303, in test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift
+    with self.assertRaises(gen.GenerationError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: GenerationError not raised
+
+======================================================================
+FAIL: test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift (test_ac_generate.GenerationTests.test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift) (name='missing-usage')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-generation-5ipacx94/preimage-regressions/test_env/test_ac_generate.py", line 303, in test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift
+    with self.assertRaises(gen.GenerationError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: GenerationError not raised
+
+======================================================================
+FAIL: test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift (test_ac_generate.GenerationTests.test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift) (name='missing-stderr')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-generation-5ipacx94/preimage-regressions/test_env/test_ac_generate.py", line 303, in test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift
+    with self.assertRaises(gen.GenerationError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: GenerationError not raised
+
+======================================================================
+FAIL: test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift (test_ac_generate.GenerationTests.test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift) (name='prompt-rehashed')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-generation-5ipacx94/preimage-regressions/test_env/test_ac_generate.py", line 303, in test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift
+    with self.assertRaises(gen.GenerationError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: GenerationError not raised
+
+======================================================================
+FAIL: test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift (test_ac_generate.GenerationTests.test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift) (name='tool-rehashed')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-generation-5ipacx94/preimage-regressions/test_env/test_ac_generate.py", line 303, in test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift
+    with self.assertRaises(gen.GenerationError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: GenerationError not raised
+
+======================================================================
+FAIL: test_fence_width_marker_indentation_and_closing_content_preserve_partitions (test_ac_generate.GenerationTests.test_fence_width_marker_indentation_and_closing_content_preserve_partitions) (name='wide-backtick-inner-shorter')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-generation-5ipacx94/preimage-regressions/test_env/test_ac_generate.py", line 148, in test_fence_width_marker_indentation_and_closing_content_preserve_partitions
+    self.assertEqual([s["heading"] for s in sections], ["Before", "Real"])
+AssertionError: Lists differ: ['Before', 'Hidden'] != ['Before', 'Real']
+
+First differing element 1:
+'Hidden'
+'Real'
+
+- ['Before', 'Hidden']
+?             ^^^^ ^
+
++ ['Before', 'Real']
+?             ^ ^^
+
+
+======================================================================
+FAIL: test_fence_width_marker_indentation_and_closing_content_preserve_partitions (test_ac_generate.GenerationTests.test_fence_width_marker_indentation_and_closing_content_preserve_partitions) (name='wide-tilde-inner-shorter')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-generation-5ipacx94/preimage-regressions/test_env/test_ac_generate.py", line 148, in test_fence_width_marker_indentation_and_closing_content_preserve_partitions
+    self.assertEqual([s["heading"] for s in sections], ["Before", "Real"])
+AssertionError: Lists differ: ['Before', 'Hidden'] != ['Before', 'Real']
+
+First differing element 1:
+'Hidden'
+'Real'
+
+- ['Before', 'Hidden']
+?             ^^^^ ^
+
++ ['Before', 'Real']
+?             ^ ^^
+
+
+======================================================================
+FAIL: test_fence_width_marker_indentation_and_closing_content_preserve_partitions (test_ac_generate.GenerationTests.test_fence_width_marker_indentation_and_closing_content_preserve_partitions) (name='closing-content-is-data')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-generation-5ipacx94/preimage-regressions/test_env/test_ac_generate.py", line 148, in test_fence_width_marker_indentation_and_closing_content_preserve_partitions
+    self.assertEqual([s["heading"] for s in sections], ["Before", "Real"])
+AssertionError: Lists differ: ['Before', 'Hidden'] != ['Before', 'Real']
+
+First differing element 1:
+'Hidden'
+'Real'
+
+- ['Before', 'Hidden']
+?             ^^^^ ^
+
++ ['Before', 'Real']
+?             ^ ^^
+
+
+======================================================================
+FAIL: test_fence_width_marker_indentation_and_closing_content_preserve_partitions (test_ac_generate.GenerationTests.test_fence_width_marker_indentation_and_closing_content_preserve_partitions) (name='closing-info-is-data')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-generation-5ipacx94/preimage-regressions/test_env/test_ac_generate.py", line 148, in test_fence_width_marker_indentation_and_closing_content_preserve_partitions
+    self.assertEqual([s["heading"] for s in sections], ["Before", "Real"])
+AssertionError: Lists differ: ['Before', 'Hidden'] != ['Before', 'Real']
+
+First differing element 1:
+'Hidden'
+'Real'
+
+- ['Before', 'Hidden']
+?             ^^^^ ^
+
++ ['Before', 'Real']
+?             ^ ^^
+
+
+======================================================================
+FAIL: test_fence_width_marker_indentation_and_closing_content_preserve_partitions (test_ac_generate.GenerationTests.test_fence_width_marker_indentation_and_closing_content_preserve_partitions) (name='three-space-indent')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-generation-5ipacx94/preimage-regressions/test_env/test_ac_generate.py", line 148, in test_fence_width_marker_indentation_and_closing_content_preserve_partitions
+    self.assertEqual([s["heading"] for s in sections], ["Before", "Real"])
+AssertionError: Lists differ: ['Before', 'Hidden'] != ['Before', 'Real']
+
+First differing element 1:
+'Hidden'
+'Real'
+
+- ['Before', 'Hidden']
+?             ^^^^ ^
+
++ ['Before', 'Real']
+?             ^ ^^
+
+
+======================================================================
+FAIL: test_fence_width_marker_indentation_and_closing_content_preserve_partitions (test_ac_generate.GenerationTests.test_fence_width_marker_indentation_and_closing_content_preserve_partitions) (name='overindented-close-is-data')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-generation-5ipacx94/preimage-regressions/test_env/test_ac_generate.py", line 148, in test_fence_width_marker_indentation_and_closing_content_preserve_partitions
+    self.assertEqual([s["heading"] for s in sections], ["Before", "Real"])
+AssertionError: Lists differ: ['Before', 'Hidden'] != ['Before', 'Real']
+
+First differing element 1:
+'Hidden'
+'Real'
+
+- ['Before', 'Hidden']
+?             ^^^^ ^
+
++ ['Before', 'Real']
+?             ^ ^^
+
+
+======================================================================
+FAIL: test_fence_width_marker_indentation_and_closing_content_preserve_partitions (test_ac_generate.GenerationTests.test_fence_width_marker_indentation_and_closing_content_preserve_partitions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-generation-5ipacx94/preimage-regressions/test_env/test_ac_generate.py", line 156, in test_fence_width_marker_indentation_and_closing_content_preserve_partitions
+    self.assertEqual([s["heading"] for s in gen.sections("doc.md", source, "repo://test/")], ["Before", "Real"])
+AssertionError: Lists differ: ['Before'] != ['Before', 'Real']
+
+Second list contains 1 additional elements.
+First extra element 1:
+'Real'
+
+- ['Before']
++ ['Before', 'Real']
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.056s
+
+FAILED (failures=12, errors=2)

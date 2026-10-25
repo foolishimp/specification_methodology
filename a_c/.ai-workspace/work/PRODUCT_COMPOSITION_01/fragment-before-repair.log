@@ -1,0 +1,66 @@
+test_markdown_examples_and_escapes_do_not_supply_edge_anchors (test_ac_support_composition.CompositionPublicTests.test_markdown_examples_and_escapes_do_not_supply_edge_anchors) ... 
+  test_markdown_examples_and_escapes_do_not_supply_edge_anchors (test_ac_support_composition.CompositionPublicTests.test_markdown_examples_and_escapes_do_not_supply_edge_anchors) (text='```markdown\n# Support\n<a id="support"></a>\n```\n') ... FAIL
+  test_markdown_examples_and_escapes_do_not_supply_edge_anchors (test_ac_support_composition.CompositionPublicTests.test_markdown_examples_and_escapes_do_not_supply_edge_anchors) (text='\\<a id="support"></a>\n') ... FAIL
+  test_markdown_examples_and_escapes_do_not_supply_edge_anchors (test_ac_support_composition.CompositionPublicTests.test_markdown_examples_and_escapes_do_not_supply_edge_anchors) (text='`example\n<a id="support"></a>\nexample`\n') ... FAIL
+  test_markdown_examples_and_escapes_do_not_supply_edge_anchors (test_ac_support_composition.CompositionPublicTests.test_markdown_examples_and_escapes_do_not_supply_edge_anchors) (text='    <a id="support"></a>\n') ... FAIL
+  test_markdown_examples_and_escapes_do_not_supply_edge_anchors (test_ac_support_composition.CompositionPublicTests.test_markdown_examples_and_escapes_do_not_supply_edge_anchors) (text='<!-- <a id="support"></a> -->\n') ... FAIL
+
+======================================================================
+FAIL: test_markdown_examples_and_escapes_do_not_supply_edge_anchors (test_ac_support_composition.CompositionPublicTests.test_markdown_examples_and_escapes_do_not_supply_edge_anchors) (text='```markdown\n# Support\n<a id="support"></a>\n```\n')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_composition.py", line 239, in test_markdown_examples_and_escapes_do_not_supply_edge_anchors
+    self.select(); self.assertRefused(self.read(self.f.data), "basis_missing")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_composition.py", line 80, in assertRefused
+    self.assertNotEqual(response["status"], "ok", response)
+AssertionError: 'ok' == 'ok' : {'evidence': {'id': 'sha256:456cfd3dc7734799114482ca4fc077930f9759d94900bd7126d61b70ec5fdd01', 'sha256': '456cfd3dc7734799114482ca4fc077930f9759d94900bd7126d61b70ec5fdd01'}, 'id': 'composition-1', 'operation': 'source.read', 'operation_outcome': {'cause': 'declared output available', 'core_value': 'satisfied', 'evidence': [], 'limits': ['output availability only; no semantic acceptance'], 'predicate': 'B(source.read)[request_sha256=21b73d71e38672cc6f9027dbf1dd8ddeed390a917f3e70cdddae99f8fe02327a]: declared output availability', 'source_parent': {'clause': 'results', 'member': 'FOUNDATIONS.md', 'sha256': '92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5'}, 'value': 'returned'}, 'refusal': None, 'result': {'artifact': None, 'value': {'acquisition': {}, 'content': '{"nested":{"a/b":null},"set":[1,2],"x":true}', 'coordinates': None, 'encoding': 'utf8', 'parent_sha256': '2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927', 'selected_sha256': '2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927', 'size_bytes': 44, 'source': {'engine': 'workspace-regular-file', 'object': None, 'path': 'inputs/data.json', 'root': 'workspace', 'selector': None, 'sha256': '2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927'}}}, 'schema': 'a_c.fd-support.response/1', 'status': 'ok'}
+
+======================================================================
+FAIL: test_markdown_examples_and_escapes_do_not_supply_edge_anchors (test_ac_support_composition.CompositionPublicTests.test_markdown_examples_and_escapes_do_not_supply_edge_anchors) (text='\\<a id="support"></a>\n')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_composition.py", line 239, in test_markdown_examples_and_escapes_do_not_supply_edge_anchors
+    self.select(); self.assertRefused(self.read(self.f.data), "basis_missing")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_composition.py", line 80, in assertRefused
+    self.assertNotEqual(response["status"], "ok", response)
+AssertionError: 'ok' == 'ok' : {'evidence': {'id': 'sha256:5c6477816e9922a2016602107cfba3a5c8d60e5765997faa4f014375fc4d6a7a', 'sha256': '5c6477816e9922a2016602107cfba3a5c8d60e5765997faa4f014375fc4d6a7a'}, 'id': 'composition-2', 'operation': 'source.read', 'operation_outcome': {'cause': 'declared output available', 'core_value': 'satisfied', 'evidence': [], 'limits': ['output availability only; no semantic acceptance'], 'predicate': 'B(source.read)[request_sha256=5dee943f8f21f86eea28e4562d2ffac609dc352c6fdaf726320bf932a6ac8fd9]: declared output availability', 'source_parent': {'clause': 'results', 'member': 'FOUNDATIONS.md', 'sha256': '92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5'}, 'value': 'returned'}, 'refusal': None, 'result': {'artifact': None, 'value': {'acquisition': {}, 'content': '{"nested":{"a/b":null},"set":[1,2],"x":true}', 'coordinates': None, 'encoding': 'utf8', 'parent_sha256': '2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927', 'selected_sha256': '2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927', 'size_bytes': 44, 'source': {'engine': 'workspace-regular-file', 'object': None, 'path': 'inputs/data.json', 'root': 'workspace', 'selector': None, 'sha256': '2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927'}}}, 'schema': 'a_c.fd-support.response/1', 'status': 'ok'}
+
+======================================================================
+FAIL: test_markdown_examples_and_escapes_do_not_supply_edge_anchors (test_ac_support_composition.CompositionPublicTests.test_markdown_examples_and_escapes_do_not_supply_edge_anchors) (text='`example\n<a id="support"></a>\nexample`\n')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_composition.py", line 239, in test_markdown_examples_and_escapes_do_not_supply_edge_anchors
+    self.select(); self.assertRefused(self.read(self.f.data), "basis_missing")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_composition.py", line 80, in assertRefused
+    self.assertNotEqual(response["status"], "ok", response)
+AssertionError: 'ok' == 'ok' : {'evidence': {'id': 'sha256:c82bf8b64636a9271f9ca709b8e1bcf13db347ea47cd348fcd9ab31069a160a8', 'sha256': 'c82bf8b64636a9271f9ca709b8e1bcf13db347ea47cd348fcd9ab31069a160a8'}, 'id': 'composition-3', 'operation': 'source.read', 'operation_outcome': {'cause': 'declared output available', 'core_value': 'satisfied', 'evidence': [], 'limits': ['output availability only; no semantic acceptance'], 'predicate': 'B(source.read)[request_sha256=8f6e176a42ad7168e1426077c2d1f7ba06d527559d5922648aa5d6dc4e7fb32d]: declared output availability', 'source_parent': {'clause': 'results', 'member': 'FOUNDATIONS.md', 'sha256': '92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5'}, 'value': 'returned'}, 'refusal': None, 'result': {'artifact': None, 'value': {'acquisition': {}, 'content': '{"nested":{"a/b":null},"set":[1,2],"x":true}', 'coordinates': None, 'encoding': 'utf8', 'parent_sha256': '2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927', 'selected_sha256': '2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927', 'size_bytes': 44, 'source': {'engine': 'workspace-regular-file', 'object': None, 'path': 'inputs/data.json', 'root': 'workspace', 'selector': None, 'sha256': '2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927'}}}, 'schema': 'a_c.fd-support.response/1', 'status': 'ok'}
+
+======================================================================
+FAIL: test_markdown_examples_and_escapes_do_not_supply_edge_anchors (test_ac_support_composition.CompositionPublicTests.test_markdown_examples_and_escapes_do_not_supply_edge_anchors) (text='    <a id="support"></a>\n')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_composition.py", line 239, in test_markdown_examples_and_escapes_do_not_supply_edge_anchors
+    self.select(); self.assertRefused(self.read(self.f.data), "basis_missing")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_composition.py", line 80, in assertRefused
+    self.assertNotEqual(response["status"], "ok", response)
+AssertionError: 'ok' == 'ok' : {'evidence': {'id': 'sha256:b5a1fe58574245e2be44f6afaf386006ae99e59dbaf34ce500c2be226ca774e6', 'sha256': 'b5a1fe58574245e2be44f6afaf386006ae99e59dbaf34ce500c2be226ca774e6'}, 'id': 'composition-4', 'operation': 'source.read', 'operation_outcome': {'cause': 'declared output available', 'core_value': 'satisfied', 'evidence': [], 'limits': ['output availability only; no semantic acceptance'], 'predicate': 'B(source.read)[request_sha256=f037468ae9aadcf4ba46ed1b23e9baf36827602dd994883ed190e4bbd2fc744c]: declared output availability', 'source_parent': {'clause': 'results', 'member': 'FOUNDATIONS.md', 'sha256': '92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5'}, 'value': 'returned'}, 'refusal': None, 'result': {'artifact': None, 'value': {'acquisition': {}, 'content': '{"nested":{"a/b":null},"set":[1,2],"x":true}', 'coordinates': None, 'encoding': 'utf8', 'parent_sha256': '2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927', 'selected_sha256': '2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927', 'size_bytes': 44, 'source': {'engine': 'workspace-regular-file', 'object': None, 'path': 'inputs/data.json', 'root': 'workspace', 'selector': None, 'sha256': '2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927'}}}, 'schema': 'a_c.fd-support.response/1', 'status': 'ok'}
+
+======================================================================
+FAIL: test_markdown_examples_and_escapes_do_not_supply_edge_anchors (test_ac_support_composition.CompositionPublicTests.test_markdown_examples_and_escapes_do_not_supply_edge_anchors) (text='<!-- <a id="support"></a> -->\n')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_composition.py", line 239, in test_markdown_examples_and_escapes_do_not_supply_edge_anchors
+    self.select(); self.assertRefused(self.read(self.f.data), "basis_missing")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_composition.py", line 80, in assertRefused
+    self.assertNotEqual(response["status"], "ok", response)
+AssertionError: 'ok' == 'ok' : {'evidence': {'id': 'sha256:66d33cf247ab923dda04d1ca599d6e9144ad6f953ddd453445ef8cdcbb709136', 'sha256': '66d33cf247ab923dda04d1ca599d6e9144ad6f953ddd453445ef8cdcbb709136'}, 'id': 'composition-5', 'operation': 'source.read', 'operation_outcome': {'cause': 'declared output available', 'core_value': 'satisfied', 'evidence': [], 'limits': ['output availability only; no semantic acceptance'], 'predicate': 'B(source.read)[request_sha256=8a5154919f59cb05ab121db07db9a3238efe68401b881191731e866764046d02]: declared output availability', 'source_parent': {'clause': 'results', 'member': 'FOUNDATIONS.md', 'sha256': '92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5'}, 'value': 'returned'}, 'refusal': None, 'result': {'artifact': None, 'value': {'acquisition': {}, 'content': '{"nested":{"a/b":null},"set":[1,2],"x":true}', 'coordinates': None, 'encoding': 'utf8', 'parent_sha256': '2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927', 'selected_sha256': '2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927', 'size_bytes': 44, 'source': {'engine': 'workspace-regular-file', 'object': None, 'path': 'inputs/data.json', 'root': 'workspace', 'selector': None, 'sha256': '2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927'}}}, 'schema': 'a_c.fd-support.response/1', 'status': 'ok'}
+
+----------------------------------------------------------------------
+Ran 1 test in 0.592s
+
+FAILED (failures=5)

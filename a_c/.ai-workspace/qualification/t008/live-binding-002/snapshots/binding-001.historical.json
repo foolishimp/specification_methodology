@@ -1,0 +1,61 @@
+{
+  "mechanism": {
+    "id": "product-policy-preflight/1",
+    "source": {
+      "engine": "workspace-regular-file",
+      "root": "product",
+      "path": "build_tenants/graphify/design/fd-support.md",
+      "object": null,
+      "sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f",
+      "selector": null
+    },
+    "implementation_sha256": "97b099812fc1f6964c83cd7df678e4a1fd0575e941c74549689fe4944f008820"
+  },
+  "result_surface": {
+    "root": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/live/evidence",
+    "namespace": "t008-fp-qualification-001",
+    "consumer": "/root"
+  },
+  "scope": {
+    "product_definition": "urn:stdo:product-definition:a-c-implementations",
+    "work_id": "T-008",
+    "task_id": "urn:a-c:fd-support:T008:live-task:001",
+    "purpose": "Existing provisional support-tool real-use qualification only",
+    "Executive": "/root",
+    "actor_calls": [
+      {
+        "role": "Worker",
+        "backend": "actual-claude-cli",
+        "count": 1
+      },
+      {
+        "role": "Reviewer",
+        "backend": "actual-claude-cli",
+        "count": 2
+      }
+    ],
+    "actor_relation": "Worker and nonauthor Reviewer are distinct registered producers. The same registered nonauthor Reviewer has two separate actual activations/processes/Contexts; mental continuity is unknown. Same model family supplies no independence; actual source-bound independence premises remain checked.",
+    "per_call_authority": "Separate exact Root approval is required for each of the three actual registered calls after integrated mechanical qualification closes; no automatic retry.",
+    "target": {
+      "root": "product",
+      "path": "build_tenants/graphify/examples/fd-support/LIFECYCLE_QUICKSTART.md",
+      "initial_state": "absent",
+      "operation": "work.write",
+      "writer_role": "Worker/Writer",
+      "limit": "One named new guide write under the exact granted target/preimage."
+    },
+    "excluded": [
+      "External publication",
+      "Installation or global configuration",
+      "Ontology/design/Product acceptance",
+      "Release or adoption",
+      "Savings, quality gain or complete-calculus claims"
+    ],
+    "next_action_authority": "Caller /root selects only already-authorized next actions; task disposition remains separate from Product acceptance.",
+    "call_sequence": [
+      "Worker: author the named guide through granted work.write",
+      "Same registered nonauthor Reviewer, activation1: source-first expectation recording before candidate exposure; this activation need not close assessment",
+      "Same registered nonauthor Reviewer, activation2: independent candidate/proof assessment with the actual earlier expectation frozen in its ReturnContract"
+    ]
+  }
+}

@@ -10,6 +10,7 @@ from typing import Any
 from . import __version__
 from .constants import OFFICIAL_REPOSITORY
 from .cohort_update import cohort_update
+from .composition import verify_fleet_composition
 from .errors import StdoError
 from .git_source import GitSnapshot
 from .manifest import build_manifest, manifest_sha256
@@ -118,6 +119,11 @@ def _parser() -> argparse.ArgumentParser:
     for name in ("status", "verify"):
         fleet_status = fleet_subparsers.add_parser(name)
         fleet_status.add_argument("--root", type=Path, required=True)
+        if name == "verify":
+            fleet_status.add_argument(
+                "--resolver-root", type=Path,
+                help="Explicit local acquisition boundary for declared composition dependencies; defaults to root directory or selected file's parent",
+            )
 
     fleet_adopt = fleet_subparsers.add_parser("adopt")
     fleet_adopt.add_argument("--root", type=Path, required=True)
@@ -143,6 +149,9 @@ def _parser() -> argparse.ArgumentParser:
 
 
 def _run_fleet(arguments: argparse.Namespace, store: Store) -> tuple[Any, int]:
+    if arguments.fleet_command == "verify":
+        report = verify_fleet_composition(arguments.root, store, resolver_root=arguments.resolver_root)
+        return report, 0 if report["valid"] else 1
     fleet_root = arguments.root.resolve()
     authorized_root = fleet_root if fleet_root.is_dir() else fleet_root.parent
     definitions = discover_definitions(arguments.root)

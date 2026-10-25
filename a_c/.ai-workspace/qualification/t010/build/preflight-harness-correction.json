@@ -1,0 +1,10 @@
+{
+  "cause": "Initial preflight accidentally selected system python rather than existing qualification .venv.",
+  "correction": "Use a_c/.venv/bin/python for all generation/upstream operations. No packages or config changed.",
+  "created_at": "2026-10-20T07:59:16.866326+00:00",
+  "error": "PackageNotFoundError: No package metadata was found for networkx",
+  "failed_command": "python3 -B environment preflight",
+  "prior_effects": "Existing CLI non-model settings/version preflight ran; environment record was not written.",
+  "prior_model_calls": 0,
+  "profile": "ac.common.harness-correction/1"
+}

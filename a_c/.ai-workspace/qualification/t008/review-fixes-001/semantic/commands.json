@@ -1,0 +1,51 @@
+{
+  "record_kind": "Worker record of observed in-session tool returns",
+  "cwd": "/Users/jim/src/apps/specification_methodology/a_c",
+  "commands": [
+    {
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "dogfood/stdo-v3-generation-rc9-review-correction/build_correction.py"
+      ],
+      "exit_code": 0,
+      "observed_status": "proposed-unaccepted"
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "dogfood/stdo-v3-generation-rc9-review-correction/build_correction.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "observed_status": "reproduced"
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "build_tenants/graphify/code/ac_graph.py",
+        "validate",
+        "dogfood/stdo-v3-generation-rc9-review-correction/proposal/model.json"
+      ],
+      "exit_code": 0,
+      "observed_status": "structurally-checked",
+      "records": 1980,
+      "references": 16420
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "build_tenants/graphify/code/ac_graph.py",
+        "decode",
+        "dogfood/stdo-v3-generation-rc9-review-correction/proposal/carrier.json",
+        "--out",
+        ".ai-workspace/qualification/t008/review-fixes-001/semantic/recovered-model.json"
+      ],
+      "exit_code": 0,
+      "observed_status": "decoded"
+    }
+  ]
+}

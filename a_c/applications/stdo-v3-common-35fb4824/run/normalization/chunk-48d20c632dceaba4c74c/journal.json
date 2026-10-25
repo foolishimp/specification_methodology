@@ -1,0 +1,411 @@
+{
+  "changes": [],
+  "chunk": "chunk-48d20c632dceaba4c74c",
+  "derived_answer_sha256": "36ffa10c064caa5a4603a40cae65972da9dc720bdfcadb3be62dcf07d53d4162",
+  "derived_non_grounding_sha256": "df3e08984d583ca7a0aca7a612efd06124f9d8e87c24f431c5cd5056ef9d23dc",
+  "fd_elapsed_seconds": 0.06896104197949171,
+  "non_grounding_sha256": "df3e08984d583ca7a0aca7a612efd06124f9d8e87c24f431c5cd5056ef9d23dc",
+  "normalizer_sha256": "f850e7ceecd945455891e6cc941fc3a86c943ed27bbe74d86b0248169d9cf682",
+  "original_evidence": {
+    "chunk_sha256": "af7ff548f2c9d8bb9289d31cf26c6942526fd4d866b6fe8b2fb4a6286f04b437",
+    "original_attempt": "actors/author/chunk-48d20c632dceaba4c74c/attempt-001",
+    "original_recorded_failure": null,
+    "original_status": "completed",
+    "original_strict_validation_error": null,
+    "original_usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 74801,
+        "output_tokens": 49075,
+        "reasoning_output_tokens": 620
+      }
+    ],
+    "pins": {
+      "actor-settings.json": "f3b748facc38547ccdceeb05350b9e75b9afb8e30b009a63f916ea374f7e40ed",
+      "actors/author/chunk-48d20c632dceaba4c74c/attempt-001/answer.json": "5153344020c54a8d98396c8dc6c8502827b1b2ed8c234a231b73df72d9b92171",
+      "actors/author/chunk-48d20c632dceaba4c74c/attempt-001/events.jsonl": "6ce07b842e170f2fc25a12afa1659231248c29bb7b64236e2064a7d566fffe98",
+      "actors/author/chunk-48d20c632dceaba4c74c/attempt-001/invocation.json": "4520827ca166fa98039df0da2c79b1afd7687f82f71acfc8cfd8b552a89a1765",
+      "actors/author/chunk-48d20c632dceaba4c74c/attempt-001/prompt.txt": "5cb82ccea799cdc9fad252b22db165e2311da49d27fe4a4198caf3ed83b78071",
+      "actors/author/chunk-48d20c632dceaba4c74c/attempt-001/result.json": "35be04d21276adacd81ca2d97e48ac5f0d03e02771a05ca1d869005aa59d5153",
+      "actors/author/chunk-48d20c632dceaba4c74c/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actors/author/chunk-48d20c632dceaba4c74c/attempt-001/usage.json": "fedd4c6b9ab5d0dc40ff7a9897e6f918c27ccf8ef926a35deb3eb5e9445c98a5",
+      "actors/author/chunk-48d20c632dceaba4c74c/attempt-001/validation.json": "27379a7b073b417756caf2538db9e58a477e12450a32237a9761bac0f5a23647",
+      "chunks.json": "2ce228fa4f647bcb275ff6653aff1a20eca792c93037f9d7959080668129d073",
+      "plan.json": "31a88bb55aa025cb95ba4f7710bd8559b5e0e5f4976b55388cdac1e1cf8337cf",
+      "source-manifest.json": "dbf32e7f99eb7228ca361ec02f44227c05e02bb6bc447d1dd38255cd3ca4a4d4"
+    },
+    "source_sections": [
+      {
+        "end_line": 273,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F4.%20Scenario%20bundle",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "880365198347582b4cec11f952834a984da461babb6b5b27a3b9a1f3086b7d8f",
+        "start_line": 254
+      },
+      {
+        "end_line": 286,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F5.%20Installed%20dev%20proof",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "9f60bd1c324d4f95b230ebc0c7c9feb9eb4034a18344eed780736817a3ef3286",
+        "start_line": 274
+      },
+      {
+        "end_line": 305,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F6.%20Significant%20path%20coverage",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "3f9ad6ee6d16751949c0033999d06ce42614bbed8d052eec09bcac0f349c5744",
+        "start_line": 287
+      },
+      {
+        "end_line": 307,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "2c2f542f0543999afdff0d5fc7e9fe9b90ce9b82f91923bbfd8eacc06f7da98c",
+        "start_line": 306
+      },
+      {
+        "end_line": 337,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FTerms",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "05caa3b91298d7c3f478265a0db5ad4858b630759fc9993403772b7004d172e5",
+        "start_line": 308
+      },
+      {
+        "end_line": 395,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FThe%20set",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "832ce23dc5a0727777775763ee811f4a87627b0b6d5a09ae7b0ba3215b5461f4",
+        "start_line": 338
+      },
+      {
+        "end_line": 427,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FUser-acceptance%20frame",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "d0b1be8dcbb5d220048e90734000ff3b8a843a1fb8648f3739efb0deabac053c",
+        "start_line": 396
+      },
+      {
+        "end_line": 450,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FEnd-to-end%20frame",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "50e5b6135b28a2f008a26ff037532378685120594f946e2d75e22dfb3817884a",
+        "start_line": 428
+      },
+      {
+        "end_line": 473,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FIntegration%20frame",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "069d6c2d4638ff225cdb122bf1e2d0cc146eb7e56f4b8c4b316c5d4c7846d952",
+        "start_line": 451
+      },
+      {
+        "end_line": 520,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FUnit%20frame",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "71aa354ed6c0e2e84daaaabf7391d21df5da4848e6e37a1477e3d22d57480149",
+        "start_line": 474
+      },
+      {
+        "end_line": 581,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F8.%20Combinatorial%20coverage%20and%20testing%20value",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "4ea8f0ec857676cd79d8f1a979c35a7fc13add08e345a0358c48ce7cc7839239",
+        "start_line": 521
+      },
+      {
+        "end_line": 631,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F9.%20Legitimate%20path%20and%20technical-debt%20erasure",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "9142f9d9a723cc74705ec0bb201c00c9dacd76cd3e8decc9daf1bb5a4ecf2c4f",
+        "start_line": 582
+      },
+      {
+        "end_line": 663,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F10.%20Testing%20evidence%20composition",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "e33956bece2cff81f17c9ee9cd796a80e2561745e22765664877c43723a78dc1",
+        "start_line": 632
+      },
+      {
+        "end_line": 698,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F11.%20Assurance%20subject%20acquisition%20and%20evaluation",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "ee207532c758bea8a1c159353626da822ba3078fdee8cc50511373616d2734c9",
+        "start_line": 664
+      },
+      {
+        "end_line": 740,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F12.%20Counterexample%20localisation",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "455d516c07b1b1b7693f6f01acc0823afb35364b24f3df5cff3594df61499fce",
+        "start_line": 699
+      },
+      {
+        "end_line": 768,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "af91b246fee17c377b87678eed734420d09cb76292c9fff47e352eeb084a552d",
+        "start_line": 741
+      },
+      {
+        "end_line": 794,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame%2FClaim%20boundaries",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "06b949af1e9ade0fafd33d24fdd628095b878659f1ec67661273bf323de52f7a",
+        "start_line": 769
+      },
+      {
+        "end_line": 878,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame%2FObligations",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "acd561b6405cce59325d2da8e142e34ae81923053bc02fe6581dc92cc7708f32",
+        "start_line": 795
+      },
+      {
+        "end_line": 901,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame%2FComputational%20whole-path%20evaluation",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "b97655fda5851b36606b5cc4f22bb74a88a59f1fd7971c1a6c74f5d02f8df71a",
+        "start_line": 879
+      },
+      {
+        "end_line": 921,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame%2FQualification",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "ac514fff79c9a19da85a57a48c63178cb3b7f833631260a8e66087d0b429b7e8",
+        "start_line": 902
+      },
+      {
+        "end_line": 1013,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F14.%20Design-to-module%20evidence%20route",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "12e91b1a9145f74eb6ab95ada281f2cba59424796cee71c939a81f88bc84478a",
+        "start_line": 922
+      },
+      {
+        "end_line": 1051,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F15.%20Module-derived%20unit%20tests",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "0a500dfbf4f849a7426c968485c490120a067242e3cdc52a29097fd7ede028cd",
+        "start_line": 1014
+      },
+      {
+        "end_line": 1099,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F16.%20Module%20lifecycle%20confirmation",
+        "path": "standards/ASSURANCE.md",
+        "sha256": "de8510483651ae24131201e42a022a66054ab6e0ae0f8e4543780097893c419d",
+        "start_line": 1052
+      },
+      {
+        "end_line": 15,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "b23761fb783cdd92dd10a6288ae8a6afb9341fc583a745f7d3f1e7f69710f9f8",
+        "start_line": 1
+      },
+      {
+        "end_line": 58,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "743a200b6c6ec01eaf2cf6672c14a4e259d2a494ff7c13c3f7500fbdf301b41f",
+        "start_line": 16
+      },
+      {
+        "end_line": 125,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position%2FDerivation%20provenance",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "cd97159873ebe78d4b0783b8ab70a13789268c663e4e212a6ed7c2fb7012d1c8",
+        "start_line": 59
+      },
+      {
+        "end_line": 143,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position%2FScope",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "d1829ae196fcd109ee01e8ac285bc34698c801dc97726c6cce326cb7f4ed0475",
+        "start_line": 126
+      },
+      {
+        "end_line": 213,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position%2FFoundation%20to%20law",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "fbb016103a9347cd97fbc6e80de7651f6e4341c92f37c3091cd0d85ed40db148",
+        "start_line": 144
+      },
+      {
+        "end_line": 328,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F2.%20Signature",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "5e74619ee1056913c0c8d9dc17c0462f4a0203e462da50000b93c3d2754b16a7",
+        "start_line": 214
+      },
+      {
+        "end_line": 340,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "da02d4a928607b97278cf48696ee7cf08fc891dd4e2886af15c5cae9e7b371a5",
+        "start_line": 329
+      },
+      {
+        "end_line": 362,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records%2FSemantic%20object",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "83ae92eee8bd09addfddf96cc5cb6c2934ac7d3b67ecb805eac46e93fa30ee82",
+        "start_line": 341
+      },
+      {
+        "end_line": 385,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records%2FTyped%20relation",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "6c3149ba51d6fb0a8798668a4d7324a082e0922657fd2dc8769b0c1bb88743bd",
+        "start_line": 363
+      },
+      {
+        "end_line": 411,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records%2FConstraint",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "1069026d75f373d757734263746e641d39afb4319cd7c99518965b3996ef1974",
+        "start_line": 386
+      },
+      {
+        "end_line": 434,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records%2FLatitude",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "859e54219502f5ffa70612eb1c5273a254f0cbaf68b6c27ae204127052a63aa8",
+        "start_line": 412
+      },
+      {
+        "end_line": 464,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F3.%20Typed%20records%2FResidual",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "8b4ca101cb350403d92ca2a1791e4c750cfba0967c919336b04d0f85337b22c0",
+        "start_line": 435
+      },
+      {
+        "end_line": 470,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "cb0d54944e0087ee1773890c5623b0657e7023eb98086415caa59fe805752dc2",
+        "start_line": 465
+      },
+      {
+        "end_line": 479,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-001%20Closed%20signature",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "ff5bcfeba281ec9a3d342ae515f800ef455291a8d526e693bcba9171d7cd28ff",
+        "start_line": 471
+      },
+      {
+        "end_line": 493,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-002%20Scoped%20identity",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "5bdbdf77523d0499f0a47216ab9198ddb73dfa602ac59bc3d6e1117b8a50fe76",
+        "start_line": 480
+      },
+      {
+        "end_line": 502,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-003%20Reference%20closure",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "0d039ababb7405e6c97b5a2a0cafa42d4cd23f8f9c46c5b84c6683df6ee00d2e",
+        "start_line": 494
+      },
+      {
+        "end_line": 508,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-004%20Relation%20typing",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "09f42183a888aa9af42f2d82bae368a603c9e2d827fddb0496aab0cb6755f5ce",
+        "start_line": 503
+      },
+      {
+        "end_line": 518,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-005%20Authority%20conservation",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "ee29b94b8bdec9373adbc7169323da01e8537bc7891eeaaf3608b0e40b817011",
+        "start_line": 509
+      },
+      {
+        "end_line": 529,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-006%20Basis%20coherence",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "5db54d8c401e8835c39ef52af6a722c64f3f735454624110c7e63decf728d6a5",
+        "start_line": 519
+      },
+      {
+        "end_line": 629,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-007%20Constraint%20and%20refusal",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "e476536499c81ef3294db1007956c7d3eb83314cee81a3f22bf1090798d13267",
+        "start_line": 530
+      },
+      {
+        "end_line": 637,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-008%20Explicit%20latitude",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "23f3ee970e3c8dc8ca04973641344de931646d8587c3466c5676f891318ba147",
+        "start_line": 630
+      },
+      {
+        "end_line": 644,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-009%20Residual%20conservation",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "684d8db7b7dc3f7cb295bac7e9ce1a7bf2fbbf7e3666df28d5abdcad0c4a3a75",
+        "start_line": 638
+      },
+      {
+        "end_line": 663,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-010%20Material%20closure",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "393cbd3c2d95679717248af7bd689894b7bb50515a886712fb92f65a598c0b55",
+        "start_line": 645
+      },
+      {
+        "end_line": 684,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-011%20Projection",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "bd919829d80720b7879748c1d8f83fc045571da5d29ce02a714542deac2b8340",
+        "start_line": 664
+      },
+      {
+        "end_line": 692,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-012%20Overlay",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "b99c800207806048c3a567710c52241ef64e476763112fc5b399da0a0a1ee795",
+        "start_line": 685
+      },
+      {
+        "end_line": 878,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-013%20Transformation",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "9433ceb327c80b4b4ea933fd922bba987767adbc4245367ce47a3aac6538b0eb",
+        "start_line": 693
+      },
+      {
+        "end_line": 906,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F4.%20Fundamental%20laws%2FAC-014%20Judgment%20separation",
+        "path": "standards/AXIOMATIC_CALCULUS.md",
+        "sha256": "b7f575510fce6c0e9a827aa6bfb26f7f50e1a13c5983294e4969c44c6a490386",
+        "start_line": 879
+      }
+    ]
+  },
+  "policy": {
+    "claim": "F_D source re-entry normalization only; no semantic rewriting, completeness judgment, new F_P usage or semantic acceptance.",
+    "equivalence": "Collapse each maximal Unicode whitespace run to one ASCII space; strip outer whitespace only. Preserve every non-whitespace character, case, punctuation and inter-character whitespace boundary.",
+    "id": "a_c.grounding.unique-whitespace-runs/1",
+    "scope": "Only quote/start_line/end_line inside the five known grounding arrays; section_id and all other fields remain unchanged.",
+    "uniqueness": "Exactly one normalized occurrence in the same supplied source section, including coordinate-only repairs. Already strict-valid anchors are unchanged without a recovery claim."
+  },
+  "policy_sha256": "6242bffb75d652b8826fb859651f0967631f727da30d7a3980d0604dc0ad67c4",
+  "profile": "ac.generation.grounding-normalization/1",
+  "selected_original_attempt": "actors/author/chunk-48d20c632dceaba4c74c/attempt-001",
+  "status": "validated_original",
+  "unverified_original_pins": {
+    "actors/author/chunk-48d20c632dceaba4c74c/attempt-001/answer.json": "5153344020c54a8d98396c8dc6c8502827b1b2ed8c234a231b73df72d9b92171",
+    "actors/author/chunk-48d20c632dceaba4c74c/attempt-001/events.jsonl": "6ce07b842e170f2fc25a12afa1659231248c29bb7b64236e2064a7d566fffe98",
+    "actors/author/chunk-48d20c632dceaba4c74c/attempt-001/invocation.json": "4520827ca166fa98039df0da2c79b1afd7687f82f71acfc8cfd8b552a89a1765",
+    "actors/author/chunk-48d20c632dceaba4c74c/attempt-001/prompt.txt": "5cb82ccea799cdc9fad252b22db165e2311da49d27fe4a4198caf3ed83b78071",
+    "actors/author/chunk-48d20c632dceaba4c74c/attempt-001/result.json": "35be04d21276adacd81ca2d97e48ac5f0d03e02771a05ca1d869005aa59d5153",
+    "actors/author/chunk-48d20c632dceaba4c74c/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "actors/author/chunk-48d20c632dceaba4c74c/attempt-001/usage.json": "fedd4c6b9ab5d0dc40ff7a9897e6f918c27ccf8ef926a35deb3eb5e9445c98a5"
+  }
+}

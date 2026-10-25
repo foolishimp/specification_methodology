@@ -1,0 +1,63 @@
+[
+  {
+    "name": "targeted",
+    "argv": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "a_c/build_tenants/graphify/test_env",
+      "-p",
+      "test_ac_support_composition.py",
+      "-v"
+    ],
+    "exit": 0,
+    "started_ns": 1792939931878767000,
+    "ended_ns": 1792939948943116000,
+    "source_freeze": "../source-freeze-04.json",
+    "log": "targeted.log",
+    "sha256": "6160997bf4e50f39524e366551612a3c32bbd4cf7d7148439103e6f514bfea69"
+  },
+  {
+    "name": "support-suite",
+    "argv": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "a_c/build_tenants/graphify/test_env",
+      "-p",
+      "test_ac_support*.py",
+      "-v"
+    ],
+    "exit": 0,
+    "started_ns": 1792939948943432000,
+    "ended_ns": 1792940027789050000,
+    "source_freeze": "../source-freeze-04.json",
+    "log": "support-suite.log",
+    "sha256": "8261ef11cc4e135e7a5f3dadb72f4c1872b49004e07be799d99919caba0bf903"
+  },
+  {
+    "name": "typing",
+    "argv": [
+      "a_c/.venv/bin/python",
+      "-m",
+      "mypy",
+      "--strict",
+      "a_c/build_tenants/graphify/code/ac_support.py",
+      "a_c/build_tenants/graphify/code/ac_support_core.py",
+      "a_c/build_tenants/graphify/code/ac_support_effects.py",
+      "a_c/build_tenants/graphify/code/ac_support_composition.py"
+    ],
+    "exit": 0,
+    "started_ns": 1792940027789438000,
+    "ended_ns": 1792940028537061000,
+    "source_freeze": "../source-freeze-04.json",
+    "log": "typing.log",
+    "sha256": "71144743c83babea384888a735db0c4daba3d4d7b7942b6839984bd5c21b52bb"
+  }
+]

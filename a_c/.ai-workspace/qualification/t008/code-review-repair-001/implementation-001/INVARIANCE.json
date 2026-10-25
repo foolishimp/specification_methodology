@@ -1,0 +1,119 @@
+{
+  "conditional_fixture_created": false,
+  "historical_reproduction_manifest": {
+    "all_listed_files_unchanged": true,
+    "listed_files": 1819,
+    "new_impl_subdirectory_separately_authorized": true,
+    "path": "../MANIFEST.json",
+    "sha256": "77e82443776bbf6bc3d4d6b2b7fe4f1af1ae0b86290bc95b5b0484f2df995979"
+  },
+  "original_local_actor_and_fixture_support_unchanged": true,
+  "readonly_guards": [
+    {
+      "actual_sha256": "653ec05538d92f71d92d4ad9bb32162fa07d1b874fa9fe17edc2561edaab8bbb",
+      "expected_sha256": "653ec05538d92f71d92d4ad9bb32162fa07d1b874fa9fe17edc2561edaab8bbb",
+      "path": "a_c/.ai-workspace/qualification/t008/code-review-repair-001/REPAIR_PROPOSAL.md",
+      "unchanged": true
+    },
+    {
+      "actual_sha256": "d93b934577fec5fd86a2906ac5aab3a19fd5ce24d982d5002b7ad5ca2ed1af43",
+      "expected_sha256": "d93b934577fec5fd86a2906ac5aab3a19fd5ce24d982d5002b7ad5ca2ed1af43",
+      "path": "a_c/.ai-workspace/qualification/t008/design-review-repair-001/publication-001/CLOSED_RETURN.json",
+      "unchanged": true
+    },
+    {
+      "actual_sha256": "2f59468cbecac464589ee99d79f32e4a12f551cd308c8a3d3e9ac52df8d7278f",
+      "expected_sha256": "2f59468cbecac464589ee99d79f32e4a12f551cd308c8a3d3e9ac52df8d7278f",
+      "path": "a_c/.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md",
+      "unchanged": true
+    },
+    {
+      "actual_sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1",
+      "expected_sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1",
+      "path": "a_c/build_tenants/graphify/design/fd-method-claude-rc9.json",
+      "unchanged": true
+    },
+    {
+      "actual_sha256": "e3c5e6e83d9be525a0ca44fc4e64c9077e33958337bc29807014715a50592939",
+      "expected_sha256": "e3c5e6e83d9be525a0ca44fc4e64c9077e33958337bc29807014715a50592939",
+      "path": "a_c/build_tenants/graphify/design/fd-support.md",
+      "unchanged": true
+    },
+    {
+      "actual_sha256": "4d03920c625ac77bc7f38794bccf73003b08fd883ca2ad06022cfc4164dd6b84",
+      "expected_sha256": "4d03920c625ac77bc7f38794bccf73003b08fd883ca2ad06022cfc4164dd6b84",
+      "path": "a_c/build_tenants/graphify/examples/fd-support/LIFECYCLE_QUICKSTART.md",
+      "unchanged": true
+    },
+    {
+      "actual_sha256": "39201a5147db14d2acf929e9065b3eb5fd7cca6eeda0218095a6e1f94499c3b6",
+      "expected_sha256": "39201a5147db14d2acf929e9065b3eb5fd7cca6eeda0218095a6e1f94499c3b6",
+      "path": "a_c/build_tenants/graphify/test_env/fixture_support.py",
+      "unchanged": true
+    },
+    {
+      "actual_sha256": "9c3c0fd8fe563f96db6cb00d95989fd319a6518b006f0efffcfd3d48caf6838a",
+      "expected_sha256": "9c3c0fd8fe563f96db6cb00d95989fd319a6518b006f0efffcfd3d48caf6838a",
+      "path": "a_c/build_tenants/graphify/test_env/support_fixtures/local_actor.py",
+      "unchanged": true
+    },
+    {
+      "actual_sha256": "b0e013e6f9dabb9d3f31dd02c1a6909e9fc6418925a8d829f3bb1c2adf3dac1d",
+      "expected_sha256": "b0e013e6f9dabb9d3f31dd02c1a6909e9fc6418925a8d829f3bb1c2adf3dac1d",
+      "path": "a_c/stdo_a_c.json",
+      "unchanged": true
+    }
+  ],
+  "schema": "a_c.repair-invariance/1",
+  "verified_at_ns": 1792390863857092000,
+  "write_files": [
+    {
+      "after_sha256": "4d41a2373def237136cefe8b186c196c2e4376137c221ae4675c274abed5ad31",
+      "before_sha256": "4d1ea7fe98ec1b53f2a19d9a2fef2b3fbb070624c955fbb1e9e48f5cc88011b1",
+      "bytes": 20703,
+      "diff_lines": 11,
+      "path": "a_c/build_tenants/graphify/code/ac_support.py",
+      "snapshot": "candidate/ac_support.py"
+    },
+    {
+      "after_sha256": "5395fd2947157541255168c6a1235136df64e9197d5032b25b31a0f071a4fe74",
+      "before_sha256": "78f70fa8da1a29ce4fadc8cb78743c2293bf7f35947b353218dc2a6b1e03ae94",
+      "bytes": 212740,
+      "diff_lines": 97,
+      "path": "a_c/build_tenants/graphify/code/ac_support_core.py",
+      "snapshot": "candidate/ac_support_core.py"
+    },
+    {
+      "after_sha256": "36f75671b9dbce14e5f06811e180b662deb635b37921695668337466ace9bf25",
+      "before_sha256": "9108d6ad10e412f5a0e981c88c06c7b37cb913a24286282da9aae752f239a586",
+      "bytes": 84271,
+      "diff_lines": 138,
+      "path": "a_c/build_tenants/graphify/code/ac_support_effects.py",
+      "snapshot": "candidate/ac_support_effects.py"
+    },
+    {
+      "after_sha256": "6b1ce2819e0e96aad32fb87feccb3aeaee1cd37a85c91aa4e1b693b9a15dd709",
+      "before_sha256": "7cf93cf0bc83713a74f47284e9c3acc785c08cdc3b4807b573f463465541ec07",
+      "bytes": 100818,
+      "diff_lines": 125,
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_core.py",
+      "snapshot": "candidate/test_ac_support_core.py"
+    },
+    {
+      "after_sha256": "4c96735d16f6dd67d24b89fb5a6b5b7bdc376de13d8c98c14b833ce346c0662e",
+      "before_sha256": "62aa2967c9bba8b151555b3d23d6d794ca746e6ba329994bac32316f28a1bd20",
+      "bytes": 82247,
+      "diff_lines": 362,
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_effects.py",
+      "snapshot": "candidate/test_ac_support_effects.py"
+    },
+    {
+      "after_sha256": "7722ddcbc48ab7dd48e824ccdbec320f30e80dc3b63c0881564ff7ed97ee3450",
+      "before_sha256": "3ea958e61ec240b74d33f21185bf0045246f4e756313a2327f8f8bbe3cf4affc",
+      "bytes": 61347,
+      "diff_lines": 250,
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py",
+      "snapshot": "candidate/test_ac_support_interfaces.py"
+    }
+  ]
+}

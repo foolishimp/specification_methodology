@@ -1,0 +1,1426 @@
+{
+  "first-failure": {
+    "operation_counts": {
+      "context.assemble": 4,
+      "contract.preflight": 4,
+      "dispatch.observe": 5,
+      "dispatch.start": 4,
+      "evidence.read": 4,
+      "relations.query": 8,
+      "return.capture": 4,
+      "return.check": 4
+    },
+    "public_calls": 37,
+    "registered_process_invocations": 4,
+    "all_public_calls_exit_zero": true,
+    "cases": [
+      {
+        "test": "test_direct_performed_satisfied_and_falsified_conditions_remain_usable",
+        "retained_root": "first-failure/public/test_direct_performed_satisfied_and_falsified_conditions_remain_usable",
+        "producer_captures": [
+          {
+            "producer_authenticated": true,
+            "binding_checks": {
+              "format_valid": true,
+              "gaps": []
+            },
+            "original_activation": {
+              "id": "activation-satisfied",
+              "sha256": "38dfff0968d7d14905d61708dde1a999c911d0792054dc37fbd9d2f43d00e8dd"
+            },
+            "performed_ids": [
+              "actual-evaluation"
+            ],
+            "not_performed": [],
+            "original_domain_outcomes": [
+              {
+                "arbitrary": [
+                  null,
+                  true,
+                  4,
+                  {
+                    "a/b~": "unchanged"
+                  }
+                ],
+                "original_domain": "satisfied"
+              }
+            ],
+            "record": {
+              "id": "sha256:4ddb62574a00cf79cf314143fe4d72fd354519e0a5ae5c029b66f80268a8114b",
+              "sha256": "4ddb62574a00cf79cf314143fe4d72fd354519e0a5ae5c029b66f80268a8114b"
+            }
+          },
+          {
+            "producer_authenticated": true,
+            "binding_checks": {
+              "format_valid": true,
+              "gaps": []
+            },
+            "original_activation": {
+              "id": "activation-falsified",
+              "sha256": "e9edd368a06ba9acebefb2282a8e5ab1630708fff32eefa25e910faec0c5c78d"
+            },
+            "performed_ids": [
+              "actual-evaluation"
+            ],
+            "not_performed": [],
+            "original_domain_outcomes": [
+              {
+                "arbitrary": [
+                  null,
+                  true,
+                  4,
+                  {
+                    "a/b~": "unchanged"
+                  }
+                ],
+                "original_domain": "falsified"
+              }
+            ],
+            "record": {
+              "id": "sha256:6f348509b3634592e8fc43c755cbddf2448b9443eec2b02144c419be6f5aec97",
+              "sha256": "6f348509b3634592e8fc43c755cbddf2448b9443eec2b02144c419be6f5aec97"
+            }
+          }
+        ],
+        "return_checks": [
+          {
+            "consumable": true,
+            "gaps": []
+          },
+          {
+            "consumable": true,
+            "gaps": []
+          }
+        ],
+        "process_ends": [
+          {
+            "descendants": "unknown",
+            "ended_ns": 1792470760405920000,
+            "observed": true,
+            "returncode": 0
+          },
+          {
+            "descendants": "unknown",
+            "ended_ns": 1792470762760973000,
+            "observed": true,
+            "returncode": 0
+          }
+        ],
+        "raw_output_observations": [
+          {
+            "complete": true,
+            "slot": "final_stdout_object",
+            "attempt": {
+              "id": "sha256:cc9e2873dec36cedddd6573093109236329888c3ba073ebfef05aa43228e370a",
+              "sha256": "cc9e2873dec36cedddd6573093109236329888c3ba073ebfef05aa43228e370a"
+            },
+            "raw_record": {
+              "id": "sha256:31f97fadc3456bcaf961beee8121388523e9cb25ddbc06a1663b2f9fd5132984",
+              "sha256": "31f97fadc3456bcaf961beee8121388523e9cb25ddbc06a1663b2f9fd5132984"
+            }
+          },
+          {
+            "complete": true,
+            "slot": "final_stdout_object",
+            "attempt": {
+              "id": "sha256:250f7f0cd79ac4efbe30168525e85a0cbea60654b08d99030e40c2933fee0906",
+              "sha256": "250f7f0cd79ac4efbe30168525e85a0cbea60654b08d99030e40c2933fee0906"
+            },
+            "raw_record": {
+              "id": "sha256:6049ff520d57d852830d69816257049d9b25d7abadcf1e34731c68c986852593",
+              "sha256": "6049ff520d57d852830d69816257049d9b25d7abadcf1e34731c68c986852593"
+            }
+          }
+        ],
+        "relation_queries": [
+          {
+            "request_id": "judgment-ingress-1",
+            "source": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/relations-missing.json",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "68a0bfa9cbe446f4371c03902991710ff5980f9beb192e8541f63a94e42c7c75"
+            },
+            "condition": {
+              "evaluation": null,
+              "predicate": {
+                "engine": "workspace-regular-file",
+                "object": null,
+                "path": "inputs/law.txt",
+                "root": "workspace",
+                "selector": null,
+                "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+              }
+            },
+            "core_value": null,
+            "excluded": false,
+            "unresolved": true,
+            "gaps": [
+              "Missing actual condition judgment"
+            ],
+            "records": [
+              "urn:a-c:toy:object:a",
+              "urn:a-c:toy:object:b"
+            ],
+            "traversed_relations": [
+              "e1",
+              "e2"
+            ],
+            "evidence": {
+              "id": "sha256:5b45ddc636724ab8b89d4f0397cf7a9ad091a4147fc7857e6b911be52e539b85",
+              "sha256": "5b45ddc636724ab8b89d4f0397cf7a9ad091a4147fc7857e6b911be52e539b85"
+            }
+          },
+          {
+            "request_id": "judgment-ingress-9",
+            "source": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/relations-satisfied.json",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "394d269b2fd5fa16572706f2c1d822201aa2d8917a31252bc6527223ad5444cb"
+            },
+            "condition": {
+              "evaluation": {
+                "pointer": "/payload/original/evaluations/0",
+                "record": {
+                  "id": "sha256:4ddb62574a00cf79cf314143fe4d72fd354519e0a5ae5c029b66f80268a8114b",
+                  "sha256": "4ddb62574a00cf79cf314143fe4d72fd354519e0a5ae5c029b66f80268a8114b"
+                }
+              },
+              "predicate": {
+                "engine": "workspace-regular-file",
+                "object": null,
+                "path": "inputs/law.txt",
+                "root": "workspace",
+                "selector": null,
+                "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+              }
+            },
+            "core_value": "satisfied",
+            "excluded": false,
+            "unresolved": false,
+            "gaps": [],
+            "records": [
+              "urn:a-c:toy:object:a",
+              "urn:a-c:toy:object:b"
+            ],
+            "traversed_relations": [
+              "e1",
+              "e2"
+            ],
+            "evidence": {
+              "id": "sha256:aaaa56b2d96f1a424f825803e03591e732d205eeeff521be0abf2a1c3291a48e",
+              "sha256": "aaaa56b2d96f1a424f825803e03591e732d205eeeff521be0abf2a1c3291a48e"
+            }
+          },
+          {
+            "request_id": "judgment-ingress-18",
+            "source": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/relations-falsified.json",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "43cd9ccaa25cf077f3f9283f2fbc316b892b55893915152d4fc85dbbbb7798f6"
+            },
+            "condition": {
+              "evaluation": {
+                "pointer": "/payload/original/evaluations/0",
+                "record": {
+                  "id": "sha256:6f348509b3634592e8fc43c755cbddf2448b9443eec2b02144c419be6f5aec97",
+                  "sha256": "6f348509b3634592e8fc43c755cbddf2448b9443eec2b02144c419be6f5aec97"
+                }
+              },
+              "predicate": {
+                "engine": "workspace-regular-file",
+                "object": null,
+                "path": "inputs/law.txt",
+                "root": "workspace",
+                "selector": null,
+                "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+              }
+            },
+            "core_value": "falsified",
+            "excluded": true,
+            "unresolved": false,
+            "gaps": [],
+            "records": [
+              "urn:a-c:toy:object:a"
+            ],
+            "traversed_relations": [],
+            "evidence": {
+              "id": "sha256:ca30c0dc319b1bb8b2b259677d37d2cbf9bc503bd27abd4ecedf406831d518d5",
+              "sha256": "ca30c0dc319b1bb8b2b259677d37d2cbf9bc503bd27abd4ecedf406831d518d5"
+            }
+          }
+        ]
+      },
+      {
+        "test": "test_missing_judgment_preserves_unknown_required_dependency",
+        "retained_root": "first-failure/public/test_missing_judgment_preserves_unknown_required_dependency",
+        "producer_captures": [],
+        "return_checks": [],
+        "process_ends": [],
+        "raw_output_observations": [],
+        "relation_queries": [
+          {
+            "request_id": "judgment-ingress-1",
+            "source": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/relations-missing.json",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "68a0bfa9cbe446f4371c03902991710ff5980f9beb192e8541f63a94e42c7c75"
+            },
+            "condition": {
+              "evaluation": null,
+              "predicate": {
+                "engine": "workspace-regular-file",
+                "object": null,
+                "path": "inputs/law.txt",
+                "root": "workspace",
+                "selector": null,
+                "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+              }
+            },
+            "core_value": null,
+            "excluded": false,
+            "unresolved": true,
+            "gaps": [
+              "Missing actual condition judgment"
+            ],
+            "records": [
+              "urn:a-c:toy:object:a",
+              "urn:a-c:toy:object:b"
+            ],
+            "traversed_relations": [
+              "e1",
+              "e2"
+            ],
+            "evidence": {
+              "id": "sha256:1d4f73995f7ac289c48d745005ca12d98595474b27d6526a8fb2d8b37fbab04a",
+              "sha256": "1d4f73995f7ac289c48d745005ca12d98595474b27d6526a8fb2d8b37fbab04a"
+            }
+          }
+        ]
+      },
+      {
+        "test": "test_nested_not_performed_domain_data_cannot_exclude_required_dependency",
+        "retained_root": "first-failure/public/test_nested_not_performed_domain_data_cannot_exclude_required_dependency",
+        "producer_captures": [
+          {
+            "producer_authenticated": true,
+            "binding_checks": {
+              "format_valid": true,
+              "gaps": []
+            },
+            "original_activation": {
+              "id": "activation-nested",
+              "sha256": "1285428344309a10ff9dbb97a584a849317e540634691dd03f1b68b2c2a75b04"
+            },
+            "performed_ids": [
+              "actual-evaluation"
+            ],
+            "not_performed": [
+              "nested-not-performed"
+            ],
+            "original_domain_outcomes": [
+              {
+                "arbitrary": {
+                  "arbitrary": [
+                    null,
+                    true,
+                    4,
+                    {
+                      "a/b~": "unchanged"
+                    }
+                  ],
+                  "original_domain": "satisfied"
+                },
+                "nested": {
+                  "core_value": "falsified",
+                  "domain_outcome": false,
+                  "evidence": [
+                    {
+                      "engine": "workspace-regular-file",
+                      "object": null,
+                      "path": "inputs/data.json",
+                      "root": "workspace",
+                      "selector": null,
+                      "sha256": "2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927"
+                    }
+                  ],
+                  "id": "nested-not-performed",
+                  "invalidators": [],
+                  "predicate": {
+                    "engine": "workspace-regular-file",
+                    "object": null,
+                    "path": "inputs/law.txt",
+                    "root": "workspace",
+                    "selector": null,
+                    "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+                  },
+                  "residuals": []
+                }
+              }
+            ],
+            "record": {
+              "id": "sha256:803c712e920bdc7f1d2f19b66f3ac8f4b1f89e72b60be1116328351aeb3167ca",
+              "sha256": "803c712e920bdc7f1d2f19b66f3ac8f4b1f89e72b60be1116328351aeb3167ca"
+            }
+          }
+        ],
+        "return_checks": [
+          {
+            "consumable": true,
+            "gaps": []
+          }
+        ],
+        "process_ends": [
+          {
+            "descendants": "unknown",
+            "ended_ns": 1792470765762998000,
+            "observed": true,
+            "returncode": 0
+          }
+        ],
+        "raw_output_observations": [
+          {
+            "complete": true,
+            "slot": "final_stdout_object",
+            "attempt": {
+              "id": "sha256:e945ed50a396940be64bc48a8e9eed843408b1a3c2c8a7383609e7048269010d",
+              "sha256": "e945ed50a396940be64bc48a8e9eed843408b1a3c2c8a7383609e7048269010d"
+            },
+            "raw_record": {
+              "id": "sha256:985eed64ae73212f73359426d1a0899c2ce69e9c5b9ec8d24bde0ebf28434c41",
+              "sha256": "985eed64ae73212f73359426d1a0899c2ce69e9c5b9ec8d24bde0ebf28434c41"
+            }
+          }
+        ],
+        "relation_queries": [
+          {
+            "request_id": "judgment-ingress-1",
+            "source": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/relations-missing.json",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "68a0bfa9cbe446f4371c03902991710ff5980f9beb192e8541f63a94e42c7c75"
+            },
+            "condition": {
+              "evaluation": null,
+              "predicate": {
+                "engine": "workspace-regular-file",
+                "object": null,
+                "path": "inputs/law.txt",
+                "root": "workspace",
+                "selector": null,
+                "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+              }
+            },
+            "core_value": null,
+            "excluded": false,
+            "unresolved": true,
+            "gaps": [
+              "Missing actual condition judgment"
+            ],
+            "records": [
+              "urn:a-c:toy:object:a",
+              "urn:a-c:toy:object:b"
+            ],
+            "traversed_relations": [
+              "e1",
+              "e2"
+            ],
+            "evidence": {
+              "id": "sha256:204a7cea72df29d9c88895b5512dc4048ead2f7025d9cc60f63054b9f8be3f6b",
+              "sha256": "204a7cea72df29d9c88895b5512dc4048ead2f7025d9cc60f63054b9f8be3f6b"
+            }
+          },
+          {
+            "request_id": "judgment-ingress-9",
+            "source": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/relations-nested-data.json",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "90b739faf093f98b2b80af75fa4e757faece9941380c8196bf4909204ed4d806"
+            },
+            "condition": {
+              "evaluation": {
+                "pointer": "/payload/original/evaluations/0/domain_outcome/nested",
+                "record": {
+                  "id": "sha256:803c712e920bdc7f1d2f19b66f3ac8f4b1f89e72b60be1116328351aeb3167ca",
+                  "sha256": "803c712e920bdc7f1d2f19b66f3ac8f4b1f89e72b60be1116328351aeb3167ca"
+                }
+              },
+              "predicate": {
+                "engine": "workspace-regular-file",
+                "object": null,
+                "path": "inputs/law.txt",
+                "root": "workspace",
+                "selector": null,
+                "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+              }
+            },
+            "core_value": "falsified",
+            "excluded": true,
+            "unresolved": false,
+            "gaps": [],
+            "records": [
+              "urn:a-c:toy:object:a"
+            ],
+            "traversed_relations": [],
+            "evidence": {
+              "id": "sha256:7a957159fa7a4b06920621b0c60720a90eea20947617d3adc1265f111bbcf0f7",
+              "sha256": "7a957159fa7a4b06920621b0c60720a90eea20947617d3adc1265f111bbcf0f7"
+            }
+          }
+        ]
+      },
+      {
+        "test": "test_wrong_activation_return_cannot_exclude_required_dependency",
+        "retained_root": "first-failure/public/test_wrong_activation_return_cannot_exclude_required_dependency",
+        "producer_captures": [
+          {
+            "producer_authenticated": true,
+            "binding_checks": {
+              "format_valid": true,
+              "gaps": [
+                {
+                  "binding": "activation",
+                  "expected": {
+                    "id": "activation-wrong-activation",
+                    "sha256": "64c253f72c45ec20552e55582305d07cf4042492500e30b62ea39e598737ac78"
+                  },
+                  "historical": {
+                    "id": "activation-wrong-activation",
+                    "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+                  }
+                }
+              ]
+            },
+            "original_activation": {
+              "id": "activation-wrong-activation",
+              "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+            },
+            "performed_ids": [
+              "actual-evaluation"
+            ],
+            "not_performed": [],
+            "original_domain_outcomes": [
+              {
+                "arbitrary": [
+                  null,
+                  true,
+                  4,
+                  {
+                    "a/b~": "unchanged"
+                  }
+                ],
+                "original_domain": "falsified"
+              }
+            ],
+            "record": {
+              "id": "sha256:af0647714d0812b1ab79bfc3ffab5beff68c0cb30738a2b79c98dc58c453c316",
+              "sha256": "af0647714d0812b1ab79bfc3ffab5beff68c0cb30738a2b79c98dc58c453c316"
+            }
+          }
+        ],
+        "return_checks": [
+          {
+            "consumable": false,
+            "gaps": [
+              {
+                "binding": "activation",
+                "expected": {
+                  "id": "activation-wrong-activation",
+                  "sha256": "64c253f72c45ec20552e55582305d07cf4042492500e30b62ea39e598737ac78"
+                },
+                "historical": {
+                  "id": "activation-wrong-activation",
+                  "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+                }
+              },
+              {
+                "binding": "activation",
+                "expected": {
+                  "id": "activation-wrong-activation",
+                  "sha256": "64c253f72c45ec20552e55582305d07cf4042492500e30b62ea39e598737ac78"
+                },
+                "historical": {
+                  "id": "activation-wrong-activation",
+                  "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+                }
+              }
+            ]
+          }
+        ],
+        "process_ends": [
+          {
+            "descendants": "unknown",
+            "ended_ns": 1792470767948985000,
+            "observed": true,
+            "returncode": 0
+          }
+        ],
+        "raw_output_observations": [
+          {
+            "complete": true,
+            "slot": "final_stdout_object",
+            "attempt": {
+              "id": "sha256:dcb8625f9ae4c84a22a5794b1198fd4d0383b17cfd89fb5029d15e147556fd9d",
+              "sha256": "dcb8625f9ae4c84a22a5794b1198fd4d0383b17cfd89fb5029d15e147556fd9d"
+            },
+            "raw_record": {
+              "id": "sha256:fff741e16bf96714dbf6d72e0082cc08611692b45647db0d6deb211b9f4492d9",
+              "sha256": "fff741e16bf96714dbf6d72e0082cc08611692b45647db0d6deb211b9f4492d9"
+            }
+          }
+        ],
+        "relation_queries": [
+          {
+            "request_id": "judgment-ingress-1",
+            "source": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/relations-missing.json",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "68a0bfa9cbe446f4371c03902991710ff5980f9beb192e8541f63a94e42c7c75"
+            },
+            "condition": {
+              "evaluation": null,
+              "predicate": {
+                "engine": "workspace-regular-file",
+                "object": null,
+                "path": "inputs/law.txt",
+                "root": "workspace",
+                "selector": null,
+                "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+              }
+            },
+            "core_value": null,
+            "excluded": false,
+            "unresolved": true,
+            "gaps": [
+              "Missing actual condition judgment"
+            ],
+            "records": [
+              "urn:a-c:toy:object:a",
+              "urn:a-c:toy:object:b"
+            ],
+            "traversed_relations": [
+              "e1",
+              "e2"
+            ],
+            "evidence": {
+              "id": "sha256:bf047975ff5a9df82eb26c7b922f0d6e4354cd1dc63616f6c75e60064f1b9876",
+              "sha256": "bf047975ff5a9df82eb26c7b922f0d6e4354cd1dc63616f6c75e60064f1b9876"
+            }
+          },
+          {
+            "request_id": "judgment-ingress-9",
+            "source": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/relations-wrong-activation.json",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "0998b59a62ec2820ce27dce1a080c18c14603a7a7f0519c2d6cd62b02456dd8c"
+            },
+            "condition": {
+              "evaluation": {
+                "pointer": "/payload/original/evaluations/0",
+                "record": {
+                  "id": "sha256:af0647714d0812b1ab79bfc3ffab5beff68c0cb30738a2b79c98dc58c453c316",
+                  "sha256": "af0647714d0812b1ab79bfc3ffab5beff68c0cb30738a2b79c98dc58c453c316"
+                }
+              },
+              "predicate": {
+                "engine": "workspace-regular-file",
+                "object": null,
+                "path": "inputs/law.txt",
+                "root": "workspace",
+                "selector": null,
+                "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+              }
+            },
+            "core_value": "falsified",
+            "excluded": true,
+            "unresolved": false,
+            "gaps": [],
+            "records": [
+              "urn:a-c:toy:object:a"
+            ],
+            "traversed_relations": [],
+            "evidence": {
+              "id": "sha256:4b8373182d6b8210d9d8f7ac5b8af2be4a044c7cad07ce7956a45edcc67660aa",
+              "sha256": "4b8373182d6b8210d9d8f7ac5b8af2be4a044c7cad07ce7956a45edcc67660aa"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "focused-after": {
+    "operation_counts": {
+      "context.assemble": 4,
+      "contract.preflight": 4,
+      "dispatch.observe": 5,
+      "dispatch.start": 4,
+      "evidence.read": 4,
+      "relations.query": 9,
+      "return.capture": 4,
+      "return.check": 4
+    },
+    "public_calls": 38,
+    "registered_process_invocations": 4,
+    "all_public_calls_exit_zero": true,
+    "cases": [
+      {
+        "test": "test_direct_performed_satisfied_and_falsified_conditions_remain_usable",
+        "retained_root": "focused-after/public/test_direct_performed_satisfied_and_falsified_conditions_remain_usable",
+        "producer_captures": [
+          {
+            "producer_authenticated": true,
+            "binding_checks": {
+              "format_valid": true,
+              "gaps": []
+            },
+            "original_activation": {
+              "id": "activation-satisfied",
+              "sha256": "cbdb3780e889d2a15cad81ff74fe189e73fdce1a8ba277847a3269ad3f256dd9"
+            },
+            "performed_ids": [
+              "actual-evaluation"
+            ],
+            "not_performed": [],
+            "original_domain_outcomes": [
+              {
+                "arbitrary": [
+                  null,
+                  true,
+                  4,
+                  {
+                    "a/b~": "unchanged"
+                  }
+                ],
+                "original_domain": "satisfied"
+              }
+            ],
+            "record": {
+              "id": "sha256:61bc78a660f03c979ec26243d6ca1776b1d0a91ccbe2031271092abba760c00b",
+              "sha256": "61bc78a660f03c979ec26243d6ca1776b1d0a91ccbe2031271092abba760c00b"
+            }
+          },
+          {
+            "producer_authenticated": true,
+            "binding_checks": {
+              "format_valid": true,
+              "gaps": []
+            },
+            "original_activation": {
+              "id": "activation-falsified",
+              "sha256": "7befe48c6efb1b3d759bdfe4384d18156d6998886486cad4c65297ad357aa154"
+            },
+            "performed_ids": [
+              "actual-evaluation"
+            ],
+            "not_performed": [],
+            "original_domain_outcomes": [
+              {
+                "arbitrary": [
+                  null,
+                  true,
+                  4,
+                  {
+                    "a/b~": "unchanged"
+                  }
+                ],
+                "original_domain": "falsified"
+              }
+            ],
+            "record": {
+              "id": "sha256:7e7fb9553dc9b42a947c622e0b3d74e7a30e765471a7dea537ccc3c079f103fa",
+              "sha256": "7e7fb9553dc9b42a947c622e0b3d74e7a30e765471a7dea537ccc3c079f103fa"
+            }
+          }
+        ],
+        "return_checks": [
+          {
+            "consumable": true,
+            "gaps": []
+          },
+          {
+            "consumable": true,
+            "gaps": []
+          }
+        ],
+        "process_ends": [
+          {
+            "descendants": "unknown",
+            "ended_ns": 1792470897351107000,
+            "observed": true,
+            "returncode": 0
+          },
+          {
+            "descendants": "unknown",
+            "ended_ns": 1792470899797645000,
+            "observed": true,
+            "returncode": 0
+          }
+        ],
+        "raw_output_observations": [
+          {
+            "complete": true,
+            "slot": "final_stdout_object",
+            "attempt": {
+              "id": "sha256:9e1f0da0bcd0f1ee80ca10563015af7fcd7d9787f850513fa514f265ef02cfe9",
+              "sha256": "9e1f0da0bcd0f1ee80ca10563015af7fcd7d9787f850513fa514f265ef02cfe9"
+            },
+            "raw_record": {
+              "id": "sha256:aa6606cd579e1a066497b9517b33490cce93f0aff1a6120cf760ec3eb65a9db4",
+              "sha256": "aa6606cd579e1a066497b9517b33490cce93f0aff1a6120cf760ec3eb65a9db4"
+            }
+          },
+          {
+            "complete": true,
+            "slot": "final_stdout_object",
+            "attempt": {
+              "id": "sha256:60f717f251ba20d65d66784b557e9c564eb685279628f342565d4907a1d88962",
+              "sha256": "60f717f251ba20d65d66784b557e9c564eb685279628f342565d4907a1d88962"
+            },
+            "raw_record": {
+              "id": "sha256:a27da238bf0e9d5be1b969e2d866023c3439900ae6eb8c1ed0ea8641c0b1ae2a",
+              "sha256": "a27da238bf0e9d5be1b969e2d866023c3439900ae6eb8c1ed0ea8641c0b1ae2a"
+            }
+          }
+        ],
+        "relation_queries": [
+          {
+            "request_id": "judgment-ingress-1",
+            "source": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/relations-missing.json",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "68a0bfa9cbe446f4371c03902991710ff5980f9beb192e8541f63a94e42c7c75"
+            },
+            "condition": {
+              "evaluation": null,
+              "predicate": {
+                "engine": "workspace-regular-file",
+                "object": null,
+                "path": "inputs/law.txt",
+                "root": "workspace",
+                "selector": null,
+                "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+              }
+            },
+            "core_value": null,
+            "excluded": false,
+            "unresolved": true,
+            "gaps": [
+              "Missing actual condition judgment"
+            ],
+            "records": [
+              "urn:a-c:toy:object:a",
+              "urn:a-c:toy:object:b"
+            ],
+            "traversed_relations": [
+              "e1",
+              "e2"
+            ],
+            "evidence": {
+              "id": "sha256:42ac107f0fb1ad6db6d1ad77138e07d056dbc9b082ce7979f4442e4f3d6e2a92",
+              "sha256": "42ac107f0fb1ad6db6d1ad77138e07d056dbc9b082ce7979f4442e4f3d6e2a92"
+            }
+          },
+          {
+            "request_id": "judgment-ingress-9",
+            "source": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/relations-satisfied.json",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "d3233fe50cfa5c6cc4ee9b04ded1e467a98f6091e70db48438e46161e8b38ee0"
+            },
+            "condition": {
+              "evaluation": {
+                "pointer": "/payload/original/evaluations/0",
+                "record": {
+                  "id": "sha256:61bc78a660f03c979ec26243d6ca1776b1d0a91ccbe2031271092abba760c00b",
+                  "sha256": "61bc78a660f03c979ec26243d6ca1776b1d0a91ccbe2031271092abba760c00b"
+                }
+              },
+              "predicate": {
+                "engine": "workspace-regular-file",
+                "object": null,
+                "path": "inputs/law.txt",
+                "root": "workspace",
+                "selector": null,
+                "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+              }
+            },
+            "core_value": "satisfied",
+            "excluded": false,
+            "unresolved": false,
+            "gaps": [],
+            "records": [
+              "urn:a-c:toy:object:a",
+              "urn:a-c:toy:object:b"
+            ],
+            "traversed_relations": [
+              "e1",
+              "e2"
+            ],
+            "evidence": {
+              "id": "sha256:6083c2a0fc7edbebfbe156dedf9bff1a954673f9baa51a755bd436561de9e210",
+              "sha256": "6083c2a0fc7edbebfbe156dedf9bff1a954673f9baa51a755bd436561de9e210"
+            }
+          },
+          {
+            "request_id": "judgment-ingress-18",
+            "source": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/relations-falsified.json",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "e270598c18c4ec818a9d2f1482c8cceda6cde069e76df764ea17258ff4aad2d0"
+            },
+            "condition": {
+              "evaluation": {
+                "pointer": "/payload/original/evaluations/0",
+                "record": {
+                  "id": "sha256:7e7fb9553dc9b42a947c622e0b3d74e7a30e765471a7dea537ccc3c079f103fa",
+                  "sha256": "7e7fb9553dc9b42a947c622e0b3d74e7a30e765471a7dea537ccc3c079f103fa"
+                }
+              },
+              "predicate": {
+                "engine": "workspace-regular-file",
+                "object": null,
+                "path": "inputs/law.txt",
+                "root": "workspace",
+                "selector": null,
+                "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+              }
+            },
+            "core_value": "falsified",
+            "excluded": true,
+            "unresolved": false,
+            "gaps": [],
+            "records": [
+              "urn:a-c:toy:object:a"
+            ],
+            "traversed_relations": [],
+            "evidence": {
+              "id": "sha256:fe5be3c82538d5f9839e2ee68444fbab3822d0a7c8374b8a16b329de6f6d75e4",
+              "sha256": "fe5be3c82538d5f9839e2ee68444fbab3822d0a7c8374b8a16b329de6f6d75e4"
+            }
+          }
+        ]
+      },
+      {
+        "test": "test_missing_judgment_preserves_unknown_required_dependency",
+        "retained_root": "focused-after/public/test_missing_judgment_preserves_unknown_required_dependency",
+        "producer_captures": [],
+        "return_checks": [],
+        "process_ends": [],
+        "raw_output_observations": [],
+        "relation_queries": [
+          {
+            "request_id": "judgment-ingress-1",
+            "source": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/relations-missing.json",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "68a0bfa9cbe446f4371c03902991710ff5980f9beb192e8541f63a94e42c7c75"
+            },
+            "condition": {
+              "evaluation": null,
+              "predicate": {
+                "engine": "workspace-regular-file",
+                "object": null,
+                "path": "inputs/law.txt",
+                "root": "workspace",
+                "selector": null,
+                "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+              }
+            },
+            "core_value": null,
+            "excluded": false,
+            "unresolved": true,
+            "gaps": [
+              "Missing actual condition judgment"
+            ],
+            "records": [
+              "urn:a-c:toy:object:a",
+              "urn:a-c:toy:object:b"
+            ],
+            "traversed_relations": [
+              "e1",
+              "e2"
+            ],
+            "evidence": {
+              "id": "sha256:2dfdb29a0d915fd52b59747d35b4024fecdcc973e61f90441963b6a9c92981a1",
+              "sha256": "2dfdb29a0d915fd52b59747d35b4024fecdcc973e61f90441963b6a9c92981a1"
+            }
+          }
+        ]
+      },
+      {
+        "test": "test_nested_not_performed_domain_data_cannot_exclude_required_dependency",
+        "retained_root": "focused-after/public/test_nested_not_performed_domain_data_cannot_exclude_required_dependency",
+        "producer_captures": [
+          {
+            "producer_authenticated": true,
+            "binding_checks": {
+              "format_valid": true,
+              "gaps": []
+            },
+            "original_activation": {
+              "id": "activation-nested",
+              "sha256": "9bdf7a79b4713deaa6b2536f98ff2c90bd4e3749e1d278fe3c9ca3df9a9c252d"
+            },
+            "performed_ids": [
+              "actual-evaluation"
+            ],
+            "not_performed": [
+              "nested-not-performed"
+            ],
+            "original_domain_outcomes": [
+              {
+                "arbitrary": {
+                  "arbitrary": [
+                    null,
+                    true,
+                    4,
+                    {
+                      "a/b~": "unchanged"
+                    }
+                  ],
+                  "original_domain": "satisfied"
+                },
+                "nested": {
+                  "core_value": "falsified",
+                  "domain_outcome": false,
+                  "evidence": [
+                    {
+                      "engine": "workspace-regular-file",
+                      "object": null,
+                      "path": "inputs/data.json",
+                      "root": "workspace",
+                      "selector": null,
+                      "sha256": "2b3ece6dc9aaa4f4ad85767fbd4b26fe969acc6d1426222d605f2326490ab927"
+                    }
+                  ],
+                  "id": "nested-not-performed",
+                  "invalidators": [],
+                  "predicate": {
+                    "engine": "workspace-regular-file",
+                    "object": null,
+                    "path": "inputs/law.txt",
+                    "root": "workspace",
+                    "selector": null,
+                    "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+                  },
+                  "residuals": []
+                }
+              }
+            ],
+            "record": {
+              "id": "sha256:a09a662acc5388eaddceed290e7d1be32135cb5fd81ba4d0736d62a0bdb312ef",
+              "sha256": "a09a662acc5388eaddceed290e7d1be32135cb5fd81ba4d0736d62a0bdb312ef"
+            }
+          }
+        ],
+        "return_checks": [
+          {
+            "consumable": true,
+            "gaps": []
+          }
+        ],
+        "process_ends": [
+          {
+            "descendants": "unknown",
+            "ended_ns": 1792470902896704000,
+            "observed": true,
+            "returncode": 0
+          }
+        ],
+        "raw_output_observations": [
+          {
+            "complete": true,
+            "slot": "final_stdout_object",
+            "attempt": {
+              "id": "sha256:5cb9885766ef8a8b6e486d6fa5575ba9061aba4c080d3dcf97c78d04047b29f2",
+              "sha256": "5cb9885766ef8a8b6e486d6fa5575ba9061aba4c080d3dcf97c78d04047b29f2"
+            },
+            "raw_record": {
+              "id": "sha256:f96a7801b3828b99480e84c28a16a44f7ec0ae01873ce6a39be5f0f46c5a536e",
+              "sha256": "f96a7801b3828b99480e84c28a16a44f7ec0ae01873ce6a39be5f0f46c5a536e"
+            }
+          }
+        ],
+        "relation_queries": [
+          {
+            "request_id": "judgment-ingress-1",
+            "source": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/relations-missing.json",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "68a0bfa9cbe446f4371c03902991710ff5980f9beb192e8541f63a94e42c7c75"
+            },
+            "condition": {
+              "evaluation": null,
+              "predicate": {
+                "engine": "workspace-regular-file",
+                "object": null,
+                "path": "inputs/law.txt",
+                "root": "workspace",
+                "selector": null,
+                "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+              }
+            },
+            "core_value": null,
+            "excluded": false,
+            "unresolved": true,
+            "gaps": [
+              "Missing actual condition judgment"
+            ],
+            "records": [
+              "urn:a-c:toy:object:a",
+              "urn:a-c:toy:object:b"
+            ],
+            "traversed_relations": [
+              "e1",
+              "e2"
+            ],
+            "evidence": {
+              "id": "sha256:17c7d7aa69226fa2f87ab22626bf97ec4ae381327e72580a3bb0fc904d6a1f31",
+              "sha256": "17c7d7aa69226fa2f87ab22626bf97ec4ae381327e72580a3bb0fc904d6a1f31"
+            }
+          },
+          {
+            "request_id": "judgment-ingress-9",
+            "source": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/relations-nested-data.json",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "37626a61268e3ac0972b5bf952a441fda99674567e2c58f7e4ac8180e7d23e71"
+            },
+            "condition": {
+              "evaluation": {
+                "pointer": "/payload/original/evaluations/0/domain_outcome/nested",
+                "record": {
+                  "id": "sha256:a09a662acc5388eaddceed290e7d1be32135cb5fd81ba4d0736d62a0bdb312ef",
+                  "sha256": "a09a662acc5388eaddceed290e7d1be32135cb5fd81ba4d0736d62a0bdb312ef"
+                }
+              },
+              "predicate": {
+                "engine": "workspace-regular-file",
+                "object": null,
+                "path": "inputs/law.txt",
+                "root": "workspace",
+                "selector": null,
+                "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+              }
+            },
+            "core_value": null,
+            "excluded": false,
+            "unresolved": true,
+            "gaps": [
+              {
+                "code": "basis_missing",
+                "gaps": [],
+                "reason": "Judgment pointer must identify one performed evaluation",
+                "source_refs": []
+              }
+            ],
+            "records": [
+              "urn:a-c:toy:object:a",
+              "urn:a-c:toy:object:b"
+            ],
+            "traversed_relations": [
+              "e1",
+              "e2"
+            ],
+            "evidence": {
+              "id": "sha256:1dfcf95a539bc081234b78469db9113fef7287b3fe16d03f1dbbe0fcfcdc0767",
+              "sha256": "1dfcf95a539bc081234b78469db9113fef7287b3fe16d03f1dbbe0fcfcdc0767"
+            }
+          },
+          {
+            "request_id": "judgment-ingress-10",
+            "source": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/relations-nested-direct.json",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "6a9b6f36b571894e6f3ecd0cda3d9133fe612508ee544374871cadc9880e033f"
+            },
+            "condition": {
+              "evaluation": {
+                "pointer": "/payload/original/evaluations/0",
+                "record": {
+                  "id": "sha256:a09a662acc5388eaddceed290e7d1be32135cb5fd81ba4d0736d62a0bdb312ef",
+                  "sha256": "a09a662acc5388eaddceed290e7d1be32135cb5fd81ba4d0736d62a0bdb312ef"
+                }
+              },
+              "predicate": {
+                "engine": "workspace-regular-file",
+                "object": null,
+                "path": "inputs/law.txt",
+                "root": "workspace",
+                "selector": null,
+                "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+              }
+            },
+            "core_value": "satisfied",
+            "excluded": false,
+            "unresolved": false,
+            "gaps": [],
+            "records": [
+              "urn:a-c:toy:object:a",
+              "urn:a-c:toy:object:b"
+            ],
+            "traversed_relations": [
+              "e1",
+              "e2"
+            ],
+            "evidence": {
+              "id": "sha256:6fd738b339895b988ffebb0085ca2abb8077ade6041d8e4a994299e5352e12dd",
+              "sha256": "6fd738b339895b988ffebb0085ca2abb8077ade6041d8e4a994299e5352e12dd"
+            }
+          }
+        ]
+      },
+      {
+        "test": "test_wrong_activation_return_cannot_exclude_required_dependency",
+        "retained_root": "focused-after/public/test_wrong_activation_return_cannot_exclude_required_dependency",
+        "producer_captures": [
+          {
+            "producer_authenticated": true,
+            "binding_checks": {
+              "format_valid": true,
+              "gaps": [
+                {
+                  "binding": "activation",
+                  "expected": {
+                    "id": "activation-wrong-activation",
+                    "sha256": "32803c1d3b58a0a0c0e181eae79fc03ac5e1bb9f075b621039d09ae298a55f9d"
+                  },
+                  "historical": {
+                    "id": "activation-wrong-activation",
+                    "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+                  }
+                }
+              ]
+            },
+            "original_activation": {
+              "id": "activation-wrong-activation",
+              "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+            },
+            "performed_ids": [
+              "actual-evaluation"
+            ],
+            "not_performed": [],
+            "original_domain_outcomes": [
+              {
+                "arbitrary": [
+                  null,
+                  true,
+                  4,
+                  {
+                    "a/b~": "unchanged"
+                  }
+                ],
+                "original_domain": "falsified"
+              }
+            ],
+            "record": {
+              "id": "sha256:e4d0c539288243d460c0c23026b1ffb41868624216abff969d4773863d02a928",
+              "sha256": "e4d0c539288243d460c0c23026b1ffb41868624216abff969d4773863d02a928"
+            }
+          }
+        ],
+        "return_checks": [
+          {
+            "consumable": false,
+            "gaps": [
+              {
+                "binding": "activation",
+                "expected": {
+                  "id": "activation-wrong-activation",
+                  "sha256": "32803c1d3b58a0a0c0e181eae79fc03ac5e1bb9f075b621039d09ae298a55f9d"
+                },
+                "historical": {
+                  "id": "activation-wrong-activation",
+                  "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+                }
+              },
+              {
+                "binding": "activation",
+                "expected": {
+                  "id": "activation-wrong-activation",
+                  "sha256": "32803c1d3b58a0a0c0e181eae79fc03ac5e1bb9f075b621039d09ae298a55f9d"
+                },
+                "historical": {
+                  "id": "activation-wrong-activation",
+                  "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+                }
+              }
+            ]
+          }
+        ],
+        "process_ends": [
+          {
+            "descendants": "unknown",
+            "ended_ns": 1792470905418578000,
+            "observed": true,
+            "returncode": 0
+          }
+        ],
+        "raw_output_observations": [
+          {
+            "complete": true,
+            "slot": "final_stdout_object",
+            "attempt": {
+              "id": "sha256:db9c3c8f153241e12b17c194b7ae1d6b0616b007323ae0907e2e33ae113d27c4",
+              "sha256": "db9c3c8f153241e12b17c194b7ae1d6b0616b007323ae0907e2e33ae113d27c4"
+            },
+            "raw_record": {
+              "id": "sha256:a59427672a0d756313b42644a1a2b3105169e41f930e9bb38654ffbf8dde1da0",
+              "sha256": "a59427672a0d756313b42644a1a2b3105169e41f930e9bb38654ffbf8dde1da0"
+            }
+          }
+        ],
+        "relation_queries": [
+          {
+            "request_id": "judgment-ingress-1",
+            "source": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/relations-missing.json",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "68a0bfa9cbe446f4371c03902991710ff5980f9beb192e8541f63a94e42c7c75"
+            },
+            "condition": {
+              "evaluation": null,
+              "predicate": {
+                "engine": "workspace-regular-file",
+                "object": null,
+                "path": "inputs/law.txt",
+                "root": "workspace",
+                "selector": null,
+                "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+              }
+            },
+            "core_value": null,
+            "excluded": false,
+            "unresolved": true,
+            "gaps": [
+              "Missing actual condition judgment"
+            ],
+            "records": [
+              "urn:a-c:toy:object:a",
+              "urn:a-c:toy:object:b"
+            ],
+            "traversed_relations": [
+              "e1",
+              "e2"
+            ],
+            "evidence": {
+              "id": "sha256:c7bae202e5e86a6a13cb00b754093e0ba102b0d6f497733a29fbd0e344d15542",
+              "sha256": "c7bae202e5e86a6a13cb00b754093e0ba102b0d6f497733a29fbd0e344d15542"
+            }
+          },
+          {
+            "request_id": "judgment-ingress-9",
+            "source": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "inputs/relations-wrong-activation.json",
+              "root": "workspace",
+              "selector": null,
+              "sha256": "d26f59e4a91bab40f26241f99149ee418c8290670490a37dbe567881a8d4ba04"
+            },
+            "condition": {
+              "evaluation": {
+                "pointer": "/payload/original/evaluations/0",
+                "record": {
+                  "id": "sha256:e4d0c539288243d460c0c23026b1ffb41868624216abff969d4773863d02a928",
+                  "sha256": "e4d0c539288243d460c0c23026b1ffb41868624216abff969d4773863d02a928"
+                }
+              },
+              "predicate": {
+                "engine": "workspace-regular-file",
+                "object": null,
+                "path": "inputs/law.txt",
+                "root": "workspace",
+                "selector": null,
+                "sha256": "b6285c57e8797db5d4c51c80d6f11938afda9b11c6a003549709189e9b4b92a2"
+              }
+            },
+            "core_value": null,
+            "excluded": false,
+            "unresolved": true,
+            "gaps": [
+              {
+                "code": "basis_missing",
+                "gaps": [
+                  {
+                    "binding": "activation",
+                    "expected": {
+                      "id": "activation-wrong-activation",
+                      "sha256": "32803c1d3b58a0a0c0e181eae79fc03ac5e1bb9f075b621039d09ae298a55f9d"
+                    },
+                    "historical": {
+                      "id": "activation-wrong-activation",
+                      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+                    }
+                  }
+                ],
+                "reason": "Original return has material binding gaps",
+                "source_refs": []
+              }
+            ],
+            "records": [
+              "urn:a-c:toy:object:a",
+              "urn:a-c:toy:object:b"
+            ],
+            "traversed_relations": [
+              "e1",
+              "e2"
+            ],
+            "evidence": {
+              "id": "sha256:dafc15e5f89c9901b546a04e954a522c6bed1abf6ba58f1a5d01918388f0b50e",
+              "sha256": "dafc15e5f89c9901b546a04e954a522c6bed1abf6ba58f1a5d01918388f0b50e"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

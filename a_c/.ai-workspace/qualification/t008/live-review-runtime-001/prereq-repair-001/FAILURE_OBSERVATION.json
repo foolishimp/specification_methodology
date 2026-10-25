@@ -1,0 +1,40 @@
+{
+  "Root_reported_facts": {
+    "context_complete": false,
+    "context_delivery_bytes": 0,
+    "helper_exit_code": 2,
+    "helper_pid": 6099,
+    "stderr_exact": "Actor transport unavailable: TransportError: Evidence parent must already exist\n",
+    "stdout_bytes": 0
+  },
+  "actual_observe_acquisition": "Existing protected bytes read directly under preparation; no support operation invoked.",
+  "attempt": "sha256:03df642a257f37d2ff9b4c0b7432edce25aae2fcad8a94a4a324acd378717838",
+  "conclusion": "Exact diagnostic uniquely binds missing-parent guard before output.mkdir/input read/_capture. That helper invocation does not reach the sole native Popen edge. This uses source ordering plus actual stderr, not exit code alone. No native evidence child exists. No general external/process-tree end or historical host absence is certified.",
+  "counts": {
+    "native_actor_launches_evidenced_for_this_attempt": 0,
+    "required_two_Reviewer_native_activations_performed": 0,
+    "retained_helper_attempts_for_this_call": 1
+  },
+  "source": {
+    "engine": "retained-evidence",
+    "object": null,
+    "path": "sha256:6c6c920a236f0efd0f3c4c10787c6042893578bef209f5388fb3e7edc6764a8c",
+    "root": "evidence",
+    "selector": null,
+    "sha256": "6c6c920a236f0efd0f3c4c10787c6042893578bef209f5388fb3e7edc6764a8c"
+  },
+  "source_bound_branch": {
+    "capture_Popen_line": 189,
+    "helper_sha256": "06cd55463fd23e45fbf56fa46de92b9ba49f6650e3dc5686e219544d5457b42c",
+    "later_capture_call_line": 402,
+    "main_exception_lines": [
+      422,
+      435
+    ],
+    "missing_parent_raise_line": 375,
+    "run_function_lines": [
+      370,
+      419
+    ]
+  }
+}

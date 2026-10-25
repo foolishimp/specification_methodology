@@ -1,0 +1,1912 @@
+{
+  "concepts": [
+    {
+      "conditions": [],
+      "definition": "This member's traversal is a typed contract with id, domain, codomain, context, owner, scope, basis, preconditions, postconditions, authority, evidence, provenance and stop_states.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":926,
+          "quote":"v = {\n  id,\n  domain,\n  codomain,\n  context,\n  owner,\n  scope,\n  basis,\n  preconditions,\n  postconditions,\n  authority,\n  evidence,\n  provenance,\n  stop_states\n}",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds",
+          "start_line":912
+        }
+      ],
+      "key":"traversal_contract",
+      "label":"Traversal contract"
+    },
+    {
+      "conditions": [],
+      "definition": "F_D, urn:stdo:concept:axiomatic-calculus:f-d, classifies deterministic evaluation or proof over declared properties. It returns a judgment without performing the domain construction judged.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":937,
+          "quote":"F_D = urn:stdo:concept:axiomatic-calculus:f-d",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds",
+          "start_line":937
+        },
+        {
+          "end_line":975,
+          "quote":"- `F_D` classifies deterministic evaluation or proof over declared\n  properties. It returns a judgment and does not perform the domain\n  construction being judged (P6).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds",
+          "start_line":973
+        }
+      ],
+      "key":"deterministic_functor",
+      "label":"F_D"
+    },
+    {
+      "conditions": [],
+      "definition": "F_P, urn:stdo:concept:axiomatic-calculus:f-p, classifies bounded probabilistic interpretation, construction or proposal under an exact traversal contract. Usefulness or repeatability confers no semantic, admission, acceptance or closure authority on its result.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":938,
+          "quote":"F_P = urn:stdo:concept:axiomatic-calculus:f-p",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds",
+          "start_line":938
+        },
+        {
+          "end_line":979,
+          "quote":"- `F_P` classifies bounded probabilistic interpretation, construction or\n  proposal under an exact traversal contract. Its result has no semantic,\n  admission, acceptance or closure authority merely because it is useful\n  or repeatable (P6, P0; instance premise (iii) of §1 Foundation to law).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds",
+          "start_line":976
+        }
+      ],
+      "key":"probabilistic_functor",
+      "label":"F_P"
+    },
+    {
+      "conditions": [],
+      "definition": "F_H, urn:stdo:concept:axiomatic-calculus:f-h, classifies explicit human adjudication under exact identity, authority grant, subject, basis and decision contract. Human presence grants no ambient authority.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":939,
+          "quote":"F_H = urn:stdo:concept:axiomatic-calculus:f-h",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds",
+          "start_line":939
+        },
+        {
+          "end_line":982,
+          "quote":"- `F_H` classifies explicit human adjudication under an exact identity,\n  authority grant, subject, basis and decision contract. Human presence\n  grants no ambient authority (P6).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds",
+          "start_line":980
+        }
+      ],
+      "key":"human_functor",
+      "label":"F_H"
+    },
+    {
+      "conditions": [],
+      "definition": "F_K[v](X_v) -> Y_v | Omega_v denotes one functor kind applied under one exact traversal identity to its typed input domain, yielding its typed result domain or a value of its closed stop algebra. Omega_v refines the core result algebra without adding a core value.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":952,
+          "quote":"where `F_K` is one functor kind, `v` is one exact traversal identity,\n`X_v` and `Y_v` are its typed input and result domains, and `Omega_v` is\nits closed stop algebra. `Omega_v` is a refinement of the core result\nalgebra of [FOUNDATIONS §4 Results](FOUNDATIONS.md#results): it adds no\ncore value",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds",
+          "start_line":948
+        }
+      ],
+      "key":"functor_application",
+      "label":"Functor application and stop domain"
+    },
+    {
+      "conditions": [],
+      "definition": "Typed composition orders a first traversal v and a second traversal w, written F_K2[w] compose F_K1[v], while retaining their separate contracts and results.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1018,
+          "quote":"Composition retains both traversal identities, intermediate results,\njudgments, evidence, authority, provenance and stop states.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds%2FAC-016%20Typed%20composition",
+          "start_line":1017
+        }
+      ],
+      "key":"typed_composition",
+      "label":"Typed composition"
+    },
+    {
+      "conditions": [],
+      "definition": "Interpret_a_c(subject_basis, signature, interpretation_contract) applies a_c to one exact subject and yields a proposed M_subject* or hold, gap or refusal. The star denotes absence of the applicable semantic acceptance judgment; stops take their cause-dependent core values under AC-007.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1038,
+          "quote":"Interpret_a_c(subject_basis, signature, interpretation_contract)\n  -> M_subject* | hold | gap | refusal\n```\n\nThe stops `hold`, `gap` and `refusal` take their core values under AC-007\nby their causes. The trailing `*` marks a proposed model that has not\nreceived the\napplicable semantic acceptance judgment.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models",
+          "start_line":1029
+        }
+      ],
+      "key":"subject_interpretation",
+      "label":"Exact subject interpretation"
+    },
+    {
+      "conditions": [],
+      "definition": "Structural conformance covers closed syntax, types, identities, references, bases and mechanically decidable predicates. Semantic fidelity covers interpretation meaning and materiality. Semantic acceptance is a separately recorded authority judgment.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1075,
+          "quote":"structural conformance of a model covers its closed syntax, types,\nidentities, references, bases and mechanically decidable predicates, and\nthe semantic fidelity of an interpretation covers its meaning and\nmateriality (P1, P6).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models%2FAC-018%20Structural%20and%20semantic%20separation",
+          "start_line":1072
+        },
+        {
+          "end_line":1056,
+          "quote":"Semantic acceptance remains a separately recorded authority judgment (P6,\nP1).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models",
+          "start_line":1055
+        }
+      ],
+      "key":"model_assessment",
+      "label":"Structural, semantic and acceptance assessments"
+    },
+    {
+      "conditions": [],
+      "definition": "M_b satisfies a_c[Sigma] names a valid-model claim under an exact signature and calculus basis, subject to AC-019's necessary conditions.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1080,
+          "quote":"A model `M_b` is a valid model of `a_c` under signature `Sigma`, written\n`M_b satisfies a_c[Sigma]`, only when (P6, P1):",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models%2FAC-019%20Valid%20model",
+          "start_line":1079
+        }
+      ],
+      "key":"valid_model_claim",
+      "label":"Valid model claim"
+    },
+    {
+      "conditions": [],
+      "definition": "a_c is the pure calculus layer.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1102,
+          "quote":"a_c       = the pure calculus",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F7.%20Layers",
+          "start_line":1102
+        }
+      ],
+      "key":"pure_calculus",
+      "label":"a_c"
+    },
+    {
+      "conditions": [],
+      "definition": "a_c.X is subject X interpreted as a model of a_c. Acceptance is external to its unchanged content identity; an accepted interpretation is the pair (a_c.X, J_X).",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1103,
+          "quote":"a_c.X     = subject X interpreted as a model of a_c",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F7.%20Layers",
+          "start_line":1103
+        },
+        {
+          "end_line":1227,
+          "quote":"The accepted\ninterpretation is the pair `(a_c.X, J_X)` where `J_X` is the applicable\naccepted judgment.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F8.%20Calculus%20identity",
+          "start_line":1225
+        }
+      ],
+      "key":"interpreted_subject_layer",
+      "label":"a_c.X"
+    },
+    {
+      "conditions": [],
+      "definition": "a_c.X.C is the accepted model encoded in carrier C. G_C denotes encoded bytes; J_X is external semantic acceptance over unchanged M_X; D_C is deterministic carrier admission under v_carrier_admission using G_C, Profile_C and CarrierBasis_C, over unchanged carrier bytes. The admitted encoding evidence is the exact triple (G_C, J_X, D_C).",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1114,
+          "quote":"M_X = Interpret_a_c(X)\nJ_X = Accept_X(M_X) -> accepted | refuse\nG_C = Encode_C(M_X, J_X) where J_X = accepted\nD_C = F_D[v_carrier_admission](G_C, Profile_C, CarrierBasis_C)\n      -> admitted | refuse",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F7.%20Layers",
+          "start_line":1110
+        },
+        {
+          "end_line":1123,
+          "quote":"`D_C` is a judgment over unchanged carrier bytes; it is not a\ntransformed carrier. The admitted encoding evidence relation is the exact\ntriple `(G_C, J_X, D_C)`; neither judgment enters the identity of its\nsubject (P6, P3).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F7.%20Layers",
+          "start_line":1120
+        }
+      ],
+      "key":"encoded_carrier_layer",
+      "label":"a_c.X.C and encoding evidence"
+    },
+    {
+      "conditions": [],
+      "definition": "AxiomaticCalculusBasis is an external, post-publication record distinguishing the stable calculus concept from an immutable edition. It binds governing premise clauses through derivation_basis and the published member through publication_basis within one exact immutable package.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1155,
+          "quote":"The stable concept identity does not identify one immutable calculus\nedition. An exact released calculus basis is an external record created\nafter the publication bytes exist. It binds the governing premise clauses\nand the published calculus member as distinct roles inside one exact\nimmutable package (P3, P6):",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F8.%20Calculus%20identity",
+          "start_line":1151
+        }
+      ],
+      "key":"calculus_basis_record",
+      "label":"AxiomaticCalculusBasis"
+    },
+    {
+      "conditions": [],
+      "definition": "An application binding is an external typed import, translation or specialisation of an a_c concept declared under the application's own exact authority, context, basis, scope, preservation, loss, refusal and invalidation law.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1277,
+          "quote":"An application may declare a typed import, translation or specialisation\nof an `a_c` concept under that application's own exact authority, context,\nbasis, scope, preservation, loss, refusal and invalidation law. Such a\nrelation is external to the calculus.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FExternal%20imports%20and%20specialisations",
+          "start_line":1274
+        }
+      ],
+      "key":"application_binding",
+      "label":"External application binding"
+    },
+    {
+      "conditions": [],
+      "definition": "A constraint surface is a derived task view specifying a declared subject and work boundary's objects and meanings, predicates and dependencies, admissible operations, required results, authority, evidence, permitted freedom and unresolved conditions. It bounds work without prescribing internal strategy beyond those obligations and supports recovery of task constraints within finite attention.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1289,
+          "quote":"A constraint surface states, for a declared subject and work boundary,\nthe obligations and the permitted freedom of the work: its objects and\ntheir meanings, the predicates and dependencies that bear on it, the\nadmissible operations, the required results, the authority, the evidence\nand the conditions still unresolved. It constrains the work without\nprescribing the worker's internal solution strategy beyond those\nobligations (P2, P6).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FConstraint%20surfaces",
+          "start_line":1283
+        }
+      ],
+      "key":"constraint_surface",
+      "label":"Constraint surface"
+    },
+    {
+      "conditions": [],
+      "definition": "Calculus review and qualification evaluate explicitly bounded claims about the member, including its signature, laws, identities, references, conservation properties and absence of hidden application dependencies.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1386,
+          "quote":"Review and qualification of this member cover at least (P6):\n\n1. closed signature, `RecordKind_ac`, population, field, value-domain and\n   reference-domain definitions;",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F10.%20Conformance%20obligations",
+          "start_line":1383
+        }
+      ],
+      "key":"calculus_qualification",
+      "label":"Calculus qualification"
+    },
+    {
+      "conditions": [],
+      "definition": "CONFORMANCE is a Tier 2 catalogue importing method rules for shared owners and consumers without defining a competing result algebra. A discriminator is a situation whose expected distinction separates a conforming application from a defective one. A case names subject, mechanism and expected distinction; a separate execution record binds exact tested subject, basis, acquired context, observations, assessor and result.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":13,
+          "quote":"Tier 2. Defines conformance cases for the method's shared owners and their\nconsumers. A discriminator is a situation whose expected distinction\nseparates a conforming application from a defective one. Each expectation\nand its deciding local owner are stated here; this member imports the\nmethod's rules and defines no competing result algebra.\n\nA case names its subject, mechanism and expected distinction. An execution\nrecord separately binds the exact tested subject, basis, acquired context,\nobservations, assessor and result.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE",
+          "start_line":3
+        }
+      ],
+      "key":"conformance_catalogue",
+      "label":"Conformance catalogue and cases"
+    },
+    {
+      "conditions": [],
+      "definition": "The named core values are satisfied, falsified, indeterminate, out_of_frame and invalid_basis. CONFORMANCE imports them from FOUNDATIONS. Its re_enter, re_entry_requested(authority), not_effected and completion_unknown are ACTIVATION-defined refinements mapped into that core. Non-performance has no result.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":31,
+          "quote":"Result values. The values `satisfied`, `falsified`, `indeterminate`,\n`out_of_frame` and `invalid_basis` named in this member are core values of\n[FOUNDATIONS §4 Results](FOUNDATIONS.md#results). The values `re_enter`,\n`re_entry_requested(authority)`, `not_effected` and `completion_unknown`\nare refinements that\n[ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition) defines and\nmaps into that core. This member defines no result value\n(P5, P6).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE",
+          "start_line":24
+        }
+      ],
+      "key":"conformance_result_domains",
+      "label":"Imported conformance result domains"
+    },
+    {
+      "conditions": [],
+      "definition": "Counterexample cases C-01 through C-12 identify failure mechanisms and local rules expected to distinguish them; they are assessment designs rather than reports of observed failures or passes.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":36,
+          "quote":"These cases identify failure mechanisms and the local rules that must\ndistinguish them.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F1.%20Counterexample%20cases",
+          "start_line":35
+        }
+      ],
+      "key":"counterexample_cases",
+      "label":"Counterexample cases"
+    },
+    {
+      "conditions": [],
+      "definition": "Construction trials T-01 through T-08 test bounded construction, ambiguity, composition, failure conservation, recovery, requirement change, defective acceptance and broader sourced decision work.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":57,
+          "quote":"| T-01 Context cap and decomposition | required basis exceeds one actor's declared cap; repeat with tighter caps and a coupled case that cannot fit | refinement preserves the outer contract under independent assessment; the cannot-fit case returns out_of_frame or a lawful escalation, never omission |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F2.%20Construction%20trials",
+          "start_line":57
+        }
+      ],
+      "key":"construction_trials",
+      "label":"Construction trials"
+    },
+    {
+      "conditions": [],
+      "definition": "R-01 and R-02 test fresh-context recovery of governing relations from the corpus, including matched comparisons when claimed and operation without validator folklore, author memory or whole-corpus loading.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":79,
+          "quote":"| R-02 No private knowledge | the same with validator folklore, author memory and whole-corpus loading withheld | the activation still succeeds or returns out_of_frame truthfully |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F3.%20Recoverability",
+          "start_line":79
+        }
+      ],
+      "key":"recoverability_cases",
+      "label":"Recoverability cases"
+    },
+    {
+      "conditions": [],
+      "definition": "CD construction-discriminator cases exercise configurations, executor bindings and workspace recovery through actual use. AR assurance-relation cases exercise weak assertions, insufficient observations, shared error and change selection.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":91,
+          "quote":"A case here is\nnamed CD (construction discriminator); the numbers in brackets are those of the\ndiscriminators it exercises.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F4.%20Cases%20for%20method%20discriminators",
+          "start_line":89
+        },
+        {
+          "end_line":110,
+          "quote":"The four cases below carry them; a case here is named AR (assurance\nrelation). Each applicable case requires its own exact execution and assessment\nrecord; no run or result is asserted by this catalogue.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F4.%20Cases%20for%20method%20discriminators",
+          "start_line":108
+        }
+      ],
+      "key":"method_use_assurance_cases",
+      "label":"Construction-discriminator and assurance-relation cases"
+    },
+    {
+      "conditions": [],
+      "definition": "Discriminator coverage associates each situation and expected distinction with local owning sections and checks. L-n denotes a qualified reviewer's reasoned textual review without execution; actual-use cases add observed evidence. J53–J59 concern integrated assessment across members and their material composition.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":129,
+          "quote":"A logical-review check is a reviewer's reasoned reading: the reviewer\nconstructs a discriminator's situation against the text and finds whether\nthe text yields the expected distinction, or finds a counterexample or a\ncontradiction, without running anything (P6).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Discriminator%20coverage",
+          "start_line":121
+        },
+        {
+          "end_line":197,
+          "quote":"Integrated assessment checks the complete declared member set and its\nmaterial composition. Local success cannot discharge a contradictory\nshared determination, an unresolved owner decision or a required result\ngap.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Discriminator%20coverage",
+          "start_line":194
+        }
+      ],
+      "key":"discriminator_coverage",
+      "label":"Logical and integrated discriminator coverage"
+    },
+    {
+      "conditions": [],
+      "definition": "UC-1–UC-9 are construction cases and AS-1–AS-12 are assurance cases with stated expected distinctions. Each receives local-owner logical review and applicable actual-use evidence where required by the claim. These cases remain assessment design.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":222,
+          "quote":"The following nine construction cases and twelve assurance cases state\ntheir complete expected distinctions. UC-n identifies a construction case;\nAS-n identifies an assurance case. Each receives a logical-review check\nunder its local owner, and applicable actual-use evidence where the claim\nrequires it.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Discriminator%20coverage%2FUniversal-construction%20and%20assurance%20discriminators",
+          "start_line":216
+        }
+      ],
+      "key":"universal_assurance_cases",
+      "label":"Universal-construction and assurance discriminators"
+    },
+    {
+      "conditions": ["Applies within boundaries governed by this optional profile."],
+      "definition": "DESIGN_MODULE is a Tier 3 optional realisation-design profile covering ontology-first derivation, proportional sequencing and decision completeness, bounded frames, native constructability, capability and foundation selection, entity/authority/admission/function completeness, Prime atoms and contraction, IACS, three-view design, reconstruction, computational realisation, module taxonomy, realisation rules, review, adoption and bound-runtime identity defaults.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":14,
+          "quote":"Tier 3. An optional profile of realisation design: ontology-first\nderivation, proportional design sequencing and decision completeness,\nbounded frame conservation, native constructability, capability and\nfoundation selection, entity, authority, admission and function\ncompleteness, Prime semantic atoms and their contraction, the irreducible\narchitectural carrier set, the three-view design gate, invariant\nreconstruction, computational realisation, the module taxonomy, the\nrealisation rules (immutable carriers, totality, effect edge, no semantic\ncentre, coupling, governance and strategy separation, opportunistic\noptimisation, recurrence, post-ticket review, interface bleed, proxy\ninterfaces), the review questions and checklist, adoption, and the identity\ndefaults of a bound runtime realisation.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE",
+          "start_line":3
+        }
+      ],
+      "key":"design_module_profile",
+      "label":"DESIGN_MODULE"
+    },
+    {
+      "conditions": ["These terms have profile-local ownership."],
+      "definition": "The profile names Ontology as the engineering Ontology of one designed boundary; Prime; Irreducible Architectural Carrier Set (IACS); Subordinate Payload; Promotion Test; Boundary Inflation; carrier; three-view design asset; module; and decision_complete(B) and co_evolution_admissible(B). Their detailed definitions are referred to §§5–9.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":32,
+          "quote":"This profile's own terms are Ontology (the engineering Ontology of one\ndesigned boundary, §5), Prime (§5, §6), the Irreducible Architectural\nCarrier Set (IACS, §6), Subordinate Payload, Promotion Test and Boundary\nInflation (§6), carrier, three-view design asset (§7), module (§9) and the\npredicates `decision_complete(B)` and `co_evolution_admissible(B)` (§5).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE",
+          "start_line":28
+        }
+      ],
+      "key":"design_profile_terms",
+      "label":"Profile-owned design terms"
+    },
+    {
+      "conditions": [],
+      "definition": "Tier-2 ASSURANCE supplies the design-to-module evidence route, module-derived unit tests and module lifecycle confirmation (§§14–16), and names generic carrier inventory, accepted ontology/design, domain/sequence/state projections and decision-completeness/co-evolution conditions that this profile binds for its own boundaries.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":24,
+          "quote":"the design-to-module evidence route, module-derived unit tests and\nmodule lifecycle confirmation ASSURANCE §14 to §16.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE",
+          "start_line":23
+        },
+        {
+          "end_line":38,
+          "quote":"where ASSURANCE (tier 2) names \"the\ncarrier inventory the design declares\", \"the accepted ontology and\ndesign\", \"the design's domain, sequence and state projections\" and \"the\ndesign's decision-completeness and co-evolution conditions\", a boundary\ngoverned by this profile binds them to the IACS, the accepted Ontology and\ntarget design, the three-view design asset and the two predicates of §5.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE",
+          "start_line":33
+        }
+      ],
+      "key":"assurance_design_roles",
+      "label":"Imported ASSURANCE design roles"
+    },
+    {
+      "conditions": [],
+      "definition": "Profile evaluation results, Ontology/design dispositions and author-declared design-record entries are distinct categories. Reconstruction decisions and axiom verdicts are the profile's two result refinements. Other closed design vocabularies are records without core-result mappings; their evaluations return their own core values.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":54,
+          "quote":"A performed evaluation under this profile\nreturns a value of the core result algebra of\n[FOUNDATIONS §4 Results](FOUNDATIONS.md#results), directly or through one\nof this profile's two refinements, each mapped where it is defined: the\nreconstruction decisions of §7 Invariant reconstruction sufficiency and\nthe axiom verdicts of §7 Cross-view axiom evaluation.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE",
+          "start_line":44
+        }
+      ],
+      "key":"design_result_record_distinction",
+      "label":"Design results, dispositions and record entries"
+    },
+    {
+      "conditions": ["Once the project has decided its outcomes and capabilities."],
+      "definition": "The profile concerns realisation design and implementation shape. Its goals are reduced ambiguity, entropy, avoidable debt, hidden authority, hidden mutation and semantic drift; increased refactorability; and preserved evidence for audit and reconstruction. Bounded intermediate traversal gives finite inspectable units for reasoning, implementation, evaluation, proof and refactor; a module boundary is one such tool.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":91,
+          "quote":"The goals are to reduce ambiguity, reduce\nentropy, eliminate avoidable technical debt, increase refactorability,\nreduce hidden authority, hidden mutation and semantic drift in realisation\ncode, and preserve enough evidence that later reviewers can audit,\nrefactor and reconstruct why the realisation took its current shape (P2,\nP6).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FPurpose",
+          "start_line":85
+        },
+        {
+          "end_line":107,
+          "quote":"Specification gives the global WHAT; every intermediate\ntraversal should have a finite, inspectable unit for reasoning,\nimplementation, evaluation, proof and later refactor. A module boundary is\none realisation-level tool for creating that unit; it is not the only\npossible bounded traversal.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FPurpose",
+          "start_line":101
+        }
+      ],
+      "key":"bounded_realisation_design",
+      "label":"Bounded realisation design"
+    },
+    {
+      "conditions": ["Within the profile's governed boundaries."],
+      "definition": "Functional design discipline is required, with a preferred functionally biased realisation: explicit typed carriers and transforms hold meaning, imperative coordination is subordinate to admitted truth, effects are isolated at explicit boundary modules, and mutable shared state is minimised and justified. A functional programming language is not required.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":134,
+          "quote":"The preferred realisation shape is functionally biased (P1, P6). That means semantic meaning should live in typed carriers and\nexplicit transforms; imperative coordination should be subordinate to\nadmitted truth; side effects should be isolated to explicit boundary\nmodules; and mutable shared state should be minimised and justified. The\nprofile does not require a functional programming language; it does\nrequire a functional design discipline.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FPosition",
+          "start_line":127
+        }
+      ],
+      "key":"functional_design_discipline",
+      "label":"Functional design discipline"
+    },
+    {
+      "conditions": ["Scoped to boundaries governed by DESIGN_MODULE."],
+      "definition": "The core realisation-shape rule is owned once by SPEC_METHOD §2. Its stated test is that a design is too imperative and coupled when a reader must inspect orchestration to learn the system's meaning. The profile's subsequent rules refine it.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":143,
+          "quote":"The core rule, with the test that a design is too imperative and too\ncoupled when a reader has to inspect orchestration to learn what the\nsystem means, is stated once in\n[SPEC_METHOD §2 Realisation shape](SPEC_METHOD.md#realisation-shape),\nscoped to boundaries this profile governs; every rule below refines it\n(P1, P6).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FCore%20rule",
+          "start_line":138
+        }
+      ],
+      "key":"imported_realisation_core_rule",
+      "label":"Imported realisation core rule"
+    }
+  ],
+  "constraints": [
+    {
+      "applies_to_keys":["traversal_contract","deterministic_functor","probabilistic_functor","human_functor"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":932,
+          "quote":"A same-spelled term\nowned by a profile, a realisation or a runtime is not imported by nominal\nequality and does not specialise this record except through a declared\nbinding under that owner's authority",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds",
+          "start_line":929
+        },
+        {
+          "end_line":988,
+          "quote":"The actor, the executor, the domain operation and the functor kind are\ndifferent coordinates. `Encode`, `Interpret`, `Serialize`, `Measure` and\nother named domain operations are not aliases for `F_D`, `F_P` or `F_H`.\nDifferent traversals may share one functor kind without sharing identity,\nsemantics, inputs, outputs, authority or evidence (P3, P6).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds",
+          "start_line":984
+        }
+      ],
+      "key":"traversal_identity_and_coordinate_separation",
+      "statement":"Nominal equality does not import or specialise this member's traversal; specialisation requires a declared binding under the other owner's authority. Actor, executor, domain operation and functor kind remain distinct coordinates. Encode, Interpret, Serialize, Measure and other operations are not kind aliases. Sharing a kind implies no shared traversal identity, semantics, input, output, authority or evidence.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["functor_application","traversal_contract"],
+      "conditions":["For every stop value and each cause refinement declared by the signature stop contract or traversal stop_states."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":971,
+          "quote":"Each refined value, whether the stop contract or a\n`stop_states` declares it, names its parent value and its cause and maps\nto its parent's core value: a value refined from `hold` to indeterminate,\nfrom `gap` or `refusal(basis)` to invalid_basis, and from\n`refusal(constraint)` to falsified. No refined value takes `satisfied`.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds",
+          "start_line":960
+        }
+      ],
+      "key":"stop_mapping_conservation",
+      "statement":"Each stop maps to exactly one existing core value, never satisfied. Further stops declare their single core mapping in the signature stop contract; traversal stop_states binds its exact mapping. Every refinement names parent and cause and keeps the parent's core value: hold -> indeterminate; gap and refusal(basis) -> invalid_basis; refusal(constraint) -> falsified. A different core value requires a different parent declared only by that parent's owning member; this member owns the four named stops. Neither contract nor stop_states raises standing or turns a violated constraint into mere evidential undecidability.",
+      "uncertainty":"The full cause definitions in AC-007 are outside the supplied sections."
+    },
+    {
+      "applies_to_keys":["functor_application"],
+      "conditions":["For every functor application."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1006,
+          "quote":"Every functor application binds exactly one functor kind and one traversal\nidentity. Applying any `F_*` kind without the bracketed traversal identity\n`[v]` is incomplete (P3). Such an\napplication violates this law, and its outcome is `refusal(constraint)`\nunder AC-007; this sense of incomplete is not the construction-availability\nvalue `incomplete` of a step",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds%2FAC-015%20Functor%20classification",
+          "start_line":998
+        }
+      ],
+      "key":"exact_functor_application_binding",
+      "statement":"Bind exactly one kind and one traversal identity. An F_* application lacking bracketed [v] violates AC-015 and yields refusal(constraint), whose supplied core mapping is falsified. Its descriptive incompleteness is not ACTIVATION's construction-availability value incomplete.",
+      "uncertainty":"ACTIVATION's separate incomplete value is referenced but not defined here."
+    },
+    {
+      "applies_to_keys":["typed_composition"],
+      "conditions":["When two traversals are composed."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1022,
+          "quote":"Two traversals compose only when the first result type and judgment\nsatisfy the second traversal's exact domain and preconditions (P4a):",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds%2FAC-016%20Typed%20composition",
+          "start_line":1010
+        },
+        {
+          "end_line":1022,
+          "quote":"Composition retains both traversal identities, intermediate results,\njudgments, evidence, authority, provenance and stop states. It cannot\nflatten probabilistic proposal, deterministic evaluation and human\ndecision into one undifferentiated operation.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds%2FAC-016%20Typed%20composition",
+          "start_line":1017
+        }
+      ],
+      "key":"composition_admissibility_and_conservation",
+      "statement":"Composition is possible only if the first result type and judgment satisfy the second exact domain and preconditions. Preserve both identities, intermediate results, judgments, evidence, authority, provenance and stop states; probabilistic proposal, deterministic evaluation and human decision cannot be flattened. No universal F_P -> F_D -> F_H sequence is prescribed. FOUNDATIONS §3 P4a consumes this law.",
+      "uncertainty":"The consuming P4a clause is not supplied."
+    },
+    {
+      "applies_to_keys":["functor_application"],
+      "conditions":["If a model claims categorical functor laws."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":994,
+          "quote":"\"Functor kind\" is an `a_c` term for this traversal classification. It does\nnot by itself assert a category-theoretic functor. A model that claims\ncategorical functor laws carries the demonstration that\n[FOUNDATIONS §4](FOUNDATIONS.md#4-algebra), Formal fragment, requires of\nevery categorical claim (P6, P1).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds",
+          "start_line":990
+        }
+      ],
+      "key":"categorical_claim_demonstration",
+      "statement":"Functor-kind classification alone makes no category-theoretic assertion. A categorical claim carries the required Formal fragment demonstration; the supplied conformance discriminator further requires objects, arrows, arrow equality, identity, composition and demonstrated functor laws before such a claim.",
+      "uncertainty":"FOUNDATIONS' full formal requirements are not supplied."
+    },
+    {
+      "applies_to_keys":["subject_interpretation","model_assessment"],
+      "conditions":["For an exact-subject interpretation contract."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1049,
+          "quote":"- the exact `a_c` basis;\n- the exact subject identity, inventory, and bytes or semantic addresses;\n- the selected signature and any compatible extension relation;\n- the mapping from subject declarations to every applicable model record\n  population, including objects, relations, constraints, latitude,\n  residuals, traversals, transformations and judgments;\n- the interpreter identity, capability, provenance and stop states;\n- the structural evaluation contract;\n- the semantic selection and acceptance authority; and\n- the source re-entry and invalidation rules.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models",
+          "start_line":1040
+        },
+        {
+          "end_line":1056,
+          "quote":"The proposed model `M_subject*` does not become accepted through\nconstruction. Structural evaluation can prove closed shape, reference\ntyping, identity derivation and basis coherence. It cannot prove that\nprobabilistic semantic selection retained every material subject meaning.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models",
+          "start_line":1051
+        }
+      ],
+      "key":"interpretation_contract_and_acceptance_separation",
+      "statement":"The contract makes FOUNDATIONS §2 Interpretation exact for one subject and signature and declares every listed coordinate: exact calculus basis; subject identity, inventory and bytes or semantic addresses; signature and compatible extension; mapping to every applicable record population, including the eight named populations; interpreter identity, capability, provenance and stops; structural evaluation; semantic selection and acceptance authority; source re-entry and invalidation. Construction grants no acceptance. Structural proof of shape, references, identity or basis does not establish retention of every material meaning; semantic acceptance remains separate.",
+      "uncertainty":"The cited FOUNDATIONS definition and full source-defined record schemas are absent."
+    },
+    {
+      "applies_to_keys":["subject_interpretation"],
+      "conditions":["For every admitted model record and every evaluated subject declaration."],
+      "exceptions":["A record may be explicitly model-local under competent authority instead of mapping to exact subject provenance."],
+      "grounding":[
+        {
+          "end_line":1064,
+          "quote":"Every admitted model record maps to exact subject provenance or is\nexplicitly identified as model-local content under competent authority.\nEvery evaluated subject declaration has a retained, omitted, residual,\ninapplicable or refused disposition. Interpretation cannot treat absence\nas immateriality without a recorded basis and authority (P1, P4b, P6).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models%2FAC-017%20Interpretation%20fidelity",
+          "start_line":1060
+        }
+      ],
+      "key":"interpretation_fidelity_accounting",
+      "statement":"Admitted records require exact subject provenance or the stated model-local exception. Every evaluated declaration receives retained, omitted, residual, inapplicable or refused disposition. Absence cannot be treated as immaterial without recorded basis and authority.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["model_assessment"],
+      "conditions":["For every review, as owned by EVALUATION §2 and bound here to a_c."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1075,
+          "quote":"The separation of structural conformance from semantic fidelity, and the\nrule that structural success is evidence for semantic review and no\nsubstitute for it, are [EVALUATION §2](EVALUATION.md#2-separation)'s,\nwhich owns them for every review.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models%2FAC-018%20Structural%20and%20semantic%20separation",
+          "start_line":1068
+        }
+      ],
+      "key":"structural_success_is_review_evidence",
+      "statement":"Keep structural conformance separate from semantic fidelity. Structural success supports semantic review but cannot substitute for it; the owning rule remains EVALUATION's.",
+      "uncertainty":"EVALUATION's wider review protocol is unavailable in these sections."
+    },
+    {
+      "applies_to_keys":["valid_model_claim"],
+      "conditions":["When claiming M_b satisfies a_c[Sigma]."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1095,
+          "quote":"1. `Sigma` and the exact `a_c` basis resolve;\n2. every record satisfies AC-001 through AC-009;\n3. every claimed closure, projection, overlay, transformation, judgment\n   and composition satisfies its applicable law;\n4. interpretation fidelity and residual dispositions bind the exact\n   subject;\n5. structural evaluation and semantic acceptance remain distinct and both\n   required where claimed; and\n6. all evidence, provenance, invalidation and re-entry coordinates\n   resolve.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models%2FAC-019%20Valid%20model",
+          "start_line":1082
+        }
+      ],
+      "key":"valid_model_prerequisites",
+      "statement":"Validity requires resolving Sigma and exact calculus basis; every record satisfying AC-001–AC-009; every claimed closure, projection, overlay, transformation, judgment and composition satisfying its applicable law; fidelity and residual dispositions binding the exact subject; distinct structural evaluation and semantic acceptance, both required where claimed; and resolution of every evidence, provenance, invalidation and re-entry coordinate. A checker may decide the structural subset. A generic checker cannot claim the semantic or authority subset unless the model supplies an exact lawful decision contract.",
+      "uncertainty":"Several required laws and the decision-contract details are outside the supplied source."
+    },
+    {
+      "applies_to_keys":["interpreted_subject_layer","encoded_carrier_layer"],
+      "conditions":["When encoding a model or combining semantic-acceptance and carrier-admission results."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1129,
+          "quote":"Encoding requires `J_X.decision = accepted` and exact equality between the\njudgment subject identity and digest and `M_X`; hold or refusal cannot be\nencoded.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F7.%20Layers",
+          "start_line":1118
+        },
+        {
+          "end_line":1129,
+          "quote":"`accepted` and\n`admitted` map to satisfied, a hold maps as AC-007's `hold`, and `refuse`\nis a `refusal` that takes its core value under AC-007 by its cause",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F7.%20Layers",
+          "start_line":1124
+        }
+      ],
+      "key":"encoding_acceptance_and_result_mapping",
+      "statement":"Encoding requires an accepted J_X whose subject identity and digest exactly equal unchanged M_X; hold and refusal cannot be encoded. Acceptance and admission answer distinct predicates, do not alter subject identity, and combine with other results only through core mappings: accepted/admitted -> satisfied; hold -> AC-007 hold; refuse -> cause-dependent AC-007 refusal. Withheld or refused judgments never count as accepted.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["pure_calculus","interpreted_subject_layer","encoded_carrier_layer"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1147,
+          "quote":"`a_c`, `a_c.X` and `a_c.X.C` have independent content identities,\njudgments, supersession relations and proof obligations (P3, P6):",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F7.%20Layers%2FAC-020%20Layer%20and%20release%20separation",
+          "start_line":1133
+        },
+        {
+          "end_line":1147,
+          "quote":"An encoding failure does not change `a_c.X`. An interpretation failure\ndoes not change `a_c`. A downstream success cannot ratify an upstream\nlayer or basis. None of these layers is automatically an independently\nreleased Product.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F7.%20Layers%2FAC-020%20Layer%20and%20release%20separation",
+          "start_line":1142
+        }
+      ],
+      "key":"layer_proof_and_release_independence",
+      "statement":"The three layers retain independent content identities, judgments, supersession and proof obligations. Calculus qualification tests internal coherence against its complete declared laws; interpretation proves fidelity to exact X; carrier qualification proves faithful canonical encoding of the accepted model. Encoding failure does not change the interpreted model, interpretation failure does not change the calculus, and downstream success cannot ratify upstream basis or layer. Product status belongs to an external authority selecting and releasing the layer, never follows automatically. SPEC_METHOD §6 applies this law to release lineage.",
+      "uncertainty":"SPEC_METHOD's release-lineage application is not supplied."
+    },
+    {
+      "applies_to_keys":["calculus_basis_record"],
+      "conditions":["For the source-defined AxiomaticCalculusBasis record."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1173,
+          "quote":"  kind: \"stdo.axiomatic-calculus-basis\",\n  schema_version: 1,\n  concept_identity: \"urn:stdo:concept:axiomatic-calculus:a-c\",",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F8.%20Calculus%20identity",
+          "start_line":1159
+        },
+        {
+          "end_line":1183,
+          "quote":"The record uses RFC 8785 JSON Canonicalization Scheme bytes. Duplicate\nobject names are rejected before canonicalisation.\n`derivation_basis.principle_refs` is duplicate-free and sorted by\nascending unsigned UTF-16 code units.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F8.%20Calculus%20identity",
+          "start_line":1176
+        }
+      ],
+      "key":"calculus_basis_grammar_and_identity",
+      "statement":"The record has kind stdo.axiomatic-calculus-basis, schema_version 1 and concept_identity urn:stdo:concept:axiomatic-calculus:a-c. derivation_basis contains an absolute immutable package release_uri, manifest_sha256 and nonempty absolute semantic-address principle_refs. publication_basis contains the same release_uri, manifest_sha256, absolute member_uri within that release and member_sha256. Each digest field is 'sha256:' plus 64 lowercase hexadecimal characters. Reject duplicate object names before RFC 8785 JCS canonicalisation; principle_refs is duplicate-free and sorted ascending by unsigned UTF-16 code units. Identity is urn:stdo:axiomatic-calculus-basis:sha256: followed by sha256(JCS(AxiomaticCalculusBasis)).",
+      "uncertainty":"No basis record is constructed or its identity calculated here."
+    },
+    {
+      "applies_to_keys":["calculus_basis_record"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1202,
+          "quote":"A principle reference outside the bound package, a\nmissing or ambiguous clause, an extra undeclared premise reference, or a\nmanifest or member digest mismatch invalidates the record (P3, P6).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F8.%20Calculus%20identity",
+          "start_line":1200
+        },
+        {
+          "end_line":1211,
+          "quote":"The identity record is external to the member bytes and to the manifest\nmember set whose digest it names. It is issued only after that set and its\nmanifest are frozen",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F8.%20Calculus%20identity",
+          "start_line":1204
+        }
+      ],
+      "key":"calculus_basis_exactness_and_acyclic_issuance",
+      "statement":"derivation_basis binds the complete finite governing-clause set identified by §1 Derivation provenance; recompute it when clauses change, never infer it from a hard-coded member count. Every reference resolves within publication_basis's exact package, with equal release_uri and manifest_sha256 across both roles; co-publication does not transfer premise ownership. publication_basis binds exact member bytes at a member_uri within its release. Every release_uri has immutable stdo://releases/v<version>-rc.<positive-ordinal>/ form. Acceptance is a verdict over that cut, not another identity; record presence grants no acceptance or release status. Outside-package references, missing/ambiguous clauses, extra undeclared premises and digest mismatches invalidate the record. Issue only after frozen member set and manifest; keep the record outside both hashed member set and member bytes. It may accompany them as external metadata, but neither member nor manifest embeds its identity or final bytes. The record hashes already-fixed coordinates without reverse dependency.",
+      "uncertainty":"The actual §1 premise inventory and RELEASE issuance/acceptance rules are not supplied."
+    },
+    {
+      "applies_to_keys":["interpreted_subject_layer","encoded_carrier_layer","calculus_basis_record"],
+      "conditions":["For downstream identities and dependencies on a released calculus."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1221,
+          "quote":"id(a_c.X) binds\n  exact id(a_c)\n  + exact subject basis id(X)\n  + exact interpretation contract\n  + selected model content identity\n  + semantic-selection ledger identity and digest",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F8.%20Calculus%20identity",
+          "start_line":1216
+        },
+        {
+          "end_line":1237,
+          "quote":"id(a_c.X.C) binds\n  exact id(a_c.X)\n  + exact carrier Product or cut\n  + exact encoding profile\n  + canonical carrier content identity",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F8.%20Calculus%20identity",
+          "start_line":1233
+        },
+        {
+          "end_line":1259,
+          "quote":"A dependency on a released calculus binds that record's identity,\nrelease, manifest digest and member digest. A mutable authoring copy or an\nunissued record is never substituted for that exact basis (P3, P6).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F8.%20Calculus%20identity",
+          "start_line":1257
+        }
+      ],
+      "key":"downstream_content_identity_bindings",
+      "statement":"Interpreted identity binds at least exact calculus identity, subject basis identity, interpretation contract, selected model content identity and semantic-selection ledger identity/digest. Carrier identity binds at least exact interpreted identity, carrier Product or cut, encoding profile and canonical carrier content identity. Semantic acceptance points to unchanged interpreted identity/digest and stays external to both identities; encoding mechanically verifies that match and retains acceptance as evidence. Admission points to unchanged carrier identity/digest; admitted encoding is the external triple (a_c.X.C, J_X, D_C). Product acceptance/release likewise point to content-first identities. The owning Product defines downstream canonical grammar and issuance authority but cannot omit upstream identities or replace them with mutable locators. Publication binding is issued under RELEASE and AC-020 after exact package bytes exist, tying this member and §1 governing clauses to the same package. Released-calculus dependencies bind the issued record's identity, release, manifest and member digests; mutable authoring copies and unissued records cannot substitute.",
+      "uncertainty":"Downstream canonical grammars and issuance authorities are intentionally delegated and not specified here."
+    },
+    {
+      "applies_to_keys":["pure_calculus","interpreted_subject_layer","encoded_carrier_layer"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1270,
+          "quote":"This member defines the generic relations `a_c.X` and `a_c.X.C`. It\nselects, constructs, accepts or releases no concrete interpretation or\ncarrier. A downstream authority owns its exact subject population,\ninterpretation, carrier, judgments and Product or release status. The\ndownstream identity is never embedded back into the calculus or its\npublication basis (P2, P6).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FApplication%20boundary",
+          "start_line":1265
+        }
+      ],
+      "key":"generic_application_boundary",
+      "statement":"The member defines generic interpretation and carrier relations without selecting, constructing, accepting or releasing concrete instances. Downstream authority owns exact subject population, interpretation, carrier, judgments and Product/release status. Downstream identity is never embedded back in the calculus or publication basis.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["constraint_surface"],
+      "conditions":["For a task projection from an interpreted subject."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1307,
+          "quote":"The task's declared subject and work boundary\nare the seed set `Z`, with the dependency relation family `R` the task\ndeclares, and the surface is `project(M_subject, Z, R)` (AC-011) over the\nmaterial closure of AC-010.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FConstraint%20surfaces",
+          "start_line":1292
+        }
+      ],
+      "key":"surface_projection_contents",
+      "statement":"Use task subject/work boundary as seed Z and its declared dependency family R: project(M_subject,Z,R) under AC-011 over AC-010 material closure. Surface objects/meanings come from M_Z semantic objects with AC-002 identity and AC-017 provenance; predicates/dependencies from constraints and typed relations under AC-007/AC-004, sharing one premise record across several constraints without imposing tree shape or execution order; operations from closure traversals/transformations with preconditions and operation authority; results from constraint judgment kinds/outcomes mapped under AC-007; freedom from AC-008 latitude; authority retained per record under AC-005, with none granted by the surface; evidence from judgments and evidence/provenance/basis under AC-014/AC-006; unresolved conditions from AC-009 residuals and AC-011 Boundary_Z seams.",
+      "uncertainty":"Full closure, projection, transformation and record laws referenced by the construction are absent."
+    },
+    {
+      "applies_to_keys":["constraint_surface"],
+      "conditions":["Whenever a constraint surface is used."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1326,
+          "quote":"A missing premise or an omitted\n   obligation never becomes permission or a satisfied result (AC-007,\n   AC-009).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FConstraint%20surfaces",
+          "start_line":1324
+        },
+        {
+          "end_line":1334,
+          "quote":"It\n   supplies no observation, effect grant or task context",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FConstraint%20surfaces",
+          "start_line":1328
+        }
+      ],
+      "key":"surface_standing_dependencies_and_acquisition",
+      "statement":"Preserve each element's recorded standing as premise, derived consequence, policy choice, observation or unresolved claim; retain policy ownership and never turn preference into obligation. Construction/assurance elements keep their recorded kind among FOUNDATIONS' five support kinds: formula is not discharge, and externally assessed predicates retain establishing source, scope and evidence. A residual, hold, gap or unestablished external predicate retains source and required acquisition and blocks every dependent operation/result until its premise is established. Missing premises and omitted obligations grant neither permission nor satisfaction. A surface carries constraints and acquisition routes, not observations, effect grants or task context; ACTIVATION §2 acquisition obtains those from workspace and selected authoritative inputs, and workspace remains the reacquisition basis.",
+      "uncertainty":"The five support-kind definitions and detailed acquisition protocol are not supplied."
+    },
+    {
+      "applies_to_keys":["constraint_surface"],
+      "conditions":["For source/basis binding, derived fidelity, qualification and ordinary entry."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1352,
+          "quote":"A projection from an\n   interpretation bound to other subject bytes, or whose basis is not\n   established, returns `refusal(basis)`, which is `invalid_basis`",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FConstraint%20surfaces",
+          "start_line":1337
+        },
+        {
+          "end_line":1359,
+          "quote":"Ordinary entry\nselects the current exact interpretation with its limits, and an earlier\ninterpretation is identified as historical.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FConstraint%20surfaces",
+          "start_line":1357
+        }
+      ],
+      "key":"surface_exactness_fidelity_and_claim_limits",
+      "statement":"Bind exact represented subject separately from calculus basis/signature. Different subject bytes or unestablished basis yield refusal(basis)=invalid_basis. The surface is a derived view of owning prose, not another owner; changing permitted/required work is a fidelity defect repaired at the causal source or derivation. Approximation declares adequacy relation and end-to-end bound. Structural validity may be checked mechanically, fidelity needs semantic judgment, and task sufficiency is shown only through actual use. Mechanical projection requires a separately selected checking contract; none of those claims grants operation or acceptance authority. This section itself selects, constructs and accepts no interpretation. Downstream authority owns the interpretation and its currency; ordinary entry selects the current exact interpretation with limits, marking earlier ones historical.",
+      "uncertainty":"Detailed checking, adequacy and task-qualification contracts are delegated to absent owners."
+    },
+    {
+      "applies_to_keys":["pure_calculus"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1379,
+          "quote":"`a_c` is not (P2):\n\n- a representation or compression of its derivation source;\n- a selected semantic model of any subject;\n- a carrier profile or carrier instance;\n- an executable language, interpreter, compiler implementation or\n  runtime;\n- a deterministic semantic assessor or theorem prover;\n- a required storage topology of any shape;\n- an ontology of any domain;\n- an authority registry; or\n- a claim that all governed systems share one vocabulary or relation set.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FExclusions",
+          "start_line":1368
+        }
+      ],
+      "key":"calculus_excluded_roles",
+      "statement":"a_c is none of: representation/compression of its derivation source; selected subject semantic model; carrier profile/instance; executable language, interpreter, compiler implementation or runtime; deterministic semantic assessor/theorem prover; required storage topology; domain ontology; authority registry; or assertion of a universal vocabulary/relation set across governed systems.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["calculus_qualification"],
+      "conditions":["For review and qualification of the calculus member."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1406,
+          "quote":"No example, checker, model or carrier can qualify a law outside the exact\nclaim it evaluates (P6; EVALUATION §1).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F10.%20Conformance%20obligations",
+          "start_line":1405
+        },
+        {
+          "end_line":1403,
+          "quote":"10. one neutral toy model demonstrating that the calculus has no hidden\n    derivation-source record, application-profile or carrier dependency.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F10.%20Conformance%20obligations",
+          "start_line":1402
+        }
+      ],
+      "key":"calculus_minimum_qualification_coverage",
+      "statement":"Cover at least: closed signature, RecordKind_ac, populations, fields, value/reference domains; well-typed positive/refusal examples for every fundamental law; identity uniqueness and cross-context collisions; closure/projection/overlay/transformation/composition, including exact model identities, population partitions, basis equality and byte-or-typed-equality preservation refusal; strict operation/kind/actor/judgment separation; residual/authority conservation through interpretation/encoding; exact calculus-basis reconstruction; direct-coordinate, cross-family, wrong-family, duplicate-family and dangling-reference refusal cases for every fundamental record family; derivation/publication reconstruction with cyclic and same-carrier counterexamples; and one neutral toy model exposing no hidden derivation-source-record, application-profile or carrier dependency. No example, checker, model or carrier qualifies a law beyond its exact evaluated claim.",
+      "uncertainty":"The referenced full signatures, record families and other laws are not supplied."
+    },
+    {
+      "applies_to_keys":["conformance_catalogue","conformance_result_domains"],
+      "conditions":["For case execution, assessment and pass claims."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":22,
+          "quote":"A run is not a pass; only an assessment\nagainst the declared predicate establishes one. The presence of a case or\ncoverage map is no execution or qualification evidence (P6).\n\nA case passes when the expected distinction is observed and no coerced\nsuccess appears anywhere in the result",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE",
+          "start_line":11
+        }
+      ],
+      "key":"case_execution_and_pass_boundary",
+      "statement":"A run alone is not a pass. Assessment against the declared predicate must observe the expected distinction without coerced success anywhere, returning satisfied for a pass. A case that cannot run with its declared subject is a planned evaluation not performed: it has no result and is explicitly recorded not run. Catalogue or coverage-map presence proves no execution or qualification. Core values and refinements retain their imported owners and mappings.",
+      "uncertainty":"No run, assessment or pass is asserted by this interpretation."
+    },
+    {
+      "applies_to_keys":["counterexample_cases"],
+      "conditions":["For the respective C-01–C-06 situations."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":45,
+          "quote":"| C-01 No cost term | an activation whose governed question is capability fit, run without an allowance | ACTIVATION §6 | the activation refuses or records the missing allowance; the return reports spend or unavailability |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F1.%20Counterexample%20cases",
+          "start_line":40
+        }
+      ],
+      "key":"counterexamples_cost_status_restart_and_acquisition",
+      "statement":"C-01: capability-fit activation without allowance refuses or records missing allowance and reports spend/unavailability (ACTIVATION §6). C-02: for 40 rows labelled proven with literal PENDING fields, inspect underlying data and return falsified for rows, not satisfied for labels (EVALUATION §§2,4). C-03: eight from-scratch restarts repeating a method-stance defect require the restart proposal to explain why retained-work repair is insufficient; locate the defect at its owner and reprice it instead of rerunning (ACTIVATION §5). C-04: repeated unchanged-basis derivation at handoff requires counting per-handoff reads/derivations and replacing repetition with applicable reuse (ACTIVATION §7; FOUNDATIONS §4). C-05: parsing a 504.8 MB manifest for 182 entries requires declared exact-identity selective acquisition and counted transferred context without trimming required members (ACTIVATION §2). C-06: distinguish a 2.4 GB report's volume from model traffic in cost records (ACTIVATION §6).",
+      "uncertainty":"The named local mechanisms are references; their full rules are not supplied."
+    },
+    {
+      "applies_to_keys":["counterexample_cases"],
+      "conditions":["For the respective C-07–C-12 situations."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":51,
+          "quote":"| C-07 Operational variable missed at intake | a provider permission profile that changed before activation | ACTIVATION §1 | the intake names operational variables; a change returns invalid_basis before effects |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F1.%20Counterexample%20cases",
+          "start_line":46
+        }
+      ],
+      "key":"counterexamples_authority_outcome_triage_and_closure",
+      "statement":"C-07: intake names operational variables; changed provider permission profile returns invalid_basis before effects (ACTIVATION §1). C-08: engine completeness amid Product-outcome regression is judged only against the selected outcome, which evidence surfaces cannot enlarge (SPEC_METHOD §3). C-09: a kernel deciding the worker's question requires declared boundary and re_enter at the owning misallocated relation (ODD §5; FOUNDATIONS §2 Work boundary). C-10: a fixture simplified around a kernel defect requires owner triage before repair, framework correction and fixture restoration (SPEC_METHOD §4). C-11: reviewer sign-off cannot close work whose stated condition is unmet; closure follows that condition and reviewer result is input only (EVALUATION §5). C-12: ticket/column/filename-only findings are judged by ambiguity removed, with carrier findings costed as churn (ACTIVATION §6).",
+      "uncertainty":"The named local mechanisms are references; their full rules are not supplied."
+    },
+    {
+      "applies_to_keys":["construction_trials"],
+      "conditions":["For each applicable construction trial, with declarations before every run."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":64,
+          "quote":"| T-04 Failure and missing assessment | one observed failure plus one required obligation with no assessment | both states survive; the composite cannot report success or erase the unassessed obligation |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F2.%20Construction%20trials",
+          "start_line":60
+        },
+        {
+          "end_line":72,
+          "quote":"Trials declare a per-actor context cap, the fit of\n[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope),\nand a total-work budget, a resource limit under\n[ACTIVATION §6 Resource limits](ACTIVATION.md#resource-limits), before each\nrun, include a required basis larger than the cap, count transferred context\nacross every delegated actor, keep acceptance criteria independent of the\nconstructing actor, and repeat probabilistic trials with varied task order.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F2.%20Construction%20trials",
+          "start_line":66
+        }
+      ],
+      "key":"construction_trial_expectations_and_protocol",
+      "statement":"T-01: basis exceeding one actor cap, tighter repeats and a coupled cannot-fit case preserve the outer contract through independently assessed refinement; cannot-fit yields out_of_frame or lawful escalation, never omission. T-02: sufficient but ambiguous small-feature intent has ambiguity resolved or explicit and meets independently owned acceptance. T-03: joining two valid bounded results preserves all inputs, constraints, judgments and evidence and refuses an incompatible producing-step composition boundary. T-04: observed failure and required unassessed obligation both survive without composite success. T-05: pause/context-clear/new actor recovers valid progress/basis and detects unsupported completion and needless restarts. T-06: revised requirement reopens affected claims and reuses unaffected results with explicit dependencies. T-07: structurally passing but behaviourally defective candidate is detected or evidential limits reported; structural green is not acceptance. T-08: sourced decision analysis with uncertainty/staleness keeps facts, assumptions, judgments and authority distinct and is independently assessable. Before every run declare per-actor cap/fit and total-work resource budget; include required basis larger than cap, count context across every delegate, keep acceptance independent of constructor and vary task order in probabilistic repeats.",
+      "uncertainty":"ACTIVATION's fit and resource-limit definitions are referenced but not supplied."
+    },
+    {
+      "applies_to_keys":["recoverability_cases"],
+      "conditions":["For R-01 and R-02; comparative obligations apply when an improvement is claimed."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":79,
+          "quote":"| R-01 Fresh-context activation | a fresh actor given only this corpus performs a bounded activation on a declared subject; a comparative claim also selects an exact comparable baseline and runs the same task under matched acquisition conditions | the governing relations are recovered with fidelity judged independently; reconstruction cost, task completion and material errors are recorded; a comparative improvement claim has supporting matched evidence and any adverse difference is explained |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F3.%20Recoverability",
+          "start_line":78
+        }
+      ],
+      "key":"recoverability_and_comparison_evidence",
+      "statement":"R-01 gives a fresh actor only the corpus for bounded activation on a declared subject; governing-relation recovery has independently judged fidelity and records reconstruction cost, task completion and material errors. Comparative claims select an exact comparable baseline, run the same task under matched acquisition conditions, supply matched supporting evidence and explain adverse differences. R-02 repeats without validator folklore, author memory or whole-corpus loading and must succeed or truthfully return out_of_frame.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["method_use_assurance_cases"],
+      "conditions":["For discriminators 32, 33, 38, 42 and 43 and their CD-01–CD-03 actual-use cases."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":101,
+          "quote":"Each needs actual use, a fresh constructor applying this\ncorpus to a declared subject with the result assessed, in addition to the\nlogical review of §5.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F4.%20Cases%20for%20method%20discriminators",
+          "start_line":87
+        },
+        {
+          "end_line":97,
+          "quote":"the summary never overrules the workspace, discarding the prior context erases nothing in it, and a missing record of the effect leaves it completion_unknown, never absent",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F4.%20Cases%20for%20method%20discriminators",
+          "start_line":97
+        }
+      ],
+      "key":"construction_discriminator_actual_use",
+      "statement":"These distinctions require fresh-constructor actual use on a declared subject with assessment in addition to textual logical review. CD-01 (32,33; ACTIVATION §1 Configuration, §3 Effects, §5; EXECUTIVE_BASELINE §16): peer actors without central coordinator or familiar responsibility names, alongside an installed release Executive, are judged by task, dependencies, limits, authority and assurance; labels/topology neither accept nor reject, and installed configuration retains its own scope. A handoff of uncertain external effect preserves outstanding obligations/dependent results, resolves completion before next dependent action and retains admitted authority/required independence; self-organisation provides no exemption. CD-02 (42,43; SPEC_METHOD §11 rules 1,2,4; EVALUATION §3): software and mixed human/software realisations of the same requirements each provide computational calculus, execution binding and evidence, judged by requirements rather than executor kind. A faster plan merging required independent assessments or automating a required human decision is falsified for each weakened obligation; output equality, cost and speed do not discharge losses. CD-03 (38; ACTIVATION §5 workspace/account, §3 Effects and Construction availability, §7): fresh actor reconciles stale summary with current subject/authoritative inputs, corrects account, retains applicable work and continues within grant; the out-of-grant disagreement stops with re_entry_requested(authority). Summary cannot override workspace; clearing context erases no workspace; missing effect record leaves completion_unknown, not absent.",
+      "uncertainty":"Referenced operational owners are not supplied; the cases describe expected behaviour, not an executed workflow."
+    },
+    {
+      "applies_to_keys":["method_use_assurance_cases"],
+      "conditions":["For each applicable positive, negative and unresolved assurance case."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":110,
+          "quote":"The assurance relations require the candidate to demonstrate here the\napplicable positive, negative and unresolved cases of a weak assertion, an\ninsufficient observation, shared error, and change selection that retains\nvalid evidence or invalidates affected evidence",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F4.%20Cases%20for%20method%20discriminators",
+          "start_line":103
+        },
+        {
+          "end_line":117,
+          "quote":"a changed hash alone decides nothing",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F4.%20Cases%20for%20method%20discriminators",
+          "start_line":117
+        }
+      ],
+      "key":"assurance_relation_case_expectations",
+      "statement":"Each applicable AR case requires its own exact execution and assessment record, with no catalogue-implied run/result. AR-01: each actual-use expectation set includes a necessary condition a wrong decision can satisfy; satisfied establishes only that condition, supplies no correct-frame-use claim and is excluded from benefit attribution, while falsified remains a failed run condition (FOUNDATIONS §4 Assertions and observation). AR-02: each set records two admissible returns, one correct, one incorrect, indistinguishable at the observation; grade indeterminate with that reason, never satisfied/falsified. A return matching neither is listed for diagnosis because item or return may be at fault. AR-03: expectation writer, actors and grader from one model family, with writer/actors reading shared owners, do not create independent evidence by agreement. Diagnose disagreement among ACTIVATION §1's four causes, including expectation error; assume no statistical independence from families/codebases; name donors/common dependencies of ported material (FOUNDATIONS §4 Parallel derivation). AR-04: for two changed and nine added owning sections, dependent curated frames, hashed expectation sets, interpretation and conservation readings whose validity dependencies meet impact cover are reassessed or invalidated until rebuilt; frames regenerate/tests rerun, and interpretation lacking added-section coverage stays invalidated. An expectation set with unchanged deciding sentences may remain with validity conditions stated; hash change alone decides nothing (FOUNDATIONS §4 Change impact, S_Δ and retain_applicable; ACTIVATION §7).",
+      "uncertainty":"The four diagnostic causes and full formal assurance relations are not supplied."
+    },
+    {
+      "applies_to_keys":["discriminator_coverage"],
+      "conditions":["For each applicable coverage row, read against material member and consumer scope."],
+      "exceptions":["Interpretation and optional-profile cases apply only when that surface or claim is selected; mere availability creates no implementation obligation."],
+      "grounding":[
+        {
+          "end_line":137,
+          "quote":"Each applicable row is\nread against the material member and consumer scope; an actual-use case\nadds observed evidence and does not replace that reading. Required frame\nresults carry the core result algebra or its mapped refinement. Cases\nabout an interpretation or optional profile apply when that surface or\nclaim is selected; availability alone creates no implementation obligation.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Discriminator%20coverage",
+          "start_line":132
+        },
+        {
+          "end_line":212,
+          "quote":"A coverage mapping states which cases can exercise a distinction. It is\nnot a claim that those cases ran or passed. A selected case without a\ncurrent assessment remains a planned evaluation without a closed result",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Discriminator%20coverage",
+          "start_line":209
+        }
+      ],
+      "key":"coverage_review_and_applicability_protocol",
+      "statement":"Logical review constructs each situation against the text and finds the expected distinction, a counterexample or contradiction without running anything; its reviewer must meet EVALUATION §3 and result follows §4. Mechanical/structural checking does not establish this review, which supplies no actual-use evidence. Actual use adds evidence without replacing applicable textual reading. Required frame results carry core algebra or mapped refinement. Mapping denotes possible exercise, not execution/pass; a selected case without current assessment remains planned with no closed result.",
+      "uncertainty":"Reviewer eligibility and review-result contracts are outside this source."
+    },
+    {
+      "applies_to_keys":["discriminator_coverage"],
+      "conditions":["For coverage discriminators 1–10; L-n is the corresponding logical-review check."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":150,
+          "quote":"A blank field, generic referral, coarser grouping or whole-member preamble cannot supply a missing relation.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Discriminator%20coverage",
+          "start_line":142
+        }
+      ],
+      "key":"discriminators_derivation_shared_ownership_and_reduction",
+      "statement":"1: show every claimed derivation's premises and argue independence rather than assume it (FOUNDATIONS §§1,3; EVALUATION §1; L-1 premises shown). 2: family arguments cover material inherited/edited rules and actual declared-family consumers or support no separate consumer; blank/generic/coarser/preamble substitutes cannot supply missing relations (FOUNDATIONS §3 tables/family index; every member family table). 3: a new introduction plus unchanged rival consumer rules is only correspondence; deciding consumers must use shared determination or justified refinement (FOUNDATIONS §§2,3; ACTIVATION §§1–7; EVALUATION §§3,5). 4: shorter text is no reduction witness; comparative claims compare actual deciding paths/acquisition with exact comparable baseline (FOUNDATIONS §3; README; shared owners). 5: shared-law use must preserve outcomes and necessary domain exception ownership; no universal reduction percentage/word decrease is needed (FOUNDATIONS §4 refinements, §2 imports; refining members). 6: outcome-driven contracts govern construction, evaluation, continuation, recovery and termination with independent cases and justified extra policies, without requiring optional typed-graph adoption (ACTIVATION §§1,4,5; ODD §1). 7: one successor law may conserve multiple predecessor claims without old partitions, but each material obligation/consumer binding is evaluated and bare links cannot replace meaning (RELEASE §9; work-carrier dispositions). 8: size reduction cannot erase material exceptions: valid disposition preserves required behaviour or obtains owning removal decision (same owners). 9: shared-law replacement retains material trigger, modal force, adoption conditions and exceptions, with noncircular owner/domain determination (FOUNDATIONS §2; referring members). 10: generic rules remain obtainable without optional-profile adoption; profile additions retain selection boundary (FOUNDATIONS §3; PROFILES §1; IDENTITY §2; ACTIVATION §1).",
+      "uncertainty":"Most deciding owner clauses are referenced only; this preserves catalogue expectations, not independently reconstructed owner laws."
+    },
+    {
+      "applies_to_keys":["discriminator_coverage"],
+      "conditions":["For coverage discriminators 11–20; each uses its matching L-n check."],
+      "exceptions":["For discriminator 18, an authorised successor relation may establish changed permitted work."],
+      "grounding":[
+        {
+          "end_line":160,
+          "quote":"The changed permitted work is a fidelity defect unless an authorised successor relation establishes the change. Matching digests or valid schema do not repair it.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Discriminator%20coverage",
+          "start_line":158
+        }
+      ],
+      "key":"discriminators_boundaries_fidelity_and_current_entry",
+      "statement":"11: promoting a helper requires a material distinction/independent boundary; names and shared machinery create no semantic/authority owner (DESIGN_MODULE §4; ACTIVATION §6). 12: a small interface proves no Markov sufficiency/independence; state assumptions/evidence and leave unsupported claims unresolved (IDENTITY §2; WORLD_MODEL §4; FOUNDATIONS §5). 13: a schema-passing model omitting a condition fails fidelity for affected decisions and cannot authorise source-prohibited work (AXIOMATIC_CALCULUS §6, AC-017/018; EVALUATION §2). 14: a faithful fragment proves only covered scope; whole-method claims require every material owned determination/dependency (same owners). 15: assess projected frames against source fidelity/task sufficiency; different encoding alone is no defect, changed obligations/permissions are (AXIOMATIC_CALCULUS §9; ACTIVATION §2). 16: unresolved premises retain dependencies and applicable stop/acquisition/refinement, never unrestricted freedom or permission grants (AXIOMATIC_CALCULUS §9, AC-009; ACTIVATION §1). 17: permit alternative solutions satisfying contract; internal strategy stays with worker (AXIOMATIC_CALCULUS §9, AC-008). 18: changing not-required to prohibited or preference to obligation is a fidelity defect absent authorised successor change; digest/schema agreement cannot repair it (EVALUATION §7; AXIOMATIC_CALCULUS AC-008, §9). 19: ordinary entry binds current source, signature, program, maps, instructions and evidence boundary and reproduces its route; older artifacts stay historical. Stale-input refusal contains failure without proving usable current publication or coverage (PRODUCT_DEFINITION §11; ACTIVATION §2; README). 20: structural agreement between information/representation establishes neither identical meaning nor semantic fidelity (EVALUATION §§2,6; AC-017/018; L-20 structure is not meaning).",
+      "uncertainty":"Referenced ownership and selection details outside supplied sections remain unresolved."
+    },
+    {
+      "applies_to_keys":["discriminator_coverage"],
+      "conditions":["For coverage discriminators 21–30."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":170,
+          "quote":"Plan membership does not authenticate the returned judgement. The misbound result cannot satisfy the assessment obligation.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Discriminator%20coverage",
+          "start_line":164
+        }
+      ],
+      "key":"discriminators_identity_composition_attention_and_independence",
+      "statement":"21: stable identity with changed content requires separate consideration of current state and old observation applicability (FOUNDATIONS §2 Object; IDENTITY §2; RF-005; ACTIVATION §7; L-21). 22: producer/consumer domain or precondition incompatibility is explicit; same-shaped fields do not validate a join (FOUNDATIONS §4; AC-004/016; T-03 and L-22). 23: retain authenticated A failure/citations and unresolved uncovered B; authenticate each planned assessment judgment against producer, subject, basis and evidence. B is required coverage outside planned assessments, not an omitted planned judgment (FOUNDATIONS §4 conjunction; T-04 and L-23). 24: plan membership cannot authenticate a wrong-subject judgment or satisfy its obligation (FOUNDATIONS §4 second input; EVALUATION §2; RF-005; L-24). 25: interdependent context exceeding capacity requires lawful narrowing, capable handoff or truthful stop preserving obligations (ACTIVATION §2 step 3, §4; RF-014; T-01). 26: byte-fit alone proves no adequacy; retain material dependencies, exclude irrelevant material and assess actual frame use (ACTIVATION §2 steps 2/3; EVALUATION §7; RF-003/004; L-26 plus frame qualification). 27: changed frame/task or answer-supplying instructions require exact tested packet and independent expectations; report narrower evidence, since rewritten trials or matching pins prove no current sufficiency (EVALUATION §§7,3; L-27). 28: fresh context is not independent authorship/authority; ported contributions retain authorship and contributors cannot independently accept them, though independent reviewers may share relevant common sources (EVALUATION §3; ACTIVATION §1 reconfiguration; L-28). 29: excluded frontier work stays open, with next-decision dependencies retained (ACTIVATION §1; RF-015; L-29). 30: discovery can enlarge frontier while improving knowledge; counts alone prove no progress. Revised destination needs owner decision and cannot prove original attainment (ACTIVATION §§1,5; L-30).",
+      "uncertainty":"Referenced reference-frame and activation laws are not supplied in full."
+    },
+    {
+      "applies_to_keys":["discriminator_coverage"],
+      "conditions":["For coverage discriminators 31–40."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":180,
+          "quote":"harmless explanatory metadata leaves a closed result reusable after the consumer's exact applicability check",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Discriminator%20coverage",
+          "start_line":176
+        }
+      ],
+      "key":"discriminators_configuration_reuse_and_workspace",
+      "statement":"31: a directly authorised task fitting a sufficient frame permits direct activation subject to separately required assessment, with no fixed role inventory/actor sequence (ACTIVATION §1; L-31). 32: peer/no-Executive/unfamiliar-role configurations are judged by task, dependencies, limits, authority and assurance; labels/topology neither reject nor accept; adopted configurations keep scope (ACTIVATION §1; EXECUTIVE_BASELINE §16; CD-01). 33: redistribution preserves obligations/dependencies, resolves material effect uncertainty before dependent action and retains authority/independence, with no self-organisation exemption (ACTIVATION §§1,3,5; CD-01). 34: adequacy differs from optimality; optimality requires objectives, constraints, comparison scope and evidence, with different models/objectives possibly favouring different configurations (ACTIVATION §1; L-34). 35: compact results must not hide delivery blockers; coordinator retains longer-term outcome and acquires next-decision information through permitted frame inputs, never assumes missing information favourable (ACTIVATION §§1,7; L-35). 36: changed dependencies/new invalidating evidence trigger applicability/validity checks before reuse even with unchanged bytes; keep demonstrably independent supported work. A declaration-preserving frame revision's harmless metadata permits reuse after exact consumer applicability check; new evidence bearing on closure or discovered out-of-family activation reopens results and consuming coverage before reliance (ACTIVATION §§7,1; EVALUATION §2; REFERENCE_FRAME §10; T-06 and L-36). 37: relevant rules without material context/authority are insufficient; activated frame binds contract, subject, evidence, capability and permitted effects (REFERENCE_FRAME §11; ACTIVATION §§1,2; L-37). 38: reconcile fresh-actor summary against current authoritative workspace, retain applicable work and stay within grant; cleared context proves no uncertain effect absent (ACTIVATION §§5,3; CD-03). 39: partial-write recovery uses current workspace/applicable state without erasing progress or inventing completed assessment (ACTIVATION §5; FOUNDATIONS §4 Not performed; T-05 and L-39). 40: parse/map success remains mechanical until independently sufficient semantic and practical evidence exists (EVALUATION §§2,7; AC-018/019; T-07 and L-40).",
+      "uncertainty":"The cited operating protocols are retained as owner references, not executed or fully reconstructed."
+    },
+    {
+      "applies_to_keys":["discriminator_coverage"],
+      "conditions":["For coverage discriminators 41–52."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":192,
+          "quote":"Failure, undecidability, non-performance and unknown effect completion never map to a higher standing.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Discriminator%20coverage",
+          "start_line":187
+        },
+        {
+          "end_line":192,
+          "quote":"An exact step preserves meaning. An approximate step states its adequacy relation and an end-to-end bound.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Discriminator%20coverage",
+          "start_line":192
+        }
+      ],
+      "key":"discriminators_execution_results_ownership_and_formal_claims",
+      "statement":"41: proposed carrier/process law needs purpose/material justification or is unsupported overhead (ACTIVATION §6; SPEC_METHOD §4; TICKETS §5; L-41). 42: software, human and mixed tenants each supply calculus, execution binding and evidence; requirements decide fitness, executor kind does not. Preserve permitted adequate human processes using current records/direct observation without code or full event-history replay (SPEC_METHOD §11 rules 1,2,4; CD-02). 43: faster assessment-merging or human-decision automation fails conformance despite matching outputs/lower cost (SPEC_METHOD §11 rules 2,4; EVALUATION §3; CD-02). 44: each environment binding satisfies calculus laws; different stacks require no duplicate calculus, and actor identity decides neither operation kind nor authority (SPEC_METHOD §11 rules 2,5; L-44). 45: structural validation of a human-process model selects no automated executor and proves no execution fitness, which needs applicable evidence (SPEC_METHOD §11 rule 6; AC-018; L-45). 46: one locus owns a question; others refer or refine with mapping back, frame copies name owner, and precedence is no substitute (FOUNDATIONS §2 imports; PRODUCT_DEFINITION §11; L-46). 47: each owner-defined result maps declared predicate and meaning conditions to exactly one core value without raised standing; predicate/domain outcome travel with it. At 12:01, evidence of only three of five updates required by 12:00 is not_effected=falsified with two missing updates as counterexample and unknown ending as residual; lost response without counterexample is completion_unknown=indeterminate; neither repeats before reconciliation (FOUNDATIONS §4; ACTIVATION §3; result-defining members/profiles; L-47). 48: lifecycle/classification data remains distinct from admission/compliance/closure decisions; actual determination uses core contract, and data labels/core referrals cannot replace domain mappings (FOUNDATIONS §4; ACTIVATION §3; TICKETS §3; SPEC_METHOD §2; L-48). 49: compare required/permitted decisions on the same material case including modality, triggers, scope and exceptions; indicative grammar does not settle meaning. Superseded claims name replacement relation/owners and proposed replacements stay pending until accepted (RELEASE §9; work-carrier dispositions; L-49). 50: every result-returning frame carries core algebra or profile mapping (RF-012, §11; ACTIVATION §2; L-50). 51: categorical functor/join claims require objects, arrows, arrow equality, identity, composition and demonstrated laws before the claim; otherwise hypothesis (FOUNDATIONS §4; EVALUATION §6; AXIOMATIC_CALCULUS §5; L-51). 52: rewrite/refinement declares its permitting subject law; exact preserves meaning, approximate declares adequacy/end-to-end bound (ACTIVATION §4; L-52).",
+      "uncertainty":"External result mappings are retained only where the supplied catalogue states them."
+    },
+    {
+      "applies_to_keys":["discriminator_coverage"],
+      "conditions":["For integrated assessment of the complete declared member set and material composition, including J53–J59."],
+      "exceptions":["Existing applicable evidence may support several cases; no separate run per table row or complete fresh execution is required where governing assurance is established."],
+      "grounding":[
+        {
+          "end_line":207,
+          "quote":"Supported inapplicability of a conditional obligation is recorded separately; it does not waive any applicable mandatory criterion.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Discriminator%20coverage",
+          "start_line":203
+        },
+        {
+          "end_line":207,
+          "quote":"Existing applicable evidence can support several cases; no separate run per table row is imposed.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Discriminator%20coverage",
+          "start_line":205
+        }
+      ],
+      "key":"integrated_assessment_distinctions",
+      "statement":"Review and acceptance remain distinct EVALUATION-owned acts; local success cannot discharge shared contradiction, unresolved owner decision or required-result gap. J53: separately satisfied members do not erase cross-member contradiction; assess shared owners/composition. J54: reviewer agreement supports a replacement proposal but dependent acceptance waits for exact owner replacement decision on work carrier; construction grant supplies none. J55: missing, stale or falsified required criteria withhold acceptance under conjunction while preserving components; favourable verdict cannot replace evidence; supported conditional inapplicability is separate and waives no applicable mandatory criterion. J56: control success alongside candidate-frame failure preserves applicable task judgment, proves neither fixture answer leakage nor removal of frame-use failure; benefit attribution and applicability corrections need their own claim/reason. J57: assess actual path from selected outcome through bounded work, observation, diagnosis and lawful continuation/closure, using independently specified actual-use expectations; prose alone proves no use. J58: join source obligation, interpreted predicate, observed subject and supported conclusion, exposing weak assertion, insufficient observation and shared error while retaining bounded standings. J59: supported repair impact selects reassessment, retains known failures and unknown coverage and combines new evidence with justified reuse; demonstrate both valid retention and missed-dependency/changed-oracle cases.",
+      "uncertainty":"The full conjunction and acceptance protocols remain external references."
+    },
+    {
+      "applies_to_keys":["universal_assurance_cases"],
+      "conditions":["For UC-1–UC-9; each has its corresponding L-UCn check, with UC-9 also exercised by CD-03."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":234,
+          "quote":"Preservation alone proves no progress or termination. State the actual support for continuing or the unresolved stop; no generic termination proof is required merely to perform bounded work.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Discriminator%20coverage%2FUniversal-construction%20and%20assurance%20discriminators",
+          "start_line":232
+        }
+      ],
+      "key":"universal_construction_distinctions",
+      "statement":"UC-1: internal success with required end-to-end failure retains outer failure and diagnoses affected join; local completion proves no Z (ACTIVATION §1; FOUNDATIONS §4 preservation; EVALUATION §1). UC-2: lawful operations with unmet outcome constraints distinguish admissible construction from delivery; specification supplies Z, calculus/execution implies no satisfaction/acceptance (ACTIVATION §1 Binding A and Z; SPEC_METHOD §11). UC-3: bug labels do not decide implementation/requirement/observation cause or repair permission; use one intake/diagnosis, correct supported affected relation or acquire evidence and retain alternatives (ACTIVATION §1; SPEC_METHOD §4). UC-4: weakened Z needs owner decision/downstream re-entry and proves neither former Z nor erasure of original counterexample (ACTIVATION §1; SPEC_METHOD §4; FOUNDATIONS §4 parallel derivation). UC-5: predictive accuracy and normative outcome satisfaction are separate predicates/support, neither determining the other (ACTIVATION §1 three accounts/diagnosis). UC-6: select strategy within outcome constraints by material resource/risk/feedback tradeoffs, with no cost waiver; preserve incomparable alternatives and unsupported estimates (ACTIVATION §1; FOUNDATIONS §4 quantified assurance; EXECUTIVE_BASELINE Steel-thread). UC-7: invariant preservation alone proves no progress/termination; give actual continuation support or unresolved stop, without imposing generic termination proof for bounded work (ACTIVATION §1; FOUNDATIONS §3). UC-8: distinguish attempt termination, discovery, ongoing maintenance and delivery; elapsed work/count changes alone decide none (ACTIVATION §§1,6). UC-9: restart/disturbance contradicting cache requires current-subject reacquisition, affected-claim reopening, independent-work preservation and sufficient effect-uncertainty resolution before dependent action (ACTIVATION §§5,7; CD-03).",
+      "uncertainty":"Owner definitions of A, Z and governing construction relations are not fully supplied."
+    },
+    {
+      "applies_to_keys":["universal_assurance_cases"],
+      "conditions":["For AS-1–AS-6; each has L-ASn, with AS-2/3/6 also exercised by AR-01/02/03 respectively."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":240,
+          "quote":"A universal soundness claim covers every admitted conclusion; a selected deterministic model retains its scope, and a probability claim needs its own distribution and evidence.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Discriminator%20coverage%2FUniversal-construction%20and%20assurance%20discriminators",
+          "start_line":239
+        }
+      ],
+      "key":"assurance_assertion_observation_and_independence_distinctions",
+      "statement":"AS-1: local success without postcondition-to-next-precondition preservation or final-property-to-Z coverage requires the missing argument, withholds unsupported end-to-end conclusion and retains local support (FOUNDATIONS §4 preservation). AS-2: correct histogram keys with wrong counts shows a key-only test's predicate limit; assertion provenance distinguishes necessary from sufficient, and faithful count assertion detects the count defect within scope (FOUNDATIONS §4 assertions; AR-01). AS-3: opposite-truth admissible states with identical observations preclude sound complete decision from those observations; acquire distinguishing evidence, justify narrower scope or return indeterminate, distinguishing unavailable observation from non-performance (same owner; AR-02). AS-4: implementation-copied expectations plus requirement digest prove neither assertion fidelity nor independent upstream derivation; supported local regression claims remain usable (FOUNDATIONS §4 parallel derivation). AS-5: where human/probabilistic checker soundly admits satisfied or indeterminate on identical observations, the model admits both; universal soundness covers all admitted conclusions, deterministic selection keeps scope, probability needs distribution/evidence (FOUNDATIONS §4 assertions). AS-6: differing actors agreeing through shared wrong interpretation/fixture/contribution do not supply independence; expose common causes and port authorship, and validate common expectation using its separate purpose/evidence (FOUNDATIONS §4 parallel derivation; AR-03).",
+      "uncertainty":"Formal proofs, observation models and independence evidence are not present."
+    },
+    {
+      "applies_to_keys":["universal_assurance_cases"],
+      "conditions":["For AS-7–AS-12 and all claims based on the listed finite models or case mappings."],
+      "exceptions":["Applicable unchanged evidence may be retained where isolation and validity conditions are supported; full re-execution is not required solely because the subject changed."],
+      "grounding":[
+        {
+          "end_line":246,
+          "quote":"Missing influence information cannot justify exclusion; new uncovered obligations generate work and mandatory gates remain applicable.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Discriminator%20coverage%2FUniversal-construction%20and%20assurance%20discriminators",
+          "start_line":244
+        },
+        {
+          "end_line":251,
+          "quote":"The listed cases are an assessment design. Their execution records bind\ncurrent subjects and evidence independently. A mapped case never becomes\na pass by its presence, and a mapping does not exempt a material owner or\nconsumer from review (P6, P2).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Discriminator%20coverage%2FUniversal-construction%20and%20assurance%20discriminators",
+          "start_line":248
+        }
+      ],
+      "key":"assurance_quantification_change_and_scope_distinctions",
+      "statement":"AS-7/L-AS7: multiplying miss rates or promoting injected-defect scores to whole-Product correctness requires model, justified dependence and calibration scope; unsupported quantification stays unresolved while bounded observations survive (FOUNDATIONS §4 quantified assurance). AS-8/L-AS8: finite successes/schema-valid formula are no universal preservation proof; formal obligation, discharged argument, structure and bounded execution retain distinct scopes, with bounded work allowed under governing conditions (FOUNDATIONS §4 formal representation; AXIOMATIC_CALCULUS §9 condition 1). AS-9/AR-04/L-AS9: changed governing requirements trigger owner-authorised reassessment of affected assertions/applicability; original evidence/counterexamples retain subjects (FOUNDATIONS §4 change impact; ACTIVATION §7). AS-10/L-AS10: impact includes material execution/validity dependencies, not just requirement-to-test provenance; missing influence cannot justify exclusion, uncovered obligations generate work and mandatory gates remain (FOUNDATIONS §4 change impact). AS-11/L-AS11: supported isolated repair permits unchanged applicable evidence plus affected reassessment, without automatic full rerun. AS-12/L-AS12: selection accounts for required assurance, residual uncertainty and total relevant cost; broader execution is available, and cheap selection/fixed full-suite habits prove neither adequacy nor efficiency (FOUNDATIONS §4 change impact/quantified assurance). Every case receives local logical review and actual-use evidence where its claim requires it; finite-model properties stay within declared model/population, mechanical validity grants no semantic fidelity or whole-Product conformance. Execution records independently bind current subjects/evidence; mapping neither proves pass nor exempts material owners/consumers from review.",
+      "uncertainty":"Quantitative models, impact covers and actual evidence are not supplied."
+    },
+    {
+      "applies_to_keys":["design_module_profile","design_profile_terms","assurance_design_roles"],
+      "conditions":["Where the optional profile governs a boundary."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":26,
+          "quote":"It imports\n[FOUNDATIONS](FOUNDATIONS.md), [ACTIVATION](ACTIVATION.md),\n[EVALUATION](EVALUATION.md), [IDENTITY](IDENTITY.md),\n[SPEC_METHOD](SPEC_METHOD.md), [ASSURANCE](ASSURANCE.md),\n[TICKETS](TICKETS.md) and [RELEASE](RELEASE.md) by reference and defines\nnone of their objects again",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE",
+          "start_line":14
+        },
+        {
+          "end_line":75,
+          "quote":"Every clause names the principle that requires it (P0 to P6, FOUNDATIONS\n§3).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE",
+          "start_line":74
+        }
+      ],
+      "key":"design_profile_import_ownership",
+      "statement":"Import FOUNDATIONS, ACTIVATION, EVALUATION, IDENTITY, SPEC_METHOD, ASSURANCE, TICKETS and RELEASE by reference without redefining their objects. Ownership remains: proportionality at ACTIVATION §6; execution unit/seam at §1; complete enclosing-relation admission at §4; authority identity at IDENTITY §6; shared machinery at FOUNDATIONS §4; realisation core/non-goals at SPEC_METHOD §2; design-to-module evidence, module-derived tests and lifecycle confirmation at ASSURANCE §§14–16. ODD graph-execution and UX profiles refine/bound DESIGN_MODULE where their own scopes apply. Each profile clause names its requiring P0–P6 principle.",
+      "uncertainty":"Imported owner definitions and the stated refining profiles are outside the supplied excerpts."
+    },
+    {
+      "applies_to_keys":["design_result_record_distinction"],
+      "conditions":["For performed profile evaluations, design dispositions and record entries."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":72,
+          "quote":"This member uses `not_applicable` in two senses. A\n`not_applicable` record entry, in the entity-lifecycle matrix, for a\ndiscovery category or for an unsupported admission form (§5), records an\nexclusion: the excluded obligation has no result",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE",
+          "start_line":62
+        },
+        {
+          "end_line":72,
+          "quote":"A `not_applicable` axiom verdict (§7\nCross-view axiom evaluation) is a value of a predicate declared as a\ndisjunction that includes non-application, mapped there under the same\nparagraph.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE",
+          "start_line":67
+        }
+      ],
+      "key":"design_results_are_not_record_vocabularies",
+      "statement":"Performed evaluations return core values directly or via the two locally mapped refinements: §7 reconstruction decisions and cross-view axiom verdicts. Ontology/design verdicts are ACTIVATION §3 dispositions as specified by §7 Gate and retrospective work. Function-derivation dispositions, entity-lifecycle entries, discovery-category/unsupported-admission not_applicable entries, competing-path dispositions, IACS revision classes, reference mappings, two-part algorithmic-obligation dispositions and module roles are author-declared assessed records, not results, and map to no core value. Their evaluations return separate core values. A not_applicable record entry records an exclusion with no result for the excluded obligation under ACTIVATION applicability/core exclusions; a not_applicable axiom verdict is instead a mapped predicate value for a disjunction including non-application. Consumers must never combine record entries as results.",
+      "uncertainty":"The two refinement mappings and referenced exclusion/disposition contracts are not supplied."
+    },
+    {
+      "applies_to_keys":["design_module_profile","bounded_realisation_design"],
+      "conditions":["For module boundaries, schema/carrier families, entity/record design and interface contracts under this profile."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":123,
+          "quote":"A product decision that functionality is\nrequired does not decide how many entities, functions, public operations,\ncarriers or modules should exist",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FPurpose",
+          "start_line":113
+        },
+        {
+          "end_line":123,
+          "quote":"For a product governed by the\ngraph-execution profile, this profile does not authorise replacing a graph\nfunction, edge traversal or graph module with deterministic implementation\nmodules; it governs the deterministic realisation shape inside or beneath\nthose carriers",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FPurpose",
+          "start_line":115
+        }
+      ],
+      "key":"realisation_design_scope_and_bias",
+      "statement":"The profile biases toward low coupling, modular composition, immutable typed carriers, total or nearly total semantic transforms and explicit effect boundaries, pursuing implementation discipline beyond passing code rather than language ideology. Every intermediate traversal should have a finite inspectable reasoning/implementation/evaluation/proof/refactor unit; modules are one tool, not the only possible bounded traversal. The profile governs ontology, architecture and module derivation after selected outcomes/capabilities, without replacing SPEC_METHOD constitutional authority or graph-native law. Required functionality does not determine entity/function/public-operation/carrier/module counts. For graph-profile Products, deterministic modules cannot replace graph functions, edge traversals or graph modules by this profile's authority; it governs deterministic shape within/beneath them. Scope includes the named boundary/schema/entity/interface forms and is not limited to one language/runtime.",
+      "uncertainty":"The execution-unit and graph-native owners are referenced but not fully supplied."
+    },
+    {
+      "applies_to_keys":["functional_design_discipline"],
+      "conditions":["For implementations seeking to satisfy the profile."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":134,
+          "quote":"A Python, Scala, TypeScript,\nKotlin or Java implementation may each satisfy it if it keeps semantic law\nin explicit carriers and transforms rather than hidden orchestration.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FPosition",
+          "start_line":132
+        }
+      ],
+      "key":"functional_discipline_modal_requirements",
+      "statement":"Functional design discipline is required without requiring a functional language. The preferred shape says meaning should live in typed carriers/explicit transforms, imperative coordination should be subordinate to admitted truth, effects should be isolated to explicit boundary modules, and shared mutable state should be minimised and justified. Python, Scala, TypeScript, Kotlin and Java may each satisfy the discipline if semantic law remains explicit rather than hidden in orchestration.",
+      "uncertainty":"These preference/should formulations are retained without upgrading each into an unconditional must."
+    }
+  ],
+  "dispositions": [
+    {
+      "decision":"residual",
+      "keys":["traversal_contract","deterministic_functor","probabilistic_functor","human_functor","functor_application","traversal_identity_and_coordinate_separation","stop_mapping_conservation","categorical_claim_demonstration","stop_cause_refinement_latitude","traversal_operational_and_reference_limits"],
+      "reason":"Retains traversal contracts, kind identities, stop mappings and classification boundaries; records unavailable owning laws and non-materialised operational detail.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds"
+    },
+    {
+      "decision":"retained",
+      "keys":["exact_functor_application_binding"],
+      "reason":"Retains exact binding, refusal outcome and the distinction from step construction-availability incomplete.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds%2FAC-015%20Functor%20classification"
+    },
+    {
+      "decision":"retained",
+      "keys":["typed_composition","composition_admissibility_and_conservation","application_topology_latitude"],
+      "reason":"Retains typed composition prerequisites, conserved coordinates and application-owned lawful topology.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds%2FAC-016%20Typed%20composition"
+    },
+    {
+      "decision":"residual",
+      "keys":["subject_interpretation","model_assessment","interpretation_contract_and_acceptance_separation","interpretation_population_representation_limit"],
+      "reason":"Retains interpretation contract, proposed result and acceptance separation; explicitly accounts for source populations not instantiated in this schema.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models"
+    },
+    {
+      "decision":"retained",
+      "keys":["interpretation_fidelity_accounting"],
+      "reason":"Retains universal record provenance, declaration disposition and authorised absence-accounting requirements.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models%2FAC-017%20Interpretation%20fidelity"
+    },
+    {
+      "decision":"retained",
+      "keys":["model_assessment","structural_success_is_review_evidence"],
+      "reason":"Retains EVALUATION ownership and the scope/separation of structural and semantic claims.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models%2FAC-018%20Structural%20and%20semantic%20separation"
+    },
+    {
+      "decision":"residual",
+      "keys":["valid_model_claim","valid_model_prerequisites","validity_law_dependencies"],
+      "reason":"Retains all six necessary conditions and checker boundary while leaving unsupplied governing laws unresolved.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models%2FAC-019%20Valid%20model"
+    },
+    {
+      "decision":"retained",
+      "keys":["pure_calculus","interpreted_subject_layer","encoded_carrier_layer","encoding_acceptance_and_result_mapping","interpreted_layer_models_calculus","carrier_encodes_accepted_interpretation"],
+      "reason":"Retains the three layers, external judgments, encoding prerequisites, evidence triple and result mappings as descriptions.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F7.%20Layers"
+    },
+    {
+      "decision":"retained",
+      "keys":["layer_proof_and_release_independence"],
+      "reason":"Retains independent identity/proof/release obligations and non-ratification across layers.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F7.%20Layers%2FAC-020%20Layer%20and%20release%20separation"
+    },
+    {
+      "decision":"residual",
+      "keys":["calculus_basis_record","interpreted_subject_layer","calculus_basis_grammar_and_identity","calculus_basis_exactness_and_acyclic_issuance","downstream_content_identity_bindings","basis_binds_calculus_publication","basis_and_downstream_issuance_dependencies"],
+      "reason":"Retains record grammar, canonical identity, exactness, acyclic issuance and downstream identity dependencies; missing premise inventory and release/downstream contracts remain explicit.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F8.%20Calculus%20identity"
+    },
+    {
+      "decision":"omitted",
+      "keys":[],
+      "reason":"This section contains only a grouping heading and blank line; substantive application-boundary, import, surface and exclusion sections are interpreted separately.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions"
+    },
+    {
+      "decision":"retained",
+      "keys":["generic_application_boundary"],
+      "reason":"Retains generic-only scope, downstream ownership and prohibition of reverse identity embedding.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FApplication%20boundary"
+    },
+    {
+      "decision":"retained",
+      "keys":["application_binding","external_binding_latitude","application_binding_targets_calculus"],
+      "reason":"Retains conditional permission for external imports/translations/specialisations without calculus mutation or authority transfer.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FExternal%20imports%20and%20specialisations"
+    },
+    {
+      "decision":"residual",
+      "keys":["constraint_surface","surface_projection_contents","surface_standing_dependencies_and_acquisition","surface_exactness_fidelity_and_claim_limits","surface_worker_latitude","surface_projects_subject_interpretation","surface_projection_dependencies"],
+      "reason":"Retains all surface parts and six use conditions, current-entry ownership and purpose; leaves absent projection/support/acquisition contracts unresolved.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FConstraint%20surfaces"
+    },
+    {
+      "decision":"retained",
+      "keys":["calculus_excluded_roles"],
+      "reason":"Retains every enumerated exclusion.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FExclusions"
+    },
+    {
+      "decision":"retained",
+      "keys":["calculus_qualification","calculus_minimum_qualification_coverage"],
+      "reason":"Retains the minimum ten-part qualification coverage and exact-claim limit without claiming qualification.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F10.%20Conformance%20obligations"
+    },
+    {
+      "decision":"residual",
+      "keys":["conformance_catalogue","conformance_result_domains","case_execution_and_pass_boundary","conformance_external_owner_dependencies"],
+      "reason":"Retains case/execution/result distinctions, pass conditions and non-performance; external result-owner contracts remain bounded references.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE"
+    },
+    {
+      "decision":"retained",
+      "keys":["counterexample_cases","counterexamples_cost_status_restart_and_acquisition","counterexamples_authority_outcome_triage_and_closure"],
+      "reason":"Retains all twelve case subjects, mechanisms, owner references and expected distinctions.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F1.%20Counterexample%20cases"
+    },
+    {
+      "decision":"retained",
+      "keys":["construction_trials","construction_trial_expectations_and_protocol"],
+      "reason":"Retains all eight trials and every stated cap, budget, transfer, independence and repetition requirement.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F2.%20Construction%20trials"
+    },
+    {
+      "decision":"retained",
+      "keys":["recoverability_cases","recoverability_and_comparison_evidence"],
+      "reason":"Retains both recoverability cases and conditional matched-comparison obligations.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F3.%20Recoverability"
+    },
+    {
+      "decision":"retained",
+      "keys":["method_use_assurance_cases","construction_discriminator_actual_use","assurance_relation_case_expectations","actual_use_cases_exercise_discriminators"],
+      "reason":"Retains all CD and AR cases, applicability, actual-use requirements and bounded expected results without asserting runs.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F4.%20Cases%20for%20method%20discriminators"
+    },
+    {
+      "decision":"residual",
+      "keys":["discriminator_coverage","coverage_review_and_applicability_protocol","discriminators_derivation_shared_ownership_and_reduction","discriminators_boundaries_fidelity_and_current_entry","discriminators_identity_composition_attention_and_independence","discriminators_configuration_reuse_and_workspace","discriminators_execution_results_ownership_and_formal_claims","integrated_assessment_distinctions","assessment_evidence_reuse_latitude","coverage_owner_reference_limits"],
+      "reason":"Retains all 52 discriminator distinctions, check mappings, seven integrated cases and review/selection boundaries; absent deciding owner text remains unresolved.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Discriminator%20coverage"
+    },
+    {
+      "decision":"retained",
+      "keys":["universal_assurance_cases","universal_construction_distinctions","assurance_assertion_observation_and_independence_distinctions","assurance_quantification_change_and_scope_distinctions"],
+      "reason":"Retains all nine UC and twelve AS cases with local-owner/check references, applicability and evidence limitations.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Discriminator%20coverage%2FUniversal-construction%20and%20assurance%20discriminators"
+    },
+    {
+      "decision":"residual",
+      "keys":["design_module_profile","design_profile_terms","assurance_design_roles","design_result_record_distinction","design_profile_import_ownership","design_results_are_not_record_vocabularies","profile_terms_bind_assurance_roles","design_terms_and_result_maps_unresolved"],
+      "reason":"Retains optional-profile identity, imports, local terms, exact ASSURANCE binding and result/record distinctions; later definitions and mappings are not supplied.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE"
+    },
+    {
+      "decision":"omitted",
+      "keys":[],
+      "reason":"This section contains only a grouping heading and blank line; its supplied Purpose, Position and Core rule children are interpreted separately.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position"
+    },
+    {
+      "decision":"residual",
+      "keys":["bounded_realisation_design","realisation_design_scope_and_bias","design_authoring_path_latitude","coevolution_predicate_dependency"],
+      "reason":"Retains goals, bounded traversal, profile scope, conditional co-evolution and graph-authority boundary; unsupplied co-evolution predicate remains unresolved.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FPurpose"
+    },
+    {
+      "decision":"retained",
+      "keys":["functional_design_discipline","functional_discipline_modal_requirements","implementation_language_latitude"],
+      "reason":"Retains required discipline, preferred/should formulations and conditional language neutrality without strengthening modality.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FPosition"
+    },
+    {
+      "decision":"residual",
+      "keys":["imported_realisation_core_rule","profile_refines_realisation_core","core_rule_reference_limit"],
+      "reason":"Retains the stated orchestration test and ownership/refinement direction; full SPEC_METHOD core rule is not supplied.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FCore%20rule"
+    }
+  ],
+  "latitude": [
+    {
+      "allowed":["Declare further stops with exactly one existing core mapping in the signature stop contract.","Refine signature stops by cause, and further refine them for a traversal, naming parent and cause and preserving the parent's core value."],
+      "applies_to_keys":["functor_application","traversal_contract"],
+      "forbidden":["Adding core values through stop refinement.","Mapping any stop to satisfied.","Changing a refinement's core value or raising standing.","Declaring a different parent on behalf of its owner."],
+      "grounding":[
+        {
+          "end_line":968,
+          "quote":"The signature's stop contract declares any\nfurther stop value with the one core value it maps to, and may refine a\nstop value by cause.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds",
+          "start_line":955
+        }
+      ],
+      "key":"stop_cause_refinement_latitude"
+    },
+    {
+      "allowed":["Each application owns its lawful topology; there is no prescribed universal F_P -> F_D -> F_H sequence."],
+      "applies_to_keys":["typed_composition"],
+      "forbidden":["Composing without the exact domain/precondition match.","Flattening proposal, evaluation and human decision into an undifferentiated operation."],
+      "grounding":[
+        {
+          "end_line":1022,
+          "quote":"`a_c` prescribes no\nuniversal `F_P -> F_D -> F_H` sequence; each application owns its lawful\ntopology",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds%2FAC-016%20Typed%20composition",
+          "start_line":1020
+        }
+      ],
+      "key":"application_topology_latitude"
+    },
+    {
+      "allowed":["An application may declare a typed import, translation or specialisation under its own exact authority, context, basis, scope, preservation, loss, refusal and invalidation law."],
+      "applies_to_keys":["application_binding"],
+      "forbidden":["Changing a_c or entering this member merely because the external relation is useful to an application."],
+      "grounding":[
+        {
+          "end_line":1279,
+          "quote":"An application may declare a typed import, translation or specialisation\nof an `a_c` concept under that application's own exact authority, context,\nbasis, scope, preservation, loss, refusal and invalidation law. Such a\nrelation is external to the calculus. It neither changes `a_c` nor enters\nthis member by being useful to an application",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FExternal%20imports%20and%20specialisations",
+          "start_line":1274
+        }
+      ],
+      "key":"external_binding_latitude"
+    },
+    {
+      "allowed":["The worker chooses what no obligation fixes and an explicit latitude admits.","Internal solution strategy may vary within the task's obligations."],
+      "applies_to_keys":["constraint_surface"],
+      "forbidden":["Reading an unresolved premise, omitted obligation or missing permission as freedom.","Changing permitted or required work through a derived surface."],
+      "grounding":[
+        {
+          "end_line":1304,
+          "quote":"| permitted freedom | the latitude records (AC-008); what no obligation fixes and a latitude admits is the worker's choice |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FConstraint%20surfaces",
+          "start_line":1304
+        }
+      ],
+      "key":"surface_worker_latitude"
+    },
+    {
+      "allowed":["Use existing applicable evidence for multiple integrated cases.","Retain justified unchanged evidence with reassessment of affected claims; no separate run per table row or complete fresh execution is imposed where governing assurance is already established."],
+      "applies_to_keys":["discriminator_coverage"],
+      "forbidden":["Using local success to erase contradictions, known failures or unknown required coverage.","Treating case mapping as execution, pass or exemption from review."],
+      "grounding":[
+        {
+          "end_line":207,
+          "quote":"complete fresh execution is not required where the governing assurance is already established.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Discriminator%20coverage",
+          "start_line":207
+        },
+        {
+          "end_line":205,
+          "quote":"Existing applicable evidence can support several cases; no separate run per table row is imposed.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Discriminator%20coverage",
+          "start_line":205
+        }
+      ],
+      "key":"assessment_evidence_reuse_latitude"
+    },
+    {
+      "allowed":["No single optimal authoring path is mandated.","Implementation and proof may be derived in one work pass only when co_evolution_admissible(B) holds under §5 proportional sequencing and decision completeness precedes every design-method closure claim.","Module boundaries are one possible bounded traversal tool."],
+      "applies_to_keys":["bounded_realisation_design","design_module_profile"],
+      "forbidden":["Claiming design-method closure before decision completeness.","Treating same-pass construction as acceptable without the co-evolution condition."],
+      "grounding":[
+        {
+          "end_line":98,
+          "quote":"It does not mandate one optimal authoring path for every agent, worker or\nruntime. Agentic coders may sometimes move faster by deriving\nimplementation and proof in the same work pass; that is acceptable only\nwhen `co_evolution_admissible(B)` holds under proportional design\nsequencing (§5) and the boundary reaches decision completeness before any\ndesign-method closure claim (P0, P2).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FPurpose",
+          "start_line":93
+        }
+      ],
+      "key":"design_authoring_path_latitude"
+    },
+    {
+      "allowed":["Python, Scala, TypeScript, Kotlin or Java may satisfy the profile when semantic law resides in explicit carriers/transforms.","A functional programming language is not required."],
+      "applies_to_keys":["functional_design_discipline"],
+      "forbidden":["Treating language choice as dispensing with required functional design discipline.","Hiding semantic law in orchestration while claiming the stated satisfaction condition."],
+      "grounding":[
+        {
+          "end_line":134,
+          "quote":"The\nprofile does not require a functional programming language; it does\nrequire a functional design discipline. A Python, Scala, TypeScript,\nKotlin or Java implementation may each satisfy it if it keeps semantic law\nin explicit carriers and transforms rather than hidden orchestration.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FPosition",
+          "start_line":130
+        }
+      ],
+      "key":"implementation_language_latitude"
+    }
+  ],
+  "limitations": [
+    "This is a source-grounded proposal interpretation only. It asserts no semantic acceptance, execution, installed qualification, model validity, Product instantiation or completeness.",
+    "Only supplied section text is interpreted. Graphify nodes and edges outside that text remain discovery data; no graph confidence or connectivity supplies normative authority.",
+    "Two heading-only sections are omitted as non-substantive grouping text, with explicit dispositions. No substantive supplied section is deliberately excluded.",
+    "Case tables are compacted into grouped conditional constraints while retaining case identities, concrete situations, expected distinctions, owner references and check mappings. The tables remain assessment designs, not evidence that any case ran or passed.",
+    "External references to FOUNDATIONS, ACTIVATION, EVALUATION, SPEC_METHOD, RELEASE, PROFILES, IDENTITY, ASSURANCE, REFERENCE_FRAME, PRODUCT_DEFINITION, EXECUTIVE_BASELINE, ODD, UX, WORLD_MODEL, TICKETS, README routes and unsupplied local clauses are not resolved by this call.",
+    "The source-defined traversal, transformation and judgment populations are described as concepts and constraints only; no such operational records are instantiated. Their adapter populations remain empty.",
+    "The subject's calculus and identity schema are data distinct from the outer workflow's selected STDO 2.5.1-rc.2 basis. No identity digest is computed, issued or verified.",
+    "Detailed downstream identity grammars, exact premise inventories, five formal support kinds, profile term definitions and design-result refinement mappings require source re-entry beyond this chunk.",
+    "Grounding establishes exact source re-entry for each authored record. It does not certify the entire interpretation's fidelity or discharge the described obligations."
+  ],
+  "relations": [
+    {
+      "conditions":[],
+      "exceptions":[],
+      "governing":false,
+      "grounding":[
+        {
+          "end_line":1103,
+          "quote":"a_c.X     = subject X interpreted as a model of a_c",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F7.%20Layers",
+          "start_line":1103
+        }
+      ],
+      "key":"interpreted_layer_models_calculus",
+      "kind":"interpreted_model_of",
+      "meaning":"The interpreted-subject layer represents subject X as a model of the pure calculus; this classification grants no acceptance.",
+      "source_key":"interpreted_subject_layer",
+      "target_key":"pure_calculus"
+    },
+    {
+      "conditions":["J_X.decision is accepted and J_X's subject identity and digest exactly equal unchanged M_X."],
+      "exceptions":["Hold or refusal cannot be encoded."],
+      "governing":true,
+      "grounding":[
+        {
+          "end_line":1120,
+          "quote":"Encoding requires `J_X.decision = accepted` and exact equality between the\njudgment subject identity and digest and `M_X`; hold or refusal cannot be\nencoded.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F7.%20Layers",
+          "start_line":1118
+        }
+      ],
+      "key":"carrier_encodes_accepted_interpretation",
+      "kind":"encoding_requires",
+      "meaning":"Carrier encoding depends on exact accepted interpreted content while acceptance remains external evidence.",
+      "source_key":"encoded_carrier_layer",
+      "target_key":"interpreted_subject_layer"
+    },
+    {
+      "conditions":["Exact member/package bytes already exist and the member set and manifest are frozen."],
+      "exceptions":[],
+      "governing":true,
+      "grounding":[
+        {
+          "end_line":1195,
+          "quote":"`publication_basis` binds this member's exact bytes. Its member URI resolves\ninside its release URI.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F8.%20Calculus%20identity",
+          "start_line":1194
+        }
+      ],
+      "key":"basis_binds_calculus_publication",
+      "kind":"exact_publication_binding",
+      "meaning":"The external basis record's publication role binds the calculus member's exact bytes within the immutable package; the dependency does not run back from those bytes to the record.",
+      "source_key":"calculus_basis_record",
+      "target_key":"pure_calculus"
+    },
+    {
+      "conditions":["Declared under the application's exact authority, context, basis, scope, preservation, loss, refusal and invalidation law."],
+      "exceptions":[],
+      "governing":false,
+      "grounding":[
+        {
+          "end_line":1279,
+          "quote":"Such a\nrelation is external to the calculus. It neither changes `a_c` nor enters\nthis member by being useful to an application",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FExternal%20imports%20and%20specialisations",
+          "start_line":1276
+        }
+      ],
+      "key":"application_binding_targets_calculus",
+      "kind":"external_import_translation_or_specialisation",
+      "meaning":"An application's declared relation targets an a_c concept without governing or modifying the calculus. PROFILES §1 states the corresponding declared-binding rule from the profile side.",
+      "source_key":"application_binding",
+      "target_key":"pure_calculus"
+    },
+    {
+      "conditions":["Declared task subject/work boundary Z and dependency family R; exact subject, calculus basis and signature established."],
+      "exceptions":["Different subject bytes or unestablished basis return refusal(basis)=invalid_basis."],
+      "governing":true,
+      "grounding":[
+        {
+          "end_line":1295,
+          "quote":"An interpretation of a subject in `a_c` (§6) yields the constraint surface\nof a task by projection.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FConstraint%20surfaces",
+          "start_line":1291
+        }
+      ],
+      "key":"surface_projects_subject_interpretation",
+      "kind":"derived_projection_of",
+      "meaning":"The task surface is project(M_subject,Z,R) over material closure and depends on its exact interpreted source; it does not become a second owner or authority grant.",
+      "source_key":"constraint_surface",
+      "target_key":"subject_interpretation"
+    },
+    {
+      "conditions":["Actual use by a fresh constructor on a declared subject with assessed result, in addition to logical review."],
+      "exceptions":[],
+      "governing":false,
+      "grounding":[
+        {
+          "end_line":91,
+          "quote":"Discriminators 32, 33, 38, 42 and 43 of §5, turn on what\nactors do during real work",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F4.%20Cases%20for%20method%20discriminators",
+          "start_line":83
+        }
+      ],
+      "key":"actual_use_cases_exercise_discriminators",
+      "kind":"coverage_exercise_mapping",
+      "meaning":"CD-01 exercises discriminators 32/33, CD-02 exercises 42/43 and CD-03 exercises 38. Coverage mapping alone establishes neither run nor pass.",
+      "source_key":"method_use_assurance_cases",
+      "target_key":"discriminator_coverage"
+    },
+    {
+      "conditions":["A boundary is governed by this profile."],
+      "exceptions":[],
+      "governing":true,
+      "grounding":[
+        {
+          "end_line":42,
+          "quote":"Direction: profile to tier 2; preserved meaning: the tier-2 law applies\nunchanged to the bound objects; narrowed scope: boundaries this profile\ngoverns; invalidation: a change of this profile's definition of any bound\nobject re-evaluates the binding",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE",
+          "start_line":39
+        }
+      ],
+      "key":"profile_terms_bind_assurance_roles",
+      "kind":"declared_profile_to_tier_two_binding",
+      "meaning":"Bind ASSURANCE carrier inventory to IACS, accepted ontology/design to accepted Ontology and target design, domain/sequence/state projections to the three-view design asset, and decision-completeness/co-evolution conditions to the two §5 predicates. Tier-2 law applies unchanged; changed bound-object definitions require binding re-evaluation.",
+      "source_key":"design_profile_terms",
+      "target_key":"assurance_design_roles"
+    },
+    {
+      "conditions":["Only within boundaries governed by this profile."],
+      "exceptions":[],
+      "governing":true,
+      "grounding":[
+        {
+          "end_line":143,
+          "quote":"[SPEC_METHOD §2 Realisation shape](SPEC_METHOD.md#realisation-shape),\nscoped to boundaries this profile governs; every rule below refines it",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FCore%20rule",
+          "start_line":141
+        }
+      ],
+      "key":"profile_refines_realisation_core",
+      "kind":"refines_owned_core_rule",
+      "meaning":"The profile's rules refine the once-owned SPEC_METHOD realisation core rule, retaining that owner and the profile's applicability boundary.",
+      "source_key":"design_module_profile",
+      "target_key":"imported_realisation_core_rule"
+    }
+  ],
+  "residuals": [
+    {
+      "consequence":"Retain the stated mappings and classification boundaries without resolving absent cause definitions, importing same-spelled runtime concepts or claiming an operational traversal/categorical proof.",
+      "grounding":[
+        {
+          "end_line":955,
+          "quote":"A stop this member writes, `hold`, `gap`,\n`refusal(constraint)` or `refusal(basis)`, has the meaning and the core\nvalue that AC-007 gives it.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F5.%20Traversals%20and%20functor%20kinds",
+          "start_line":953
+        }
+      ],
+      "key":"traversal_operational_and_reference_limits",
+      "subject_key":"traversal_contract",
+      "uncertainty":"AC-007, FOUNDATIONS formal fragment, P0–P6 derivation context and full signature stop contract are not supplied. This finite representation describes traversal fields and operations but supplies no executable contract instances, operational judgments or proof objects."
+    },
+    {
+      "consequence":"The eight source populations are accounted for descriptively; traversal, transformation and judgment populations remain uninstantiated. No semantic acceptance or structural execution follows.",
+      "grounding":[
+        {
+          "end_line":1045,
+          "quote":"- the mapping from subject declarations to every applicable model record\n  population, including objects, relations, constraints, latitude,\n  residuals, traversals, transformations and judgments;",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models",
+          "start_line":1043
+        }
+      ],
+      "key":"interpretation_population_representation_limit",
+      "subject_key":"subject_interpretation",
+      "uncertainty":"The source describes eight model record populations and contracts beyond this author schema's five active semantic families. Full typed record grammars, structural-evaluation execution, source re-entry machinery and acceptance records cannot be represented operationally here."
+    },
+    {
+      "consequence":"AC-019 is retained as a conditional validity rule, not a determination that this or any supplied model satisfies it.",
+      "grounding":[
+        {
+          "end_line":1085,
+          "quote":"2. every record satisfies AC-001 through AC-009;\n3. every claimed closure, projection, overlay, transformation, judgment\n   and composition satisfies its applicable law;",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models%2FAC-019%20Valid%20model",
+          "start_line":1083
+        }
+      ],
+      "key":"validity_law_dependencies",
+      "subject_key":"valid_model_prerequisites",
+      "uncertainty":"AC-001–AC-009 and several applicable closure/projection/overlay/transformation/judgment laws are outside the supplied text; their full requirements cannot be reconstructed from their names."
+    },
+    {
+      "consequence":"Preserve the exact grammar and one-way dependencies without issuing a basis, calculating its digest, identifying its complete premise inventory or asserting release/acceptance status.",
+      "grounding":[
+        {
+          "end_line":1192,
+          "quote":"`derivation_basis` binds the complete finite set of governing clauses\nidentified under §1 Derivation provenance.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F8.%20Calculus%20identity",
+          "start_line":1186
+        },
+        {
+          "end_line":1251,
+          "quote":"The owning Product defines the canonical record grammar and issuance\nauthority for those downstream identities.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F8.%20Calculus%20identity",
+          "start_line":1249
+        }
+      ],
+      "key":"basis_and_downstream_issuance_dependencies",
+      "subject_key":"calculus_basis_record",
+      "uncertainty":"§1 Derivation provenance and RELEASE §§2/8 are absent, and downstream identity grammars/issuance are intentionally owned by unspecified Products. No exact release artifact or governing-clause inventory is supplied for verification."
+    },
+    {
+      "consequence":"Retain the projection expression, all six use conditions and unresolved blocking semantics without executing projection, selecting a checking contract or claiming surface sufficiency.",
+      "grounding":[
+        {
+          "end_line":1295,
+          "quote":"the surface is `project(M_subject, Z, R)` (AC-011) over the\nmaterial closure of AC-010.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FConstraint%20surfaces",
+          "start_line":1294
+        },
+        {
+          "end_line":1320,
+          "quote":"one of the five that\n   [FOUNDATIONS §4 Formal representation](FOUNDATIONS.md#formal-representation)\n   distinguishes",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F9.%20Application%20boundary%2C%20imports%20and%20exclusions%2FConstraint%20surfaces",
+          "start_line":1316
+        }
+      ],
+      "key":"surface_projection_dependencies",
+      "subject_key":"constraint_surface",
+      "uncertainty":"Full AC-010/011 projection/closure contracts, Boundary_Z schema, five formal support kinds, acquisition and actual-use qualification protocols are not supplied. Their named dependencies are retained without invented definitions."
+    },
+    {
+      "consequence":"Treat values and expectations as imported, source-stated data; do not infer missing mappings, perform cases or infer qualification.",
+      "grounding":[
+        {
+          "end_line":31,
+          "quote":"are refinements that\n[ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition) defines and\nmaps into that core. This member defines no result value",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE",
+          "start_line":28
+        }
+      ],
+      "key":"conformance_external_owner_dependencies",
+      "subject_key":"conformance_result_domains",
+      "uncertainty":"FOUNDATIONS' complete core-result contract and ACTIVATION's complete refinement definitions are not supplied. Later catalogue rows explicitly identify some mappings, but those examples do not resolve every referenced value or cause."
+    },
+    {
+      "consequence":"Retain every catalogue distinction and check association with bounded owner references; obtain absent deciding clauses before any claim requiring their full semantics.",
+      "grounding":[
+        {
+          "end_line":137,
+          "quote":"Each row states the situation, expected distinction, local owning sections\nand checks.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/CONFORMANCE.md#CONFORMANCE%2F5.%20Discriminator%20coverage",
+          "start_line":131
+        }
+      ],
+      "key":"coverage_owner_reference_limits",
+      "subject_key":"discriminator_coverage",
+      "uncertainty":"The table points to many unsupplied member/consumer clauses, frame rules, release dispositions and README routes. These references do not furnish their complete meanings, review eligibility, actual-use protocols or evidence. Grouped constraints are finite descriptive compression, not completed review results."
+    },
+    {
+      "consequence":"Do not fabricate Ontology/Prime/IACS definitions, predicate truth conditions or not_applicable core mappings. Preserve record exclusion versus mapped axiom-result distinction and the conditional ASSURANCE binding.",
+      "grounding":[
+        {
+          "end_line":32,
+          "quote":"the\npredicates `decision_complete(B)` and `co_evolution_admissible(B)` (§5).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE",
+          "start_line":31
+        },
+        {
+          "end_line":49,
+          "quote":"this profile's two refinements, each mapped where it is defined: the\nreconstruction decisions of §7 Invariant reconstruction sufficiency and\nthe axiom verdicts of §7 Cross-view axiom evaluation.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE",
+          "start_line":47
+        }
+      ],
+      "key":"design_terms_and_result_maps_unresolved",
+      "subject_key":"design_result_record_distinction",
+      "uncertainty":"DESIGN_MODULE §§5–9 definitions, §7 reconstruction/axiom maps and Gate dispositions, ASSURANCE §§14–16, PROFILES §1 and ACTIVATION exclusion law are not supplied. Named terms and result distinctions can be retained, but their full definitions and mappings remain unresolved."
+    },
+    {
+      "consequence":"Conditional permission for implementation/proof co-evolution remains unresolved for any particular boundary; it cannot be converted into unconditional permission or a closure claim.",
+      "grounding":[
+        {
+          "end_line":98,
+          "quote":"that is acceptable only\nwhen `co_evolution_admissible(B)` holds under proportional design\nsequencing (§5) and the boundary reaches decision completeness before any\ndesign-method closure claim",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FPurpose",
+          "start_line":95
+        }
+      ],
+      "key":"coevolution_predicate_dependency",
+      "subject_key":"design_authoring_path_latitude",
+      "uncertainty":"The §5 definitions and evaluation conditions for co_evolution_admissible(B) and decision completeness are outside this chunk."
+    },
+    {
+      "consequence":"Retain the supplied orchestration test and refinement/ownership relation without inventing the remainder of SPEC_METHOD's realisation-shape law.",
+      "grounding":[
+        {
+          "end_line":143,
+          "quote":"is stated once in\n[SPEC_METHOD §2 Realisation shape](SPEC_METHOD.md#realisation-shape)",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/DESIGN_MODULE.md#DESIGN_MODULE%2F1.%20Purpose%20and%20position%2FCore%20rule",
+          "start_line":140
+        }
+      ],
+      "key":"core_rule_reference_limit",
+      "subject_key":"imported_realisation_core_rule",
+      "uncertainty":"The complete once-owned SPEC_METHOD §2 core rule is not supplied; the local passage gives only its owner, applicability, refinement relation and one diagnostic test."
+    }
+  ]
+}

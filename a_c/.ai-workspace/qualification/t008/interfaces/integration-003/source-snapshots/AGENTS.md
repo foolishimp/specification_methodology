@@ -1,0 +1,58 @@
+# Specification Methodology Repository Bootstrap
+
+This root coordinates five peer source projects. It is not a Product and owns
+no Product meaning.
+
+The Git checkout is `specification_methodology`. The STDO Specification
+Methodology product has two version lines side by side: STDO 2.* authoring
+belongs in `./specification_methodology/v2/`; v3.0.0 construction belongs in
+`./specification_methodology/v3/`. Each child retains its own Product
+Definition and source boundary.
+
+Independent axiomatic-calculus implementation work belongs in `./a_c/`, whose
+Graphify realization is a build tenant. Select `a_c/stdo_a_c.json` and its local
+bootstrap. This child is outside the existing STDO release-matched cohort.
+
+Before work:
+
+1. Select exactly one child Product scope, or name an explicit cross-Product
+   relation.
+2. Read that child's `AGENTS.md`, then `README.md`, `specification/GOALS.md`,
+   `INTENT.md`, `PRODUCT.md`, requirements, and ratified design as present.
+3. Use the child's Product Definition to resolve its exact STDO basis and
+   accepted Development Products.
+4. Do not substitute mutable sibling source for an immutable Product, Install,
+   map, skill, or dependency selected by that definition.
+5. Treat co-location, shared actors, paths, code, tools, and matching output as
+   no authority and no implicit composition.
+
+For context-heavy work, the Executive maintains the exact outcome and basis,
+selects the smallest dependency-ready reference-frame frontier, delegates each
+bounded evaluation, consumes closed results, and chooses only an already
+authorized next action. It does not load every frame into one context.
+
+Native skills available from this root:
+
+- `$axiomatize-corpus` authors and mechanically validates an `a_c` program;
+- `$stdo-representation` uses the mutable source project's current
+  source-linked `a_c.STDO` compression index and re-enters Source STDO for
+  exact details. It is a development convenience, not an immutable Product
+  Install; verify the child checkpoint and Product status before use.
+
+The skills route attention. They grant no semantic, mutation, acceptance, or
+release authority.
+
+## Coordinated Stack Release
+
+Interpret an owner's STDO release request through
+[`Meaning Of A Release Request`](STACK_RELEASE.md#meaning-of-a-release-request).
+
+When work selects the explicit STDO release-matched cohort relation, read
+`STACK_RELEASE.md` and `stack_release.json`. One cohort version suffix covers
+the STDO corpus, distributed plugin, Axiom Indexer mechanics, STDO
+Representation, and generated `a_c.STDO` program/map index. Missing, stale,
+differently versioned, or source-digest-incongruent assets stop publication.
+
+Use `scripts/check_stack_release.py` at the content, local-ref-graph, and remote
+publication gates. The relation coordinates the peer Products; it does not
+merge their meaning, member sets, acceptance, or release authorities.

@@ -1,0 +1,53 @@
+{
+  "scope": "Temporary validation dependency only; no global or Product runtime installation",
+  "prior_attempts": [
+    {
+      "interpreter": "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+      "result": "not run: missing yaml import"
+    },
+    {
+      "interpreter": "a_c/.venv/bin/python",
+      "result": "not run: missing yaml import"
+    }
+  ],
+  "setup": [
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-m",
+        "venv",
+        "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skill-validator-fff2bcbz"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skill-validator-fff2bcbz/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "--disable-pip-version-check",
+        "--no-input",
+        "PyYAML==6.0.3"
+      ],
+      "exit": 0,
+      "stdout": "Collecting PyYAML==6.0.3\n  Using cached pyyaml-6.0.3-cp312-cp312-macosx_11_0_arm64.whl.metadata (2.4 kB)\nUsing cached pyyaml-6.0.3-cp312-cp312-macosx_11_0_arm64.whl (173 kB)\nInstalling collected packages: PyYAML\nSuccessfully installed PyYAML-6.0.3\n",
+      "stderr": ""
+    }
+  ],
+  "interpreter_and_PyYAML": "3.12.8 (v3.12.8:2dc476bcb91, Dec  3 2024, 14:43:19) [Clang 13.0.0 (clang-1300.0.29.30)]\n6.0.3\n",
+  "validation": {
+    "argv": [
+      "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-skill-validator-fff2bcbz/bin/python",
+      "-B",
+      "/Users/jim/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+      "stdo_skills/build_tenants/codex/skills/stdo-work"
+    ],
+    "exit": 0,
+    "stdout": "Skill is valid!\n",
+    "stderr": ""
+  },
+  "temporary_environment_removed": true
+}

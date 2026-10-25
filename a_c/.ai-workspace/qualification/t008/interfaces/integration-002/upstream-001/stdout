@@ -1,0 +1,81 @@
+{
+  "checks": [
+    "actual builder preserves all node identities and occurrence edges with dedup=False",
+    "actual export and path loader preserve node identities and occurrence edge count",
+    "tenant decoder recovers the exact declared model after actual upstream processing",
+    "decoder refuses removal of an occurrence and both incident edges from actual upstream output",
+    "decoder refuses a changed semantic record in actual upstream output",
+    "decoder refuses reversed semantic owner/target roles in actual upstream output",
+    "decoder refuses altered derived native-search attributes without a model change",
+    "actual local query helper resolves an exact seed and renders graph context",
+    "actual unseeded local query retrieves the expected semantic record from authored wording at depth zero"
+  ],
+  "claim": "bounded actual-upstream representation compatibility; no semantic admission or efficiency claim",
+  "codec_sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+  "coverage": {
+    "family_counts": {
+      "constraints": 1,
+      "judgments": 1,
+      "latitude": 1,
+      "objects": 3,
+      "relations": 5,
+      "residuals": 1,
+      "transformations": 1,
+      "traversals": 1
+    },
+    "node_roles": {
+      "external": 19,
+      "metadata": 1,
+      "record": 14,
+      "reference-endpoint": 124,
+      "reference-occurrence": 124
+    },
+    "parallel_relations": true,
+    "repeated_ordered_references": true,
+    "reversed_relations": true,
+    "self_relation": true
+  },
+  "edges": 372,
+  "exported_graph_sha256": "fccb77dd7940f6025654a35b23c18606ec4aeb30daf0a962f9f15717a2632529",
+  "fixture": {
+    "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/fixtures/toy_model.json",
+    "sha256": "a72d423a222ecd84a429e28796c93ba07ac8b79d40caf3b74af02c36029f3b0b"
+  },
+  "native_discovery": {
+    "characters": 1722,
+    "claim": "fixture retrieval only; no implication, governing closure, semantic acceptance or efficiency proof",
+    "excerpt": "Graph: /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/a-c-integrated-check-rufbgjtt/ac-graphify-qualification-nh8eeqt5/upstream.json (282 nodes) | Traversal: BFS depth=0 | Start: ['urn:a-c:graph:record:3 urn:a-c:toy:object:a {\"arguments\": [\"urn:a-c:toy:object:a\", \"urn:a-c:toy:object:a\", \"urn:a-c:toy:object:b\"], \"text\": \"A requires B. A may be restated; its unresolved reading stays visible.\"}', 'urn:a-c:graph:record:11 urn:a-c:toy:residual:reading \"urn:a-c:toy:residual-kind:uncertainty\"', 'urn:a-c:graph:record:2 urn:a-c:toy:latitude:wording \"\"'] | 3 nodes found\n\nNODE urn:a-c:graph:record:3 urn:a-c:toy:object:a {\"arguments\": [\"urn:a-c:toy:object:a\", \"urn:a-c:toy:object:a\", \"urn:a-c:toy:object:b\"], \"text\": \"A requires B. A may be restated; its unresolved reading stays visible.\"} [src=a_c://authored-model loc= community=None attrs={display_scope=\"deterministic authored-field excerpts; complete record i..., record_family=\"objects\", semantic_identity=\"urn:a-c:toy:object:a\", sort=\"\"urn:a-c:toy:sort:statement\"\", value=\"{\"argument...}]\nNODE urn:a-c:graph:record:11 urn:a-c:toy:residual:reading \"urn:a-c:toy:residual-kind:uncertainty\" [src=a_c://authored-model loc= community=None attrs={consequence=\"\"Semantic acceptance remains open.\"\", display_scope=\"deterministic authored-field excerpts; complete record i..., invalidation=\"\"urn:a-c:toy:invalidation\"\", kind=\"\"urn:a-c:toy:residual...}]\nNODE urn:a-c:graph:record:2 urn:a-c:toy:latitude:wording \"\" [src=a_c://authored-model loc= community=None attrs={allowed_variation=\"[\"Restate words while preserving the declared dependency..., applies_to=\"[\"urn:a-c:toy:object:a\"]\", display_scope=\"deterministic authored-field excerpts; complete record i..., fo...}]",
+    "expected_record": "urn:a-c:toy:object:a",
+    "query": "unresolved reading",
+    "scope": {
+      "depth": 0,
+      "explicit_seeds": false,
+      "mode": "bfs",
+      "token_budget": 2000
+    },
+    "sha256": "c553534e698a2e7f45ee027d786e6656a43f127facc6e0bd96e0a426aef220a4"
+  },
+  "nodes": 282,
+  "python_version": "3.12.8",
+  "qualification_script_sha256": "e7c796e71b6143cd6314114fa3b5db6dae35f0a13fd6bcfed010402747182561",
+  "query_characters": 5068,
+  "query_excerpt": "Graph: /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/a-c-integrated-check-rufbgjtt/ac-graphify-qualification-nh8eeqt5/upstream.json (282 nodes) | Traversal: BFS depth=2 | Start (given): ['urn:a-c:graph:record:0 urn:a-c:toy:constraint:review \"urn:a-c:toy:constraint-kind:review\"'] | 23 nodes found\n\nNODE urn:a-c:graph:record:0 urn:a-c:toy:constraint:review \"urn:a-c:toy:constraint-kind:review\" [src=a_c://authored-model loc= community=None attrs={applies_to=\"[\"urn:a-c:toy:object:a\"]\", display_scope=\"deterministic authored-field excerpts; complete record i..., judgment_kind=\"\"urn:a-c:toy:judgment-kind:review\"\", kind=\"\"urn:a-c:toy:constraint-...}]\nNODE urn:a-c:graph:endpoint:120 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:occurrence:0 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:occurrence:1 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:occurrence:2 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:occurrence:3 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:occurrence:4 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:occurrence:5 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:occurrence:6 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:occurrence:7 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:occurrence:8 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:occurrence:9 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:endpoint:0 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:endpoint:1 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:endpoint:2 [src=a_c://authored-model loc= community=None]\nNODE urn:a-c:graph:endpoint:3 [src=a_c:/",
+  "query_sha256": "38973601793d9a0c0deee431f20473a408c36b0548ce8de35bdb3557e70b4efd",
+  "status": "passed",
+  "upstream": {
+    "clean": true,
+    "commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+    "entrypoint_sha256": {
+      "graphify/build.py": "742075a82ec2797925a2e9d16d325b2e86a3e674eea04f06377f88bf7653fc17",
+      "graphify/export.py": "737cb97c5ca596f48a405a26e283140272b14d7ce5b63c89e6542ba8ac904e17",
+      "graphify/paths.py": "529cf874f7a990d8f318c8ca343bffced5378a5cff74f31c36404dc609ee5855",
+      "graphify/serve.py": "5ed6d9b150aae093b2f7e3b8cd7a7d4b922d73f88829b4b3992a1399159520be",
+      "graphify/validate.py": "be068c6b2ff4e514f31663e0155a9d63f35096d154b98ab6c9c467a23febd6f7"
+    },
+    "packages": {
+      "networkx": "3.4.2",
+      "tree-sitter": "0.25.2"
+    },
+    "version": "0.9.90"
+  }
+}

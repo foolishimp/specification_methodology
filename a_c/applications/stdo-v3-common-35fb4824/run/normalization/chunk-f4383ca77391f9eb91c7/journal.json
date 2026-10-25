@@ -1,0 +1,486 @@
+{
+  "changes": [
+    {
+      "new": {
+        "end_line": 984,
+        "quote": "a\n`Break-To-Closure Map` stating which break closes which closure-law clause;",
+        "start_line": 983
+      },
+      "old": {
+        "end_line": 985,
+        "quote": "a `Break-To-Closure Map` stating which break closes which closure-law clause;",
+        "start_line": 984
+      },
+      "path": "/concepts/18/grounding/0",
+      "record_key": "migration_break_order",
+      "section_id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FBreak%20order%20and%20break-to-closure%20map",
+      "witness": {
+        "normalized_end": 820,
+        "normalized_occurrence_count": 1,
+        "normalized_quote_sha256": "20a0eb704391d53f4bd28a1c05030eee456da247985a663614aef86132f5a74c",
+        "normalized_start": 743,
+        "outer_whitespace_search_trimmed": false,
+        "section_character_end": 823,
+        "section_character_start": 746,
+        "section_sha256": "3837ee8264b1eb9ff96205f05a6ccbd217370445687ea32aff2f0a9c33310845",
+        "word_boundaries_preserved": true
+      }
+    }
+  ],
+  "chunk": "chunk-f4383ca77391f9eb91c7",
+  "derived_answer_sha256": "e5eeef8eac38251a4cd617b6b316cc012cefabe022c58ad5a7a2b3316936548e",
+  "derived_non_grounding_sha256": "8dd243a38a91d2ac9c6ee4807baf873567e461328eeb1f5bda31c869549d6742",
+  "fd_elapsed_seconds": 0.07160266698338091,
+  "non_grounding_sha256": "8dd243a38a91d2ac9c6ee4807baf873567e461328eeb1f5bda31c869549d6742",
+  "normalizer_sha256": "f850e7ceecd945455891e6cc941fc3a86c943ed27bbe74d86b0248169d9cf682",
+  "original_evidence": {
+    "chunk_sha256": "5441f62d1a36068b837fe42b83403f5a720f40692bebbffd54c2a7fbecdd561a",
+    "original_attempt": "actors/author/chunk-f4383ca77391f9eb91c7/attempt-001",
+    "original_recorded_failure": "record[migration_break_order]/grounding/0: grounding quote is not exact source at declared range",
+    "original_status": "failed",
+    "original_strict_validation_error": "record[migration_break_order]/grounding/0: grounding quote is not exact source at declared range",
+    "original_usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 75813,
+        "output_tokens": 42110,
+        "reasoning_output_tokens": 1474
+      }
+    ],
+    "pins": {
+      "actor-settings.json": "f3b748facc38547ccdceeb05350b9e75b9afb8e30b009a63f916ea374f7e40ed",
+      "actors/author/chunk-f4383ca77391f9eb91c7/attempt-001/answer.json": "a00f684680ad7eabe001a23a025053f205f4504d4972089d44035113c4815d41",
+      "actors/author/chunk-f4383ca77391f9eb91c7/attempt-001/events.jsonl": "109be377d9526c489ffa739464d37c7c5e01697af865b347fde360a67cefd8b1",
+      "actors/author/chunk-f4383ca77391f9eb91c7/attempt-001/invocation.json": "0d147fd5d9b4fa3520fc09dc2223ea8e9f07cad4b7d375074d60ffd585ff35bb",
+      "actors/author/chunk-f4383ca77391f9eb91c7/attempt-001/prompt.txt": "8930c8220691c8668abaa7200fe33872014317a1ae3148b5b885a0b66b17add4",
+      "actors/author/chunk-f4383ca77391f9eb91c7/attempt-001/result.json": "575c6c04c5d8c08bab211282394fc59b00e6d9fc9399226e4a42cb2d1f2ff03b",
+      "actors/author/chunk-f4383ca77391f9eb91c7/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actors/author/chunk-f4383ca77391f9eb91c7/attempt-001/usage.json": "bd37c5c5bf2b0b21877208abb7aa097cff1e60ae36508cf81189dac26d853d0b",
+      "chunks.json": "2ce228fa4f647bcb275ff6653aff1a20eca792c93037f9d7959080668129d073",
+      "plan.json": "31a88bb55aa025cb95ba4f7710bd8559b5e0e5f4976b55388cdac1e1cf8337cf",
+      "source-manifest.json": "dbf32e7f99eb7228ca361ec02f44227c05e02bb6bc447d1dd38255cd3ca4a4d4"
+    },
+    "source_sections": [
+      {
+        "end_line": 100,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F1.%20Work%20carriers%2FExecution%20contracts",
+        "path": "standards/TICKETS.md",
+        "sha256": "4b669e9d653755d91002e307a2c8d2f5ed68c235da6ba26bd13fa217c431bb8e",
+        "start_line": 76
+      },
+      {
+        "end_line": 117,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F1.%20Work%20carriers%2FMilestones%20and%20phase-scoped%20truth%20%28UP-006%29",
+        "path": "standards/TICKETS.md",
+        "sha256": "0fc924c643f8d1cc170514d5261425710bafab1248e424cdadd9d5e5cbc15ab6",
+        "start_line": 101
+      },
+      {
+        "end_line": 119,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F2.%20Layout%20and%20authority",
+        "path": "standards/TICKETS.md",
+        "sha256": "49c84a02bc7fb5e8b80f3f8e9427e7a579e79fafbda7fcf0da1d2760a29585a9",
+        "start_line": 118
+      },
+      {
+        "end_line": 147,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F2.%20Layout%20and%20authority%2FDefault%20layout",
+        "path": "standards/TICKETS.md",
+        "sha256": "ae5c5200138f4fc49340a76d7a9fce18c22fe999d20cd7f88a7b702c501ca0f5",
+        "start_line": 120
+      },
+      {
+        "end_line": 164,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F2.%20Layout%20and%20authority%2FBindings%20and%20projections",
+        "path": "standards/TICKETS.md",
+        "sha256": "6e6d4157e444f7d6fe6d852ce16cc6cc0b3a144b11bb643a079801e77a69acc3",
+        "start_line": 148
+      },
+      {
+        "end_line": 178,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F2.%20Layout%20and%20authority%2FCarrier%20substitution",
+        "path": "standards/TICKETS.md",
+        "sha256": "9c49c5756f266df059aa23a1c64363aaf3c724b43c920e1fee8edd1fc5c8f1d1",
+        "start_line": 165
+      },
+      {
+        "end_line": 180,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F3.%20Sprint%20rules",
+        "path": "standards/TICKETS.md",
+        "sha256": "5ed16b4facbb89dbc2f67bf5522689bbdddaeb337165f876fef3e963e6794c36",
+        "start_line": 179
+      },
+      {
+        "end_line": 189,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F3.%20Sprint%20rules%2FOne%20durable%20record%20per%20sprint",
+        "path": "standards/TICKETS.md",
+        "sha256": "a79ce434fb41ab8d0ae3858f66e3e3c79949ca9f7d28219c0309c4af6ec301db",
+        "start_line": 181
+      },
+      {
+        "end_line": 208,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F3.%20Sprint%20rules%2FManifest%20fields",
+        "path": "standards/TICKETS.md",
+        "sha256": "b28e0e61f91d604a15ace854bcbf49ad13f2eff5d5aebf2069d65eb299530b28",
+        "start_line": 190
+      },
+      {
+        "end_line": 219,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F3.%20Sprint%20rules%2FSprint%20status",
+        "path": "standards/TICKETS.md",
+        "sha256": "494e312105699ebc62b6e3d77bb9ebd07b48b7cbd0a8ad9d8f1c457d0a32a5e0",
+        "start_line": 209
+      },
+      {
+        "end_line": 233,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F3.%20Sprint%20rules%2FSprint%20admission",
+        "path": "standards/TICKETS.md",
+        "sha256": "2b66fff59a421052a64fd25213f34190f2794825f9388f50740c2bc35c5f1aca",
+        "start_line": 220
+      },
+      {
+        "end_line": 260,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F3.%20Sprint%20rules%2FCompliance%20escrow",
+        "path": "standards/TICKETS.md",
+        "sha256": "7d8c06737f18bf38209d33c69285fe8c3791af3b3a2e8263ccbac32b63cfdec4",
+        "start_line": 234
+      },
+      {
+        "end_line": 324,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F3.%20Sprint%20rules%2FClose%20review",
+        "path": "standards/TICKETS.md",
+        "sha256": "33c990decea01bb9b815dc2d50cfc53fc5f7e4c897865328740e241df5dc0e87",
+        "start_line": 261
+      },
+      {
+        "end_line": 326,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules",
+        "path": "standards/TICKETS.md",
+        "sha256": "af393b4c1fc0663d81edef1bbce14e16f15ce356445dd685f60ba816d5c6a7b5",
+        "start_line": 325
+      },
+      {
+        "end_line": 339,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FOne%20durable%20record%20per%20ticket",
+        "path": "standards/TICKETS.md",
+        "sha256": "ec86e51e8af1f7a46ecd388a187e38a27df14dde5bc3634b18f459486cac0427",
+        "start_line": 327
+      },
+      {
+        "end_line": 386,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FMulti-build-tenant%20independence",
+        "path": "standards/TICKETS.md",
+        "sha256": "16e37dffd298e0a19ec78869656b90150ca21b3bf6e0577d6e6b4235660daa55",
+        "start_line": 340
+      },
+      {
+        "end_line": 407,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FRequired%20fields",
+        "path": "standards/TICKETS.md",
+        "sha256": "53f0aa90552029aa7e49134b6585bebcae51fa8aefe78d3503545fd171896751",
+        "start_line": 387
+      },
+      {
+        "end_line": 414,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FTypes",
+        "path": "standards/TICKETS.md",
+        "sha256": "0e76a7066ccccc3c71e071f53b5359832c7e022ff7881d89d7d515737837a587",
+        "start_line": 408
+      },
+      {
+        "end_line": 429,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FCategory",
+        "path": "standards/TICKETS.md",
+        "sha256": "38b57140e8797e7666363f8114ec4fa8da93dec432fcf13c63438b2304f07388",
+        "start_line": 415
+      },
+      {
+        "end_line": 445,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FInside-out%20sequencing",
+        "path": "standards/TICKETS.md",
+        "sha256": "de25586f41cf86d9ab367c9c707fa0eb485b8e9fdd41939f1a8113a5fa6f56cb",
+        "start_line": 430
+      },
+      {
+        "end_line": 467,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FChange%20class",
+        "path": "standards/TICKETS.md",
+        "sha256": "333ed79e25c2aa34728f97c8c2d2150f472cfb623b36da5f017ba06a0aacbf84",
+        "start_line": 446
+      },
+      {
+        "end_line": 507,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FUpward%20propagation%20check",
+        "path": "standards/TICKETS.md",
+        "sha256": "6b07cc59a69d2d6c7c19d53089ca6d7828266f084a6ded0b7a0b858599bacc8d",
+        "start_line": 468
+      },
+      {
+        "end_line": 516,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FTriage%20metadata",
+        "path": "standards/TICKETS.md",
+        "sha256": "46b6aac6dab500d7eb9f7fe6a408ecc8194762389681e0c960b784016b4d12b3",
+        "start_line": 508
+      },
+      {
+        "end_line": 535,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FStatus",
+        "path": "standards/TICKETS.md",
+        "sha256": "be47599b7605c08341618c1a27a9b5cece5061c400a212479a7788154e2e21d5",
+        "start_line": 517
+      },
+      {
+        "end_line": 549,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FLanes",
+        "path": "standards/TICKETS.md",
+        "sha256": "819bb27fb8c4b1cad486fa81d5135f872e1b49e8b48d2dfee7001009d2bf4e22",
+        "start_line": 536
+      },
+      {
+        "end_line": 564,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution",
+        "path": "standards/TICKETS.md",
+        "sha256": "92af5eb062898613c1e12b02a9d7313ddad7ff1a9d3895259e10897e08362eb4",
+        "start_line": 550
+      },
+      {
+        "end_line": 618,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FFoundation%20to%20law%3A%20work%20carriers",
+        "path": "standards/TICKETS.md",
+        "sha256": "68b598a1b8fe144635b97ca0186587670b6ab0a58c282b27b53e0100fd62b3dc",
+        "start_line": 565
+      },
+      {
+        "end_line": 677,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FCarrier%20selection",
+        "path": "standards/TICKETS.md",
+        "sha256": "3eae38729d34a0dbcc91ba75d277ada16315beffddecb88ea6ddd8f78b5352cc",
+        "start_line": 619
+      },
+      {
+        "end_line": 701,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FExecution%20contract%20admission",
+        "path": "standards/TICKETS.md",
+        "sha256": "1a5f34e60354c3985908e5c623a655b8d8e36c4983f7029a6ef0755e02ccb130",
+        "start_line": 678
+      },
+      {
+        "end_line": 723,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FEvaluation%20criteria%20and%20non-closure%20conditions",
+        "path": "standards/TICKETS.md",
+        "sha256": "322c1e81234b1e8868ab38b0aafd36bab61da41819527f9ee8ea04d7e7e7aa46",
+        "start_line": 702
+      },
+      {
+        "end_line": 742,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FBounded-context%20term%20binding",
+        "path": "standards/TICKETS.md",
+        "sha256": "6fc6057453c6323a494937a8085bab5d72b7f8ff4fc1d334ddeea572d34c6c0b",
+        "start_line": 724
+      },
+      {
+        "end_line": 744,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration",
+        "path": "standards/TICKETS.md",
+        "sha256": "2b292f509c260cfb1fd054aa9356c6b449bdf6ab37fcb1a0786cf5e54740b1a7",
+        "start_line": 743
+      },
+      {
+        "end_line": 799,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FDeclaration%20and%20checklist",
+        "path": "standards/TICKETS.md",
+        "sha256": "877da360bfa22bc563dc24eec450d805801490d7ebcc78effe70dc8639aaf8cb",
+        "start_line": 745
+      },
+      {
+        "end_line": 829,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FClosure%20of%20a%20migration%20ticket",
+        "path": "standards/TICKETS.md",
+        "sha256": "e6a577464f0594fc8b5c9bea5a81a01ee3e4bb6a01d817e0110571c5152ba4b2",
+        "start_line": 800
+      },
+      {
+        "end_line": 849,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FStrategy%20requirements",
+        "path": "standards/TICKETS.md",
+        "sha256": "c87eb3e9fe69382146ec81eaaa9ce022b7eebe80a48e321bcd0ba79bb25c3988",
+        "start_line": 830
+      },
+      {
+        "end_line": 880,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FRecurring%20realisation%20and%20library%20declaration",
+        "path": "standards/TICKETS.md",
+        "sha256": "2a030f06afc7b69555d7aedaeeb4eea4585e3cfc29c26bd7fa773860f3f38a7a",
+        "start_line": 850
+      },
+      {
+        "end_line": 891,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FMulti-build-tenant%20review",
+        "path": "standards/TICKETS.md",
+        "sha256": "c7cdb336b375244fe6b8e445d1d84abe8ea1633860ec59c454e9e183530bc8e9",
+        "start_line": 881
+      },
+      {
+        "end_line": 931,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FReview%20disambiguation",
+        "path": "standards/TICKETS.md",
+        "sha256": "290bd8c07e9d6da416d59ec8b7b6729bac8b4008372ed3822b8008ba8fb99843",
+        "start_line": 892
+      },
+      {
+        "end_line": 966,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FImpacted%20interface%20review%20checklist",
+        "path": "standards/TICKETS.md",
+        "sha256": "ade687d10055180012dea257e3350d7fb04f214fd02f09d61c7974f4bff360ed",
+        "start_line": 932
+      },
+      {
+        "end_line": 995,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FBreak%20order%20and%20break-to-closure%20map",
+        "path": "standards/TICKETS.md",
+        "sha256": "3837ee8264b1eb9ff96205f05a6ccbd217370445687ea32aff2f0a9c33310845",
+        "start_line": 967
+      },
+      {
+        "end_line": 1024,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FMixed-state%20negative%20proof",
+        "path": "standards/TICKETS.md",
+        "sha256": "f1b4016c40a4d7522030fe43d8c1d25ca418ebe5e67c27b321cc50c3b961f091",
+        "start_line": 996
+      },
+      {
+        "end_line": 1034,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state",
+        "path": "standards/TICKETS.md",
+        "sha256": "02ecd3b5b8cbf7fa38d06e7b9c8ab5cf0abf185a5fbb669510e34fe0d6330ea9",
+        "start_line": 1025
+      },
+      {
+        "end_line": 1092,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FExecution%20and%20verification%20authority%20separation%20%28UP-007%29",
+        "path": "standards/TICKETS.md",
+        "sha256": "1c3a94a3c83e769658d633172e58ff43d9e2f5f8738549726fe3e1f38e9b0376",
+        "start_line": 1035
+      },
+      {
+        "end_line": 1180,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FRecorded%20judgment%20and%20owner-ruling%20continuity",
+        "path": "standards/TICKETS.md",
+        "sha256": "a4d9b8e04f0ca62538f6450df06f54b15ec2047f6442d9a765f484fe934d8617",
+        "start_line": 1093
+      },
+      {
+        "end_line": 1216,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FCondition-based%20closure%20and%20reuse",
+        "path": "standards/TICKETS.md",
+        "sha256": "30964637ad46417629d8d22747092d585e41ad0e5de20361ec5f01901ee566f4",
+        "start_line": 1181
+      },
+      {
+        "end_line": 1262,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FTest%20case%20authority",
+        "path": "standards/TICKETS.md",
+        "sha256": "b27ac901dd5b38dd7c610b0f8620ff080feaeee5a494e03ef84e7b883246d741",
+        "start_line": 1217
+      },
+      {
+        "end_line": 1276,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FOne-truth%20state%20projection%20and%20drift%20refusal%20%28UP-009%29",
+        "path": "standards/TICKETS.md",
+        "sha256": "f357c47475b889816fa54923f6dab1ac20693f0e64c6e859bd9d60c58c67af73",
+        "start_line": 1263
+      },
+      {
+        "end_line": 1421,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F8.%20Recommended%20shapes",
+        "path": "standards/TICKETS.md",
+        "sha256": "a130bcfeada865f3d93ec0fe9ba8e24c5c715b0d2622f2d062d546b7c497e9f9",
+        "start_line": 1277
+      },
+      {
+        "end_line": 1423,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F9.%20Operating%20mode%20and%20relationships",
+        "path": "standards/TICKETS.md",
+        "sha256": "7e3d0e4ce8143c9b84c8e1bc287e53ff50adf1807b80edae8b8305a2282d0f2e",
+        "start_line": 1422
+      },
+      {
+        "end_line": 1437,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F9.%20Operating%20mode%20and%20relationships%2FOperating%20mode",
+        "path": "standards/TICKETS.md",
+        "sha256": "9754a8af7731034590d7de4f7b63d4c774b42fc632ed6b8b5075df4457595dab",
+        "start_line": 1424
+      },
+      {
+        "end_line": 1450,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TICKETS.md#TICKETS%2F9.%20Operating%20mode%20and%20relationships%2FRelationship%20to%20other%20surfaces",
+        "path": "standards/TICKETS.md",
+        "sha256": "d79c927af92420962f729eef172cbe1804d9e6c44b6e1a8c2a997d0ae2610958",
+        "start_line": 1438
+      },
+      {
+        "end_line": 25,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE",
+        "path": "standards/TRAVERSAL_OCCURRENCE.md",
+        "sha256": "473e51919500c9c7c974013979457149938da015a63fd44481189a2543ff883b",
+        "start_line": 1
+      },
+      {
+        "end_line": 51,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FPosition",
+        "path": "standards/TRAVERSAL_OCCURRENCE.md",
+        "sha256": "c8d0cdd5c4d393bf542c93c6ebd6b19cc5e3543ccf454af48d37ed7007d79c8c",
+        "start_line": 26
+      },
+      {
+        "end_line": 109,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FPosition%2FFoundation%20to%20law",
+        "path": "standards/TRAVERSAL_OCCURRENCE.md",
+        "sha256": "72990f140b235d8d0eea17c5de4990c1df22af1b39052cbddbb69aaeed99bd94",
+        "start_line": 52
+      },
+      {
+        "end_line": 127,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FScope",
+        "path": "standards/TRAVERSAL_OCCURRENCE.md",
+        "sha256": "e313ebc3c7d3ab737a81c3da88d5b3027b3c0519c09990a3865317bc90d909c6",
+        "start_line": 110
+      },
+      {
+        "end_line": 185,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FImported%20calculus%20boundary",
+        "path": "standards/TRAVERSAL_OCCURRENCE.md",
+        "sha256": "8f69034c45baed636fdcdb1d8f47f15257ee2b9d3c1de7b7882653ecb402f785",
+        "start_line": 128
+      },
+      {
+        "end_line": 244,
+        "id": "repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+        "path": "standards/TRAVERSAL_OCCURRENCE.md",
+        "sha256": "2cca58c762a528a560fdb32aa4fbe141f81774178b555c981913a831ec8e622f",
+        "start_line": 186
+      }
+    ]
+  },
+  "policy": {
+    "claim": "F_D source re-entry normalization only; no semantic rewriting, completeness judgment, new F_P usage or semantic acceptance.",
+    "equivalence": "Collapse each maximal Unicode whitespace run to one ASCII space; strip outer whitespace only. Preserve every non-whitespace character, case, punctuation and inter-character whitespace boundary.",
+    "id": "a_c.grounding.unique-whitespace-runs/1",
+    "scope": "Only quote/start_line/end_line inside the five known grounding arrays; section_id and all other fields remain unchanged.",
+    "uniqueness": "Exactly one normalized occurrence in the same supplied source section, including coordinate-only repairs. Already strict-valid anchors are unchanged without a recovery claim."
+  },
+  "policy_sha256": "6242bffb75d652b8826fb859651f0967631f727da30d7a3980d0604dc0ad67c4",
+  "profile": "ac.generation.grounding-normalization/1",
+  "selected_original_attempt": "actors/author/chunk-f4383ca77391f9eb91c7/attempt-001",
+  "status": "derived_validated",
+  "unverified_original_pins": {
+    "actors/author/chunk-f4383ca77391f9eb91c7/attempt-001/answer.json": "a00f684680ad7eabe001a23a025053f205f4504d4972089d44035113c4815d41",
+    "actors/author/chunk-f4383ca77391f9eb91c7/attempt-001/events.jsonl": "109be377d9526c489ffa739464d37c7c5e01697af865b347fde360a67cefd8b1",
+    "actors/author/chunk-f4383ca77391f9eb91c7/attempt-001/invocation.json": "0d147fd5d9b4fa3520fc09dc2223ea8e9f07cad4b7d375074d60ffd585ff35bb",
+    "actors/author/chunk-f4383ca77391f9eb91c7/attempt-001/prompt.txt": "8930c8220691c8668abaa7200fe33872014317a1ae3148b5b885a0b66b17add4",
+    "actors/author/chunk-f4383ca77391f9eb91c7/attempt-001/result.json": "575c6c04c5d8c08bab211282394fc59b00e6d9fc9399226e4a42cb2d1f2ff03b",
+    "actors/author/chunk-f4383ca77391f9eb91c7/attempt-001/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "actors/author/chunk-f4383ca77391f9eb91c7/attempt-001/usage.json": "bd37c5c5bf2b0b21877208abb7aa097cff1e60ae36508cf81189dac26d853d0b"
+  }
+}

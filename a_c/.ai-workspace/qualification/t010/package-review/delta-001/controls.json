@@ -1,0 +1,385 @@
+{
+  "actual_common_model_bundle_reviewed": false,
+  "controls": [
+    {
+      "details": {
+        "bounded_review_receipts": 1,
+        "claim": "Types, exact source/model/artifact bindings and readable-report custody checked; receipt truth, issuer legitimacy, independence and semantic fitness remain external.",
+        "construction_receipt": "urn:reviewer:synthetic:construction"
+      },
+      "name": "constructor-accepts-exact-bound-failed-review-without-acceptance",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "failed-outcome-preserved",
+      "passed": true
+    },
+    {
+      "details": "public receipt fields do not match the application contract",
+      "name": "original-untyped-wrong-model-review-refused",
+      "passed": true
+    },
+    {
+      "details": "public receipt source/model/raw-artifact bindings differ from the actual candidate",
+      "name": "constructor:review-source-subject_id",
+      "passed": true
+    },
+    {
+      "details": "public receipt source/model/raw-artifact bindings differ from the actual candidate",
+      "name": "constructor:review-source-commit",
+      "passed": true
+    },
+    {
+      "details": "public receipt source/model/raw-artifact bindings differ from the actual candidate",
+      "name": "constructor:review-source-package_tree",
+      "passed": true
+    },
+    {
+      "details": "public receipt source/model/raw-artifact bindings differ from the actual candidate",
+      "name": "constructor:review-source-source_manifest_sha256",
+      "passed": true
+    },
+    {
+      "details": "public receipt source/model/raw-artifact bindings differ from the actual candidate",
+      "name": "constructor:review-source-semantic_files_sha256",
+      "passed": true
+    },
+    {
+      "details": "public receipt source/model/raw-artifact bindings differ from the actual candidate",
+      "name": "constructor:review-source-section_inventory_sha256",
+      "passed": true
+    },
+    {
+      "details": "public receipt source/model/raw-artifact bindings differ from the actual candidate",
+      "name": "constructor:review-source-source_reentry_sha256",
+      "passed": true
+    },
+    {
+      "details": "public receipt source/model/raw-artifact bindings differ from the actual candidate",
+      "name": "constructor:review-model-id",
+      "passed": true
+    },
+    {
+      "details": "public receipt source/model/raw-artifact bindings differ from the actual candidate",
+      "name": "constructor:review-model-sha256",
+      "passed": true
+    },
+    {
+      "details": "public receipt source/model/raw-artifact bindings differ from the actual candidate",
+      "name": "constructor:review-artifact-model.json-bytes",
+      "passed": true
+    },
+    {
+      "details": "public receipt source/model/raw-artifact bindings differ from the actual candidate",
+      "name": "constructor:review-artifact-model.json-sha256",
+      "passed": true
+    },
+    {
+      "details": "public receipt source/model/raw-artifact bindings differ from the actual candidate",
+      "name": "constructor:review-artifact-carrier.json-bytes",
+      "passed": true
+    },
+    {
+      "details": "public receipt source/model/raw-artifact bindings differ from the actual candidate",
+      "name": "constructor:review-artifact-carrier.json-sha256",
+      "passed": true
+    },
+    {
+      "details": "public receipt source/model/raw-artifact bindings differ from the actual candidate",
+      "name": "constructor:review-artifact-graph.json-bytes",
+      "passed": true
+    },
+    {
+      "details": "public receipt source/model/raw-artifact bindings differ from the actual candidate",
+      "name": "constructor:review-artifact-graph.json-sha256",
+      "passed": true
+    },
+    {
+      "details": "public receipt source/model/raw-artifact bindings differ from the actual candidate",
+      "name": "constructor:review-artifact-coverage.json-bytes",
+      "passed": true
+    },
+    {
+      "details": "public receipt source/model/raw-artifact bindings differ from the actual candidate",
+      "name": "constructor:review-artifact-coverage.json-sha256",
+      "passed": true
+    },
+    {
+      "details": "public receipt source/model/raw-artifact bindings differ from the actual candidate",
+      "name": "constructor:review-artifact-result.json-bytes",
+      "passed": true
+    },
+    {
+      "details": "public receipt source/model/raw-artifact bindings differ from the actual candidate",
+      "name": "constructor:review-artifact-result.json-sha256",
+      "passed": true
+    },
+    {
+      "details": "public receipt has the wrong explicit type",
+      "name": "constructor:wrong-kind",
+      "passed": true
+    },
+    {
+      "details": "bounded review receipt does not declare a closed review",
+      "name": "constructor:unfinished-review",
+      "passed": true
+    },
+    {
+      "details": "duplicate review report path",
+      "name": "constructor:duplicate-report-path",
+      "passed": true
+    },
+    {
+      "details": "bound readable review report is missing",
+      "name": "constructor:missing-bound-report",
+      "passed": true
+    },
+    {
+      "details": "readable review report bytes differ from its explicit receipt binding",
+      "name": "constructor:stale-report-digest",
+      "passed": true
+    },
+    {
+      "details": "public receipt identity collision",
+      "name": "constructor:duplicate-construction-identity",
+      "passed": true
+    },
+    {
+      "details": "public receipt source/model/raw-artifact bindings differ from the actual candidate",
+      "name": "constructor:wrong-construction-model",
+      "passed": true
+    },
+    {
+      "details": "public receipt source/model/raw-artifact bindings differ from the actual candidate",
+      "name": "constructor:wrong-construction-source",
+      "passed": true
+    },
+    {
+      "details": "at least one typed bounded-review receipt is required",
+      "name": "constructor:missing-review",
+      "passed": true
+    },
+    {
+      "details": "public receipt identity collision",
+      "name": "constructor:duplicate-review",
+      "passed": true
+    },
+    {
+      "details": {
+        "stderr": "",
+        "stdout": "{\n  \"claim\": \"Exact bundle custody, bounded structural checks and carrier recovery; no semantic acceptance, source-method release, or public-distribution authorization.\",\n  \"displayed_records\": 7,\n  \"inventory_files\": 208,\n  \"model\": {\n    \"id\": \"urn:a-c:toy:model:proposal\",\n    \"sha256\": \"bb2ce4d3833f069cc057e607ecba55a06d5e39256d556ce14ea89561b965cc5a\"\n  },\n  \"omitted_records\": 7,\n  \"physical_grounding_occurrences\": 0,\n  \"public_evidence\": {\n    \"bounded_review_receipts\": 1,\n    \"claim\": \"Types, exact source/model/artifact bindings and readable-report custody checked; receipt truth, issuer legitimacy, independence and semantic fitness remain external.\",\n    \"construction_receipt\": \"urn:reviewer:synthetic:construction\"\n  },\n  \"records\": 14,\n  \"source\": {\n    \"bytes\": 3298515,\n    \"files\": 81,\n    \"semantic_files\": 58\n  },\n  \"status\": \"passed\",\n  \"subject\": \"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6\"\n}\n"
+      },
+      "name": "clean-extracted-stdlib-replay",
+      "passed": true
+    },
+    {
+      "details": {
+        "bytes": 2840536,
+        "file": "second.tar.gz",
+        "format": "deterministic tar.gz; sorted files, fixed0644 uid/gid/mtime0, blank owner names, gzip mtime0",
+        "sha256": "6d78d2b7bdedcdce3a1cfbf075ef73b927215873a830507cfe4b2e9c46170e93"
+      },
+      "name": "repaired-recipe-deterministic",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"public receipt source/model/raw-artifact bindings differ from the actual candidate\"}",
+      "name": "portable-reindexed:review-source-subject_id",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"public receipt source/model/raw-artifact bindings differ from the actual candidate\"}",
+      "name": "portable-reindexed:review-source-commit",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"public receipt source/model/raw-artifact bindings differ from the actual candidate\"}",
+      "name": "portable-reindexed:review-source-package_tree",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"public receipt source/model/raw-artifact bindings differ from the actual candidate\"}",
+      "name": "portable-reindexed:review-source-source_manifest_sha256",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"public receipt source/model/raw-artifact bindings differ from the actual candidate\"}",
+      "name": "portable-reindexed:review-source-semantic_files_sha256",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"public receipt source/model/raw-artifact bindings differ from the actual candidate\"}",
+      "name": "portable-reindexed:review-source-section_inventory_sha256",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"public receipt source/model/raw-artifact bindings differ from the actual candidate\"}",
+      "name": "portable-reindexed:review-source-source_reentry_sha256",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"public receipt source/model/raw-artifact bindings differ from the actual candidate\"}",
+      "name": "portable-reindexed:review-model-id",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"public receipt source/model/raw-artifact bindings differ from the actual candidate\"}",
+      "name": "portable-reindexed:review-model-sha256",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"public receipt source/model/raw-artifact bindings differ from the actual candidate\"}",
+      "name": "portable-reindexed:review-artifact-model.json-bytes",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"public receipt source/model/raw-artifact bindings differ from the actual candidate\"}",
+      "name": "portable-reindexed:review-artifact-model.json-sha256",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"public receipt source/model/raw-artifact bindings differ from the actual candidate\"}",
+      "name": "portable-reindexed:review-artifact-carrier.json-bytes",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"public receipt source/model/raw-artifact bindings differ from the actual candidate\"}",
+      "name": "portable-reindexed:review-artifact-carrier.json-sha256",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"public receipt source/model/raw-artifact bindings differ from the actual candidate\"}",
+      "name": "portable-reindexed:review-artifact-graph.json-bytes",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"public receipt source/model/raw-artifact bindings differ from the actual candidate\"}",
+      "name": "portable-reindexed:review-artifact-graph.json-sha256",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"public receipt source/model/raw-artifact bindings differ from the actual candidate\"}",
+      "name": "portable-reindexed:review-artifact-coverage.json-bytes",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"public receipt source/model/raw-artifact bindings differ from the actual candidate\"}",
+      "name": "portable-reindexed:review-artifact-coverage.json-sha256",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"public receipt source/model/raw-artifact bindings differ from the actual candidate\"}",
+      "name": "portable-reindexed:review-artifact-result.json-bytes",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"public receipt source/model/raw-artifact bindings differ from the actual candidate\"}",
+      "name": "portable-reindexed:review-artifact-result.json-sha256",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"public receipt has the wrong explicit type\"}",
+      "name": "portable-reindexed:wrong-kind",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"bounded review receipt does not declare a closed review\"}",
+      "name": "portable-reindexed:unfinished-review",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"duplicate review report path\"}",
+      "name": "portable-reindexed:duplicate-report-path",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"bound readable review report is missing\"}",
+      "name": "portable-reindexed:missing-bound-report",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"readable review report bytes differ from its explicit receipt binding\"}",
+      "name": "portable-reindexed:stale-report-digest",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"public receipt identity collision\"}",
+      "name": "portable-reindexed:duplicate-construction-identity",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"public receipt fields do not match the application contract\"}",
+      "name": "portable-reindexed:original-untyped-wrong-model",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"public receipt fields do not match the application contract\"}",
+      "name": "portable-reindexed:untyped-construction",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"public receipt source/model/raw-artifact bindings differ from the actual candidate\"}",
+      "name": "portable-reindexed:wrong-construction-model",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"readable review report bytes differ from its explicit receipt binding\"}",
+      "name": "portable-reindexed:changed-readable-report",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"bound readable review report is missing\"}",
+      "name": "portable-reindexed:missing-readable-report",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"preparation requires at least one explicit bounded-review receipt\"}",
+      "name": "portable-reindexed:missing-review-index",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"release review receipt index differs\"}",
+      "name": "portable-reindexed:duplicate-review-index",
+      "passed": true
+    },
+    {
+      "details": "{\"status\": \"refusal\", \"reason\": \"public evidence has missing or unbound files\"}",
+      "name": "portable-reindexed:extra-unbound-file",
+      "passed": true
+    }
+  ],
+  "controls_passed": 67,
+  "findings": [],
+  "frozen_post_checks": [
+    {
+      "matched": true,
+      "path": "package_release.py"
+    },
+    {
+      "matched": true,
+      "path": "release_tools/bundle_check.py"
+    },
+    {
+      "matched": true,
+      "path": "release_tools/public_receipts.py"
+    },
+    {
+      "matched": true,
+      "path": "release_tools/PUBLIC-RECEIPTS.md"
+    },
+    {
+      "matched": true,
+      "path": "RELEASE-PREPARATION.md"
+    }
+  ],
+  "interactive_behavior": "unverified; no browser or server effects",
+  "original_F001_counterexample": "now refused by constructor and portable checker even after ordinary index/inventory refresh",
+  "scratch": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-common-package-review-qoznki7o",
+  "stage": "frozen-binding-repair-delta",
+  "status": "passed",
+  "synthetic_model": {
+    "id": "urn:a-c:toy:model:proposal",
+    "sha256": "bb2ce4d3833f069cc057e607ecba55a06d5e39256d556ce14ea89561b965cc5a"
+  }
+}

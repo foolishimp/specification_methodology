@@ -17,3 +17,8 @@ Workers implement only their grant, self-assess the exact candidate and return. 
 A required Reviewer acquires governing sources and derives expected behavior before the exact candidate and proof. Use a fresh permitted reviewer and retain actual exposure, author relationship, model family/resolution and limitations. Nonauthor same-family review does not prove cross-family independence. Where a review.prepare tool is selected, actually call its supported contract. The Reviewer reports findings, severity, evidence, affected claims and uncertainty; it does not implement the adopted repair or decide promotion. After material repair, withdraw only affected old reliance and obtain the required fresh assessment.
 
 A returned candidate_ready concerns availability. Assessments keep their own predicates and results. Owner disposition is a separate act. Contradictory results require disposition, not majority voting.
+
+At a Product crossing or controlled-view handoff, use [composition](composition.md)
+to rebind the actual actor/purpose/route and preserve eligibility, exposure and
+continuation obligations. Parent permission and unchanged candidate bytes alone
+do not establish child access or current evidence.

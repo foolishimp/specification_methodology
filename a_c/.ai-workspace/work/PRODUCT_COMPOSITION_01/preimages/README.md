@@ -1,0 +1,1 @@
+Freeze03 preimages were copied and verified before the independent-review repair. The freeze02 interface test was reconstructed by reversing the recorded 02-to-03 patch and then verified byte-for-byte against source-freeze-02.json; it was not separately retained during the original run. No production source differs between freezes02 and03.

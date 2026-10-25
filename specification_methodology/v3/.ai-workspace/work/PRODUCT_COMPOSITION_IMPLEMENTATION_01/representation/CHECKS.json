@@ -1,0 +1,91 @@
+{
+  "author_schema_and_exact_grounding": "passed by existing author_check",
+  "declared_sections": 7,
+  "family_counts": {
+    "objects": 7,
+    "relations": 3,
+    "constraints": 7,
+    "latitude": 5,
+    "residuals": 2,
+    "traversals": 0,
+    "transformations": 0,
+    "judgments": 0
+  },
+  "outputs_relocated_after_success": "repair1/generated-* replaced the four corresponding current representation artifacts after successful value recovery",
+  "recovery_relation": "equal JSON values and canonical model digests; raw serialization-byte equality not claimed",
+  "carrier_recovery_equal_json_values": true,
+  "graphify_extraction_recovery_equal_json_values": true,
+  "canonical_model_sha256": "451532d247c3804538880a96fa0a29161bd6104fa3d314f14e9a8b8d3bf62119",
+  "commands": [
+    {
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_graph.py",
+        "validate",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/PRODUCT_COMPOSITION_IMPLEMENTATION_01/representation/MODEL.json"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"claim\": \"declared fragment only; no semantic acceptance or full calculus validity\",\n  \"model\": {\n    \"id\": \"urn:stdo:composition:interpretation:pc01-pc07:proposal:1\",\n    \"profile\": \"a_c.graphify.model/1\",\n    \"sha256\": \"451532d247c3804538880a96fa0a29161bd6104fa3d314f14e9a8b8d3bf62119\"\n  },\n  \"records\": 24,\n  \"references\": 185,\n  \"status\": \"structurally-checked\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_graph.py",
+        "materialize",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/PRODUCT_COMPOSITION_IMPLEMENTATION_01/representation/MODEL.json",
+        "--out",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/PRODUCT_COMPOSITION_IMPLEMENTATION_01/representation/repair1/generated-CARRIER.json"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"claim\": \"no issuer-authority proof or carrier admission\",\n  \"model\": {\n    \"id\": \"urn:stdo:composition:interpretation:pc01-pc07:proposal:1\",\n    \"profile\": \"a_c.graphify.model/1\",\n    \"sha256\": \"451532d247c3804538880a96fa0a29161bd6104fa3d314f14e9a8b8d3bf62119\"\n  },\n  \"status\": \"proposal-view\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_graph.py",
+        "materialize",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/PRODUCT_COMPOSITION_IMPLEMENTATION_01/representation/MODEL.json",
+        "--out",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/PRODUCT_COMPOSITION_IMPLEMENTATION_01/representation/repair1/generated-GRAPHIFY_EXTRACTION.json",
+        "--extraction"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"claim\": \"no issuer-authority proof or carrier admission\",\n  \"model\": {\n    \"id\": \"urn:stdo:composition:interpretation:pc01-pc07:proposal:1\",\n    \"profile\": \"a_c.graphify.model/1\",\n    \"sha256\": \"451532d247c3804538880a96fa0a29161bd6104fa3d314f14e9a8b8d3bf62119\"\n  },\n  \"status\": \"proposal-view\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_graph.py",
+        "decode",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/PRODUCT_COMPOSITION_IMPLEMENTATION_01/representation/repair1/generated-CARRIER.json",
+        "--out",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/PRODUCT_COMPOSITION_IMPLEMENTATION_01/representation/repair1/generated-RECOVERED.json"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"model\": {\n    \"id\": \"urn:stdo:composition:interpretation:pc01-pc07:proposal:1\",\n    \"profile\": \"a_c.graphify.model/1\",\n    \"sha256\": \"451532d247c3804538880a96fa0a29161bd6104fa3d314f14e9a8b8d3bf62119\"\n  },\n  \"status\": \"decoded\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_graph.py",
+        "decode",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/PRODUCT_COMPOSITION_IMPLEMENTATION_01/representation/repair1/generated-GRAPHIFY_EXTRACTION.json",
+        "--out",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/PRODUCT_COMPOSITION_IMPLEMENTATION_01/representation/repair1/generated-RECOVERED_EXTRACTION.json"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"model\": {\n    \"id\": \"urn:stdo:composition:interpretation:pc01-pc07:proposal:1\",\n    \"profile\": \"a_c.graphify.model/1\",\n    \"sha256\": \"451532d247c3804538880a96fa0a29161bd6104fa3d314f14e9a8b8d3bf62119\"\n  },\n  \"status\": \"decoded\"\n}\n",
+      "stderr": ""
+    }
+  ],
+  "claims": "Bounded source grounding, structural validation and carrier round-trip only; independent semantics and actual upstream Graphify trial separate."
+}

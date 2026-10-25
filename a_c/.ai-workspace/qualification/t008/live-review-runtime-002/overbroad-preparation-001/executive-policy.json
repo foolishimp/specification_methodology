@@ -1,0 +1,1579 @@
+{
+  "authority_sources": [
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": ".ai-workspace/tickets/active/T-008-fd-tenant-implementation.md",
+      "root": "product",
+      "selector": {
+        "lines": [
+          785,
+          860
+        ]
+      },
+      "sha256": "51082af52a4126aa85a9f2b7c361ce00e2ddc845af6d0654dd2016aa97633013"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": ".ai-workspace/qualification/t008/live-binding-001/TASK.md",
+      "root": "product",
+      "selector": null,
+      "sha256": "6d777ece58832ec57185f47cbe69f714222329e600b3a190acac63d7d744fff2"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "GRANT.md",
+      "root": "runtime",
+      "selector": null,
+      "sha256": "d160e6a9ec523d6fc6cd19b8100408df1692a88d46c40f2108af5fbf99a3194b"
+    }
+  ],
+  "event_sinks": {
+    "t008-root-events": {
+      "authority_source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": ".ai-workspace/tickets/active/T-008-fd-tenant-implementation.md",
+        "root": "product",
+        "selector": {
+          "lines": [
+            785,
+            860
+          ]
+        },
+        "sha256": "51082af52a4126aa85a9f2b7c361ce00e2ddc845af6d0654dd2016aa97633013"
+      },
+      "consumer": "/root",
+      "directory": "notifications",
+      "kind": "durable-file-events",
+      "retention": "indefinite"
+    }
+  },
+  "evidence_root": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/live/evidence",
+  "executors": {
+    "claude-reviewer-expectation-002": {
+      "actor_id": "urn:a-c:T008:claude-reviewer:001",
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/examples/fd-support/actor_cli.py",
+        "--plan",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/live-review-runtime-002/expectation-actor-plan.json",
+        "--plan-sha256",
+        "b73b9bf5501a977cbe4c20876130eed6974c70552a2fe07abc7310ae24a1c9f6"
+      ],
+      "cwd": "/private/tmp/a-c-review-native-z3sp1bs8",
+      "dependencies": [
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/examples/fd-support/actor_cli.py",
+          "root": "product",
+          "selector": null,
+          "sha256": "06cd55463fd23e45fbf56fa46de92b9ba49f6650e3dc5686e219544d5457b42c"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/code/ac_support_core.py",
+          "root": "product",
+          "selector": null,
+          "sha256": "78f70fa8da1a29ce4fadc8cb78743c2293bf7f35947b353218dc2a6b1e03ae94"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/code/ac_graph.py",
+          "root": "product",
+          "selector": null,
+          "sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/code/ac_support_effects.py",
+          "root": "product",
+          "selector": null,
+          "sha256": "9108d6ad10e412f5a0e981c88c06c7b37cb913a24286282da9aae752f239a586"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/code/ac_support.py",
+          "root": "product",
+          "selector": null,
+          "sha256": "4d1ea7fe98ec1b53f2a19d9a2fef2b3fbb070624c955fbb1e9e48f5cc88011b1"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "reviewer-tool-policy.json",
+          "root": "runtime",
+          "selector": null,
+          "sha256": "21650bec17d146e989115ef3484d1e7841a2cff1493b4c8f1c06ac82a72897ed"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "reviewer.mcp.json",
+          "root": "runtime",
+          "selector": null,
+          "sha256": "534b18edc8f2239c46a9cc7580dbc6fe8fe3eba1a88b95871b155e8877ce8b43"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "system-expectation.txt",
+          "root": "runtime",
+          "selector": null,
+          "sha256": "fe0e34ec8aa85daac2b01e95ca2c0df6ec99d2e143c4df24a0f5759894cf694b"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "protocol/closed-return-format.json",
+          "root": "runtime",
+          "selector": null,
+          "sha256": "d5131bdf44d0320cc63f18cc89013ccc82957395b933235c63d37f52c544b91a"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "expectation-actor-plan.json",
+          "root": "runtime",
+          "selector": null,
+          "sha256": "b73b9bf5501a977cbe4c20876130eed6974c70552a2fe07abc7310ae24a1c9f6"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "expectation-call.json",
+          "root": "runtime",
+          "selector": null,
+          "sha256": "0b92b23580ce61096e2eb913e298ddf2725a6a09f4aa644ed2c918b43273a2f0"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "expectation-packet.json",
+          "root": "runtime",
+          "selector": null,
+          "sha256": "c3f7cab1535e73eb9efef58449ec347b7cc36ecbc929b603933a3e10a5cca776"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "expectation-return-contract.json",
+          "root": "runtime",
+          "selector": null,
+          "sha256": "b904de46fd02d8bbe1b7d09fc9fa9f7e355db8ee461e91a9510aeb1553632071"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "reviewer-instructions.md",
+          "root": "runtime",
+          "selector": null,
+          "sha256": "ec9ca671a055dc25029d9d381560ee689d3d30a8f08664070512e6e15ccb2045"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "review-evaluation.md",
+          "root": "runtime",
+          "selector": null,
+          "sha256": "a53828d226ae4c74eed8d0c38b84f1902457ea80b82dfc6c9a4f3472fdaa2b8b"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "review-claim.json",
+          "root": "runtime",
+          "selector": null,
+          "sha256": "add30fdcb998528fbca4cbd5406163a214b58ad788619220cf4ae6ad547176de"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "independence-policy.json",
+          "root": "runtime",
+          "selector": null,
+          "sha256": "dea9d02c8885f30f7367b7802b28cfadaa89ec04bdaa54417e56ed3d6beca0f7"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "2.1.302",
+          "root": "native",
+          "selector": null,
+          "sha256": "5262ce9de86243fed0d21edc39b271555d56780d0112e2b194439fe1c6662d37"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "python3.12",
+          "root": "python",
+          "selector": null,
+          "sha256": "a7f5b535d61d1c7326824204ac80f045a97a652abb154421e2c74fcc365a3539"
+        }
+      ],
+      "effect_scope": {
+        "kind": "cooperative-native-Claude-read-only-public-MCP-review",
+        "unknowns": [
+          "native/managed/memory/host additions",
+          "provider/model usage outside observed trace",
+          "generic descendant/external effect end"
+        ]
+      },
+      "environment": {
+        "CODEX_HOME": "/Users/jim/.codex",
+        "HOME": "/Users/jim",
+        "LANG": "C.UTF-8",
+        "LC_ALL": "C.UTF-8",
+        "LC_CTYPE": "C.UTF-8",
+        "LOGNAME": "jim",
+        "PATH": "/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/Library/Apple/usr/bin:/Library/TeX/texbin:/Users/jim/.codex/packages/app-server-daemon/releases/0.163.0-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0-macos/codex-arg0JtPKke:/Users/jim/.codex/tmp/arg0/codex-arg0CDnCoA:/Users/jim/.codex/packages/app-server-daemon/releases/0.162.1-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg0Bb4u1U:/Users/jim/.codex/packages/app-server-daemon/releases/0.162.0-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg0LxzuXl:/Users/jim/.codex/packages/app-server-daemon/releases/0.161.0-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg03BXQTA:/Users/jim/.codex/packages/app-server-daemon/releases/0.160.1-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg00N7H4l:/Users/jim/.codex/packages/app-server-daemon/releases/0.160.0-aarch64-apple-darwin/codex-path:/Users/jim/.codex/tmp/arg0/codex-arg0KdMMgl:/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/codex-path:/Users/jim/.grok/bin:/Users/jim/.bun/bin:/Users/jim/google-cloud-sdk/bin:/opt/homebrew/opt/openjdk/bin:/Users/jim/bin:/usr/local/opt/openjdk@17/bin:/Users/jim/.pyenv/shims:/Users/jim/.pyenv/bin:/opt/homebrew/opt/curl/bin:/opt/homebrew/opt/openssl/bin:/Users/jim/.local/bin:/opt/homebrew/bin:/Users/jim/.cargo/bin:/Applications/iTerm.app/Contents/Resources/utilities:/opt/homebrew/bin/flutter",
+        "SHELL": "/bin/zsh",
+        "TERM": "dumb",
+        "TMPDIR": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/",
+        "USER": "jim"
+      },
+      "executable": {
+        "path": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+        "sha256": "a7f5b535d61d1c7326824204ac80f045a97a652abb154421e2c74fcc365a3539"
+      },
+      "id": "claude-reviewer-expectation-002",
+      "observers": [
+        {
+          "kind": "process-end"
+        }
+      ],
+      "settings": {
+        "termination_grace_ms": 10000,
+        "timeout_ms": 960000
+      },
+      "stdin_mode": "context-utf8",
+      "stdout_decoder": {
+        "decode_json_string": false,
+        "format": "json",
+        "pointer": null
+      },
+      "tools": [
+        "tools.describe",
+        "source.read",
+        "evidence.read",
+        "review.prepare"
+      ]
+    }
+  },
+  "grants": {
+    "urn:a-c:grant:T008:review:002": {
+      "admission": {
+        "allowed_override_sources": [],
+        "authority_source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": ".ai-workspace/tickets/active/T-008-fd-tenant-implementation.md",
+          "root": "product",
+          "selector": {
+            "lines": [
+              785,
+              860
+            ]
+          },
+          "sha256": "51082af52a4126aa85a9f2b7c361ce00e2ddc845af6d0654dd2016aa97633013"
+        },
+        "mechanism_id": "product-policy-preflight/1",
+        "mechanism_source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/design/fd-support.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "b38eedbe85ee32ef11d945d6a60ed3f9bb2312ac10e873d8ddc9b7986744a005"
+        },
+        "required_predicates": []
+      },
+      "authority_sources": [
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": ".ai-workspace/tickets/active/T-008-fd-tenant-implementation.md",
+          "root": "product",
+          "selector": {
+            "lines": [
+              785,
+              860
+            ]
+          },
+          "sha256": "51082af52a4126aa85a9f2b7c361ce00e2ddc845af6d0654dd2016aa97633013"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": ".ai-workspace/qualification/t008/live-binding-001/TASK.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "6d777ece58832ec57185f47cbe69f714222329e600b3a190acac63d7d744fff2"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "GRANT.md",
+          "root": "runtime",
+          "selector": null,
+          "sha256": "d160e6a9ec523d6fc6cd19b8100408df1692a88d46c40f2108af5fbf99a3194b"
+        }
+      ],
+      "executors": [
+        "claude-reviewer-expectation-002"
+      ],
+      "id": "urn:a-c:grant:T008:review:002",
+      "notification_sink": "t008-root-events",
+      "operations": [
+        "contract.preflight",
+        "dispatch.start",
+        "dispatch.cancel"
+      ],
+      "outcome": {
+        "id": "urn:a-c:fd-support:T008:live-task:001",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": ".ai-workspace/qualification/t008/live-binding-001/TASK.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "6d777ece58832ec57185f47cbe69f714222329e600b3a190acac63d7d744fff2"
+        }
+      },
+      "preconditions": [
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/README.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "259f22b0d60d7ff7cf0e67583cd71d2701ebf40304692f3d5b3f00b8005cb3ef"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/code/ac_support.py",
+          "root": "product",
+          "selector": null,
+          "sha256": "4d1ea7fe98ec1b53f2a19d9a2fef2b3fbb070624c955fbb1e9e48f5cc88011b1"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/code/ac_support_core.py",
+          "root": "product",
+          "selector": null,
+          "sha256": "78f70fa8da1a29ce4fadc8cb78743c2293bf7f35947b353218dc2a6b1e03ae94"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/code/ac_support_effects.py",
+          "root": "product",
+          "selector": null,
+          "sha256": "9108d6ad10e412f5a0e981c88c06c7b37cb913a24286282da9aae752f239a586"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/code/ac_graph.py",
+          "root": "product",
+          "selector": null,
+          "sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/design/README.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "f757ab636858c851cc500f5473ef0bc99a8d20ef2dfc209857917657895cf961"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/design/fd-support.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "b38eedbe85ee32ef11d945d6a60ed3f9bb2312ac10e873d8ddc9b7986744a005"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/design/fd-method-claude-rc9.json",
+          "root": "product",
+          "selector": null,
+          "sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/examples/fd-support/README.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "eca9c4cbfbd7ad4b712a7d1e8fc73f8cec42b0fb196967b77890833997018f94"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/examples/fd-support/actor_cli.py",
+          "root": "product",
+          "selector": null,
+          "sha256": "06cd55463fd23e45fbf56fa46de92b9ba49f6650e3dc5686e219544d5457b42c"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/examples/fd-support/prepare_readonly.py",
+          "root": "product",
+          "selector": null,
+          "sha256": "8bb5f22182af4b08816bbeff208fe43c650803f7f094cae6bb1465b325f2d8f3"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/test_env/test_ac_support_core.py",
+          "root": "product",
+          "selector": null,
+          "sha256": "7cf93cf0bc83713a74f47284e9c3acc785c08cdc3b4807b573f463465541ec07"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/test_env/test_ac_support_effects.py",
+          "root": "product",
+          "selector": null,
+          "sha256": "62aa2967c9bba8b151555b3d23d6d794ca746e6ba329994bac32316f28a1bd20"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/test_env/test_ac_support_interfaces.py",
+          "root": "product",
+          "selector": null,
+          "sha256": "3ea958e61ec240b74d33f21185bf0045246f4e756313a2327f8f8bbe3cf4affc"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/test_env/support_fixtures/local_actor.py",
+          "root": "product",
+          "selector": null,
+          "sha256": "9c3c0fd8fe563f96db6cb00d95989fd319a6518b006f0efffcfd3d48caf6838a"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/test_env/check_upstream.py",
+          "root": "product",
+          "selector": null,
+          "sha256": "e7c796e71b6143cd6314114fa3b5db6dae35f0a13fd6bcfed010402747182561"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/mypy.ini",
+          "root": "product",
+          "selector": null,
+          "sha256": "2ebf1ac43e89df83b0cd42a01ea0a3f00ee5f1a82045281357369847fd91b461"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/examples/fd-support/LIFECYCLE_QUICKSTART.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "4d03920c625ac77bc7f38794bccf73003b08fd883ca2ad06022cfc4164dd6b84"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": ".ai-workspace/tickets/active/T-008-fd-tenant-implementation.md",
+          "root": "product",
+          "selector": {
+            "lines": [
+              785,
+              860
+            ]
+          },
+          "sha256": "51082af52a4126aa85a9f2b7c361ce00e2ddc845af6d0654dd2016aa97633013"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": ".ai-workspace/qualification/t008/live-binding-001/TASK.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "6d777ece58832ec57185f47cbe69f714222329e600b3a190acac63d7d744fff2"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "GRANT.md",
+          "root": "runtime",
+          "selector": null,
+          "sha256": "d160e6a9ec523d6fc6cd19b8100408df1692a88d46c40f2108af5fbf99a3194b"
+        }
+      ],
+      "principals": [
+        "/root"
+      ],
+      "targets": [
+        "claude-reviewer-001"
+      ],
+      "territory": [],
+      "tools": [
+        "tools.describe",
+        "source.read",
+        "evidence.read",
+        "review.prepare"
+      ]
+    }
+  },
+  "id": "urn:a-c:T008:review-executive-policy:002",
+  "independence_policy": {
+    "engine": "workspace-regular-file",
+    "object": null,
+    "path": "independence-policy.json",
+    "root": "runtime",
+    "selector": null,
+    "sha256": "dea9d02c8885f30f7367b7802b28cfadaa89ec04bdaa54417e56ed3d6beca0f7"
+  },
+  "limits": {
+    "max_attempt_ms": 1320000,
+    "max_bytes": 16777216,
+    "max_files": 512,
+    "max_history_records": 20000,
+    "max_message_bytes": 8388608,
+    "max_output_bytes": 4194304,
+    "max_wait_ms": 30000,
+    "min_poll_ms": 100
+  },
+  "method_profile": {
+    "id": "urn:a-c:fd-support:method:claude-rc9:executive:1",
+    "sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1",
+    "source": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "build_tenants/graphify/design/fd-method-claude-rc9.json",
+      "root": "product",
+      "selector": null,
+      "sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+    }
+  },
+  "operators": {},
+  "predicates": {},
+  "principals": {
+    "/root": {
+      "actor_id": "/root",
+      "authorship": "root-executive-T008",
+      "family": "codex-executive",
+      "operations": [
+        "tools.describe",
+        "source.read",
+        "workspace.observe",
+        "evidence.read",
+        "context.assemble",
+        "contract.preflight",
+        "dispatch.start",
+        "dispatch.observe",
+        "dispatch.cancel",
+        "events.wait",
+        "return.capture",
+        "return.check"
+      ],
+      "role": "Executive",
+      "role_binding": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "GRANT.md",
+        "root": "runtime",
+        "selector": null,
+        "sha256": "d160e6a9ec523d6fc6cd19b8100408df1692a88d46c40f2108af5fbf99a3194b"
+      },
+      "role_transition": null
+    },
+    "claude-reviewer-001": {
+      "actor_id": "urn:a-c:T008:claude-reviewer:001",
+      "authorship": "t008-independent-reviewer-001",
+      "family": "anthropic-claude",
+      "operations": [
+        "tools.describe",
+        "source.read",
+        "evidence.read",
+        "review.prepare"
+      ],
+      "role": "Reviewer",
+      "role_binding": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "GRANT.md",
+        "root": "runtime",
+        "selector": null,
+        "sha256": "d160e6a9ec523d6fc6cd19b8100408df1692a88d46c40f2108af5fbf99a3194b"
+      },
+      "role_transition": null
+    }
+  },
+  "product": {
+    "authority_binding": {
+      "definition_locator": "/reference_frame_bases/0/authority/3",
+      "mechanism": {
+        "id": "product-policy-preflight/1",
+        "implementation_sha256": "78f70fa8da1a29ce4fadc8cb78743c2293bf7f35947b353218dc2a6b1e03ae94",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/design/fd-support.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "b38eedbe85ee32ef11d945d6a60ed3f9bb2312ac10e873d8ddc9b7986744a005"
+        }
+      },
+      "owner_record": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": ".ai-workspace/tickets/active/T-008-fd-tenant-implementation.md",
+        "root": "product",
+        "selector": {
+          "lines": [
+            785,
+            860
+          ]
+        },
+        "sha256": "51082af52a4126aa85a9f2b7c361ce00e2ddc845af6d0654dd2016aa97633013"
+      },
+      "result_surface": {
+        "consumer": "/root",
+        "namespace": "t008-fp-qualification-001",
+        "root": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/live/evidence"
+      },
+      "scope": {
+        "Executive": "/root",
+        "actor_calls": [
+          {
+            "backend": "actual-claude-cli",
+            "count": 2,
+            "role": "Reviewer"
+          }
+        ],
+        "actor_relation": "The same registered nonauthor Reviewer has two separate actual activations/processes/Contexts; mental continuity unknown. Same model family supplies no independence; actual source-bound premises remain checked.",
+        "call_sequence": [
+          "Same registered nonauthor Reviewer activation1: source-first expectations before candidate exposure; no candidate assessment required in this activation",
+          "Same registered nonauthor Reviewer activation2: candidate/proof assessment with the actual earlier expectation frozen in its ReturnContract"
+        ],
+        "excluded": [
+          "External publication",
+          "Installation or global configuration",
+          "Ontology/design/Product acceptance",
+          "Release or adoption",
+          "Savings, quality gain or complete-calculus claims"
+        ],
+        "historical_worker": {
+          "consumable_closed_return": false,
+          "guide_written_late": true,
+          "native_calls": 1,
+          "new_Worker_call_authorized": false
+        },
+        "next_action_authority": "Caller /root selects only already-authorized next actions; task disposition remains separate from Product acceptance.",
+        "per_call_authority": "Each of the two future actual registered Reviewer activations requires separate exact Root approval after current-source mechanical qualification. No Worker rerun, automatic retry or earlier call approval is reused.",
+        "prior_reviewer_mechanical_attempt": {
+          "attempt": {
+            "id": "sha256:03df642a257f37d2ff9b4c0b7432edce25aae2fcad8a94a4a324acd378717838",
+            "sha256": "03df642a257f37d2ff9b4c0b7432edce25aae2fcad8a94a4a324acd378717838"
+          },
+          "capture": {
+            "id": "sha256:d1310998cdc4fc9d88dba0090d540db223f6e02145583e385d7304842709b810",
+            "sha256": "d1310998cdc4fc9d88dba0090d540db223f6e02145583e385d7304842709b810"
+          },
+          "check": {
+            "id": "sha256:3b2d272bca71db6717b53bd9857d9523b4f282f47c3eaec25adb4fb871e469ed",
+            "sha256": "3b2d272bca71db6717b53bd9857d9523b4f282f47c3eaec25adb4fb871e469ed"
+          },
+          "exposure_scope": "Root-reported mechanical failure before native launch/context delivery; no actual Reviewer F_P source exposure. Not a completed assessment.",
+          "native_context_deliveries": 0,
+          "native_launches": 0
+        },
+        "product_definition": "urn:stdo:product-definition:a-c-implementations",
+        "purpose": "Existing provisional support-tool qualification, genuine source/basis re-entry on a newly frozen review subject",
+        "source_basis_reentry": "Genuine new frozen source/basis subject and claim; earlier failed attempt/pins retain historical identity. No cosmetic relabel or old-candidate retry.",
+        "target": {
+          "path": "build_tenants/graphify/examples/fd-support/LIFECYCLE_QUICKSTART.md",
+          "rights": "Candidate acquisition and F_P assessment only; no guide modification. Existing writes remain historical or separately delegated native Writer contributions.",
+          "root": "product"
+        },
+        "task_id": "urn:a-c:fd-support:T008:live-task:001",
+        "work_id": "T-008"
+      }
+    },
+    "definition": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "stdo_a_c.json",
+      "root": "product",
+      "selector": null,
+      "sha256": "b0e013e6f9dabb9d3f31dd02c1a6909e9fc6418925a8d829f3bb1c2adf3dac1d"
+    },
+    "definition_id": "urn:stdo:product-definition:a-c-implementations"
+  },
+  "schema": "a_c.fd-support.policy/1",
+  "sources": {
+    "method": {
+      "kind": "workspace",
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/live-review-runtime-002/authority/method",
+      "read_scope": [
+        {
+          "kind": "file",
+          "path": "README.md"
+        },
+        {
+          "kind": "file",
+          "path": "FOUNDATIONS.md"
+        },
+        {
+          "kind": "file",
+          "path": "REFERENCE_FRAME.md"
+        },
+        {
+          "kind": "file",
+          "path": "ACTIVATION.md"
+        },
+        {
+          "kind": "file",
+          "path": "EVALUATION.md"
+        },
+        {
+          "kind": "file",
+          "path": "SPEC_METHOD.md"
+        },
+        {
+          "kind": "file",
+          "path": "PRODUCT_DEFINITION.md"
+        },
+        {
+          "kind": "file",
+          "path": "TICKETS.md"
+        },
+        {
+          "kind": "file",
+          "path": "ASSURANCE.md"
+        },
+        {
+          "kind": "file",
+          "path": "EXECUTIVE_BASELINE.md"
+        },
+        {
+          "kind": "file",
+          "path": "DESIGN_MODULE.md"
+        },
+        {
+          "kind": "file",
+          "path": "AXIOMATIC_CALCULUS.md"
+        }
+      ],
+      "writable": false
+    },
+    "native": {
+      "kind": "workspace",
+      "path": "/Users/jim/.local/share/claude/versions",
+      "read_scope": [
+        {
+          "kind": "file",
+          "path": "2.1.302"
+        }
+      ],
+      "writable": false
+    },
+    "product": {
+      "kind": "workspace",
+      "path": "/Users/jim/src/apps/specification_methodology/a_c",
+      "read_scope": [
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/guide-provenance-repair-001/CLOSED_RETURN.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/guide-provenance-repair-001/REPAIR.contract.txt"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/guide-provenance-repair-001/WRITER.receipt.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/guide-provenance-repair-001/guide.diff"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/guide-provenance-repair-001/original.md"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/CLOSED_RETURN.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/CLOSED_SUBJECT.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/OPERATION_SCENARIO_MAP.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/PUBLIC_RETRY_PROOF_INDEX.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/RESULTS.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/SOURCE_MANIFEST.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/interfaces-001/command.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/interfaces-001/sources-after.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/interfaces-001/sources-before.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/interfaces-001/stderr"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/interfaces-001/stdout"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/ordinary-demo-001/01-setup.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/ordinary-demo-001/01-setup.stdout"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/ordinary-demo-001/02-describe.json.stdin"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/ordinary-demo-001/02-describe.json.stdout"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/ordinary-demo-001/03-read-product.json.stdin"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/ordinary-demo-001/03-read-product.json.stdout"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/ordinary-demo-001/05-denied-preflight.json.stdin"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/ordinary-demo-001/05-denied-preflight.json.stdout"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/ordinary-demo-001/06-mcp.stdin"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/ordinary-demo-001/06-mcp.stdout"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/ordinary-demo-001/checks.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/command.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_absent_selection_stays_held/calls/008-dispatch.start/execution.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_absent_selection_stays_held/calls/008-dispatch.start/request.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_absent_selection_stays_held/calls/008-dispatch.start/stdout.bin"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_absent_selection_stays_held/evidence/objects/311f334d746452624e22898e15618900cab40cd3a40a7c4c22210a9e5ba157f9.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_checks_every_selected_basis/calls/008-dispatch.start/execution.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_checks_every_selected_basis/calls/008-dispatch.start/request.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_checks_every_selected_basis/calls/008-dispatch.start/stdout.bin"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_checks_every_selected_basis/evidence/objects/7413184fb54914ea1072cb3b55ff77364441d82cc2740caee5efe48300e2c96e.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_checks_every_selected_registered_id/calls/008-dispatch.start/execution.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_checks_every_selected_registered_id/calls/008-dispatch.start/request.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_checks_every_selected_registered_id/calls/008-dispatch.start/stdout.bin"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_checks_every_selected_registered_id/evidence/objects/989a14ad22cf61d82d679dde1920a1a0d903edcdc3acc50869968e8489213a36.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_checks_every_selected_subject/calls/008-dispatch.start/execution.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_checks_every_selected_subject/calls/008-dispatch.start/request.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_checks_every_selected_subject/calls/008-dispatch.start/stdout.bin"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_checks_every_selected_subject/evidence/objects/3feb1dadd0949a1b9942bd04ace6dd7b390300cd9f08a19248d01a3833e22188.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_empty_selection_stays_held/calls/008-dispatch.start/execution.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_empty_selection_stays_held/calls/008-dispatch.start/request.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_empty_selection_stays_held/calls/008-dispatch.start/stdout.bin"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_empty_selection_stays_held/evidence/objects/21fdeb3d0f396b814a599c50ab56d52e1dffd4f8c5077a70ba6366361eca63b0.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_refuses_false_check/calls/008-dispatch.start/execution.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_refuses_false_check/calls/008-dispatch.start/request.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_refuses_false_check/calls/008-dispatch.start/stdout.bin"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_refuses_false_check/evidence/objects/83c5bb6365f64f2273a51ee7d64a4f81a5db482c955d2b2c0f1a3638e2b808ca.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_refuses_invalid_check_basis/calls/009-dispatch.start/execution.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_refuses_invalid_check_basis/calls/009-dispatch.start/request.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_refuses_invalid_check_basis/calls/009-dispatch.start/stdout.bin"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_refuses_invalid_check_basis/evidence/objects/3f55b0760ef23beceb7d8be7b8112746c1b974d1912acd67755f9223be4a0fb4.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_refuses_wrong_predecessor/calls/008-dispatch.start/execution.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_refuses_wrong_predecessor/calls/008-dispatch.start/request.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_refuses_wrong_predecessor/calls/008-dispatch.start/stdout.bin"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_refuses_wrong_predecessor/evidence/objects/22b921b327158524c37c8218c19d3618f6307db15cfb8b92a96d4e17139fd0b9.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_requires_actual_check/calls/007-dispatch.start/execution.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_requires_actual_check/calls/007-dispatch.start/request.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_requires_actual_check/calls/007-dispatch.start/stdout.bin"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_retry_requires_actual_check/evidence/objects/9c9fb2fe47d17f80e3883b9aff52b94ac07d18e90832d50003ccdeca54eebade.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_selected_retry/calls/001-context.assemble/execution.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_selected_retry/calls/001-context.assemble/request.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_selected_retry/calls/001-context.assemble/stdout.bin"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_selected_retry/calls/006-checks.evaluate/execution.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_selected_retry/calls/006-checks.evaluate/request.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_selected_retry/calls/006-checks.evaluate/stdout.bin"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_selected_retry/calls/007-contract.preflight/execution.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_selected_retry/calls/007-contract.preflight/request.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_selected_retry/calls/007-contract.preflight/stdout.bin"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_selected_retry/calls/008-dispatch.start/execution.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_selected_retry/calls/008-dispatch.start/request.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_selected_retry/calls/008-dispatch.start/stdout.bin"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_selected_retry/calls/011-dispatch.observe/execution.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_selected_retry/calls/011-dispatch.observe/request.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_selected_retry/calls/011-dispatch.observe/stdout.bin"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_selected_retry/evidence/objects/24b50aac892671fbfe487ab712bc2b7a149b2a3bb960c5ab419276137303c51e.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_selected_retry/evidence/objects/310e21f9059eccc36dff5e2a7e7d650e5e5b4f1273b06e5735e24cf82d603303.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_selected_retry/evidence/objects/5b6d3618c11d25a41093a4dd39469f7b725106a18a99f658c41cb734f04d2811.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_selected_retry/evidence/objects/a69473fcfbc5c9edc481d1bc73cf26b8046b50e1baa5182277f4f90aa639b441.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/effects-fixtures/test_ac_support_effects_PublicRetryTests_test_public_selected_retry/evidence/objects/c96a71289d5127c7570eb2113080c84ff2488879667f2b29d2475b80da0ea7a3.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/sources-after.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/sources-before.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/stderr"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/suite-001/stdout"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/typing-001/command.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/typing-001/sources-after.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/typing-001/sources-before.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/typing-001/stderr"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/typing-001/stdout"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/upstream-001/command.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/upstream-001/sources-after.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/upstream-001/sources-before.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/upstream-001/stderr"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/upstream-001/stdout"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/interfaces/integration-002/upstream-001/upstream-report.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-binding-001/TASK.md"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-binding-002/APPLY_CHECKS.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-binding-002/CLOSED_RETURN.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-binding-002/GUIDE.contribution.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-binding-002/guide.diff"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-binding-002/runtime-binding.selected.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-reconciliation-001/CHECKS.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-reconciliation-001/CLIENT_TOOLS.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-reconciliation-001/EVIDENCE_INDEX.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-reconciliation-001/NATIVE.metadata.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-reconciliation-001/RECHECK.changed-source.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-reconciliation-001/SOURCE_ACQUISITION.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-reconciliation-001/SOURCE_MANIFEST.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-reconciliation-001/native.process.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-reconciliation-001/native.result.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-reconciliation-001/writer.request.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-reconciliation-001/writer.response.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-reconciliation-001/writer.tool-use.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-review-runtime-001/prereq-repair-001/CLOSED_RETURN.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-review-runtime-001/prereq-repair-001/FAILURE_OBSERVATION.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-review-runtime-001/prereq-repair-001/POSTCONDITIONS.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-review-runtime-001/prereq-repair-001/PRECONDITIONS.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-runtime-prep-002/actor-transports/worker-001/invocation.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-runtime-prep-002/actor-transports/worker-001/process.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-runtime-prep-002/actor-transports/worker-001/result.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-runtime-prep-002/executive-policy.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-runtime-prep-002/worker-actor-plan.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-runtime-prep-002/worker-call.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-runtime-prep-002/worker-packet.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-runtime-prep-002/worker-return-contract.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-runtime-prep-002/worker-tool-policy.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/live-runtime-prep-002/worker.mcp.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/retry-repair-001/CHECKS.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/retry-repair-001/CLOSED_RETURN.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/qualification/t008/retry-repair-001/SOURCE_MANIFEST.json"
+        },
+        {
+          "kind": "file",
+          "path": ".ai-workspace/tickets/active/T-008-fd-tenant-implementation.md"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/README.md"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/code/ac_graph.py"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/code/ac_support.py"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/code/ac_support_core.py"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/code/ac_support_effects.py"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/design/README.md"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/design/fd-method-claude-rc9.json"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/design/fd-support.md"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/examples/fd-support/LIFECYCLE_QUICKSTART.md"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/examples/fd-support/README.md"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/examples/fd-support/actor_cli.py"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/examples/fd-support/prepare_readonly.py"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/mypy.ini"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/test_env/check_upstream.py"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/test_env/support_fixtures/local_actor.py"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/test_env/test_ac_support_core.py"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/test_env/test_ac_support_effects.py"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/test_env/test_ac_support_interfaces.py"
+        },
+        {
+          "kind": "file",
+          "path": "specification/INTENT.md"
+        },
+        {
+          "kind": "file",
+          "path": "specification/PRODUCT.md"
+        },
+        {
+          "kind": "file",
+          "path": "specification/REFERENCE_FRAME_BASIS.md"
+        },
+        {
+          "kind": "file",
+          "path": "specification/requirements/fd-source-owner-map.md"
+        },
+        {
+          "kind": "file",
+          "path": "specification/requirements/fd-support-tools.md"
+        },
+        {
+          "kind": "file",
+          "path": "specification/requirements/fd-support-verification.md"
+        },
+        {
+          "kind": "file",
+          "path": "stdo_a_c.json"
+        }
+      ],
+      "writable": false
+    },
+    "python": {
+      "kind": "workspace",
+      "path": "/Library/Frameworks/Python.framework/Versions/3.12/bin",
+      "read_scope": [
+        {
+          "kind": "file",
+          "path": "python3.12"
+        }
+      ],
+      "writable": false
+    },
+    "runtime": {
+      "kind": "workspace",
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/qualification/t008/live-review-runtime-002",
+      "read_scope": [
+        {
+          "kind": "file",
+          "path": "GRANT.md"
+        },
+        {
+          "kind": "file",
+          "path": "reviewer-instructions.md"
+        },
+        {
+          "kind": "file",
+          "path": "review-evaluation.md"
+        },
+        {
+          "kind": "file",
+          "path": "RETURN_EVALUATIONS.prepared.json"
+        },
+        {
+          "kind": "file",
+          "path": "governing-index.json"
+        },
+        {
+          "kind": "file",
+          "path": "protocol-origin.json"
+        },
+        {
+          "kind": "file",
+          "path": "review-claim.json"
+        },
+        {
+          "kind": "file",
+          "path": "candidate-manifest.json"
+        },
+        {
+          "kind": "file",
+          "path": "independence-policy.json"
+        },
+        {
+          "kind": "file",
+          "path": "expectation-return-contract.json"
+        },
+        {
+          "kind": "file",
+          "path": "expectation-call.json"
+        },
+        {
+          "kind": "file",
+          "path": "expectation-packet.json"
+        },
+        {
+          "kind": "file",
+          "path": "system-expectation.txt"
+        },
+        {
+          "kind": "file",
+          "path": "reviewer-tool-policy.json"
+        },
+        {
+          "kind": "file",
+          "path": "reviewer.mcp.json"
+        },
+        {
+          "kind": "file",
+          "path": "expectation-actor-plan.json"
+        },
+        {
+          "kind": "file",
+          "path": "authority/METHOD_INDEX.json"
+        },
+        {
+          "kind": "file",
+          "path": "authority/CLAUSE_POINTERS.json"
+        },
+        {
+          "kind": "file",
+          "path": "authority/CUSTODY_MANIFEST.json"
+        },
+        {
+          "kind": "file",
+          "path": "REENTRY.neutral.md"
+        },
+        {
+          "kind": "file",
+          "path": "assessment-return-contract.json"
+        },
+        {
+          "kind": "file",
+          "path": "assessment-packet.json"
+        },
+        {
+          "kind": "file",
+          "path": "assessment-call.json"
+        },
+        {
+          "kind": "file",
+          "path": "assessment-instructions.md"
+        },
+        {
+          "kind": "file",
+          "path": "assessment-expectation.json"
+        },
+        {
+          "kind": "directory",
+          "path": "protocol"
+        },
+        {
+          "kind": "directory",
+          "path": "authority/headings"
+        }
+      ],
+      "writable": false
+    },
+    "stdlib": {
+      "kind": "workspace",
+      "path": "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12",
+      "read_scope": [
+        {
+          "kind": "directory",
+          "path": "json"
+        }
+      ],
+      "writable": false
+    }
+  }
+}

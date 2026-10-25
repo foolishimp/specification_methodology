@@ -23,3 +23,8 @@ Use the selected return contract. Under this native binding:
 - An unperformed assessment has no result and belongs in not_performed.
 
 Close with original frame, activation, subject, method/observation basis, actor and consumer. Add exact current artifact/effect evidence without replacing the original activation basis. Retain failed attempts and unknown costs. After source/tool/host/grant/candidate changes or a counterexample, invalidate only affected reliance with its cause and preserve unrelated valid evidence. Never declare acceptance from test totals.
+
+At a Product crossing or controlled-view handoff, use [composition](composition.md)
+to rebind the actual actor/purpose/route and preserve eligibility, exposure and
+continuation obligations. Parent permission and unchanged candidate bytes alone
+do not establish child access or current evidence.

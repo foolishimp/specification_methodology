@@ -9,6 +9,10 @@ Help the user complete the requested work under the selected Product and exact m
 
 1. Identify the outcome and changed owner: requirement, design, implementation, assessment or release. Select exactly one applicable Product Definition, or an explicitly authorized cross-Product relation. Read the applicable local bootstrap and deciding sources. If an activated Context already supplies the exact binding, use it and acquire only its missing material sources.
 2. Verify the pinned installation and operation compatibility through [basis](references/basis.md) and [tools](references/tools.md). Preserve sufficient existing authorization. Ask only for a material missing decision, not repeated consent for already granted work.
+   For cross-Product work or a required composition-controlled view, follow
+   [composition](references/composition.md) at acquisition, child handoff and recovery.
+   It resolves actual edges, inspects the trusted a_c binding and preserves per-route
+   information eligibility; a graph path is not a grant.
 3. Choose the smallest sufficient path. For an authorized one-file correction with adequate requirement/design, enter the bound direct Writer path: acquire current preimage, make only that effect through its declared tool, perform focused proof and return to its consumer. Do not require a new ticket, Executive or independent reviewer solely because work exists.
 4. Use [delegation](references/delegation.md) when a material context, capability, ownership or required independence boundary calls for it. An Executive coordinates without mutating; a separately granted Worker/Writer implements. Do not launch actors unless the current grant permits them.
 5. Make the requested change and inspect actual responses and postimages. Read [recovery](references/recovery.md) on continuation, interruption, refusal or stale evidence. An unsupported required tool withholds the dependent claim. An uncertain effect must be reconciled before repeating it.

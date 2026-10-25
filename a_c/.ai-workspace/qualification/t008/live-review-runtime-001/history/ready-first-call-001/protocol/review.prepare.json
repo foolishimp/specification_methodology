@@ -1,0 +1,230 @@
+{
+  "$defs": {
+    "ArtifactRef": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "sha256": {
+          "$ref": "#/$defs/Sha256"
+        }
+      },
+      "required": [
+        "id",
+        "sha256"
+      ],
+      "type": "object"
+    },
+    "Id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "JsonPointer": {
+      "pattern": "^(?:/(?:[^~]|~[01])*)*$",
+      "type": "string"
+    },
+    "Sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "SourceRef": {
+      "additionalProperties": false,
+      "properties": {
+        "engine": {
+          "enum": [
+            "workspace-regular-file",
+            "immutable-git-blob",
+            "retained-evidence"
+          ]
+        },
+        "object": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "pattern": "^(?:[0-9a-f]{40}|[0-9a-f]{64})$",
+              "type": "string"
+            }
+          ]
+        },
+        "path": {
+          "$ref": "#/$defs/Id"
+        },
+        "root": {
+          "$ref": "#/$defs/Id"
+        },
+        "selector": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "lines": {
+                  "items": false,
+                  "maxItems": 2,
+                  "minItems": 2,
+                  "prefixItems": [
+                    {
+                      "minimum": 1,
+                      "type": "integer"
+                    },
+                    {
+                      "minimum": 1,
+                      "type": "integer"
+                    }
+                  ],
+                  "type": "array"
+                }
+              },
+              "required": [
+                "lines"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "json_pointer": {
+                  "$ref": "#/$defs/JsonPointer"
+                }
+              },
+              "required": [
+                "json_pointer"
+              ],
+              "type": "object"
+            }
+          ]
+        },
+        "sha256": {
+          "$ref": "#/$defs/Sha256"
+        }
+      },
+      "required": [
+        "engine",
+        "root",
+        "path",
+        "object",
+        "sha256",
+        "selector"
+      ],
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "arguments": {
+      "additionalProperties": false,
+      "properties": {
+        "candidate": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/SourceRef"
+            }
+          ]
+        },
+        "claim": {
+          "$ref": "#/$defs/SourceRef"
+        },
+        "comparison": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/SourceRef"
+            }
+          ]
+        },
+        "expectation_body": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "source_inputs": {
+                  "items": {
+                    "$ref": "#/$defs/ArtifactRef"
+                  },
+                  "type": "array"
+                },
+                "text": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "text",
+                "source_inputs"
+              ],
+              "type": "object"
+            }
+          ]
+        },
+        "expectations": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/ArtifactRef"
+            }
+          ]
+        },
+        "phase": {
+          "enum": [
+            "expectation",
+            "candidate"
+          ]
+        },
+        "proof": {
+          "items": {
+            "$ref": "#/$defs/SourceRef"
+          },
+          "type": "array"
+        },
+        "sources": {
+          "items": {
+            "$ref": "#/$defs/SourceRef"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "phase",
+        "claim",
+        "sources",
+        "candidate",
+        "proof",
+        "comparison",
+        "expectations",
+        "expectation_body"
+      ],
+      "type": "object"
+    },
+    "id": {
+      "$ref": "#/$defs/Id"
+    },
+    "operation": {
+      "const": "review.prepare"
+    },
+    "schema": {
+      "const": "a_c.fd-support.request/1"
+    }
+  },
+  "required": [
+    "schema",
+    "id",
+    "operation",
+    "arguments"
+  ],
+  "type": "object"
+}

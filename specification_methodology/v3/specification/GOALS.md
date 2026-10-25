@@ -4,6 +4,16 @@ This file states the current work wave of this source project: what is being wor
 
 ## Current Selection
 
+The owner selects the reviewed recursive Product composition implementation under
+[T-005](../.ai-workspace/tickets/active/T-005-product-composition-implementation.md)
+and [PRODUCT_COMPOSITION](requirements/PRODUCT_COMPOSITION.md). The mutable common
+source is an unreleased increment over published 3.0.1 RC1; no successor version,
+installed adoption or release publication is selected. Manager and a_c increments
+remain separately owned; source-matched frames and a bounded changed-clause
+representation are required. Independent review and acceptance remain open.
+
+### Earlier 3.0.1 delivery and retained obligations
+
 The owner selects STDO 3.0.1 delivery under
 [T-004](../.ai-workspace/tickets/active/T-004-STDO-3.0.1-delivery.md) and the
 [bounded common amendment](requirements/STDO_3_0_1.md). The first target is

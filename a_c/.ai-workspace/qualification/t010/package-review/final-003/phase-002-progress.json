@@ -1,0 +1,102 @@
+{
+  "controls": [
+    {
+      "expected": null,
+      "name": "actual-public-projection-complete-declared-finite-closure",
+      "observed": {
+        "included": 2,
+        "seeds": [
+          "urn:a-c:generation:0657852b6fd1fa48457c3f7d:record:5fec0f21265016ca449d4389511dce49"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "expected": 2,
+      "name": "actual-carrier-derived-label-tamper-refused",
+      "observed": {
+        "returncode": 2,
+        "stderr": "{\"status\": \"refusal\", \"reason\": \"graph differs from complete semantic encoding\"}\n"
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "tampered-carrier-does-not-create-output",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": 2,
+      "name": "actual-source-tamper-refused-after-inventory-reindex",
+      "observed": {
+        "returncode": 2,
+        "stderr": "{\"status\": \"refusal\", \"reason\": \"source bytes changed: standards/ACTIVATION.md\"}\n"
+      },
+      "passed": true
+    },
+    {
+      "expected": 2,
+      "name": "actual-wrong-model-review-refused-after-release-and-inventory-reindex",
+      "observed": {
+        "returncode": 2,
+        "stderr": "{\"status\": \"refusal\", \"reason\": \"public receipt source/model/raw-artifact bindings differ from the actual candidate\"}\n"
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "sealed-five-raw-artifacts-unchanged-after-review",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "named-code-pins-unchanged-after-review",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "source-eightyone-members-unchanged-after-review",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "all4296-preexisting-source-study-guards-conserved-after-review",
+      "observed": {
+        "guarded_files": 4296,
+        "mismatches": []
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "preexisting-tracked-modified-bytes-conserved",
+      "observed": {
+        "entries": 23,
+        "mismatches": []
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "exact-frozen-archive-size-and-sha-unchanged",
+      "observed": {
+        "bytes": 10087425,
+        "sha256": "2b33530c20a17dd27033e8b34b1af497de7a4e0f3b8165a22d0821298516e386"
+      },
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "baseline-extraction-and-live-bundle-unchanged",
+      "observed": {
+        "files": 213
+      },
+      "passed": true
+    }
+  ],
+  "scratch": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-common-package-review-wxp9n7x5"
+}

@@ -1,0 +1,61 @@
+{
+  "authority_source": {
+    "engine": "workspace-regular-file",
+    "object": null,
+    "path": ".ai-workspace/qualification/t008/live-binding-001/TASK.md",
+    "root": "product",
+    "selector": null,
+    "sha256": "6d777ece58832ec57185f47cbe69f714222329e600b3a190acac63d7d744fff2"
+  },
+  "carrier": "a_c.fd-support.closed-return/1",
+  "id": "urn:a-c:T008:review-expectation-return:001",
+  "output_slot": "final_stdout_object",
+  "proof": {
+    "claim": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "review-claim.json",
+      "root": "runtime",
+      "selector": null,
+      "sha256": "2f2526a38bb4e61b3a8baa4508ee1c7035dadce6f7956ac3ddde318eebaef594"
+    },
+    "comparison": null,
+    "expectations": null,
+    "independence_policy": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "independence-policy.json",
+      "root": "runtime",
+      "selector": null,
+      "sha256": "d91419999896321dc29991d8edc6aaee049440924e3fec149eee094894e9db22"
+    },
+    "predicate_ids": [],
+    "proof_sources": []
+  },
+  "required_evaluations": [
+    {
+      "id": "source-derived-expectations",
+      "predicate": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "review-evaluation.md",
+        "root": "runtime",
+        "selector": null,
+        "sha256": "954ebdfbf9bbedab0f3f59cd62d11b1a1fb492fb4344f974b3fc25a26d044889"
+      }
+    },
+    {
+      "id": "integrated-review",
+      "predicate": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "review-evaluation.md",
+        "root": "runtime",
+        "selector": null,
+        "sha256": "954ebdfbf9bbedab0f3f59cd62d11b1a1fb492fb4344f974b3fc25a26d044889"
+      }
+    }
+  ],
+  "role": "Reviewer",
+  "schema": "a_c.fd-support.return-contract/1"
+}

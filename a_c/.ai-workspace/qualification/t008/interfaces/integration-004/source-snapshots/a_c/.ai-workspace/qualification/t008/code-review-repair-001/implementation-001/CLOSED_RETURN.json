@@ -1,0 +1,155 @@
+{
+  "activation": "T008-code-review-repair-001-implementation-001",
+  "actor": "/root/ac_fd_effects_worker",
+  "basis": {
+    "HOW_sha256": "e3c5e6e83d9be525a0ca44fc4e64c9077e33958337bc29807014715a50592939",
+    "Root_contract": {
+      "path": "IMPLEMENTATION.contract.txt",
+      "sha256": "30de765cea96dfd2ca48d8e12421d05245130834b04590cdbd55a4a286932597"
+    },
+    "Root_reported_admission": {
+      "path": "IMPLEMENTATION.admission.json",
+      "sha256": "1c4105bca39eebde8a4325b6a5b2a9f35f7d61efb90470f34b7721974cf9a295"
+    },
+    "T008_sha256": "2f59468cbecac464589ee99d79f32e4a12f551cd308c8a3d3e9ac52df8d7278f",
+    "admitter": "/root",
+    "design_publication_sha256": "d93b934577fec5fd86a2906ac5aab3a19fd5ce24d982d5002b7ad5ca2ed1af43",
+    "negative_reproduction_return_sha256": "afb151bcf67e9bcc57429ea80e88b98ebd7e569ad6d4f77db8fe9893773c3364"
+  },
+  "candidate": [
+    {
+      "after_sha256": "4d41a2373def237136cefe8b186c196c2e4376137c221ae4675c274abed5ad31",
+      "before_sha256": "4d1ea7fe98ec1b53f2a19d9a2fef2b3fbb070624c955fbb1e9e48f5cc88011b1",
+      "bytes": 20703,
+      "diff_lines": 11,
+      "path": "a_c/build_tenants/graphify/code/ac_support.py",
+      "snapshot": "candidate/ac_support.py"
+    },
+    {
+      "after_sha256": "5395fd2947157541255168c6a1235136df64e9197d5032b25b31a0f071a4fe74",
+      "before_sha256": "78f70fa8da1a29ce4fadc8cb78743c2293bf7f35947b353218dc2a6b1e03ae94",
+      "bytes": 212740,
+      "diff_lines": 97,
+      "path": "a_c/build_tenants/graphify/code/ac_support_core.py",
+      "snapshot": "candidate/ac_support_core.py"
+    },
+    {
+      "after_sha256": "36f75671b9dbce14e5f06811e180b662deb635b37921695668337466ace9bf25",
+      "before_sha256": "9108d6ad10e412f5a0e981c88c06c7b37cb913a24286282da9aae752f239a586",
+      "bytes": 84271,
+      "diff_lines": 138,
+      "path": "a_c/build_tenants/graphify/code/ac_support_effects.py",
+      "snapshot": "candidate/ac_support_effects.py"
+    },
+    {
+      "after_sha256": "6b1ce2819e0e96aad32fb87feccb3aeaee1cd37a85c91aa4e1b693b9a15dd709",
+      "before_sha256": "7cf93cf0bc83713a74f47284e9c3acc785c08cdc3b4807b573f463465541ec07",
+      "bytes": 100818,
+      "diff_lines": 125,
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_core.py",
+      "snapshot": "candidate/test_ac_support_core.py"
+    },
+    {
+      "after_sha256": "4c96735d16f6dd67d24b89fb5a6b5b7bdc376de13d8c98c14b833ce346c0662e",
+      "before_sha256": "62aa2967c9bba8b151555b3d23d6d794ca746e6ba329994bac32316f28a1bd20",
+      "bytes": 82247,
+      "diff_lines": 362,
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_effects.py",
+      "snapshot": "candidate/test_ac_support_effects.py"
+    },
+    {
+      "after_sha256": "7722ddcbc48ab7dd48e824ccdbec320f30e80dc3b63c0881564ff7ed97ee3450",
+      "before_sha256": "3ea958e61ec240b74d33f21185bf0045246f4e756313a2327f8f8bbe3cf4affc",
+      "bytes": 61347,
+      "diff_lines": 250,
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py",
+      "snapshot": "candidate/test_ac_support_interfaces.py"
+    }
+  ],
+  "consumer": "/root",
+  "guard_invariance": {
+    "adverse_fixture_symlinks": 3,
+    "authorized_existing_files_changed": 6,
+    "conditional_new_fixture_created": false,
+    "historical_reproduction_files": 1819,
+    "manifest_sha256": "57f62d0f359d59f8e1a3a127067fbe559df9b81bad5cf8a7d94c2495c196d4bf",
+    "original_fixture_helpers_unchanged": true,
+    "proof_regular_files": 4933,
+    "readonly_guards": 9
+  },
+  "history_absence_contract": "No verified completion or committed intent plus complete protected query with no matching canonical Writer-intent envelope before fresh planning. An envelope without its owning marker is history_incomplete/unknown, not effect/admission/end proof. Recovery observations require a committed marker; typed support only.",
+  "limits": [
+    "Local deterministic fixture/process evidence only; zero provider/native-F_P/network calls",
+    "F1 qualification gate/controlled producer tests establish no actual operator or F_P semantic qualification",
+    "No full tenant/upstream/demo rerun in this grant; Root integration Worker owns final broad run",
+    "No common WHAT/PD/HOW/profile/T008/guide/README/Graphify/codec/grounding/generation/Git/global/install effects",
+    "Private typing caches and historical adverse symlinks retained as execution residue, not source authority",
+    "No Product acceptance/semantic fitness/benefit/efficiency/whole-calculus/RC/install/release claim",
+    "Existing Root production bindings pinned to old code need separate renewal before actual activation"
+  ],
+  "next_action": "STOP source edits; closed candidate ready for Root independent review/integration; no actual actor call authorization",
+  "outcomes": {
+    "F1": "Exact required-P authenticated applicable F no longer needs contributor coverage; subject/basis/predicate/cardinality/gaps/mandatory precedence retained",
+    "F2": "Actual typed Context source/model/selected-fit inputs are in rechecks at admission/dispatch/supervisor; quoted/opaque data not mined, no selected-byte substitution",
+    "F3": "Core pure current Writer authority; null-plan public membrane; identity-locked claim/replay/committed-intent recovery then fresh planning/effect; original history recovered and no repeats under concurrent/lost-response/fault controls"
+  },
+  "proof": {
+    "CONTROL_MAP.json": {
+      "path": "CONTROL_MAP.json",
+      "sha256": "27a993a2cee9fcb1c6434f69970510173998046f67889a11a6e933cc89936a85"
+    },
+    "IMPLEMENTATION.admission.json": {
+      "path": "IMPLEMENTATION.admission.json",
+      "sha256": "1c4105bca39eebde8a4325b6a5b2a9f35f7d61efb90470f34b7721974cf9a295"
+    },
+    "IMPLEMENTATION.contract.txt": {
+      "path": "IMPLEMENTATION.contract.txt",
+      "sha256": "30de765cea96dfd2ca48d8e12421d05245130834b04590cdbd55a4a286932597"
+    },
+    "INVARIANCE.json": {
+      "path": "INVARIANCE.json",
+      "sha256": "0f62d91b72762a62707fc02322267d8dd16e641de98ebface0bc44833a097b6f"
+    },
+    "MANIFEST.json": {
+      "path": "MANIFEST.json",
+      "sha256": "57f62d0f359d59f8e1a3a127067fbe559df9b81bad5cf8a7d94c2495c196d4bf"
+    },
+    "ORACLES.json": {
+      "path": "ORACLES.json",
+      "sha256": "fa54d09d23374ef702c589a22566c73f6d14ab98970e901abd571ba512cadecf"
+    },
+    "PATCH.diff": {
+      "path": "PATCH.diff",
+      "sha256": "6f7aa7c764fccf3d7793f06139e15d42095d54c20bfde1f1ea4a259e2f85b973"
+    },
+    "REPORT.md": {
+      "path": "REPORT.md",
+      "sha256": "99fa2326a77f02a2e55ce65be7508330e7dea54c6510395d0d5bfd03452264a1"
+    },
+    "RESULTS.json": {
+      "path": "RESULTS.json",
+      "sha256": "65f44427b2765a95071bd72f420d3764376d1b3cb0c9ac426a8b73e09679b2c2"
+    }
+  },
+  "residuals": [
+    "Independent code review and integrated qualification",
+    "Root-controlled current mechanism/runtime owner binding renewal",
+    "Any further design/material semantic gap returns to Root before code chooses it"
+  ],
+  "role": "Worker realization_refactor",
+  "schema": "a_c.external-worker.closed-return/1",
+  "standing": "CLOSED provisional implementation of the3 bounded independently supported code findings; separate independent code/integrated assessment pending",
+  "tests": {
+    "both_final_runs_exact_source_before_after": true,
+    "execution": "runs/004-final-selected/execution.json",
+    "initial_typing_failure_retained": "runs/003-strict-typing",
+    "passed": 38,
+    "prior_test_runs": "runs/001-initial-writer; runs/002-review-controls",
+    "reported_seconds": "10.745",
+    "selected_methods": 38,
+    "skipped": 0,
+    "strict_execution": "runs/005-final-strict/execution.json",
+    "strict_explicit_files": 6,
+    "strict_normal_imports": true
+  }
+}

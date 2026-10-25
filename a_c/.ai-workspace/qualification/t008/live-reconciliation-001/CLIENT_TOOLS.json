@@ -1,0 +1,1012 @@
+{
+  "handling": "Raw provider transport contains hidden reasoning and is referenced only; no reasoning content copied. Entries extract public client tool-call/result coordinates and metadata.",
+  "limits": [
+    "This matches only emitted client requests/results in the retained stream. It proves no mental acquisition, complete provider scope, later absence of unobserved requests, or descendant end."
+  ],
+  "observed_client_tool_calls": 22,
+  "observed_tool_results": 22,
+  "pending_observed_tool_use_ids": [],
+  "schema": "a_c.T008.observed-client-tools/1",
+  "server_content_type_counts": {
+    "advisor_tool_result": 1,
+    "server_tool_use": 1
+  },
+  "source": {
+    "bytes": 1566183,
+    "path": "a_c/.ai-workspace/qualification/t008/live-runtime-prep-002/actor-transports/worker-001/vendor.stdout",
+    "sha256": "218f243a0abeb920a0a436897877f549e439d3e3896284cc31a0a483a4933f36"
+  },
+  "terminal_vendor_result_events": [],
+  "tools": [
+    {
+      "describe_operation": null,
+      "encoding": null,
+      "operation": "tools.describe",
+      "ordinal": 1,
+      "request": {
+        "canonical_json_sha256": "9de6695412f39ce5ff265cee7bef5488753d0e3b0d41f74e7b2507a1dadbb0cb",
+        "carrier": "vendor.stdout",
+        "json_pointer": "/message/content/0/input",
+        "jsonl_line": 6,
+        "line_without_newline_sha256": "0cc130f2238c8489bc1d352dbd2ea38255b3849ad1b39d514f921c38c5446c51"
+      },
+      "request_id": "w001-describe-all",
+      "result": {
+        "block_canonical_sha256": "5ef130233e3276582343b08e5fa953d463d7a3a4e53093f51182b1e390e8e622",
+        "is_error": false,
+        "json_pointer": "/message/content/0",
+        "jsonl_line": 7,
+        "line_without_newline_sha256": "2c7d728f7f30f14b938db8a3110240baa9dc4dc851c3289f28c5c3bc0a60b662",
+        "structured_public_response": false,
+        "wrapper": {
+          "character_count": 144030,
+          "kind": "native_maximum_result_tokens",
+          "text_sha256": "6879cc633068b7b484134046f38c5dbef43957878563f9f727ed9519ea1578be",
+          "text_utf8_bytes": 2159,
+          "vendor_saved_path_reported": "/Users/jim/.claude/projects/-private-var-folders-rz-r6wxvr0n15d906k2s0jw8j2h0000gn-T-t008-claude-worker-001-n4hj0go7/535f6348-4431-46d7-8be9-cc4226928f8b/tool-results/mcp-ac-tools_describe-1792359202489.txt"
+        }
+      },
+      "source": null,
+      "tool_name": "mcp__ac__tools_describe",
+      "tool_use_id": "toolu_01HkL7wWD9dkhikdgRKfyZjf"
+    },
+    {
+      "describe_operation": null,
+      "encoding": "utf8",
+      "operation": "source.read",
+      "ordinal": 2,
+      "request": {
+        "canonical_json_sha256": "2cfb28207da3f67083d067a38623e5c4140b9cf0d2223e75ad05d43c2aaa1480",
+        "carrier": "vendor.stdout",
+        "json_pointer": "/message/content/0/input",
+        "jsonl_line": 8,
+        "line_without_newline_sha256": "4779378f777a9b83fefe9b216560405c1b445515fdc0447fe61c701f990d8306"
+      },
+      "request_id": "w002-read-task",
+      "result": {
+        "OperationEvidence": {
+          "id": "sha256:9f883759de6c4500b9c93f58d73d2c0d69976c026eb71dc1a6c15d35a8dfebae",
+          "sha256": "9f883759de6c4500b9c93f58d73d2c0d69976c026eb71dc1a6c15d35a8dfebae"
+        },
+        "artifact": null,
+        "block_canonical_sha256": "6f6fb6b65c878293cc49eed10caeba101a679f2f364d356e2e0a88ad787a370a",
+        "delivered_utf8": {
+          "bytes": 6829,
+          "claim": "Complete selected utf8 content occurs in the actual client tool-result; no mental attention claim.",
+          "content_matches_exact_current_selected_source": true,
+          "parent_sha256": "6d777ece58832ec57185f47cbe69f714222329e600b3a190acac63d7d744fff2",
+          "selected_sha256": "6d777ece58832ec57185f47cbe69f714222329e600b3a190acac63d7d744fff2"
+        },
+        "is_error": false,
+        "json_pointer": "/message/content/0",
+        "jsonl_line": 9,
+        "line_without_newline_sha256": "f907df90d8249ba87dc20a85d40ec203217f1db9fa44f997e69699f7c332cef6",
+        "operation": "source.read",
+        "response_text_sha256": "398c29c91b8afca2075df097ba988ec9e3e116d423acbc7c3b2fa24028a3ad0d",
+        "status": "ok",
+        "structured_public_response": true
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": ".ai-workspace/qualification/t008/live-binding-001/TASK.md",
+        "root": "product",
+        "selector": null,
+        "sha256": "6d777ece58832ec57185f47cbe69f714222329e600b3a190acac63d7d744fff2"
+      },
+      "tool_name": "mcp__ac__source_read",
+      "tool_use_id": "toolu_01WSU28aS1cGqkAEG7jX6u14"
+    },
+    {
+      "describe_operation": null,
+      "encoding": "utf8",
+      "operation": "source.read",
+      "ordinal": 3,
+      "request": {
+        "canonical_json_sha256": "5ce8b9ab4ec15615a58d30df68f8af181f65c8df4362071f316c80c064aed1bb",
+        "carrier": "vendor.stdout",
+        "json_pointer": "/message/content/0/input",
+        "jsonl_line": 10,
+        "line_without_newline_sha256": "8ed09eab5447a9170d4a124937dca187058c9d012c10a09509b5d1d3f7b9c8d9"
+      },
+      "request_id": "w003-read-instructions",
+      "result": {
+        "OperationEvidence": {
+          "id": "sha256:03b444eeb6e586727262a7b4dd636467f4b3109b5d901bd40c179a8b54a996f4",
+          "sha256": "03b444eeb6e586727262a7b4dd636467f4b3109b5d901bd40c179a8b54a996f4"
+        },
+        "artifact": null,
+        "block_canonical_sha256": "bcf0edde057f4514f9d179b9cfeb064c9573661866096ec36651122285c8fe18",
+        "delivered_utf8": {
+          "bytes": 3364,
+          "claim": "Complete selected utf8 content occurs in the actual client tool-result; no mental attention claim.",
+          "content_matches_exact_current_selected_source": true,
+          "parent_sha256": "66bb45f919bc4f9ead81076a4acafbc2d2a46566df73c89f43147967eb5cc4b4",
+          "selected_sha256": "66bb45f919bc4f9ead81076a4acafbc2d2a46566df73c89f43147967eb5cc4b4"
+        },
+        "is_error": false,
+        "json_pointer": "/message/content/0",
+        "jsonl_line": 11,
+        "line_without_newline_sha256": "8f519e74353621f8058b53b4cac36c36d7d6fe8aa5db14f4e6a74d737f425937",
+        "operation": "source.read",
+        "response_text_sha256": "ade4f312060da434a9e236c5070f453736064d5955cc584f06fdb1eb1eb88ead",
+        "status": "ok",
+        "structured_public_response": true
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "worker-instructions.md",
+        "root": "runtime",
+        "selector": null,
+        "sha256": "66bb45f919bc4f9ead81076a4acafbc2d2a46566df73c89f43147967eb5cc4b4"
+      },
+      "tool_name": "mcp__ac__source_read",
+      "tool_use_id": "toolu_01BjnhnYkgDctibuj1qxpwd3"
+    },
+    {
+      "describe_operation": null,
+      "encoding": "utf8",
+      "operation": "source.read",
+      "ordinal": 4,
+      "request": {
+        "canonical_json_sha256": "79b018e93dbfd069eaac36e6a542d74a120e4d5cadcdc5ea627869d9477f3151",
+        "carrier": "vendor.stdout",
+        "json_pointer": "/message/content/0/input",
+        "jsonl_line": 12,
+        "line_without_newline_sha256": "cf600258dd2ae6aa10c563e1935ebef918c1902d19382a27f2fb69ec42f86ba4"
+      },
+      "request_id": "w004-read-grant",
+      "result": {
+        "OperationEvidence": {
+          "id": "sha256:6d499952ed0975cdb64967789ba4fd7f8de6c08860d42588613701aaa0a9603e",
+          "sha256": "6d499952ed0975cdb64967789ba4fd7f8de6c08860d42588613701aaa0a9603e"
+        },
+        "artifact": null,
+        "block_canonical_sha256": "e3aa64c68a1030cdb7522a4ea703121f90c580f830cad02769133668efe30c50",
+        "delivered_utf8": {
+          "bytes": 1536,
+          "claim": "Complete selected utf8 content occurs in the actual client tool-result; no mental attention claim.",
+          "content_matches_exact_current_selected_source": true,
+          "parent_sha256": "bc26d713a2f162e61aaf96011f0931fa6d9b1656e21c611e6c4f23265f5b3ac8",
+          "selected_sha256": "bc26d713a2f162e61aaf96011f0931fa6d9b1656e21c611e6c4f23265f5b3ac8"
+        },
+        "is_error": false,
+        "json_pointer": "/message/content/0",
+        "jsonl_line": 13,
+        "line_without_newline_sha256": "b906f77b09fdad2caacd7d5804da6560d93349644f6ef302370d19f441f5042c",
+        "operation": "source.read",
+        "response_text_sha256": "17870703d873918bade4f400a0b6f19bf3712c6607c66e5c6a9594f7f6702f01",
+        "status": "ok",
+        "structured_public_response": true
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "GRANT.md",
+        "root": "runtime",
+        "selector": null,
+        "sha256": "bc26d713a2f162e61aaf96011f0931fa6d9b1656e21c611e6c4f23265f5b3ac8"
+      },
+      "tool_name": "mcp__ac__source_read",
+      "tool_use_id": "toolu_01HW2Jy2ab5ZCVfLFcrFm8up"
+    },
+    {
+      "describe_operation": null,
+      "encoding": "utf8",
+      "operation": "source.read",
+      "ordinal": 5,
+      "request": {
+        "canonical_json_sha256": "b4fa18d96c7d115c70e38efa08c74dddcbfaa4f3e87d46799e8f4e71a71f0bc4",
+        "carrier": "vendor.stdout",
+        "json_pointer": "/message/content/0/input",
+        "jsonl_line": 14,
+        "line_without_newline_sha256": "42801329f57e9656ba6408cb9ccb31b867695b152cd5842e339a36705052cafa"
+      },
+      "request_id": "w005-read-return-contract",
+      "result": {
+        "OperationEvidence": {
+          "id": "sha256:42e9f52846d4b316558bfeafdbedb059a9af573ee05fa52f56e0b5df9efe4131",
+          "sha256": "42e9f52846d4b316558bfeafdbedb059a9af573ee05fa52f56e0b5df9efe4131"
+        },
+        "artifact": null,
+        "block_canonical_sha256": "a165f33f29f5ae2d984143abe8531bbc6dceb15ca84e67609bfd8e398df15e18",
+        "delivered_utf8": {
+          "bytes": 1891,
+          "claim": "Complete selected utf8 content occurs in the actual client tool-result; no mental attention claim.",
+          "content_matches_exact_current_selected_source": true,
+          "parent_sha256": "b548d16766a3486cc98a6cb7e8990c2824153d72bfc58cbb7e8003c626c3dcd7",
+          "selected_sha256": "b548d16766a3486cc98a6cb7e8990c2824153d72bfc58cbb7e8003c626c3dcd7"
+        },
+        "is_error": false,
+        "json_pointer": "/message/content/0",
+        "jsonl_line": 15,
+        "line_without_newline_sha256": "690baeaf3e536606fe3602d71caf0b1fbee104648383d3a7384776e05343228a",
+        "operation": "source.read",
+        "response_text_sha256": "529aa678d995aeefb8be6d4f9df823bc4ff392607c7a80e15baf7fbbb64544f0",
+        "status": "ok",
+        "structured_public_response": true
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "worker-return-contract.json",
+        "root": "runtime",
+        "selector": null,
+        "sha256": "b548d16766a3486cc98a6cb7e8990c2824153d72bfc58cbb7e8003c626c3dcd7"
+      },
+      "tool_name": "mcp__ac__source_read",
+      "tool_use_id": "toolu_01W41R9HqhdCAkCGQs53hY7S"
+    },
+    {
+      "describe_operation": "work.write",
+      "encoding": null,
+      "operation": "tools.describe",
+      "ordinal": 6,
+      "request": {
+        "canonical_json_sha256": "db81f0688f88e6d6ac8ec412ee158fe3ec1a821e4af194fb7bce1b99c6b769af",
+        "carrier": "vendor.stdout",
+        "json_pointer": "/message/content/0/input",
+        "jsonl_line": 21,
+        "line_without_newline_sha256": "ba44ca533525aa134dff7825b56f9f07b6a6a8548838e094cee9a59f90e30b4a"
+      },
+      "request_id": "w006-describe-work-write",
+      "result": {
+        "OperationEvidence": {
+          "id": "sha256:bac9562e6716fc1472f439de0c15c1b3e7b348e90dc30f33817a6b3b8177794d",
+          "sha256": "bac9562e6716fc1472f439de0c15c1b3e7b348e90dc30f33817a6b3b8177794d"
+        },
+        "artifact": null,
+        "block_canonical_sha256": "f43257db3b4ba306a4ddbce30cdef277684fb1fa2551bb61e5cad0458b3a1d02",
+        "is_error": false,
+        "json_pointer": "/message/content/0",
+        "jsonl_line": 22,
+        "line_without_newline_sha256": "68a42ea9b769d431f9df78d79922b92c5ecf28f4bfd032c18119c3e5bb7fc927",
+        "operation": "tools.describe",
+        "response_text_sha256": "5cf054b05b25209511495a071e37af8d21b6779929fb86cf579c85509c404ae8",
+        "status": "ok",
+        "structured_public_response": true
+      },
+      "source": null,
+      "tool_name": "mcp__ac__tools_describe",
+      "tool_use_id": "toolu_01PMHrts7U614rXHgWnVYq67"
+    },
+    {
+      "describe_operation": "workspace.observe",
+      "encoding": null,
+      "operation": "tools.describe",
+      "ordinal": 7,
+      "request": {
+        "canonical_json_sha256": "e71807a0644804e92755294bc484fb6b445b9b82701fc481cabba4c64883c4be",
+        "carrier": "vendor.stdout",
+        "json_pointer": "/message/content/0/input",
+        "jsonl_line": 23,
+        "line_without_newline_sha256": "fe9c77edb6bd175651038ed9747d84be0d504c0288f4d656c10d7a981fbdc458"
+      },
+      "request_id": "w007-describe-workspace-observe",
+      "result": {
+        "OperationEvidence": {
+          "id": "sha256:c4199a9347b3e205d8c36ea5e6e2a717604c32af2a37e9e2e61c73ecf8cba1e4",
+          "sha256": "c4199a9347b3e205d8c36ea5e6e2a717604c32af2a37e9e2e61c73ecf8cba1e4"
+        },
+        "artifact": null,
+        "block_canonical_sha256": "39504d9c4ba694687da2d8352c0734ddefd232f8c696db7e9bf3d04325a749bd",
+        "is_error": false,
+        "json_pointer": "/message/content/0",
+        "jsonl_line": 24,
+        "line_without_newline_sha256": "15e988a76044d8bf57b2eaa51ae6a2f3d9aa17ea8accdd13a8c6b4c1fd269d8c",
+        "operation": "tools.describe",
+        "response_text_sha256": "56446ac4c082dc11694ffd21d50e04d42e88f345b51a9d59a066054df34f1151",
+        "status": "ok",
+        "structured_public_response": true
+      },
+      "source": null,
+      "tool_name": "mcp__ac__tools_describe",
+      "tool_use_id": "toolu_01PDmEyJyq5EF11zYakBaBLs"
+    },
+    {
+      "describe_operation": null,
+      "encoding": "utf8",
+      "operation": "source.read",
+      "ordinal": 8,
+      "request": {
+        "canonical_json_sha256": "46b648c63d45f2f67c0e43d9b6c378c3799ac70b54f02ad338cd9648cbe14ee2",
+        "carrier": "vendor.stdout",
+        "json_pointer": "/message/content/0/input",
+        "jsonl_line": 30,
+        "line_without_newline_sha256": "4f59d3557fdb8a9039ffe46227db5fd84d0d4b958d361d44254b66d2431c746d"
+      },
+      "request_id": "w008-read-how",
+      "result": {
+        "block_canonical_sha256": "21b8fdbbc7244951219a3c024d1b9ae6d7f54f0215ac9ad9f5058d18ea9f3c99",
+        "is_error": false,
+        "json_pointer": "/message/content/0",
+        "jsonl_line": 31,
+        "line_without_newline_sha256": "2ecf886f90510debe87902ecef0c65d40154cc2aa06501b2f17868f6cd82f14a",
+        "structured_public_response": false,
+        "wrapper": {
+          "character_count": 246450,
+          "kind": "native_maximum_result_tokens",
+          "text_sha256": "404dd21a79269f67b4b0625cffe141f704a84615ad94077b8871e605c1878993",
+          "text_utf8_bytes": 2150,
+          "vendor_saved_path_reported": "/Users/jim/.claude/projects/-private-var-folders-rz-r6wxvr0n15d906k2s0jw8j2h0000gn-T-t008-claude-worker-001-n4hj0go7/535f6348-4431-46d7-8be9-cc4226928f8b/tool-results/mcp-ac-source_read-1792359224145.txt"
+        }
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/graphify/design/fd-support.md",
+        "root": "product",
+        "selector": null,
+        "sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f"
+      },
+      "tool_name": "mcp__ac__source_read",
+      "tool_use_id": "toolu_01AQgbR8hbxCX65YoW8GhTDe"
+    },
+    {
+      "describe_operation": null,
+      "encoding": "utf8",
+      "operation": "source.read",
+      "ordinal": 9,
+      "request": {
+        "canonical_json_sha256": "416f36968b8d96bcceb8d4ea704e45e92b6d0f5a9a89faab49dcc1c895a41c61",
+        "carrier": "vendor.stdout",
+        "json_pointer": "/message/content/0/input",
+        "jsonl_line": 32,
+        "line_without_newline_sha256": "3351e675bf54ef87b0e9f838bb34b3c518405eba97b7865d71ee645409c095b1"
+      },
+      "request_id": "w009-read-setup",
+      "result": {
+        "block_canonical_sha256": "e6468ba450b4735f797a44c65e9de218836ec810a06f0e818c16a7754449c35f",
+        "is_error": true,
+        "json_pointer": "/message/content/0",
+        "jsonl_line": 33,
+        "line_without_newline_sha256": "960cabeb3edc948db149b89b32ec4eed85e7b5afbad7c2f31b3e41ea0c2dc4b6",
+        "structured_public_response": false,
+        "wrapper": {
+          "diagnostic": "$/arguments/source/sha256 has invalid lexical form",
+          "kind": "tool_input_validation_error",
+          "text_sha256": "2d06c8560c33ef84b9f5851a3ebcb983302c72765f48e599a2d1cbc815f90c42",
+          "text_utf8_bytes": 50
+        }
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/graphify/examples/fd-support/README.md",
+        "root": "product",
+        "selector": null,
+        "sha256": "eca9c4cbfbd7ad4b712a7d1e8fc73f8cec42b0fb196967b778908339970018f94"
+      },
+      "tool_name": "mcp__ac__source_read",
+      "tool_use_id": "toolu_017DP6sXUXndeefz8QgrWtfy"
+    },
+    {
+      "describe_operation": null,
+      "encoding": "utf8",
+      "operation": "source.read",
+      "ordinal": 10,
+      "request": {
+        "canonical_json_sha256": "bc28184d0e557930389f77ba517e92ed229ef83f7042d4832cbb0479e2d40152",
+        "carrier": "vendor.stdout",
+        "json_pointer": "/message/content/0/input",
+        "jsonl_line": 34,
+        "line_without_newline_sha256": "5f6d63b52c4274d83559ed1c3081f24364c4a09f3410a1d3ecb3b3fdc9111eba"
+      },
+      "request_id": "w010-read-source-index",
+      "result": {
+        "OperationEvidence": {
+          "id": "sha256:65bb80ad25b1ac581ac1145c0733ae543c2b6ba2612ef38382638f73d11d7f6c",
+          "sha256": "65bb80ad25b1ac581ac1145c0733ae543c2b6ba2612ef38382638f73d11d7f6c"
+        },
+        "artifact": null,
+        "block_canonical_sha256": "b83fded1319ca08eb7edac10064cd86f2544302e1e4889dad78854072e965943",
+        "delivered_utf8": {
+          "bytes": 3602,
+          "claim": "Complete selected utf8 content occurs in the actual client tool-result; no mental attention claim.",
+          "content_matches_exact_current_selected_source": true,
+          "parent_sha256": "01b77ad3a61f3e1149a2f228f38f353ac8da42836a80b2a3aae8ff4b00d80518",
+          "selected_sha256": "01b77ad3a61f3e1149a2f228f38f353ac8da42836a80b2a3aae8ff4b00d80518"
+        },
+        "is_error": false,
+        "json_pointer": "/message/content/0",
+        "jsonl_line": 35,
+        "line_without_newline_sha256": "a5d64a497fdb1585fdb9eb1682a92bd68d09a2cc0d0f453f03206a85191b126c",
+        "operation": "source.read",
+        "response_text_sha256": "ee36cb3575fade9aecf44c234e488766a2b3f64d53de0476312bcdea0e0c10fa",
+        "status": "ok",
+        "structured_public_response": true
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "source-index.json",
+        "root": "runtime",
+        "selector": null,
+        "sha256": "01b77ad3a61f3e1149a2f228f38f353ac8da42836a80b2a3aae8ff4b00d80518"
+      },
+      "tool_name": "mcp__ac__source_read",
+      "tool_use_id": "toolu_013g7YddWAB5UAjwdWyDncHV"
+    },
+    {
+      "describe_operation": null,
+      "encoding": "utf8",
+      "operation": "source.read",
+      "ordinal": 11,
+      "request": {
+        "canonical_json_sha256": "5bee399abf703586dfa250eed474cfffa51f6bcac07788974d04c4e53ca6352c",
+        "carrier": "vendor.stdout",
+        "json_pointer": "/message/content/0/input",
+        "jsonl_line": 36,
+        "line_without_newline_sha256": "63955708e641050c702a62123602fa1ef11dfe4826cb85dd575d0eafb166eb6d"
+      },
+      "request_id": "w011-read-ticket-selection",
+      "result": {
+        "OperationEvidence": {
+          "id": "sha256:790501da95a2fefb6ba5bfac0dc5e9f79b256bfece2b00b35abe1e32494dec69",
+          "sha256": "790501da95a2fefb6ba5bfac0dc5e9f79b256bfece2b00b35abe1e32494dec69"
+        },
+        "artifact": null,
+        "block_canonical_sha256": "d1a2ee947d25eeafebdfeda391df508d4d6c5a0bc8ef259244db94e71720be8a",
+        "delivered_utf8": {
+          "bytes": 2788,
+          "claim": "Complete selected utf8 content occurs in the actual client tool-result; no mental attention claim.",
+          "content_matches_exact_current_selected_source": true,
+          "parent_sha256": "ab06521088409bc6efa21caf95ff4dec5b8eadb7686c32e3c8866dfd72dc7abc",
+          "selected_sha256": "bc1fc91bdf44ba68930487e910ab5199341b33b57081f52d871ce703184850b8"
+        },
+        "is_error": false,
+        "json_pointer": "/message/content/0",
+        "jsonl_line": 37,
+        "line_without_newline_sha256": "23bc297b42e8e04e39bc22f8354409e855be2014dc7547aba0cdf916809e0912",
+        "operation": "source.read",
+        "response_text_sha256": "90c2ef4e8509ab65e1bdc9ed69eda58af61069caf311228594850f9ba9f0be67",
+        "status": "ok",
+        "structured_public_response": true
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": ".ai-workspace/tickets/active/T-008-fd-tenant-implementation.md",
+        "root": "product",
+        "selector": {
+          "lines": [
+            668,
+            728
+          ]
+        },
+        "sha256": "ab06521088409bc6efa21caf95ff4dec5b8eadb7686c32e3c8866dfd72dc7abc"
+      },
+      "tool_name": "mcp__ac__source_read",
+      "tool_use_id": "toolu_01JbV4RfKSXbCua4iPsXUrAX"
+    },
+    {
+      "describe_operation": null,
+      "encoding": "utf8",
+      "operation": "source.read",
+      "ordinal": 12,
+      "request": {
+        "canonical_json_sha256": "881e3c7d84bece7916a2c841de73747245c195d0597df221d14c4a2fc507152c",
+        "carrier": "vendor.stdout",
+        "json_pointer": "/message/content/0/input",
+        "jsonl_line": 58,
+        "line_without_newline_sha256": "cdb4f8b350e713043ca425ab632dd7665badeb6789e21ee9a5c0a36455b88633"
+      },
+      "request_id": "w012-read-setup",
+      "result": {
+        "OperationEvidence": {
+          "id": "sha256:faa86f21b899126c109ea18a5cd781fe1b5e74915c2300c05ae5ff91beb24587",
+          "sha256": "faa86f21b899126c109ea18a5cd781fe1b5e74915c2300c05ae5ff91beb24587"
+        },
+        "artifact": null,
+        "block_canonical_sha256": "464cc8fe09551fe38f86c2b95753c5e4c2561ee1559f137a602ec873acee5e0f",
+        "delivered_utf8": {
+          "bytes": 10729,
+          "claim": "Complete selected utf8 content occurs in the actual client tool-result; no mental attention claim.",
+          "content_matches_exact_current_selected_source": true,
+          "parent_sha256": "eca9c4cbfbd7ad4b712a7d1e8fc73f8cec42b0fb196967b77890833997018f94",
+          "selected_sha256": "eca9c4cbfbd7ad4b712a7d1e8fc73f8cec42b0fb196967b77890833997018f94"
+        },
+        "is_error": false,
+        "json_pointer": "/message/content/0",
+        "jsonl_line": 59,
+        "line_without_newline_sha256": "a572d073c226afa4ac00b4a3549c5f740a912ec8d5b635f4f9ca6c28241e21a7",
+        "operation": "source.read",
+        "response_text_sha256": "e6f406a1b633bb0e644c801b073241337c2d17ec158a69cb2fc8f8daa0b5b2f4",
+        "status": "ok",
+        "structured_public_response": true
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/graphify/examples/fd-support/README.md",
+        "root": "product",
+        "selector": null,
+        "sha256": "eca9c4cbfbd7ad4b712a7d1e8fc73f8cec42b0fb196967b77890833997018f94"
+      },
+      "tool_name": "mcp__ac__source_read",
+      "tool_use_id": "toolu_01XWA1xYcCeqduZwjNxue6a1"
+    },
+    {
+      "describe_operation": null,
+      "encoding": "utf8",
+      "operation": "source.read",
+      "ordinal": 13,
+      "request": {
+        "canonical_json_sha256": "8071d9f556d879c801f8e5c9e7bf0ce647ad7037973505eef5000a4807bb3d71",
+        "carrier": "vendor.stdout",
+        "json_pointer": "/message/content/0/input",
+        "jsonl_line": 60,
+        "line_without_newline_sha256": "8e9f745b28a58fa0885b804350a180cfb5cd0f64424014321fdc755435e3430b"
+      },
+      "request_id": "w013-read-how-1-120",
+      "result": {
+        "OperationEvidence": {
+          "id": "sha256:29512bc2d6995e00f037b4d92012767e4f1ab42ece9bfb420e7317961f5258f5",
+          "sha256": "29512bc2d6995e00f037b4d92012767e4f1ab42ece9bfb420e7317961f5258f5"
+        },
+        "artifact": null,
+        "block_canonical_sha256": "c6d985d3d9f6f86b9e387d17d4ce0ec9efc9906d3a1cf0f7b1c578f70e40f23e",
+        "delivered_utf8": {
+          "bytes": 8928,
+          "claim": "Complete selected utf8 content occurs in the actual client tool-result; no mental attention claim.",
+          "content_matches_exact_current_selected_source": true,
+          "parent_sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f",
+          "selected_sha256": "f8a3bd750e9bae0451bd619c6f6ef7bc70005a2f99377a4b58f872cdd16a69ce"
+        },
+        "is_error": false,
+        "json_pointer": "/message/content/0",
+        "jsonl_line": 61,
+        "line_without_newline_sha256": "1a6a5e12ef83078e5952e45272e0d025959536fbee9a5771ba84c44ad4cdc4cf",
+        "operation": "source.read",
+        "response_text_sha256": "5b5e93712f048e08c16ad2e374983cddf2e372e36cc591d38e9cf545e27c8035",
+        "status": "ok",
+        "structured_public_response": true
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/graphify/design/fd-support.md",
+        "root": "product",
+        "selector": {
+          "lines": [
+            1,
+            120
+          ]
+        },
+        "sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f"
+      },
+      "tool_name": "mcp__ac__source_read",
+      "tool_use_id": "toolu_01849CXFJcY8KTHUvkyyRQgV"
+    },
+    {
+      "describe_operation": null,
+      "encoding": "utf8",
+      "operation": "source.read",
+      "ordinal": 14,
+      "request": {
+        "canonical_json_sha256": "3ad8cb3dac3446e884a2524439adda6c86c4d08e39309967c26473ef3587cd9b",
+        "carrier": "vendor.stdout",
+        "json_pointer": "/message/content/0/input",
+        "jsonl_line": 66,
+        "line_without_newline_sha256": "0337cfe2bde75f4b377b2e0473f88b81743ace6519950c7a812df0a84902701a"
+      },
+      "request_id": "w014-read-how-121-500",
+      "result": {
+        "OperationEvidence": {
+          "id": "sha256:3e1a493094e7bc0936cbf7626dc9826e1ccaac503fcfeef70caebea95055c184",
+          "sha256": "3e1a493094e7bc0936cbf7626dc9826e1ccaac503fcfeef70caebea95055c184"
+        },
+        "artifact": null,
+        "block_canonical_sha256": "2cbcad62c3742793763c9f7af75f02cc44d124059047cd232c4c617eab39c219",
+        "delivered_utf8": {
+          "bytes": 28140,
+          "claim": "Complete selected utf8 content occurs in the actual client tool-result; no mental attention claim.",
+          "content_matches_exact_current_selected_source": true,
+          "parent_sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f",
+          "selected_sha256": "db75d9f31ff5bb69229fbde918401c00de990b81e6bf9ae2af87c563b365bfa9"
+        },
+        "is_error": false,
+        "json_pointer": "/message/content/0",
+        "jsonl_line": 67,
+        "line_without_newline_sha256": "441d5ea3ca26878417163fdb2e077d0957df3844f2992bb96fe99e99c71b13c2",
+        "operation": "source.read",
+        "response_text_sha256": "32346e462389bd73824a776dfbd5f2213ec43568552bc0e20fa62eaaba827899",
+        "status": "ok",
+        "structured_public_response": true
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/graphify/design/fd-support.md",
+        "root": "product",
+        "selector": {
+          "lines": [
+            121,
+            500
+          ]
+        },
+        "sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f"
+      },
+      "tool_name": "mcp__ac__source_read",
+      "tool_use_id": "toolu_01DDekLvBf5PtN9cHYJstMGD"
+    },
+    {
+      "describe_operation": null,
+      "encoding": "utf8",
+      "operation": "source.read",
+      "ordinal": 15,
+      "request": {
+        "canonical_json_sha256": "00ae1ce46ac82276693983befb091e9ee3640abc94d26bf5adabede07231e675",
+        "carrier": "vendor.stdout",
+        "json_pointer": "/message/content/0/input",
+        "jsonl_line": 89,
+        "line_without_newline_sha256": "df9c68171ecd683b9d23e7de810ca8854fe16f7300b9f8b5c08144ecde80bebe"
+      },
+      "request_id": "w015-read-how-501-880",
+      "result": {
+        "OperationEvidence": {
+          "id": "sha256:bf6be55231ae54063caf3563d0b2144917762508a52f93e1848c8eb5253c5349",
+          "sha256": "bf6be55231ae54063caf3563d0b2144917762508a52f93e1848c8eb5253c5349"
+        },
+        "artifact": null,
+        "block_canonical_sha256": "d1699546343449cc8fb34eeaadad28e3f24f2e9971f572ce64009aa10d08a11c",
+        "delivered_utf8": {
+          "bytes": 26180,
+          "claim": "Complete selected utf8 content occurs in the actual client tool-result; no mental attention claim.",
+          "content_matches_exact_current_selected_source": true,
+          "parent_sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f",
+          "selected_sha256": "e239dd4e0a9d6a027553d20edc66cf614fa48882e7672d964cae428d1206858b"
+        },
+        "is_error": false,
+        "json_pointer": "/message/content/0",
+        "jsonl_line": 90,
+        "line_without_newline_sha256": "3a36c5f52333c79fea420d9a2d616a2aa585e06dd7fee03483b3d77cbd6cbb03",
+        "operation": "source.read",
+        "response_text_sha256": "fd8f840083a73ada84ea16f3f37f76b260dd28f64dc5595ace7fa5314c4964a3",
+        "status": "ok",
+        "structured_public_response": true
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/graphify/design/fd-support.md",
+        "root": "product",
+        "selector": {
+          "lines": [
+            501,
+            880
+          ]
+        },
+        "sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f"
+      },
+      "tool_name": "mcp__ac__source_read",
+      "tool_use_id": "toolu_01JMvzyZ3xwSV4CDnwCB3Dhv"
+    },
+    {
+      "describe_operation": null,
+      "encoding": "utf8",
+      "operation": "source.read",
+      "ordinal": 16,
+      "request": {
+        "canonical_json_sha256": "7699c023bac55f688b05bfe313d3e58fd5422a050895d31557642f53f9e47d46",
+        "carrier": "vendor.stdout",
+        "json_pointer": "/message/content/0/input",
+        "jsonl_line": 99,
+        "line_without_newline_sha256": "181a5086710c2c97c5ac530e52ce2714c0fffe01abd8829ab2300dac41ca1301"
+      },
+      "request_id": "w016-read-how-881-1260",
+      "result": {
+        "block_canonical_sha256": "b5d0b74b060e80144b68741590da619a7d07d8a30d0fdffd14df6fdb05be9efa",
+        "is_error": false,
+        "json_pointer": "/message/content/0",
+        "jsonl_line": 101,
+        "line_without_newline_sha256": "ca7f16a73f5775976cdff51cccef6ec3bbfcd17b25cd1ab6d1135c0104acd205",
+        "structured_public_response": false,
+        "wrapper": {
+          "kind": "native_persisted_preview",
+          "preview_description": "Full output saved; only first2KB preview in this tool result.",
+          "text_sha256": "db98b62daa7492726fd9f9b175ba2945a7cd1800ea3311160fa8dd36f3ed9036",
+          "text_utf8_bytes": 2317,
+          "vendor_saved_path_reported": "/Users/jim/.claude/projects/-private-var-folders-rz-r6wxvr0n15d906k2s0jw8j2h0000gn-T-t008-claude-worker-001-n4hj0go7/535f6348-4431-46d7-8be9-cc4226928f8b/tool-results/toolu_011uGvxeq5AsxFyqsAVhyrdv.txt"
+        }
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/graphify/design/fd-support.md",
+        "root": "product",
+        "selector": {
+          "lines": [
+            881,
+            1260
+          ]
+        },
+        "sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f"
+      },
+      "tool_name": "mcp__ac__source_read",
+      "tool_use_id": "toolu_011uGvxeq5AsxFyqsAVhyrdv"
+    },
+    {
+      "describe_operation": null,
+      "encoding": "utf8",
+      "operation": "source.read",
+      "ordinal": 17,
+      "request": {
+        "canonical_json_sha256": "52f02a90bcefe020cadcc1525176ace0466fa0653b03f519215e2e327f3c5ddb",
+        "carrier": "vendor.stdout",
+        "json_pointer": "/message/content/0/input",
+        "jsonl_line": 108,
+        "line_without_newline_sha256": "ea8c2fd54a4d079960d82e7ccf4bc7d7b36cdd87406843c085a5c8f38bc8b284"
+      },
+      "request_id": "w017-read-how-881-1060",
+      "result": {
+        "OperationEvidence": {
+          "id": "sha256:5869078d5cf09ae912d487a2a782d5f123fb4da710551af088eebc1ec3e7e227",
+          "sha256": "5869078d5cf09ae912d487a2a782d5f123fb4da710551af088eebc1ec3e7e227"
+        },
+        "artifact": null,
+        "block_canonical_sha256": "186b06669b7c8a49948cce50dbe25bd6d1eac3d0cac32cc1a289dd3620e8b05c",
+        "delivered_utf8": {
+          "bytes": 12597,
+          "claim": "Complete selected utf8 content occurs in the actual client tool-result; no mental attention claim.",
+          "content_matches_exact_current_selected_source": true,
+          "parent_sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f",
+          "selected_sha256": "e7eb09ddbe85ae0b802e705bae8f3582307b5c541247a7d8f2e1c4f64587028f"
+        },
+        "is_error": false,
+        "json_pointer": "/message/content/0",
+        "jsonl_line": 109,
+        "line_without_newline_sha256": "0015e258c3c95a046e317429f982e0bf87ab555c6e953b2bca69c95e846e3c1f",
+        "operation": "source.read",
+        "response_text_sha256": "54bb613ca97f0647e93cb709c5d72327d618b24bf92dfdb2e01b3b3e01f1c34a",
+        "status": "ok",
+        "structured_public_response": true
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/graphify/design/fd-support.md",
+        "root": "product",
+        "selector": {
+          "lines": [
+            881,
+            1060
+          ]
+        },
+        "sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f"
+      },
+      "tool_name": "mcp__ac__source_read",
+      "tool_use_id": "toolu_01NvbuvGbRFiRcNpYVUnpGVL"
+    },
+    {
+      "describe_operation": null,
+      "encoding": "utf8",
+      "operation": "source.read",
+      "ordinal": 18,
+      "request": {
+        "canonical_json_sha256": "cf63d6d0cef7c50e71dcab75187ae81ea107602f087b5f701c8c90508faa38fd",
+        "carrier": "vendor.stdout",
+        "json_pointer": "/message/content/0/input",
+        "jsonl_line": 113,
+        "line_without_newline_sha256": "dee1c031d3ce75e3d595608387cb4fe3d2794c8429ec7cf88abc711884f6c289"
+      },
+      "request_id": "w018-read-how-1061-1160",
+      "result": {
+        "OperationEvidence": {
+          "id": "sha256:be9d2e93c9b1c7b91dafa8cfaf1e27d3ed9c34d92c19d6cec93056e3ec06e906",
+          "sha256": "be9d2e93c9b1c7b91dafa8cfaf1e27d3ed9c34d92c19d6cec93056e3ec06e906"
+        },
+        "artifact": null,
+        "block_canonical_sha256": "d4bf0b83f85e1023a6f58f70386ac8506a38f02074c5e46ff49678df29bb8df8",
+        "delivered_utf8": {
+          "bytes": 8070,
+          "claim": "Complete selected utf8 content occurs in the actual client tool-result; no mental attention claim.",
+          "content_matches_exact_current_selected_source": true,
+          "parent_sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f",
+          "selected_sha256": "03e644c8dbddab28dd3bfcce3585ea9c9f157356be598517f3dbf8bc72b6987e"
+        },
+        "is_error": false,
+        "json_pointer": "/message/content/0",
+        "jsonl_line": 114,
+        "line_without_newline_sha256": "9efb3c24ab21b38f9704e0e33083d66bc8db786e642116b890f1e96e8a8462f5",
+        "operation": "source.read",
+        "response_text_sha256": "b167d8f5b96447f9aaa163af5aa72ac8b53f1b7c7a2fda09f55eaa5b8654bdf1",
+        "status": "ok",
+        "structured_public_response": true
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/graphify/design/fd-support.md",
+        "root": "product",
+        "selector": {
+          "lines": [
+            1061,
+            1160
+          ]
+        },
+        "sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f"
+      },
+      "tool_name": "mcp__ac__source_read",
+      "tool_use_id": "toolu_01CxV747DjMNEoTDQ3QcV2zC"
+    },
+    {
+      "describe_operation": null,
+      "encoding": "utf8",
+      "operation": "source.read",
+      "ordinal": 19,
+      "request": {
+        "canonical_json_sha256": "7f3064211040eee4060e68b518048ce1330a9aee82e3d6e25960ec14f33775c4",
+        "carrier": "vendor.stdout",
+        "json_pointer": "/message/content/0/input",
+        "jsonl_line": 139,
+        "line_without_newline_sha256": "753cc16f91965d244b1b5b881c4cf53f299b5942c9b3a03d7de9a08b3c21dbe1"
+      },
+      "request_id": "w019-read-how-1261-1360",
+      "result": {
+        "OperationEvidence": {
+          "id": "sha256:6c7553151a29f8c50c7d9f6f6c865ef1969f963cf23573ffd7e65c79e8a14130",
+          "sha256": "6c7553151a29f8c50c7d9f6f6c865ef1969f963cf23573ffd7e65c79e8a14130"
+        },
+        "artifact": null,
+        "block_canonical_sha256": "90348942ecb59063d249ebfdc9651d78fb7390b56d2a113b8a11c4d230a7e8a0",
+        "delivered_utf8": {
+          "bytes": 3305,
+          "claim": "Complete selected utf8 content occurs in the actual client tool-result; no mental attention claim.",
+          "content_matches_exact_current_selected_source": true,
+          "parent_sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f",
+          "selected_sha256": "83b1aa505bbe908f1b8356b6d10ce006fc26af3d6d51b422bc66c8ac34acc6ef"
+        },
+        "is_error": false,
+        "json_pointer": "/message/content/0",
+        "jsonl_line": 140,
+        "line_without_newline_sha256": "942491f77421035e036724dffe829db547b62de322207f7d8e857e950cd54a87",
+        "operation": "source.read",
+        "response_text_sha256": "a6a71792dd6edb07cc7e3c2ce85d6b9a91b962eec769668f37da9338905f5bee",
+        "status": "ok",
+        "structured_public_response": true
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/graphify/design/fd-support.md",
+        "root": "product",
+        "selector": {
+          "lines": [
+            1261,
+            1360
+          ]
+        },
+        "sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f"
+      },
+      "tool_name": "mcp__ac__source_read",
+      "tool_use_id": "toolu_017DHXgppJsofzJMzWU63y6q"
+    },
+    {
+      "describe_operation": null,
+      "encoding": "utf8",
+      "operation": "source.read",
+      "ordinal": 20,
+      "request": {
+        "canonical_json_sha256": "37419f590d5d8bcebfbbd33b73f121de738995dc3e541ebb71c4a1ecfe6d92c9",
+        "carrier": "vendor.stdout",
+        "json_pointer": "/message/content/0/input",
+        "jsonl_line": 144,
+        "line_without_newline_sha256": "cf0870ae4dabeef3a85d4c52122a5ae0013218bdf054621271b186aed7277242"
+      },
+      "request_id": "w020-read-how-2000-2100",
+      "result": {
+        "OperationEvidence": {
+          "id": "sha256:606bc0784dfd60357f99d0ccecaad2826029a5ba229ac364c846e75387008633",
+          "sha256": "606bc0784dfd60357f99d0ccecaad2826029a5ba229ac364c846e75387008633"
+        },
+        "artifact": null,
+        "block_canonical_sha256": "c4dfc1fc6931ed36a0d657f6c135c8ac21367f0ed5a325f6f5c7d54a218c5304",
+        "delivered_utf8": {
+          "bytes": 6312,
+          "claim": "Complete selected utf8 content occurs in the actual client tool-result; no mental attention claim.",
+          "content_matches_exact_current_selected_source": true,
+          "parent_sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f",
+          "selected_sha256": "a9f663dbbe431cee166e6951c8e3b8117f9bf1b58f6eff895be86e3616b7e6df"
+        },
+        "is_error": false,
+        "json_pointer": "/message/content/0",
+        "jsonl_line": 145,
+        "line_without_newline_sha256": "b1aeed8a921d6e22ee900bed52d71f4e86e87926774789046b6760218c6a8f3c",
+        "operation": "source.read",
+        "response_text_sha256": "35f042d32a57dd3895a509201bd321c5eec9374946072fbd7af5d39cbd7b6885",
+        "status": "ok",
+        "structured_public_response": true
+      },
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "build_tenants/graphify/design/fd-support.md",
+        "root": "product",
+        "selector": {
+          "lines": [
+            2000,
+            2100
+          ]
+        },
+        "sha256": "faefdf2432759859780d962ca1028f44f7ebca9a5f6a11c324c27ddc258d521f"
+      },
+      "tool_name": "mcp__ac__source_read",
+      "tool_use_id": "toolu_01GfrmCWnyGtA1bPpzumQv3c"
+    },
+    {
+      "describe_operation": null,
+      "encoding": null,
+      "operation": "workspace.observe",
+      "ordinal": 21,
+      "request": {
+        "canonical_json_sha256": "100cebde964a5b964681092c9fcb21509bc432afb3ec16db5dfa8d6b767a9f77",
+        "carrier": "vendor.stdout",
+        "json_pointer": "/message/content/0/input",
+        "jsonl_line": 171,
+        "line_without_newline_sha256": "6943efde33201ca740d7830913f931af2641c3dc6d8ae2ee9095654706283b3d"
+      },
+      "request_id": "w021-observe-target-and-sources",
+      "result": {
+        "OperationEvidence": {
+          "id": "sha256:2f3a4eae574c9007b37af0b861cc10f45c682c0c00d93cb93ae2d37653aa09f8",
+          "sha256": "2f3a4eae574c9007b37af0b861cc10f45c682c0c00d93cb93ae2d37653aa09f8"
+        },
+        "artifact": {
+          "id": "sha256:96e3ffd13f76ecedb20dedb8443abb468c0d791bad4da4aa60eaf036465a68c4",
+          "sha256": "96e3ffd13f76ecedb20dedb8443abb468c0d791bad4da4aa60eaf036465a68c4"
+        },
+        "block_canonical_sha256": "d8da18cc1294d3124c134030e773a3dd9c61bf864ada1c1b0eebad1b186d06ac",
+        "is_error": false,
+        "json_pointer": "/message/content/0",
+        "jsonl_line": 172,
+        "line_without_newline_sha256": "42e73b622e06ea7b540c46ab3df4823b5f182227489417a4b087baba7a5584be",
+        "operation": "workspace.observe",
+        "response_text_sha256": "664384abe08f53329a0fb742c4df1f4f8a8b64fd06db181d09aed715da6bb820",
+        "status": "ok",
+        "structured_public_response": true
+      },
+      "source": null,
+      "tool_name": "mcp__ac__workspace_observe",
+      "tool_use_id": "toolu_01JYH1RN1yPUfa8rYam4zhjv"
+    },
+    {
+      "describe_operation": null,
+      "encoding": null,
+      "operation": "work.write",
+      "ordinal": 22,
+      "request": {
+        "canonical_json_sha256": "5c35e8fa27d5a8e90faddd736c6eb8490f32b704c3cc5b59704a0b686c60cc29",
+        "carrier": "vendor.stdout",
+        "json_pointer": "/message/content/0/input",
+        "jsonl_line": 461,
+        "line_without_newline_sha256": "4c1174e7bc8abefb7a5146e35c224004c1ea93f21e0ba008358de327ac8f0723"
+      },
+      "request_id": "w022-write-guide",
+      "result": {
+        "OperationEvidence": {
+          "id": "sha256:d3ffdebf35f0fdf6fdd611f5e641e8b85b01a9d1a4d7e7a4cd497ff7aff4e808",
+          "sha256": "d3ffdebf35f0fdf6fdd611f5e641e8b85b01a9d1a4d7e7a4cd497ff7aff4e808"
+        },
+        "artifact": {
+          "id": "sha256:8d43523f5d27884563bdbb734a477077e5e955fd27afc0899971af4053a87e94",
+          "sha256": "8d43523f5d27884563bdbb734a477077e5e955fd27afc0899971af4053a87e94"
+        },
+        "block_canonical_sha256": "6c6970e0a09301d024974d9433856f48198f6760eb5dc347fd1c1995a3330ec3",
+        "is_error": false,
+        "json_pointer": "/message/content/0",
+        "jsonl_line": 462,
+        "line_without_newline_sha256": "43f63b5752c1da4cebfd6f594ab0eba823c3269cefcc42b8a38b4de2bb278410",
+        "operation": "work.write",
+        "response_text_sha256": "f1932773553948eb0eb5b60bb20e1b9cbe066418d64cb39d5b649daa68cace3f",
+        "status": "ok",
+        "structured_public_response": true
+      },
+      "source": null,
+      "tool_name": "mcp__ac__work_write",
+      "tool_use_id": "toolu_01NEEEhffxgA55bNKPZt2eQa"
+    }
+  ],
+  "unparsed_lines": []
+}

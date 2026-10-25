@@ -1,0 +1,19 @@
+test_public_cancel_finalizes_while_descendant_still_holds_pipes (test_ac_support_effects.PublicRetryTests.test_public_cancel_finalizes_while_descendant_still_holds_pipes) ... FAIL
+
+======================================================================
+FAIL: test_public_cancel_finalizes_while_descendant_still_holds_pipes (test_ac_support_effects.PublicRetryTests.test_public_cancel_finalizes_while_descendant_still_holds_pipes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-effects-mb574zvl/baseline-cancel/build_tenants/graphify/test_env/test_ac_support_effects.py", line 1241, in test_public_cancel_finalizes_while_descendant_still_holds_pipes
+    self._held_pipe_case(cancel=True)
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-effects-mb574zvl/baseline-cancel/build_tenants/graphify/test_env/test_ac_support_effects.py", line 1203, in _held_pipe_case
+    observed = self._finished(attempt, timeout=2)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-effects-mb574zvl/baseline-cancel/build_tenants/graphify/test_env/test_ac_support_effects.py", line 1110, in _finished
+    self.fail("Public registered fixture did not finish within its bounded deadline")
+AssertionError: Public registered fixture did not finish within its bounded deadline
+
+----------------------------------------------------------------------
+Ran 1 test in 3.416s
+
+FAILED (failures=1)

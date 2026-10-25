@@ -1,0 +1,32 @@
+{
+  "actual_common_final_artifact_reviewed": false,
+  "advertised_command_returncode": 2,
+  "at": "2026-10-20T10:18:19.547311+00:00",
+  "candidate_edits": false,
+  "findings": [
+    {
+      "id": "F002",
+      "location": "applications/stdo-v3-common-35fb4824/SOURCE-READINESS.md:71",
+      "priority": "P3",
+      "summary": "Copied source-readiness instructions/routes require omitted originating-workspace files without clear qualification"
+    }
+  ],
+  "frozen_subjects": [
+    {
+      "expected": "8439938a7937bb44eecc50571c90d71fad9405ba5bc2f4eb28abbdd5379593c6",
+      "path": "package_release.py",
+      "sha256": "8439938a7937bb44eecc50571c90d71fad9405ba5bc2f4eb28abbdd5379593c6"
+    },
+    {
+      "expected": "74beb6365104bc4352b691725c9e18fe3521d01fe50a080c0c9cc735a4a141f5",
+      "path": "release_tools/bundle_check.py",
+      "sha256": "74beb6365104bc4352b691725c9e18fe3521d01fe50a080c0c9cc735a4a141f5"
+    }
+  ],
+  "missing_outside_links": 2,
+  "outcome": "changes_requested",
+  "prior_binding_repair_review": "conserved; delta-001/CLOSED.json unchanged",
+  "scope": "one extracted documentation portability/custody navigation lead",
+  "source_readiness_sha256": "114a4580a344daa1cf32bcbc19246ab189c26b3f50b58d47c105ae7a2b54bd1d",
+  "status": "CLOSED"
+}

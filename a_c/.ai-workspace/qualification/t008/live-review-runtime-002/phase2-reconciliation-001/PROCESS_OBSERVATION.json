@@ -1,0 +1,63 @@
+{
+  "end_scope": "Observed native registered parent return143 only; descendant/process-tree/external effect end remains unknown. Outer helper exit1 is Root-reported and protected observe is separately bound.",
+  "helper_result": {
+    "actor_launched": true,
+    "failure": "timeout; output/effect completion remains unknown",
+    "output_available": false,
+    "semantic_result": null
+  },
+  "input_forwarding_complete_at_local_native_stdin": true,
+  "native_elapsed_seconds": 1200.732863,
+  "process": {
+    "ended_ns": 1792386114126557000,
+    "failure": "timeout; output/effect completion remains unknown",
+    "input_bytes": 42606,
+    "input_forwarded_bytes": 42606,
+    "output_available": false,
+    "pid": 40963,
+    "returncode": 143,
+    "schema": "a_c.fd-support.actor-cli-observation/1",
+    "started_ns": 1792384913393694000,
+    "stderr_bytes": 0,
+    "stderr_eof": false,
+    "stdout_bytes": 3553404,
+    "stdout_eof": false,
+    "termination_requests": [
+      {
+        "at_ns": 1792386113510112000,
+        "delivery": "requested",
+        "scope": "registered parent process only",
+        "signal": "terminate"
+      }
+    ],
+    "unknowns": [
+      "descendant/process-tree end and external side effects",
+      "host/model active-context size",
+      "backend retries or unreported usage",
+      "semantic outcome and owner disposition"
+    ]
+  },
+  "raw_sources": [
+    {
+      "bytes": 681,
+      "path": ".ai-workspace/qualification/t008/live-review-runtime-002/actor-transports/assessment-001/process.json",
+      "sha256": "411eec718da6587a1b17321ed4db7f456fc02e709732d3e0cd211280bfb5a71b"
+    },
+    {
+      "bytes": 134,
+      "path": ".ai-workspace/qualification/t008/live-review-runtime-002/actor-transports/assessment-001/result.json",
+      "sha256": "7437f51bbb18ccc7291021cbfbd3b8ebbdc03e5cead7efa73efde35d8002468b"
+    },
+    {
+      "bytes": 8512,
+      "path": ".ai-workspace/qualification/t008/live-review-runtime-002/actor-transports/assessment-001/plan.json",
+      "sha256": "97882432821a0c95396074c4ef34a3465426caf542c56ac95a6626073aa43893"
+    },
+    {
+      "bytes": 8361,
+      "path": ".ai-workspace/qualification/t008/live-review-runtime-002/actor-transports/assessment-001/invocation.json",
+      "sha256": "47aeea7b46de125ef6f07983a9c51b31a9d6eed962a279d66646cb74a5db7468"
+    }
+  ],
+  "usage_billing": "Unknown; no inferred zero or estimate."
+}

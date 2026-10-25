@@ -1,0 +1,26 @@
+{
+  "automatic_next": false,
+  "claim": {
+    "engine": "workspace-regular-file",
+    "object": null,
+    "path": "review-claim.json",
+    "root": "runtime",
+    "selector": null,
+    "sha256": "f3ea849f047052303418644155667c7c39e1d655623abd6655dd891370899481"
+  },
+  "independence_policy": {
+    "engine": "workspace-regular-file",
+    "object": null,
+    "path": "independence-policy.json",
+    "root": "runtime",
+    "selector": null,
+    "sha256": "d041c968d310627443826a94189651f17ef221a2df2432c0b7d0683ae291922b"
+  },
+  "max_attempt_ms": 1320000,
+  "planned_effort": "xhigh",
+  "planned_executor_timeout_ms": 1260000,
+  "planned_helper_timeout_ms": 1200000,
+  "planned_return_contract_id": "urn:a-c:T008:review-assessment-return:001",
+  "required_actual_prior": "Same Reviewer actual expectation ArtifactRef with exact claim population, source_inputs/delivery and preserved gaps. Root consumes actual first result before selecting second exact contract.",
+  "state": "HELD; no final ReturnContract/Context/approval/dispatch"
+}

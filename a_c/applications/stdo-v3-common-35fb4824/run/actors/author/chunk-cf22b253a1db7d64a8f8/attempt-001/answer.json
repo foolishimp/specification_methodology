@@ -1,0 +1,1813 @@
+{
+  "concepts": [
+    {
+      "conditions": [],
+      "definition": "Roles are configuration-allocated relations over steps, not actor kinds or a fixed inventory. Where the corresponding operations occur, the constructor owns bounded implementation and self-review, the assessor independently evaluates a frozen candidate, and the decision owner disposes. Other responsibilities may be allocated.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":627,
+          "quote":"Roles are relations over steps that a configuration allocates\n(Configuration above), not kinds of actor and not a fixed inventory.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FRoles%20and%20delegation",
+          "start_line":621
+        }
+      ],
+      "key":"step_roles",
+      "label":"Roles over steps"
+    },
+    {
+      "conditions": [],
+      "definition": "A bounded operation grant can cover a declared construction, status and checkpoint sequence. A bounded proxy is a delegate whose ability to accept and advance routine actions must be declared by the governing authority relation.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":638,
+          "quote":"The governing authority relation declares whether a bounded proxy may\naccept and advance routine actions.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FRoles%20and%20delegation",
+          "start_line":637
+        },
+        {
+          "end_line":682,
+          "quote":"One bounded operation grant may cover its declared construction, status and\ncheckpoint sequence.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FRoles%20and%20delegation",
+          "start_line":681
+        }
+      ],
+      "key":"bounded_operation_grant",
+      "label":"Bounded operation grant and proxy"
+    },
+    {
+      "conditions": [],
+      "definition": "Context construction is the source-defined procedure joining material closure, projection, envelope fit and exact input acquisition. Z contains the intake's subject, outcome and affected relations; R contains dependency relations whose change can alter result, basis validity, evidence sufficiency or authority; B is the actor's envelope.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":698,
+          "quote":"Given a seed set Z (the subject, outcome and affected relations named in the\nintake), a relation family R (the dependency relations whose change can\nalter the result, basis validity, evidence sufficiency or authority), and\nthe actor's envelope B:",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope",
+          "start_line":695
+        }
+      ],
+      "key":"context_construction",
+      "label":"Context construction under an envelope"
+    },
+    {
+      "conditions": [],
+      "definition": "Acquisition is read-only observation of the frame, actual subject and declared inputs needed by a step, within the inputs its intake permits. Activation selects one capable frame or declared active frame configuration and binds reusable declarations to the exact subject and basis. Evaluation applies the activated frame's invariants, evidence rules and result algebra.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":780,
+          "quote":"Acquisition. Acquisition is the read-only observation of the material a\nstep needs (its frame, its subject and its declared inputs) within the\ninputs its intake permits it to acquire (§1 Intake).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope",
+          "start_line":776
+        },
+        {
+          "end_line":819,
+          "quote":"Activation\nbinds each reusable frame declaration to the exact subject and basis and\nloads the declared material relations and evidence sources",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope",
+          "start_line":817
+        },
+        {
+          "end_line":830,
+          "quote":"Evaluation. The evaluator applies the activated frame's declared\ninvariants, evidence rules and result algebra.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope",
+          "start_line":829
+        }
+      ],
+      "key":"acquisition_activation_evaluation",
+      "label":"Acquisition, activation and evaluation"
+    },
+    {
+      "conditions": [],
+      "definition": "A derived surface copies, projects or compresses owning sources, names those sources and owns no determination. A task constraint surface from a current a_c interpretation is an example, subject to the cited constraint-surface law. Currentness is relative to an exact selected basis; it is distinct from fidelity and question-specific sufficiency.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":784,
+          "quote":"A derived surface is material derived from owning\nsources by copying, projection or compression, such as a projected frame\nfor a task; it names its sources and owns no determination.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope",
+          "start_line":782
+        },
+        {
+          "end_line":901,
+          "quote":"They establish neither its fidelity to them nor its\n  sufficiency for a question",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope%2FStaleness%20of%20derived%20surfaces",
+          "start_line":899
+        }
+      ],
+      "key":"derived_surface",
+      "label":"Derived surface"
+    },
+    {
+      "conditions": [],
+      "definition": "A prompt is a rendered contract over typed authority, not source law; it projects the material selected by acquisition.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":845,
+          "quote":"Prompt construction. A prompt is rendered contract over typed authority;\nit is not source law.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope",
+          "start_line":844
+        }
+      ],
+      "key":"rendered_prompt",
+      "label":"Prompt as rendered contract"
+    },
+    {
+      "conditions": [],
+      "definition": "The source describes five refinements of its core result algebra: admission and activation asks whether a step may begin; construction availability asks whether a candidate is available; disposition asks whether a candidate is accepted at its declared boundary; ambiguity outcome asks whether a declared ambiguity is resolved on the exact basis; effects asks whether an intended effect occurred. These answer different questions from the step's evaluations.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":941,
+          "quote":"| admission and activation | may the step begin | the step is lawfully admitted and activated on the exact subject and basis |\n| construction availability | did the step yield its output | a candidate is available |\n| disposition | what the decision owner does with an assessed candidate | the candidate is accepted at its declared boundary |\n| ambiguity outcome | what happened to a declared ambiguity | the declared ambiguity is resolved on the exact basis |\n| effects | did an intended external effect occur | the intended effect occurred |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition",
+          "start_line":937
+        }
+      ],
+      "key":"step_result_refinements",
+      "label":"Five predicate-bound result refinements"
+    },
+    {
+      "conditions": [],
+      "definition": "Admission and activation outcomes concern lawful admission and activation on the exact subject and basis. A step exists only after its contract is admitted and its frame activated. Named outcomes are activated, admission_refused(authority), admission_refused(basis), closure_unresolved, out_of_frame and cause-qualified activation_refusal.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":953,
+          "quote":"A step exists only after its contract is admitted (§1, Admission) and its\nframe is activated on the exact subject and basis (§2).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FAdmission%20and%20activation",
+          "start_line":949
+        }
+      ],
+      "key":"admission_activation_outcomes",
+      "label":"Admission and activation outcomes"
+    },
+    {
+      "conditions": ["Lawful activation has occurred."],
+      "definition": "Construction availability records existence of a step's candidate output: a constructing step's constructed subject or an assessing step's closed results. Its values are candidate_ready, refused, incomplete, re_entry_requested(authority) and re_entry_requested(basis). Output remains a candidate until evaluated.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":986,
+          "quote":"A step's output is a candidate until evaluated (FOUNDATIONS §3, P0): the\nconstructed subject of a constructing step, or the closed results of an\nassessing step. Construction availability records whether that output\nexists (P5, P6):",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FConstruction%20availability",
+          "start_line":983
+        }
+      ],
+      "key":"construction_availability",
+      "label":"Construction availability"
+    },
+    {
+      "conditions": ["A decision owner disposes an assessed candidate."],
+      "definition": "Disposition is the acceptance result, distinct from availability, assessment and an assessor's recommendation. Its four semantic values are accept, local_repair, re_enter and reject, all mapped for acceptance at the candidate's declared boundary.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1037,
+          "quote":"The disposition is the\nacceptance result: it consumes the candidate's availability and assessment\nresults and stays separate from both (FOUNDATIONS §4 Results).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FDisposition",
+          "start_line":1033
+        }
+      ],
+      "key":"candidate_disposition",
+      "label":"Candidate disposition"
+    },
+    {
+      "conditions": ["A declared ambiguity is being handled."],
+      "definition": "Ambiguity outcomes are resolved, carried, escalated and blocked. They answer whether the declared ambiguity is resolved on the exact basis and retain their domain-specific information beside their core value.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1073,
+          "quote":"A declared ambiguity is resolved, carried, escalated or blocked, and the\noutcome is recorded either way",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FAmbiguity%20outcome",
+          "start_line":1068
+        }
+      ],
+      "key":"ambiguity_outcome",
+      "label":"Ambiguity outcome"
+    },
+    {
+      "conditions": ["An effectful step has an intended external effect."],
+      "definition": "Effect outcomes concern attainment of the declared intended outcome: completed, not_effected or completion_unknown. Whether the effect has ended is a separate question, required conjunctively for completed and otherwise recorded as an unresolved end when applicable. Uncertain completion includes completion_unknown and not_effected with an unestablished end.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1099,
+          "quote":"An effectful step's intended external effect has one of three values,\nmapped for the predicate \"the intended effect occurred\", that is, the\ndeclared outcome of the effect is attained.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FEffects",
+          "start_line":1095
+        },
+        {
+          "end_line":1130,
+          "quote":"An effect of uncertain completion is one whose value is\n`completion_unknown`, or whose value is `not_effected` with its end not\nestablished.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FEffects",
+          "start_line":1128
+        }
+      ],
+      "key":"external_effect_outcome",
+      "label":"External effect outcome and end"
+    },
+    {
+      "conditions": [],
+      "definition": "Total handling declares a next move for every admitted condition class, including an explicit unknown class. It does not assert recognition of every external condition, provider termination or completion of every request. A hanging call, unsatisfiable demand and lost post-effect response remain distinct cases.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1152,
+          "quote":"Each admitted condition class has a declared\nnext move, including an explicit unknown class. Total handling does not\nclaim that every external condition is recognised, that an invoked provider\nterminates, or that every request can be completed.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement",
+          "start_line":1147
+        }
+      ],
+      "key":"total_handling",
+      "label":"Total handling and reconfiguration"
+    },
+    {
+      "conditions": [],
+      "definition": "Refinement decomposes an outer transformation T: A → X with success predicates P₀ … Pₙ into steps. A rewrite replaces a representation, step or composite by another claimed to keep its meaning, including partitioning, regrouping, reordering, merging or substitution. Exact steps preserve meaning under the subject's declared interpretation; approximate steps instead require an adequacy relation and a composite end-to-end bound.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1187,
+          "quote":"An outer transformation T: A → X with success predicates P₀ … Pₙ\nis faithfully refined by steps Tᵢ",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement%2FRefinement",
+          "start_line":1183
+        },
+        {
+          "end_line":1213,
+          "quote":"A rewrite step replaces a representation, a step or\na composite by another that is claimed to keep its meaning",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement%2FRefinement",
+          "start_line":1211
+        }
+      ],
+      "key":"refinement_and_rewrite",
+      "label":"Refinement, rewrite, exactness and approximation"
+    },
+    {
+      "conditions": ["A material transition is proposed for admission."],
+      "definition": "The complete enclosing admission relation includes every participant and equality join whose identity, validity, authority, currentness or transition can affect or be affected by admission, including relevant far sides of crossing seams. Each admission owner independently derives and validates it from authoritative inputs.",
+      "exceptions": ["A crossing seam's far side may be excluded when authoritative evidence establishes that it cannot participate."],
+      "grounding": [
+        {
+          "end_line":1267,
+          "quote":"For a material transition, each admission owner is independently\nresponsible for deriving and validating the complete enclosing relation\nfrom authoritative inputs (P4b, P6).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement%2FComplete%20enclosing-relation%20admission",
+          "start_line":1259
+        }
+      ],
+      "key":"complete_enclosing_admission",
+      "label":"Complete enclosing-relation admission"
+    },
+    {
+      "conditions": ["An admission owner and supported boundary are declared by accepted design."],
+      "definition": "Standing structural qualification instantiates the admission law for every such owner and boundary, with case applicability determined by supported inputs, state and operating or threat model. It examines direct, composite or nested, forged, ambiguous, stale, incoherent, competing-authority, reconstructed, replay and atomic-publication-failure forms.",
+      "exceptions": ["Unsupported forms require a design-grounded not_applicable disposition and no weaker or competing path."],
+      "grounding": [
+        {
+          "end_line":1317,
+          "quote":"Qualification of the admission law is instantiated for every admission\nowner and supported boundary declared by accepted design (P6). Case applicability\nfollows the supported input, state and operating or threat model.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement%2FStanding%20structural%20qualification",
+          "start_line":1311
+        }
+      ],
+      "key":"standing_admission_qualification",
+      "label":"Standing structural qualification"
+    },
+    {
+      "conditions": [],
+      "definition": "Work state is an object comprising the current persistent workspace, governing basis, applicable closed results and judgments with invalidators, residuals and known uncertainty over external effects. Resumption re-enters the same method from current material state, possibly with another actor. Checkpointing, resumption and progress accounting are carrier-independent procedures.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1350,
+          "quote":"Work state is the tuple of: the current persistent workspace; the governing\nbasis; the applicable closed results and judgments with their invalidators;\nthe residuals; and the known uncertainty over external effects.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F5.%20Work%20state%20and%20restart",
+          "start_line":1343
+        }
+      ],
+      "key":"work_state",
+      "label":"Work state, resumption and checkpoint"
+    },
+    {
+      "conditions": [],
+      "definition": "Progress is accepted material movement toward the selected outcome. Prerequisite work names the obligation enabled; preservation and repeated proof are evidence without new progress; rejected or superseded construction is churn; discovering hidden distance revises the forecast without being negative progress. These are semantic categories, not a numeric progress algorithm.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1382,
+          "quote":"Progress is accepted material movement toward the selected outcome;\nprerequisite work names the obligation it enables; preservation and\nrepeated proof are evidence, not new progress; rejected or superseded\nconstruction is churn; discovering previously hidden distance revises the\nforecast and is not negative progress.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F5.%20Work%20state%20and%20restart",
+          "start_line":1375
+        }
+      ],
+      "key":"progress_categories",
+      "label":"Progress categories"
+    },
+    {
+      "conditions": [],
+      "definition": "The persistent workspace and authoritative inputs are the work's continuing truth surface. An actor's context is its bounded, revisable and disposable account, not a second truth surface. Later intake reconstructs governing relations without the prior actor's private context.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1440,
+          "quote":"The workspace and its authoritative inputs persist across activations and\nare the continuing truth surface of the work: the surface whose current\nmaterial state decides what the work has and has not done.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F5.%20Work%20state%20and%20restart%2FThe%20workspace%20and%20an%20actor%27s%20account",
+          "start_line":1431
+        }
+      ],
+      "key":"workspace_and_actor_account",
+      "label":"Workspace truth surface and actor account"
+    },
+    {
+      "conditions": [],
+      "definition": "Proportionality relates semantic ambiguity removed to effective reasoning complexity introduced. Complexity includes independent concepts and authority surfaces, cross-document joins, exceptions, branching, states, transitions, reconciled duplicates and decision-relevant detail; it is not raw lines, artifact count or context-window size.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1506,
+          "quote":"Proportionality is the relation between semantic ambiguity removed and\neffective reasoning complexity introduced.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F6.%20Cost%20and%20proportionality",
+          "start_line":1492
+        }
+      ],
+      "key":"proportionality",
+      "label":"Proportionality"
+    },
+    {
+      "conditions": ["A cost claim is the governed question."],
+      "definition": "A selected cost claim declares an allowance and reports spend measured under the selected execution binding or explicitly unmeasured. Material startup, framework processing, external computation, transport and assurance costs are distinct components. Transferred-context cost includes every delegated actor.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1552,
+          "quote":"Cost is selected, not universal. Where a cost claim is the governed\nquestion, the activation declares its allowance and reports its spend,\nmeasured under the selected execution binding or recorded as unmeasured",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F6.%20Cost%20and%20proportionality",
+          "start_line":1549
+        }
+      ],
+      "key":"selected_cost_claim",
+      "label":"Selected cost claim"
+    },
+    {
+      "conditions": [],
+      "definition": "A resource limit bounds context, attention, wall time, spend, human effort, communication or machine resources consumed by activation. Its intake, capability envelope or selected execution binding must declare it. This law supplies no numerical limit; the selected execution binding supplies values and measurable units and boundaries.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1603,
+          "quote":"A resource limit bounds a resource that an activation consumes: context,\nattention, wall time, spend, human effort, communication or a machine\nresource (P0). This subsection owns the law for every such limit. It sets\nno value",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F6.%20Cost%20and%20proportionality%2FResource%20limits",
+          "start_line":1600
+        }
+      ],
+      "key":"resource_limit",
+      "label":"Declared resource limit"
+    },
+    {
+      "conditions": [],
+      "definition": "A closed result identifies frame and activation, subject, basis, evaluation, actor, evidence, verdict, residual uncertainty and invalidation conditions. Its reuse depends on exact applicability and three invalidator kinds: material input change, changed basis and a declared revising observation that occurs.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1657,
+          "quote":"A closed result identifies the frame and its activation, the subject, the\nbasis, the evaluation, the actor, the evidence, the verdict, the residual\nuncertainty and the invalidation conditions",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F7.%20Closed%20result%20and%20reuse",
+          "start_line":1654
+        }
+      ],
+      "key":"closed_result",
+      "label":"Closed result and invalidators"
+    },
+    {
+      "conditions": [],
+      "definition": "Transition evidence is a consumer-represented read model identifying exact candidate, affected relations, changed realisation paths, added or removed authority paths, retained and open seams, focused and required integration proof, explicit non-changes, any activated assessor's recommendation and the owner's disposition once made. It is not specification, design or admission authority.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":1725,
+          "quote":"Consumers\nchoose the representation. Transition evidence is a read\nmodel; it does not become specification, design or admission authority",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F7.%20Closed%20result%20and%20reuse%2FTransition%20evidence",
+          "start_line":1722
+        }
+      ],
+      "key":"transition_evidence",
+      "label":"Transition evidence"
+    },
+    {
+      "conditions": [],
+      "definition": "ASSURANCE is presented as a tier-2 owner of assurance and testing law: verification layers; testing taxonomy, proof authorities and portability; test authority; scenario bundles; installed development proof; significant paths; product testing frames; combinatorial coverage and testing value; legitimate-path and technical-debt erasure; evidence composition; subject acquisition; counterexample localisation; and interface integration. Its family table is F14. It consumes tier-1 laws without adding tier-1 definitions.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":11,
+          "quote":"Tier 2. Owns the assurance and testing law of the method",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE",
+          "start_line":3
+        },
+        {
+          "end_line":20,
+          "quote":"adds no definition to tier 1.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE",
+          "start_line":20
+        }
+      ],
+      "key":"assurance_member",
+      "label":"ASSURANCE document role"
+    },
+    {
+      "conditions": [],
+      "definition": "The verification layers preserve distinct truths: requirements preserve invariant truth and ask what must be true; design preserves structural choice and asks how that truth is realised; scenarios preserve operational meaning and ask whether the realised system can do the claimed thing. Scenarios are concrete end-to-end product-owner use cases validating intent through realised behaviour.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":40,
+          "quote":"| Requirements | invariant truth | what must be true? |\n| Design | structural choice | how is that truth realised? |\n| Scenarios | operational meaning | can the realised system actually do the claimed thing? |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers",
+          "start_line":38
+        }
+      ],
+      "key":"verification_layers",
+      "label":"Requirements, design and scenarios"
+    },
+    {
+      "conditions": [],
+      "definition": "F14 is the source's foundation-to-law account for evidence about realised products and its organisation. Its additional instance premises are runnable product (source and deployed, installed or runnable forms can produce execution or observation evidence), composition (modules, interfaces and owners form causal paths), users (claims concern supported-surface outcomes), external boundaries (workers, transports or fixtures outside source), and designed modules (a design profile may govern a boundary and module ownership). Commitments do not supply these premises. Fourteen rows distinguish claimed consequences from domain and policy choices.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":88,
+          "quote":"Its instance premises, which the commitments\ndo not supply, are named in the rows as follows:",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers%2FFoundation%20to%20law%3A%20assurance%20and%20testing",
+          "start_line":77
+        }
+      ],
+      "key":"assurance_foundation_family",
+      "label":"F14 assurance and testing foundation account"
+    },
+    {
+      "conditions": ["The selected complete STDO basis supplies the bounded context."],
+      "definition": "The product-assurance bounded context is urn:stdo:bounded-context:product-assurance. Its Product-level taxonomy distinguishes design or module conformance authority from UAT or acceptance authority independently of execution breadth. Conformance asks whether implementation realises the module or design boundary; UAT asks whether the composed product satisfies its claimed requirement or scenario.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":140,
+          "quote":"This member owns the product-assurance bounded context,\n`urn:stdo:bounded-context:product-assurance`, under the selected complete\nSTDO basis, and within it the Product-level test-authority taxonomy.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy",
+          "start_line":135
+        }
+      ],
+      "key":"proof_authority_taxonomy",
+      "label":"Product-assurance proof taxonomy"
+    },
+    {
+      "conditions": [],
+      "definition": "Sandbox UAT exercises an isolated composed product through declared application, public, runtime or control surfaces using a requirement-sourced scenario or acceptance case. Harnessed mode uses deterministic, fake, recorded or injected worker or result surfaces; live mode uses a real configured worker, tool, agent, service or external probabilistic transport where the product depends on that boundary.",
+      "exceptions": ["An explicitly equivalent isolated composed-product proof lane may also be called UAT or acceptance testing."],
+      "grounding": [
+        {
+          "end_line":181,
+          "quote":"Under this method only sandbox tests, or an explicitly equivalent isolated\ncomposed-product proof lane, may be called UAT or acceptance tests.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy",
+          "start_line":173
+        },
+        {
+          "end_line":189,
+          "quote":"- harnessed sandbox UAT exercises the full composed product path with a\n  deterministic, fake, recorded or injected worker or result surface; and\n- live sandbox UAT exercises the full composed product path with a real\n  configured worker, tool, agent, service or other external probabilistic\n  transport where the product depends on that live boundary.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy",
+          "start_line":185
+        }
+      ],
+      "key":"sandbox_uat_modes",
+      "label":"Harnessed and live sandbox UAT"
+    },
+    {
+      "conditions": [],
+      "definition": "Fixture and proof portability concerns reproducibility of required closure lanes from their declared source boundary and the classification or declared acquisition of external project evidence.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":221,
+          "quote":"Required closure lanes are reproducible from the declared source boundary",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy%2FFixture%20and%20proof%20portability",
+          "start_line":217
+        }
+      ],
+      "key":"fixture_proof_portability",
+      "label":"Fixture and proof portability"
+    },
+    {
+      "conditions": [],
+      "definition": "Written test-case authority is traceable authority for each live requirement's proof. It includes each expected result's assertion provenance: owning obligation, interpretation, assumptions, derivation, shared dependencies and whether the asserted predicate is the obligation itself, a necessary condition or part of a sufficient conjunction.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line":245,
+          "quote":"Written authority includes the assertion\nprovenance of each expected result: the owning obligation, its\ninterpretation, assumptions, derivation and shared dependencies, and\nwhether the asserted predicate is the obligation, a necessary condition of\nit or part of a sufficient conjunction",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F3.%20Test%20authority",
+          "start_line":241
+        }
+      ],
+      "key":"written_test_authority",
+      "label":"Written test-case authority"
+    }
+  ],
+  "constraints": [
+    {
+      "applies_to_keys":["step_roles","bounded_operation_grant"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":635,
+          "quote":"no role name confers an operation",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FRoles%20and%20delegation",
+          "start_line":633
+        },
+        {
+          "end_line":659,
+          "quote":"Direct entry preserves\nexecution-contract admission (Admission above), the smallest lawful\ncarrier, the required assessment and the reserved decisions",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FRoles%20and%20delegation",
+          "start_line":655
+        }
+      ],
+      "key":"role_independence_and_direct_entry",
+      "statement":"Where independent assessment supports promotion, the assessor evaluates the exact live subject, authority paths, proof and installed state, not the constructor's summary. Independence is claim-relative and imposes no actor count. Direct constructor entry requires one capable context with sufficient existing work authority, exact intake and operation grant; no coordinating activation is required solely for appointment. Configuration selects coordination when material contexts, authority, capability or required independence need it, never merely because of a role or frame name. Direct entry preserves admission, the smallest lawful carrier, required assessment and reserved decisions; it permits bounded work and condition-based recording, not self-acceptance at another owner's boundary.",
+      "uncertainty":"The referenced configuration, admission and independence laws are not supplied in full."
+    },
+    {
+      "applies_to_keys":["bounded_operation_grant","step_roles"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":679,
+          "quote":"The\nrecording waives no condition that actually applies",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FRoles%20and%20delegation",
+          "start_line":666
+        },
+        {
+          "end_line":691,
+          "quote":"A material change to the operation, the\nsubject, the territory, the authority or the validity conditions requires\nthe affected binding to be resolved before effect.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FRoles%20and%20delegation",
+          "start_line":684
+        }
+      ],
+      "key":"result_recording_and_grant_continuity",
+      "statement":"Only when applicable law requires no independent assessment and reserves no acceptance may the grant-holding constructor record the satisfied bounded result, evaluated conditions and evidence in the existing durable result surface without adding a carrier, appointment, review or recreated design view solely for completion. Recording waives no applicable condition, reports no unperformed evaluation and disposes no other owner's boundary. Required assessment or reserved acceptance remains required; discovered insufficiency withholds the dependent effect and returns the question to its owner. Carriers and profiles add only their carrier binding. Actual role transitions are recorded in the existing work carrier; status change alone requires neither a new grant nor rehashing an unchanged subject. Material operation, subject, territory, authority or validity changes require affected binding resolution before effect. A sequence-wide grant never lifts a configuration's non-mutation restriction on its coordinating role, including the cited Executive restriction.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["context_construction"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":714,
+          "quote":"If Z, R, the required-edge semantics, the basis or the scope is not\n   exact, or the closure is not finite and unique on the exact basis,\n   activation returns `closure_unresolved` (§3, Admission and activation)\n   and no step proceeds; it does not guess.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope",
+          "start_line":702
+        }
+      ],
+      "key":"closure_and_projection_requirements",
+      "statement":"The described procedure computes material closure of Z under R, then projects it to the selected context, recording excluded, external, unresolved, translated and invalidation-sensitive seams. Inexact Z, R, required-edge semantics, basis or scope, a closure not finite and unique on the exact basis, or projection gap or refusal returns closure_unresolved and permits no step. Material outside the closure stays out; adjacency or corpus presence is no inclusion reason. The method does not require proof that no undiscovered material relation exists.",
+      "uncertainty":"AC-010 and AC-011 are referenced but their full definitions are outside the supplied source."
+    },
+    {
+      "applies_to_keys":["context_construction","resource_limit"],
+      "conditions":["The actor's envelope declares context capacity."],
+      "exceptions":["Without declared context capacity, this measurement is not required; the other cited finite-attention conditions still apply."],
+      "grounding":[
+        {
+          "end_line":730,
+          "quote":"The fit claim for a measured\n   boundary and the step's fit judgment are distinct",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope",
+          "start_line":723
+        },
+        {
+          "end_line":745,
+          "quote":"Where B declares no context capacity, no measurement is\n   required",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope",
+          "start_line":740
+        }
+      ],
+      "key":"context_capacity_fit",
+      "statement":"Before reading, measure selected context in the declared capacity's unit, bytes or tokens, over the selected execution binding's boundary; record measurement, capacity and comparison. Fit covers only that boundary; outside context is not measured and receives no fit claim. The step's fit judgment requires recorded complete active inputs or a supported upper bound including host-supplied context; without either it is indeterminate unless a counterexample such as measured excess establishes falsified. A correct task result retains its bounded standing but cannot supply missing fit. This conditional measurement applies whatever question the step governs, is not a budget or universal gate, and proves fit only; adequate attention requires actual-use evidence. Other envelope dimensions and time, spend and resource limits retain their own laws.",
+      "uncertainty":"The complete active-input judgment and adequate-attention criteria depend on referenced laws not supplied here."
+    },
+    {
+      "applies_to_keys":["acquisition_activation_evaluation","derived_surface"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":798,
+          "quote":"Only material in the exact selected\nbasis is acquired",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope",
+          "start_line":794
+        },
+        {
+          "end_line":814,
+          "quote":"No frame,\nderived surface or acquisition carries a universal sufficiency claim",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope",
+          "start_line":803
+        }
+      ],
+      "key":"exact_acquisition_and_question_scope",
+      "statement":"Acquire declared inputs by exact identity. Absence from the materialised view permits neither reading elsewhere nor concluding source absence. Acquisition is neither admission nor another actor stage and grants no role, operation or decision; effectful work still requires an admitted contract. Acquire a serving derived surface whose sources are current; for another task or a stale, missing or question-insufficient surface, acquire the deciding owner sections declared in the exact selected basis. Candidate sources, version-line selectors and another basis cannot substitute. Read the selected material and actual subject and follow needed material-source and coupled-obligation references. Sufficiency is for the named question and material relations, never universal. Before dependent action, name missing bindings: no available frame declaring evaluation needs yields out_of_frame; an absent or unverifiable exact required basis yields admission_refused(basis) at admission or activation_refusal(basis) at activation. Handle coupled material that does not fit through the fit procedure. A standalone surface can decide only questions its own source members own; questions owned elsewhere or joining several owners return out_of_frame naming owners and require those members at current digests or a surface declaring every owner.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["acquisition_activation_evaluation","rendered_prompt"],
+      "conditions":[],
+      "exceptions":["Historical workaround prose may remain only where current requirement, design, runtime or test still needs its constraint."],
+      "grounding":[
+        {
+          "end_line":832,
+          "quote":"It distinguishes semantic\nlaw, observed evidence, inference and decision, and records every\nassumption whose failure could change the result",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope",
+          "start_line":830
+        },
+        {
+          "end_line":854,
+          "quote":"Prompt text must project the current authority\nreferences, obligations, contracts, boundaries, proof expectations and\nfallback conditions the step needs.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope",
+          "start_line":845
+        }
+      ],
+      "key":"activation_evaluation_and_prompt_boundaries",
+      "statement":"The actor or assigning authority selects one capable frame or declared active configuration. Activation binds exact subject and basis and loads declared material relations and evidence sources as the referenced packet, never an undifferentiated workspace dump. If no lawful frame/actor pairing exists, missing declared material relation or capability yields out_of_frame; otherwise the applicable activation_refusal cause governs. Implied context cannot sustain work. Evaluation distinguishes semantic law, observation, inference and decision and records every result-changing assumption. Prompt construction starts from the highest live authority surface needed, projects current authority references, obligations, contracts, boundaries, proof expectations, fallback conditions and acquisition-selected material, including raw owners when required. It names an upstream unresolved authority gap before reading fallback context and excludes obsolete workaround prose.",
+      "uncertainty":"The packet shape, full activation-refusal causes and design/ODD/UX/ticket prompt specialisations are references, not supplied definitions."
+    },
+    {
+      "applies_to_keys":["derived_surface"],
+      "conditions":["Applies to derived surfaces under every method and selected carrier."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":905,
+          "quote":"It is current for a selected basis only while every source identity it\n  names equals the identity of that source in the selected basis. A change\n  to any of them makes it stale.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope%2FStaleness%20of%20derived%20surfaces",
+          "start_line":889
+        }
+      ],
+      "key":"derived_surface_currentness",
+      "statement":"A surface names the exact identity, such as path and digest, of every derivation source and every source whose change can change its content. It is current only while all named identities equal the selected basis identities; any change makes it stale. No stale surface is used as current for any question. Currentness is restored only by regeneration from selected-basis sources or explicit re-acceptance recording new source identities and a finding that content still matches; meanwhile deciding owners are acquired directly. Identity matches establish provenance alone, neither fidelity nor sufficiency. Selected-basis owners decide question-specific insufficiency and overreach; the surface never judges these about itself. Packaging and installation carriers refine identities and re-acceptance procedures while naming this subsection as owner; PRODUCT_DEFINITION §11 is identified as the released-carrier application.",
+      "uncertainty":"The referenced carrier-specific re-acceptance procedure is not supplied."
+    },
+    {
+      "applies_to_keys":["step_result_refinements"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":933,
+          "quote":"each evaluation it\nperformed returns one core value with its predicate and domain outcome,\nand an evaluation it did not perform has no result.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition",
+          "start_line":920
+        },
+        {
+          "end_line":945,
+          "quote":"A profile that refines these values for its own units maps each of its\nvalues to exactly one core value under FOUNDATIONS §4 Results and adds no\ncore value.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition",
+          "start_line":943
+        }
+      ],
+      "key":"predicate_bound_core_mapping",
+      "statement":"Every performed evaluation returns exactly one core value with predicate and domain outcome; an unperformed evaluation has no result. Every refinement value maps to exactly one core value for its own named predicate, which travels with it. Satisfied under one predicate cannot satisfy another. Consumers must not treat refused activation as step stop, availability as fitness or acceptance, carried ambiguity as resolution, or unknown effect as no effect. Profile refinements likewise map each value to one core value and add none.",
+      "uncertainty":"The complete core algebra and conjunction law are not supplied; only the quoted local uses and mappings are represented."
+    },
+    {
+      "applies_to_keys":["admission_activation_outcomes"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":968,
+          "quote":"| `closure_unresolved` | the seed set Z, the relation family R, the required-edge semantics, the basis or the scope is not exact, or the material closure is not finite and unique on the exact basis (§2, step 1; AC-010), or the projection of the closure returns a gap or refusal (§2, step 2; AC-011); the outcome names the condition that fails and the basis coordinates that leave it open | invalid_basis |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FAdmission%20and%20activation",
+          "start_line":966
+        },
+        {
+          "end_line":976,
+          "quote":"A refused admission or activation creates no step, no\nactivation of the step's frame and no work result",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FAdmission%20and%20activation",
+          "start_line":971
+        }
+      ],
+      "key":"admission_outcome_mapping",
+      "statement":"For lawful admission and activation: activated → satisfied only with admitted contract and admission evidence, exact Z/R/required-edge semantics/basis/scope, finite unique closure, selected-context projection and activated_frame. admission_refused(authority) → out_of_frame when no admission mechanism or explicit human override admits the exact contract, or no authorised available durable result/evidence surface exists; name missing authority or surface and owner. admission_refused(basis) → invalid_basis when cited outcome, prerequisite or experiment basis, or named exact subject/basis, cannot support the contract; name that basis. closure_unresolved → invalid_basis for closure/projection defects, naming failing condition and open basis coordinates. out_of_frame → out_of_frame when no frame/actor pairing declares a needed relation or capability, or no fit option fits context to an envelope. activation_refusal takes its cause, predicate and core value from REFERENCE_FRAME §5, without local remapping. Refusal creates no step, frame activation or work result; return it to assigning authority or declared result carrier and never record it as construction availability or a step's stop.",
+      "uncertainty":"The full activation_refusal mapping is externally owned and unresolved in this excerpt."
+    },
+    {
+      "applies_to_keys":["construction_availability"],
+      "conditions":["Lawful activation occurred; causes known during admission or activation instead use admission/activation outcomes."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":995,
+          "quote":"| `candidate_ready` | satisfied | an exact candidate and its transition evidence are available |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FConstruction%20availability",
+          "start_line":990
+        },
+        {
+          "end_line":1026,
+          "quote":"A stop\nwith both causes records both and takes `re_entry_requested(basis)`",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FConstruction%20availability",
+          "start_line":1023
+        }
+      ],
+      "key":"construction_availability_mapping",
+      "statement":"The cause-selected mapping is total and exclusive after lawful activation; wording, timing and preference cannot change it. candidate_ready → satisfied when exact candidate and transition evidence are available, establishing availability only. refused → falsified when governing prohibition or owner-valid construction refusal defeats construction, with that prohibition/refusal as counterexample. incomplete → falsified for candidate availability when the step stops without output because required evaluation was unperformed or undecidable on admissible evidence, or execution ended first; stop basis and residuals identify which. re_entry_requested(authority) → out_of_frame for a needed material decision outside the grant, naming owner. re_entry_requested(basis) → invalid_basis when activated basis no longer supports work. Both re-entry causes are recorded when present, with basis taking precedence. Performed evaluations keep their own results, including indeterminate; planned unperformed evaluations have no result and remain work-state residuals naming unfinished capability or execution. Incomplete assessment never falsifies an unassessed criterion or the assessed subject.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["candidate_disposition"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1044,
+          "quote":"| `accept` | the candidate closes its declared cone and preserves every affected governing relation | satisfied |\n| `local_repair` | implementation or proof is locally defective while the governing relation remains coherent | falsified |\n| `re_enter` | the governing outcome, a requirement, an identity, a lifecycle, an authority, a public contract or the accepted design must change | invalid_basis |\n| `reject` | the candidate violates a governing relation or leaves an undisposed competing truth path | falsified |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FDisposition",
+          "start_line":1041
+        },
+        {
+          "end_line":1064,
+          "quote":"it prohibits repeating an\nunchanged failed construction relation as if iteration alone could close\nit",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FDisposition",
+          "start_line":1062
+        }
+      ],
+      "key":"disposition_mapping_and_reassessment",
+      "statement":"Only the decision owner disposes; an assessor may recommend, but recommendation is evidence, never disposition. accept → satisfied when the candidate closes its declared cone and preserves every affected governing relation. local_repair → falsified for local implementation/proof defect with coherent governing relation; the defect is the counterexample. re_enter → invalid_basis when governing outcome, requirement, identity, lifecycle, authority, public contract or accepted design must change; re-enter the owning relation because the construction/assessment basis cannot support acceptance. reject → falsified for a governing violation or undisposed competing truth path, which is the counterexample. A repair creates a new candidate with its own results. Global correctness conserves every affected global relation without requiring whole-product proof in each local action. Repeated rejection at one unchanged boundary requires reassessment of frame altitude, causal cone, common components, design-versus-code placement and authority sufficiency. No rejection threshold, mandatory round count or review state machine is imposed; unchanged failed construction cannot be repeated as if iteration alone closed it.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["ambiguity_outcome"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1080,
+          "quote":"| `carried` | falsified | policy permits work to continue with the ambiguity open; the open ambiguity is the counterexample, and it stays a recorded residual that names the evidence or decision that would resolve it |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FAmbiguity%20outcome",
+          "start_line":1078
+        },
+        {
+          "end_line":1089,
+          "quote":"No outcome other than `resolved` maps to `satisfied`",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FAmbiguity%20outcome",
+          "start_line":1087
+        }
+      ],
+      "key":"ambiguity_mapping",
+      "statement":"Record every ambiguity outcome. resolved → satisfied only for a recorded decision under policy permitting lawful probabilistic processing or human adjudication. carried → falsified for resolution when policy permits continuation with known open ambiguity; retain a residual naming resolving evidence or decision. escalated → out_of_frame when policy/risk appetite reserves decision to human authority absent from the step; name it. blocked → falsified when unresolved ambiguity and policy or hard stop halt work; name the halting condition and what lifts it. Carried and blocked are known openness, not evidence-indeterminate resolution. Preserve their domain details, and never support a dependent claim as if carried, escalated or blocked ambiguity were resolved.",
+      "uncertainty":"The applicable ambiguity policy and risk appetite are not supplied."
+    },
+    {
+      "applies_to_keys":["external_effect_outcome"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1105,
+          "quote":"| `completed` | satisfied | evidence about the subject establishes that the intended effect occurred in full and that the effect has ended |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FEffects",
+          "start_line":1103
+        },
+        {
+          "end_line":1126,
+          "quote":"The residual does\nnot weaken the counterexample, and the counterexample does not resolve\nthe residual.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FEffects",
+          "start_line":1121
+        }
+      ],
+      "key":"effect_evidence_and_end_mapping",
+      "statement":"Use admitted evidence about the subject. completed → satisfied requires full intended effect and established end. not_effected → falsified requires evidence that the declared outcome is unattained and no later completion can attain it: examples include no effect beginning, an effect ending short, a bounded interval closing partly undone, or prior action destroying what the outcome needs; name any part that occurred. completion_unknown → indeterminate when neither other value is established, including lost response without observed counterexample or full effect observed while it may still act; name the deciding observation. Lost response, absent record or no context trace is not evidence of not_effected. End is established by subject evidence that action ceased or never began; if an effect began without established end, record the needed observation separately. End does not decide not_effected: a closed incomplete interval can falsify outcome while action continues. Counterexample and end residual remain independent. Before repetition or dependent action, reconcile uncertain completion sufficiently for that action; not_effected with unknown end licenses neither absence assumptions nor repetition.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["total_handling","ambiguity_outcome"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1170,
+          "quote":"A hard stop halts the work at its condition whatever the policy",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement",
+          "start_line":1165
+        }
+      ],
+      "key":"totality_policy_and_hard_stops",
+      "statement":"Name next moves in advance for every non-satisfied result and admitted condition class, including unknown. Applicable ambiguity policy and risk appetite choose ambiguity outcomes; this section states no default policy and names SPEC_METHOD §5 as its owner. Hard stops are not optional policy choices and halt at their condition regardless of risk appetite. Typical, non-exhaustive classes are violated invariant/guarantee, absent required authority surface, missing declared executional/operational capability, undeclared irreversible side effect and explicit human-approval gate. A declared ambiguity takes blocked; other cases take a transition stop. Adding algebra values does not solve hanging calls, unsatisfiable demands or lost post-effect responses.",
+      "uncertainty":"The default ambiguity policy and the general transition-stop specification are outside this excerpt."
+    },
+    {
+      "applies_to_keys":["refinement_and_rewrite"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1208,
+          "quote":"Coverage of the outer obligations, correctness of the local\nimplications and legitimate authority are premises, not conclusions",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement%2FRefinement",
+          "start_line":1198
+        },
+        {
+          "end_line":1243,
+          "quote":"Faithful refinement, defined above, requires exact\nsteps.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement%2FRefinement",
+          "start_line":1229
+        }
+      ],
+      "key":"refinement_composition_and_licensing",
+      "statement":"Faithful refinement requires exact steps: each admitted input satisfying Pᵢ yields output satisfying Pᵢ₊₁, retains every applicable invariant, exposes other outcomes without coercion and satisfies the next step's domain/preconditions. Successful exact composition carries P₀ to Pₙ by induction, assuming outer-obligation coverage, valid local implications and legitimate authority; local passes do not establish those premises. Non-next-step transfer needs a declared adapter composed as a step or a specialised contract whose domain names the carried material and whose exact owner authority, context, basis, scope, preservation, loss, refusal and invalidation law are declared. Coupled required relations fit together in some step; unrelated obligations remain excluded; every affected seam includes its far side or explains nonparticipation. Every layer states and discharges preservation of the layer above. Refinement/rewrite requires a subject-owner licensing law, such as declared associativity, commutativity or equivalence; without declared laws only universally valid steps are admissible. Any unlicensed and non-universal step, and any refinement/rewrite relying on it, is inadmissible. Approximate steps state adequacy and an argued composite end-to-end bound; such composites are adequate only within that bound, never faithful. Fixed per-step tolerances alone do not establish composition bounds. A step neither exact nor approximate with the required adequacy and composite bound is inadmissible, as is reliance on it. Material-transition admission remains one complete semantic commit or none, including the cited ODD realisation.",
+      "uncertainty":"Referenced preservation, typed-composition, ODD and profile laws are not supplied in full."
+    },
+    {
+      "applies_to_keys":["complete_enclosing_admission"],
+      "conditions":["A material transition is admitted."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1300,
+          "quote":"Admission\nis one semantic commit of the complete transition, bound to its exact basis\nidentity; failure or interruption admits the complete transition or none,\nnever a subset.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement%2FComplete%20enclosing-relation%20admission",
+          "start_line":1290
+        }
+      ],
+      "key":"complete_admission_atomicity_and_basis",
+      "statement":"Derive and validate completeness from authoritative inputs; caller/owner assertions of completeness, validity, prior admission or authority do not establish truth. Bind one exact admission-valid authoritative basis through admission. If validity/currentness can advance after preflight, require the declared predecessor/currentness commit condition or effect-free re-entry into derivation and validation. Participating owners bind equal bases or a design-declared coherent composite; independently valid mixed-basis judgments cannot combine. Validate every participant and join before any effect. No subset or nested constituent becomes admitted truth; failure/interruption admits the entire transition or none. Direct, supported composite and nested realisations preserve this law; partial results cannot replace an owner's derivation/validation and competing same-scope paths cannot establish transition outside the governing relation. Same-basis reconstruction and replay exactly reproduce enclosing relation, basis identity and complete semantic outcome/refusal. The law is false for asserted-only completeness, omitted relevant participant/join/seam, unidentified/stale/incoherently mixed basis, advancing currentness without condition or effect-free re-entry, premature effect, exposed subset, differing reconstruction or remaining competing authority.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["standing_admission_qualification"],
+      "conditions":["Cases fall within accepted design's supported input, state and operating or threat model."],
+      "exceptions":["Named representative atomic-failure observations suffice only with a design-declared dominance or equivalence proof covering the complete partial-failure surface."],
+      "grounding":[
+        {
+          "end_line":1330,
+          "quote":"| atomic publication failure | after validation succeeds, failure or interruption is observed at every materially distinct commit or publication boundary capable of exposing a subset, followed by fresh reconstruction showing the complete transition or none; named representative observations suffice only under a design-declared dominance or equivalence proof covering the complete partial-failure surface |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement%2FStanding%20structural%20qualification",
+          "start_line":1330
+        },
+        {
+          "end_line":1339,
+          "quote":"Final-participant\nvalidation failure does not substitute for post-validation atomic-failure\nevidence.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement%2FStanding%20structural%20qualification",
+          "start_line":1333
+        }
+      ],
+      "key":"admission_qualification_cases",
+      "statement":"An excluded threat alone creates no acceptance predicate or defensive-work requirement; scope expansion returns to its owner, while supported malformed inputs, stale state and effect boundaries keep checks. Direct cases derive, validate and admit the complete relation once. Every supported composite/nested constituent and owner boundary obeys the same law; unsupported forms need design-grounded not_applicable and no weaker/competing path. Reachable forged identity, membership, equality or authority is refused without effect; exclusion requires owning authority, not helper inability. Unresolved participant/join/seam/relation identity is refused without effect. Stale input is refused; preflight-to-admission advancement causes effect-free re-entry. Incoherent multi-owner bases are refused without effect. Competing same-scope paths cannot establish transition. Fresh process/reconstruction and exact replay reproduce relation, basis and complete outcome/refusal. After successful validation, observe interruption/failure at every materially distinct commit/publication boundary capable of exposing subsets, then reconstruct all or none. An indivisible commit unit requires established boundary and observations immediately on both sides. Final-participant validation failure is not post-validation atomic-failure evidence. A standing claim is false if any owner/supported boundary is omitted, any distinct partial-failure boundary lacks observation or coverage proof, a weaker helper/manufactured refusal is used, or reconstruction omits complete semantic comparison.",
+      "uncertainty":"No actual design, supported model or qualification observations are supplied."
+    },
+    {
+      "applies_to_keys":["work_state","progress_categories"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1373,
+          "quote":"A preservation checkpoint may retain unfinished or unaccepted\nwork under an existing exact operation grant",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F5.%20Work%20state%20and%20restart",
+          "start_line":1364
+        },
+        {
+          "end_line":1395,
+          "quote":"The execution protocol of §1, §3 and this section is false if execution\nproceeds from unreconstructable context",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F5.%20Work%20state%20and%20restart",
+          "start_line":1389
+        }
+      ],
+      "key":"resumption_checkpoint_and_progress_rules",
+      "statement":"Resumption recovers applicable progress, checks every reused result's invalidators, reopens only affected support and reconciles uncertain effects before repetition/dependent action sufficiently for that action. It implies no idempotence: lawful next moves for uncertain effects are reconciliation, yield or stop, never blind repetition. Acceptance binds one exact checkpoint and does not enlarge outcome or affected relations; the next already-authorised bounded action needs no renewed human approval. A preservation checkpoint under an exact grant names parent/predecessor, included territory, concurrent-writer disposition and durable evidence location; it is neither acceptance, promotion nor publication. Restart from less than retained work states why repair is insufficient, surviving obligations/evidence and changed causal assumptions; reconstructability alone does not choose restart. Counts of paperwork, code, tests, commits or reviews alone are not progress. Finer categories must name and refine this owner, mapping each to progress, prerequisite work, non-progress evidence, churn or forecast revision; an unmappable category requires owner change. Execution protocol is false for unreconstructable context, constructor reports replacing required independent live evidence, proxy overreach, unrelated incompleteness blocking a closed cone, same-process proof of materially cross-process authority or rejected activity reported as accepted progress.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["work_state","proportionality","selected_cost_claim","resource_limit","closed_result","transition_evidence"],
+      "conditions":["Each foundation-family row applies only under its stated instance premises."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1404,
+          "quote":"They are conditions of the work this family governs, not\ncommitments, and do not follow from finite capacity alone.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F5.%20Work%20state%20and%20restart",
+          "start_line":1401
+        },
+        {
+          "end_line":1582,
+          "quote":"the default priority, the smallest supported product path first: SPEC_METHOD §8",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F6.%20Cost%20and%20proportionality",
+          "start_line":1582
+        }
+      ],
+      "key":"activation_foundation_accounts",
+      "statement":"The source's work-state/reuse family has extra premises a persistent workspace, b work spanning activations, c changing actors and d open-world effects. Its six rows are: work-state object, P3/P0 with a,b, pillars 2,5, carrier chosen by profile/realisation; workspace versus account, P0/P3/P4b/P6 with a,c, pillars 6,9, recovery observations chosen by resuming intake plus work state; effect reconciliation, P5/P6 with d, pillars 4,5, no added choice; checkpoint/progress, P2/P6 with b, pillar 5, projections chosen by consumer; closed handoff/reuse, P4b/P0/P6 with c, pillars 7,9, revising observations and other invalidation conditions declared by producer; transition evidence, P5/P6 with c, pillar 9, representation chosen by consumer. The proportionality/cost family has extra premises a selected outcome, b complexity-adding obligations, c a governed cost claim and d bounded-resource consumption. Its six rows are proportionality P2/P0 with b, pillars 6,7, once-per-family rationale by owning law; symbolic design P2/P0/P1 with b, pillars 4,6, no added choice; execution purpose P2/P0/P6 with b, pillars 7,9, no added choice; cost P0/P2 with c, pillar 8, allowance by activation and measurement boundary/unit by execution binding; resource limits P0/P5/P6/P2 with d, pillars 8,7, values and measurable units/boundaries by execution binding; delivery priority P2/P0 with a, pillars 1,5, SPEC_METHOD §8 chooses the smallest supported product path first and prioritises likelihood, impact, reversibility, dependency and delayed feedback without probability waiving hard stops. These are source-authored derivation accounts, not proofs performed here. P0 is labelled recovered; P1/P2/P3/P6 independent; P5 derived from P0/P6 with the open-world premise; P4b derived from P0/P2 with non-reacquirable step-produced facts. Instance premises are not commitments and do not follow from finite capacity alone. Consumer applications add no determination beyond their owning rule.",
+      "uncertainty":"The external foundation standing and most listed consumer loci are not supplied."
+    },
+    {
+      "applies_to_keys":["workspace_and_actor_account","work_state"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1463,
+          "quote":"Discarding an actor's private context resets nothing",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F5.%20Work%20state%20and%20restart%2FThe%20workspace%20and%20an%20actor%27s%20account",
+          "start_line":1456
+        },
+        {
+          "end_line":1476,
+          "quote":"The recovery contract that applies, which is\nthe resuming step's intake with the work state, determines which\nobservations and which effect reconciliations the next dependent action\nneeds.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F5.%20Work%20state%20and%20restart%2FThe%20workspace%20and%20an%20actor%27s%20account",
+          "start_line":1471
+        }
+      ],
+      "key":"current_evidence_and_recovery",
+      "statement":"Record closed results and needed step-produced facts before returning. When current subject/authoritative inputs materially disagree with cached belief, retained summary or prior result, reconcile: current evidence corrects the account and undecided matters stay explicit unknowns. Stored accounts and past success never overrule contrary current evidence. Reliance on prior results requires current applicability and invalidator checks. Correct accounts within grant; required out-of-grant operation, territory or decision stops with re_entry_requested(authority) naming owner. Discarding private context changes neither workspace, valid work nor outstanding obligations. Missing context/memory/summary trace proves neither undone work, absent effect nor ended effect; retain completion_unknown or not_effected with end unresolved until subject evidence decides. Interrupted partial writes remain current material state and are assessed as they stand. Unperformed assessment has no result. No universal reset, full-history replay or additional carrier is required. Recovery intake plus work state determines needed observations/reconciliation. Handoff uses closed results without requiring private context and preserves validity and independence conditions.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["proportionality","selected_cost_claim"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1525,
+          "quote":"Rival authority,\nuncertainty over failure classification and evidence uncertainty count only\nwhere they leave materially distinct admissible semantic, authority,\noutcome or acceptance interpretations",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F6.%20Cost%20and%20proportionality",
+          "start_line":1511
+        },
+        {
+          "end_line":1562,
+          "quote":"a cost claim over transferred context\ncounts the context transferred to every delegated actor, not only to the\ncoordinator.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F6.%20Cost%20and%20proportionality",
+          "start_line":1559
+        }
+      ],
+      "key":"proportionality_and_cost_requirements",
+      "statement":"Each constraint identifies removed semantic ambiguity and justifies its added reasoning complexity through sufficient contraction of admissible interpretations. Rival authority, failure-classification uncertainty and evidence uncertainty count only as material alternative interpretations, not independent benefits. Greater capability may enlarge the bounded relation resolvable but grants no authority, weakens no invariant and waives no acceptance. Detailed symbolic design is proportional when one bounded model within capacity resolves material alternatives; divergent implementation paths, states, tests, reviews and joins are counterfactual evidence of those alternatives, not another numerator. A prior design removing no material alternative is disproportionate, as are additions duplicating truth, adding reconciliation or expanding reasoning without materially reducing ambiguity. Existing obligations should absorb detail where ownership and meaning survive. Repeated acquisition, assembly, hashing, preparation, status, review and evidence generation require an identified change, decision or assurance need; repetition adds neither validity nor independence, reuse remains conditional, and materially outcome-affecting operational assumptions require cited UP-019 qualification. For governed cost claims, declare allowance, report measured or unmeasured spend, separate concealable cost components, and declare supported dimensions/workloads before qualification. Report volume is not model traffic. No universal quota, ticket/actor count or separate accounting carrier follows.",
+      "uncertainty":"UP-019 qualification and the complete delivery-priority law are external references."
+    },
+    {
+      "applies_to_keys":["resource_limit"],
+      "conditions":["A limit is declared through intake, actor envelope or selected execution binding and its owning selected-frame scope."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1623,
+          "quote":"A context limit bounds the material held in active\n  context at once, including material acquired during the activation",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F6.%20Cost%20and%20proportionality%2FResource%20limits",
+          "start_line":1616
+        },
+        {
+          "end_line":1639,
+          "quote":"Pressure on a declared limit never licenses omitting or\n  truncating a material obligation or input.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F6.%20Cost%20and%20proportionality%2FResource%20limits",
+          "start_line":1624
+        }
+      ],
+      "key":"resource_declaration_measurement_exhaustion",
+      "statement":"Declare each limit's value before the activation it bounds and specify unit and measurement boundary, including counted inputs, actors, processes and repeated reads. Measure in that unit/boundary where the served obligation needs measurement; outside consumption is recorded unmeasured and receives no limit claim. Separately report initial context bytes, cumulative acquired bytes including rereads, and the bound on simultaneously active material including later acquisitions; different-question measures remain separate. Before exceeding a limit, refine, sequence, reassign to fitting limits or stop with the applicable result naming the limit, such as incomplete when bounded execution ends first; keep unresolved outcome. Enlarging a limit re-enters its grant/binding owner. The execution binding supplies values and measurable units/boundaries, with a referenced build-tenant binding. Staying within limits proves no adequacy; larger limits give no authority or invariant waiver. No universal quota, budget or measurement gate follows.",
+      "uncertainty":"No selected execution binding or actual limit values are supplied."
+    },
+    {
+      "applies_to_keys":["closed_result"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":1681,
+          "quote":"Invalidation withdraws the result from direct reliance",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F7.%20Closed%20result%20and%20reuse",
+          "start_line":1677
+        },
+        {
+          "end_line":1713,
+          "quote":"A reused judgment does not\nsatisfy a separately required independent judgment",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F7.%20Closed%20result%20and%20reuse",
+          "start_line":1704
+        }
+      ],
+      "key":"closed_result_reuse_and_invalidation",
+      "statement":"An unchanged consumer may reuse a result after checking exact applicability. Affectedness is described as dependencies D*(t) meeting impact cover I(Δ). Before reliance, invalidate results affected by material subject/input/evidence change capable of changing value, any changed bound basis coordinate, or occurrence of a declared revising observation. This applies even if subject bytes are unchanged, while preserving predecessor/successor links and demonstrably independent survivors. Invalidation withdraws direct reliance; retain_applicable separately governs retaining evidence on a new basis, and changed coordinates alone establish neither truth nor falsity. Source/task/actor condition changes are basis changes if bound there, otherwise material input changes; role/conversation/resumption changes alone invalidate nothing unless required actor conditions change. Domain triggers instantiate these three kinds, never a parallel list. Judgment continuity names basis/evidence; Return A Closed Result names inputs/observation. Reuse cannot satisfy a separately required independent judgment; an independent assessor acquires its own evidence and gives its own judgment, subject to the permission for shared valid mechanical evidence. Frame revision-coordinate need belongs to REFERENCE_FRAME §10, touched-result validity to this reuse law.",
+      "uncertainty":"The exact impact-cover, retain_applicable, minimum closed-result shape and independence conditions are referenced but not fully supplied."
+    },
+    {
+      "applies_to_keys":["transition_evidence"],
+      "conditions":[],
+      "exceptions":["Affected risk may require whole-candidate proof after local change."],
+      "grounding":[
+        {
+          "end_line":1734,
+          "quote":"Construction uses the cheapest focused proof capable of falsifying the\nactive relation.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F7.%20Closed%20result%20and%20reuse%2FTransition%20evidence",
+          "start_line":1727
+        }
+      ],
+      "key":"transition_proof_cadence",
+      "statement":"Construction uses the cheapest focused proof capable of falsifying the active relation. Expensive whole-candidate qualification occurs at a declared candidate boundary rather than every local edit, except where affected risk requires it. If loss of incidental process state is a material counterexample to durable/reconstructable authority, same-process proof alone cannot establish that claim: destroy or exclude incidental authority and compare reconstructed semantic outcomes. The evidence record includes all declared transition coordinates, any required integration proof and, conditionally, assessor recommendation and subsequent owner disposition.",
+      "uncertainty":""
+    },
+    {
+      "applies_to_keys":["assurance_member"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":29,
+          "quote":"the profile that maps engagement roles and specialist\nfamilies onto them is [EXECUTIVE_BASELINE](EXECUTIVE_BASELINE.md), tier 3,\nand nothing here depends on it.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE",
+          "start_line":26
+        }
+      ],
+      "key":"assurance_document_boundaries",
+      "statement":"ASSURANCE consumes FOUNDATIONS claim/evidence/judgment/authority and result/conjunction laws, REFERENCE_FRAME declarations/conjunction/translation/coverage, EVALUATION separation/assessment/acceptance/conformance, and ACTIVATION applicability/execution/proportionality/reuse. SPEC_METHOD owns the particular chain and change classes; PRODUCT_DEFINITION owns project bindings. The introduction locates the design profile's module-derived unit-proof law in ASSURANCE §§14–16 and ticket test-case authority in TICKETS §7, pre-empting neither. Testing and interface frames are §§7–13; the tier-3 Executive mapping does not govern this member through dependency. Every clause is stated to name its requiring P0–P6 principle.",
+      "uncertainty":"The module-law ownership phrasing competes with the later taxonomy paragraph; the unsupplied owners cannot resolve it here."
+    },
+    {
+      "applies_to_keys":["verification_layers"],
+      "conditions":[],
+      "exceptions":["Constraints, governance rules and verification-infrastructure requirements may need evidence in addition to or instead of end-to-end scenarios."],
+      "grounding":[
+        {
+          "end_line":64,
+          "quote":"The failure alone does not show whether the realisation, the governing\nclaim, the scenario's expected outcome or its observation is wrong",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers",
+          "start_line":61
+        }
+      ],
+      "key":"scenario_evidence_limits",
+      "statement":"Requirements/design wording alone cannot verify operational capability. While no concrete scenario can be written, operational meaning is unverified, without deciding whether the claim is inadequate or means of stating/observing its outcome are missing; diagnosis locates the cause. Failure reports observed versus expected disagreement and establishes actual-behaviour disagreement only with supported observation binding. Failure alone does not locate error among realisation, governing claim, expected outcome and observation; localisation proceeds only as far as evidence supports. Scenarios primarily validate capability and other operational behaviour and never replace requirement categories or all other evidence.",
+      "uncertainty":"The diagnostic, observation-binding and counterexample-localisation procedures are referenced outside the supplied detail."
+    },
+    {
+      "applies_to_keys":["assurance_foundation_family"],
+      "conditions":["Use each row only under its specified instance premises."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":98,
+          "quote":"the preference for a fresh sandbox, at \"should\": a policy choice of this member",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers%2FFoundation%20to%20law%3A%20assurance%20and%20testing",
+          "start_line":97
+        }
+      ],
+      "key":"assurance_family_proof_obligations",
+      "statement":"The foundation table separately states: every executable proof surface declares authority and derives expected results from it, not implementation; project lanes map to one taxonomy before closure. Composed-product acceptance evidence comes through declared surfaces; substituted workers/transports prove only exercised relations and narrower green lanes do not prove a real external boundary. Required lanes reproduce from exact declared source boundary using checked-in fixtures, declared external acquisition or classification outside required closure; missing fixture is an unperformed evaluation, not product semantic failure. Every live requirement has written traceable test authority. Where meaningful behaviour is claimed, proof should be an ordered coherent-use sequence; significant paths are declared and exercised, with undeclared coverage unjudgeable and unexercised behaviour unproved. For an installable-system claim, decisive proof runs against installed development form as an external target; source checks cannot replace it, and a fresh sandbox is a should-level preference. When testing frames are selected, each binds exact claim, subject, path, population, oracle and falsifier; results stay claim-bound and combine only through declared relations. Labels, runners, counts and coverage measures confer no assurance; broader results do not make narrower laws true and narrower green results do not establish unexamined broader claims.",
+      "uncertainty":"Detailed five significant paths, four ordinary frames and their complete declarations are referenced but not supplied."
+    },
+    {
+      "applies_to_keys":["assurance_foundation_family"],
+      "conditions":["Apply the relevant row's composition, runnable-product, users or designed-module premises."],
+      "exceptions":["Path-sensitive mutation is a policy choice only where proportionate and safe."],
+      "grounding":[
+        {
+          "end_line":105,
+          "quote":"a reduced covering set is lawful only with a reason why the omitted interactions cannot change the claim, or with them kept as residuals",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers%2FFoundation%20to%20law%3A%20assurance%20and%20testing",
+          "start_line":100
+        }
+      ],
+      "key":"assurance_family_paths_subjects_modules",
+      "statement":"Path claims require two-sided evidence: required ordinary supported paths witnessed and each forbidden path absent/refused in production and assurance graphs; equal output through a forbidden path falsifies a path claim. Testing value concerns material combinations discriminated, not counts; reduced covering sets need a reason omitted interactions cannot change the claim or explicit residuals, and code coverage proves only visits. Assurance evaluates the owner-issued subject acquired through its owner surface, never parallel reconstructed owner state; missing owner projection remains a named undecided gap. Counterexamples persist until disposed and return to the earliest evidence-supported causal frontier; unique locus, joint set, unresolved alternatives and unbounded frontier remain distinct core-mapped forms, and localisation grants no repair. Interface chains keep contract sufficiency, boundary congruence, path realisation and user usability distinct; full usability requires all four and their conjunction. Each seam binds domains, available context, translation, current observation, actual path and diagnostic cause; local success cannot replace complete-path results. For design-governed boundaries, implementation and unit tests derive from accepted ontology/design/module authority; evidence feeds back without choosing semantic answers. Module-owned unit tests are authoritative for module proof and should trace ownership rather than helper shape; no lane means not closure-ready. Before module closure every lifecycle phase is answered, reasoned not_applicable or named gap; implementation proves only within its authority and gaps proceed only when governed.",
+      "uncertainty":"The eight index terms, nine factors, four localisation mappings, twelve interface elements, six obligations, ten qualification cases, two module evidence chains and nine lifecycle items are referenced but not enumerated in the supplied source."
+    },
+    {
+      "applies_to_keys":["assurance_foundation_family"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":109,
+          "quote":"The table accounts for §1 to §16.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers%2FFoundation%20to%20law%3A%20assurance%20and%20testing",
+          "start_line":109
+        },
+        {
+          "end_line":131,
+          "quote":"Each consumer applies the rule and decides nothing the owning section does\nnot (P2, P6).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers%2FFoundation%20to%20law%3A%20assurance%20and%20testing",
+          "start_line":130
+        }
+      ],
+      "key":"assurance_foundation_standing_and_choices",
+      "statement":"Row provenance is retained as source claims, not established derivations: verification P2/P6 with runnable product+users, pillars 1,5,9; taxonomy P6/P2/P1 with runnable product, 4,9; composed acceptance P6/P1/P5 with runnable product+users+external boundaries, 8,9; portability P3/P6/P5 with external boundaries, 8,9; test authority/paths P6/P2 with composition, 1,5,9; installed proof P6/P3 with runnable product, 8,9; testing frames P0/P6/P1/P4a with composition, 3,7,9; path claims P6/P3/P5 with runnable product+composition, 4,9; combinations P2/P6/P5/P4a with composition, 3,9; subject acquisition P6/P1/P5 with runnable product, 6,9; localisation P5/P1/P4b with composition, 3,9; interfaces P0/P1/P4a/P5/P6 with composition+users, 4,7,9; module tests P6/P4b/P2 with designed modules, 4,9; lifecycle P2/P6/P5 with designed modules, 1,9. P0 is recovered, P1/P2/P3/P4a/P6 independent, P5 derived from P0/P6 with open-world premise, and P4b derived from P0/P2 with non-reacquirable step-produced facts. ASSURANCE's added choices include the three layers/product-owner scenarios; two proof authorities/context/terminology; sandbox modes; three portability forms; scenario bundle/five usual paths; fresh-sandbox preference; four ordinary frames/declarations; proportionate safe path mutation; eight index terms/nine factors; four localisation forms; interface identity/twelve elements/four claims/six obligations/ten cases; two module evidence chains/completeness/traceability; nine lifecycle items. Project chooses lane names; governing frame configuration or admitted authority selects testing/interface frames; scalar scores belong to Product/requirement/accepted-design authority. SPEC_METHOD owns chain, change re-entry and lifecycle markers; FOUNDATIONS owns observation binding and install/development roles; ACTIVATION owns diagnosis; TICKETS owns admitted test derivation; DESIGN_MODULE binds module terms and computational recurrence; EXECUTIVE_BASELINE maps roles/families. Consumer listings identify applications, not transferred ownership; merely naming a law is distinguished from applying it, and each consumer decides nothing beyond the owner.",
+      "uncertainty":"Full standing and detailed referenced domain inventories remain outside the supplied excerpts."
+    },
+    {
+      "applies_to_keys":["proof_authority_taxonomy","sandbox_uat_modes"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":171,
+          "quote":"Authority source is not execution breadth.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy",
+          "start_line":149
+        },
+        {
+          "end_line":199,
+          "quote":"Where a product or release\nclaim depends on live probabilistic compute, semantic green, unit green,\nmodule-integration green and harnessed-sandbox green are necessary and not\nsufficient for live acceptance",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy",
+          "start_line":196
+        }
+      ],
+      "key":"proof_authority_and_live_claims",
+      "statement":"Every executable proof surface declares authority. For ticketed work, admitted ticket and triage path are immediate authority; expected results derive from lawful re-entry and cited constitutional/realisation law, never current implementation behaviour. Conformance derives from governing design, module ownership, declared carrier inventory or equivalent, structural diagrams where present and boundary-local fail-closed law. Unit tests are conformance; module integration, negative and fail-closed tests may be conformance when their target is a designed boundary rather than user scenario. UAT derives from requirements, acceptance criteria, declared scenarios/use cases and product release/qualification claims. Direct source unit/helper/module-integration tests cannot alone close user acceptance or be called UAT. Harnessed UAT proves composition, orchestration, control, projection, archive and scenario wiring with deterministic reproducibility; live UAT proves the same scenario crosses the actual external probabilistic boundary and returns evidence through result, evaluation, provenance and projection surfaces. Live-dependent claims require more than necessary semantic/unit/integration/harnessed green results. Unit denotes conformance scope, integration breadth rather than authority, sandbox composed acceptance, harnessed/fake/recorded/deterministic non-live execution, and live actual external execution; a projection merely named live is insufficient. Every local lane label maps to this taxonomy before closure.",
+      "uncertainty":"Module-derived unit-proof ownership is textually unsettled across the supplied sections."
+    },
+    {
+      "applies_to_keys":["fixture_proof_portability"],
+      "conditions":[],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":221,
+          "quote":"A unit, semantic or\nmodule-design conformance lane does not depend on an undeclared local path,\na sibling workspace, an operator home directory or a mutable external\nfixture.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy%2FFixture%20and%20proof%20portability",
+          "start_line":218
+        },
+        {
+          "end_line":234,
+          "quote":"A missing external fixture fails with a governed diagnostic that names the\nfixture authority and the lane; it never masquerades as a product semantic\nfailure",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy%2FFixture%20and%20proof%20portability",
+          "start_line":232
+        }
+      ],
+      "key":"portable_required_closure",
+      "statement":"Required closure lanes reproduce from the declared source boundary. Unit, semantic and module-design conformance lanes must not depend on an undeclared local path, sibling workspace, operator home directory or mutable external fixture. Missing external fixtures produce a governed diagnostic naming fixture authority and lane, never a product semantic failure.",
+      "uncertainty":"The family consumer note's reference to a core value for an unperformed evaluation is retained separately as a textual tension."
+    },
+    {
+      "applies_to_keys":["written_test_authority"],
+      "conditions":["A requirement is live."],
+      "exceptions":[],
+      "grounding":[
+        {
+          "end_line":252,
+          "quote":"No live requirement is fully proved on\ninformal operator confidence, ambient habit or an unlabelled test corpus",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F3.%20Test%20authority",
+          "start_line":248
+        }
+      ],
+      "key":"traceable_test_authority_requirement",
+      "statement":"Every live requirement has written, traceable test-case authority including full expected-result assertion provenance and predicate relationship to its owning obligation. Informal confidence, ambient habit, unlabelled tests and green labels cannot by themselves establish full proof or acceptance. Derivation from admitted work authority is delegated by reference to TICKETS §7.",
+      "uncertainty":"The referenced ticket derivation and assertion/parallel-derivation laws are not fully supplied."
+    }
+  ],
+  "dispositions": [
+    {
+      "decision":"residual",
+      "keys":["step_roles","bounded_operation_grant","role_independence_and_direct_entry","result_recording_and_grant_continuity","delegation_and_role_variation","unavailable_activation_owner_laws"],
+      "reason":"Retains allocation, independence, direct-entry, recording and grant limits; externally owned proxy limits remain unresolved.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FRoles%20and%20delegation"
+    },
+    {
+      "decision":"residual",
+      "keys":["context_construction","acquisition_activation_evaluation","derived_surface","rendered_prompt","closure_and_projection_requirements","context_capacity_fit","exact_acquisition_and_question_scope","activation_evaluation_and_prompt_boundaries","context_fit_alternatives","acquisition_uses_derived_surface","prompt_projects_acquisition","context_procedure_representation_limit"],
+      "reason":"Retains the described procedure and refusal boundaries as data; its referenced calculus laws and operational realisation remain unresolved.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope"
+    },
+    {
+      "decision":"retained",
+      "keys":["derived_surface","derived_surface_currentness"],
+      "reason":"Retains exact-source currentness, stale-surface recovery, fidelity/sufficiency separation and carrier applicability.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope%2FStaleness%20of%20derived%20surfaces"
+    },
+    {
+      "decision":"retained",
+      "keys":["step_result_refinements","predicate_bound_core_mapping"],
+      "reason":"Retains all five distinct predicates, exactly-one mappings and unperformed-evaluation boundary.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition"
+    },
+    {
+      "decision":"residual",
+      "keys":["admission_activation_outcomes","admission_outcome_mapping","activation_refusal_external_mapping"],
+      "reason":"Retains supplied outcome causes and mappings while leaving externally owned activation-refusal mappings unresolved.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FAdmission%20and%20activation"
+    },
+    {
+      "decision":"retained",
+      "keys":["construction_availability","construction_availability_mapping","candidate_ready_requires_transition_evidence"],
+      "reason":"Retains cause-exclusive availability mapping, basis precedence and separation from evaluation, fitness and acceptance.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FConstruction%20availability"
+    },
+    {
+      "decision":"retained",
+      "keys":["candidate_disposition","disposition_mapping_and_reassessment","disposition_consumes_availability"],
+      "reason":"Retains all dispositions, authority boundary, counterexamples and repeated-rejection requirements.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FDisposition"
+    },
+    {
+      "decision":"retained",
+      "keys":["ambiguity_outcome","ambiguity_mapping"],
+      "reason":"Retains all recorded ambiguity outcomes, predicate-specific falsity and policy/authority conditions without supplying a policy.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FAmbiguity%20outcome"
+    },
+    {
+      "decision":"retained",
+      "keys":["external_effect_outcome","effect_evidence_and_end_mapping","uncertain_effect_requires_reconciliation"],
+      "reason":"Retains outcome evidence, end as a separate fact and reconciliation before reliance or repetition.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FEffects"
+    },
+    {
+      "decision":"retained",
+      "keys":["total_handling","totality_policy_and_hard_stops","cause_based_next_moves"],
+      "reason":"Retains total handling's limited claim, hard stops and cause-sensitive reconfiguration options.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement"
+    },
+    {
+      "decision":"residual",
+      "keys":["refinement_and_rewrite","refinement_composition_and_licensing","refinement_operational_detail"],
+      "reason":"Retains exact/approximate distinctions, licensing and preservation premises without constructing or proving a transformation.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement%2FRefinement"
+    },
+    {
+      "decision":"retained",
+      "keys":["complete_enclosing_admission","complete_admission_atomicity_and_basis","admission_reuse_and_realisation_latitude"],
+      "reason":"Retains independent owner responsibility, exact basis, all-or-none admission, lawful reuse and reconstruction equality.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement%2FComplete%20enclosing-relation%20admission"
+    },
+    {
+      "decision":"retained",
+      "keys":["standing_admission_qualification","admission_qualification_cases","qualification_tests_admission_law"],
+      "reason":"Retains every listed case and applicability, exclusion, atomic-failure and coverage-proof conditions as qualification requirements, not qualification evidence.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement%2FStanding%20structural%20qualification"
+    },
+    {
+      "decision":"residual",
+      "keys":["work_state","progress_categories","resumption_checkpoint_and_progress_rules","activation_foundation_accounts","work_state_and_consumer_reference_limits"],
+      "reason":"Retains work-state rules, progress categories and foundation distinctions; detailed external consumer applications are unresolved references.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F5.%20Work%20state%20and%20restart"
+    },
+    {
+      "decision":"retained",
+      "keys":["workspace_and_actor_account","current_evidence_and_recovery"],
+      "reason":"Retains current-evidence priority, disposable accounts, partial-work recovery and absence-of-trace boundaries.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F5.%20Work%20state%20and%20restart%2FThe%20workspace%20and%20an%20actor%27s%20account"
+    },
+    {
+      "decision":"residual",
+      "keys":["proportionality","selected_cost_claim","proportionality_and_cost_requirements","activation_foundation_accounts","proportional_method_variation","cost_consumer_reference_limits"],
+      "reason":"Retains proportionality, modality, cost scope and foundation choices; external qualification and consumer detail remain unresolved.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F6.%20Cost%20and%20proportionality"
+    },
+    {
+      "decision":"retained",
+      "keys":["resource_limit","resource_declaration_measurement_exhaustion"],
+      "reason":"Retains declaration applicability, measurement boundaries, distinct context measures, exhaustion responses and non-authority of capacity.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F6.%20Cost%20and%20proportionality%2FResource%20limits"
+    },
+    {
+      "decision":"residual",
+      "keys":["closed_result","closed_result_reuse_and_invalidation","closed_result_transfer_variation","reuse_external_laws"],
+      "reason":"Retains result identity, invalidators, evidence-retention distinction and independence; cited impact and retention operations remain unexpanded.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F7.%20Closed%20result%20and%20reuse"
+    },
+    {
+      "decision":"retained",
+      "keys":["transition_evidence","transition_proof_cadence"],
+      "reason":"Retains the read-model fields, focused-proof cadence and fresh-reconstruction proof boundary.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F7.%20Closed%20result%20and%20reuse%2FTransition%20evidence"
+    },
+    {
+      "decision":"residual",
+      "keys":["assurance_member","assurance_document_boundaries","module_proof_ownership_tension"],
+      "reason":"Retains document ownership and dependency boundaries, with unresolved module-proof ownership wording.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE"
+    },
+    {
+      "decision":"retained",
+      "keys":["verification_layers","scenario_evidence_limits"],
+      "reason":"Retains distinct layer truths and limits of scenario absence, failure and observation.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers"
+    },
+    {
+      "decision":"residual",
+      "keys":["assurance_foundation_family","assurance_family_proof_obligations","assurance_family_paths_subjects_modules","assurance_foundation_standing_and_choices","assurance_unsupplied_detail","unperformed_fixture_core_wording"],
+      "reason":"Retains all fourteen row meanings and their premise/choice distinctions; detailed referenced laws and one unperformed-result wording tension remain unresolved.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers%2FFoundation%20to%20law%3A%20assurance%20and%20testing"
+    },
+    {
+      "decision":"residual",
+      "keys":["proof_authority_taxonomy","sandbox_uat_modes","proof_authority_and_live_claims","uat_specialises_proof_taxonomy","module_proof_ownership_tension"],
+      "reason":"Retains authority taxonomy, execution modes and live-claim limits while preserving ownership tension with the introduction.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy"
+    },
+    {
+      "decision":"retained",
+      "keys":["fixture_proof_portability","portable_required_closure","external_fixture_options"],
+      "reason":"Retains reproducibility, all three external-evidence options and missing-fixture diagnostic boundaries.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy%2FFixture%20and%20proof%20portability"
+    },
+    {
+      "decision":"retained",
+      "keys":["written_test_authority","traceable_test_authority_requirement","test_authority_forms"],
+      "reason":"Retains universal live-requirement authority, assertion provenance, permitted evidence forms and proof limits.",
+      "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F3.%20Test%20authority"
+    }
+  ],
+  "latitude": [
+    {
+      "allowed":[
+        "A configuration may allocate responsibilities beyond constructor, assessor and decision owner.",
+        "One actor may occupy different roles across different claims if independence for the assessed claim is preserved; no actor count is prescribed.",
+        "A declared bounded proxy may accept preservation, require local repair, reject a violating candidate and advance to the next already-authorised action within its limit.",
+        "Human ceremony need not occur at every transition when governing basis, affected cone, decision envelope and re-entry conditions are already accepted."
+      ],
+      "applies_to_keys":["step_roles","bounded_operation_grant"],
+      "forbidden":[
+        "Treating a role name as an operation grant.",
+        "Weakening direct human acceptance required by product or release law.",
+        "Changing matters outside the proxy limit without the required owner re-entry."
+      ],
+      "grounding":[
+        {
+          "end_line":647,
+          "quote":"Inside a step, a proxy so declared may\naccept preservation, require local repair, reject a violating candidate\nand advance to the next already-authorised action",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FRoles%20and%20delegation",
+          "start_line":638
+        }
+      ],
+      "key":"delegation_and_role_variation"
+    },
+    {
+      "allowed":[
+        "When context does not fit, combine contract refinement into fitting steps, sequenced activations, lawful compression preserving evaluation distinctions and failure detection, another fitting actor, or out_of_frame.",
+        "Within its grant, a step selects refinement, sequencing and compression.",
+        "Another actor or a larger envelope requires owner re-entry unless that choice was delegated in the grant.",
+        "Assess a recorded compression-preservation claim independently only where its served promotion requires independent assessment."
+      ],
+      "applies_to_keys":["context_construction"],
+      "forbidden":[
+        "Silent omission to fit.",
+        "Silently narrowing the required predicate or preserved obligations; narrowing is an owner-controlled destination change.",
+        "Hiding undecided matters; they remain explicit unknowns.",
+        "Claiming compression preservation without recording compression and its preservation argument."
+      ],
+      "grounding":[
+        {
+          "end_line":771,
+          "quote":"Silent\n   omission to fit is never one of them",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope",
+          "start_line":755
+        }
+      ],
+      "key":"context_fit_alternatives"
+    },
+    {
+      "allowed":[
+        "After a non-satisfied result, continue within the current contract when supported, refine, recover, yield, re-enter the owning relation or terminate.",
+        "For out_of_frame, invalid_basis, repeated indeterminate or incompatible results, follow the cause by supplying missing admissible evidence, selecting an actor within capability envelope, activating another existing frame, refining/extending a declaration, revising the frame set, changing the evaluation or re-entering product/method law."
+      ],
+      "applies_to_keys":["total_handling"],
+      "forbidden":[
+        "Inferring that another frame is required merely because an evaluation is difficult.",
+        "Using risk appetite to waive a hard stop."
+      ],
+      "grounding":[
+        {
+          "end_line":1179,
+          "quote":"The next move follows the cause; a\ndifficult evaluation alone does not prove that another frame is required",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement",
+          "start_line":1177
+        }
+      ],
+      "key":"cause_based_next_moves"
+    },
+    {
+      "allowed":[
+        "Reuse established facts whose exact subject, basis, scope, provenance and validity remain applicable and whose production/invalidation are recoverable.",
+        "Choose internal evaluation order and lawful reuse as implementation matters; no mechanism or participant count is prescribed.",
+        "Cross function, component, role, conversation or status boundaries without repeating derivation solely for that boundary."
+      ],
+      "applies_to_keys":["complete_enclosing_admission"],
+      "forbidden":[
+        "Treating unsupported prior-success assertions as established facts.",
+        "Reusing past material mutation, rollback, authority/basis change, expired validity or an actual trust boundary without applicable validation before reliance/effect.",
+        "Transferring the owner's responsibility, omitting participants or satisfying a separately required independent judgment through reuse."
+      ],
+      "grounding":[
+        {
+          "end_line":1278,
+          "quote":"An owner may consume established facts when their exact subject, basis,\nscope, provenance and validity remain applicable to its relation.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement%2FComplete%20enclosing-relation%20admission",
+          "start_line":1269
+        },
+        {
+          "end_line":1294,
+          "quote":"Internal evaluation order and lawful reuse are implementation-owned",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement%2FComplete%20enclosing-relation%20admission",
+          "start_line":1289
+        }
+      ],
+      "key":"admission_reuse_and_realisation_latitude"
+    },
+    {
+      "allowed":[
+        "Vary internal decomposition, search, collaboration, tools or synthesis when variation cannot affect governed semantic, authority, evidence, safety or release properties.",
+        "An owning law may justify one coherent constraint family once, without rationale fields, receipts or repeated audits for every clause or application."
+      ],
+      "applies_to_keys":["proportionality"],
+      "forbidden":[
+        "Treating higher actor capability as new authority or waiver of invariants or acceptance.",
+        "Counting the same removed interpretation space as several independent proportionality benefits."
+      ],
+      "grounding":[
+        {
+          "end_line":1525,
+          "quote":"The method does not prescribe an internal decomposition, search,\ncollaboration, tool or synthesis procedure when variation in that procedure\ncannot affect a governed semantic, authority, evidence, safety or release\nproperty.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F6.%20Cost%20and%20proportionality",
+          "start_line":1516
+        }
+      ],
+      "key":"proportional_method_variation"
+    },
+    {
+      "allowed":[
+        "Omit transfer of internal working context when the closed result and provenance suffice for the consuming decision.",
+        "Attach internal context for audit or other purposes without changing the result.",
+        "Share valid mechanical evidence between independent evaluations under the externally declared independence conditions."
+      ],
+      "applies_to_keys":["closed_result"],
+      "forbidden":[
+        "Using a reused judgment to satisfy a separately required independent judgment."
+      ],
+      "grounding":[
+        {
+          "end_line":1663,
+          "quote":"The frame's internal working context need not be\ntransferred when the closed result and its provenance are sufficient for\nthe consuming decision; it may still be attached, for audit or otherwise,\nwithout changing the result.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F7.%20Closed%20result%20and%20reuse",
+          "start_line":1657
+        }
+      ],
+      "key":"closed_result_transfer_variation"
+    },
+    {
+      "allowed":[
+        "For needed external project evidence, check a minimal fixture into the source boundary.",
+        "Alternatively, declare external source, version and acquisition/binding rule in a fixture manifest.",
+        "Alternatively, classify the test as harnessed sandbox, live sandbox, reference comparison or optional local evidence rather than required semantic closure."
+      ],
+      "applies_to_keys":["fixture_proof_portability"],
+      "forbidden":[
+        "Using undeclared external fixture dependence for required semantic closure.",
+        "Reporting a missing fixture as a product semantic failure."
+      ],
+      "grounding":[
+        {
+          "end_line":230,
+          "quote":"- a minimal fixture is checked into the source boundary;\n- a fixture manifest declares the external source, version and\n  acquisition or binding rule; or\n- the test is classified as harnessed sandbox, live sandbox, reference\n  comparison or optional local evidence rather than required semantic\n  closure.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy%2FFixture%20and%20proof%20portability",
+          "start_line":225
+        }
+      ],
+      "key":"external_fixture_options"
+    },
+    {
+      "allowed":[
+        "Written authority may use scenario bundles, ordered test-case sequences, negative/control cases and other explicit evidence cases suited to the kind of truth."
+      ],
+      "applies_to_keys":["written_test_authority"],
+      "forbidden":[
+        "Replacing written traceable authority with informal confidence, ambient habit or an unlabelled corpus."
+      ],
+      "grounding":[
+        {
+          "end_line":241,
+          "quote":"That authority may include scenario bundles,\nordered test-case sequences, negative or control cases and other explicit\nevidence cases appropriate to the kind of truth being proved",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F3.%20Test%20authority",
+          "start_line":238
+        }
+      ],
+      "key":"test_authority_forms"
+    }
+  ],
+  "limitations": [
+    "This is a source-linked F_P interpretation only. It establishes no semantic acceptance, execution, installed qualification, actual result, authority grant or completeness judgment.",
+    "The selected published calculus basis is treated as workflow metadata; the subject's calculus, judgments, traversals, transformations and procedures are represented only as source-described concepts and constraints. No operational populations or proofs are instantiated.",
+    "Only the supplied ACTIVATION and ASSURANCE excerpts govern this interpretation. Discovery graph nodes, edges, confidence scores and omitted graph populations supply no normative assertions or resolved external endpoints.",
+    "FOUNDATIONS, REFERENCE_FRAME, AXIOMATIC_CALCULUS, EVALUATION, most other referenced documents, earlier ACTIVATION sections and later ASSURANCE sections are not supplied in full. Local descriptions are retained without inventing the missing owner laws, exact mappings, qualification inventories or procedures.",
+    "The foundation tables' premise, standing, consequence and choice distinctions are retained as authored claims. Their detailed consumer indexes remain source-reentry references rather than separately materialised cross-document endpoint graphs; this loses index topology, not permission to infer missing applications.",
+    "The source's module-derived unit-proof ownership wording and its consumer-note wording about an unperformed fixture evaluation remain explicit competing readings.",
+    "No accepted design, actual admission basis, resource binding, live subject, policy, evidence set or consumer result is provided; the described applicability tests cannot be decided for an instance here.",
+    "Disposition selections identify processing choices only; they do not certify semantic completeness."
+  ],
+  "relations": [
+    {
+      "conditions":["A derived surface whose sources are current serves the task."],
+      "exceptions":["For another task, or a stale, missing or question-insufficient surface, acquire deciding selected-basis owner sections directly."],
+      "governing":true,
+      "grounding":[
+        {
+          "end_line":794,
+          "quote":"Where a derived surface whose sources\nare current serves the task, the actor acquires it.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope",
+          "start_line":789
+        }
+      ],
+      "key":"acquisition_uses_derived_surface",
+      "kind":"conditional_input_selection",
+      "meaning":"The source expressly makes current task-serving derived material the acquisition input, with owner-source fallback conditions.",
+      "source_key":"acquisition_activation_evaluation",
+      "target_key":"derived_surface"
+    },
+    {
+      "conditions":[],
+      "exceptions":[],
+      "governing":true,
+      "grounding":[
+        {
+          "end_line":854,
+          "quote":"The prompt projects the material that\nAcquisition above selects, including the raw owning members where\nAcquisition falls back to them",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope",
+          "start_line":852
+        }
+      ],
+      "key":"prompt_projects_acquisition",
+      "kind":"material_selection_dependency",
+      "meaning":"Prompt content follows acquisition's selected material and its required owner-source fallback.",
+      "source_key":"rendered_prompt",
+      "target_key":"acquisition_activation_evaluation"
+    },
+    {
+      "conditions":["The availability value is candidate_ready."],
+      "exceptions":[],
+      "governing":true,
+      "grounding":[
+        {
+          "end_line":990,
+          "quote":"| `candidate_ready` | satisfied | an exact candidate and its transition evidence are available |",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FConstruction%20availability",
+          "start_line":990
+        }
+      ],
+      "key":"candidate_ready_requires_transition_evidence",
+      "kind":"availability_prerequisite",
+      "meaning":"An exact candidate alone is insufficient for candidate_ready; its transition evidence must also be available.",
+      "source_key":"construction_availability",
+      "target_key":"transition_evidence"
+    },
+    {
+      "conditions":["An assessed candidate is disposed."],
+      "exceptions":[],
+      "governing":false,
+      "grounding":[
+        {
+          "end_line":1035,
+          "quote":"it consumes the candidate's availability and assessment\nresults and stays separate from both",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FDisposition",
+          "start_line":1034
+        }
+      ],
+      "key":"disposition_consumes_availability",
+      "kind":"result_consumption",
+      "meaning":"Disposition consumes availability alongside assessment while retaining an independent acceptance predicate; this dataflow does not confer acceptance authority on availability.",
+      "source_key":"candidate_disposition",
+      "target_key":"construction_availability"
+    },
+    {
+      "conditions":["Completion is unknown, or not_effected has an unestablished end."],
+      "exceptions":[],
+      "governing":true,
+      "grounding":[
+        {
+          "end_line":1133,
+          "quote":"§5 reconciles it, sufficiently for the next dependent\naction, before any repetition or dependent action.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FEffects",
+          "start_line":1130
+        }
+      ],
+      "key":"uncertain_effect_requires_reconciliation",
+      "kind":"recovery_precondition",
+      "meaning":"An uncertain effect requires work-state reconciliation before repetition or dependent action, sufficiently for that action.",
+      "source_key":"external_effect_outcome",
+      "target_key":"work_state"
+    },
+    {
+      "conditions":["The owner and supported boundary are declared by accepted design."],
+      "exceptions":["Unsupported cases follow the source's applicability and exclusion requirements."],
+      "governing":true,
+      "grounding":[
+        {
+          "end_line":1313,
+          "quote":"Qualification of the admission law is instantiated for every admission\nowner and supported boundary declared by accepted design",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement%2FStanding%20structural%20qualification",
+          "start_line":1311
+        }
+      ],
+      "key":"qualification_tests_admission_law",
+      "kind":"qualification_obligation",
+      "meaning":"Standing structural qualification is required for each declared owner and supported boundary of the admission law; no actual qualification is asserted.",
+      "source_key":"standing_admission_qualification",
+      "target_key":"complete_enclosing_admission"
+    },
+    {
+      "conditions":[],
+      "exceptions":["An explicitly equivalent isolated composed-product lane may carry the same UAT designation."],
+      "governing":false,
+      "grounding":[
+        {
+          "end_line":189,
+          "quote":"Sandbox UAT has two lawful execution modes",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy",
+          "start_line":183
+        }
+      ],
+      "key":"uat_specialises_proof_taxonomy",
+      "kind":"execution_mode_specialisation",
+      "meaning":"Harnessed and live sandbox modes specialise the UAT side of the proof taxonomy without merging execution breadth with authority.",
+      "source_key":"sandbox_uat_modes",
+      "target_key":"proof_authority_taxonomy"
+    }
+  ],
+  "residuals": [
+    {
+      "consequence":"Proxy change limits, re-entry details, exact configuration restrictions and admission/independence prerequisites remain bounded references; no additional authority or permission is inferred.",
+      "grounding":[
+        {
+          "end_line":643,
+          "quote":"what it cannot change,\nand the re-entry such a change requires, is the proxy limit of\n[FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds), which\nthis paragraph applies and does not restate.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FRoles%20and%20delegation",
+          "start_line":640
+        }
+      ],
+      "key":"unavailable_activation_owner_laws",
+      "subject_key":"bounded_operation_grant",
+      "uncertainty":"The source expressly delegates proxy limits to an unsupplied owner and also refers to earlier configuration/admission and independent-assessment laws."
+    },
+    {
+      "consequence":"The procedural order and local result boundaries are retained descriptively. No closure, projection, fit judgment, traversal, transformation, frame activation or proof is executed or claimed; referenced operational laws and packet/constraint-surface detail remain unresolved.",
+      "grounding":[
+        {
+          "end_line":869,
+          "quote":"The operation that joins AC-010, AC-011 and RF-002, RF-003, RF-004,\nRF-014 and RF-017 into one procedure is stated here",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F2.%20Context%20construction%20under%20an%20envelope",
+          "start_line":863
+        }
+      ],
+      "key":"context_procedure_representation_limit",
+      "subject_key":"context_construction",
+      "uncertainty":"This finite schema represents the source's procedural and judgment semantics only through concepts, constraints and links; the owning calculus and reference-frame sections are absent."
+    },
+    {
+      "consequence":"Retain cause-qualified activation_refusal without guessing its complete causes or remapping its values; no missing mapping is treated as false or as a work result.",
+      "grounding":[
+        {
+          "end_line":959,
+          "quote":"The outcomes of frame activation are the `activate`\nrefinement of [REFERENCE_FRAME §5](REFERENCE_FRAME.md#5-method-functions),\nwhich owns their causes, their predicate and their core values.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FAdmission%20and%20activation",
+          "start_line":954
+        }
+      ],
+      "key":"activation_refusal_external_mapping",
+      "subject_key":"admission_activation_outcomes",
+      "uncertainty":"REFERENCE_FRAME §5 is the explicitly named owner of activation causes, predicate and values but is not supplied."
+    },
+    {
+      "consequence":"The preservation, licensing and approximation requirements remain source-defined conditions. No actual decomposition, rewrite, adapter, specialised contract, induction proof or adequacy bound is constructed or validated.",
+      "grounding":[
+        {
+          "end_line":1197,
+          "quote":"a composite that contains an approximate step carries only what its\nend-to-end bound states",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement%2FRefinement",
+          "start_line":1190
+        },
+        {
+          "end_line":1255,
+          "quote":"the obligation to state an\nadequacy relation and a composition bound, and the end-to-end obligations\nof a composition, are\n[FOUNDATIONS §4 Preservation through construction](FOUNDATIONS.md#preservation-through-construction)",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F4.%20Totality%20and%20refinement%2FRefinement",
+          "start_line":1251
+        }
+      ],
+      "key":"refinement_operational_detail",
+      "subject_key":"refinement_and_rewrite",
+      "uncertainty":"The outer transformation, subject licensing laws, full typed-composition calculus and preservation law are not supplied; formal operational content exceeds this schema's active families."
+    },
+    {
+      "consequence":"Retain the six row meanings and their owner/consumer distinction. External application indexes are available only through the quoted source locations and are not expanded into invented concepts or governing edges.",
+      "grounding":[
+        {
+          "end_line":1417,
+          "quote":"Consumers of these rows, where an actor enters them (FOUNDATIONS §3\nFoundation to law, Consumers), one list per row, each consumer linked to\nits own locus:",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F5.%20Work%20state%20and%20restart",
+          "start_line":1415
+        },
+        {
+          "end_line":1427,
+          "quote":"Each consumer applies the rule and decides nothing the owning section does\nnot (P2, P6).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F5.%20Work%20state%20and%20restart",
+          "start_line":1426
+        }
+      ],
+      "key":"work_state_and_consumer_reference_limits",
+      "subject_key":"activation_foundation_accounts",
+      "uncertainty":"Lines 1419–1424 index applications in transitions, FOUNDATIONS, WORLD_MODEL, REFERENCE_FRAME, UX, ODD, EXECUTIVE_BASELINE, CONFORMANCE, PRODUCT_DEFINITION, SPEC_METHOD, TRAVERSAL_OCCURRENCE, EVALUATION, TICKETS, DESIGN_MODULE and ASSURANCE; most target sections and their full semantics are absent."
+    },
+    {
+      "consequence":"Retain local proportionality and resource/cost conditions plus the table's bounded delivery-priority description; do not infer full qualification, priority algorithms or external consumer laws.",
+      "grounding":[
+        {
+          "end_line":1547,
+          "quote":"Where this work materially affects the supported outcome, its\noperational assumptions are qualified under UP-019 below.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F6.%20Cost%20and%20proportionality",
+          "start_line":1544
+        },
+        {
+          "end_line":1596,
+          "quote":"Each consumer applies the rule and decides nothing the owning section does\nnot (P2, P6).",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F6.%20Cost%20and%20proportionality",
+          "start_line":1595
+        }
+      ],
+      "key":"cost_consumer_reference_limits",
+      "subject_key":"proportionality",
+      "uncertainty":"The six consumer lists at 1588–1593 reference configuration/intake, transition evidence, DESIGN_MODULE, CONFORMANCE, EXECUTIVE_BASELINE, FOUNDATIONS, REFERENCE_FRAME, EVALUATION, SPEC_METHOD and ASSURANCE; detailed external applications and UP-019 are not supplied."
+    },
+    {
+      "consequence":"Do not evaluate impact intersections, decide retained evidence, infer independence or instantiate the closed-result minimum shape beyond the fields explicitly listed.",
+      "grounding":[
+        {
+          "end_line":1670,
+          "quote":"a closed result is affected\nwhen its dependencies `D*(t)` meet the impact cover `I(Δ)`",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F7.%20Closed%20result%20and%20reuse",
+          "start_line":1669
+        },
+        {
+          "end_line":1681,
+          "quote":"whether\nits evidence is retained on the new basis is decided by `retain_applicable`\nof FOUNDATIONS §4 Change impact and evidence reuse",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ACTIVATION.md#ACTIVATION%2F7.%20Closed%20result%20and%20reuse",
+          "start_line":1677
+        }
+      ],
+      "key":"reuse_external_laws",
+      "subject_key":"closed_result",
+      "uncertainty":"D*, impact cover, retain_applicable, REFERENCE_FRAME §13 and EVALUATION §3 are externally owned definitions unavailable in full."
+    },
+    {
+      "consequence":"Preserve the distinction between Product-level test authority and design/module authority, but leave exact ownership of the module-derived unit-proof law unresolved; do not merge or select an owner silently.",
+      "grounding":[
+        {
+          "end_line":25,
+          "quote":"The\ndesign profile's module-derived unit-proof law (its 6A to 6C) is §14 to\n§16",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE",
+          "start_line":22
+        },
+        {
+          "end_line":140,
+          "quote":"Module-derived unit-proof law stays owned by the design profile (the\nDESIGN_MODULE member); the shared context does not merge the two authority\nsources",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy",
+          "start_line":138
+        }
+      ],
+      "key":"module_proof_ownership_tension",
+      "subject_key":"proof_authority_taxonomy",
+      "uncertainty":"The introduction locates this law in ASSURANCE §§14–16, while the taxonomy says it remains owned by DESIGN_MODULE. This might distinguish written law from profile-object binding, but the absent sections do not establish that reconciliation."
+    },
+    {
+      "consequence":"Retain every table row's stated claim, modality and source-owner distinction without fabricating inventories, mappings, evidence, consumer endpoints or complete application semantics.",
+      "grounding":[
+        {
+          "end_line":109,
+          "quote":"The table accounts for §1 to §16.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers%2FFoundation%20to%20law%3A%20assurance%20and%20testing",
+          "start_line":109
+        },
+        {
+          "end_line":113,
+          "quote":"Consumers of these rows, where an actor enters them (FOUNDATIONS §3\nFoundation to law, Consumers), one list per row, each consumer linked to\nits own locus:",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers%2FFoundation%20to%20law%3A%20assurance%20and%20testing",
+          "start_line":111
+        }
+      ],
+      "key":"assurance_unsupplied_detail",
+      "subject_key":"assurance_foundation_family",
+      "uncertainty":"ASSURANCE §§4–16 and most foundation/consumer targets are absent. The table references but does not enumerate several testing, localisation, interface, module and lifecycle inventories. Consumer lists at 115–128 identify application versus mere reference, including cases with no separate consumer; their detailed cross-file topology is not materialised."
+    },
+    {
+      "consequence":"Retain missing fixture as unperformed evaluation, with a governed fixture/lane diagnostic and no product semantic-failure inference. Do not assign it an invented core value.",
+      "grounding":[
+        {
+          "end_line":95,
+          "quote":"a missing fixture means the evaluation was not performed, so it is reported as such, never as a product semantic failure.",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers%2FFoundation%20to%20law%3A%20assurance%20and%20testing",
+          "start_line":95
+        },
+        {
+          "end_line":118,
+          "quote":"a missing fixture is reported as an evaluation not performed, in the core value of FOUNDATIONS §4 Results that this paragraph applies",
+          "section_id":"repo://stdo-v3-common/35fb4824a064a84df5af214a0d0e2da597c18ac6/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers%2FFoundation%20to%20law%3A%20assurance%20and%20testing",
+          "start_line":118
+        }
+      ],
+      "key":"unperformed_fixture_core_wording",
+      "subject_key":"assurance_family_proof_obligations",
+      "uncertainty":"The consumer note mentions a core value for an evaluation not performed, whereas the supplied ACTIVATION rules expressly give unperformed evaluations no result. The note does not specify a value or a different predicate that would resolve this wording tension."
+    }
+  ]
+}

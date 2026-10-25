@@ -1,0 +1,65 @@
+{
+  "activated_at": "2026-10-20T08:26:25.037550+00:00",
+  "actor": "/root/common_rep_build_plan",
+  "claims": "Exact16 fresh initial calls only, unchanged prompts/settings/validation/implementation; every failure retained. Three combined calls/reservations per exactchunk remains ceiling, not blanket approval.",
+  "conservation": {
+    "created_at": "2026-10-20T08:26:25.037192+00:00",
+    "implementation_manifest_sha256": "594fafcf083eadbbaf1472d68fe9f375fc21ccb426c6825194793304eac2503e",
+    "package_members": 81,
+    "semantic_members": 58,
+    "source_manifest_sha256": "dbf32e7f99eb7228ca361ec02f44227c05e02bb6bc447d1dd38255cd3ca4a4d4",
+    "status": "exact"
+  },
+  "consumed_first_batch_result_sha256": "ebf9da663379f37ec723a558e83045276785602c95510df93fe6d8948e721890",
+  "consumed_first_phase_closure_sha256": "71b76a32d75a7e361d72b879588869fd9b4016de87b4078808331ac6b84df5ce",
+  "issuer": "/root",
+  "native_grant": {
+    "attempts_each": 1,
+    "calls": 16,
+    "cli_version": "codex-cli 0.162.1",
+    "exact_chunk_ids": [
+      "chunk-48d20c632dceaba4c74c",
+      "chunk-6a6fe643ed4a56a2207f",
+      "chunk-9ad55c758435da840238",
+      "chunk-5de9b50d9be9a9a975ec",
+      "chunk-681e3bcdbe30d3f19555",
+      "chunk-840f31f0a41659bed31f",
+      "chunk-a9bfe9fddc1bbf8bf726",
+      "chunk-fb45aab9fdaa869d1b60",
+      "chunk-dd5da8dbb2163820ad7c",
+      "chunk-2f24e576ad073131be2b",
+      "chunk-e6c17b5f309623af04f5",
+      "chunk-e1247fa9e1eb5dbd49cd",
+      "chunk-f4383ca77391f9eb91c7",
+      "chunk-aee29b86d3101ee98ba1",
+      "chunk-dac75ca2eb8f2a17b8e5",
+      "chunk-1e8571ebafdc9e3b6403"
+    ],
+    "intentional_timeout_delta": "1200 to1800 for remaining calls after first strict call took1118.518seconds",
+    "jobs": 4,
+    "model": "gpt-6-astra",
+    "model_reasoning_effort": "high",
+    "service_tier": "default",
+    "timeout_seconds": 1800
+  },
+  "profile": "ac.common.remaining-author-worker-activation/1",
+  "prohibited": [
+    "old chunk retry",
+    "repair reservation or execution",
+    "F_D normalization",
+    "assembly",
+    "source/manifest/code-original/WHAT/profile/Git/global-config mutation",
+    "oracle/review/prior-model authoring input",
+    "other native calls"
+  ],
+  "role": "Worker",
+  "triage": "new application using existing HOW; continuation of source-first common construction; no upstream meaning or Product basis change",
+  "write_territory": [
+    "applications/stdo-v3-common-35fb4824/build/**",
+    "applications/stdo-v3-common-35fb4824/run/**",
+    "applications/stdo-v3-common-35fb4824/build_common.py",
+    "applications/stdo-v3-common-35fb4824/BUILD.md",
+    ".ai-workspace/qualification/t010/build/**",
+    "own ac-common-build-* temporary territory"
+  ]
+}

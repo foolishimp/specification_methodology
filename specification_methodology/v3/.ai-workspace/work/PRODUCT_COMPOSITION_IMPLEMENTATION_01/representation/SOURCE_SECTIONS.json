@@ -1,0 +1,61 @@
+{
+  "id": "composition-seven-clauses",
+  "segments": [
+    {
+      "id": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-01--recursive-product-boundaries",
+      "path": "standards/PRODUCT_DEFINITION.md",
+      "text": "### PC-01 — Recursive Product boundaries\n\nA Product identifies one coherent WHAT and its owning authority. Alternative\nrealizations of that WHAT are build tenants. A decomposition into Products names\nwhich distinct outcomes and authorities each constituent owns, and which outer\noutcome the composition owns.\n\nUnder the identity and ownership laws (P3, P6), within a declared decomposition scope, a leaf has no further constituent Product\nboundary exposed by that decomposition. It may contain modules and declared\nexternal dependencies. A composite relates two or more constituent capabilities\nor an outer capability to its constituent capability; its own capability may in\nturn be consumed as a constituent. The same definition, contract and authority\nlaws apply at every depth. Shared constituents keep one identity and their\nseparately bound uses; a hierarchy view may show several references to one leaf.\n\nDecomposition, capability/data dependency, inspection permission, authority and\nwork prerequisites are distinct relations. A directory tree establishes none of\nthem. A named composition view states its root, participating identities,\nselected boundaries and relation kinds rather than treating all reachable edges\nas one hierarchy.\n\n",
+      "start_line": 855,
+      "end_line": 875,
+      "sha256": "3ddd35947eed9311edbe4906563ed45418c354f1941411af15b0f47a86ea4e14"
+    },
+    {
+      "id": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-02--independent-entry-and-the-integrated-outcome",
+      "path": "standards/PRODUCT_DEFINITION.md",
+      "text": "### PC-02 — Independent entry and the integrated outcome\n\nA Product offered as a standalone constituent must be enterable through its own\nProduct Definition and a Product-authorized applicable frame basis, with the\ndependency closure and capabilities its contract declares. Entry must not require\nan enclosing composition's activation unless that enclosing capability is itself\nan explicit prerequisite. Such a prerequisite is disclosed as a limit on the\nstandalone claim. Shared or externally located frame documents are permitted\nwhere adoption, scope and availability are established; file ownership alone is\nnot the deciding test.\n\nStandalone does not imply dependency-free, separately deployable or able to\nsupply every host itself. The claim names which construction, evaluation or use\ncan be performed independently and its required inputs. The composition owner\nseparately establishes interface compatibility, material joins and its complete\noutcome. Successful constituent checks do not establish that outer predicate.\n\n",
+      "start_line": 876,
+      "end_line": 892,
+      "sha256": "525d68562c67b3037df86c494b877b9accf26286464a4624650e4063fc967e76"
+    },
+    {
+      "id": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-03--the-edges-contract-and-authority-record",
+      "path": "standards/PRODUCT_DEFINITION.md",
+      "text": "### PC-03 — The edge's contract and authority record\n\nFor each directed relation, the `relation` authority and referenced `contracts`\nstate, directly or by exact reference:\n\n1. Source and target Product identities and roles; the consumed capability,\n   outcome, purpose, selected basis and currentness policy.\n2. The existing owners and grants for each material operation: acquisition,\n   disclosure, use, execution, mutation, assessment and disposition. A kind or\n   role label records no grant by itself.\n3. Admissible inputs and exports; material assumptions, effects, failures,\n   obligations and evidence; restrictions on implementation material and derived\n   information where applicable.\n4. The acting principals or binding rule, task/phase scope, permitted delegation,\n   return consumer, stop/refusal conditions and revocation/invalidation route.\n\nThese coordinates may be supplied by source-linked prose. The relation locates\nand constrains lawfully granted authority; it cannot manufacture the target's\npermission or the source's admission. Missing material authority or an unresolved\nconflict withholds the dependent action. The execution-scoped activation remains\nthe place where a particular actor, input, effect and return are bound.\n\n",
+      "start_line": 893,
+      "end_line": 914,
+      "sha256": "84bf7dc6de36e8805410b895d817a76f16f3e0820b01706d511e19587cbb3284"
+    },
+    {
+      "id": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-04--recursive-authority-and-information-eligibility",
+      "path": "standards/PRODUCT_DEFINITION.md",
+      "text": "### PC-04 — Recursive authority and information eligibility\n\nA permitted A → B use does not entail A's access to B's dependencies. Neither\nA → B plus B → C nor two routes to a shared leaf imply a union of their grants.\nEach onward acquisition, disclosure or delegated effect needs authority for that\nactor, purpose and path, including any permitted onward use of returned material.\nExisting delegation may authorize a chain explicitly; its scope cannot expand\nsilently at a recursive step.\n\nA provider may encapsulate internal dependencies behind an adequate contract.\nConsumers need not flatten every implementation dependency into a direct edge.\nWhere an outer claim materially relies on a far-side contract, assumption,\nevidence item or acquisition, that reliance and its applicable authority must be\npreserved through the boundary. Unknown impact is not evidence of encapsulation.\n\nDurable Product consumption and bounded authorized inspection are different\nrelations. A Reviewer or diagnostic Worker may inspect a larger causal cone under\nan explicit access grant without thereby adopting those internals as a runtime\ndependency or gaining a write grant. If findings become a continuing construction\nconstraint or dependency, their producer, applicability and governing relation\nmust be retained.\n\n",
+      "start_line": 915,
+      "end_line": 936,
+      "sha256": "a35aedd7a9c75e0c518352d55269b1eca90851d21df3b89303a8d0f01add438c"
+    },
+    {
+      "id": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-05--context-construction-and-clean-room-conditions",
+      "path": "standards/PRODUCT_DEFINITION.md",
+      "text": "### PC-05 — Context construction and clean-room conditions\n\nAn actor's selected context must satisfy both permission and adequacy for its\nengagement. Permission covers the source information and permitted derivations,\nnot only paths or filenames. The boundary identifies eligible source classes,\nexports and tool outputs, material provenance, intended use, later acquisitions\nand the effect of prior exposure. An allowed file location or a fresh summary\ndoes not sanitize prohibited information.\n\nA target owner may authorize an export, but clean-room eligibility additionally\nrequires that the engagement's information policy admits that export and its\nprovenance. The actual delivered/acquired material must be recorded to the extent\nrequired by the claim. An uncertain or prohibited exposure follows the declared\nhold/re-entry rule; it cannot be repaired by deleting its receipt or relabeling\nthe same actor fresh. Prior actor knowledge and external acquisition channels are\npart of the declared limits.\n\nAdequacy retains the distinctions required for the task's decisions and\ncontinuations, including unresolved obligations, result standing, currentness and\nauthority. If the permitted material is insufficient, acquire an authorized\nextension, narrow the task with the owner, use a suitable actor or return the\nunresolved outcome. Permission is not evidence of sufficiency, and a budget is\nnot permission to omit a deciding condition. This applies [FOUNDATIONS Observation sufficiency](FOUNDATIONS.md#assurance-relations)\nand its scoped preservation law; it supplies no general optimal context selector (P1, P2, P6).\n\n",
+      "start_line": 937,
+      "end_line": 961,
+      "sha256": "cf9d32fdf288527422df78a12b6261e632d7a6fb3d962090ec0bb000af0939a6"
+    },
+    {
+      "id": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-06--readiness-cycles-and-replacement",
+      "path": "standards/PRODUCT_DEFINITION.md",
+      "text": "### PC-06 — Readiness, cycles and replacement\n\nWork selects a dependency-ready frontier at the required subjects and revisions.\nA cycle in declared Product relationships need not be a cycle in the selected\nwork. A cycle of current prerequisite claims requires an executable resolution:\nfor example an admitted prior revision, explicit seed, staged contract or bounded\niteration with its continuation/stop conditions. Naming a lead alone does not\nsupply a missing prerequisite or establish convergence.\n\nReplacing a constituent or refining it into further Products preserves the\nconsumer's material contract: meaning, preconditions, effects, failures,\nauthority, lifecycle, evidence and subsequent obligations. A semantic change\nrequires an authorized successor relation and affected reassessment. The [ACTIVATION refinement contract](ACTIVATION.md#refinement) governs this\npreservation. Matching signatures, labels or a sample output is insufficient (P4a, P6). New capabilities may be\nadded without silently widening existing consumers' duties or grants.\n\n",
+      "start_line": 962,
+      "end_line": 977,
+      "sha256": "b063404dbfc93bc8465c1a380b61c525597f585e22be1a01c0415746faab51a6"
+    },
+    {
+      "id": "repo://stdo-composition/PRODUCT_DEFINITION.md#pc-07--change-evidence-and-reliance",
+      "path": "standards/PRODUCT_DEFINITION.md",
+      "text": "### PC-07 — Change, evidence and reliance\n\nEach cross-boundary use binds the actual selected sources and material execution\nbasis, including uncommitted bytes where relevant. A moving selection identifies\nhow advancement is detected and which reliance must be reassessed. Git is one\npossible carrier, not a mandatory identity system.\n\nChanges and new counterexamples propagate through material assertion, execution\nand evidence-use dependencies under [FOUNDATIONS Change impact and evidence reuse](FOUNDATIONS.md#change-impact-and-evidence-reuse). Historical\nevidence remains about its original subject. Reuse on a changed subject needs an\nestablished applicability or preservation relation; rereading alone does not\nestablish it. A new release does not invalidate a still-selected older release,\nand a changed hash alone establishes neither semantic incompatibility nor\ncontinued validity. Unknown impact holds the dependent assurance or widens\nassessment; it does not require unrelated work to restart.\n\n",
+      "start_line": 978,
+      "end_line": 993,
+      "sha256": "9946c3d87bf78c0f864c9599aaceae82217109aff830948c173328347f21d30f"
+    }
+  ]
+}

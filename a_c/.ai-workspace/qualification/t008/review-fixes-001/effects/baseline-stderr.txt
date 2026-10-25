@@ -1,0 +1,88 @@
+test_legacy_attempt_without_activation_support_holds_dispatch (test_ac_support_effects.ProcessTests.test_legacy_attempt_without_activation_support_holds_dispatch) ... FAIL
+test_public_reassembled_context_cannot_reset_activation_history (test_ac_support_effects.PublicRetryTests.test_public_reassembled_context_cannot_reset_activation_history) ... FAIL
+test_public_selected_retry_survives_context_reassembly (test_ac_support_effects.PublicRetryTests.test_public_selected_retry_survives_context_reassembly) ... FAIL
+test_public_timeout_finalizes_while_descendant_still_holds_pipes (test_ac_support_effects.PublicRetryTests.test_public_timeout_finalizes_while_descendant_still_holds_pipes) ... FAIL
+test_public_cancel_finalizes_while_descendant_still_holds_pipes (test_ac_support_effects.PublicRetryTests.test_public_cancel_finalizes_while_descendant_still_holds_pipes) ... FAIL
+test_public_timeout_bounds_continuously_readable_descendant_tail (test_ac_support_effects.PublicRetryTests.test_public_timeout_bounds_continuously_readable_descendant_tail) ... FAIL
+test_public_timeout_honors_selected_grace_before_local_kill (test_ac_support_effects.PublicRetryTests.test_public_timeout_honors_selected_grace_before_local_kill) ... ok
+test_public_distinct_activation_keeps_its_own_attempt_population (test_ac_support_effects.PublicRetryTests.test_public_distinct_activation_keeps_its_own_attempt_population) ... ok
+
+======================================================================
+FAIL: test_legacy_attempt_without_activation_support_holds_dispatch (test_ac_support_effects.ProcessTests.test_legacy_attempt_without_activation_support_holds_dispatch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-effects-mb574zvl/baseline/build_tenants/graphify/test_env/test_ac_support_effects.py", line 751, in test_legacy_attempt_without_activation_support_holds_dispatch
+    self.assertIsNotNone(result["refusal"])
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_public_reassembled_context_cannot_reset_activation_history (test_ac_support_effects.PublicRetryTests.test_public_reassembled_context_cannot_reset_activation_history)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-effects-mb574zvl/baseline/build_tenants/graphify/test_env/test_ac_support_effects.py", line 1135, in test_public_reassembled_context_cannot_reset_activation_history
+    self.assertEqual(refused["status"], "error", refused)
+AssertionError: 'ok' != 'error'
+- ok
++ error
+ : {'evidence': {'id': 'sha256:3dbb9cfd31f65a8e4b02bc2492edd43795adf0999a018e340e4093147109812e', 'sha256': '3dbb9cfd31f65a8e4b02bc2492edd43795adf0999a018e340e4093147109812e'}, 'id': 'public-13', 'operation': 'dispatch.start', 'operation_outcome': {'cause': 'declared output available', 'core_value': 'satisfied', 'evidence': [], 'limits': ['output availability only; no semantic acceptance'], 'predicate': 'B(dispatch.start): declared exact output/effect-evidence payload availability on the requested basis', 'source_parent': {'clause': 'results', 'member': 'FOUNDATIONS.md', 'sha256': 'fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f'}, 'value': 'returned'}, 'refusal': None, 'result': {'artifact': {'id': 'sha256:7311b388fabf4a1ecc2ae68dd84c51240ba42c87525a7a2f6522d5bc140ac6af', 'sha256': '7311b388fabf4a1ecc2ae68dd84c51240ba42c87525a7a2f6522d5bc140ac6af'}, 'value': {'attempt': {'id': 'sha256:7311b388fabf4a1ecc2ae68dd84c51240ba42c87525a7a2f6522d5bc140ac6af', 'sha256': '7311b388fabf4a1ecc2ae68dd84c51240ba42c87525a7a2f6522d5bc140ac6af'}, 'launch': 'consult retained observations', 'reservation': 'complete', 'unknowns': ['Supervisor receipt is not an actor result or external completion.']}}, 'schema': 'a_c.fd-support.response/1', 'status': 'ok'}
+
+======================================================================
+FAIL: test_public_selected_retry_survives_context_reassembly (test_ac_support_effects.PublicRetryTests.test_public_selected_retry_survives_context_reassembly)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-effects-mb574zvl/baseline/build_tenants/graphify/test_env/test_ac_support_effects.py", line 1337, in test_public_selected_retry_survives_context_reassembly
+    self._retry_case("reassembled")
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-effects-mb574zvl/baseline/build_tenants/graphify/test_env/test_ac_support_effects.py", line 1325, in _retry_case
+    self._ok(retried)
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-effects-mb574zvl/baseline/build_tenants/graphify/test_env/test_ac_support_effects.py", line 1080, in _ok
+    self.assertEqual(response["status"], "ok", response.get("refusal"))
+AssertionError: 'error' != 'ok'
+- error
++ ok
+ : {'code': 'effect_unreconciled', 'gaps': [], 'reason': 'Retry does not bind an existing predecessor/reconciliation', 'source_refs': []}
+
+======================================================================
+FAIL: test_public_timeout_finalizes_while_descendant_still_holds_pipes (test_ac_support_effects.PublicRetryTests.test_public_timeout_finalizes_while_descendant_still_holds_pipes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-effects-mb574zvl/baseline/build_tenants/graphify/test_env/test_ac_support_effects.py", line 1236, in test_public_timeout_finalizes_while_descendant_still_holds_pipes
+    self._held_pipe_case(cancel=False)
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-effects-mb574zvl/baseline/build_tenants/graphify/test_env/test_ac_support_effects.py", line 1201, in _held_pipe_case
+    observed = self._finished(attempt, timeout=2)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-effects-mb574zvl/baseline/build_tenants/graphify/test_env/test_ac_support_effects.py", line 1110, in _finished
+    self.fail("Public registered fixture did not finish within its bounded deadline")
+AssertionError: Public registered fixture did not finish within its bounded deadline
+
+======================================================================
+FAIL: test_public_cancel_finalizes_while_descendant_still_holds_pipes (test_ac_support_effects.PublicRetryTests.test_public_cancel_finalizes_while_descendant_still_holds_pipes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-effects-mb574zvl/baseline/build_tenants/graphify/test_env/test_ac_support_effects.py", line 1239, in test_public_cancel_finalizes_while_descendant_still_holds_pipes
+    self._held_pipe_case(cancel=True)
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-effects-mb574zvl/baseline/build_tenants/graphify/test_env/test_ac_support_effects.py", line 1199, in _held_pipe_case
+    self._ok(self._public("dispatch.cancel", {"attempt": attempt, "reason": "stop the owned held-pipe fixture"}))
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-effects-mb574zvl/baseline/build_tenants/graphify/test_env/test_ac_support_effects.py", line 1080, in _ok
+    self.assertEqual(response["status"], "ok", response.get("refusal"))
+AssertionError: 'refused' != 'ok'
+- refused
++ ok
+ : {'code': 'authority_missing', 'gaps': [], 'reason': 'Existing attempt grant does not authorize this cancellation requester', 'source_refs': []}
+
+======================================================================
+FAIL: test_public_timeout_bounds_continuously_readable_descendant_tail (test_ac_support_effects.PublicRetryTests.test_public_timeout_bounds_continuously_readable_descendant_tail)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-effects-mb574zvl/baseline/build_tenants/graphify/test_env/test_ac_support_effects.py", line 1242, in test_public_timeout_bounds_continuously_readable_descendant_tail
+    self._held_pipe_case(cancel=False, continuous=True)
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-effects-mb574zvl/baseline/build_tenants/graphify/test_env/test_ac_support_effects.py", line 1201, in _held_pipe_case
+    observed = self._finished(attempt, timeout=2)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-fix-effects-mb574zvl/baseline/build_tenants/graphify/test_env/test_ac_support_effects.py", line 1110, in _finished
+    self.fail("Public registered fixture did not finish within its bounded deadline")
+AssertionError: Public registered fixture did not finish within its bounded deadline
+
+----------------------------------------------------------------------
+Ran 8 tests in 16.756s
+
+FAILED (failures=6)

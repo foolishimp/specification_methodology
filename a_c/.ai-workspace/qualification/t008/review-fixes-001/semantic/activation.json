@@ -1,0 +1,41 @@
+{
+  "status": "active",
+  "role": "F_P semantic Worker/Writer",
+  "actor": "/root/fix_ac_claude_semantic",
+  "owner_authorization": "ok mke the fixes",
+  "parent_activation": "Root exact bounded Worker grant in this session",
+  "product_definition": "stdo_a_c.json",
+  "operation": "Author one source-faithful target predicate correction and package a separate unaccepted proposed model/carrier, retaining unchanged frozen parents",
+  "triage": "realization_refactor: application correction under existing AC-R-001/003/006/007/011/015; no intended WHAT or methodology change",
+  "write_territory": [
+    "dogfood/stdo-v3-generation-rc9-review-correction/**",
+    ".ai-workspace/qualification/t008/review-fixes-001/semantic/**",
+    "own newly created OS temp prefix ac-fix-semantic-**"
+  ],
+  "prohibited_effects": [
+    "existing dogfood writes",
+    "runtime/code/tests/spec/profile/Git writes",
+    "native/vendor/model/network/install calls",
+    "acceptance/release judgments"
+  ],
+  "preimages": {
+    "stdo_a_c.json": "b0e013e6f9dabb9d3f31dd02c1a6909e9fc6418925a8d829f3bb1c2adf3dac1d",
+    "dogfood/stdo-v3-generation-rc9/runs-v2/claude/direct/repaired-proposal/model.json": "bf12529fc3359c3d0a6238c6214693e022d665f1148a1543f7add2ac2b150704",
+    "dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/ACTIVATION.md": "3bb7594a194950819d6aad65e3938358e8685bbbc2ebf67c0ad720c37bb04487",
+    "dogfood/stdo-v3-generation-rc9/corpora/claude/source/standards/FOUNDATIONS.md": "fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f",
+    "build_tenants/graphify/code/ac_graph.py": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667"
+  },
+  "installed_basis": {
+    "uri": "stdo://releases/v2.5.1-rc.2/",
+    "files": {
+      "manifest.json": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+      "standards/AXIOMATIC_CALCULUS.md": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+      "standards/authority_compressions/stdo_bootstrap.md": "f7bec3f86d9f24d1fb22acc553ade2eb0861105ec4cd2f1afa7290cc85c5b61a"
+    }
+  },
+  "checkout_head": "bfe228511415d346459523cec44e7e8157e2991a",
+  "status_sha256": "07d6bbcfacde4ed1b7651c9cb90d1aa82eb5808d59ae39a105ed34dfdd3d8be6",
+  "status_entries": 42167,
+  "created_utc": "2026-10-20T04:38:42.573982+00:00",
+  "new_territories_preexist": false
+}
