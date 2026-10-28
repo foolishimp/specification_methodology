@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:a-c:lean:formal-gate-request:1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "input",
+    "selections",
+    "supplied_views",
+    "context_binding"
+  ],
+  "properties": {
+    "schema": {
+      "const": "a_c.formal-gate.request/1"
+    },
+    "input": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "format",
+        "path",
+        "raw_sha256"
+      ],
+      "properties": {
+        "format": {
+          "enum": [
+            "model",
+            "carrier"
+          ]
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "raw_sha256": {
+          "$ref": "#/$defs/sha"
+        }
+      }
+    },
+    "selections": {
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "seeds",
+          "budget_records"
+        ],
+        "properties": {
+          "seeds": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "budget_records": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "supplied_views": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "path",
+            "raw_sha256"
+          ],
+          "properties": {
+            "path": {
+              "type": "string",
+              "minLength": 1
+            },
+            "raw_sha256": {
+              "$ref": "#/$defs/sha"
+            }
+          }
+        }
+      ]
+    },
+    "context_binding": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "rendered_sha256",
+            "activation_identity"
+          ],
+          "properties": {
+            "rendered_sha256": {
+              "$ref": "#/$defs/sha"
+            },
+            "activation_identity": {
+              "type": "object"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "$defs": {
+    "sha": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+test_public_distinct_activation_keeps_its_own_attempt_population (test_ac_support_effects.PublicRetryTests.test_public_distinct_activation_keeps_its_own_attempt_population) ... ok
+test_public_selected_retry (test_ac_support_effects.PublicRetryTests.test_public_selected_retry) ... FAIL
+test_public_selected_retry_survives_context_reassembly (test_ac_support_effects.PublicRetryTests.test_public_selected_retry_survives_context_reassembly) ... FAIL
+test_public_timeout_finalizes_while_descendant_still_holds_pipes (test_ac_support_effects.PublicRetryTests.test_public_timeout_finalizes_while_descendant_still_holds_pipes) ... ok
+test_timeout_preserves_raw_partials_and_keeps_unobserved_effect_scope_unknown (test_ac_support_interfaces.ActorCliTransportTests.test_timeout_preserves_raw_partials_and_keeps_unobserved_effect_scope_unknown) ... FAIL
+test_direct_performed_satisfied_and_falsified_conditions_remain_usable (test_ac_support_interfaces.PublicJudgmentIngressTests.test_direct_performed_satisfied_and_falsified_conditions_remain_usable) ... ok
+
+======================================================================
+FAIL: test_public_selected_retry (test_ac_support_effects.PublicRetryTests.test_public_selected_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py", line 1353, in test_public_selected_retry
+    self._retry_case("positive")
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py", line 1345, in _retry_case
+    self._finished(c.as_object(c.as_object(retried["result"])["artifact"]))
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py", line 1110, in _finished
+    self.fail("Public registered fixture did not finish within its bounded deadline")
+AssertionError: Public registered fixture did not finish within its bounded deadline
+
+======================================================================
+FAIL: test_public_selected_retry_survives_context_reassembly (test_ac_support_effects.PublicRetryTests.test_public_selected_retry_survives_context_reassembly)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py", line 1356, in test_public_selected_retry_survives_context_reassembly
+    self._retry_case("reassembled")
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py", line 1345, in _retry_case
+    self._finished(c.as_object(c.as_object(retried["result"])["artifact"]))
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_effects.py", line 1110, in _finished
+    self.fail("Public registered fixture did not finish within its bounded deadline")
+AssertionError: Public registered fixture did not finish within its bounded deadline
+
+======================================================================
+FAIL: test_timeout_preserves_raw_partials_and_keeps_unobserved_effect_scope_unknown (test_ac_support_interfaces.ActorCliTransportTests.test_timeout_preserves_raw_partials_and_keeps_unobserved_effect_scope_unknown)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py", line 1203, in test_timeout_preserves_raw_partials_and_keeps_unobserved_effect_scope_unknown
+    self.assertEqual((output / "vendor.stdout").read_bytes(), b'{"type":"partial"}\n')
+AssertionError: b'' != b'{"type":"partial"}\n'
+
+----------------------------------------------------------------------
+Ran 6 tests in 90.071s
+
+FAILED (failures=3)

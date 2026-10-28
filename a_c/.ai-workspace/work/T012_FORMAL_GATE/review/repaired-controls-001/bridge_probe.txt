@@ -1,0 +1,20 @@
+import hashlib,json
+from pathlib import Path
+import ac_generate as generation
+import ac_support_core as core
+import ac_support_effects as effects
+source = Path.cwd() / 'ac_formal_gate.py'
+expected = hashlib.sha256(source.read_bytes()).hexdigest()
+assert effects.formal is core.ac_formal_gate
+config = json.loads((Path.cwd().parent / 'checker-config.json').read_text())
+for module in (generation.ac_formal_gate, core.ac_formal_gate):
+    assert Path(module.__file__) == source
+    assert module.__a_c_loaded_sha256__ == expected
+    module.validate_config(config)
+source.write_bytes(source.read_bytes() + b'\n# review-only changed current bytes after load\n')
+config['adapter_sha256'] = hashlib.sha256(source.read_bytes()).hexdigest()
+for module in (generation.ac_formal_gate, core.ac_formal_gate):
+    try: module.validate_config(config)
+    except module.GateError as exc: assert exc.status == 'refused'
+    else: raise AssertionError('loaded source identity substituted')
+print(json.dumps({'exact_bridge_loaded':True,'loaded_source_drift_refused':True}))

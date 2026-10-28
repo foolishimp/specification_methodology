@@ -1,0 +1,29 @@
+{
+  "cases": [
+    {
+      "case": "new-model-only",
+      "evidence": "8d1b9ce41990785e79eeb3877c2e2238b088569fa49088f9a21a26692cd79695",
+      "expected": "verified",
+      "reason": null,
+      "seconds": 16.50715229101479,
+      "status": "verified"
+    },
+    {
+      "case": "carrier-with-actual-view",
+      "evidence": "8dc6174ba02686a9dd53fe4a210ff2d20c1c83c215393df644cb427ccc0d489c",
+      "expected": "verified",
+      "reason": null,
+      "seconds": 15.482326083118096,
+      "status": "verified"
+    },
+    {
+      "case": "fresh-evidence-replay",
+      "expected": "verified",
+      "seconds": null,
+      "status": "refused"
+    }
+  ],
+  "reason": "fresh evidence replay failed: {'schema': 'a_c.formal-gate.result/1', 'status': 'refused', 'reason': 'Evidence unavailable/malformed: unreadable JSON: only integer-valued JSON is supported', 'checked_claims': [], 'evidence': None}",
+  "seconds": 41.579615249997005,
+  "status": "incomplete"
+}

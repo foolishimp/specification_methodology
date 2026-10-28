@@ -1,0 +1,45 @@
+{
+  "schema": "a_c.scaling-probe-return/1",
+  "actor": "/root/ac_lean_scaling_probe",
+  "role": "Worker probe",
+  "status": "closed_partial_on_executive_request",
+  "closed_at": "2026-10-27T15:10:29.013084+00:00",
+  "executed_probes": 1,
+  "maximum_probes": 3,
+  "remaining_prepared": [
+    "Probe2.lean",
+    "Probe3.lean"
+  ],
+  "performed_result": {
+    "probe": 1,
+    "status": "timeout",
+    "exit": -9,
+    "seconds": 60.13928533298895,
+    "command": [
+      "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/.toolchain/lean-4.35.0-darwin_aarch64/bin/lean",
+      "-j",
+      "1",
+      "-M",
+      "4096",
+      "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T012_FORMAL_GATE/lean/scaling-probe/Probe1.lean"
+    ],
+    "source_sha256": "e91b42327f7141c170526f4b86b4758ce0be7e9e5dd37b523ad8757b987d181b"
+  },
+  "root_cause": "unresolved; no per-declaration completion identified",
+  "candidate_mutations": false,
+  "git_effects": false,
+  "active_processes": false,
+  "files": {
+    "ACTIVATION.json": "bac156ee51ff58d32526552a6f0df1967bb53aec40dbc5a30eb96785ecf1fe78",
+    "PARTIAL_RETURN.md": "096c503cb70b2475769cd8b7ce7140bfe66e83927a90de1d0218efd89527ce0d",
+    "Probe1-result.json": "58d8a707338718c46f4aa4675c06a37b880852cee28080654c6d1f90f578083d",
+    "Probe1.lean": "e91b42327f7141c170526f4b86b4758ce0be7e9e5dd37b523ad8757b987d181b",
+    "Probe1.log": "abd0ec744612b127f65671151b00150e6d435395c371648933c868259578e02a",
+    "Probe2.lean": "3a4e7f1ad28fa45ad334310e9ee41c330d143f5343924147cfe481ae40e10feb",
+    "Probe3.lean": "093cf6d5f57e565254ab2efa0249cbf058ef19752aff7a006fcb982d1a3f81af",
+    "snapshot-AC-Structure.lean": "f2d13a53ba8ac31731640a06facf78566b93d92a6dadbe4c7689e15d00c81a54",
+    "snapshot-large-model-structural-GateModel.lean": "0ee2efa037da3581a8ded32685068f5189ade454c206262120d9245da7de87d9",
+    "snapshot-small-pipeline-probe-GateModel.lean": "3c914e80e1ff9206e1bd8d78282498d9a84087bc7e6b599e2736f1ed5b3ab8ab"
+  },
+  "stop": "No further work until Root follow-up"
+}

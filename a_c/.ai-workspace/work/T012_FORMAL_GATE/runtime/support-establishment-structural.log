@@ -1,0 +1,12 @@
+Build completed successfully (643 jobs).
+uncaught exception: --fresh flag is only valid when specifying a single module:
+[AC.Structure, AC.GateRuntime]
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/scripts/formal_support.py", line 69, in <module>
+    result=establish(args.output);print(json.dumps({'status':'established','members':len(result['members']),'seconds':result['established_seconds']}))
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/scripts/formal_support.py", line 49, in establish
+    subprocess.run([str(prefix/'bin/lake'),'env','leanchecker','--fresh','AC.GateRuntime','AC.Structure'],cwd=ROOT,env=env,check=True,timeout=300)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/.toolchain/lean-4.35.0-darwin_aarch64/bin/lake', 'env', 'leanchecker', '--fresh', 'AC.GateRuntime', 'AC.Structure']' returned non-zero exit status 1.

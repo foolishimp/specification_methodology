@@ -81,3 +81,54 @@ Implementation and ordinary-use qualification are downstream of its required
 assessment/disposition; benefit, full calculus conformance and release remain
 unqualified. Deferred common requirements are not silently relabeled by this
 work-scoped configuration record.
+
+## T-011 formalisation construction
+
+The [T-011 owner instruction](../.ai-workspace/tickets/active/T-011-lean-formalisation.md#owner-instruction)
+selects definition, implementation and local verification of a separate
+Lean/Mathlib build tenant. The installed builder above remains operative; the
+32-record published STDO 3.0.2 supplement is an exact represented subject.
+Neither the subject version nor another tenant's work-scoped RC9 configuration
+replaces this construction basis. The common
+[formalisation requirements](requirements/formalisation.md) and tenant design
+bind the selected fragment.
+
+| Work-scoped frame | Question and evidence | Result boundary |
+|---|---|---|
+| F-FORMAL-CONTRACT | Do the exact mathematical definitions, source correspondence and selected propositions conserve the owning calculus distinctions and expose premises, opaque content and unsupported claims? | Source/contract assessment; no semantic acceptance or whole-calculus theorem. |
+| F-FORMAL-PROOF | Do generic checked proofs establish exact declared closure, retained-record preservation and budget refusal, with no admitted proof gaps or premises that merely assume the desired result? | The exact formal propositions under their named premises and trusted proof basis. |
+| F-FORMAL-INTEGRATION | Does the documented executable path reproduce source-bound data, discharge its certificate obligations and exercise the 32-record fixture plus success/refusal controls? Are parser/importer/compiler/runtime boundaries explicit? | Tested data and execution correspondence; no proof of source prose fidelity or semantic role selection. |
+
+Executive `/root` delegates bounded contract, implementation and assessment
+work and performs no mutation. The common Writer and tenant Worker have disjoint
+territories recorded in T-011. A nonauthor Reviewer acquires the exact owning
+source and candidate proof independently. Each result names its frozen subject,
+performed checks, premises, trust dependencies, residuals and invalidators.
+The proof author, checker and source digest do not supply external semantic
+acceptance or owner authority. Jim retains meaning, Product acceptance and
+release decisions.
+
+## T-012 reusable formal gate construction
+
+The [T-012 owner instruction](../.ai-workspace/tickets/active/T-012-reusable-formal-gate.md#owner-instruction)
+selects all five reusable-gate increments under
+[FR-008–FR-014](requirements/formalisation.md#reusable-formal-verification-gate).
+The installed v2.5.1-rc.2 builder remains operative. The recorded T-011 baseline
+preserves its exact reviewed source and evidence boundary; it is not automatic
+qualification of a changed adapter, proof, gate or consumer path.
+
+| Work-scoped frame | Question and evidence | Result boundary |
+|---|---|---|
+| F-GATE-CONTRACT | Are adapter support, requested claims, exact-subject/selection/budget bindings, four evidence statuses and independent authority conditions explicit? | Common contract/design assessment; no generic semantic or adapter self-admission. |
+| F-GATE-VERIFICATION | Does the actual gate verify an unseen supported subject and supplied view under current exact proof/implementation/toolchain pins, with portable recheckable evidence? | The declared formal fragment and actual supplied bytes; opaque content and unproved bridges remain explicit. |
+| F-GATE-INTEGRATION | Does an ordinary generation result and actual Worker-context/preflight/dispatch path enforce the selected required condition on the delivered bytes, conserve existing effect boundaries and retain genuine outcomes? | Observed integrated operations and refusals under existing grants; no semantic context sufficiency or replacement work authority. |
+| F-GATE-QUALIFICATION | Does source-first independent assessment exercise the actual gate/consumer path, adversarial currentness/authority cases and measured time/resource/reuse behavior? | Bounded qualification of exact subjects and supported environment; no unmeasured benefit, whole-calculus or acceptance claim. |
+
+Executive `/root` retains coordination and performs no mutation. The common
+Writer owns only T-012's named baseline/specification/ticket territory. Tenant
+Workers and nonauthor Reviewers have separately bounded operations and
+territories; they stop at closed returns. Increments 1–3 establish the runnable
+unseen-subject gate before 4–5 claim ordinary integration or qualification.
+Controlled/replayed generation inputs may exercise mechanics without paid LLM
+calls, retaining their actual provenance and the distinct actual Worker handoff.
+Jim retains meaning, scope, Product acceptance and release authority.

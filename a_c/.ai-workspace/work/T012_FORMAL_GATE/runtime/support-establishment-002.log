@@ -1,0 +1,22 @@
+✔ [643/643] Built AC.GateRuntime (5.3s)
+Build completed successfully (643 jobs).
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/scripts/formal_support.py", line 69, in <module>
+    result=establish(args.output);print(json.dumps({'status':'established','members':len(result['members']),'seconds':result['established_seconds']}))
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/scripts/formal_support.py", line 49, in establish
+    subprocess.run([str(prefix/'bin/lake'),'env','leanchecker','--fresh','AC.GateRuntime'],cwd=ROOT,env=env,check=True,timeout=300)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1209, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 2141, in _communicate
+    self.wait(timeout=self._remaining_time(endtime))
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 2045, in _wait
+    raise TimeoutExpired(self.args, timeout)
+subprocess.TimeoutExpired: Command '['/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/.toolchain/lean-4.35.0-darwin_aarch64/bin/lake', 'env', 'leanchecker', '--fresh', 'AC.GateRuntime']' timed out after 299.9998963328544 seconds

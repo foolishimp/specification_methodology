@@ -1,0 +1,46 @@
+{
+  "checked_claims": [],
+  "context_binding": null,
+  "evidence": {
+    "manifest_sha256": "e4a22907b84e5bd26c4d4753d3998f0adc0bc5e1745a9628f9e333f99c42beeb",
+    "members": {
+      "input.json": "f8406ed18504077815f4a1f70a3d23b69f5ab7937e744751604790cc339a7ab0",
+      "replay-request.json": "16be9c579cd86ac2df42e52aae00d95d8b7877ee8c1ccf2f0e8e175b625c255d",
+      "request.json": "314bd18f1c3a0cd95fd23e042d00f2c73d5dffcd482285dcbc12afb00181aba9"
+    }
+  },
+  "inputs": {
+    "input": {
+      "bytes": 150450,
+      "raw_sha256": "f8406ed18504077815f4a1f70a3d23b69f5ab7937e744751604790cc339a7ab0",
+      "retained_path": "input.json"
+    }
+  },
+  "limits": [
+    "Finite declared structural model/closure/projection only; no semantic acceptance.",
+    "Whole-model-source-correspondence covers only supplied or carrier-recovered model JSON; original prose/corpus-to-model F_P fidelity remains opaque and unproved.",
+    "Python profile/parser/generator and runtime serialization remain tested trusted bridges.",
+    "Python API imports and interpreter initialization remain trusted-host responsibilities; the CLI isolates helper loading after startup.",
+    "Context binding is metadata; consumer must check actual delivered bytes.",
+    "Crossing relations are checked source-derived metadata, not a Lean theorem."
+  ],
+  "model": null,
+  "observations": {
+    "child_maxrss_native_units": 40534016,
+    "elapsed_seconds": 0.0015366249717772007,
+    "limits": {
+      "max_input_bytes": 33554432,
+      "max_selections": 64,
+      "memory_mb": 4096,
+      "timeout_seconds": 90
+    },
+    "stages": []
+  },
+  "reason": "signature: expected object",
+  "request_sha256": "9ee936c5110ba4a45b8902433a3d40ad7c828ff42a55d742a750278c3d2a8c78",
+  "requested_claims": [],
+  "runtime_identity": null,
+  "schema": "a_c.formal-gate.result/1",
+  "selections": [],
+  "status": "refused"
+}

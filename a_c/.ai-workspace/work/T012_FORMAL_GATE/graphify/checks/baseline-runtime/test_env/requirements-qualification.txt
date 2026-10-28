@@ -1,0 +1,6 @@
+# Local qualification only; the tenant CLI itself uses the Python stdlib.
+# Upstream Graphify is inspected from its exact checkout rather than installed.
+networkx==3.4.2
+tree-sitter==0.25.2
+# Static qualification of this test harness and the tenant implementation.
+mypy==1.15.0

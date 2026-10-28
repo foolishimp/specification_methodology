@@ -1,0 +1,24 @@
+{
+  "role": "Worker probe",
+  "actor": "/root/ac_lean_scaling_probe",
+  "grant": "Root delegated bounded kernel scaling diagnosis; own scratch only; no candidate edits",
+  "limits": {
+    "probes": 3,
+    "seconds_each": 60,
+    "lean_megabytes": 4096
+  },
+  "snapshots": {
+    "a_c/build_tenants/lean/AC/Structure.lean": {
+      "sha256": "f2d13a53ba8ac31731640a06facf78566b93d92a6dadbe4c7689e15d00c81a54",
+      "snapshot": "snapshot-AC-Structure.lean"
+    },
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/runtime/small-pipeline-probe/GateModel.lean": {
+      "sha256": "3c914e80e1ff9206e1bd8d78282498d9a84087bc7e6b599e2736f1ed5b3ab8ab",
+      "snapshot": "snapshot-small-pipeline-probe-GateModel.lean"
+    },
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/runtime/large-model-structural/GateModel.lean": {
+      "sha256": "0ee2efa037da3581a8ded32685068f5189ade454c206262120d9245da7de87d9",
+      "snapshot": "snapshot-large-model-structural-GateModel.lean"
+    }
+  }
+}

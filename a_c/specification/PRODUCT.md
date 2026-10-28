@@ -43,6 +43,52 @@ a separate judgment over unchanged carrier bytes; creating bytes or passing a
 partial check does not itself issue that judgment. Its declared assessment may
 be mechanical, as in `F_D[v_carrier_admission]`.
 
+## Formalisation capability
+
+A formalisation tenant supplies an explicit mathematical interpretation of a
+declared calculus fragment, source-linked definitions, checked generic proofs
+and an executable application. The common
+[formalisation requirements](requirements/formalisation.md) govern its proof
+boundary and deciding evidence; the tenant owns the logic, representation,
+proof assistant, libraries and imported-data bridge.
+
+The Lean/Mathlib tenant's selected first delivery represents all eight record
+families and exact retained content. It proves seed inclusion, closure and
+leastness/reachability for finite declared dependencies, projection preservation
+of retained identity/content/authority/basis/residuals, and refusal on an
+insufficient budget. A sound finite certificate checker may connect an external
+closure calculation to those generic proofs. The executable example uses the
+frozen 32-record STDO 3.0.2 composition supplement selected in
+[T-011](../.ai-workspace/tickets/active/T-011-lean-formalisation.md).
+
+Proofs establish their exact propositions under explicit premises. The imported
+schema, parser, source mapping, compiler/runtime and semantic selection have
+declared trust boundaries. Full record content may be conserved opaquely; that
+equality proves no embedded prose proposition. Formalisation neither transfers
+source authority nor supplies F_P interpretation fidelity, semantic admission,
+whole-calculus validity or Product acceptance. Graph carrier import is an
+optional adapter; Graphify execution and mutable v3 source are not dependencies
+of the formal core.
+
+The additional [reusable formal gate](requirements/formalisation.md#reusable-formal-verification-gate)
+accepts previously unseen supported subjects through checked versioned adapter
+contracts. It verifies exact model/carrier identity and, when requested, the
+actual supplied projection, ordered selection and budget. Its portable evidence
+records verified, refused, unsupported or incomplete status, the exact deciding
+proof/implementation/toolchain basis and current input/output identities.
+Neither a supplied success label nor stale cached proof admits a new request.
+
+Callers may select this gate as a required condition of ordinary generation,
+context construction, preflight and dispatch. The selected condition follows
+the actual generated and delivered bytes; current matching verification is
+required before the affected use proceeds. Pure construction may produce a
+pending artifact for a separate verification effect. Existing grants, disclosure
+policy, applicability and semantic sufficiency remain independently owned
+conditions. The gate does not define another methodology or confer acceptance.
+T-012 selects a runnable unseen-subject gate before ordinary-path integration
+and independent actual-path qualification, with measured costs and explicit
+limits.
+
 ## F_D support for F_P development actors
 
 The Product additionally provides deterministic support tools for F_P
@@ -126,9 +172,10 @@ release remain open.
 
 ## Independence
 
-Graphify is a build tenant of this common WHAT. It is not a separately composed
-Axiom Indexer Product. The Product Definition's composition is empty. This
-project neither changes nor waits for v3, and has no membership in the existing
+Graphify and Lean/Mathlib are independent build tenants of this common WHAT.
+Neither is a separately composed Axiom Indexer Product. The Product Definition's
+composition is empty. This project neither changes nor waits for v3, and has no
+membership in the existing
 STDO release-matched cohort. Any later consumer adoption is separately selected.
 Upstream software used by a tenant is part of that tenant's HOW.
 
@@ -146,3 +193,17 @@ selects the provisional realization after bounded implementation/review/technica
 integration; T-008 remains active for explicit qualification gaps. It supplies
 no Product acceptance, release decision or current runtime-call authority.
 Construction and independent assessment do not accept their own subjects.
+
+The [T-011 instruction](../.ai-workspace/tickets/active/T-011-lean-formalisation.md#owner-instruction)
+authorizes defining, implementing and locally verifying the new formalisation
+tenant. Its exact fixture is a subject, and its proof toolchain is tenant HOW;
+the instruction changes neither the builder nor Product composition. Formal
+construction and independent review remain distinct from Jim's semantic,
+Product acceptance and release decisions.
+
+The [T-012 instruction](../.ai-workspace/tickets/active/T-012-reusable-formal-gate.md#owner-instruction)
+authorizes all five increments of that reusable gate, including ordinary
+generation and actual Worker-context integration and independent qualification.
+It preserves T-011's historical evidence, the installed construction basis and
+empty Product composition. Construction checks, gate verification and independent
+assessment remain distinct from Jim's acceptance and release authority.

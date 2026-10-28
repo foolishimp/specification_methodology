@@ -1,0 +1,30 @@
+{
+  "api_evidence_members": [
+    "input.json",
+    "replay-request.json",
+    "request.json"
+  ],
+  "api_exit_code": 0,
+  "api_result": {
+    "escaped_exception": "AttributeError",
+    "message": "'NoneType' object has no attribute 'get'"
+  },
+  "authorization": "Executive granted one own-copy malformed signature:null control; no builds or Lean runs",
+  "cli_evidence_members": [
+    "input.json",
+    "replay-request.json",
+    "request.json"
+  ],
+  "cli_exit_code": 4,
+  "cli_result": {
+    "reason": "AttributeError: 'NoneType' object has no attribute 'get'",
+    "schema": "a_c.formal-gate.result/1",
+    "status": "incomplete"
+  },
+  "compiler_or_kernel_execution": false,
+  "malformation": "supported model profile with signature:null",
+  "original_source_pins_unchanged": true,
+  "schema": "a_c.independent-malformed-signature-probe/1",
+  "source_manifest_sha256": "6791eaa26b72e1fe441af9c6b774ed4e3faebaec089845fbd082e01c5ab0adcf",
+  "toolchain_copied": false
+}

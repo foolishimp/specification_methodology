@@ -1,0 +1,147 @@
+{
+  "changes": {
+    "README.md": {
+      "after": "ac11076acfb5ab77c45e38be26e4e0370fe52c10641c58ff279a407cb6d194ce",
+      "before": "362968d83e4e89a85312cd3aa4e7e58573eb2ec469a1bcaf5c631b8f834201d0"
+    },
+    "design/FORMAL_GATE.md": {
+      "after": "32a4c573f2af9dbda9d73ac8fa24797687345ade870488a6d31347350b3fa79c",
+      "before": "c09bdb4b5120179887f05c95e68dd03412a9fbbc4c8b8e0a00898041d6e54f8c"
+    },
+    "scripts/formal_gate.py": {
+      "after": "599d32cf5802f212bf9845f1453cb9ba0ba5631600177ce2406ce82770f557e8",
+      "before": "640a59e7ed0b7ba3aa8ed5dc5cc9f5094d5eed781636194b303e9d741f427689"
+    },
+    "scripts/generation_profile.py": {
+      "after": "7f65b5ff763cf2d7b9ab9ef7ae18584dd5a5590418e10d30e186f8261ff67ace",
+      "before": "37cf26a15c2ccb24c847e5768bf2112f8f5311fd91ff020e47e388246a250fee"
+    },
+    "tests/test_formal_gate.py": {
+      "after": "411711e9637c02280564a22438f5b6cf0b306f4361328124ba72c23d04efc807",
+      "before": "a0131165b46851e29638759be303082d27b49040f66c4a0ead983630890ff935"
+    }
+  },
+  "created_utc": "2026-10-27T15:51:08.188920+00:00",
+  "freeze_rule": "No deciding source/profile/proof edits or heavy proof runs until Executive selects a next bounded step.",
+  "historical_qualification": {
+    "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T012_FORMAL_GATE/runtime/qualification-002/qualification.json",
+    "seconds": 106.97676245798357,
+    "sha256": "c94859b85ca0f24dc0e9c4403403ca2eaa7e9345a456eef75e0fe3176356e939",
+    "status": "passed",
+    "unit_controls": 50
+  },
+  "prior_freeze": {
+    "path": "lean/SOURCE_FREEZE_001.json",
+    "preserved_exact_sources": "lean/repair-001/before",
+    "sha256": "6791eaa26b72e1fe441af9c6b774ed4e3faebaec089845fbd082e01c5ab0adcf"
+  },
+  "proof_library": "Lean4.35.0/Mathlib56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "remaining": [
+    "1987-record concrete proof performance remains incomplete; no new large-model claim.",
+    "Refreshed Graphify whole-path qualification and independent repaired-cut assessment are pending.",
+    "Final T011 full checker rerun remains after deciding sources stabilize."
+  ],
+  "repair_controls": {
+    "evidence": {
+      "runtime/repair-001/api-null-receipt/input.json": "afe0fadd98319c7034a81362af9260ca6db5561124f4595ff86c1440de5307f9",
+      "runtime/repair-001/api-null-receipt/manifest.json": "59501ae95f83fb9d58c008f0d5516768228868c37301a948e2510746d01f79f7",
+      "runtime/repair-001/api-null-receipt/replay-request.json": "716bb4b1d048edd604ace49989bde9f6154227053ab0d5b9bf5621fd8f1665fb",
+      "runtime/repair-001/api-null-receipt/request.json": "8495d892b5087ccd3b0a122b3f17f5ed1fdcf87ce17fcca7032e54254d4b44d0",
+      "runtime/repair-001/api-null-receipt/result.json": "b7332313fdce411327ee3a9b40fe7dd168f5039238874b3a38a5afec1cfcb33f",
+      "runtime/repair-001/cli-null-receipt/input.json": "afe0fadd98319c7034a81362af9260ca6db5561124f4595ff86c1440de5307f9",
+      "runtime/repair-001/cli-null-receipt/manifest.json": "59501ae95f83fb9d58c008f0d5516768228868c37301a948e2510746d01f79f7",
+      "runtime/repair-001/cli-null-receipt/replay-request.json": "716bb4b1d048edd604ace49989bde9f6154227053ab0d5b9bf5621fd8f1665fb",
+      "runtime/repair-001/cli-null-receipt/request.json": "8495d892b5087ccd3b0a122b3f17f5ed1fdcf87ce17fcca7032e54254d4b44d0",
+      "runtime/repair-001/cli-null-receipt/result.json": "c80ea7c839ef65826fc975cabc6d750762d46ead966804876b9d730a273cde91",
+      "runtime/repair-001/final-startup-controls.log": "6c10117d3667e8fcf0b2e4b1f2b2910a77a038ae699d27f890b747f6dfe31e79",
+      "runtime/repair-001/null-cli.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "runtime/repair-001/null-cli.stdout": "82b57686e3f69c304ba261a9bf747d5e7148efbc76ac98e4c1b73cd0e892e121",
+      "runtime/repair-001/repair-controls.json": "8de1636ff419729a2caf2b441ff105eebd53b06013a708e0984f237138eb8401",
+      "runtime/repair-001/request.json": "8495d892b5087ccd3b0a122b3f17f5ed1fdcf87ce17fcca7032e54254d4b44d0",
+      "runtime/repair-001/signature-null.json": "afe0fadd98319c7034a81362af9260ca6db5561124f4595ff86c1440de5307f9",
+      "runtime/repair-001/unit-controls.json": "85c066a12d2f7cced5edbbdbad67acee696d158f884d2857055964480de25a53",
+      "runtime/repair-001/unit-controls.log": "1c96c436d3cf42046d0eff270536b6d27297c640f997b1544a3b07a3da7d7ad0"
+    },
+    "final_affected_controls": 3,
+    "status": "passed",
+    "unit_controls": 56
+  },
+  "role": "Worker",
+  "runtime_identity": {
+    "pins": {
+      "AC/Closure.lean": "d8c66f511c486eeaf40393733779148843e2ce075e2540cb41259ed9b23e011f",
+      "AC/GateProof.lean": "b2c9bcfeafee1f5691a0bc81f93ce593143c3a2b7f974bb3dc3903296da92100",
+      "AC/GateRuntime.lean": "76dc6b64cdbf75bf569981f1f2a69abda056f336e4ea8b91e7d9cd4d268a6fd6",
+      "AC/Model.lean": "943bd93abdcccb3cb084ab8e41196f8cac77629089e746c90d7da09ac90a22d5",
+      "AC/Projection.lean": "ac2a9ce8ed148400967519c724715f6ea491bceff960ed77249b5ff744692575",
+      "AC/Structure.lean": "f2d13a53ba8ac31731640a06facf78566b93d92a6dadbe4c7689e15d00c81a54",
+      "lake-manifest.json": "8ccec766188ba32a956dd142439b4f08faa877512654162ae7cd2e35c1fdda34",
+      "lakefile.toml": "68338aa894a2a54fd3f4f9f22366359cc0107ba581459b29699f03c629437fc3",
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "profiles/formal-gate-request.schema.json": "edb498b7af5dced9822055ee2e09938fffa5a22da33ea1ea9550d89dd90a233a",
+      "profiles/generation-signature-v1.json": "db4f0a4d41b575a1b06ecc75a0a56e3b4f26044830e5bff3624b2ae4f7a219a8",
+      "profiles/proof-support-v1.json": "3ee283ef53a47cd966ad6c47479fe57c2c793003a88590469c2289ea8b2621a2",
+      "scripts/bootstrap.py": "7fc1038180d95d7a5c6ee8cecaea12f9f2534cc8d1af4933303c214cd5127fd7",
+      "scripts/check.py": "cad730b6de699ab2d4b2e8a7235e7b18bd28a4c8b5853e3f7838265a32a60deb",
+      "scripts/check_gate.py": "ebf41503202c17f0d5872b3b5700f33b6969d5bee61befac680540e6a9093642",
+      "scripts/formal_gate.py": "599d32cf5802f212bf9845f1453cb9ba0ba5631600177ce2406ce82770f557e8",
+      "scripts/formal_support.py": "1b7ad94f9076ed9d26e53075ea7965598b2b77dd3f8e380b86b795dd948619a6",
+      "scripts/gate_codegen.py": "0d0309c51a998dd16563755b79fb50e916b7364d837a75071a11dfc5400d54fb",
+      "scripts/generate_fixture.py": "ae36a07ff8ae3106eca66f346cdd82eb3d476ec1b407c944ed32987273705ca4",
+      "scripts/generation_profile.py": "7f65b5ff763cf2d7b9ab9ef7ae18584dd5a5590418e10d30e186f8261ff67ace",
+      "scripts/import_fixture.py": "5a63b45523dcdbf69b87f39864f28f99ee58890e70c4b3073b057fb80a864d7a",
+      "scripts/runtime_process.py": "dac99212afddad9f6c0d42f13c4c1ad2faa4ab0fa8ea2e26f09dc3af3a904018",
+      "toolchain-lock.json": "ac1fc82fc9b6df1f955b6538a4c91cd9f246ae2f23a38e17e6b4ad9482a2c20b"
+    },
+    "sha256": "a194a9370c0f6c779f98c4cf8c3c47f9380e16315e5c8910286500fd98aa4888"
+  },
+  "schema": "a_c.lean.worker-source-freeze/1",
+  "scope": "T012 bounded P1/P2/P3 standalone repair cut; no new proof qualification",
+  "source_files": {
+    ".gitignore": "4f37f4290d19a1e76f896d6757a5b2532eed46cc22b9f8f6e33d974501c3b026",
+    "AC.lean": "a887a453a58b5a2e56b2eb9580d97227d5efb60ea79f4082decb8c5c79e4209f",
+    "AC/Audit.lean": "bbe185b9e3550029328a19fbb927719450f6885720918cb45a60e5ba6131b647",
+    "AC/Closure.lean": "d8c66f511c486eeaf40393733779148843e2ce075e2540cb41259ed9b23e011f",
+    "AC/Fixture.lean": "483293b34e35efd01883dd57a222eabfbba658c0c4d797b0bc54633192f236ea",
+    "AC/GateProof.lean": "b2c9bcfeafee1f5691a0bc81f93ce593143c3a2b7f974bb3dc3903296da92100",
+    "AC/GateRuntime.lean": "76dc6b64cdbf75bf569981f1f2a69abda056f336e4ea8b91e7d9cd4d268a6fd6",
+    "AC/Model.lean": "943bd93abdcccb3cb084ab8e41196f8cac77629089e746c90d7da09ac90a22d5",
+    "AC/Projection.lean": "ac2a9ce8ed148400967519c724715f6ea491bceff960ed77249b5ff744692575",
+    "AC/Run.lean": "12a07031acb8d1a4bdcedd3341a2d70633e57598aede87c97cfab67aedad9ab6",
+    "AC/Structure.lean": "f2d13a53ba8ac31731640a06facf78566b93d92a6dadbe4c7689e15d00c81a54",
+    "AC/Toy.lean": "9cf4aaba1f9c98329b7fc2cefbd08042ef05dffe12148e1e6399363cfdf559b8",
+    "README.md": "ac11076acfb5ab77c45e38be26e4e0370fe52c10641c58ff279a407cb6d194ce",
+    "design/BOUNDARIES.md": "3b584a57bc9e66a2b4b43113e189b748db20040c5db77d988b69101021067004",
+    "design/FORMAL_GATE.md": "32a4c573f2af9dbda9d73ac8fa24797687345ade870488a6d31347350b3fa79c",
+    "design/IMPORTER.md": "e130881a982eabcc9df2d837f21a40d2bc714a512a8ec2026a2aff4c7b71db9b",
+    "design/README.md": "6389e3985af5938568f3c3b1fc0374536510cd4d6df990e33c2491cf1fffc370",
+    "design/SOURCE_CORRESPONDENCE.md": "14e7e97d4288af40cb63780a0993128629cab623e90d797f638650b6077cec98",
+    "fixtures/stdo-3.0.2/CARRIER.json": "e77be91716c8f4a7e45ba19fabd818b88115c40872dd22d754f896892b584b8b",
+    "fixtures/stdo-3.0.2/CUSTODY.json": "401db86d69cd252452fda1b71d03c9805c51a1f361ce7c6319246e6aaf586ef2",
+    "fixtures/stdo-3.0.2/GRAPHIFY_EXTRACTION.json": "5a8115141979c4e5873256a816c483a8cd64f906d08555aaee73c0cf0a3e33cb",
+    "fixtures/stdo-3.0.2/MODEL.json": "fc3114dd666218c387a64846b755a14979182f488de64ffff6a6d305a9698793",
+    "fixtures/toy/CUSTODY.json": "1272732fc99c96473db7bb3e9e071d27349bebe6220a72ce30bc04fc27e35f1e",
+    "fixtures/toy/MODEL.json": "a72d423a222ecd84a429e28796c93ba07ac8b79d40caf3b74af02c36029f3b0b",
+    "lake-manifest.json": "8ccec766188ba32a956dd142439b4f08faa877512654162ae7cd2e35c1fdda34",
+    "lakefile.toml": "68338aa894a2a54fd3f4f9f22366359cc0107ba581459b29699f03c629437fc3",
+    "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+    "profiles/formal-gate-request.schema.json": "edb498b7af5dced9822055ee2e09938fffa5a22da33ea1ea9550d89dd90a233a",
+    "profiles/generation-signature-v1.json": "db4f0a4d41b575a1b06ecc75a0a56e3b4f26044830e5bff3624b2ae4f7a219a8",
+    "profiles/proof-support-v1.json": "3ee283ef53a47cd966ad6c47479fe57c2c793003a88590469c2289ea8b2621a2",
+    "scripts/bootstrap.py": "7fc1038180d95d7a5c6ee8cecaea12f9f2534cc8d1af4933303c214cd5127fd7",
+    "scripts/check.py": "cad730b6de699ab2d4b2e8a7235e7b18bd28a4c8b5853e3f7838265a32a60deb",
+    "scripts/check_gate.py": "ebf41503202c17f0d5872b3b5700f33b6969d5bee61befac680540e6a9093642",
+    "scripts/formal_gate.py": "599d32cf5802f212bf9845f1453cb9ba0ba5631600177ce2406ce82770f557e8",
+    "scripts/formal_support.py": "1b7ad94f9076ed9d26e53075ea7965598b2b77dd3f8e380b86b795dd948619a6",
+    "scripts/gate_codegen.py": "0d0309c51a998dd16563755b79fb50e916b7364d837a75071a11dfc5400d54fb",
+    "scripts/generate_fixture.py": "ae36a07ff8ae3106eca66f346cdd82eb3d476ec1b407c944ed32987273705ca4",
+    "scripts/generation_profile.py": "7f65b5ff763cf2d7b9ab9ef7ae18584dd5a5590418e10d30e186f8261ff67ace",
+    "scripts/import_fixture.py": "5a63b45523dcdbf69b87f39864f28f99ee58890e70c4b3073b057fb80a864d7a",
+    "scripts/runtime_process.py": "dac99212afddad9f6c0d42f13c4c1ad2faa4ab0fa8ea2e26f09dc3af3a904018",
+    "tests/test_adapter.py": "0ed3d060d2bc11cf44e36f2c5d0b893bac6eee73067d899ae7dd4259d761f164",
+    "tests/test_formal_gate.py": "411711e9637c02280564a22438f5b6cf0b306f4361328124ba72c23d04efc807",
+    "tests/test_runtime_process.py": "48d9275c3446d545e7a491bc4f204df33e5ff6e871f9274712ee48e8e076ec72",
+    "toolchain-lock.json": "ac1fc82fc9b6df1f955b6538a4c91cd9f246ae2f23a38e17e6b4ad9482a2c20b"
+  },
+  "support_manifest_sha256": "3ee283ef53a47cd966ad6c47479fe57c2c793003a88590469c2289ea8b2621a2"
+}

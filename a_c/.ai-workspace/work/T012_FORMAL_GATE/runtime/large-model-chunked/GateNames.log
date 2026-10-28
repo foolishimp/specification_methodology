@@ -1,0 +1,11 @@
+/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T012_FORMAL_GATE/runtime/large-model-chunked/GateNames.lean:10:2: error: Tactic `decide` failed to reduce
+  @decide
+    (List.IsChain (fun x1 x2 => x1 < x2) ((List.map Record.identity model.records).mergeSort fun a b => decide (a ≤ b)))
+    ((List.map Record.identity model.records).mergeSort fun a b => decide (a ≤ b)).instDecidableIsChainOfDecidableRel
+to `true` or `false`.
+
+Reduction got stuck at
+  match (List.map Record.identity model.records).mergeSort fun a b => decide (a ≤ b) with
+  | [] => isTrue ⋯
+  | a :: l => List.instDecidableIsChainOfDecidableRel.go a l
+'_private.GateNames.0.AC.GateData.names_checked' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

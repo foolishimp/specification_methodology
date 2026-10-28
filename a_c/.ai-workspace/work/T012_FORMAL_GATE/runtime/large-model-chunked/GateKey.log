@@ -1,0 +1,15 @@
+List.IsChain.{u_1} {α : Type u_1} (R : α → α → Prop) : List α → Prop
+List.isChain_iff_pairwise.{u_1} {α✝ : Type u_1} {R : α✝ → α✝ → Prop} {l : List α✝} [Trans R R R] :
+  List.IsChain R l ↔ List.Pairwise R l
+List.IsChain.pairwise.{u_1} {α✝ : Type u_1} {R : α✝ → α✝ → Prop} {l : List α✝} [Trans R R R] (c : List.IsChain R l) :
+  List.Pairwise R l
+List.nodup_mergeSort.{u} {α : Type u} {l : List α} {le : α → α → Bool} : (l.mergeSort le).Nodup ↔ l.Nodup
+List.Nodup.of_map.{u, v} {α : Type u} {β : Type v} (f : α → β) {l : List α} : (List.map f l).Nodup → l.Nodup
+List.mem_range {m n : ℕ} : m ∈ List.range n ↔ m < n
+List.Perm.nodup_iff.{u_1} {α : Type u_1} {l₁ l₂ : List α} : l₁.Perm l₂ → (l₁.Nodup ↔ l₂.Nodup)
+String.lt_trans {a b c : String} : a < b → b < c → a < c
+List.pairwise_cons.{u} {α : Type u} {R : α → α → Prop} {a : α} {l : List α} :
+  List.Pairwise R (a :: l) ↔ (∀ a' ∈ l, R a a') ∧ List.Pairwise R l
+List.isChain_cons_cons.{u_1} {α✝ : Type u_1} {R : α✝ → α✝ → Prop} {a b : α✝} {l : List α✝} :
+  List.IsChain R (a :: b :: l) ↔ R a b ∧ List.IsChain R (b :: l)
+/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T012_FORMAL_GATE/runtime/large-model-chunked/GateKey.lean:17:7: error(lean.unknownIdentifier): Unknown constant `List.Nodup.range`

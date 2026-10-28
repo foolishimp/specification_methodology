@@ -1,0 +1,3 @@
+from pathlib import Path
+Path('/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T012_FORMAL_GATE/review/repaired-controls-001/unselected-bridge-executed').write_text("executed")
+raise RuntimeError("unselected bridge")

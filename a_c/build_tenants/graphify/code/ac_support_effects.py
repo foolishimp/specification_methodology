@@ -21,11 +21,15 @@ import subprocess
 import sys
 import threading
 import time
-from typing import Iterator, cast
+from typing import Iterator, TYPE_CHECKING, cast
 import uuid
 
 import ac_support_core as c
 import ac_support_composition as composition
+if TYPE_CHECKING:
+    import ac_formal_gate as formal
+else:
+    formal = c.ac_formal_gate
 
 __all__ = ["EvidenceStore", "execute_effect", "persist_outcome", "supervise"]
 
@@ -241,8 +245,8 @@ def _payload_support(kind: str, value: c.JSON) -> list[c.Object]:
     fields: dict[str, tuple[tuple[str, str], ...]] = {
         "observation": (("bindings.product_definition", "SourceRef"), ("bindings.method_profile", "SourceRef")),
         "context": (("observations.*", "ArtifactRef"), ("packet.subject_basis.observations.*", "ArtifactRef"), ("sources.*.source", "SourceRef"), ("projections.*.model", "ModelRef")),
-        "preflight": (("context", "ArtifactRef"), ("state_evidence.*", "AcquiredRef"), ("mechanism.source", "SourceRef"), ("authority.owner_record", "SourceRef"), ("authority.mechanism.source", "SourceRef"), ("recheck", "Recheck"), ("evaluations.*", "Judgment")),
-        "attempt": (("preflight", "ArtifactRef"), ("context", "ArtifactRef"), ("retry_of", "ArtifactRef"), ("reconciliation", "ArtifactRef"), ("notification.binding.authority_source", "SourceRef")),
+        "preflight": (("context", "ArtifactRef"), ("formal_evidence", "ArtifactRef"), ("state_evidence.*", "AcquiredRef"), ("mechanism.source", "SourceRef"), ("authority.owner_record", "SourceRef"), ("authority.mechanism.source", "SourceRef"), ("recheck", "Recheck"), ("evaluations.*", "Judgment")),
+        "attempt": (("preflight", "ArtifactRef"), ("context", "ArtifactRef"), ("formal_use", "ArtifactRef"), ("retry_of", "ArtifactRef"), ("reconciliation", "ArtifactRef"), ("notification.binding.authority_source", "SourceRef")),
         "return": (("attempt", "ArtifactRef"), ("raw_payload", "ArtifactRef"), ("return_contract", "SourceRef"), ("producer.attempt", "ArtifactRef")),
         "expectation": (("claim", "SourceRef"), ("source_inputs.*", "ArtifactRef"), ("exposure_check.prior.*.acquisition", "ArtifactRef"), ("exposure_check.history.refs.*", "ArtifactRef")),
         "resource": (("owner.record", "ArtifactRef"), ("samples.*.owner.record", "ArtifactRef"), ("samples.*.raw_source", "AcquiredRef")),
@@ -274,6 +278,8 @@ def _payload_support(kind: str, value: c.JSON) -> list[c.Object]:
     if kind != "raw":
         return refs
     raw_fields: dict[str, tuple[tuple[str, str], ...]] = {
+        "a_c.fd-support.formal-verification/1": (("context", "ArtifactRef"),),
+        "a_c.fd-support.formal-use/1": (("context", "ArtifactRef"), ("formal_evidence", "ArtifactRef")),
         "a_c.fd-support.request-claim/1": (("selected_policy", "ArtifactRef"),),
         "a_c.fd-support.writer-intent/1": (("recheck", "Recheck"), ("plan.record.provenance", "SourceRef"), ("plan.interpretation.author", "SourceRef")),
         "a_c.fd-support.writer-result/1": (("intent", "ArtifactRef"), ("record.provenance", "SourceRef"), ("interpretation.author", "SourceRef")),
@@ -289,6 +295,7 @@ def _payload_support(kind: str, value: c.JSON) -> list[c.Object]:
         refs.extend(_outcome_support(c.text(request["operation"]), c.as_object(payload["outcome"])))
     elif schema == "a_c.fd-support.attempt-event/1":
         event_fields: dict[str, tuple[tuple[str, str], ...]] = {
+            "formal_gate_verified": (("context", "ArtifactRef"), ("formal_use", "ArtifactRef")),
             "context_delivery": (("context", "ArtifactRef"),),
             "output_finalized": (("stdout", "ArtifactRef"), ("stderr", "ArtifactRef")),
             "notification_failure": (("event", "ArtifactRef"),),
@@ -664,6 +671,134 @@ def _complete(runtime: c.Runtime, store: EvidenceStore, request: c.Object, key: 
     return outcome
 
 
+def _formal_inputs(runtime: c.Runtime, context: c.Object) -> tuple[c.Object | None, list[tuple[bytes, c.Object]]]:
+    selected = runtime.policy.get("formal_gate")
+    if selected is None or not c.as_list(c.as_object(selected)["required_targets"]):
+        if context.get("formal_gate") is not None:
+            raise c.SupportError("basis_stale", "Context formal condition does not match the current selected policy")
+        return None, []
+    packet = c.as_object(context["packet"])
+    required = c.formal_condition(runtime, packet)
+    if context.get("formal_gate") != required:
+        raise c.SupportError("basis_stale", "Policy-selected formal condition was dropped or changed")
+    if required is None:
+        return None, []
+    # Compare the actual actor bytes, not an independently reconstructed claim.
+    body = {key: context[key] for key in ("packet", "projections", "sources", "late_acquisition", "boundaries", "formal_gate")}
+    body["schema"] = "a_c.fd-support.actor-context/1"
+    rendered = c.PREFIX + c.canonical(body).decode("utf-8")
+    if rendered != context["rendered_utf8"] or _hash(rendered.encode()) != context["rendered_sha256"]:
+        raise c.SupportError("digest_mismatch", "Required formal subject differs from actual Context rendering")
+    inputs = []
+    for value in c.as_list(context["projections"]):
+        projection = c.as_object(value)
+        c.exact_keys(projection, ("model", "views", "selections"), label="formally selected projection")
+        model = c.as_object(projection["model"])
+        c.validate_content(model, "ModelRef")
+        c._selections(projection["selections"])
+        if len(c.as_list(projection["views"])) != len(c.as_list(projection["selections"])):
+            raise c.SupportError("contract_violation", "Actual view population differs from the declared ordered selections")
+        # All source reads pass existing read scope, engine and digest checks.
+        # The checker receives a snapshot, never a Context-supplied path.
+        acquired = c.read_source(runtime, c.as_object(model["source"]))
+        raw = base64.b64decode(c.text(acquired["content_base64"]))
+        c._model(runtime, model)
+        inputs.append((raw, projection))
+    return required, inputs
+
+
+def _formal_error(exc: formal.GateError, evidence: c.Object | None = None) -> c.SupportError:
+    code = {"incomplete": "observation_unavailable", "unsupported": "unsupported_contract", "refused": "contract_violation"}[exc.status]
+    return c.SupportError(code, str(exc), [] if evidence is None else [evidence], [])
+
+
+def _verify_formal(runtime: c.Runtime, store: EvidenceStore, request: c.Object,
+                   context_ref: c.Object) -> tuple[c.Object | None, str | None]:
+    context = c.as_object(c.load_artifact(runtime, context_ref, "context")["payload"])
+    required, inputs = _formal_inputs(runtime, context)
+    if required is None:
+        return None, None
+    _directory(store.root / "formal", create=True)
+    checker = c.as_object(c.as_object(runtime.policy["formal_gate"])["checker"])
+    target, _ = c._target(runtime, c.as_object(c.as_object(context["packet"])["actor_authority"]))
+    binding = {"rendered_sha256": context["rendered_sha256"], "activation_identity": c.activation_identity(c.as_object(context["packet"]))}
+    runs: list[c.JSON] = []
+    status, reason = ("verified", None) if inputs else ("refused", "Required formal Context contains no model subject")
+    try:
+        for raw, projection in inputs:
+            model = c.as_object(projection["model"])
+            output = store.root / "formal" / uuid.uuid4().hex
+            run = formal.verify(checker, raw, c.text(model["format"]), cast(list[dict[str, object]], projection["selections"]),
+                                projection["views"] if c.as_list(projection["selections"]) else None, binding, output)
+            if run["result"]["status"] == "verified" and run["result"].get("model") != {"id": model["model_id"], "sha256": model["model_sha256"]}:
+                raise formal.GateError("refused", "Formal result changed the exact acquired model identity")
+            runs.append(c.document(formal.receipt(run)))
+            if run["result"]["status"] != "verified":
+                status, reason = run["result"]["status"], run["result"].get("reason")
+                break
+    except formal.GateError as exc:
+        status, reason = exc.status, str(exc)
+    payload = c.document({"schema": "a_c.fd-support.formal-verification/1", "context": context_ref,
+                          "checker_sha256": c.digest(checker), "binding": binding, "runs": runs,
+                          "status": status, "reason": reason, "origin": "selected-checker-effect-invocation"})
+    envelope, ref = _artifact(runtime, request, "raw", payload, target=target)
+    store.retain(envelope)
+    if status in ("incomplete", "unsupported"):
+        raise _formal_error(formal.GateError(status, str(reason)), ref)
+    return ref, status
+
+
+def _recheck_formal(runtime: c.Runtime, store: EvidenceStore, request: c.Object,
+                    receipt: c.Object, context: c.Object, *, stage: str = "dispatch",
+                    attempt: c.Object | None = None) -> c.Object | None:
+    required, inputs = _formal_inputs(runtime, context)
+    if required is None:
+        return None
+    if "formal_evidence" not in receipt:
+        raise c.SupportError("basis_missing", "Required formal gate has no effect-produced evidence")
+    _directory(store.root / "formal")
+    ref = c.as_object(receipt["formal_evidence"])
+    envelope = c.load_artifact(runtime, ref, "raw")
+    evidence = c.as_object(envelope["payload"])
+    checker = c.as_object(c.as_object(runtime.policy["formal_gate"])["checker"])
+    binding = {"rendered_sha256": context["rendered_sha256"], "activation_identity": c.activation_identity(c.as_object(context["packet"]))}
+    if (evidence.get("schema") != "a_c.fd-support.formal-verification/1"
+            or evidence.get("origin") != "selected-checker-effect-invocation"
+            or evidence.get("status") != "verified" or evidence.get("context") != receipt["context"]
+            or evidence.get("binding") != binding or evidence.get("checker_sha256") != c.digest(checker)
+            or c.as_object(envelope["provenance"])["policy_sha256"] != runtime.policy_sha256):
+        raise c.SupportError("basis_stale", "Formal evidence has another origin, policy or exact Context")
+    runs = c.as_list(evidence["runs"])
+    if len(runs) != len(inputs) or not runs:
+        raise c.SupportError("basis_missing", "Required formal evidence does not cover all actual model inputs")
+    replays: list[c.JSON] = []
+    try:
+        for (raw, projection), item in zip(inputs, runs):
+            run = c.as_object(item)
+            views = projection["views"] if c.as_list(projection["selections"]) else None
+            result = c.as_object(run["result"])
+            model = c.as_object(projection["model"])
+            if (run["input_sha256"] != _hash(raw) or run["views_sha256"] != (None if views is None else c.digest(views))
+                    or result.get("selections") != projection["selections"] or result.get("context_binding") != binding
+                    or result.get("model") != {"id": model["model_id"], "sha256": model["model_sha256"]}):
+                raise formal.GateError("refused", "Retained formal subject, selection or actual view changed")
+            bundle = Path(c.text(run["bundle"]))
+            if not bundle.is_relative_to(store.root / "formal") or any(path.is_symlink() for path in (bundle, *bundle.parents)):
+                raise formal.GateError("refused", "Formal evidence escaped the protected effect store")
+            replay = formal.recheck(checker, run, store.root / "formal" / uuid.uuid4().hex)
+            replays.append(c.document(formal.receipt(replay)))
+            if replay["result"]["status"] != "verified":
+                raise formal.GateError(replay["result"]["status"], str(replay["result"].get("reason")))
+    except formal.GateError as exc:
+        raise _formal_error(exc, ref) from exc
+    audit, audit_ref = _artifact(runtime, request, "raw", c.document({"schema": "a_c.fd-support.formal-use/1",
+                          "context": receipt["context"], "formal_evidence": ref, "binding": binding,
+                          "operation": request["operation"], "stage": stage, "replays": replays}),
+                          target=c.text(receipt["target"]), attempt=attempt)
+    store.retain(audit)
+    return audit_ref
+
+
 def _preflight(runtime: c.Runtime, store: EvidenceStore, request: c.Object, plan: c.EffectPlan) -> c.CoreOutcome:
     # A reconstructed historical receipt is returned unchanged, never re-admitted.
     previous = store.query_artifacts("preflight", {"provenance.requester_principal": runtime.principal_id, "provenance.request_sha256": c.digest(request)})
@@ -681,6 +816,17 @@ def _preflight(runtime: c.Runtime, store: EvidenceStore, request: c.Object, plan
         payload = c.as_object(plan["payload"]).copy()
         if payload.get("contract_state") != "drafted" or payload.get("decision") is not None:
             raise c.SupportError("contract_violation", "Core preflight plan must be a draft, not caller-supplied admission", [], [])
+        formal_ref, formal_status = _verify_formal(runtime, store, request, c.as_object(payload["context"]))
+        if formal_ref is not None:
+            # Verification may take time: reacquire the current material basis
+            # after it finishes, before this effect can admit the contract.
+            _fresh(runtime, store, request, c.as_object(plan["recheck"]))
+            payload["formal_evidence"] = formal_ref
+            c.as_list(payload["evaluations"]).append({"predicate": "policy-selected required exact formal gate",
+                                                       "domain_outcome": formal_status,
+                                                       "core_value": "satisfied" if formal_status == "verified" else "falsified"})
+            if formal_status != "verified":
+                c.as_list(payload["gaps"]).append({"formal_status": formal_status, "evidence": formal_ref})
         evaluations = c.as_list(payload["evaluations"])
         accepted = not c.as_list(payload["gaps"]) and all(c.as_object(item).get("core_value") == "satisfied" for item in evaluations)
         payload["contract_state"] = "admitted" if accepted else "rejected"
@@ -940,7 +1086,7 @@ def _verify_pin(pin: c.Object) -> Path:
 def _supervisor_binding(runtime: c.Runtime, ref: c.Object) -> c.Object:
     directory = Path(__file__).resolve().parent
     python = _pin(Path(sys.executable))
-    modules: list[c.JSON] = [_pin(directory / name) for name in ("ac_support.py", "ac_support_core.py", "ac_support_effects.py", "ac_support_composition.py")]
+    modules: list[c.JSON] = [_pin(directory / name) for name in ("ac_support.py", "ac_support_core.py", "ac_support_effects.py", "ac_support_composition.py", "ac_formal_gate.py", "ac_graph.py")]
     entry = directory / "ac_support.py"
     argv: list[c.JSON] = [python["path"], str(entry), "_supervise", "--policy", str(runtime.policy_path), "--policy-sha256", runtime.policy_sha256, "--principal", runtime.principal_id, "--attempt-id", ref["id"], "--attempt-sha256", ref["sha256"]]
     return {"python": python, "modules": modules, "argv_template": "fixed-private-entry-with-anchor", "startup": {"python": str(Path(sys.executable)), "policy": str(runtime.policy_path), "policy_sha256": runtime.policy_sha256, "principal": runtime.principal_id}, "argv": argv}
@@ -950,8 +1096,8 @@ def _verify_supervisor(binding: c.Object, runtime: c.Runtime, ref: c.Object) -> 
     python = _verify_pin(c.as_object(binding["python"]))
     directory = Path(__file__).resolve().parent
     pins = [c.as_object(item) for item in c.as_list(binding["modules"])]
-    expected = {str((directory / name).resolve()) for name in ("ac_support.py", "ac_support_core.py", "ac_support_effects.py", "ac_support_composition.py")}
-    if {c.text(item["path"]) for item in pins} != expected or len(pins) != 4:
+    expected = {str((directory / name).resolve()) for name in ("ac_support.py", "ac_support_core.py", "ac_support_effects.py", "ac_support_composition.py", "ac_formal_gate.py", "ac_graph.py")}
+    if {c.text(item["path"]) for item in pins} != expected or len(pins) != len(expected):
         raise c.SupportError("dependency_changed", "Supervisor module population differs from the sealed shipped entry", [], [])
     for item in pins:
         _verify_pin(item)
@@ -1089,6 +1235,9 @@ def _dispatch(runtime: c.Runtime, store: EvidenceStore, request: c.Object, key: 
         with store._lock("scope:" + _product(runtime)):
             composition.context(runtime, context, target)
             _fresh(runtime, store, request, c.as_object(receipt["recheck"]))
+            formal_use = _recheck_formal(runtime, store, request, receipt, context)
+            if formal_use is not None:
+                _fresh(runtime, store, request, c.as_object(receipt["recheck"]))
             # Seal own-code/startup pins before the immutable anchor exists.
             # Anchor arguments are a fixed template, instantiated after hashing.
             binding = _supervisor_binding(runtime, {"id": "anchor-coordinate", "sha256": "anchor-coordinate"})
@@ -1099,6 +1248,8 @@ def _dispatch(runtime: c.Runtime, store: EvidenceStore, request: c.Object, key: 
             if inherited_names:
                 invocation["environment_passthrough"] = [{"name": name, "present": name in inherited} for name in inherited_names]
             anchor: c.Object = {"schema": "a_c.fd-support.attempt/1", "preflight": receipt_ref, "context": context_ref, "request": request, "requester": runtime.principal_id, "target": target, "executor": executor_id, "invocation": invocation, "notification": {"sink_id": sink_id, "binding": sink}, "result_key": receipt["result_key"], "retry_of": retry, "reconciliation": reconciliation}
+            if formal_use is not None:
+                anchor["formal_use"] = formal_use
             envelope, reference = _artifact(runtime, request, "attempt", anchor, target=target)
             _mark(store, store.root / "requests" / (key + ".attempt.json"), envelope, "attempt_reservation")
         _event(runtime, store, request, reference, "reserved", {"invocation": invocation, "launch": "not-yet-established"})
@@ -1227,6 +1378,10 @@ def supervise(runtime: c.Runtime, attempt_ref: c.Object) -> int:
             # invoked through the actor's own public tool child.
             with store._lock("scope:" + _product(runtime)):
                 _fresh(runtime, store, request, c.as_object(receipt["recheck"]))
+                formal_use = _recheck_formal(runtime, store, request, receipt, context, stage="supervisor", attempt=ref)
+                if formal_use is not None:
+                    _fresh(runtime, store, request, c.as_object(receipt["recheck"]))
+                    _event(runtime, store, request, ref, "formal_gate_verified", {"formal_use": formal_use, "context": anchor["context"], "rendered_sha256": context["rendered_sha256"]})
                 _verify_supervisor(c.as_object(invocation["supervisor"]), runtime, ref)
                 if anchor["retry_of"] is not None:
                     checked = _reconcile(runtime, _ref(anchor["retry_of"]), _ref(anchor["reconciliation"]), grant, context)

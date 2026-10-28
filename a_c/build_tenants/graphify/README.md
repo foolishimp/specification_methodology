@@ -6,6 +6,15 @@ model family supports all eight core record shapes, exact basis and content
 identity, reversible graph representation, inspection, discovery and declared
 governing closure. The [design](design/README.md) defines the checked fragment.
 
+T-012 adds an optional, caller-selected required [formal gate](design/formal-gate.md)
+using the independent [Lean tenant](../lean/README.md). Ordinary, grounded and
+repaired generation check their exact model/carrier outputs when selected.
+Support policies can require the same gate for registered Worker targets:
+context assembly stays pure, and preflight, dispatch and supervisor effects check
+the actual model, selected views and delivered context bytes. Existing calls with
+no gate selection require no Lean installation. The gate establishes bounded
+formal structure, while semantic acceptance and work authority remain separate.
+
 ## Support tools for Executive, Worker and Reviewer callers
 
 [`code/ac_support.py`](code/ac_support.py) is the public JSON CLI and stdio MCP

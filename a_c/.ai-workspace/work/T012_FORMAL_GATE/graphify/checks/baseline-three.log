@@ -1,0 +1,41 @@
+test_public_selected_retry (test_ac_support_effects.PublicRetryTests.test_public_selected_retry) ... FAIL
+test_public_selected_retry_survives_context_reassembly (test_ac_support_effects.PublicRetryTests.test_public_selected_retry_survives_context_reassembly) ... FAIL
+test_timeout_preserves_raw_partials_and_keeps_unobserved_effect_scope_unknown (test_ac_support_interfaces.ActorCliTransportTests.test_timeout_preserves_raw_partials_and_keeps_unobserved_effect_scope_unknown) ... FAIL
+
+======================================================================
+FAIL: test_public_selected_retry (test_ac_support_effects.PublicRetryTests.test_public_selected_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T012_FORMAL_GATE/graphify/checks/baseline-runtime/test_env/test_ac_support_effects.py", line 1353, in test_public_selected_retry
+    self._retry_case("positive")
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T012_FORMAL_GATE/graphify/checks/baseline-runtime/test_env/test_ac_support_effects.py", line 1279, in _retry_case
+    observed = self._finished(predecessor)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T012_FORMAL_GATE/graphify/checks/baseline-runtime/test_env/test_ac_support_effects.py", line 1110, in _finished
+    self.fail("Public registered fixture did not finish within its bounded deadline")
+AssertionError: Public registered fixture did not finish within its bounded deadline
+
+======================================================================
+FAIL: test_public_selected_retry_survives_context_reassembly (test_ac_support_effects.PublicRetryTests.test_public_selected_retry_survives_context_reassembly)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T012_FORMAL_GATE/graphify/checks/baseline-runtime/test_env/test_ac_support_effects.py", line 1356, in test_public_selected_retry_survives_context_reassembly
+    self._retry_case("reassembled")
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T012_FORMAL_GATE/graphify/checks/baseline-runtime/test_env/test_ac_support_effects.py", line 1345, in _retry_case
+    self._finished(c.as_object(c.as_object(retried["result"])["artifact"]))
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T012_FORMAL_GATE/graphify/checks/baseline-runtime/test_env/test_ac_support_effects.py", line 1110, in _finished
+    self.fail("Public registered fixture did not finish within its bounded deadline")
+AssertionError: Public registered fixture did not finish within its bounded deadline
+
+======================================================================
+FAIL: test_timeout_preserves_raw_partials_and_keeps_unobserved_effect_scope_unknown (test_ac_support_interfaces.ActorCliTransportTests.test_timeout_preserves_raw_partials_and_keeps_unobserved_effect_scope_unknown)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T012_FORMAL_GATE/graphify/checks/baseline-runtime/test_env/test_ac_support_interfaces.py", line 1203, in test_timeout_preserves_raw_partials_and_keeps_unobserved_effect_scope_unknown
+    self.assertEqual((output / "vendor.stdout").read_bytes(), b'{"type":"partial"}\n')
+AssertionError: b'' != b'{"type":"partial"}\n'
+
+----------------------------------------------------------------------
+Ran 3 tests in 31.054s
+
+FAILED (failures=3)

@@ -1,0 +1,75 @@
+{
+  "chunks_authored": 1,
+  "chunks_missing": [],
+  "chunks_total": 1,
+  "family_counts": {
+    "constraints": 1,
+    "judgments": 0,
+    "latitude": 1,
+    "objects": 2,
+    "relations": 1,
+    "residuals": 1,
+    "transformations": 0,
+    "traversals": 0
+  },
+  "interpretation_contract": {
+    "author_schema_sha256": "6a9ecd905c5fe6d9cfa6cf35bf7945fb57833e43d87cc95e5ceb25efeb3dca87",
+    "calculus": {
+      "sha256": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+      "uri": "stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md"
+    },
+    "limits": [
+      "Proposal only; no semantic acceptance or full coverage claim.",
+      "Source supplies meaning; graph supplies fallible discovery data.",
+      "References are chunk-local; cross-chunk identity/conservation requires independent review.",
+      "Conditions, exceptions and uncertainty are inert source-linked statements, not executed predicates."
+    ],
+    "meaning": "F_P-authored source interpretation. Five declared active record families; traversals/transformations/judgments unimplemented and explicitly empty. Source documents and templates are interpreted as documents; prescribed operations are not executed or accepted.",
+    "mode": "direct",
+    "profile": "ac.generation.contract/1",
+    "semantic_extraction_profile": "a_c.direct.source-authoring/1"
+  },
+  "mode": "direct",
+  "processing_complete": true,
+  "profile": "ac.generation.coverage/1",
+  "section_dispositions": [
+    {
+      "chunk": "chunk-dfc3c524504f9e3fb6d0",
+      "dispositions": [
+        {
+          "decision": "residual",
+          "keys": [
+            "proceed",
+            "evidence",
+            "proceed_requires_evidence",
+            "complete_evidence",
+            "wording",
+            "external_policy"
+          ],
+          "reason": "Retains prerequisite, refusal, wording latitude and unresolved external meaning.",
+          "section_id": "repo://unit-control/refused/source/rules.md#Rules"
+        }
+      ],
+      "limitations": [
+        "No external-policy meaning or semantic acceptance established."
+      ]
+    }
+  ],
+  "semantic_acceptance": "not requested or issued",
+  "semantic_completeness": "unassessed",
+  "source_sections": 1,
+  "unqualified": [
+    "cross-chunk consolidation",
+    "normative interpretation fidelity",
+    "complete calculus conformance",
+    "accepted-result cost"
+  ],
+  "unresolved_boundaries": [
+    {
+      "author_declared_limitations": [
+        "No external-policy meaning or semantic acceptance established."
+      ],
+      "chunk": "chunk-dfc3c524504f9e3fb6d0"
+    }
+  ]
+}

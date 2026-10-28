@@ -1,0 +1,59 @@
+{
+  "prior_manifest_sha256": "c2bdfe7ce5bfd0c95ea71316708a93d738e8f8385086195c720e859e14968009",
+  "prior_log_sha256": "45e3ed7310936c9e3676e76c66fb911a7545c85a019f8e44614c63aa7d4b5a7e",
+  "prior_command": "leanchecker --fresh AC.GateRuntime",
+  "prior_result": "established",
+  "prior_seconds": 74.01223216601647,
+  "prior_members": 30392,
+  "unchanged": 30387,
+  "changed": [
+    ".lake/build/lib/lean/AC/GateRuntime.ir",
+    ".lake/build/lib/lean/AC/GateRuntime.olean",
+    ".lake/build/lib/lean/AC/GateRuntime.olean.private",
+    ".lake/build/lib/lean/AC/GateRuntime.olean.server",
+    "AC/GateRuntime.lean"
+  ],
+  "removed": [],
+  "added": [
+    ".lake/build/lib/lean/AC/GateProof.ir",
+    ".lake/build/lib/lean/AC/GateProof.ir.sig",
+    ".lake/build/lib/lean/AC/GateProof.olean",
+    ".lake/build/lib/lean/AC/GateProof.olean.private",
+    ".lake/build/lib/lean/AC/GateProof.olean.server",
+    ".lake/build/lib/lean/AC/Structure.ir",
+    ".lake/build/lib/lean/AC/Structure.ir.sig",
+    ".lake/build/lib/lean/AC/Structure.olean",
+    ".lake/build/lib/lean/AC/Structure.olean.private",
+    ".lake/build/lib/lean/AC/Structure.olean.server",
+    ".toolchain/lean-4.35.0-darwin_aarch64/bin/lake",
+    "AC/GateProof.lean",
+    "AC/Structure.lean"
+  ],
+  "unexpected_external_changes": [],
+  "seconds": 27.710328709101304,
+  "prior_root_source_recovered_sha256": "fb9d1e9815990adc213899ab1b51f02ddc4bddd3e0163066ef17123042cc4bf2",
+  "dependency_conservation": {
+    "prior_root_direct": [
+      "AC.Projection",
+      "Lean.Data.Json.Basic"
+    ],
+    "prior_tenant_transitive": [
+      "AC.Projection",
+      "AC.Model",
+      "AC.Closure"
+    ],
+    "new_Structure_direct": [
+      "AC.Model"
+    ],
+    "new_GateProof_direct": [
+      "AC.Projection",
+      "AC.Structure"
+    ],
+    "changed_GateRuntime_direct": [
+      "AC.Projection",
+      "AC.Structure",
+      "Lean.Data.Json.Basic"
+    ],
+    "external_imports_added_by_new_source": []
+  }
+}

@@ -257,6 +257,7 @@ def verify_normalization(output: Path, plan: dict[str, Any], chunk: dict[str, An
 def assemble(output: Path, *, name: str = "normalization", allow_partial: bool = False, upstream: Path | None = None) -> dict[str, Any]:
     started = time.perf_counter()
     plan, chunks = generation.checkpoint(output)
+    formal_checker = generation._formal_selection(output, plan, None)
     if plan["mode"] in generation.GRAPH_MODES:
         generation.verify_discovery(output)
     root = normalization_root(output, name)
@@ -329,6 +330,7 @@ def assemble(output: Path, *, name: str = "normalization", allow_partial: bool =
               "family_counts": coverage["family_counts"], "grounding_recoveries": recoveries, "new_fp_calls": 0, "upstream_trial": trial,
               "fd_assembly_elapsed_seconds": time.perf_counter() - started,
               "files": {path.name: generation.sha(path.read_bytes()) for path in destination.iterdir() if path.is_file()}, "claim": POLICY["claim"]}
+    generation.check_formal_proposal(plan, destination, result, formal_checker=formal_checker)
     generation.save(destination / "result.json", result, exclusive=True)
     return result
 
@@ -352,8 +354,8 @@ def main(argv: list[str] | None = None) -> int:
         else:
             result = assemble(args.output, name=args.normalization_directory, allow_partial=args.allow_partial, upstream=args.upstream)
         print(json.dumps(result, ensure_ascii=False, sort_keys=True, indent=2))
-        return 1 if any(row.get("status") == "refused" for row in result.get("chunks", [])) else 0
-    except (GroundingError, generation.GenerationError, ac_graph.Refusal, OSError, ValueError, KeyError, TypeError) as exc:
+        return generation.formal_exit(result) or (1 if any(row.get("status") == "refused" for row in result.get("chunks", [])) else 0)
+    except (GroundingError, generation.GenerationError, generation.ac_formal_gate.GateError, ac_graph.Refusal, OSError, ValueError, KeyError, TypeError) as exc:
         print("grounding refused: " + str(exc), file=sys.stderr)
         return 2
 

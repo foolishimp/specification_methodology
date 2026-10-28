@@ -23,10 +23,25 @@ import subprocess
 import sys
 import time
 import tomllib
-from typing import Any
+from typing import Any, TYPE_CHECKING
 from urllib.parse import quote
 
 import ac_graph
+
+if TYPE_CHECKING:
+    import ac_formal_gate
+else:
+    # This new bridge is loaded from the exact sibling source bytes, never by
+    # an ambient module/package name or a possibly stale bytecode cache.
+    from types import ModuleType
+    _formal_path = Path(__file__).resolve().with_name("ac_formal_gate.py")
+    if _formal_path.is_symlink() or not _formal_path.is_file():
+        raise RuntimeError("Formal bridge must be the selected regular source file")
+    _formal_source = _formal_path.read_bytes()
+    ac_formal_gate = ModuleType("ac_formal_gate")
+    ac_formal_gate.__file__ = str(_formal_path)
+    exec(compile(_formal_source, str(_formal_path), "exec"), ac_formal_gate.__dict__)
+    ac_formal_gate.__dict__["__a_c_loaded_sha256__"] = hashlib.sha256(_formal_source).hexdigest()
 
 HERE = Path(__file__).resolve().parent
 ASSETS = HERE / "generation"
@@ -206,7 +221,7 @@ def upstream_modules(path: Path) -> dict[str, Any]:
 
 
 def prepare(corpus: Path, manifest_path: Path, output: Path, mode: str, upstream: Path | None,
-            chunk_chars: int = 120_000, graph_chars: int = 40_000) -> dict[str, Any]:
+            chunk_chars: int = 120_000, graph_chars: int = 40_000, *, formal_checker: dict[str, Any] | None = None) -> dict[str, Any]:
     require(mode in SEMANTIC_PROFILES, "unsupported generation mode")
     require(1_000 <= chunk_chars <= 500_000 and 1_000 <= graph_chars <= 200_000, "explicit chunk/graph character envelope outside supported range")
     corpus = corpus.resolve(strict=True)
@@ -217,6 +232,8 @@ def prepare(corpus: Path, manifest_path: Path, output: Path, mode: str, upstream
     upstream_record = verify_upstream(upstream) if upstream else None
     require(mode == "direct" or upstream_record is not None, "Graphify mode requires --upstream")
     require(not output.exists(), "output already exists; use stage commands to resume")
+    if formal_checker is not None:
+        ac_formal_gate.validate_config(formal_checker)
     pinned, all_sections, file_seen = [], [], set()
     for entry in manifest["files"]:
         path = safe_relative(entry["path"])
@@ -253,6 +270,9 @@ def prepare(corpus: Path, manifest_path: Path, output: Path, mode: str, upstream
             "runner_sha256": sha(Path(__file__).read_bytes()), "codec_sha256": sha((HERE / "ac_graph.py").read_bytes()),
             "assets": assets, "calculus": {"uri": ac_graph.CALCULUS_URI, "sha256": ac_graph.CALCULUS_SHA256},
             "claim": "Fresh F_P proposal authoring; processing coverage is not semantic completeness or acceptance."}
+    if formal_checker is not None:
+        plan["formal_checker"] = formal_checker
+        save(output / "formal-selection.json", formal_checker, exclusive=True)
     save(output / "plan.json", plan, exclusive=True)
     return plan
 
@@ -994,8 +1014,53 @@ def model_from_answers(plan: dict[str, Any], chunks: list[dict[str, Any]],
     return model, coverage
 
 
-def assemble(output: Path, *, allow_partial: bool = False, upstream: Path | None = None) -> dict[str, Any]:
+def _formal_selection(output: Path, plan: dict[str, Any], selected: dict[str, Any] | None) -> dict[str, Any] | None:
+    prior = plan.get("formal_checker")
+    path = output / "formal-selection.json"
+    if path.exists():
+        retained = load(path)
+        require(prior is None or retained == prior, "prepared formal checker selection changed")
+        prior = retained
+    elif prior is not None:
+        raise GenerationError("prepared required formal checker selection is missing")
+    if prior is not None and selected is not None:
+        require(prior == selected, "required formal checker cannot be changed during generation")
+    result = prior if prior is not None else selected
+    if result is not None:
+        ac_formal_gate.validate_config(result)
+        if not path.exists():
+            save(path, result, exclusive=True)
+    return result
+
+
+def check_formal_proposal(plan: dict[str, Any], folder: Path, result: dict[str, Any], *,
+                          formal_checker: dict[str, Any] | None = None) -> None:
+    """One required-gate policy for direct, grounded and repaired producers."""
+    formal_checker = _formal_selection(folder.parent, plan, formal_checker)
+    if formal_checker is not None:
+        gate: dict[str, Any] = {"required": True, "status": "verified", "checker_sha256": digest(formal_checker), "runs": [],
+                                "scope": "exact generated model and actual carrier; no semantic acceptance"}
+        try:
+            for format in ("model", "carrier"):
+                raw = (folder / (format + ".json")).read_bytes()
+                run = ac_formal_gate.verify(formal_checker, raw, format, [], None, None, folder / ("formal-" + format))
+                gate["runs"].append(run)
+                if run["result"]["status"] != "verified":
+                    gate["status"] = run["result"]["status"]
+                    gate["reason"] = run["result"].get("reason")
+                    break
+        except (ac_formal_gate.GateError, OSError) as exc:
+            gate["status"] = exc.status if isinstance(exc, ac_formal_gate.GateError) else "incomplete"
+            gate["reason"] = str(exc)
+        if gate["status"] != "verified":
+            result["status"] = "unverified_proposal"
+        result["formal_gate"] = gate
+
+
+def assemble(output: Path, *, allow_partial: bool = False, upstream: Path | None = None,
+             formal_checker: dict[str, Any] | None = None) -> dict[str, Any]:
     plan, chunks = checkpoint(output)
+    formal_checker = _formal_selection(output, plan, formal_checker)
     if plan["mode"] in GRAPH_MODES:
         verify_discovery(output)
     answers, provenance = {}, []
@@ -1032,9 +1097,18 @@ def assemble(output: Path, *, allow_partial: bool = False, upstream: Path | None
               "processing_complete": coverage["processing_complete"], "upstream_trial": upstream_trial,
               "files": {path.name: sha(path.read_bytes()) for path in folder.iterdir() if path.is_file()},
               "claim": "Mechanically valid, source-grounded F_P proposal and lossless carrier; interpretation fidelity and semantic acceptance unassessed."}
+    check_formal_proposal(plan, folder, result, formal_checker=formal_checker)
     save(folder / "result.json", result)
     return result
 
+
+def formal_exit(value: Any) -> int:
+    if isinstance(value, dict):
+        selected = value.get("formal_gate")
+        if isinstance(selected, dict) and selected.get("required"):
+            return ac_formal_gate.EXITS[selected["status"]]
+        return max((formal_exit(child) for child in value.values()), default=0)
+    return max((formal_exit(child) for child in value), default=0) if isinstance(value, list) else 0
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
@@ -1066,19 +1140,29 @@ def main(argv: list[str] | None = None) -> int:
         p.add_argument("--upstream", type=Path)
         if name == "assemble":
             p.add_argument("--allow-partial", action="store_true")
+    for name in ("prepare", "assemble", "run"):
+        p = commands.choices[name]
+        p.add_argument("--formal-checker", type=Path, help="select a REQUIRED pinned checker configuration")
+        p.add_argument("--formal-checker-sha256", help="trusted startup digest of the exact checker configuration")
     args = parser.parse_args(argv)
     try:
+        formal_checker = None
+        if args.command in ("prepare", "assemble", "run"):
+            require(bool(args.formal_checker) == bool(args.formal_checker_sha256), "formal checker requires both path and trusted configuration digest")
+            if args.formal_checker:
+                formal_checker = ac_formal_gate.load_config(args.formal_checker, args.formal_checker_sha256)
         if args.command == "prepare":
-            result = prepare(args.corpus, args.manifest, args.output, args.mode, args.upstream, args.chunk_chars, args.graph_chars)
+            result = prepare(args.corpus, args.manifest, args.output, args.mode, args.upstream, args.chunk_chars, args.graph_chars, formal_checker=formal_checker)
         elif args.command in ("extract", "author"):
             result = stage(args.output, args.command, execute=args.execute, codex=args.codex, timeout=args.timeout, max_chunks=args.max_chunks,
                            jobs=args.jobs, retry_failed=args.retry_failed, upstream=args.upstream, model=args.model, effort=args.effort)
         elif args.command == "graph":
             result = build_discovery(args.output, args.upstream)
         elif args.command == "assemble":
-            result = assemble(args.output, allow_partial=args.allow_partial, upstream=args.upstream)
+            result = assemble(args.output, allow_partial=args.allow_partial, upstream=args.upstream, formal_checker=formal_checker)
         else:
             plan, _ = checkpoint(args.output)
+            formal_checker = _formal_selection(args.output, plan, formal_checker)
             results = []
             if plan["mode"] == "graphify-ac":
                 results.append(build_discovery(args.output, args.upstream))
@@ -1091,15 +1175,19 @@ def main(argv: list[str] | None = None) -> int:
                 if name == "extract":
                     results.append(build_discovery(args.output, args.upstream))
             if results[-1]["status"] == "completed" and args.execute:
-                results.append(assemble(args.output, upstream=args.upstream))
+                results.append(assemble(args.output, upstream=args.upstream, formal_checker=formal_checker))
             result = {"stages": results}
+            if formal_checker is not None and not any("formal_gate" in item for item in results):
+                result["formal_gate"] = {"required": True, "status": "incomplete", "reason": "Generation did not produce an assembled proposal for the required formal gate"}
         print(json.dumps(result, ensure_ascii=False, sort_keys=True, indent=2))
         def failed(value: Any) -> bool:
             if isinstance(value, dict):
                 return value.get("status") == "failed" or any(failed(child) for child in value.values())
             return isinstance(value, list) and any(failed(child) for child in value)
+        if formal_exit(result):
+            return formal_exit(result)
         return 1 if failed(result) else 0
-    except (GenerationError, ac_graph.Refusal, OSError, ValueError, subprocess.SubprocessError) as exc:
+    except (GenerationError, ac_graph.Refusal, ac_formal_gate.GateError, OSError, ValueError, subprocess.SubprocessError) as exc:
         print("generation refused: " + str(exc), file=sys.stderr)
         return 2
 

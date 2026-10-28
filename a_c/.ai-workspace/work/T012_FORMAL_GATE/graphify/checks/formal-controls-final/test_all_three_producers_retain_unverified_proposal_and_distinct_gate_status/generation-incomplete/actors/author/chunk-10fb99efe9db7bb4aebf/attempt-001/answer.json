@@ -1,0 +1,134 @@
+{
+  "concepts": [
+    {
+      "conditions": [
+        "Evidence is complete."
+      ],
+      "definition": "An action requiring complete evidence.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 2,
+          "quote": "A may proceed only when evidence is complete.",
+          "section_id": "repo://unit-control/incomplete/source/rules.md#Rules",
+          "start_line": 2
+        }
+      ],
+      "key": "proceed",
+      "label": "Proceed"
+    },
+    {
+      "conditions": [],
+      "definition": "The evidence required before proceeding.",
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 2,
+          "quote": "A may proceed only when evidence is complete.",
+          "section_id": "repo://unit-control/incomplete/source/rules.md#Rules",
+          "start_line": 2
+        }
+      ],
+      "key": "evidence",
+      "label": "Evidence"
+    }
+  ],
+  "constraints": [
+    {
+      "applies_to_keys": [
+        "proceed"
+      ],
+      "conditions": [
+        "A request to proceed is considered."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "end_line": 2,
+          "quote": "A may proceed only when evidence is complete.",
+          "section_id": "repo://unit-control/incomplete/source/rules.md#Rules",
+          "start_line": 2
+        }
+      ],
+      "key": "complete_evidence",
+      "statement": "Proceed only with complete evidence; otherwise refuse.",
+      "uncertainty": ""
+    }
+  ],
+  "dispositions": [
+    {
+      "decision": "residual",
+      "keys": [
+        "proceed",
+        "evidence",
+        "proceed_requires_evidence",
+        "complete_evidence",
+        "wording",
+        "external_policy"
+      ],
+      "reason": "Retains prerequisite, refusal, wording latitude and unresolved external meaning.",
+      "section_id": "repo://unit-control/incomplete/source/rules.md#Rules"
+    }
+  ],
+  "latitude": [
+    {
+      "allowed": [
+        "Wording may vary."
+      ],
+      "applies_to_keys": [
+        "proceed"
+      ],
+      "forbidden": [
+        "Removing the prerequisite."
+      ],
+      "grounding": [
+        {
+          "end_line": 3,
+          "quote": "wording may vary but prerequisites cannot.",
+          "section_id": "repo://unit-control/incomplete/source/rules.md#Rules",
+          "start_line": 3
+        }
+      ],
+      "key": "wording"
+    }
+  ],
+  "limitations": [
+    "No external-policy meaning or semantic acceptance established."
+  ],
+  "relations": [
+    {
+      "conditions": [],
+      "exceptions": [],
+      "governing": true,
+      "grounding": [
+        {
+          "end_line": 2,
+          "quote": "A may proceed only when evidence is complete.",
+          "section_id": "repo://unit-control/incomplete/source/rules.md#Rules",
+          "start_line": 2
+        }
+      ],
+      "key": "proceed_requires_evidence",
+      "kind": "requires",
+      "meaning": "Proceeding requires complete evidence.",
+      "source_key": "proceed",
+      "target_key": "evidence"
+    }
+  ],
+  "residuals": [
+    {
+      "consequence": "Re-enter exact policy before relying on it.",
+      "grounding": [
+        {
+          "end_line": 4,
+          "quote": "Meaning of external policy remains unresolved.",
+          "section_id": "repo://unit-control/incomplete/source/rules.md#Rules",
+          "start_line": 4
+        }
+      ],
+      "key": "external_policy",
+      "subject_key": "proceed",
+      "uncertainty": "External policy meaning is unresolved."
+    }
+  ]
+}

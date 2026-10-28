@@ -1,0 +1,16 @@
+Build completed successfully (643 jobs).
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/scripts/formal_support.py", line 91, in <module>
+    result=establish(args.output);print(json.dumps({'status':'established','members':len(result['members']),'seconds':result['established_seconds']}))
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/scripts/formal_support.py", line 60, in establish
+    runtime_process.run([str(prefix/'bin/leanchecker'),'--fresh','AC.GateRuntime'],cwd=ROOT,env=env,stdout=None,check=True,timeout=300)
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/scripts/runtime_process.py", line 37, in run
+    try:code=process.wait(timeout=timeout)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 2045, in _wait
+    raise TimeoutExpired(self.args, timeout)
+subprocess.TimeoutExpired: Command '['/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/.toolchain/lean-4.35.0-darwin_aarch64/bin/leanchecker', '--fresh', 'AC.GateRuntime']' timed out after 300 seconds

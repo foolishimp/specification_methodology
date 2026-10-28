@@ -18,10 +18,25 @@ import re
 import stat
 import subprocess
 import time
-from typing import Callable, TypeAlias, cast
+from typing import Callable, TypeAlias, TYPE_CHECKING, cast
 
 import ac_graph
 import ac_support_composition as composition
+
+if TYPE_CHECKING:
+    import ac_formal_gate
+else:
+    # Exact bytes bind the new bridge before its code executes. An ambient
+    # ac_formal_gate package and Python bytecode caches cannot replace it.
+    from types import ModuleType
+    _formal_path = Path(__file__).resolve().with_name("ac_formal_gate.py")
+    if _formal_path.is_symlink() or not _formal_path.is_file():
+        raise RuntimeError("Formal bridge must be the selected regular source file")
+    _formal_source = _formal_path.read_bytes()
+    ac_formal_gate = ModuleType("ac_formal_gate")
+    ac_formal_gate.__file__ = str(_formal_path)
+    exec(compile(_formal_source, str(_formal_path), "exec"), ac_formal_gate.__dict__)
+    ac_formal_gate.__dict__["__a_c_loaded_sha256__"] = hashlib.sha256(_formal_source).hexdigest()
 
 JSON: TypeAlias = ac_graph.JSON
 Object: TypeAlias = dict[str, JSON]
@@ -457,7 +472,7 @@ class Runtime:
         if _sha(raw) != expected_sha256:
             raise SupportError("digest_mismatch", "Policy bytes do not match trusted startup digest")
         policy = as_object(parse_json(raw), "policy")
-        exact_keys(policy, ("schema", "id", "product", "method_profile", "sources", "principals", "grants", "predicates", "operators", "executors", "event_sinks", "independence_policy", "evidence_root", "limits", "authority_sources"), ("composition",), label="policy")
+        exact_keys(policy, ("schema", "id", "product", "method_profile", "sources", "principals", "grants", "predicates", "operators", "executors", "event_sinks", "independence_policy", "evidence_root", "limits", "authority_sources"), ("composition", "formal_gate"), label="policy")
         if policy["schema"] != "a_c.fd-support.policy/1":
             raise SupportError("unsupported_contract", "Unsupported policy schema")
         text(policy["id"])
@@ -477,6 +492,21 @@ class Runtime:
                 if item["kind"] not in ("file", "directory"):
                     raise SupportError("unsupported_contract", "Unknown read-scope kind")
         principals = as_object(policy["principals"])
+        if "formal_gate" in policy:
+            formal = as_object(policy["formal_gate"])
+            exact_keys(formal, ("checker", "required_targets"), label="formal gate selection")
+            targets = _strings(formal["required_targets"])
+            _unique(targets, "formal gate targets")
+            if not set(targets) <= set(principals):
+                raise SupportError("unsupported_contract", "Formal gate selects an unregistered target")
+            expected_adapter = as_object(formal["checker"]).get("adapter_sha256")
+            if (expected_adapter != _sha(_regular_bytes(Path(__file__).with_name("ac_formal_gate.py")))
+                    or expected_adapter != getattr(ac_formal_gate, "__a_c_loaded_sha256__", None)):
+                raise SupportError("dependency_changed", "Trusted formal adapter implementation differs from policy selection")
+            try:
+                ac_formal_gate.validate_config(formal["checker"])
+            except ac_formal_gate.GateError as exc:
+                raise SupportError("unsupported_contract", str(exc)) from exc
         if principal not in principals:
             raise SupportError("authority_missing", "Startup principal is not registered")
         for principal_value in principals.values():
@@ -1056,9 +1086,23 @@ def _acquisition(runtime: Runtime, request: Object, source: JSON, content: JSON,
     return make_artifact("acquisition", payload, provenance(runtime, request, started, ended))
 
 
+def formal_condition(runtime: Runtime, packet: Object) -> Object | None:
+    """Pure required-condition selection from the trusted startup policy."""
+    selected = runtime.policy.get("formal_gate")
+    if selected is None or not as_list(as_object(selected)["required_targets"]):
+        return None
+    target_id, _ = _target(runtime, as_object(packet["actor_authority"]))
+    if target_id not in as_list(as_object(selected)["required_targets"]):
+        return None
+    return document({"required": True, "state": "pending", "checker_sha256": digest(as_object(selected)["checker"]),
+                     "activation_identity": activation_identity(packet),
+                     "scope": "declared formal model and exact supplied projections; no semantic or authority acceptance"})
+
+
 def _assemble(runtime: Runtime, request: Object, args: Object, started: int) -> CoreOutcome:
     packet = as_object(args["packet"])
     target_id, target = _validate_packet(runtime, packet)
+    formal = formal_condition(runtime, packet)
     late = [as_object(x) for x in as_list(args["late_acquisition"])]
     late_ids = {canonical(x) for x in late}
     refs: dict[bytes, Object] = {canonical(x): x for x in _all_source_refs(packet)}
@@ -1079,6 +1123,8 @@ def _assemble(runtime: Runtime, request: Object, args: Object, started: int) -> 
     for raw in as_list(args["models"]):
         selected = as_object(raw); model_ref = as_object(selected["model"])
         projection = document({"model": model_ref, "views": _project(_model(runtime, model_ref), selected["selections"])})
+        if formal is not None:
+            projection["selections"] = document({"items": [{"seeds": seeds, "budget_records": budget} for seeds, budget in _selections(selected["selections"])]})["items"]
         projections.append(projection)
         acquired_projection, projection_ref = _acquisition(runtime, request, model_ref["source"], projection, started, time.time_ns(), model_ref, selected["selections"], text(target["actor_id"]), target_principal=target_id)
         artifacts.append(acquired_projection); acquisitions.append(projection_ref)
@@ -1090,6 +1136,8 @@ def _assemble(runtime: Runtime, request: Object, args: Object, started: int) -> 
     body: Object = document({"schema": "a_c.fd-support.actor-context/1", "packet": packet,
                     "projections": projections, "sources": sources,
                     "late_acquisition": cast(list[JSON], late), "boundaries": boundaries})
+    if formal is not None:
+        body["formal_gate"] = formal
     rendered = PREFIX + canonical(body).decode("utf-8")
     measured = len(rendered.encode("utf-8"))
     envelope = as_object(args["envelope"]); host = as_object(envelope["host_context"])
@@ -1134,6 +1182,8 @@ def _assemble(runtime: Runtime, request: Object, args: Object, started: int) -> 
                        "sources": sources, "late_acquisition": cast(list[JSON], late), "boundaries": boundaries,
                        "rendered_utf8": rendered, "rendered_sha256": _sha(rendered.encode()),
                        "fit": fit, "observations": as_object(packet["subject_basis"])["observations"]})
+    if formal is not None:
+        payload["formal_gate"] = formal
     if selected_composition is not None:
         # Retained outside rendered_utf8: this contains protected provenance,
         # not additional material delivered to the activated actor.
@@ -1829,6 +1879,9 @@ def build_preflight(runtime: Runtime, request: Object) -> EffectPlan:
     context = as_object(load_artifact(runtime, context_ref, "context")["payload"])
     packet = as_object(context["packet"]); target_id, target = _validate_packet(runtime, packet)
     composition.context(runtime, context, target_id)
+    formal = formal_condition(runtime, packet)
+    if context.get("formal_gate") != formal:
+        raise SupportError("basis_stale", "Context dropped or changed its policy-selected formal condition")
     grant_id = text(args["grant_id"])
     grant = _grant(runtime, grant_id, "contract.preflight")
     executor_id = text(args["executor_id"])
@@ -1937,6 +1990,8 @@ def build_preflight(runtime: Runtime, request: Object) -> EffectPlan:
                        "contract_state": "drafted", "decision": None, "state_evidence": [],
                        "mechanism": authority["mechanism"], "authority": authority,
                        "evaluations": checks, "recheck": recheck, "gaps": gaps})
+    if formal is not None:
+        payload["formal_gate"] = formal
     return _effect_plan(runtime, request, target_id, recheck, payload)
 
 

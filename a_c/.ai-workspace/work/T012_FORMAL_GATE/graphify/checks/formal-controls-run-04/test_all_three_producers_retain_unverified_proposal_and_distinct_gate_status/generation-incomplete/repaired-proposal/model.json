@@ -1,0 +1,2220 @@
+{
+  "basis": {
+    "calculus": {
+      "sha256": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+      "uri": "stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md"
+    },
+    "id": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis",
+    "subject": {
+      "id": "repo://unit-control/incomplete",
+      "inventory": [
+        {
+          "id": "repo://unit-control/incomplete/source/rules.md#Rules",
+          "sha256": "57ea83fe551c36ba2fdeed4e178a4b2c457b1a12b21509cd92c9473ecf827945"
+        }
+      ],
+      "sha256": "70bc3b1906316cdb272fa377ff0d21a2989944f242dc3d605cff60db734a56bb"
+    }
+  },
+  "coordinates": {
+    "context": "urn:a-c:generation:ac8f8580e79ea132428472f2:context:source-first-proposal",
+    "owner": "urn:a-c:generation:ac8f8580e79ea132428472f2:actor:f-p-author",
+    "scope": [
+      "urn:a-c:generation:ac8f8580e79ea132428472f2:scope:source-corpus"
+    ]
+  },
+  "dependency_contract": {
+    "attachment_families": [
+      "constraints",
+      "latitude",
+      "residuals"
+    ],
+    "id": "urn:a-c:generation:ac8f8580e79ea132428472f2:dependency-contract:authored-governing-relations",
+    "required_relation_kinds": [
+      "urn:a-c:generation:ac8f8580e79ea132428472f2:relation-kind:governing:requires"
+    ]
+  },
+  "external_resolutions": [
+    {
+      "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:evidence:explicit-generation-signature",
+      "external_identity": "repo://unit-control/incomplete/source/rules.md#Rules",
+      "external_target_kind": "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:source-section",
+      "reference_domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis",
+      "resolved_target_identity": "repo://unit-control/incomplete/source/rules.md#Rules"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:actor:f-p-author",
+      "external_target_kind": "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:actor",
+      "reference_domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis",
+      "resolved_target_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:actor:f-p-author"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:authority:proposal-authoring-only",
+      "external_target_kind": "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:authority",
+      "reference_domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis",
+      "resolved_target_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:authority:proposal-authoring-only"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis",
+      "external_target_kind": "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:basis",
+      "reference_domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis",
+      "resolved_target_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:constraint-kind:authored-source-statement",
+      "external_target_kind": "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:constraint-kind",
+      "reference_domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis",
+      "resolved_target_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:constraint-kind:authored-source-statement"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:context:source-first-proposal",
+      "external_target_kind": "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:context",
+      "reference_domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis",
+      "resolved_target_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:context:source-first-proposal"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:invalidation:source-or-interpretation-change",
+      "external_target_kind": "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:invalidation",
+      "reference_domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis",
+      "resolved_target_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:invalidation:source-or-interpretation-change"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:judgment-kind:external-semantic-review",
+      "external_target_kind": "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:judgment-kind",
+      "reference_domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis",
+      "resolved_target_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:judgment-kind:external-semantic-review"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:relation-kind:governing:requires",
+      "external_target_kind": "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:relation-kind",
+      "reference_domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis",
+      "resolved_target_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:relation-kind:governing:requires"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:residual-kind:authored-uncertainty",
+      "external_target_kind": "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:residual-kind",
+      "reference_domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis",
+      "resolved_target_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:residual-kind:authored-uncertainty"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:scope:source-corpus",
+      "external_target_kind": "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:scope",
+      "reference_domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis",
+      "resolved_target_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:scope:source-corpus"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:sort:authored-concept",
+      "external_target_kind": "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:sort",
+      "reference_domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis",
+      "resolved_target_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:sort:authored-concept"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:stop:no-execution-or-acceptance",
+      "external_target_kind": "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:stop",
+      "reference_domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis",
+      "resolved_target_identity": "urn:a-c:generation:ac8f8580e79ea132428472f2:stop:no-execution-or-acceptance"
+    }
+  ],
+  "functor_bindings": {},
+  "id": "urn:a-c:generation:ac8f8580e79ea132428472f2:model:c9ecaff86e5bb79b0a987dbb",
+  "identity_universe": [
+    "repo://unit-control/incomplete/source/rules.md#Rules",
+    "urn:a-c:generation:ac8f8580e79ea132428472f2:actor:f-p-author",
+    "urn:a-c:generation:ac8f8580e79ea132428472f2:authority:proposal-authoring-only",
+    "urn:a-c:generation:ac8f8580e79ea132428472f2:basis",
+    "urn:a-c:generation:ac8f8580e79ea132428472f2:constraint-kind:authored-source-statement",
+    "urn:a-c:generation:ac8f8580e79ea132428472f2:context:source-first-proposal",
+    "urn:a-c:generation:ac8f8580e79ea132428472f2:invalidation:source-or-interpretation-change",
+    "urn:a-c:generation:ac8f8580e79ea132428472f2:judgment-kind:external-semantic-review",
+    "urn:a-c:generation:ac8f8580e79ea132428472f2:record:14424506e3310bf20344d967c315ec61",
+    "urn:a-c:generation:ac8f8580e79ea132428472f2:record:22c0c26eda296702d435617f303bb9d6",
+    "urn:a-c:generation:ac8f8580e79ea132428472f2:record:2bc02c854472dec2ed49cbaff6e5d479",
+    "urn:a-c:generation:ac8f8580e79ea132428472f2:record:3119be2e933acae7da06c2b8e1b3565b",
+    "urn:a-c:generation:ac8f8580e79ea132428472f2:record:949eea80672a588f9ca45a1f9985574b",
+    "urn:a-c:generation:ac8f8580e79ea132428472f2:record:a5190395878563b3d6a69ceed1de3153",
+    "urn:a-c:generation:ac8f8580e79ea132428472f2:relation-kind:governing:requires",
+    "urn:a-c:generation:ac8f8580e79ea132428472f2:residual-kind:authored-uncertainty",
+    "urn:a-c:generation:ac8f8580e79ea132428472f2:scope:source-corpus",
+    "urn:a-c:generation:ac8f8580e79ea132428472f2:sort:authored-concept",
+    "urn:a-c:generation:ac8f8580e79ea132428472f2:stop:no-execution-or-acceptance"
+  ],
+  "interpretation": {
+    "authority": {
+      "id": "urn:a-c:generation:ac8f8580e79ea132428472f2:authority:proposal-authoring-only",
+      "sha256": "332110e600d3ac9be0047e9c5fed7dfc01d4cf9d6f8805b40ad871a91766e1ed"
+    },
+    "contract": {
+      "id": "urn:a-c:generation:ac8f8580e79ea132428472f2:interpretation-contract",
+      "sha256": "de0c523005e51b2e9cedb909671f697be4aba999698ecdd024d316dceaa6a7d4"
+    },
+    "dispositions": [
+      {
+        "authority": "urn:a-c:generation:ac8f8580e79ea132428472f2:authority:proposal-authoring-only",
+        "basis": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis",
+        "decision": "residual",
+        "reason": "Retains prerequisite, refusal, wording latitude and unresolved external meaning.",
+        "records": [
+          "urn:a-c:generation:ac8f8580e79ea132428472f2:record:2bc02c854472dec2ed49cbaff6e5d479",
+          "urn:a-c:generation:ac8f8580e79ea132428472f2:record:14424506e3310bf20344d967c315ec61",
+          "urn:a-c:generation:ac8f8580e79ea132428472f2:record:949eea80672a588f9ca45a1f9985574b",
+          "urn:a-c:generation:ac8f8580e79ea132428472f2:record:a5190395878563b3d6a69ceed1de3153",
+          "urn:a-c:generation:ac8f8580e79ea132428472f2:record:22c0c26eda296702d435617f303bb9d6",
+          "urn:a-c:generation:ac8f8580e79ea132428472f2:record:3119be2e933acae7da06c2b8e1b3565b"
+        ],
+        "source": "repo://unit-control/incomplete/source/rules.md#Rules"
+      }
+    ],
+    "interpreter": {
+      "id": "urn:a-c:generation:ac8f8580e79ea132428472f2:interpreter:f-p-cli",
+      "sha256": "dd093054f4d54d5df1b64dcd6bdb7133d0834cf06300c1aa4aee4f9f74a3beca"
+    },
+    "invalidation": {
+      "id": "urn:a-c:generation:ac8f8580e79ea132428472f2:invalidation:source-or-interpretation-change",
+      "sha256": "ec23fb2d5994461d3e78305466f14b0922e86f4e3e25e66ce35749f4849b6e08"
+    },
+    "provenance": [
+      {
+        "id": "urn:a-c:generation:ac8f8580e79ea132428472f2:provenance:generation-plan",
+        "sha256": "f720efd458a9d8846c5b98977e9d6711aef7091e2324d504485a4ce07eb73210"
+      },
+      {
+        "id": "urn:a-c:generation:ac8f8580e79ea132428472f2:provenance:author-invocations",
+        "sha256": "dd093054f4d54d5df1b64dcd6bdb7133d0834cf06300c1aa4aee4f9f74a3beca"
+      }
+    ],
+    "selection_ledger": {
+      "id": "urn:a-c:generation:ac8f8580e79ea132428472f2:selection-ledger",
+      "sha256": "9703ce67caecc3fc0f0983eeae095103c6b1bf4c7cb3cb5a85c8a27091e2fdc3"
+    },
+    "source_reentry": {
+      "id": "urn:a-c:generation:ac8f8580e79ea132428472f2:source-reentry",
+      "sha256": "66745740b50f4a350752f113b73117662340078b8296be76cc028b7f9d836d8b"
+    }
+  },
+  "populations": {
+    "constraints": [
+      {
+        "applies_to": [
+          "urn:a-c:generation:ac8f8580e79ea132428472f2:record:2bc02c854472dec2ed49cbaff6e5d479"
+        ],
+        "basis": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis",
+        "context": "urn:a-c:generation:ac8f8580e79ea132428472f2:context:source-first-proposal",
+        "id": "urn:a-c:generation:ac8f8580e79ea132428472f2:record:a5190395878563b3d6a69ceed1de3153",
+        "judgment_kind": "urn:a-c:generation:ac8f8580e79ea132428472f2:judgment-kind:external-semantic-review",
+        "kind": "urn:a-c:generation:ac8f8580e79ea132428472f2:constraint-kind:authored-source-statement",
+        "latitude_ref": [],
+        "owner": "urn:a-c:generation:ac8f8580e79ea132428472f2:actor:f-p-author",
+        "predicate": {
+          "conditions": [
+            "A request to proceed is considered."
+          ],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 2,
+              "path": "rules.md",
+              "quote": "A may proceed only when evidence is complete.",
+              "section": "repo://unit-control/incomplete/source/rules.md#Rules",
+              "start_line": 2
+            }
+          ],
+          "statement": "Proceed only with complete evidence; otherwise refuse.",
+          "uncertainty": ""
+        },
+        "refusal": "urn:a-c:generation:ac8f8580e79ea132428472f2:stop:no-execution-or-acceptance",
+        "scope": [
+          "urn:a-c:generation:ac8f8580e79ea132428472f2:scope:source-corpus"
+        ]
+      }
+    ],
+    "judgments": [],
+    "latitude": [
+      {
+        "allowed_variation": {
+          "grounding": [
+            {
+              "end_line": 3,
+              "path": "rules.md",
+              "quote": "wording may vary but prerequisites cannot.",
+              "section": "repo://unit-control/incomplete/source/rules.md#Rules",
+              "start_line": 3
+            }
+          ],
+          "statements": [
+            "Wording may vary."
+          ]
+        },
+        "applies_to": [
+          "urn:a-c:generation:ac8f8580e79ea132428472f2:record:2bc02c854472dec2ed49cbaff6e5d479"
+        ],
+        "basis": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis",
+        "context": "urn:a-c:generation:ac8f8580e79ea132428472f2:context:source-first-proposal",
+        "forbidden_variation": {
+          "grounding": [
+            {
+              "end_line": 3,
+              "path": "rules.md",
+              "quote": "wording may vary but prerequisites cannot.",
+              "section": "repo://unit-control/incomplete/source/rules.md#Rules",
+              "start_line": 3
+            }
+          ],
+          "statements": [
+            "Removing the prerequisite."
+          ]
+        },
+        "id": "urn:a-c:generation:ac8f8580e79ea132428472f2:record:22c0c26eda296702d435617f303bb9d6",
+        "invalidation": "urn:a-c:generation:ac8f8580e79ea132428472f2:invalidation:source-or-interpretation-change",
+        "owner": "urn:a-c:generation:ac8f8580e79ea132428472f2:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:ac8f8580e79ea132428472f2:scope:source-corpus"
+        ]
+      }
+    ],
+    "objects": [
+      {
+        "basis": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis",
+        "context": "urn:a-c:generation:ac8f8580e79ea132428472f2:context:source-first-proposal",
+        "id": "urn:a-c:generation:ac8f8580e79ea132428472f2:record:2bc02c854472dec2ed49cbaff6e5d479",
+        "owner": "urn:a-c:generation:ac8f8580e79ea132428472f2:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:ac8f8580e79ea132428472f2:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:ac8f8580e79ea132428472f2:sort:authored-concept",
+        "value": {
+          "conditions": [
+            "Evidence is complete."
+          ],
+          "definition": "An action requiring complete evidence.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 2,
+              "path": "rules.md",
+              "quote": "A may proceed only when evidence is complete.",
+              "section": "repo://unit-control/incomplete/source/rules.md#Rules",
+              "start_line": 2
+            }
+          ],
+          "label": "Proceed"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis",
+        "context": "urn:a-c:generation:ac8f8580e79ea132428472f2:context:source-first-proposal",
+        "id": "urn:a-c:generation:ac8f8580e79ea132428472f2:record:14424506e3310bf20344d967c315ec61",
+        "owner": "urn:a-c:generation:ac8f8580e79ea132428472f2:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:ac8f8580e79ea132428472f2:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:ac8f8580e79ea132428472f2:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "The evidence required before proceeding.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 2,
+              "path": "rules.md",
+              "quote": "A may proceed only when evidence is complete.",
+              "section": "repo://unit-control/incomplete/source/rules.md#Rules",
+              "start_line": 2
+            }
+          ],
+          "label": "Evidence"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "basis": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis",
+        "context": "urn:a-c:generation:ac8f8580e79ea132428472f2:context:source-first-proposal",
+        "id": "urn:a-c:generation:ac8f8580e79ea132428472f2:record:949eea80672a588f9ca45a1f9985574b",
+        "kind": "urn:a-c:generation:ac8f8580e79ea132428472f2:relation-kind:governing:requires",
+        "owner": "urn:a-c:generation:ac8f8580e79ea132428472f2:actor:f-p-author",
+        "qualifiers": {
+          "conditions": [],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 2,
+              "path": "rules.md",
+              "quote": "A may proceed only when evidence is complete.",
+              "section": "repo://unit-control/incomplete/source/rules.md#Rules",
+              "start_line": 2
+            }
+          ],
+          "kind": "requires",
+          "meaning": "Proceeding requires complete evidence."
+        },
+        "scope": [
+          "urn:a-c:generation:ac8f8580e79ea132428472f2:scope:source-corpus"
+        ],
+        "source": "urn:a-c:generation:ac8f8580e79ea132428472f2:record:2bc02c854472dec2ed49cbaff6e5d479",
+        "target": "urn:a-c:generation:ac8f8580e79ea132428472f2:record:14424506e3310bf20344d967c315ec61"
+      }
+    ],
+    "residuals": [
+      {
+        "basis": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis",
+        "consequence": "Re-enter exact policy before relying on it.",
+        "context": "urn:a-c:generation:ac8f8580e79ea132428472f2:context:source-first-proposal",
+        "id": "urn:a-c:generation:ac8f8580e79ea132428472f2:record:3119be2e933acae7da06c2b8e1b3565b",
+        "invalidation": "urn:a-c:generation:ac8f8580e79ea132428472f2:invalidation:source-or-interpretation-change",
+        "kind": "urn:a-c:generation:ac8f8580e79ea132428472f2:residual-kind:authored-uncertainty",
+        "owner": "urn:a-c:generation:ac8f8580e79ea132428472f2:actor:f-p-author",
+        "re_entry": [],
+        "scope": [
+          "urn:a-c:generation:ac8f8580e79ea132428472f2:scope:source-corpus"
+        ],
+        "subject": "urn:a-c:generation:ac8f8580e79ea132428472f2:record:2bc02c854472dec2ed49cbaff6e5d479",
+        "uncertainty": {
+          "grounding": [
+            {
+              "end_line": 4,
+              "path": "rules.md",
+              "quote": "Meaning of external policy remains unresolved.",
+              "section": "repo://unit-control/incomplete/source/rules.md#Rules",
+              "start_line": 4
+            }
+          ],
+          "statement": "External policy meaning is unresolved."
+        }
+      }
+    ],
+    "transformations": [],
+    "traversals": []
+  },
+  "profile": "a_c.graphify.model/1",
+  "signature": {
+    "definition": {
+      "constraint_kinds": {
+        "urn:a-c:generation:ac8f8580e79ea132428472f2:constraint-kind:authored-source-statement": {
+          "applies_to": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "predicate": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+                      "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "statement": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "uncertainty": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        }
+      },
+      "fields": {
+        "constraints": {
+          "applies_to": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "basis": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "judgment_kind": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:judgment-kind"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "kind": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:constraint-kind"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "latitude_ref": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "latitude"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "predicate": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+                      "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "statement": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "uncertainty": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "refusal": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:stop"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          }
+        },
+        "judgments": {
+          "authority": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:authority"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "basis": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "decided_at": {
+            "min_length": 1,
+            "type": "string"
+          },
+          "decision": {
+            "type": "enum",
+            "values": [
+              "indeterminate",
+              "refused",
+              "accepted"
+            ]
+          },
+          "evaluator": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "evidence": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:evidence"
+              ],
+              "governing": false,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "kind": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:judgment-kind"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "provenance": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:evidence"
+              ],
+              "governing": false,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "subject": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "subject_digest": {
+            "min_length": 1,
+            "type": "string"
+          }
+        },
+        "latitude": {
+          "allowed_variation": {
+            "fields": {
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+                      "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "statements": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              }
+            },
+            "type": "object"
+          },
+          "applies_to": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "basis": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "forbidden_variation": {
+            "fields": {
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+                      "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "statements": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              }
+            },
+            "type": "object"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "invalidation": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:invalidation"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          }
+        },
+        "objects": {
+          "basis": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "sort": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:sort"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "value": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "definition": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+                      "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "label": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        },
+        "relations": {
+          "basis": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "kind": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:relation-kind"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "qualifiers": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+                      "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "kind": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "meaning": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "source": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "target": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          }
+        },
+        "residuals": {
+          "basis": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "consequence": {
+            "min_length": 1,
+            "type": "string"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "invalidation": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:invalidation"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "kind": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:residual-kind"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "re_entry": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [],
+              "governing": false,
+              "local_families": [
+                "traversals"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "subject": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects",
+              "relations",
+              "constraints",
+              "latitude"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "uncertainty": {
+            "fields": {
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+                      "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "statement": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        },
+        "transformations": {
+          "basis": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "codomain_model": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:model"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "domain_model": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:model"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "evidence": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:evidence"
+              ],
+              "governing": false,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "external_introduced": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:external-resolution"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "external_preserved": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:external-resolution"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "external_removed": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:external-resolution"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "external_resolution_witnesses": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:witness"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "introduced": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:future-record"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "invalidation": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:invalidation"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "operation_authority": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:authority"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "preconditions": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "constraints"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "preservation_relation": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:preservation-law"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "preserved": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "provenance": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:evidence"
+              ],
+              "governing": false,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "re_entry": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [],
+              "governing": false,
+              "local_families": [
+                "traversals"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "removed": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "residuals": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "residuals"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "stop_states": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:stop"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "traversal": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "traversals"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          }
+        },
+        "traversals": {
+          "authority": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:authority"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "basis": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "codomain": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:domain"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "domain": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:domain"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "evidence": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:evidence"
+              ],
+              "governing": false,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "postconditions": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "constraints"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "preconditions": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "constraints"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "provenance": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:evidence"
+              ],
+              "governing": false,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "stop_states": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:stop"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          }
+        }
+      },
+      "functor_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:f-d",
+        "urn:stdo:concept:axiomatic-calculus:f-p",
+        "urn:stdo:concept:axiomatic-calculus:f-h"
+      ],
+      "judgment_kinds": {
+        "urn:a-c:generation:ac8f8580e79ea132428472f2:judgment-kind:external-semantic-review": {
+          "decision": {
+            "type": "enum",
+            "values": [
+              "indeterminate",
+              "refused",
+              "accepted"
+            ]
+          },
+          "evidence": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:evidence"
+              ],
+              "governing": false,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "subject": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          }
+        }
+      },
+      "relation_kinds": {
+        "urn:a-c:generation:ac8f8580e79ea132428472f2:relation-kind:governing:requires": {
+          "qualifiers": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+                      "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "kind": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "meaning": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "source": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "target": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          }
+        }
+      },
+      "required_families": [],
+      "residual_kinds": {
+        "urn:a-c:generation:ac8f8580e79ea132428472f2:residual-kind:authored-uncertainty": {
+          "consequence": {
+            "min_length": 1,
+            "type": "string"
+          },
+          "invalidation": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:invalidation"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "re_entry": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+              "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+              "external_kinds": [],
+              "governing": false,
+              "local_families": [
+                "traversals"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "subject": {
+            "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+            "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects",
+              "relations",
+              "constraints",
+              "latitude"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "uncertainty": {
+            "fields": {
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+                      "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "statement": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        }
+      },
+      "sorts": {
+        "urn:a-c:generation:ac8f8580e79ea132428472f2:sort:authored-concept": {
+          "value": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "definition": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:ac8f8580e79ea132428472f2:basis-relation:exact",
+                      "domain": "urn:a-c:generation:ac8f8580e79ea132428472f2:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:ac8f8580e79ea132428472f2:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "label": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        }
+      },
+      "stop_kinds": [
+        "urn:a-c:generation:ac8f8580e79ea132428472f2:stop:no-execution-or-acceptance"
+      ]
+    },
+    "id": "urn:a-c:generation:ac8f8580e79ea132428472f2:signature:compact-source-proposal-v1",
+    "sha256": "68bee271388e31531c8aede76e2628a95d7c86f35e8f0ecb73f03565a2adda23"
+  }
+}

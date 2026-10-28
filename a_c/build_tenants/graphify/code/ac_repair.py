@@ -388,6 +388,7 @@ def assemble(output: Path, *, normalization_name: str = "normalization", allow_p
     output = output.resolve(strict=True)
     started = time.perf_counter()
     plan, chunks = g.checkpoint(output)
+    formal_checker = g._formal_selection(output, plan, None)
     if plan["mode"] in g.GRAPH_MODES:
         g.verify_discovery(output)
     answers, provenance, selections = {}, [], []
@@ -463,6 +464,7 @@ def assemble(output: Path, *, normalization_name: str = "normalization", allow_p
               "fd_assembly_elapsed_seconds": time.perf_counter() - started,
               "files": {path.name: g.sha(path.read_bytes()) for path in destination.iterdir() if path.is_file()},
               "claim": coverage["grounding_repair"]["claim"]}
+    g.check_formal_proposal(plan, destination, result, formal_checker=formal_checker)
     g.save(destination / "result.json", result, exclusive=True)
     return result
 
@@ -498,8 +500,8 @@ def main(argv: list[str] | None = None) -> int:
         else:
             result = assemble(args.output, normalization_name=args.normalization_directory, allow_partial=args.allow_partial, upstream=args.upstream)
         print(json.dumps(result, ensure_ascii=False, sort_keys=True, indent=2))
-        return 1 if result.get("status") in ("failed_actor", "invalid_patch", "refused", "incomplete_patch") else 0
-    except (RepairError, g.GenerationError, h.GroundingError, ac_graph.Refusal, OSError, ValueError, KeyError, TypeError) as exc:
+        return g.formal_exit(result) or (1 if result.get("status") in ("failed_actor", "invalid_patch", "refused", "incomplete_patch") else 0)
+    except (RepairError, g.GenerationError, g.ac_formal_gate.GateError, h.GroundingError, ac_graph.Refusal, OSError, ValueError, KeyError, TypeError) as exc:
         print("repair refused: " + str(exc), file=sys.stderr)
         return 2
 

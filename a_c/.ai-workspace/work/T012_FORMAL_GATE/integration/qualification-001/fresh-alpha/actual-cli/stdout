@@ -1,0 +1,355 @@
+{
+  "claim": "Mechanically valid, source-grounded F_P proposal and lossless carrier; interpretation fidelity and semantic acceptance unassessed.",
+  "family_counts": {
+    "constraints": 1,
+    "judgments": 0,
+    "latitude": 1,
+    "objects": 2,
+    "relations": 1,
+    "residuals": 1,
+    "transformations": 0,
+    "traversals": 0
+  },
+  "files": {
+    "carrier.json": "e9bc83697c320ebe254b3770099d9b86bb754238fac5759c2683c9b87c4b54ca",
+    "coverage.json": "f0fd391487f0c76f0bc0327a518402aa391dfab93edc4433f2f99bc2ebb3e51f",
+    "model.json": "2cc882a4b6e906a70c0d0b078a072cfa4d7b614d054856a7a1aa9dfc2d6e1c74"
+  },
+  "formal_gate": {
+    "checker_sha256": "cad6accc5f5222f9b552bd51fb509eff56f70eb43eaba5dd949afdd7bacbf033",
+    "required": true,
+    "runs": [
+      {
+        "bundle": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-001/fresh-alpha/run/proposal/formal-model/bundle",
+        "input_sha256": "2cc882a4b6e906a70c0d0b078a072cfa4d7b614d054856a7a1aa9dfc2d6e1c74",
+        "request_sha256": "1336d522f00c6c068bfba012b27ed1a90f5b24460ae3695d76a4d68e469ea563",
+        "result": {
+          "checked_claims": [
+            "imported-model-well-formedness",
+            "whole-model-source-correspondence"
+          ],
+          "context_binding": null,
+          "evidence": {
+            "manifest_sha256": "39b1a4118c9e31584af2cae39e8e26346120dc160287b31747acee1426e73456",
+            "members": {
+              "GateData.ir": "f883c688447f567a7cdb43507454401d87896915786ec926c37613f647f6b2e7",
+              "GateData.ir.sig": "ef0f5154b1ae5adbcf4a0d57fd190ebd435d4e80a57a748669a5df689d43bab0",
+              "GateData.lean": "eb8490678ce28cb1bd364bdf90ed2e49c9dcdc8f979e9027e9d672b500a38c6f",
+              "GateData.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "GateData.olean": "b62add5d9ccf02508f9fd8c49a0245198b3231c812664c1c09472c13808f438d",
+              "GateData.olean.private": "4d3ff729b29a8e270f32fb1242cb4689c99eeafcab7ce4907168dee8195d15ed",
+              "GateData.olean.server": "bc286906bc58380932ca96d5926ab16d1614dc4fe0b6bf260120a9754772dd93",
+              "GateModel.ir": "d2d2633042c71f3dc0500d32e017227282e10d9752b1779023b7a14440d0eb70",
+              "GateModel.ir.sig": "a3cc15a301b053f068ac6525b37a4de73cab86c8906c4809e7ce8f1a79cf0b64",
+              "GateModel.lean": "60c2ae920f5307024bbd198811f66497f81d14ce89495c506eb3a92e887b8cb1",
+              "GateModel.log": "a15a20e7d67eee818dddfaba79a448bbe8957f28eadc70e76ad792f0318a97ee",
+              "GateModel.olean": "f7efcfd4cc61c1579d21537667e8f3e2656845a154a88bcb06e0bfd070cf71a0",
+              "GateModel.olean.private": "fac3e2439e379662b358319584ad51de71299fe20a93ff15e389a67d13c2eade",
+              "GateModel.olean.server": "101e58c135ddd8335e5e464a9ccdb8d508d7b43dd64c8ec8395aa7b9f123ae8c",
+              "GateRun.lean": "375c96daa7ac826c4db89a79505d95b1ec307a90e71c9f825f1d970d3351a9a9",
+              "GateViews.ir": "b83032484d353cc5692f5d70b59915801d596987ff2248bf2d71606a4987f236",
+              "GateViews.ir.sig": "a092dee3843e33a19cc22e3314bdbb65cbd2cc6087a1607e2b3a2da1fea5ceb3",
+              "GateViews.lean": "eecbd0af3b04a9b2580495008692117f0dbebcbf27c9b67336d118dd64b167df",
+              "GateViews.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "GateViews.olean": "49e1bcd2d75cc0f1c3440ea4719150d5ba01b4983ff9c246e7ae713cb0773e60",
+              "GateViews.olean.private": "869216c585b6cb95e7433dd4a3d17cef4bbfbf1be148dee953f32a7ee1ff9abd",
+              "GateViews.olean.server": "7fe1ea708ae2c0308222bbd76419c1057213f1aa7b0243a1f1e6667b00757357",
+              "actual-runtime.log": "ab0be46b55fe7119f4e38962592a80cbf1ed44742167eed60d1b7ca22a0db71a",
+              "certificates.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+              "dynamic-kernel-replay.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "input.json": "2cc882a4b6e906a70c0d0b078a072cfa4d7b614d054856a7a1aa9dfc2d6e1c74",
+              "model.json": "2cc882a4b6e906a70c0d0b078a072cfa4d7b614d054856a7a1aa9dfc2d6e1c74",
+              "replay-request.json": "ab71ee949a2a5c1b541bf87af43745e987118aed76f5ac065a173c0322f9dfcf",
+              "request.json": "2ee1eddda86925418e7654ba67ee4a485667a646fa7838c8aa39de5fd642f410"
+            }
+          },
+          "inputs": {
+            "input": {
+              "bytes": 90260,
+              "raw_sha256": "2cc882a4b6e906a70c0d0b078a072cfa4d7b614d054856a7a1aa9dfc2d6e1c74",
+              "retained_path": "input.json"
+            },
+            "model": {
+              "canonical_sha256": "5b9a5b80b853bf9c90d76c38d07b3abca8cc7811d5772b070daed5ef27642a51",
+              "raw_sha256": "2cc882a4b6e906a70c0d0b078a072cfa4d7b614d054856a7a1aa9dfc2d6e1c74",
+              "retained_path": "input.json"
+            }
+          },
+          "limits": [
+            "Finite declared structural model/closure/projection only; no semantic acceptance.",
+            "Python profile/parser/generator and runtime serialization remain tested trusted bridges.",
+            "Context binding is metadata; consumer must check actual delivered bytes.",
+            "Crossing relations are checked source-derived metadata, not a Lean theorem."
+          ],
+          "model": {
+            "id": "urn:a-c:generation:abd8c99d0ffe20e27c1444db:model:04f822c620e31ed0ef44b892",
+            "sha256": "5b9a5b80b853bf9c90d76c38d07b3abca8cc7811d5772b070daed5ef27642a51"
+          },
+          "observations": {
+            "child_maxrss_native_units": 3383296000,
+            "edges": 9,
+            "elapsed_seconds": 21.062789416871965,
+            "limits": {
+              "max_input_bytes": 33554432,
+              "max_selections": 64,
+              "memory_mb": 4096,
+              "timeout_seconds": 90
+            },
+            "records": 6,
+            "references": 45,
+            "reuse": "none; fresh dynamic obligations; pinned established base support",
+            "stages": [
+              {
+                "seconds": 8.597579249879345,
+                "stage": "support-pins"
+              },
+              {
+                "exit_code": 0,
+                "seconds": 0.9222081250045449,
+                "stage": "GateData"
+              },
+              {
+                "exit_code": 0,
+                "seconds": 1.9483813750557601,
+                "stage": "GateModel"
+              },
+              {
+                "exit_code": 0,
+                "seconds": 0.7561797918751836,
+                "stage": "GateViews"
+              },
+              {
+                "exit_code": 0,
+                "seconds": 4.171068332856521,
+                "stage": "dynamic-kernel-replay"
+              },
+              {
+                "exit_code": 0,
+                "seconds": 0.7265356669668108,
+                "stage": "actual-runtime"
+              },
+              {
+                "seconds": 3.915689207846299,
+                "stage": "support-pins-after"
+              }
+            ],
+            "support": {
+              "manifest_sha256": "3ee283ef53a47cd966ad6c47479fe57c2c793003a88590469c2289ea8b2621a2",
+              "members": 30405,
+              "platform": "Darwin-arm64"
+            }
+          },
+          "reason": null,
+          "request_sha256": "1336d522f00c6c068bfba012b27ed1a90f5b24460ae3695d76a4d68e469ea563",
+          "requested_claims": [
+            "imported-model-well-formedness",
+            "whole-model-source-correspondence"
+          ],
+          "runtime_identity": {
+            "pins": {
+              "AC/Closure.lean": "d8c66f511c486eeaf40393733779148843e2ce075e2540cb41259ed9b23e011f",
+              "AC/GateProof.lean": "b2c9bcfeafee1f5691a0bc81f93ce593143c3a2b7f974bb3dc3903296da92100",
+              "AC/GateRuntime.lean": "76dc6b64cdbf75bf569981f1f2a69abda056f336e4ea8b91e7d9cd4d268a6fd6",
+              "AC/Model.lean": "943bd93abdcccb3cb084ab8e41196f8cac77629089e746c90d7da09ac90a22d5",
+              "AC/Projection.lean": "ac2a9ce8ed148400967519c724715f6ea491bceff960ed77249b5ff744692575",
+              "AC/Structure.lean": "f2d13a53ba8ac31731640a06facf78566b93d92a6dadbe4c7689e15d00c81a54",
+              "lake-manifest.json": "8ccec766188ba32a956dd142439b4f08faa877512654162ae7cd2e35c1fdda34",
+              "lakefile.toml": "68338aa894a2a54fd3f4f9f22366359cc0107ba581459b29699f03c629437fc3",
+              "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+              "profiles/formal-gate-request.schema.json": "edb498b7af5dced9822055ee2e09938fffa5a22da33ea1ea9550d89dd90a233a",
+              "profiles/generation-signature-v1.json": "db4f0a4d41b575a1b06ecc75a0a56e3b4f26044830e5bff3624b2ae4f7a219a8",
+              "profiles/proof-support-v1.json": "3ee283ef53a47cd966ad6c47479fe57c2c793003a88590469c2289ea8b2621a2",
+              "scripts/bootstrap.py": "7fc1038180d95d7a5c6ee8cecaea12f9f2534cc8d1af4933303c214cd5127fd7",
+              "scripts/check.py": "cad730b6de699ab2d4b2e8a7235e7b18bd28a4c8b5853e3f7838265a32a60deb",
+              "scripts/check_gate.py": "ebf41503202c17f0d5872b3b5700f33b6969d5bee61befac680540e6a9093642",
+              "scripts/formal_gate.py": "640a59e7ed0b7ba3aa8ed5dc5cc9f5094d5eed781636194b303e9d741f427689",
+              "scripts/formal_support.py": "1b7ad94f9076ed9d26e53075ea7965598b2b77dd3f8e380b86b795dd948619a6",
+              "scripts/gate_codegen.py": "0d0309c51a998dd16563755b79fb50e916b7364d837a75071a11dfc5400d54fb",
+              "scripts/generate_fixture.py": "ae36a07ff8ae3106eca66f346cdd82eb3d476ec1b407c944ed32987273705ca4",
+              "scripts/generation_profile.py": "37cf26a15c2ccb24c847e5768bf2112f8f5311fd91ff020e47e388246a250fee",
+              "scripts/import_fixture.py": "5a63b45523dcdbf69b87f39864f28f99ee58890e70c4b3073b057fb80a864d7a",
+              "scripts/runtime_process.py": "dac99212afddad9f6c0d42f13c4c1ad2faa4ab0fa8ea2e26f09dc3af3a904018",
+              "toolchain-lock.json": "ac1fc82fc9b6df1f955b6538a4c91cd9f246ae2f23a38e17e6b4ad9482a2c20b"
+            },
+            "sha256": "ba063fa4c52bbf49c1140d286b155faa6c968cca41c8b63b6109a51a8b680dad"
+          },
+          "schema": "a_c.formal-gate.result/1",
+          "selections": [],
+          "status": "verified"
+        },
+        "result_sha256": "f5e4b9f9c2d4638003d4b01f5f095c4271e640e97f1749c870d0e469da9328c8",
+        "views_sha256": null
+      },
+      {
+        "bundle": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-001/fresh-alpha/run/proposal/formal-carrier/bundle",
+        "input_sha256": "e9bc83697c320ebe254b3770099d9b86bb754238fac5759c2683c9b87c4b54ca",
+        "request_sha256": "eef91cbb74540b3105b7bfe04b3e3fb57085e749f0a44d910e86e677a6179886",
+        "result": {
+          "checked_claims": [
+            "imported-model-well-formedness",
+            "whole-model-source-correspondence"
+          ],
+          "context_binding": null,
+          "evidence": {
+            "manifest_sha256": "d4bc2688093af1ba3847148ecf8645eb326ad26afc366147662b8405e61b3e12",
+            "members": {
+              "GateData.ir": "f883c688447f567a7cdb43507454401d87896915786ec926c37613f647f6b2e7",
+              "GateData.ir.sig": "ef0f5154b1ae5adbcf4a0d57fd190ebd435d4e80a57a748669a5df689d43bab0",
+              "GateData.lean": "eb8490678ce28cb1bd364bdf90ed2e49c9dcdc8f979e9027e9d672b500a38c6f",
+              "GateData.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "GateData.olean": "b62add5d9ccf02508f9fd8c49a0245198b3231c812664c1c09472c13808f438d",
+              "GateData.olean.private": "4d3ff729b29a8e270f32fb1242cb4689c99eeafcab7ce4907168dee8195d15ed",
+              "GateData.olean.server": "bc286906bc58380932ca96d5926ab16d1614dc4fe0b6bf260120a9754772dd93",
+              "GateModel.ir": "d2d2633042c71f3dc0500d32e017227282e10d9752b1779023b7a14440d0eb70",
+              "GateModel.ir.sig": "a3cc15a301b053f068ac6525b37a4de73cab86c8906c4809e7ce8f1a79cf0b64",
+              "GateModel.lean": "60c2ae920f5307024bbd198811f66497f81d14ce89495c506eb3a92e887b8cb1",
+              "GateModel.log": "a15a20e7d67eee818dddfaba79a448bbe8957f28eadc70e76ad792f0318a97ee",
+              "GateModel.olean": "f7efcfd4cc61c1579d21537667e8f3e2656845a154a88bcb06e0bfd070cf71a0",
+              "GateModel.olean.private": "fac3e2439e379662b358319584ad51de71299fe20a93ff15e389a67d13c2eade",
+              "GateModel.olean.server": "101e58c135ddd8335e5e464a9ccdb8d508d7b43dd64c8ec8395aa7b9f123ae8c",
+              "GateRun.lean": "375c96daa7ac826c4db89a79505d95b1ec307a90e71c9f825f1d970d3351a9a9",
+              "GateViews.ir": "b83032484d353cc5692f5d70b59915801d596987ff2248bf2d71606a4987f236",
+              "GateViews.ir.sig": "a092dee3843e33a19cc22e3314bdbb65cbd2cc6087a1607e2b3a2da1fea5ceb3",
+              "GateViews.lean": "eecbd0af3b04a9b2580495008692117f0dbebcbf27c9b67336d118dd64b167df",
+              "GateViews.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "GateViews.olean": "49e1bcd2d75cc0f1c3440ea4719150d5ba01b4983ff9c246e7ae713cb0773e60",
+              "GateViews.olean.private": "869216c585b6cb95e7433dd4a3d17cef4bbfbf1be148dee953f32a7ee1ff9abd",
+              "GateViews.olean.server": "7fe1ea708ae2c0308222bbd76419c1057213f1aa7b0243a1f1e6667b00757357",
+              "actual-runtime.log": "ab0be46b55fe7119f4e38962592a80cbf1ed44742167eed60d1b7ca22a0db71a",
+              "certificates.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+              "dynamic-kernel-replay.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "input.json": "e9bc83697c320ebe254b3770099d9b86bb754238fac5759c2683c9b87c4b54ca",
+              "model.json": "2cc882a4b6e906a70c0d0b078a072cfa4d7b614d054856a7a1aa9dfc2d6e1c74",
+              "replay-request.json": "bd85d8689da3b76ac1f50453e861a790a6f30aa3ca45a8c28a41d545c8406aff",
+              "request.json": "69560712943e434b27a4dbf49a1f6c7ba1917ca32fde161559e4b72ca7f7abff"
+            }
+          },
+          "inputs": {
+            "input": {
+              "bytes": 207667,
+              "raw_sha256": "e9bc83697c320ebe254b3770099d9b86bb754238fac5759c2683c9b87c4b54ca",
+              "retained_path": "input.json"
+            },
+            "model": {
+              "canonical_sha256": "5b9a5b80b853bf9c90d76c38d07b3abca8cc7811d5772b070daed5ef27642a51",
+              "raw_sha256": "2cc882a4b6e906a70c0d0b078a072cfa4d7b614d054856a7a1aa9dfc2d6e1c74",
+              "retained_path": "model.json"
+            }
+          },
+          "limits": [
+            "Finite declared structural model/closure/projection only; no semantic acceptance.",
+            "Python profile/parser/generator and runtime serialization remain tested trusted bridges.",
+            "Context binding is metadata; consumer must check actual delivered bytes.",
+            "Crossing relations are checked source-derived metadata, not a Lean theorem."
+          ],
+          "model": {
+            "id": "urn:a-c:generation:abd8c99d0ffe20e27c1444db:model:04f822c620e31ed0ef44b892",
+            "sha256": "5b9a5b80b853bf9c90d76c38d07b3abca8cc7811d5772b070daed5ef27642a51"
+          },
+          "observations": {
+            "child_maxrss_native_units": 3397763072,
+            "edges": 9,
+            "elapsed_seconds": 15.827176792081445,
+            "limits": {
+              "max_input_bytes": 33554432,
+              "max_selections": 64,
+              "memory_mb": 4096,
+              "timeout_seconds": 90
+            },
+            "records": 6,
+            "references": 45,
+            "reuse": "none; fresh dynamic obligations; pinned established base support",
+            "stages": [
+              {
+                "seconds": 3.9024064170662314,
+                "stage": "support-pins"
+              },
+              {
+                "exit_code": 0,
+                "seconds": 0.8399787081871182,
+                "stage": "GateData"
+              },
+              {
+                "exit_code": 0,
+                "seconds": 1.7984474590048194,
+                "stage": "GateModel"
+              },
+              {
+                "exit_code": 0,
+                "seconds": 0.6687316251918674,
+                "stage": "GateViews"
+              },
+              {
+                "exit_code": 0,
+                "seconds": 4.009038666961715,
+                "stage": "dynamic-kernel-replay"
+              },
+              {
+                "exit_code": 0,
+                "seconds": 0.7210915419273078,
+                "stage": "actual-runtime"
+              },
+              {
+                "seconds": 3.8532125828787684,
+                "stage": "support-pins-after"
+              }
+            ],
+            "support": {
+              "manifest_sha256": "3ee283ef53a47cd966ad6c47479fe57c2c793003a88590469c2289ea8b2621a2",
+              "members": 30405,
+              "platform": "Darwin-arm64"
+            }
+          },
+          "reason": null,
+          "request_sha256": "eef91cbb74540b3105b7bfe04b3e3fb57085e749f0a44d910e86e677a6179886",
+          "requested_claims": [
+            "imported-model-well-formedness",
+            "whole-model-source-correspondence"
+          ],
+          "runtime_identity": {
+            "pins": {
+              "AC/Closure.lean": "d8c66f511c486eeaf40393733779148843e2ce075e2540cb41259ed9b23e011f",
+              "AC/GateProof.lean": "b2c9bcfeafee1f5691a0bc81f93ce593143c3a2b7f974bb3dc3903296da92100",
+              "AC/GateRuntime.lean": "76dc6b64cdbf75bf569981f1f2a69abda056f336e4ea8b91e7d9cd4d268a6fd6",
+              "AC/Model.lean": "943bd93abdcccb3cb084ab8e41196f8cac77629089e746c90d7da09ac90a22d5",
+              "AC/Projection.lean": "ac2a9ce8ed148400967519c724715f6ea491bceff960ed77249b5ff744692575",
+              "AC/Structure.lean": "f2d13a53ba8ac31731640a06facf78566b93d92a6dadbe4c7689e15d00c81a54",
+              "lake-manifest.json": "8ccec766188ba32a956dd142439b4f08faa877512654162ae7cd2e35c1fdda34",
+              "lakefile.toml": "68338aa894a2a54fd3f4f9f22366359cc0107ba581459b29699f03c629437fc3",
+              "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+              "profiles/formal-gate-request.schema.json": "edb498b7af5dced9822055ee2e09938fffa5a22da33ea1ea9550d89dd90a233a",
+              "profiles/generation-signature-v1.json": "db4f0a4d41b575a1b06ecc75a0a56e3b4f26044830e5bff3624b2ae4f7a219a8",
+              "profiles/proof-support-v1.json": "3ee283ef53a47cd966ad6c47479fe57c2c793003a88590469c2289ea8b2621a2",
+              "scripts/bootstrap.py": "7fc1038180d95d7a5c6ee8cecaea12f9f2534cc8d1af4933303c214cd5127fd7",
+              "scripts/check.py": "cad730b6de699ab2d4b2e8a7235e7b18bd28a4c8b5853e3f7838265a32a60deb",
+              "scripts/check_gate.py": "ebf41503202c17f0d5872b3b5700f33b6969d5bee61befac680540e6a9093642",
+              "scripts/formal_gate.py": "640a59e7ed0b7ba3aa8ed5dc5cc9f5094d5eed781636194b303e9d741f427689",
+              "scripts/formal_support.py": "1b7ad94f9076ed9d26e53075ea7965598b2b77dd3f8e380b86b795dd948619a6",
+              "scripts/gate_codegen.py": "0d0309c51a998dd16563755b79fb50e916b7364d837a75071a11dfc5400d54fb",
+              "scripts/generate_fixture.py": "ae36a07ff8ae3106eca66f346cdd82eb3d476ec1b407c944ed32987273705ca4",
+              "scripts/generation_profile.py": "37cf26a15c2ccb24c847e5768bf2112f8f5311fd91ff020e47e388246a250fee",
+              "scripts/import_fixture.py": "5a63b45523dcdbf69b87f39864f28f99ee58890e70c4b3073b057fb80a864d7a",
+              "scripts/runtime_process.py": "dac99212afddad9f6c0d42f13c4c1ad2faa4ab0fa8ea2e26f09dc3af3a904018",
+              "toolchain-lock.json": "ac1fc82fc9b6df1f955b6538a4c91cd9f246ae2f23a38e17e6b4ad9482a2c20b"
+            },
+            "sha256": "ba063fa4c52bbf49c1140d286b155faa6c968cca41c8b63b6109a51a8b680dad"
+          },
+          "schema": "a_c.formal-gate.result/1",
+          "selections": [],
+          "status": "verified"
+        },
+        "result_sha256": "4595c9c83ece7778630da6a44039e58973040857223ebbc5a0cc4861e0226260",
+        "views_sha256": null
+      }
+    ],
+    "scope": "exact generated model and actual carrier; no semantic acceptance",
+    "status": "verified"
+  },
+  "mode": "direct",
+  "model_id": "urn:a-c:generation:abd8c99d0ffe20e27c1444db:model:04f822c620e31ed0ef44b892",
+  "model_sha256": "5b9a5b80b853bf9c90d76c38d07b3abca8cc7811d5772b070daed5ef27642a51",
+  "processing_complete": true,
+  "profile": "ac.generation.proposal/1",
+  "status": "proposed",
+  "upstream_trial": null
+}

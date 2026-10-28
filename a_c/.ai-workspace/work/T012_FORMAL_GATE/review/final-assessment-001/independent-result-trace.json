@@ -1,0 +1,111 @@
+{
+  "canonical_model_sha256": "676365bf861fca3a1a3903c8c501b0c4fd11808259ee7f64d1580978ec357933",
+  "excluded_keys": [
+    2,
+    7
+  ],
+  "expected_directed_edges": [
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      0
+    ],
+    [
+      6,
+      1
+    ],
+    [
+      7,
+      2
+    ]
+  ],
+  "included_keys": [
+    0,
+    1,
+    3,
+    4,
+    5,
+    6
+  ],
+  "independent_oracle": "Literal expected edges, keys and reference counts constructed from the source-first test definition; exact JSON payload equality, no adapter imports.",
+  "integrated_proof_costs": [
+    {
+      "elapsed_seconds": 15.07594725000672,
+      "path": "proof-without-authority/evidence/formal/dcbd6aeaaa5743ebac939925ef7c951f/bundle/result.json",
+      "rendered_sha256": "04ceee419e3ad92cb4ce061a056c1029281b98d98cdbc769bfbc07e38498e2c9"
+    },
+    {
+      "elapsed_seconds": 15.442578624933958,
+      "path": "required-worker/evidence/formal/720ae76af91d4cdb9b407be3627452c0/bundle/result.json",
+      "rendered_sha256": "0307c84229195b2c90a75f5114e26266e8ac4b7cf4b0e4ccafc950fa5b47a420"
+    },
+    {
+      "elapsed_seconds": 15.399855291005224,
+      "path": "required-worker/evidence/formal/b4ed20baf4ff4a6c9bb2cf7254d5ea81/bundle/result.json",
+      "rendered_sha256": "0307c84229195b2c90a75f5114e26266e8ac4b7cf4b0e4ccafc950fa5b47a420"
+    },
+    {
+      "elapsed_seconds": 15.638203541981056,
+      "path": "required-worker/evidence/formal/e5f4955b9b1c42f0af23a040224b9f3e/bundle/result.json",
+      "rendered_sha256": "0307c84229195b2c90a75f5114e26266e8ac4b7cf4b0e4ccafc950fa5b47a420"
+    }
+  ],
+  "limits": "Model JSON correspondence only; actual controlled local Worker stdin, not semantic or external-effect acceptance.",
+  "preserved": [
+    "whole envelope",
+    "all record payloads",
+    "basis/context/owner/scope",
+    "external resolutions",
+    "reference path targets",
+    "retained residual",
+    "excluded residual",
+    "invalidation",
+    "actual Worker bytes"
+  ],
+  "public_costs_seconds": {
+    "replay": 14.535891833016649,
+    "tamper": 11.630582083016634,
+    "verify": 19.502272124867886
+  },
+  "raw_model_sha256": "ef21b7f207a58930cf305a417f8e4f91aafb80b35e4fb43857000c348c16dc92",
+  "status": "matched",
+  "subject_records": 8,
+  "typed_references": 60,
+  "worker_stdin_bytes": 23716,
+  "worker_stdin_sha256": "0307c84229195b2c90a75f5114e26266e8ac4b7cf4b0e4ccafc950fa5b47a420"
+}

@@ -1,0 +1,59 @@
+{
+  "actual_output_sha256": "2f900f4dd946d3ace83d528c5b44d9ca229f5bf3accf9852d5f583cb52980fce",
+  "actual_projection_outputs": 46,
+  "actual_underbudget_refusals": 46,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axiom_checked_theorems": 204,
+  "claim": "bounded mechanical formalisation; no semantic acceptance",
+  "fixture": {
+    "carrier_recovery": "both exact",
+    "edges": 47,
+    "model_sha256": "b3f97a2667c277c21417230421aca02c26b3a7b19baa598197e94f67c5439151",
+    "proof_boundary": "Python import/custody/check results; generic Lean proofs are a separate check.",
+    "raw_sha256": {
+      "CARRIER.json": "e77be91716c8f4a7e45ba19fabd818b88115c40872dd22d754f896892b584b8b",
+      "GRAPHIFY_EXTRACTION.json": "5a8115141979c4e5873256a816c483a8cd64f906d08555aaee73c0cf0a3e33cb",
+      "MODEL.json": "fc3114dd666218c387a64846b755a14979182f488de64ffff6a6d305a9698793"
+    },
+    "records": 32,
+    "references": 246,
+    "singleton_closure_histogram": {
+      "11": 5,
+      "2": 6,
+      "3": 9,
+      "4": 4,
+      "6": 8
+    },
+    "source_reconstruction": "exact"
+  },
+  "kernel_replay": "fresh AC including both fixtures and selected imports",
+  "lean": "4.35.0",
+  "lean_commit": "eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
+  "mathlib_commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "source_sha256": {
+    "AC.lean": "a887a453a58b5a2e56b2eb9580d97227d5efb60ea79f4082decb8c5c79e4209f",
+    "AC/Audit.lean": "bbe185b9e3550029328a19fbb927719450f6885720918cb45a60e5ba6131b647",
+    "AC/Closure.lean": "d8c66f511c486eeaf40393733779148843e2ce075e2540cb41259ed9b23e011f",
+    "AC/Fixture.lean": "483293b34e35efd01883dd57a222eabfbba658c0c4d797b0bc54633192f236ea",
+    "AC/Model.lean": "943bd93abdcccb3cb084ab8e41196f8cac77629089e746c90d7da09ac90a22d5",
+    "AC/Projection.lean": "ac2a9ce8ed148400967519c724715f6ea491bceff960ed77249b5ff744692575",
+    "AC/Run.lean": "12a07031acb8d1a4bdcedd3341a2d70633e57598aede87c97cfab67aedad9ab6",
+    "AC/Toy.lean": "9cf4aaba1f9c98329b7fc2cefbd08042ef05dffe12148e1e6399363cfdf559b8",
+    "scripts/bootstrap.py": "7fc1038180d95d7a5c6ee8cecaea12f9f2534cc8d1af4933303c214cd5127fd7",
+    "scripts/check.py": "cad730b6de699ab2d4b2e8a7235e7b18bd28a4c8b5853e3f7838265a32a60deb",
+    "scripts/generate_fixture.py": "3b5dd68c50ef5ae479e286e60916a41b54598a6e1972de9397e25cc5ef7d5cf6",
+    "scripts/import_fixture.py": "319d0ee5a47b9bc61a25ce9003feabbf4c0da3f459f57b493ae22eb070fb694d"
+  },
+  "status": "passed",
+  "toy": {
+    "edges": 29,
+    "model_sha256": "d275eb906b8ac2871e6fd7415065c1dabf915242e8583fe3e202bc723a18dec3",
+    "raw_sha256": "a72d423a222ecd84a429e28796c93ba07ac8b79d40caf3b74af02c36029f3b0b",
+    "records": 14,
+    "references": 124
+  }
+}

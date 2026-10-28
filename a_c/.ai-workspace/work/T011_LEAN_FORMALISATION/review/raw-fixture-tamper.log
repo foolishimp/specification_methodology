@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T011_LEAN_FORMALISATION/review/isolated-generator/scripts/generate_fixture.py", line 129, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T011_LEAN_FORMALISATION/review/isolated-generator/scripts/generate_fixture.py", line 108, in main
+    content,custody=expected_source()
+                    ^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T011_LEAN_FORMALISATION/review/isolated-generator/scripts/generate_fixture.py", line 99, in expected_source
+    custody = verify_fixture()
+              ^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T011_LEAN_FORMALISATION/review/isolated-generator/scripts/import_fixture.py", line 628, in verify_fixture
+    require(actual == expected, f"raw fixture digest mismatch: {name}")
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T011_LEAN_FORMALISATION/review/isolated-generator/scripts/import_fixture.py", line 64, in require
+    raise Refusal(message)
+import_fixture.Refusal: raw fixture digest mismatch: MODEL.json

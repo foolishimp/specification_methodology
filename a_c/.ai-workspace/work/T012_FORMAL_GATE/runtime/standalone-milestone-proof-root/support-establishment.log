@@ -1,0 +1,25 @@
+ℹ [644/644] Built AC.GateProof (3.0s)
+info: AC/GateProof.lean:8:0: 'AC.checkModel_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AC/GateProof.lean:9:0: 'AC.certificate_exact_reachability' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AC/GateProof.lean:10:0: 'AC.certificate_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AC/GateProof.lean:11:0: 'AC.project_ok_properties' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AC/GateProof.lean:12:0: 'AC.projection_all_residuals_accounted' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AC/GateProof.lean:13:0: 'AC.names_nodup_of_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AC/GateProof.lean:14:0: 'AC.wellFormed_of_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AC/GateProof.lean:15:0: 'AC.checked_of_wellFormed' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (644 jobs).
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/scripts/formal_support.py", line 93, in <module>
+    result=establish(args.output);print(json.dumps({'status':'established','members':len(result['members']),'seconds':result['established_seconds']}))
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/scripts/formal_support.py", line 60, in establish
+    runtime_process.run([str(prefix/'bin/leanchecker'),'--fresh','AC.GateProof'],cwd=ROOT,env=env,stdout=None,check=True,timeout=300)
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/scripts/runtime_process.py", line 37, in run
+    try:code=process.wait(timeout=timeout)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 2045, in _wait
+    raise TimeoutExpired(self.args, timeout)
+subprocess.TimeoutExpired: Command '['/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/.toolchain/lean-4.35.0-darwin_aarch64/bin/leanchecker', '--fresh', 'AC.GateProof']' timed out after 300 seconds

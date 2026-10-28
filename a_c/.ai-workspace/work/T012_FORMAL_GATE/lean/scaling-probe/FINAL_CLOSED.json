@@ -1,0 +1,61 @@
+{
+  "schema": "a_c.scaling-probe-return/1",
+  "actor": "/root/ac_lean_scaling_probe",
+  "role": "Worker probe",
+  "status": "closed_bounded_diagnostic_complete_large_gate_incomplete",
+  "closed_at": "2026-10-27T15:52:25.009229+00:00",
+  "executed_probes": 3,
+  "maximum_probes": 3,
+  "remaining_prepared": [],
+  "results": [
+    {
+      "probe": 1,
+      "status": "timeout",
+      "seconds": 60.13928533298895
+    },
+    {
+      "probe": "Probe2",
+      "status": "passed",
+      "seconds": 14.278806958114728,
+      "children_maxrss_bytes_on_macos": 4248076288,
+      "process_reaped": true,
+      "support_unchanged": true
+    },
+    {
+      "probe": "Probe3",
+      "status": "passed",
+      "seconds": 0.7058240419719368,
+      "children_maxrss_bytes_on_macos": 713261056,
+      "process_reaped": true,
+      "support_unchanged": true
+    }
+  ],
+  "root_cause": "Literal Array/List reconstruction alone ruled out as explanation; numeric/equality/ordering aggregate costly, per-declaration cost unresolved",
+  "large_model_status": "incomplete",
+  "candidate_mutations": false,
+  "git_effects": false,
+  "active_processes": false,
+  "files": {
+    "ACTIVATION.json": "bac156ee51ff58d32526552a6f0df1967bb53aec40dbc5a30eb96785ecf1fe78",
+    "CLOSED.json": "095227b9589fc54df987c410da5bfc0b51a4894bb2b0582d36b89fc9ab8ce9d8",
+    "FINAL_RETURN.md": "6c93985a9e5c39ad91788f73a5cc208e59c33080f4a8d4b8710b492274218aa7",
+    "PARTIAL_RETURN.md": "096c503cb70b2475769cd8b7ce7140bfe66e83927a90de1d0218efd89527ce0d",
+    "Probe1-result.json": "58d8a707338718c46f4aa4675c06a37b880852cee28080654c6d1f90f578083d",
+    "Probe1.lean": "e91b42327f7141c170526f4b86b4758ce0be7e9e5dd37b523ad8757b987d181b",
+    "Probe1.log": "abd0ec744612b127f65671151b00150e6d435395c371648933c868259578e02a",
+    "Probe2-input.json": "35f4c5ee8748f0ec4ebaa05d91b2f6e50f2ca83d8756796ae94092b9f6d4a523",
+    "Probe2-result.json": "bbca4e14bcf9c4b481885c1836eafe78f04f3d3014d759a69aba1b1f713a69e0",
+    "Probe2.lean": "6e53d6e0b699efaa45131c26e8bbbb2cdb25e113e4e7cbdc26c9a9d2fb356046",
+    "Probe2.log": "ba2c967f4c8830cea97d0f339374119293ada8e7ec8dc03daf949552fdf48dd0",
+    "Probe3-input.json": "9bfb8cfda6f18dffd3157a9321e3e2370f7ffcc0c4730c0b7cb9ade9616d5988",
+    "Probe3-result.json": "bbc871f8687f9263c0ef485c6d7e89d66cec6cb3a36a985b399ac0c9f58137dd",
+    "Probe3.lean": "6c96bff7ff9aef47bbc4468206c940b737e346291d3e9b0581bff415fcac7dc8",
+    "Probe3.log": "0d4ff54b2ef6eb667dd259c6e74e419a804bc2b53d80fe56cf5c689c91b7f53d",
+    "RESUMPTION.json": "cfa23245d6ab5c86ce73e42648cb3f3b36d9cc0fbd9544d58c104078358e5212",
+    "run_bounded_probe.py": "3587cfe60a1fb5f3336999bf52ed390bd671c7f7fdb1ad81408fdf12eb93e16f",
+    "snapshot-AC-Structure.lean": "f2d13a53ba8ac31731640a06facf78566b93d92a6dadbe4c7689e15d00c81a54",
+    "snapshot-large-model-structural-GateModel.lean": "0ee2efa037da3581a8ded32685068f5189ade454c206262120d9245da7de87d9",
+    "snapshot-small-pipeline-probe-GateModel.lean": "3c914e80e1ff9206e1bd8d78282498d9a84087bc7e6b599e2736f1ed5b3ab8ab"
+  },
+  "stop": "Original grant exhausted; no further experiments"
+}

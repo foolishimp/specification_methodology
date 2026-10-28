@@ -5,9 +5,27 @@ realizations of the carrier-neutral STDO calculus. Shared requirements define
 the WHAT; each `build_tenants/` child binds those requirements to its own
 computational representation and execution stack.
 
-The first tenant is [Graphify](build_tenants/graphify/README.md). It is a
-realization of the shared requirements. Axiom Indexer, STDO Representation and
+The tenants are [Graphify](build_tenants/graphify/README.md) and
+[Lean/Mathlib](build_tenants/lean/README.md). Graphify supplies a graph carrier
+and support operations. Lean supplies formal definitions, checked proofs and an
+executable dependency-closure/projection fragment under the common
+[formalisation contract](specification/requirements/formalisation.md).
+[T-011](.ai-workspace/tickets/active/T-011-lean-formalisation.md) records completed
+bounded implementation and independent review of FR-001–FR-007. The
+[delivery handoff](.ai-workspace/work/T011_LEAN_FORMALISATION/DELIVERY.md) links
+runnable commands, the exact source freeze and the satisfied final assessment:
+46 actual projections, 46 insufficient-budget refusals and 204 deciding theorem
+reports. This work is uncommitted and unpushed on `main`; no owner acceptance or
+release is issued. Axiom Indexer, STDO Representation and
 Specification Methodology v3 are not prerequisites or composed Products.
+
+[T-012](.ai-workspace/tickets/active/T-012-reusable-formal-gate.md) is the active
+successor: a reusable exact-subject formal gate for new supported subjects,
+portable proof evidence, and optional required verification in ordinary
+generation and actual Worker context/preflight/dispatch. Its five increments
+include independent actual-path qualification and measured costs. The
+[baseline](.ai-workspace/work/T012_FORMAL_GATE/baseline/BASELINE.json) preserves
+T-011's exact reviewed tenant and current common source before this work.
 
 Read [stdo_a_c.json](stdo_a_c.json), [Goals](specification/GOALS.md),
 [Intent](specification/INTENT.md), [Product](specification/PRODUCT.md), and
@@ -32,7 +50,8 @@ remains Deferred/unqualified, and frozen methodology models are not a maintained
 whole-workspace index.
 
 This is a development candidate, with no Product acceptance or release claim.
-See the tenant README for runnable commands and the bounded qualification claim.
+See each tenant README for runnable commands and its bounded proof or
+qualification claim.
 
 The completed RC9 rebuild is
 [T-006](.ai-workspace/tickets/active/T-006-rc9-rebuild-comparison.md):

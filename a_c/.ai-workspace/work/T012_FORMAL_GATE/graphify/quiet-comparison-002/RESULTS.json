@@ -1,0 +1,44 @@
+{
+  "exclusive_window": "Executive confirmed scaling probes stopped and no other team heavy process; no timeout/assertion changes.",
+  "limitation": "Single ordered comparison; unrelated host load is not controlled. Test failures remain visible, without inferring semantic or external-effect acceptance.",
+  "plan_sha256": "7098181742b244d2ead47752cf7957aef0d3cb3e0a82c01398aa861d57f63aef",
+  "results": {
+    "baseline": {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-m",
+        "unittest",
+        "-v",
+        "test_ac_support_effects.PublicRetryTests.test_public_selected_retry",
+        "test_ac_support_effects.PublicRetryTests.test_public_selected_retry_survives_context_reassembly",
+        "test_ac_support_interfaces.ActorCliTransportTests.test_timeout_preserves_raw_partials_and_keeps_unobserved_effect_scope_unknown"
+      ],
+      "elapsed_seconds": 4.518584500066936,
+      "log_sha256": "c0ef6ef894518155e56ea790ea487f23c1729380acb187ab04c07770c99e8073",
+      "remaining_selected_supervisors": [],
+      "returncode": 0,
+      "settling_seconds": 0.047934832982718945,
+      "source_pins_reverified": true,
+      "supervisor_settled_before_next_run": true
+    },
+    "candidate": {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-m",
+        "unittest",
+        "-v",
+        "test_ac_support_effects.PublicRetryTests.test_public_selected_retry",
+        "test_ac_support_effects.PublicRetryTests.test_public_selected_retry_survives_context_reassembly",
+        "test_ac_support_interfaces.ActorCliTransportTests.test_timeout_preserves_raw_partials_and_keeps_unobserved_effect_scope_unknown"
+      ],
+      "elapsed_seconds": 4.845977333141491,
+      "log_sha256": "9b4ccf4e6a37020dc5c8456b74f47e04baa4704190bd2833d24580ac438969ad",
+      "remaining_selected_supervisors": [],
+      "returncode": 0,
+      "settling_seconds": 0.048017249908298254,
+      "source_pins_reverified": true,
+      "supervisor_settled_before_next_run": true
+    }
+  },
+  "schema": "a_c.t012.matched-quiet-comparison-result/1"
+}

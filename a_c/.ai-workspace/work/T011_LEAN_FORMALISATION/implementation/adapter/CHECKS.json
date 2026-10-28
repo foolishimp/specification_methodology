@@ -1,0 +1,101 @@
+{
+  "tests": {
+    "command": [
+      "/usr/local/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "a_c/build_tenants/lean/tests",
+      "-p",
+      "test_adapter.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 7.419374166987836,
+    "test_methods": 32,
+    "log_sha256": "c348a7c95d52f5c95d08797384f0867bc5d8fac174cbbf672d88ca726e6ba606"
+  },
+  "actual_cli_checks": [
+    {
+      "name": "published",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "a_c/build_tenants/lean/scripts/import_fixture.py"
+      ],
+      "exit_code": 0,
+      "observed": {
+        "status": "checked",
+        "result": {
+          "raw_sha256": {
+            "MODEL.json": "fc3114dd666218c387a64846b755a14979182f488de64ffff6a6d305a9698793",
+            "CARRIER.json": "e77be91716c8f4a7e45ba19fabd818b88115c40872dd22d754f896892b584b8b",
+            "GRAPHIFY_EXTRACTION.json": "5a8115141979c4e5873256a816c483a8cd64f906d08555aaee73c0cf0a3e33cb"
+          },
+          "model_sha256": "b3f97a2667c277c21417230421aca02c26b3a7b19baa598197e94f67c5439151",
+          "records": 32,
+          "references": 246,
+          "edges": 47,
+          "singleton_closure_histogram": {
+            "11": 5,
+            "2": 6,
+            "3": 9,
+            "4": 4,
+            "6": 8
+          },
+          "source_reconstruction": "exact",
+          "carrier_recovery": "both exact",
+          "proof_boundary": "Python import/custody/check results; generic Lean proofs are a separate check."
+        }
+      }
+    },
+    {
+      "name": "toy",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "a_c/build_tenants/lean/scripts/import_fixture.py",
+        "--toy"
+      ],
+      "exit_code": 0,
+      "observed": {
+        "status": "checked",
+        "result": {
+          "raw_sha256": {
+            "MODEL.json": "a72d423a222ecd84a429e28796c93ba07ac8b79d40caf3b74af02c36029f3b0b"
+          },
+          "model_sha256": "d275eb906b8ac2871e6fd7415065c1dabf915242e8583fe3e202bc723a18dec3",
+          "records": 14,
+          "references": 124,
+          "edges": 29,
+          "families": {
+            "objects": 3,
+            "relations": 5,
+            "constraints": 1,
+            "latitude": 1,
+            "residuals": 1,
+            "traversals": 1,
+            "transformations": 1,
+            "judgments": 1
+          },
+          "singleton_closure_histogram": {
+            "1": 1,
+            "10": 2,
+            "11": 1,
+            "12": 1,
+            "9": 9
+          },
+          "source_reconstruction": "exact",
+          "proof_boundary": "Synthetic all-family structural input; no transformation execution or semantic acceptance."
+        }
+      }
+    }
+  ],
+  "static_checks": [
+    "Python AST parse",
+    "no trailing whitespace"
+  ],
+  "proof_scope": "These are adapter mechanical checks; Lean proofs and independent assessment are separate."
+}

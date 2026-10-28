@@ -1,0 +1,25 @@
+{
+  "schema": "a_c.work-activation-record/1",
+  "work_item": "T-011",
+  "actor": "/root/ac_lean_contract_writer",
+  "role": "Writer",
+  "delegating_executive": "/root",
+  "operation": "Preserve the exact reviewed common source, record bounded implementation and independent review completion, and add a usable delivery handoff.",
+  "write_territory": [
+    "a_c/README.md",
+    "a_c/specification/GOALS.md",
+    "a_c/.ai-workspace/tickets/active/T-011-lean-formalisation.md",
+    "a_c/.ai-workspace/work/T011_LEAN_FORMALISATION/DELIVERY.md",
+    "a_c/.ai-workspace/work/T011_LEAN_FORMALISATION/final-status/**"
+  ],
+  "prerequisite": "Copy and verify all eleven subjects in contract/CLOSED.json before updating the three status files.",
+  "review_return_sha256": "d2ccc3ee74d4ac4e7fce366483720733c8d67936674679d0156039438605a308",
+  "review_verdict": "satisfied FR-001 through FR-007; no findings or required repairs",
+  "preserve": [
+    "All 29 files in implementation/SOURCE_MANIFEST.json",
+    "Requirements, Product, Intent, tenant registry, Product Definition and frame basis",
+    "All prior closed returns and review evidence"
+  ],
+  "excluded_effects": ["source or proof fixes", "new tests or review campaigns", "Git/index/commit/push", "global installs", "release", "owner acceptance"],
+  "stop": "Return changed paths, exact identities and preservation verification; then stop."
+}

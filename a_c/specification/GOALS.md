@@ -1,5 +1,36 @@
 # Goals
 
+The delivered reusable-gate increment is
+[T-012](../.ai-workspace/tickets/active/T-012-reusable-formal-gate.md), under
+[FR-008–FR-014](requirements/formalisation.md#reusable-formal-verification-gate).
+All five ordered increments are delivered with bounded independent qualification:
+checked adapters for unseen supported subjects, exact model/carrier and supplied
+projection verification, portable current-proof evidence, and optional required
+gating through ordinary generation and actual Worker preflight/dispatch/delivery.
+The [final review](../.ai-workspace/work/T012_FORMAL_GATE/review/final-assessment-001/REVIEW.md)
+supports the declared fragment, resolves all three findings and leaves no blocking
+finding. The [handoff](../.ai-workspace/work/T012_FORMAL_GATE/DELIVERY.md) binds usable
+commands, exact source/review identities, costs and preserved history. The actual
+1,987-record case remains incomplete under selected resources; no successful
+large-model scaling or efficiency gain is established. The installed builder,
+existing authority owners and historical T-011 evidence remain unchanged.
+Work remains uncommitted and unpushed on `main`; semantic/owner acceptance,
+adoption, release, publication and Git actions are unselected.
+
+The completed formalisation increment is
+[T-011](../.ai-workspace/tickets/active/T-011-lean-formalisation.md): an independent
+Lean/Mathlib tenant implementing the selected
+[FR-001–FR-007](requirements/formalisation.md) fragment. Generic checked proofs
+establish exact declared dependency closure, retained-record projection and
+insufficient-budget refusal. The exact 32-record STDO 3.0.2 composition subject
+and 14-record all-family toy supply 46 concrete selections. Independent final
+review is satisfied with no findings or required repairs; its public-path run
+checks 46 actual projections, 46 underbudget refusals and 204 deciding theorem
+reports. The [delivery handoff](../.ai-workspace/work/T011_LEAN_FORMALISATION/DELIVERY.md)
+binds runnable commands, frozen source, review evidence and retained trust
+boundaries. The builder remains v2.5.1-rc.2. Work is uncommitted and unpushed on
+`main`; F_P fidelity, owner acceptance and release are not issued by these checks.
+
 The selected composition increment implements
 [FC-01–FC-07](requirements/fd-composition.md) in the existing Graphify support
 tenant. It adds optional source-bound actor/edge information declarations to

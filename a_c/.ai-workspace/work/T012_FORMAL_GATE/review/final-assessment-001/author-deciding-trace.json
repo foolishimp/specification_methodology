@@ -1,0 +1,291 @@
+{
+  "author_actual_stdout": {
+    "fixture": "count",
+    "stdin_sha256": "8c194eeb227e48929cb9fb420619688e1ab2af339c2f13da4872351e76758e47"
+  },
+  "author_delivery": {
+    "attempt": {
+      "id": "sha256:2958cdf246d2ce4b31fd74f4f083cd824cec012454625c4d712db78dee5c2276",
+      "sha256": "2958cdf246d2ce4b31fd74f4f083cd824cec012454625c4d712db78dee5c2276"
+    },
+    "claim": "Actual controlled local Worker stdin; no semantic or external-effect acceptance.",
+    "context_sha256": "8c194eeb227e48929cb9fb420619688e1ab2af339c2f13da4872351e76758e47",
+    "formal_required": true,
+    "observed_process_exit": 0,
+    "supervisor_formal_use": {
+      "id": "sha256:8efbff3d8c08a5860fe05fae61a6eec9de50e4739c0b48131e76c0021a04a718",
+      "sha256": "8efbff3d8c08a5860fe05fae61a6eec9de50e4739c0b48131e76c0021a04a718"
+    },
+    "worker_stdin_sha256": "8c194eeb227e48929cb9fb420619688e1ab2af339c2f13da4872351e76758e47"
+  },
+  "four_producers": [
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_generate.py",
+        "assemble",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run",
+        "--formal-checker",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/checker-002.json",
+        "--formal-checker-sha256",
+        "ab4acb0d13c255bb9fdcf0e87ff259c4a0feffa8010c5730e0492fd222cedc7c"
+      ],
+      "proposal_standing": "proposed",
+      "route": "assemble-alpha",
+      "runs": [
+        {
+          "bundle": "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/proposal/formal-model/bundle",
+          "canonical_model": {
+            "id": "urn:a-c:generation:abd8c99d0ffe20e27c1444db:model:710ab1ae13284c496bdd1387",
+            "sha256": "42fc67413dfa9b0584a2725c8ccf149940e4594be29f7fdd19bcba9d22c09d88"
+          },
+          "elapsed_seconds": 19.65866183396429,
+          "format": "model",
+          "raw_sha256": "8a502f8e91056263f1464103f5a1cb3f36f3ccc9f0e7b2357e6d2068ecf90abe",
+          "result_sha256": "6293499fae3f54fb51835820b1dc916dbd439fc1f43658a8774daaf3275cc35f"
+        },
+        {
+          "bundle": "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/proposal/formal-carrier/bundle",
+          "canonical_model": {
+            "id": "urn:a-c:generation:abd8c99d0ffe20e27c1444db:model:710ab1ae13284c496bdd1387",
+            "sha256": "42fc67413dfa9b0584a2725c8ccf149940e4594be29f7fdd19bcba9d22c09d88"
+          },
+          "elapsed_seconds": 16.418747749878094,
+          "format": "carrier",
+          "raw_sha256": "a8ee0c542a3a09ef1c6a6cfb6fc835283feb4a046219e87c789841828f495470",
+          "result_sha256": "6c3f312405cf74cb11dc83868db8039b9deb5df5ab2b9219c9f212b654fda2eb"
+        }
+      ]
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_grounding.py",
+        "assemble",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run"
+      ],
+      "proposal_standing": "proposed",
+      "route": "assemble-grounded",
+      "runs": [
+        {
+          "bundle": "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/grounded-proposal/formal-model/bundle",
+          "canonical_model": {
+            "id": "urn:a-c:generation:abd8c99d0ffe20e27c1444db:model:710ab1ae13284c496bdd1387",
+            "sha256": "1ca1010ce3cdfd56344663e41b9e3397659a40c78186afd39a02a12bda55cbe9"
+          },
+          "elapsed_seconds": 16.446071667131037,
+          "format": "model",
+          "raw_sha256": "c33414049f03fee90a509050236f1c641f12b77f55e8ab512f30d75d45de4010",
+          "result_sha256": "03166b1d3822cc7b384906805b4c066f466f8133fc62f868b182d6062c7574fb"
+        },
+        {
+          "bundle": "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/grounded-proposal/formal-carrier/bundle",
+          "canonical_model": {
+            "id": "urn:a-c:generation:abd8c99d0ffe20e27c1444db:model:710ab1ae13284c496bdd1387",
+            "sha256": "1ca1010ce3cdfd56344663e41b9e3397659a40c78186afd39a02a12bda55cbe9"
+          },
+          "elapsed_seconds": 15.911205915967003,
+          "format": "carrier",
+          "raw_sha256": "3b7be0fc8f89292418cc89a5cf949046eff9c6444915c6786184ef3449810736",
+          "result_sha256": "0ad5c4f25dcfb3b4e73ca3a5afac84c8a9271878d3ec1f7e64beecaab0582d58"
+        }
+      ]
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_repair.py",
+        "assemble",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run"
+      ],
+      "proposal_standing": "proposed",
+      "route": "assemble-repaired",
+      "runs": [
+        {
+          "bundle": "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/repaired-proposal/formal-model/bundle",
+          "canonical_model": {
+            "id": "urn:a-c:generation:abd8c99d0ffe20e27c1444db:model:710ab1ae13284c496bdd1387",
+            "sha256": "18cd3c2814f64b947d337f0f698624f13ed86a04eec449ff514b59fdf88734c3"
+          },
+          "elapsed_seconds": 16.337965999962762,
+          "format": "model",
+          "raw_sha256": "747d4b634fb67bacd545f3d534244933b889ba2945e525da02f28d16e8299fee",
+          "result_sha256": "7d3835fd2fa7fee5e17e215ade3649556502cb60ee560a96acebd72e79074ede"
+        },
+        {
+          "bundle": "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/repaired-proposal/formal-carrier/bundle",
+          "canonical_model": {
+            "id": "urn:a-c:generation:abd8c99d0ffe20e27c1444db:model:710ab1ae13284c496bdd1387",
+            "sha256": "18cd3c2814f64b947d337f0f698624f13ed86a04eec449ff514b59fdf88734c3"
+          },
+          "elapsed_seconds": 15.6598251669202,
+          "format": "carrier",
+          "raw_sha256": "ff1e9492f1867c1ebf72f231a47567566ce4c1a534f366aa003e138627a53b98",
+          "result_sha256": "2fe024f9abd0926abfa947d781e1b944fa8c45a6f8df80b68ae090914a4a7a76"
+        }
+      ]
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_generate.py",
+        "run",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/run",
+        "--formal-checker",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/checker-002.json",
+        "--formal-checker-sha256",
+        "ab4acb0d13c255bb9fdcf0e87ff259c4a0feffa8010c5730e0492fd222cedc7c",
+        "--execute",
+        "--codex",
+        "/never-called-completed-authored-replay"
+      ],
+      "proposal_standing": "proposed",
+      "route": "run-beta",
+      "runs": [
+        {
+          "bundle": "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/run/proposal/formal-model/bundle",
+          "canonical_model": {
+            "id": "urn:a-c:generation:4192d7db6292c2f78556d9b7:model:fe0b0cdb9313d7874436c75b",
+            "sha256": "b9d77ff67767898567deea8757f8169a0dcdf92c2335761226f1a2e081aaec6c"
+          },
+          "elapsed_seconds": 15.453703749924898,
+          "format": "model",
+          "raw_sha256": "69f33e41c922fdaa220382cb3591593e718daaa08e8fc9a201b6240ca8e62a0c",
+          "result_sha256": "d0a787846024f7deb91c6d58f82c6d4fbe250f8b5b50180c9fa3f6372f835d06"
+        },
+        {
+          "bundle": "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/run/proposal/formal-carrier/bundle",
+          "canonical_model": {
+            "id": "urn:a-c:generation:4192d7db6292c2f78556d9b7:model:fe0b0cdb9313d7874436c75b",
+            "sha256": "b9d77ff67767898567deea8757f8169a0dcdf92c2335761226f1a2e081aaec6c"
+          },
+          "elapsed_seconds": 16.086412000004202,
+          "format": "carrier",
+          "raw_sha256": "0916fabcf99da685a69c7c477024cff8741a225c01c1f21691d699ba29abb5a4",
+          "result_sha256": "8beaf2ea005fd5817cd9395406d490267aab4f0320c22f28f3a867bfb499f62f"
+        }
+      ]
+    }
+  ],
+  "manifest_sha256": "bcaf345b7a620ad42884db870bafe2b1e4a092412094b0aeceb170cc102b9778",
+  "scope": "Selected deciding public producer/gate/Worker evidence only; not a rerun or full 2583-member audit.",
+  "selected_count": 111,
+  "selected_evidence_members": {
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/QUALIFICATION_002_METRICS.json": "4374321f782b206279bd15c135c7ad8e924dca3b84d97a46d3815f22bb7903c1",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/QUALIFICATION.json": "a36cf12d79e1f6f49c00df19dd4ef10ab4af114907da9338566df31975451e6c",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/ac_grounding/invocation.json": "a80fb9b7c5eabc10480c8ecdb652268cb403da0dd83b72f69a2c05152b374955",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/ac_grounding/stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/ac_grounding/stdout": "9ac64d0156f1c1e9fbfd9c4f564108d7c02689a4f731830bee133f20c880a033",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/ac_repair/invocation.json": "352674b81f05fcbb276730f62ee672cea9cd39a63593f2a6e22ba6bf6bc4a579",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/ac_repair/stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/ac_repair/stdout": "2b6d20dc4fe98db5a0ef9d13f82bfe90ec47ff9d391dab65892523bce2c64250",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/actual-cli/invocation.json": "397c5bcc4051b15a933acae3e428101d085e6f8f6f1fede7cd280b60059b3220",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/actual-cli/stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/actual-cli/stdout": "a659aecbcc014174d5736cf1782cd9a55a0d02f2287a083dd4a940eb0c280d9c",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/grounded-proposal/carrier.json": "3b7be0fc8f89292418cc89a5cf949046eff9c6444915c6786184ef3449810736",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/grounded-proposal/formal-carrier/bundle/GateData.lean": "d676cad15600379d603dc89534c6a67827a59f82b067099b50e4fe7f831ba820",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/grounded-proposal/formal-carrier/bundle/GateModel.lean": "60c2ae920f5307024bbd198811f66497f81d14ce89495c506eb3a92e887b8cb1",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/grounded-proposal/formal-carrier/bundle/GateModel.log": "a15a20e7d67eee818dddfaba79a448bbe8957f28eadc70e76ad792f0318a97ee",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/grounded-proposal/formal-carrier/bundle/GateViews.lean": "eecbd0af3b04a9b2580495008692117f0dbebcbf27c9b67336d118dd64b167df",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/grounded-proposal/formal-carrier/bundle/actual-runtime.log": "f8e778886f543f63ff72a7aa64e9b4c7a37c0be715545cc621d28a529896aa0c",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/grounded-proposal/formal-carrier/bundle/dynamic-kernel-replay.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/grounded-proposal/formal-carrier/bundle/input.json": "3b7be0fc8f89292418cc89a5cf949046eff9c6444915c6786184ef3449810736",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/grounded-proposal/formal-carrier/bundle/manifest.json": "23fedb0d6aafc9023e0abd3781bc6e3e2cf7e61eb5340b7f1ca47d3caaf1d038",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/grounded-proposal/formal-carrier/bundle/request.json": "bdc08564ed6c08206e7db1e4156d9cf9d0c8d8f7111092f6377b87806c4b6906",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/grounded-proposal/formal-carrier/bundle/result.json": "0ad5c4f25dcfb3b4e73ca3a5afac84c8a9271878d3ec1f7e64beecaab0582d58",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/grounded-proposal/formal-model/bundle/GateData.lean": "d676cad15600379d603dc89534c6a67827a59f82b067099b50e4fe7f831ba820",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/grounded-proposal/formal-model/bundle/GateModel.lean": "60c2ae920f5307024bbd198811f66497f81d14ce89495c506eb3a92e887b8cb1",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/grounded-proposal/formal-model/bundle/GateModel.log": "a15a20e7d67eee818dddfaba79a448bbe8957f28eadc70e76ad792f0318a97ee",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/grounded-proposal/formal-model/bundle/GateViews.lean": "eecbd0af3b04a9b2580495008692117f0dbebcbf27c9b67336d118dd64b167df",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/grounded-proposal/formal-model/bundle/actual-runtime.log": "f8e778886f543f63ff72a7aa64e9b4c7a37c0be715545cc621d28a529896aa0c",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/grounded-proposal/formal-model/bundle/dynamic-kernel-replay.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/grounded-proposal/formal-model/bundle/input.json": "c33414049f03fee90a509050236f1c641f12b77f55e8ab512f30d75d45de4010",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/grounded-proposal/formal-model/bundle/manifest.json": "b8203d2ea92facaff396c9ed8b5c24477b767f4d4940e6e7978699639051925d",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/grounded-proposal/formal-model/bundle/request.json": "b193305ef95db091bdb5ffbd0a07bb3b974a39137267833e7f88e9458496c34b",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/grounded-proposal/formal-model/bundle/result.json": "03166b1d3822cc7b384906805b4c066f466f8133fc62f868b182d6062c7574fb",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/grounded-proposal/model.json": "c33414049f03fee90a509050236f1c641f12b77f55e8ab512f30d75d45de4010",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/grounded-proposal/result.json": "9ac64d0156f1c1e9fbfd9c4f564108d7c02689a4f731830bee133f20c880a033",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/proposal/carrier.json": "a8ee0c542a3a09ef1c6a6cfb6fc835283feb4a046219e87c789841828f495470",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/proposal/formal-carrier/bundle/GateData.lean": "a6fe035688d20dee05b9a3a7d1447e646f5fa90d2aef6f15bdc8523de0666b55",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/proposal/formal-carrier/bundle/GateModel.lean": "60c2ae920f5307024bbd198811f66497f81d14ce89495c506eb3a92e887b8cb1",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/proposal/formal-carrier/bundle/GateModel.log": "a15a20e7d67eee818dddfaba79a448bbe8957f28eadc70e76ad792f0318a97ee",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/proposal/formal-carrier/bundle/GateViews.lean": "eecbd0af3b04a9b2580495008692117f0dbebcbf27c9b67336d118dd64b167df",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/proposal/formal-carrier/bundle/actual-runtime.log": "2b79a6a21561fa96185d5e9e63d3189719cd9b50189d4ab1d48e3ebbe548d4a0",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/proposal/formal-carrier/bundle/dynamic-kernel-replay.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/proposal/formal-carrier/bundle/input.json": "a8ee0c542a3a09ef1c6a6cfb6fc835283feb4a046219e87c789841828f495470",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/proposal/formal-carrier/bundle/manifest.json": "ea7fd65ddffd2a4e3f96a4dc72f64b11189e7e0ca982811a37a46292280bb47f",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/proposal/formal-carrier/bundle/request.json": "e3968eea31b68ddd1ae7ef7a0bc1f8169ba4c9fb08224f8d8421704b46713360",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/proposal/formal-carrier/bundle/result.json": "6c3f312405cf74cb11dc83868db8039b9deb5df5ab2b9219c9f212b654fda2eb",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/proposal/formal-model/bundle/GateData.lean": "a6fe035688d20dee05b9a3a7d1447e646f5fa90d2aef6f15bdc8523de0666b55",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/proposal/formal-model/bundle/GateModel.lean": "60c2ae920f5307024bbd198811f66497f81d14ce89495c506eb3a92e887b8cb1",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/proposal/formal-model/bundle/GateModel.log": "a15a20e7d67eee818dddfaba79a448bbe8957f28eadc70e76ad792f0318a97ee",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/proposal/formal-model/bundle/GateViews.lean": "eecbd0af3b04a9b2580495008692117f0dbebcbf27c9b67336d118dd64b167df",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/proposal/formal-model/bundle/actual-runtime.log": "2b79a6a21561fa96185d5e9e63d3189719cd9b50189d4ab1d48e3ebbe548d4a0",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/proposal/formal-model/bundle/dynamic-kernel-replay.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/proposal/formal-model/bundle/input.json": "8a502f8e91056263f1464103f5a1cb3f36f3ccc9f0e7b2357e6d2068ecf90abe",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/proposal/formal-model/bundle/manifest.json": "55692e804dded1e56338ee65a67e71f2e240af698bcfc02f5451560a69d29231",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/proposal/formal-model/bundle/request.json": "e3c74f083ad4d7f023bc9451c024a8880a32e81ca2238fc0eb9f86f9221577ce",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/proposal/formal-model/bundle/result.json": "6293499fae3f54fb51835820b1dc916dbd439fc1f43658a8774daaf3275cc35f",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/proposal/model.json": "8a502f8e91056263f1464103f5a1cb3f36f3ccc9f0e7b2357e6d2068ecf90abe",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/proposal/result.json": "a659aecbcc014174d5736cf1782cd9a55a0d02f2287a083dd4a940eb0c280d9c",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/repaired-proposal/carrier.json": "ff1e9492f1867c1ebf72f231a47567566ce4c1a534f366aa003e138627a53b98",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/repaired-proposal/formal-carrier/bundle/GateData.lean": "afd119f7477e73db13e3d799116e021cfdb44409bdeeb2dc4a453a26228d4ec8",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/repaired-proposal/formal-carrier/bundle/GateModel.lean": "60c2ae920f5307024bbd198811f66497f81d14ce89495c506eb3a92e887b8cb1",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/repaired-proposal/formal-carrier/bundle/GateModel.log": "a15a20e7d67eee818dddfaba79a448bbe8957f28eadc70e76ad792f0318a97ee",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/repaired-proposal/formal-carrier/bundle/GateViews.lean": "eecbd0af3b04a9b2580495008692117f0dbebcbf27c9b67336d118dd64b167df",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/repaired-proposal/formal-carrier/bundle/actual-runtime.log": "3125c2a54b2ee93caf90debef8622b189126b898375994c47ba0bbc1b047b128",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/repaired-proposal/formal-carrier/bundle/dynamic-kernel-replay.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/repaired-proposal/formal-carrier/bundle/input.json": "ff1e9492f1867c1ebf72f231a47567566ce4c1a534f366aa003e138627a53b98",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/repaired-proposal/formal-carrier/bundle/manifest.json": "2bf3a770a5f5ae62dfaf8e103c779e82ab12c6f5afa754654cc16cadc45370b8",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/repaired-proposal/formal-carrier/bundle/request.json": "efee2fec34211d67820c8003ad52a18f5aeb5bd22ab139c9e9fb88aa11fc7b38",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/repaired-proposal/formal-carrier/bundle/result.json": "2fe024f9abd0926abfa947d781e1b944fa8c45a6f8df80b68ae090914a4a7a76",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/repaired-proposal/formal-model/bundle/GateData.lean": "afd119f7477e73db13e3d799116e021cfdb44409bdeeb2dc4a453a26228d4ec8",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/repaired-proposal/formal-model/bundle/GateModel.lean": "60c2ae920f5307024bbd198811f66497f81d14ce89495c506eb3a92e887b8cb1",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/repaired-proposal/formal-model/bundle/GateModel.log": "a15a20e7d67eee818dddfaba79a448bbe8957f28eadc70e76ad792f0318a97ee",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/repaired-proposal/formal-model/bundle/GateViews.lean": "eecbd0af3b04a9b2580495008692117f0dbebcbf27c9b67336d118dd64b167df",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/repaired-proposal/formal-model/bundle/actual-runtime.log": "3125c2a54b2ee93caf90debef8622b189126b898375994c47ba0bbc1b047b128",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/repaired-proposal/formal-model/bundle/dynamic-kernel-replay.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/repaired-proposal/formal-model/bundle/input.json": "747d4b634fb67bacd545f3d534244933b889ba2945e525da02f28d16e8299fee",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/repaired-proposal/formal-model/bundle/manifest.json": "3769ab8178fa4cf0e1f8ce44e8fb2f9b7285d7d1db2bd1e09b64c1c46350a052",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/repaired-proposal/formal-model/bundle/request.json": "80c6ad7074f3bc534ec8acfea2ae6f2442703a467597de0bf1e608336f9fef0a",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/repaired-proposal/formal-model/bundle/result.json": "7d3835fd2fa7fee5e17e215ade3649556502cb60ee560a96acebd72e79074ede",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/repaired-proposal/model.json": "747d4b634fb67bacd545f3d534244933b889ba2945e525da02f28d16e8299fee",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-alpha/run/repaired-proposal/result.json": "2b6d20dc4fe98db5a0ef9d13f82bfe90ec47ff9d391dab65892523bce2c64250",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/actual-cli/invocation.json": "d43ab7839634910844ddc3c9bb51251e2827a733f5e292eae21b4f2917d63f62",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/actual-cli/stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/actual-cli/stdout": "f6ce810b3079401f46cda2127de3f99257df1a560936db4014a7150d4035846d",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/run/proposal/carrier.json": "0916fabcf99da685a69c7c477024cff8741a225c01c1f21691d699ba29abb5a4",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/run/proposal/formal-carrier/bundle/GateData.lean": "239046cc69ae731989cd4f13f4c654744602ce716d29fb6b6e6a8bddbdcc8af6",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/run/proposal/formal-carrier/bundle/GateModel.lean": "60c2ae920f5307024bbd198811f66497f81d14ce89495c506eb3a92e887b8cb1",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/run/proposal/formal-carrier/bundle/GateModel.log": "a15a20e7d67eee818dddfaba79a448bbe8957f28eadc70e76ad792f0318a97ee",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/run/proposal/formal-carrier/bundle/GateViews.lean": "eecbd0af3b04a9b2580495008692117f0dbebcbf27c9b67336d118dd64b167df",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/run/proposal/formal-carrier/bundle/actual-runtime.log": "3ed0e03e41cc652dbd97b4c43977a29ab274647f986e568544f9a087f26d63d0",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/run/proposal/formal-carrier/bundle/dynamic-kernel-replay.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/run/proposal/formal-carrier/bundle/input.json": "0916fabcf99da685a69c7c477024cff8741a225c01c1f21691d699ba29abb5a4",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/run/proposal/formal-carrier/bundle/manifest.json": "b77a15c9cb339138f03d526e89c69069a9b61eb530c71ab4d6a6b4953efba718",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/run/proposal/formal-carrier/bundle/request.json": "aeca597c4292c452a880861d2385b3c7cfec0d26402c1921f1848899286a951e",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/run/proposal/formal-carrier/bundle/result.json": "8beaf2ea005fd5817cd9395406d490267aab4f0320c22f28f3a867bfb499f62f",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/run/proposal/formal-model/bundle/GateData.lean": "239046cc69ae731989cd4f13f4c654744602ce716d29fb6b6e6a8bddbdcc8af6",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/run/proposal/formal-model/bundle/GateModel.lean": "60c2ae920f5307024bbd198811f66497f81d14ce89495c506eb3a92e887b8cb1",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/run/proposal/formal-model/bundle/GateModel.log": "a15a20e7d67eee818dddfaba79a448bbe8957f28eadc70e76ad792f0318a97ee",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/run/proposal/formal-model/bundle/GateViews.lean": "eecbd0af3b04a9b2580495008692117f0dbebcbf27c9b67336d118dd64b167df",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/run/proposal/formal-model/bundle/actual-runtime.log": "3ed0e03e41cc652dbd97b4c43977a29ab274647f986e568544f9a087f26d63d0",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/run/proposal/formal-model/bundle/dynamic-kernel-replay.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/run/proposal/formal-model/bundle/input.json": "69f33e41c922fdaa220382cb3591593e718daaa08e8fc9a201b6240ca8e62a0c",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/run/proposal/formal-model/bundle/manifest.json": "13ff09d42800c8bd3481093927700fac4babdc646673917f94df55dfb32e31c0",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/run/proposal/formal-model/bundle/request.json": "6d4ae288cb6849bd80381e77cbcb1385dc41a22f5fd21a06ebe115086db2d24f",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/run/proposal/formal-model/bundle/result.json": "d0a787846024f7deb91c6d58f82c6d4fbe250f8b5b50180c9fa3f6372f835d06",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/run/proposal/model.json": "69f33e41c922fdaa220382cb3591593e718daaa08e8fc9a201b6240ca8e62a0c",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/fresh-beta/run/proposal/result.json": "0b4b19baef69e7f7e637da4f4aebfdc2874f378900f55d8feb4a18351e7079b7",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/required/DELIVERY.json": "4be740ac90bc0ceaec08932233c5d474b7df88d63029c06902f2b1d1559e78cd",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/required/calls/22/stdout": "9f561db1273d003088ba790e5e9a07a514500a81c9bfc1d5af20fb77cf717df7",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/required/evidence/objects/7d6a945b820578b4ccc87f0d8275c08a5e03d498be9ef0216e5523ca4f0a339e.json": "7d6a945b820578b4ccc87f0d8275c08a5e03d498be9ef0216e5523ca4f0a339e",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/required/evidence/objects/8efbff3d8c08a5860fe05fae61a6eec9de50e4739c0b48131e76c0021a04a718.json": "8efbff3d8c08a5860fe05fae61a6eec9de50e4739c0b48131e76c0021a04a718",
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/integration/qualification-002/required/evidence/objects/df5f2344ad6da25c05287ba0ec1937e0b027df89021a25e915d13c766d3a20ed.json": "df5f2344ad6da25c05287ba0ec1937e0b027df89021a25e915d13c766d3a20ed"
+  },
+  "status": "matched"
+}

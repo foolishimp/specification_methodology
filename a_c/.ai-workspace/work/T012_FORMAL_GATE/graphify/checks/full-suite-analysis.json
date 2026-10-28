@@ -1,0 +1,54 @@
+{
+  "all_six_recorded_pins_accounted_for": true,
+  "disposition": "retain failed run; replay exact six affected methods without weakening timing predicates",
+  "errors": 1,
+  "failures": 5,
+  "predicate_class": "deadline and bounded early-output observations; no required formal gate selected",
+  "prior_effects_recovery": {
+    "path": "a_c/.ai-workspace/work/T012_FORMAL_GATE/graphify/checks/full-suite-source/ac_support_effects.py",
+    "sha256": "a2880b4fd4b25c27dc0f99d5357b49b7c41611f09f645b4c020aebd8524de612",
+    "source": "Exact prior bytes reconstructed by reversing only two subsequent required-path directory-guard additions; digest equals actual supervisor sealed source pin in retained failure trace."
+  },
+  "recorded_source_pins": [
+    {
+      "current_sha256": "f65efad15fd770075650ce0484df5b1cea14612047a82918d35fdc4f870deafa",
+      "logged_sha256": "f65efad15fd770075650ce0484df5b1cea14612047a82918d35fdc4f870deafa",
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py",
+      "same": true
+    },
+    {
+      "current_sha256": "502336e0ce9a1fa2bb9d0536d1911b56a202d839a3fd01a0edc9891cd38234e6",
+      "logged_sha256": "502336e0ce9a1fa2bb9d0536d1911b56a202d839a3fd01a0edc9891cd38234e6",
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_core.py",
+      "same": true
+    },
+    {
+      "current_sha256": "32ce7d64e2f150b3a9466170bcd1cbfc8b30ea424cec03fcb4dbfd2d89d28cf7",
+      "logged_sha256": "a2880b4fd4b25c27dc0f99d5357b49b7c41611f09f645b4c020aebd8524de612",
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_effects.py",
+      "same": false
+    },
+    {
+      "current_sha256": "3b6c58d90280aa65fe5c1d8b9bb58a37a15376fcff1ef71e7f248f509df52625",
+      "logged_sha256": "3b6c58d90280aa65fe5c1d8b9bb58a37a15376fcff1ef71e7f248f509df52625",
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_composition.py",
+      "same": true
+    },
+    {
+      "current_sha256": "d7174742f884a7f67ddac87b202d1059c66eb1a7c9f27e78f5d4eca8c29dcf8b",
+      "logged_sha256": "d7174742f884a7f67ddac87b202d1059c66eb1a7c9f27e78f5d4eca8c29dcf8b",
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_formal_gate.py",
+      "same": true
+    },
+    {
+      "current_sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+      "logged_sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_graph.py",
+      "same": true
+    }
+  ],
+  "run": "full-suite.log",
+  "seconds": 551.782,
+  "source_note": "ac_support_effects.py now adds two directory guards only on required formal path after this run closed; all other recorded pins are compared directly.",
+  "tests": 364
+}

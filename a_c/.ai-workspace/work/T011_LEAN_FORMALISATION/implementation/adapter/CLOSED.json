@@ -1,0 +1,52 @@
+{
+  "schema": "a_c.closed-implementation-return/1",
+  "work_item": "T-011",
+  "actor": "/root/ac_lean_contract_writer",
+  "role": "Worker",
+  "result": "candidate_ready",
+  "source_files": {
+    "a_c/build_tenants/lean/scripts/import_fixture.py": "319d0ee5a47b9bc61a25ce9003feabbf4c0da3f459f57b493ae22eb070fb694d",
+    "a_c/build_tenants/lean/tests/test_adapter.py": "0ed3d060d2bc11cf44e36f2c5d0b893bac6eee73067d899ae7dd4259d761f164",
+    "a_c/build_tenants/lean/design/IMPORTER.md": "e130881a982eabcc9df2d837f21a40d2bc714a512a8ec2026a2aff4c7b71db9b",
+    "a_c/build_tenants/lean/fixtures/stdo-3.0.2/CARRIER.json": "e77be91716c8f4a7e45ba19fabd818b88115c40872dd22d754f896892b584b8b",
+    "a_c/build_tenants/lean/fixtures/stdo-3.0.2/CUSTODY.json": "401db86d69cd252452fda1b71d03c9805c51a1f361ce7c6319246e6aaf586ef2",
+    "a_c/build_tenants/lean/fixtures/stdo-3.0.2/GRAPHIFY_EXTRACTION.json": "5a8115141979c4e5873256a816c483a8cd64f906d08555aaee73c0cf0a3e33cb",
+    "a_c/build_tenants/lean/fixtures/stdo-3.0.2/MODEL.json": "fc3114dd666218c387a64846b755a14979182f488de64ffff6a6d305a9698793",
+    "a_c/build_tenants/lean/fixtures/toy/CUSTODY.json": "1272732fc99c96473db7bb3e9e071d27349bebe6220a72ce30bc04fc27e35f1e",
+    "a_c/build_tenants/lean/fixtures/toy/MODEL.json": "a72d423a222ecd84a429e28796c93ba07ac8b79d40caf3b74af02c36029f3b0b"
+  },
+  "evidence_files": {
+    "a_c/.ai-workspace/work/T011_LEAN_FORMALISATION/implementation/adapter/ACTIVATION.json": "22b6fdc2d319d22eaf6a82fb753de63668ba447eef8241e0025cf032aff9bc3f",
+    "a_c/.ai-workspace/work/T011_LEAN_FORMALISATION/implementation/adapter/CHECKS.json": "8a34d76eee4137be14a8f880617791ac812e0aef8d0b8d25175ed69378810f2c",
+    "a_c/.ai-workspace/work/T011_LEAN_FORMALISATION/implementation/adapter/published-cli.json": "9c05776f3f65fd65cce15f5ec2e1c8f7048ade8093a40fc2cf0aa751e501c30d",
+    "a_c/.ai-workspace/work/T011_LEAN_FORMALISATION/implementation/adapter/tests.log": "c348a7c95d52f5c95d08797384f0867bc5d8fac174cbbf672d88ca726e6ba606",
+    "a_c/.ai-workspace/work/T011_LEAN_FORMALISATION/implementation/adapter/toy-cli.json": "e4322a91d69f82bfb6e3610a6ba45463240e633c122b3320b6fd9f3c59578568"
+  },
+  "checks": {
+    "adapter_test_methods": 32,
+    "adapter_tests_exit": 0,
+    "published_fixture_cli_exit": 0,
+    "toy_fixture_cli_exit": 0,
+    "git_diff_check": "passed",
+    "closed_common_source_unchanged": "passed"
+  },
+  "claims": [
+    "Pure Python stdlib adapter accepts two exact pinned model-family signatures; imports every source field and occurrence.",
+    "Published32record model reconstructs exactly and is independently recovered from both frozen carriers.",
+    "All32published singleton closures and budgets tested; toy14records cover all8families and14selector certificates.",
+    "Typed reference paths distinguish fields from array indices; full retained and excluded residual data remain visible.",
+    "Stale derived edges, malformed schemas/references/carriers, altered records, incomplete closures, unreachable extras and insufficient budgets refuse."
+  ],
+  "residuals": [
+    "Python parser/schema interpretation/importer/hash/runtime are unproved trust dependencies; bounded tests do not prove general correctness.",
+    "Source-role selection, semantic adequacy/fidelity and authority legitimacy remain F_P/external judgment.",
+    "Actual Lean compilation, kernel proof checking and complete generated data correspondence are the formal Worker deliverable.",
+    "Independent assessment and Product acceptance remain separate."
+  ],
+  "no_effects": [
+    "No Graphify or v3 source mutations",
+    "No common-contract changes after its closed return",
+    "No Git effects",
+    "No external publication or global installation"
+  ]
+}

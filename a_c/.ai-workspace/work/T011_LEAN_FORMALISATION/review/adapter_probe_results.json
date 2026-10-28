@@ -1,0 +1,169 @@
+{
+  "subject_manifest_sha256": "5f97e749909b60a58e072ea9b36ce40e5cebab2612fef39940ec98ee6d70aca5",
+  "reviewer": "/root/ac_lean_review",
+  "scope": "Python adapter only; no Lean proof or runtime assessment",
+  "results": [
+    {
+      "probe": "stdo-3.0.2: independent source mapping",
+      "result": "passed",
+      "detail": {
+        "records": 32,
+        "references": 246,
+        "edges": 47
+      }
+    },
+    {
+      "probe": "stdo-3.0.2: independent multiseed closure and residual partition",
+      "result": "passed",
+      "detail": {
+        "seeds": [
+          4,
+          7
+        ],
+        "included": [
+          2,
+          4,
+          7,
+          11,
+          15,
+          17,
+          20,
+          28,
+          29,
+          31
+        ]
+      }
+    },
+    {
+      "probe": "stdo-3.0.2: one below exact local-record budget",
+      "result": "passed",
+      "detail": "required closure needs 10 records; budget 9 refuses without truncation"
+    },
+    {
+      "probe": "stdo-3.0.2: stale full projection on equal-edge changed content",
+      "result": "passed",
+      "detail": "projection changes parent, selection, retained data or boundaries"
+    },
+    {
+      "probe": "toy: independent source mapping",
+      "result": "passed",
+      "detail": {
+        "records": 14,
+        "references": 124,
+        "edges": 29
+      }
+    },
+    {
+      "probe": "toy: independent multiseed closure and residual partition",
+      "result": "passed",
+      "detail": {
+        "seeds": [
+          11,
+          13
+        ],
+        "included": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          9,
+          10,
+          11,
+          13
+        ]
+      }
+    },
+    {
+      "probe": "toy: one below exact local-record budget",
+      "result": "passed",
+      "detail": "required closure needs 11 records; budget 10 refuses without truncation"
+    },
+    {
+      "probe": "toy: stale full projection on equal-edge changed content",
+      "result": "passed",
+      "detail": "projection changes parent, selection, retained data or boundaries"
+    },
+    {
+      "probe": "declared direction: PC03 does not acquire PC04",
+      "result": "passed",
+      "detail": {
+        "included": [
+          2,
+          15
+        ],
+        "crossing_relation": 10
+      }
+    },
+    {
+      "probe": "stale derived reverse edge",
+      "result": "passed",
+      "detail": "stale or altered imported data"
+    },
+    {
+      "probe": "excluded residual payload/standing alteration",
+      "result": "passed",
+      "detail": "projection changes parent, selection, retained data or boundaries"
+    },
+    {
+      "probe": "projection envelope authority alteration",
+      "result": "passed",
+      "detail": "projection changes parent, selection, retained data or boundaries"
+    },
+    {
+      "probe": "published original bytes equal all three tenant copies",
+      "result": "passed",
+      "detail": {
+        "MODEL.json": "fc3114dd666218c387a64846b755a14979182f488de64ffff6a6d305a9698793",
+        "CARRIER.json": "e77be91716c8f4a7e45ba19fabd818b88115c40872dd22d754f896892b584b8b",
+        "GRAPHIFY_EXTRACTION.json": "5a8115141979c4e5873256a816c483a8cd64f906d08555aaee73c0cf0a3e33cb"
+      }
+    },
+    {
+      "probe": "public CLI --seed 2 --budget 2",
+      "result": "passed",
+      "detail": {
+        "exit": 0,
+        "status": "checked",
+        "included": [
+          2,
+          15
+        ],
+        "reason": null
+      }
+    },
+    {
+      "probe": "public CLI --seed 2 --budget 1",
+      "result": "passed",
+      "detail": {
+        "exit": 2,
+        "status": "refused",
+        "included": null,
+        "reason": "required closure needs 2 records; budget 1 refuses without truncation"
+      }
+    },
+    {
+      "probe": "public CLI --toy --seed 11 --budget 10",
+      "result": "passed",
+      "detail": {
+        "exit": 0,
+        "status": "checked",
+        "included": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          9,
+          10,
+          11
+        ],
+        "reason": null
+      }
+    }
+  ]
+}

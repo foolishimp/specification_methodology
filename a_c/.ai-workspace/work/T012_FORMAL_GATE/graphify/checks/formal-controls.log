@@ -1,0 +1,51 @@
+test_actual_rendering_and_actual_view_population_are_bound (test_ac_formal_gate.FormalGateControls.test_actual_rendering_and_actual_view_population_are_bound) ... ok
+test_all_three_producers_retain_unverified_proposal_and_distinct_gate_status (test_ac_formal_gate.FormalGateControls.test_all_three_producers_retain_unverified_proposal_and_distinct_gate_status) ... ok
+test_changed_helper_cannot_execute_forged_old_identity (test_ac_formal_gate.FormalGateControls.test_changed_helper_cannot_execute_forged_old_identity) ... ok
+test_forged_success_receipt_without_effect_evidence_refused (test_ac_formal_gate.FormalGateControls.test_forged_success_receipt_without_effect_evidence_refused) ... FAIL
+test_model_acquisition_cannot_escape_authorized_source_scope (test_ac_formal_gate.FormalGateControls.test_model_acquisition_cannot_escape_authorized_source_scope) ... ok
+test_new_shadow_module_and_changed_support_manifest_refused_before_execution (test_ac_formal_gate.FormalGateControls.test_new_shadow_module_and_changed_support_manifest_refused_before_execution) ... ok
+test_optional_unselected_policy_preserves_legacy_context (test_ac_formal_gate.FormalGateControls.test_optional_unselected_policy_preserves_legacy_context) ... ok
+test_outer_timeout_stops_nested_group_with_stalled_parent_and_bounds_pipe_drain (test_ac_formal_gate.FormalGateControls.test_outer_timeout_stops_nested_group_with_stalled_parent_and_bounds_pipe_drain) ... FAIL
+test_pure_core_records_required_condition_without_compiler (test_ac_formal_gate.FormalGateControls.test_pure_core_records_required_condition_without_compiler) ... ok
+test_required_condition_cannot_be_removed (test_ac_formal_gate.FormalGateControls.test_required_condition_cannot_be_removed) ... ok
+test_selected_graphify_adapter_drift_refuses_generation_and_support_startup (test_ac_formal_gate.FormalGateControls.test_selected_graphify_adapter_drift_refuses_generation_and_support_startup) ... ok
+
+======================================================================
+FAIL: test_forged_success_receipt_without_effect_evidence_refused (test_ac_formal_gate.FormalGateControls.test_forged_success_receipt_without_effect_evidence_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_effects.py", line 73, in _directory
+    mode = cursor.lstat().st_mode
+           ^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pathlib.py", line 847, in lstat
+    return self.stat(follow_symlinks=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pathlib.py", line 840, in stat
+    return os.stat(self, follow_symlinks=follow_symlinks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/a-c-formal-control-sbqg2_s_/fixture/evidence/formal'
+
+During handling of the above exception, another exception occurred:
+
+ac_support_core.SupportError: Protected directory is absent
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_formal_gate.py", line 138, in test_forged_success_receipt_without_effect_evidence_refused
+    with self.assertRaisesRegex(core.SupportError, "no effect-produced evidence"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "no effect-produced evidence" does not match "Protected directory is absent"
+
+======================================================================
+FAIL: test_outer_timeout_stops_nested_group_with_stalled_parent_and_bounds_pipe_drain (test_ac_formal_gate.FormalGateControls.test_outer_timeout_stops_nested_group_with_stalled_parent_and_bounds_pipe_drain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_formal_gate.py", line 201, in test_outer_timeout_stops_nested_group_with_stalled_parent_and_bounds_pipe_drain
+    self.assertFalse(marker.exists())
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 11 tests in 17.074s
+
+FAILED (failures=2)

@@ -1,0 +1,32 @@
+{
+  "schema": "a_c.independent-review-activation/1",
+  "work_item": "T-012",
+  "actor": "/root/ac_lean_review",
+  "role": "Reviewer",
+  "delegating_executive": "/root",
+  "owner_authorization": "Executive records owner approval of the five-step reusable formal gate plan followed by 'ok start'.",
+  "operation": "Read existing source contracts and record independent expectations before T-012 candidate exposure; stop until an exact closed candidate is delivered.",
+  "basis": {
+    "uri": "stdo://releases/v2.5.1-rc.2/",
+    "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "calculus_sha256": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d"
+  },
+  "read_scope": [
+    "Existing a_c common Product and FR-001 through FR-007",
+    "Selected installed calculus",
+    "Existing Graphify generation/model/projection/context/preflight/dispatch source contracts",
+    "T-011 proof and integration boundary"
+  ],
+  "write_territory": [
+    "a_c/.ai-workspace/work/T012_FORMAL_GATE/review/**"
+  ],
+  "prohibited_effects": [
+    "Candidate source edits",
+    "Inspection of new T-012 implementation before its closed return",
+    "Git effects",
+    "Global/toolchain changes",
+    "Paid actor or broad qualification campaign"
+  ],
+  "later_test_cache_grant": "Not yet granted; exact additional local test territory must be delegated with candidate assessment.",
+  "claim_boundary": "Source-derived expectations are commentary, not candidate correctness, semantic admission, Product acceptance or release."
+}

@@ -1,0 +1,68 @@
+{
+  "scope": "Independent bounded full-path probes; no candidate mutation",
+  "results": [
+    {
+      "probe": "stdo-3.0.2: independent actual Lean output-to-raw-source comparison",
+      "result": "passed",
+      "detail": {
+        "projections": 32,
+        "complete_records_exercised": 32
+      }
+    },
+    {
+      "probe": "toy: independent actual Lean output-to-raw-source comparison",
+      "result": "passed",
+      "detail": {
+        "projections": 14,
+        "complete_records_exercised": 14
+      }
+    },
+    {
+      "probe": "generator-control",
+      "result": "passed",
+      "detail": {
+        "exit": 0,
+        "matched_message": "source-bound-import-checked"
+      }
+    },
+    {
+      "probe": "generated-payload-tamper",
+      "result": "passed",
+      "detail": {
+        "exit": 1,
+        "matched_message": "Generated Lean Fixture differs from exact checked source import"
+      }
+    },
+    {
+      "probe": "raw-fixture-tamper",
+      "result": "passed",
+      "detail": {
+        "exit": 1,
+        "matched_message": "raw fixture digest mismatch: MODEL.json"
+      }
+    },
+    {
+      "probe": "KernelControls.lean",
+      "result": "passed",
+      "detail": {
+        "exit": 0,
+        "matched_message": "depends on axioms"
+      }
+    },
+    {
+      "probe": "RejectedDisconnectedCycle.lean",
+      "result": "passed",
+      "detail": {
+        "exit": 1,
+        "matched_message": "is false"
+      }
+    },
+    {
+      "probe": "frozen tenant source unchanged",
+      "result": "passed",
+      "detail": {
+        "files": 29
+      }
+    }
+  ]
+}

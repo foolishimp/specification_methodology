@@ -1,0 +1,21 @@
+{
+  "candidate_failures": [],
+  "proof_or_public_command_failures": [],
+  "read_only_trace_harness_corrections": [
+    {
+      "correction": "Matched the three explicit bounded claim strings and retained proposed standing.",
+      "initial_assumption": "all producer claims use identical wording",
+      "script": "final_evidence_trace.py"
+    },
+    {
+      "correction": "Read completed author stage and exact proposal at stages[1]; matched retained proposal.",
+      "initial_assumption": "ordinary run returns proposal at root",
+      "script": "final_evidence_trace.py"
+    },
+    {
+      "correction": "List comprehension used; no candidate code affected.",
+      "initial_error": "Unparenthesized generator in sorted expression",
+      "script": "independent_result_trace.py"
+    }
+  ]
+}

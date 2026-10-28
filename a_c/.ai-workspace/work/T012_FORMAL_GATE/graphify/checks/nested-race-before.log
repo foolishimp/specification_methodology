@@ -1,0 +1,14 @@
+test_outer_timeout_stops_nested_group_with_stalled_parent_and_bounds_pipe_drain (test_ac_formal_gate.FormalGateControls.test_outer_timeout_stops_nested_group_with_stalled_parent_and_bounds_pipe_drain) ... FAIL
+
+======================================================================
+FAIL: test_outer_timeout_stops_nested_group_with_stalled_parent_and_bounds_pipe_drain (test_ac_formal_gate.FormalGateControls.test_outer_timeout_stops_nested_group_with_stalled_parent_and_bounds_pipe_drain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_formal_gate.py", line 237, in test_outer_timeout_stops_nested_group_with_stalled_parent_and_bounds_pipe_drain
+    self.fail("controlled checker descendant remains observable after cleanup")
+AssertionError: controlled checker descendant remains observable after cleanup
+
+----------------------------------------------------------------------
+Ran 1 test in 6.614s
+
+FAILED (failures=1)

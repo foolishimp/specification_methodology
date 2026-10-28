@@ -1,0 +1,83 @@
+{
+  "checked_claims": [],
+  "context_binding": null,
+  "evidence": {
+    "manifest_sha256": "6ce9519068a7588a5949127a9e2504eea349ba20e9d86a96e32a655d0d7bd73a",
+    "members": {
+      "input.json": "fc3114dd666218c387a64846b755a14979182f488de64ffff6a6d305a9698793",
+      "model.json": "577b9e5cf06638d0eb44e8241e9bbc6cf49b8341938492ef3bbced288ae485f7",
+      "replay-request.json": "3d1a995461fcb98e111ff896e2830644adda9a5ecca594f946ca0751417f5995",
+      "request.json": "f636ab13fa6a8f1823fa7885bd7788eb3cbdce4e0a53a234bd199f93c8be9c89"
+    }
+  },
+  "inputs": {
+    "input": {
+      "bytes": 223396,
+      "raw_sha256": "fc3114dd666218c387a64846b755a14979182f488de64ffff6a6d305a9698793",
+      "retained_path": "input.json"
+    },
+    "model": {
+      "canonical_sha256": "b3f97a2667c277c21417230421aca02c26b3a7b19baa598197e94f67c5439151",
+      "raw_sha256": "fc3114dd666218c387a64846b755a14979182f488de64ffff6a6d305a9698793",
+      "retained_path": "model.json"
+    }
+  },
+  "limits": [
+    "Finite declared structural model/closure/projection only; no semantic acceptance.",
+    "Python profile/parser/generator and runtime serialization remain tested trusted bridges.",
+    "Context binding is metadata; consumer must check actual delivered bytes.",
+    "Crossing relations are checked source-derived metadata, not a Lean theorem."
+  ],
+  "model": {
+    "id": "urn:stdo:3.0.2:composition-release:interpretation:1",
+    "sha256": "b3f97a2667c277c21417230421aca02c26b3a7b19baa598197e94f67c5439151"
+  },
+  "observations": {
+    "child_maxrss_native_units": 0,
+    "edges": 47,
+    "elapsed_seconds": 0.07960012508556247,
+    "limits": {
+      "max_input_bytes": 33554432,
+      "max_selections": 64,
+      "memory_mb": 4096,
+      "timeout_seconds": 90
+    },
+    "records": 32,
+    "references": 246,
+    "reuse": "none; fresh dynamic obligations; pinned established base support",
+    "stages": []
+  },
+  "reason": "Selected proof support changed/unavailable: [Errno 2] No such file or directory: '/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/profiles/proof-support-v1.json'",
+  "request_sha256": "ed0413f6036d4c51b5fa7b75997ddf210e5f522af8dd13b524ad6f17dcd6f02f",
+  "requested_claims": [
+    "imported-model-well-formedness",
+    "whole-model-source-correspondence"
+  ],
+  "runtime_identity": {
+    "pins": {
+      "AC/Closure.lean": "d8c66f511c486eeaf40393733779148843e2ce075e2540cb41259ed9b23e011f",
+      "AC/GateRuntime.lean": "de48922e956f047a7f5f1c440527f9a350dcacba5a319fa4790426b61c388570",
+      "AC/Model.lean": "943bd93abdcccb3cb084ab8e41196f8cac77629089e746c90d7da09ac90a22d5",
+      "AC/Projection.lean": "ac2a9ce8ed148400967519c724715f6ea491bceff960ed77249b5ff744692575",
+      "AC/Structure.lean": "f2d13a53ba8ac31731640a06facf78566b93d92a6dadbe4c7689e15d00c81a54",
+      "lake-manifest.json": "8ccec766188ba32a956dd142439b4f08faa877512654162ae7cd2e35c1fdda34",
+      "lakefile.toml": "68338aa894a2a54fd3f4f9f22366359cc0107ba581459b29699f03c629437fc3",
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "profiles/formal-gate-request.schema.json": "edb498b7af5dced9822055ee2e09938fffa5a22da33ea1ea9550d89dd90a233a",
+      "profiles/generation-signature-v1.json": "db4f0a4d41b575a1b06ecc75a0a56e3b4f26044830e5bff3624b2ae4f7a219a8",
+      "scripts/bootstrap.py": "7fc1038180d95d7a5c6ee8cecaea12f9f2534cc8d1af4933303c214cd5127fd7",
+      "scripts/check.py": "cad730b6de699ab2d4b2e8a7235e7b18bd28a4c8b5853e3f7838265a32a60deb",
+      "scripts/formal_gate.py": "5d32682d35d45b689d9c4f00bba042bd4bd52e3627a2967800be3d5d2a3a787d",
+      "scripts/formal_support.py": "d70890f3d929d1a2760f7ed854f36211e77efbdce52fa6b94f19c04dd83efa6e",
+      "scripts/gate_codegen.py": "ac67476f81ab84ef555339a80535612d5f4eb44555e0dcb76a52d747b69f736d",
+      "scripts/generate_fixture.py": "ae36a07ff8ae3106eca66f346cdd82eb3d476ec1b407c944ed32987273705ca4",
+      "scripts/generation_profile.py": "37cf26a15c2ccb24c847e5768bf2112f8f5311fd91ff020e47e388246a250fee",
+      "scripts/import_fixture.py": "5a63b45523dcdbf69b87f39864f28f99ee58890e70c4b3073b057fb80a864d7a",
+      "toolchain-lock.json": "ac1fc82fc9b6df1f955b6538a4c91cd9f246ae2f23a38e17e6b4ad9482a2c20b"
+    },
+    "sha256": "1d567f9e2ff38ff670e0ea5644111bb962bc4f6ce6140bdd573992188ae609be"
+  },
+  "schema": "a_c.formal-gate.result/1",
+  "selections": [],
+  "status": "refused"
+}

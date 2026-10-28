@@ -28,6 +28,25 @@ Interpretation fidelity, representation preservation, actual use, semantic
 acceptance and release are separate deciding questions. Their evidence and
 residuals remain explicit even when a mechanical check succeeds.
 
+## Formalisation
+
+[FR-001–FR-007](formalisation.md) govern tenants declaring formal definitions
+and checked proofs. They require a source-linked mathematical interpretation,
+explicit premises and trust boundaries, and a runnable first fragment for exact
+declared closure, retained-record projection and budget refusal.
+[T-011](../../.ai-workspace/tickets/active/T-011-lean-formalisation.md) selects
+the independent Lean/Mathlib realization. These obligations are capability
+specific; they do not retrospectively claim formal verification of Graphify.
+
+[FR-008–FR-014](formalisation.md#reusable-formal-verification-gate) add the
+reusable exact-subject gate selected by
+[T-012](../../.ai-workspace/tickets/active/T-012-reusable-formal-gate.md): checked
+versioned adapters for new subjects, actual supplied-view verification, portable
+evidence and proof currentness, and optional required gating through ordinary
+generation, context, preflight and dispatch. These are active construction
+requirements; qualification requires the actual integrated path and independent
+assessment, with existing semantic and operation authority retained separately.
+
 ## Deterministic support tools
 
 The additional toolset supports F_P Executives, Workers and Reviewers under
