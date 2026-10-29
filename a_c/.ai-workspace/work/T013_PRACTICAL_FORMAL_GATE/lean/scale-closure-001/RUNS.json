@@ -1,0 +1,85 @@
+{
+  "schema": "a_c.t013.scale-public-outcomes/1",
+  "runs": [
+    {
+      "name": "public-positive-002",
+      "status": "verified",
+      "reason": null,
+      "result_sha256": "1de052047cd8bdc15fd38be9cd9094e7c628df0fa209e1820c2fe99ae405d05e",
+      "manifest_sha256": "d51e57221a10dcda413870b20e84838b91e495cb38e724e28f981d1c6c85147e",
+      "outer_observation_sha256": "d5c93eb1f3b8d39473e5d171b07d07dd2ece48cd8c459aadf4d80ef39fc17913",
+      "runtime_identity": "e8cf8aa74408d6642bdbf9be3bddb224fb857de51040cbbbd30e9cd0758d1182",
+      "external_seconds": 269.82888320903294,
+      "gate_seconds": 269.57934033405036,
+      "aggregate_child_high_water_rss_bytes": 12732956672,
+      "stage_seconds": {
+        "support-pins": 3.7008843331132084,
+        "GateData": 43.63599458313547,
+        "GateLocalNames": 52.69839370902628,
+        "GateExternalNames": 45.623720332980156,
+        "GateIdentities": 28.048992374911904,
+        "GateBounds": 44.73652841593139,
+        "GateModel": 0.6627779579721391,
+        "GateViews": 6.323554666945711,
+        "dynamic-kernel-replay": 28.368402290856466,
+        "actual-runtime": 9.690666750073433,
+        "support-pins-after": 3.7597353749442846
+      },
+      "all_retained_members_rehashed": true
+    },
+    {
+      "name": "public-altered-view-001",
+      "status": "refused",
+      "reason": "Supplied Graphify view differs from actual formal result/boundary mapping",
+      "result_sha256": "2b5553d17bc689370aff45d5d408c5b67b849baa1a9792280664dc94c0cced3f",
+      "manifest_sha256": "cde7f35b6db2b79398fc009cb86f487b77ab084a3d664c0d6172e06b91307a41",
+      "outer_observation_sha256": "d565fb07f3d46d990a05d9d579ffaa0d024c511b1b632abe9d1edd1beccd2408",
+      "runtime_identity": "e8cf8aa74408d6642bdbf9be3bddb224fb857de51040cbbbd30e9cd0758d1182",
+      "external_seconds": 269.8851395419333,
+      "gate_seconds": 269.60924387490377,
+      "aggregate_child_high_water_rss_bytes": 13016973312,
+      "stage_seconds": {
+        "support-pins": 3.830407042056322,
+        "GateData": 42.225172040984035,
+        "GateLocalNames": 52.84313845797442,
+        "GateExternalNames": 46.212155875051394,
+        "GateIdentities": 29.402382916072384,
+        "GateBounds": 46.387466750107706,
+        "GateModel": 0.7237819170113653,
+        "GateViews": 6.458712124964222,
+        "dynamic-kernel-replay": 29.28815699997358,
+        "actual-runtime": 9.89530095900409
+      },
+      "all_retained_members_rehashed": true
+    },
+    {
+      "name": "public-underbudget-001",
+      "status": "refused",
+      "reason": "Insufficient record budget; verified refusal, no truncated projection",
+      "result_sha256": "7ba226f60a7e4601c7abbe387f7a98473bf8dc877ad85bdc8cdb73578d8088ed",
+      "manifest_sha256": "4545aefdceaabe635cc5ff7f0a154d0fa7f0faa1cc1ce07de69f09541504027e",
+      "outer_observation_sha256": "ae6c9780e79857c71256fd6bdd6d37ae16f514f2947e0735cab122acdcb605ab",
+      "runtime_identity": "e8cf8aa74408d6642bdbf9be3bddb224fb857de51040cbbbd30e9cd0758d1182",
+      "external_seconds": 263.819810166955,
+      "gate_seconds": 263.53259208309464,
+      "aggregate_child_high_water_rss_bytes": 12767215616,
+      "stage_seconds": {
+        "support-pins": 3.8006434170529246,
+        "GateData": 42.63249941589311,
+        "GateLocalNames": 52.836690000025555,
+        "GateExternalNames": 46.55756724998355,
+        "GateIdentities": 28.922099500196055,
+        "GateBounds": 45.173780124867335,
+        "GateModel": 0.7211111250799149,
+        "GateViews": 6.431135874940082,
+        "dynamic-kernel-replay": 28.955773416906595,
+        "actual-runtime": 1.3768806250300258,
+        "support-pins-after": 3.7782637919299304
+      },
+      "all_retained_members_rehashed": true
+    }
+  ],
+  "memory_scope": "Darwin getrusage(RUSAGE_CHILDREN) process-lifetime high-water RSS for each external invocation; not stage-attributed. Compiler -M4096 is an allocation setting, not an OS RSS cap; leanchecker has no memory flag.",
+  "request_proof_reuse": false,
+  "underbudget_actual_runtime_has_no_projection": true
+}

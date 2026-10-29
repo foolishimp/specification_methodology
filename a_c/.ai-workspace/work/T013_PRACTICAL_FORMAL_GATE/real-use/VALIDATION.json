@@ -1,0 +1,80 @@
+{
+  "candidate_report_implementation_created": false,
+  "compiler_invocations": 0,
+  "created_utc": "2026-10-29T00:19:56.399158+00:00",
+  "formal_gate_invocations": 0,
+  "git_effects": false,
+  "hidden_discriminator_families": 8,
+  "hidden_input_variants": 17,
+  "intentionally_invalid_reporting_inputs": [
+    "evaluation/inputs/H8-broken-json.json",
+    "evaluation/inputs/H8-duplicate-status.json",
+    "evaluation/inputs/H8-nested-duplicate.json",
+    "evaluation/inputs/H8-nonfinite.json",
+    "evaluation/inputs/H8-unknown-status.json",
+    "evaluation/inputs/H8-wrong-claims.json"
+  ],
+  "markdown_trailing_whitespace": [],
+  "model_invocations": 0,
+  "model_raw_unchanged": true,
+  "ordinary_json_documents_parsed": 30,
+  "projection_external_count": 19,
+  "projection_record_count": 29,
+  "projection_relation_count": 3,
+  "pure_budget_28_refused": true,
+  "pure_projection_reproduced": true,
+  "schema": "t013.real-use.preparation-validation/1",
+  "scope": "Preparation source custody, exact pure structural projection and data/whitespace checks only; no delivery or semantic qualification.",
+  "source_checks": [
+    {
+      "copy": "shared/FORMAL_GATE.md",
+      "exact_copy_valid": true,
+      "live_source_still_matches": true
+    },
+    {
+      "copy": "source/formal_gate.py",
+      "exact_copy_valid": true,
+      "live_source_still_matches": false
+    },
+    {
+      "copy": "source/actor_cli.py",
+      "exact_copy_valid": true,
+      "live_source_still_matches": true
+    },
+    {
+      "copy": "shared/examples/verified.json",
+      "exact_copy_valid": true,
+      "live_source_still_matches": true
+    },
+    {
+      "copy": "shared/examples/model-only.json",
+      "exact_copy_valid": true,
+      "live_source_still_matches": true
+    },
+    {
+      "copy": "shared/examples/budget-refusal.json",
+      "exact_copy_valid": true,
+      "live_source_still_matches": true
+    },
+    {
+      "copy": "shared/examples/view-mismatch.json",
+      "exact_copy_valid": true,
+      "live_source_still_matches": true
+    },
+    {
+      "copy": "shared/examples/malformed-model.json",
+      "exact_copy_valid": true,
+      "live_source_still_matches": true
+    },
+    {
+      "copy": "shared/examples/historical-incomplete.json",
+      "exact_copy_valid": true,
+      "live_source_still_matches": true
+    },
+    {
+      "copy": "shared/examples/authored-unsupported.json",
+      "exact_copy_valid": true,
+      "live_source_still_matches": null
+    }
+  ]
+}

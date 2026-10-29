@@ -1,0 +1,90 @@
+{
+  "final_checker_identity": null,
+  "final_checker_reason": "Scale/reuse candidate is still under construction; no predecessor identity substituted.",
+  "method_basis": {
+    "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "uri": "stdo://releases/v2.5.1-rc.2/"
+  },
+  "read_only_model": {
+    "bytes": 7399706,
+    "canonical_sha256": "691c4ab0d0993312a31e7e2371070ea4758fdf74b32862ff4d5a32d05af79fbf",
+    "external_resolutions": 1021,
+    "id": "urn:a-c:generation:0657852b6fd1fa48457c3f7d:model:2e6f0d59737b5bca00691b60",
+    "raw_sha256": "70feb48cf657bcb20231dbfffe0c2076e5e69b24aeb0f226a001a22957b7f56a",
+    "record_count": 1987,
+    "source": "a_c/applications/stdo-v3-common-35fb4824/run/repaired-proposal/model.json"
+  },
+  "records": [
+    {
+      "bytes": 10962,
+      "copy": "shared/FORMAL_GATE.md",
+      "raw_sha256": "32a4c573f2af9dbda9d73ac8fa24797687345ade870488a6d31347350b3fa79c",
+      "source": "a_c/build_tenants/lean/design/FORMAL_GATE.md",
+      "standing": "Exact public design at preparation; not a final T013 checker freeze."
+    },
+    {
+      "bytes": 24912,
+      "copy": "source/formal_gate.py",
+      "raw_sha256": "599d32cf5802f212bf9845f1453cb9ba0ba5631600177ce2406ce82770f557e8",
+      "source": "a_c/build_tenants/lean/scripts/formal_gate.py",
+      "standing": "Exact source inspected for result shape/reason mapping; read-only snapshot, not invoked or delivered as a helper solution."
+    },
+    {
+      "bytes": 21944,
+      "copy": "source/actor_cli.py",
+      "raw_sha256": "3f0bd239339e635f4e49ae89a00f0857f4672cb177a5dd2ce03f124f0b116528",
+      "source": "a_c/build_tenants/graphify/examples/fd-support/actor_cli.py",
+      "standing": "Existing transport source snapshot; not executed."
+    },
+    {
+      "bytes": 9035,
+      "copy": "shared/examples/verified.json",
+      "raw_sha256": "139e173d542e4502047188caab39d3144da9ba838321f584791ffa5fa0e8b387",
+      "source": "a_c/.ai-workspace/work/T012_FORMAL_GATE/runtime/qualification-002/carrier-with-actual-view/result.json",
+      "standing": "Genuine bounded T012 carrier and supplied-view result, retained historical checker identity."
+    },
+    {
+      "bytes": 8020,
+      "copy": "shared/examples/model-only.json",
+      "raw_sha256": "400d226d4bbcee00701a357812eeb990b31b8df99ba700996ddd6a6dcf78b5c3",
+      "source": "a_c/.ai-workspace/work/T012_FORMAL_GATE/runtime/qualification-002/new-model-only/result.json",
+      "standing": "Genuine bounded T012 model-only result; no projection claim."
+    },
+    {
+      "bytes": 8382,
+      "copy": "shared/examples/budget-refusal.json",
+      "raw_sha256": "507b9c3741451c259a7077eef0ed98cb390666f04209866f81b6afe8054f1d82",
+      "source": "a_c/.ai-workspace/work/T012_FORMAL_GATE/runtime/qualification-002/budget-refuses/result.json",
+      "standing": "Genuine bounded T012 budget refusal; checked claims do not truncate its closure."
+    },
+    {
+      "bytes": 8867,
+      "copy": "shared/examples/view-mismatch.json",
+      "raw_sha256": "fc3112787f5c5724f702e1f226be97e5ea95cc6b44f2fa742d2f84451705b13a",
+      "source": "a_c/.ai-workspace/work/T012_FORMAL_GATE/runtime/qualification-002/changed-view-refuses/result.json",
+      "standing": "Genuine bounded T012 supplied-view mismatch with partial checked claims."
+    },
+    {
+      "bytes": 1869,
+      "copy": "shared/examples/malformed-model.json",
+      "raw_sha256": "c80ea7c839ef65826fc975cabc6d750762d46ead966804876b9d730a273cde91",
+      "source": "a_c/.ai-workspace/work/T012_FORMAL_GATE/runtime/repair-001/cli-null-receipt/result.json",
+      "standing": "Genuine repaired T012 malformed-signature refusal."
+    },
+    {
+      "bytes": 133,
+      "copy": "shared/examples/historical-incomplete.json",
+      "raw_sha256": "0a71be4468919fd2c53378811898c75563c015c7f1699a5fc754e2e6169593b9",
+      "source": "a_c/.ai-workspace/work/T012_FORMAL_GATE/review/malformed-signature-001/cli.stdout",
+      "standing": "Genuine historical incomplete CLI output from a subsequently repaired defect; no claim of current defect."
+    },
+    {
+      "bytes": 224,
+      "copy": "shared/examples/authored-unsupported.json",
+      "raw_sha256": "0953f4c0a89f30ddcb76c58d876e2d2e8bc1fe91fe3e462a1539b1bdd8d9ac61",
+      "source": null,
+      "standing": "Authored contract example, not retained runtime evidence; schema/reason grounded in source/formal_gate.py."
+    }
+  ],
+  "schema": "t013.real-use.preparation-source-custody/1"
+}

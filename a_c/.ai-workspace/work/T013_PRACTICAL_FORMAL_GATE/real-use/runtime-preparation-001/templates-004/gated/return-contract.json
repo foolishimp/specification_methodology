@@ -1,0 +1,42 @@
+{
+  "authority_source": {
+    "engine": "workspace-regular-file",
+    "object": null,
+    "path": ".ai-workspace/tickets/active/T-013-practical-formal-gate.md",
+    "root": "product",
+    "selector": {
+      "lines": [
+        134,
+        210
+      ]
+    },
+    "sha256": "fbcf3edf07ae81071ed2d5864bcc7ed7ed946f524edefe17b2ff206252dfa524"
+  },
+  "carrier": "a_c.fd-support.closed-return/1",
+  "id": "t013-report-return-gated",
+  "output_slot": "final_stdout_object",
+  "proof": {
+    "predicate_ids": [],
+    "transition_sources": [
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "TASK.md",
+        "root": "prepared",
+        "selector": null,
+        "sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "gated/activation.json",
+        "root": "operator",
+        "selector": null,
+        "sha256": "ec2722074783b5eaece6cea2ef773c33dd979ba46f615f48dddc05a08477d7b4"
+      }
+    ]
+  },
+  "required_evaluations": [],
+  "role": "Worker",
+  "schema": "a_c.fd-support.return-contract/1"
+}

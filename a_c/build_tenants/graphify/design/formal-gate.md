@@ -22,7 +22,9 @@ Python executable digest, Graphify adapter digest, fixed entry digest, complete 
 and outer timeout. Generation selection and trusted support startup reject a
 changed Graphify adapter. The selected Lean identity includes every deciding Python helper,
 profile, core proof source, toolchain/Mathlib lock and the exact proof-support
-manifest. Selection must be repeated explicitly after changing that basis.
+manifest, plus the fixed local-origin selection when explicitly established.
+Selection must be repeated explicitly after changing that basis. Portable
+standalone cold fallback never relaxes this live configuration equality.
 
 Generation and support load the new Graphify bridge by compiling its exact sibling
 source bytes. They do not resolve the bridge through a module or package name or
@@ -83,6 +85,47 @@ acceptance. A gate refusal, unsupported profile or operational failure leaves an
 that does not reach assembly reports an incomplete gate. Existing calls with no
 selection preserve their prior behavior and require no Lean installation.
 
+### Selected acquisition and retained startup custody
+
+Before selected `prepare` reads a manifest or corpus member, the adapter reserves
+that checker's fixed `.cache/formal-origin-v1/` subtree and rejects overlapping
+outputs. Before any resumed checkpoint hashes manifest/chunks/corpus/upstream
+members, it reconciles the inherited plan, retained selection and any existing
+first-assemble/run override. No new resume flags or public schemas are required.
+
+For inherited selection only, fixed operator-owned `plan.json` and
+`formal-selection.json` are the narrow trusted bootstrap reads. Their regular,
+unaliasable custody is a startup precondition. The bootstrap parses selection and
+reads no plan-named subject paths; after resolving selection it guards and
+reconfirms those metadata bytes. An explicit first selection guards even those
+reads. A hosted wrapper must own run/selection choice; it cannot treat an arbitrary
+request-selected directory or rewritten selector as trusted configuration.
+
+The selected checkpoint inspects the actual retained run with a metadata-only
+scan: no file contents, symlink following, special files or multiply linked files.
+This covers later confined actor/journal acquisitions in generation, grounding
+and repair. Direct repair `verify_request` and grounding `verify_normalization`
+apply the same shared guard before their first retained request/journal read;
+selected folder/member paths remain inside the inspected run. Actual reopened
+corpus/upstream and output paths also receive the selected guard at acquisition.
+No adversarial concurrent filesystem replacement is claimed to be isolated.
+
+The reservation compares existing ancestor device/inode identity, so a Darwin
+case alias cannot read the private store. Missing reserved suffixes conservatively
+reserve their case variants. Ordinary SourceRef acquisition guards the actual
+selected target before both normal and absent-Writer returns; broad registered
+read roots remain lawful. Normal sources under those roots still work. Without
+a selected checker, generation and SourceRefs retain their prior behavior and
+perform no Lean/store lookup. The adapter reads only public selected pins, never
+origin keys. Ordinary evidence copies only authenticated public artifacts; package
+inventories must exclude the entire private origin subtree.
+
+Host administration that rewrites startup policy/selection/private state,
+deliberately chooses an unselected generation run, or directly invokes generic
+host byte/JSON utilities remains outside this mediated boundary. Internal helpers
+without selected-run context (for example repair actor-log parsing) require their
+normal guarded caller. This does not make arbitrary host file access safe.
+
 ## Context, admission and actual delivery
 
 The trusted support policy optionally contains `formal_gate`, with `checker`
@@ -117,12 +160,13 @@ apply independently, including when the proof succeeds.
 
 The effect reacquires material currentness after the potentially long proof call
 as well as before it. Dispatch and supervisor do the same immediately after their
-fresh replay, before reserving or launching the actual use.
+current exact recheck, before reserving or launching the actual use.
 
 Dispatch compares the current policy requirement, reconstructed rendering,
 acquired model bytes, selections, views and activation against the receipt.
-It checks the protected result bytes and invokes `check-evidence` for a fresh
-proof replay. The supervisor repeats this check at the actual launch boundary
+It checks the protected result bytes and invokes `check-evidence` for current
+checking, using an authenticated exact local cold establishment when available
+and fresh proof checking otherwise. The supervisor repeats this check at the actual launch boundary
 before sending the sealed rendering to Worker stdin. Neither a saved `verified`
 field nor caller-supplied JSON can substitute for these executions. Existing
 attempt reservation, uncertain-effect and retry/reconciliation behavior remains
@@ -138,6 +182,10 @@ support manifests, escaped model source paths, dropped policy requirements,
 forged success, distinct failure statuses across all three producer paths, and
 an actual timeout/descendant cleanup probe. Explicit doubles in these tests are
 unit controls, not formal qualification evidence.
+`test_env/test_ac_formal_origin_paths.py` adds synthetic path/alias, first-selection,
+inherited checkpoint, direct journal entry and live-origin pin controls. The
+selected metadata scan and two direct entry guards are the narrow T013 source
+review refinement; they do not alter grounding or repair meaning.
 
 `test_env/qualify_formal_gate.py` runs two fresh subjects through ordinary public
 generation, exercises grounded and repaired producers, and drives actual public

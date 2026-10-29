@@ -1,0 +1,154 @@
+{
+  "schema": "a_c.t013.reuse-staging-closed/1",
+  "actor": "/root/ac_scale_reuse_worker",
+  "role": "Worker",
+  "delegating_executive": "/root",
+  "closed_utc": "2026-10-29T02:22:41.157451+00:00",
+  "work_item": "T-013",
+  "result": "Staged implementation and cheap control checks complete; submitted for independent source assessment.",
+  "write_territory": "a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/**",
+  "authority_records": {
+    "ACTIVATION.json": "b62402a1a6e000cb0a946f0f0536b59fe25deac12fdcf3944c893e5c9741d2dc",
+    "GRANT-REFINEMENT.json": "a5db2f8680ff37e2ca8f010e746ca40b80b6f2d9b2232e97d86c061c08e65474",
+    "GRANT-REFINEMENT-002.json": "69168b4574939890e9166a29c8e415693387f959672192f26f71b045b2dcc5e0"
+  },
+  "predecessor_pins": {
+    "../DESIGN.md": "e1744a44a53887795aacbcf8784abd6f5a9a829ad9b9e97ebc9e83ced8f73a1e",
+    "../CLOSED.json": "15a147cfbb605cbd937746d4931fc1c00d14f6f2b3e4769365c59272e547a2ca",
+    "../revision-002/DESIGN.md": "2a0cf59bff21aafe20f28830ecaf0749b3835e547a219cde32da5f26751c5775",
+    "../../review/reuse-design-002/CLOSED.json": "2a017b576a06dec913269f7c9536bcde9d0f89bea53ecf075aba7326de7b87ef"
+  },
+  "cut": {
+    "candidate_root": "candidate/a_c",
+    "patch": "candidate.patch",
+    "patch_sha256": "cdccf9fdd55ac558f1b248c8139ac7e7372fd9e2133feaa74d81f0c1299aebc6",
+    "source_pins": "SOURCE-PINS.json",
+    "source_pins_sha256": "9f69e8559f33b4048071ea55541dd16de0dc34218d87e294ee9e0ba39cda2789",
+    "handoff": "HANDOFF.md",
+    "handoff_sha256": "4e568f5f5ef89370f5e1c35c6e3b327c9aa103be030839659455d582fc8e332b",
+    "changed_files": {
+      "build_tenants/graphify/code/ac_formal_gate.py": {
+        "before_sha256": "93c7aa262f1d7dd393a83afb4448880c7fa08031eced81539792fc9528359462",
+        "after_sha256": "d37de63f2b809e7a02d88d560b29b4900e8cda6217cfbc32e5796f40065659b8"
+      },
+      "build_tenants/graphify/code/ac_generate.py": {
+        "before_sha256": "f3b95da9a113870cf739ef108f791089b6e9b17a9b0308f2505285af9b5ced5c",
+        "after_sha256": "50967f0f5db2bac54383f896b2a47578e1cbe0536565f40d8b1f14e3b2c23bee"
+      },
+      "build_tenants/graphify/code/ac_grounding.py": {
+        "before_sha256": "0fc1f15699e5961711c38328cb06bc837d39abb36ab466a071bdcf0d4f0e3410",
+        "after_sha256": "720fee34b7078387ced46b4180c88d574dfc02de36e0bcdc34d86f49a56fe343"
+      },
+      "build_tenants/graphify/code/ac_repair.py": {
+        "before_sha256": "38cd68f9cb6be5acb80be340fdcb32d1cd0fa8f6c66e129872d6f238ba7f4ba6",
+        "after_sha256": "00e442b9a13d8aab6af888b863ab62a53701238d36fa10397ae8022a1b05575d"
+      },
+      "build_tenants/graphify/code/ac_support_core.py": {
+        "before_sha256": "e0d4998f0e5a2ecc5fea5f6ef82acb3d5d0a0049d16a392ca63cba13b672a15b",
+        "after_sha256": "024470f433a891d5ecdef3f4e08e5d8cfa5b66df16bf36270d2865d6b1450b5b"
+      },
+      "build_tenants/graphify/design/formal-gate.md": {
+        "before_sha256": "589f348e06fee2c20ffa8d4d521ad53d09f6af9792815f9531bfd3fa52c80df6",
+        "after_sha256": "9ea8ac15d8a05683e826e88da39d483ad7f661fb5a0ed35ffa16f49d4a525c2f"
+      },
+      "build_tenants/graphify/test_env/test_ac_formal_origin_paths.py": {
+        "before_sha256": null,
+        "after_sha256": "1904af74a2bc89db85e033c29831759cc10251434db9fd243018040f3a11215b"
+      },
+      "build_tenants/lean/design/FORMAL_GATE.md": {
+        "before_sha256": "06bcef62a45d8f1560bd40c8af297c120b7d8ec6d6805e877ac9af05449a0093",
+        "after_sha256": "e249ec4f9fb5bbcd9cdfe3dfc83ec9c91830e9a10fc92f4d943e4a65992e58d1"
+      },
+      "build_tenants/lean/scripts/formal_gate.py": {
+        "before_sha256": "8216c756b39f43f1f304f0dc96463472ff7082d7ad599afadbcca257e452f685",
+        "after_sha256": "f578f46afda709ea97270222507ea83eecdfe01b0bd6a56504f1693753a40831"
+      },
+      "build_tenants/lean/scripts/formal_reuse.py": {
+        "before_sha256": null,
+        "after_sha256": "819d22b902724387f96d26156f1030af30e8e4bc21c6ec3dccc165664bfd91c4"
+      },
+      "build_tenants/lean/tests/test_formal_reuse.py": {
+        "before_sha256": null,
+        "after_sha256": "f792c0a46f5dd53e400166cd748efa4060350b8c284f4b0e9fdf488c9cc6132e"
+      }
+    },
+    "baseline": "BASELINE.json",
+    "baseline_sha256": "a63ef03f48065769141fe675f7febd031f5bea4cf3e53ebf0cf7250c785546a5",
+    "baseline_refresh": "BASELINE-REFRESH.json",
+    "baseline_refresh_sha256": "a854b63f6833587421aeeb24129ec95e6fd19d10c9c19f8141f8d8aef715262c",
+    "live_baseline_files_unchanged": 38
+  },
+  "validation": {
+    "tests": {
+      "lean-final-unit.log": {
+        "sha256": "57d82b5aa8f9ec74573d2a5387363aa42495556621a1cc5ba59acb255ed1bf30",
+        "status": "PASS",
+        "tests": 19,
+        "kind": "synthetic control evidence; not actual proof qualification",
+        "skips": 0
+      },
+      "graphify-final-unit.log": {
+        "sha256": "f332a9b0965868c0ac07f786b6e02aa823fdb9b6c8df685c6d436e9510035f29",
+        "status": "PASS",
+        "tests": 10,
+        "kind": "synthetic control evidence; not actual proof qualification",
+        "skips": 0
+      },
+      "compatibility-final-unit.log": {
+        "sha256": "79a95e99ea01203b2af1a6a19318031ff2888a17e65d22bae0ce5af9a19dcf75",
+        "status": "PASS",
+        "tests": 31,
+        "kind": "synthetic control evidence; not actual proof qualification",
+        "skips": 0
+      }
+    },
+    "total_controls": 60,
+    "skips": 0,
+    "syntactic_python_files": 26,
+    "synthetic_proof_support_only": true,
+    "production_runtime_identity_acquired": false,
+    "actual_formal_qualification": false,
+    "test_private_files_remaining": []
+  },
+  "conservation": {
+    "generator_and_support": {
+      "build_tenants/lean/scripts/gate_codegen.py": "d72f34fad6dfc95c2fdb9f6772a36e046eb700f16f700c6c18472b9bb3f3e455",
+      "build_tenants/lean/scripts/formal_support.py": "20a8010b47c3d330f4ba07b398413acc9ad77bea5c5f9ecf817963b948ca98f6"
+    },
+    "Lean_sources": "No Lean theorem/runtime source file edited or copied for this staging task.",
+    "source_ownership": "Live Lean/Graphify remained untouched; original reuse design/closures preserved."
+  },
+  "boundary": {
+    "public_verify_check_evidence_signatures": "unchanged",
+    "Graphify_public_schemas_and_resume_CLI": "unchanged",
+    "setup_only_command": "init-origin with no origin/key/location argument, as approved",
+    "trusted_bootstrap": "Only operator-owned fixed plan.json and formal-selection.json before inherited selection reservation; no arbitrary request-run authentication.",
+    "direct_entry_coverage": [
+      "repair.verify_request before request.json",
+      "grounding.verify_normalization before journal.json with confinement",
+      "shared checkpoint before manifest/chunks/corpus/upstream acquisition",
+      "selected SourceRef before normal and absent Writer returns"
+    ],
+    "host_utility_exclusions": [
+      "Generic byte/JSON utilities without selected runtime/run context",
+      "Internal repair actor-log parsing requires its normal guarded verify_request/execute/verify caller",
+      "Operator policy/selection/private-store rewrites and concurrent host filesystem replacement"
+    ]
+  },
+  "excluded_effects": [
+    "live tenant writes",
+    "actual live origin read or mint",
+    "real proof-support/toolchain/object copying",
+    "actual proof/full-model/LLM actor calls",
+    "Git/index/commit/push",
+    "owner acceptance or public release"
+  ],
+  "remaining_next_grant": [
+    "independent source assessment and integration",
+    "production origin setup on final integrated identity",
+    "new actual small and full cold establishment plus exact reuse/adverse qualification",
+    "two owner-authorized matched F_P trials and independent benefit assessment",
+    "local package inventory excluding the whole production origin subtree"
+  ],
+  "stop": "Worker staging grant closed; no further mutation until separately granted."
+}

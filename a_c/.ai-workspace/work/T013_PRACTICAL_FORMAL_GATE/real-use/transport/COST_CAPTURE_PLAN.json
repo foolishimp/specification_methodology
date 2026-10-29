@@ -1,0 +1,79 @@
+{
+  "each_interval": [
+    "scope",
+    "start_monotonic_ns",
+    "end_monotonic_ns",
+    "wall_seconds",
+    "parent_interval_id",
+    "exact source artifact and pointer",
+    "completeness/gaps"
+  ],
+  "end_state": [
+    "actor launched or not",
+    "transport complete or partial",
+    "public return admission",
+    "output correctness",
+    "false refusal",
+    "input contamination",
+    "total rework within invocation",
+    "unperformed repair and remaining defect"
+  ],
+  "final_artifacts": [
+    "all workspace deliverables and raw byte hashes",
+    "immutable inputs before/after",
+    "Context/helper context.bin hashes",
+    "policy/plan/checker source pins",
+    "all public request/response/attempt/return artifacts",
+    "vendor stdout/stderr and final payload",
+    "independent assessment artifacts"
+  ],
+  "intervals": [
+    "preparation",
+    "source acquisition",
+    "context assembly",
+    "cold establishment/support",
+    "proof/kernel/runtime correspondence",
+    "reused proof/currentness",
+    "preflight",
+    "dispatch/supervision",
+    "actor",
+    "return capture",
+    "independent assessment",
+    "operator rework"
+  ],
+  "model_settings": {
+    "actual": "reported source value or unknown; never inferred from parent",
+    "requested": "same native CLI defaults with explicit sandbox/config isolation"
+  },
+  "money": {
+    "absent": "unknown; no inferred zero or price calculation",
+    "source": "only provider-reported amount with exact event pointer"
+  },
+  "schema": "t013.real-use.cost-capture-preparation/1",
+  "state": "observation plan; no measurements claimed",
+  "tokens": {
+    "fields": [
+      "input_tokens",
+      "cached_input_tokens",
+      "output_tokens",
+      "reasoning_output_tokens"
+    ],
+    "rules": [
+      "cached input is subset of input, not added again",
+      "reasoning count is subset if provider defines it; do not add speculatively",
+      "missing counters remain unknown",
+      "failed/partial invocation cost remains recorded, not discarded"
+    ],
+    "source": "actual turn.completed usage in retained vendor.stdout JSONL"
+  },
+  "tool_calls": {
+    "count_rule": "one completed item per exact id; retain failed/repeated commands; separate command/file/MCP/search/etc. kinds and unknown kinds",
+    "scope_checks": [
+      "extra actor/model invocation",
+      "network acquisition",
+      "outside-workspace access",
+      "other-arm/evaluation/private support exposure"
+    ],
+    "source": "actual JSONL item identities/types"
+  }
+}

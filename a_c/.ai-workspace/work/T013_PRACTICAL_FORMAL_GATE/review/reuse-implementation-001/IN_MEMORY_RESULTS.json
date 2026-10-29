@@ -1,0 +1,135 @@
+{
+  "actual_formal_verification": false,
+  "candidate_closure_sha256": "2cdcd1cebc7a91cdc0a4a54062a9d81676389b20e720042d22012cfd702afe45",
+  "candidate_or_origin_writes": false,
+  "compiler_or_actor_runs": false,
+  "count": 31,
+  "results": [
+    {
+      "discriminator": "exact activation closure",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "exact source pin manifest",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "exact candidate patch",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "all 41 staged source pins",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "all 38 refreshed before-source pins",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "exact eight modified and three new source members",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "declared math generator and support unchanged",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "three author test logs pinned, not rerun",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "foreign and absent origin alone preserve cold compatibility",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "changed deciding helper refuses compatibility",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "no caller-defined origin exception",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "aggregate identity cannot be refreshed incorrectly",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "canonical request preserves boolean/integer distinction",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "duplicate keys and nonfinite numbers refuse",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "manufactured hint with no private final entry does not hit",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "exact synthetic sealed envelope lookup selects original body",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "incorrect seal refuses lookup",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "self-consistent public result cannot replace authenticated body",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "malformed original result refuses: NoneType",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "malformed original result refuses: list",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "malformed original result refuses: int",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "malformed original result refuses: str",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "reuse layout resolves direct original cold body without chain",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "hypothetical review origin remains absent",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "absent protected suffix and case variant refuse before acquisition",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "output ancestor of reserved subtree refuses",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "broad registered input directory remains eligible",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "host case alias discriminator available",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "case-alias output ancestor and protected suffix refuse",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "Graphify guard independently rejects case-alias output and reserved suffix",
+      "outcome": "passed"
+    },
+    {
+      "discriminator": "Graphify broad input root remains eligible",
+      "outcome": "passed"
+    }
+  ],
+  "schema": "a_c.independent-source-discriminators/1",
+  "scope": "source hashes and extracted function definitions; in-memory synthetic envelopes and ordinary ancestor metadata only"
+}

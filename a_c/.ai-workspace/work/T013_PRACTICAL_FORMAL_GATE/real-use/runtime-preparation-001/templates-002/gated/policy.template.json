@@ -1,0 +1,770 @@
+{
+  "authority_sources": [
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": ".ai-workspace/tickets/active/T-013-practical-formal-gate.md",
+      "root": "product",
+      "selector": {
+        "lines": [
+          134,
+          210
+        ]
+      },
+      "sha256": "fbcf3edf07ae81071ed2d5864bcc7ed7ed946f524edefe17b2ff206252dfa524"
+    }
+  ],
+  "event_sinks": {
+    "events": {
+      "authority_source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": ".ai-workspace/tickets/active/T-013-practical-formal-gate.md",
+        "root": "product",
+        "selector": {
+          "lines": [
+            134,
+            210
+          ]
+        },
+        "sha256": "fbcf3edf07ae81071ed2d5864bcc7ed7ed946f524edefe17b2ff206252dfa524"
+      },
+      "consumer": "/root",
+      "directory": "events",
+      "kind": "durable-file-events",
+      "retention": "indefinite"
+    }
+  },
+  "evidence_root": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/real-use/runtime-preparation-001/execution/evidence",
+  "executors": {
+    "actor": {
+      "actor_id": "t013-report-gated-worker-001",
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/examples/fd-support/actor_cli.py",
+        "--plan",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/real-use/runtime-preparation-001/templates-002/gated/actor-plan.json",
+        "--plan-sha256",
+        "887d281747cef2f1d7913c6991ec310d1881817f99276a9efcffe07d145bb979"
+      ],
+      "cwd": "/private/tmp/T013_WORKSPACE_NOT_SELECTED/gated",
+      "dependencies": [
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/code/ac_graph.py",
+          "root": "product",
+          "selector": null,
+          "sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/code/ac_support.py",
+          "root": "product",
+          "selector": null,
+          "sha256": "f65efad15fd770075650ce0484df5b1cea14612047a82918d35fdc4f870deafa"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/code/ac_support_core.py",
+          "root": "product",
+          "selector": null,
+          "sha256": "e0d4998f0e5a2ecc5fea5f6ef82acb3d5d0a0049d16a392ca63cba13b672a15b"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/code/ac_support_effects.py",
+          "root": "product",
+          "selector": null,
+          "sha256": "5d2f4cd9ef2a450f895dad61a136756e05bc443717644268f66db127dfb684af"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/code/ac_support_composition.py",
+          "root": "product",
+          "selector": null,
+          "sha256": "3b6c58d90280aa65fe5c1d8b9bb58a37a15376fcff1ef71e7f248f509df52625"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/code/ac_formal_gate.py",
+          "root": "product",
+          "selector": null,
+          "sha256": "93c7aa262f1d7dd393a83afb4448880c7fa08031eced81539792fc9528359462"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/examples/fd-support/actor_cli.py",
+          "root": "product",
+          "selector": null,
+          "sha256": "3f0bd239339e635f4e49ae89a00f0857f4672cb177a5dd2ce03f124f0b116528"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "gated/actor-plan.json",
+          "root": "operator",
+          "selector": null,
+          "sha256": "887d281747cef2f1d7913c6991ec310d1881817f99276a9efcffe07d145bb979"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "gated/return.schema.json",
+          "root": "operator",
+          "selector": null,
+          "sha256": "d66628831533237bbb3cada3c2af34e20f2794d74f134c28db2929f1607fbffd"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "codex",
+          "root": "native",
+          "selector": null,
+          "sha256": "d8990e3ee7acfbc26f91265b12a1a83f0fee40d0e0f8f1f40a37d4ec21f499cf"
+        }
+      ],
+      "effect_scope": {
+        "cooperative": true,
+        "filesystem": "local task workspace",
+        "unknowns": [
+          "OS/provider internals and unreported retries"
+        ]
+      },
+      "environment": {
+        "PATH": "/Library/Frameworks/Python.framework/Versions/3.12/bin:/usr/bin:/bin:/opt/homebrew/bin",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "TMPDIR": "/private/tmp/T013_WORKSPACE_NOT_SELECTED/gated/scratch"
+      },
+      "executable": {
+        "path": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+        "sha256": "a7f5b535d61d1c7326824204ac80f045a97a652abb154421e2c74fcc365a3539"
+      },
+      "id": "actor",
+      "observers": [
+        {
+          "kind": "process-end"
+        }
+      ],
+      "settings": {
+        "execution_selection": {
+          "automatic_retry": false,
+          "maximum_invocations_per_arm": 1,
+          "protocol_sha256": "547a73826a8bd28721661361106d5a8e53844ca3a3a8b2a10dd5b66d7a2ae4f6",
+          "reason": "Final scale/reuse freeze and exact Executive execution selection absent.",
+          "schema": "a_c.T013.execution-selection/1",
+          "state": "pending",
+          "task_sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829"
+        },
+        "termination_grace_ms": 2000,
+        "timeout_ms": 1000000
+      },
+      "stdin_mode": "context-utf8",
+      "stdout_decoder": {
+        "decode_json_string": false,
+        "format": "json",
+        "pointer": null
+      },
+      "tools": [
+        "local-shell-files",
+        "python3-stdlib"
+      ]
+    }
+  },
+  "formal_gate": {
+    "checker": null,
+    "required_targets": [
+      "worker"
+    ]
+  },
+  "grants": {
+    "task": {
+      "admission": {
+        "allowed_override_sources": [],
+        "authority_source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": ".ai-workspace/tickets/active/T-013-practical-formal-gate.md",
+          "root": "product",
+          "selector": {
+            "lines": [
+              134,
+              210
+            ]
+          },
+          "sha256": "fbcf3edf07ae81071ed2d5864bcc7ed7ed946f524edefe17b2ff206252dfa524"
+        },
+        "mechanism_id": "product-policy-preflight/1",
+        "mechanism_source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/design/fd-support.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "36f41798dcd9259c44efe175c7f01b8df398d8b5d8d763e4442da206114482e0"
+        },
+        "required_predicates": [
+          "executive-selected"
+        ]
+      },
+      "authority_sources": [
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": ".ai-workspace/tickets/active/T-013-practical-formal-gate.md",
+          "root": "product",
+          "selector": {
+            "lines": [
+              134,
+              210
+            ]
+          },
+          "sha256": "fbcf3edf07ae81071ed2d5864bcc7ed7ed946f524edefe17b2ff206252dfa524"
+        },
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "execution-selection.json",
+          "root": "operator",
+          "selector": null,
+          "sha256": "09433184faf42ed23a332b58883e878fb8948c33196ae41935ddce653738027d"
+        }
+      ],
+      "executors": [
+        "actor"
+      ],
+      "id": "task",
+      "notification_sink": "events",
+      "operations": [
+        "contract.preflight",
+        "dispatch.start"
+      ],
+      "outcome": {
+        "id": "urn:a-c:T013:report-helper:001",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "TASK.md",
+          "root": "prepared",
+          "selector": null,
+          "sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829"
+        }
+      },
+      "preconditions": [
+        {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "execution-selection.json",
+          "root": "operator",
+          "selector": null,
+          "sha256": "09433184faf42ed23a332b58883e878fb8948c33196ae41935ddce653738027d"
+        }
+      ],
+      "principals": [
+        "executive"
+      ],
+      "targets": [
+        "worker"
+      ],
+      "territory": [
+        {
+          "kind": "file",
+          "path": "gate_report.py",
+          "root": "task"
+        },
+        {
+          "kind": "file",
+          "path": "test_gate_report.py",
+          "root": "task"
+        },
+        {
+          "kind": "file",
+          "path": "README.md",
+          "root": "task"
+        },
+        {
+          "kind": "directory",
+          "path": "support",
+          "root": "task"
+        },
+        {
+          "kind": "directory",
+          "path": "scratch",
+          "root": "task"
+        }
+      ],
+      "tools": [
+        "local-shell-files",
+        "python3-stdlib"
+      ]
+    }
+  },
+  "id": "t013-report-gated-worker-001:policy",
+  "independence_policy": null,
+  "limits": {
+    "max_attempt_ms": 1000000,
+    "max_bytes": 33554432,
+    "max_files": 4096,
+    "max_history_records": 20000,
+    "max_message_bytes": 33554432,
+    "max_output_bytes": 16777216,
+    "max_wait_ms": 1000,
+    "min_poll_ms": 100
+  },
+  "method_profile": {
+    "id": "urn:a-c:fd-support:method:claude-rc9:executive:1",
+    "sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1",
+    "source": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "build_tenants/graphify/design/fd-method-claude-rc9.json",
+      "root": "product",
+      "selector": null,
+      "sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+    }
+  },
+  "operators": {},
+  "predicates": {
+    "executive-selected": {
+      "basis": {
+        "method_profile": {
+          "id": "urn:a-c:fd-support:method:claude-rc9:executive:1",
+          "sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+        },
+        "observations": []
+      },
+      "expression": {
+        "args": [
+          {
+            "input": "executor",
+            "pointer": "/settings/execution_selection/state"
+          },
+          {
+            "literal": "selected"
+          }
+        ],
+        "op": "equals"
+      },
+      "id": "executive-selected",
+      "input_names": [
+        "executor"
+      ],
+      "limits": [
+        "Exact external selection-state guard; JSON and hashes do not authenticate the Executive."
+      ],
+      "source": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "execution-selection.json",
+        "root": "operator",
+        "selector": null,
+        "sha256": "09433184faf42ed23a332b58883e878fb8948c33196ae41935ddce653738027d"
+      },
+      "subject": {
+        "id": "urn:a-c:T013:report-helper:001",
+        "sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829"
+      }
+    }
+  },
+  "principals": {
+    "executive": {
+      "actor_id": "/root",
+      "authorship": "/root",
+      "family": "executive",
+      "operations": [
+        "tools.describe",
+        "source.read",
+        "workspace.observe",
+        "context.assemble",
+        "contract.preflight",
+        "dispatch.start",
+        "dispatch.observe",
+        "dispatch.cancel",
+        "event.wait",
+        "return.capture",
+        "return.check"
+      ],
+      "role": "Executive",
+      "role_binding": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": ".ai-workspace/tickets/active/T-013-practical-formal-gate.md",
+        "root": "product",
+        "selector": {
+          "lines": [
+            134,
+            210
+          ]
+        },
+        "sha256": "fbcf3edf07ae81071ed2d5864bcc7ed7ed946f524edefe17b2ff206252dfa524"
+      },
+      "role_transition": null
+    },
+    "worker": {
+      "actor_id": "t013-report-gated-worker-001",
+      "authorship": "t013-report-gated-worker-001",
+      "family": "codex-native-default",
+      "operations": [
+        "tools.describe",
+        "source.read"
+      ],
+      "role": "Worker",
+      "role_binding": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "gated/activation.json",
+        "root": "operator",
+        "selector": null,
+        "sha256": "ec2722074783b5eaece6cea2ef773c33dd979ba46f615f48dddc05a08477d7b4"
+      },
+      "role_transition": null
+    }
+  },
+  "product": {
+    "authority_binding": {
+      "definition_locator": "/reference_frame_bases/0/authority/6",
+      "mechanism": {
+        "id": "product-policy-preflight/1",
+        "implementation_sha256": "e0d4998f0e5a2ecc5fea5f6ef82acb3d5d0a0049d16a392ca63cba13b672a15b",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/design/fd-support.md",
+          "root": "product",
+          "selector": null,
+          "sha256": "36f41798dcd9259c44efe175c7f01b8df398d8b5d8d763e4442da206114482e0"
+        }
+      },
+      "owner_record": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": ".ai-workspace/tickets/active/T-013-practical-formal-gate.md",
+        "root": "product",
+        "selector": {
+          "lines": [
+            134,
+            210
+          ]
+        },
+        "sha256": "fbcf3edf07ae81071ed2d5864bcc7ed7ed946f524edefe17b2ff206252dfa524"
+      },
+      "result_surface": {
+        "consumer": "/root",
+        "namespace": "t013-matched-report-helper-001",
+        "root": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/real-use/runtime-preparation-001/execution/evidence"
+      },
+      "scope": {
+        "Executive": "/root",
+        "actor_calls": [
+          {
+            "actor_id": "t013-report-ungated-worker-001",
+            "arm": "ungated",
+            "backend": "actual-codex-native-cli",
+            "count": 1,
+            "role": "Worker"
+          },
+          {
+            "actor_id": "t013-report-gated-worker-001",
+            "arm": "gated",
+            "backend": "actual-codex-native-cli",
+            "count": 1,
+            "role": "Worker"
+          }
+        ],
+        "bounds": {
+          "automatic_retry": false,
+          "input_bytes": 2097152,
+          "maximum_invocations_per_arm": 1,
+          "outer_supervisor_ms": 1000000,
+          "output_bytes": 16777216,
+          "per_actor_ms": 900000,
+          "termination_grace_ms": 2000
+        },
+        "excluded": [
+          "new Product feature adoption",
+          "owner acceptance",
+          "semantic fidelity/whole-calculus qualification",
+          "release/publication",
+          "extra actor/model invocation",
+          "network acquisition",
+          "Git effects",
+          "credential inspection",
+          "private proof/origin material access"
+        ],
+        "operations": [
+          "context.assemble",
+          "contract.preflight",
+          "dispatch.start",
+          "dispatch.observe",
+          "return.capture",
+          "bounded local Worker file/shell implementation and tests inside granted task workspace"
+        ],
+        "owner_instruction": "T013 Owner instruction: ok start it; bounded matched actual-use task, no acceptance or release.",
+        "per_call_authority": "Separate exact Executive execution selection after final scale/reuse candidate freeze, pure configuration validation, current owner/source/Context checks and successful public preflight; no automatic retry.",
+        "product_definition": "urn:stdo:product-definition:a-c-implementations",
+        "protocol_sha256": "547a73826a8bd28721661361106d5a8e53844ca3a3a8b2a10dd5b66d7a2ae4f6",
+        "purpose": "Two matched bounded disposable report-helper constructions; evaluation deliverables only.",
+        "result_standing": "Worker candidate availability and test observations remain distinct from independent assessment and owner decisions.",
+        "source_setup_disposition": "This binding publishes selected task/mechanism/result scope. Actual actor calls remain contingent on a separate exact Executive execution selection and successful current public admission.",
+        "task_id": "urn:a-c:T013:report-helper:001",
+        "task_sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829",
+        "territory": "Only the separately selected fresh task workspace for that arm; inputs immutable; no other-arm/evaluator/private-support access.",
+        "work_id": "T-013"
+      }
+    },
+    "definition": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "stdo_a_c.json",
+      "root": "product",
+      "selector": null,
+      "sha256": "e3bbb4fc916f39c505a5c858a876b8bdc3e0533d4fecec23d84d5da109b1ca66"
+    },
+    "definition_id": "urn:stdo:product-definition:a-c-implementations"
+  },
+  "schema": "a_c.fd-support.policy/1",
+  "sources": {
+    "native": {
+      "kind": "workspace",
+      "path": "/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin",
+      "read_scope": [
+        {
+          "kind": "file",
+          "path": "codex"
+        }
+      ],
+      "writable": false
+    },
+    "operator": {
+      "kind": "workspace",
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/real-use/runtime-preparation-001/templates-002",
+      "read_scope": [
+        {
+          "kind": "file",
+          "path": "execution-selection.json"
+        },
+        {
+          "kind": "file",
+          "path": "ungated/activation.json"
+        },
+        {
+          "kind": "file",
+          "path": "ungated/return-contract.json"
+        },
+        {
+          "kind": "file",
+          "path": "ungated/return-instructions.json"
+        },
+        {
+          "kind": "file",
+          "path": "ungated/return-fixed-fields.json"
+        },
+        {
+          "kind": "file",
+          "path": "ungated/packet.json"
+        },
+        {
+          "kind": "file",
+          "path": "ungated/policy.shape-only.json"
+        },
+        {
+          "kind": "file",
+          "path": "ungated/return.schema.json"
+        },
+        {
+          "kind": "file",
+          "path": "ungated/policy.template.json"
+        },
+        {
+          "kind": "file",
+          "path": "ungated/context.request.json"
+        },
+        {
+          "kind": "file",
+          "path": "ungated/actor-plan.json"
+        },
+        {
+          "kind": "file",
+          "path": "gated/activation.json"
+        },
+        {
+          "kind": "file",
+          "path": "gated/return-contract.json"
+        },
+        {
+          "kind": "file",
+          "path": "gated/return-instructions.json"
+        },
+        {
+          "kind": "file",
+          "path": "gated/return-fixed-fields.json"
+        },
+        {
+          "kind": "file",
+          "path": "gated/packet.json"
+        },
+        {
+          "kind": "file",
+          "path": "gated/return.schema.json"
+        },
+        {
+          "kind": "file",
+          "path": "gated/context.request.json"
+        },
+        {
+          "kind": "file",
+          "path": "gated/actor-plan.json"
+        }
+      ],
+      "writable": false
+    },
+    "prepared": {
+      "kind": "workspace",
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/real-use",
+      "read_scope": [
+        {
+          "kind": "file",
+          "path": "TASK.md"
+        },
+        {
+          "kind": "file",
+          "path": "shared/CUSTODY.json"
+        },
+        {
+          "kind": "file",
+          "path": "shared/FORMAL_GATE.md"
+        },
+        {
+          "kind": "file",
+          "path": "shared/MODEL_SELECTION.json"
+        },
+        {
+          "kind": "file",
+          "path": "shared/examples/authored-unsupported.json"
+        },
+        {
+          "kind": "file",
+          "path": "shared/examples/budget-refusal.json"
+        },
+        {
+          "kind": "file",
+          "path": "shared/examples/historical-incomplete.json"
+        },
+        {
+          "kind": "file",
+          "path": "shared/examples/malformed-model.json"
+        },
+        {
+          "kind": "file",
+          "path": "shared/examples/model-only.json"
+        },
+        {
+          "kind": "file",
+          "path": "shared/examples/verified.json"
+        },
+        {
+          "kind": "file",
+          "path": "shared/examples/view-mismatch.json"
+        },
+        {
+          "kind": "file",
+          "path": "shared/model-view.json"
+        }
+      ],
+      "writable": false
+    },
+    "product": {
+      "kind": "workspace",
+      "path": "/Users/jim/src/apps/specification_methodology/a_c",
+      "read_scope": [
+        {
+          "kind": "file",
+          "path": ".ai-workspace/tickets/active/T-013-practical-formal-gate.md"
+        },
+        {
+          "kind": "file",
+          "path": "applications/stdo-v3-common-35fb4824/run/repaired-proposal/model.json"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/code/ac_formal_gate.py"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/code/ac_graph.py"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/code/ac_support.py"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/code/ac_support_composition.py"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/code/ac_support_core.py"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/code/ac_support_effects.py"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/design/fd-method-claude-rc9.json"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/design/fd-support.md"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/examples/fd-support/actor_cli.py"
+        },
+        {
+          "kind": "file",
+          "path": "stdo_a_c.json"
+        }
+      ],
+      "writable": false
+    },
+    "task": {
+      "kind": "workspace",
+      "path": "/private/tmp/T013_WORKSPACE_NOT_SELECTED/gated",
+      "read_scope": [
+        {
+          "kind": "directory",
+          "path": "inputs"
+        },
+        {
+          "kind": "file",
+          "path": "gate_report.py"
+        },
+        {
+          "kind": "file",
+          "path": "test_gate_report.py"
+        },
+        {
+          "kind": "file",
+          "path": "README.md"
+        },
+        {
+          "kind": "directory",
+          "path": "support"
+        },
+        {
+          "kind": "directory",
+          "path": "scratch"
+        }
+      ],
+      "writable": true
+    }
+  }
+}

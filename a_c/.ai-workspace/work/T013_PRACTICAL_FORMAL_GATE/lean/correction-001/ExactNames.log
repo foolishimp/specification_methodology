@@ -1,0 +1,9 @@
+/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/correction-001/ExactNames.lean:13:1: error: Type mismatch: After simplification, term
+  array_reconstruct nameTable ""
+ has type
+  @Eq (List String) nameTable.toList (List.map (fun i => nameTable[i]?.getD "") (List.range 1987))
+but is expected to have type
+  @Eq (List String) nameTable.toList (List.map lookupName (List.range 1987))
+'AC.array_reconstruct' depends on axioms: [propext, Quot.sound]
+'AC.GateData.names_array' does not depend on any axioms
+'AC.GateData.names_exact' depends on axioms: [sorryAx]

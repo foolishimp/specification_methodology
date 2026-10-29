@@ -1,0 +1,2093 @@
+--- a/a_c/build_tenants/graphify/code/ac_formal_gate.py
++++ b/a_c/build_tenants/graphify/code/ac_formal_gate.py
+@@ -13,6 +13,7 @@
+ from pathlib import Path
+ import re
+ import signal
++import stat
+ import subprocess
+ import sys
+ import time
+@@ -58,6 +59,89 @@
+     if not path.is_absolute() or any(p.is_symlink() for p in (path, *path.parents)) or not path.is_file():
+         raise GateError("refused", "Checker or evidence path is not an absolute regular file")
+     return path.read_bytes()
++
++
++def _unalias(path: Path) -> Path:
++    path = path.absolute()
++    for part in reversed((path, *path.parents)):
++        try:
++            info = part.lstat()
++        except FileNotFoundError:
++            continue
++        if stat.S_ISLNK(info.st_mode):
++            raise GateError("refused", "Symlink path is outside selected formal acquisition")
++    return path.resolve(strict=False)
++
++
++
++def _contains(parent, child):
++    """Containment by existing ancestor identity, including host case aliases.
++
++    Only a missing suffix has no inode. Reserve case variants of that fixed
++    suffix conservatively; do not fold or ban unrelated existing source roots.
++    """
++    anchor, suffix = parent, []
++    while True:
++        try:
++            info = anchor.stat()
++            break
++        except FileNotFoundError:
++            suffix.insert(0, anchor.name)
++            anchor = anchor.parent
++    identity = (info.st_dev, info.st_ino)
++    for candidate in (child, *child.parents):
++        try:
++            info = candidate.stat()
++        except FileNotFoundError:
++            continue
++        if (info.st_dev, info.st_ino) == identity:
++            tail = child.relative_to(candidate).parts
++            return len(tail) >= len(suffix) and tuple(p.casefold() for p in tail[:len(suffix)]) == tuple(p.casefold() for p in suffix)
++    return False
++
++
++def guard_path(config: dict[str, Any], path: Path, *, output: bool = False,
++               directory: bool = False, absent: bool = False) -> Path:
++    """Reserve actual mediated paths; broad registered source roots stay valid.
++
++    The selected checker configuration is trusted. No Lean/helper/key read is
++    needed for reservation, including before local origin setup exists.
++    """
++    path = _unalias(path)
++    protected = _unalias(Path(config["root"]) / ".cache/formal-origin-v1")
++    if _contains(protected, path) or (output and _contains(path, protected)):
++        raise GateError("refused", "Ordinary path overlaps protected formal origin material")
++    try:
++        info = path.stat()
++    except FileNotFoundError:
++        if output or absent:
++            return path
++        raise
++    if directory:
++        if not stat.S_ISDIR(info.st_mode):
++            raise GateError("refused", "Expected a regular selected directory")
++    elif not output and not stat.S_ISREG(info.st_mode):
++        raise GateError("refused", "Selected input is not a regular file")
++    if stat.S_ISREG(info.st_mode) and info.st_nlink != 1:
++        raise GateError("refused", "Multiply linked selected input/output is unsupported")
++    return path
++
++
++def read_selected(config: dict[str, Any], path: Path) -> bytes:
++    path = guard_path(config, path)
++    fd = os.open(path, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK)
++    try:
++        info = os.fstat(fd)
++        if not stat.S_ISREG(info.st_mode) or info.st_nlink != 1:
++            raise GateError("refused", "Expected singly linked selected input")
++        with os.fdopen(fd, "rb", closefd=False) as stream:
++            raw = stream.read()
++        after = os.fstat(fd)
++        if (info.st_dev, info.st_ino, info.st_size, info.st_mtime_ns) != (after.st_dev, after.st_ino, after.st_size, after.st_mtime_ns):
++            raise GateError("refused", "Selected input changed during acquisition")
++        return raw
++    finally:
++        os.close(fd)
+ 
+ 
+ def validate_config(config: Any) -> dict[str, Any]:
+@@ -264,6 +348,8 @@
+ 
+ 
+ def _result(config: dict[str, Any], process: subprocess.CompletedProcess[bytes], bundle: Path) -> dict[str, Any]:
++    guard_path(config, bundle.parent / "checker.stdout", output=True)
++    guard_path(config, bundle.parent / "checker.stderr", output=True)
+     (bundle.parent / "checker.stdout").write_bytes(process.stdout)
+     (bundle.parent / "checker.stderr").write_bytes(process.stderr)
+     result = _json(process.stdout)
+@@ -271,7 +357,7 @@
+             or result.get("status") not in EXITS or EXITS[result["status"]] != process.returncode):
+         raise GateError("incomplete", "Checker exit/result contract mismatch")
+     if result["status"] == "verified":
+-        raw = _regular(bundle / "result.json")
++        raw = read_selected(config, bundle / "result.json")
+         if _json(raw) != result or result.get("runtime_identity") != config["runtime_identity"]:
+             raise GateError("refused", "Checker result or deciding runtime identity mismatch")
+     current(config)
+@@ -281,8 +367,9 @@
+ def verify(config: dict[str, Any], raw: bytes, format: str, selections: list[dict[str, Any]],
+            views: Any, context_binding: Any, output: Path) -> dict[str, Any]:
+     """Verify exact acquired bytes and actual ordered views in a fresh directory."""
++    validate_config(config)
++    output = guard_path(config, output, output=True)
+     current(config)
+-    output = output.absolute()
+     output.mkdir(parents=True, exist_ok=False)
+     source = output / "input.json"; source.write_bytes(raw)
+     view_binding = None
+@@ -298,7 +385,7 @@
+             or result.get("selections") != selections or result.get("context_binding") != context_binding):
+         raise GateError("refused", "Checker result does not bind the actual integration request")
+     return {"result": result, "bundle": str(bundle),
+-            "result_sha256": sha(_regular(bundle / "result.json")) if (bundle / "result.json").is_file() else None,
++            "result_sha256": sha(read_selected(config, bundle / "result.json")) if (bundle / "result.json").is_file() else None,
+             "request_sha256": sha(canonical(request)), "input_sha256": sha(raw),
+             "views_sha256": None if views is None else sha(canonical(views))}
+ 
+@@ -311,10 +398,12 @@
+ 
+ 
+ def recheck(config: dict[str, Any], retained: dict[str, Any], output: Path) -> dict[str, Any]:
+-    """Fresh proof replay from a hash-bound protected receipt, never saved success."""
++    """Current exact checking; eligible local cold establishments may be reused."""
++    validate_config(config)
++    output = guard_path(config, output, output=True)
++    bundle = guard_path(config, Path(retained["bundle"]), directory=True)
+     current(config)
+-    bundle = Path(retained["bundle"])
+-    raw = _regular(bundle / "result.json")
++    raw = read_selected(config, bundle / "result.json")
+     if sha(raw) != retained["result_sha256"] or receipt({"result": _json(raw)})["result"] != receipt(retained)["result"]:
+         raise GateError("refused", "Retained checker result changed")
+     output = output.absolute(); output.mkdir(parents=True, exist_ok=False)
+--- a/a_c/build_tenants/graphify/code/ac_generate.py
++++ b/a_c/build_tenants/graphify/code/ac_generate.py
+@@ -19,6 +19,7 @@
+ import re
+ import shutil
+ import signal
++import stat
+ import subprocess
+ import sys
+ import time
+@@ -78,7 +79,7 @@
+     return sha(canonical(value))
+ 
+ 
+-def load(path: Path) -> Any:
++def _decode(raw: bytes) -> Any:
+     def pairs(items: list[tuple[str, Any]]) -> dict[str, Any]:
+         result: dict[str, Any] = {}
+         for key, value in items:
+@@ -87,7 +88,11 @@
+         return result
+     def invalid_constant(value: str) -> None:
+         raise GenerationError("non-finite JSON constant " + value)
+-    return json.loads(path.read_bytes(), object_pairs_hook=pairs, parse_constant=invalid_constant)
++    return json.loads(raw, object_pairs_hook=pairs, parse_constant=invalid_constant)
++
++
++def load(path: Path) -> Any:
++    return _decode(path.read_bytes())
+ 
+ 
+ def save(path: Path, value: Any, *, exclusive: bool = False) -> None:
+@@ -220,20 +225,124 @@
+     return modules
+ 
+ 
++def _selected_path(checker: dict[str, Any] | None, path: Path, *, write: bool = False,
++                   directory: bool = False, absent: bool = False) -> Path:
++    if checker is not None:
++        return ac_formal_gate.guard_path(checker, path, output=write, directory=directory, absent=absent)
++    return path
++
++
++def _selected_read(checker: dict[str, Any] | None, path: Path) -> bytes:
++    return ac_formal_gate.read_selected(checker, path) if checker is not None else path.read_bytes()
++
++
++def _resolve_selection(plan: dict[str, Any], retained: Any, present: bool,
++                       selected: dict[str, Any] | None) -> dict[str, Any] | None:
++    prior = plan.get("formal_checker")
++    if present:
++        require(prior is None or retained == prior, "prepared formal checker selection changed")
++        prior = retained
++    elif prior is not None:
++        raise GenerationError("prepared required formal checker selection is missing")
++    if prior is not None and selected is not None:
++        require(prior == selected, "required formal checker cannot be changed during generation")
++    result = prior if prior is not None else selected
++    if result is not None:
++        ac_formal_gate.validate_config(result)
++    return result
++
++
++def _startup(output: Path, selected: dict[str, Any] | None = None) -> tuple[dict[str, Any], dict[str, Any] | None]:
++    """Read only the operator-owned fixed startup files before reservation.
++
++    This does not authenticate arbitrary request-selected run directories. The
++    operator/wrapper owns the run and selection, under the cooperative host
++    contract. No plan-named content is read until selected guards are active.
++    """
++    if selected is not None:
++        ac_formal_gate.validate_config(selected)
++        _selected_path(selected, output, write=True, directory=True)
++    plan_path, selection_path = output / "plan.json", output / "formal-selection.json"
++    _selected_path(selected, plan_path)
++    _selected_path(selected, selection_path, absent=True)
++    plan_raw = plan_path.read_bytes()
++    present = selection_path.exists()
++    selection_raw = selection_path.read_bytes() if present else None
++    try:
++        plan = _decode(plan_raw)
++        retained = _decode(selection_raw) if present else None
++    except (ValueError, UnicodeError) as exc:
++        raise GenerationError("Malformed trusted generation startup metadata") from None
++    checker = _resolve_selection(plan, retained, present, selected)
++    if checker is not None:
++        _selected_path(checker, output, write=True, directory=True)
++        require(_selected_read(checker, plan_path) == plan_raw, "generation plan changed during startup")
++        _selected_path(checker, selection_path, absent=True)
++        if present:
++            require(_selected_read(checker, selection_path) == selection_raw, "formal selection changed during startup")
++    return plan, checker
++
++
++def _selected_run(output: Path, selected: dict[str, Any] | None = None) -> tuple[dict[str, Any], dict[str, Any] | None]:
++    """Metadata-only scan of the actual selected run, never a registered root.
++
++    Downstream retained journals/actor files stay confined to this run. Concurrent
++    host replacement after inspection is outside the cooperative host contract.
++    """
++    plan, checker = _startup(output, selected)
++    if checker is not None:
++        pending = [output]
++        while pending:
++            directory = pending.pop()
++            for path in directory.iterdir():
++                mode = path.lstat().st_mode
++                is_directory = stat.S_ISDIR(mode)
++                _selected_path(checker, path, directory=is_directory)
++                if is_directory:
++                    pending.append(path)
++    return plan, checker
++
++
++def _run_member(output: Path, path: Path) -> Path:
++    """Direct selected entry boundary before its first retained-member read."""
++    _, checker = _selected_run(output)
++    if checker is not None:
++        require(path.absolute().resolve().is_relative_to(output.absolute().resolve()), "selected member escapes retained run")
++        _selected_path(checker, path)
++    return path
++
++
++def _run_path(output: Path, path: Path, *, write: bool = False, directory: bool = False,
++              absent: bool = False) -> Path:
++    _, checker = _startup(output)
++    return _selected_path(checker, path, write=write, directory=directory, absent=absent)
++
++
++def _upstream_path(output: Path, path: Path) -> Path:
++    _run_path(output, path, directory=True)
++    _run_path(output, path / UPSTREAM_PROMPT)
++    return path
++
++
+ def prepare(corpus: Path, manifest_path: Path, output: Path, mode: str, upstream: Path | None,
+             chunk_chars: int = 120_000, graph_chars: int = 40_000, *, formal_checker: dict[str, Any] | None = None) -> dict[str, Any]:
+     require(mode in SEMANTIC_PROFILES, "unsupported generation mode")
+     require(1_000 <= chunk_chars <= 500_000 and 1_000 <= graph_chars <= 200_000, "explicit chunk/graph character envelope outside supported range")
++    if formal_checker is not None:
++        ac_formal_gate.validate_config(formal_checker)
++        _selected_path(formal_checker, output, write=True)
++        _selected_path(formal_checker, corpus, directory=True)
++        if upstream is not None:
++            _selected_path(formal_checker, upstream, directory=True)
++            _selected_path(formal_checker, upstream / UPSTREAM_PROMPT)
+     corpus = corpus.resolve(strict=True)
+-    manifest = load(manifest_path)
++    manifest = _decode(_selected_read(formal_checker, manifest_path))
+     require(isinstance(manifest, dict) and isinstance(manifest.get("files"), list) and manifest["files"], "corpus manifest requires nonempty files array")
+     subject = manifest.get("subject_id")
+     require(isinstance(subject, str) and re.match(r"^[A-Za-z][A-Za-z0-9+.-]*:[^\s]+$", subject), "manifest requires absolute subject_id")
+     upstream_record = verify_upstream(upstream) if upstream else None
+     require(mode == "direct" or upstream_record is not None, "Graphify mode requires --upstream")
+     require(not output.exists(), "output already exists; use stage commands to resume")
+-    if formal_checker is not None:
+-        ac_formal_gate.validate_config(formal_checker)
+     pinned, all_sections, file_seen = [], [], set()
+     for entry in manifest["files"]:
+         path = safe_relative(entry["path"])
+@@ -241,7 +350,7 @@
+         file_seen.add(path)
+         source = corpus / path
+         require(source.resolve(strict=True).is_relative_to(corpus), "source symlink escapes corpus")
+-        raw = source.read_bytes()
++        raw = _selected_read(formal_checker, source)
+         require(sha(raw) == entry["sha256"], f"source digest mismatch: {path}")
+         if "bytes" in entry:
+             require(len(raw) == entry["bytes"], f"source byte count mismatch: {path}")
+@@ -255,11 +364,11 @@
+     for entry in pinned:
+         destination = output / "corpus" / entry["path"]
+         destination.parent.mkdir(parents=True, exist_ok=True)
+-        destination.write_bytes((corpus / entry["path"]).read_bytes())
++        _selected_path(formal_checker, destination, write=True).write_bytes(_selected_read(formal_checker, corpus / entry["path"]))
+     save(output / "source-manifest.json", manifest, exclusive=True)
+     save(output / "chunks.json", chunks, exclusive=True)
+     if mode == "graphify":
+-        shutil.copyfile(Path(upstream_record["root"]) / UPSTREAM_PROMPT, output / "upstream-extraction-spec.md")
++        (output / "upstream-extraction-spec.md").write_bytes(_selected_read(formal_checker, Path(upstream_record["root"]) / UPSTREAM_PROMPT))
+     assets = {path.name: sha(path.read_bytes()) for path in sorted(ASSETS.iterdir()) if path.is_file()}
+     plan = {"profile": "ac.generation.plan/1", "mode": mode, "subject_id": subject,
+             "semantic_extraction_profile": SEMANTIC_PROFILES[mode],
+@@ -277,21 +386,32 @@
+     return plan
+ 
+ 
+-def checkpoint(output: Path) -> tuple[dict[str, Any], list[dict[str, Any]]]:
+-    plan = load(output / "plan.json")
++def checkpoint(output: Path, *, formal_checker: dict[str, Any] | None = None) -> tuple[dict[str, Any], list[dict[str, Any]]]:
++    plan, checker = _selected_run(output, formal_checker)
+     require(plan.get("profile") == "ac.generation.plan/1", "unknown generation plan")
+-    require(sha((output / "source-manifest.json").read_bytes()) == plan["source_manifest_sha256"], "source manifest changed")
+-    require(sha((output / "chunks.json").read_bytes()) == plan["chunks_sha256"], "chunk plan changed")
+-    require(sha(Path(__file__).read_bytes()) == plan["runner_sha256"], "runner changed since preparation; create a new plan")
+-    require(sha((HERE / "ac_graph.py").read_bytes()) == plan["codec_sha256"], "codec changed since preparation")
+-    require({path.name: sha(path.read_bytes()) for path in ASSETS.iterdir() if path.is_file()} == plan["assets"], "generation schemas/prompts changed")
++    def read(path: Path) -> bytes:
++        return _selected_read(checker, path)
++    require(sha(read(output / "source-manifest.json")) == plan["source_manifest_sha256"], "source manifest changed")
++    chunks_raw = read(output / "chunks.json")
++    require(sha(chunks_raw) == plan["chunks_sha256"], "chunk plan changed")
++    require(sha(read(Path(__file__))) == plan["runner_sha256"], "runner changed since preparation; create a new plan")
++    require(sha(read(HERE / "ac_graph.py")) == plan["codec_sha256"], "codec changed since preparation")
++    require({path.name: sha(read(path)) for path in ASSETS.iterdir() if path.is_file()} == plan["assets"], "generation schemas/prompts changed")
+     for entry in plan["files"]:
+-        source = output / "corpus" / entry["path"]
++        relative = safe_relative(entry["path"]) if checker is not None else entry["path"]
++        source = output / "corpus" / relative
++        _selected_path(checker, source)
+         require(source.resolve(strict=True).is_relative_to((output / "corpus").resolve()), "snapshot source escapes checkpoint")
+-        require(sha(source.read_bytes()) == entry["sha256"], "frozen source bytes changed: " + entry["path"])
++        require(sha(read(source)) == entry["sha256"], "frozen source bytes changed: " + relative)
+     if plan["mode"] == "graphify":
+-        require(sha((output / "upstream-extraction-spec.md").read_bytes()) == plan["upstream"]["prompt_sha256"], "upstream prompt changed")
+-    return plan, load(output / "chunks.json")
++        require(sha(read(output / "upstream-extraction-spec.md")) == plan["upstream"]["prompt_sha256"], "upstream prompt changed")
++    chunks = _decode(chunks_raw)
++    if checker is not None:
++        for chunk in chunks:
++            require("/" not in safe_relative(chunk["id"]), "selected chunk id must be one safe basename")
++            for segment in chunk["segments"]:
++                safe_relative(segment["path"])
++    return plan, chunks
+ 
+ 
+ def schema_errors(value: Any, schema: dict[str, Any], path: str = "$") -> list[str]:
+@@ -402,7 +522,7 @@
+ 
+ 
+ def extraction_prompt(plan: dict[str, Any], chunk: dict[str, Any], output: Path) -> str:
+-    reference = (output / "upstream-extraction-spec.md").read_text()
++    reference = _run_path(output, output / "upstream-extraction-spec.md").read_text()
+     body = reference.split("```", 2)[1].strip()
+     files = sorted({str((output / "corpus" / segment["path"]).resolve()) for segment in chunk["segments"]})
+     body = body.replace("FILE_LIST", "\n".join(files)).replace("CHUNK_NUM", chunk["id"]).replace("TOTAL_CHUNKS", str(len(plan["chunks"]))).replace("DEEP_MODE", "normal mode; no deep expansion")
+@@ -419,7 +539,7 @@
+     # Reserve space for the exact parent digest and final coverage counters.
+     # The final check covers the complete emitted object, including metadata.
+     selection_limit = max(0, limit - 512)
+-    graph = load(output / "discovery" / "graph.json")
++    graph = load(_run_path(output, output / "discovery" / "graph.json"))
+     paths = {segment["path"] for segment in chunk["segments"]}
+     absolute = {str((output / "corpus" / path).resolve()) for path in paths}
+     all_nodes = graph.get("nodes", [])
+@@ -594,6 +714,10 @@
+     paths = ("answer.json", "result.json", "invocation.json", "prompt.txt", "events.jsonl", "stderr.txt", "usage.json")
+     require(all((attempt / name).is_file() for name in paths), "incomplete actor evidence")
+     require(all((attempt / name).resolve().is_relative_to(output.resolve()) for name in paths), "actor evidence symlink escapes selected run")
++    for name in paths:
++        _run_path(output, attempt / name)
++    _run_path(output, attempt / "validation.json", absent=True)
++    _run_path(output, output / "actor-settings.json")
+     result = load(attempt / "result.json")
+     invocation = load(attempt / "invocation.json")
+     settings = load(output / "actor-settings.json")
+@@ -697,6 +821,8 @@
+     attempt = attempts[-1]
+     # A newer failed/unfinished retry remains visible; never fall back to an
+     # older success. Stage execution still requires explicit --retry-failed.
++    _run_path(output, attempt / "result.json", absent=True)
++    _run_path(output, attempt / "validation.json", absent=True)
+     if not (attempt / "result.json").is_file() or load(attempt / "result.json").get("status") != "completed":
+         return None
+     if not (attempt / "validation.json").is_file():
+@@ -716,10 +842,10 @@
+     if name == "author" and plan["mode"] in GRAPH_MODES:
+         require((output / "discovery" / "result.json").exists(), "build the discovery graph before authoring")
+         verify_discovery(output)
+-    modules = upstream_modules(upstream or Path(plan["upstream"]["root"])) if name == "extract" else None
++    modules = upstream_modules(_upstream_path(output, upstream or Path(plan["upstream"]["root"]))) if name == "extract" else None
+     pending = [chunk for chunk in chunks if successful_attempt(output, name, chunk) is None]
+     selected = pending[:max_chunks] if max_chunks is not None else pending
+-    settings_path = output / "actor-settings.json"
++    settings_path = _run_path(output, output / "actor-settings.json", write=True)
+     if execute and selected:
+         chosen = {key: value for key, value in (("model", model), ("model_reasoning_effort", effort)) if value is not None}
+         _, _, metadata = actor_settings(codex, chosen)
+@@ -732,6 +858,7 @@
+         prompt = extraction_prompt(plan, chunk, output) if name == "extract" else author_prompt(plan, chunk, output)
+         if not execute:
+             path = output / "prepared-prompts" / name / (chunk["id"] + ".txt")
++            _run_path(output, path, write=True)
+             path.parent.mkdir(parents=True, exist_ok=True)
+             if path.exists():
+                 require(path.read_text() == prompt, "prepared prompt changed")
+@@ -742,6 +869,7 @@
+         attempts = sorted(root.iterdir()) if root.exists() else []
+         require(not attempts or retry_failed, f"{chunk['id']}: failed/interrupted attempt preserved; explicit --retry-failed required")
+         attempt = root / f"attempt-{len(attempts) + 1:03d}"
++        _run_path(output, attempt, write=True)
+         result = run_actor(prompt, ASSETS / ("extraction.schema.json" if name == "extract" else "author.schema.json"), attempt, codex, timeout, load(settings_path)["settings"])
+         if result["status"] == "completed":
+             try:
+@@ -764,17 +892,18 @@
+     summary = {"profile": "ac.generation.stage/1", "stage": name, "mode": plan["mode"], "processed": results,
+                "completed_chunks": completed, "remaining_chunks": [chunk["id"] for chunk in chunks if chunk["id"] not in completed],
+                "status": "completed" if len(completed) == len(chunks) else "incomplete"}
+-    save(output / (name + "-status.json"), summary)
++    save(_run_path(output, output / (name + "-status.json"), write=True), summary)
+     return summary
+ 
+ 
+ def verify_discovery(output: Path) -> dict[str, Any]:
+-    record = load(output / "discovery" / "result.json")
++    record = load(_run_path(output, output / "discovery" / "result.json"))
++    _run_path(output, output / "discovery" / "coverage.json")
+     require(record.get("status") == "completed", "discovery graph incomplete")
+     mode = load(output / "plan.json")["mode"]
+     require(record.get("mode") == mode and mode in GRAPH_MODES, "discovery treatment differs from generation plan")
+     for path, expected in record["files"].items():
+-        require(sha((output / "discovery" / path).read_bytes()) == expected, "discovery graph changed: " + path)
++        require(sha(_run_member(output, output / "discovery" / path).read_bytes()) == expected, "discovery graph changed: " + path)
+     chunks = {chunk["id"]: chunk for chunk in load(output / "chunks.json")}
+     for entry in load(output / "discovery" / "coverage.json")["chunks"]:
+         require(entry["id"] in chunks, "discovery provenance names unknown source chunk")
+@@ -791,16 +920,16 @@
+ def build_discovery(output: Path, upstream: Path | None = None) -> dict[str, Any]:
+     plan, chunks = checkpoint(output)
+     require(plan["mode"] in GRAPH_MODES, "direct mode does not build a discovery graph")
+-    folder = output / "discovery"
++    folder = _run_path(output, output / "discovery", write=True)
+     if folder.exists():
+         return verify_discovery(output)
+     attempts = [successful_attempt(output, "extract", chunk) for chunk in chunks] if plan["mode"] == "graphify" else []
+     require(plan["mode"] != "graphify" or all(attempts), "every source chunk needs a validated fresh semantic extraction before graph build")
+-    modules = upstream_modules(upstream or Path(plan["upstream"]["root"]))
++    modules = upstream_modules(_upstream_path(output, upstream or Path(plan["upstream"]["root"])))
+     folder.mkdir()
+     started = time.perf_counter()
+     corpus = (output / "corpus").resolve()
+-    structural = modules["extract"].extract([corpus / entry["path"] for entry in plan["files"]], cache_root=folder, root=corpus, parallel=False)
++    structural = modules["extract"].extract([_run_path(output, corpus / entry["path"]) for entry in plan["files"]], cache_root=folder, root=corpus, parallel=False)
+     save(folder / "structural.json", structural)
+     require(not structural.get("failed_sources") and not structural.get("error"), "upstream structural extraction failed required sources; raw failure retained in discovery/structural.json")
+     require(set(structural.get("extracted_sources", [])) == {str(corpus / entry["path"]) for entry in plan["files"]}, "upstream structural dispatch did not cover exact corpus")
+@@ -1015,20 +1144,21 @@
+ 
+ 
+ def _formal_selection(output: Path, plan: dict[str, Any], selected: dict[str, Any] | None) -> dict[str, Any] | None:
+-    prior = plan.get("formal_checker")
+     path = output / "formal-selection.json"
+-    if path.exists():
+-        retained = load(path)
+-        require(prior is None or retained == prior, "prepared formal checker selection changed")
+-        prior = retained
+-    elif prior is not None:
+-        raise GenerationError("prepared required formal checker selection is missing")
+-    if prior is not None and selected is not None:
+-        require(prior == selected, "required formal checker cannot be changed during generation")
+-    result = prior if prior is not None else selected
++    if selected is not None:
++        ac_formal_gate.validate_config(selected)
++        _selected_path(selected, output, write=True, directory=True)
++        _selected_path(selected, path, absent=True)
++    present = path.exists()
++    # This fixed inherited startup locator has the same trusted custody as plan.
++    raw = path.read_bytes() if present else None
++    result = _resolve_selection(plan, _decode(raw) if present else None, present, selected)
+     if result is not None:
+-        ac_formal_gate.validate_config(result)
+-        if not path.exists():
++        _selected_path(result, output, write=True, directory=True)
++        _selected_path(result, path, write=not present)
++        if present:
++            require(_selected_read(result, path) == raw, "formal selection changed during startup")
++        else:
+             save(path, result, exclusive=True)
+     return result
+ 
+@@ -1042,7 +1172,7 @@
+                                 "scope": "exact generated model and actual carrier; no semantic acceptance"}
+         try:
+             for format in ("model", "carrier"):
+-                raw = (folder / (format + ".json")).read_bytes()
++                raw = _selected_read(formal_checker, folder / (format + ".json"))
+                 run = ac_formal_gate.verify(formal_checker, raw, format, [], None, None, folder / ("formal-" + format))
+                 gate["runs"].append(run)
+                 if run["result"]["status"] != "verified":
+@@ -1059,7 +1189,7 @@
+ 
+ def assemble(output: Path, *, allow_partial: bool = False, upstream: Path | None = None,
+              formal_checker: dict[str, Any] | None = None) -> dict[str, Any]:
+-    plan, chunks = checkpoint(output)
++    plan, chunks = checkpoint(output, formal_checker=formal_checker)
+     formal_checker = _formal_selection(output, plan, formal_checker)
+     if plan["mode"] in GRAPH_MODES:
+         verify_discovery(output)
+@@ -1077,7 +1207,7 @@
+     model_checked = ac_graph.validate(model)
+     carrier = ac_graph.materialize(model_checked)
+     require(ac_graph.decode(carrier).document == model, "proposal carrier did not preserve authored model")
+-    folder = output / ("partial-proposal" if len(answers) < len(chunks) else "proposal")
++    folder = _run_path(output, output / ("partial-proposal" if len(answers) < len(chunks) else "proposal"), write=True)
+     require(not folder.exists(), "assembled proposal already exists; preserve immutable result")
+     folder.mkdir()
+     save(folder / "model.json", model)
+@@ -1085,7 +1215,7 @@
+     save(folder / "coverage.json", coverage)
+     upstream_trial = None
+     if plan["mode"] in GRAPH_MODES:
+-        modules = upstream_modules(upstream or Path(plan["upstream"]["root"]))
++        modules = upstream_modules(_upstream_path(output, upstream or Path(plan["upstream"]["root"])))
+         graph = modules["build"].build_from_json(ac_graph.extraction(carrier), dedup=False)
+         communities = modules["cluster"].cluster(graph)
+         require(modules["export"].to_json(graph, communities, str(folder / "graph.json"), force=True, built_at_commit=UPSTREAM_COMMIT), "upstream proposal export refused")
+@@ -1161,7 +1291,7 @@
+         elif args.command == "assemble":
+             result = assemble(args.output, allow_partial=args.allow_partial, upstream=args.upstream, formal_checker=formal_checker)
+         else:
+-            plan, _ = checkpoint(args.output)
++            plan, _ = checkpoint(args.output, formal_checker=formal_checker)
+             formal_checker = _formal_selection(args.output, plan, formal_checker)
+             results = []
+             if plan["mode"] == "graphify-ac":
+--- a/a_c/build_tenants/graphify/code/ac_grounding.py
++++ b/a_c/build_tenants/graphify/code/ac_grounding.py
+@@ -228,7 +228,7 @@
+ 
+ 
+ def verify_normalization(output: Path, plan: dict[str, Any], chunk: dict[str, Any], folder: Path) -> tuple[dict[str, Any], dict[str, Any]]:
+-    journal = generation.load(folder / "journal.json")
++    journal = generation.load(generation._run_member(output, folder / "journal.json"))
+     require(journal.get("profile") == "ac.generation.grounding-normalization/1" and journal.get("chunk") == chunk["id"], "normalization proof identifies a different chunk/profile")
+     require(journal.get("status") in ("derived_validated", "validated_original"), "normalization was refused; preserve it and choose a fresh normalization directory after F_P repair")
+     require(journal.get("policy") == POLICY and journal.get("policy_sha256") == generation.digest(POLICY), "normalization policy changed")
+--- a/a_c/build_tenants/graphify/code/ac_repair.py
++++ b/a_c/build_tenants/graphify/code/ac_repair.py
+@@ -229,7 +229,7 @@
+ def verify_request(output: Path, attempt: Path, visiting: set[str] | None = None) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any], dict[str, Any]]:
+     output = output.resolve(strict=True)
+     attempt = safe_attempt(output, attempt)
+-    request = g.load(attempt / "request.json")
++    request = g.load(g._run_member(output, attempt / "request.json"))
+     require(request.get("profile") == PROFILE and request.get("chunk") == attempt.parent.name, "repair request profile/chunk differs")
+     plan, chunk = choose_chunk(output, request["chunk"])
+     require(request["code_pins"] == code_pins(), "repair/generator/grounding/codec/prompt/schema code drift")
+--- a/a_c/build_tenants/graphify/code/ac_support_core.py
++++ b/a_c/build_tenants/graphify/code/ac_support_core.py
+@@ -659,6 +659,16 @@
+     return False
+ 
+ 
++def _formal_source_path(runtime: Runtime, path: Path, *, write: bool, absent: bool = False) -> Path:
++    selected = runtime.policy.get("formal_gate")
++    if selected is not None:
++        try:
++            ac_formal_gate.guard_path(as_object(selected)["checker"], path, output=write, absent=absent)
++        except ac_formal_gate.GateError as exc:
++            raise SupportError("path_refused", str(exc)) from exc
++    return path
++
++
+ def source_path(runtime: Runtime, ref: Object, *, write: bool = False,
+                 allow_absent: bool = False) -> Path:
+     if ref.get("engine") != "workspace-regular-file":
+@@ -678,7 +688,7 @@
+             info = current.lstat()
+         except FileNotFoundError:
+             if allow_absent and index == len(member.parts) - 1:
+-                return current
++                return _formal_source_path(runtime, current, write=write, absent=True)
+             raise SupportError("source_missing", "Missing path component: " + str(current)) from None
+         if stat.S_ISLNK(info.st_mode):
+             raise SupportError("path_refused", "Symlink path components are refused")
+@@ -686,7 +696,7 @@
+             raise SupportError("path_refused", "Intermediate path is not a directory")
+     if write and (_overlaps(current, runtime.evidence_root) or _overlaps(current, runtime.policy_path)):
+         raise SupportError("role_effect_denied", "Writer target aliases protected policy/evidence")
+-    return current
++    return _formal_source_path(runtime, current, write=write)
+ 
+ 
+ def read_source(runtime: Runtime, ref: Object) -> Object:
+--- a/a_c/build_tenants/graphify/design/formal-gate.md
++++ b/a_c/build_tenants/graphify/design/formal-gate.md
+@@ -22,7 +22,9 @@
+ and outer timeout. Generation selection and trusted support startup reject a
+ changed Graphify adapter. The selected Lean identity includes every deciding Python helper,
+ profile, core proof source, toolchain/Mathlib lock and the exact proof-support
+-manifest. Selection must be repeated explicitly after changing that basis.
++manifest, plus the fixed local-origin selection when explicitly established.
++Selection must be repeated explicitly after changing that basis. Portable
++standalone cold fallback never relaxes this live configuration equality.
+ 
+ Generation and support load the new Graphify bridge by compiling its exact sibling
+ source bytes. They do not resolve the bridge through a module or package name or
+@@ -83,6 +85,47 @@
+ that does not reach assembly reports an incomplete gate. Existing calls with no
+ selection preserve their prior behavior and require no Lean installation.
+ 
++### Selected acquisition and retained startup custody
++
++Before selected `prepare` reads a manifest or corpus member, the adapter reserves
++that checker's fixed `.cache/formal-origin-v1/` subtree and rejects overlapping
++outputs. Before any resumed checkpoint hashes manifest/chunks/corpus/upstream
++members, it reconciles the inherited plan, retained selection and any existing
++first-assemble/run override. No new resume flags or public schemas are required.
++
++For inherited selection only, fixed operator-owned `plan.json` and
++`formal-selection.json` are the narrow trusted bootstrap reads. Their regular,
++unaliasable custody is a startup precondition. The bootstrap parses selection and
++reads no plan-named subject paths; after resolving selection it guards and
++reconfirms those metadata bytes. An explicit first selection guards even those
++reads. A hosted wrapper must own run/selection choice; it cannot treat an arbitrary
++request-selected directory or rewritten selector as trusted configuration.
++
++The selected checkpoint inspects the actual retained run with a metadata-only
++scan: no file contents, symlink following, special files or multiply linked files.
++This covers later confined actor/journal acquisitions in generation, grounding
++and repair. Direct repair `verify_request` and grounding `verify_normalization`
++apply the same shared guard before their first retained request/journal read;
++selected folder/member paths remain inside the inspected run. Actual reopened
++corpus/upstream and output paths also receive the selected guard at acquisition.
++No adversarial concurrent filesystem replacement is claimed to be isolated.
++
++The reservation compares existing ancestor device/inode identity, so a Darwin
++case alias cannot read the private store. Missing reserved suffixes conservatively
++reserve their case variants. Ordinary SourceRef acquisition guards the actual
++selected target before both normal and absent-Writer returns; broad registered
++read roots remain lawful. Normal sources under those roots still work. Without
++a selected checker, generation and SourceRefs retain their prior behavior and
++perform no Lean/store lookup. The adapter reads only public selected pins, never
++origin keys. Ordinary evidence copies only authenticated public artifacts; package
++inventories must exclude the entire private origin subtree.
++
++Host administration that rewrites startup policy/selection/private state,
++deliberately chooses an unselected generation run, or directly invokes generic
++host byte/JSON utilities remains outside this mediated boundary. Internal helpers
++without selected-run context (for example repair actor-log parsing) require their
++normal guarded caller. This does not make arbitrary host file access safe.
++
+ ## Context, admission and actual delivery
+ 
+ The trusted support policy optionally contains `formal_gate`, with `checker`
+@@ -117,12 +160,13 @@
+ 
+ The effect reacquires material currentness after the potentially long proof call
+ as well as before it. Dispatch and supervisor do the same immediately after their
+-fresh replay, before reserving or launching the actual use.
++current exact recheck, before reserving or launching the actual use.
+ 
+ Dispatch compares the current policy requirement, reconstructed rendering,
+ acquired model bytes, selections, views and activation against the receipt.
+-It checks the protected result bytes and invokes `check-evidence` for a fresh
+-proof replay. The supervisor repeats this check at the actual launch boundary
++It checks the protected result bytes and invokes `check-evidence` for current
++checking, using an authenticated exact local cold establishment when available
++and fresh proof checking otherwise. The supervisor repeats this check at the actual launch boundary
+ before sending the sealed rendering to Worker stdin. Neither a saved `verified`
+ field nor caller-supplied JSON can substitute for these executions. Existing
+ attempt reservation, uncertain-effect and retry/reconciliation behavior remains
+@@ -138,6 +182,10 @@
+ forged success, distinct failure statuses across all three producer paths, and
+ an actual timeout/descendant cleanup probe. Explicit doubles in these tests are
+ unit controls, not formal qualification evidence.
++`test_env/test_ac_formal_origin_paths.py` adds synthetic path/alias, first-selection,
++inherited checkpoint, direct journal entry and live-origin pin controls. The
++selected metadata scan and two direct entry guards are the narrow T013 source
++review refinement; they do not alter grounding or repair meaning.
+ 
+ `test_env/qualify_formal_gate.py` runs two fresh subjects through ordinary public
+ generation, exercises grounded and repaired producers, and drives actual public
+--- /dev/null
++++ b/a_c/build_tenants/graphify/test_env/test_ac_formal_origin_paths.py
+@@ -0,0 +1,192 @@
++"""Synthetic selected-path controls; no real origin, Lean, or actor invocation."""
++from contextlib import contextmanager
++import copy
++import os
++from pathlib import Path
++import unittest
++from unittest.mock import patch
++
++import test_ac_formal_gate as controls
++import ac_generate as generation
++import ac_grounding as grounding
++import ac_repair as repair
++import ac_support_core as core
++
++formal = core.ac_formal_gate
++
++
++class FormalOriginPathControls(unittest.TestCase):
++    setUp = controls.FormalGateControls.setUp
++    retain_control = controls.FormalGateControls.retain_control
++    identity = controls.FormalGateControls.identity
++    fixture = controls.FormalGateControls.fixture
++
++    def secret(self):
++        path = self.checker / '.cache/formal-origin-v1/origin.key'
++        path.parent.mkdir(parents=True, exist_ok=True)
++        if not path.exists():path.write_bytes(b'UNIT-SYNTHETIC-KEY-NOT-PRODUCTION')
++        return path
++
++    @contextmanager
++    def no_secret_read(self, secret):
++        original = Path.read_bytes
++        original_open = os.open
++        def checked(path):
++            if path.exists() and path.is_file() and path.stat().st_ino == secret.stat().st_ino:
++                raise AssertionError('protected synthetic bytes reached ordinary read')
++            return original(path)
++        def checked_open(path, *args, **kwargs):
++            candidate = Path(path)
++            if candidate.exists() and candidate.is_file() and candidate.stat().st_ino == secret.stat().st_ino:
++                raise AssertionError('protected synthetic bytes reached ordinary descriptor open')
++            return original_open(path, *args, **kwargs)
++        with patch.object(Path, 'read_bytes', checked), patch.object(os, 'open', checked_open):
++            yield
++
++    def prepare(self, selected=True):
++        ordinal = len(list(self.root.glob('run-*')))
++        corpus = self.root / ('corpus-' + str(ordinal)); corpus.mkdir()
++        raw = b'# Unit source\nA bounded source for acquisition controls.\n'
++        (corpus / 'rules.md').write_bytes(raw)
++        manifest = self.root / ('manifest-' + str(ordinal) + '.json')
++        generation.save(manifest, {'profile': 'ac.generation.corpus/1', 'subject_id': 'repo://unit/path-controls/',
++                                  'revision': 'unit-only', 'files': [{'path': 'rules.md', 'sha256': generation.sha(raw), 'bytes': len(raw)}]})
++        output = self.root / ('run-' + str(ordinal))
++        generation.prepare(corpus, manifest, output, 'direct', None, formal_checker=self.config if selected else None)
++        return output
++
++    def test_adapter_output_and_bundle_guard_precede_checker_or_retention(self):
++        secret = self.secret()
++        with patch.object(formal, 'current', side_effect=AssertionError('checker ran before path guard')):
++            for output in (secret, secret.parent / 'out', self.checker):
++                with self.assertRaises(formal.GateError):
++                    formal.verify(self.config, b'unit', 'model', [], None, None, output)
++            with self.assertRaises(formal.GateError):
++                formal.recheck(self.config, {'bundle': str(secret.parent)}, self.root / 'recheck')
++        self.assertFalse((secret.parent / 'out').exists())
++
++    def test_initial_manifest_and_corpus_protection_precede_read_and_copy(self):
++        secret = self.secret(); corpus = self.root / 'corpus'; corpus.mkdir()
++        with self.no_secret_read(secret):
++            with self.assertRaises(generation.ac_formal_gate.GateError):
++                generation.prepare(corpus, secret, self.root / 'bad-manifest', 'direct', None, formal_checker=self.config)
++        self.assertFalse((self.root / 'bad-manifest').exists())
++        manifest = self.root / 'manifest.json'
++        generation.save(manifest, {'subject_id': 'repo://unit/source/', 'files': [
++            {'path': '.cache/formal-origin-v1/origin.key', 'sha256': '0' * 64}]})
++        with self.no_secret_read(secret):
++            with self.assertRaises(generation.ac_formal_gate.GateError):
++                generation.prepare(self.checker, manifest, self.root / 'bad-corpus', 'direct', None, formal_checker=self.config)
++        self.assertFalse((self.root / 'bad-corpus').exists())
++
++    def test_shared_selected_checkpoint_blocks_aliases_before_every_resume_consumer(self):
++        secret = self.secret()
++        callers = [lambda p: generation.stage(p, 'author', execute=False),
++                   lambda p: generation.build_discovery(p), lambda p: generation.assemble(p),
++                   lambda p: generation.main(['run', '--output', str(p)]),
++                   lambda p: grounding.normalize(p), lambda p: grounding.assemble(p),
++                   lambda p: repair.choose_chunk(p, 'unused'), lambda p: repair.assemble(p)]
++        for index, caller in enumerate(callers):
++            for member in ('source-manifest.json', 'chunks.json', 'corpus/rules.md', 'upstream-extraction-spec.md', 'actor-journal.json'):
++                with self.subTest(caller=index, member=member):
++                    output = self.prepare()
++                    target = output / member; target.unlink(missing_ok=True); os.link(secret, target)
++                    with self.no_secret_read(secret), patch.object(generation, 'run_actor', side_effect=AssertionError('actor invoked')):
++                        if index == 3:
++                            self.assertEqual(caller(output), 2)
++                        else:
++                            with self.assertRaises(generation.ac_formal_gate.GateError):caller(output)
++                    target.unlink()
++
++    def test_metadata_scan_refuses_symlink_directories_without_following_or_reading(self):
++        output = self.prepare(); secret = self.secret()
++        (output / 'actor-alias').symlink_to(secret.parent, target_is_directory=True)
++        with self.no_secret_read(secret):
++            with self.assertRaises(generation.ac_formal_gate.GateError):generation.checkpoint(output)
++
++    def test_direct_repair_and_grounding_entries_guard_before_first_journal_read(self):
++        output = self.prepare(); secret = self.secret()
++        attempt = output / repair.REPAIRS / 'chunk-unit' / 'attempt-001'; attempt.mkdir(parents=True)
++        os.link(secret, attempt / 'request.json')
++        with self.no_secret_read(secret):
++            with self.assertRaises(generation.ac_formal_gate.GateError):repair.verify_request(output, attempt)
++        (attempt / 'request.json').unlink()
++        folder = output / 'normalization/chunk-unit'; folder.mkdir(parents=True)
++        os.link(secret, folder / 'journal.json')
++        with self.no_secret_read(secret):
++            with self.assertRaises(generation.ac_formal_gate.GateError):grounding.verify_normalization(output, {}, {}, folder)
++        (folder / 'journal.json').unlink()
++        with self.no_secret_read(secret):
++            with self.assertRaises(generation.GenerationError):grounding.verify_normalization(output, {}, {}, secret.parent)
++
++    def test_explicit_first_selection_protects_checkpoint_before_persistence(self):
++        output = self.prepare(False); secret = self.secret()
++        (output / 'chunks.json').unlink(); os.link(secret, output / 'chunks.json')
++        with self.no_secret_read(secret):
++            with self.assertRaises(generation.ac_formal_gate.GateError):generation.assemble(output, formal_checker=self.config)
++        self.assertFalse((output / 'formal-selection.json').exists())
++
++    def test_inherited_resume_and_unselected_generation_need_no_new_flags_or_lean(self):
++        selected = self.prepare()
++        with patch.object(generation.ac_formal_gate, 'current', side_effect=AssertionError('checkpoint launched Lean')):
++            plan, _ = generation.checkpoint(selected)
++            self.assertEqual(plan['formal_checker'], self.config)
++            self.assertEqual(generation.stage(selected, 'author', execute=False)['status'], 'incomplete')
++        with patch.object(generation.ac_formal_gate, 'guard_path', side_effect=AssertionError('unselected origin dependency')):
++            unselected = self.prepare(False)
++            self.assertNotIn('formal_checker', generation.checkpoint(unselected)[0])
++            self.assertEqual(generation.stage(unselected, 'author', execute=False)['status'], 'incomplete')
++
++    def test_broad_registered_root_accepts_normal_source_but_reserves_actual_targets(self):
++        secret = self.secret(); normal = self.checker / 'normal.txt'; normal.write_bytes(b'normal source')
++        fixture = self.fixture()
++        fixture.policy['sources']['broad'] = {'path': str(self.root), 'read_scope': [{'path': 'checker', 'kind': 'directory'}], 'kind': 'workspace', 'writable': True}
++        runtime = fixture.runtime()
++        ref = fixture.ref(normal, 'broad', 'checker/normal.txt')
++        self.assertEqual(core.read_source(runtime, ref)['parent_sha256'], formal.sha(normal.read_bytes()))
++        protected = dict(ref, path='checker/.cache/formal-origin-v1/origin.key')
++        with self.no_secret_read(secret):
++            with self.assertRaises(core.SupportError):core.read_source(runtime, protected)
++        absent = dict(ref, path='checker/.cache/formal-origin-v1/absent')
++        with self.assertRaises(core.SupportError):core.source_path(runtime, absent, write=True, allow_absent=True)
++        with self.assertRaises(core.SupportError):core.source_path(runtime, dict(ref, path='checker'), write=True)
++        alias = self.checker / 'alias.txt'; os.link(secret, alias)
++        with self.no_secret_read(secret):
++            with self.assertRaises(core.SupportError):core.read_source(runtime, dict(ref, path='checker/alias.txt'))
++        alias.unlink()
++        del fixture.policy['formal_gate']; runtime = fixture.runtime()
++        with patch.object(formal, 'guard_path', side_effect=AssertionError('unselected source imported Lean policy')):
++            self.assertEqual(core.source_path(runtime, ref), normal)
++
++    def test_live_graphify_origin_pin_equality_remains_strict(self):
++        selected = self.secret().with_name('selection.json'); selected.write_bytes(b'UNIT selected A')
++        config = copy.deepcopy(self.config)
++        config['runtime_identity']['pins']['.cache/formal-origin-v1/selection.json'] = formal.sha(selected.read_bytes())
++        config['runtime_identity']['sha256'] = formal.sha(formal.canonical(config['runtime_identity']['pins']))
++        selected.write_bytes(b'UNIT selected B')
++        with patch.object(formal.subprocess, 'Popen', side_effect=AssertionError('stale live configuration executed')):
++            with self.assertRaises(formal.GateError):formal.current(config)
++            selected.unlink()
++            with self.assertRaises(formal.GateError):formal.current(config)
++
++    def test_case_alias_source_and_output_refuse_before_any_read(self):
++        secret = self.secret()
++        alias = Path(str(secret).replace('/.cache/', '/.CACHE/'))
++        if not alias.exists() or not alias.samefile(secret):
++            self.skipTest('selected filesystem has no case aliases')
++        fixture = self.fixture()
++        fixture.policy['sources']['broad'] = {'path': str(self.root), 'read_scope': [{'path': 'checker', 'kind': 'directory'}], 'kind': 'workspace', 'writable': True}
++        runtime = fixture.runtime()
++        ref = {'engine': 'workspace-regular-file', 'root': 'broad', 'path': 'checker/.CACHE/formal-origin-v1/origin.key',
++               'object': None, 'sha256': '0' * 64, 'selector': None}
++        with self.no_secret_read(secret):
++            with self.assertRaises(core.SupportError):core.read_source(runtime, ref)
++            with self.assertRaises(formal.GateError):formal.read_selected(self.config, alias)
++            with self.assertRaises(formal.GateError):formal.guard_path(self.config, alias.parent / 'out', output=True)
++            with self.assertRaises(formal.GateError):formal.guard_path(self.config, self.checker.with_name('CHECKER'), output=True)
++        empty = self.root / 'empty-checker'; empty.mkdir()
++        with self.assertRaises(formal.GateError):formal.guard_path(dict(self.config, root=str(empty)), empty / '.CACHE/FORMAL-ORIGIN-V1/out', output=True)
++
++
++if __name__ == '__main__':
++    unittest.main()
+--- a/a_c/build_tenants/lean/design/FORMAL_GATE.md
++++ b/a_c/build_tenants/lean/design/FORMAL_GATE.md
+@@ -17,7 +17,8 @@
+ compiler or resource failures are incomplete, never verified. The result JSON
+ is evidence, not an authentication root: `check-evidence --bundle DIR --output
+ NEW_DIR` rebuilds the exact request from retained source and executes the trusted
+-selected verifier again; it does not trust a saved `status` field.
++selected verifier again. It can reuse an exact locally established cold proof
++under the origin contract below; a saved `status` field never establishes that origin.
+ 
+ The output directory must be fresh and cannot overlap an input path or old bundle.
+ The verifier never receives code, executable arguments, schema overrides or a
+@@ -45,7 +46,7 @@
+ ## Proof and support boundary
+ 
+ `AC.Model`, `AC.Closure` and `AC.Projection` retain their T011 definitions.
+-`AC.GateProof` is the fresh replay root, importing exactly the generic projection and structural proof libraries. `AC.GateRuntime` imports that internal proof module; JSON serialization remains compiled, pinned and output-tested outside the proof root. Each request produces full `GateData.lean`, local/external character-source modules, a global identity certificate, reference/bounds checks, concrete `GateModel.lean` and
++`AC.GateProof` is the fresh replay root, importing exactly the generic projection and structural proof libraries. `AC.GateRuntime` imports that internal proof module; JSON serialization remains compiled, pinned and output-tested outside the proof root. Each cold `verify` produces full `GateData.lean`, local/external character-source modules, a global identity certificate, reference/bounds checks, concrete `GateModel.lean` and
+ `GateViews.lean`, and a `GateRun.lean` executable. Generated proof declarations
+ use kernel reduction with `debug.skipKernelTC=false`; no native proof shortcut
+ is admitted. A second kernel replay checks the request's proof modules. The actual
+@@ -156,11 +157,11 @@
+ Both raw carrier custody and recovered canonical model identity are recorded.
+ 
+ `check-evidence` checks retained members, current deciding pins and exact replay
+-bindings, then creates a new immutable bundle with fresh concrete checks. Its
+-request digest describes that newly issued replay request. A saved success label
+-or supplied proof JSON cannot bypass execution. Portable evidence is inspectable
+-and replayable against an explicitly selected compatible verifier; it is not a
+-signed credential or a grant of operation authority.
++bindings, then creates a new immutable bundle with current checks. Its request
++digest describes that newly issued replay request. Without an eligible trusted
++local establishment it executes fresh concrete proofs. Portable evidence stays
++inspectable and replayable; a public origin hint, saved success label or supplied
++proof JSON is neither a credential nor a grant of operation authority.
+ 
+ The T012 local support used a conserved extension of an earlier
+ successful fresh establishment. That earlier manifest, successful log and exact
+@@ -183,8 +184,82 @@
+ allowed, with explicit direct imports and fresh replay of all affected tenant
+ modules. The manifest records exact changed/conserved populations and retains the
+ prior origin chain. This setup-only conservation is separate from dynamic request
+-proof reuse: every public request still generates, checks and replays its complete
+-concrete obligations.
++proof reuse: every cold `verify` still generates, checks and replays its complete
++concrete obligations. Dynamic reuse has its own completed-cold origin below.
++
++## Exact local-origin reuse
++
++`verify` always performs cold checking. Optional `check-evidence` reuse uses
++`scripts/formal_reuse.py`, included in the exact helper namespace and source
++identity. Explicit setup is `python3 -I -S -B scripts/formal_gate.py init-origin`.
++It accepts no store or key argument and creates an absent owner-only
++`.cache/formal-origin-v1/` beneath this selected tenant, with a random 32-byte
++`origin.key`, fixed `selection.json`, `entries/` and `pending/`. Ordinary gate
++requests never initialize, repair, rotate or import an origin. The public
++selection's digest is pinned at exactly
++`.cache/formal-origin-v1/selection.json`; identity output never contains key bytes.
++
++The entire fixed subtree is reserved before ordinary request/input/evidence
++reads or output creation, including when no origin is selected. Existing
++ancestors must be nonsymlinked; ordinary files must be regular and singly linked.
++Existing ancestor device/inode identity catches case aliases on Darwin. A missing
++reserved suffix conservatively reserves its case variants. Output paths cannot
++contain the protected subtree. Reads use no-follow descriptors and regular-file
++checks. This reserves actual targets, not every registered root containing them.
++The Graphify adapter independently implements that reservation without loading
++Lean or reading the private key. Ordinary artifacts and local packages must
++exclude the **whole** origin subtree, including public selection, keys, entries
++and pending material; `.cache` Git exclusion alone is not package validation.
++
++After all requested cold claims, theorem audits, kernel replay, actual output/view
++comparisons and final source/support checks complete, the gate finalizes its
++immutable result and manifest. Only that internal completed-cold path can seal an
++entry. The entry binds the original request digest, exact fixed-relocation replay
++request, all effective resource limits, full model/input/claim/source/support
++identities, actual proof module/audit population, raw result and manifest digests,
++and every retained artifact. The HMAC-SHA256 domain is fixed by the versioned
++entry schema; canonical finite JSON rejects duplicate keys. No caller-provided
++result can invoke a sign/import endpoint. Python host/API administration remains
++trusted, including direct access to private helper functions.
++
++Publication writes/fsyncs a protected pending entry, atomically inserts the public
++`local-origin.json` hint, then atomically inserts the private final entry **last**.
++No-overwrite insertion preserves existing entry meaning. Only that private final
++namespace commits eligibility; pending files and manufactured public hints never
++hit. A committed origin can exist after interruption before the caller observed
++return. The receipt establishes completed checking, not observed caller delivery.
++
++A local hit needs full runtime identity equality, the selected private key/seal,
++and exact authenticated artifact bindings. Current input import/reconstruction,
++ordered selection/certificate creation, full support checks before/after, actual
++retained runtime model/projection/view correspondence, artifact bytes and origin
++currentness all run again. Request matching uses canonical bytes, including
++boolean/integer distinctions. Reuse launches no compiler, kernel replay or Lean
++runtime and never imports retained `.olean` files. Those files are hashed as
++original proof artifacts. Current observations explicitly record zero such
++invocations and retain the original result, manifest, request and replay request
++under fixed `origin-*` names. Original proof costs remain in `origin-result.json`;
++current costs are separate. A reused bundle points directly to the same cold
++establishment, with no chain or request index.
++
++Standalone portable cold compatibility validates both complete identity
++aggregates, removes only the exact fixed origin-selection pin from copied pin
++maps, and requires every remaining pin and its population to agree. An origin-only
++or absent-origin difference forces a current cold check. Changed deciding code,
++profiles, proofs or support refuse. This exception never relaxes Graphify live
++checker-policy/receipt/runtime equality. Missing optional origin material or hint
++can cold-fallback; malformed or altered alleged local bindings refuse. Required
++support unavailability remains incomplete; unknown profiles remain unsupported.
++
++Internal elapsed time covers checking and excludes final bundle/origin publication.
++Complete public wall cost must be measured externally through process exit. The
++original and current result retain that scope and Darwin child-RSS limits. The
++4096 MB, 90-second process and 600-second public invocation bounds are unchanged.
++`tests/test_formal_reuse.py` uses isolated synthetic stores and stubbed proof/support
++processes only. It is control evidence, not real formal qualification. The added
++helper and selected origin change identity: final integrated small/full cold
++establishment and reuse qualification are required; prior successful public
++results cannot be retrospectively signed or imported.
+ 
+ Qualification observations under `T012_FORMAL_GATE/runtime/qualification-002`
+ cover two new test-authored subjects and the actual Graphify view mapping. Small
+--- a/a_c/build_tenants/lean/scripts/formal_gate.py
++++ b/a_c/build_tenants/lean/scripts/formal_gate.py
+@@ -15,7 +15,7 @@
+ 
+ ROOT=Path(__file__).resolve().parents[1]
+ SCRIPT_FILES=frozenset(name+'.py' for name in (
+-    'bootstrap','check','check_gate','formal_gate','formal_support','gate_codegen',
++    'bootstrap','check','check_gate','formal_gate','formal_reuse','formal_support','gate_codegen',
+     'generate_fixture','generation_profile','import_fixture','runtime_process'))
+ RESULT_LIMITS=[
+     'Finite declared structural model/closure/projection only; no semantic acceptance.',
+@@ -46,7 +46,7 @@
+     # deferred generation-profile import. Compile exact source bytes rather than
+     # SourceFileLoader, which may consume a cached .pyc instead of the pinned .py.
+     for name in ('generation_profile','import_fixture','runtime_process',
+-                 'formal_support','generate_fixture','check','gate_codegen'):
++                 'formal_reuse','formal_support','generate_fixture','check','gate_codegen'):
+         path=ROOT/'scripts'/(name+'.py');raw=path.read_bytes()
+         module=types.ModuleType(name);module.__file__=str(path);module.__package__=''
+         sys.modules[name]=module
+@@ -68,6 +68,7 @@
+ import import_fixture as bridge
+ from generation_profile import ProfileError,validate_generation_profile
+ import formal_support as support
++import formal_reuse as reuse
+ import runtime_process
+ from gate_codegen import (data_source,name_source,name_contract_names,identities_source,
+                           bounds_source,model_proof,identity_contract_names,views_source,RUNNER)
+@@ -88,8 +89,7 @@
+ def read_evidence_json(path):
+     # Timing observations are ordinary finite JSON numbers. They are not part
+     # of the integer-only subject grammar imported into Lean.
+-    def invalid_constant(value):raise ValueError('nonfinite evidence number: '+value)
+-    return json.loads(Path(path).read_text(encoding='utf-8'),object_pairs_hook=bridge._pairs,parse_constant=invalid_constant)
++    return reuse.decode(reuse.read(path))
+ def write_json(path,value):
+     with Path(path).open('x',encoding='utf-8') as f:f.write(json.dumps(value,ensure_ascii=False,sort_keys=True,indent=2)+'\n')
+ 
+@@ -98,6 +98,8 @@
+     paths={ROOT/'toolchain-lock.json',ROOT/'lake-manifest.json',ROOT/'lakefile.toml',ROOT/'lean-toolchain'}
+     paths.update((ROOT/'scripts').glob('*.py'));paths.update((ROOT/'profiles').glob('*.json'))
+     paths.update(ROOT/f'AC/{name}.lean' for name in support.CORE)
++    selected=reuse.selection()
++    if selected is not None:paths.add(ROOT/reuse.ORIGIN_SELECTION_PIN)
+     pins={str(p.relative_to(ROOT)):support.sha(p) for p in sorted(paths)}
+     if any(pins.get(path)!=h for path,h in _CLI_HELPER_SOURCES.items()):
+         raise ScriptNamespaceError('Selected helper source changed after exact-file loading')
+@@ -164,7 +166,11 @@
+     return found
+ 
+ def verify(request,output_dir,limits=None,*,base_dir=None):
+-    started=time.monotonic();limits=DEFAULT_LIMITS|dict(limits or {});out=Path(output_dir).absolute();created=False
++    """Always cold; optional local establishment follows complete actual success."""
++    return _verify(request,output_dir,limits,base_dir=base_dir)
++
++def _verify(request,output_dir,limits=None,*,base_dir=None,established=None,reuse_unavailable=None):
++    started=time.monotonic();limits=DEFAULT_LIMITS|dict(limits or {});out=Path(output_dir).absolute();created=False;origin=None;completed=False
+     result={'schema':'a_c.formal-gate.result/1','status':'incomplete','reason':None,'model':None,
+       'request_sha256':digest(request),'inputs':{},'selections':request.get('selections') if isinstance(request,dict) else None,
+       'context_binding':request.get('context_binding') if isinstance(request,dict) else None,
+@@ -172,7 +178,10 @@
+       'evidence':{'manifest_sha256':None,'members':{}},'observations':{'stages':[]},
+       'limits':list(RESULT_LIMITS)}
+     try:
++        acquired_at=time.monotonic()
+         validate_request(request)
++        if set(limits)!=set(DEFAULT_LIMITS) or any(type(v) is not int or v<1 for v in limits.values()):fail('refused','Malformed resource limits')
++        reuse.guard(out,output=True)
+         base=Path(base_dir or Path.cwd())
+         def source_path(binding):
+             p=Path(binding['path']);return p if p.is_absolute() else base/p
+@@ -180,7 +189,7 @@
+         if out.exists() or out.is_symlink():fail('refused','Evidence output already exists; no overwrite')
+         for p in sources:
+             if out.resolve()==p.resolve() or p.resolve().is_relative_to(out.resolve()):fail('refused','Evidence output overlaps an input')
+-            if p.is_symlink():fail('refused','Input symlinks are unsupported')
++            reuse.guard(p)
+         out.mkdir(parents=True,exist_ok=False);created=True
+         write_json(out/'request.json',request)
+         replay=copy.deepcopy(request)
+@@ -189,8 +198,7 @@
+             if binding is None:continue
+             p=source_path(binding)
+             try:
+-                if p.stat().st_size>limits['max_input_bytes']:fail('incomplete','Input exceeds selected byte resource limit')
+-                raw=p.read_bytes()
++                raw=reuse.read(p,max_bytes=limits['max_input_bytes'])
+             except OSError as e:fail('incomplete','Required input unavailable: '+str(e))
+             if hashlib.sha256(raw).hexdigest()!=binding['raw_sha256']:fail('refused','Raw input digest mismatch: '+key)
+             (out/name).write_bytes(raw);replay[key]['path']=name
+@@ -222,45 +230,88 @@
+         if request['supplied_views']:result['requested_claims']+=['supplied-graphify-view-correspondence']
+         result['observations'].update(records=len(imported['records']),references=len(imported['references']),edges=len(imported['edges']),reuse='none; fresh dynamic obligations; pinned established base support',
+             execution='projectWithProof with exact freshly checked model/closure premises; per-selection equality to unchanged project is kernel-replayed; the raw checker is not reevaluated')
++        result['observations']['stages'].append({'stage':'acquire-import-reconstruct','seconds':time.monotonic()-acquired_at})
+         initial=runtime_identity();result['runtime_identity']=initial
++        if reuse_unavailable is not None:result['observations']['reuse_unavailable']=reuse_unavailable
+         t=time.monotonic()
+         try:result['observations']['support']=support.check()
+         except OSError as e:fail('incomplete','Selected proof support unavailable: '+str(e))
+         except (ValueError,KeyError) as e:fail('refused','Selected proof support changed: '+str(e))
+         result['observations']['stages'].append({'stage':'support-pins','seconds':time.monotonic()-t})
++        t=time.monotonic()
+         names={r['record']['id']:r['index'] for r in imported['records']};cases=[]
+         for selection in request['selections']:
+             if any(s not in names for s in selection['seeds']):fail('refused','Selection names a nonlocal seed')
+             c=bridge.closure_certificate(imported,[names[s] for s in selection['seeds']])
+             c['effective_budget']=c['required_count'] if selection['budget_records'] is None else selection['budget_records'];cases.append(c)
+         write_json(out/'certificates.json',cases)
+-        for name,source in {'GateData':data_source(imported,raw_model_sha),
+-                            'GateLocalNames':name_source(imported),'GateExternalNames':name_source(imported,True),
+-                            'GateIdentities':identities_source(imported),'GateBounds':bounds_source(imported),
+-                            'GateModel':model_proof(imported),'GateViews':views_source(cases),'GateRun':RUNNER}.items():(out/(name+'.lean')).write_text(source)
+-        prefix,env,_=support.proof_environment(out)
+-        def run(command,label):
+-            start=time.monotonic();log=out/(label+'.log')
+-            with log.open('wb') as f:
+-                try:r=runtime_process.run(command,cwd=ROOT,env=env,stdout=f,timeout=limits['timeout_seconds'])
+-                except subprocess.TimeoutExpired:fail('incomplete',label+' exceeded selected time limit')
+-                except (runtime_process.CleanupUnresolved,InterruptedError) as e:fail('incomplete',label+': '+str(e))
+-            elapsed=time.monotonic()-start
+-            result['observations']['stages'].append({'stage':label,'seconds':elapsed,'exit_code':r.returncode})
+-            if r.returncode:fail('incomplete',label+' did not complete successfully; diagnostic retained')
+-            return log.read_text()
+-        for name in ('GateData','GateLocalNames','GateExternalNames','GateIdentities','GateBounds','GateModel','GateViews'):
+-            log=run([str(prefix/'bin/lean'),'-j','1','-M',str(limits['memory_mb']),'-R',str(out),'-o',str(out/(name+'.olean')),str(out/(name+'.lean'))],name)
+-            if name=='GateLocalNames':_audit(log,name_contract_names(imported,False))
+-            elif name=='GateExternalNames':_audit(log,name_contract_names(imported,True))
+-            elif name=='GateIdentities':_audit(log,identity_contract_names(imported))
+-            elif name=='GateBounds':_audit(log,['AC.GateData.edgeBounds','AC.GateData.refBounds'] if len(imported['records'])>256 else [])
+-            elif name=='GateModel':_audit(log,['AC.GateData.model_checked'])
+-            elif name=='GateViews':_audit(log,[f'AC.GateData.{p}{i}' for i in range(len(cases)) for p in ('checked','set','reachability','result','execution_matches_project')])
+-        # Newly elaborated generated declarations are already kernel-checked with
+-        # skipKernelTC=false. Replay only this request's proof declarations.
+-        run([str(prefix/'bin/leanchecker'),'GateLocalNames','GateExternalNames','GateIdentities','GateBounds','GateModel','GateViews'],'dynamic-kernel-replay')
+-        log=run([str(prefix/'bin/lean'),'-j','1','-M',str(limits['memory_mb']),'--run',str(out/'GateRun.lean')],'actual-runtime')
++        result['observations']['stages'].append({'stage':'current-certificates','seconds':time.monotonic()-t})
++        if established is None:
++            for name,source in {'GateData':data_source(imported,raw_model_sha),
++                                'GateLocalNames':name_source(imported),'GateExternalNames':name_source(imported,True),
++                                'GateIdentities':identities_source(imported),'GateBounds':bounds_source(imported),
++                                'GateModel':model_proof(imported),'GateViews':views_source(cases),'GateRun':RUNNER}.items():(out/(name+'.lean')).write_text(source)
++            result['observations']['proof_modules']=['GateData','GateLocalNames','GateExternalNames','GateIdentities','GateBounds','GateModel','GateViews','GateRun']
++            result['observations']['theorem_audit']={}
++            def audit(log,expected):
++                found=_audit(log,expected)
++                result['observations']['theorem_audit'].update({k:sorted(v) for k,v in found.items()})
++            prefix,env,_=support.proof_environment(out)
++            def run(command,label):
++                start=time.monotonic();log=out/(label+'.log')
++                with log.open('wb') as f:
++                    try:r=runtime_process.run(command,cwd=ROOT,env=env,stdout=f,timeout=limits['timeout_seconds'])
++                    except subprocess.TimeoutExpired:fail('incomplete',label+' exceeded selected time limit')
++                    except (runtime_process.CleanupUnresolved,InterruptedError) as e:fail('incomplete',label+': '+str(e))
++                elapsed=time.monotonic()-start
++                result['observations']['stages'].append({'stage':label,'seconds':elapsed,'exit_code':r.returncode})
++                if r.returncode:fail('incomplete',label+' did not complete successfully; diagnostic retained')
++                return log.read_text()
++            for name in ('GateData','GateLocalNames','GateExternalNames','GateIdentities','GateBounds','GateModel','GateViews'):
++                log=run([str(prefix/'bin/lean'),'-j','1','-M',str(limits['memory_mb']),'-R',str(out),'-o',str(out/(name+'.olean')),str(out/(name+'.lean'))],name)
++                if name=='GateLocalNames':audit(log,name_contract_names(imported,False))
++                elif name=='GateExternalNames':audit(log,name_contract_names(imported,True))
++                elif name=='GateIdentities':audit(log,identity_contract_names(imported))
++                elif name=='GateBounds':audit(log,['AC.GateData.edgeBounds','AC.GateData.refBounds'] if len(imported['records'])>256 else [])
++                elif name=='GateModel':audit(log,['AC.GateData.model_checked'])
++                elif name=='GateViews':audit(log,[f'AC.GateData.{p}{i}' for i in range(len(cases)) for p in ('checked','set','reachability','result','execution_matches_project')])
++            # Newly elaborated generated declarations are already kernel-checked with
++            # skipKernelTC=false. Replay only this request's proof declarations.
++            run([str(prefix/'bin/leanchecker'),'GateLocalNames','GateExternalNames','GateIdentities','GateBounds','GateModel','GateViews'],'dynamic-kernel-replay')
++            log=run([str(prefix/'bin/lean'),'-j','1','-M',str(limits['memory_mb']),'--run',str(out/'GateRun.lean')],'actual-runtime')
++            result['observations'].update(current_dynamic_proof_invocations=7,current_kernel_replay_invocations=1,current_runtime_invocations=1)
++        else:
++            t=time.monotonic();body=established['body'];old=established['directory'];layout=established['hint']['layout']
++            if (reuse.canonical(body['replay_request'])!=reuse.canonical(replay) or body['resource_limits']!=limits or body['runtime_identity']!=initial
++                    or any(body[k]!=result[k] for k in ('model','inputs','requested_claims'))
++                    or body['support']!=result['observations']['support']):
++                fail('refused','Current request, input, model, support or limits differ from the original establishment')
++            # Copy only authenticated artifacts. Saved objects are inert bytes,
++            # never imported by a compiler and never a source of current truth.
++            for name,expected in body['members'].items():
++                raw=reuse.read(old/reuse.origin_name(name,layout))
++                if reuse.sha(raw)!=expected:fail('refused','Original artifact changed before retention')
++                if name in ('request.json','replay-request.json'):
++                    (out/('origin-'+name)).write_bytes(raw)
++                elif name=='view-comparison.json':
++                    pass  # rebuilt after current output/view correspondence below
++                elif (out/name).exists():
++                    if reuse.sha(reuse.read(out/name))!=expected:fail('refused','Current reconstructed artifact differs: '+name)
++                else:(out/name).write_bytes(raw)
++            for name in ('result.json','manifest.json'):
++                raw=reuse.read(old/reuse.origin_name(name,layout))
++                if reuse.sha(raw)!=body[name.replace('.json','_sha256')]:fail('refused','Original metadata changed before retention')
++                (out/('origin-'+name)).write_bytes(raw)
++            log=reuse.read(out/'actual-runtime.log').decode('utf-8')
++            result['observations'].update(reuse='local-origin',
++                original_establishment={'origin_id':body['origin_id'],'entry_id':established['hint']['entry_id'],
++                    'result_sha256':body['result_sha256'],'manifest_sha256':body['manifest_sha256'],
++                    'result_path':'origin-result.json','caller_return':'not established by local origin'},
++                execution='retained authenticated cold runtime; current source/import/certificate/output correspondence checked',
++                proof_modules=body['proof_modules'],theorem_audit=body['theorem_audit'],
++                current_dynamic_proof_invocations=0,current_kernel_replay_invocations=0,current_runtime_invocations=0)
++            result['observations']['stages'].append({'stage':'authenticated-artifacts','seconds':time.monotonic()-t})
++        t=time.monotonic()
+         actual=read_json_bytes(log.encode())
+         if actual.get('model')!=model_output(imported,raw_model_sha):fail('refused','Actual Lean whole-model output differs from imported source')
+         expected_views=[]
+@@ -276,6 +327,7 @@
+             if supplied!=expected:fail('refused','Supplied Graphify view differs from actual formal result/boundary mapping')
+             result['checked_claims'].append('supplied-graphify-view-correspondence')
+             write_json(out/'view-comparison.json',{'status':'equal','supplied_sha256':request['supplied_views']['raw_sha256'],'formal_runtime_sha256':support.sha(out/'actual-runtime.log'),'boundary_mapping':'a_c.lean.graphify-view/1'})
++        result['observations']['stages'].append({'stage':'output-view-correspondence','seconds':time.monotonic()-t})
+         if runtime_identity()!=initial:fail('refused','Deciding verifier/profile/proof source changed during verification')
+         t=time.monotonic()
+         try:support.check()
+@@ -283,12 +335,26 @@
+         except (ValueError,KeyError) as e:fail('refused','Proof support changed during verification: '+str(e))
+         result['observations']['stages'].append({'stage':'support-pins-after','seconds':time.monotonic()-t})
+         if any(c['effective_budget']<c['required_count'] for c in cases):fail('refused','Insufficient record budget; verified refusal, no truncated projection')
+-        result['status']='verified'
++        t=time.monotonic()
++        if established is not None:
++            for name in ('model.json','certificates.json','view-comparison.json'):
++                if name in established['body']['members'] and reuse.sha(reuse.read(out/name))!=established['body']['members'][name]:
++                    fail('refused','Current correspondence artifact differs from cold establishment')
++            current,reason=reuse.lookup(established['directory'],initial,limits)
++            if current!=established:fail('refused','Local establishment changed during reuse')
++        else:
++            origin,reason=reuse._origin()
++            if reason is not None:result['observations']['origin_unavailable']=reason
++        result['observations']['stages'].append({'stage':'origin-currentness','seconds':time.monotonic()-t})
++        if result['requested_claims']!=result['checked_claims']:fail('incomplete','Requested claims were not completely checked')
++        result['status']='verified';completed=True
+     except GateError as e:result.update(status=e.status,reason=e.reason)
++    except reuse.OriginError as e:result.update(status=e.status,reason=str(e))
+     except ScriptNamespaceError as e:result.update(status='refused',reason=str(e))
+     except bridge.Refusal as e:result.update(status='refused',reason=str(e))
+     except (OSError,ValueError,KeyError,TypeError,subprocess.SubprocessError,RecursionError) as e:result.update(status='incomplete',reason=type(e).__name__+': '+str(e))
+     result['observations']['elapsed_seconds']=time.monotonic()-started
++    result['observations']['elapsed_scope']='checking only; excludes final bundle/origin publication; complete wall requires external process measurement'
+     result['observations']['limits']=limits
+     result['observations']['child_maxrss_native_units']=resource.getrusage(resource.RUSAGE_CHILDREN).ru_maxrss
+     if created:
+@@ -297,43 +363,64 @@
+         write_json(out/'manifest.json',manifest)
+         result['evidence']={'manifest_sha256':support.sha(out/'manifest.json'),'members':members}
+         write_json(out/'result.json',result)
++        if completed:
++            try:
++                if established is not None:
++                    reuse.publish_hint(out,established['body']['origin_id'],established['hint']['entry_id'],'reuse')
++                elif origin is not None:reuse._establish(out,origin)
++            except (OSError,reuse.OriginError) as exc:
++                # The sealed result is immutable. A committed establishment may
++                # exist even if publication/return observation is incomplete.
++                result=copy.deepcopy(result)
++                result.update(status='incomplete',reason='Local origin publication did not complete: '+str(exc))
+     return result
+ 
+ def check_evidence(bundle,output_dir,limits=None):
+-    old=Path(bundle).resolve();out=Path(output_dir).resolve()
+-    if out==old or out.is_relative_to(old) or old.is_relative_to(out):return _recheck_failure('Evidence output overlaps prior bundle')
+     try:
+-        manifest=read_evidence_json(old/'manifest.json');saved=read_evidence_json(old/'result.json')
+-        if manifest.get('schema')!='a_c.formal-gate.bundle/1' or saved.get('evidence',{}).get('manifest_sha256')!=support.sha(old/'manifest.json'):return _recheck_failure('Evidence manifest binding mismatch')
+-        for name,h in manifest['members'].items():
+-            if Path(name).name!=name or (old/name).is_symlink() or support.sha(old/name)!=h:return _recheck_failure('Retained evidence member missing/changed: '+name)
+-        if saved.get('runtime_identity')!=runtime_identity():return _recheck_failure('Evidence verifier/proof/profile pins are stale')
+-        original=bridge.read_json(old/'request.json');replay=bridge.read_json(old/'replay-request.json')
++        old=reuse.guard(bundle,directory=True);out=reuse.guard(output_dir,output=True)
++        if reuse._contains(old,out) or reuse._contains(out,old):return _recheck_failure('Evidence output overlaps prior bundle')
++        saved,manifest=reuse.bundle(old)
++        initial=runtime_identity()
++        if not reuse.compatible(saved.get('runtime_identity'),initial):return _recheck_failure('Evidence verifier/proof/profile pins are stale')
++        original=read_json_bytes(reuse.read(old/'request.json'));replay=read_json_bytes(reuse.read(old/'replay-request.json'))
++        validate_request(original);validate_request(replay)
+         if digest(original)!=saved.get('request_sha256'):return _recheck_failure('Original request digest changed')
+         expected=copy.deepcopy(original)
+         expected['input']['path']='input.json'
+         if expected['supplied_views']:expected['supplied_views']['path']='supplied-views.json'
+-        if replay!=expected:return _recheck_failure('Retained replay request differs from original selections/bindings')
+-        result=verify(replay,out,limits,base_dir=old)
+-        return result
+-    except (OSError,ValueError,KeyError,TypeError) as e:return _recheck_failure('Evidence unavailable/malformed: '+str(e))
+-
+-def _recheck_failure(reason):
+-    return {'schema':'a_c.formal-gate.result/1','status':'refused','reason':reason,'checked_claims':[],'evidence':None,'limits':list(RESULT_LIMITS)}
++        if reuse.canonical(replay)!=reuse.canonical(expected):return _recheck_failure('Retained replay request differs from original selections/bindings')
++        effective=DEFAULT_LIMITS|dict(limits or {})
++        if saved['runtime_identity']==initial:
++            established,reason=reuse.lookup(old,initial,effective)
++        else:
++            established,reason=None,'different or absent origin selection; standalone cold verification required'
++        return _verify(replay,out,limits,base_dir=old,established=established,reuse_unavailable=reason)
++    except reuse.OriginError as e:return _recheck_failure(str(e),e.status)
++    except ScriptNamespaceError as e:return _recheck_failure(str(e))
++    except GateError as e:return _recheck_failure(e.reason,e.status)
++    except (OSError,ValueError,KeyError,TypeError,RecursionError) as e:return _recheck_failure('Evidence unavailable/malformed: '+str(e))
++
++def _recheck_failure(reason,status='refused'):
++    return {'schema':'a_c.formal-gate.result/1','status':status,'reason':reason,'checked_claims':[],'evidence':None,'limits':list(RESULT_LIMITS)}
+ 
+ def main():
+     parser=argparse.ArgumentParser(description=__doc__);sub=parser.add_subparsers(dest='command',required=True)
+     sub.add_parser('identity')
++    sub.add_parser('init-origin')
+     p=sub.add_parser('verify');p.add_argument('--request',type=Path,required=True);p.add_argument('--output',type=Path,required=True)
+     p=sub.add_parser('check-evidence');p.add_argument('--bundle',type=Path,required=True);p.add_argument('--output',type=Path,required=True)
+     args=parser.parse_args()
+     if args.command=='identity':print(json.dumps(runtime_identity(),sort_keys=True));return 0
++    if args.command=='init-origin':print(json.dumps(reuse.init_origin(),sort_keys=True));return 0
+     if args.command=='verify':
+-        req=bridge.read_json(args.request)
++        reuse.guard(args.output,output=True)
++        req=read_json_bytes(reuse.read(args.request))
+         result=verify(req,args.output,base_dir=args.request.resolve().parent)
+     else:result=check_evidence(args.bundle,args.output)
+     print(json.dumps(result,ensure_ascii=False,sort_keys=True));return EXIT[result['status']]
+ if __name__=='__main__':
+     try:sys.exit(main())
++    except (GateError,reuse.OriginError) as e:
++        print(json.dumps(_recheck_failure(str(e),e.status),sort_keys=True));sys.exit(EXIT[e.status])
+     except Exception as e:
+         print(json.dumps({'schema':'a_c.formal-gate.result/1','status':'incomplete','reason':type(e).__name__+': '+str(e),'limits':list(RESULT_LIMITS)},sort_keys=True));sys.exit(4)
+--- /dev/null
++++ b/a_c/build_tenants/lean/scripts/formal_reuse.py
+@@ -0,0 +1,368 @@
++"""Private local cold establishments. Public bundles contain lookup hints only.
++
++No caller path, environment variable or bundle selects an origin. Import has no
++store effect. Only explicit tenant setup creates it; only the completed internal
++cold path calls _establish. Python API/host administrators remain trusted.
++"""
++from __future__ import annotations
++import hashlib
++import hmac
++import json
++import os
++from pathlib import Path
++import re
++import secrets
++import stat
++
++ROOT = Path(__file__).resolve().parents[1]
++STORE_RELATIVE = '.cache/formal-origin-v1'
++ORIGIN_SELECTION_PIN = STORE_RELATIVE + '/selection.json'
++SELECTION = 'a_c.formal-gate.local-origin-selection/1'
++ENTRY = 'a_c.formal-gate.local-origin-entry/1'
++HINT = 'a_c.formal-gate.local-origin-hint/1'
++DOMAIN = b'a_c.formal-gate.local-origin-entry/1\x00'
++METADATA = ('result.json', 'manifest.json', 'request.json', 'replay-request.json')
++
++
++class OriginError(ValueError):
++    def __init__(self, reason, status='refused'):
++        super().__init__(reason)
++        self.status = status
++
++
++def canonical(value):
++    return json.dumps(value, sort_keys=True, ensure_ascii=False, separators=(',', ':'), allow_nan=False).encode('utf-8')
++
++
++def sha(raw):
++    return hashlib.sha256(raw).hexdigest()
++
++
++def decode(raw):
++    def pairs(items):
++        result = {}
++        for key, value in items:
++            if key in result:
++                raise OriginError('Duplicate evidence JSON key')
++            result[key] = value
++        return result
++    def invalid(value):
++        raise OriginError('Nonfinite evidence JSON number')
++    try:
++        value = json.loads(raw, object_pairs_hook=pairs, parse_constant=invalid)
++        canonical(value)  # rejects overflowing JSON floats and invalid Unicode
++        return value
++    except (ValueError, UnicodeError, RecursionError) as exc:
++        raise OriginError('Malformed finite evidence JSON') from exc
++
++
++def _hex(value, width=64):
++    return isinstance(value, str) and re.fullmatch('[0-9a-f]{' + str(width) + '}', value) is not None
++
++
++def _unalias(path):
++    path = Path(path).absolute()
++    for part in reversed((path, *path.parents)):
++        try:
++            mode = part.lstat().st_mode
++        except FileNotFoundError:
++            continue
++        if stat.S_ISLNK(mode):
++            raise OriginError('Symlink path is outside the protected acquisition contract')
++    return path.resolve(strict=False)
++
++
++
++def _contains(parent, child):
++    """Containment by existing ancestor identity, including host case aliases.
++
++    Only a missing suffix has no inode. Reserve case variants of that fixed
++    suffix conservatively; do not fold or ban unrelated existing source roots.
++    """
++    anchor, suffix = parent, []
++    while True:
++        try:
++            info = anchor.stat()
++            break
++        except FileNotFoundError:
++            suffix.insert(0, anchor.name)
++            anchor = anchor.parent
++    identity = (info.st_dev, info.st_ino)
++    for candidate in (child, *child.parents):
++        try:
++            info = candidate.stat()
++        except FileNotFoundError:
++            continue
++        if (info.st_dev, info.st_ino) == identity:
++            tail = child.relative_to(candidate).parts
++            return len(tail) >= len(suffix) and tuple(p.casefold() for p in tail[:len(suffix)]) == tuple(p.casefold() for p in suffix)
++    return False
++
++
++def guard(path, *, output=False, directory=False, absent=False):
++    """Reserve the fixed subtree before ordinary I/O, even without selection."""
++    path = _unalias(path)
++    protected = _unalias(ROOT / STORE_RELATIVE)
++    if _contains(protected, path) or (output and _contains(path, protected)):
++        raise OriginError('Ordinary path overlaps protected formal origin material')
++    try:
++        info = path.stat()
++    except FileNotFoundError:
++        if absent or output:
++            return path
++        raise
++    if directory:
++        if not stat.S_ISDIR(info.st_mode):
++            raise OriginError('Expected a regular evidence directory')
++    elif not output and not stat.S_ISREG(info.st_mode):
++        raise OriginError('Ordinary input is not a regular file')
++    if stat.S_ISREG(info.st_mode) and info.st_nlink != 1:
++        raise OriginError('Multiply linked ordinary files are unsupported')
++    return path
++
++
++def _read_regular(path, *, private=False, single_link=True, max_bytes=None):
++    flags = os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK
++    fd = os.open(path, flags)
++    try:
++        info = os.fstat(fd)
++        if not stat.S_ISREG(info.st_mode) or (single_link and info.st_nlink != 1):
++            raise OriginError('Expected a singly linked regular file')
++        if private and (info.st_uid != os.getuid() or info.st_mode & 0o077):
++            raise OriginError('Formal origin file is not owner-only')
++        if max_bytes is not None and info.st_size > max_bytes:
++            raise OriginError('Input exceeds selected byte resource limit', 'incomplete')
++        with os.fdopen(fd, 'rb', closefd=False) as stream:
++            raw = stream.read() if max_bytes is None else stream.read(max_bytes + 1)
++        if max_bytes is not None and len(raw) > max_bytes:
++            raise OriginError('Input exceeds selected byte resource limit', 'incomplete')
++        after = os.fstat(fd)
++        if (info.st_dev, info.st_ino, info.st_size, info.st_mtime_ns) != (after.st_dev, after.st_ino, after.st_size, after.st_mtime_ns):
++            raise OriginError('Input changed during acquisition')
++        return raw
++    finally:
++        os.close(fd)
++
++
++def read(path, *, max_bytes=None):
++    return _read_regular(guard(path), max_bytes=max_bytes)
++
++
++def _private_dir(path):
++    path = _unalias(path)
++    info = path.stat()
++    if not stat.S_ISDIR(info.st_mode) or info.st_uid != os.getuid() or info.st_mode & 0o077:
++        raise OriginError('Formal origin directory is not owner-only')
++    return path
++
++
++def selection():
++    """Trusted fixed startup coordinate; absence never initializes a store."""
++    path = ROOT / ORIGIN_SELECTION_PIN
++    _unalias(path)
++    if not path.exists():
++        return None
++    _private_dir(ROOT / STORE_RELATIVE)
++    raw = _read_regular(path, private=True)
++    selected = decode(raw)
++    if (not isinstance(selected, dict) or set(selected) != {'schema', 'origin_id', 'store_relative', 'key_sha256'}
++            or selected['schema'] != SELECTION or selected['store_relative'] != STORE_RELATIVE
++            or not _hex(selected['origin_id'], 32) or not _hex(selected['key_sha256'])):
++        raise OriginError('Invalid fixed formal origin selection')
++    return selected, sha(raw)
++
++
++def _origin():
++    selected = selection()
++    if selected is None:
++        return None, 'no selected local origin'
++    store = _private_dir(ROOT / STORE_RELATIVE)
++    try:
++        key = _read_regular(_unalias(store / 'origin.key'), private=True)
++        _private_dir(store / 'entries')
++        _private_dir(store / 'pending')
++    except FileNotFoundError:
++        return None, 'selected local origin unavailable'
++    if len(key) != 32 or sha(key) != selected[0]['key_sha256']:
++        raise OriginError('Selected local origin key binding changed')
++    return (selected[0], selected[1], key), None
++
++
++def _write(path, raw):
++    fd = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_NOFOLLOW, 0o600)
++    try:
++        with os.fdopen(fd, 'wb', closefd=False) as stream:
++            stream.write(raw)
++            stream.flush()
++            os.fsync(fd)
++    finally:
++        os.close(fd)
++
++
++def _flush(directory):
++    fd = os.open(directory, os.O_RDONLY)
++    try:
++        os.fsync(fd)
++    finally:
++        os.close(fd)
++
++
++def init_origin():
++    """Explicit setup only. No location/key arguments and no overwrite/repair."""
++    store = _unalias(ROOT / STORE_RELATIVE)
++    store.parent.mkdir(mode=0o700, exist_ok=True)
++    store.mkdir(mode=0o700, exist_ok=False)
++    (store / 'entries').mkdir(mode=0o700)
++    (store / 'pending').mkdir(mode=0o700)
++    key = secrets.token_bytes(32)
++    selected = {'schema': SELECTION, 'origin_id': secrets.token_hex(16),
++                'store_relative': STORE_RELATIVE, 'key_sha256': sha(key)}
++    _write(store / 'origin.key', key)
++    _write(store / 'selection.json', canonical(selected))
++    _flush(store)
++    return selected
++
++
++def compatible(saved, current):
++    """Standalone cold compatibility only; full local/live equality stays strict."""
++    for identity in (saved, current):
++        if (not isinstance(identity, dict) or set(identity) != {'sha256', 'pins'}
++                or not isinstance(identity['pins'], dict) or not identity['pins']
++                or not _hex(identity['sha256']) or sha(canonical(identity['pins'])) != identity['sha256']):
++            raise OriginError('Malformed aggregate runtime identity')
++        for name, value in identity['pins'].items():
++            if (not isinstance(name, str) or not name or '\\' in name or Path(name).is_absolute()
++                    or any(part in ('', '.', '..') for part in name.split('/')) or not _hex(value)):
++                raise OriginError('Malformed runtime identity member')
++    return ({k: v for k, v in saved['pins'].items() if k != ORIGIN_SELECTION_PIN}
++            == {k: v for k, v in current['pins'].items() if k != ORIGIN_SELECTION_PIN})
++
++
++def bundle(directory):
++    directory = guard(directory, directory=True)
++    manifest_raw, result_raw = read(directory / 'manifest.json'), read(directory / 'result.json')
++    manifest, result = decode(manifest_raw), decode(result_raw)
++    if (not isinstance(manifest, dict) or set(manifest) != {'schema', 'members'}
++            or manifest['schema'] != 'a_c.formal-gate.bundle/1' or not isinstance(manifest['members'], dict)
++            or not isinstance(result, dict) or result.get('evidence') != {'manifest_sha256': sha(manifest_raw), 'members': manifest['members']}):
++        raise OriginError('Evidence manifest binding mismatch')
++    for name, expected in manifest['members'].items():
++        member_name(name)
++        if not _hex(expected) or sha(read(directory / name)) != expected:
++            raise OriginError('Retained evidence member missing or changed: ' + name)
++    return result, manifest
++
++
++def member_name(name):
++    if (not isinstance(name, str) or not name or name in ('.', '..', 'result.json', 'manifest.json', 'local-origin.json')
++            or '/' in name or '\\' in name or '\x00' in name):
++        raise OriginError('Malformed retained member name')
++    return name
++
++
++def origin_name(name, layout):
++    return 'origin-' + name if layout == 'reuse' and name in METADATA else name
++
++
++def binding(directory, layout, selected, selection_sha):
++    """Reconstruct exact claims from retained bytes; this does not confer trust."""
++    result_raw = read(directory / origin_name('result.json', layout))
++    manifest_raw = read(directory / origin_name('manifest.json', layout))
++    result, manifest = decode(result_raw), decode(manifest_raw)
++    if (not isinstance(manifest, dict) or set(manifest) != {'schema', 'members'}
++            or manifest['schema'] != 'a_c.formal-gate.bundle/1' or not isinstance(manifest['members'], dict)
++            or not isinstance(result, dict) or result.get('status') != 'verified' or not result.get('checked_claims')
++            or result.get('requested_claims') != result['checked_claims']
++            or result.get('evidence') != {'manifest_sha256': sha(manifest_raw), 'members': manifest['members']}):
++        raise OriginError('Original cold result or manifest binding changed')
++    for name, expected in manifest['members'].items():
++        member_name(name)
++        if name.startswith('origin-') or not _hex(expected) or sha(read(directory / origin_name(name, layout))) != expected:
++            raise OriginError('Original cold artifact binding changed')
++    original = decode(read(directory / origin_name('request.json', layout)))
++    replay = decode(read(directory / origin_name('replay-request.json', layout)))
++    if sha(canonical(original)) != result['request_sha256']:
++        raise OriginError('Original cold request binding changed')
++    observations = result['observations']
++    return {'origin_id': selected['origin_id'], 'origin_selection_sha256': selection_sha,
++            'request_sha256': result['request_sha256'], 'replay_request': replay,
++            'resource_limits': observations['limits'], 'model': result['model'], 'inputs': result['inputs'],
++            'requested_claims': result['requested_claims'], 'checked_claims': result['checked_claims'],
++            'runtime_identity': result['runtime_identity'], 'support': observations['support'],
++            'proof_modules': observations['proof_modules'], 'theorem_audit': observations['theorem_audit'],
++            'result_sha256': sha(result_raw), 'manifest_sha256': sha(manifest_raw), 'members': manifest['members']}
++
++
++def _install(pending, final, raw, *, private):
++    """POSIX atomic no-overwrite insertion; an existing meaning is immutable."""
++    try:
++        os.link(pending, final, follow_symlinks=False)
++    except FileExistsError:
++        existing = _read_regular(_unalias(final), private=True, single_link=False) if private else read(final)
++        if existing != raw:
++            raise OriginError('Concurrent publication differs from immutable entry')
++    _flush(final.parent)
++
++
++def publish_hint(directory, origin_id, entry_id, layout):
++    raw = canonical({'schema': HINT, 'origin_id': origin_id, 'entry_id': entry_id, 'layout': layout})
++    guard(directory, output=True, directory=True)
++    temp = directory / ('.origin-hint-' + secrets.token_hex(16))
++    _write(temp, raw)
++    try:
++        _install(temp, directory / 'local-origin.json', raw, private=False)
++    finally:
++        temp.unlink(missing_ok=True)
++
++
++def _establish(directory, origin):
++    """Called only by the completed cold path, after result/manifest finalization."""
++    selected, selection_sha, key = origin
++    if _origin()[0] != origin:
++        raise OriginError('Local origin changed during cold checking')
++    body = binding(directory, 'cold', selected, selection_sha)
++    raw_body = canonical(body)
++    entry_id = sha(raw_body)
++    raw = canonical({'schema': ENTRY, 'body': body, 'hmac_sha256': hmac.new(key, DOMAIN + raw_body, hashlib.sha256).hexdigest()})
++    store = _private_dir(ROOT / STORE_RELATIVE)
++    pending = store / 'pending' / (secrets.token_hex(16) + '.json')
++    _write(pending, raw)
++    try:
++        publish_hint(directory, selected['origin_id'], entry_id, 'cold')
++        # The only eligibility commit. A hint/pending file cannot establish it.
++        _install(pending, store / 'entries' / (entry_id + '.json'), raw, private=True)
++    finally:
++        pending.unlink(missing_ok=True)
++    return entry_id
++
++
++def lookup(directory, current_identity, limits):
++    origin, unavailable = _origin()
++    if origin is None:
++        return None, unavailable
++    hint_path = directory / 'local-origin.json'
++    if not hint_path.exists() and not hint_path.is_symlink():
++        return None, 'no local origin hint'
++    hint = decode(read(hint_path))
++    if (not isinstance(hint, dict) or set(hint) != {'schema', 'origin_id', 'entry_id', 'layout'}
++            or hint['schema'] != HINT or not _hex(hint['origin_id'], 32) or not _hex(hint['entry_id'])
++            or hint['layout'] not in ('cold', 'reuse')):
++        raise OriginError('Malformed public origin hint')
++    selected, selection_sha, key = origin
++    if hint['origin_id'] != selected['origin_id']:
++        return None, 'foreign local origin hint'
++    path = ROOT / STORE_RELATIVE / 'entries' / (hint['entry_id'] + '.json')
++    try:
++        entry = decode(_read_regular(_unalias(path), private=True, single_link=False))
++    except FileNotFoundError:
++        return None, 'no committed local establishment'
++    if not isinstance(entry, dict) or set(entry) != {'schema', 'body', 'hmac_sha256'} or entry['schema'] != ENTRY:
++        raise OriginError('Malformed private local establishment')
++    raw_body = canonical(entry['body'])
++    tag = hmac.new(key, DOMAIN + raw_body, hashlib.sha256).hexdigest()
++    if not _hex(entry['hmac_sha256']) or not hmac.compare_digest(entry['hmac_sha256'], tag) or sha(raw_body) != hint['entry_id']:
++        raise OriginError('Private local establishment seal mismatch')
++    body = binding(directory, hint['layout'], selected, selection_sha)
++    if canonical(body) != canonical(entry['body']) or body['runtime_identity'] != current_identity or canonical(body['resource_limits']) != canonical(limits):
++        raise OriginError('Exact local establishment binding changed')
++    return {'body': body, 'hint': hint, 'directory': directory}, None
+--- /dev/null
++++ b/a_c/build_tenants/lean/tests/test_formal_reuse.py
+@@ -0,0 +1,361 @@
++"""Synthetic origin/control evidence only: the proof and support engine is stubbed.
++
++No real toolchain, support objects, established origin, full model or F_P actor
++is acquired. Real cold/reuse qualification belongs to the final integrated cut.
++"""
++from contextlib import ExitStack
++from copy import deepcopy
++import hashlib
++import json
++import os
++from pathlib import Path
++import re
++import shutil
++import subprocess
++import sys
++import tempfile
++import unittest
++from unittest.mock import patch
++
++ROOT = Path(__file__).resolve().parents[1]
++sys.path.insert(0, str(ROOT / 'scripts'))
++import formal_gate as gate
++import formal_reuse as reuse
++
++
++class ReuseControls(unittest.TestCase):
++    def setUp(self):
++        temporary = ROOT / '.cache' / 'reuse-unit'
++        temporary.mkdir(parents=True, exist_ok=True)
++        self.temp = tempfile.TemporaryDirectory(dir=temporary)
++        self.addCleanup(self.temp.cleanup)
++        self.root = Path(self.temp.name)
++        self.checker = self.root / 'checker'; self.checker.mkdir()
++        self.stack = ExitStack(); self.addCleanup(self.stack.close)
++        self.stack.enter_context(patch.object(reuse, 'ROOT', self.checker))
++        self.stack.enter_context(patch.object(gate, 'ROOT', self.checker))
++        self.stack.enter_context(patch.object(gate, 'runtime_identity', side_effect=self.identity))
++        self.support = self.stack.enter_context(patch.object(gate.support, 'check', return_value={'unit_stub': 'no proof/support qualification'}))
++        self.stack.enter_context(patch.object(gate.support, 'proof_environment', return_value=(self.root / 'never-executed-toolchain', {}, None)))
++        self.process = self.stack.enter_context(patch.object(gate.runtime_process, 'run', side_effect=self.proof_stub))
++        self.subject = self.root / 'subject.json'
++        self.subject.write_bytes((ROOT / 'fixtures/toy/MODEL.json').read_bytes())
++        self.imported = gate.bridge.import_model(gate.read_json_bytes(self.subject.read_bytes()))
++        self.selections = [{'seeds': [self.imported['records'][0]['record']['id']], 'budget_records': None}]
++        case = gate.bridge.closure_certificate(self.imported, [0])
++        self.views = self.root / 'views.json'
++        self.views.write_bytes(reuse.canonical([gate.graphify_view(self.imported, case, self.selections[0])]))
++        self.request = {'schema': 'a_c.formal-gate.request/1',
++                        'input': {'format': 'model', 'path': str(self.subject), 'raw_sha256': reuse.sha(self.subject.read_bytes())},
++                        'selections': self.selections,
++                        'supplied_views': {'path': str(self.views), 'raw_sha256': reuse.sha(self.views.read_bytes())},
++                        'context_binding': {'rendered_sha256': 'a' * 64, 'activation_identity': {'id': 'unit-only'}}}
++        self.counter = 0
++        reuse.init_origin()
++
++    def identity(self):
++        pins = {'scripts/formal_gate.py': '1' * 64, 'scripts/formal_reuse.py': '2' * 64,
++                'profiles/proof-support-v1.json': '3' * 64}
++        selected = reuse.selection()
++        if selected is not None:
++            pins[reuse.ORIGIN_SELECTION_PIN] = selected[1]
++        return {'pins': pins, 'sha256': reuse.sha(reuse.canonical(pins))}
++
++    def proof_stub(self, command, *, cwd, env, stdout, timeout):
++        """Only controlled orchestration; these bytes are not a Lean proof."""
++        directory = Path(stdout.name).parent
++        if '-o' in command:
++            target = Path(command[command.index('-o') + 1])
++            target.write_bytes(b'UNIT-STUB-NOT-LEAN:' + target.name.encode())
++            source = Path(command[-1]).read_text()
++            names = re.findall(r'#print axioms ([A-Za-z0-9_.]+)', source)
++            stdout.write(''.join("'AC.GateData." + name + "' does not depend on any axioms\n" for name in names).encode())
++        elif '--run' in command:
++            cases = gate.read_json_bytes((directory / 'certificates.json').read_bytes())
++            raw_sha = reuse.sha((directory / 'input.json').read_bytes())
++            actual = {'model': gate.model_output(self.imported, raw_sha), 'views': [
++                {'status': 'refused', 'reason': 'insufficient record budget; required closure is not truncated'}
++                if case['effective_budget'] < case['required_count'] else
++                {'status': 'verified', 'projection': gate.projection_output(self.imported, case, raw_sha)} for case in cases]}
++            stdout.write(reuse.canonical(actual))
++        else:
++            stdout.write(b'UNIT STUB: no kernel executed\n')
++        return subprocess.CompletedProcess(command, 0)
++
++    def output(self):
++        self.counter += 1
++        return self.root / ('bundle-' + str(self.counter))
++
++    def cold(self, request=None):
++        out = self.output()
++        result = gate.verify(deepcopy(request or self.request), out)
++        self.assertEqual(result['status'], 'verified', result.get('reason'))
++        self.assertEqual(self.process.call_count % 9, 0)
++        return out, result
++
++    def refresh(self, out):
++        manifest = reuse.decode((out / 'manifest.json').read_bytes())
++        manifest['members'] = {name: reuse.sha((out / name).read_bytes()) for name in manifest['members']}
++        (out / 'manifest.json').write_bytes(reuse.canonical(manifest))
++        result = reuse.decode((out / 'result.json').read_bytes())
++        result['evidence'] = {'manifest_sha256': reuse.sha((out / 'manifest.json').read_bytes()), 'members': manifest['members']}
++        (out / 'result.json').write_bytes(reuse.canonical(result))
++
++    def test_exact_reuse_and_reuse_of_reuse_preserve_original_cost_and_artifacts(self):
++        old, cold = self.cold()
++        self.process.reset_mock(); self.support.reset_mock()
++        out = self.output(); result = gate.check_evidence(old, out)
++        self.assertEqual(result['status'], 'verified', result.get('reason'))
++        self.assertEqual(result['observations']['reuse'], 'local-origin')
++        self.process.assert_not_called(); self.assertEqual(self.support.call_count, 2)
++        self.assertEqual(reuse.decode((out / 'origin-result.json').read_bytes()), cold)
++        for field in ('current_dynamic_proof_invocations', 'current_kernel_replay_invocations', 'current_runtime_invocations'):
++            self.assertEqual(result['observations'][field], 0)
++        again = self.output(); newest = gate.check_evidence(out, again)
++        self.assertEqual(newest['status'], 'verified', newest.get('reason'))
++        self.process.assert_not_called()
++        self.assertEqual((again / 'origin-result.json').read_bytes(), (old / 'result.json').read_bytes())
++        self.assertEqual(reuse.decode((again / 'local-origin.json').read_bytes())['entry_id'], reuse.decode((old / 'local-origin.json').read_bytes())['entry_id'])
++        key = (self.checker / reuse.STORE_RELATIVE / 'origin.key').read_bytes()
++        self.assertTrue(all(key not in path.read_bytes() for path in again.iterdir()))
++
++    def test_foreign_and_absent_origin_only_identity_execute_cold(self):
++        old, _ = self.cold()
++        for selected in (False, True):
++            checker = self.root / ('foreign-' + str(selected)); checker.mkdir()
++            with patch.object(reuse, 'ROOT', checker), patch.object(gate, 'ROOT', checker):
++                if selected: reuse.init_origin()
++                self.process.reset_mock()
++                out = self.output(); result = gate.check_evidence(old, out)
++                self.assertEqual(result['status'], 'verified', result.get('reason'))
++                self.assertEqual(result['runtime_identity'], self.identity())
++                self.assertEqual(self.process.call_count, 9)
++                self.assertNotEqual(result['observations']['reuse'], 'local-origin')
++
++    def test_nonorigin_pin_drift_extra_pin_and_bad_aggregate_refuse(self):
++        old, _ = self.cold()
++        for mode in ('changed', 'extra', 'aggregate'):
++            identity = self.identity()
++            if mode == 'changed': identity['pins']['scripts/formal_reuse.py'] = '4' * 64
++            if mode == 'extra': identity['pins']['caller-labelled-origin.json'] = '5' * 64
++            identity['sha256'] = reuse.sha(reuse.canonical(identity['pins'])) if mode != 'aggregate' else '0' * 64
++            self.process.reset_mock()
++            with patch.object(gate, 'runtime_identity', return_value=identity):
++                result = gate.check_evidence(old, self.output())
++            self.assertEqual(result['status'], 'refused'); self.process.assert_not_called()
++
++    def test_public_manifest_refresh_cannot_forge_exact_origin(self):
++        old, _ = self.cold()
++        for name in ('input.json', 'model.json', 'supplied-views.json', 'certificates.json', 'GateModel.lean',
++                     'GateModel.olean', 'GateModel.log', 'actual-runtime.log', 'view-comparison.json', 'result.json'):
++            with self.subTest(name=name):
++                changed = self.output(); shutil.copytree(old, changed)
++                (changed / name).write_bytes((changed / name).read_bytes() + b' ')
++                self.refresh(changed)
++                self.process.reset_mock()
++                result = gate.check_evidence(changed, self.output())
++                self.assertEqual(result['status'], 'refused', result)
++                self.process.assert_not_called()
++
++    def test_exact_request_and_limits_cannot_be_refreshed_by_caller(self):
++        old, _ = self.cold()
++        modifications = [lambda r: r['selections'][0].update(budget_records=100),
++                         lambda r: r['selections'][0]['seeds'].append(self.imported['records'][1]['record']['id']),
++                         lambda r: r['context_binding']['activation_identity'].update(id='different'),
++                         lambda r: r['context_binding'].update(rendered_sha256='b' * 64)]
++        for modify in modifications:
++            changed = self.output(); shutil.copytree(old, changed)
++            original = reuse.decode((changed / 'request.json').read_bytes()); modify(original)
++            replay = deepcopy(original); replay['input']['path'] = 'input.json'; replay['supplied_views']['path'] = 'supplied-views.json'
++            for name, value in (('request.json', original), ('replay-request.json', replay)):
++                (changed / name).write_bytes(reuse.canonical(value))
++            result = reuse.decode((changed / 'result.json').read_bytes()); result['request_sha256'] = gate.digest(original)
++            (changed / 'result.json').write_bytes(reuse.canonical(result)); self.refresh(changed)
++            self.assertEqual(gate.check_evidence(changed, self.output())['status'], 'refused')
++        self.assertEqual(gate.check_evidence(old, self.output(), {'max_selections': 1})['status'], 'refused')
++
++    def test_current_reused_request_is_type_exact_against_original_establishment(self):
++        request = deepcopy(self.request); request['context_binding']['activation_identity']['flag'] = True
++        old, _ = self.cold(request)
++        reused = self.output(); self.assertEqual(gate.check_evidence(old, reused)['status'], 'verified')
++        for name in ('request.json', 'replay-request.json'):
++            value = reuse.decode((reused / name).read_bytes())
++            value['context_binding']['activation_identity']['flag'] = 1
++            (reused / name).write_bytes(reuse.canonical(value))
++        value = reuse.decode((reused / 'result.json').read_bytes())
++        value['request_sha256'] = reuse.sha(reuse.canonical(reuse.decode((reused / 'request.json').read_bytes())))
++        (reused / 'result.json').write_bytes(reuse.canonical(value)); self.refresh(reused)
++        self.process.reset_mock()
++        self.assertEqual(gate.check_evidence(reused, self.output())['status'], 'refused')
++        self.process.assert_not_called()
++
++    def test_failed_cold_stages_never_publish(self):
++        for failing in range(1, 10):
++            with self.subTest(stage=failing):
++                count = 0
++                def fail_one(*args, **kwargs):
++                    nonlocal count
++                    count += 1
++                    return subprocess.CompletedProcess(args[0], 1) if count == failing else self.proof_stub(*args, **kwargs)
++                with patch.object(gate.runtime_process, 'run', side_effect=fail_one):
++                    out = self.output(); result = gate.verify(self.request, out)
++                self.assertEqual(result['status'], 'incomplete')
++                self.assertFalse((out / 'local-origin.json').exists())
++                self.assertEqual(list((self.checker / reuse.STORE_RELATIVE / 'entries').iterdir()), [])
++        for calls in ([ValueError('support drift')], [{'unit_stub': 'no proof/support qualification'}, ValueError('post-support drift')]):
++            with patch.object(gate.support, 'check', side_effect=calls):
++                out = self.output(); self.assertEqual(gate.verify(self.request, out)['status'], 'refused')
++            self.assertFalse((out / 'local-origin.json').exists())
++        under = deepcopy(self.request); under['selections'][0]['budget_records'] = 0
++        out = self.output(); self.assertEqual(gate.verify(under, out)['status'], 'refused')
++        self.assertFalse((out / 'local-origin.json').exists())
++
++    def test_pending_and_hint_never_commit_but_postcommit_is_established(self):
++        install = reuse._install
++        for boundary in ('before-hint', 'before-private', 'after-private'):
++            with self.subTest(boundary=boundary):
++                def interrupted(pending, final, raw, *, private):
++                    if (boundary == 'before-hint' and not private) or (boundary == 'before-private' and private):
++                        raise OSError('UNIT controlled precommit interruption')
++                    install(pending, final, raw, private=private)
++                    if boundary == 'after-private' and private:
++                        raise OSError('UNIT controlled transport interruption')
++                with patch.object(reuse, '_install', side_effect=interrupted):
++                    out = self.output(); result = gate.verify(self.request, out)
++                self.assertEqual(result['status'], 'incomplete')
++                if not (out / 'local-origin.json').exists():
++                    origin, _ = reuse._origin(); body = reuse.binding(out, 'cold', origin[0], origin[1])
++                    reuse.publish_hint(out, origin[0]['origin_id'], reuse.sha(reuse.canonical(body)), 'cold')
++                self.process.reset_mock(); replay = gate.check_evidence(out, self.output())
++                self.assertEqual(replay['status'], 'verified', replay.get('reason'))
++                self.assertEqual(self.process.call_count, 0 if boundary == 'after-private' else 9)
++                self.assertEqual(list((self.checker / reuse.STORE_RELATIVE / 'pending').iterdir()), [])
++
++    def test_bad_seal_or_key_refuses_and_missing_key_cold_falls_back(self):
++        old, _ = self.cold(); store = self.checker / reuse.STORE_RELATIVE
++        hint = reuse.decode((old / 'local-origin.json').read_bytes()); entry = store / 'entries' / (hint['entry_id'] + '.json')
++        original = entry.read_bytes(); value = reuse.decode(original); value['hmac_sha256'] = '0' * 64; entry.write_bytes(reuse.canonical(value))
++        self.assertEqual(gate.check_evidence(old, self.output())['status'], 'refused'); entry.write_bytes(original)
++        key = store / 'origin.key'; raw = key.read_bytes(); key.write_bytes(b'0' * 32)
++        self.assertEqual(gate.check_evidence(old, self.output())['status'], 'refused'); key.write_bytes(raw)
++        key.unlink(); self.process.reset_mock()
++        self.assertEqual(gate.check_evidence(old, self.output())['status'], 'verified'); self.assertEqual(self.process.call_count, 9)
++        self.assertFalse(key.exists())
++
++    def test_duplicate_nonfinite_and_immutable_entry_controls(self):
++        for raw in (b'{"a":1,"a":2}', b'{"a":NaN}', b'{"a":1e999}'):
++            with self.assertRaises(reuse.OriginError): reuse.decode(raw)
++        old, _ = self.cold(); origin, _ = reuse._origin()
++        entry_id = reuse._establish(old, origin)
++        entry = self.checker / reuse.STORE_RELATIVE / 'entries' / (entry_id + '.json')
++        entry.write_bytes(b'controlled conflicting existing entry')
++        with self.assertRaises(reuse.OriginError): reuse._establish(old, origin)
++        self.assertEqual(entry.read_bytes(), b'controlled conflicting existing entry')
++        with self.assertRaises(FileExistsError): reuse.init_origin()
++
++    def test_ordinary_paths_never_read_or_retain_origin_material(self):
++        secret = self.checker / reuse.STORE_RELATIVE / 'origin.key'
++        request = deepcopy(self.request); request['input']['path'] = str(secret)
++        out = self.output()
++        with patch.object(reuse, '_read_regular', side_effect=AssertionError('protected bytes acquired')):
++            self.assertEqual(gate.verify(request, out)['status'], 'refused')
++            self.assertEqual(gate.check_evidence(secret.parent, self.output())['status'], 'refused')
++            with patch.object(sys, 'argv', ['formal_gate.py', 'verify', '--request', str(secret), '--output', str(self.output())]):
++                with self.assertRaises(reuse.OriginError): gate.main()
++        self.assertFalse(out.exists())
++        for destination in (secret, secret.parent / 'output', self.checker):
++            self.assertEqual(gate.verify(self.request, destination)['status'], 'refused')
++        alias = self.root / 'hardlink.json'; os.link(secret, alias)
++        request['input']['path'] = str(alias)
++        self.assertEqual(gate.verify(request, self.output())['status'], 'refused'); alias.unlink()
++        alias = self.root / 'alias'; alias.symlink_to(secret.parent, target_is_directory=True)
++        request['input']['path'] = str(alias / 'origin.key')
++        self.assertEqual(gate.verify(request, self.output())['status'], 'refused')
++
++    def test_current_correspondence_and_final_support_are_not_skipped(self):
++        old, _ = self.cold(); self.process.reset_mock()
++        with patch.object(gate, 'model_output', return_value={'changed': True}):
++            self.assertEqual(gate.check_evidence(old, self.output())['status'], 'refused')
++        with patch.object(gate.support, 'check', side_effect=[{'unit_stub': 'no proof/support qualification'}, ValueError('late drift')]):
++            self.assertEqual(gate.check_evidence(old, self.output())['status'], 'refused')
++        self.process.assert_not_called()
++
++    def test_missing_hint_never_uses_saved_status_or_objects(self):
++        old, _ = self.cold()
++        (old / 'local-origin.json').unlink()
++        (old / 'GateModel.olean').write_bytes(b'caller-forged proof object')
++        self.refresh(old)
++        self.process.reset_mock(); out = self.output()
++        result = gate.check_evidence(old, out)
++        self.assertEqual(result['status'], 'verified', result.get('reason'))
++        self.assertEqual(self.process.call_count, 9)
++        self.assertNotEqual((out / 'GateModel.olean').read_bytes(), (old / 'GateModel.olean').read_bytes())
++        self.assertNotEqual(result['observations']['reuse'], 'local-origin')
++
++    def test_distinct_failures_and_final_source_drift_cannot_establish(self):
++        for status, change in (('unsupported', lambda r: r.update(schema='future/99')),
++                               ('refused', lambda r: r.update(origin={'key': 'caller-selected'}))):
++            request = deepcopy(self.request); change(request)
++            out = self.output(); result = gate.verify(request, out)
++            self.assertEqual(result['status'], status); self.assertFalse(out.exists())
++        out = self.output()
++        with patch.object(gate, 'runtime_identity', side_effect=[self.identity(), {'changed': True}]):
++            result = gate.verify(self.request, out)
++        self.assertEqual(result['status'], 'refused'); self.assertFalse((out / 'local-origin.json').exists())
++        with patch.object(gate.support, 'check', side_effect=FileNotFoundError('unit support unavailable')):
++            self.assertEqual(gate.verify(self.request, self.output())['status'], 'incomplete')
++        self.assertEqual(list((self.checker / reuse.STORE_RELATIVE / 'entries').iterdir()), [])
++
++    def test_flat_helper_namespace_is_still_exact_with_reuse_helper(self):
++        scripts = self.checker / 'scripts'; scripts.mkdir()
++        for name in gate.SCRIPT_FILES:(scripts / name).write_bytes(b'# unit namespace only')
++        gate._script_namespace()
++        self.assertIn('formal_reuse.py', gate.SCRIPT_FILES)
++        (scripts / 'unselected.py').write_bytes(b'# never imported')
++        with self.assertRaises(gate.ScriptNamespaceError):gate._script_namespace()
++
++    def test_case_aliases_refuse_before_read_and_output_creation(self):
++        secret = self.checker / reuse.STORE_RELATIVE / 'origin.key'
++        aliases = [Path(str(secret).replace('/.cache/', '/.CACHE/')),
++                   self.checker.with_name(self.checker.name.upper()) / reuse.STORE_RELATIVE / 'origin.key']
++        if not all(path.exists() and path.samefile(secret) for path in aliases):
++            self.skipTest('selected filesystem has no case aliases; absent reserved suffix still separately tested')
++        with patch.object(reuse, '_read_regular', side_effect=AssertionError('case alias acquired protected bytes')):
++            for alias in aliases:
++                request = deepcopy(self.request); request['input']['path'] = str(alias)
++                self.assertEqual(gate.verify(request, self.output())['status'], 'refused')
++                self.assertEqual(gate.check_evidence(alias.parent, self.output())['status'], 'refused')
++                with self.assertRaises(reuse.OriginError):reuse.guard(alias.parent / 'new-output', output=True)
++            with self.assertRaises(reuse.OriginError):reuse.guard(self.checker.with_name(self.checker.name.upper()), output=True)
++        old, _ = self.cold()
++        overlapping = old.with_name(old.name.upper()) / 'new-output'
++        self.assertEqual(gate.check_evidence(old, overlapping)['status'], 'refused')
++        self.assertFalse(overlapping.exists())
++
++    def test_absent_origin_suffix_is_reserved_before_setup(self):
++        checker = self.root / 'unselected-checker'; checker.mkdir()
++        with patch.object(reuse, 'ROOT', checker):
++            for suffix in ('.cache/formal-origin-v1/out', '.CACHE/FORMAL-ORIGIN-V1/out'):
++                with self.assertRaises(reuse.OriginError):reuse.guard(checker / suffix, output=True)
++        self.assertEqual(list(checker.iterdir()), [])
++
++    def test_malformed_retained_original_result_refuses_with_four_state_api(self):
++        old, _ = self.cold(); out = self.output()
++        self.assertEqual(gate.check_evidence(old, out)['status'], 'verified')
++        for value in (None, [], 1, 'verified'):
++            changed = self.output(); shutil.copytree(out, changed)
++            (changed / 'origin-result.json').write_bytes(reuse.canonical(value)); self.refresh(changed)
++            result = gate.check_evidence(changed, self.output())
++            self.assertEqual(result['status'], 'refused', result)
++
++    def test_setup_material_is_owner_only_and_ordinary_calls_do_not_repair_it(self):
++        store = self.checker / reuse.STORE_RELATIVE
++        for path in (store, store / 'entries', store / 'pending', store / 'origin.key', store / 'selection.json'):
++            self.assertEqual(path.stat().st_mode & 0o077, 0)
++        key = store / 'origin.key'; key.chmod(0o644)
++        with self.assertRaises(reuse.OriginError):reuse._origin()
++        self.assertEqual(key.stat().st_mode & 0o077, 0o044)
++
++
++if __name__ == '__main__':
++    unittest.main()

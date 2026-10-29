@@ -1,6 +1,7 @@
 module
 public import AC.Projection
 public import AC.Structure
+public import AC.GateProof
 public import Lean.Data.Json.Basic
 @[expose] public section
 namespace AC.GateRuntime
@@ -60,10 +61,14 @@ def modelJson (m : Model) : Json := Json.mkObj [
   ("externalResolutions", Json.arr (m.externalResolutions.map externalJson).toArray),
   ("edges", toJson (m.edges.map fun e => [e.1, e.2])), ("invalidation", toJson m.invalidation)]
 
-def gateSelectionJson (m : Model) (s : Finset Nat × List Nat × Nat) : Json :=
-  let (seeds, trace, budget) := s
-  match project m seeds trace budget with
+def selectionResultJson (m : Model) (result : Except String Projection) : Json :=
+  match result with
   | .ok p => Json.mkObj [("status", toJson "verified"), ("projection", projectionJson m p)]
   | .error reason => Json.mkObj [("status", toJson "refused"), ("reason", toJson reason)]
+
+/-- Original unchecked entry point; its runtime checker cost is unchanged. -/
+def gateSelectionJson (m : Model) (s : Finset Nat × List Nat × Nat) : Json :=
+  let (seeds, trace, budget) := s
+  selectionResultJson m (project m seeds trace budget)
 
 end AC.GateRuntime

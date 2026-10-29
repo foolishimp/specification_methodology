@@ -1,0 +1,31 @@
+{
+  "actual_source_and_projection_comparison": "exact",
+  "concrete_audit_names_per_run": 62,
+  "conditions": {
+    "1": "discharged",
+    "2": "discharged for frozen cut",
+    "3": "cold-scale configured limits/cost discharged; reuse/admission/task and physical-memory suitability open",
+    "4": "not discharged",
+    "5": "not discharged by this increment",
+    "6": "not discharged"
+  },
+  "created_utc": "2026-10-29T01:52:34.169228+00:00",
+  "edges": 3995,
+  "effects": "Only review/** writes; no product modules, compiler/proof/runtime/actor/cache/key/candidate/Git effects",
+  "externals": 1021,
+  "observed_returncode": 0,
+  "pins": {
+    ".ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/contract/REVIEW_DISCRIMINATORS.md": "f2a033071b53a01c01eafea14c794d0528844b92127a44be40c8a26acca5705d",
+    ".ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/SCALE_RETURN.md": "b9a198a634a4b1871f6d8d2719414344fa443a9ace2f198f8cfb204f7e2edef9",
+    ".ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/scale-closure-001/CLOSED.json": "cd38d667a5c2679512d63a1f844cecb417fb1fec67be0cd42b952d536bea4bb0",
+    ".ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/scale-closure-001/RUNS.json": "407708c022aea0eed2c6ebb5042f354c5e34ab24ffedf0c018a42659a483e792",
+    ".ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/scale-closure-001/SOURCE.json": "71425a1c66bf3b56fdf49f73813f83673fc6a9b2c2704a52ee52c0e64f3e301f",
+    ".ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/review/runtime-specialization-implementation-001/CLOSED.json": "1caa5942976a96b8bfa37a99d26ae1b9d2fe2925d1939a3a04260e5479fc44a2"
+  },
+  "records": 1987,
+  "references": 16498,
+  "retained_members_rehashed": 174,
+  "reviewer": "/root/ac_scale_review",
+  "schema": "a_c.t013.scale-independent-assessment/1",
+  "verification_command": "python3 -I -S -B review/scale-final-001/inspect_evidence.py"
+}

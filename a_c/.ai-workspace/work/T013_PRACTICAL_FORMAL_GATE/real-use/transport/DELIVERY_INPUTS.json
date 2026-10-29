@@ -1,0 +1,85 @@
+{
+  "arms": "same substantive inputs and bytes in both fresh workspaces",
+  "excluded": [
+    "evaluation/**",
+    "source/**",
+    "other arm outputs",
+    "private proof/origin support"
+  ],
+  "files": [
+    {
+      "from": "TASK.md",
+      "render": "source",
+      "sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829",
+      "to": "inputs/TASK.md"
+    },
+    {
+      "from": "shared/CUSTODY.json",
+      "render": "source",
+      "sha256": "2e5c99cb07abe1d6837a1d8d39033c644e3c846ea3c31cce8e21a28a263e22a0",
+      "to": "inputs/CUSTODY.json"
+    },
+    {
+      "from": "shared/FORMAL_GATE.md",
+      "render": "source",
+      "sha256": "32a4c573f2af9dbda9d73ac8fa24797687345ade870488a6d31347350b3fa79c",
+      "to": "inputs/FORMAL_GATE.md"
+    },
+    {
+      "from": "shared/MODEL_SELECTION.json",
+      "render": "source",
+      "sha256": "108bea2e1080c11152db20800f9f696988264f08e14310827c1cc3479ab5cda6",
+      "to": "inputs/MODEL_SELECTION.json"
+    },
+    {
+      "from": "shared/examples/authored-unsupported.json",
+      "render": "source",
+      "sha256": "0953f4c0a89f30ddcb76c58d876e2d2e8bc1fe91fe3e462a1539b1bdd8d9ac61",
+      "to": "inputs/examples/authored-unsupported.json"
+    },
+    {
+      "from": "shared/examples/budget-refusal.json",
+      "render": "source",
+      "sha256": "507b9c3741451c259a7077eef0ed98cb390666f04209866f81b6afe8054f1d82",
+      "to": "inputs/examples/budget-refusal.json"
+    },
+    {
+      "from": "shared/examples/historical-incomplete.json",
+      "render": "source",
+      "sha256": "0a71be4468919fd2c53378811898c75563c015c7f1699a5fc754e2e6169593b9",
+      "to": "inputs/examples/historical-incomplete.json"
+    },
+    {
+      "from": "shared/examples/malformed-model.json",
+      "render": "source",
+      "sha256": "c80ea7c839ef65826fc975cabc6d750762d46ead966804876b9d730a273cde91",
+      "to": "inputs/examples/malformed-model.json"
+    },
+    {
+      "from": "shared/examples/model-only.json",
+      "render": "source",
+      "sha256": "400d226d4bbcee00701a357812eeb990b31b8df99ba700996ddd6a6dcf78b5c3",
+      "to": "inputs/examples/model-only.json"
+    },
+    {
+      "from": "shared/examples/verified.json",
+      "render": "source",
+      "sha256": "139e173d542e4502047188caab39d3144da9ba838321f584791ffa5fa0e8b387",
+      "to": "inputs/examples/verified.json"
+    },
+    {
+      "from": "shared/examples/view-mismatch.json",
+      "render": "source",
+      "sha256": "fc3112787f5c5724f702e1f226be97e5ea95cc6b44f2fa742d2f84451705b13a",
+      "to": "inputs/examples/view-mismatch.json"
+    },
+    {
+      "from": "shared/model-view.json",
+      "render": "model projection only; do not duplicate as a source",
+      "sha256": "5b106c80072d06dc407dc06673d68730312cecb9535ff0aa1e99d5597c2a0d79",
+      "to": "inputs/model-view.json"
+    }
+  ],
+  "operational_sources": "Finalize task activation, grant, method profile, return contract and prompt with exact permitted substitutions; enumerate differences before launch.",
+  "schema": "t013.real-use.delivery-inputs/1"
+}

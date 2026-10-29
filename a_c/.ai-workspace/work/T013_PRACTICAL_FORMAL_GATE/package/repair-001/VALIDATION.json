@@ -1,0 +1,64 @@
+{
+  "schema": "a_c.T013.package-repair-validation/1",
+  "recorded_at": "2026-10-29T01:44:34.347185+00:00",
+  "tests": {
+    "count": 17,
+    "exit_code": 0,
+    "log_sha256": "9bc9c76176caea2edf3dcecf7b315c0999d19aa0b75480f18323fbb1454db588",
+    "source_sha256": "deae6be6caf7eb1fa598752e4d77d824f0dac9e322ee716d1d569597abf68db8"
+  },
+  "repairs_exercised": [
+    "full qualified identity retained and fixed portable projection used by select/build/verify with no origin payload",
+    "public pin mutation and caller omission cannot pass",
+    "casefolded runtime/private exclusions before metadata or content read",
+    "both source and output noncanonical roots refused on build/archive/extract"
+  ],
+  "synthetic_data_only": true,
+  "original_preparation_pins_preserved": 10,
+  "original_closure_preserved": true,
+  "review_closure_sha256": "9e13805edb82e0b5c93d14f6f67a49b54a4f285df0389460c85fa8c9e2603edb",
+  "packager_sha256": "a8d0c9fb84d5e2b8391ed429b52149e0315caa6a5a25e2dd86afd87ade13f9af",
+  "plan_sha256": "45da2fdbc379e42daa12e03fefc89ef911d3a10f1a75e54de4d0aad3fe6967a9",
+  "closed_namespace_coverage": [
+    {
+      "directory": "a_c/build_tenants/lean/AC",
+      "files": 10,
+      "new_unselected": []
+    },
+    {
+      "directory": "a_c/build_tenants/lean/scripts",
+      "files": 10,
+      "new_unselected": []
+    },
+    {
+      "directory": "a_c/build_tenants/lean/profiles",
+      "files": 3,
+      "new_unselected": []
+    },
+    {
+      "directory": "a_c/build_tenants/lean/tests",
+      "files": 3,
+      "new_unselected": []
+    },
+    {
+      "directory": "a_c/build_tenants/lean/design",
+      "files": 5,
+      "new_unselected": []
+    },
+    {
+      "directory": "a_c/build_tenants/lean/fixtures",
+      "files": 6,
+      "new_unselected": []
+    },
+    {
+      "directory": "a_c/build_tenants/graphify/code/generation",
+      "files": 5,
+      "new_unselected": []
+    }
+  ],
+  "candidate_archive_created": false,
+  "final_source_selected": false,
+  "runtime_or_proof_executed": false,
+  "private_origin_material_read_or_written": false,
+  "Git_effects": false
+}

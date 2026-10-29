@@ -229,7 +229,7 @@ def prepare(output: Path, chunk_id: str, *, parent_repair: Path | None = None) -
 def verify_request(output: Path, attempt: Path, visiting: set[str] | None = None) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any], dict[str, Any]]:
     output = output.resolve(strict=True)
     attempt = safe_attempt(output, attempt)
-    request = g.load(attempt / "request.json")
+    request = g.load(g._run_member(output, attempt / "request.json"))
     require(request.get("profile") == PROFILE and request.get("chunk") == attempt.parent.name, "repair request profile/chunk differs")
     plan, chunk = choose_chunk(output, request["chunk"])
     require(request["code_pins"] == code_pins(), "repair/generator/grounding/codec/prompt/schema code drift")

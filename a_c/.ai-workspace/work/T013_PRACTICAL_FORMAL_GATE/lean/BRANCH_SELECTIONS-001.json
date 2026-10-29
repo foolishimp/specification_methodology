@@ -1,0 +1,50 @@
+{
+  "schema": "a_c.t013.measured-branch-selections/1",
+  "created_utc": "2026-10-29T00:29:19.027800+00:00",
+  "executive": "/root",
+  "worker": "/root/ac_scale_worker",
+  "limits": {
+    "lean_allocation_mb": 4096,
+    "per_process_seconds": 90,
+    "whole_public_gate_seconds": 600,
+    "os_rss_cap": false
+  },
+  "sequential_selections": [
+    {
+      "branch": "generic Array source reconstruction",
+      "result": "actual 1987-name equality passed; exact original values",
+      "evidence": "correction-001/ExactNames02.result.json"
+    },
+    {
+      "branch": "complete byte-derived code certificate",
+      "result": "complete candidate allocation failure; large integer cause not isolated",
+      "evidence": "correction-003/model-02.result.json"
+    },
+    {
+      "branch": "bounded modular byte-derived code certificate",
+      "result": "complete candidate allocation failure; separated identity timeout; direct rfl128 block passed but cost does not justify a whole90-second identity module",
+      "evidence": [
+        "correction-004/model-03.result.json",
+        "correction-005/identities-01.result.json",
+        "correction-006/block-rfl-01.result.json"
+      ],
+      "selection": "closed; no further encoding runs"
+    },
+    {
+      "branch": "exact sorted labeled String certificate",
+      "result": "generic theorem compiled; bounded128 actual identities exhausted allocation; source/adjacency not yet isolated",
+      "evidence": [
+        "correction-006/structure-06.result.json",
+        "correction-007/labeled-block-01.result.json"
+      ]
+    }
+  ],
+  "preserved_success": {
+    "reference_and_bounds_module": "correction-005/GateBounds.lean",
+    "result": "correction-005/bounds-01.result.json",
+    "repeat_selected": false
+  },
+  "current_status": "incomplete; awaiting bounded reconstruction/adjacency discriminator selection",
+  "full_public_gate_ran": false,
+  "proof_result_cache_implemented": false
+}

@@ -19,6 +19,7 @@ from pathlib import Path, PurePosixPath
 import re
 import shutil
 import signal
+import stat
 import subprocess
 import sys
 import time
@@ -78,7 +79,7 @@ def digest(value: Any) -> str:
     return sha(canonical(value))
 
 
-def load(path: Path) -> Any:
+def _decode(raw: bytes) -> Any:
     def pairs(items: list[tuple[str, Any]]) -> dict[str, Any]:
         result: dict[str, Any] = {}
         for key, value in items:
@@ -87,7 +88,11 @@ def load(path: Path) -> Any:
         return result
     def invalid_constant(value: str) -> None:
         raise GenerationError("non-finite JSON constant " + value)
-    return json.loads(path.read_bytes(), object_pairs_hook=pairs, parse_constant=invalid_constant)
+    return json.loads(raw, object_pairs_hook=pairs, parse_constant=invalid_constant)
+
+
+def load(path: Path) -> Any:
+    return _decode(path.read_bytes())
 
 
 def save(path: Path, value: Any, *, exclusive: bool = False) -> None:
@@ -220,20 +225,124 @@ def upstream_modules(path: Path) -> dict[str, Any]:
     return modules
 
 
+def _selected_path(checker: dict[str, Any] | None, path: Path, *, write: bool = False,
+                   directory: bool = False, absent: bool = False) -> Path:
+    if checker is not None:
+        return ac_formal_gate.guard_path(checker, path, output=write, directory=directory, absent=absent)
+    return path
+
+
+def _selected_read(checker: dict[str, Any] | None, path: Path) -> bytes:
+    return ac_formal_gate.read_selected(checker, path) if checker is not None else path.read_bytes()
+
+
+def _resolve_selection(plan: dict[str, Any], retained: Any, present: bool,
+                       selected: dict[str, Any] | None) -> dict[str, Any] | None:
+    prior = plan.get("formal_checker")
+    if present:
+        require(prior is None or retained == prior, "prepared formal checker selection changed")
+        prior = retained
+    elif prior is not None:
+        raise GenerationError("prepared required formal checker selection is missing")
+    if prior is not None and selected is not None:
+        require(prior == selected, "required formal checker cannot be changed during generation")
+    result = prior if prior is not None else selected
+    if result is not None:
+        ac_formal_gate.validate_config(result)
+    return result
+
+
+def _startup(output: Path, selected: dict[str, Any] | None = None) -> tuple[dict[str, Any], dict[str, Any] | None]:
+    """Read only the operator-owned fixed startup files before reservation.
+
+    This does not authenticate arbitrary request-selected run directories. The
+    operator/wrapper owns the run and selection, under the cooperative host
+    contract. No plan-named content is read until selected guards are active.
+    """
+    if selected is not None:
+        ac_formal_gate.validate_config(selected)
+        _selected_path(selected, output, write=True, directory=True)
+    plan_path, selection_path = output / "plan.json", output / "formal-selection.json"
+    _selected_path(selected, plan_path)
+    _selected_path(selected, selection_path, absent=True)
+    plan_raw = plan_path.read_bytes()
+    present = selection_path.exists()
+    selection_raw = selection_path.read_bytes() if present else None
+    try:
+        plan = _decode(plan_raw)
+        retained = _decode(selection_raw) if present else None
+    except (ValueError, UnicodeError) as exc:
+        raise GenerationError("Malformed trusted generation startup metadata") from None
+    checker = _resolve_selection(plan, retained, present, selected)
+    if checker is not None:
+        _selected_path(checker, output, write=True, directory=True)
+        require(_selected_read(checker, plan_path) == plan_raw, "generation plan changed during startup")
+        _selected_path(checker, selection_path, absent=True)
+        if present:
+            require(_selected_read(checker, selection_path) == selection_raw, "formal selection changed during startup")
+    return plan, checker
+
+
+def _selected_run(output: Path, selected: dict[str, Any] | None = None) -> tuple[dict[str, Any], dict[str, Any] | None]:
+    """Metadata-only scan of the actual selected run, never a registered root.
+
+    Downstream retained journals/actor files stay confined to this run. Concurrent
+    host replacement after inspection is outside the cooperative host contract.
+    """
+    plan, checker = _startup(output, selected)
+    if checker is not None:
+        pending = [output]
+        while pending:
+            directory = pending.pop()
+            for path in directory.iterdir():
+                mode = path.lstat().st_mode
+                is_directory = stat.S_ISDIR(mode)
+                _selected_path(checker, path, directory=is_directory)
+                if is_directory:
+                    pending.append(path)
+    return plan, checker
+
+
+def _run_member(output: Path, path: Path) -> Path:
+    """Direct selected entry boundary before its first retained-member read."""
+    _, checker = _selected_run(output)
+    if checker is not None:
+        require(path.absolute().resolve().is_relative_to(output.absolute().resolve()), "selected member escapes retained run")
+        _selected_path(checker, path)
+    return path
+
+
+def _run_path(output: Path, path: Path, *, write: bool = False, directory: bool = False,
+              absent: bool = False) -> Path:
+    _, checker = _startup(output)
+    return _selected_path(checker, path, write=write, directory=directory, absent=absent)
+
+
+def _upstream_path(output: Path, path: Path) -> Path:
+    _run_path(output, path, directory=True)
+    _run_path(output, path / UPSTREAM_PROMPT)
+    return path
+
+
 def prepare(corpus: Path, manifest_path: Path, output: Path, mode: str, upstream: Path | None,
             chunk_chars: int = 120_000, graph_chars: int = 40_000, *, formal_checker: dict[str, Any] | None = None) -> dict[str, Any]:
     require(mode in SEMANTIC_PROFILES, "unsupported generation mode")
     require(1_000 <= chunk_chars <= 500_000 and 1_000 <= graph_chars <= 200_000, "explicit chunk/graph character envelope outside supported range")
+    if formal_checker is not None:
+        ac_formal_gate.validate_config(formal_checker)
+        _selected_path(formal_checker, output, write=True)
+        _selected_path(formal_checker, corpus, directory=True)
+        if upstream is not None:
+            _selected_path(formal_checker, upstream, directory=True)
+            _selected_path(formal_checker, upstream / UPSTREAM_PROMPT)
     corpus = corpus.resolve(strict=True)
-    manifest = load(manifest_path)
+    manifest = _decode(_selected_read(formal_checker, manifest_path))
     require(isinstance(manifest, dict) and isinstance(manifest.get("files"), list) and manifest["files"], "corpus manifest requires nonempty files array")
     subject = manifest.get("subject_id")
     require(isinstance(subject, str) and re.match(r"^[A-Za-z][A-Za-z0-9+.-]*:[^\s]+$", subject), "manifest requires absolute subject_id")
     upstream_record = verify_upstream(upstream) if upstream else None
     require(mode == "direct" or upstream_record is not None, "Graphify mode requires --upstream")
     require(not output.exists(), "output already exists; use stage commands to resume")
-    if formal_checker is not None:
-        ac_formal_gate.validate_config(formal_checker)
     pinned, all_sections, file_seen = [], [], set()
     for entry in manifest["files"]:
         path = safe_relative(entry["path"])
@@ -241,7 +350,7 @@ def prepare(corpus: Path, manifest_path: Path, output: Path, mode: str, upstream
         file_seen.add(path)
         source = corpus / path
         require(source.resolve(strict=True).is_relative_to(corpus), "source symlink escapes corpus")
-        raw = source.read_bytes()
+        raw = _selected_read(formal_checker, source)
         require(sha(raw) == entry["sha256"], f"source digest mismatch: {path}")
         if "bytes" in entry:
             require(len(raw) == entry["bytes"], f"source byte count mismatch: {path}")
@@ -255,11 +364,11 @@ def prepare(corpus: Path, manifest_path: Path, output: Path, mode: str, upstream
     for entry in pinned:
         destination = output / "corpus" / entry["path"]
         destination.parent.mkdir(parents=True, exist_ok=True)
-        destination.write_bytes((corpus / entry["path"]).read_bytes())
+        _selected_path(formal_checker, destination, write=True).write_bytes(_selected_read(formal_checker, corpus / entry["path"]))
     save(output / "source-manifest.json", manifest, exclusive=True)
     save(output / "chunks.json", chunks, exclusive=True)
     if mode == "graphify":
-        shutil.copyfile(Path(upstream_record["root"]) / UPSTREAM_PROMPT, output / "upstream-extraction-spec.md")
+        (output / "upstream-extraction-spec.md").write_bytes(_selected_read(formal_checker, Path(upstream_record["root"]) / UPSTREAM_PROMPT))
     assets = {path.name: sha(path.read_bytes()) for path in sorted(ASSETS.iterdir()) if path.is_file()}
     plan = {"profile": "ac.generation.plan/1", "mode": mode, "subject_id": subject,
             "semantic_extraction_profile": SEMANTIC_PROFILES[mode],
@@ -277,21 +386,32 @@ def prepare(corpus: Path, manifest_path: Path, output: Path, mode: str, upstream
     return plan
 
 
-def checkpoint(output: Path) -> tuple[dict[str, Any], list[dict[str, Any]]]:
-    plan = load(output / "plan.json")
+def checkpoint(output: Path, *, formal_checker: dict[str, Any] | None = None) -> tuple[dict[str, Any], list[dict[str, Any]]]:
+    plan, checker = _selected_run(output, formal_checker)
     require(plan.get("profile") == "ac.generation.plan/1", "unknown generation plan")
-    require(sha((output / "source-manifest.json").read_bytes()) == plan["source_manifest_sha256"], "source manifest changed")
-    require(sha((output / "chunks.json").read_bytes()) == plan["chunks_sha256"], "chunk plan changed")
-    require(sha(Path(__file__).read_bytes()) == plan["runner_sha256"], "runner changed since preparation; create a new plan")
-    require(sha((HERE / "ac_graph.py").read_bytes()) == plan["codec_sha256"], "codec changed since preparation")
-    require({path.name: sha(path.read_bytes()) for path in ASSETS.iterdir() if path.is_file()} == plan["assets"], "generation schemas/prompts changed")
+    def read(path: Path) -> bytes:
+        return _selected_read(checker, path)
+    require(sha(read(output / "source-manifest.json")) == plan["source_manifest_sha256"], "source manifest changed")
+    chunks_raw = read(output / "chunks.json")
+    require(sha(chunks_raw) == plan["chunks_sha256"], "chunk plan changed")
+    require(sha(read(Path(__file__))) == plan["runner_sha256"], "runner changed since preparation; create a new plan")
+    require(sha(read(HERE / "ac_graph.py")) == plan["codec_sha256"], "codec changed since preparation")
+    require({path.name: sha(read(path)) for path in ASSETS.iterdir() if path.is_file()} == plan["assets"], "generation schemas/prompts changed")
     for entry in plan["files"]:
-        source = output / "corpus" / entry["path"]
+        relative = safe_relative(entry["path"]) if checker is not None else entry["path"]
+        source = output / "corpus" / relative
+        _selected_path(checker, source)
         require(source.resolve(strict=True).is_relative_to((output / "corpus").resolve()), "snapshot source escapes checkpoint")
-        require(sha(source.read_bytes()) == entry["sha256"], "frozen source bytes changed: " + entry["path"])
+        require(sha(read(source)) == entry["sha256"], "frozen source bytes changed: " + relative)
     if plan["mode"] == "graphify":
-        require(sha((output / "upstream-extraction-spec.md").read_bytes()) == plan["upstream"]["prompt_sha256"], "upstream prompt changed")
-    return plan, load(output / "chunks.json")
+        require(sha(read(output / "upstream-extraction-spec.md")) == plan["upstream"]["prompt_sha256"], "upstream prompt changed")
+    chunks = _decode(chunks_raw)
+    if checker is not None:
+        for chunk in chunks:
+            require("/" not in safe_relative(chunk["id"]), "selected chunk id must be one safe basename")
+            for segment in chunk["segments"]:
+                safe_relative(segment["path"])
+    return plan, chunks
 
 
 def schema_errors(value: Any, schema: dict[str, Any], path: str = "$") -> list[str]:
@@ -402,7 +522,7 @@ def source_payload(chunk: dict[str, Any], output: Path) -> str:
 
 
 def extraction_prompt(plan: dict[str, Any], chunk: dict[str, Any], output: Path) -> str:
-    reference = (output / "upstream-extraction-spec.md").read_text()
+    reference = _run_path(output, output / "upstream-extraction-spec.md").read_text()
     body = reference.split("```", 2)[1].strip()
     files = sorted({str((output / "corpus" / segment["path"]).resolve()) for segment in chunk["segments"]})
     body = body.replace("FILE_LIST", "\n".join(files)).replace("CHUNK_NUM", chunk["id"]).replace("TOTAL_CHUNKS", str(len(plan["chunks"]))).replace("DEEP_MODE", "normal mode; no deep expansion")
@@ -419,7 +539,7 @@ def graph_context(output: Path, chunk: dict[str, Any], limit: int) -> dict[str, 
     # Reserve space for the exact parent digest and final coverage counters.
     # The final check covers the complete emitted object, including metadata.
     selection_limit = max(0, limit - 512)
-    graph = load(output / "discovery" / "graph.json")
+    graph = load(_run_path(output, output / "discovery" / "graph.json"))
     paths = {segment["path"] for segment in chunk["segments"]}
     absolute = {str((output / "corpus" / path).resolve()) for path in paths}
     all_nodes = graph.get("nodes", [])
@@ -594,6 +714,10 @@ def actor_evidence(output: Path, plan: dict[str, Any], chunk: dict[str, Any], at
     paths = ("answer.json", "result.json", "invocation.json", "prompt.txt", "events.jsonl", "stderr.txt", "usage.json")
     require(all((attempt / name).is_file() for name in paths), "incomplete actor evidence")
     require(all((attempt / name).resolve().is_relative_to(output.resolve()) for name in paths), "actor evidence symlink escapes selected run")
+    for name in paths:
+        _run_path(output, attempt / name)
+    _run_path(output, attempt / "validation.json", absent=True)
+    _run_path(output, output / "actor-settings.json")
     result = load(attempt / "result.json")
     invocation = load(attempt / "invocation.json")
     settings = load(output / "actor-settings.json")
@@ -697,6 +821,8 @@ def successful_attempt(output: Path, stage: str, chunk: dict[str, Any]) -> Path 
     attempt = attempts[-1]
     # A newer failed/unfinished retry remains visible; never fall back to an
     # older success. Stage execution still requires explicit --retry-failed.
+    _run_path(output, attempt / "result.json", absent=True)
+    _run_path(output, attempt / "validation.json", absent=True)
     if not (attempt / "result.json").is_file() or load(attempt / "result.json").get("status") != "completed":
         return None
     if not (attempt / "validation.json").is_file():
@@ -716,10 +842,10 @@ def stage(output: Path, name: str, *, execute: bool, codex: str = "codex", timeo
     if name == "author" and plan["mode"] in GRAPH_MODES:
         require((output / "discovery" / "result.json").exists(), "build the discovery graph before authoring")
         verify_discovery(output)
-    modules = upstream_modules(upstream or Path(plan["upstream"]["root"])) if name == "extract" else None
+    modules = upstream_modules(_upstream_path(output, upstream or Path(plan["upstream"]["root"]))) if name == "extract" else None
     pending = [chunk for chunk in chunks if successful_attempt(output, name, chunk) is None]
     selected = pending[:max_chunks] if max_chunks is not None else pending
-    settings_path = output / "actor-settings.json"
+    settings_path = _run_path(output, output / "actor-settings.json", write=True)
     if execute and selected:
         chosen = {key: value for key, value in (("model", model), ("model_reasoning_effort", effort)) if value is not None}
         _, _, metadata = actor_settings(codex, chosen)
@@ -732,6 +858,7 @@ def stage(output: Path, name: str, *, execute: bool, codex: str = "codex", timeo
         prompt = extraction_prompt(plan, chunk, output) if name == "extract" else author_prompt(plan, chunk, output)
         if not execute:
             path = output / "prepared-prompts" / name / (chunk["id"] + ".txt")
+            _run_path(output, path, write=True)
             path.parent.mkdir(parents=True, exist_ok=True)
             if path.exists():
                 require(path.read_text() == prompt, "prepared prompt changed")
@@ -742,6 +869,7 @@ def stage(output: Path, name: str, *, execute: bool, codex: str = "codex", timeo
         attempts = sorted(root.iterdir()) if root.exists() else []
         require(not attempts or retry_failed, f"{chunk['id']}: failed/interrupted attempt preserved; explicit --retry-failed required")
         attempt = root / f"attempt-{len(attempts) + 1:03d}"
+        _run_path(output, attempt, write=True)
         result = run_actor(prompt, ASSETS / ("extraction.schema.json" if name == "extract" else "author.schema.json"), attempt, codex, timeout, load(settings_path)["settings"])
         if result["status"] == "completed":
             try:
@@ -764,17 +892,18 @@ def stage(output: Path, name: str, *, execute: bool, codex: str = "codex", timeo
     summary = {"profile": "ac.generation.stage/1", "stage": name, "mode": plan["mode"], "processed": results,
                "completed_chunks": completed, "remaining_chunks": [chunk["id"] for chunk in chunks if chunk["id"] not in completed],
                "status": "completed" if len(completed) == len(chunks) else "incomplete"}
-    save(output / (name + "-status.json"), summary)
+    save(_run_path(output, output / (name + "-status.json"), write=True), summary)
     return summary
 
 
 def verify_discovery(output: Path) -> dict[str, Any]:
-    record = load(output / "discovery" / "result.json")
+    record = load(_run_path(output, output / "discovery" / "result.json"))
+    _run_path(output, output / "discovery" / "coverage.json")
     require(record.get("status") == "completed", "discovery graph incomplete")
     mode = load(output / "plan.json")["mode"]
     require(record.get("mode") == mode and mode in GRAPH_MODES, "discovery treatment differs from generation plan")
     for path, expected in record["files"].items():
-        require(sha((output / "discovery" / path).read_bytes()) == expected, "discovery graph changed: " + path)
+        require(sha(_run_member(output, output / "discovery" / path).read_bytes()) == expected, "discovery graph changed: " + path)
     chunks = {chunk["id"]: chunk for chunk in load(output / "chunks.json")}
     for entry in load(output / "discovery" / "coverage.json")["chunks"]:
         require(entry["id"] in chunks, "discovery provenance names unknown source chunk")
@@ -791,16 +920,16 @@ def verify_discovery(output: Path) -> dict[str, Any]:
 def build_discovery(output: Path, upstream: Path | None = None) -> dict[str, Any]:
     plan, chunks = checkpoint(output)
     require(plan["mode"] in GRAPH_MODES, "direct mode does not build a discovery graph")
-    folder = output / "discovery"
+    folder = _run_path(output, output / "discovery", write=True)
     if folder.exists():
         return verify_discovery(output)
     attempts = [successful_attempt(output, "extract", chunk) for chunk in chunks] if plan["mode"] == "graphify" else []
     require(plan["mode"] != "graphify" or all(attempts), "every source chunk needs a validated fresh semantic extraction before graph build")
-    modules = upstream_modules(upstream or Path(plan["upstream"]["root"]))
+    modules = upstream_modules(_upstream_path(output, upstream or Path(plan["upstream"]["root"])))
     folder.mkdir()
     started = time.perf_counter()
     corpus = (output / "corpus").resolve()
-    structural = modules["extract"].extract([corpus / entry["path"] for entry in plan["files"]], cache_root=folder, root=corpus, parallel=False)
+    structural = modules["extract"].extract([_run_path(output, corpus / entry["path"]) for entry in plan["files"]], cache_root=folder, root=corpus, parallel=False)
     save(folder / "structural.json", structural)
     require(not structural.get("failed_sources") and not structural.get("error"), "upstream structural extraction failed required sources; raw failure retained in discovery/structural.json")
     require(set(structural.get("extracted_sources", [])) == {str(corpus / entry["path"]) for entry in plan["files"]}, "upstream structural dispatch did not cover exact corpus")
@@ -1015,20 +1144,21 @@ def model_from_answers(plan: dict[str, Any], chunks: list[dict[str, Any]],
 
 
 def _formal_selection(output: Path, plan: dict[str, Any], selected: dict[str, Any] | None) -> dict[str, Any] | None:
-    prior = plan.get("formal_checker")
     path = output / "formal-selection.json"
-    if path.exists():
-        retained = load(path)
-        require(prior is None or retained == prior, "prepared formal checker selection changed")
-        prior = retained
-    elif prior is not None:
-        raise GenerationError("prepared required formal checker selection is missing")
-    if prior is not None and selected is not None:
-        require(prior == selected, "required formal checker cannot be changed during generation")
-    result = prior if prior is not None else selected
+    if selected is not None:
+        ac_formal_gate.validate_config(selected)
+        _selected_path(selected, output, write=True, directory=True)
+        _selected_path(selected, path, absent=True)
+    present = path.exists()
+    # This fixed inherited startup locator has the same trusted custody as plan.
+    raw = path.read_bytes() if present else None
+    result = _resolve_selection(plan, _decode(raw) if present else None, present, selected)
     if result is not None:
-        ac_formal_gate.validate_config(result)
-        if not path.exists():
+        _selected_path(result, output, write=True, directory=True)
+        _selected_path(result, path, write=not present)
+        if present:
+            require(_selected_read(result, path) == raw, "formal selection changed during startup")
+        else:
             save(path, result, exclusive=True)
     return result
 
@@ -1042,7 +1172,7 @@ def check_formal_proposal(plan: dict[str, Any], folder: Path, result: dict[str, 
                                 "scope": "exact generated model and actual carrier; no semantic acceptance"}
         try:
             for format in ("model", "carrier"):
-                raw = (folder / (format + ".json")).read_bytes()
+                raw = _selected_read(formal_checker, folder / (format + ".json"))
                 run = ac_formal_gate.verify(formal_checker, raw, format, [], None, None, folder / ("formal-" + format))
                 gate["runs"].append(run)
                 if run["result"]["status"] != "verified":
@@ -1059,7 +1189,7 @@ def check_formal_proposal(plan: dict[str, Any], folder: Path, result: dict[str, 
 
 def assemble(output: Path, *, allow_partial: bool = False, upstream: Path | None = None,
              formal_checker: dict[str, Any] | None = None) -> dict[str, Any]:
-    plan, chunks = checkpoint(output)
+    plan, chunks = checkpoint(output, formal_checker=formal_checker)
     formal_checker = _formal_selection(output, plan, formal_checker)
     if plan["mode"] in GRAPH_MODES:
         verify_discovery(output)
@@ -1077,7 +1207,7 @@ def assemble(output: Path, *, allow_partial: bool = False, upstream: Path | None
     model_checked = ac_graph.validate(model)
     carrier = ac_graph.materialize(model_checked)
     require(ac_graph.decode(carrier).document == model, "proposal carrier did not preserve authored model")
-    folder = output / ("partial-proposal" if len(answers) < len(chunks) else "proposal")
+    folder = _run_path(output, output / ("partial-proposal" if len(answers) < len(chunks) else "proposal"), write=True)
     require(not folder.exists(), "assembled proposal already exists; preserve immutable result")
     folder.mkdir()
     save(folder / "model.json", model)
@@ -1085,7 +1215,7 @@ def assemble(output: Path, *, allow_partial: bool = False, upstream: Path | None
     save(folder / "coverage.json", coverage)
     upstream_trial = None
     if plan["mode"] in GRAPH_MODES:
-        modules = upstream_modules(upstream or Path(plan["upstream"]["root"]))
+        modules = upstream_modules(_upstream_path(output, upstream or Path(plan["upstream"]["root"])))
         graph = modules["build"].build_from_json(ac_graph.extraction(carrier), dedup=False)
         communities = modules["cluster"].cluster(graph)
         require(modules["export"].to_json(graph, communities, str(folder / "graph.json"), force=True, built_at_commit=UPSTREAM_COMMIT), "upstream proposal export refused")
@@ -1161,7 +1291,7 @@ def main(argv: list[str] | None = None) -> int:
         elif args.command == "assemble":
             result = assemble(args.output, allow_partial=args.allow_partial, upstream=args.upstream, formal_checker=formal_checker)
         else:
-            plan, _ = checkpoint(args.output)
+            plan, _ = checkpoint(args.output, formal_checker=formal_checker)
             formal_checker = _formal_selection(args.output, plan, formal_checker)
             results = []
             if plan["mode"] == "graphify-ac":

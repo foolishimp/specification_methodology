@@ -1,0 +1,43 @@
+{
+  "schema": "a_c.t013.contention-cost-scope/1",
+  "observation": "Executive leanchecker pseudo-help process, approximately 01:18:55\u201301:19:40 UTC; terminated group 90222",
+  "window_method": "Retained result file mtime minus recorded duration; diagnostic wrappers write directly after child completion. Approximate, not an instrumented wall start.",
+  "nearby_measurements": [
+    {
+      "path": "runtime-specialization-001/generic-specialization.result.json",
+      "approximate_start_utc": "2026-10-29T01:15:04.487292+00:00",
+      "approximate_end_utc": "2026-10-29T01:15:05.200628+00:00",
+      "seconds": 0.7133357089478523,
+      "possible_overlap": false
+    },
+    {
+      "path": "runtime-specialization-001/SpecializedExecution02.result.json",
+      "approximate_start_utc": "2026-10-29T01:16:12.531393+00:00",
+      "approximate_end_utc": "2026-10-29T01:16:22.512680+00:00",
+      "seconds": 9.981286374852061,
+      "possible_overlap": false
+    },
+    {
+      "path": "runtime-specialization-001/SpecializedExecution.result.json",
+      "approximate_start_utc": "2026-10-29T01:15:48.296294+00:00",
+      "approximate_end_utc": "2026-10-29T01:15:49.011296+00:00",
+      "seconds": 0.7150019169785082,
+      "possible_overlap": false
+    },
+    {
+      "path": "runtime-specialization-001/specialization-serializer.result.json",
+      "approximate_start_utc": "2026-10-29T01:15:47.519778+00:00",
+      "approximate_end_utc": "2026-10-29T01:15:48.233801+00:00",
+      "seconds": 0.7140229588840157,
+      "possible_overlap": false
+    },
+    {
+      "path": "final-source-002/support-establishment.result.json",
+      "approximate_start_utc": "2026-10-29T01:20:14.521388+00:00",
+      "approximate_end_utc": "2026-10-29T01:20:32.930561+00:00",
+      "seconds": 18.409172999905422,
+      "possible_overlap": false
+    }
+  ],
+  "rule": "Any overlapping cost is a potentially contended observation, not an uncontended baseline. Sound successful proof is conserved; later cold public runs supply separate timings."
+}

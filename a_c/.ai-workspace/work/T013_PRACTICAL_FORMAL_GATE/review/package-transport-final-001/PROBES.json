@@ -1,0 +1,79 @@
+{
+  "schema": "a_c.T013.package-transport-readonly-probes/1",
+  "recorded_utc": "2026-10-29T13:49:11.857618+00:00",
+  "pin_inventory": [
+    {
+      "path": "package/repair-002",
+      "members": 9,
+      "all_match": true
+    },
+    {
+      "path": "checkpoint/evidence-transport-001",
+      "members": 14,
+      "all_match": true
+    }
+  ],
+  "package_path_probes": [
+    {
+      "operation": "build",
+      "case_alias_refusal": "overlapping filesystem source/bundle/output paths",
+      "source_or_output_opened": false
+    },
+    {
+      "operation": "archive",
+      "case_alias_refusal": "overlapping filesystem source/bundle/output paths",
+      "source_or_output_opened": false
+    },
+    {
+      "operation": "extract",
+      "case_alias_refusal": "overlapping filesystem source/bundle/output paths",
+      "source_or_output_opened": false
+    },
+    {
+      "operation": "build-reverse",
+      "case_alias_refusal": "overlapping filesystem source/bundle/output paths",
+      "source_or_output_opened": false
+    },
+    {
+      "operation": "archive-reverse",
+      "case_alias_refusal": "overlapping filesystem source/bundle/output paths",
+      "source_or_output_opened": false
+    },
+    {
+      "operation": "extract-reverse",
+      "case_alias_refusal": "overlapping filesystem source/bundle/output paths",
+      "source_or_output_opened": false
+    },
+    {
+      "dotdot_refused_before_file_access": true
+    },
+    {
+      "identity_failure_propagates": "identity unavailable"
+    },
+    {
+      "disjoint_existing_roots_allowed": true
+    },
+    {
+      "casefolded_private_exclusions": 4
+    },
+    {
+      "fixed_private_coordinate_only_removed": true,
+      "original_full_identity_preserved": true
+    }
+  ],
+  "transport_shape_probes": [
+    {
+      "path_exclusion_controls": 5,
+      "selection_manifest_payload_population_match": true,
+      "compression_writer_attribution_matches": true
+    },
+    {
+      "gitignore_exact_mapped_paths": 10,
+      "wildcards": false
+    },
+    {
+      "actual_payload_expansion_bound": "decompressed output exceeds bound",
+      "writes": 0
+    }
+  ]
+}

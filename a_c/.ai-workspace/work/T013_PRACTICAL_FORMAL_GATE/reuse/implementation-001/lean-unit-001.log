@@ -1,0 +1,176 @@
+test_bad_seal_or_key_refuses_and_missing_key_cold_falls_back (test_formal_reuse.ReuseControls.test_bad_seal_or_key_refuses_and_missing_key_cold_falls_back) ... FAIL
+test_current_correspondence_and_final_support_are_not_skipped (test_formal_reuse.ReuseControls.test_current_correspondence_and_final_support_are_not_skipped) ... FAIL
+test_duplicate_nonfinite_and_immutable_entry_controls (test_formal_reuse.ReuseControls.test_duplicate_nonfinite_and_immutable_entry_controls) ... FAIL
+test_exact_request_and_limits_cannot_be_refreshed_by_caller (test_formal_reuse.ReuseControls.test_exact_request_and_limits_cannot_be_refreshed_by_caller) ... FAIL
+test_exact_reuse_and_reuse_of_reuse_preserve_original_cost_and_artifacts (test_formal_reuse.ReuseControls.test_exact_reuse_and_reuse_of_reuse_preserve_original_cost_and_artifacts) ... FAIL
+test_failed_cold_stages_never_publish (test_formal_reuse.ReuseControls.test_failed_cold_stages_never_publish) ... FAIL
+test_foreign_and_absent_origin_only_identity_execute_cold (test_formal_reuse.ReuseControls.test_foreign_and_absent_origin_only_identity_execute_cold) ... FAIL
+test_nonorigin_pin_drift_extra_pin_and_bad_aggregate_refuse (test_formal_reuse.ReuseControls.test_nonorigin_pin_drift_extra_pin_and_bad_aggregate_refuse) ... FAIL
+test_ordinary_paths_never_read_or_retain_origin_material (test_formal_reuse.ReuseControls.test_ordinary_paths_never_read_or_retain_origin_material) ... ok
+test_pending_and_hint_never_commit_but_postcommit_is_established (test_formal_reuse.ReuseControls.test_pending_and_hint_never_commit_but_postcommit_is_established) ... 
+  test_pending_and_hint_never_commit_but_postcommit_is_established (test_formal_reuse.ReuseControls.test_pending_and_hint_never_commit_but_postcommit_is_established) (boundary='before-hint') ... ERROR
+  test_pending_and_hint_never_commit_but_postcommit_is_established (test_formal_reuse.ReuseControls.test_pending_and_hint_never_commit_but_postcommit_is_established) (boundary='before-private') ... ERROR
+  test_pending_and_hint_never_commit_but_postcommit_is_established (test_formal_reuse.ReuseControls.test_pending_and_hint_never_commit_but_postcommit_is_established) (boundary='after-private') ... ERROR
+test_public_manifest_refresh_cannot_forge_exact_origin (test_formal_reuse.ReuseControls.test_public_manifest_refresh_cannot_forge_exact_origin) ... FAIL
+
+======================================================================
+ERROR: test_pending_and_hint_never_commit_but_postcommit_is_established (test_formal_reuse.ReuseControls.test_pending_and_hint_never_commit_but_postcommit_is_established) (boundary='before-hint')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/candidate/a_c/build_tenants/lean/tests/test_formal_reuse.py", line 212, in test_pending_and_hint_never_commit_but_postcommit_is_established
+    origin, _ = reuse._origin(); body = reuse.binding(out, 'cold', origin[0], origin[1])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/candidate/a_c/build_tenants/lean/scripts/formal_reuse.py", line 250, in binding
+    raise OriginError('Original cold result or manifest binding changed')
+formal_reuse.OriginError: Original cold result or manifest binding changed
+
+======================================================================
+ERROR: test_pending_and_hint_never_commit_but_postcommit_is_established (test_formal_reuse.ReuseControls.test_pending_and_hint_never_commit_but_postcommit_is_established) (boundary='before-private')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/candidate/a_c/build_tenants/lean/tests/test_formal_reuse.py", line 212, in test_pending_and_hint_never_commit_but_postcommit_is_established
+    origin, _ = reuse._origin(); body = reuse.binding(out, 'cold', origin[0], origin[1])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/candidate/a_c/build_tenants/lean/scripts/formal_reuse.py", line 250, in binding
+    raise OriginError('Original cold result or manifest binding changed')
+formal_reuse.OriginError: Original cold result or manifest binding changed
+
+======================================================================
+ERROR: test_pending_and_hint_never_commit_but_postcommit_is_established (test_formal_reuse.ReuseControls.test_pending_and_hint_never_commit_but_postcommit_is_established) (boundary='after-private')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/candidate/a_c/build_tenants/lean/tests/test_formal_reuse.py", line 212, in test_pending_and_hint_never_commit_but_postcommit_is_established
+    origin, _ = reuse._origin(); body = reuse.binding(out, 'cold', origin[0], origin[1])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/candidate/a_c/build_tenants/lean/scripts/formal_reuse.py", line 250, in binding
+    raise OriginError('Original cold result or manifest binding changed')
+formal_reuse.OriginError: Original cold result or manifest binding changed
+
+======================================================================
+FAIL: test_bad_seal_or_key_refuses_and_missing_key_cold_falls_back (test_formal_reuse.ReuseControls.test_bad_seal_or_key_refuses_and_missing_key_cold_falls_back)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/candidate/a_c/build_tenants/lean/tests/test_formal_reuse.py", line 220, in test_bad_seal_or_key_refuses_and_missing_key_cold_falls_back
+    old, _ = self.cold(); store = self.checker / reuse.STORE_RELATIVE
+             ^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/candidate/a_c/build_tenants/lean/tests/test_formal_reuse.py", line 92, in cold
+    self.assertEqual(result['status'], 'verified', result.get('reason'))
+AssertionError: 'incomplete' != 'verified'
+- incomplete
++ verified
+ : Dynamic theorem coverage/axiom audit failed
+
+======================================================================
+FAIL: test_current_correspondence_and_final_support_are_not_skipped (test_formal_reuse.ReuseControls.test_current_correspondence_and_final_support_are_not_skipped)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/candidate/a_c/build_tenants/lean/tests/test_formal_reuse.py", line 261, in test_current_correspondence_and_final_support_are_not_skipped
+    old, _ = self.cold(); self.process.reset_mock()
+             ^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/candidate/a_c/build_tenants/lean/tests/test_formal_reuse.py", line 92, in cold
+    self.assertEqual(result['status'], 'verified', result.get('reason'))
+AssertionError: 'incomplete' != 'verified'
+- incomplete
++ verified
+ : Dynamic theorem coverage/axiom audit failed
+
+======================================================================
+FAIL: test_duplicate_nonfinite_and_immutable_entry_controls (test_formal_reuse.ReuseControls.test_duplicate_nonfinite_and_immutable_entry_controls)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/candidate/a_c/build_tenants/lean/tests/test_formal_reuse.py", line 233, in test_duplicate_nonfinite_and_immutable_entry_controls
+    old, _ = self.cold(); origin, _ = reuse._origin()
+             ^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/candidate/a_c/build_tenants/lean/tests/test_formal_reuse.py", line 92, in cold
+    self.assertEqual(result['status'], 'verified', result.get('reason'))
+AssertionError: 'incomplete' != 'verified'
+- incomplete
++ verified
+ : Dynamic theorem coverage/axiom audit failed
+
+======================================================================
+FAIL: test_exact_request_and_limits_cannot_be_refreshed_by_caller (test_formal_reuse.ReuseControls.test_exact_request_and_limits_cannot_be_refreshed_by_caller)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/candidate/a_c/build_tenants/lean/tests/test_formal_reuse.py", line 161, in test_exact_request_and_limits_cannot_be_refreshed_by_caller
+    old, _ = self.cold()
+             ^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/candidate/a_c/build_tenants/lean/tests/test_formal_reuse.py", line 92, in cold
+    self.assertEqual(result['status'], 'verified', result.get('reason'))
+AssertionError: 'incomplete' != 'verified'
+- incomplete
++ verified
+ : Dynamic theorem coverage/axiom audit failed
+
+======================================================================
+FAIL: test_exact_reuse_and_reuse_of_reuse_preserve_original_cost_and_artifacts (test_formal_reuse.ReuseControls.test_exact_reuse_and_reuse_of_reuse_preserve_original_cost_and_artifacts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/candidate/a_c/build_tenants/lean/tests/test_formal_reuse.py", line 105, in test_exact_reuse_and_reuse_of_reuse_preserve_original_cost_and_artifacts
+    old, cold = self.cold()
+                ^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/candidate/a_c/build_tenants/lean/tests/test_formal_reuse.py", line 92, in cold
+    self.assertEqual(result['status'], 'verified', result.get('reason'))
+AssertionError: 'incomplete' != 'verified'
+- incomplete
++ verified
+ : Dynamic theorem coverage/axiom audit failed
+
+======================================================================
+FAIL: test_failed_cold_stages_never_publish (test_formal_reuse.ReuseControls.test_failed_cold_stages_never_publish)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/candidate/a_c/build_tenants/lean/tests/test_formal_reuse.py", line 192, in test_failed_cold_stages_never_publish
+    out = self.output(); self.assertEqual(gate.verify(self.request, out)['status'], 'refused')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'incomplete' != 'refused'
+- incomplete
++ refused
+
+
+======================================================================
+FAIL: test_foreign_and_absent_origin_only_identity_execute_cold (test_formal_reuse.ReuseControls.test_foreign_and_absent_origin_only_identity_execute_cold)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/candidate/a_c/build_tenants/lean/tests/test_formal_reuse.py", line 123, in test_foreign_and_absent_origin_only_identity_execute_cold
+    old, _ = self.cold()
+             ^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/candidate/a_c/build_tenants/lean/tests/test_formal_reuse.py", line 92, in cold
+    self.assertEqual(result['status'], 'verified', result.get('reason'))
+AssertionError: 'incomplete' != 'verified'
+- incomplete
++ verified
+ : Dynamic theorem coverage/axiom audit failed
+
+======================================================================
+FAIL: test_nonorigin_pin_drift_extra_pin_and_bad_aggregate_refuse (test_formal_reuse.ReuseControls.test_nonorigin_pin_drift_extra_pin_and_bad_aggregate_refuse)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/candidate/a_c/build_tenants/lean/tests/test_formal_reuse.py", line 136, in test_nonorigin_pin_drift_extra_pin_and_bad_aggregate_refuse
+    old, _ = self.cold()
+             ^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/candidate/a_c/build_tenants/lean/tests/test_formal_reuse.py", line 92, in cold
+    self.assertEqual(result['status'], 'verified', result.get('reason'))
+AssertionError: 'incomplete' != 'verified'
+- incomplete
++ verified
+ : Dynamic theorem coverage/axiom audit failed
+
+======================================================================
+FAIL: test_public_manifest_refresh_cannot_forge_exact_origin (test_formal_reuse.ReuseControls.test_public_manifest_refresh_cannot_forge_exact_origin)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/candidate/a_c/build_tenants/lean/tests/test_formal_reuse.py", line 148, in test_public_manifest_refresh_cannot_forge_exact_origin
+    old, _ = self.cold()
+             ^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/candidate/a_c/build_tenants/lean/tests/test_formal_reuse.py", line 92, in cold
+    self.assertEqual(result['status'], 'verified', result.get('reason'))
+AssertionError: 'incomplete' != 'verified'
+- incomplete
++ verified
+ : Dynamic theorem coverage/axiom audit failed
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.876s
+
+FAILED (failures=9, errors=3)

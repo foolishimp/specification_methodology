@@ -1,0 +1,14 @@
+{
+  "schema": "a_c.t013.external-contention-observation/1",
+  "source": "Executive message",
+  "observed_start_utc": "2026-10-29T01:18:55+00:00",
+  "observed_end_utc": "2026-10-29T01:19:40+00:00",
+  "operation": "leanchecker --help; binary lacks help handler and began default scanning",
+  "process_group": 90222,
+  "disposition": "Executive sent SIGTERM; exit 143; no output; no source/artifact writes observed",
+  "support_establishment_approximate_start_utc": "2026-10-29T01:20:14.521388+00:00",
+  "support_establishment_approximate_end_utc": "2026-10-29T01:20:32.930561+00:00",
+  "establishment_overlap": false,
+  "start_estimate_basis": "result file mtime minus measured process duration; includes only negligible write delay",
+  "performance_rule": "An overlapping stage is not an uncontended baseline; no sound proof repeated only for contention. Compiler -M4096 is not a checker or OS RSS cap."
+}

@@ -43,32 +43,135 @@ def data_source(imported,raw_sha):
     decls.append('def model : Model := {\n'+'\n'.join(fields)+'\n  records := records\n  references := references\n  externalResolutions := externals\n  edges := edges\n}\n')
     return HEADER+'\n'.join(decls)+'\nend AC.GateData\n'
 
-def model_proof(imported):
-    n=len(imported['records'])
-    text='module\npublic import GateData\npublic import AC.Structure\n@[expose] public section\nset_option maxRecDepth 100000\nset_option maxHeartbeats 0\nset_option debug.skipKernelTC false\nnamespace AC.GateData\n'
-    text+=f'theorem keys_exact : model.records.map Record.key = List.range {n} := by rfl\n'
-    if n <= 256:
-        return text+'theorem model_checked : checkModel model = true := by decide +kernel\n#print axioms model_checked\nend AC.GateData\n'
-    text+=f'theorem names_checked : (model.records.map Record.identity).Nodup := by\n apply names_nodup_of_order _ lookupName nameOrder {n} {n.bit_length()}\n · rfl\n · decide +kernel\n · decide +kernel\n'
-    text+='theorem external_checked : (model.externalResolutions.map External.identity).Nodup := by decide +kernel\n'
-    entries=[('records','separate','fun r : Record => r.identity ∉ model.externalResolutions.map External.identity',len(imported['records'])),
-        ('edges','edgeBounds',f'fun e : Nat × Nat => e.1 < {n} ∧ e.2 < {n}',len(imported['edges'])),
-        ('references','refBounds',f'fun r : Reference => r.owner < {n} ∧ targetBound {n} (model.externalResolutions.map External.identity) r.target',len(imported['references']))]
-    for base,proof,prop,count in entries:
-        blocks=[base+str(i) for i in range((count+127)//128)]
-        for i,block in enumerate(blocks):
-            text+=f'theorem {proof}{i} : ∀ x ∈ {block}, ({prop}) x := by decide +kernel\n'
-        text+=f'theorem {proof} : ∀ x ∈ model.{base}, ({prop}) x := by\n'
-        text+=f' change ∀ x ∈ '+('['+', '.join(blocks)+'].flatten')+f', ({prop}) x\n'
-        text+=' apply all_flatten\n intro block member\n'
-        if not blocks:text+=' simp only [List.not_mem_nil] at member\n'
-        else:
-            text+=' simp only [List.mem_cons, List.not_mem_nil, or_false] at member\n'
-            text+=' rcases member with '+' | '.join('rfl' for _ in blocks)+'\n'
-            for i in range(len(blocks)):text+=f' · exact {proof}{i}\n'
-    text+=f'theorem model_checked : checkModel model = true :=\n checked_of_wellFormed model (wellFormed_of_range model {n} keys_exact names_checked external_checked separate edgeBounds refBounds)\n'
-    text+='#print axioms model_checked\nend AC.GateData\n'
+def _flatten_proof(base,proof,prop,count,model_field=None):
+    blocks=[base+str(i) for i in range((count+127)//128)]
+    text=f'theorem {proof} : ∀ x ∈ model.{model_field or base}, ({prop}) x := by\n'
+    text+=f' change ∀ x ∈ ['+', '.join(blocks)+f'].flatten, ({prop}) x\n'
+    text+=' apply all_flatten\n intro block member\n'
+    if not blocks:text+=' simp only [List.not_mem_nil] at member\n'
+    else:
+        text+=' simp only [List.mem_cons, List.not_mem_nil, or_false] at member\n'
+        text+=' rcases member with '+' | '.join('rfl' for _ in blocks)+'\n'
+        for i in range(len(blocks)):text+=f' · exact {proof}{i}\n'
     return text
+
+
+def _references_proof(imported,n):
+    externals=imported['envelope']['external_resolutions']
+    blocks=['externals'+str(i) for i in range((len(externals)+127)//128)]
+    text=''
+    for i,block in enumerate(blocks):
+        table='externalTable'+str(i)
+        text+=f'def {table} : Array String := ({block}.map External.identity).toArray\n'
+        member='List.mem_cons.mpr (Or.inl rfl)'
+        for _ in range(i):member='List.mem_cons.mpr (Or.inr ('+member+'))'
+        text+=f'theorem externalInside{i} : ∀ x ∈ {table}.toList, x ∈ model.externalResolutions.map External.identity := by\n'
+        text+=f' change ∀ x ∈ {table}.toList, x ∈ ['+', '.join(blocks)+'].flatten.map External.identity\n'
+        text+=f' simpa only [{table}, List.toList_toArray] using mapped_block_inside External.identity ['+', '.join(blocks)+f'] {block} ({member})\n'
+    external_index={e['external_identity']:i for i,e in enumerate(externals)}
+    # Each external membership is proved once by an exact bounded block index.
+    for i,entry in enumerate(externals):
+        text+=f'theorem externalAt{i} : {lean_string(entry["external_identity"])} ∈ model.externalResolutions.map External.identity :=\n member_of_block_index _ externalTable{i//128} {i%128} _ externalInside{i//128} (by rfl)\n'
+    prop=f'fun r : Reference => r.owner < {n} ∧ targetBound {n} (model.externalResolutions.map External.identity) r.target'
+    refs=imported['references']
+    for i,start in enumerate(range(0,len(refs),128)):
+        term='List.forall_mem_nil _'
+        for ref in reversed(refs[start:start+128]):
+            witness='(by decide +kernel)' if type(ref['target']) is int else f'⟨by decide +kernel, externalAt{external_index[ref["target"]]}⟩'
+            term='List.forall_mem_cons.mpr ⟨'+witness+', '+term+'⟩'
+        text+=f'theorem refBounds{i} : ∀ x ∈ references{i}, ({prop}) x :=\n {term}\n'
+    return text+_flatten_proof('references','refBounds',prop,len(refs))
+
+
+def _proof_header(imports):
+    return 'module\n'+''.join('public import '+name+'\n' for name in imports)+'@[expose] public section\nset_option maxRecDepth 100000\nset_option maxHeartbeats 0\nset_option debug.skipKernelTC false\nnamespace AC.GateData\n'
+
+
+def _char_literal(value):
+    return "'"+lean_string(value)[1:-1].replace("'", "\\'")+"'"
+
+
+def _name_rows(imported,external):
+    return [e['external_identity'] for e in imported['envelope']['external_resolutions']] if external else [e['record']['id'] for e in imported['records']]
+
+
+def name_contract_names(imported,external):
+    if len(imported['records'])<=256:return []
+    base='external' if external else 'local'
+    return ['AC.GateData.'+base+'CharsBlock'+str(i)+'_source' for i in range((len(_name_rows(imported,external))+127)//128)]+['AC.GateData.'+base+'Chars_source']+([] if external else ['AC.GateData.names_exact'])
+
+
+def name_source(imported,external=False):
+    n=len(imported['records']);text=_proof_header(['GateData','AC.Structure'])
+    if not external:text+=f'theorem keys_exact : model.records.map Record.key = List.range {n} := by rfl\n'
+    if n<=256:return text+'end AC.GateData\n'
+    if not external:
+        text+=f'theorem names_array : model.records.map Record.identity = nameTable.toList := by rfl\ntheorem nameTable_size : nameTable.size = {n} := by rfl\n'
+        text+=f'theorem names_exact : model.records.map Record.identity = (List.range {n}).map lookupName := by\n rw [names_array]\n change nameTable.toList = (List.range {n}).map (fun i => nameTable[i]?.getD "")\n simpa only [nameTable_size] using array_reconstruct nameTable ""\n#print axioms names_exact\n'
+    base='external' if external else 'local';letter='E' if external else 'L';records='externals' if external else 'records';project='External.identity' if external else 'Record.identity';field='externalResolutions' if external else 'records'
+    rows=_name_rows(imported,external)
+    for i,value in enumerate(rows):text+=f'def chars{letter}{i} : List Char := ['+', '.join(_char_literal(c) for c in value)+']\n'
+    blocks=[];checks=[]
+    for i,start in enumerate(range(0,len(rows),128)):
+        block=base+'CharsBlock'+str(i);blocks.append(block);checks.append(block+'_source')
+        text+=f'def {block} : List (List Char) := ['+', '.join(f'chars{letter}{j}' for j in range(start,min(start+128,len(rows))))+']\n'
+        text+=f'theorem {block}_source : {block}.map String.ofList = {records}{i}.map {project} := by rfl\n#print axioms {block}_source\n'
+    text+=f'def {base}Chars : List (List Char) := ['+', '.join(blocks)+'].flatten\n'
+    text+=f'theorem {base}Chars_source : {base}Chars.map String.ofList = model.{field}.map {project} := by\n'
+    text+=' change (['+', '.join(blocks)+'].flatten).map String.ofList = (['+', '.join(records+str(i) for i in range(len(blocks)))+f'].flatten).map {project}\n'
+    text+=' simp only [List.map_flatten, List.map_cons, List.map_nil'+(' ,'+', '.join(checks) if checks else '')+']\n'
+    return text+f'#print axioms {base}Chars_source\nend AC.GateData\n'
+
+
+def identity_contract_names(imported):
+    if len(imported['records'])<=256:return []
+    count=len(imported['records'])+len(imported['envelope']['external_resolutions'])
+    return ['AC.GateData.orderedPairsChecked'+str(i) for i in range((max(0,count-1)+127)//128)]+['AC.GateData.chars_reconstructed','AC.GateData.ordered_chain','AC.GateData.identities_checked']
+
+
+def identities_source(imported):
+    text=_proof_header(['GateLocalNames','GateExternalNames'])
+    if len(imported['records'])<=256:return text+'end AC.GateData\n'
+    rows=[(value,'charsL'+str(i)) for i,value in enumerate(_name_rows(imported,False))]+[(value,'charsE'+str(i)) for i,value in enumerate(_name_rows(imported,True))]
+    ordered=sorted(enumerate(rows),key=lambda p:p[1][0]);names=[entry[1][1] for entry in ordered];count=len(rows);fuel=count.bit_length()
+    text+='def labeledChars : List (Nat × List Char) := ['+', '.join(f'({i},{row[1]})' for i,row in ordered)+']\n'
+    text+='def orderedChars : List (List Char) := ['+', '.join(names)+']\n'
+    text+=f'theorem chars_reconstructed : (sortLabeled {fuel} labeledChars).map Prod.snd = localChars ++ externalChars := by rfl\n#print axioms chars_reconstructed\n'
+    blocks=[]
+    for i,start in enumerate(range(0,max(0,count-1),128)):
+        block='orderedPairs'+str(i);blocks.append(block)
+        text+=f'def {block} : List (List Char × List Char) := ['+', '.join(f'({names[j]},{names[j+1]})' for j in range(start,min(start+128,count-1)))+']\n'
+        text+=f'theorem orderedPairsChecked{i} : ∀ p ∈ {block}, p.1 < p.2 := by decide +kernel\n#print axioms orderedPairsChecked{i}\n'
+    text+='theorem orderedPairs_exact : orderedChars.zip orderedChars.tail = ['+', '.join(blocks)+'].flatten := by rfl\n'
+    text+='theorem ordered_chain : orderedChars.IsChain (· < ·) := by\n apply isChain_of_pairs\n rw [orderedPairs_exact]\n apply all_flatten\n intro block member\n'
+    if blocks:
+        text+=' simp only [List.mem_cons, List.not_mem_nil, or_false] at member\n rcases member with '+' | '.join('rfl' for _ in blocks)+'\n'
+        for i in range(len(blocks)):text+=f' · exact orderedPairsChecked{i}\n'
+    else:text+=' simp only [List.not_mem_nil] at member\n'
+    text+=f'theorem identitySource : (sortLabeled {fuel} labeledChars).map (fun p => String.ofList p.2) = model.records.map Record.identity ++ model.externalResolutions.map External.identity :=\n rendered_labeled_source _ _ localChars externalChars labeledChars {fuel} chars_reconstructed localChars_source externalChars_source\n'
+    text+=f'theorem identities_checked : ((model.records.map Record.identity) ++ (model.externalResolutions.map External.identity)).Nodup :=\n nodup_of_labeled_characters _ labeledChars {fuel} identitySource ordered_chain\n'
+    text+='theorem names_checked : (model.records.map Record.identity).Nodup := (List.nodup_append.mp identities_checked).1\n'
+    text+='theorem external_checked : (model.externalResolutions.map External.identity).Nodup := (List.nodup_append.mp identities_checked).2.1\n'
+    text+='theorem separate : ∀ r ∈ model.records, r.identity ∉ model.externalResolutions.map External.identity := separated_of_nodup _ _ identities_checked\n'
+    return text+'#print axioms ordered_chain\n#print axioms identities_checked\nend AC.GateData\n'
+
+def bounds_source(imported):
+    n=len(imported['records']);text=_proof_header(['GateData','AC.Structure'])
+    if n>256:
+        prop=f'fun e : Nat × Nat => e.1 < {n} ∧ e.2 < {n}'
+        for i in range((len(imported['edges'])+127)//128):
+            text+=f'theorem edgeBounds{i} : ∀ x ∈ edges{i}, ({prop}) x := by decide +kernel\n'
+        text+=_flatten_proof('edges','edgeBounds',prop,len(imported['edges']))
+        text+=_references_proof(imported,n)
+        text+='#print axioms edgeBounds\n#print axioms refBounds\n'
+    return text+'end AC.GateData\n'
+
+
+def model_proof(imported):
+    n=len(imported['records']);text=_proof_header(['GateIdentities','GateBounds'])
+    if n<=256:text+='theorem model_checked : checkModel model = true := by decide +kernel\n'
+    else:text+=f'theorem model_checked : checkModel model = true :=\n checked_of_wellFormed model (wellFormed_of_range model {n} keys_exact names_checked external_checked separate edgeBounds refBounds)\n'
+    return text+'#print axioms model_checked\nend AC.GateData\n'
 
 def views_source(cases):
     text='module\npublic import GateModel\n@[expose] public section\nset_option maxRecDepth 100000\nset_option maxHeartbeats 0\nset_option debug.skipKernelTC false\nnamespace AC.GateData\n'
@@ -83,8 +186,11 @@ def views_source(cases):
             text+=f'theorem result{i} : project model seeds{i} trace{i} {budget} = .ok (makeProjection model seeds{i} included{i}) := by\n rw [← set{i}]\n exact projection_success model seeds{i} trace{i} {budget} model_checked checked{i} (by decide +kernel)\n'
         else:
             text+=f'theorem result{i} : project model seeds{i} trace{i} {budget} = .error "insufficient record budget; required closure is not truncated" :=\n insufficient_budget_refuses model seeds{i} trace{i} {budget} model_checked checked{i} (by decide +kernel)\n'
-        for prefix in ('checked','set','reachability','result'):text+=f'#print axioms {prefix}{i}\n'
-    text+='def selections : List (Finset Nat × List Nat × Nat) := ['+', '.join(f'(seeds{i},trace{i},{c["effective_budget"]})' for i,c in enumerate(cases))+']\nend AC.GateData\n'
+        text+=f'def execution{i} : Except String Projection := projectWithProof model seeds{i} trace{i} {budget} model_checked checked{i}\n'
+        text+=f'theorem execution_matches_project{i} : execution{i} = project model seeds{i} trace{i} {budget} :=\n projectWithProof_eq_project model seeds{i} trace{i} {budget} model_checked checked{i}\n'
+        for prefix in ('checked','set','reachability','result','execution_matches_project'):text+=f'#print axioms {prefix}{i}\n'
+    text+='def selections : List (Finset Nat × List Nat × Nat) := ['+', '.join(f'(seeds{i},trace{i},{c["effective_budget"]})' for i,c in enumerate(cases))+']\n'
+    text+='def executions : List (Except String Projection) := ['+', '.join(f'execution{i}' for i in range(len(cases)))+']\nend AC.GateData\n'
     return text
 
 RUNNER='''module
@@ -97,7 +203,7 @@ public section
 def main : IO UInt32 := do
  let m := AC.GateData.model
  let result := Lean.Json.mkObj [("model", AC.GateRuntime.modelJson m),
-   ("views", Lean.Json.arr (AC.GateData.selections.map (AC.GateRuntime.gateSelectionJson m)).toArray)]
+   ("views", Lean.Json.arr (AC.GateData.executions.map (AC.GateRuntime.selectionResultJson m)).toArray)]
  IO.println result.compress
  return 0
 '''

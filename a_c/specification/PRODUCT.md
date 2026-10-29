@@ -207,3 +207,19 @@ generation and actual Worker-context integration and independent qualification.
 It preserves T-011's historical evidence, the installed construction basis and
 empty Product composition. Construction checks, gate verification and independent
 assessment remain distinct from Jim's acceptance and release authority.
+
+The [T-013 instruction](../.ai-workspace/tickets/active/T-013-practical-formal-gate.md#owner-instruction)
+selects the reviewed checkpoint/push, full-size verification, sound reuse,
+bounded matched actual-use assessment and local package preparation under the
+existing formalisation requirements. It does not enlarge the calculus fragment,
+adopt a method, or issue owner acceptance or public release. Tenant design owns
+the optimization and origin mechanism; the independently assessed exact outcome
+and measured costs govern any subsequent use recommendation.
+
+The T-013 cold full-size milestone is complete and independently reviewed at
+its exact scale cut. Reuse is integrated and source reviewed, with actual runtime
+qualification pending. The real Worker pair is unstarted. Package and evidence-
+transport preparation is reviewed; final archive, installed qualification,
+Product acceptance and release remain open. The compiler's `-M4096` option does
+not cap physical memory: observed aggregate child high-water RSS was
+12.73–13.02 GB. These delivery observations change no capability or authority.

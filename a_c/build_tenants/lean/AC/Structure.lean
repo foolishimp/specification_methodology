@@ -6,6 +6,16 @@ in the actual Model; these lemmas avoid repeatedly deciding irrelevant fields. -
 @[expose] public section
 namespace AC
 
+/-- Exact list reconstruction without normalizing every concrete indexed lookup.
+The array still contains the complete original identities. -/
+theorem array_reconstruct {α : Type} (xs : Array α) (fallback : α) :
+    xs.toList = (List.range xs.size).map (fun i => xs[i]?.getD fallback) := by
+  apply List.ext_getElem
+  · simp
+  · intro i hi hj
+    simp only [List.getElem_map, List.getElem_range, Array.getElem_toList]
+    simp [Array.getElem?_eq_getElem (by simpa using hi)]
+
 def mergeIndices : Nat → List Nat → List Nat → List Nat
   | 0, xs, ys => xs ++ ys
   | _ + 1, [], ys => ys
@@ -45,6 +55,112 @@ theorem sortIndices_perm (fuel : Nat) (names : List Nat) :
     unfold sortIndices
     exact (mergeIndices_perm _ _ _).trans
       (((ih _).append (ih _)).trans (by rw [List.take_append_drop]))
+
+def mergeLabeled {α : Type} : Nat → List (Nat × α) → List (Nat × α) → List (Nat × α)
+  | 0, xs, ys => xs ++ ys
+  | _ + 1, [], ys => ys
+  | _ + 1, xs, [] => xs
+  | fuel + 1, x :: xs, y :: ys =>
+    if x.1 ≤ y.1 then x :: mergeLabeled fuel xs (y :: ys)
+    else y :: mergeLabeled fuel (x :: xs) ys
+
+theorem mergeLabeled_perm {α : Type} (fuel : Nat) (xs ys : List (Nat × α)) :
+    (mergeLabeled fuel xs ys).Perm (xs ++ ys) := by
+  induction fuel generalizing xs ys with
+  | zero => exact List.Perm.refl _
+  | succ fuel ih =>
+    cases xs with
+    | nil => simp only [mergeLabeled, List.nil_append]; exact List.Perm.refl _
+    | cons x xs =>
+      cases ys with
+      | nil => simp only [mergeLabeled, List.append_nil]; exact List.Perm.refl _
+      | cons y ys =>
+        simp only [mergeLabeled]
+        split
+        · exact (ih xs (y :: ys)).cons x
+        · exact ((ih (x :: xs) ys).cons y).trans List.perm_middle.symm
+
+def sortLabeled {α : Type} : Nat → List (Nat × α) → List (Nat × α)
+  | 0, xs => xs
+  | fuel + 1, xs =>
+    let left := xs.take (xs.length / 2)
+    let right := xs.drop (xs.length / 2)
+    mergeLabeled xs.length (sortLabeled fuel left) (sortLabeled fuel right)
+
+theorem sortLabeled_perm {α : Type} (fuel : Nat) (values : List (Nat × α)) :
+    (sortLabeled fuel values).Perm values := by
+  induction fuel generalizing values with
+  | zero => exact List.Perm.refl _
+  | succ fuel ih =>
+    unfold sortLabeled
+    exact (mergeLabeled_perm _ _ _).trans
+      (((ih _).append (ih _)).trans (by rw [List.take_append_drop]))
+
+/-- Character lists are exact reconstruction witnesses. Injectivity comes from
+the checked String.ofList theorem; no UTF-8 decoding or serializer assumption is
+part of a concrete adjacency check. -/
+theorem nodup_of_labeled_characters (names : List String)
+    (labeled : List (Nat × List Char)) (fuel : Nat)
+    (source : (sortLabeled fuel labeled).map (fun p => String.ofList p.2) = names)
+    (ordered : (labeled.map Prod.snd).IsChain (· < ·)) : names.Nodup := by
+  have nd : (labeled.map Prod.snd).Nodup :=
+    ordered.pairwise.imp (fun {a b} h eq => by subst b; exact List.lt_irrefl a h)
+  have rendered : (labeled.map (fun p => String.ofList p.2)).Nodup := by
+    simpa only [List.map_map, Function.comp_def] using
+      nd.map (fun _ _ h => String.ofList_injective h)
+  rw [← source]
+  exact ((sortLabeled_perm fuel labeled).map (fun p => String.ofList p.2)).nodup_iff.mpr rendered
+
+theorem rendered_labeled_source (localNames externalNames : List String)
+    (localChars externalChars : List (List Char))
+    (labeled : List (Nat × List Char)) (fuel : Nat)
+    (source : (sortLabeled fuel labeled).map Prod.snd = localChars ++ externalChars)
+    (localSource : localChars.map String.ofList = localNames)
+    (externalSource : externalChars.map String.ofList = externalNames) :
+    (sortLabeled fuel labeled).map (fun p => String.ofList p.2) = localNames ++ externalNames := by
+  change (sortLabeled fuel labeled).map (String.ofList ∘ Prod.snd) = _
+  rw [← List.map_map, source, List.map_append, localSource, externalSource]
+
+/-- Every adjacent pair, including boundaries between generated proof blocks,
+is required. Exact zip equality ties the checked pairs to the complete order. -/
+theorem isChain_of_pairs {α : Type} (relation : α → α → Prop) (values : List α)
+    (checked : ∀ pair ∈ values.zip values.tail, relation pair.1 pair.2) :
+    values.IsChain relation := by
+  induction values with
+  | nil => exact List.IsChain.nil
+  | cons a values ih =>
+    cases values with
+    | nil => exact List.IsChain.singleton a
+    | cons b rest =>
+      apply List.isChain_cons_cons.mpr
+      constructor
+      · exact checked (a,b) (List.mem_cons_self)
+      · apply ih
+        intro pair member
+        exact checked pair (List.mem_cons_of_mem _ member)
+
+theorem separated_of_nodup (records : List Record) (external : List String)
+    (unique : (records.map Record.identity ++ external).Nodup) :
+    ∀ r ∈ records, r.identity ∉ external := by
+  intro r hr he
+  exact (List.nodup_append.mp unique).2.2 _ (List.mem_map.mpr ⟨r, hr, rfl⟩) _ he rfl
+
+/-- Membership witnesses may point into one exact block. Neither the index nor
+the producer's table is trusted without the equality and block inclusion. -/
+theorem member_of_block_index {α : Type} (all : List α) (block : Array α)
+    (index : Nat) (value : α)
+    (inside : ∀ x ∈ block.toList, x ∈ all)
+    (atIndex : block[index]? = some value) : value ∈ all := by
+  apply inside
+  exact Array.mem_toList_iff.mpr (Array.mem_of_getElem? atIndex)
+
+theorem mapped_block_inside {α β : Type} (project : α → β)
+    (blocks : List (List α)) (block : List α) (member : block ∈ blocks) :
+    ∀ x ∈ block.map project, x ∈ blocks.flatten.map project := by
+  intro x hx
+  rw [List.map_flatten]
+  exact List.mem_flatten.mpr
+    ⟨block.map project, List.mem_map.mpr ⟨block, member, rfl⟩, hx⟩
 
 theorem names_nodup_of_order (names : List String) (lookup : Nat → String)
     (order : List Nat) (n fuel : Nat)

@@ -15,17 +15,33 @@ bounded implementation and independent review of FR-001–FR-007. The
 [delivery handoff](.ai-workspace/work/T011_LEAN_FORMALISATION/DELIVERY.md) links
 runnable commands, the exact source freeze and the satisfied final assessment:
 46 actual projections, 46 insufficient-budget refusals and 204 deciding theorem
-reports. This work is uncommitted and unpushed on `main`; no owner acceptance or
-release is issued. Axiom Indexer, STDO Representation and
+reports. T-011 and T-012 are checkpointed and pushed on `main` at
+`a971d38583da8a06b91ec2ca1b65940ce2ecec08`; no owner acceptance or release is
+issued. Axiom Indexer, STDO Representation and
 Specification Methodology v3 are not prerequisites or composed Products.
 
-[T-012](.ai-workspace/tickets/active/T-012-reusable-formal-gate.md) is the active
-successor: a reusable exact-subject formal gate for new supported subjects,
+[T-012](.ai-workspace/tickets/active/T-012-reusable-formal-gate.md) delivered
+a reusable exact-subject formal gate for new supported subjects,
 portable proof evidence, and optional required verification in ordinary
-generation and actual Worker context/preflight/dispatch. Its five increments
-include independent actual-path qualification and measured costs. The
+generation and actual Worker context/preflight/dispatch. Its
+[closed independent assessment](.ai-workspace/work/T012_FORMAL_GATE/review/final-assessment-001/REVIEW.md)
+supports the declared fragment with no blocking findings. The
 [baseline](.ai-workspace/work/T012_FORMAL_GATE/baseline/BASELINE.json) preserves
-T-011's exact reviewed tenant and current common source before this work.
+T-011's exact reviewed tenant and common source before that work.
+
+[T-013](.ai-workspace/tickets/active/T-013-practical-formal-gate.md) is the active
+successor. The exact 1,987-record/1,021-external cold check and supplied view are
+complete and [independently reviewed](.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/review/scale-final-001/REVIEW.md).
+Origin-bound reuse is [integrated](.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/integration-001/HANDOFF.md)
+and source reviewed; 117 integration controls pass, while actual cold/reuse
+qualification on that new identity remains pending. The matched real F_P Worker
+pair is unstarted. [Package and evidence-transport preparation](.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/review/package-transport-final-001/REVIEW.md)
+is reviewed; no final archive, installation or release exists.
+The compiler uses `-M4096`; observed aggregate child high-water RSS was
+12.73–13.02 GB, so this is not a 4 GB physical-memory result. Practical benefit
+and total reused cost remain unestablished. The
+[reviewed-increment checkpoint record](.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/checkpoint/reviewed-increment-002/RETURN.md)
+binds the selected source, reviews and byte-preserving evidence transport.
 
 Read [stdo_a_c.json](stdo_a_c.json), [Goals](specification/GOALS.md),
 [Intent](specification/INTENT.md), [Product](specification/PRODUCT.md), and

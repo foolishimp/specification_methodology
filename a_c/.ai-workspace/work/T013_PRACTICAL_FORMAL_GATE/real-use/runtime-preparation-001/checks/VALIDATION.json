@@ -1,0 +1,80 @@
+{
+  "actor_model_calls": 0,
+  "actual_contexts_created": 0,
+  "admitted_receipts_created": 0,
+  "checks": [
+    {
+      "check": "static Python syntax",
+      "passed": true,
+      "source": "prepare_runtime.py"
+    },
+    {
+      "check": "static Python syntax",
+      "passed": true,
+      "source": "request_builder.py"
+    },
+    {
+      "check": "static Python syntax",
+      "passed": true,
+      "source": "compare_contexts.py"
+    },
+    {
+      "arm": "ungated",
+      "check": "pending checker policy refused",
+      "code": "contract_violation",
+      "message": "object must be an object"
+    },
+    {
+      "arm": "ungated",
+      "check": "request builder refuses preparation manifest",
+      "message": "Preparation templates cannot create dependent execution requests"
+    },
+    {
+      "arm": "ungated",
+      "check": "exact current Product-located owner bytes acquired via public Core",
+      "sha256": "3b5ac2e51753f10d7f2f80bd4259c060bd5b1b9dd8e0e967029834e4d9aea419"
+    },
+    {
+      "admitted": false,
+      "arm": "ungated",
+      "check": "public pure planner crossed actual owner-binding check then refused unavailable Context",
+      "code": "basis_missing",
+      "message": "Protected artifact resolver is not configured"
+    },
+    {
+      "arm": "gated",
+      "check": "pending checker policy refused",
+      "code": "contract_violation",
+      "message": "object must be an object"
+    },
+    {
+      "arm": "gated",
+      "check": "request builder refuses preparation manifest",
+      "message": "Preparation templates cannot create dependent execution requests"
+    },
+    {
+      "arm": "gated",
+      "check": "exact current Product-located owner bytes acquired via public Core",
+      "sha256": "3b5ac2e51753f10d7f2f80bd4259c060bd5b1b9dd8e0e967029834e4d9aea419"
+    },
+    {
+      "admitted": false,
+      "arm": "gated",
+      "check": "public pure planner crossed actual owner-binding check then refused unavailable Context",
+      "code": "basis_missing",
+      "message": "Protected artifact resolver is not configured"
+    }
+  ],
+  "created_utc": "2026-10-29T00:46:16.395453+00:00",
+  "dispatches": 0,
+  "formal_gate_proof_compiler_calls": 0,
+  "git_effects": 0,
+  "json_documents_parsed": 98,
+  "limits": "Shape/source-only. Actual final Contexts, full selected checker, preflight, forwarding, provider/schema availability and task outcomes remain untested.",
+  "method_basis": "unchanged STDO 2.5.1 RC2 with existing work-scoped support profile",
+  "previous_preparation_all_pins_preserved": true,
+  "product_definition_unchanged": true,
+  "schema": "t013.runtime-preparation.validation/1",
+  "selected_templates": "templates-004",
+  "ticket_original_prefix_preserved": true
+}

@@ -659,6 +659,16 @@ def _allowed(root: Object, relative: str) -> bool:
     return False
 
 
+def _formal_source_path(runtime: Runtime, path: Path, *, write: bool, absent: bool = False) -> Path:
+    selected = runtime.policy.get("formal_gate")
+    if selected is not None:
+        try:
+            ac_formal_gate.guard_path(as_object(selected)["checker"], path, output=write, absent=absent)
+        except ac_formal_gate.GateError as exc:
+            raise SupportError("path_refused", str(exc)) from exc
+    return path
+
+
 def source_path(runtime: Runtime, ref: Object, *, write: bool = False,
                 allow_absent: bool = False) -> Path:
     if ref.get("engine") != "workspace-regular-file":
@@ -678,7 +688,7 @@ def source_path(runtime: Runtime, ref: Object, *, write: bool = False,
             info = current.lstat()
         except FileNotFoundError:
             if allow_absent and index == len(member.parts) - 1:
-                return current
+                return _formal_source_path(runtime, current, write=write, absent=True)
             raise SupportError("source_missing", "Missing path component: " + str(current)) from None
         if stat.S_ISLNK(info.st_mode):
             raise SupportError("path_refused", "Symlink path components are refused")
@@ -686,7 +696,7 @@ def source_path(runtime: Runtime, ref: Object, *, write: bool = False,
             raise SupportError("path_refused", "Intermediate path is not a directory")
     if write and (_overlaps(current, runtime.evidence_root) or _overlaps(current, runtime.policy_path)):
         raise SupportError("role_effect_denied", "Writer target aliases protected policy/evidence")
-    return current
+    return _formal_source_path(runtime, current, write=write)
 
 
 def read_source(runtime: Runtime, ref: Object) -> Object:

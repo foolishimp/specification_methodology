@@ -1,0 +1,33 @@
+{
+  "fixed": {
+    "activation": {
+      "id": "t013-report-gated-worker-001:activation",
+      "sha256": "44e3917bb1d7b8a2460eac48c688d84a4867ae803f6fc3ee62b1a44279f976e3"
+    },
+    "actor": {
+      "authorship": "t013-report-gated-worker-001",
+      "family": "codex-native-default",
+      "id": "t013-report-gated-worker-001"
+    },
+    "basis": {
+      "method_profile": {
+        "id": "urn:a-c:fd-support:method:claude-rc9:executive:1",
+        "sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+      },
+      "observations": []
+    },
+    "consumer": "/root",
+    "frame": {
+      "id": "t013-report-helper-frame",
+      "revision": "1"
+    },
+    "id": "t013-report-gated-worker-001:return",
+    "schema": "a_c.fd-support.closed-return/1",
+    "subject": {
+      "id": "urn:a-c:T013:report-helper:001",
+      "sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829"
+    }
+  },
+  "instruction": "Implement the supplied exact TASK in your own workspace. Return one strict closed-return JSON object with these fixed fields. Report actual local checks only; no independent acceptance. All extra task files belong in support/ or scratch/. Preserve actual test output in support/test-output.txt. Write support/candidate.json listing every deliverable with its raw SHA-256 and byte length, excluding that manifest itself. A candidate_ready return uses a SourceRef to that exact manifest and nonempty evidence SourceRefs to actual local test/output files. SourceRef engine is workspace-regular-file, root is task, path is workspace-relative, object and selector are null, sha256 hashes exact raw file bytes. No extra models/agents/network/outside reads.",
+  "schema": "a_c.T013.return-instructions/1"
+}

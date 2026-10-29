@@ -1,0 +1,80 @@
+{
+  "command": [
+    "/usr/local/bin/python3",
+    "-I",
+    "-S",
+    "-B",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/scripts/formal_gate.py",
+    "verify",
+    "--request",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/view-expectations-001/request.json",
+    "--output",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/public-positive-002"
+  ],
+  "outer_seconds": 600,
+  "per_stage_seconds": 90,
+  "lean_memory_mb": 4096,
+  "os_rss_cap": false,
+  "status": "verified",
+  "returncode": 0,
+  "reason": null,
+  "gate_elapsed_seconds": 269.57934033405036,
+  "stages": [
+    {
+      "seconds": 3.7008843331132084,
+      "stage": "support-pins"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 43.63599458313547,
+      "stage": "GateData"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 52.69839370902628,
+      "stage": "GateLocalNames"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 45.623720332980156,
+      "stage": "GateExternalNames"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 28.048992374911904,
+      "stage": "GateIdentities"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 44.73652841593139,
+      "stage": "GateBounds"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 0.6627779579721391,
+      "stage": "GateModel"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 6.323554666945711,
+      "stage": "GateViews"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 28.368402290856466,
+      "stage": "dynamic-kernel-replay"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 9.690666750073433,
+      "stage": "actual-runtime"
+    },
+    {
+      "seconds": 3.7597353749442846,
+      "stage": "support-pins-after"
+    }
+  ],
+  "gate_result_sha256": "1de052047cd8bdc15fd38be9cd9094e7c628df0fa209e1820c2fe99ae405d05e",
+  "external_elapsed_seconds": 269.82888320903294,
+  "child_high_water_rss_bytes": 12732956672
+}

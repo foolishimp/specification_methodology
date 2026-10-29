@@ -1,0 +1,42 @@
+{
+  "schema": "a_c.t013.reuse-integration-activation/1",
+  "actor": "/root/ac_scale_reuse_worker",
+  "role": "Worker",
+  "delegating_executive": "/root",
+  "work_item": "T-013",
+  "observed_utc": "2026-10-29T16:04:23.932019+00:00",
+  "change_class": "realization_refactor",
+  "operation": "Integrate exact independently reviewed staged bytes and run bounded Python controls against integrated paths; close source ownership.",
+  "write_territory": [
+    "build_tenants/graphify/code/ac_formal_gate.py",
+    "build_tenants/graphify/code/ac_generate.py",
+    "build_tenants/graphify/code/ac_grounding.py",
+    "build_tenants/graphify/code/ac_repair.py",
+    "build_tenants/graphify/code/ac_support_core.py",
+    "build_tenants/graphify/design/formal-gate.md",
+    "build_tenants/graphify/test_env/test_ac_formal_origin_paths.py",
+    "build_tenants/lean/design/FORMAL_GATE.md",
+    "build_tenants/lean/scripts/formal_gate.py",
+    "build_tenants/lean/scripts/formal_reuse.py",
+    "build_tenants/lean/tests/test_formal_reuse.py",
+    ".ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/integration-001/**"
+  ],
+  "basis": {
+    "installed_release": "stdo://releases/v2.5.1-rc.2/",
+    "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "calculus_sha256": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d"
+  },
+  "selected_patch_sha256": "cdccf9fdd55ac558f1b248c8139ac7e7372fd9e2133feaa74d81f0c1299aebc6",
+  "review_closed_sha256": "e4a23349444c9d7fa66dad0630368933dc30d56b7325871bdc1db59123e2669a",
+  "test_scope": "same 60 cheap synthetic controls plus existing 57 Lean Python tests; temporary effects redirected to integration records",
+  "exclusions": [
+    "synthesized live edits",
+    "Lean/compiler/proof calls",
+    "live-origin/key creation or reading",
+    "past evidence signing",
+    "model actor calls",
+    "Git/index/commit/push",
+    "public release/owner acceptance"
+  ],
+  "stop": "Close exact integrated pins and origin-absent identity; hand live source ownership back to Executive. No subsequent runtime source mutation."
+}

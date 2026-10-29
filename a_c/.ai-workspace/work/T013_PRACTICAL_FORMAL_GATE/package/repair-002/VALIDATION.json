@@ -1,0 +1,56 @@
+{
+  "schema": "a_c.T013.package-overlap-repair-validation/1",
+  "recorded_at": "2026-10-29T02:07:57.408226+00:00",
+  "synthetic_tests": {
+    "count": 19,
+    "exit_code": 0,
+    "skips": 0,
+    "log_sha256": "f277c6386ac27f464da76f17207329297c369d2500ce880995e7c89fe367c671"
+  },
+  "exact_host_probe": {
+    "source": "/Users/jim/src/apps/specification_methodology/a_c",
+    "output": "/users/jim/src/apps/specification_methodology/a_c/packaging-review-case-hypothetical-output",
+    "lexically_disjoint": true,
+    "output_parent_samefile_source": true,
+    "refusal": "overlapping filesystem source/bundle/output paths",
+    "output_created": false,
+    "probe_uses_existing_metadata_only": true
+  },
+  "unsupported_identity_and_absent_root_controls": "refused",
+  "source_sha256": "9907d7245372af188276384cc5ab710b9a77328b92047a277a94e1ed5ab40117",
+  "tests_sha256": "48666fe8981d5d0ba569e53ae18e48d21d5069400aba5bb8ba95dff7419bf222",
+  "plan_sha256": "90e99f4f4345f4443416a3ce9a1c2f34a4b72dac331cd7088f7528d0d42af02e",
+  "candidate_inventory_unchanged": true,
+  "candidate_members": 58,
+  "payload_destinations": 63,
+  "packaging_source_rebindings": [
+    {
+      "path": "DEPENDENCIES.md",
+      "previous_source": "a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/repair-001/DEPENDENCIES.md",
+      "successor_source": "a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/repair-002/DEPENDENCIES.md"
+    },
+    {
+      "path": "INVENTORY_PLAN.json",
+      "previous_source": "a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/repair-001/INVENTORY_PLAN.json",
+      "successor_source": "a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/repair-002/INVENTORY_PLAN.json"
+    },
+    {
+      "path": "PACKAGE_README.md",
+      "previous_source": "a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/repair-001/RECIPE.md",
+      "successor_source": "a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/repair-002/RECIPE.md"
+    },
+    {
+      "path": "package_source.py",
+      "previous_source": "a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/repair-001/package_source.py",
+      "successor_source": "a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/repair-002/package_source.py"
+    },
+    {
+      "path": "test_package_source.py",
+      "previous_source": "a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/repair-001/test_package_source.py",
+      "successor_source": "a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/repair-002/test_package_source.py"
+    }
+  ],
+  "predecessor_member_pins_preserved": 10,
+  "final_archive_or_runtime_executed": false,
+  "private_origin_or_Git_effects": false
+}

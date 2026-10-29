@@ -1,0 +1,62 @@
+{
+  "actual_model": "unknown until a vendor event reports it; otherwise remains unknown",
+  "chain": [
+    {
+      "bytes": 43,
+      "path": "/Users/jim/bin/codex",
+      "raw_sha256": "94226c0923bf7a090cb3855e215e943e021ec0b0896f6de58ec85ea56d22c7a8",
+      "selected": false
+    },
+    {
+      "bytes": 206,
+      "path": "/Users/jim/bin/codex-main",
+      "raw_sha256": "99ada98dedae0f55d4de54dddd76d7f1ce1af16afae89378508f586df4cdab71",
+      "selected": false
+    },
+    {
+      "bytes": 8790,
+      "path": "/opt/homebrew/lib/node_modules/@openai/codex/bin/codex.js",
+      "raw_sha256": "61b0194f3bb6534439c8d26a3ed57d0805f84b884588b761795323eeb92fcf70",
+      "selected": false
+    },
+    {
+      "bytes": 260293200,
+      "path": "/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex",
+      "raw_sha256": "d8990e3ee7acfbc26f91265b12a1a83f0fee40d0e0f8f1f40a37d4ec21f499cf",
+      "selected": true
+    }
+  ],
+  "credentials": "Not inspected; no HOME/home/CODEX_HOME changes.",
+  "helper_python": {
+    "path": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "sha256": "a7f5b535d61d1c7326824204ac80f045a97a652abb154421e2c74fcc365a3539",
+    "version": "3.12.8"
+  },
+  "model_invocations": 0,
+  "native_loader_boundary": {
+    "qualification": "OS/dyld/system-library semantics remain trusted host dependencies, not a complete machine-image pin.",
+    "system_libraries": "native-system-libraries.txt",
+    "user_launcher": "none; direct regular native executable"
+  },
+  "observed_commands": [
+    "native --version",
+    "native exec --help"
+  ],
+  "observed_utc": "2026-10-29T00:14:58.590413+00:00",
+  "official_references": [
+    "https://learn.chatgpt.com/docs/non-interactive-mode",
+    "https://learn.chatgpt.com/docs/developer-commands?surface=cli"
+  ],
+  "requested_model": null,
+  "requested_reasoning_effort": null,
+  "schema": "t013.real-use.cli-inspection/1",
+  "selected_native": {
+    "bytes": 260293200,
+    "path": "/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex",
+    "raw_sha256": "d8990e3ee7acfbc26f91265b12a1a83f0fee40d0e0f8f1f40a37d4ec21f499cf",
+    "selected": true
+  },
+  "settings_selection": "Native CLI defaults with ignore-user-config; explicit workspace-write; same argv profile in both arms.",
+  "version": "codex-cli 0.164.0",
+  "wrapper_exclusion": "codex-main assigns CODEX_HOME and injects danger-full-access; wrappers excluded. Their implicit defaults were not tested."
+}

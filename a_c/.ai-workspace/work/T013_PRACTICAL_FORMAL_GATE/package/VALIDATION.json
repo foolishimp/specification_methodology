@@ -1,0 +1,71 @@
+{
+  "final_freeze_pending": true,
+  "packager_sha256": "c574b4e7d410ae00b5fb92c691bb3404832cbe63df5b0f1fb88f91c678fcd126",
+  "plan_sha256": "e22bdddacdc060f195aaf9c2d5962d4a0d560d42f491ed8f2761a860f150d3bd",
+  "preparation_observation": "First inventory probe selected the wrong parent depth and stopped at an assertion before writes or tests; corrected to the actual repo root for this run.",
+  "recorded_at": "2026-10-29T01:27:25.889660+00:00",
+  "schema": "a_c.T013.package-validation/1",
+  "source_only_checks": {
+    "ast_parse": [
+      "package_source.py",
+      "test_package_source.py"
+    ],
+    "closed_namespace_coverage": [
+      {
+        "directory": "a_c/build_tenants/lean/AC",
+        "files": 10,
+        "unselected": []
+      },
+      {
+        "directory": "a_c/build_tenants/lean/scripts",
+        "files": 10,
+        "unselected": []
+      },
+      {
+        "directory": "a_c/build_tenants/lean/profiles",
+        "files": 3,
+        "unselected": []
+      },
+      {
+        "directory": "a_c/build_tenants/lean/tests",
+        "files": 3,
+        "unselected": []
+      },
+      {
+        "directory": "a_c/build_tenants/lean/design",
+        "files": 5,
+        "unselected": []
+      },
+      {
+        "directory": "a_c/build_tenants/lean/fixtures",
+        "files": 6,
+        "unselected": []
+      },
+      {
+        "directory": "a_c/build_tenants/graphify/code/generation",
+        "files": 5,
+        "unselected": []
+      }
+    ],
+    "explicit_entries": 63,
+    "markdown_whitespace": "clean",
+    "paths_regular_and_unique": true,
+    "source_changes_since_inspection": []
+  },
+  "source_setup_not_executed": [
+    "final source selection",
+    "candidate archive",
+    "candidate copying or extraction",
+    "bootstrap or installer",
+    "proof or gate",
+    "private support/cache/key access",
+    "Git effects"
+  ],
+  "synthetic_tests": {
+    "exit_code": 0,
+    "log": "synthetic-tests.log",
+    "log_sha256": "adec322a2a9b02207f920cee361a085fe0172ce8251dc4d05355cf0c668e57ae",
+    "tests": 13
+  },
+  "tests_sha256": "4906e4a7620030fff00b9df26f8d43f5aa8218eb21f1845ba2b30b0779d36a50"
+}

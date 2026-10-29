@@ -1,0 +1,63 @@
+{
+  "schema": "a_c.t013.reuse-exact-integration/1",
+  "observed_utc": "2026-10-29T16:05:05.541917+00:00",
+  "status": "PASS",
+  "method": "Exact byte copy from independently reviewed staged candidate; no synthesis.",
+  "changed_files": {
+    "build_tenants/graphify/code/ac_formal_gate.py": {
+      "before_sha256": "93c7aa262f1d7dd393a83afb4448880c7fa08031eced81539792fc9528359462",
+      "after_sha256": "d37de63f2b809e7a02d88d560b29b4900e8cda6217cfbc32e5796f40065659b8"
+    },
+    "build_tenants/graphify/code/ac_generate.py": {
+      "before_sha256": "f3b95da9a113870cf739ef108f791089b6e9b17a9b0308f2505285af9b5ced5c",
+      "after_sha256": "50967f0f5db2bac54383f896b2a47578e1cbe0536565f40d8b1f14e3b2c23bee"
+    },
+    "build_tenants/graphify/code/ac_grounding.py": {
+      "before_sha256": "0fc1f15699e5961711c38328cb06bc837d39abb36ab466a071bdcf0d4f0e3410",
+      "after_sha256": "720fee34b7078387ced46b4180c88d574dfc02de36e0bcdc34d86f49a56fe343"
+    },
+    "build_tenants/graphify/code/ac_repair.py": {
+      "before_sha256": "38cd68f9cb6be5acb80be340fdcb32d1cd0fa8f6c66e129872d6f238ba7f4ba6",
+      "after_sha256": "00e442b9a13d8aab6af888b863ab62a53701238d36fa10397ae8022a1b05575d"
+    },
+    "build_tenants/graphify/code/ac_support_core.py": {
+      "before_sha256": "e0d4998f0e5a2ecc5fea5f6ef82acb3d5d0a0049d16a392ca63cba13b672a15b",
+      "after_sha256": "024470f433a891d5ecdef3f4e08e5d8cfa5b66df16bf36270d2865d6b1450b5b"
+    },
+    "build_tenants/graphify/design/formal-gate.md": {
+      "before_sha256": "589f348e06fee2c20ffa8d4d521ad53d09f6af9792815f9531bfd3fa52c80df6",
+      "after_sha256": "9ea8ac15d8a05683e826e88da39d483ad7f661fb5a0ed35ffa16f49d4a525c2f"
+    },
+    "build_tenants/graphify/test_env/test_ac_formal_origin_paths.py": {
+      "before_sha256": null,
+      "after_sha256": "1904af74a2bc89db85e033c29831759cc10251434db9fd243018040f3a11215b"
+    },
+    "build_tenants/lean/design/FORMAL_GATE.md": {
+      "before_sha256": "06bcef62a45d8f1560bd40c8af297c120b7d8ec6d6805e877ac9af05449a0093",
+      "after_sha256": "e249ec4f9fb5bbcd9cdfe3dfc83ec9c91830e9a10fc92f4d943e4a65992e58d1"
+    },
+    "build_tenants/lean/scripts/formal_gate.py": {
+      "before_sha256": "8216c756b39f43f1f304f0dc96463472ff7082d7ad599afadbcca257e452f685",
+      "after_sha256": "f578f46afda709ea97270222507ea83eecdfe01b0bd6a56504f1693753a40831"
+    },
+    "build_tenants/lean/scripts/formal_reuse.py": {
+      "before_sha256": null,
+      "after_sha256": "819d22b902724387f96d26156f1030af30e8e4bc21c6ec3dccc165664bfd91c4"
+    },
+    "build_tenants/lean/tests/test_formal_reuse.py": {
+      "before_sha256": null,
+      "after_sha256": "f792c0a46f5dd53e400166cd748efa4060350b8c284f4b0e9fdf488c9cc6132e"
+    }
+  },
+  "syntax_checked_python_paths": [
+    "build_tenants/graphify/code/ac_formal_gate.py",
+    "build_tenants/graphify/code/ac_generate.py",
+    "build_tenants/graphify/code/ac_grounding.py",
+    "build_tenants/graphify/code/ac_repair.py",
+    "build_tenants/graphify/code/ac_support_core.py",
+    "build_tenants/graphify/test_env/test_ac_formal_origin_paths.py",
+    "build_tenants/lean/scripts/formal_gate.py",
+    "build_tenants/lean/scripts/formal_reuse.py",
+    "build_tenants/lean/tests/test_formal_reuse.py"
+  ]
+}

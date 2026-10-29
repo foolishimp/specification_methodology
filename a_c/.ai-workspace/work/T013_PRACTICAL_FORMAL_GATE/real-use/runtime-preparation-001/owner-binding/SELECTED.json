@@ -1,0 +1,77 @@
+{
+  "mechanism": {
+    "id": "product-policy-preflight/1",
+    "implementation_sha256": "e0d4998f0e5a2ecc5fea5f6ef82acb3d5d0a0049d16a392ca63cba13b672a15b",
+    "source": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "build_tenants/graphify/design/fd-support.md",
+      "root": "product",
+      "selector": null,
+      "sha256": "36f41798dcd9259c44efe175c7f01b8df398d8b5d8d763e4442da206114482e0"
+    }
+  },
+  "result_surface": {
+    "consumer": "/root",
+    "namespace": "t013-matched-report-helper-001",
+    "root": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/real-use/runtime-preparation-001/execution/evidence"
+  },
+  "scope": {
+    "Executive": "/root",
+    "actor_calls": [
+      {
+        "actor_id": "t013-report-ungated-worker-001",
+        "arm": "ungated",
+        "backend": "actual-codex-native-cli",
+        "count": 1,
+        "role": "Worker"
+      },
+      {
+        "actor_id": "t013-report-gated-worker-001",
+        "arm": "gated",
+        "backend": "actual-codex-native-cli",
+        "count": 1,
+        "role": "Worker"
+      }
+    ],
+    "bounds": {
+      "automatic_retry": false,
+      "input_bytes": 2097152,
+      "maximum_invocations_per_arm": 1,
+      "outer_supervisor_ms": 1000000,
+      "output_bytes": 16777216,
+      "per_actor_ms": 900000,
+      "termination_grace_ms": 2000
+    },
+    "excluded": [
+      "new Product feature adoption",
+      "owner acceptance",
+      "semantic fidelity/whole-calculus qualification",
+      "release/publication",
+      "extra actor/model invocation",
+      "network acquisition",
+      "Git effects",
+      "credential inspection",
+      "private proof/origin material access"
+    ],
+    "operations": [
+      "context.assemble",
+      "contract.preflight",
+      "dispatch.start",
+      "dispatch.observe",
+      "return.capture",
+      "bounded local Worker file/shell implementation and tests inside granted task workspace"
+    ],
+    "owner_instruction": "T013 Owner instruction: ok start it; bounded matched actual-use task, no acceptance or release.",
+    "per_call_authority": "Separate exact Executive execution selection after final scale/reuse candidate freeze, pure configuration validation, current owner/source/Context checks and successful public preflight; no automatic retry.",
+    "product_definition": "urn:stdo:product-definition:a-c-implementations",
+    "protocol_sha256": "547a73826a8bd28721661361106d5a8e53844ca3a3a8b2a10dd5b66d7a2ae4f6",
+    "purpose": "Two matched bounded disposable report-helper constructions; evaluation deliverables only.",
+    "result_standing": "Worker candidate availability and test observations remain distinct from independent assessment and owner decisions.",
+    "source_setup_disposition": "This binding publishes selected task/mechanism/result scope. Actual actor calls remain contingent on a separate exact Executive execution selection and successful current public admission.",
+    "task_id": "urn:a-c:T013:report-helper:001",
+    "task_sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829",
+    "territory": "Only the separately selected fresh task workspace for that arm; inputs immutable; no other-arm/evaluator/private-support access.",
+    "work_id": "T-013"
+  }
+}

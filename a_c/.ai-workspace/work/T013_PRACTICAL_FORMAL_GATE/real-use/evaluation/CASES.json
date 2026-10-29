@@ -1,0 +1,416 @@
+{
+  "cases": [
+    {
+      "exact_preservation": "reported must equal the complete parsed input; source hashes the raw bytes, not canonical JSON",
+      "expected_cost": {
+        "elapsed_seconds": {
+          "state": "unknown",
+          "value": null
+        },
+        "money_usd": {
+          "state": "unknown",
+          "value": null
+        },
+        "tokens": {
+          "state": "unknown",
+          "value": null
+        }
+      },
+      "expected_exit": 0,
+      "expected_summary": {
+        "category": "unsupported_contract",
+        "checked_claim_count": null,
+        "requested_claim_count": null,
+        "status": "unsupported"
+      },
+      "id": "H1-minimal-unsupported",
+      "input": "inputs/H1-minimal-unsupported.json",
+      "input_bytes": 242,
+      "input_sha256": "3b09c1b8d546cd6876a935d12300c212f9e2acf1f27ac5b8acf68a70fa5d9195",
+      "provenance": "Authored hidden reporting input, not a gate execution.",
+      "standing": {
+        "establishes_semantic_acceptance": false,
+        "grants_authority": false,
+        "input_authenticated": false
+      }
+    },
+    {
+      "exact_preservation": "reported must equal the complete parsed input; source hashes the raw bytes, not canonical JSON",
+      "expected_cost": {
+        "elapsed_seconds": {
+          "state": "unknown",
+          "value": null
+        },
+        "money_usd": {
+          "state": "unknown",
+          "value": null
+        },
+        "tokens": {
+          "state": "unknown",
+          "value": null
+        }
+      },
+      "expected_exit": 0,
+      "expected_summary": {
+        "category": "record_budget_refusal",
+        "checked_claim_count": 4,
+        "requested_claim_count": 5,
+        "status": "refused"
+      },
+      "id": "H2-budget-with-unchecked-claim",
+      "input": "inputs/H2-budget-with-unchecked-claim.json",
+      "input_bytes": 8378,
+      "input_sha256": "ba1a8660ba6fb51908c6fe22b2be1616f49cb3f10febbfe7af1347ba5fdea091",
+      "provenance": "Derived from the pinned genuine budget result; removed elapsed and appended one requested-only claim for a hidden report test. Not new runtime evidence.",
+      "standing": {
+        "establishes_semantic_acceptance": false,
+        "grants_authority": false,
+        "input_authenticated": false
+      }
+    },
+    {
+      "exact_preservation": "reported must equal the complete parsed input; source hashes the raw bytes, not canonical JSON",
+      "expected_cost": {
+        "elapsed_seconds": {
+          "state": "unknown",
+          "value": null
+        },
+        "money_usd": {
+          "state": "unknown",
+          "value": null
+        },
+        "tokens": {
+          "state": "unknown",
+          "value": null
+        }
+      },
+      "expected_exit": 0,
+      "expected_summary": {
+        "category": "other_refusal",
+        "checked_claim_count": 0,
+        "requested_claim_count": 1,
+        "status": "refused"
+      },
+      "id": "H3-new-refusal-reason",
+      "input": "inputs/H3-new-refusal-reason.json",
+      "input_bytes": 355,
+      "input_sha256": "82299b4ef143a4f35385714786f28c9e6a36364dd6307c66105ad53d30abaf82",
+      "provenance": "Authored hidden reporting input, not a gate execution.",
+      "standing": {
+        "establishes_semantic_acceptance": false,
+        "grants_authority": false,
+        "input_authenticated": false
+      }
+    },
+    {
+      "exact_preservation": "reported must equal the complete parsed input; source hashes the raw bytes, not canonical JSON",
+      "expected_cost": {
+        "elapsed_seconds": {
+          "state": "unknown",
+          "value": null
+        },
+        "money_usd": {
+          "state": "unknown",
+          "value": null
+        },
+        "tokens": {
+          "state": "unknown",
+          "value": null
+        }
+      },
+      "expected_exit": 0,
+      "expected_summary": {
+        "category": "check_incomplete",
+        "checked_claim_count": null,
+        "requested_claim_count": null,
+        "status": "incomplete"
+      },
+      "id": "H4-incomplete-is-not-success",
+      "input": "inputs/H4-incomplete-is-not-success.json",
+      "input_bytes": 590,
+      "input_sha256": "933ae7e66db06fde8d0ed727d496a1460324d5051c7d28af927c9a785c17a0d5",
+      "provenance": "Authored hidden reporting input, not a gate execution.",
+      "standing": {
+        "establishes_semantic_acceptance": false,
+        "grants_authority": false,
+        "input_authenticated": false
+      }
+    },
+    {
+      "exact_preservation": "reported must equal the complete parsed input; source hashes the raw bytes, not canonical JSON",
+      "expected_cost": {
+        "elapsed_seconds": {
+          "state": "reported",
+          "value": 0
+        },
+        "money_usd": {
+          "state": "unknown",
+          "value": null
+        },
+        "tokens": {
+          "state": "unknown",
+          "value": null
+        }
+      },
+      "expected_exit": 0,
+      "expected_summary": {
+        "category": "verified_claims_reported",
+        "checked_claim_count": 1,
+        "requested_claim_count": 1,
+        "status": "verified"
+      },
+      "id": "H5-cost-zero",
+      "input": "inputs/H5-cost-zero.json",
+      "input_bytes": 193,
+      "input_sha256": "14bb5d96f465dc5afc20dc64db097ddea5a6267b50cc6a9e1d419b1ad8ef80b8",
+      "provenance": "Authored hidden reporting input, not a gate execution.",
+      "standing": {
+        "establishes_semantic_acceptance": false,
+        "grants_authority": false,
+        "input_authenticated": false
+      }
+    },
+    {
+      "exact_preservation": "reported must equal the complete parsed input; source hashes the raw bytes, not canonical JSON",
+      "expected_cost": {
+        "elapsed_seconds": {
+          "state": "unknown",
+          "value": null
+        },
+        "money_usd": {
+          "state": "unknown",
+          "value": null
+        },
+        "tokens": {
+          "state": "unknown",
+          "value": null
+        }
+      },
+      "expected_exit": 0,
+      "expected_summary": {
+        "category": "verified_claims_reported",
+        "checked_claim_count": 1,
+        "requested_claim_count": 1,
+        "status": "verified"
+      },
+      "id": "H5-cost-null",
+      "input": "inputs/H5-cost-null.json",
+      "input_bytes": 196,
+      "input_sha256": "955bc1f1a95118132e9fcb5cefb9a032f1f83c0b9493bc60885207f603e3bd45",
+      "provenance": "Authored hidden reporting input, not a gate execution.",
+      "standing": {
+        "establishes_semantic_acceptance": false,
+        "grants_authority": false,
+        "input_authenticated": false
+      }
+    },
+    {
+      "exact_preservation": "reported must equal the complete parsed input; source hashes the raw bytes, not canonical JSON",
+      "expected_cost": {
+        "elapsed_seconds": {
+          "state": "invalid",
+          "value": null
+        },
+        "money_usd": {
+          "state": "unknown",
+          "value": null
+        },
+        "tokens": {
+          "state": "unknown",
+          "value": null
+        }
+      },
+      "expected_exit": 0,
+      "expected_summary": {
+        "category": "verified_claims_reported",
+        "checked_claim_count": 1,
+        "requested_claim_count": 1,
+        "status": "verified"
+      },
+      "id": "H5-cost-boolean",
+      "input": "inputs/H5-cost-boolean.json",
+      "input_bytes": 197,
+      "input_sha256": "a6d86ac32e065968f0ed537816ee488eada054004742cef3de1bfb54c6bf3e9d",
+      "provenance": "Authored hidden reporting input, not a gate execution.",
+      "standing": {
+        "establishes_semantic_acceptance": false,
+        "grants_authority": false,
+        "input_authenticated": false
+      }
+    },
+    {
+      "exact_preservation": "reported must equal the complete parsed input; source hashes the raw bytes, not canonical JSON",
+      "expected_cost": {
+        "elapsed_seconds": {
+          "state": "invalid",
+          "value": null
+        },
+        "money_usd": {
+          "state": "unknown",
+          "value": null
+        },
+        "tokens": {
+          "state": "unknown",
+          "value": null
+        }
+      },
+      "expected_exit": 0,
+      "expected_summary": {
+        "category": "verified_claims_reported",
+        "checked_claim_count": 1,
+        "requested_claim_count": 1,
+        "status": "verified"
+      },
+      "id": "H5-cost-negative",
+      "input": "inputs/H5-cost-negative.json",
+      "input_bytes": 198,
+      "input_sha256": "5afe2030c3c237d9fac2b9fbf76e0d00874d75905af238dd5288bf1f4a814aa2",
+      "provenance": "Authored hidden reporting input, not a gate execution.",
+      "standing": {
+        "establishes_semantic_acceptance": false,
+        "grants_authority": false,
+        "input_authenticated": false
+      }
+    },
+    {
+      "exact_preservation": "reported must equal the complete parsed input; source hashes the raw bytes, not canonical JSON",
+      "expected_cost": {
+        "elapsed_seconds": {
+          "state": "reported",
+          "value": 12.685360041912645
+        },
+        "money_usd": {
+          "state": "unknown",
+          "value": null
+        },
+        "tokens": {
+          "state": "unknown",
+          "value": null
+        }
+      },
+      "expected_exit": 0,
+      "expected_summary": {
+        "category": "supplied_view_mismatch",
+        "checked_claim_count": 4,
+        "requested_claim_count": 5,
+        "status": "refused"
+      },
+      "id": "H6-view-mismatch-preserves-partial-claims",
+      "input": "inputs/H6-view-mismatch-preserves-partial-claims.json",
+      "input_bytes": 8867,
+      "input_sha256": "fc3112787f5c5724f702e1f226be97e5ea95cc6b44f2fa742d2f84451705b13a",
+      "provenance": "Exact semantic value of the pinned genuine view-mismatch result, serialized for an evaluator input; original raw result remains in shared custody.",
+      "standing": {
+        "establishes_semantic_acceptance": false,
+        "grants_authority": false,
+        "input_authenticated": false
+      }
+    },
+    {
+      "exact_preservation": "reported must equal the complete parsed input; source hashes the raw bytes, not canonical JSON",
+      "expected_cost": {
+        "elapsed_seconds": {
+          "state": "unknown",
+          "value": null
+        },
+        "money_usd": {
+          "state": "unknown",
+          "value": null
+        },
+        "tokens": {
+          "state": "unknown",
+          "value": null
+        }
+      },
+      "expected_exit": 0,
+      "expected_summary": {
+        "category": "malformed_model",
+        "checked_claim_count": null,
+        "requested_claim_count": null,
+        "status": "refused"
+      },
+      "id": "H7-raw-custody",
+      "input": "inputs/H7-raw-custody.json",
+      "input_bytes": 172,
+      "input_sha256": "3f1682764aa3db6925bbb0dfddad277316199b76334639009a0fa3da6b94d469",
+      "provenance": "Authored hidden reporting input, not a gate execution.",
+      "standing": {
+        "establishes_semantic_acceptance": false,
+        "grants_authority": false,
+        "input_authenticated": false
+      }
+    },
+    {
+      "expected_exit": 0,
+      "expected_relation": "Same reported value, summary, cost and standing; different source.raw_sha256 and source.bytes matching each exact file.",
+      "id": "H7-raw-custody-pair",
+      "input": "inputs/H7-raw-custody-whitespace.json",
+      "input_sha256": "06a0f06a90825b4628d476d1a7dbbc1d5b9a4b9294c051585f31dd596fdafff6",
+      "relation_to": "H7-raw-custody"
+    },
+    {
+      "expected_exit": 2,
+      "expected_stderr": "nonempty concise input error",
+      "expected_stdout": "empty",
+      "id": "H8-duplicate-status",
+      "input": "inputs/H8-duplicate-status.json",
+      "provenance": "Authored malformed or unsupported reporting input; no gate invocation."
+    },
+    {
+      "expected_exit": 2,
+      "expected_stderr": "nonempty concise input error",
+      "expected_stdout": "empty",
+      "id": "H8-nested-duplicate",
+      "input": "inputs/H8-nested-duplicate.json",
+      "provenance": "Authored malformed or unsupported reporting input; no gate invocation."
+    },
+    {
+      "expected_exit": 2,
+      "expected_stderr": "nonempty concise input error",
+      "expected_stdout": "empty",
+      "id": "H8-nonfinite",
+      "input": "inputs/H8-nonfinite.json",
+      "provenance": "Authored malformed or unsupported reporting input; no gate invocation."
+    },
+    {
+      "expected_exit": 2,
+      "expected_stderr": "nonempty concise input error",
+      "expected_stdout": "empty",
+      "id": "H8-unknown-status",
+      "input": "inputs/H8-unknown-status.json",
+      "provenance": "Authored malformed or unsupported reporting input; no gate invocation."
+    },
+    {
+      "expected_exit": 2,
+      "expected_stderr": "nonempty concise input error",
+      "expected_stdout": "empty",
+      "id": "H8-wrong-claims",
+      "input": "inputs/H8-wrong-claims.json",
+      "provenance": "Authored malformed or unsupported reporting input; no gate invocation."
+    },
+    {
+      "expected_exit": 2,
+      "expected_stderr": "nonempty concise input error",
+      "expected_stdout": "empty",
+      "id": "H8-broken-json",
+      "input": "inputs/H8-broken-json.json",
+      "provenance": "Authored malformed or unsupported reporting input; no gate invocation."
+    }
+  ],
+  "common_report_assertions": [
+    "top-level schema and exact field set match TASK",
+    "reported exact parsed semantic value preserved including unknown fields",
+    "source exact raw byte digest/length",
+    "standing grants no authority/authentication/semantic acceptance",
+    "tokens and money remain unknown",
+    "no writes or path/URI following by report command"
+  ],
+  "grading": [
+    "Run the public genuine cases too, independently of worker tests.",
+    "Record each actual command, stdout, stderr, exit, wall duration and exact artifact hash.",
+    "Do not patch candidates; assess both frozen outputs before disclosing arm mapping/cost.",
+    "Independently check useful README, tests and raw input immutability; hidden assertions are not exhaustive semantic qualification."
+  ],
+  "purpose": "Eight discriminator families; evaluator-only, withheld from both Worker inputs. Assertions are independent of the generated implementation.",
+  "schema": "t013.real-use.hidden-cases/1"
+}

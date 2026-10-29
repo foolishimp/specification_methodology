@@ -1,0 +1,76 @@
+{
+  "command": [
+    "/usr/local/bin/python3",
+    "-I",
+    "-S",
+    "-B",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/scripts/formal_gate.py",
+    "verify",
+    "--request",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/view-expectations-001/altered-request.json",
+    "--output",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/public-altered-view-001"
+  ],
+  "outer_seconds": 600,
+  "per_stage_seconds": 90,
+  "lean_memory_mb": 4096,
+  "os_rss_cap": false,
+  "status": "refused",
+  "returncode": 2,
+  "reason": "Supplied Graphify view differs from actual formal result/boundary mapping",
+  "gate_elapsed_seconds": 269.60924387490377,
+  "stages": [
+    {
+      "seconds": 3.830407042056322,
+      "stage": "support-pins"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 42.225172040984035,
+      "stage": "GateData"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 52.84313845797442,
+      "stage": "GateLocalNames"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 46.212155875051394,
+      "stage": "GateExternalNames"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 29.402382916072384,
+      "stage": "GateIdentities"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 46.387466750107706,
+      "stage": "GateBounds"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 0.7237819170113653,
+      "stage": "GateModel"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 6.458712124964222,
+      "stage": "GateViews"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 29.28815699997358,
+      "stage": "dynamic-kernel-replay"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 9.89530095900409,
+      "stage": "actual-runtime"
+    }
+  ],
+  "gate_result_sha256": "2b5553d17bc689370aff45d5d408c5b67b849baa1a9792280664dc94c0cced3f",
+  "external_elapsed_seconds": 269.8851395419333,
+  "child_high_water_rss_bytes": 13016973312
+}

@@ -1,0 +1,58 @@
+{
+  "actor_id": "t013-report-ungated-worker-001",
+  "additional_files": "Only support/ and scratch/; inputs/ immutable.",
+  "frame": "t013-report-helper-frame",
+  "maximum_invocations": 1,
+  "method_boundary": "Existing selected Claude-RC9 support profile under unchanged STDO 2.5.1 RC2 builder; represented common model is subject data.",
+  "prohibited": [
+    "additional agents/models",
+    "network acquisition",
+    "other arm/evaluator read",
+    "tenant private proof/origin read",
+    "credential read",
+    "Git or release"
+  ],
+  "revision": "1",
+  "role": "Worker",
+  "schema": "a_c.T013.worker-activation/1",
+  "stops": [
+    "input/currentness mismatch",
+    "permission unavailable",
+    "task timeout",
+    "outside-scope source required",
+    "attempt already used"
+  ],
+  "task_sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829",
+  "territory": [
+    {
+      "kind": "file",
+      "path": "gate_report.py",
+      "root": "task"
+    },
+    {
+      "kind": "file",
+      "path": "test_gate_report.py",
+      "root": "task"
+    },
+    {
+      "kind": "file",
+      "path": "README.md",
+      "root": "task"
+    },
+    {
+      "kind": "directory",
+      "path": "support",
+      "root": "task"
+    },
+    {
+      "kind": "directory",
+      "path": "scratch",
+      "root": "task"
+    }
+  ],
+  "tools": [
+    "local-shell-files",
+    "python3-stdlib"
+  ],
+  "workspace": "/private/tmp/T013_WORKSPACE_NOT_SELECTED/ungated"
+}

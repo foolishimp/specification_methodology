@@ -1,0 +1,38 @@
+test_adapter_output_and_bundle_guard_precede_checker_or_retention (test_ac_formal_origin_paths.FormalOriginPathControls.test_adapter_output_and_bundle_guard_precede_checker_or_retention) ... ok
+test_broad_registered_root_accepts_normal_source_but_reserves_actual_targets (test_ac_formal_origin_paths.FormalOriginPathControls.test_broad_registered_root_accepts_normal_source_but_reserves_actual_targets) ... ok
+test_direct_repair_and_grounding_entries_guard_before_first_journal_read (test_ac_formal_origin_paths.FormalOriginPathControls.test_direct_repair_and_grounding_entries_guard_before_first_journal_read) ... ok
+test_explicit_first_selection_protects_checkpoint_before_persistence (test_ac_formal_origin_paths.FormalOriginPathControls.test_explicit_first_selection_protects_checkpoint_before_persistence) ... ok
+test_inherited_resume_and_unselected_generation_need_no_new_flags_or_lean (test_ac_formal_origin_paths.FormalOriginPathControls.test_inherited_resume_and_unselected_generation_need_no_new_flags_or_lean) ... ok
+test_initial_manifest_and_corpus_protection_precede_read_and_copy (test_ac_formal_origin_paths.FormalOriginPathControls.test_initial_manifest_and_corpus_protection_precede_read_and_copy) ... ok
+test_live_graphify_origin_pin_equality_remains_strict (test_ac_formal_origin_paths.FormalOriginPathControls.test_live_graphify_origin_pin_equality_remains_strict) ... ERROR
+test_metadata_scan_refuses_symlink_directories_without_following_or_reading (test_ac_formal_origin_paths.FormalOriginPathControls.test_metadata_scan_refuses_symlink_directories_without_following_or_reading) ... ok
+test_shared_selected_checkpoint_blocks_aliases_before_every_resume_consumer (test_ac_formal_origin_paths.FormalOriginPathControls.test_shared_selected_checkpoint_blocks_aliases_before_every_resume_consumer) ... generation refused: Multiply linked selected input/output is unsupported
+generation refused: Multiply linked selected input/output is unsupported
+generation refused: Multiply linked selected input/output is unsupported
+generation refused: Multiply linked selected input/output is unsupported
+generation refused: Multiply linked selected input/output is unsupported
+ok
+
+======================================================================
+ERROR: test_live_graphify_origin_pin_equality_remains_strict (test_ac_formal_origin_paths.FormalOriginPathControls.test_live_graphify_origin_pin_equality_remains_strict)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/candidate/a_c/build_tenants/graphify/test_env/test_ac_formal_origin_paths.py", line 164, in test_live_graphify_origin_pin_equality_remains_strict
+    with self.assertRaises(OSError):formal.current(config)
+                                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/candidate/a_c/build_tenants/graphify/code/ac_formal_gate.py", line 292, in current
+    result = _invoke(config, ["identity"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/candidate/a_c/build_tenants/graphify/code/ac_formal_gate.py", line 234, in _invoke
+    _pins(config)
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/candidate/a_c/build_tenants/graphify/code/ac_formal_gate.py", line 161, in _pins
+    if sha(_regular(root / name)) != expected:
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/candidate/a_c/build_tenants/graphify/code/ac_formal_gate.py", line 60, in _regular
+    raise GateError("refused", "Checker or evidence path is not an absolute regular file")
+ac_formal_gate.GateError: Checker or evidence path is not an absolute regular file
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.273s
+
+FAILED (errors=1)

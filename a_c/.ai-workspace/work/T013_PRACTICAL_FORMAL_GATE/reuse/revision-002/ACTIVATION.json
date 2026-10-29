@@ -1,0 +1,37 @@
+{
+  "schema": "a_c.t013.reuse-design-revision-activation/1",
+  "actor": "/root/ac_scale_reuse_worker",
+  "role": "Worker",
+  "delegating_executive": "/root",
+  "work_item": "T-013",
+  "observed_utc": "2026-10-29 00:48:44 UTC",
+  "operation": "Revise only the concrete origin-only cold-fallback comparison, private eligibility commit order, and selected generation checkpoint acquisition guard algorithms and tests in response to R1-R3.",
+  "write_territory": [
+    "a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/revision-002/**"
+  ],
+  "authority": "Executive follow-up grant to /root/ac_scale_reuse_worker; design revision only after review/reuse-design-001 closed assessment.",
+  "basis": {
+    "installed_release": "stdo://releases/v2.5.1-rc.2/",
+    "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "calculus_sha256": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d"
+  },
+  "predecessor": {
+    "design": "../DESIGN.md",
+    "design_sha256": "e1744a44a53887795aacbcf8784abd6f5a9a829ad9b9e97ebc9e83ced8f73a1e",
+    "closed_return": "../CLOSED.json",
+    "closed_return_sha256": "15a147cfbb605cbd937746d4931fc1c00d14f6f2b3e4769365c59272e547a2ca"
+  },
+  "review": {
+    "closed_return": "../../review/reuse-design-001/CLOSED.json",
+    "closed_return_sha256": "28580ead58fb6efde66cb227457f6b2df6c5524a4adceafac1563c5343561325",
+    "finding_ids": ["R1", "R2", "R3"]
+  },
+  "exclusions": [
+    "original reuse/DESIGN.md and reuse/CLOSED.json mutation",
+    "candidate/common source or test edits",
+    "key/cache/model/proof or runtime effects",
+    "Git/index/commit/push",
+    "owner acceptance or release"
+  ],
+  "stop": "Submit the closed successor to Executive and Reviewer; await independent disposition and exact implementation grant."
+}

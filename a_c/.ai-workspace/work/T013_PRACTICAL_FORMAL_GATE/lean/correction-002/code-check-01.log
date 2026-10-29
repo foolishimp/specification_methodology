@@ -1,0 +1,146 @@
+@[expose] def AC.identityCode : String → ℕ :=
+fun name => List.foldl (fun n b => n * 257 + b.toNat + 1) 1 name.toUTF8.data.toList
+(List.rec ⟨fun x => x, PUnit.unit⟩
+      (fun head tail tail_ih =>
+        ⟨fun x =>
+          tail_ih.1
+            ((Nat.rec ⟨fun x => x, PUnit.unit⟩ (fun n n_ih => ⟨fun x => (n_ih.1 x).succ, n_ih⟩) head.1.1.1).1
+                ((Nat.rec ⟨fun x => x, PUnit.unit⟩ (fun n n_ih => ⟨fun x => (n_ih.1 x).succ, n_ih⟩) x).1
+                  ((Nat.rec ⟨fun x => x, PUnit.unit⟩ (fun n n_ih => ⟨fun x => (n_ih.1 x).succ, n_ih⟩) x).1
+                    ((Nat.rec ⟨fun x => x, PUnit.unit⟩ (fun n n_ih => ⟨fun x => (n_ih.1 x).succ, n_ih⟩) x).1
+                      ((Nat.rec ⟨fun x => x, PUnit.unit⟩ (fun n n_ih => ⟨fun x => (n_ih.1 x).succ, n_ih⟩) x).1
+                        ((Nat.rec ⟨fun x => x, PUnit.unit⟩ (fun n n_ih => ⟨fun x => (n_ih.1 x).succ, n_ih⟩) x).1
+                          ((Nat.rec ⟨fun x => x, PUnit.unit⟩ (fun n n_ih => ⟨fun x => (n_ih.1 x).succ, n_ih⟩) x).1
+                            ((Nat.rec ⟨fun x => x, PUnit.unit⟩ (fun n n_ih => ⟨fun x => (n_ih.1 x).succ, n_ih⟩) x).1
+                              ((Nat.rec ⟨fun x => x, PUnit.unit⟩ (fun n n_ih => ⟨fun x => (n_ih.1 x).succ, n_ih⟩) x).1
+                                ((Nat.rec ⟨fun x => x, PUnit.unit⟩ (fun n n_ih => ⟨fun x => (n_ih.1 x).succ, n_ih⟩) x).1
+                                  ((Nat.rec ⟨fun x => x, PUnit.unit⟩ (fun n n_ih => ⟨fun x => (n_ih.1 x).succ, n_ih⟩)
+                                        x).1
+                                    ((Nat.rec ⟨fun x => x, PUnit.unit⟩ (fun n n_ih => ⟨fun x => (n_ih.1 x).succ, n_ih⟩)
+                                          x).1
+                                      ((Nat.rec ⟨fun x => x, PUnit.unit⟩
+                                            (fun n n_ih => ⟨fun x => (n_ih.1 x).succ, n_ih⟩) x).1
+                                        ((Nat.rec ⟨fun x => x, PUnit.unit⟩
+                                              (fun n n_ih => ⟨fun x => (n_ih.1 x).succ, n_ih⟩) x).1
+                                          ((Nat.rec ⟨fun x => x, PUnit.unit⟩
+                                                (fun n n_ih => ⟨fun x => (n_ih.1 x).succ, n_ih⟩) x).1
+                                            ((Nat.rec ⟨fun x => x, PUnit.unit⟩
+                                                  (fun n n_ih => ⟨fun x => (n_ih.1 x).succ, n_ih⟩) x).1
+                                              ((Nat.rec ⟨fun x => x, PUnit.unit⟩
+                                                    (fun n n_ih => ⟨fun x => (n_ih.1 x).succ, n_ih⟩) x).1
+                                                ((Nat.rec ⟨fun x => x, PUnit.unit⟩
+                                                      (fun n n_ih => ⟨fun x => (n_ih.1 x).succ, n_ih⟩) x).1
+                                                  ((Nat.rec ⟨fun x => x, PUnit.unit⟩
+                                                        (fun n n_ih => ⟨fun x => (n_ih.1 x).succ, n_ih⟩) x).1
+                                                    ((Nat.rec ⟨fun x => x, PUnit.unit⟩
+                                                          (fun n n_ih => ⟨fun x => (n_ih.1 x).succ, n_ih⟩) x).1
+                                                      ((Nat.rec ⟨fun x => x, PUnit.unit⟩
+                                                            (fun n n_ih => ⟨fun x => (n_ih.1 x).succ, n_ih⟩) x).1
+                                                        ((Nat.rec ⟨fun x => x, PUnit.unit⟩
+                                                              (fun n n_ih => ⟨fun x => (n_ih.1 x).succ, n_ih⟩) x).1
+                                                          ((Nat.rec ⟨fun x => x, PUnit.unit⟩
+                                                                (fun n n_ih => ⟨fun x => (n_ih.1 x).succ, n_ih⟩) x).1
+                                                            ((Nat.rec ⟨fun x => x, PUnit.unit⟩
+                                                                  (fun n n_ih => ⟨fun x => (n_ih.1 x).succ, n_ih⟩) x).1
+                                                              ((Nat.rec ⟨fun x => x, PUnit.unit⟩
+                                                                    (fun n n_ih => ⟨fun x => (n_ih.1 x).succ, n_ih⟩)
+                                                                    x).1
+                                                                ((Nat.rec ⟨fun x => x, PUnit.unit⟩
+                                                                      (fun n n_ih => ⟨fun x => (n_ih.1 x).succ, n_ih⟩)
+                                                                      x).1
+                                                                  ((Nat.rec ⟨fun x => x, PUnit.unit⟩
+                                                                        (fun n n_ih => ⟨fun x => (n_ih.1 x).succ, n_ih⟩)
+                                                                        x).1
+                                                                    ((Nat.rec ⟨fun x => x, PUnit.unit⟩
+                                                                          (fun n n_ih =>
+                                                                            ⟨fun x => (n_ih.1 x).succ, n_ih⟩)
+                                                                          x).1
+                                                                      ((Nat.rec ⟨fun x => x, PUnit.unit⟩
+                                                                            (fun n n_ih =>
+                                                                              ⟨fun x => (n_ih.1 x).succ, n_ih⟩)
+                                                                            x).1
+                                                                        ((Nat.rec ⟨fun x => x, PUnit.unit⟩
+                                                                              (fun n n_ih =>
+                                                                                ⟨fun x => (n_ih.1 x).succ, n_ih⟩)
+                                                                              x).1
+                                                                          ((Nat.rec ⟨fun x => x, PUnit.unit⟩
+                                                                                (fun n n_ih =>
+                                                                                  ⟨fun x => (n_ih.1 x).succ, n_ih⟩)
+                                                                                x).1
+                                                                            ((Nat.rec ⟨fun x => x, PUnit.unit⟩
+                                                                                  (fun n n_ih =>
+                                                                                    ⟨fun x => (n_ih.1 x).succ, n_ih⟩)
+                                                                                  x).1
+                                                                              ((Nat.rec ⟨fun x => x, PUnit.unit⟩
+                                                                                    (fun n n_ih =>
+                                                                                      ⟨fun x => (n_ih.1 x).succ, n_ih⟩)
+                                                                                    x).1
+                                                                                ((Nat.rec ⟨fun x => x, PUnit.unit⟩
+                                                                                      (fun n n_ih =>
+                                                                                        ⟨fun x => (n_ih.1 x).succ,
+                                                                                          n_ih⟩)
+                                                                                      x).1
+                                                                                  ((Nat.rec ⟨fun x => x, PUnit.unit⟩
+                                                                                        (fun n n_ih =>
+                                                                                          ⟨fun x => (n_ih.1 x).succ,
+                                                                                            n_ih⟩)
+                                                                                        x).1
+                                                                                    ((Nat.rec ⟨fun x => x, PUnit.unit⟩
+                                                                                          (fun n n_ih =>
+                                                                                            ⟨fun x => (n_ih.1 x).succ,
+                                                                                              n_ih⟩)
+                                                                                          x).1
+                                                                                      ((Nat.rec ⟨fun x => x, PUnit.unit⟩
+                                                                                            (fun n n_ih =>
+                                                                                              ⟨fun x => (n_ih.1 x).succ,
+                                                                                                n_ih⟩)
+                                                                                            x).1
+                                                                                        ((Nat.rec
+                                                                                              ⟨fun x => x, PUnit.unit⟩
+                                                                                              (fun n n_ih =>
+                                                                                                ⟨fun x =>
+                                                                                                  (n_ih.1 x).succ,
+                                                                                                  n_ih⟩)
+                                                                                              x).1
+                                                                                          ((Nat.rec
+                                                                                                ⟨fun x => x, PUnit.unit⟩
+                                                                                                (fun n n_ih =>
+                                                                                                  ⟨fun x =>
+                                                                                                    (n_ih.1 x).succ,
+                                                                                                    n_ih⟩)
+                                                                                                x).1
+                                                                                            ((Nat.rec
+                                                                                                  ⟨fun x => x,
+                                                                                                    PUnit.unit⟩
+                                                                                                  (fun n n_ih =>
+                                                                                                    ⟨fun x =>
+                                                                                                      (n_ih.1 x).succ,
+                                                                                                      n_ih⟩)
+                                                                                                  x).1
+                                                                                              ((Nat.rec
+                                                                                                    ⟨fun x => x,
+                                                                                                      PUnit.unit⟩
+                                                                                                    (fun n n_ih =>
+                                                                                                      ⟨fun x =>
+                                                                                                        (n_ih.1 x).succ,
+                                                                                                        n_ih⟩)
+                                                                                                    x).1
+                                                                                                (⋯.1
+                                                                                                  (⋯
+                                                                                                    ⋯))))))))))))))))))))))))))))))))))))))))))).succ,
+          tail_ih⟩)
+      "a".toUTF8.1.1).1
+  1
+/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/correction-002/CodeCheck.lean:6:42: error: Tactic `decide` failed to reduce
+  @decide (AC.identityCode "a" = 355) (instDecidableEqNat (AC.identityCode "a") 355)
+to `true` or `false`.
+
+Reduction got stuck at
+  (AC.identityCode "a").beq 355
+/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/correction-002/CodeCheck.lean:7:42: error: Tactic `rfl` failed: The left-hand side
+  AC.identityCode "a"
+is not definitionally equal to the right-hand side
+  355
+
+⊢ AC.identityCode "a" = 355
+'AC.nodup_of_codes' depends on axioms: [propext, Classical.choice, Quot.sound]

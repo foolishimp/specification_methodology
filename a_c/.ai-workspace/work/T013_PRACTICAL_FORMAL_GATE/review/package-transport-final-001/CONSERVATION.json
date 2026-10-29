@@ -1,0 +1,32 @@
+{
+  "schema": "a_c.T013.package-transport-conservation/1",
+  "recorded_utc": "2026-10-29T13:52:44.005476+00:00",
+  "predecessor_package_members_unchanged": 10,
+  "package_changed_definitions": [
+    "separate"
+  ],
+  "all_other_package_definitions_conserved": true,
+  "same_payload_destinations": 63,
+  "package_control_source_rebindings": [
+    "DEPENDENCIES.md",
+    "INVENTORY_PLAN.json",
+    "PACKAGE_README.md",
+    "package_source.py",
+    "test_package_source.py"
+  ],
+  "containing_T013_root_remains_disjoint_from_all_mapped_outputs": true,
+  "transport_case_alias_refused_before_payload_reads_or_writes": "transport/restore filesystem roots overlap",
+  "actual_payload_wrong_raw_digest_refused_without_writes": "decompressed identity mismatch",
+  "retained_author_tests": {
+    "package": {
+      "count": 19,
+      "skips": 0,
+      "rerun": false
+    },
+    "transport": {
+      "count": 9,
+      "rerun": false
+    }
+  },
+  "entire_package_module_AST_except_separate_conserved": true
+}

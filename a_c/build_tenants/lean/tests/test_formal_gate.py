@@ -1,5 +1,6 @@
 """Reusable adapter/gate controls. Real kernel qualification is a separate retained run."""
 from copy import deepcopy
+import hashlib
 import importlib.util
 import json
 import os
@@ -125,6 +126,18 @@ class FormalGateTests(unittest.TestCase):
         with patch.dict(os.environ,{'LEAN_PATH':'/hostile','LEAN_SYSROOT':'/hostile','LAKE_HOME':'/hostile','DYLD_LIBRARY_PATH':'/hostile','LD_PRELOAD':'/hostile','PYTHONPATH':'/hostile'}):
             _,env,_=support.tools()
         for key in ('LEAN_PATH','LEAN_SYSROOT','LAKE_HOME','DYLD_LIBRARY_PATH','LD_PRELOAD','PYTHONPATH'):self.assertNotIn(key,env)
+
+    def test_scale_support_origin_uses_raw_bytes_before_any_effect(self):
+        original=b'{\n  "origin": "raw-byte regression"\n}\n'
+        prior=self.directory/'crlf-support-origin.json'
+        prior.write_bytes(original.replace(b'\n',b'\r\n'))
+        self.assertEqual(prior.read_text().encode(),original)
+        output=self.directory/'unadmitted-support.json'
+        with patch.object(support,'SCALE_PRIOR_MANIFEST',hashlib.sha256(original).hexdigest()), \
+             patch.object(support,'proof_environment',side_effect=AssertionError('origin refusal must precede compiler setup')):
+            with self.assertRaisesRegex(ValueError,'exact established T012 support'):
+                support.extend_scale(output,prior)
+        self.assertFalse(output.exists())
 
     def test_malformed_signature_shapes_refuse_with_retained_receipts(self):
         shapes=[None,[],7,'signature',{}, {'id':None,'sha256':'0'*64,'definition':{}},

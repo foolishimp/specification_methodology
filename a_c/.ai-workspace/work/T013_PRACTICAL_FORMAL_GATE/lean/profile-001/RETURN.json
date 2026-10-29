@@ -1,0 +1,118 @@
+{
+  "actor": "/root/ac_scale_worker",
+  "candidate_source_changes": false,
+  "closed_utc": "2026-10-28T23:59:09.993094+00:00",
+  "conclusions": [
+    "Exact full data compilation succeeds; importing it also supports the numeric permutation proof in2.51s.",
+    "Exact source-name reconstruction alone exhausts the selected Lean memory limit in76.14s; broad profiling stopped after this discriminator.",
+    "The Lean4096MB flag is an allocation threshold, not an OS RSS cap; failed linkage observed8.419GB child high-water RSS.",
+    "External uniqueness, separation and membership remain unmeasured live obligations, not discharged by this diagnostic."
+  ],
+  "diagnostics_limit": 6,
+  "diagnostics_used": 4,
+  "next": "Prove exact source linkage by generic Array/list reconstruction, then one combined identity certificate and indexed external-membership witnesses under the unchanged propositions.",
+  "results": [
+    {
+      "child_high_water_rss_bytes": 4047028224,
+      "command": [
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/.toolchain/lean-4.35.0-darwin_aarch64/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "4096",
+        "-R",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/profile-001",
+        "-o",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/profile-001/GateData.olean",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/profile-001/GateData.lean"
+      ],
+      "compiler_sha256": "d1d9c26a539f54fe839d2aa7760bf1ac1dd76a30b26e2c9684bebf2900038fcf",
+      "exit_code": 0,
+      "lean_memory_mb": 4096,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "name": "GateData",
+      "seconds": 46.054457125021145,
+      "source_sha256": "41b982e9903e68f792af8547f703cf852613f9156a593b58c9458d60ad4ff597",
+      "status": "passed",
+      "support_manifest_sha256": "3ee283ef53a47cd966ad6c47479fe57c2c793003a88590469c2289ea8b2621a2",
+      "timeout_seconds": 90
+    },
+    {
+      "child_high_water_rss_bytes": 8419639296,
+      "command": [
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/.toolchain/lean-4.35.0-darwin_aarch64/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "4096",
+        "-R",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/profile-001",
+        "-o",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/profile-001/ProfileLinkage.olean",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/profile-001/ProfileLinkage.lean"
+      ],
+      "compiler_sha256": "d1d9c26a539f54fe839d2aa7760bf1ac1dd76a30b26e2c9684bebf2900038fcf",
+      "exit_code": -6,
+      "lean_memory_mb": 4096,
+      "log_sha256": "48bc2200174632932b9ea98fd0a0c30e6dc353ce535531045f1c7efc7b79940a",
+      "name": "ProfileLinkage",
+      "seconds": 74.05192362493835,
+      "source_sha256": "8c02ce24d64b857dbed043051515fa8cbcb44002e49f275a694dd9b9f34883e8",
+      "status": "incomplete",
+      "support_manifest_sha256": "3ee283ef53a47cd966ad6c47479fe57c2c793003a88590469c2289ea8b2621a2",
+      "timeout_seconds": 90
+    },
+    {
+      "child_high_water_rss_bytes": 1353334784,
+      "command": [
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/.toolchain/lean-4.35.0-darwin_aarch64/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "4096",
+        "-R",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/profile-001",
+        "-o",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/profile-001/ProfileLocalNumeric.olean",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/profile-001/ProfileLocalNumeric.lean"
+      ],
+      "compiler_sha256": "d1d9c26a539f54fe839d2aa7760bf1ac1dd76a30b26e2c9684bebf2900038fcf",
+      "exit_code": 0,
+      "lean_memory_mb": 4096,
+      "log_sha256": "751cc8a5c6c8c4f52e785544f45321484fa1e9deca7e54a439038d1168c25f0c",
+      "name": "ProfileLocalNumeric",
+      "seconds": 2.5090215830132365,
+      "source_sha256": "f6b7bc9faa106644fbf4379e52696798cc6a995b9dff9f3ad4fe2e7935eb1670",
+      "status": "passed",
+      "support_manifest_sha256": "3ee283ef53a47cd966ad6c47479fe57c2c793003a88590469c2289ea8b2621a2",
+      "timeout_seconds": 90
+    },
+    {
+      "child_high_water_rss_bytes": 8419000320,
+      "command": [
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/.toolchain/lean-4.35.0-darwin_aarch64/bin/lean",
+        "-j",
+        "1",
+        "-M",
+        "4096",
+        "-R",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/profile-001",
+        "-o",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/profile-001/ProfileNames.olean",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/profile-001/ProfileNames.lean"
+      ],
+      "compiler_sha256": "d1d9c26a539f54fe839d2aa7760bf1ac1dd76a30b26e2c9684bebf2900038fcf",
+      "exit_code": -6,
+      "lean_memory_mb": 4096,
+      "log_sha256": "48bc2200174632932b9ea98fd0a0c30e6dc353ce535531045f1c7efc7b79940a",
+      "name": "ProfileNames",
+      "seconds": 76.13879045797512,
+      "source_sha256": "130ff7927142ba066e44d503d4ca31cee51cd36f36be4c51f8411087b16a968d",
+      "status": "incomplete",
+      "support_manifest_sha256": "3ee283ef53a47cd966ad6c47479fe57c2c793003a88590469c2289ea8b2621a2",
+      "timeout_seconds": 90
+    }
+  ],
+  "schema": "a_c.t013.diagnostic-return/1",
+  "support_changed": false
+}

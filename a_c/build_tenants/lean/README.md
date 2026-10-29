@@ -95,3 +95,43 @@ Source correspondence means the supplied or carrier-recovered model JSON;
 original prose/corpus-to-model `F_P` fidelity remains opaque and unproved. The
 standalone CLI loads exact helper source files under isolated Python startup.
 Direct Python API callers own their host startup and import namespace.
+
+For the reusable gate, actual projection execution uses `projectWithProof`, with
+fresh exact model/closure premises and a kernel-checked equality to the original
+`project`. The budget branch and complete record/boundary computation still run.
+This does not improve the original unchecked runtime checker, which timed out on
+the 1,987-record scaling subject. See the proof-directed runtime and measured scope
+in [FORMAL_GATE.md](design/FORMAL_GATE.md).
+
+The T013 scale cut passed the complete public check on that frozen model
+and an actual nine-record Graphify view in 269.83 seconds. Fresh public controls
+refused an omitted residual and budget eight. Every run regenerated and replayed
+its concrete proofs. The [independent scale assessment](../../.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/review/scale-final-001/REVIEW.md)
+confirms full-data correspondence and the actual path at that exact identity.
+Observed aggregate child high-water RSS was 12.73–13.02 GB, despite the compiler's
+`-M4096` setting, which is not a physical RSS cap. The 90-second per-process and
+600-second public limits were met. The
+[scale return](../../.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/SCALE_RETURN.md)
+binds exact source, support and evidence.
+
+Origin-bound request-proof reuse is now
+[integrated and source reviewed](../../.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/integration-001/HANDOFF.md).
+The integrated source identity is
+`07f423004952338c7ce4273e2fe1f17556b0c96803caa4a355859762750e9601`
+with no origin selected. All 117 bounded Python integration controls pass;
+actual origin establishment and fresh cold/reuse qualification remain pending.
+`init-origin` explicitly creates local origin state and changes the identity;
+it is a separately authorized setup operation. `check-evidence` may reuse only
+an exact locally established eligible result; without that origin, it checks
+cold. Earlier scale proof does not acquire reuse eligibility by being retained.
+Current support, request, Context and authority checks still apply.
+
+The matched real Worker pair is unstarted. The
+[reviewed package preparation](../../.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/review/package-transport-final-001/REVIEW.md)
+has no final archive or installed qualification. The core gate is standalone;
+the reusable tests and `check_gate.py` also require the explicitly inventoried
+Graphify helper subset. Exact oversized historical proof objects travel through
+the [reviewed compressed transport](../../.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/checkpoint/evidence-transport-001/README.md);
+restore those mapped bytes before replaying the affected historical bundles.
+Semantic acceptance, practical benefit, Product acceptance and release remain
+separate.

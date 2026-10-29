@@ -228,7 +228,7 @@ def normalize(output: Path, *, name: str = "normalization", chunk_id: str | None
 
 
 def verify_normalization(output: Path, plan: dict[str, Any], chunk: dict[str, Any], folder: Path) -> tuple[dict[str, Any], dict[str, Any]]:
-    journal = generation.load(folder / "journal.json")
+    journal = generation.load(generation._run_member(output, folder / "journal.json"))
     require(journal.get("profile") == "ac.generation.grounding-normalization/1" and journal.get("chunk") == chunk["id"], "normalization proof identifies a different chunk/profile")
     require(journal.get("status") in ("derived_validated", "validated_original"), "normalization was refused; preserve it and choose a fresh normalization directory after F_P repair")
     require(journal.get("policy") == POLICY and journal.get("policy_sha256") == generation.digest(POLICY), "normalization policy changed")

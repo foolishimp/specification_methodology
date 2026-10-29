@@ -17,7 +17,8 @@ model/projection refuses. Unknown signature/profile is unsupported. Runtime,
 compiler or resource failures are incomplete, never verified. The result JSON
 is evidence, not an authentication root: `check-evidence --bundle DIR --output
 NEW_DIR` rebuilds the exact request from retained source and executes the trusted
-selected verifier again; it does not trust a saved `status` field.
+selected verifier again. It can reuse an exact locally established cold proof
+under the origin contract below; a saved `status` field never establishes that origin.
 
 The output directory must be fresh and cannot overlap an input path or old bundle.
 The verifier never receives code, executable arguments, schema overrides or a
@@ -45,7 +46,7 @@ proposal/context bytes, rather than inserted into its own hashed rendered input.
 ## Proof and support boundary
 
 `AC.Model`, `AC.Closure` and `AC.Projection` retain their T011 definitions.
-`AC.GateProof` is the fresh replay root, importing exactly the generic projection and structural proof libraries. `AC.GateRuntime` and JSON serialization are compiled, pinned and output-tested outside that proof root. Each request produces full `GateData.lean`, concrete `GateModel.lean` and
+`AC.GateProof` is the fresh replay root, importing exactly the generic projection and structural proof libraries. `AC.GateRuntime` imports that internal proof module; JSON serialization remains compiled, pinned and output-tested outside the proof root. Each cold `verify` produces full `GateData.lean`, local/external character-source modules, a global identity certificate, reference/bounds checks, concrete `GateModel.lean` and
 `GateViews.lean`, and a `GateRun.lean` executable. Generated proof declarations
 use kernel reduction with `debug.skipKernelTC=false`; no native proof shortcut
 is admitted. A second kernel replay checks the request's proof modules. The actual
@@ -57,9 +58,41 @@ including control characters and Unicode; no digest replaces the model data.
 Small models use the original finite structural decision. Larger models can use
 `AC.Structure`: exact record-key range, identity uniqueness, external separation,
 and bounded edge/reference checks imply the *unchanged* `Model.WellFormed`.
+Identity witnesses retain every original string. Exact `String.ofList` equalities
+bind character lists to the local and external identities. A permutation-preserving
+Nat-label sort reconstructs their complete concatenation. Every adjacent character
+comparison, including proof-block boundaries, is checked; exact zip equality ties
+those pairs to the complete order. Checked `String.ofList` injectivity transports
+uniqueness to strings. One combined uniqueness result supplies both local/external
+uniqueness and their separation. External membership is proved once per exact
+bounded block index and reused by the complete reference checks.
+
 The optimization is a proof certificate, not a stronger assumption. Resource
 exhaustion in any concrete proof remains `incomplete`. Successful model checking
 is performed once per batch; each selection reuses that exact theorem.
+
+### Proof-directed runtime
+
+The reusable gate executes `projectWithProof`, a specialization of the unchanged
+`project` operation. It requires proofs of `checkModel m = true` and
+`checkCertificate m.dependencies m.localKeys seeds trace = true` for those exact
+dependent inputs. Its generic theorem proves equality to `project`; each generated
+selection also proves that equality for the current model, seeds, trace and budget.
+All of those declarations are axiom-audited and included in fresh kernel replay.
+
+The runtime computes the original budget branch, `traceSet`, and `makeProjection`,
+including record filtering and every boundary field. It then serializes the actual
+result through `selectionResultJson`. No projection or success status is supplied
+by a request or accepted from a prior result. Missing proof premises cannot inhabit
+the generated call. Budget exhaustion still returns the existing refusal with no
+truncated view. Full actual model/projection and supplied-view correspondence checks
+remain mandatory.
+
+This avoids recomputing already proved structural predicates at runtime. It does
+not claim that the original `checkModel` or the direct `gateSelectionJson` wrapper
+now runs faster. On the full 1,987-record subject, direct `checkModel` alone reached
+the 90-second limit; model initialization and complete serialization each finished
+in approximately 1.3 seconds. That original limitation remains recorded in T013.
 
 A selected `profiles/proof-support-v1.json` records the exact compiler, generic
 sources, imported source/object/IR/runtime files and fresh base-kernel replay.
@@ -124,13 +157,13 @@ remains opaque and unproved; retaining corpus coordinates does not establish it.
 Both raw carrier custody and recovered canonical model identity are recorded.
 
 `check-evidence` checks retained members, current deciding pins and exact replay
-bindings, then creates a new immutable bundle with fresh concrete checks. Its
-request digest describes that newly issued replay request. A saved success label
-or supplied proof JSON cannot bypass execution. Portable evidence is inspectable
-and replayable against an explicitly selected compatible verifier; it is not a
-signed credential or a grant of operation authority.
+bindings, then creates a new immutable bundle with current checks. Its request
+digest describes that newly issued replay request. Without an eligible trusted
+local establishment it executes fresh concrete proofs. Portable evidence stays
+inspectable and replayable; a public origin hint, saved success label or supplied
+proof JSON is neither a credential nor a grant of operation authority.
 
-The selected local support presently uses a conserved extension of an earlier
+The T012 local support used a conserved extension of an earlier
 successful fresh establishment. That earlier manifest, successful log and exact
 root source are embedded byte-for-byte in `origin.retained_text`, with fixed
 selected SHA-256 identities in `formal_support.py`. All 30,392 prior members were
@@ -144,6 +177,90 @@ stop reuse. The initial successful fresh replay took 74.01 seconds; subsequent
 300-second fresh attempts were retained as incomplete, followed by the successful
 16.16-second bounded extension. No failed replay was relabelled as success.
 
+T013 explicitly extends that exact successful T012 manifest. The prior file is
+hashed as raw bytes before UTF-8 decoding; a CRLF variant is refused before any
+compiler effect. Every external/core source and object remains pinned. Only the
+selected `Structure`, `GateProof` and `GateRuntime` tenant source/object delta is
+allowed, with explicit direct imports and fresh replay of all affected tenant
+modules. The manifest records exact changed/conserved populations and retains the
+prior origin chain. This setup-only conservation is separate from dynamic request
+proof reuse: every cold `verify` still generates, checks and replays its complete
+concrete obligations. Dynamic reuse has its own completed-cold origin below.
+
+## Exact local-origin reuse
+
+`verify` always performs cold checking. Optional `check-evidence` reuse uses
+`scripts/formal_reuse.py`, included in the exact helper namespace and source
+identity. Explicit setup is `python3 -I -S -B scripts/formal_gate.py init-origin`.
+It accepts no store or key argument and creates an absent owner-only
+`.cache/formal-origin-v1/` beneath this selected tenant, with a random 32-byte
+`origin.key`, fixed `selection.json`, `entries/` and `pending/`. Ordinary gate
+requests never initialize, repair, rotate or import an origin. The public
+selection's digest is pinned at exactly
+`.cache/formal-origin-v1/selection.json`; identity output never contains key bytes.
+
+The entire fixed subtree is reserved before ordinary request/input/evidence
+reads or output creation, including when no origin is selected. Existing
+ancestors must be nonsymlinked; ordinary files must be regular and singly linked.
+Existing ancestor device/inode identity catches case aliases on Darwin. A missing
+reserved suffix conservatively reserves its case variants. Output paths cannot
+contain the protected subtree. Reads use no-follow descriptors and regular-file
+checks. This reserves actual targets, not every registered root containing them.
+The Graphify adapter independently implements that reservation without loading
+Lean or reading the private key. Ordinary artifacts and local packages must
+exclude the **whole** origin subtree, including public selection, keys, entries
+and pending material; `.cache` Git exclusion alone is not package validation.
+
+After all requested cold claims, theorem audits, kernel replay, actual output/view
+comparisons and final source/support checks complete, the gate finalizes its
+immutable result and manifest. Only that internal completed-cold path can seal an
+entry. The entry binds the original request digest, exact fixed-relocation replay
+request, all effective resource limits, full model/input/claim/source/support
+identities, actual proof module/audit population, raw result and manifest digests,
+and every retained artifact. The HMAC-SHA256 domain is fixed by the versioned
+entry schema; canonical finite JSON rejects duplicate keys. No caller-provided
+result can invoke a sign/import endpoint. Python host/API administration remains
+trusted, including direct access to private helper functions.
+
+Publication writes/fsyncs a protected pending entry, atomically inserts the public
+`local-origin.json` hint, then atomically inserts the private final entry **last**.
+No-overwrite insertion preserves existing entry meaning. Only that private final
+namespace commits eligibility; pending files and manufactured public hints never
+hit. A committed origin can exist after interruption before the caller observed
+return. The receipt establishes completed checking, not observed caller delivery.
+
+A local hit needs full runtime identity equality, the selected private key/seal,
+and exact authenticated artifact bindings. Current input import/reconstruction,
+ordered selection/certificate creation, full support checks before/after, actual
+retained runtime model/projection/view correspondence, artifact bytes and origin
+currentness all run again. Request matching uses canonical bytes, including
+boolean/integer distinctions. Reuse launches no compiler, kernel replay or Lean
+runtime and never imports retained `.olean` files. Those files are hashed as
+original proof artifacts. Current observations explicitly record zero such
+invocations and retain the original result, manifest, request and replay request
+under fixed `origin-*` names. Original proof costs remain in `origin-result.json`;
+current costs are separate. A reused bundle points directly to the same cold
+establishment, with no chain or request index.
+
+Standalone portable cold compatibility validates both complete identity
+aggregates, removes only the exact fixed origin-selection pin from copied pin
+maps, and requires every remaining pin and its population to agree. An origin-only
+or absent-origin difference forces a current cold check. Changed deciding code,
+profiles, proofs or support refuse. This exception never relaxes Graphify live
+checker-policy/receipt/runtime equality. Missing optional origin material or hint
+can cold-fallback; malformed or altered alleged local bindings refuse. Required
+support unavailability remains incomplete; unknown profiles remain unsupported.
+
+Internal elapsed time covers checking and excludes final bundle/origin publication.
+Complete public wall cost must be measured externally through process exit. The
+original and current result retain that scope and Darwin child-RSS limits. The
+4096 MB, 90-second process and 600-second public invocation bounds are unchanged.
+`tests/test_formal_reuse.py` uses isolated synthetic stores and stubbed proof/support
+processes only. It is control evidence, not real formal qualification. The added
+helper and selected origin change identity: final integrated small/full cold
+establishment and reuse qualification are required; prior successful public
+results cannot be retrospectively signed or imported.
+
 Qualification observations under `T012_FORMAL_GATE/runtime/qualification-002`
 cover two new test-authored subjects and the actual Graphify view mapping. Small
 successful invocations took approximately 16–17 seconds, including about four
@@ -152,6 +269,39 @@ seconds for each complete support recheck. `child_maxrss_native_units` uses
 bytes and the value is the process-lifetime maximum over reaped children. It is
 not a measurement of one named proof stage; API batches may include earlier
 children. The first isolated public CLI reported approximately 3.41 GB. The
-1,987-record frozen subject has not yet passed concrete proof qualification;
-elaboration succeeded, while identity/well-formedness checks exhausted selected
-memory or time limits. Those outcomes remain incomplete, with retained logs.
+1,987-record frozen subject did not pass the T012 attempts. T013 preserves those
+negative observations, then establishes full identity/reference/model/view proofs
+with the unchanged core definitions. Its final public execution outcomes are
+recorded separately under `T013_PRACTICAL_FORMAL_GATE/lean`; proof completion alone
+does not establish runtime or supplied-view qualification. The compiler setting
+`-M4096` is not an OS physical-RSS cap. The public 600-second outer limit, individual
+90-second checking limits, configured Lean memory and observed RSS are distinct
+observations.
+
+### Full-size T013 observations
+
+The candidate frozen in `T013_PRACTICAL_FORMAL_GATE/lean/final-source-002`
+completed these sequential public invocations on the same verifier identity:
+
+| Actual request | Public result | External elapsed | Aggregate child high-water RSS |
+| --- | --- | ---: | ---: |
+| Complete 1,987-record model and supplied nine-record Graphify view | Verified | 269.83 s | 12.73 GB |
+| Same view with its retained residual omitted | Refused at supplied-view correspondence | 269.89 s | 13.02 GB |
+| Same closure with budget eight | Verified refusal, no truncated projection | 263.82 s | 12.77 GB |
+
+The model retains all 1,021 external resolutions, 16,498 reference occurrences
+and 3,995 edges. The selected view retains one unresolved residual and 18 external
+boundary entries. Every invocation freshly compiled all deciding data/proof
+modules and replayed all six generated proof modules. The positive invocation's
+replay took 28.37 seconds and actual proof-directed runtime took 9.69 seconds.
+The runtime emitted the complete model, and both model and projection JSON
+matched independent source-derived output. No request proof or saved verdict was
+reused. The original raw `checkModel` timeout remains a separate limitation.
+
+These are single-host observations, not an OS memory guarantee or a general
+performance claim. `-M4096` applies to the Lean compiler; the selected checker has
+no memory flag. The RSS figures are process-lifetime maxima over all reaped
+children of each external invocation, not measurements attributed to a named
+stage. Failed identity encodings, representation experiments and the first public
+runtime timeout remain retained. The exact scale return links their evidence and
+the separate source-currentness, literal-escaping and raw-origin controls.

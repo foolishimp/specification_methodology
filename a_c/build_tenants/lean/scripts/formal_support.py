@@ -14,7 +14,9 @@ SELECTED_PRIOR={
     'manifest':'c2bdfe7ce5bfd0c95ea71316708a93d738e8f8385086195c720e859e14968009',
     'log':'45e3ed7310936c9e3676e76c66fb911a7545c85a019f8e44614c63aa7d4b5a7e',
     'root':'fb9d1e9815990adc213899ab1b51f02ddc4bddd3e0163066ef17123042cc4bf2'}
-GENERIC_CONTRACTS={'AC.'+n for n in ('checkModel_sound','certificate_exact_reachability','certificate_unique','project_ok_properties','projection_all_residuals_accounted','names_nodup_of_order','wellFormed_of_range','checked_of_wellFormed')}
+SCALE_PRIOR_MANIFEST='3ee283ef53a47cd966ad6c47479fe57c2c793003a88590469c2289ea8b2621a2'
+SCALE_MODULES=('Structure','GateProof','GateRuntime')
+GENERIC_CONTRACTS={'AC.'+n for n in ('checkModel_sound', 'certificate_exact_reachability', 'certificate_unique', 'project_ok_properties', 'projection_all_residuals_accounted', 'names_nodup_of_order', 'array_reconstruct', 'sortLabeled_perm', 'nodup_of_labeled_characters', 'rendered_labeled_source', 'isChain_of_pairs', 'separated_of_nodup', 'member_of_block_index', 'mapped_block_inside', 'wellFormed_of_range', 'checked_of_wellFormed', 'projectWithProof_eq_project')}
 
 def sha(path):
     with Path(path).open('rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()
@@ -129,6 +131,63 @@ def extend_selected(output,prior_path,log_path,root_path):
     with output.open('x') as f:f.write(json.dumps(result,sort_keys=True,indent=2)+'\n')
     return result
 
+def _scale_delta(prior,current):
+    """Only the selected tenant proof additions may differ from exact T012."""
+    allowed={'AC/Structure.lean','AC/GateProof.lean','AC/GateRuntime.lean'}
+    allowed.update('.lake/build/lib/lean/AC/'+module+suffix
+        for module in SCALE_MODULES
+        for suffix in ('.olean','.olean.private','.olean.server','.ir','.ir.sig'))
+    if set(current)!=set(prior['members']):raise ValueError('scale extension changed the support population')
+    changed=sorted(n for n,h in prior['members'].items() if current[n]!=h)
+    if set(changed)-allowed:raise ValueError('scale extension changed conserved external/core support')
+    return changed
+
+def extend_scale(output,prior_path):
+    """Setup-only replay of the T013 tenant delta over the exact checked T012 base.
+
+    This is support establishment, not reuse of a request verdict or generated
+    dynamic theorem. Every public request continues to prove and replay its data.
+    """
+    output=Path(output)
+    if output.exists():raise ValueError('support output already exists')
+    start=time.monotonic();prior_bytes=Path(prior_path).read_bytes()
+    if hashlib.sha256(prior_bytes).hexdigest()!=SCALE_PRIOR_MANIFEST:
+        raise ValueError('scale extension requires the exact established T012 support')
+    prior_text=prior_bytes.decode('utf-8')
+    prior=json.loads(prior_text)
+    origin=prior['origin']
+    if origin['selected_sha256']!=SELECTED_PRIOR or any(hashlib.sha256(origin['retained_text'][k].encode()).hexdigest()!=h for k,h in SELECTED_PRIOR.items()):
+        raise ValueError('T012 historical fresh-proof origin changed')
+    expected_imports={'Structure':['AC.Model'],'GateProof':['AC.Projection','AC.Structure'],
+                      'GateRuntime':['AC.Projection','AC.Structure','AC.GateProof','Lean.Data.Json.Basic']}
+    for module,expected in expected_imports.items():
+        actual=re.findall(r'^public import ([A-Za-z0-9_.]+)$',(ROOT/f'AC/{module}.lean').read_text(),re.M)
+        if actual!=expected:raise ValueError('scale extension escapes conserved import closure: '+module)
+    prefix,env,lock=proof_environment()
+    # Compile only affected tenant roots. Core Model/Closure/Projection and all
+    # external source/object bytes must match the historical manifest exactly.
+    _scale_delta(prior,members())
+    for module in SCALE_MODULES:
+        runtime_process.run([str(prefix/'bin/lean'),'-j','1','-M','4096','-R',str(ROOT),
+            '-o',str(ROOT/f'.lake/build/lib/lean/AC/{module}.olean'),str(ROOT/f'AC/{module}.lean')],
+            cwd=ROOT,env=env,stdout=None,check=True,timeout=90)
+    current=members();changed=_scale_delta(prior,current)
+    runtime_process.run([str(prefix/'bin/leanchecker'),*[f'AC.{m}' for m in SCALE_MODULES]],
+        cwd=ROOT,env=env,stdout=None,check=True,timeout=90)
+    audit=audit_contracts(prefix,env)
+    if members()!=current:raise ValueError('support changed during scale extension')
+    result={'schema':'a_c.lean.proof-support/1','platform':prior['platform'],
+        'lean':lock['lean'],'mathlib':lock['mathlib'],
+        'kernel_replay':'leanchecker AC.Structure AC.GateProof AC.GateRuntime against exact established T012 imports',
+        'generic_contract_audit':audit,'members':current,'established_seconds':time.monotonic()-start,
+        'runtime_boundary':prior['runtime_boundary'],'origin':origin,
+        'scale_extension':{'selected_manifest_sha256':SCALE_PRIOR_MANIFEST,'retained_manifest':prior_text,
+            'changed':changed,'unchanged_members':len(current)-len(changed),
+            'direct_imports':expected_imports,'new_external_proof_imports':[],
+            'replayed_modules':list(SCALE_MODULES)}}
+    with output.open('x') as f:f.write(json.dumps(result,sort_keys=True,indent=2)+'\n')
+    return result
+
 def check():
     basis=json.loads(SUPPORT.read_text())
     if basis.get('schema')!='a_c.lean.proof-support/1':raise ValueError('unsupported selected proof support')
@@ -136,6 +195,13 @@ def check():
         origin=basis['origin']
         if origin['selected_sha256']!=SELECTED_PRIOR or any(hashlib.sha256(origin['retained_text'][k].encode()).hexdigest()!=h for k,h in SELECTED_PRIOR.items()):
             raise ValueError('selected prior support origin changed')
+    if 'scale_extension' in basis:
+        extension=basis['scale_extension']
+        if extension['selected_manifest_sha256']!=SCALE_PRIOR_MANIFEST or hashlib.sha256(extension['retained_manifest'].encode()).hexdigest()!=SCALE_PRIOR_MANIFEST:
+            raise ValueError('selected scale support origin changed')
+        changed=_scale_delta(json.loads(extension['retained_manifest']),basis['members'])
+        if extension['changed']!=changed or extension['replayed_modules']!=list(SCALE_MODULES):
+            raise ValueError('scale support delta/replay declaration changed')
     # Newly installed irrelevant modules do not affect the selected import basis;
     # every selected source/object/runtime member must still match exactly.
     for name,digest in basis['members'].items():
@@ -158,6 +224,8 @@ def check():
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--output',type=Path,required=True)
-    parser.add_argument('--extend-selected',type=Path);parser.add_argument('--prior-log',type=Path);parser.add_argument('--prior-root',type=Path);args=parser.parse_args()
-    result=extend_selected(args.output,args.extend_selected,args.prior_log,args.prior_root) if args.extend_selected else establish(args.output)
+    selection=parser.add_mutually_exclusive_group()
+    selection.add_argument('--extend-selected',type=Path);selection.add_argument('--extend-scale',type=Path)
+    parser.add_argument('--prior-log',type=Path);parser.add_argument('--prior-root',type=Path);args=parser.parse_args()
+    result=extend_scale(args.output,args.extend_scale) if args.extend_scale else extend_selected(args.output,args.extend_selected,args.prior_log,args.prior_root) if args.extend_selected else establish(args.output)
     print(json.dumps({'status':'established','members':len(result['members']),'seconds':result['established_seconds']}))

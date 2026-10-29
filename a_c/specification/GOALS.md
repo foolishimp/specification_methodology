@@ -1,5 +1,27 @@
 # Goals
 
+The active practical-gate increment is
+[T-013](../.ai-workspace/tickets/active/T-013-practical-formal-gate.md), a
+`goal_reprice` and `design_reframe` under unchanged FR-001–FR-014. Cold verification
+of the exact 1,987-record/1,021-external subject and an actual nontrivial view is
+complete and independently reviewed at its frozen scale identity. Origin-bound
+reuse is integrated and source reviewed, with 117 passing integration controls;
+actual fresh cold/reuse qualification on the integrated identity is next.
+Then run at most two matched actual F_P Worker tasks and independently assess
+their outputs and complete costs. The pair remains unstarted. Package preparation
+and exact oversized-evidence transport are reviewed; final archive construction
+and installed qualification remain pending. Full data correspondence, total
+cold/reused cost, current authority and actual received bytes decide the outcome. The
+[execution contract](../.ai-workspace/tickets/active/T-013-practical-formal-gate.md#ordered-execution)
+binds the sequence and retained limits. The
+[reviewed-increment checkpoint](../.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/checkpoint/reviewed-increment-002/RETURN.md)
+preserves this source and its closed evidence before actual runtime trials.
+The selected compiler option remains `-M4096`, with 90 seconds per checking
+process and 600 seconds per public invocation. Observed aggregate child high-water
+RSS was 12.73–13.02 GB; the compiler option is not a physical-memory cap.
+Owner acceptance, public release, method adoption and wider calculus claims
+remain unselected.
+
 The delivered reusable-gate increment is
 [T-012](../.ai-workspace/tickets/active/T-012-reusable-formal-gate.md), under
 [FR-008–FR-014](requirements/formalisation.md#reusable-formal-verification-gate).
@@ -11,11 +33,12 @@ The [final review](../.ai-workspace/work/T012_FORMAL_GATE/review/final-assessmen
 supports the declared fragment, resolves all three findings and leaves no blocking
 finding. The [handoff](../.ai-workspace/work/T012_FORMAL_GATE/DELIVERY.md) binds usable
 commands, exact source/review identities, costs and preserved history. The actual
-1,987-record case remains incomplete under selected resources; no successful
-large-model scaling or efficiency gain is established. The installed builder,
+1,987-record case was incomplete at that predecessor cut; T-013 now supplies the
+separately reviewed cold-scale result. No efficiency gain is established. The installed builder,
 existing authority owners and historical T-011 evidence remain unchanged.
-Work remains uncommitted and unpushed on `main`; semantic/owner acceptance,
-adoption, release, publication and Git actions are unselected.
+This predecessor is checkpointed and pushed on `main`; its historical records
+retain the standing observed at their closure. Semantic/owner acceptance,
+adoption and release remain unselected.
 
 The completed formalisation increment is
 [T-011](../.ai-workspace/tickets/active/T-011-lean-formalisation.md): an independent
@@ -28,8 +51,9 @@ review is satisfied with no findings or required repairs; its public-path run
 checks 46 actual projections, 46 underbudget refusals and 204 deciding theorem
 reports. The [delivery handoff](../.ai-workspace/work/T011_LEAN_FORMALISATION/DELIVERY.md)
 binds runnable commands, frozen source, review evidence and retained trust
-boundaries. The builder remains v2.5.1-rc.2. Work is uncommitted and unpushed on
-`main`; F_P fidelity, owner acceptance and release are not issued by these checks.
+boundaries. The builder remains v2.5.1-rc.2. The preserved implementation is
+checkpointed on `main`; F_P fidelity, owner acceptance and release are not issued
+by these checks.
 
 The selected composition increment implements
 [FC-01–FC-07](requirements/fd-composition.md) in the existing Graphify support

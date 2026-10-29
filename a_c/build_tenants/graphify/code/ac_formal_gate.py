@@ -13,6 +13,7 @@ import os
 from pathlib import Path
 import re
 import signal
+import stat
 import subprocess
 import sys
 import time
@@ -58,6 +59,89 @@ def _regular(path: Path) -> bytes:
     if not path.is_absolute() or any(p.is_symlink() for p in (path, *path.parents)) or not path.is_file():
         raise GateError("refused", "Checker or evidence path is not an absolute regular file")
     return path.read_bytes()
+
+
+def _unalias(path: Path) -> Path:
+    path = path.absolute()
+    for part in reversed((path, *path.parents)):
+        try:
+            info = part.lstat()
+        except FileNotFoundError:
+            continue
+        if stat.S_ISLNK(info.st_mode):
+            raise GateError("refused", "Symlink path is outside selected formal acquisition")
+    return path.resolve(strict=False)
+
+
+
+def _contains(parent, child):
+    """Containment by existing ancestor identity, including host case aliases.
+
+    Only a missing suffix has no inode. Reserve case variants of that fixed
+    suffix conservatively; do not fold or ban unrelated existing source roots.
+    """
+    anchor, suffix = parent, []
+    while True:
+        try:
+            info = anchor.stat()
+            break
+        except FileNotFoundError:
+            suffix.insert(0, anchor.name)
+            anchor = anchor.parent
+    identity = (info.st_dev, info.st_ino)
+    for candidate in (child, *child.parents):
+        try:
+            info = candidate.stat()
+        except FileNotFoundError:
+            continue
+        if (info.st_dev, info.st_ino) == identity:
+            tail = child.relative_to(candidate).parts
+            return len(tail) >= len(suffix) and tuple(p.casefold() for p in tail[:len(suffix)]) == tuple(p.casefold() for p in suffix)
+    return False
+
+
+def guard_path(config: dict[str, Any], path: Path, *, output: bool = False,
+               directory: bool = False, absent: bool = False) -> Path:
+    """Reserve actual mediated paths; broad registered source roots stay valid.
+
+    The selected checker configuration is trusted. No Lean/helper/key read is
+    needed for reservation, including before local origin setup exists.
+    """
+    path = _unalias(path)
+    protected = _unalias(Path(config["root"]) / ".cache/formal-origin-v1")
+    if _contains(protected, path) or (output and _contains(path, protected)):
+        raise GateError("refused", "Ordinary path overlaps protected formal origin material")
+    try:
+        info = path.stat()
+    except FileNotFoundError:
+        if output or absent:
+            return path
+        raise
+    if directory:
+        if not stat.S_ISDIR(info.st_mode):
+            raise GateError("refused", "Expected a regular selected directory")
+    elif not output and not stat.S_ISREG(info.st_mode):
+        raise GateError("refused", "Selected input is not a regular file")
+    if stat.S_ISREG(info.st_mode) and info.st_nlink != 1:
+        raise GateError("refused", "Multiply linked selected input/output is unsupported")
+    return path
+
+
+def read_selected(config: dict[str, Any], path: Path) -> bytes:
+    path = guard_path(config, path)
+    fd = os.open(path, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK)
+    try:
+        info = os.fstat(fd)
+        if not stat.S_ISREG(info.st_mode) or info.st_nlink != 1:
+            raise GateError("refused", "Expected singly linked selected input")
+        with os.fdopen(fd, "rb", closefd=False) as stream:
+            raw = stream.read()
+        after = os.fstat(fd)
+        if (info.st_dev, info.st_ino, info.st_size, info.st_mtime_ns) != (after.st_dev, after.st_ino, after.st_size, after.st_mtime_ns):
+            raise GateError("refused", "Selected input changed during acquisition")
+        return raw
+    finally:
+        os.close(fd)
 
 
 def validate_config(config: Any) -> dict[str, Any]:
@@ -264,6 +348,8 @@ def load_config(path: Path, expected_sha256: str) -> dict[str, Any]:
 
 
 def _result(config: dict[str, Any], process: subprocess.CompletedProcess[bytes], bundle: Path) -> dict[str, Any]:
+    guard_path(config, bundle.parent / "checker.stdout", output=True)
+    guard_path(config, bundle.parent / "checker.stderr", output=True)
     (bundle.parent / "checker.stdout").write_bytes(process.stdout)
     (bundle.parent / "checker.stderr").write_bytes(process.stderr)
     result = _json(process.stdout)
@@ -271,7 +357,7 @@ def _result(config: dict[str, Any], process: subprocess.CompletedProcess[bytes],
             or result.get("status") not in EXITS or EXITS[result["status"]] != process.returncode):
         raise GateError("incomplete", "Checker exit/result contract mismatch")
     if result["status"] == "verified":
-        raw = _regular(bundle / "result.json")
+        raw = read_selected(config, bundle / "result.json")
         if _json(raw) != result or result.get("runtime_identity") != config["runtime_identity"]:
             raise GateError("refused", "Checker result or deciding runtime identity mismatch")
     current(config)
@@ -281,8 +367,9 @@ def _result(config: dict[str, Any], process: subprocess.CompletedProcess[bytes],
 def verify(config: dict[str, Any], raw: bytes, format: str, selections: list[dict[str, Any]],
            views: Any, context_binding: Any, output: Path) -> dict[str, Any]:
     """Verify exact acquired bytes and actual ordered views in a fresh directory."""
+    validate_config(config)
+    output = guard_path(config, output, output=True)
     current(config)
-    output = output.absolute()
     output.mkdir(parents=True, exist_ok=False)
     source = output / "input.json"; source.write_bytes(raw)
     view_binding = None
@@ -298,7 +385,7 @@ def verify(config: dict[str, Any], raw: bytes, format: str, selections: list[dic
             or result.get("selections") != selections or result.get("context_binding") != context_binding):
         raise GateError("refused", "Checker result does not bind the actual integration request")
     return {"result": result, "bundle": str(bundle),
-            "result_sha256": sha(_regular(bundle / "result.json")) if (bundle / "result.json").is_file() else None,
+            "result_sha256": sha(read_selected(config, bundle / "result.json")) if (bundle / "result.json").is_file() else None,
             "request_sha256": sha(canonical(request)), "input_sha256": sha(raw),
             "views_sha256": None if views is None else sha(canonical(views))}
 
@@ -311,10 +398,12 @@ def receipt(run: dict[str, Any]) -> dict[str, Any]:
 
 
 def recheck(config: dict[str, Any], retained: dict[str, Any], output: Path) -> dict[str, Any]:
-    """Fresh proof replay from a hash-bound protected receipt, never saved success."""
+    """Current exact checking; eligible local cold establishments may be reused."""
+    validate_config(config)
+    output = guard_path(config, output, output=True)
+    bundle = guard_path(config, Path(retained["bundle"]), directory=True)
     current(config)
-    bundle = Path(retained["bundle"])
-    raw = _regular(bundle / "result.json")
+    raw = read_selected(config, bundle / "result.json")
     if sha(raw) != retained["result_sha256"] or receipt({"result": _json(raw)})["result"] != receipt(retained)["result"]:
         raise GateError("refused", "Retained checker result changed")
     output = output.absolute(); output.mkdir(parents=True, exist_ok=False)

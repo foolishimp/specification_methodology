@@ -1,0 +1,97 @@
+{
+  "arms": {
+    "gated": {
+      "actor_id": "t013-report-gated-worker-001",
+      "actor_plan_sha256": "29af24f430561a845c47990a158242af5597e8f40a1c5e43e852757d4b0c5fa0",
+      "actual_context_created": false,
+      "context_request_sha256": "b2bccbe5a1b1ff09c8f6ed074e2883168c12cebe5a88ebc1c08bc8701dceac2b",
+      "owner_acquisition_sha256": "3b5ac2e51753f10d7f2f80bd4259c060bd5b1b9dd8e0e967029834e4d9aea419",
+      "packet_sha256": "b1b210857b1db30174c8c847261e2b5ff842108fd7ddf96d86d5420fe6476c1e",
+      "policy_sha256": "7bc556023837ec0569a73629ce0ee642ef997b309501073d8465612e4d109ac1",
+      "public_shape_policy_loaded": true,
+      "return_fixed": {
+        "activation": {
+          "id": "t013-report-gated-worker-001:activation",
+          "sha256": "44e3917bb1d7b8a2460eac48c688d84a4867ae803f6fc3ee62b1a44279f976e3"
+        },
+        "actor": {
+          "authorship": "t013-report-gated-worker-001",
+          "family": "codex-native-default",
+          "id": "t013-report-gated-worker-001"
+        },
+        "basis": {
+          "method_profile": {
+            "id": "urn:a-c:fd-support:method:claude-rc9:executive:1",
+            "sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+          },
+          "observations": []
+        },
+        "consumer": "/root",
+        "frame": {
+          "id": "t013-report-helper-frame",
+          "revision": "1"
+        },
+        "id": "t013-report-gated-worker-001:return",
+        "schema": "a_c.fd-support.closed-return/1",
+        "subject": {
+          "id": "urn:a-c:T013:report-helper:001",
+          "sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829"
+        }
+      },
+      "workspace": "/private/tmp/T013_WORKSPACE_NOT_SELECTED/gated"
+    },
+    "ungated": {
+      "actor_id": "t013-report-ungated-worker-001",
+      "actor_plan_sha256": "4e9f6509dcccec80fd1738c20939505c60de477b5634dc316b4da91349d9a82c",
+      "actual_context_created": false,
+      "context_request_sha256": "6cdd744bb24a6c5652accf95734a5441f7de3071a1a215255cffc058436e907c",
+      "owner_acquisition_sha256": "3b5ac2e51753f10d7f2f80bd4259c060bd5b1b9dd8e0e967029834e4d9aea419",
+      "packet_sha256": "00d7f61a83e38bc748245d9bbcc56fbf2315fed3f8d70f5b9ba79e8b3e4da33d",
+      "policy_sha256": "e79985993bb2355befc3b8ee619ce0e58a3656a5b9872e752566479aa56655df",
+      "public_shape_policy_loaded": true,
+      "return_fixed": {
+        "activation": {
+          "id": "t013-report-ungated-worker-001:activation",
+          "sha256": "1c9acb66c3085d4e4bc0a232cca5cf15e75d10e98c7c7f43f2e1b601810ab5c3"
+        },
+        "actor": {
+          "authorship": "t013-report-ungated-worker-001",
+          "family": "codex-native-default",
+          "id": "t013-report-ungated-worker-001"
+        },
+        "basis": {
+          "method_profile": {
+            "id": "urn:a-c:fd-support:method:claude-rc9:executive:1",
+            "sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+          },
+          "observations": []
+        },
+        "consumer": "/root",
+        "frame": {
+          "id": "t013-report-helper-frame",
+          "revision": "1"
+        },
+        "id": "t013-report-ungated-worker-001:return",
+        "schema": "a_c.fd-support.closed-return/1",
+        "subject": {
+          "id": "urn:a-c:T013:report-helper:001",
+          "sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829"
+        }
+      },
+      "workspace": "/private/tmp/T013_WORKSPACE_NOT_SELECTED/ungated"
+    }
+  },
+  "checker_config": null,
+  "execution_selection_sha256": "09433184faf42ed23a332b58883e878fb8948c33196ae41935ddce653738027d",
+  "schema": "t013.runtime-preparation.manifest/1",
+  "source_pins": {
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_formal_gate.py": "93c7aa262f1d7dd393a83afb4448880c7fa08031eced81539792fc9528359462",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_graph.py": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py": "f65efad15fd770075650ce0484df5b1cea14612047a82918d35fdc4f870deafa",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_composition.py": "3b6c58d90280aa65fe5c1d8b9bb58a37a15376fcff1ef71e7f248f509df52625",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_core.py": "e0d4998f0e5a2ecc5fea5f6ef82acb3d5d0a0049d16a392ca63cba13b672a15b",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_effects.py": "5d2f4cd9ef2a450f895dad61a136756e05bc443717644268f66db127dfb684af",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/examples/fd-support/actor_cli.py": "3f0bd239339e635f4e49ae89a00f0857f4672cb177a5dd2ce03f124f0b116528"
+  },
+  "template_only": true
+}

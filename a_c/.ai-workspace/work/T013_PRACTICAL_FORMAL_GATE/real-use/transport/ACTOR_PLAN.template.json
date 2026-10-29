@@ -1,0 +1,60 @@
+{
+  "argv": [
+    "/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--json",
+    "--sandbox",
+    "workspace-write",
+    "--skip-git-repo-check",
+    "--output-schema",
+    "__PINNED_RETURN_SCHEMA__",
+    "-"
+  ],
+  "backend": "codex",
+  "cwd": "__FRESH_ARM_WORKSPACE__",
+  "decoder": "codex-final-jsonl/1",
+  "dependencies_pending": [
+    "selected final return schema",
+    "native support/loader closure if any",
+    "pinned Python/helper/core source chain",
+    "exact task source and current public integration candidate"
+  ],
+  "environment": {
+    "PATH": "/Library/Frameworks/Python.framework/Versions/3.12/bin:/usr/bin:/bin:/opt/homebrew/bin",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "evidence_directory": "__FRESH_OPERATOR_OWNED_TRANSPORT_EVIDENCE__",
+  "executable": {
+    "path": "/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex",
+    "sha256": "d8990e3ee7acfbc26f91265b12a1a83f0fee40d0e0f8f1f40a37d4ec21f499cf"
+  },
+  "helper_python_pin": {
+    "path": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "sha256": "a7f5b535d61d1c7326824204ac80f045a97a652abb154421e2c74fcc365a3539"
+  },
+  "limits_proposed": {
+    "max_input_bytes": 2097152,
+    "max_output_bytes": 16777216,
+    "termination_grace_ms": 2000,
+    "timeout_ms": 900000
+  },
+  "protected_environment": "Existing HOME/home/CODEX_HOME unchanged through shipped helper; never serialized as overrides.",
+  "schema": "t013.real-use.actor-plan-template/1",
+  "settings": {
+    "model_policy": "native CLI default; record actually reported identity or unknown",
+    "prohibited": [
+      "additional agents/models",
+      "network acquisition",
+      "other arm or evaluation material",
+      "tenant private proof/origin material",
+      "credential inspection",
+      "Git/publication"
+    ],
+    "selected_effort": null,
+    "selected_model": null,
+    "task_tools": "local shell/file operations within granted task workspace only"
+  },
+  "state": "non-executable preparation; finalize only after separate grant and candidate freeze"
+}

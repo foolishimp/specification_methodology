@@ -1,0 +1,39 @@
+{
+  "schema": "a_c.t013.reuse-staging-activation/1",
+  "actor": "/root/ac_scale_reuse_worker",
+  "role": "Worker",
+  "delegating_executive": "/root",
+  "work_item": "T-013",
+  "observed_utc": "2026-10-29T01:34:55.339291+00:00",
+  "change_class": "realization_refactor",
+  "operation": "Implement independently approved reuse revision 002 in isolated staging; focused synthetic unit and control tests only.",
+  "write_territory": [
+    "a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/implementation-001/**"
+  ],
+  "basis": {
+    "installed_release": "stdo://releases/v2.5.1-rc.2/",
+    "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "calculus_sha256": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d"
+  },
+  "approved_design": {
+    "path": "../revision-002/DESIGN.md",
+    "sha256": "2a0cf59bff21aafe20f28830ecaf0749b3835e547a219cde32da5f26751c5775",
+    "review_closed_sha256": "2a017b576a06dec913269f7c9536bcde9d0f89bea53ecf075aba7326de7b87ef"
+  },
+  "predecessor": {
+    "cold_runtime_sha256": "e8cf8aa74408d6642bdbf9be3bddb224fb857de51040cbbbd30e9cd0758d1182",
+    "cold_result_sha256": "1de052047cd8bdc15fd38be9cd9094e7c628df0fa209e1820c2fe99ae405d05e",
+    "reported_wall_seconds": 269.829
+  },
+  "permitted_test_effects": "Explicitly synthetic isolated temporary keys/stores only within this staging territory. Stubbed proof controls are unit evidence.",
+  "exclusions": [
+    "live tenant mutation",
+    "real .lake/.toolchain/support copying",
+    "actual live origin read or mint",
+    "Git effects",
+    "fullproof/model/actor calls",
+    "retroactive signing/import of public evidence",
+    "public release/owner acceptance"
+  ],
+  "stop": "Submit exact staged diff/source pins/closed return; await separate integration grant."
+}

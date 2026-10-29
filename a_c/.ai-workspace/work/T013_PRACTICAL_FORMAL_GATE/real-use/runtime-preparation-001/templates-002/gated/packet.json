@@ -1,0 +1,463 @@
+{
+  "activation": {
+    "configuration": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "gated/activation.json",
+      "root": "operator",
+      "selector": null,
+      "sha256": "ec2722074783b5eaece6cea2ef773c33dd979ba46f615f48dddc05a08477d7b4"
+    },
+    "id": "t013-report-gated-worker-001:activation",
+    "revision": "1"
+  },
+  "actor_authority": {
+    "acceptance": null,
+    "actor_id": "t013-report-gated-worker-001",
+    "capability": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "gated/activation.json",
+      "root": "operator",
+      "selector": null,
+      "sha256": "ec2722074783b5eaece6cea2ef773c33dd979ba46f615f48dddc05a08477d7b4"
+    },
+    "decision": null,
+    "evaluation": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "TASK.md",
+      "root": "prepared",
+      "selector": null,
+      "sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829"
+    },
+    "operation": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": ".ai-workspace/tickets/active/T-013-practical-formal-gate.md",
+      "root": "product",
+      "selector": {
+        "lines": [
+          134,
+          210
+        ]
+      },
+      "sha256": "fbcf3edf07ae81071ed2d5864bcc7ed7ed946f524edefe17b2ff206252dfa524"
+    },
+    "publication": null,
+    "role": "Worker",
+    "semantic": null,
+    "territory": [
+      {
+        "kind": "file",
+        "path": "gate_report.py",
+        "root": "task"
+      },
+      {
+        "kind": "file",
+        "path": "test_gate_report.py",
+        "root": "task"
+      },
+      {
+        "kind": "file",
+        "path": "README.md",
+        "root": "task"
+      },
+      {
+        "kind": "directory",
+        "path": "support",
+        "root": "task"
+      },
+      {
+        "kind": "directory",
+        "path": "scratch",
+        "root": "task"
+      }
+    ],
+    "tools": [
+      "local-shell-files",
+      "python3-stdlib"
+    ]
+  },
+  "attention": {
+    "exclusions": [
+      "Hidden evaluator cases and other-arm outputs"
+    ],
+    "invariants": [
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "TASK.md",
+        "root": "prepared",
+        "selector": null,
+        "sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829"
+      }
+    ],
+    "material_relations": [
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "TASK.md",
+        "root": "prepared",
+        "selector": null,
+        "sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829"
+      }
+    ],
+    "prohibited_assumptions": [
+      "Saved result authenticates itself",
+      "Proof grants authority",
+      "Unknown cost is zero",
+      "Parent model equals child model"
+    ],
+    "semantic_sources": [
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "TASK.md",
+        "root": "prepared",
+        "selector": null,
+        "sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "shared/CUSTODY.json",
+        "root": "prepared",
+        "selector": null,
+        "sha256": "2e5c99cb07abe1d6837a1d8d39033c644e3c846ea3c31cce8e21a28a263e22a0"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "shared/FORMAL_GATE.md",
+        "root": "prepared",
+        "selector": null,
+        "sha256": "32a4c573f2af9dbda9d73ac8fa24797687345ade870488a6d31347350b3fa79c"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "shared/MODEL_SELECTION.json",
+        "root": "prepared",
+        "selector": null,
+        "sha256": "108bea2e1080c11152db20800f9f696988264f08e14310827c1cc3479ab5cda6"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "shared/examples/authored-unsupported.json",
+        "root": "prepared",
+        "selector": null,
+        "sha256": "0953f4c0a89f30ddcb76c58d876e2d2e8bc1fe91fe3e462a1539b1bdd8d9ac61"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "shared/examples/budget-refusal.json",
+        "root": "prepared",
+        "selector": null,
+        "sha256": "507b9c3741451c259a7077eef0ed98cb390666f04209866f81b6afe8054f1d82"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "shared/examples/historical-incomplete.json",
+        "root": "prepared",
+        "selector": null,
+        "sha256": "0a71be4468919fd2c53378811898c75563c015c7f1699a5fc754e2e6169593b9"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "shared/examples/malformed-model.json",
+        "root": "prepared",
+        "selector": null,
+        "sha256": "c80ea7c839ef65826fc975cabc6d750762d46ead966804876b9d730a273cde91"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "shared/examples/model-only.json",
+        "root": "prepared",
+        "selector": null,
+        "sha256": "400d226d4bbcee00701a357812eeb990b31b8df99ba700996ddd6a6dcf78b5c3"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "shared/examples/verified.json",
+        "root": "prepared",
+        "selector": null,
+        "sha256": "139e173d542e4502047188caab39d3144da9ba838321f584791ffa5fa0e8b387"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "shared/examples/view-mismatch.json",
+        "root": "prepared",
+        "selector": null,
+        "sha256": "fc3112787f5c5724f702e1f226be97e5ea95cc6b44f2fa742d2f84451705b13a"
+      }
+    ]
+  },
+  "evidence_relations": {
+    "acquisition": [
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "TASK.md",
+        "root": "prepared",
+        "selector": null,
+        "sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "shared/CUSTODY.json",
+        "root": "prepared",
+        "selector": null,
+        "sha256": "2e5c99cb07abe1d6837a1d8d39033c644e3c846ea3c31cce8e21a28a263e22a0"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "shared/FORMAL_GATE.md",
+        "root": "prepared",
+        "selector": null,
+        "sha256": "32a4c573f2af9dbda9d73ac8fa24797687345ade870488a6d31347350b3fa79c"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "shared/MODEL_SELECTION.json",
+        "root": "prepared",
+        "selector": null,
+        "sha256": "108bea2e1080c11152db20800f9f696988264f08e14310827c1cc3479ab5cda6"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "shared/examples/authored-unsupported.json",
+        "root": "prepared",
+        "selector": null,
+        "sha256": "0953f4c0a89f30ddcb76c58d876e2d2e8bc1fe91fe3e462a1539b1bdd8d9ac61"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "shared/examples/budget-refusal.json",
+        "root": "prepared",
+        "selector": null,
+        "sha256": "507b9c3741451c259a7077eef0ed98cb390666f04209866f81b6afe8054f1d82"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "shared/examples/historical-incomplete.json",
+        "root": "prepared",
+        "selector": null,
+        "sha256": "0a71be4468919fd2c53378811898c75563c015c7f1699a5fc754e2e6169593b9"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "shared/examples/malformed-model.json",
+        "root": "prepared",
+        "selector": null,
+        "sha256": "c80ea7c839ef65826fc975cabc6d750762d46ead966804876b9d730a273cde91"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "shared/examples/model-only.json",
+        "root": "prepared",
+        "selector": null,
+        "sha256": "400d226d4bbcee00701a357812eeb990b31b8df99ba700996ddd6a6dcf78b5c3"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "shared/examples/verified.json",
+        "root": "prepared",
+        "selector": null,
+        "sha256": "139e173d542e4502047188caab39d3144da9ba838321f584791ffa5fa0e8b387"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "shared/examples/view-mismatch.json",
+        "root": "prepared",
+        "selector": null,
+        "sha256": "fc3112787f5c5724f702e1f226be97e5ea95cc6b44f2fa742d2f84451705b13a"
+      }
+    ],
+    "admissible_evidence": [
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "TASK.md",
+        "root": "prepared",
+        "selector": null,
+        "sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829"
+      }
+    ],
+    "conjunction": null,
+    "consumer": "/root",
+    "dependencies": [
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "TASK.md",
+        "root": "prepared",
+        "selector": null,
+        "sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829"
+      }
+    ],
+    "return_contract": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "gated/return-contract.json",
+      "root": "operator",
+      "selector": null,
+      "sha256": "e8767be5da47ee9f62536ded00792e39ebed46cf65fa6a1c7f0f2c2e03a7fc4e"
+    },
+    "translation": null
+  },
+  "frame": {
+    "declaration": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "TASK.md",
+      "root": "prepared",
+      "selector": null,
+      "sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829"
+    },
+    "evaluation": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "TASK.md",
+      "root": "prepared",
+      "selector": null,
+      "sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829"
+    },
+    "id": "t013-report-helper-frame",
+    "result_algebra": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "gated/return-contract.json",
+      "root": "operator",
+      "selector": null,
+      "sha256": "e8767be5da47ee9f62536ded00792e39ebed46cf65fa6a1c7f0f2c2e03a7fc4e"
+    },
+    "revision": "1"
+  },
+  "profile_additions": {
+    "worker": {
+      "mutation_subject": {
+        "id": "urn:a-c:T013:report-helper:001",
+        "sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829"
+      },
+      "operation_grant_id": "task",
+      "territory": [
+        {
+          "kind": "file",
+          "path": "gate_report.py",
+          "root": "task"
+        },
+        {
+          "kind": "file",
+          "path": "test_gate_report.py",
+          "root": "task"
+        },
+        {
+          "kind": "file",
+          "path": "README.md",
+          "root": "task"
+        },
+        {
+          "kind": "directory",
+          "path": "support",
+          "root": "task"
+        },
+        {
+          "kind": "directory",
+          "path": "scratch",
+          "root": "task"
+        }
+      ]
+    }
+  },
+  "stop_change": {
+    "invalidators": [
+      "Any selected source, policy or activation change"
+    ],
+    "re_entry": [
+      "Return to Executive on blocked input or authority"
+    ],
+    "reconfiguration": [],
+    "residuals": [
+      "Semantic acceptance remains external"
+    ],
+    "stop_conditions": [
+      "input/currentness mismatch",
+      "permission unavailable",
+      "task timeout",
+      "outside-scope source required",
+      "attempt already used"
+    ]
+  },
+  "subject_basis": {
+    "dependencies": [
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "TASK.md",
+        "root": "prepared",
+        "selector": null,
+        "sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": ".ai-workspace/tickets/active/T-013-practical-formal-gate.md",
+        "root": "product",
+        "selector": {
+          "lines": [
+            134,
+            210
+          ]
+        },
+        "sha256": "fbcf3edf07ae81071ed2d5864bcc7ed7ed946f524edefe17b2ff206252dfa524"
+      },
+      {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "execution-selection.json",
+        "root": "operator",
+        "selector": null,
+        "sha256": "09433184faf42ed23a332b58883e878fb8948c33196ae41935ddce653738027d"
+      }
+    ],
+    "method_profile": {
+      "id": "urn:a-c:fd-support:method:claude-rc9:executive:1",
+      "sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+    },
+    "observations": [],
+    "product": {
+      "definition": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "stdo_a_c.json",
+        "root": "product",
+        "selector": null,
+        "sha256": "e3bbb4fc916f39c505a5c858a876b8bdc3e0533d4fecec23d84d5da109b1ca66"
+      },
+      "id": "urn:stdo:product-definition:a-c-implementations"
+    },
+    "subject": {
+      "id": "urn:a-c:T013:report-helper:001",
+      "sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829"
+    },
+    "time_basis": "Exact pinned sources freshly rechecked before each dependent operation."
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "command": [
+    "/usr/local/bin/python3",
+    "-I",
+    "-S",
+    "-B",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/scripts/formal_gate.py",
+    "verify",
+    "--request",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/view-expectations-001/request.json",
+    "--output",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/public-positive-001"
+  ],
+  "outer_seconds": 600,
+  "per_stage_seconds": 90,
+  "lean_memory_mb": 4096,
+  "os_rss_cap": false,
+  "status": "incomplete",
+  "returncode": 4,
+  "reason": "actual-runtime exceeded selected time limit",
+  "gate_elapsed_seconds": 341.47559758415446,
+  "stages": [
+    {
+      "seconds": 3.6686046249233186,
+      "stage": "support-pins"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 41.408725457964465,
+      "stage": "GateData"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 51.97197108413093,
+      "stage": "GateLocalNames"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 44.777103665983304,
+      "stage": "GateExternalNames"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 27.674240458989516,
+      "stage": "GateIdentities"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 44.39154504099861,
+      "stage": "GateBounds"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 0.6671258748974651,
+      "stage": "GateModel"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 6.304963500006124,
+      "stage": "GateViews"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 28.30852683307603,
+      "stage": "dynamic-kernel-replay"
+    }
+  ],
+  "gate_result_sha256": "f7a77cb2ec7ea2c74ebc506d203726d4293581705a564729abc882b1eba82c25",
+  "external_elapsed_seconds": 341.7199677499011,
+  "child_high_water_rss_bytes": 13050642432
+}
