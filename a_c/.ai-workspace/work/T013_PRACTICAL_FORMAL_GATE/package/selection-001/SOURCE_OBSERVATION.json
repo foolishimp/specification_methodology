@@ -1,0 +1,536 @@
+{
+  "schema": "a_c.T013.integrated-package-source-observation/1",
+  "observed_utc": "2026-10-29T16:34:17.673352+00:00",
+  "source_checkpoint": "21585e1ac5a41ed1df0d7f90d7a0551e6f4cd58d",
+  "scope": "Public source bytes and explicit closed namespaces only; no proof or origin files acquired. Not final qualified-runtime identity.",
+  "candidate_members": 60,
+  "package_control_members": 5,
+  "payload_destinations": 65,
+  "members": {
+    "a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/selection-001/DEPENDENCIES.md": {
+      "sha256": "acca43bb0d0469a5176e6088736bdf4f15bb46233739b63c82e7cb0c64ffb09f",
+      "bytes": 6498,
+      "path": "DEPENDENCIES.md",
+      "role": "source-packaging-recipe-and-controls"
+    },
+    "a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/selection-001/INVENTORY_PLAN.json": {
+      "sha256": "18747b0982d194becd5a1c6c12e3bd4b04d51782470f8a2e04b4a3e7387a5449",
+      "bytes": 12463,
+      "path": "INVENTORY_PLAN.json",
+      "role": "source-packaging-recipe-and-controls"
+    },
+    "a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/selection-001/RECIPE.md": {
+      "sha256": "5743a1c86e48d0b07eef226b74c162013b9be232a1f6eb065c885c0fb2bdd6e1",
+      "bytes": 12081,
+      "path": "PACKAGE_README.md",
+      "role": "source-packaging-recipe-and-controls"
+    },
+    "a_c/build_tenants/graphify/code/ac_formal_gate.py": {
+      "sha256": "d37de63f2b809e7a02d88d560b29b4900e8cda6217cfbc32e5796f40065659b8",
+      "bytes": 22488,
+      "path": "a_c/build_tenants/graphify/code/ac_formal_gate.py",
+      "role": "lean-test-import-dependency"
+    },
+    "a_c/build_tenants/graphify/code/ac_generate.py": {
+      "sha256": "50967f0f5db2bac54383f896b2a47578e1cbe0536565f40d8b1f14e3b2c23bee",
+      "bytes": 91592,
+      "path": "a_c/build_tenants/graphify/code/ac_generate.py",
+      "role": "lean-test-import-dependency"
+    },
+    "a_c/build_tenants/graphify/code/ac_graph.py": {
+      "sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+      "bytes": 49166,
+      "path": "a_c/build_tenants/graphify/code/ac_graph.py",
+      "role": "lean-test-import-dependency"
+    },
+    "a_c/build_tenants/graphify/code/generation/author.schema.json": {
+      "sha256": "6a9ecd905c5fe6d9cfa6cf35bf7945fb57833e43d87cc95e5ceb25efeb3dca87",
+      "bytes": 11148,
+      "path": "a_c/build_tenants/graphify/code/generation/author.schema.json",
+      "role": "complete-generation-asset-namespace"
+    },
+    "a_c/build_tenants/graphify/code/generation/author.txt": {
+      "sha256": "11f1fcf1e9a4da5531737639fcfe64dfbfcb4c57026ad9d20b2f8a0a0e8bacdc",
+      "bytes": 4240,
+      "path": "a_c/build_tenants/graphify/code/generation/author.txt",
+      "role": "complete-generation-asset-namespace"
+    },
+    "a_c/build_tenants/graphify/code/generation/extraction.schema.json": {
+      "sha256": "30f3dace4caad72b9b53edf5f208a8688da271e249b30eb1080ac3e5e37382cd",
+      "bytes": 4818,
+      "path": "a_c/build_tenants/graphify/code/generation/extraction.schema.json",
+      "role": "complete-generation-asset-namespace"
+    },
+    "a_c/build_tenants/graphify/code/generation/isolation.txt": {
+      "sha256": "3bf712063d1cb959d5c7c1eab258368eac8cbe6f4351c2dc745b0552f77f73e1",
+      "bytes": 696,
+      "path": "a_c/build_tenants/graphify/code/generation/isolation.txt",
+      "role": "complete-generation-asset-namespace"
+    },
+    "a_c/build_tenants/graphify/code/generation/requirements.txt": {
+      "sha256": "233c1d0d4946525f9539289ad957c49c73491391cb0e3f52e574925e99bb93c2",
+      "bytes": 214,
+      "path": "a_c/build_tenants/graphify/code/generation/requirements.txt",
+      "role": "complete-generation-asset-namespace"
+    },
+    "a_c/build_tenants/graphify/test_env/test_ac_generate.py": {
+      "sha256": "bf928fdb90c1df2cae5356336f0d56bd1c817515ef92c3a815348832d62a197d",
+      "bytes": 45945,
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_generate.py",
+      "role": "test-authored-source-helper-only"
+    },
+    "a_c/build_tenants/lean/AC.lean": {
+      "sha256": "a887a453a58b5a2e56b2eb9580d97227d5efb60ea79f4082decb8c5c79e4209f",
+      "bytes": 129,
+      "path": "a_c/build_tenants/lean/AC.lean",
+      "role": "tenant-entry-and-locks"
+    },
+    "a_c/build_tenants/lean/AC/Audit.lean": {
+      "sha256": "bbe185b9e3550029328a19fbb927719450f6885720918cb45a60e5ba6131b647",
+      "bytes": 10357,
+      "path": "a_c/build_tenants/lean/AC/Audit.lean",
+      "role": "formal-source"
+    },
+    "a_c/build_tenants/lean/AC/Closure.lean": {
+      "sha256": "d8c66f511c486eeaf40393733779148843e2ce075e2540cb41259ed9b23e011f",
+      "bytes": 7243,
+      "path": "a_c/build_tenants/lean/AC/Closure.lean",
+      "role": "formal-source"
+    },
+    "a_c/build_tenants/lean/AC/Fixture.lean": {
+      "sha256": "483293b34e35efd01883dd57a222eabfbba658c0c4d797b0bc54633192f236ea",
+      "bytes": 315965,
+      "path": "a_c/build_tenants/lean/AC/Fixture.lean",
+      "role": "formal-source"
+    },
+    "a_c/build_tenants/lean/AC/GateProof.lean": {
+      "sha256": "0359f5c3593c9e637758abb94cd0e1ca37d69b00a618c0049d39cd12c551d0f3",
+      "bytes": 2033,
+      "path": "a_c/build_tenants/lean/AC/GateProof.lean",
+      "role": "formal-source"
+    },
+    "a_c/build_tenants/lean/AC/GateRuntime.lean": {
+      "sha256": "6714177025577839178623de17fa41feacdf7455519d62bd22028703b0d2d11f",
+      "bytes": 3539,
+      "path": "a_c/build_tenants/lean/AC/GateRuntime.lean",
+      "role": "formal-source"
+    },
+    "a_c/build_tenants/lean/AC/Model.lean": {
+      "sha256": "943bd93abdcccb3cb084ab8e41196f8cac77629089e746c90d7da09ac90a22d5",
+      "bytes": 2894,
+      "path": "a_c/build_tenants/lean/AC/Model.lean",
+      "role": "formal-source"
+    },
+    "a_c/build_tenants/lean/AC/Projection.lean": {
+      "sha256": "ac2a9ce8ed148400967519c724715f6ea491bceff960ed77249b5ff744692575",
+      "bytes": 8407,
+      "path": "a_c/build_tenants/lean/AC/Projection.lean",
+      "role": "formal-source"
+    },
+    "a_c/build_tenants/lean/AC/Run.lean": {
+      "sha256": "12a07031acb8d1a4bdcedd3341a2d70633e57598aede87c97cfab67aedad9ab6",
+      "bytes": 3572,
+      "path": "a_c/build_tenants/lean/AC/Run.lean",
+      "role": "formal-source"
+    },
+    "a_c/build_tenants/lean/AC/Structure.lean": {
+      "sha256": "cf7f586289dc20bfa3b35fe2a9c05f54d3865af7b412c289f07e25de950f56cb",
+      "bytes": 9730,
+      "path": "a_c/build_tenants/lean/AC/Structure.lean",
+      "role": "formal-source"
+    },
+    "a_c/build_tenants/lean/AC/Toy.lean": {
+      "sha256": "9cf4aaba1f9c98329b7fc2cefbd08042ef05dffe12148e1e6399363cfdf559b8",
+      "bytes": 97713,
+      "path": "a_c/build_tenants/lean/AC/Toy.lean",
+      "role": "formal-source"
+    },
+    "a_c/build_tenants/lean/README.md": {
+      "sha256": "c99afd31547879d155749b51be0efb313adc5bd9204a34704ef6ac47eb5af967",
+      "bytes": 8311,
+      "path": "a_c/build_tenants/lean/README.md",
+      "role": "tenant-entry-and-locks"
+    },
+    "a_c/build_tenants/lean/design/BOUNDARIES.md": {
+      "sha256": "3b584a57bc9e66a2b4b43113e189b748db20040c5db77d988b69101021067004",
+      "bytes": 4337,
+      "path": "a_c/build_tenants/lean/design/BOUNDARIES.md",
+      "role": "formal-meaning-and-claim-boundary"
+    },
+    "a_c/build_tenants/lean/design/FORMAL_GATE.md": {
+      "sha256": "e249ec4f9fb5bbcd9cdfe3dfc83ec9c91830e9a10fc92f4d943e4a65992e58d1",
+      "bytes": 21248,
+      "path": "a_c/build_tenants/lean/design/FORMAL_GATE.md",
+      "role": "formal-meaning-and-claim-boundary"
+    },
+    "a_c/build_tenants/lean/design/IMPORTER.md": {
+      "sha256": "e130881a982eabcc9df2d837f21a40d2bc714a512a8ec2026a2aff4c7b71db9b",
+      "bytes": 8978,
+      "path": "a_c/build_tenants/lean/design/IMPORTER.md",
+      "role": "formal-meaning-and-claim-boundary"
+    },
+    "a_c/build_tenants/lean/design/README.md": {
+      "sha256": "6389e3985af5938568f3c3b1fc0374536510cd4d6df990e33c2491cf1fffc370",
+      "bytes": 4672,
+      "path": "a_c/build_tenants/lean/design/README.md",
+      "role": "formal-meaning-and-claim-boundary"
+    },
+    "a_c/build_tenants/lean/design/SOURCE_CORRESPONDENCE.md": {
+      "sha256": "14e7e97d4288af40cb63780a0993128629cab623e90d797f638650b6077cec98",
+      "bytes": 4270,
+      "path": "a_c/build_tenants/lean/design/SOURCE_CORRESPONDENCE.md",
+      "role": "formal-meaning-and-claim-boundary"
+    },
+    "a_c/build_tenants/lean/fixtures/stdo-3.0.2/CARRIER.json": {
+      "sha256": "e77be91716c8f4a7e45ba19fabd818b88115c40872dd22d754f896892b584b8b",
+      "bytes": 760182,
+      "path": "a_c/build_tenants/lean/fixtures/stdo-3.0.2/CARRIER.json",
+      "role": "complete-runtime-fixture"
+    },
+    "a_c/build_tenants/lean/fixtures/stdo-3.0.2/CUSTODY.json": {
+      "sha256": "401db86d69cd252452fda1b71d03c9805c51a1f361ce7c6319246e6aaf586ef2",
+      "bytes": 1225,
+      "path": "a_c/build_tenants/lean/fixtures/stdo-3.0.2/CUSTODY.json",
+      "role": "complete-runtime-fixture"
+    },
+    "a_c/build_tenants/lean/fixtures/stdo-3.0.2/GRAPHIFY_EXTRACTION.json": {
+      "sha256": "5a8115141979c4e5873256a816c483a8cd64f906d08555aaee73c0cf0a3e33cb",
+      "bytes": 760077,
+      "path": "a_c/build_tenants/lean/fixtures/stdo-3.0.2/GRAPHIFY_EXTRACTION.json",
+      "role": "complete-runtime-fixture"
+    },
+    "a_c/build_tenants/lean/fixtures/stdo-3.0.2/MODEL.json": {
+      "sha256": "fc3114dd666218c387a64846b755a14979182f488de64ffff6a6d305a9698793",
+      "bytes": 223396,
+      "path": "a_c/build_tenants/lean/fixtures/stdo-3.0.2/MODEL.json",
+      "role": "complete-runtime-fixture"
+    },
+    "a_c/build_tenants/lean/fixtures/toy/CUSTODY.json": {
+      "sha256": "1272732fc99c96473db7bb3e9e071d27349bebe6220a72ce30bc04fc27e35f1e",
+      "bytes": 823,
+      "path": "a_c/build_tenants/lean/fixtures/toy/CUSTODY.json",
+      "role": "complete-runtime-fixture"
+    },
+    "a_c/build_tenants/lean/fixtures/toy/MODEL.json": {
+      "sha256": "a72d423a222ecd84a429e28796c93ba07ac8b79d40caf3b74af02c36029f3b0b",
+      "bytes": 70776,
+      "path": "a_c/build_tenants/lean/fixtures/toy/MODEL.json",
+      "role": "complete-runtime-fixture"
+    },
+    "a_c/build_tenants/lean/lake-manifest.json": {
+      "sha256": "8ccec766188ba32a956dd142439b4f08faa877512654162ae7cd2e35c1fdda34",
+      "bytes": 3158,
+      "path": "a_c/build_tenants/lean/lake-manifest.json",
+      "role": "tenant-entry-and-locks"
+    },
+    "a_c/build_tenants/lean/lakefile.toml": {
+      "sha256": "68338aa894a2a54fd3f4f9f22366359cc0107ba581459b29699f03c629437fc3",
+      "bytes": 225,
+      "path": "a_c/build_tenants/lean/lakefile.toml",
+      "role": "tenant-entry-and-locks"
+    },
+    "a_c/build_tenants/lean/lean-toolchain": {
+      "sha256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "bytes": 25,
+      "path": "a_c/build_tenants/lean/lean-toolchain",
+      "role": "tenant-entry-and-locks"
+    },
+    "a_c/build_tenants/lean/profiles/formal-gate-request.schema.json": {
+      "sha256": "edb498b7af5dced9822055ee2e09938fffa5a22da33ea1ea9550d89dd90a233a",
+      "bytes": 2538,
+      "path": "a_c/build_tenants/lean/profiles/formal-gate-request.schema.json",
+      "role": "selected-contract-or-public-support-provenance"
+    },
+    "a_c/build_tenants/lean/profiles/generation-signature-v1.json": {
+      "sha256": "db4f0a4d41b575a1b06ecc75a0a56e3b4f26044830e5bff3624b2ae4f7a219a8",
+      "bytes": 49920,
+      "path": "a_c/build_tenants/lean/profiles/generation-signature-v1.json",
+      "role": "selected-contract-or-public-support-provenance"
+    },
+    "a_c/build_tenants/lean/profiles/proof-support-v1.json": {
+      "sha256": "7198879c3dfefe52ee4c980b33990197cd338eb19ac4e84cce3dd26a4cd66363",
+      "bytes": 19319521,
+      "path": "a_c/build_tenants/lean/profiles/proof-support-v1.json",
+      "role": "selected-contract-or-public-support-provenance"
+    },
+    "a_c/build_tenants/lean/scripts/bootstrap.py": {
+      "sha256": "7fc1038180d95d7a5c6ee8cecaea12f9f2534cc8d1af4933303c214cd5127fd7",
+      "bytes": 2961,
+      "path": "a_c/build_tenants/lean/scripts/bootstrap.py",
+      "role": "gate-and-verification-source"
+    },
+    "a_c/build_tenants/lean/scripts/check.py": {
+      "sha256": "cad730b6de699ab2d4b2e8a7235e7b18bd28a4c8b5853e3f7838265a32a60deb",
+      "bytes": 10459,
+      "path": "a_c/build_tenants/lean/scripts/check.py",
+      "role": "gate-and-verification-source"
+    },
+    "a_c/build_tenants/lean/scripts/check_gate.py": {
+      "sha256": "ebf41503202c17f0d5872b3b5700f33b6969d5bee61befac680540e6a9093642",
+      "bytes": 5531,
+      "path": "a_c/build_tenants/lean/scripts/check_gate.py",
+      "role": "gate-and-verification-source"
+    },
+    "a_c/build_tenants/lean/scripts/formal_gate.py": {
+      "sha256": "f578f46afda709ea97270222507ea83eecdfe01b0bd6a56504f1693753a40831",
+      "bytes": 32681,
+      "path": "a_c/build_tenants/lean/scripts/formal_gate.py",
+      "role": "gate-and-verification-source"
+    },
+    "a_c/build_tenants/lean/scripts/formal_reuse.py": {
+      "sha256": "819d22b902724387f96d26156f1030af30e8e4bc21c6ec3dccc165664bfd91c4",
+      "bytes": 16556,
+      "path": "a_c/build_tenants/lean/scripts/formal_reuse.py",
+      "role": "gate-and-verification-source"
+    },
+    "a_c/build_tenants/lean/scripts/formal_support.py": {
+      "sha256": "20a8010b47c3d330f4ba07b398413acc9ad77bea5c5f9ecf817963b948ca98f6",
+      "bytes": 16535,
+      "path": "a_c/build_tenants/lean/scripts/formal_support.py",
+      "role": "gate-and-verification-source"
+    },
+    "a_c/build_tenants/lean/scripts/gate_codegen.py": {
+      "sha256": "d72f34fad6dfc95c2fdb9f6772a36e046eb700f16f700c6c18472b9bb3f3e455",
+      "bytes": 16096,
+      "path": "a_c/build_tenants/lean/scripts/gate_codegen.py",
+      "role": "gate-and-verification-source"
+    },
+    "a_c/build_tenants/lean/scripts/generate_fixture.py": {
+      "sha256": "ae36a07ff8ae3106eca66f346cdd82eb3d476ec1b407c944ed32987273705ca4",
+      "bytes": 6992,
+      "path": "a_c/build_tenants/lean/scripts/generate_fixture.py",
+      "role": "gate-and-verification-source"
+    },
+    "a_c/build_tenants/lean/scripts/generation_profile.py": {
+      "sha256": "7f65b5ff763cf2d7b9ab9ef7ae18584dd5a5590418e10d30e186f8261ff67ace",
+      "bytes": 4157,
+      "path": "a_c/build_tenants/lean/scripts/generation_profile.py",
+      "role": "gate-and-verification-source"
+    },
+    "a_c/build_tenants/lean/scripts/import_fixture.py": {
+      "sha256": "5a63b45523dcdbf69b87f39864f28f99ee58890e70c4b3073b057fb80a864d7a",
+      "bytes": 37921,
+      "path": "a_c/build_tenants/lean/scripts/import_fixture.py",
+      "role": "gate-and-verification-source"
+    },
+    "a_c/build_tenants/lean/scripts/runtime_process.py": {
+      "sha256": "dac99212afddad9f6c0d42f13c4c1ad2faa4ab0fa8ea2e26f09dc3af3a904018",
+      "bytes": 1881,
+      "path": "a_c/build_tenants/lean/scripts/runtime_process.py",
+      "role": "gate-and-verification-source"
+    },
+    "a_c/build_tenants/lean/tests/test_adapter.py": {
+      "sha256": "0ed3d060d2bc11cf44e36f2c5d0b893bac6eee73067d899ae7dd4259d761f164",
+      "bytes": 22762,
+      "path": "a_c/build_tenants/lean/tests/test_adapter.py",
+      "role": "tenant-tests"
+    },
+    "a_c/build_tenants/lean/tests/test_formal_gate.py": {
+      "sha256": "0e2989db25113b0fefb97097455166fb3751c7dfe91de38141f45a440b075390",
+      "bytes": 14268,
+      "path": "a_c/build_tenants/lean/tests/test_formal_gate.py",
+      "role": "tenant-tests"
+    },
+    "a_c/build_tenants/lean/tests/test_formal_reuse.py": {
+      "sha256": "f792c0a46f5dd53e400166cd748efa4060350b8c284f4b0e9fdf488c9cc6132e",
+      "bytes": 23588,
+      "path": "a_c/build_tenants/lean/tests/test_formal_reuse.py",
+      "role": "tenant-tests"
+    },
+    "a_c/build_tenants/lean/tests/test_runtime_process.py": {
+      "sha256": "48d9275c3446d545e7a491bc4f204df33e5ff6e871f9274712ee48e8e076ec72",
+      "bytes": 1937,
+      "path": "a_c/build_tenants/lean/tests/test_runtime_process.py",
+      "role": "tenant-tests"
+    },
+    "a_c/build_tenants/lean/toolchain-lock.json": {
+      "sha256": "ac1fc82fc9b6df1f955b6538a4c91cd9f246ae2f23a38e17e6b4ad9482a2c20b",
+      "bytes": 1607,
+      "path": "a_c/build_tenants/lean/toolchain-lock.json",
+      "role": "tenant-entry-and-locks"
+    },
+    "a_c/specification/INTENT.md": {
+      "sha256": "aa086f711e03be68db999924ce2fbd77fb945dd9c7bfdb9fe8d2cf6ba99cdad3",
+      "bytes": 1288,
+      "path": "a_c/specification/INTENT.md",
+      "role": "owning-scope-and-requirements"
+    },
+    "a_c/specification/PRODUCT.md": {
+      "sha256": "a9324f0a2d657b10fae5c04fb598db7ffad9ad24cc0ddb04dbd3cac4053afd0e",
+      "bytes": 15211,
+      "path": "a_c/specification/PRODUCT.md",
+      "role": "owning-scope-and-requirements"
+    },
+    "a_c/specification/REFERENCE_FRAME_BASIS.md": {
+      "sha256": "561117302d0614085d1916898e86df0c07a06da2c170e5d22a50dae51319e145",
+      "bytes": 11094,
+      "path": "a_c/specification/REFERENCE_FRAME_BASIS.md",
+      "role": "owning-scope-and-requirements"
+    },
+    "a_c/specification/requirements/README.md": {
+      "sha256": "707d1173e6188181ba8880a31a77d7ba222fe952991f6729aeb345cc4104a20d",
+      "bytes": 7382,
+      "path": "a_c/specification/requirements/README.md",
+      "role": "owning-scope-and-requirements"
+    },
+    "a_c/specification/requirements/formalisation.md": {
+      "sha256": "3b2e3defd4c40dac98d301ec3c0f8bd5e1ed797e5f663e5b7f56d12428f9dd1c",
+      "bytes": 13688,
+      "path": "a_c/specification/requirements/formalisation.md",
+      "role": "owning-scope-and-requirements"
+    },
+    "a_c/stdo_a_c.json": {
+      "sha256": "e3bbb4fc916f39c505a5c858a876b8bdc3e0533d4fecec23d84d5da109b1ca66",
+      "bytes": 4069,
+      "path": "a_c/stdo_a_c.json",
+      "role": "owning-scope-and-requirements"
+    },
+    "a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/selection-001/package_source.py": {
+      "sha256": "9907d7245372af188276384cc5ab710b9a77328b92047a277a94e1ed5ab40117",
+      "bytes": 18742,
+      "path": "package_source.py",
+      "role": "source-packaging-recipe-and-controls"
+    },
+    "a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/selection-001/test_package_source.py": {
+      "sha256": "48666fe8981d5d0ba569e53ae18e48d21d5069400aba5bb8ba95dff7419bf222",
+      "bytes": 18093,
+      "path": "test_package_source.py",
+      "role": "source-packaging-recipe-and-controls"
+    }
+  },
+  "closed_namespaces": {
+    "a_c/build_tenants/lean/AC": {
+      "actual_files": 10,
+      "all_explicitly_selected": true
+    },
+    "a_c/build_tenants/lean/scripts": {
+      "actual_files": 11,
+      "all_explicitly_selected": true
+    },
+    "a_c/build_tenants/lean/profiles": {
+      "actual_files": 3,
+      "all_explicitly_selected": true
+    },
+    "a_c/build_tenants/lean/tests": {
+      "actual_files": 4,
+      "all_explicitly_selected": true
+    },
+    "a_c/build_tenants/lean/design": {
+      "actual_files": 5,
+      "all_explicitly_selected": true
+    },
+    "a_c/build_tenants/lean/fixtures": {
+      "actual_files": 6,
+      "all_explicitly_selected": true
+    },
+    "a_c/build_tenants/graphify/code/generation": {
+      "actual_files": 5,
+      "all_explicitly_selected": true
+    }
+  },
+  "python_nonstdlib_imports": {
+    "a_c/build_tenants/graphify/code/ac_formal_gate.py": [],
+    "a_c/build_tenants/graphify/code/ac_generate.py": [
+      "ac_formal_gate",
+      "ac_graph"
+    ],
+    "a_c/build_tenants/graphify/code/ac_graph.py": [],
+    "a_c/build_tenants/graphify/test_env/test_ac_generate.py": [
+      "ac_generate",
+      "ac_graph",
+      "ac_grounding"
+    ],
+    "a_c/build_tenants/lean/scripts/bootstrap.py": [],
+    "a_c/build_tenants/lean/scripts/check.py": [
+      "import_fixture"
+    ],
+    "a_c/build_tenants/lean/scripts/check_gate.py": [
+      "formal_gate",
+      "formal_support",
+      "gate_codegen",
+      "import_fixture",
+      "test_formal_gate"
+    ],
+    "a_c/build_tenants/lean/scripts/formal_gate.py": [
+      "check",
+      "formal_reuse",
+      "formal_support",
+      "gate_codegen",
+      "generation_profile",
+      "import_fixture",
+      "runtime_process"
+    ],
+    "a_c/build_tenants/lean/scripts/formal_reuse.py": [],
+    "a_c/build_tenants/lean/scripts/formal_support.py": [
+      "runtime_process"
+    ],
+    "a_c/build_tenants/lean/scripts/gate_codegen.py": [
+      "generate_fixture",
+      "import_fixture"
+    ],
+    "a_c/build_tenants/lean/scripts/generate_fixture.py": [
+      "import_fixture"
+    ],
+    "a_c/build_tenants/lean/scripts/generation_profile.py": [],
+    "a_c/build_tenants/lean/scripts/import_fixture.py": [
+      "generation_profile"
+    ],
+    "a_c/build_tenants/lean/scripts/runtime_process.py": [],
+    "a_c/build_tenants/lean/tests/test_adapter.py": [
+      "import_fixture"
+    ],
+    "a_c/build_tenants/lean/tests/test_formal_gate.py": [
+      "ac_generate",
+      "ac_graph",
+      "formal_gate",
+      "formal_support",
+      "generate_fixture",
+      "generation_profile",
+      "import_fixture"
+    ],
+    "a_c/build_tenants/lean/tests/test_formal_reuse.py": [
+      "formal_gate",
+      "formal_reuse"
+    ],
+    "a_c/build_tenants/lean/tests/test_runtime_process.py": [
+      "formal_support",
+      "runtime_process"
+    ],
+    "a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/selection-001/package_source.py": [],
+    "a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/selection-001/test_package_source.py": [
+      "package_source"
+    ]
+  },
+  "unresolved_selected_runtime_imports": [],
+  "deferred_unselected_imports": {
+    "ac_grounding": {
+      "source": "a_c/build_tenants/graphify/test_env/test_ac_generate.py",
+      "owners": [
+        {
+          "function": "test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift",
+          "line": 276
+        }
+      ],
+      "disposition": "Graphify-only test method, not imported at module load or called by Lean new_subject/SOURCE/fixture_answer helpers; full Graphify suite excluded."
+    }
+  },
+  "dynamic_paths": {
+    "formal_gate.py": "Exact eleven-script flat namespace and source-loaded helper order conserved; all named sources included.",
+    "ac_generate.py": "Source-loads exact sibling ac_formal_gate.py; included. External graphify imports belong only to unselected upstream extraction.",
+    "test_formal_gate.py": "Loads test_ac_generate.py for SOURCE and fixture_answer; included.",
+    "generation_assets": "All five assets included; direct fixture authoring hashes them without external Graphify or LLM execution."
+  },
+  "excluded_boundary": [
+    "full Graphify F_D service and test suite",
+    "external upstream Graphify acquisition/extraction",
+    "historical applications/dogfood/evidence",
+    "private origin/cache/key/entry state",
+    "ordinary compiled toolchain/support binaries"
+  ],
+  "packager_conserved_sha256": "9907d7245372af188276384cc5ab710b9a77328b92047a277a94e1ed5ab40117",
+  "tests_conserved_sha256": "48666fe8981d5d0ba569e53ae18e48d21d5069400aba5bb8ba95dff7419bf222",
+  "final_full_runtime_identity": "065648e6cc971be7edc75c1fa7b0428351357fe312146059b71fb788842313a7",
+  "runtime_or_archive_execution": false,
+  "origin_free_runtime_identity": "07f423004952338c7ce4273e2fe1f17556b0c96803caa4a355859762750e9601",
+  "identity_basis": "Exact public ScaleWorker/Executive source selection, not successful qualification"
+}

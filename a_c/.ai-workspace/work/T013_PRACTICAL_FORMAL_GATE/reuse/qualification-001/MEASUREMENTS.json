@@ -1,0 +1,297 @@
+{
+  "compiler_limits": {
+    "lean_memory_mb": 4096,
+    "physical_rss_ceiling": false,
+    "public_seconds": 600,
+    "seconds_per_checking_process": 90
+  },
+  "full_measured_cold_over_reuse_ratio": 24.905907261209236,
+  "general_performance_claim": false,
+  "quiet_sequential_proof_window": true,
+  "runs": [
+    {
+      "current_compiler_invocations": 7,
+      "current_kernel_replay_invocations": 1,
+      "current_runtime_invocations": 1,
+      "external_child_high_water_rss_bytes": 8831631360,
+      "external_seconds": 22.31906000012532,
+      "internal_checking_seconds": 22.174009582959116,
+      "label": "small-cold",
+      "launcher_high_water_rss_bytes": 43122688,
+      "stages": [
+        {
+          "seconds": 0.015921291895210743,
+          "stage": "acquire-import-reconstruct"
+        },
+        {
+          "seconds": 3.684718708973378,
+          "stage": "support-pins"
+        },
+        {
+          "seconds": 0.015595042146742344,
+          "stage": "current-certificates"
+        },
+        {
+          "exit_code": 0,
+          "seconds": 0.7835727091878653,
+          "stage": "GateData"
+        },
+        {
+          "exit_code": 0,
+          "seconds": 0.6156749590300024,
+          "stage": "GateLocalNames"
+        },
+        {
+          "exit_code": 0,
+          "seconds": 0.6119779590517282,
+          "stage": "GateExternalNames"
+        },
+        {
+          "exit_code": 0,
+          "seconds": 0.6193752498365939,
+          "stage": "GateIdentities"
+        },
+        {
+          "exit_code": 0,
+          "seconds": 0.6599247911944985,
+          "stage": "GateBounds"
+        },
+        {
+          "exit_code": 0,
+          "seconds": 1.649584666825831,
+          "stage": "GateModel"
+        },
+        {
+          "exit_code": 0,
+          "seconds": 0.6585582089610398,
+          "stage": "GateViews"
+        },
+        {
+          "exit_code": 0,
+          "seconds": 8.535281083080918,
+          "stage": "dynamic-kernel-replay"
+        },
+        {
+          "exit_code": 0,
+          "seconds": 0.6231200420297682,
+          "stage": "actual-runtime"
+        },
+        {
+          "seconds": 0.0026430832222104073,
+          "stage": "output-view-correspondence"
+        },
+        {
+          "seconds": 3.67270450014621,
+          "stage": "support-pins-after"
+        },
+        {
+          "seconds": 0.0004554577171802521,
+          "stage": "origin-currentness"
+        }
+      ]
+    },
+    {
+      "current_compiler_invocations": 0,
+      "current_kernel_replay_invocations": 0,
+      "current_runtime_invocations": 0,
+      "external_child_high_water_rss_bytes": 169639936,
+      "external_seconds": 7.642737374641001,
+      "internal_checking_seconds": 7.464942667167634,
+      "label": "small-reuse-1",
+      "launcher_high_water_rss_bytes": 43171840,
+      "stages": [
+        {
+          "seconds": 0.01670195907354355,
+          "stage": "acquire-import-reconstruct"
+        },
+        {
+          "seconds": 3.7068426250480115,
+          "stage": "support-pins"
+        },
+        {
+          "seconds": 0.015507000032812357,
+          "stage": "current-certificates"
+        },
+        {
+          "seconds": 0.01489812508225441,
+          "stage": "authenticated-artifacts"
+        },
+        {
+          "seconds": 0.002692500129342079,
+          "stage": "output-view-correspondence"
+        },
+        {
+          "seconds": 3.6786815840750933,
+          "stage": "support-pins-after"
+        },
+        {
+          "seconds": 0.01198787521570921,
+          "stage": "origin-currentness"
+        }
+      ]
+    },
+    {
+      "current_compiler_invocations": 0,
+      "current_kernel_replay_invocations": 0,
+      "current_runtime_invocations": 0,
+      "external_child_high_water_rss_bytes": 146866176,
+      "external_seconds": 7.430624541826546,
+      "internal_checking_seconds": 7.26825183397159,
+      "label": "small-reuse-2",
+      "launcher_high_water_rss_bytes": 43024384,
+      "stages": [
+        {
+          "seconds": 0.015775832813233137,
+          "stage": "acquire-import-reconstruct"
+        },
+        {
+          "seconds": 3.6238102093338966,
+          "stage": "support-pins"
+        },
+        {
+          "seconds": 0.015058792196214199,
+          "stage": "current-certificates"
+        },
+        {
+          "seconds": 0.014598084148019552,
+          "stage": "authenticated-artifacts"
+        },
+        {
+          "seconds": 0.0023291250690817833,
+          "stage": "output-view-correspondence"
+        },
+        {
+          "seconds": 3.5694501250982285,
+          "stage": "support-pins-after"
+        },
+        {
+          "seconds": 0.011368208099156618,
+          "stage": "origin-currentness"
+        }
+      ]
+    },
+    {
+      "current_compiler_invocations": 7,
+      "current_kernel_replay_invocations": 1,
+      "current_runtime_invocations": 1,
+      "external_child_high_water_rss_bytes": 13616070656,
+      "external_seconds": 264.94666604185477,
+      "internal_checking_seconds": 264.4247199166566,
+      "label": "full-cold",
+      "launcher_high_water_rss_bytes": 43073536,
+      "stages": [
+        {
+          "seconds": 0.35314816609025,
+          "stage": "acquire-import-reconstruct"
+        },
+        {
+          "seconds": 7.874398124869913,
+          "stage": "support-pins"
+        },
+        {
+          "seconds": 1.0949479169212282,
+          "stage": "current-certificates"
+        },
+        {
+          "exit_code": 0,
+          "seconds": 38.77021783404052,
+          "stage": "GateData"
+        },
+        {
+          "exit_code": 0,
+          "seconds": 49.30668354174122,
+          "stage": "GateLocalNames"
+        },
+        {
+          "exit_code": 0,
+          "seconds": 43.15637245820835,
+          "stage": "GateExternalNames"
+        },
+        {
+          "exit_code": 0,
+          "seconds": 27.182966500055045,
+          "stage": "GateIdentities"
+        },
+        {
+          "exit_code": 0,
+          "seconds": 46.527637667022645,
+          "stage": "GateBounds"
+        },
+        {
+          "exit_code": 0,
+          "seconds": 0.8392583751119673,
+          "stage": "GateModel"
+        },
+        {
+          "exit_code": 0,
+          "seconds": 5.924146083183587,
+          "stage": "GateViews"
+        },
+        {
+          "exit_code": 0,
+          "seconds": 27.433711958117783,
+          "stage": "dynamic-kernel-replay"
+        },
+        {
+          "exit_code": 0,
+          "seconds": 9.558938292320818,
+          "stage": "actual-runtime"
+        },
+        {
+          "seconds": 0.1888731666840613,
+          "stage": "output-view-correspondence"
+        },
+        {
+          "seconds": 5.5800724579021335,
+          "stage": "support-pins-after"
+        },
+        {
+          "seconds": 0.0014231251552700996,
+          "stage": "origin-currentness"
+        }
+      ]
+    },
+    {
+      "current_compiler_invocations": 0,
+      "current_kernel_replay_invocations": 0,
+      "current_runtime_invocations": 0,
+      "external_child_high_water_rss_bytes": 715784192,
+      "external_seconds": 10.637904624920338,
+      "internal_checking_seconds": 9.883031416218728,
+      "label": "full-reuse",
+      "launcher_high_water_rss_bytes": 42860544,
+      "stages": [
+        {
+          "seconds": 0.36060345778241754,
+          "stage": "acquire-import-reconstruct"
+        },
+        {
+          "seconds": 3.7907350840978324,
+          "stage": "support-pins"
+        },
+        {
+          "seconds": 1.1376010421663523,
+          "stage": "current-certificates"
+        },
+        {
+          "seconds": 0.4558247500099242,
+          "stage": "authenticated-artifacts"
+        },
+        {
+          "seconds": 0.18814125005155802,
+          "stage": "output-view-correspondence"
+        },
+        {
+          "seconds": 3.722525415942073,
+          "stage": "support-pins-after"
+        },
+        {
+          "seconds": 0.21007666736841202,
+          "stage": "origin-currentness"
+        }
+      ]
+    }
+  ],
+  "schema": "a_c.T013.reuse-measurements/1",
+  "scope": "Each launcher is a fresh isolated process. External interval includes adapter validation, actual CLI execution and final publication; excludes writing its external receipt. Internal intervals exclude final bundle/origin publication. Darwin child ru_maxrss is aggregate high-water for that invocation, not stage attribution. leanchecker has no memory flag."
+}

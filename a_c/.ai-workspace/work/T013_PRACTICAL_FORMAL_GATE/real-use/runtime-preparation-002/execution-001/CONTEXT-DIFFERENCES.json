@@ -1,0 +1,359 @@
+{
+  "schema": "a_c.T013.actual-context-differences/1",
+  "contexts": {
+    "ungated": {
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/real-use/runtime-preparation-001/execution/evidence/objects/39879b57010af12213d7ffe7d0ce94c16fb84d978e9245fe80168e0f403372be.json",
+      "artifact": {
+        "id": "sha256:39879b57010af12213d7ffe7d0ce94c16fb84d978e9245fe80168e0f403372be",
+        "sha256": "39879b57010af12213d7ffe7d0ce94c16fb84d978e9245fe80168e0f403372be"
+      },
+      "rendered_sha256": "e1d29b7b9fa4fce877aeec641e1730d9e9f57fdab7049fecaab355aa24e9e77c",
+      "rendered_bytes": 380548,
+      "actual_response_sha256": "ef5415d91801c441a87d517ebb72adcea30dabfb5394a5a47cc9a58936d0ec48"
+    },
+    "gated": {
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/real-use/runtime-preparation-001/execution/evidence/objects/e453f4ccdb3a267d93861e1e415ba8d1f84260e2f29a7c44263b864732b40318.json",
+      "artifact": {
+        "id": "sha256:e453f4ccdb3a267d93861e1e415ba8d1f84260e2f29a7c44263b864732b40318",
+        "sha256": "e453f4ccdb3a267d93861e1e415ba8d1f84260e2f29a7c44263b864732b40318"
+      },
+      "rendered_sha256": "f4c740d577337af344b07c376455746d25d3e4489d8b9d2da9cb79be2c057990",
+      "rendered_bytes": 381108,
+      "actual_response_sha256": "4517caeb297db6ea132c428f6a7c30a7f5d6ad3133f5a12135c44b03f3ae28e3"
+    }
+  },
+  "complete_non_source_body_differences": [
+    {
+      "path": "/boundaries/activation_identity/id",
+      "kind": "value",
+      "ungated": "t013-report-ungated-worker-001:activation",
+      "gated": "t013-report-gated-worker-001:activation"
+    },
+    {
+      "path": "/boundaries/activation_identity/sha256",
+      "kind": "value",
+      "ungated": "b81627a1e9d4a0727214c330e1203576e285278468b208aca5cd6283f1950e58",
+      "gated": "291b47c0b6c502bd7c451e918af860944a1518c29a12c0eed7cc5871f53d006f"
+    },
+    {
+      "path": "/formal_gate",
+      "kind": "presence",
+      "ungated": null,
+      "gated": {
+        "activation_identity": {
+          "id": "t013-report-gated-worker-001:activation",
+          "sha256": "291b47c0b6c502bd7c451e918af860944a1518c29a12c0eed7cc5871f53d006f"
+        },
+        "checker_sha256": "2ae9f8c00437b351cb30fbebb769e4a252b9f3b30f41bc021cae90b1f196bd19",
+        "required": true,
+        "scope": "declared formal model and exact supplied projections; no semantic or authority acceptance",
+        "state": "pending"
+      }
+    },
+    {
+      "path": "/packet/activation/configuration/path",
+      "kind": "value",
+      "ungated": "ungated/activation.json",
+      "gated": "gated/activation.json"
+    },
+    {
+      "path": "/packet/activation/configuration/sha256",
+      "kind": "value",
+      "ungated": "31437511a90c4b43311d661623f55a381be5ab77788e54cf47b90440c8e7f677",
+      "gated": "fafe66a5a78a0fd56c93c708311882990d4709edbdf1d85e5b52f605b7f7c4a8"
+    },
+    {
+      "path": "/packet/activation/id",
+      "kind": "value",
+      "ungated": "t013-report-ungated-worker-001:activation",
+      "gated": "t013-report-gated-worker-001:activation"
+    },
+    {
+      "path": "/packet/actor_authority/actor_id",
+      "kind": "value",
+      "ungated": "t013-report-ungated-worker-001",
+      "gated": "t013-report-gated-worker-001"
+    },
+    {
+      "path": "/packet/actor_authority/capability/path",
+      "kind": "value",
+      "ungated": "ungated/activation.json",
+      "gated": "gated/activation.json"
+    },
+    {
+      "path": "/packet/actor_authority/capability/sha256",
+      "kind": "value",
+      "ungated": "31437511a90c4b43311d661623f55a381be5ab77788e54cf47b90440c8e7f677",
+      "gated": "fafe66a5a78a0fd56c93c708311882990d4709edbdf1d85e5b52f605b7f7c4a8"
+    },
+    {
+      "path": "/packet/evidence_relations/return_contract/path",
+      "kind": "value",
+      "ungated": "ungated/return-contract.json",
+      "gated": "gated/return-contract.json"
+    },
+    {
+      "path": "/packet/evidence_relations/return_contract/sha256",
+      "kind": "value",
+      "ungated": "ffa3c4ccd381bba76e350731446d4f61cbaef51ff24613ff3a961b673ae399ce",
+      "gated": "b46569df56bfff1ad2b3fdcc50f29b19a89a9b48ed04db28e45affdb2a779599"
+    },
+    {
+      "path": "/packet/frame/result_algebra/path",
+      "kind": "value",
+      "ungated": "ungated/return-contract.json",
+      "gated": "gated/return-contract.json"
+    },
+    {
+      "path": "/packet/frame/result_algebra/sha256",
+      "kind": "value",
+      "ungated": "ffa3c4ccd381bba76e350731446d4f61cbaef51ff24613ff3a961b673ae399ce",
+      "gated": "b46569df56bfff1ad2b3fdcc50f29b19a89a9b48ed04db28e45affdb2a779599"
+    },
+    {
+      "path": "/projections/0/selections",
+      "kind": "presence",
+      "ungated": null,
+      "gated": [
+        {
+          "budget_records": 29,
+          "seeds": [
+            "urn:a-c:generation:0657852b6fd1fa48457c3f7d:record:2bdf6340141f53f21c1781855206b707",
+            "urn:a-c:generation:0657852b6fd1fa48457c3f7d:record:1e617d4a71ceb9be3d7c064bf93039d6"
+          ]
+        }
+      ]
+    }
+  ],
+  "common_acquired_sources": 14,
+  "common_source_content_and_metadata_exactly_equal": true,
+  "common_sources_relative_order_equal": true,
+  "actual_source_order": {
+    "ungated": [
+      {
+        "root": "product",
+        "path": ".ai-workspace/tickets/active/T-013-practical-formal-gate.md"
+      },
+      {
+        "root": "prepared",
+        "path": "TASK.md"
+      },
+      {
+        "root": "operator",
+        "path": "execution-selection.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/CUSTODY.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/FORMAL_GATE.md"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/MODEL_SELECTION.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/examples/authored-unsupported.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/examples/budget-refusal.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/examples/historical-incomplete.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/examples/malformed-model.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/examples/model-only.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/examples/verified.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/examples/view-mismatch.json"
+      },
+      {
+        "root": "product",
+        "path": "stdo_a_c.json"
+      },
+      {
+        "root": "operator",
+        "path": "ungated/activation.json"
+      },
+      {
+        "root": "operator",
+        "path": "ungated/return-contract.json"
+      },
+      {
+        "root": "operator",
+        "path": "ungated/return-instructions.json"
+      }
+    ],
+    "gated": [
+      {
+        "root": "product",
+        "path": ".ai-workspace/tickets/active/T-013-practical-formal-gate.md"
+      },
+      {
+        "root": "prepared",
+        "path": "TASK.md"
+      },
+      {
+        "root": "operator",
+        "path": "execution-selection.json"
+      },
+      {
+        "root": "operator",
+        "path": "gated/activation.json"
+      },
+      {
+        "root": "operator",
+        "path": "gated/return-contract.json"
+      },
+      {
+        "root": "operator",
+        "path": "gated/return-instructions.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/CUSTODY.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/FORMAL_GATE.md"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/MODEL_SELECTION.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/examples/authored-unsupported.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/examples/budget-refusal.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/examples/historical-incomplete.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/examples/malformed-model.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/examples/model-only.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/examples/verified.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/examples/view-mismatch.json"
+      },
+      {
+        "root": "product",
+        "path": "stdo_a_c.json"
+      }
+    ]
+  },
+  "source_order_explanation": "Core _assemble sorts exact canonical SourceRefs at ac_support_core.py:1121. Only three arm-specific operator paths alter where operational metadata is interleaved. Common sources keep identical bytes and relative order. Actual Context bytes were never rewritten.",
+  "arm_metadata": [
+    {
+      "file": "activation.json",
+      "differences": [
+        {
+          "path": "/actor_id",
+          "kind": "value",
+          "ungated": "t013-report-ungated-worker-001",
+          "gated": "t013-report-gated-worker-001"
+        },
+        {
+          "path": "/workspace",
+          "kind": "value",
+          "ungated": "/private/tmp/ac-t013-report-001/ungated",
+          "gated": "/private/tmp/ac-t013-report-001/gated"
+        }
+      ],
+      "exact_acquired_bytes_match_reviewed_builder_output": true
+    },
+    {
+      "file": "return-contract.json",
+      "differences": [
+        {
+          "path": "/id",
+          "kind": "value",
+          "ungated": "t013-report-return-ungated",
+          "gated": "t013-report-return-gated"
+        },
+        {
+          "path": "/proof/transition_sources/1/path",
+          "kind": "value",
+          "ungated": "ungated/activation.json",
+          "gated": "gated/activation.json"
+        },
+        {
+          "path": "/proof/transition_sources/1/sha256",
+          "kind": "value",
+          "ungated": "31437511a90c4b43311d661623f55a381be5ab77788e54cf47b90440c8e7f677",
+          "gated": "fafe66a5a78a0fd56c93c708311882990d4709edbdf1d85e5b52f605b7f7c4a8"
+        }
+      ],
+      "exact_acquired_bytes_match_reviewed_builder_output": true
+    },
+    {
+      "file": "return-instructions.json",
+      "differences": [
+        {
+          "path": "/fixed/activation/id",
+          "kind": "value",
+          "ungated": "t013-report-ungated-worker-001:activation",
+          "gated": "t013-report-gated-worker-001:activation"
+        },
+        {
+          "path": "/fixed/activation/sha256",
+          "kind": "value",
+          "ungated": "b81627a1e9d4a0727214c330e1203576e285278468b208aca5cd6283f1950e58",
+          "gated": "291b47c0b6c502bd7c451e918af860944a1518c29a12c0eed7cc5871f53d006f"
+        },
+        {
+          "path": "/fixed/actor/authorship",
+          "kind": "value",
+          "ungated": "t013-report-ungated-worker-001",
+          "gated": "t013-report-gated-worker-001"
+        },
+        {
+          "path": "/fixed/actor/id",
+          "kind": "value",
+          "ungated": "t013-report-ungated-worker-001",
+          "gated": "t013-report-gated-worker-001"
+        },
+        {
+          "path": "/fixed/id",
+          "kind": "value",
+          "ungated": "t013-report-ungated-worker-001:return",
+          "gated": "t013-report-gated-worker-001:return"
+        }
+      ],
+      "exact_acquired_bytes_match_reviewed_builder_output": true
+    }
+  ],
+  "required_gate_difference": "Existing formal_condition and _assemble add exact checker/activation requirement and ordered projection selection metadata only to gated arm (ac_support_core.py:1098-1149); actual views and model are identical.",
+  "unexplained_differences": [],
+  "actual_contexts_modified": false,
+  "complete_actual_constructed_bytes_compared_by": "CONTEXT-COMPARISON.json",
+  "inspection_note": "The first supplementary classification assertion omitted the return-contract proof transition SourceRef. Inspection of unchanged prepare_runtime.py:192 and exact contract-to-packet equality explains its path/hash as the same predeclared arm activation. That classification was completed without changing any candidate, Context, policy or request; no public operation or proof was repeated."
+}

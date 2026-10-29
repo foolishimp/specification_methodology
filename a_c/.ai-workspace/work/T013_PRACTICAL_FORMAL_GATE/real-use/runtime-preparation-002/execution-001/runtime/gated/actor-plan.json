@@ -1,0 +1,47 @@
+{
+  "argv": [
+    "/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--json",
+    "--sandbox",
+    "workspace-write",
+    "--skip-git-repo-check",
+    "--output-schema",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/real-use/runtime-preparation-002/execution-001/runtime/gated/return.schema.json",
+    "-"
+  ],
+  "backend": "codex",
+  "cwd": "/private/tmp/ac-t013-report-001/gated",
+  "decoder": "codex-final-jsonl/1",
+  "dependencies": [
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/real-use/runtime-preparation-002/execution-001/runtime/gated/return.schema.json",
+      "sha256": "c5f9b53204a47664688cea3eab2cf3956621ad5f26d86f2213bc7ca841f39e72"
+    }
+  ],
+  "environment": {
+    "PATH": "/Library/Frameworks/Python.framework/Versions/3.12/bin:/usr/bin:/bin:/opt/homebrew/bin",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "TMPDIR": "/private/tmp/ac-t013-report-001/gated/scratch"
+  },
+  "evidence_directory": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/real-use/runtime-preparation-001/execution/actor-transports/t013-report-gated-worker-001",
+  "executable": {
+    "path": "/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex",
+    "sha256": "d8990e3ee7acfbc26f91265b12a1a83f0fee40d0e0f8f1f40a37d4ec21f499cf"
+  },
+  "id": "t013-report-gated-worker-001:native-plan",
+  "limits": {
+    "max_input_bytes": 2097152,
+    "max_output_bytes": 16777216,
+    "termination_grace_ms": 2000,
+    "timeout_ms": 900000
+  },
+  "schema": "a_c.fd-support.actor-cli-plan/1",
+  "settings": {
+    "defaults": "native CLI defaults with ignore-user-config; actual identity unknown until reported",
+    "selected_effort": null,
+    "selected_model": null
+  }
+}

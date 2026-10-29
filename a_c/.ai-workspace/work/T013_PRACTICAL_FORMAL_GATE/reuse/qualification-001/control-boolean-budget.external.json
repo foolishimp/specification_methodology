@@ -1,0 +1,102 @@
+{
+  "checking_seconds": 90,
+  "child_high_water_rss_bytes": 35897344,
+  "expected_argv": [
+    "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "-I",
+    "-S",
+    "-B",
+    "-X",
+    "pycache_prefix=/dev/null",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/scripts/formal_gate.py",
+    "verify",
+    "--request",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/qualification-001/controls/boolean-budget-request.json",
+    "--output",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/qualification-001/control-boolean-budget"
+  ],
+  "external_invocation_seconds": 0.124656583648175,
+  "finished_utc": "2026-10-29T16:47:04.369016+00:00",
+  "label": "control-boolean-budget",
+  "lean_memory_mb": 4096,
+  "measurement_scope": "From before reviewed adapter validation/launch through complete CLI exit and publication; excludes writing this qualification receipt.",
+  "origin_after": {
+    "entries": [
+      "a1189f1ef014bdec218a1c2abd15943486dbdfed1856c49c4012d3b53c1ca6f1.json",
+      "fc0ab1c301e5adf906799193e6aba1a2d124cad6c9a15a6ef5e6060509fa0e71.json"
+    ],
+    "entry_count": 2,
+    "pending_count": 0,
+    "present": true
+  },
+  "origin_before": {
+    "entries": [
+      "a1189f1ef014bdec218a1c2abd15943486dbdfed1856c49c4012d3b53c1ca6f1.json",
+      "fc0ab1c301e5adf906799193e6aba1a2d124cad6c9a15a6ef5e6060509fa0e71.json"
+    ],
+    "entry_count": 2,
+    "pending_count": 0,
+    "present": true
+  },
+  "outer_seconds": 600,
+  "parent_high_water_rss_bytes": 43220992,
+  "physical_rss_cap": false,
+  "returncode": 2,
+  "returned": {
+    "checked_claims": [],
+    "context_binding": {
+      "activation_identity": {
+        "id": "qualification-only",
+        "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "trial_ordinal": 1
+      },
+      "rendered_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    "evidence": {
+      "manifest_sha256": null,
+      "members": {}
+    },
+    "inputs": {},
+    "limits": [
+      "Finite declared structural model/closure/projection only; no semantic acceptance.",
+      "Whole-model-source-correspondence covers only supplied or carrier-recovered model JSON; original prose/corpus-to-model F_P fidelity remains opaque and unproved.",
+      "Python profile/parser/generator and runtime serialization remain tested trusted bridges.",
+      "Python API imports and interpreter initialization remain trusted-host responsibilities; the CLI isolates helper loading after startup.",
+      "Context binding is metadata; consumer must check actual delivered bytes.",
+      "Crossing relations are checked source-derived metadata, not a Lean theorem."
+    ],
+    "model": null,
+    "observations": {
+      "child_maxrss_native_units": 0,
+      "elapsed_scope": "checking only; excludes final bundle/origin publication; complete wall requires external process measurement",
+      "elapsed_seconds": 5.550030618906021e-05,
+      "limits": {
+        "max_input_bytes": 33554432,
+        "max_selections": 64,
+        "memory_mb": 4096,
+        "timeout_seconds": 90
+      },
+      "stages": []
+    },
+    "reason": "Budget must be a nonnegative record count or null",
+    "request_sha256": "8e8b9e839d1c24813bfe2e2e84fc265c65579c41cfc18c08fd59595ddee104b5",
+    "requested_claims": [],
+    "runtime_identity": null,
+    "schema": "a_c.formal-gate.result/1",
+    "selections": [
+      {
+        "budget_records": true,
+        "seeds": [
+          "urn:a-c:generation:da23f2e34408e1723ea356a6:record:2aa600c4570863811a75d98c28fb384b"
+        ]
+      }
+    ],
+    "status": "refused"
+  },
+  "rss_scope": "Darwin bytes: launcher self peak and cumulative peak over reaped children of this isolated launcher invocation; child peak is not stage-attributed.",
+  "schema": "a_c.T013.public-invocation/1",
+  "started_utc": "2026-10-29T16:47:04.243629+00:00",
+  "status": "refused",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "9691a4a92433ae7edf95ed7faf3a81ecc7c316f2b220248be478c85183898283"
+}

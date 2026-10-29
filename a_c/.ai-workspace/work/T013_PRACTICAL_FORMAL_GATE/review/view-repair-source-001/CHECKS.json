@@ -1,0 +1,116 @@
+{
+  "checks": {
+    "actual_positive_component": {
+      "audit": {
+        "AC.GateData.checked0": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "AC.GateData.execution_matches_project0": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "AC.GateData.reachability0": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "AC.GateData.result0": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "AC.GateData.set0": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "fresh_public_replay_or_runtime": false,
+      "seconds": 11.866845750249922,
+      "status": "PASS",
+      "uses_conserved_prior_model_objects": true
+    },
+    "affected_kernel_negatives": [
+      {
+        "label": "unknown-parent",
+        "predicate": "181 ∈ seeds0",
+        "seconds": 0.7784951250068843,
+        "status": "intended kernel refusal"
+      },
+      {
+        "label": "missing-edge",
+        "predicate": "1122 ∈ model.dependencies 278",
+        "seconds": 1.001557749696076,
+        "status": "intended kernel refusal"
+      },
+      {
+        "label": "omitted-residual",
+        "predicate": "Closed model.dependencies (traceSet seeds0 trace0)",
+        "seconds": 9.495671583805233,
+        "status": "intended kernel refusal"
+      }
+    ],
+    "conserved_independent_parent_analysis": {
+      "meaning": "Same exact witnesses as prior independent 3995-edge analysis; no repetition of full source census",
+      "prior_review_closure": "69b7a119bfa5dcd7cf3ca29fd490ec1b15bf3533ee9811638a5a4aab53d8812b",
+      "rows": 27,
+      "status": "PASS"
+    },
+    "conserved_python_controls": {
+      "reviewer_rerun": false,
+      "scope": "Retained author controls; exact live source attribution and harness inspection; unit support/reuse stubs remain unit evidence",
+      "skips": 0,
+      "status": "PASS",
+      "tests": 77
+    },
+    "exact_patch_and_live_sources": {
+      "changed_files": {
+        "build_tenants/lean/scripts/formal_gate.py": {
+          "after_sha256": "2fcd6fd3e94af5cf81001643f4e252a64b156429a0edf5fa2898082958348f51",
+          "before_sha256": "f578f46afda709ea97270222507ea83eecdfe01b0bd6a56504f1693753a40831"
+        },
+        "build_tenants/lean/scripts/gate_codegen.py": {
+          "after_sha256": "0a348c16aeaec6cb421aa56374218b9035a0f159b85eb789394d4f49f9096a86",
+          "before_sha256": "d72f34fad6dfc95c2fdb9f6772a36e046eb700f16f700c6c18472b9bb3f3e455"
+        },
+        "build_tenants/lean/tests/test_gate_codegen.py": {
+          "after_sha256": "122a64c482218ba0bae6e406c5bfb20cf70a14ce74bfd2c5f25ee65eaa81dada",
+          "before_sha256": null
+        }
+      },
+      "status": "PASS"
+    },
+    "generated_proposal_and_suffix": {
+      "normal_and_underbudget_suffix_conserved": true,
+      "positive_source_sha256": "634202ee564e7337765607bdf155d318fc75347852ce7dea18d44a4902c11b66",
+      "same_prefix_seeds_trace_included": true,
+      "status": "PASS"
+    },
+    "minimal_deciding_delta": "PASS: only views_source implementation and its single caller differ; generic/runtime logic conserved",
+    "same_selection_custody": {
+      "certificates.json": "c89d4d60d85d98a43122c27b0e5713ce1ac14dd657ff646690eef7c298ce6e06",
+      "request.json": "68944b5e62860ae2d01e685e317f1f1f2fd0ff40134fd78cc621a2ddf45048b5",
+      "supplied-views.json": "70bfa0148bcb3bc10111a99a60fa42c2e87f5b99352ed446fe4c09178f419768"
+    },
+    "selected_artifact_hashes": {
+      "bytes": 395615,
+      "members": 39,
+      "status": "PASS"
+    },
+    "source_conservation": {
+      "conserved_coordinates": 22,
+      "large_support_members_rehashed": false,
+      "portable_coordinates_hashed": 24,
+      "private_origin_acquired": false,
+      "status": "PASS",
+      "support_descriptor_only": "7198879c3dfefe52ee4c980b33990197cd338eb19ac4e84cce3dd26a4cd66363"
+    }
+  },
+  "effects": "Read-only stdlib file/hash/AST/text comparisons; output only in active review directory; no product imports or compiler/proof/actor/Context/Git/private-origin operations",
+  "remaining": "Actual full public same-model 29-view cold proof/replay/runtime and current source/checker/Context/authority bindings; repair discharge remains open",
+  "schema": "a_c.T013.independent-view-repair-source-checks/1",
+  "status": "PASS"
+}

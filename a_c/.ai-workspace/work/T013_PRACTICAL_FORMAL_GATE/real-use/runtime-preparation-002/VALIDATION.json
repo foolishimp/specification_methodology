@@ -1,0 +1,45 @@
+{
+  "schema": "a_c.T013.runtime-template-validation/1",
+  "observed_utc": "2026-10-29T16:38:31.045575+00:00",
+  "template_manifest_sha256": "017e830676280c439a26daed0498b553ea66e13a9c03c3f01dd5970b16a960ab",
+  "checker_raw_sha256": "9203ff1e38087e0d9bf668f24fc796286dd115e3ee1fcecc527e91ddb80bf341",
+  "full_runtime_identity_sha256": "065648e6cc971be7edc75c1fa7b0428351357fe312146059b71fb788842313a7",
+  "source_pins": {
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_formal_gate.py": "d37de63f2b809e7a02d88d560b29b4900e8cda6217cfbc32e5796f40065659b8",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_graph.py": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py": "f65efad15fd770075650ce0484df5b1cea14612047a82918d35fdc4f870deafa",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_composition.py": "3b6c58d90280aa65fe5c1d8b9bb58a37a15376fcff1ef71e7f248f509df52625",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_core.py": "024470f433a891d5ecdef3f4e08e5d8cfa5b66df16bf36270d2865d6b1450b5b",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_effects.py": "5d2f4cd9ef2a450f895dad61a136756e05bc443717644268f66db127dfb684af",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/examples/fd-support/actor_cli.py": "3f0bd239339e635f4e49ae89a00f0857f4672cb177a5dd2ce03f124f0b116528"
+  },
+  "task_protocol_unchanged": true,
+  "common_substantive_source_refs_equal": true,
+  "same_substantive_input_bytes": "Frozen delivery map and actual source pins rechecked by unchanged builder; no actual Context or Worker delivery asserted.",
+  "arms": {
+    "ungated": {
+      "owner_source_acquired_sha256": "4846a79958e343f5e7e302044ae169eaa50cb44a992a4c290f58f660d420fb6b",
+      "source_owner_route_current": true,
+      "pending_execution_selection": true,
+      "required_gate": false,
+      "workspace_intent": "/private/tmp/ac-t013-report-001/ungated",
+      "workspace_absent": true,
+      "bounded_actor_plan": true,
+      "shape_only_policy_has_no_executor_or_grants": true
+    },
+    "gated": {
+      "owner_source_acquired_sha256": "4846a79958e343f5e7e302044ae169eaa50cb44a992a4c290f58f660d420fb6b",
+      "source_owner_route_current": true,
+      "pending_execution_selection": true,
+      "required_gate": true,
+      "workspace_intent": "/private/tmp/ac-t013-report-001/gated",
+      "workspace_absent": true,
+      "bounded_actor_plan": true,
+      "shape_only_policy_has_no_executor_or_grants": true
+    }
+  },
+  "builder_request_builder_comparator_byte_identical": true,
+  "actual_context_preflight_gate_dispatch_actor_calls": 0,
+  "secrets_or_private_origin_acquired": false,
+  "runtime_preparation": "source-only, selected for independent review, not executable admission or practical outcome"
+}

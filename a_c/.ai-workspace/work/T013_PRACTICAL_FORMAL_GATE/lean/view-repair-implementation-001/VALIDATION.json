@@ -1,0 +1,99 @@
+{
+  "schema": "a_c.T013.view-repair-implementation-validation/1",
+  "status": "PASS for bounded components and Python controls",
+  "controls": {
+    "actual-29": {
+      "returncode": 0,
+      "seconds": 11.866845750249922,
+      "reaped_child_peak_rss_bytes": 2605973504,
+      "source_sha256": "634202ee564e7337765607bdf155d318fc75347852ce7dea18d44a4902c11b66",
+      "external_record_sha256": "b4a850a6ad68f5219a9e6f1e0bdca5b5f7ee593610c929b094de781ede76ccd3",
+      "log_sha256": "f82f3e8f7640bca99be6d30f10151a49bc958d3ff13cb1fe93df794c985756cb",
+      "audit": {
+        "AC.GateData.checked0": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "AC.GateData.set0": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "AC.GateData.reachability0": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "AC.GateData.result0": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "AC.GateData.execution_matches_project0": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "unknown-parent": {
+      "returncode": 1,
+      "seconds": 0.7784951250068843,
+      "reaped_child_peak_rss_bytes": 826753024,
+      "source_sha256": "da8d97fe4b4f6dab5b55823d2800f31383fd899390baad9fa9235764f217d20a",
+      "external_record_sha256": "09102d17527a82c10e349ac80cdffcbbe3ee773c55d412cb2e3800eaef518171",
+      "log_sha256": "a0af0ab0ca3a15983c2761ed166f0c14347d6a974aa743d5e0dc5b735f59e2c0",
+      "intended_false_obligation": "181 \u2208 seeds0",
+      "status": "targeted-kernel-rejection"
+    },
+    "missing-edge": {
+      "returncode": 1,
+      "seconds": 1.001557749696076,
+      "reaped_child_peak_rss_bytes": 828817408,
+      "source_sha256": "eb9f9f5213ed63ff8a1ba14efe8bf964f312fc33d4217db3f68464c80a9a8bf0",
+      "external_record_sha256": "0fcfd835ad170a4bfca3a439fc9c4a30ee6ce493201c013d134b08da56ba4046",
+      "log_sha256": "a7d7ba175a850f1c84e9280ce0564d6b2750ab0a216c4d6e59d1edcfd2db0259",
+      "intended_false_obligation": "1122 \u2208 model.dependencies 278",
+      "status": "targeted-kernel-rejection"
+    },
+    "omitted-residual": {
+      "returncode": 1,
+      "seconds": 9.495671583805233,
+      "reaped_child_peak_rss_bytes": 2258468864,
+      "source_sha256": "13916c57f8407ef37dcc04db7f1d0d912ba67a59d929dc7bcd61a11eea0ad1af",
+      "external_record_sha256": "32b447b4269a7f3a76bf78e962dccb531df6f723aad9e52731c584afbfe57884",
+      "log_sha256": "086e50f7b2e612559a70ed5db460a8d3fa023a25211cb56c28dd4e3c16f0d96b",
+      "intended_false_obligation": "Closed model.dependencies (traceSet seeds0 trace0)",
+      "status": "targeted-kernel-rejection"
+    }
+  },
+  "python_controls": {
+    "schema": "a_c.T013.view-repair-python-controls/1",
+    "status": "PASS",
+    "tests": 77,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "seconds": 11.973374334163964,
+    "modules": [
+      "test_adapter",
+      "test_formal_gate",
+      "test_runtime_process",
+      "test_formal_reuse",
+      "test_gate_codegen"
+    ],
+    "live_deciding_sources_loaded": true,
+    "temporary_substitution": "tempfile defaults and only the two explicit live test-cache TemporaryDirectory arguments redirect here; mkdir of exactly those cache paths is a no-op; all other filesystem/code behavior unchanged.",
+    "evidence_kind": "Python controls; reuse support/proof stubs and temporary synthetic origins are unit evidence only."
+  },
+  "python_log_sha256": "465f9a69c30d2e8f8b2a756a4753cfa5c39a15720112b1ddd5a2ed574153d929",
+  "preparation_failure_retained": "prepare-attempt-001.failure.json and prepare-attempt-001.py; corrected object-only JSON reader on array, no compiler invoked in failed preparation.",
+  "actual_compiler_invocations": 4,
+  "positive_compiler_attempts": 1,
+  "syntax_or_design_repairs_to_production": 0,
+  "actual_kernel_replay": false,
+  "whole_public_gate_or_runtime_execution": false,
+  "actor_calls": 0,
+  "remaining": "Independent source/evidence review, new exact checker/owner selection, then successor Phase A actual 29-record public cold/preflight with fresh replay/runtime and actual Context; no duplicate standalone full cold run."
+}

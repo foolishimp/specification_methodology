@@ -1,0 +1,45 @@
+{
+  "schema": "a_c.T013.view-repair-implementation-closure/1",
+  "actor": "/root/ac_scale_reuse_worker",
+  "role": "Worker",
+  "Executive": "/root",
+  "closed_utc": "2026-10-29T18:25:47.573998+00:00",
+  "status": "worker-complete; full public qualification remains open",
+  "activation_sha256": "5727f8d80c69d7a922969d04defb68cd3b1631cc71e8767c043bfb5e343eb34a",
+  "baseline_sha256": "2aae9b766774b8fcbdf299df9ef42623d60374164e8afc2cab0935e1e0abc1e8",
+  "source_pins_sha256": "f19d592d81a76a4c8c1153e867982aba750c46838fd7a827fc6cebdf08ecd242",
+  "patch_sha256": "0cd1075e317593bcfc37f648828bd1b256f3f3d5c84ed8e453b5f22996983aa1",
+  "validation_sha256": "a64ea9e226b065a02d6d0c5df6cab19d10bb9af91b5c788eeb6fb59fa97cd9d2",
+  "pins_sha256": "7b9ab4ddd5c7b33b0f142d43fbb0d370d2ea8314dbff717d0cf8bd26397f1171",
+  "return_sha256": "ce7fdb66d8e3ac02c4f368bd322327239d3f70be0fd753be866323f1cce1fe2f",
+  "runtime_identity_sha256": "f492806bfb58bcabad63a89caa4c62c57bd37f8ed99b8fed764a9a6c5b8908c9",
+  "origin_free_identity_sha256": "4f9e8402122f1722559a4bb7d7559b09ce107f8de8a38de600aedc947611072d",
+  "changed_files": {
+    "build_tenants/lean/scripts/gate_codegen.py": {
+      "before_sha256": "d72f34fad6dfc95c2fdb9f6772a36e046eb700f16f700c6c18472b9bb3f3e455",
+      "after_sha256": "0a348c16aeaec6cb421aa56374218b9035a0f159b85eb789394d4f49f9096a86"
+    },
+    "build_tenants/lean/scripts/formal_gate.py": {
+      "before_sha256": "f578f46afda709ea97270222507ea83eecdfe01b0bd6a56504f1693753a40831",
+      "after_sha256": "2fcd6fd3e94af5cf81001643f4e252a64b156429a0edf5fa2898082958348f51"
+    },
+    "build_tenants/lean/tests/test_gate_codegen.py": {
+      "before_sha256": null,
+      "after_sha256": "122a64c482218ba0bae6e406c5bfb20cf70a14ce74bfd2c5f25ee65eaa81dada"
+    }
+  },
+  "positive_component_compile": "PASS; first attempt; 11.866846 seconds; five ordinary axiom audits",
+  "affected_kernel_negatives": 3,
+  "python_controls": 77,
+  "python_skips": 0,
+  "compiler_invocations": 4,
+  "frozen_bundle_members_conserved": 53,
+  "other_deciding_source_pins_conserved": 22,
+  "base_support_manifest_sha256": "7198879c3dfefe52ee4c980b33990197cd338eb19ac4e84cce3dd26a4cd66363",
+  "actual_public_gate_or_kernel_replay": false,
+  "actual_context_preflight_or_actor": false,
+  "actor_calls": 0,
+  "ownership": "Live source ownership and heavy window returned to /root; no process active.",
+  "remaining": "Independent review; new exact checker/source/authority selection; successor Phase A actual complete public cold path under unchanged limits and exact original Context/view.",
+  "stop": "Worker activation closed; no source mutation, full gate, actor, package or Git effect without separate grant."
+}

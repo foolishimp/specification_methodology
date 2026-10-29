@@ -1,0 +1,7 @@
+{
+  "schema": "a_c.T013.source-inspection-note/1",
+  "initial_check": "A whole-file static-import scan reported ac_grounding as absent from inventory.",
+  "resolution": "Inspection classifies the sole import at test_ac_generate.py:276 inside the unselected Graphify test test_ordinary_cli_rejects_missing_raw_evidence_and_rehashed_prompt_or_tool_drift. Selected Lean use imports only module-level data and fixture_answer; no extra sibling is required.",
+  "candidate_code_changed": false,
+  "full_Graphify_suite_claimed": false
+}

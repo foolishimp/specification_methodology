@@ -1,0 +1,498 @@
+{
+  "actual_actor_calls": 0,
+  "both_phase_a_public_wall_sum_seconds": 518.4734342144802,
+  "context_comparison_wall_seconds": 2.3646371657960117,
+  "finalizer_wall_seconds": 0.1812384589575231,
+  "gate_checking_only_seconds": 268.20598662504926,
+  "gate_child_maxrss_native_bytes_darwin": 14612791296,
+  "gate_public_preflight_wall_seconds": 273.07198129221797,
+  "gate_stages": [
+    {
+      "seconds": 0.34108408400788903,
+      "stage": "acquire-import-reconstruct"
+    },
+    {
+      "seconds": 6.9618099592626095,
+      "stage": "support-pins"
+    },
+    {
+      "seconds": 1.0920793330296874,
+      "stage": "current-certificates"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 36.99213458318263,
+      "stage": "GateData"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 47.40173783386126,
+      "stage": "GateLocalNames"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 41.712316958233714,
+      "stage": "GateExternalNames"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 24.7212512078695,
+      "stage": "GateIdentities"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 41.741556708235294,
+      "stage": "GateBounds"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 0.6202534171752632,
+      "stage": "GateModel"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 12.006156207993627,
+      "stage": "GateViews"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 26.108821792062372,
+      "stage": "dynamic-kernel-replay"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 24.148742584045976,
+      "stage": "actual-runtime"
+    },
+    {
+      "seconds": 0.18214620789512992,
+      "stage": "output-view-correspondence"
+    },
+    {
+      "seconds": 3.55339275021106,
+      "stage": "support-pins-after"
+    },
+    {
+      "seconds": 0.0013595828786492348,
+      "stage": "origin-currentness"
+    }
+  ],
+  "operator_model_tokens": null,
+  "operator_monetary_cost": null,
+  "operator_recording_rework": [
+    "raw-vs-canonical owner digest comparison: Root-authorized correction before any public call",
+    "supplementary inspection initially treated framed Context as bare JSON; exact wrapper inspected; no public operation repeated"
+  ],
+  "practical_efficiency_claim": false,
+  "prior_failed_phase_public_wall_sum_seconds": 236.38353550247848,
+  "public_operation_count": 40,
+  "public_operation_wall_sum_seconds": 282.08989871200174,
+  "public_operations": [
+    {
+      "arm": "gated",
+      "children_maxrss_bytes_darwin": 155418624,
+      "children_system_seconds": 0.029703,
+      "children_user_seconds": 1.256468,
+      "operation": "context.assemble",
+      "path": "observations/gated/context/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 1.2899968749843538
+    },
+    {
+      "arm": "gated",
+      "children_maxrss_bytes_darwin": 14612791296,
+      "children_system_seconds": 116.032045,
+      "children_user_seconds": 273.526061,
+      "operation": "contract.preflight",
+      "path": "observations/gated/preflight/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 273.07198129221797
+    },
+    {
+      "arm": "gated",
+      "children_maxrss_bytes_darwin": 46661632,
+      "children_system_seconds": 0.011212,
+      "children_user_seconds": 0.072313,
+      "operation": "source.read",
+      "path": "observations/gated/source-00-761a7c3be938/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.08626304194331169
+    },
+    {
+      "arm": "gated",
+      "children_maxrss_bytes_darwin": 44695552,
+      "children_system_seconds": 0.011498999999999999,
+      "children_user_seconds": 0.071241,
+      "operation": "source.read",
+      "path": "observations/gated/source-01-4a57eb3bd0eb/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.08549124980345368
+    },
+    {
+      "arm": "gated",
+      "children_maxrss_bytes_darwin": 317652992,
+      "children_system_seconds": 0.047879,
+      "children_user_seconds": 0.332198,
+      "operation": "source.read",
+      "path": "observations/gated/source-02-c3676b6a15dd/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.38669670931994915
+    },
+    {
+      "arm": "gated",
+      "children_maxrss_bytes_darwin": 45350912,
+      "children_system_seconds": 0.010805,
+      "children_user_seconds": 0.070399,
+      "operation": "source.read",
+      "path": "observations/gated/source-03-134ae37e8927/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.08403383288532495
+    },
+    {
+      "arm": "gated",
+      "children_maxrss_bytes_darwin": 44285952,
+      "children_system_seconds": 0.010124,
+      "children_user_seconds": 0.06600299999999999,
+      "operation": "source.read",
+      "path": "observations/gated/source-04-69e0804b5518/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.07863870915025473
+    },
+    {
+      "arm": "gated",
+      "children_maxrss_bytes_darwin": 44056576,
+      "children_system_seconds": 0.010058,
+      "children_user_seconds": 0.065653,
+      "operation": "source.read",
+      "path": "observations/gated/source-05-86604224bc51/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.07829337473958731
+    },
+    {
+      "arm": "gated",
+      "children_maxrss_bytes_darwin": 44449792,
+      "children_system_seconds": 0.010128999999999999,
+      "children_user_seconds": 0.065343,
+      "operation": "source.read",
+      "path": "observations/gated/source-06-4eff51dab2fd/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.07796987518668175
+    },
+    {
+      "arm": "gated",
+      "children_maxrss_bytes_darwin": 44646400,
+      "children_system_seconds": 0.010392,
+      "children_user_seconds": 0.066979,
+      "operation": "source.read",
+      "path": "observations/gated/source-07-0cb0e75f3686/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.08000462502241135
+    },
+    {
+      "arm": "gated",
+      "children_maxrss_bytes_darwin": 44056576,
+      "children_system_seconds": 0.009956999999999999,
+      "children_user_seconds": 0.06590399999999999,
+      "operation": "source.read",
+      "path": "observations/gated/source-08-ffd706da312e/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.07839616714045405
+    },
+    {
+      "arm": "gated",
+      "children_maxrss_bytes_darwin": 44957696,
+      "children_system_seconds": 0.010175,
+      "children_user_seconds": 0.06631,
+      "operation": "source.read",
+      "path": "observations/gated/source-09-0b5605ace9ca/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.07898020884022117
+    },
+    {
+      "arm": "gated",
+      "children_maxrss_bytes_darwin": 44056576,
+      "children_system_seconds": 0.009869,
+      "children_user_seconds": 0.06505899999999999,
+      "operation": "source.read",
+      "path": "observations/gated/source-10-ae14829c1806/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.07742600003257394
+    },
+    {
+      "arm": "gated",
+      "children_maxrss_bytes_darwin": 44056576,
+      "children_system_seconds": 0.009994,
+      "children_user_seconds": 0.066243,
+      "operation": "source.read",
+      "path": "observations/gated/source-11-d7cc63263b0f/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.07870408287271857
+    },
+    {
+      "arm": "gated",
+      "children_maxrss_bytes_darwin": 44056576,
+      "children_system_seconds": 0.010133,
+      "children_user_seconds": 0.066428,
+      "operation": "source.read",
+      "path": "observations/gated/source-12-8e9b23e4a2cd/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.07901458395645022
+    },
+    {
+      "arm": "gated",
+      "children_maxrss_bytes_darwin": 44056576,
+      "children_system_seconds": 0.009909,
+      "children_user_seconds": 0.06555,
+      "operation": "source.read",
+      "path": "observations/gated/source-13-2f53100b6290/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.07817762484773993
+    },
+    {
+      "arm": "gated",
+      "children_maxrss_bytes_darwin": 44367872,
+      "children_system_seconds": 0.010485999999999999,
+      "children_user_seconds": 0.066509,
+      "operation": "source.read",
+      "path": "observations/gated/source-14-914517e996bd/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.07955483300611377
+    },
+    {
+      "arm": "gated",
+      "children_maxrss_bytes_darwin": 46383104,
+      "children_system_seconds": 0.010161,
+      "children_user_seconds": 0.066025,
+      "operation": "source.read",
+      "path": "observations/gated/source-15-7a3cfd0005a3/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.07861033314839005
+    },
+    {
+      "arm": "gated",
+      "children_maxrss_bytes_darwin": 44482560,
+      "children_system_seconds": 0.010417,
+      "children_user_seconds": 0.066883,
+      "operation": "source.read",
+      "path": "observations/gated/source-16-edc9caaba943/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.07970550004392862
+    },
+    {
+      "arm": "gated",
+      "children_maxrss_bytes_darwin": 44056576,
+      "children_system_seconds": 0.010095999999999999,
+      "children_user_seconds": 0.06605699999999999,
+      "operation": "source.read",
+      "path": "observations/gated/source-17-b9878d193666/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.07889679213985801
+    },
+    {
+      "arm": "ungated",
+      "children_maxrss_bytes_darwin": 155844608,
+      "children_system_seconds": 0.028523999999999997,
+      "children_user_seconds": 1.226562,
+      "operation": "context.assemble",
+      "path": "observations/ungated/context/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 1.2588234581053257
+    },
+    {
+      "arm": "ungated",
+      "children_maxrss_bytes_darwin": 1301577728,
+      "children_system_seconds": 0.349078,
+      "children_user_seconds": 2.528898,
+      "operation": "contract.preflight",
+      "path": "observations/ungated/preflight/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 2.906191292218864
+    },
+    {
+      "arm": "ungated",
+      "children_maxrss_bytes_darwin": 44646400,
+      "children_system_seconds": 0.010081,
+      "children_user_seconds": 0.064411,
+      "operation": "source.read",
+      "path": "observations/ungated/source-00-761a7c3be938/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.10171399964019656
+    },
+    {
+      "arm": "ungated",
+      "children_maxrss_bytes_darwin": 46284800,
+      "children_system_seconds": 0.009585999999999999,
+      "children_user_seconds": 0.064828,
+      "operation": "source.read",
+      "path": "observations/ungated/source-01-4a57eb3bd0eb/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.07672983314841986
+    },
+    {
+      "arm": "ungated",
+      "children_maxrss_bytes_darwin": 283377664,
+      "children_system_seconds": 0.046404999999999995,
+      "children_user_seconds": 0.327907,
+      "operation": "source.read",
+      "path": "observations/ungated/source-02-c3676b6a15dd/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.38015450024977326
+    },
+    {
+      "arm": "ungated",
+      "children_maxrss_bytes_darwin": 44449792,
+      "children_system_seconds": 0.010761999999999999,
+      "children_user_seconds": 0.070128,
+      "operation": "source.read",
+      "path": "observations/ungated/source-03-134ae37e8927/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.08355491561815143
+    },
+    {
+      "arm": "ungated",
+      "children_maxrss_bytes_darwin": 44417024,
+      "children_system_seconds": 0.010530999999999999,
+      "children_user_seconds": 0.070339,
+      "operation": "source.read",
+      "path": "observations/ungated/source-04-0cb0e75f3686/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.08352037472650409
+    },
+    {
+      "arm": "ungated",
+      "children_maxrss_bytes_darwin": 44843008,
+      "children_system_seconds": 0.010067999999999999,
+      "children_user_seconds": 0.06736099999999999,
+      "operation": "source.read",
+      "path": "observations/ungated/source-05-ffd706da312e/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.08014137484133244
+    },
+    {
+      "arm": "ungated",
+      "children_maxrss_bytes_darwin": 46710784,
+      "children_system_seconds": 0.011210999999999999,
+      "children_user_seconds": 0.072179,
+      "operation": "source.read",
+      "path": "observations/ungated/source-06-0b5605ace9ca/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.08616608381271362
+    },
+    {
+      "arm": "ungated",
+      "children_maxrss_bytes_darwin": 45203456,
+      "children_system_seconds": 0.010924,
+      "children_user_seconds": 0.07081599999999999,
+      "operation": "source.read",
+      "path": "observations/ungated/source-07-ae14829c1806/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.08439720794558525
+    },
+    {
+      "arm": "ungated",
+      "children_maxrss_bytes_darwin": 45023232,
+      "children_system_seconds": 0.010888,
+      "children_user_seconds": 0.071757,
+      "operation": "source.read",
+      "path": "observations/ungated/source-08-d7cc63263b0f/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.08507483266294003
+    },
+    {
+      "arm": "ungated",
+      "children_maxrss_bytes_darwin": 44728320,
+      "children_system_seconds": 0.010709999999999999,
+      "children_user_seconds": 0.070294,
+      "operation": "source.read",
+      "path": "observations/ungated/source-09-8e9b23e4a2cd/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.08374983398243785
+    },
+    {
+      "arm": "ungated",
+      "children_maxrss_bytes_darwin": 44056576,
+      "children_system_seconds": 0.010921,
+      "children_user_seconds": 0.07017899999999999,
+      "operation": "source.read",
+      "path": "observations/ungated/source-10-2f53100b6290/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.08379633398726583
+    },
+    {
+      "arm": "ungated",
+      "children_maxrss_bytes_darwin": 44056576,
+      "children_system_seconds": 0.010813999999999999,
+      "children_user_seconds": 0.070462,
+      "operation": "source.read",
+      "path": "observations/ungated/source-11-914517e996bd/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.08399208402261138
+    },
+    {
+      "arm": "ungated",
+      "children_maxrss_bytes_darwin": 44367872,
+      "children_system_seconds": 0.010853,
+      "children_user_seconds": 0.070241,
+      "operation": "source.read",
+      "path": "observations/ungated/source-12-7a3cfd0005a3/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.08376649999991059
+    },
+    {
+      "arm": "ungated",
+      "children_maxrss_bytes_darwin": 44662784,
+      "children_system_seconds": 0.010910999999999999,
+      "children_user_seconds": 0.07076199999999999,
+      "operation": "source.read",
+      "path": "observations/ungated/source-13-edc9caaba943/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.08439874975010753
+    },
+    {
+      "arm": "ungated",
+      "children_maxrss_bytes_darwin": 45711360,
+      "children_system_seconds": 0.010936999999999999,
+      "children_user_seconds": 0.070474,
+      "operation": "source.read",
+      "path": "observations/ungated/source-14-b9878d193666/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.08410154189914465
+    },
+    {
+      "arm": "ungated",
+      "children_maxrss_bytes_darwin": 44056576,
+      "children_system_seconds": 0.011153999999999999,
+      "children_user_seconds": 0.070621,
+      "operation": "source.read",
+      "path": "observations/ungated/source-15-5c959d0ec3ed/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.0845559174194932
+    },
+    {
+      "arm": "ungated",
+      "children_maxrss_bytes_darwin": 45105152,
+      "children_system_seconds": 0.011208,
+      "children_user_seconds": 0.070507,
+      "operation": "source.read",
+      "path": "observations/ungated/source-16-8328168a5274/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.0844621667638421
+    },
+    {
+      "arm": "ungated",
+      "children_maxrss_bytes_darwin": 44367872,
+      "children_system_seconds": 0.01092,
+      "children_user_seconds": 0.07012,
+      "operation": "source.read",
+      "path": "observations/ungated/source-17-d54ab08022d2/PROCESS.json",
+      "response_status": "ok",
+      "whole_invocation_wall_seconds": 0.08377199992537498
+    }
+  ],
+  "public_retries": 0,
+  "schema": "a_c.T013.phase-a-cost/1",
+  "scope": "External whole public invocation includes startup, source checks, proof, publication and response. Internal gate elapsed excludes final publication. Child RSS is Darwin high-water observation, not a physical 4096MB cap. Summed operation durations exclude operator reasoning/tool gaps/analysis and are not complete engagement cost. Prior failed phase retained as rework, not discarded.",
+  "source_batch_wall_seconds": 4.663150874897838,
+  "total_monetary_cost": null,
+  "worker_model_usage": "No Worker/model invocation occurred"
+}

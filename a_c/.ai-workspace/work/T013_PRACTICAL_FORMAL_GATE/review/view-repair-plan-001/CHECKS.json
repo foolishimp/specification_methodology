@@ -1,0 +1,72 @@
+{
+  "actual_same_model_29_view_public_success_required": true,
+  "affected_negative_required": true,
+  "concrete_proposal_sha256": "f30c279516423b2ea937240f402ba12b2f9c6ed1bb572a8c42af69d8cf049f2f",
+  "exact_prefix_and_downstream_suffix_preserved": true,
+  "expected_future_parent_negative": {
+    "parent": 181,
+    "parent_in_known": false,
+    "real_edge": true,
+    "step": 0,
+    "target": 1122
+  },
+  "expected_missing_edge_negative": {
+    "parent": 278,
+    "parent_in_known": true,
+    "real_edge": false,
+    "step": 0,
+    "target": 1122
+  },
+  "frozen_core_pins": {
+    "AC/Closure.lean": "d8c66f511c486eeaf40393733779148843e2ce075e2540cb41259ed9b23e011f",
+    "AC/GateProof.lean": "0359f5c3593c9e637758abb94cd0e1ca37d69b00a618c0049d39cd12c551d0f3",
+    "AC/Model.lean": "943bd93abdcccb3cb084ab8e41196f8cac77629089e746c90d7da09ac90a22d5",
+    "AC/Projection.lean": "ac2a9ce8ed148400967519c724715f6ea491bceff960ed77249b5ff744692575"
+  },
+  "frozen_views_source_references": [
+    {
+      "line": 74,
+      "path": "a_c/build_tenants/lean/scripts/formal_gate.py",
+      "text": "bounds_source,model_proof,identity_contract_names,views_source,RUNNER)"
+    },
+    {
+      "line": 253,
+      "path": "a_c/build_tenants/lean/scripts/formal_gate.py",
+      "text": "'GateModel':model_proof(imported),'GateViews':views_source(cases),'GateRun':RUNNER}.items():(out/(name+'.lean')).write_text(source)"
+    },
+    {
+      "line": 176,
+      "path": "a_c/build_tenants/lean/scripts/gate_codegen.py",
+      "text": "def views_source(cases):"
+    }
+  ],
+  "original_model_edges": 3995,
+  "parent_steps": 27,
+  "probe_summary": [
+    {
+      "exit": -6,
+      "name": "ProbeWitness",
+      "seconds": 15.672989416867495
+    },
+    {
+      "exit": 1,
+      "name": "ProbeClosed",
+      "seconds": 6.043065750040114
+    },
+    {
+      "exit": 0,
+      "name": "ProbeDecomposed",
+      "seconds": 1.3256668336689472
+    }
+  ],
+  "proposal_files_checked": 23,
+  "proposal_sha256": "1398b50d1aa71072290e1437cfa0be78692a61995741b099a9de039a85fc4db7",
+  "range_only_cause_supported": false,
+  "repair_discharged": false,
+  "scope": "closed proposal and frozen source/data only; no compiler/product/model/actor invocation or live source read",
+  "status": "passed",
+  "unchanged_final_audit_names": true,
+  "uncompiled_proposal": true,
+  "valid_exact_parent_memberships": true,
+  "witness_cause_uniquely_established": false
+}

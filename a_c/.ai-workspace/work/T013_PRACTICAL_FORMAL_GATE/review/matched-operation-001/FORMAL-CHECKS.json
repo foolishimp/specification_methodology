@@ -1,0 +1,171 @@
+{
+  "audits_checked": 62,
+  "cold_checking_seconds": 268.20598662504926,
+  "cold_counts": {
+    "current_dynamic_proof_invocations": 7,
+    "current_kernel_replay_invocations": 1,
+    "current_runtime_invocations": 1
+  },
+  "cold_result_sha256": "72ad6dc64938ab0e76476f5d479c9154035131354423ebbbb9fde38c8737dfe4",
+  "cold_stages": [
+    {
+      "seconds": 0.34108408400788903,
+      "stage": "acquire-import-reconstruct"
+    },
+    {
+      "seconds": 6.9618099592626095,
+      "stage": "support-pins"
+    },
+    {
+      "seconds": 1.0920793330296874,
+      "stage": "current-certificates"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 36.99213458318263,
+      "stage": "GateData"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 47.40173783386126,
+      "stage": "GateLocalNames"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 41.712316958233714,
+      "stage": "GateExternalNames"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 24.7212512078695,
+      "stage": "GateIdentities"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 41.741556708235294,
+      "stage": "GateBounds"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 0.6202534171752632,
+      "stage": "GateModel"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 12.006156207993627,
+      "stage": "GateViews"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 26.108821792062372,
+      "stage": "dynamic-kernel-replay"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 24.148742584045976,
+      "stage": "actual-runtime"
+    },
+    {
+      "seconds": 0.18214620789512992,
+      "stage": "output-view-correspondence"
+    },
+    {
+      "seconds": 3.55339275021106,
+      "stage": "support-pins-after"
+    },
+    {
+      "seconds": 0.0013595828786492348,
+      "stage": "origin-currentness"
+    }
+  ],
+  "conserved_generated_sources": [
+    "GateData.lean",
+    "GateLocalNames.lean",
+    "GateExternalNames.lean",
+    "GateIdentities.lean",
+    "GateBounds.lean",
+    "GateModel.lean",
+    "GateRun.lean"
+  ],
+  "current_graphify_source_coordinates": 7,
+  "current_public_runtime_coordinates": 24,
+  "not_claimed": "No fresh library/kernel run, compiled-object recensus, semantic source adequacy or permission supplied by the theorem",
+  "reuse": {
+    "dispatch": {
+      "counts": {
+        "current_dynamic_proof_invocations": 0,
+        "current_kernel_replay_invocations": 0,
+        "current_runtime_invocations": 0
+      },
+      "entry_id": "4d4f0499b990c092995901e295e461979ffac753a7bc4f9d8e44c072bf689e93",
+      "exact_cold_source_output_view_preserved": true,
+      "formal_use_artifact": {
+        "id": "sha256:57c249f7ae246c67ab7cb3a33540ac44c8cd5b9d210c8369ca0d01badbe102fe",
+        "sha256": "57c249f7ae246c67ab7cb3a33540ac44c8cd5b9d210c8369ca0d01badbe102fe"
+      },
+      "original_result_sha256": "72ad6dc64938ab0e76476f5d479c9154035131354423ebbbb9fde38c8737dfe4",
+      "result_sha256": "6a4cbb203aa47354407467b747ca0f6a286685621be9de5dff1373227c31ed18",
+      "seconds": 9.298054750077426
+    },
+    "supervisor": {
+      "counts": {
+        "current_dynamic_proof_invocations": 0,
+        "current_kernel_replay_invocations": 0,
+        "current_runtime_invocations": 0
+      },
+      "entry_id": "4d4f0499b990c092995901e295e461979ffac753a7bc4f9d8e44c072bf689e93",
+      "exact_cold_source_output_view_preserved": true,
+      "formal_use_artifact": {
+        "id": "sha256:80d3e213fe2a1b8133c0e1fc3dab726fe2c99399c435846f53c42019d945f374",
+        "sha256": "80d3e213fe2a1b8133c0e1fc3dab726fe2c99399c435846f53c42019d945f374"
+      },
+      "original_result_sha256": "72ad6dc64938ab0e76476f5d479c9154035131354423ebbbb9fde38c8737dfe4",
+      "result_sha256": "c311f105e1701df0e76e51597f65e60647fe16a07ea81384de25e3d8e32293d0",
+      "seconds": 9.222353250253946
+    }
+  },
+  "same_reviewed_29_view_module": true,
+  "schema": "a_c.T013.independent-actual-formal-path-checks/1",
+  "scope": "Independent full model/reference/basis/authority/residual/actual projection/source-view correspondence on new cold output; byte-identical authenticated-reuse outputs; no product/proof/native execution or private-origin acquisition",
+  "source_identity": "f492806bfb58bcabad63a89caa4c62c57bd37f8ed99b8fed764a9a6c5b8908c9",
+  "status": "PASS",
+  "subject": {
+    "edges": 3995,
+    "external_resolutions": 1021,
+    "records": 1987,
+    "references": 16498,
+    "retained_unresolved": 1,
+    "selected_indices": [
+      181,
+      182,
+      183,
+      184,
+      276,
+      277,
+      278,
+      281,
+      282,
+      738,
+      739,
+      740,
+      1121,
+      1122,
+      1123,
+      1124,
+      1125,
+      1126,
+      1127,
+      1128,
+      1215,
+      1216,
+      1217,
+      1219,
+      1220,
+      1221,
+      1748,
+      1749,
+      1867
+    ],
+    "view_external": 19
+  }
+}

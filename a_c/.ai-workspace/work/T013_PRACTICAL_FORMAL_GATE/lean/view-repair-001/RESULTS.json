@@ -1,0 +1,53 @@
+{
+  "schema": "a_c.T013.view-proof-diagnostic-results/1",
+  "status": "diagnostic-limit-reached; proposal returned",
+  "probes": {
+    "ProbeWitness": {
+      "ordinal": 1,
+      "status": "did-not-compile",
+      "returncode": -6,
+      "external_seconds": 15.672989416867495,
+      "launcher_peak_rss_bytes": 23019520,
+      "reaped_child_peak_rss_bytes": 4295131136,
+      "source_sha256": "4b5ba17cdd6378722a64798aa080f9f380dc207d8a320e48d50972768008200b",
+      "log_sha256": "83422ef2e6693eb1a61e656614b80c8a28b779e0e82d6e23eab3c3c33b441d25"
+    },
+    "ProbeClosed": {
+      "ordinal": 2,
+      "status": "did-not-compile",
+      "returncode": 1,
+      "external_seconds": 6.043065750040114,
+      "launcher_peak_rss_bytes": 22806528,
+      "reaped_child_peak_rss_bytes": 2557329408,
+      "source_sha256": "05c354b0eb74f2ebe66ca5d5068557f5ff42924b84a1985895256db36349148d",
+      "log_sha256": "f33a20747531abfbb57dee9b2e2479df82488048f42960beb61a326bfa07b7f3"
+    },
+    "ProbeDecomposed": {
+      "ordinal": 3,
+      "status": "compiled",
+      "returncode": 0,
+      "external_seconds": 1.3256668336689472,
+      "launcher_peak_rss_bytes": 22888448,
+      "reaped_child_peak_rss_bytes": 1004634112,
+      "source_sha256": "25a81bb4134e32cdb417db70bc697609df659e3d2903ac5a69593e041616032c",
+      "log_sha256": "cc6ff3ee3ed071cad5f233298c7dbbbed2be5c416d19b5e85513459ca6430fec"
+    }
+  },
+  "probe_count": 3,
+  "maximum_probes": 3,
+  "total_probe_seconds": 23.041722000576556,
+  "known": "Range subset and Closed are individually dischargeable under the fixed bound.",
+  "hypothesis": "Witness existential search or cumulative certificate reduction; not uniquely isolated.",
+  "instrumentation_failures": "ProbeWitness and ProbeClosed IO markers inferred BaseIO; logs and unsuccessful module outcomes retained.",
+  "minimal_proposal": "Explicit per-step kernel-checked parent witnesses composed with the original remaining finite checks to unchanged checkCertificate.",
+  "dependency_tables_proposed": false,
+  "full_candidate_compiled": false,
+  "full_gate_replayed": false,
+  "source_conservation": {
+    "frozen_bundle_members": 53,
+    "public_runtime_source_pins": 24,
+    "all_unchanged": true
+  },
+  "actor_calls": 0,
+  "heavy_window": "Returned to Executive; no active probe remains."
+}

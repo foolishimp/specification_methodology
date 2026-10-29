@@ -1,0 +1,137 @@
+{
+  "arms": {
+    "gated": {
+      "actor_id": "t013-report-gated-worker-001",
+      "actor_plan_sha256": "abfcc5c74adb1374414443b456f99ebd5667fc25e0668292977ba7af62af4e2b",
+      "actual_context_created": false,
+      "context_request_sha256": "b9839424c1bf4022a09d77af1d785c637cb8d31a6b561dc7fa352a9bc1a131b2",
+      "owner_acquisition_sha256": "4846a79958e343f5e7e302044ae169eaa50cb44a992a4c290f58f660d420fb6b",
+      "packet_sha256": "8128714698e2196f958091f7ca62cb2dc9e6c14e5e24def978d82d7c0ccda2e6",
+      "policy_sha256": "708341dfff677e84980c4c698eb0c67725007bcb9d82526ce0bb6eb9c42baec4",
+      "public_shape_policy_loaded": true,
+      "return_fixed": {
+        "activation": {
+          "id": "t013-report-gated-worker-001:activation",
+          "sha256": "291b47c0b6c502bd7c451e918af860944a1518c29a12c0eed7cc5871f53d006f"
+        },
+        "actor": {
+          "authorship": "t013-report-gated-worker-001",
+          "family": "codex-native-default",
+          "id": "t013-report-gated-worker-001"
+        },
+        "basis": {
+          "method_profile": {
+            "id": "urn:a-c:fd-support:method:claude-rc9:executive:1",
+            "sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+          },
+          "observations": []
+        },
+        "consumer": "/root",
+        "frame": {
+          "id": "t013-report-helper-frame",
+          "revision": "1"
+        },
+        "id": "t013-report-gated-worker-001:return",
+        "schema": "a_c.fd-support.closed-return/1",
+        "subject": {
+          "id": "urn:a-c:T013:report-helper:001",
+          "sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829"
+        }
+      },
+      "workspace": "/private/tmp/ac-t013-report-001/gated"
+    },
+    "ungated": {
+      "actor_id": "t013-report-ungated-worker-001",
+      "actor_plan_sha256": "d8e27656384ebc085bd74a8b0a5ebf1d295a8246782f5511fa1ae06ca6554a5a",
+      "actual_context_created": false,
+      "context_request_sha256": "ee33df3640fb9faa51a3d20ceedc5c1bb6ef2eab2bc0891011640d5184725663",
+      "owner_acquisition_sha256": "4846a79958e343f5e7e302044ae169eaa50cb44a992a4c290f58f660d420fb6b",
+      "packet_sha256": "22951ba8f669ccadd17054e8114268470c05516a961b8130fbf7a46cbb322080",
+      "policy_sha256": "dc5fca5ce2fd5ddeed2ec7a18b3096f84c17f8142a689ca4de378bd7a17965c1",
+      "public_shape_policy_loaded": true,
+      "return_fixed": {
+        "activation": {
+          "id": "t013-report-ungated-worker-001:activation",
+          "sha256": "b81627a1e9d4a0727214c330e1203576e285278468b208aca5cd6283f1950e58"
+        },
+        "actor": {
+          "authorship": "t013-report-ungated-worker-001",
+          "family": "codex-native-default",
+          "id": "t013-report-ungated-worker-001"
+        },
+        "basis": {
+          "method_profile": {
+            "id": "urn:a-c:fd-support:method:claude-rc9:executive:1",
+            "sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+          },
+          "observations": []
+        },
+        "consumer": "/root",
+        "frame": {
+          "id": "t013-report-helper-frame",
+          "revision": "1"
+        },
+        "id": "t013-report-ungated-worker-001:return",
+        "schema": "a_c.fd-support.closed-return/1",
+        "subject": {
+          "id": "urn:a-c:T013:report-helper:001",
+          "sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829"
+        }
+      },
+      "workspace": "/private/tmp/ac-t013-report-001/ungated"
+    }
+  },
+  "checker_config": {
+    "adapter_sha256": "d37de63f2b809e7a02d88d560b29b4900e8cda6217cfbc32e5796f40065659b8",
+    "entry_sha256": "f578f46afda709ea97270222507ea83eecdfe01b0bd6a56504f1693753a40831",
+    "python": {
+      "path": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+      "sha256": "a7f5b535d61d1c7326824204ac80f045a97a652abb154421e2c74fcc365a3539"
+    },
+    "root": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean",
+    "runtime_identity": {
+      "pins": {
+        ".cache/formal-origin-v1/selection.json": "a6f7cce1d1654d43c4cc7c05445a39c090e3ff4b490bf7646d8870835ae1c8af",
+        "AC/Closure.lean": "d8c66f511c486eeaf40393733779148843e2ce075e2540cb41259ed9b23e011f",
+        "AC/GateProof.lean": "0359f5c3593c9e637758abb94cd0e1ca37d69b00a618c0049d39cd12c551d0f3",
+        "AC/GateRuntime.lean": "6714177025577839178623de17fa41feacdf7455519d62bd22028703b0d2d11f",
+        "AC/Model.lean": "943bd93abdcccb3cb084ab8e41196f8cac77629089e746c90d7da09ac90a22d5",
+        "AC/Projection.lean": "ac2a9ce8ed148400967519c724715f6ea491bceff960ed77249b5ff744692575",
+        "AC/Structure.lean": "cf7f586289dc20bfa3b35fe2a9c05f54d3865af7b412c289f07e25de950f56cb",
+        "lake-manifest.json": "8ccec766188ba32a956dd142439b4f08faa877512654162ae7cd2e35c1fdda34",
+        "lakefile.toml": "68338aa894a2a54fd3f4f9f22366359cc0107ba581459b29699f03c629437fc3",
+        "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+        "profiles/formal-gate-request.schema.json": "edb498b7af5dced9822055ee2e09938fffa5a22da33ea1ea9550d89dd90a233a",
+        "profiles/generation-signature-v1.json": "db4f0a4d41b575a1b06ecc75a0a56e3b4f26044830e5bff3624b2ae4f7a219a8",
+        "profiles/proof-support-v1.json": "7198879c3dfefe52ee4c980b33990197cd338eb19ac4e84cce3dd26a4cd66363",
+        "scripts/bootstrap.py": "7fc1038180d95d7a5c6ee8cecaea12f9f2534cc8d1af4933303c214cd5127fd7",
+        "scripts/check.py": "cad730b6de699ab2d4b2e8a7235e7b18bd28a4c8b5853e3f7838265a32a60deb",
+        "scripts/check_gate.py": "ebf41503202c17f0d5872b3b5700f33b6969d5bee61befac680540e6a9093642",
+        "scripts/formal_gate.py": "f578f46afda709ea97270222507ea83eecdfe01b0bd6a56504f1693753a40831",
+        "scripts/formal_reuse.py": "819d22b902724387f96d26156f1030af30e8e4bc21c6ec3dccc165664bfd91c4",
+        "scripts/formal_support.py": "20a8010b47c3d330f4ba07b398413acc9ad77bea5c5f9ecf817963b948ca98f6",
+        "scripts/gate_codegen.py": "d72f34fad6dfc95c2fdb9f6772a36e046eb700f16f700c6c18472b9bb3f3e455",
+        "scripts/generate_fixture.py": "ae36a07ff8ae3106eca66f346cdd82eb3d476ec1b407c944ed32987273705ca4",
+        "scripts/generation_profile.py": "7f65b5ff763cf2d7b9ab9ef7ae18584dd5a5590418e10d30e186f8261ff67ace",
+        "scripts/import_fixture.py": "5a63b45523dcdbf69b87f39864f28f99ee58890e70c4b3073b057fb80a864d7a",
+        "scripts/runtime_process.py": "dac99212afddad9f6c0d42f13c4c1ad2faa4ab0fa8ea2e26f09dc3af3a904018",
+        "toolchain-lock.json": "ac1fc82fc9b6df1f955b6538a4c91cd9f246ae2f23a38e17e6b4ad9482a2c20b"
+      },
+      "sha256": "065648e6cc971be7edc75c1fa7b0428351357fe312146059b71fb788842313a7"
+    },
+    "schema": "a_c.graphify.formal-checker/1",
+    "timeout_seconds": 600
+  },
+  "execution_selection_sha256": "4f3c6a063c427cb09f55c5f2a8821ba08c058b47c9efdb1d7d9c252f2c5262bc",
+  "schema": "t013.runtime-preparation.manifest/1",
+  "source_pins": {
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_formal_gate.py": "d37de63f2b809e7a02d88d560b29b4900e8cda6217cfbc32e5796f40065659b8",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_graph.py": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py": "f65efad15fd770075650ce0484df5b1cea14612047a82918d35fdc4f870deafa",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_composition.py": "3b6c58d90280aa65fe5c1d8b9bb58a37a15376fcff1ef71e7f248f509df52625",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_core.py": "024470f433a891d5ecdef3f4e08e5d8cfa5b66df16bf36270d2865d6b1450b5b",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_effects.py": "5d2f4cd9ef2a450f895dad61a136756e05bc443717644268f66db127dfb684af",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/examples/fd-support/actor_cli.py": "3f0bd239339e635f4e49ae89a00f0857f4672cb177a5dd2ce03f124f0b116528"
+  },
+  "template_only": false
+}

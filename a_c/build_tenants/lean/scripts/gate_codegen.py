@@ -173,13 +173,31 @@ def model_proof(imported):
     else:text+=f'theorem model_checked : checkModel model = true :=\n checked_of_wellFormed model (wellFormed_of_range model {n} keys_exact names_checked external_checked separate edgeBounds refBounds)\n'
     return text+'#print axioms model_checked\nend AC.GateData\n'
 
-def views_source(cases):
+def views_source(imported,cases):
     text='module\npublic import GateModel\n@[expose] public section\nset_option maxRecDepth 100000\nset_option maxHeartbeats 0\nset_option debug.skipKernelTC false\nnamespace AC.GateData\n'
     for i,c in enumerate(cases):
         budget=c['effective_budget'];size=c['required_count']
         text+=f'def seeds{i} : Finset Nat := ({numbers(c["seeds"])} : List Nat).toFinset\n'
         text+=f'def trace{i} : List Nat := {numbers(c["order"])}\ndef included{i} : Finset Nat := ({numbers(c["included"])} : List Nat).toFinset\n'
-        text+=f'theorem checked{i} : checkCertificate model.dependencies model.localKeys seeds{i} trace{i} = true := by\n rw [localKeys_range model _ keys_exact]\n decide +kernel\n'
+        known=set(c['seeds']);parents=[]
+        for step,child in enumerate(c['order']):
+            parent=min((a for a,b in imported['edges'] if b==child and a in known),default=None)
+            if parent is None:
+                raise ValueError(f'Closure trace has no earlier parent at selection {i}, step {step}')
+            parents.append(parent);known.add(child)
+            text+=f'theorem witness_edge{i}_{step} : {child} ∈ model.dependencies {parent} := by decide +kernel\n'
+        # Python supplies only witnesses. Both the original model edge and the
+        # parent's membership in the preceding known set remain kernel checked.
+        text+=f'theorem witness{i} : Witness model.dependencies seeds{i} trace{i} := by\n exact\n'
+        for step,parent in enumerate(parents):
+            text+='  '+' '*step+f'⟨⟨{parent}, by decide +kernel, witness_edge{i}_{step}⟩,\n'
+        text+='  '+' '*len(parents)+'True.intro'+'⟩'*len(parents)+'\n'
+        n=len(imported['records'])
+        text+=f'theorem seed_nonempty{i} : seeds{i}.Nonempty := by decide +kernel\n'
+        text+=f'theorem seed_universe{i} : seeds{i} ⊆ Finset.range {n} := by decide +kernel\n'
+        text+=f'theorem trace_universe{i} : traceSet seeds{i} trace{i} ⊆ Finset.range {n} := by decide +kernel\n'
+        text+=f'theorem closed{i} : Closed model.dependencies (traceSet seeds{i} trace{i}) := by decide +kernel\n'
+        text+=f'theorem checked{i} : checkCertificate model.dependencies model.localKeys seeds{i} trace{i} = true := by\n rw [localKeys_range model _ keys_exact]\n exact decide_eq_true ⟨seed_nonempty{i}, seed_universe{i}, trace_universe{i}, witness{i}, closed{i}⟩\n'
         text+=f'theorem set{i} : traceSet seeds{i} trace{i} = included{i} := by decide +kernel\n'
         text+=f'theorem reachability{i} (x : Nat) : x ∈ included{i} ↔ Reachable model.dependencies seeds{i} x := by\n rw [← set{i}]\n exact certificate_exact_reachability model.dependencies model.localKeys seeds{i} trace{i} checked{i} x\n'
         if budget>=size:

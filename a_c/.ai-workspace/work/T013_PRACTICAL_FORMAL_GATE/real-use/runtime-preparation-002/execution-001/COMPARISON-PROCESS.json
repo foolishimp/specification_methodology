@@ -1,0 +1,40 @@
+{
+  "schema": "a_c.T013.phase-a-context-comparison-process/1",
+  "command": [
+    "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "-B",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/real-use/runtime-preparation-002/compare_contexts.py",
+    "--runtime",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/real-use/runtime-preparation-002/execution-001/runtime",
+    "--ungated-context",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/real-use/runtime-preparation-001/execution/evidence/objects/39879b57010af12213d7ffe7d0ce94c16fb84d978e9245fe80168e0f403372be.json",
+    "--gated-context",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/real-use/runtime-preparation-001/execution/evidence/objects/e453f4ccdb3a267d93861e1e415ba8d1f84260e2f29a7c44263b864732b40318.json"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 2.4251000829972327,
+  "comparison_sha256": "7cdeb52823614d09316b76ad21d7846eafa9bfd4cb6962fd67e47e9079dbbae9",
+  "contexts": {
+    "ungated": {
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/real-use/runtime-preparation-001/execution/evidence/objects/39879b57010af12213d7ffe7d0ce94c16fb84d978e9245fe80168e0f403372be.json",
+      "artifact": {
+        "id": "sha256:39879b57010af12213d7ffe7d0ce94c16fb84d978e9245fe80168e0f403372be",
+        "sha256": "39879b57010af12213d7ffe7d0ce94c16fb84d978e9245fe80168e0f403372be"
+      },
+      "rendered_sha256": "e1d29b7b9fa4fce877aeec641e1730d9e9f57fdab7049fecaab355aa24e9e77c",
+      "rendered_bytes": 380548,
+      "actual_response_sha256": "ef5415d91801c441a87d517ebb72adcea30dabfb5394a5a47cc9a58936d0ec48"
+    },
+    "gated": {
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/real-use/runtime-preparation-001/execution/evidence/objects/e453f4ccdb3a267d93861e1e415ba8d1f84260e2f29a7c44263b864732b40318.json",
+      "artifact": {
+        "id": "sha256:e453f4ccdb3a267d93861e1e415ba8d1f84260e2f29a7c44263b864732b40318",
+        "sha256": "e453f4ccdb3a267d93861e1e415ba8d1f84260e2f29a7c44263b864732b40318"
+      },
+      "rendered_sha256": "f4c740d577337af344b07c376455746d25d3e4489d8b9d2da9cb79be2c057990",
+      "rendered_bytes": 381108,
+      "actual_response_sha256": "4517caeb297db6ea132c428f6a7c30a7f5d6ad3133f5a12135c44b03f3ae28e3"
+    }
+  },
+  "no_effects": "Reviewed comparator regenerates pure expected Contexts only; no proof, persistence, admission or actor."
+}

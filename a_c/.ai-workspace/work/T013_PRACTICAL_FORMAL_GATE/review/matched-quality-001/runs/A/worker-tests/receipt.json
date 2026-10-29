@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "/usr/local/bin/python3",
+    "-I",
+    "-S",
+    "-B",
+    "-c",
+    "import sys,unittest;sys.path.insert(0,sys.argv[1]);s=unittest.defaultTestLoader.discover(sys.argv[1],pattern='test_gate_report.py');r=unittest.TextTestRunner(verbosity=2).run(s);sys.exit(0 if r.wasSuccessful() else 1)",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/review/matched-quality-001/copies/A"
+  ],
+  "exit": 0,
+  "scope": "Additional self-test reproduction, not independent acceptance oracle; frozen scratch directory preserved",
+  "seconds": 0.2480587917380035,
+  "stderr_sha256": "a433bc2eb0cdd5f659e68bcf7d40b39ddfc02e54feb51d2e983b295be31510f6",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

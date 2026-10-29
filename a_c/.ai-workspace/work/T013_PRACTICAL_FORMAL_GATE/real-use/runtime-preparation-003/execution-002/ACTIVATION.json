@@ -1,0 +1,61 @@
+{
+  "Executive": "/root",
+  "Worker_territory": "Only own /private/tmp/ac-t013-report-002/{arm}/{gate_report.py,test_gate_report.py,README.md,support/**,scratch/**}; inputs immutable.",
+  "activated_utc": "2026-10-29T19:06:00.381571+00:00",
+  "actor": "/root/ac_scale_checkpoint_writer",
+  "automatic_retry": false,
+  "basis": {
+    "checker_raw_sha256": "c44cfa4b1d8817b9ef30fbdf31c101364d577fcd152068b233ca2703f7afbe61",
+    "owner_ticket_sha256": "c5c8ed56ebfef3f51406be4b63d7d1fd3976de294ce0a64c801ea3f4da44fefc",
+    "phase_a_closure_sha256": "e4c7455ed963c88115158a0919d960e6866b65b4d2148ecab6c610c67b57c6e2",
+    "protocol_sha256": "547a73826a8bd28721661361106d5a8e53844ca3a3a8b2a10dd5b66d7a2ae4f6",
+    "ready_requests_sha256": "cafe93b5c4c982e5476884a7195c7f6c785d4ce2bb56b988a2a3d0dc5385725f",
+    "runtime_identity_sha256": "f492806bfb58bcabad63a89caa4c62c57bd37f8ed99b8fed764a9a6c5b8908c9",
+    "task_sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829"
+  },
+  "bounds": {
+    "actor_seconds": 900,
+    "checker_seconds": 600,
+    "checking_process_seconds": 90,
+    "compiler_options": [
+      "-j1",
+      "-M4096"
+    ],
+    "grace_seconds": 2,
+    "input_bytes": 2097152,
+    "output_bytes": 16777216,
+    "supervisor_seconds": 1000
+  },
+  "forbidden": [
+    "direct native/provider bypass",
+    "additional actor/model call or retry",
+    "model/effort override",
+    "source/owner/common/package/Git edits",
+    "output repairs or semantic grading",
+    "first arm output in second arm context"
+  ],
+  "heavy_window": "Exclusive Root grant; no unrelated proof/hash work.",
+  "initial_actor_calls": 0,
+  "maximum_actor_invocations_per_arm": 1,
+  "maximum_total_actor_invocations": 2,
+  "operation": "Two actual native F_P Worker invocations through public dispatch.start, dispatch.observe and return.capture; sequential ungated then gated.",
+  "role": "Worker/Writer/Operator",
+  "schema": "a_c.T013.actual-phase-b-activation/1",
+  "sequence": [
+    "ungated",
+    "gated"
+  ],
+  "stop_conditions": [
+    "prelaunch refusal/error",
+    "first arm not settled or local cleanup/currentness unconfirmed",
+    "unresolved unauthorized effects",
+    "input/source/policy/executable mismatch"
+  ],
+  "transport_amendment": "Root explicitly added the two frozen plan transport directories; create only their necessary empty common parent before helper use, leave each call-specific directory fresh. No plan/path/policy change.",
+  "write_territory": [
+    "real-use/runtime-preparation-003/execution-002/**",
+    "real-use/runtime-preparation-001/execution/evidence/** append/new only",
+    "real-use/runtime-preparation-001/execution/actor-transports/t013-report-ungated-worker-001/**",
+    "real-use/runtime-preparation-001/execution/actor-transports/t013-report-gated-worker-001/**"
+  ]
+}

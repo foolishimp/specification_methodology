@@ -71,6 +71,32 @@ The optimization is a proof certificate, not a stronger assumption. Resource
 exhaustion in any concrete proof remains `incomplete`. Successful model checking
 is performed once per batch; each selection reuses that exact theorem.
 
+### Explicit trace witnesses
+
+`gate_codegen.views_source` receives the exact imported model and certificates.
+For each trace step it selects an actual dependency edge from a parent already
+in the seeds or preceding trace. Generated kernel proofs establish both that
+parent's membership in the preceding known set and the child's membership in
+`model.dependencies parent`, which retains the original full edge relation.
+Nested witnesses construct the existing `Witness` proposition directly. No
+precomputed dependency table or altered dependency definition is introduced.
+
+Seed nonemptiness, seed inclusion in the exact key range, trace-set inclusion in
+that range and final dependency closure retain their original finite kernel
+decisions. These four propositions and the explicit witness prove the unchanged
+`checkCertificate model.dependencies model.localKeys seeds trace = true` premise.
+The exact-set, reachability, success/refusal, `projectWithProof` and pointwise
+runtime-equality suffix is unchanged. A missing parent is an internal generation
+inconsistency retained as `incomplete`; it cannot create a proof or a verified
+result. The focused generator test checks that failure retention.
+
+This construction passed the actual 29-record case that exhausted the prior
+combined decision. It does not establish a unique allocator cause: the preceding
+range and closure probes discharged separately, and failed instrumentation is
+retained in the diagnosis. Kernel negatives separately reject a real edge whose
+parent is not yet known, a known parent with no such edge, and an omitted required
+residual. Generic Lean definitions and the established support remain unchanged.
+
 ### Proof-directed runtime
 
 The reusable gate executes `projectWithProof`, a specialization of the unchanged
@@ -257,9 +283,11 @@ original and current result retain that scope and Darwin child-RSS limits. The
 4096 MB, 90-second process and 600-second public invocation bounds are unchanged.
 `tests/test_formal_reuse.py` uses isolated synthetic stores and stubbed proof/support
 processes only. It is control evidence, not real formal qualification. The added
-helper and selected origin change identity: final integrated small/full cold
-establishment and reuse qualification are required; prior successful public
-results cannot be retrospectively signed or imported.
+helper and selected origin participate in identity. A deciding-source or origin
+selection change requires fresh exact-current establishment and qualification;
+prior successful public results cannot be retrospectively signed or imported.
+The actual small/full cold and reuse runs for the integrated predecessor are
+retained under `T013_PRACTICAL_FORMAL_GATE/reuse/qualification-001`.
 
 Qualification observations under `T012_FORMAL_GATE/runtime/qualification-002`
 cover two new test-authored subjects and the actual Graphify view mapping. Small
@@ -305,3 +333,31 @@ children of each external invocation, not measurements attributed to a named
 stage. Failed identity encodings, representation experiments and the first public
 runtime timeout remain retained. The exact scale return links their evidence and
 the separate source-currentness, literal-escaping and raw-origin controls.
+
+### Current explicit-parent cut
+
+The source review at `T013_PRACTICAL_FORMAL_GATE/review/view-repair-source-001`
+and public Phase A at `real-use/runtime-preparation-003/execution-001` bind the
+current full runtime identity
+`f492806bfb58bcabad63a89caa4c62c57bd37f8ed99b8fed764a9a6c5b8908c9`.
+Its origin-free portable identity is
+`4f9e8402122f1722559a4bb7d7559b09ce107f8de8a38de600aedc947611072d`;
+only the fixed origin-selection coordinate is omitted. The support manifest
+remains `7198879c3dfefe52ee4c980b33990197cd338eb19ac4e84cce3dd26a4cd66363`.
+
+That public invocation verified the complete original 1,987-record model, seeds
+182 and 278, 27-step trace and supplied 29-record view at budget 29. It freshly
+compiled all seven dynamic proof modules, replayed the concrete proof and ran
+the actual projection/runtime under the unchanged limits. Result
+`72ad6dc64938ab0e76476f5d479c9154035131354423ebbbb9fde38c8737dfe4`
+and evidence manifest
+`fc0801aa9ecdd6c2cfd411e420246da66c78d445d87946cec4ac366bad0f699a`
+identify that exact success; no previous proof result was imported as current.
+
+Phase B at `real-use/runtime-preparation-003/execution-002` records the two
+selected real Worker calls and authenticated returns. Execution completion does
+not decide task quality, practical benefit, semantic acceptance or release.
+Package selection/delivery records identify each local archive and installed
+execution separately; origin-free installation must execute its own current
+cold fallback. Conserving exact Darwin-arm64 support is not fresh-machine or
+cross-platform qualification.

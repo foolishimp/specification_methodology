@@ -1,0 +1,65 @@
+{
+  "changed_source": {
+    "build_tenants/lean/scripts/formal_gate.py": {
+      "after_sha256": "2fcd6fd3e94af5cf81001643f4e252a64b156429a0edf5fa2898082958348f51",
+      "before_sha256": "f578f46afda709ea97270222507ea83eecdfe01b0bd6a56504f1693753a40831"
+    },
+    "build_tenants/lean/scripts/gate_codegen.py": {
+      "after_sha256": "0a348c16aeaec6cb421aa56374218b9035a0f159b85eb789394d4f49f9096a86",
+      "before_sha256": "d72f34fad6dfc95c2fdb9f6772a36e046eb700f16f700c6c18472b9bb3f3e455"
+    },
+    "build_tenants/lean/tests/test_gate_codegen.py": {
+      "after_sha256": "122a64c482218ba0bae6e406c5bfb20cf70a14ce74bfd2c5f25ee65eaa81dada",
+      "before_sha256": null
+    }
+  },
+  "checker_changes": [
+    "entry_sha256",
+    "runtime_identity.sha256",
+    "runtime_identity.pins.scripts/formal_gate.py",
+    "runtime_identity.pins.scripts/gate_codegen.py"
+  ],
+  "observed_utc": "2026-10-29T18:31:32.431689+00:00",
+  "origin_free_identity_sha256": "4f9e8402122f1722559a4bb7d7559b09ce107f8de8a38de600aedc947611072d",
+  "private_coordinate": {
+    "name": ".cache/formal-origin-v1/selection.json",
+    "sha256": "a6f7cce1d1654d43c4cc7c05445a39c090e3ff4b490bf7646d8870835ae1c8af",
+    "standing": "Copied from selected public exact identity only; no acquisition of private origin selection/key/store."
+  },
+  "public_runtime_pins_verified": {
+    "AC/Closure.lean": "d8c66f511c486eeaf40393733779148843e2ce075e2540cb41259ed9b23e011f",
+    "AC/GateProof.lean": "0359f5c3593c9e637758abb94cd0e1ca37d69b00a618c0049d39cd12c551d0f3",
+    "AC/GateRuntime.lean": "6714177025577839178623de17fa41feacdf7455519d62bd22028703b0d2d11f",
+    "AC/Model.lean": "943bd93abdcccb3cb084ab8e41196f8cac77629089e746c90d7da09ac90a22d5",
+    "AC/Projection.lean": "ac2a9ce8ed148400967519c724715f6ea491bceff960ed77249b5ff744692575",
+    "AC/Structure.lean": "cf7f586289dc20bfa3b35fe2a9c05f54d3865af7b412c289f07e25de950f56cb",
+    "lake-manifest.json": "8ccec766188ba32a956dd142439b4f08faa877512654162ae7cd2e35c1fdda34",
+    "lakefile.toml": "68338aa894a2a54fd3f4f9f22366359cc0107ba581459b29699f03c629437fc3",
+    "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+    "profiles/formal-gate-request.schema.json": "edb498b7af5dced9822055ee2e09938fffa5a22da33ea1ea9550d89dd90a233a",
+    "profiles/generation-signature-v1.json": "db4f0a4d41b575a1b06ecc75a0a56e3b4f26044830e5bff3624b2ae4f7a219a8",
+    "profiles/proof-support-v1.json": "7198879c3dfefe52ee4c980b33990197cd338eb19ac4e84cce3dd26a4cd66363",
+    "scripts/bootstrap.py": "7fc1038180d95d7a5c6ee8cecaea12f9f2534cc8d1af4933303c214cd5127fd7",
+    "scripts/check.py": "cad730b6de699ab2d4b2e8a7235e7b18bd28a4c8b5853e3f7838265a32a60deb",
+    "scripts/check_gate.py": "ebf41503202c17f0d5872b3b5700f33b6969d5bee61befac680540e6a9093642",
+    "scripts/formal_gate.py": "2fcd6fd3e94af5cf81001643f4e252a64b156429a0edf5fa2898082958348f51",
+    "scripts/formal_reuse.py": "819d22b902724387f96d26156f1030af30e8e4bc21c6ec3dccc165664bfd91c4",
+    "scripts/formal_support.py": "20a8010b47c3d330f4ba07b398413acc9ad77bea5c5f9ecf817963b948ca98f6",
+    "scripts/gate_codegen.py": "0a348c16aeaec6cb421aa56374218b9035a0f159b85eb789394d4f49f9096a86",
+    "scripts/generate_fixture.py": "ae36a07ff8ae3106eca66f346cdd82eb3d476ec1b407c944ed32987273705ca4",
+    "scripts/generation_profile.py": "7f65b5ff763cf2d7b9ab9ef7ae18584dd5a5590418e10d30e186f8261ff67ace",
+    "scripts/import_fixture.py": "5a63b45523dcdbf69b87f39864f28f99ee58890e70c4b3073b057fb80a864d7a",
+    "scripts/runtime_process.py": "dac99212afddad9f6c0d42f13c4c1ad2faa4ab0fa8ea2e26f09dc3af3a904018",
+    "toolchain-lock.json": "ac1fc82fc9b6df1f955b6538a4c91cd9f246ae2f23a38e17e6b4ad9482a2c20b"
+  },
+  "runtime_identity_sha256": "f492806bfb58bcabad63a89caa4c62c57bd37f8ed99b8fed764a9a6c5b8908c9",
+  "schema": "a_c.T013.source-only-selected-runtime-pins/1",
+  "source_closure": {
+    "path": "lean/view-repair-implementation-001/CLOSED.json",
+    "sha256": "be5621baa8dcd9177389201fd6319d27b054e5260a089ea2844f0c45edf8f60d"
+  },
+  "source_record": {
+    "path": "lean/view-repair-implementation-001/SOURCE-PINS.json",
+    "sha256": "f19d592d81a76a4c8c1153e867982aba750c46838fd7a827fc6cebdf08ecd242"
+  }
+}

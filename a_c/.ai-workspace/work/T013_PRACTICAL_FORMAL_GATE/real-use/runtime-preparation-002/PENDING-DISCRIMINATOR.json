@@ -1,0 +1,17 @@
+{
+  "schema": "a_c.T013.template-refusal-check/1",
+  "checks": [
+    {
+      "arm": "ungated",
+      "result": "refused",
+      "reason": "Preparation templates cannot create dependent execution requests"
+    },
+    {
+      "arm": "gated",
+      "result": "refused",
+      "reason": "Preparation templates cannot create dependent execution requests"
+    }
+  ],
+  "scope": "Unchanged pure request-builder refusal before request construction; no public tool, Context, preflight, gate or actor call.",
+  "request_builder_sha256": "cc589ba818116fc1e6d5822188ac57e4e11f884a77c850bd764d1c25927b1765"
+}

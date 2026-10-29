@@ -1,0 +1,142 @@
+{
+  "arms": {
+    "gated": {
+      "actual_underlying_model": null,
+      "exact_input_bytes": 381036,
+      "exact_input_sha256": "f114593150b15dc49a5aa58c1f018f43e731f77d5d3c15eea632ebdd28a83bfa",
+      "meaning": "Worker statement and observed local execution only; independent quality assessment remains open.",
+      "model_unknown_reason": "Native JSONL exposes no selected model field; no inference from parent session.",
+      "monetary_cost": null,
+      "native_actor_invocations": 1,
+      "native_process": {
+        "ended_ns": 1793301312618915000,
+        "failure": null,
+        "input_bytes": 381036,
+        "input_forwarded_bytes": 381036,
+        "output_available": true,
+        "pid": 40205,
+        "returncode": 0,
+        "schema": "a_c.fd-support.actor-cli-observation/1",
+        "started_ns": 1793301219491118000,
+        "stderr_bytes": 0,
+        "stderr_eof": true,
+        "stdout_bytes": 42059,
+        "stdout_eof": true,
+        "termination_requests": [],
+        "unknowns": [
+          "descendant/process-tree end and external side effects",
+          "host/model active-context size",
+          "backend retries or unreported usage",
+          "semantic outcome and owner disposition"
+        ]
+      },
+      "native_process_seconds": 93.127797,
+      "operator_repairs_or_actor_retries": 0,
+      "protected_environment_pass_through_observed": {},
+      "provider_cost_fields": [],
+      "raw_provider_jsonl": "real-use/runtime-preparation-001/execution/actor-transports/t013-report-gated-worker-001/vendor.stdout",
+      "raw_provider_jsonl_sha256": "e1441fe0f2accb1da8a743d94cbe9cae6015b64e8dec9d8422467322c0134176",
+      "reported_model_fields": [],
+      "reported_terminal_usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 1258880,
+        "input_tokens": 1468423,
+        "output_tokens": 5590,
+        "reasoning_output_tokens": 153
+      },
+      "reported_work_result": "candidate_ready",
+      "requested_settings": {
+        "defaults": "native CLI defaults with ignore-user-config; actual identity unknown until reported",
+        "selected_effort": null,
+        "selected_model": null
+      },
+      "return_artifact": {
+        "id": "sha256:f435e98f607bc0ab19157a75af29b7f0163b446247940e1a09d75dfb63838797",
+        "sha256": "f435e98f607bc0ab19157a75af29b7f0163b446247940e1a09d75dfb63838797"
+      },
+      "return_authenticated": true,
+      "return_binding_checks": {
+        "format_valid": true,
+        "gaps": []
+      },
+      "tool_completed_commands": 5,
+      "tool_completed_item_types": [
+        "agent_message",
+        "command_execution"
+      ],
+      "tool_failed_commands": 0
+    },
+    "ungated": {
+      "actual_underlying_model": null,
+      "exact_input_bytes": 380476,
+      "exact_input_sha256": "61390e83c91466c7cf6991c33c1bc07bf9309e83fb38384fb7e6e0a5c39693d7",
+      "meaning": "Worker statement and observed local execution only; independent quality assessment remains open.",
+      "model_unknown_reason": "Native JSONL exposes no selected model field; no inference from parent session.",
+      "monetary_cost": null,
+      "native_actor_invocations": 1,
+      "native_process": {
+        "ended_ns": 1793300942135355000,
+        "failure": null,
+        "input_bytes": 380476,
+        "input_forwarded_bytes": 380476,
+        "output_available": true,
+        "pid": 36603,
+        "returncode": 0,
+        "schema": "a_c.fd-support.actor-cli-observation/1",
+        "started_ns": 1793300880588034000,
+        "stderr_bytes": 0,
+        "stderr_eof": true,
+        "stdout_bytes": 40841,
+        "stdout_eof": true,
+        "termination_requests": [],
+        "unknowns": [
+          "descendant/process-tree end and external side effects",
+          "host/model active-context size",
+          "backend retries or unreported usage",
+          "semantic outcome and owner disposition"
+        ]
+      },
+      "native_process_seconds": 61.547321,
+      "operator_repairs_or_actor_retries": 0,
+      "protected_environment_pass_through_observed": {},
+      "provider_cost_fields": [],
+      "raw_provider_jsonl": "real-use/runtime-preparation-001/execution/actor-transports/t013-report-ungated-worker-001/vendor.stdout",
+      "raw_provider_jsonl_sha256": "6e2845b764de48b89b453b3720c893a614dcaf51b7ee820df41b0ffa59ddd1e6",
+      "reported_model_fields": [],
+      "reported_terminal_usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 1043456,
+        "input_tokens": 1252891,
+        "output_tokens": 4168,
+        "reasoning_output_tokens": 56
+      },
+      "reported_work_result": "candidate_ready",
+      "requested_settings": {
+        "defaults": "native CLI defaults with ignore-user-config; actual identity unknown until reported",
+        "selected_effort": null,
+        "selected_model": null
+      },
+      "return_artifact": {
+        "id": "sha256:294193676e8332cd0022ce515aa309f5a8981a53ca55c35327ad49dee6341462",
+        "sha256": "294193676e8332cd0022ce515aa309f5a8981a53ca55c35327ad49dee6341462"
+      },
+      "return_authenticated": true,
+      "return_binding_checks": {
+        "format_valid": true,
+        "gaps": []
+      },
+      "tool_completed_commands": 5,
+      "tool_completed_item_types": [
+        "agent_message",
+        "command_execution"
+      ],
+      "tool_failed_commands": 0
+    }
+  },
+  "automatic_retries": 0,
+  "backend_hidden_retries_or_unreported_calls": "unknown; exact native JSONL and selected transport retained",
+  "schema": "a_c.T013.actual-native-worker-observations/1",
+  "semantic_grades": null,
+  "third_call": false,
+  "total_actual_native_invocations": 2
+}

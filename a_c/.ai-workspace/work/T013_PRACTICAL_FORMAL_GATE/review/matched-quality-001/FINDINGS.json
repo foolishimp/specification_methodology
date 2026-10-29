@@ -1,0 +1,52 @@
+{
+  "arm_mapping_read": false,
+  "findings": [
+    {
+      "actual": "Exit 0; reported values -0.0; elapsed state reported and value -0.0",
+      "consequence": "Required value and negative/zero distinctions are lost; some finite accepted inputs are refused",
+      "evidence": "runs/A/I-number-negative-underflow/receipt.json",
+      "expected": "Preserve -1e-400; elapsed state invalid with null summary value",
+      "id": "Q-A-01",
+      "input": "case-inputs/I-number-negative-underflow.json",
+      "input_sha256": "58aee3bdbd87af3a3c3f1ce923455d7a54f36e6265bc583e904bd5c36687ff1d",
+      "location": "A/gate_report.py:27",
+      "related_location": "A/gate_report.py:61",
+      "same_cause": [
+        "I-number-precision",
+        "I-number-positive-underflow",
+        "I-number-finite-large",
+        "I-number-decimal-exponent-boundary"
+      ],
+      "severity": "S2",
+      "subject": "A",
+      "title": "Binary-float conversion changes finite values and misclassifies negative elapsed as reported zero"
+    },
+    {
+      "actual": "Exit 1, empty stdout, 1510-byte traceback ending decimal.InvalidOperation",
+      "consequence": "Rare short numeric input produces neither a report nor the declared error outcome",
+      "evidence": "runs/B/I-number-decimal-exponent-boundary/receipt.json",
+      "expected": "Valid finite JSON reports with exit 0 under unbounded TASK grammar; even parser refusal must follow exit-2 concise error contract",
+      "id": "Q-B-01",
+      "input": "case-inputs/I-number-decimal-exponent-boundary.json",
+      "input_sha256": "ce090a0e00ddcd1aac7c432c11b178ebfb1e8888b61f05e5ba6aab05c6064f4c",
+      "location": "B/gate_report.py:34",
+      "related_location": "B/gate_report.py:88",
+      "severity": "S3",
+      "subject": "B",
+      "title": "Decimal exponent-capacity exception escapes CLI result/error surface"
+    }
+  ],
+  "repair_performed": false,
+  "schema": "a_c.T013.independent-neutral-quality-findings/1",
+  "severities": {
+    "S0": [],
+    "S1": [],
+    "S2": [
+      "Q-A-01"
+    ],
+    "S3": [
+      "Q-B-01"
+    ],
+    "S4": []
+  }
+}

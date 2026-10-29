@@ -1,0 +1,66 @@
+{
+  "checking_seconds": 90,
+  "child_high_water_rss_bytes": 30162944,
+  "expected_argv": [
+    "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "-I",
+    "-S",
+    "-B",
+    "-X",
+    "pycache_prefix=/dev/null",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/scripts/formal_gate.py",
+    "check-evidence",
+    "--bundle",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/qualification-001/controls/omitted-residual",
+    "--output",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/qualification-001/control-omitted-residual"
+  ],
+  "external_invocation_seconds": 0.15586033323779702,
+  "finished_utc": "2026-10-29T16:47:03.600657+00:00",
+  "label": "control-omitted-residual",
+  "lean_memory_mb": 4096,
+  "measurement_scope": "From before reviewed adapter validation/launch through complete CLI exit and publication; excludes writing this qualification receipt.",
+  "origin_after": {
+    "entries": [
+      "a1189f1ef014bdec218a1c2abd15943486dbdfed1856c49c4012d3b53c1ca6f1.json",
+      "fc0ab1c301e5adf906799193e6aba1a2d124cad6c9a15a6ef5e6060509fa0e71.json"
+    ],
+    "entry_count": 2,
+    "pending_count": 0,
+    "present": true
+  },
+  "origin_before": {
+    "entries": [
+      "a1189f1ef014bdec218a1c2abd15943486dbdfed1856c49c4012d3b53c1ca6f1.json",
+      "fc0ab1c301e5adf906799193e6aba1a2d124cad6c9a15a6ef5e6060509fa0e71.json"
+    ],
+    "entry_count": 2,
+    "pending_count": 0,
+    "present": true
+  },
+  "outer_seconds": 600,
+  "parent_high_water_rss_bytes": 42975232,
+  "physical_rss_cap": false,
+  "returncode": 2,
+  "returned": {
+    "checked_claims": [],
+    "evidence": null,
+    "limits": [
+      "Finite declared structural model/closure/projection only; no semantic acceptance.",
+      "Whole-model-source-correspondence covers only supplied or carrier-recovered model JSON; original prose/corpus-to-model F_P fidelity remains opaque and unproved.",
+      "Python profile/parser/generator and runtime serialization remain tested trusted bridges.",
+      "Python API imports and interpreter initialization remain trusted-host responsibilities; the CLI isolates helper loading after startup.",
+      "Context binding is metadata; consumer must check actual delivered bytes.",
+      "Crossing relations are checked source-derived metadata, not a Lean theorem."
+    ],
+    "reason": "Exact local establishment binding changed",
+    "schema": "a_c.formal-gate.result/1",
+    "status": "refused"
+  },
+  "rss_scope": "Darwin bytes: launcher self peak and cumulative peak over reaped children of this isolated launcher invocation; child peak is not stage-attributed.",
+  "schema": "a_c.T013.public-invocation/1",
+  "started_utc": "2026-10-29T16:47:03.444297+00:00",
+  "status": "refused",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "ac31e101328ed02b51c32cea9cff0b020057eb202acaae3f8b14138b96bfdbed"
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "t013.candidate/1",
+  "deliverables": [
+    {
+      "path": "gate_report.py",
+      "raw_sha256": "f7bbeae2c15866ef537d90b8ab777eec9ae7ea77111af5304431a50498dee9a9",
+      "bytes": 4154
+    },
+    {
+      "path": "test_gate_report.py",
+      "raw_sha256": "899e87ac29544f67c4a470ed27fa544a8842d0910b1689d8372a5acdfd1aa3e1",
+      "bytes": 6724
+    },
+    {
+      "path": "README.md",
+      "raw_sha256": "c2ae43506e8d08d92e65b38df1787ac580d3c29a40e9ec970e3f2957de2f31ad",
+      "bytes": 1411
+    },
+    {
+      "path": "support/test-output.txt",
+      "raw_sha256": "ded8591643b909209762f1133645b23025bb7e7dfabc26d8a856b71c23836ba8",
+      "bytes": 668
+    }
+  ],
+  "test": {
+    "command": "python3 -B -m unittest -v",
+    "exit_code": 0,
+    "observation": "7 tests passed; actual output retained in support/test-output.txt"
+  }
+}

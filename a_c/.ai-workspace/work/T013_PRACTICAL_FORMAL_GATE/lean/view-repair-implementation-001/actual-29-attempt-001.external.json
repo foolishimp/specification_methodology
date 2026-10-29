@@ -1,0 +1,67 @@
+{
+  "schema": "a_c.T013.view-repair-component-control/1",
+  "label": "actual-29-attempt-001",
+  "started_utc": "2026-10-29T18:20:12.995164+00:00",
+  "argv": [
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/.toolchain/lean-4.35.0-darwin_aarch64/bin/lean",
+    "-j",
+    "1",
+    "-M",
+    "4096",
+    "-R",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/view-repair-implementation-001/actual-29",
+    "-o",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/view-repair-implementation-001/actual-29/GateViews.olean",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/view-repair-implementation-001/actual-29/GateViews.lean"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean",
+  "LEAN_PATH": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/real-use/runtime-preparation-001/execution/evidence/formal/3894ddfbbea44daeb14009252f0e9148/bundle:/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/.lake/build/lib/lean:/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/.lake/packages/Cli/.lake/build/lib/lean:/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/.lake/packages/batteries/.lake/build/lib/lean:/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/.lake/packages/Qq/.lake/build/lib/lean:/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/.lake/packages/aesop/.lake/build/lib/lean:/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/.lake/packages/importGraph/.lake/build/lib/lean:/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/.lake/packages/plausible/.lake/build/lib/lean:/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/.lake/packages/mathlib/.lake/build/lib/lean",
+  "source_sha256": "634202ee564e7337765607bdf155d318fc75347852ce7dea18d44a4902c11b66",
+  "timeout_seconds": 90,
+  "physical_rss_cap": false,
+  "evidence_kind": "Actual kernel-checked generated component; not complete public gate qualification",
+  "rss_scope": "Darwin native bytes: isolated launcher self and RUSAGE_CHILDREN high-water field for the reaped compiler; no simultaneous total-RSS claim.",
+  "returncode": 0,
+  "compile_status": "compiled",
+  "resource_failure": false,
+  "audit": {
+    "AC.GateData.checked0": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AC.GateData.set0": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AC.GateData.reachability0": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AC.GateData.result0": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AC.GateData.execution_matches_project0": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "audit_status": "PASS",
+  "seconds": 11.866845750249922,
+  "finished_utc": "2026-10-29T18:20:24.862398+00:00",
+  "launcher_peak_rss_bytes": 27344896,
+  "reaped_child_peak_rss_bytes": 2605973504,
+  "log_sha256": "f82f3e8f7640bca99be6d30f10151a49bc958d3ff13cb1fe93df794c985756cb",
+  "produced": {
+    "GateViews.ir": "fe4cc26c461fc608ad1ab9d23268664bfb0073d02d0af662be6700c5b7a13aee",
+    "GateViews.ir.sig": "a092dee3843e33a19cc22e3314bdbb65cbd2cc6087a1607e2b3a2da1fea5ceb3",
+    "GateViews.olean": "38459a6575ac5ac659825296d831a06b6e4bc5e3c7cb80018c5e5bccce7af7e9",
+    "GateViews.olean.private": "abc385c96760b31d5c58933141e93deb0cb6b4ec95a74e5d17938ab5ca400cd6",
+    "GateViews.olean.server": "4699d61e2930767b46846caaed33ffc4b53600ca49238360cbf9a852f7720291"
+  }
+}

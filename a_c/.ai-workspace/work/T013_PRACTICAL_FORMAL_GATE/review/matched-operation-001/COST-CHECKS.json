@@ -1,0 +1,98 @@
+{
+  "actual_worker_models": null,
+  "all_invocation_intervals_additive": false,
+  "arithmetic_total_public_process_seconds": 550.1381302550435,
+  "arms": {
+    "gated": {
+      "derived_uncached_input_tokens": 209543,
+      "dispatch_cli_seconds": 15.02298945793882,
+      "dispatch_to_capture_end_seconds": 184.038447,
+      "dispatch_to_helper_end_seconds": 124.53526902198792,
+      "native_seconds": 93.127797,
+      "registered_helper_seconds": 96.520629,
+      "summed_public_operation_seconds": 21.670346290804446,
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 1258880,
+        "input_tokens": 1468423,
+        "output_tokens": 5590,
+        "reasoning_output_tokens": 153
+      }
+    },
+    "ungated": {
+      "derived_uncached_input_tokens": 209435,
+      "dispatch_cli_seconds": 3.5478374999947846,
+      "dispatch_to_capture_end_seconds": 196.480893,
+      "dispatch_to_helper_end_seconds": 69.39131188392639,
+      "native_seconds": 61.547321,
+      "registered_helper_seconds": 64.621421,
+      "summed_public_operation_seconds": 9.99434974975884,
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 1043456,
+        "input_tokens": 1252891,
+        "output_tokens": 4168,
+        "reasoning_output_tokens": 56
+      }
+    }
+  },
+  "coordination_tokens": null,
+  "failed_phase_a": {
+    "checking_only_seconds": 224.67383679188788,
+    "standing": "incomplete; no actor; retained cost, not invalid model",
+    "whole_preflight_seconds": 227.9924090001732
+  },
+  "interpretation": [
+    "Cached input is a subset of input, not an extra chargeable token count. Reasoning output is preserved separately without a billing assumption.",
+    "Native/helper/reuse/dispatch/capture intervals overlap; request-to-capture includes operator polling and analysis.",
+    "Summed public process durations are accounting of observations, not end-to-end wall time; source batches may overlap.",
+    "Cold and failed Phase A, operator corrections and assessment are retained; they are not zero because recurring reuse is cheaper.",
+    "-M4096 is a Lean allocation option, not a measured physical 4 GiB process cap. Darwin child RSS is aggregate high-water, not a per-stage or simultaneous total.",
+    "Only two ordered actual outputs were observed. Different absolute prompt layout, provider-cache state, unknown model identity and no random arm order prevent causal quality/cost inference."
+  ],
+  "money": null,
+  "owner_preimage_sha256": "c5c8ed56ebfef3f51406be4b63d7d1fd3976de294ce0a64c801ea3f4da44fefc",
+  "phases": {
+    "failed_phase_a": {
+      "first_start": "2026-10-29T17:24:29.767608+00:00",
+      "last_finish": "2026-10-29T17:34:51.890911+00:00",
+      "public_operations": 40,
+      "summed_public_process_seconds": 236.38353550247848
+    },
+    "phase_b": {
+      "first_dispatch_to_last_capture_wall_seconds": 499.567936,
+      "first_start": "2026-10-29T19:07:53.622041+00:00",
+      "last_finish": "2026-10-29T19:16:13.189977+00:00",
+      "public_operations": 8,
+      "summed_public_process_seconds": 31.664696040563285
+    },
+    "successful_phase_a": {
+      "first_start": "2026-10-29T18:42:31.319478+00:00",
+      "last_finish": "2026-10-29T18:51:18.869516+00:00",
+      "public_operations": 40,
+      "summed_public_process_seconds": 282.08989871200174
+    }
+  },
+  "quality_check_process_seconds": 3.3997130817733705,
+  "reuse_checking_seconds": {
+    "dispatch": 9.298054750077426,
+    "supervisor": 9.222353250253946
+  },
+  "schema": "a_c.T013.independent-cost-reconciliation/1",
+  "successful_cold": {
+    "aggregate_child_high_water_bytes": 14612791296,
+    "checking_only_seconds": 268.20598662504926,
+    "comparison_seconds": 2.3646371657960117,
+    "finalizer_seconds": 0.1812384589575231,
+    "source_batch_seconds": 4.663150874897838,
+    "whole_preflight_seconds": 273.07198129221797
+  },
+  "unmeasured": [
+    "Total preparation/diagnostic/design/review/package effort",
+    "Operator and Reviewer model usage/cost",
+    "Provider hidden retries or unreported usage",
+    "Whole engagement wall time",
+    "Worker peak RSS/CPU/energy",
+    "Future output repair cost"
+  ]
+}

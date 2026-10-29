@@ -1,0 +1,49 @@
+{
+  "schema": "a_c.T013.package-delivery-activation/1",
+  "actor": "/root/ac_scale_reuse_worker",
+  "role": "Package Worker",
+  "delegating_executive": "/root",
+  "recorded_utc": "2026-10-29T17:00:35.541674+00:00",
+  "change_class": "realization_refactor",
+  "operation": "Build exact selected source package, archive/extract/repack, preserve pristine tree, copy exact selected local support once, and perform one installed origin-free small cold fallback.",
+  "write_territory": [
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/delivery-001/**",
+    "/private/tmp/ac-t013-lean-package-001/**"
+  ],
+  "source_root": "/Users/jim/src/apps/specification_methodology",
+  "basis": {
+    "installed_release": "stdo://releases/v2.5.1-rc.2/",
+    "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "calculus_sha256": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d"
+  },
+  "selected": {
+    "source_package_sha256": "e981245097c06f693fcbe89565d5724db2103982fdb7891e8413a8a6cdc86ee4",
+    "pre_execution_review_sha256": "1a69d600996a664ba04e27ea80b8de78e6236b009b03f82c93d70a573ca1d8d0",
+    "qualification_closed_sha256": "3fa8fa7f48fc5816ec2d34cdbf4012dd8c85f4ef46e3065f1a77049a258aa85e",
+    "packager_sha256": "9907d7245372af188276384cc5ab710b9a77328b92047a277a94e1ed5ab40117",
+    "proof_support_manifest_sha256": "7198879c3dfefe52ee4c980b33990197cd338eb19ac4e84cce3dd26a4cd66363",
+    "support_member_count": 30405,
+    "origin_free_identity": "07f423004952338c7ce4273e2fe1f17556b0c96803caa4a355859762750e9601",
+    "python": {
+      "path": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+      "sha256": "a7f5b535d61d1c7326824204ac80f045a97a652abb154421e2c74fcc365a3539"
+    }
+  },
+  "heavy_window": "Sequential exclusive window; one installed small check-evidence only; return at closure.",
+  "execution_bounds": {
+    "public_seconds": 600,
+    "checking_seconds": 90,
+    "lean_memory_mb": 4096,
+    "physical_rss_cap": false
+  },
+  "excluded_effects": [
+    "Live candidate/source/docs/Product/Git mutation",
+    "Origin/key/selection/entries/pending acquisition or copying",
+    "Bootstrap/download/support re-establishment/fresh Mathlib replay",
+    "Unselected support/runtime extras",
+    "Old full fixture or full-model checking",
+    "Actual F_P actors",
+    "Release or acceptance"
+  ],
+  "stop": "On any failure retain evidence and return before repair/retry; otherwise close exact delivery/fallback and return heavy window."
+}

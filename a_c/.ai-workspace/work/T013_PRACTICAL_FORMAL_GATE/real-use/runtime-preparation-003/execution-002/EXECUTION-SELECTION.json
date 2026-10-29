@@ -1,0 +1,43 @@
+{
+  "Product_acceptance": false,
+  "activation_sha256": "48bf26284a8de04ed445c39c345dc6f6d95cd4be164b26544e800ca072391e2c",
+  "arms": {
+    "gated": {
+      "context": {
+        "id": "sha256:7cf0976f8b0db3b980c27b5f5584e74cc698aebcdf80d511b59b509357983ae6",
+        "sha256": "7cf0976f8b0db3b980c27b5f5584e74cc698aebcdf80d511b59b509357983ae6"
+      },
+      "dispatch_request_sha256": "4d2cb9430f572a651f1416d3d627ec392fc44faea5e1335da710306b31995047",
+      "policy_sha256": "9209a1e1653752da9b3d4e32e5ba7b216b94a3ff5cea580775a1e793499708e0",
+      "preflight_receipt": {
+        "id": "sha256:124080bc5f7b8b73c12cd6525a8fc95f6b20684952ad6e05155810827b5f4f29",
+        "sha256": "124080bc5f7b8b73c12cd6525a8fc95f6b20684952ad6e05155810827b5f4f29"
+      },
+      "rendered_sha256": "f114593150b15dc49a5aa58c1f018f43e731f77d5d3c15eea632ebdd28a83bfa"
+    },
+    "ungated": {
+      "context": {
+        "id": "sha256:124db488a8387d51c4fdbcd6f29889f86de311578f056b55784169b6ef469aad",
+        "sha256": "124db488a8387d51c4fdbcd6f29889f86de311578f056b55784169b6ef469aad"
+      },
+      "dispatch_request_sha256": "5d0b8dd3c849296b75d57b50400bc0edf3df112a4ec8aecf72aa8e5b9417ce15",
+      "policy_sha256": "65ac6021c4c456deebc62c79799e04bb1df3d189e585e321e256148bbbce009b",
+      "preflight_receipt": {
+        "id": "sha256:47914c62038d5c682d9dda584271e65a9e4517220539f7cfbd3038dbe73b0741",
+        "sha256": "47914c62038d5c682d9dda584271e65a9e4517220539f7cfbd3038dbe73b0741"
+      },
+      "rendered_sha256": "61390e83c91466c7cf6991c33c1bc07bf9309e83fb38384fb7e6e0a5c39693d7"
+    }
+  },
+  "native_python_settings": "Exact already-selected defaults and workspace-write; no HOME/CODEX_HOME or model/effort override",
+  "no_retry": true,
+  "operation_allowance": {
+    "gated": 1,
+    "ungated": 1
+  },
+  "phase_a_closure_sha256": "e4c7455ed963c88115158a0919d960e6866b65b4d2148ecab6c610c67b57c6e2",
+  "ready_requests_sha256": "cafe93b5c4c982e5476884a7195c7f6c785d4ce2bb56b988a2a3d0dc5385725f",
+  "schema": "a_c.T013.actual-phase-b-selection/1",
+  "selected_by": "/root",
+  "selection": "Actual two-call Phase B under frozen Phase A policies/contexts; external exact grant supersedes the Phase A dispatch reservation without rewriting frozen Context metadata."
+}

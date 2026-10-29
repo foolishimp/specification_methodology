@@ -1,0 +1,33 @@
+--- evidence-transport-001/transport.py
++++ evidence-transport-002/transport.py
+@@ -22,6 +22,20 @@
+ HEX = re.compile(r"[0-9a-f]{64}\Z")
+ FORBIDDEN = {".cache", ".git", ".lake", ".toolchain", "private", "keys", "entries", "formal-origin-v1"}
+ 
++# Exact T013 public evidence aliases selected by the Executive; no prefix grant.
++EXACT_COMPILED_ALIASES = frozenset({
++    'package/delivery-002/installed-29-evidence/GateExternalNames.olean.private',
++    'package/delivery-002/installed-29-evidence/GateLocalNames.olean.private',
++    'real-use/runtime-preparation-001/execution/evidence/formal/0722e7d2daaf4122aba23379dde3b07e/bundle/GateExternalNames.olean.private',
++    'real-use/runtime-preparation-001/execution/evidence/formal/0722e7d2daaf4122aba23379dde3b07e/bundle/GateLocalNames.olean.private',
++    'real-use/runtime-preparation-001/execution/evidence/formal/3894ddfbbea44daeb14009252f0e9148/bundle/GateExternalNames.olean.private',
++    'real-use/runtime-preparation-001/execution/evidence/formal/3894ddfbbea44daeb14009252f0e9148/bundle/GateLocalNames.olean.private',
++    'real-use/runtime-preparation-001/execution/evidence/formal/56203db2a47742b39866c17a05e352ca/bundle/GateExternalNames.olean.private',
++    'real-use/runtime-preparation-001/execution/evidence/formal/56203db2a47742b39866c17a05e352ca/bundle/GateLocalNames.olean.private',
++    'real-use/runtime-preparation-001/execution/evidence/formal/9c7303aa2c844d439da9f3eb32b8543f/bundle/GateExternalNames.olean.private',
++    'real-use/runtime-preparation-001/execution/evidence/formal/9c7303aa2c844d439da9f3eb32b8543f/bundle/GateLocalNames.olean.private',
++})
++
+ 
+ def need(value, message):
+     if not value:
+@@ -73,7 +87,8 @@
+     need(all(x not in ("", ".", "..") for x in parts), "noncanonical member path")
+     need(not ({x.casefold() for x in parts} & FORBIDDEN), "private/runtime path forbidden")
+     if compiled:
+-        need(parts[0] in ("lean", "reuse") and name.endswith(".olean.private"),
++        need((parts[0] in ("lean", "reuse") and name.endswith(".olean.private"))
++             or name in EXACT_COMPILED_ALIASES,
+              "only explicitly mapped public compiled proof members are supported")
+     return name
+ 

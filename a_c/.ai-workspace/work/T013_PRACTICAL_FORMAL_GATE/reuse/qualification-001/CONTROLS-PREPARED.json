@@ -1,0 +1,180 @@
+{
+  "controls": [
+    {
+      "changed_public_files": {
+        "manifest.json": {
+          "after": "d7a560e1419af2444751d41c08ddf7bf2e5415ce6a6a6bba9849b39f53c79d90",
+          "before": "4055c96765a5be39902d266ef39ae9bcdffe0bd500f025410f7e7ab033ff26c1"
+        },
+        "replay-request.json": {
+          "after": "60703b9134d26ae33eb62915e7b1f3ab9f82f0f9e4663c90badef6c6bfcddd74",
+          "before": "1f9d4a94b5559cddc5dff78c0fc0f7ceefa579a0f10d0b1ca4bd23d5bea73b03"
+        },
+        "request.json": {
+          "after": "309e36c721fc70f7b14cd48e52b7fccbb08b229e5d5e5ec455557eda1dc1de53",
+          "before": "6564324318f92751c02844df944f032f00c6a2491933b70e5bc68dbad0bfbb33"
+        },
+        "result.json": {
+          "after": "216f0430a3e2851e467f29bde20cf91b568839ae2140a3dbd444251e32fc5e3e",
+          "before": "f0a223baff83392913a076ddd47747dfdcf5296fcd1dee32e4c5dac2987e223f"
+        },
+        "supplied-views.json": {
+          "after": "a0b3c575c34b6577a871206b2692ce80d315b44074be6c60a9db2662a6629f52",
+          "before": "fda32ab1e6fa330e5c807d0365cc85cabeee2d1eda454bb68002b4545941d77e"
+        }
+      },
+      "control": "omitted-residual",
+      "expected_exit": 2,
+      "expected_reason": "Exact local establishment binding changed",
+      "expected_status": "refused",
+      "mutation": "Remove unresolved residual from included identities, residual population, and unresolved boundary; move its identity to excluded.",
+      "omitted_identity": "urn:a-c:generation:da23f2e34408e1723ea356a6:record:d30fed4882b375ba9ee07064a4b98dbf",
+      "public_copy": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/qualification-001/controls/omitted-residual",
+      "refreshed_public_hashes": true
+    },
+    {
+      "changed_identity": "urn:a-c:generation:da23f2e34408e1723ea356a6:record:2aa600c4570863811a75d98c28fb384b",
+      "changed_public_files": {
+        "actual-runtime.log": {
+          "after": "000246b393c20f51b0dd9218baeee0b0751fc15763e5f41c2ac53bd8b8ecf221",
+          "before": "cd97d04ab200acaa18159ee7076c1787552726290a08f245018a850aa87ee2b5"
+        },
+        "manifest.json": {
+          "after": "365a825937b65f546686c83e21eb44dbecc8a730a8b936a40aed2ff5154343bf",
+          "before": "4055c96765a5be39902d266ef39ae9bcdffe0bd500f025410f7e7ab033ff26c1"
+        },
+        "result.json": {
+          "after": "0565a94203d2a166b9ab2f084119356d06cd02a7bd1db2504e00ab87767e0d34",
+          "before": "f0a223baff83392913a076ddd47747dfdcf5296fcd1dee32e4c5dac2987e223f"
+        }
+      },
+      "control": "runtime-tamper",
+      "expected_exit": 2,
+      "expected_reason": "Exact local establishment binding changed",
+      "expected_status": "refused",
+      "mutation": "Alter one projected runtime record payload while retaining well-formed JSON.",
+      "public_copy": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/qualification-001/controls/runtime-tamper",
+      "refreshed_public_hashes": true
+    },
+    {
+      "canonical_request_changed": true,
+      "changed_public_files": {
+        "manifest.json": {
+          "after": "32041cf232ad982c9762adfda037987a2ac9b95339045bfce406ef9f235b4c8a",
+          "before": "4055c96765a5be39902d266ef39ae9bcdffe0bd500f025410f7e7ab033ff26c1"
+        },
+        "replay-request.json": {
+          "after": "32c9a66cd991d71523e558e37b0f080ff1b9baca5e971073795eccd4ef043167",
+          "before": "1f9d4a94b5559cddc5dff78c0fc0f7ceefa579a0f10d0b1ca4bd23d5bea73b03"
+        },
+        "request.json": {
+          "after": "b08a4c159745d4acf467f7c55f5754918bbbf7559509034004fc2c00100e8ed3",
+          "before": "6564324318f92751c02844df944f032f00c6a2491933b70e5bc68dbad0bfbb33"
+        },
+        "result.json": {
+          "after": "5933860c603a0f3ce716b427ab0f168c5e2c50bb6930fe76f55a769e4ee61d61",
+          "before": "f0a223baff83392913a076ddd47747dfdcf5296fcd1dee32e4c5dac2987e223f"
+        }
+      },
+      "control": "typed-context",
+      "expected_exit": 2,
+      "expected_reason": "Exact local establishment binding changed",
+      "expected_status": "refused",
+      "mutation": "Replace integer trial_ordinal 1 with boolean true in original/replay requests and saved context binding.",
+      "public_copy": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/qualification-001/controls/typed-context",
+      "refreshed_public_hashes": true
+    },
+    {
+      "changed_public_files": {
+        "result.json": {
+          "after": "9d38917a492a85482acda86869dba8df5a41056df583aa1356ac9288e2ae1a86",
+          "before": "f0a223baff83392913a076ddd47747dfdcf5296fcd1dee32e4c5dac2987e223f"
+        }
+      },
+      "control": "stale-pin",
+      "expected_exit": 2,
+      "expected_reason": "Evidence verifier/proof/profile pins are stale",
+      "expected_status": "refused",
+      "mutation": "Replace non-origin deciding generator source pin and recompute aggregate runtime identity.",
+      "public_copy": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/qualification-001/controls/stale-pin",
+      "refreshed_public_hashes": true
+    },
+    {
+      "control": "boolean-budget",
+      "expected_exit": 2,
+      "expected_reason": "Budget must be a nonnegative record count or null",
+      "expected_status": "refused",
+      "mutation": "Set budget_records to boolean true in a fresh public request.",
+      "request": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/qualification-001/controls/boolean-budget-request.json"
+    }
+  ],
+  "original_bundle_members": {
+    "GateBounds.ir": "a3ab8c463cf7f3102a3952b0b4066cf19b7a350e51aa72a459899cda5b8d9d57",
+    "GateBounds.ir.sig": "6f30da785554a7c7a7888098fc3d1cd0ece7ecbf635710277bae22d18843d903",
+    "GateBounds.lean": "deb558bdbec1e9a90dfd21716bb95a1e6f767c546c0d8c839d8e0a809c1a72c3",
+    "GateBounds.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "GateBounds.olean": "63a55a912764e20a8ad45a95966b433a5d4c579bbc1fb3793132458c209f996f",
+    "GateBounds.olean.private": "22ee2316e2500fd78160b2d0a3ac5637d917e9c871c448ec247fd69a79ea6d46",
+    "GateBounds.olean.server": "8afcf65ccd32c66f6ea5f562571327c009fe09ec36b4ef32626633d157f94ff1",
+    "GateData.ir": "5c8cec0a03ea93478425e3ad1fe8389288c8981222b5841297a120abce5cea83",
+    "GateData.ir.sig": "ef0f5154b1ae5adbcf4a0d57fd190ebd435d4e80a57a748669a5df689d43bab0",
+    "GateData.lean": "f41f7a77c23390100334471009f7cd62e57f62df9ea087818ea48a8fed8ba6a0",
+    "GateData.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "GateData.olean": "949a974d82e2bd654b580fe0caa8d0609d1cdf73d8dc4e072444b69919f229ca",
+    "GateData.olean.private": "34f79b119dce11ac2d99c45ee9f5379ee3b6f18f1fed170d532e96094f020e27",
+    "GateData.olean.server": "c85d708c3916d67acba2770759a15258e4282679f48187a85d4651f365e65db4",
+    "GateExternalNames.ir": "6cb98b7fc3273591196369149f7dd9dec49ebd76fb5faddb1eb0105d7ab650ac",
+    "GateExternalNames.ir.sig": "60bb6fb7e45eebb178af0994cd4de606945bade1f83198e35b105f8e94d6f546",
+    "GateExternalNames.lean": "deb558bdbec1e9a90dfd21716bb95a1e6f767c546c0d8c839d8e0a809c1a72c3",
+    "GateExternalNames.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "GateExternalNames.olean": "c1f60de5a69146da8d6f2e32f17ed3f5448290563c9750c163a0de7f5edaab24",
+    "GateExternalNames.olean.private": "5cd3e09760d3aff459c974cc9dd2367122d990bbd28ac3471863f4ffb07bde56",
+    "GateExternalNames.olean.server": "52a44d11443a407c472cc6091ac1320d4357199fd33e5fd8083a2af22b140b93",
+    "GateIdentities.ir": "f94b542167d87af240738582fa378d9de2c524e7d6ca687d7767f9255194828c",
+    "GateIdentities.ir.sig": "9ee9d29e8ad631db89be41b5c903fcd07b03d7dc0f4d412f0b654a1fe2a69561",
+    "GateIdentities.lean": "8804c0619fca45e6be8d9d87f768818be20891f203eba7eddf29723c9dd56307",
+    "GateIdentities.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "GateIdentities.olean": "b9bd54ec23fa0f2514b2cd05b9237b92871dab3496ba0d3c8baef3816d8e847e",
+    "GateIdentities.olean.private": "1ca481f03c22de5ac0af97c81cf7ff5d36df46b5718ab5669e3b85af38d56f35",
+    "GateIdentities.olean.server": "38d24b9fbf295c1540960cf2c6e49a387a10fbcc3002fcc5e1d5673027515159",
+    "GateLocalNames.ir": "ea4d0861de299d875090f8456b8728273519f30632cea010527111f5ca5ea368",
+    "GateLocalNames.ir.sig": "78e164976c4ef9fdbbd23becb78feb2f301bfebdf144b8a43530ec934bd9d88b",
+    "GateLocalNames.lean": "51cc21732b6b077e7b3d6f62be66c58e3a1fa62503e27424bc3b2ffd57698163",
+    "GateLocalNames.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "GateLocalNames.olean": "7731d3a9c73a97524e0cc2a0e5d5235a4748a5dcf92678b35aed3c0ad7e07dc6",
+    "GateLocalNames.olean.private": "bb186b68ab06f6e5783816afc82eaccc925cc5271eb2ad17fb02f66a16eab63e",
+    "GateLocalNames.olean.server": "9420c3e0928d9fb3f9c8a634c7b6773250c5caffc84354a5a24cfd7a7cfe090a",
+    "GateModel.ir": "d36c482cb4dde2ffa4b702dbff1697d381eca43c2a578391a33bd386fb130c5a",
+    "GateModel.ir.sig": "a3cc15a301b053f068ac6525b37a4de73cab86c8906c4809e7ce8f1a79cf0b64",
+    "GateModel.lean": "361ab6d764e5604b24982fbea12a6309a6a5752d004879878a59ad60a419ae62",
+    "GateModel.log": "a15a20e7d67eee818dddfaba79a448bbe8957f28eadc70e76ad792f0318a97ee",
+    "GateModel.olean": "79244f38704d50b333e5ec14dce43820eda274bcdfaeca16d83f48e4e86aa713",
+    "GateModel.olean.private": "a52c12a3f5a45469f3d9a0b73b7f8c82a62c9b430226ed58146ee1f2bef38956",
+    "GateModel.olean.server": "2b651b0577fc630159b2cc055e0adc4f44c58ec6622bd383e2a4c7c54bcd7999",
+    "GateRun.lean": "3aca46dd2a8de76afb0a9f568bff1c07a07deb02f5713f69515f9de63e28e69a",
+    "GateViews.ir": "0a59553164104ac93beb62b2b9213a69714b1dacdf76198831eb8815536c3ce6",
+    "GateViews.ir.sig": "a092dee3843e33a19cc22e3314bdbb65cbd2cc6087a1607e2b3a2da1fea5ceb3",
+    "GateViews.lean": "cf4ba9c7160e3434c61e9e1019b57825fc74e3bf3ad7150b451d5844a0f1db85",
+    "GateViews.log": "f82f3e8f7640bca99be6d30f10151a49bc958d3ff13cb1fe93df794c985756cb",
+    "GateViews.olean": "6f224c32ded64385e010df315598c216a38ecc6e8653e5534817546feb487f38",
+    "GateViews.olean.private": "b37da22c28d99d17ad2daa4a7c501ce3b537d65769d5e4901c50417be4867e21",
+    "GateViews.olean.server": "c4431326d25dbcde1a36b442cb5b22e5771f3b6809e3eb2392b06093ffbacaf9",
+    "actual-runtime.log": "cd97d04ab200acaa18159ee7076c1787552726290a08f245018a850aa87ee2b5",
+    "certificates.json": "d541c15d4fca6b1d64cf6f380b05e85392a8fad8a0d30a7f6df8d0f77bbbdcfd",
+    "dynamic-kernel-replay.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "input.json": "8367c7eba1b80a96dbacd2cfc82304f13dacd0671083244a33613d14b9249346",
+    "local-origin.json": "3e91c0a45870b3531348495a282aa485b98b0b95ec016ca65580ea739264af0d",
+    "manifest.json": "4055c96765a5be39902d266ef39ae9bcdffe0bd500f025410f7e7ab033ff26c1",
+    "model.json": "89d24b19044551b44429e815e3a8f5046ae377a1baa430214c004f06e68a13d6",
+    "replay-request.json": "1f9d4a94b5559cddc5dff78c0fc0f7ceefa579a0f10d0b1ca4bd23d5bea73b03",
+    "request.json": "6564324318f92751c02844df944f032f00c6a2491933b70e5bc68dbad0bfbb33",
+    "result.json": "f0a223baff83392913a076ddd47747dfdcf5296fcd1dee32e4c5dac2987e223f",
+    "supplied-views.json": "fda32ab1e6fa330e5c807d0365cc85cabeee2d1eda454bb68002b4545941d77e",
+    "view-comparison.json": "88d88b5119bdb37a6abd8b5f6f1171bd6259b4fcc366f7f7d26b7181c6fd198d"
+  },
+  "original_bundle_unchanged": true,
+  "private_entry_mutation": false,
+  "production_source_mutation": false,
+  "schema": "a_c.T013.public-controls-preparation/1",
+  "source_bundle": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/qualification-001/small-cold"
+}

@@ -1,7 +1,7 @@
 # T-013 Practical formal gate
 
-Status: active; full-size cold scaling complete and independently reviewed;
-reuse integrated and source reviewed, actual runtime qualification pending.
+Status: bounded delivery and experiment complete; full-view cold/reuse, two-call trial and local package reviewed;
+practical benefit/economics and broader qualification remain open; owner acceptance/release unselected.
 Owner: Jim. Executive: `/root`. Change classes: `goal_reprice` and
 `design_reframe` under unchanged [FR-001–FR-014](../../../specification/requirements/formalisation.md).
 
@@ -42,18 +42,18 @@ merely because the work item changed.
 | --- | --- | --- |
 | 1. Preserve the reviewed tool | Checkpoint T-011/T-012 on `main` and push it. | Complete: the linked checkpoint record observes exact direct remote parity and preserved source/evidence. |
 | 2. Verify the full representation | Isolate actual expensive obligations, then implement a bounded proof construction for the complete frozen subject and a real supplied projection. | Complete at the frozen scale identity: cold public success, full-data/runtime correspondence, adverse controls and independent assessment. See the scale review below. |
-| 3. Reuse exact established evidence | Give eligible retained proof a demonstrated origin and exact request/dependency bindings, while revalidating affected facts before use. | Integrated and source reviewed; 117 integration controls pass. Actual cold/reused public paths, adverse controls and complete measured costs on the integrated identity remain pending. |
-| 4. Exercise real F_P work | Run one bounded software task in gated and ungated arms with equivalent substantive context, then assess both outputs independently. | Protocol and runtime preparation reviewed; actual pair unstarted. At most two Worker runs plus independent assessment; retain complete outputs, received inputs, costs and rework. |
-| 5. Assess and prepare delivery | Independently review changed proofs, reuse and actual use; prepare a local tenant package and its reproducible checks. | Package and exact evidence-transport preparation reviewed. Final inventory/archive, installed checks and actual-use assessment remain open. Public release and owner acceptance are not inferred. |
+| 3. Reuse exact established evidence | Give eligible retained proof a demonstrated origin and exact request/dependency bindings, while revalidating affected facts before use. | Implemented and reviewed. Current full29 cold proof and actual dispatcher/supervisor origin-bound reuse succeed. [Independent operational assessment](../../work/T013_PRACTICAL_FORMAL_GATE/review/matched-operation-001/REVIEW.md) discharges selected path/currentness obligations within the cooperative-host contract. |
+| 4. Exercise real F_P work | Run one bounded software task in gated and ungated arms with equivalent substantive context, then assess both outputs independently. | Exactly two native calls complete, with exact received inputs and authenticated returns. Independent review finds ungated S2 numeric fidelity and gated S3 exponent error. Both remain uncorrected disposable evaluation observations; no adoption, retry or further call. |
+| 5. Assess and prepare delivery | Independently review changed proofs, reuse and actual use; prepare a local tenant package and its reproducible checks. | Complete within scope: [package/transport review](../../work/T013_PRACTICAL_FORMAL_GATE/review/package-final-002/REVIEW.md) finds no actionable defect in the local archive, installed full29 check or exact 24-file transport. Complete economics/positive benefit and broader qualification remain open; task-output observations create no new Product-feature repair gate. |
 
 The [final scale review](../../work/T013_PRACTICAL_FORMAL_GATE/review/scale-final-001/REVIEW.md)
 closes step 2 for runtime identity
 `e8cf8aa74408d6642bdbf9be3bddb224fb857de51040cbbbd30e9cd0758d1182`.
-The [reviewed reuse integration](../../work/T013_PRACTICAL_FORMAL_GATE/reuse/integration-001/HANDOFF.md)
-selects identity `07f423004952338c7ce4273e2fe1f17556b0c96803caa4a355859762750e9601`
-with no origin selected. Fresh bounded cold/reuse qualification is next;
-the older cold proof is not signed into the new identity. The Executive selects
-each activation from closed results and retains the target outcome.
+The earlier [reuse integration](../../work/T013_PRACTICAL_FORMAL_GATE/reuse/integration-001/HANDOFF.md)
+selected `07f423004952338c7ce4273e2fe1f17556b0c96803caa4a355859762750e9601` without origin.
+Current full runtime is `f492806bfb58bcabad63a89caa4c62c57bd37f8ed99b8fed764a9a6c5b8908c9`;
+portable origin-free runtime is `4f9e8402122f1722559a4bb7d7559b09ce107f8de8a38de600aedc947611072d`.
+The [delivery handoff](../../work/T013_PRACTICAL_FORMAL_GATE/DELIVERY.md) separates these cuts and current evidence.
 
 ## Exact scaling target and limits
 
@@ -67,8 +67,8 @@ deciding run. Retained/excluded residual and external boundaries remain explicit
 
 Retain the selected **compiler `-M4096` option, 90 seconds per checking process
 and 600 seconds per public invocation**. `-M4096` is not a physical-memory cap:
-the independently assessed cold runs observed 12.73–13.02 GB aggregate child
-high-water RSS. This observation cannot be attributed to one checking stage;
+earlier cold runs observed 12.73–13.02 GB; the current full29 run reached 14.61 GB
+child high-water RSS. This observation cannot be attributed to one checking stage;
 the kernel checker has no memory flag. Attribute individual obligations on actual
 imported data rather than buffered marker arrival. Measure total cold and reused
 wall/resource cost, including import, support checks, proof construction/kernel

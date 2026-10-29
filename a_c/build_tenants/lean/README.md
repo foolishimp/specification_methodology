@@ -62,8 +62,8 @@ outside this fragment.
 
 The normative calculus remains installed STDO v2.5.1-rc.2, exact calculus digest
 `cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d`.
-STDO 3.0.2 is represented subject data, not the builder. Runtime commands read
-only this tenant's copied fixtures and private dependencies; they import no
+STDO 3.0.2 is represented subject data, not the builder. The fixed-fixture commands
+above read this tenant's copied fixtures and private dependencies; they import no
 Graphify, v3, Axiom Indexer or STDO Representation implementation.
 
 Read [design](design/README.md), [source correspondence](design/SOURCE_CORRESPONDENCE.md),
@@ -75,7 +75,11 @@ The reusable gate also accepts new subjects produced under the checked ordinary
 generation signature contract. Its request and evidence interface is documented
 in [FORMAL_GATE.md](design/FORMAL_GATE.md); the request schema is
 [formal-gate-request.schema.json](profiles/formal-gate-request.schema.json).
-After private bootstrap and explicit local support establishment:
+Proof execution requires the exact selected support as well as source. A separately
+authorized copy of already established support preserves its identity. Bootstrap
+alone does not establish that downloaded or rebuilt objects match that support
+map; selecting new support requires its own establishment and qualification.
+After support setup, run from this Lean directory:
 
 ```sh
 python3 -I -S -B scripts/formal_gate.py identity
@@ -84,6 +88,31 @@ python3 -I -S -B scripts/formal_gate.py check-evidence --bundle /retained/eviden
 python3 -m unittest discover -s tests -p 'test_*.py' -v
 python3 scripts/check_gate.py --output /fresh/qualification-directory
 ```
+
+For a complete model-only request using the included toy fixture:
+
+```sh
+AC_GATE_WORK=$(mktemp -d /private/tmp/ac-formal-XXXXXX)
+python3 -I -S -B - "$AC_GATE_WORK/request.json" <<'PY'
+import hashlib, json, sys
+from pathlib import Path
+source = Path("fixtures/toy/MODEL.json").resolve()
+request = {
+    "schema": "a_c.formal-gate.request/1",
+    "input": {"format": "model", "path": str(source),
+              "raw_sha256": hashlib.sha256(source.read_bytes()).hexdigest()},
+    "selections": [], "supplied_views": None, "context_binding": None,
+}
+Path(sys.argv[1]).write_text(json.dumps(request) + "\n")
+PY
+python3 -I -S -B scripts/formal_gate.py verify --request "$AC_GATE_WORK/request.json" --output "$AC_GATE_WORK/cold"
+python3 -I -S -B scripts/formal_gate.py check-evidence --bundle "$AC_GATE_WORK/cold" --output "$AC_GATE_WORK/recheck"
+```
+
+Choose fresh, disjoint outputs with nonsymlinked ancestors. The default limits are
+32 MiB input, 64 selections, 90 seconds per checking process and Lean `-j1 -M4096`.
+The selected Graphify supervisor adds the 600-second whole-invocation bound; a
+standalone CLI caller must supply its own outer supervision.
 
 Use `selections: []` and `supplied_views: null` for a model-only generation gate.
 For projections, supply ordered source-identity seeds, an exact record budget or
@@ -114,21 +143,43 @@ Observed aggregate child high-water RSS was 12.73–13.02 GB, despite the compil
 [scale return](../../.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/SCALE_RETURN.md)
 binds exact source, support and evidence.
 
-Origin-bound request-proof reuse is now
+Origin-bound request-proof reuse is
 [integrated and source reviewed](../../.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/integration-001/HANDOFF.md).
-The integrated source identity is
-`07f423004952338c7ce4273e2fe1f17556b0c96803caa4a355859762750e9601`
-with no origin selected. All 117 bounded Python integration controls pass;
-actual origin establishment and fresh cold/reuse qualification remain pending.
+Its [cold/reuse qualification](../../.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/qualification-001/CLOSED.json)
+records actual origin establishment and small/full cold and reuse runs at that
+earlier exact cut. A deciding-source change requires fresh current evidence.
 `init-origin` explicitly creates local origin state and changes the identity;
 it is a separately authorized setup operation. `check-evidence` may reuse only
 an exact locally established eligible result; without that origin, it checks
 cold. Earlier scale proof does not acquire reuse eligibility by being retained.
 Current support, request, Context and authority checks still apply.
 
-The matched real Worker pair is unstarted. The
-[reviewed package preparation](../../.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/review/package-transport-final-001/REVIEW.md)
-has no final archive or installed qualification. The core gate is standalone;
+The current generator constructs each trace step from an explicit earlier parent,
+with kernel-checked membership in the preceding known set and in the original
+model's dependency relation. The remaining four certificate conditions and the
+original `checkCertificate`, projection, budget and runtime-equality claims are
+unchanged. The [source review](../../.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/review/view-repair-source-001/CLOSED.json)
+and [full public Phase A](../../.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/real-use/runtime-preparation-003/execution-001/CLOSED.json)
+bind the repaired cut: the original 1,987-record model, two seeds and supplied
+29-record view passed fresh proof construction, kernel replay, actual runtime
+and exact output checks. Its full runtime identity is
+`f492806bfb58bcabad63a89caa4c62c57bd37f8ed99b8fed764a9a6c5b8908c9`;
+the portable identity, omitting only the fixed local-origin selection pin, is
+`4f9e8402122f1722559a4bb7d7559b09ce107f8de8a38de600aedc947611072d`.
+
+Both selected real Worker calls completed with authenticated returns in
+[Phase B](../../.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/real-use/runtime-preparation-003/execution-002/CLOSED.json).
+That is execution evidence; task quality and practical benefit require their
+separate assessment. The [prior local package delivery](../../.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/delivery-001/CLOSED.json)
+retains archive reproduction and origin-free installed checking for its exact
+predecessor. The current [source inventory](../../.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/selection-002/SOURCE_PACKAGE.json)
+and [delivery records](../../.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/delivery-002/)
+identify the successor package and its own installation evidence. Every source
+archive excludes the whole origin subtree and runtime dependencies; local setup
+conserves only the separately selected exact support. This is Darwin-arm64 local
+acquisition, not fresh-machine onboarding or cross-platform qualification.
+
+The core gate is standalone;
 the reusable tests and `check_gate.py` also require the explicitly inventoried
 Graphify helper subset. Exact oversized historical proof objects travel through
 the [reviewed compressed transport](../../.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/checkpoint/evidence-transport-001/README.md);

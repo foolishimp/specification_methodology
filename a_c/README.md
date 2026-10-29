@@ -29,19 +29,31 @@ supports the declared fragment with no blocking findings. The
 [baseline](.ai-workspace/work/T012_FORMAL_GATE/baseline/BASELINE.json) preserves
 T-011's exact reviewed tenant and common source before that work.
 
-[T-013](.ai-workspace/tickets/active/T-013-practical-formal-gate.md) is the active
-successor. The exact 1,987-record/1,021-external cold check and supplied view are
-complete and [independently reviewed](.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/review/scale-final-001/REVIEW.md).
-Origin-bound reuse is [integrated](.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/reuse/integration-001/HANDOFF.md)
-and source reviewed; 117 integration controls pass, while actual cold/reuse
-qualification on that new identity remains pending. The matched real F_P Worker
-pair is unstarted. [Package and evidence-transport preparation](.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/review/package-transport-final-001/REVIEW.md)
-is reviewed; no final archive, installation or release exists.
-The compiler uses `-M4096`; observed aggregate child high-water RSS was
-12.73–13.02 GB, so this is not a 4 GB physical-memory result. Practical benefit
-and total reused cost remain unestablished. The
-[reviewed-increment checkpoint record](.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/checkpoint/reviewed-increment-002/RETURN.md)
-binds the selected source, reviews and byte-preserving evidence transport.
+[T-013](.ai-workspace/tickets/active/T-013-practical-formal-gate.md) completes the
+bounded practical-gate delivery and experiment. The checker covers the exact 1,987-record/1,021-external
+model and actual 29-record Worker view, with fresh kernel replay and full data
+correspondence. The gated dispatch and supervisor then reuse that exact proof
+through the normal public path. The [delivery handoff](.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/DELIVERY.md)
+links runnable instructions, exact identities, costs and preserved failed work.
+Use the [Lean README](build_tenants/lean/README.md) and
+[formal-gate contract](build_tenants/lean/design/FORMAL_GATE.md) for the CLI and
+JSON interface; there is no dedicated gate UI.
+
+Both matched native F_P Workers completed with their exact selected input bytes.
+[Independent quality review](.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/review/matched-quality-001/REVIEW.md)
+found an S2 numeric-fidelity defect in the ungated helper and an S3 exponent-error
+defect in the gated helper. These remain uncorrected disposable evaluation
+observations; neither helper is adopted as a Product feature. The pair does not
+establish a causal quality benefit or lower total cost. Successful cold preflight
+took 273.07 seconds; actual reused checks took 9.30 and 9.22 seconds. The compiler
+uses `-M4096`, but observed child high-water RSS reached 14.61 GB.
+[Independent operational review](.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/review/matched-operation-001/REVIEW.md)
+supports the selected proof/reuse/received-input path with no new actionable defect.
+A local source archive and installed full-view cold check are
+[independently reviewed](.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/review/package-final-002/REVIEW.md),
+including exact byte-preserving transport of all 24 oversized proof files.
+Fresh-host/cross-platform qualification, complete economics and positive practical
+benefit remain open. No owner acceptance or public release is issued.
 
 Read [stdo_a_c.json](stdo_a_c.json), [Goals](specification/GOALS.md),
 [Intent](specification/INTENT.md), [Product](specification/PRODUCT.md), and

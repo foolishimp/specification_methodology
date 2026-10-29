@@ -250,7 +250,7 @@ def _verify(request,output_dir,limits=None,*,base_dir=None,established=None,reus
             for name,source in {'GateData':data_source(imported,raw_model_sha),
                                 'GateLocalNames':name_source(imported),'GateExternalNames':name_source(imported,True),
                                 'GateIdentities':identities_source(imported),'GateBounds':bounds_source(imported),
-                                'GateModel':model_proof(imported),'GateViews':views_source(cases),'GateRun':RUNNER}.items():(out/(name+'.lean')).write_text(source)
+                                'GateModel':model_proof(imported),'GateViews':views_source(imported,cases),'GateRun':RUNNER}.items():(out/(name+'.lean')).write_text(source)
             result['observations']['proof_modules']=['GateData','GateLocalNames','GateExternalNames','GateIdentities','GateBounds','GateModel','GateViews','GateRun']
             result['observations']['theorem_audit']={}
             def audit(log,expected):

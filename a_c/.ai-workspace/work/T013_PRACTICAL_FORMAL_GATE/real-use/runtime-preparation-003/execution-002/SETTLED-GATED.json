@@ -1,0 +1,67 @@
+{
+  "actual_native_calls": 1,
+  "actual_total_native_calls": 2,
+  "allowance_remaining": 0,
+  "arm": "gated",
+  "cleanup_scope": "Selected local supervisor/helper groups observed absent after native parent exit and complete pipes; not a proof of external effects or all host internals.",
+  "context_sha256": "f114593150b15dc49a5aa58c1f018f43e731f77d5d3c15eea632ebdd28a83bfa",
+  "immutable_inputs_unchanged": true,
+  "local_groups_empty": true,
+  "local_process_group_probes": [
+    {
+      "kind": "supervisor_spawned",
+      "pgid": 40027,
+      "process_rows": [],
+      "signal_zero_state": "absent"
+    },
+    {
+      "kind": "actor_started",
+      "pgid": 40188,
+      "process_rows": [],
+      "signal_zero_state": "absent"
+    }
+  ],
+  "native_elapsed_seconds": 93.127797,
+  "observed_completed_shell_commands": 5,
+  "observed_native_completed_item_types": [
+    "agent_message",
+    "command_execution"
+  ],
+  "observed_shell_failure_count": 0,
+  "observed_utc": "2026-10-29T19:19:51.321449+00:00",
+  "output_files_within_declared_territory": {
+    "README.md": {
+      "bytes": 1411,
+      "sha256": "c2ae43506e8d08d92e65b38df1787ac580d3c29a40e9ec970e3f2957de2f31ad"
+    },
+    "gate_report.py": {
+      "bytes": 4154,
+      "sha256": "f7bbeae2c15866ef537d90b8ab777eec9ae7ea77111af5304431a50498dee9a9"
+    },
+    "support/candidate.json": {
+      "bytes": 847,
+      "sha256": "ab91e181327904498315a86f22e7adc61f71489ba14c9ec3b10526eff21f7ab7"
+    },
+    "support/test-output.txt": {
+      "bytes": 668,
+      "sha256": "ded8591643b909209762f1133645b23025bb7e7dfabc26d8a856b71c23836ba8"
+    },
+    "test_gate_report.py": {
+      "bytes": 6724,
+      "sha256": "899e87ac29544f67c4a470ed27fa544a8842d0910b1689d8372a5acdfd1aa3e1"
+    }
+  },
+  "process_returncode": 0,
+  "public_return_authenticated": true,
+  "reported_work_result": "candidate_ready",
+  "return_binding_gaps": [],
+  "schema": "a_c.T013.phase-b-arm-settled/1",
+  "scope_observation": "Retained commands use own relative inputs/output files, stdlib tests and local shell; no additional agent/model/network acquisition command observed.",
+  "semantic_grade": null,
+  "source_currentness_event": {
+    "changes": [],
+    "gaps": [],
+    "observations": []
+  },
+  "transport_complete": true
+}

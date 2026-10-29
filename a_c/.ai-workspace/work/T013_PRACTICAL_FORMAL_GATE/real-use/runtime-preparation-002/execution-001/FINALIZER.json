@@ -1,0 +1,27 @@
+{
+  "schema": "a_c.T013.phase-a-finalizer/1",
+  "observed_utc": "2026-10-29T17:21:54.513959+00:00",
+  "command": [
+    "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "-B",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/real-use/runtime-preparation-002/prepare_runtime.py",
+    "--out",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/real-use/runtime-preparation-002/execution-001/runtime",
+    "--workspace-ungated",
+    "/private/tmp/ac-t013-report-001/ungated",
+    "--workspace-gated",
+    "/private/tmp/ac-t013-report-001/gated",
+    "--checker-config",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/real-use/runtime-preparation-002/CHECKER.json",
+    "--execution-selection",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/real-use/runtime-preparation-002/execution-001/EXECUTION-SELECTION.json"
+  ],
+  "exit_code": 0,
+  "external_wall_seconds": 0.21158337499946356,
+  "children_user_seconds": 0.15631699999999998,
+  "children_system_seconds": 0.040277,
+  "children_maxrss_bytes_darwin": 326434816,
+  "resource_scope": "One finalizer process and waited descendants, no proof or actor; Darwin getrusage RUSAGE_CHILDREN high-water scope.",
+  "stdout": "finalizer.stdout.json",
+  "stderr": "finalizer.stderr.log"
+}

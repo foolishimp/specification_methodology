@@ -1,0 +1,183 @@
+{
+  "schema": "a_c.T013.actual-context-ordering-limitation/1",
+  "recorded_utc": "2026-10-29T17:33:59.560932+00:00",
+  "supplementary_comparison": "CONTEXT-DIFFERENCES.json",
+  "supplementary_comparison_sha256": "cf8d3202cd0d0e76bf2191b3e1c01093f0febd2033672d647dc85c90ea8e363b",
+  "scope": "Exact actual ordering observation; no normalization, equivalence extension or acceptance decision.",
+  "source_records_per_arm": 17,
+  "common_acquired_records": 14,
+  "common_substantive_prepared_records": 11,
+  "common_records_byte_identical": true,
+  "shared_substantive_relative_order_identical": true,
+  "source_order": {
+    "ungated": [
+      {
+        "root": "product",
+        "path": ".ai-workspace/tickets/active/T-013-practical-formal-gate.md"
+      },
+      {
+        "root": "prepared",
+        "path": "TASK.md"
+      },
+      {
+        "root": "operator",
+        "path": "execution-selection.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/CUSTODY.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/FORMAL_GATE.md"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/MODEL_SELECTION.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/examples/authored-unsupported.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/examples/budget-refusal.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/examples/historical-incomplete.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/examples/malformed-model.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/examples/model-only.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/examples/verified.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/examples/view-mismatch.json"
+      },
+      {
+        "root": "product",
+        "path": "stdo_a_c.json"
+      },
+      {
+        "root": "operator",
+        "path": "ungated/activation.json"
+      },
+      {
+        "root": "operator",
+        "path": "ungated/return-contract.json"
+      },
+      {
+        "root": "operator",
+        "path": "ungated/return-instructions.json"
+      }
+    ],
+    "gated": [
+      {
+        "root": "product",
+        "path": ".ai-workspace/tickets/active/T-013-practical-formal-gate.md"
+      },
+      {
+        "root": "prepared",
+        "path": "TASK.md"
+      },
+      {
+        "root": "operator",
+        "path": "execution-selection.json"
+      },
+      {
+        "root": "operator",
+        "path": "gated/activation.json"
+      },
+      {
+        "root": "operator",
+        "path": "gated/return-contract.json"
+      },
+      {
+        "root": "operator",
+        "path": "gated/return-instructions.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/CUSTODY.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/FORMAL_GATE.md"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/MODEL_SELECTION.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/examples/authored-unsupported.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/examples/budget-refusal.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/examples/historical-incomplete.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/examples/malformed-model.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/examples/model-only.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/examples/verified.json"
+      },
+      {
+        "root": "prepared",
+        "path": "shared/examples/view-mismatch.json"
+      },
+      {
+        "root": "product",
+        "path": "stdo_a_c.json"
+      }
+    ]
+  },
+  "arm_specific_operator_files": [
+    "activation.json",
+    "return-contract.json",
+    "return-instructions.json"
+  ],
+  "arm_specific_zero_based_positions": {
+    "ungated": [
+      14,
+      15,
+      16
+    ],
+    "gated": [
+      3,
+      4,
+      5
+    ]
+  },
+  "representation": "Each source array row contains full acquired content_base64 and provenance; this difference is not confined to bare reference strings.",
+  "cause": "Unchanged Core sorts canonical SourceRefs; gated/ precedes shared/, while ungated/ follows it.",
+  "confound": "Shared substantive records keep their exact bytes and relative order, but their absolute array/prompt positions and surrounding operational content differ. That prompt-layout/interleaving difference can affect an LLM independently of gate verification; this trial does not isolate its effect. Root must assess whether this is acceptable for the bounded exploratory pair.",
+  "not_claimed": [
+    "byte-identical full prompts",
+    "absolute-position equality",
+    "general semantic or behavioral equivalence",
+    "absence of prompt-layout effects",
+    "causal isolation of verification benefit"
+  ],
+  "actual_context_policy_source_edits": false,
+  "actor_dispatches": 0
+}

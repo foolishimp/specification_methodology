@@ -1,0 +1,272 @@
+{
+  "schema": "a_c.T013.source-package-delivery/1",
+  "status": "PASS",
+  "recorded_utc": "2026-10-29T17:01:25.380233+00:00",
+  "source_root": "/Users/jim/src/apps/specification_methodology",
+  "manifest_sha256": "e981245097c06f693fcbe89565d5724db2103982fdb7891e8413a8a6cdc86ee4",
+  "source_member_count": 65,
+  "archive_member_count": 66,
+  "archive_sha256": "40dbe00cc85d9c1c4a6ec88634a4318d7f9363bd2d68b025d6941872319d7ea0",
+  "archive_bytes": 22353920,
+  "repacked_archive_sha256": "40dbe00cc85d9c1c4a6ec88634a4318d7f9363bd2d68b025d6941872319d7ea0",
+  "byte_identical_repacking": true,
+  "pristine_tree": "/private/tmp/ac-t013-lean-package-001/pristine",
+  "operational_tree": "/private/tmp/ac-t013-lean-package-001/operational",
+  "retained_archive": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/delivery-001/source-package.tar",
+  "records": [
+    {
+      "step": "build",
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+        "-I",
+        "-S",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/repair-002/package_source.py",
+        "build",
+        "--source-root",
+        "/Users/jim/src/apps/specification_methodology",
+        "--selection",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/selection-001/SOURCE_PACKAGE.json",
+        "--output",
+        "/private/tmp/ac-t013-lean-package-001/bundle",
+        "--manifest-sha256",
+        "e981245097c06f693fcbe89565d5724db2103982fdb7891e8413a8a6cdc86ee4"
+      ],
+      "returncode": 0,
+      "seconds": 0.09177025035023689,
+      "stdout_sha256": "3bb8747861b6fc387eaa38ebd85790d28a39b03d74c6e36d54c88ed362d44068",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "returned": {
+        "files": 66,
+        "manifest_sha256": "e981245097c06f693fcbe89565d5724db2103982fdb7891e8413a8a6cdc86ee4",
+        "status": "source_bytes_verified"
+      }
+    },
+    {
+      "step": "verify-bundle",
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+        "-I",
+        "-S",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/repair-002/package_source.py",
+        "verify-tree",
+        "--tree",
+        "/private/tmp/ac-t013-lean-package-001/bundle",
+        "--manifest-sha256",
+        "e981245097c06f693fcbe89565d5724db2103982fdb7891e8413a8a6cdc86ee4"
+      ],
+      "returncode": 0,
+      "seconds": 0.044068749994039536,
+      "stdout_sha256": "3bb8747861b6fc387eaa38ebd85790d28a39b03d74c6e36d54c88ed362d44068",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "returned": {
+        "files": 66,
+        "manifest_sha256": "e981245097c06f693fcbe89565d5724db2103982fdb7891e8413a8a6cdc86ee4",
+        "status": "source_bytes_verified"
+      }
+    },
+    {
+      "step": "archive",
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+        "-I",
+        "-S",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/repair-002/package_source.py",
+        "archive",
+        "--tree",
+        "/private/tmp/ac-t013-lean-package-001/bundle",
+        "--output",
+        "/private/tmp/ac-t013-lean-package-001/source-package.tar",
+        "--manifest-sha256",
+        "e981245097c06f693fcbe89565d5724db2103982fdb7891e8413a8a6cdc86ee4"
+      ],
+      "returncode": 0,
+      "seconds": 0.08315008319914341,
+      "stdout_sha256": "39a383d6ea24df5a9784eeadc6f96f42be5540cb8e124e39537e96d8c37dcd32",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "returned": {
+        "archive_sha256": "40dbe00cc85d9c1c4a6ec88634a4318d7f9363bd2d68b025d6941872319d7ea0",
+        "bytes": 22353920,
+        "manifest_sha256": "e981245097c06f693fcbe89565d5724db2103982fdb7891e8413a8a6cdc86ee4",
+        "status": "source_archive_created"
+      }
+    },
+    {
+      "step": "verify-archive",
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+        "-I",
+        "-S",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/repair-002/package_source.py",
+        "verify-archive",
+        "--archive",
+        "/private/tmp/ac-t013-lean-package-001/source-package.tar",
+        "--manifest-sha256",
+        "e981245097c06f693fcbe89565d5724db2103982fdb7891e8413a8a6cdc86ee4"
+      ],
+      "returncode": 0,
+      "seconds": 0.0401717908680439,
+      "stdout_sha256": "79c5ce5efb1c5de07ebb36e4e5a451c2f89b9e8e0c6c215253167d99d24f8b87",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "returned": {
+        "files": 66,
+        "manifest_sha256": "e981245097c06f693fcbe89565d5724db2103982fdb7891e8413a8a6cdc86ee4",
+        "status": "source_archive_verified"
+      }
+    },
+    {
+      "step": "extract-pristine",
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+        "-I",
+        "-S",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/repair-002/package_source.py",
+        "extract",
+        "--archive",
+        "/private/tmp/ac-t013-lean-package-001/source-package.tar",
+        "--output",
+        "/private/tmp/ac-t013-lean-package-001/pristine",
+        "--manifest-sha256",
+        "e981245097c06f693fcbe89565d5724db2103982fdb7891e8413a8a6cdc86ee4"
+      ],
+      "returncode": 0,
+      "seconds": 0.07370995869860053,
+      "stdout_sha256": "3bb8747861b6fc387eaa38ebd85790d28a39b03d74c6e36d54c88ed362d44068",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "returned": {
+        "files": 66,
+        "manifest_sha256": "e981245097c06f693fcbe89565d5724db2103982fdb7891e8413a8a6cdc86ee4",
+        "status": "source_bytes_verified"
+      }
+    },
+    {
+      "step": "verify-pristine",
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+        "-I",
+        "-S",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/repair-002/package_source.py",
+        "verify-tree",
+        "--tree",
+        "/private/tmp/ac-t013-lean-package-001/pristine",
+        "--manifest-sha256",
+        "e981245097c06f693fcbe89565d5724db2103982fdb7891e8413a8a6cdc86ee4"
+      ],
+      "returncode": 0,
+      "seconds": 0.04226216673851013,
+      "stdout_sha256": "3bb8747861b6fc387eaa38ebd85790d28a39b03d74c6e36d54c88ed362d44068",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "returned": {
+        "files": 66,
+        "manifest_sha256": "e981245097c06f693fcbe89565d5724db2103982fdb7891e8413a8a6cdc86ee4",
+        "status": "source_bytes_verified"
+      }
+    },
+    {
+      "step": "repack-pristine",
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+        "-I",
+        "-S",
+        "-B",
+        "/private/tmp/ac-t013-lean-package-001/pristine/package_source.py",
+        "archive",
+        "--tree",
+        "/private/tmp/ac-t013-lean-package-001/pristine",
+        "--output",
+        "/private/tmp/ac-t013-lean-package-001/source-repack.tar",
+        "--manifest-sha256",
+        "e981245097c06f693fcbe89565d5724db2103982fdb7891e8413a8a6cdc86ee4"
+      ],
+      "returncode": 0,
+      "seconds": 0.08402945892885327,
+      "stdout_sha256": "39a383d6ea24df5a9784eeadc6f96f42be5540cb8e124e39537e96d8c37dcd32",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "returned": {
+        "archive_sha256": "40dbe00cc85d9c1c4a6ec88634a4318d7f9363bd2d68b025d6941872319d7ea0",
+        "bytes": 22353920,
+        "manifest_sha256": "e981245097c06f693fcbe89565d5724db2103982fdb7891e8413a8a6cdc86ee4",
+        "status": "source_archive_created"
+      }
+    },
+    {
+      "step": "verify-repack",
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+        "-I",
+        "-S",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/repair-002/package_source.py",
+        "verify-archive",
+        "--archive",
+        "/private/tmp/ac-t013-lean-package-001/source-repack.tar",
+        "--manifest-sha256",
+        "e981245097c06f693fcbe89565d5724db2103982fdb7891e8413a8a6cdc86ee4"
+      ],
+      "returncode": 0,
+      "seconds": 0.04034633422270417,
+      "stdout_sha256": "79c5ce5efb1c5de07ebb36e4e5a451c2f89b9e8e0c6c215253167d99d24f8b87",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "returned": {
+        "files": 66,
+        "manifest_sha256": "e981245097c06f693fcbe89565d5724db2103982fdb7891e8413a8a6cdc86ee4",
+        "status": "source_archive_verified"
+      }
+    },
+    {
+      "step": "extract-operational",
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+        "-I",
+        "-S",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/repair-002/package_source.py",
+        "extract",
+        "--archive",
+        "/private/tmp/ac-t013-lean-package-001/source-package.tar",
+        "--output",
+        "/private/tmp/ac-t013-lean-package-001/operational",
+        "--manifest-sha256",
+        "e981245097c06f693fcbe89565d5724db2103982fdb7891e8413a8a6cdc86ee4"
+      ],
+      "returncode": 0,
+      "seconds": 0.07510416582226753,
+      "stdout_sha256": "3bb8747861b6fc387eaa38ebd85790d28a39b03d74c6e36d54c88ed362d44068",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "returned": {
+        "files": 66,
+        "manifest_sha256": "e981245097c06f693fcbe89565d5724db2103982fdb7891e8413a8a6cdc86ee4",
+        "status": "source_bytes_verified"
+      }
+    },
+    {
+      "step": "verify-operational-source",
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+        "-I",
+        "-S",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/package/repair-002/package_source.py",
+        "verify-tree",
+        "--tree",
+        "/private/tmp/ac-t013-lean-package-001/operational",
+        "--manifest-sha256",
+        "e981245097c06f693fcbe89565d5724db2103982fdb7891e8413a8a6cdc86ee4"
+      ],
+      "returncode": 0,
+      "seconds": 0.04322812519967556,
+      "stdout_sha256": "3bb8747861b6fc387eaa38ebd85790d28a39b03d74c6e36d54c88ed362d44068",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "returned": {
+        "files": 66,
+        "manifest_sha256": "e981245097c06f693fcbe89565d5724db2103982fdb7891e8413a8a6cdc86ee4",
+        "status": "source_bytes_verified"
+      }
+    }
+  ]
+}

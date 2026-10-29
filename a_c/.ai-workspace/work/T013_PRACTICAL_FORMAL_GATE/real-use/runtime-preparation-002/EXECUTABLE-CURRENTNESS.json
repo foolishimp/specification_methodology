@@ -1,0 +1,33 @@
+{
+  "schema": "a_c.T013.runtime-executable-currentness/1",
+  "observed_utc": "2026-10-29T16:36:21.880913+00:00",
+  "selected_prior_inspection_sha256": "67e2070408a42b4be9ba85d6687c97d3321121a16b0035258d7c87f3893f6d62",
+  "current_files": [
+    {
+      "role": "native",
+      "path": "/opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex",
+      "sha256": "d8990e3ee7acfbc26f91265b12a1a83f0fee40d0e0f8f1f40a37d4ec21f499cf",
+      "bytes": 260293200,
+      "metadata_stable_during_hash": true
+    },
+    {
+      "role": "helper_python",
+      "path": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+      "sha256": "a7f5b535d61d1c7326824204ac80f045a97a652abb154421e2c74fcc365a3539",
+      "bytes": 152096,
+      "metadata_stable_during_hash": true
+    }
+  ],
+  "native_version": "0.164.0 from retained exact-binary inspection; not rerun here",
+  "launcher": "Direct native executable; wrappers and JavaScript launcher excluded as previously observed.",
+  "host_loader_boundary": {
+    "qualification": "OS/dyld/system-library semantics remain trusted host dependencies, not a complete machine-image pin.",
+    "system_libraries": "native-system-libraries.txt",
+    "user_launcher": "none; direct regular native executable"
+  },
+  "settings": "Native defaults, no model/effort override, workspace-write, --ignore-user-config, --ephemeral, --json, no HOME/CODEX_HOME override.",
+  "actual_underlying_model": "unknown until actually reported",
+  "credentials_inspected": false,
+  "model_calls": 0,
+  "CLI_or_interpreter_child_calls": 0
+}

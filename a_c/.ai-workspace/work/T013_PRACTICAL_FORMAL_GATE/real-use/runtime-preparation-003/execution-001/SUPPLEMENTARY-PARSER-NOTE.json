@@ -1,0 +1,10 @@
+{
+  "actual_Runtime_or_Source_or_Context_failure": false,
+  "correction": "Read-only inspection established the exact instruction prefix. Verify that prefix and parse only the JSON suffix for field classification; unchanged reviewed comparator already compares complete exact rendered bytes. No actual bytes are rewritten or normalized.",
+  "dependent_public_or_proof_operation_during_inspection": false,
+  "diagnostic": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "failed_expression": "json.loads(d[\"rendered_utf8\"])",
+  "observation": "Initial supplementary inspector attempted json.loads(actual rendered_utf8); it contains an explicit leading instruction line, so that bare-JSON parse raised JSONDecodeError before any comparison record or dependent request was written.",
+  "public_operation_repeated": false,
+  "schema": "a_c.T013.supplementary-inspection-note/1"
+}

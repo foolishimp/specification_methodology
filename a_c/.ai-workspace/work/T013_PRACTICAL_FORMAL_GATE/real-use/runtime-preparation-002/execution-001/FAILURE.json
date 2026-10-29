@@ -1,0 +1,56 @@
+{
+  "schema": "a_c.T013.phase-a-closed-failure/1",
+  "status": "incomplete",
+  "meaning": "Actual selected Context-bound view proof did not complete; no correctness or semantic-invalidity verdict. Pair not ready for dispatch.",
+  "ungated_preflight": "admitted",
+  "gated_preflight": "public observation_unavailable error; no admission",
+  "failed_stage": "GateViews",
+  "stage_exit_code": -6,
+  "stage_seconds": 13.031401833985,
+  "compiler_option": "-M4096",
+  "diagnostic": "libc++abi: terminating due to uncaught exception of type lean::memory_exception: excessive memory consumption detected at interpreter",
+  "diagnostic_log": "real-use/runtime-preparation-001/execution/evidence/formal/3894ddfbbea44daeb14009252f0e9148/bundle/GateViews.log",
+  "diagnostic_log_sha256": "48bc2200174632932b9ea98fd0a0c30e6dc353ce535531045f1c7efc7b79940a",
+  "gate_result_sha256": "3048818a896d26ec064e6c956310fa844566235cd4caa642e0254641f1ac7ec9",
+  "gate_manifest_sha256": "b36560f2ce3316085d81dc179c66816dfcd84ef00a7a8360330736f0573482c7",
+  "public_diagnostic_artifact": {
+    "id": "sha256:c9ee49939b9077e9a8310c12689181c10be58fbfaecb41bd0c33c0b56bec9005",
+    "sha256": "c9ee49939b9077e9a8310c12689181c10be58fbfaecb41bd0c33c0b56bec9005"
+  },
+  "runtime_identity_sha256": "065648e6cc971be7edc75c1fa7b0428351357fe312146059b71fb788842313a7",
+  "actual_input_sha256": "70feb48cf657bcb20231dbfffe0c2076e5e69b24aeb0f226a001a22957b7f56a",
+  "actual_view_sha256": "70bfa0148bcb3bc10111a99a60fa42c2e87f5b99352ed446fe4c09178f419768",
+  "selection": [
+    {
+      "budget_records": 29,
+      "seeds": [
+        "urn:a-c:generation:0657852b6fd1fa48457c3f7d:record:2bdf6340141f53f21c1781855206b707",
+        "urn:a-c:generation:0657852b6fd1fa48457c3f7d:record:1e617d4a71ceb9be3d7c064bf93039d6"
+      ]
+    }
+  ],
+  "context_binding": {
+    "activation_identity": {
+      "id": "t013-report-gated-worker-001:activation",
+      "sha256": "291b47c0b6c502bd7c451e918af860944a1518c29a12c0eed7cc5871f53d006f"
+    },
+    "rendered_sha256": "f4c740d577337af344b07c376455746d25d3e4489d8b9d2da9cb79be2c057990"
+  },
+  "checked_claims": [],
+  "successful_compile_stages_before_failure": [
+    "GateData",
+    "GateLocalNames",
+    "GateExternalNames",
+    "GateIdentities",
+    "GateBounds",
+    "GateModel"
+  ],
+  "Kernel_replay_and_actual_runtime_completed": false,
+  "received_actual_contexts": true,
+  "actor_delivery_or_task_outcome": false,
+  "layout_disposition": "EXECUTIVE-LAYOUT-DISPOSITION.json",
+  "repair_retry_or_resource_change": false,
+  "ready_dispatch_pair": false,
+  "dispatch_requests_created": 0,
+  "process_status": "Public CLI and its supervised proof invocation exited; no active operator tool session or actor Attempt."
+}

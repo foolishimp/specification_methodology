@@ -1,0 +1,176 @@
+{
+  "actual_worker_delivery_or_benefit_established": false,
+  "controls": [
+    {
+      "control": "omitted-residual",
+      "early_no_output": true,
+      "external_seconds": 0.15586033323779702,
+      "public_hashes_refreshed": true,
+      "reason": "Exact local establishment binding changed"
+    },
+    {
+      "control": "runtime-tamper",
+      "early_no_output": true,
+      "external_seconds": 0.1540923328138888,
+      "public_hashes_refreshed": true,
+      "reason": "Exact local establishment binding changed"
+    },
+    {
+      "control": "typed-context",
+      "early_no_output": true,
+      "external_seconds": 0.15625158324837685,
+      "public_hashes_refreshed": true,
+      "reason": "Exact local establishment binding changed"
+    },
+    {
+      "control": "stale-pin",
+      "early_no_output": true,
+      "external_seconds": 0.14361329190433025,
+      "public_hashes_refreshed": true,
+      "reason": "Evidence verifier/proof/profile pins are stale"
+    },
+    {
+      "control": "boolean-budget",
+      "early_no_output": true,
+      "external_seconds": 0.124656583648175,
+      "public_hashes_refreshed": false,
+      "reason": "Budget must be a nonnegative record count or null"
+    }
+  ],
+  "exact_prior_full_artifacts_conserved": [
+    "GateData.lean",
+    "GateLocalNames.lean",
+    "GateExternalNames.lean",
+    "GateIdentities.lean",
+    "GateBounds.lean",
+    "GateModel.lean",
+    "GateViews.lean",
+    "GateRun.lean",
+    "actual-runtime.log",
+    "input.json",
+    "model.json",
+    "certificates.json",
+    "supplied-views.json"
+  ],
+  "full_ratio": 24.905907261209236,
+  "full_runtime_identity": "065648e6cc971be7edc75c1fa7b0428351357fe312146059b71fb788842313a7",
+  "origin_free_installed_fallback_established": false,
+  "portable_runtime_pins": 24,
+  "prior_scale_changed_runtime_paths": [
+    "scripts/formal_gate.py",
+    "scripts/formal_reuse.py"
+  ],
+  "reconstructed_subjects": {
+    "full-cold": {
+      "edges": 3995,
+      "external_resolutions": 1021,
+      "records": 1987,
+      "references": 16498,
+      "retained_unresolved": 1,
+      "selected_indices": [
+        0,
+        9,
+        10,
+        664,
+        666,
+        866,
+        867,
+        869,
+        1825
+      ],
+      "view_external": 18
+    },
+    "small-cold": {
+      "edges": 9,
+      "external_resolutions": 13,
+      "records": 6,
+      "references": 45,
+      "retained_unresolved": 1,
+      "selected_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "view_external": 12
+    }
+  },
+  "runs": [
+    {
+      "audit_count": 6,
+      "child_high_water_rss_bytes": 8831631360,
+      "current_invocations": [
+        7,
+        1,
+        1
+      ],
+      "entry_id": "a1189f1ef014bdec218a1c2abd15943486dbdfed1856c49c4012d3b53c1ca6f1",
+      "external_seconds": 22.31906000012532,
+      "internal_seconds": 22.174009582959116,
+      "label": "small-cold",
+      "result_sha256": "f0a223baff83392913a076ddd47747dfdcf5296fcd1dee32e4c5dac2987e223f"
+    },
+    {
+      "audit_count": 6,
+      "child_high_water_rss_bytes": 169639936,
+      "current_invocations": [
+        0,
+        0,
+        0
+      ],
+      "entry_id": "a1189f1ef014bdec218a1c2abd15943486dbdfed1856c49c4012d3b53c1ca6f1",
+      "external_seconds": 7.642737374641001,
+      "internal_seconds": 7.464942667167634,
+      "label": "small-reuse-1",
+      "result_sha256": "d7825bb44c478fc7675f84188f3b4f8e5b16717ea0605a561ab3253f8d90169f"
+    },
+    {
+      "audit_count": 6,
+      "child_high_water_rss_bytes": 146866176,
+      "current_invocations": [
+        0,
+        0,
+        0
+      ],
+      "entry_id": "a1189f1ef014bdec218a1c2abd15943486dbdfed1856c49c4012d3b53c1ca6f1",
+      "external_seconds": 7.430624541826546,
+      "internal_seconds": 7.26825183397159,
+      "label": "small-reuse-2",
+      "result_sha256": "43389650c5427db90801db7b35407d6b8a5eda5f226557c1b23fd76f1fbc1f58"
+    },
+    {
+      "audit_count": 62,
+      "child_high_water_rss_bytes": 13616070656,
+      "current_invocations": [
+        7,
+        1,
+        1
+      ],
+      "entry_id": "fc0ab1c301e5adf906799193e6aba1a2d124cad6c9a15a6ef5e6060509fa0e71",
+      "external_seconds": 264.94666604185477,
+      "internal_seconds": 264.4247199166566,
+      "label": "full-cold",
+      "result_sha256": "5e93cb068dccd820dbc0ec8090e6701f0a220d8eb8b2e2cfb0c7ba88ad06d987"
+    },
+    {
+      "audit_count": 62,
+      "child_high_water_rss_bytes": 715784192,
+      "current_invocations": [
+        0,
+        0,
+        0
+      ],
+      "entry_id": "fc0ab1c301e5adf906799193e6aba1a2d124cad6c9a15a6ef5e6060509fa0e71",
+      "external_seconds": 10.637904624920338,
+      "internal_seconds": 9.883031416218728,
+      "label": "full-reuse",
+      "result_sha256": "9d1da9389524fe1ead95fb99bdc62cc830605543d41fa6406e843e00e77c41da"
+    }
+  ],
+  "scope": "Read-only public source/evidence comparisons; no product execution, proof, private origin or key read",
+  "source_pin_count": 57,
+  "status": "passed",
+  "support_manifest_sha256": "7198879c3dfefe52ee4c980b33990197cd338eb19ac4e84cce3dd26a4cd66363"
+}

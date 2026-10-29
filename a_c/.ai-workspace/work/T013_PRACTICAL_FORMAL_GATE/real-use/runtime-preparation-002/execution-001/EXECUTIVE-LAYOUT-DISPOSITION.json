@@ -1,0 +1,40 @@
+{
+  "schema": "a_c.T013.phase-a-layout-disposition/1",
+  "recorded_utc": "2026-10-29T17:35:48.647855+00:00",
+  "decider": "/root",
+  "decision": "Keep actual current Context layout and finish Phase A unchanged; no actor grant yet.",
+  "basis": "CONTEXT-DIFFERENCES.json and CONTEXT-ORDERING-NOTE.json",
+  "preservation": "14 common acquired records are byte-identical and keep their relative order. Three operator records and identities are declared operational differences; changed interleaving is retained explicitly. Eleven of the common records are the prepared task/source inputs; three are shared owner/selection/Product records.",
+  "evaluation_scope": [
+    "actual workflow usability",
+    "deliverable quality",
+    "observed total cost"
+  ],
+  "prohibited_inference": [
+    "attribute a quality difference solely to verification",
+    "byte-identical prompt claim",
+    "causal verification-benefit claim"
+  ],
+  "no_reformat_or_new_Context_or_repeated_proof": true,
+  "retained_rendered_bytes": {
+    "ungated": {
+      "path": "rendered-ungated.context.txt",
+      "sha256": "e1d29b7b9fa4fce877aeec641e1730d9e9f57fdab7049fecaab355aa24e9e77c",
+      "bytes": 380548,
+      "source_artifact": {
+        "id": "sha256:39879b57010af12213d7ffe7d0ce94c16fb84d978e9245fe80168e0f403372be",
+        "sha256": "39879b57010af12213d7ffe7d0ce94c16fb84d978e9245fe80168e0f403372be"
+      }
+    },
+    "gated": {
+      "path": "rendered-gated.context.txt",
+      "sha256": "f4c740d577337af344b07c376455746d25d3e4489d8b9d2da9cb79be2c057990",
+      "bytes": 381108,
+      "source_artifact": {
+        "id": "sha256:e453f4ccdb3a267d93861e1e415ba8d1f84260e2f29a7c44263b864732b40318",
+        "sha256": "e453f4ccdb3a267d93861e1e415ba8d1f84260e2f29a7c44263b864732b40318"
+      }
+    }
+  },
+  "dispatch_permission": false
+}

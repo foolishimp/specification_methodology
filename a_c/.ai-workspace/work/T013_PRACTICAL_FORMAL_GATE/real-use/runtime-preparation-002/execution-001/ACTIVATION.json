@@ -1,0 +1,64 @@
+{
+  "schema": "a_c.T013.actual-use-phase-a-activation/1",
+  "activated_utc": "2026-10-29T17:19:51.977491+00:00",
+  "actor": "/root/ac_scale_checkpoint_writer",
+  "role": "Worker/Operator for bounded Phase A",
+  "Executive": "/root",
+  "delegated_principal": "existing registered executive principal, executing the exact selected public operations on behalf of Root",
+  "basis": {
+    "uri": "stdo://releases/v2.5.1-rc.2/",
+    "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "calculus_sha256": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+    "owner_ticket_sha256": "c5c8ed56ebfef3f51406be4b63d7d1fd3976de294ce0a64c801ea3f4da44fefc",
+    "owner_lines": [
+      149,
+      225
+    ]
+  },
+  "selected_closed_preconditions": {
+    "review/pre-execution-001/CLOSED.json": "1a69d600996a664ba04e27ea80b8de78e6236b009b03f82c93d70a573ca1d8d0",
+    "review/reuse-qualification-001/CLOSED.json": "c6fe55e51bb19075e43f936d23e32e8cee200746d5905782c51eafc424043870",
+    "package/delivery-001/CLOSED.json": "be9537a34cca887700275396218cf3c76fba674bede662d5a2fab43b5a986ee1",
+    "real-use/runtime-preparation-002/CLOSED.json": "3ddc0345172a81c8cf511570c2c183ff600d8c28436947e95e62e9491cf30e33"
+  },
+  "write_territories": [
+    "real-use/runtime-preparation-002/execution-001/**",
+    "real-use/runtime-preparation-001/execution/**",
+    "/private/tmp/ac-t013-report-001/ungated/**",
+    "/private/tmp/ac-t013-report-001/gated/**"
+  ],
+  "granted_effects": [
+    "Freeze exact current execution configuration for Phase A only, preserving reviewed task/protocol, source pins, checker and two-call allowance.",
+    "Create the two exact fresh task directories and stage immutable inputs using unchanged reviewed finalizer.",
+    "Current executable/loader/source/owner/checker inspection without authentication files or raw credentials.",
+    "Existing public source.read for all declared source refs, then context.assemble for both arms.",
+    "Reviewed exact actual Context comparison; stop on unexplained difference.",
+    "After successful comparison, existing public contract.preflight for both arms, including fresh full-model 29-view Context-bound gated proof in exclusive heavy window.",
+    "Prepare exact dispatch requests for Executive decision without execution.",
+    "Retain actual requests, responses, acquisition, timing/resource evidence and readiness/failure closure."
+  ],
+  "limits": {
+    "proof_checking_process_seconds": 90,
+    "compiler_option": "-M4096; not physical RSS cap",
+    "public_checker_seconds": 600,
+    "actor_seconds": 900,
+    "outer_actor_seconds": 1000,
+    "actor_input_bytes": 2097152,
+    "actor_output_bytes": 16777216,
+    "actor_grace_seconds": 2,
+    "maximum_later_invocations_per_arm": 1,
+    "automatic_retry": false
+  },
+  "phase_actor_allowance": 0,
+  "forbidden": [
+    "dispatch.start or any native Codex/model invocation",
+    "candidate/code/common/docs/owner/historical preparation edits",
+    "Git/index/commit/push",
+    "acceptance or review authority claim",
+    "manual private selection/key/store reads",
+    "silent normalization or replay/retry of failed full proof",
+    "invented host-context capacity/admission facts"
+  ],
+  "stop_rule": "Stop on shared setup, currentness or unexplained Context mismatch; retain exact failure with no candidate fix or repeated full proof.",
+  "heavy_window": "Root declares package/other heavy work closed; this Phase A gated proof owns exclusive heavy window."
+}

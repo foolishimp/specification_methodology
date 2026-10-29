@@ -1,0 +1,47 @@
+{
+  "schema": "a_c.T013.runtime-preparation-activation/1",
+  "activated_utc": "2026-10-29T18:28:59.551740+00:00",
+  "actor": "/root/ac_scale_checkpoint_writer",
+  "role": "Writer",
+  "Executive": "/root",
+  "instruction": "Prepare only successor runtime-preparation-003 against the exact generator/caller repair while independent review runs. No actual runtime selection or effect.",
+  "change_class": "realization_refactor",
+  "requirements": "FR-001\u2013FR-014 unchanged",
+  "write_territory": "real-use/runtime-preparation-003/**",
+  "basis": {
+    "product_definition": "a_c/stdo_a_c.json",
+    "installed_builder": "stdo://releases/v2.5.1-rc.2/",
+    "builder_manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+    "owner_ticket_sha256": "c5c8ed56ebfef3f51406be4b63d7d1fd3976de294ce0a64c801ea3f4da44fefc",
+    "owner_json_lines": [
+      149,
+      225
+    ],
+    "selected_records": {
+      "lean/view-repair-implementation-001/CLOSED.json": "be5621baa8dcd9177389201fd6319d27b054e5260a089ea2844f0c45edf8f60d",
+      "lean/view-repair-implementation-001/SOURCE-PINS.json": "f19d592d81a76a4c8c1153e867982aba750c46838fd7a827fc6cebdf08ecd242",
+      "real-use/runtime-preparation-002/CLOSED.json": "3ddc0345172a81c8cf511570c2c183ff600d8c28436947e95e62e9491cf30e33",
+      "real-use/runtime-preparation-002/execution-001/CLOSED.json": "2b791df7a0cb172f569606534c27dc6d55eb619caae4444be566bab13e652f9b"
+    }
+  },
+  "full_runtime_identity_sha256": "f492806bfb58bcabad63a89caa4c62c57bd37f8ed99b8fed764a9a6c5b8908c9",
+  "origin_free_identity_sha256": "4f9e8402122f1722559a4bb7d7559b09ce107f8de8a38de600aedc947611072d",
+  "permitted": [
+    "read source and public exact pins",
+    "copy unchanged reviewed builder and form current pending configuration/templates",
+    "read-only confirm unused task workspaces equal frozen input set",
+    "preserve original owner/task/protocol/model/29-view/evidence root/layout disposition",
+    "pure source and shape checks confined to this preparation"
+  ],
+  "forbidden": [
+    "public source.read/context.assemble/contract.preflight/dispatch",
+    "proof/gate/compiler/native CLI/model calls",
+    "workspace modifications",
+    "candidate/source/owner/common edits",
+    "private origin selection/key/store acquisition",
+    "Git effects",
+    "review acceptance or execution authority"
+  ],
+  "actor_call_count": 0,
+  "execution_requires": "Separate Root grant after independent source review and this preparation closure."
+}

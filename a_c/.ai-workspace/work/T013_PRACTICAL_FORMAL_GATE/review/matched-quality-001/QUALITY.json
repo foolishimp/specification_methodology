@@ -1,0 +1,107 @@
+{
+  "additional_cases_per_output": 51,
+  "all_cli_results": {
+    "A": {
+      "fail": 5,
+      "pass": 70
+    },
+    "B": {
+      "fail": 1,
+      "pass": 74
+    }
+  },
+  "blinding": {
+    "complete_blinding_claimed": false,
+    "explicit_gated_or_ungated_label_seen_in_delivered_code_docs_manifests_tests": false,
+    "mapping_costs_operational_transcripts_read": false,
+    "reason": "Unedited artifacts; shared protocol states trial design; mapping was withheld"
+  },
+  "candidate_manifest_hash_claims": "Both four-artifact lists independently match frozen files",
+  "candidate_repairs": 0,
+  "frozen_inputs_and_disposable_copies_after_checks": "unchanged",
+  "handoff_sha256": "8aa45c66afae9b0725b3b3d2a099b5812c918ef2a0fe7892e7312eb58fdd4c40",
+  "hidden_cases_sha256": "4c99396b63547c9a875fbaf22e2b118587bcd61c963e97af65128ad38841a213",
+  "independently_reproduced_worker_tests": {
+    "A": {
+      "exit": 0,
+      "tests": 6
+    },
+    "B": {
+      "exit": 0,
+      "tests": 7
+    }
+  },
+  "input_pins_sha256": "335e9b465d1fbe5a0acf632b09256e03def0055f49c335972646b1426d61cfff",
+  "operational_or_causal_benefit_claim": false,
+  "predeclared_results": {
+    "A": {
+      "cases_passed": 17,
+      "cases_total": 17,
+      "families": 8
+    },
+    "B": {
+      "cases_passed": 17,
+      "cases_total": 17,
+      "families": 8
+    }
+  },
+  "product_acceptance": false,
+  "protocol_sha256": "547a73826a8bd28721661361106d5a8e53844ca3a3a8b2a10dd5b66d7a2ae4f6",
+  "review_check_process_seconds": 3.3997130817733705,
+  "review_cost_scope": "Sequential independent CLI and self-test process intervals only; excludes source review/authorship/coordination; not actual Worker performance",
+  "schema": "a_c.T013.independent-neutral-quality-verdict/1",
+  "scope": "Quality only, frozen before operational mapping/cost/transcript disclosure",
+  "subjects": {
+    "A": {
+      "README.md": {
+        "bytes": 1585,
+        "sha256": "351e034f22ddfbc1b7532661d67bab37c98c50a7b0886c4637f1576faa1a6b7b"
+      },
+      "gate_report.py": {
+        "bytes": 3857,
+        "sha256": "cea3f4b62d1c6286bf3f0a067c91643fbc71a0114abeafbe69ed3a702891f6e9"
+      },
+      "support/candidate.json": {
+        "bytes": 870,
+        "sha256": "5f8678fe0e0ee6779a3bf98459cf0d552c1df6565830c8cc6e5e63665a35b94d"
+      },
+      "support/test-output.txt": {
+        "bytes": 574,
+        "sha256": "87e8dc7d986dde80b1b2cfe9a4d38078389ce703f5be1a6ba189a3bb359ca665"
+      },
+      "test_gate_report.py": {
+        "bytes": 5999,
+        "sha256": "ddb213f05d913d532bf3a83122d125856335fbe0a2e3b8896057d87fafe036da"
+      }
+    },
+    "B": {
+      "README.md": {
+        "bytes": 1411,
+        "sha256": "c2ae43506e8d08d92e65b38df1787ac580d3c29a40e9ec970e3f2957de2f31ad"
+      },
+      "gate_report.py": {
+        "bytes": 4154,
+        "sha256": "f7bbeae2c15866ef537d90b8ab777eec9ae7ea77111af5304431a50498dee9a9"
+      },
+      "support/candidate.json": {
+        "bytes": 847,
+        "sha256": "ab91e181327904498315a86f22e7adc61f71489ba14c9ec3b10526eff21f7ab7"
+      },
+      "support/test-output.txt": {
+        "bytes": 668,
+        "sha256": "ded8591643b909209762f1133645b23025bb7e7dfabc26d8a856b71c23836ba8"
+      },
+      "test_gate_report.py": {
+        "bytes": 6724,
+        "sha256": "899e87ac29544f67c4a470ed27fa544a8842d0910b1689d8372a5acdfd1aa3e1"
+      }
+    }
+  },
+  "supplied_examples": {
+    "A": 7,
+    "B": 7
+  },
+  "task_sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829",
+  "total_cli_cases_per_output": 75,
+  "verdict": "Changes needed in both outputs; B better preserves numeric distinctions on this task"
+}

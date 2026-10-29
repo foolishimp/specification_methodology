@@ -1,0 +1,11 @@
+{
+  "stage": "control preparation",
+  "attempt": 1,
+  "command": "Python 3.12 -I -S -B prepare.py",
+  "exit_code": 1,
+  "error": "import_fixture.Refusal: unreadable JSON: document: expected object",
+  "cause": "Diagnostic harness used bridge.read_json, an object-only reader, for the frozen certificates array.",
+  "source_sha256": "8dc0711fe5fb846f2dbd984c1ca9d12328b1d6f8f13351879d8e3e1bb53b3afc",
+  "repair": "Read the already manifest-verified certificates array with json.loads. No production source change for this harness correction.",
+  "Lean_invocations": 0
+}

@@ -1,0 +1,303 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "activation": {
+      "const": {
+        "id": "t013-report-ungated-worker-001:activation",
+        "sha256": "b81627a1e9d4a0727214c330e1203576e285278468b208aca5cd6283f1950e58"
+      }
+    },
+    "actor": {
+      "const": {
+        "authorship": "t013-report-ungated-worker-001",
+        "family": "codex-native-default",
+        "id": "t013-report-ungated-worker-001"
+      }
+    },
+    "basis": {
+      "const": {
+        "method_profile": {
+          "id": "urn:a-c:fd-support:method:claude-rc9:executive:1",
+          "sha256": "bdb937545c13d2cea8eaa93507102cff7c2ea41ca0fc169a8ec84c81003dc7d1"
+        },
+        "observations": []
+      }
+    },
+    "consumer": {
+      "const": "/root"
+    },
+    "evaluations": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "core_value": {
+            "enum": [
+              "satisfied",
+              "falsified",
+              "indeterminate",
+              "out_of_frame",
+              "invalid_basis"
+            ]
+          },
+          "domain_outcome": {
+            "additionalProperties": false,
+            "properties": {
+              "command": {
+                "type": "string"
+              },
+              "exit_code": {
+                "type": "integer"
+              },
+              "observation": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "command",
+              "exit_code",
+              "observation"
+            ],
+            "type": "object"
+          },
+          "evidence": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "engine": {
+                  "const": "workspace-regular-file"
+                },
+                "object": {
+                  "type": "null"
+                },
+                "path": {
+                  "type": "string"
+                },
+                "root": {
+                  "const": "task"
+                },
+                "selector": {
+                  "type": "null"
+                },
+                "sha256": {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "engine",
+                "root",
+                "path",
+                "object",
+                "sha256",
+                "selector"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "id": {
+            "type": "string"
+          },
+          "invalidators": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "predicate": {
+            "const": {
+              "engine": "workspace-regular-file",
+              "object": null,
+              "path": "TASK.md",
+              "root": "prepared",
+              "selector": null,
+              "sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829"
+            }
+          },
+          "residuals": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "id",
+          "predicate",
+          "domain_outcome",
+          "core_value",
+          "evidence",
+          "residuals",
+          "invalidators"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "frame": {
+      "const": {
+        "id": "t013-report-helper-frame",
+        "revision": "1"
+      }
+    },
+    "id": {
+      "const": "t013-report-ungated-worker-001:return"
+    },
+    "invalidators": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "not_performed": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "residuals": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "schema": {
+      "const": "a_c.fd-support.closed-return/1"
+    },
+    "subject": {
+      "const": {
+        "id": "urn:a-c:T013:report-helper:001",
+        "sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829"
+      }
+    },
+    "work_result": {
+      "anyOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "candidate": {
+              "anyOf": [
+                {
+                  "additionalProperties": false,
+                  "properties": {
+                    "engine": {
+                      "const": "workspace-regular-file"
+                    },
+                    "object": {
+                      "type": "null"
+                    },
+                    "path": {
+                      "const": "support/candidate.json"
+                    },
+                    "root": {
+                      "const": "task"
+                    },
+                    "selector": {
+                      "type": "null"
+                    },
+                    "sha256": {
+                      "pattern": "^[0-9a-f]{64}$",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "engine",
+                    "root",
+                    "path",
+                    "object",
+                    "sha256",
+                    "selector"
+                  ],
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "cause": {
+              "type": "string"
+            },
+            "evidence": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "engine": {
+                    "const": "workspace-regular-file"
+                  },
+                  "object": {
+                    "type": "null"
+                  },
+                  "path": {
+                    "type": "string"
+                  },
+                  "root": {
+                    "const": "task"
+                  },
+                  "selector": {
+                    "type": "null"
+                  },
+                  "sha256": {
+                    "pattern": "^[0-9a-f]{64}$",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "engine",
+                  "root",
+                  "path",
+                  "object",
+                  "sha256",
+                  "selector"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "residuals": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "value": {
+              "enum": [
+                "candidate_ready",
+                "refused",
+                "incomplete",
+                "re_entry_requested"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "cause",
+            "candidate",
+            "evidence",
+            "residuals"
+          ],
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "schema",
+    "id",
+    "frame",
+    "activation",
+    "subject",
+    "basis",
+    "actor",
+    "consumer",
+    "evaluations",
+    "not_performed",
+    "work_result",
+    "residuals",
+    "invalidators"
+  ],
+  "type": "object"
+}

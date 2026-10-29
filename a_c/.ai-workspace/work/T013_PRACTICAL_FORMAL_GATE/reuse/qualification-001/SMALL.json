@@ -1,0 +1,46 @@
+{
+  "schema": "a_c.T013.small-reuse-qualification/1",
+  "status": "passed",
+  "six_records": true,
+  "retained_residual": true,
+  "direct_original_lineage": true,
+  "entry_count_after": 1,
+  "runs": [
+    {
+      "label": "small-cold",
+      "status": "verified",
+      "entry_id": "a1189f1ef014bdec218a1c2abd15943486dbdfed1856c49c4012d3b53c1ca6f1",
+      "layout": "cold",
+      "result_sha256": "f0a223baff83392913a076ddd47747dfdcf5296fcd1dee32e4c5dac2987e223f",
+      "external_seconds": 22.31906000012532,
+      "child_high_water_rss_bytes": 8831631360,
+      "proof_invocations": 7,
+      "kernel_invocations": 1,
+      "runtime_invocations": 1
+    },
+    {
+      "label": "small-reuse-1",
+      "status": "verified",
+      "entry_id": "a1189f1ef014bdec218a1c2abd15943486dbdfed1856c49c4012d3b53c1ca6f1",
+      "layout": "reuse",
+      "result_sha256": "d7825bb44c478fc7675f84188f3b4f8e5b16717ea0605a561ab3253f8d90169f",
+      "external_seconds": 7.642737374641001,
+      "child_high_water_rss_bytes": 169639936,
+      "proof_invocations": 0,
+      "kernel_invocations": 0,
+      "runtime_invocations": 0
+    },
+    {
+      "label": "small-reuse-2",
+      "status": "verified",
+      "entry_id": "a1189f1ef014bdec218a1c2abd15943486dbdfed1856c49c4012d3b53c1ca6f1",
+      "layout": "reuse",
+      "result_sha256": "43389650c5427db90801db7b35407d6b8a5eda5f226557c1b23fd76f1fbc1f58",
+      "external_seconds": 7.430624541826546,
+      "child_high_water_rss_bytes": 146866176,
+      "proof_invocations": 0,
+      "kernel_invocations": 0,
+      "runtime_invocations": 0
+    }
+  ]
+}

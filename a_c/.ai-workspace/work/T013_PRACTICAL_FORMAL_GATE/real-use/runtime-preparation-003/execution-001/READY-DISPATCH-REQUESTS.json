@@ -1,0 +1,77 @@
+{
+  "actor_calls": 0,
+  "arms": {
+    "gated": {
+      "actor_id": "t013-report-gated-worker-001",
+      "actual_preflight_response": "real-use/runtime-preparation-003/execution-001/observations/gated/preflight/response.json",
+      "actual_preflight_response_sha256": "a738df1262979a8d070b306d2e6a5ae99beb6c3fa90e13caf81229a5b40ecedd",
+      "admission_evaluations": 11,
+      "context": {
+        "actual_response_sha256": "a4c442fffcbcfd00a9f8317d7e251f0b1e4d192e7a7f4f82537a81a3536a023f",
+        "artifact": {
+          "id": "sha256:7cf0976f8b0db3b980c27b5f5584e74cc698aebcdf80d511b59b509357983ae6",
+          "sha256": "7cf0976f8b0db3b980c27b5f5584e74cc698aebcdf80d511b59b509357983ae6"
+        },
+        "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/real-use/runtime-preparation-001/execution/evidence/objects/7cf0976f8b0db3b980c27b5f5584e74cc698aebcdf80d511b59b509357983ae6.json",
+        "rendered_bytes": 381036,
+        "rendered_sha256": "f114593150b15dc49a5aa58c1f018f43e731f77d5d3c15eea632ebdd28a83bfa"
+      },
+      "dispatch_request": "real-use/runtime-preparation-003/execution-001/requests/gated/dispatch.request.json",
+      "dispatch_request_sha256": "4d2cb9430f572a651f1416d3d627ec392fc44faea5e1335da710306b31995047",
+      "formal_evidence": {
+        "id": "sha256:73f1363d4155c7f263ea5130cc2a6ec8f3417f5de9daa8927911f280c073d9e4",
+        "sha256": "73f1363d4155c7f263ea5130cc2a6ec8f3417f5de9daa8927911f280c073d9e4"
+      },
+      "gaps": [],
+      "policy": "real-use/runtime-preparation-003/execution-001/runtime/gated/policy.json",
+      "policy_sha256": "9209a1e1653752da9b3d4e32e5ba7b216b94a3ff5cea580775a1e793499708e0",
+      "preflight_receipt": {
+        "id": "sha256:124080bc5f7b8b73c12cd6525a8fc95f6b20684952ad6e05155810827b5f4f29",
+        "sha256": "124080bc5f7b8b73c12cd6525a8fc95f6b20684952ad6e05155810827b5f4f29"
+      },
+      "request_only_no_dispatch": true,
+      "workspace": "/private/tmp/ac-t013-report-002/gated"
+    },
+    "ungated": {
+      "actor_id": "t013-report-ungated-worker-001",
+      "actual_preflight_response": "real-use/runtime-preparation-003/execution-001/observations/ungated/preflight/response.json",
+      "actual_preflight_response_sha256": "ceb098ee4149705d0968993bbc23a53f1df5f2f76f1d01136b09ba71c3102810",
+      "admission_evaluations": 10,
+      "context": {
+        "actual_response_sha256": "0ea0c8e308e6e46f59e841380542bff69ed7099317d4e03d6b950ce1705592b6",
+        "artifact": {
+          "id": "sha256:124db488a8387d51c4fdbcd6f29889f86de311578f056b55784169b6ef469aad",
+          "sha256": "124db488a8387d51c4fdbcd6f29889f86de311578f056b55784169b6ef469aad"
+        },
+        "path": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/real-use/runtime-preparation-001/execution/evidence/objects/124db488a8387d51c4fdbcd6f29889f86de311578f056b55784169b6ef469aad.json",
+        "rendered_bytes": 380476,
+        "rendered_sha256": "61390e83c91466c7cf6991c33c1bc07bf9309e83fb38384fb7e6e0a5c39693d7"
+      },
+      "dispatch_request": "real-use/runtime-preparation-003/execution-001/requests/ungated/dispatch.request.json",
+      "dispatch_request_sha256": "5d0b8dd3c849296b75d57b50400bc0edf3df112a4ec8aecf72aa8e5b9417ce15",
+      "formal_evidence": null,
+      "gaps": [],
+      "policy": "real-use/runtime-preparation-003/execution-001/runtime/ungated/policy.json",
+      "policy_sha256": "65ac6021c4c456deebc62c79799e04bb1df3d189e585e321e256148bbbce009b",
+      "preflight_receipt": {
+        "id": "sha256:47914c62038d5c682d9dda584271e65a9e4517220539f7cfbd3038dbe73b0741",
+        "sha256": "47914c62038d5c682d9dda584271e65a9e4517220539f7cfbd3038dbe73b0741"
+      },
+      "request_only_no_dispatch": true,
+      "workspace": "/private/tmp/ac-t013-report-002/ungated"
+    }
+  },
+  "authority": "Actual admission receipts returned for Root independent consumption and separate dispatch selection. This record gives no dispatch grant; engine rechecks current exact bindings at use.",
+  "automatic_retry": false,
+  "checker_canonical_sha256": "21854d77e788fd93d4ea52b6cf5a72c5a446c8f69322c09b21882aaf761f5f48",
+  "checker_raw_sha256": "c44cfa4b1d8817b9ef30fbdf31c101364d577fcd152068b233ca2703f7afbe61",
+  "dispatches": 0,
+  "formal_gate_manifest_sha256": "fc0801aa9ecdd6c2cfd411e420246da66c78d445d87946cec4ac366bad0f699a",
+  "formal_gate_result": "real-use/runtime-preparation-001/execution/evidence/formal/9c7303aa2c844d439da9f3eb32b8543f/bundle/result.json",
+  "formal_gate_result_sha256": "72ad6dc64938ab0e76476f5d479c9154035131354423ebbbb9fde38c8737dfe4",
+  "maximum_total_actor_calls": 2,
+  "observed_utc": "2026-10-29T18:54:31.860346+00:00",
+  "one_call_per_arm": true,
+  "runtime_identity_sha256": "f492806bfb58bcabad63a89caa4c62c57bd37f8ed99b8fed764a9a6c5b8908c9",
+  "schema": "a_c.T013.phase-a-dispatch-request-return/1"
+}

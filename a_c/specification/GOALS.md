@@ -1,24 +1,39 @@
 # Goals
 
-The active practical-gate increment is
+The completed bounded practical-gate increment is
 [T-013](../.ai-workspace/tickets/active/T-013-practical-formal-gate.md), a
 `goal_reprice` and `design_reframe` under unchanged FR-001–FR-014. Cold verification
-of the exact 1,987-record/1,021-external subject and an actual nontrivial view is
-complete and independently reviewed at its frozen scale identity. Origin-bound
-reuse is integrated and source reviewed, with 117 passing integration controls;
-actual fresh cold/reuse qualification on the integrated identity is next.
-Then run at most two matched actual F_P Worker tasks and independently assess
-their outputs and complete costs. The pair remains unstarted. Package preparation
-and exact oversized-evidence transport are reviewed; final archive construction
-and installed qualification remain pending. Full data correspondence, total
-cold/reused cost, current authority and actual received bytes decide the outcome. The
+of the exact 1,987-record/1,021-external subject now includes the actual 29-record
+Worker view under the current repaired generator. Fresh proof, kernel replay and
+runtime correspondence succeed; actual dispatch and supervisor checks reuse the
+exact current proof through its selected origin. Both allowed native F_P Worker
+calls are complete with exact received inputs and authenticated returns.
+Independent quality review found an S2 numeric-fidelity defect in the ungated
+helper and an S3 exponent-error defect in the gated helper. Both are retained,
+uncorrected evaluation observations; neither is an adopted Product feature.
+No further actor call or output repair is selected.
+
+The [operational review](../.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/review/matched-operation-001/REVIEW.md)
+finds no new actionable defect. Discriminators 1, 2, 4 and 5 are discharged within
+their stated boundaries; 3 has measured path/bounds evidence with overall economics
+open; 6 completes the bounded experiment without establishing positive benefit.
+The [final package/transport review](../.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/review/package-final-002/REVIEW.md)
+finds no actionable defect. Bounded T013 delivery and its experiment are complete:
+exact transport preserves all 24 oversized proof files, and the local source
+archive passes an installed full-view cold check. Fresh-host/cross-platform
+qualification remains open. The [delivery handoff](../.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/DELIVERY.md)
+binds usable entry points, current versus historical identities, scoped costs and
+remaining decisions. Full data correspondence, current authority and actual
+received bytes remain independent obligations. The
 [execution contract](../.ai-workspace/tickets/active/T-013-practical-formal-gate.md#ordered-execution)
 binds the sequence and retained limits. The
 [reviewed-increment checkpoint](../.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/checkpoint/reviewed-increment-002/RETURN.md)
-preserves this source and its closed evidence before actual runtime trials.
+preserves the earlier source and closed evidence before actual runtime trials.
 The selected compiler option remains `-M4096`, with 90 seconds per checking
-process and 600 seconds per public invocation. Observed aggregate child high-water
-RSS was 12.73–13.02 GB; the compiler option is not a physical-memory cap.
+process and 600 seconds per public invocation. The reaped-child high-water RSS
+field reached 14.61 GB in the current full-view check; the compiler option is not a
+physical-memory cap. The pair establishes neither causal quality benefit nor
+lower total cost; underlying Worker model identity and monetary totals were not reported.
 Owner acceptance, public release, method adoption and wider calculus claims
 remain unselected.
 

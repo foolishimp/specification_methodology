@@ -1,0 +1,156 @@
+{
+  "all_retained_phase_a_public_wall_sum_seconds": 518.4734342144802,
+  "arms": {
+    "gated": {
+      "dispatch_request_to_authenticated_capture_end_seconds": 184.03844690322876,
+      "dispatch_request_to_observed_helper_end_seconds": 124.53526902198792,
+      "dispatch_start_wall_seconds": 15.02298945793882,
+      "monetary_cost": null,
+      "native_call_seconds": 93.127797,
+      "native_or_operator_retries": 0,
+      "native_tool_completed_shell_commands": 5,
+      "native_tool_failed_shell_commands": 0,
+      "operator_output_repairs": 0,
+      "provider_reported_terminal_usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 1258880,
+        "input_tokens": 1468423,
+        "output_tokens": 5590,
+        "reasoning_output_tokens": 153
+      },
+      "public_operation_wall_sum_seconds": 21.670346290804446,
+      "registered_helper_interval_seconds": 96.520629,
+      "reported_model": null,
+      "worker_peak_rss_cpu_energy": "Not measured by transport; public CLI child-resource fields do not include the detached actor tree."
+    },
+    "ungated": {
+      "dispatch_request_to_authenticated_capture_end_seconds": 196.48089289665222,
+      "dispatch_request_to_observed_helper_end_seconds": 69.39131188392639,
+      "dispatch_start_wall_seconds": 3.5478374999947846,
+      "monetary_cost": null,
+      "native_call_seconds": 61.547321,
+      "native_or_operator_retries": 0,
+      "native_tool_completed_shell_commands": 5,
+      "native_tool_failed_shell_commands": 0,
+      "operator_output_repairs": 0,
+      "provider_reported_terminal_usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 1043456,
+        "input_tokens": 1252891,
+        "output_tokens": 4168,
+        "reasoning_output_tokens": 56
+      },
+      "public_operation_wall_sum_seconds": 9.99434974975884,
+      "registered_helper_interval_seconds": 64.621421,
+      "reported_model": null,
+      "worker_peak_rss_cpu_energy": "Not measured by transport; public CLI child-resource fields do not include the detached actor tree."
+    }
+  },
+  "current_reuse_checking_seconds": {
+    "dispatch": 9.298054750077426,
+    "supervisor": 9.222353250253946
+  },
+  "independent_assessment_and_repair_cost": "Not yet performed; unknown future cost, not successful zero-cost repair.",
+  "native_wall_sum_seconds": 154.675118,
+  "operator_model_monetary_cost": null,
+  "operator_model_tokens": null,
+  "provider_hidden_retries_or_unreported_usage": null,
+  "provider_monetary_cost": null,
+  "public_operation_count": 8,
+  "public_operation_wall_sum_seconds": 31.664696040563285,
+  "public_operations": [
+    {
+      "arm": "gated",
+      "children_maxrss_bytes_darwin": 1305706496,
+      "children_system_seconds": 2.909935,
+      "children_user_seconds": 11.427921,
+      "finished_utc": "2026-10-29T19:13:24.175095+00:00",
+      "operation": "dispatch.start",
+      "path": "observations/gated/dispatch/PROCESS.json",
+      "started_utc": "2026-10-29T19:13:09.151530+00:00",
+      "whole_invocation_wall_seconds": 15.02298945793882
+    },
+    {
+      "arm": "gated",
+      "children_maxrss_bytes_darwin": 292438016,
+      "children_system_seconds": 0.25961999999999996,
+      "children_user_seconds": 1.805329,
+      "finished_utc": "2026-10-29T19:14:06.178973+00:00",
+      "operation": "dispatch.observe",
+      "path": "observations/gated/observe-001/PROCESS.json",
+      "started_utc": "2026-10-29T19:14:02.155126+00:00",
+      "whole_invocation_wall_seconds": 4.023436292074621
+    },
+    {
+      "arm": "gated",
+      "children_maxrss_bytes_darwin": 326107136,
+      "children_system_seconds": 0.284056,
+      "children_user_seconds": 1.859551,
+      "finished_utc": "2026-10-29T19:15:27.196641+00:00",
+      "operation": "dispatch.observe",
+      "path": "observations/gated/observe-002/PROCESS.json",
+      "started_utc": "2026-10-29T19:15:25.043842+00:00",
+      "whole_invocation_wall_seconds": 2.1524314577691257
+    },
+    {
+      "arm": "gated",
+      "children_maxrss_bytes_darwin": 245645312,
+      "children_system_seconds": 0.059031,
+      "children_user_seconds": 0.409449,
+      "finished_utc": "2026-10-29T19:16:13.189977+00:00",
+      "operation": "return.capture",
+      "path": "observations/gated/return-capture/PROCESS.json",
+      "started_utc": "2026-10-29T19:16:12.718202+00:00",
+      "whole_invocation_wall_seconds": 0.4714890830218792
+    },
+    {
+      "arm": "ungated",
+      "children_maxrss_bytes_darwin": 1342619648,
+      "children_system_seconds": 0.412273,
+      "children_user_seconds": 2.778828,
+      "finished_utc": "2026-10-29T19:07:57.170110+00:00",
+      "operation": "dispatch.start",
+      "path": "observations/ungated/dispatch/PROCESS.json",
+      "started_utc": "2026-10-29T19:07:53.622041+00:00",
+      "whole_invocation_wall_seconds": 3.5478374999947846
+    },
+    {
+      "arm": "ungated",
+      "children_maxrss_bytes_darwin": 403603456,
+      "children_system_seconds": 0.24881499999999998,
+      "children_user_seconds": 1.701753,
+      "finished_utc": "2026-10-29T19:08:28.272363+00:00",
+      "operation": "dispatch.observe",
+      "path": "observations/ungated/observe-001/PROCESS.json",
+      "started_utc": "2026-10-29T19:08:24.260289+00:00",
+      "whole_invocation_wall_seconds": 4.011743708048016
+    },
+    {
+      "arm": "ungated",
+      "children_maxrss_bytes_darwin": 311984128,
+      "children_system_seconds": 0.242251,
+      "children_user_seconds": 1.734853,
+      "finished_utc": "2026-10-29T19:10:00.912863+00:00",
+      "operation": "dispatch.observe",
+      "path": "observations/ungated/observe-002/PROCESS.json",
+      "started_utc": "2026-10-29T19:09:58.931247+00:00",
+      "whole_invocation_wall_seconds": 1.981255624908954
+    },
+    {
+      "arm": "ungated",
+      "children_maxrss_bytes_darwin": 215187456,
+      "children_system_seconds": 0.055757999999999995,
+      "children_user_seconds": 0.39488999999999996,
+      "finished_utc": "2026-10-29T19:11:10.102934+00:00",
+      "operation": "return.capture",
+      "path": "observations/ungated/return-capture/PROCESS.json",
+      "started_utc": "2026-10-29T19:11:09.649123+00:00",
+      "whole_invocation_wall_seconds": 0.4535129168070853
+    }
+  ],
+  "retained_phase_a_plus_b_public_wall_sum_seconds": 550.1381302550435,
+  "schema": "a_c.T013.phase-b-cost/1",
+  "scope": "Public dispatch is asynchronous. Native/helper/prelaunch/reuse intervals are nested or overlapping and must not be blindly summed. Request-to-capture includes operator polling/inspection delay. Phase A cold and failed-run costs remain separately charged evidence. No monetary rate or overall efficiency/quality inference is supplied.",
+  "successful_cold_preflight_wall_seconds": 273.07198129221797,
+  "total_end_to_end_monetary_cost": null
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "a_c.T013.view-repair-implementation-activation/1",
+  "actor": "/root/ac_scale_reuse_worker",
+  "role": "Worker",
+  "Executive": "/root",
+  "recorded_utc": "2026-10-29T18:16:53.465232+00:00",
+  "change_class": "realization_refactor",
+  "basis": "Unchanged installed STDO v2.5.1-rc.2, FR-008\u2013FR-014 and T013 limits",
+  "operation": "Implement reviewed explicit earlier-parent/original-edge certificate; bounded actual 29-case compile/audit and targeted kernel negatives; Python controls; no public gate.",
+  "write_territory": [
+    "build_tenants/lean/scripts/gate_codegen.py",
+    "build_tenants/lean/scripts/formal_gate.py",
+    "build_tenants/lean/tests/test_gate_codegen.py",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T013_PRACTICAL_FORMAL_GATE/lean/view-repair-implementation-001/**"
+  ],
+  "proposal_closed_sha256": "a914ec6d639073b1bfd3d56f5db2bb6da6079b2d77d77b0d505d03d67ff84d25",
+  "review_closed_sha256": "69b7a119bfa5dcd7cf3ca29fd490ec1b15bf3533ee9811638a5a4aab53d8812b",
+  "limits": {
+    "checking_seconds": 90,
+    "lean_threads": 1,
+    "lean_memory_mb": 4096,
+    "physical_rss_cap": false
+  },
+  "negative_targets": [
+    "Real edge 181->1122 but parent not yet known",
+    "Known parent 278 but absent edge to1122",
+    "Omitted required residual1867, isolated Closed if straightforward"
+  ],
+  "error_contract": "Missing chosen parent raises ValueError, retained as incomplete by verify.",
+  "excluded_effects": [
+    "Generic Lean or support changes/establishment",
+    "Public whole-gate or Mathlib rerun",
+    "Schema/Graphify/owner/docs/Git changes",
+    "Private origin changes or key/body acquisition",
+    "Context/preflight/dispatch/actor/model calls",
+    "Package effects"
+  ],
+  "stop": "Stop for another mathematical design or resource failure; ordinary syntax defects may be repaired with affected retries retained. Close source identity and evidence; return ownership."
+}

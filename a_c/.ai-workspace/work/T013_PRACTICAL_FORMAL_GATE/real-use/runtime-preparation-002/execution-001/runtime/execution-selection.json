@@ -1,0 +1,31 @@
+{
+  "activation_sha256": "1de82e9ea424c6e1b7700b856decb9807fecf34df050e89fb9a982e812b07daf",
+  "automatic_retry": false,
+  "checker_config_sha256": "2ae9f8c00437b351cb30fbebb769e4a252b9f3b30f41bc021cae90b1f196bd19",
+  "dispatch_permission": "Not granted by this Phase A activation; Root must separately select the exact two calls after consuming the closed readiness result.",
+  "full_runtime_identity_sha256": "065648e6cc971be7edc75c1fa7b0428351357fe312146059b71fb788842313a7",
+  "maximum_invocations_per_arm": 1,
+  "phase": "A",
+  "phase_actor_invocations": 0,
+  "phase_operations": [
+    "source.read",
+    "context.assemble",
+    "contract.preflight"
+  ],
+  "protocol_sha256": "547a73826a8bd28721661361106d5a8e53844ca3a3a8b2a10dd5b66d7a2ae4f6",
+  "qualification_review_sha256": "c6fe55e51bb19075e43f936d23e32e8cee200746d5905782c51eafc424043870",
+  "reason": "Executive selected Phase A setup/source acquisition/Context comparison/preflight only after closed readiness and actual reuse qualification review. Actor dispatch remains separately reserved.",
+  "schema": "a_c.T013.execution-selection/1",
+  "source_pins": {
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_formal_gate.py": "d37de63f2b809e7a02d88d560b29b4900e8cda6217cfbc32e5796f40065659b8",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_graph.py": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support.py": "f65efad15fd770075650ce0484df5b1cea14612047a82918d35fdc4f870deafa",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_composition.py": "3b6c58d90280aa65fe5c1d8b9bb58a37a15376fcff1ef71e7f248f509df52625",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_core.py": "024470f433a891d5ecdef3f4e08e5d8cfa5b66df16bf36270d2865d6b1450b5b",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_effects.py": "5d2f4cd9ef2a450f895dad61a136756e05bc443717644268f66db127dfb684af",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/examples/fd-support/actor_cli.py": "3f0bd239339e635f4e49ae89a00f0857f4672cb177a5dd2ce03f124f0b116528"
+  },
+  "state": "selected",
+  "task_sha256": "33e08813021b43a259dc72aa35f904f82b370de25faff64488f29ee4d4495829",
+  "ticket_sha256": "c5c8ed56ebfef3f51406be4b63d7d1fd3976de294ce0a64c801ea3f4da44fefc"
+}

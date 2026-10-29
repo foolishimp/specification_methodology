@@ -1,0 +1,436 @@
+{
+  "actual_results": [
+    {
+      "bundle": "real-use/runtime-preparation-001/execution/evidence/formal/0722e7d2daaf4122aba23379dde3b07e/bundle",
+      "checked_claims": [
+        "imported-model-well-formedness",
+        "whole-model-source-correspondence",
+        "declared-closure-and-projection",
+        "record-budget-result",
+        "supplied-graphify-view-correspondence"
+      ],
+      "context_binding": {
+        "activation_identity": {
+          "id": "t013-report-gated-worker-001:activation",
+          "sha256": "d847e931133e76356e1b1899be3fa92d417fa294858fef8e16b36700d1a239f5"
+        },
+        "rendered_sha256": "f114593150b15dc49a5aa58c1f018f43e731f77d5d3c15eea632ebdd28a83bfa"
+      },
+      "manifest_sha256": "51c0dd4cc6cce3b380eefe36526f87b042307bd53eaba5510b57142eb37ce5f7",
+      "observations": {
+        "child_maxrss_native_units": 0,
+        "current_dynamic_proof_invocations": 0,
+        "current_kernel_replay_invocations": 0,
+        "current_runtime_invocations": 0,
+        "edges": 3995,
+        "elapsed_scope": "checking only; excludes final bundle/origin publication; complete wall requires external process measurement",
+        "elapsed_seconds": 9.298054750077426,
+        "execution": "retained authenticated cold runtime; current source/import/certificate/output correspondence checked",
+        "limits": {
+          "max_input_bytes": 33554432,
+          "max_selections": 64,
+          "memory_mb": 4096,
+          "timeout_seconds": 90
+        },
+        "original_establishment": {
+          "caller_return": "not established by local origin",
+          "entry_id": "4d4f0499b990c092995901e295e461979ffac753a7bc4f9d8e44c072bf689e93",
+          "manifest_sha256": "fc0801aa9ecdd6c2cfd411e420246da66c78d445d87946cec4ac366bad0f699a",
+          "origin_id": "5d99e985ed795939aff12c23fbd93e9f",
+          "result_path": "origin-result.json",
+          "result_sha256": "72ad6dc64938ab0e76476f5d479c9154035131354423ebbbb9fde38c8737dfe4"
+        },
+        "proof_modules": [
+          "GateData",
+          "GateLocalNames",
+          "GateExternalNames",
+          "GateIdentities",
+          "GateBounds",
+          "GateModel",
+          "GateViews",
+          "GateRun"
+        ],
+        "records": 1987,
+        "references": 16498,
+        "reuse": "local-origin",
+        "stages": [
+          {
+            "seconds": 0.34192970814183354,
+            "stage": "acquire-import-reconstruct"
+          },
+          {
+            "seconds": 3.613012124784291,
+            "stage": "support-pins"
+          },
+          {
+            "seconds": 1.075746291782707,
+            "stage": "current-certificates"
+          },
+          {
+            "seconds": 0.42296833265572786,
+            "stage": "authenticated-artifacts"
+          },
+          {
+            "seconds": 0.18005233397707343,
+            "stage": "output-view-correspondence"
+          },
+          {
+            "seconds": 3.4569942918606102,
+            "stage": "support-pins-after"
+          },
+          {
+            "seconds": 0.1917232503183186,
+            "stage": "origin-currentness"
+          }
+        ],
+        "support": {
+          "manifest_sha256": "7198879c3dfefe52ee4c980b33990197cd338eb19ac4e84cce3dd26a4cd66363",
+          "members": 30405,
+          "platform": "Darwin-arm64"
+        },
+        "theorem_audit": {
+          "AC.GateData.chars_reconstructed": [],
+          "AC.GateData.checked0": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.edgeBounds": [
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.execution_matches_project0": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.externalCharsBlock0_source": [],
+          "AC.GateData.externalCharsBlock1_source": [],
+          "AC.GateData.externalCharsBlock2_source": [],
+          "AC.GateData.externalCharsBlock3_source": [],
+          "AC.GateData.externalCharsBlock4_source": [],
+          "AC.GateData.externalCharsBlock5_source": [],
+          "AC.GateData.externalCharsBlock6_source": [],
+          "AC.GateData.externalCharsBlock7_source": [],
+          "AC.GateData.externalChars_source": [
+            "propext"
+          ],
+          "AC.GateData.identities_checked": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.localCharsBlock0_source": [],
+          "AC.GateData.localCharsBlock10_source": [],
+          "AC.GateData.localCharsBlock11_source": [],
+          "AC.GateData.localCharsBlock12_source": [],
+          "AC.GateData.localCharsBlock13_source": [],
+          "AC.GateData.localCharsBlock14_source": [],
+          "AC.GateData.localCharsBlock15_source": [],
+          "AC.GateData.localCharsBlock1_source": [],
+          "AC.GateData.localCharsBlock2_source": [],
+          "AC.GateData.localCharsBlock3_source": [],
+          "AC.GateData.localCharsBlock4_source": [],
+          "AC.GateData.localCharsBlock5_source": [],
+          "AC.GateData.localCharsBlock6_source": [],
+          "AC.GateData.localCharsBlock7_source": [],
+          "AC.GateData.localCharsBlock8_source": [],
+          "AC.GateData.localCharsBlock9_source": [],
+          "AC.GateData.localChars_source": [
+            "propext"
+          ],
+          "AC.GateData.model_checked": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.names_exact": [
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.orderedPairsChecked0": [],
+          "AC.GateData.orderedPairsChecked1": [],
+          "AC.GateData.orderedPairsChecked10": [],
+          "AC.GateData.orderedPairsChecked11": [],
+          "AC.GateData.orderedPairsChecked12": [],
+          "AC.GateData.orderedPairsChecked13": [],
+          "AC.GateData.orderedPairsChecked14": [],
+          "AC.GateData.orderedPairsChecked15": [],
+          "AC.GateData.orderedPairsChecked16": [],
+          "AC.GateData.orderedPairsChecked17": [],
+          "AC.GateData.orderedPairsChecked18": [],
+          "AC.GateData.orderedPairsChecked19": [],
+          "AC.GateData.orderedPairsChecked2": [],
+          "AC.GateData.orderedPairsChecked20": [],
+          "AC.GateData.orderedPairsChecked21": [],
+          "AC.GateData.orderedPairsChecked22": [],
+          "AC.GateData.orderedPairsChecked23": [],
+          "AC.GateData.orderedPairsChecked3": [],
+          "AC.GateData.orderedPairsChecked4": [],
+          "AC.GateData.orderedPairsChecked5": [],
+          "AC.GateData.orderedPairsChecked6": [],
+          "AC.GateData.orderedPairsChecked7": [],
+          "AC.GateData.orderedPairsChecked8": [],
+          "AC.GateData.orderedPairsChecked9": [],
+          "AC.GateData.ordered_chain": [
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.reachability0": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.refBounds": [
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.result0": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.set0": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      },
+      "result_sha256": "6a4cbb203aa47354407467b747ca0f6a286685621be9de5dff1373227c31ed18",
+      "status": "verified"
+    },
+    {
+      "bundle": "real-use/runtime-preparation-001/execution/evidence/formal/56203db2a47742b39866c17a05e352ca/bundle",
+      "checked_claims": [
+        "imported-model-well-formedness",
+        "whole-model-source-correspondence",
+        "declared-closure-and-projection",
+        "record-budget-result",
+        "supplied-graphify-view-correspondence"
+      ],
+      "context_binding": {
+        "activation_identity": {
+          "id": "t013-report-gated-worker-001:activation",
+          "sha256": "d847e931133e76356e1b1899be3fa92d417fa294858fef8e16b36700d1a239f5"
+        },
+        "rendered_sha256": "f114593150b15dc49a5aa58c1f018f43e731f77d5d3c15eea632ebdd28a83bfa"
+      },
+      "manifest_sha256": "51c0dd4cc6cce3b380eefe36526f87b042307bd53eaba5510b57142eb37ce5f7",
+      "observations": {
+        "child_maxrss_native_units": 0,
+        "current_dynamic_proof_invocations": 0,
+        "current_kernel_replay_invocations": 0,
+        "current_runtime_invocations": 0,
+        "edges": 3995,
+        "elapsed_scope": "checking only; excludes final bundle/origin publication; complete wall requires external process measurement",
+        "elapsed_seconds": 9.222353250253946,
+        "execution": "retained authenticated cold runtime; current source/import/certificate/output correspondence checked",
+        "limits": {
+          "max_input_bytes": 33554432,
+          "max_selections": 64,
+          "memory_mb": 4096,
+          "timeout_seconds": 90
+        },
+        "original_establishment": {
+          "caller_return": "not established by local origin",
+          "entry_id": "4d4f0499b990c092995901e295e461979ffac753a7bc4f9d8e44c072bf689e93",
+          "manifest_sha256": "fc0801aa9ecdd6c2cfd411e420246da66c78d445d87946cec4ac366bad0f699a",
+          "origin_id": "5d99e985ed795939aff12c23fbd93e9f",
+          "result_path": "origin-result.json",
+          "result_sha256": "72ad6dc64938ab0e76476f5d479c9154035131354423ebbbb9fde38c8737dfe4"
+        },
+        "proof_modules": [
+          "GateData",
+          "GateLocalNames",
+          "GateExternalNames",
+          "GateIdentities",
+          "GateBounds",
+          "GateModel",
+          "GateViews",
+          "GateRun"
+        ],
+        "records": 1987,
+        "references": 16498,
+        "reuse": "local-origin",
+        "stages": [
+          {
+            "seconds": 0.343855082988739,
+            "stage": "acquire-import-reconstruct"
+          },
+          {
+            "seconds": 3.48281866684556,
+            "stage": "support-pins"
+          },
+          {
+            "seconds": 1.0893819592893124,
+            "stage": "current-certificates"
+          },
+          {
+            "seconds": 0.44568583415821195,
+            "stage": "authenticated-artifacts"
+          },
+          {
+            "seconds": 0.1813420420512557,
+            "stage": "output-view-correspondence"
+          },
+          {
+            "seconds": 3.4631786248646677,
+            "stage": "support-pins-after"
+          },
+          {
+            "seconds": 0.2003713329322636,
+            "stage": "origin-currentness"
+          }
+        ],
+        "support": {
+          "manifest_sha256": "7198879c3dfefe52ee4c980b33990197cd338eb19ac4e84cce3dd26a4cd66363",
+          "members": 30405,
+          "platform": "Darwin-arm64"
+        },
+        "theorem_audit": {
+          "AC.GateData.chars_reconstructed": [],
+          "AC.GateData.checked0": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.edgeBounds": [
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.execution_matches_project0": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.externalCharsBlock0_source": [],
+          "AC.GateData.externalCharsBlock1_source": [],
+          "AC.GateData.externalCharsBlock2_source": [],
+          "AC.GateData.externalCharsBlock3_source": [],
+          "AC.GateData.externalCharsBlock4_source": [],
+          "AC.GateData.externalCharsBlock5_source": [],
+          "AC.GateData.externalCharsBlock6_source": [],
+          "AC.GateData.externalCharsBlock7_source": [],
+          "AC.GateData.externalChars_source": [
+            "propext"
+          ],
+          "AC.GateData.identities_checked": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.localCharsBlock0_source": [],
+          "AC.GateData.localCharsBlock10_source": [],
+          "AC.GateData.localCharsBlock11_source": [],
+          "AC.GateData.localCharsBlock12_source": [],
+          "AC.GateData.localCharsBlock13_source": [],
+          "AC.GateData.localCharsBlock14_source": [],
+          "AC.GateData.localCharsBlock15_source": [],
+          "AC.GateData.localCharsBlock1_source": [],
+          "AC.GateData.localCharsBlock2_source": [],
+          "AC.GateData.localCharsBlock3_source": [],
+          "AC.GateData.localCharsBlock4_source": [],
+          "AC.GateData.localCharsBlock5_source": [],
+          "AC.GateData.localCharsBlock6_source": [],
+          "AC.GateData.localCharsBlock7_source": [],
+          "AC.GateData.localCharsBlock8_source": [],
+          "AC.GateData.localCharsBlock9_source": [],
+          "AC.GateData.localChars_source": [
+            "propext"
+          ],
+          "AC.GateData.model_checked": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.names_exact": [
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.orderedPairsChecked0": [],
+          "AC.GateData.orderedPairsChecked1": [],
+          "AC.GateData.orderedPairsChecked10": [],
+          "AC.GateData.orderedPairsChecked11": [],
+          "AC.GateData.orderedPairsChecked12": [],
+          "AC.GateData.orderedPairsChecked13": [],
+          "AC.GateData.orderedPairsChecked14": [],
+          "AC.GateData.orderedPairsChecked15": [],
+          "AC.GateData.orderedPairsChecked16": [],
+          "AC.GateData.orderedPairsChecked17": [],
+          "AC.GateData.orderedPairsChecked18": [],
+          "AC.GateData.orderedPairsChecked19": [],
+          "AC.GateData.orderedPairsChecked2": [],
+          "AC.GateData.orderedPairsChecked20": [],
+          "AC.GateData.orderedPairsChecked21": [],
+          "AC.GateData.orderedPairsChecked22": [],
+          "AC.GateData.orderedPairsChecked23": [],
+          "AC.GateData.orderedPairsChecked3": [],
+          "AC.GateData.orderedPairsChecked4": [],
+          "AC.GateData.orderedPairsChecked5": [],
+          "AC.GateData.orderedPairsChecked6": [],
+          "AC.GateData.orderedPairsChecked7": [],
+          "AC.GateData.orderedPairsChecked8": [],
+          "AC.GateData.orderedPairsChecked9": [],
+          "AC.GateData.ordered_chain": [
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.reachability0": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.refBounds": [
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.result0": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.set0": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      },
+      "result_sha256": "c311f105e1701df0e76e51597f65e60647fe16a07ea81384de25e3d8e32293d0",
+      "status": "verified"
+    }
+  ],
+  "fresh_dynamic_compiler_kernel_runtime_invocations": 0,
+  "meaning": "Two actual current local-origin rechecks preserve exact Context/model/view bindings and redo current support/certificate/output correspondence. They conserve the prior cold proof; they are not fresh Lean compilation or semantic acceptance.",
+  "origin_access": "Normal selected public dispatch/supervisor gate only; no manual private origin/key/store read or administration.",
+  "schema": "a_c.T013.phase-b-formal-reuse/1",
+  "stages": {
+    "dispatch": {
+      "formal_use_artifact": {
+        "id": "sha256:57c249f7ae246c67ab7cb3a33540ac44c8cd5b9d210c8369ca0d01badbe102fe",
+        "sha256": "57c249f7ae246c67ab7cb3a33540ac44c8cd5b9d210c8369ca0d01badbe102fe"
+      },
+      "original_preflight_evidence": {
+        "id": "sha256:73f1363d4155c7f263ea5130cc2a6ec8f3417f5de9daa8927911f280c073d9e4",
+        "sha256": "73f1363d4155c7f263ea5130cc2a6ec8f3417f5de9daa8927911f280c073d9e4"
+      },
+      "replay_bundle": "real-use/runtime-preparation-001/execution/evidence/formal/0722e7d2daaf4122aba23379dde3b07e/bundle",
+      "replayed_cold_result_sha256": "72ad6dc64938ab0e76476f5d479c9154035131354423ebbbb9fde38c8737dfe4",
+      "result_sha256": "6a4cbb203aa47354407467b747ca0f6a286685621be9de5dff1373227c31ed18"
+    },
+    "supervisor": {
+      "formal_use_artifact": {
+        "id": "sha256:80d3e213fe2a1b8133c0e1fc3dab726fe2c99399c435846f53c42019d945f374",
+        "sha256": "80d3e213fe2a1b8133c0e1fc3dab726fe2c99399c435846f53c42019d945f374"
+      },
+      "original_preflight_evidence": {
+        "id": "sha256:73f1363d4155c7f263ea5130cc2a6ec8f3417f5de9daa8927911f280c073d9e4",
+        "sha256": "73f1363d4155c7f263ea5130cc2a6ec8f3417f5de9daa8927911f280c073d9e4"
+      },
+      "replay_bundle": "real-use/runtime-preparation-001/execution/evidence/formal/56203db2a47742b39866c17a05e352ca/bundle",
+      "replayed_cold_result_sha256": "72ad6dc64938ab0e76476f5d479c9154035131354423ebbbb9fde38c8737dfe4",
+      "result_sha256": "c311f105e1701df0e76e51597f65e60647fe16a07ea81384de25e3d8e32293d0"
+    }
+  }
+}
